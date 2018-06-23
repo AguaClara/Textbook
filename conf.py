@@ -84,7 +84,7 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -116,7 +116,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'AguaClaraTextbookdoc'
+htmlhelp_basename = 'AguaClaraTextbook'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -172,3 +172,15 @@ texinfo_documents = [
 # -- Options for figure, equation and table referencing -------------------
 
 numfig = True
+
+# -- Custom roles ---------------------------------------------------------
+rst_prolog = """
+.. role:: red
+"""
+# create global roles using this: https://stackoverflow.com/questions/9698702/how-do-i-create-a-global-role-roles-in-sphinx
+# If this grows too much, we'll need to add a global rst as described in the
+# post above.
+
+# Here's a function to define custom styles to be used with the roles:
+def setup(app):
+    app.add_stylesheet('css/custom.css')
