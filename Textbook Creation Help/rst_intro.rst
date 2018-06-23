@@ -94,5 +94,5 @@ Ideally, use pandoc to do the conversion: :code:`pandoc --from=markdown --to=rst
 Raw html will not be converted (because it is not actually markdown), and tables are converted poorly.
 You'll need to carefully review any page converted with pandoc.
 
-.. _Sphinx: <http://www.sphinx-doc.org/en/master/>
-.. _Pandoc: <https://pandoc.org/installing.html>
+.. _Sphinx: http://www.sphinx-doc.org/en/master/
+.. _Pandoc: https://pandoc.org/installing.html
