@@ -4,6 +4,12 @@
 Example AguaClara RST
 ================================
 
+How to use this file:
+---------------------
+Open the source code of the file next to the rendered code. The source code is
+found by clicking "Page source" at the bottom of the page. Next, follow along with the
+source code and rendered code. When you want to use the source code
+
 * Always have a clear, informative title, as seen above.
 * For headings, use the following:
   + # with overline, for parts
@@ -59,4 +65,4 @@ Example AguaClara RST
    "Smith", "John", 40
    "Smith", "John, Junior", 20
 * References work by referencing any "target." This can be a figure :numref:`mountain`, equation :eq:`quadratic`,
-  or table :ref:`an_example_table`. Note that `tables are not automatically numbered <https://stackoverflow.com/questions/8524630/csv-table-reference-as-table-number-rather-than-table-name>`_.
+  or table :numref:`an_example_table`.
