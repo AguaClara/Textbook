@@ -7,5 +7,3 @@ Welcome to the AguaClara Textbook!
 
    Textbook Creation Help/example_aguaclara_rst.rst
    Textbook Creation Help/rst_intro.rst
-
-* :ref:`search`
