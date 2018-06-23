@@ -54,26 +54,27 @@
 </div>
 </div></blockquote>
 </li>
-<li><dl class="first docutils">
-<dt>Figures…</dt>
-<dd><div class="first last figure align-center" id="id2">
-<a class="reference internal image-reference" href="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"><img alt="alternate text" src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" style="width: 200px; height: 100px;" /></a>
-<p class="caption"><span class="caption-text">always need captions and alt-text.</span></p>
+<li><p class="first">Figures…</p>
+<blockquote>
+<div><div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"><img alt="external figure" src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" style="width: 200px; height: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">always need captions and alt-text. And this is an external (url) figure.</span></p>
 </div>
-</dd>
-</dl>
+<div class="figure align-center" id="id3">
+<span id="mountain"></span><a class="reference internal image-reference" href="../_images/mountain.jpg"><img alt="internal figure" src="../_images/mountain.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Here is an internally referenced figure. Specify folders with folder/image.jpg</span></p>
+</div>
+</div></blockquote>
 </li>
 <li><p class="first">Math is very cool, and works natively in rst:</p>
+<div class="math notranslate nohighlight" id="equation-quadratic">
+<span class="eqno">(1)<a class="headerlink" href="#equation-quadratic" title="Permalink to this equation">¶</a></span>\[\begin{split}   y   = ax^2 + bx + c \\\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\begin{eqnarray}
-   y    &amp; = &amp; ax^2 + bx + c \\
-   f(x) &amp; = &amp; x^2 + 2xy + y^2
-\end{eqnarray}</div><div class="math notranslate nohighlight">
 \[n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k\]</div>
 </li>
 <li><p class="first">Tables should be made using csv pasted in:</p>
-<table border="1" class="colwidths-given docutils" id="id3">
-<caption><span class="caption-text">a title</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<span id="an-example-table"></span><table border="1" class="colwidths-given docutils" id="id4">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Example Table</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="40%" />
 <col width="40%" />
@@ -97,7 +98,8 @@
 </tbody>
 </table>
 </li>
-<li><p class="first">last bullet</p>
+<li><p class="first">References work by referencing any “target.” This can be a figure <a class="reference internal" href="#mountain"><span class="std std-numref">Fig. 2</span></a>, equation <a class="reference internal" href="#equation-quadratic">(1)</a>,
+or table <a class="reference internal" href="#an-example-table"><span class="std std-ref">Example Table</span></a>. Note that <a class="reference external" href="https://stackoverflow.com/questions/8524630/csv-table-reference-as-table-number-rather-than-table-name">tables are not automatically numbered</a>.</p>
 </li>
 </ul>
 </div>
