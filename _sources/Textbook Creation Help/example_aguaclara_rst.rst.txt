@@ -1,8 +1,8 @@
 .. _example_aguaclara_rst:
 
-================================
+*****************************
 Example AguaClara RST
-================================
+*****************************
 
 How to use this file:
 ---------------------
@@ -66,3 +66,4 @@ source code and rendered code. When you want to use the source code
    "Smith", "John, Junior", 20
 * References work by referencing any "target." This can be a figure :numref:`mountain`, equation :eq:`quadratic`,
   or table :numref:`an_example_table`.
+* Colored :red:`text`. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.  
