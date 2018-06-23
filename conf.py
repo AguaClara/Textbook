@@ -169,5 +169,6 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
+# -- Options for figure, equation and table referencing -------------------
 
-
+numfig = True

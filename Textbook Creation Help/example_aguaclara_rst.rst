@@ -20,23 +20,30 @@ Example AguaClara RST
       code block
 
 * Figures...
+
     .. figure:: https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg
         :width: 200px
         :align: center
         :height: 100px
-        :alt: alternate text
+        :alt: external figure
 
-        always need captions and alt-text.
+        always need captions and alt-text. And this is an external (url) figure.
+
+    .. _mountain:
+    .. figure:: mountain.jpg
+        :width: 300px
+        :align: center
+        :alt: internal figure
+
+        Here is an internally referenced figure. Specify folders with folder/image.jpg
+
 
 * Math is very cool, and works natively in rst:
 
   .. math::
-     :nowrap:
+     :label: quadratic
 
-     \begin{eqnarray}
-        y    & = & ax^2 + bx + c \\
-        f(x) & = & x^2 + 2xy + y^2
-     \end{eqnarray}
+        y   = ax^2 + bx + c \\
 
   .. math::
 
@@ -44,10 +51,12 @@ Example AguaClara RST
 
 * Tables should be made using csv pasted in:
 
-  .. csv-table:: a title
+  .. _an_example_table:
+  .. csv-table:: Example Table
    :header: "name", "firstname", "age"
    :widths: 20, 20, 10
 
    "Smith", "John", 40
    "Smith", "John, Junior", 20
-* last bullet
+* References work by referencing any "target." This can be a figure :numref:`mountain`, equation :eq:`quadratic`,
+  or table :ref:`an_example_table`. Note that `tables are not automatically numbered <https://stackoverflow.com/questions/8524630/csv-table-reference-as-table-number-rather-than-table-name>`_.

@@ -54,6 +54,10 @@ To publish online, you need to submit a pull request to master and merge it in. 
 Travis will build the site using Sphinx_, and if there aren't any errors, upload
 it to the gh_pages branch. We used `this guide <https://gist.github.com/brenns10/f48e1021e8befd2221a2>`_ to set up Travis.
 
+**PUBLISHING NOTE**: If your changes to the master branch aren't pushing to gh-pages,
+then check the status of the `Travis build here <https://travis-ci.org/AguaClara/Textbook>`_.
+
+
 Brief Best Practices
 ====================
 When writing rst, there are often many ways to write the same thing. Almost always,
@@ -76,7 +80,9 @@ Example to Start From
 This file is written in rst. You can start there! Just click on "Page source" at
 in the footer at the bottom right of the page:
 
-.. image::page_source.png
+.. image:: page_source.png
+    :align: center
+    :alt: screenshot of footer
 
 Also, here's a rich example where we try to implement all AguaClara best
 practices: :ref:`example_aguaclara_rst`. I recommend looking
