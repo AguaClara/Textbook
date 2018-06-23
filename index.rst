@@ -1,0 +1,9 @@
+Welcome to the AguaClara Textbook!
+==============================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   Textbook Creation Help/example_aguaclara_rst.rst
+   Textbook Creation Help/rst_intro.rst
