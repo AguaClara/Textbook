@@ -10,7 +10,7 @@ Welcome to AguaClara Textbook's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   Textbook Creation Help/best_practices_example.rst
+   Textbook Creation Help/example_aguaclara_rst.rst
    Textbook Creation Help/rst_intro.rst
 
 
