@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RST Primer for AguaClara &mdash; AguaClara Textbook 0.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Example AguaClara RST" href="example_aguaclara_rst.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="example_aguaclara_rst.html">Example AguaClara RST</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RST Primer for AguaClara</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-rst">What is RST?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#why-rst">Why RST?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-rst-for-development">Setting up RST for Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-the-atom-plugins">Installing the Atom Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-rst-locally-with-sphinx">Building RST Locally with Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publishing-online">Publishing Online</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#brief-best-practices">Brief Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-write-rst">How do I write RST?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-to-start-from">Example to Start From</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-markdown-to-rst">Converting Markdown to RST</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>RST Primer for AguaClara</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Textbook Creation Help/rst_intro.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rst-primer-for-aguaclara">
+<h1>RST Primer for AguaClara<a class="headerlink" href="#rst-primer-for-aguaclara" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-rst">
+<h2>What is RST?<a class="headerlink" href="#what-is-rst" title="Permalink to this headline">¶</a></h2>
+<p>RST stands for restructured text. It is the standard markup language
+used for documenting python packages. <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>
+is the Python package that can generate an html website from the rst files. To read more
+about why we chose RST over markdown or Latex, read the section <a class="reference internal" href="#why-rst">Why RST?</a>.</p>
+<div class="section" id="why-rst">
+<h3>Why RST?<a class="headerlink" href="#why-rst" title="Permalink to this headline">¶</a></h3>
+<p>In the beginning, we used markdown. As we tried to add different features to markdown (colored words, image sizes, citations),
+we were forced to use raw html and various pre-processors. With these various band-aid
+solutions came added complexity. Adding sections became cumbersome and awkward as it required
+ill-defined html. Additionally, providing site-wide style updates was prohibitively time-consuming and
+complex. Essentially, we were trying to pack too much functionality into markdown.
+In the search for an alternative, restructured text provided several advantages.
+Out of the box, rst supports globally-defined styles, figure numbering and referencing,
+Latex function rendering, image display customization and more. Furthermore,
+restructured text was already the language of choice for the AIDE ecosystem’s
+documentation.</p>
+</div>
+</div>
+<div class="section" id="setting-up-rst-for-development">
+<h2>Setting up RST for Development<a class="headerlink" href="#setting-up-rst-for-development" title="Permalink to this headline">¶</a></h2>
+<p>There are two ways to quickly view an RST file. The first is using an Atom plugin
+that renders the view alongside the source code. This is a good initial test to
+make sure the rst is proper rst and <em>mostly</em> looks correct. However, some functionality,
+such as any extensions provided by <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> won’t run in the preview. In order to
+see the final html that will display on the website, you’ll need to run sphinx to fully
+generate the html code. Finally, to push the code so it is available on the textbook,
+you’ll need to incorporate it to the master branch.</p>
+<div class="section" id="installing-the-atom-plugins">
+<h3>Installing the Atom Plugins<a class="headerlink" href="#installing-the-atom-plugins" title="Permalink to this headline">¶</a></h3>
+<p>If you are using the Atom IDE to write rst, you can use the <a class="reference external" href="https://atom.io/packages/rst-preview-pandoc">rst-preview-pandoc</a>
+plugin to auto-generate a live rst preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview
+working, you’ll need to install <a class="reference external" href="https://atom.io/packages/language-restructuredtext">language-restructuredtext</a> and <a class="reference external" href="https://pandoc.org/installing.html">Pandoc</a>. If everything
+worked, you can use ctrl-shift-e to toggle a display window for the live-updated
+rst preview.</p>
+</div>
+<div class="section" id="building-rst-locally-with-sphinx">
+<h3>Building RST Locally with <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a><a class="headerlink" href="#building-rst-locally-with-sphinx" title="Permalink to this headline">¶</a></h3>
+<p>We use <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> to build rst locally. Follow these steps to get <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> and run locally:</p>
+<ol class="arabic simple">
+<li>Install <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> using pip: <code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">--user</span> <span class="pre">-U</span></code></li>
+<li>To generate all the html, run the make file with <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code></li>
+<li>View the html generated in the _build directory by opening it in your favorite editor.</li>
+</ol>
+</div>
+<div class="section" id="publishing-online">
+<h3>Publishing Online<a class="headerlink" href="#publishing-online" title="Permalink to this headline">¶</a></h3>
+<p>To publish online, you need to submit a pull request to master and merge it in. Then
+Travis will build the site using <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, and if there aren’t any errors, upload
+it to the gh_pages branch. We used <a class="reference external" href="https://gist.github.com/brenns10/f48e1021e8befd2221a2">this guide</a> to set up Travis.</p>
+<p><strong>PUBLISHING NOTE</strong>: If your changes to the master branch aren’t pushing to gh-pages,
+then check the status of the <a class="reference external" href="https://travis-ci.org/AguaClara/Textbook">Travis build here</a>.</p>
+</div>
+</div>
+<div class="section" id="brief-best-practices">
+<h2>Brief Best Practices<a class="headerlink" href="#brief-best-practices" title="Permalink to this headline">¶</a></h2>
+<p>When writing rst, there are often many ways to write the same thing. Almost always,
+the way with the fewest number of characters is the best way. Ideally, never copy and paste.</p>
+<div class="section" id="how-do-i-write-rst">
+<h3>How do I write RST?<a class="headerlink" href="#how-do-i-write-rst" title="Permalink to this headline">¶</a></h3>
+<p>RST is friendly to learn and powerful. There are many useful <a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks">cheatsheets</a>.
+When you start writing rst, look at the cheat sheets all the time. Use <code class="code docutils literal notranslate"><span class="pre">ctrl-f</span></code> all the time to find
+whatever you need. Things not covered in the cheat sheets:</p>
+<ul class="simple">
+<li>Writing inline code snippet: <code class="code docutils literal notranslate"><span class="pre">:code:'your</span> <span class="pre">code'</span></code>. Learn how to syntax highlight <a class="reference external" href="https://stackoverflow.com/questions/10870719/inline-code-highlighting-in-restructuredtext">here</a></li>
+<li>A document is referred to by its title, as defined between the ==== signs at the
+top of the page… NOT the filename. So it is critical to have a title.</li>
+<li>Always run <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> before pushing to ensure you can make your changes without errors.</li>
+<li>Anything else you’d like to add for the future…</li>
+</ul>
+</div>
+<div class="section" id="example-to-start-from">
+<h3>Example to Start From<a class="headerlink" href="#example-to-start-from" title="Permalink to this headline">¶</a></h3>
+<p>This file is written in rst. You can start there! Just click on “Page source” at
+in the footer at the bottom right of the page:</p>
+<img alt="screenshot of footer" class="align-center" src="../_images/page_source.png" />
+<p>Also, here’s a rich example where we try to implement all AguaClara best
+practices: <a class="reference internal" href="example_aguaclara_rst.html#example-aguaclara-rst"><span class="std std-ref">Example AguaClara RST</span></a>. I recommend looking
+at the raw rst and the rendered html side by side.</p>
+</div>
+</div>
+<div class="section" id="converting-markdown-to-rst">
+<h2>Converting Markdown to RST<a class="headerlink" href="#converting-markdown-to-rst" title="Permalink to this headline">¶</a></h2>
+<p>Ideally, use pandoc to do the conversion: <code class="code docutils literal notranslate"><span class="pre">pandoc</span> <span class="pre">--from=markdown</span> <span class="pre">--to=rst</span> <span class="pre">--output=my_file.rst</span> <span class="pre">my_file.md</span></code>.
+Raw html will not be converted (because it is not actually markdown), and tables are converted poorly.
+You’ll need to carefully review any page converted with pandoc.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="example_aguaclara_rst.html" class="btn btn-neutral" title="Example AguaClara RST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
