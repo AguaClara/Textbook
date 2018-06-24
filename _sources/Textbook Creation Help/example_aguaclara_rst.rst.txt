@@ -12,12 +12,12 @@ source code and rendered code. When you want to use the source code
 
 * Always have a clear, informative title, as seen above.
 * For headings, use the following:
-  + # with overline, for parts
-  + * with overline, for chapters
-  + =, for sections
-  + -, for subsections
-  + ^, for subsubsections
-  + “, for paragraphs
+    + # with overline, for parts
+    + * with overline, for chapters
+    + =, for sections
+    + -, for subsections
+    + ^, for subsubsections
+    + “, for paragraphs
 
 * When writing code, :code:`use an inline code block` or a
 
