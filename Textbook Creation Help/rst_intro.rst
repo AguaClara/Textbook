@@ -77,12 +77,8 @@ whatever you need. Things not covered in the cheat sheets:
 
 Example to Start From
 ---------------------
-This file is written in rst. You can start there! Just click on "Page source" at
-in the footer at the bottom right of the page:
-
-.. image:: page_source.png
-    :align: center
-    :alt: screenshot of footer
+This file is written in rst. You can start there! Just click on "View page source"
+at the top of the page.
 
 Also, here's a rich example where we try to implement all AguaClara best
 practices: :ref:`example_aguaclara_rst`. I recommend looking

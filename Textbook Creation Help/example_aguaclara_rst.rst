@@ -7,7 +7,7 @@ Example AguaClara RST
 How to use this file:
 ---------------------
 Open the source code of the file next to the rendered code. The source code is
-found by clicking "Page source" at the bottom of the page. Next, follow along with the
+found by clicking "View page source" at the top of the page. Next, follow along with the
 source code and rendered code. When you want to use the source code
 
 * Always have a clear, informative title, as seen above.
@@ -66,4 +66,4 @@ source code and rendered code. When you want to use the source code
    "Smith", "John, Junior", 20
 * References work by referencing any "target." This can be a figure :numref:`mountain`, equation :eq:`quadratic`,
   or table :numref:`an_example_table`.
-* Colored :red:`text`. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.  
+* Colored :red:`text`. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.

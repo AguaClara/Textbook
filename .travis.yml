@@ -2,15 +2,20 @@
 language: python
 python:
   - 3.5
+before_install:
+ - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev # required to avoid SSL errors
 install:
   - pip install sphinx sphinx_rtd_theme
-script: make html
-env:
-  global:
-    - secure: "RSoKhGfwciftgR2aKv5hI7gEVHnEg6DGFDeTBIGlG6O9y05X6kCB1yR7DF5W42PMcmkRSlJonSPSFPAdrtBz9Kro4g6AICPpIGjbhlKH673Km4zladbN3HFfrpbVYVXw3ftDrljG3/sDFW1g58XjIXEaDFaBvn5oIjrvuc9atEbAQl/YWpv4zQo8saWZKWPD3JltIbiGkFT7ObX28OZKaaupQnfZNE6bEvp92eXBScAl7rgFnk5SyPOkAdi7pitonIdF/fj5FpVjLwmNKVI2ArxWlhaCJbTapAOu8VGFmU+5U/AF85AjZGdV/bpgJco0AVLBAIKrZMqGaOnO4AWADTZ0UtyI1GQr/VLcEQHo540sG6JhtEb4TmV1Bd/wceDRbQ5caQit9qLQa6nGHnkPSTsVPf2rE1xKyqfpVvxjZtWLdZwV0H/mGOHSxo4SmMr0Jk7nEGfnTgfKKSZP4NpZqUPzX9pwrcPoNZX/BOVCPhaS2XT2rPSIp9mSku5+6lvg5i2rQ9QO1TCE9aO+LfAp1xOV+iRbADoCZVFCQk95DErIDmpKMjAxpretLUJF/WswPp6tNAyKhSL/ZS3UcV0P6izQpTJE/51QLF74Krj/o7w9sUN1Zh+wefjY6d4yk1WB5bl33La2h3sBqZfU37KD2+wpK/ZrX6GxrI9r/A4ppag="
+  - gem install html-proofer
+script:
+  - make html
+  - htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html"
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
-  local-dir: _build/html
