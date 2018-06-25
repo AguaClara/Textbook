@@ -5,19 +5,18 @@ Example AguaClara RST
 *****************************
 
 How to use this file:
----------------------
+=====================
 Open the source code of the file next to the rendered code. The source code is
 found by clicking "View page source" at the top of the page. Next, follow along with the
 source code and rendered code. When you want to use the source code
 
 * Always have a clear, informative title, as seen above.
-* For headings, use the following:
-    + # with overline, for parts
-    + * with overline, for chapters
-    + =, for sections
+* For headings, use the following
+    + \* with overline, for sections
+    + = for sections
     + -, for subsections
     + ^, for subsubsections
-    + “, for paragraphs
+    + “, for subsubsubsections
 
 * When writing code, :code:`use an inline code block` or a
 
@@ -53,7 +52,7 @@ source code and rendered code. When you want to use the source code
 
   .. math::
 
-     n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
+     n_{\rm{offset}} = \sum_{k=0}^{N-1} s_k n_k
 
 * Tables should be made using csv pasted in:
 
