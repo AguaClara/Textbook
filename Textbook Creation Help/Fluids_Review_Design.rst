@@ -84,7 +84,7 @@ fluid mechanics course at Cornell, you can find a pdf of the book
 `here <https://hellcareers.files.wordpress.com/2016/01/fluid-mechanics-seventh-edition-by-frank-m-white.pdf>`__.
 
 Important Terms
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 1. Head
 2. Streamline
@@ -97,7 +97,7 @@ Important Terms
 9. Vena Contracta/Coefficient of Contraction
 
 Important Equations
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 1. Bernoulli equation
 2. Energy equation
@@ -117,7 +117,7 @@ must be understood before moving on to the more fun sections of this
 document.
 
 Continuity Equation
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 Continuity is simply an application of mass balance to fluid mechanics.
 It states that the cross sectional area :math:`A` that a fluid flows
@@ -169,7 +169,7 @@ through :math:`{\rm pipe} \, 1` must be the same as the flow through
    </center>
 
 Laminar and Turbulent Flow
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Considering that this class deals with the flow of water through a water
 treatment plant, understanding the characteristics of the flow is very
@@ -252,7 +252,7 @@ characteristic, and its categories, referred to as flow regimes, are
 laminar or turbulent.
 
 Streamlines and Control Volumes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Both
 `streamlines <https://en.wikipedia.org/wiki/Streamlines,_streaklines,_and_pathlines>`__
@@ -311,7 +311,7 @@ pressure, potential (deriving from elevation), and kinetic (deriving
 from velocity).
 
 The Bernoulli Equation
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 These three forms of energy expressed above make up the Bernoulli
 equation:
@@ -363,7 +363,7 @@ of water shooting out of the ground (right).
    </center>
 
 Assumption in using the Bernoulli equation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Though there are `many assumptions needed to confirm that the Bernoulli
 equation can be
@@ -377,7 +377,7 @@ can only be transferred between its three forms if this equation is to
 be used, it can’t be gained or lost.
 
 Example problems
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 `Here is a simple worksheet with very straightforward example problems
 using the Bernoulli
@@ -388,7 +388,7 @@ This just means that every term in the equation is multiplied by
 equation does not affect the solution to the problem it helps solved.
 
 The Energy Equation
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 The assumption necessary to use the Bernoulli equation, which is stated
 above, represents the key difference between the Bernoulli equation and
@@ -435,7 +435,7 @@ fluid-fluid friction resulting from flow (e)xpansions, :math:`h_e`, such
 that :math:`h_L = h_{\rm{f}} + h_e`.
 
 Major Losses
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 These losses are the result of friction between the fluid and the
 surface over which the fluid is flowing. A force acting parallel to a
@@ -556,7 +556,7 @@ alternative to computational methods for finding :math:`\rm{f}`.
    </center>
 
 Minor Losses
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 Unfortunately, there is no simple ‘pushing a box across the ground’
 example to explain minor losses. So instead, consider a `hydraulic
@@ -743,7 +743,7 @@ class. Understanding it now will be invaluable, as future concepts will
 use and build on this equation.
 
 Vena Contracta
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 Before describing the equation, we must first understand the concept of
 a `vena contracta <https://en.wikipedia.org/wiki/Vena_contracta>`__.
@@ -794,7 +794,7 @@ two coefficients is common mistake that this paragraph will hopefully
 help you to avoid.
 
 Origin
-~~~~~~
+^^^^^^
 
 The orifice equation is derived from the Bernoulli equation as applied
 to the red points in the following image:
@@ -886,12 +886,11 @@ Energy equation, simplified to remove pumps, turbines, and
 | Darcy-Weisbach equation:
 |
 
-  .. math:: h_{\rm{f}} = {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}
+.. math:: h_{\rm{f}} = {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}
 
-   For water treatment plant design we tend to use plant flow rate,
-  :math:`Q`, as our master variable and thus we have.
+For water treatment plant design we tend to use plant flow rate, :math:`Q`, as our master variable and thus we have.
 
-  .. math:: h_{\rm{f}} = {\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}
+.. math:: h_{\rm{f}} = {\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}
 
 :math:`\rm{f}` for laminar flow:
 
