@@ -45,8 +45,9 @@ Building RST Locally with Sphinx_
 We use Sphinx_ to build rst locally. Follow these steps to get Sphinx_ and run locally:
 
 #. Install Sphinx_ using pip: :code:`pip install sphinx --user -U`
-#. To generate all the html, run the make file with :code:`make html`
-#. View the html generated in the _build directory by opening it in your favorite editor.
+#. Generate all the html by navigating to the source directory :code:`.../Textbook` and creating the build in that directory with :code:`sphinx-build -b html . _build`.
+#. View the html generated in the :code:`.../Textbook/_build` directory by copying the full file path of the :code:`/Textbook/_build/html/index.html` generated file and pasting it into your browser.
+#. To generate a new build once the first one has been made, simply run the make file with :code:`make html` instead of :code:`sphinx-build -b html . _build`
 
 Publishing Online
 -----------------
