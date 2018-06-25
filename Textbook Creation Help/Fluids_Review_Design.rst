@@ -1,5 +1,6 @@
+========================
 Fluids Review  Design
-====================
+========================
 
 Welcome to the **first** summary sheet of CEE 4540! These documents will
 be guides and references for you throughout the semester. Since
@@ -883,7 +884,7 @@ Energy equation, simplified to remove pumps, turbines, and
    :math:`{\rm{f}} = \frac{64}{\rm{Re}}`, can be used
 
 | Darcy-Weisbach equation:
-| 
+|
 
   .. math:: h_{\rm{f}} = {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}
 
