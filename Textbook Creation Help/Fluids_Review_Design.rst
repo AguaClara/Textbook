@@ -582,7 +582,7 @@ know the equation for minor losses, but understanding where it comes
 from is very important for effective AguaClara plant design. For this
 reason, you are strongly recommended to read through the full
 derivation, which can be found
-`here <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Fluids%20Review/Fluids_Review_Derivation_minor_loss_equation.md>`__.
+`here <https://github.com/AguaClara/Textbook/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Fluids%20Review/Fluids_Review_Derivations.md>`__.
 
 There are three forms of the minor loss equation that you will see in
 this class:
