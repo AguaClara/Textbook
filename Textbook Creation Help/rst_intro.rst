@@ -1,3 +1,5 @@
+.. _rst_intro:
+
 ************************
 RST Primer for AguaClara
 ************************
@@ -11,14 +13,8 @@ about why we chose RST over markdown or Latex, read the section `Why RST?`_.
 
 Why RST?
 --------
-In the beginning, we used markdown. As we tried to add different features to markdown (colored words, image sizes, citations),
-we were forced to use raw html and various pre-processors. With these various band-aid
-solutions came added complexity. Adding sections became cumbersome and awkward as it required
-ill-defined html. Additionally, providing site-wide style updates was prohibitively time-consuming and
-complex. Essentially, we were trying to pack too much functionality into markdown.
-In the search for an alternative, restructured text provided several advantages.
-Out of the box, rst supports globally-defined styles, figure numbering and referencing,
-Latex function rendering, image display customization and more. Furthermore,
+In the beginning, we used markdown. As we tried to add different features to markdown (colored words, image sizes, citations), we were forced to use raw html and various pre-processors. With these various band-aid
+solutions came added complexity. Adding sections became cumbersome and awkward as it required ill-defined html. Additionally, providing site-wide style updates was prohibitively time-consuming and complex. Essentially, we were trying to pack too much functionality into markdown. In the search for an alternative, restructured text provided several advantages. Out of the box, rst supports globally-defined styles, figure numbering and referencing, Latex function rendering, image display customization and more. Furthermore,
 restructured text was already the language of choice for the AIDE ecosystem's
 documentation.
 
@@ -45,9 +41,9 @@ Building RST Locally with Sphinx_
 We use Sphinx_ to build rst locally. Follow these steps to get Sphinx_ and run locally:
 
 #. Install Sphinx_ using pip: :code:`pip install sphinx --user -U`
-#. Generate all the html by navigating to the source directory :code:`.../Textbook` and creating the build in that directory with :code:`sphinx-build -b html . _build`.
-#. View the html generated in the :code:`.../Textbook/_build` directory by copying the full file path of the :code:`/Textbook/_build/html/index.html` generated file and pasting it into your browser.
-#. To generate a new build once the first one has been made, simply run the make file with :code:`make html` instead of :code:`sphinx-build -b html . _build`
+#. Generate all the html by navigating to the source directory :code:`.../Textbook` and creating the build in that directory with :code:`make html`.
+#. View the html generated in the :code:`.../Textbook/_build` directory by copying the full file path of the :code:`.../Textbook/_build/html/index.html` generated file and pasting it into your browser.
+
 
 Publishing Online
 -----------------
@@ -61,8 +57,7 @@ then check the status of the `Travis build here <https://travis-ci.org/AguaClara
 
 Brief Best Practices
 ====================
-When writing rst, there are often many ways to write the same thing. Almost always,
-the way with the fewest number of characters is the best way. Ideally, never copy and paste.
+When writing rst, there are often many ways to write the same thing. Almost always, the way with the fewest number of characters is the best way. Ideally, never copy and paste.
 
 How do I write RST?
 -------------------
@@ -70,9 +65,8 @@ RST is friendly to learn and powerful. There are many useful `cheatsheets <https
 When you start writing rst, look at the cheat sheets all the time. Use :code:`ctrl-f` all the time to find
 whatever you need. Things not covered in the cheat sheets:
 
-* Writing inline code snippet: :code:`:code:'your code'`. Learn how to syntax highlight `here <https://stackoverflow.com/questions/10870719/inline-code-highlighting-in-restructuredtext>`_
-* A document is referred to by its title, as defined between the ==== signs at the
-  top of the page... NOT the filename. So it is critical to have a title.
+* Writing inline code snippet: ``:code:'your code'``. Learn how to syntax highlight `here <https://stackoverflow.com/questions/10870719/inline-code-highlighting-in-restructuredtext>`_
+* A document is referred to by its title, as defined between the ==== signs at the top of the page... NOT the filename. So it is critical to have a title.
 * Always run :code:`make html` before pushing to ensure you can make your changes without errors.
 * Anything else you'd like to add for the future...
 
