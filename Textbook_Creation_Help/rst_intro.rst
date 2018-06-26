@@ -6,6 +6,8 @@ RST Primer for AguaClara
 
 What is RST?
 ============
+
+:ref:`example_aguaclara_rst`
 RST stands for restructured text. It is the standard markup language
 used for documenting python packages. Sphinx_
 is the Python package that can generate an html website from the rst files. To read more
