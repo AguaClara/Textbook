@@ -8,8 +8,8 @@ Welcome to the AguaClara Textbook!
    :maxdepth: 2
    :caption: Contents:
 
-   Textbook Creation Help/example_aguaclara_rst.rst
+   Fluids_Review/Fluids_Review_Derivations.rst
 
-   Textbook Creation Help/rst_intro.rst
+   Textbook_Creation_Help/example_aguaclara_rst.rst
 
-   AguaClara Water Treatment Plant Design/Fluids Review/Fluids_Review_Derivations.rst
+   Textbook_Creation_Help/rst_intro.rst
