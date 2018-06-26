@@ -8,7 +8,7 @@ eliminated.
 
 
     .. _minor_loss_pipe:
-    .. figure:: Images/Minor_loss_pipe.png
+    .. figure:: Images/minor_loss_pipe.png
         :width: 700px
         :align: center
         :alt: internal figure
