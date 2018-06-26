@@ -4,9 +4,22 @@ Rapid mix is the term commonly used to describe the processes that occur between
 “In summary, little is known about rapid mix, much less any sensitivity to scale. However, the models and data reviewed suggest the need to be on the lookout for certain effects. From what is presently known, it can be speculated that since coagulant precipitation is sensitive to both micro- and macro-mixing, scale-up must consider not only energy dissipation rate, but also the reaction injection point and the contacting method.”
  - [Mixing in Coagulation and Flocculation 1991 page 292](https://books.google.com/books/about/Mixing_in_coagulation_and_flocculation.html?id=dkFSAAAAMAAJ)
 
-
-
 Rapid mix units often require significant energy and this has led some municipal water treatment plant operators to experiment with turning off rapid mix units. There is a need to understand the physical and chemical processes that occur when a concentrated liquid coagulant is added to water.
+
+* Fluid mixing
+  * The term "Rapid mix" describes this process
+* Chemistry of flocculation
+  * pH effects of adding coagulant
+  * Buffering capacity of natural waters
+  * pH range for precipitation of coagulant nanoparticles
+  * pH adjustment in water treatment plants
+* Coagulant nanoparticle interactions
+  * Dissolved organic matter
+  * Suspended solids
+  * Rate estimates for transport and attachment to suspended solids
+* Energy dissipation rate and velocity gradients
+
+
 
 # Coagulant nanoparticle application
 Rapid mix sets the stage for aggregation of both suspended particles and dissolved substances. Particle and dissolve substance aggregation is mediated by coagulant nanoparticles. The nanoparticles attach to raw water particles as well as to some dissolved species (the topic of these notes). After the nanoparticles have been mixed with the raw water and have attached to raw water particles the next process, flocculation, can begin. Flocculation is the process of producing collisions between particles to create flocs (aggregates) (next set of notes).
