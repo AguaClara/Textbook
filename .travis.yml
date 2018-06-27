@@ -13,6 +13,7 @@ install:
   - gem install html-proofer
 script:
   - make html
+  - make doctest
   - htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html"
 deploy:
   provider: pages
