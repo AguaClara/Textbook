@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>RST Primer for AguaClara &mdash; AguaClara Textbook 0.0.0 documentation</title>
+  <title>4. RST Primer for AguaClara &mdash; AguaClara Textbook 0.0.0 documentation</title>
   
 
   
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Example AguaClara RST" href="example_aguaclara_rst.html" /> 
+    <link rel="prev" title="3. Example AguaClara RST" href="example_aguaclara_rst.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,27 +82,27 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Derivations.html">Fluids Review Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example_aguaclara_rst.html">Example AguaClara RST</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">RST Primer for AguaClara</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#what-is-rst">What is RST?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#why-rst">Why RST?</a></li>
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Design.html">1. Fluids Review  Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Derivations.html">2. Fluids Review Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_aguaclara_rst.html">3. Example AguaClara RST</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. RST Primer for AguaClara</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-rst">4.1. What is RST?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#why-rst">4.1.1. Why RST?</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#setting-up-rst-for-development">Setting up RST for Development</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#installing-the-atom-plugins">Installing the Atom Plugins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#building-rst-locally-with-sphinx">Building RST Locally with Sphinx</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#publishing-online">Publishing Online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-rst-for-development">4.2. Setting up RST for Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-the-atom-plugins">4.2.1. Installing the Atom Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-rst-locally-with-sphinx">4.2.2. Building RST Locally with Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publishing-online">4.2.3. Publishing Online</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#brief-best-practices">Brief Best Practices</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#how-do-i-write-rst">How do I write RST?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example-to-start-from">Example to Start From</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brief-best-practices">4.3. Brief Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-write-rst">4.3.1. How do I write RST?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-to-start-from">4.3.2. Example to Start From</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#converting-markdown-to-rst">Converting Markdown to RST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-markdown-to-rst">4.4. Converting Markdown to RST</a></li>
 </ul>
 </li>
 </ul>
@@ -150,7 +150,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>RST Primer for AguaClara</li>
+      <li>4. RST Primer for AguaClara</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,15 +170,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="rst-primer-for-aguaclara">
-<span id="rst-intro"></span><h1>RST Primer for AguaClara<a class="headerlink" href="#rst-primer-for-aguaclara" title="Permalink to this headline">¶</a></h1>
+<span id="rst-intro"></span><h1>4. RST Primer for AguaClara<a class="headerlink" href="#rst-primer-for-aguaclara" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-is-rst">
-<h2>What is RST?<a class="headerlink" href="#what-is-rst" title="Permalink to this headline">¶</a></h2>
-<p>RST stands for restructured text. It is the standard markup language
+<h2>4.1. What is RST?<a class="headerlink" href="#what-is-rst" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="example_aguaclara_rst.html#example-aguaclara-rst"><span class="std std-ref">Example AguaClara RST</span></a>
+RST stands for restructured text. It is the standard markup language
 used for documenting python packages. <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>
 is the Python package that can generate an html website from the rst files. To read more
 about why we chose RST over markdown or Latex, read the section <a class="reference internal" href="#why-rst">Why RST?</a>.</p>
 <div class="section" id="why-rst">
-<h3>Why RST?<a class="headerlink" href="#why-rst" title="Permalink to this headline">¶</a></h3>
+<h3>4.1.1. Why RST?<a class="headerlink" href="#why-rst" title="Permalink to this headline">¶</a></h3>
 <p>In the beginning, we used markdown. As we tried to add different features to markdown (colored words, image sizes, citations), we were forced to use raw html and various pre-processors. With these various band-aid
 solutions came added complexity. Adding sections became cumbersome and awkward as it required ill-defined html. Additionally, providing site-wide style updates was prohibitively time-consuming and complex. Essentially, we were trying to pack too much functionality into markdown. In the search for an alternative, restructured text provided several advantages. Out of the box, rst supports globally-defined styles, figure numbering and referencing, Latex function rendering, image display customization and more. Furthermore,
 restructured text was already the language of choice for the AIDE ecosystem’s
@@ -186,7 +187,7 @@ documentation.</p>
 </div>
 </div>
 <div class="section" id="setting-up-rst-for-development">
-<h2>Setting up RST for Development<a class="headerlink" href="#setting-up-rst-for-development" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. Setting up RST for Development<a class="headerlink" href="#setting-up-rst-for-development" title="Permalink to this headline">¶</a></h2>
 <p>There are two ways to quickly view an RST file. The first is using an Atom plugin
 that renders the view alongside the source code. This is a good initial test to
 make sure the rst is proper rst and <em>mostly</em> looks correct. However, some functionality,
@@ -195,15 +196,15 @@ see the final html that will display on the website, you’ll need to run sphinx
 generate the html code. Finally, to push the code so it is available on the textbook,
 you’ll need to incorporate it to the master branch.</p>
 <div class="section" id="installing-the-atom-plugins">
-<h3>Installing the Atom Plugins<a class="headerlink" href="#installing-the-atom-plugins" title="Permalink to this headline">¶</a></h3>
+<h3>4.2.1. Installing the Atom Plugins<a class="headerlink" href="#installing-the-atom-plugins" title="Permalink to this headline">¶</a></h3>
 <p>If you are using the Atom IDE to write rst, you can use the <a class="reference external" href="https://atom.io/packages/rst-preview-pandoc">rst-preview-pandoc</a>
 plugin to auto-generate a live rst preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview
-working, you’ll need to install <a class="reference external" href="https://atom.io/packages/language-restructuredtext">language-restructuredtext</a> and <a class="reference external" href="https://pandoc.org/installing.html">Pandoc</a>. If everything
+working, you’ll need to install <a class="reference external" href="https://atom.io/packages/language-restructuredtext">language-restructuredtext</a> and <a class="reference external" href="https://pandoc.org/installing.html">Pandoc</a> (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandoc</span></code>). If everything
 worked, you can use ctrl-shift-e to toggle a display window for the live-updated
 rst preview.</p>
 </div>
 <div class="section" id="building-rst-locally-with-sphinx">
-<h3>Building RST Locally with <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a><a class="headerlink" href="#building-rst-locally-with-sphinx" title="Permalink to this headline">¶</a></h3>
+<h3>4.2.2. Building RST Locally with <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a><a class="headerlink" href="#building-rst-locally-with-sphinx" title="Permalink to this headline">¶</a></h3>
 <p>We use <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> to build rst locally. Follow these steps to get <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> and run locally:</p>
 <ol class="arabic simple">
 <li>Install <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> using pip: <code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">--user</span> <span class="pre">-U</span></code></li>
@@ -212,7 +213,7 @@ rst preview.</p>
 </ol>
 </div>
 <div class="section" id="publishing-online">
-<h3>Publishing Online<a class="headerlink" href="#publishing-online" title="Permalink to this headline">¶</a></h3>
+<h3>4.2.3. Publishing Online<a class="headerlink" href="#publishing-online" title="Permalink to this headline">¶</a></h3>
 <p>To publish online, you need to submit a pull request to master and merge it in. Then
 Travis will build the site using <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, and if there aren’t any errors, upload
 it to the gh_pages branch. We used <a class="reference external" href="https://gist.github.com/brenns10/f48e1021e8befd2221a2">this guide</a> to set up Travis.</p>
@@ -221,10 +222,10 @@ then check the status of the <a class="reference external" href="https://travis-
 </div>
 </div>
 <div class="section" id="brief-best-practices">
-<h2>Brief Best Practices<a class="headerlink" href="#brief-best-practices" title="Permalink to this headline">¶</a></h2>
+<h2>4.3. Brief Best Practices<a class="headerlink" href="#brief-best-practices" title="Permalink to this headline">¶</a></h2>
 <p>When writing rst, there are often many ways to write the same thing. Almost always, the way with the fewest number of characters is the best way. Ideally, never copy and paste.</p>
 <div class="section" id="how-do-i-write-rst">
-<h3>How do I write RST?<a class="headerlink" href="#how-do-i-write-rst" title="Permalink to this headline">¶</a></h3>
+<h3>4.3.1. How do I write RST?<a class="headerlink" href="#how-do-i-write-rst" title="Permalink to this headline">¶</a></h3>
 <p>RST is friendly to learn and powerful. There are many useful <a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks">cheatsheets</a>.
 When you start writing rst, look at the cheat sheets all the time. Use <code class="code docutils literal notranslate"><span class="pre">ctrl-f</span></code> all the time to find
 whatever you need. Things not covered in the cheat sheets:</p>
@@ -236,7 +237,7 @@ whatever you need. Things not covered in the cheat sheets:</p>
 </ul>
 </div>
 <div class="section" id="example-to-start-from">
-<h3>Example to Start From<a class="headerlink" href="#example-to-start-from" title="Permalink to this headline">¶</a></h3>
+<h3>4.3.2. Example to Start From<a class="headerlink" href="#example-to-start-from" title="Permalink to this headline">¶</a></h3>
 <p>This file is written in rst. You can start there! Just click on “View page source”
 at the top of the page.</p>
 <p>Also, here’s a rich example where we try to implement all AguaClara best
@@ -245,7 +246,7 @@ at the raw rst and the rendered html side by side.</p>
 </div>
 </div>
 <div class="section" id="converting-markdown-to-rst">
-<h2>Converting Markdown to RST<a class="headerlink" href="#converting-markdown-to-rst" title="Permalink to this headline">¶</a></h2>
+<h2>4.4. Converting Markdown to RST<a class="headerlink" href="#converting-markdown-to-rst" title="Permalink to this headline">¶</a></h2>
 <p>Ideally, use pandoc to do the conversion: <code class="code docutils literal notranslate"><span class="pre">pandoc</span> <span class="pre">--from=markdown</span> <span class="pre">--to=rst</span> <span class="pre">--output=my_file.rst</span> <span class="pre">my_file.md</span></code>.
 Raw html will not be converted (because it is not actually markdown), and tables are converted poorly.
 You’ll need to carefully review any page converted with pandoc.</p>
@@ -261,7 +262,7 @@ You’ll need to carefully review any page converted with pandoc.</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="example_aguaclara_rst.html" class="btn btn-neutral" title="Example AguaClara RST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="example_aguaclara_rst.html" class="btn btn-neutral" title="3. Example AguaClara RST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
