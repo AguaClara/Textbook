@@ -173,6 +173,7 @@ texinfo_documents = [
 # -- Options for figure, equation and table referencing -------------------
 
 numfig = True
+math_number_all = True
 
 # -- Custom roles ---------------------------------------------------------
 rst_prolog = """
