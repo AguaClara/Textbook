@@ -139,7 +139,7 @@ Considering that this class deals with the flow of water through a water treatme
 
 
     .. wikipedia_laminar_turbulent:
-    .. figure:: Images/wikipedia_laminar_turbulent.png
+    .. figure:: Images/Wikipedia_laminar_turbulent.png
         :width: 400px
         :align: center
         :alt: internal figure
