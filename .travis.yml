@@ -11,6 +11,7 @@ addons:
 install:
   - pip install sphinx sphinx_rtd_theme
   - pip install pandas
+  - pip install sphinxcontrib-disqus
   - gem install html-proofer
 script:
   - make html
