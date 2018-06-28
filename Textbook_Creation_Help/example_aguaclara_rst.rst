@@ -236,9 +236,11 @@ Python and Doctests
 
 * To get doctests to pass through Travis, you'll have to add any packages you use to the install step in ".travis.yml". Under install, add a line that says :code:`pip install my_package==0.0.0`. When doing this, make sure to specify the version as functionality can change!
 
-
 .. _assorted_convention:
 
 Assorted Other Convention
 -------------------------
 * Colored :red:`text`. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.
+
+  .. disqus::
+
