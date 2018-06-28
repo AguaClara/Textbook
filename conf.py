@@ -31,7 +31,7 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.doctest',
+extensions = ['sphinx.ext.doctest', 'sphinxcontrib.disqus',
     'sphinx.ext.mathjax']
 
 # Add any paths that contain templates here, relative to this directory.
@@ -74,7 +74,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = []
+exclude_patterns = ['_build']
 html_extra_path = [".nojekyll"]
 
 # The name of the Pygments (syntax highlighting) style to use.
@@ -82,6 +82,9 @@ pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
+
+# disqus setup
+disqus_shortname = 'AguaClara'
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -177,6 +180,7 @@ texinfo_documents = [
 # -- Options for figure, equation and table referencing -------------------
 
 numfig = True
+math_number_all = True
 
 # -- Custom roles ---------------------------------------------------------
 rst_prolog = """

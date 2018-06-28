@@ -11,8 +11,9 @@ eliminated.
     .. figure:: Images/minor_loss_pipe.png
         :width: 700px
         :align: center
-        :alt: internal figure
+        :alt: Example of flow expansion resulting in a minor loss
 
+        Example of a minor loss due to a flow expansion
 
     .. math::
 
