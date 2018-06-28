@@ -17,8 +17,7 @@ script:
   - make doctest
   - htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html"
 before_deploy:
-  - test $TRAVIS_TAG && # If this is tagged, build the latex and the pdf to be released.
-    ./build_pdf
+  - test $TRAVIS_TAG && ./build_pdf # If this is tagged, build the latex and the pdf to be released.
 deploy:
   - provider: pages
     skip-cleanup: true
