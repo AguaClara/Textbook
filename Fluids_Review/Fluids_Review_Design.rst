@@ -4,6 +4,8 @@
 Fluids Review  Design
 ************************
 
+
+
 Welcome to the **first** summary sheet of CEE 4540! These documents will
 be guides and references for you throughout the semester. Since
 Professor Monroe’s class time is limited, so too is the amount of
@@ -42,7 +44,6 @@ thoroughly and will not be tested.
 
 --------------
 
-.. _section-fluids-review-1:
 
 Section: Fluids Review
 ========================
@@ -124,13 +125,13 @@ The continuity equation is also useful when flow is going from one geometry to a
 
 An example of changing flow geometries is when the a change in pipe size occurs in a circular piping system, as is demonstrated below. The flow through :math:`{\rm pipe} \, 1` must be the same as the flow through :math:`{\rm pipe} \, 2`.
 
-
-    .. continuity_pipes:
+    .. _continuity_pipes:
     .. figure:: Images/continuity_pipes.png
         :width: 700px
         :align: center
         :alt: internal figure
 
+        Flow going from a small diameter pipe to a large one. The flow through each pipe must be the same.
 
 Laminar and Turbulent Flow
 ---------------------------
@@ -138,7 +139,7 @@ Laminar and Turbulent Flow
 Considering that this class deals with the flow of water through a water treatment plant, understanding the characteristics of the flow is very important. Thus, it is necessary to understand the most common characteristic of fluid flow: whether it is laminar or turbulent. `Laminar <https://en.wikipedia.org/wiki/Laminar_flow>`_ flow is very smooth and highly ordered. `Turbulent <https://en.wikipedia.org/wiki/Turbulence>`_ flow is chaotic, messy, and disordered. The best way to understand each flow and what it looks like is visually, `like in this video <https://youtu.be/qtvVN2qt968?t=131>`_ or the wikipedia image below. Please ignore the part of the video after the image of the tap.
 
 
-    .. wikipedia_laminar_turbulent:
+    .. _wikipedia_laminar_turbulent:
     .. figure:: Images/Wikipedia_laminar_turbulent.png
         :width: 400px
         :align: center
@@ -739,17 +740,20 @@ between the two points, :math:`z_A - z_B`, to be :math:`\Delta h`. With
 these simplifications (:math:`p_A = \bar v_A = p_B = 0`) and assumptions
 (:math:`z_A - z_B = \Delta h`), the Bernoulli equation becomes:
 
-.. math:: \Delta h = \frac{\bar v_B^2}{2g}
+  .. math:: \Delta h = \frac{\bar v_B^2}{2g}
 
 Substituting the continuity equation :math:`Q = \bar v A` in the form of
 :math:`\bar v_B^2 = \frac{Q^2}{A_{vc}^2}`, the vena contracta
 coefficient in the form of :math:`A_{vc} = \Pi_{vc} A_{or}` yields:
 
-.. math:: \Delta h = \frac{Q^2}{2g \Pi_{vc}^2 A_{or}^2}
+  .. math:: \Delta h = \frac{Q^2}{2g \Pi_{vc}^2 A_{or}^2}
 
 Which, rearranged to solve for Q gives **The Orifice Equation:**
 
-.. math:: Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}
+  .. math::
+    :label: orifice_equation
+
+      Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}
 
 | Such that:
 | :math:`\Pi_{vc}` = 0.62 = vena contracta coefficient, in aide_design
@@ -782,7 +786,6 @@ Design Challenge.
 
 Section Summary
 ---------------
-
 1. **Bernoulli vs energy equations:** The Bernoulli equation assumes
    that energy is conserved throughout a streamline or control volume.
    The Energy equation assumes that there is energy loss, or head loss
