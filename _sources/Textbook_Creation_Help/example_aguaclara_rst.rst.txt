@@ -87,4 +87,4 @@ source code and rendered code. When you want to use the source code
 
 * To get doctests to pass through Travis, you'll have to add any packages you use to the install step in ".travis.yml". Under install, add a line that says :code:`pip install my_package==0.0.0`. When doing this, make sure to specify the version as functionality can change!
 
-
+  .. disqus::
