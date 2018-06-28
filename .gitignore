@@ -1,2 +1,5 @@
 # sphinx build files:
 _build/
+
+# jetbrains config files:
+.idea/
