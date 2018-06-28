@@ -5,7 +5,7 @@
 make latexpdf
 
 # Needed to check if conda already installed
-  - export PATH="$HOME/miniconda/bin:$PATH"
+export PATH="$HOME/miniconda/bin:$PATH"
 
 # If not yet installed, obtain Miniconda
 # and tectonic
