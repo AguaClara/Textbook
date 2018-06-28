@@ -18,12 +18,7 @@ script:
   - htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html"
 before_deploy:
   - test $TRAVIS_TAG && # If this is tagged, build the latex and the pdf to be released.
-    make latexpdf &&
-    sudo apt-get install libfontconfig1-dev libgraphite2-dev libharfbuzz-dev libicu-dev zlib1g-dev &&
-    cargo install tectonic &&
-    tectonic _build/latex/AguaClaraTextbook.tex &&
-    zip -r _build/zipped_latex.zip _build/latex/*
-
+    ./build_pdf
 deploy:
   - provider: pages
     skip-cleanup: true
