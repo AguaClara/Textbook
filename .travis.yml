@@ -27,7 +27,7 @@ deploy:
   - provider: releases
     api_key: $GITHUB_TOKEN
     file:
-      - _build/latex/AguaClaraTextbook.pdf
+      - _build/AguaClaraTextbook.pdf
       - _build/zipped_latex.zip
     skip_cleanup: true
     on:

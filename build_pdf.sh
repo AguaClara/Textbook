@@ -20,4 +20,4 @@ if ! command -v conda > /dev/null; then # Install conda if you don't have it.
   conda install tectonic;
 fi
 tectonic _build/latex/AguaClaraTextbook.tex -p -o _build/ &&
-zip -r _build/zipped_latex.zip _build/latex/*
+zip -rj _build/zipped_latex.zip _build/latex/*
