@@ -15,44 +15,75 @@ Open the source code of the file next to the rendered code. The source code is f
 
 .. important:: **Proper indentation and line spacing is extremely important**
 
-
-.. _headers:
-
-Headers
--------
-Always have a clear, informative title, as seen above.
-For headings, use the following:
-
-* \* with overline, for sections
-
-* = for sections
-
-* -, for subsections
-
-* ^, for subsubsections
-
-* “, for subsubsubsections
-
-Though rst is written in a way that makes any heading ordering implied, this textbook will use the above heading hierarchy for consistency.
-
-.. important:: Before every section and subsection header, include a call reference in the line before the header. For this subsection, the reference is ``.. _headers`` and is used in the `links_and_references`_ section, which you will read soon.
+You will often see a format like this ``.. word::``. The 'word' in this case is called a directive. Directives are what rst uses to format text.
 
 
 .. _code:
 
 Code
 ----
-When writing code, :code:`use an inline code block with this syntax` or ``this syntax`` or a
+You can write code in-line or as a code block. There are two ways of doing each. For inline code, use ````this syntax```` or ``:code:`this syntax```. For code blocks, use this syntax:
+
+  .. code::
 
     .. code::
 
-      code block
+      This is my code block.
+
+Or this syntax::
+
+  This text is not a code block, the code block is below::
+
+    This is my code block.
+
+
+.. _headings:
+
+Headings
+-----------
+
+In order to write a title, you can either underline it or under and overline it. The following examples are correct titles.::
+
+  ******
+  Title
+  ******
+
+  subtitle
+  =========
+
+  subsubtitle
+  ------------
+  and so on
+
+Two rules:
+
+* If under and overline are used, their length must be identical
+* The length of the underline must be at least as long as the title itself
+
+Normally, there are no heading levels assigned to certain characters as the
+structure is determined from the succession of headings. However, it is better to stick to the same convention throughout a project. For instance, this is the convention for the AguaClara textbook:
+
+* `*` with overline, for document titles
+* `=`, for sections
+* `-`, for subsections
+* `^`, for subsubsections
+* `"`, for subsubsubsections
+
+Each section and subsection should have a call reference before it, formatted like this::
+
+    .. _headings:
+
+    Headings
+    -----------
+
+There should always be a blank line between the call reference and the actual heading, else the reference will not work. For the sake of document readability, include 3 blank lines before the reference to a section and 2 blank lines before the reference to a subsection. All lower headers should not have references, and there should be one blank line between lower headings and the preceeding content.
+
 
 .. _figures:
 
 Figures
 -------
-Every figure should have a caption, alternative text, and a label. A caption is written below all of the figure specifications, with a line between the two.  The label used to reference a figure is written before the figure directive. Below, the two figures are ``fluffy_cat`` and ``mountain_figure``.
+Every figure should have a label, alternative text, and a caption. The label is used to reference a figure and is written before the figure directive. Below, the two figures are labelled ``fluffy_cat`` and ``mountain_figure``. The alternative text is a desciption of the figure with few words. A caption is written below all of the figure specifications, with a blank line to separate the specs from the caption.
 
 Use the following syntax for including figures from online sources::
 
@@ -99,10 +130,10 @@ Displayed below are the two figures generated using the code above.
         In this case, that is Textbook/Textbook_Creation_Help.
 
 
-.. _math:
+.. _math_and_equations:
 
-Math
-----
+Math and Equations
+-------------------
 Math is very cool, and works natively in rst using LaTeX math syntax. In-line math can be written with the following syntax: ``:math:`y = ax^2 + bx + c``` which displays :math:`y = ax^2 + bx + c`. To display equations in their own line, use the following syntax::
 
   .. math::
@@ -123,11 +154,6 @@ Complex equations can be generated as well, since rst uses LaTeX math.
 
      n_{\rm{offset}} = \sum_{k=0}^{N-1} \frac{s_k}{n_k} \ln \left( \frac{k}{k!} \right)
 
-
-.. _equations:
-
-Equations
----------
 When introducing a new equation, Make sure to specify what the parameters in the equation mean. Once the equation has been introduced, its parameters do not need to be explained when displayed in the future. Use the following syntax for introducing equations::
 
     .. math::
@@ -142,7 +168,7 @@ When introducing a new equation, Make sure to specify what the parameters in the
   | :math:`r =` pipe radius
   | :math:`D =` pipe diameter
 
-The following equation uses the code from the block above except for ``:label: continuity_equation``, as it is an equation too minor to be referenced. Adding labels to equations is up to the discretion of the contributor.
+All equations that appear on their own are automatically numbered. If you wish to call an equation in a later section of the document or in another document, give it a label. In the example equation above, the label is given with the ``:label: continuity_equation`` line. The equation below uses the code from the block above except for this label, since this equation is too minor to be referenced later on.
 
   .. math::
 
@@ -182,12 +208,20 @@ The code block above generates the following table:
    "Smith", "John", 40
    "Smith", "John, Junior", 20
 
+Every table should have a reference, shown above as ``an_example_table``
+
 
 .. _links_and_references:
 
 Links and References for Documents, Figures, and Tables
 --------------------------------------------------------
-Links are fairly straightforward, use the following syntax, ```hyperlink word display <aguaclarareach.org>`_``, and look like this `hyperlink word display <https://www.aguaclarareach.org/>`_. References work by referencing any "target." There are two types of references, internal and external.
+Links are fairly straightforward, use the following syntax, ```hyperlink word display <aguaclarareach.org>`_``, and look like this `hyperlink word display <https://www.aguaclarareach.org/>`_. References work by referencing any "target." If you will be using the same link many times in a document, you can place this line at the end of the document::
+
+  .. _AguaClara Reach: aguaclarareach.org
+
+Now, the syntax ``AguaClara_`` will link to the specified site: AguaClara_
+
+There are two types of references, internal and external.
 
 Internal References
 ^^^^^^^^^^^^^^^^^^^^^
@@ -196,7 +230,7 @@ Internal references link to figures, tables, or headers that are in the same doc
 * Figures: ```fluffy_cat`_`` gives `fluffy_cat`_
 * Tables: ```an_example_table`_`` gives `an_example_table`_
 * Headers: ```How to use this file:`_`` gives `How to use this file:`_
-
+  * For this header reference, make sure that the header title is identical to the string of the link used in the reference call.
 
 External References
 ^^^^^^^^^^^^^^^^^^^^
@@ -207,6 +241,7 @@ These are references to documents, equations, figures, tables, or headers in ano
 * Figures: ``:numref:`continuity_pipes``` gives :numref:`continuity_pipes`
 * Tables: ``:numref:`dimension_table``` gives :numref:`dimension_table`
 * Headers: ``:ref:`what_is_rst``` gives :ref:`what_is_rst`
+  * This method of referencing headers uses a different call than the internal reference. To reference a header in an external document, you must call the reference directly before the header itself. For example, if you view the source code for this file, you will see that the header for this section, **Links and References for Documents, Figures, and Tables** is referenced by ``links_and_references``.
 
 This can be a figure :numref:`mountain_figure`, equation :eq:`quadratic`, or table :numref:`an_example_table`.
 
@@ -242,5 +277,6 @@ Assorted Other Convention
 -------------------------
 * Colored :red:`text`. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.
 
-  .. disqus::
+.. _AguaClara: http://aguaclara.cornell.edu/
 
+  .. disqus::
