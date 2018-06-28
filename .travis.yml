@@ -23,7 +23,6 @@ before_deploy:
     cargo install tectonic &&
     tectonic _build/latex/AguaClaraTextbook.tex &&
     zip -r _build/zipped_latex.zip _build/latex/*
-
 deploy:
   - provider: pages
     skip-cleanup: true
