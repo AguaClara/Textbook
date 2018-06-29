@@ -51,7 +51,17 @@ We use Sphinx_ to build rst locally. Follow these steps to get Sphinx_ and run l
 
 Publishing Online
 -----------------
-To publish online, you need to submit a `pull request to master <https://github.com/AguaClara/Textbook/pulls>`_ and merge it in. Then Travis will build the site using Sphinx_, and if there aren't any errors, upload it to the gh_pages branch. We used `this guide <https://gist.github.com/brenns10/f48e1021e8befd2221a2>`_ to set up Travis.
+To publish online, you need to:
+
+#. Submit a `pull request to master <https://github.com/AguaClara/Textbook/pulls>`_. You'll need to ask for someone else to review your work at this stage- "request reviewers".
+#.  Travis will build the site using Sphinx_, and if there aren't any errors, Travis will report success to GitHub on the "checks" part of the pull request.
+#. You'll need one other person to review and approve your commit before the merge is allowed.
+#. Once the PR passes Travis and is approved by another author, feel free to "merge to master."
+#. To release the master branch, (build the html, pdf, and latex, and upload the pdf to Pages) you'll need to publish a `GitHub release <https://github.com/AguaClara/Textbook/releases/new>`_. Include a `semver <https://semver.org/>`_ version number as the tag (under "Tag: Choose or create"), and a brief description of the updates under "Release Title". Finally, for the description, detail the changes as much as you see fit and when ready, hit "Publish release". Example:
+  * Tag name: 0.1.5
+  * Release title: Filtration section maintenance
+  * Description: Added filter code from aide_design 0.2.6. Also updated all broken external links.
+#. Travis will rebuild the site and push the html to Pages, and the PDF and LaTeX to GitHub Releases under the tag name.
 
 .. important:: If your changes to the master branch aren't pushing to gh-pages, then check the status of the `Travis build here <https://travis-ci.org/AguaClara/Textbook>`_.
 

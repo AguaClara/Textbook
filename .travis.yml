@@ -17,9 +17,23 @@ script:
   - make html
   - make doctest
   - htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html"
+before_deploy:
+  - if [ -n $TRAVIS_TAG -a $TRAVIS_BRANCH = "master" ] ; then ./build_pdf.sh; fi; # If this is tagged, build the latex and the pdf to be released.
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep-history: true
-  local-dir: _build/html
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    keep-history: true
+    local-dir: _build/html
+    on:
+      tags: true
+      branch: master
+  - provider: releases
+    api_key: $GITHUB_TOKEN
+    file:
+      - _build/AguaClaraTextbook.pdf
+      - _build/zipped_latex.zip
+    skip_cleanup: true
+    on:
+      tags: true
+      branch: master

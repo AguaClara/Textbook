@@ -27,3 +27,10 @@ This is a place holder for 'Chapter 1: Introduction' files
 
    Fluids_Review/Fluids_Review_Design.rst
    Fluids_Review/Fluids_Review_Derivations.rst
+
+
+`PDF and LaTeX versions <https://github.com/AguaClara/Textbook/releases/latest>`_ [#pdf_warning]_.
+
+.. rubric:: **Notes**
+
+.. [#pdf_warning] PDF and LaTeX versions may contain visual oddities because it is generated automatically. The website is the recommended way to read this textbook. `Please visit our GitHub site <https://github.com/AguaClara/Textbook>`_ to submit an issue, contribute, or comment.
