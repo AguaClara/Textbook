@@ -3,117 +3,74 @@
 ************************
 Fluids Review  Design
 ************************
-
-
-
-Welcome to the **first** summary sheet of CEE 4540! These documents will
-be guides and references for you throughout the semester. Since
-Professor Monroe’s class time is limited, so too is the amount of
-material he can fit on the slides while ensuring that they remain
-understandable. Thus, these summary sheets will supplement the
-powerpoints by going into further detail on the course concepts
-introduced in the slides.
-
-Equations, universal constants, and other helpful goodies can be found
-in the `aide_design repository on
-GitHub <https://github.com/AguaClara/aide_design/tree/master/aide_design>`_.
-Most equations and constants you find in these summary sheets will
-already have been coded into aide_design, and will be shown here in the
-following format:
-
-| Variable: ``pc.gravity``
-| Function: ``pc.area_circle(DiamCircle)``.
-
-The letters before the ``.``, in this case ``pc``, indicate the file
-within aide_design where the variable or function can be found. In the
-examples above, ``pc.gravity`` and ``pc.area_circle(DiamCircle)`` show
-that the variable ``gravity`` and function ``area_circle(DiamCicle)``
-are located inside the
-`physchem.py <https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py>`__
-(``pc``) file. You are strongly recommended to look up any aide_design
-equations you plan to use within in their aide_design file before using
-them, even if they are given here in this summary sheet. This is because
-each equation has comments in its original file describing what the
-specific conditions are to using it.
-
-For the most part, `hyperlinks in these documents will contain
-supplementary information <http://likethis.com/>`__. The information
-contained in the linked external sites is there in case you don’t feel
-completely comfortable with a concept, but is not necessary to learn
-thoroughly and will not be tested.
-
---------------
-
-
-Section: Fluids Review
-========================
-
 This section is meant to be a refresher on fluid mechanics. It will only cover the topics of fluids mechanics that will be used heavily in the course.
 
-If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_. If you wish to review from the textbook used in CEE 3310, the intro to fluid mechanics course at Cornell, you can find a pdf of the book `here <https://hellcareers.files.wordpress.com/2016/01/fluid-mechanics-seventh-edition-by-frank-m-white.pdf>`_.
+If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_. If you wish to review from a legitimate textbook, you can find a pdf of good book by Frank White `here <https://hellcareers.files.wordpress.com/2016/01/fluid-mechanics-seventh-edition-by-frank-m-white.pdf>`_.
 
-Important Terms
------------------
 
-1. Head
-2. Streamline
-3. Head loss
-4. Laminar
-5. Turbulent
-6. Moody Diagram
-7. Viscosity
-8. Driving head
-9. Vena Contracta/Coefficient of Contraction
 
-Important Equations
---------------------
+.. _fluids_terms_eqs:
 
-1. Bernoulli equation
-2. Energy equation
-3. Darcy-Weisbach equation
-4. Reynolds number
-5. Swamee-Jain equation
-6. Hagen-Poiseuille equation
-7. Orifice equation
+Important Terms and Equations
+==============================
+Terms:
+
+#. Head
+#. Streamline
+#. Head loss
+#. Laminar
+#. Turbulent
+#. Moody Diagram
+#. Viscosity
+#. Driving head
+#. Vena Contracta/Coefficient of Contraction
+
+Equations:
+
+#. Bernoulli equation
+#. Energy equation
+#. Darcy-Weisbach equation
+#. Reynolds number
+#. Swamee-Jain equation
+#. Hagen-Poiseuille equation
+#. Orifice equation
+
+
+
+.. _introductory_concepts:
 
 Introductory Concepts
 =======================
+Before diving in to the rest of the fluids review document, there are a few important concepts which will be the foundation for building your understanding of fluid mechanics. One must walk before they can run, and similarly, the basics of fluid mechanics must be understood before moving on to the more fun sections of this document.
 
-Before diving in, there are a few important concepts which will be the
-foundation for building your understanding of fluid mechanics. One must
-walk before they can run, and similarly, the basics of fluid mechanics
-must be understood before moving on to the more fun sections of this
-document.
+
+.. _continuity_equation:
 
 Continuity Equation
 ----------------------
+Continuity is simply an application of mass balance to fluid mechanics. It states that the cross sectional area :math:`A` that a fluid flows through multiplied by the fluid’s average flow velocity :math:`\bar v` must equal the fluid’s flow rate :math:`Q`:
 
-Continuity is simply an application of mass balance to fluid mechanics.
-It states that the cross sectional area :math:`A` that a fluid flows
-through multiplied by the fluid’s average flow velocity :math:`\bar v`
-must equal the fluid’s flow rate :math:`Q`:
+.. math::
 
-    .. math::
-
-      Q = \bar v A
+    Q = \bar v A
 
 .. note:: The line above the :math:`v` is called a ‘bar,’ and represents an average. Any variable can have a bar. In this case, we are adding the bar to velocity :math:`v`, turning it into average velocity :math:`\bar v`. This variable is pronounced ‘v bar.’
 
 In CEE 4540, we deal primarily with flow through pipes. For a circular pipe, :math:`A = \pi r^2`. Substituting diameter in for radius, :math:`r = \frac{D}{2}`, we get :math:`A = \frac{\pi D^2}{4}`. You will often see this form of the continuity equation being used to relate the flow rate in a pipe to the fluid velocity and pipe diameter:
 
-    .. math::
+.. math::
 
-      Q = \bar v \frac{\pi D^2}{4}
+    Q = \bar v \frac{\pi D^2}{4}
 
 The continuity equation is also useful when flow is going from one geometry to another. In this case, the flow in one geometry must be the same as the flow in the other, :math:`Q_1 = Q_2`, which yields the following equations:
 
-    .. math::
+.. math::
 
-      \bar v_1 A_1 = \bar v_2 A_2
+    \bar v_1 A_1 = \bar v_2 A_2
 
-    .. math::
+.. math::
 
-      \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
+    \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
 
 | Such that:
 | :math:`Q =` fluid flow rate
@@ -125,32 +82,34 @@ The continuity equation is also useful when flow is going from one geometry to a
 
 An example of changing flow geometries is when the a change in pipe size occurs in a circular piping system, as is demonstrated below. The flow through :math:`{\rm pipe} \, 1` must be the same as the flow through :math:`{\rm pipe} \, 2`.
 
-    .. _continuity_pipes:
-    .. figure:: Images/continuity_pipes.png
-        :width: 700px
-        :align: center
-        :alt: internal figure
+.. _continuity_pipes:
+.. figure:: Images/continuity_pipes.png
+    :width: 700px
+    :align: center
+    :alt: internal figure
 
-        Flow going from a small diameter pipe to a large one. The flow through each pipe must be the same.
+    Flow going from a small diameter pipe to a large one. The flow through each pipe must be the same.
+
+
+.. _laminar_and_turbulent_flow:
 
 Laminar and Turbulent Flow
 ---------------------------
-
 Considering that this class deals with the flow of water through a water treatment plant, understanding the characteristics of the flow is very important. Thus, it is necessary to understand the most common characteristic of fluid flow: whether it is laminar or turbulent. `Laminar <https://en.wikipedia.org/wiki/Laminar_flow>`_ flow is very smooth and highly ordered. `Turbulent <https://en.wikipedia.org/wiki/Turbulence>`_ flow is chaotic, messy, and disordered. The best way to understand each flow and what it looks like is visually, `like in this video <https://youtu.be/qtvVN2qt968?t=131>`_ or the wikipedia image below. Please ignore the part of the video after the image of the tap.
 
+.. _wikipedia_laminar_turbulent:
+.. figure:: Images/Wikipedia_laminar_turbulent.png
+    :width: 400px
+    :align: center
+    :alt: Laminar flow, turbulent flow, and the transition
 
-    .. _wikipedia_laminar_turbulent:
-    .. figure:: Images/Wikipedia_laminar_turbulent.png
-        :width: 400px
-        :align: center
-        :alt: internal figure
-
+    This is a beautiful example of the difference between ordered, smooth laminar and chaotic turbulent flow.
 
 A numeric way to determine whether flow is laminar or turbulent is by finding the `Reynolds number <https://en.wikipedia.org/wiki/Reynolds_number>`_, :math:`{\rm Re}`. The Reynolds number is a dimensionless parameter that compares inertia, represented by the average flow velocity :math:`\bar v` times a length scale :math:`D` to `viscosity <https://en.wikipedia.org/wiki/Viscosity>`_, represented by the kinematic viscosity :math:`\nu`. `Click here <https://www.youtube.com/watch?v=DVQw0svRHZA>`_ for a brief video explanation of viscosity. If the Reynolds number is less than 2,100 the flow is considered laminar. If it is more than a certain value, it is considered turbulent.
 
-    .. math::
+.. math::
 
-      {\rm Re = \frac{inertia}{viscosity}} = \frac{\bar vD}{\nu}
+    {\rm Re = \frac{inertia}{viscosity}} = \frac{\bar vD}{\nu}
 
 `There is a transition between laminar and turbulent flow which is not yet well understood <https://en.wikipedia.org/wiki/Laminar%E2%80%93turbulent_transition>`_. To simplify this phenomenon and make it possible to code for laminar or turbulent flow, we assume that the transition occurs at :math:`\rm{Re} = 2100`. The flow regime is assumed to be laminar below this value and turbulent above it. This variable is coded into aide_design as ``pc.RE_TRANSITION_PIPE``. We will neglect transitional flow.
 
@@ -158,9 +117,9 @@ Fluid can flow through very many different geometries like a pipe, a rectangular
 
 Here are other commonly used forms of the Reynolds number equation. They are the same as the one above, just with the substitutions :math:`Q = \bar v \frac{\pi D^2}{4}` and :math:`\nu = \frac{\mu}{\rho}`
 
-    .. math::
+.. math::
 
-      {\rm{Re}} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}
+    {\rm{Re}} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}
 
 | Such that:
 | :math:`Q` = fluid flow rate in pipe
@@ -171,231 +130,130 @@ Here are other commonly used forms of the Reynolds number equation. They are the
 
 .. seealso:: **Function in aide_design:** ``pc.re_pipe(FlowRate, Diam, Nu)`` Returns the Reynolds number *in a circular pipe*. Functions for finding the Reynolds number through other conduits and geometries can also be found in `physchem.py <https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py>`_ within aide_design.
 
-**Note:** Laminar and turbulent flow are described as two different
-**flow regimes**. When there is a characteristic of flow and different
-categories of the characteristic, each category is referred to as a flow
-regime. For example, the Reynolds number describes a flow
-characteristic, and its categories, referred to as flow regimes, are
-laminar or turbulent.
+.. note:: Laminar and turbulent flow are described as two different **flow regimes**. When there is a characteristic of flow and different categories of the characteristic, each category is referred to as a flow regime. For example, the Reynolds number describes a flow characteristic, and its categories, referred to as flow regimes, are laminar or turbulent.
+
+
+.. _streamlines-and_control_volumes:
 
 Streamlines and Control Volumes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
+Both `streamlines <https://en.wikipedia.org/wiki/Streamlines,_streaklines,_and_pathlines>`_ and **control volumes** are tools to compare different sections of a system. For this class, this system will always be hydraulic.
 
-Both
-`streamlines <https://en.wikipedia.org/wiki/Streamlines,_streaklines,_and_pathlines>`__
-and **control volumes** are tools to compare different sections of a
-system. For this class, this system will always be hydraulic.
+Imagine water flowing through a pipe. A streamline is the path that a particle would take if it could be placed in the fluid without changing the original flow of the fluid. A more technical definition is “a line which is everywhere parallel to the local velocity vector.” Computational tools, `dyes (in water) <https://proxy.duckduckgo.com/iur/?f=1&image_host=http%3A%2F%2Fwww.nuclear-power.net%2Fwp-content%2Fuploads%2F2016%2F05%2FFlow-Regime.png%3F4b884b&u=https://www.nuclear-power.net/wp-content/uploads/2016/05/Flow-Regime.png?4b884b>`_, or `smoke (in air) <https://www.youtube.com/watch?v=E9ZSAX56m0E&t=59s>`_ can be used to visualize streamlines.
 
-Imagine water flowing through a pipe. A streamline is the path that a
-particle would take if it could be placed in the fluid without changing
-the original flow of the fluid. A more technical definition is “a line
-which is everywhere parallel to the local velocity vector.”
-Computational tools, `dyes (in
-water) <https://proxy.duckduckgo.com/iur/?f=1&image_host=http%3A%2F%2Fwww.nuclear-power.net%2Fwp-content%2Fuploads%2F2016%2F05%2FFlow-Regime.png%3F4b884b&u=https://www.nuclear-power.net/wp-content/uploads/2016/05/Flow-Regime.png?4b884b>`__,
-or `smoke (in
-air) <https://www.youtube.com/watch?v=E9ZSAX56m0E&t=59s>`__ can be used
-to visualize streamlines.
+A control volume is just an imaginary 3-dimensional shape in space. Its boundaries can be placed anywhere by the person applying the control volume, and once set the boundaries remain fixed in space over time. These boundaries are usually chosen to compare two relevant surfaces to each other. The entirety of a control volume is usually not shown, as it is often unnecessary. This is shown in the following image:
 
-A control volume is just an imaginary 3-dimensional shape in space. Its
-boundaries can be placed anywhere by the person applying the control
-volume, and once set the boundaries remain fixed in space over time.
-These boundaries are usually chosen to compare two relevant surfaces to
-each other. The entirety of a control volume is usually not shown, as it
-is often unnecessary. This is shown in the following image:
+.. _control_volume_simplification:
+.. figure:: Images/control_volume_simplification.png
+    :width: 650px
+    :align: center
+    :alt: Control volume simplification
 
-.. raw:: html
+    While the image on the left indicates a complete control volume, control volumes are usually shortened to only include the relevant surfaces, in which the control volume intersects the fluid. This is shown in the image on the right.
 
-   <center>
+.. important:: Many images will be used over the course of this class to show hydraulic systems. A standardized system of lines will be used throughout them all to distinguish reference elevations from control volumes from streamlines. This system is described in the image below.
 
-.. raw:: html
+.. _image_control_volumes:
+.. figure:: Images/image_control_volumes.png
+    :width: 650px
+    :align: center
+    :alt: Image control volumes
 
-   </center>
+    A convention for figure control volume and streamlines will be very helpful throughout this course.
 
-**Important Note:** Many images will be used over the course of this
-class to show hydraulic systems. A standardized system of lines will be
-used throughout them all to distinguish reference elevations from
-control volumes from streamlines. This system is described in the image
-below.
 
-.. raw:: html
 
-   <center>
-
-.. raw:: html
-
-   </center>
+.. _bernoulli_and_energy_equations:
 
 The Bernoulli and Energy Equations
-----------------------------------
+==================================
+As explained in CEE 3310 with more details than most of you wanted to know, the Bernoulli and energy equations are incredibly useful in understanding the transfer of the fluid’s energy throughout a streamline or through a control volume. The Bernoulli equation applies to two different points along one streamline, whereas the energy equation applies across a control volume. The energy of a fluid has three forms: pressure, potential (deriving from elevation), and kinetic (deriving from velocity).
 
-As explained in CEE 3310 with more details than most of you wanted to
-know, the Bernoulli and energy equations are incredibly useful in
-understanding the transfer of the fluid’s energy throughout a streamline
-or through a control volume. The Bernoulli equation applies to two
-different points along one streamline, whereas the energy equation
-applies across a control volume. The energy of a fluid has three forms:
-pressure, potential (deriving from elevation), and kinetic (deriving
-from velocity).
+
+.. _bernoulli_equation:
 
 The Bernoulli Equation
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
+These three forms of energy expressed above make up the Bernoulli equation:
 
-These three forms of energy expressed above make up the Bernoulli
-equation:
+.. math::
 
-.. math:: \frac{p_1}{\rho g} + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{v_2^2}{2g}
+    \frac{p_1}{\rho g} + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{v_2^2}{2g}
 
 | Such that:
-| :math:`p` = pressure, :math:`\frac{[M]}{[L] \cdot [T]^2}`
-| :math:`\rho` = fluid density, :math:`\frac{[M]}{[L]^3}`
-| :math:`g` = acceleration due to gravity, :math:`\frac{[L]}{[T]^2}`, in
-  aide_design as ``pc.gravity``
-| :math:`z` = elevation relative to a reference, :math:`[L]`
-| :math:`v` = fluid velocity, :math:`\frac{[L]}{[T]}`
-| Where letters in brackets specify units:
-| :math:`[M]` = mass
-| :math:`[L]` = length
-| :math:`[T]` = time
+| :math:`p` = pressure
+| :math:`\rho` = fluid density
+| :math:`g` = acceleration due to gravity, in aide_design as ``pc.gravity``
+| :math:`z` = elevation relative to a reference
+| :math:`v` = fluid velocity
 
-Notice that each term in this form of the Bernoulli equation has units
-of :math:`[L]`, even though the terms represent the energy of water,
-which has units of :math:`\frac{[M] \cdot [L]^2}{[T]^2}`. When energy of
-water is described in units of length, the term used is called **head**.
+Notice that each term in this form of the Bernoulli equation has units of :math:`[L]`, even though the terms represent the energy of water, which has units of :math:`\frac{[M] \cdot [L]^2}{[T]^2}`. When energy of water is described in units of length, the term used is called **head**.
 
-There are two important distinctions to keep in mind when using head to
-talk about energy. First is that head is dependent on the density of the
-fluid under consideration. Take mercury, for example, which is around
-13.6 times more dense than water. 1 meter of mercury head is therefore
-equivalent to around 13.6 meters of water head. Second is that head is
-independent of the amount of fluid being considered, *as long as all the
-fluid is the same density*. Thus, raising 1 liter of water up by one
-meter and raising 100 liters of water up by one meter are both
-equivalent to giving the water 1 meter of water head, even though it
-requires 100 times more energy to raise the hundred liters than to raise
-the single liter. Since we are concerned mainly with water in this
-class, we will refer to ‘water head’ simply as ‘head’.
+There are two important distinctions to keep in mind when using head to talk about energy. First is that head is dependent on the density of the fluid under consideration. Take mercury, for example, which is around 13.6 times more dense than water. 1 meter of mercury head is therefore equivalent to around 13.6 meters of water head. Second is that head is independent of the amount of fluid being considered, *as long as all the fluid is the same density*. Thus, raising 1 liter of water up by one meter and raising 100 liters of water up by one meter are both equivalent to giving the water 1 meter of water head, even though it requires 100 times more energy to raise the hundred liters than to raise the single liter. Since we are concerned mainly with water in this class, we will refer to ‘water head’ simply as ‘head’.
 
-Going back to the Bernoulli equation, the :math:`\frac{p}{\rho g}` term
-is called the pressure head, :math:`z` the elevation head, and
-:math:`\frac{v^2}{2g}` the velocity head. The following diagram shows
-these various forms of head via a 1 meter deep bucket (left) and a jet
-of water shooting out of the ground (right).
+Going back to the Bernoulli equation, the :math:`\frac{p}{\rho g}` term is called the pressure head, :math:`z` the elevation head, and :math:`\frac{v^2}{2g}` the velocity head. The following diagram shows these various forms of head via a 1 meter deep bucket (left) and a jet of water shooting out of the ground (right).
 
-.. raw:: html
+.. _different_forms_of_head:
+.. figure:: Images/different_forms_of_head.png
+    :width: 650px
+    :align: center
+    :alt: Different forms of head
 
-   <center>
-
-.. raw:: html
-
-   </center>
+    The three forms of hydraulic head.
 
 Assumption in using the Bernoulli equation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Though there are `many assumptions needed to confirm that the Bernoulli
-equation can be
-used <https://en.wikipedia.org/wiki/Bernoulli%27s_principle#Incompressible_flow_equation>`__,
-the main one for the purpose of this class is that energy is not gained
-or lost throughout the streamline being considered. If we consider more
-precise fluid mechanics terminology, then “friction by viscous forces
-must be negligible.” What this means is that the fluid along the
-streamline being considered is not losing energy to viscosity. Energy
-can only be transferred between its three forms if this equation is to
-be used, it can’t be gained or lost.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Though there are `many assumptions needed to confirm that the Bernoulli equation can be used <https://en.wikipedia.org/wiki/Bernoulli%27s_principle#Incompressible_flow_equation>`_, the main one for the purpose of this class is that energy is not gained or lost throughout the streamline being considered. If we consider more precise fluid mechanics terminology, then “friction by viscous forces must be negligible.” What this means is that the fluid along the streamline being considered is not losing energy to viscosity. Energy can only be transferred between its three forms if this equation is to be used, it can’t be gained or lost.
 
 Example problems
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
+`Here is a simple worksheet with very straightforward example problems using the Bernoulli equation. <https://www.teachengineering.org/content/cub_/lessons/cub_bernoulli/cub_bernoulli_lesson01_bepworksheetas_draft4_tedl_dwc.pdf>`_ Note that the solutions use the pressure-form of the Bernoulli equation. This just means that every term in the equation is multiplied by :math:`\rho g`, so the pressure term is just :math:`P`. The form of the equation does not affect the solution to the problem it helps solved.
 
-`Here is a simple worksheet with very straightforward example problems
-using the Bernoulli
-equation. <https://www.teachengineering.org/content/cub_/lessons/cub_bernoulli/cub_bernoulli_lesson01_bepworksheetas_draft4_tedl_dwc.pdf>`__
-Note that the solutions use the pressure-form of the Bernoulli equation.
-This just means that every term in the equation is multiplied by
-:math:`\rho g`, so the pressure term is just :math:`P`. The form of the
-equation does not affect the solution to the problem it helps solved.
+
+.. _energy_equation:
 
 The Energy Equation
-^^^^^^^^^^^^^^^^^^^
+-------------------
+The assumption necessary to use the Bernoulli equation, which is stated above, represents the key difference between the Bernoulli equation and the energy equation for the purpose of this class. The energy equation accounts for the (L)oss of energy from both the fluid flowing, :math:`h_L`, and any other energy drain, like the charging of a (T)urbine, :math:`h_T`. It also accounts for any energy inputs into the system, :math:`h_P`, which is usually caused by a (P)ump within the control volume.
 
-The assumption necessary to use the Bernoulli equation, which is stated
-above, represents the key difference between the Bernoulli equation and
-the energy equation for the purpose of this class. The energy equation
-accounts for the (L)oss of energy from both the fluid flowing,
-:math:`h_L`, and any other energy drain, like the charging of a
-(T)urbine, :math:`h_T`. It also accounts for any energy inputs into the
-system, :math:`h_P`, which is usually caused by a (P)ump within the
-control volume.
+.. math::
 
-.. math:: \frac{p_{1}}{\rho g} + z_{1} + \alpha_{1} \frac{\bar v_{1}^2}{2g} + h_P = \frac{p_{2}}{\rho g} + z_{2} + {\alpha_{2}} \frac{\bar v_{2}^2}{2g} + h_T + h_L
+    \frac{p_{1}}{\rho g} + z_{1} + \alpha_{1} \frac{\bar v_{1}^2}{2g} + h_P = \frac{p_{2}}{\rho g} + z_{2} + {\alpha_{2}} \frac{\bar v_{2}^2}{2g} + h_T + h_L
 
-You’ll also notice the :math:`\alpha` term attached to the velocity
-head. This is a correction factor for kinetic energy, and will be
-neglected in this class. If you wish to learn more about the correction
-factors, `click here to sate your
-curiosity <http://nptel.ac.in/courses/105106114/pdfs/Unit6/6_1.pdf>`__.
-In the Bernoulli equation, the velocity of the streamline of water is
-considered, :math:`v`. The energy equation, however compares control
-surfaces instead of streamlines, and the velocities across a control
-surface many not all be the same. Hence, :math:`\bar v` is used to
-represent the average velocity. Since AguaClara does not use pumps nor
-turbines, :math:`h_P = h_T = 0`. With these simplifications, the energy
-equation can be written as follows:
+You’ll also notice the :math:`\alpha` term attached to the velocity head. This is a correction factor for kinetic energy, and will be neglected in this class. If you wish to learn more about the correction factors, `click here to sate your curiosity <http://nptel.ac.in/courses/105106114/pdfs/Unit6/6_1.pdf>`_. In the Bernoulli equation, the velocity of the streamline of water is considered, :math:`v`. The energy equation, however compares control surfaces instead of streamlines, and the velocities across a control surface many not all be the same. Hence, :math:`\bar v` is used to represent the average velocity. Since AguaClara does not use pumps nor turbines, :math:`h_P = h_T = 0`. With these simplifications, the energy equation can be written as follows:
 
-.. math:: \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
+.. math::
 
-**This is the form of the energy equation that you will see over and
-over again in CEE 4540.** To summarize, the main difference between the
-Bernoulli equation and the energy equation for the purposes of this
-class is energy loss. The energy equation accounts for the fluid’s loss
-of energy over time while the Bernoulli equation does not. So how can
-the fluid lose energy?
+    \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
 
-Head Loss
----------
+**This is the form of the energy equation that you will see over and over again in CEE 4540.** To summarize, the main difference between the Bernoulli equation and the energy equation for the purposes of this class is energy loss. The energy equation accounts for the fluid’s loss of energy over time while the Bernoulli equation does not. So how can the fluid lose energy?
 
-**Head (L)oss**, :math:`h_L` is a term that is ubiquitous in both this
-class and fluid mechanics in general. Its definition is exactly as it
-sounds: it refers to the loss of energy of a fluid as it flows through
-space. There are two components to head loss: major losses caused by
-pipe-fluid (f)riction, :math:`h_{\rm{f}}`, and minor losses caused by
-fluid-fluid friction resulting from flow (e)xpansions, :math:`h_e`, such
-that :math:`h_L = h_{\rm{f}} + h_e`.
+
+
+.. _headloss:
+
+Headloss
+=========
+**Head(L)oss**, :math:`h_L` is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through space. There are two components to head loss: major losses caused by pipe-fluid (f)riction, :math:`h_{\rm{f}}`, and minor losses caused by fluid-fluid friction resulting from flow (e)xpansions, :math:`h_e`, such that :math:`h_L = h_{\rm{f}} + h_e`.
+
+
+.. _major_losses:
 
 Major Losses
-^^^^^^^^^^^^
+-------------
+These losses are the result of friction between the fluid and the surface over which the fluid is flowing. A force acting parallel to a surface is referred to as `shear <https://en.wikipedia.org/wiki/Shear_force>`_. It can therefore be said that major losses are the result of shear between the fluid and the surface it’s flowing over. To help in understanding major losses, consider the following example: imagine, as you have so often in physics class, pushing a large box across the ground. Friction is what resists your efforts to push the box. The farther you push the box, the more energy you expend pushing against friction. The same is true for water moving through a pipe, where water is analogous to the box you want to move, the pipe is similar to the floor that provides the friction, and the major losses of the water through the pipe is analogous to the energy **you** expend by pushing the box.
 
-These losses are the result of friction between the fluid and the
-surface over which the fluid is flowing. A force acting parallel to a
-surface is referred to as
-`shear <https://en.wikipedia.org/wiki/Shear_force>`__. It can therefore
-be said that major losses are the result of shear between the fluid and
-the surface it’s flowing over. To help in understanding major losses,
-consider the following example: imagine, as you have so often in physics
-class, pushing a large box across the ground. Friction is what resists
-your efforts to push the box. The farther you push the box, the more
-energy you expend pushing against friction. The same is true for water
-moving through a pipe, where water is analogous to the box you want to
-move, the pipe is similar to the floor that provides the friction, and
-the major losses of the water through the pipe is analogous to the
-energy **you** expend by pushing the box.
+In this class, we will be dealing primarily with major losses in circular pipes, as opposed to channels or pipes with other geometries. Fortunately for us, Henry Darcy and Julius Weisbach came up with a handy equation to determine the major losses in a circular pipe *under both laminar and turbulent flow conditions*. Their equation is logically but unoriginally named the `Darcy-Weisbach equation <https://en.wikipedia.org/wiki/Darcy%E2%80%93Weisbach_equation>`_ and is shown below:
 
-In this class, we will be dealing primarily with major losses in
-circular pipes, as opposed to channels or pipes with other geometries.
-Fortunately for us, Henry Darcy and Julius Weisbach came up with a handy
-equation to determine the major losses in a circular pipe *under both
-laminar and turbulent flow conditions*. Their equation is logically but
-unoriginally named the `Darcy-Weisbach
-equation <https://en.wikipedia.org/wiki/Darcy%E2%80%93Weisbach_equation>`__
-and is shown below:
+.. math::
 
-.. math:: h_{\rm{f}} \, = \, {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}
+    h_{\rm{f}} \, = \, {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}
 
-Substituting the continuity equation :math:`Q = \bar vA` in the form of
-:math:`\bar v^2 = \frac{16Q^2}{\pi^2 D^4}` gives another, equivalent
-form of Darcy-Weisbach which uses flow, :math:`Q`, instead of velocity,
-:math:`\bar v`:
+Substituting the continuity equation :math:`Q = \bar vA` in the form of :math:`\bar v^2 = \frac{16Q^2}{\pi^2 D^4}` gives another, equivalent form of Darcy-Weisbach which uses flow, :math:`Q`, instead of velocity, :math:`\bar v`:
 
-.. math:: h_{\rm{f}} \, = \,{\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}
+.. math::
+
+    h_{\rm{f}} \, = \,{\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}
 
 | Such that:
 | :math:`h_{\rm{f}}` = major loss, :math:`[L]`
@@ -404,87 +262,69 @@ form of Darcy-Weisbach which uses flow, :math:`Q`, instead of velocity,
 | :math:`Q` = pipe flow rate, :math:`\frac{[L]^3}{[T]}`
 | :math:`D` = pipe diameter, :math:`[L]`
 
-**Function in aide_design:**
-``pc.headloss_fric(FlowRate, Diam, Length, Nu, PipeRough)`` Returns only
-major losses. Works for both laminar and turbulent flow.
+.. seealso:: **Function in aide_design:** ``pc.headloss_fric(FlowRate, Diam, Length, Nu, PipeRough)`` Returns only major losses. Works for both laminar and turbulent flow.
 
-Darcy-Weisbach is wonderful because it applies to both laminar and
-turbulent flow regimes and contains relatively easy to measure
-variables. The one exception is the Darcy friction factor,
-:math:`\rm{f}`. This parameter is an approximation for the magnitude of
-friction between the pipe walls and the fluid, and its value changes
-depending on the whether or not the flow is laminar or turbulent, and
-varies with the Reynolds number in both flow regimes.
+Darcy-Weisbach is wonderful because it applies to both laminar and turbulent flow regimes and contains relatively easy to measure variables. The one exception is the Darcy friction factor, :math:`\rm{f}`. This parameter is an approximation for the magnitude of friction between the pipe walls and the fluid, and its value changes depending on the whether or not the flow is laminar or turbulent, and varies with the Reynolds number in both flow regimes.
 
-For laminar flow, the friction factor can be determined from the
-following equation:
+For laminar flow, the friction factor can be determined from the following equation:
 
-.. math:: {\rm{f}} = \frac{64}{\rm{Re}}
+.. math::
 
-For turbulent flow, the friction factor is more difficult to determine.
-In this class, we will use the `Swamee-Jain
-equation <https://en.wikipedia.org/wiki/Darcy_friction_factor_formulae#Swamee%E2%80%93Jain_equation>`__:
+    {\rm{f}} = \frac{64}{\rm{Re}}
 
-.. math:: {\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}
+For turbulent flow, the friction factor is more difficult to determine. In this class, we will use the `Swamee-Jain equation <https://en.wikipedia.org/wiki/Darcy_friction_factor_formulae#Swamee%E2%80%93Jain_equation>`_:
+
+.. math::
+
+    {\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}
 
 | Such that:
 | :math:`\epsilon` = pipe roughness, :math:`[L]`
 | :math:`D` = pipe diameter, :math:`[L]`
 
-**Function in aide_design:** ``pc.fric(FlowRate, Diam, Nu, PipeRough)``
-Returns :math:`\rm{f}` for laminar *or* turbulent flow. For laminar
-flow, use ‘0’ for the ``PipeRough`` input.
+.. seealso:: **Function in aide_design:** ``pc.fric(FlowRate, Diam, Nu, PipeRough)`` Returns :math:`\rm{f}` for laminar *or* turbulent flow. For laminar flow, use ‘0’ for the ``PipeRough`` input.
 
-The simplicity of the equation for :math:`\rm{f}` during laminar flow
-allows for substitutions to create a very useful, simplified equation
-for major losses during laminar flow. This simplification combines the
-Darcy-Weisbach equation, the equation for the Darcy friction factor
-during laminar flow, and the Reynold’s number formula:
+The simplicity of the equation for :math:`\rm{f}` during laminar flow allows for substitutions to create a very useful, simplified equation for major losses during laminar flow. This simplification combines the Darcy-Weisbach equation, the equation for the Darcy friction factor during laminar flow, and the Reynold’s number formula:
 
-.. math:: h_{\rm{f}} \, = \,{\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}
+.. math::
 
-.. math:: {\rm{f}} = \frac{64}{\rm{Re}}
+    h_{\rm{f}} \, = \,{\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}
 
-.. math:: {\rm{Re}}=\frac{4Q}{\pi D\nu}
+.. math::
 
-To form the `Hagen-Poiseuille
-equation <https://en.wikipedia.org/wiki/Hagen%E2%80%93Poiseuille_equation>`__
-for major losses during laminar flow, and *only* during laminar flow:
+    {\rm{f}} = \frac{64}{\rm{Re}}
 
-.. math:: h_{\rm{f}} = \frac{128\mu L Q}{\rho g\pi D^4}
+.. math::
 
-.. math:: h_{\rm{f}} = \frac{32\nu L\bar v}{ g D^2}
+    {\rm{Re}}=\frac{4Q}{\pi D\nu}
 
-The significance of this equation lies in its relationship between
-:math:`h_{\rm{f}}` and :math:`Q`. Hagen-Poiseuille shows that the terms
-are directly proportional (:math:`h_{\rm{f}} \propto Q`) during laminar
-flow, while Darcy-Weisbach shows that :math:`h_{\rm{f}}` grows with the
-square of :math:`Q` during turbulent flow
-(:math:`h_{\rm{f}} \propto Q^2`). As you will soon see, minor losses,
-:math:`h_e`, will grow with the square of :math:`Q` in both laminar and
-turbulent flow. This has implications that will be discussed later, in
-the flow control section.
+To form the `Hagen-Poiseuille equation <https://en.wikipedia.org/wiki/Hagen%E2%80%93Poiseuille_equation>`_ for major losses during laminar flow, and *only* during laminar flow:
 
-In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental
-data, gathered by many people, on the Darcy-Weisbach friction factor to
-create what we now call the `Moody
-diagram <https://en.wikipedia.org/wiki/Moody_chart>`__. This diagram has
-the friction factor :math:`\rm{f}` on the left-hand y-axis, relative
-pipe roughness :math:`\frac{\epsilon}{D}` on the right-hand y-axis, and
-Reynolds number :math:`\rm{Re}` on the x-axis. The Moody diagram is an
-alternative to computational methods for finding :math:`\rm{f}`.
+.. math::
 
-.. raw:: html
+    h_{\rm{f}} = \frac{128\mu L Q}{\rho g\pi D^4}
 
-   <center>
+.. math::
 
-.. raw:: html
+    h_{\rm{f}} = \frac{32\nu L\bar v}{ g D^2}
 
-   </center>
+The significance of this equation lies in its relationship between :math:`h_{\rm{f}}` and :math:`Q`. Hagen-Poiseuille shows that the terms are directly proportional (:math:`h_{\rm{f}} \propto Q`) during laminar flow, while Darcy-Weisbach shows that :math:`h_{\rm{f}}` grows with the square of :math:`Q` during turbulent flow (:math:`h_{\rm{f}} \propto Q^2`). As you will soon see, minor losses, :math:`h_e`, will grow with the square of :math:`Q` in both laminar and turbulent flow. This has implications that will be discussed later, in the flow control section.
+
+In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gathered by many people, on the Darcy-Weisbach friction factor to create what we now call the `Moody diagram <https://en.wikipedia.org/wiki/Moody_chart>`_. This diagram has the friction factor :math:`\rm{f}` on the left-hand y-axis, relative pipe roughness :math:`\frac{\epsilon}{D}` on the right-hand y-axis, and Reynolds number :math:`\rm{Re}` on the x-axis. The Moody diagram is an alternative to computational methods for finding :math:`\rm{f}`.
+
+.. _moody:
+.. figure:: Images/moody.jpg
+    :width: 650px
+    :align: center
+    :alt: Moody diagram
+
+    This is the famous and famously useful Moody diagram.
+
+
+.. _minor_losses:
 
 Minor Losses
-^^^^^^^^^^^^
-
+-------------
 Unfortunately, there is no simple ‘pushing a box across the ground’
 example to explain minor losses. So instead, consider a `hydraulic
 jump <https://www.youtube.com/watch?v=5spXXZX55C8>`__. In the video, you

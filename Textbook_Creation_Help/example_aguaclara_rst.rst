@@ -3,7 +3,7 @@
 ***********************************************
 Functionality in RST and AguaClara Convention
 ***********************************************
-This file will explain how to use rst functionality including images, tables, code, equations, and both internal and cross-document refereces. Additionally, this document is intended to define convention for this textbook. Any syntax included in this document should be used when contributing to the textbook project. If you come across a function for which there is no convention, please include it here.
+This file will explain how to use RST functionality including images, tables, code, equations, and both internal and cross-document refereces. Additionally, this document is intended to define convention for this textbook project. Any syntax included in this document should be used when contributing to the textbook project. If you come across a function for which there is no convention, please edit this file to include it here.
 
 
 
@@ -13,22 +13,22 @@ How to use this file:
 =====================
 Open the source code of the file next to the rendered code. The source code is found by clicking "View page source" at the top of the page. Follow along with the source code and rendered code, using the source code as a reference for the proper syntax.
 
-.. important:: **Proper indentation and line spacing is extremely important**
+You will often see this format ``.. word::``. The 'word' in this case is called a directive. Directives are what RST uses to format text. Directives allow the inclusion of figures, math, tables, references, color, and much more.
 
-You will often see a format like this ``.. word::``. The 'word' in this case is called a directive. Directives are what rst uses to format text.
+.. important:: **Proper indentation and line spacing is extremely important when writing in RST**
 
 
 .. _code:
 
 Code
 ----
-You can write code in-line or as a code block. There are two ways of doing each. For inline code, use ````this syntax```` or ``:code:`this syntax```. For code blocks, use this syntax:
+You can write code in-line or as a code block. There are two ways of doing each. For in-line code, use ````this syntax```` or ``:code:`this syntax```. For code blocks, use this syntax:
+
+.. code::
 
   .. code::
 
-    .. code::
-
-      This is my code block.
+    This is my code block.
 
 Or this syntax::
 
@@ -41,27 +41,7 @@ Or this syntax::
 
 Headings
 -----------
-
-In order to write a title, you can either underline it or under and overline it. The following examples are correct titles.::
-
-  ******
-  Title
-  ******
-
-  subtitle
-  =========
-
-  subsubtitle
-  ------------
-  and so on
-
-Two rules:
-
-* If under and overline are used, their length must be identical
-* The length of the underline must be at least as long as the title itself
-
-Normally, there are no heading levels assigned to certain characters as the
-structure is determined from the succession of headings. However, it is better to stick to the same convention throughout a project. For instance, this is the convention for the AguaClara textbook:
+Headings are defined by an underline consisting of one of the following characters: ``*,  =,  -,  ^, and "``. RST does not give any particular character hierarchy over another for defining titles, sections, subsections, or so on. The user indicates character hierarchy for headings and can use whatever order they want, and the order can change between documents. However, it is better to stick to the same convention throughout a project. This is the convention for the AguaClara textbook:
 
 * `*` with overline, for document titles
 * `=`, for sections
@@ -69,21 +49,45 @@ structure is determined from the succession of headings. However, it is better t
 * `^`, for subsubsections
 * `"`, for subsubsubsections
 
-Each section and subsection should have a call reference before it, formatted like this::
+Each title, section and subsection should have a label before it, formatted like this ``.. _headings:``. There should always be a blank line between the label and the actual heading, else references to the label will not work. For the sake of document readability, include 3 blank lines before the section label and 2 blank lines before the subsection label. Lesser headings (subsubsections and beyond) do not need to have labels, and there should be one blank line between lower headings and the preceeding content. Here is an example. Note the amount and location of blank lines::
 
-    .. _headings:
+  .. _example_document_title:
 
-    Headings
-    -----------
+  ****************
+  Document Title
+  ****************
+  Words go here
 
-There should always be a blank line between the call reference and the actual heading, else the reference will not work. For the sake of document readability, include 3 blank lines before the reference to a section and 2 blank lines before the reference to a subsection. All lower headers should not have references, and there should be one blank line between lower headings and the preceeding content.
+
+
+  .. _example_section:
+
+  Section
+  =========
+  Words also go here
+
+
+  .. _example_subsection:
+
+  Subsection
+  ------------
+  and here
+
+  Subsubsection
+  ^^^^^^^^^^^^^^
+  Even more words
+
+Two rules:
+
+* If under and overline are used, their length must be identical
+* The length of the underline must be at least as long as the title itself
 
 
 .. _figures:
 
 Figures
 -------
-Every figure should have a label, alternative text, and a caption. The label is used to reference a figure and is written before the figure directive. Below, the two figures are labelled ``fluffy_cat`` and ``mountain_figure``. The alternative text is a desciption of the figure with few words. A caption is written below all of the figure specifications, with a blank line to separate the specs from the caption.
+Every figure should have a label, alternative text, and a caption. The label is used to reference a figure and is written before the figure directive. Below, the two figures are labelled ``fluffy_cat`` and ``mountain_figure``. The alternative text is a very short desciption of the figure. A caption is written below all of the figure specifications, with a blank line to separate the specs from the caption.
 
 Use the following syntax for including figures from online sources::
 
@@ -110,67 +114,54 @@ Use this syntax for figures located within the /Textbook repository on GitHub::
 
 Displayed below are the two figures generated using the code above.
 
-    .. _fluffy_cat:
-    .. figure:: https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg
-        :width: 200px
-        :align: center
-        :height: 100px
-        :alt: external figure
+.. _fluffy_cat:
+.. figure:: https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg
+    :width: 200px
+    :align: center
+    :height: 100px
+    :alt: external figure
 
-        This is a caption.
+    This is a caption.
 
-    .. _mountain_figure:
-    .. figure:: mountain.jpg
-        :width: 300px
-        :align: center
-        :alt: internal figure
+.. _mountain_figure:
+.. figure:: mountain.jpg
+    :width: 300px
+    :align: center
+    :alt: internal figure
 
-        Here is a figure labeled ``mountain``. Specify the figure location with folder/image.jpg.
-        The base directory for figure location is the directory of the file you are writing.
-        In this case, that is Textbook/Textbook_Creation_Help.
+    Here is a figure labeled ``mountain``. Specify the figure location with folder/image.jpg.
+    The base directory for figure location is the directory of the file you are writing.
+    In this case, that is Textbook/Textbook_Creation_Help.
 
 
 .. _math_and_equations:
 
 Math and Equations
 -------------------
-Math is very cool, and works natively in rst using LaTeX math syntax. In-line math can be written with the following syntax: ``:math:`y = ax^2 + bx + c``` which displays :math:`y = ax^2 + bx + c`. To display equations in their own line, use the following syntax::
+Math is very cool, and works natively in RST using LaTeX math syntax. In-line math can be written with the following syntax: ``:math:`y = ax^2 + bx + c``` which displays :math:`y = ax^2 + bx + c`. To display equations in their own line, use the following syntax::
 
   .. math::
-     :label: quadratic
+    :label: quadratic
 
-        y = ax^2 + bx + c
+      y = ax^2 + bx + c
 
 Which displays as:
 
   .. math::
-     :label: quadratic
+    :label: quadratic
 
-        y = ax^2 + bx + c
+      y = ax^2 + bx + c
 
-Complex equations can be generated as well, since rst uses LaTeX math.
+Complex equations can be generated as well, since RST uses LaTeX math.
 
   .. math::
 
-     n_{\rm{offset}} = \sum_{k=0}^{N-1} \frac{s_k}{n_k} \ln \left( \frac{k}{k!} \right)
+      n_{\rm{offset}} = \sum_{k=0}^{N-1} \frac{s_k}{n_k} \ln \left( \frac{k}{k!} \right)
 
 When introducing a new equation, Make sure to specify what the parameters in the equation mean. Once the equation has been introduced, its parameters do not need to be explained when displayed in the future. Use the following syntax for introducing equations::
 
-    .. math::
-      :label: continuity_equation
-
-         \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
-
-  | Such that:
-  | :math:`Q =` fluid flow rate
-  | :math:`\bar v =` fluid average velocity
-  | :math:`A =` pipe area
-  | :math:`r =` pipe radius
-  | :math:`D =` pipe diameter
-
-All equations that appear on their own are automatically numbered. If you wish to call an equation in a later section of the document or in another document, give it a label. In the example equation above, the label is given with the ``:label: continuity_equation`` line. The equation below uses the code from the block above except for this label, since this equation is too minor to be referenced later on.
-
   .. math::
+    :label: continuity_equation
 
       \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
 
@@ -180,6 +171,20 @@ All equations that appear on their own are automatically numbered. If you wish t
   | :math:`A =` pipe area
   | :math:`r =` pipe radius
   | :math:`D =` pipe diameter
+
+All equations that appear on their own are automatically numbered. If you wish to call an equation in a later section of the document or in another document, give it a label. In the example equation above, the label is given with the ``:label: continuity_equation`` line. The equation below uses the code from the block above.
+
+.. math::
+  :label: continuity_equation
+
+    \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
+
+| Such that:
+| :math:`Q =` fluid flow rate
+| :math:`\bar v =` fluid average velocity
+| :math:`A =` pipe area
+| :math:`r =` pipe radius
+| :math:`D =` pipe diameter
 
 
 .. _tables:
@@ -208,42 +213,40 @@ The code block above generates the following table:
    "Smith", "John", 40
    "Smith", "John, Junior", 20
 
-Every table should have a reference, shown above as ``an_example_table``
+Every table should have a label, shown above as ``an_example_table``
 
 
 .. _links_and_references:
 
 Links and References for Documents, Figures, and Tables
 --------------------------------------------------------
-Links are fairly straightforward, use the following syntax, ```hyperlink word display <aguaclarareach.org>`_``, and look like this `hyperlink word display <https://www.aguaclarareach.org/>`_. References work by referencing any "target." If you will be using the same link many times in a document, you can place this line at the end of the document::
+Links are fairly straightforward, use the following syntax, ```hyperlink word display <aguaclarareach.org>`_``, and look like this `hyperlink word display <https://www.aguaclarareach.org/>`_. If you will be using the same link many times in a document, you can place this line at the end of the document::
 
-  .. _AguaClara Reach: aguaclarareach.org
+  .. _AguaClara: http://aguaclara.cornell.edu/
 
 Now, the syntax ``AguaClara_`` will link to the specified site: AguaClara_
 
-There are two types of references, internal and external.
+References work by calling any "target. There are two types of references, internal and external. All types of call-able references can be accessed using their labels.
 
 Internal References
 ^^^^^^^^^^^^^^^^^^^^^
-Internal references link to figures, tables, or headers that are in the same document as the reference itself. All types of call-able references can be accessed using their labels, and they all follow the same syntax. Equations don't appear to be referencable by this syntax.
+Internal references link to figures, tables, or headings that are in the same document as the reference itself. They all follow the same syntax. Equations don't appear to be referencable by this syntax.
 
 * Figures: ```fluffy_cat`_`` gives `fluffy_cat`_
 * Tables: ```an_example_table`_`` gives `an_example_table`_
-* Headers: ```How to use this file:`_`` gives `How to use this file:`_
-  * For this header reference, make sure that the header title is identical to the string of the link used in the reference call.
+* Headings: ```How to use this file:`_`` gives `How to use this file:`_
+    * For this heading reference method, make sure that the heading string is identical to the call string.
 
 External References
 ^^^^^^^^^^^^^^^^^^^^
-These are references to documents, equations, figures, tables, or headers in another file in the textbook. Note that clicking these references will take you away from this document, necessarily.
+These are references to documents, equations, figures, tables, or headings in another file in the textbook. Note that clicking these references will take you away from this document, necessarily.
 
 * Documents: ``:ref:`rst_intro``` gives :ref:`rst_intro`
 * Equations: ``:eq:`orifice_equation``` only generates a number in parentheses. Thus, this reference should be preceeded by the word: 'equation.' Like this: equation :eq:`orifice_equation`
 * Figures: ``:numref:`continuity_pipes``` gives :numref:`continuity_pipes`
 * Tables: ``:numref:`dimension_table``` gives :numref:`dimension_table`
-* Headers: ``:ref:`what_is_rst``` gives :ref:`what_is_rst`
-  * This method of referencing headers uses a different call than the internal reference. To reference a header in an external document, you must call the reference directly before the header itself. For example, if you view the source code for this file, you will see that the header for this section, **Links and References for Documents, Figures, and Tables** is referenced by ``links_and_references``.
-
-This can be a figure :numref:`mountain_figure`, equation :eq:`quadratic`, or table :numref:`an_example_table`.
+* Headings: ``:ref:`what_is_rst``` gives :ref:`what_is_rst`
+    * To reference a heading in an external document, you must call the heading's label two lines above the heading itself. For example, if you view the source code for this file, you will see that the heading for this section, **Links and References for Documents, Figures, and Tables** is labelled ``links_and_references``.
 
 
 .. _python_and_doctests:
@@ -270,6 +273,7 @@ Python and Doctests
     2         Jill       Jack
 
 * To get doctests to pass through Travis, you'll have to add any packages you use to the install step in ".travis.yml". Under install, add a line that says :code:`pip install my_package==0.0.0`. When doing this, make sure to specify the version as functionality can change!
+
 
 .. _assorted_convention:
 
