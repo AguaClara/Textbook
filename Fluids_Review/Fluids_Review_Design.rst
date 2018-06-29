@@ -313,7 +313,7 @@ The significance of this equation lies in its relationship between :math:`h_{\rm
 In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gathered by many people, on the Darcy-Weisbach friction factor to create what we now call the `Moody diagram <https://en.wikipedia.org/wiki/Moody_chart>`_. This diagram has the friction factor :math:`\rm{f}` on the left-hand y-axis, relative pipe roughness :math:`\frac{\epsilon}{D}` on the right-hand y-axis, and Reynolds number :math:`\rm{Re}` on the x-axis. The Moody diagram is an alternative to computational methods for finding :math:`\rm{f}`.
 
 .. _moody:
-.. figure:: Images/moody.jpg
+.. figure:: Images/Moody.jpg
     :width: 650px
     :align: center
     :alt: Moody diagram
