@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction to RST and Sphinx for AguaClara &mdash; AguaClara Textbook 0.0.0 documentation</title>
+  <title>Introduction to RST and Sphinx for AguaClara &mdash; AguaClara Textbook 0.0.2 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.0
+                0.0.2
               </div>
             
           
@@ -203,7 +203,24 @@
 </div>
 <div class="section" id="publishing-online">
 <span id="id3"></span><h3>Publishing Online<a class="headerlink" href="#publishing-online" title="Permalink to this headline">¶</a></h3>
-<p>To publish online, you need to submit a <a class="reference external" href="https://github.com/AguaClara/Textbook/pulls">pull request to master</a> and merge it in. Then Travis will build the site using <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, and if there aren’t any errors, upload it to the gh_pages branch. We used <a class="reference external" href="https://gist.github.com/brenns10/f48e1021e8befd2221a2">this guide</a> to set up Travis.</p>
+<p>To publish online, you need to:</p>
+<ol class="arabic simple">
+<li>Submit a <a class="reference external" href="https://github.com/AguaClara/Textbook/pulls">pull request to master</a>. You’ll need to ask for someone else to review your work at this stage- “request reviewers”.</li>
+<li>Travis will build the site using <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, and if there aren’t any errors, Travis will report success to GitHub on the “checks” part of the pull request.</li>
+<li>You’ll need one other person to review and approve your commit before the merge is allowed.</li>
+<li>Once the PR passes Travis and is approved by another author, feel free to “merge to master.”</li>
+<li>To release the master branch, (build the html, pdf, and latex, and upload the pdf to Pages) you’ll need to publish a <a class="reference external" href="https://github.com/AguaClara/Textbook/releases/new">GitHub release</a>. Include a <a class="reference external" href="https://semver.org/">semver</a> version number as the tag (under “Tag: Choose or create”), and a brief description of the updates under “Release Title”. Finally, for the description, detail the changes as much as you see fit and when ready, hit “Publish release”. Example:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Tag name: 0.1.5</li>
+<li>Release title: Filtration section maintenance</li>
+<li>Description: Added filter code from aide_design 0.2.6. Also updated all broken external links.</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple">
+<li>Travis will rebuild the site and push the html to Pages, and the PDF and LaTeX to GitHub Releases under the tag name.</li>
+</ol>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last">If your changes to the master branch aren’t pushing to gh-pages, then check the status of the <a class="reference external" href="https://travis-ci.org/AguaClara/Textbook">Travis build here</a>.</p>
@@ -280,7 +297,7 @@ You’ll need to carefully review any page converted with pandoc.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.0',
+            VERSION:'0.0.2',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
