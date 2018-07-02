@@ -55,6 +55,7 @@ Publishing Online
 -----------------
 We use Travis_ to ensure this site will always contain functional builds. To publish online, you need to:
 
+#. Always test your build by first building_rst_locally_, and then following the testing_online_ instructions. Once you like how your build looks, follow the steps below to introduce it into the master branch.
 #. Submit a `pull request to master <https://github.com/AguaClara/Textbook/pulls>`_. You'll need to ask for someone else to review your work at this stage- "request reviewers". Every pull request **must** be reviewed by at least one other person.
 #.  Travis_ will build the site using Sphinx_, and if there aren't any errors, Travis will report success to GitHub on the "checks" part of the pull request.
 #. All your requested reviewers must now approve and comment on  your commit before the merge is allowed.
@@ -67,9 +68,18 @@ We use Travis_ to ensure this site will always contain functional builds. To pub
 
 .. important:: If your changes to the master branch aren't pushing to gh-pages, then check the status of the `Travis build here <https://travis-ci.org/AguaClara/Textbook>`_.
 
+.. _testing_online:
+
 Testing Online
 --------------
-To test exactly what will be published, we have a test branch. The test branch is built by Travis and contains all the processed html that Travis produces in _build/html. Also, if the PDF=True environment variable is triggered for a Travis build, the PDF will also be generated and placed in the test branch.
+To test exactly what will be published, we have a test branch. The test branch is built by Travis and contains all the processed html that Travis produces in _build/html. This branch is populated when ANY COMMIT IS PUSHED. Meaning, the last commit to be pushed, if it passes the Travis tests, will be built and the output will be placed in the test branch. Also, if the PDF=True environment variable is triggered for a Travis build, the PDF will also be generated and placed in the test branch. To do this, use the "Trigger Build" option in Travis and put:
+
+.. code::
+
+script:
+    - PDF=True
+
+`The website output is viewable here <https://rawgit.com/AguaClara/Textbook/test/html/index.html>`_ and the `built PDF is downloadable here. <
 
 
 .. _brief_best_practices:
