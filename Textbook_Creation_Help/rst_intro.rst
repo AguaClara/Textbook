@@ -81,6 +81,10 @@ script:
 
 `The website output is viewable here <https://rawgit.com/AguaClara/Textbook/test/html/index.html>`_.
 
+Sharing Test Output
+------------------
+if you want to share what your latest branch developments look like without having whoever is viewing it actually have to build it, you can push a commit, and find the `rawgit URL with this site <https://rawgit.com/>`_ by entering the URL of the git file within the test branch that you'd like to share. Furthermore, if you want to point to the commit so that even if someone else pushes, the URL will still point to the code you intend it to, make sure to include the commit SHA within the rawgit URL like so: https://rawgit.com/AguaClara/Textbook/e5693e0485702b95e11d4d6bdf76d07c42fdbf99/html/index.html. That link will never change where it is pointing. To share the PDF output, follow the testing_online_ instructions to build the PDF, and point to the commit with the PDF. Happy testing!
+
 
 .. _brief_best_practices:
 
