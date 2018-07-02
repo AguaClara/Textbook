@@ -79,7 +79,7 @@ To test exactly what will be published, we have a test branch. The test branch i
 script:
     - PDF=True
 
-`The website output is viewable here <https://rawgit.com/AguaClara/Textbook/test/html/index.html>`_ and the `built PDF is downloadable here. <
+`The website output is viewable here <https://rawgit.com/AguaClara/Textbook/test/html/index.html>`_.
 
 
 .. _brief_best_practices:
