@@ -35,7 +35,8 @@ deploy:
     keep-history: true
     local-dir: _build
     target-branch: test
-    all_branches: true
+    on:
+      all_branches: true
   - provider: releases
     api_key: $GITHUB_TOKEN
     file:
