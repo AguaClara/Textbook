@@ -67,6 +67,9 @@ We use Travis_ to ensure this site will always contain functional builds. To pub
 
 .. important:: If your changes to the master branch aren't pushing to gh-pages, then check the status of the `Travis build here <https://travis-ci.org/AguaClara/Textbook>`_.
 
+Testing Online
+--------------
+To test exactly what will be published, we have a test branch. The test branch is built by Travis and contains all the processed html that Travis produces in _build/html. Also, if the PDF=True environment variable is triggered for a Travis build, the PDF will also be generated and placed in the test branch.
 
 
 .. _brief_best_practices:
