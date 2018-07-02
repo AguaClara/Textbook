@@ -6,13 +6,13 @@ Fluids Review Derivations
 This document contains the derivation of the minor loss equation using the following image as a reference. The derivation begins with a slightly simplified energy equation across the control volume show. Our energy equation begins with :math:`h_P` and :math:`h_T` having been
 eliminated.
 
-    .. _minor_loss_pipe:
-    .. figure:: Images/minor_loss_pipe.png
-        :width: 700px
-        :align: center
-        :alt: Example of flow expansion resulting in a minor loss
+.. _minor_loss_pipe:
+.. figure:: Images/minor_loss_pipe.png
+    :width: 700px
+    :align: center
+    :alt: Example of flow expansion resulting in a minor loss
 
-        Example of a minor loss due to a flow expansion
+    Example of a minor loss due to a flow expansion
 
 .. math::
 

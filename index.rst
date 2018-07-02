@@ -35,6 +35,7 @@ This is a place holder for 'Chapter 1: Introduction' files
    :caption: Chapter 3: Flow Control and Measurement
    :maxdepth: 2
 
+   Flow_Control_and_Measurement/FCM_Design.rst
    Flow_Control_and_Measurement/FCM_Derivations.rst
 
 

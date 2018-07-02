@@ -266,10 +266,7 @@ L_{Min, \, head loss} = L = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}}
 
 If you decrease the max flow $Q_{Max}$ and hold $h_{L_{Max}}$ constant, $\color{green}{L_{Min, \, head loss}}$ becomes larger. This means that a CDC system for a plant of 40 $\frac{L}{s}$ must be different than one for a plant of 20 $\frac{L}{s}$. If we want to maintain the same head loss at maximum flow in both plants, then the dosing tube(s) will need to be a lot longer for the 20 $\frac{L}{s}$ plant.
 
-To visualize the distinction between $\color{red}{
-  L_{Min, \, \Pi_{Error}}}$ and $\color{green}{
-L_{Min, \, head loss}}$, see the following plot. $\color{green}{
-L_{Min, \, head loss}}$ is discontinuous because it takes in the smallest allowable tube diameter as an input. As the chemical flow rate through the dosing tube(s) decreases, the dosing tube diameter does as well. Whenever you see a jump in the green points, that means the tubing diameter has changed.
+To visualize the distinction between $\color{red}{L_{Min, \, \Pi_{Error}}}$ and $\color{green}{L_{Min, \, head loss}}$, see the following plot. $\color{green}{L_{Min, \, head loss}}$ is discontinuous because it takes in the smallest allowable tube diameter as an input. As the chemical flow rate through the dosing tube(s) decreases, the dosing tube diameter does as well. Whenever you see a jump in the green points, that means the tubing diameter has changed.
 
 <center><img src="https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Flow%20Control%20and%20Measurement/Images/CDC_length_model.jpg?raw=true" width=800></center>
 
