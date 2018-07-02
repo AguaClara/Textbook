@@ -1,65 +1,8 @@
-Flow Control and Measurement  Design
-===================================
+.. _flow_control_design:
 
-Welcome to the **second** summary sheet of CEE 4540! These documents
-will be guides and references for you throughout the semester. Since
-Professor Monroe’s class time is limited, so too is the amount of
-material he can fit on the slides while ensuring that they remain
-understandable. Thus, these summary sheets will supplement the
-powerpoints by going into further detail on the course concepts
-introduced in the slides.
-
-Equations, universal constants, and other helpful goodies can be found
-in the `aide_design repository on
-GitHub <https://github.com/AguaClara/aide_design/tree/master/aide_design>`__.
-Most equations and constants you find in these summary sheets will
-already have been coded into aide_design, and will be shown here in the
-following format:
-
-| Variable: ``pc.gravity``
-| Function: ``pc.area_circle(DiamCircle)``.
-
-The letters before the ``.``, in this case ``pc``, indicate the file
-within aide_design where the variable or function can be found. In the
-examples above, ``pc.gravity`` and ``pc.area_circle(DiamCircle)`` show
-that the variable ``gravity`` and function ``area_circle(DiamCicle)``
-are located inside the
-`physchem.py <https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py>`__
-(``pc``) file. You are strongly recommended to look up any aide_design
-equations you plan to use within in their aide_design file before using
-them, even if they are given here in this summary sheet. This is because
-each equation has comments in its original file describing what the
-specific conditions are to using it.
-
-For the most part, `hyperlinks in these documents will contain
-supplementary information <http://likethis.com/>`__. The information
-contained in the linked external sites is there in case you don’t feel
-completely comfortable with a concept, but is not necessary to learn
-thoroughly and will not be tested.
-
---------------
-
-Table of Contents
------------------
-
-| Please use this table to control/command find the sections you are
-  looking for. #### **Section: Introduction to Flow Control: The Search
-  for Constant Head**
-| **Tank with a valve**
-|          -  Flow :math:`Q` and Water Level :math:`h` as a Function of
-  Time
-|          -  Drain System for a Tank
-| **AguaClara Flow Control and Measurement Technologies**
-|          -  “Almost Linear” Flow Controller
-|          -  Linear Flow Orifice Meter (LFOM)
-|          -  Linear Chemical Dose Controller (CDC)
-| **Section Summary** 
-
---------------
-
-Section: Introduction to Flow Control: The Search for Constant Head
--------------------------------------------------------------------
-
+**************************************
+Flow Control and Measurement Design
+**************************************
 The term **constant head** means that the driving head of a system,
 :math:`\Delta z` or :math:`\Delta h`, does not change over time, even as
 water flows through or out of the system. Constant head implies constant
@@ -71,8 +14,13 @@ also varying that flow of chemicals as the flow rate through the plant
 changes, so that the concentration of chemicals in the raw water stays
 the same.
 
-Important Terms
-~~~~~~~~~~~~~~~
+
+
+.. _fcm_terms_eqs:
+
+Important Terms and Equations
+===============================
+Terms:
 
 1. Dose
 2. Coagulant
@@ -82,43 +30,36 @@ Important Terms
 6. Constant Head Tank
 7. Sutro weir
 
-Important Equations
-~~~~~~~~~~~~~~~~~~~
+Equations:
 
 1. Hagen-Poiseuille equation
 
+
+
+.. _tank_with_a_valve:
 Tank with a Valve
------------------
+==================
+
+
+.. _qh_as_a_function_of_t:
 
 Flow :math:`Q` and Water Level :math:`h` as a Function of Time
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------------------------
+Our first step is to see if we can get constant head out of a simple system. The most simple flow control system is a bucket or tank with a hole in it. This system is too coarse to provide constant head. One step above that is a bucket or tank with a valve. This is where we begin our search for constant head.
 
-Our first step is to see if we can get constant head out of a simple
-system. The most simple flow control system is a bucket or tank with a
-hole in it. This system is too coarse to provide constant head. One step
-above that is a bucket or tank with a valve. This is where we begin our
-search for constant head.
+Using the setup of in the image below, we derive the following equation for flow :math:`Q` through the valve as a function of time :math:`t`. `The derivation is found here, <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Flow%20Control%20and%20Measurement/FCM_Derivation_flow_through_tank_with_a_valve.md>`_ you are advised to read through it if you are confused about this equation.
 
-Using the setup of in the image below, we derive the following equation
-for flow :math:`Q` through the valve as a function of time :math:`t`.
-`The derivation is found
-here, <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Flow%20Control%20and%20Measurement/FCM_Derivation_flow_through_tank_with_a_valve.md>`__
-you are advised to read through it if you are confused about this
-equation.
+.. math::
 
-.. math::  \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
+    \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
 
 | Such that:
-| :math:`Q` = :math:`Q(t)` = flow of hypochlorite through valve at time
-  :math:`t`
+| :math:`Q` = :math:`Q(t)` = flow of hypochlorite through valve at time :math:`t`
 | :math:`Q_0` = flow of hypochlorite through valve at time :math:`t` = 0
 | :math:`t` = elapsed time
-| :math:`t_{Design}` = time it would take for tank to empty if flow
-  stayed constant at :math:`Q_0`, which it does not
-| :math:`h_{Tank}` = elevation of water level with reference to tank
-  bottom at time :math:`t` = 0
-| :math:`h_0` = elevation of water level with reference to the valve at
-  time :math:`t` = 0
+| :math:`t_{Design}` = time it would take for tank to empty if flow stayed constant at :math:`Q_0`, which it does not
+| :math:`h_{Tank}` = elevation of water level with reference to tank bottom at time :math:`t` = 0
+| :math:`h_0` = elevation of water level with reference to the valve at time :math:`t` = 0
 
 .. raw:: html
 
@@ -128,29 +69,10 @@ equation.
 
    </center>
 
-This equation has historically give students some trouble, and while its
-nuances are explained in the derivation, they will be quickly summarized
-below:
+This equation has historically give students some trouble, and while its nuances are explained in the derivation, they will be quickly summarized below:
 
--  :math:`t_{Design}` is **NOT** the time it takes to drain the tank. It
-   is the time that it *would* take to drain the tank *if* the flow rate
-   at time :math:`t = 0`, :math:`Q_0`, were the flow rate forever, which
-   it is not. :math:`t_{Design}` was used in the derivation to simplify
-   the equation, which is why this potentially-confusing parameter
-   exists. The actual time it takes to drain the tank lies somewhere
-   between :math:`t_{Design}` and :math:`2 \, t_{Design}` and depends on
-   the ratio :math:`\frac{h_{Tank}}{h_0}`
-
--  :math:`h_{Tank}` is not the same as :math:`h_{0}`. :math:`h_{Tank}`
-   is the height of water level in the tank with reference to the tank
-   bottom. :math:`h_{0}` is the water level in the tank with reference
-   to the valve. Neither change with time, they both refer to the water
-   level and time :math:`t` = 0. Therefore, :math:`h_{0} \geq h_{Tank}`
-   is true if the valve is located at or below the bottom of the tank.
-   If the tank is elevated far above the valve, then the
-   :math:`h_{0} > > h_{Tank}`. If the valve is at the same elevation as
-   the bottom of the tank, then :math:`h_{0} = h_{Tank}`. Please refer
-   to the image above to clarify :math:`h_{0}` and :math:`h_{Tank}`.
+* :math:`t_{Design}` is **NOT** the time it takes to drain the tank. It is the time that it *would* take to drain the tank *if* the flow rate at time :math:`t = 0`, :math:`Q_0`, were the flow rate forever, which it is not. :math:`t_{Design}` was used in the derivation to simplify the equation, which is why this potentially-confusing parameter exists. The actual time it takes to drain the tank lies somewhere between :math:`t_{Design}` and :math:`2 \, t_{Design}` and depends on the ratio :math:`\frac{h_{Tank}}{h_0}`
+* :math:`h_{Tank}` is not the same as :math:`h_{0}`. :math:`h_{Tank} is the height of water level in the tank with reference to the tank bottom. :math:`h_{0}` is the water level in the tank with reference to the valve. Neither change with time, they both refer to the water level and time :math:`t` = 0. Therefore, :math:`h_{0} \geq h_{Tank}` is true if the valve is located at or below the bottom of the tank. If the tank is elevated far above the valve, then the :math:`h_{0} > > h_{Tank}`. If the valve is at the same elevation as the bottom of the tank, then :math:`h_{0} = h_{Tank}`. Please refer to the image above to clarify :math:`h_{0}` and :math:`h_{Tank}`.
 
 We can use the proportionality :math:`Q \propto \sqrt{h}`, which applies
 to both minor losses and orifices to form a relationship between water
@@ -527,7 +449,7 @@ Either way, the design algorithm is roughly the same:
    will be as many solutions as there are reasonable diameters
    available.
 
-.. math::  Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }} 
+.. math::  Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}
 
 2. Calculate how much flow of chemical needs to pass through the CDC at
    maximum plant flow and maximum chemical dose. This depends on the
@@ -582,14 +504,14 @@ Section Summary
 
    .. math::  \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
 
-    This equation describes flow :math:`Q` as a function of time
-   :math:`t` of a fluid leaving a tank through a valve. Attempting to
-   get this ‘tank with a valve’ system to yield constant head means
-   raising the tank far, far above the valve that controls the flow.
-   This is unreasonable when designing a flow control system for
-   constant dosing, but can be used to design systems to drain a tank.
-   See the section above for a description of the variables in the
-   equation.
+This equation describes flow :math:`Q` as a function of time
+:math:`t` of a fluid leaving a tank through a valve. Attempting to
+get this ‘tank with a valve’ system to yield constant head means
+raising the tank far, far above the valve that controls the flow.
+This is unreasonable when designing a flow control system for
+constant dosing, but can be used to design systems to drain a tank.
+See the section above for a description of the variables in the
+equation.
 
 2. **LFOM:** The LFOM makes the water level in the entrance tank linear
    with respect to the flow out of the entrance tank. This is useful in

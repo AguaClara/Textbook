@@ -1,7 +1,7 @@
 .. _fluids_review_design:
 
 ************************
-Fluids Review  Design
+Fluids Review Design
 ************************
 This section is meant to be a refresher on fluid mechanics. It will only cover the topics of fluids mechanics that will be used heavily in the course.
 
