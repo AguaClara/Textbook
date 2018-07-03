@@ -28,10 +28,11 @@ Now we can solve for the eddy turnover time which is a measure of the
 mixing time at the eddy scale.
 
 .. math::
-
-   \color{purple}{
-     t_{eddy} \approx \frac{L_{eddy}}{\left( \bar\varepsilon \, L_{eddy} \right)^\frac{1}{3}} \approx \left( \frac{L_{eddy}^2}{ \bar\varepsilon }\right)^\frac{1}{3}
-   }
+   :label: minor_loss_equation
+   
+       \color{purple}{
+       t_{eddy} \approx \frac{L_{eddy}}{\left( \bar\varepsilon \, L_{eddy} \right)^\frac{1}{3}} \approx \left( \frac{L_{eddy}^2}{ \bar\varepsilon }\right)^\frac{1}{3}
+       }
 
 :math:`t_{coagulant, \, application}`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,7 +116,7 @@ Table of :math:`G`, :math:`\varepsilon`, and :math:`h_L` for Different Geometrie
 ---------------------------------------------------------------------------------------------
 
 .. todo::
-  link to the table in 
+  link to the table in
 These are the derivations for the equations that `appear in the
 table
 containing equations for :math:`G`, :math:`\varepsilon`, and

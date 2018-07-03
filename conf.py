@@ -171,7 +171,7 @@ texinfo_documents = [
 ]
 
 # -- Options for figure, equation and table referencing -------------------
-
+math_number_all = True
 numfig = True
 
 # -- Custom roles ---------------------------------------------------------

@@ -58,11 +58,22 @@ source code and rendered code. When you want to use the source code
 
   .. _an_example_table:
   .. csv-table:: Example Table
-   :header: "name", "firstname", "age"
+   :header: "name", ":math:`\bar\varepsilon`", "age"
    :widths: 20, 20, 10
 
    "Smith", "John", 40
    "Smith", "John, Junior", 20
+
+Is this normal?
+:math:`\bar\varepsilon`
+
+:math:`\begin{matrix}
+ &\varepsilon  &\varepsilon  &\varepsilon \\
+ &\varepsilon  &\varepsilon  &\varepsilon \\
+ &\varepsilon  &\varepsilon  &\varepsilon
+\end{matrix}``
+
+
 * References work by referencing any "target." This can be a figure :numref:`mountain`, equation :eq:`quadratic`,
   or table :numref:`an_example_table`.
 * Colored :red:`text`. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.
