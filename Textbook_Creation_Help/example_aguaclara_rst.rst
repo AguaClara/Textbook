@@ -10,7 +10,7 @@ This file will explain how to use RST functionality including images, tables, co
 .. _how_to_use_this_file:
 
 How to use this file:
-=====================
+======================
 Open the source code of the file next to the rendered code. The source code is found by clicking "View page source" at the top of the page. Follow along with the source code and rendered code, using the source code as a reference for the proper syntax.
 
 You will often see this format ``.. word::``. The 'word' in this case is called a directive. Directives are what RST uses to format text. Directives allow the inclusion of figures, math, tables, references, color, and much more.
@@ -45,7 +45,7 @@ Headings are defined by an underline consisting of one of the following characte
 
 * `*` with overline, for document titles
 * `=`, for sections
-* `-`, for subsections
+* `-`, for subsecti ons
 * `^`, for subsubsections
 * `"`, for subsubsubsections
 
