@@ -220,7 +220,7 @@ The assumption necessary to use the Bernoulli equation, which is stated above, r
 
     \frac{p_{1}}{\rho g} + z_{1} + \alpha_{1} \frac{\bar v_{1}^2}{2g} + h_P = \frac{p_{2}}{\rho g} + z_{2} + {\alpha_{2}} \frac{\bar v_{2}^2}{2g} + h_T + h_L
 
-You’ll also notice the :math:`\alpha` term attached to the velocity head. This is a correction factor for kinetic energy, and will be neglected in this class. If you wish to learn more about the correction factors, `click here to sate your curiosity <http://nptel.ac.in/courses/105106114/pdfs/Unit6/6_1.pdf>`_. In the Bernoulli equation, the velocity of the streamline of water is considered, :math:`v`. The energy equation, however compares control surfaces instead of streamlines, and the velocities across a control surface many not all be the same. Hence, :math:`\bar v` is used to represent the average velocity. Since AguaClara does not use pumps nor turbines, :math:`h_P = h_T = 0`. With these simplifications, the energy equation can be written as follows:
+You’ll also notice the :math:`\alpha` term attached to the velocity head. This is a correction factor for kinetic energy, and will be neglected in this class. In the Bernoulli equation, the velocity of the streamline of water is considered, :math:`v`. The energy equation, however compares control surfaces instead of streamlines, and the velocities across a control surface many not all be the same. Hence, :math:`\bar v` is used to represent the average velocity. Since AguaClara does not use pumps nor turbines, :math:`h_P = h_T = 0`. With these simplifications, the energy equation can be written as follows:
 
 .. math::
 
