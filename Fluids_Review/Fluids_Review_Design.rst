@@ -5,7 +5,7 @@ Fluids Review  Design
 ************************
 This section is meant to be a refresher on fluid mechanics. It will only cover the topics of fluids mechanics that will be used heavily in the course.
 
-If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_. If you wish to review from a legitimate textbook, you can find a pdf of good book by Frank White `here <https://hellcareers.files.wordpress.com/2016/01/fluid-mechanics-seventh-edition-by-frank-m-white.pdf>`_.
+If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_ Note that you will need to create a Github account if you do not already have one to view this link. If you wish to review from a legitimate textbook, you can find a pdf of good book by Frank White `here <https://hellcareers.files.wordpress.com/2016/01/fluid-mechanics-seventh-edition-by-frank-m-white.pdf>`_.
 
 
 
@@ -13,20 +13,21 @@ If you wish to review fluid mechanics in (much) more detail, please refer to `th
 
 Important Terms and Equations
 ==============================
-Terms:
+**Terms:**
 
+#. Laminar
+#. Turbulent
+#. Viscosity
 #. Head
 #. Streamline
 #. Head loss
-#. Laminar
-#. Turbulent
 #. Moody Diagram
-#. Viscosity
 #. Driving head
 #. Vena Contracta/Coefficient of Contraction
 
-Equations:
+**Equations:**
 
+#. Continuity equation
 #. Bernoulli equation
 #. Energy equation
 #. Darcy-Weisbach equation
@@ -41,7 +42,7 @@ Equations:
 
 Introductory Concepts
 =======================
-Before diving in to the rest of the fluids review document, there are a few important concepts which will be the foundation for building your understanding of fluid mechanics. One must walk before they can run, and similarly, the basics of fluid mechanics must be understood before moving on to the more fun sections of this document.
+Before diving in to the rest of this document, there are a few important concepts to focus on which will be the foundation for building your understanding of fluid mechanics. One must walk before they can run, and similarly, the basics of fluid mechanics must be understood before moving on to the more fun (and exciting!) sections of this document.
 
 
 .. _continuity_equation:
@@ -56,7 +57,7 @@ Continuity is simply an application of mass balance to fluid mechanics. It state
 
 .. note:: The line above the :math:`v` is called a ‘bar,’ and represents an average. Any variable can have a bar. In this case, we are adding the bar to velocity :math:`v`, turning it into average velocity :math:`\bar v`. This variable is pronounced ‘v bar.’
 
-In CEE 4540, we deal primarily with flow through pipes. For a circular pipe, :math:`A = \pi r^2`. Substituting diameter in for radius, :math:`r = \frac{D}{2}`, we get :math:`A = \frac{\pi D^2}{4}`. You will often see this form of the continuity equation being used to relate the flow rate in a pipe to the fluid velocity and pipe diameter:
+In this course, we deal primarily with flow through pipes. For a circular pipe, :math:`A = \pi r^2`. Substituting diameter in for radius, :math:`r = \frac{D}{2}`, we get :math:`A = \frac{\pi D^2}{4}`. You will often see this form of the continuity equation being used to relate the a pipe's flow rate to its diameter and the velocity of the fluid flowing through it:
 
 .. math::
 
@@ -80,7 +81,7 @@ The continuity equation is also useful when flow is going from one geometry to a
 | :math:`D =` pipe diameter
 
 
-An example of changing flow geometries is when the a change in pipe size occurs in a circular piping system, as is demonstrated below. The flow through :math:`{\rm pipe} \, 1` must be the same as the flow through :math:`{\rm pipe} \, 2`.
+An example of changing flow geometries is when a change in pipe size occurs in a circular piping system, as is demonstrated below. The flow through :math:`{\rm pipe} \, 1` must be the same as the flow through :math:`{\rm pipe} \, 2`.
 
 .. _continuity_pipes:
 .. figure:: Images/continuity_pipes.png
@@ -88,14 +89,14 @@ An example of changing flow geometries is when the a change in pipe size occurs 
     :align: center
     :alt: internal figure
 
-    Flow going from a small diameter pipe to a large one. The flow through each pipe must be the same.
+    Flow going from a small diameter pipe to a large one. The continuity principle states that the flow through each pipe must be the same.
 
 
 .. _laminar_and_turbulent_flow:
 
 Laminar and Turbulent Flow
 ---------------------------
-Considering that this class deals with the flow of water through a water treatment plant, understanding the characteristics of the flow is very important. Thus, it is necessary to understand the most common characteristic of fluid flow: whether it is laminar or turbulent. `Laminar <https://en.wikipedia.org/wiki/Laminar_flow>`_ flow is very smooth and highly ordered. `Turbulent <https://en.wikipedia.org/wiki/Turbulence>`_ flow is chaotic, messy, and disordered. The best way to understand each flow and what it looks like is visually, `like in this video <https://youtu.be/qtvVN2qt968?t=131>`_ or the wikipedia image below. Please ignore the part of the video after the image of the tap.
+Considering that this class deals with the flow of water through a water treatment plant, understanding the characteristics of the flow is very important. Thus, it is necessary to understand the most common characteristic of fluid flow: whether it is **laminar** or **turbulent**     . `Laminar <https://en.wikipedia.org/wiki/Laminar_flow>`_ flow is very smooth and highly ordered. `Turbulent <https://en.wikipedia.org/wiki/Turbulence>`_ flow is chaotic, messy, and disordered. The best way to understand each flow and what it looks like is visually, like in the wikipedia figure below `or in this video <https://youtu.be/qtvVN2qt968?t=131>`_. Please ignore the part of the video after the image of the tap.
 
 .. _wikipedia_laminar_turbulent:
 .. figure:: Images/Wikipedia_laminar_turbulent.png
@@ -103,19 +104,19 @@ Considering that this class deals with the flow of water through a water treatme
     :align: center
     :alt: Laminar flow, turbulent flow, and the transition
 
-    This is a beautiful example of the difference between ordered, smooth laminar and chaotic turbulent flow.
+    This is a beautiful example of the difference between ordered and smooth laminar flow and chaotic turbulent flow.
 
-A numeric way to determine whether flow is laminar or turbulent is by finding the `Reynolds number <https://en.wikipedia.org/wiki/Reynolds_number>`_, :math:`{\rm Re}`. The Reynolds number is a dimensionless parameter that compares inertia, represented by the average flow velocity :math:`\bar v` times a length scale :math:`D` to `viscosity <https://en.wikipedia.org/wiki/Viscosity>`_, represented by the kinematic viscosity :math:`\nu`. `Click here <https://www.youtube.com/watch?v=DVQw0svRHZA>`_ for a brief video explanation of viscosity. If the Reynolds number is less than 2,100 the flow is considered laminar. If it is more than a certain value, it is considered turbulent.
+A numeric way to determine whether flow is laminar or turbulent is by finding the `Reynolds number <https://en.wikipedia.org/wiki/Reynolds_number>`_, :math:`{\rm Re}`. The Reynolds number is a dimensionless parameter that compares inertia, represented by the average flow velocity :math:`\bar v` times a length scale :math:`D` to `viscosity <https://en.wikipedia.org/wiki/Viscosity>`_, represented by the kinematic viscosity :math:`\nu`. `Click here <https://www.youtube.com/watch?v=DVQw0svRHZA>`_ for a brief video explanation of viscosity. If the Reynolds number is less than 2,100 the flow is considered laminar. If it is more than 2,100, it is considered turbulent.
 
 .. math::
 
     {\rm Re = \frac{inertia}{viscosity}} = \frac{\bar vD}{\nu}
 
-`There is a transition between laminar and turbulent flow which is not yet well understood <https://en.wikipedia.org/wiki/Laminar%E2%80%93turbulent_transition>`_. To simplify this phenomenon and make it possible to code for laminar or turbulent flow, we assume that the transition occurs at :math:`\rm{Re} = 2100`. The flow regime is assumed to be laminar below this value and turbulent above it. This variable is coded into aide_design as ``pc.RE_TRANSITION_PIPE``. We will neglect transitional flow.
+`The transition between laminar and turbulent flow is not yet well understood <https://en.wikipedia.org/wiki/Laminar%E2%80%93turbulent_transition>`_, which is why the concept of transitional flow is often simplified and neglected to make it possible to code for laminar or turbulent flow, which are better understood. We will assume that the transition occurs at :math:`\rm{Re} = 2100`. In aide_design, this parameter shows us as ``pc.RE_TRANSITION_PIPE``.
 
-Fluid can flow through very many different geometries like a pipe, a rectangular channel, or any other shape. To account for this, the characteristic length scale is quantified as the `hydraulic diameter <https://www.engineeringtoolbox.com/hydraulic-equivalent-diameter-d_458.html>`_, which can be applied to any geometry. For circular pipes, which are the most common geometry you’ll encounter in this class, the hydraulic diameter is simply the pipe diameter.
+Fluid can flow through very many different geometries, like a pipe, a rectangular channel, or any other shape. To account for this, the characteristic length scale for the Reynolds number is quantified as the `hydraulic diameter <https://www.engineeringtoolbox.com/hydraulic-equivalent-diameter-d_458.html>`_, :math:`D_h` which can be applied to any geometry. For circular pipes, which are the most common geometry you’ll encounter in this class, the hydraulic diameter is simply the pipe diameter.
 
-Here are other commonly used forms of the Reynolds number equation. They are the same as the one above, just with the substitutions :math:`Q = \bar v \frac{\pi D^2}{4}` and :math:`\nu = \frac{\mu}{\rho}`
+Here are other commonly used forms of the Reynolds number equation *for circular pipes*. They are the same as the one above, just with the substitutions :math:`Q = \bar v \frac{\pi D^2}{4}` and :math:`\nu = \frac{\mu}{\rho}`
 
 .. math::
 

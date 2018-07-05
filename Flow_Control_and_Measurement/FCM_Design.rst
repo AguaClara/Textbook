@@ -3,16 +3,9 @@
 **************************************
 Flow Control and Measurement Design
 **************************************
-The term **constant head** means that the driving head of a system,
-:math:`\Delta z` or :math:`\Delta h`, does not change over time, even as
-water flows through or out of the system. Constant head implies constant
-flow, since the energy driving the flow does not change.
+The term **constant head** means that the driving head of a system, :math:`\Delta z` or :math:`\Delta h`, does not change over time, even as water flows through or out of the system. Constant head implies constant flow, since the energy driving the flow does not change.
 
-The challenge of constant head in chemical dosing for water treatment
-plants is not *just* providing one continuous flow of chemicals; it is
-also varying that flow of chemicals as the flow rate through the plant
-changes, so that the concentration of chemicals in the raw water stays
-the same.
+The challenge of constant head in chemical dosing for water treatment plants is not *just* providing one continuous flow of chemicals; it is also varying that flow of chemicals as the flow rate through the plant changes, so that the concentration of chemicals in the raw water stays the same.
 
 
 
@@ -110,7 +103,7 @@ The equation can also be rearranged to solve for the time it would take to drain
 | :math:`t_{Drain}` = Time it takes to drain the tank
 | :math:`\sum K` = Sum of all the minor loss coefficients in the system
 
-.. _pipe_stub_drainage_variables:
+.. _pipe_stub_drainage_variables_in_derivation:
 .. figure:: Images/pipe_stub_drainage_variables.png
     :width: 600px
     :align: center
