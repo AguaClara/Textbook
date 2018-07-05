@@ -94,16 +94,17 @@ In drinking water treatment plant operation it is sometimes necessary to add a b
 We will evaluate the case where we add a base that will increase the ANC of the raw water and it might also increase the total carbonate concentration. Our goal is to calculate how much of that base to add to reach a target pH. The final ANC after base addition is given by
 .. math:: ANC_1 = ANC_0 + \Pi_{ANC}C_B
 
-where:
-  :math:`ANC_1` is the final acid neutralizing capacity of the mixture after the base is added.
-  :math:`C_B` is concentration of base
-in mole/liter  :math:`\Pi_{ANC}` is ANC per mole of base
+| where:
+| :math:`ANC_1` is the final acid neutralizing capacity of the mixture after the base is added.
+| :math:`C_B` is concentration of base in mole/liter  :math:`\Pi_{ANC}` is ANC per mole of base
 
 The final carbonate concentration is given by
 
 .. math:: C_{T_1} ={C_{T_0}}+ \Pi_{CO_3^{-2}}C_B
 
-where: \* :math:`C_{T_1}` is the final total carbonate concentration of the mixture after the base is added. \* :math:`\Pi_{CO_3^{-2}}` is mole of carbonate per mole of base (0 for :math:`NaOH` and 1 for :math:`Na_2CO_3`)
+| where:
+| :math:`C_{T_1}` is the final total carbonate concentration of the mixture after the base is added.
+| :math:`\Pi_{CO_3^{-2}}` is mole of carbonate per mole of base (0 for :math:`NaOH` and 1 for :math:`Na_2CO_3`)
 
 Substituting these values into the ANC equation we obtain
 
@@ -293,8 +294,7 @@ Below is the code used to calculate the required base addition.
     Pi_CO3_NaOH = 0
 
     C_Na2CO3 = pH_adjust(pH_0,ANC_0,Pi_ANC_Na2CO3,Pi_CO3_Na2CO3,pH_target)
-    print(C_Na2CO3)
-    0.4454 millimole / liter
+
     C_NaHCO3 = pH_adjust(pH_0,ANC_0,Pi_ANC_NaHCO3,Pi_CO3_NaHCO3,pH_target)
     C_NaOH = pH_adjust(pH_0,ANC_0,Pi_ANC_NaOH,Pi_CO3_NaOH,pH_target)
 
@@ -317,7 +317,7 @@ Below is the code used to calculate the required base addition.
     ax.plot(pH_graph,C_NaHCO3)
     ax.plot(pH_graph,C_Na2CO3)
     ax.plot(pH_graph,C_NaOH)
-    imagepath = 'AguaClara Water Treatment Plant Design/Rapid Mix/Images/'
+    imagepath = 'Rapid_Mix/Images/'
     ax.set(xlabel='pH target', ylabel='Base concentration (mmole/L)')
     ax.legend(["sodium bicarbonate","sodium carbonate","sodium hydroxide"])
     fig.savefig(imagepath+'mole_base_for_target_pH')
@@ -331,7 +331,20 @@ Below is the code used to calculate the required base addition.
     fig.savefig(imagepath+'mg_base_for_target_pH')
     plt.show()
 
-The
+The analysis reveals that the choice of base matters. The most efficient (on a mass or mole basis) base is :math:`NaOH` because it doesn't add any carbonates that don't fully react with the hydrogen ions. The decision about which base to use will be influenced by economics, operator safety, and by whether additional carbonate buffering simplifies plant operation with changing raw water quality.
+
+
+
+  .. _Calcium bases:
+  .. csv-table:: Calcium base.
+     :header:  "Chemical name",   "common name",  "Chemcal formula"
+     :widths: 20, 20, 20
+
+     "calcium carbonate","limestone or chalk",":math:`CaCO_3`"
+     "calcium hydroxide","slaked lime or hydrated lime",":math:`Ca(OH)_2`"
+     "calcium oxide","quicklime",":math:`CaO`"
+
+The calcium bases are relatively inexpensive and have the disadvantage of lower solubility than sodium bases. Calcium carbonate has a low solubility, carbon dioxide is present in the atmosphere, and thus calcium carbonate precipitation limits the concentration that can be used for chemical feeds.
 
     .. _mole_base_for_target_pH:
     .. figure::    Images/mole_base_for_target_pH.png
@@ -341,7 +354,7 @@ The
 
         Dose of three bases (in mole/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with :math:`NaOH`.
 
-    .. _mole_base_for_target_pH:
+    .. _mg_base_for_target_pH:
     .. figure::    Images/mg_base_for_target_pH.png
         :width: 700px
         :align: center

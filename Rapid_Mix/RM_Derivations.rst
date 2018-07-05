@@ -1,5 +1,8 @@
+.. _rapid_mix_derivations:
+
+************************
 Rapid Mix Derivations
-=====================
+************************
 
 :math:`t_{eddy}`
 ~~~~~~~~~~~~~~~~
@@ -640,7 +643,13 @@ The impellers used in mechanical flocculators could be modeled as a rotating fla
 
 Ariane Walker-Horn modeled the flat plate using Fluent in 2015.
 
-Figure x. The energy dissipation rate and streamlines for a 1 m wide plate in two dimensional flow with an approach velocity of :math:`1 m/s`. The maximum energy dissipation rate was approximately :math:`0.04 W/kg`.
+  .. _CFD_Flat_Plate:
+  .. figure::    Images/CFD_Flat_Plate.png
+      :width: 600px
+      :align: center
+      :alt: CFD Flat Plate
+
+      The energy dissipation rate and streamlines for a 1 m wide plate in two dimensional flow with an approach velocity of :math:`1 m/s`. The maximum energy dissipation rate was approximately :math:`0.04 W/kg`.
 
 .. math::
 

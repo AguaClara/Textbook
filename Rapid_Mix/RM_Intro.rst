@@ -11,13 +11,67 @@ dissipation rate, but also the reaction injection point and the contacting metho
 
 Although the processes have not been well characterized, the energy that is invested for rapid miz processes is significant. In many cases the amount of energy used isn't practical for gravity powered water treatment plants. The high energy consumption of rapid mix units has led some municipal water treatment plant operators to experiment with turning off rapid mix units. They have found that at least under some conditions there is no indication that the energy used in rapid mix improved plant performance. Thus there is a need to understand the physical and chemical processes that occur when a concentrated liquid coagulant is added to water.
 
-The processes of
+Rapid mix sets the stage for aggregation of both suspended particles and dissolved substances. Particle and dissolve substance aggregation is mediated by coagulant nanoparticles. The nanoparticles attach to raw water particles as well as to some dissolved species. After the nanoparticles have been mixed with the raw water and have attached to raw water particles the next process, flocculation, can begin. Flocculation is the process of producing collisions between particles to create flocs (aggregates of particles).
+
+Nanoparticle application includes multiple steps that must occur before the raw water particles can begin to aggregate. The sticky nanoparticles can be aluminum :math:`(Al^{+3})` or iron :math:`(Fe^{+3})` based and in either case the nanoparticles are formed from precipitated hydroxide species :math:`(Al(OH)_3)` or :math:`(Fe(OH)_3)`. The series of events that are contained in the broad designation of “rapid mix” are:
+
+1. Liquid coagulant stock solution with a low pH is injected into the raw water
+2. Fluid Mixing: Turbulent eddies randomize the fluids (but don’t blend them)
+
+   1. Large scale eddies mix the coagulant with the raw water by creating large fluid deformations. This stretching and turning of the raw water and coagulant is analogous to shuffling a deck of cards. The cards are randomized, but the cards maintain their identity. The original liquids retain their chemical composition. This step must be completed before any flow splitting for parallel treatment trains.
+   2. Turbulent eddies disintegrate into smaller and smaller eddies.
+   3. At a very small scale (Inner viscous length scale) viscosity becomes significant and the kinetic energy of the eddies begins to be converted to heat by viscosity.
+
+3. The coagulant is blended with the raw water by molecular diffusion
+4. The higher pH of the raw water causes the coagulant to begin to precipitate as :math:`Al_{12}AlO_4(OH)_{24}(H_2O)_{12}^{7+}`, an aluminum, Al, nanoparticle.
+5. The precipitating :math:`Al_{13}` molecules aggregates with other nearby :math:`Al_{13}` molecules to form aluminum hydroxide nanoparticles. It is also possible that the nanoparticles are already formed in the coagulant stock suspension. Polyaluminum chloride stock solutions turn white in about a year at room temperature and this suggests that nanoparticles form in the stock solution.
+6. The Al nanoparticles attach to other dissolved species and suspended particles.
+7. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
+8. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
+
+These multiple steps cover a wide range of length scales and it is not clear at the onset which processes might be the rate limiting steps. We will develop time scale estimates for several of these steps to help identify which processes will likely require the most attention to design. Many of these transport processes are presumed to occur in parallel. :numref:`transport_length_scales` shows the range of length scales
+
+  .. _transport_length_scales:
+  .. figure::    Images/rapid_mix_macro_to_nano_scale.png
+      :width: 700px
+      :align: center
+      :alt: rapid mix macro to nano scale
+
+      Transport of coagulant nanoparticles occurs over length scales ranging from meter to a fraction of a nanometer.
+
 
 
 Fluid mixing
 ========================================
 
-The term “Rapid mix” describes this process
+Fluid mixing is the process by which large scale eddies distribute packets of the coagulant stock throughout the raw water. The term “Rapid mix” is probably best used to describe this process. Traditional methods of achieving this fluid mixing include
+
+  .. _Backmix:
+  .. figure::    Images/Backmix.jpg
+      :width: 200px
+      :align: center
+      :alt: Backmix
+
+      Backmix: a mechanical rapid mixer that has a relatively long residence time in a completely mixed flow reactor.
+
+  .. _Inline:
+  .. figure::    Images/Inline.jpg
+      :width: 400px
+      :align: center
+      :alt: Inline
+
+      Inline: a mechanical rapid mixer that has a short residence time in a completely mixed flow reactor that is often built into a pipe.
+
+  .. _hydraulic_jump:
+  .. figure::    Images/hydraulic_jump.jpg
+      :width: 200px
+      :align: center
+      :alt: hydraulic jump
+
+      Hydraulic jump: a hydraulic rapid mixer uses the flow expansion downstream from supercritical open channel flow.
+
+The hydraulic jump in :numref:`hydraulic_jump` uses a flow expanion to generate mixing in an open channel and that suggests that a flow expansion could also be used to generate mixing in a closed conduit. AguaClara rapid mix units consiste of an orifice in the bottom of the Linear Flow Orifice Meter where the water enters the flocculator.
+
 
 
 Chemistry of coagulant nanoparticles
@@ -64,37 +118,9 @@ Energy dissipation rate and velocity gradients
 Coagulant nanoparticle application
 ==================================
 
-Rapid mix sets the stage for aggregation of both suspended particles and dissolved substances. Particle and dissolve substance aggregation is mediated by coagulant nanoparticles. The nanoparticles attach to raw water particles as well as to some dissolved species (the topic of these notes). After the nanoparticles have been mixed with the raw water and have attached to raw water particles the next process, flocculation, can begin. Flocculation is the process of producing collisions between particles to create flocs (aggregates) (next set of notes).
-
-Nanoparticle application includes multiple steps that must occur before the raw water particles can begin to aggregate. The sticky nanoparticles can be aluminum :math:`(Al^{+3})` or iron :math:`(Fe^{+3})` based and in either case the nanoparticles are formed from precipitated hydroxide species :math:`(Al(OH)_3)` or :math:`(Fe(OH)_3)`. The series of events that are contained in the broad designation of “rapid mix” are:
-
-1. Liquid coagulant stock solution with a low pH is injected into the raw water
-2. Turbulent eddies randomize the fluids (but don’t blend them)
-
-   1. Large scale eddies mix the coagulant with the raw water by creating large fluid deformations. This stretching and turning of the raw water and coagulant is analogous to shuffling a deck of cards. The cards are randomized, but the cards maintain their identity. The original liquids retain their chemical composition.
-   2. Turbulent eddies disintegrate into smaller and smaller eddies.
-   3. At a very small scale (Inner viscous length scale) viscosity becomes significant and the kinetic energy of the eddies begins to be converted to heat by viscosity.
-
-3. The coagulant is blended with the raw water by molecular diffusion
-4. The higher pH of the raw water causes the coagulant to begin to precipitate as :math:`Al_{12}AlO_4(OH)_{24}(H_2O)_{12}^{7+}`, an aluminum, Al, nanoparticle.
-5. The precipitating :math:`Al_{13}` molecules aggregates with other nearby :math:`Al_{13}` molecules to form aluminum hydroxide nanoparticles. It is also possible that the nanoparticles are already formed in the coagulant stock suspension. Polyaluminum chloride stock solutions turn white in about a year at room temperature and this suggests that nanoparticles have reached
-6. The Al nanoparticles attach to other dissolved species and suspended particles.
-7. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
-8. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
-
-These multiple steps cover a wide range of length scales and it is not clear at the onset which processes might be the rate limiting steps. We will develop time scale estimates for several of these steps to help identify which processes will likely require the most attention to design. Many of these transport processes are presumed to occur in parallel. :numref:`transport_length_scales` shows the range of length scales
-
-  .. _transport_length_scales:
-  .. figure::    Images/rapid_mix_macro_to_nano_scale.png
-      :width: 700px
-      :align: center
-      :alt: rapid mix macro to nano scale
-
-      Transport of coagulant nanoparticles occurs over length scales ranging from meter to a fraction of a nanometer.
-
 
 Energy Dissipation Rate, Velocity Gradient, and Mixing
-------------------------------------------------------
+======================================================
 
 In addition to the general fluids review in the previous chapter, there are a few extra fluid dynamics concepts that are important to know in order to understand drinking water treatment and AguaClara’s approach to it. These concepts are primarily focused on the relationships between: \* Turbulence \* Viscosity \* Shear \* Velocity Gradients (:math:`G`), which serve as a measure of fluid deformation \* Energy Dissipation Rate (EDR, :math:`\varepsilon`)
 
@@ -103,7 +129,7 @@ Knowledge of these concepts and how they interact is critical to understand rapi
 The two concepts that were not covered in the previous chapter, `fluids review <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Fluids%20Review/Fluids_Review_Design.md>`__, are velocity gradient :math:`G` and energy dissipation rate :math:`\varepsilon`. While these will be very thoroughly described over the course of this introduction, a brief and simple explanation is included to help get the ball rolling.
 
 Understanding :math:`G` and :math:`\varepsilon`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------
 
 :math:`G`, or velocity gradient, is a measure of fluid deformation. It is defined by how quickly one point of water along one streamline moves in comparison to another point on another streamline (:math:`v_A` compared to :math:`v_B`, for example), taking into account the distance between the streamlines, :math:`\Delta h`. A visual example of a velocity gradient is shown in the image below:
 
@@ -144,10 +170,10 @@ Velocity gradients are central to flocculation because they cause the deformatio
 
       Pedestrians walking on a sidewalk serve as a model for velocity gradients.
 
-Different Geometries
-====================
+Common Flow Geometries that Dissipate Energy
+============================================
 
-Water treatment plants at research and municipal scales deploy a wide range of flow geometries. The following list includes the flow geometries that are commonly used for mixing processes and example locations.
+Water treatment plants at research and municipal scales deploy a wide range of flow geometries. The following list includes the flow geometries that are commonly used for mixing processes.
 
 -  Straight pipe (wall shear) - [uncommon, but included for completeness]
 -  Coiled tube (wall shear and expansions) - [research scale mixing]
@@ -158,7 +184,7 @@ Water treatment plants at research and municipal scales deploy a wide range of f
 -  Plane jet - (expansion) - [inlet into sedimentation tank]
 -  Behind a flat plate - (expansion) - [mechanical mixers]
 
-The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants.
+The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants. The :ref:`rapid_mix_derivations` are available as a reference.
 
   .. _Control_volume_equations:
   .. csv-table:: Table of equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.
@@ -188,7 +214,7 @@ For turbulent flow and for flow expansions the amount of fluid deformation decre
   .. csv-table:: Table of equations for maximum (wall) energy dissipation rates and wall velocity gradients.
      :header: "Geometry", "Energy dissipation rate at the wall", "Velocity gradient at the wall"
      :widths: 30, 30, 30
-     :align: center
+     :align: left
 
      "Straight pipe", ":math:`\varepsilon_{wall} = \frac{1}{\nu}\left({\rm f}  \frac{\bar v^2}{8} \right)^2`", ":math:`G_{wall} ={\rm f}  \frac{\bar v^2}{8\nu}`"
      "Straight pipe laminar", ":math:`\varepsilon_{wall} = \left(\frac{8\bar v}{D} \right)^2 \nu`", ":math:`G_{wall} =  \frac{8\bar v}{D}`"
@@ -200,6 +226,7 @@ For turbulent flow and for flow expansions the amount of fluid deformation decre
   .. csv-table:: Equations for maximum energy dissipation rates and velocity gradients for flow expansions.
      :header: "Geometry", ":math:`\Pi_{Jet}`", "Maximum energy dissipation rate", "Maximum velocity gradient"
      :widths: 30, 10, 30, 30
+     :align: left
 
      "Round jet", "0.08", ":math:`\varepsilon_{Max} = \Pi_{JetRound}\frac{   \bar v_{Jet} ^3}{D_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{RoundJet} \bar v_{Jet} }{\nu D_{Jet}}}`"
      "Plane jet", "0.0124", ":math:`\varepsilon_{Max} = \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{S_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}`"
@@ -209,10 +236,12 @@ For mechanical mixing where an impeller or other stirring device is adding shaft
 
 .. math::  \bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}
 
-where \* :math:`P` = power input into the control volume \* :math:`m` =
-mass of fluid in the control volume \* :math:`\rlap{-}V` = volume of the
-control volume \* :math:`\rho` = density of the fluid
+| where
+| :math:`P` = power input into the control volume
+| :math:`m` = mass of fluid in the control volume
+| :math:`\rlap{-}V` = volume of the control volume
+| :math:`\rho` = density of the fluid
 
-The Camp-Stein velocity gradient in a mechanically mixed reactor is
+The Camp-Stein velocity gradient for a mechanically mixed reactor is
 
 .. math::  G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}
