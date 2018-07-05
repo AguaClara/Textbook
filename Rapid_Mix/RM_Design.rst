@@ -4,9 +4,7 @@ Rapid Mix Design
 Length and time scales for each of the processes
 ------------------------------------------------
 
-Let’s begin by describing the coagulant injection for a 60 L/s plant. We
-will use a `linear flow orifice
-meter <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Flow%20Control%20and%20Measurement/FCM_Design.md#linear-flow-orifice-meter-lfom>`__
+Let’s begin by describing the coagulant injection for a 60 L/s plant. We will use a `linear flow orifice meter <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Flow%20Control%20and%20Measurement/FCM_Design.md#linear-flow-orifice-meter-lfom>`__
 with 20 cm of head loss.
 
 .. code:: python
@@ -47,12 +45,7 @@ The LFOM requires a 16 inch diameter pipe.
 Example problem: Energy dissipation rate in a straight pipe
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-A water treatment plant that is treating 120 L/s of water injects the
-coagulant into the middle of the pipe that delivers the raw water to the
-plant and then splits the flow into 2 parallel treatment trains for
-subsequent flocculation. The pipe is PVC 16 inch nominal pipe diameter
-SDR 26. The water temperature is :math:`0^{\circ}C`. Estimate the
-minimum distance between the injection point and the flow split.
+A water treatment plant that is treating 120 L/s of water injects the coagulant into the middle of the pipe that delivers the raw water to the plant and then splits the flow into 2 parallel treatment trains for subsequent flocculation. The pipe is PVC 16 inch nominal pipe diameter SDR 26. The water temperature is :math:`0^{\circ}C`. Estimate the minimum distance between the injection point and the flow split.
 
 Solution scheme 1) Calculate the friction factor
 
@@ -73,21 +66,7 @@ Solution scheme 1) Calculate the friction factor
     L_mixing = ID_pipe*N_pipe_diameters
     print('The minimum distance required for mixing across the diameter of the pipe is ',L_mixing.to_base_units())
 
-The previous analysis provides a minimum distance for sufficient mixing
-so that equal mass flux of coagulant will end up in both treatment
-trains. This assumes that the coagulant was injected in the pipe
-centerline. Injection at the wall of the pipe is a poor practice and
-would require many more pipe diameters because it takes significant time
-for the coagulant to be mixed out of the slower fluid at the wall. The
-time required for mixing at the scale of the flow in the plant is thus
-accomplished in a few seconds. This ends up being the fastest part of
-the transport of the coagulant nanoparticles on their way to attachment
-to the clay particles.
-
-Next we will determine a typical flow rate of coagulant. **Aluminum**
-concentrations for polyaluminum chloride (PACl) typically range from 1
-to 10 mg/L. The maximum PACl stock solution concentration is about 70
-g/L as **Al**.
+The previous analysis provides a minimum distance for sufficient mixing so that equal mass flux of coagulant will end up in both treatment trains. This assumes that the coagulant was injected in the pipe centerline. Injection at the wall of the pipe is a poor practice and would require many more pipe diameters because it takes significant time for the coagulant to be mixed out of the slower fluid at the wall. The time required for mixing at the scale of the flow in the plant is thus accomplished in a few seconds. This ends up being the fastest part of the transport of the coagulant nanoparticles on their way to attachment to the clay particles.  Next we will determine a typical flow rate of coagulant. **Aluminum** concentrations for polyaluminum chloride (PACl) typically range from 1 to 10 mg/L. The maximum PACl stock solution concentration is about 70 g/L as **Al**.
 
 .. code:: python
 
@@ -96,15 +75,7 @@ g/L as **Al**.
     Q_PACl_max = (Q_plant*C_PACl_dose_max/C_PACl_stock).to(u.mL/u.s)
     print(Q_PACl_max)
 
-We can estimate the diameter of the injection port by setting the
-kinetic energy loss where the coagulant is injected into the main flow
-to be 10 cm. The amount of energy we invest in injecting the coagulant
-into the raw water is a compromise between having to raise the entire
-chemical feed system including the stock tanks to increase the potential
-energy and a goal of not having pressure fluctuations inside the LFOM
-pipe cause flow oscillations in the chemical dosing tube. Thus our goal
-is to have the kinetic energy at the injection point be large compared
-with the expected pressure fluctuations in the LFOM.
+We can estimate the diameter of the injection port by setting the kinetic energy loss where the coagulant is injected into the main flow to be 10 cm. The amount of energy we invest in injecting the coagulant into the raw water is a compromise between having to raise the entire chemical feed system including the stock tanks to increase the potential energy and a goal of not having pressure fluctuations inside the LFOM pipe cause flow oscillations in the chemical dosing tube. Thus our goal is to have the kinetic energy at the injection point be large compared with the expected pressure fluctuations in the LFOM.
 
 .. code:: python
 
