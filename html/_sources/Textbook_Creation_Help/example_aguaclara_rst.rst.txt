@@ -286,23 +286,12 @@ Or this syntax::
 Writing Python and Including Doctests
 -----------------------------------------
 
-Writing Executable Code
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To write a code block that runs while it is being edited in Atom (such as to test functions), the syntax is very similar to writing a non-executable code block except "python" is specified for writing in python. If you are writing in a different language, you can specify a different langauge directive (such as c, json, java, etc.). If you are running Hydrogen, you run the code line by line using shift + enter. There does not appear to be a way to run the whole block at once. The following is the syntax for an executable code block: 
-
-
-.. code::
-
-  .. code:: python
-
-    from aide_design.play import*
-    this = 'a runnable code block'
-
 Doctests
 ^^^^^^^^^^^^
 
-* Test some python code with doctests. To test the code, run :code:`make doctest` as described `here <http://docs.sphinxdocs.com/en/latest/step-3.html>`_. In the linked document, there are many more options for controlling doctest behavior.
+When writing code for the textbook, some sections will be written in execuatable code to demonstrate functions or run calculations. They will not, however, run automatically in the webpage, so to ensure that they are correct before they are pubished they are tested with doctests. Doctests compare the written code with the expected result typed manually below it. In the Anaconda Prompt, simply run the :code:`make doctest` in the correct directory and branch. When run, you see where your excutable code doesn't match up with the "answer" provided by you, the contributor. One reason this is important is because if functions in aide_design change, their outputs might alter from old versions. Doctests will show where this happens. Additonally, typos and other mistakes can be seen. Further documentation on running doctest can be found `here <http://docs.sphinxdocs.com/en/latest/step-3.html>`_.
+
+The way to ensure a doctest will run is to precede each line of code with '>>>', the default Python prompt. When a doctest is run, every line of code with '>>>' in front of it will be run within a directory. The testing becomes relevant for lines which do not have '>>>' in front of them. Any line that is directly below a line beginnning with '>>>' is assumed to be an output of the line of code just above it. In the example below, :code:`19` is the expected output of the line :code:`>>> print(5+14)`. If the output of that line did not match the line below, doctests would alert you! Below are some examples of doctestable code.
 
     >>> python="code"
     >>> print(5+14)
@@ -322,6 +311,8 @@ Doctests
     2         Jill       Jack
 
 * To get doctests to pass through Travis, you'll have to add any packages you use to the install step in ".travis.yml". Under install, add a line that says :code:`pip install my_package==0.0.0`. When doing this, make sure to specify the version as functionality can change!
+
+Though there are other ways to include code in an RST document, this method makes doctesting possible, and will make it easy to change the documents should aide_design functions change, therefore this is the best way to include code! Additionally it makes it easy to see the difference between the code and the output, whereas other methods are less clear in this distinction.
 
 
 .. _assorted_convention:
