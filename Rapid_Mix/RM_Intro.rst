@@ -6,8 +6,7 @@ Rapid Mix Introduction
 
 Rapid mix is the term commonly used to describe the processes that occur between the coagulant addition to the raw water and the flocculation process. The processes that occur are not well understood and thus design guidelines have been empirical.
 
-“In summary, little is known about rapid mix, much less any sensitivity to scale. However, the models and data reviewed suggest the need to be on the lookout for certain effects. From what is presently known, it can be speculated that since coagulant precipitation is sensitive to both micro- and macro-mixing, scale-up must consider not only energy
-dissipation rate, but also the reaction injection point and the contacting method.” - `Mixing in Coagulation and Flocculation 1991 page 292 <https://books.google.com/books/about/Mixing_in_coagulation_and_flocculation.html?id=dkFSAAAAMAAJ>`_.
+“In summary, little is known about rapid mix, much less any sensitivity to scale. However, the models and data reviewed suggest the need to be on the lookout for certain effects. From what is presently known, it can be speculated that since coagulant precipitation is sensitive to both micro- and macro-mixing, scale-up must consider not only energy dissipation rate, but also the reaction injection point and the contacting method.” - `Mixing in Coagulation and Flocculation 1991 page 292 <https://books.google.com/books/about/Mixing_in_coagulation_and_flocculation.html?id=dkFSAAAAMAAJ>`_.
 
 Although the processes have not been well characterized, the energy that is invested for rapid miz processes is significant. In many cases the amount of energy used isn't practical for gravity powered water treatment plants. The high energy consumption of rapid mix units has led some municipal water treatment plant operators to experiment with turning off rapid mix units. They have found that at least under some conditions there is no indication that the energy used in rapid mix improved plant performance. Thus there is a need to understand the physical and chemical processes that occur when a concentrated liquid coagulant is added to water.
 
@@ -72,7 +71,7 @@ Fluid mixing is the process by which large scale eddies distribute packets of th
 
 The hydraulic jump in :numref:`hydraulic_jump` uses a flow expanion to generate mixing in an open channel and that suggests that a flow expansion could also be used to generate mixing in a closed conduit. AguaClara rapid mix units consiste of an orifice in the bottom of the Linear Flow Orifice Meter where the water enters the flocculator.
 
-
+.. _Chemistry_of_coagulant_nanoparticles:
 
 Chemistry of coagulant nanoparticles
 ========================================
@@ -96,6 +95,7 @@ pH range for precipitation of coagulant nanoparticles
 pH adjustment in water treatment plants
 ----------------------------------------
 
+.. _Coagulant_nanoparticle_interactions:
 
 Coagulant nanoparticle interactions
 ========================================
@@ -109,15 +109,7 @@ Suspended solids
 Rate estimates for transport to suspended solids
 ------------------------------------------------------
 
-
-Energy dissipation rate and velocity gradients
-===============================================
-
-.. _Coagulant_nanoparticle_application:
-
-Coagulant nanoparticle application
-==================================
-
+.. _EDR_G_and_mixing:
 
 Energy Dissipation Rate, Velocity Gradient, and Mixing
 ======================================================
