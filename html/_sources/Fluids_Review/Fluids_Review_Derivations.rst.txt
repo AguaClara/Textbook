@@ -3,16 +3,23 @@
 ***************************************************
 Fluids Review Derivations
 ***************************************************
-This document contains the derivation of the minor loss equation using the following image as a reference. The derivation begins with a slightly simplified energy equation across the control volume show. Our energy equation begins with :math:`h_P` and :math:`h_T` having been
+
+
+
+.. _minor_loss_equation_derivation:
+
+Minor Loss Equation
+====================
+This section contains the derivation of the minor loss equation using the following image as a reference. The derivation begins with a slightly simplified energy equation across the control volume show. Our energy equation begins with :math:`h_P` and :math:`h_T` having been
 eliminated.
 
-    .. _minor_loss_pipe:
-    .. figure:: Images/minor_loss_pipe.png
-        :width: 700px
-        :align: center
-        :alt: Example of flow expansion resulting in a minor loss
+.. _minor_loss_pipe:
+.. figure:: Images/minor_loss_pipe.png
+    :width: 700px
+    :align: center
+    :alt: Example of flow expansion resulting in a minor loss
 
-        Example of a minor loss due to a flow expansion
+    Example of a minor loss due to a flow expansion
 
 .. math::
 
@@ -83,6 +90,11 @@ To combine the two terms, the numerator and denominator of the first term, :math
 
     h_e = \frac{\bar v_{out}^2 - 2 \bar v_{in} \bar v_{out} + \bar v_{in}^2}{2g}
 
+
+.. _final_minor_loss_equations:
+
+Final Forms of the Minor Loss Equation
+-----------------------------------------
 Factoring the numerator yields to the first ‘final’ form of the minor loss equation:
 
 .. math::
