@@ -16,9 +16,10 @@ install:
 script:
   - make html
   - make doctest
-  - htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html"
+  - htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/Textbook/test/html/index.html
 before_deploy:
   - if [ -n "$TRAVIS_TAG" ]; then ./build_pdf.sh; fi; # If this is tagged, build the latex and the pdf to be released.
+  - if [ -n "$PDF" ]; then ./build_pdf.sh; fi; # If the PDF environment variable is passed in, build PDF to be pushed to test branch.
 deploy:
   - provider: pages
     skip-cleanup: true
@@ -28,6 +29,14 @@ deploy:
     on:
       tags: true
       branch: master
+  - provider: pages # Deploy to the test branch
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    keep-history: true
+    local-dir: _build
+    target-branch: test
+    on:
+      all_branches: true
   - provider: releases
     api_key: $GITHUB_TOKEN
     file:
