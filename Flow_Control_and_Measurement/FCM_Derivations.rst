@@ -36,7 +36,7 @@ Our other equation for flow is the head loss equation. Since major losses are ne
 
     h = h_e = \left( \sum K \right) \frac{Q^2}{2gA_{Valve}^2}
 
-Bear in mind that this is the second form of the minor loss equation as described in `this previous derivation <https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Flow%20Control%20and%20Measurement/Images/Derivation_minor_loss_equation.md>`_. Rearranging the minor loss equation to solve for :math:`Q`, it looks like this:
+Bear in mind that this is the second form of the minor loss equation as described in :ref:`final_minor_loss_equations`. Rearranging the minor loss equation to solve for :math:`Q`, it looks like this:
 
 .. math::
 
@@ -159,7 +159,7 @@ First, it is necessary to understand how AguaClara tank drains work and what the
 
 While AguaClara sedimentation tanks use valves instead of pipe to begin the process of draining, the actual drain piping system is the same, pipe and an elbow. The equation that will soon be derived applies to both pipe stub and valve drains.
 
-We will start the derivation from the following equation, which is found in an intermediate step from the `‘tank with a valve derivation’ <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Flow%20Control%20and%20Measurement/Derivation_flow_through_tank_with_a_valve.md>`_. While this system does not have a valve, it has other sources of minor loss and therefore the equation is still valid.
+We will start the derivation from the following equation, which is found in an intermediate step from the ':math:`Q(t)` :ref:`flow_for_a_tank_with_a_valve`.' While this system does not have a valve, it has other sources of minor loss and therefore the equation is still valid.
 
 .. math::
 

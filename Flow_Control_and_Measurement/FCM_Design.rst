@@ -41,7 +41,7 @@ Flow :math:`Q` and Water Level :math:`h` as a Function of Time
 ----------------------------------------------------------------
 Our first step is to see if we can get constant head out of a simple system. The most simple flow control system is a bucket or tank with a hole in it. This system is too coarse to provide constant head. One step above that is a bucket or tank with a valve. This is where we begin our search for constant head.
 
-Using the setup of in the image below, we derive the following equation for flow :math:`Q` through the valve as a function of time :math:`t`. `The derivation is found here, <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Flow%20Control%20and%20Measurement/FCM_Derivation_flow_through_tank_with_a_valve.md>`_ you are advised to read through it if you are confused about this equation.
+Using the setup of in the image below, we derive the following equation for flow :math:`Q` through the valve as a function of time :math:`t`. `The derivation is found here: :ref:`flow_for_a_tank_with_a_valve` you are advised to read through it if you are confused about this equation.
 
 .. math::
 
@@ -85,7 +85,7 @@ Using this equation and relationship, we make the following plots. On the left, 
 
 Drain System for a Tank
 ------------------------
-While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they essentially tanks with valves. The derivation for the following equation is `found here <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Flow%20Control%20and%20Measurement/FCM_Derivation_drain_system_design.md>`_, along with more details on AguaClara’s pipe stub method for draining tanks. The derived ‘Tank Drain’ equation is as follows:
+While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they essentially tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: :ref:`diameter_and_time_tank_drain_equation`. The derived ‘Tank Drain’ equation is as follows:
 
 .. math::
 
@@ -245,7 +245,7 @@ The CDC makes it easy and accurate to dose chemicals. The flow of chemicals auto
 
 How it works
 ^^^^^^^^^^^^^^^^
-A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be `found here, in the derivations section <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Flow%20Control%20and%20Measurement/FCM_Derivation_designing_the_cdc.md>`_, and you are very, very strongly encouraged to read them.
+A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: :ref:`design_equations_for_the_cdc`, and you are very, very strongly encouraged to read them.
 
 The CDC can be designed manually using the equations from the derivation linked above or via aide_design, using the equations found in `cdc_functions.py <https://github.com/AguaClara/aide_design/blob/master/aide_design/cdc_functions.py>`_. Either way, the design algorithm is roughly the same:
 
