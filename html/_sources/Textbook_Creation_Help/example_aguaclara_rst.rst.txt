@@ -285,6 +285,23 @@ Or this syntax::
 
 Writing Python and Including Doctests
 -----------------------------------------
+
+Writing Executable Code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To write a code block that runs while it is being edited in Atom (such as to test functions), the syntax is very similar to writing a non-executable code block except "python" is specified for writing in python. If you are writing in a different language, you can specify a different langauge directive (such as c, json, java, etc.). If you are running Hydrogen, you run the code line by line using shift + enter. There does not appear to be a way to run the whole block at once. The following is the syntax for an executable code block: 
+
+
+.. code::
+
+  .. code:: python
+
+    from aide_design.play import*
+    this = 'a runnable code block'
+
+Doctests
+^^^^^^^^^^^^
+
 * Test some python code with doctests. To test the code, run :code:`make doctest` as described `here <http://docs.sphinxdocs.com/en/latest/step-3.html>`_. In the linked document, there are many more options for controlling doctest behavior.
 
     >>> python="code"
@@ -294,13 +311,13 @@ Writing Python and Including Doctests
 * You can even print and test tables in doctests:
 
     >>> import pandas as pd
-    >>> names_male = pd.Series(['Obama', 'Monroe', 'Jack'])
+    >>> names_male = pd.Series(['Barack', 'Monroe', 'Jack'])
     >>> names_female = pd.Series(['Michelle', 'Juanita', 'Jill'])
     >>> var_names = dict( female_names = names_female, male_names = names_male)
     >>> df = pd.DataFrame(var_names)
     >>> print(df)
       female_names male_names
-    0     Michelle      Obama
+    0     Michelle     Barack
     1      Juanita     Monroe
     2         Jill       Jack
 
