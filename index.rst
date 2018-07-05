@@ -28,6 +28,12 @@ This is a place holder for 'Chapter 1: Introduction' files
    Fluids_Review/Fluids_Review_Design.rst
    Fluids_Review/Fluids_Review_Derivations.rst
 
+.. toctree::
+  :caption: Chapter 8: Filtration
+  :maxdepth: 2
+
+  Filtration/Filtration_Derivations.rst
+  Filtration/Filtration_Design.rst
 
 `PDF and LaTeX versions <https://github.com/AguaClara/Textbook/releases/latest>`_ [#pdf_warning]_.
 
