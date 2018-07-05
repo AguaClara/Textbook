@@ -32,8 +32,7 @@
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.doctest', 'sphinxcontrib.disqus',
-    'sphinx.ext.mathjax', 'matplotlib.sphinxext.only_directives', 
-    'matplotlib.sphinxext.plot_directive']
+    'sphinx.ext.mathjax']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
