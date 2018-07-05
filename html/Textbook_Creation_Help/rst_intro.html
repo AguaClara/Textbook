@@ -110,10 +110,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Design.html">Fluids Review  Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Derivations.html">Fluids Review Derivations</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 </ul>
 
             
@@ -193,13 +193,13 @@
 <p>There are two ways to <em>quickly</em> view an RST file. The first is using an <a class="reference external" href="https://ide.atom.io/">Atom</a> plugin that renders the view alongside the source code. This is a good initial test to make sure the RST is proper RST and looks <em>mostly</em> correct. However, some functionality, such as any extensions provided by <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> won’t run in the preview. In order to see the final html that will display on the website, you’ll need to use the second method, running sphinx locally to fully generate the html code. Once you are satisfied with your work and want to push it to the textbook, you’ll need to incorporate it to the master branch. To do so, refer to <a class="reference internal" href="#id3">Publishing online</a>.</p>
 <div class="section" id="installing-the-atom-plugins">
 <span id="installing-atom"></span><h3>Installing the Atom Plugins<a class="headerlink" href="#installing-the-atom-plugins" title="Permalink to this headline">¶</a></h3>
-<p>If you are using the Atom IDE to write RST, you can use the <a class="reference external" href="https://atom.io/packages/rst-preview-pandoc">rst-preview-pandoc</a> plugin to auto-generate a live RST preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview working, you’ll need to install <a class="reference external" href="https://atom.io/packages/language-restructuredtext">language-restructuredtext</a> and <a class="reference external" href="https://pandoc.org/installing.html">Pandoc</a> (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandoc</span></code>). If everything worked, you can use <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">shift</span> <span class="pre">+</span> <span class="pre">e</span></code> to toggle a display window for the live-updated RST preview.</p>
+<p>If you are using the Atom IDE to write RST, you can use the <a class="reference external" href="https://atom.io/packages/rst-preview-pandoc">rst-preview-pandoc</a> plugin to auto-generate a live RST preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview working, you’ll need to install <a class="reference external" href="https://atom.io/packages/language-restructuredtext">language-restructuredtext</a> via atom and <a class="reference external" href="https://pandoc.org/installing.html">Pandoc</a> via your command line (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandoc</span></code>). If everything worked, you can use <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">shift</span> <span class="pre">+</span> <span class="pre">e</span></code> to toggle a display window for the live-updated RST preview.</p>
 </div>
 <div class="section" id="building-rst-locally-with-sphinx">
 <span id="building-rst-locally"></span><h3>Building RST Locally with <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a><a class="headerlink" href="#building-rst-locally-with-sphinx" title="Permalink to this headline">¶</a></h3>
 <p>We use <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> to build RST locally and remotely. Follow these steps to get <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> and run it locally:</p>
 <ol class="arabic simple">
-<li>Install <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> and disqus for sphinx using pip: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">--user</span> <span class="pre">-U</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">git+https://github.com/rmk135/sphinxcontrib-disqus</span></code>.</li>
+<li>Install <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, disqus, and a sphinx visual theme using pip: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">--user</span> <span class="pre">-U</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">git+https://github.com/rmk135/sphinxcontrib-disqus</span></code>.</li>
 <li>Generate all the html by navigating in the command line to the source directory /Textbook and creating the build in that directory with the command line <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>.</li>
 <li>View the html generated in the /Textbook/_build directory by copying the full file path of /Textbook/_build/html/index.html and pasting it into your browser.</li>
 </ol>
@@ -237,13 +237,10 @@
 <div class="section" id="testing-online">
 <span id="id4"></span><h3>Testing Online<a class="headerlink" href="#testing-online" title="Permalink to this headline">¶</a></h3>
 <p>To test exactly what will be published, we have a test branch. The test branch is built by Travis and contains all the processed html that Travis produces in _build/html. This branch is populated when ANY COMMIT IS PUSHED. Meaning, the last commit to be pushed, if it passes the Travis tests, will be built and the output will be placed in the test branch. Also, if the PDF=True environment variable is triggered for a Travis build, the PDF will also be generated and placed in the test branch. To do this, use the “Trigger Build” option in Travis and put:</p>
-<dl class="docutils">
-<dt>script:</dt>
-<dd><ul class="first last simple">
-<li>PDF=True</li>
-</ul>
-</dd>
-</dl>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">script</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">PDF</span><span class="o">=</span><span class="kc">True</span>
+</pre></div>
+</div>
 <p><a class="reference external" href="https://rawgit.com/AguaClara/Textbook/test/html/index.html">The website output is viewable here</a>.</p>
 </div>
 <div class="section" id="sharing-test-output">
@@ -261,7 +258,6 @@
 <ul class="simple">
 <li>A document is referred to by its title, as defined between the <code class="docutils literal notranslate"><span class="pre">*****</span></code> signs at the top of the page, <strong>NOT</strong> the filename. So it is critical to have a title.</li>
 <li>In addition to a title, every RST document in this book should have a refernce so that it can be linked to in other, external documents. If you view the source code of this document and scroll to the top, you’ll see this document is labeled as <code class="docutils literal notranslate"><span class="pre">rst_intro</span></code> with the following code <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_rst_intro</span></code>. Call this document in another textbook RST file with <code class="docutils literal notranslate"><span class="pre">:ref:`rst_intro`</span></code></li>
-<li>Always run <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> before pushing to ensure you can make your changes without errors.</li>
 <li>Anything else you’d like to add for the future…</li>
 </ul>
 </div>

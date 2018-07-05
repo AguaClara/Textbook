@@ -84,8 +84,11 @@
 <li class="toctree-l1"><a class="reference internal" href="rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Functionality in RST and AguaClara Convention</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-use-this-file">How to use this file:</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#headings">Headings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#headings-bullet-points-and-numbered-lists">Headings, Bullet Points, and Numbered Lists</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#headings">Headings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lists-and-bullets">Lists and Bullets</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#figures">Figures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#math-and-equations">Math and Equations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
@@ -94,7 +97,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#external-references">External References</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#python-and-doctests">Python and Doctests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#writing-code-blocks-not-actual-executable-code">Writing Code Blocks (not actual, executable code)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#writing-python-and-including-doctests">Writing Python and Including Doctests</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#assorted-other-convention">Assorted Other Convention</a></li>
 </ul>
 </li>
@@ -107,10 +111,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Design.html">Fluids Review  Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Derivations.html">Fluids Review Derivations</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 </ul>
 
             
@@ -186,28 +190,15 @@
 <p class="first admonition-title">Important</p>
 <p class="last"><strong>Proper indentation and line spacing is extremely important when writing in RST</strong></p>
 </div>
-<div class="section" id="code">
-<span id="id2"></span><h3>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
-<p>You can write code in-line or as a code block. There are two ways of doing each. For in-line code, use <code class="docutils literal notranslate"><span class="pre">``this</span> <span class="pre">syntax``</span></code> or <code class="docutils literal notranslate"><span class="pre">:code:`this</span> <span class="pre">syntax`</span></code>. For code blocks, use this syntax:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="p">::</span>
-
-  <span class="n">This</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">code</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
-<p>Or this syntax:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">text</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">code</span> <span class="n">block</span><span class="p">,</span> <span class="n">the</span> <span class="n">code</span> <span class="n">block</span> <span class="ow">is</span> <span class="n">below</span><span class="p">::</span>
-
-  <span class="n">This</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">code</span> <span class="n">block</span><span class="o">.</span>
-</pre></div>
-</div>
-</div>
+<div class="section" id="headings-bullet-points-and-numbered-lists">
+<span id="headings-bullets-and-lists"></span><h3>Headings, Bullet Points, and Numbered Lists<a class="headerlink" href="#headings-bullet-points-and-numbered-lists" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="headings">
-<span id="id3"></span><h3>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h3>
+<h4>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h4>
 <p>Headings are defined by an underline consisting of one of the following characters: <code class="docutils literal notranslate"><span class="pre">*,</span>&#160; <span class="pre">=,</span>&#160; <span class="pre">-,</span>&#160; <span class="pre">^,</span> <span class="pre">and</span> <span class="pre">&quot;</span></code>. RST does not give any particular character hierarchy over another for defining titles, sections, subsections, or so on. The user indicates character hierarchy for headings and can use whatever order they want, and the order can change between documents. However, it is better to stick to the same convention throughout a project. This is the convention for the AguaClara textbook:</p>
 <ul class="simple">
 <li><cite>*</cite> with overline, for document titles</li>
 <li><cite>=</cite>, for sections</li>
-<li><cite>-</cite>, for subsections</li>
+<li><cite>-</cite>, for subsecti ons</li>
 <li><cite>^</cite>, for subsubsections</li>
 <li><cite>“</cite>, for subsubsubsections</li>
 </ul>
@@ -245,8 +236,41 @@
 <li>The length of the underline must be at least as long as the title itself</li>
 </ul>
 </div>
+<div class="section" id="lists-and-bullets">
+<h4>Lists and Bullets<a class="headerlink" href="#lists-and-bullets" title="Permalink to this headline">¶</a></h4>
+<p>This section is lifted from <a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks">this rst cheatsheet</a>.
+The following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">bulleted</span> <span class="nb">list</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">It</span> <span class="n">has</span> <span class="n">two</span> <span class="n">items</span><span class="p">,</span> <span class="n">the</span> <span class="n">second</span>
+  <span class="n">item</span> <span class="n">uses</span> <span class="n">two</span> <span class="n">lines</span><span class="o">.</span> <span class="p">(</span><span class="n">note</span> <span class="n">the</span> <span class="n">indentation</span><span class="p">)</span>
+
+<span class="mf">1.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">numbered</span> <span class="nb">list</span><span class="o">.</span>
+<span class="mf">2.</span> <span class="n">It</span> <span class="n">has</span> <span class="n">two</span> <span class="n">items</span> <span class="n">too</span><span class="o">.</span>
+
+<span class="c1">#. This is a numbered list.</span>
+<span class="c1">#. It has two items too.</span>
+</pre></div>
+</div>
+<p>gives:</p>
+<ul class="simple">
+<li>This is a bulleted list.</li>
+<li>It has two items, the second
+item uses two lines. (note the indentation)</li>
+</ul>
+<ol class="arabic simple">
+<li>This is a numbered list.</li>
+<li>It has two items too.</li>
+<li>This is a numbered list.</li>
+<li>It has two items too.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">if two lists are separated by a blanck line only, then the two lists are not differentiated as you can see above.</p>
+</div>
+</div>
+</div>
 <div class="section" id="figures">
-<span id="id4"></span><h3>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h3>
+<span id="id2"></span><h3>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h3>
 <p>Every figure should have a label, alternative text, and a caption. The label is used to reference a figure and is written before the figure directive. Below, the two figures are labelled <code class="docutils literal notranslate"><span class="pre">fluffy_cat</span></code> and <code class="docutils literal notranslate"><span class="pre">mountain_figure</span></code>. The alternative text is a very short desciption of the figure. A caption is written below all of the figure specifications, with a blank line to separate the specs from the caption.</p>
 <p>Use the following syntax for including figures from online sources:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_fluffy_cat</span><span class="p">:</span>
@@ -272,11 +296,11 @@
 </pre></div>
 </div>
 <p>Displayed below are the two figures generated using the code above.</p>
-<div class="figure align-center" id="id8">
+<div class="figure align-center" id="id5">
 <span id="fluffy-cat"></span><a class="reference internal image-reference" href="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"><img alt="external figure" src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" style="width: 200px; height: 100px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">This is a caption.</span></p>
 </div>
-<div class="figure align-center" id="id9">
+<div class="figure align-center" id="id6">
 <span id="mountain-figure"></span><a class="reference internal image-reference" href="../_images/mountain.jpg"><img alt="internal figure" src="../_images/mountain.jpg" style="width: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Here is a figure labeled <code class="docutils literal notranslate"><span class="pre">mountain</span></code>. Specify the figure location with folder/image.jpg.
 The base directory for figure location is the directory of the file you are writing.
@@ -284,7 +308,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </div>
 </div>
 <div class="section" id="math-and-equations">
-<span id="id5"></span><h3>Math and Equations<a class="headerlink" href="#math-and-equations" title="Permalink to this headline">¶</a></h3>
+<span id="id3"></span><h3>Math and Equations<a class="headerlink" href="#math-and-equations" title="Permalink to this headline">¶</a></h3>
 <p>Math is very cool, and works natively in RST using LaTeX math syntax. In-line math can be written with the following syntax: <code class="docutils literal notranslate"><span class="pre">:math:`y</span> <span class="pre">=</span> <span class="pre">ax^2</span> <span class="pre">+</span> <span class="pre">bx</span> <span class="pre">+</span> <span class="pre">c`</span></code> which displays <span class="math notranslate nohighlight">\(y = ax^2 + bx + c\)</span>. To display equations in their own line, use the following syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">math</span><span class="p">::</span>
   <span class="p">:</span><span class="n">label</span><span class="p">:</span> <span class="n">quadratic</span>
@@ -329,10 +353,10 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </div>
 </div>
 <div class="section" id="tables">
-<span id="id6"></span><h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
+<span id="id4"></span><h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
 <p>Tables should be made using csv for compatibility with excel:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_an_example_table</span><span class="p">:</span>
-<span class="o">..</span> <span class="n">csv</span><span class="o">-</span><span class="n">table</span><span class="p">::</span> <span class="n">a</span> <span class="n">title</span>
+<span class="o">..</span> <span class="n">csv</span><span class="o">-</span><span class="n">table</span><span class="p">::</span> <span class="n">This</span> <span class="n">table</span> <span class="n">has</span> <span class="n">a</span> <span class="n">title</span>
    <span class="p">:</span><span class="n">header</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;firstname&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span>
    <span class="p">:</span><span class="n">widths</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span>
    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
@@ -342,8 +366,8 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </pre></div>
 </div>
 <p>The code block above generates the following table:</p>
-<span id="an-example-table"></span><table border="1" class="colwidths-given docutils align-center" id="id10">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">This table has a title</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
+<span id="an-example-table"></span><table border="1" class="colwidths-given docutils align-center" id="id7">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">This table has a title</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="40%" />
 <col width="40%" />
@@ -366,7 +390,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </tr>
 </tbody>
 </table>
-<p>Every table should have a label, shown above as <code class="docutils literal notranslate"><span class="pre">an_example_table</span></code></p>
+<p>Every table should have a label, shown in the example above as <code class="docutils literal notranslate"><span class="pre">an_example_table</span></code></p>
 </div>
 <div class="section" id="links-and-references-for-documents-figures-and-tables">
 <span id="links-and-references"></span><h3>Links and References for Documents, Figures, and Tables<a class="headerlink" href="#links-and-references-for-documents-figures-and-tables" title="Permalink to this headline">¶</a></h3>
@@ -411,8 +435,23 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </ul>
 </div>
 </div>
-<div class="section" id="python-and-doctests">
-<span id="id7"></span><h3>Python and Doctests<a class="headerlink" href="#python-and-doctests" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="writing-code-blocks-not-actual-executable-code">
+<span id="writing-code-blocks"></span><h3>Writing Code Blocks (not actual, executable code)<a class="headerlink" href="#writing-code-blocks-not-actual-executable-code" title="Permalink to this headline">¶</a></h3>
+<p>You can write code in-line or as a code block. Note that these ways of showing code <em>only display code</em>, they do not generate a code block that actually runs. There are two ways of doing each. For in-line code, use <code class="docutils literal notranslate"><span class="pre">``this</span> <span class="pre">syntax``</span></code> or <code class="docutils literal notranslate"><span class="pre">:code:`this</span> <span class="pre">syntax`</span></code>. For code blocks, use this syntax:</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="p">::</span>
+
+  <span class="n">This</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">code</span> <span class="n">block</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Or this syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">two</span> <span class="n">colons</span> <span class="n">at</span> <span class="n">the</span> <span class="n">end</span> <span class="n">of</span> <span class="n">this</span> <span class="n">line</span> <span class="n">indicate</span> <span class="n">that</span> <span class="n">the</span> <span class="n">text</span> <span class="n">below</span><span class="p">,</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">separated</span> <span class="n">by</span> <span class="n">a</span> <span class="n">blank</span> <span class="n">line</span> <span class="ow">and</span> <span class="n">indented</span><span class="p">,</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">code</span> <span class="n">block</span><span class="p">::</span>
+
+  <span class="n">This</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">code</span> <span class="n">block</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="writing-python-and-including-doctests">
+<span id="python-and-doctests"></span><h3>Writing Python and Including Doctests<a class="headerlink" href="#writing-python-and-including-doctests" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">Test some python code with doctests. To test the code, run <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code> as described <a class="reference external" href="http://docs.sphinxdocs.com/en/latest/step-3.html">here</a>. In the linked document, there are many more options for controlling doctest behavior.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">python</span><span class="o">=</span><span class="s2">&quot;code&quot;</span>

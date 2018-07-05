@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Filtration Derivations" href="../Filtration/Filtration_Derivations.html" />
+    <link rel="next" title="Flow Control and Measurement Design" href="../Flow_Control_and_Measurement/FCM_Design.html" />
     <link rel="prev" title="Fluids Review Design" href="Fluids_Review_Design.html" /> 
 
   
@@ -88,12 +88,18 @@
 <p class="caption"><span class="caption-text">Chapter 2: Fluids Review</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Fluids_Review_Design.html">Fluids Review  Design</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Fluids Review Derivations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fluids Review Derivations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#minor-loss-equation">Minor Loss Equation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#final-forms-of-the-minor-loss-equation">Final Forms of the Minor Loss Equation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 </ul>
 
             
@@ -160,14 +166,14 @@
             
   <div class="section" id="fluids-review-derivations">
 <span id="id1"></span><h1>Fluids Review Derivations<a class="headerlink" href="#fluids-review-derivations" title="Permalink to this headline">¶</a></h1>
-<p>This document contains the derivation of the minor loss equation using the following image as a reference. The derivation begins with a slightly simplified energy equation across the control volume show. Our energy equation begins with <span class="math notranslate nohighlight">\(h_P\)</span> and <span class="math notranslate nohighlight">\(h_T\)</span> having been
+<div class="section" id="minor-loss-equation">
+<span id="minor-loss-equation-derivation"></span><h2>Minor Loss Equation<a class="headerlink" href="#minor-loss-equation" title="Permalink to this headline">¶</a></h2>
+<p>This section contains the derivation of the minor loss equation using the following image as a reference. The derivation begins with a slightly simplified energy equation across the control volume show. Our energy equation begins with <span class="math notranslate nohighlight">\(h_P\)</span> and <span class="math notranslate nohighlight">\(h_T\)</span> having been
 eliminated.</p>
-<blockquote>
-<div><div class="figure align-center" id="id2">
+<div class="figure align-center" id="id2">
 <span id="minor-loss-pipe"></span><a class="reference internal image-reference" href="../_images/minor_loss_pipe.png"><img alt="Example of flow expansion resulting in a minor loss" src="../_images/minor_loss_pipe.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Example of a minor loss due to a flow expansion</span></p>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Example of a minor loss due to a flow expansion</span></p>
 </div>
-</div></blockquote>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-0">
 <span class="eqno">(47)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-0" title="Permalink to this equation">¶</a></span>\[\frac{p_{in}}{\rho g} + {z_{in}} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{\bar v_{out}^2}{2g} + h_L\]</div>
 <p>Since the elevations of the ‘in’ and ‘out’ references are the same, we can eliminate <span class="math notranslate nohighlight">\(z_{in}\)</span> and <span class="math notranslate nohighlight">\(z_{out}\)</span>. As we are considering such a small length of pipe, we will neglect the major loss component of head loss. Thus, <span class="math notranslate nohighlight">\(h_L = h_e\)</span>. The following three equations are all the same, simply rearranged to solve for <span class="math notranslate nohighlight">\(h_e\)</span>.</p>
@@ -206,6 +212,8 @@ few millimeters into the larger pipe, which means that the cross-sectional area 
 <p>To combine the two terms, the numerator and denominator of the first term, <span class="math notranslate nohighlight">\(\frac{\bar v_{out}^2 - \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{g}\)</span> will be multiplied by <span class="math notranslate nohighlight">\(2\)</span> to become <span class="math notranslate nohighlight">\(\frac{2 \bar v_{out}^2 - 2 \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{2 g}\)</span>. The equation then looks like:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-11">
 <span class="eqno">(58)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-11" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\bar v_{out}^2 - 2 \bar v_{in} \bar v_{out} + \bar v_{in}^2}{2g}\]</div>
+<div class="section" id="final-forms-of-the-minor-loss-equation">
+<span id="final-minor-loss-equations"></span><h3>Final Forms of the Minor Loss Equation<a class="headerlink" href="#final-forms-of-the-minor-loss-equation" title="Permalink to this headline">¶</a></h3>
 <p>Factoring the numerator yields to the first ‘final’ form of the minor loss equation:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-12">
 <span class="eqno">(59)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-12" title="Permalink to this equation">¶</a></span>\[{\rm{ \mathbf{First \, form:} }} \,\,\, h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}\]</div>
@@ -222,6 +230,8 @@ few millimeters into the larger pipe, which means that the cross-sectional area 
 </div>
 <p>Being familiar with these three forms and how they are used will be of great help throughout the class. The third form is the one that is most commonly used.</p>
 </div>
+</div>
+</div>
 
 
            </div>
@@ -231,7 +241,7 @@ few millimeters into the larger pipe, which means that the cross-sectional area 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Filtration/Filtration_Derivations.html" class="btn btn-neutral float-right" title="Filtration Derivations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Flow_Control_and_Measurement/FCM_Design.html" class="btn btn-neutral float-right" title="Flow Control and Measurement Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Fluids_Review_Design.html" class="btn btn-neutral" title="Fluids Review Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
