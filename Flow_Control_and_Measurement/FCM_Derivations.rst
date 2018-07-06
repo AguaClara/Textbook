@@ -111,7 +111,7 @@ Here lies another common source of confusion. :math:`h_{Tank}` is not the same a
     :align: center
     :alt: Hypochlorinator variables
 
-    :math:`Q_0 =` initial flow rate of hypochlorite solution at time :math:`t = 0`, :math:`t_{Design} =` time it would take to drain the tank if flow was held constant at :math:`$Q_0`
+    :math:`Q_0 =` initial flow rate of hypochlorite solution at time :math:`t = 0`, :math:`t_{Design} =` time it would take to drain the tank if flow was held constant at :math:`Q_0`
 
 Finally, our fabricated equivalence, :math:`\frac{Q_0}{A_{Tank}} = \frac{h_{Tank}}{t_{Design}}` can be plugged into :math:`\frac{Q}{Q_0} = 1 - \frac{t Q_0}{2 A_{Tank} h_0}` to create the highly useful equation for flow rate as a function of time for a drip hypochlorinator:
 
@@ -309,6 +309,19 @@ Minor losses will never be 0, so how much error in our linearity are we willing 
     1 - \Pi_{Error} = \frac{\color{blue}{ h_L }}{\color{green}{ h_{L_{linear}} }}
 
 Now we plug :math:`\color{blue}{ h_L(Q) }` and :math:`\color{green}{ h_{L_{linear}} }` back into the equation for :math:`1 - \Pi_{Error}` and take the limit as :math:`Q \rightarrow 0`, as that is when the relative difference between actual head loss and our linear model for head loss is the greatest.
+
+.. .. raw:: html
+..
+..     <script type="text/javascript" >
+..     MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+..     MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+..       cancel: ["Extension","cancel"],
+..       bcancel: ["Extension","cancel"],
+..       xcancel: ["Extension","cancel"],
+..       cancelto: ["Extension","cancel"]
+..       });
+..     });
+..     </script>
 
 .. math::
 

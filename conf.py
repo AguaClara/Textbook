@@ -34,6 +34,19 @@
 extensions = ['sphinx.ext.doctest', 'sphinxcontrib.disqus',
     'sphinx.ext.mathjax']
 
+# To setup mathjax with required extensions for all files
+mathjax_path = "mathjax_config.js"
+
+# Add required latex elements for processing. Add things to be imported that aren't
+# automatically to the preamble section.
+latex_elements = {
+    'preamble':
+        "\\usepackage{cancel}"
+        }
+
+# The config value `latex_engine` has to be a one of ('pdflatex', 'xelatex', 'lualatex', 'platex')
+latex_engine = 'pdflatex'
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -193,3 +206,4 @@ rst_prolog = """
 # Here's a function to define custom styles to be used with the roles:
 def setup(app):
     app.add_stylesheet('css/custom.css')
+    app.add_javascript("mathjax-config.js")
