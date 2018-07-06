@@ -31,6 +31,10 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+import sys
+import os
+sys.path.append(os.path.abspath('sphinxext'))
+
 extensions = ['sphinx.ext.doctest', 'sphinxcontrib.disqus',
     'sphinx.ext.mathjax', 'matplotlib.sphinxext.only_directives', 'matplotlib.sphinxext.plot_directive']
 
@@ -58,7 +62,7 @@ author = 'AguaClara Cornell'
 # The short X.Y version.
 # We use semantic versioning - see here: semver.org as applied to textbooks.
 # Note that version names are set on GitHub - NOT here.
-import os
+#import os
 version = os.getenv("TRAVIS_TAG", "EXPERIMENTAL")
 # The full version, including alpha/beta/rc tags.
 release = version
