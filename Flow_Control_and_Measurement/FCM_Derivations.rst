@@ -310,19 +310,6 @@ Minor losses will never be 0, so how much error in our linearity are we willing 
 
 Now we plug :math:`\color{blue}{ h_L(Q) }` and :math:`\color{green}{ h_{L_{linear}} }` back into the equation for :math:`1 - \Pi_{Error}` and take the limit as :math:`Q \rightarrow 0`, as that is when the relative difference between actual head loss and our linear model for head loss is the greatest.
 
-.. .. raw:: html
-..
-..     <script type="text/javascript" >
-..     MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
-..     MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
-..       cancel: ["Extension","cancel"],
-..       bcancel: ["Extension","cancel"],
-..       xcancel: ["Extension","cancel"],
-..       cancelto: ["Extension","cancel"]
-..       });
-..     });
-..     </script>
-
 .. math::
 
    1 - \Pi_{Error} =

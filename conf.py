@@ -206,4 +206,3 @@ rst_prolog = """
 # Here's a function to define custom styles to be used with the roles:
 def setup(app):
     app.add_stylesheet('css/custom.css')
-    app.add_javascript("mathjax-config.js")
