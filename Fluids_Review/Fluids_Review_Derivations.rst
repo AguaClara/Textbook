@@ -105,13 +105,13 @@ From here, the two other forms of the minor loss equation can be derived by solv
 
 .. math::
 
-    {\rm{ \mathbf{Second \, form:} }} \,\,\, h_e = \frac{\bar v_{in}^2}{2g}{\left( {1 - \frac{A_{in}}{A_{out}}} \right)^2} = \frac{\bar v_{in}^2}{2g} K_e^{'}, {\rm \, \, \, where \, \, \,} K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2
+    {\rm{ \mathbf{Second \, form:} }} \,\,\, h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \frac{\bar v_{in}^2}{2g} = K_e^{'} \frac{\bar v_{in}^2}{2g}, {\rm \, \, \, where \, \, \,} K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2
 
 .. math::
  :label: minor_loss_equation
 
     \color{purple}{
-    {\rm{ \mathbf{Third \, form:} }} \,\,\, h_e = \frac{\bar  v_{out}^2}{2g}{\left( {\frac{A_{out}}{A_{in}}} -1 \right)^2} = \frac{\bar v_{out}^2}{2g} K_e, {\rm \, \, \, where \, \, \,} K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
+    {\rm{ \mathbf{Third \, form:} }} \,\,\, h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \frac{\bar  v_{out}^2}{2g} = K_e \frac{\bar v_{out}^2}{2g}, {\rm \, \, \, where \, \, \,} K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
     }
 
 .. note:: You will often see :math:`K_e^{'}` and :math:`K_e` used without the :math:`e` subscript, they will appear as :math:`K^{'}` and :math:`K`.
