@@ -102,6 +102,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#doctests">Doctests</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#inserting-plots">Inserting Plots</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#assorted-other-convention">Assorted Other Convention</a></li>
 </ul>
 </li>
@@ -479,10 +480,49 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </pre></div>
 </div>
 </li>
+<li><p class="first">Python will also “remember” variables from one block to the next:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">python</span><span class="p">)</span>
+<span class="go">code</span>
+</pre></div>
+</div>
+</li>
 <li><p class="first">To get doctests to pass through Travis, you’ll have to add any packages you use to the install step in “.travis.yml”. Under install, add a line that says <code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">my_package==0.0.0</span></code>. When doing this, make sure to specify the version as functionality can change!</p>
 </li>
 </ul>
 <p>Though there are other ways to include code in an RST document, this method makes doctesting possible, and will make it easy to change the documents should aide_design functions change, therefore this is the best way to include code! Additionally it makes it easy to see the difference between the code and the output, whereas other methods are less clear in this distinction.</p>
+</div>
+</div>
+<div class="section" id="inserting-plots">
+<h3>Inserting Plots<a class="headerlink" href="#inserting-plots" title="Permalink to this headline">¶</a></h3>
+<p>(<a class="reference external" href="../Textbook_Creation_Help/example_aguaclara_rst-1.py">Source code</a>, <a class="reference external" href="../Textbook_Creation_Help/example_aguaclara_rst-1.png">png</a>, <a class="reference external" href="../Textbook_Creation_Help/example_aguaclara_rst-1.hires.png">hires.png</a>, <a class="reference external" href="../Textbook_Creation_Help/example_aguaclara_rst-1.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../_images/example_aguaclara_rst-1.png" src="../_images/example_aguaclara_rst-1.png" />
+</div>
+<p>Or insert from a file like so:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Ellipse</span>
+
+<span class="n">delta</span> <span class="o">=</span> <span class="mf">45.0</span> <span class="c1"># degrees</span>
+
+<span class="n">angles</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="o">+</span><span class="n">delta</span><span class="p">,</span> <span class="n">delta</span><span class="p">)</span>
+<span class="n">ells</span> <span class="o">=</span> <span class="p">[</span><span class="n">Ellipse</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">angles</span><span class="p">]</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ells</span><span class="p">:</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">set_clip_box</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+<span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../pyplots/ellipses_example.py">Source code</a>, <a class="reference external" href="../pyplots/ellipses_example.png">png</a>, <a class="reference external" href="../pyplots/ellipses_example.hires.png">hires.png</a>, <a class="reference external" href="../pyplots/ellipses_example.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../_images/ellipses_example.png" src="../_images/ellipses_example.png" />
 </div>
 </div>
 <div class="section" id="assorted-other-convention">
@@ -549,7 +589,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
       <script type="text/javascript" src="../_static/disqus.js"></script>
 
   
