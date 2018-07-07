@@ -310,9 +310,32 @@ The way to ensure a doctest will run is to precede each line of code with '>>>',
     1      Juanita     Monroe
     2         Jill       Jack
 
+* Python will also "remember" variables from one block to the next:
+
+    >>> print(python)
+    code
+
 * To get doctests to pass through Travis, you'll have to add any packages you use to the install step in ".travis.yml". Under install, add a line that says :code:`pip install my_package==0.0.0`. When doing this, make sure to specify the version as functionality can change!
 
 Though there are other ways to include code in an RST document, this method makes doctesting possible, and will make it easy to change the documents should aide_design functions change, therefore this is the best way to include code! Additionally it makes it easy to see the difference between the code and the output, whereas other methods are less clear in this distinction.
+
+Inserting Plots
+---------------
+
+.. plot::
+
+   import matplotlib.pyplot as plt
+   import numpy as np
+   x = np.random.randn(1000000)
+   plt.hist( x, 20)
+   plt.grid()
+   plt.title(r'Normal: $\mu=%.2f, \sigma=%.2f$'%(x.mean(), x.std()))
+   plt.show()
+
+Or insert from a file like so:
+
+.. plot:: pyplots/ellipses_example.py
+   :include-source:
 
 
 .. _assorted_convention:
