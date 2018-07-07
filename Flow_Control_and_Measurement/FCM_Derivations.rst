@@ -111,7 +111,7 @@ Here lies another common source of confusion. :math:`h_{Tank}` is not the same a
     :align: center
     :alt: Hypochlorinator variables
 
-    :math:`Q_0 =` initial flow rate of hypochlorite solution at time :math:`t = 0`, :math:`t_{Design} =` time it would take to drain the tank if flow was held constant at :math:`$Q_0`
+    :math:`Q_0 =` initial flow rate of hypochlorite solution at time :math:`t = 0`, :math:`t_{Design} =` time it would take to drain the tank if flow was held constant at :math:`Q_0`
 
 Finally, our fabricated equivalence, :math:`\frac{Q_0}{A_{Tank}} = \frac{h_{Tank}}{t_{Design}}` can be plugged into :math:`\frac{Q}{Q_0} = 1 - \frac{t Q_0}{2 A_{Tank} h_0}` to create the highly useful equation for flow rate as a function of time for a drip hypochlorinator:
 

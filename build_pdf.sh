@@ -1,9 +1,6 @@
 #!/bin/bash
 # This runs in Travis to build the textbook. You can run this locally.
 
-# Make the latex using sphinx
-make latexpdf
-
 # Needed to check if conda already installed
 export PATH="$HOME/miniconda/bin:$PATH"
 
