@@ -37,16 +37,6 @@ extensions = ['sphinx.ext.doctest', 'sphinxcontrib.disqus',
 # To setup mathjax with required extensions for all files
 mathjax_path = "mathjax_config.js"
 
-# Add required latex elements for processing. Add things to be imported that aren't
-# automatically to the preamble section.
-latex_elements = {
-    'preamble':
-        "\\usepackage{cancel}"
-        }
-
-# The config value `latex_engine` has to be a one of ('pdflatex', 'xelatex', 'lualatex', 'platex')
-latex_engine = 'pdflatex'
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -142,6 +132,11 @@ htmlhelp_basename = 'AguaClaraTextbook'
 
 # -- Options for LaTeX output ---------------------------------------------
 
+# The config value `latex_engine` has to be a one of ('pdflatex', 'xelatex', 'lualatex', 'platex')
+latex_engine = 'pdflatex'
+
+# Add required latex elements for processing. Add things to be imported that aren't
+# automatically to the preamble section.
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
@@ -153,7 +148,9 @@ latex_elements = {
 
     # Additional stuff for the LaTeX preamble.
     #
-    # 'preamble': '',
+    'preamble': r'''
+        \usepackage{cancel}
+    ''',
 
     # Latex figure (float) alignment
     #
