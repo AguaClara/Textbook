@@ -332,6 +332,11 @@ Inserting Plots
    plt.title(r'Normal: $\mu=%.2f, \sigma=%.2f$'%(x.mean(), x.std()))
    plt.show()
 
+Or insert from a file like so:
+
+.. plot:: pyplots/ellipses_example.py
+   :include-source:
+
 
 .. _assorted_convention:
 
