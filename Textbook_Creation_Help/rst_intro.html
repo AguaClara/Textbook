@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction to RST and Sphinx for AguaClara &mdash; AguaClara Textbook 0.0.3 documentation</title>
+  <title>Introduction to RST and Sphinx for Textbook Contributors &mdash; AguaClara Textbook 0.0.5 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.3
+                0.0.5
               </div>
             
           
@@ -85,7 +85,7 @@
             
               <p class="caption"><span class="caption-text">Contributor's guide</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to RST and Sphinx for AguaClara</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to RST and Sphinx for Textbook Contributors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-rst">What is RST?</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#why-rst">Why RST?</a></li>
 </ul>
@@ -94,6 +94,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#installing-the-atom-plugins">Installing the Atom Plugins</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#building-rst-locally-with-sphinx">Building RST Locally with Sphinx</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#publishing-online">Publishing Online</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-online">Testing Online</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sharing-test-output">Sharing Test Output</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#brief-best-practices">Brief Best Practices</a><ul>
@@ -111,6 +113,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Design.html">Fluids Review  Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Derivations.html">Fluids Review Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 </ul>
 
             
@@ -156,7 +163,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Introduction to RST and Sphinx for AguaClara</li>
+      <li>Introduction to RST and Sphinx for Textbook Contributors</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,50 +182,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introduction-to-rst-and-sphinx-for-aguaclara">
-<span id="rst-intro"></span><h1>Introduction to RST and Sphinx for AguaClara<a class="headerlink" href="#introduction-to-rst-and-sphinx-for-aguaclara" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="introduction-to-rst-and-sphinx-for-textbook-contributors">
+<span id="rst-intro"></span><h1>Introduction to RST and Sphinx for Textbook Contributors<a class="headerlink" href="#introduction-to-rst-and-sphinx-for-textbook-contributors" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-is-rst">
 <span id="id1"></span><h2>What is RST?<a class="headerlink" href="#what-is-rst" title="Permalink to this headline">¶</a></h2>
-<p>RST stands for restructured text. It is the standard markup language used for documenting python packages. <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> is the Python package that can generate an html website from the rst files. To read more about why we chose RST over markdown or Latex, read the section <a class="reference internal" href="#id2">Why RST?</a></p>
+<p>RST stands for ReStructured Text. It is the standard markup language used for documenting python packages. <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> is the Python package that generates an html website from RST files, and it is what we are using to generate this site. To read more about why we chose RST over markdown or Latex, read the following section, <a class="reference internal" href="#why-rst">why_rst</a>.</p>
 <div class="section" id="why-rst">
 <span id="id2"></span><h3>Why RST?<a class="headerlink" href="#why-rst" title="Permalink to this headline">¶</a></h3>
-<p>In the beginning, we used markdown. As we tried to add different features to markdown (colored words, image sizes, citations), we were forced to use raw html and various pre-processors. With these various band-aid solutions came added complexity. Adding sections became cumbersome and awkward as it required ill-defined html. Additionally, providing site-wide style updates was prohibitively time-consuming and complex. Essentially, we were trying to pack too much functionality into markdown. In the search for an alternative, restructured text provided several advantages. Out of the box, rst supports globally-defined styles, figure numbering and referencing, Latex function rendering, image display customization and more. Furthermore, restructured text was already the language of choice for the AIDE ecosystem’s documentation.</p>
+<p>In the beginning, we used markdown. As we tried to add different features to markdown (<span class="red">colored words</span>, image sizes, citations), we were forced to use raw html and various pre-processors. With these various band-aid solutions came added complexity. Adding sections became cumbersome and awkward as it required ill-defined html. Additionally, providing site-wide style updates was prohibitively time-consuming and complex. Essentially, we were trying to pack too much functionality into markdown. In the search for an alternative, restructured text provided several advantages. Out of the box, RST supports globally-defined styles, figure numbering and referencing, Latex function rendering, image display customization and more. Furthermore, restructured text was already the language of choice for the AIDE ecosystem’s documentation.</p>
 </div>
 </div>
 <div class="section" id="setting-up-rst-for-development">
 <span id="setting-up-rst"></span><h2>Setting up RST for Development<a class="headerlink" href="#setting-up-rst-for-development" title="Permalink to this headline">¶</a></h2>
-<p>There are two ways to <em>quickly</em> view an RST file. The first is using an <a class="reference external" href="https://ide.atom.io/">Atom</a> plugin that renders the view alongside the source code. This is a good initial test to make sure the rst is proper rst and <em>mostly</em> looks correct. However, some functionality, such as any extensions provided by <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> won’t run in the preview. In order to see the final html that will display on the website, you’ll need to use the second menthod, running sphinx to fully generate the html code. Once you are satisfied with your work and want to push it to the textbook, you’ll need to incorporate it to the master branch. To do so, refer to <a class="reference internal" href="#id3">Publishing online</a>.</p>
+<p>There are two ways to <em>quickly</em> view an RST file. The first is using an <a class="reference external" href="https://ide.atom.io/">Atom</a> plugin that renders the view alongside the source code. This is a good initial test to make sure the RST is proper RST and looks <em>mostly</em> correct. However, some functionality, such as any extensions provided by <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> won’t run in the preview. In order to see the final html that will display on the website, you’ll need to use the second method, running sphinx locally to fully generate the html code. Once you are satisfied with your work and want to push it to the textbook, you’ll need to incorporate it to the master branch. To do so, refer to <a class="reference internal" href="#id3">Publishing online</a>.</p>
 <div class="section" id="installing-the-atom-plugins">
 <span id="installing-atom"></span><h3>Installing the Atom Plugins<a class="headerlink" href="#installing-the-atom-plugins" title="Permalink to this headline">¶</a></h3>
-<p>If you are using the Atom IDE to write rst, you can use the <a class="reference external" href="https://atom.io/packages/rst-preview-pandoc">rst-preview-pandoc</a> plugin to auto-generate a live rst preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview working, you’ll need to install <a class="reference external" href="https://atom.io/packages/language-restructuredtext">language-restructuredtext</a> and <a class="reference external" href="https://pandoc.org/installing.html">Pandoc</a> (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandoc</span></code>). If everything worked, you can use ctrl-shift-e to toggle a display window for the live-updated rst preview.</p>
+<p>If you are using the Atom IDE to write RST, you can use the <a class="reference external" href="https://atom.io/packages/rst-preview-pandoc">rst-preview-pandoc</a> plugin to auto-generate a live RST preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview working, you’ll need to install <a class="reference external" href="https://atom.io/packages/language-restructuredtext">language-restructuredtext</a> via atom and <a class="reference external" href="https://pandoc.org/installing.html">Pandoc</a> via your command line (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandoc</span></code>). If everything worked, you can use <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">shift</span> <span class="pre">+</span> <span class="pre">e</span></code> to toggle a display window for the live-updated RST preview.</p>
 </div>
 <div class="section" id="building-rst-locally-with-sphinx">
 <span id="building-rst-locally"></span><h3>Building RST Locally with <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a><a class="headerlink" href="#building-rst-locally-with-sphinx" title="Permalink to this headline">¶</a></h3>
-<p>We use <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> to build rst locally. Follow these steps to get <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> and run locally:</p>
+<p>We use <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> to build RST locally and remotely. Follow these steps to get <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> and run it locally:</p>
 <ol class="arabic simple">
-<li>Install <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> using pip: <code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">--user</span> <span class="pre">-U</span></code></li>
+<li>Install <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, disqus, and a sphinx visual theme using pip: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">--user</span> <span class="pre">-U</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">git+https://github.com/rmk135/sphinxcontrib-disqus</span></code>.</li>
 <li>Generate all the html by navigating in the command line to the source directory /Textbook and creating the build in that directory with the command line <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>.</li>
-<li>View the html generated in the /Textbook/_build directory by copying the full file path of the /Textbook/_build/html/index.html file and pasting it into your browser.</li>
+<li>View the html generated in the /Textbook/_build directory by copying the full file path of /Textbook/_build/html/index.html and pasting it into your browser.</li>
 </ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Regarding <strong>1.</strong> the master branch for the package implementing disqus in sphinx <a class="reference external" href="https://github.com/Robpol86/sphinxcontrib-disqus/pull/7">is broken</a>, which is why we use a non-standard pip/online installation. If you already have the incorrect sphinx-disqus version installed, uninstall it with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span> <span class="pre">sphinxcontrib-disqus</span></code> before installing the functioning version.</p>
+</div>
 </div>
 <div class="section" id="publishing-online">
 <span id="id3"></span><h3>Publishing Online<a class="headerlink" href="#publishing-online" title="Permalink to this headline">¶</a></h3>
-<p>To publish online, you need to:</p>
+<p>We use <a class="reference external" href="https://travis-ci.org/">Travis</a> to ensure this site will always contain functional builds. To publish online, you need to:</p>
 <ol class="arabic simple">
-<li>Submit a <a class="reference external" href="https://github.com/AguaClara/Textbook/pulls">pull request to master</a>. You’ll need to ask for someone else to review your work at this stage- “request reviewers”.</li>
-<li>Travis will build the site using <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, and if there aren’t any errors, Travis will report success to GitHub on the “checks” part of the pull request.</li>
-<li>You’ll need one other person to review and approve your commit before the merge is allowed.</li>
+<li>Always test your build by first <a class="reference internal" href="#building-rst-locally">building_rst_locally</a>, and then following the <a class="reference internal" href="#testing-online">testing_online</a> instructions. Once you like how your build looks, follow the steps below to introduce it into the master branch.</li>
+<li>Submit a <a class="reference external" href="https://github.com/AguaClara/Textbook/pulls">pull request to master</a>. You’ll need to ask for someone else to review your work at this stage- “request reviewers”. Every pull request <strong>must</strong> be reviewed by at least one other person.</li>
+<li><a class="reference external" href="https://travis-ci.org/">Travis</a> will build the site using <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, and if there aren’t any errors, Travis will report success to GitHub on the “checks” part of the pull request.</li>
+<li>All your requested reviewers must now approve and comment on  your commit before the merge is allowed.</li>
 <li>Once the PR passes Travis and is approved by another author, feel free to “merge to master.”</li>
-<li>To release the master branch, (build the html, pdf, and latex, and upload the pdf to Pages) you’ll need to publish a <a class="reference external" href="https://github.com/AguaClara/Textbook/releases/new">GitHub release</a>. Include a <a class="reference external" href="https://semver.org/">semver</a> version number as the tag (under “Tag: Choose or create”), and a brief description of the updates under “Release Title”. Finally, for the description, detail the changes as much as you see fit and when ready, hit “Publish release”. Example:</li>
-</ol>
-<blockquote>
-<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>To release the master branch, (build the html, pdf, and latex, and upload the pdf to Pages) you’ll need to publish a <a class="reference external" href="https://github.com/AguaClara/Textbook/releases/new">GitHub release</a>. Include a <a class="reference external" href="https://semver.org/">semver</a> version number as the tag (under “Tag: Choose or create”), and a brief description of the updates under “Release Title”. Finally, for the description, detail the changes as much as you see fit and when ready, hit “Publish release”. Example:</dt>
+<dd><ul class="first last">
 <li>Tag name: 0.1.5</li>
 <li>Release title: Filtration section maintenance</li>
 <li>Description: Added filter code from aide_design 0.2.6. Also updated all broken external links.</li>
 </ul>
-</div></blockquote>
-<ol class="arabic simple">
+</dd>
+</dl>
+</li>
 <li>Travis will rebuild the site and push the html to Pages, and the PDF and LaTeX to GitHub Releases under the tag name.</li>
 </ol>
 <div class="admonition important">
@@ -226,25 +238,37 @@
 <p class="last">If your changes to the master branch aren’t pushing to gh-pages, then check the status of the <a class="reference external" href="https://travis-ci.org/AguaClara/Textbook">Travis build here</a>.</p>
 </div>
 </div>
+<div class="section" id="testing-online">
+<span id="id4"></span><h3>Testing Online<a class="headerlink" href="#testing-online" title="Permalink to this headline">¶</a></h3>
+<p>To test exactly what will be published, we have a test branch. The test branch is built by Travis and contains all the processed html that Travis produces in _build/html. This branch is populated when ANY COMMIT IS PUSHED. Meaning, the last commit to be pushed, if it passes the Travis tests, will be built and the output will be placed in the test branch. Also, if the PDF=True environment variable is triggered for a Travis build, the PDF will also be generated and placed in the test branch. To do this, use the “Trigger Build” option in Travis and put:</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">script</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">PDF</span><span class="o">=</span><span class="kc">True</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://rawgit.com/AguaClara/Textbook/test/html/index.html">The website output is viewable here</a>.</p>
+</div>
+<div class="section" id="sharing-test-output">
+<h3>Sharing Test Output<a class="headerlink" href="#sharing-test-output" title="Permalink to this headline">¶</a></h3>
+<p>if you want to share what your latest branch developments look like without having whoever is viewing it actually have to build it, you can push a commit, and find the <a class="reference external" href="https://rawgit.com/">rawgit URL with this site</a> by entering the URL of the git file within the test branch that you’d like to share. Furthermore, if you want to point to the commit so that even if someone else pushes, the URL will still point to the code you intend it to, make sure to include the commit SHA within the rawgit URL like so: <a class="reference external" href="https://rawgit.com/AguaClara/Textbook/e5693e0485702b95e11d4d6bdf76d07c42fdbf99/html/index.html">https://rawgit.com/AguaClara/Textbook/e5693e0485702b95e11d4d6bdf76d07c42fdbf99/html/index.html</a>. That link will never change where it is pointing. To share the PDF output, follow the <a class="reference internal" href="#testing-online">testing_online</a> instructions to build the PDF, and point to the commit with the PDF. Happy testing!</p>
+</div>
 </div>
 <div class="section" id="brief-best-practices">
-<span id="id4"></span><h2>Brief Best Practices<a class="headerlink" href="#brief-best-practices" title="Permalink to this headline">¶</a></h2>
-<p>When writing rst, there are often many ways to write the same thing. Almost always, the way with the fewest number of characters is the best way. Ideally, never copy and paste.</p>
+<span id="id5"></span><h2>Brief Best Practices<a class="headerlink" href="#brief-best-practices" title="Permalink to this headline">¶</a></h2>
+<p>When writing RST, there are often many ways to write the same thing. Almost always, the way with the fewest number of characters is the best way. Ideally, never copy and paste.</p>
 <div class="section" id="how-do-i-write-rst">
-<span id="id5"></span><h3>How do I write RST?<a class="headerlink" href="#how-do-i-write-rst" title="Permalink to this headline">¶</a></h3>
-<p>RST is friendly to learn and powerful. There are many useful <a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks">cheatsheets</a>. When you start writing rst, look at the cheat sheets all the time. Use <code class="code docutils literal notranslate"><span class="pre">ctrl-f</span></code> all the time to find whatever you need. Things not covered in the cheat sheets:</p>
+<span id="id6"></span><h3>How do I write RST?<a class="headerlink" href="#how-do-i-write-rst" title="Permalink to this headline">¶</a></h3>
+<p>RST is friendly to learn and powerful. There are many useful cheatsheets, like <a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks">this one</a> and the next page on this site: <a class="reference internal" href="example_aguaclara_rst.html#example-aguaclara-rst"><span class="std std-ref">Functionality in RST and AguaClara Convention</span></a>, which is specifically for AguaClara and this textbook project. When you start writing RST, look at the cheat sheets all the time. Use <code class="code docutils literal notranslate"><span class="pre">ctrl-f</span></code> all the time to find whatever you need.</p>
+<p><strong>Things not covered in most cheat sheets which are of critical importance:</strong></p>
 <ul class="simple">
-<li>Writing inline code snippet: <code class="docutils literal notranslate"><span class="pre">:code:'your</span> <span class="pre">code'</span></code>. Learn how to syntax highlight <a class="reference external" href="https://stackoverflow.com/questions/10870719/inline-code-highlighting-in-restructuredtext">here</a></li>
 <li>A document is referred to by its title, as defined between the <code class="docutils literal notranslate"><span class="pre">*****</span></code> signs at the top of the page, <strong>NOT</strong> the filename. So it is critical to have a title.</li>
-<li>Always run <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> before pushing to ensure you can make your changes without errors.</li>
-<li>In addition to a title, every rst document in this book should have a refernce so that it can be linked to in other, external documents. If you view the source code of this document and scroll to the top, you’ll see this document is labeled as <code class="docutils literal notranslate"><span class="pre">rst_intro</span></code> with the following code <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_rst_intro</span></code>. Call this document in another textbook rst file with <code class="docutils literal notranslate"><span class="pre">:ref:`rst_intro`</span></code></li>
+<li>In addition to a title, every RST document in this book should have a refernce so that it can be linked to in other, external documents. If you view the source code of this document and scroll to the top, you’ll see this document is labeled as <code class="docutils literal notranslate"><span class="pre">rst_intro</span></code> with the following code <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_rst_intro</span></code>. Call this document in another textbook RST file with <code class="docutils literal notranslate"><span class="pre">:ref:`rst_intro`</span></code></li>
 <li>Anything else you’d like to add for the future…</li>
 </ul>
 </div>
 <div class="section" id="example-to-start-from">
-<span id="id6"></span><h3>Example to Start From<a class="headerlink" href="#example-to-start-from" title="Permalink to this headline">¶</a></h3>
-<p>This file is written in rst. You can start there! Just click on “View page source” at the top of the page.</p>
-<p>Also, here’s a rich example where we try to implement all AguaClara best practices: <a class="reference internal" href="example_aguaclara_rst.html#example-aguaclara-rst"><span class="std std-ref">Functionality in RST and AguaClara Convention</span></a>. I recommend looking at the raw rst and the rendered html side by side.</p>
+<span id="id7"></span><h3>Example to Start From<a class="headerlink" href="#example-to-start-from" title="Permalink to this headline">¶</a></h3>
+<p>This file is written in RST. You can start there! Just click on “View page source” at the top of the page.</p>
+<p>Also, the next page is specifies convention where we document all AguaClara best practices: <a class="reference internal" href="example_aguaclara_rst.html#example-aguaclara-rst"><span class="std std-ref">Functionality in RST and AguaClara Convention</span></a>. I recommend looking at the raw RST and the rendered html side by side.</p>
 </div>
 </div>
 <div class="section" id="converting-markdown-to-rst">
@@ -297,7 +321,7 @@ You’ll need to carefully review any page converted with pandoc.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.3',
+            VERSION:'0.0.5',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
@@ -308,7 +332,7 @@ You’ll need to carefully review any page converted with pandoc.</p>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
 
   
 
