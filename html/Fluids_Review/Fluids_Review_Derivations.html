@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Flow Control and Measurement Design" href="../Flow_Control_and_Measurement/FCM_Design.html" />
+    <link rel="next" title="Filtration Derivations" href="../Filtration/Filtration_Derivations.html" />
     <link rel="prev" title="Fluids Review Design" href="Fluids_Review_Design.html" /> 
 
   
@@ -88,18 +88,12 @@
 <p class="caption"><span class="caption-text">Chapter 2: Fluids Review</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Fluids_Review_Design.html">Fluids Review  Design</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Fluids Review Derivations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#minor-loss-equation">Minor Loss Equation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#final-forms-of-the-minor-loss-equation">Final Forms of the Minor Loss Equation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fluids Review Derivations</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration</a></li>
 </ul>
 
             
@@ -166,26 +160,26 @@
             
   <div class="section" id="fluids-review-derivations">
 <span id="id1"></span><h1>Fluids Review Derivations<a class="headerlink" href="#fluids-review-derivations" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="minor-loss-equation">
-<span id="minor-loss-equation-derivation"></span><h2>Minor Loss Equation<a class="headerlink" href="#minor-loss-equation" title="Permalink to this headline">¶</a></h2>
-<p>This section contains the derivation of the minor loss equation using the following image as a reference. The derivation begins with a slightly simplified energy equation across the control volume show. Our energy equation begins with <span class="math notranslate nohighlight">\(h_P\)</span> and <span class="math notranslate nohighlight">\(h_T\)</span> having been
+<p>This document contains the derivation of the minor loss equation using the following image as a reference. The derivation begins with a slightly simplified energy equation across the control volume show. Our energy equation begins with <span class="math notranslate nohighlight">\(h_P\)</span> and <span class="math notranslate nohighlight">\(h_T\)</span> having been
 eliminated.</p>
-<div class="figure align-center" id="id2">
+<blockquote>
+<div><div class="figure align-center" id="id2">
 <span id="minor-loss-pipe"></span><a class="reference internal image-reference" href="../_images/minor_loss_pipe.png"><img alt="Example of flow expansion resulting in a minor loss" src="../_images/minor_loss_pipe.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Example of a minor loss due to a flow expansion</span></p>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Example of a minor loss due to a flow expansion</span></p>
 </div>
+</div></blockquote>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-0">
-<span class="eqno">(49)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-0" title="Permalink to this equation">¶</a></span>\[\frac{p_{in}}{\rho g} + {z_{in}} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{\bar v_{out}^2}{2g} + h_L\]</div>
+<span class="eqno">(47)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-0" title="Permalink to this equation">¶</a></span>\[\frac{p_{in}}{\rho g} + {z_{in}} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{\bar v_{out}^2}{2g} + h_L\]</div>
 <p>Since the elevations of the ‘in’ and ‘out’ references are the same, we can eliminate <span class="math notranslate nohighlight">\(z_{in}\)</span> and <span class="math notranslate nohighlight">\(z_{out}\)</span>. As we are considering such a small length of pipe, we will neglect the major loss component of head loss. Thus, <span class="math notranslate nohighlight">\(h_L = h_e\)</span>. The following three equations are all the same, simply rearranged to solve for <span class="math notranslate nohighlight">\(h_e\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-1">
-<span class="eqno">(50)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-1" title="Permalink to this equation">¶</a></span>\[\frac{p_{in}}{\rho g} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + \frac{\bar v_{out}^2}{2g} + h_e\]</div>
+<span class="eqno">(48)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-1" title="Permalink to this equation">¶</a></span>\[\frac{p_{in}}{\rho g} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + \frac{\bar v_{out}^2}{2g} + h_e\]</div>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-2">
-<span class="eqno">(51)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-2" title="Permalink to this equation">¶</a></span>\[\frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2}{2g} + h_e\]</div>
+<span class="eqno">(49)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-2" title="Permalink to this equation">¶</a></span>\[\frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2}{2g} + h_e\]</div>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-3">
-<span class="eqno">(52)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-3" title="Permalink to this equation">¶</a></span>\[h_e = \frac{p_{in} - p_{out}}{\rho g} + \frac{\bar v_{in}^2 - \bar v_{out}^2}{2g}\]</div>
+<span class="eqno">(50)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-3" title="Permalink to this equation">¶</a></span>\[h_e = \frac{p_{in} - p_{out}}{\rho g} + \frac{\bar v_{in}^2 - \bar v_{out}^2}{2g}\]</div>
 <p>This last equation to determine <span class="math notranslate nohighlight">\(h_e\)</span> has four variables, and we would like it to have just one or two. Thus, we will invoke conservation of momentum in the horizontal direction across our control volume to remove some variables. The difference in momentum from the <span class="math notranslate nohighlight">\(in\)</span> point to the <span class="math notranslate nohighlight">\(out\)</span> point is result of the pressure difference between each end of the control volume. We will be considering the pressure at the centroid of our control surfaces, and we will neglect shear along the pipe walls. After these assumptions, our momentum equation becomes the following:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-4">
-<span class="eqno">(53)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-4" title="Permalink to this equation">¶</a></span>\[M_{in, \, x} + M_{out, \, x} = F_{p_{in, \, x}} + F_{p_{out, \, x}}\]</div>
+<span class="eqno">(51)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-4" title="Permalink to this equation">¶</a></span>\[M_{in, \, x} + M_{out, \, x} = F_{p_{in, \, x}} + F_{p_{out, \, x}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(M_{x}\)</span> = momentum flowing through the control volume in the x-direction</div>
@@ -193,44 +187,40 @@ eliminated.</p>
 </div>
 <p>Recall that momentum is mass times velocity, <span class="math notranslate nohighlight">\(m\bar v\)</span> with units of <span class="math notranslate nohighlight">\(\frac{[M][L]}{[T]}\)</span>, for solid bodies. Since we consider water flowing through a pipe, there is not one singular mass. Instead, there is a mass flow rate, or a mass per time indicated by <span class="math notranslate nohighlight">\(\rho Q\)</span> (<span class="math notranslate nohighlight">\(\frac{[M]}{[T]}\)</span>). Applying the continuity equation <span class="math notranslate nohighlight">\(Q = \bar v A\)</span> and multiplying <span class="math notranslate nohighlight">\(\rho Q\)</span> by <span class="math notranslate nohighlight">\(\bar v\)</span> to obtain the correct units, we get to the following equation for the momentum of a fluid flowing through a pipe, <span class="math notranslate nohighlight">\(M = \rho \bar v^2 A\)</span>. The pressure force is simply the pressure at the centroid of the flow multiplied by the area the pressure is acting upon, <span class="math notranslate nohighlight">\(p A\)</span>. To ensure correct sign convention, we will make each side of the equation negative for reasons discussed shortly. Since <span class="math notranslate nohighlight">\(\bar v_{in} &gt; \bar v_{out}\)</span>, the left hand side becomes <span class="math notranslate nohighlight">\(M_{out} - M_{in}\)</span>. The reduction in velocity from <span class="math notranslate nohighlight">\(in\)</span> to <span class="math notranslate nohighlight">\(out\)</span> causes an increase in pressure, therefore <span class="math notranslate nohighlight">\(p_{in} - p_{out}\)</span> will be negative. With these substitutions, the conservation of momentum equation becomes as follows:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-5">
-<span class="eqno">(54)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-5" title="Permalink to this equation">¶</a></span>\[\rho \bar v_{out}^2 A_{out} - \rho \bar v_{in}^2 A_{in} = p_{in} A_{out} - p_{out} A_{out}\]</div>
+<span class="eqno">(52)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-5" title="Permalink to this equation">¶</a></span>\[\rho \bar v_{out}^2 A_{out} - \rho \bar v_{in}^2 A_{in} = p_{in} A_{out} - p_{out} A_{out}\]</div>
 <p>Note that the area term attached to <span class="math notranslate nohighlight">\(p_{in}\)</span> is actually <span class="math notranslate nohighlight">\(A_{out}\)</span> instead of <span class="math notranslate nohighlight">\(A_{in}\)</span>, as one might think. This is because <span class="math notranslate nohighlight">\(A_{out} = A_{in}\)</span>. We chose our control volume to start a
 few millimeters into the larger pipe, which means that the cross-sectional area does not change over the course of the control volume.</p>
 <p>By dividing both sides of the equation by <span class="math notranslate nohighlight">\(A_{out} \rho g\)</span>, we obtain the following equation, which contains the very same pressure term as our adjusted energy equation above. This is why we chose a negative sign convention.</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-6">
-<span class="eqno">(55)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-6" title="Permalink to this equation">¶</a></span>\[\frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2 \frac{A_{in}}{A_{out}}}{g}\]</div>
+<span class="eqno">(53)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-6" title="Permalink to this equation">¶</a></span>\[\frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2 \frac{A_{in}}{A_{out}}}{g}\]</div>
 <p>Now, we combine the adjusted energy, momentum, and continuity equations:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-7">
-<span class="eqno">(56)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-7" title="Permalink to this equation">¶</a></span>\[{\rm{Energy \, equation:}} \,\,\,  h_e = \frac{p_{in} - p_{out}}{\rho g} + \frac{\bar v_{in}^2 - \bar v_{out}^2}{2g}\]</div>
+<span class="eqno">(54)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-7" title="Permalink to this equation">¶</a></span>\[{\rm{Energy \, equation:}} \,\,\,  h_e = \frac{p_{in} - p_{out}}{\rho g} + \frac{\bar v_{in}^2 - \bar v_{out}^2}{2g}\]</div>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-8">
-<span class="eqno">(57)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-8" title="Permalink to this equation">¶</a></span>\[{\rm{Momentum \, equation:}} \,\,\, \frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2 \frac{A_{in}}{A_{out}}}{g}\]</div>
+<span class="eqno">(55)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-8" title="Permalink to this equation">¶</a></span>\[{\rm{Momentum \, equation:}} \,\,\, \frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2 \frac{A_{in}}{A_{out}}}{g}\]</div>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-9">
-<span class="eqno">(58)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-9" title="Permalink to this equation">¶</a></span>\[{\rm{Continuity \, equation:}} \,\,\, \frac{A_{in}}{A_{out}} = \frac{\bar v_{out}}{\bar v_{in}}\]</div>
+<span class="eqno">(56)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-9" title="Permalink to this equation">¶</a></span>\[{\rm{Continuity \, equation:}} \,\,\, \frac{A_{in}}{A_{out}} = \frac{\bar v_{out}}{\bar v_{in}}\]</div>
 <p>To obtain an equation for minor losses with just two variables, <span class="math notranslate nohighlight">\(\bar v_{in}\)</span> and <span class="math notranslate nohighlight">\(\bar v_{out}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-10">
-<span class="eqno">(59)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-10" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\bar v_{out}^2 - \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{g} + \frac{\bar v_{in}^2 - \bar v_{out}^2}{2g}\]</div>
+<span class="eqno">(57)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-10" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\bar v_{out}^2 - \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{g} + \frac{\bar v_{in}^2 - \bar v_{out}^2}{2g}\]</div>
 <p>To combine the two terms, the numerator and denominator of the first term, <span class="math notranslate nohighlight">\(\frac{\bar v_{out}^2 - \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{g}\)</span> will be multiplied by <span class="math notranslate nohighlight">\(2\)</span> to become <span class="math notranslate nohighlight">\(\frac{2 \bar v_{out}^2 - 2 \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{2 g}\)</span>. The equation then looks like:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-11">
-<span class="eqno">(60)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-11" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\bar v_{out}^2 - 2 \bar v_{in} \bar v_{out} + \bar v_{in}^2}{2g}\]</div>
-<div class="section" id="final-forms-of-the-minor-loss-equation">
-<span id="final-minor-loss-equations"></span><h3>Final Forms of the Minor Loss Equation<a class="headerlink" href="#final-forms-of-the-minor-loss-equation" title="Permalink to this headline">¶</a></h3>
+<span class="eqno">(58)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-11" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\bar v_{out}^2 - 2 \bar v_{in} \bar v_{out} + \bar v_{in}^2}{2g}\]</div>
 <p>Factoring the numerator yields to the first ‘final’ form of the minor loss equation:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-12">
-<span class="eqno">(61)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-12" title="Permalink to this equation">¶</a></span>\[{\rm{ \mathbf{First \, form:} }} \,\,\, h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}\]</div>
+<span class="eqno">(59)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-12" title="Permalink to this equation">¶</a></span>\[{\rm{ \mathbf{First \, form:} }} \,\,\, h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}\]</div>
 <p>From here, the two other forms of the minor loss equation can be derived by solving for either <span class="math notranslate nohighlight">\(\bar v_{in}\)</span> or <span class="math notranslate nohighlight">\(\bar v_{out}\)</span> using the ubiquitous continuity equation <span class="math notranslate nohighlight">\(\bar v_{in} A_{in} = \bar v_{out} A_{out}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-derivations-13">
-<span class="eqno">(62)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-13" title="Permalink to this equation">¶</a></span>\[{\rm{ \mathbf{Second \, form:} }} \,\,\, h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \frac{\bar v_{in}^2}{2g} = K_e^{'} \frac{\bar v_{in}^2}{2g}, {\rm \, \, \, where \, \, \,} K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2\]</div>
+<span class="eqno">(60)<a class="headerlink" href="#equation-fluids-review-fluids-review-derivations-13" title="Permalink to this equation">¶</a></span>\[{\rm{ \mathbf{Second \, form:} }} \,\,\, h_e = \frac{\bar v_{in}^2}{2g}{\left( {1 - \frac{A_{in}}{A_{out}}} \right)^2} = \frac{\bar v_{in}^2}{2g} K_e^{'}, {\rm \, \, \, where \, \, \,} K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2\]</div>
 <div class="math notranslate nohighlight" id="equation-minor-loss-equation">
-<span class="eqno">(63)<a class="headerlink" href="#equation-minor-loss-equation" title="Permalink to this equation">¶</a></span>\[   \color{purple}{
-   {\rm{ \mathbf{Third \, form:} }} \,\,\, h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \frac{\bar  v_{out}^2}{2g} = K_e \frac{\bar v_{out}^2}{2g}, {\rm \, \, \, where \, \, \,} K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
+<span class="eqno">(61)<a class="headerlink" href="#equation-minor-loss-equation" title="Permalink to this equation">¶</a></span>\[   \color{purple}{
+   {\rm{ \mathbf{Third \, form:} }} \,\,\, h_e = \frac{\bar  v_{out}^2}{2g}{\left( {\frac{A_{out}}{A_{in}}} -1 \right)^2} = \frac{\bar v_{out}^2}{2g} K_e, {\rm \, \, \, where \, \, \,} K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
    }\]</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">You will often see <span class="math notranslate nohighlight">\(K_e^{'}\)</span> and <span class="math notranslate nohighlight">\(K_e\)</span> used without the <span class="math notranslate nohighlight">\(e\)</span> subscript, they will appear as <span class="math notranslate nohighlight">\(K^{'}\)</span> and <span class="math notranslate nohighlight">\(K\)</span>.</p>
 </div>
 <p>Being familiar with these three forms and how they are used will be of great help throughout the class. The third form is the one that is most commonly used.</p>
-</div>
-</div>
 </div>
 
 
@@ -241,7 +231,7 @@ few millimeters into the larger pipe, which means that the cross-sectional area 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Flow_Control_and_Measurement/FCM_Design.html" class="btn btn-neutral float-right" title="Flow Control and Measurement Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Filtration/Filtration_Derivations.html" class="btn btn-neutral float-right" title="Filtration Derivations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Fluids_Review_Design.html" class="btn btn-neutral" title="Fluids Review Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -286,7 +276,7 @@ few millimeters into the larger pipe, which means that the cross-sectional area 
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
