@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flow Control and Measurement Design &mdash; AguaClara Textbook 0.0.5 documentation</title>
+  <title>Flow Control and Measurement Design &mdash; AguaClara Textbook  documentation</title>
   
 
   
@@ -57,10 +57,6 @@
 
           
             
-            
-              <div class="version">
-                0.0.5
-              </div>
             
           
 
@@ -223,7 +219,7 @@
 <p>Our first step is to see if we can get constant head out of a simple system. The most simple flow control system is a bucket or tank with a hole in it. This system is too coarse to provide constant head. One step above that is a bucket or tank with a valve. This is where we begin our search for constant head.</p>
 <p>Using the setup of in the image below, we derive the following equation for flow <span class="math notranslate nohighlight">\(Q\)</span> through the valve as a function of time <span class="math notranslate nohighlight">\(t\)</span>. <cite>The derivation is found here: :ref:`flow_for_a_tank_with_a_valve</cite> you are advised to read through it if you are confused about this equation.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-0">
-<span class="eqno">(62)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
+<span class="eqno">(64)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(Q\)</span> = <span class="math notranslate nohighlight">\(Q(t)\)</span> = flow of hypochlorite through valve at time <span class="math notranslate nohighlight">\(t\)</span></div>
@@ -253,10 +249,10 @@
 <span id="id2"></span><h3>Drain System for a Tank<a class="headerlink" href="#drain-system-for-a-tank" title="Permalink to this headline">¶</a></h3>
 <p>While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they essentially tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: <a class="reference internal" href="FCM_Derivations.html#diameter-and-time-tank-drain-equation"><span class="std std-ref"> and  for Tank Drain Equation</span></a>. The derived ‘Tank Drain’ equation is as follows:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-1">
-<span class="eqno">(63)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{4}}}\]</div>
+<span class="eqno">(65)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{4}}}\]</div>
 <p>The equation can also be rearranged to solve for the time it would take to drain a tank given its dimensions and a certain drain pipe size:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-2">
-<span class="eqno">(64)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[t_{Drain} =  \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{2}}}\]</div>
+<span class="eqno">(66)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[t_{Drain} =  \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{2}}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(D_{Pipe}\)</span> = Diameter of the drain piping</div>
@@ -388,22 +384,22 @@
 <li>Calculate the maximum flow rate, <span class="math notranslate nohighlight">\(Q_{Max, \, Tube}\)</span>, through each available dosing tube diameter <span class="math notranslate nohighlight">\(D\)</span> that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-3">
-<span class="eqno">(65)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-3" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
+<span class="eqno">(67)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-3" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
 <ol class="arabic simple" start="2">
 <li>Calculate how much flow of chemical needs to pass through the CDC at maximum plant flow and maximum chemical dose. This depends on the concentration of chemicals in the stock tank.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-4">
-<span class="eqno">(66)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-4" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
+<span class="eqno">(68)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-4" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
 <ol class="arabic simple" start="3">
 <li>Calculate the number of dosing tubes required if the tubes flow at  maximum capacity (round up)</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-5">
-<span class="eqno">(67)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-5" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
+<span class="eqno">(69)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-5" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
 <ol class="arabic simple" start="4">
 <li>Calculate the length of dosing tube(s) that correspond to each available tube diameter.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-6">
-<span class="eqno">(68)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-6" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
+<span class="eqno">(70)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-6" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
 <ol class="arabic simple" start="5">
 <li>Select a tube length from your array of solutions. Pick the longest dosing tube that you can, keeping in mind that the tube(s) must be able to fit in the plant and can’t be longer than the length of the plant wall it will be placed along.</li>
 <li>Finally, select the dosing tube diameter and flow rate corresponding to the selected tube length.</li>
@@ -479,7 +475,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.5',
+            VERSION:'',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
