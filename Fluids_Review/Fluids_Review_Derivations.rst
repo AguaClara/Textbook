@@ -10,7 +10,7 @@ Fluids Review Derivations
 
 Minor Loss Equation
 ====================
-This section contains the derivation of the minor loss equation using the following image as a reference. The derivation begins with a slightly simplified energy equation across the control volume show. Our energy equation begins with :math:`h_P` and :math:`h_T` having been
+This section contains the derivation of the minor loss equation using the following figure as a reference. The derivation begins with a slightly simplified energy equation across the control volume shown. Our energy equation begins with :math:`h_P` and :math:`h_T` having been
 eliminated.
 
 .. _minor_loss_pipe:
@@ -19,13 +19,13 @@ eliminated.
     :align: center
     :alt: Example of flow expansion resulting in a minor loss
 
-    Example of a minor loss due to a flow expansion
+    This is the system we will use to derive the minor loss equation.
 
 .. math::
 
     \frac{p_{in}}{\rho g} + {z_{in}} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{\bar v_{out}^2}{2g} + h_L
 
-Since the elevations of the ‘in’ and ‘out’ references are the same, we can eliminate :math:`z_{in}` and :math:`z_{out}`. As we are considering such a small length of pipe, we will neglect the major loss component of head loss. Thus, :math:`h_L = h_e`. The following three equations are all the same, simply rearranged to solve for :math:`h_e`.
+Since the elevations of the :math:`in` and :math:`out` references are the same, we can eliminate :math:`z_{in}` and :math:`z_{out}`. As we are considering such a small length of pipe, we will neglect the major loss component of head loss. Thus, :math:`h_L = h_e`. The following three equations are all the same, simply rearranged to solve for :math:`h_e`.
 
 .. math::
 
