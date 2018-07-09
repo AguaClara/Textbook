@@ -120,7 +120,7 @@ Here are other commonly used forms of the Reynolds number equation *for circular
 
 .. math::
 
-    {\rm{Re}} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}
+    {\rm Re} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}
 
 | Such that:
 | :math:`Q` = fluid flow rate in pipe
@@ -188,7 +188,7 @@ These three forms of energy expressed above make up the Bernoulli equation:
 | :math:`z` = elevation relative to a reference
 | :math:`v` = fluid velocity
 
-Notice that each term in this form of the Bernoulli equation has units of :math:`[L]`, even though the terms represent the energy of water, which has units of :math:`\frac{[M] \cdot [L]^2}{[T]^2}`. When energy of water is described in units of length, the term used is called **head** and referred to as :math:`h`.
+Notice that each term in this form of the Bernoulli equation has units of :math:`[L]`, even though the terms represent the energy of the fluid, which has units of :math:`\frac{[M] \cdot [L]^2}{[T]^2}`. When energy of the fluid is described in units of length, the term used is called **head** and referred to as :math:`h`.
 
 There are two important distinctions to keep in mind when using head to talk about a fluid's energy. First is that head is dependent on the density of the fluid under consideration. Take mercury, for example, which is around 13.6 times more dense than water. 1 meter of mercury head is therefore equivalent to around 13.6 meters of water head. Second is that head is independent of the amount of fluid being considered, *as long as all the fluid is the same density*. Thus, raising 1 liter of water up by one meter and raising 100 liters of water up by one meter are both equivalent to giving the water 1 meter of water head, even though it requires 100 times more energy to raise the hundred liters than to raise the single liter. Since we are concerned mainly with water in this class, we will refer to ‘water head’ simply as ‘head’.
 
@@ -221,7 +221,7 @@ The assumption necessary to use the Bernoulli equation, which is stated above, r
 
     \frac{p_{1}}{\rho g} + z_{1} + \alpha_{1} \frac{\bar v_{1}^2}{2g} + h_P = \frac{p_{2}}{\rho g} + z_{2} + {\alpha_{2}} \frac{\bar v_{2}^2}{2g} + h_T + h_L
 
-You’ll also notice the :math:`\alpha` term attached to the velocity head. This is a correction factor for kinetic energy, and will be neglected in this class; we assume that its value is 1. In the Bernoulli equation, the velocity of the streamline of water is considered, :math:`v`. The energy equation, however compares control surfaces instead of streamlines, and the velocities across a control surface many not all be the same. Hence, :math:`\bar v` is used to represent the average velocity. Since AguaClara does not use pumps nor turbines, :math:`h_P = h_T = 0`. With these simplifications, the energy equation can be written as follows:
+You’ll also notice the :math:`\alpha` term attached to the velocity head. This is a correction factor for kinetic energy, and will be neglected in this class; we assume that its value is 1. In the Bernoulli equation, the velocity of a streamline of the fluid is considered, :math:`v`. The energy equation, however compares control surfaces instead of streamlines, and the velocities across a control surface many not all be the same. Hence, :math:`\bar v` is used to represent the average velocity. Since AguaClara does not use pumps nor turbines, :math:`h_P = h_T = 0`. With these simplifications, the energy equation can be written as follows:
 
 .. math::
 
@@ -372,9 +372,9 @@ one <https://www.engineeringtoolbox.com/minor-loss-coefficients-pipes-d_626.html
     :align: center
     :alt: Minor loss displayed in an elbow
 
-    Flow around a pipe elbow results in a minor loss.
+    Flow around a pipe elbow results in a minor loss. 'Control surface 1' can be abbreviated as 'CS 1'
 
-In order to find :math:`\bar v_{out}`, we first need to know what (or where) is :math:`out` and what is :math:`in`. A simple way to distinguish the two surfaces is that :math:`in` occurs when the flow is most contracted, and :math:`out` occurs when the flow has fully expanded after that maximal contraction. Going on these guidelines, ‘B’ in the figure above above would be :math:`in`, since it represents the most contracted flow in the elbow-pipe system. Therefore, ‘C’ would be :math:`out`, as it represents the flow having fully expanded after its compression in ‘B.’
+In order to find :math:`\bar v_{out}`, we first need to know what (or where) is :math:`out` and what is :math:`in`. A simple way to distinguish the two surfaces is that :math:`in` occurs when the flow is most contracted, and :math:`out` occurs when the flow has fully expanded after that maximal contraction. Going on these guidelines, Control surface '2' (CS 2) in the figure above above would be :math:`in`, since it represents the most contracted flow in the elbow-pipe system. Therefore, CS 3 would be :math:`out`, as it represents the flow having fully expanded after its compression at CS 2.
 
 :math:`\bar v_{out}` is easy to determine because it is the velocity of the fluid as it flows through the entire area of the pipe. Thus, :math:`\bar v_{out}` can be found with the continuity equation, since the flow through the pipe and its diameter are easy to measure, :math:`\bar v_{out} = \frac{4 Q}{\pi D^2}`. On the other hand, :math:`\bar v_{in}` is difficult to find, as the area of the contracted flow is dependent on the exact geometry of the elbow. This is why the third form of the minor loss equation, as we have defined it, is the most common:
 
@@ -401,13 +401,13 @@ Consider the following figure:
 
     A typical hydraulic system can be used to understand the headloss trick.
 
-In systems like this, where an elevation difference is causing the flow of water, the elevation difference is called the **driving head**. In the system above, the driving head is the elevation difference between the water level and the end of the tubing. Usually, driving head is written as :math:`\Delta z` or :math:`\Delta h`, though above it is labelled as :math:`h_L`. Doesn't :math:`h_L` refer to headloss though? Yes it does! This *IS* the headloss trick, and is explained in the following paragraphs and equations.
+In systems like this, where an elevation difference is causing water to flow, the elevation difference is called the **driving head**. In the system above, the driving head is the elevation difference between the water level and the end of the tubing. Usually, driving head is written as :math:`\Delta z` or :math:`\Delta h`, though above it is labelled as :math:`h_L`. Doesn't :math:`h_L` refer to headloss though? Yes it does! Referring to :math:`\Delta h` or :math:`\Delta z` *IS* the headloss trick, and how it works is explained in the following paragraphs and equations.
 
-The figure is technically violating the energy equation by saying that the elevation difference between the water in the tank and the end of the tube is :math:`h_L`. It implies that all of the driving head, :math:`\Delta z`, is lost to headloss. Since all of the energy is gone, there can be no water flowing out of the tubing. But this is not true. Let’s apply the energy equation cross the control surfaces shown. Pressures are atmospheric at both locations and the velocity of water at the top of tank is negligible.
+The figure is technically violating the energy equation by saying that the elevation difference between the water in the tank and the end of the tube is :math:`h_L`. It implies that all of the driving head, :math:`\Delta z`, is lost to headloss. Since all of the energy is gone, there should not be water flowing out of the tubing. But there is. Let’s apply the energy equation across the control surfaces shown in the figure. Pressures at both ends are atmospheric and the velocity of water at the top of tank is negligible.
 
 .. math::
 
-    \rlap{\Bigg/}\frac{p_{1}}{\rho g} + z_{1} + \rlap{\Bigg/}\frac{\bar v_{1}^2}{2g} = \rlap{\Bigg/}\frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
+    \cancel{ \frac{p_{1}}{\rho g} } + z_{1} + \cancel{ \frac{\bar v_{1}^2}{2g} } = \cancel{ \frac{p_{2}}{\rho g} } + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
 
 We now get:
 
@@ -433,7 +433,7 @@ This equation contradicts the figure above, which says that :math:`\Delta z = h_
 
     \Delta z = \left( \sum K \right) \frac{\bar v_2^2}{2g} + h_f
 
-This last step incorporated the kinetic energy term of the energy equation, :math:`\frac{\bar v_2^2}{2g}`, into the minor loss equation by saying that its :math:`K` is 1. From here, we reverse our steps to get :math:`\Delta z = h_L`
+This last step incorporated the kinetic energy term of the energy equation, :math:`\frac{\bar v_2^2}{2g}`, into the minor loss equation by saying that its :math:`K` is 1 and incorporating that 1 into :math:`\sum K`. From here, we reverse our steps to get :math:`\Delta z = h_L`, starting with :math:`h_e = \left( \sum K \right) \frac{\bar v_2^2}{2g}`
 
 .. math::
 
@@ -443,17 +443,17 @@ This last step incorporated the kinetic energy term of the energy equation, :mat
 
     \Delta z = h_L
 
-By applying the headloss trick, you are considering the entire flow of water out of a control volume as lost energy. This is just an algebraic trick, the only thing to remember when applying this trick is that :math:`\sum K` will always be at least 1, even if there are no ‘real’ minor losses in the system.
+By applying the headloss trick, you are considering the entire flow of the fluid out of a control volume as energy lost via minor losses. This is just an algebraic trick, the only thing to remember when applying this trick is that :math:`\sum K` will always be at least 1, even if there are no ‘real’ minor losses in the system.
 
 
 .. _the_orifice_equation:
 
 The Orifice Equation
---------------------
+=====================
 This equation is one that you’ll see and use again and again throughout this class. Understanding it now will be invaluable, as future concepts will use and build on this equation.
 
 What is a Vena Contracta?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 Before describing the equation, we must first understand the concept of a `vena contracta <https://en.wikipedia.org/wiki/Vena_contracta>`_. Refer to the figure below.
 
 .. _sluice_gate_vena_contracta:
@@ -462,9 +462,9 @@ Before describing the equation, we must first understand the concept of a `vena 
     :align: center
     :alt: Sluice Gate Vena Contracta
 
-    This figure shows flow around a sluice gate. Since the most extreme streamline can't make a sharp turn, the flow is forced to contract to an area smaller than the area of the gate.
+    This figure shows flow around a sluice gate. Since streamlines can't make sharp turns, the flow is forced to gradually curve and contract to an area smaller than the area of the gate.
 
-The flow contracts as the fluid moves past the gate. This happens because the fluid can’t make a sharp turn as it tries to go around the gate, as indicated by the streamline in the figure.. Instead, the most extreme streamline makes a gradual change in direction. As a result of this gradual turn, the flow contracts and the cross-sectional area the fluid is flowing decreases.
+The flow contracts as the fluid moves past the gate. This happens because the fluid can’t make a sharp turn as it tries to go around the gate, as indicated by the streamline in the figure. Instead, the most extreme streamline makes a gradual change in direction. As a result of this gradual turn, the flow contracts and the cross-sectional area the fluid is flowing decreases.
 
 The term ‘vena contracta’ describes the phenomenon of contracting flow due to streamlines being unable to make sharp turns. :math:`\Pi_{vc}` is a dimensionless ratio comparing the flow area at the point of maximal contraction, :math:`A_{downstream}`, and the flow area *before* the contraction, :math:`A_{gate}`. In the figure above, the equation for the vena contracta coefficient would be:
 
@@ -472,14 +472,14 @@ The term ‘vena contracta’ describes the phenomenon of contracting flow due t
 
     \Pi_{vc} = \frac{A_{downstream}}{A_{gate}}
 
-When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter is in aide_design as ``pc.RATIO_VC_ORIFICE``. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the leasy contracted area, :math:`\Pi_{vc}` is always less than 1.
+When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter value, 0.62, is in aide_design as ``pc.RATIO_VC_ORIFICE``. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the least contracted area, :math:`\Pi_{vc}` is always less than 1.
 
 .. important:: **A vena contracta coefficient is not a minor loss coefficient.** Though the equations for the two both involve contracted and non-contracted areas, these coefficients are not the same. Minor losses coefficients imply energy loss, and vena contractas do not. Minor losses coefficients deal with flow expansions, and vena contracas deal with flow contractions. Confusing the two coefficients is common mistake that this paragraph will hopefully help you to avoid.
 
 .. note:: Note that what this class calls :math:`\Pi_{vc}` is often referred to as a ‘Coefficient of Contraction,’ :math:`C_c`, in other engineering courses and settings.
 
-Origin
-^^^^^^
+Origin of the Orifice Equation
+---------------------------------
 The orifice equation is derived from the Bernoulli equation as applied to the purple points in the following image:
 
 .. _hole_in_a_bucket:
@@ -488,15 +488,15 @@ The orifice equation is derived from the Bernoulli equation as applied to the pu
     :align: center
     :alt: Minor loss displayed in an elbow
 
-    Flow through a hole in the bottom of a bucket is a great example of a orifice equation.
+    Flow through a hole in the bottom of a bucket is a great example of the orifice equation.
 
-At point A, the pressure is atmospheric and the instantaneous velocity is negligible as the water level in the bucket drops slowly. At point B, the pressure is also atmospheric. We define the difference in elevations between the two points, :math:`z_A - z_B`, to be :math:`\Delta h`. With these simplifications (:math:`p_A = \bar v_A = p_B = 0`) and assumptions (:math:`z_A - z_B = \Delta h`), the Bernoulli equation becomes:
+At point 1, the pressure is atmospheric and the instantaneous velocity is negligible as the water level in the bucket drops slowly. At point 2, the pressure is also atmospheric. We define the difference in elevations between the two points, :math:`z_1 - z_2`, to be :math:`\Delta h`. With these simplifications :math:`(p_1 = \bar v_1 = p_2 = 0)` and assumptions :math:`(z_A - z_B = \Delta h)`, the Bernoulli equation becomes:
 
 .. math::
 
-    \Delta h = \frac{\bar v_B^2}{2g}
+    \Delta h = \frac{\bar v_2^2}{2g}
 
-Substituting the continuity equation :math:`Q = \bar v A` in the form of :math:`\bar v_B^2 = \frac{Q^2}{A_{vc}^2}`, the vena contracta coefficient in the form of :math:`A_{vc} = \Pi_{vc} A_{or}` yields:
+Substituting the continuity equation :math:`Q = \bar v A` in the form of :math:`\bar v_2^2 = \frac{Q^2}{A_{vc}^2}`, the vena contracta coefficient in the form of :math:`A_{vc} = \Pi_{vc} A_{or}` yields:
 
 .. math::
 
@@ -518,22 +518,51 @@ Which, rearranged to solve for :math:`Q` gives **The Orifice Equation:**
 
 .. seealso:: **Equation in aide_design:** ``pc.flow_orifice_vert(Diam, Height, RatioVCOrifice)`` Returns flow through a vertical orifice. The height parameter refers to height above the center of the orifice.
 
+There are two configurations for an orifice in the tank holding a fluid: horizontal and vertical. These are both displayed in the figure below. The orifice equation written is for a horizontal orifice; the equation for flow through vertical orifice equation requires integration or the orifice equation across its height to return the correct flow. This is explored in the Flow Control and Measurement Examples section.
+
 .. _vertical_and_horizontal_orifices:
 .. figure:: Images/vertical_and_horizontal_orifices.png
     :width: 650px
     :align: center
     :alt: Vertical and horizontal orifices
 
-    The descriptions 'vertical' and 'horizontal' apply to the orientation of the orifices, not to the orientation of the fluid coming out of the orifices.
-
-There are two configurations for an orifice in the wall of a reservoir of water, horizontal and vertical, as the image above shows. The orifice equation shown in the previous section is for a horizontal orifice, but for a vertical orifice the equation requires integration to return the correct flow. You will explore this in the Flow Control and Measurement Design Challenge.
+    The descriptions 'vertical' and 'horizontal' **apply to the orientation of the orifices,** not to the orientation of the fluid coming out of the orifices.
 
 
 .. _FR_section_summary:
 
 Section Summary
----------------
-1. **Bernoulli vs energy equations:** The Bernoulli equation assumes that energy is conserved throughout a streamline or control volume. The Energy equation assumes that there is energy loss, or headloss :math:`h_L`. This headloss is composed of major losses, :math:`h_{\rm{f}}`, and minor losses, :math:`h_e`.
+================
+1. **Introductory Concepts:**
+
+    * **Continuity** means that the mass of a fluid is conserved and implies a constant density. The continuity equation has two purposes.
+
+        #. Relating the average velocity of a fluid, :math:`\bar v`, to its flow rate, :math:`Q`, via the cross-sectional area, :math:`A`, that it flows through. When the fluid is flowing in a pipe, we can simply this even further to relate the flow rate and velocity to the pipe's diameter, :math:`D`. The final equation below is only used for circular pipes, as it includes a pipe diameter.
+
+        .. math::
+
+            Q = \bar v A = \bar v \frac{\pi D^2}{4}
+
+        #. The continuity equation can also be used to find the average velocity or flow when the geometry of a fluid's flow changes, as the mass of the fluid must be conserved as it transitions through flow geometries.
+
+        .. math::
+
+            Q_1 = Q_2
+
+        .. math::
+
+            \bar v_1 A_1 = \bar v_2 A_2
+
+        .. math::
+
+            \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
+
+    * **Laminar and Turbulent flow** describe the disorder and chaos of fluid flow. The **Reynols number** is used to distinguish laminar from turbulent flow.
+
+    .. math::
+
+
+2. **Bernoulli vs Energy equations:** The Bernoulli equation assumes that energy is conserved throughout a streamline or control volume. The Energy equation assumes that there is energy loss, or headloss :math:`h_L`. This headloss is composed of major losses, :math:`h_{\rm{f}}`, and minor losses, :math:`h_e`.
 
 Bernoulli equation:
 
@@ -547,7 +576,7 @@ Energy equation, simplified to remove pumps, turbines, and :math:`\alpha` factor
 
    \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
 
-2. **Major losses:** Defined as the energy loss due to shear between the walls of the pipe/flow conduit and the fluid. The Darcy-Weisbach equation is used to find major losses in both laminar and turbulent flow regimes. The equation for finding the Darcy friction factor, :math:`\rm{f}`, changes depending on whether the flow is laminar or turbulent. The Moody diagram is a common graphical method for finding :math:`\rm{f}`. During laminar flow, the Hagen-Poiseuille equation, which is just a combination of Darcy-Weisbach, Reynolds number, and :math:`{\rm{f}} = \frac{64}{\rm{Re}}`, can be used
+3. **Major losses:** Defined as the energy loss due to shear between the walls of the pipe/flow conduit and the fluid. The Darcy-Weisbach equation is used to find major losses in both laminar and turbulent flow regimes. The equation for finding the Darcy friction factor, :math:`\rm{f}`, changes depending on whether the flow is laminar or turbulent. The Moody diagram is a common graphical method for finding :math:`\rm{f}`. During laminar flow, the Hagen-Poiseuille equation, which is just a combination of Darcy-Weisbach, Reynolds number, and :math:`{\rm{f}} = \frac{64}{\rm{Re}}`, can be used
 
 Darcy-Weisbach equation:
 
@@ -579,7 +608,7 @@ Hagen-Poiseuille equation for laminar flow:
 
     h_{\rm{f}} = \frac{32\mu L \bar v}{\rho gD^2} = \frac{128\mu Q}{\rho g\pi D^4}
 
-3. **Minor losses:** Defined as the energy loss due to the generation of turbulent eddies when flow expands. Once more: minor losses are caused by flow expansions. There are three forms of the minor loss equation, two of which look the same but use different coefficients (:math:`K^{'}` vs :math:`K`) and velocities (:math:`\bar v_{in}` vs :math:`\bar v_{out}`). *Make sure the coefficient you select is consistent with the velocity you use*.
+4. **Minor losses:** Defined as the energy loss due to the generation of turbulent eddies when flow expands. Once more: minor losses are caused by flow expansions. There are three forms of the minor loss equation, two of which look the same but use different coefficients (:math:`K^{'}` vs :math:`K`) and velocities (:math:`\bar v_{in}` vs :math:`\bar v_{out}`). *Make sure the coefficient you select is consistent with the velocity you use*.
 
 First form:
 
@@ -599,7 +628,7 @@ Third and most common form:
 
     h_e = \frac{\bar v_{out}^2}{2g}{\left( {\frac{A_{out}}{A_{in}}} -1 \right)^2} = \,\,\,\, \frac{\bar v_{out}^2}{2g} \mathbf{K}
 
-4. **Major and minor losses vary with flow:** While it is generally important to know how increasing or decreasing flow will affect headloss, it is even more important for this class to understand exactly how flow will affect headloss. As the table below shows, headloss will always be proportional to flow squared during turbulent flow. During laminar flow, however, the exponent on :math:`Q` will be between 1 and 2 depending on the proportion of major to minor losses.
+5. **Major and minor losses vary with flow:** While it is generally important to know how increasing or decreasing flow will affect headloss, it is even more important for this class to understand exactly how flow will affect headloss. As the table below shows, headloss will always be proportional to flow squared during turbulent flow. During laminar flow, however, the exponent on :math:`Q` will be between 1 and 2 depending on the proportion of major to minor losses.
 
 +------------------------+--------------+--------------+
 | Head loss scales with: | Major Losses | Minor Losses |
@@ -609,9 +638,9 @@ Third and most common form:
 | Turbulent              | :math:`Q^2`  | :math:`Q^2`  |
 +------------------------+--------------+--------------+
 
-5. The **headloss trick**, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, :math:`\frac{\bar v_2^2}{2g}`, into headloss as a minor loss with :math:`K = 1`, so the minor loss equation becomes :math:`\left( 1 + \sum K \right) \frac{\bar v^2}{2g}`. This is used to be able to say that :math:`\Delta z = h_L` and makes many equation simplifications possible in the future.
+6. The **headloss trick**, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, :math:`\frac{\bar v_2^2}{2g}`, into headloss as a minor loss with :math:`K = 1`, so the minor loss equation becomes :math:`\left( 1 + \sum K \right) \frac{\bar v^2}{2g}`. This is used to be able to say that :math:`\Delta z = h_L` and makes many equation simplifications possible in the future.
 
-6. **Orifice equation and vena contractas:** The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, :math:`Q \propto \sqrt{\Delta h}`. Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aide_design should be used.
+7. **Orifice equation and vena contractas:** The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, :math:`Q \propto \sqrt{\Delta h}`. Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aide_design should be used.
 
 The Orifice Equation:
 

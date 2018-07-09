@@ -25,7 +25,7 @@ This is a place holder for 'Chapter 1: Introduction' files
 
 .. toctree::
    :caption: Chapter 2: Fluids Review
-   :maxdepth: 2
+   :maxdepth: 1
 
    Fluids_Review/Fluids_Review_Design.rst
    Fluids_Review/Fluids_Review_Derivations.rst
@@ -33,7 +33,7 @@ This is a place holder for 'Chapter 1: Introduction' files
 
 .. toctree::
    :caption: Chapter 3: Flow Control and Measurement
-   :maxdepth: 2
+   :maxdepth: 1
 
    Flow_Control_and_Measurement/FCM_Design.rst
    Flow_Control_and_Measurement/FCM_Derivations.rst
