@@ -299,7 +299,7 @@
 </div>
 <div class="figure align-center" id="id14">
 <span id="image-control-volumes"></span><a class="reference internal image-reference" href="../_images/image_control_volumes.png"><img alt="Image control volumes" src="../_images/image_control_volumes.png" style="width: 650px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">A convention for figure control volume and streamlines will be very helpful throughout this course, as there will be very, very many figures.</span></p>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">On the right, a control volume is applied to a hydraulic system. On the left, a streamline is applied to a hydraulic system. A figure-convention for control volumes and streamlines will be very helpful throughout this course as there will be very, very many figures.</span></p>
 </div>
 </div>
 </div>
@@ -551,7 +551,7 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 <li><p class="first"><strong>Introductory Concepts:</strong></p>
 <blockquote>
 <div><ul>
-<li><p class="first"><strong>Continuity</strong> means that the mass of a fluid is conserved and implies a constant density. The continuity equation has two purposes.</p>
+<li><p class="first"><strong>Continuity</strong> means that the mass of a fluid is conserved as it flows, and implies a constant density. The continuity equation has two purposes:</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li>Relating the average velocity of a fluid, <span class="math notranslate nohighlight">\(\bar v\)</span>, to its flow rate, <span class="math notranslate nohighlight">\(Q\)</span>, via the cross-sectional area, <span class="math notranslate nohighlight">\(A\)</span>, that it flows through. When the fluid is flowing in a pipe, we can simply this even further to relate the flow rate and velocity to the pipe’s diameter, <span class="math notranslate nohighlight">\(D\)</span>. The final equation below is only used for circular pipes, as it includes a pipe diameter.</li>
@@ -559,7 +559,7 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-design-33">
 <span class="eqno">(38)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-33" title="Permalink to this equation">¶</a></span>\[Q = \bar v A = \bar v \frac{\pi D^2}{4}\]</div>
 <ol class="arabic simple">
-<li>The continuity equation can also be used to find the average velocity or flow when the geometry of a fluid’s flow changes, as the mass of the fluid must be conserved as it transitions through flow geometries.</li>
+<li>Finding the average velocity or flow when the geometry of a fluid’s flow changes, as the mass of the fluid must be conserved when it transitions through flow geometries.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-design-34">
 <span class="eqno">(39)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-34" title="Permalink to this equation">¶</a></span>\[Q_1 = Q_2\]</div>
@@ -569,26 +569,32 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 <span class="eqno">(41)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-36" title="Permalink to this equation">¶</a></span>\[\bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}\]</div>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>Laminar and Turbulent flow</strong> describe the disorder and chaos of fluid flow. The <strong>Reynols number</strong> is used to distinguish laminar from turbulent flow.</p>
+<li><p class="first"><strong>Laminar and Turbulent flow</strong> describe the disorder and chaos of fluid flow. The <strong>Reynolds number,</strong> <span class="math notranslate nohighlight">\({\rm Re}\)</span> is used to distinguish laminar from turbulent flow. For <span class="math notranslate nohighlight">\({\rm Re} &lt; 2100\)</span>, flow is considered laminar. For <span class="math notranslate nohighlight">\({\rm Re} &gt; 2100\)</span>, flow is considered turbulent. The equations for the Reynolds number are below:</p>
 </li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-design-37">
-<span class="eqno">(42)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-37" title="Permalink to this equation">¶</a></span>\[\]</div>
+<span class="eqno">(42)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-37" title="Permalink to this equation">¶</a></span>\[{\rm Re} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}\]</div>
+<ul class="simple">
+<li><strong>Control volumes vs Streamlines.</strong> This section is quite short, a summary would simply repeat what the sections says. The section is its own summary; read it here: <a class="reference internal" href="#id5">Streamlines and Control Volumes</a></li>
+</ul>
 </div></blockquote>
 </li>
 <li><p class="first"><strong>Bernoulli vs Energy equations:</strong> The Bernoulli equation assumes that energy is conserved throughout a streamline or control volume. The Energy equation assumes that there is energy loss, or headloss <span class="math notranslate nohighlight">\(h_L\)</span>. This headloss is composed of major losses, <span class="math notranslate nohighlight">\(h_{\rm{f}}\)</span>, and minor losses, <span class="math notranslate nohighlight">\(h_e\)</span>.</p>
 </li>
 </ol>
-<p>Bernoulli equation:</p>
+<blockquote>
+<div><p>Bernoulli equation:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-design-38">
 <span class="eqno">(43)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-38" title="Permalink to this equation">¶</a></span>\[\frac{p_1}{\rho g} + {z_1} + \frac{\bar v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{\bar v_2^2}{2g}\]</div>
 <p>Energy equation, simplified to remove pumps, turbines, and <span class="math notranslate nohighlight">\(\alpha\)</span> factors:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-design-39">
 <span class="eqno">(44)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-39" title="Permalink to this equation">¶</a></span>\[\frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L\]</div>
+</div></blockquote>
 <ol class="arabic simple" start="3">
 <li><strong>Major losses:</strong> Defined as the energy loss due to shear between the walls of the pipe/flow conduit and the fluid. The Darcy-Weisbach equation is used to find major losses in both laminar and turbulent flow regimes. The equation for finding the Darcy friction factor, <span class="math notranslate nohighlight">\(\rm{f}\)</span>, changes depending on whether the flow is laminar or turbulent. The Moody diagram is a common graphical method for finding <span class="math notranslate nohighlight">\(\rm{f}\)</span>. During laminar flow, the Hagen-Poiseuille equation, which is just a combination of Darcy-Weisbach, Reynolds number, and <span class="math notranslate nohighlight">\({\rm{f}} = \frac{64}{\rm{Re}}\)</span>, can be used</li>
 </ol>
-<p>Darcy-Weisbach equation:</p>
+<blockquote>
+<div><p>Darcy-Weisbach equation:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-design-40">
 <span class="eqno">(45)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-40" title="Permalink to this equation">¶</a></span>\[h_{\rm{f}} = {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}\]</div>
 <p>For water treatment plant design we tend to use plant flow rate, <span class="math notranslate nohighlight">\(Q\)</span>, as our master variable and thus we have.</p>
@@ -603,10 +609,12 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 <p>Hagen-Poiseuille equation for laminar flow:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-design-44">
 <span class="eqno">(49)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-44" title="Permalink to this equation">¶</a></span>\[h_{\rm{f}} = \frac{32\mu L \bar v}{\rho gD^2} = \frac{128\mu Q}{\rho g\pi D^4}\]</div>
+</div></blockquote>
 <ol class="arabic simple" start="4">
 <li><strong>Minor losses:</strong> Defined as the energy loss due to the generation of turbulent eddies when flow expands. Once more: minor losses are caused by flow expansions. There are three forms of the minor loss equation, two of which look the same but use different coefficients (<span class="math notranslate nohighlight">\(K^{'}\)</span> vs <span class="math notranslate nohighlight">\(K\)</span>) and velocities (<span class="math notranslate nohighlight">\(\bar v_{in}\)</span> vs <span class="math notranslate nohighlight">\(\bar v_{out}\)</span>). <em>Make sure the coefficient you select is consistent with the velocity you use</em>.</li>
 </ol>
-<p>First form:</p>
+<blockquote>
+<div><p>First form:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-design-45">
 <span class="eqno">(50)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-45" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}\]</div>
 <p>Second form:</p>
@@ -615,6 +623,7 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 <p>Third and most common form:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-design-47">
 <span class="eqno">(52)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-47" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\bar v_{out}^2}{2g}{\left( {\frac{A_{out}}{A_{in}}} -1 \right)^2} = \,\,\,\, \frac{\bar v_{out}^2}{2g} \mathbf{K}\]</div>
+</div></blockquote>
 <ol class="arabic simple" start="5">
 <li><strong>Major and minor losses vary with flow:</strong> While it is generally important to know how increasing or decreasing flow will affect headloss, it is even more important for this class to understand exactly how flow will affect headloss. As the table below shows, headloss will always be proportional to flow squared during turbulent flow. During laminar flow, however, the exponent on <span class="math notranslate nohighlight">\(Q\)</span> will be between 1 and 2 depending on the proportion of major to minor losses.</li>
 </ol>
@@ -645,9 +654,11 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 <li>The <strong>headloss trick</strong>, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, <span class="math notranslate nohighlight">\(\frac{\bar v_2^2}{2g}\)</span>, into headloss as a minor loss with <span class="math notranslate nohighlight">\(K = 1\)</span>, so the minor loss equation becomes <span class="math notranslate nohighlight">\(\left( 1 + \sum K \right) \frac{\bar v^2}{2g}\)</span>. This is used to be able to say that <span class="math notranslate nohighlight">\(\Delta z = h_L\)</span> and makes many equation simplifications possible in the future.</li>
 <li><strong>Orifice equation and vena contractas:</strong> The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, <span class="math notranslate nohighlight">\(Q \propto \sqrt{\Delta h}\)</span>. Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aide_design should be used.</li>
 </ol>
-<p>The Orifice Equation:</p>
+<blockquote>
+<div><p>The Orifice Equation:</p>
 <div class="math notranslate nohighlight" id="equation-fluids-review-fluids-review-design-48">
 <span class="eqno">(53)<a class="headerlink" href="#equation-fluids-review-fluids-review-design-48" title="Permalink to this equation">¶</a></span>\[Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}\]</div>
+</div></blockquote>
 </div>
 </div>
 

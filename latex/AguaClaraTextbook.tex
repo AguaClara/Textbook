@@ -815,7 +815,7 @@ Many images will be used over the course of this class to show hydraulic systems
 \capstart
 
 \noindent\sphinxincludegraphics[width=650\sphinxpxdimen]{{image_control_volumes}.png}
-\caption{A convention for figure control volume and streamlines will be very helpful throughout this course, as there will be very, very many figures.}\label{\detokenize{Fluids_Review/Fluids_Review_Design:id14}}\label{\detokenize{Fluids_Review/Fluids_Review_Design:image-control-volumes}}\end{figure}
+\caption{On the right, a control volume is applied to a hydraulic system. On the left, a streamline is applied to a hydraulic system. A figure-convention for control volumes and streamlines will be very helpful throughout this course as there will be very, very many figures.}\label{\detokenize{Fluids_Review/Fluids_Review_Design:id14}}\label{\detokenize{Fluids_Review/Fluids_Review_Design:image-control-volumes}}\end{figure}
 
 
 \section{The Bernoulli and Energy Equations}
@@ -1166,7 +1166,7 @@ There are two configurations for an orifice in the tank holding a fluid: horizon
 \begin{quote}
 \begin{itemize}
 \item {} 
-\sphinxstylestrong{Continuity} means that the mass of a fluid is conserved and implies a constant density. The continuity equation has two purposes.
+\sphinxstylestrong{Continuity} means that the mass of a fluid is conserved as it flows, and implies a constant density. The continuity equation has two purposes:
 \begin{quote}
 \begin{enumerate}
 \item {} 
@@ -1177,7 +1177,7 @@ Relating the average velocity of a fluid, \(\bar v\), to its flow rate, \(Q\), v
 \begin{split}Q = \bar v A = \bar v \frac{\pi D^2}{4}\end{split}
 \end{equation}\begin{enumerate}
 \item {} 
-The continuity equation can also be used to find the average velocity or flow when the geometry of a fluid’s flow changes, as the mass of the fluid must be conserved as it transitions through flow geometries.
+Finding the average velocity or flow when the geometry of a fluid’s flow changes, as the mass of the fluid must be conserved when it transitions through flow geometries.
 
 \end{enumerate}
 \begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:34}
@@ -1189,7 +1189,14 @@ The continuity equation can also be used to find the average velocity or flow wh
 \end{equation}\end{quote}
 
 \item {} 
-\sphinxstylestrong{Laminar and Turbulent flow} describe the disorder and chaos of fluid flow. The \sphinxstylestrong{Reynols number} is used to distinguish laminar from turbulent flow.
+\sphinxstylestrong{Laminar and Turbulent flow} describe the disorder and chaos of fluid flow. The \sphinxstylestrong{Reynolds number,} \({\rm Re}\) is used to distinguish laminar from turbulent flow. For \({\rm Re} < 2100\), flow is considered laminar. For \({\rm Re} > 2100\), flow is considered turbulent. The equations for the Reynolds number are below:
+
+\end{itemize}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:37}
+\begin{split}{\rm Re} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}\end{split}
+\end{equation}\begin{itemize}
+\item {} 
+\sphinxstylestrong{Control volumes vs Streamlines.} This section is quite short, a summary would simply repeat what the sections says. The section is its own summary; read it here: {\hyperref[\detokenize{Fluids_Review/Fluids_Review_Design:id5}]{\sphinxcrossref{Streamlines and Control Volumes}}}
 
 \end{itemize}
 \end{quote}
@@ -1198,6 +1205,7 @@ The continuity equation can also be used to find the average velocity or flow wh
 \sphinxstylestrong{Bernoulli vs Energy equations:} The Bernoulli equation assumes that energy is conserved throughout a streamline or control volume. The Energy equation assumes that there is energy loss, or headloss \(h_L\). This headloss is composed of major losses, \(h_{\rm{f}}\), and minor losses, \(h_e\).
 
 \end{enumerate}
+\begin{quote}
 
 Bernoulli equation:
 \begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:38}
@@ -1206,12 +1214,14 @@ Bernoulli equation:
 Energy equation, simplified to remove pumps, turbines, and \(\alpha\) factors:
 \begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:39}
 \begin{split}\frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L\end{split}
-\end{equation}\begin{enumerate}
+\end{equation}\end{quote}
+\begin{enumerate}
 \setcounter{enumi}{2}
 \item {} 
 \sphinxstylestrong{Major losses:} Defined as the energy loss due to shear between the walls of the pipe/flow conduit and the fluid. The Darcy-Weisbach equation is used to find major losses in both laminar and turbulent flow regimes. The equation for finding the Darcy friction factor, \(\rm{f}\), changes depending on whether the flow is laminar or turbulent. The Moody diagram is a common graphical method for finding \(\rm{f}\). During laminar flow, the Hagen-Poiseuille equation, which is just a combination of Darcy-Weisbach, Reynolds number, and \({\rm{f}} = \frac{64}{\rm{Re}}\), can be used
 
 \end{enumerate}
+\begin{quote}
 
 Darcy-Weisbach equation:
 \begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:40}
@@ -1232,12 +1242,14 @@ For water treatment plant design we tend to use plant flow rate, \(Q\), as our m
 Hagen-Poiseuille equation for laminar flow:
 \begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:44}
 \begin{split}h_{\rm{f}} = \frac{32\mu L \bar v}{\rho gD^2} = \frac{128\mu Q}{\rho g\pi D^4}\end{split}
-\end{equation}\begin{enumerate}
+\end{equation}\end{quote}
+\begin{enumerate}
 \setcounter{enumi}{3}
 \item {} 
 \sphinxstylestrong{Minor losses:} Defined as the energy loss due to the generation of turbulent eddies when flow expands. Once more: minor losses are caused by flow expansions. There are three forms of the minor loss equation, two of which look the same but use different coefficients (\(K^{'}\) vs \(K\)) and velocities (\(\bar v_{in}\) vs \(\bar v_{out}\)). \sphinxstyleemphasis{Make sure the coefficient you select is consistent with the velocity you use}.
 
 \end{enumerate}
+\begin{quote}
 
 First form:
 \begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:45}
@@ -1250,7 +1262,8 @@ Second form:
 Third and most common form:
 \begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:47}
 \begin{split}h_e = \frac{\bar v_{out}^2}{2g}{\left( {\frac{A_{out}}{A_{in}}} -1 \right)^2} = \,\,\,\, \frac{\bar v_{out}^2}{2g} \mathbf{K}\end{split}
-\end{equation}\begin{enumerate}
+\end{equation}\end{quote}
+\begin{enumerate}
 \setcounter{enumi}{4}
 \item {} 
 \sphinxstylestrong{Major and minor losses vary with flow:} While it is generally important to know how increasing or decreasing flow will affect headloss, it is even more important for this class to understand exactly how flow will affect headloss. As the table below shows, headloss will always be proportional to flow squared during turbulent flow. During laminar flow, however, the exponent on \(Q\) will be between 1 and 2 depending on the proportion of major to minor losses.
@@ -1296,11 +1309,13 @@ The \sphinxstylestrong{headloss trick}, also called the control volume trick, ca
 \sphinxstylestrong{Orifice equation and vena contractas:} The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, \(Q \propto \sqrt{\Delta h}\). Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aide\_design should be used.
 
 \end{enumerate}
+\begin{quote}
 
 The Orifice Equation:
 \begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:48}
 \begin{split}Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}\end{split}
-\end{equation}
+\end{equation}\end{quote}
+
 
 \chapter{Fluids Review Derivations}
 \label{\detokenize{Fluids_Review/Fluids_Review_Derivations:fluids-review-derivations}}\label{\detokenize{Fluids_Review/Fluids_Review_Derivations:id1}}\label{\detokenize{Fluids_Review/Fluids_Review_Derivations::doc}}
