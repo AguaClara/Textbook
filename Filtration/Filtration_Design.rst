@@ -73,8 +73,7 @@ describes the uniformity of the sand. A :math:`UC = 1` indicates that every grai
 .. math::
   :label: minimum_fluidization_velocity_sand
 
-  V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)}
-  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
+    V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 
 
 From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter is **not** indicative of fluidization at the bottom.
@@ -85,7 +84,7 @@ This result is also important in determining the expansion of the sand bed durin
 .. math::
   :label: backwash_porosity
 
-  \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}
+    \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}
 
 | Such that:
 | :math:`phi_{FiSandBw}` = sand porosity during backwash
@@ -108,6 +107,34 @@ From this it becomes possible to directly relate porosity (as above) to the filt
 
 
 
+.. _headloss_requirements:
+
+Headloss Requirements
+======================
+One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen Pouseille equation (ref from elsewhere) describes the headloss through a clean bed during filtration
+
+.. math::
+  :label: karmen_kozeny_clean_bed
+
+  \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu V_{Fi}}{g D_{60}^2}
+
+| Such that:
+| :math:`h_l` = headloss in sand bed
+| :math:`H_{FiSand}` = the sand bed depth/length of flow paths
+| :math:`phi_{FiSand}` = porosity of sand
+| :math:`nu` = kinematic viscosity
+| :math:`V_{Fi}` = the water velocity in the filter
+| :math:`D_{60}` = the size of the sand
+| :math:`g` = gravity
+| :math:`k` = Kozeny constant (5 for most filtration cases)
+
+This equation is valid for Reynolds numbers less than 6. Where:
+:math:`{\rm Re}  = \frac{D_{60} V_{Fi}}{\nu}`
+
+The headloss during backwash is the
+
+
+
 
 .. _backwash:
 
@@ -125,8 +152,9 @@ Parallel filters would require too much area and wouldn't work well under low fl
 Given:
 
 .. math::
- :label: filter_example_conditions
-  Q_{Plant} = 6 \, \frac{L}{s} \,\,\,\,\, V_{Fi} = 1.8 \, \frac{mm}{s} \,\,\,\,\, V_{Bw} = 9 \, \frac{mm}{s}
+  :label: filter_base_conditions
+
+    Q_{Plant} = 6 \, \frac{L}{s} \,\,\,\,\, V_{Fi} = 1.8 \, \frac{mm}{s} \,\,\,\,\, V_{Bw} = 9 \, \frac{mm}{s}
 
 As the ratio of the backwash velocity to the filter velocity is 5, 5 filters will be needs to provide enough flow to backash one: Therefore the number of parallel filters is 6:
 
@@ -144,9 +172,11 @@ If the velocities could be more similar less space would be needed!
 
 This could be accomplished in several ways, such as decreasing the media density thus lowering velocity to fluidize it, decrease the media diameter thus lowering the fluidization velocity, or make a more compact filter which filters in parallel and backwashes in series.
 
-As changing the material characteristics of the sand is challenging, a more compact filter is the chosen design. In the design, six layers of sand are stacked, there are three inlets, and four outlet
+As changing the material characteristics of the sand is challenging, a more compact filter is the chosen design. In the design, six layers of sand are stacked, there are three inlets, and four outlets. Throughout this section, figures and images will be the best methods to understand the design flow through the system, and will be supplemented by the text.
 
 This overall design can be seen in Figure XXXXX.
+
+
 
 
 
