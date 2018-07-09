@@ -134,7 +134,7 @@ Here are other commonly used forms of the Reynolds number equation *for circular
 .. note:: **Definition of Flow Regimes:** Laminar and turbulent flow are described as two different **flow regimes**. When there is a characteristic of flow and different categories of the characteristic, each category is referred to as a flow regime. For example, the Reynolds number describes a flow characteristic, and its categories, referred to as flow regimes, are laminar or turbulent.
 
 
-.. _streamlines-and_control_volumes:
+.. _streamlines_and_control_volumes:
 
 Streamlines and Control Volumes
 --------------------------------
@@ -160,7 +160,7 @@ A **control volume** is just an imaginary 3-dimensional shape in space. Its boun
     :align: center
     :alt: Image control volumes
 
-    A convention for figure control volume and streamlines will be very helpful throughout this course, as there will be very, very many figures.
+    On the right, a control volume is applied to a hydraulic system. On the left, a streamline is applied to a hydraulic system. A figure-convention for control volumes and streamlines will be very helpful throughout this course as there will be very, very many figures.
 
 
 
@@ -535,7 +535,7 @@ Section Summary
 ================
 1. **Introductory Concepts:**
 
-    * **Continuity** means that the mass of a fluid is conserved and implies a constant density. The continuity equation has two purposes.
+    * **Continuity** means that the mass of a fluid is conserved as it flows, and implies a constant density. The continuity equation has two purposes:
 
         #. Relating the average velocity of a fluid, :math:`\bar v`, to its flow rate, :math:`Q`, via the cross-sectional area, :math:`A`, that it flows through. When the fluid is flowing in a pipe, we can simply this even further to relate the flow rate and velocity to the pipe's diameter, :math:`D`. The final equation below is only used for circular pipes, as it includes a pipe diameter.
 
@@ -543,7 +543,7 @@ Section Summary
 
             Q = \bar v A = \bar v \frac{\pi D^2}{4}
 
-        #. The continuity equation can also be used to find the average velocity or flow when the geometry of a fluid's flow changes, as the mass of the fluid must be conserved as it transitions through flow geometries.
+        #. Finding the average velocity or flow when the geometry of a fluid's flow changes, as the mass of the fluid must be conserved when it transitions through flow geometries.
 
         .. math::
 
@@ -557,76 +557,80 @@ Section Summary
 
             \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
 
-    * **Laminar and Turbulent flow** describe the disorder and chaos of fluid flow. The **Reynols number** is used to distinguish laminar from turbulent flow.
+    * **Laminar and Turbulent flow** describe the disorder and chaos of fluid flow. The **Reynolds number,** :math:`{\rm Re}` is used to distinguish laminar from turbulent flow. For :math:`{\rm Re} < 2100`, flow is considered laminar. For :math:`{\rm Re} > 2100`, flow is considered turbulent. The equations for the Reynolds number are below:
 
     .. math::
+
+        {\rm Re} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}
+
+    * **Control volumes vs Streamlines.** This section is quite short, a summary would simply repeat what the sections says. The section is its own summary; read it here: `Streamlines and Control Volumes`_
 
 
 2. **Bernoulli vs Energy equations:** The Bernoulli equation assumes that energy is conserved throughout a streamline or control volume. The Energy equation assumes that there is energy loss, or headloss :math:`h_L`. This headloss is composed of major losses, :math:`h_{\rm{f}}`, and minor losses, :math:`h_e`.
 
-Bernoulli equation:
+  Bernoulli equation:
 
-.. math::
+  .. math::
 
-    \frac{p_1}{\rho g} + {z_1} + \frac{\bar v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{\bar v_2^2}{2g}
+      \frac{p_1}{\rho g} + {z_1} + \frac{\bar v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{\bar v_2^2}{2g}
 
-Energy equation, simplified to remove pumps, turbines, and :math:`\alpha` factors:
+  Energy equation, simplified to remove pumps, turbines, and :math:`\alpha` factors:
 
-.. math::
+  .. math::
 
-   \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
+     \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
 
 3. **Major losses:** Defined as the energy loss due to shear between the walls of the pipe/flow conduit and the fluid. The Darcy-Weisbach equation is used to find major losses in both laminar and turbulent flow regimes. The equation for finding the Darcy friction factor, :math:`\rm{f}`, changes depending on whether the flow is laminar or turbulent. The Moody diagram is a common graphical method for finding :math:`\rm{f}`. During laminar flow, the Hagen-Poiseuille equation, which is just a combination of Darcy-Weisbach, Reynolds number, and :math:`{\rm{f}} = \frac{64}{\rm{Re}}`, can be used
 
-Darcy-Weisbach equation:
+  Darcy-Weisbach equation:
 
-.. math::
+  .. math::
 
-    h_{\rm{f}} = {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}
+      h_{\rm{f}} = {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}
 
-For water treatment plant design we tend to use plant flow rate, :math:`Q`, as our master variable and thus we have.
+  For water treatment plant design we tend to use plant flow rate, :math:`Q`, as our master variable and thus we have.
 
-.. math::
+  .. math::
 
-    h_{\rm{f}} = {\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}
+      h_{\rm{f}} = {\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}
 
-:math:`\rm{f}` for laminar flow:
+  :math:`\rm{f}` for laminar flow:
 
-.. math::
+  .. math::
 
-    {\rm{f}} = \frac{64}{\rm{Re}} = \frac{16 \pi D \nu}{Q} = \frac{64 \nu}{\bar v D}
+      {\rm{f}} = \frac{64}{\rm{Re}} = \frac{16 \pi D \nu}{Q} = \frac{64 \nu}{\bar v D}
 
-:math:`\rm{f}` for turbulent flow:
+  :math:`\rm{f}` for turbulent flow:
 
-.. math::
+  .. math::
 
-    {\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}
+      {\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}
 
-Hagen-Poiseuille equation for laminar flow:
+  Hagen-Poiseuille equation for laminar flow:
 
-.. math::
+  .. math::
 
-    h_{\rm{f}} = \frac{32\mu L \bar v}{\rho gD^2} = \frac{128\mu Q}{\rho g\pi D^4}
+      h_{\rm{f}} = \frac{32\mu L \bar v}{\rho gD^2} = \frac{128\mu Q}{\rho g\pi D^4}
 
 4. **Minor losses:** Defined as the energy loss due to the generation of turbulent eddies when flow expands. Once more: minor losses are caused by flow expansions. There are three forms of the minor loss equation, two of which look the same but use different coefficients (:math:`K^{'}` vs :math:`K`) and velocities (:math:`\bar v_{in}` vs :math:`\bar v_{out}`). *Make sure the coefficient you select is consistent with the velocity you use*.
 
-First form:
+  First form:
 
-.. math::
+  .. math::
 
-    h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}
+      h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}
 
-Second form:
+  Second form:
 
-.. math::
+  .. math::
 
-    h_e = \frac{\bar v_{in}^2}{2g}{\left( {1 - \frac{A_{in}}{A_{out}}} \right)^2} = \,\,\, \frac{\bar v_{in}^2}{2g} \mathbf{K^{'}}
+      h_e = \frac{\bar v_{in}^2}{2g}{\left( {1 - \frac{A_{in}}{A_{out}}} \right)^2} = \,\,\, \frac{\bar v_{in}^2}{2g} \mathbf{K^{'}}
 
-Third and most common form:
+  Third and most common form:
 
-.. math::
+  .. math::
 
-    h_e = \frac{\bar v_{out}^2}{2g}{\left( {\frac{A_{out}}{A_{in}}} -1 \right)^2} = \,\,\,\, \frac{\bar v_{out}^2}{2g} \mathbf{K}
+      h_e = \frac{\bar v_{out}^2}{2g}{\left( {\frac{A_{out}}{A_{in}}} -1 \right)^2} = \,\,\,\, \frac{\bar v_{out}^2}{2g} \mathbf{K}
 
 5. **Major and minor losses vary with flow:** While it is generally important to know how increasing or decreasing flow will affect headloss, it is even more important for this class to understand exactly how flow will affect headloss. As the table below shows, headloss will always be proportional to flow squared during turbulent flow. During laminar flow, however, the exponent on :math:`Q` will be between 1 and 2 depending on the proportion of major to minor losses.
 
@@ -642,8 +646,8 @@ Third and most common form:
 
 7. **Orifice equation and vena contractas:** The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, :math:`Q \propto \sqrt{\Delta h}`. Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aide_design should be used.
 
-The Orifice Equation:
+  The Orifice Equation:
 
-.. math::
+  .. math::
 
-    Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}
+      Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}
