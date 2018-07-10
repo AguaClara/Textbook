@@ -334,24 +334,26 @@ There are three forms of the minor loss equation that you will see in this class
 
 .. math::
 
-    {\rm{ \mathbf{First \, form:} }} \,\,\, h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}
+    {\rm{ \mathbf{First \, form:} }} \quad h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}
 
 .. math::
 
-    {\rm{ \mathbf{Second \, form:} }} \,\,\, h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \frac{\bar v_{in}^2}{2g}  = \,\,\, \mathbf{K_e^{'}} \frac{\bar v_{in}^2}{2g}
+    {\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2
 
 .. math::
 
-    {\rm{ \mathbf{Third \, form:} }} \,\,\, h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \frac{\bar v_{out}^2}{2g} = \,\,\,\, \mathbf{K_e} \frac{\bar v_{out}^2}{2g}
+    \color{purple}{
+    {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
+    }
 
 | Such that:
 | :math:`K_e^{'}, \,\, K_e` = minor loss coefficients, dimensionless
 
+.. note:: You will most often see :math:`K_e^{'}` and :math:`K_e` used without the :math:`e` subscript,  as :math:`K^{'}` and :math:`K`.
+
 .. seealso:: **Function in aide_design:** ``pc.headloss_exp_general(Vel, KMinor)`` Returns :math:`h_e`. Can be either the second or third form due to user input of both velocity and minor loss coefficient. It is up to the user to use consistent :math:`\bar v` and :math:`K_e`.
 
 .. seealso:: **Function in aide_design:** ``pc.headloss_exp(FlowRate, Diam, KMinor)`` Returns :math:`h_e`. Uses third form, :math:`K_e`.
-
-.. note:: You will most often see :math:`K_e^{'}` and :math:`K_e` used without the :math:`e` subscript,  as :math:`K^{'}` and :math:`K`.
 
 .. _minor_loss_pipe_FRD:
 .. figure:: Images/minor_loss_pipe.png
@@ -359,7 +361,7 @@ There are three forms of the minor loss equation that you will see in this class
     :align: center
     :alt: Minor loss displayed in a flow expansion
 
-    The :math:`in` and :math:`out` subscripts in each of the three forms of the mionr loss equation refer to this diagram that was used for the derivation.
+    The :math:`in` and :math:`out` subscripts in each of the three forms of the minor loss equation refer to this diagram that was used for the derivation.
 
 The second and third forms are the ones which you are probably most familiar with. The distinction between them, however, is critical. First, consider the magnitudes of :math:`A_{in}` and :math:`A_{out}`. :math:`A_{in}` can never be larger than :math:`A_{out}`, because the flow is expanding. When flow expands, the cross-sectional area it flows through must increase. As a result, both :math:`\frac{A_{out}}{A_{in}} > 1` and :math:`\frac{A_{in}}{A_{out}} < 1` must always be true. This means that :math:`K^{'}` can never be greater than 1, while :math:`K` technically has no upper limit.
 
@@ -612,35 +614,32 @@ Section Summary
 
       h_{\rm{f}} = \frac{32\mu L \bar v}{\rho gD^2} = \frac{128\mu Q}{\rho g\pi D^4}
 
-4. **Minor losses:** Defined as the energy loss due to the generation of turbulent eddies when flow expands. Once more: minor losses are caused by flow expansions. There are three forms of the minor loss equation, two of which look the same but use different coefficients (:math:`K^{'}` vs :math:`K`) and velocities (:math:`\bar v_{in}` vs :math:`\bar v_{out}`). *Make sure the coefficient you select is consistent with the velocity you use*.
+4. **Minor losses:** Defined as the energy loss due to the generation of turbulent eddies when flow expands. Once more: minor losses are caused by flow expansions. There are three forms of the minor loss equation, two of which look the same but use different coefficients (:math:`K^{'}` vs :math:`K`) and velocities (:math:`\bar v_{in}` vs :math:`\bar v_{out}`). *Make sure the coefficient you select is consistent with the velocity you use*. The third form, written in purple, is the most commonly used form of the minor loss equation.
 
-  First form:
+.. math::
 
-  .. math::
+    {\rm{ \mathbf{First \, form:} }} \quad h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}
 
-      h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}
+.. math::
 
-  Second form:
+    {\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2
 
-  .. math::
+.. math::
 
-      h_e = \frac{\bar v_{in}^2}{2g}{\left( {1 - \frac{A_{in}}{A_{out}}} \right)^2} = \,\,\, \frac{\bar v_{in}^2}{2g} \mathbf{K^{'}}
-
-  Third and most common form:
-
-  .. math::
-
-      h_e = \frac{\bar v_{out}^2}{2g}{\left( {\frac{A_{out}}{A_{in}}} -1 \right)^2} = \,\,\,\, \frac{\bar v_{out}^2}{2g} \mathbf{K}
+    \color{purple}{
+    {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
+    }
 
 5. **Major and minor losses vary with flow:** While it is generally important to know how increasing or decreasing flow will affect headloss, it is even more important for this class to understand exactly how flow will affect headloss. As the table below shows, headloss will always be proportional to flow squared during turbulent flow. During laminar flow, however, the exponent on :math:`Q` will be between 1 and 2 depending on the proportion of major to minor losses.
 
-+------------------------+--------------+--------------+
-| Head loss scales with: | Major Losses | Minor Losses |
-+========================+==============+==============+
-| Laminar                | :math:`Q`    | :math:`Q^2`  |
-+------------------------+--------------+--------------+
-| Turbulent              | :math:`Q^2`  | :math:`Q^2`  |
-+------------------------+--------------+--------------+
+.. _h_Q_proportionality:
+.. csv-table:: Proportionality between head loss :math:`h_L` and flow rate :math:`Q` for different flow regimes and types of head loss.
+  :header: :math:`h_L \propto Q^?`, "Major Losses", "Minor Losses"
+  :widths: 10, 10, 10
+  :align: center
+
+  "Laminar", :math:`Q`, :math:`Q^2`
+  "Turbulent", :math:`Q^2`, :math:`Q^2`
 
 6. The **headloss trick**, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, :math:`\frac{\bar v_2^2}{2g}`, into headloss as a minor loss with :math:`K = 1`, so the minor loss equation becomes :math:`\left( 1 + \sum K \right) \frac{\bar v^2}{2g}`. This is used to be able to say that :math:`\Delta z = h_L` and makes many equation simplifications possible in the future.
 

@@ -36,10 +36,11 @@ Since the elevations at the center of the :math:`in` and :math:`out` control sur
     \frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2}{2g} + h_e
 
 .. math::
+  :label: minor_loss_energy_eq
 
     h_e = \frac{p_{in} - p_{out}}{\rho g} + \frac{\bar v_{in}^2 - \bar v_{out}^2}{2g}
 
-This last equation to determine :math:`h_e` has four variables :math:`(p_{in}, \, p_{out}, \, v_{in}`, and :math:`v_{out})`, and we would like it to have just one. Thus, we will invoke conservation of momentum in the horizontal direction across our control volume to remove variables. The difference in momentum from the :math:`in` point to the :math:`out` point is driven by the pressure difference between each end of the control volume. We will be considering the pressure at the centroid of our control surfaces, and we will neglect shear along the pipe walls. After these assumptions, our momentum equation becomes the following:
+This last equation has :math:`h_e` as a function of four variables :math:`(p_{in}, \, p_{out}, \, v_{in}`, and :math:`v_{out})`; we would like it to be a function of only one. Thus, we will invoke conservation of momentum in the horizontal direction across our control volume to remove variables. The difference in momentum from the :math:`in` point to the :math:`out` point is driven by the pressure difference between each end of the control volume. We will be considering the pressure at the centroid of our control surfaces, and we will neglect shear along the pipe walls. After these assumptions, our momentum equation becomes the following:
 
 .. math::
 
@@ -63,7 +64,7 @@ To ensure correct sign convention, we will make each side of the equation negati
 
 Note that the area term attached to :math:`p_{in}` is actually :math:`A_{out}` instead of :math:`A_{in}`, as one might think. This is because :math:`A_{out} = A_{in}`. We chose our control volume to start a few millimeters into the larger pipe, which means that the cross-sectional area does not change over the course of the control volume.
 
-Dividing both sides of the equation by :math:`A_{out} \rho g`, we obtain the following equation, which contains the very same pressure term as our adjusted energy equation above. This is why we chose a negative sign convention.
+Dividing both sides of the equation by :math:`A_{out} \rho g`, we obtain the following equation, which contains the very same pressure term as our adjusted energy equation above, equation :eq:`minor_loss_energy_eq`. This is why we chose a negative sign convention.
 
 .. math::
 
@@ -89,7 +90,7 @@ To obtain an equation for minor losses with just two variables, :math:`\bar v_{i
 
     h_e = \frac{\bar v_{out}^2 - \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{g} + \frac{\bar v_{in}^2 - \bar v_{out}^2}{2g}
 
-To combine the two terms, the numerator and denominator of the first term, :math:`\frac{\bar v_{out}^2 - \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{g}` will be multiplied by :math:`2` to become :math:`\frac{2 \bar v_{out}^2 - 2 \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{2 g}`. The equation then looks like:
+Now we will combine the two terms. The numerator and denominator of the first term, :math:`\frac{\bar v_{out}^2 - \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{g}` will be multiplied by :math:`2` to become :math:`\frac{2 \bar v_{out}^2 - 2 \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{2 g}`. The equation then looks like:
 
 .. math::
 
@@ -104,19 +105,19 @@ Factoring the numerator yields to the first ‘final’ form of the minor loss e
 
 .. math::
 
-    {\rm{ \mathbf{First \, form:} }} \,\,\, h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}
+    {\rm{ \mathbf{First \, form:} }} \quad h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}
 
 From here, the two other forms of the minor loss equation can be derived by solving for either :math:`\bar v_{in}` or :math:`\bar v_{out}` using the ubiquitous continuity equation :math:`\bar v_{in} A_{in} = \bar v_{out} A_{out}`:
 
 .. math::
 
-    {\rm{ \mathbf{Second \, form:} }} \,\,\, h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \frac{\bar v_{in}^2}{2g} = K_e^{'} \frac{\bar v_{in}^2}{2g}, {\rm \, \, \, where \, \, \,} K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2
+    {\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2
 
 .. math::
  :label: minor_loss_equation
 
     \color{purple}{
-    {\rm{ \mathbf{Third \, form:} }} \,\,\, h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \frac{\bar  v_{out}^2}{2g} = K_e \frac{\bar v_{out}^2}{2g}, {\rm \, \, \, where \, \, \,} K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
+    {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
     }
 
 .. note:: You will often see :math:`K_e^{'}` and :math:`K_e` used without the :math:`e` subscript, they will appear as :math:`K^{'}` and :math:`K`.
