@@ -25,7 +25,7 @@ eliminated.
 
     \frac{p_{in}}{\rho g} + {z_{in}} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{\bar v_{out}^2}{2g} + h_L
 
-Since the elevations of the :math:`in` and :math:`out` references are the same, we can eliminate :math:`z_{in}` and :math:`z_{out}`. As we are considering such a small length of pipe, we will neglect the major loss component of head loss. Thus, :math:`h_L = h_e`. The following three equations are all the same, simply rearranged to solve for :math:`h_e`.
+Since the elevations at the center of the :math:`in` and :math:`out` control surfaces are the same, we can eliminate :math:`z_{in}` and :math:`z_{out}`. As we are considering such a small length of pipe, we will neglect the major loss component of head loss. Thus, :math:`h_L = h_e + \cancel{h_f}`. The following three equations are all the same, simply rearranged to solve for :math:`h_e`.
 
 .. math::
 
@@ -39,7 +39,7 @@ Since the elevations of the :math:`in` and :math:`out` references are the same, 
 
     h_e = \frac{p_{in} - p_{out}}{\rho g} + \frac{\bar v_{in}^2 - \bar v_{out}^2}{2g}
 
-This last equation to determine :math:`h_e` has four variables, and we would like it to have just one or two. Thus, we will invoke conservation of momentum in the horizontal direction across our control volume to remove some variables. The difference in momentum from the :math:`in` point to the :math:`out` point is result of the pressure difference between each end of the control volume. We will be considering the pressure at the centroid of our control surfaces, and we will neglect shear along the pipe walls. After these assumptions, our momentum equation becomes the following:
+This last equation to determine :math:`h_e` has four variables :math:`(p_{in}, \, p_{out}, \, v_{in}`, and :math:`v_{out})`, and we would like it to have just one. Thus, we will invoke conservation of momentum in the horizontal direction across our control volume to remove variables. The difference in momentum from the :math:`in` point to the :math:`out` point is driven by the pressure difference between each end of the control volume. We will be considering the pressure at the centroid of our control surfaces, and we will neglect shear along the pipe walls. After these assumptions, our momentum equation becomes the following:
 
 .. math::
 
@@ -49,22 +49,27 @@ This last equation to determine :math:`h_e` has four variables, and we would lik
 | :math:`M_{x}` = momentum flowing through the control volume in the x-direction
 | :math:`F_{p_x}` = force due to pressure acting on the boundaries of the control volume in the x-direction
 
-Recall that momentum is mass times velocity, :math:`m\bar v` with units of :math:`\frac{[M][L]}{[T]}`, for solid bodies. Since we consider water flowing through a pipe, there is not one singular mass. Instead, there is a mass flow rate, or a mass per time indicated by :math:`\rho Q` (:math:`\frac{[M]}{[T]}`). Applying the continuity equation :math:`Q = \bar v A` and multiplying :math:`\rho Q` by :math:`\bar v` to obtain the correct units, we get to the following equation for the momentum of a fluid flowing through a pipe, :math:`M = \rho \bar v^2 A`. The pressure force is simply the pressure at the centroid of the flow multiplied by the area the pressure is acting upon, :math:`p A`. To ensure correct sign convention, we will make each side of the equation negative for reasons discussed shortly. Since :math:`\bar v_{in} > \bar v_{out}`, the left hand side becomes :math:`M_{out} - M_{in}`. The reduction in velocity from :math:`in` to :math:`out` causes an increase in pressure, therefore :math:`p_{in} - p_{out}` will be negative. With these substitutions, the conservation of momentum equation becomes as follows:
+Recall that momentum is mass times velocity for solids, :math:`m v`, with units of :math:`\frac{[M][L]}{[T]}`. Since we consider water flowing through a pipe, there is not one singular mass or one singular velocity. Instead, there is a mass flow rate, or a mass per time indicated by :math:`\dot m = \rho Q`, which has units of :math:`\frac{[M]}{[T]}`. Therefore, the momentum for a fluid is :math:`\rho Q \bar v`. Applying the continuity equation :math:`Q = \bar v A`, we get to the following equation for the momentum of a fluid flowing through a pipe which we will use in this derivation, :math:`M = \rho \bar v^2 A`. The pressure force is simply the pressure at the centroid of the flow multiplied by the area the pressure is acting upon, :math:`p A`.
+
+To ensure correct sign convention, we will make each side of the equation negative for reasons discussed shortly. Since :math:`\bar v_{in} > \bar v_{out}`, the left hand side will be :math:`M_{out} - M_{in}` in order to be negative. The reduction in velocity from :math:`in` to :math:`out` causes an increase in pressure, therefore :math:`p_{in} - p_{out}` is negative. With these substitutions, the conservation of momentum equation becomes as follows:
+
+.. math::
+
+    M_{out} - M_{in} = p_{in} - p_{out}
 
 .. math::
 
     \rho \bar v_{out}^2 A_{out} - \rho \bar v_{in}^2 A_{in} = p_{in} A_{out} - p_{out} A_{out}
 
-Note that the area term attached to :math:`p_{in}` is actually :math:`A_{out}` instead of :math:`A_{in}`, as one might think. This is because :math:`A_{out} = A_{in}`. We chose our control volume to start a
-few millimeters into the larger pipe, which means that the cross-sectional area does not change over the course of the control volume.
+Note that the area term attached to :math:`p_{in}` is actually :math:`A_{out}` instead of :math:`A_{in}`, as one might think. This is because :math:`A_{out} = A_{in}`. We chose our control volume to start a few millimeters into the larger pipe, which means that the cross-sectional area does not change over the course of the control volume.
 
-By dividing both sides of the equation by :math:`A_{out} \rho g`, we obtain the following equation, which contains the very same pressure term as our adjusted energy equation above. This is why we chose a negative sign convention.
+Dividing both sides of the equation by :math:`A_{out} \rho g`, we obtain the following equation, which contains the very same pressure term as our adjusted energy equation above. This is why we chose a negative sign convention.
 
 .. math::
 
     \frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2 \frac{A_{in}}{A_{out}}}{g}
 
-Now, we combine the adjusted energy, momentum, and continuity equations:
+Now, we combine the momentum, continuity, and adjusted energy equations:
 
 .. math::
 
