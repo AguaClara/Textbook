@@ -13,9 +13,11 @@ install:
   - pip install pandas
   - pip install git+https://github.com/rmk135/sphinxcontrib-disqus
   - gem install html-proofer
+  - pip install matplotlib
 script:
   - make html
   - make doctest
+  - make latex
   - htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/Textbook/test/html/index.html
 before_deploy:
   - if [ -n "$TRAVIS_TAG" ]; then ./build_pdf.sh; fi; # If this is tagged, build the latex and the pdf to be released.

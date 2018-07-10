@@ -10,7 +10,7 @@ This file will explain how to use RST functionality including images, tables, co
 .. _how_to_use_this_file:
 
 How to use this file:
-=====================
+======================
 Open the source code of the file next to the rendered code. The source code is found by clicking "View page source" at the top of the page. Follow along with the source code and rendered code, using the source code as a reference for the proper syntax.
 
 You will often see this format ``.. word::``. The 'word' in this case is called a directive. Directives are what RST uses to format text. Directives allow the inclusion of figures, math, tables, references, color, and much more.
@@ -18,34 +18,18 @@ You will often see this format ``.. word::``. The 'word' in this case is called 
 .. important:: **Proper indentation and line spacing is extremely important when writing in RST**
 
 
-.. _code:
+.. _headings_bullets_and_lists:
 
-Code
-----
-You can write code in-line or as a code block. There are two ways of doing each. For in-line code, use ````this syntax```` or ``:code:`this syntax```. For code blocks, use this syntax:
-
-.. code::
-
-  .. code::
-
-    This is my code block.
-
-Or this syntax::
-
-  This text is not a code block, the code block is below::
-
-    This is my code block.
-
-
-.. _headings:
+Headings, Bullet Points, and Numbered Lists
+---------------------------------------------
 
 Headings
------------
+^^^^^^^^^
 Headings are defined by an underline consisting of one of the following characters: ``*,  =,  -,  ^, and "``. RST does not give any particular character hierarchy over another for defining titles, sections, subsections, or so on. The user indicates character hierarchy for headings and can use whatever order they want, and the order can change between documents. However, it is better to stick to the same convention throughout a project. This is the convention for the AguaClara textbook:
 
 * `*` with overline, for document titles
 * `=`, for sections
-* `-`, for subsections
+* `-`, for subsecti ons
 * `^`, for subsubsections
 * `"`, for subsubsubsections
 
@@ -81,6 +65,35 @@ Two rules:
 
 * If under and overline are used, their length must be identical
 * The length of the underline must be at least as long as the title itself
+
+Lists and Bullets
+^^^^^^^^^^^^^^^^^^^
+This section is lifted from `this rst cheatsheet <https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks>`_.
+The following code::
+
+    * This is a bulleted list.
+    * It has two items, the second
+      item uses two lines. (note the indentation)
+
+    1. This is a numbered list.
+    2. It has two items too.
+
+    #. This is a numbered list.
+    #. It has two items too.
+
+gives:
+
+* This is a bulleted list.
+* It has two items, the second
+  item uses two lines. (note the indentation)
+
+1. This is a numbered list.
+2. It has two items too.
+
+#. This is a numbered list.
+#. It has two items too.
+
+.. note:: if two lists are separated by a blanck line only, then the two lists are not differentiated as you can see above.
 
 
 .. _figures:
@@ -194,7 +207,7 @@ Tables
 Tables should be made using csv for compatibility with excel::
 
   .. _an_example_table:
-  .. csv-table:: a title
+  .. csv-table:: This table has a title
      :header: "name", "firstname", "age"
      :widths: 20, 20, 10
      :align: center
@@ -213,7 +226,7 @@ The code block above generates the following table:
    "Smith", "John", 40
    "Smith", "John, Junior", 20
 
-Every table should have a label, shown above as ``an_example_table``
+Every table should have a label, shown in the example above as ``an_example_table``
 
 
 .. _links_and_references:
@@ -249,11 +262,36 @@ These are references to documents, equations, figures, tables, or headings in an
     * To reference a heading in an external document, you must call the heading's label two lines above the heading itself. For example, if you view the source code for this file, you will see that the heading for this section, **Links and References for Documents, Figures, and Tables** is labelled ``links_and_references``.
 
 
+.. _writing_code_blocks:
+
+Writing Code Blocks (not actual, executable code)
+---------------------------------------------------
+You can write code in-line or as a code block. Note that these ways of showing code *only display code*, they do not generate a code block that actually runs. There are two ways of doing each. For in-line code, use ````this syntax```` or ``:code:`this syntax```. For code blocks, use this syntax:
+
+.. code::
+
+  .. code::
+
+    This is my code block.
+
+Or this syntax::
+
+    This two colons at the end of this line indicate that the text below, which is separated by a blank line and indented, is a code block::
+
+      This is my code block.
+
+
 .. _python_and_doctests:
 
-Python and Doctests
---------------------
-* Test some python code with doctests. To test the code, run :code:`make doctest` as described `here <http://docs.sphinxdocs.com/en/latest/step-3.html>`_. In the linked document, there are many more options for controlling doctest behavior.
+Writing Python and Including Doctests
+-----------------------------------------
+
+Doctests
+^^^^^^^^^^^^
+
+When writing code for the textbook, some sections will be written in execuatable code to demonstrate functions or run calculations. They will not, however, run automatically in the webpage, so to ensure that they are correct before they are pubished they are tested with doctests. Doctests compare the written code with the expected result typed manually below it. In the Anaconda Prompt, simply run the :code:`make doctest` in the correct directory and branch. When run, you see where your excutable code doesn't match up with the "answer" provided by you, the contributor. One reason this is important is because if functions in aide_design change, their outputs might alter from old versions. Doctests will show where this happens. Additonally, typos and other mistakes can be seen. Further documentation on running doctest can be found `here <http://docs.sphinxdocs.com/en/latest/step-3.html>`_.
+
+The way to ensure a doctest will run is to precede each line of code with '>>>', the default Python prompt. When a doctest is run, every line of code with '>>>' in front of it will be run within a directory. The testing becomes relevant for lines which do not have '>>>' in front of them. Any line that is directly below a line beginnning with '>>>' is assumed to be an output of the line of code just above it. In the example below, :code:`19` is the expected output of the line :code:`>>> print(5+14)`. If the output of that line did not match the line below, doctests would alert you! Below are some examples of doctestable code.
 
     >>> python="code"
     >>> print(5+14)
@@ -262,17 +300,42 @@ Python and Doctests
 * You can even print and test tables in doctests:
 
     >>> import pandas as pd
-    >>> names_male = pd.Series(['Obama', 'Monroe', 'Jack'])
+    >>> names_male = pd.Series(['Barack', 'Monroe', 'Jack'])
     >>> names_female = pd.Series(['Michelle', 'Juanita', 'Jill'])
     >>> var_names = dict( female_names = names_female, male_names = names_male)
     >>> df = pd.DataFrame(var_names)
     >>> print(df)
       female_names male_names
-    0     Michelle      Obama
+    0     Michelle     Barack
     1      Juanita     Monroe
     2         Jill       Jack
 
+* Python will also "remember" variables from one block to the next:
+
+    >>> print(python)
+    code
+
 * To get doctests to pass through Travis, you'll have to add any packages you use to the install step in ".travis.yml". Under install, add a line that says :code:`pip install my_package==0.0.0`. When doing this, make sure to specify the version as functionality can change!
+
+Though there are other ways to include code in an RST document, this method makes doctesting possible, and will make it easy to change the documents should aide_design functions change, therefore this is the best way to include code! Additionally it makes it easy to see the difference between the code and the output, whereas other methods are less clear in this distinction.
+
+Inserting Plots
+---------------
+
+.. plot::
+
+   import matplotlib.pyplot as plt
+   import numpy as np
+   x = np.random.randn(1000000)
+   plt.hist( x, 20)
+   plt.grid()
+   plt.title(r'Normal: $\mu=%.2f, \sigma=%.2f$'%(x.mean(), x.std()))
+   plt.show()
+
+Or insert from a file like so:
+
+.. plot:: pyplots/ellipses_example.py
+   :include-source:
 
 
 .. _assorted_convention:
