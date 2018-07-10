@@ -33,7 +33,7 @@ There are two ways to *quickly* view an RST file. The first is using an Atom_ pl
 
 Installing the Atom Plugins
 ---------------------------
-If you are using the Atom IDE to write RST, you can use the `rst-preview-pandoc <https://atom.io/packages/rst-preview-pandoc>`_ plugin to auto-generate a live RST preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview working, you'll need to install `language-restructuredtext <https://atom.io/packages/language-restructuredtext>`_ and Pandoc_ (``pip install pandoc``). If everything worked, you can use ``ctrl + shift + e`` to toggle a display window for the live-updated RST preview.
+If you are using the Atom IDE to write RST, you can use the `rst-preview-pandoc <https://atom.io/packages/rst-preview-pandoc>`_ plugin to auto-generate a live RST preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview working, you'll need to install `language-restructuredtext <https://atom.io/packages/language-restructuredtext>`_ via atom and Pandoc_ via your command line (``pip install pandoc``). If everything worked, you can use ``ctrl + shift + e`` to toggle a display window for the live-updated RST preview.
 
 
 .. _building_rst_locally:
@@ -42,7 +42,7 @@ Building RST Locally with Sphinx_
 ---------------------------------
 We use Sphinx_ to build RST locally and remotely. Follow these steps to get Sphinx_ and run it locally:
 
-#. Install Sphinx_ and disqus for sphinx using pip: ``pip install sphinx --user -U`` and ``pip install git+https://github.com/rmk135/sphinxcontrib-disqus``.
+#. Install Sphinx_, disqus, and a sphinx visual theme using pip: ``pip install sphinx --user -U`` and ``pip install git+https://github.com/rmk135/sphinxcontrib-disqus``.
 #. Generate all the html by navigating in the command line to the source directory /Textbook and creating the build in that directory with the command line :code:`make html`.
 #. View the html generated in the /Textbook/_build directory by copying the full file path of /Textbook/_build/html/index.html and pasting it into your browser.
 
@@ -76,13 +76,13 @@ To test exactly what will be published, we have a test branch. The test branch i
 
 .. code::
 
-script:
-    - PDF=True
+  script:
+      - PDF=True
 
 `The website output is viewable here <https://rawgit.com/AguaClara/Textbook/test/html/index.html>`_.
 
 Sharing Test Output
-------------------
+--------------------
 if you want to share what your latest branch developments look like without having whoever is viewing it actually have to build it, you can push a commit, and find the `rawgit URL with this site <https://rawgit.com/>`_ by entering the URL of the git file within the test branch that you'd like to share. Furthermore, if you want to point to the commit so that even if someone else pushes, the URL will still point to the code you intend it to, make sure to include the commit SHA within the rawgit URL like so: https://rawgit.com/AguaClara/Textbook/e5693e0485702b95e11d4d6bdf76d07c42fdbf99/html/index.html. That link will never change where it is pointing. To share the PDF output, follow the testing_online_ instructions to build the PDF, and point to the commit with the PDF. Happy testing!
 
 
@@ -103,7 +103,6 @@ RST is friendly to learn and powerful. There are many useful cheatsheets, like `
 
 * A document is referred to by its title, as defined between the ``*****`` signs at the top of the page, **NOT** the filename. So it is critical to have a title.
 * In addition to a title, every RST document in this book should have a refernce so that it can be linked to in other, external documents. If you view the source code of this document and scroll to the top, you'll see this document is labeled as ``rst_intro`` with the following code ``.. _rst_intro``. Call this document in another textbook RST file with ``:ref:`rst_intro```
-* Always run :code:`make html` before pushing to ensure you can make your changes without errors.
 * Anything else you'd like to add for the future...
 
 
