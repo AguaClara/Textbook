@@ -92,9 +92,9 @@
 <li class="toctree-l3"><a class="reference internal" href="#figures">Figures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#math-and-equations">Math and Equations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#links-and-references-for-documents-figures-and-tables">Links and References for Documents, Figures, and Tables</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#internal-references">Internal References</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#external-references">External References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#links-and-references">Links and References</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#links">Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#writing-code-blocks-not-actual-executable-code">Writing Code Blocks (not actual, executable code)</a></li>
@@ -112,11 +112,12 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Fluids Review</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Design.html">Fluids Review  Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Design.html">Fluids Review Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Derivations.html">Fluids Review Derivations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 </ul>
@@ -184,60 +185,61 @@
            <div itemprop="articleBody">
             
   <div class="section" id="functionality-in-rst-and-aguaclara-convention">
-<span id="example-aguaclara-rst"></span><h1>Functionality in RST and AguaClara Convention<a class="headerlink" href="#functionality-in-rst-and-aguaclara-convention" title="Permalink to this headline">¶</a></h1>
+<span id="title-aguaclara-rst-convention"></span><h1>Functionality in RST and AguaClara Convention<a class="headerlink" href="#functionality-in-rst-and-aguaclara-convention" title="Permalink to this headline">¶</a></h1>
 <p>This file will explain how to use RST functionality including images, tables, code, equations, and both internal and cross-document refereces. Additionally, this document is intended to define convention for this textbook project. Any syntax included in this document should be used when contributing to the textbook project. If you come across a function for which there is no convention, please edit this file to include it here.</p>
 <div class="section" id="how-to-use-this-file">
-<span id="id1"></span><h2>How to use this file:<a class="headerlink" href="#how-to-use-this-file" title="Permalink to this headline">¶</a></h2>
+<span id="heading-how-to-use-this-file"></span><h2>How to use this file:<a class="headerlink" href="#how-to-use-this-file" title="Permalink to this headline">¶</a></h2>
 <p>Open the source code of the file next to the rendered code. The source code is found by clicking “View page source” at the top of the page. Follow along with the source code and rendered code, using the source code as a reference for the proper syntax.</p>
 <p>You will often see this format <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">word::</span></code>. The ‘word’ in this case is called a directive. Directives are what RST uses to format text. Directives allow the inclusion of figures, math, tables, references, color, and much more.</p>
+<p>You will also often see this format <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_words_separated_by_underscores:</span></code>. These are called tags, and they exist so that the location of the tag can be referenced during some other section or document in the textbook. They are defined by <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_</span></code> at the beginning of the tag and <code class="docutils literal notranslate"><span class="pre">:</span></code> at the end of the tag. There is convention for how to name tags. So before you go off writing tags all willy-nilly in your textbook documents, read the entirety of this document and use it as your convention bible. For tags and everything else.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last"><strong>Proper indentation and line spacing is extremely important when writing in RST</strong></p>
 </div>
 <div class="section" id="headings-bullet-points-and-numbered-lists">
-<span id="headings-bullets-and-lists"></span><h3>Headings, Bullet Points, and Numbered Lists<a class="headerlink" href="#headings-bullet-points-and-numbered-lists" title="Permalink to this headline">¶</a></h3>
+<span id="heading-headings-bullets-and-lists"></span><h3>Headings, Bullet Points, and Numbered Lists<a class="headerlink" href="#headings-bullet-points-and-numbered-lists" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="headings">
 <h4>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h4>
-<p>Headings are defined by an underline consisting of one of the following characters: <code class="docutils literal notranslate"><span class="pre">*,</span>&#160; <span class="pre">=,</span>&#160; <span class="pre">-,</span>&#160; <span class="pre">^,</span> <span class="pre">and</span> <span class="pre">&quot;</span></code>. RST does not give any particular character hierarchy over another for defining titles, sections, subsections, or so on. The user indicates character hierarchy for headings and can use whatever order they want, and the order can change between documents. However, it is better to stick to the same convention throughout a project. This is the convention for the AguaClara textbook:</p>
+<p>Headings are defined by an underline and sometimes overline consisting of one of the following characters: <code class="docutils literal notranslate"><span class="pre">*,</span>&#160; <span class="pre">=,</span>&#160; <span class="pre">-,</span>&#160; <span class="pre">^,</span> <span class="pre">and</span> <span class="pre">&quot;</span></code>. RST does not give any particular character hierarchy over another for defining titles, sections, subsections, or so on. The user indicates character hierarchy for headings and can use whatever order they want, and the order can change between documents. However, it is better to stick to the same convention throughout a project. <strong>This is the convention for the AguaClara textbook:</strong></p>
 <ul class="simple">
 <li><cite>*</cite> with overline, for document titles</li>
 <li><cite>=</cite>, for sections</li>
-<li><cite>-</cite>, for subsecti ons</li>
+<li><cite>-</cite>, for subsections</li>
 <li><cite>^</cite>, for subsubsections</li>
 <li><cite>“</cite>, for subsubsubsections</li>
 </ul>
-<p>Each title, section and subsection should have a label before it, formatted like this <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_headings:</span></code>. There should always be a blank line between the label and the actual heading, else references to the label will not work. For the sake of document readability, include 3 blank lines before the section label and 2 blank lines before the subsection label. Lesser headings (subsubsections and beyond) do not need to have labels, and there should be one blank line between lower headings and the preceeding content. Here is an example. Note the amount and location of blank lines:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_example_document_title</span><span class="p">:</span>
+<p>Each title, section and subsection should have a tag before it. Tags for document titles <strong>must</strong> begin with <code class="docutils literal notranslate"><span class="pre">title</span></code> and tags for headings <strong>must</strong> begin with <code class="docutils literal notranslate"><span class="pre">heading</span></code>. For example, this document’s title tag is <code class="docutils literal notranslate"><span class="pre">title_aguaclara_rst_convention</span></code> and this heading’s tag is <code class="docutils literal notranslate"><span class="pre">heading_headings_bullets_and_lists</span></code>. There should always be a blank line between the tag and the actual heading, else references to the tag will not work. For the sake of document readability, include 3 blank lines before the section tag and 2 blank lines before the subsection tag. Lesser headings (subsubsections and beyond) do not need to have tags, and there should be one blank line between lower headings and the preceeding content. Here is an example. Note the amount and location of blank lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. _title_example_document_title:
 
-<span class="o">****************</span>
-<span class="n">Document</span> <span class="n">Title</span>
-<span class="o">****************</span>
-<span class="n">Words</span> <span class="n">go</span> <span class="n">here</span>
-
-
-
-<span class="o">..</span> <span class="n">_example_section</span><span class="p">:</span>
-
-<span class="n">Section</span>
-<span class="o">=========</span>
-<span class="n">Words</span> <span class="n">also</span> <span class="n">go</span> <span class="n">here</span>
+****************
+Document Title
+****************
+Words go here
 
 
-<span class="o">..</span> <span class="n">_example_subsection</span><span class="p">:</span>
 
-<span class="n">Subsection</span>
-<span class="o">------------</span>
-<span class="ow">and</span> <span class="n">here</span>
+.. _heading_example_section:
 
-<span class="n">Subsubsection</span>
-<span class="o">^^^^^^^^^^^^^^</span>
-<span class="n">Even</span> <span class="n">more</span> <span class="n">words</span>
+Section
+=========
+Words also go here
+
+
+.. _heading_example_subsection:
+
+Subsection
+------------
+Here too!
+
+Subsubsection
+^^^^^^^^^^^^^^
+Even more words
 </pre></div>
 </div>
 <p>Two rules:</p>
 <ul class="simple">
-<li>If under and overline are used, their length must be identical</li>
-<li>The length of the underline must be at least as long as the title itself</li>
+<li>If under and overlines are used, their length must be identical</li>
+<li>The length of the underline must be at least as long as the title itself.</li>
 </ul>
 </div>
 <div class="section" id="lists-and-bullets">
@@ -269,15 +271,15 @@ item uses two lines. (note the indentation)</li>
 </ol>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">if two lists are separated by a blanck line only, then the two lists are not differentiated as you can see above.</p>
+<p class="last">if two lists are separated by a blank line only, then the two lists are not differentiated as you can see above.</p>
 </div>
 </div>
 </div>
 <div class="section" id="figures">
-<span id="id2"></span><h3>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h3>
-<p>Every figure should have a label, alternative text, and a caption. The label is used to reference a figure and is written before the figure directive. Below, the two figures are labelled <code class="docutils literal notranslate"><span class="pre">fluffy_cat</span></code> and <code class="docutils literal notranslate"><span class="pre">mountain_figure</span></code>. The alternative text is a very short desciption of the figure. A caption is written below all of the figure specifications, with a blank line to separate the specs from the caption.</p>
+<span id="heading-figures"></span><h3>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h3>
+<p>Every figure should have a tag, alternative text, and a caption. Figure tags must begin with <code class="docutils literal notranslate"><span class="pre">figure</span></code>.  Below, the two figures are labelled <code class="docutils literal notranslate"><span class="pre">figure_fluffy_cat</span></code> and <code class="docutils literal notranslate"><span class="pre">figure_mountain</span></code>. The alternative text is a very short desciption of the figure. A caption is written below all of the figure specifications, with a blank line to separate the specs from the caption.</p>
 <p>Use the following syntax for including figures from online sources:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_fluffy_cat</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_figure_fluffy_cat</span><span class="p">:</span>
 <span class="o">..</span> <span class="n">figure</span><span class="p">::</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">catster</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">wp</span><span class="o">-</span><span class="n">content</span><span class="o">/</span><span class="n">uploads</span><span class="o">/</span><span class="mi">2017</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="n">A</span><span class="o">-</span><span class="n">fluffy</span><span class="o">-</span><span class="n">cat</span><span class="o">-</span><span class="n">looking</span><span class="o">-</span><span class="n">funny</span><span class="o">-</span><span class="n">surprised</span><span class="o">-</span><span class="ow">or</span><span class="o">-</span><span class="n">concerned</span><span class="o">.</span><span class="n">jpg</span>
     <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">200</span><span class="n">px</span>
     <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span>
@@ -288,51 +290,51 @@ item uses two lines. (note the indentation)</li>
 </pre></div>
 </div>
 <p>Use this syntax for figures located within the /Textbook repository on GitHub:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. _mountain_figure:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. _figure_mountain:
 .. figure:: mountain.jpg
     :width: 300px
     :align: center
     :alt: internal figure
 
-    Here is a figure labeled ``mountain``. Specify the figure location with folder/image.jpg.
+    Here is a figure tagged ``figure_mountain``. Specify the figure location with folder/image.jpg.
     The base directory for figure location is the directory of the file you are writing.
     In this case, that is Textbook/Textbook_Creation_Help.
 </pre></div>
 </div>
 <p>Displayed below are the two figures generated using the code above.</p>
-<div class="figure align-center" id="id5">
-<span id="fluffy-cat"></span><a class="reference internal image-reference" href="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"><img alt="external figure" src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" style="width: 200px; height: 100px;" /></a>
+<div class="figure align-center" id="id1">
+<span id="figure-fluffy-cat"></span><a class="reference internal image-reference" href="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"><img alt="external figure" src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" style="width: 200px; height: 100px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">This is a caption.</span></p>
 </div>
-<div class="figure align-center" id="id6">
-<span id="mountain-figure"></span><a class="reference internal image-reference" href="../_images/mountain.jpg"><img alt="internal figure" src="../_images/mountain.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Here is a figure labeled <code class="docutils literal notranslate"><span class="pre">mountain</span></code>. Specify the figure location with folder/image.jpg.
+<div class="figure align-center" id="id2">
+<span id="figure-mountain"></span><a class="reference internal image-reference" href="../_images/mountain.jpg"><img alt="internal figure" src="../_images/mountain.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Here is a figure tagged <code class="docutils literal notranslate"><span class="pre">figure_mountain</span></code>. Specify the figure location with folder/image.jpg.
 The base directory for figure location is the directory of the file you are writing.
 In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </div>
 </div>
 <div class="section" id="math-and-equations">
-<span id="id3"></span><h3>Math and Equations<a class="headerlink" href="#math-and-equations" title="Permalink to this headline">¶</a></h3>
+<span id="heading-math-and-equations"></span><h3>Math and Equations<a class="headerlink" href="#math-and-equations" title="Permalink to this headline">¶</a></h3>
 <p>Math is very cool, and works natively in RST using LaTeX math syntax. In-line math can be written with the following syntax: <code class="docutils literal notranslate"><span class="pre">:math:`y</span> <span class="pre">=</span> <span class="pre">ax^2</span> <span class="pre">+</span> <span class="pre">bx</span> <span class="pre">+</span> <span class="pre">c`</span></code> which displays <span class="math notranslate nohighlight">\(y = ax^2 + bx + c\)</span>. To display equations in their own line, use the following syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">math</span><span class="p">::</span>
-  <span class="p">:</span><span class="n">label</span><span class="p">:</span> <span class="n">quadratic</span>
+  <span class="p">:</span><span class="n">label</span><span class="p">:</span> <span class="n">quadratic_equation</span>
 
     <span class="n">y</span> <span class="o">=</span> <span class="n">ax</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">bx</span> <span class="o">+</span> <span class="n">c</span>
 </pre></div>
 </div>
 <p>Which displays as:</p>
 <blockquote>
-<div><div class="math notranslate nohighlight" id="equation-quadratic">
-<span class="eqno">(1)<a class="headerlink" href="#equation-quadratic" title="Permalink to this equation">¶</a></span>\[  y = ax^2 + bx + c\]</div>
+<div><div class="math notranslate nohighlight" id="equation-quadratic-equation">
+<span class="eqno">(1)<a class="headerlink" href="#equation-quadratic-equation" title="Permalink to this equation">¶</a></span>\[  y = ax^2 + bx + c\]</div>
 </div></blockquote>
-<p>Complex equations can be generated as well, since RST uses LaTeX math.</p>
+<p>Equations do not have tags, they can be referenced via their labels, as you can see above. Equation labels don’t need to begin with any particular word, unlike tags. Not every equation needs a label. Only label equations that you need to reference. If you need to reference an equation that does not have a label, give it an intuitive one. All equations are numbered, regardless of whether or not they are labelled. Complex equations can be generated as well, since RST uses LaTeX math.</p>
 <blockquote>
 <div><div class="math notranslate nohighlight" id="equation-textbook-creation-help-example-aguaclara-rst-0">
 <span class="eqno">(2)<a class="headerlink" href="#equation-textbook-creation-help-example-aguaclara-rst-0" title="Permalink to this equation">¶</a></span>\[n_{\rm{offset}} = \sum_{k=0}^{N-1} \frac{s_k}{n_k} \ln \left( \frac{k}{k!} \right)\]</div>
 </div></blockquote>
 <p>When introducing a new equation, Make sure to specify what the parameters in the equation mean. Once the equation has been introduced, its parameters do not need to be explained when displayed in the future. Use the following syntax for introducing equations:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. math::
-  :label: continuity_equation
+  :label: continuity_equation_example
 
     \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
 
@@ -344,9 +346,8 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 | :math:`D =` pipe diameter
 </pre></div>
 </div>
-<p>All equations that appear on their own are automatically numbered. If you wish to call an equation in a later section of the document or in another document, give it a label. In the example equation above, the label is given with the <code class="docutils literal notranslate"><span class="pre">:label:</span> <span class="pre">continuity_equation</span></code> line. The equation below uses the code from the block above.</p>
-<div class="math notranslate nohighlight" id="equation-continuity-equation">
-<span class="eqno">(3)<a class="headerlink" href="#equation-continuity-equation" title="Permalink to this equation">¶</a></span>\[  \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}\]</div>
+<div class="math notranslate nohighlight" id="equation-continuity-equation-example">
+<span class="eqno">(3)<a class="headerlink" href="#equation-continuity-equation-example" title="Permalink to this equation">¶</a></span>\[  \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(Q =\)</span> fluid flow rate</div>
@@ -357,9 +358,9 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </div>
 </div>
 <div class="section" id="tables">
-<span id="id4"></span><h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
+<span id="heading-tables"></span><h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
 <p>Tables should be made using csv for compatibility with excel:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_an_example_table</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_table_an_example_table</span><span class="p">:</span>
 <span class="o">..</span> <span class="n">csv</span><span class="o">-</span><span class="n">table</span><span class="p">::</span> <span class="n">This</span> <span class="n">table</span> <span class="n">has</span> <span class="n">a</span> <span class="n">title</span>
    <span class="p">:</span><span class="n">header</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;firstname&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span>
    <span class="p">:</span><span class="n">widths</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span>
@@ -370,8 +371,8 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </pre></div>
 </div>
 <p>The code block above generates the following table:</p>
-<span id="an-example-table"></span><table border="1" class="colwidths-given docutils align-center" id="id7">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">This table has a title</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<span id="table-an-example-table"></span><table border="1" class="colwidths-given docutils align-center" id="id3">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">This table has a title</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="40%" />
 <col width="40%" />
@@ -394,53 +395,48 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </tr>
 </tbody>
 </table>
-<p>Every table should have a label, shown in the example above as <code class="docutils literal notranslate"><span class="pre">an_example_table</span></code></p>
+<p>Every table should have a tag, shown in the example above as <code class="docutils literal notranslate"><span class="pre">table_an_example_table</span></code>. A table’s tag must begin with <code class="docutils literal notranslate"><span class="pre">table</span></code></p>
 </div>
-<div class="section" id="links-and-references-for-documents-figures-and-tables">
-<span id="links-and-references"></span><h3>Links and References for Documents, Figures, and Tables<a class="headerlink" href="#links-and-references-for-documents-figures-and-tables" title="Permalink to this headline">¶</a></h3>
-<p>Links are fairly straightforward, use the following syntax, <code class="docutils literal notranslate"><span class="pre">`hyperlink</span> <span class="pre">word</span> <span class="pre">display</span> <span class="pre">&lt;aguaclarareach.org&gt;`_</span></code>, and look like this <a class="reference external" href="https://www.aguaclarareach.org/">hyperlink word display</a>. If you will be using the same link many times in a document, you can place this line at the end of the document:</p>
+<div class="section" id="links-and-references">
+<span id="heading-links-and-references"></span><h3>Links and References<a class="headerlink" href="#links-and-references" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="links">
+<h4>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h4>
+<p>Links are fairly straightforward, use the following syntax, <code class="docutils literal notranslate"><span class="pre">`hyperlink</span> <span class="pre">word</span> <span class="pre">display</span> <span class="pre">&lt;https://www.aguaclarareach.org/&gt;`_</span></code>, and look like this <a class="reference external" href="https://www.aguaclarareach.org/">hyperlink word display</a>. If you will be using the same link many times in a document, you can place this line at the end of the document:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_AguaClara</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">aguaclara</span><span class="o">.</span><span class="n">cornell</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>Now, the syntax <code class="docutils literal notranslate"><span class="pre">AguaClara_</span></code> will link to the specified site: <a class="reference external" href="http://aguaclara.cornell.edu/">AguaClara</a></p>
-<p>References work by calling any “target. There are two types of references, internal and external. All types of call-able references can be accessed using their labels.</p>
-<div class="section" id="internal-references">
-<h4>Internal References<a class="headerlink" href="#internal-references" title="Permalink to this headline">¶</a></h4>
-<p>Internal references link to figures, tables, or headings that are in the same document as the reference itself. They all follow the same syntax. Equations don’t appear to be referencable by this syntax.</p>
+</div>
+<div class="section" id="references">
+<h4>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h4>
+<p>References work by calling any “target”- either tags (titles, headings, figures, and tables) or labels (equations). These refernce formats work internally- calling something within the same document and externally- calling content in some other document within this same project.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Before you start tagging and labelling content with any degree of willy-nilly-ness, make sure that you are not repeating tags or labels. You can check to see if your tag or label is taken by visiting libraries on GitHub. <a class="reference external" href="https://github.com/AguaClara/Textbook/blob/master/equation_index.txt">Check here for labels</a> and <a class="reference external" href="https://github.com/AguaClara/Textbook/blob/master/heading_index.txt">here for tags</a>.</p>
+</div>
+<div class="section" id="document-titles-and-headings">
+<h5>Document Titles and Headings<a class="headerlink" href="#document-titles-and-headings" title="Permalink to this headline">¶</a></h5>
+<p>This content should be called with the <code class="docutils literal notranslate"><span class="pre">:ref:`tag`</span></code> functionality. You can also choose what text will be shown. For example, <code class="docutils literal notranslate"><span class="pre">:ref:`This</span> <span class="pre">text</span> <span class="pre">&lt;heading_links_and_refernces&gt;`</span></code> gives <a class="reference internal" href="#heading-links-and-references"><span class="std std-ref">This text</span></a>.</p>
+</div>
+<div class="section" id="figures-and-tables">
+<h5>Figures and Tables<a class="headerlink" href="#figures-and-tables" title="Permalink to this headline">¶</a></h5>
+<p>These can be referenced in the exact same way as titles and headings. However, they can <em>also</em> be refernced using the <code class="docutils literal notranslate"><span class="pre">:numref:`tag`</span></code> syntax. When this is done, there cannot be text written that will link to the figure. Instead, what shows up is ‘Fig. 3’ or ‘Table 3’.</p>
 <ul class="simple">
-<li>Figures: <code class="docutils literal notranslate"><span class="pre">`fluffy_cat`_</span></code> gives <a class="reference internal" href="#fluffy-cat">fluffy_cat</a></li>
-<li>Tables: <code class="docutils literal notranslate"><span class="pre">`an_example_table`_</span></code> gives <a class="reference internal" href="#an-example-table">an_example_table</a></li>
-<li><dl class="first docutils">
-<dt>Headings: <code class="docutils literal notranslate"><span class="pre">`How</span> <span class="pre">to</span> <span class="pre">use</span> <span class="pre">this</span> <span class="pre">file:`_</span></code> gives <a class="reference internal" href="#id1">How to use this file:</a></dt>
-<dd><ul class="first last">
-<li>For this heading reference method, make sure that the heading string is identical to the call string.</li>
-</ul>
-</dd>
-</dl>
-</li>
+<li>Figures: <code class="docutils literal notranslate"><span class="pre">:numref:`figure_fluffy_cat`</span></code> gives <a class="reference internal" href="#figure-fluffy-cat"><span class="std std-numref">Fig. 1</span></a></li>
+<li>Tables: <code class="docutils literal notranslate"><span class="pre">:numref:`table_an_example_table`</span></code> gives <a class="reference internal" href="#table-an-example-table"><span class="std std-numref">Table 2</span></a></li>
 </ul>
 </div>
-<div class="section" id="external-references">
-<h4>External References<a class="headerlink" href="#external-references" title="Permalink to this headline">¶</a></h4>
-<p>These are references to documents, equations, figures, tables, or headings in another file in the textbook. Note that clicking these references will take you away from this document, necessarily.</p>
+<div class="section" id="equations">
+<h5>Equations<a class="headerlink" href="#equations" title="Permalink to this headline">¶</a></h5>
+<p>Equations are a little different, <code class="docutils literal notranslate"><span class="pre">:ref:`label`</span></code> does not work. They are instead called with the <code class="docutils literal notranslate"><span class="pre">:eq:`label`</span></code> syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation’s number will be the linked-text.</p>
 <ul class="simple">
-<li>Documents: <code class="docutils literal notranslate"><span class="pre">:ref:`rst_intro`</span></code> gives <a class="reference internal" href="rst_intro.html#rst-intro"><span class="std std-ref">Introduction to RST and Sphinx for Textbook Contributors</span></a></li>
-<li>Equations: <code class="docutils literal notranslate"><span class="pre">:eq:`orifice_equation`</span></code> only generates a number in parentheses. Thus, this reference should be preceeded by the word: ‘equation.’ Like this: equation <a class="reference internal" href="../Fluids_Review/Fluids_Review_Design.html#equation-orifice-equation">(37)</a></li>
-<li>Figures: <code class="docutils literal notranslate"><span class="pre">:numref:`continuity_pipes`</span></code> gives <a class="reference internal" href="../Fluids_Review/Fluids_Review_Design.html#continuity-pipes"><span class="std std-numref">Fig. 3</span></a></li>
-<li>Tables: <code class="docutils literal notranslate"><span class="pre">:numref:`dimension_table`</span></code> gives <a class="reference internal" href="parameter_convention_list.html#dimension-table"><span class="std std-numref">Table 2</span></a></li>
-<li><dl class="first docutils">
-<dt>Headings: <code class="docutils literal notranslate"><span class="pre">:ref:`what_is_rst`</span></code> gives <a class="reference internal" href="rst_intro.html#what-is-rst"><span class="std std-ref">What is RST?</span></a></dt>
-<dd><ul class="first last">
-<li>To reference a heading in an external document, you must call the heading’s label two lines above the heading itself. For example, if you view the source code for this file, you will see that the heading for this section, <strong>Links and References for Documents, Figures, and Tables</strong> is labelled <code class="docutils literal notranslate"><span class="pre">links_and_references</span></code>.</li>
+<li>Equations: <code class="docutils literal notranslate"><span class="pre">:eq:`quadratic_equation`</span></code> only generates a number in parentheses. Thus, this reference is usually preceeded by the word: ‘equation.’ Like this: equation <a class="reference internal" href="#equation-quadratic-equation">(1)</a>.</li>
 </ul>
-</dd>
-</dl>
-</li>
-</ul>
+</div>
 </div>
 </div>
 <div class="section" id="writing-code-blocks-not-actual-executable-code">
-<span id="writing-code-blocks"></span><h3>Writing Code Blocks (not actual, executable code)<a class="headerlink" href="#writing-code-blocks-not-actual-executable-code" title="Permalink to this headline">¶</a></h3>
+<span id="heading-writing-code-blocks"></span><h3>Writing Code Blocks (not actual, executable code)<a class="headerlink" href="#writing-code-blocks-not-actual-executable-code" title="Permalink to this headline">¶</a></h3>
 <p>You can write code in-line or as a code block. Note that these ways of showing code <em>only display code</em>, they do not generate a code block that actually runs. There are two ways of doing each. For in-line code, use <code class="docutils literal notranslate"><span class="pre">``this</span> <span class="pre">syntax``</span></code> or <code class="docutils literal notranslate"><span class="pre">:code:`this</span> <span class="pre">syntax`</span></code>. For code blocks, use this syntax:</p>
 <div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="p">::</span>
 
@@ -455,7 +451,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </div>
 </div>
 <div class="section" id="writing-python-and-including-doctests">
-<span id="python-and-doctests"></span><h3>Writing Python and Including Doctests<a class="headerlink" href="#writing-python-and-including-doctests" title="Permalink to this headline">¶</a></h3>
+<span id="heading-python-and-including-doctests"></span><h3>Writing Python and Including Doctests<a class="headerlink" href="#writing-python-and-including-doctests" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="doctests">
 <h4>Doctests<a class="headerlink" href="#doctests" title="Permalink to this headline">¶</a></h4>
 <p>When writing code for the textbook, some sections will be written in execuatable code to demonstrate functions or run calculations. They will not, however, run automatically in the webpage, so to ensure that they are correct before they are pubished they are tested with doctests. Doctests compare the written code with the expected result typed manually below it. In the Anaconda Prompt, simply run the <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code> in the correct directory and branch. When run, you see where your excutable code doesn’t match up with the “answer” provided by you, the contributor. One reason this is important is because if functions in aide_design change, their outputs might alter from old versions. Doctests will show where this happens. Additonally, typos and other mistakes can be seen. Further documentation on running doctest can be found <a class="reference external" href="http://docs.sphinxdocs.com/en/latest/step-3.html">here</a>.</p>
@@ -526,7 +522,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </div>
 </div>
 <div class="section" id="assorted-other-convention">
-<span id="assorted-convention"></span><h3>Assorted Other Convention<a class="headerlink" href="#assorted-other-convention" title="Permalink to this headline">¶</a></h3>
+<span id="heading-assorted-convention"></span><h3>Assorted Other Convention<a class="headerlink" href="#assorted-other-convention" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Colored <span class="red">text</span>. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.</li>
 </ul>

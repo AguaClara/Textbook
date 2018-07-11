@@ -72,7 +72,45 @@
 \phantomsection\label{\detokenize{index::doc}}
 
 
-This textbook is written and maintained in \sphinxhref{https://github.com/AguaClara/Textbook}{Github} via \sphinxhref{http://www.sphinx-doc.org/en/master/}{Sphinx} (version v1.7.5). It uses and refers to AguaClara code and functions in \sphinxhref{https://github.com/AguaClara/aide\_design}{aide\_design} (version 0.0.12)
+This textbook is written and maintained in \sphinxhref{https://github.com/AguaClara/Textbook}{Github} via \sphinxhref{http://www.sphinx-doc.org/en/master/}{Sphinx}. It uses and refers to AguaClara code and functions in \sphinxhref{https://github.com/AguaClara/aide\_design}{aide\_design}. Listed below are the versions of the programs we use:
+
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\sphinxcapstartof{table}
+\sphinxcaption{These are the software versions used to compile this textbook}\label{\detokenize{index:id2}}\label{\detokenize{index:software-versions}}
+\sphinxaftercaption
+\begin{tabular}[t]{|\X{10}{20}|\X{10}{20}|}
+\hline
+\sphinxstyletheadfamily 
+Software
+&\sphinxstyletheadfamily 
+version
+\\
+\hline
+Sphinx
+&
+1.7.5
+\\
+\hline
+aide\_design
+&
+0.0.12
+\\
+\hline
+Anaconda
+&
+4.5.4
+\\
+\hline
+Python
+&
+3.6.5
+\\
+\hline
+\end{tabular}
+\par
+\sphinxattableend\end{savenotes}
 
 
 \chapter{Introduction to RST and Sphinx for Textbook Contributors}
@@ -633,7 +671,7 @@ Distance Between Particles
 This is a place holder for ‘Chapter 1: Introduction’ files
 
 
-\chapter{Fluids Review  Design}
+\chapter{Fluids Review Design}
 \label{\detokenize{Fluids_Review/Fluids_Review_Design:fluids-review-design}}\label{\detokenize{Fluids_Review/Fluids_Review_Design:id1}}\label{\detokenize{Fluids_Review/Fluids_Review_Design::doc}}
 This section is meant to be a refresher on fluid mechanics. It will only cover the topics of fluids mechanics that will be used heavily in the course.
 
@@ -645,22 +683,22 @@ If you wish to review fluid mechanics in (much) more detail, please refer to \sp
 \sphinxstylestrong{Terms:}
 \begin{enumerate}
 \item {} 
-Laminar
+{\hyperref[\detokenize{Fluids_Review/Fluids_Review_Design:laminar-and-turbulent-flow}]{\sphinxcrossref{\DUrole{std,std-ref}{Laminar}}}}
 
 \item {} 
-Turbulent
+{\hyperref[\detokenize{Fluids_Review/Fluids_Review_Design:laminar-and-turbulent-flow}]{\sphinxcrossref{\DUrole{std,std-ref}{Turbulent}}}}
 
 \item {} 
-Viscosity
+{\hyperref[\detokenize{Fluids_Review/Fluids_Review_Design:viscosity-target}]{\sphinxcrossref{\DUrole{std,std-ref}{Viscosity}}}}
 
 \item {} 
-Streamline
+{\hyperref[\detokenize{Fluids_Review/Fluids_Review_Design:streamlines-and-control-volumes}]{\sphinxcrossref{\DUrole{std,std-ref}{Streamline}}}}
 
 \item {} 
-Control Volume
+{\hyperref[\detokenize{Fluids_Review/Fluids_Review_Design:streamlines-and-control-volumes}]{\sphinxcrossref{\DUrole{std,std-ref}{Control Volume}}}}
 
 \item {} 
-Head
+{\hyperref[\detokenize{Fluids_Review/Fluids_Review_Design:hydraulic-head}]{\sphinxcrossref{\DUrole{std,std-ref}{Head}}}}
 
 \item {} 
 Head loss
@@ -676,7 +714,7 @@ Vena Contracta/Coefficient of Contraction
 \sphinxstylestrong{Equations:}
 \begin{enumerate}
 \item {} 
-Continuity equation
+Continuity equation: \eqref{equation:Fluids_Review/Fluids_Review_Design:continuity_equation}
 
 \item {} 
 Bernoulli equation
@@ -710,21 +748,21 @@ Before diving in to the rest of this document, there are a few important concept
 \subsection{Continuity Equation}
 \label{\detokenize{Fluids_Review/Fluids_Review_Design:continuity-equation}}\label{\detokenize{Fluids_Review/Fluids_Review_Design:id3}}
 Continuity is simply an application of mass balance to fluid mechanics. It states that the cross sectional area \(A\) that a fluid flows through multiplied by the fluid’s average flow velocity \(\bar v\) must equal the fluid’s flow rate \(Q\):
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:0}
-\begin{split}Q = \bar v A\end{split}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:continuity_equation}
+\begin{split}  Q = \bar v A\end{split}
 \end{equation}
 \begin{sphinxadmonition}{note}{Note:}
 The line above the \(v\) is called a ‘bar,’ and represents an average. Any variable can have a bar. In this case, we are adding the bar to velocity \(v\), turning it into average velocity \(\bar v\). This variable is pronounced ‘v bar.’
 \end{sphinxadmonition}
 
 In this course, we deal primarily with flow through pipes. For a circular pipe, \(A = \pi r^2\). Substituting diameter in for radius, \(r = \frac{D}{2}\), we get \(A = \frac{\pi D^2}{4}\). You will often see this form of the continuity equation being used to relate the a pipe’s flow rate to its diameter and the velocity of the fluid flowing through it:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:1}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:0}
 \begin{split}Q = \bar v \frac{\pi D^2}{4}\end{split}
 \end{equation}
 The continuity equation is also useful when flow is going from one geometry to another. In this case, the flow in one geometry must be the same as the flow in the other, \(Q_1 = Q_2\), which yields the following equations:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:2}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:1}
 \begin{split}\bar v_1 A_1 = \bar v_2 A_2\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:3}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:2}
 \begin{split}\bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}\end{split}
 \end{equation}
 \begin{DUlineblock}{0em}
@@ -756,9 +794,9 @@ Considering that this class deals with the flow of water through a water treatme
 
 \noindent\sphinxincludegraphics[width=400\sphinxpxdimen]{{Wikipedia_laminar_turbulent}.png}
 \caption{This is a beautiful example of the difference between ordered and smooth laminar flow and chaotic turbulent flow.}\label{\detokenize{Fluids_Review/Fluids_Review_Design:id12}}\label{\detokenize{Fluids_Review/Fluids_Review_Design:wikipedia-laminar-turbulent}}\end{figure}
-
+\phantomsection\label{\detokenize{Fluids_Review/Fluids_Review_Design:viscosity-target}}
 A numeric way to determine whether flow is laminar or turbulent is by finding the \sphinxhref{https://en.wikipedia.org/wiki/Reynolds\_number}{Reynolds number}, \({\rm Re}\). The Reynolds number is a dimensionless parameter that compares inertia, represented by the average flow velocity \(\bar v\) times a length scale \(D\) to \sphinxhref{https://en.wikipedia.org/wiki/Viscosity}{viscosity}, represented by the kinematic viscosity \(\nu\). \sphinxhref{https://www.youtube.com/watch?v=DVQw0svRHZA}{Click here} for a brief video explanation of viscosity. If the Reynolds number is less than 2,100 the flow is considered laminar. If it is more than 2,100, it is considered turbulent.
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:4}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:3}
 \begin{split}{\rm Re = \frac{inertia}{viscosity}} = \frac{\bar vD}{\nu}\end{split}
 \end{equation}
 \sphinxhref{https://en.wikipedia.org/wiki/Laminar\%E2\%80\%93turbulent\_transition}{The transition between laminar and turbulent flow is not yet well understood}, which is why the concept of transitional flow is often simplified and neglected to make it possible to code for laminar or turbulent flow, which are better understood. We will assume that the transition occurs at \(\rm{Re} = 2100\). In aide\_design, this parameter shows us as \sphinxcode{\sphinxupquote{pc.RE\_TRANSITION\_PIPE}}.
@@ -766,7 +804,7 @@ A numeric way to determine whether flow is laminar or turbulent is by finding th
 Fluid can flow through very many different geometries, like a pipe, a rectangular channel, or any other shape. To account for this, the characteristic length scale for the Reynolds number, which was written in the equation above as \(D\), is quantified as the \sphinxhref{https://www.engineeringtoolbox.com/hydraulic-equivalent-diameter-d\_458.html}{hydraulic diameter}, \(D_h\) when considering a general cross-sectional area. For circular pipes, which are the most common geometry you’ll encounter in this class, the hydraulic diameter is simply the pipe’s diameter, \(D_h = D\).
 
 Here are other commonly used forms of the Reynolds number equation \sphinxstyleemphasis{for circular pipes}. They are the same as the one above, just with the substitutions \(Q = \bar v \frac{\pi D^2}{4}\) and \(\nu = \frac{\mu}{\rho}\)
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:5}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:4}
 \begin{split}{\rm Re} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}\end{split}
 \end{equation}
 \begin{DUlineblock}{0em}
@@ -826,7 +864,7 @@ As explained in almost every fluid mechanics class, the Bernoulli and energy equ
 \subsection{The Bernoulli Equation}
 \label{\detokenize{Fluids_Review/Fluids_Review_Design:the-bernoulli-equation}}\label{\detokenize{Fluids_Review/Fluids_Review_Design:bernoulli-equation}}
 These three forms of energy expressed above make up the Bernoulli equation:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:6}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:5}
 \begin{split}\frac{p_1}{\rho g} + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{v_2^2}{2g}\end{split}
 \end{equation}
 \begin{DUlineblock}{0em}
@@ -837,7 +875,7 @@ These three forms of energy expressed above make up the Bernoulli equation:
 \item[] \(z\) = elevation relative to a reference
 \item[] \(v\) = fluid velocity
 \end{DUlineblock}
-
+\phantomsection\label{\detokenize{Fluids_Review/Fluids_Review_Design:hydraulic-head}}
 Notice that each term in this form of the Bernoulli equation has units of \([L]\), even though the terms represent the energy of the fluid, which has units of \(\frac{[M] \cdot [L]^2}{[T]^2}\). When energy of the fluid is described in units of length, the term used is called \sphinxstylestrong{head} and referred to as \(h\).
 
 There are two important distinctions to keep in mind when using head to talk about a fluid’s energy. First is that head is dependent on the density of the fluid under consideration. Take mercury, for example, which is around 13.6 times more dense than water. 1 meter of mercury head is therefore equivalent to around 13.6 meters of water head. Second is that head is independent of the amount of fluid being considered, \sphinxstyleemphasis{as long as all the fluid is the same density}. Thus, raising 1 liter of water up by one meter and raising 100 liters of water up by one meter are both equivalent to giving the water 1 meter of water head, even though it requires 100 times more energy to raise the hundred liters than to raise the single liter. Since we are concerned mainly with water in this class, we will refer to ‘water head’ simply as ‘head’.
@@ -865,11 +903,11 @@ Though there are \sphinxhref{https://en.wikipedia.org/wiki/Bernoulli\%27s\_princ
 \subsection{The Energy Equation}
 \label{\detokenize{Fluids_Review/Fluids_Review_Design:the-energy-equation}}\label{\detokenize{Fluids_Review/Fluids_Review_Design:energy-equation}}
 The assumption necessary to use the Bernoulli equation, which is stated above, represents the key difference between the Bernoulli equation and the energy equation for the purpose of this class. The energy equation accounts for the potential addition or loss of fluid energy within the control volume. (L)oss of energy is usually due to viscous friction resisting fluid flow, \(h_L\), or the charging of a (T)urbine, \(h_T\). The most common input of fluid energy into a system is usually caused by a (P)ump within the control volume, \(h_P\).
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:7}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:6}
 \begin{split}\frac{p_{1}}{\rho g} + z_{1} + \alpha_{1} \frac{\bar v_{1}^2}{2g} + h_P = \frac{p_{2}}{\rho g} + z_{2} + {\alpha_{2}} \frac{\bar v_{2}^2}{2g} + h_T + h_L\end{split}
 \end{equation}
 You’ll also notice the \(\alpha\) term attached to the velocity head. This is a correction factor for kinetic energy, and will be neglected in this class; we assume that its value is 1. In the Bernoulli equation, the velocity of a streamline of the fluid is considered, \(v\). The energy equation, however compares control surfaces instead of streamlines, and the velocities across a control surface many not all be the same. Hence, \(\bar v\) is used to represent the average velocity. Since AguaClara does not use pumps nor turbines, \(h_P = h_T = 0\). With these simplifications, the energy equation can be written as follows:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:8}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:7}
 \begin{split}\frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L\end{split}
 \end{equation}
 \sphinxstylestrong{This is the form of the energy equation that you will see over and over again in this book.} To summarize, the main difference between the Bernoulli equation and the energy equation for the purposes of this class is energy loss. The energy equation accounts for the fluid’s loss of energy over time while the Bernoulli equation does not. So how can the fluid lose energy?
@@ -885,11 +923,11 @@ You’ll also notice the \(\alpha\) term attached to the velocity head. This is 
 These losses are the result of friction between the fluid and the surface over which the fluid is flowing. A force acting parallel to a surface is referred to as \sphinxhref{https://en.wikipedia.org/wiki/Shear\_force}{shear}. It can therefore be said that major losses are the result of shear between the fluid and the surface it’s flowing over. To help in understanding major losses, consider the following example: imagine, as you have so often in physics class, pushing a large box across the ground. Friction is what resists your efforts to push the box. The farther you push the box, the more energy you expend pushing against friction. The same is true for water moving through a pipe, where water is analogous to the box you want to move, the pipe is similar to the floor that provides the friction, and the major losses of the water through the pipe is analogous to the energy \sphinxstylestrong{you} expend by pushing the box.
 
 In this class, we will be dealing primarily with major losses in circular pipes, as opposed to channels or pipes with other geometries. Fortunately for us, Henry Darcy and Julius Weisbach came up with a handy equation to determine the major losses in a circular pipe \sphinxstyleemphasis{under both laminar and turbulent flow conditions}. Their equation is logically and unoriginally named the \sphinxhref{https://en.wikipedia.org/wiki/Darcy\%E2\%80\%93Weisbach\_equation}{Darcy-Weisbach equation}. It is shown below:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:9}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:8}
 \begin{split}h_{\rm{f}} \, = \, {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}\end{split}
 \end{equation}
 Substituting the continuity equation \(Q = \bar vA\) in the form of \(\bar v^2 = \frac{16Q^2}{\pi^2 D^4}\) gives another, equivalent form of Darcy-Weisbach which uses flow, \(Q\), instead of velocity, \(\bar v\):
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:10}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:9}
 \begin{split}h_{\rm{f}} \, = \,{\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}\end{split}
 \end{equation}
 \begin{DUlineblock}{0em}
@@ -912,11 +950,11 @@ Substituting the continuity equation \(Q = \bar vA\) in the form of \(\bar v^2 =
 Darcy-Weisbach is wonderful because it applies to both laminar and turbulent flow regimes and contains relatively easy to measure variables. The one exception is the Darcy friction factor, \(\rm{f}\). This parameter is an approximation for the magnitude of friction between the pipe walls and the fluid, and its value changes depending on the whether or not the flow is laminar or turbulent, and varies with the Reynolds number in both flow regimes.
 
 For laminar flow, the friction factor can be determined from the following equation:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:11}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:10}
 \begin{split}{\rm{f}} = \frac{64}{\rm{Re}}\end{split}
 \end{equation}
 For turbulent flow, the friction factor is more difficult to determine. In this class, we will use the \sphinxhref{https://en.wikipedia.org/wiki/Darcy\_friction\_factor\_formulae\#Swamee\%E2\%80\%93Jain\_equation}{Swamee-Jain equation}:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:12}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:11}
 \begin{split}{\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}\end{split}
 \end{equation}
 \begin{DUlineblock}{0em}
@@ -934,17 +972,17 @@ For turbulent flow, the friction factor is more difficult to determine. In this 
 
 
 The simplicity of the equation for \(\rm{f}\) during laminar flow allows for substitutions to create a very useful, simplified equation for major losses during laminar flow. This simplification combines the Darcy-Weisbach equation, the equation for the Darcy friction factor during laminar flow, and the Reynold’s number formula:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:13}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:12}
 \begin{split}h_{\rm{f}} \, = \,{\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:14}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:13}
 \begin{split}{\rm{f}} = \frac{64}{\rm{Re}}\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:15}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:14}
 \begin{split}{\rm{Re}}=\frac{4Q}{\pi D\nu}\end{split}
 \end{equation}
 To form the \sphinxhref{https://en.wikipedia.org/wiki/Hagen\%E2\%80\%93Poiseuille\_equation}{Hagen-Poiseuille equation} for major losses during laminar flow, and \sphinxstyleemphasis{only} during laminar flow:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:16}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:15}
 \begin{split}h_{\rm{f}} = \frac{128\mu L Q}{\rho g\pi D^4}\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:17}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:16}
 \begin{split}h_{\rm{f}} = \frac{32\nu L\bar v}{ g D^2}\end{split}
 \end{equation}
 The significance of this equation lies in its relationship between \(h_{\rm{f}}\) and \(Q\). Hagen-Poiseuille shows that the terms are directly proportional (\(h_{\rm{f}} \propto Q\)) during laminar flow, while Darcy-Weisbach shows that \(h_{\rm{f}}\) grows with the square of \(Q\) during turbulent flow (\(h_{\rm{f}} \propto Q^2\)). As you will soon see, minor losses, \(h_e\), will grow with the square of \(Q\) in both laminar and turbulent flow. This has implications that will be discussed in a future chapter: {\hyperref[\detokenize{Flow_Control_and_Measurement/FCM_Design:flow-control-design}]{\sphinxcrossref{\DUrole{std,std-ref}{Flow Control and Measurement Design}}}}.
@@ -966,11 +1004,11 @@ Unfortunately, there is no simple ‘pushing a box across the ground’ example 
 As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: \sphinxstylestrong{minor losses are caused by flow expansions}. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in \hyperref[\detokenize{Fluids_Review/Fluids_Review_Design:minor-loss-pipe-frd}]{Fig.\@ \ref{\detokenize{Fluids_Review/Fluids_Review_Design:minor-loss-pipe-frd}}} below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: {\hyperref[\detokenize{Fluids_Review/Fluids_Review_Derivations:fluids-review-derivations}]{\sphinxcrossref{\DUrole{std,std-ref}{Fluids Review Derivations}}}}.
 
 There are three forms of the minor loss equation that you will see in this class:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:18}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:17}
 \begin{split}{\rm{ \mathbf{First \, form:} }} \quad h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:19}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:18}
 \begin{split}{\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:20}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:19}
 \begin{split}\color{purple}{
 {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
 }\end{split}
@@ -1022,7 +1060,7 @@ one}, and they almost all have coefficients greater than 1. This implies that th
 In order to find \(\bar v_{out}\), we first need to know what (or where) is \(out\) and what is \(in\). A simple way to distinguish the two surfaces is that \(in\) occurs when the flow is most contracted, and \(out\) occurs when the flow has fully expanded after that maximal contraction. Going on these guidelines, Control surface ‘2’ (CS 2) in the figure above above would be \(in\), since it represents the most contracted flow in the elbow-pipe system. Therefore, CS 3 would be \(out\), as it represents the flow having fully expanded after its compression at CS 2.
 
 \(\bar v_{out}\) is easy to determine because it is the velocity of the fluid as it flows through the entire area of the pipe. Thus, \(\bar v_{out}\) can be found with the continuity equation, since the flow through the pipe and its diameter are easy to measure, \(\bar v_{out} = \frac{4 Q}{\pi D^2}\). On the other hand, \(\bar v_{in}\) is difficult to find, as the area of the contracted flow is dependent on the exact geometry of the elbow. This is why the third form of the minor loss equation, as we have defined it, is the most common:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:21}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:20}
 \begin{split}h_e = K \frac{\bar v_{out}^2}{2g} = \,\,\,\, \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \frac{\bar v_{out}^2}{2g}\end{split}
 \end{equation}
 \begin{sphinxadmonition}{note}{Note:}
@@ -1046,27 +1084,27 @@ Consider the following figure:
 In systems like this, where an elevation difference is causing water to flow, the elevation difference is called the \sphinxstylestrong{driving head}. In the system above, the driving head is the elevation difference between the water level and the end of the tubing. Usually, driving head is written as \(\Delta z\) or \(\Delta h\), though above it is labelled as \(h_L\). Doesn’t \(h_L\) refer to headloss though? Yes it does! Referring to \(\Delta h\) or \(\Delta z\) \sphinxstyleemphasis{IS} the headloss trick, and how it works is explained in the following paragraphs and equations.
 
 The figure is technically violating the energy equation by saying that the elevation difference between the water in the tank and the end of the tube is \(h_L\). It implies that all of the driving head, \(\Delta z\), is lost to headloss. Since all of the energy is gone, there should not be water flowing out of the tubing. But there is. Let’s apply the energy equation across the control surfaces shown in the figure. Pressures at both ends are atmospheric and the velocity of water at the top of tank is negligible.
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:22}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:21}
 \begin{split}\cancel{ \frac{p_{1}}{\rho g} } + z_{1} + \cancel{ \frac{\bar v_{1}^2}{2g} } = \cancel{ \frac{p_{2}}{\rho g} } + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L\end{split}
 \end{equation}
 We now get:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:23}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:22}
 \begin{split}\Delta z = \frac{\bar v_2^2}{2g} + h_L\end{split}
 \end{equation}
 This equation contradicts the figure above, which says that \(\Delta z = h_L\) and neglects \(\frac{\bar v_2^2}{2g}\). The figure above is correct, however, if you apply the headloss trick. The trick incorporates the \(\frac{\bar v_2^2}{2g}\) term \sphinxstyleemphasis{into} the \(h_L\) term as a minor loss. See the math below:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:24}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:23}
 \begin{split}\Delta z = \frac{\bar v_2^2}{2g} + h_e + h_f\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:25}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:24}
 \begin{split}\Delta z = \frac{\bar v_2^2}{2g} + \left( \sum K \right) \frac{\bar v_2^2}{2g} + h_f\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:26}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:25}
 \begin{split}\Delta z = \left( 1 + \sum K \right) \frac{\bar v_2^2}{2g} + h_f\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:27}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:26}
 \begin{split}\Delta z = \left( \sum K \right) \frac{\bar v_2^2}{2g} + h_f\end{split}
 \end{equation}
 This last step incorporated the kinetic energy term of the energy equation, \(\frac{\bar v_2^2}{2g}\), into the minor loss equation by saying that its \(K\) is 1 and incorporating that 1 into \(\sum K\). From here, we reverse our steps to get \(\Delta z = h_L\), starting with \(h_e = \left( \sum K \right) \frac{\bar v_2^2}{2g}\)
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:28}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:27}
 \begin{split}\Delta z = h_e + h_f\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:29}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:28}
 \begin{split}\Delta z = h_L\end{split}
 \end{equation}
 By applying the headloss trick, you are considering the entire flow of the fluid out of a control volume as energy lost via minor losses. This is just an algebraic trick, the only thing to remember when applying this trick is that \(\sum K\) will always be at least 1, even if there are no ‘real’ minor losses in the system.
@@ -1091,7 +1129,7 @@ Before describing the equation, we must first understand the concept of a \sphin
 The flow contracts as the fluid moves past the gate. This happens because the fluid can’t make a sharp turn as it tries to go around the gate, as indicated by the streamline in the figure. Instead, the most extreme streamline makes a gradual change in direction. As a result of this gradual turn, the flow contracts and the cross-sectional area the fluid is flowing decreases.
 
 The term ‘vena contracta’ describes the phenomenon of contracting flow due to streamlines being unable to make sharp turns. \(\Pi_{vc}\) is a dimensionless ratio comparing the flow area at the point of maximal contraction, \(A_{downstream}\), and the flow area \sphinxstyleemphasis{before} the contraction, \(A_{gate}\). In the figure above, the equation for the vena contracta coefficient would be:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:30}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:29}
 \begin{split}\Pi_{vc} = \frac{A_{downstream}}{A_{gate}}\end{split}
 \end{equation}
 When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter value, 0.62, is in aide\_design as \sphinxcode{\sphinxupquote{pc.RATIO\_VC\_ORIFICE}}. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the least contracted area, \(\Pi_{vc}\) is always less than 1.
@@ -1117,11 +1155,11 @@ The orifice equation is derived from the Bernoulli equation as applied to the pu
 \caption{Flow through a hole in the bottom of a bucket is a great example of the orifice equation.}\label{\detokenize{Fluids_Review/Fluids_Review_Design:id21}}\label{\detokenize{Fluids_Review/Fluids_Review_Design:hole-in-a-bucket}}\end{figure}
 
 At point 1, the pressure is atmospheric and the instantaneous velocity is negligible as the water level in the bucket drops slowly. At point 2, the pressure is also atmospheric. We define the difference in elevations between the two points, \(z_1 - z_2\), to be \(\Delta h\). With these simplifications \((p_1 = \bar v_1 = p_2 = 0)\) and assumptions \((z_A - z_B = \Delta h)\), the Bernoulli equation becomes:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:31}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:30}
 \begin{split}\Delta h = \frac{\bar v_2^2}{2g}\end{split}
 \end{equation}
 Substituting the continuity equation \(Q = \bar v A\) in the form of \(\bar v_2^2 = \frac{Q^2}{A_{vc}^2}\), the vena contracta coefficient in the form of \(A_{vc} = \Pi_{vc} A_{or}\) yields:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:32}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:31}
 \begin{split}\Delta h = \frac{Q^2}{2g \Pi_{vc}^2 A_{or}^2}\end{split}
 \end{equation}
 Which, rearranged to solve for \(Q\) gives \sphinxstylestrong{The Orifice Equation:}
@@ -1175,18 +1213,18 @@ There are two configurations for an orifice in the tank holding a fluid: horizon
 Relating the average velocity of a fluid, \(\bar v\), to its flow rate, \(Q\), via the cross-sectional area, \(A\), that it flows through. When the fluid is flowing in a pipe, we can simply this even further to relate the flow rate and velocity to the pipe’s diameter, \(D\). The final equation below is only used for circular pipes, as it includes a pipe diameter.
 
 \end{enumerate}
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:33}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:32}
 \begin{split}Q = \bar v A = \bar v \frac{\pi D^2}{4}\end{split}
 \end{equation}\begin{enumerate}
 \item {} 
 Finding the average velocity or flow when the geometry of a fluid’s flow changes, as the mass of the fluid must be conserved when it transitions through flow geometries.
 
 \end{enumerate}
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:34}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:33}
 \begin{split}Q_1 = Q_2\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:35}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:34}
 \begin{split}\bar v_1 A_1 = \bar v_2 A_2\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:36}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:35}
 \begin{split}\bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}\end{split}
 \end{equation}\end{quote}
 
@@ -1194,7 +1232,7 @@ Finding the average velocity or flow when the geometry of a fluid’s flow chang
 \sphinxstylestrong{Laminar and Turbulent flow} describe the disorder and chaos of fluid flow. The \sphinxstylestrong{Reynolds number,} \({\rm Re}\) is used to distinguish laminar from turbulent flow. For \({\rm Re} < 2100\), flow is considered laminar. For \({\rm Re} > 2100\), flow is considered turbulent. The equations for the Reynolds number are below:
 
 \end{itemize}
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:37}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:36}
 \begin{split}{\rm Re} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}\end{split}
 \end{equation}\begin{itemize}
 \item {} 
@@ -1210,11 +1248,11 @@ Finding the average velocity or flow when the geometry of a fluid’s flow chang
 \begin{quote}
 
 Bernoulli equation:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:38}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:37}
 \begin{split}\frac{p_1}{\rho g} + {z_1} + \frac{\bar v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{\bar v_2^2}{2g}\end{split}
 \end{equation}
 Energy equation, simplified to remove pumps, turbines, and \(\alpha\) factors:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:39}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:38}
 \begin{split}\frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L\end{split}
 \end{equation}\end{quote}
 \begin{enumerate}
@@ -1226,23 +1264,23 @@ Energy equation, simplified to remove pumps, turbines, and \(\alpha\) factors:
 \begin{quote}
 
 Darcy-Weisbach equation:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:40}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:39}
 \begin{split}h_{\rm{f}} = {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}\end{split}
 \end{equation}
 For water treatment plant design we tend to use plant flow rate, \(Q\), as our master variable and thus we have.
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:41}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:40}
 \begin{split}h_{\rm{f}} = {\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}\end{split}
 \end{equation}
 \(\rm{f}\) for laminar flow:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:42}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:41}
 \begin{split}{\rm{f}} = \frac{64}{\rm{Re}} = \frac{16 \pi D \nu}{Q} = \frac{64 \nu}{\bar v D}\end{split}
 \end{equation}
 \(\rm{f}\) for turbulent flow:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:43}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:42}
 \begin{split}{\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}\end{split}
 \end{equation}
 Hagen-Poiseuille equation for laminar flow:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:44}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:43}
 \begin{split}h_{\rm{f}} = \frac{32\mu L \bar v}{\rho gD^2} = \frac{128\mu Q}{\rho g\pi D^4}\end{split}
 \end{equation}\end{quote}
 \begin{enumerate}
@@ -1251,11 +1289,11 @@ Hagen-Poiseuille equation for laminar flow:
 \sphinxstylestrong{Minor losses:} Defined as the energy loss due to the generation of turbulent eddies when flow expands. Once more: minor losses are caused by flow expansions. There are three forms of the minor loss equation, two of which look the same but use different coefficients (\(K^{'}\) vs \(K\)) and velocities (\(\bar v_{in}\) vs \(\bar v_{out}\)). \sphinxstyleemphasis{Make sure the coefficient you select is consistent with the velocity you use}. The third form, written in purple, is the most commonly used form of the minor loss equation.
 
 \end{enumerate}
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:45}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:44}
 \begin{split}{\rm{ \mathbf{First \, form:} }} \quad h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:46}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:45}
 \begin{split}{\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2\end{split}
-\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:47}
+\end{equation}\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:46}
 \begin{split}\color{purple}{
 {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
 }\end{split}
@@ -1302,7 +1340,7 @@ Turbulent
 \begin{enumerate}
 \setcounter{enumi}{5}
 \item {} 
-The \sphinxstylestrong{headloss trick}, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, \(\frac{\bar v_2^2}{2g}\), into headloss as a minor loss with \(K = 1\), so the minor loss equation becomes \(\left( 1 + \sum K \right) \frac{\bar v^2}{2g}\). This is used to be able to say that \(\Delta z = h_L\) and makes many equation simplifications possible in the future.
+The \sphinxstylestrong{head loss trick}, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, \(\frac{\bar v_2^2}{2g}\), into headloss as a minor loss with \(K = 1\), so the minor loss equation becomes \(\left( 1 + \sum K \right) \frac{\bar v^2}{2g}\). This is used to be able to say that \(\Delta z = h_L\) and makes many equation simplifications possible in the future.
 
 \item {} 
 \sphinxstylestrong{Orifice equation and vena contractas:} The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, \(Q \propto \sqrt{\Delta h}\). Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aide\_design should be used.
@@ -1311,7 +1349,7 @@ The \sphinxstylestrong{headloss trick}, also called the control volume trick, ca
 \begin{quote}
 
 The Orifice Equation:
-\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:48}
+\begin{equation}\label{equation:Fluids_Review/Fluids_Review_Design:Fluids_Review/Fluids_Review_Design:47}
 \begin{split}Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}\end{split}
 \end{equation}\end{quote}
 
@@ -1403,6 +1441,85 @@ You will often see \(K_e^{'}\) and \(K_e\) used without the \(e\) subscript, the
 Being familiar with these three forms and how they are used will be of great help throughout the class. The third form is the one that is most commonly used.
 
 
+\chapter{Flow Control and Measurement Introduction}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:flow-control-and-measurement-introduction}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:flow-control-intro}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro::doc}}
+
+\section{Tank with a Valve}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:tank-with-a-valve}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:id1}}
+
+\subsection{Flow \protect\(Q\protect\) and Water Level \protect\(h\protect\) as a Function of Time}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:flow-and-water-level-as-a-function-of-time}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:qh-as-a-function-of-t}}
+Our first step is to see if we can get constant head out of a simple system. The most simple flow control system is a bucket or tank with a hole in it. This system is too coarse to provide constant head. One step above that is a bucket or tank with a valve. This is where we begin our search for constant head.
+
+Using the setup of in the image below, we derive the following equation for flow \(Q\) through the valve as a function of time \(t\). The derivation is found here: {\hyperref[\detokenize{Flow_Control_and_Measurement/FCM_Derivations:flow-for-a-tank-with-a-valve}]{\sphinxcrossref{\DUrole{std,std-ref}{ for a Tank with a Valve}}}}. You are advised to read through it if you are at all confused about this equation.
+\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Intro:Q_tank_with_valve}
+\begin{split}  \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\end{split}
+\end{equation}
+\begin{DUlineblock}{0em}
+\item[] Such that:
+\item[] \(Q\) = \(Q(t)\) = flow of hypochlorite through valve at time \(t\)
+\item[] \(Q_0\) = flow of hypochlorite through valve at time \(t = 0\)
+\item[] \(t\) = elapsed time
+\item[] \(t_{Design}\) = time it \sphinxstyleemphasis{would} take for tank to empty if flow stayed constant at \(Q_0\), which it does not
+\item[] \(h_{Tank}\) = elevation of water level with reference to tank bottom at time \(t\) = 0
+\item[] \(h_0\) = elevation of water level with reference to the valve at time \(t = 0\)
+\end{DUlineblock}
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=600\sphinxpxdimen]{{hypochlorinator_variable_explanation}.png}
+\caption{This figure shows the variables that are defined in the equation above.}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:id3}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:hypochlorinator-variable-explanation-design}}\end{figure}
+
+This equation has historically give students some trouble, and while its nuances are explained in the derivation, they will be quickly summarized here:
+\begin{itemize}
+\item {} 
+\(t_{Design}\) is \sphinxstylestrong{NOT} the time it takes to drain the tank. It is the time that it \sphinxstyleemphasis{would} take to drain the tank \sphinxstyleemphasis{if} the flow rate at time \(t = 0\), \(Q_0\), were the flow rate forever, which it is not. \(t_{Design}\) was used in the derivation to simplify the equation, which is why this potentially-confusing parameter exists. The actual time it takes to drain the tank lies somewhere between \(t_{Design}\) and \(2 \, t_{Design}\) and depends on the ratio \(\frac{h_{Tank}}{h_0}\).
+
+\item {} 
+\(h_{Tank}\) is not the same as \(h_{0}\). \(h_{Tank}\) is the height of water level in the tank with reference to the tank bottom. \(h_{0}\) is the water level in the tank with reference to the valve. Neither change with time, they both refer to the water level at one instance in time, \(t = 0\). Therefore, \(h_{0} \geq h_{Tank}\) is always true. If the tank is elevated far above the valve, then the \(h_{0} > > h_{Tank}\). If the valve is at the same elevation as the bottom of the tank, then \(h_{0} = h_{Tank}\). Please refer to the figure above to clarify \(h_{0}\) and \(h_{Tank}\).
+
+\end{itemize}
+
+We can use the proportionality \(Q \propto \sqrt{h}\), which applies to both minor losses and orifices to form a relationship between water level in the tank \(h\) and time \(t\). This proportionality comes from rearranging the minor loss equation \(h = K \frac{Q^2}{2 g A^2}\) for \(Q\) instead of \(h\). A table of proportionality between \(Q\) and math:\sphinxtitleref{h} can be found in \hyperref[\detokenize{Fluids_Review/Fluids_Review_Design:h-q-proportionality}]{Table \ref{\detokenize{Fluids_Review/Fluids_Review_Design:h-q-proportionality}}}
+
+Using equation \eqref{equation:Flow_Control_and_Measurement/FCM_Intro:Q_tank_with_valve} and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or \(h_{Tank} = h_0\). Our attempt to get a continuous flow rate out of this system is to make \(\frac{h_{Tank}}{h_0}\) very small by elevating the tank far above the valve. On the right, \(\frac{h_{Tank}}{h_0} = \frac{1}{50}\). While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=600\sphinxpxdimen]{{tank_valve_play}.png}
+\caption{These graphs show how manipulation of the variables in the \(Q(t)\) expression can result in effectively constant head.}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:id4}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:tank-valve-play}}\end{figure}
+
+
+\subsection{Drain System for a Tank}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:drain-system-for-a-tank}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:id2}}
+While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they are just tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: {\hyperref[\detokenize{Flow_Control_and_Measurement/FCM_Derivations:diameter-and-time-tank-drain-equation}]{\sphinxcrossref{\DUrole{std,std-ref}{ and  for Tank Drain Equation}}}}. The derived ‘Tank Drain’ equation is as follows:
+\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Intro:Flow_Control_and_Measurement/FCM_Intro:0}
+\begin{split}D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{4}}}\end{split}
+\end{equation}
+The equation can also be rearranged to solve for the time it would take to drain a tank given its dimensions and a certain drain pipe size:
+\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Intro:Flow_Control_and_Measurement/FCM_Intro:1}
+\begin{split}t_{Drain} =  \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{2}}}\end{split}
+\end{equation}
+\begin{DUlineblock}{0em}
+\item[] Such that:
+\item[] \(D_{Pipe}\) = Diameter of the drain piping
+\item[] \(L_{Tank}, W_{Tank}, H_{Tank}\) = Tank dimensions
+\item[] \(t_{Drain}\) = Time it takes to drain the tank
+\item[] \(\sum K\) = Sum of all the minor loss coefficients in the system
+\end{DUlineblock}
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=600\sphinxpxdimen]{{pipe_stub_drainage_variables}.png}
+\caption{Variables for draining a tank}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:id5}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:pipe-stub-drainage-variables-in-derivation}}\end{figure}
+
+
 \chapter{Flow Control and Measurement Design}
 \label{\detokenize{Flow_Control_and_Measurement/FCM_Design:flow-control-and-measurement-design}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:flow-control-design}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design::doc}}
 This section explores AguaClara’s search for constant head in checmial dosing. The term \sphinxstylestrong{constant head} means that the driving head of a system, \(\Delta z\) or \(\Delta h\), does not change over time, even as water flows through or out of the system. Constant head implies constant flow, since the energy driving the flow does not change.
@@ -1412,7 +1529,7 @@ The challenge of constant head in chemical dosing for water treatment plants is 
 
 \section{Important Terms and Equations}
 \label{\detokenize{Flow_Control_and_Measurement/FCM_Design:important-terms-and-equations}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:fcm-terms-eqs}}
-Terms:
+\sphinxstylestrong{Terms:}
 \begin{enumerate}
 \item {} 
 Dose
@@ -1437,7 +1554,7 @@ Sutro weir
 
 \end{enumerate}
 
-Equations:
+\sphinxstylestrong{Equations:}
 \begin{enumerate}
 \item {} 
 Hagen-Poiseuille equation
@@ -1445,84 +1562,8 @@ Hagen-Poiseuille equation
 \end{enumerate}
 
 
-\section{Tank with a Valve}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:tank-with-a-valve}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id1}}
-
-\subsection{Flow \protect\(Q\protect\) and Water Level \protect\(h\protect\) as a Function of Time}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:flow-and-water-level-as-a-function-of-time}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:qh-as-a-function-of-t}}
-Our first step is to see if we can get constant head out of a simple system. The most simple flow control system is a bucket or tank with a hole in it. This system is too coarse to provide constant head. One step above that is a bucket or tank with a valve. This is where we begin our search for constant head.
-
-Using the setup of in the image below, we derive the following equation for flow \(Q\) through the valve as a function of time \(t\). The derivation is found here: {\hyperref[\detokenize{Flow_Control_and_Measurement/FCM_Derivations:flow-for-a-tank-with-a-valve}]{\sphinxcrossref{\DUrole{std,std-ref}{ for a Tank with a Valve}}}}. You are advised to read through it if you are at all confused about this equation.
-\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Design:Q_tank_with_valve}
-\begin{split}  \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\end{split}
-\end{equation}
-\begin{DUlineblock}{0em}
-\item[] Such that:
-\item[] \(Q\) = \(Q(t)\) = flow of hypochlorite through valve at time \(t\)
-\item[] \(Q_0\) = flow of hypochlorite through valve at time \(t = 0\)
-\item[] \(t\) = elapsed time
-\item[] \(t_{Design}\) = time it \sphinxstyleemphasis{would} take for tank to empty if flow stayed constant at \(Q_0\), which it does not
-\item[] \(h_{Tank}\) = elevation of water level with reference to tank bottom at time \(t\) = 0
-\item[] \(h_0\) = elevation of water level with reference to the valve at time \(t = 0\)
-\end{DUlineblock}
-
-\begin{figure}[htbp]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=600\sphinxpxdimen]{{hypochlorinator_variable_explanation}.png}
-\caption{This figure shows the variables that are defined in the equation above.}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id13}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:hypochlorinator-variable-explanation-design}}\end{figure}
-
-This equation has historically give students some trouble, and while its nuances are explained in the derivation, they will be quickly summarized here:
-\begin{itemize}
-\item {} 
-\(t_{Design}\) is \sphinxstylestrong{NOT} the time it takes to drain the tank. It is the time that it \sphinxstyleemphasis{would} take to drain the tank \sphinxstyleemphasis{if} the flow rate at time \(t = 0\), \(Q_0\), were the flow rate forever, which it is not. \(t_{Design}\) was used in the derivation to simplify the equation, which is why this potentially-confusing parameter exists. The actual time it takes to drain the tank lies somewhere between \(t_{Design}\) and \(2 \, t_{Design}\) and depends on the ratio \(\frac{h_{Tank}}{h_0}\).
-
-\item {} 
-\(h_{Tank}\) is not the same as \(h_{0}\). \(h_{Tank}\) is the height of water level in the tank with reference to the tank bottom. \(h_{0}\) is the water level in the tank with reference to the valve. Neither change with time, they both refer to the water level at one instance in time, \(t = 0\). Therefore, \(h_{0} \geq h_{Tank}\) is always true. If the tank is elevated far above the valve, then the \(h_{0} > > h_{Tank}\). If the valve is at the same elevation as the bottom of the tank, then \(h_{0} = h_{Tank}\). Please refer to the figure above to clarify \(h_{0}\) and \(h_{Tank}\).
-
-\end{itemize}
-
-We can use the proportionality \(Q \propto \sqrt{h}\), which applies to both minor losses and orifices to form a relationship between water level in the tank \(h\) and time \(t\). This proportionality comes from rearranging the minor loss equation \(h = K \frac{Q^2}{2 g A^2}\) for \(Q\) instead of \(h\). A table of proportionality between \(Q\) and math:\sphinxtitleref{h} can be found in \hyperref[\detokenize{Fluids_Review/Fluids_Review_Design:h-q-proportionality}]{Table \ref{\detokenize{Fluids_Review/Fluids_Review_Design:h-q-proportionality}}}
-
-Using equation \eqref{equation:Flow_Control_and_Measurement/FCM_Design:Q_tank_with_valve} and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or \(h_{Tank} = h_0\). Our attempt to get a continuous flow rate out of this system is to make \(\frac{h_{Tank}}{h_0}\) very small by elevating the tank far above the valve. On the right, \(\frac{h_{Tank}}{h_0} = \frac{1}{50}\). While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.
-
-\begin{figure}[htbp]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=600\sphinxpxdimen]{{tank_valve_play}.png}
-\caption{These graphs show how manipulation of the variables in the \(Q(t)\) expression can result in effectively constant head.}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id14}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:tank-valve-play}}\end{figure}
-
-
-\subsection{Drain System for a Tank}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:drain-system-for-a-tank}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id2}}
-While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they are just tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: {\hyperref[\detokenize{Flow_Control_and_Measurement/FCM_Derivations:diameter-and-time-tank-drain-equation}]{\sphinxcrossref{\DUrole{std,std-ref}{ and  for Tank Drain Equation}}}}. The derived ‘Tank Drain’ equation is as follows:
-\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Design:Flow_Control_and_Measurement/FCM_Design:0}
-\begin{split}D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{4}}}\end{split}
-\end{equation}
-The equation can also be rearranged to solve for the time it would take to drain a tank given its dimensions and a certain drain pipe size:
-\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Design:Flow_Control_and_Measurement/FCM_Design:1}
-\begin{split}t_{Drain} =  \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{2}}}\end{split}
-\end{equation}
-\begin{DUlineblock}{0em}
-\item[] Such that:
-\item[] \(D_{Pipe}\) = Diameter of the drain piping
-\item[] \(L_{Tank}, W_{Tank}, H_{Tank}\) = Tank dimensions
-\item[] \(t_{Drain}\) = Time it takes to drain the tank
-\item[] \(\sum K\) = Sum of all the minor loss coefficients in the system
-\end{DUlineblock}
-
-\begin{figure}[htbp]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics[width=600\sphinxpxdimen]{{pipe_stub_drainage_variables}.png}
-\caption{Variables for draining a tank}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id15}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:pipe-stub-drainage-variables-in-derivation}}\end{figure}
-
-
 \section{AguaClara Flow Control and Measurement Technologies}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:aguaclara-flow-control-and-measurement-technologies}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id3}}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:aguaclara-flow-control-and-measurement-technologies}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id1}}
 Each technology or component for this section will have five subsections:
 \begin{itemize}
 \item {} 
@@ -1547,7 +1588,7 @@ This section will often refer to the proportionality between flow \(Q\) and head
 
 
 \subsection{“Almost Linear” Flow Controller}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:almost-linear-flow-controller}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id4}}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:almost-linear-flow-controller}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id2}}
 
 \subsubsection{What it is}
 \label{\detokenize{Flow_Control_and_Measurement/FCM_Design:what-it-is}}
@@ -1587,7 +1628,7 @@ The tube connecting the CHT to the outlet of chemicals must really belong and, m
 \label{\detokenize{Flow_Control_and_Measurement/FCM_Design:linear-flow-orifice-meter-lfom}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:lfom}}
 
 \subsubsection{What it is}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id5}}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id3}}
 The LFOM is a weir shape cut into a pipe. It was meant to imitate \sphinxhref{http://www.nptel.ac.in/courses/105106114/pdfs/Unit14/14\_3b.pdf}{the Sutro Weir} while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix and flocculator.
 
 \begin{figure}[htbp]
@@ -1595,11 +1636,11 @@ The LFOM is a weir shape cut into a pipe. It was meant to imitate \sphinxhref{ht
 \capstart
 
 \noindent\sphinxincludegraphics[width=600\sphinxpxdimen]{{sutro_v_lfom}.png}
-\caption{On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id16}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:sutro-v-lfom}}\end{figure}
+\caption{On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id11}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:sutro-v-lfom}}\end{figure}
 
 
 \subsubsection{What it does and why}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id6}}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id4}}
 The LFOM does one thing and serves two purposes.
 
 What it does:
@@ -1618,7 +1659,7 @@ Allows for the Linear Chemical Dose Controller, which will be explained next, to
 
 
 \subsubsection{How it works}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id7}}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id5}}
 This is best understood with examples. By shaping a weir differently, different relationships between \(Q\) and \(h\) are formed:
 * In the case of a \sphinxhref{https://swmm5.files.wordpress.com/2016/09/image00124.jpg}{rectangular weir}, \(Q \propto h^{\frac{3}{2}}\)
 * In the case of a \sphinxhref{https://swmm5.files.wordpress.com/2016/09/image0096.jpg}{v-notch weir}, \(Q \propto h^{\frac{5}{2}}\)
@@ -1626,7 +1667,7 @@ This is best understood with examples. By shaping a weir differently, different 
 
 
 \subsubsection{Notes}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id8}}\begin{itemize}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id6}}\begin{itemize}
 \item {} 
 The LFOM is not perfect. Before the water level reaches the second row of holes, the LFOM is simulating a rectangular weir, and thus \(h \not\propto Q\). The Sutro weir also experiences this problem.
 
@@ -1642,7 +1683,7 @@ Since the Linear Chemical Dose Controller has become the standard in AguaClara, 
 
 
 \subsubsection{What it is}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id9}}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id7}}
 The CDC brings together the LFOM and many improvements to the “Almost Linear” Flow Controller. Let’s break it down, with the image below as a guide.
 \begin{enumerate}
 \item {} 
@@ -1683,16 +1724,16 @@ The slider itself controls the dose of chemicals. For any given plant flow rate,
 \capstart
 
 \noindent\sphinxincludegraphics[width=600\sphinxpxdimen]{{cdc_labelled}.png}
-\caption{This is the setup of the chemical dose controller.}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id17}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:cdc-labelled}}\end{figure}
+\caption{This is the setup of the chemical dose controller.}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id12}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:cdc-labelled}}\end{figure}
 
 
 \subsubsection{What it does and why}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id10}}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id8}}
 The CDC makes it easy and accurate to dose chemicals. The flow of chemicals automatically adjusts to changes in the plant flow rate to keep a constant dose, set by the operator. When a turbidity event occurs, the operator can change the dose of coagulant by moving the coagulant slider \sphinxstyleemphasis{lower} on the lever to increase the dose. The slider has labelled marks so the operator can record the dose accurately.
 
 
 \subsubsection{How it works}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id11}}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id9}}
 A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: {\hyperref[\detokenize{Flow_Control_and_Measurement/FCM_Derivations:design-equations-for-the-cdc}]{\sphinxcrossref{\DUrole{std,std-ref}{Design Equations for the Linear Chemical Dose Controller (CDC)}}}}, and you are very, very strongly encouraged to read them.
 
 The CDC can be designed manually using the equations from the derivation linked above or via aide\_design, using the equations found in \sphinxhref{https://github.com/AguaClara/aide\_design/blob/master/aide\_design/cdc\_functions.py}{cdc\_functions.py}. Either way, the design algorithm is roughly the same:
@@ -1701,7 +1742,7 @@ The CDC can be designed manually using the equations from the derivation linked 
 Calculate the maximum flow rate, \(Q_{Max, \, Tube}\), through each available dosing tube diameter \(D\) that keeps error due to minor losses below 10\% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.
 
 \end{enumerate}
-\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Design:Flow_Control_and_Measurement/FCM_Design:2}
+\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Design:Flow_Control_and_Measurement/FCM_Design:0}
 \begin{split}Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\end{split}
 \end{equation}\begin{enumerate}
 \setcounter{enumi}{1}
@@ -1709,7 +1750,7 @@ Calculate the maximum flow rate, \(Q_{Max, \, Tube}\), through each available do
 Calculate how much flow of chemical needs to pass through the CDC at maximum plant flow and maximum chemical dose. This depends on the concentration of chemicals in the stock tank.
 
 \end{enumerate}
-\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Design:Flow_Control_and_Measurement/FCM_Design:3}
+\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Design:Flow_Control_and_Measurement/FCM_Design:1}
 \begin{split}Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\end{split}
 \end{equation}\begin{enumerate}
 \setcounter{enumi}{2}
@@ -1717,7 +1758,7 @@ Calculate how much flow of chemical needs to pass through the CDC at maximum pla
 Calculate the number of dosing tubes required if the tubes flow at  maximum capacity (round up)
 
 \end{enumerate}
-\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Design:Flow_Control_and_Measurement/FCM_Design:4}
+\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Design:Flow_Control_and_Measurement/FCM_Design:2}
 \begin{split}n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\end{split}
 \end{equation}\begin{enumerate}
 \setcounter{enumi}{3}
@@ -1725,7 +1766,7 @@ Calculate the number of dosing tubes required if the tubes flow at  maximum capa
 Calculate the length of dosing tube(s) that correspond to each available tube diameter.
 
 \end{enumerate}
-\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Design:Flow_Control_and_Measurement/FCM_Design:5}
+\begin{equation}\label{equation:Flow_Control_and_Measurement/FCM_Design:Flow_Control_and_Measurement/FCM_Design:3}
 \begin{split}L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\end{split}
 \end{equation}\begin{enumerate}
 \setcounter{enumi}{4}
@@ -1739,7 +1780,7 @@ Finally, select the dosing tube diameter and flow rate corresponding to the sele
 
 
 \subsubsection{Notes}
-\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id12}}
+\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:id10}}
 Nothing in life is perfect, and the CDC is no exception. It has a few causes of inaccuracy which go beyond non-zero minor losses:
 * Float valves are not perfect. There will still be minor fluctuations of the fluid level in the CHT which will result in imperfect dosing.
 * Surface tension may resist the flow of chemicals from the dosing tube into the drop tube during low flows. Since the CDC design does not consider surface tension, this is a potential source of error.
