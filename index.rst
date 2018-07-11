@@ -3,9 +3,18 @@
 ====================================
 Welcome to the Aguaclara Textbook!
 ====================================
+This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in `aide_design <https://github.com/AguaClara/aide_design>`_. Listed below are the versions of the programs we use:
 
-This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_ (version v1.7.5). It uses and refers to AguaClara code and functions in `aide_design <https://github.com/AguaClara/aide_design>`_ (version 0.0.12)
+.. _software_versions:
+.. csv-table:: These are the software versions used to compile this textbook
+   :header: "Software", "version"
+   :widths: 10, 10
+   :align: center
 
+   "Sphinx", "1.7.5"
+   "aide_design", "0.0.12"
+   "Anaconda", "4.5.4"
+   "Python", "3.6.5"
 
 .. toctree::
    :caption: Contributor's guide
@@ -35,6 +44,7 @@ This is a place holder for 'Chapter 1: Introduction' files
    :caption: Chapter 3: Flow Control and Measurement
    :maxdepth: 1
 
+   Flow_Control_and_Measurement/FCM_Intro.rst
    Flow_Control_and_Measurement/FCM_Design.rst
    Flow_Control_and_Measurement/FCM_Derivations.rst
 
