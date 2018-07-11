@@ -1,4 +1,4 @@
-.. _filtration:
+.. _title_filtration:
 
 
 *************
@@ -7,7 +7,30 @@ Filtration
 
 
 
-.. _filter_types:
+
+
+
+.. _heading_filtration_terms:
+
+Important Terms and Equations
+===============================
+Terms:
+
+1. Porosity
+2. StaRS
+3. Backwash
+
+
+Equations:
+
+1.
+
+
+
+
+
+
+.. _heading_filter_types:
 
 =============
 Filter Types
@@ -15,7 +38,7 @@ Filter Types
 
 The principal difference in various filters is the difference in velocity of water through them. This in turn determines the plan area of the filter for a particular flow.
 
-For a multistage filter system, the filter areas for the Dynamic, Roughing, and Slow Sand filters are included in a total are. For a given flow, and the velocity for each filter type the total area is:
+For a multistage filter system, the filter areas for the Dynamic, Roughing, and Slow Sand filters are included in a total area. For a given flow, and the velocity for each filter type the total area is:
 
 
 .. math::
@@ -25,12 +48,10 @@ For a multistage filter system, the filter areas for the Dynamic, Roughing, and 
 
 Using this formula it becomes easy to see the relative sizes of different filter systems. **Note: Clare, consider adding the table from slide 23 here.**
 
-Understanding the amount of area requires for this component makes it easy to see why certain systems would be preferable to others, but also that overall filtration is only a polishing step and cannot treat as well as other unit processes.
+Understanding the amount of area requires for this component makes it easy to see why certain systems would be preferable to others, but also that overall filtration is only a polishing step and cannot treat as well as other unit processes, predominantly the flocculation-sedimentation combination.
 
 
-
-
-.. _porosity:
+.. _heading_porosity:
 
 Porosity
 ===========
@@ -59,27 +80,19 @@ One way that the relative size of particles is characterized is by describing th
 
     \D_{60} = the sieve size that passes 60% by mass of the sand through
 
-:math:'D_{10}' is used for particle removal models, and :math:'D_{60}' is used for hydrualic modeling.
+:math:`D_{10}` is used for particle removal models, and :math:`D_{60}` is used for hydrualic modeling.
 
-The relationship of the two, the uniformity coeffecient:
+The relationship of the two is the uniformity coeffecient:
 
 .. math::
   :label: uniformity_coefficient
 
     UC = \frac{D_{60}}{D_{10}}
 
-describes the uniformity of the sand. A :math:`UC = 1` indicates that every grain of sand is the same size, which is the ideal case. A large :math:`UC` is indicative of a wide range of grain sizes which can cause trouble during filter operation and backwash, as stratification occurs and the porosity changes with respect to depth in the filter. Using the minimum fluidization velocity equation from sedimentation (=====) and adapted for the physical characteristis of sand, the water velocity needed during backwash can be seen as:
-
-.. math::
-  :label: minimum_fluidization_velocity_sand
-
-    V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
+The uniformity coefficient describes the uniformity of the sand. A :math:`UC = 1` indicates that every grain of sand is the same size, which is the ideal case. A large :math:`UC` is indicative of a wide range of grain sizes which can cause trouble during filter operation and backwash, as stratification occurs and the porosity changes with respect to depth in the filter.
 
 
-From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter is **not** indicative of fluidization at the bottom.
-
-This result is also important in determining the expansion of the sand bed during the backwash process. As the sand fluidizes within the filter, it is lifted causing a change in porosity of the sand bed (as the volume of water occupied by the sand is increased.) The porosity and height of the sand bed are directly related through the following equation:
-
+During backwash sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:
 
 .. math::
   :label: backwash_porosity
@@ -107,7 +120,7 @@ From this it becomes possible to directly relate porosity (as above) to the filt
 
 
 
-.. _headloss_requirements:
+.. _heading_headloss_requirements:
 
 Headloss Requirements
 ======================
@@ -131,17 +144,37 @@ One of the key parameters in design of a filter is the headloss through the syst
 This equation is valid for Reynolds numbers less than 6. Where:
 :math:`{\rm Re}  = \frac{D_{60} V_{Fi}}{\nu}`
 
-The headloss during backwash is the
+The headloss during backwash is taken as the design parameter, so other values are constructed around it.
+
+The following equation describes the headloss through the fluidized bed:
+
+.. math::
+  :label: headloss_fluidzed_bed
+  \frac{h_{l_{FiBw}}}{H_{FiSand}} = \left( 1 - \phi_{FiSand} \right)\left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
+
+| Such that:
+| :math:`h_{l_{FiBw}` = the headloss in the fluidized bed
+| :math:`H_{FiSand}` =  the depth of the settled sand bed
+| :math:`phi_{FiSand}` = the settled sand porosity
+| :math:`rho_{Sand}`  = the sand density
+| :math:`rho_{Water}` = the water density
+
+Using these two equations the minimum velocity for snad fluidization can be found!
+
+.. math::
+  :label: minimum_fluidization_velocity_sand
+    V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
+
+From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter is **not** indicative of fluidization at the bottom.
 
 
 
-
-.. _backwash:
+.. _heading_backwash:
 
 Backwash
 ===========
 
-When considering backwash design, there are two main factors that constitute a dilemma. The first, backwash velocity must be must greater than filtration velocity (to expand the sand bed), and second, the backwash water must be clean water (cleaning with dirty water introduces more particles into the filter). This limits the paths water can take during the backwash process. The conventional options include pumping it back from the storage tank, using a set of parallel fiters to backwash one filter at a time, or storing the filtered water at an adequate elevation.
+When considering backwash design, there are two main factors that constitute a dilemma. The first, backwash velocity must be must greater than filtration velocity (to expand the sand bed), and second, the backwash water must be clean water (cleaning with dirty water introduces more particles into the filter). This limits the paths water can take during the backwash process. The conventional options include pumping it back from the storage tank, using a set of parallel fiters to backwash one filter at a time, or storing the filtered water at an adequate elevation. Due to energy limitations and space constraints, the conventional solutions are simply not feasible for this system. Examples that illustrate why they cannot work can be found in the derivations sections(?)(or the examples?)
 
 **brief example here?**
 
@@ -168,13 +201,20 @@ The third option, elevating the filtered water to provide enough head to cause b
 
 How can we find a solution?
 
-If the velocities could be more similar less space would be needed!
+If the velocities could be more similar the filter could work!
 
-This could be accomplished in several ways, such as decreasing the media density thus lowering velocity to fluidize it, decrease the media diameter thus lowering the fluidization velocity, or make a more compact filter which filters in parallel and backwashes in series.
+This could be accomplished in several ways: such as decreasing the media density thus lowering velocity to fluidize it, decrease the media diameter thus lowering the fluidization velocity, or make a more compact filter which filters in parallel and backwashes in series.
 
-As changing the material characteristics of the sand is challenging, a more compact filter is the chosen design. In the design, six layers of sand are stacked, there are three inlets, and four outlets. Throughout this section, figures and images will be the best methods to understand the design flow through the system, and will be supplemented by the text.
+As changing the material characteristics of the sand is challenging, a more compact filter is the chosen design. As it happens this innovation results in a more concpetually difficult filter. In the design, six layers of sand are stacked, there are four inlets, and three outlets which are all in use during filtration. During backwash only one inlet is used and the backwash water is discarded through a separate manifold. Throughout this section, figures and images will be the best methods to understand the design flow through the system, and will be supplemented by the text.
 
 This overall design can be seen in Figure XXXXX.
+
+(figure of the full system)
+
+Tasks for clare for Thursday + Friday morning: insert images! none of them are in yet. Save as pngs. streamline the way you want this to work as well. like overall structure
+
+
+
 
 
 
