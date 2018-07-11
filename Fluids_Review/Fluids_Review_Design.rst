@@ -1,7 +1,7 @@
 .. _fluids_review_design:
 
 ************************
-Fluids Review  Design
+Fluids Review Design
 ************************
 This section is meant to be a refresher on fluid mechanics. It will only cover the topics of fluids mechanics that will be used heavily in the course.
 
@@ -15,19 +15,19 @@ Important Terms and Equations
 ==============================
 **Terms:**
 
-#. Laminar
-#. Turbulent
-#. Viscosity
-#. Streamline
-#. Control Volume
-#. Head
+#. :ref:`Laminar <laminar_and_turbulent_flow>`
+#. :ref:`Turbulent <laminar_and_turbulent_flow>`
+#. :ref:`Viscosity <viscosity_target>`
+#. :ref:`Streamline <streamlines_and_control_volumes>`
+#. :ref:`Control Volume <streamlines_and_control_volumes>`
+#. :ref:`Head <hydraulic_head>`
 #. Head loss
 #. Driving head
 #. Vena Contracta/Coefficient of Contraction
 
 **Equations:**
 
-#. Continuity equation
+#. Continuity equation: :eq:`continuity_equation`
 #. Bernoulli equation
 #. Energy equation
 #. Darcy-Weisbach equation
@@ -52,6 +52,7 @@ Continuity Equation
 Continuity is simply an application of mass balance to fluid mechanics. It states that the cross sectional area :math:`A` that a fluid flows through multiplied by the fluid’s average flow velocity :math:`\bar v` must equal the fluid’s flow rate :math:`Q`:
 
 .. math::
+  :label: continuity_equation
 
     Q = \bar v A
 
@@ -105,6 +106,8 @@ Considering that this class deals with the flow of water through a water treatme
     :alt: Laminar flow, turbulent flow, and the transition
 
     This is a beautiful example of the difference between ordered and smooth laminar flow and chaotic turbulent flow.
+
+.. _viscosity_target:
 
 A numeric way to determine whether flow is laminar or turbulent is by finding the `Reynolds number <https://en.wikipedia.org/wiki/Reynolds_number>`_, :math:`{\rm Re}`. The Reynolds number is a dimensionless parameter that compares inertia, represented by the average flow velocity :math:`\bar v` times a length scale :math:`D` to `viscosity <https://en.wikipedia.org/wiki/Viscosity>`_, represented by the kinematic viscosity :math:`\nu`. `Click here <https://www.youtube.com/watch?v=DVQw0svRHZA>`_ for a brief video explanation of viscosity. If the Reynolds number is less than 2,100 the flow is considered laminar. If it is more than 2,100, it is considered turbulent.
 
@@ -187,6 +190,8 @@ These three forms of energy expressed above make up the Bernoulli equation:
 | :math:`g` = acceleration due to gravity, in aide_design as ``con.GRAVITY``
 | :math:`z` = elevation relative to a reference
 | :math:`v` = fluid velocity
+
+.. _hydraulic_head:
 
 Notice that each term in this form of the Bernoulli equation has units of :math:`[L]`, even though the terms represent the energy of the fluid, which has units of :math:`\frac{[M] \cdot [L]^2}{[T]^2}`. When energy of the fluid is described in units of length, the term used is called **head** and referred to as :math:`h`.
 
@@ -641,7 +646,7 @@ Section Summary
   "Laminar", :math:`Q`, :math:`Q^2`
   "Turbulent", :math:`Q^2`, :math:`Q^2`
 
-6. The **headloss trick**, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, :math:`\frac{\bar v_2^2}{2g}`, into headloss as a minor loss with :math:`K = 1`, so the minor loss equation becomes :math:`\left( 1 + \sum K \right) \frac{\bar v^2}{2g}`. This is used to be able to say that :math:`\Delta z = h_L` and makes many equation simplifications possible in the future.
+6. The **head loss trick**, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, :math:`\frac{\bar v_2^2}{2g}`, into headloss as a minor loss with :math:`K = 1`, so the minor loss equation becomes :math:`\left( 1 + \sum K \right) \frac{\bar v^2}{2g}`. This is used to be able to say that :math:`\Delta z = h_L` and makes many equation simplifications possible in the future.
 
 7. **Orifice equation and vena contractas:** The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, :math:`Q \propto \sqrt{\Delta h}`. Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aide_design should be used.
 
