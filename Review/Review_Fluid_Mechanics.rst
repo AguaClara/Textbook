@@ -97,7 +97,7 @@ An example of changing flow geometries is when a change in pipe size occurs in a
 
 Laminar and Turbulent Flow
 ---------------------------
-Considering that this class deals with the flow of water through a water treatment plant, understanding the characteristics of the flow is very important. Thus, it is necessary to understand the most common characteristic of fluid flow: whether it is **laminar** or **turbulent**     . `Laminar <https://en.wikipedia.org/wiki/Laminar_flow>`_ flow is very smooth and highly ordered. `Turbulent <https://en.wikipedia.org/wiki/Turbulence>`_ flow is chaotic, messy, and disordered. The best way to understand each flow and what it looks like is visually, like in the wikipedia figure below `or in this video <https://youtu.be/qtvVN2qt968?t=131>`_. Please ignore the part of the video after the image of the tap.
+Considering that this class deals with the flow of water through a water treatment plant, understanding the characteristics of the flow is very important. Thus, it is necessary to understand the most common characteristic of fluid flow: whether it is **laminar** or **turbulent**. `Laminar <https://en.wikipedia.org/wiki/Laminar_flow>`_ flow is very smooth and highly ordered. `Turbulent <https://en.wikipedia.org/wiki/Turbulence>`_ flow is chaotic, messy, and disordered. The best way to understand each flow and what it looks like is visually, like in the wikipedia figure below `or in this video <https://youtu.be/qtvVN2qt968?t=131>`_. Please ignore the part of the video after the image of the tap.
 
 .. _figure_wikipedia_laminar_turbulent:
 .. figure:: Images/Wikipedia_laminar_turbulent.png
