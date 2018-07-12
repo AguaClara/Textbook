@@ -30,7 +30,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Flow Control and Measurement Design" href="FCM_Design.html" />
-    <link rel="prev" title="Fluids Review Derivations" href="../Fluids_Review/Fluids_Review_Derivations.html" /> 
+    <link rel="prev" title="Review: Fluid Mechanics Derivations" href="../Review/Review_Fluid_Mechanics_Derivations.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,10 +85,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 2: Fluids Review</span></p>
+<p class="caption"><span class="caption-text">Chapter 1.1: Review: Fluid Mechanics and Python</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Design.html">Fluids Review Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Derivations.html">Fluids Review Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
 <ul class="current">
@@ -194,7 +194,7 @@
 <li><span class="math notranslate nohighlight">\(t_{Design}\)</span> is <strong>NOT</strong> the time it takes to drain the tank. It is the time that it <em>would</em> take to drain the tank <em>if</em> the flow rate at time <span class="math notranslate nohighlight">\(t = 0\)</span>, <span class="math notranslate nohighlight">\(Q_0\)</span>, were the flow rate forever, which it is not. <span class="math notranslate nohighlight">\(t_{Design}\)</span> was used in the derivation to simplify the equation, which is why this potentially-confusing parameter exists. The actual time it takes to drain the tank lies somewhere between <span class="math notranslate nohighlight">\(t_{Design}\)</span> and <span class="math notranslate nohighlight">\(2 \, t_{Design}\)</span> and depends on the ratio <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span>.</li>
 <li><span class="math notranslate nohighlight">\(h_{Tank}\)</span> is not the same as <span class="math notranslate nohighlight">\(h_{0}\)</span>. <span class="math notranslate nohighlight">\(h_{Tank}\)</span> is the height of water level in the tank with reference to the tank bottom. <span class="math notranslate nohighlight">\(h_{0}\)</span> is the water level in the tank with reference to the valve. Neither change with time, they both refer to the water level at one instance in time, <span class="math notranslate nohighlight">\(t = 0\)</span>. Therefore, <span class="math notranslate nohighlight">\(h_{0} \geq h_{Tank}\)</span> is always true. If the tank is elevated far above the valve, then the <span class="math notranslate nohighlight">\(h_{0} &gt; &gt; h_{Tank}\)</span>. If the valve is at the same elevation as the bottom of the tank, then <span class="math notranslate nohighlight">\(h_{0} = h_{Tank}\)</span>. Please refer to the figure above to clarify <span class="math notranslate nohighlight">\(h_{0}\)</span> and <span class="math notranslate nohighlight">\(h_{Tank}\)</span>.</li>
 </ul>
-<p>We can use the proportionality <span class="math notranslate nohighlight">\(Q \propto \sqrt{h}\)</span>, which applies to both minor losses and orifices to form a relationship between water level in the tank <span class="math notranslate nohighlight">\(h\)</span> and time <span class="math notranslate nohighlight">\(t\)</span>. This proportionality comes from rearranging the minor loss equation <span class="math notranslate nohighlight">\(h = K \frac{Q^2}{2 g A^2}\)</span> for <span class="math notranslate nohighlight">\(Q\)</span> instead of <span class="math notranslate nohighlight">\(h\)</span>. A table of proportionality between <span class="math notranslate nohighlight">\(Q\)</span> and math:<cite>h</cite> can be found in <code class="xref std std-numref docutils literal notranslate"><span class="pre">heading_h_Q_proportionality</span></code></p>
+<p>We can use the proportionality <span class="math notranslate nohighlight">\(Q \propto \sqrt{h}\)</span>, which applies to both minor losses and orifices to form a relationship between water level in the tank <span class="math notranslate nohighlight">\(h\)</span> and time <span class="math notranslate nohighlight">\(t\)</span>. This proportionality comes from rearranging the minor loss equation <span class="math notranslate nohighlight">\(h = K \frac{Q^2}{2 g A^2}\)</span> for <span class="math notranslate nohighlight">\(Q\)</span> instead of <span class="math notranslate nohighlight">\(h\)</span>. A table of proportionality between <span class="math notranslate nohighlight">\(Q\)</span> and math:<cite>h</cite> can be found in <a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#table-h-q-proportionality"><span class="std std-numref">Table 5</span></a></p>
 <p>Using equation <a class="reference internal" href="#equation-q-tank-with-valve">(70)</a> and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or <span class="math notranslate nohighlight">\(h_{Tank} = h_0\)</span>. Our attempt to get a continuous flow rate out of this system is to make <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span> very small by elevating the tank far above the valve. On the right, <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0} = \frac{1}{50}\)</span>. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-tank-valve-play"></span><a class="reference internal image-reference" href="../_images/tank_valve_play.png"><img alt="Manipulating hypochlorinator heights" src="../_images/tank_valve_play.png" style="width: 600px;" /></a>
@@ -235,7 +235,7 @@
         <a href="FCM_Design.html" class="btn btn-neutral float-right" title="Flow Control and Measurement Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../Fluids_Review/Fluids_Review_Derivations.html" class="btn btn-neutral" title="Fluids Review Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../Review/Review_Fluid_Mechanics_Derivations.html" class="btn btn-neutral" title="Review: Fluid Mechanics Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

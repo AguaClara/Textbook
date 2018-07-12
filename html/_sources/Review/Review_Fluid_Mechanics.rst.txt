@@ -1,11 +1,11 @@
-.. _title_fluids_review_design:
+.. _title_review_fluid_mechanics:
 
 ************************
-Fluids Review Design
+Review: Fluid Mechanics
 ************************
-This section is meant to be a refresher on fluid mechanics. It will only cover the topics of fluids mechanics that will be used heavily in the course.
+This document is meant to be a refresher on fluid mechanics. It will only cover the topics of fluids mechanics that will be used heavily in the course.
 
-If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_ Note that you will need to create a Github account if you do not already have one to view this link. If you wish to review from a legitimate textbook, you can find a pdf of good book by Frank White `here <https://hellcareers.files.wordpress.com/2016/01/fluid-mechanics-seventh-edition-by-frank-m-white.pdf>`_.
+If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_ Note that to view this link, you will need a Github accounts. If you wish to review from a legitimate textbook, you can find a pdf of good book by Frank White `here <https://hellcareers.files.wordpress.com/2016/01/fluid-mechanics-seventh-edition-by-frank-m-white.pdf>`_.
 
 
 
@@ -17,24 +17,24 @@ Important Terms and Equations
 
 #. :ref:`Laminar <heading_laminar_and_turbulent_flow>`
 #. :ref:`Turbulent <heading_laminar_and_turbulent_flow>`
-#. :ref:`Viscosity <viscosity_target>`
+#. :ref:`Viscosity <heading_laminar_and_turbulent_flow>`
 #. :ref:`Streamline <heading_streamlines_and_control_volumes>`
 #. :ref:`Control Volume <heading_streamlines_and_control_volumes>`
-#. :ref:`Head <hydraulic_head>`
-#. Head loss
-#. Driving head
-#. Vena Contracta/Coefficient of Contraction
+#. :ref:`Head <heading_bernoulli_equation>`
+#. :ref:`Head loss <heading_head_loss>`
+#. :ref:`Driving head <heading_head_loss_elevation_difference_trick>`
+#. :ref:`Vena Contracta/Coefficient of Contraction <heading_what_is_a_vena_contracta>`
 
 **Equations:**
 
 #. Continuity equation: :eq:`continuity_equation`
-#. Bernoulli equation
-#. Energy equation
-#. Darcy-Weisbach equation
-#. Reynolds number
-#. Swamee-Jain equation
-#. Hagen-Poiseuille equation
-#. Orifice equation
+#. Reynolds number :eq:`reynolds_number_equation`
+#. Bernoulli equation :eq:`bernoulli_equation`
+#. Energy equation :eq:`energy_equation`
+#. Darcy-Weisbach equation :eq:`darcy_weisbach`
+#. Swamee-Jain equation :eq:`swamee_jain`
+#. Hagen-Poiseuille equation :eq:`hagen_poiseuille`
+#. Orifice equation :eq:`orifice_equation`
 
 
 
@@ -97,7 +97,7 @@ An example of changing flow geometries is when a change in pipe size occurs in a
 
 Laminar and Turbulent Flow
 ---------------------------
-Considering that this class deals with the flow of water through a water treatment plant, understanding the characteristics of the flow is very important. Thus, it is necessary to understand the most common characteristic of fluid flow: whether it is **laminar** or **turbulent**     . `Laminar <https://en.wikipedia.org/wiki/Laminar_flow>`_ flow is very smooth and highly ordered. `Turbulent <https://en.wikipedia.org/wiki/Turbulence>`_ flow is chaotic, messy, and disordered. The best way to understand each flow and what it looks like is visually, like in the wikipedia figure below `or in this video <https://youtu.be/qtvVN2qt968?t=131>`_. Please ignore the part of the video after the image of the tap.
+Considering that this class deals with the flow of water through a water treatment plant, understanding the characteristics of the flow is very important. Thus, it is necessary to understand the most common characteristic of fluid flow: whether it is **laminar** or **turbulent**. `Laminar <https://en.wikipedia.org/wiki/Laminar_flow>`_ flow is very smooth and highly ordered. `Turbulent <https://en.wikipedia.org/wiki/Turbulence>`_ flow is chaotic, messy, and disordered. The best way to understand each flow and what it looks like is visually, like in the wikipedia figure below `or in this video <https://youtu.be/qtvVN2qt968?t=131>`_. Please ignore the part of the video after the image of the tap.
 
 .. _figure_wikipedia_laminar_turbulent:
 .. figure:: Images/Wikipedia_laminar_turbulent.png
@@ -106,8 +106,6 @@ Considering that this class deals with the flow of water through a water treatme
     :alt: Laminar flow, turbulent flow, and the transition
 
     This is a beautiful example of the difference between ordered and smooth laminar flow and chaotic turbulent flow.
-
-.. _viscosity_target:
 
 A numeric way to determine whether flow is laminar or turbulent is by finding the `Reynolds number <https://en.wikipedia.org/wiki/Reynolds_number>`_, :math:`{\rm Re}`. The Reynolds number is a dimensionless parameter that compares inertia, represented by the average flow velocity :math:`\bar v` times a length scale :math:`D` to `viscosity <https://en.wikipedia.org/wiki/Viscosity>`_, represented by the kinematic viscosity :math:`\nu`. `Click here <https://www.youtube.com/watch?v=DVQw0svRHZA>`_ for a brief video explanation of viscosity. If the Reynolds number is less than 2,100 the flow is considered laminar. If it is more than 2,100, it is considered turbulent.
 
@@ -122,6 +120,7 @@ Fluid can flow through very many different geometries, like a pipe, a rectangula
 Here are other commonly used forms of the Reynolds number equation *for circular pipes*. They are the same as the one above, just with the substitutions :math:`Q = \bar v \frac{\pi D^2}{4}` and :math:`\nu = \frac{\mu}{\rho}`
 
 .. math::
+  :label: reynolds_number_equation
 
     {\rm Re} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}
 
@@ -181,6 +180,7 @@ The Bernoulli Equation
 These three forms of energy expressed above make up the Bernoulli equation:
 
 .. math::
+  :label: bernoulli_equation
 
     \frac{p_1}{\rho g} + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{v_2^2}{2g}
 
@@ -190,8 +190,6 @@ These three forms of energy expressed above make up the Bernoulli equation:
 | :math:`g` = acceleration due to gravity, in aide_design as ``con.GRAVITY``
 | :math:`z` = elevation relative to a reference
 | :math:`v` = fluid velocity
-
-.. _hydraulic_head:
 
 Notice that each term in this form of the Bernoulli equation has units of :math:`[L]`, even though the terms represent the energy of the fluid, which has units of :math:`\frac{[M] \cdot [L]^2}{[T]^2}`. When energy of the fluid is described in units of length, the term used is called **head** and referred to as :math:`h`.
 
@@ -229,6 +227,7 @@ The assumption necessary to use the Bernoulli equation, which is stated above, r
 You’ll also notice the :math:`\alpha` term attached to the velocity head. This is a correction factor for kinetic energy, and will be neglected in this class; we assume that its value is 1. In the Bernoulli equation, the velocity of a streamline of the fluid is considered, :math:`v`. The energy equation, however compares control surfaces instead of streamlines, and the velocities across a control surface many not all be the same. Hence, :math:`\bar v` is used to represent the average velocity. Since AguaClara does not use pumps nor turbines, :math:`h_P = h_T = 0`. With these simplifications, the energy equation can be written as follows:
 
 .. math::
+  :label: energy_equation
 
     \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
 
@@ -236,11 +235,11 @@ You’ll also notice the :math:`\alpha` term attached to the velocity head. This
 
 
 
-.. _heading_headloss:
+.. _heading_head_loss:
 
 Headloss
 =========
-**Head(L)oss**, :math:`h_L` is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through space. There are two components to headloss: major losses caused by (f)riction between the fluid the surface it's flowing over, :math:`h_{\rm{f}}`, and minor losses caused by fluid-fluid internal friction resulting from flow (e)xpansions, :math:`h_e`. These two components combine such that :math:`h_L = h_{\rm{f}} + h_e`.
+**Head(L)oss**, :math:`h_L` is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through space. There are two components to head loss: major losses caused by (f)riction between the fluid the surface it's flowing over, :math:`h_{\rm{f}}`, and minor losses caused by fluid-fluid internal friction resulting from flow (e)xpansions, :math:`h_e`. These two components combine such that :math:`h_L = h_{\rm{f}} + h_e`.
 
 
 .. _heading_major_losses:
@@ -252,6 +251,7 @@ These losses are the result of friction between the fluid and the surface over w
 In this class, we will be dealing primarily with major losses in circular pipes, as opposed to channels or pipes with other geometries. Fortunately for us, Henry Darcy and Julius Weisbach came up with a handy equation to determine the major losses in a circular pipe *under both laminar and turbulent flow conditions*. Their equation is logically and unoriginally named the `Darcy-Weisbach equation <https://en.wikipedia.org/wiki/Darcy%E2%80%93Weisbach_equation>`_. It is shown below:
 
 .. math::
+  :label: darcy_weisbach
 
     h_{\rm{f}} \, = \, {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}
 
@@ -281,6 +281,7 @@ For laminar flow, the friction factor can be determined from the following equat
 For turbulent flow, the friction factor is more difficult to determine. In this class, we will use the `Swamee-Jain equation <https://en.wikipedia.org/wiki/Darcy_friction_factor_formulae#Swamee%E2%80%93Jain_equation>`_:
 
 .. math::
+  :label: swamee_jain
 
     {\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}
 
@@ -307,6 +308,7 @@ The simplicity of the equation for :math:`\rm{f}` during laminar flow allows for
 To form the `Hagen-Poiseuille equation <https://en.wikipedia.org/wiki/Hagen%E2%80%93Poiseuille_equation>`_ for major losses during laminar flow, and *only* during laminar flow:
 
 .. math::
+  :label: hagen_poiseuille
 
     h_{\rm{f}} = \frac{128\mu L Q}{\rho g\pi D^4}
 
@@ -333,7 +335,7 @@ Minor Losses
 -------------
 Unfortunately, there is no simple ‘pushing a box across the ground’ example to explain minor losses. So instead, consider a `hydraulic jump <https://www.youtube.com/watch?v=5spXXZX55C8>`_. In the video, you can see lots of turbulence and eddies in the transition region between the fast, shallow flow and the slow, deep flow. The high amount of mixing of the water in the transition region of the hydraulic jump results in significant friction *between water and water*. This turbulent, eddy-induced, fluid-fluid friction results in  minor losses, much like fluid-pipe friction results in major losses.
 
-As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: **minor losses are caused by flow expansions**. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in :numref:`figure_minor_loss_pipe_FRD` below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: :ref:`title_fluids_review_derivations`.
+As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: **minor losses are caused by flow expansions**. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in :numref:`figure_minor_loss_pipe_FRD` below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: :ref:`title_review_fluid_mechanics_derivations`.
 
 There are three forms of the minor loss equation that you will see in this class:
 
@@ -396,7 +398,7 @@ In order to find :math:`\bar v_{out}`, we first need to know what (or where) is 
 
 Head Loss = Elevation Difference Trick
 --------------------------------------
-This trick, also called the ‘control volume trick,’ or more colloquially, the ‘headloss trick,’ is incredibly useful for simplifying hydraulic systems and is used all the time in this class.
+This trick, also called the ‘control volume trick,’ or more colloquially, the ‘head loss trick,’ is incredibly useful for simplifying hydraulic systems and is used all the time in this class.
 
 Consider the following figure:
 
@@ -404,13 +406,13 @@ Consider the following figure:
 .. figure:: Images/head_loss_trick.png
     :width: 650px
     :align: center
-    :alt: Image used to explain the headloss trick
+    :alt: Image used to explain the head loss trick
 
-    A typical hydraulic system can be used to understand the headloss trick.
+    A typical hydraulic system can be used to understand the head loss trick.
 
-In systems like this, where an elevation difference is causing water to flow, the elevation difference is called the **driving head**. In the system above, the driving head is the elevation difference between the water level and the end of the tubing. Usually, driving head is written as :math:`\Delta z` or :math:`\Delta h`, though above it is labelled as :math:`h_L`. Doesn't :math:`h_L` refer to headloss though? Yes it does! Referring to :math:`\Delta h` or :math:`\Delta z` *IS* the headloss trick, and how it works is explained in the following paragraphs and equations.
+In systems like this, where an elevation difference is causing water to flow, the elevation difference is called the **driving head**. In the system above, the driving head is the elevation difference between the water level and the end of the tubing. Usually, driving head is written as :math:`\Delta z` or :math:`\Delta h`, though above it is labelled as :math:`h_L`. Doesn't :math:`h_L` refer to head loss though? Yes it does! Referring to :math:`\Delta h` or :math:`\Delta z` *IS* the head loss trick, and how it works is explained in the following paragraphs and equations.
 
-The figure is technically violating the energy equation by saying that the elevation difference between the water in the tank and the end of the tube is :math:`h_L`. It implies that all of the driving head, :math:`\Delta z`, is lost to headloss. Since all of the energy is gone, there should not be water flowing out of the tubing. But there is. Let’s apply the energy equation across the control surfaces shown in the figure. Pressures at both ends are atmospheric and the velocity of water at the top of tank is negligible.
+The figure is technically violating the energy equation by saying that the elevation difference between the water in the tank and the end of the tube is :math:`h_L`. It implies that all of the driving head, :math:`\Delta z`, is lost to head loss. Since all of the energy is gone, there should not be water flowing out of the tubing. But there is. Let’s apply the energy equation across the control surfaces shown in the figure. Pressures at both ends are atmospheric and the velocity of water at the top of tank is negligible.
 
 .. math::
 
@@ -422,7 +424,7 @@ We now get:
 
     \Delta z = \frac{\bar v_2^2}{2g} + h_L
 
-This equation contradicts the figure above, which says that :math:`\Delta z = h_L` and neglects :math:`\frac{\bar v_2^2}{2g}`. The figure above is correct, however, if you apply the headloss trick. The trick incorporates the :math:`\frac{\bar v_2^2}{2g}` term *into* the :math:`h_L` term as a minor loss. See the math below:
+This equation contradicts the figure above, which says that :math:`\Delta z = h_L` and neglects :math:`\frac{\bar v_2^2}{2g}`. The figure above is correct, however, if you apply the head loss trick. The trick incorporates the :math:`\frac{\bar v_2^2}{2g}` term *into* the :math:`h_L` term as a minor loss. See the math below:
 
 .. math::
 
@@ -450,7 +452,7 @@ This last step incorporated the kinetic energy term of the energy equation, :mat
 
     \Delta z = h_L
 
-By applying the headloss trick, you are considering the entire flow of the fluid out of a control volume as energy lost via minor losses. This is just an algebraic trick, the only thing to remember when applying this trick is that :math:`\sum K` will always be at least 1, even if there are no ‘real’ minor losses in the system.
+By applying the head loss trick, you are considering the entire flow of the fluid out of a control volume as energy lost via minor losses. This is just an algebraic trick, the only thing to remember when applying this trick is that :math:`\sum K` will always be at least 1, even if there are no ‘real’ minor losses in the system.
 
 
 .. _heading_the_orifice_equation:
@@ -458,6 +460,9 @@ By applying the headloss trick, you are considering the entire flow of the fluid
 The Orifice Equation
 =====================
 This equation is one that you’ll see and use again and again throughout this class. Understanding it now will be invaluable, as future concepts will use and build on this equation.
+
+
+.. _heading_what_is_a_vena_contracta:
 
 What is a Vena Contracta?
 ---------------------------
@@ -573,7 +578,7 @@ Section Summary
     * **Control volumes vs Streamlines.** This section is quite short, a summary would simply repeat what the sections says. The section is its own summary; read it here: `Streamlines and Control Volumes`_
 
 
-2. **Bernoulli vs Energy equations:** The Bernoulli equation assumes that energy is conserved throughout a streamline or control volume. The Energy equation assumes that there is energy loss, or headloss :math:`h_L`. This headloss is composed of major losses, :math:`h_{\rm{f}}`, and minor losses, :math:`h_e`.
+2. **Bernoulli vs Energy equations:** The Bernoulli equation assumes that energy is conserved throughout a streamline or control volume. The Energy equation assumes that there is energy loss, or head loss :math:`h_L`. This head loss is composed of major losses, :math:`h_{\rm{f}}`, and minor losses, :math:`h_e`.
 
   Bernoulli equation:
 
@@ -635,7 +640,7 @@ Section Summary
     {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
     }
 
-5. **Major and minor losses vary with flow:** While it is generally important to know how increasing or decreasing flow will affect headloss, it is even more important for this class to understand exactly how flow will affect headloss. As the table below shows, headloss will always be proportional to flow squared during turbulent flow. During laminar flow, however, the exponent on :math:`Q` will be between 1 and 2 depending on the proportion of major to minor losses.
+5. **Major and minor losses vary with flow:** While it is generally important to know how increasing or decreasing flow will affect head loss, it is even more important for this class to understand exactly how flow will affect head loss. As the table below shows, head loss will always be proportional to flow squared during turbulent flow. During laminar flow, however, the exponent on :math:`Q` will be between 1 and 2 depending on the proportion of major to minor losses.
 
 .. _table_h_Q_proportionality:
 .. csv-table:: Proportionality between head loss :math:`h_L` and flow rate :math:`Q` for different flow regimes and types of head loss.
@@ -646,7 +651,7 @@ Section Summary
   "Laminar", :math:`Q`, :math:`Q^2`
   "Turbulent", :math:`Q^2`, :math:`Q^2`
 
-6. The **head loss trick**, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, :math:`\frac{\bar v_2^2}{2g}`, into headloss as a minor loss with :math:`K = 1`, so the minor loss equation becomes :math:`\left( 1 + \sum K \right) \frac{\bar v^2}{2g}`. This is used to be able to say that :math:`\Delta z = h_L` and makes many equation simplifications possible in the future.
+6. The **head loss trick**, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, :math:`\frac{\bar v_2^2}{2g}`, into head loss as a minor loss with :math:`K = 1`, so the minor loss equation becomes :math:`\left( 1 + \sum K \right) \frac{\bar v^2}{2g}`. This is used to be able to say that :math:`\Delta z = h_L` and makes many equation simplifications possible in the future.
 
 7. **Orifice equation and vena contractas:** The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, :math:`Q \propto \sqrt{\Delta h}`. Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aide_design should be used.
 
