@@ -1,4 +1,4 @@
-.. _fluids_review_design:
+.. _title_fluids_review_design:
 
 ************************
 Fluids Review Design
@@ -9,17 +9,17 @@ If you wish to review fluid mechanics in (much) more detail, please refer to `th
 
 
 
-.. _fluids_terms_eqs:
+.. _heading_fluids_terms_eqs:
 
 Important Terms and Equations
 ==============================
 **Terms:**
 
-#. :ref:`Laminar <laminar_and_turbulent_flow>`
-#. :ref:`Turbulent <laminar_and_turbulent_flow>`
+#. :ref:`Laminar <heading_laminar_and_turbulent_flow>`
+#. :ref:`Turbulent <heading_laminar_and_turbulent_flow>`
 #. :ref:`Viscosity <viscosity_target>`
-#. :ref:`Streamline <streamlines_and_control_volumes>`
-#. :ref:`Control Volume <streamlines_and_control_volumes>`
+#. :ref:`Streamline <heading_streamlines_and_control_volumes>`
+#. :ref:`Control Volume <heading_streamlines_and_control_volumes>`
 #. :ref:`Head <hydraulic_head>`
 #. Head loss
 #. Driving head
@@ -38,14 +38,14 @@ Important Terms and Equations
 
 
 
-.. _introductory_concepts:
+.. _heading_introductory_concepts:
 
 Introductory Concepts
 =======================
 Before diving in to the rest of this document, there are a few important concepts to focus on which will be the foundation for building your understanding of fluid mechanics. One must walk before they can run, and similarly, the basics of fluid mechanics must be understood before moving on to the more fun (and exciting!) sections of this document.
 
 
-.. _continuity_equation:
+.. _heading_continuity_equation:
 
 Continuity Equation
 ----------------------
@@ -84,7 +84,7 @@ The continuity equation is also useful when flow is going from one geometry to a
 
 An example of changing flow geometries is when a change in pipe size occurs in a circular piping system, as is demonstrated below. The flow through :math:`{\rm pipe} \, 1` must be the same as the flow through :math:`{\rm pipe} \, 2`.
 
-.. _continuity_pipes:
+.. _figure_continuity_pipes:
 .. figure:: Images/continuity_pipes.png
     :width: 700px
     :align: center
@@ -93,13 +93,13 @@ An example of changing flow geometries is when a change in pipe size occurs in a
     Flow going from a small diameter pipe to a large one. The continuity principle states that the flow through each pipe must be the same.
 
 
-.. _laminar_and_turbulent_flow:
+.. _heading_laminar_and_turbulent_flow:
 
 Laminar and Turbulent Flow
 ---------------------------
 Considering that this class deals with the flow of water through a water treatment plant, understanding the characteristics of the flow is very important. Thus, it is necessary to understand the most common characteristic of fluid flow: whether it is **laminar** or **turbulent**     . `Laminar <https://en.wikipedia.org/wiki/Laminar_flow>`_ flow is very smooth and highly ordered. `Turbulent <https://en.wikipedia.org/wiki/Turbulence>`_ flow is chaotic, messy, and disordered. The best way to understand each flow and what it looks like is visually, like in the wikipedia figure below `or in this video <https://youtu.be/qtvVN2qt968?t=131>`_. Please ignore the part of the video after the image of the tap.
 
-.. _wikipedia_laminar_turbulent:
+.. _figure_wikipedia_laminar_turbulent:
 .. figure:: Images/Wikipedia_laminar_turbulent.png
     :width: 400px
     :align: center
@@ -137,7 +137,7 @@ Here are other commonly used forms of the Reynolds number equation *for circular
 .. note:: **Definition of Flow Regimes:** Laminar and turbulent flow are described as two different **flow regimes**. When there is a characteristic of flow and different categories of the characteristic, each category is referred to as a flow regime. For example, the Reynolds number describes a flow characteristic, and its categories, referred to as flow regimes, are laminar or turbulent.
 
 
-.. _streamlines_and_control_volumes:
+.. _heading_streamlines_and_control_volumes:
 
 Streamlines and Control Volumes
 --------------------------------
@@ -147,7 +147,7 @@ Imagine water flowing through a pipe. A streamline is the path that a particle w
 
 A **control volume** is just an imaginary 3-dimensional shape in space. Its boundaries can be placed anywhere by the person applying the control volume, and once set the boundaries remain fixed in space over time. These boundaries are usually chosen to compare two relevant surfaces to each other. These surfaces are called *Control Surfaces*. The entirety of a control volume is usually not shown, as it is often unnecessary. This is demonstrated in the following image:
 
-.. _control_volume_simplification:
+.. _figure_control_volume_simplification:
 .. figure:: Images/control_volume_simplification.png
     :width: 650px
     :align: center
@@ -157,7 +157,7 @@ A **control volume** is just an imaginary 3-dimensional shape in space. Its boun
 
 .. important:: Many images will be used over the course of this class to show hydraulic systems. A standardized system of lines will be used throughout them all to distinguish reference elevations from control volumes from streamlines. This system is described in the image below.
 
-.. _image_control_volumes:
+.. _figure_image_control_volumes:
 .. figure:: Images/image_control_volumes.png
     :width: 650px
     :align: center
@@ -167,14 +167,14 @@ A **control volume** is just an imaginary 3-dimensional shape in space. Its boun
 
 
 
-.. _bernoulli_and_energy_equations:
+.. _heading_bernoulli_and_energy_equations:
 
 The Bernoulli and Energy Equations
 ==================================
 As explained in almost every fluid mechanics class, the Bernoulli and energy equations are incredibly useful in understanding the transfer of the fluid’s energy throughout a streamline or through a control volume. The Bernoulli equation applies to two different points along one streamline, whereas the energy equation applies to fluid entering and exiting a control volume. The energy of a fluid has three forms: pressure, potential (deriving from elevation), and kinetic (deriving from velocity).
 
 
-.. _bernoulli_equation:
+.. _heading_bernoulli_equation:
 
 The Bernoulli Equation
 ----------------------
@@ -199,7 +199,7 @@ There are two important distinctions to keep in mind when using head to talk abo
 
 Going back to the Bernoulli equation, the :math:`\frac{p}{\rho g}` term is called the pressure head, :math:`z` is called the elevation head, and :math:`\frac{v^2}{2g}` is the velocity head. The following diagram shows these various forms of head via a 1 meter deep bucket (left) and a jet of water shooting out of the ground (right).
 
-.. _different_forms_of_head:
+.. _figure_different_forms_of_head:
 .. figure:: Images/different_forms_of_head.png
     :width: 650px
     :align: center
@@ -216,7 +216,7 @@ Example problems
 `Here is a simple worksheet with very straightforward example problems using the Bernoulli equation. <https://www.teachengineering.org/content/cub_/lessons/cub_bernoulli/cub_bernoulli_lesson01_bepworksheetas_draft4_tedl_dwc.pdf>`_ Note that the solutions use the pressure-form of the Bernoulli equation. This just means that every term in the equation is multiplied by :math:`\rho g`, so the pressure term is just :math:`P`. The form of the equation does not affect the solution to the problem it helps solved.
 
 
-.. _energy_equation:
+.. _heading_energy_equation:
 
 The Energy Equation
 -------------------
@@ -236,14 +236,14 @@ You’ll also notice the :math:`\alpha` term attached to the velocity head. This
 
 
 
-.. _headloss:
+.. _heading_headloss:
 
 Headloss
 =========
 **Head(L)oss**, :math:`h_L` is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through space. There are two components to headloss: major losses caused by (f)riction between the fluid the surface it's flowing over, :math:`h_{\rm{f}}`, and minor losses caused by fluid-fluid internal friction resulting from flow (e)xpansions, :math:`h_e`. These two components combine such that :math:`h_L = h_{\rm{f}} + h_e`.
 
 
-.. _major_losses:
+.. _heading_major_losses:
 
 Major Losses
 -------------
@@ -314,11 +314,11 @@ To form the `Hagen-Poiseuille equation <https://en.wikipedia.org/wiki/Hagen%E2%8
 
     h_{\rm{f}} = \frac{32\nu L\bar v}{ g D^2}
 
-The significance of this equation lies in its relationship between :math:`h_{\rm{f}}` and :math:`Q`. Hagen-Poiseuille shows that the terms are directly proportional (:math:`h_{\rm{f}} \propto Q`) during laminar flow, while Darcy-Weisbach shows that :math:`h_{\rm{f}}` grows with the square of :math:`Q` during turbulent flow (:math:`h_{\rm{f}} \propto Q^2`). As you will soon see, minor losses, :math:`h_e`, will grow with the square of :math:`Q` in both laminar and turbulent flow. This has implications that will be discussed in a future chapter: :ref:`flow_control_design`.
+The significance of this equation lies in its relationship between :math:`h_{\rm{f}}` and :math:`Q`. Hagen-Poiseuille shows that the terms are directly proportional (:math:`h_{\rm{f}} \propto Q`) during laminar flow, while Darcy-Weisbach shows that :math:`h_{\rm{f}}` grows with the square of :math:`Q` during turbulent flow (:math:`h_{\rm{f}} \propto Q^2`). As you will soon see, minor losses, :math:`h_e`, will grow with the square of :math:`Q` in both laminar and turbulent flow. This has implications that will be discussed in a future chapter: :ref:`title_flow_control_design`.
 
 In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gathered by many people, on the Darcy-Weisbach friction factor to create what we now call the `Moody diagram <https://en.wikipedia.org/wiki/Moody_chart>`_. This diagram has makes it easy to find the friction factor :math:`f`. :math:`\rm{f}` is plotted on the left-hand y-axis, relative pipe roughness :math:`\frac{\epsilon}{D}` is on the right-hand y-axis, and Reynolds number :math:`\rm{Re}` is on the x-axis. The Moody diagram is an alternative to computational methods for finding :math:`\rm{f}`.
 
-.. _moody:
+.. _figure_moody:
 .. figure:: Images/Moody.jpg
     :width: 650px
     :align: center
@@ -327,13 +327,13 @@ In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gat
     This is the famous and famously useful Moody diagram.
 
 
-.. _minor_losses:
+.. _heading_minor_losses:
 
 Minor Losses
 -------------
 Unfortunately, there is no simple ‘pushing a box across the ground’ example to explain minor losses. So instead, consider a `hydraulic jump <https://www.youtube.com/watch?v=5spXXZX55C8>`_. In the video, you can see lots of turbulence and eddies in the transition region between the fast, shallow flow and the slow, deep flow. The high amount of mixing of the water in the transition region of the hydraulic jump results in significant friction *between water and water*. This turbulent, eddy-induced, fluid-fluid friction results in  minor losses, much like fluid-pipe friction results in major losses.
 
-As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: **minor losses are caused by flow expansions**. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in :numref:`minor_loss_pipe_FRD` below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: :ref:`fluids_review_derivations`.
+As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: **minor losses are caused by flow expansions**. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in :numref:`figure_minor_loss_pipe_FRD` below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: :ref:`title_fluids_review_derivations`.
 
 There are three forms of the minor loss equation that you will see in this class:
 
@@ -360,7 +360,7 @@ There are three forms of the minor loss equation that you will see in this class
 
 .. seealso:: **Function in aide_design:** ``pc.headloss_exp(FlowRate, Diam, KMinor)`` Returns :math:`h_e`. Uses third form, :math:`K_e`.
 
-.. _minor_loss_pipe_FRD:
+.. _figure_minor_loss_pipe_FRD:
 .. figure:: Images/minor_loss_pipe.png
     :width: 650px
     :align: center
@@ -373,7 +373,7 @@ The second and third forms are the ones which you are probably most familiar wit
 If you have taken CEE 3310, you have seen tables of minor loss coefficients `like this
 one <https://www.engineeringtoolbox.com/minor-loss-coefficients-pipes-d_626.html>`_, and they almost all have coefficients greater than 1. This implies that these tables use the third form of the minor loss equation as we have defined it, where the velocity is :math:`\bar v_{out}`. There is a good reason for using the third form over the second one: :math:`\bar v_{out}` is far easier to determine than :math:`\bar v_{in}`. Consider flow through a pipe elbow, as shown in the image below.
 
-.. _minor_loss_elbow:
+.. _figure_minor_loss_elbow:
 .. figure:: Images/minor_loss_elbow.png
     :width: 650px
     :align: center
@@ -392,7 +392,7 @@ In order to find :math:`\bar v_{out}`, we first need to know what (or where) is 
 .. note:: When considering a hydraulic system within a control volume, there can be many sources of minor losses. Instead of saying :math:`h_e = K_1 \frac{\bar v_{out}^2}{2g} + K_2 \frac{\bar v_{out}^2}{2g} + ...` we can simply lump all of the minor loss coefficients into one: :math:`\sum K = K_1 + K_2 + ...`. Thus, it is also common to see this form of the minor loss equation when finding the minor loss across control volumes: :math:`\sum K \frac{v_{out}^2}{2g}`.
 
 
-.. _head_loss_elevation_difference_trick:
+.. _heading_head_loss_elevation_difference_trick:
 
 Head Loss = Elevation Difference Trick
 --------------------------------------
@@ -400,7 +400,7 @@ This trick, also called the ‘control volume trick,’ or more colloquially, th
 
 Consider the following figure:
 
-.. _head_loss_trick:
+.. _figure_head_loss_trick:
 .. figure:: Images/head_loss_trick.png
     :width: 650px
     :align: center
@@ -453,7 +453,7 @@ This last step incorporated the kinetic energy term of the energy equation, :mat
 By applying the headloss trick, you are considering the entire flow of the fluid out of a control volume as energy lost via minor losses. This is just an algebraic trick, the only thing to remember when applying this trick is that :math:`\sum K` will always be at least 1, even if there are no ‘real’ minor losses in the system.
 
 
-.. _the_orifice_equation:
+.. _heading_the_orifice_equation:
 
 The Orifice Equation
 =====================
@@ -463,7 +463,7 @@ What is a Vena Contracta?
 ---------------------------
 Before describing the equation, we must first understand the concept of a `vena contracta <https://en.wikipedia.org/wiki/Vena_contracta>`_. Refer to the figure below.
 
-.. _sluice_gate_vena_contracta:
+.. _figure_sluice_gate_vena_contracta:
 .. figure:: Images/sluice_gate_vena_contracta.png
     :width: 650px
     :align: center
@@ -489,7 +489,7 @@ Origin of the Orifice Equation
 ---------------------------------
 The orifice equation is derived from the Bernoulli equation as applied to the purple points in the following image:
 
-.. _hole_in_a_bucket:
+.. _figure_hole_in_a_bucket:
 .. figure:: Images/hole_in_a_bucket.png
     :width: 650px
     :align: center
@@ -527,7 +527,7 @@ Which, rearranged to solve for :math:`Q` gives **The Orifice Equation:**
 
 There are two configurations for an orifice in the tank holding a fluid: horizontal and vertical. These are both displayed in the figure below. The orifice equation written is for a horizontal orifice; the equation for flow through vertical orifice equation requires integration or the orifice equation across its height to return the correct flow. This is explored in the Flow Control and Measurement Examples section.
 
-.. _vertical_and_horizontal_orifices:
+.. _figure_vertical_and_horizontal_orifices:
 .. figure:: Images/vertical_and_horizontal_orifices.png
     :width: 650px
     :align: center
@@ -536,7 +536,7 @@ There are two configurations for an orifice in the tank holding a fluid: horizon
     The descriptions 'vertical' and 'horizontal' **apply to the orientation of the orifices,** not to the orientation of the fluid coming out of the orifices.
 
 
-.. _FR_section_summary:
+.. _heading_FR_section_summary:
 
 Section Summary
 ================
@@ -637,7 +637,7 @@ Section Summary
 
 5. **Major and minor losses vary with flow:** While it is generally important to know how increasing or decreasing flow will affect headloss, it is even more important for this class to understand exactly how flow will affect headloss. As the table below shows, headloss will always be proportional to flow squared during turbulent flow. During laminar flow, however, the exponent on :math:`Q` will be between 1 and 2 depending on the proportion of major to minor losses.
 
-.. _h_Q_proportionality:
+.. _table_h_Q_proportionality:
 .. csv-table:: Proportionality between head loss :math:`h_L` and flow rate :math:`Q` for different flow regimes and types of head loss.
   :header: :math:`h_L \propto Q^?`, "Major Losses", "Minor Losses"
   :widths: 10, 10, 10

@@ -1,4 +1,4 @@
-.. _flow_control_derivations:
+.. _title_flow_control_derivations:
 
 ******************************************
 Flow Control and Measurement Derivations
@@ -6,13 +6,13 @@ Flow Control and Measurement Derivations
 
 
 
-.. _flow_for_a_tank_with_a_valve:
+.. _heading_flow_for_a_tank_with_a_valve:
 
 :math:`Q(t)` for a Tank with a Valve
 ======================================
 This document contains the derivation of the flow through a tank-with-a-valve over time, :math:`Q(t)`. Our reference will be a simple hypochlorinator, shown in the following image. In the image, a hypochlorite solution is slowly dripping and mixing with piped source water, thereby disinfecting it. The valve is almost closed to make sure that the hypochlorite solution drips instead of flows. At the end of this document is an image which shows the variables in the final equation.
 
-.. _drip_hypochlorinator:
+.. _figure_drip_hypochlorinator:
 .. figure:: Images/drip_hypochlorinator.png
     :width: 600px
     :align: center
@@ -36,7 +36,7 @@ Our other equation for flow is the head loss equation. Since major losses are ne
 
     h = h_e = \left( \sum K \right) \frac{Q^2}{2gA_{Valve}^2}
 
-Bear in mind that this is the second form of the minor loss equation as described in :ref:`final_minor_loss_equations`. Rearranging the minor loss equation to solve for :math:`Q`, it looks like this:
+Bear in mind that this is the second form of the minor loss equation as described in :ref:`this derivation <heading_final_minor_loss_equations>`. Rearranging the minor loss equation to solve for :math:`Q`, it looks like this:
 
 .. math::
 
@@ -105,7 +105,7 @@ This equation describes draining all the hypochlorite solution from the tank. Th
 
 Here lies another common source of confusion. :math:`h_{Tank}` is not the same as :math:`h_{0}`. :math:`h_{Tank}` is the height of water level in the tank with reference to the tank bottom. :math:`h_{0}` is the water level in the tank with reference to the valve. Therefore, :math:`h_{0} \geq h_{Tank}` is true if the valve is located at or below the bottom of the tank. If the tank is elevated far above the valve, then the :math:`h_{0} > > h_{Tank}`. If the valve is at the same elevation as the bottom of the tank, then :math:`h_{0} = h_{Tank}`. Please refer to the following image to clarify :math:`h_{0}` and :math:`h_{Tank}`. Also note that both :math:`h_{Tank}` and :math:`h_{0}` are not variables, they are constants which are defined by the initial state of the hypochlorinator, when the solution just begins to flow.
 
-.. _hypochlorinator_variable_explanation:
+.. _figure_hypochlorinator_variable_explanation:
 .. figure:: Images/hypochlorinator_variable_explanation.png
     :width: 600px
     :align: center
@@ -141,7 +141,7 @@ Which can be slightly rearranged to yield:
 
 
 
-.. _diameter_and_time_tank_drain_equation:
+.. _heading_diameter_and_time_tank_drain_equation:
 
 :math:`D(t)` and :math:`t(D)` for Tank Drain Equation
 =========================================================
@@ -149,7 +149,7 @@ This document contains the derivation of :math:`D_{Pipe}`, which is the pipe dia
 
 First, it is necessary to understand how AguaClara tank drains work and what they look like. Many tanks, including the flocculator and entrance tank, have a hole in their bottoms which are fitted with `pipe couplings <https://www.mrpoolman.com.au/assets/thumbL/16057.jpg>`_. During normal operation, these couplings have pipe stubs in them, and the pipe stubs are tall enough to go above the water level in the tank and not allow water to flow into the drain. When the pipe stub is removed, the water begins to flow out of the drain, as the image below indicates. The drain pipe consists of pipe and one elbow, shown in the image.
 
-.. _pipe_stub_drainage:
+.. _figure_pipe_stub_drainage:
 .. figure:: Images/pipe_stub_drainage.png
     :width: 600px
     :align: center
@@ -159,7 +159,7 @@ First, it is necessary to understand how AguaClara tank drains work and what the
 
 While AguaClara sedimentation tanks use valves instead of pipe to begin the process of draining, the actual drain piping system is the same, pipe and an elbow. The equation that will soon be derived applies to both pipe stub and valve drains.
 
-We will start the derivation from the following equation, which is found in an intermediate step from the ':math:`Q(t)` :ref:`flow_for_a_tank_with_a_valve`.' While this system does not have a valve, it has other sources of minor loss and therefore the equation is still valid.
+We will start the derivation from the following equation, which is found in an intermediate step from the ':math:`Q(t)` :ref:`heading_flow_for_a_tank_with_a_valve`.' While this system does not have a valve, it has other sources of minor loss and therefore the equation is still valid.
 
 .. math::
 
@@ -199,7 +199,7 @@ We can also easily rearrange to find the time required to drain a tank given a d
 
 Such that the variables are as the appear in the image below.
 
-.. _pipe_stub_drainage_variables:
+.. _figure_pipe_stub_drainage_variables:
 .. figure:: Images/pipe_stub_drainage_variables.png
     :width: 600px
     :align: center
@@ -209,7 +209,7 @@ Such that the variables are as the appear in the image below.
 
 
 
-.. _design_equations_for_the_cdc:
+.. _heading_design_equations_for_the_cdc:
 
 Design Equations for the Linear Chemical Dose Controller (CDC)
 ===============================================================
@@ -219,7 +219,7 @@ We will use the ‘head loss trick’ that was introduced in the Fluids Review s
 
 .. note:: There are a lot of equations in this section, and they may quickly get confusing. They are color coded in an attempt to make them easier to follow. There are two final design equations: :math:`\color{purple}{\bar v_{Max}}` and math:`\color{purple}{L_{Min}}`, and they will be written in :math:`\color{purple}{\rm{purple \, text \, coloring}}` to make them noticeable.
 
-.. _cdc_derivation:
+.. _figure_cdc_derivation:
 .. figure:: Images/CDC_derivation.png
     :width: 600px
     :align: center
@@ -228,7 +228,7 @@ We will use the ‘head loss trick’ that was introduced in the Fluids Review s
     Visual representation of CDC.
 
 
-.. _cdc_design_equation_derivations:
+.. _heading_cdc_design_equation_derivations:
 
 CDC Design Equation Derivation
 -------------------------------
@@ -286,7 +286,7 @@ This equation is not linear with respect to flow. We can make it linear by turni
 
 Here is a plot of the three colored equations above. Our goal is to minimize the minor losses in the system; to bring the red and blue curves as close as possible to the green one.
 
-.. _CDC_linearity_model:
+.. _figure_CDC_linearity_model:
 .. figure:: Images/CDC_linearity_model.png
     :width: 600px
     :align: center
@@ -396,7 +396,7 @@ If you decrease the max flow :math:`Q_{Max}` and hold :math:`h_{L_{Max}}` consta
 
 To visualize the distinction between :math:`\color{red}{  L_{Min, \, \Pi_{Error}}}` and math:`\color{green}{ L_{Min, \, head loss}}`, see the following plot. :math:`\color{green}{ L_{Min, \, head loss}}` is discontinuous because it takes in the smallest allowable tube diameter as an input. As the chemical flow rate through the dosing tube(s) decreases, the dosing tube diameter does as well. Whenever you see a jump in the green points, that means the tubing diameter has changed.
 
-.. _CDC_length_model:
+.. _figure_CDC_length_model:
 .. figure:: Images/CDC_length_model.png
     :width: 600px
     :align: center
@@ -449,7 +449,7 @@ To get:
 
 Combined with the discrete amount of tubing sizes (shown in dark green), we can create a graph of the three diameter constraints:
 
-.. _CDC_diameter_model:
+.. _figure_CDC_diameter_model:
 .. figure:: Images/CDC_diameter_model.png
     :width: 600px
     :align: center
