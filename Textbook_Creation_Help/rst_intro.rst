@@ -11,7 +11,7 @@ Introduction to RST and Sphinx for Textbook Contributors
 What is RST?
 ============
 
-RST stands for ReStructured Text. It is the standard markup language used for documenting python packages. Sphinx_ is the Python package that generates an html website from RST files, and it is what we are using to generate this site. To read more about why we chose RST over markdown or Latex, read the following section, `why_rst`_.
+RST stands for ReStructured Text. It is the standard markup language used for documenting python packages. Sphinx_ is the Python package that generates an html website from RST files, and it is what we are using to generate this site. To read more about why we chose RST over markdown or Latex, read the following section, :ref:`heading_why_rst`.
 
 
 .. _heading_why_rst:
@@ -55,7 +55,7 @@ Publishing Online
 -----------------
 We use Travis_ to ensure this site will always contain functional builds. To publish online, you need to:
 
-#. Always test your build by first building_rst_locally_, and then following the testing_online_ instructions. Once you like how your build looks, follow the steps below to introduce it into the master branch.
+#. Always test your build by first :ref:` building RST locally <heading_building_rst_locally>`, and then following the :ref:`testing online <heading_testing_online>` instructions. Once you like how your build looks, follow the steps below to introduce it into the master branch.
 #. Submit a `pull request to master <https://github.com/AguaClara/Textbook/pulls>`_. You'll need to ask for someone else to review your work at this stage- "request reviewers". Every pull request **must** be reviewed by at least one other person.
 #.  Travis_ will build the site using Sphinx_, and if there aren't any errors, Travis will report success to GitHub on the "checks" part of the pull request.
 #. All your requested reviewers must now approve and comment on  your commit before the merge is allowed.
@@ -83,7 +83,7 @@ To test exactly what will be published, we have a test branch. The test branch i
 
 Sharing Test Output
 --------------------
-if you want to share what your latest branch developments look like without having whoever is viewing it actually have to build it, you can push a commit, and find the `rawgit URL with this site <https://rawgit.com/>`_ by entering the URL of the git file within the test branch that you'd like to share. Furthermore, if you want to point to the commit so that even if someone else pushes, the URL will still point to the code you intend it to, make sure to include the commit SHA within the rawgit URL like so: https://rawgit.com/AguaClara/Textbook/e5693e0485702b95e11d4d6bdf76d07c42fdbf99/html/index.html. That link will never change where it is pointing. To share the PDF output, follow the testing_online_ instructions to build the PDF, and point to the commit with the PDF. Happy testing!
+if you want to share what your latest branch developments look like without having whoever is viewing it actually have to build it, you can push a commit, and find the `rawgit URL with this site <https://rawgit.com/>`_ by entering the URL of the git file within the test branch that you'd like to share. Furthermore, if you want to point to the commit so that even if someone else pushes, the URL will still point to the code you intend it to, make sure to include the commit SHA within the rawgit URL like so: https://rawgit.com/AguaClara/Textbook/e5693e0485702b95e11d4d6bdf76d07c42fdbf99/html/index.html. That link will never change where it is pointing. To share the PDF output, follow the :ref:`testing online <heading_testing_online>` instructions to build the PDF, and point to the commit with the PDF. Happy testing!
 
 
 .. _heading_brief_best_practices:
@@ -97,12 +97,11 @@ When writing RST, there are often many ways to write the same thing. Almost alwa
 
 How do I write RST?
 -------------------
-RST is friendly to learn and powerful. There are many useful cheatsheets, like `this one <https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks>`_ and the next page on this site: :ref:`example_aguaclara_rst`, which is specifically for AguaClara and this textbook project. When you start writing RST, look at the cheat sheets all the time. Use :code:`ctrl-f` all the time to find whatever you need.
+RST is friendly to learn and powerful. There are many useful cheatsheets, like `this one <https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks>`_ and the next page on this site: :ref:`Functionality in RST and AguaClara Convention <title_aguaclara_rst_convention>`, which is specifically for AguaClara and this textbook project. When you start writing RST, look at the cheat sheets all the time. Use :code:`ctrl-f` all the time to find whatever you need.
 
 **Things not covered in most cheat sheets which are of critical importance:**
 
 * A document is referred to by its title, as defined between the ``*****`` signs at the top of the page, **NOT** the filename. So it is critical to have a title.
-* In addition to a title, every RST document in this book should have a refernce so that it can be linked to in other, external documents. If you view the source code of this document and scroll to the top, you'll see this document is labeled as ``rst_intro`` with the following code ``.. _rst_intro``. Call this document in another textbook RST file with ``:ref:`rst_intro```
 * Anything else you'd like to add for the future...
 
 
@@ -112,7 +111,7 @@ Example to Start From
 ---------------------
 This file is written in RST. You can start there! Just click on "View page source" at the top of the page.
 
-Also, the next page is specifies convention where we document all AguaClara best practices: :ref:`example_aguaclara_rst`. I recommend looking at the raw RST and the rendered html side by side.
+Also, the next page contains the convention, and is where we specify all AguaClara RST best practices: :ref:`Functionality in RST and AguaClara Convention <title_aguaclara_rst_convention>`. I recommend looking at the raw RST and the rendered html side by side.
 
 
 

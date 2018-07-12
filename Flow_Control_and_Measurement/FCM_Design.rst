@@ -161,7 +161,7 @@ The CDC makes it easy and accurate to dose chemicals. The flow of chemicals auto
 
 How it works
 ^^^^^^^^^^^^^^^^
-A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: :ref:`design_equations_for_the_cdc`, and you are very, very strongly encouraged to read them.
+A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: :ref:`heading_design_equations_for_the_cdc`, and you are very, very strongly encouraged to read them.
 
 The CDC can be designed manually using the equations from the derivation linked above or via aide_design, using the equations found in `cdc_functions.py <https://github.com/AguaClara/aide_design/blob/master/aide_design/cdc_functions.py>`_. Either way, the design algorithm is roughly the same:
 

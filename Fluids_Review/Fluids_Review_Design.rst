@@ -20,7 +20,7 @@ Important Terms and Equations
 #. :ref:`Viscosity <viscosity_target>`
 #. :ref:`Streamline <heading_streamlines_and_control_volumes>`
 #. :ref:`Control Volume <heading_streamlines_and_control_volumes>`
-#. :ref:`Head <heading_hydraulic_head>`
+#. :ref:`Head <hydraulic_head>`
 #. Head loss
 #. Driving head
 #. Vena Contracta/Coefficient of Contraction
@@ -314,7 +314,7 @@ To form the `Hagen-Poiseuille equation <https://en.wikipedia.org/wiki/Hagen%E2%8
 
     h_{\rm{f}} = \frac{32\nu L\bar v}{ g D^2}
 
-The significance of this equation lies in its relationship between :math:`h_{\rm{f}}` and :math:`Q`. Hagen-Poiseuille shows that the terms are directly proportional (:math:`h_{\rm{f}} \propto Q`) during laminar flow, while Darcy-Weisbach shows that :math:`h_{\rm{f}}` grows with the square of :math:`Q` during turbulent flow (:math:`h_{\rm{f}} \propto Q^2`). As you will soon see, minor losses, :math:`h_e`, will grow with the square of :math:`Q` in both laminar and turbulent flow. This has implications that will be discussed in a future chapter: :ref:`flow_control_design`.
+The significance of this equation lies in its relationship between :math:`h_{\rm{f}}` and :math:`Q`. Hagen-Poiseuille shows that the terms are directly proportional (:math:`h_{\rm{f}} \propto Q`) during laminar flow, while Darcy-Weisbach shows that :math:`h_{\rm{f}}` grows with the square of :math:`Q` during turbulent flow (:math:`h_{\rm{f}} \propto Q^2`). As you will soon see, minor losses, :math:`h_e`, will grow with the square of :math:`Q` in both laminar and turbulent flow. This has implications that will be discussed in a future chapter: :ref:`title_flow_control_design`.
 
 In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gathered by many people, on the Darcy-Weisbach friction factor to create what we now call the `Moody diagram <https://en.wikipedia.org/wiki/Moody_chart>`_. This diagram has makes it easy to find the friction factor :math:`f`. :math:`\rm{f}` is plotted on the left-hand y-axis, relative pipe roughness :math:`\frac{\epsilon}{D}` is on the right-hand y-axis, and Reynolds number :math:`\rm{Re}` is on the x-axis. The Moody diagram is an alternative to computational methods for finding :math:`\rm{f}`.
 
@@ -333,7 +333,7 @@ Minor Losses
 -------------
 Unfortunately, there is no simple ‘pushing a box across the ground’ example to explain minor losses. So instead, consider a `hydraulic jump <https://www.youtube.com/watch?v=5spXXZX55C8>`_. In the video, you can see lots of turbulence and eddies in the transition region between the fast, shallow flow and the slow, deep flow. The high amount of mixing of the water in the transition region of the hydraulic jump results in significant friction *between water and water*. This turbulent, eddy-induced, fluid-fluid friction results in  minor losses, much like fluid-pipe friction results in major losses.
 
-As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: **minor losses are caused by flow expansions**. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in :numref:`minor_loss_pipe_FRD` below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: :ref:`fluids_review_derivations`.
+As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: **minor losses are caused by flow expansions**. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in :numref:`figure_minor_loss_pipe_FRD` below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: :ref:`title_fluids_review_derivations`.
 
 There are three forms of the minor loss equation that you will see in this class:
 
