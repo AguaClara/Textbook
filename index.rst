@@ -33,11 +33,11 @@ This is a place holder for 'Chapter 1: Introduction' files
 
 
 .. toctree::
-   :caption: Chapter 2: Fluids Review
+   :caption: Chapter 1.1: Review: Fluid Mechanics and Python
    :maxdepth: 1
 
-   Fluids_Review/Fluids_Review_Design.rst
-   Fluids_Review/Fluids_Review_Derivations.rst
+   Review/Review_Fluid_Mechanics.rst
+   Review/Review_Fluid_Mechanics_Derivations.rst
 
 
 .. toctree::
