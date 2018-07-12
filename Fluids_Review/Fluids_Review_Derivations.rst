@@ -1,4 +1,4 @@
-.. _fluids_review_derivations:
+.. _title_fluids_review_derivations:
 
 ***************************************************
 Fluids Review Derivations
@@ -6,14 +6,14 @@ Fluids Review Derivations
 
 
 
-.. _minor_loss_equation_derivation:
+.. _heading_minor_loss_equation_derivation:
 
 Minor Loss Equation
 ====================
 This section contains the derivation of the minor loss equation using the following figure as a reference. The derivation begins with a slightly simplified energy equation across the control volume shown. Our energy equation begins with :math:`h_P` and :math:`h_T` having been
 eliminated.
 
-.. _minor_loss_pipe:
+.. _figure_minor_loss_pipe:
 .. figure:: Images/minor_loss_pipe.png
     :width: 700px
     :align: center
@@ -97,7 +97,7 @@ Now we will combine the two terms. The numerator and denominator of the first te
     h_e = \frac{\bar v_{out}^2 - 2 \bar v_{in} \bar v_{out} + \bar v_{in}^2}{2g}
 
 
-.. _final_minor_loss_equations:
+.. _heading_final_minor_loss_equations:
 
 Final Forms of the Minor Loss Equation
 -----------------------------------------
