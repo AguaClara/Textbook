@@ -1,4 +1,4 @@
-.. _rst_intro:
+.. _title_rst_intro:
 
 *********************************************************
 Introduction to RST and Sphinx for Textbook Contributors
@@ -6,7 +6,7 @@ Introduction to RST and Sphinx for Textbook Contributors
 
 
 
-.. _what_is_rst:
+.. _heading_what_is_rst:
 
 What is RST?
 ============
@@ -14,7 +14,7 @@ What is RST?
 RST stands for ReStructured Text. It is the standard markup language used for documenting python packages. Sphinx_ is the Python package that generates an html website from RST files, and it is what we are using to generate this site. To read more about why we chose RST over markdown or Latex, read the following section, `why_rst`_.
 
 
-.. _why_rst:
+.. _heading_why_rst:
 
 Why RST?
 --------
@@ -22,21 +22,21 @@ In the beginning, we used markdown. As we tried to add different features to mar
 
 
 
-.. _setting_up_rst:
+.. _heading_setting_up_rst:
 
 Setting up RST for Development
 ==============================
 There are two ways to *quickly* view an RST file. The first is using an Atom_ plugin that renders the view alongside the source code. This is a good initial test to make sure the RST is proper RST and looks *mostly* correct. However, some functionality, such as any extensions provided by Sphinx_ won't run in the preview. In order to see the final html that will display on the website, you'll need to use the second method, running sphinx locally to fully generate the html code. Once you are satisfied with your work and want to push it to the textbook, you'll need to incorporate it to the master branch. To do so, refer to `Publishing online`_.
 
 
-.. _installing_atom:
+.. _heading_installing_atom:
 
 Installing the Atom Plugins
 ---------------------------
 If you are using the Atom IDE to write RST, you can use the `rst-preview-pandoc <https://atom.io/packages/rst-preview-pandoc>`_ plugin to auto-generate a live RST preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview working, you'll need to install `language-restructuredtext <https://atom.io/packages/language-restructuredtext>`_ via atom and Pandoc_ via your command line (``pip install pandoc``). If everything worked, you can use ``ctrl + shift + e`` to toggle a display window for the live-updated RST preview.
 
 
-.. _building_rst_locally:
+.. _heading_building_rst_locally:
 
 Building RST Locally with Sphinx_
 ---------------------------------
@@ -49,7 +49,7 @@ We use Sphinx_ to build RST locally and remotely. Follow these steps to get Sphi
 .. note:: Regarding **1.** the master branch for the package implementing disqus in sphinx `is broken <https://github.com/Robpol86/sphinxcontrib-disqus/pull/7>`_, which is why we use a non-standard pip/online installation. If you already have the incorrect sphinx-disqus version installed, uninstall it with ``pip uninstall sphinxcontrib-disqus`` before installing the functioning version.
 
 
-.. _publishing_online:
+.. _heading_publishing_online:
 
 Publishing Online
 -----------------
@@ -68,7 +68,7 @@ We use Travis_ to ensure this site will always contain functional builds. To pub
 
 .. important:: If your changes to the master branch aren't pushing to gh-pages, then check the status of the `Travis build here <https://travis-ci.org/AguaClara/Textbook>`_.
 
-.. _testing_online:
+.. _heading_testing_online:
 
 Testing Online
 --------------
@@ -86,14 +86,14 @@ Sharing Test Output
 if you want to share what your latest branch developments look like without having whoever is viewing it actually have to build it, you can push a commit, and find the `rawgit URL with this site <https://rawgit.com/>`_ by entering the URL of the git file within the test branch that you'd like to share. Furthermore, if you want to point to the commit so that even if someone else pushes, the URL will still point to the code you intend it to, make sure to include the commit SHA within the rawgit URL like so: https://rawgit.com/AguaClara/Textbook/e5693e0485702b95e11d4d6bdf76d07c42fdbf99/html/index.html. That link will never change where it is pointing. To share the PDF output, follow the testing_online_ instructions to build the PDF, and point to the commit with the PDF. Happy testing!
 
 
-.. _brief_best_practices:
+.. _heading_brief_best_practices:
 
 Brief Best Practices
 ====================
 When writing RST, there are often many ways to write the same thing. Almost always, the way with the fewest number of characters is the best way. Ideally, never copy and paste.
 
 
-.. _how_do_i_write_rst:
+.. _heading_how_do_i_write_rst:
 
 How do I write RST?
 -------------------
@@ -106,7 +106,7 @@ RST is friendly to learn and powerful. There are many useful cheatsheets, like `
 * Anything else you'd like to add for the future...
 
 
-.. _Example_to_start_from:
+.. _heading_Example_to_start_from:
 
 Example to Start From
 ---------------------
@@ -116,7 +116,7 @@ Also, the next page is specifies convention where we document all AguaClara best
 
 
 
-.. _converting_md_to_rst:
+.. _heading_converting_md_to_rst:
 
 Converting Markdown to RST
 ==========================

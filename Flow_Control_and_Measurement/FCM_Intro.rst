@@ -1,17 +1,17 @@
-.. _flow_control_intro:
+.. _title_flow_control_intro:
 
 ********************************************
 Flow Control and Measurement Introduction
 ********************************************
 
 
-.. _tank_with_a_valve:
+.. _heading_tank_with_a_valve:
 
 Tank with a Valve
 ==================
 
 
-.. _qh_as_a_function_of_t:
+.. _heading_qh_as_a_function_of_t:
 
 Flow :math:`Q` and Water Level :math:`h` as a Function of Time
 ----------------------------------------------------------------
@@ -32,7 +32,7 @@ Using the setup of in the image below, we derive the following equation for flow
 | :math:`h_{Tank}` = elevation of water level with reference to tank bottom at time :math:`t` = 0
 | :math:`h_0` = elevation of water level with reference to the valve at time :math:`t = 0`
 
-.. _hypochlorinator_variable_explanation_design:
+.. _figure_hypochlorinator_variable_explanation_design:
 .. figure:: Images/hypochlorinator_variable_explanation.png
     :width: 600px
     :align: center
@@ -49,7 +49,7 @@ We can use the proportionality :math:`Q \propto \sqrt{h}`, which applies to both
 
 Using equation :eq:`Q_tank_with_valve` and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or :math:`h_{Tank} = h_0`. Our attempt to get a continuous flow rate out of this system is to make :math:`\frac{h_{Tank}}{h_0}` very small by elevating the tank far above the valve. On the right, :math:`\frac{h_{Tank}}{h_0} = \frac{1}{50}`. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.
 
-.. _tank_valve_play:
+.. _figure_tank_valve_play:
 .. figure:: Images/tank_valve_play.png
     :width: 600px
     :align: center
@@ -58,7 +58,7 @@ Using equation :eq:`Q_tank_with_valve` and this proportionality relationship, we
     These graphs show how manipulation of the variables in the :math:`Q(t)` expression can result in effectively constant head.
 
 
-.. _drain_system_for_a_tank:
+.. _heading_drain_system_for_a_tank:
 
 Drain System for a Tank
 ------------------------
@@ -80,7 +80,7 @@ The equation can also be rearranged to solve for the time it would take to drain
 | :math:`t_{Drain}` = Time it takes to drain the tank
 | :math:`\sum K` = Sum of all the minor loss coefficients in the system
 
-.. _pipe_stub_drainage_variables_in_derivation:
+.. _figure_pipe_stub_drainage_variables_in_derivation:
 .. figure:: Images/pipe_stub_drainage_variables.png
     :width: 600px
     :align: center

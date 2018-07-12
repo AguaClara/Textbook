@@ -1,4 +1,4 @@
-.. _flow_control_design:
+.. _title_flow_control_design:
 
 **************************************
 Flow Control and Measurement Design
@@ -9,7 +9,7 @@ The challenge of constant head in chemical dosing for water treatment plants is 
 
 
 
-.. _fcm_terms_eqs:
+.. _heading_fcm_terms_eqs:
 
 Important Terms and Equations
 ===============================
@@ -29,7 +29,7 @@ Important Terms and Equations
 
 
 
-.. _aguaclara_flow_control_and_measurement_technologies:
+.. _heading_aguaclara_flow_control_and_measurement_technologies:
 
 AguaClara Flow Control and Measurement Technologies
 =====================================================
@@ -45,7 +45,7 @@ Before diving into the technologies, recall the purpose of the chemicals that we
 .. important:: This section will often refer to the proportionality between flow :math:`Q` and head :math:`\Delta h` (recall that :math:`\Delta h = h_L` after applying the head loss trick) by using the ‘proportional to’ symbol, :math:`\propto`. It is important to remember that it doesn’t necessarily matter whether :math:`Q` or :math:`h_L` goes first, :math:`Q \propto \sqrt{h_L}` is equivalent to saying that :math:`h_L \propto Q^2`.
 
 
-.. _almost_linear_flow_controller:
+.. _heading_almost_linear_flow_controller:
 
 “Almost Linear” Flow Controller
 --------------------------------
@@ -76,7 +76,7 @@ Notes
 -  The tube connecting the CHT to the outlet of chemicals must really belong and, more importantly, **straight** to form a linear relationship between driving head and flow. This was not true for the “Almost Linear” Flow Controller. When you read about the Linear Chemical Flow Controller (CDC), you will be learning about the replacement to the “Almost Linear” Flow Controller’s replacement.
 
 
-.. _lfom:
+.. _heading_lfom:
 
 Linear Flow Orifice Meter (LFOM)
 --------------------------------
@@ -85,7 +85,7 @@ What it is
 ^^^^^^^^^^^^^^
 The LFOM is a weir shape cut into a pipe. It was meant to imitate `the Sutro Weir <http://www.nptel.ac.in/courses/105106114/pdfs/Unit14/14_3b.pdf>`_ while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix and flocculator.
 
-.. _sutro_v_lfom:
+.. _figure_sutro_v_lfom:
 .. figure:: Images/sutro_v_lfom.png
     :width: 600px
     :align: center
@@ -120,7 +120,7 @@ Notes
 -  If the water level exceeds the topmost row of the LFOM’s orifices, the linearity also breaks down. The entire LFOM begins to act like an orifice, the exponent of :math:`Q` in :math:`h \propto Q` becomes greater than 1. This is because the LFOM approaches orifice behavior, and for orifices, :math:`h \propto Q^2`.
 
 
-.. _linear_cdc:
+.. _heading_linear_cdc:
 
 Linear Chemical Dose Controller (CDC)
 ---------------------------------------
@@ -147,7 +147,7 @@ The CDC brings together the LFOM and many improvements to the “Almost Linear�
 
 4. The slider itself controls the dose of chemicals. For any given plant flow rate, the slider can be adjusted to increase or decrease the amount of chemical flowing through the plant.
 
-.. _cdc_labelled:
+.. _figure_cdc_labelled:
 .. figure:: Images/cdc_labelled.png
     :width: 600px
     :align: center
@@ -202,7 +202,7 @@ Nothing in life is perfect, and the CDC is no exception. It has a few causes of 
 
 
 
-.. _FCM_section_summary:
+.. _heading_FCM_section_summary:
 
 Section Summary
 ================
