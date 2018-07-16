@@ -77,8 +77,6 @@ One way that the relative size of particles is characterized is by describing th
 
 :math:`D_{10}` = the sieve size that passes 10% by mass of sand through
 
-and
-
 :math:`D_{60}` = the sieve sixe that passes 60% by mass of sand through
 
 :math:`D_{10}` is used for particle removal models, and :math:`D_{60}` is used for hydrualic modeling.
@@ -125,12 +123,12 @@ From this it becomes possible to directly relate porosity (as above) to the filt
 
 Headloss Requirements
 ======================
-One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen Pouseille equation (ref from elsewhere) describes the headloss through a clean bed during filtration
+One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen Pouseille equation (ref from elsewhere) describes the headloss through a clean bed during filtration.
 
 .. math::
   :label: karmen_kozeny_clean_bed
 
-  \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu V_{Fi}}{g D_{60}^2}
+    \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu V_{Fi}}{g D_{60}^2}
 
 | Such that:
 | :math:`h_l` = headloss in sand bed
@@ -213,6 +211,10 @@ This overall design can be seen in Figure XXXXX.
 (figure of the full system)
 
 Tasks for clare for Thursday + Friday morning: insert images! none of them are in yet. Save as pngs. streamline the way you want this to work as well. like overall structure
+
+In is most basic schema, the filter is a series of pipes leading into a deep box with 1.2 meters of sand (for most filters)
+
+As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter.
 
 
 
