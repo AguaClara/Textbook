@@ -66,19 +66,20 @@ In understading how sand filtration works, porosity is one of the most important
 
 Porosity is determined by the geometry of the material in the control volume, but also by the size of the particles involved. If you have three different sized spheres (such as .0um clay, .2mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.
 
-.. porosity image goes here! slide 1 in diagrams slide
+.. _figure_porosity:
+.. figure:: Images/figure_porosity.png
+    :align: center
+    :alt: This figure illustrates how different sized materials have the same total bulk porosity
+
+    Within each box, the spheres are different sizes. However the total porosity is the same. To minimize the pore space, the smaller particles could be used to fill the spore space between the larger particles, though in a filter this is not necessarily ideal.
 
 One way that the relative size of particles is characterized is by describing the size of the smallest 10% of grains, and the smallest 60% of grains. That is:
 
-.. math::
-  :label: D_10_sand
+:math:`D_{10}` = the sieve size that passes 10% by mass of sand through
 
-    \D_{10} = the sieve size that passes 10% by mass of the sand through
+and
 
-.. math::
-  :label: D_60_sand
-
-    \D_{60} = the sieve size that passes 60% by mass of the sand through
+:math:`D_{60}` = the sieve sixe that passes 60% by mass of sand through
 
 :math:`D_{10}` is used for particle removal models, and :math:`D_{60}` is used for hydrualic modeling.
 
@@ -150,7 +151,7 @@ The following equation describes the headloss through the fluidized bed:
 
 .. math::
   :label: headloss_fluidzed_bed
-  \frac{h_{l_{FiBw}}}{H_{FiSand}} = \left( 1 - \phi_{FiSand} \right)\left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
+    \frac{h_{l_{FiBw}}}{H_{FiSand}} = \left( 1 - \phi_{FiSand} \right)\left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 
 | Such that:
 | :math:`h_{l_{FiBw}` = the headloss in the fluidized bed
