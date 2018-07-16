@@ -2,11 +2,11 @@
 
 
 *************
-Filtration
+Filtration Design
 *************
 
 
-
+In its most basic form a sand filter is simply a bed of sand with water running through it. Though it is quite straightforward in goal, the filter is the most complex unit processes within an AguaClara plant. Considerations must be made for headloss and velocity constraints in addition to the added complextity of backwash.
 
 
 
@@ -214,7 +214,10 @@ Tasks for clare for Thursday + Friday morning: insert images! none of them are i
 
 In is most basic schema, the filter is a series of pipes leading into a deep box with 1.2 meters of sand (for most filters)
 
-As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter.
+As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter. These structures have slots which allow water out of the inlet pipes into the sand bed. Across a layer of sand from the inlet is an outlet pipe in the same shapes as the slotted pipe inlets. Water passes into the pipes and up to the fitler outlet box where it only needs to be chlorinated before being distributed.
+
+Steps of designing a filter.
+1.
 
 
 
