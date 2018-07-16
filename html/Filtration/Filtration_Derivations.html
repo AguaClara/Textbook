@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Filtration" href="Filtration_Design.html" />
-    <link rel="prev" title="Fluids Review Derivations" href="../Fluids_Review/Fluids_Review_Derivations.html" /> 
+    <link rel="next" title="Flow Control and Measurement Design" href="../Flow_Control_and_Measurement/FCM_Design.html" />
+    <link rel="prev" title="Filtration Design" href="Filtration_Design.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -92,8 +92,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Filtration Design</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Filtration Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Filtration</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
 <ul>
@@ -165,6 +165,44 @@
             
   <div class="section" id="filtration-derivations">
 <span id="title-filtration-derivations"></span><h1>Filtration Derivations<a class="headerlink" href="#filtration-derivations" title="Permalink to this headline">¶</a></h1>
+<p id="derivation-backwash-headloss-force-balance">To determine the head loss during backwash a force balance should be performed between the water and the sand per unit of filter area (thus pressure values will be yielded). A schematic for this system is shown below:</p>
+<div class="figure align-center" id="figure-force-balance">
+<a class="reference internal image-reference" href="../_images/figure_force_balance.png"><img alt="This figure is a simplified schematic of the filter force balance." src="../_images/figure_force_balance.png" style="width: 50%;" /></a>
+</div>
+<p>The pressure from the water:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-0">
+<span class="eqno">(79)<a class="headerlink" href="#equation-filtration-filtration-derivations-0" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}\]</div>
+<div class="line-block">
+<div class="line">Such that:</div>
+<div class="line"><span class="math notranslate nohighlight">\(P_{Manometer} =\)</span> total height from the bottom of the filter to the inlet box</div>
+<div class="line"><span class="math notranslate nohighlight">\(\rho_{Water} =\)</span> density of water</div>
+<div class="line"><span class="math notranslate nohighlight">\(H_{W_1} =\)</span> the distnace from the top of the settled sand bed to the water surface in the filter</div>
+<div class="line"><span class="math notranslate nohighlight">\(H_{W_2} =\)</span> the height of the water below the sand bed but within the filter</div>
+<div class="line"><span class="math notranslate nohighlight">\(\phi_{FiSand} =\)</span> porosity of sand</div>
+<div class="line"><span class="math notranslate nohighlight">\(H_{FiSand} =\)</span> height of the filter bed</div>
+<div class="line"><span class="math notranslate nohighlight">\(\rho_{Sand} =\)</span> density of sand</div>
+</div>
+<p>The pressure from the sand:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-1">
+<span class="eqno">(80)<a class="headerlink" href="#equation-filtration-filtration-derivations-1" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
+<div class="line-block">
+<div class="line">Such that:</div>
+<div class="line"><span class="math notranslate nohighlight">\(h_{l_{FiBw}} =\)</span> the difference in height of the inlet and water surface height during backwash; the backwash head loss</div>
+</div>
+<p>Setting them equal for a force balance:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-2">
+<span class="eqno">(81)<a class="headerlink" href="#equation-filtration-filtration-derivations-2" title="Permalink to this equation">¶</a></span>\[\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
+<p>Which simplifies to:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-3">
+<span class="eqno">(82)<a class="headerlink" href="#equation-filtration-filtration-derivations-3" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}
+or
+h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
+<p>This result gives a ratio of the head loss during backwash to the height difference during forward operation. With <span class="math notranslate nohighlight">\(\phi_{FiSand} = 0.4\)</span> and <span class="math notranslate nohighlight">\(\rho_{Sand} = 2650 kg/m^3\)</span> the value of this ratio is:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-4">
+<span class="eqno">(83)<a class="headerlink" href="#equation-filtration-filtration-derivations-4" title="Permalink to this equation">¶</a></span>\[\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\]</div>
+<p>Thus:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-5">
+<span class="eqno">(84)<a class="headerlink" href="#equation-filtration-filtration-derivations-5" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = H_{FiSand} * 0.99\]</div>
 </div>
 
 
@@ -175,10 +213,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Filtration_Design.html" class="btn btn-neutral float-right" title="Filtration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Flow_Control_and_Measurement/FCM_Design.html" class="btn btn-neutral float-right" title="Flow Control and Measurement Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../Fluids_Review/Fluids_Review_Derivations.html" class="btn btn-neutral" title="Fluids Review Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Filtration_Design.html" class="btn btn-neutral" title="Filtration Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

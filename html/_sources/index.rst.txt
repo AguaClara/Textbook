@@ -34,8 +34,9 @@ This is a place holder for 'Chapter 1: Introduction' files
   :caption: Chapter 8: Filtration
   :maxdepth: 2
 
-  Filtration/Filtration_Derivations.rst
   Filtration/Filtration_Design.rst
+  Filtration/Filtration_Derivations.rst
+
 
 .. toctree::
    :caption: Chapter 3: Flow Control and Measurement

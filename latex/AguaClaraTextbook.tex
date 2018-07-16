@@ -1403,11 +1403,10 @@ You will often see \(K_e^{'}\) and \(K_e\) used without the \(e\) subscript, the
 Being familiar with these three forms and how they are used will be of great help throughout the class. The third form is the one that is most commonly used.
 
 
-\chapter{Filtration Derivations}
-\label{\detokenize{Filtration/Filtration_Derivations:filtration-derivations}}\label{\detokenize{Filtration/Filtration_Derivations:title-filtration-derivations}}\label{\detokenize{Filtration/Filtration_Derivations::doc}}
+\chapter{Filtration Design}
+\label{\detokenize{Filtration/Filtration_Design:filtration-design}}\label{\detokenize{Filtration/Filtration_Design:title-filtration}}\label{\detokenize{Filtration/Filtration_Design::doc}}
+In its most basic form a sand filter is simply a bed of sand with water running through it. Though it is quite straightforward in goal, the filter is the most complex unit processes within an AguaClara plant. Considerations must be made for headloss and velocity constraints in addition to the added complextity of backwash.
 
-\chapter{Filtration}
-\label{\detokenize{Filtration/Filtration_Design:filtration}}\label{\detokenize{Filtration/Filtration_Design:title-filtration}}\label{\detokenize{Filtration/Filtration_Design::doc}}
 
 \section{Important Terms and Equations}
 \label{\detokenize{Filtration/Filtration_Design:important-terms-and-equations}}\label{\detokenize{Filtration/Filtration_Design:heading-filtration-terms}}
@@ -1576,11 +1575,67 @@ Tasks for clare for Thursday + Friday morning: insert images! none of them are i
 
 In is most basic schema, the filter is a series of pipes leading into a deep box with 1.2 meters of sand (for most filters)
 
-As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter.
+As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter. These structures have slots which allow water out of the inlet pipes into the sand bed. Across a layer of sand from the inlet is an outlet pipe in the same shapes as the slotted pipe inlets. Water passes into the pipes and up to the fitler outlet box where it only needs to be chlorinated before being distributed.
+
+Steps of designing a filter.
+1.
 
 
 \section{Siphon}
 \label{\detokenize{Filtration/Filtration_Design:siphon}}\label{\detokenize{Filtration/Filtration_Design:id1}}
+
+\chapter{Filtration Derivations}
+\label{\detokenize{Filtration/Filtration_Derivations:filtration-derivations}}\label{\detokenize{Filtration/Filtration_Derivations:title-filtration-derivations}}\label{\detokenize{Filtration/Filtration_Derivations::doc}}\phantomsection\label{\detokenize{Filtration/Filtration_Derivations:derivation-backwash-headloss-force-balance}}
+To determine the head loss during backwash a force balance should be performed between the water and the sand per unit of filter area (thus pressure values will be yielded). A schematic for this system is shown below:
+
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics[width=0.500\linewidth]{{figure_force_balance}.png}
+\label{\detokenize{Filtration/Filtration_Derivations:figure-force-balance}}\end{figure}
+
+The pressure from the water:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:0}
+\begin{split}P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}\end{split}
+\end{equation}
+\begin{DUlineblock}{0em}
+\item[] Such that:
+\item[] \(P_{Manometer} =\) total height from the bottom of the filter to the inlet box
+\item[] \(\rho_{Water} =\) density of water
+\item[] \(H_{W_1} =\) the distnace from the top of the settled sand bed to the water surface in the filter
+\item[] \(H_{W_2} =\) the height of the water below the sand bed but within the filter
+\item[] \(\phi_{FiSand} =\) porosity of sand
+\item[] \(H_{FiSand} =\) height of the filter bed
+\item[] \(\rho_{Sand} =\) density of sand
+\end{DUlineblock}
+
+The pressure from the sand:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:1}
+\begin{split}P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\end{split}
+\end{equation}
+\begin{DUlineblock}{0em}
+\item[] Such that:
+\item[] \(h_{l_{FiBw}} =\) the difference in height of the inlet and water surface height during backwash; the backwash head loss
+\end{DUlineblock}
+
+Setting them equal for a force balance:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:2}
+\begin{split}\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\end{split}
+\end{equation}
+Which simplifies to:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:3}
+\begin{split}h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}
+or
+h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\end{split}
+\end{equation}
+This result gives a ratio of the head loss during backwash to the height difference during forward operation. With \(\phi_{FiSand} = 0.4\) and \(\rho_{Sand} = 2650 kg/m^3\) the value of this ratio is:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:4}
+\begin{split}\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\end{split}
+\end{equation}
+Thus:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:5}
+\begin{split}h_{l_{FiBw}} = H_{FiSand} * 0.99\end{split}
+\end{equation}
 
 \chapter{Flow Control and Measurement Design}
 \label{\detokenize{Flow_Control_and_Measurement/FCM_Design:flow-control-and-measurement-design}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design:flow-control-design}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Design::doc}}
