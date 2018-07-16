@@ -30,7 +30,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Flow Control and Measurement Derivations" href="FCM_Derivations.html" />
-    <link rel="prev" title="Flow Control and Measurement Introduction" href="FCM_Intro.html" /> 
+    <link rel="prev" title="Filtration" href="../Filtration/Filtration_Design.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,16 +85,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 1.1: Review: Fluid Mechanics and Python</span></p>
+<p class="caption"><span class="caption-text">Chapter 2: Fluids Review</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Design.html">Fluids Review  Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_Review/Fluids_Review_Derivations.html">Fluids Review Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Flow Control and Measurement Design</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#important-terms-and-equations">Important Terms and Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tank-with-a-valve">Tank with a Valve</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flow-and-water-level-as-a-function-of-time">Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#drain-system-for-a-tank">Drain System for a Tank</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#aguaclara-flow-control-and-measurement-technologies">AguaClara Flow Control and Measurement Technologies</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#almost-linear-flow-controller">“Almost Linear” Flow Controller</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#what-it-is">What it is</a></li>
@@ -104,17 +113,17 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#linear-flow-orifice-meter-lfom">Linear Flow Orifice Meter (LFOM)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">What it is</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">What it does and why</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">How it works</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">Notes</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#linear-chemical-dose-controller-cdc">Linear Chemical Dose Controller (CDC)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id5">What it is</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id6">What it does and why</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id7">How it works</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id8">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#linear-chemical-dose-controller-cdc">Linear Chemical Dose Controller (CDC)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">What it is</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">What it does and why</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">How it works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">Notes</a></li>
 </ul>
 </li>
 </ul>
@@ -188,12 +197,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="flow-control-and-measurement-design">
-<span id="title-flow-control-design"></span><h1>Flow Control and Measurement Design<a class="headerlink" href="#flow-control-and-measurement-design" title="Permalink to this headline">¶</a></h1>
+<span id="flow-control-design"></span><h1>Flow Control and Measurement Design<a class="headerlink" href="#flow-control-and-measurement-design" title="Permalink to this headline">¶</a></h1>
 <p>This section explores AguaClara’s search for constant head in checmial dosing. The term <strong>constant head</strong> means that the driving head of a system, <span class="math notranslate nohighlight">\(\Delta z\)</span> or <span class="math notranslate nohighlight">\(\Delta h\)</span>, does not change over time, even as water flows through or out of the system. Constant head implies constant flow, since the energy driving the flow does not change.</p>
 <p>The challenge of constant head in chemical dosing for water treatment plants is not <em>just</em> providing one continuous flow of chemicals; it is also varying that flow of chemicals as the flow rate through the plant changes, so that the concentration of chemicals in the raw water stays the same.</p>
 <div class="section" id="important-terms-and-equations">
-<span id="heading-fcm-terms-eqs"></span><h2>Important Terms and Equations<a class="headerlink" href="#important-terms-and-equations" title="Permalink to this headline">¶</a></h2>
-<p><strong>Terms:</strong></p>
+<span id="fcm-terms-eqs"></span><h2>Important Terms and Equations<a class="headerlink" href="#important-terms-and-equations" title="Permalink to this headline">¶</a></h2>
+<p>Terms:</p>
 <ol class="arabic simple">
 <li>Dose</li>
 <li>Coagulant</li>
@@ -203,13 +212,67 @@
 <li>Constant Head Tank</li>
 <li>Sutro weir</li>
 </ol>
-<p><strong>Equations:</strong></p>
+<p>Equations:</p>
 <ol class="arabic simple">
 <li>Hagen-Poiseuille equation</li>
 </ol>
 </div>
+<div class="section" id="tank-with-a-valve">
+<span id="id1"></span><h2>Tank with a Valve<a class="headerlink" href="#tank-with-a-valve" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="flow-and-water-level-as-a-function-of-time">
+<span id="qh-as-a-function-of-t"></span><h3>Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time<a class="headerlink" href="#flow-and-water-level-as-a-function-of-time" title="Permalink to this headline">¶</a></h3>
+<p>Our first step is to see if we can get constant head out of a simple system. The most simple flow control system is a bucket or tank with a hole in it. This system is too coarse to provide constant head. One step above that is a bucket or tank with a valve. This is where we begin our search for constant head.</p>
+<p>Using the setup of in the image below, we derive the following equation for flow <span class="math notranslate nohighlight">\(Q\)</span> through the valve as a function of time <span class="math notranslate nohighlight">\(t\)</span>. The derivation is found here: <a class="reference internal" href="FCM_Derivations.html#flow-for-a-tank-with-a-valve"><span class="std std-ref"> for a Tank with a Valve</span></a>. You are advised to read through it if you are at all confused about this equation.</p>
+<div class="math notranslate nohighlight" id="equation-q-tank-with-valve">
+<span class="eqno">(79)<a class="headerlink" href="#equation-q-tank-with-valve" title="Permalink to this equation">¶</a></span>\[  \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
+<div class="line-block">
+<div class="line">Such that:</div>
+<div class="line"><span class="math notranslate nohighlight">\(Q\)</span> = <span class="math notranslate nohighlight">\(Q(t)\)</span> = flow of hypochlorite through valve at time <span class="math notranslate nohighlight">\(t\)</span></div>
+<div class="line"><span class="math notranslate nohighlight">\(Q_0\)</span> = flow of hypochlorite through valve at time <span class="math notranslate nohighlight">\(t = 0\)</span></div>
+<div class="line"><span class="math notranslate nohighlight">\(t\)</span> = elapsed time</div>
+<div class="line"><span class="math notranslate nohighlight">\(t_{Design}\)</span> = time it <em>would</em> take for tank to empty if flow stayed constant at <span class="math notranslate nohighlight">\(Q_0\)</span>, which it does not</div>
+<div class="line"><span class="math notranslate nohighlight">\(h_{Tank}\)</span> = elevation of water level with reference to tank bottom at time <span class="math notranslate nohighlight">\(t\)</span> = 0</div>
+<div class="line"><span class="math notranslate nohighlight">\(h_0\)</span> = elevation of water level with reference to the valve at time <span class="math notranslate nohighlight">\(t = 0\)</span></div>
+</div>
+<div class="figure align-center" id="id13">
+<span id="hypochlorinator-variable-explanation-design"></span><a class="reference internal image-reference" href="../_images/hypochlorinator_variable_explanation.png"><img alt="Drip hypochlorinator variables" src="../_images/hypochlorinator_variable_explanation.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">This figure shows the variables that are defined in the equation above.</span></p>
+</div>
+<p>This equation has historically give students some trouble, and while its nuances are explained in the derivation, they will be quickly summarized here:</p>
+<ul class="simple">
+<li><span class="math notranslate nohighlight">\(t_{Design}\)</span> is <strong>NOT</strong> the time it takes to drain the tank. It is the time that it <em>would</em> take to drain the tank <em>if</em> the flow rate at time <span class="math notranslate nohighlight">\(t = 0\)</span>, <span class="math notranslate nohighlight">\(Q_0\)</span>, were the flow rate forever, which it is not. <span class="math notranslate nohighlight">\(t_{Design}\)</span> was used in the derivation to simplify the equation, which is why this potentially-confusing parameter exists. The actual time it takes to drain the tank lies somewhere between <span class="math notranslate nohighlight">\(t_{Design}\)</span> and <span class="math notranslate nohighlight">\(2 \, t_{Design}\)</span> and depends on the ratio <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span>.</li>
+<li><span class="math notranslate nohighlight">\(h_{Tank}\)</span> is not the same as <span class="math notranslate nohighlight">\(h_{0}\)</span>. <span class="math notranslate nohighlight">\(h_{Tank}\)</span> is the height of water level in the tank with reference to the tank bottom. <span class="math notranslate nohighlight">\(h_{0}\)</span> is the water level in the tank with reference to the valve. Neither change with time, they both refer to the water level at one instance in time, <span class="math notranslate nohighlight">\(t = 0\)</span>. Therefore, <span class="math notranslate nohighlight">\(h_{0} \geq h_{Tank}\)</span> is always true. If the tank is elevated far above the valve, then the <span class="math notranslate nohighlight">\(h_{0} &gt; &gt; h_{Tank}\)</span>. If the valve is at the same elevation as the bottom of the tank, then <span class="math notranslate nohighlight">\(h_{0} = h_{Tank}\)</span>. Please refer to the figure above to clarify <span class="math notranslate nohighlight">\(h_{0}\)</span> and <span class="math notranslate nohighlight">\(h_{Tank}\)</span>.</li>
+</ul>
+<p>We can use the proportionality <span class="math notranslate nohighlight">\(Q \propto \sqrt{h}\)</span>, which applies to both minor losses and orifices to form a relationship between water level in the tank <span class="math notranslate nohighlight">\(h\)</span> and time <span class="math notranslate nohighlight">\(t\)</span>. This proportionality comes from rearranging the minor loss equation <span class="math notranslate nohighlight">\(h = K \frac{Q^2}{2 g A^2}\)</span> for <span class="math notranslate nohighlight">\(Q\)</span> instead of <span class="math notranslate nohighlight">\(h\)</span>. A table of proportionality between <span class="math notranslate nohighlight">\(Q\)</span> and math:<cite>h</cite> can be found in <a class="reference internal" href="../Fluids_Review/Fluids_Review_Design.html#h-q-proportionality"><span class="std std-numref">Table 4</span></a></p>
+<p>Using equation <a class="reference internal" href="#equation-q-tank-with-valve">(79)</a> and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or <span class="math notranslate nohighlight">\(h_{Tank} = h_0\)</span>. Our attempt to get a continuous flow rate out of this system is to make <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span> very small by elevating the tank far above the valve. On the right, <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0} = \frac{1}{50}\)</span>. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.</p>
+<div class="figure align-center" id="id14">
+<span id="tank-valve-play"></span><a class="reference internal image-reference" href="../_images/tank_valve_play.png"><img alt="Manipulating hypochlorinator heights" src="../_images/tank_valve_play.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">These graphs show how manipulation of the variables in the <span class="math notranslate nohighlight">\(Q(t)\)</span> expression can result in effectively constant head.</span></p>
+</div>
+</div>
+<div class="section" id="drain-system-for-a-tank">
+<span id="id2"></span><h3>Drain System for a Tank<a class="headerlink" href="#drain-system-for-a-tank" title="Permalink to this headline">¶</a></h3>
+<p>While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they are just tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: <a class="reference internal" href="FCM_Derivations.html#diameter-and-time-tank-drain-equation"><span class="std std-ref"> and  for Tank Drain Equation</span></a>. The derived ‘Tank Drain’ equation is as follows:</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-0">
+<span class="eqno">(80)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{4}}}\]</div>
+<p>The equation can also be rearranged to solve for the time it would take to drain a tank given its dimensions and a certain drain pipe size:</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-1">
+<span class="eqno">(81)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[t_{Drain} =  \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{2}}}\]</div>
+<div class="line-block">
+<div class="line">Such that:</div>
+<div class="line"><span class="math notranslate nohighlight">\(D_{Pipe}\)</span> = Diameter of the drain piping</div>
+<div class="line"><span class="math notranslate nohighlight">\(L_{Tank}, W_{Tank}, H_{Tank}\)</span> = Tank dimensions</div>
+<div class="line"><span class="math notranslate nohighlight">\(t_{Drain}\)</span> = Time it takes to drain the tank</div>
+<div class="line"><span class="math notranslate nohighlight">\(\sum K\)</span> = Sum of all the minor loss coefficients in the system</div>
+</div>
+<div class="figure align-center" id="id15">
+<span id="pipe-stub-drainage-variables-in-derivation"></span><a class="reference internal image-reference" href="../_images/pipe_stub_drainage_variables.png"><img alt="Variables for draining a tank" src="../_images/pipe_stub_drainage_variables.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Variables for draining a tank</span></p>
+</div>
+</div>
+</div>
 <div class="section" id="aguaclara-flow-control-and-measurement-technologies">
-<span id="heading-aguaclara-flow-control-and-measurement-technologies"></span><h2>AguaClara Flow Control and Measurement Technologies<a class="headerlink" href="#aguaclara-flow-control-and-measurement-technologies" title="Permalink to this headline">¶</a></h2>
+<span id="id3"></span><h2>AguaClara Flow Control and Measurement Technologies<a class="headerlink" href="#aguaclara-flow-control-and-measurement-technologies" title="Permalink to this headline">¶</a></h2>
 <p>Each technology or component for this section will have five subsections:</p>
 <ul class="simple">
 <li><strong>What it is</strong></li>
@@ -223,7 +286,7 @@
 <p class="last">This section will often refer to the proportionality between flow <span class="math notranslate nohighlight">\(Q\)</span> and head <span class="math notranslate nohighlight">\(\Delta h\)</span> (recall that <span class="math notranslate nohighlight">\(\Delta h = h_L\)</span> after applying the head loss trick) by using the ‘proportional to’ symbol, <span class="math notranslate nohighlight">\(\propto\)</span>. It is important to remember that it doesn’t necessarily matter whether <span class="math notranslate nohighlight">\(Q\)</span> or <span class="math notranslate nohighlight">\(h_L\)</span> goes first, <span class="math notranslate nohighlight">\(Q \propto \sqrt{h_L}\)</span> is equivalent to saying that <span class="math notranslate nohighlight">\(h_L \propto Q^2\)</span>.</p>
 </div>
 <div class="section" id="almost-linear-flow-controller">
-<span id="heading-almost-linear-flow-controller"></span><h3>“Almost Linear” Flow Controller<a class="headerlink" href="#almost-linear-flow-controller" title="Permalink to this headline">¶</a></h3>
+<span id="id4"></span><h3>“Almost Linear” Flow Controller<a class="headerlink" href="#almost-linear-flow-controller" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="what-it-is">
 <h4>What it is<a class="headerlink" href="#what-it-is" title="Permalink to this headline">¶</a></h4>
 <p>This device consists of a bottle of chemical solution, called the <strong>Constant Head Tank</strong> (CHT), a float valve to keep a solution in the CHT at a constant water level, a flexible tube starting at the bottom of the CHT, and many precisely placed and equally spaced holes in a pipe, as the image below shows. The holes in the pipe hold the other end of the tube that starts at the CHT.</p>
@@ -249,17 +312,17 @@
 </div>
 </div>
 <div class="section" id="linear-flow-orifice-meter-lfom">
-<span id="heading-lfom"></span><h3>Linear Flow Orifice Meter (LFOM)<a class="headerlink" href="#linear-flow-orifice-meter-lfom" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id1">
-<h4>What it is<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<span id="lfom"></span><h3>Linear Flow Orifice Meter (LFOM)<a class="headerlink" href="#linear-flow-orifice-meter-lfom" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>What it is<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <p>The LFOM is a weir shape cut into a pipe. It was meant to imitate <a class="reference external" href="http://www.nptel.ac.in/courses/105106114/pdfs/Unit14/14_3b.pdf">the Sutro Weir</a> while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix and flocculator.</p>
-<div class="figure align-center" id="id9">
-<span id="figure-sutro-v-lfom"></span><a class="reference internal image-reference" href="../_images/sutro_v_lfom.png"><img alt="A sutro weir and an LFOM" src="../_images/sutro_v_lfom.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span></p>
+<div class="figure align-center" id="id16">
+<span id="sutro-v-lfom"></span><a class="reference internal image-reference" href="../_images/sutro_v_lfom.png"><img alt="A sutro weir and an LFOM" src="../_images/sutro_v_lfom.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span></p>
 </div>
 </div>
-<div class="section" id="id2">
-<h4>What it does and why<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id6">
+<h4>What it does and why<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <p>The LFOM does one thing and serves two purposes.</p>
 <p>What it does:</p>
 <p><strong>The LFOM creates a linear relationship between water level in the entrance tank and the flow out of the entrance tank.</strong> <em>It does not control the flow through the plant</em>. If the LFOM were replaced with a hole in the bottom of the entrance tank, the same flow rate would go through the plant, the only difference being that the water level in the entrance tank would scale with flow squared <span class="math notranslate nohighlight">\(h \propto Q^2\)</span> instead of <span class="math notranslate nohighlight">\(h \propto Q\)</span>. For example, if an LFOM has 10 rows of holes and has been designed for a plant whose maximum flow rate is 10 L/s, then the operator knows that the number of rows submerged in water is equal to the flow rate of the plant in L/s. So if the water were up to the third row of holes, there would be 3 L/s of water flowing through the plant.</p>
@@ -269,15 +332,15 @@
 <li>Allows for the Linear Chemical Dose Controller, which will be explained next, to automatically adjust the flow of coagulant/chlorine into the plant as the plant flow rate changes. This means the operator would only need to adjust the flow of coagulant when there is a change in turbidity or organic matter.</li>
 </ol>
 </div>
-<div class="section" id="id3">
-<h4>How it works<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id7">
+<h4>How it works<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <p>This is best understood with examples. By shaping a weir differently, different relationships between <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(h\)</span> are formed:
 * In the case of a <a class="reference external" href="https://swmm5.files.wordpress.com/2016/09/image00124.jpg">rectangular weir</a>, <span class="math notranslate nohighlight">\(Q \propto h^{\frac{3}{2}}\)</span>
 * In the case of a <a class="reference external" href="https://swmm5.files.wordpress.com/2016/09/image0096.jpg">v-notch weir</a>, <span class="math notranslate nohighlight">\(Q \propto h^{\frac{5}{2}}\)</span>
 * In the case of a <a class="reference external" href="http://www.engineeringexcelspreadsheets.com/wp-content/uploads/2012/11/Sutro-Weir-Diagram1.jpg">Sutro weir</a> and thus LFOM, <span class="math notranslate nohighlight">\(Q \propto h\)</span>.</p>
 </div>
-<div class="section" id="id4">
-<h4>Notes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id8">
+<h4>Notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>The LFOM is not perfect. Before the water level reaches the second row of holes, the LFOM is simulating a rectangular weir, and thus <span class="math notranslate nohighlight">\(h \not\propto Q\)</span>. The Sutro weir also experiences this problem.</li>
 <li>If the water level exceeds the topmost row of the LFOM’s orifices, the linearity also breaks down. The entire LFOM begins to act like an orifice, the exponent of <span class="math notranslate nohighlight">\(Q\)</span> in <span class="math notranslate nohighlight">\(h \propto Q\)</span> becomes greater than 1. This is because the LFOM approaches orifice behavior, and for orifices, <span class="math notranslate nohighlight">\(h \propto Q^2\)</span>.</li>
@@ -285,10 +348,10 @@
 </div>
 </div>
 <div class="section" id="linear-chemical-dose-controller-cdc">
-<span id="heading-linear-cdc"></span><h3>Linear Chemical Dose Controller (CDC)<a class="headerlink" href="#linear-chemical-dose-controller-cdc" title="Permalink to this headline">¶</a></h3>
+<span id="linear-cdc"></span><h3>Linear Chemical Dose Controller (CDC)<a class="headerlink" href="#linear-chemical-dose-controller-cdc" title="Permalink to this headline">¶</a></h3>
 <p>Since the Linear Chemical Dose Controller has become the standard in AguaClara, it is often simply called the Chemical Dose Controller, <strong>or CDC for short</strong>. It can be confusing to describe with words, so be sure to flip through the slides in the ‘Flow Control and Measurement’ powerpoint, as they contain very, very, helpful diagrams of the CDC.</p>
-<div class="section" id="id5">
-<h4>What it is<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id9">
+<h4>What it is<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <p>The CDC brings together the LFOM and many improvements to the “Almost Linear” Flow Controller. Let’s break it down, with the image below as a guide.</p>
 <ol class="arabic simple">
 <li>Start at the Constant Head Tank (CHT). This is the same set up as the “Almost Linear” Flow Controller. The stock tank feeds into the CHT, and the float valve makes sure that the water level in the constant head tank is always the same.</li>
@@ -309,46 +372,46 @@
 <li>The slider rests on a lever. This lever is the critical part of the CDC, it connects the water level in the entrance tank, which is adjusted by the LFOM, to the difference in head between the CHT and the end of the dosing tube. This allows the flow of chemicals to automatically adjust to a change in the plant flow rate, maintaining a constant dose in the plant water. One end of the lever tracks the water level in the entrance tank by using a float. The counterweight on the other side of the lever is to make sure the float ‘floats,’ since this float is usually made of PVC, which is more dense than water.</li>
 <li>The slider itself controls the dose of chemicals. For any given plant flow rate, the slider can be adjusted to increase or decrease the amount of chemical flowing through the plant.</li>
 </ol>
-<div class="figure align-center" id="id10">
-<span id="figure-cdc-labelled"></span><a class="reference internal image-reference" href="../_images/cdc_labelled.png"><img alt="CDC Displayed" src="../_images/cdc_labelled.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">This is the setup of the chemical dose controller.</span></p>
+<div class="figure align-center" id="id17">
+<span id="cdc-labelled"></span><a class="reference internal image-reference" href="../_images/cdc_labelled.png"><img alt="CDC Displayed" src="../_images/cdc_labelled.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">This is the setup of the chemical dose controller.</span></p>
 </div>
 </div>
-<div class="section" id="id6">
-<h4>What it does and why<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id10">
+<h4>What it does and why<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
 <p>The CDC makes it easy and accurate to dose chemicals. The flow of chemicals automatically adjusts to changes in the plant flow rate to keep a constant dose, set by the operator. When a turbidity event occurs, the operator can change the dose of coagulant by moving the coagulant slider <em>lower</em> on the lever to increase the dose. The slider has labelled marks so the operator can record the dose accurately.</p>
 </div>
-<div class="section" id="id7">
-<h4>How it works<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
-<p>A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: <a class="reference internal" href="FCM_Derivations.html#heading-design-equations-for-the-cdc"><span class="std std-ref">Design Equations for the Linear Chemical Dose Controller (CDC)</span></a>, and you are very, very strongly encouraged to read them.</p>
+<div class="section" id="id11">
+<h4>How it works<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<p>A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: <a class="reference internal" href="FCM_Derivations.html#design-equations-for-the-cdc"><span class="std std-ref">Design Equations for the Linear Chemical Dose Controller (CDC)</span></a>, and you are very, very strongly encouraged to read them.</p>
 <p>The CDC can be designed manually using the equations from the derivation linked above or via aide_design, using the equations found in <a class="reference external" href="https://github.com/AguaClara/aide_design/blob/master/aide_design/cdc_functions.py">cdc_functions.py</a>. Either way, the design algorithm is roughly the same:</p>
 <ol class="arabic simple">
 <li>Calculate the maximum flow rate, <span class="math notranslate nohighlight">\(Q_{Max, \, Tube}\)</span>, through each available dosing tube diameter <span class="math notranslate nohighlight">\(D\)</span> that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.</li>
 </ol>
-<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-0">
-<span class="eqno">(73)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-2">
+<span class="eqno">(82)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
 <ol class="arabic simple" start="2">
 <li>Calculate how much flow of chemical needs to pass through the CDC at maximum plant flow and maximum chemical dose. This depends on the concentration of chemicals in the stock tank.</li>
 </ol>
-<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-1">
-<span class="eqno">(74)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-3">
+<span class="eqno">(83)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-3" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
 <ol class="arabic simple" start="3">
 <li>Calculate the number of dosing tubes required if the tubes flow at  maximum capacity (round up)</li>
 </ol>
-<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-2">
-<span class="eqno">(75)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-4">
+<span class="eqno">(84)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-4" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
 <ol class="arabic simple" start="4">
 <li>Calculate the length of dosing tube(s) that correspond to each available tube diameter.</li>
 </ol>
-<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-3">
-<span class="eqno">(76)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-3" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-5">
+<span class="eqno">(85)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-5" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
 <ol class="arabic simple" start="5">
 <li>Select a tube length from your array of solutions. Pick the longest dosing tube that you can, keeping in mind that the tube(s) must be able to fit in the plant and can’t be longer than the length of the plant wall it will be placed along.</li>
 <li>Finally, select the dosing tube diameter and flow rate corresponding to the selected tube length.</li>
 </ol>
 </div>
-<div class="section" id="id8">
-<h4>Notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id12">
+<h4>Notes<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <p>Nothing in life is perfect, and the CDC is no exception. It has a few causes of inaccuracy which go beyond non-zero minor losses:
 * Float valves are not perfect. There will still be minor fluctuations of the fluid level in the CHT which will result in imperfect dosing.
 * Surface tension may resist the flow of chemicals from the dosing tube into the drop tube during low flows. Since the CDC design does not consider surface tension, this is a potential source of error.
@@ -357,7 +420,7 @@
 </div>
 </div>
 <div class="section" id="section-summary">
-<span id="heading-fcm-section-summary"></span><h2>Section Summary<a class="headerlink" href="#section-summary" title="Permalink to this headline">¶</a></h2>
+<span id="fcm-section-summary"></span><h2>Section Summary<a class="headerlink" href="#section-summary" title="Permalink to this headline">¶</a></h2>
 <p>1. <strong>Tank with a valve:</strong>
 .. math:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">frac</span><span class="p">{</span><span class="n">Q</span><span class="p">}{</span><span class="n">Q_0</span><span class="p">}</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="mi">2</span><span class="p">}</span> \<span class="n">frac</span><span class="p">{</span><span class="n">t</span><span class="p">}{</span><span class="n">t_</span><span class="p">{</span><span class="n">Design</span><span class="p">}}</span> \<span class="n">frac</span><span class="p">{</span><span class="n">h_</span><span class="p">{</span><span class="n">Tank</span><span class="p">}}{</span><span class="n">h_0</span><span class="p">}</span>
@@ -386,7 +449,7 @@
         <a href="FCM_Derivations.html" class="btn btn-neutral float-right" title="Flow Control and Measurement Derivations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="FCM_Intro.html" class="btn btn-neutral" title="Flow Control and Measurement Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../Filtration/Filtration_Design.html" class="btn btn-neutral" title="Filtration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

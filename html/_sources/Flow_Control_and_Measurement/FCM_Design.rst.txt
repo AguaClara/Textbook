@@ -1,4 +1,4 @@
-.. _title_flow_control_design:
+.. _flow_control_design:
 
 **************************************
 Flow Control and Measurement Design
@@ -9,11 +9,11 @@ The challenge of constant head in chemical dosing for water treatment plants is 
 
 
 
-.. _heading_fcm_terms_eqs:
+.. _fcm_terms_eqs:
 
 Important Terms and Equations
 ===============================
-**Terms:**
+Terms:
 
 1. Dose
 2. Coagulant
@@ -23,13 +23,98 @@ Important Terms and Equations
 6. Constant Head Tank
 7. Sutro weir
 
-**Equations:**
+Equations:
 
 1. Hagen-Poiseuille equation
 
 
 
-.. _heading_aguaclara_flow_control_and_measurement_technologies:
+.. _tank_with_a_valve:
+
+Tank with a Valve
+==================
+
+
+.. _qh_as_a_function_of_t:
+
+Flow :math:`Q` and Water Level :math:`h` as a Function of Time
+----------------------------------------------------------------
+Our first step is to see if we can get constant head out of a simple system. The most simple flow control system is a bucket or tank with a hole in it. This system is too coarse to provide constant head. One step above that is a bucket or tank with a valve. This is where we begin our search for constant head.
+
+Using the setup of in the image below, we derive the following equation for flow :math:`Q` through the valve as a function of time :math:`t`. The derivation is found here: :ref:`flow_for_a_tank_with_a_valve`. You are advised to read through it if you are at all confused about this equation.
+
+.. math::
+  :label: Q_tank_with_valve
+
+    \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
+
+| Such that:
+| :math:`Q` = :math:`Q(t)` = flow of hypochlorite through valve at time :math:`t`
+| :math:`Q_0` = flow of hypochlorite through valve at time :math:`t = 0`
+| :math:`t` = elapsed time
+| :math:`t_{Design}` = time it *would* take for tank to empty if flow stayed constant at :math:`Q_0`, which it does not
+| :math:`h_{Tank}` = elevation of water level with reference to tank bottom at time :math:`t` = 0
+| :math:`h_0` = elevation of water level with reference to the valve at time :math:`t = 0`
+
+.. _hypochlorinator_variable_explanation_design:
+.. figure:: Images/hypochlorinator_variable_explanation.png
+    :width: 600px
+    :align: center
+    :alt: Drip hypochlorinator variables
+
+    This figure shows the variables that are defined in the equation above.
+
+This equation has historically give students some trouble, and while its nuances are explained in the derivation, they will be quickly summarized here:
+
+* :math:`t_{Design}` is **NOT** the time it takes to drain the tank. It is the time that it *would* take to drain the tank *if* the flow rate at time :math:`t = 0`, :math:`Q_0`, were the flow rate forever, which it is not. :math:`t_{Design}` was used in the derivation to simplify the equation, which is why this potentially-confusing parameter exists. The actual time it takes to drain the tank lies somewhere between :math:`t_{Design}` and :math:`2 \, t_{Design}` and depends on the ratio :math:`\frac{h_{Tank}}{h_0}`.
+* :math:`h_{Tank}` is not the same as :math:`h_{0}`. :math:`h_{Tank}` is the height of water level in the tank with reference to the tank bottom. :math:`h_{0}` is the water level in the tank with reference to the valve. Neither change with time, they both refer to the water level at one instance in time, :math:`t = 0`. Therefore, :math:`h_{0} \geq h_{Tank}` is always true. If the tank is elevated far above the valve, then the :math:`h_{0} > > h_{Tank}`. If the valve is at the same elevation as the bottom of the tank, then :math:`h_{0} = h_{Tank}`. Please refer to the figure above to clarify :math:`h_{0}` and :math:`h_{Tank}`.
+
+We can use the proportionality :math:`Q \propto \sqrt{h}`, which applies to both minor losses and orifices to form a relationship between water level in the tank :math:`h` and time :math:`t`. This proportionality comes from rearranging the minor loss equation :math:`h = K \frac{Q^2}{2 g A^2}` for :math:`Q` instead of :math:`h`. A table of proportionality between :math:`Q` and math:`h` can be found in :numref:`h_Q_proportionality`
+
+Using equation :eq:`Q_tank_with_valve` and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or :math:`h_{Tank} = h_0`. Our attempt to get a continuous flow rate out of this system is to make :math:`\frac{h_{Tank}}{h_0}` very small by elevating the tank far above the valve. On the right, :math:`\frac{h_{Tank}}{h_0} = \frac{1}{50}`. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.
+
+.. _tank_valve_play:
+.. figure:: Images/tank_valve_play.png
+    :width: 600px
+    :align: center
+    :alt: Manipulating hypochlorinator heights
+
+    These graphs show how manipulation of the variables in the :math:`Q(t)` expression can result in effectively constant head.
+
+
+.. _drain_system_for_a_tank:
+
+Drain System for a Tank
+------------------------
+While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they are just tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: :ref:`diameter_and_time_tank_drain_equation`. The derived ‘Tank Drain’ equation is as follows:
+
+.. math::
+
+    D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{4}}}
+
+The equation can also be rearranged to solve for the time it would take to drain a tank given its dimensions and a certain drain pipe size:
+
+.. math::
+
+    t_{Drain} =  \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{2}}}
+
+| Such that:
+| :math:`D_{Pipe}` = Diameter of the drain piping
+| :math:`L_{Tank}, W_{Tank}, H_{Tank}` = Tank dimensions
+| :math:`t_{Drain}` = Time it takes to drain the tank
+| :math:`\sum K` = Sum of all the minor loss coefficients in the system
+
+.. _pipe_stub_drainage_variables_in_derivation:
+.. figure:: Images/pipe_stub_drainage_variables.png
+    :width: 600px
+    :align: center
+    :alt: Variables for draining a tank
+
+    Variables for draining a tank
+
+
+
+.. _aguaclara_flow_control_and_measurement_technologies:
 
 AguaClara Flow Control and Measurement Technologies
 =====================================================
@@ -45,7 +130,7 @@ Before diving into the technologies, recall the purpose of the chemicals that we
 .. important:: This section will often refer to the proportionality between flow :math:`Q` and head :math:`\Delta h` (recall that :math:`\Delta h = h_L` after applying the head loss trick) by using the ‘proportional to’ symbol, :math:`\propto`. It is important to remember that it doesn’t necessarily matter whether :math:`Q` or :math:`h_L` goes first, :math:`Q \propto \sqrt{h_L}` is equivalent to saying that :math:`h_L \propto Q^2`.
 
 
-.. _heading_almost_linear_flow_controller:
+.. _almost_linear_flow_controller:
 
 “Almost Linear” Flow Controller
 --------------------------------
@@ -76,7 +161,7 @@ Notes
 -  The tube connecting the CHT to the outlet of chemicals must really belong and, more importantly, **straight** to form a linear relationship between driving head and flow. This was not true for the “Almost Linear” Flow Controller. When you read about the Linear Chemical Flow Controller (CDC), you will be learning about the replacement to the “Almost Linear” Flow Controller’s replacement.
 
 
-.. _heading_lfom:
+.. _lfom:
 
 Linear Flow Orifice Meter (LFOM)
 --------------------------------
@@ -85,7 +170,7 @@ What it is
 ^^^^^^^^^^^^^^
 The LFOM is a weir shape cut into a pipe. It was meant to imitate `the Sutro Weir <http://www.nptel.ac.in/courses/105106114/pdfs/Unit14/14_3b.pdf>`_ while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix and flocculator.
 
-.. _figure_sutro_v_lfom:
+.. _sutro_v_lfom:
 .. figure:: Images/sutro_v_lfom.png
     :width: 600px
     :align: center
@@ -120,7 +205,7 @@ Notes
 -  If the water level exceeds the topmost row of the LFOM’s orifices, the linearity also breaks down. The entire LFOM begins to act like an orifice, the exponent of :math:`Q` in :math:`h \propto Q` becomes greater than 1. This is because the LFOM approaches orifice behavior, and for orifices, :math:`h \propto Q^2`.
 
 
-.. _heading_linear_cdc:
+.. _linear_cdc:
 
 Linear Chemical Dose Controller (CDC)
 ---------------------------------------
@@ -147,7 +232,7 @@ The CDC brings together the LFOM and many improvements to the “Almost Linear�
 
 4. The slider itself controls the dose of chemicals. For any given plant flow rate, the slider can be adjusted to increase or decrease the amount of chemical flowing through the plant.
 
-.. _figure_cdc_labelled:
+.. _cdc_labelled:
 .. figure:: Images/cdc_labelled.png
     :width: 600px
     :align: center
@@ -161,7 +246,7 @@ The CDC makes it easy and accurate to dose chemicals. The flow of chemicals auto
 
 How it works
 ^^^^^^^^^^^^^^^^
-A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: :ref:`heading_design_equations_for_the_cdc`, and you are very, very strongly encouraged to read them.
+A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: :ref:`design_equations_for_the_cdc`, and you are very, very strongly encouraged to read them.
 
 The CDC can be designed manually using the equations from the derivation linked above or via aide_design, using the equations found in `cdc_functions.py <https://github.com/AguaClara/aide_design/blob/master/aide_design/cdc_functions.py>`_. Either way, the design algorithm is roughly the same:
 
@@ -202,7 +287,7 @@ Nothing in life is perfect, and the CDC is no exception. It has a few causes of 
 
 
 
-.. _heading_FCM_section_summary:
+.. _FCM_section_summary:
 
 Section Summary
 ================
