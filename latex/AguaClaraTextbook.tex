@@ -58,7 +58,7 @@
     
 
 \title{AguaClara Textbook Documentation}
-\date{Jul 16, 2018}
+\date{Jul 17, 2018}
 \release{}
 \author{AguaClara Cornell}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -2207,12 +2207,21 @@ Combined with the discrete amount of tubing sizes (shown in dark green), we can 
 
 \chapter{Sedimentation Theory and Future Work}
 \label{\detokenize{Sedimentation/Sed_Theory_and_Future_Work:sedimentation-theory-and-future-work}}\label{\detokenize{Sedimentation/Sed_Theory_and_Future_Work::doc}}
-We suspect that collisions between primary particles and large flocs is possible in the sedimentation tank because the rotational velocity of the flocs is small relative to the sedimentation velocity of the flocs. If the rotational velocity of the flocs is small, then a stagnation point will exist on the floc and a finite flow of fluid will come within a primary particle radius of the floc. Thus a
-Would it be possible to increase the concentration of the floc blanket and thus increase the collision rate? There must be an optimal amount of recycled flocs for a floc blanket. Of course, one possiblity is that the optimal recycle is zero. Recycled flocs increase the floc blanket concentration and thus increase the rate of collisions between primary particles and flocs. The recycled flocs also decrease the residence time in the floc blanket and thus decrease the total number of collisions between primary particles and flocs. It may be more complicated than this because the
+We hypothesize that the flocs in floc blankets serve as collectors that primary particles attach to. We suspect that collisions between primary particles and large flocs is possible in the sedimentation tank because the rotational velocity of the flocs is small relative to the sedimentation velocity of the flocs. If the rotational velocity of the flocs is small, then a stagnation point will exist on the floc and a finite flow of fluid will come within a primary particle radius of the floc. Thus we expect primary particle removal in floc blankets to be proportional to the number of collectors that a primary particle passes while in the floc blanket.
 
-Our goal is to find the optimal recycle ratio. Optimal is defined as the maximum collision potential. Collision potential is equal to the collision rate times the hydraulic residence time. Collision rate is given by
+The number of collectors that a primary particle passes is proportional to the solids concentration (a surrogate for the number concentration of flocs), the primary particle residence time in the floc blanket, and the sedimentation velocity of the flocs. The sedimentation velocity of the flocs is important because that is what causes a relative velocity between the primary particles and the flocs.
+
+As we have explored increasing the upflow velocity in sedimentation tanks the performance has dropped markedly. This is undoubtedly due in part to the combined effective of a very dilute floc blanket at high upflow velocities AND a low residence time for the primary particles.
+
+Would it be possible to increase the concentration of the floc blanket and thus increase the collision rate? At 3 mm/s upflow velocity there are very few flocs that can stay in the floc blanket. We need a mechanism to transport flocs to the bottom of the floc blanket and return them again after they are carried to the top of the floc blanket.
+
+We propose to test this by installing a settled floc recycle line. The recycle line will connect to the bottom surface of the tube settler below the location of the floc weir. From there is will carry concentrated sludge to the very bottom of the sedimentation tank where it will pass through the wall of the sedimentation tank. Increasing the amount of recycle flow will both increase the solids concentration in the floc blanket and decrease the primary particle residence time in the floc blanket.
+
+There must be an optimal amount of recycled flocs for a floc blanket. Of course, one possiblity is that the optimal recycle is zero. Recycled flocs increase the floc blanket concentration and thus increase the rate of collisions between primary particles and flocs. The recycled flocs also decrease the residence time in the floc blanket and thus decrease the total number of collisions between primary particles and flocs. It may be more complicated than this because the hindered sedimentation velocity of the flocs in the floc blanket is also a function of their concentration.
+
+Our goal is to find the optimal recycle ratio. Optimal is defined as the maximum collision potential. Collision potential for the floc blanket is proportional to to the collision rate times the hydraulic residence time. The collision rate is proportional to the solids concentration and the hindered sedimentation velocity of those flocs. The collision potential is thus proportional to the total number of flocs that a primary particle passes on its way through the floc blanket.
 \begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:0}
-\begin{split}CP_{fb} \propto C_{fb} \theta_{fb}\end{split}
+\begin{split}CP_{fb} \propto C_{fb} \theta_{fb} v_{hindered}\end{split}
 \end{equation}
 The residence time in the floc blanket is given by
 \begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:1}
@@ -2228,48 +2237,56 @@ The velocity up through the floc blanket without recycle is defined as
 \end{equation}\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:5}
 \begin{split}v_{fb} = v_{up}\left( 1 + \Pi_{recycle} \right)\end{split}
 \end{equation}
-Now we need equations for the concentration in the floc blanket. This is based on mass conservation such that the mass in the floc blanket is constant. We are neglecting the fact that there is a hindered sedimentation velocity of the flocs that results in a reduction of the mass flux out of the top of the control volume.
+Now we need equations for the concentration in the floc blanket. This is based on mass conservation such that the mass in the floc blanket is constant. There is a hindered sedimentation velocity of the flocs that results in a reduction of the mass flux out of the top of the control volume.
 \begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:6}
-\begin{split}C_{fb}\left( Q_{plant}+Q_{recycle} \right) = C_{plant}Q_{plant} + C_{recycle}Q_{recycle}\end{split}
+\begin{split}C_{fb}\left(\frac{ Q_{plant}+Q_{recycle} }{A_{fb}}-v_{hindered}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}Q_{recycle}\end{split}
 \end{equation}\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:7}
-\begin{split}C_{fb} = \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{1+\Pi_{recycle}}\end{split}
+\begin{split}C_{fb}\left(\frac{ Q_{plant}+\Pi_{recycle}Q_{plant} }{A_{fb}}-v_{hindered}\frac{Q_{plant}}{Q_{plant}}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}\Pi_{recycle}Q_{plant}\end{split}
+\end{equation}\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:8}
+\begin{split}C_{fb}\left( 1+\Pi_{recycle} -\frac{v_{hindered}}{v_{up}}\right) = C_{plant} + C_{recycle}\Pi_{recycle}\end{split}
+\end{equation}\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:9}
+\begin{split}C_{fb} = \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{v_{hindered}}{v_{up}}\right)}\end{split}
 \end{equation}
 Now we can substitute to get the collision potential as a function of the flow rates.
-\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:8}
-\begin{split}CP_{fb} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left( 1 + \Pi_{recycle} \right)^2}  \frac{H_{fb}} {v_{up}}\end{split}
+\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:10}
+\begin{split}CP_{fb} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{v_{hindered}}{v_{up}}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{fb}v_{hindered}} {v_{up}}\end{split}
 \end{equation}
+We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc blanket. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc blanket. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland measurements of the solids concentration in the floc hopper sludge.
+
 \fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{from} \PYG{n+nn}{aide\PYGZus{}design}\PYG{n+nn}{.}\PYG{n+nn}{play} \PYG{k}{import}\PYG{o}{*}
 \PYG{n}{D\PYGZus{}fb}\PYG{o}{=}\PYG{l+m+mf}{2.5}\PYG{o}{*}\PYG{n}{u}\PYG{o}{.}\PYG{n}{cm}
 \PYG{n}{A\PYGZus{}fb} \PYG{o}{=} \PYG{n}{pc}\PYG{o}{.}\PYG{n}{area\PYGZus{}circle}\PYG{p}{(}\PYG{n}{D\PYGZus{}fb}\PYG{p}{)}
 \PYG{n}{H\PYGZus{}fb} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{m}
-\PYG{n}{V\PYGZus{}hindered} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{mm}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{s}
+\PYG{n}{v\PYGZus{}hindered} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{mm}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{s}
 \PYG{n}{C\PYGZus{}fb\PYGZus{}conventional} \PYG{o}{=} \PYG{l+m+mi}{3} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{g}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{L}
 \PYG{n}{C\PYGZus{}recycle} \PYG{o}{=} \PYG{l+m+mi}{20} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{g}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{L}
 \PYG{n}{C\PYGZus{}plant} \PYG{o}{=} \PYG{l+m+mi}{100} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{NTU}
 \PYG{n}{v\PYGZus{}up} \PYG{o}{=} \PYG{l+m+mi}{3} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{mm}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{s}
-\PYG{n}{QC\PYGZus{}fb} \PYG{o}{=} \PYG{p}{(}\PYG{n}{V\PYGZus{}up}\PYG{o}{\PYGZhy{}}\PYG{n}{V\PYGZus{}hindered}\PYG{p}{)}\PYG{o}{*}\PYG{n}{A\PYGZus{}fb}\PYG{o}{*}\PYG{n}{C\PYGZus{}fb}
 
-\PYG{k}{def} \PYG{n+nf}{CP}\PYG{p}{(}\PYG{n}{H\PYGZus{}fb}\PYG{p}{,}\PYG{n}{v\PYGZus{}up}\PYG{p}{,}\PYG{n}{Pi\PYGZus{}recycle}\PYG{p}{,}\PYG{n}{C\PYGZus{}plant}\PYG{p}{,}\PYG{n}{C\PYGZus{}recycle}\PYG{p}{)}\PYG{p}{:}
-  \PYG{k}{return} \PYG{p}{(}\PYG{n}{H\PYGZus{}fb}\PYG{o}{/}\PYG{n}{v\PYGZus{}up}\PYG{o}{*}\PYG{p}{(}\PYG{n}{C\PYGZus{}plant}\PYG{o}{+}\PYG{n}{C\PYGZus{}recycle}\PYG{o}{*}\PYG{n}{Pi\PYGZus{}recycle}\PYG{p}{)}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{+}\PYG{n}{Pi\PYGZus{}recycle}\PYG{p}{)}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{o}{.}\PYG{n}{to\PYGZus{}base\PYGZus{}units}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{CP}\PYG{p}{(}\PYG{n}{H\PYGZus{}fb}\PYG{p}{,}\PYG{n}{v\PYGZus{}up}\PYG{p}{,}\PYG{n}{v\PYGZus{}hindered}\PYG{p}{,}\PYG{n}{Pi\PYGZus{}recycle}\PYG{p}{,}\PYG{n}{C\PYGZus{}plant}\PYG{p}{,}\PYG{n}{C\PYGZus{}recycle}\PYG{p}{)}\PYG{p}{:}
+  \PYG{k}{return} \PYG{p}{(}\PYG{n}{H\PYGZus{}fb}\PYG{o}{*}\PYG{n}{v\PYGZus{}hindered}\PYG{o}{/}\PYG{n}{v\PYGZus{}up}\PYG{o}{*}\PYG{p}{(}\PYG{n}{C\PYGZus{}plant}\PYG{o}{+}\PYG{n}{C\PYGZus{}recycle}\PYG{o}{*}\PYG{n}{Pi\PYGZus{}recycle}\PYG{p}{)}\PYG{o}{/}\PYG{p}{(}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{+}\PYG{n}{Pi\PYGZus{}recycle}\PYG{p}{)}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{+}\PYG{n}{Pi\PYGZus{}recycle}\PYG{o}{\PYGZhy{}}\PYG{n}{v\PYGZus{}hindered}\PYG{o}{/}\PYG{n}{v\PYGZus{}up}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{to\PYGZus{}base\PYGZus{}units}\PYG{p}{(}\PYG{p}{)}
 \PYG{n}{Pi\PYGZus{}recycle\PYGZus{}max} \PYG{o}{=} \PYG{l+m+mi}{2}
 \PYG{n}{Pi\PYGZus{}recycle} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{Pi\PYGZus{}recycle\PYGZus{}max}\PYG{p}{,}\PYG{l+m+mf}{0.1}\PYG{p}{)}
 \PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
 \PYG{n}{x}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{Pi\PYGZus{}recycle\PYGZus{}max}\PYG{p}{]}\PYG{p}{)}
-\PYG{n}{yscale} \PYG{o}{=} \PYG{p}{(}\PYG{n}{C\PYGZus{}fb}\PYG{o}{*}\PYG{n}{H\PYGZus{}fb}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{*}\PYG{n}{u}\PYG{o}{.}\PYG{n}{mm}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{s}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{to\PYGZus{}base\PYGZus{}units}\PYG{p}{(}\PYG{p}{)}
-\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{yscale}\PYG{p}{)}
+\PYG{n}{yscale} \PYG{o}{=} \PYG{p}{(}\PYG{n}{C\PYGZus{}fb}\PYG{o}{*}\PYG{n}{H\PYGZus{}fb}\PYG{o}{*}\PYG{n}{v\PYGZus{}hindered}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{*}\PYG{n}{u}\PYG{o}{.}\PYG{n}{mm}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{s}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{to\PYGZus{}base\PYGZus{}units}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{yscale}
 \PYG{n}{y}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{)}\PYG{o}{*}\PYG{n}{yscale}
 \PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{n}{y}\PYG{p}{)}
-\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{Pi\PYGZus{}recycle}\PYG{p}{,}\PYG{n}{CP}\PYG{p}{(}\PYG{n}{H\PYGZus{}fb}\PYG{p}{,}\PYG{n}{v\PYGZus{}up}\PYG{p}{,}\PYG{n}{Pi\PYGZus{}recycle}\PYG{p}{,}\PYG{n}{C\PYGZus{}plant}\PYG{p}{,}\PYG{n}{C\PYGZus{}recycle}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{Pi\PYGZus{}recycle}\PYG{p}{,}\PYG{n}{CP}\PYG{p}{(}\PYG{n}{H\PYGZus{}fb}\PYG{p}{,}\PYG{n}{v\PYGZus{}up}\PYG{p}{,}\PYG{n}{v\PYGZus{}hindered}\PYG{p}{,}\PYG{n}{Pi\PYGZus{}recycle}\PYG{p}{,}\PYG{n}{C\PYGZus{}plant}\PYG{p}{,}\PYG{n}{C\PYGZus{}recycle}\PYG{p}{)}\PYG{p}{)}
 \PYG{n}{imagepath} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Sedimentation/Images/}\PYG{l+s+s1}{\PYGZsq{}}
-\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{recycle ratio}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Collision Potential}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{recycle ratio}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Collision Potential (kg/m\PYGZca{}2)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{ax}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{no recycle at 1 mm/s}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{with recycle at 3 mm/s}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]}\PYG{p}{)}
 \PYG{n}{fig}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{n}{imagepath}\PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{fb\PYGZus{}recycle\PYGZus{}ratio}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
-
-\PYG{o}{.}\PYG{o}{.} \PYG{n}{\PYGZus{}Collision} \PYG{n}{potential} \PYG{k}{with} \PYG{n}{sludge} \PYG{n}{recycle}\PYG{p}{:}
 \end{sphinxVerbatim}
+
+Here are the results.
+\begin{quote}
+\end{quote}
 
 \begin{figure}[htbp]
 \centering
@@ -2278,26 +2295,30 @@ Now we can substitute to get the collision potential as a function of the flow r
 \noindent\sphinxincludegraphics[width=700\sphinxpxdimen]{{fb_recycle_ratio}.png}
 \caption{Collision potential comparison in a 1 m deep floc blanket.}\label{\detokenize{Sedimentation/Sed_Theory_and_Future_Work:id1}}\end{figure}
 
-This analysis suggest that a recycle flow rate that is between 0.5 and 1.5 at a net upflow velocity of 3 mm/s could produce collision potential that is 1/2 of the collision potential with a 1 mm/s upflow velocity. Thus a 3 mm/s sed tank with 2 m of floc blanket might be able to perform at the same level as a 1 mm/s sed tank with a 1 m floc blanket.
+This analysis suggest that a recycle flow rate that is between 0.5 and 1.5 at a net upflow velocity of 3 mm/s could produce collision potential that is 2/3 of the collision potential with a 1 mm/s upflow velocity. Thus a 3 mm/s sed tank with 1.5 m of floc blanket and recycle might be able to perform at the same level as a 1 mm/s sed tank with a 1 m floc blanket.
 
 The next step is to design the recycle tube. The recycle tube could be inclined to promote additional consolidation to reduce the amount of water that is recycled. The slope would need to be about 60 degrees. We could experiment with the design of the recycle line if it were made of flexible tubing.
 
 It is expected that the consolidated sludge will flow by gravity because of its higher density. The big unknown is what diameter recycle line is needed for a lab scale test with a 2.5 cm diameter sedimentation tank.
 
 The recycle sludge has a density given by
-\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:9}
+\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:11}
 \begin{split}\rho_{sludge} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O}\end{split}
 \end{equation}
 The piezometric head (measured in equivalent change in height of the recycle line liquid) that is causing the flow through the recycle line is equal to the difference in density between the recycled sludge and the floc blanket times the height of the floc blanket normalized by the recycle line density.
-\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:10}
+\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:12}
 \begin{split}H_l = H_{fb}\frac{\rho_{sludge} - \rho_{fb}}{\rho_{sludge}}\end{split}
-\end{equation}\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:11}
+\end{equation}
+Substitute to replace the sludge and floc blanket densities.
+\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:13}
 \begin{split}H_l = H_{fb}\frac{\left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O} -\left[  \left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{fb} + \rho_{H_2O} \right]} {\left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O}}\end{split}
-\end{equation}\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:12}
+\end{equation}
+Simplify the equation for the head loss in the recycle tube.
+\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:14}
 \begin{split}H_l = H_{fb}\frac{ C_{sludge} -C_{fb}} { C_{sludge} + \frac{\rho_{H_2O}\rho_{Clay}}{  \rho_{Clay} -\rho_{H_2O} }}\end{split}
 \end{equation}
-The length of the tube is
-\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:13}
+The recycle tube is assumed to be sloped at 60 degrees from the horizontal to enable further consolidation. The length of the recycle tube is
+\begin{equation}\label{equation:Sedimentation/Sed_Theory_and_Future_Work:Sedimentation/Sed_Theory_and_Future_Work:15}
 \begin{split}L_{tube} = H_{fb}/sin(60)\end{split}
 \end{equation}
 We will assume that the dynamic viscosity of the sludge is the same as the dynamic viscosity of water. We will calculate the kinematic viscosity of the sludge by dividing the dynamic viscosity of water by the density of the recycle.
@@ -2310,7 +2331,7 @@ Now we can solve for the required tube diameter
 \PYG{n}{Temperature}\PYG{o}{=} \PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n}{u}\PYG{o}{.}\PYG{n}{degC}
 \PYG{n}{D\PYGZus{}fb}\PYG{o}{=}\PYG{l+m+mf}{2.5}\PYG{o}{*}\PYG{n}{u}\PYG{o}{.}\PYG{n}{cm}
 \PYG{n}{A\PYGZus{}fb} \PYG{o}{=} \PYG{n}{pc}\PYG{o}{.}\PYG{n}{area\PYGZus{}circle}\PYG{p}{(}\PYG{n}{D\PYGZus{}fb}\PYG{p}{)}
-\PYG{n}{H\PYGZus{}fb} \PYG{o}{=} \PYG{l+m+mi}{3} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{m}
+\PYG{n}{H\PYGZus{}fb} \PYG{o}{=} \PYG{l+m+mf}{1.5} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{m}
 \PYG{n}{Angle\PYGZus{}tube} \PYG{o}{=} \PYG{l+m+mi}{60}\PYG{o}{*}\PYG{n}{u}\PYG{o}{.}\PYG{n}{deg}
 \PYG{n}{L\PYGZus{}tube} \PYG{o}{=} \PYG{n}{H\PYGZus{}fb}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{Angle\PYGZus{}tube}\PYG{p}{)}
 \PYG{n}{density\PYGZus{}clay}\PYG{o}{=}\PYG{l+m+mi}{2650}\PYG{o}{*}\PYG{n}{u}\PYG{o}{.}\PYG{n}{kg}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{m}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{3}
@@ -2325,6 +2346,8 @@ Now we can solve for the required tube diameter
 \PYG{n}{D\PYGZus{}recycle}\PYG{o}{.}\PYG{n}{to}\PYG{p}{(}\PYG{n}{u}\PYG{o}{.}\PYG{n}{mm}\PYG{p}{)}
 \PYG{n}{D\PYGZus{}recycle}\PYG{o}{.}\PYG{n}{to}\PYG{p}{(}\PYG{n}{u}\PYG{o}{.}\PYG{n}{inch}\PYG{p}{)}
 \end{sphinxVerbatim}
+
+The head loss in the recycle tube is approximately 1.6 cm in a 1.5 m deep floc blanket.
 
 The recycle line will be installed between the bottom of the tube settler and the inlet to the sedimentation tank. The recycle line will connect  directly to the side of the sedimentation tank to minimize minor losses. We will use a 0.25” ID, 3/8”OD clear flexible tube for the recycle line. We will use PVC glue to attach the flexible tube to the rigid clear PVC tubing.
 
