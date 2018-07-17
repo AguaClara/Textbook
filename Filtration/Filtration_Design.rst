@@ -1,13 +1,11 @@
 .. _title_filtration:
 
 
-*************
+*******************
 Filtration Design
-*************
+*******************
 
-
-In its most basic form a sand filter is simply a bed of sand with water running through it. Though it is quite straightforward in goal, the filter is the most complex unit processes within an AguaClara plant. Considerations must be made for headloss and velocity constraints in addition to the added complextity of backwash.
-
+This section deals with search for a self-backwashing filter which is functional over a wide range of flows. While in basic concept,running water through a sand bed, filters are the simplest of the unit processes, the are probably the most complex in design within an AguaClara plant because they are not inherently self-cleaning. Additionally. The search to overcome this problem has led to the development of a Stacked Rapid Sand Filter (StaRS Filter) a novel filter design which provides a hydraulic backwash system and works over a large range of flows with some adpatation for small flows.
 
 
 .. _heading_filtration_terms:
@@ -17,7 +15,7 @@ Important Terms and Equations
 Terms:
 
 1. Porosity
-2. StaRS
+2. StaRS Filter
 3. Backwash
 
 
@@ -25,7 +23,15 @@ Equations:
 
 1.
 
+.. _heading_aguaclara_filtration_technologies:
 
+AguaClara Flow Control and Measurement Technologies
+=====================================================
+
+What it is
+What it does and why
+How it works
+Notes
 
 
 
