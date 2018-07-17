@@ -48,11 +48,6 @@ This is a place holder for 'Chapter 1: Introduction' files
    Flow_Control_and_Measurement/FCM_Design.rst
    Flow_Control_and_Measurement/FCM_Derivations.rst
 
-.. toctree::
-   :caption: Chapter 6: Sedimentation
-   :maxdepth: 1
-
-   Sedimentation/Sed_Theory_and_Future_Work.rst
 
 `PDF and LaTeX versions <https://github.com/AguaClara/Textbook/releases/latest>`_ [#pdf_warning]_.
 
