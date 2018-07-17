@@ -1434,6 +1434,240 @@ You will often see \(K_e^{'}\) and \(K_e\) used without the \(e\) subscript, the
 Being familiar with these three forms and how they are used will be of great help throughout the class. The third form is the one that is most commonly used.
 
 
+\chapter{Filtration Design}
+\label{\detokenize{Filtration/Filtration_Design:filtration-design}}\label{\detokenize{Filtration/Filtration_Design:title-filtration}}\label{\detokenize{Filtration/Filtration_Design::doc}}
+In its most basic form a sand filter is simply a bed of sand with water running through it. Though it is quite straightforward in goal, the filter is the most complex unit processes within an AguaClara plant. Considerations must be made for headloss and velocity constraints in addition to the added complextity of backwash.
+
+
+\section{Important Terms and Equations}
+\label{\detokenize{Filtration/Filtration_Design:important-terms-and-equations}}\label{\detokenize{Filtration/Filtration_Design:heading-filtration-terms}}
+Terms:
+\begin{enumerate}
+\item {} 
+Porosity
+
+\item {} 
+StaRS
+
+\item {} 
+Backwash
+
+\end{enumerate}
+
+Equations:
+\begin{enumerate}
+\item {} 
+\end{enumerate}
+
+
+\subsection{Filter Types}
+\label{\detokenize{Filtration/Filtration_Design:filter-types}}\label{\detokenize{Filtration/Filtration_Design:heading-filter-types}}
+The principal difference in various filters is the difference in velocity of water through them. This in turn determines the plan area of the filter for a particular flow.
+
+For a multistage filter system, the filter areas for the Dynamic, Roughing, and Slow Sand filters are included in a total area. For a given flow, and the velocity for each filter type the total area is:
+\begin{equation}\label{equation:Filtration/Filtration_Design:area_stuff}
+\begin{split}  A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}\end{split}
+\end{equation}
+Using this formula it becomes easy to see the relative sizes of different filter systems. \sphinxstylestrong{Note: Clare, consider adding the table from slide 23 here.}
+
+Understanding the amount of area requires for this component makes it easy to see why certain systems would be preferable to others, but also that overall filtration is only a polishing step and cannot treat as well as other unit processes, predominantly the flocculation-sedimentation combination.
+
+
+\section{Porosity}
+\label{\detokenize{Filtration/Filtration_Design:porosity}}\label{\detokenize{Filtration/Filtration_Design:heading-porosity}}
+In understading how sand filtration works, porosity is one of the most important concepts to be familiar with. Porosity refers to the ratio of the void volume to the total volume of a control volume.
+\begin{equation}\label{equation:Filtration/Filtration_Design:porosity}
+\begin{split}  \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}\end{split}
+\end{equation}
+Porosity is determined by the geometry of the material in the control volume, but also by the size of the particles involved. If you have three different sized spheres (such as .0um clay, .2mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics{{figure_porosity}.png}
+\caption{Within each box, the spheres are different sizes. However the total porosity is the same. To minimize the pore space, the smaller particles could be used to fill the spore space between the larger particles, though in a filter this is not necessarily ideal.}\label{\detokenize{Filtration/Filtration_Design:id2}}\label{\detokenize{Filtration/Filtration_Design:figure-porosity}}\end{figure}
+
+One way that the relative size of particles is characterized is by describing the size of the smallest 10\% of grains, and the smallest 60\% of grains. That is:
+
+\(D_{10}\) = the sieve size that passes 10\% by mass of sand through
+
+\(D_{60}\) = the sieve sixe that passes 60\% by mass of sand through
+
+\(D_{10}\) is used for particle removal models, and \(D_{60}\) is used for hydrualic modeling.
+
+The relationship of the two is the uniformity coeffecient:
+\begin{equation}\label{equation:Filtration/Filtration_Design:uniformity_coefficient}
+\begin{split}  UC = \frac{D_{60}}{D_{10}}\end{split}
+\end{equation}
+The uniformity coefficient describes the uniformity of the sand. A \(UC = 1\) indicates that every grain of sand is the same size, which is the ideal case. A large \(UC\) is indicative of a wide range of grain sizes which can cause trouble during filter operation and backwash, as stratification occurs and the porosity changes with respect to depth in the filter.
+
+During backwash sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:
+\begin{equation}\label{equation:Filtration/Filtration_Design:backwash_porosity}
+\begin{split}  \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}\end{split}
+\end{equation}
+\begin{DUlineblock}{0em}
+\item[] Such that:
+\item[] \(phi_{FiSandBw}\) = sand porosity during backwash
+\item[] \(phi_{FiSand}\) = settled sand porosity
+\item[] \(H_{FiSand}\) = height of sand in the filter
+\item[] \(H_{FiSandBw}\) = height of sand during backwash
+\item[] \(A_{Fi}\) = filter area
+\end{DUlineblock}
+
+From this it becomes possible to directly relate porosity (as above) to the filter expansion ratio, which is simply the ratio of the heights of the expanded sand bed and the settled sand bed:
+\begin{equation}\label{equation:Filtration/Filtration_Design:filter_expansion_ratio}
+\begin{split}\Pi_{FiBw} = \frac{H_{FiSandBw}}{H_{FiSand}}\end{split}
+\end{equation}
+\begin{DUlineblock}{0em}
+\item[] Such that:
+\item[] \(Pi_{FiBw}\) = the expansion ratio value
+\item[] \(H_{FiSand}\) = height of sand in the filter
+\item[] \(H_{FiSandBw}\) = height of sand during backwash
+\end{DUlineblock}
+
+
+\section{Headloss Requirements}
+\label{\detokenize{Filtration/Filtration_Design:headloss-requirements}}\label{\detokenize{Filtration/Filtration_Design:heading-headloss-requirements}}
+One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen Pouseille equation (ref from elsewhere) describes the headloss through a clean bed during filtration.
+\begin{equation}\label{equation:Filtration/Filtration_Design:karmen_kozeny_clean_bed}
+\begin{split}  \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu V_{Fi}}{g D_{60}^2}\end{split}
+\end{equation}
+\begin{DUlineblock}{0em}
+\item[] Such that:
+\item[] \(h_l\) = headloss in sand bed
+\item[] \(H_{FiSand}\) = the sand bed depth/length of flow paths
+\item[] \(phi_{FiSand}\) = porosity of sand
+\item[] \(nu\) = kinematic viscosity
+\item[] \(V_{Fi}\) = the water velocity in the filter
+\item[] \(D_{60}\) = the size of the sand
+\item[] \(g\) = gravity
+\item[] \(k\) = Kozeny constant (5 for most filtration cases)
+\end{DUlineblock}
+
+This equation is valid for Reynolds numbers less than 6. Where:
+\({\rm Re}  = \frac{D_{60} V_{Fi}}{\nu}\)
+
+The headloss during backwash is taken as the design parameter, so other values are constructed around it.
+
+The following equation describes the headloss through the fluidized bed:
+
+\begin{DUlineblock}{0em}
+\item[] Such that:
+\item[] \(h_{l_{FiBw}\) = the headloss in the fluidized bed
+\item[] \(H_{FiSand}\) =  the depth of the settled sand bed
+\item[] \(phi_{FiSand}\) = the settled sand porosity
+\item[] \(rho_{Sand}\)  = the sand density
+\item[] \(rho_{Water}\) = the water density
+\end{DUlineblock}
+
+Using these two equations the minimum velocity for snad fluidization can be found!
+
+From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter is \sphinxstylestrong{not} indicative of fluidization at the bottom.
+
+
+\section{Backwash}
+\label{\detokenize{Filtration/Filtration_Design:backwash}}\label{\detokenize{Filtration/Filtration_Design:heading-backwash}}
+When considering backwash design, there are two main factors that constitute a dilemma. The first, backwash velocity must be must greater than filtration velocity (to expand the sand bed), and second, the backwash water must be clean water (cleaning with dirty water introduces more particles into the filter). This limits the paths water can take during the backwash process. The conventional options include pumping it back from the storage tank, using a set of parallel fiters to backwash one filter at a time, or storing the filtered water at an adequate elevation. Due to energy limitations and space constraints, the conventional solutions are simply not feasible for this system. Examples that illustrate why they cannot work can be found in the derivations sections(?)(or the examples?)
+
+\sphinxstylestrong{brief example here?}
+
+To avoid electricity, pumps can be immeidately ruled out.
+
+Parallel filters would require too much area and wouldn’t work well under low flow conditions:
+
+Given:
+\begin{equation}\label{equation:Filtration/Filtration_Design:filter_base_conditions}
+\begin{split}  Q_{Plant} = 6 \, \frac{L}{s} \,\,\,\,\, V_{Fi} = 1.8 \, \frac{mm}{s} \,\,\,\,\, V_{Bw} = 9 \, \frac{mm}{s}\end{split}
+\end{equation}
+As the ratio of the backwash velocity to the filter velocity is 5, 5 filters will be needs to provide enough flow to backash one: Therefore the number of parallel filters is 6:
+
+\(N_{Fi} = \frac{V_{Bw}}{V_{Fi}} + 1 = 6\)
+
+In this system, the water exiting five of the filters would be diverted to backwash one of the other filters. In addtion to requiring the plan view area of 6 filters, each filter would need to be backwashed independently, meaning it would take 6x longer and use 6x the water as compared to just having one filter. Another detriment to this system is that in low flows (such as drought conditions) not enough water would be passing through the system to backwash at points since all the water is diverted to backwash.
+
+The third option, elevating the filtered water to provide enough head to cause backwash, is also unfeasible.
+
+\sphinxstylestrong{add the third one at some later point if it’s useful}
+
+How can we find a solution?
+
+If the velocities could be more similar the filter could work!
+
+This could be accomplished in several ways: such as decreasing the media density thus lowering velocity to fluidize it, decrease the media diameter thus lowering the fluidization velocity, or make a more compact filter which filters in parallel and backwashes in series.
+
+As changing the material characteristics of the sand is challenging, a more compact filter is the chosen design. As it happens this innovation results in a more concpetually difficult filter. In the design, six layers of sand are stacked, there are four inlets, and three outlets which are all in use during filtration. During backwash only one inlet is used and the backwash water is discarded through a separate manifold. Throughout this section, figures and images will be the best methods to understand the design flow through the system, and will be supplemented by the text.
+
+This overall design can be seen in Figure XXXXX.
+
+(figure of the full system)
+
+Tasks for clare for Thursday + Friday morning: insert images! none of them are in yet. Save as pngs. streamline the way you want this to work as well. like overall structure
+
+In is most basic schema, the filter is a series of pipes leading into a deep box with 1.2 meters of sand (for most filters)
+
+As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter. These structures have slots which allow water out of the inlet pipes into the sand bed. Across a layer of sand from the inlet is an outlet pipe in the same shapes as the slotted pipe inlets. Water passes into the pipes and up to the fitler outlet box where it only needs to be chlorinated before being distributed.
+
+Steps of designing a filter.
+1.
+
+
+\section{Siphon}
+\label{\detokenize{Filtration/Filtration_Design:siphon}}\label{\detokenize{Filtration/Filtration_Design:id1}}
+
+\chapter{Filtration Derivations}
+\label{\detokenize{Filtration/Filtration_Derivations:filtration-derivations}}\label{\detokenize{Filtration/Filtration_Derivations:title-filtration-derivations}}\label{\detokenize{Filtration/Filtration_Derivations::doc}}\phantomsection\label{\detokenize{Filtration/Filtration_Derivations:derivation-backwash-headloss-force-balance}}
+To determine the head loss during backwash a force balance should be performed between the water and the sand per unit of filter area (thus pressure values will be yielded). A schematic for this system is shown below:
+
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics[width=0.500\linewidth]{{figure_force_balance}.png}
+\label{\detokenize{Filtration/Filtration_Derivations:figure-force-balance}}\end{figure}
+
+The pressure from the water:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:0}
+\begin{split}P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}\end{split}
+\end{equation}
+\begin{DUlineblock}{0em}
+\item[] Such that:
+\item[] \(P_{Manometer} =\) total height from the bottom of the filter to the inlet box
+\item[] \(\rho_{Water} =\) density of water
+\item[] \(H_{W_1} =\) the distnace from the top of the settled sand bed to the water surface in the filter
+\item[] \(H_{W_2} =\) the height of the water below the sand bed but within the filter
+\item[] \(\phi_{FiSand} =\) porosity of sand
+\item[] \(H_{FiSand} =\) height of the filter bed
+\item[] \(\rho_{Sand} =\) density of sand
+\end{DUlineblock}
+
+The pressure from the sand:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:1}
+\begin{split}P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\end{split}
+\end{equation}
+\begin{DUlineblock}{0em}
+\item[] Such that:
+\item[] \(h_{l_{FiBw}} =\) the difference in height of the inlet and water surface height during backwash; the backwash head loss
+\end{DUlineblock}
+
+Setting them equal for a force balance:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:2}
+\begin{split}\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\end{split}
+\end{equation}
+Which simplifies to:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:3}
+\begin{split}h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}
+or
+h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\end{split}
+\end{equation}
+This result gives a ratio of the head loss during backwash to the height difference during forward operation. With \(\phi_{FiSand} = 0.4\) and \(\rho_{Sand} = 2650 kg/m^3\) the value of this ratio is:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:4}
+\begin{split}\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\end{split}
+\end{equation}
+Thus:
+\begin{equation}\label{equation:Filtration/Filtration_Derivations:Filtration/Filtration_Derivations:5}
+\begin{split}h_{l_{FiBw}} = H_{FiSand} * 0.99\end{split}
+\end{equation}
+
 \chapter{Flow Control and Measurement Introduction}
 \label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:flow-control-and-measurement-introduction}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro:title-flow-control-intro}}\label{\detokenize{Flow_Control_and_Measurement/FCM_Intro::doc}}
 
