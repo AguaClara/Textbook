@@ -17,6 +17,13 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
    "Python", "3.6.5"
 
 .. toctree::
+    :caption: Acknowledgements
+    :maxdepth: 1
+
+    Acknowledgements.rst
+    Authors.rst
+
+.. toctree::
    :caption: Contributor's guide
    :maxdepth: 1
 
@@ -47,6 +54,22 @@ This is a place holder for 'Chapter 1: Introduction' files
    Flow_Control_and_Measurement/FCM_Intro.rst
    Flow_Control_and_Measurement/FCM_Design.rst
    Flow_Control_and_Measurement/FCM_Derivations.rst
+
+.. toctree::
+   :caption: Chapter 4: Rapid Mix
+   :maxdepth: 1
+
+   Rapid_Mix/RM_Intro.rst
+   Rapid_Mix/RM_Design.rst
+   Rapid_Mix/RM_Derivations.rst
+   Rapid_Mix/RM_Examples.rst
+   Rapid_Mix/RM_Theory_and_Future_Work.rst
+
+.. toctree::
+   :caption: Chapter 6: Sedimentation
+   :maxdepth: 1
+
+   Sedimentation/Sed_Theory_and_Future_Work.rst
 
 
 `PDF and LaTeX versions <https://github.com/AguaClara/Textbook/releases/latest>`_ [#pdf_warning]_.

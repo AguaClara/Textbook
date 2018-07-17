@@ -66,7 +66,7 @@ We estimate the hindered sedimentation velocity to be 1 mm/s since that is what 
  Pi_recycle = np.arange(0,Pi_recycle_max,0.1)
  fig, ax = plt.subplots()
  x=np.array([0,Pi_recycle_max])
- yscale = (C_fb*H_fb*v_hindered/(1*u.mm/u.s)).to_base_units()
+ yscale = (C_fb_conventional*H_fb*v_hindered/(1*u.mm/u.s)).to_base_units()
  yscale
  y=np.array([1,1])*yscale
  ax.plot(x,y)

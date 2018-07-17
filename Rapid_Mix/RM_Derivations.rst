@@ -200,13 +200,13 @@ Parallel plates Laminar
 
 Flow between parallel plates occurs in plate settlers in the sedimentation tank. We will derive the velocity gradient at the wall using the Navier Stokes equation.
 
-  .. _Parallel_Plate_schematic:
-  .. figure::    Images\Parallel_Plate_schematic.png
-     :width: 700px
-     :align: center
-     :alt: Parallel plate schematic
+.. _Parallel_Plate_schematic:
+.. figure::    Images\Parallel_Plate_schematic.png
+   :width: 700px
+   :align: center
+   :alt: Parallel plate schematic
 
-     A fluid flowing from left to right due to a pressure gradient results in wall shear on the parallel plates. This flow profile is for the case when :math:`\frac{dp}{dx}` is negative.
+   A fluid flowing from left to right due to a pressure gradient results in wall shear on the parallel plates. This flow profile is for the case when :math:`\frac{dp}{dx}` is negative.
 
 
 We start with the Navier-Stokes equation written for flow in the x direction.
