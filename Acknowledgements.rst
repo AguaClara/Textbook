@@ -10,8 +10,9 @@ Environmental Protection Agency statement
 =========================================
 “This textbook was developed under numerous Assistance Agreements awarded by the U.S. Environmental Protection Agency to Cornell University. It has not been formally reviewed by EPA. The views expressed in this document are solely those of the authors and do not necessarily reflect those of the Agency. EPA does not endorse any products or commercial services mentioned in this publication.”
 
-  .. _NSF_logo:
-  .. figure:: https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo_thumb.jpg
+ .. _NSF_logo:
+.. figure:: https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo_thumb.jpg
+
 National Science Foundation statement
 =====================================
 This material is based upon work supported by the National Science Foundation under Grant numbers CBET-1704472 and CBET-1437961. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.
