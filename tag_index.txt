@@ -1,0 +1,160 @@
+As of 10:31AM on July 17th 2018 this is a list off all instaces of a section or reference as indicated by ".. _" in the Textbook repo's RST files.
+This includes: sections, figures, titles, tables (the labels will be changed very soon to make this file easier to use)
+
+
+--------------------------HEADINGS----------------------------
+
+PS C:\Users\public\github\textbook> Select-String -Pattern ".. _heading" -Path "C:\Users\Public\github\Textbook\*\*.rst"
+
+Filtration\Filtration_Design.rst:13:.. _heading_filtration_terms:
+Filtration\Filtration_Design.rst:33:.. _heading_filter_types:
+Filtration\Filtration_Design.rst:54:.. _heading_porosity:
+Filtration\Filtration_Design.rst:122:.. _heading_headloss_requirements:
+Filtration\Filtration_Design.rst:171:.. _heading_backwash:
+Flow_Control_and_Measurement\FCM_Derivations.rst:9:.. _heading_flow_for_a_tank_with_a_valve:
+Flow_Control_and_Measurement\FCM_Derivations.rst:144:.. _heading_diameter_and_time_tank_drain_equation:
+Flow_Control_and_Measurement\FCM_Derivations.rst:212:.. _heading_design_equations_for_the_cdc:
+Flow_Control_and_Measurement\FCM_Derivations.rst:231:.. _heading_cdc_design_equation_derivations:
+Flow_Control_and_Measurement\FCM_Design.rst:12:.. _heading_fcm_terms_eqs:
+Flow_Control_and_Measurement\FCM_Design.rst:32:.. _heading_aguaclara_flow_control_and_measurement_technologies:
+Flow_Control_and_Measurement\FCM_Design.rst:48:.. _heading_almost_linear_flow_controller:
+Flow_Control_and_Measurement\FCM_Design.rst:79:.. _heading_lfom:
+Flow_Control_and_Measurement\FCM_Design.rst:123:.. _heading_linear_cdc:
+Flow_Control_and_Measurement\FCM_Design.rst:205:.. _heading_FCM_section_summary:
+Flow_Control_and_Measurement\FCM_Intro.rst:8:.. _heading_tank_with_a_valve:
+Flow_Control_and_Measurement\FCM_Intro.rst:14:.. _heading_qh_as_a_function_of_t:
+Flow_Control_and_Measurement\FCM_Intro.rst:61:.. _heading_drain_system_for_a_tank:
+Review\Review_Fluid_Mechanics.rst:12:.. _heading_fluids_terms_eqs:
+Review\Review_Fluid_Mechanics.rst:41:.. _heading_introductory_concepts:
+Review\Review_Fluid_Mechanics.rst:48:.. _heading_continuity_equation:
+Review\Review_Fluid_Mechanics.rst:96:.. _heading_laminar_and_turbulent_flow:
+Review\Review_Fluid_Mechanics.rst:139:.. _heading_streamlines_and_control_volumes:
+Review\Review_Fluid_Mechanics.rst:169:.. _heading_bernoulli_and_energy_equations:
+Review\Review_Fluid_Mechanics.rst:176:.. _heading_bernoulli_equation:
+Review\Review_Fluid_Mechanics.rst:217:.. _heading_energy_equation:
+Review\Review_Fluid_Mechanics.rst:238:.. _heading_head_loss:
+Review\Review_Fluid_Mechanics.rst:245:.. _heading_major_losses:
+Review\Review_Fluid_Mechanics.rst:332:.. _heading_minor_losses:
+Review\Review_Fluid_Mechanics.rst:397:.. _heading_head_loss_elevation_difference_trick:
+Review\Review_Fluid_Mechanics.rst:458:.. _heading_the_orifice_equation:
+Review\Review_Fluid_Mechanics.rst:465:.. _heading_what_is_a_vena_contracta:
+Review\Review_Fluid_Mechanics.rst:544:.. _heading_FR_section_summary:
+Review\Review_Fluid_Mechanics_Derivations.rst:9:.. _heading_minor_loss_equation_derivation:
+Review\Review_Fluid_Mechanics_Derivations.rst:100:.. _heading_final_minor_loss_equations:
+Textbook_Creation_Help\example_aguaclara_rst.rst:10:.. _heading_how_to_use_this_file:
+Textbook_Creation_Help\example_aguaclara_rst.rst:23:.. _heading_headings_bullets_and_lists:
+Textbook_Creation_Help\example_aguaclara_rst.rst:49:  .. _heading_example_section:
+Textbook_Creation_Help\example_aguaclara_rst.rst:56:  .. _heading_example_subsection:
+Textbook_Creation_Help\example_aguaclara_rst.rst:101:.. _heading_figures:
+Textbook_Creation_Help\example_aguaclara_rst.rst:152:.. _heading_math_and_equations:
+Textbook_Creation_Help\example_aguaclara_rst.rst:203:.. _heading_tables:
+Textbook_Creation_Help\example_aguaclara_rst.rst:232:.. _heading_links_and_references:
+Textbook_Creation_Help\example_aguaclara_rst.rst:269:.. _heading_writing_code_blocks:
+Textbook_Creation_Help\example_aguaclara_rst.rst:288:.. _heading_python_and_including_doctests:
+Textbook_Creation_Help\example_aguaclara_rst.rst:345:.. _heading_assorted_convention:
+Textbook_Creation_Help\rst_intro.rst:9:.. _heading_what_is_rst:
+Textbook_Creation_Help\rst_intro.rst:17:.. _heading_why_rst:
+Textbook_Creation_Help\rst_intro.rst:25:.. _heading_setting_up_rst:
+Textbook_Creation_Help\rst_intro.rst:32:.. _heading_installing_atom:
+Textbook_Creation_Help\rst_intro.rst:39:.. _heading_building_rst_locally:
+Textbook_Creation_Help\rst_intro.rst:52:.. _heading_publishing_online:
+Textbook_Creation_Help\rst_intro.rst:71:.. _heading_testing_online:
+Textbook_Creation_Help\rst_intro.rst:89:.. _heading_brief_best_practices:
+Textbook_Creation_Help\rst_intro.rst:96:.. _heading_how_do_i_write_rst:
+Textbook_Creation_Help\rst_intro.rst:108:.. _heading_Example_to_start_from:
+Textbook_Creation_Help\rst_intro.rst:118:.. _heading_converting_md_to_rst:
+
+
+----------------------------FIGURES---------------------------------------------
+
+PS C:\Users\public\github\textbook> Select-String -Pattern ".. _figure" -Path "C:\Users\Public\github\Textbook\*\*.rst"
+
+Filtration\Filtration_Derivations.rst:13:.. _figure_force_balance:
+Filtration\Filtration_Design.rst:69:.. _figure_porosity:
+Flow_Control_and_Measurement\FCM_Derivations.rst:15:.. _figure_drip_hypochlorinator:
+Flow_Control_and_Measurement\FCM_Derivations.rst:108:.. _figure_hypochlorinator_variable_explanation:
+Flow_Control_and_Measurement\FCM_Derivations.rst:152:.. _figure_pipe_stub_drainage:
+Flow_Control_and_Measurement\FCM_Derivations.rst:202:.. _figure_pipe_stub_drainage_variables:
+Flow_Control_and_Measurement\FCM_Derivations.rst:222:.. _figure_cdc_derivation:
+Flow_Control_and_Measurement\FCM_Derivations.rst:289:.. _figure_CDC_linearity_model:
+Flow_Control_and_Measurement\FCM_Derivations.rst:399:.. _figure_CDC_length_model:
+Flow_Control_and_Measurement\FCM_Derivations.rst:452:.. _figure_CDC_diameter_model:
+Flow_Control_and_Measurement\FCM_Design.rst:88:.. _figure_sutro_v_lfom:
+Flow_Control_and_Measurement\FCM_Design.rst:150:.. _figure_cdc_labelled:
+Flow_Control_and_Measurement\FCM_Intro.rst:35:.. _figure_hypochlorinator_variable_explanation_design:
+Flow_Control_and_Measurement\FCM_Intro.rst:52:.. _figure_tank_valve_play:
+Flow_Control_and_Measurement\FCM_Intro.rst:83:.. _figure_pipe_stub_drainage_variables_in_derivation:
+Review\Review_Fluid_Mechanics.rst:87:.. _figure_continuity_pipes:
+Review\Review_Fluid_Mechanics.rst:102:.. _figure_wikipedia_laminar_turbulent:
+Review\Review_Fluid_Mechanics.rst:149:.. _figure_control_volume_simplification:
+Review\Review_Fluid_Mechanics.rst:159:.. _figure_image_control_volumes:
+Review\Review_Fluid_Mechanics.rst:200:.. _figure_different_forms_of_head:
+Review\Review_Fluid_Mechanics.rst:323:.. _figure_moody:
+Review\Review_Fluid_Mechanics.rst:365:.. _figure_minor_loss_pipe_FRD:
+Review\Review_Fluid_Mechanics.rst:378:.. _figure_minor_loss_elbow:
+Review\Review_Fluid_Mechanics.rst:405:.. _figure_head_loss_trick:
+Review\Review_Fluid_Mechanics.rst:471:.. _figure_sluice_gate_vena_contracta:
+Review\Review_Fluid_Mechanics.rst:497:.. _figure_hole_in_a_bucket:
+Review\Review_Fluid_Mechanics.rst:535:.. _figure_vertical_and_horizontal_orifices:
+Review\Review_Fluid_Mechanics_Derivations.rst:16:.. _figure_minor_loss_pipe:
+Textbook_Creation_Help\example_aguaclara_rst.rst:109:  .. _figure_fluffy_cat:
+Textbook_Creation_Help\example_aguaclara_rst.rst:120:  .. _figure_mountain:
+Textbook_Creation_Help\example_aguaclara_rst.rst:132:.. _figure_fluffy_cat:
+Textbook_Creation_Help\example_aguaclara_rst.rst:141:.. _figure_mountain:
+
+----------------------------TABLES--------------------------------
+
+
+PS C:\Users\public\github\textbook> Select-String -Pattern ".. _table" -Path "C:\Users\Public\github\Textbook\*\*.rst"
+
+Review\Review_Fluid_Mechanics.rst:645:.. _table_h_Q_proportionality:
+Textbook_Creation_Help\example_aguaclara_rst.rst:209:  .. _table_an_example_table:
+Textbook_Creation_Help\example_aguaclara_rst.rst:220:.. _table_an_example_table:
+Textbook_Creation_Help\parameter_convention_list.rst:7:.. _table_dimension_table:
+Textbook_Creation_Help\parameter_convention_list.rst:20:.. _table_parameter_table:
+
+------------------------------TITLES----------------------------------------
+
+PS C:\Users\public\github\textbook> Select-String -Pattern ".. _title" -Path "C:\Users\Public\github\Textbook\*\*.rst"
+
+Filtration\Filtration_Derivations.rst:1:.. _title_filtration_derivations:
+Filtration\Filtration_Design.rst:1:.. _title_filtration:
+Flow_Control_and_Measurement\FCM_Derivations.rst:1:.. _title_flow_control_derivations:
+Flow_Control_and_Measurement\FCM_Design.rst:1:.. _title_flow_control_design:
+Flow_Control_and_Measurement\FCM_Intro.rst:1:.. _title_flow_control_intro:
+Review\Review_Fluid_Mechanics.rst:1:.. _title_review_fluid_mechanics:
+Review\Review_Fluid_Mechanics_Derivations.rst:1:.. _title_review_fluid_mechanics_derivations:
+Textbook_Creation_Help\example_aguaclara_rst.rst:1:.. _title_aguaclara_rst_convention:
+Textbook_Creation_Help\example_aguaclara_rst.rst:40:  .. _title_example_document_title:
+Textbook_Creation_Help\parameter_convention_list.rst:1:.. _title_parameter_convention_list:
+Textbook_Creation_Help\rst_intro.rst:1:.. _title_rst_intro:
+
+--------------------------------EQUATIONS-------------------------------------------------------------------
+
+PS C:\Users\public\github\textbook> Select-String -Pattern ":label:" -Path "C:\Users\Public\github\Textbook\*\*.rst"
+
+Filtration\Filtration_Design.rst:45:  :label: area_stuff
+Filtration\Filtration_Design.rst:62:  :label: porosity
+Filtration\Filtration_Design.rst:87:  :label: uniformity_coefficient
+Filtration\Filtration_Design.rst:97:  :label: backwash_porosity
+Filtration\Filtration_Design.rst:111:  :label: filter_expansion_ratio
+Filtration\Filtration_Design.rst:129:  :label: karmen_kozeny_clean_bed
+Filtration\Filtration_Design.rst:151:  :label: headloss_fluidzed_bed
+Filtration\Filtration_Design.rst:164:  :label: minimum_fluidization_velocity_sand
+Filtration\Filtration_Design.rst:187:  :label: filter_base_conditions
+Flow_Control_and_Measurement\FCM_Intro.rst:23:  :label: Q_tank_with_valve
+Review\Review_Fluid_Mechanics.rst:55:  :label: continuity_equation
+Review\Review_Fluid_Mechanics.rst:123:  :label: reynolds_number_equation
+Review\Review_Fluid_Mechanics.rst:183:  :label: bernoulli_equation
+Review\Review_Fluid_Mechanics.rst:230:  :label: energy_equation
+Review\Review_Fluid_Mechanics.rst:254:  :label: darcy_weisbach
+Review\Review_Fluid_Mechanics.rst:284:  :label: swamee_jain
+Review\Review_Fluid_Mechanics.rst:311:  :label: hagen_poiseuille
+Review\Review_Fluid_Mechanics.rst:520:  :label: orifice_equation
+Review\Review_Fluid_Mechanics_Derivations.rst:39:  :label: minor_loss_energy_eq
+Review\Review_Fluid_Mechanics_Derivations.rst:117: :label: minor_loss_equation
+Textbook_Creation_Help\example_aguaclara_rst.rst:159:    :label: quadratic_equation
+Textbook_Creation_Help\example_aguaclara_rst.rst:166:    :label: quadratic_equation
+Textbook_Creation_Help\example_aguaclara_rst.rst:179:    :label: continuity_equation_example
+Textbook_Creation_Help\example_aguaclara_rst.rst:191:  :label: continuity_equation_example
+
