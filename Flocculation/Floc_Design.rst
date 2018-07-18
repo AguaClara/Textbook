@@ -11,9 +11,9 @@ Equations, universal constants, and other helpful goodies can be found in the [a
 Variable: `pc.gravity`
 Function: `pc.area_circle(DiamCircle)`.
 
-The letters before the `.`, in this case `pc`, indicate the file within aide_design where the variable or function can be found. In the examples above, `pc.gravity` and `pc.area_circle(DiamCircle)` show that the variable `gravity` and function `area_circle(DiamCicle)` are located inside the [physchem.py](https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py) (`pc`) file. You are strongly recommended to look up any aide_design equations you plan to use within in their aide_design file before using them, even if they are given here in this summary sheet. This is because each equation has comments in its original file describing what the specific conditions are to using it.
+The letters before the `.`, in this case `pc`, indicate the file within aide_design where the variable or function can be found. In the examples above, `pc.gravity` and `pc.area_circle(DiamCircle)` show that the variable `gravity` and function `area_circle(DiamCicle)` are located inside the `physchem.py <https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py>`_ (`pc`) file. You are strongly recommended to look up any aide_design equations you plan to use within in their aide_design file before using them, even if they are given here in this summary sheet. This is because each equation has comments in its original file describing what the specific conditions are to using it.
 
-For the most part, [hyperlinks in these documents will contain supplementary information](http://likethis.com/ "This link does not go anywhere"). The information contained in the linked external sites is there in case you don't feel completely comfortable with a concept, but is not necessary to learn thoroughly and will not be tested.
+For the most part, `hyperlinks in these documents will contain supplementary information <http://likethis.com/ "This link does not go anywhere">`_. The information contained in the linked external sites is there in case you don't feel completely comfortable with a concept, but is not necessary to learn thoroughly and will not be tested.
 
 **Important Note:** This chapter introduces <font color="red">uncertainty and empirical design</font>. Some of the parameters used to design AguaClara flocculators are based on what has been shown to work in the field, as opposed to having been derived scientifically. To make sure that the reader is aware of these concepts and parameters that don't yet have a thorough basis in research, they will be highlighted in red when they appear.
 
@@ -89,145 +89,181 @@ Collision Potential, :math:`\bar G \theta`, and Energy Dissipation Rate, :math:`
 
 **Collision potential :math:`(\bar G \theta)`** is a term with a very straightforward name. It represents the magnitude of potential particle collisions in a fluid. It is a _dimensionless_ parameter which is often used as a performance metric for flocculators; big :math:`\bar G \theta` values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). <font color="red">AguaClara flocculators usually aim for a collision potential of :math:`(\bar G \theta) = 37,000`</font>, which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying :math:`\bar G`, a parameter for average fluid shear with units of :math:`\frac{1}{[T]}`, and :math:`\theta$` , the residence time of water in the flocculator, with units of ::math:`[T]` . :math:`\theta` is intuitive to measure, calculate, and understand. :math:`\bar G` is a bit more difficult. First, an intuitive explanation. See the image below, which shows the velocity profile of flowing water.
 
-<center><img src="https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/G_velocity_profile.jpg?raw=true" width=500></center>
+.. _figure_G_velocity_profile:
+
+.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/G_velocity_profile.jpg?raw=true
+    :width: 50%
+    :align: center
+    :alt: external figure
+
+    The velocity profile of flowing water over a non-moving bottom boundary.
 
 
-$G$ measures the magnitude of shear by using the velocity gradient of a fluid in space, $\frac{\Delta \bar v}{\Delta h}$. This is essentially the same as the $\frac{\delta u}{\delta y}$ term in fluid mechanics, which is found in the ubiquitous [fluid-shear problem](http://polymerdatabase.com/polymer%20physics/images/Visc.png "sourced from http://polymerdatabase.com/polymer%20physics/Viscosity.html").
 
-$\bar G$ represents the average $\frac{\Delta \bar v}{\Delta h}$ for the entire water volume under consideration, and is the parameter we will be using from now on. Unfortunately, it is unrealistic to measure $\frac{\Delta \bar v}{\Delta h}$ for every parcel of the water in our flocculator and take an average. We need to approximate $\bar G$ using measureable parameters.
+:math:`G` measures the magnitude of shear by using the velocity gradient of a fluid in space, :math:`\frac{\Delta \bar v}{\Delta h}`. This is essentially the same as the :math:`\frac{\delta u}{\delta y}` term in fluid mechanics, which is found in the ubiquitous `fluid-shear problem <http://polymerdatabase.com/polymer%20physics/images/Visc.png>`_ as sourced from `here. <http://polymerdatabase.com/polymer%20physics/Viscosity.html>`_
 
-The parameter that serves as the basis for obtaining $\bar G$ is $\varepsilon$, which represents the **energy dissipation** rate of a fluid _normalized by its mass_. The units of $\varepsilon$ are Watts per kilogram:
+:math:`\bar G` represents the average :math:`\frac{\Delta \bar v}{\Delta h}` for the entire water volume under consideration, and is the parameter we will be using from now on. Unfortunately, it is unrealistic to measure :math:`\frac{\Delta \bar v}{\Delta h}` for every parcel of the water in our flocculator and take an average. We need to approximate :math:`\bar G` using measureable parameters.
 
-$$\varepsilon = \left[ \frac{W}{Kg} \right]
-= \left[ \frac{J}{s \cdot Kg} \right]
-= \left[ \frac{N \cdot m}{s \cdot Kg} \right]
-= \left[ \frac{kg \cdot m \cdot m}{s^2 \cdot s \cdot Kg} \right]
-= \left[ \frac{m^2}{s^3} \right]
-= \left[ \frac{[L]^2}{[T]^3} \right]$$
+The parameter that serves as the basis for obtaining :math:`\bar G` is :math:`\varepsilon`, which represents the **energy dissipation** rate of a fluid _normalized by its mass_. The units of :math:`\varepsilon` are Watts per kilogram:
 
-There are at least two ways to think about $\varepsilon$. One is through $G$. Imagine that a fluid has _no viscosity_; there is no internal friction caused by fluid flow. No matter how high $G$ becomes, no energy is dissipated. Now image a honey, which has a very high viscosity. Making honey flow fast requires a lot of energy over a short period of time, which means a high energy dissipation rate. This explanation allows us to understand the equation for $\varepsilon$ in terms of $G$ and $\nu$. [See this textbook](https://app.knovel.com/web/view/khtml/show.v/rcid:kpMWHWTPD1/cid:kt00AD4KW1/viewerType:khtml/root_slug:mwh-s-water-treatment/url_slug:principles-reactor-analysis?&b-toc-cid=kpMWHWTPD1&b-toc-url-slug=coagulation-flocculation&b-toc-title=MWH%E2%80%99s%20Water%20Treatment%20-%20Principles%20and%20Design%20(3rd%20Edition)&page=80&view=collapsed&zoom=1) for the derivation of the following equation:
+.. math::
+  \varepsilon = \left[ \frac{W}{Kg} \right] = \left[ \frac{J}{s \cdot Kg} \right] = \left[ \frac{N \cdot m}{s \cdot Kg} \right] = \left[ \frac{kg \cdot m \cdot m}{s^2 \cdot s \cdot Kg} \right] = \left[ \frac{m^2}{s^3} \right] = \left[ \frac{[L]^2}{[T]^3} \right]
 
-$$\varepsilon = \nu G^2$$
+There are at least two ways to think about :math:`\varepsilon`. One is through :math:`G`. Imagine that a fluid has *no viscosity* ; there is no internal friction caused by fluid flow. No matter how high :math:`G` becomes, no energy is dissipated. Now image a honey, which has a very high viscosity. Making honey flow fast requires a lot of energy over a short period of time, which means a high energy dissipation rate. This explanation allows us to understand the equation for :math:`\varepsilon` in terms of:math:`G` and :math:`\nu`. `See this textbook <https://app.knovel.com/web/view/khtml/show.v/rcid:kpMWHWTPD1/cid:kt00AD4KW1/viewerType:khtml/root_slug:mwh-s-water-treatment/url_slug:principles-reactor-analysis?&b-toc-cid=kpMWHWTPD1&b-toc-url-slug=coagulation-flocculation&b-toc-title=MWH%E2%80%99s%20Water%20Treatment%20-%20Principles%20and%20Design%20(3rd%20Edition)&page=80&view=collapsed&zoom=1)>`_ for the derivation of the following equation:
 
-Which means we can solve for $G$:
+.. math::
+  \varepsilon = \nu G^2
 
-$$G = \sqrt{\frac{\varepsilon}{\nu}}$$
+Which means we can solve for :math:`G`:
 
-Energy dissipation rate is, fortunately, easier to determine than collision potential. This is due to the second way to think about $\varepsilon$, which is using head loss. In any reactor, a flocculator in this case, the total energy dissipated is simply the head loss, $h_L$. The amount of time required to dissipate that energy is the residence time of the water in the reactor, $\theta$. Accounting for the fact that 'head' energy is due to gravity $g$, we have all the parameters needed to determine another equation for energy dissipation rate:
+.. math::
+  G = \sqrt{\frac{\varepsilon}{\nu}}
 
-$$ \bar \varepsilon = \frac{g h_L}{\theta}$$
+Energy dissipation rate is, fortunately, easier to determine than collision potential. This is due to the second way to think about :math:`\varepsilon`, which is using head loss. In any reactor, a flocculator in this case, the total energy dissipated is simply the head loss, :math:`h_L`. The amount of time required to dissipate that energy is the residence time of the water in the reactor, :math:`\theta`. Accounting for the fact that 'head' energy is due to gravity :math:`g`, we have all the parameters needed to determine another equation for energy dissipation rate:
 
-Note that the equation above is for $\bar \varepsilon$, not $\varepsilon$. Since the head loss term we are using, $h_L$, occurs over the entire reactor, it can only be used to find an average energy dissipation rate for the entire reactor. Combining the equations above, $G = \sqrt{\frac{\varepsilon}{\nu}}$ and $\bar \varepsilon = \frac{g h_L}{\theta}$, we can get an equation for $\bar G$ in terms of easily measureable parameters:
+.. math::
+  \bar \varepsilon = \frac{g h_L}{\theta}
 
-$$\bar G = \sqrt{\frac{g h_L}{\nu \theta}}$$
+Note that the equation above is for :math:`\bar \varepsilon`, not :math:`\varepsilon`. Since the head loss term we are using, :math:`h_L`, occurs over the entire reactor, it can only be used to find an average energy dissipation rate for the entire reactor. Combining the equations above, :math:`G = \sqrt{\frac{\varepsilon}{\nu}}` and :math:`\bar \varepsilon = \frac{g h_L}{\theta}`, we can get an equation for :math:`\bar G` in terms of easily measureable parameters:
+
+.. math::
+  \bar G = \sqrt{\frac{g h_L}{\nu \theta}}
 
 We can use this to obtain a final equation for collision potential of a reactor:
 
-$$\bar G \theta = \sqrt{\frac{g h_L \theta}{\nu}}$$
+.. math::
+  \bar G \theta = \sqrt{\frac{g h_L \theta}{\nu}}
 
-**Note:** When we say $G \theta$ we are almost always referring to $\bar G \theta$.
+**Note:** When we say :math:`G \theta` we are almost always referring to :math:`\bar G \theta`.
 
 
-### Generating Head Loss with Baffles
-#### **What are Baffles?**
+Generating Head Loss with Baffles
+----------------------------------
+
+**What are Baffles?**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Now that we know how to measure collision potential with head loss, we need a way to actually generate head loss. While both major or minor losses can be the design basis, it generally makes more sense to use major losses only for very low-flow flocculation (lab-scale) and minor losses for higher flows, as flocculation with minor losses tends to be more space-efficient. Since this book focuses on town and village-scale water treatment (5 L/S to 120 L/S), we will use minor losses as our design basis.
 
 To generate minor losses, we need to create flow expansions. AguaClara does this with **baffles**, which are obstructions in the channel of a flocculator to force the flow to switch directions by 180°. Baffles in AguaClara plants are plastic sheets, and all of the baffles in one flocculator channel are connected to form a **baffle module.** Images below show an AguaClara flocculator and the beginnings of a baffle module.
 
-<center><img src="https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/AC_flocculator.JPG?raw=true" width=900></center>
+.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/AC_flocculator.JPG?raw=true
+  :width: 50%
+  :align: center
+  :alt: this is a floc images
 
-<br/>
-<br/>
-<br/>
+  Clockwise from the top left the images show: the outline of the entire flocculator, some top and bottom baffles in the channeles, the 4 flocculator channels in this flocculator, and the flow path of water through the flocculator
 
-<center><img src="https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Baffle_module.JPG?raw=true" width=600></center>
+.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Baffle_module.JPG?raw=true
+  :width: 50%
+  :align: center
+  :alt: this image shows the floc baffle module out of the water within a plant.
 
-<br/>
-<br/>
+  Before being inserted into the floccualtor channel, the baffle module is constructed as a unit as shown here.
 
-AguaClara flocculators, like the one pictured above, are called **vertical hydraulic flocculators** because the baffles force the flow vertically up and down. If the baffles were instead arranged to force the flow side-to-side, the flocculator would be called a **horizontal hydraulic flocculator**. AguaClara uses vertical flocculators because they are more efficient when considering plant area. They are deeper than horizontal flocculators, which allows them to have a smaller [plan-view area](https://simple.wikipedia.org/wiki/Plan_view) and thus to be cheaper.
+AguaClara flocculators, like the one pictured above, are called **vertical hydraulic flocculators** because the baffles force the flow vertically up and down. If the baffles were instead arranged to force the flow side-to-side, the flocculator would be called a **horizontal hydraulic flocculator**. AguaClara uses vertical flocculators because they are more efficient when considering plant area. They are deeper than horizontal flocculators, which allows them to have a smaller `plan-view area <https://simple.wikipedia.org/wiki/Plan_view>`_ and thus to be cheaper.
 
-#### **Finding the Minor Loss of a Baffle**
-Before beginning this section, it is important to make sure that the we understand how water flows through a baffled flocculator. This is done in the following image. Take note of the red lines, they indicate the compression of the flow around a baffle.
+**Finding the Minor Loss of a Baffle**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-<center>
-<img src="https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Flocculator_flow.jpg?raw=true" width=400>
-</center>
+Before beginning this section, it is important to understand how water flows through a baffled flocculator. This flow path is shown in the following image. Take note of the thin red arrows; they indicate the compression of the flow around a baffle.
 
 
-<br/>
-<br/>
+.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Flocculator_flow.jpg?raw=true
+  :width: 600px
+  :align: center
+  :alt: flocculator flow image
 
-Since baffles are the source of head loss via minor losses, we need to find the minor loss coefficient of one baffle if we want to be able to quantify its head loss. To do this, we apply fluid mechanics intuition and check it against a computational fluid dynamics (CFD) simulation. Flow around a 90° bend has a vena contracta value of around $\Pi_{vc} = 0.62$. Flow around a 180° bend therefore has a value of $\color{red}{\Pi_{vc, \, baffle} = \Pi_{vc}^2 = 0.384}$. This number is roughly confirmed with CFD, as shown in the image below.
 
-<center>
-<img src="https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/CFD_vc_baffle.jpg?raw=true" width=60>
-</center>
 
-We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or $A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}$. Through the [third form of the minor loss equation](https://github.com/AguaClara/Textbook/blob/master/Fluids%20Review/Fluids_Review_Design.md#minor-losses), $h_e = K \frac{\bar v_{out}^2}{2g}$ and its definition of the minor loss coefficient, $K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2$, we can determine a $K$ for flow around a single baffle:
+Since baffles are the source of head loss via minor losses, we need to find the minor loss coefficient of one baffle if we want to be able to quantify its head loss. To do this, we apply fluid mechanics intuition and check it against a computational fluid dynamics (CFD) simulation. Flow around a 90° bend has a vena contracta value of around :math:`\Pi_{vc} = 0.62`. Flow around a 180° bend therefore has a value of :math:`\color{red}{\Pi_{vc, \, baffle} = \Pi_{vc}^2 = 0.384}`. This number is roughly confirmed with CFD, as shown in the image below.
 
-$$K_{baffle} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2$$
 
-$$K_{baffle} = \left( \frac{\rlap{\Big/} A_{expanded}}{\Pi_{vc, \, baffle} \rlap{\Big/} A_{expanded}} -1 \right)^2$$
+.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/CFD_vc_baffle.jpg?raw=true
+  :align: center
+  :width:5 0%
+  :alt: CFD vs baffle
 
-$$K_{baffle} = \left( \frac{1}{0.384} -1 \right)^2$$
+  **WRITE A Caption about this image.**
 
-$$\color{red}{
-K_{baffle} = 2.56
-}$$
+We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}`. Through the `third form of the minor loss equation <https://github.com/AguaClara/Textbook/blob/master/Fluids%20Review/Fluids_Review_Design.md#minor-losses>`_, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine a :math:'k' for flow around a single baffle:
 
-This $K_{baffle}$ has been used to design many flocculators in AguaClara plants. However, its value has not yet been rigorously tested for AguaClara plants the field. Therefore it might actually deviate from $2.56$. Research and testing the $K$ of a baffle in an AguaClara plant is ongoing, but for now the designs made under the assumption that $\color{red}{K_{baffle} = 2.56}$ are functioning very well in AguaClara plants. Although research has been done by many academics on the minor loss coefficient, including [this paper by Haarhoff in 1998](http://aqua.iwaponline.com/content/47/3/142 "    DOI: 10.2166/aqua.1998.20"), the $K_{baffle}$ values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a $K_{baffle}$ value between $2.5$ and $4$.
+.. math::
+  K_{baffle} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2
 
-### Flocculator Efficiency
+  K_{baffle} = \left( \frac{\rlap{\Big/} A_{expanded}}{\Pi_{vc, \, baffle} \rlap{\Big/} A_{expanded}} -1 \right)^2
+
+  K_{baffle} = \left( \frac{1}{0.384} -1 \right)^2
+
+  \color{red}{K_{baffle} = 2.56}
+
+This :math:`K_{baffle}` has been used to design many flocculators in AguaClara plants. However, its value has not yet been rigorously tested for AguaClara plants the field. Therefore it might actually deviate from :math:`2.56`. Research and testing the :math:`K` of a baffle in an AguaClara plant is ongoing, but for now the designs made under the assumption that :math:`\color{red}{K_{baffle} = 2.56}` are functioning very well in AguaClara plants. Although research has been done by many academics on the minor loss coefficient, including `this paper by Haarhoff in 1998 <http://aqua.iwaponline.com/content/47/3/142>`_  (DOI: 10.2166/aqua.1998.20"), the :math:`K_{baffle}` values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a :math: `K_{baffle}` value between :math:`2.5` and :math:`4`.
+
+Flocculator Efficiency
+=======================
+
 When designing an effective and efficient flocculator, there are two main problems that we seek to avoid:
 
-1. Having certain sections in the flocculator with such high local $G$ values that our big, fluffy flocs are sheared apart into smaller flocs.
+1. Having certain sections in the flocculator with such high local :math:`G` values that our big, fluffy flocs are sheared apart into smaller flocs.
 2. Having dead space. Dead space means volume within the flocculator that is not being used to facilitate collisions. Dead space occurs after the flow has fully expanded from flowing around a baffle and before it reaches the next baffle.
 
 Fortunately for us, both problems can be quantified with a single ratio:
 
-$$\Pi_{\bar G}^{G_{Max}} = \frac{G_{Max}}{\bar G}$$
+.. math::
+  \Pi_{\bar G}^{G_{Max}} = \frac{G_{Max}}{\bar G}
 
- High values of $\Pi_{\bar G}^{G_{Max}}$ occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local $G$ values, then $G_{Max}$ becomes large. If the flocculator has a lot of dead space, then $\bar G$ becomes small. Either way, $\Pi_{\bar G}^{G_{Max}}$ becomes larger.
+ High values of :math:`\Pi_{\bar G}^{G_{Max}}` occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local :math:`G` values, then :math:`G_{Max}` becomes large. If the flocculator has a lot of dead space, then :nath:`\bar G` becomes small. Either way, :math:`\Pi_{\bar G}^{G_{Max}}` becomes larger.
 
-**Note:** Recall the relationship between $G$ and $\varepsilon$: $G = \sqrt{ \frac{\varepsilon}{\nu} }$. From this relationship, we can see that $G \propto \sqrt{\varepsilon}$. Thus, by defining  $\Pi_{\bar G}^{G_{Max}}$, we can also define a ratio for Max to average energy dissipation rate:
+**Note:** Recall the relationship between :math:`G` and :math:`\varepsilon` : :math:`G = \sqrt{ \frac{\varepsilon}{\nu} }`. From this relationship, we can see that :math:`G \propto \sqrt{\varepsilon}`. Thus, by defining  :math:`\Pi_{\bar G}^{G_{Max}}`, we can also define a ratio for Max to average energy dissipation rate:
 
-$$\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{\bar G}^{G_{Max}} \right)^2$$
+.. math::
+  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{\bar G}^{G_{Max}} \right)^2
 
-Therefore, by making our $\Pi_{\bar G}^{G_{Max}}$ as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. [A paper by Haarhoff and van der Walt in 2001](http://aqua.iwaponline.com/content/50/3/149 "DOI: 10.2166/aqua.2001.0014") uses CFD to show that the minimum $\Pi_{\bar G}^{G_{Max}}$ attainable in a hydraulic flocculator is $\Pi_{\bar G}^{G_{Max}} = \sqrt{2} \approx 1.4$, which means that $\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{\bar G}^{G_{Max}} \right)^2 \approx 2$. So how do we optimize an AguaClara flocculator to make sure $\Pi_{\bar G}^{G_{Max}} = \sqrt{2}$?
+Therefore, by making our :math:`\Pi_{\bar G}^{G_{Max}}` as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. `A paper by Haarhoff and van der Walt in 2001 <http://aqua.iwaponline.com/content/50/3/149>`_ (DOI: 10.2166/aqua.2001.0014) uses CFD to show that the minimum :math:`\Pi_{\bar G}^{G_{Max}}` attainable in a hydraulic flocculator is :math:`\Pi_{\bar G}^{G_{Max}} = \sqrt{2} \approx 1.4`, which means that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{\bar G}^{G_{Max}} \right)^2 \approx 2`. So how do we optimize an AguaClara flocculator to make sure :math:`\Pi_{\bar G}^{G_{Max}} = \sqrt{2}`?
 
 We define and optimize a performance metric:
 
-$$\frac{H_e}{S} = \Pi_{H_eS}$$
+.. math::
+  \frac{H_e}{S} = \Pi_{H_eS}
 
-Where $H_e$ is the distance between flow expansions in the flocculator and $S$ is the spacing between baffles. For now, $H_e$ is approximated as the height of water in the flocculator.
+Where :math:`H_e` is the distance between flow expansions in the flocculator and :math:`S` is the spacing between baffles. For now, :math:`H_e` is approximated as the height of water in the flocculator.
 
-Since $G_{Max}$ is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on $\frac{H_e}{S}$. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle. We base this on the rule of thumb for flow expansion, _**<font color="red">RESEARCHED BY GERHART JIRKA FIND A REFERENCE THAT'S BETTER THAN ONE OF MONROE'S POWERPOINTS**_: a jet doubles its initial diameter/length once it travels 10 times the distance of its original diameter/length</font>. If this is confusing, refer to the equation and image below:
+Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on :math:`\frac{H_e}{S}`. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle. We base this on the rule of thumb for flow expansion, _**<font color="red">RESEARCHED BY GERHART JIRKA FIND A REFERENCE THAT'S BETTER THAN ONE OF MONROE'S POWERPOINTS**_: a jet doubles its initial diameter/length once it travels 10 times the distance of its original diameter/length</font>. If this is confusing, refer to the equation and image below:
 
-$$\frac{x}{10} = D - D_0 $$
+.. math::
+  \frac{x}{10} = D - D_0
 
-<center><img src="https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Jet_expansion_flocculator.jpg?raw=true" width=600></center>
+.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Jet_expansion_flocculator.jpg?raw=true
+  :align: center
+  :width: 50%
+  :alt: jet expansion in the flocculator
 
-Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing $S$. We do this by substituting $D_0 = (0.384 S)$ along with $D = S$ to approximate how much distance, $x = H_e$, the contracted flow has to cover.
 
-$$\frac{H_e}{10} = S - (0.384 S)$$
-$$\frac{H_e}{10} = 0.616 S$$
-$$H_e = 6.16S$$
-$$\frac{H_e}{S} = 6.16$$
-$$\Pi_{H_eS_{Max}} = \frac{H_e}{S} = 6.16 \approx 6$$
+Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing :math:`S`. We do this by substituting  :math:`D_0 = (0.384 S)` along with :math:`D = S` to approximate how much distance, :math:`x = H_e`, the contracted flow has to cover.
 
-This is the highest allowable $\Pi_{H_eS}$ that we can design while ensuring that there is no dead space in the flocculator.
+.. math::
+  \frac{H_e}{10} = S - (0.384 S)
+  \frac{H_e}{10} = 0.616 S
+  H_e = 6.16S
+  \frac{H_e}{S} = 6.16
+  \Pi_{H_eS_{Max}} = \frac{H_e}{S} = 6.16 \approx 6
 
-<center><img src="https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/CFD_baffle_image.jpg?raw=true" width=600></center>
+This is the highest allowable :math:`\Pi_{H_eS}` that we can design while ensuring that there is no dead space in the flocculator.
 
-<center><img src="https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/CFD_full_channel.jpg?raw=true" width=700></center>
+.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/CFD_baffle_image.jpg?raw=true"
+  :align: center
+  :width: 50%
+  :alt: CFD baffle image
 
-</br>
-</br>
+.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/CFD_full_channel.jpg?raw=true"
+  :width: 700px
+  :align: center
+  :alt: CFD full channel
 
-In order to have a robust design process for a baffle module, we need to have some flexibility in the $\Pi_{H_eS} = \frac{H_e}{S}$ ratio. Since we found $\Pi_{H_eS_{Max}}$ previously, we must now find the lowest functional $\frac{H_e}{S}$ ratio, $\Pi_{H_eS_{Min}}$.
 
-AguaClara uses a fairly straightforward way of setting $\Pi_{H_eS_{Min}}$. It is based on the distance between the water level and the bottom baffle (which is the same distance between the flocculator floor and a top baffle). This distance is referred to as the slot width [(Haarhoff 1998)](http://aqua.iwaponline.com/content/47/3/142 "    DOI: 10.2166/aqua.1998.20") and is defined by the slot width ratio, which describes the slot width as a function of baffle spacing $S$. Slot width is shown in the following image:
+In order to have a robust design process for a baffle module, we need to have some flexibility in the :math:`\Pi_{H_eS} = \frac{H_e}{S}` ratio. Since we found :math:`\Pi_{H_eS_{Max}}` previously, we must now find the lowest functional :math:`\frac{H_e}{S}$ ratio, $\Pi_{H_eS_{Min}}`.
+
+AguaClara uses a fairly straightforward way of setting :math:`\Pi_{H_eS_{Min}}`. It is based on the distance between the water level and the bottom baffle (which is the same distance between the flocculator floor and a top baffle). This distance is referred to as the slot width [(Haarhoff 1998)](http://aqua.iwaponline.com/content/47/3/142 "    DOI: 10.2166/aqua.1998.20") and is defined by the slot width ratio, which describes the slot width as a function of baffle spacing $S$. Slot width is shown in the following image:
 
 <center><img src="https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Slot_width_description.jpg?raw=true" width=500></center>
 
