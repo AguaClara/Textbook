@@ -1,11 +1,13 @@
-.. _rapid_mix_derivations:
+.. _title_rapid_mix_derivations:
 
 ************************
 Rapid Mix Derivations
 ************************
 
-:math:`t_{eddy}`
-~~~~~~~~~~~~~~~~
+.. _heading_Eddy_turnover_time:
+
+Eddy turnover time
+==================
 
 Eddy turnover time, :math:`t_{eddy}`, is the time it takes for the eddy to travel a distance equal to its length-scale. We assume that the energy of the large eddy is dissipated into smaller length scales in the time :math:`t_{eddy}`:
 
@@ -31,10 +33,11 @@ Now we can solve for the eddy turnover time which is a measure of the mixing tim
     }
 
 :math:`t_{coagulant, \, application}`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _heading_Collision_Rates:
 
 Collision Rates
-^^^^^^^^^^^^^^^
+===============
 
 .. math:: {\rlap{\kern.08em--}V_{\rm{Cleared}}} \approx \pi d_{Clay} L_{Diff_{NC}} v_r t_c
 
@@ -51,8 +54,10 @@ Where :math:`t_c = \frac{dN_c}{dt}`:
 
 .. math:: dN_c = \pi d_{Clay} L_{Diff_{NC}}{\Lambda^{-2}_{Clay}} G dt
 
+.. _heading_Collision_Rate_and_Particle_Removal:
+
 Collision Rate and Particle Removal
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------
 
 A fraction of the remaining coagulant nanoparticles are removed during the time required for one sweep past the clay particle.
 
@@ -60,8 +65,10 @@ A fraction of the remaining coagulant nanoparticles are removed during the time 
 
 .. math:: \frac{dn_{NC}}{ - k \, n_{NC}} = \pi d_{Clay} L_{Diff_{NC}}{\Lambda^{-2}_{Clay}} G dt
 
+.. _heading_Integrate_the_coagulant_transport_model:
+
 Integrate the coagulant transport model
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------
 
 Integrate from the initial coagulant nanoparticle concentration to the concentration at time t.
 
@@ -146,8 +153,10 @@ or in terms of flow rate, we have:
 
 .. math::   G_{CS} = \left(\frac{\rm{32f}}{ \pi^3\nu} \frac{Q^3}{D^7} \right)^\frac{1}{2}
 
+.. _heading_Straight_Pipe_Laminar:
+
 Straight Pipe Laminar
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 Laboratory scale apparatus is often limited to laminar flow where viscosity effects dominate. The equations describing laminar flow conditions always include viscosity. For the case of laminar flow in a straight pipe, we have:
 
@@ -183,7 +192,7 @@ The Camp-Stein velocity gradient in a long straight laminar flow tube is thus
      G_{CS} =4\sqrt2 \frac{\bar v}{D}
    }
 
-Our estimate of :math:`G_{CS}` based on :math:`\bar \varepsilon` is an overestimate because it assumes that the energy dissipation is completely uniform through the control volume. The true spatial average velocity gradient, :math:`\bar G`, for laminar flow in a pipe is (`Gregory, 1981<https://doi.org/10.1016/0009-2509(81)80126-1>`__),
+Our estimate of :math:`G_{CS}` based on :math:`\bar \varepsilon` is an overestimate because it assumes that the energy dissipation is completely uniform through the control volume. The true spatial average velocity gradient, :math:`\bar G`, for laminar flow in a pipe is (`Gregory, 1981 <https://doi.org/10.1016/0009-2509(81)80126-1>`__),
 
 .. math:: \bar G = \frac{8}{3}\frac{\bar v}{D}
 
@@ -195,12 +204,14 @@ As a function of flow rate we have
 
 .. math::  G_{CS} =\frac{16\sqrt2}{\pi} \frac{Q}{D^3}
 
-Parallel plates Laminar
-~~~~~~~~~~~~~~~~~~~~~~~
+.. _heading_Parallel_Plates_Laminar:
+
+Parallel Plates Laminar
+-------------------------
 
 Flow between parallel plates occurs in plate settlers in the sedimentation tank. We will derive the velocity gradient at the wall using the Navier Stokes equation.
 
-.. _Parallel_Plate_schematic:
+.. _figure_Parallel_Plate_schematic:
 .. figure::    Images\Parallel_Plate_schematic.png
    :width: 700px
    :align: center
@@ -276,7 +287,7 @@ The energy dissipation rate at the wall
 
 .. math:: \varepsilon_{wall} = \left( \frac{6 \bar v}{S}\right)^2 \nu
 
-Head loss due to shear on the plates is obtained from a force balance on a control volume between two parallel plates as shown in :numref:`Parallel_Plate_schematic`.
+Head loss due to shear on the plates is obtained from a force balance on a control volume between two parallel plates as shown in :numref:`figure_Parallel_Plate_schematic`.
 
 A force balance on a control volume gives
 
@@ -326,21 +337,23 @@ The Camp-Stein velocity gradient for laminar flow between parallel plates is
      G_{CS} = 2\sqrt{3}\frac{  \bar v}{S}
      }
 
+.. _heading_Coiled_tubes_(laminar_flow):
+
 Coiled tubes (laminar flow)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 Coiled tubes are used as flocculators at laboratory scale. The one shown below is a doubled coil. A single coil would only go around one cylinder
 
 ` <https://confluence.cornell.edu/display/AGUACLARA/Laminar+Tube+Floc?preview=/10422268/258146480/ReportLaminarTubeFlocSpring2014.pdf>`__
 
 
-  .. _Tube_flocculator_AC:
-  .. figure::    Images/Tube_flocculator_AC.JPG
-     :width: 700px
-     :align: center
-     :alt: Parallel plate schematic
+.. _figure_Tube_flocculator_AC:
+.. figure::    Images/Tube_flocculator_AC.JPG
+   :width: 700px
+   :align: center
+   :alt: Parallel plate schematic
 
-     The double coiled flocculator creates secondary currents that oscillate in direction. This may be helpful in creating much more mixing than would occur in a straight laminar flow pipe.
+   The double coiled flocculator creates secondary currents that oscillate in direction. This may be helpful in creating much more mixing than would occur in a straight laminar flow pipe.
 
 The ratio of the coiled to straight friction factors is given by `Mishra and Gupta <https://doi.org/10.1021/i260069a017>`__
 
@@ -386,8 +399,10 @@ where :math:`G_{CS} =4\sqrt2 \frac{\bar v}{D}` for laminar flow in a straight pi
      G_{CS_{coil}} = 4\sqrt2 \frac{\bar v}{D}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}
    }
 
+.. _heading_Expansions:
+
 Expansions
-~~~~~~~~~~
+-----------
 
 The average energy dissipation rate for a flow expansion really only has meaning if there is a defined control volume where the mechanical energy is lost. Hydraulic flocculators provide such a case because the same flow expansion is repeated and thus the mechanical energy loss can be assumed to happen in the volume associated with one flow expansion. In this case we have
 
@@ -421,17 +436,21 @@ Combining the previous equations we obtain
      G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}
    }
 
-**Maximum velocity gradients**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _heading_Maximum_velocity_gradients:
+
+Maximum velocity gradients
+============================
+
+.. _heading_Straight_pipe_(major_losses):
 
 Straight pipe (major losses)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
 The maximum velocity gradient in pipe flow occurs at the wall. This is true for both laminar and turbulent flow. In either case a force balance on a control volume of pipe gives us the wall shear and the wall shear can then be used to estimate the velocity gradient at the wall.
 
 
-  .. _pipe_pressure_shear_force_balance:
-  .. figure:: Images/pipe_pressure_shear_force_balance.png
+.. _figure_pipe_pressure_shear_force_balance:
+.. figure:: Images/pipe_pressure_shear_force_balance.png
       :width: 400px
       :align: center
       :alt: Pipe pressure and shear force balance
@@ -496,10 +515,10 @@ The energy dissipation rate at the wall is
      \varepsilon_{wall} = \left(\frac{8\bar v}{D} \right)^2 \nu
      }
 
-.. _coiled-tubes-laminar-flow-1:
+.. _heading_coiled-tubes-laminar-flow-1:
 
 Coiled tubes (laminar flow)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 The shear on the wall of a coiled tube is not uniform. The outside of the curve has a higher velocity gradient than the inside of the curve and there are secondary currents that results in wall shear that is not purely in the locally defined upstream direction. We do not have a precise equation for the wall shear. The best we can do currently is define an average wall shear in the locally defined direction of flow by combining
 :math:`G_{{CS}_{wall_{coil}}} =\rm{f_{coil}} \frac{\bar v^2}{8\nu}` and
@@ -512,15 +531,17 @@ to obtain
      G_{{CS}_{wall_{coil}}} ={\rm f} \left[ 1 + 0.033 \left(log_{10}De \right)^4 \right]  \frac{\bar v^2}{8\nu}
    }
 
-.. _expansions-1:
+.. _heading_Expansions-1:
 
 Expansions
-~~~~~~~~~~
+----------
 
 Flow expansions are used intentionally or unavoidable in multiple locations in hydraulically optimized water treatment plants. Rapid mix and hydraulic flocculation use flow expansions to generate fluid mixing and collisions between particles.
 
-Round jet
-~~~~~~~~~
+.. _heading_Round_Jet:
+
+Round Jet
+-----------
 
 
 `Baldyga, et al. 1995 <https://doi.org/10.1016/0009-2509(95)00049-B>`__
@@ -553,16 +574,18 @@ Below we plot the Baldyga et al. equation for the energy dissipation rate as a 
 `.. plot:: Rapid_Mix/plots/Jet_EDR.py`
    `:include-source:`
 
-   .. _Jet_centerline_EDR:
-   .. figure:: Images/Jet_centerline_EDR.png
-       :width: 400px
-       :align: center
-       :alt: Pipe pressure and shear force balance
+.. _figure_Jet_centerline_EDR:
+.. figure:: Images/Jet_centerline_EDR.png
+    :width: 400px
+    :align: center
+    :alt: Pipe pressure and shear force balance
 
-       The centerline energy dissipation rate downstream from a round jet. The distance downstream is measured in units of jet diameters. The energy dissipation rate between the jet and 7 jet diameters is developing as the shear between the stationary fluid and the jet propagates toward the center of the jet and turbulence is generated.
+    The centerline energy dissipation rate downstream from a round jet. The distance downstream is measured in units of jet diameters. The energy dissipation rate between the jet and 7 jet diameters is developing as the shear between the stationary fluid and the jet propagates toward the center of the jet and turbulence is generated.
+
+.. _heading_Plane_Jet:
 
 Plane Jet
-~~~~~~~~~
+---------
 
 Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by `Heskestad in 1965 <http://dx.doi.org/10.1115/1.3627309>`__ and it may be possible to use that data to get a better estimate of $:raw-latex:`\Pi`\_{JetPlane} $ from that source.
 
@@ -610,7 +633,7 @@ Substitute the values for :math:`\bar \varepsilon` and
 .. math:: \Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}
 
 :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value of 2 for
-:math:`H_e/S<5` (CFD analysis and `Haarhoff, 2001 <https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267>`__)
+:math:`H_e/S <5` (CFD analysis and `Haarhoff, 2001 <https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267>`__)
 The transition value for :math:`H_e/S` is at 5 (from CFD analysis, our weakest assumption).
 
 We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value of
@@ -634,8 +657,10 @@ We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value
 
     con.RATIO_VC_ORIFICE**8*con.K_MINOR_FLOC_BAFFLE/Ratio_Jet_Plane
 
+.. _heading_Behind_a_flat_plate:
+
 Behind a flat plate
-~~~~~~~~~~~~~~~~~~~
+---------------------
 
 A flat plate normal to the direction of flow could be used in a hydraulic flocculator. In vertical flow flocculators it would create a space where flocs can settle and thus it is not a recommended design.
 
@@ -643,8 +668,8 @@ The impellers used in mechanical flocculators could be modeled as a rotating fla
 
 Ariane Walker-Horn modeled the flat plate using Fluent in 2015.
 
-  .. _CFD_Flat_Plate:
-  .. figure::    Images/CFD_Flat_Plate.png
+.. _figure_CFD_Flat_Plate:
+.. figure::    Images/CFD_Flat_Plate.png
       :width: 600px
       :align: center
       :alt: CFD Flat Plate

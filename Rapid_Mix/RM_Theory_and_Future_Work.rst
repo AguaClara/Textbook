@@ -1,10 +1,13 @@
+.. _title_Rapid_Mix_Theory_and_Future_Work:
+
+********************************
 Rapid Mix Theory and Future Work
-================================
+********************************
 
-
+.. _heading_Equations_Varying_Flow_Geometries:
 
 Equations for :math:`\varepsilon` and :math:`G` in Varying Flow Geometries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===============================================================================
 
 Estimation of velocity gradients for various flow geometries is the basis for the design of rapid mix, flocculators, and plate settlers. Thus, our goal is to define the velocity gradients consistently across a range of possible flow regimes. There are three approaches to calculating the average velocity gradient within a control volume. 1) Use the Navier Stokes equations and solve for the spatially averaged velocity gradient. 1) Use Computational Fluid Dynamics (CFD) to solve for the spatially averaged velocity gradient. 1) Use the total mechanical energy loss in the control volume to calculate the energy dissipation rate. Estimate the velocity gradient directly from the energy dissipation rate, :math:`G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}`, as defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil Eng., 30, 203–221.).
 
@@ -84,16 +87,17 @@ Our understanding of rapid mix is currently quite speculative. This is an area t
 
 Developing a fundamental understanding of the mixing and transport processes that occur between coagulant addition and flocculation is a very high priority for the AguaClara program.
 
+.. _heading_Estimates_of_time_required_for_mixing_processes:
+
 Estimates of time required for mixing processes
------------------------------------------------
+================================================
 
-Turbulent mixing
-~~~~~~~~~~~~~~~~
+.. _heading_Turbulent_Large_Scale_Eddies:
 
-Large scale eddies at the dimension of flow
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Turbulent Large Scale Eddies
+------------------------------------
 
-The first step in mixing is at the large scale of the dimension of the largest eddies where the dimension of the largest eddies is the smallest dimension normal to the direction of flow. Thus in a pipe the dimension of the largest eddies is set by the pipe diameter. In a open channel the dimension of the largest eddies is usually the water depth although it could be the width of the channel for the case of a narrow tall channel.
+The first step in mixing is at the scale of the largest eddies. The largest eddies are limited in size by the smallest dimension normal to the direction of flow. Thus in a pipe the dimension of the largest eddies is set by the pipe diameter. In a open channel the dimension of the largest eddies is usually the water depth although it could be the width of the channel for the case of a narrow tall channel.
 
 We can use the eddy velocity to estimate how long it will take for an eddy to cross the smallest dimension of flow. Eddy velocity is :math:`v_{eddy} \approx \left( \bar\varepsilon \, L_{eddy} \right)^\frac{1}{3}`.
 The “:math:`\approx`” indicates that this relationship is the same order of magnitude. In a pipe we have
@@ -117,8 +121,10 @@ Where :math:`N_{D_{pipe}}` is the distance in number of pipe diameters downstrea
 
     print((0.02/2)**(1/3))
 
-Inner viscous length scale
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _heading_Inner_Viscous_Length_Scale:
+
+Inner Viscous Length Scale
+--------------------------
 
 The smallest scale at which inertia containing eddies causes mixing is set by the final damping of inertia by viscosity. Turbulence occurs when fluid inertia is too large to be damped by viscosity. The ratio of inertia to viscosity is given by the Reynolds number, :math:`\rm Re`:
 
@@ -167,15 +173,22 @@ The dividing line between eddy transport and fluid deformation controlled by vis
     fig.savefig(imagepath+'Inner_viscous_vs_EDR')
     plt.show()
 
-**Figure x:** Eddies can cause fluid mixing down to the scale of a few
-millimeters for energy dissipation rates used in rapid mix units and
-flocculators.
+.. _figure_Inner_viscous_vs_EDR:
 
-Turbulent mixing time as a function of scale
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. figure:: Images/Inner_viscous_vs_EDR.png
+    :width: 400px
+    :align: center
+    :alt: Inner viscous vs EDR
+
+    Eddies can cause fluid mixing down to the scale of a few millimeters for energy dissipation rates used in rapid mix units and flocculators.
+
+.. _heading_Mixing Time as a Function of Scale:
+
+Turbulent Mixing Time as a Function of Scale
+--------------------------------------------
 
 We are searching for the rate limiting step in the mixing process as we transition from the scale of the flow down to the scale of the coagulant nanoparticles. We can estimate the time required for eddies to mix at their length scales by assuming that the eddies pass all of their energy to smaller scales in the time it takes for an eddy to travel the distance equal to the length scale of the eddy. This time is known as the **`eddy turnover time <http://ceeserver.cee.cornell.edu/eac20/cee637/handouts/TURBFLOW_1.pdf>`__**,
-:math:`t_{eddy}`. `The derivation for the equation below is found here <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Rapid%20Mix/RM_Derivations.md#t_eddy>`__.
+:math:`t_{eddy}`. `The derivation for the equation below is found here <heading_Eddy_turnover_time>`__.
 
 .. math:: t_{eddy} \approx \left( \frac{L_{eddy}^2}{ \bar\varepsilon }\right)^\frac{1}{3}
 
@@ -203,7 +216,14 @@ We can plot the eddy turnover time as a function of scale from the inner viscous
     fig.savefig(imagepath+'Eddy_turnover_time')
     plt.show()
 
-**Figure x:** Eddy turnover times as a function of length scale for a range of energy dissipation rates.
+.. _figure_Eddy_turnover_times:
+
+.. figure:: Images/Eddy_turnover_time.png
+    :width: 400px
+    :align: center
+    :alt: Eddy turnover time
+
+    Eddy turnover times as a function of length scale for a range of energy dissipation rates.
 
 The eddy turnover times are longest for the largest eddies and this analysis suggests that it only takes a few seconds for turbulent eddies to mix from the scale of the flow down to the inner viscous length scale.
 
@@ -211,18 +231,24 @@ The large scale mixing time is critical for the design of water treatment plants
 
 It is likely this process of mixing from the scale of the flow down to the inner viscous length scale is commonly referred to as “rapid mix.” Here we showed that this mixing is indeed rapid and is really only a concern in the case where the coagulant injection point is very close to the location where the flow is split into multiple treatment trains.
 
-Shear-diffusion transport
-~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _heading_Shear-Diffusion_Transport:
+
+Shear-Diffusion Transport
+-------------------------
 
 After the first few seconds in which mixing occurs from the length scale of the flow down to the inner viscous length scale the next step in the transport process is blending of the coagulant uniformly with the raw water. At the end of the turbulent transport the coagulant stock has been stretched out into thin bands throughout the raw water, but the two fluids are not actually blended together by turbulence. The blending is accomplished by fluid deformation and then by molecular diffusion.
 
-Fluid deformation by Shear
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _heading_Fluid_Deformation_by_Shear:
 
-The time scale for fluid deformation is :math:`1/G` where :math:`G` is the velocity gradient. This simple relationship is because the velocity of fluid deformation is proportional to the length scale and thus the time to travel any given distance is always the same. Velocity gradients in conventional mechanized rapid mix units are order 1000 Hz and thus the time for fluid deformation to blur concentration gradients is approximately 1 ms. This confirms the idea that blending the coagulant with the raw water is actually a very fast process with the slowest phase being the transport by turbulent eddies at the scale of reactor.
+Fluid Deformation by Shear
+--------------------------
 
-Einstein’s diffusion equation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The time scale for fluid deformation is :math:`1/G` where :math:`G` is the velocity gradient. This simple relationship is because the velocity of fluid deformation is proportional to the length scale and thus the time to travel any given distance in a linear velocity gradient is always the same. Velocity gradients in conventional mechanized rapid mix units are order 1000 Hz and thus the time for fluid deformation to blur concentration gradients is approximately 1 ms. This confirms the idea that blending the coagulant with the raw water is actually a very fast process with the slowest phase being the transport by turbulent eddies at the scale of reactor.
+
+.. _heading_Einstein_Diffusion_Equation:
+
+Einstein’s Diffusion Equation
+-----------------------------
 
 We can estimate the length scale at which fluid shear and diffusion provide transport at the same rate. Einstein’s diffusion equation is
 
@@ -255,21 +281,27 @@ Substitute Einstein’s diffusion equation and solve for the length scale that t
 
 Molecular diffusion finishes the blending process by transporting the coagulant nanoparticles the last few hundred nanometers. The entire mixing process from the coagulant injection point to uniform blending with the raw water takes only a few seconds.
 
-We have demonstrated that all of the steps for mixing of the coagulant nanoparticles with the raw water are very fast. Compared with the time required for flocculation, 10s to 1000s of seconds, the time required for this mixing is insignificant. The remaining steps are: 1. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate. 1. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
+We have demonstrated that all of the steps for mixing of the coagulant nanoparticles with the raw water are very fast. Compared with the time required for flocculation, 10s to 1000s of seconds, the time required for this mixing is insignificant. The remaining steps are:
+ 1. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
+ 1. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
 
-Length scales of coagulant nanoparticles and clay
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _heading_Length_Scales_of_Coagulant_Nanoparticles_and_Clay:
+
+Length Scales of Coagulant Nanoparticles and Clay
+=================================================
 
 The coagulant nanoparticles eventually will attach to clay particles. The clay particles have a diameter of approximately :math:`5 \, {\rm \mu m}` and thus it is clear from the length scale in the figure above that turbulent eddies aren’t able to transport all the way to attachment to clay.
 
+.. _heading_Diffusion_and_Shear_Transport_Coagulant_Nanoparticles_to_Clay:
+
 Diffusion and Shear Transport Coagulant Nanoparticles to Clay
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================
 
-The time required for shear and diffusion to transport coagulant nanoparticles to clay has previously been assumed to be a rapid process. The
+The time required for shear and diffusion to transport coagulant nanoparticles to clay has previously been assumed to be a rapid process.
 
--  Diffusion blends the coagulant with the raw water sufficiently so that the coagulant precipitates and forms nanoparticles.
--  Dissolved organic molecules diffuse to the coagulant nanoparticles and adhere to the nanoparticle surface.
--  The coagulant nanoparticles are transported to suspended particle surfaces by a combination of diffusion and fluid shear.
+  - Diffusion blends the coagulant with the raw water sufficiently so that the coagulant precipitates and forms nanoparticles.
+  - Dissolved organic molecules diffuse to the coagulant nanoparticles and adhere to the nanoparticle surface.
+  - The coagulant nanoparticles are transported to suspended particle surfaces by a combination of diffusion and fluid shear.
 
 The following is a very preliminary estimate of the time required for attachment of the nanoparticles to the clay particles. This analysis includes multiple simplifying assumptions and there is a reasonable possibility that some of those assumptions are wrong. However, the core assumptions that coagulant nanoparticles are transported to clay particles by a combination of fluid deformation (shear) and molecular diffusion is reasonable.
 
@@ -277,11 +309,11 @@ The volume of the suspension that is cleared of nanoparticles is proportional to
 
 .. math::  \propto \pi \, d_{Clay} \, L_{Diff_{NC}}
 
- The volume cleared is proportional to time
+The volume cleared is proportional to time
 
 .. math::  \propto t
 
- The volume cleared is proportional to the relative velocity between clay and nanoparticles. This scaling
+The volume cleared is proportional to the relative velocity between clay and nanoparticles. This scaling
 
 .. math::  \propto v_r
 
@@ -306,7 +338,7 @@ Use dimensional analysis to get a relative velocity for the long range transport
 Diffusion band thickness
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Figure x:** The time required for shear to transport all of the fluid past the clay so that diffusion can transport the coagulant nanoparticles to the clay surface is significant.
+The time required for shear to transport all of the fluid past the clay so that diffusion can transport the coagulant nanoparticles to the clay surface is significant.
 
 .. math:: D_{Diffusion} = \frac{k_B T}{3 \pi \, \mu \, d_P}
 
@@ -339,9 +371,16 @@ Let’s estimate the thickness of the diffusion band
     fig.savefig(imagepath+'Diffusion_band_thickness')
     plt.show()
 
-**Figure x:**
+.. _figure_Eddy_turnover_times:
 
-Using the equation for :math:`L_{Diff}` above, `we can solve for <https://github.com/AguaClara/CEE4540_Master/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Rapid%20Mix/RM_Derivations.md#t_coagulant%20application>`__ the time required to reach a target efficiency of application of coagulant nanoparticles to clay:
+.. figure:: Images/Diffusion_band_thickness.png
+    :width: 400px
+    :align: center
+    :alt: Diffusion band thickness
+
+    Molecular diffusion band thickness as a function of velocity gradient. This length scale marks the transition between transport by fluid deformation and by diffusion.
+
+Using the equation for :math:`L_{Diff}` above, we can solve for  the time required to reach a target efficiency of application of coagulant nanoparticles to clay:
 
 .. math:: t_{coagulant, \, application} = \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\,  L_{Diff_{NC}} }
 
@@ -380,10 +419,20 @@ Below we estimate the time required to achieve 80% attachment of nanoparticles i
     fig.savefig(imagepath+'Coag_attach_time')
     plt.show()
 
-**Figure x:** An estimate of the time required for 80% of the coagulant nanoparticles to attach to clay particles given a raw water turbidity of 10 NTU.
+.. _figure_Coag_attach_time:
 
-Energy tradeoff for coagulant transport
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. figure:: Images/Coag_attach_time.png
+    :width: 400px
+    :align: center
+    :alt: Coag attach time
+
+    An estimate of the time required for 80% of the coagulant nanoparticles to attach to clay particles given a raw water turbidity of 10 NTU.
+
+
+.. _heading_Energy_Tradeoff_for_Coagulant_Transport:
+
+Energy Tradeoff for Coagulant Transport
+-----------------------------------------
 
 .. math::   \Delta h =   \frac{G^2 \nu \theta}{g}
 
@@ -406,9 +455,16 @@ Energy tradeoff for coagulant transport
     fig.savefig(imagepath+'Coag_attach_head_loss')
     plt.show()
 
-**Figure x:** The total energy required to attach coagulant nanoparticles to raw water inorganic particles increases rapidly with the velocity gradient used in the rapid mix process.
+.. _figure_Coag_attach_head_loss:
 
-There is often a tradeoff between reactor volume and energy input. The reactor volume results in a higher capital cost and the energy input requires both higher operating costs and higher capital costs. This provides an opportunity to optimize rapid mix design once we have a confirmed model characterizing the process.
+.. figure:: Images/Coag_attach_head_loss.png
+    :width: 400px
+    :align: center
+    :alt: Coag attach head loss
+
+    The total energy required to attach coagulant nanoparticles to raw water inorganic particles increases rapidly with the velocity gradient used in the rapid mix process.
+
+There is an economic tradeoff between reactor volume and energy input. The reactor volume results in a higher capital cost and the energy input requires both higher operating costs and higher capital costs. This provides an opportunity to optimize rapid mix design once we have a confirmed model characterizing the process.
 
 The total potential energy used to operate an AguaClara plant is approximately 2 m. This represents the difference in elevation between where the raw water enters the plant and where the filtered water exits the plant. If we assume that the rapid mix energy budget is a fraction of that total and thus for subsequent analysis we will assume somewhat arbitrarily that the energy available to attach the coagulant nanoparticles to the raw water particles is 50 cm.
 
@@ -444,8 +500,11 @@ According to the analysis above, the maximum velocity gradient that can be used 
 
 The analysis of the time required for shear and diffusion to transport the coagulant nanoparticles the last few millimeters suggests that it is this last step that requires the most time. Indeed, the time required for coagulant nanoparticle attachment to raw water particles is comparable to the time that will be required for the next step in the processs, flocculation.
 
-Coagulant attachment mechanism
-------------------------------
+.. _heading_Coagulant_Attachment_Mechanism:
+
+Coagulant Attachment Mechanism
+===============================
+We do not yet understand the origin of the bonds that form between coagulant nanoparticles, between a coagulant nanoparticle and suspended particles, and between coagulant nanoparticles and dissolved organic molecules. Historically the role of the coagulant was assumed to be to reduce the repulsive force between particles so that the particles could get close enough for Van der Waals forces to hold the particles together.
 
 -  Surface charge neutralization hypothesis
 
@@ -454,24 +513,19 @@ Coagulant attachment mechanism
 
 -  Polar bonds
 
-   -  Electronegativity reveals that the aluminum - oxygen bond is more
-      polar than the hydrogen - oxygen bond
-   -  The bond between a coagulant nanoparticle and a clay surface can
-      potentially be stronger than the bond between a water molecule and
-      the clay surface.
+   -  Electronegativity reveals that the aluminum - oxygen bond is more polar than the hydrogen - oxygen bond
+   -  The bond between a coagulant nanoparticle and a clay surface can potentially be stronger than the bond between a water molecule and the clay surface.
 
-Jet Mixing
-~~~~~~~~~~
+.. _heading_Conventional_Mechanical_Rapid_Mix:
 
-In both mixing for the application of coagulant nanoparticles and for flocculation we have the goal of deforming the fluid to facilitate collisions between particles. As engineers we need to design reactors that deform the fluid. There are several approaches \* coiled tube flocculators (laminar flow) \* rotating propellers \* hydraulic jet  Coiled tube flocculators are commonly used by AguaClara Cornell researchers for small laboratory scale (a few mL/s) experiments.
+Conventional Mechanical Rapid Mix
+=================================
 
-[add equations here for coiled flocculators]
 
-Conventional Rapid Mix
-----------------------
+.. _heading_Conventional_Maximum_Velocity_Gradients:
 
-Maximum velocity gradients
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Maximum Velocity Gradients
+--------------------------
 
 .. code:: python
 
@@ -489,7 +543,14 @@ Maximum velocity gradients
     fig.savefig(imagepath+'Mechanical_RM_Gt')
     plt.show()
 
-**Figure x:** Mechanical rapid mix units use a wide range of velocity gradients and residence times.
+.. _figure_Mechanical_RM_Gt:
+
+.. figure:: Images/Mechanical_RM_Gt.png
+    :width: 400px
+    :align: center
+    :alt: Mechanical RM Gt
+
+    Mechanical rapid mix units use a wide range of velocity gradients and residence times.
 
 Conventional rapid mix units use mechanical or potential energy to generate intense turbulence to begin the mixing process. Conventional design is based on the use of :math:`\bar G` (an average velocity gradient) as a design parameter. We don’t yet know what the design objective is for rapid mix and thus it isn’t clear which parameters matter. We hypothesize that both velocity gradients that cause deformation of the fluid and time for molecular diffusion are required to ultimately transport coagulant nanoparticles to the surfaces of clay particles.
 
@@ -515,61 +576,18 @@ Combining the two equations we obtain.
 
 .. math::   \Delta h =   \frac{G^2 \nu \theta}{g}
 
-Typical values for residence time and average velocity gradient are given below.
+.. _Table_Conventional_Rapid_Mix_Design_Values:
 
-+-----------------+-----------------+-----------------+-----------------+
-| Residence Time  | Velocity        | Energy          | Equivalent      |
-| (s)             | gradient G      | dissipation     | height (m)\*    |
-|                 | (1/s)           | rate (W/kg)     |                 |
-+=================+=================+=================+=================+
-| 0.5             | 4000            | 16              | 0.8             |
-+-----------------+-----------------+-----------------+-----------------+
-| 10 - 20         | 1500            | 2.25            | 2.3 - 4.6       |
-+-----------------+-----------------+-----------------+-----------------+
-| 20 - 30         | 950             | 0.9             | 1.8 - 2.8       |
-+-----------------+-----------------+-----------------+-----------------+
-| 30 - 40         | 850             | 0.72            | 2.2 - 2.9       |
-+-----------------+-----------------+-----------------+-----------------+
-| 40 - 130        | 750             | 0.56            | 2.3 - 7.5       |
-+-----------------+-----------------+-----------------+-----------------+
+.. csv-table:: Typical values for conventional rapid mix residence time and average velocity gradients
+   :header:  "Residence Time (s)","Velocity gradient G (1/s)","Energy dissipation rate (W/kg)","Equivalent height (m)"
+
+   "0.5","4000","16","0.8"
+   "10 - 20","1500","2.25","2.3 - 4.6"
+   "20 - 30","950","0.9","1.8 - 2.8"
+   "30 - 40","850","0.72","2.2 - 2.9"
+   "40 - 130","750","0.56","2.3 - 7.5"
 
 From Environmental Engineering: A Design Approach by Sincero and
 Sincero. 1996. page 267.
 
 Rotating propellers can either be installed in open tanks or enclosed in pipes. From a mixing and fluids perspective it doesn’t make any difference whether the tank is open to the atmosphere or not. The parameters of interest are the rate of fluid deformation and the residence time in the mixing zone.
-
-**Figure x:** Open tank, backmix system that uses a relatively large tank with a submerged impeller.
-
-**Figure x:** Enclosed mix system that uses a relatively small volume.
-
-Orifice Diameter to obtain Target Mixing
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. math::  A_{Orifice} \Pi_{vc} = A_{Jet}
-
-.. math::  D_{Orifice} \sqrt{\Pi_{vc}} = D_{Jet}
-
-.. math::  \varepsilon_{Max} \cong \frac{ \left( \Pi_{JetRound} \frac{4Q}{\pi D_{Jet}^2} \right)^3}{D_{Jet}}
-
-.. math::  D_{Orifice} \cong \left( \frac{4 Q \Pi_{JetRound}}{\varepsilon_{Max}^{\frac{1}{3}} \pi} \right)^{\frac{3}{7}} \frac{1}{\sqrt{\Pi_{vc} }}
-
-**Off-slide**
-
-.. math::
-
-   \varepsilon_{Max} \cong  \frac{ \left( \Pi_{Jet} \frac{4 Q_{Jet}}{\pi} \right)^3 }{D_{Orifice}^7 \sqrt{\Pi_{vc}^7} }
-
-Rapid Mix Head Loss
-~~~~~~~~~~~~~~~~~~~
-
-.. math::  D_{Orifice} \cong \left( \frac{4 Q \Pi_{JetRound}}{\varepsilon_{Max}^{\frac{1}{3}} \pi} \right)^{\frac{3}{7}}
-
-.. math:: \bar v_{Jet} \cong \frac{\left( D_{Jet} \, \varepsilon_{Max} \right)^{\frac{1}{3}}}{\Pi_{JetRound}}
-
-.. math:: h_e = \frac{ \left( D_{Jet} \, \varepsilon_{Max} \right)^{\frac{2}{3}}}{ 2g \Pi_{JetRound}^2}
-
-.. math:: h_e = \frac{ \left( \frac{4 \Pi_{JetRound} Q \varepsilon_{Max}^2}{\pi} \right)^{\frac{2}{7}}}{2 g \Pi_{JetRound}^2}
-
-**Off-slide**
-
-.. math:: Q = \frac{D_{Jet}^{\frac{7}{3}} \pi \varepsilon_{Max}^{\frac{1}{3}}}{4 \Pi_{Jet}}

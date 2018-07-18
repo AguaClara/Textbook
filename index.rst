@@ -36,7 +36,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
    :caption: Chapter 1: Introduction
    :maxdepth: 1
 
-This is a place holder for 'Chapter 1: Introduction' files
+   Introduction/Introduction.rst
 
 
 .. toctree::
@@ -66,9 +66,19 @@ This is a place holder for 'Chapter 1: Introduction' files
    Rapid_Mix/RM_Theory_and_Future_Work.rst
 
 .. toctree::
+  :caption: Chapter 5: Flocculation
+  :maxdepth: 1
+
+Flocculation/Floc_Intro.rst
+Flocculation/Floc_Design.rst
+Flocculation/Floc_Derivations.rst
+
+.. toctree::
    :caption: Chapter 6: Sedimentation
    :maxdepth: 1
 
+   Sedimentation/Sed_Intro.rst
+   Sedimentation/Sed_Examples.rst
    Sedimentation/Sed_Theory_and_Future_Work.rst
 
 

@@ -1,11 +1,13 @@
-.. _rapid_mix_examples:
+.. _title_rapid_mix_examples:
 
 ***************************************************
 Rapid Mix Appendix C: Examples
 ***************************************************
 
+.. _heading_Carbonate_reactions_buffering_and_pH:
+
 Carbonate reactions, buffering, and pH
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+======================================
 
 The coagulants used for drinking water treatment are acidic and thus result in a lowering of the pH of the treated water. The optimal pH for aluminum coagulant nanoparticle formation is between pH of 6.5 and 8.5. This is also the `pH range set by the EPA secondary standards for drinking water <https://www.epa.gov/dwstandardsregulations/secondary-drinking-water-standards-guidance-nuisance-chemicals>`__. Although many water sources are within this pH range, there are some waters with more extreme values of pH. The aluminum and iron based coagulants are also acidic and in some waters the pH may drop below the ideal range when adding the coagulant. When the pH is outside the acceptable range it is necessary to adjust the pH by adding either a base or an acid.
 
@@ -13,8 +15,10 @@ When acid is added to a water containing bicarbonate, :math:`HCO_3^-`, one of th
 
 The reactions of carbonate species with protons provides pH buffering capacity that must be considered when calculating the effect of acid or base addition. Since carbonates are the dominant buffering agents in natural waters it is essential to account for their influence on pH.
 
-Carbonic acid and Bicarbonate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _heading_Carbonic_Acid_and_Bicarbonate:
+
+Carbonic Acid and Bicarbonate
+==============================
 
 .. math:: {H_2}CO_3^{\star} \overset {K_1} \longleftrightarrow {H^+} + HCO_3^-
    :label: carbonate
@@ -30,8 +34,10 @@ Where the [ ] indicates concentration in mole/L. We will use the p function, :ma
 
 At the point of equal concentrations of bicarbonate and carbonic acid the dissociation constant, :math:`K_1`, is equal to the hydrogen ion concentration, :math:`H^ +`. Thus we have equal concentrations at :math:`p{K_1} = pH`. This reaction is “centered” at pH = 6.3 and thus there is maximum buffering due to this reaction at pH = 6.3.
 
+.. _heading_Bicarbonate_and_Carbonate:
+
 Bicarbonate and Carbonate
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=========================
 
 .. math:: HCO_3^ - \overset {{K_2}} \longleftrightarrow {H^ + } + CO_3^{ - 2}
 
@@ -39,8 +45,10 @@ Bicarbonate and Carbonate
 
 .. math:: p{K_2} = 10.3
 
-Total concentration of carbonates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _heading_Total_Concentration_of_Carbonates:
+
+Total Concentration of Carbonates
+=================================
 
 The total concentration of carbonate species is given by
 
@@ -48,7 +56,14 @@ The total concentration of carbonate species is given by
 
  Where: :math:`{C_T}` is the total concentration of carbonates.
 
-The total concentration of carbonates, :math:`{C_T}`, is useful because it is conservative even though the individual species concentrations change as pH changes. ### Alpha notation The alpha notation is used to show the concentration dependence on pH and to make the equations simpler.
+The total concentration of carbonates, :math:`{C_T}`, is useful because it is conservative even though the individual species concentrations change as pH changes.
+
+.. _heading_Alpha_Notation:
+
+Alpha Notation
+===============
+
+The alpha notation is used to show the concentration dependence on pH and to make the equations simpler.
 
 .. math:: \left[ {{H_2}CO_3^{\star} } \right] = {\alpha_0}{C_T}
 
@@ -56,8 +71,11 @@ The total concentration of carbonates, :math:`{C_T}`, is useful because it is co
 
 .. math:: \left[ {CO_3^{-2}} \right] = {\alpha_2}{C_T}
 
+
+.. _heading_Acid_Neutralizing_Capacity_(ANC)_or_Alkalinity:
+
 Acid Neutralizing Capacity (ANC) or Alkalinity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===============================================
 
 Acid neutralizing capacity or alkalinity is the ability of a water sample to react with and neutralize an input of acid. The units of ANC are equivalents (or protons) per liter. Bicarbonate, :math:`HCO_3^-`, can react with one proton, :math:`H^+`, and thus each mole of :math:`HCO_3^-` provides one equivalent per liter of ANC. The other terms in the equation have similar explanations.
 
@@ -124,6 +142,7 @@ Example: Find the required dose of several bases to raise the pH at the Manzarag
 The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel. The plant is located in the municipality of Guinope, the department of El Paraiso, Honduras.
 
   .. _Manzaragua_WTP:
+
   .. figure::    Images/Manzaragua_WTP.jpg
       :width: 700px
       :align: center
@@ -133,36 +152,31 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 
 The plant performed very poorly from the first day of operation. The first attempted fix was to double the flocculator residence time by increasing the number of flocculator pipes (3 inch diameter by 1.5 m long) from 12 to 24. This improved performance, but the plant continued to perform poorly. A raw water sample was analyzed on May 30, 2018 and the following results were obtained.
 
-  .. _Manzaragua_Water_Analysis:
-  .. figure::    Images/Manzaragua_Water_Analysis.jpg
-      :width: 700px
-      :align: center
-      :alt: Manzaragua Water Analysis
+.. _figure_Manzaragua_Water_Analysis:
 
-      Water quality analysis for Manzaragua.
+.. figure::    Images/Manzaragua_Water_Analysis.jpg
+   :width: 700px
+   :align: center
+   :alt: Manzaragua Water Analysis
 
-Table 1. Manzaragua water quality analysis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Water quality analysis for Manzaragua.
 
-+--------------+--------------------------------+-----------+---------+
-| Parameter    | Units                          | Standard  | Results |
-+==============+================================+===========+=========+
-| Turbidity    | NTU                            | 5         | 71      |
-+--------------+--------------------------------+-----------+---------+
-| Color        | color units                    | 15        | 150     |
-+--------------+--------------------------------+-----------+---------+
-| pH           | pH                             | 6.5 - 8.5 | 5.91    |
-+--------------+--------------------------------+-----------+---------+
-| Conductivity | :math:`\mu s/cm`               | 400       | 69.15   |
-+--------------+--------------------------------+-----------+---------+
-| Alkalinity   | :math:`mg/L` as :math:`CaCO_3` | -         | 24.5    |
-+--------------+--------------------------------+-----------+---------+
-| Bicarbonates | :math:`mg/L` as :math:`CaCO_3` | -         | 24.5    |
-+--------------+--------------------------------+-----------+---------+
-| Carbonates   | :math:`mg/L` as :math:`CaCO_3` | -         | 0       |
-+--------------+--------------------------------+-----------+---------+
-| Hardness     | :math:`mg/L` as :math:`CaCO_3` | 400       | 15.68   |
-+--------------+--------------------------------+-----------+---------+
+
+.. _Table_Manzaragua_water_quality_analysis:
+
+.. csv-table:: Manzaragua water quality analysis
+   :header: "Parameter", "Units", "Standard", "Results"
+   :widths: 20, 20, 20, 20
+   :align: center
+
+   "Turbidity","NTU", "5", "71"
+   "Color", "color units", "15", "150"
+   "pH", "pH", "6.5 - 8.5", "5.91"
+   "Conductivity", ":math:`\mu s/cm`", "400", "69.15"
+   "Alkalinity", ":math:`mg/L` as :math:`CaCO_3`", "-", "24.5"
+   "Bicarbonates",":math:`mg/L` as :math:`CaCO_3`", "-","24.5"
+   "Carbonates", ":math:`mg/L` as :math:`CaCO_3`", "-", "0"
+   "Hardness", ":math:`mg/L` as :math:`CaCO_3`", "400", "15.68"
 
 This water has high color which suggests a high concentration of dissolved organic matter. The pH is a clear problem because the pH is too low for the coagulant nanoparticles to precipitate. As the water sample pH of 5.91 a significant fraction of the coagulant will remain soluble.
 
@@ -176,26 +190,20 @@ For step 1 we need to solve the ANC equation for the carbonate concentration.
 
 .. math::  C_{T_0} = \frac{ANC_0  - \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} + \left[ {{H^ + }} \right]}{\alpha_1 + 2\alpha_2}
 
-.. todo:: We eventually should add the effect of the coagulant to this analysis so the required base concentration can be calculated given the raw water alkalinity, raw water pH, and coagulant dose.
+.. note:: We eventually should add the effect of the coagulant to this analysis so the required base concentration can be calculated given the raw water alkalinity, raw water pH, and coagulant dose.
 
-Table 2. ANC and carbonate values for several bases and acids.
+.. _Table_ANC_and_carbonate_values_for_several_bases_and_acids:
 
-+-----------------------+-----------------------+-----------------------+
-| Base/Acid             | :math:`\Pi_{ANC}`     | :math:`\Pi_{CO_3^{-2} |
-|                       |                       | }`                    |
-+=======================+=======================+=======================+
-| :math:`Na_2CO_3` or   | 2                     | 1                     |
-| :math:`CaCO_3`        |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| :math:`NaHCO_3`       | 1                     | 1                     |
-+-----------------------+-----------------------+-----------------------+
-| :math:`NaOH`          | 1                     | 0                     |
-+-----------------------+-----------------------+-----------------------+
-| :math:`HCl` or        | -1                    | 0                     |
-| :math:`HNO_3`         |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| :math:`H_2SO_4`       | -2                    | 0                     |
-+-----------------------+-----------------------+-----------------------+
+.. csv-table:: ANC and carbonate values for several bases and acids
+   :header: "Base/Acid", ":math:`\Pi_{ANC}`", ":math:`\Pi_{CO_3^{-2}}`"
+   :widths: 20, 20, 20
+   :align: center
+
+   ":math:`Na_2CO_3` or :math:`CaCO_3`", "2", "1"
+   ":math:`NaHCO_3`", "1","1"
+   ":math:`NaOH`", "1", "0"
+   ":math:`HCl` or :math:`HNO_3`", "-1", "0"
+   ":math:`H_2SO_4`", "-2", "0"
 
 For :math:`Na_2CO_3` \* :math:`\Pi_{ANC}` = 2 because we are adding
 :math:`CO_3^{-2}` which is multiplied by two in the ANC equation because
@@ -335,38 +343,43 @@ The analysis reveals that the choice of base matters. The most efficient (on a m
 
 
 
-  .. _Calcium bases:
-  .. csv-table:: Calcium base.
-     :header:  "Chemical name",   "common name",  "Chemcal formula"
-     :widths: 20, 20, 20
+.. _Table_Calcium_bases:
 
-     "calcium carbonate","limestone or chalk",":math:`CaCO_3`"
-     "calcium hydroxide","slaked lime or hydrated lime",":math:`Ca(OH)_2`"
-     "calcium oxide","quicklime",":math:`CaO`"
+.. csv-table:: Calcium base.
+   :header:  "Chemical name",   "common name",  "Chemcal formula"
+   :widths: 20, 20, 20
+
+   "calcium carbonate","limestone or chalk",":math:`CaCO_3`"
+   "calcium hydroxide","slaked lime or hydrated lime",":math:`Ca(OH)_2`"
+   "calcium oxide","quicklime",":math:`CaO`"
 
 The calcium bases are relatively inexpensive and have the disadvantage of lower solubility than sodium bases. Calcium carbonate has a low solubility, carbon dioxide is present in the atmosphere, and thus calcium carbonate precipitation limits the concentration that can be used for chemical feeds.
 
-    .. _mole_base_for_target_pH:
-    .. figure::    Images/mole_base_for_target_pH.png
-        :width: 700px
-        :align: center
-        :alt: mole base for target pH
+.. _figure_mole_base_for_target_pH:
 
-        Dose of three bases (in mole/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with :math:`NaOH`.
+.. figure::    Images/mole_base_for_target_pH.png
+    :width: 700px
+    :align: center
+    :alt: mole base for target pH
 
-    .. _mg_base_for_target_pH:
-    .. figure::    Images/mg_base_for_target_pH.png
-        :width: 700px
-        :align: center
-        :alt: mg base for target pH
+    Dose of three bases (in mole/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with :math:`NaOH`.
 
-        Dose of two bases (in mg/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with :math:`NaOH`.
+.. _figure_mg_base_for_target_pH:
+
+.. figure::    Images/mg_base_for_target_pH.png
+    :width: 700px
+    :align: center
+    :alt: mg base for target pH
+
+    Dose of two bases (in mg/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with :math:`NaOH`.
 
 The required dose for each of the bases is summarized below.
-   .. _Base_table:
-   .. csv-table:: Dose of each base required to change the pH of the Manzaragua water to 7.
-      :header:  "units",   ":math:`NaOH`",  ":math:`NaHCO_3`",  ":math:`Na_2CO_3`"
-      :widths: 20, 20, 20, 20
 
-      "[mmoles/L]",  "0.45",     "2.8",    "0.53"
-      "[mg/L]",     "47.21",   "235.0",   "21.19"
+.. _table_Base_table:
+
+.. csv-table:: Dose of each base required to change the pH of the Manzaragua water to 7.
+   :header: "units", ":math:`NaOH`", ":math:`NaHCO_3`", ":math:`Na_2CO_3`"
+   :widths: 20, 20, 20, 20
+
+   "[mmoles/L]",  "0.45",     "2.8",    "0.53"
+   "[mg/L]",     "47.21",   "235.0",   "21.19"

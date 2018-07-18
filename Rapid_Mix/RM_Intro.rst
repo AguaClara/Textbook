@@ -1,8 +1,10 @@
-.. _rapid_mix_introduction:
+.. _title_Rapid_Mix_Designtroduction:
 
 ************************
 Rapid Mix Introduction
 ************************
+
+Before we introduce rapid mix, we need to first discuss our strategy for taking a water source that is contaminated with dissolved or suspended contaminants and
 
 Rapid mix is the term commonly used to describe the processes that occur between the coagulant addition to the raw water and the flocculation process. The processes that occur are not well understood and thus design guidelines have been empirical.
 
@@ -14,29 +16,30 @@ Rapid mix sets the stage for aggregation of both suspended particles and dissolv
 
 Nanoparticle application includes multiple steps that must occur before the raw water particles can begin to aggregate. The sticky nanoparticles can be aluminum :math:`(Al^{+3})` or iron :math:`(Fe^{+3})` based and in either case the nanoparticles are formed from precipitated hydroxide species :math:`(Al(OH)_3)` or :math:`(Fe(OH)_3)`. The series of events that are contained in the broad designation of “rapid mix” are:
 
-1. Liquid coagulant stock solution with a low pH is injected into the raw water
-2. Fluid Mixing: Turbulent eddies randomize the fluids (but don’t blend them)
+  1. Liquid coagulant stock solution with a low pH is injected into the raw water
+  2. Fluid Mixing: Turbulent eddies randomize the fluids (but don’t blend them)
 
-   1. Large scale eddies mix the coagulant with the raw water by creating large fluid deformations. This stretching and turning of the raw water and coagulant is analogous to shuffling a deck of cards. The cards are randomized, but the cards maintain their identity. The original liquids retain their chemical composition. This step must be completed before any flow splitting for parallel treatment trains.
-   2. Turbulent eddies disintegrate into smaller and smaller eddies.
-   3. At a very small scale (Inner viscous length scale) viscosity becomes significant and the kinetic energy of the eddies begins to be converted to heat by viscosity.
+     1. Large scale eddies mix the coagulant with the raw water by creating large fluid deformations. This stretching and turning of the raw water and coagulant is analogous to shuffling a deck of cards. The cards are randomized, but the cards maintain their identity. The original liquids retain their chemical composition. This step must be completed before any flow splitting for parallel treatment trains.
+     2. Turbulent eddies disintegrate into smaller and smaller eddies.
+     3. At a very small scale (Inner viscous length scale) viscosity becomes significant and the kinetic energy of the eddies begins to be converted to heat by viscosity.
 
-3. The coagulant is blended with the raw water by molecular diffusion
-4. The higher pH of the raw water causes the coagulant to begin to precipitate as :math:`Al_{12}AlO_4(OH)_{24}(H_2O)_{12}^{7+}`, an aluminum, Al, nanoparticle.
-5. The precipitating :math:`Al_{13}` molecules aggregates with other nearby :math:`Al_{13}` molecules to form aluminum hydroxide nanoparticles. It is also possible that the nanoparticles are already formed in the coagulant stock suspension. Polyaluminum chloride stock solutions turn white in about a year at room temperature and this suggests that nanoparticles form in the stock solution.
-6. The Al nanoparticles attach to other dissolved species and suspended particles.
-7. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
-8. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
+  3. The coagulant is blended with the raw water by molecular diffusion
+  4. The higher pH of the raw water causes the coagulant to begin to precipitate as :math:`Al_{12}AlO_4(OH)_{24}(H_2O)_{12}^{7+}`, an aluminum, Al, nanoparticle.
+  5. The precipitating :math:`Al_{13}` molecules aggregates with other nearby :math:`Al_{13}` molecules to form aluminum hydroxide nanoparticles. It is also possible that the nanoparticles are already formed in the coagulant stock suspension. Polyaluminum chloride stock solutions turn white in about a year at room temperature and this suggests that nanoparticles form in the stock solution.
+  6. The Al nanoparticles attach to other dissolved species and suspended particles.
+  7. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
+  8. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
 
 These multiple steps cover a wide range of length scales and it is not clear at the onset which processes might be the rate limiting steps. We will develop time scale estimates for several of these steps to help identify which processes will likely require the most attention to design. Many of these transport processes are presumed to occur in parallel. :numref:`transport_length_scales` shows the range of length scales
 
-  .. _transport_length_scales:
-  .. figure::    Images/rapid_mix_macro_to_nano_scale.png
-      :width: 700px
-      :align: center
-      :alt: rapid mix macro to nano scale
+.. _transport_length_scales:
 
-      Transport of coagulant nanoparticles occurs over length scales ranging from meter to a fraction of a nanometer.
+.. figure::    Images/rapid_mix_macro_to_nano_scale.png
+    :width: 700px
+    :align: center
+    :alt: rapid mix macro to nano scale
+
+    Transport of coagulant nanoparticles occurs over length scales ranging from meter to a fraction of a nanometer.
 
 
 
@@ -45,71 +48,81 @@ Fluid mixing
 
 Fluid mixing is the process by which large scale eddies distribute packets of the coagulant stock throughout the raw water. The term “Rapid mix” is probably best used to describe this process. Traditional methods of achieving this fluid mixing include
 
-  .. _Backmix:
-  .. figure::    Images/Backmix.jpg
-      :width: 200px
-      :align: center
-      :alt: Backmix
+.. _figure_Backmix:
 
-      Backmix: a mechanical rapid mixer that has a relatively long residence time in a completely mixed flow reactor.
+.. figure:: Images/Backmix.jpg
+    :width: 200px
+    :align: center
+    :alt: Backmix
 
-  .. _Inline:
-  .. figure::    Images/Inline.jpg
-      :width: 400px
-      :align: center
-      :alt: Inline
+    Backmix: a mechanical rapid mixer that has a relatively long residence time in a completely mixed flow reactor.
 
-      Inline: a mechanical rapid mixer that has a short residence time in a completely mixed flow reactor that is often built into a pipe.
+.. _figure_Inline:
 
-  .. _hydraulic_jump:
-  .. figure::    Images/hydraulic_jump.jpg
-      :width: 200px
-      :align: center
-      :alt: hydraulic jump
+.. figure:: Images/Inline.jpg
+    :width: 400px
+    :align: center
+    :alt: Inline
 
-      Hydraulic jump: a hydraulic rapid mixer uses the flow expansion downstream from supercritical open channel flow.
+    Inline: a mechanical rapid mixer that has a short residence time in a completely mixed flow reactor that is often built into a pipe.
 
-The hydraulic jump in :numref:`hydraulic_jump` uses a flow expanion to generate mixing in an open channel and that suggests that a flow expansion could also be used to generate mixing in a closed conduit. AguaClara rapid mix units consiste of an orifice in the bottom of the Linear Flow Orifice Meter where the water enters the flocculator.
+.. _figure_hydraulic_jump:
 
-.. _Chemistry_of_coagulant_nanoparticles:
+.. figure:: Images/hydraulic_jump.jpg
+    :width: 200px
+    :align: center
+    :alt: hydraulic jump
+
+    Hydraulic jump: a hydraulic rapid mixer uses the flow expansion downstream from supercritical open channel flow.
+
+The hydraulic jump in :numref:`figure_hydraulic_jump` uses a flow expanion to generate mixing in an open channel and that suggests that a flow expansion could also be used to generate mixing in a closed conduit. AguaClara rapid mix units consiste of an orifice in the bottom of the Linear Flow Orifice Meter where the water enters the flocculator.
+
+.. _heading_Chemistry_of_Coagulant_Nanoparticles:
 
 Chemistry of coagulant nanoparticles
 ========================================
-what
 
+.. _heading_pH_Effects_of_Adding_Coagulant:
 
-pH effects of adding coagulant
+pH Effects of Adding Coagulant
 ----------------------------------------
 
+.. _heading_Buffering_Capacity_of_Natural_Waters:
 
-
-Buffering capacity of natural waters
+Buffering Capacity of Natural Waters
 ----------------------------------------
 
+.. _heading_pH_Range_for_Precipitation_of_Coagulant_Nanoparticles:
 
-
-pH range for precipitation of coagulant nanoparticles
+pH Range for Precipitation of Coagulant Nanoparticles
 ------------------------------------------------------
 
+.. _heading_pH_Adjustment_in_Water_Treatment_Plants:
 
-pH adjustment in water treatment plants
+pH Adjustment in Water Treatment Plants
 ----------------------------------------
 
-.. _Coagulant_nanoparticle_interactions:
+.. _heading__Coagulant_Nanoparticle_Interactions:
 
-Coagulant nanoparticle interactions
+Coagulant Nanoparticle Interactions
 ========================================
 
-Dissolved organic matter
+.. _heading_Dissolved_Organic_Matter:
+
+Dissolved Organic Matter
 ----------------------------------------
 
-Suspended solids
+.. _heading_Suspended_Solids:
+
+Suspended Solids
 ----------------------------------------
 
-Rate estimates for transport to suspended solids
-------------------------------------------------------
+.. _heading_Rate_Estimates_for_Coagulant_Nanoparticle_Transport_to_Suspended_Solids:
 
-.. _EDR_G_and_mixing:
+Rate Estimates for Coagulant Nanoparticle Transport to Suspended Solids
+------------------------------------------------------------------------
+
+.. _heading_EDR_G_and_mixing:
 
 Energy Dissipation Rate, Velocity Gradient, and Mixing
 ======================================================
@@ -125,13 +138,14 @@ Understanding :math:`G` and :math:`\varepsilon`
 
 :math:`G`, or velocity gradient, is a measure of fluid deformation. It is defined by how quickly one point of water along one streamline moves in comparison to another point on another streamline (:math:`v_A` compared to :math:`v_B`, for example), taking into account the distance between the streamlines, :math:`\Delta h`. A visual example of a velocity gradient is shown in the image below:
 
-  .. _Velocity_gradient_image:
-  .. figure::    Images/Velocity_gradient_image.jpg
-      :width: 700px
-      :align: center
-      :alt: Velocity gradient image
+.. _figure_Velocity_gradient_image:
 
-      Velocity gradients cause relative velocities of fluid elements. Those relative velocities form the basis of particle collisions that are essential for the flocculation process.
+.. figure::    Images/Velocity_gradient_image.jpg
+    :width: 700px
+    :align: center
+    :alt: Velocity gradient image
+
+    Velocity gradients cause relative velocities of fluid elements. Those relative velocities form the basis of particle collisions that are essential for the flocculation process.
 
 
 **Note on terminology:** “Fluid deformation” is equivalent to “velocity gradient,” and the two terms can be used interchangeably. They are different ways of thinking about the same concept. Thus, :math:`G` is the measure of both terms.
@@ -154,41 +168,42 @@ These dimensions can be understood as a velocity squared per time, otherwise kno
 
 Velocity gradients are central to flocculation because they cause the deformation of the fluid, and this results in particle collisions. Consider a real-world example via the image below: if everyone on a sidewalk is walking in the same direction at exactly the same velocity, then there will never be any collisions between people (top). If, however, people at one side of the sidewalk stand still and people walk progressively faster as a function of how far they are away from the zero velocity side of the sidewalk, then there will be many collisions between the pedestrians. Indeed, the rate of collisions is proportional to the velocity gradient.
 
-  .. _Pedestrians_on_sidewalk:
-  .. figure::    Images/Pedestrians_on_sidewalk.jpg
-      :width: 700px
-      :align: center
-      :alt: Pedestrians on sidewalk
+.. _figure_Pedestrians_on_sidewalk:
 
-      Pedestrians walking on a sidewalk serve as a model for velocity gradients.
+.. figure::    Images/Pedestrians_on_sidewalk.jpg
+    :width: 700px
+    :align: center
+    :alt: Pedestrians on sidewalk
+
+    Pedestrians walking on a sidewalk serve as a model for velocity gradients.
 
 Common Flow Geometries that Dissipate Energy
 ============================================
 
 Water treatment plants at research and municipal scales deploy a wide range of flow geometries. The following list includes the flow geometries that are commonly used for mixing processes.
 
--  Straight pipe (wall shear) - [uncommon, but included for completeness]
--  Coiled tube (wall shear and expansions) - [research scale mixing]
--  Series of expansions (expansions) - [hydraulic flocculators]
--  Mechanical mixing - [mechanical rapid mix and flocculators]
--  Between flat plates (wall shear) - [plate settlers]
--  Round jet - (expansion) - [hydraulic rapid mix]
--  Plane jet - (expansion) - [inlet into sedimentation tank]
--  Behind a flat plate - (expansion) - [mechanical mixers]
+  -  Straight pipe (wall shear) - [uncommon, but included for completeness]
+  -  Coiled tube (wall shear and expansions) - [research scale mixing]
+  -  Series of expansions (expansions) - [hydraulic flocculators]
+  -  Mechanical mixing - [mechanical rapid mix and flocculators]
+  -  Between flat plates (wall shear) - [plate settlers]
+  -  Round jet - (expansion) - [hydraulic rapid mix]
+  -  Plane jet - (expansion) - [inlet into sedimentation tank]
+  -  Behind a flat plate - (expansion) - [mechanical mixers]
 
-The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants. The :ref:`rapid_mix_derivations` are available as a reference.
+The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants. The :ref:`title_rapid_mix_derivations` are available as a reference.
 
-  .. _Control_volume_equations:
-  .. csv-table:: Table of equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.
-     :header: "Geometry", ":math:`h_L`", "Energy dissipation rate",":math:`G_{CS}(\bar v)`",":math:`G_{CS}(Q)`"
-     :widths: 20, 30, 30, 30, 30
-     :align: left
+.. _table_Control_volume_equations:
 
-     "Straight pipe",":math:`h_{{\rm f}} = {{\rm f}} \frac{L}{D} \frac{\bar v^2}{2g}`", ":math:`\bar\varepsilon = \frac{{\rm f}}{2} \frac{\bar v^3}{D}`",":math:`G_{CS} = \left(\frac{{\rm f}}{2\nu} \frac{\bar v^3}{D} \right)^\frac{1}{2}`",":math:`G_{CS} = \left(\frac{\rm{32f}}{ \pi^3\nu} \frac{Q^3}{D^7} \right)^\frac{1}{2}`"
-     "Straight pipe laminar",":math:`h_{{\rm f}} = \frac{32\nu L\bar v}{ g D^2}`",":math:`\bar\varepsilon =32\nu \left( \frac{\bar v}{D} \right)^2`",":math:`G_{CS} =4\sqrt2 \frac{\bar v}{D}`",":math:`G_{CS} =\frac{16\sqrt2}{\pi} \frac{Q}{D^3}`"
-     "Parallel plates laminar",":math:`h_{{\rm f}} = 12\frac{ \nu L \bar v }{gS^2}`",":math:`\bar\varepsilon = 12 \nu \left(\frac{ \bar v}{S} \right)^2`",":math:`G_{CS} = 2\sqrt{3}\frac{ \bar v}{S}`","-"
-     "Coiled tube laminar",":math:`h_{L_{coil}} = \frac{32\nu L\bar v}{ g D^2} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]`",":math:`\bar\varepsilon = 32\nu \left( \frac{\bar v}{D} \right)^2 \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]`",":math:`G_{CS_{coil}} = 4\sqrt2 \frac{\bar v}{D}\left[ 1 + 0.033\left(log_{10}De\right)^4 \right]^\frac{1}{2}`","-"
-     "Expansions",":math:`h_e = K\frac{\bar v_{out}^2}{2g}`",":math:`\bar\varepsilon = K\frac{\bar v_{out}^3}{2H}`",":math:`G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}`","-"
+.. csv-table:: Table of equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.
+   :header: "Geometry", ":math:`h_L`", "Energy dissipation rate",":math:`G_{CS}(\bar v)`",":math:`G_{CS}(Q)`"
+   :align: left
+
+   "Straight pipe",":math:`h_{{\rm f}} = {{\rm f}} \frac{L}{D} \frac{\bar v^2}{2g}`", ":math:`\bar\varepsilon = \frac{{\rm f}}{2} \frac{\bar v^3}{D}`",":math:`G_{CS} = \left(\frac{{\rm f}}{2\nu} \frac{\bar v^3}{D} \right)^\frac{1}{2}`",":math:`G_{CS} = \left(\frac{\rm{32f}}{ \pi^3\nu} \frac{Q^3}{D^7} \right)^\frac{1}{2}`"
+   "Straight pipe laminar",":math:`h_{{\rm f}} = \frac{32\nu L\bar v}{ g D^2}`",":math:`\bar\varepsilon =32\nu \left( \frac{\bar v}{D} \right)^2`",":math:`G_{CS} =4\sqrt2 \frac{\bar v}{D}`",":math:`G_{CS} =\frac{16\sqrt2}{\pi} \frac{Q}{D^3}`"
+   "Parallel plates laminar",":math:`h_{{\rm f}} = 12\frac{ \nu L \bar v }{gS^2}`",":math:`\bar\varepsilon = 12 \nu \left(\frac{ \bar v}{S} \right)^2`",":math:`G_{CS} = 2\sqrt{3}\frac{ \bar v}{S}`","-"
+   "Coiled tube laminar",":math:`h_{L_{coil}} = \frac{32\nu L\bar v}{ g D^2} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]`",":math:`\bar\varepsilon = 32\nu \left( \frac{\bar v}{D} \right)^2 \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]`",":math:`G_{CS_{coil}} = 4\sqrt2 \frac{\bar v}{D}\left[ 1 + 0.033\left(log_{10}De\right)^4 \right]^\frac{1}{2}`","-"
+   "Expansions",":math:`h_e = K\frac{\bar v_{out}^2}{2g}`",":math:`\bar\varepsilon = K\frac{\bar v_{out}^3}{2H}`",":math:`G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}`","-"
 
 The equations used to convert between columns in the table above are:
 
@@ -202,27 +217,27 @@ Note that the velocity gradient is independent of viscosity (and hence temperatu
 
 For turbulent flow and for flow expansions the amount of fluid deformation decreases as the viscosity increases and the total energy required to send the flow through the reactor is almost independent of the viscosity. The “almost” is because for wall shear under turbulent conditions there is a small effect of viscosity that is buried inside the friction factor.
 
-  .. _EDR_G_max_equations:
-  .. csv-table:: Table of equations for maximum (wall) energy dissipation rates and wall velocity gradients.
-     :header: "Geometry", "Energy dissipation rate at the wall", "Velocity gradient at the wall"
-     :widths: 30, 30, 30
-     :align: left
+.. _table_EDR_G_max_equations:
 
-     "Straight pipe", ":math:`\varepsilon_{wall} = \frac{1}{\nu}\left({\rm f}  \frac{\bar v^2}{8} \right)^2`", ":math:`G_{wall} ={\rm f}  \frac{\bar v^2}{8\nu}`"
-     "Straight pipe laminar", ":math:`\varepsilon_{wall} = \left(\frac{8\bar v}{D} \right)^2 \nu`", ":math:`G_{wall} =  \frac{8\bar v}{D}`"
-     "parallel plates", ":math:`\varepsilon_{wall} = 36\left( \frac{\bar v}{S}\right)^2 \nu`", ":math:`G_{wall} = \frac{6 \bar v}{S}`"
-     "Coiled pipe", "-", ":math:`G_{CS_{wall_{coil}}} ={\rm f} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]\frac{\bar v^2}{8\nu}`"
+.. csv-table:: Table of equations for maximum (wall) energy dissipation rates and wall velocity gradients.
+   :header: "Geometry", "Energy dissipation rate at the wall", "Velocity gradient at the wall"
+   :align: left
+
+   "Straight pipe", ":math:`\varepsilon_{wall} = \frac{1}{\nu}\left({\rm f}  \frac{\bar v^2}{8} \right)^2`", ":math:`G_{wall} ={\rm f}  \frac{\bar v^2}{8\nu}`"
+   "Straight pipe laminar", ":math:`\varepsilon_{wall} = \left(\frac{8\bar v}{D} \right)^2 \nu`", ":math:`G_{wall} =  \frac{8\bar v}{D}`"
+   "parallel plates", ":math:`\varepsilon_{wall} = 36\left( \frac{\bar v}{S}\right)^2 \nu`", ":math:`G_{wall} = \frac{6 \bar v}{S}`"
+   "Coiled pipe", "-", ":math:`G_{CS_{wall_{coil}}} ={\rm f} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]\frac{\bar v^2}{8\nu}`"
 
 
-  .. _EDR_G_equations:
-  .. csv-table:: Equations for maximum energy dissipation rates and velocity gradients for flow expansions.
-     :header: "Geometry", ":math:`\Pi_{Jet}`", "Maximum energy dissipation rate", "Maximum velocity gradient"
-     :widths: 30, 10, 30, 30
-     :align: left
+.. _table_EDR_G_equations:
 
-     "Round jet", "0.08", ":math:`\varepsilon_{Max} = \Pi_{JetRound}\frac{   \bar v_{Jet} ^3}{D_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{RoundJet} \bar v_{Jet} }{\nu D_{Jet}}}`"
-     "Plane jet", "0.0124", ":math:`\varepsilon_{Max} = \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{S_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}`"
-     "Behind a flat plate", "0.04", ":math:`\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}`", ":math:`G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}`"
+.. csv-table:: Equations for maximum energy dissipation rates and velocity gradients for flow expansions.
+   :header: "Geometry", ":math:`\Pi_{Jet}`", "Maximum energy dissipation rate", "Maximum velocity gradient"
+   :align: left
+
+   "Round jet", "0.08", ":math:`\varepsilon_{Max} = \Pi_{JetRound}\frac{   \bar v_{Jet} ^3}{D_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{RoundJet} \bar v_{Jet} }{\nu D_{Jet}}}`"
+   "Plane jet", "0.0124", ":math:`\varepsilon_{Max} = \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{S_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}`"
+   "Behind a flat plate", "0.04", ":math:`\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}`", ":math:`G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}`"
 
 For mechanical mixing where an impeller or other stirring device is adding shaft work to a control volume we have
 
