@@ -39,6 +39,13 @@ This is a place holder for 'Chapter 1: Introduction' files
    Review/Review_Fluid_Mechanics.rst
    Review/Review_Fluid_Mechanics_Derivations.rst
 
+
+.. toctree::
+    :caption: Chapter 5: Flocculation
+    :maxdepth: 1
+
+    Flocculation/Floc_Design.rst
+
 .. toctree::
   :caption: Chapter 8: Filtration
   :maxdepth: 2
