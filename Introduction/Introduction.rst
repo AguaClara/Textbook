@@ -9,13 +9,24 @@ Introduction to AguaClara Water Treatment Design
 A Different Kind of Textbook
 ============================
 
+This textbook represents our cumulative insights from our journey that has been motivated by a quest to make the world a better place where everyone has access to safe water on tap, the engineering challenge of optimizing the design of drinking water treatment plants, and the curiosity to understand what controls their performance. We would like to understand what determines which contaminants make it the whole way through a water treatment plant. If we could understand what allows some contaminants to sneak the whole way through a water treatment plant, then we suspect that we could create better designs to more effectively remove contaminants.
+
 Engineering textbooks provide a venue for authors to share what they've learned, to organize ideas, and to provide a guide for engineers as they design solutions for real world problems. Engineering textbooks are often intended to document the established core of knowledge. It seems reasonable to assume that what is in textbooks and in peer reviewed literature is mostly true.
 
-A challenge for authors is to recognize the difference between what is known with a reasonably high degree of certainty and what is assumed to be true with out a solid basis. We struggle to tell the difference between fact and hypothesis. The time-honored approach in science is to rely on the peer review process. But that process for vetting knowledge has been shown to be flawed.
+.. _heading_Edge_of_Knowledge:
 
-Your question could be whether the distinction between fact and hypothesis really matters. If the hypothesis is widely accepted as fact and if it has been accepted for decades what benefit is there to calling it a hypothesis rather than a fact?
+The edge of knowledge may be closer than we thought
+----------------------------------------------------
 
-This question is at the core of our educational philosophy. Is this text the repository of knowledge that we are providing for you to drink or is this text a conversation where we invite you to join the effort to discover better ways to provide safe water on tap?
+The assumption that what is written and passed down in oral history through the scientific community is true can lead to missed opportunities and lost insights. The hypotheses from one generation of scientists can too easily evolve into new theories in the next generation and then into established theories for the next. The history of drinking water treatment science is cloudy (think high turbidity!) with hypotheses that miss or misrepresent key concepts.
+
+You might wonder why getting the science right matters. After all, the core drinking water treatment technologies were invented before we were born and many of us have safe drinking water coming from our taps. Environmental Engineers have known how to design municipal drinking water treatment plants since they early 1900's. We hypothesize that there are many opportunities to significantly improve drinking water treatment technologies and that improved understandings of each unit process have the potential to lead to new breakthroughs.
+
+Our contention is that no one has ever optimized the design of a drinking water treatment plant! We are reasonably certain of this because we don't yet have models (with equations) that describe performance of most of the core unit processes (rapid mix, flocculation, floc blankets, sedimentation, sand filtration) used for surface water treatment. The only possible exception is lamellar sedimentation which can be characterized if we know the size and density distribution of the particles entering the sedimentation tank.
+
+Traditional drinking water treatment textbooks can too easily miss the opportunity to advance the science of drinking water treatment technologies by presenting certainty where there should be skepticism. For example, rapid mix is described as process that occurs in a few seconds, flocculation is described as a process that should be fastest for high turbidity waters and slowest for low turbidity waters, and filtration performance is described by a model that predicts first order removal with respect to filter bed depth. We will demonstrate why each of these assumptions doesn't match observations, we will discuss new insights into these processes, and we will identify high priority research questions that have the potential to lead to major improvements in drinking water treatment.
+
+We want to encourage skepticism and we want to develop insights to guide thoughtful skepticism. A key skill for successful engineering is the ability to identify the location of the edge of knowledge. The ability to distinguish between what is reasonably certain and what is still in question is what powers the scientific method of slowly extending knowledge. New insights are difficult to obtain if the research  is based on a faulty premise.
 
 .. _figure_short_walk:
 
@@ -24,7 +35,61 @@ This question is at the core of our educational philosophy. Is this text the rep
     :align: center
     :alt: internal figure
 
-    We've learned that we can find the edge of knowledge very soon after we begin researching a water treatment technology (artwork created by Ju Khuan Pan in 2012).
+    We've learned that we can find the edge of knowledge very soon after we begin researching a water treatment technology (artwork created by Yi Wen Ng in 2012).
+
+There are significant knowledge gaps in every process that we cover in this textbook. We aren’t yet able to optimize surface water treatment processes because we don’t yet understand the fundamental physics of many of the processes. We are getting closer, join us on the journey.
+
+We need the brightest and the best to create new and better solutions so we can meet the goal of providing everyone with safe drinking water. This challenge is apparently more difficult than building a space station, designing a fuel cell, or inventing the world wide web. So let’s role up our sleeves and begin.
+
+.. _heading_Tools_to_Find_the_Edge_of_Knowledge:
+
+Tools to Find the Edge of Knowledge
+-----------------------------------
+
+ - Don't believe everything we say
+ - Ask lots of questions
+
+  - How do you know that? The goal here is to identify the difference between what is known and what is hypothesized.
+  - What is the equation that describes the physics of this process? If there isn't an equation the describes the process and that can be used to design the reactor for the process, then it is likely that the equation doesn't yet capture the physics.
+  - How could we improve this process? If the physics of a process are fully understood, then dimensionally correct equations can be used to obtain the optimal design for that process.
+  - Is the process design based on "rules of thumb" or on physics? "Rules of thumb" or empirical design guidelines often can be identified by the use of physical parameters that have units. For example, if the design guideline specifies a length, time, or velocity then it is likely that the guideline is not based on physics. If the design guidelines are based on a dimensionless parameter then it is possible that it is based on physics.
+
+ - Evaluate the data to see if it matches predictions of the hypothesized model. Assess whether the authors acknowledge when their data doesn't match hypothesized models.
+ - Beware of the use of words that are poorly defined and that hide uncertainty. For example, creating a name for a supposed mechanism to describe all of the observations that don't fit with your theory does NOT mean that you understand that mechanism. The ability to name something doesn't mean it is understood.
+ - Does this “theory” provide insights that have led to new discoveries or new applications?
+ - Does the “theory” include equations that are based on the fundamental laws of nature?
+ - Does the “theory” use dimensionless constants that are close to one?
+ - Is it an elegant “theory” with no need for special cases?
+
+
+.. _heading_Myth_in_Environmental_Engineering:
+
+Myth in Environmental Engineering
+---------------------------------
+
+The following list is designed to get you thinking. These are concepts that present in the Environmental Engineering community and that may capture some elements of truth and that may also further misconceptions.
+ - Dead bodies cause disease
+ - Slow sand filters ripen (improve in ability to remove contaminants over time) because of biological growth in the filter bed
+ - If a 20 cm deep sand filter removes 90% of influent particles, then a 40 cm deep filter will remove 99% of influent particles
+ - If water is dirty, then you should filter it.
+ - Chlorine disinfects dirty water and makes it safe to drink
+ - Chlorination and filtration eliminated typhoid fever from the US
+ - Cessation of chlorination due to fear of disinfection by products caused the cholera outbreak in Peru in 1993
+ - Sedimentation is simple
+ - We already know how to solve the problem of the billions of people who do not having access to safe drinking water
+
+A challenge for authors is to recognize the difference between what is known with a reasonably high degree of certainty and what is assumed to be true without a solid basis. We struggle to tell the difference between fact and hypothesis. The time-honored approach in science is to rely on the peer review process. But that process for vetting knowledge has been shown to be flawed.
+
+Your question could be whether the distinction between fact and hypothesis really matters. If the hypothesis is widely accepted as fact and if it has been accepted for decades what benefit is there to calling it a hypothesis rather than a fact?
+
+This question is at the core of our educational philosophy. Is this text the repository of knowledge that we are providing for you to drink or is this text a conversation where we invite you to join the effort to discover better ways to provide safe water on tap?
+
+.. _heading_Textbook_Philosophy:
+
+Integrating Educational Philosophy with an Evolving Textbook
+--------------------------------------------------------------
+
+This is an evolving textbook. We don't intend to ever print this book. This book has version numbers just like software with the idea that revisions are rapid and frequent. We commit to helping to accelerate the pace of knowledge generation and to revising this text as you help us identify places where we have presented hypotheses as theory and places where research provides a basis for better theoretical models of the water treatment processes.
 
 Socrates said "`Education is the kindling of a flame, not the filling of a vessel <https://www.goodreads.com/quotes/69267-education-is-the-kindling-of-a-flame-not-the-filling>`_." Our goal is to bring the spirit of play, discovery, and mystery into the challenge of improving the quality of life of everyone on the planet by sharing better methods to produce safe drinking water.
 
@@ -33,6 +98,32 @@ In We Make the Road by Walking: Conversations on Education and Social Change, Pa
 
 We commit to playing together in a relationship where we are all learning and we are all teaching.
 "Education must begin with the solution of the teacher-student contradiction, by reconciling the poles of the contradiction so that both are simultaneously teachers and students." - Paulo Freire
+
+.. _heading_Empathy:
+
+Respect, Empathy, Love and Curiosity power the AguaClara Innovation System
+--------------------------------------------------------------------------
+
+The AguaClara network of organizations has been methodically inventing improved water treatment technologies since 2005. Our success is based on respect, empathy and love. Innovation requires flocculation of ideas. The transport of ideas between organizations and individuals is mediated by respect. Respect as a cornerstone of organizational culture foster rapid and honest exchange of ideas.
+
+Any large organization will require a leadership hierarchy and any hierarchy will rely on respect based on fear or respect based on love. `Fear-based hierarchies <https://www.forbes.com/sites/lizryan/2015/11/25/the-five-characteristics-of-fear-based-leaders/#a6179f38a968>`_ impede the accurate sharing of information and can easily devolve into data-free and low-truth decision-making schemes. According to `Liz Ryan <https://www.forbes.com/sites/lizryan/2015/11/25/the-five-characteristics-of-fear-based-leaders/#a6179f38a968>`_, the characteristics of fear-based leaders include:
+  - They'll Teach You, Whether You Like It or Not
+  - Everyone is a Friend or a Foe
+  - It's All about the Trophies
+  - They Don't Step Outside Boxes
+  - They're Addicted to Yardsticks
+
+Love-based hierarchies foster honesty and a free-flow of information. Reflection is encouraged across the organization and truth, honesty, and integrity are valued. Staff at the bottom of the hierarchy know that their opinions and reflections are valued and thus they will be willing to report problems to organization leaders.
+
+Love-based leaders relate to others based on true respect for the other. They will take the time to converse with people at all levels of the organization and will value the opportunity to speak with people who are the interface between the organization and the rest of the world. A person's value is based on being a person, not based on position in the hierarchy.
+
+As water treatment plant designers it is critical that we spend time with a diverse set of stakeholders including community members and water treatment plant operators. Those relationships must begin with respect and valuing their insights. As we spend time together we can develop trust so that they communicate both the good and bad.
+
+We've learned much from plant operators. They figured out how to reduce rising flocs at Agalteca, Honduras where we learned that conventional sedimentation tank inlet manifolds generate large circulation currents. Plant operators added curtains to the windows at Moroceli, Honduras because they noticed that direct sunlight on the sedimentation tanks caused an increase in settled water turbidity.
+
+Empathy enables us to consider reality from another's perspective. Empathy is fundamental in design. Empathy enables us to bring the people who will use or benefit from a technology into the design considerations. Empathy brings the insight that water treatment plants need to have roofs and provide a secure work environment both day and night. Empathy brings the insight that replacement parts must be readily available and that generic components are preferred over specialty proprietary components.
+
+Curiosity can flourish in a culture of love, respect, and empathy. Asking why and why not and pondering an ever growing number of questions has empowered student teams to take on the quest for new knowledge and new solutions.
 
 .. _heading_The_Global_Context_for_Drinking_Water Treatment:
 
@@ -105,9 +196,14 @@ The need for drinking water supplies isn't limited to the global south. The Cali
 Why don't 2 billion people have access to safe water?
 -------------------------------------------------------
 
-The simple answer is that they are too poor and are unable to afford safe water on tap. But it isn't that simple! Families without access to safe water on tap often spend more for water than families with safe water on tap. 
+The simple answer is that they are too poor and are unable to afford safe water on tap. But it isn't that simple! Families without access to safe water on tap often spend more for water than families with safe water on tap.
 
 As we work to solve a global challenge that has been plaguing humanity since the dawn of human civilization, then it will serve us well to understand a bit of the history that has led to our current reality. Water treatment history includes amazing successes, persistent failures, fortuitous discoveries, a heavy reliance on empiricism, and an occasional myth. Our goal is learn from and reflect on our history and then create even better solutions.
+
+.. _heading_Introduction_to_Surface_Water_Treatment:
+
+Introduction to Surface Water Treatment
+=======================================
 
 .. _table_History_of_Surface_Water_Treatment Technologies:
 
@@ -134,12 +230,20 @@ See `Pretreatment Processes for Potable Water Treatment Plants by Jeff Lindgren 
 .. _heading_Treatment_Trains:
 
 Treatment Trains
-================
+----------------
 
-The prerequisites in the table above reveal that surface water treatment almost always requires a series of treatment steps. A treatment train is a series of treatment steps (or unit processes) designed to convert a contaminated source water into a purified water meeting the design objectives.
+The prerequisites for the unit processes in the table above reveal that surface water treatment almost always requires a series of treatment steps. A treatment train is a series of treatment steps (or unit processes) designed to convert a contaminated source water into a purified water meeting the design objectives.
+
+
+
+The AguaClara Treatment Train
+Why does flocculation precedes sedimentation?
+Which process removes the largest quantity of contaminants?
+
+
 
 Design Evolution
-================
+----------------
 
 During the later half of the 20th century surface water treatment technologies evolved slowly. The slow evolution was likely a product of the regulatory environment, the high cost of water treatment infrastructure, and the low profit margin. The high cost of municipal scale water treatment infrastructure made experiments at scale infeasible and thus there was no mechanism to introduce disruptive innovations. With little opportunity for a significant return on investment there was little incentive to invest in the research and development that could have advanced the technologies. A final disincentive was the widely held belief that surface water treatment was a mature field with little opportunity for significant advancement. The advances of the latter half of the 20th century focused primarily on mechanization and automation (Supervisory Control and Data Acquisition - SCADA).
 
@@ -175,7 +279,7 @@ The AguaClara Cornell program was founded in 2005 with the goal of creating a ne
 .. _heading_Empirical_Design:
 
 Empirical Design
-================
+----------------
 
 For the past several decades surface water treatment technologies have been considered "mature" and when I (Monroe) took a design course on drinking water treatment in 1985 I had the impression that there was little room for further innovation. This perspective is remarkable given that with the exception of lamellar sedimentation there were no equations describing the core treatment processes.
 
@@ -204,7 +308,7 @@ Design for the client requires empathy and a commitment to listen to and learn f
 .. _heading_Design_Bifurcations:
 
 Design Bifurcations
-===================
+-------------------
 
 Seemingly small decisions can have a profound effect on the evolution of design. Traditionally in tropical and temperate climates, flocculation and sedimentation units are built without an enclosing building. Without protection from the sun the materials used for plant construction must be UV resistant and thus plastic can't be used. This requires use of heavier and more expensive materials such stainless steel and aluminum. Metal plate settlers are heavy and thus they can't be easily removed by the plant operator.
 
@@ -232,31 +336,7 @@ Conventional sedimentation tank cleaning must be done by providing operator acce
 
 Dramatically different designs are also created when we choose gravity power and smart fluids rather than electricity for each of the unit processes.
 
-.. _heading_Empathy:
 
-Respect, Empathy, Love and Curiosity power the AguaClara Innovation System
-====================================================================================
-
-The AguaClara network of organizations has been methodically inventing improved water treatment technologies since 2005. Our success is based on respect, empathy and love. Innovation requires flocculation of ideas. The transport of ideas between organizations and individuals is mediated by respect. Respect as a cornerstone of organizational culture foster rapid and honest exchange of ideas.
-
-Any large organization will require a leadership hierarchy and any hierarchy will rely on respect based on fear or respect based on love. `Fear-based hierarchies <https://www.forbes.com/sites/lizryan/2015/11/25/the-five-characteristics-of-fear-based-leaders/#a6179f38a968>`_ impede the accurate sharing of information and can easily devolve into data-free and low-truth decision-making schemes. According to `Liz Ryan <https://www.forbes.com/sites/lizryan/2015/11/25/the-five-characteristics-of-fear-based-leaders/#a6179f38a968>`_, the characteristics of fear-based leaders include:
-  - They'll Teach You, Whether You Like It or Not
-  - Everyone is a Friend or a Foe
-  - It's All about the Trophies
-  - They Don't Step Outside Boxes
-  - They're Addicted to Yardsticks
-
-Love-based hierarchies foster honesty and a free-flow of information. Reflection is encouraged across the organization and truth, honesty, and integrity are valued. Staff at the bottom of the hierarchy know that their opinions and reflections are valued and thus they will be willing to report problems to organization leaders.
-
-Love-based leaders relate to others based on true respect for the other. They will take the time to converse with people at all levels of the organization and will value the opportunity to speak with people who are the interface between the organization and the rest of the world. A person's value is based on being a person, not based on position in the hierarchy.
-
-As water treatment plant designers it is critical that we spend time with a diverse set of stakeholders including community members and water treatment plant operators. Those relationships must begin with respect and valuing their insights. As we spend time together we can develop trust so that they communicate both the good and bad.
-
-We've learned much from plant operators. They figured out how to reduce rising flocs at Agalteca, Honduras where we learned that conventional sedimentation tank inlet manifolds generate large circulation currents. Plant operators added curtains to the windows at Moroceli, Honduras because they noticed that direct sunlight on the sedimentation tanks caused an increase in settled water turbidity.
-
-Empathy enables us to consider reality from another's perspective. Empathy is fundamental in design. Empathy enables us to bring the people who will use or benefit from a technology into the design considerations. Empathy brings the insight that water treatment plants need to have roofs and provide a secure work environment both day and night. Empathy brings the insight that replacement parts must be readily available and that generic components are preferred over specialty proprietary components.
-
-Curiosity can flourish in a culture of love, respect, and empathy. Asking why and why not and pondering an ever growing number of questions has empowered student teams to take on the quest for new knowledge and new solutions.
 
 .. _heading_Water_Contaminants:
 
