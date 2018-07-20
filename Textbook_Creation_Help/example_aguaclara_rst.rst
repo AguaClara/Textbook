@@ -118,7 +118,7 @@ Use the following syntax for including figures from online sources::
 Use this syntax for figures located within the /Textbook repository on GitHub::
 
   .. _figure_mountain:
-  .. figure:: mountain.jpg
+  .. figure:: Images/mountain.jpg
       :width: 300px
       :align: center
       :alt: internal figure
@@ -127,19 +127,22 @@ Use this syntax for figures located within the /Textbook repository on GitHub::
       The base directory for figure location is the directory of the file you are writing.
       In this case, that is Textbook/Textbook_Creation_Help.
 
-Displayed below are the two figures generated using the code above.
+:numref:`figure_fluffy_cat` and :numref:`figure_mountain` are the two figures generated using the code above.
 
 .. _figure_fluffy_cat:
+
 .. figure:: https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg
     :width: 200px
     :align: center
-    :height: 100px
     :alt: external figure
 
     This is a caption.
 
+See :numref:`figure_mountain` for a typical mountain view.
+
 .. _figure_mountain:
-.. figure:: mountain.jpg
+
+.. figure:: Images/mountain.jpg
     :width: 300px
     :align: center
     :alt: internal figure
@@ -244,7 +247,7 @@ Now, the syntax ``AguaClara_`` will link to the specified site: AguaClara_
 
 References
 ^^^^^^^^^^^
-References work by calling any "target"- either tags (titles, headings, figures, and tables) or labels (equations). These refernce formats work internally- calling something within the same document and externally- calling content in some other document within this same project.
+References work by calling any "target"- either tags (titles, headings, figures, and tables) or labels (equations). These reference formats work internally- calling something within the same document and externally- calling content in some other document within this same project.
 
 .. important:: Before you start tagging and labelling content with any degree of willy-nilly-ness, make sure that you are not repeating tags or labels. You can check to see if your tag or label is taken by visiting libraries on GitHub. `Check here for labels <https://github.com/AguaClara/Textbook/blob/master/equation_index.txt>`_ and `here for tags <https://github.com/AguaClara/Textbook/blob/master/heading_index.txt>`_.
 

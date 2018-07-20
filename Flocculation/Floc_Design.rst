@@ -43,7 +43,8 @@ Important Equations
 Introduction to Hydraulic Flocculation
 ======================================
 
-The reason that flocculation is widely used in water treatment is because of sedimentation. Sedimentation is the process that actually removes particles like clay, dirt, organic matter, and bacteria from water. As you learned in the previous chapter on Rapid Mix ***(DOUBLE CHECK THAT THIS IS IN RAPID MIX ONCE RAPID MIX IS WRITTEN)***, sedimentation is the process of particles ‘falling’ out of water due to density stratification, and its governing equation is:
+The reason that flocculation is widely used in water treatment is because of sedimentation. Sedimentation is the process that actually removes particles like clay, dirt, organic matter, and bacteria from water. As you learned in the
+:ref:`introduction on treatment trains <heading_Treatment_Trains>`, sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
 
 .. math:: \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
 
@@ -52,22 +53,23 @@ The reason that flocculation is widely used in water treatment is because of sed
 | :math:`D_{particle}` = particle diameter
 | :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
 
-To increase :math:`\bar v_t` and make sedimentation more efficient, floccuation aims to increase the diameter :math:`d` of the particles. This is done by applying a coagulant to the dirty water and helping the coagulant to stick evenly to all particles during Rapid Mix ***(DOUBLE CHECK THAT THIS IS IN RAPID MIX ONCE RAPID MIX IS WRITTEN)***. Being covered in coagulant allows the particles to collide, merge, and grow bigger during flocculation.
+To increase :math:`\bar v_t` and make sedimentation more efficient, flocculation aims to increase the diameter :math:`d` of the particles. This is done by applying a coagulant to the dirty water and helping the coagulant to stick evenly to all particles during Rapid Mix ***(DOUBLE CHECK THAT THIS IS IN RAPID MIX ONCE RAPID MIX IS WRITTEN)***. Being covered in coagulant allows the particles to collide, merge, and grow bigger during flocculation.
 
 Our goal in designing a flocculator is to facilitate particle collisions. How can we do this?
 
 Collision Potential, :math:`\bar G \theta`, and Energy Dissipation Rate, :math:`\varepsilon`
 --------------------------------------------------------------------------------------------
 
-**Collision potential :math:`(\bar G \theta)`** is a term with a very straightforward name. It represents the magnitude of potential particle collisions in a fluid. It is a *dimensionless* parameter which is often used as a performance metric for flocculators; big :math:`\bar G \theta` values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). AguaClara flocculators usually aim for a collision potential of :math:`\bar G \theta = 37,000`\ , which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying :math:`\bar G`, a parameter for average fluid shear with units of :math:`\frac{1}{[T]}`, and :math:`\theta`, the residence time of water in the flocculator, with units of :math:`[T]`. :math:`\theta` is intuitive to measure, calculate, and understand. :math:`\bar G` is a bit more difficult. First, an intuitive explanation. See the image below, which shows the velocity profile of flowing water.
+**Collision potential :math:`(\bar G \theta)`** is a term with a very straightforward name. It represents the magnitude of potential particle collisions in a fluid. It is a *dimensionless* parameter which is often used as a performance metric for flocculators; big :math:`\bar G \theta` values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). AguaClara flocculators usually aim for a collision potential of :math:`\bar G \theta = 37,000`\ , which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying :math:`\bar G`, a parameter for average fluid shear with units of :math:`\frac{1}{[T]}`, and :math:`\theta`, the residence time of water in the flocculator, with units of :math:`[T]`. :math:`\theta` is intuitive to measure, calculate, and understand. :math:`\bar G` is a bit more difficult. First, an intuitive explanation. :numref:`figure_G_velocity_profile` , which shows the velocity profile of flowing water.
 
-.. raw:: html
+.. _figure_G_velocity_profile:
 
-   <center>
+.. figure:: Images/G_velocity_profile.jpg
+    :width: 300px
+    :align: center
+    :alt: G velocity profile
 
-.. raw:: html
-
-   </center>
+    Velocity profile for the case of uniform shear.
 
 :math:`G` measures the magnitude of shear by using the velocity gradient of a fluid in space, :math:`\frac{\Delta \bar v}{\Delta h}`. This is essentially the same as the :math:`\frac{\delta u}{\delta y}` term in fluid mechanics, which is found in the ubiquitous `fluid-shear problem <http://polymerdatabase.com/polymer%20physics/images/Visc.png>`__.
 
@@ -109,47 +111,47 @@ We can use this to obtain a final equation for collision potential of a reactor:
 Generating Head Loss with Baffles
 ---------------------------------
 
-**What are Baffles?**
+What are Baffles?
 ^^^^^^^^^^^^^^^^^^^^^
 
 Now that we know how to measure collision potential with head loss, we need a way to actually generate head loss. While both major or minor losses can be the design basis, it generally makes more sense to use major losses only for very low-flow flocculation (lab-scale) and minor losses for higher flows, as flocculation with minor losses tends to be more space-efficient. Since this book focuses on town and village-scale water treatment (5 L/S to 120 L/S), we will use minor losses as our design basis.
 
-To generate minor losses, we need to create flow expansions. AguaClara does this with **baffles**, which are obstructions in the channel of a flocculator to force the flow to switch directions by 180°. Baffles in AguaClara plants are plastic sheets, and all of the baffles in one flocculator channel are connected to form a **baffle module.** Images below show an AguaClara flocculator and the beginnings of a baffle module.
+To generate minor losses, we need to create flow expansions. AguaClara does this with **baffles**, which are obstructions in the channel of a flocculator to force the flow to switch directions by 180°. Baffles in AguaClara plants are plastic sheets, and all of the baffles in one flocculator channel are connected to form a **baffle module.** :numref:`AC_flocculator` shows an AguaClara flocculator and :numref:`Baffle_module` shows the assembly of a baffle module.
 
-.. raw:: html
+.. _AC_flocculator:
 
-   <center>
+.. figure:: Images/AC_flocculator.JPG
+    :width: 500px
+    :align: center
+    :alt: AC flocculator
 
-.. raw:: html
+    AguaClara vertical flow hydraulic flocculator.
 
-   </center>
+.. _Baffle_module:
 
-|
-|
-|
+.. figure:: Images/Baffle_module.JPG
+    :width: 500px
+    :align: center
+    :alt: Baffle module
 
-.. raw:: html
+    AguaClara baffle module for a hydraulic flocculator.
 
-   <center>
-
-.. raw:: html
-
-   </center>
 
 AguaClara flocculators, like the one pictured above, are called **vertical hydraulic flocculators** because the baffles force the flow vertically up and down. If the baffles were instead arranged to force the flow side-to-side, the flocculator would be called a **horizontal hydraulic flocculator**. AguaClara uses vertical flocculators because they are more efficient when considering plant area. They are deeper than horizontal flocculators, which allows them to have a smaller `plan-view area <https://simple.wikipedia.org/wiki/Plan_view>`__ and thus to be cheaper.
 
 **Finding the Minor Loss of a Baffle**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Before beginning this section, it is important to make sure that the we understand how water flows through a baffled flocculator. This is done in the following image. Take note of the red lines, they indicate the compression of the flow around a baffle.
+Before beginning this section, it is important to make sure that the we understand how water flows through a baffled flocculator (see :numref:`Flocculator_flow`). Take note of the red lines, they indicate the compression of the flow around a baffle.
 
-.. raw:: html
+.. _Flocculator_flow:
 
-   <center>
+.. figure:: Images/Flocculator_flow.JPG
+    :width: 500px
+    :align: center
+    :alt: Flocculator flow
 
-.. raw:: html
-
-   </center>
+    Flow path through a vertical flow hydraulic flocculator.
 
 Since baffles are the source of head loss via minor losses, we need to find the minor loss coefficient of one baffle if we want to be able to quantify its head loss. To do this, we apply fluid mechanics intuition and check it against a computational fluid dynamics (CFD) simulation. Flow around a 90° bend has a vena contracta value of around :math:`\Pi_{vc} = 0.62`. Flow around a 180° bend therefore has a value of :math:`\color{red}{\Pi_{vc, \, baffle} = \Pi_{vc}^2 = 0.384}`. This number is roughly confirmed with CFD, as shown in the image below.
 
@@ -161,7 +163,7 @@ Since baffles are the source of head loss via minor losses, we need to find the 
 
    </center>
 
-We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}`. Through the `third form of the minor loss equation <https://github.com/AguaClara/Textbook/blob/master/Fluids%20Review/Fluids_Review_Design.md#minor-losses>`__,
+We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}`. Through the :ref:`third form of the minor loss equation <heading_minor_losses>`,
 :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine a :math:`K` for flow around a single baffle:
 
 .. math:: K_{baffle} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2
@@ -208,13 +210,14 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
 
 .. math:: \frac{x}{10} = D - D_0
 
-.. raw:: html
+.. _figure_Jet_expansion_flocculator:
 
-   <center>
+.. figure:: Images/Jet_expansion_flocculator.jpg
+    :width: 400px
+    :align: center
+    :alt: Jet expansion flocculator
 
-.. raw:: html
-
-   </center>
+    This is a caption.
 
 Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing :math:`S`. We do this by substituting :math:`D_0 = (0.384 S)` along with :math:`D = S` to approximate how much distance, :math:`x = H_e`, the contracted flow has to cover.
 

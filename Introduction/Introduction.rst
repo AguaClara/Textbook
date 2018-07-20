@@ -236,11 +236,21 @@ The prerequisites for the unit processes in the table above reveal that surface 
 
 
 
+
 The AguaClara Treatment Train
 Why does flocculation precedes sedimentation?
 Which process removes the largest quantity of contaminants?
 
+Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
 
+.. math:: \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
+
+| Such that:
+| :math:`\bar v_t` = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water
+| :math:`D_{particle}` = particle diameter
+| :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
+
+:todo: add graph showing sed velocity of organic and inorganic particles as function of diameter.
 
 Design Evolution
 ----------------
