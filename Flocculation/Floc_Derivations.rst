@@ -1,8 +1,13 @@
-Flocculation  Derivations
-========================
+.. _title_Flocculation_Derivations:
+
+*************************
+Flocculation Derivations
+*************************
+
+.. _heading_Design_Equations_for_the_Flocculator:
 
 Design Equations for the Flocculator
-------------------------------------
+====================================
 
 This document contains the derivation for the minimum allowable width of
 a flocculator channel based on the requirements that
@@ -11,7 +16,7 @@ serves as a basis for design. The final parameter derived is
 :math:`W_{Min, \, \Pi_{H_eS}}`.
 
 Width
-~~~~~
+-----
 
 Our two restrictions are: - Ensuring that we maintain the :math:`\bar G`
 we get based on our input parameters - Ensuring that
@@ -25,7 +30,6 @@ other to bring :math:`\bar G` into the equation.
 .. math:: \nu \bar G^2 = \frac{g h_{L_{floc}}}{\theta}
 
 **Very Important Note:**
-''''''''''''''''''''''''
 
 For the following steps, we will consider the flow through ***a single
 flow expansion :math:`H_e`, not through the entire flocculator***. This

@@ -120,7 +120,7 @@ To generate minor losses, we need to create flow expansions. AguaClara does this
 
 .. _AC_flocculator:
 
-.. figure:: Images/AC_flocculator.JPG
+.. figure:: Images/AC_flocculator.jpg
     :width: 500px
     :align: center
     :alt: AC flocculator
@@ -129,7 +129,7 @@ To generate minor losses, we need to create flow expansions. AguaClara does this
 
 .. _Baffle_module:
 
-.. figure:: Images/Baffle_module.JPG
+.. figure:: Images/Baffle_module.jpg
     :width: 500px
     :align: center
     :alt: Baffle module
@@ -146,7 +146,7 @@ Before beginning this section, it is important to make sure that the we understa
 
 .. _Flocculator_flow:
 
-.. figure:: Images/Flocculator_flow.JPG
+.. figure:: Images/Flocculator_flow.jpg
     :width: 500px
     :align: center
     :alt: Flocculator flow
@@ -198,7 +198,7 @@ High values of :math:`\Pi_{\bar G}^{G_{Max}}` occur when one or both of the prev
 
 .. math:: \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{\bar G}^{G_{Max}} \right)^2
 
-Therefore, by making our :math:`\Pi_{\bar G}^{G_{Max}}` as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. `A paper by Haarhoff and van der Walt in 2001 <http://aqua.iwaponline.com/content/50/3/149>`__ uses CFD to show that the minimum :math:`\Pi_{\bar G}^{G_{Max}}` attainable in a hydraulic flocculator is :math:`\Pi_{\bar G}^{G_{Max}} = \sqrt{2} \approx 1.4`, which means that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{\bar G}^{G_{Max}} \right)^2 \approx 2`. So how do we optimize an AguaClara flocculator to make sure :math:`\Pi_{\bar G}^{G_{Max}} = \sqrt{2}`?
+Therefore, by making our :math:`\Pi_{\bar G}^{G_{Max}}` as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. `A paper by Haarhoff and van der Walt in 2001 <https://doi.org/10.2166/aqua.2001.0014>`__ uses CFD to show that the minimum :math:`\Pi_{\bar G}^{G_{Max}}` attainable in a hydraulic flocculator is :math:`\Pi_{\bar G}^{G_{Max}} = \sqrt{2} \approx 1.4`, which means that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{\bar G}^{G_{Max}} \right)^2 \approx 2`. So how do we optimize an AguaClara flocculator to make sure :math:`\Pi_{\bar G}^{G_{Max}} = \sqrt{2}`?
 
 We define and optimize a performance metric:
 
@@ -313,7 +313,7 @@ AguaClara Design of Hydraulic, Vertical Flow Flocculators
 
 AguaClara’s approach to flocculator design is the same as it is for any other unit process. First, critical design criteria, called inputs, are established. These criteria represent the priorities that the rest of the design will be based around. Once these parameters are established, then the other parameters of the design, which are dependent on the inputs, are calculated based on certain constraints.
 
-`Take the CDC as an example of this design process <https://github.com/AguaClara/Textbook/blob/master/Flow%20Control%20and%20Measurement/FCM_Derivation_designing_the_cdc.md#cdc-design-equation-derivation>`__; its inputs are :math:`h_{L_{Max}}`, :math:`\sum K`, :math:`\Pi_{Error}`, and the discrete dosing tube diameters :math:`D` that are available at hardware stores or pipe suppliers. Its dependent variables include the number and length of the dosing tubes and the flow through the CDC system.
+Take the CDC as an example of this design process in :ref:`title_flow_control_design`; its inputs are :math:`h_{L_{Max}}`, :math:`\sum K`, :math:`\Pi_{Error}`, and the discrete dosing tube diameters :math:`D` that are available at hardware stores or pipe suppliers. Its dependent variables include the number and length of the dosing tubes and the flow through the CDC system.
 
 The flocculator is more complex to design than the CDC, as it has more details and parameters and the equations for those details and parameters are very interdependent. Therefore, there are many ways to design an AguaClara flocculator, and many different sets of critical design criteria to begin with. Enumerated below is the current AguaClara approach.
 
@@ -363,7 +363,7 @@ Input Parameters
 ---------------~
 
 **Specify**
-^^^^^^^^^^^
+
 
 We start by making sure that our flocculator will be able to flocculate effectively by defining :math:`h_{L_{floc}}` and :math:`\bar G \theta`. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards in AguaClara flocculators: -
 :math:`h_{L_{floc}} = 40 \, {\rm cm}` - :math:`\bar G \theta = 37,000`
@@ -402,10 +402,9 @@ Now that we have the basic parameters defined, we can start to design the detail
 Physical Dimensions
 ------------------~
 
-Deriving the equations required to find the physical dimensions now and the hydraulic parameters (baffle/obstacle design) in the next section requires many steps. To simplify this design explanation, `the equation derivations will all be in the derivation sheet <https://github.com/AguaClara/Textbook/blob/master/Flocculation/Derivation_flocculator_design_equations.md>`__. All complex equations which seemingly came out of nowhere will be derived in the derivation sheet.
+Deriving the equations required to find the physical dimensions now and the hydraulic parameters (baffle/obstacle design) in the next section requires many steps. To simplify this design explanation the equation derivations are developed in :ref:`title_review_fluid_mechanics_derivations`. All complex equations which seemingly came out of nowhere will be derived in the derivation sheet.
 
 **Length**
-^^^^^^^^^^
 
 Flocculator length, :math:`L_{channel}` must meet two constraints: it must be less than or equal to the length of the sedimentation tanks, as the flocculator is adjacent to the sed tanks. This constraint is :math:`L_{Max, \, sed}`. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside :math:`L_{Max, \, \rlap{-} V}`. **The constraint that wins out is the one that results in the *smaller* length value**.
 
@@ -436,8 +435,8 @@ The equation for *actual* flocculator length is therefore:
 
    </center>
 
-**Width and Number of Channels**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Width and Number of Channels
+----------------------------
 
 The width of a single flocculator channel must meet the following conditions: - Maintain :math:`\bar G` at the value found in the inputs section - Allow for :math:`3 < \frac{H_e}{S} < 6`. Recall that :math:`\frac{H_e}{S} = \Pi_{H_eS}` - Allow for a human to be able to fit into a flocculator channel
 
@@ -469,6 +468,7 @@ Finally:
        n_{channels} = \frac{W_{total}}{W_{Min}}
        }
 | Such that:
+
 | :math:`n_{channels}` is an even number and is not 0. Usually,
   :math:`n_{channels}` is either 2 or 4.
 

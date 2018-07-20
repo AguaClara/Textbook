@@ -30,7 +30,7 @@ We want to encourage skepticism and we want to develop insights to guide thought
 
 .. _figure_short_walk:
 
-.. figure:: Images\Short_walk_to_the_edge.jpg
+.. figure:: Images/Short_walk_to_the_edge.jpg
     :width: 500px
     :align: center
     :alt: internal figure
@@ -134,7 +134,7 @@ The `Sustainable Development Goals: SDGs <https://www.un.org/sustainabledevelopm
 
 .. _figure_SDG6:
 
-.. figure:: Images\SDG6.png
+.. figure:: Images/SDG6.png
     :width: 100px
     :align: center
     :alt: SDG6
@@ -334,7 +334,6 @@ Conventional sedimentation tank cleaning must be done by providing operator acce
 
     `Plant operators opening hatch below plate settlers <http://www.youtube.com/watch?v=TSh-ZNqaW8Y>`_ in a traditional sedimentation tank.
 
-    .. _figure_Cleaning_a_Sed_Tank_with_fixed_plates:
 
 .. figure:: http://img.youtube.com/vi/vZ2f6mduEls/0.jpg
     :width: 300px

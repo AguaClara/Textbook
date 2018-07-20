@@ -336,7 +336,7 @@ Use dimensional analysis to get a relative velocity for the long range transport
    \nu = \frac{[L]^2}{[T]}
 
 Diffusion band thickness
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 The time required for shear to transport all of the fluid past the clay so that diffusion can transport the coagulant nanoparticles to the clay surface is significant.
 
@@ -371,7 +371,7 @@ Let’s estimate the thickness of the diffusion band
     fig.savefig(imagepath+'Diffusion_band_thickness')
     plt.show()
 
-.. _figure_Eddy_turnover_times:
+.. _figure_Diffusion_band_thickness:
 
 .. figure:: Images/Diffusion_band_thickness.png
     :width: 400px

@@ -131,7 +131,7 @@ In addition to the general fluids review in the previous chapter, there are a fe
 
 Knowledge of these concepts and how they interact is critical to understand rapid mix, flocculation, and disinfection. These concepts and their interactions first become relevant in rapid mix, the step in which the coagulant gets added to the raw water.
 
-The two concepts that were not covered in the previous chapter, `title_review_fluid_mechanics`_, are velocity gradient :math:`G` and energy dissipation rate :math:`\varepsilon`. While these will be very thoroughly described over the course of this introduction, a brief and simple explanation is included to help get the ball rolling.
+The two concepts that were not covered in the previous chapter, :ref:`title_review_fluid_mechanics`, are velocity gradient :math:`G` and energy dissipation rate :math:`\varepsilon`. While these will be very thoroughly described over the course of this introduction, a brief and simple explanation is included to help get the ball rolling.
 
 Understanding :math:`G` and :math:`\varepsilon`
 -----------------------------------------------

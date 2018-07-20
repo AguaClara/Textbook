@@ -212,7 +212,7 @@ Parallel Plates Laminar
 Flow between parallel plates occurs in plate settlers in the sedimentation tank. We will derive the velocity gradient at the wall using the Navier Stokes equation.
 
 .. _figure_Parallel_Plate_schematic:
-.. figure::    Images\Parallel_Plate_schematic.png
+.. figure::    Images/Parallel_Plate_schematic.png
    :width: 700px
    :align: center
    :alt: Parallel plate schematic
