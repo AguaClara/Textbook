@@ -246,7 +246,7 @@ References
 ^^^^^^^^^^^
 References work by calling any "target"- either tags (titles, headings, figures, and tables) or labels (equations). These refernce formats work internally- calling something within the same document and externally- calling content in some other document within this same project.
 
-.. important:: Before you start tagging and labelling content with any degree of willy-nilly-ness, make sure that you are not repeating tags or labels. You can check to see if your tag or label is taken by visiting libraries on GitHub. `Check here for labels <https://github.com/AguaClara/Textbook/blob/master/equation_index.txt>`_ and `here for tags <https://github.com/AguaClara/Textbook/blob/master/heading_index.txt>`_.
+.. important:: Before you start tagging and labelling content with any degree of willy-nilly-ness, make sure that you are not repeating tags or labels. You can check to see if your tag or label is taken by visiting libraries on GitHub. :download:`Check here for tags and labels: </_static/text_documents/heading_index.txt>`.
 
 Document Titles and Headings
 """""""""""""""""""""""""""""
