@@ -463,16 +463,13 @@ We can find the number of channels, :math:`n_{channels}` and their actual width 
 
 Finally:
 
-|
-
-  .. math::
-
+| .. math::
      \color{purple}{
        n_{channels} = \frac{W_{total}}{W_{Min}}
        }
 | Such that:
 | :math:`n_{channels}` is an even number and is not 0. Usually,
-|  :math:`n_{channels}` is either 2 or 4.
+| :math:`n_{channels}` is either 2 or 4.
 
 Now that we know :math:`n_{channels}`, we can find the actual width of a channel, :math:`W_{channel}`.
 
