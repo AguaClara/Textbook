@@ -30,7 +30,7 @@ Nanoparticle application includes multiple steps that must occur before the raw 
   7. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
   8. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
 
-These multiple steps cover a wide range of length scales and it is not clear at the onset which processes might be the rate limiting steps. We will develop time scale estimates for several of these steps to help identify which processes will likely require the most attention to design. Many of these transport processes are presumed to occur in parallel. :numref:`_figure_transport_length_scales` shows the range of length scales
+These multiple steps cover a wide range of length scales and it is not clear at the onset which processes might be the rate limiting steps. We will develop time scale estimates for several of these steps to help identify which processes will likely require the most attention to design. Many of these transport processes are presumed to occur in parallel. :numref:`figure_transport_length_scales` shows the range of length scales
 
 .. _figure_transport_length_scales:
 

@@ -414,13 +414,10 @@ Deriving the equations required to find the physical dimensions now and the hydr
 Flocculator length, :math:`L_{channel}` must meet two constraints: it must be less than or equal to the length of the sedimentation tanks, as the flocculator is adjacent to the sed tanks. This constraint is :math:`L_{Max, \, sed}`. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside :math:`L_{Max, \, \rlap{-} V}`. **The constraint that wins out is the one that results in the *smaller* length value**.
 
 |
-
-  .. math:: L_{Max, \, sed} = 6 \, {\rm m}
-
-  .. math:: L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human} H}
-
-| Such that:
-| :math:`n_{Min, \, channels} = 2`
+ .. math:: L_{Max, \, sed} = 6 \, {\rm m}
+ .. math:: L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human} H}
+ Such that:
+ :math:`n_{Min, \, channels} = 2`
 
 The reason why :math:`W_{Min, \, human}` is used is because it represents the absolute minimum of flocculator channel width. If the width ends up being larger, the length will decrease. :math:`n_{Min, \, channels} = 2` to make sure that the flow ends up on the correct side of the sedimentation tank, as the image below shows. Note that there can only be an even number of flocculator channels, as explained in the image’s caption.
 
@@ -522,7 +519,7 @@ Finally, we can obtain the number of obstacles per baffle space. The :math:`- 1`
 **Baffle Spacing :math:`S`**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Finally, we can find the space between baffles, :math:`S`. The equation for :math:`S` is taken from an intermediate step `in the :math:`W_{Min, \, \Pi_{H_eS}}` derivation <https://github.com/AguaClara/Textbook/blob/master/Flocculation/Floc_Derivation_flocculator_design_equations.md>`__, :math:`W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}`. Rearranging for :math:`S`, we get:
+Finally, we can find the space between baffles, :math:`S`. The equation for :math:`S` is taken from an intermediate step `in the :math:`W_{Min, \, \Pi_{H_eS}} :ref:`derivation <title_Flocculation_Derivations>`, :math:`W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}`. Rearranging for :math:`S`, we get:
 
 .. math::
 
