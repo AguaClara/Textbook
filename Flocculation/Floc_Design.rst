@@ -91,8 +91,7 @@ Collision Potential, :math:`\bar G \theta`, and Energy Dissipation Rate, :math:`
 **Collision potential :math:`(\bar G \theta)`** is a term with a very straightforward name. It represents the magnitude of potential particle collisions in a fluid. It is a *dimensionless* parameter which is often used as a performance metric for flocculators; big :math:`\bar G \theta` values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). **AguaClara flocculators usually aim for a collision potential of :math:`(\bar G \theta) = 37,000`**, which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying :math:`\bar G`, a parameter for average fluid shear with units of :math:`\frac{1}{[T]}`, and :math:`\theta` , the residence time of water in the flocculator, with units of ::math:`[T]` . :math:`\theta` is intuitive to measure, calculate, and understand. :math:`\bar G` is a bit more difficult. First, an intuitive explanation. See the image below, which shows the velocity profile of flowing water.
 
 .. _figure_G_velocity_profile:
-
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/G_velocity_profile.jpg?raw=true
+.. figure:: Images/G_velocity_profile.jpg
     :width: 50%
     :align: center
     :alt: external figure
@@ -148,14 +147,16 @@ Now that we know how to measure collision potential with head loss, we need a wa
 
 To generate minor losses, we need to create flow expansions. AguaClara does this with **baffles**, which are obstructions in the channel of a flocculator to force the flow to switch directions by 180°. Baffles in AguaClara plants are plastic sheets, and all of the baffles in one flocculator channel are connected to form a **baffle module.** Images below show an AguaClara flocculator and the beginnings of a baffle module.
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/AC_flocculator.JPG?raw=true
+.. _figure_AC_flocculator:
+.. figure:: Images/AC_flocculator.JPG
   :width: 50%
   :align: center
   :alt: this is a floc images
 
   Clockwise from the top left the images show: the outline of the entire flocculator, some top and bottom baffles in the channeles, the 4 flocculator channels in this flocculator, and the flow path of water through the flocculator
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Baffle_module.JPG?raw=true
+.. _figure_baffle_module:
+.. figure:: Images/Baffle_module.JPG
   :width: 50%
   :align: center
   :alt: this image shows the floc baffle module out of the water within a plant.
@@ -169,8 +170,8 @@ AguaClara flocculators, like the one pictured above, are called **vertical hydra
 
 Before beginning this section, it is important to understand how water flows through a baffled flocculator. This flow path is shown in the following image. Take note of the thin red arrows; they indicate the compression of the flow around a baffle.
 
-
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Flocculator_flow.jpg?raw=true
+.. _figure_flocculator_flow:
+.. figure:: Images/Flocculator_flow.jpg
   :width: 600px
   :align: center
   :alt: flocculator flow image
@@ -179,11 +180,11 @@ Before beginning this section, it is important to understand how water flows thr
 
 Since baffles are the source of head loss via minor losses, we need to find the minor loss coefficient of one baffle if we want to be able to quantify its head loss. To do this, we apply fluid mechanics intuition and check it against a computational fluid dynamics (CFD) simulation. Flow around a 90° bend has a vena contracta value of around :math:`\Pi_{vc} = 0.62`. Flow around a 180° bend therefore has a value of :math:`\color{red}{\Pi_{vc, \, baffle} = \Pi_{vc}^2 = 0.384}`. This number is roughly confirmed with CFD, as shown in the image below.
 
-
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/CFD_vc_baffle.jpg?raw=true
+.. _figure_cfd_VC_baffle:
+.. figure:: Images/CFD_vc_baffle.jpg
   :align: center
   :width: 200px
-  :alt: CFD vs baffle
+  :alt: CFD vc baffle
 
 
 We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}`. Through the `third form of the minor loss equation <https://github.com/AguaClara/Textbook/blob/master/Fluids%20Review/Fluids_Review_Design.md#minor-losses>`_, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine a :math:'k' for flow around a single baffle:
@@ -234,7 +235,8 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
 .. math::
   \frac{x}{10} = D - D_0
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Jet_expansion_flocculator.jpg?raw=true
+.. _figure_jet_expansion_flocculator:
+.. figure:: Images/Jet_expansion_flocculator.jpg
   :align: center
   :width: 600px
   :alt: jet expansion in the flocculator
@@ -251,12 +253,14 @@ Using the equation and image above, we can find the distance required for the fl
 
 This is the highest allowable :math:`\Pi_{H_eS}` that we can design while ensuring that there is no dead space in the flocculator.
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/CFD_baffle_image.jpg?raw=true"
+.. _figure_CFD_baffle_image:
+.. figure:: Images/CFD_baffle_image.jpg
   :align: center
   :width: 50%
   :alt: CFD baffle image
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/CFD_full_channel.jpg?raw=true"
+.. _figure_CFD_full_channel:
+.. figure:: Images/CFD_full_channel.jpg
   :width: 700px
   :align: center
   :alt: CFD full channel
@@ -266,7 +270,8 @@ In order to have a robust design process for a baffle module, we need to have so
 
 AguaClara uses a fairly straightforward way of setting :math:`\Pi_{H_eS_{Min}}`. It is based on the distance between the water level and the bottom baffle (which is the same distance between the flocculator floor and a top baffle). This distance is referred to as the slot width (`Haarhoff 1998 <http://aqua.iwaponline.com/content/47/3/142>`_)  DOI: 10.2166/aqua.1998.20") and is defined by the slot width ratio, which describes the slot width as a function of baffle spacing :math:`S`. Slot width is shown in the following image:
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Slot_width_description.jpg?raw=true
+.. _figure_slot_width_description:
+.. figure:: Images/Slot_width_description.jpg
   :align: center
   :width: 600px
   :alt: image showing the dimensiond of spacing within the flocculator
@@ -275,7 +280,8 @@ AguaClara uses a slot width ratio of 1 for its flocculators. This number has bee
 
 The minimum :math:`\Pi_{H_eS}` allowable depends on the slot with ratio. If :math:`\Pi_{H_eS}` is less than twice the slot width ratio, the water would flow straight through the flocculator without having to bend around the baffles. This means that the flocculator would not be generating almost any head loss, and the top and bottom of the flocculator will largely be dead space. See the following image for an example:
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/HeS_ratio_min.jpg?raw=true
+.. _figure_HeS_ratio_min:
+.. figure:: Images/HeS_ratio_min.jpg
   :align: center
   :width: 600px
   :alt: minimum H S ratio
@@ -300,12 +306,14 @@ To get around this problem, AguaClara included 'obstacles,' or half-pipes to con
 
 These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` to exceed 6, while maintaining maximum flocculator efficiency since, :math:`\frac{H_e}{S}` can still be between 3 and 6. Obstacles make it possible to design smaller flocculators without compromising flocculation efficiency. The following images show these obstacles and how they affect the flow in a flocculator.
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Floc_module_with_obstacles.jpg?raw=true
+.. _figure_floc_module_with_obstacles:
+.. figure:: Images/Floc_module_with_obstacles.jpg
   :width: 800px
   :align: center
   :alt: floc module with obstacles
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Floc_flow_with_obstacles.jpg?raw=true
+.. _figure_floc_flow_with_obstacles:
+.. figure:: Images/Floc_flow_with_obstacles.jpg
   :align: center
   :width: 900px
   :alt: floc flow with obstacles
@@ -342,7 +350,8 @@ The flocculator is more complex to design than the CDC, as it has more details a
       - :math:`n_{obstacles}`, amount of obstacles per baffle space
       - :math:`S`, baffle spacing, distance between baffles
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Flocculator_physical_parameters.jpg?raw=true
+.. _figure_floculator_physical_parameters:
+.. figure:: Images/Flocculator_physical_parameters.jpg
   :width: 600px
   :align: center
   :alt: physical floccuat parameters
@@ -362,7 +371,8 @@ The plant flow rate :math:`Q` is defined by the needs of the community that the 
 - :math:`L_{Max, \, sed} = 6 \, {\rm m}`
 - :math:`W_{Min, \, human} = 45 \, {\rm cm}`
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Physical_design_criteria.jpg?raw=true
+.. _figure_physical_design_criteria_floc:
+.. figure:: Images/Physical_design_criteria.jpg
   :align: center
   :width: 600px
   :alt: physical design criteria
@@ -411,7 +421,8 @@ The equation for *actual* flocculator length is therefore:
   L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \rlap{-} V})
   }
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Floc_channels.jpg?raw=true
+.. _figure_floc_channels:
+.. figure:: Images/Floc_channels.jpg
   :align: center
   :width: 600px
   :alt: floc channels
@@ -543,7 +554,8 @@ Residence Time of Water in the Flocculator Check
 -----------------------------------------------------
 It is now time to make our final check. We need to make sure that our actual residence time is *at least* as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than :math:`\rlap{-} V_{floc}`. See the image below for clarification.
 
-.. figure:: https://github.com/AguaClara/Textbook/blob/master/Flocculation/Images/Flocculator_head_loss.jpg?raw=true
+.. _figure_flocculator_head_loss:
+.. figure:: Images/Flocculator_head_loss.jpg
   :align: center
   :width: 750px
   :alt: flocculator head loss
