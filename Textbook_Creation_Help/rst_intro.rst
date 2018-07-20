@@ -173,4 +173,6 @@ You'll need to carefully review any page converted with pandoc.
 .. _Pandoc: https://pandoc.org/installing.html
 .. _Atom: https://ide.atom.io/
 .. _Travis: https://travis-ci.org/
+.. _BibTeX: http://www.bibtex.org/
+.. _sphinxcontrib-bibtex: https://sphinxcontrib-bibtex.readthedocs.io/en/latest/
 .. bibliography:: references.bib
