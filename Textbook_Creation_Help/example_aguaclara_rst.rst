@@ -398,6 +398,8 @@ Assorted Other Convention
 .. _AguaClara: http://aguaclara.cornell.edu/
 .. _BibTeX: http://www.bibtex.org/
 .. _sphinxcontrib-bibtex: https://sphinxcontrib-bibtex.readthedocs.io/en/latest/
-.. bibliography:: references.bib
+.. _Sphinx: http://www.sphinx-doc.org/en/master/
 
-  .. disqus::
+.. disqus::
+
+.. bibliography:: references.bib
