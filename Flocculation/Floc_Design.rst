@@ -419,7 +419,7 @@ Flocculator length, :math:`L_{channel}` must meet two constraints: it must be le
 
   .. math:: L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human} H}
 
-   Such that:
+| Such that:
 | :math:`n_{Min, \, channels} = 2`
 
 The reason why :math:`W_{Min, \, human}` is used is because it represents the absolute minimum of flocculator channel width. If the width ends up being larger, the length will decrease. :math:`n_{Min, \, channels} = 2` to make sure that the flow ends up on the correct side of the sedimentation tank, as the image below shows. Note that there can only be an even number of flocculator channels, as explained in the image’s caption.
@@ -474,9 +474,8 @@ Finally:
        n_{channels} = \frac{W_{total}}{W_{Min}}
        }
 | Such that:
-
 | :math:`n_{channels}` is an even number and is not 0. Usually,
-  :math:`n_{channels}` is either 2 or 4.
+|  :math:`n_{channels}` is either 2 or 4.
 
 Now that we know :math:`n_{channels}`, we can find the actual width of a channel, :math:`W_{channel}`.
 
