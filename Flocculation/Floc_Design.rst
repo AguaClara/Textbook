@@ -261,7 +261,7 @@ AguaClara uses a fairly straightforward way of setting :math:`\Pi_{H_eS_{Min}}`.
 
    </center>
 
-AguaClara uses a slot width ratio of 1 for its flocculators. This number has been the topic of much hydraulic flocculation research, and values between 1 and 1.5 are generally accepted for hydraulic flocculators. See the following paper and book respectively for more data on slot width ratios and other hydraulic flocculator parameters: `Haarhoff 1998 <http://aqua.iwaponline.com/content/47/3/142>`_, `Shulz and Okun 1984 <https://isbnsearch.org/isbn/0471802611>`__. We base our slot width ratio of 1 on research done by `Haarhoff and van der Walt in 2001 <http://aqua.iwaponline.com/content/50/3/149>`__ on optimizing hydraulic flocculator parameters to maximize flocculator efficiency.
+AguaClara uses a slot width ratio of 1 for its flocculators. This number has been the topic of much hydraulic flocculation research, and values between 1 and 1.5 are generally accepted for hydraulic flocculators. See the following paper and book respectively for more data on slot width ratios and other hydraulic flocculator parameters: `Haarhoff 1998 <http://aqua.iwaponline.com/content/47/3/142>`_, `Shulz and Okun 1984 <https://isbnsearch.org/isbn/0471802611>`__. We base our slot width ratio of 1 on research done by `Haarhoff and van der Walt in 2001 <https://doi.org/10.2166/aqua.2001.0014>`__ on optimizing hydraulic flocculator parameters to maximize flocculator efficiency.
 
 The minimum :math:`\Pi_{H_eS}` allowable depends on the slot with ratio. If :math:`\Pi_{H_eS}` is less than twice the slot width ratio, the water would flow straight through the flocculator without having to bend around the baffles. This means that the flocculator would not be generating almost any head loss, and the top and bottom of the flocculator will largely be dead space. See the following image for an example:
 
@@ -290,23 +290,24 @@ To get around this problem, AguaClara included ‘obstacles,’ or half-pipes to
 
 **Baffle space** is the term we use for the space between two baffles. The number of flow expansions per baffle space is :math:`n_{expansions} = 1 + n_{obstacles}`. The :math:`1` is because the baffle itself causes a flow expansion.
 
-These obstacles serve as ‘pseudo-baffles’. They allow for :math:`\frac{H}{S}` to exceed 6, while maintaining maximum flocculator efficiency since, :math:`\frac{H_e}{S}` can still be between 3 and 6. Obstacles make it possible to design smaller flocculators without compromising flocculation efficiency. The following images show these obstacles and how they affect the flow in a flocculator.
+These obstacles serve as ‘pseudo-baffles’. They allow for :math:`\frac{H}{S}` to exceed 6, while maintaining maximum flocculator efficiency since, :math:`\frac{H_e}{S}` can still be between 3 and 6. Obstacles make it possible to design smaller flocculators without compromising flocculation efficiency. :numref:`figure_Floc_module_with_obstacles` and :numref:`figure_Floc_flow_with_obstacles` show these obstacles and how they affect the flow in a flocculator.
 
-.. raw:: html
 
-   <center>
+.. _figure_Floc_module_with_obstacles:
 
-.. raw:: html
+.. figure:: Images/Floc_module_with_obstacles.jpg
+    :width: 300px
+    :align: center
+    :alt: Floc module with obstacles
 
-   </center>
+Images/Floc_flow_with_obstacles.jpg
 
-.. raw:: html
+.. _figure_Floc_flow_with_obstacles:
 
-   <center>
-
-.. raw:: html
-
-   </center>
+.. figure:: Images/Floc_flow_with_obstacles.jpg
+    :width: 300px
+    :align: center
+    :alt: Floc flow with obstacles
 
 AguaClara Design of Hydraulic, Vertical Flow Flocculators
 =========================================================
@@ -351,13 +352,16 @@ The flocculator is more complex to design than the CDC, as it has more details a
       -  :math:`n_{obstacles}`, amount of obstacles per baffle space
       -  :math:`S`, baffle spacing, distance between baffles
 
-         .. raw:: html
+Flocculator_physical_parameters.jpg
 
-            <center>
+.. _figure_Flocculator_physical_parameters:
 
-         .. raw:: html
+.. figure:: Images/Flocculator_physical_parameters.jpg
+    :width: 400px
+    :align: center
+    :alt: external figure
 
-            </center>
+    This is a caption.
 
 Input Parameters
 ---------------~
@@ -374,16 +378,17 @@ The plant flow rate :math:`Q` is defined by the needs of the community that the 
 -  :math:`L_{Max, \, sed} = 6 \, {\rm m}`
 -  :math:`W_{Min, \, human} = 45 \, {\rm cm}`
 
-.. raw:: html
 
-   <center>
+.. _figure_Physical_design_criteria:
 
-.. raw:: html
+.. figure:: Images/Physical_design_criteria.jpg
+    :width: 300px
+    :align: center
+    :alt: Physical design criteria
 
-   </center>
+    Here is a caption
 
 **Find**
-^^^^^^^^
 
 We can rearrange the equation for :math:`\bar G` from the section on collision potential, :math:`\bar G = \sqrt{\frac{g h_L}{\nu \theta}}`, to solve for :math:`\bar G` in terms of :math:`\bar G \theta`:
 
@@ -427,20 +432,21 @@ The equation for *actual* flocculator length is therefore:
      L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \rlap{-} V})
      }
 
-.. raw:: html
+.. _figure_Floc_channels:
 
-   <center>
+.. figure:: Images/Floc_channels.jpg
+    :width: 400px
+    :align: center
+    :alt: Floc channels
 
-.. raw:: html
-
-   </center>
+    Here is a caption
 
 Width and Number of Channels
 ----------------------------
 
 The width of a single flocculator channel must meet the following conditions: - Maintain :math:`\bar G` at the value found in the inputs section - Allow for :math:`3 < \frac{H_e}{S} < 6`. Recall that :math:`\frac{H_e}{S} = \Pi_{H_eS}` - Allow for a human to be able to fit into a flocculator channel
 
-The first two conditions are wrapped up into the following equation, `which is derived here <https://github.com/AguaClara/Textbook/blob/master/Flocculation/Floc_Derivation_flocculator_design_equations.md>`__:
+The first two conditions are wrapped up into the following equation, :ref:`which is derived here <title_Flocculation_Derivations>`:
 
 .. math:: W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}
 
@@ -569,15 +575,17 @@ As water flows through the flocculators, the flocs will get larger and larger. A
 Residence Time of Water in the Flocculator Check
 ------------------------------------------------
 
-It is now time to make our final check. We need to make sure that our actual residence time is *at least* as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than :math:`\rlap{-} V_{floc}`. See the image below for clarification.
+It is now time to make our final check. We need to make sure that our actual residence time is *at least* as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than :math:`\rlap{-} V_{floc}`. See :numref:`figure_Flocculator_head_loss` for clarification.
 
-.. raw:: html
+.. _figure_Flocculator_head_loss:
 
-   <center>
+.. figure:: Images/Flocculator_head_loss.jpg
+    :width: 400px
+    :align: center
+    :alt: Flocculator_head_loss
 
-.. raw:: html
+    Here is a caption
 
-   </center>
 
 Thus, the actual average water level in the flocculator is :math:`H + \frac{h_{L_{floc}}}{2}`. Thus, the actual residence time is:
 

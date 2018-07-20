@@ -188,7 +188,7 @@ Turbulent Mixing Time as a Function of Scale
 --------------------------------------------
 
 We are searching for the rate limiting step in the mixing process as we transition from the scale of the flow down to the scale of the coagulant nanoparticles. We can estimate the time required for eddies to mix at their length scales by assuming that the eddies pass all of their energy to smaller scales in the time it takes for an eddy to travel the distance equal to the length scale of the eddy. This time is known as the **`eddy turnover time <http://ceeserver.cee.cornell.edu/eac20/cee637/handouts/TURBFLOW_1.pdf>`__**,
-:math:`t_{eddy}`. `The derivation for the equation below is found here <heading_Eddy_turnover_time>`__.
+:math:`t_{eddy}`. :ref:`The derivation for the equation below is found here <heading_Eddy_turnover_time>`.
 
 .. math:: t_{eddy} \approx \left( \frac{L_{eddy}^2}{ \bar\varepsilon }\right)^\frac{1}{3}
 

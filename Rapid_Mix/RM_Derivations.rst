@@ -348,7 +348,7 @@ Coiled tubes are used as flocculators at laboratory scale. The one shown below i
 
 
 .. _figure_Tube_flocculator_AC:
-.. figure::    Images/Tube_flocculator_AC.JPG
+.. figure::    Images/Tube_flocculator_AC.jpg
    :width: 700px
    :align: center
    :alt: Parallel plate schematic
