@@ -34,6 +34,7 @@
 
 extensions = ['sphinx.ext.doctest',
               'sphinx.ext.mathjax',
+              'sphinx.ext.todo',
               'sphinxcontrib.bibtex',
               'sphinxcontrib.disqus',
               'matplotlib.sphinxext.only_directives',
