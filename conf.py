@@ -34,11 +34,11 @@
 
 extensions = ['sphinx.ext.doctest',
               'sphinx.ext.mathjax',
+              'sphinx.ext.todo',
               'sphinxcontrib.bibtex',
               'sphinxcontrib.disqus',
               'matplotlib.sphinxext.only_directives',
-              'matplotlib.sphinxext.plot_directive',
-              'sphinx.ext.todo'
+              'matplotlib.sphinxext.plot_directive'
               ]
 
 # To setup mathjax with required extensions for all files
