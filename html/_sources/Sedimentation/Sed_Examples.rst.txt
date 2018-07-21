@@ -8,7 +8,7 @@ Sedimentation Examples
 
 Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, :math:`V_\alpha`. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.
 
-.. math:: \frac{\bar v_{\uparrow}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha$$
+.. math:: \frac{\bar v_{\uparrow}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha
 
 .. math:: \bar v_\uparrow = \bar v_\alpha\sin \alpha
 
