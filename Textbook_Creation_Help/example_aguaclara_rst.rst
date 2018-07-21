@@ -310,7 +310,8 @@ including an entry for:
 A working example: :cite:`Strunk1979`.
 
 Equations
-"""""""""""
+==========
+
 Equations are a little different, ``:ref:`label``` does not work. They are instead called with the ``:eq:`label``` syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation's number will be the linked-text.
 
 * Equations: ``:eq:`quadratic_equation``` only generates a number in parentheses. Thus, this reference is usually preceeded by the word: 'equation.' Like this: equation :eq:`quadratic_equation`.

@@ -347,14 +347,15 @@ Coiled tubes are used as flocculators at laboratory scale. The one shown below i
 ` <https://confluence.cornell.edu/display/AGUACLARA/Laminar+Tube+Floc?preview=/10422268/258146480/ReportLaminarTubeFlocSpring2014.pdf>`__
 
 
-.. _figure_Tube_flocculator_AC:
+.. _figure_Coiled_tube_flocculator:
 
-.. figure:: Images/Tube_flocculator_AC.jpg
+.. figure:: Images/Coiled_tube_flocculator.jpg
    :width: 500px
    :align: center
-   :alt: Parallel plate schematic
+   :alt: double coiled tube flocculator
 
-   The double coiled flocculator creates secondary currents that oscillate in direction. This may be helpful in creating much more mixing than would occur in a straight laminar flow pipe.
+
+   The double coiled laminar flow flocculator creates secondary currents that oscillate in direction. This may be helpful in creating much more mixing than would occur in a straight laminar flow pipe.
 
 The ratio of the coiled to straight friction factors is given by `Mishra and Gupta <https://doi.org/10.1021/i260069a017>`__
 

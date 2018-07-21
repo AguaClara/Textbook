@@ -468,7 +468,7 @@ There is an economic tradeoff between reactor volume and energy input. The react
 
 The total potential energy used to operate an AguaClara plant is approximately 2 m. This represents the difference in elevation between where the raw water enters the plant and where the filtered water exits the plant. If we assume that the rapid mix energy budget is a fraction of that total and thus for subsequent analysis we will assume somewhat arbitrarily that the energy available to attach the coagulant nanoparticles to the raw water particles is 50 cm.
 
-`We solve the coagulant transport model <>`__,
+We solve the coagulant transport model,
 :math:`t_{coagulant, \, application} = \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\, L_{Diff_{NC}} }`,
 for G given a head loss.
 
