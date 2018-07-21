@@ -79,7 +79,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contributor's guide</span></p>
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Functionality in RST and AguaClara Convention</a><ul>
@@ -101,6 +106,9 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#citations">Citations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#equations">Equations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#writing-code-blocks-not-actual-executable-code">Writing Code Blocks (not actual, executable code)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#writing-python-and-including-doctests">Writing Python and Including Doctests</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#doctests">Doctests</a></li>
@@ -114,6 +122,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="parameter_convention_list.html">Parameter Convention List</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Chapter 1.1: Review: Fluid Mechanics and Python</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
@@ -124,6 +136,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 </ul>
 
             
@@ -295,7 +327,7 @@ item uses two lines. (note the indentation)</li>
 </div>
 <p>Use this syntax for figures located within the /Textbook repository on GitHub:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. _figure_mountain:
-.. figure:: mountain.jpg
+.. figure:: Images/mountain.jpg
     :width: 300px
     :align: center
     :alt: internal figure
@@ -305,14 +337,15 @@ item uses two lines. (note the indentation)</li>
     In this case, that is Textbook/Textbook_Creation_Help.
 </pre></div>
 </div>
-<p>Displayed below are the two figures generated using the code above.</p>
+<p><a class="reference internal" href="#figure-fluffy-cat"><span class="std std-numref">Fig. 2</span></a> and <a class="reference internal" href="#figure-mountain"><span class="std std-numref">Fig. 3</span></a> are the two figures generated using the code above.</p>
 <div class="figure align-center" id="id3">
-<span id="figure-fluffy-cat"></span><a class="reference internal image-reference" href="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"><img alt="external figure" src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" style="width: 200px; height: 100px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">This is a caption.</span></p>
+<span id="figure-fluffy-cat"></span><a class="reference internal image-reference" href="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"><img alt="external figure" src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">This is a caption.</span></p>
 </div>
+<p>See <a class="reference internal" href="#figure-mountain"><span class="std std-numref">Fig. 3</span></a> for a typical mountain view.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-mountain"></span><a class="reference internal image-reference" href="../_images/mountain.jpg"><img alt="internal figure" src="../_images/mountain.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Here is a figure tagged <code class="docutils literal notranslate"><span class="pre">figure_mountain</span></code>. Specify the figure location with folder/image.jpg.
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Here is a figure tagged <code class="docutils literal notranslate"><span class="pre">figure_mountain</span></code>. Specify the figure location with folder/image.jpg.
 The base directory for figure location is the directory of the file you are writing.
 In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </div>
@@ -376,7 +409,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </div>
 <p>The code block above generates the following table:</p>
 <span id="table-an-example-table"></span><table border="1" class="colwidths-given docutils align-center" id="id5">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">This table has a title</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">This table has a title</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="40%" />
 <col width="40%" />
@@ -413,7 +446,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </div>
 <div class="section" id="references">
 <h4>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h4>
-<p>References work by calling any “target”- either tags (titles, headings, figures, and tables) or labels (equations). These refernce formats work internally- calling something within the same document and externally- calling content in some other document within this same project.</p>
+<p>References work by calling any “target”- either tags (titles, headings, figures, and tables) or labels (equations). These reference formats work internally- calling something within the same document and externally- calling content in some other document within this same project.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last">Before you start tagging and labelling content with any degree of willy-nilly-ness, make sure that you are not repeating tags or labels. You can check to see if your tag or label is taken by visiting libraries on GitHub. <a class="reference download internal" href="../_downloads/heading_index.txt" download=""><code class="xref download docutils literal notranslate"><span class="pre">Check</span> <span class="pre">here</span> <span class="pre">for</span> <span class="pre">tags</span> <span class="pre">and</span> <span class="pre">labels:</span></code></a>.</p>
@@ -426,8 +459,8 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 <h5>Figures and Tables<a class="headerlink" href="#figures-and-tables" title="Permalink to this headline">¶</a></h5>
 <p>These can be referenced in the exact same way as titles and headings. However, they can <em>also</em> be refernced using the <code class="docutils literal notranslate"><span class="pre">:numref:`tag`</span></code> syntax. When this is done, there cannot be text written that will link to the figure. Instead, what shows up is ‘Fig. 3’ or ‘Table 3’.</p>
 <ul class="simple">
-<li>Figures: <code class="docutils literal notranslate"><span class="pre">:numref:`figure_fluffy_cat`</span></code> gives <a class="reference internal" href="#figure-fluffy-cat"><span class="std std-numref">Fig. 1</span></a></li>
-<li>Tables: <code class="docutils literal notranslate"><span class="pre">:numref:`table_an_example_table`</span></code> gives <a class="reference internal" href="#table-an-example-table"><span class="std std-numref">Table 2</span></a></li>
+<li>Figures: <code class="docutils literal notranslate"><span class="pre">:numref:`figure_fluffy_cat`</span></code> gives <a class="reference internal" href="#figure-fluffy-cat"><span class="std std-numref">Fig. 2</span></a></li>
+<li>Tables: <code class="docutils literal notranslate"><span class="pre">:numref:`table_an_example_table`</span></code> gives <a class="reference internal" href="#table-an-example-table"><span class="std std-numref">Table 3</span></a></li>
 </ul>
 </div>
 </div>
@@ -467,11 +500,14 @@ including an entry for:</p>
 </pre></div>
 </div>
 <p>A working example: <a class="reference internal" href="#strunk1979" id="id2">[SW79]</a>.</p>
+</div>
+</div>
+<div class="section" id="equations">
+<h2>Equations<a class="headerlink" href="#equations" title="Permalink to this headline">¶</a></h2>
 <p>Equations are a little different, <code class="docutils literal notranslate"><span class="pre">:ref:`label`</span></code> does not work. They are instead called with the <code class="docutils literal notranslate"><span class="pre">:eq:`label`</span></code> syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation’s number will be the linked-text.</p>
 <ul class="simple">
 <li>Equations: <code class="docutils literal notranslate"><span class="pre">:eq:`quadratic_equation`</span></code> only generates a number in parentheses. Thus, this reference is usually preceeded by the word: ‘equation.’ Like this: equation <a class="reference internal" href="#equation-quadratic-equation">(1)</a>.</li>
 </ul>
-</div>
 <div class="section" id="writing-code-blocks-not-actual-executable-code">
 <span id="heading-writing-code-blocks"></span><h3>Writing Code Blocks (not actual, executable code)<a class="headerlink" href="#writing-code-blocks-not-actual-executable-code" title="Permalink to this headline">¶</a></h3>
 <p>You can write code in-line or as a code block. Note that these ways of showing code <em>only display code</em>, they do not generate a code block that actually runs. There are two ways of doing each. For in-line code, use <code class="docutils literal notranslate"><span class="pre">``this</span> <span class="pre">syntax``</span></code> or <code class="docutils literal notranslate"><span class="pre">:code:`this</span> <span class="pre">syntax`</span></code>. For code blocks, use this syntax:</p>
