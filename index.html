@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to the Aguaclara Textbook! &mdash; AguaClara Textbook 0.0.5 documentation</title>
+  <title>Welcome to the Aguaclara Textbook! &mdash; AguaClara Textbook 0.0.8 documentation</title>
   
 
   
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction to RST and Sphinx for Textbook Contributors" href="Textbook_Creation_Help/rst_intro.html" /> 
+    <link rel="next" title="Acknowledgements" href="Acknowledgements.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.0.5
+                0.0.8
               </div>
             
           
@@ -82,21 +82,51 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contributor's guide</span></p>
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 2: Fluids Review</span></p>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Fluids_Review/Fluids_Review_Design.html">Fluids Review  Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Fluids_Review/Fluids_Review_Derivations.html">Fluids Review Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1.1: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Flocculation/Floc_Intro.html">Flocculation  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 </ul>
 
             
@@ -163,7 +193,40 @@
             
   <div class="section" id="welcome-to-the-aguaclara-textbook">
 <span id="toc"></span><h1>Welcome to the Aguaclara Textbook!<a class="headerlink" href="#welcome-to-the-aguaclara-textbook" title="Permalink to this headline">¶</a></h1>
-<p>This textbook is written and maintained in <a class="reference external" href="https://github.com/AguaClara/Textbook">Github</a> via <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> (version v1.7.5). It uses and refers to AguaClara code and functions in <a class="reference external" href="https://github.com/AguaClara/aide_design">aide_design</a> (version 0.0.12)</p>
+<p>This textbook is written and maintained in <a class="reference external" href="https://github.com/AguaClara/Textbook">Github</a> via <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>. It uses and refers to AguaClara code and functions in <a class="reference external" href="https://github.com/AguaClara/aide_design">aide_design</a>. Listed below are the versions of the programs we use:</p>
+<span id="software-versions"></span><table border="1" class="colwidths-given docutils align-center" id="id2">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">These are the software versions used to compile this textbook</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Software</th>
+<th class="head">version</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Sphinx</td>
+<td>1.7.5</td>
+</tr>
+<tr class="row-odd"><td>aide_design</td>
+<td>0.0.12</td>
+</tr>
+<tr class="row-even"><td>Anaconda</td>
+<td>4.5.4</td>
+</tr>
+<tr class="row-odd"><td>Python</td>
+<td>3.6.5</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Authors.html">Authors</a></li>
+</ul>
+</div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
 <ul>
@@ -173,40 +236,50 @@
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-</div>
-<p>This is a place holder for ‘Chapter 1: Introduction’ files</p>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Chapter 2: Fluids Review</span></p>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Fluids_Review/Fluids_Review_Design.html">Fluids Review  Design</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Fluids_Review/Fluids_Review_Design.html#important-terms-and-equations">Important Terms and Equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fluids_Review/Fluids_Review_Design.html#introductory-concepts">Introductory Concepts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fluids_Review/Fluids_Review_Design.html#the-bernoulli-and-energy-equations">The Bernoulli and Energy Equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fluids_Review/Fluids_Review_Design.html#headloss">Headloss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Fluids_Review/Fluids_Review_Derivations.html">Fluids Review Derivations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Fluids_Review/Fluids_Review_Derivations.html#minor-loss-equation">Minor Loss Equation</a></li>
-</ul>
-</li>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Chapter 1.1: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Design.html#important-terms-and-equations">Important Terms and Equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Design.html#tank-with-a-valve">Tank with a Valve</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Design.html#aguaclara-flow-control-and-measurement-technologies">AguaClara Flow Control and Measurement Technologies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Design.html#section-summary">Section Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Derivations.html#for-a-tank-with-a-valve"><span class="math notranslate nohighlight">\(Q(t)\)</span> for a Tank with a Valve</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Derivations.html#and-for-tank-drain-equation"><span class="math notranslate nohighlight">\(D(t)\)</span> and <span class="math notranslate nohighlight">\(t(D)\)</span> for Tank Drain Equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Derivations.html#design-equations-for-the-linear-chemical-dose-controller-cdc">Design Equations for the Linear Chemical Dose Controller (CDC)</a></li>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
 </ul>
-</li>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Flocculation/Floc_Intro.html">Flocculation  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 </ul>
 </div>
 <p><a class="reference external" href="https://github.com/AguaClara/Textbook/releases/latest">PDF and LaTeX versions</a> <a class="footnote-reference" href="#pdf-warning" id="id1">[1]</a>.</p>
@@ -227,7 +300,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Textbook_Creation_Help/rst_intro.html" class="btn btn-neutral float-right" title="Introduction to RST and Sphinx for Textbook Contributors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Acknowledgements.html" class="btn btn-neutral float-right" title="Acknowledgements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
@@ -259,7 +332,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.0.5',
+            VERSION:'0.0.8',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

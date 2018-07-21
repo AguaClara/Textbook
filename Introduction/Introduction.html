@@ -1,0 +1,647 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction to AguaClara Water Treatment Design &mdash; AguaClara Textbook 0.0.8 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Review: Fluid Mechanics" href="../Review/Review_Fluid_Mechanics.html" />
+    <link rel="prev" title="Parameter Convention List" href="../Textbook_Creation_Help/parameter_convention_list.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to AguaClara Water Treatment Design</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-different-kind-of-textbook">A Different Kind of Textbook</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-edge-of-knowledge-may-be-closer-than-we-thought">The edge of knowledge may be closer than we thought</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tools-to-find-the-edge-of-knowledge">Tools to Find the Edge of Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myth-in-environmental-engineering">Myth in Environmental Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integrating-educational-philosophy-with-an-evolving-textbook">Integrating Educational Philosophy with an Evolving Textbook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#respect-empathy-love-and-curiosity-power-the-aguaclara-innovation-system">Respect, Empathy, Love and Curiosity power the AguaClara Innovation System</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-global-context-for-drinking-water-treatment">The Global Context for Drinking Water Treatment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#why-don-t-2-billion-people-have-access-to-safe-water">Why don’t 2 billion people have access to safe water?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-surface-water-treatment">Introduction to Surface Water Treatment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#treatment-trains">Treatment Trains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#design-evolution">Design Evolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#empirical-design">Empirical Design</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#design-for-the-financers-venders-client-or-context">Design for the Financers, Venders, Client, or Context</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#design-bifurcations">Design Bifurcations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#water-contaminants">Water Contaminants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turbidity">Turbidity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pathogens">Pathogens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dissolved-species">Dissolved Species</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#chlorine-saved-the-world">Chlorine Saved the World</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1.1: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction to AguaClara Water Treatment Design</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Introduction/Introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-to-aguaclara-water-treatment-design">
+<span id="title-introduction-to-aguaclara-water-treatment-design"></span><h1>Introduction to AguaClara Water Treatment Design<a class="headerlink" href="#introduction-to-aguaclara-water-treatment-design" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a-different-kind-of-textbook">
+<span id="heading-a-different-kind-of-textbook"></span><h2>A Different Kind of Textbook<a class="headerlink" href="#a-different-kind-of-textbook" title="Permalink to this headline">¶</a></h2>
+<p>This textbook represents our cumulative insights from our journey that has been motivated by a quest to make the world a better place where everyone has access to safe water on tap, the engineering challenge of optimizing the design of drinking water treatment plants, and the curiosity to understand what controls their performance. We would like to understand what determines which contaminants make it the whole way through a water treatment plant. If we could understand what allows some contaminants to sneak the whole way through a water treatment plant, then we suspect that we could create better designs to more effectively remove contaminants.</p>
+<p>Engineering textbooks provide a venue for authors to share what they’ve learned, to organize ideas, and to provide a guide for engineers as they design solutions for real world problems. Engineering textbooks are often intended to document the established core of knowledge. It seems reasonable to assume that what is in textbooks and in peer reviewed literature is mostly true.</p>
+<div class="section" id="the-edge-of-knowledge-may-be-closer-than-we-thought">
+<span id="heading-edge-of-knowledge"></span><h3>The edge of knowledge may be closer than we thought<a class="headerlink" href="#the-edge-of-knowledge-may-be-closer-than-we-thought" title="Permalink to this headline">¶</a></h3>
+<p>The assumption that what is written and passed down in oral history through the scientific community is true can lead to missed opportunities and lost insights. The hypotheses from one generation of scientists can too easily evolve into new theories in the next generation and then into established theories for the next. The history of drinking water treatment science is cloudy (think high turbidity!) with hypotheses that miss or misrepresent key concepts.</p>
+<p>You might wonder why getting the science right matters. After all, the core drinking water treatment technologies were invented before we were born and many of us have safe drinking water coming from our taps. Environmental Engineers have known how to design municipal drinking water treatment plants since they early 1900’s. We hypothesize that there are many opportunities to significantly improve drinking water treatment technologies and that improved understandings of each unit process have the potential to lead to new breakthroughs.</p>
+<p>Our contention is that no one has ever optimized the design of a drinking water treatment plant! We are reasonably certain of this because we don’t yet have models (with equations) that describe performance of most of the core unit processes (rapid mix, flocculation, floc blankets, sedimentation, sand filtration) used for surface water treatment. The only possible exception is lamellar sedimentation which can be characterized if we know the size and density distribution of the particles entering the sedimentation tank.</p>
+<p>Traditional drinking water treatment textbooks can too easily miss the opportunity to advance the science of drinking water treatment technologies by presenting certainty where there should be skepticism. For example, rapid mix is described as process that occurs in a few seconds, flocculation is described as a process that should be fastest for high turbidity waters and slowest for low turbidity waters, and filtration performance is described by a model that predicts first order removal with respect to filter bed depth. We will demonstrate why each of these assumptions doesn’t match observations, we will discuss new insights into these processes, and we will identify high priority research questions that have the potential to lead to major improvements in drinking water treatment.</p>
+<p>We want to encourage skepticism and we want to develop insights to guide thoughtful skepticism. A key skill for successful engineering is the ability to identify the location of the edge of knowledge. The ability to distinguish between what is reasonably certain and what is still in question is what powers the scientific method of slowly extending knowledge. New insights are difficult to obtain if the research  is based on a faulty premise.</p>
+<div class="figure align-center" id="id11">
+<span id="figure-short-walk"></span><a class="reference internal image-reference" href="../_images/Short_walk_to_the_edge.jpg"><img alt="internal figure" src="../_images/Short_walk_to_the_edge.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">We’ve learned that we can find the edge of knowledge very soon after we begin researching a water treatment technology (artwork created by Yi Wen Ng in 2012).</span></p>
+</div>
+<p>There are significant knowledge gaps in every process that we cover in this textbook. We aren’t yet able to optimize surface water treatment processes because we don’t yet understand the fundamental physics of many of the processes. We are getting closer, join us on the journey.</p>
+<p>We need the brightest and the best to create new and better solutions so we can meet the goal of providing everyone with safe drinking water. This challenge is apparently more difficult than building a space station, designing a fuel cell, or inventing the world wide web. So let’s role up our sleeves and begin.</p>
+</div>
+<div class="section" id="tools-to-find-the-edge-of-knowledge">
+<span id="heading-tools-to-find-the-edge-of-knowledge"></span><h3>Tools to Find the Edge of Knowledge<a class="headerlink" href="#tools-to-find-the-edge-of-knowledge" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Don’t believe everything we say</li>
+<li>Ask lots of questions</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>How do you know that? The goal here is to identify the difference between what is known and what is hypothesized.</li>
+<li>What is the equation that describes the physics of this process? If there isn’t an equation the describes the process and that can be used to design the reactor for the process, then it is likely that the equation doesn’t yet capture the physics.</li>
+<li>How could we improve this process? If the physics of a process are fully understood, then dimensionally correct equations can be used to obtain the optimal design for that process.</li>
+<li>Is the process design based on “rules of thumb” or on physics? “Rules of thumb” or empirical design guidelines often can be identified by the use of physical parameters that have units. For example, if the design guideline specifies a length, time, or velocity then it is likely that the guideline is not based on physics. If the design guidelines are based on a dimensionless parameter then it is possible that it is based on physics.</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>Evaluate the data to see if it matches predictions of the hypothesized model. Assess whether the authors acknowledge when their data doesn’t match hypothesized models.</li>
+<li>Beware of the use of words that are poorly defined and that hide uncertainty. For example, creating a name for a supposed mechanism to describe all of the observations that don’t fit with your theory does NOT mean that you understand that mechanism. The ability to name something doesn’t mean it is understood.</li>
+<li>Does this “theory” provide insights that have led to new discoveries or new applications?</li>
+<li>Does the “theory” include equations that are based on the fundamental laws of nature?</li>
+<li>Does the “theory” use dimensionless constants that are close to one?</li>
+<li>Is it an elegant “theory” with no need for special cases?</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="myth-in-environmental-engineering">
+<span id="heading-myth-in-environmental-engineering"></span><h3>Myth in Environmental Engineering<a class="headerlink" href="#myth-in-environmental-engineering" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>The following list is designed to get you thinking. These are concepts that present in the Environmental Engineering community and that may capture some elements of truth and that may also further misconceptions.</dt>
+<dd><ul class="first last simple">
+<li>Dead bodies cause disease</li>
+<li>Slow sand filters ripen (improve in ability to remove contaminants over time) because of biological growth in the filter bed</li>
+<li>If a 20 cm deep sand filter removes 90% of influent particles, then a 40 cm deep filter will remove 99% of influent particles</li>
+<li>If water is dirty, then you should filter it.</li>
+<li>Chlorine disinfects dirty water and makes it safe to drink</li>
+<li>Chlorination and filtration eliminated typhoid fever from the US</li>
+<li>Cessation of chlorination due to fear of disinfection by products caused the cholera outbreak in Peru in 1993</li>
+<li>Sedimentation is simple</li>
+<li>We already know how to solve the problem of the billions of people who do not having access to safe drinking water</li>
+</ul>
+</dd>
+</dl>
+<p>A challenge for authors is to recognize the difference between what is known with a reasonably high degree of certainty and what is assumed to be true without a solid basis. We struggle to tell the difference between fact and hypothesis. The time-honored approach in science is to rely on the peer review process. But that process for vetting knowledge has been shown to be flawed.</p>
+<p>Your question could be whether the distinction between fact and hypothesis really matters. If the hypothesis is widely accepted as fact and if it has been accepted for decades what benefit is there to calling it a hypothesis rather than a fact?</p>
+<p>This question is at the core of our educational philosophy. Is this text the repository of knowledge that we are providing for you to drink or is this text a conversation where we invite you to join the effort to discover better ways to provide safe water on tap?</p>
+</div>
+<div class="section" id="integrating-educational-philosophy-with-an-evolving-textbook">
+<span id="heading-textbook-philosophy"></span><h3>Integrating Educational Philosophy with an Evolving Textbook<a class="headerlink" href="#integrating-educational-philosophy-with-an-evolving-textbook" title="Permalink to this headline">¶</a></h3>
+<p>This is an evolving textbook. We don’t intend to ever print this book. This book has version numbers just like software with the idea that revisions are rapid and frequent. We commit to helping to accelerate the pace of knowledge generation and to revising this text as you help us identify places where we have presented hypotheses as theory and places where research provides a basis for better theoretical models of the water treatment processes.</p>
+<p>Socrates said “<a class="reference external" href="https://www.goodreads.com/quotes/69267-education-is-the-kindling-of-a-flame-not-the-filling">Education is the kindling of a flame, not the filling of a vessel</a>.” Our goal is to bring the spirit of play, discovery, and mystery into the challenge of improving the quality of life of everyone on the planet by sharing better methods to produce safe drinking water.</p>
+<p>In We Make the Road by Walking: Conversations on Education and Social Change, Paulo Freire said,
+“<a class="reference external" href="https://www.goodreads.com/author/quotes/41108.Paulo_Freire?page=2">The more we become able to become a child again, to keep ourselves childlike, the more we can understand that because we love the world and we are open to understanding, to comprehension, that when we kill the child in us, we are no longer</a>”.</p>
+<p>We commit to playing together in a relationship where we are all learning and we are all teaching.
+“Education must begin with the solution of the teacher-student contradiction, by reconciling the poles of the contradiction so that both are simultaneously teachers and students.” - Paulo Freire</p>
+</div>
+<div class="section" id="respect-empathy-love-and-curiosity-power-the-aguaclara-innovation-system">
+<span id="heading-empathy"></span><h3>Respect, Empathy, Love and Curiosity power the AguaClara Innovation System<a class="headerlink" href="#respect-empathy-love-and-curiosity-power-the-aguaclara-innovation-system" title="Permalink to this headline">¶</a></h3>
+<p>The AguaClara network of organizations has been methodically inventing improved water treatment technologies since 2005. Our success is based on respect, empathy and love. Innovation requires flocculation of ideas. The transport of ideas between organizations and individuals is mediated by respect. Respect as a cornerstone of organizational culture foster rapid and honest exchange of ideas.</p>
+<dl class="docutils">
+<dt>Any large organization will require a leadership hierarchy and any hierarchy will rely on respect based on fear or respect based on love. <a class="reference external" href="https://www.forbes.com/sites/lizryan/2015/11/25/the-five-characteristics-of-fear-based-leaders/#a6179f38a968">Fear-based hierarchies</a> impede the accurate sharing of information and can easily devolve into data-free and low-truth decision-making schemes. According to <a class="reference external" href="https://www.forbes.com/sites/lizryan/2015/11/25/the-five-characteristics-of-fear-based-leaders/#a6179f38a968">Liz Ryan</a>, the characteristics of fear-based leaders include:</dt>
+<dd><ul class="first last simple">
+<li>They’ll Teach You, Whether You Like It or Not</li>
+<li>Everyone is a Friend or a Foe</li>
+<li>It’s All about the Trophies</li>
+<li>They Don’t Step Outside Boxes</li>
+<li>They’re Addicted to Yardsticks</li>
+</ul>
+</dd>
+</dl>
+<p>Love-based hierarchies foster honesty and a free-flow of information. Reflection is encouraged across the organization and truth, honesty, and integrity are valued. Staff at the bottom of the hierarchy know that their opinions and reflections are valued and thus they will be willing to report problems to organization leaders.</p>
+<p>Love-based leaders relate to others based on true respect for the other. They will take the time to converse with people at all levels of the organization and will value the opportunity to speak with people who are the interface between the organization and the rest of the world. A person’s value is based on being a person, not based on position in the hierarchy.</p>
+<p>As water treatment plant designers it is critical that we spend time with a diverse set of stakeholders including community members and water treatment plant operators. Those relationships must begin with respect and valuing their insights. As we spend time together we can develop trust so that they communicate both the good and bad.</p>
+<p>We’ve learned much from plant operators. They figured out how to reduce rising flocs at Agalteca, Honduras where we learned that conventional sedimentation tank inlet manifolds generate large circulation currents. Plant operators added curtains to the windows at Moroceli, Honduras because they noticed that direct sunlight on the sedimentation tanks caused an increase in settled water turbidity.</p>
+<p>Empathy enables us to consider reality from another’s perspective. Empathy is fundamental in design. Empathy enables us to bring the people who will use or benefit from a technology into the design considerations. Empathy brings the insight that water treatment plants need to have roofs and provide a secure work environment both day and night. Empathy brings the insight that replacement parts must be readily available and that generic components are preferred over specialty proprietary components.</p>
+<p>Curiosity can flourish in a culture of love, respect, and empathy. Asking why and why not and pondering an ever growing number of questions has empowered student teams to take on the quest for new knowledge and new solutions.</p>
+</div>
+</div>
+<div class="section" id="the-global-context-for-drinking-water-treatment">
+<span id="heading-the-global-context-for-drinking-water-treatment"></span><h2>The Global Context for Drinking Water Treatment<a class="headerlink" href="#the-global-context-for-drinking-water-treatment" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/">Sustainable Development Goals: SDGs</a> and specifically <a class="reference external" href="https://www.un.org/sustainabledevelopment/water-and-sanitation/">SDG 6</a> provide the context and motivation for this text. The first SDG 6 target is: “By 2030, achieve universal and equitable access to safe and affordable drinking water for all.” That goal is daunting and won’t be met using the approaches of the past 5 decades. This text is about creating a new paradigm for the design of high performing water treatment technologies with the goal of making a real contribution toward SDG 6.1.</p>
+<div class="figure align-center" id="id12">
+<span id="figure-sdg6"></span><a class="reference internal image-reference" href="../_images/SDG6.png"><img alt="SDG6" src="../_images/SDG6.png" style="width: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Sustainable development goal 6 is all about clean water and sanitation.</span></p>
+</div>
+<p>The number of people who currently lack access to reliable safe water on tap is not known. Estimates range from “<a class="reference external" href="https://www.un.org/sustainabledevelopment/water-and-sanitation/">1.8 billion who use a source of drinking water that is fecally contaminated</a>” to the Centers for Disease Control recommendations for where it is <a class="reference external" href="https://lifehacker.com/know-what-countries-guarantee-drinkable-tap-water-with-1635070463">usually safe to drink tap water</a>.</p>
+<div class="figure align-center" id="id13">
+<span id="figure-cdc-global-safe-tap-water"></span><a class="reference internal image-reference" href="../_images/CDC_Global_Safe_Tap_Water.png"><img alt="CDC Global Safe Tap Water" src="../_images/CDC_Global_Safe_Tap_Water.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">There are relatively few countries where it is almost always safe to drink the tap water.</span></p>
+</div>
+<p>The <a class="reference external" href="https://www.un.org/sustainabledevelopment/blog/2017/07/billions-around-the-world-lack-safe-water-proper-sanitation-facilities-reveals-un-report/">UN estimate in 2017</a> was that 2.1 billion lack access to safe water. By 2030 there will be an additional <a class="reference external" href="https://news.un.org/en/story/2015/07/505352-un-projects-world-population-reach-85-billion-2030-driven-growth-developing">1.2 billion from population growth</a>.</p>
+<div class="figure align-center" id="id14">
+<span id="figure-population-infographic-01"></span><a class="reference internal image-reference" href="../_images/Population_Infographic_01.jpg"><img alt="Population infographic" src="../_images/Population_Infographic_01.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">1.2 billion people will be added to the global population between 2015 and 2030.</span></p>
+</div>
+<p>Thus by 2030 we need to provide safe water for at least 3.3 billion people AND maintain the water supply systems for the 5.2 billion who currently have access to safe water. That is a daunting number that requires some exploration!</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="n">People_needing_water_2030</span> <span class="o">=</span> <span class="mf">3.3</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span>
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">Task_time</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2030</span> <span class="o">-</span> <span class="n">now</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">year</span>
+<span class="c1">#If we assume we will meet this demand by building the same amount of new capacity each year, then we have</span>
+<span class="n">People_per_year</span> <span class="o">=</span> <span class="n">People_needing_water_2030</span><span class="o">/</span><span class="n">Task_time</span>
+<span class="n">People_per_year</span>
+<span class="c1">#The percapita demand for water</span>
+<span class="n">Per_capita_demand</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">Per_capita_demand</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
+<span class="n">Per_capita_demand</span>
+<span class="n">Rate_new_water_supply_capacity</span> <span class="o">=</span> <span class="p">(</span><span class="n">People_per_year</span> <span class="o">*</span> <span class="n">Per_capita_demand</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">year</span><span class="p">))</span>
+<span class="n">Rate_new_water_supply_capacity</span>
+<span class="n">NYC_water_supply</span> <span class="o">=</span> <span class="mi">44000</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">NYC_per_year</span> <span class="o">=</span> <span class="n">Rate_new_water_supply_capacity</span><span class="o">/</span><span class="n">NYC_water_supply</span>
+<span class="n">NYC_per_year</span>
+</pre></div>
+</div>
+<p>If we provide 260 L/day per person, then we need to provide the equivalent of 19 water supplies for New York City every year between now and 2030. The planet needs approximately 800,000 L/s of capacity each year. AguaClara water treatment plants cost approximately $10,000 per L/s of treatment capacity. Thus the budget for global water treatment needs to be 8 billion USD per year. Note that this doesn’t include any other aspects of supplying water. Managing water sources, transmission lines, storage, and distribution systems are even more expensive than water treatment.</p>
+<p>The need for drinking water supplies isn’t limited to the global south. The California Urban Water Agencies <a class="reference external" href="https://static1.squarespace.com/static/5a565e93b07869c78112e2e5/t/5a5965934192024b3f610be1/1515808194305/CUWA2017_AnnualReport.pdf">estimate that 530,000 or more people in rural areas of California are unable to turn on their tap and access clean, safe water</a>.</p>
+<div class="section" id="why-don-t-2-billion-people-have-access-to-safe-water">
+<span id="heading-2-billion-without-access-to-safe-water"></span><h3>Why don’t 2 billion people have access to safe water?<a class="headerlink" href="#why-don-t-2-billion-people-have-access-to-safe-water" title="Permalink to this headline">¶</a></h3>
+<p>The simple answer is that they are too poor and are unable to afford safe water on tap. But it isn’t that simple! Families without access to safe water on tap often spend more for water than families with safe water on tap.</p>
+<p>As we work to solve a global challenge that has been plaguing humanity since the dawn of human civilization, then it will serve us well to understand a bit of the history that has led to our current reality. Water treatment history includes amazing successes, persistent failures, fortuitous discoveries, a heavy reliance on empiricism, and an occasional myth. Our goal is learn from and reflect on our history and then create even better solutions.</p>
+</div>
+</div>
+<div class="section" id="introduction-to-surface-water-treatment">
+<span id="heading-introduction-to-surface-water-treatment"></span><h2>Introduction to Surface Water Treatment<a class="headerlink" href="#introduction-to-surface-water-treatment" title="Permalink to this headline">¶</a></h2>
+<span id="table-history-of-surface-water-treatment-technologies"></span><table border="1" class="docutils align-center" id="id15">
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">History of Surface Water Treatment Technologies</span><a class="headerlink" href="#id15" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Technology</th>
+<th class="head">Description</th>
+<th class="head">Prerequisite</th>
+<th class="head">Owner</th>
+<th class="head">Year</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Simple sedimentation</td>
+<td>particles settle</td>
+<td>none</td>
+<td>public</td>
+<td>unknown</td>
+</tr>
+<tr class="row-odd"><td>Flocculation</td>
+<td>aluminum and iron salts</td>
+<td>none</td>
+<td>public</td>
+<td><a class="reference external" href="https://www.iwapublishing.com/news/coagulation-and-flocculation-water-and-wastewater-treatment">1757</a></td>
+</tr>
+<tr class="row-even"><td>Sedimentation</td>
+<td>horizontal flow</td>
+<td>flocculation</td>
+<td>public</td>
+<td>unknown</td>
+</tr>
+<tr class="row-odd"><td>Lamellar sedimentation</td>
+<td>plate or tube settlers</td>
+<td>flocculation or floc blanket</td>
+<td>public</td>
+<td><a class="reference external" href="http://www.hydroflotech.com/inclined-plate-clarifier-basic-theory-of-operation">1904</a></td>
+</tr>
+<tr class="row-even"><td>Slow sand filtration</td>
+<td>single step treatment for low NTU water</td>
+<td>none</td>
+<td>public</td>
+<td><a class="reference external" href="https://en.wikipedia.org/wiki/Slow_sand_filter">1829</a></td>
+</tr>
+<tr class="row-odd"><td>Rapid sand filtration</td>
+<td>depth filtration</td>
+<td>sedimentation</td>
+<td>public</td>
+<td><a class="reference external" href="https://en.wikipedia.org/wiki/Rapid_sand_filter">1920</a></td>
+</tr>
+<tr class="row-even"><td>Stacked rapid sand filter</td>
+<td>gravity powered backwash</td>
+<td>lamellar sedimentation</td>
+<td>AguaClara Cornell open source</td>
+<td><a class="reference external" href="https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EE.1943-7870.0000562">2012</a></td>
+</tr>
+<tr class="row-odd"><td>Floc blanket</td>
+<td>upflow fluidized suspension of flocs</td>
+<td>flocculation</td>
+<td>public</td>
+<td><a class="reference external" href="https://link.springer.com/chapter/10.1007%2F978-3-642-61196-4_2">1930</a></td>
+</tr>
+<tr class="row-even"><td>Jet reverser floc blanket</td>
+<td>first fully fluidized floc blanket</td>
+<td>flocculation</td>
+<td>AguaClara Cornell open source</td>
+<td><a class="reference external" href="http://cuaguaclara.blogspot.com/2012/08/the-floc-blanket-quest.html">2012</a></td>
+</tr>
+<tr class="row-odd"><td>Ballasted sedimentation</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td><a class="reference external" href="http://www.veoliawatertechnologies.com.au/medias/topics/focus_actiflo.htm">Actiflo Veolia</a></td>
+<td><a class="reference external" href="https://patents.google.com/patent/US5840195">1995</a></td>
+</tr>
+<tr class="row-even"><td>Superpulsator</td>
+<td>pulsing flow through floc blanket</td>
+<td>rapid mix</td>
+<td><a class="reference external" href="http://www.degremont-technologies.com/SUPERPULSATOR-R">Degremont</a></td>
+<td><a class="reference external" href="https://patents.google.com/patent/US3038608A">1958</a>  <a class="reference external" href="https://patents.google.com/patent/US5143625">1991</a></td>
+</tr>
+<tr class="row-odd"><td>Dissolved air flotation</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>See <a class="reference external" href="https://www.pnws-awwa.org/uploads/PDFs/conferences/2014/2.%20PNWS%20AWWA%20WTC%20Precon%2005%2007%202014%20Pretreatment%20by%20B&amp;V%201&amp;2%20-%20R1.pdf">Pretreatment Processes for Potable Water Treatment Plants by Jeff Lindgren for an excellent overview of available technologies, May 2014 (not including AguaClara innovations)</a>.</p>
+<div class="section" id="treatment-trains">
+<span id="heading-treatment-trains"></span><h3>Treatment Trains<a class="headerlink" href="#treatment-trains" title="Permalink to this headline">¶</a></h3>
+<p>The prerequisites for the unit processes in the table above reveal that surface water treatment almost always requires a series of treatment steps. A treatment train is a series of treatment steps (or unit processes) designed to convert a contaminated source water into a purified water meeting the design objectives.</p>
+<p>The AguaClara Treatment Train
+Why does flocculation precedes sedimentation?
+Which process removes the largest quantity of contaminants?</p>
+<p>Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:</p>
+<div class="math notranslate nohighlight" id="equation-introduction-introduction-0">
+<span class="eqno">(4)<a class="headerlink" href="#equation-introduction-introduction-0" title="Permalink to this equation">¶</a></span>\[\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\]</div>
+<div class="line-block">
+<div class="line">Such that:</div>
+<div class="line"><span class="math notranslate nohighlight">\(\bar v_t\)</span> = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water</div>
+<div class="line"><span class="math notranslate nohighlight">\(D_{particle}\)</span> = particle diameter</div>
+<div class="line"><span class="math notranslate nohighlight">\(\rho\)</span> = density. The <span class="math notranslate nohighlight">\(p\)</span> subscript stands for particle, while <span class="math notranslate nohighlight">\(w\)</span> stands for water</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">todo:</th><td class="field-body">add graph showing sed velocity of organic and inorganic particles as function of diameter.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="design-evolution">
+<h3>Design Evolution<a class="headerlink" href="#design-evolution" title="Permalink to this headline">¶</a></h3>
+<p>During the later half of the 20th century surface water treatment technologies evolved slowly. The slow evolution was likely a product of the regulatory environment, the high cost of water treatment infrastructure, and the low profit margin. The high cost of municipal scale water treatment infrastructure made experiments at scale infeasible and thus there was no mechanism to introduce disruptive innovations. With little opportunity for a significant return on investment there was little incentive to invest in the research and development that could have advanced the technologies. A final disincentive was the widely held belief that surface water treatment was a mature field with little opportunity for significant advancement. The advances of the latter half of the 20th century focused primarily on mechanization and automation (Supervisory Control and Data Acquisition - SCADA).</p>
+<p>Design standards such as the [Great Lakes - Upper Mississippi River Board 10 States Standards](<a class="reference external" href="http://10statesstandards.com/">http://10statesstandards.com/</a>) are evolving very slowly and retain an empirical approach to design. The empirical design methodology is a direct result of two confounding factors. The physics of particle interactions based on diffusion, fluid shear, and gravity are complex and given the challenges of characterizing surface water particle suspensions it was natural to assume that a mathematical description of the processes would be intractable.</p>
+<p>Mechanized and automated water treatment plants performed reasonably well in communities with ready access to technical support services and supply chains that could reliably deliver replacement parts. In the global south municipal water treatment plants haven’t faired as well. In 2012, one of the main water treatment plants serving Kathmandu, Nepal had failed chlorine pumps and were using a red garden hose to siphon chlorine from the stock tank. They crimped the end of the hose to control the flow rate of the chlorine solution.</p>
+<div class="figure align-center" id="id16">
+<span id="figure-kathmandu-chemical-feed-room"></span><a class="reference internal image-reference" href="../_images/Kathmandu_chemical_feed_room.png"><img alt="internal figure" src="../_images/Kathmandu_chemical_feed_room.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Failed chlorine doing system bypassed with a red tube that siphons the chlorine solution at a plant in Kathmandu, Nepal in 2012.</span></p>
+</div>
+<p>The ingenious and simple chemical dosing system that uses a siphon to completely bypass the failed pumps begs the question of whether design engineers could have invented a better option than the short lived pumps that they specified. We will investigate a gravity powered chemical dosing system that is far more reliable than chemical dosing pumps and that borrows from the simplicity of the garden hose solution used by the Nepali plant operators.</p>
+<p>Chemical dosing systems are particularly vulnerable and their failures make plant operation very challenging. Providing the right coagulant dose is critical for efficient removal of particle and dissolved organics. Chemical dosing systems commonly rely on pumps and those pumps require regular maintenance and have relatively short mean times between failures.</p>
+<div class="figure align-center" id="id17">
+<span id="figure-kathmandu-alum-dosing"></span><a class="reference internal image-reference" href="../_images/Kathmandu_alum_dosing.jpg"><img alt="Kathmandu alum dosing" src="../_images/Kathmandu_alum_dosing.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Alum dosing system based on the rate that 25 kg blocks of alum are placed in the inlet channel of the plant.</span></p>
+</div>
+<p>The AguaClara Cornell program was founded in 2005 with the goal of creating a new generation of sustainable technologies that would perform well even in the rugged settings of rural communities. The goal wasn’t simply to create technologies that would work for communities with very limited resources. The goal was to create the next generation of technologies that would both perform well in communities with limited resources and would be the highest performing technologies on multiple metrics for all communities.</p>
+</div>
+<div class="section" id="empirical-design">
+<span id="heading-empirical-design"></span><h3>Empirical Design<a class="headerlink" href="#empirical-design" title="Permalink to this headline">¶</a></h3>
+<p>For the past several decades surface water treatment technologies have been considered “mature” and when I (Monroe) took a design course on drinking water treatment in 1985 I had the impression that there was little room for further innovation. This perspective is remarkable given that with the exception of lamellar sedimentation there were no equations describing the core treatment processes.</p>
+<p>Empirical design guidelines don’t provide insight into how designs could be optimized or even what the performance of a water treatment plant will be. Thus designers can’t compare alternative designs because there is no way to compare designs that would deliver comparable results.</p>
+</div>
+</div>
+<div class="section" id="design-for-the-financers-venders-client-or-context">
+<span id="heading-design-for-the-context"></span><h2>Design for the Financers, Venders, Client, or Context<a class="headerlink" href="#design-for-the-financers-venders-client-or-context" title="Permalink to this headline">¶</a></h2>
+<p>Tours of water treatment plants suggest that it is common for designs to be driven by the vender goal of a stable revenue stream for replacement parts rather than by a goal of meeting the client’s needs. Mandatory software upgrades, mechanical valves, chemical pumps, mixing units provide a steady demand for proprietary components. Financers often prefer projects that can be implemented quickly either because they have target expenditures for a fiscal year or because loan repayment begins when the facility is turned over to the client.</p>
+<p>Design for the client would strive to reduce capital, operating, and maintenance expenses. Clients also place a high value on reliability, ease of maintenance, and the ability to handle repairs with their staff. Design for the context would account for the capabilities of local and national supply chains. A key design consideration is to ensure that the treatment capabilities of the treatment plant match the variable water quality of the proposed water source. There are numerous slow sand filtration plants installed in the global south that are attempting to treat water sources that can not be effectively treated by slow sand filtration. The cost of the failure to consider the client and the context is born by the communities who end up with water treatment systems that aren’t able to provide reliable safe water.</p>
+<p>Design for the client requires empathy and a commitment to listen to and learn from plant operators. It also requires attention to detail and watching how plant operators interact with water treatment plants. Empathy leads to the goal of creating a work environment that makes it easy for the plant operators to do their routine tasks. This isn’t just to make the plant operators work easy. A plant that is designed with the plant operator in mind will also engender pride and that pride will lead to better plant performance.</p>
+<div class="figure align-center" id="id18">
+<span id="figure"></span><a class="reference internal image-reference" href="../_images/Improvised_ladder_access_to_sed_tank.jpg"><img alt="Improvised ladder access to sed tank" src="../_images/Improvised_ladder_access_to_sed_tank.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">A plant operator built a makeshift ladder to enable easier access to the flocculation and sedimentation tanks in a package plant. This ladder considerably shortened the distance between the coagulant dose controls and the observation of flocculation.</span></p>
+</div>
+<div class="section" id="design-bifurcations">
+<span id="heading-design-bifurcations"></span><h3>Design Bifurcations<a class="headerlink" href="#design-bifurcations" title="Permalink to this headline">¶</a></h3>
+<p>Seemingly small decisions can have a profound effect on the evolution of design. Traditionally in tropical and temperate climates, flocculation and sedimentation units are built without an enclosing building. Without protection from the sun the materials used for plant construction must be UV resistant and thus plastic can’t be used. This requires use of heavier and more expensive materials such stainless steel and aluminum. Metal plate settlers are heavy and thus they can’t be easily removed by the plant operator.</p>
+<p>Conventional sedimentation tank cleaning must be done by providing operator access below the plate settlers. This in turn requires that the space below the plate settlers be tall enough to accommodate a plant operator. Thus sedimentation tanks that are built in the open have to be deeper than sedimentation tanks that are built under a roof and they are more difficult to maintain because the operator has to enter the tank through a waterproof access port.</p>
+<div class="figure align-center" id="id19">
+<span id="figure-cleaning-a-sed-tank-with-fixed-plates"></span><a class="reference internal image-reference" href="http://img.youtube.com/vi/TSh-ZNqaW8Y/0.jpg"><img alt="internal figure" src="http://img.youtube.com/vi/TSh-ZNqaW8Y/0.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text"><a class="reference external" href="http://www.youtube.com/watch?v=TSh-ZNqaW8Y">Plant operators opening hatch below plate settlers</a> in a traditional sedimentation tank.</span></p>
+</div>
+<div class="figure align-center" id="id20">
+<a class="reference internal image-reference" href="http://img.youtube.com/vi/vZ2f6mduEls/0.jpg"><img alt="internal figure" src="http://img.youtube.com/vi/vZ2f6mduEls/0.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text"><a class="reference external" href="http://www.youtube.com/watch?v=vZ2f6mduEls">Plant operator removing plate settlers</a> from an AguaClara sedimentation tank settlers.</span></p>
+</div>
+<p>Dramatically different designs are also created when we choose gravity power and smart fluids rather than electricity for each of the unit processes.</p>
+</div>
+</div>
+<div class="section" id="water-contaminants">
+<span id="heading-water-contaminants"></span><h2>Water Contaminants<a class="headerlink" href="#water-contaminants" title="Permalink to this headline">¶</a></h2>
+<p>“<a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0048969708010103">Particles transported by rivers are composed of resistant primary minerals (e.g., quartz and zircon), secondary minerals (clays, metallic oxides and oxyhydroxides) and biogenic remains</a>.</p>
+<div class="section" id="turbidity">
+<span id="heading-turbidity"></span><h3>Turbidity<a class="headerlink" href="#turbidity" title="Permalink to this headline">¶</a></h3>
+<p>Define Turbidity
+Show optical systems
+explain rough correlation with suspended solids concentration and why that relationship varies depending on the particle size distribution and density.</p>
+</div>
+<div class="section" id="pathogens">
+<span id="heading-pathogens"></span><h3>Pathogens<a class="headerlink" href="#pathogens" title="Permalink to this headline">¶</a></h3>
+<p>Pathogens are particles</p>
+</div>
+<div class="section" id="dissolved-species">
+<span id="heading-dissolved-species"></span><h3>Dissolved Species<a class="headerlink" href="#dissolved-species" title="Permalink to this headline">¶</a></h3>
+<p>Natural Organic Matter (NOM) plays a supersized role in influencing performance of surface water treatment plants.
+Discuss charge density.
+Observed stabilization of inorganic particles</p>
+</div>
+</div>
+<div class="section" id="chlorine-saved-the-world">
+<span id="heading-chlorine-saved-the-world"></span><h2>Chlorine Saved the World<a class="headerlink" href="#chlorine-saved-the-world" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id21">
+<span id="figure-us-death-rate"></span><a class="reference internal image-reference" href="../_images/US_infectious_diseases_death_rate.jpg"><img alt="US_infectious_diseases_death_rate" src="../_images/US_infectious_diseases_death_rate.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text"><a class="reference external" href="https://www.cdc.gov/mmwr/preview/mmwrhtml/mm4829a1.htm">Classic graph showing the reduction in the death rate for the United States from 1900 to 1996.</a></span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Review/Review_Fluid_Mechanics.html" class="btn btn-neutral float-right" title="Review: Fluid Mechanics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Textbook_Creation_Help/parameter_convention_list.html" class="btn btn-neutral" title="Parameter Convention List" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.8',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
