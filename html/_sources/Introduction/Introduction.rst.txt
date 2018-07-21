@@ -385,7 +385,7 @@ Chlorine Saved the World
 
 .. _figure_US_death_rate:
 
-.. figure:: Images/US_infectious_diseases_death_rate.gif
+.. figure:: Images/US_infectious_diseases_death_rate.jpg
     :width: 500px
     :align: center
     :alt: US_infectious_diseases_death_rate
