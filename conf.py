@@ -32,8 +32,14 @@
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 
-extensions = ['sphinx.ext.doctest', 'sphinxcontrib.disqus',
-    'sphinx.ext.mathjax', 'matplotlib.sphinxext.only_directives', 'matplotlib.sphinxext.plot_directive']
+extensions = ['sphinx.ext.doctest',
+              'sphinx.ext.mathjax',
+              'sphinx.ext.todo',
+              'sphinxcontrib.bibtex',
+              'sphinxcontrib.disqus',
+              'matplotlib.sphinxext.only_directives',
+              'matplotlib.sphinxext.plot_directive'
+              ]
 
 # To setup mathjax with required extensions for all files
 mathjax_path = "mathjax_config.js"

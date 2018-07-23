@@ -458,6 +458,9 @@ fig.savefig(imagepath+'Jet_centerline_EDR')
 plt.show()
 ```
 
+  .. plot:: Rapid_Mix\plots\Jet_EDR.py
+     :include-source:
+
 <img src="https://github.com/AguaClara/CEE4540_Master/raw/master/AguaClara%20Water%20Treatment%20Plant%20Design/Rapid%20Mix/Images/Jet_centerline_EDR.png" width="400">
 
 Figure x. The centerline energy dissipation rate downstream from a round jet. The distance downstream is measured in units of jet diameters. The energy dissipation rate between the jet and 7 jet diameters is developing as the shear between the stationary fluid and the jet propagates toward the center of the jet and turbulence is generated.
