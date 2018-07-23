@@ -140,7 +140,7 @@ Now that we know how to measure collision potential with head loss, we need a wa
 To generate minor losses, we need to create flow expansions. AguaClara does this with **baffles**, which are obstructions in the channel of a flocculator to force the flow to switch directions by 180°. Baffles in AguaClara plants are plastic sheets, and all of the baffles in one flocculator channel are connected to form a **baffle module.** Images below show an AguaClara flocculator and the beginnings of a baffle module.
 
 .. _figure_AC_flocculator:
-.. figure:: Images/AC_flocculator.JPG
+.. figure:: Images/AC_flocculator.jpg
   :width: 50%
   :align: center
   :alt: AC Flocculator
@@ -148,7 +148,7 @@ To generate minor losses, we need to create flow expansions. AguaClara does this
   Clockwise from the top left the images show: the outline of the entire flocculator, some top and bottom baffles in the channeles, the 4 flocculator channels in this flocculator, and the flow path of water through the flocculator
 
 .. _figure_baffle_module:
-.. figure:: Images/Baffle_module.JPG
+.. figure:: Images/Baffle_module.jpg
   :width: 50%
   :align: center
   :alt: this image shows the floc baffle module out of the water within a plant.
@@ -180,7 +180,7 @@ Since baffles are the source of head loss via minor losses, we need to find the 
 
   The 180° bend at the end of a baffle results in a dramatic flow contraction with all of the flow passing through less than 40% of the space between the baffles.
 
-We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}`. Through the `third form of the minor loss equation <https://github.com/AguaClara/Textbook/blob/master/Fluids%20Review/Fluids_Review_Design.md#minor-losses>`_, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine a :math:'k' for flow around a single baffle:
+We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}`. Through the `third form of the minor loss equation <https://github.com/AguaClara/Textbook/blob/master/Fluids%20Review/Fluids_Review_Design.md#minor-losses>`_, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine a :math:`k` for flow around a single baffle:
 
 .. math::
   K_{baffle} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2
@@ -234,7 +234,7 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
   :width: 400px
   :alt: jet expansion in the flocculator
 
-   A turbulent jet expands in width by one unit for every 10 units downstream.
+  A turbulent jet expands in width by one unit for every 10 units downstream.
 
 Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing :math:`S`. We do this by substituting  :math:`D_0 = (0.384 S)` along with :math:`D = S` to approximate how much distance, :math:`x = H_e`, the contracted flow has to cover.
 
@@ -287,7 +287,7 @@ The minimum :math:`\Pi_{H_eS}` allowable depends on the slot with ratio. If :mat
 
   The minimum :math:`\frac{H_e}{S}` ratio is set by the need to prevent short circuiting through the flocculator.
 
-Thus, :math:`\Pi_{H_eS_{Min}}` should be at leasts twice the slot width ratio, :math:`\Pi_{H_eS_{Min}} = 2 ` . <span style="color:red">Historically, AguaClara plants have been designed using :math:`\Pi_{H_eS_{Min}} = 3`</span>. This adds a safety factor of sorts, ensuring that the flow does not short-circuit through the flocculator and also allowing more space for the flow to expand after each contraction.
+Thus, :math:`\Pi_{H_eS_{Min}}` should be at leasts twice the slot width ratio, :math:`\Pi_{H_eS_{Min}} = 2 ` . Historically, AguaClara plants have been designed using :math:`\Pi_{H_eS_{Min}} = 3`. This adds a safety factor of sorts, ensuring that the flow does not short-circuit through the flocculator and also allowing more space for the flow to expand after each contraction.
 
 .. math::
   \Pi_{H_eS_{Min}} = \frac{H_e}{S} = 3
@@ -372,7 +372,7 @@ We start by making sure that our flocculator will be able to flocculate effectiv
 - :math:`h_{L_{floc}} = 40 \, {\rm cm}`
 - :math:`\bar G \theta = 37,000`
 
-The plant flow rate :math:`Q` is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water *at the end* of the flocculator, :math:`H`, the *maximum* length of the flocculator based on the length of the sedimentation tank length, :math:`L_{Max, \, sed}`, and the *minimum* width of a flocculator channel required for a human to fit inside, :math:`W_{Min, \, human}`, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the sedimentation tanks, which is why the length constraint exists. See :numref:`figure_physical_design_criteria` for a representation of how the flocculator and sedimentation tanks are placed in a plant.
+The plant flow rate :math:`Q` is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water *at the end* of the flocculator, :math:`H`, the *maximum* length of the flocculator based on the length of the sedimentation tank length, :math:`L_{Max, \, sed}`, and the *minimum* width of a flocculator channel required for a human to fit inside, :math:`W_{Min, \, human}`, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the sedimentation tanks, which is why the length constraint exists. See :numref:`figure_physical_design_criteria_floc` for a representation of how the flocculator and sedimentation tanks are placed in a plant.
 
 - :math:`H = 2 \, {\rm m}`
 - :math:`L_{Max, \, sed} = 6 \, {\rm m}`
@@ -469,9 +469,7 @@ We can find the number of channels, :math:`n_{channels}` and their actual width 
 Finally:
 
 .. math::
-  \color{purple}{
-  n_{channels} = \frac{W_{total}}{W_{Min}
-  }
+  \color{purple}{n_{channels} = \frac{W_{total}{W_{Min}}
 
 | Such that:
 | :math:`n_{channels}` is an even number and is not 0. Usually, :math:`n_{channels}` is either 2 or 4.
