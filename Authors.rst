@@ -9,5 +9,5 @@ This text is a collaborative effort involving hundreds of people. Innovation req
 
 - Juan Guzman
 - Monroe Weber-Shirk
-- Clare O'Conner
+- Clare O'Connor
 - Ethan Keller
