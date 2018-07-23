@@ -107,6 +107,7 @@ Every figure should have a tag, alternative text, and a caption. Figure tags mus
 Use the following syntax for including figures from online sources::
 
   .. _figure_fluffy_cat:
+
   .. figure:: https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg
       :width: 200px
       :align: center
@@ -118,6 +119,7 @@ Use the following syntax for including figures from online sources::
 Use this syntax for figures located within the /Textbook repository on GitHub::
 
   .. _figure_mountain:
+  
   .. figure:: Images/mountain.jpg
       :width: 300px
       :align: center
