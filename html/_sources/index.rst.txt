@@ -73,22 +73,9 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flocculation/Floc_Design.rst
   Flocculation/Floc_Derivations.rst
 
-
-.. toctree::
-  :caption: Chapter 8: Filtration
-  :maxdepth: 2
-
-  Filtration/Filtration_Design.rst
-  Filtration/Filtration_Derivations.rst
-
-
-.. toctree::
-   :caption: Chapter 3: Flow Control and Measurement
-   :maxdepth: 1
-
 .. toctree::
   :caption: Chapter 6: Sedimentation
-   :maxdepth: 1
+  :maxdepth: 1
 
   Sedimentation/Sed_Intro.rst
   Sedimentation/Sed_Examples.rst
