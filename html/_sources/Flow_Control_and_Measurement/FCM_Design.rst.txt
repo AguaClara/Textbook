@@ -3,7 +3,7 @@
 **************************************
 Flow Control and Measurement Design
 **************************************
-This section explores AguaClara's search for constant head in checmial dosing. The term **constant head** means that the driving head of a system, :math:`\Delta z` or :math:`\Delta h`, does not change over time, even as water flows through or out of the system. Constant head implies constant flow, since the energy driving the flow does not change.
+This section explores AguaClara's search for constant head in chemical dosing. The term **constant head** means that the driving head of a system, :math:`\Delta z` or :math:`\Delta h`, does not change over time, even as water flows through or out of the system. Constant head implies constant flow, since the energy driving the flow does not change.
 
 The challenge of constant head in chemical dosing for water treatment plants is not *just* providing one continuous flow of chemicals; it is also varying that flow of chemicals as the flow rate through the plant changes, so that the concentration of chemicals in the raw water stays the same.
 
