@@ -275,7 +275,7 @@ AguaClara uses a fairly straightforward way of setting :math:`\Pi_{H_eS_{Min}}`.
 
   The space between the bottom of the upper baffle and the floor of the flocculator is defined as the slot width.
 
-AguaClara uses a slot width ratio of 1 for its flocculators. This number has been the topic of much hydraulic flocculation research, and values between 1 and 1.5 are generally accepted for hydraulic flocculators. See the following paper and book respectively for more data on slot width ratios and other hydraulic flocculator parameters: `Haarhoff 1998 <http://aqua.iwaponline.com/content/47/3/142>`_  (DOI: 10.2166/aqua.1998.20"), `Shulz and Okun 1984 <https://isbnsearch.org/isbn/0471802611>`_ (ISBN: 0471802611). We base our slot width ratio of 1 on research done by `Haarhoff and van der Walt in 2001 <https://iwaponline.com/aqua/article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the>`_` (DOI: 10.2166/aqua.2001.0014) on optimizing hydraulic flocculator parameters to maximize flocculator efficiency.
+AguaClara uses a slot width ratio of 1 for its flocculators. This number has been the topic of much hydraulic flocculation research, and values between 1 and 1.5 are generally accepted for hydraulic flocculators. See the following paper and book respectively for more data on slot width ratios and other hydraulic flocculator parameters: `Haarhoff 1998 <http://aqua.iwaponline.com/content/47/3/142>`_  (DOI: 10.2166/aqua.1998.20"), **citation for schulz is not working. will need some more looking at**. We base our slot width ratio of 1 on research done by `Haarhoff and van der Walt in 2001 <https://iwaponline.com/aqua/article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the>`_` (DOI: 10.2166/aqua.2001.0014) on optimizing hydraulic flocculator parameters to maximize flocculator efficiency.
 
 The minimum :math:`\Pi_{H_eS}` allowable depends on the slot with ratio. If :math:`\Pi_{H_eS}` is less than twice the slot width ratio, the water would flow straight through the flocculator without having to bend around the baffles. This means that the flocculator would not be generating almost any head loss, and the top and bottom of the flocculator will largely be dead space. See the following image for an example:
 
@@ -556,3 +556,5 @@ Thus, the actual average water level in the flocculator is :math:`H + \frac{h_{L
 .. math:: \theta_{actual} = \frac{n_{channels} L_{channel} W_{channel} \left( H + \frac{h_{L_{floc}}}{2} \right)} {Q}
 
 Check to see if :math:`\theta_{actual}` is greater than :math:`\theta`.
+
+.. bibliography:: floc_ref.bib
