@@ -80,7 +80,7 @@ Our goal in designing a flocculator is to facilitate particle collisions. How ca
 Collision Potential, :math:`\bar G \theta`, and Energy Dissipation Rate, :math:`\varepsilon`
 ---------------------------------------------------------------------------------------------
 
-**Collision potential :math:`(\bar G \theta)`** is a term with a very straightforward name. It represents the magnitude of potential particle collisions in a fluid. It is a *dimensionless* parameter which is often used as a performance metric for flocculators; big :math:`\bar G \theta` values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). **AguaClara flocculators usually aim for a collision potential of :math:`(\bar G \theta) = 37,000`**, which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying :math:`\bar G`, a parameter for average fluid shear with units of :math:`\frac{1}{[T]}`, and :math:`\theta` , the residence time of water in the flocculator, with units of ::math:`[T]` . :math:`\theta` is intuitive to measure, calculate, and understand. :math:`\bar G` is a bit more difficult. First, an intuitive explanation. See the image below, which shows the velocity profile of flowing water.
+**Collision potential :math:`(\bar G \theta)`** is a term with a very straightforward name. It represents the magnitude of potential particle collisions in a fluid. It is a *dimensionless* parameter which is often used as a performance metric for flocculators; big :math:`\bar G \theta` values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). **AguaClara flocculators usually aim for a collision potential of :math:`(\bar G \theta) = 37,000`**, which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying :math:`\bar G`, a parameter for average fluid shear with units of :math:`\frac{1}{[T]}`, and :math:`\theta` , the residence time of water in the flocculator, with units of ::math:`[T]` . :math:`\theta` is intuitive to measure, calculate, and understand. :math:`\bar G` is a bit more difficult. First, an intuitive explanation. See :numref:`figure_G_velocity_profile`, which shows the velocity profile of flowing water.
 
 .. _figure_G_velocity_profile:
 .. figure:: Images/G_velocity_profile.jpg
@@ -137,7 +137,7 @@ Generating Head Loss with Baffles
 
 Now that we know how to measure collision potential with head loss, we need a way to actually generate head loss. While both major or minor losses can be the design basis, it generally makes more sense to use major losses only for very low-flow flocculation (lab-scale) and minor losses for higher flows, as flocculation with minor losses tends to be more space-efficient. Since this book focuses on town and village-scale water treatment (5 L/S to 120 L/S), we will use minor losses as our design basis.
 
-To generate minor losses, we need to create flow expansions. AguaClara does this with **baffles**, which are obstructions in the channel of a flocculator to force the flow to switch directions by 180°. Baffles in AguaClara plants are plastic sheets, and all of the baffles in one flocculator channel are connected to form a **baffle module.** Images below show an AguaClara flocculator and the beginnings of a baffle module.
+To generate minor losses, we need to create flow expansions. AguaClara does this with **baffles**, which are obstructions in the channel of a flocculator to force the flow to switch directions by 180°. Baffles in AguaClara plants are plastic sheets, and all of the baffles in one flocculator channel are connected to form a **baffle module.** :numref:`figure_AC_flocculator` shows an AguaClara flocculator and :numref:`figure_baffle_module` shows the assembly of a baffle module.
 
 .. _figure_AC_flocculator:
 .. figure:: Images/AC_flocculator.jpg
@@ -160,7 +160,7 @@ AguaClara flocculators, like the one pictured above, are called **vertical hydra
 **Finding the Minor Loss of a Baffle**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Before beginning this section, it is important to understand how water flows through a baffled flocculator. This flow path is shown in the following image. Take note of the thin red arrows; they indicate the compression of the flow around a baffle.
+Before beginning this section, it is important to understand how water flows through a baffled flocculator. This flow path is shown in :numref:`figure_flocculator_flow`. Take note of the thin red arrows; they indicate the compression of the flow around a baffle.
 
 .. _figure_flocculator_flow:
 .. figure:: Images/Flocculator_flow.jpg
@@ -180,7 +180,7 @@ Since baffles are the source of head loss via minor losses, we need to find the 
 
   The 180° bend at the end of a baffle results in a dramatic flow contraction with all of the flow passing through less than 40% of the space between the baffles.
 
-We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}`. Through the `third form of the minor loss equation <https://github.com/AguaClara/Textbook/blob/master/Fluids%20Review/Fluids_Review_Design.md#minor-losses>`_, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine a :math:`k` for flow around a single baffle:
+We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}`. Through the `:ref:`third form of the minor loss equation <heading_minor_losses>`, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine a :math:`k` for flow around a single baffle:
 
 .. math::
   K_{baffle} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2
@@ -305,7 +305,7 @@ To get around this problem, AguaClara included 'obstacles,' or half-pipes to con
 
 **Baffle space** is the term we use for the space between two baffles. The number of flow expansions per baffle space is :math:`n_{expansions} = 1 + n_{obstacles}`. The :math:`1` is because the baffle itself causes a flow expansion.
 
-These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` to exceed 6, while maintaining maximum flocculator efficiency since, :math:`\frac{H_e}{S}` can still be between 3 and 6. Obstacles make it possible to design smaller flocculators without compromising flocculation efficiency. The following images show these obstacles and how they affect the flow in a flocculator.
+These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` to exceed 6, while maintaining maximum flocculator efficiency since, :math:`\frac{H_e}{S}` can still be between 3 and 6. Obstacles make it possible to design smaller flocculators without compromising flocculation efficiency. :numref:`figure_Floc_module_with_obstacles` and :numref:`figure_Floc_flow_with_obstacles` show these obstacles and how they affect the flow in a flocculator.
 
 .. _figure_floc_module_with_obstacles:
 .. figure:: Images/Floc_module_with_obstacles.jpg
@@ -328,7 +328,7 @@ AguaClara Design of Hydraulic, Vertical Flow Flocculators
 
 AguaClara's approach to flocculator design is the same as it is for any other unit process. First, critical design criteria, called inputs, are established. These criteria represent the priorities that the rest of the design will be based around. Once these parameters are established, then the other parameters of the design, which are dependent on the inputs, are calculated based on certain constraints.
 
-[Take the CDC as an example of this design process](https://github.com/AguaClara/Textbook/blob/master/Flow%20Control%20and%20Measurement/FCM_Derivation_designing_the_cdc.md#cdc-design-equation-derivation "CDC design derivation document"); its inputs are :math:`h_{L_{Max}}`, :math:`\sum K`, :math:`\Pi_{Error}`, and the discrete dosing tube diameters  :math:`D` that are available at hardware stores or pipe suppliers. Its dependent variables include the number and length of the dosing tubes and the flow through the CDC system.
+Take the CDC as an example of this design process in :ref:`title_flow_control_design`; its inputs are :math:`h_{L_{Max}}`, :math:`\sum K`, :math:`\Pi_{Error}`, and the discrete dosing tube diameters  :math:`D` that are available at hardware stores or pipe suppliers. Its dependent variables include the number and length of the dosing tubes and the flow through the CDC system.
 
 The flocculator is more complex to design than the CDC, as it has more details and parameters and the equations for those details and parameters are very interdependent. Therefore, there are many ways to design an AguaClara flocculator, and many different sets of critical design criteria to begin with. Enumerated below is the current AguaClara approach.
 
@@ -408,7 +408,7 @@ Now that we have the basic parameters defined, we can start to design the detail
 
 Physical Dimensions
 -----------------------------
-Deriving the equations required to find the physical dimensions now and the hydraulic parameters (baffle/obstacle design) in the next section requires many steps. To simplify this design explanation, `the equation derivations will all be in the derivation sheet <https://github.com/AguaClara/Textbook/blob/master/Flocculation/Derivation_flocculator_design_equations.md>`_`. All complex equations which seemingly came out of nowhere will be derived in the derivation sheet.
+Deriving the equations required to find the physical dimensions now and the hydraulic parameters (baffle/obstacle design) in the next section requires many steps. To simplify this design explanation the equation derivations are developed in :ref:`title_review_fluid_mechanics_derivations`. All complex equations which seemingly came out of nowhere will be derived in the derivation sheet.
 
 **Length**
 ^^^^^^^^^^^^^^^^^^^^^
@@ -446,7 +446,7 @@ The width of a single flocculator channel must meet the following conditions:
 - Allow for :math:`3 < \frac{H_e}{S} < 6`. Recall that :math:`\frac{H_e}{S} =  \Pi_{H_eS}`
 - Allow for a human to be able to fit into a flocculator channel
 
-The first two conditions are wrapped up into the following equation, `which is derived here <https://github.com/AguaClara/Textbook/blob/master/Flocculation/Floc_Derivation_flocculator_design_equations.md>`_:
+The first two conditions are wrapped up into the following equation, :ref:`which is derived here <title_Flocculation_Derivations>`
 
 .. math::
   W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}
@@ -517,7 +517,7 @@ Finally, we can obtain the number of obstacles per baffle space. The :math:`- 1`
 
 **Baffle Spacing :math:`S`**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Finally, we can find the space between baffles, :math:`S`. The equation for :math:`S` is taken from an intermediate step [in the :math:`W_{Min, \, \Pi_{H_eS}}`` derivation](https://github.com/AguaClara/Textbook/blob/master/Flocculation/Floc_Derivation_flocculator_design_equations.md), :math:`W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}`. Rearranging for :math:`S`, we get:
+Finally, we can find the space between baffles, :math:`S`. The equation for :math:`S` is taken from an intermediate step `in the :math:`W_{Min, \, \Pi_{H_eS}} :ref:`derivation <title_Flocculation_Derivations>`, :math:`W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}`. Rearranging for :math:`S`, we get:
 
 .. math::
   \color{purple}{S = \left( \frac{K}{2 H_e \bar G^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}}
@@ -539,9 +539,9 @@ As water flows through the flocculators, the flocs will get larger and larger. A
 Residence Time of Water in the Flocculator Check
 ------------------------------------------------
 
-It is now time to make our final check. We need to make sure that our actual residence time is *at least* as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than :math:`\rlap{-} V_{floc}`. See :numref:`figure_Flocculator_head_loss` for clarification.
+It is now time to make our final check. We need to make sure that our actual residence time is *at least* as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than :math:`\rlap{-} V_{floc}`. See :numref:`figure_flocculator_head_loss` for clarification.
 
-.. _figure_Flocculator_head_loss:
+.. _figure_flocculator_head_loss:
 
 .. figure:: Images/Flocculator_head_loss.jpg
     :width: 400px
