@@ -74,11 +74,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flocculation/Floc_Derivations.rst
 
 
-    :caption: Chapter 5: Flocculation
-    :maxdepth: 1
-
-    Flocculation/Floc_Design.rst
-
 .. toctree::
   :caption: Chapter 8: Filtration
   :maxdepth: 2
