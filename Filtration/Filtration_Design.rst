@@ -28,11 +28,6 @@ Equations:
 AguaClara Flow Control and Measurement Technologies
 =====================================================
 
-What it is
-What it does and why
-How it works
-Notes
-
 
 
 
@@ -42,17 +37,23 @@ Notes
 Filter Types
 =============
 
-The principal difference in various filters is the difference in velocity of water through them. This in turn determines the plan area of the filter for a particular flow.
+The principal difference in various filters is the difference in velocity of water through them. This in turn determines the plan view area of the filter for a particular flow.
 
 For a multistage filter system, the filter areas for the Dynamic, Roughing, and Slow Sand filters are included in a total area. For a given flow, and the velocity for each filter type the total area is:
 
 
 .. math::
-  :label: area_stuff
-
     A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}
 
-Using this formula it becomes easy to see the relative sizes of different filter systems. **Note: Clare, consider adding the table from slide 23 here.**
+Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. **Note: Clare, consider adding the table from slide 23 here.** :numref:`figure_relative_area_of_filtration!`shows the relative area of various filtration technologies.
+
+.. _figure_relative_area_of_filtration:
+
+.. figure:: /Images/figure_relative_area_of_filtration.png
+  :align: center
+  :alt: table showing the relative areas of multistage filtration techniques to AguaClara unit processes
+  :width: 80%
+
 
 Understanding the amount of area requires for this component makes it easy to see why certain systems would be preferable to others, but also that overall filtration is only a polishing step and cannot treat as well as other unit processes, predominantly the flocculation-sedimentation combination.
 
@@ -70,7 +71,7 @@ In understading how sand filtration works, porosity is one of the most important
     \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}
 
 
-Porosity is determined by the geometry of the material in the control volume, but also by the size of the particles involved. If you have three different sized spheres (such as .0um clay, .2mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.
+Porosity is determined by the geometry of the material in the control volume, but also by the size of the particles involved. If you have three different sized spheres (such as .0um clay, .2mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in :numref:`figure_porosity`. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.
 
 .. _figure_porosity:
 .. figure:: Images/figure_porosity.png
@@ -87,17 +88,17 @@ One way that the relative size of particles is characterized is by describing th
 
 :math:`D_{10}` is used for particle removal models, and :math:`D_{60}` is used for hydrualic modeling.
 
-The relationship of the two is the uniformity coeffecient:
+The ratio of the two is the uniformity coeffecient:
 
 .. math::
   :label: uniformity_coefficient
 
     UC = \frac{D_{60}}{D_{10}}
 
-The uniformity coefficient describes the uniformity of the sand. A :math:`UC = 1` indicates that every grain of sand is the same size, which is the ideal case. A large :math:`UC` is indicative of a wide range of grain sizes which can cause trouble during filter operation and backwash, as stratification occurs and the porosity changes with respect to depth in the filter.
+The uniformity coefficient describes the uniformity of the sand. A :math:`UC = 1` indicates that every grain of sand is the same size, which is the ideal case. A large :math:`UC` is indicative of a wide range of grain sizes which can cause trouble during filter operation and backwash, as stratification occurs and the porosity changes with respect to depth in the filter, which affects the requirements for backwash.
 
 
-During backwash sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:
+During backwash, the sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:
 
 .. math::
   :label: backwash_porosity
@@ -129,7 +130,7 @@ From this it becomes possible to directly relate porosity (as above) to the filt
 
 Headloss Requirements
 ======================
-One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen Pouseille equation (ref from elsewhere) describes the headloss through a clean bed during filtration.
+One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen-Pouseille equation (ref from elsewhere, not linked yet) describes the headloss through a clean bed during filtration.
 
 .. math::
   :label: karmen_kozeny_clean_bed
@@ -171,6 +172,8 @@ Using these two equations the minimum velocity for snad fluidization can be foun
     V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 
 From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter is **not** indicative of fluidization at the bottom.
+
+This parameter is the most important parameter to consider as it is a property of the sand not of the water!
 
 
 
@@ -223,7 +226,12 @@ In is most basic schema, the filter is a series of pipes leading into a deep box
 As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter. These structures have slots which allow water out of the inlet pipes into the sand bed. Across a layer of sand from the inlet is an outlet pipe in the same shapes as the slotted pipe inlets. Water passes into the pipes and up to the fitler outlet box where it only needs to be chlorinated before being distributed.
 
 Steps of designing a filter.
-1.
+1. Calculate backwash velocity from sand diameter
+  - complicating factors:
+      - wall shear
+      - lift as a unit and fall together
+      - stratification will always occur if a range of sizes exists
+2.
 
 
 
@@ -249,3 +257,9 @@ Steps of designing a filter.
 
 Siphon
 ========
+
+Backwash is initiated through the activation of a siphons system. In the sipohoning process two things must happen for a success.
+  1. Backwash can be initiated at any point in time
+  2. Backwash can be prevented with the siphon as well
+
+  In under the siphon, the ideal gas law, **Add a ref**, is the most important equation to understand how it is initiated. 
