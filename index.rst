@@ -16,21 +16,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
    "Anaconda", "4.5.4"
    "Python", "3.6.5"
 
-.. .. _figure_bronny:
-.. .. figure:: Textbook_Creation_Help/LEBRON_LEFT.jpeg
-   :align: center
-   :alt: internal figure
-
-   Baby come back!
-
-.. .. _figure_ANGRY_BRON:
-.. .. figure:: Textbook_Creation_Help/BRON_NOOOO.jpg
-   :width: 500px
-   :align: center
-   :alt: internal figure
-
-   Cleveland didn't deserve you :'(
-
 .. toctree::
    :caption: Contributor's guide
    :maxdepth: 1
@@ -53,6 +38,7 @@ This is a place holder for 'Chapter 1: Introduction' files
 
    Review/Review_Fluid_Mechanics.rst
    Review/Review_Fluid_Mechanics_Derivations.rst
+   Review/Review_Python.rst
 
 
 .. toctree::
