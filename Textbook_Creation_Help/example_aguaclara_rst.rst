@@ -285,19 +285,22 @@ command.
 The references are stored in a separate plain text BibTeX format file.
 Currently, only the ``unsrt`` and ``plain`` BibTeX styles are supported.
 
+Additionally, PDFs of sources are stored in the "_static/references" folder, which then uses internal links, ensures we never lose access, and  keeps everything in one place.
+
 Example
 -------
 
-In the document, use the following syntax::
+Within the body of the document, use the following syntax::
 
    See :cite:`ex-Strunk1979` for an introduction to stylish blah, blah...
 
-And place the directive at the end of the document::
+And place the directive at the very end of the document::
 
    .. bibliography:: references.bib
+      :cited:
       :keyprefix: ex-
 
-The "keyprefix" should be related to the type of document. For example, when within flocculator_design documents, the keyprefix should be `floc_design-` and all citations should be prefixed with `floc_design`.
+The "keyprefix" should be related to the type of document. For example, when within flocculator_design documents, the keyprefix should be `floc_design-` and all citations should be prefixed with `floc_design`, and on this example page is "ex". Every page will require its own keyprefix which prevents confusion of repeat citations in Travis.
 
 The ``references.bib`` file should contain a BibTex_ bibliography,
 including an entry for:
