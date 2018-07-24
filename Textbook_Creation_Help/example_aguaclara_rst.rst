@@ -119,7 +119,7 @@ Use the following syntax for including figures from online sources::
 Use this syntax for figures located within the /Textbook repository on GitHub::
 
   .. _figure_mountain:
-  
+
   .. figure:: Images/mountain.jpg
       :width: 300px
       :align: center
@@ -290,11 +290,14 @@ Example
 
 In the document, use the following syntax::
 
-   See :cite:`Strunk1979` for an introduction to stylish blah, blah...
+   See :cite:`ex-Strunk1979` for an introduction to stylish blah, blah...
 
 And place the directive at the end of the document::
 
    .. bibliography:: references.bib
+      :keyprefix: ex-
+
+The "keyprefix" should be related to the type of document. For example, when within flocculator_design documents, the keyprefix should be `floc_design-` and all citations should be prefixed with `floc_design`.
 
 The ``references.bib`` file should contain a BibTex_ bibliography,
 including an entry for:
@@ -309,7 +312,7 @@ including an entry for:
      edition = {Third}
    }
 
-A working example: :cite:`Strunk1979`.
+A working example: :cite:`ex-Strunk1979`.
 
 Equations
 ==========
@@ -408,4 +411,6 @@ Assorted Other Convention
 
 .. disqus::
 
-.. bibliography:: references.bib
+.. bibliography:: /references.bib
+  :cited:
+  :keyprefix: ex-
