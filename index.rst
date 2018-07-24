@@ -23,6 +23,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Acknowledgements.rst
   Authors.rst
 
+
 .. toctree::
   :caption: Contributor's guide
   :maxdepth: 1
@@ -47,6 +48,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Review/Review_Fluid_Mechanics_Derivations.rst
   Review/Review_Python.rst
 
+
 .. toctree::
   :caption: Chapter 3: Flow Control and Measurement
   :maxdepth: 1
@@ -54,6 +56,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flow_Control_and_Measurement/FCM_Intro.rst
   Flow_Control_and_Measurement/FCM_Design.rst
   Flow_Control_and_Measurement/FCM_Derivations.rst
+
 
 .. toctree::
   :caption: Chapter 4: Rapid Mix
@@ -65,6 +68,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Rapid_Mix/RM_Examples.rst
   Rapid_Mix/RM_Theory_and_Future_Work.rst
 
+
 .. toctree::
   :caption: Chapter 5: Flocculation
   :maxdepth: 1
@@ -74,25 +78,21 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flocculation/Floc_Derivations.rst
 
 
+  .. toctree::
+    :caption: Chapter 6: Sedimentation
+     :maxdepth: 1
+
+    Sedimentation/Sed_Intro.rst
+    Sedimentation/Sed_Examples.rst
+    Sedimentation/Sed_Theory_and_Future_Work.rst
+
+
 .. toctree::
   :caption: Chapter 8: Filtration
   :maxdepth: 2
 
   Filtration/Filtration_Design.rst
   Filtration/Filtration_Derivations.rst
-
-
-.. toctree::
-   :caption: Chapter 3: Flow Control and Measurement
-   :maxdepth: 1
-
-.. toctree::
-  :caption: Chapter 6: Sedimentation
-   :maxdepth: 1
-
-  Sedimentation/Sed_Intro.rst
-  Sedimentation/Sed_Examples.rst
-  Sedimentation/Sed_Theory_and_Future_Work.rst
 
 
 `PDF and LaTeX versions <https://github.com/AguaClara/Textbook/releases/latest>`_ [#pdf_warning]_.
