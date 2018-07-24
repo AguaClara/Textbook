@@ -45,7 +45,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
   Review/Review_Fluid_Mechanics.rst
   Review/Review_Fluid_Mechanics_Derivations.rst
-
+  Review/Review_Python.rst
 
 .. toctree::
   :caption: Chapter 3: Flow Control and Measurement
