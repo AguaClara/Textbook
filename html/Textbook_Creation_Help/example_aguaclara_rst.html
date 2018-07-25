@@ -130,7 +130,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Python.html">Review: Python</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
 <ul>
@@ -487,16 +486,20 @@ allows <a class="reference external" href="http://www.bibtex.org/">BibTeX</a> ci
 command.</p>
 <p>The references are stored in a separate plain text BibTeX format file.
 Currently, only the <code class="docutils literal notranslate"><span class="pre">unsrt</span></code> and <code class="docutils literal notranslate"><span class="pre">plain</span></code> BibTeX styles are supported.</p>
+<p>Additionally, PDFs of sources are stored in the “_static/references” folder, which then uses internal links, ensures we never lose access, and  keeps everything in one place.</p>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<p>In the document, use the following syntax:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>See :cite:`Strunk1979` for an introduction to stylish blah, blah...
+<p>Within the body of the document, use the following syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>See :cite:`ex-Strunk1979` for an introduction to stylish blah, blah...
 </pre></div>
 </div>
-<p>And place the directive at the end of the document:</p>
+<p>And place the directive at the very end of the document:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">bibliography</span><span class="p">::</span> <span class="n">references</span><span class="o">.</span><span class="n">bib</span>
+   <span class="p">:</span><span class="n">cited</span><span class="p">:</span>
+   <span class="p">:</span><span class="n">keyprefix</span><span class="p">:</span> <span class="n">ex</span><span class="o">-</span>
 </pre></div>
 </div>
+<p>The “keyprefix” should be related to the type of document. For example, when within flocculator_design documents, the keyprefix should be <cite>floc_design-</cite> and all citations should be prefixed with <cite>floc_design</cite>, and on this example page is “ex”. Every page will require its own keyprefix which prevents confusion of repeat citations in Travis.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">references.bib</span></code> file should contain a <a class="reference external" href="http://www.bibtex.org/">BibTex</a> bibliography,
 including an entry for:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>@BOOK<span class="nb">{</span>Strunk1979,
@@ -508,7 +511,7 @@ including an entry for:</p>
 <span class="nb">}</span>
 </pre></div>
 </div>
-<p>A working example: <a class="reference internal" href="#strunk1979" id="id2">[SW79]</a>.</p>
+<p>A working example: <a class="reference internal" href="#ex-strunk1979" id="id2">[SW79]</a>.</p>
 </div>
 </div>
 <div class="section" id="equations">
@@ -608,7 +611,7 @@ including an entry for:</p>
 <ul class="simple">
 <li>Colored <span class="red">text</span>. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.</li>
 </ul>
-<div data-disqus-identifier="Functionality in RST and AguaClara Convention" data-disqus-shortname="AguaClara" id="disqus_thread"></div><p id="bibtex-bibliography-Textbook_Creation_Help/example_aguaclara_rst-0"><table class="docutils citation" frame="void" id="strunk1979" rules="none">
+<div data-disqus-identifier="Functionality in RST and AguaClara Convention" data-disqus-shortname="AguaClara" id="disqus_thread"></div><p id="bibtex-bibliography-Textbook_Creation_Help/example_aguaclara_rst-0"><table class="docutils citation" frame="void" id="ex-strunk1979" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id2">[SW79]</a></td><td>William Strunk, Jr. and E.&nbsp;B. White. <em>The Elements of Style</em>. Macmillan, third edition, 1979.</td></tr>
