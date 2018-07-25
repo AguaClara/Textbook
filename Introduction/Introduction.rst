@@ -101,9 +101,7 @@ Our students are co-creators of knowledge and not empty vessels to be filled wit
 Socrates said "`Education is the kindling of a flame, not the filling of a vessel <https://www.goodreads.com/quotes/69267-education-is-the-kindling-of-a-flame-not-the-filling>`_." Our goal is to bring the spirit of play, discovery, and mystery into the challenge of improving the quality of life of everyone on the planet by sharing better methods to produce safe drinking water.
 
 In We Make the Road by Walking: Conversations on Education and Social Change, Paulo Freire said,
-"`The more we become able to become a child again, to keep ourselves childlike, the more we can understand that because we love the world and we are open to understanding, to comprehension, that when we kill the child in us, we are no longer <https://www.goodreads.com/author/quotes/41108.Paulo_Freire?page=2>`_".
-
-We commit to playing together in a relationship where we are all learning and we are all teaching. "Education must begin with the solution of the teacher-student contradiction, by reconciling the poles of the contradiction so that both are simultaneously teachers and students." - Paulo Freire
+"`The more we become able to become a child again, to keep ourselves childlike, the more we can understand... <https://www.goodreads.com/author/quotes/41108.Paulo_Freire?page=2>`_". We commit to playing together in a relationship where we are all learning and we are all teaching. "Education must begin with the solution of the teacher-student contradiction, by reconciling the poles of the contradiction so that both are simultaneously teachers and students." - Paulo Freire
 
 .. _heading_Empathy:
 
@@ -270,7 +268,7 @@ From an aesthetic perspective, NOM absorbs light at short wavelengths and this r
 
 NOM plays a supersized role in influencing performance of surface water treatment plants. NOM has three negative effects:
  1) It requires higher dosages of coagulant for effective particle removal.
- 1) It reduces the disinfection effectiveness of chlorine, ozone, and UV.
+ 1) It reduces the disinfection effectiveness of chlorine, ozone, and UV. Chlorine partially oxidizes the NOM and thus more chlorine must be used to maintain a residual level of chlorine.
  1) It can produce disinfection by-products that are toxic.
 
 Thus removal of NOM is a water treatment goal. Fortunately the same coagulants that are used for particle removal also can remove a significant fraction of NOM. The interactions between NOM and coagulants will be discussed in the :ref:`Introduction to Rapid Mix <title_Rapid_Mix_Introduction>`.
@@ -282,7 +280,7 @@ The removal of other dissolved species is beyond the scope of the first release 
 Chlorine (Might Have) Saved the World
 -------------------------------------
 
-Chlorine is widely recognized for reducing mortality from water borne disease in the United States. A more careful review of the mortality data and of the ability of chlorine to inactive various pathogens makes it difficult to assess the role of chlorine. A classic graph (see :numref:`figure_US_death_rate`) implies that
+Chlorine is widely recognized for reducing mortality from water borne disease in the United States. A more careful review of the mortality data and of the ability of chlorine to inactive various pathogens makes it difficult to assess the role of chlorine. A classic graph (see :numref:`figure_US_death_rate`) has been used to suggest that chlorination of drinking water supplies resulted in a significant reduction in mortality
 
 .. _figure_US_death_rate:
 
@@ -348,6 +346,23 @@ Sedimentation is the process of particles ‘falling’ because they have a high
 | :math:`D_{particle}` = particle diameter
 | :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
 
+.. plot::
+
+  from aide_design.play import*
+  def v_t(D_particle,density_particle,Temperature):
+    return (D_particle**2*pc.gravity *(density_particle - pc.density_water(Temperature))/(18*pc.viscosity_kinematic(Temperature)*pc.density_water(Temperature))).to(u.m/u.s)
+  clay = 2650 * u.kg/u.m**3
+  organic = 1040 * u.kg/u.m**3
+  Temperature = 20 * u.degC
+  D_particle = np.logspace(-6,-3)*u.m
+  fig, ax = plt.subplots()
+  ax.loglog(D_particle.to(u.m),v_t(D_particle,clay,Temperature).to(u.m/u.s))
+  ax.loglog(D_particle.to(u.m),v_t(D_particle,organic,Temperature).to(u.m/u.s))
+  ax.set(xlabel='Particle diameter (m)', ylabel='Terminal velocity (m/s)')
+  ax.legend(["clay or sand","organic particle"])
+  plt.show()
+
+
 :todo: add graph showing sed velocity of organic and inorganic particles as function of diameter.
 
 Design Evolution
@@ -364,7 +379,7 @@ Mechanized and automated water treatment plants performed reasonably well in com
 .. figure:: Images/Kathmandu_chemical_feed_room.png
     :width: 300px
     :align: center
-    :alt: internal figure
+    :alt: Kathmandu chemical feed room
 
     Failed chlorine doing system bypassed with a red tube that siphons the chlorine solution at a plant in Kathmandu, Nepal in 2012.
 
@@ -406,8 +421,6 @@ Design for the client requires empathy and a commitment to listen to and learn f
 
 An example of design for the operator is the elevation of the walkways in AguaClara plants. Conventional plants often have walkways that are above the tanks. That places the operator's eyes several meters above the water surface and makes it difficult to see particles and flocs in the water. AguaClara plants have the walkways approximately 50 cm below the top of the tanks. This makes it easy for the plant operator to look into the tanks for quick visual inspections.
 
-
-
 .. _figure:
 
 .. figure:: Images/Improvised_ladder_access_to_sed_tank.jpg
@@ -439,22 +452,26 @@ Without the ability to gain access to a sedimentation tank from above, conventio
 .. figure:: http://img.youtube.com/vi/TSh-ZNqaW8Y/0.jpg
     :width: 300px
     :align: center
-    :alt: internal figure
+    :alt: Cleaning a Sed Tank with fixed plates
+    :target: http://www.youtube.com/watch?v=TSh-ZNqaW8Y
 
-    `Plant operators opening hatch below plate settlers <http://www.youtube.com/watch?v=TSh-ZNqaW8Y>`_ in a traditional sedimentation tank.
+    Plant operators opening hatch below plate settlers in a traditional sedimentation tank.
 
-AguaClara sedimentation tanks are designed to be taken off line one at a time so the water treatment plant can continue to operate during maintenance. Two plant operators can quickly open a sedimentation tank by removing the plastic plate settlers (see :numref:`figure_Removing_Plate_Settlers`). The zero settled sludge design of the AguaClara sedimentation tanks also reduces the need for cleaning.
+AguaClara sedimentation tanks are designed to be taken off line one at a time so the water treatment plant can continue to operate during maintenance. Two plant operators can quickly open a sedimentation tank by removing the plastic plate settlers (see the video :numref:`figure_Removing_Plate_Settlers`). The zero settled sludge design of the AguaClara sedimentation tanks also reduces the need for cleaning.
 
 .. _figure_Removing_Plate_Settlers:
 
 .. figure:: http://img.youtube.com/vi/vZ2f6mduEls/0.jpg
     :width: 300px
     :align: center
-    :alt: internal figure
+    :alt: Removing Plate Settlers from an AguaClara Sedimentation tank
+    :target: http://www.youtube.com/watch?v=vZ2f6mduEls
 
-    `Plant operator removing plate settlers <http://www.youtube.com/watch?v=vZ2f6mduEls>`_ from an AguaClara sedimentation tank settlers.
+    Plant operator removing plate settlers from an AguaClara sedimentation tank.
 
 .. _heading_Mechanized_or_Smart_Hydraulics:
+
+There is another major consequence of building water treatment plants in a secure enclosed building. Many water treatment plants will operate around the clock and that requires plant operators to spend the night at the facility. Having a secure facility provides improved safety for the plant operator. That improved safety is very important for some potential operators and thus providing that safety will increase potential diversity.
 
 Mechanized or Smart Hydraulics
 ------------------------------
@@ -466,3 +483,5 @@ Dramatically different designs are also created when we choose gravity power and
 Automated plants often move the controls far away from the critical observation locations in the plant. This might be appropriate or necessary in some cases, but it has the disadvantage of making it more difficult for operators to directly observe what is happening in the plant. Direct observations are critical because even highly mechanized water treatment plants are not yet equipped with enough sensors to enable rapid troubleshooting from the control room.
 
 AguaClara plants have a layout that places the coagulant dose controls within a few steps of the best places to observe floc formation in the flocculator. This provides plant operators with rapid feedback that is critical when the raw water changes rapidly at the beginning of a high runoff event. As operators spend time observing the processes in the plant they begin to associate cause and effect and can make operational changes to improve performance. For example, gas bubbles that carry flocs to the surface can indicate sludge accumulation in a sedimentation tank. Rising flocs without gas bubbles can indicate a poor inlet flow distribution for a sedimentation tank or density differences caused by temperature differences.
+
+.. todo:: Show the plan view of an AguaClara plant.
