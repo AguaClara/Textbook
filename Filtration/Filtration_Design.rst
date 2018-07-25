@@ -17,6 +17,7 @@ Terms:
 1. Porosity
 2. StaRS Filter
 3. Backwash
+4. Pressure Recovery
 
 
 Equations:
@@ -262,4 +263,71 @@ Backwash is initiated through the activation of a siphons system. In the sipohon
   1. Backwash can be initiated at any point in time
   2. Backwash can be prevented with the siphon as well
 
-  In under the siphon, the ideal gas law, **Add a ref**, is the most important equation to understand how siphoning works.. 
+  In under the siphon, the ideal gas law, **Add a ref**, is the most important equation to understand how siphoning works..
+
+
+
+
+------------------------------------
+
+***********************************
+Desgin from MathCad adapted for me
+***********************************
+
+Overall Goals:
+- Uniformity in the sand bed through appropriate headloss
+
+.. note::
+  Pressure recovery occurs when fluid velocity slows down. This happens in the filter at the end of a manifold pipe, ebcause the fluid must stop at the end. This stoppage causes the pressure to increase locally, which then, when the fluid passes into the outlet, increases the local velocity leading to non-uniform flow.
+
+
+Constraints:
+
+Filtration Constraints
+- inlet manifolds need to have small piezometric head relative to clean sand bed
+- trunk and branches are short manifolds (fL/d) (**friction factor, L, diam?**), therefore: piezometric head variablitty dominated by pressure recovery as given by :math:`\frac{V^2}{2g}` with the velocity as the initial velocity of the manifold
+  - this is the limiting constraint for the velocity in the trunk and branches, which can be relaxed with added headloss in the slots
+- limit the imbalance between inlets that carry water for two layers and inlets that carry water for one layer.
+  - *perhaps top/bottom inlet should have half the number of slots*
+  - current assumption: backwash branches will have half the slot areas
+- if slots are used to generate head loss (to improve flow distribution) sand blocking, :math:`(1-\epsilon)` during filtration must be accounted for
+- the slots are not blocked during backwash (excepy maybe at initiation)
+
+Backwash Constraints
+- flow rate from each slot/hole must be close to average (within *20%*)
+- as there is not head loss in fluidized bed, the manifold must be designed with the appropriate head loss for indpendent uniform flow distribution
+- headloss through slots/holes will be 36x greater during backwash because of 6x increase in velocity
+- to make flow more uniform:
+  - decrease head loss + pressure recovery in manifold
+  - increase head loss in slots
+- slot head loss must not impede the filtration mode capacity
+- this sets maximum headloss for each mode.
+  - during filtration <10% clean bed head loss
+  - during backwash <36x the filtration limits
+
+  Additional concerns:
+  - there are two manifold systems, the trunks into the branches and the branches into the slots. Thus pressure recovery must be small in both trunk and branches so that the slots can reconcile the changes in flow, because flow distribution is fairly uniform in short manifold systems when total port area is equal to or less than manifold area.
+
+  Sand Layer Thickness as Function of trunk diameters
+  ====================================================
+
+  Flow Distribution constraint: ratio of pressure recovery to clean bed head loss
+  ================================================================================
+
+  Number of filters
+  ===================
+
+  Clean bed head loss
+  ====================
+
+  Auxilliary box widths and plumbing
+  ===================================
+
+  Number of manifold branches
+  ==============================
+
+  Filter box dimensions and manifold inlet pipes
+  ===============================================
+
+  Manifold slot/orifice design
+  ===============================
