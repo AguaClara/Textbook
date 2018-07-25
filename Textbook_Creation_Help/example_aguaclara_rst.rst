@@ -412,13 +412,20 @@ Or insert from a file like so:
 Inserting Video
 ---------------
 
-To insert a video, you'll need to upload it to YouTube. Use AguaClara's YouTube account. Once uploaded, find the video id in the URL and use it in the youtube directive like so::
+To insert a video and use it like a figure, take an instructive snapshot of the video. Save that as an image, and create a figure linking to that image. Then, make the video open when the video is clicked on by setting the video url as the "target" for the image. To indicate it is a video, include the play bar. Here is the relevant code::
 
-  ..  youtube:: O7zewtuUM_0
 
-Here is an example:
+  .. figure:: floc_blanket.png
+     :target: https://www.youtube.com/watch?v=Xp8ygnIOgi0
 
-  ..  youtube:: O7zewtuUM_0
+     This is a floc blanket forming
+
+And here is a working example:
+
+.. figure:: floc_blanket.png
+   :target: https://www.youtube.com/watch?v=Xp8ygnIOgi0
+
+   This is a floc blanket forming
 
 
 .. _heading_assorted_convention:
