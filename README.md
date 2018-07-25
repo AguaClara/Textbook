@@ -1,7 +1,7 @@
 # Textbook [![Build Status](https://travis-ci.org/AguaClara/Textbook.svg?branch=master)](https://travis-ci.org/AguaClara/Textbook)
 
-Please enjoy [the AguaClara textbook](https://aguaclara.github.io/Textbook/)!
-If you are interested in helping out by writing, begin by reading [this page](https://github.com/AguaClara/Textbook/wiki/Contributing-by-writing)!
+Please enjoy [the AguaClara textbook](https://aguaclara.github.io/Textbook/)!  
+If you are interested in helping out by writing, begin by reading [this page](https://github.com/AguaClara/Textbook/wiki/Contributing-by-writing)!  
 If you are interested in helping out by editing existing sections, begin by reading [this page](https://github.com/AguaClara/Textbook/wiki/Contributing-by-editing)!
 
 # Textbook Structure
