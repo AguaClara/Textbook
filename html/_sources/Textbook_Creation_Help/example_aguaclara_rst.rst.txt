@@ -3,7 +3,7 @@
 ***********************************************
 Functionality in RST and AguaClara Convention
 ***********************************************
-This file will explain how to use RST functionality including images, tables, code, equations, and both internal and cross-document references. Additionally, this document is intended to define convention for this textbook project. Any syntax included in this document should be used when contributing to the textbook project. If you come across a function for which there is no convention, please edit this file to include it here.
+This file will explain how to use RST functionality including images, tables, code, equations, and both internal and cross-document refereces. Additionally, this document is intended to define convention for this textbook project. Any syntax included in this document should be used when contributing to the textbook project. If you come across a function for which there is no convention, please edit this file to include it here.
 
 
 
@@ -35,7 +35,7 @@ Headings are defined by an underline and sometimes overline consisting of one of
 * `^`, for subsubsections
 * `"`, for subsubsubsections
 
-Each title, section and subsection should have a tag before it. Tags for document titles **must** begin with ``title`` and tags for headings **must** begin with ``heading``. For example, this document's title tag is ``title_aguaclara_rst_convention`` and this heading's tag is ``heading_headings_bullets_and_lists``. There should always be a blank line between the tag and the actual heading, else references to the tag will not work. For the sake of document readability, include 3 blank lines before the section tag and 2 blank lines before the subsection tag. Lesser headings (subsubsections and beyond) do not need to have tags, and there should be one blank line between lower headings and the preceding content. Here is an example. Note the amount and location of blank lines::
+Each title, section and subsection should have a tag before it. Tags for document titles **must** begin with ``title`` and tags for headings **must** begin with ``heading``. For example, this document's title tag is ``title_aguaclara_rst_convention`` and this heading's tag is ``heading_headings_bullets_and_lists``. There should always be a blank line between the tag and the actual heading, else references to the tag will not work. For the sake of document readability, include 3 blank lines before the section tag and 2 blank lines before the subsection tag. Lesser headings (subsubsections and beyond) do not need to have tags, and there should be one blank line between lower headings and the preceeding content. Here is an example. Note the amount and location of blank lines::
 
   .. _title_example_document_title:
 
@@ -102,7 +102,7 @@ gives:
 
 Figures
 -------
-Every figure should have a tag, alternative text, and a caption. Figure tags must begin with ``figure``.  Below, the two figures are labelled ``figure_fluffy_cat`` and ``figure_mountain``. The alternative text is a very short description of the figure. A caption is written below all of the figure specifications, with a blank line to separate the specs from the caption.
+Every figure should have a tag, alternative text, and a caption. Figure tags must begin with ``figure``.  Below, the two figures are labelled ``figure_fluffy_cat`` and ``figure_mountain``. The alternative text is a very short desciption of the figure. A caption is written below all of the figure specifications, with a blank line to separate the specs from the caption.
 
 Use the following syntax for including figures from online sources::
 
@@ -255,11 +255,11 @@ References work by calling any "target"- either tags (titles, headings, figures,
 
 Document Titles and Headings
 """""""""""""""""""""""""""""
-This content should be called with the ``:ref:`tag``` functionality. You can also choose what text will be shown. For example, ``:ref:`This text <heading_links_and_references>``` gives :ref:`This text <heading_links_and_references>`.
+This content should be called with the ``:ref:`tag``` functionality. You can also choose what text will be shown. For example, ``:ref:`This text <heading_links_and_refernces>``` gives :ref:`This text <heading_links_and_references>`.
 
 Figures and Tables
 """""""""""""""""""""
-These can be referenced in the exact same way as titles and headings. However, they can *also* be referenced using the ``:numref:`tag``` syntax. When this is done, there cannot be text written that will link to the figure. Instead, what shows up is 'Fig. 3' or 'Table 3'.
+These can be referenced in the exact same way as titles and headings. However, they can *also* be refernced using the ``:numref:`tag``` syntax. When this is done, there cannot be text written that will link to the figure. Instead, what shows up is 'Fig. 3' or 'Table 3'.
 
 * Figures: ``:numref:`figure_fluffy_cat``` gives :numref:`figure_fluffy_cat`
 * Tables: ``:numref:`table_an_example_table``` gives :numref:`table_an_example_table`
@@ -352,9 +352,9 @@ Writing Python and Including Doctests
 Doctests
 ^^^^^^^^^^^^
 
-When writing code for the textbook, some sections will be written in executable code to demonstrate functions or run calculations. They will not, however, run automatically in the webpage, so to ensure that they are correct before they are published they are tested with doctests. Doctests compare the written code with the expected result typed manually below it. In the Anaconda Prompt, simply run the :code:`make doctest` in the correct directory and branch. When run, you see where your executable code doesn't match up with the "answer" provided by you, the contributor. One reason this is important is because if functions in aide_design change, their outputs might alter from old versions. Doctests will show where this happens. Additionally, typos and other mistakes can be seen. Further documentation on running doctest can be found `here <http://docs.sphinxdocs.com/en/latest/step-3.html>`_.
+When writing code for the textbook, some sections will be written in execuatable code to demonstrate functions or run calculations. They will not, however, run automatically in the webpage, so to ensure that they are correct before they are pubished they are tested with doctests. Doctests compare the written code with the expected result typed manually below it. In the Anaconda Prompt, simply run the :code:`make doctest` in the correct directory and branch. When run, you see where your excutable code doesn't match up with the "answer" provided by you, the contributor. One reason this is important is because if functions in aide_design change, their outputs might alter from old versions. Doctests will show where this happens. Additonally, typos and other mistakes can be seen. Further documentation on running doctest can be found `here <http://docs.sphinxdocs.com/en/latest/step-3.html>`_.
 
-The way to ensure a doctest will run is to precede each line of code with '>>>', the default Python prompt. When a doctest is run, every line of code with '>>>' in front of it will be run within a directory. The testing becomes relevant for lines which do not have '>>>' in front of them. Any line that is directly below a line beginning with '>>>' is assumed to be an output of the line of code just above it. In the example below, :code:`19` is the expected output of the line :code:`>>> print(5+14)`. If the output of that line did not match the line below, doctests would alert you! Below are some examples of doctestable code.
+The way to ensure a doctest will run is to precede each line of code with '>>>', the default Python prompt. When a doctest is run, every line of code with '>>>' in front of it will be run within a directory. The testing becomes relevant for lines which do not have '>>>' in front of them. Any line that is directly below a line beginnning with '>>>' is assumed to be an output of the line of code just above it. In the example below, :code:`19` is the expected output of the line :code:`>>> print(5+14)`. If the output of that line did not match the line below, doctests would alert you! Below are some examples of doctestable code.
 
     >>> python="code"
     >>> print(5+14)
@@ -399,6 +399,17 @@ Or insert from a file like so:
 
 .. plot:: pyplots/ellipses_example.py
    :include-source:
+
+Inserting Video
+---------------
+
+To insert a video, you'll need to upload it to YouTube. Use AguaClara's YouTube account. Once uploaded, find the video id in the URL and use it in the youtube directive like so::
+
+  ..  youtube:: O7zewtuUM_0
+
+Here is an example:
+
+  ..  youtube:: O7zewtuUM_0
 
 
 .. _heading_assorted_convention:
