@@ -409,6 +409,17 @@ Or insert from a file like so:
 .. plot:: pyplots/ellipses_example.py
    :include-source:
 
+Inserting Video
+---------------
+
+To insert a video, you'll need to upload it to YouTube. Use AguaClara's YouTube account. Once uploaded, find the video id in the URL and use it in the youtube directive like so::
+
+  ..  youtube:: O7zewtuUM_0
+
+Here is an example:
+
+  ..  youtube:: O7zewtuUM_0
+
 
 .. _heading_assorted_convention:
 
