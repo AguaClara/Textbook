@@ -262,4 +262,4 @@ Backwash is initiated through the activation of a siphons system. In the sipohon
   1. Backwash can be initiated at any point in time
   2. Backwash can be prevented with the siphon as well
 
-  In under the siphon, the ideal gas law, **Add a ref**, is the most important equation to understand how it is initiated. 
+  In under the siphon, the ideal gas law, **Add a ref**, is the most important equation to understand how siphoning works.. 
