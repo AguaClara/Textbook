@@ -1,4 +1,4 @@
-.. _title_Rapid_Mix_Designtroduction:
+.. _title_Rapid_Mix_Introduction:
 
 ************************
 Rapid Mix Introduction
@@ -112,10 +112,15 @@ Coagulant Nanoparticle Interactions
 Dissolved Organic Matter
 ----------------------------------------
 
+Discuss charge density.
+
+
 .. _heading_Suspended_Solids:
 
 Suspended Solids
 ----------------------------------------
+
+Observed stabilization of inorganic particles
 
 .. _heading_Rate_Estimates_for_Coagulant_Nanoparticle_Transport_to_Suspended_Solids:
 

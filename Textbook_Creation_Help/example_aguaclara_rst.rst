@@ -3,7 +3,7 @@
 ***********************************************
 Functionality in RST and AguaClara Convention
 ***********************************************
-This file will explain how to use RST functionality including images, tables, code, equations, and both internal and cross-document refereces. Additionally, this document is intended to define convention for this textbook project. Any syntax included in this document should be used when contributing to the textbook project. If you come across a function for which there is no convention, please edit this file to include it here.
+This file will explain how to use RST functionality including images, tables, code, equations, and both internal and cross-document references. Additionally, this document is intended to define convention for this textbook project. Any syntax included in this document should be used when contributing to the textbook project. If you come across a function for which there is no convention, please edit this file to include it here.
 
 
 
@@ -119,7 +119,7 @@ Use the following syntax for including figures from online sources::
 Use this syntax for figures located within the /Textbook repository on GitHub::
 
   .. _figure_mountain:
-  
+
   .. figure:: Images/mountain.jpg
       :width: 300px
       :align: center
@@ -255,11 +255,11 @@ References work by calling any "target"- either tags (titles, headings, figures,
 
 Document Titles and Headings
 """""""""""""""""""""""""""""
-This content should be called with the ``:ref:`tag``` functionality. You can also choose what text will be shown. For example, ``:ref:`This text <heading_links_and_refernces>``` gives :ref:`This text <heading_links_and_references>`.
+This content should be called with the ``:ref:`tag``` functionality. You can also choose what text will be shown. For example, ``:ref:`This text <heading_links_and_references>``` gives :ref:`This text <heading_links_and_references>`.
 
 Figures and Tables
 """""""""""""""""""""
-These can be referenced in the exact same way as titles and headings. However, they can *also* be refernced using the ``:numref:`tag``` syntax. When this is done, there cannot be text written that will link to the figure. Instead, what shows up is 'Fig. 3' or 'Table 3'.
+These can be referenced in the exact same way as titles and headings. However, they can *also* be referenced using the ``:numref:`tag``` syntax. When this is done, there cannot be text written that will link to the figure. Instead, what shows up is 'Fig. 3' or 'Table 3'.
 
 * Figures: ``:numref:`figure_fluffy_cat``` gives :numref:`figure_fluffy_cat`
 * Tables: ``:numref:`table_an_example_table``` gives :numref:`table_an_example_table`
