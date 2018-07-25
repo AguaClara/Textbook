@@ -37,6 +37,7 @@ extensions = ['sphinx.ext.doctest',
               'sphinx.ext.todo',
               'sphinxcontrib.bibtex',
               'sphinxcontrib.disqus',
+              'sphinxcontrib.youtube',
               'matplotlib.sphinxext.only_directives',
               'matplotlib.sphinxext.plot_directive'
               ]
