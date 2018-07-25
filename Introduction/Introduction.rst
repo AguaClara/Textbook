@@ -321,7 +321,7 @@ See `Pretreatment Processes for Potable Water Treatment Plants by Jeff Lindgren 
 Treatment Trains
 ----------------
 
-The prerequisites for the unit processes in :refnum:`_table_Surface_Water_Treatment_Technologies` reveal that surface water treatment almost always requires a series of treatment steps. A treatment train is a series of treatment steps (or unit processes) designed to convert a contaminated source water into a purified water meeting the use requirements.
+The prerequisites for the unit processes in :numref:`table_Surface_Water_Treatment_Technologies` reveal that surface water treatment almost always requires a series of treatment steps. A treatment train is a series of treatment steps (or unit processes) designed to convert a contaminated source water into a purified water meeting the use requirements.
 
 Example treatment trains include:
  - Conventional mechanized treatment: mechanical flocculation, lamellar sedimentation, rapid sand filtration, disinfection
