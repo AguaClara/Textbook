@@ -214,7 +214,7 @@
 <p>This document contains the derivation of the flow through a tank-with-a-valve over time, <span class="math notranslate nohighlight">\(Q(t)\)</span>. Our reference will be a simple hypochlorinator, shown in the following image. In the image, a hypochlorite solution is slowly dripping and mixing with piped source water, thereby disinfecting it. The valve is almost closed to make sure that the hypochlorite solution drips instead of flows. At the end of this document is an image which shows the variables in the final equation.</p>
 <div class="figure align-center" id="id1">
 <span id="figure-drip-hypochlorinator"></span><a class="reference internal image-reference" href="../_images/drip_hypochlorinator.png"><img alt="Drip hypochlorinator" src="../_images/drip_hypochlorinator.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">This is a common setup for chlorinating water before distributing it to a nearby community.</span></p>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">This is a common setup for chlorinating water before distributing it to a nearby community.</span></p>
 </div>
 <p>This derivation begins by finding two equations for flow, <span class="math notranslate nohighlight">\(Q\)</span>, through the hypochlorinator and setting them equal to each other. First, the rate of change of the volume of hypochlorite solution in the tank is equivalent to the flow out of the hypochlorinator. Since the volume of hypochlorite solution in the tank is equal to the tank’s cross-sectional area times it height, we get the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-0">
@@ -266,7 +266,7 @@
 <p>Here lies another common source of confusion. <span class="math notranslate nohighlight">\(h_{Tank}\)</span> is not the same as <span class="math notranslate nohighlight">\(h_{0}\)</span>. <span class="math notranslate nohighlight">\(h_{Tank}\)</span> is the height of water level in the tank with reference to the tank bottom. <span class="math notranslate nohighlight">\(h_{0}\)</span> is the water level in the tank with reference to the valve. Therefore, <span class="math notranslate nohighlight">\(h_{0} \geq h_{Tank}\)</span> is true if the valve is located at or below the bottom of the tank. If the tank is elevated far above the valve, then the <span class="math notranslate nohighlight">\(h_{0} &gt; &gt; h_{Tank}\)</span>. If the valve is at the same elevation as the bottom of the tank, then <span class="math notranslate nohighlight">\(h_{0} = h_{Tank}\)</span>. Please refer to the following image to clarify <span class="math notranslate nohighlight">\(h_{0}\)</span> and <span class="math notranslate nohighlight">\(h_{Tank}\)</span>. Also note that both <span class="math notranslate nohighlight">\(h_{Tank}\)</span> and <span class="math notranslate nohighlight">\(h_{0}\)</span> are not variables, they are constants which are defined by the initial state of the hypochlorinator, when the solution just begins to flow.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-hypochlorinator-variable-explanation"></span><a class="reference internal image-reference" href="../_images/hypochlorinator_variable_explanation.png"><img alt="Hypochlorinator variables" src="../_images/hypochlorinator_variable_explanation.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text"><span class="math notranslate nohighlight">\(Q_0 =\)</span> initial flow rate of hypochlorite solution at time <span class="math notranslate nohighlight">\(t = 0\)</span>, <span class="math notranslate nohighlight">\(t_{Design} =\)</span> time it would take to drain the tank if flow was held constant at <span class="math notranslate nohighlight">\(Q_0\)</span></span></p>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text"><span class="math notranslate nohighlight">\(Q_0 =\)</span> initial flow rate of hypochlorite solution at time <span class="math notranslate nohighlight">\(t = 0\)</span>, <span class="math notranslate nohighlight">\(t_{Design} =\)</span> time it would take to drain the tank if flow was held constant at <span class="math notranslate nohighlight">\(Q_0\)</span></span></p>
 </div>
 <p>Finally, our fabricated equivalence, <span class="math notranslate nohighlight">\(\frac{Q_0}{A_{Tank}} = \frac{h_{Tank}}{t_{Design}}\)</span> can be plugged into <span class="math notranslate nohighlight">\(\frac{Q}{Q_0} = 1 - \frac{t Q_0}{2 A_{Tank} h_0}\)</span> to create the highly useful equation for flow rate as a function of time for a drip hypochlorinator:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-13">
@@ -294,7 +294,7 @@ Q(t) = Q_0 \left( 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0} \rig
 <p>First, it is necessary to understand how AguaClara tank drains work and what they look like. Many tanks, including the flocculator and entrance tank, have a hole in their bottoms which are fitted with <a class="reference external" href="https://www.mrpoolman.com.au/assets/thumbL/16057.jpg">pipe couplings</a>. During normal operation, these couplings have pipe stubs in them, and the pipe stubs are tall enough to go above the water level in the tank and not allow water to flow into the drain. When the pipe stub is removed, the water begins to flow out of the drain, as the image below indicates. The drain pipe consists of pipe and one elbow, shown in the image.</p>
 <div class="figure align-center" id="id3">
 <span id="figure-pipe-stub-drainage"></span><a class="reference internal image-reference" href="../_images/pipe_stub_drainage.png"><img alt="Pipe stub drainage" src="../_images/pipe_stub_drainage.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">This is AguaClara’s alternatives to having valves.</span></p>
+<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">This is AguaClara’s alternatives to having valves.</span></p>
 </div>
 <p>While AguaClara sedimentation tanks use valves instead of pipe to begin the process of draining, the actual drain piping system is the same, pipe and an elbow. The equation that will soon be derived applies to both pipe stub and valve drains.</p>
 <p>We will start the derivation from the following equation, which is found in an intermediate step from the ‘<span class="math notranslate nohighlight">\(Q(t)\)</span> <a class="reference internal" href="#heading-flow-for-a-tank-with-a-valve"><span class="std std-ref"> for a Tank with a Valve</span></a>.’ While this system does not have a valve, it has other sources of minor loss and therefore the equation is still valid.</p>
@@ -324,7 +324,7 @@ t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \su
 <p>Such that the variables are as the appear in the image below.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-pipe-stub-drainage-variables"></span><a class="reference internal image-reference" href="../_images/pipe_stub_drainage_variables.png"><img alt="Pipe stub drainage variables" src="../_images/pipe_stub_drainage_variables.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text"><span class="math notranslate nohighlight">\(L_{Tank}\)</span> is the length of the tank which goes the page. <span class="math notranslate nohighlight">\(K\)</span> is the aggregate minor loss coefficient of the drain system.</span></p>
+<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text"><span class="math notranslate nohighlight">\(L_{Tank}\)</span> is the length of the tank which goes the page. <span class="math notranslate nohighlight">\(K\)</span> is the aggregate minor loss coefficient of the drain system.</span></p>
 </div>
 </div>
 <div class="section" id="design-equations-for-the-linear-chemical-dose-controller-cdc">
@@ -337,7 +337,7 @@ t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \su
 </div>
 <div class="figure align-center" id="id5">
 <span id="figure-cdc-derivation"></span><a class="reference internal image-reference" href="../_images/CDC_derivation.png"><img alt="CDC Derivation" src="../_images/CDC_derivation.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">Visual representation of CDC.</span></p>
+<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">Visual representation of CDC.</span></p>
 </div>
 <div class="section" id="cdc-design-equation-derivation">
 <span id="heading-cdc-design-equation-derivations"></span><h3>CDC Design Equation Derivation<a class="headerlink" href="#cdc-design-equation-derivation" title="Permalink to this headline">¶</a></h3>
@@ -387,7 +387,7 @@ t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \su
 <p>Here is a plot of the three colored equations above. Our goal is to minimize the minor losses in the system; to bring the red and blue curves as close as possible to the green one.</p>
 <div class="figure align-center" id="id6">
 <span id="figure-cdc-linearity-model"></span><a class="reference internal image-reference" href="../_images/CDC_linearity_model.png"><img alt="CDC linearity model" src="../_images/CDC_linearity_model.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">MathCAD generated graph for linearity error analysis. TODO: make this in python</span></p>
+<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">MathCAD generated graph for linearity error analysis. TODO: make this in python</span></p>
 </div>
 <div class="section" id="designing-for-the-error-constraint">
 <h4>Designing for the error constraint, <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span><a class="headerlink" href="#designing-for-the-error-constraint" title="Permalink to this headline">¶</a></h4>
@@ -469,7 +469,7 @@ t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \su
 <p>To visualize the distinction between <span class="math notranslate nohighlight">\(\color{red}{  L_{Min, \, \Pi_{Error}}}\)</span> and math:<cite>color{green}{ L_{Min, , head loss}}</cite>, see the following plot. <span class="math notranslate nohighlight">\(\color{green}{ L_{Min, \, head loss}}\)</span> is discontinuous because it takes in the smallest allowable tube diameter as an input. As the chemical flow rate through the dosing tube(s) decreases, the dosing tube diameter does as well. Whenever you see a jump in the green points, that means the tubing diameter has changed.</p>
 <div class="figure align-center" id="id7">
 <span id="figure-cdc-length-model"></span><a class="reference internal image-reference" href="../_images/CDC_length_model.png"><img alt="CDC length model" src="../_images/CDC_length_model.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">CDC length modeling in MathCAD.</span></p>
+<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">CDC length modeling in MathCAD.</span></p>
 </div>
 <p>As you can see, the head loss constraint is more limiting than the linearity constraint when designing for tube length. Therefore, the design equation for tube length is the one which accounts for head loss. This is the second and final design equation for designing the CDC:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-37">
@@ -499,7 +499,7 @@ D_{Min, \, Laminar} = \frac{4 Q_{Max}}{\pi \nu {\rm{Re}}_{Max}}
 <p>Combined with the discrete amount of tubing sizes (shown in dark green), we can create a graph of the three diameter constraints:</p>
 <div class="figure align-center" id="id8">
 <span id="figure-cdc-diameter-model"></span><a class="reference internal image-reference" href="../_images/CDC_diameter_model.png"><img alt="CDC diameter model" src="../_images/CDC_diameter_model.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">CDC diameter modeling in MathCAD.</span></p>
+<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">CDC diameter modeling in MathCAD.</span></p>
 </div>
 </div>
 </div>
