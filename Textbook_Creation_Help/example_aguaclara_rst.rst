@@ -153,6 +153,15 @@ See :numref:`figure_mountain` for a typical mountain view.
     The base directory for figure location is the directory of the file you are writing.
     In this case, that is Textbook/Textbook_Creation_Help.
 
+.. _figure_Youtube:
+
+.. figure:: http://img.youtube.com/vi/vZ2f6mduEls/0.jpg
+    :width: 300px
+    :align: center
+    :alt: Removing Plate Settlers from an AguaClara Sedimentation tank
+    :target: http://www.youtube.com/watch?v=vZ2f6mduEls
+
+    Plant operator removing plate settlers from an AguaClara sedimentation tank.
 
 .. _heading_math_and_equations:
 
