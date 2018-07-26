@@ -104,11 +104,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#citations">Citations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#equations">Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Citations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#equations">Equations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#writing-code-blocks-not-actual-executable-code">Writing Code Blocks (not actual, executable code)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#writing-python-and-including-doctests">Writing Python and Including Doctests</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#doctests">Doctests</a></li>
@@ -479,8 +477,15 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </div>
 </div>
 </div>
-<div class="section" id="citations">
-<span id="id1"></span><h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="equations">
+<span id="citations"></span><h2>Equations<a class="headerlink" href="#equations" title="Permalink to this headline">¶</a></h2>
+<p>Equations are a little different, <code class="docutils literal notranslate"><span class="pre">:ref:`label`</span></code> does not work. They are instead called with the <code class="docutils literal notranslate"><span class="pre">:eq:`label`</span></code> syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation’s number will be the linked-text.</p>
+<ul class="simple">
+<li>Equations: <code class="docutils literal notranslate"><span class="pre">:eq:`quadratic_equation`</span></code> only generates a number in parentheses. Thus, this reference is usually preceeded by the word: ‘equation.’ Like this: equation <a class="reference internal" href="#equation-quadratic-equation">(1)</a>.</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>Citations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Heavily used <a class="reference external" href="http://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingBibTeXCitationsInSphinx.html">this reference</a></p>
 <p>Parenthetical referencing can be produced in <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>
 using the <a class="reference external" href="https://sphinxcontrib-bibtex.readthedocs.io/en/latest/">sphinxcontrib-bibtex</a> extension.</p>
@@ -518,13 +523,6 @@ including an entry for:</p>
 </div>
 <p>A working example: <a class="reference internal" href="#ex-strunk1979" id="id2">[SW79]</a>.</p>
 </div>
-</div>
-<div class="section" id="equations">
-<h2>Equations<a class="headerlink" href="#equations" title="Permalink to this headline">¶</a></h2>
-<p>Equations are a little different, <code class="docutils literal notranslate"><span class="pre">:ref:`label`</span></code> does not work. They are instead called with the <code class="docutils literal notranslate"><span class="pre">:eq:`label`</span></code> syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation’s number will be the linked-text.</p>
-<ul class="simple">
-<li>Equations: <code class="docutils literal notranslate"><span class="pre">:eq:`quadratic_equation`</span></code> only generates a number in parentheses. Thus, this reference is usually preceeded by the word: ‘equation.’ Like this: equation <a class="reference internal" href="#equation-quadratic-equation">(1)</a>.</li>
-</ul>
 <div class="section" id="writing-code-blocks-not-actual-executable-code">
 <span id="heading-writing-code-blocks"></span><h3>Writing Code Blocks (not actual, executable code)<a class="headerlink" href="#writing-code-blocks-not-actual-executable-code" title="Permalink to this headline">¶</a></h3>
 <p>You can write code in-line or as a code block. Note that these ways of showing code <em>only display code</em>, they do not generate a code block that actually runs. There are two ways of doing each. For in-line code, use <code class="docutils literal notranslate"><span class="pre">``this</span> <span class="pre">syntax``</span></code> or <code class="docutils literal notranslate"><span class="pre">:code:`this</span> <span class="pre">syntax`</span></code>. For code blocks, use this syntax:</p>
@@ -580,6 +578,7 @@ including an entry for:</p>
 </div>
 <div class="section" id="inserting-plots">
 <h3>Inserting Plots<a class="headerlink" href="#inserting-plots" title="Permalink to this headline">¶</a></h3>
+<p>Inserting plots using this method should only be done if we can integrate this with figures.</p>
 <p>(<a class="reference external" href="../Textbook_Creation_Help/example_aguaclara_rst-1.py">Source code</a>, <a class="reference external" href="../Textbook_Creation_Help/example_aguaclara_rst-1.png">png</a>, <a class="reference external" href="../Textbook_Creation_Help/example_aguaclara_rst-1.hires.png">hires.png</a>, <a class="reference external" href="../Textbook_Creation_Help/example_aguaclara_rst-1.pdf">pdf</a>)</p>
 <div class="figure">
 <img alt="../_images/example_aguaclara_rst-1.png" src="../_images/example_aguaclara_rst-1.png" />

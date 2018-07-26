@@ -339,14 +339,17 @@ Which process removes the largest quantity of contaminants?
 
 Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
 
-.. math:: \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
+.. math::
+  :label: eq_laminar_terminal_velocity
+
+   \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
 
 | Such that:
 | :math:`\bar v_t` = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water
 | :math:`D_{particle}` = particle diameter
 | :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
 
-.. plot::
+.. code:: python
 
   from aide_design.play import*
   def v_t(D_particle,density_particle,Temperature):
@@ -360,10 +363,33 @@ Sedimentation is the process of particles ‘falling’ because they have a high
   ax.loglog(D_particle.to(u.m),v_t(D_particle,organic,Temperature).to(u.m/u.s))
   ax.set(xlabel='Particle diameter (m)', ylabel='Terminal velocity (m/s)')
   ax.legend(["clay or sand","organic particle"])
-  plt.show()
+  imagepath = 'Introduction/Images/'
+  fig.savefig(imagepath+'Terminal_velocity')
 
 
-:todo: add graph showing sed velocity of organic and inorganic particles as function of diameter.
+The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (:eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
+
+
+.. _figure_Terminal_velocity:
+
+.. figure:: Images/Terminal_velocity.png
+    :width: 500px
+    :align: center
+    :alt: Terminal Velocity
+
+    The terminal velocity of a 1 :math:`\mu m` bacteria cell is approximately 20 nanometers per second. The terminal velocity of a 5 :math:`\mu m` clay particles is 30 :math:`\mu m/s`. The velocity estimates for the faster settling particles may be too slow because those particles are transitioning to turbulent flow.
+
+The low terminal velocities of particles that we need to remove from surface waters reveals that sedimentation alone will not work. The time required for a small particle to settle even a few mm would require excessively large sedimentation tanks. This is why flocculation, the process of sticking particles together so that they can attain higher sedimentation velocities, is perhaps the most important unit process in surface water treatment plants.
+
+The AguaClara treatment train consists of the following processes
+ - flow measurement
+ - metering of the coagulant (and chlorine) that will cause particles to stick together
+ - mixing of the coagulant with the raw water
+ - flocculation where the water is deformed to cause particle collisions
+ - floc blanket where large flocs settle through water that is flowing upward causing collisions between small particles carried by the upward flowing water and the large flocs
+ - lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc blanket
+ - stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed
+ - disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes
 
 Design Evolution
 ----------------

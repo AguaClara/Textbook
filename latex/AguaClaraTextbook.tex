@@ -58,7 +58,7 @@
     
 
 \title{AguaClara Textbook Documentation}
-\date{Jul 25, 2018}
+\date{Jul 26, 2018}
 \release{}
 \author{AguaClara Cornell}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -230,10 +230,29 @@ AguaClara: Clean Water for Small Communities
 \end{tabular}
 \par
 \sphinxattableend\end{savenotes}
+\begin{description}
+\item[{More gratitude below!}] \leavevmode\begin{itemize}
+\item {} 
+Ken Brown and the Sanjuan Foundation
 
-More gratitude below!
-Ken Brown
-x 100 students who gave their time and creativity so that others could have safe water on tap.
+\item {} 
+Duane Stiller
+
+\item {} 
+Countless other donors whose contributions have made it possible to develop new technologies and share those technologies with partner organizations and communities
+
+\item {} 
+Many hundreds of students who gave their time and creativity so that others could have safe water on tap
+
+\item {} 
+The Swiss Development Cooperation that has funded the construction of 5 AguaClara plants in Honduras and 2 in Nicaragua
+
+\item {} 
+The Cornell Engineering that provided generous funding in the startup years.
+
+\end{itemize}
+
+\end{description}
 
 
 \chapter{Authors}
@@ -1312,8 +1331,8 @@ Why does flocculation precedes sedimentation?
 Which process removes the largest quantity of contaminants?
 
 Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
-\begin{equation}\label{equation:Introduction/Introduction:Introduction/Introduction:0}
-\begin{split}\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\end{split}
+\begin{equation}\label{equation:Introduction/Introduction:eq_laminar_terminal_velocity}
+\begin{split} \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\end{split}
 \end{equation}
 \begin{DUlineblock}{0em}
 \item[] Such that:
@@ -1321,11 +1340,64 @@ Sedimentation is the process of particles ‘falling’ because they have a high
 \item[] \(D_{particle}\) = particle diameter
 \item[] \(\rho\) = density. The \(p\) subscript stands for particle, while \(w\) stands for water
 \end{DUlineblock}
-\begin{quote}\begin{description}
-\item[{todo}] \leavevmode
-add graph showing sed velocity of organic and inorganic particles as function of diameter.
 
-\end{description}\end{quote}
+\fvset{hllines={, ,}}%
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{aide\PYGZus{}design}\PYG{n+nn}{.}\PYG{n+nn}{play} \PYG{k}{import}\PYG{o}{*}
+\PYG{k}{def} \PYG{n+nf}{v\PYGZus{}t}\PYG{p}{(}\PYG{n}{D\PYGZus{}particle}\PYG{p}{,}\PYG{n}{density\PYGZus{}particle}\PYG{p}{,}\PYG{n}{Temperature}\PYG{p}{)}\PYG{p}{:}
+  \PYG{k}{return} \PYG{p}{(}\PYG{n}{D\PYGZus{}particle}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{pc}\PYG{o}{.}\PYG{n}{gravity} \PYG{o}{*}\PYG{p}{(}\PYG{n}{density\PYGZus{}particle} \PYG{o}{\PYGZhy{}} \PYG{n}{pc}\PYG{o}{.}\PYG{n}{density\PYGZus{}water}\PYG{p}{(}\PYG{n}{Temperature}\PYG{p}{)}\PYG{p}{)}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{18}\PYG{o}{*}\PYG{n}{pc}\PYG{o}{.}\PYG{n}{viscosity\PYGZus{}kinematic}\PYG{p}{(}\PYG{n}{Temperature}\PYG{p}{)}\PYG{o}{*}\PYG{n}{pc}\PYG{o}{.}\PYG{n}{density\PYGZus{}water}\PYG{p}{(}\PYG{n}{Temperature}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{to}\PYG{p}{(}\PYG{n}{u}\PYG{o}{.}\PYG{n}{m}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{s}\PYG{p}{)}
+\PYG{n}{clay} \PYG{o}{=} \PYG{l+m+mi}{2650} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{kg}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{m}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{3}
+\PYG{n}{organic} \PYG{o}{=} \PYG{l+m+mi}{1040} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{kg}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{m}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{3}
+\PYG{n}{Temperature} \PYG{o}{=} \PYG{l+m+mi}{20} \PYG{o}{*} \PYG{n}{u}\PYG{o}{.}\PYG{n}{degC}
+\PYG{n}{D\PYGZus{}particle} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{logspace}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{o}{*}\PYG{n}{u}\PYG{o}{.}\PYG{n}{m}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{loglog}\PYG{p}{(}\PYG{n}{D\PYGZus{}particle}\PYG{o}{.}\PYG{n}{to}\PYG{p}{(}\PYG{n}{u}\PYG{o}{.}\PYG{n}{m}\PYG{p}{)}\PYG{p}{,}\PYG{n}{v\PYGZus{}t}\PYG{p}{(}\PYG{n}{D\PYGZus{}particle}\PYG{p}{,}\PYG{n}{clay}\PYG{p}{,}\PYG{n}{Temperature}\PYG{p}{)}\PYG{o}{.}\PYG{n}{to}\PYG{p}{(}\PYG{n}{u}\PYG{o}{.}\PYG{n}{m}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{s}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{loglog}\PYG{p}{(}\PYG{n}{D\PYGZus{}particle}\PYG{o}{.}\PYG{n}{to}\PYG{p}{(}\PYG{n}{u}\PYG{o}{.}\PYG{n}{m}\PYG{p}{)}\PYG{p}{,}\PYG{n}{v\PYGZus{}t}\PYG{p}{(}\PYG{n}{D\PYGZus{}particle}\PYG{p}{,}\PYG{n}{organic}\PYG{p}{,}\PYG{n}{Temperature}\PYG{p}{)}\PYG{o}{.}\PYG{n}{to}\PYG{p}{(}\PYG{n}{u}\PYG{o}{.}\PYG{n}{m}\PYG{o}{/}\PYG{n}{u}\PYG{o}{.}\PYG{n}{s}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n}{xlabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Particle diameter (m)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Terminal velocity (m/s)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{clay or sand}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{organic particle}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{imagepath} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Introduction/Images/}\PYG{l+s+s1}{\PYGZsq{}}
+\PYG{n}{fig}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{n}{imagepath}\PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Terminal\PYGZus{}velocity}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (\eqref{equation:Introduction/Introduction:eq_laminar_terminal_velocity}) of these particles is given in \hyperref[\detokenize{Introduction/Introduction:figure-terminal-velocity}]{Fig.\@ \ref{\detokenize{Introduction/Introduction:figure-terminal-velocity}}}.
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=500\sphinxpxdimen]{{Terminal_velocity}.png}
+\caption{The terminal velocity of a 1 \(\mu m\) bacteria cell is approximately 20 nanometers per second. The terminal velocity of a 5 \(\mu m\) clay particles is 30 \(\mu m/s\). The velocity estimates for the faster settling particles may be too slow because those particles are transitioning to turbulent flow.}\label{\detokenize{Introduction/Introduction:id19}}\label{\detokenize{Introduction/Introduction:figure-terminal-velocity}}\end{figure}
+
+The low terminal velocities of particles that we need to remove from surface waters reveals that sedimentation alone will not work. The time required for a small particle to settle even a few mm would require excessively large sedimentation tanks. This is why flocculation, the process of sticking particles together so that they can attain higher sedimentation velocities, is perhaps the most important unit process in surface water treatment plants.
+\begin{description}
+\item[{The AguaClara treatment train consists of the following processes}] \leavevmode\begin{itemize}
+\item {} 
+flow measurement
+
+\item {} 
+metering of the coagulant (and chlorine) that will cause particles to stick together
+
+\item {} 
+mixing of the coagulant with the raw water
+
+\item {} 
+flocculation where the water is deformed to cause particle collisions
+
+\item {} 
+floc blanket where large flocs settle through water that is flowing upward causing collisions between small particles carried by the upward flowing water and the large flocs
+
+\item {} 
+lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc blanket
+
+\item {} 
+stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed
+
+\item {} 
+disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes
+
+\end{itemize}
+
+\end{description}
 
 
 \subsection{Design Evolution}
@@ -1341,7 +1413,7 @@ Mechanized and automated water treatment plants performed reasonably well in com
 \capstart
 
 \noindent\sphinxincludegraphics[width=300\sphinxpxdimen]{{Kathmandu_chemical_feed_room}.png}
-\caption{Failed chlorine doing system bypassed with a red tube that siphons the chlorine solution at a plant in Kathmandu, Nepal in 2012.}\label{\detokenize{Introduction/Introduction:id19}}\label{\detokenize{Introduction/Introduction:figure-kathmandu-chemical-feed-room}}\end{figure}
+\caption{Failed chlorine doing system bypassed with a red tube that siphons the chlorine solution at a plant in Kathmandu, Nepal in 2012.}\label{\detokenize{Introduction/Introduction:id20}}\label{\detokenize{Introduction/Introduction:figure-kathmandu-chemical-feed-room}}\end{figure}
 
 The ingenious and simple chemical dosing system that uses a siphon to completely bypass the failed pumps begs the question of whether design engineers could have invented a better option than the short lived pumps that they specified. We will investigate a gravity powered chemical dosing system that is far more reliable than chemical dosing pumps and that borrows from the simplicity of the garden hose solution used by the Nepali plant operators.
 
@@ -1352,7 +1424,7 @@ Chemical dosing systems are particularly vulnerable and their failures make plan
 \capstart
 
 \noindent\sphinxincludegraphics[width=300\sphinxpxdimen]{{Kathmandu_alum_dosing}.jpg}
-\caption{Alum dosing system based on the rate that 25 kg blocks of alum are placed in the inlet channel of the plant.}\label{\detokenize{Introduction/Introduction:id20}}\label{\detokenize{Introduction/Introduction:figure-kathmandu-alum-dosing}}\end{figure}
+\caption{Alum dosing system based on the rate that 25 kg blocks of alum are placed in the inlet channel of the plant.}\label{\detokenize{Introduction/Introduction:id21}}\label{\detokenize{Introduction/Introduction:figure-kathmandu-alum-dosing}}\end{figure}
 
 The AguaClara Cornell program was founded in 2005 with the goal of creating a new generation of sustainable technologies that would perform well even in the rugged settings of rural communities. The goal wasn’t simply to create technologies that would work for communities with very limited resources. The goal was to create the next generation of technologies that would both perform well in communities with limited resources and would be the highest performing technologies on multiple metrics for all communities.
 
@@ -1379,7 +1451,7 @@ An example of design for the operator is the elevation of the walkways in AguaCl
 \capstart
 
 \noindent\sphinxincludegraphics[width=300\sphinxpxdimen]{{Improvised_ladder_access_to_sed_tank}.jpg}
-\caption{A plant operator built a makeshift ladder to enable easier access to the flocculation and sedimentation tanks in a package plant. This ladder considerably shortened the distance between the coagulant dose controls and the flocculator. The ladder also makes it possible to look closely at the water to see the size of the flocs.}\label{\detokenize{Introduction/Introduction:id21}}\label{\detokenize{Introduction/Introduction:figure}}\end{figure}
+\caption{A plant operator built a makeshift ladder to enable easier access to the flocculation and sedimentation tanks in a package plant. This ladder considerably shortened the distance between the coagulant dose controls and the flocculator. The ladder also makes it possible to look closely at the water to see the size of the flocs.}\label{\detokenize{Introduction/Introduction:id22}}\label{\detokenize{Introduction/Introduction:figure}}\end{figure}
 
 
 \section{Design Bifurcations}
@@ -1396,14 +1468,14 @@ Without the ability to gain access to a sedimentation tank from above, conventio
 \begin{figure}[htbp]
 \centering
 \capstart
-\sphinxhref{http://www.youtube.com/watch?v=TSh-ZNqaW8Y}{\sphinxincludegraphics[width=300\sphinxpxdimen]{{0}.jpg}}\caption{Plant operators opening hatch below plate settlers in a traditional sedimentation tank.}\label{\detokenize{Introduction/Introduction:id22}}\label{\detokenize{Introduction/Introduction:figure-cleaning-a-sed-tank-with-fixed-plates}}\end{figure}
+\sphinxhref{http://www.youtube.com/watch?v=TSh-ZNqaW8Y}{\sphinxincludegraphics[width=300\sphinxpxdimen]{{0}.jpg}}\caption{Plant operators opening hatch below plate settlers in a traditional sedimentation tank.}\label{\detokenize{Introduction/Introduction:id23}}\label{\detokenize{Introduction/Introduction:figure-cleaning-a-sed-tank-with-fixed-plates}}\end{figure}
 
 AguaClara sedimentation tanks are designed to be taken off line one at a time so the water treatment plant can continue to operate during maintenance. Two plant operators can quickly open a sedimentation tank by removing the plastic plate settlers (see the video \hyperref[\detokenize{Introduction/Introduction:figure-removing-plate-settlers}]{Fig.\@ \ref{\detokenize{Introduction/Introduction:figure-removing-plate-settlers}}}). The zero settled sludge design of the AguaClara sedimentation tanks also reduces the need for cleaning.
 
 \begin{figure}[htbp]
 \centering
 \capstart
-\sphinxhref{http://www.youtube.com/watch?v=vZ2f6mduEls}{\sphinxincludegraphics[width=300\sphinxpxdimen]{{01}.jpg}}\caption{Plant operator removing plate settlers from an AguaClara sedimentation tank.}\label{\detokenize{Introduction/Introduction:id23}}\label{\detokenize{Introduction/Introduction:figure-removing-plate-settlers}}\end{figure}
+\sphinxhref{http://www.youtube.com/watch?v=vZ2f6mduEls}{\sphinxincludegraphics[width=300\sphinxpxdimen]{{01}.jpg}}\caption{Plant operator removing plate settlers from an AguaClara sedimentation tank.}\label{\detokenize{Introduction/Introduction:id24}}\label{\detokenize{Introduction/Introduction:figure-removing-plate-settlers}}\end{figure}
 \phantomsection\label{\detokenize{Introduction/Introduction:heading-mechanized-or-smart-hydraulics}}
 There is another major consequence of building water treatment plants in a secure enclosed building. Many water treatment plants will operate around the clock and that requires plant operators to spend the night at the facility. Having a secure facility provides improved safety for the plant operator. That improved safety is very important for some potential operators and thus providing that safety will increase potential diversity.
 
