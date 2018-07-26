@@ -275,6 +275,14 @@ These can be referenced in the exact same way as titles and headings. However, t
 
 .. _citations:
 
+Equations
+==========
+
+Equations are a little different, ``:ref:`label``` does not work. They are instead called with the ``:eq:`label``` syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation's number will be the linked-text.
+
+* Equations: ``:eq:`quadratic_equation``` only generates a number in parentheses. Thus, this reference is usually preceeded by the word: 'equation.' Like this: equation :eq:`quadratic_equation`.
+
+
 Citations
 =============================
 
@@ -326,12 +334,6 @@ including an entry for:
 
 A working example: :cite:`ex-Strunk1979`.
 
-Equations
-==========
-
-Equations are a little different, ``:ref:`label``` does not work. They are instead called with the ``:eq:`label``` syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation's number will be the linked-text.
-
-* Equations: ``:eq:`quadratic_equation``` only generates a number in parentheses. Thus, this reference is usually preceeded by the word: 'equation.' Like this: equation :eq:`quadratic_equation`.
 
 
 .. _heading_writing_code_blocks:
@@ -393,6 +395,8 @@ Though there are other ways to include code in an RST document, this method make
 
 Inserting Plots
 ---------------
+
+Inserting plots using this method should only be done if we can integrate this with figures.
 
 .. plot::
 
