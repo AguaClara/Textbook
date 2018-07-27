@@ -113,7 +113,14 @@ Table of :math:`G`, :math:`\varepsilon`, and :math:`h_L` for Different Geometrie
 
 
 
-These are the derivations for the equations that `appear in the table containing equations for :math:`G`, :math:`\varepsilon`, and :math:`h_L`. ### Straight pipe (wall shear) The average energy dissipation rate, :math:`\bar\varepsilon`, in a control volume with residence time :math:`\theta` is
+These are the derivations for the equations that `appear in the table containing equations for :math:`G`, :math:`\varepsilon`, and :math:`h_L`.
+
+.. _heading_Straight_Pipe_Wall_Shear:
+
+Straight pipe (wall shear)
+--------------------------
+
+The average energy dissipation rate, :math:`\bar\varepsilon`, in a control volume with residence time :math:`\theta` is
 
 .. math::  \bar\varepsilon = \frac{gh_{\rm{L}}}{\theta}
 
