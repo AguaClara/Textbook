@@ -115,8 +115,7 @@ Backwash Constraints
   Additional concerns:
   - there are two manifold systems, the trunks into the branches and the branches into the slots. Thus pressure recovery must be small in both trunk and branches so that the slots can reconcile the changes in flow, because flow distribution is fairly uniform in short manifold systems when total port area is equal to or less than manifold area.
 
-Sand Layer Thickness as Function of trunk diameters
-====================================================
+
 
 Flow Distribution constraint: ratio of pressure recovery to clean bed head loss
 ================================================================================
@@ -160,23 +159,122 @@ Where the ratio of the pressure recovery in the branches to the head loss throug
 
 :math:`\Pi_{FiManifoldHeadLoss} = \frac{PR}{H_{LSand}}`
 
+Though the piezometric head profiles fothe inlet and outlet manifolds for the middle layers may be parallel, meaning the pressure recovery is less constrained for a good flow distribution, we still need a tight constraint for the outer manifolds where the velocity is 1/2 and the PR is 1/4 that of the inner layer, while smaller still in the bottom-most manifold where the velocity head is tiny as the diameter is larger.
 
 
 
 
-
-
+.. _heading_n_filter:
 Number of filters
 ===================
+
+Parameters:
+:math:`PR_{FiManBranchEst} = 0.8cm`
+:math:`ND_{FiBwTrunkMax} = 8in`
+:math:`HL_{FIBWSlotsEst}= 10cm`
+:math:`PR_{FiBwManifoldMax} = HL_{FIBWSlotsEst}*\Pi_{FiManifoldHeadLoss}`
+
+**Explain where these came from**
+
+First Constraint: Pressure Recovery in trunks during forward Filtration;
+
+Use the Kozeny equation to find the headloss through the clean bed. Assume the depth of the sand bed as calculated above in the :ref:`_heading_sand_layer_from_trunk_diam` section
+
+Second Constraint: Pressure recovery in lowest trunk during backwash
+
+:math:`V_{FiBwManTrunkMaxPR} = \sqrt{2g*(HL_{FIBWSlotsEst}*\Pi_{FiManifoldHeadLoss} - PR_{FiManBranchEst} )}`
+
+This velocity is used to find the flow possible in the pipe, using the inner diameter of the pipe, and is rounded to the nearest 1 L/s.
+
+:math:`Q_{FiPRBwTrunk} = \pi*ID_{FiBwTrunkMax}^2 * V_{FiBwManTrunkMaxPR}`
+
+The flow set by the maximum pressure recovery is then the lesser of the flow calculated from forward filtration or backwsh. This value is the maximum flow through on filter.
+
+Knowing the maximum flow through one filter, finding the number of filters is simple.
+
+If the plant flow is less than 16 L/s, EStaRS should be used, as having two filters is ideal, but the minimum filter flow is 8 L/s, which is not possible below 16 L/s.
+In all other cases at least 2 filters should be used to allow for backwash during low flows.
+
+Thus the number of filters for plants is:
+:math:`max(\frac{Q_{Plant}}{Q_{FiMaxPR}}, 2)`
+
+The flow through each filter given the number of filters:
+
+:math:`Q_{FI} = \frac{Q_{Plant}}{N_{Fi}}`
+
+Within a filter, the flow through each layer:
+
+:math:`Q_{FiLayer} = \frac{Q_{Fi}}{N_{FiLayer}}`
+
+This is the flow that sets the pipe size for each trunk within each layer of the filter. The Nominal Diameter (ND) of the trunk pipes is then determined using the available pipe sizes. This design assumes SDR 26 to be conservative and avoid looping.
+
+First, find the diameter based on the flow and velocity. A doubled flow is used because the two middle trunks must carry flow for two layers (**check this for correctness**)
+
+:math:`\frac{2Q_{FiLayer}}{V_{FiManTrunkMaxPR}} = A_{TrunkCalc} = \frac{\pi*ID_{TrunkCalc}^2}{4}`
+
+Within the set of available inner diameters for SDR 26 pipes,  this :math:`D_{TrunkCalc}` value is rounded up to the nearest real size. This size is found in the specified pipe database, and kept as a ND. This functioanlly obtained ND value is compared to the maximum filter trunk ND (:math:`ND_{FiTrunkMax}`). The lesser of the two values is chosen. The lesser value is chosen because selecting the maximum pressure recovery in a previous step can result in a filter flow rate slightly larger than the maximum for the max trunk diameter. The max trunk diameter is still used in this case, though it just barely violates the pressure recovery constraint
+
+That process is repeated to find the size of the backwash trunk, the only difference is the flow rate and velocity used are those for the backwash trunk.
+
+:math:`\frac{Q_{Fi}}{V_{FiBwManTrunkMaxPR}} = A_{BwTrunkCalc} = \frac{\pi*ID_{BwTrunkCalc}^2}{4}`
+
+Finding the pipe sizes lets the pressure recovery be determiend for the trunk in forward filtration:
+
+:math:`PR = \frac{V^2}{2g} \longrightarrow \frac{\frac{2Q_{FiLayer}}{\pi*D_{Trunk}^2}}{2g} = PR_{FiForwardTrunk}`
+
+
+and in backwash:
+
+:math:`\frac{\frac{2Q_{Fi}}{\pi*D_{TrunkBw}^2}}{2g} = PR_{FiBwTrunk}`
+
+These values allow the necessary height of sand in each layer to be determined, as in the following section.
+
+.. _heading_sand_layer_from_trunk_diam:
+Sand Layer Thickness as Function of trunk diameters
+====================================================
+
+ This is the first section in the design file and sets up the functions for the calcualtion. Im not feeling it today though!
+
+
+
+
+
+
+
+
+
+
+
 
 Clean bed head loss
 ====================
 
+The headloss through a bed of sand is determined with the Kozeny Equation (**ref for this eventually**)
+
+The head loss between the lowest layer is different than the other five layers because, it is slightly thicker as calculated just above.
+
 Auxilliary box widths and plumbing
 ===================================
 
+not today
+
 Number of manifold branches
 ==============================
+
+Constraints for number of manifold branches:
+1. Even number, because branches on both sides of the trunks
+2. max allowable flow through backwash branches
+3. allowable **average** flow for pressure recovery term
+
+First, the maximum pressure recovery in backwash branch:
+
+:math:`PR_{FiBwManBranchMax} = HL_{FIBWSlotsEst}*\Pi_{FiManifoldHeadLoss} - PR_{FiBwTrunk}`
+
+the resulting velocity from this pressure recovery:
+
+:math:`V_{FiBwManBranchMax} = \sqrt{2g*PR_{FiBwManBranchMax}}`
+
+
 
 Filter box dimensions and manifold inlet pipes
 ===============================================

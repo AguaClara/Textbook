@@ -308,26 +308,68 @@ Backwash Constraints
   Additional concerns:
   - there are two manifold systems, the trunks into the branches and the branches into the slots. Thus pressure recovery must be small in both trunk and branches so that the slots can reconcile the changes in flow, because flow distribution is fairly uniform in short manifold systems when total port area is equal to or less than manifold area.
 
-  Sand Layer Thickness as Function of trunk diameters
-  ====================================================
+Sand Layer Thickness as Function of trunk diameters
+====================================================
 
-  Flow Distribution constraint: ratio of pressure recovery to clean bed head loss
-  ================================================================================
+Flow Distribution constraint: ratio of pressure recovery to clean bed head loss
+================================================================================
 
-  Number of filters
-  ===================
+Number of filters
+===================
 
-  Clean bed head loss
-  ====================
+Clean bed head loss
+====================
 
-  Auxilliary box widths and plumbing
-  ===================================
+Auxilliary box widths and plumbing
+===================================
 
-  Number of manifold branches
-  ==============================
+Number of manifold branches
+==============================
 
-  Filter box dimensions and manifold inlet pipes
-  ===============================================
+Filter box dimensions and manifold inlet pipes
+===============================================
 
-  Manifold slot/orifice design
-  ===============================
+Manifold slot/orifice design
+===============================
+
+Plumbing head losses
+======================
+
+Total Sand depth and backwash head loss
+========================================
+
+Path head loss calculations and flow distribution between layers
+=================================================================
+
+Siphon design
+===============
+
+Inlet channel and elevations
+=============================
+
+Elevations
+===========
+
+Inlet Weir Design
+==================
+
+Entrance and overflow box lengths (X-direction)
+===============================================
+
+Siphon Valve sizes
+===================
+
+Sand Removal Pipe
+==================
+
+Trunk Line purge valves
+=========================
+
+Main plant drain channel
+=========================
+
+Sand Volume
+=============
+
+Backwash Lagoon
+=================
