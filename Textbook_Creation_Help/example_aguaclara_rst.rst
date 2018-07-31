@@ -448,3 +448,9 @@ Assorted Other Convention
 .. bibliography:: /references.bib
   :cited:
   :keyprefix: ex-
+
+Convert a DOI into a URL
+Given the following DOI.
+DOI:10.2166/aqua.2006.062
+This is the url.
+http://dx.doi.org/10.2166/aqua.2006.062
