@@ -256,7 +256,7 @@ Chemical injection into the center of a pipe is common in drinking water treatme
 .. math:: v_{eddy} \approx \left( \bar\varepsilon \, D \right)^\frac{1}{3}
 
 For a long straight pipe
-:math:`\bar\varepsilon = \frac{{\rm f}}{2} \frac{\bar v^3}{D}` (:numref:`eq_EDR_straight_pipe`) and thus we can obtain the ratio between mean velocity and the velocity of the large scale eddies.
+:math:`\bar\varepsilon = \frac{{\rm f}}{2} \frac{\bar v^3}{D}` (Equation :eq:`eq_EDR_straight_pipe`) and thus we can obtain the ratio between mean velocity and the velocity of the large scale eddies.
 
 .. math:: v_{eddy} \approx \left( \frac{{\rm f}}{2} \frac{\bar v^3}{D} \, D \right)^\frac{1}{3}
 
@@ -291,9 +291,9 @@ The length scale at which most of the kinetic energy contained in the small eddi
 Kolmogorov length scale. Thus we have
 
 .. math::
-   :label:eq_inner_viscous_length
-   
-  \lambda_\nu = \Pi_{K\nu}\left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}
+   :label: eq_inner_viscous_length
+
+   \lambda_\nu = \Pi_{K\nu}\left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}
 
 where :math:`\Pi_{K\nu} = 50`
 
@@ -434,7 +434,7 @@ We have demonstrated that all of the steps for mixing of the coagulant nanoparti
 
 
 
-Below are the derivations for the equations that `appear in the table containing equations for :math:`G`, :math:`\varepsilon`, and :math:`h_L`.
+Below are the derivations for the equations that appear in :numref:`table_Control_volume_equations` containing equations for :math:`G`, :math:`\varepsilon`, and :math:`h_L`.
 
 .. _heading_Straight_Pipe_Wall_Shear:
 

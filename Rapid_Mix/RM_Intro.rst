@@ -20,21 +20,21 @@ Although the processes have not been well characterized, the energy that is inve
 
 Rapid mix sets the stage for aggregation of both suspended particles and dissolved substances. Particle and dissolve substance aggregation is mediated by coagulant nanoparticles. The nanoparticles attach to raw water particles as well as to some dissolved species. After the nanoparticles have been mixed with the raw water and have attached to raw water particles the next process, flocculation, can begin.  :ref:`Flocculation <title_Flocculation_Introduction>` is the process of producing collisions between particles to create flocs (aggregates of particles).
 
-Coagulant nanoparticle application includes multiple steps that must occur before the raw water particles can begin to aggregate. The sticky nanoparticles can be aluminum :math:`(Al^{+3})` or iron :math:`(Fe^{+3})` based and in either case the nanoparticles are formed from precipitated hydroxide species :math:`(Al(OH)_3)` or :math:`(Fe(OH)_3)`. The series of events that are contained in the broad designation of “rapid mix” are:
+Coagulant nanoparticle application includes multiple steps that must occur before the raw water particles can begin to aggregate. The sticky nanoparticles can be aluminum :math:`(Al^{+3})` or iron :math:`(Fe^{+3})` based and in either case the nanoparticles are formed from precipitated hydroxide species (:math:`Al(OH)_3` or :math:`Fe(OH)_3`). The series of events that are contained in the broad designation of “rapid mix” are:
 
-  1. Liquid coagulant stock solution with a low pH is injected into the raw water
-  2. Fluid Mixing: Turbulent eddies randomize the fluids (but don’t blend them)
+  #. Liquid coagulant stock solution with a low pH is injected into the raw water
+  #. Fluid Mixing: Turbulent eddies randomize the fluids (but don’t blend them)
 
-     1. Large scale eddies mix the coagulant with the raw water by creating large fluid deformations. This stretching and turning of the raw water and coagulant is analogous to shuffling a deck of cards. The cards are randomized, but the cards maintain their identity. The original liquids retain their chemical composition. This step must be completed before any flow splitting for parallel treatment trains.
-     2. Turbulent eddies disintegrate into smaller and smaller eddies.
-     3. At a very small scale (Inner viscous length scale) viscosity becomes significant and the kinetic energy of the eddies begins to be converted to heat by viscosity.
+     #. Large scale eddies mix the coagulant with the raw water by creating large fluid deformations. This stretching and turning of the raw water and coagulant is analogous to shuffling a deck of cards. The cards are randomized, but the cards maintain their identity. The original liquids retain their chemical composition. This step must be completed before any flow splitting for parallel treatment trains.
+     #. Turbulent eddies disintegrate into smaller and smaller eddies.
+     #. At a very small scale (Inner viscous length scale) viscosity becomes significant and the kinetic energy of the eddies begins to be converted to heat by viscosity.
 
-  3. The coagulant is blended with the raw water by molecular diffusion
-  4. The higher pH of the raw water causes the coagulant to begin to precipitate as :math:`Al_{12}AlO_4(OH)_{24}(H_2O)_{12}^{7+}`, an aluminum, Al, nanoparticle.
-  5. The precipitating :math:`Al_{13}` molecules aggregates with other nearby :math:`Al_{13}` molecules to form aluminum hydroxide nanoparticles. It is also possible that the nanoparticles are already formed in the coagulant stock suspension. Polyaluminum chloride stock solutions turn white in about a year at room temperature and this suggests that nanoparticles form in the stock solution.
-  6. The Al nanoparticles attach to other dissolved species and suspended particles.
-  7. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
-  8. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
+  #. The coagulant is blended with the raw water by molecular diffusion
+  #. The higher pH of the raw water causes the coagulant to begin to precipitate as :math:`Al_{12}AlO_4(OH)_{24}(H_2O)_{12}^{7+}`, an aluminum, Al, nanoparticle.
+  #. The precipitating :math:`Al_{13}` molecules aggregates with other nearby :math:`Al_{13}` molecules to form aluminum hydroxide nanoparticles. It is also possible that the nanoparticles are already formed in the coagulant stock suspension. Polyaluminum chloride stock solutions turn white in about a year at room temperature and this suggests that nanoparticles form in the stock solution.
+  #. The Al nanoparticles attach to other dissolved species and suspended particles.
+  #. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
+  #. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
 
 These multiple steps cover a wide range of length scales and it is not clear at the onset which processes might be the rate limiting steps. We will develop time scale estimates for several of these steps to help identify which processes will likely require the most attention to design. Many of these transport processes are presumed to occur in parallel. :numref:`figure_transport_length_scales` shows the range of length scales.
 
@@ -58,7 +58,7 @@ Aluminum based coagulants are commonly used in drinking water treatment plants. 
  - Iron (1.83) and Oxygen (3.44) is 1.61
  - Hydrogen (2.20) and Oxygen (3.44) is 1.24
 
-Thus both aluminum and iron coagulants are more polar than water and it is possibly that it is their polarity that enables them to displace water that is bound to particles surfaces and then form bonds with that surface. In order to displace water molecules that are bound to the particles surfaces, the coagulants must have stronger bonds to particles surfaces than the polar water molecules and thus it seems likely that coagulants must be more polar than water.
+Thus both aluminum and iron coagulants are more polar than water and it is possibly that it is their strong polarity that enables them to displace water that is bound to particles surfaces and then form bonds with that surface. In order to displace water molecules that are bound to the particles surfaces, the coagulants must have stronger bonds to particles surfaces than the polar water molecules and thus it seems likely that coagulants must be more polar than water.
 
 
 
@@ -83,7 +83,7 @@ The release of these protons reduces the acid neutralizing capacity, ANC, (also 
    :header: "", "Alum", "Calcium Carbonate"
    :align: left
 
-   Molecular Formula, :math:`Al_2(SO_4)_3 \cdot 14.3H_2O`,:math:``CaCO_3`
+   Molecular Formula, :math:`Al_2(SO_4)_3 \cdot 14.3H_2O`, :math:`CaCO_3`
    Molecular mass, 600 g/mole, 100 g/mole
    eq/mole, 6,2
    Molecular mass/eq, 100 g/eq, 50 g/eq
@@ -138,7 +138,7 @@ A critical property of coagulants is that in order to act as an adhesive between
 .. _figure_Al_solubility:
 
 .. figure::    Images/Al_solubility.png
-    :width: 400px
+    :width: 600px
     :align: center
     :alt: Al solubility
 
@@ -226,7 +226,7 @@ Coagulant Nanoparticle Interactions
 
 Coagulant nanoparticles are sticky and can attach to suspended particles as well as to each other. Some dissolved substances also adsorb to coagulant nanoparticles. The development of models to describe these interactions has been impeded by the charge neutralization hypothesis that failed to account for the size of the coagulant nanoparticles and by the complexity of modeling all of these competing processes. Although the model describing removal of dissolved organic matter is still nascent, it is possible that a simplified approach that separates fast and slow processes will enable a sequential model.
 
-Interactions between the various suspended and dissolved substances (see :numref:`Particle_sizes`) can occur simultaneously as soon as the coagulant is blended with the raw water. The rates of these interactions are controlled by the transport processes of fluid deformation and molecular diffusion. Molecular diffusion is fastest for small particles and fluid deformation is most effective for larger particles. Thus the fastest process is hypothesized to be the diffusion of low mass molecules to the coagulant nanoparticles. Transport of the coagulant nanoparticles to attach to suspended solids is expected to be a slower process. Transport of suspended particles to collide with other suspended particles (flocculation) is even slower.
+Interactions between the various suspended and dissolved substances (see :numref:`figure_Particle_sizes`) can occur simultaneously as soon as the coagulant is blended with the raw water. The rates of these interactions are controlled by the transport processes of fluid deformation and molecular diffusion. Molecular diffusion is fastest for small particles and fluid deformation is most effective for larger particles. Thus the fastest process is hypothesized to be the diffusion of low mass molecules to the coagulant nanoparticles. Transport of the coagulant nanoparticles to attach to suspended solids is expected to be a slower process. Transport of suspended particles to collide with other suspended particles (flocculation) is even slower.
 
 .. _figure_Particle_sizes:
 
@@ -342,7 +342,7 @@ Water treatment plants at research and municipal scales deploy a wide range of f
   -  Plane jet - (expansion) - [inlet into sedimentation tank]
   -  Behind a flat plate - (expansion) - [mechanical mixers]
 
-The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants. The :ref:`Equations_Varying_Flow_Geometries` are available as a reference.
+The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants. The :ref:`heading_Equations_Varying_Flow_Geometries` are available as a reference.
 
 .. _table_Control_volume_equations:
 
