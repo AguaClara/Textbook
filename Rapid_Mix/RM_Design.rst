@@ -41,3 +41,13 @@ Rapid Mix Head Loss
 **Off-slide**
 
 .. math:: Q = \frac{D_{Jet}^{\frac{7}{3}} \pi \varepsilon_{Max}^{\frac{1}{3}}}{4 \Pi_{Jet}}
+
+.. code:: python
+
+ """ importing """
+ from aide_design.play import*
+ D=24 * u.inch
+ V = 11 * u.mm/u.s
+ Q= (V*D**2*u.pi/4).to(u.L/u.s)
+ Q
+ 

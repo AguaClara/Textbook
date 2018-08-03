@@ -50,7 +50,7 @@ These multiple steps cover a wide range of length scales and it is not clear at 
 
 .. _heading_Chemistry_of_Coagulant_Nanoparticles:
 
-Chemistry of coagulant nanoparticles
+Chemistry of Coagulant Nanoparticles
 ========================================
 
 Aluminum based coagulants are commonly used in drinking water treatment plants. Less frequently iron based coagulants are used. These metals precipitate in water at neutral pH as :math:`Al(OH)_3` or :math:`Fe(OH)_3`. These precipitates form nanoparticles that are sticky. The origin of that stickiness is not well known, but one significant property of both precipitates is that they are both highly polar molecules. The `difference in electronegativity <https://en.wikipedia.org/wiki/Electronegativity>`_ (Pauling scale) between
@@ -157,9 +157,9 @@ In drinking water treatment plant operation it is sometimes necessary to add a b
 
 In the section, :ref:`heading_pH_Adjustment` we evaluate the case where we add a base that will increase the ANC of the raw water and it might also increase the total carbonate concentration. We calculate how much of that base to add to reach a target pH.
 
-.. _Fluid_mixing:
+.. _Fluid_Mixing:
 
-Fluid mixing
+Fluid Mixing
 ========================================
 
 Fluid mixing is the process by which large scale eddies distribute packets of the coagulant stock throughout the raw water. The term “Rapid mix” is probably best used to describe this process. Traditional methods of achieving this fluid mixing include various methods of generating intense turbulence. Fluid mixing is able to rapidly blend the coagulant with the raw water in a matter of a few seconds. The equations describing the fluid mixing process are presented in the section on :ref:`heading_Estimates_of_time_required_for_mixing_processes`.
