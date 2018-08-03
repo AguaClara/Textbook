@@ -471,7 +471,7 @@ Finally:
 .. math::
   \color{purple}{
     n_{channels} = \frac{W_{total}{W_{Min}}
-    }
+    }}
 
 | Such that:
 | :math:`n_{channels}` is an even number and is not 0. Usually, :math:`n_{channels}` is either 2 or 4.
