@@ -128,7 +128,7 @@ To generate minor losses, we need to create flow expansions. AguaClara does this
    :align: center
    :alt: AC Flocculator
 
-  Clockwise from the top left the images show: the outline of the entire flocculator, some top and bottom baffles in the channels, the 4 flocculator channels in this flocculator, and the flow path of water through the flocculator
+   Clockwise from the top left the images show: the outline of the entire flocculator, some top and bottom baffles in the channels, the 4 flocculator channels in this flocculator, and the flow path of water through the flocculator
 
 .. _figure_baffle_module:
 
@@ -137,7 +137,7 @@ To generate minor losses, we need to create flow expansions. AguaClara does this
    :align: center
    :alt: this image shows the floc baffle module out of the water within a plant.
 
-  Before being inserted into the floccualtor channel, the baffle module is constructed as a unit as shown here.
+   Before being inserted into the floccualtor channel, the baffle module is constructed as a unit as shown here.
 
 AguaClara flocculators, like the one pictured above, are called **vertical hydraulic flocculators** because the baffles force the flow vertically up and down. If the baffles were instead arranged to force the flow side-to-side, the flocculator would be called a **horizontal hydraulic flocculator**. AguaClara uses vertical flocculators because they are more efficient when considering plant area. They are deeper than horizontal flocculators, which allows them to have a smaller `plan-view area <https://simple.wikipedia.org/wiki/Plan_view>`_ and thus to be cheaper.
 
@@ -153,7 +153,7 @@ Before beginning this section, it is important to understand how water flows thr
    :align: center
    :alt: flocculator flow image
 
-  Flow path through a vertical flow hydraulic flocculator
+   Flow path through a vertical flow hydraulic flocculator
 
 Since baffles are the source of head loss via minor losses, we need to find the minor loss coefficient of one baffle if we want to be able to quantify its head loss. To do this, we apply fluid mechanics intuition and check it against a computational fluid dynamics (CFD) simulation. Flow around a 90° bend has a vena contracta value of around :math:`\Pi_{vc} = 0.62`. Flow around a 180° bend therefore has a value of :math:`\color{red}{\Pi_{vc, \, baffle} = \Pi_{vc}^2 = 0.384}`. This number is roughly confirmed with CFD, as shown in the image below.
 
@@ -164,7 +164,7 @@ Since baffles are the source of head loss via minor losses, we need to find the 
    :width: 100px
    :alt: CFD vc baffle
 
-  The 180° bend at the end of a baffle results in a dramatic flow contraction with all of the flow passing through less than 40% of the space between the baffles.
+   The 180° bend at the end of a baffle results in a dramatic flow contraction with all of the flow passing through less than 40% of the space between the baffles.
 
 We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}`. Through the `:ref:`third form of the minor loss equation <heading_minor_losses>`, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine a :math:`k` for flow around a single baffle:
 
@@ -225,7 +225,7 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
    :width: 400px
    :alt: jet expansion in the flocculator
 
-  A turbulent jet expands in width by one unit for every 10 units downstream.
+   A turbulent jet expands in width by one unit for every 10 units downstream.
 
 Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing :math:`S`. We do this by substituting  :math:`D_0 = (0.384 S)` along with :math:`D = S` to approximate how much distance, :math:`x = H_e`, the contracted flow has to cover.
 
@@ -387,7 +387,7 @@ The plant flow rate :math:`Q` is defined by the needs of the community that the 
    :width: 600px
    :alt: physical design criteria
 
-  Layout of flocculator and sedimentation tanks that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.
+   Layout of flocculator and sedimentation tanks that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.
 
 
 Find
