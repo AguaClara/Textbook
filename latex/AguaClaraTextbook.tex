@@ -6010,7 +6010,7 @@ The minimum \(\Pi_{H_eS}\) allowable depends on the slot with ratio. If \(\Pi_{H
 \noindent\sphinxincludegraphics[width=600\sphinxpxdimen]{{HeS_ratio_min}.jpg}
 \caption{The minimum \(\frac{H_e}{S}\) ratio is set by the need to prevent short circuiting through the flocculator.}\label{\detokenize{Flocculation/Floc_Design:id13}}\label{\detokenize{Flocculation/Floc_Design:figure-hes-ratio-min}}\end{figure}
 
-Thus, \(\Pi_{H_eS_{Min}}\) should be at leasts twice the slot width ratio, \(\Pi_{H_eS_{Min}} = 2 ` . Historically, AguaClara plants have been designed using :math:\)Pi\_\{H\_eS\_\{Min\}\} = 3{}`. This adds a safety factor of sorts, ensuring that the flow does not short-circuit through the flocculator and also allowing more space for the flow to expand after each contraction.
+Thus, \(\Pi_{H_eS_{Min}}\) should be at least twice the slot width ratio, \(\Pi_{H_eS_{Min}} = 2\). Historically, AguaClara plants have been designed using \(\Pi_{H_eS_{Min}} = 3\). This adds a safety factor of sorts, ensuring that the flow does not short-circuit through the flocculator and also allowing more space for the flow to expand after each contraction.
 \begin{equation}\label{equation:Flocculation/Floc_Design:Flocculation/Floc_Design:13}
 \begin{split}\Pi_{H_eS_{Min}} = \frac{H_e}{S} = 3\end{split}
 \end{equation}
@@ -6228,11 +6228,11 @@ Now that we know \(n_{channels}\), we can find the actual width of a channel, \(
 Now that the physical dimensions of the flocculator have been defined, the baffle module needs to be designed. The parameter on which most others are based is the distance between flow expansions, \(H_e\). Recall that \(H_e = H\) when there are no obstacles in between baffles.
 
 
-\subsubsection{\sphinxstylestrong{Height Between Expansions :math:{}`H\_e{}` and Number of Obstacles per Baffle Space :math:{}`n\_\{obstacles\}{}`}}
-\label{\detokenize{Flocculation/Floc_Design:height-between-expansions-math-h-e-and-number-of-obstacles-per-baffle-space-math-n-obstacles}}
-We have a range of possible \(H_e\) values based on our window of \(3 < \frac{H_e}{S} < 6\). However, we have a limitation and a preference which shape how we design \(H_e\). Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want \(H_e\) to be closer to \(6\) than it is to \(3\); we are looking for \(H_{e_{Max}}`\).
+\subsubsection{Height Between Expansions \protect\(H_e\protect\) and Number of Obstacles per Baffle Space \protect\(n_{obstacles}\protect\)}
+\label{\detokenize{Flocculation/Floc_Design:height-between-expansions-and-number-of-obstacles-per-baffle-space}}
+We have a range of possible \(H_e\) values based on our window of \(3 < \frac{H_e}{S} < 6\). However, we have a limitation and a preference which shape how we design \(H_e\). Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want \(H_e\) to be closer to \(6\) than it is to \(3\); we are looking for \(H_{e_{Max}}\).
 
-We calculate \(H_{e_{Max}}\) based on the physical flocculator dimensions. The equation for \(H_e\) is obtained by rearranging one of the equations for minimum channel width found above, \(W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\). Because we have already design the channel width, we substitute \(\color{purple}{W_{channel}}\) for \(W_{Min, \, \Pi_{H_eS}}\). Since we are looking for \(H_{e_{Max}}\), we also substitute \(\Pi_{{HS}_{Max}}\) for \(\Pi_{H_eS}\). The result is:
+We calculate \(H_{e_{Max}}\) based on the physical flocculator dimensions. The equation for \(H_e\) is obtained by rearranging one of the equations for minimum channel width found above, \(W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\). Because we have already design the channel width, we substitute \({W_{channel}\) for \(W_{Min, \, \Pi_{H_eS}}\). Since we are looking for \(H_{e_{Max}}\), we also substitute \(\Pi_{{HS}_{Max}}\) for \(\Pi_{H_eS}\). The result is:
 \begin{equation}\label{equation:Flocculation/Floc_Design:Flocculation/Floc_Design:25}
 \begin{split}H_{e_{Max}} = \left[ \frac{K}{2 \nu \bar G^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}\end{split}
 \end{equation}
@@ -6251,7 +6251,7 @@ Finally, we can obtain the number of obstacles per baffle space. The \(- 1\) in 
 
 \subsubsection{\sphinxstylestrong{Baffle Spacing :math:{}`S{}`}}
 \label{\detokenize{Flocculation/Floc_Design:baffle-spacing-math-s}}
-Finally, we can find the space between baffles, \(S\). The equation for \(S\) is taken from an intermediate step \sphinxtitleref{in the :math:{}`W\_\{Min, , Pi\_\{H\_eS\}\} :ref:{}`derivation \textless{}title\_Flocculation\_Derivations\textgreater{}}, \(W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\). Rearranging for \(S\), we get:
+Finally, we can find the space between baffles, \(S\). The equation for \(S\) is taken from an intermediate step in the \(W_{Min, \, \Pi_{H_eS}}\) derivation where we obtained, \(W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\). Rearranging for \(S\), we get:
 \begin{equation}\label{equation:Flocculation/Floc_Design:Flocculation/Floc_Design:29}
 \begin{split}S = \left( \frac{K}{2 H_e \bar G^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}\end{split}
 \end{equation}
