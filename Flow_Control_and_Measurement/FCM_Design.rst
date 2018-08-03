@@ -83,7 +83,7 @@ Linear Flow Orifice Meter (LFOM)
 
 What it is
 ^^^^^^^^^^^^^^
-The LFOM is a weir shape cut into a pipe. It was meant to imitate `the Sutro Weir <http://www.nptel.ac.in/courses/105106114/pdfs/Unit14/14_3b.pdf>`_ while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.
+The LFOM is a weir shape cut into a pipe. It was meant to imitate `the Sutro Weir <https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research>`_ while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.
 
 .. _figure_sutro_v_lfom:
 .. figure:: Images/sutro_v_lfom.png
