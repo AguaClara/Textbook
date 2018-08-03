@@ -20,7 +20,7 @@ Henry's Law
 Effects of Gas Bubbles in Water Treatment Plants
 ================================================
 
-The American Water Works Association recognized the detrimental effects of gas bubble evolution in drinking water treatment plants and sponsored research at Virginia Polytechnic Institute and State University. `Paolo Scardina's Dissertation <_static\references\PaoloScardinaDissertation2004.pdf>`_ provides an excellent review of the problems that are caused by gas bubbles.
+The American Water Works Association recognized the detrimental effects of gas bubble evolution in drinking water treatment plants and sponsored research at Virginia Polytechnic Institute and State University. `Paolo Scardina's Dissertation <../_static/references/PaoloScardinaDissertation2004.pdf>`_ provides an excellent review of the problems that are caused by gas bubbles.
 
 Dissolved gas removal is also a goal after anaerobic wastewater treatment for enhanced removal of dissolved methane.
 
