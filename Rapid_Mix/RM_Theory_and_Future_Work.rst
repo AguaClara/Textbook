@@ -4,293 +4,12 @@
 Rapid Mix Theory and Future Work
 ********************************
 
-.. _heading_Equations_Varying_Flow_Geometries:
-
-Equations for :math:`\varepsilon` and :math:`G` in Varying Flow Geometries
-===============================================================================
-
-Estimation of velocity gradients for various flow geometries is the basis for the design of rapid mix, flocculators, and plate settlers. Thus, our goal is to define the velocity gradients consistently across a range of possible flow regimes. There are three approaches to calculating the average velocity gradient within a control volume. 1) Use the Navier Stokes equations and solve for the spatially averaged velocity gradient. 1) Use Computational Fluid Dynamics (CFD) to solve for the spatially averaged velocity gradient. 1) Use the total mechanical energy loss in the control volume to calculate the energy dissipation rate. Estimate the velocity gradient directly from the energy dissipation rate, :math:`G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}`, as defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil Eng., 30, 203–221.).
-
-The first approach would be ideal but is difficult in practice because Navier Stokes solutions are only available for limited geometries and laminar flow. CFD could be used but is difficult to use as a general engineering design approach given the large number of geometries that are used in drinking water treatment plants. For these reasons we will use the control volume approach to estimate the average velocity gradient. This method incorrectly assumes that the energy dissipation rate is completely uniform in the control volume and hence the velocity gradient is also uniform. This method results in an over estimation of the velocity gradient.
-The Camp-Stein estimate of :math:`G_{CS}` is based on a control volume where the velocity gradient is uniform. Consider a layer of fluid of depth :math:`H` and apply a velocity, :math:`v` at the top of the fluid. The velocity gradient, :math:`G`, is thus :math:`\frac{v}{H}` everywhere in the fluid. The force required to move the top of the fluid at velocity v can be obtained from the required shear, :math:`\tau`. From Newtons Law of Friction we have
-
-.. math:: \tau = \mu \frac{v}{H} = \mu G = \nu\rho G
-
-Where :math:`\tau` is the force required per unit plan view area. The power per unit area required to move the fluid at velocity :math:`v` is :math:`\tau v`. The mass per unit area is :math:`\rho H`. Thus the energy dissipation rate or the power per mass is
-
-.. math:: \varepsilon = \frac{P}{m} = \frac{\tau v}{\rho H} = \frac{\nu \rho G v}{\rho H} = \nu G^2
-
-This equation has no approximations, but has one very important assumption. We derived this equation for a control volume where the velocity gradient was **uniform**. The reactors and control volumes that we will be using as we design water treatment plants will **not** have uniform velocity gradients. Indeed, several of the water treatment processes will be turbulent and thus the velocity gradients in the fluid will vary in both space and time. Even in laminar flow in a pipe the velocity gradient is far from uniform with high velocity gradients at the wall and zero velocity gradient at the center of the pipe.
-
-We’d like to know if we can apply the previous equation
-
-.. math:: \varepsilon = \nu G^2
-
-to the case where the energy dissipation rate and velocity gradients are nonuniform by simply introducing average values of both quantities.
-
-.. math:: \bar\varepsilon \overset{?}{=} \nu \bar G^2
-
-We will test this option with a simple case. Consider a hypothetical reactor (case 2) that is 4 times as large in plan view area as the uniform velocity gradient case explored above (case 1). In addition, assume that 3/4 of the reactor has a velocity gradient of zero. The average energy dissipation rate for case 1 is
-
-.. math:: \bar \varepsilon_1 = \frac{P_1}{m_1} =  \nu \bar G_1^2
-
-The average energy dissipation rate for case 2 is
-
-.. math:: \bar \varepsilon_2 = \frac{P_1}{4m_1} = \frac{\bar \varepsilon_1}{4}
-
-This makes sense because we are putting in the same amount of energy into a control volume that is 4 times bigger.
-
-Now we calculate the velocity gradients. As previously determined,
-
-.. math:: \bar G_1 = \sqrt{\frac{\bar\varepsilon_1}{\nu}}
-
-The average velocity gradient in the second control volume is simply the volume weighted average
-
-.. math:: \bar G_2 = \bar G_1\frac{1}{4}+ 0 \frac{3}{4}
-
-where 1/4 of the case 2 control volume has the same velocity gradient as the case 1 control volume and 3/4 of the control volume has a velocity gradient of 0. The Camp Stein method would suggest that :math:`\bar G_2` is equal to
-
-.. math:: \bar G_2 \overset{?}{=} \sqrt{\frac{\bar\varepsilon_2}{\nu}}= \sqrt{\frac{\bar\varepsilon_1}{4\nu}}
-
-Now we check to see if the Camp Stein method of estimating the average velocity gradient, :math:`\bar G`, is correct.
-
-.. math:: \bar G_2 = \frac{\bar G_1}{4} \neq \sqrt{\frac{\bar\varepsilon_1}{4\nu}} =  \frac{\bar G_1}{2}
-
-Given that the energy dissipation rate is proportional to the square of the velocity gradient the mean of the energy dissipation rate is **not** proportional to the mean of the velocity gradient. Thus the Camp Stein method of calculating the average velocity gradient is not correct except in the case of uniform velocity gradient. The Camp Stein equation is dimensionally correct and could be corrected by adding a dimensionless constant :math:`\Pi_{CS}` that is a function of the energy dissipation rate distribution within the control volume.
-
-.. math:: \bar G =\Pi_{CS}\sqrt{\frac{\bar\varepsilon}{\nu}}
-
-where :math:`\Pi_{CS}` is 1 for a uniform velocity gradient and is less than one for non uniform velocity gradients. We can think :math:`\Pi_{CS}` as a measure of the efficiency of using energy to deform the fluid. We can calculate :math:`\Pi_{CS}` for cases where we have either a Navier Stokes or a computation fluid dynamics estimate of :math:`\bar G`.
-
-The conventional approach to design of flocculators uses the Camp Stein definition of
-
-.. math:: G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}
-
-where :math:`G_{CS}` is **not** the average velocity gradient, but is larger than the average velocity gradient by a factor of :math:`\Pi_{CS}`. Thus we have
-
-.. math:: G_{CS} = \Pi_{CS}\bar G
-
-Use of the Camp Stein velocity gradient in design of mixing units and flocculators results in an error when applying results from one reactor to another. If the energy dissipation rate distribution within the reactors is different, then :math:`\Pi_{CS}` will be different for the two reactors and the actual average velocity gradient, :math:`\bar G` will be different for the two reactors.
-
-Given that energy is used more efficiently to produce velocity gradients if the velocity gradients are uniform, our goal is to design mixing and flocculation units that have relatively uniform velocity gradients. If all of our reactors at both research scale and municipal scale have similar values of :math:`\Pi_{CS}`, then we can use the Camp Stein definition of :math:`G_{CS}` and not introduce any significant errors. It will not be reasonable, however, to expect similar performance based on similar values of :math:`G_{CS}` if one reactor has relatively uniform energy dissipation rates and the other reactor has zones with very high energy dissipation rates and zones with very low energy dissipation rates.
-
-We will demonstrate later that mechanically mixed reactors typically have a much wider range of energy dissipation rates than do well designed hydraulically mixed reactors. Thus comparisons between mechanically mixed and hydraulically mixed reactors must account for differences in :math:`\Pi_{CS}`.
-
-We will use the Camp Stein definition :math:`G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}` as the design parameter of convenience in this textbook.
-
-
-
-**Previously in Rapid Mix Intro Section** (delete this header once you are reacquainted with the document)
-----------------------------------------------------------------------------------------------------------
 
 Our understanding of rapid mix is currently quite speculative. This is an area that requires substantial research. We have anecdotal evidence that the process of transporting coagulant nanoparticles to suspended particle surfaces may be a slow, rate-limiting process. Dissolved organic matter may influence the rate of coagulant nanoparticle transport by effectively increasing the size of the coagulant nanoparticles and thus reducing the diffusion rate.
 
 Developing a fundamental understanding of the mixing and transport processes that occur between coagulant addition and flocculation is a very high priority for the AguaClara program.
 
-.. _heading_Estimates_of_time_required_for_mixing_processes:
 
-Estimates of time required for mixing processes
-================================================
-
-.. _heading_Turbulent_Large_Scale_Eddies:
-
-Turbulent Large Scale Eddies
-------------------------------------
-
-The first step in mixing is at the scale of the largest eddies. The largest eddies are limited in size by the smallest dimension normal to the direction of flow. Thus in a pipe the dimension of the largest eddies is set by the pipe diameter. In a open channel the dimension of the largest eddies is usually the water depth although it could be the width of the channel for the case of a narrow tall channel.
-
-We can use the eddy velocity to estimate how long it will take for an eddy to cross the smallest dimension of flow. Eddy velocity is :math:`v_{eddy} \approx \left( \bar\varepsilon \, L_{eddy} \right)^\frac{1}{3}`.
-The “:math:`\approx`” indicates that this relationship is the same order of magnitude. In a pipe we have
-
-.. math:: v_{eddy} \approx \left( \bar\varepsilon \, D \right)^\frac{1}{3}
-
-For a long straight pipe
-:math:`\bar\varepsilon = \frac{{\rm f}}{2} \frac{\bar v^3}{D}` and thus we can obtain the ratio between mean velocity and the velocity of the large scale eddies.
-
-.. math:: v_{eddy} \approx \left( \frac{{\rm f}}{2} \frac{\bar v^3}{D} \, D \right)^\frac{1}{3}
-
-.. math:: \frac{v_{eddy}}{\bar v} \approx \left( \frac{{\rm f}}{2}   \right)^\frac{1}{3}
-
-Given a friction factor of 0.02, the eddy velocity is approximately 20% of the mean velocity. We can use this ratio to estimate how many pipe diameters downstream from an injection point will the coagulant be mixed across the diameter of the pipe.
-
-.. math::  N_{D_{pipe}} \approx \frac{\bar v}{v_{eddy}} \approx \left(\frac{2}{{\rm f}} \right)^\frac{1}{3}
-
-Where :math:`N_{D_{pipe}}` is the distance in number of pipe diameters downstream of the injection point where complete mixing will have occurred. This estimate is a minimum distance and a factor of safety of 2 or more would reasonably be applied. In addition it is best practice to inject the coagulant in the center of the pipe. Injecting the coagulant at the side of the pipe will require considerably greater distance downstream for mixing across the pipe.
-
-.. code:: python
-
-    print((0.02/2)**(1/3))
-
-.. _heading_Inner_Viscous_Length_Scale:
-
-Inner Viscous Length Scale
---------------------------
-
-The smallest scale at which inertia containing eddies causes mixing is set by the final damping of inertia by viscosity. Turbulence occurs when fluid inertia is too large to be damped by viscosity. The ratio of inertia to viscosity is given by the Reynolds number, :math:`\rm Re`:
-
-.. math:: {\rm{Re}} = \frac{\bar vD}{\nu}
-
-Flows with high Reynolds numbers are turbulent (inertia dominated) and with low Reynolds are laminar (viscosity dominated). The transition Reynolds number is a function of the flow geometry and the velocity and length scale that are used to characterize the flow. In all turbulent flows there is a length scale at which inertia finally loses to viscosity. The scale where viscosity wins is some multiple of the Kolmogorov length scale, which is defined as:
-
-.. math:: \eta_K = \left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}
-
-where :math:`\eta_K` is the Kolmogorov length scale. At the Kolmogorov length scale viscosity completely dampens the inertia of the eddies and effectively “kills” the turbulence.
-
-The length scale at which most of the kinetic energy contained in the small eddies is dissipated by viscosity is the inner viscous length scale, :math:`\lambda_v`, which is about `50 times larger than <http://dimotakis.caltech.edu/pdf/Dimotakis_JFM2000.pdf>`__ the
-Kolmogorov length scale. Thus we have
-
-.. math:: \lambda_\nu = \Pi_{K\nu}\left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}
-
-{#eq:inner_viscous_length}
-
-where :math:`\Pi_{K\nu} = 50`
-
-At length scales larger than the inner viscous length scale, :math:`\lambda_v`, the dominant transport mechanism is by turbulent eddies. At length scales smaller than :math:`\lambda_v` the dominant transport mechanism is fluid deformation due to shear. If the flow regime is completely laminar such as in a small diameter tube flocculator, then the dominant transport mechanism is fluid deformation due to shear at length scales all the way up to the diameter of the tubing.
-
-The dividing line between eddy transport and fluid deformation controlled by viscosity can be calculated as a function of the energy dissipation rate using [@eq:inner_viscous_length].
-
-.. code:: python
-
-    """ importing """
-    from aide_design.play import*
-    from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
-    import matplotlib.pyplot as plt
-    from matplotlib.ticker import FormatStrFormatter
-    imagepath = 'AguaClara Water Treatment Plant Design/Rapid Mix/Images/'
-    EDR_array = np.logspace(0,4,num=50)*u.mW/u.kg
-    Temperature = 20*u.degC
-    def Inner_viscous(EDR, Temperature):
-        return fm.RATIO_KOLMOGOROV * fm.eta_kolmogorov(EDR, Temperature)
-
-    fig, ax = plt.subplots()
-    ax.semilogx(EDR_array.to(u.mW/u.kg),Inner_viscous(EDR_array, Temperature).to(u.mm))
-    ax.yaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    ax.xaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    ax.set(xlabel='Energy dissipation rate (W/kg)', ylabel='Inner viscous length scale (mm)')
-    ax.text(30, 6, 'Eddies cause mixing', fontsize=12,rotation=-30)
-    ax.text(1, 5, 'Shear and diffusion cause mixing', fontsize=12,rotation=-30)
-    fig.savefig(imagepath+'Inner_viscous_vs_EDR')
-    plt.show()
-
-.. _figure_Inner_viscous_vs_EDR:
-
-.. figure:: Images/Inner_viscous_vs_EDR.png
-    :width: 400px
-    :align: center
-    :alt: Inner viscous vs EDR
-
-    Eddies can cause fluid mixing down to the scale of a few millimeters for energy dissipation rates used in rapid mix units and flocculators.
-
-.. _heading_Mixing Time as a Function of Scale:
-
-Turbulent Mixing Time as a Function of Scale
---------------------------------------------
-
-We are searching for the rate limiting step in the mixing process as we transition from the scale of the flow down to the scale of the coagulant nanoparticles. We can estimate the time required for eddies to mix at their length scales by assuming that the eddies pass all of their energy to smaller scales in the time it takes for an eddy to travel the distance equal to the length scale of the eddy. This time is known as the **`eddy turnover time <http://ceeserver.cee.cornell.edu/eac20/cee637/handouts/TURBFLOW_1.pdf>`__**,
-:math:`t_{eddy}`. :ref:`The derivation for the equation below is found here <heading_Eddy_turnover_time>`.
-
-.. math:: t_{eddy} \approx \left( \frac{L_{eddy}^2}{ \bar\varepsilon }\right)^\frac{1}{3}
-
-We can plot the eddy turnover time as a function of scale from the inner viscous length scale up to the scale of the flow. We will discover whether large scale mixing by eddies is faster or slower than small scale mixing by eddies.
-
-.. code:: python
-
-    EDR_graph = np.array([0.01,0.1,1,10 ])*u.W/u.kg
-    Temperature
-    """Use the highest EDR to estimate the smallest length scale"""
-    Inner_viscous_graph = Inner_viscous(EDR_graph[2], Temperature)
-    Inner_viscous_graph
-    L_flow = 0.5*u.m
-    L_scale = np.logspace(np.log10(Inner_viscous_graph.magnitude),np.log10(L_flow.magnitude),50)
-    L_scale
-    fig, ax = plt.subplots()
-    for i in range(len(EDR_graph)):
-      ax.semilogx(L_scale,((L_scale**2/EDR_graph[i])**(1/3)).to_base_units())
-
-    ax.legend(EDR_graph)
-
-    #ax.yaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    #ax.xaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    ax.set(xlabel='Length (m)', ylabel='Eddy turnover time (s)')
-    fig.savefig(imagepath+'Eddy_turnover_time')
-    plt.show()
-
-.. _figure_Eddy_turnover_times:
-
-.. figure:: Images/Eddy_turnover_time.png
-    :width: 400px
-    :align: center
-    :alt: Eddy turnover time
-
-    Eddy turnover times as a function of length scale for a range of energy dissipation rates.
-
-The eddy turnover times are longest for the largest eddies and this analysis suggests that it only takes a few seconds for turbulent eddies to mix from the scale of the flow down to the inner viscous length scale.
-
-The large scale mixing time is critical for the design of water treatment plants for the case where the flow is split into multiple treatment trains after coagulant addition. In this case it is critical that the coagulant be mixed equally between all of the treatment trains and thus the mixing times shown in the previous graph represent a minimum time between where the coagulant is added and where the flow is divided into the parallel treatment trains.
-
-It is likely this process of mixing from the scale of the flow down to the inner viscous length scale is commonly referred to as “rapid mix.” Here we showed that this mixing is indeed rapid and is really only a concern in the case where the coagulant injection point is very close to the location where the flow is split into multiple treatment trains.
-
-.. _heading_Shear-Diffusion_Transport:
-
-Shear-Diffusion Transport
--------------------------
-
-After the first few seconds in which mixing occurs from the length scale of the flow down to the inner viscous length scale the next step in the transport process is blending of the coagulant uniformly with the raw water. At the end of the turbulent transport the coagulant stock has been stretched out into thin bands throughout the raw water, but the two fluids are not actually blended together by turbulence. The blending is accomplished by fluid deformation and then by molecular diffusion.
-
-.. _heading_Fluid_Deformation_by_Shear:
-
-Fluid Deformation by Shear
---------------------------
-
-The time scale for fluid deformation is :math:`1/G` where :math:`G` is the velocity gradient. This simple relationship is because the velocity of fluid deformation is proportional to the length scale and thus the time to travel any given distance in a linear velocity gradient is always the same. Velocity gradients in conventional mechanized rapid mix units are order 1000 Hz and thus the time for fluid deformation to blur concentration gradients is approximately 1 ms. This confirms the idea that blending the coagulant with the raw water is actually a very fast process with the slowest phase being the transport by turbulent eddies at the scale of reactor.
-
-.. _heading_Einstein_Diffusion_Equation:
-
-Einstein’s Diffusion Equation
------------------------------
-
-We can estimate the length scale at which fluid shear and diffusion provide transport at the same rate. Einstein’s diffusion equation is
-
-.. math:: D_{Diffusion} = \frac{k_B T}{3 \pi \mu d_P}
-
-where :math:`k_B` is the Boltzmann constant and :math:`d_P` is the diameter of the particle that is diffusion in a fluid with viscosity :math:`\nu` and density :math:`\rho`. The diffusion coefficient :math:`D_{Diffusion}` has dimensions of :math:`\frac{[L^2]}{[T]}` and can be understood as the velocity of the particle multiplied by the length of the mean free path.
-
-From dimensional analysis the time for diffusion to blur a concentration gradient over a length scale, :math:`L_{Diffusion}` is
-
-.. math:: t_{Diffusion} \approx \frac{L_{Diffusion}^2}{D_{Diffusion}}
-
-The shear time scale is :math:`1/G` and thus we can solve for the length scale at which diffusion and shear have equivalent transport rates.
-
-.. math::  1/G \approx t_{Diffusion} \approx \frac{L_{Diffusion}^2}{D_{Diffusion}}
-
-Substitute Einstein’s diffusion equation and solve for the length scale that transitions between shear and diffusion transport.
-
-.. math:: L_{Diffusion}^{Shear} \approx \sqrt{\frac{k_B T}{3 G \pi \mu  d_P}}
-
-.. code:: python
-
-    def L_Shear_Diffusion(G,Temperature,d_particle):
-      return np.sqrt((u.boltzmann_constant*Temperature/
-      (3 * G *  np.pi *pc.viscosity_dynamic(Temperature)* d_particle)).to_base_units())
-
-    G = 100*u.Hz
-    d_particle = fm.PACl.Diameter*u.m
-    x = (L_Shear_Diffusion(G,Temperature,d_particle)).to(u.nm)
-    print(x)
-
-Molecular diffusion finishes the blending process by transporting the coagulant nanoparticles the last few hundred nanometers. The entire mixing process from the coagulant injection point to uniform blending with the raw water takes only a few seconds.
-
-We have demonstrated that all of the steps for mixing of the coagulant nanoparticles with the raw water are very fast. Compared with the time required for flocculation, 10s to 1000s of seconds, the time required for this mixing is insignificant. The remaining steps are:
- 1. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
- 1. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
-
-.. _heading_Length_Scales_of_Coagulant_Nanoparticles_and_Clay:
-
-Length Scales of Coagulant Nanoparticles and Clay
-=================================================
-
-The coagulant nanoparticles eventually will attach to clay particles. The clay particles have a diameter of approximately :math:`5 \, {\rm \mu m}` and thus it is clear from the length scale in the figure above that turbulent eddies aren’t able to transport all the way to attachment to clay.
 
 .. _heading_Diffusion_and_Shear_Transport_Coagulant_Nanoparticles_to_Clay:
 
@@ -329,11 +48,85 @@ Use dimensional analysis to get a relative velocity for the long range transport
 
 .. math::
 
-   \Lambda_{Clay} = [L]
-   \, \, \, \, \, \, \,
-   \varepsilon = \frac{[L]^2}{[T]^3}
-   \, \, \, \, \, \, \,
-   \nu = \frac{[L]^2}{[T]}
+  \Lambda_{Clay} = [L]
+  \, \, \, \, \, \, \,
+  \varepsilon = \frac{[L]^2}{[T]^3}
+  \, \, \, \, \, \, \,
+  \nu = \frac{[L]^2}{[T]}
+
+.. _heading_Collision_Rates:
+
+Collision Rates
+===============
+
+.. math:: {\rlap{\kern.08em--}V_{\rm{Cleared}}} \approx \pi d_{Clay} L_{Diff_{NC}} v_r t_c
+
+Where :math:`\rlap{\kern.08em--}V_{Occupied} = \Lambda_{Clay}^3`. Solve for :math:`t_c`:
+
+.. math:: t_c = \frac{\Lambda_{NC}^3}{\pi d_{Clay} L_{Diff_{NC}} v_r}
+
+This is the average time for a clay particle to have the entire volume of water that it occupies sweep past the clay particle.
+:math:`v_r \approx \Lambda_{Clay} G`
+
+.. math:: t_c = \frac{\Lambda_{Clay}^3}{\pi d_{Clay} L_{Diff_{NC}} \Lambda_{Clay} G}
+
+Where :math:`t_c = \frac{dN_c}{dt}`:
+
+.. math:: dN_c = \pi d_{Clay} L_{Diff_{NC}}{\Lambda^{-2}_{Clay}} G dt
+
+.. _heading_Collision_Rate_and_Particle_Removal:
+
+Collision Rate and Particle Removal
+-----------------------------------
+
+A fraction of the remaining coagulant nanoparticles are removed during the time required for one sweep past the clay particle.
+
+.. math:: \frac{dn_{NC}}{ - k \, n_{NC}} = dN_c
+
+.. math:: \frac{dn_{NC}}{ - k \, n_{NC}} = \pi d_{Clay} L_{Diff_{NC}}{\Lambda^{-2}_{Clay}} G dt
+
+.. _heading_Integrate_the_coagulant_transport_model:
+
+Integrate the coagulant transport model
+---------------------------------------
+
+Integrate from the initial coagulant nanoparticle concentration to the concentration at time t.
+
+.. math:: \int \limits_{n_{NC_0}}^{n_{NC}} n_{NC}^{- 1} \, dn_{NC}  =  - \pi d_{Clay} L_{Diff_{NC}} \Lambda^{-2}_{Clay} G \, k  \int \limits_0^t {dt}
+
+Use pC notation to be consistent with how we describe removal efficiency of other contaminants.
+
+.. math:: 2.3 p C_{NC} = \pi d_{Clay}\,  L_{Diff_{NC}}\,  \Lambda^{-2}_{Clay}\,  G k  t
+
+Solve for the time required to reach a target efficiency of application of coagulant nanoparticles to clay.
+
+.. math::
+
+    t_{coagulant, \, application} = \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\,  L_{Diff_{NC}} }
+
+
+Coagulant nanoparticle application
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. math::   \Delta h =   \frac{G^2 \nu \theta}{g}
+
+Replace :math:`\theta` with t.
+
+.. math::   \Delta h =  \frac{G^2 \nu}{g} \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\,  L_{Diff_{NC}} }
+
+.. math:: L_{Diff} \approx \left( \frac{2k_B T d_{Clay}}{3 \pi \,\mu  \, d_{NC} G}\right)^\frac{1}{3}
+
+.. math::   \Delta h =  \frac{G^2 \nu}{g} \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}} \left( \frac{3 \pi \,\mu  \, d_{NC} G}{2k_B T d_{Clay}}\right)^\frac{1}{3}
+
+Solve for the velocity gradient.
+
+.. math::   \Delta h =  \frac{G^\frac{4}{3} \nu}{g} \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi k \, d_{Clay}} \left( \frac{3 \pi \,\mu  \, d_{NC} }{2k_B T d_{Clay}}\right)^\frac{1}{3}
+
+.. math::
+
+
+    G_{coagulant, \, application} =  d_{Clay}\left(\frac{\pi k \,g\Delta h }{2.3p C_{NC} \, \Lambda_{Clay}^2 \nu} \right)^\frac{3}{4} \left( \frac{2k_B T }{3 \pi \,\mu  \, d_{NC} }\right)^\frac{1}{4}
+
 
 Diffusion band thickness
 ------------------------
@@ -560,9 +353,9 @@ The velocity gradient can be obtained from the rate at which mechanical energy i
 
 where :math:`\varepsilon` is the energy dissipation rate, :math:`G` is the velocity gradient, and :math:`\nu` is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.
 
-.. math:: P = \bar\varepsilon \rlap{-}V \rho
+.. math:: P = \bar\varepsilon \rlap{\kern.08em--}V \rho
 
-.. math::  P = \bar G^2 \nu \rlap{-}V \rho
+.. math::  P = \bar G^2 \nu \rlap{\kern.08em--}V \rho
 
 We can relate reactor volume to a hydraulic residence time, :math:`\theta`, and volumetric flow rate, Q.
 
