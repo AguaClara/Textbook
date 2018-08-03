@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Sedimentation Introduction" href="../Sedimentation/Sed_Intro.html" />
+    <link rel="next" title="Dissolved Gas Introduction" href="../Dissolved_Gas/DG_Intro.html" />
     <link rel="prev" title="Filtration Design" href="Filtration_Design.html" /> 
 
   
@@ -119,17 +119,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Filtration Design</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Filtration Derivations</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 6: Sedimentation
-:maxdepth: 1</span></p>
+<p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
 </ul>
 
             
@@ -202,7 +210,7 @@
 </div>
 <p>The pressure from the water:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-0">
-<span class="eqno">(359)<a class="headerlink" href="#equation-filtration-filtration-derivations-0" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}\]</div>
+<span class="eqno">(383)<a class="headerlink" href="#equation-filtration-filtration-derivations-0" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(P_{Manometer} =\)</span> total height from the bottom of the filter to the inlet box</div>
@@ -215,25 +223,25 @@
 </div>
 <p>The pressure from the sand:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-1">
-<span class="eqno">(360)<a class="headerlink" href="#equation-filtration-filtration-derivations-1" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
+<span class="eqno">(384)<a class="headerlink" href="#equation-filtration-filtration-derivations-1" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(h_{l_{FiBw}} =\)</span> the difference in height of the inlet and water surface height during backwash; the backwash head loss</div>
 </div>
 <p>Setting them equal for a force balance:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-2">
-<span class="eqno">(361)<a class="headerlink" href="#equation-filtration-filtration-derivations-2" title="Permalink to this equation">¶</a></span>\[\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
+<span class="eqno">(385)<a class="headerlink" href="#equation-filtration-filtration-derivations-2" title="Permalink to this equation">¶</a></span>\[\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
 <p>Which simplifies to:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-3">
-<span class="eqno">(362)<a class="headerlink" href="#equation-filtration-filtration-derivations-3" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}
+<span class="eqno">(386)<a class="headerlink" href="#equation-filtration-filtration-derivations-3" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}
 or
 h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
 <p>This result gives a ratio of the head loss during backwash to the height difference during forward operation. With <span class="math notranslate nohighlight">\(\phi_{FiSand} = 0.4\)</span> and <span class="math notranslate nohighlight">\(\rho_{Sand} = 2650 kg/m^3\)</span> the value of this ratio is:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-4">
-<span class="eqno">(363)<a class="headerlink" href="#equation-filtration-filtration-derivations-4" title="Permalink to this equation">¶</a></span>\[\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\]</div>
+<span class="eqno">(387)<a class="headerlink" href="#equation-filtration-filtration-derivations-4" title="Permalink to this equation">¶</a></span>\[\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\]</div>
 <p>Thus:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-5">
-<span class="eqno">(364)<a class="headerlink" href="#equation-filtration-filtration-derivations-5" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = H_{FiSand} * 0.99\]</div>
+<span class="eqno">(388)<a class="headerlink" href="#equation-filtration-filtration-derivations-5" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = H_{FiSand} * 0.99\]</div>
 </div>
 
 
@@ -244,7 +252,7 @@ h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{S
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Sedimentation/Sed_Intro.html" class="btn btn-neutral float-right" title="Sedimentation Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Dissolved_Gas/DG_Intro.html" class="btn btn-neutral float-right" title="Dissolved Gas Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Filtration_Design.html" class="btn btn-neutral" title="Filtration Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

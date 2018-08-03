@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Filtration Design" href="../Filtration/Filtration_Design.html" />
+    <link rel="next" title="Sedimentation Introduction" href="../Sedimentation/Sed_Intro.html" />
     <link rel="prev" title="Flocculation Design" href="Floc_Design.html" /> 
 
   
@@ -125,17 +125,25 @@
 </ul>
 </li>
 </ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 6: Sedimentation
-:maxdepth: 1</span></p>
+<p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
 </ul>
 
             
@@ -219,7 +227,7 @@ rate, <span class="math notranslate nohighlight">\(\bar \varepsilon = \nu \bar G
 <span class="math notranslate nohighlight">\(\bar \varepsilon = \frac{g h_{L_{floc}}}{\theta}\)</span> equal to each
 other to bring <span class="math notranslate nohighlight">\(\bar G\)</span> into the equation.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-0">
-<span class="eqno">(344)<a class="headerlink" href="#equation-flocculation-floc-derivations-0" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = \frac{g h_{L_{floc}}}{\theta}\]</div>
+<span class="eqno">(349)<a class="headerlink" href="#equation-flocculation-floc-derivations-0" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = \frac{g h_{L_{floc}}}{\theta}\]</div>
 <p><strong>Very Important Note:</strong></p>
 <p>For the following steps, we will consider the flow through <strong>*a single
 flow expansion :math:`H_e`, not through the entire flocculator*</strong>. This
@@ -234,19 +242,19 @@ through the entire flocculator.</p>
 <span class="math notranslate nohighlight">\(\theta = \frac{H_e}{\bar v}\)</span>, and finally
 <span class="math notranslate nohighlight">\(\bar v = \frac{Q}{WS}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-1">
-<span class="eqno">(345)<a class="headerlink" href="#equation-flocculation-floc-derivations-1" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = K \frac{\bar v^2}{2 \theta}\]</div>
+<span class="eqno">(350)<a class="headerlink" href="#equation-flocculation-floc-derivations-1" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = K \frac{\bar v^2}{2 \theta}\]</div>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-2">
-<span class="eqno">(346)<a class="headerlink" href="#equation-flocculation-floc-derivations-2" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = K \frac{\bar v^3}{2 H_e}\]</div>
+<span class="eqno">(351)<a class="headerlink" href="#equation-flocculation-floc-derivations-2" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = K \frac{\bar v^3}{2 H_e}\]</div>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-3">
-<span class="eqno">(347)<a class="headerlink" href="#equation-flocculation-floc-derivations-3" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = \frac{K}{2 H_e} \left( \frac{Q}{WS} \right)^3\]</div>
+<span class="eqno">(352)<a class="headerlink" href="#equation-flocculation-floc-derivations-3" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = \frac{K}{2 H_e} \left( \frac{Q}{WS} \right)^3\]</div>
 <p>Now we can solve this equation for channel width, <span class="math notranslate nohighlight">\(W\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-4">
-<span class="eqno">(348)<a class="headerlink" href="#equation-flocculation-floc-derivations-4" title="Permalink to this equation">¶</a></span>\[W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(353)<a class="headerlink" href="#equation-flocculation-floc-derivations-4" title="Permalink to this equation">¶</a></span>\[W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\]</div>
 <p>From here, we can define <span class="math notranslate nohighlight">\(\Pi_{H_eS} = \frac{H_e}{S}\)</span> and
 substitute <span class="math notranslate nohighlight">\(S = \frac{H_e}{\Pi_{H_eS}}\)</span> into the previous equation
 for <span class="math notranslate nohighlight">\(W\)</span> to get <span class="math notranslate nohighlight">\(W_{Min, \, \Pi_{H_eS}}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-5">
-<span class="eqno">(349)<a class="headerlink" href="#equation-flocculation-floc-derivations-5" title="Permalink to this equation">¶</a></span>\[\color{purple}{
+<span class="eqno">(354)<a class="headerlink" href="#equation-flocculation-floc-derivations-5" title="Permalink to this equation">¶</a></span>\[\color{purple}{
 W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}
 }\]</div>
 <div class="line-block">
@@ -269,7 +277,7 @@ baffles</div>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Filtration/Filtration_Design.html" class="btn btn-neutral float-right" title="Filtration Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Sedimentation/Sed_Intro.html" class="btn btn-neutral float-right" title="Sedimentation Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Floc_Design.html" class="btn btn-neutral" title="Flocculation Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

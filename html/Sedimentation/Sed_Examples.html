@@ -119,17 +119,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 6: Sedimentation
-:maxdepth: 1</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
 </ul>
 
             
@@ -198,12 +206,12 @@
 <span id="id1"></span><h1>Sedimentation Examples<a class="headerlink" href="#sedimentation-examples" title="Permalink to this headline">¶</a></h1>
 <p>Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, <span class="math notranslate nohighlight">\(V_\alpha\)</span>. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-0">
-<span class="eqno">(365)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{\uparrow}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
+<span class="eqno">(355)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{\uparrow}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-1">
-<span class="eqno">(366)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_\uparrow = \bar v_\alpha\sin \alpha\]</div>
+<span class="eqno">(356)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_\uparrow = \bar v_\alpha\sin \alpha\]</div>
 <p>Solve for the length of the tube settler.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-2">
-<span class="eqno">(367)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
+<span class="eqno">(357)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
 <span class="n">v_alpha</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">v_c</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
