@@ -112,7 +112,7 @@
 <li class="toctree-l1"><a class="reference internal" href="RM_Derivations.html">Rapid Mix Derivations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid Mix Appendix C: Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#example-ph-adjustment">Example: pH Adjustment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#length-and-time-scales-for-each-process">Length and time scales for each process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lfom-and-coagulant-injection-sizing">LFOM and coagulant injection sizing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#example-problem-energy-dissipation-rate-in-a-straight-pipe">Example problem: Energy dissipation rate in a straight pipe</a></li>
 </ul>
 </li>
@@ -215,15 +215,15 @@
 The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel. The plant is located in the municipality of Guinope, the department of El Paraiso, Honduras.</p>
 <div class="figure align-center" id="id1">
 <span id="manzaragua-wtp"></span><a class="reference internal image-reference" href="../_images/Manzaragua_WTP.jpg"><img alt="Manzaragua WTP" src="../_images/Manzaragua_WTP.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 60 </span><span class="caption-text">Manzaragua water treatment plant using two of the AguaClara 1 L/s plants in parallel.</span></p>
+<p class="caption"><span class="caption-number">Fig. 63 </span><span class="caption-text">Manzaragua water treatment plant using two of the AguaClara 1 L/s plants in parallel.</span></p>
 </div>
 <p>The plant performed very poorly from the first day of operation. The first attempted fix was to double the flocculator residence time by increasing the number of flocculator pipes (3 inch diameter by 1.5 m long) from 12 to 24. This improved performance, but the plant continued to perform poorly. A raw water sample was analyzed on May 30, 2018 and the following results were obtained.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-manzaragua-water-analysis"></span><a class="reference internal image-reference" href="../_images/Manzaragua_Water_Analysis.jpg"><img alt="Manzaragua Water Analysis" src="../_images/Manzaragua_Water_Analysis.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 61 </span><span class="caption-text">Water quality analysis for Manzaragua.</span></p>
+<p class="caption"><span class="caption-number">Fig. 64 </span><span class="caption-text">Water quality analysis for Manzaragua.</span></p>
 </div>
 <span id="table-manzaragua-water-quality-analysis"></span><table border="1" class="colwidths-given docutils align-center" id="id3">
-<caption><span class="caption-number">Table 12 </span><span class="caption-text">Manzaragua water quality analysis</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 13 </span><span class="caption-text">Manzaragua water quality analysis</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="25%" />
 <col width="25%" />
@@ -290,18 +290,11 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 </tbody>
 </table>
 <p>This water has high color which suggests a high concentration of dissolved organic matter. The pH is a clear problem because the pH is too low for the coagulant nanoparticles to precipitate. As the water sample pH of 5.91 a significant fraction of the coagulant will remain soluble.</p>
-<p>Our goal is to determine how much base will need to be added to raise the pH. We do not have data on the <em>optimal</em> pH for treating high color water with PACl and so we will use pH 7 as the target. We will need a separate calculation to estimate how much additional <span class="math notranslate nohighlight">\(Na_2CO_3\)</span> will need to be added to balance the PACl acidity.</p>
-<p>At circumneutral pH (pH close to 7) the buffering capacity of the water is dominated by carbonate chemistry and specifically by the equilibrium between <span class="math notranslate nohighlight">\({H_2}CO_3^{\star}\)</span> and $HCO_3^- $. We will use the acid neutralizing capacity (reported as calcium carbonate alkalinity) and the pH from the sample analysis to estimate the total concentration of carbonates. We will not use the sample analysis carbonate concentrations because they can not be precisely correct.</p>
-<p>The solution steps are as follows: 1) Find total carbonate concentration, <span class="math notranslate nohighlight">\(C_{T_0}\)</span>, of the raw water sample using the ANC equation for the case where the system is not exchanging <span class="math notranslate nohighlight">\(CO_2\)</span> with the atmosphere. 1) Solve for the required concentration of base, <span class="math notranslate nohighlight">\(C_B\)</span>.</p>
-<p>For step 1 we need to solve the ANC equation for the carbonate concentration.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-0">
-<span class="eqno">(279)<a class="headerlink" href="#equation-rapid-mix-rm-examples-0" title="Permalink to this equation">¶</a></span>\[C_{T_0} = \frac{ANC_0  - \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} + \left[ {{H^ + }} \right]}{\alpha_1 + 2\alpha_2}\]</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">We eventually should add the effect of the coagulant to this analysis so the required base concentration can be calculated given the raw water alkalinity, raw water pH, and coagulant dose.</p>
-</div>
+<p>Our goal is to determine how much base will need to be added to raise the pH. We do not have data on the <em>optimal</em> pH for treating high color water with PACl and so we will use pH 7 as the target.</p>
+<p>At circumneutral pH (pH close to 7) the buffering capacity of the water is dominated by carbonate chemistry and specifically by the equilibrium between <span class="math notranslate nohighlight">\({H_2}CO_3^{\star}\)</span> and <span class="math notranslate nohighlight">\(HCO_3^-\)</span> . We will use the acid neutralizing capacity (reported as calcium carbonate alkalinity) and the pH from the sample analysis to estimate the total concentration of carbonates. We will not use the sample analysis carbonate concentrations because they can not be precisely correct.</p>
+<p>We will find the amount of base that must be added using <a class="reference internal" href="RM_Derivations.html#equation-base-for-ph-adjust">(157)</a>.</p>
 <span id="table-anc-and-carbonate-values-for-several-bases-and-acids"></span><table border="1" class="colwidths-given docutils align-center" id="id4">
-<caption><span class="caption-number">Table 13 </span><span class="caption-text">ANC and carbonate values for several bases and acids</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">ANC and carbonate values for several bases and acids</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -477,7 +470,7 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 </div>
 <p>The analysis reveals that the choice of base matters. The most efficient (on a mass or mole basis) base is <span class="math notranslate nohighlight">\(NaOH\)</span> because it doesn’t add any carbonates that don’t fully react with the hydrogen ions. The decision about which base to use will be influenced by economics, operator safety, and by whether additional carbonate buffering simplifies plant operation with changing raw water quality.</p>
 <span id="table-calcium-bases"></span><table border="1" class="colwidths-given docutils" id="id5">
-<caption><span class="caption-number">Table 14 </span><span class="caption-text">Calcium base.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Calcium base.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -507,15 +500,15 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 <p>The calcium bases are relatively inexpensive and have the disadvantage of lower solubility than sodium bases. Calcium carbonate has a low solubility, carbon dioxide is present in the atmosphere, and thus calcium carbonate precipitation limits the concentration that can be used for chemical feeds.</p>
 <div class="figure align-center" id="id6">
 <span id="figure-mole-base-for-target-ph"></span><a class="reference internal image-reference" href="../_images/mole_base_for_target_pH.png"><img alt="mole base for target pH" src="../_images/mole_base_for_target_pH.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 62 </span><span class="caption-text">Dose of three bases (in mole/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 65 </span><span class="caption-text">Dose of three bases (in mole/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
 </div>
 <div class="figure align-center" id="id7">
 <span id="figure-mg-base-for-target-ph"></span><a class="reference internal image-reference" href="../_images/mg_base_for_target_pH.png"><img alt="mg base for target pH" src="../_images/mg_base_for_target_pH.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 63 </span><span class="caption-text">Dose of two bases (in mg/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 66 </span><span class="caption-text">Dose of two bases (in mg/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
 </div>
 <p>The required dose for each of the bases is summarized below.</p>
 <span id="table-base-table"></span><table border="1" class="colwidths-given docutils" id="id8">
-<caption><span class="caption-number">Table 15 </span><span class="caption-text">Dose of each base required to change the pH of the Manzaragua water to 7.</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Dose of each base required to change the pH of the Manzaragua water to 7.</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="25%" />
 <col width="25%" />
@@ -543,10 +536,10 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 </tbody>
 </table>
 </div>
-<div class="section" id="length-and-time-scales-for-each-process">
-<span id="heading-length-and-time-scales-for-each-process"></span><h2>Length and time scales for each process<a class="headerlink" href="#length-and-time-scales-for-each-process" title="Permalink to this headline">¶</a></h2>
-<p>Let’s begin by describing the coagulant injection for a 60 L/s plant. We will use a <a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#heading-lfom"><span class="std std-ref">linear flow orifice meter</span></a>
-with 20 cm of head loss.</p>
+<div class="section" id="lfom-and-coagulant-injection-sizing">
+<span id="heading-lfom-and-coag-injection-sizing"></span><h2>LFOM and coagulant injection sizing<a class="headerlink" href="#lfom-and-coagulant-injection-sizing" title="Permalink to this headline">¶</a></h2>
+<p>A water treatment plant that is treating 120 L/s of water injects the coagulant into the middle of the pipe that delivers the raw water to the plant and then splits the flow into 2 parallel treatment trains for subsequent flocculation. The pipe is PVC 24 inch nominal pipe diameter SDR 26. The water temperature is <span class="math notranslate nohighlight">\(0^{\circ}C\)</span>. Estimate the minimum distance between the injection point and the flow split.</p>
+<p>We will use a <a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#heading-lfom"><span class="std std-ref">linear flow orifice meter</span></a> with 20 cm of head loss. The first step is to determine the diameter of the LFOM.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; importing &quot;&quot;&quot;</span>
 <span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
 <span class="kn">from</span> <span class="nn">aguaclara_research.play</span> <span class="k">import</span><span class="o">*</span>
@@ -555,7 +548,7 @@ with 20 cm of head loss.</p>
 <span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="k">import</span> <span class="n">FormatStrFormatter</span>
 <span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;AguaClara Water Treatment Plant Design/Rapid Mix/Images/&#39;</span>
 
-<span class="n">Q_plant</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">Q_plant</span> <span class="o">=</span> <span class="mi">120</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">HL_LFOM</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">Pi_LFOM_safety</span> <span class="o">=</span> <span class="mf">1.2</span>
 <span class="n">SDR_LFOM</span> <span class="o">=</span> <span class="mi">26</span>
@@ -565,29 +558,25 @@ with 20 cm of head loss.</p>
 
 <span class="n">L_flow</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_LFOM</span><span class="p">,</span><span class="n">SDR_LFOM</span><span class="p">)</span>
 <span class="n">L_flow</span>
-<span class="n">v_lfom</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q_plant</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_LFOM</span><span class="p">,</span><span class="n">SDR_LFOM</span><span class="p">)))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v_lfom</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The LFOM requires a 16 inch diameter pipe.</p>
-<p>10% velocity rule</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v_lfom</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q_plant</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_LFOM</span><span class="p">,</span><span class="n">SDR_LFOM</span><span class="p">)))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v_lfom</span><span class="p">)</span>
-<span class="n">t_large_scale_mix</span> <span class="o">=</span> <span class="p">(</span><span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_LFOM</span><span class="p">,</span><span class="n">SDR_LFOM</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">0.1</span><span class="o">*</span><span class="n">v_lfom</span><span class="p">))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t_large_scale_mix</span><span class="p">)</span>
-</pre></div>
-</div>
+<p>The LFOM requires a 24 inch diameter pipe.</p>
 </div>
 <div class="section" id="example-problem-energy-dissipation-rate-in-a-straight-pipe">
 <h2>Example problem: Energy dissipation rate in a straight pipe<a class="headerlink" href="#example-problem-energy-dissipation-rate-in-a-straight-pipe" title="Permalink to this headline">¶</a></h2>
-<p>A water treatment plant that is treating 120 L/s of water injects the coagulant into the middle of the pipe that delivers the raw water to the plant and then splits the flow into 2 parallel treatment trains for subsequent flocculation. The pipe is PVC 16 inch nominal pipe diameter SDR 26. The water temperature is <span class="math notranslate nohighlight">\(0^{\circ}C\)</span>. Estimate the minimum distance between the injection point and the flow split.</p>
-<p>Solution scheme 1) Calculate the friction factor</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">T_water</span><span class="o">=</span><span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
+<dl class="docutils">
+<dt>Solution scheme</dt>
+<dd>1) Calculate the friction factor
+1) Use <code class="xref eq docutils literal notranslate"><span class="pre">mixing_pipe_diameters</span></code> to estimate the mixing length in pipe diameters
+1) Convert to pipe length in meters.</dd>
+</dl>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="n">T_water</span><span class="o">=</span><span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">Pipe_roughness</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">PIPE_ROUGH_PVC</span>
 <span class="n">Pipe_roughness</span>
 <span class="n">Nu_water</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_water</span><span class="p">)</span>
 <span class="n">Q_pipe</span> <span class="o">=</span> <span class="mi">120</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">ND_pipe</span> <span class="o">=</span> <span class="mi">16</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span>
+<span class="n">ND_pipe</span> <span class="o">=</span> <span class="mi">24</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span>
 <span class="n">SDR_pipe</span> <span class="o">=</span> <span class="mi">26</span>
 <span class="n">ID_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_pipe</span><span class="p">,</span><span class="n">SDR_pipe</span><span class="p">)</span>
 <span class="n">f_pipe</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">fric</span><span class="p">(</span><span class="n">Q_pipe</span><span class="p">,</span><span class="n">ID_pipe</span><span class="p">,</span><span class="n">Nu_water</span><span class="p">,</span><span class="n">Pipe_roughness</span><span class="p">)</span>
@@ -596,6 +585,10 @@ with 20 cm of head loss.</p>
 <span class="sd">&quot;&quot;&quot;The minimum length for mixing is thus&quot;&quot;&quot;</span>
 <span class="n">L_mixing</span> <span class="o">=</span> <span class="n">ID_pipe</span><span class="o">*</span><span class="n">N_pipe_diameters</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum distance required for mixing across the diameter of the pipe is &#39;</span><span class="p">,</span><span class="n">L_mixing</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
+<span class="n">v_lfom</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q_plant</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_LFOM</span><span class="p">,</span><span class="n">SDR_LFOM</span><span class="p">)))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v_lfom</span><span class="p">)</span>
+<span class="n">t_mixing</span> <span class="o">=</span> <span class="p">(</span><span class="n">L_mixing</span><span class="o">/</span><span class="n">v_lfom</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="n">t_mixing</span>
 </pre></div>
 </div>
 <p>The previous analysis provides a minimum distance for sufficient mixing so that equal mass flux of coagulant will end up in both treatment trains. This assumes that the coagulant was injected in the pipe centerline. Injection at the wall of the pipe is a poor practice and would require many more pipe diameters because it takes significant time for the coagulant to be mixed out of the slower fluid at the wall. The time required for mixing at the scale of the flow in the plant is thus accomplished in a few seconds. This ends up being the fastest part of the transport of the coagulant nanoparticles on their way to attachment to the clay particles.  Next we will determine a typical flow rate of coagulant. <strong>Aluminum</strong> concentrations for polyaluminum chloride (PACl) typically range from 1 to 10 mg/L. The maximum PACl stock solution concentration is about 70 g/L as <strong>Al</strong>.</p>
@@ -605,8 +598,8 @@ with 20 cm of head loss.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">Q_PACl_max</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>We can estimate the diameter of the injection port by setting the kinetic energy loss where the coagulant is injected into the main flow to be 10 cm. The amount of energy we invest in injecting the coagulant into the raw water is a compromise between having to raise the entire chemical feed system including the stock tanks to increase the potential energy and a goal of not having pressure fluctuations inside the LFOM pipe cause flow oscillations in the chemical dosing tube. Thus our goal is to have the kinetic energy at the injection point be large compared with the expected pressure fluctuations in the LFOM.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HL_Coag_injection</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
+<p>We can estimate the diameter of the injection port by setting the kinetic energy loss where the coagulant is injected into the main flow to be large enough to exceed the pressure fluctuations downstream of the LFOM. The amount of energy we invest in injecting the coagulant into the raw water is a compromise between having to raise the entire chemical feed system including the stock tanks to increase the potential energy and a goal of not having pressure fluctuations inside the LFOM pipe cause flow oscillations in the chemical dosing tube. Thus our goal is to have the kinetic energy at the injection point be large compared with the expected pressure fluctuations in the LFOM. Given that the head loss through the LFOM is often 20 cm, we expect the pressure fluctuations from turbulence to be a small fraction of that head loss. Thus we set the kinetic energy to be equivalent to 2 cm.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HL_Coag_injection</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">v_Coag_injection</span> <span class="o">=</span> <span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">HL_Coag_injection</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">v_Coag_injection</span><span class="p">)</span>
 <span class="n">D_Coag_injection_min</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">diam_circle</span><span class="p">(</span><span class="n">Q_PACl_max</span><span class="o">/</span><span class="n">v_Coag_injection</span><span class="p">)</span>

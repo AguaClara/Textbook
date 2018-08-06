@@ -108,11 +108,7 @@
 <p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="RM_Intro.html">Rapid Mix Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid Mix Design</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#orifice-diameter-to-obtain-target-mixing">Orifice Diameter to obtain Target Mixing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rapid-mix-head-loss">Rapid Mix Head Loss</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid Mix Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Derivations.html">Rapid Mix Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
@@ -209,44 +205,7 @@
   <div class="section" id="rapid-mix-design">
 <span id="title-rapid-mix-design"></span><h1>Rapid Mix Design<a class="headerlink" href="#rapid-mix-design" title="Permalink to this headline">¶</a></h1>
 <p>As of 2018 the design for AguaClara rapid mix units has been based on the goal of achieving a target energy dissipation rate. This in turn was based on the assumption that it was important to rapidly mix the coagulant with the water, perhaps to minimize the self-aggregation of coagulant nanoparticles. We don’t yet have any experimental evidence that rapid mixing is important and it is quite likely that the energy dissipation rate found in the hydraulic flocculator is sufficient to provide the required mixing.</p>
-<p>The following example is provided with a good deal of skepticism as to whether the design criteria have any influence on flocculation performance. The design requirements for fluid mixing of the coagulant is an area that needs research.</p>
-<div class="section" id="orifice-diameter-to-obtain-target-mixing">
-<h2>Orifice Diameter to obtain Target Mixing<a class="headerlink" href="#orifice-diameter-to-obtain-target-mixing" title="Permalink to this headline">¶</a></h2>
-<p>The following equations need to be re-derived based on new definition of <span class="math notranslate nohighlight">\(\Pi_{JetRound}\)</span></p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-0">
-<span class="eqno">(129)<a class="headerlink" href="#equation-rapid-mix-rm-design-0" title="Permalink to this equation">¶</a></span>\[A_{Orifice} \Pi_{vc} = A_{Jet}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-1">
-<span class="eqno">(130)<a class="headerlink" href="#equation-rapid-mix-rm-design-1" title="Permalink to this equation">¶</a></span>\[D_{Orifice} \sqrt{\Pi_{vc}} = D_{Jet}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-2">
-<span class="eqno">(131)<a class="headerlink" href="#equation-rapid-mix-rm-design-2" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} \cong \frac{ \left( \Pi_{JetRound} \frac{4Q}{\pi D_{Jet}^2} \right)^3}{D_{Jet}}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-3">
-<span class="eqno">(132)<a class="headerlink" href="#equation-rapid-mix-rm-design-3" title="Permalink to this equation">¶</a></span>\[D_{Orifice} \cong \left( \frac{4 Q \Pi_{JetRound}}{\varepsilon_{Max}^{\frac{1}{3}} \pi} \right)^{\frac{3}{7}} \frac{1}{\sqrt{\Pi_{vc} }}\]</div>
-<p><strong>Off-slide</strong></p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-4">
-<span class="eqno">(133)<a class="headerlink" href="#equation-rapid-mix-rm-design-4" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} \cong  \frac{ \left( \Pi_{Jet} \frac{4 Q_{Jet}}{\pi} \right)^3 }{D_{Orifice}^7 \sqrt{\Pi_{vc}^7} }\]</div>
-</div>
-<div class="section" id="rapid-mix-head-loss">
-<h2>Rapid Mix Head Loss<a class="headerlink" href="#rapid-mix-head-loss" title="Permalink to this headline">¶</a></h2>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-5">
-<span class="eqno">(134)<a class="headerlink" href="#equation-rapid-mix-rm-design-5" title="Permalink to this equation">¶</a></span>\[D_{Orifice} \cong \left( \frac{4 Q \Pi_{JetRound}}{\varepsilon_{Max}^{\frac{1}{3}} \pi} \right)^{\frac{3}{7}}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-6">
-<span class="eqno">(135)<a class="headerlink" href="#equation-rapid-mix-rm-design-6" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet} \cong \frac{\left( D_{Jet} \, \varepsilon_{Max} \right)^{\frac{1}{3}}}{\Pi_{JetRound}}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-7">
-<span class="eqno">(136)<a class="headerlink" href="#equation-rapid-mix-rm-design-7" title="Permalink to this equation">¶</a></span>\[h_e = \frac{ \left( D_{Jet} \, \varepsilon_{Max} \right)^{\frac{2}{3}}}{ 2g \Pi_{JetRound}^2}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-8">
-<span class="eqno">(137)<a class="headerlink" href="#equation-rapid-mix-rm-design-8" title="Permalink to this equation">¶</a></span>\[h_e = \frac{ \left( \frac{4 \Pi_{JetRound} Q \varepsilon_{Max}^2}{\pi} \right)^{\frac{2}{7}}}{2 g \Pi_{JetRound}^2}\]</div>
-<p><strong>Off-slide</strong></p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-9">
-<span class="eqno">(138)<a class="headerlink" href="#equation-rapid-mix-rm-design-9" title="Permalink to this equation">¶</a></span>\[Q = \frac{D_{Jet}^{\frac{7}{3}} \pi \varepsilon_{Max}^{\frac{1}{3}}}{4 \Pi_{Jet}}\]</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; importing &quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
-<span class="n">D</span><span class="o">=</span><span class="mi">24</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">inch</span>
-<span class="n">V</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">Q</span><span class="o">=</span> <span class="p">(</span><span class="n">V</span><span class="o">*</span><span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="n">Q</span>
-</pre></div>
-</div>
-</div>
+<p>The design requirements for fluid mixing of the coagulant is an area that needs research. If the goal is to achieve a velocity gradient for a number of seconds, then this design will be the same as that developed in the flocculator section. Until we have clear guidance on the goal of rapid mix we will not provide a detailed design here.</p>
 </div>
 
 

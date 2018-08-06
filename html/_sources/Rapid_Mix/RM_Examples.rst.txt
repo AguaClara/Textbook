@@ -51,17 +51,12 @@ The plant performed very poorly from the first day of operation. The first attem
 
 This water has high color which suggests a high concentration of dissolved organic matter. The pH is a clear problem because the pH is too low for the coagulant nanoparticles to precipitate. As the water sample pH of 5.91 a significant fraction of the coagulant will remain soluble.
 
-Our goal is to determine how much base will need to be added to raise the pH. We do not have data on the *optimal* pH for treating high color water with PACl and so we will use pH 7 as the target. We will need a separate calculation to estimate how much additional :math:`Na_2CO_3` will need to be added to balance the PACl acidity.
+Our goal is to determine how much base will need to be added to raise the pH. We do not have data on the *optimal* pH for treating high color water with PACl and so we will use pH 7 as the target.
 
-At circumneutral pH (pH close to 7) the buffering capacity of the water is dominated by carbonate chemistry and specifically by the equilibrium between :math:`{H_2}CO_3^{\star}` and $HCO_3^- $. We will use the acid neutralizing capacity (reported as calcium carbonate alkalinity) and the pH from the sample analysis to estimate the total concentration of carbonates. We will not use the sample analysis carbonate concentrations because they can not be precisely correct.
+At circumneutral pH (pH close to 7) the buffering capacity of the water is dominated by carbonate chemistry and specifically by the equilibrium between :math:`{H_2}CO_3^{\star}` and :math:`HCO_3^-` . We will use the acid neutralizing capacity (reported as calcium carbonate alkalinity) and the pH from the sample analysis to estimate the total concentration of carbonates. We will not use the sample analysis carbonate concentrations because they can not be precisely correct.
 
-The solution steps are as follows: 1) Find total carbonate concentration, :math:`C_{T_0}`, of the raw water sample using the ANC equation for the case where the system is not exchanging :math:`CO_2` with the atmosphere. 1) Solve for the required concentration of base, :math:`C_B`.
+We will find the amount of base that must be added using :eq:`Base_for_pH_Adjust`.
 
-For step 1 we need to solve the ANC equation for the carbonate concentration.
-
-.. math::  C_{T_0} = \frac{ANC_0  - \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} + \left[ {{H^ + }} \right]}{\alpha_1 + 2\alpha_2}
-
-.. note:: We eventually should add the effect of the coagulant to this analysis so the required base concentration can be calculated given the raw water alkalinity, raw water pH, and coagulant dose.
 
 .. _Table_ANC_and_carbonate_values_for_several_bases_and_acids:
 
@@ -267,13 +262,14 @@ The required dose for each of the bases is summarized below.
 
 
 
-.. _heading_Length_and_time_scales_for_each_process:
+.. _heading_LFOM_and_Coag_Injection_sizing:
 
-Length and time scales for each process
+LFOM and coagulant injection sizing
 ================================================
 
-Let’s begin by describing the coagulant injection for a 60 L/s plant. We will use a :ref:`linear flow orifice meter <heading_lfom>`
-with 20 cm of head loss.
+A water treatment plant that is treating 120 L/s of water injects the coagulant into the middle of the pipe that delivers the raw water to the plant and then splits the flow into 2 parallel treatment trains for subsequent flocculation. The pipe is PVC 24 inch nominal pipe diameter SDR 26. The water temperature is :math:`0^{\circ}C`. Estimate the minimum distance between the injection point and the flow split.
+
+We will use a :ref:`linear flow orifice meter <heading_lfom>` with 20 cm of head loss. The first step is to determine the diameter of the LFOM.
 
 .. code:: python
 
@@ -285,7 +281,7 @@ with 20 cm of head loss.
  from matplotlib.ticker import FormatStrFormatter
  imagepath = 'AguaClara Water Treatment Plant Design/Rapid Mix/Images/'
 
- Q_plant = 60 * u.L/u.s
+ Q_plant = 120 * u.L/u.s
  HL_LFOM = 20 * u.cm
  Pi_LFOM_safety = 1.2
  SDR_LFOM = 26
@@ -295,35 +291,30 @@ with 20 cm of head loss.
 
  L_flow = pipe.ID_SDR(ND_LFOM,SDR_LFOM)
  L_flow
- v_lfom = (Q_plant/pc.area_circle(pipe.ID_SDR(ND_LFOM,SDR_LFOM))).to_base_units()
- print(v_lfom)
 
-The LFOM requires a 16 inch diameter pipe.
 
-10% velocity rule
 
-.. code:: python
+The LFOM requires a 24 inch diameter pipe.
 
- v_lfom = (Q_plant/pc.area_circle(pipe.ID_SDR(ND_LFOM,SDR_LFOM))).to_base_units()
- print(v_lfom)
- t_large_scale_mix = (pipe.ID_SDR(ND_LFOM,SDR_LFOM)/(0.1*v_lfom)).to_base_units()
- print(t_large_scale_mix)
 
 Example problem: Energy dissipation rate in a straight pipe
 =============================================================
 
-A water treatment plant that is treating 120 L/s of water injects the coagulant into the middle of the pipe that delivers the raw water to the plant and then splits the flow into 2 parallel treatment trains for subsequent flocculation. The pipe is PVC 16 inch nominal pipe diameter SDR 26. The water temperature is :math:`0^{\circ}C`. Estimate the minimum distance between the injection point and the flow split.
 
-Solution scheme 1) Calculate the friction factor
+Solution scheme
+ 1) Calculate the friction factor
+ 1) Use :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters
+ 1) Convert to pipe length in meters.
 
 .. code:: python
 
+ from aide_design.play import*
  T_water=0*u.degC
  Pipe_roughness = mat.PIPE_ROUGH_PVC
  Pipe_roughness
  Nu_water = pc.viscosity_kinematic(T_water)
  Q_pipe = 120 * u.L/u.s
- ND_pipe = 16*u.inch
+ ND_pipe = 24*u.inch
  SDR_pipe = 26
  ID_pipe = pipe.ID_SDR(ND_pipe,SDR_pipe)
  f_pipe = pc.fric(Q_pipe,ID_pipe,Nu_water,Pipe_roughness)
@@ -332,6 +323,10 @@ Solution scheme 1) Calculate the friction factor
  """The minimum length for mixing is thus"""
  L_mixing = ID_pipe*N_pipe_diameters
  print('The minimum distance required for mixing across the diameter of the pipe is ',L_mixing.to_base_units())
+ v_lfom = (Q_plant/pc.area_circle(pipe.ID_SDR(ND_LFOM,SDR_LFOM))).to_base_units()
+ print(v_lfom)
+ t_mixing = (L_mixing/v_lfom).to(u.s)
+ t_mixing
 
 The previous analysis provides a minimum distance for sufficient mixing so that equal mass flux of coagulant will end up in both treatment trains. This assumes that the coagulant was injected in the pipe centerline. Injection at the wall of the pipe is a poor practice and would require many more pipe diameters because it takes significant time for the coagulant to be mixed out of the slower fluid at the wall. The time required for mixing at the scale of the flow in the plant is thus accomplished in a few seconds. This ends up being the fastest part of the transport of the coagulant nanoparticles on their way to attachment to the clay particles.  Next we will determine a typical flow rate of coagulant. **Aluminum** concentrations for polyaluminum chloride (PACl) typically range from 1 to 10 mg/L. The maximum PACl stock solution concentration is about 70 g/L as **Al**.
 
@@ -342,11 +337,11 @@ The previous analysis provides a minimum distance for sufficient mixing so that 
  Q_PACl_max = (Q_plant*C_PACl_dose_max/C_PACl_stock).to(u.mL/u.s)
  print(Q_PACl_max)
 
-We can estimate the diameter of the injection port by setting the kinetic energy loss where the coagulant is injected into the main flow to be 10 cm. The amount of energy we invest in injecting the coagulant into the raw water is a compromise between having to raise the entire chemical feed system including the stock tanks to increase the potential energy and a goal of not having pressure fluctuations inside the LFOM pipe cause flow oscillations in the chemical dosing tube. Thus our goal is to have the kinetic energy at the injection point be large compared with the expected pressure fluctuations in the LFOM.
+We can estimate the diameter of the injection port by setting the kinetic energy loss where the coagulant is injected into the main flow to be large enough to exceed the pressure fluctuations downstream of the LFOM. The amount of energy we invest in injecting the coagulant into the raw water is a compromise between having to raise the entire chemical feed system including the stock tanks to increase the potential energy and a goal of not having pressure fluctuations inside the LFOM pipe cause flow oscillations in the chemical dosing tube. Thus our goal is to have the kinetic energy at the injection point be large compared with the expected pressure fluctuations in the LFOM. Given that the head loss through the LFOM is often 20 cm, we expect the pressure fluctuations from turbulence to be a small fraction of that head loss. Thus we set the kinetic energy to be equivalent to 2 cm.
 
 .. code:: python
 
- HL_Coag_injection = 10 * u.cm
+ HL_Coag_injection = 2 * u.cm
  v_Coag_injection = ((2 * u.gravity * HL_Coag_injection)**0.5).to(u.m/u.s)
  print(v_Coag_injection)
  D_Coag_injection_min = pc.diam_circle(Q_PACl_max/v_Coag_injection)
