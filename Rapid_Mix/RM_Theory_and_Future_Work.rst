@@ -17,12 +17,17 @@ Diffusion and Shear Transport Coagulant Nanoparticles to Clay
 ================================================================
 
 The time required for shear and diffusion to transport coagulant nanoparticles to clay has previously been assumed to be a rapid process.
+.. todo:: Find references for time required for coagulant attachment to suspended particles.
 
-  - Diffusion blends the coagulant with the raw water sufficiently so that the coagulant precipitates and forms nanoparticles.
+Our analysis suggests that this critical step may require significant time especially given our effort to reduce the time allotted for flocculation.
+
+  - Turbulent eddies, viscous shear, and diffusion blends the coagulant with the raw water sufficiently (:ref:`in a few seconds<heading_Mixing_time>`) so that the coagulant precipitates and forms nanoparticles.
   - Dissolved organic molecules diffuse to the coagulant nanoparticles and adhere to the nanoparticle surface.
   - The coagulant nanoparticles are transported to suspended particle surfaces by a combination of diffusion and fluid shear.
 
 The following is a very preliminary estimate of the time required for attachment of the nanoparticles to the clay particles. This analysis includes multiple simplifying assumptions and there is a reasonable possibility that some of those assumptions are wrong. However, the core assumptions that coagulant nanoparticles are transported to clay particles by a combination of fluid deformation (shear) and molecular diffusion is reasonable.
+
+The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. 
 
 The volume of the suspension that is cleared of nanoparticles is proportional to a collision area defined by a ring around the clay particle with width of the diameter of the nanoparticle diffusion band. This diffusion band is the length scale over which diffusion is able to transport coagulant particles to the clay surface during the time that the nanoparticles are sliding past the clay particle.
 
@@ -310,77 +315,3 @@ We do not yet understand the origin of the bonds that form between coagulant nan
    -  The bond between a coagulant nanoparticle and a clay surface can potentially be stronger than the bond between a water molecule and the clay surface.
 
 .. _heading_Conventional_Mechanical_Rapid_Mix:
-
-Conventional Mechanical Rapid Mix
-=================================
-
-
-.. _heading_Conventional_Maximum_Velocity_Gradients:
-
-Maximum Velocity Gradients
---------------------------
-
-.. code:: python
-
-    Mix_HRT = np.array([0.5,15,25,35,85])*u.s
-    Mix_G = np.array([4000,1500,950,850,750])/u.s
-    Mix_CP = np.multiply(Mix_HRT, np.sqrt(Mix_G))
-    Mix_Gt = np.multiply(Mix_HRT, Mix_G)
-    Mix_EDR = (Mix_G**2*pc.viscosity_kinematic(Temperature))
-
-    fig, ax = plt.subplots()
-    ax.plot(Mix_G.to(1/u.s),Mix_HRT.to(u.s),'o')
-    ax.yaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    ax.xaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    ax.set(xlabel='Velocity gradient (Hz)', ylabel='Residence time (s)')
-    fig.savefig(imagepath+'Mechanical_RM_Gt')
-    plt.show()
-
-.. _figure_Mechanical_RM_Gt:
-
-.. figure:: Images/Mechanical_RM_Gt.png
-    :width: 400px
-    :align: center
-    :alt: Mechanical RM Gt
-
-    Mechanical rapid mix units use a wide range of velocity gradients and residence times.
-
-Conventional rapid mix units use mechanical or potential energy to generate intense turbulence to begin the mixing process. Conventional design is based on the use of :math:`\bar G` (an average velocity gradient) as a design parameter. We don’t yet know what the design objective is for rapid mix and thus it isn’t clear which parameters matter. We hypothesize that both velocity gradients that cause deformation of the fluid and time for molecular diffusion are required to ultimately transport coagulant nanoparticles to the surfaces of clay particles.
-
-The velocity gradient can be obtained from the rate at which mechanical energy is being dissipated and converted to heat by viscosity.
-
-.. math::  \varepsilon = G^2 \nu
-
-where :math:`\varepsilon` is the energy dissipation rate, :math:`G` is the velocity gradient, and :math:`\nu` is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.
-
-.. math:: P = \bar\varepsilon \rlap{\kern.08em--}V \rho
-
-.. math::  P = \bar G^2 \nu \rlap{\kern.08em--}V \rho
-
-We can relate reactor volume to a hydraulic residence time, :math:`\theta`, and volumetric flow rate, Q.
-
-.. math::  P = \rho \bar G^2 \nu Q \theta
-
-This equation is perfectly useful for estimating electrical motor sizing requirements for mechanical rapid mix units. For gravity powered hydraulic rapid mix units it would be more intuitive to use the change in water surface elevation, :math:`\Delta h` instead of power input.
-
-.. math:: P = \rho g Q \Delta h
-
-Combining the two equations we obtain.
-
-.. math::   \Delta h =   \frac{G^2 \nu \theta}{g}
-
-.. _Table_Conventional_Rapid_Mix_Design_Values:
-
-.. csv-table:: Typical values for conventional rapid mix residence time and average velocity gradients
-   :header:  "Residence Time (s)","Velocity gradient G (1/s)","Energy dissipation rate (W/kg)","Equivalent height (m)"
-
-   "0.5","4000","16","0.8"
-   "10 - 20","1500","2.25","2.3 - 4.6"
-   "20 - 30","950","0.9","1.8 - 2.8"
-   "30 - 40","850","0.72","2.2 - 2.9"
-   "40 - 130","750","0.56","2.3 - 7.5"
-
-From Environmental Engineering: A Design Approach by Sincero and
-Sincero. 1996. page 267.
-
-Rotating propellers can either be installed in open tanks or enclosed in pipes. From a mixing and fluids perspective it doesn’t make any difference whether the tank is open to the atmosphere or not. The parameters of interest are the rate of fluid deformation and the residence time in the mixing zone.

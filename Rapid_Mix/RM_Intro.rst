@@ -202,6 +202,87 @@ The hydraulic jump in :numref:`figure_hydraulic_jump` uses a flow expansion to g
 
     The orifice creates a high velocity jet that generates mixing as it expands in the contact chamber prior to flocculation.
 
+.. _heading_Conventional_Mechanical_Rapid_Mix:
+
+Conventional Mechanical Rapid Mix
+---------------------------------
+
+
+.. _heading_Conventional_Maximum_Velocity_Gradients:
+
+Maximum Velocity Gradients
+--------------------------
+
+.. code:: python
+
+    Mix_HRT = np.array([0.5,15,25,35,85])*u.s
+    Mix_G = np.array([4000,1500,950,850,750])/u.s
+    Mix_CP = np.multiply(Mix_HRT, np.sqrt(Mix_G))
+    Mix_Gt = np.multiply(Mix_HRT, Mix_G)
+    Mix_EDR = (Mix_G**2*pc.viscosity_kinematic(Temperature))
+
+    fig, ax = plt.subplots()
+    ax.plot(Mix_G.to(1/u.s),Mix_HRT.to(u.s),'o')
+    ax.yaxis.set_major_formatter(FormatStrFormatter('%.f'))
+    ax.xaxis.set_major_formatter(FormatStrFormatter('%.f'))
+    ax.set(xlabel='Velocity gradient (Hz)', ylabel='Residence time (s)')
+    fig.savefig(imagepath+'Mechanical_RM_Gt')
+    plt.show()
+
+.. _figure_Mechanical_RM_Gt:
+
+.. figure:: Images/Mechanical_RM_Gt.png
+    :width: 400px
+    :align: center
+    :alt: Mechanical RM Gt
+
+    Mechanical rapid mix units use a wide range of velocity gradients and residence times.
+
+Conventional rapid mix units use mechanical or potential energy to generate intense turbulence to begin the mixing process. Conventional design is based on the use of :math:`\bar G` (an average velocity gradient) as a design parameter. We don’t yet know what the design objective is for rapid mix and thus it isn’t clear which parameters matter. We hypothesize that both velocity gradients that cause deformation of the fluid and time for molecular diffusion are required to ultimately transport coagulant nanoparticles to the surfaces of clay particles.
+
+The velocity gradient can be obtained from the rate at which mechanical energy is being dissipated and converted to heat by viscosity.
+
+.. math::  \varepsilon = G^2 \nu
+
+where :math:`\varepsilon` is the energy dissipation rate, :math:`G` is the velocity gradient, and :math:`\nu` is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.
+
+.. math:: P = \bar\varepsilon \rlap{\kern.08em--}V \rho
+
+.. math::  P = \bar G^2 \nu \rlap{\kern.08em--}V \rho
+
+We can relate reactor volume to a hydraulic residence time, :math:`\theta`, and volumetric flow rate, Q.
+
+.. math::  P = \rho \bar G^2 \nu Q \theta
+
+This equation is perfectly useful for estimating electrical motor sizing requirements for mechanical rapid mix units. For gravity powered hydraulic rapid mix units it would be more intuitive to use the change in water surface elevation, :math:`\Delta h` instead of power input.
+
+.. math:: P = \rho g Q \Delta h
+
+Combining the two equations we obtain.
+
+.. math::   \Delta h =   \frac{G^2 \nu \theta}{g}
+
+.. _Table_Conventional_Rapid_Mix_Design_Values:
+
+.. csv-table:: Typical values for conventional rapid mix residence time and average velocity gradients
+   :header:  "Residence Time (s)","Velocity gradient G (1/s)","Energy dissipation rate (W/kg)","Equivalent height (m)"
+
+   "0.5","4000","16","0.8"
+   "10 - 20","1500","2.25","2.3 - 4.6"
+   "20 - 30","950","0.9","1.8 - 2.8"
+   "30 - 40","850","0.72","2.2 - 2.9"
+   "40 - 130","750","0.56","2.3 - 7.5"
+
+From Environmental Engineering: A Design Approach by Sincero and
+Sincero. 1996. page 267.
+
+Rotating propellers can either be installed in open tanks or enclosed in pipes. From a mixing and fluids perspective it doesn’t make any difference whether the tank is open to the atmosphere or not. The parameters of interest are the rate of fluid deformation and the residence time in the mixing zone.
+
+.. _heading_Mixing_time:
+
+Mixing time
+-----------
+
 The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see equation :eq:`eq_t_eddy`) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (:numref:`figure_Eddy_turnover_times`).
 
 .. _figure_Eddy_turnover_times:
@@ -218,6 +299,10 @@ The eddy turnover times are longest for the largest eddies and this analysis sug
 The large scale mixing time is critical for the design of water treatment plants for the case where the flow is split into multiple treatment trains after coagulant addition. In this case it is critical that the coagulant be mixed equally between all of the treatment trains and thus the mixing times shown in the previous graph represent a minimum time between where the coagulant is added and where the flow is divided into the parallel treatment trains.
 
 It is likely this process of mixing from the scale of the flow down to the inner viscous length scale is commonly referred to as “rapid mix.” Here we showed that this mixing is indeed rapid and is really only a concern in the case where the coagulant injection point is very close to the location where the flow is split into multiple treatment trains.
+
+Fluid deformation dominated by viscous shear and molecular diffusion finish the process of blending the coagulant nanoparticles with the water. We show in :ref:`Fluid_Deformation_by_Shear` that the time required by fluid deformation and molecular diffusion to finish the blending process is approximately equal to 1/G where G is the velocity gradient. Given that velocity gradients in rapid mix units are typically greater than a thousand Hz the time required to finish the blending is approximately 1 ms.
+
+Thus the time required for mixing the coagulant nanoparticles with the fluid typically only requires a few seconds and will be accomplished whether or not the rapid mix unit is turned on. The turbulent eddies from the water flowing a the channel or pipe between the coagulant injection point and the flocculator in most cases will be sufficient to achieve the fluid mixing. However, the step of the :ref:`coagulant nanoparticles attaching to the suspended particles<heading_Diffusion_and_Shear_Transport_Coagulant_Nanoparticles_to_Clay>` may be aided by the high energy of the rapid mix unit.
 
 .. _heading__Coagulant_Nanoparticle_Interactions:
 
@@ -267,6 +352,10 @@ Virus particles readily attach to coagulant nanoparticles (see `"Effects of Floc
 
 Rate Estimates for Coagulant Nanoparticle Transport to Suspended Solids
 ------------------------------------------------------------------------
+
+Coagulant nanoparticles require significant time to attach to the surfaces of suspended solids. The time required is estimated in :ref:`heading_Diffusion_and_Shear_Transport_Coagulant_Nanoparticles_to_Clay`. It is quite possible that this stage of the rapid mix/flocculation process has been overlooked in the past. Transport of the nanoparticles to the suspended solids is accomplished by a combination of fluid deformation and diffusion.
+
+
 
 .. _heading_EDR_G_and_mixing:
 

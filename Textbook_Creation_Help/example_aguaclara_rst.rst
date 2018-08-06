@@ -176,10 +176,10 @@ Math is very cool, and works natively in RST using LaTeX math syntax. In-line ma
 
 Which displays as:
 
-  .. math::
-    :label: quadratic_equation
+.. math::
+   :label: quadratic_equation
 
-      y = ax^2 + bx + c
+   y = ax^2 + bx + c
 
 Equations do not have tags, they can be referenced via their labels, as you can see above. Equation labels don't need to begin with any particular word, unlike tags. Not every equation needs a label. Only label equations that you need to reference. If you need to reference an equation that does not have a label, give it an intuitive one. All equations are numbered, regardless of whether or not they are labelled. Complex equations can be generated as well, since RST uses LaTeX math.
 
@@ -202,7 +202,7 @@ When introducing a new equation, Make sure to specify what the parameters in the
   | :math:`D =` pipe diameter
 
 .. math::
-  :label: continuity_equation_example
+   :label: continuity_equation_example
 
     \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
 
