@@ -46,11 +46,11 @@ For a multistage filter system, the filter areas for the Dynamic, Roughing, and 
 .. math::
     A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}
 
-Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. **Note: Clare, consider adding the table from slide 23 here.** :numref:`figure_relative_area_of_filtration!`shows the relative area of various filtration technologies.
+Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. :numref:`figure_relative_area_of_filtration` shows the relative area of various filtration technologies.
 
 .. _figure_relative_area_of_filtration:
 
-.. figure:: /Images/figure_relative_area_of_filtration.png
+.. figure:: Images/figure_relative_area_of_filtration.png
   :align: center
   :alt: table showing the relative areas of multistage filtration techniques to AguaClara unit processes
   :width: 80%
@@ -228,10 +228,10 @@ As a parcel of water traveling in the filter the first part of the filter is the
 
 Steps of designing a filter.
 1. Calculate backwash velocity from sand diameter
-  - complicating factors:
-      - wall shear
-      - lift as a unit and fall together
-      - stratification will always occur if a range of sizes exists
+- complicating factors:
+-- wall shear
+-- lift as a unit and fall together
+--- stratification will always occur if a range of sizes exists
 2.
 
 
@@ -286,24 +286,24 @@ Constraints:
 Filtration Constraints
 - inlet manifolds need to have small piezometric head relative to clean sand bed
 - trunk and branches are short manifolds (fL/d) (**friction factor, L, diam?**), therefore: piezometric head variablitty dominated by pressure recovery as given by :math:`\frac{V^2}{2g}` with the velocity as the initial velocity of the manifold
-  - this is the limiting constraint for the velocity in the trunk and branches, which can be relaxed with added headloss in the slots
+-- this is the limiting constraint for the velocity in the trunk and branches, which can be relaxed with added headloss in the slots
 - limit the imbalance between inlets that carry water for two layers and inlets that carry water for one layer.
-  - *perhaps top/bottom inlet should have half the number of slots*
-  - current assumption: backwash branches will have half the slot areas
+-- *perhaps top/bottom inlet should have half the number of slots*
+-- current assumption: backwash branches will have half the slot areas
 - if slots are used to generate head loss (to improve flow distribution) sand blocking, :math:`(1-\epsilon)` during filtration must be accounted for
 - the slots are not blocked during backwash (excepy maybe at initiation)
 
-Backwash Constraints
+Backwash Constraints:
 - flow rate from each slot/hole must be close to average (within *20%*)
 - as there is not head loss in fluidized bed, the manifold must be designed with the appropriate head loss for indpendent uniform flow distribution
 - headloss through slots/holes will be 36x greater during backwash because of 6x increase in velocity
 - to make flow more uniform:
-  - decrease head loss + pressure recovery in manifold
-  - increase head loss in slots
+-- decrease head loss + pressure recovery in manifold
+-- increase head loss in slots
 - slot head loss must not impede the filtration mode capacity
 - this sets maximum headloss for each mode.
-  - during filtration <10% clean bed head loss
-  - during backwash <36x the filtration limits
+-- during filtration <10% clean bed head loss
+-- during backwash <36x the filtration limits
 
   Additional concerns:
   - there are two manifold systems, the trunks into the branches and the branches into the slots. Thus pressure recovery must be small in both trunk and branches so that the slots can reconcile the changes in flow, because flow distribution is fairly uniform in short manifold systems when total port area is equal to or less than manifold area.
