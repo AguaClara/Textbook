@@ -68,6 +68,16 @@ We use Travis_ to ensure this site will always contain functional builds. To pub
 
 .. important:: If your changes to the master branch aren't pushing to gh-pages, then check the status of the `Travis build here <https://travis-ci.org/AguaClara/Textbook>`_.
 
+.. _heading_building_pdf_locally:
+
+Building PDF Locally
+--------------------
+To check errors with the PDF generation more quickly, it may be worthwhile to setup your local machine to build the PDF.
+
+Now you should be able to run :code:`./build_pdf` to run the build_pdf bash script within the root of the Textbook repo. 
+
+**If you are on Windows, you'll need to use a POSIX shell, such as git bash, Cygwin, etc...**
+
 .. _heading_testing_online:
 
 Testing Online
