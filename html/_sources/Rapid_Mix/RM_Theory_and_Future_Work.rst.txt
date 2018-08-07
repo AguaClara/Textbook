@@ -27,7 +27,7 @@ Our analysis suggests that this critical step may require significant time espec
 
 The following is a very preliminary estimate of the time required for attachment of the nanoparticles to the clay particles. This analysis includes multiple simplifying assumptions and there is a reasonable possibility that some of those assumptions are wrong. However, the core assumptions that coagulant nanoparticles are transported to clay particles by a combination of fluid deformation (shear) and molecular diffusion is reasonable.
 
-The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. 
+The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. The core idea is that viscous shear dominated fluid deformation causes relative motion between the coagulant nanoparticles and the clay particles (or other suspended particles) with which they eventually will collide. The collision between these particles that are very different in size is difficult to achieve because there is a viscous layer of fluid around the clay particles that the clay particle drags with it as it rotates in deforming fluid. The coagulant nanoparticle that
 
 The volume of the suspension that is cleared of nanoparticles is proportional to a collision area defined by a ring around the clay particle with width of the diameter of the nanoparticle diffusion band. This diffusion band is the length scale over which diffusion is able to transport coagulant particles to the clay surface during the time that the nanoparticles are sliding past the clay particle.
 

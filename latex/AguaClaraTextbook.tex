@@ -58,7 +58,7 @@
     
 
 \title{AguaClara Textbook Documentation}
-\date{Aug 06, 2018}
+\date{Aug 07, 2018}
 \release{}
 \author{AguaClara Cornell}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -5194,7 +5194,7 @@ The coagulant nanoparticles are transported to suspended particle surfaces by a 
 
 The following is a very preliminary estimate of the time required for attachment of the nanoparticles to the clay particles. This analysis includes multiple simplifying assumptions and there is a reasonable possibility that some of those assumptions are wrong. However, the core assumptions that coagulant nanoparticles are transported to clay particles by a combination of fluid deformation (shear) and molecular diffusion is reasonable.
 
-The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model.
+The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. The core idea is that viscous shear dominated fluid deformation causes relative motion between the coagulant nanoparticles and the clay particles (or other suspended particles) with which they eventually will collide. The collision between these particles that are very different in size is difficult to achieve because there is a viscous layer of fluid around the clay particles that the clay particle drags with it as it rotates in deforming fluid. The coagulant nanoparticle that
 
 The volume of the suspension that is cleared of nanoparticles is proportional to a collision area defined by a ring around the clay particle with width of the diameter of the nanoparticle diffusion band. This diffusion band is the length scale over which diffusion is able to transport coagulant particles to the clay surface during the time that the nanoparticles are sliding past the clay particle.
 \begin{equation}\label{equation:Rapid_Mix/RM_Theory_and_Future_Work:Rapid_Mix/RM_Theory_and_Future_Work:0}
@@ -6222,7 +6222,7 @@ Now that the physical dimensions of the flocculator have been defined, the baffl
 \label{\detokenize{Flocculation/Floc_Design:height-between-expansions-and-number-of-obstacles-per-baffle-space}}
 We have a range of possible \(H_e\) values based on our window of \(3 < \frac{H_e}{S} < 6\). However, we have a limitation and a preference which shape how we design \(H_e\). Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want \(H_e\) to be closer to \(6\) than it is to \(3\); we are looking for \(H_{e_{Max}}\).
 
-We calculate \(H_{e_{Max}}\) based on the physical flocculator dimensions. The equation for \(H_e\) is obtained by rearranging one of the equations for minimum channel width found above, \(W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\). Because we have already design the channel width, we substitute \({W_{channel}\) for \(W_{Min, \, \Pi_{H_eS}}\). Since we are looking for \(H_{e_{Max}}\), we also substitute \(\Pi_{{HS}_{Max}}\) for \(\Pi_{H_eS}\). The result is:
+We calculate \(H_{e_{Max}}\) based on the physical flocculator dimensions. The equation for \(H_e\) is obtained by rearranging one of the equations for minimum channel width found above, \(W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\). Because we have already design the channel width, we substitute \(W_{channel}\) for \(W_{Min, \, \Pi_{H_eS}}\). Since we are looking for \(H_{e_{Max}}\), we also substitute \(\Pi_{{HS}_{Max}}\) for \(\Pi_{H_eS}\). The result is:
 \begin{equation}\label{equation:Flocculation/Floc_Design:Flocculation/Floc_Design:25}
 \begin{split}H_{e_{Max}} = \left[ \frac{K}{2 \nu \bar G^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}\end{split}
 \end{equation}
@@ -6335,9 +6335,7 @@ From here, we can define \(\Pi_{H_eS} = \frac{H_e}{S}\) and
 substitute \(S = \frac{H_e}{\Pi_{H_eS}}\) into the previous equation
 for \(W\) to get \(W_{Min, \, \Pi_{H_eS}}\):
 \begin{equation}\label{equation:Flocculation/Floc_Derivations:Flocculation/Floc_Derivations:5}
-\begin{split}\color{purple}{
-W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}
-}\end{split}
+\begin{split}W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\end{split}
 \end{equation}
 \begin{DUlineblock}{0em}
 \item[] This equation represents the absolute smallest width of a flocculator
