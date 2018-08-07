@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flow Control and Measurement Design &mdash; AguaClara Textbook 0.0.8 documentation</title>
+  <title>Flow Control and Measurement Design &mdash; AguaClara Textbook 0.0.16 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.8
+                0.0.16
               </div>
             
           
@@ -157,6 +157,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+</ul>
 
             
           
@@ -222,7 +236,7 @@
             
   <div class="section" id="flow-control-and-measurement-design">
 <span id="title-flow-control-design"></span><h1>Flow Control and Measurement Design<a class="headerlink" href="#flow-control-and-measurement-design" title="Permalink to this headline">¶</a></h1>
-<p>This section explores AguaClara’s search for constant head in checmial dosing. The term <strong>constant head</strong> means that the driving head of a system, <span class="math notranslate nohighlight">\(\Delta z\)</span> or <span class="math notranslate nohighlight">\(\Delta h\)</span>, does not change over time, even as water flows through or out of the system. Constant head implies constant flow, since the energy driving the flow does not change.</p>
+<p>This section explores AguaClara’s search for constant head in chemical dosing. The term <strong>constant head</strong> means that the driving head of a system, <span class="math notranslate nohighlight">\(\Delta z\)</span> or <span class="math notranslate nohighlight">\(\Delta h\)</span>, does not change over time, even as water flows through or out of the system. Constant head implies constant flow, since the energy driving the flow does not change.</p>
 <p>The challenge of constant head in chemical dosing for water treatment plants is not <em>just</em> providing one continuous flow of chemicals; it is also varying that flow of chemicals as the flow rate through the plant changes, so that the concentration of chemicals in the raw water stays the same.</p>
 <div class="section" id="important-terms-and-equations">
 <span id="heading-fcm-terms-eqs"></span><h2>Important Terms and Equations<a class="headerlink" href="#important-terms-and-equations" title="Permalink to this headline">¶</a></h2>
@@ -285,10 +299,10 @@
 <span id="heading-lfom"></span><h3>Linear Flow Orifice Meter (LFOM)<a class="headerlink" href="#linear-flow-orifice-meter-lfom" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id1">
 <h4>What it is<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
-<p>The LFOM is a weir shape cut into a pipe. It was meant to imitate <a class="reference external" href="http://www.nptel.ac.in/courses/105106114/pdfs/Unit14/14_3b.pdf">the Sutro Weir</a> while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix and flocculator.</p>
+<p>The LFOM is a weir shape cut into a pipe. It was meant to imitate <a class="reference external" href="https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research">the Sutro Weir</a> while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.</p>
 <div class="figure align-center" id="id9">
 <span id="figure-sutro-v-lfom"></span><a class="reference internal image-reference" href="../_images/sutro_v_lfom.png"><img alt="A sutro weir and an LFOM" src="../_images/sutro_v_lfom.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span></p>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span></p>
 </div>
 </div>
 <div class="section" id="id2">
@@ -344,7 +358,7 @@
 </ol>
 <div class="figure align-center" id="id10">
 <span id="figure-cdc-labelled"></span><a class="reference internal image-reference" href="../_images/cdc_labelled.png"><img alt="CDC Displayed" src="../_images/cdc_labelled.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">This is the setup of the chemical dose controller.</span></p>
+<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">This is the setup of the chemical dose controller.</span></p>
 </div>
 </div>
 <div class="section" id="id6">
@@ -450,7 +464,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.8',
+            VERSION:'0.0.16',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

@@ -3,7 +3,7 @@
 ***********************************************
 Functionality in RST and AguaClara Convention
 ***********************************************
-This file will explain how to use RST functionality including images, tables, code, equations, and both internal and cross-document refereces. Additionally, this document is intended to define convention for this textbook project. Any syntax included in this document should be used when contributing to the textbook project. If you come across a function for which there is no convention, please edit this file to include it here.
+This file will explain how to use RST functionality including images, tables, code, equations, and both internal and cross-document references. Additionally, this document is intended to define convention for this textbook project. Any syntax included in this document should be used when contributing to the textbook project. If you come across a function for which there is no convention, please edit this file to include it here.
 
 
 
@@ -35,7 +35,7 @@ Headings are defined by an underline and sometimes overline consisting of one of
 * `^`, for subsubsections
 * `"`, for subsubsubsections
 
-Each title, section and subsection should have a tag before it. Tags for document titles **must** begin with ``title`` and tags for headings **must** begin with ``heading``. For example, this document's title tag is ``title_aguaclara_rst_convention`` and this heading's tag is ``heading_headings_bullets_and_lists``. There should always be a blank line between the tag and the actual heading, else references to the tag will not work. For the sake of document readability, include 3 blank lines before the section tag and 2 blank lines before the subsection tag. Lesser headings (subsubsections and beyond) do not need to have tags, and there should be one blank line between lower headings and the preceeding content. Here is an example. Note the amount and location of blank lines::
+Each title, section and subsection should have a tag before it. Tags for document titles **must** begin with ``title`` and tags for headings **must** begin with ``heading``. For example, this document's title tag is ``title_aguaclara_rst_convention`` and this heading's tag is ``heading_headings_bullets_and_lists``. There should always be a blank line between the tag and the actual heading, else references to the tag will not work. For the sake of document readability, include 3 blank lines before the section tag and 2 blank lines before the subsection tag. Lesser headings (subsubsections and beyond) do not need to have tags, and there should be one blank line between lower headings and the preceding content. Here is an example. Note the amount and location of blank lines::
 
   .. _title_example_document_title:
 
@@ -102,11 +102,12 @@ gives:
 
 Figures
 -------
-Every figure should have a tag, alternative text, and a caption. Figure tags must begin with ``figure``.  Below, the two figures are labelled ``figure_fluffy_cat`` and ``figure_mountain``. The alternative text is a very short desciption of the figure. A caption is written below all of the figure specifications, with a blank line to separate the specs from the caption.
+Every figure should have a tag, alternative text, and a caption. Figure tags must begin with ``figure``.  Below, the two figures are labelled ``figure_fluffy_cat`` and ``figure_mountain``. The alternative text is a very short description of the figure. A caption is written below all of the figure specifications, with a blank line to separate the specs from the caption.
 
 Use the following syntax for including figures from online sources::
 
   .. _figure_fluffy_cat:
+
   .. figure:: https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg
       :width: 200px
       :align: center
@@ -118,6 +119,7 @@ Use the following syntax for including figures from online sources::
 Use this syntax for figures located within the /Textbook repository on GitHub::
 
   .. _figure_mountain:
+
   .. figure:: Images/mountain.jpg
       :width: 300px
       :align: center
@@ -151,6 +153,15 @@ See :numref:`figure_mountain` for a typical mountain view.
     The base directory for figure location is the directory of the file you are writing.
     In this case, that is Textbook/Textbook_Creation_Help.
 
+.. _figure_Youtube:
+
+.. figure:: http://img.youtube.com/vi/vZ2f6mduEls/0.jpg
+    :width: 300px
+    :align: center
+    :alt: Removing Plate Settlers from an AguaClara Sedimentation tank
+    :target: http://www.youtube.com/watch?v=vZ2f6mduEls
+
+    Plant operator removing plate settlers from an AguaClara sedimentation tank.
 
 .. _heading_math_and_equations:
 
@@ -165,10 +176,10 @@ Math is very cool, and works natively in RST using LaTeX math syntax. In-line ma
 
 Which displays as:
 
-  .. math::
-    :label: quadratic_equation
+.. math::
+   :label: quadratic_equation
 
-      y = ax^2 + bx + c
+   y = ax^2 + bx + c
 
 Equations do not have tags, they can be referenced via their labels, as you can see above. Equation labels don't need to begin with any particular word, unlike tags. Not every equation needs a label. Only label equations that you need to reference. If you need to reference an equation that does not have a label, give it an intuitive one. All equations are numbered, regardless of whether or not they are labelled. Complex equations can be generated as well, since RST uses LaTeX math.
 
@@ -191,7 +202,7 @@ When introducing a new equation, Make sure to specify what the parameters in the
   | :math:`D =` pipe diameter
 
 .. math::
-  :label: continuity_equation_example
+   :label: continuity_equation_example
 
     \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
 
@@ -253,16 +264,24 @@ References work by calling any "target"- either tags (titles, headings, figures,
 
 Document Titles and Headings
 """""""""""""""""""""""""""""
-This content should be called with the ``:ref:`tag``` functionality. You can also choose what text will be shown. For example, ``:ref:`This text <heading_links_and_refernces>``` gives :ref:`This text <heading_links_and_references>`.
+This content should be called with the ``:ref:`tag``` functionality. You can also choose what text will be shown. For example, ``:ref:`This text <heading_links_and_references>``` gives :ref:`This text <heading_links_and_references>`.
 
 Figures and Tables
 """""""""""""""""""""
-These can be referenced in the exact same way as titles and headings. However, they can *also* be refernced using the ``:numref:`tag``` syntax. When this is done, there cannot be text written that will link to the figure. Instead, what shows up is 'Fig. 3' or 'Table 3'.
+These can be referenced in the exact same way as titles and headings. However, they can *also* be referenced using the ``:numref:`tag``` syntax. When this is done, there cannot be text written that will link to the figure. Instead, what shows up is 'Fig. 3' or 'Table 3'.
 
 * Figures: ``:numref:`figure_fluffy_cat``` gives :numref:`figure_fluffy_cat`
 * Tables: ``:numref:`table_an_example_table``` gives :numref:`table_an_example_table`
 
 .. _citations:
+
+Equations
+==========
+
+Equations are a little different, ``:ref:`label``` does not work. They are instead called with the ``:eq:`label``` syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation's number will be the linked-text.
+
+* Equations: ``:eq:`quadratic_equation``` only generates a number in parentheses. Thus, this reference is usually preceeded by the word: 'equation.' Like this: equation :eq:`quadratic_equation`.
+
 
 Citations
 =============================
@@ -283,16 +302,22 @@ command.
 The references are stored in a separate plain text BibTeX format file.
 Currently, only the ``unsrt`` and ``plain`` BibTeX styles are supported.
 
+Additionally, PDFs of sources are stored in the "_static/references" folder, which then uses internal links, ensures we never lose access, and  keeps everything in one place.
+
 Example
 -------
 
-In the document, use the following syntax::
+Within the body of the document, use the following syntax::
 
-   See :cite:`Strunk1979` for an introduction to stylish blah, blah...
+   See :cite:`ex-Strunk1979` for an introduction to stylish blah, blah...
 
-And place the directive at the end of the document::
+And place the directive at the very end of the document::
 
    .. bibliography:: references.bib
+      :cited:
+      :keyprefix: ex-
+
+The "keyprefix" should be related to the type of document. For example, when within flocculator_design documents, the keyprefix should be `floc_design-` and all citations should be prefixed with `floc_design`, and on this example page is "ex". Every page will require its own keyprefix which prevents confusion of repeat citations in Travis.
 
 The ``references.bib`` file should contain a BibTex_ bibliography,
 including an entry for:
@@ -307,14 +332,8 @@ including an entry for:
      edition = {Third}
    }
 
-A working example: :cite:`Strunk1979`.
+A working example: :cite:`ex-Strunk1979`.
 
-Equations
-==========
-
-Equations are a little different, ``:ref:`label``` does not work. They are instead called with the ``:eq:`label``` syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation's number will be the linked-text.
-
-* Equations: ``:eq:`quadratic_equation``` only generates a number in parentheses. Thus, this reference is usually preceeded by the word: 'equation.' Like this: equation :eq:`quadratic_equation`.
 
 
 .. _heading_writing_code_blocks:
@@ -344,9 +363,9 @@ Writing Python and Including Doctests
 Doctests
 ^^^^^^^^^^^^
 
-When writing code for the textbook, some sections will be written in execuatable code to demonstrate functions or run calculations. They will not, however, run automatically in the webpage, so to ensure that they are correct before they are pubished they are tested with doctests. Doctests compare the written code with the expected result typed manually below it. In the Anaconda Prompt, simply run the :code:`make doctest` in the correct directory and branch. When run, you see where your excutable code doesn't match up with the "answer" provided by you, the contributor. One reason this is important is because if functions in aide_design change, their outputs might alter from old versions. Doctests will show where this happens. Additonally, typos and other mistakes can be seen. Further documentation on running doctest can be found `here <http://docs.sphinxdocs.com/en/latest/step-3.html>`_.
+When writing code for the textbook, some sections will be written in executable code to demonstrate functions or run calculations. They will not, however, run automatically in the webpage, so to ensure that they are correct before they are published they are tested with doctests. Doctests compare the written code with the expected result typed manually below it. In the Anaconda Prompt, simply run the :code:`make doctest` in the correct directory and branch. When run, you see where your executable code doesn't match up with the "answer" provided by you, the contributor. One reason this is important is because if functions in aide_design change, their outputs might alter from old versions. Doctests will show where this happens. Additionally, typos and other mistakes can be seen. Further documentation on running doctest can be found `here <http://docs.sphinxdocs.com/en/latest/step-3.html>`_.
 
-The way to ensure a doctest will run is to precede each line of code with '>>>', the default Python prompt. When a doctest is run, every line of code with '>>>' in front of it will be run within a directory. The testing becomes relevant for lines which do not have '>>>' in front of them. Any line that is directly below a line beginnning with '>>>' is assumed to be an output of the line of code just above it. In the example below, :code:`19` is the expected output of the line :code:`>>> print(5+14)`. If the output of that line did not match the line below, doctests would alert you! Below are some examples of doctestable code.
+The way to ensure a doctest will run is to precede each line of code with '>>>', the default Python prompt. When a doctest is run, every line of code with '>>>' in front of it will be run within a directory. The testing becomes relevant for lines which do not have '>>>' in front of them. Any line that is directly below a line beginning with '>>>' is assumed to be an output of the line of code just above it. In the example below, :code:`19` is the expected output of the line :code:`>>> print(5+14)`. If the output of that line did not match the line below, doctests would alert you! Below are some examples of doctestable code.
 
     >>> python="code"
     >>> print(5+14)
@@ -377,6 +396,8 @@ Though there are other ways to include code in an RST document, this method make
 Inserting Plots
 ---------------
 
+Inserting plots using this method should only be done if we can integrate this with figures.
+
 .. plot::
 
    import matplotlib.pyplot as plt
@@ -392,6 +413,24 @@ Or insert from a file like so:
 .. plot:: pyplots/ellipses_example.py
    :include-source:
 
+Inserting Video
+---------------
+
+To insert a video and use it like a figure, take an instructive snapshot of the video. Save that as an image, and create a figure linking to that image. Then, make the video open when the video is clicked on by setting the video url as the "target" for the image. To indicate it is a video, include the play bar. Here is the relevant code::
+
+
+  .. figure:: floc_blanket.png
+     :target: https://www.youtube.com/watch?v=Xp8ygnIOgi0
+
+     This is a floc blanket forming
+
+And here is a working example:
+
+.. figure:: floc_blanket.png
+   :target: https://www.youtube.com/watch?v=Xp8ygnIOgi0
+
+   This is a floc blanket forming
+
 
 .. _heading_assorted_convention:
 
@@ -406,4 +445,12 @@ Assorted Other Convention
 
 .. disqus::
 
-.. bibliography:: references.bib
+.. bibliography:: /references.bib
+  :cited:
+  :keyprefix: ex-
+
+Convert a DOI into a URL
+Given the following DOI.
+DOI:10.2166/aqua.2006.062
+This is the url.
+http://dx.doi.org/10.2166/aqua.2006.062

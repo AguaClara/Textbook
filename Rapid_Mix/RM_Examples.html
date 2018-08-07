@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Rapid Mix Appendix C: Examples &mdash; AguaClara Textbook 0.0.8 documentation</title>
+  <title>Rapid Mix Appendix C: Examples &mdash; AguaClara Textbook 0.0.16 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.8
+                0.0.16
               </div>
             
           
@@ -115,16 +115,9 @@
 <li class="toctree-l1"><a class="reference internal" href="RM_Design.html">Rapid Mix Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Derivations.html">Rapid Mix Derivations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid Mix Appendix C: Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#carbonate-reactions-buffering-and-ph">Carbonate reactions, buffering, and pH</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#carbonic-acid-and-bicarbonate">Carbonic Acid and Bicarbonate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bicarbonate-and-carbonate">Bicarbonate and Carbonate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#total-concentration-of-carbonates">Total Concentration of Carbonates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#alpha-notation">Alpha Notation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#acid-neutralizing-capacity-anc-or-alkalinity">Acid Neutralizing Capacity (ANC) or Alkalinity</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ph-adjustment">pH Adjustment</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#example-find-the-required-dose-of-several-bases-to-raise-the-ph-at-the-manzaragua-water-treatment-plant">Example: Find the required dose of several bases to raise the pH at the Manzaragua Water Treatment Plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-ph-adjustment">Example: pH Adjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lfom-and-coagulant-injection-sizing">LFOM and coagulant injection sizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-problem-energy-dissipation-rate-in-a-straight-pipe">Example problem: Energy dissipation rate in a straight pipe</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
@@ -140,6 +133,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
 </ul>
 
             
@@ -206,125 +213,21 @@
             
   <div class="section" id="rapid-mix-appendix-c-examples">
 <span id="title-rapid-mix-examples"></span><h1>Rapid Mix Appendix C: Examples<a class="headerlink" href="#rapid-mix-appendix-c-examples" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="carbonate-reactions-buffering-and-ph">
-<span id="heading-carbonate-reactions-buffering-and-ph"></span><h2>Carbonate reactions, buffering, and pH<a class="headerlink" href="#carbonate-reactions-buffering-and-ph" title="Permalink to this headline">¶</a></h2>
-<p>The coagulants used for drinking water treatment are acidic and thus result in a lowering of the pH of the treated water. The optimal pH for aluminum coagulant nanoparticle formation is between pH of 6.5 and 8.5. This is also the <a class="reference external" href="https://www.epa.gov/dwstandardsregulations/secondary-drinking-water-standards-guidance-nuisance-chemicals">pH range set by the EPA secondary standards for drinking water</a>. Although many water sources are within this pH range, there are some waters with more extreme values of pH. The aluminum and iron based coagulants are also acidic and in some waters the pH may drop below the ideal range when adding the coagulant. When the pH is outside the acceptable range it is necessary to adjust the pH by adding either a base or an acid.</p>
-<p>When acid is added to a water containing bicarbonate, <span class="math notranslate nohighlight">\(HCO_3^-\)</span>, one of the potential reactions is for a proton to combine with <span class="math notranslate nohighlight">\(HCO_3^-\)</span> to form carbonic acid, <span class="math notranslate nohighlight">\({H_2}CO_3\)</span>. If a base is added to water the reaction will proceed in the opposite direction. Carbonic acid, <span class="math notranslate nohighlight">\({H_2}CO_3\)</span>, is chemical indistinguishable from dissolved carbon dioxide, <span class="math notranslate nohighlight">\(CO_{2_{aq}}\)</span> and the total of carbonic acid and dissolved carbon dioxide is represented as <span class="math notranslate nohighlight">\({H_2}CO_3^{\star}\)</span>. The reaction of bicarbonate to form carbonic acid removes one proton from solution and thus the concentration of protons doesn’t increase as fast as we might have first expected as acid is added to the water.</p>
-<p>The reactions of carbonate species with protons provides pH buffering capacity that must be considered when calculating the effect of acid or base addition. Since carbonates are the dominant buffering agents in natural waters it is essential to account for their influence on pH.</p>
-</div>
-<div class="section" id="carbonic-acid-and-bicarbonate">
-<span id="heading-carbonic-acid-and-bicarbonate"></span><h2>Carbonic Acid and Bicarbonate<a class="headerlink" href="#carbonic-acid-and-bicarbonate" title="Permalink to this headline">¶</a></h2>
-<div class="math notranslate nohighlight" id="equation-carbonate">
-<span class="eqno">(242)<a class="headerlink" href="#equation-carbonate" title="Permalink to this equation">¶</a></span>\[{H_2}CO_3^{\star} \overset {K_1} \longleftrightarrow {H^+} + HCO_3^-\]</div>
-<dl class="docutils">
-<dt>Where:</dt>
-<dd><div class="first last line-block">
-<div class="line"><span class="math notranslate nohighlight">\(K_1\)</span> is the dissociation constant defined below.</div>
-</div>
-</dd>
-</dl>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-0">
-<span class="eqno">(243)<a class="headerlink" href="#equation-rapid-mix-rm-examples-0" title="Permalink to this equation">¶</a></span>\[{K_1} = \frac{{\left[ {{H^ + }} \right]\left[ {HCO_3^ - } \right]}}{{\left[ {{H_2}CO_3^{\star} } \right]}}\]</div>
-<p>Where the [ ] indicates concentration in mole/L. We will use the p function, <span class="math notranslate nohighlight">\(p(x)=-log_{10}(x)\)</span>, to define the dissociation constant.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-1">
-<span class="eqno">(244)<a class="headerlink" href="#equation-rapid-mix-rm-examples-1" title="Permalink to this equation">¶</a></span>\[p{K_1} = 6.3\]</div>
-<p>At the point of equal concentrations of bicarbonate and carbonic acid the dissociation constant, <span class="math notranslate nohighlight">\(K_1\)</span>, is equal to the hydrogen ion concentration, <span class="math notranslate nohighlight">\(H^ +\)</span>. Thus we have equal concentrations at <span class="math notranslate nohighlight">\(p{K_1} = pH\)</span>. This reaction is “centered” at pH = 6.3 and thus there is maximum buffering due to this reaction at pH = 6.3.</p>
-</div>
-<div class="section" id="bicarbonate-and-carbonate">
-<span id="heading-bicarbonate-and-carbonate"></span><h2>Bicarbonate and Carbonate<a class="headerlink" href="#bicarbonate-and-carbonate" title="Permalink to this headline">¶</a></h2>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-2">
-<span class="eqno">(245)<a class="headerlink" href="#equation-rapid-mix-rm-examples-2" title="Permalink to this equation">¶</a></span>\[HCO_3^ - \overset {{K_2}} \longleftrightarrow {H^ + } + CO_3^{ - 2}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-3">
-<span class="eqno">(246)<a class="headerlink" href="#equation-rapid-mix-rm-examples-3" title="Permalink to this equation">¶</a></span>\[{K_2} = \frac{{\left[ {{H^ + }} \right]\left[ {CO_3^{ - 2}} \right]}}{{\left[ {HCO_3^ - } \right]}}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-4">
-<span class="eqno">(247)<a class="headerlink" href="#equation-rapid-mix-rm-examples-4" title="Permalink to this equation">¶</a></span>\[p{K_2} = 10.3\]</div>
-</div>
-<div class="section" id="total-concentration-of-carbonates">
-<span id="heading-total-concentration-of-carbonates"></span><h2>Total Concentration of Carbonates<a class="headerlink" href="#total-concentration-of-carbonates" title="Permalink to this headline">¶</a></h2>
-<p>The total concentration of carbonate species is given by</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-5">
-<span class="eqno">(248)<a class="headerlink" href="#equation-rapid-mix-rm-examples-5" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}{C_T} = \left[ {{H_2}CO_3^{\star} } \right] + \left[ {HCO_3^ - } \right] + \left[ {CO_3^{ - 2}} \right]\\Where: :math:`{C_T}` is the total concentration of carbonates.\end{aligned}\end{align} \]</div>
-<p>The total concentration of carbonates, <span class="math notranslate nohighlight">\({C_T}\)</span>, is useful because it is conservative even though the individual species concentrations change as pH changes.</p>
-</div>
-<div class="section" id="alpha-notation">
-<span id="heading-alpha-notation"></span><h2>Alpha Notation<a class="headerlink" href="#alpha-notation" title="Permalink to this headline">¶</a></h2>
-<p>The alpha notation is used to show the concentration dependence on pH and to make the equations simpler.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-6">
-<span class="eqno">(249)<a class="headerlink" href="#equation-rapid-mix-rm-examples-6" title="Permalink to this equation">¶</a></span>\[\left[ {{H_2}CO_3^{\star} } \right] = {\alpha_0}{C_T}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-7">
-<span class="eqno">(250)<a class="headerlink" href="#equation-rapid-mix-rm-examples-7" title="Permalink to this equation">¶</a></span>\[\left[ {HCO_3^-} \right] = {\alpha_1}{C_T}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-8">
-<span class="eqno">(251)<a class="headerlink" href="#equation-rapid-mix-rm-examples-8" title="Permalink to this equation">¶</a></span>\[\left[ {CO_3^{-2}} \right] = {\alpha_2}{C_T}\]</div>
-</div>
-<div class="section" id="acid-neutralizing-capacity-anc-or-alkalinity">
-<span id="heading-acid-neutralizing-capacity-anc-or-alkalinity"></span><h2>Acid Neutralizing Capacity (ANC) or Alkalinity<a class="headerlink" href="#acid-neutralizing-capacity-anc-or-alkalinity" title="Permalink to this headline">¶</a></h2>
-<p>Acid neutralizing capacity or alkalinity is the ability of a water sample to react with and neutralize an input of acid. The units of ANC are equivalents (or protons) per liter. Bicarbonate, <span class="math notranslate nohighlight">\(HCO_3^-\)</span>, can react with one proton, <span class="math notranslate nohighlight">\(H^+\)</span>, and thus each mole of <span class="math notranslate nohighlight">\(HCO_3^-\)</span> provides one equivalent per liter of ANC. The other terms in the equation have similar explanations.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-9">
-<span class="eqno">(252)<a class="headerlink" href="#equation-rapid-mix-rm-examples-9" title="Permalink to this equation">¶</a></span>\[{\text{ANC}} = [HCO_3^ - {\text{] + 2[CO}}_3^{ - 2}{\text{] + [O}}{{\text{H}}^{\text{ - }}}{\text{] - [}}{{\text{H}}^{\text{ + }}}{\text{]}}\]</div>
-<p>Note that carbonic acid and dissolved carbon dioxide are not in the ANC equation because they have no ability to neutralize protons.</p>
-<p>We can write the ANC equation using alpha notation</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-10">
-<span class="eqno">(253)<a class="headerlink" href="#equation-rapid-mix-rm-examples-10" title="Permalink to this equation">¶</a></span>\[ANC = {C_T}({\alpha_1} + 2{\alpha_2}) + \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
-<p>The alphas are each a function of the proton concentration and the dissociation constants of the carbonate reactions.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-11">
-<span class="eqno">(254)<a class="headerlink" href="#equation-rapid-mix-rm-examples-11" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}} + \frac{{{K_1}{K_2}}}{{{{[{H^ + }]}^2}}}}}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-12">
-<span class="eqno">(255)<a class="headerlink" href="#equation-rapid-mix-rm-examples-12" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}}\left( {1 + \frac{{{K_2}}}{{[{H^ + }]}}} \right)}}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-13">
-<span class="eqno">(256)<a class="headerlink" href="#equation-rapid-mix-rm-examples-13" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{1}}} = \frac{1}{{\frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}} + 1 + \frac{{{{\rm K}_2}}}{{[{{\rm H}^ + }]}}}}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-14">
-<span class="eqno">(257)<a class="headerlink" href="#equation-rapid-mix-rm-examples-14" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{2}}} = \frac{1}{{\frac{{{{[{{\rm H}^ + }]}^2}}}{{{{\rm K}_1}{{\rm K}_2}}} + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}} + 1}}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-15">
-<span class="eqno">(258)<a class="headerlink" href="#equation-rapid-mix-rm-examples-15" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{2}}} = \frac{1}{{1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}}\left( {1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}}} \right)}}\]</div>
-<p>For completeness we include acid neutralizing capacity for the case where the system is in equilibrium with atmospheric carbon dioxide,
-<span class="math notranslate nohighlight">\(CO_2\)</span>.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-16">
-<span class="eqno">(259)<a class="headerlink" href="#equation-rapid-mix-rm-examples-16" title="Permalink to this equation">¶</a></span>\[ANC_{atm\,equilibrium} = \frac{{{P{C{O_2}}}{K_H}}}{{{\alpha_0}}}({\alpha_1} + 2{\alpha_2}) + \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
-<div class="section" id="ph-adjustment">
-<h3>pH Adjustment<a class="headerlink" href="#ph-adjustment" title="Permalink to this headline">¶</a></h3>
-<p>In drinking water treatment plant operation it is sometimes necessary to add a base (or acid) to increase (or decrease) the pH of the raw water. The carbonate system is most important in understanding how the base will adjust the pH because the reaction between carbonic acid and bicarbonate occurs around pH 6.3, the pK for that reaction. Carbon dioxide exchange with the atmosphere is insignificant in drinking water treatment unit processes unless there is a aeration stage. Thus we can use the ANC equation for the case with no <span class="math notranslate nohighlight">\(CO_2\)</span> exchange with the atmosphere.</p>
-<p>We will evaluate the case where we add a base that will increase the ANC of the raw water and it might also increase the total carbonate concentration. Our goal is to calculate how much of that base to add to reach a target pH. The final ANC after base addition is given by
-.. math:: ANC_1 = ANC_0 + Pi_{ANC}C_B</p>
-<div class="line-block">
-<div class="line">where:</div>
-<div class="line"><span class="math notranslate nohighlight">\(ANC_1\)</span> is the final acid neutralizing capacity of the mixture after the base is added.</div>
-<div class="line"><span class="math notranslate nohighlight">\(C_B\)</span> is concentration of base in mole/liter  <span class="math notranslate nohighlight">\(\Pi_{ANC}\)</span> is ANC per mole of base</div>
-</div>
-<p>The final carbonate concentration is given by</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-17">
-<span class="eqno">(260)<a class="headerlink" href="#equation-rapid-mix-rm-examples-17" title="Permalink to this equation">¶</a></span>\[C_{T_1} ={C_{T_0}}+ \Pi_{CO_3^{-2}}C_B\]</div>
-<div class="line-block">
-<div class="line">where:</div>
-<div class="line"><span class="math notranslate nohighlight">\(C_{T_1}\)</span> is the final total carbonate concentration of the mixture after the base is added.</div>
-<div class="line"><span class="math notranslate nohighlight">\(\Pi_{CO_3^{-2}}\)</span> is mole of carbonate per mole of base (0 for <span class="math notranslate nohighlight">\(NaOH\)</span> and 1 for <span class="math notranslate nohighlight">\(Na_2CO_3\)</span>)</div>
-</div>
-<p>Substituting these values into the ANC equation we obtain</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-18">
-<span class="eqno">(261)<a class="headerlink" href="#equation-rapid-mix-rm-examples-18" title="Permalink to this equation">¶</a></span>\[ANC_0 + \Pi_{ANC}C_B = ({C_{T_0}}+ \Pi_{CO_3^{-2}}C_B)({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
-<p>Now we solve for <span class="math notranslate nohighlight">\(C_B\)</span>, the concentration of base that must be added to reach a target pH.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-19">
-<span class="eqno">(262)<a class="headerlink" href="#equation-rapid-mix-rm-examples-19" title="Permalink to this equation">¶</a></span>\[(\Pi_{ANC} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2}) )C_B= {C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-20">
-<span class="eqno">(263)<a class="headerlink" href="#equation-rapid-mix-rm-examples-20" title="Permalink to this equation">¶</a></span>\[C_B= \frac{{C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0}{\Pi_{ANC} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2})}\]</div>
-<p>Note that the equations above can also be used for the case where acid is added to reduce the pH. In that case <span class="math notranslate nohighlight">\(\Pi_{ANC}\)</span> will have a negative value.</p>
-</div>
-</div>
-<div class="section" id="example-find-the-required-dose-of-several-bases-to-raise-the-ph-at-the-manzaragua-water-treatment-plant">
-<h2>Example: Find the required dose of several bases to raise the pH at the Manzaragua Water Treatment Plant<a class="headerlink" href="#example-find-the-required-dose-of-several-bases-to-raise-the-ph-at-the-manzaragua-water-treatment-plant" title="Permalink to this headline">¶</a></h2>
-<p>The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel. The plant is located in the municipality of Guinope, the department of El Paraiso, Honduras.</p>
-<blockquote>
-<div><div class="figure align-center" id="id1">
+<div class="section" id="example-ph-adjustment">
+<span id="heading-example-ph-adjustment"></span><h2>Example: pH Adjustment<a class="headerlink" href="#example-ph-adjustment" title="Permalink to this headline">¶</a></h2>
+<p>Find the required dose of several bases to raise the pH at the Manzaragua Water Treatment Plant
+The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel. The plant is located in the municipality of Guinope, the department of El Paraiso, Honduras.</p>
+<div class="figure align-center" id="id1">
 <span id="manzaragua-wtp"></span><a class="reference internal image-reference" href="../_images/Manzaragua_WTP.jpg"><img alt="Manzaragua WTP" src="../_images/Manzaragua_WTP.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 51 </span><span class="caption-text">Manzaragua water treatment plant using two of the AguaClara 1 L/s plants in parallel.</span></p>
+<p class="caption"><span class="caption-number">Fig. 63 </span><span class="caption-text">Manzaragua water treatment plant using two of the AguaClara 1 L/s plants in parallel.</span></p>
 </div>
-</div></blockquote>
 <p>The plant performed very poorly from the first day of operation. The first attempted fix was to double the flocculator residence time by increasing the number of flocculator pipes (3 inch diameter by 1.5 m long) from 12 to 24. This improved performance, but the plant continued to perform poorly. A raw water sample was analyzed on May 30, 2018 and the following results were obtained.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-manzaragua-water-analysis"></span><a class="reference internal image-reference" href="../_images/Manzaragua_Water_Analysis.jpg"><img alt="Manzaragua Water Analysis" src="../_images/Manzaragua_Water_Analysis.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 52 </span><span class="caption-text">Water quality analysis for Manzaragua.</span></p>
+<p class="caption"><span class="caption-number">Fig. 64 </span><span class="caption-text">Water quality analysis for Manzaragua.</span></p>
 </div>
 <span id="table-manzaragua-water-quality-analysis"></span><table border="1" class="colwidths-given docutils align-center" id="id3">
-<caption><span class="caption-number">Table 11 </span><span class="caption-text">Manzaragua water quality analysis</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 13 </span><span class="caption-text">Manzaragua water quality analysis</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="25%" />
 <col width="25%" />
@@ -391,18 +294,11 @@
 </tbody>
 </table>
 <p>This water has high color which suggests a high concentration of dissolved organic matter. The pH is a clear problem because the pH is too low for the coagulant nanoparticles to precipitate. As the water sample pH of 5.91 a significant fraction of the coagulant will remain soluble.</p>
-<p>Our goal is to determine how much base will need to be added to raise the pH. We do not have data on the <em>optimal</em> pH for treating high color water with PACl and so we will use pH 7 as the target. We will need a separate calculation to estimate how much additional <span class="math notranslate nohighlight">\(Na_2CO_3\)</span> will need to be added to balance the PACl acidity.</p>
-<p>At circumneutral pH (pH close to 7) the buffering capacity of the water is dominated by carbonate chemistry and specifically by the equilibrium between <span class="math notranslate nohighlight">\({H_2}CO_3^{\star}\)</span> and $HCO_3^- $. We will use the acid neutralizing capacity (reported as calcium carbonate alkalinity) and the pH from the sample analysis to estimate the total concentration of carbonates. We will not use the sample analysis carbonate concentrations because they can not be precisely correct.</p>
-<p>The solution steps are as follows: 1) Find total carbonate concentration, <span class="math notranslate nohighlight">\(C_{T_0}\)</span>, of the raw water sample using the ANC equation for the case where the system is not exchanging <span class="math notranslate nohighlight">\(CO_2\)</span> with the atmosphere. 1) Solve for the required concentration of base, <span class="math notranslate nohighlight">\(C_B\)</span>.</p>
-<p>For step 1 we need to solve the ANC equation for the carbonate concentration.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-examples-21">
-<span class="eqno">(264)<a class="headerlink" href="#equation-rapid-mix-rm-examples-21" title="Permalink to this equation">¶</a></span>\[C_{T_0} = \frac{ANC_0  - \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} + \left[ {{H^ + }} \right]}{\alpha_1 + 2\alpha_2}\]</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">We eventually should add the effect of the coagulant to this analysis so the required base concentration can be calculated given the raw water alkalinity, raw water pH, and coagulant dose.</p>
-</div>
+<p>Our goal is to determine how much base will need to be added to raise the pH. We do not have data on the <em>optimal</em> pH for treating high color water with PACl and so we will use pH 7 as the target.</p>
+<p>At circumneutral pH (pH close to 7) the buffering capacity of the water is dominated by carbonate chemistry and specifically by the equilibrium between <span class="math notranslate nohighlight">\({H_2}CO_3^{\star}\)</span> and <span class="math notranslate nohighlight">\(HCO_3^-\)</span> . We will use the acid neutralizing capacity (reported as calcium carbonate alkalinity) and the pH from the sample analysis to estimate the total concentration of carbonates. We will not use the sample analysis carbonate concentrations because they can not be precisely correct.</p>
+<p>We will find the amount of base that must be added using <a class="reference internal" href="RM_Derivations.html#equation-base-for-ph-adjust">(157)</a>.</p>
 <span id="table-anc-and-carbonate-values-for-several-bases-and-acids"></span><table border="1" class="colwidths-given docutils align-center" id="id4">
-<caption><span class="caption-number">Table 12 </span><span class="caption-text">ANC and carbonate values for several bases and acids</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">ANC and carbonate values for several bases and acids</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -487,7 +383,8 @@
 
 
 <span class="sd">&quot;&quot;&quot; calculate the amount of base that must be added to reach a target pH&quot;&quot;&quot;</span>
-<span class="k">def</span> <span class="nf">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_ANC</span><span class="p">,</span><span class="n">Pi_CO3</span><span class="p">,</span><span class="n">pH_target</span><span class="p">):</span>
+
+<span class="k">def</span> <span class="nf">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_base</span><span class="p">,</span><span class="n">Pi_CO3</span><span class="p">,</span><span class="n">Pi_Al</span><span class="p">,</span><span class="n">C_Al</span><span class="p">,</span><span class="n">pH_target</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;This function calculates the required base (or acid) to adjust the pH to a target value. The buffering capacity is assumed to be completely due to carbonate species. The initial carbonate concentration is calculated based on the initial pH and the initial ANC.</span>
 
 <span class="sd">  Parameters</span>
@@ -496,10 +393,14 @@
 <span class="sd">      pH of the sample</span>
 <span class="sd">  ANC_0: float</span>
 <span class="sd">      acid neutralizing capacity (Alkalinity) of the sample in eq/L.</span>
-<span class="sd">  Pi_ANC: float</span>
+<span class="sd">  Pi_base: float</span>
 <span class="sd">    equivalents of ANC per mole of base (or acid)</span>
 <span class="sd">  Pi_CO3: float</span>
 <span class="sd">    mole of carbonate per mole of base (or acid)</span>
+<span class="sd">  Pi_Al : float</span>
+<span class="sd">    equivalents of ANC per mole of aluminum coagulant</span>
+<span class="sd">  C_Al</span>
+<span class="sd">    concentration of aluminum coagulant in moles/L</span>
 <span class="sd">  pH_target: float</span>
 <span class="sd">    pH goal</span>
 <span class="sd">  Returns</span>
@@ -507,30 +408,35 @@
 <span class="sd">  The required concentration of base (or acid) in millimoles/L</span>
 <span class="sd">  Examples</span>
 <span class="sd">  --------</span>
-<span class="sd">  &gt;&gt;&gt; pH_adjust(5.91,0.2*u.mmol/u.L,1,1,7)</span>
+<span class="sd">  &gt;&gt;&gt; pH_adjust(5.91,0.2*u.mmol/u.L,1,1,0,0,7)</span>
 <span class="sd">  2.2892822041250924 millimole/liter</span>
+<span class="sd">  &gt;&gt;&gt; pH_adjust(7,0.2*u.mmol/u.L,1,1,0,0,0,0,7)</span>
+<span class="sd">  0.0 millimole/liter</span>
+<span class="sd">  &gt;&gt;&gt; pH_adjust(7,0*u.mmol/u.L,1,0,-3,1*u.mmol/u.L,7)</span>
+<span class="sd">  3.0 millimole/liter</span>
 <span class="sd">  &quot;&quot;&quot;</span>
   <span class="n">CT_0</span> <span class="o">=</span> <span class="n">total_carbonates_closed</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">)</span>
-  <span class="n">B_num</span> <span class="o">=</span> <span class="n">CT_0</span> <span class="o">*</span> <span class="p">(</span><span class="n">epa</span><span class="o">.</span><span class="n">alpha1_carbonate</span><span class="p">(</span><span class="n">pH_target</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">epa</span><span class="o">.</span><span class="n">alpha2_carbonate</span><span class="p">(</span><span class="n">pH_target</span><span class="p">))</span> <span class="o">+</span> <span class="n">epa</span><span class="o">.</span><span class="n">Kw</span><span class="o">/</span><span class="n">epa</span><span class="o">.</span><span class="n">invpH</span><span class="p">(</span><span class="n">pH_target</span><span class="p">)</span> <span class="o">-</span> <span class="n">epa</span><span class="o">.</span><span class="n">invpH</span><span class="p">(</span><span class="n">pH_target</span><span class="p">)</span> <span class="o">-</span> <span class="n">ANC_0</span>
-  <span class="n">B_den</span> <span class="o">=</span> <span class="n">Pi_ANC</span> <span class="o">-</span> <span class="n">Pi_CO3</span><span class="o">*</span><span class="p">(</span><span class="n">epa</span><span class="o">.</span><span class="n">alpha1_carbonate</span><span class="p">(</span><span class="n">pH_target</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">epa</span><span class="o">.</span><span class="n">alpha2_carbonate</span><span class="p">(</span><span class="n">pH_target</span><span class="p">))</span>
+  <span class="n">B_num</span> <span class="o">=</span> <span class="n">CT_0</span> <span class="o">*</span> <span class="p">(</span><span class="n">epa</span><span class="o">.</span><span class="n">alpha1_carbonate</span><span class="p">(</span><span class="n">pH_target</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">epa</span><span class="o">.</span><span class="n">alpha2_carbonate</span><span class="p">(</span><span class="n">pH_target</span><span class="p">))</span> <span class="o">+</span> <span class="n">epa</span><span class="o">.</span><span class="n">Kw</span><span class="o">/</span><span class="n">epa</span><span class="o">.</span><span class="n">invpH</span><span class="p">(</span><span class="n">pH_target</span><span class="p">)</span> <span class="o">-</span> <span class="n">epa</span><span class="o">.</span><span class="n">invpH</span><span class="p">(</span><span class="n">pH_target</span><span class="p">)</span> <span class="o">-</span> <span class="n">ANC_0</span> <span class="o">-</span> <span class="n">Pi_Al</span><span class="o">*</span><span class="n">C_Al</span>
+  <span class="n">B_den</span> <span class="o">=</span> <span class="n">Pi_base</span> <span class="o">-</span> <span class="n">Pi_CO3</span><span class="o">*</span><span class="p">(</span><span class="n">epa</span><span class="o">.</span><span class="n">alpha1_carbonate</span><span class="p">(</span><span class="n">pH_target</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">epa</span><span class="o">.</span><span class="n">alpha2_carbonate</span><span class="p">(</span><span class="n">pH_target</span><span class="p">))</span>
   <span class="k">return</span> <span class="p">(</span><span class="n">B_num</span><span class="o">/</span><span class="n">B_den</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mmol</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
+
 
 <span class="sd">&quot;&quot;&quot;target pH&quot;&quot;&quot;</span>
 <span class="n">pH_target</span> <span class="o">=</span> <span class="mi">7</span>
 
-<span class="n">Pi_ANC_Na2CO3</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">Pi_base_Na2CO3</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">Pi_CO3_Na2CO3</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="n">Pi_ANC_NaHCO3</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">Pi_base_NaHCO3</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">Pi_CO3_NaHCO3</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="n">Pi_ANC_NaOH</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">Pi_base_NaOH</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">Pi_CO3_NaOH</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="n">C_Na2CO3</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_ANC_Na2CO3</span><span class="p">,</span><span class="n">Pi_CO3_Na2CO3</span><span class="p">,</span><span class="n">pH_target</span><span class="p">)</span>
+<span class="n">C_Na2CO3</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_base_Na2CO3</span><span class="p">,</span><span class="n">Pi_CO3_Na2CO3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">pH_target</span><span class="p">)</span>
 
-<span class="n">C_NaHCO3</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_ANC_NaHCO3</span><span class="p">,</span><span class="n">Pi_CO3_NaHCO3</span><span class="p">,</span><span class="n">pH_target</span><span class="p">)</span>
-<span class="n">C_NaOH</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_ANC_NaOH</span><span class="p">,</span><span class="n">Pi_CO3_NaOH</span><span class="p">,</span><span class="n">pH_target</span><span class="p">)</span>
+<span class="n">C_NaHCO3</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_base_NaHCO3</span><span class="p">,</span><span class="n">Pi_CO3_NaHCO3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">pH_target</span><span class="p">)</span>
+<span class="n">C_NaOH</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_base_NaOH</span><span class="p">,</span><span class="n">Pi_CO3_NaOH</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">pH_target</span><span class="p">)</span>
 
 <span class="sd">&quot;&quot;&quot;Display results in a pandas table&quot;&quot;&quot;</span>
 <span class="n">base</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;NaOH&quot;</span><span class="p">,</span><span class="s2">&quot;NaHCO3&quot;</span><span class="p">,</span><span class="s2">&quot;Na2CO3&quot;</span><span class="p">]</span>
@@ -542,9 +448,9 @@
 
 <span class="sd">&quot;&quot;&quot;Graph the base concentration required as a function of the target pH&quot;&quot;&quot;</span>
 <span class="n">pH_graph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">C_Na2CO3</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_ANC_Na2CO3</span><span class="p">,</span><span class="n">Pi_CO3_Na2CO3</span><span class="p">,</span><span class="n">pH_graph</span><span class="p">)</span>
-<span class="n">C_NaHCO3</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_ANC_NaHCO3</span><span class="p">,</span><span class="n">Pi_CO3_NaHCO3</span><span class="p">,</span><span class="n">pH_graph</span><span class="p">)</span>
-<span class="n">C_NaOH</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_ANC_NaOH</span><span class="p">,</span><span class="n">Pi_CO3_NaOH</span><span class="p">,</span><span class="n">pH_graph</span><span class="p">)</span>
+<span class="n">C_Na2CO3</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_base_Na2CO3</span><span class="p">,</span><span class="n">Pi_CO3_Na2CO3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">pH_graph</span><span class="p">)</span>
+<span class="n">C_NaHCO3</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_base_NaHCO3</span><span class="p">,</span><span class="n">Pi_CO3_NaHCO3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">pH_graph</span><span class="p">)</span>
+<span class="n">C_NaOH</span> <span class="o">=</span> <span class="n">pH_adjust</span><span class="p">(</span><span class="n">pH_0</span><span class="p">,</span><span class="n">ANC_0</span><span class="p">,</span><span class="n">Pi_base_NaOH</span><span class="p">,</span><span class="n">Pi_CO3_NaOH</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">pH_graph</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 
@@ -568,7 +474,7 @@
 </div>
 <p>The analysis reveals that the choice of base matters. The most efficient (on a mass or mole basis) base is <span class="math notranslate nohighlight">\(NaOH\)</span> because it doesn’t add any carbonates that don’t fully react with the hydrogen ions. The decision about which base to use will be influenced by economics, operator safety, and by whether additional carbonate buffering simplifies plant operation with changing raw water quality.</p>
 <span id="table-calcium-bases"></span><table border="1" class="colwidths-given docutils" id="id5">
-<caption><span class="caption-number">Table 13 </span><span class="caption-text">Calcium base.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Calcium base.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -598,15 +504,15 @@
 <p>The calcium bases are relatively inexpensive and have the disadvantage of lower solubility than sodium bases. Calcium carbonate has a low solubility, carbon dioxide is present in the atmosphere, and thus calcium carbonate precipitation limits the concentration that can be used for chemical feeds.</p>
 <div class="figure align-center" id="id6">
 <span id="figure-mole-base-for-target-ph"></span><a class="reference internal image-reference" href="../_images/mole_base_for_target_pH.png"><img alt="mole base for target pH" src="../_images/mole_base_for_target_pH.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 53 </span><span class="caption-text">Dose of three bases (in mole/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 65 </span><span class="caption-text">Dose of three bases (in mole/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
 </div>
 <div class="figure align-center" id="id7">
 <span id="figure-mg-base-for-target-ph"></span><a class="reference internal image-reference" href="../_images/mg_base_for_target_pH.png"><img alt="mg base for target pH" src="../_images/mg_base_for_target_pH.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 54 </span><span class="caption-text">Dose of two bases (in mg/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 66 </span><span class="caption-text">Dose of two bases (in mg/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
 </div>
 <p>The required dose for each of the bases is summarized below.</p>
 <span id="table-base-table"></span><table border="1" class="colwidths-given docutils" id="id8">
-<caption><span class="caption-number">Table 14 </span><span class="caption-text">Dose of each base required to change the pH of the Manzaragua water to 7.</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Dose of each base required to change the pH of the Manzaragua water to 7.</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="25%" />
 <col width="25%" />
@@ -633,6 +539,77 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="lfom-and-coagulant-injection-sizing">
+<span id="heading-lfom-and-coag-injection-sizing"></span><h2>LFOM and coagulant injection sizing<a class="headerlink" href="#lfom-and-coagulant-injection-sizing" title="Permalink to this headline">¶</a></h2>
+<p>A water treatment plant that is treating 120 L/s of water injects the coagulant into the middle of the pipe that delivers the raw water to the plant and then splits the flow into 2 parallel treatment trains for subsequent flocculation. The pipe is PVC 24 inch nominal pipe diameter SDR 26. The water temperature is <span class="math notranslate nohighlight">\(0^{\circ}C\)</span>. Estimate the minimum distance between the injection point and the flow split.</p>
+<p>We will use a <a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#heading-lfom"><span class="std std-ref">linear flow orifice meter</span></a> with 20 cm of head loss. The first step is to determine the diameter of the LFOM.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; importing &quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">from</span> <span class="nn">aguaclara_research.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">import</span> <span class="nn">aguaclara_research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="k">import</span> <span class="n">FormatStrFormatter</span>
+<span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;AguaClara Water Treatment Plant Design/Rapid Mix/Images/&#39;</span>
+
+<span class="n">Q_plant</span> <span class="o">=</span> <span class="mi">120</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">HL_LFOM</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
+<span class="n">Pi_LFOM_safety</span> <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">SDR_LFOM</span> <span class="o">=</span> <span class="mi">26</span>
+<span class="kn">from</span> <span class="nn">aide_design.unit_process_design</span> <span class="k">import</span> <span class="n">lfom</span> <span class="k">as</span> <span class="n">lfom</span>
+<span class="n">ND_LFOM</span> <span class="o">=</span> <span class="n">lfom</span><span class="o">.</span><span class="n">nom_diam_lfom_pipe</span><span class="p">(</span><span class="n">Q_plant</span><span class="p">,</span><span class="n">HL_LFOM</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ND_LFOM</span><span class="p">,</span> <span class="s1">&#39;(&#39;</span><span class="p">,</span><span class="n">ND_LFOM</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">),</span> <span class="s1">&#39;)&#39;</span><span class="p">)</span>
+
+<span class="n">L_flow</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_LFOM</span><span class="p">,</span><span class="n">SDR_LFOM</span><span class="p">)</span>
+<span class="n">L_flow</span>
+</pre></div>
+</div>
+<p>The LFOM requires a 24 inch diameter pipe.</p>
+</div>
+<div class="section" id="example-problem-energy-dissipation-rate-in-a-straight-pipe">
+<h2>Example problem: Energy dissipation rate in a straight pipe<a class="headerlink" href="#example-problem-energy-dissipation-rate-in-a-straight-pipe" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Solution scheme</dt>
+<dd>1) Calculate the friction factor
+1) Use <code class="xref eq docutils literal notranslate"><span class="pre">mixing_pipe_diameters</span></code> to estimate the mixing length in pipe diameters
+1) Convert to pipe length in meters.</dd>
+</dl>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="n">T_water</span><span class="o">=</span><span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
+<span class="n">Pipe_roughness</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">PIPE_ROUGH_PVC</span>
+<span class="n">Pipe_roughness</span>
+<span class="n">Nu_water</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_water</span><span class="p">)</span>
+<span class="n">Q_pipe</span> <span class="o">=</span> <span class="mi">120</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">ND_pipe</span> <span class="o">=</span> <span class="mi">24</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span>
+<span class="n">SDR_pipe</span> <span class="o">=</span> <span class="mi">26</span>
+<span class="n">ID_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_pipe</span><span class="p">,</span><span class="n">SDR_pipe</span><span class="p">)</span>
+<span class="n">f_pipe</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">fric</span><span class="p">(</span><span class="n">Q_pipe</span><span class="p">,</span><span class="n">ID_pipe</span><span class="p">,</span><span class="n">Nu_water</span><span class="p">,</span><span class="n">Pipe_roughness</span><span class="p">)</span>
+<span class="n">N_pipe_diameters</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="n">f_pipe</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">N_pipe_diameters</span>
+<span class="sd">&quot;&quot;&quot;The minimum length for mixing is thus&quot;&quot;&quot;</span>
+<span class="n">L_mixing</span> <span class="o">=</span> <span class="n">ID_pipe</span><span class="o">*</span><span class="n">N_pipe_diameters</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum distance required for mixing across the diameter of the pipe is &#39;</span><span class="p">,</span><span class="n">L_mixing</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
+<span class="n">v_lfom</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q_plant</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_LFOM</span><span class="p">,</span><span class="n">SDR_LFOM</span><span class="p">)))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v_lfom</span><span class="p">)</span>
+<span class="n">t_mixing</span> <span class="o">=</span> <span class="p">(</span><span class="n">L_mixing</span><span class="o">/</span><span class="n">v_lfom</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="n">t_mixing</span>
+</pre></div>
+</div>
+<p>The previous analysis provides a minimum distance for sufficient mixing so that equal mass flux of coagulant will end up in both treatment trains. This assumes that the coagulant was injected in the pipe centerline. Injection at the wall of the pipe is a poor practice and would require many more pipe diameters because it takes significant time for the coagulant to be mixed out of the slower fluid at the wall. The time required for mixing at the scale of the flow in the plant is thus accomplished in a few seconds. This ends up being the fastest part of the transport of the coagulant nanoparticles on their way to attachment to the clay particles.  Next we will determine a typical flow rate of coagulant. <strong>Aluminum</strong> concentrations for polyaluminum chloride (PACl) typically range from 1 to 10 mg/L. The maximum PACl stock solution concentration is about 70 g/L as <strong>Al</strong>.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C_PACl_stock</span> <span class="o">=</span> <span class="mi">70</span> <span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
+<span class="n">C_PACl_dose_max</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
+<span class="n">Q_PACl_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q_plant</span><span class="o">*</span><span class="n">C_PACl_dose_max</span><span class="o">/</span><span class="n">C_PACl_stock</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Q_PACl_max</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can estimate the diameter of the injection port by setting the kinetic energy loss where the coagulant is injected into the main flow to be large enough to exceed the pressure fluctuations downstream of the LFOM. The amount of energy we invest in injecting the coagulant into the raw water is a compromise between having to raise the entire chemical feed system including the stock tanks to increase the potential energy and a goal of not having pressure fluctuations inside the LFOM pipe cause flow oscillations in the chemical dosing tube. Thus our goal is to have the kinetic energy at the injection point be large compared with the expected pressure fluctuations in the LFOM. Given that the head loss through the LFOM is often 20 cm, we expect the pressure fluctuations from turbulence to be a small fraction of that head loss. Thus we set the kinetic energy to be equivalent to 2 cm.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HL_Coag_injection</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
+<span class="n">v_Coag_injection</span> <span class="o">=</span> <span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">HL_Coag_injection</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v_Coag_injection</span><span class="p">)</span>
+<span class="n">D_Coag_injection_min</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">diam_circle</span><span class="p">(</span><span class="n">Q_PACl_max</span><span class="o">/</span><span class="n">v_Coag_injection</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">D_Coag_injection_min</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -678,7 +655,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.8',
+            VERSION:'0.0.16',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
