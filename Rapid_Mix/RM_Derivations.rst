@@ -9,6 +9,7 @@ Rapid Mix Derivations
 Carbonate reactions, buffering, and pH
 ======================================
 
+Carbonates provide the majority of the buffering for drinking water as long as the pH is close to neutral. These equations provide a basis to calculate how much base or acid must be added to a natural water to achieve a target pH.
 
 
 .. _heading_Carbonic_Acid_and_Bicarbonate:
@@ -41,6 +42,8 @@ Bicarbonate and Carbonate
 
 .. math:: p{K_2} = 10.3
 
+Thus the carbonate system also provides buffering around pH 10.3.
+
 .. _heading_Total_Concentration_of_Carbonates:
 
 Total Concentration of Carbonates
@@ -50,9 +53,9 @@ The total concentration of carbonate species is given by
 
 .. math:: {C_T} = \left[ {{H_2}CO_3^{\star} } \right] + \left[ {HCO_3^ - } \right] + \left[ {CO_3^{ - 2}} \right]
 
- Where: :math:`{C_T}` is the total concentration of carbonates.
+Where: :math:`{C_T}` is the total concentration of carbonates.
 
-The total concentration of carbonates, :math:`{C_T}`, is useful because it is conservative even though the individual species concentrations change as pH changes.
+The total concentration of carbonates, :math:`{C_T}`, is useful because it is conservative (in a closed system) even though the individual species concentrations change as pH changes.
 
 .. _heading_Alpha_Notation:
 
@@ -67,6 +70,17 @@ The alpha notation is used to show the concentration dependence on pH and to mak
 
 .. math:: \left[ {CO_3^{-2}} \right] = {\alpha_2}{C_T}
 
+The alphas sum to 1 because each :math:`\alpha` is the fraction of the carbonates corresponding to that species. The alphas are each a function of the proton concentration and the dissociation constants of the carbonate reactions.
+
+.. math:: {\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}} + \frac{{{K_1}{K_2}}}{{{{[{H^ + }]}^2}}}}}
+
+.. math:: {\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}}\left( {1 + \frac{{{K_2}}}{{[{H^ + }]}}} \right)}}
+
+.. math:: {\alpha_{\text{1}}} = \frac{1}{{\frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}} + 1 + \frac{{{{\rm K}_2}}}{{[{{\rm H}^ + }]}}}}
+
+.. math:: {\alpha_{\text{2}}} = \frac{1}{{\frac{{{{[{{\rm H}^ + }]}^2}}}{{{{\rm K}_1}{{\rm K}_2}}} + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}} + 1}}
+
+.. math:: {\alpha_{\text{2}}} = \frac{1}{{1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}}\left( {1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}}} \right)}}
 
 .. _heading_Acid_Neutralizing_Capacity_(ANC)_or_Alkalinity:
 
@@ -83,17 +97,7 @@ We can write the ANC equation using alpha notation
 
 .. math:: ANC = {C_T}({\alpha_1} + 2{\alpha_2}) + \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]
 
-The alphas are each a function of the proton concentration and the dissociation constants of the carbonate reactions.
 
-.. math:: {\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}} + \frac{{{K_1}{K_2}}}{{{{[{H^ + }]}^2}}}}}
-
-.. math:: {\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}}\left( {1 + \frac{{{K_2}}}{{[{H^ + }]}}} \right)}}
-
-.. math:: {\alpha_{\text{1}}} = \frac{1}{{\frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}} + 1 + \frac{{{{\rm K}_2}}}{{[{{\rm H}^ + }]}}}}
-
-.. math:: {\alpha_{\text{2}}} = \frac{1}{{\frac{{{{[{{\rm H}^ + }]}^2}}}{{{{\rm K}_1}{{\rm K}_2}}} + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}} + 1}}
-
-.. math:: {\alpha_{\text{2}}} = \frac{1}{{1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}}\left( {1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}}} \right)}}
 
 For completeness we include acid neutralizing capacity for the case where the system is in equilibrium with atmospheric carbon dioxide,
 :math:`CO_2`.
@@ -105,16 +109,17 @@ For completeness we include acid neutralizing capacity for the case where the sy
 pH Adjustment
 -------------
 
-The final ANC after base addition and aluminum coagulant addition is given by
+The final ANC, :math:`ANC_1`, after base addition and aluminum coagulant addition is given by
 
 .. math:: ANC_1 = ANC_0 + \Pi_{base}C_B + \Pi_{Al}C_{Al}
 
 | where:
+| :math:`ANC_0` is the initial acid neutralizing capacity of the water sample.
 | :math:`ANC_1` is the final acid neutralizing capacity of the mixture after the base and aluminum coagulant is added.
 | :math:`C_B` is concentration of base in mole/liter
 | :math:`\Pi_{base}` is ANC per mole of base
-| :math:`\Pi_{Al}` is ANC per mole of aluminum
 | :math:`C_{Al}` is the concentration of coagulant in mole of aluminum/liter
+| :math:`\Pi_{Al}` is ANC per mole of aluminum
 
 The final carbonate concentration is given by
 
@@ -132,9 +137,14 @@ Now we solve for :math:`C_B`, the concentration of base that must be added to re
 
 .. math::  (\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2}) )C_B= {C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}
 
-.. math::  C_B= \frac{{C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}}{\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2})}
+.. math::
+   :label: Base_for_pH_Adjust
+
+   C_B= \frac{{C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}}{\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2})}
 
 Note that the equations above can also be used for the case where acid is added to reduce the pH. In that case :math:`\Pi_{base}` will have a negative value.
+
+An example using this equation to find the required amount of base addition is given in :ref:`heading_Example_pH_Adjustment`.
 
 .. _heading_Equations_Varying_Flow_Geometries:
 
@@ -264,7 +274,10 @@ For a long straight pipe
 
 Given a friction factor of 0.02, the eddy velocity is approximately 20% of the mean velocity. We can use this ratio to estimate how many pipe diameters downstream from an injection point will the coagulant be mixed across the diameter of the pipe.
 
-.. math::  N_{D_{pipe}} \approx \frac{\bar v}{v_{eddy}} \approx \left(\frac{2}{{\rm f}} \right)^\frac{1}{3}
+.. math::
+   :label: mixing_pipe_diameters
+
+  N_{D_{pipe}} \approx \frac{\bar v}{v_{eddy}} \approx \left(\frac{2}{{\rm f}} \right)^\frac{1}{3}
 
 Where :math:`N_{D_{pipe}}` is the distance in number of pipe diameters downstream of the injection point where complete mixing will have occurred. This estimate is a minimum distance and a factor of safety of 2 or more would reasonably be applied. In addition it is best practice to inject the coagulant in the center of the pipe. Injecting the coagulant at the side of the pipe will require considerably greater distance downstream for mixing across the pipe.
 
@@ -309,7 +322,7 @@ The dividing line between eddy transport and fluid deformation controlled by vis
     import aguaclara_research.floc_model as fm
     import matplotlib.pyplot as plt
     from matplotlib.ticker import FormatStrFormatter
-    imagepath = 'AguaClara Water Treatment Plant Design/Rapid Mix/Images/'
+    imagepath = 'Rapid_Mix/Images/'
     EDR_array = np.logspace(0,4,num=50)*u.mW/u.kg
     Temperature = 20*u.degC
     def Inner_viscous(EDR, Temperature):
@@ -360,6 +373,7 @@ We can plot the eddy turnover time as a function of scale from the inner viscous
     L_flow = 0.5*u.m
     L_scale = np.logspace(np.log10(Inner_viscous_graph.magnitude),np.log10(L_flow.magnitude),50)
     L_scale
+    imagepath = 'Rapid_Mix/Images/'
     fig, ax = plt.subplots()
     for i in range(len(EDR_graph)):
       ax.semilogx(L_scale,((L_scale**2/EDR_graph[i])**(1/3)).to_base_units())
@@ -372,6 +386,14 @@ We can plot the eddy turnover time as a function of scale from the inner viscous
     fig.savefig(imagepath+'Eddy_turnover_time')
     plt.show()
 
+.. _figure_Eddy_turnover_time:
+
+.. figure:: Images/Eddy_turnover_time.png
+    :width: 400px
+    :align: center
+    :alt: Eddy turnover time
+
+    Small eddies turn in less time than large eddies. This is why the mixing at the largest scale dominates the mixing time.
 
 
 .. _heading_Shear-Diffusion_Transport:
@@ -379,7 +401,7 @@ We can plot the eddy turnover time as a function of scale from the inner viscous
 Shear-Diffusion Transport
 -------------------------
 
-After the first few seconds in which mixing occurs from the length scale of the flow down to the inner viscous length scale the next step in the transport process is blending of the coagulant uniformly with the raw water. At the end of the turbulent transport the coagulant stock has been stretched out into thin bands throughout the raw water, but the two fluids are not actually blended together by turbulence. The blending is accomplished by fluid deformation and then by molecular diffusion.
+After the first few seconds in which mixing occurs from the length scale of the flow down to the inner viscous length scale the next step in the transport process is blending of the coagulant uniformly with the raw water. At the end of the turbulent transport the coagulant stock has been stretched out into thin bands throughout the raw water, but the two fluids are not actually blended together by turbulence. The blending is accomplished by a combination of fluid deformation controlled by viscous shear and then by molecular diffusion.
 
 .. _heading_Fluid_Deformation_by_Shear:
 
@@ -388,18 +410,18 @@ Fluid Deformation by Shear
 
 The time scale for fluid deformation is :math:`1/G` where :math:`G` is the velocity gradient. This simple relationship is because the velocity of fluid deformation is proportional to the length scale and thus the time to travel any given distance in a linear velocity gradient is always the same. Velocity gradients in conventional mechanized rapid mix units are order 1000 Hz and thus the time for fluid deformation to blur concentration gradients is approximately 1 ms. This confirms the idea that blending the coagulant with the raw water is actually a very fast process with the slowest phase being the transport by turbulent eddies at the scale of reactor.
 
+The full time required for fluid deformation to achieve blending down to the scale where molecular diffusion takes over is likely a multiple of 1/G where the multiple is determined by the number of different directions that the fluid must be sheared in to reach close to uniform blending. However, even multiplying 1/G by a factor of 10 still results in very rapid mixing.
+
 .. _heading_Einstein_Diffusion_Equation:
 
 Einstein’s Diffusion Equation
 -----------------------------
 
-We can estimate the length scale at which fluid shear and diffusion provide transport at the same rate. Einstein’s diffusion equation is
+The final step of mixing is mediated by molecular diffusion. We can estimate the length scale at which fluid shear and diffusion provide transport at the same rate. Einstein’s diffusion equation is
 
 .. math:: D_{Diffusion} = \frac{k_B T}{3 \pi \mu d_P}
 
-where :math:`k_B` is the Boltzmann constant and :math:`d_P` is the diameter of the particle that is diffusion in a fluid with viscosity :math:`\nu` and density :math:`\rho`. The diffusion coefficient :math:`D_{Diffusion}` has dimensions of :math:`\frac{[L^2]}{[T]}` and can be understood as the velocity of the particle multiplied by the length of the mean free path.
-
-From dimensional analysis the time for diffusion to blur a concentration gradient over a length scale, :math:`L_{Diffusion}` is
+where :math:`k_B` is the Boltzmann constant and :math:`d_P` is the diameter of the particle that is diffusion in a fluid with viscosity :math:`\nu` and density :math:`\rho`. The diffusion coefficient :math:`D_{Diffusion}` has dimensions of :math:`\frac{[L^2]}{[T]}` and can be understood as the velocity of the particle multiplied by the length of the mean free path. From dimensional analysis the time for diffusion to blur a concentration gradient over a length scale, :math:`L_{Diffusion}` is
 
 .. math:: t_{Diffusion} \approx \frac{L_{Diffusion}^2}{D_{Diffusion}}
 
@@ -420,19 +442,33 @@ Substitute Einstein’s diffusion equation and solve for the length scale that t
       return np.sqrt((u.boltzmann_constant*Temperature/
       (3 * G *  np.pi *pc.viscosity_dynamic(Temperature)* d_particle)).to_base_units())
 
-    G = 100*u.Hz
+    G = np.arange(10,5000)*u.Hz
     d_particle = fm.PACl.Diameter*u.m
     Temperature=20*u.degC
     x = (L_Shear_Diffusion(G,Temperature,d_particle)).to(u.nm)
-    print(x)
+    imagepath = 'Rapid_Mix/Images/'
+    fig, ax = plt.subplots()
+    ax.semilogx(G,x)
+    ax.set(xlabel='Velocity gradient (Hz)', ylabel='Length scale (nm)')
+    fig.savefig(imagepath+'Shear_diffusion_length_scale')
+    plt.show()
+
+.. _figure_Shear_diffusion_length_scale:
+
+.. figure:: Images/Shear_diffusion_length_scale.png
+    :width: 400px
+    :align: center
+    :alt: Shear diffusion length scale
+
+    The length scale at which diffusion becomes the dominant transport mechanism for coagulant nanoparticles as a function of the velocity gradient. The time scale for the final diffusion to achieve blending of the nanoparticles with the water is simply 1/G.
 
 Molecular diffusion finishes the blending process by transporting the coagulant nanoparticles the last few hundred nanometers. The entire mixing process from the coagulant injection point to uniform blending with the raw water takes only a few seconds.
 
-We have demonstrated that all of the steps for mixing of the coagulant nanoparticles with the raw water are very fast. Compared with the time required for flocculation, 10s to 1000s of seconds, the time required for this mixing is insignificant. The remaining steps are:
+We have demonstrated that all of the steps for mixing of the coagulant nanoparticles with the raw water are very fast. Compared with the time required for flocculation, 10s to 1000s of seconds, the time required for this mixing (blending the nanoparticles uniformly with the water) is insignificant. The remaining steps are:
  1. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
  1. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
 
-
+The time scale for the fluid shear and molecular diffusion to cause coagulant nanoparticles to collide with particles is estimated in :ref:`heading_Diffusion_and_Shear_Transport_Coagulant_Nanoparticles_to_Clay`.
 
 Below are the derivations for the equations that appear in :numref:`table_Control_volume_equations` containing equations for :math:`G`, :math:`\varepsilon`, and :math:`h_L`.
 
@@ -785,11 +821,8 @@ Combining the energy equation, the force balance, and the relationship between s
 
 This equation is valid for both laminar flow. For turbulent flow it is necessary to make the approximation that wall shear perpendicular to the direction of flow is insignificant in increasing the magnitude of the wall shear. We can substitute the Darcy Weisbach equation for head loss to obtain
 
-.. math::
+.. math:: G_{wall} ={\rm f}  \frac{\bar v^2}{8\nu}
 
-   \color{purple}{
-     G_{wall} ={\rm f}  \frac{\bar v^2}{8\nu}
-   }
 
 The energy dissipation rate at the wall is
 
