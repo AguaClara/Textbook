@@ -154,11 +154,12 @@ The headloss during backwash is taken as the design parameter, so other values a
 The following equation describes the headloss through the fluidized bed:
 
 .. math::
-  :label: headloss_fluidzed_bed
+   :label: headloss_fluidzed_bed
+
     \frac{h_{l_{FiBw}}}{H_{FiSand}} = \left( 1 - \phi_{FiSand} \right)\left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 
 | Such that:
-| :math:`h_{l_{FiBw}` = the headloss in the fluidized bed
+| :math:`h_{l_{FiBw}}` = the headloss in the fluidized bed
 | :math:`H_{FiSand}` =  the depth of the settled sand bed
 | :math:`phi_{FiSand}` = the settled sand porosity
 | :math:`rho_{Sand}`  = the sand density
@@ -167,8 +168,10 @@ The following equation describes the headloss through the fluidized bed:
 Using these two equations the minimum velocity for snad fluidization can be found!
 
 .. math::
-  :label: minimum_fluidization_velocity_sand
-    V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
+
+   :label: minimum_fluidization_velocity_sand
+
+   V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 
 From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter is **not** indicative of fluidization at the bottom.
 
