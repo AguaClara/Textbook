@@ -127,7 +127,9 @@ There are three flow distribution problems in the filter design:
 
 The relative distribution of the flow through a particular path is defined as:
 
-:math:`\Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{C_p_{Short}}{C_p_{Short}}}`
+.. math::
+
+  \Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{C_p_{Short}}{C_p_{Short}}}
 
 | Such that:
 | :math:`\Pi_Q =` the ratio of flow
@@ -138,7 +140,9 @@ The relative distribution of the flow through a particular path is defined as:
 
 :math:`C_p` is defined in Fluids review (**Make this actually be defined here**)
 
-:math:`\Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{H_{LSand}-PR}{H_{LSand}}}`
+.. math::
+
+  \Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{H_{LSand}-PR}{H_{LSand}}}
 
 | Such that:
 | :math:`H_LSand = ` the head loss in the sand bed
@@ -183,11 +187,11 @@ Use the Kozeny equation to find the headloss through the clean bed. Assume the d
 
 Second Constraint: Pressure recovery in lowest trunk during backwash
 
-:math:`V_{BwManTrunkMaxPR} = \sqrt{2g*(HL_{BWSlotsEst}*\Pi_{ManifoldHeadLoss} - PR_{ManBranchEst} )}`
+.. math:: V_{BwManTrunkMaxPR} = \sqrt{2g*(HL_{BWSlotsEst}*\Pi_{ManifoldHeadLoss} - PR_{ManBranchEst} )}
 
 This velocity is used to find the flow possible in the pipe, using the inner diameter of the pipe, and is rounded to the nearest 1 L/s.
 
-:math:`Q_{PRBwTrunk} = \pi*ID_{BwTrunkMax}^2 * V_{BwManTrunkMaxPR}`
+.. math:: Q_{PRBwTrunk} = \pi*ID_{BwTrunkMax}^2 * V_{BwManTrunkMaxPR}
 
 The flow set by the maximum pressure recovery is then the lesser of the flow calculated from forward filtration or backwsh. This value is the maximum flow through on filter.
 
@@ -197,36 +201,37 @@ If the plant flow is less than 16 L/s, EStaRS should be used, as having two filt
 In all other cases at least 2 filters should be used to allow for backwash during low flows.
 
 Thus the number of filters for plants is:
-:math:`max(\frac{Q_{Plant}}{Q_{MaxPR}}, 2)`
+
+.. math:: max(\frac{Q_{Plant}}{Q_{MaxPR}}, 2)
 
 The flow through each filter given the number of filters:
 
-:math:`Q_{Fi} = \frac{Q_{Plant}}{N_{Fi}}`
+.. math:: Q_{Fi} = \frac{Q_{Plant}}{N_{Fi}}
 
 Within a filter, the flow through each layer:
 
-:math:`Q_{Layer} = \frac{Q_{Fi}}{N_{Layer}}`
+.. math:: Q_{Layer} = \frac{Q_{Fi}}{N_{Layer}}
 
 This is the flow that sets the pipe size for each trunk within each layer of the filter. The Nominal Diameter (ND) of the trunk pipes is then determined using the available pipe sizes. This design assumes SDR 26 to be conservative and avoid looping.
 
 First, find the diameter based on the flow and velocity. A doubled flow is used because the two middle trunks must carry flow for two layers (**check this for correctness**)
 
-:math:`\frac{2Q_{Layer}}{V_{ManTrunkMaxPR}} = A_{TrunkCalc} = \frac{\pi*ID_{TrunkCalc}^2}{4}`
+.. math:: \frac{2Q_{Layer}}{V_{ManTrunkMaxPR}} = A_{TrunkCalc} = \frac{\pi*ID_{TrunkCalc}^2}{4}
 
 Within the set of available inner diameters for SDR 26 pipes,  this :math:`D_{TrunkCalc}` value is rounded up to the nearest real size. This size is found in the specified pipe database, and kept as a ND. This functioanlly obtained ND value is compared to the maximum filter trunk ND (:math:`ND_{TrunkMax}`). The lesser of the two values is chosen. The lesser value is chosen because selecting the maximum pressure recovery in a previous step can result in a filter flow rate slightly larger than the maximum for the max trunk diameter. The max trunk diameter is still used in this case, though it just barely violates the pressure recovery constraint
 
 That process is repeated to find the size of the backwash trunk, the only difference is the flow rate and velocity used are those for the backwash trunk.
 
-:math:`\frac{Q_{Fi}}{V_{BwManTrunkMaxPR}} = A_{BwTrunkCalc} = \frac{\pi*ID_{BwTrunkCalc}^2}{4}`
+.. math:: \frac{Q_{Fi}}{V_{BwManTrunkMaxPR}} = A_{BwTrunkCalc} = \frac{\pi*ID_{BwTrunkCalc}^2}{4}
 
 Finding the pipe sizes lets the pressure recovery be determiend for the trunk in forward filtration:
 
-:math:`PR = \frac{V^2}{2g} \longrightarrow \frac{\frac{2Q_{Layer}}{\pi*D_{Trunk}^2}}{2g} = PR_{ForwardTrunk}`
+.. math:: PR = \frac{V^2}{2g} \longrightarrow \frac{\frac{2Q_{Layer}}{\pi*D_{Trunk}^2}}{2g} = PR_{ForwardTrunk}
 
 
 and in backwash:
 
-:math:`\frac{\frac{2Q_{Fi}}{\pi*D_{TrunkBw}^2}}{2g} = PR_{BwTrunk}`
+.. math:: \frac{\frac{2Q_{Fi}}{\pi*D_{TrunkBw}^2}}{2g} = PR_{BwTrunk}
 
 These values allow the necessary height of sand in each layer to be determined, as in the following section.
 
@@ -240,7 +245,7 @@ To make construction easier, all sand depths get rounded up to the nearest centi
 
 The following are the functions which determine the heights of the all the sand layers.
 
-:math:`H_{layer} = f(ND_{trunk}) = `
+.. math:: H_{layer} = f(ND_{trunk}) =
 
 This relates to the distance between the manifold branches and how the water will distribute amoung the layers.
 
@@ -269,71 +274,74 @@ Constraints for number of manifold branches:
 
 First, the maximum pressure recovery in backwash branch:
 
-:math:`PR_{BwManBranchMax} = HL_{BWSlotsEst}*\Pi_{ManifoldHeadLoss} - PR_{BwTrunk}`
+.. math:: PR_{BwManBranchMax} = HL_{BWSlotsEst}*\Pi_{ManifoldHeadLoss} - PR_{BwTrunk}
 
 the resulting velocity from this pressure recovery:
 
-:math:`V_{BwManBranchMax} = \sqrt{2g*PR_{BwManBranchMax}}`
+.. math:: V_{BwManBranchMax} = \sqrt{2g*PR_{BwManBranchMax}}
 
 The maximum allowable flow through this branch is then:
 
-:math:`Q_{BwBranchMaxPR} = V_{BwManBranchMax}*\pi*IR_{BranchManifold}^2`
+.. math:: Q_{BwBranchMaxPR} = V_{BwManBranchMax}*\pi*IR_{BranchManifold}^2
 
 The allowable average flow is also necessary, which is derived thusly:
 
-:math:`\Pi_{Q} = \frac{Q_{min}}{Q_{max}}`
+.. math:: \Pi_{Q} = \frac{Q_{min}}{Q_{max}}
 
 Assume linear flow distrubution between branches:
 
-:math:`Q_{ave} = \frac{Q_{max} + Q_{min}}{2}`
+.. math::
 
-:math:`Q_{ave} = \frac{Q_{max} + \Pi_{Q}Q_{max}}{2}`
+  Q_{ave} = \frac{Q_{max} + Q_{min}}{2}
 
-:math:`Q_{ave} = Q_{max}(\frac{1 + \Pi_{Q}} {2} )`
+  Q_{ave} = \frac{Q_{max} + \Pi_{Q}Q_{max}}{2}
 
-:math:`\Pi_{Q} = \sqrt{1 - \Pi_{HL}}`
+  Q_{ave} = Q_{max}(\frac{1 + \Pi_{Q}} {2} )
 
-:math:`Q_{ave} = Q_{max}(\frac{1 + \sqrt{1 - \Pi_{HL}}} {2} )`
+  \Pi_{Q} = \sqrt{1 - \Pi_{HL}}
+
+  Q_{ave} = Q_{max}(\frac{1 + \sqrt{1 - \Pi_{HL}}} {2} )
 
 Thus, the average allowable flow:
 
-:math:`Q_{BwBranchAveMaxPR} = Q_{BwBranchMaxPR}(\frac{1 + \sqrt{1-\frac{PR_{BwTrunk}}{HL_{BWSlotsEst}}}} {2} )`
+.. math:: Q_{BwBranchAveMaxPR} = Q_{BwBranchMaxPR}(\frac{1 + \sqrt{1-\frac{PR_{BwTrunk}}{HL_{BWSlotsEst}}}} {2} )
 
 Then the number of manifold branches (rounded up to he nearest even number) because of backwash flow distribution:
 
-:math:`N_{BwManBranchMin} =  \frac{Q_{Fi}}{Q_{BwBranchAveMaxPR}}`
+.. math:: N_{BwManBranchMin} =  \frac{Q_{Fi}}{Q_{BwBranchAveMaxPR}}
 
 .. _heading_n_manifold_for_filt:
 
 To determine the minimum for the forward filtration flow distribution is a similar process with flows and PR adjusted for forward flow.
 
-:math:`PR_{ManBranchMax} = HL_{CleanLayerMin}*\Pi_{ManifoldHeadLoss} - PR_{ForwardTrunk}`
+.. math:: PR_{ManBranchMax} = HL_{CleanLayerMin}*\Pi_{ManifoldHeadLoss} - PR_{ForwardTrunk}
 
-the resulting velocity from this pressure recovery:
+The resulting velocity from this pressure recovery:
 
-:math:`V_{ManBranchMax} = \sqrt{2g*PR_{ManBranchMax}}`
+.. math:: V_{ManBranchMax} = \sqrt{2g*PR_{ManBranchMax}}
 
 The maximum allowable flow through this branch is then:
 
-:math:`Q_{ForwardBranchMaxPR} = V_{ManBranchMax}*\pi*IR_{BranchManifold}^2`
+.. math:: Q_{ForwardBranchMaxPR} = V_{ManBranchMax}*\pi*IR_{BranchManifold}^2
 
 The average allowable flow:
 
-:math:`Q_{ForwardBranchAveMaxPR} = Q_{ForwardBranchMaxPR}(\frac{1 + \sqrt{1 - \frac{PR_{ForwardTrunk}}{HL_{CleanLayer}}}} {2} )`
+.. math:: Q_{ForwardBranchAveMaxPR} = Q_{ForwardBranchMaxPR}(\frac{1 + \sqrt{1 - \frac{PR_{ForwardTrunk}}{HL_{CleanLayer}}}} {2} )
 
 Then the number of manifold branches (rounded up to he nearest even number) because of backwash flow distribution:
 
-:math:`N_{ManBranchMin} =  \frac{2Q_{Layer}}{Q_{ForwardBranchAveMaxPR}}`
+.. math:: N_{ManBranchMin} =  \frac{2Q_{Layer}}{Q_{ForwardBranchAveMaxPR}}
 
 Then the design minimum number of branches is the maximum of the two minimums:
 
-:math:`N_{ManBranchMin}` and :math:`N_{BwManBranchMin}`
+.. math:: N_{ManBranchMin}` and :math:`N_{BwManBranchMin}
 
 In addition to the minimums based on the flow constraints, a maximum number of branches exists for geometry reasons, so that the filter box width matches the auxiliary box width (when there is more than one filter)
 
 This maximum is determined by the following rounded down to a whole number:
 
 .. math::
+
   N_{ManSideBranchMaxMult} = \frac{\frac{A_{Active}}{W_{ActiveMin}} - OD_{BwManBranch} + L_{ManFerncoCoupling} + S_{BranchToWall}}{B_{ManifoldBranch}}
 
 | Such that:
@@ -349,7 +357,9 @@ This maximum is determined by the following rounded down to a whole number:
 
 As there are branches on both sides of the trunk, this number id multiplied by 2 to get the total maximum number of branches.
 
-:math:`N_{ManBranchMaxMult} = 2*N_{ManSideBranchMaxMult}`
+.. math::
+
+  N_{ManBranchMaxMult} = 2*N_{ManSideBranchMaxMult}
 
 **Include only one filter????????? that design is in here?????
 the red text is here with a not from skyler or the error if the geo branches doesn't meet flow distribtuion constraint????**
@@ -374,52 +384,66 @@ In this section several "expert inputs" become relevant. Expert input are parame
 
 The total length of the filter is the sum of several things:
 
-:math:`L_{Fi} = (\frac{N_{ManBranch}}{2} -1 )B_{ManifoldBranch} + OD_{BwManBranch} + L_{ManFerncoCoupling} + S_{BranchToWall}`
+.. math::
+
+  L_{Fi} = (\frac{N_{ManBranch}}{2} -1 )B_{ManifoldBranch} + OD_{BwManBranch} + L_{ManFerncoCoupling} + S_{BranchToWall}
 
 The active width of the filter is the active area divided by the length:
 
-:math:`W_{Active} = \frac{A_{Active}}{L_Fi}`
+.. math::
+
+  W_{Active} = \frac{A_{Active}}{L_Fi}
 
 This width is the active filter width, which does not include the projected area of the trunk lines, though it is assumed that the space betweent the branch holders contributes to the active area.
 
 The the total width is:
 
-:math:`W_{Fi} = W_{Active} + OD_{BWTrunk}`
+.. math::
+
+  W_{Fi} = W_{Active} + OD_{BWTrunk}
 
 The width of the filter entrance is the sum of half the width of the filter, the outer radius of the cap of the backwash trunk, the minimum space between fittings in a tank or fittings and the wall of the tank, the thickness of the filter walls, and the thickness of the filter box walls. That is:
 
-:math:`W_{entrance} = \frac{W_{Fi}}{2} + OR_{Fitting} + S_{Fitting} + T_{FiWall} + T_{FiBoxWall}`
+.. math:: W_{entrance} = \frac{W_{Fi}}{2} + OR_{Fitting} + S_{Fitting} + T_{FiWall} + T_{FiBoxWall}
 
 The width of the filter overflow depends in the number of filters. If there is one filter, then :math:`W_{FiOverflow} = W_{FiOverflowMin}`. In most cases when there are 2 or more filters, the width of the overflow box is:
 
-:math:`W_{FiOverflow} = W_{Fi} + T_{FiWall} - W_{FiEntrance} - 2T_{FiBoxWall}`
+.. math:: W_{FiOverflow} = W_{Fi} + T_{FiWall} - W_{FiEntrance} - 2T_{FiBoxWall}
 
 The length of the filter with regards to the manifold braches is the next calculable attribute:
 
-:math:`L_{ManBranch} = \frac{W_{Fi}}{2} - OR_{Fitting} - OR_{BranchHolder} + 2L_{ManBranchExt} - S_{ManAssembly}`
+.. math:: L_{ManBranch} = \frac{W_{Fi}}{2} - OR_{Fitting} - OR_{BranchHolder} + 2L_{ManBranchExt} - S_{ManAssembly}
 
 
 This length is the length of the filter per manifold branch.  Thus the total length of the filter where the manifold branches are is this lengths multiplied by the number of branches:
 
-:math:`L_{ManBranchTot} = L_{ManBranch}N_{ManBranch}`
+.. math::
+
+  L_{ManBranchTot} = L_{ManBranch}N_{ManBranch}
 
 The length of the backwash manifold is calculated similarly.
 
-:math:`L_{BwManBranch} = \frac{W_{Fi}}{2} - OR_{BwTrunk} - OR_{FittingBWBranchHolder} - OR_{BWBranchHolder} + 2L_{ManBranchExt} - S_{ManAssembly}`
+.. math::
 
-:math:`L_{BwManBranchTot} = L_{BwManBranch}N_{ManBranch}`
+  L_{BwManBranch} = \frac{W_{Fi}}{2} - OR_{BwTrunk} - OR_{FittingBWBranchHolder} - OR_{BWBranchHolder} + 2L_{ManBranchExt} - S_{ManAssembly}
+
+  L_{BwManBranchTot} = L_{BwManBranch}N_{ManBranch}
 
 Next, the length of the trunks:
 
-:math:`L_{Trunk} = L_{Fi} - \frac{L_{ManFerncoCoupling}}{2} - T_{TrunkCap} - S_{ManAssembly}`
+.. math::
 
-:math:`L_{BWTrunk} = L_{Fi} - \frac{L_{ManFerncoCoupling}}{2} - T_{BwTrunkCap} - S_{ManAssembly}`
+  L_{Trunk} = L_{Fi} - \frac{L_{ManFerncoCoupling}}{2} - T_{TrunkCap} - S_{ManAssembly}
+
+  L_{BWTrunk} = L_{Fi} - \frac{L_{ManFerncoCoupling}}{2} - T_{BwTrunkCap} - S_{ManAssembly}
 
 And the lengths of the branch holders:
 
-:math:`L_{BranchHolder} = L_{Fi} - 2T_{BranchHolder} - 2S_{ManAssembly}`
+.. math::
 
-:math:`L_{BwBranchHolder} = L_{Fi} - 2T_{BwBranchHolder} - 2S_{ManAssembly}`
+  L_{BranchHolder} = L_{Fi} - 2T_{BranchHolder} - 2S_{ManAssembly}
+
+  L_{BwBranchHolder} = L_{Fi} - 2T_{BwBranchHolder} - 2S_{ManAssembly}
 
 
 
@@ -432,11 +456,47 @@ Manifold slot/orifice design
 
 Now the design has changed to having inlet branches with orifices instead of slots to avoid clogging. Sand is kept out with downward-facing U-channels around the pipes that create gravity exclusion zones. The outlet manifdol are stll slotted because we don't yet have a design that would keep sand out of the orifices during normal filtration.
 
-The basis of the design of the orifices is the head loss through the bottome manifold orifices during backwash in order to get good flow distribution along the manifold.
+The basis of the design of the orifices is the head loss through the bottom manifold orifices during backwash in order to get good flow distribution along the manifold.
 
-:math:`HL_{BwOrificeEst} = \frac{PR_{BwManTotal}}{\Pi_{ManifoldHeadLoss}}`
+.. math::
 
-:math:`A_BwManOrificeEst = \frac{Q}{\Pi_{VC}}`
+  HL_{BwOrificeEst} = \frac{PR_{BwManTotal}}{\Pi_{ManifoldHeadLoss}}
+
+  A_BwManOrificeEst = \frac{Q_{Fi}}{\Pi_{VC}\sqrt{2g(HL_{BwOrificeEst})}}
+
+  A_{BwManOrificeEst} = 2A_{BwManOrificeEst}
+
+  A_{TopManOrificeEst} = A_{BwManOrificeEst}
+
+  A_{OutletManSlots} = A_{InletManOrificesEst}
+
+
+Outlet Design:
+
+Parameters:
+
+.. math::
+
+  B_{ManSlot} = \frac{1}{8}in = 3.175mm
+
+  N_{SlotRows} = 2
+
+Lengths:
+
+.. math::
+
+  L_{OutletManSlotBranchTotal} = \frac{A_{OutletManSlots}}{W_{ManSlots}N_{ManBranch}}
+
+  L_{OutletBranchSlotted} = L_{ManBranch} - 2L_{ManBranchExt} - B_{ManSlot}
+
+Number of outlet slots per branch, then rounded down to the nearest integer:
+
+.. math:: N_{OutletManSlotsPerRow} =  \frac{L_{OutletBranchSlotted}}{B_{ManSlot}}
+
+Then the number of the slots per branch:
+
+.. math:: N_{OutletManSlotsPerBranch} = N_{OutletManSlotsPerRow}N_{SlotRows}
+
 
 
 
