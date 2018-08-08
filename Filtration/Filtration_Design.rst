@@ -5,7 +5,7 @@
 Filtration Design
 *******************
 
-This section deals with search for a self-backwashing filter which is functional over a wide range of flows. While in basic concept,running water through a sand bed, filters are the simplest of the unit processes, the are probably the most complex in design within an AguaClara plant because they are not inherently self-cleaning. Additionally. The search to overcome this problem has led to the development of a Stacked Rapid Sand Filter (StaRS Filter) a novel filter design which provides a hydraulic backwash system and works over a large range of flows with some adpatation for small flows.
+This section deals with search for a self-backwashing filter which is functional over a wide range of flows. While in basic concept, running water through a sand bed, filters are the simplest of the unit processes, the are probably the most complex in design within an AguaClara plant because they are not inherently self-cleaning. Additionally. The search to overcome this problem has led to the development of a Stacked Rapid Sand Filter (StaRS Filter) a novel filter design which provides a hydraulic backwash system and works over a large range of flows with some adaptation for small flows.
 
 
 .. _heading_filtration_terms:
@@ -44,6 +44,11 @@ For a multistage filter system, the filter areas for the Dynamic, Roughing, and 
 
 
 .. math::
+<<<<<<< HEAD
+=======
+   :label: area_stuff
+
+>>>>>>> master
     A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}
 
 Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. :numref:`figure_relative_area_of_filtration` shows the relative area of various filtration technologies.
@@ -67,7 +72,7 @@ Porosity
 In understading how sand filtration works, porosity is one of the most important concepts to be familiar with. Porosity refers to the ratio of the void volume to the total volume of a control volume.
 
 .. math::
-  :label: porosity
+   :label: porosity
 
     \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}
 
@@ -75,6 +80,7 @@ In understading how sand filtration works, porosity is one of the most important
 Porosity is determined by the geometry of the material in the control volume, but also by the size of the particles involved. If you have three different sized spheres (such as .0um clay, .2mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in :numref:`figure_porosity`. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.
 
 .. _figure_porosity:
+
 .. figure:: Images/figure_porosity.png
     :align: center
     :alt: This figure illustrates how different sized materials have the same total bulk porosity
@@ -92,7 +98,7 @@ One way that the relative size of particles is characterized is by describing th
 The ratio of the two is the uniformity coeffecient:
 
 .. math::
-  :label: uniformity_coefficient
+   :label: uniformity_coefficient
 
     UC = \frac{D_{60}}{D_{10}}
 
@@ -102,7 +108,7 @@ The uniformity coefficient describes the uniformity of the sand. A :math:`UC = 1
 During backwash, the sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:
 
 .. math::
-  :label: backwash_porosity
+   :label: backwash_porosity
 
     \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}
 
@@ -116,7 +122,7 @@ During backwash, the sand is fluidized and the sand bed expands. This expansion 
 From this it becomes possible to directly relate porosity (as above) to the filter expansion ratio, which is simply the ratio of the heights of the expanded sand bed and the settled sand bed:
 
 .. math::
-  :label: filter_expansion_ratio
+   :label: filter_expansion_ratio
 
   \Pi_{FiBw} = \frac{H_{FiSandBw}}{H_{FiSand}}
 
@@ -134,7 +140,7 @@ Headloss Requirements
 One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen-Pouseille equation (ref from elsewhere, not linked yet) describes the headloss through a clean bed during filtration.
 
 .. math::
-  :label: karmen_kozeny_clean_bed
+   :label: karmen_kozeny_clean_bed
 
     \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu V_{Fi}}{g D_{60}^2}
 
@@ -156,11 +162,12 @@ The headloss during backwash is taken as the design parameter, so other values a
 The following equation describes the headloss through the fluidized bed:
 
 .. math::
-  :label: headloss_fluidzed_bed
+   :label: headloss_fluidzed_bed
+
     \frac{h_{l_{FiBw}}}{H_{FiSand}} = \left( 1 - \phi_{FiSand} \right)\left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 
 | Such that:
-| :math:`h_{l_{FiBw}` = the headloss in the fluidized bed
+| :math:`h_{l_{FiBw}}` = the headloss in the fluidized bed
 | :math:`H_{FiSand}` =  the depth of the settled sand bed
 | :math:`phi_{FiSand}` = the settled sand porosity
 | :math:`rho_{Sand}`  = the sand density
@@ -169,8 +176,10 @@ The following equation describes the headloss through the fluidized bed:
 Using these two equations the minimum velocity for snad fluidization can be found!
 
 .. math::
-  :label: minimum_fluidization_velocity_sand
-    V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
+
+   :label: minimum_fluidization_velocity_sand
+
+   V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 
 From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter is **not** indicative of fluidization at the bottom.
 
@@ -183,18 +192,18 @@ This parameter is the most important parameter to consider as it is a property o
 Backwash
 ===========
 
-When considering backwash design, there are two main factors that constitute a dilemma. The first, backwash velocity must be must greater than filtration velocity (to expand the sand bed), and second, the backwash water must be clean water (cleaning with dirty water introduces more particles into the filter). This limits the paths water can take during the backwash process. The conventional options include pumping it back from the storage tank, using a set of parallel fiters to backwash one filter at a time, or storing the filtered water at an adequate elevation. Due to energy limitations and space constraints, the conventional solutions are simply not feasible for this system. Examples that illustrate why they cannot work can be found in the derivations sections(?)(or the examples?)
+When considering backwash design, there are two main factors that constitute a dilemma. The first, backwash velocity must be must greater than filtration velocity (to expand the sand bed), and second, the backwash water must be clean water (cleaning with dirty water introduces more particles into the filter). This limits the paths water can take during the backwash process. The conventional options include pumping it back from the storage tank, using a set of parallel filters to backwash one filter at a time, or storing the filtered water at an adequate elevation. Due to energy limitations and space constraints, the conventional solutions are simply not feasible for this system. Examples that illustrate why they cannot work can be found in the derivations sections(?)(or the examples?)
 
 **brief example here?**
 
-To avoid electricity, pumps can be immeidately ruled out.
+To avoid electricity, pumps can be immediately ruled out.
 
 Parallel filters would require too much area and wouldn't work well under low flow conditions:
 
 Given:
 
 .. math::
-  :label: filter_base_conditions
+   :label: filter_base_conditions
 
     Q_{Plant} = 6 \, \frac{L}{s} \,\,\,\,\, V_{Fi} = 1.8 \, \frac{mm}{s} \,\,\,\,\, V_{Bw} = 9 \, \frac{mm}{s}
 
@@ -214,7 +223,7 @@ If the velocities could be more similar the filter could work!
 
 This could be accomplished in several ways: such as decreasing the media density thus lowering velocity to fluidize it, decrease the media diameter thus lowering the fluidization velocity, or make a more compact filter which filters in parallel and backwashes in series.
 
-As changing the material characteristics of the sand is challenging, a more compact filter is the chosen design. As it happens this innovation results in a more concpetually difficult filter. In the design, six layers of sand are stacked, there are four inlets, and three outlets which are all in use during filtration. During backwash only one inlet is used and the backwash water is discarded through a separate manifold. Throughout this section, figures and images will be the best methods to understand the design flow through the system, and will be supplemented by the text.
+As changing the material characteristics of the sand is challenging, a more compact filter is the chosen design. As it happens this innovation results in a more conceptually difficult filter. In the design, six layers of sand are stacked, there are four inlets, and three outlets which are all in use during filtration. During backwash only one inlet is used and the backwash water is discarded through a separate manifold. Throughout this section, figures and images will be the best methods to understand the design flow through the system, and will be supplemented by the text.
 
 This overall design can be seen in Figure XXXXX.
 
@@ -224,7 +233,7 @@ Tasks for clare for Thursday + Friday morning: insert images! none of them are i
 
 In is most basic schema, the filter is a series of pipes leading into a deep box with 1.2 meters of sand (for most filters)
 
-As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter. These structures have slots which allow water out of the inlet pipes into the sand bed. Across a layer of sand from the inlet is an outlet pipe in the same shapes as the slotted pipe inlets. Water passes into the pipes and up to the fitler outlet box where it only needs to be chlorinated before being distributed.
+As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter. These structures have slots which allow water out of the inlet pipes into the sand bed. Across a layer of sand from the inlet is an outlet pipe in the same shapes as the slotted pipe inlets. Water passes into the pipes and up to the filter outlet box where it only needs to be chlorinated before being distributed.
 
 Steps of designing a filter.
 1. Calculate backwash velocity from sand diameter
