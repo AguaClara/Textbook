@@ -61,9 +61,9 @@ for :math:`W` to get :math:`W_{Min, \, \Pi_{H_eS}}`:
 
 .. math::
 
-   \color{purple}{
+
    W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}
-   }
+
 
 | This equation represents the absolute smallest width of a flocculator
   channel if we consider the lowest value of :math:`\Pi_{H_eS}` and the

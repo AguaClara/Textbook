@@ -88,12 +88,36 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
 
 .. toctree::
+  :caption: Chapter 6: Sedimentation
+  :maxdepth: 1
+
+  Sedimentation/Sed_Intro.rst
+  Sedimentation/Sed_Examples.rst
+  Sedimentation/Sed_Theory_and_Future_Work.rst
+
+.. toctree::
   :caption: Chapter 8: Filtration
-  :maxdepth: 2
+  :maxdepth: 1
 
   Filtration/Filtration_Design.rst
   Filtration/Filtration_Derivations.rst
 
+<<<<<<< HEAD
+=======
+.. toctree::
+  :caption: Chapter 9: Dissolved Gas
+  :maxdepth: 1
+
+  Dissolved_Gas/DG_Intro.rst
+
+
+.. toctree::
+  :caption: Chapter 10: Troubleshooting
+  :maxdepth: 1
+
+  Troubleshooting/Troubleshooting.rst
+
+>>>>>>> master
 
 `PDF and LaTeX versions <https://github.com/AguaClara/Textbook/releases/latest>`_ [#pdf_warning]_.
 
