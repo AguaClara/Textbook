@@ -95,7 +95,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#installing-the-atom-plugins">Installing the Atom Plugins</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#building-rst-locally-with-sphinx">Building RST Locally with Sphinx</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#publishing-online">Publishing Online</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#building-pdf-locally">Building PDF Locally</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#testing-online">Testing Online</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sharing-test-output">Sharing Test Output</a></li>
 </ul>
@@ -119,6 +118,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Python.html">Review: Python</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
 <ul>
@@ -238,16 +238,14 @@
 <p>There are two ways to <em>quickly</em> view an RST file. The first is using an <a class="reference external" href="https://ide.atom.io/">Atom</a> plugin that renders the view alongside the source code. This is a good initial test to make sure the RST is proper RST and looks <em>mostly</em> correct. However, some functionality, such as any extensions provided by <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> won’t run in the preview. In order to see the final html that will display on the website, you’ll need to use the second method, running sphinx locally to fully generate the html code. Once you are satisfied with your work and want to push it to the textbook, you’ll need to incorporate it to the master branch. To do so, refer to <a class="reference internal" href="#publishing-online">Publishing online</a>.</p>
 <div class="section" id="installing-the-atom-plugins">
 <span id="heading-installing-atom"></span><h3>Installing the Atom Plugins<a class="headerlink" href="#installing-the-atom-plugins" title="Permalink to this headline">¶</a></h3>
-<p>If you are using the Atom IDE to write RST, you can use the <a class="reference external" href="https://atom.io/packages/rst-preview-pandoc">rst-preview-pandoc</a> plugin to auto-generate a live RST preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview working, you’ll need to install <a class="reference external" href="https://atom.io/packages/language-restructuredtext">language-restructuredtext</a> via atom and <a class="reference external" href="https://pandoc.org/installing.html">Pandoc</a> via your command line (<code class="docutils literal notranslate"><span class="pre">$pip</span> <span class="pre">install</span> <span class="pre">pandoc</span></code>). If everything worked, you can use <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">shift</span> <span class="pre">+</span> <span class="pre">e</span></code> to toggle a display window for the live-updated RST preview.</p>
+<p>If you are using the Atom IDE to write RST, you can use the <a class="reference external" href="https://atom.io/packages/rst-preview-pandoc">rst-preview-pandoc</a> plugin to auto-generate a live RST preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview working, you’ll need to install <a class="reference external" href="https://atom.io/packages/language-restructuredtext">language-restructuredtext</a> via atom and <a class="reference external" href="https://pandoc.org/installing.html">Pandoc</a> via your command line (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandoc</span></code>). If everything worked, you can use <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">shift</span> <span class="pre">+</span> <span class="pre">e</span></code> to toggle a display window for the live-updated RST preview.</p>
 </div>
 <div class="section" id="building-rst-locally-with-sphinx">
 <span id="heading-building-rst-locally"></span><h3>Building RST Locally with <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a><a class="headerlink" href="#building-rst-locally-with-sphinx" title="Permalink to this headline">¶</a></h3>
 <p>We use <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> to build RST locally and remotely. Follow these steps to get <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> and run it locally:</p>
 <ol class="arabic simple">
-<li>Get <a class="reference external" href="https://www.python.org/downloads/">Python 3.5+</a> and pipenv (<code class="code docutils literal notranslate"><span class="pre">$pip</span> <span class="pre">install</span> <span class="pre">pipenv</span></code>)</li>
-<li>Install all dependencies and setup a virtual environment with <code class="code docutils literal notranslate"><span class="pre">$pipenv</span> <span class="pre">install</span></code></li>
-<li>Whenever you want to issue commands, start your virtual environment with <code class="code docutils literal notranslate"><span class="pre">$pipenv</span> <span class="pre">shell</span></code> - exit it with <code class="code docutils literal notranslate"><span class="pre">$exit</span></code></li>
-<li>Generate all the html by navigating in the command line to the source directory /Textbook and creating the build in that directory with the command line <code class="code docutils literal notranslate"><span class="pre">$make</span> <span class="pre">html</span></code>.</li>
+<li>Install <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, disqus, and a sphinx visual theme using pip: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span> <span class="pre">--user</span> <span class="pre">-U</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">git+https://github.com/rmk135/sphinxcontrib-disqus</span></code>.</li>
+<li>Generate all the html by navigating in the command line to the source directory /Textbook and creating the build in that directory with the command line <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>.</li>
 <li>View the html generated in the /Textbook/_build directory by copying the full file path of /Textbook/_build/html/index.html and pasting it into your browser.</li>
 </ol>
 <div class="admonition note">
@@ -280,12 +278,6 @@
 <p class="first admonition-title">Important</p>
 <p class="last">If your changes to the master branch aren’t pushing to gh-pages, then check the status of the <a class="reference external" href="https://travis-ci.org/AguaClara/Textbook">Travis build here</a>.</p>
 </div>
-</div>
-<div class="section" id="building-pdf-locally">
-<span id="heading-building-pdf-locally"></span><h3>Building PDF Locally<a class="headerlink" href="#building-pdf-locally" title="Permalink to this headline">¶</a></h3>
-<p>To check errors with the PDF generation more quickly, it may be worthwhile to setup your local machine to build the PDF.</p>
-<p>Now you should be able to run <code class="code docutils literal notranslate"><span class="pre">./build_pdf</span></code> to run the build_pdf bash script within the root of the Textbook repo.</p>
-<p><strong>If you are on Windows, you’ll need to use a POSIX shell, such as git bash, Cygwin, etc…</strong></p>
 </div>
 <div class="section" id="testing-online">
 <span id="heading-testing-online"></span><h3>Testing Online<a class="headerlink" href="#testing-online" title="Permalink to this headline">¶</a></h3>
