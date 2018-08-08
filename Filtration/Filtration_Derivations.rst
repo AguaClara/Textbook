@@ -401,11 +401,25 @@ The length of the filter with regards to the manifold braches is the next calcul
 
 This length is the length of the filter per manifold branch.  Thus the total length of the filter where the manifold branches are is this lengths multiplied by the number of branches:
 
-:math:`L_{ManBranch}N_{ManBranch}`
+:math:`L_{ManBranchTot} = L_{ManBranch}N_{ManBranch}`
 
-The length of the backwash manifold is calculated similarly. 
+The length of the backwash manifold is calculated similarly.
 
+:math:`L_{BwManBranch} = \frac{W_{Fi}}{2} - OR_{BwTrunk} - OR_{FittingBWBranchHolder} - OR_{BWBranchHolder} + 2L_{ManBranchExt} - S_{ManAssembly}`
 
+:math:`L_{BwManBranchTot} = L_{BwManBranch}N_{ManBranch}`
+
+Next, the length of the trunks:
+
+:math:`L_{Trunk} = L_{Fi} - \frac{L_{ManFerncoCoupling}}{2} - T_{TrunkCap} - S_{ManAssembly}`
+
+:math:`L_{BWTrunk} = L_{Fi} - \frac{L_{ManFerncoCoupling}}{2} - T_{BwTrunkCap} - S_{ManAssembly}`
+
+And the lengths of the branch holders:
+
+:math:`L_{BranchHolder} = L_{Fi} - 2T_{BranchHolder} - 2S_{ManAssembly}`
+
+:math:`L_{BwBranchHolder} = L_{Fi} - 2T_{BwBranchHolder} - 2S_{ManAssembly}`
 
 
 
@@ -413,6 +427,27 @@ The length of the backwash manifold is calculated similarly.
 
 Manifold slot/orifice design
 ===============================
+
+**Note** Previously all manifold branches were slotted, and the middle two inlets and hte three outlets had identical slotted pipes. The top and bottom inlets  were different becausethey only received half the flow but we wanted the same slot head loss through all manifolds.
+
+Now the design has changed to having inlet branches with orifices instead of slots to avoid clogging. Sand is kept out with downward-facing U-channels around the pipes that create gravity exclusion zones. The outlet manifdol are stll slotted because we don't yet have a design that would keep sand out of the orifices during normal filtration.
+
+The basis of the design of the orifices is the head loss through the bottome manifold orifices during backwash in order to get good flow distribution along the manifold.
+
+:math:`HL_{BwOrificeEst} = \frac{PR_{BwManTotal}}{\Pi_{ManifoldHeadLoss}}`
+
+:math:`A_BwManOrificeEst = \frac{Q}{\Pi_{VC}}`
+
+
+
+
+
+
+
+
+
+
+
 
 Plumbing head losses
 ======================
