@@ -124,11 +124,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#coagulant-attachment-mechanism">Coagulant Attachment Mechanism</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rederivation-of-nanoparticle-attachment">Rederivation of nanoparticle Attachment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rederived-collision-rates">Rederived Collision Rates</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Collision Rate and Particle Removal</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -240,20 +235,14 @@
 <p>The following is a very preliminary estimate of the time required for attachment of the nanoparticles to the clay particles. This analysis includes multiple simplifying assumptions and there is a reasonable possibility that some of those assumptions are wrong. However, the core assumptions that coagulant nanoparticles are transported to clay particles by a combination of fluid deformation (shear) and molecular diffusion is reasonable.</p>
 <p>The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. The core idea is that viscous shear dominated fluid deformation causes relative motion between the coagulant nanoparticles and the clay particles (or other suspended particles) with which they eventually will collide. The collision between these particles that are very different in size is difficult to achieve because there is a viscous layer of fluid around the clay particles that the clay particle drags with it as it rotates in deforming fluid. The coagulant nanoparticle that</p>
 <p>The volume of the suspension that is cleared of nanoparticles is proportional to a collision area defined by a ring around the clay particle with width of the diameter of the nanoparticle diffusion band. This diffusion band is the length scale over which diffusion is able to transport coagulant particles to the clay surface during the time that the nanoparticles are sliding past the clay particle.</p>
-<div class="figure align-center" id="id4">
-<span id="figure-coagulant-nanoparticle-clay-collisions"></span><a class="reference internal image-reference" href="../_images/Coagulant_nanoparticle_clay_collisions.png"><img alt="Coagulant nanoparticle clay collisions" src="../_images/Coagulant_nanoparticle_clay_collisions.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 67 </span><span class="caption-text">Fluid deformation moves coagulant nanoparticles close to clay particles and diffusion helps transport the nanoparticles the last nanometers toward a successful collision.</span></p>
-</div>
-<p>The volume cleared is proportional to the area of this ring. Here we assume that the <span class="math notranslate nohighlight">\(L_{Diff_{NC}} &lt;&lt; d_{Clay}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-0">
 <span class="eqno">(275)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-0" title="Permalink to this equation">¶</a></span>\[\propto \pi \, d_{Clay} \, L_{Diff_{NC}}\]</div>
 <p>The volume cleared is proportional to time</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-1">
 <span class="eqno">(276)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-1" title="Permalink to this equation">¶</a></span>\[\propto t\]</div>
-<p>The volume cleared is proportional to the relative velocity between clay and nanoparticles. This relative velocity is in the viscous layer of fluid in the ring surrounding the clay particle.</p>
+<p>The volume cleared is proportional to the relative velocity between clay and nanoparticles. This scaling</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-2">
 <span class="eqno">(277)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[\propto v_r\]</div>
-<p>Combining the previous three equations we obtain.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-3">
 <span class="eqno">(278)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[\bar v_{\rm{Cleared}} = \pi  d_{Clay} \, L_{Diff_{NC}}  v_r  t\]</div>
 <p>Use dimensional analysis to get a relative velocity for the long range transport controlled by shear.</p>
@@ -352,9 +341,9 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id1">
 <span id="figure-diffusion-band-thickness"></span><a class="reference internal image-reference" href="../_images/Diffusion_band_thickness.png"><img alt="Diffusion band thickness" src="../_images/Diffusion_band_thickness.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 68 </span><span class="caption-text">Molecular diffusion band thickness as a function of velocity gradient. This length scale marks the transition between transport by fluid deformation and by diffusion.</span></p>
+<p class="caption"><span class="caption-number">Fig. 67 </span><span class="caption-text">Molecular diffusion band thickness as a function of velocity gradient. This length scale marks the transition between transport by fluid deformation and by diffusion.</span></p>
 </div>
 <p>Using the equation for <span class="math notranslate nohighlight">\(L_{Diff}\)</span> above, we can solve for  the time required to reach a target efficiency of application of coagulant nanoparticles to clay:</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-27">
@@ -391,9 +380,9 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id6">
+<div class="figure align-center" id="id2">
 <span id="figure-coag-attach-time"></span><a class="reference internal image-reference" href="../_images/Coag_attach_time.png"><img alt="Coag attach time" src="../_images/Coag_attach_time.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text">An estimate of the time required for 80% of the coagulant nanoparticles to attach to clay particles given a raw water turbidity of 10 NTU.</span></p>
+<p class="caption"><span class="caption-number">Fig. 68 </span><span class="caption-text">An estimate of the time required for 80% of the coagulant nanoparticles to attach to clay particles given a raw water turbidity of 10 NTU.</span></p>
 </div>
 </div>
 <div class="section" id="energy-tradeoff-for-coagulant-transport">
@@ -418,9 +407,9 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id7">
+<div class="figure align-center" id="id3">
 <span id="figure-coag-attach-head-loss"></span><a class="reference internal image-reference" href="../_images/Coag_attach_head_loss.png"><img alt="Coag attach head loss" src="../_images/Coag_attach_head_loss.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 70 </span><span class="caption-text">The total energy required to attach coagulant nanoparticles to raw water inorganic particles increases rapidly with the velocity gradient used in the rapid mix process.</span></p>
+<p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text">The total energy required to attach coagulant nanoparticles to raw water inorganic particles increases rapidly with the velocity gradient used in the rapid mix process.</span></p>
 </div>
 <p>There is an economic tradeoff between reactor volume and energy input. The reactor volume results in a higher capital cost and the energy input requires both higher operating costs and higher capital costs. This provides an opportunity to optimize rapid mix design once we have a confirmed model characterizing the process.</p>
 <p>The total potential energy used to operate an AguaClara plant is approximately 2 m. This represents the difference in elevation between where the raw water enters the plant and where the filtered water exits the plant. If we assume that the rapid mix energy budget is a fraction of that total and thus for subsequent analysis we will assume somewhat arbitrarily that the energy available to attach the coagulant nanoparticles to the raw water particles is 50 cm.</p>
@@ -469,58 +458,7 @@ for G given a head loss.</p>
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="rederivation-of-nanoparticle-attachment">
-<h2>Rederivation of nanoparticle Attachment<a class="headerlink" href="#rederivation-of-nanoparticle-attachment" title="Permalink to this headline">¶</a></h2>
-<p>The volume cleared is proportional to the area of this ring. Here we assume that the <span class="math notranslate nohighlight">\(L_{Diff_{NC}} &lt;&lt; d_{Clay}\)</span></p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-30">
-<span class="eqno">(305)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-30" title="Permalink to this equation">¶</a></span>\[\propto \pi \, d_{Clay} \, L_{Diff_{NC}}\]</div>
-<p>The volume cleared is proportional to time</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-31">
-<span class="eqno">(306)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-31" title="Permalink to this equation">¶</a></span>\[\propto t\]</div>
-<p>The volume cleared is proportional to the relative velocity between clay and nanoparticles. This relative velocity is in the viscous layer of fluid in the ring surrounding the clay particle.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-32">
-<span class="eqno">(307)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-32" title="Permalink to this equation">¶</a></span>\[\propto v_r\]</div>
-<p>Combining the previous three equations we obtain.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-33">
-<span class="eqno">(308)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-33" title="Permalink to this equation">¶</a></span>\[\bar v_{\rm{Cleared}} = \pi  d_{Clay} \, L_{Diff_{NC}}  v_r  t\]</div>
-<p>Use dimensional analysis to get a relative velocity for the long range transport controlled by shear.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-34">
-<span class="eqno">(309)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-34" title="Permalink to this equation">¶</a></span>\[v_r = f \left( \varepsilon ,\nu ,\Lambda_{Clay} \right)\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-35">
-<span class="eqno">(310)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-35" title="Permalink to this equation">¶</a></span>\[v_r = \Lambda_{Clay} f \left( \varepsilon ,\nu \right)\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-36">
-<span class="eqno">(311)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-36" title="Permalink to this equation">¶</a></span>\[v_r \approx \Lambda_{Clay} G\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-37">
-<span class="eqno">(312)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-37" title="Permalink to this equation">¶</a></span>\[\Lambda_{Clay} = [L]
-\, \, \, \, \, \, \,
-\varepsilon = \frac{[L]^2}{[T]^3}
-\, \, \, \, \, \, \,
-\nu = \frac{[L]^2}{[T]}\]</div>
-</div>
-<div class="section" id="rederived-collision-rates">
-<span id="id1"></span><h2>Rederived Collision Rates<a class="headerlink" href="#rederived-collision-rates" title="Permalink to this headline">¶</a></h2>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-38">
-<span class="eqno">(313)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-38" title="Permalink to this equation">¶</a></span>\[{\rlap{\kern.08em--}V_{\rm{Cleared}}} \approx \pi d_{Clay} L_{Diff_{NC}} v_r t_c\]</div>
-<p>Where <span class="math notranslate nohighlight">\(\rlap{\kern.08em--}V_{Occupied} = \Lambda_{Clay}^3\)</span>. Solve for <span class="math notranslate nohighlight">\(t_c\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-39">
-<span class="eqno">(314)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-39" title="Permalink to this equation">¶</a></span>\[t_c = \frac{\Lambda_{NC}^3}{\pi d_{Clay} L_{Diff_{NC}} v_r}\]</div>
-<p>This is the average time for a clay particle to have the entire volume of water that it occupies sweep past the clay particle.
-<span class="math notranslate nohighlight">\(v_r \approx \Lambda_{Clay} G\)</span></p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-40">
-<span class="eqno">(315)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-40" title="Permalink to this equation">¶</a></span>\[t_c = \frac{\Lambda_{Clay}^3}{\pi d_{Clay} L_{Diff_{NC}} \Lambda_{Clay} G}\]</div>
-<p>Where <span class="math notranslate nohighlight">\(t_c = \frac{dN_c}{dt}\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-41">
-<span class="eqno">(316)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-41" title="Permalink to this equation">¶</a></span>\[dN_c = \pi d_{Clay} L_{Diff_{NC}}{\Lambda^{-2}_{Clay}} G dt\]</div>
-<div class="section" id="id2">
-<span id="id3"></span><h3>Collision Rate and Particle Removal<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>A fraction of the remaining coagulant nanoparticles are removed during the time required for one sweep past the clay particle.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-42">
-<span class="eqno">(317)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-42" title="Permalink to this equation">¶</a></span>\[\frac{dn_{NC}}{ - k \, n_{NC}} = dN_c\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-43">
-<span class="eqno">(318)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-43" title="Permalink to this equation">¶</a></span>\[\frac{dn_{NC}}{ - k \, n_{NC}} = \pi d_{Clay} L_{Diff_{NC}}{\Lambda^{-2}_{Clay}} G dt\]</div>
-</div>
-</div>
+<span class="target" id="heading-conventional-mechanical-rapid-mix"></span></div>
 </div>
 
 

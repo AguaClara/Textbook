@@ -33,7 +33,7 @@ There are two ways to *quickly* view an RST file. The first is using an Atom_ pl
 
 Installing the Atom Plugins
 ---------------------------
-If you are using the Atom IDE to write RST, you can use the `rst-preview-pandoc <https://atom.io/packages/rst-preview-pandoc>`_ plugin to auto-generate a live RST preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview working, you'll need to install `language-restructuredtext <https://atom.io/packages/language-restructuredtext>`_ via atom and Pandoc_ via your command line (``pip install pandoc``). If everything worked, you can use ``ctrl + shift + e`` to toggle a display window for the live-updated RST preview.
+If you are using the Atom IDE to write RST, you can use the `rst-preview-pandoc <https://atom.io/packages/rst-preview-pandoc>`_ plugin to auto-generate a live RST preview within atom (much like the markdown-preview-plus preview page.) To get rst-preview working, you'll need to install `language-restructuredtext <https://atom.io/packages/language-restructuredtext>`_ via atom and Pandoc_ via your command line (``$pip install pandoc``). If everything worked, you can use ``ctrl + shift + e`` to toggle a display window for the live-updated RST preview.
 
 
 .. _heading_building_rst_locally:
@@ -42,8 +42,10 @@ Building RST Locally with Sphinx_
 ---------------------------------
 We use Sphinx_ to build RST locally and remotely. Follow these steps to get Sphinx_ and run it locally:
 
-#. Install Sphinx_, disqus, and a sphinx visual theme using pip: ``pip install sphinx --user -U`` and ``pip install git+https://github.com/rmk135/sphinxcontrib-disqus``.
-#. Generate all the html by navigating in the command line to the source directory /Textbook and creating the build in that directory with the command line :code:`make html`.
+#. Get `Python 3.5+ <https://www.python.org/downloads/>`_ and pipenv (:code:`$pip install pipenv`)
+#. Install all dependencies and setup a virtual environment with :code:`$pipenv install`
+#. Whenever you want to issue commands, start your virtual environment with :code:`$pipenv shell` - exit it with :code:`$exit`
+#. Generate all the html by navigating in the command line to the source directory /Textbook and creating the build in that directory with the command line :code:`$make html`.
 #. View the html generated in the /Textbook/_build directory by copying the full file path of /Textbook/_build/html/index.html and pasting it into your browser.
 
 .. note:: Regarding **1.** the master branch for the package implementing disqus in sphinx `is broken <https://github.com/Robpol86/sphinxcontrib-disqus/pull/7>`_, which is why we use a non-standard pip/online installation. If you already have the incorrect sphinx-disqus version installed, uninstall it with ``pip uninstall sphinxcontrib-disqus`` before installing the functioning version.
@@ -67,6 +69,16 @@ We use Travis_ to ensure this site will always contain functional builds. To pub
 #. Travis will rebuild the site and push the html to Pages, and the PDF and LaTeX to GitHub Releases under the tag name.
 
 .. important:: If your changes to the master branch aren't pushing to gh-pages, then check the status of the `Travis build here <https://travis-ci.org/AguaClara/Textbook>`_.
+
+.. _heading_building_pdf_locally:
+
+Building PDF Locally
+--------------------
+To check errors with the PDF generation more quickly, it may be worthwhile to setup your local machine to build the PDF.
+
+Now you should be able to run :code:`./build_pdf` to run the build_pdf bash script within the root of the Textbook repo.
+
+**If you are on Windows, you'll need to use a POSIX shell, such as git bash, Cygwin, etc...**
 
 .. _heading_testing_online:
 
@@ -127,3 +139,4 @@ You'll need to carefully review any page converted with pandoc.
 .. _Pandoc: https://pandoc.org/installing.html
 .. _Atom: https://ide.atom.io/
 .. _Travis: https://travis-ci.org/
+.. _Python: https://www.python.org/downloads/

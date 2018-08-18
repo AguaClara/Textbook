@@ -31,30 +31,15 @@ The following analysis is similar to the collision analysis that was developed i
 
 The volume of the suspension that is cleared of nanoparticles is proportional to a collision area defined by a ring around the clay particle with width of the diameter of the nanoparticle diffusion band. This diffusion band is the length scale over which diffusion is able to transport coagulant particles to the clay surface during the time that the nanoparticles are sliding past the clay particle.
 
-
-
-.. _figure_Coagulant_nanoparticle_clay_collisions:
-
-.. figure:: Images/Coagulant_nanoparticle_clay_collisions.png
-    :width: 400px
-    :align: center
-    :alt: Coagulant nanoparticle clay collisions
-
-    Fluid deformation moves coagulant nanoparticles close to clay particles and diffusion helps transport the nanoparticles the last nanometers toward a successful collision.
-
-The volume cleared is proportional to the area of this ring. Here we assume that the :math:`L_{Diff_{NC}} << d_{Clay}`
-
 .. math::  \propto \pi \, d_{Clay} \, L_{Diff_{NC}}
 
 The volume cleared is proportional to time
 
 .. math::  \propto t
 
-The volume cleared is proportional to the relative velocity between clay and nanoparticles. This relative velocity is in the viscous layer of fluid in the ring surrounding the clay particle.
+The volume cleared is proportional to the relative velocity between clay and nanoparticles. This scaling
 
 .. math::  \propto v_r
-
-Combining the previous three equations we obtain.
 
 .. math::  \bar v_{\rm{Cleared}} = \pi  d_{Clay} \, L_{Diff_{NC}}  v_r  t
 
@@ -329,69 +314,4 @@ We do not yet understand the origin of the bonds that form between coagulant nan
    -  Electronegativity reveals that the aluminum - oxygen bond is more polar than the hydrogen - oxygen bond
    -  The bond between a coagulant nanoparticle and a clay surface can potentially be stronger than the bond between a water molecule and the clay surface.
 
-
-Rederivation of nanoparticle Attachment
-=======================================
-
-The volume cleared is proportional to the area of this ring. Here we assume that the :math:`L_{Diff_{NC}} << d_{Clay}`
-
-.. math::  \propto \pi \, d_{Clay} \, L_{Diff_{NC}}
-
-The volume cleared is proportional to time
-
-.. math::  \propto t
-
-The volume cleared is proportional to the relative velocity between clay and nanoparticles. This relative velocity is in the viscous layer of fluid in the ring surrounding the clay particle.
-
-.. math::  \propto v_r
-
-Combining the previous three equations we obtain.
-
-.. math::  \bar v_{\rm{Cleared}} = \pi  d_{Clay} \, L_{Diff_{NC}}  v_r  t
-
-Use dimensional analysis to get a relative velocity for the long range transport controlled by shear.
-
-.. math:: v_r = f \left( \varepsilon ,\nu ,\Lambda_{Clay} \right)
-
-.. math:: v_r = \Lambda_{Clay} f \left( \varepsilon ,\nu \right)
-
-.. math:: v_r \approx \Lambda_{Clay} G
-
-.. math::
-
-  \Lambda_{Clay} = [L]
-  \, \, \, \, \, \, \,
-  \varepsilon = \frac{[L]^2}{[T]^3}
-  \, \, \, \, \, \, \,
-  \nu = \frac{[L]^2}{[T]}
-
-.. _heading_Collision_Rates:
-
-Rederived Collision Rates
-=========================
-
-.. math:: {\rlap{\kern.08em--}V_{\rm{Cleared}}} \approx \pi d_{Clay} L_{Diff_{NC}} v_r t_c
-
-Where :math:`\rlap{\kern.08em--}V_{Occupied} = \Lambda_{Clay}^3`. Solve for :math:`t_c`:
-
-.. math:: t_c = \frac{\Lambda_{NC}^3}{\pi d_{Clay} L_{Diff_{NC}} v_r}
-
-This is the average time for a clay particle to have the entire volume of water that it occupies sweep past the clay particle.
-:math:`v_r \approx \Lambda_{Clay} G`
-
-.. math:: t_c = \frac{\Lambda_{Clay}^3}{\pi d_{Clay} L_{Diff_{NC}} \Lambda_{Clay} G}
-
-Where :math:`t_c = \frac{dN_c}{dt}`:
-
-.. math:: dN_c = \pi d_{Clay} L_{Diff_{NC}}{\Lambda^{-2}_{Clay}} G dt
-
-.. _heading_Collision_Rate_and_Particle_Removal:
-
-Collision Rate and Particle Removal
------------------------------------
-
-A fraction of the remaining coagulant nanoparticles are removed during the time required for one sweep past the clay particle.
-
-.. math:: \frac{dn_{NC}}{ - k \, n_{NC}} = dN_c
-
-.. math:: \frac{dn_{NC}}{ - k \, n_{NC}} = \pi d_{Clay} L_{Diff_{NC}}{\Lambda^{-2}_{Clay}} G dt
+.. _heading_Conventional_Mechanical_Rapid_Mix:
