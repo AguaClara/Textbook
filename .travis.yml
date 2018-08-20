@@ -10,7 +10,7 @@ addons:
     - libcurl4-openssl-dev # required to avoid SSL errors
 install:
   - pip install pipenv
-  - pipenv install --dev --verbose
+  - pipenv install --dev
   - gem install html-proofer
 script:
   - pipenv run make html
