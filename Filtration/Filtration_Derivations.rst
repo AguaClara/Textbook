@@ -20,6 +20,7 @@ To determine the head loss during backwash a force balance should be performed b
 The pressure from the water:
 
 .. math::
+
   P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}
 
 | Such that:
@@ -44,24 +45,28 @@ The pressure from the sand:
 Setting them equal for a force balance:
 
 .. math::
+
   \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)
 
 Which simplifies to:
 
 .. math::
+
   h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}
+
   or
+
   h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 
 This result gives a ratio of the head loss during backwash to the height difference during forward operation. With :math:`\phi_{FiSand} = 0.4` and :math:`\rho_{Sand} = 2650 kg/m^3` the value of this ratio is:
 
 .. math::
+
   \left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99
 
 Thus:
 
-.. math::
-  h_{l_{FiBw}} = H_{FiSand} * 0.99
+.. math::  h_{l_{FiBw}} = H_{FiSand} * 0.99
 
 
 
@@ -92,11 +97,8 @@ Constraints:
 
 Filtration Constraints
 - inlet manifolds need to have small piezometric head relative to clean sand bed
-- trunk and branches are short manifolds (fL/d) (**friction factor, L, diam?**), therefore: piezometric head variablitty dominated by pressure recovery as given by :math:`\frac{V^2}{2g}` with the velocity as the initial velocity of the manifold
-  - this is the limiting constraint for the velocity in the trunk and branches, which can be relaxed with added headloss in the slots
-- limit the imbalance between inlets that carry water for two layers and inlets that carry water for one layer.
-  - *perhaps top/bottom inlet should have half the number of slots*
-  - current assumption: backwash branches will have half the slot areas
+- trunk and branches are short manifolds (fL/d) (**friction factor, L, diam?**), therefore: piezometric head variablitty dominated by pressure recovery as given by :math:`\frac{V^2}{2g}` with the velocity as the initial velocity of the manifold 1. ------ this is the limiting constraint for the velocity in the trunk and branches, which can be relaxed with added headloss in the slots
+- limit the imbalance between inlets that carry water for two layers and inlets that carry water for one layer. -1 *perhaps top/bottom inlet should have half the number of slots* -2 current assumption: backwash branches will have half the slot areas
 - if slots are used to generate head loss (to improve flow distribution) sand blocking, :math:`(1-\epsilon)` during filtration must be accounted for
 - the slots are not blocked during backwash (excepy maybe at initiation)
 
@@ -104,13 +106,9 @@ Backwash Constraints
 - flow rate from each slot/hole must be close to average (within *20%*)
 - as there is not head loss in fluidized bed, the manifold must be designed with the appropriate head loss for indpendent uniform flow distribution
 - headloss through slots/holes will be 36x greater during backwash because of 6x increase in velocity
-- to make flow more uniform:
-  - decrease head loss + pressure recovery in manifold
-  - increase head loss in slots
+- to make flow more uniform: 1. decrease head loss + pressure recovery in manifold 2.  increase head loss in slots
 - slot head loss must not impede the filtration mode capacity
-- this sets maximum headloss for each mode.
-  - during filtration <10% clean bed head loss
-  - during backwash <36x the filtration limits
+- this sets maximum headloss for each mode: 1. during filtration <10% clean bed head loss 2. during backwash <36x the filtration limits
 
   Additional concerns:
   - there are two manifold systems, the trunks into the branches and the branches into the slots. Thus pressure recovery must be small in both trunk and branches so that the slots can reconcile the changes in flow, because flow distribution is fairly uniform in short manifold systems when total port area is equal to or less than manifold area.
@@ -118,7 +116,7 @@ Backwash Constraints
 
 
 Flow Distribution constraint: ratio of pressure recovery to clean bed head loss
-================================================================================
+==================================================================================
 
 There are three flow distribution problems in the filter design:
 1. Between slots along manifold branches
@@ -144,8 +142,9 @@ The relative distribution of the flow through a particular path is defined as:
 
   \Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{H_{LSand}-PR}{H_{LSand}}}
 
+
 | Such that:
-| :math:`H_LSand = ` the head loss in the sand bed
+| :math:`H_LSand =` the head loss in the sand bed
 | :math:`PR =` pressure recovery (as defined by: :math:`\frac{V^2}{2g}`)
 
 
@@ -334,7 +333,7 @@ Then the number of manifold branches (rounded up to he nearest even number) beca
 
 Then the design minimum number of branches is the maximum of the two minimums:
 
-.. math:: N_{ManBranchMin}` and :math:`N_{BwManBranchMin}
+.. math:: N_{ManBranchMin} \ and \ N_{BwManBranchMin}:
 
 In addition to the minimums based on the flow constraints, a maximum number of branches exists for geometry reasons, so that the filter box width matches the auxiliary box width (when there is more than one filter)
 
@@ -375,6 +374,9 @@ the red text is here with a not from skyler or the error if the geo branches doe
 
 Filter box dimensions and manifold pipe lengths
 ================================================
+
+.. note::
+  In this section and beyond, B is used to describe the center-to-center distance between features (such as slots or orifices) and W is the width of a feature (such as the width of a slot)
 
 From the number of manifold branches the lengths of the manifold pipes as well as the various filter box dimensions can be determined.
 
@@ -497,16 +499,92 @@ Then the number of the slots per branch:
 
 .. math:: N_{OutletManSlotsPerBranch} = N_{OutletManSlotsPerRow}N_{SlotRows}
 
+Thus the length of the slot is:
+
+.. math:: L_{OutletManSlotCurvedInner} = \frac{ L_{OutletManSlotBranchTotal}}{N_{OutletManSlotsPerBranch}}
+
+This amount should be checked to ensure that it does not exceed what is possible given the 1/2 unner circumference of the branch.
+
+Inlet Design:
 
 
+Parameter:
+:math:`B_{ManOrificeEst} = 1cm`
+.. is this a diameter of the orifice?
 
+For the backwash branches the maximum number of orifices is (rounded down an integer):
 
+.. math:: N_{BwManBranchOrificeMax} = \frac{L_{BwManBranch} - 2L_{ManBranchExt} - B_{ManOrificeEst}}{B_{ManOrificeEst}}
 
+The maximum number of orifices on the backwas manifold is:
 
+.. math:: N_{BwManOrificeMax} = N_{ManBranch} N_{BwManBranchOrificeMax}
 
+On the other inlets an identical calculation is done :
 
+.. math::
 
+  N_{ManBranchOrificeMax} = \frac{L_{ManBranch} - 2L_{ManBranchExt} - B_{ManOrificeEst}}{B_{ManOrificeEst}}
 
+  N_{ManOrificeMax} = N_{ManBranch} N_{ManBranchOrificesMax}
+
+  -----
+
+Determining the diameter of the orifices is next.
+In this design only drill bit sizes of 1/4" and 1/8" are considered. The total area of the orifices is divided by the maximum number of orifices. From this a radius is calculated and double to get a diameter. This diameter is compared to the available  drill bit options and rounded up to the closest size. This is done for the backwash manifold, inner inlet manifolds, and the top inlet manifold as shown below:
+.. why are these the only two drill bit sizes considered?
+
+.. math::
+
+  D_{BwManOrifice} = 2\sqrt{\frac{A_{BwManOrificeEst}}{\pi* N_{BwManBranchOrificesMax}}}
+
+  D_{InletManOrifice} = 2\sqrt{\frac{A_{InletManOrificeEst}}{\pi* N_{ManOrificesMax}}}
+
+  D_{TopManOrifice} = 2\sqrt{\frac{A_{TopManOrificeEst}}{\pi* N_{ManOrificesMax}}}
+
+Thus the hole size is determined!
+
+The actual number of inlet orifices can then be calculated. A calculation is done for each "type" of inlet, if that number is larger than the maximum allowed number of orifices then the maximum is used. Otherwise the calculated number is used.
+
+The calculations for number of orifices based on orifice size is:
+
+.. math::
+
+  N_{BwManOrificesCalc} = \frac{A_{InletManOrificesEst}}{\frac{\pi}{4}*D_{BwManOrifice}^2}
+
+  N_{InletManOrificesCalc} = \frac{A_{InletManOrificesEst}}{\frac{\pi}{4}*D_{InletManOrifice}^2}
+
+  N_{TopManOrificesCalc} = \frac{A_{FiTopManOrificesEst}}{\frac{\pi}{4}*D_{TopManOrifice}^2}
+
+Comparing these calculations to the output provides values for :math:`N_{BwManOrifices}`, :math:`N_{InletManOrifices}`, and :math:`N_{TopManOrifices}` which are then used to find the actual areas of the inlet orifices
+
+.. math::
+
+  A_{BwManOrifices} = \frac{\pi}{4}D_{BwManOrifice}^2 * N_{BwManOrifices}
+
+  A_{InletManOrifices} =  \frac{\pi}{4}D_{InletManOrifice}^2 * N_{InletManOrifices}
+
+  A_{TopManOrifices} =  \frac{\pi}{4}D_{TopManOrifice}^2 * N_{TopManOrifices}
+
+------
+
+Recalling the outlet area, a conservative headloss calculation can be made accounting for sand blockage. Currently, this is not included inteh total path headloss; it is unclear if it applies.
+
+.. math::
+
+  HL_{OutletSlotForward} = \frac{(\frac{2Q_{FiLayer}}{A_{OutletManSlots}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}
+
+Additionally the headloss from each of the inlets can be found.
+
+.. math::
+
+  HL_{BwManOrifice} = \frac{(\frac{Q_{Fi}}{A_{BwManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}
+
+  HL_{BwManOrificeForward} = \frac{(\frac{Q_{FiLayer}}{A_{BwManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}
+
+  HL_{InletManOrificeForward} = \frac{(\frac{2Q_{FiLayer}}{A_{InletManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}
+
+  HL_{TopManOrificeForward} = \frac{(\frac{Q_{FiLayer}}{A_{TopManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}
 
 
 Plumbing head losses
@@ -515,8 +593,51 @@ Plumbing head losses
 Total Sand depth and backwash head loss
 ========================================
 
+Here, :math:`H` is used as height of sand, though as the filter extends downward it may be more intuitive to think of this as a depth of sand.
+
+The overall depth of sand is:
+
+.. math:: H_{Sand} = (N_{Layer} - 1)H_{Layer} + H_{BottomLayer} + OR_{BwManBranchFitting} + OR_{ManBranch}
+
+During filtration not all of the sand is activiely involved in the process, the amount of sand that is active is all the sand contained in the sand layers.
+
+.. math:: H_{SandActive} = H_{Sand} - OR_{BwManBranch} - OR_{ManBranch}
+
+The height of the fluidized sand bed is the height of the settled sand bed times the expansion ratio:
+
+.. math:: H_{FluidizedBed} = \Pi_{Fluidized} H_{Sand}
+
+Knowing the depth of the fluidized bed allows the steady state headloss to be calculated for backwash.
+
+.. math::
+
+  HL_{BwSandSS} = \frac{H_{Sand}(\rho_{Sand} - \rho_{H2O})(1 - \epsilon_{Sand})}  {\rho_{H20}}
+
+The value of this HL is very close to the total depth of sand in the filter, though it should be noted that this value does neglect losses in the plumbing.
+
+.. math:: HL_{Terminal} = HL_{CleanLayer} + HL_{Dirty}
+
+.. math:: HL_{BwInitiation} = HL_{BwSF} + HL_{BwSandSS}
+
+.. note:: What are these terms? have them explained! also explain how the terms below are gotten
+
+How much does the filter bed over-fluidize when the entrance box level lowers after backwash initiation!
+
+.. math::
+
+  H_{FluidizedBedVariation} = \frac{(HL_{BwInitiation}-HL_{BwSandSS})(W_{FiEntrance}L_{FiEntranceEst} - 3 \pi OR_{Trunk}^2 - \pi OR_{BwTrunk}^2)}{A_{FiActive}}
+
+
+
+
 Path head loss calculations and flow distribution between layers
 =================================================================
+
+Now that the sand layer depth is set the Kozeny Head Loss can be determined for the clean bed and the headloss through various flow paths can be determined.
+
+First use the Kozeny Equation (**ref kozeny** )to find the HL in the central layers and also the bottom layer with :math:`H_{Layer}` and :math:`H_{BottomLayer}`
+
+
 
 Siphon design
 ===============

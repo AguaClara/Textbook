@@ -44,11 +44,8 @@ For a multistage filter system, the filter areas for the Dynamic, Roughing, and 
 
 
 .. math::
-<<<<<<< HEAD
-=======
    :label: area_stuff
 
->>>>>>> master
     A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}
 
 Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. :numref:`figure_relative_area_of_filtration` shows the relative area of various filtration technologies.
