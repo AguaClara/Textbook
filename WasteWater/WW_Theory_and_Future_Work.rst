@@ -43,7 +43,7 @@ String Digester (SD)
 
 Trickling filters are an old wastewater treatment technology that is much more energy efficient than the activated sludge process.
 
-.. todo:: Provide calculations to prove this statement
+.. todo:: Provide calculations to prove this statement. Find electricity consumption for aeration and convert it to an equivalent height that the wastewater must be pumped
 
 
 
@@ -59,7 +59,7 @@ Vertical-flow media require an average hydraulic approach velocities greater tha
 
 `Crine et al. (1990) <https://doi.org/10.2166/wst.1990.0149>`_ found that the wetted area-to-specific-surface-area ratio ranged from 0.2 to 0.6 with the lowest values for high-density random pack trickling filter media. This confirms that conventional trickling filters are unable to efficiently wet all biofilm surfaces and thus the trickling filters must be substantially over-designed (by a factor of 2 to 5) to accommodate this poor wetting efficiency.
 
-If we take the hydraulic approach velocity of 0.5 mm/s and divide by the wetted area-to-specific-surface-area ratio of 0.6 we obtain 0.83 mm/s, a velocity that is comparable to the upflow velocity in an AguaClara sedimentation tank. Thus a well designed String Digester could be quite compact. 
+If we take the hydraulic approach velocity of 0.5 mm/s and divide by the wetted area-to-specific-surface-area ratio of 0.6 we obtain 0.83 mm/s, a velocity that is comparable to the upflow velocity in an AguaClara sedimentation tank. Thus a well designed String Digester could be quite compact.
 
 .. todo:: Compare with activated sludge tank hydraulic approach velocity (depth/HRT)
 
