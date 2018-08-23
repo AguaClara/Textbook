@@ -340,7 +340,7 @@ Which process removes the largest quantity of contaminants?
 Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
 
 .. math::
-  :label: eq_laminar_terminal_velocity
+   :label: eq_laminar_terminal_velocity
 
    \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
 
@@ -390,6 +390,36 @@ The AguaClara treatment train consists of the following processes
  - lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc blanket
  - stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed
  - disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes
+
+ Comparison with Croton Water Treatment Plant
+ ---------------------------------------------
+
+ As AguaClara technologies extend to larger and larger cities one of the criticisms could be that the technologies are somehow limited to small scale facilities. To address this question we will compare AguaClara unit processes with one of the most recent large scale water treatment plants, the `Croton Water Treatment Plant <_static/references/Croton-WFP.pdf>`_ (CWTP) in NYC.
+
+ The CWTP is designed to treat `290 mgd <https://www.hazenandsawyer.com/work/projects/croton-wtp/>`_ (million gallons per day) which is equivalent to 12,700 L/s. The final cost of the project was $3.2bn. The cost per L/s of treatment capacity was thus $250,000. This is approximately 25 times more expensive than AguaClara water treatments. Of course, AguaClara water treatment plants haven't been constructed underground in the middle of a major city! Nonetheless, the factor of 25 suggests that AguaClara technologies have a significant cost advantage.
+
+ The CWTP has 48 flocculators and 48 dissolved air flotation processes working in parallel. The flow per unit is thus 265 L/s. The current maximum size of the AguaClara Open Stacked Rapid Sand (OStaR) ilter is 20 L/s. It would be possible to design larger OStaR filters by simply including multiple sets of inlet/outlet trunk lines into a single filter box. The CWTP filters appear to have 6 outlet trunk lines per filter and thus the flow per trunk line is 44 L/s.
+
+ The CWTP uses 2 stage mechanical flocculators with a total residence time of 4.8 minutes and a velocity gradient of 100 Hz. This residence time is much shorter than conventional design requirements, about half of the residence time used by the AguaClara plants built around 2017, significantly larger than the 90 second residence time used in the AguaClara 1 L/s plants.
+
+ CWTP uses dissolved air flotation tanks that are located on top of the rapid sand filters. The d
+
+ The filter approach velocity (the velocity of water before it enters the sand bed) for CWTP is 4.42 mm/s. This is significantly higher than the 1.85 mm/s filtration velocity currently used in StaRS filters. StaRS filters are a stack of 6 filters and the net filtration velocity is 11 mm/s. Thus by that metric the StaRS filters are significantly smaller than the CWTP filters.
+
+
+
+
+ .. code:: python
+
+   from aide_design.play import*
+   Q_Croton =(290 *u.Mgal/u.day).to(u.L/u.s)
+   Cost_Croton = 3.2 * 10**9 * u.USD
+   Cost_per_Lps = Cost_Croton/Q_Croton
+   Cost_per_Lps
+   N_DAF = 48
+   Q_per_unit = Q_Croton/N_DAF
+   Q_per_unit/6
+   (15.9 * u.m/u.hr).to(u.mm/u.s)
 
 Design Evolution
 ----------------
@@ -495,9 +525,11 @@ AguaClara sedimentation tanks are designed to be taken off line one at a time so
 
     Plant operator removing plate settlers from an AguaClara sedimentation tank.
 
-.. _heading_Mechanized_or_Smart_Hydraulics:
+
 
 There is another major consequence of building water treatment plants in a secure enclosed building. Many water treatment plants will operate around the clock and that requires plant operators to spend the night at the facility. Having a secure facility provides improved safety for the plant operator. That improved safety is very important for some potential operators and thus providing that safety will increase potential diversity.
+
+.. _heading_Mechanized_or_Smart_Hydraulics:
 
 Mechanized or Smart Hydraulics
 ------------------------------
@@ -511,3 +543,5 @@ Automated plants often move the controls far away from the critical observation 
 AguaClara plants have a layout that places the coagulant dose controls within a few steps of the best places to observe floc formation in the flocculator. This provides plant operators with rapid feedback that is critical when the raw water changes rapidly at the beginning of a high runoff event. As operators spend time observing the processes in the plant they begin to associate cause and effect and can make operational changes to improve performance. For example, gas bubbles that carry flocs to the surface can indicate sludge accumulation in a sedimentation tank. Rising flocs without gas bubbles can indicate a poor inlet flow distribution for a sedimentation tank or density differences caused by temperature differences.
 
 .. todo:: Show the plan view of an AguaClara plant.
+
+.. _heading_Comparison_with_Croton_Water_Treatment_Plant:
