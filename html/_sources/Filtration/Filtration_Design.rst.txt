@@ -17,7 +17,6 @@ Terms:
 1. Porosity
 2. StaRS Filter
 3. Backwash
-4. Pressure Recovery
 
 
 Equations:
@@ -29,6 +28,11 @@ Equations:
 AguaClara Flow Control and Measurement Technologies
 =====================================================
 
+What it is
+What it does and why
+How it works
+Notes
+
 
 
 
@@ -38,7 +42,7 @@ AguaClara Flow Control and Measurement Technologies
 Filter Types
 =============
 
-The principal difference in various filters is the difference in velocity of water through them. This in turn determines the plan view area of the filter for a particular flow.
+The principal difference in various filters is the difference in velocity of water through them. This in turn determines the plan area of the filter for a particular flow.
 
 For a multistage filter system, the filter areas for the Dynamic, Roughing, and Slow Sand filters are included in a total area. For a given flow, and the velocity for each filter type the total area is:
 
@@ -48,15 +52,7 @@ For a multistage filter system, the filter areas for the Dynamic, Roughing, and 
 
     A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}
 
-Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. :numref:`figure_relative_area_of_filtration` shows the relative area of various filtration technologies.
-
-.. _figure_relative_area_of_filtration:
-
-.. figure:: Images/figure_relative_area_of_filtration.png
-  :align: center
-  :alt: table showing the relative areas of multistage filtration techniques to AguaClara unit processes
-  :width: 80%
-
+Using this formula it becomes easy to see the relative sizes of different filter systems. **Note: Clare, consider adding the table from slide 23 here.**
 
 Understanding the amount of area requires for this component makes it easy to see why certain systems would be preferable to others, but also that overall filtration is only a polishing step and cannot treat as well as other unit processes, predominantly the flocculation-sedimentation combination.
 
@@ -74,7 +70,7 @@ In understading how sand filtration works, porosity is one of the most important
     \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}
 
 
-Porosity is determined by the geometry of the material in the control volume, but also by the size of the particles involved. If you have three different sized spheres (such as .0um clay, .2mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in :numref:`figure_porosity`. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.
+Porosity is determined by the geometry of the material in the control volume, but also by the size of the particles involved. If you have three different sized spheres (such as .0um clay, .2mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.
 
 .. _figure_porosity:
 
@@ -92,17 +88,17 @@ One way that the relative size of particles is characterized is by describing th
 
 :math:`D_{10}` is used for particle removal models, and :math:`D_{60}` is used for hydrualic modeling.
 
-The ratio of the two is the uniformity coeffecient:
+The relationship of the two is the uniformity coeffecient:
 
 .. math::
    :label: uniformity_coefficient
 
     UC = \frac{D_{60}}{D_{10}}
 
-The uniformity coefficient describes the uniformity of the sand. A :math:`UC = 1` indicates that every grain of sand is the same size, which is the ideal case. A large :math:`UC` is indicative of a wide range of grain sizes which can cause trouble during filter operation and backwash, as stratification occurs and the porosity changes with respect to depth in the filter, which affects the requirements for backwash.
+The uniformity coefficient describes the uniformity of the sand. A :math:`UC = 1` indicates that every grain of sand is the same size, which is the ideal case. A large :math:`UC` is indicative of a wide range of grain sizes which can cause trouble during filter operation and backwash, as stratification occurs and the porosity changes with respect to depth in the filter.
 
 
-During backwash, the sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:
+During backwash sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:
 
 .. math::
    :label: backwash_porosity
@@ -134,7 +130,7 @@ From this it becomes possible to directly relate porosity (as above) to the filt
 
 Headloss Requirements
 ======================
-One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen-Pouseille equation (ref from elsewhere, not linked yet) describes the headloss through a clean bed during filtration.
+One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen Pouseille equation (ref from elsewhere) describes the headloss through a clean bed during filtration.
 
 .. math::
    :label: karmen_kozeny_clean_bed
@@ -179,8 +175,6 @@ Using these two equations the minimum velocity for snad fluidization can be foun
    V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 
 From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter is **not** indicative of fluidization at the bottom.
-
-This parameter is the most important parameter to consider as it is a property of the sand not of the water!
 
 
 
@@ -233,12 +227,7 @@ In is most basic schema, the filter is a series of pipes leading into a deep box
 As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter. These structures have slots which allow water out of the inlet pipes into the sand bed. Across a layer of sand from the inlet is an outlet pipe in the same shapes as the slotted pipe inlets. Water passes into the pipes and up to the filter outlet box where it only needs to be chlorinated before being distributed.
 
 Steps of designing a filter.
-1. Calculate backwash velocity from sand diameter
-- complicating factors:
--- wall shear
--- lift as a unit and fall together
---- stratification will always occur if a range of sizes exists
-2.
+1.
 
 
 
@@ -264,118 +253,3 @@ Steps of designing a filter.
 
 Siphon
 ========
-
-Backwash is initiated through the activation of a siphons system. In the sipohoning process two things must happen for a success.
-  1. Backwash can be initiated at any point in time
-  2. Backwash can be prevented with the siphon as well
-
-  In under the siphon, the ideal gas law, **Add a ref**, is the most important equation to understand how siphoning works..
-
-
-
-
-------------------------------------
-
-***********************************
-Desgin from MathCad adapted for me
-***********************************
-
-Overall Goals:
-- Uniformity in the sand bed through appropriate headloss
-
-.. note::
-  Pressure recovery occurs when fluid velocity slows down. This happens in the filter at the end of a manifold pipe, ebcause the fluid must stop at the end. This stoppage causes the pressure to increase locally, which then, when the fluid passes into the outlet, increases the local velocity leading to non-uniform flow.
-
-
-Constraints:
-
-Filtration Constraints
-- inlet manifolds need to have small piezometric head relative to clean sand bed
-- trunk and branches are short manifolds (fL/d) (**friction factor, L, diam?**), therefore: piezometric head variablitty dominated by pressure recovery as given by :math:`\frac{V^2}{2g}` with the velocity as the initial velocity of the manifold
--- this is the limiting constraint for the velocity in the trunk and branches, which can be relaxed with added headloss in the slots
-- limit the imbalance between inlets that carry water for two layers and inlets that carry water for one layer.
--- *perhaps top/bottom inlet should have half the number of slots*
--- current assumption: backwash branches will have half the slot areas
-- if slots are used to generate head loss (to improve flow distribution) sand blocking, :math:`(1-\epsilon)` during filtration must be accounted for
-- the slots are not blocked during backwash (excepy maybe at initiation)
-
-Backwash Constraints:
-- flow rate from each slot/hole must be close to average (within *20%*)
-- as there is not head loss in fluidized bed, the manifold must be designed with the appropriate head loss for indpendent uniform flow distribution
-- headloss through slots/holes will be 36x greater during backwash because of 6x increase in velocity
-- to make flow more uniform:
--- decrease head loss + pressure recovery in manifold
--- increase head loss in slots
-- slot head loss must not impede the filtration mode capacity
-- this sets maximum headloss for each mode.
--- during filtration <10% clean bed head loss
--- during backwash <36x the filtration limits
-
-  Additional concerns:
-  - there are two manifold systems, the trunks into the branches and the branches into the slots. Thus pressure recovery must be small in both trunk and branches so that the slots can reconcile the changes in flow, because flow distribution is fairly uniform in short manifold systems when total port area is equal to or less than manifold area.
-
-Sand Layer Thickness as Function of trunk diameters
-====================================================
-
-Flow Distribution constraint: ratio of pressure recovery to clean bed head loss
-================================================================================
-
-Number of filters
-===================
-
-Clean bed head loss
-====================
-
-Auxilliary box widths and plumbing
-===================================
-
-Number of manifold branches
-==============================
-
-Filter box dimensions and manifold inlet pipes
-===============================================
-
-Manifold slot/orifice design
-===============================
-
-Plumbing head losses
-======================
-
-Total Sand depth and backwash head loss
-========================================
-
-Path head loss calculations and flow distribution between layers
-=================================================================
-
-Siphon design
-===============
-
-Inlet channel and elevations
-=============================
-
-Elevations
-===========
-
-Inlet Weir Design
-==================
-
-Entrance and overflow box lengths (X-direction)
-===============================================
-
-Siphon Valve sizes
-===================
-
-Sand Removal Pipe
-==================
-
-Trunk Line purge valves
-=========================
-
-Main plant drain channel
-=========================
-
-Sand Volume
-=============
-
-Backwash Lagoon
-=================

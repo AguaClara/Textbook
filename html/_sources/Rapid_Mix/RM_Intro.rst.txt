@@ -91,14 +91,13 @@ The release of these protons reduces the acid neutralizing capacity, ANC, (also 
 
 Low ANC waters (See section on :ref:`heading_Buffering_Capacity_of_Natural_Waters`.) could have their ANC increased by addition of a base. A simpler approach is often to use a different coagulant that is less acidic.
 
-Polyaluminum chloride (PACl) is another aluminum based coagulant that performs similarly to alum. PACl is manufactured by slowly titrating an acidic solution containing dissolved aluminum with a base (in the chemical plant) to produce a meta-stable and soluble polymeric aluminum. The PACl consumes less alkalinity (ANC) because it is partially neutralized by the titration with a base. In addition, the aluminum mass fraction of PACl is higher than in alum because there are no attached water molecules. The mass of PACl required for flocculation is less than for alum due largely to the higher aluminum fraction. The lower mass of PACl required is an economic benefit when shipping is a significant cost of the coagulant.
+Polyaluminum chloride (PACl) is another aluminum based coagulant that performs similarly to alum. PACl is manufactured by slowly titrating an acidic solution containing dissolved aluminum with a base (in the chemical plant) to produce a meta-stable and soluble polymeric aluminum. PACl consumes less alkalinity (ANC) because it is partially neutralized by the titration with a base. In addition, the aluminum mass fraction of PACl is higher than in alum because there are no attached water molecules. The mass of PACl required for flocculation is less than for alum due largely to the higher aluminum fraction. The lower mass of PACl required is an economic benefit when shipping is a significant cost of the coagulant.
 
-The PACl molecular formula is:
+There are many different molecular formulas given for PACl. The molecular formulas are either from the perspective of the chemical supplier or represent the composition of the PACl nanoparticles. The molecular formula from the chemical supplier represents the extent of neutralization and hence the replacement of chloride with hydroxide. In that case the PACl molecular formula is:
 
 .. math:: [Al_n(OH)_mCl_{3n-m}]_x
 
-The extent of the PACl titration with base is defined as basicity. Basicity is the ratio of hydroxyl equivalents to aluminum equivalents. Basicity of 1 would mean that the PACl does not produce any protons when it dissolves in water. Basicity of
-0 means it produces 3 protons per Al (like alum). The equation for basicity is:
+The extent of the PACl titration with base is defined as basicity. Basicity is the ratio of hydroxyl equivalents to aluminum equivalents. Basicity of 1 would mean that the PACl does not produce any protons when it dissolves in water. Basicity of 0 means it produces 3 protons per Al (like alum). The equation for basicity is:
 
 .. math:: Basicity = \left( \frac{m}{3n}\right)
 
@@ -116,6 +115,11 @@ Thus the ANC of alum (with 0 hydroxides) is :math:`-3[Al]`. The method of calcul
 
 .. todo:: Add link to the pH_adjust function that is currently in the RM_Exmaples.rst sheet.
 
+The molecular formula of the PACl nanoparticles is always some combination of Al, O, and H. One common molecular structure is a Keggin structure with 13 aluminum atoms. This molecule has a tetrahedral Al atom in the center of the cluster coordinated to 4 oxygen atoms. The molecular formula of the Keggin structured aluminum molecule is
+
+.. math:: AlO_4Al_{12}(OH)_{24}(H_2O)_{12}^{7+}
+
+The attached water molecules are sometimes omitted. Coagulant nanoparticles are presumably created by aggregation of these Keggin structure molecules.
 
 .. _heading_Buffering_Capacity_of_Natural_Waters:
 
