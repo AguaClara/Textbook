@@ -300,8 +300,8 @@ Flows with high Reynolds numbers are turbulent (inertia dominated) and with low 
 
 where :math:`\eta_K` is the Kolmogorov length scale. At the Kolmogorov length scale viscosity completely dampens the inertia of the eddies and effectively “kills” the turbulence.
 
-The length scale at which most of the kinetic energy contained in the small eddies is dissipated by viscosity is the inner viscous length scale, :math:`\lambda_v`, which is about `50 times larger than <http://dimotakis.caltech.edu/pdf/Dimotakis_JFM2000.pdf>`__ the
-Kolmogorov length scale. Thus we have
+The length scale at which most of the kinetic energy contained in the small eddies is dissipated by viscosity is the inner viscous length scale, :math:`\lambda_v`, which according to Dimotakis (2000) is about `50 times larger than <https://doi.org/10.1017/S0022112099007946>`_
+Thus we have
 
 .. math::
    :label: eq_inner_viscous_length
