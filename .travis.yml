@@ -9,12 +9,12 @@ addons:
     packages:
     - libcurl4-openssl-dev # required to avoid SSL errors
 install:
-  - pip install -r requirements-dev.txt
+  - pip install pipenv
+  - pipenv install --dev
   - gem install html-proofer
 script:
-  - make html
-  - make doctest
-  - make latex
+  - pipenv run make html
+  - pipenv run make doctest
   - htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/Textbook/test/html/index.html
 before_deploy:
   - if [ -n "$TRAVIS_TAG" ]; then ./build_pdf.sh; fi; # If this is tagged, build the latex and the pdf to be released.
