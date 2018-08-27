@@ -394,7 +394,7 @@ The AguaClara treatment train consists of the following processes
  Comparison with Croton Water Treatment Plant
  ---------------------------------------------
 
- As AguaClara technologies extend to larger and larger cities one of the criticisms could be that the technologies are somehow limited to small scale facilities. To address this question we will compare AguaClara unit processes with one of the most recent large scale water treatment plants, the `Croton Water Treatment Plant <_static/references/Croton-WFP.pdf>`_ (CWTP) in NYC.
+ As AguaClara technologies extend to larger and larger cities one of the criticisms could be that the technologies are somehow limited to small scale facilities. To address this question we will compare AguaClara unit processes with one of the most recent large scale water treatment plants, the `Croton Water Treatment Plant <../_static/references/Croton-WFP.pdf>`_ (CWTP) in NYC.
 
  The CWTP is designed to treat `290 mgd <https://www.hazenandsawyer.com/work/projects/croton-wtp/>`_ (million gallons per day) which is equivalent to 12,700 L/s. The final cost of the project was $3.2bn. The cost per L/s of treatment capacity was thus $250,000. This is approximately 25 times more expensive than AguaClara water treatments. Of course, AguaClara water treatment plants haven't been constructed underground in the middle of a major city! Nonetheless, the factor of 25 suggests that AguaClara technologies have a significant cost advantage.
 
