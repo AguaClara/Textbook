@@ -5,7 +5,7 @@ Rapid Mix Theory and Future Work
 ********************************
 
 
-Our understanding of rapid mix is currently quite speculative. This is an area that requires substantial research. We have anecdotal evidence that the process of transporting coagulant nanoparticles to suspended particle surfaces may be a slow, rate-limiting process, especially when coupled with high rate flocculators. Dissolved organic matter may influence the rate of coagulant nanoparticle transport by effectively increasing the size of the coagulant nanoparticles and thus reducing the diffusion rate.
+Our understanding of the coagulant nanoparticle attachment to suspended particles and dissolved species is currently quite speculative. This is an area that requires substantial research and modeling because has the potential to significantly influence the design of flocculators. We have anecdotal evidence that the process of transporting coagulant nanoparticles to suspended particle surfaces may be a slow, rate-limiting process, especially when coupled with high rate flocculators. Dissolved organic matter may slow the rate of coagulant nanoparticle transport by effectively increasing the size of the coagulant nanoparticles and thus reducing the diffusion rate.
 
 Developing a fundamental understanding of the mixing and transport processes that occur between coagulant addition and flocculation is a very high priority for the AguaClara program.
 
@@ -15,6 +15,7 @@ Diffusion and Shear Transport Coagulant Nanoparticles to Clay
 ================================================================
 
 The time required for shear and diffusion to transport coagulant nanoparticles to clay has previously been assumed to be a rapid process.
+
 .. todo:: Find references for time required for coagulant attachment to suspended particles.
 
 Our analysis suggests that this critical step may require significant time especially given our effort to reduce the time allotted for flocculation.
