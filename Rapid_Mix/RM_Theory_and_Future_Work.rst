@@ -48,17 +48,25 @@ The time required for shear to transport all of the fluid past the clay so that 
 
 .. math:: D_{Diffusion} = \frac{k_B T}{3 \pi \mu d_{CN}}
 
-where :math:`d_{cn}` is the diameter of the coagulant nanoparticles.
+where :math:`d_{cn}` is the diameter of the coagulant nanoparticles. The length scale over which diffusion is occurring can be estimate from the diffusion coefficient and the time allotted.
 
-.. math:: L_{Diff} \approx \sqrt{D_{Diffusion} t_{Diffusion}}
+.. math::
+   :label: Diffusion_Length_scale
+
+   L_{Diff} \approx \sqrt{D_{Diffusion} t_{Diffusion}}
 
 The time for coagulant nanoparticles to diffuse through the boundary layer around the clay particle is equal to the distance they travel around the clay particle divided by their velocity. The distance they travel scales with :math:`d_{Clay}` and their average velocity scales with the thickness of the diffusion layer/2 \* the velocity gradient.
 
-.. math:: t_{Diffusion} = \frac{ 2d_{Clay}} {L_{Diff} G}
+.. math::
+   :label: Diffusion_Layer_time
+
+   t_{Diffusion} = \frac{ 2d_{Clay}} {L_{Diff} G}
+
+We can eliminate the diffusion time in equation :eq:`Diffusion_Length_scale` using equation :eq:`Diffusion_Layer_time`.
 
 .. math:: L_{Diff} \approx \left( \frac{2k_B T d_{Clay}}{3 \pi \,\mu  \, d_{CN} G}\right)^\frac{1}{3}
 
-Let’s estimate the thickness of the diffusion band
+This diffusion layer thickness is the length scale over which diffusion becomes the dominant transport mechanism for coagulant nanoparticles. Let’s estimate the thickness of this diffusion layer.
 
 .. code:: python
 
@@ -94,7 +102,9 @@ Let’s estimate the thickness of the diffusion band
 
     Molecular diffusion band thickness as a function of velocity gradient. This length scale marks the transition between transport by fluid deformation and by diffusion.
 
-The volume cleared is proportional to the area of this ring with the ring thickness equal to the molecular diffusion band thickness. Here we assume that the :math:`L_{Diff_{CN}} << d_{Clay}`
+Diffusion transports the coagulant nanoparticles a relatively short distance, a fraction of a :math:`\mu m`.
+
+We need to calculate the rate at which coagulant nanoparticles attach to the clay particles. The long range transport is assumed to be the rate limiting step. The volume cleared is proportional to the area of this ring with the ring thickness equal to the molecular diffusion band thickness. Here we assume that the :math:`L_{Diff_{CN}} << d_{Clay}`
 
 .. math:: {\rlap{\kern.08em--}V_{\rm{Cleared}}} \propto \pi \, d_{Clay} \, L_{Diff_{CN}}
 
@@ -106,15 +116,21 @@ The volume cleared is proportional to the relative velocity between clay and nan
 
 .. math:: {\rlap{\kern.08em--}V_{\rm{Cleared}}} \propto v_r
 
-We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between coagulant nanoparticles and clay particle that they will eventually collide with is assumed to be proportional to the average distance between clay particles. This assumption is both critical for the following derivation and is suspect. It is critical because if we were to assume that the velocity is proportional to the nanoparticle diameter, the clay diameter, or the diffusion length scale, then the velocity would be extremely small and the time to clear the volume of fluid associated with one clay particle would take a very long time. However, wishing for a speedy process doesn't justify incorrect scaling. This velocity is assumed to be the velocity at which coagulant nanoparticles are transported into the two separate fluid volumes that will deform into the ring around the clay particle in the next few seconds.
+We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between coagulant nanoparticles and clay particle that they will eventually collide with is assumed to be proportional to the average distance between clay particles. This assumption is both critical for the following derivation and is suspect. It is critical because if we were to assume that the relative velocity caused by shear is proportional to the nanoparticle diameter, the clay diameter, or the diffusion length scale, then the velocity would be extremely small and the time to clear the volume of fluid associated with one clay particle would take a very long time. However, wishing for a speedy process doesn't justify incorrect scaling. The relative velocity is assumed to be the velocity at which coagulant nanoparticles are transported into the two separate fluid volumes that will deform into the ring around the clay particle in the next few seconds.
+
+The assumption that the relative velocity scales with the average distance between clay particles leads to the following steps. The first step is just a proposed functional relationship. We could also have jumped to the assumption that the relative velocity is a function of the length scale and the velocity gradient.
 
 .. math:: v_r = f \left( \varepsilon ,\nu ,\Lambda_{Clay} \right)
 
+In a uniform shear environment the velocity gradient is linear. Thus the relative velocity must be proportional to the length scale.
+
 .. math:: v_r = \Lambda_{Clay} f \left( \varepsilon ,\nu \right)
+
+The only way to for :math:`\varepsilon` and :math:`\nu` to produce dimensions of time is to combine to create 1/G.
 
 .. math:: v_r \approx \Lambda_{Clay} G
 
-Combining the three equations for :math:`{\rlap{\kern.08em--}V_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared during which all of the nanoparticles have had an opportunity to collide with a clay particle
+Combining the three equations for :math:`{\rlap{\kern.08em--}V_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared as a function of time.
 
 .. math::  {\rlap{\kern.08em--}V_{\rm{Cleared}}} \approx \pi  d_{Clay} \, L_{Diff_{CN}}  \Lambda_{Clay} G  t_c
 
