@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Filtration Design &mdash; AguaClara Textbook 0.0.20 documentation</title>
+  <title>Filtration Design &mdash; AguaClara Textbook 0.0.21 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.20
+                0.0.21
               </div>
             
           
@@ -144,9 +144,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#headloss-requirements">Headloss Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#backwash">Backwash</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#siphon">Siphon</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="#desgin-from-mathcad-adapted-for-me">Desgin from MathCad adapted for me</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#design-from-mathcad-adapted-for-me">Design from MathCad adapted for me</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sand-layer-thickness-as-function-of-trunk-diameters">Sand Layer Thickness as Function of trunk diameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#flow-distribution-constraint-ratio-of-pressure-recovery-to-clean-bed-head-loss">Flow Distribution constraint: ratio of pressure recovery to clean bed head loss</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#number-of-filters">Number of filters</a></li>
@@ -181,6 +179,10 @@
 <p class="caption"><span class="caption-text">Chapter 10: Fluoride</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Wastewater</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
 <ul>
@@ -377,7 +379,7 @@
 <p>As changing the material characteristics of the sand is challenging, a more compact filter is the chosen design. As it happens this innovation results in a more conceptually difficult filter. In the design, six layers of sand are stacked, there are four inlets, and three outlets which are all in use during filtration. During backwash only one inlet is used and the backwash water is discarded through a separate manifold. Throughout this section, figures and images will be the best methods to understand the design flow through the system, and will be supplemented by the text.</p>
 <p>This overall design can be seen in Figure XXXXX.</p>
 <p>(figure of the full system)</p>
-<p>Tasks for clare for Thursday + Friday morning: insert images! none of them are in yet. Save as pngs. streamline the way you want this to work as well. like overall structure</p>
+<p>Tasks for Clare for Thursday + Friday morning: insert images! none of them are in yet. Save as pngs. streamline the way you want this to work as well. like overall structure</p>
 <p>In is most basic schema, the filter is a series of pipes leading into a deep box with 1.2 meters of sand (for most filters)</p>
 <p>As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter. These structures have slots which allow water out of the inlet pipes into the sand bed. Across a layer of sand from the inlet is an outlet pipe in the same shapes as the slotted pipe inlets. Water passes into the pipes and up to the filter outlet box where it only needs to be chlorinated before being distributed.</p>
 <p>Steps of designing a filter.
@@ -391,7 +393,7 @@
 <div class="section" id="siphon">
 <span id="id1"></span><h2>Siphon<a class="headerlink" href="#siphon" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt>Backwash is initiated through the activation of a siphons system. In the sipohoning process two things must happen for a success.</dt>
+<dt>Backwash is initiated through the activation of a siphons system. In the siphoning process two things must happen for a success.</dt>
 <dd><ol class="first arabic simple">
 <li>Backwash can be initiated at any point in time</li>
 <li>Backwash can be prevented with the siphon as well</li>
@@ -400,10 +402,9 @@
 </dd>
 </dl>
 </div>
-</div>
 <hr class="docutils" />
-<div class="section" id="desgin-from-mathcad-adapted-for-me">
-<h1>Desgin from MathCad adapted for me<a class="headerlink" href="#desgin-from-mathcad-adapted-for-me" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="design-from-mathcad-adapted-for-me">
+<h2>Design from MathCad adapted for me<a class="headerlink" href="#design-from-mathcad-adapted-for-me" title="Permalink to this headline">¶</a></h2>
 <p>Overall Goals:
 - Uniformity in the sand bed through appropriate headloss</p>
 <div class="admonition note">
@@ -413,7 +414,7 @@
 <p>Constraints:</p>
 <p>Filtration Constraints
 - inlet manifolds need to have small piezometric head relative to clean sand bed
-- trunk and branches are short manifolds (fL/d) (<strong>friction factor, L, diam?</strong>), therefore: piezometric head variablitty dominated by pressure recovery as given by <span class="math notranslate nohighlight">\(\frac{V^2}{2g}\)</span> with the velocity as the initial velocity of the manifold
+- trunk and branches are short manifolds (fL/d) (<strong>friction factor, L, diam?</strong>), therefore: piezometric head variability dominated by pressure recovery as given by <span class="math notranslate nohighlight">\(\frac{V^2}{2g}\)</span> with the velocity as the initial velocity of the manifold
 – this is the limiting constraint for the velocity in the trunk and branches, which can be relaxed with added headloss in the slots
 - limit the imbalance between inlets that carry water for two layers and inlets that carry water for one layer.
 – <em>perhaps top/bottom inlet should have half the number of slots</em>
@@ -434,6 +435,7 @@
 <blockquote>
 <div>Additional concerns:
 - there are two manifold systems, the trunks into the branches and the branches into the slots. Thus pressure recovery must be small in both trunk and branches so that the slots can reconcile the changes in flow, because flow distribution is fairly uniform in short manifold systems when total port area is equal to or less than manifold area.</div></blockquote>
+</div>
 <div class="section" id="sand-layer-thickness-as-function-of-trunk-diameters">
 <h2>Sand Layer Thickness as Function of trunk diameters<a class="headerlink" href="#sand-layer-thickness-as-function-of-trunk-diameters" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -544,7 +546,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.20',
+            VERSION:'0.0.21',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

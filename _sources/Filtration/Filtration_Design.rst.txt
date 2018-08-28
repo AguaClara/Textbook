@@ -226,7 +226,7 @@ This overall design can be seen in Figure XXXXX.
 
 (figure of the full system)
 
-Tasks for clare for Thursday + Friday morning: insert images! none of them are in yet. Save as pngs. streamline the way you want this to work as well. like overall structure
+Tasks for Clare for Thursday + Friday morning: insert images! none of them are in yet. Save as pngs. streamline the way you want this to work as well. like overall structure
 
 In is most basic schema, the filter is a series of pipes leading into a deep box with 1.2 meters of sand (for most filters)
 
@@ -265,7 +265,7 @@ Steps of designing a filter.
 Siphon
 ========
 
-Backwash is initiated through the activation of a siphons system. In the sipohoning process two things must happen for a success.
+Backwash is initiated through the activation of a siphons system. In the siphoning process two things must happen for a success.
   1. Backwash can be initiated at any point in time
   2. Backwash can be prevented with the siphon as well
 
@@ -276,9 +276,9 @@ Backwash is initiated through the activation of a siphons system. In the sipohon
 
 ------------------------------------
 
-***********************************
-Desgin from MathCad adapted for me
-***********************************
+
+Design from MathCad adapted for me
+==================================
 
 Overall Goals:
 - Uniformity in the sand bed through appropriate headloss
@@ -291,7 +291,7 @@ Constraints:
 
 Filtration Constraints
 - inlet manifolds need to have small piezometric head relative to clean sand bed
-- trunk and branches are short manifolds (fL/d) (**friction factor, L, diam?**), therefore: piezometric head variablitty dominated by pressure recovery as given by :math:`\frac{V^2}{2g}` with the velocity as the initial velocity of the manifold
+- trunk and branches are short manifolds (fL/d) (**friction factor, L, diam?**), therefore: piezometric head variability dominated by pressure recovery as given by :math:`\frac{V^2}{2g}` with the velocity as the initial velocity of the manifold
 -- this is the limiting constraint for the velocity in the trunk and branches, which can be relaxed with added headloss in the slots
 - limit the imbalance between inlets that carry water for two layers and inlets that carry water for one layer.
 -- *perhaps top/bottom inlet should have half the number of slots*
