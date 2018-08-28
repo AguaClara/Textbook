@@ -132,7 +132,7 @@ The relative distribution of the flow through a particular path is defined as:
 | Such that:
 | :math:`\Pi_Q =` the ratio of flow
 | :math:`Q_{long} =` the flow through the longest filter path (lowest layer, at the furthest slot on the furthest branch)
-| :math:`\Q_{Long} =` the flow through the shortest filter path (top layer, closest slot on the first branch)
+| :math:`Q_{Long} =` the flow through the shortest filter path (top layer, closest slot on the first branch)
 | :math:`C_{p_{short}} =` pressure coefficient at the end of the shortest path
 | :math:`C_{p_{long}} =` pressure coefficient at the end of the longest path
 
