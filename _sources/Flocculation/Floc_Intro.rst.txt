@@ -1,7 +1,7 @@
 .. _title_Flocculation_Introduction:
 
 **************************
-Flocculation  Introduction
+Flocculation Introduction
 **************************
 
 
