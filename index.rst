@@ -110,7 +110,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :caption: Chapter 11: Wastewater
   :maxdepth: 1
 
-  WW_Theory_and_Future_Work.rst
+  WasteWater/WW_Theory_and_Future_Work.rst
 
 .. toctree::
   :caption: Chapter 12: Troubleshooting
