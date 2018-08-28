@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction to AguaClara Water Treatment Design &mdash; AguaClara Textbook 0.0.16 documentation</title>
+  <title>Introduction to AguaClara Water Treatment Design &mdash; AguaClara Textbook 0.0.18 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.16
+                0.0.18
               </div>
             
           
@@ -170,6 +170,7 @@
 <p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html#desgin-from-mathcad-adapted-for-me">Desgin from MathCad adapted for me</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
@@ -560,7 +561,7 @@
 Which process removes the largest quantity of contaminants?</p>
 <p>Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:</p>
 <div class="math notranslate nohighlight" id="equation-eq-laminar-terminal-velocity">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq-laminar-terminal-velocity" title="Permalink to this equation">¶</a></span>\[ \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\]</div>
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-laminar-terminal-velocity" title="Permalink to this equation">¶</a></span>\[\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\bar v_t\)</span> = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water</div>
@@ -591,7 +592,7 @@ Which process removes the largest quantity of contaminants?</p>
 <p>The low terminal velocities of particles that we need to remove from surface waters reveals that sedimentation alone will not work. The time required for a small particle to settle even a few mm would require excessively large sedimentation tanks. This is why flocculation, the process of sticking particles together so that they can attain higher sedimentation velocities, is perhaps the most important unit process in surface water treatment plants.</p>
 <dl class="docutils">
 <dt>The AguaClara treatment train consists of the following processes</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first simple">
 <li>flow measurement</li>
 <li>metering of the coagulant (and chlorine) that will cause particles to stick together</li>
 <li>mixing of the coagulant with the raw water</li>
@@ -601,6 +602,23 @@ Which process removes the largest quantity of contaminants?</p>
 <li>stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed</li>
 <li>disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes</li>
 </ul>
+<p>As AguaClara technologies extend to larger and larger cities one of the criticisms could be that the technologies are somehow limited to small scale facilities. To address this question we will compare AguaClara unit processes with one of the most recent large scale water treatment plants, the <a class="reference external" href="../_static/references/Croton-WFP.pdf">Croton Water Treatment Plant</a> (CWTP) in NYC.</p>
+<p>The CWTP is designed to treat <a class="reference external" href="https://www.hazenandsawyer.com/work/projects/croton-wtp/">290 mgd</a> (million gallons per day) which is equivalent to 12,700 L/s. The final cost of the project was $3.2bn. The cost per L/s of treatment capacity was thus $250,000. This is approximately 25 times more expensive than AguaClara water treatments. Of course, AguaClara water treatment plants haven’t been constructed underground in the middle of a major city! Nonetheless, the factor of 25 suggests that AguaClara technologies have a significant cost advantage.</p>
+<p>The CWTP has 48 flocculators and 48 dissolved air flotation processes working in parallel. The flow per unit is thus 265 L/s. The current maximum size of the AguaClara Open Stacked Rapid Sand (OStaR) ilter is 20 L/s. It would be possible to design larger OStaR filters by simply including multiple sets of inlet/outlet trunk lines into a single filter box. The CWTP filters appear to have 6 outlet trunk lines per filter and thus the flow per trunk line is 44 L/s.</p>
+<p>The CWTP uses 2 stage mechanical flocculators with a total residence time of 4.8 minutes and a velocity gradient of 100 Hz. This residence time is much shorter than conventional design requirements, about half of the residence time used by the AguaClara plants built around 2017, significantly larger than the 90 second residence time used in the AguaClara 1 L/s plants.</p>
+<p>CWTP uses dissolved air flotation tanks that are located on top of the rapid sand filters. The d</p>
+<p>The filter approach velocity (the velocity of water before it enters the sand bed) for CWTP is 4.42 mm/s. This is significantly higher than the 1.85 mm/s filtration velocity currently used in StaRS filters. StaRS filters are a stack of 6 filters and the net filtration velocity is 11 mm/s. Thus by that metric the StaRS filters are significantly smaller than the CWTP filters.</p>
+<div class="code python last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="n">Q_Croton</span> <span class="o">=</span><span class="p">(</span><span class="mi">290</span> <span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">Mgal</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">day</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Cost_Croton</span> <span class="o">=</span> <span class="mf">3.2</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">USD</span>
+<span class="n">Cost_per_Lps</span> <span class="o">=</span> <span class="n">Cost_Croton</span><span class="o">/</span><span class="n">Q_Croton</span>
+<span class="n">Cost_per_Lps</span>
+<span class="n">N_DAF</span> <span class="o">=</span> <span class="mi">48</span>
+<span class="n">Q_per_unit</span> <span class="o">=</span> <span class="n">Q_Croton</span><span class="o">/</span><span class="n">N_DAF</span>
+<span class="n">Q_per_unit</span><span class="o">/</span><span class="mi">6</span>
+<span class="p">(</span><span class="mf">15.9</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">hr</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd>
 </dl>
 <div class="section" id="design-evolution">
@@ -653,14 +671,14 @@ Which process removes the largest quantity of contaminants?</p>
 <span id="figure-removing-plate-settlers"></span><a class="reference external image-reference" href="http://www.youtube.com/watch?v=vZ2f6mduEls"><img alt="Removing Plate Settlers from an AguaClara Sedimentation tank" src="http://img.youtube.com/vi/vZ2f6mduEls/0.jpg" style="width: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Plant operator removing plate settlers from an AguaClara sedimentation tank.</span></p>
 </div>
-<p id="heading-mechanized-or-smart-hydraulics">There is another major consequence of building water treatment plants in a secure enclosed building. Many water treatment plants will operate around the clock and that requires plant operators to spend the night at the facility. Having a secure facility provides improved safety for the plant operator. That improved safety is very important for some potential operators and thus providing that safety will increase potential diversity.</p>
+<p>There is another major consequence of building water treatment plants in a secure enclosed building. Many water treatment plants will operate around the clock and that requires plant operators to spend the night at the facility. Having a secure facility provides improved safety for the plant operator. That improved safety is very important for some potential operators and thus providing that safety will increase potential diversity.</p>
 </div>
 <div class="section" id="mechanized-or-smart-hydraulics">
-<h3>Mechanized or Smart Hydraulics<a class="headerlink" href="#mechanized-or-smart-hydraulics" title="Permalink to this headline">¶</a></h3>
+<span id="heading-mechanized-or-smart-hydraulics"></span><h3>Mechanized or Smart Hydraulics<a class="headerlink" href="#mechanized-or-smart-hydraulics" title="Permalink to this headline">¶</a></h3>
 <p>Dramatically different designs are also created when we choose gravity power and smart hydraulics rather than mechanical mixers, pumps, and mechanical controls for each of the unit processes. It appears that use of electricity in drinking water treatment plants became the popular choice about 100 years ago. Many gravity powered plants have been converted to use mechanical mixers for rapid mix and flocculation. That choice may not have been well founded from a water quality or performance perspective.</p>
 <p>Automated plants often move the controls far away from the critical observation locations in the plant. This might be appropriate or necessary in some cases, but it has the disadvantage of making it more difficult for operators to directly observe what is happening in the plant. Direct observations are critical because even highly mechanized water treatment plants are not yet equipped with enough sensors to enable rapid troubleshooting from the control room.</p>
 <p>AguaClara plants have a layout that places the coagulant dose controls within a few steps of the best places to observe floc formation in the flocculator. This provides plant operators with rapid feedback that is critical when the raw water changes rapidly at the beginning of a high runoff event. As operators spend time observing the processes in the plant they begin to associate cause and effect and can make operational changes to improve performance. For example, gas bubbles that carry flocs to the surface can indicate sludge accumulation in a sedimentation tank. Rising flocs without gas bubbles can indicate a poor inlet flow distribution for a sedimentation tank or density differences caused by temperature differences.</p>
-</div>
+<span class="target" id="heading-comparison-with-croton-water-treatment-plant"></span></div>
 </div>
 </div>
 
@@ -706,7 +724,7 @@ Which process removes the largest quantity of contaminants?</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.16',
+            VERSION:'0.0.18',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

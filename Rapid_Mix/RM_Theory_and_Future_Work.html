@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Rapid Mix Theory and Future Work &mdash; AguaClara Textbook 0.0.16 documentation</title>
+  <title>Rapid Mix Theory and Future Work &mdash; AguaClara Textbook 0.0.18 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.16
+                0.0.18
               </div>
             
           
@@ -116,14 +116,16 @@
 <li class="toctree-l1"><a class="reference internal" href="RM_Derivations.html">Rapid Mix Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid Mix Theory and Future Work</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#diffusion-and-shear-transport-coagulant-nanoparticles-to-clay">Diffusion and Shear Transport Coagulant Nanoparticles to Clay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diffusion-and-shear-transport-coagulant-nanoparticles-to-clay">Diffusion and Shear Transport Coagulant Nanoparticles to Clay</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#diffusion-band-thickness">Diffusion band thickness</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#collision-rates">Collision Rates</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#collision-rate-and-particle-removal">Collision Rate and Particle Removal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#integrate-the-coagulant-transport-model">Integrate the coagulant transport model</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#coagulant-nanoparticle-application">Coagulant nanoparticle application</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#diffusion-band-thickness">Diffusion band thickness</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#energy-tradeoff-for-coagulant-transport">Energy Tradeoff for Coagulant Transport</a></li>
 </ul>
 </li>
@@ -146,6 +148,7 @@
 <p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html#desgin-from-mathcad-adapted-for-me">Desgin from MathCad adapted for me</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
@@ -222,12 +225,11 @@
             
   <div class="section" id="rapid-mix-theory-and-future-work">
 <span id="title-rapid-mix-theory-and-future-work"></span><h1>Rapid Mix Theory and Future Work<a class="headerlink" href="#rapid-mix-theory-and-future-work" title="Permalink to this headline">¶</a></h1>
-<p>Our understanding of rapid mix is currently quite speculative. This is an area that requires substantial research. We have anecdotal evidence that the process of transporting coagulant nanoparticles to suspended particle surfaces may be a slow, rate-limiting process. Dissolved organic matter may influence the rate of coagulant nanoparticle transport by effectively increasing the size of the coagulant nanoparticles and thus reducing the diffusion rate.</p>
+<p>Our understanding of the coagulant nanoparticle attachment to suspended particles and dissolved species is currently quite speculative. This is an area that requires substantial research and modeling because has the potential to significantly influence the design of flocculators. We have anecdotal evidence that the process of transporting coagulant nanoparticles to suspended particle surfaces may be a slow, rate-limiting process, especially when coupled with high rate flocculators. Dissolved organic matter may slow the rate of coagulant nanoparticle transport by effectively increasing the size of the coagulant nanoparticles and thus reducing the diffusion rate.</p>
 <p>Developing a fundamental understanding of the mixing and transport processes that occur between coagulant addition and flocculation is a very high priority for the AguaClara program.</p>
 <div class="section" id="diffusion-and-shear-transport-coagulant-nanoparticles-to-clay">
 <span id="heading-diffusion-and-shear-transport-coagulant-nanoparticles-to-clay"></span><h2>Diffusion and Shear Transport Coagulant Nanoparticles to Clay<a class="headerlink" href="#diffusion-and-shear-transport-coagulant-nanoparticles-to-clay" title="Permalink to this headline">¶</a></h2>
-<p>The time required for shear and diffusion to transport coagulant nanoparticles to clay has previously been assumed to be a rapid process.
-.. todo:: Find references for time required for coagulant attachment to suspended particles.</p>
+<p>The time required for shear and diffusion to transport coagulant nanoparticles to clay has previously been assumed to be a rapid process.</p>
 <p>Our analysis suggests that this critical step may require significant time especially given our effort to reduce the time allotted for flocculation.</p>
 <blockquote>
 <div><ul class="simple">
@@ -236,98 +238,35 @@
 <li>The coagulant nanoparticles are transported to suspended particle surfaces by a combination of diffusion and fluid shear.</li>
 </ul>
 </div></blockquote>
-<p>The following is a very preliminary estimate of the time required for attachment of the nanoparticles to the clay particles. This analysis includes multiple simplifying assumptions and there is a reasonable possibility that some of those assumptions are wrong. However, the core assumptions that coagulant nanoparticles are transported to clay particles by a combination of fluid deformation (shear) and molecular diffusion is reasonable.</p>
-<p>The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. The core idea is that viscous shear dominated fluid deformation causes relative motion between the coagulant nanoparticles and the clay particles (or other suspended particles) with which they eventually will collide. The collision between these particles that are very different in size is difficult to achieve because there is a viscous layer of fluid around the clay particles that the clay particle drags with it as it rotates in deforming fluid. The coagulant nanoparticle that</p>
+<p>The following is a very preliminary estimate of the time required for attachment of the nanoparticles to the clay particles. This analysis includes multiple simplifying assumptions and there is a reasonable possibility that some of those assumptions are wrong. However, the core assumption that coagulant nanoparticles are transported to clay particles by a combination of fluid deformation (shear) and molecular diffusion is reasonable.</p>
+<p>The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. The core idea is that viscous shear dominated fluid deformation causes relative motion between the coagulant nanoparticles and the clay particles (or other suspended particles) with which they eventually will collide. The collision between these particles that are very different in size is difficult to achieve because there is a viscous layer of fluid around the clay particles that the clay particle drags with it as it rotates in deforming fluid. Diffusion helps transport the coagulant nanoparticles through this viscous layer.</p>
 <p>The volume of the suspension that is cleared of nanoparticles is proportional to a collision area defined by a ring around the clay particle with width of the diameter of the nanoparticle diffusion band. This diffusion band is the length scale over which diffusion is able to transport coagulant particles to the clay surface during the time that the nanoparticles are sliding past the clay particle.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-0">
-<span class="eqno">(275)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-0" title="Permalink to this equation">¶</a></span>\[\propto \pi \, d_{Clay} \, L_{Diff_{NC}}\]</div>
-<p>The volume cleared is proportional to time</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-1">
-<span class="eqno">(276)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-1" title="Permalink to this equation">¶</a></span>\[\propto t\]</div>
-<p>The volume cleared is proportional to the relative velocity between clay and nanoparticles. This scaling</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-2">
-<span class="eqno">(277)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[\propto v_r\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-3">
-<span class="eqno">(278)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[\bar v_{\rm{Cleared}} = \pi  d_{Clay} \, L_{Diff_{NC}}  v_r  t\]</div>
-<p>Use dimensional analysis to get a relative velocity for the long range transport controlled by shear.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-4">
-<span class="eqno">(279)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[v_r = f \left( \varepsilon ,\nu ,\Lambda_{Clay} \right)\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-5">
-<span class="eqno">(280)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-5" title="Permalink to this equation">¶</a></span>\[v_r = \Lambda_{Clay} f \left( \varepsilon ,\nu \right)\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-6">
-<span class="eqno">(281)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-6" title="Permalink to this equation">¶</a></span>\[v_r \approx \Lambda_{Clay} G\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-7">
-<span class="eqno">(282)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-7" title="Permalink to this equation">¶</a></span>\[\Lambda_{Clay} = [L]
-\, \, \, \, \, \, \,
-\varepsilon = \frac{[L]^2}{[T]^3}
-\, \, \, \, \, \, \,
-\nu = \frac{[L]^2}{[T]}\]</div>
-</div>
-<div class="section" id="collision-rates">
-<span id="heading-collision-rates"></span><h2>Collision Rates<a class="headerlink" href="#collision-rates" title="Permalink to this headline">¶</a></h2>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-8">
-<span class="eqno">(283)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[{\rlap{\kern.08em--}V_{\rm{Cleared}}} \approx \pi d_{Clay} L_{Diff_{NC}} v_r t_c\]</div>
-<p>Where <span class="math notranslate nohighlight">\(\rlap{\kern.08em--}V_{Occupied} = \Lambda_{Clay}^3\)</span>. Solve for <span class="math notranslate nohighlight">\(t_c\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-9">
-<span class="eqno">(284)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-9" title="Permalink to this equation">¶</a></span>\[t_c = \frac{\Lambda_{NC}^3}{\pi d_{Clay} L_{Diff_{NC}} v_r}\]</div>
-<p>This is the average time for a clay particle to have the entire volume of water that it occupies sweep past the clay particle.
-<span class="math notranslate nohighlight">\(v_r \approx \Lambda_{Clay} G\)</span></p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-10">
-<span class="eqno">(285)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-10" title="Permalink to this equation">¶</a></span>\[t_c = \frac{\Lambda_{Clay}^3}{\pi d_{Clay} L_{Diff_{NC}} \Lambda_{Clay} G}\]</div>
-<p>Where <span class="math notranslate nohighlight">\(t_c = \frac{dN_c}{dt}\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-11">
-<span class="eqno">(286)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-11" title="Permalink to this equation">¶</a></span>\[dN_c = \pi d_{Clay} L_{Diff_{NC}}{\Lambda^{-2}_{Clay}} G dt\]</div>
-<div class="section" id="collision-rate-and-particle-removal">
-<span id="heading-collision-rate-and-particle-removal"></span><h3>Collision Rate and Particle Removal<a class="headerlink" href="#collision-rate-and-particle-removal" title="Permalink to this headline">¶</a></h3>
-<p>A fraction of the remaining coagulant nanoparticles are removed during the time required for one sweep past the clay particle.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-12">
-<span class="eqno">(287)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-12" title="Permalink to this equation">¶</a></span>\[\frac{dn_{NC}}{ - k \, n_{NC}} = dN_c\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-13">
-<span class="eqno">(288)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-13" title="Permalink to this equation">¶</a></span>\[\frac{dn_{NC}}{ - k \, n_{NC}} = \pi d_{Clay} L_{Diff_{NC}}{\Lambda^{-2}_{Clay}} G dt\]</div>
-</div>
-<div class="section" id="integrate-the-coagulant-transport-model">
-<span id="heading-integrate-the-coagulant-transport-model"></span><h3>Integrate the coagulant transport model<a class="headerlink" href="#integrate-the-coagulant-transport-model" title="Permalink to this headline">¶</a></h3>
-<p>Integrate from the initial coagulant nanoparticle concentration to the concentration at time t.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-14">
-<span class="eqno">(289)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-14" title="Permalink to this equation">¶</a></span>\[\int \limits_{n_{NC_0}}^{n_{NC}} n_{NC}^{- 1} \, dn_{NC}  =  - \pi d_{Clay} L_{Diff_{NC}} \Lambda^{-2}_{Clay} G \, k  \int \limits_0^t {dt}\]</div>
-<p>Use pC notation to be consistent with how we describe removal efficiency of other contaminants.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-15">
-<span class="eqno">(290)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-15" title="Permalink to this equation">¶</a></span>\[2.3 p C_{NC} = \pi d_{Clay}\,  L_{Diff_{NC}}\,  \Lambda^{-2}_{Clay}\,  G k  t\]</div>
-<p>Solve for the time required to reach a target efficiency of application of coagulant nanoparticles to clay.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-16">
-<span class="eqno">(291)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-16" title="Permalink to this equation">¶</a></span>\[t_{coagulant, \, application} = \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\,  L_{Diff_{NC}} }\]</div>
-<div class="section" id="coagulant-nanoparticle-application">
-<h4>Coagulant nanoparticle application<a class="headerlink" href="#coagulant-nanoparticle-application" title="Permalink to this headline">¶</a></h4>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-17">
-<span class="eqno">(292)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-17" title="Permalink to this equation">¶</a></span>\[\Delta h =   \frac{G^2 \nu \theta}{g}\]</div>
-<p>Replace <span class="math notranslate nohighlight">\(\theta\)</span> with t.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-18">
-<span class="eqno">(293)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-18" title="Permalink to this equation">¶</a></span>\[\Delta h =  \frac{G^2 \nu}{g} \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\,  L_{Diff_{NC}} }\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-19">
-<span class="eqno">(294)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-19" title="Permalink to this equation">¶</a></span>\[L_{Diff} \approx \left( \frac{2k_B T d_{Clay}}{3 \pi \,\mu  \, d_{NC} G}\right)^\frac{1}{3}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-20">
-<span class="eqno">(295)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-20" title="Permalink to this equation">¶</a></span>\[\Delta h =  \frac{G^2 \nu}{g} \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}} \left( \frac{3 \pi \,\mu  \, d_{NC} G}{2k_B T d_{Clay}}\right)^\frac{1}{3}\]</div>
-<p>Solve for the velocity gradient.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-21">
-<span class="eqno">(296)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-21" title="Permalink to this equation">¶</a></span>\[\Delta h =  \frac{G^\frac{4}{3} \nu}{g} \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi k \, d_{Clay}} \left( \frac{3 \pi \,\mu  \, d_{NC} }{2k_B T d_{Clay}}\right)^\frac{1}{3}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-22">
-<span class="eqno">(297)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-22" title="Permalink to this equation">¶</a></span>\[G_{coagulant, \, application} =  d_{Clay}\left(\frac{\pi k \,g\Delta h }{2.3p C_{NC} \, \Lambda_{Clay}^2 \nu} \right)^\frac{3}{4} \left( \frac{2k_B T }{3 \pi \,\mu  \, d_{NC} }\right)^\frac{1}{4}\]</div>
-</div>
+<p>If we go backwards in time, the ring of fluid around the clay particle would deform into two separate highly distorted volumes of fluid, one located to the left of the clay particle and one to the right (see figure <a class="reference internal" href="#figure-coagulant-nanoparticle-clay-collisions"><span class="std std-numref">Fig. 67</span></a>). This volume of fluid is assumed to receive nanoparticles that are transported in by fluid deformation.</p>
+<div class="figure align-center" id="id1">
+<span id="figure-coagulant-nanoparticle-clay-collisions"></span><a class="reference internal image-reference" href="../_images/Coagulant_nanoparticle_clay_collisions.png"><img alt="Coagulant nanoparticle clay collisions" src="../_images/Coagulant_nanoparticle_clay_collisions.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 67 </span><span class="caption-text">Fluid deformation moves coagulant nanoparticles close to clay particles and diffusion helps transport the nanoparticles the last nanometers toward a successful collision.</span></p>
 </div>
 <div class="section" id="diffusion-band-thickness">
 <h3>Diffusion band thickness<a class="headerlink" href="#diffusion-band-thickness" title="Permalink to this headline">¶</a></h3>
-<p>The time required for shear to transport all of the fluid past the clay so that diffusion can transport the coagulant nanoparticles to the clay surface is significant.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-23">
-<span class="eqno">(298)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-23" title="Permalink to this equation">¶</a></span>\[D_{Diffusion} = \frac{k_B T}{3 \pi \, \mu \, d_P}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-24">
-<span class="eqno">(299)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-24" title="Permalink to this equation">¶</a></span>\[L_{Diff} \approx \sqrt{D_{Diffusion} t_{Diffusion}}\]</div>
-<p>The time for nanoparticles to diffuse through the boundary layer around the clay particle is equal to the distance they travel around the clay particle divided by their velocity. The distance they travel scales with <span class="math notranslate nohighlight">\(d_{Clay}\)</span> and their average velocity scales with the thickness of the diffusion layer/2 * the velocity gradient.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-25">
-<span class="eqno">(300)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-25" title="Permalink to this equation">¶</a></span>\[t_{Diffusion} = \frac{ 2d_{Clay}} {L_{Diff} G}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-26">
-<span class="eqno">(301)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-26" title="Permalink to this equation">¶</a></span>\[L_{Diff} \approx \left( \frac{2k_B T d_{Clay}}{3 \pi \,\mu  \, d_{NC} G}\right)^\frac{1}{3}\]</div>
-<p>Let’s estimate the thickness of the diffusion band</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">T_graph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
+<p>The time required for shear to transport all of the fluid past the clay so that diffusion can transport the coagulant nanoparticles to the clay surface is significant. The diffusion coefficient for coagulant nanoparticles is given by</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-0">
+<span class="eqno">(276)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-0" title="Permalink to this equation">¶</a></span>\[D_{Diffusion} = \frac{k_B T}{3 \pi \mu d_{CN}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(d_{cn}\)</span> is the diameter of the coagulant nanoparticles. The length scale over which diffusion is occurring can be estimate from the diffusion coefficient and the time allotted.</p>
+<div class="math notranslate nohighlight" id="equation-diffusion-length-scale">
+<span class="eqno">(277)<a class="headerlink" href="#equation-diffusion-length-scale" title="Permalink to this equation">¶</a></span>\[L_{Diff} \approx \sqrt{D_{Diffusion} t_{Diffusion}}\]</div>
+<p>The time for coagulant nanoparticles to diffuse through the boundary layer around the clay particle is equal to the distance they travel around the clay particle divided by their velocity. The distance they travel scales with <span class="math notranslate nohighlight">\(d_{Clay}\)</span> and their average velocity scales with the thickness of the diffusion layer/2 * the velocity gradient.</p>
+<div class="math notranslate nohighlight" id="equation-diffusion-layer-time">
+<span class="eqno">(278)<a class="headerlink" href="#equation-diffusion-layer-time" title="Permalink to this equation">¶</a></span>\[t_{Diffusion} = \frac{ 2d_{Clay}} {L_{Diff} G}\]</div>
+<p>We can eliminate the diffusion time in equation <a class="reference internal" href="#equation-diffusion-length-scale">(277)</a> using equation <a class="reference internal" href="#equation-diffusion-layer-time">(278)</a>.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-1">
+<span class="eqno">(279)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-1" title="Permalink to this equation">¶</a></span>\[L_{Diff} \approx \left( \frac{2k_B T d_{Clay}}{3 \pi \,\mu  \, d_{CN} G}\right)^\frac{1}{3}\]</div>
+<p>This diffusion layer thickness is the length scale over which diffusion becomes the dominant transport mechanism for coagulant nanoparticles. Let’s estimate the thickness of this diffusion layer.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">from</span> <span class="nn">aguaclara_research.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">import</span> <span class="nn">aguaclara_research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
+<span class="sd">&quot;&quot;&quot;I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated.&quot;&quot;&quot;</span>
+<span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;Rapid_Mix/Images/&#39;</span>
+<span class="n">T_graph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">5000</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">Hz</span>
 
 <span class="k">def</span> <span class="nf">L_Diff</span><span class="p">(</span><span class="n">Temperature</span><span class="p">,</span><span class="n">G</span><span class="p">):</span>
@@ -337,34 +276,120 @@
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">T_graph</span><span class="p">)):</span>
   <span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">L_Diff</span><span class="p">(</span><span class="n">T_graph</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">G</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">nm</span><span class="p">))</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">T_graph</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;%.f&#39;</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;%.f&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="o">*</span><span class="n">T_graph</span><span class="p">])</span>
+<span class="sd">&quot;&quot;&quot;* is used to unpack T_graph so that units are preserved when adding another legend item.&quot;&quot;&quot;</span>
+
+
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Velocity gradient (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Diffusion band thickness ($nm$)&#39;</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">imagepath</span><span class="o">+</span><span class="s1">&#39;Diffusion_band_thickness&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id1">
+<div class="figure align-center" id="id2">
 <span id="figure-diffusion-band-thickness"></span><a class="reference internal image-reference" href="../_images/Diffusion_band_thickness.png"><img alt="Diffusion band thickness" src="../_images/Diffusion_band_thickness.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 67 </span><span class="caption-text">Molecular diffusion band thickness as a function of velocity gradient. This length scale marks the transition between transport by fluid deformation and by diffusion.</span></p>
+<p class="caption"><span class="caption-number">Fig. 68 </span><span class="caption-text">Molecular diffusion band thickness as a function of velocity gradient. This length scale marks the transition between transport by fluid deformation and by diffusion.</span></p>
 </div>
+<p>Diffusion transports the coagulant nanoparticles a relatively short distance, a fraction of a <span class="math notranslate nohighlight">\(\mu m\)</span>.</p>
+<p>We need to calculate the rate at which coagulant nanoparticles attach to the clay particles. The long range transport is assumed to be the rate limiting step. The volume cleared is proportional to the area of this ring with the ring thickness equal to the molecular diffusion band thickness. Here we assume that the <span class="math notranslate nohighlight">\(L_{Diff_{CN}} &lt;&lt; d_{Clay}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-2">
+<span class="eqno">(280)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[{\rlap{\kern.08em--}V_{\rm{Cleared}}} \propto \pi \, d_{Clay} \, L_{Diff_{CN}}\]</div>
+<p>The volume cleared is proportional to time</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-3">
+<span class="eqno">(281)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[{\rlap{\kern.08em--}V_{\rm{Cleared}}} \propto t\]</div>
+<p>The volume cleared is proportional to the relative velocity between clay and nanoparticles. This relative velocity is in the viscous layer of fluid in the ring surrounding the clay particle.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-4">
+<span class="eqno">(282)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[{\rlap{\kern.08em--}V_{\rm{Cleared}}} \propto v_r\]</div>
+<p>We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between coagulant nanoparticles and clay particle that they will eventually collide with is assumed to be proportional to the average distance between clay particles. This assumption is both critical for the following derivation and is suspect. It is critical because if we were to assume that the relative velocity caused by shear is proportional to the nanoparticle diameter, the clay diameter, or the diffusion length scale, then the velocity would be extremely small and the time to clear the volume of fluid associated with one clay particle would take a very long time. However, wishing for a speedy process doesn’t justify incorrect scaling. The relative velocity is assumed to be the velocity at which coagulant nanoparticles are transported into the two separate fluid volumes that will deform into the ring around the clay particle in the next few seconds.</p>
+<p>The assumption that the relative velocity scales with the average distance between clay particles leads to the following steps. The first step is just a proposed functional relationship. We could also have jumped to the assumption that the relative velocity is a function of the length scale and the velocity gradient.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-5">
+<span class="eqno">(283)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-5" title="Permalink to this equation">¶</a></span>\[v_r = f \left( \varepsilon ,\nu ,\Lambda_{Clay} \right)\]</div>
+<p>In a uniform shear environment the velocity gradient is linear. Thus the relative velocity must be proportional to the length scale.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-6">
+<span class="eqno">(284)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-6" title="Permalink to this equation">¶</a></span>\[v_r = \Lambda_{Clay} f \left( \varepsilon ,\nu \right)\]</div>
+<p>The only way to for <span class="math notranslate nohighlight">\(\varepsilon\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> to produce dimensions of time is to combine to create 1/G.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-7">
+<span class="eqno">(285)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-7" title="Permalink to this equation">¶</a></span>\[v_r \approx \Lambda_{Clay} G\]</div>
+<p>Combining the three equations for <span class="math notranslate nohighlight">\({\rlap{\kern.08em--}V_{\rm{Cleared}}}\)</span> and the equation for <span class="math notranslate nohighlight">\(v_r\)</span> we obtain the volume cleared as a function of time.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-8">
+<span class="eqno">(286)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[{\rlap{\kern.08em--}V_{\rm{Cleared}}} \approx \pi  d_{Clay} \, L_{Diff_{CN}}  \Lambda_{Clay} G  t_c\]</div>
+</div>
+</div>
+<div class="section" id="collision-rates">
+<span id="heading-collision-rates"></span><h2>Collision Rates<a class="headerlink" href="#collision-rates" title="Permalink to this headline">¶</a></h2>
+<p>The time for all of the fluid to have had one opportunity for a collision occurs when <span class="math notranslate nohighlight">\({\rlap{\kern.08em--}V_{\rm{Cleared}}} = {\rlap{\kern.08em--}V_{\rm{Occupied}}} = \Lambda_{Clay}^3\)</span></p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-9">
+<span class="eqno">(287)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-9" title="Permalink to this equation">¶</a></span>\[t_c = \frac{\Lambda_{Clay}^3}{\pi d_{Clay} L_{Diff_{CN}} \Lambda_{Clay} G}\]</div>
+<p>The successful collision rate (the attachment rate) is given by</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-10">
+<span class="eqno">(288)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-10" title="Permalink to this equation">¶</a></span>\[\frac{dN_c}{dt} = \frac{1}{t_c}\]</div>
+<p>Substitute the equation for <span class="math notranslate nohighlight">\(t_c\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-11">
+<span class="eqno">(289)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-11" title="Permalink to this equation">¶</a></span>\[dN_c = \pi d_{Clay} L_{Diff_{CN}}{\Lambda^{-2}_{Clay}} G dt\]</div>
+<div class="section" id="collision-rate-and-particle-removal">
+<span id="heading-collision-rate-and-particle-removal"></span><h3>Collision Rate and Particle Removal<a class="headerlink" href="#collision-rate-and-particle-removal" title="Permalink to this headline">¶</a></h3>
+<p>A fraction of the remaining coagulant nanoparticles are removed during the time required for one sweep past the clay particle.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-12">
+<span class="eqno">(290)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-12" title="Permalink to this equation">¶</a></span>\[\frac{dn_{CN}}{ - k \, n_{CN}} = dN_c\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-13">
+<span class="eqno">(291)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-13" title="Permalink to this equation">¶</a></span>\[\frac{dn_{CN}}{ - k \, n_{CN}} = \pi d_{Clay} L_{Diff_{CN}}{\Lambda^{-2}_{Clay}} G dt\]</div>
+</div>
+<div class="section" id="integrate-the-coagulant-transport-model">
+<span id="heading-integrate-the-coagulant-transport-model"></span><h3>Integrate the coagulant transport model<a class="headerlink" href="#integrate-the-coagulant-transport-model" title="Permalink to this headline">¶</a></h3>
+<p>Integrate from the initial coagulant nanoparticle concentration to the concentration at time t.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-14">
+<span class="eqno">(292)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-14" title="Permalink to this equation">¶</a></span>\[\int \limits_{n_{CN_0}}^{n_{CN}} n_{CN}^{- 1} \, dn_{CN}  =  - \pi d_{Clay} L_{Diff_{CN}} \Lambda^{-2}_{Clay} G \, k  \int \limits_0^t {dt}\]</div>
+<p>Use pC notation to be consistent with how we describe removal efficiency of other contaminants.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-15">
+<span class="eqno">(293)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-15" title="Permalink to this equation">¶</a></span>\[2.3 p C_{CN} = \pi d_{Clay}\,  L_{Diff_{CN}}\,  \Lambda^{-2}_{Clay}\,  G k  t\]</div>
+<p>Solve for the time required to reach a target efficiency of application of coagulant nanoparticles to clay.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-16">
+<span class="eqno">(294)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-16" title="Permalink to this equation">¶</a></span>\[t_{coagulant, \, application} = \frac{2.3p C_{CN} \Lambda_{Clay}^2}{\pi G k \, d_{Clay}  L_{Diff_{CN}} }\]</div>
+<div class="section" id="coagulant-nanoparticle-application">
+<h4>Coagulant nanoparticle application<a class="headerlink" href="#coagulant-nanoparticle-application" title="Permalink to this headline">¶</a></h4>
+<p>If we assume that we are willing to invest a certain amount of energy in the process, then we can estimate the time required to achieve a target coagulant nanoparticle application efficiency. The velocity gradient in the reactor where the coagulant is attaching to the clay particles is related to the head loss or drop in water level, <span class="math notranslate nohighlight">\(\Delta h\)</span>, through the reactor.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-17">
+<span class="eqno">(295)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-17" title="Permalink to this equation">¶</a></span>\[\Delta h =   \frac{G^2 \nu \theta}{g}\]</div>
+<p>Replace <span class="math notranslate nohighlight">\(\theta\)</span> with <span class="math notranslate nohighlight">\(t_{coagulant, \, application}\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-18">
+<span class="eqno">(296)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-18" title="Permalink to this equation">¶</a></span>\[\Delta h =  \frac{G^2 \nu}{g} \frac{2.3p C_{CN} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\,  L_{Diff_{CN}} }\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-19">
+<span class="eqno">(297)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-19" title="Permalink to this equation">¶</a></span>\[L_{Diff} \approx \left( \frac{2k_B T d_{Clay}}{3 \pi \,\mu  \, d_{CN} G}\right)^\frac{1}{3}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-20">
+<span class="eqno">(298)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-20" title="Permalink to this equation">¶</a></span>\[\Delta h =  \frac{G^2 \nu}{g} \frac{2.3p C_{CN} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}} \left( \frac{3 \pi \,\mu  \, d_{CN} G}{2k_B T d_{Clay}}\right)^\frac{1}{3}\]</div>
+<p>Solve for the velocity gradient.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-21">
+<span class="eqno">(299)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-21" title="Permalink to this equation">¶</a></span>\[\Delta h =  \frac{G^\frac{4}{3} \nu}{g} \frac{2.3p C_{CN} \, \Lambda_{Clay}^2}{\pi k \, d_{Clay}} \left( \frac{3 \pi \,\mu  \, d_{CN} }{2k_B T d_{Clay}}\right)^\frac{1}{3}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-22">
+<span class="eqno">(300)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-22" title="Permalink to this equation">¶</a></span>\[G_{coagulant, \, application} =  d_{Clay}\left(\frac{\pi k \,g\Delta h }{2.3p C_{CN} \, \Lambda_{Clay}^2 \nu} \right)^\frac{3}{4} \left( \frac{2k_B T }{3 \pi \,\mu  \, d_{CN} }\right)^\frac{1}{4}\]</div>
 <p>Using the equation for <span class="math notranslate nohighlight">\(L_{Diff}\)</span> above, we can solve for  the time required to reach a target efficiency of application of coagulant nanoparticles to clay:</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-27">
-<span class="eqno">(302)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-27" title="Permalink to this equation">¶</a></span>\[t_{coagulant, \, application} = \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\,  L_{Diff_{NC}} }\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-23">
+<span class="eqno">(301)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-23" title="Permalink to this equation">¶</a></span>\[t_{coagulant, \, application} = \frac{2.3p C_{CN} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\,  L_{Diff_{CN}} }\]</div>
 <p>The time required for the coagulant to be transported to clay surfaces is strongly dependent on the turbidity as indicated by the average spacing of clay particles, <span class="math notranslate nohighlight">\(\Lambda_{Clay}\)</span>. As turbidity increases the spacing between clay particles decreases and the time required for shear to transport coagulant nanoparticles to the clay decreases. Increasing the shear also results in faster transport of the coagulant nanoparticles to clay surfaces. The times required are strongly influenced by the size of the coagulant nanoparticles because larger nanoparticles diffuse more slowly.</p>
-<p>Below we estimate the time required to achieve 80% attachment of nanoparticles in a 10 NTU clay suspension.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated.&quot;&quot;&quot;</span>
-<span class="k">def</span> <span class="nf">Nano_coag_attach_time</span><span class="p">(</span><span class="n">pC_NC</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">Temperature</span><span class="p">):</span>
+<p>Below we estimate the time required to achieve 80% attachment of nanoparticles in a 10 NTU clay suspension in a reactor with G of 100 Hz.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">from</span> <span class="nn">aguaclara_research.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">import</span> <span class="nn">aguaclara_research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
+<span class="sd">&quot;&quot;&quot;I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated.&quot;&quot;&quot;</span>
+
+<span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;Rapid_Mix/Images/&#39;</span>
+
+<span class="c1"># conventional mechanical design values below</span>
+<span class="n">Mix_HRT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">85</span><span class="p">])</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">Mix_G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4000</span><span class="p">,</span><span class="mi">1500</span><span class="p">,</span><span class="mi">950</span><span class="p">,</span><span class="mi">850</span><span class="p">,</span><span class="mi">750</span><span class="p">])</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">Mix_CP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">Mix_HRT</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Mix_G</span><span class="p">))</span>
+<span class="n">Mix_Gt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">Mix_HRT</span><span class="p">,</span> <span class="n">Mix_G</span><span class="p">)</span>
+<span class="n">Mix_EDR</span> <span class="o">=</span> <span class="p">(</span><span class="n">Mix_G</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temperature</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">Nano_coag_attach_time</span><span class="p">(</span><span class="n">pC_CN</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">Temperature</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;We assume that 70% of nanoparticles attach in the average time for one collision.&quot;&quot;&quot;</span>
   <span class="n">k_nano</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">num</span><span class="o">=</span><span class="mf">2.3</span><span class="o">*</span><span class="n">pC_NC</span><span class="o">*</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">sep_dist_clay</span><span class="p">(</span><span class="n">C_clay</span><span class="p">,</span><span class="n">fm</span><span class="o">.</span><span class="n">Clay</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span>
+  <span class="n">num</span><span class="o">=</span><span class="mf">2.3</span><span class="o">*</span><span class="n">pC_CN</span><span class="o">*</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">sep_dist_clay</span><span class="p">(</span><span class="n">C_clay</span><span class="p">,</span><span class="n">fm</span><span class="o">.</span><span class="n">Clay</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span>
   <span class="n">den</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">G</span><span class="o">*</span> <span class="n">k_nano</span> <span class="o">*</span> <span class="n">fm</span><span class="o">.</span><span class="n">Clay</span><span class="o">.</span><span class="n">Diameter</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">*</span> <span class="n">L_Diff</span><span class="p">(</span><span class="n">Temperature</span><span class="p">,</span><span class="n">G</span><span class="p">)</span>
   <span class="k">return</span> <span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="n">den</span><span class="p">)</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
 
 <span class="n">C_Al</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
 <span class="n">C_clay</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">NTU</span>
-<span class="n">pC_NC</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">pC_CN</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mf">0.8</span><span class="p">)</span>
 <span class="sd">&quot;&quot;&quot;apply 80% of the coagulant nanoparticles to the clay&quot;&quot;&quot;</span>
 
 <span class="n">G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">5000</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">Hz</span>
@@ -372,97 +397,92 @@
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">T_graph</span><span class="p">)):</span>
-  <span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">Nano_coag_attach_time</span><span class="p">(</span><span class="n">pC_NC</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">T_graph</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">Nano_coag_attach_time</span><span class="p">(</span><span class="n">pC_CN</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">T_graph</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">Mix_G</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span><span class="n">Mix_HRT</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="o">*</span><span class="n">T_graph</span><span class="p">,</span> <span class="s2">&quot;Conventional rapid mix&quot;</span><span class="p">])</span>
 <span class="sd">&quot;&quot;&quot;* is used to unpack T_graph so that units are preserved when adding another legend item.&quot;&quot;&quot;</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;%.f&#39;</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;%.f&#39;</span><span class="p">))</span>
+
+
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Velocity gradient (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Nanoparticle attachment time (s)&#39;</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">imagepath</span><span class="o">+</span><span class="s1">&#39;Coag_attach_time&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id3">
 <span id="figure-coag-attach-time"></span><a class="reference internal image-reference" href="../_images/Coag_attach_time.png"><img alt="Coag attach time" src="../_images/Coag_attach_time.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 68 </span><span class="caption-text">An estimate of the time required for 80% of the coagulant nanoparticles to attach to clay particles given a raw water turbidity of 10 NTU.</span></p>
+<p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text">An estimate of the time required for 80% of the coagulant nanoparticles to attach to clay particles given a raw water turbidity of 10 NTU.</span></p>
+</div>
 </div>
 </div>
 <div class="section" id="energy-tradeoff-for-coagulant-transport">
 <span id="heading-energy-tradeoff-for-coagulant-transport"></span><h3>Energy Tradeoff for Coagulant Transport<a class="headerlink" href="#energy-tradeoff-for-coagulant-transport" title="Permalink to this headline">¶</a></h3>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-28">
-<span class="eqno">(303)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-28" title="Permalink to this equation">¶</a></span>\[\Delta h =   \frac{G^2 \nu \theta}{g}\]</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Nano_attach_time</span> <span class="o">=</span> <span class="n">Nano_coag_attach_time</span><span class="p">(</span><span class="n">pC_NC</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">Temperature</span><span class="p">)</span>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-24">
+<span class="eqno">(302)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-24" title="Permalink to this equation">¶</a></span>\[\Delta h =   \frac{G^2 \nu \theta}{g}\]</div>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">from</span> <span class="nn">aguaclara_research.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">import</span> <span class="nn">aguaclara_research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
+<span class="n">Nano_attach_time</span> <span class="o">=</span> <span class="n">Nano_coag_attach_time</span><span class="p">(</span><span class="n">pC_CN</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">Temperature</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">HL_coag_attach</span><span class="p">(</span><span class="n">pC_NC</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">Temperature</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">HL_coag_attach</span><span class="p">(</span><span class="n">pC_CN</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">Temperature</span><span class="p">):</span>
   <span class="k">return</span> <span class="p">(</span><span class="n">G</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temperature</span><span class="p">)</span><span class="o">*</span><span class="n">Nano_attach_time</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">gravity</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">T_graph</span><span class="p">)):</span>
-  <span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">HL_coag_attach</span><span class="p">(</span><span class="n">pC_NC</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">T_graph</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">HL_coag_attach</span><span class="p">(</span><span class="n">pC_CN</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">T_graph</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">T_graph</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;%.f&#39;</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;%.f&#39;</span><span class="p">))</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Velocity gradient (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Head loss (cm)&#39;</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">imagepath</span><span class="o">+</span><span class="s1">&#39;Coag_attach_head_loss&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id4">
 <span id="figure-coag-attach-head-loss"></span><a class="reference internal image-reference" href="../_images/Coag_attach_head_loss.png"><img alt="Coag attach head loss" src="../_images/Coag_attach_head_loss.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text">The total energy required to attach coagulant nanoparticles to raw water inorganic particles increases rapidly with the velocity gradient used in the rapid mix process.</span></p>
+<p class="caption"><span class="caption-number">Fig. 70 </span><span class="caption-text">The total energy required to attach coagulant nanoparticles to raw water inorganic particles increases rapidly with the velocity gradient used in the rapid mix process.</span></p>
 </div>
 <p>There is an economic tradeoff between reactor volume and energy input. The reactor volume results in a higher capital cost and the energy input requires both higher operating costs and higher capital costs. This provides an opportunity to optimize rapid mix design once we have a confirmed model characterizing the process.</p>
 <p>The total potential energy used to operate an AguaClara plant is approximately 2 m. This represents the difference in elevation between where the raw water enters the plant and where the filtered water exits the plant. If we assume that the rapid mix energy budget is a fraction of that total and thus for subsequent analysis we will assume somewhat arbitrarily that the energy available to attach the coagulant nanoparticles to the raw water particles is 50 cm.</p>
 <p>We solve the coagulant transport model,
-<span class="math notranslate nohighlight">\(t_{coagulant, \, application} = \frac{2.3p C_{NC} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\, L_{Diff_{NC}} }\)</span>,
+<span class="math notranslate nohighlight">\(t_{coagulant, \, application} = \frac{2.3p C_{CN} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\, L_{Diff_{CN}} }\)</span>,
 for G given a head loss.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-29">
-<span class="eqno">(304)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-29" title="Permalink to this equation">¶</a></span>\[G_{coagulant, \, application} =  d_{Clay}\left(\frac{\pi k \,g\Delta h }{2.3p C_{NC} \, \Lambda_{Clay}^2 \nu} \right)^\frac{3}{4} \left( \frac{2k_B T }{3 \pi \,\mu  \, d_{NC} }\right)^\frac{1}{4}\]</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;find G for target head loss&quot;&quot;&quot;</span>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-25">
+<span class="eqno">(303)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-25" title="Permalink to this equation">¶</a></span>\[G_{coagulant, \, application} =  d_{Clay}\left(\frac{\pi k \,g\Delta h }{2.3p C_{CN} \, \Lambda_{Clay}^2 \nu} \right)^\frac{3}{4} \left( \frac{2k_B T }{3 \pi \,\mu  \, d_{CN} }\right)^\frac{1}{4}\]</div>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">from</span> <span class="nn">aguaclara_research.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">import</span> <span class="nn">aguaclara_research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
+<span class="sd">&quot;&quot;&quot;find G for target head loss&quot;&quot;&quot;</span>
 <span class="n">HL_nano_transport</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span>
-<span class="k">def</span> <span class="nf">G_max_head_loss</span><span class="p">(</span><span class="n">pC_NC</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">HL_nano_transport</span><span class="p">,</span><span class="n">Temperature</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">G_max_head_loss</span><span class="p">(</span><span class="n">pC_CN</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">HL_nano_transport</span><span class="p">,</span><span class="n">Temperature</span><span class="p">):</span>
   <span class="n">k_nano</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
   <span class="n">num</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">HL_nano_transport</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">k_nano</span>
-  <span class="n">den</span><span class="o">=</span> <span class="mf">2.3</span> <span class="o">*</span> <span class="n">pC_NC</span> <span class="o">*</span> <span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">sep_dist_clay</span><span class="p">(</span><span class="n">C_clay</span><span class="p">,</span><span class="n">fm</span><span class="o">.</span><span class="n">Clay</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temperature</span><span class="p">)</span>
+  <span class="n">den</span><span class="o">=</span> <span class="mf">2.3</span> <span class="o">*</span> <span class="n">pC_CN</span> <span class="o">*</span> <span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">sep_dist_clay</span><span class="p">(</span><span class="n">C_clay</span><span class="p">,</span><span class="n">fm</span><span class="o">.</span><span class="n">Clay</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temperature</span><span class="p">)</span>
   <span class="n">num2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">boltzmann_constant</span> <span class="o">*</span> <span class="n">Temperature</span>
   <span class="n">den2</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_dynamic</span><span class="p">(</span><span class="n">Temperature</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">PACl</span><span class="o">.</span><span class="n">Diameter</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
   <span class="k">return</span> <span class="n">fm</span><span class="o">.</span><span class="n">Clay</span><span class="o">.</span><span class="n">Diameter</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">*</span><span class="p">((((</span><span class="n">num</span><span class="o">/</span><span class="n">den</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">num2</span><span class="o">/</span><span class="n">den2</span><span class="p">))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span>
-<span class="sd">&quot;&quot;&quot;Note the use of to_base_units BEFORE raising to the fractional power.</span>
-<span class="sd">This prevents a rounding error in the unit exponent.&quot;&quot;&quot;</span>
 
-<span class="n">G_max</span> <span class="o">=</span> <span class="n">G_max_head_loss</span><span class="p">(</span><span class="n">pC_NC</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="mi">20</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">,</span><span class="n">Temperature</span><span class="p">)</span>
+<span class="sd">&quot;&quot;&quot;Note the use of to_base_units BEFORE raising to the fractional power. This prevents a rounding error in the unit exponent.&quot;&quot;&quot;</span>
+
+<span class="n">G_max</span> <span class="o">=</span> <span class="n">G_max_head_loss</span><span class="p">(</span><span class="n">pC_CN</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="mi">50</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">,</span><span class="n">Temperature</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">G_max</span><span class="p">)</span>
 
 <span class="sd">&quot;&quot;&quot;The time required?&quot;&quot;&quot;</span>
-<span class="n">Nano_attach_time</span> <span class="o">=</span> <span class="n">Nano_coag_attach_time</span><span class="p">(</span><span class="n">pC_NC</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G_max</span><span class="p">,</span><span class="n">Temperature</span><span class="p">)</span>
+<span class="n">Nano_attach_time</span> <span class="o">=</span> <span class="n">Nano_coag_attach_time</span><span class="p">(</span><span class="n">pC_CN</span><span class="p">,</span><span class="n">C_clay</span><span class="p">,</span><span class="n">G_max</span><span class="p">,</span><span class="n">Temperature</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Nano_attach_time</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">G_max</span><span class="o">*</span><span class="n">Nano_attach_time</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>According to the analysis above, the maximum velocity gradient that can be used to achieve 80% coagulant nanoparticle attachment using only 20 cm of head loss is 142 Hz. This requires a residence time of 100 seconds. These model results must be experimentally verified and it is very likely that the model will need to be modified.</p>
-<p>The analysis of the time required for shear and diffusion to transport the coagulant nanoparticles the last few millimeters suggests that it is this last step that requires the most time. Indeed, the time required for coagulant nanoparticle attachment to raw water particles is comparable to the time that will be required for the next step in the processs, flocculation.</p>
+<p>According to the analysis above, the maximum velocity gradient that can be used to achieve 80% coagulant nanoparticle attachment using 50 cm of head loss is 283 Hz. This requires a residence time of 61 seconds. These model results must be experimentally verified and it is very likely that the model will need to be modified.</p>
+<p>The analysis of the time required for shear and diffusion to transport the coagulant nanoparticles the last few millimeters suggests that it is the last step of diffusion to the clay particles that requires the most time. Indeed, the time required for coagulant nanoparticle attachment to raw water particles is comparable to the time that will be required for the next step in the process, flocculation.</p>
 </div>
 </div>
 <div class="section" id="coagulant-attachment-mechanism">
 <span id="heading-coagulant-attachment-mechanism"></span><h2>Coagulant Attachment Mechanism<a class="headerlink" href="#coagulant-attachment-mechanism" title="Permalink to this headline">¶</a></h2>
-<p>We do not yet understand the origin of the bonds that form between coagulant nanoparticles, between a coagulant nanoparticle and suspended particles, and between coagulant nanoparticles and dissolved organic molecules. Historically the role of the coagulant was assumed to be to reduce the repulsive force between particles so that the particles could get close enough for Van der Waals forces to hold the particles together.</p>
-<ul class="simple">
-<li>Surface charge neutralization hypothesis<ul>
-<li>coagulant nanoparticles attach to each other</li>
-<li></li>
-</ul>
-</li>
-<li>Polar bonds<ul>
-<li>Electronegativity reveals that the aluminum - oxygen bond is more polar than the hydrogen - oxygen bond</li>
-<li>The bond between a coagulant nanoparticle and a clay surface can potentially be stronger than the bond between a water molecule and the clay surface.</li>
-</ul>
-</li>
-</ul>
-<span class="target" id="heading-conventional-mechanical-rapid-mix"></span></div>
+<p>We do not yet understand the origin of the bonds that form between coagulant nanoparticles, between a coagulant nanoparticle and a suspended particle, and between coagulant nanoparticles and dissolved organic molecules. Historically the role of the coagulant was assumed to be to reduce the repulsive force between particles so that the particles could get close enough for Van der Waals forces to hold the particles together. That neglected the fact that Van der Waals forces were already acting between the water molecules and the suspended particle surfaces. In order for the water molecules to be pushed out of the way it is necessary for the coagulant nanoparticles to have stronger bonds with the suspended particles than the bonds between water molecules and the suspended particles.</p>
+<p>The water molecules are subject to Brownian motion and thus it is possible that they are frequently vibrated free from the Van der Waals attractive forces. The coagulant nanoparticles are much larger, less affected by Brownian motion, and thus less likely to be vibrated. The fractal nature of the coagulant nanoparticles may also make it possible for multiple well aligned connections between the two surfaces. The fractal tentacles of the coagulant nanoparticle can align as needed to enable many strong bonding connections to the clay surface.</p>
+</div>
 </div>
 
 
@@ -507,7 +527,7 @@ for G given a head loss.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.16',
+            VERSION:'0.0.18',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

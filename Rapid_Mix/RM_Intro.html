@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Rapid Mix Introduction &mdash; AguaClara Textbook 0.0.16 documentation</title>
+  <title>Rapid Mix Introduction &mdash; AguaClara Textbook 0.0.18 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.16
+                0.0.18
               </div>
             
           
@@ -159,6 +159,7 @@
 <p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html#desgin-from-mathcad-adapted-for-me">Desgin from MathCad adapted for me</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
@@ -329,12 +330,11 @@
 </tbody>
 </table>
 <p>Low ANC waters (See section on <a class="reference internal" href="#heading-buffering-capacity-of-natural-waters"><span class="std std-ref">Buffering Capacity of Natural Waters</span></a>.) could have their ANC increased by addition of a base. A simpler approach is often to use a different coagulant that is less acidic.</p>
-<p>Polyaluminum chloride (PACl) is another aluminum based coagulant that performs similarly to alum. PACl is manufactured by slowly titrating an acidic solution containing dissolved aluminum with a base (in the chemical plant) to produce a meta-stable and soluble polymeric aluminum. The PACl consumes less alkalinity (ANC) because it is partially neutralized by the titration with a base. In addition, the aluminum mass fraction of PACl is higher than in alum because there are no attached water molecules. The mass of PACl required for flocculation is less than for alum due largely to the higher aluminum fraction. The lower mass of PACl required is an economic benefit when shipping is a significant cost of the coagulant.</p>
-<p>The PACl molecular formula is:</p>
+<p>Polyaluminum chloride (PACl) is another aluminum based coagulant that performs similarly to alum. PACl is manufactured by slowly titrating an acidic solution containing dissolved aluminum with a base (in the chemical plant) to produce a meta-stable and soluble polymeric aluminum. PACl consumes less alkalinity (ANC) because it is partially neutralized by the titration with a base. In addition, the aluminum mass fraction of PACl is higher than in alum because there are no attached water molecules. The mass of PACl required for flocculation is less than for alum due largely to the higher aluminum fraction. The lower mass of PACl required is an economic benefit when shipping is a significant cost of the coagulant.</p>
+<p>There are many different molecular formulas given for PACl. The molecular formulas are either from the perspective of the chemical supplier or represent the composition of the PACl nanoparticles. The molecular formula from the chemical supplier represents the extent of neutralization and hence the replacement of chloride with hydroxide. In that case the PACl molecular formula is:</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-1">
 <span class="eqno">(121)<a class="headerlink" href="#equation-rapid-mix-rm-intro-1" title="Permalink to this equation">¶</a></span>\[[Al_n(OH)_mCl_{3n-m}]_x\]</div>
-<p>The extent of the PACl titration with base is defined as basicity. Basicity is the ratio of hydroxyl equivalents to aluminum equivalents. Basicity of 1 would mean that the PACl does not produce any protons when it dissolves in water. Basicity of
-0 means it produces 3 protons per Al (like alum). The equation for basicity is:</p>
+<p>The extent of the PACl titration with base is defined as basicity. Basicity is the ratio of hydroxyl equivalents to aluminum equivalents. Basicity of 1 would mean that the PACl does not produce any protons when it dissolves in water. Basicity of 0 means it produces 3 protons per Al (like alum). The equation for basicity is:</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-2">
 <span class="eqno">(122)<a class="headerlink" href="#equation-rapid-mix-rm-intro-2" title="Permalink to this equation">¶</a></span>\[Basicity = \left( \frac{m}{3n}\right)\]</div>
 <p>The lowest basicity commercial PACl formulations are about 10%. Most PACls are in the medium to high basicity range (50-70%). The highest stable basicity (83%) is aluminum chlorohydrate (<span class="math notranslate nohighlight">\(Al_2(OH)_5Cl\)</span>) that is useful for treating water with very low ANC.</p>
@@ -346,6 +346,10 @@
 <div class="line"><span class="math notranslate nohighlight">\(\Pi_{Al}=\left(\frac{m}{n} - 3\right)\)</span> is ANC per mole of aluminum for the given coagulant</div>
 </div>
 <p>Thus the ANC of alum (with 0 hydroxides) is <span class="math notranslate nohighlight">\(-3[Al]\)</span>. The method of calculating the <span class="math notranslate nohighlight">\(ANC_{Al}\)</span> will be used to calculate the amount of base that must be added to achieve a target pH.</p>
+<p>The molecular formula of the PACl nanoparticles is always some combination of Al, O, and H. One common molecular structure is a Keggin structure with 13 aluminum atoms. This molecule has a tetrahedral Al atom in the center of the cluster coordinated to 4 oxygen atoms. The molecular formula of the Keggin structured aluminum molecule is</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-4">
+<span class="eqno">(124)<a class="headerlink" href="#equation-rapid-mix-rm-intro-4" title="Permalink to this equation">¶</a></span>\[AlO_4Al_{12}(OH)_{24}(H_2O)_{12}^{7+}\]</div>
+<p>The attached water molecules are sometimes omitted. Coagulant nanoparticles are presumably created by aggregation of these Keggin structure molecules.</p>
 </div>
 <div class="section" id="buffering-capacity-of-natural-waters">
 <span id="heading-buffering-capacity-of-natural-waters"></span><h3>Buffering Capacity of Natural Waters<a class="headerlink" href="#buffering-capacity-of-natural-waters" title="Permalink to this headline">¶</a></h3>
@@ -415,22 +419,22 @@
 </div>
 <p>Conventional rapid mix units use mechanical or potential energy to generate intense turbulence to begin the mixing process. Conventional design is based on the use of <span class="math notranslate nohighlight">\(\bar G\)</span> (an average velocity gradient) as a design parameter. We don’t yet know what the design objective is for rapid mix and thus it isn’t clear which parameters matter. We hypothesize that both velocity gradients that cause deformation of the fluid and time for molecular diffusion are required to ultimately transport coagulant nanoparticles to the surfaces of clay particles.</p>
 <p>The velocity gradient can be obtained from the rate at which mechanical energy is being dissipated and converted to heat by viscosity.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-4">
-<span class="eqno">(124)<a class="headerlink" href="#equation-rapid-mix-rm-intro-4" title="Permalink to this equation">¶</a></span>\[\varepsilon = G^2 \nu\]</div>
-<p>where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the energy dissipation rate, <span class="math notranslate nohighlight">\(G\)</span> is the velocity gradient, and <span class="math notranslate nohighlight">\(\nu\)</span> is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-5">
-<span class="eqno">(125)<a class="headerlink" href="#equation-rapid-mix-rm-intro-5" title="Permalink to this equation">¶</a></span>\[P = \bar\varepsilon \rlap{\kern.08em--}V \rho\]</div>
+<span class="eqno">(125)<a class="headerlink" href="#equation-rapid-mix-rm-intro-5" title="Permalink to this equation">¶</a></span>\[\varepsilon = G^2 \nu\]</div>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the energy dissipation rate, <span class="math notranslate nohighlight">\(G\)</span> is the velocity gradient, and <span class="math notranslate nohighlight">\(\nu\)</span> is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-6">
-<span class="eqno">(126)<a class="headerlink" href="#equation-rapid-mix-rm-intro-6" title="Permalink to this equation">¶</a></span>\[P = \bar G^2 \nu \rlap{\kern.08em--}V \rho\]</div>
-<p>We can relate reactor volume to a hydraulic residence time, <span class="math notranslate nohighlight">\(\theta\)</span>, and volumetric flow rate, Q.</p>
+<span class="eqno">(126)<a class="headerlink" href="#equation-rapid-mix-rm-intro-6" title="Permalink to this equation">¶</a></span>\[P = \bar\varepsilon \rlap{\kern.08em--}V \rho\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-7">
-<span class="eqno">(127)<a class="headerlink" href="#equation-rapid-mix-rm-intro-7" title="Permalink to this equation">¶</a></span>\[P = \rho \bar G^2 \nu Q \theta\]</div>
-<p>This equation is perfectly useful for estimating electrical motor sizing requirements for mechanical rapid mix units. For gravity powered hydraulic rapid mix units it would be more intuitive to use the change in water surface elevation, <span class="math notranslate nohighlight">\(\Delta h\)</span> instead of power input.</p>
+<span class="eqno">(127)<a class="headerlink" href="#equation-rapid-mix-rm-intro-7" title="Permalink to this equation">¶</a></span>\[P = \bar G^2 \nu \rlap{\kern.08em--}V \rho\]</div>
+<p>We can relate reactor volume to a hydraulic residence time, <span class="math notranslate nohighlight">\(\theta\)</span>, and volumetric flow rate, Q.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-8">
-<span class="eqno">(128)<a class="headerlink" href="#equation-rapid-mix-rm-intro-8" title="Permalink to this equation">¶</a></span>\[P = \rho g Q \Delta h\]</div>
-<p>Combining the two equations we obtain.</p>
+<span class="eqno">(128)<a class="headerlink" href="#equation-rapid-mix-rm-intro-8" title="Permalink to this equation">¶</a></span>\[P = \rho \bar G^2 \nu Q \theta\]</div>
+<p>This equation is perfectly useful for estimating electrical motor sizing requirements for mechanical rapid mix units. For gravity powered hydraulic rapid mix units it would be more intuitive to use the change in water surface elevation, <span class="math notranslate nohighlight">\(\Delta h\)</span> instead of power input.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-9">
-<span class="eqno">(129)<a class="headerlink" href="#equation-rapid-mix-rm-intro-9" title="Permalink to this equation">¶</a></span>\[\Delta h =   \frac{G^2 \nu \theta}{g}\]</div>
+<span class="eqno">(129)<a class="headerlink" href="#equation-rapid-mix-rm-intro-9" title="Permalink to this equation">¶</a></span>\[P = \rho g Q \Delta h\]</div>
+<p>Combining the two equations we obtain.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-10">
+<span class="eqno">(130)<a class="headerlink" href="#equation-rapid-mix-rm-intro-10" title="Permalink to this equation">¶</a></span>\[\Delta h =   \frac{G^2 \nu \theta}{g}\]</div>
 <span id="table-conventional-rapid-mix-design-values"></span><table border="1" class="docutils" id="id10">
 <caption><span class="caption-number">Table 9 </span><span class="caption-text">Typical values for conventional rapid mix residence time and average velocity gradients</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -480,7 +484,7 @@ Sincero. 1996. page 267.</p>
 </div>
 <div class="section" id="mixing-time">
 <span id="heading-mixing-time"></span><h3>Mixing time<a class="headerlink" href="#mixing-time" title="Permalink to this headline">¶</a></h3>
-<p>The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see equation <a class="reference internal" href="RM_Derivations.html#equation-eq-t-eddy">(183)</a>) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (<a class="reference internal" href="#figure-eddy-turnover-times"><span class="std std-numref">Fig. 51</span></a>).</p>
+<p>The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see equation <a class="reference internal" href="RM_Derivations.html#equation-eq-t-eddy">(184)</a>) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (<a class="reference internal" href="#figure-eddy-turnover-times"><span class="std std-numref">Fig. 51</span></a>).</p>
 <div class="figure align-center" id="id11">
 <span id="figure-eddy-turnover-times"></span><a class="reference internal image-reference" href="../_images/Eddy_turnover_time.png"><img alt="Eddy turnover time" src="../_images/Eddy_turnover_time.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 51 </span><span class="caption-text">Eddy turnover times as a function of length scale for a range of energy dissipation rates.</span></p>
@@ -544,11 +548,11 @@ Sincero. 1996. page 267.</p>
 <p><span class="math notranslate nohighlight">\(\varepsilon\)</span>, or energy dissipation rate, is the rate that the kinetic energy of the fluid is being converted to heat. EDR is a very useful concept because the last step of converting kinetic energy into heat is accomplished by viscosity (<span class="math notranslate nohighlight">\(\nu\)</span>). This kinetic energy being dissipated by viscosity is the energy associated with velocity gradients (<span class="math notranslate nohighlight">\(G\)</span>). Thus, through EDR there is a direct connection between <span class="math notranslate nohighlight">\(\nu\)</span> and <span class="math notranslate nohighlight">\(G\)</span>. This connection will be further covered later on in this introduction.</p>
 <p>As mentioned above, EDR and velocity gradients play an important role in mixing and in causing suspended particles to collide with each other, both of which are important topics in flocculation. Their use is not limited to flocculation, they are also helpful in understanding failure modes of plate settlers and terminal head loss of sand filters</p>
 <p>We will begin by defining the concept of energy dissipation rate for a control volume. In a control volume that does not include pumps, turbines or other external energy sources or sinks, the mechanical energy lost is indicated by a change in elevation and quantified as <span class="math notranslate nohighlight">\(g h_L\)</span>. That mechanical energy is lost in the time that the fluid is in the control volume, <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-10">
-<span class="eqno">(130)<a class="headerlink" href="#equation-rapid-mix-rm-intro-10" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon \theta = g h_L\]</div>
-<p>This equation simply states that the average rate of energy dissipation times the time over which that dissipation occurs is equal to the total lost mechanical energy. The dimensions of <span class="math notranslate nohighlight">\(\varepsilon\)</span> are:</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-11">
-<span class="eqno">(131)<a class="headerlink" href="#equation-rapid-mix-rm-intro-11" title="Permalink to this equation">¶</a></span>\[\varepsilon = \frac{[m^3]}{[s^3]} = {\rm \frac{W}{kg}}\]</div>
+<span class="eqno">(131)<a class="headerlink" href="#equation-rapid-mix-rm-intro-11" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon \theta = g h_L\]</div>
+<p>This equation simply states that the average rate of energy dissipation times the time over which that dissipation occurs is equal to the total lost mechanical energy. The dimensions of <span class="math notranslate nohighlight">\(\varepsilon\)</span> are:</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-12">
+<span class="eqno">(132)<a class="headerlink" href="#equation-rapid-mix-rm-intro-12" title="Permalink to this equation">¶</a></span>\[\varepsilon = \frac{[m^3]}{[s^3]} = {\rm \frac{W}{kg}}\]</div>
 <p>These dimensions can be understood as a velocity squared per time, otherwise known as a rate of kinetic energy loss (recall that kinetic energy is <span class="math notranslate nohighlight">\({\rm Ke} = \frac{\bar v^2}{2g}\)</span>, or <span class="math notranslate nohighlight">\({\rm Ke} \propto \bar v^2\)</span>), or as power per unit mass, which would be <span class="math notranslate nohighlight">\({\rm  \frac{W}{kg}}\)</span>.</p>
 <p>Velocity gradients are central to flocculation because they cause the deformation of the fluid, and this results in particle collisions. Consider a real-world example via the image below: if everyone on a sidewalk is walking in the same direction at exactly the same velocity, then there will never be any collisions between people (top). If, however, people at one side of the sidewalk stand still and people walk progressively faster as a function of how far they are away from the zero velocity side of the sidewalk, then there will be many collisions between the pedestrians (see <a class="reference internal" href="#figure-pedestrians-on-sidewalk"><span class="std std-numref">Fig. 54</span></a>). Indeed, the rate of collisions is proportional to the velocity gradient.</p>
 <div class="figure align-center" id="id14">
@@ -633,8 +637,8 @@ Sincero. 1996. page 267.</p>
 </tbody>
 </table>
 <p>The equations used to convert between columns in the table above are:</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-12">
-<span class="eqno">(132)<a class="headerlink" href="#equation-rapid-mix-rm-intro-12" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-13">
+<span class="eqno">(133)<a class="headerlink" href="#equation-rapid-mix-rm-intro-13" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
 G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 \bar v=\frac{4Q}{\pi D}\]</div>
 <p>Note that the velocity gradient is independent of viscosity (and hence temperature) for laminar flow. This is because the total amount of fluid deformation is simply based on geometry. The no slip condition, the diameter, and the length of the flow passage set the total fluid deformation. Of course, if temperature decreases and viscosity increases the amount of energy required to push the fluid through the flow passage will increase (head loss is proportional to viscosity for laminar flow).</p>
@@ -708,8 +712,8 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 </tbody>
 </table>
 <p>For mechanical mixing where an impeller or other stirring device is adding shaft work to a control volume we have</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-13">
-<span class="eqno">(133)<a class="headerlink" href="#equation-rapid-mix-rm-intro-13" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-14">
+<span class="eqno">(134)<a class="headerlink" href="#equation-rapid-mix-rm-intro-14" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}\]</div>
 <div class="line-block">
 <div class="line">where</div>
 <div class="line"><span class="math notranslate nohighlight">\(P\)</span> = power input into the control volume</div>
@@ -718,8 +722,8 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 <div class="line"><span class="math notranslate nohighlight">\(\rho\)</span> = density of the fluid</div>
 </div>
 <p>The Camp-Stein velocity gradient for a mechanically mixed reactor is</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-14">
-<span class="eqno">(134)<a class="headerlink" href="#equation-rapid-mix-rm-intro-14" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-15">
+<span class="eqno">(135)<a class="headerlink" href="#equation-rapid-mix-rm-intro-15" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}\]</div>
 </div>
 </div>
 
@@ -765,7 +769,7 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.16',
+            VERSION:'0.0.18',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

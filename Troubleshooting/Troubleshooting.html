@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Problems &mdash; AguaClara Textbook 0.0.16 documentation</title>
+  <title>Problems &mdash; AguaClara Textbook 0.0.18 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.0.16
+                0.0.18
               </div>
             
           
@@ -131,6 +131,7 @@
 <p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html#desgin-from-mathcad-adapted-for-me">Desgin from MathCad adapted for me</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
@@ -140,7 +141,10 @@
 <p class="caption"><span class="caption-text">Chapter 10: Troubleshooting</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Problems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#solutions">Solutions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#high-head-loss-after-backwash-in-estars">High head loss after backwash in EStaRS</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -267,6 +271,13 @@
 </tr>
 </tbody>
 </table>
+<div class="section" id="high-head-loss-after-backwash-in-estars">
+<h2>High head loss after backwash in EStaRS<a class="headerlink" href="#high-head-loss-after-backwash-in-estars" title="Permalink to this headline">¶</a></h2>
+<p>The 60 cm diameter EStaRS filters at El PODA had a very high head loss of 43 cm within a few minutes of ending backwash. The maximum available head is only 50 cm and thus filter runs lasted only a few hours. El PODA was the 2nd site where 60 cm diameter EStaRS filters were used. Given that the filter backwashed just fine without excess head required it appeared that the inlet system was performing as expected and did not have excessive head loss.</p>
+<p>The key insight was that the top two layers of sand stopped producing filter water soon after beginning a filter run. A complete stoppage means that clogging ISN’T the issue! Clogging would decrease the flow rate, but it wouldn’t stop flow because the clogging would have to be absolute to stop the flow.</p>
+<p>The failure was that the water traveling horizontally in the branches and trunk carries air bubbles to the vertically downward flowing pipe (see a photo here). The air accumulates in that pipe and the water falls through the air losing energy like a waterfall. Water completely stops flowing through the layers of the filter that exit through that trunk line when the height of the air is equal to the available energy driving water through the StaRS filter.</p>
+<p>There are two improvements required at El PODA. First, the transmission line must be operated with downstream flow control to prevent air entrapment and compression. That will likely be sufficient to solve the problem of air in the filters. The second improvement is to add manual air release valves to the top of each of the trunk lines so that operates can expel air during filtration. Note that these air vents must have a valve that is closed during backwash because the filter is under negative pressure during backwash and would suck air into the filter through those vents if they were open.</p>
+</div>
 </div>
 
 
@@ -309,7 +320,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.16',
+            VERSION:'0.0.18',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
