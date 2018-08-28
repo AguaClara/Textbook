@@ -127,7 +127,7 @@ The relative distribution of the flow through a particular path is defined as:
 
 .. math::
 
-  \Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{C_p_{Short}}{C_p_{Short}}}
+  \Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{C_{p_{Short}}}{C_{p_{Short}}}}
 
 | Such that:
 | :math:`\Pi_Q =` the ratio of flow
