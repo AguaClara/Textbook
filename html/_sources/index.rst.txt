@@ -72,13 +72,14 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flocculation/Floc_Intro.rst
   Flocculation/Floc_Design.rst
   Flocculation/Floc_Derivations.rst
-
+  Flocculation/Floc_Theory_and_Future_Work.rst
 
 .. toctree::
   :caption: Chapter 6: Sedimentation
   :maxdepth: 1
 
   Sedimentation/Sed_Intro.rst
+  Sedimentation/Sed_Design.rst
   Sedimentation/Sed_Examples.rst
   Sedimentation/Sed_Theory_and_Future_Work.rst
 
@@ -86,8 +87,10 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :caption: Chapter 8: Filtration
   :maxdepth: 1
 
+  Filtration/Filtration_Intro.rst
   Filtration/Filtration_Design.rst
   Filtration/Filtration_Derivations.rst
+  Filtration/Filtration_Theory_and_Future_Work.rst
 
 .. toctree::
   :caption: Chapter 9: Dissolved Gas
@@ -97,7 +100,20 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
 
 .. toctree::
-  :caption: Chapter 10: Troubleshooting
+  :caption: Chapter 10: Fluoride
+  :maxdepth: 1
+
+  Fluoride/Fluoride_Intro.rst
+
+
+.. toctree::
+  :caption: Chapter 11: Wastewater
+  :maxdepth: 1
+
+  WW_Theory_and_Future_Work.rst
+
+.. toctree::
+  :caption: Chapter 12: Troubleshooting
   :maxdepth: 1
 
   Troubleshooting/Troubleshooting.rst
