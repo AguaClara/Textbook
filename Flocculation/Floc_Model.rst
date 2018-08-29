@@ -1,0 +1,1043 @@
+.. _title_Flocculation_Model:
+
+
+**********************************************
+A New Paradigm for Hydraulic Flocculation}
+**********************************************
+
+William H. Pennock, Monroe L. Weber-Shirk, Leonard W. Lion
+
+abstract
+========
+
+The authors previously proposed rate equations for the removal of non-settleable aggregates in hydraulic flocculators. This work continues the prior effort by developing two models for coupled flocculation/sedimentation performance. The first model describes settled effluent turbidity for flocculators where the relative velocities between particles are dominated by viscous forces (e.g., laminar flows). The second model applies to flocculators where inertial forces dominate. The predictions of these models were compared with lab-scale flocculation/sedimentation data obtained from both a laminar- and a turbulent-flow flocculator. The viscous equation fit the data from the laminar flow flocculator well. For the turbulent flocculator, both models gave good fits of the data, but the viscous model performed slightly better. The similarity of the two models under the experimental constraints explains this result, and further study in different conditions is needed to delineate the applicability of the models in turbulent flocculation. Given the better fit by the viscous model and that the product of the mean fluid velocity gradient applicable to laminar flow (:math:`\overline{G}`) and hydraulic residence time (:math:`\theta`), :math:`\overline{G}\theta`, has historically been used in flocculator design, it is recommended that the viscous flocculation model introduced in this paper be used. The new flocculation model has a single fitting parameter and provides reasonable estimates of flocculator design parameters from first principles.
+
+Introduction
+============
+
+Hydraulic flocculators have significant advantages over mechanically-mixed flocculators. They have no moving parts, resulting in lower operation (electricity) and maintenance (repair and replacement) costs. Additionally, hydraulic flocculators approach plug flow, which improves reaction kinetics because the inflow is not diluted. This also means they are far less vulnerable to short-circuiting compared with mechanically-mixed mixed flocculators, which operationally approach continuous-flow stirred tank reactors \citep{benjamin_water_2013}. Hydraulic flocculators have been chosen for their sustainability in drinking water treatment plants, such as the gravity-powered plants designed by Cornell University's AguaClara program implemented in Honduras as well as those in South Africa studied by \citet{haarhoff_design_1998}.
+
+Flocculation changes the particle size distribution (PSD) received by the downstream processes of sedimentation and filtration. Improving drinking water treatment plant performance, therefore, requires the optimization of flocculation to give the best PSD for subsequent processes. To optimize flocculation performance, it is useful to develop a generalized, mechanistically-based flocculation model to guide design and operation of flocculators.
+
+\citet{haarhoff_design_1998} developed an empirical design approach for horizontal baffled hydraulic flocculators, and then verified these guidelines with computational fluid dynamics (CFD) simulations \citep{haarhoff_towards_2001}. Although this work is an excellent resource, their design guidance is limited to one geometry and it does not provide performance predictions.
+
+Several researchers have developed population balance models (PBM), which are sets of differential equations applied to a control volume defined by the entire flocculator (i.e., Eulerian frame of reference) based on the model proposed by \citet{smoluchowski_versuch_1917}. These are numerically integrated to solve for the PSD over time. An example of this approach applied to mechanically-mixed flocculators is given in \citet{ducoste_two-scale_2002}. This approach has the advantage of being theoretically-based and providing predictions for the evolution of PSD through the process. Challenges in applying this approach include finding sufficiently accurate estimates of the initial conditions, the hydraulic conditions within the flocculator, and the values of attachment efficiencies which are unknown functions of the coagulant dose and raw water quality. Additionally, especially when CFD simulations are used to model the hydraulic conditions, this approach suffers the disadvantage of being computationally intensive, which may be too cumbersome for design and  operation \citep{prat_simulation_2007,bridgeman_development_2010}.
+
+\citet{argaman_turbulence_1968} proposed an analytical solution to \citeauthor{smoluchowski_versuch_1917}'s PBM by making a number of simplifying assumptions and integrating, creating a flocculator performance prediction equation that can be used for design and operation of both plug flow (hydraulic) and completely mixed (mechanical) flocculators. \citet{liu_accurate_2004} refined this formulation to enhance predictions for hydraulic flocculators that have non-uniform hydraulic conditions. The Argaman-Kaufman equation has three experimentally-derived constants. Two are physically based, representing the rates of aggregation and breakup in the process, and each can be derived from a different set of experiments, each containing at least nine runs \citep{haarhoff_determination_1997}. The third has no physical meaning, and is unique to each flocculator \citep{liu_accurate_2004}. Determining the values of these parameters presents an obstacle to using the Argaman-Kaufman model to design new flocculators.
+
+The present work aims to further simplify hydraulic flocculator performance prediction by integrating from an alternative differential equation to the Smoluchowski equation integrated by \citet{argaman_turbulence_1968}. This differential equation, a Lagrangian model proposed by \citet{pennock_theoretical_2016}, achieves simplicity by modeling the journey of a characteristic non-settleable particle through the flocculator. Specifically, the characteristic particle is chosen such that its properties are representative of the population of particles in the flocculator that are non-settleable. It is reasonable to track these particles to the exclusion of flocs that have grown large enough to be settleable, because it is the non-settleable, or residual, particles that determine flocculation performance. Additionally, the majority of successful collisions involving non-settleable particles appear to be collisions with other non-settleable particles. This hypothesis is suggested by \citet{casson_flocculation_1990} who found in flocculating a trimodal distribution of particles that homocoagulation dominated. They cited \citet{adler_heterocoagulation_1981}, who found that numerical simulations accounting for the effects of hydrodynamic, van der Waals, and double layer forces generally gave higher collision efficiencies for particles of similar size. It is therefore assumed that the rate of non-settleable particles' conversion to settleable flocs can be modeled as a function of the concentration non-settleable particles.
+
+In their article, \citet{pennock_theoretical_2016} began with a first order model which relates the rate of successful collisions between non-settleable particles to the time between collisions:
+
+.. math::
+   :label: dNc
+
+	 \frac{dN_c}{dt}=\frac{\overline{\Gamma}}{\overline{t_{c}}},
+
+
+where :math:`\frac{dN_c}{dt}` is the rate of successful collisions between non-settleable particles, :math:`\overline{\Gamma}` is the mean fractional coverage of particle surface area by coagulant precipitates, and :math:`\overline{t_{c}}` is the mean time between collisions of non-settleable particles. The mean fractional coverage, :math:`\overline{\Gamma}`, is akin to the attachment efficiency term in other flocculation models (e.g., \citealt{casson_flocculation_1990,ducoste_two-scale_2002}) and has a physical basis given knowledge of the concentrations and diameters of colloidal particles and of coagulant precipitate clusters \citep{swetland_flocculation-sedimentation_2014}. The inclusion of :math:`\overline{\Gamma}` in Equation :eq:`dNc` converts the general collisions described by :math:`\overline{t_{c}}` to the successful collisions described by :math:`\frac{dN_c}{dt}`. The concept behind :math:`\overline{\Gamma}` differs from random sequential adsorption (RSA) in that it allows for the possibility of coagulant precipitate clusters stacking on top of previously-attached coagulant precipitate clusters, thereby approaching complete coverage asymptotically \citep{feder_random_1980,swetland_flocculation-sedimentation_2014}. The calculation of :math:`\overline{\Gamma}` also accounts for the loss of coagulant to reactor walls, with the assumption that the coagulant has equal affinity for particle and wall surfaces \citep{swetland_flocculation-sedimentation_2014}.
+
+The probability that two non-settleable particles attach is expected to be equal to the probability that at least one of the colliding particles has a precipitated coagulant nanoparticle at the initial contact point. The original use of :math:`\overline{\Gamma}` by \citet{pennock_theoretical_2016} to describe the fraction of collisions that are successful did not properly account for the probability of a successful collision. While :math:`\overline{\Gamma}` is the probability of a single non-settleable particle surface colliding at a site on its surface that is covered with a coagulant precipitate, the collision involves two particles, and so the probability of attachment is higher.
+
+It is simpler to derive the probability of attachment from the probability that neither particle has a coagulant precipitate at the point where the two particles collide, since the probability of a successful collision includes the probabilities of one particle and of both particles having a coagulant precipitate. The probability of one particle colliding at a point without a coagulant precipitate is :math:`(1-\overline{\Gamma})`, so the probability of neither particle having a coagulant precipitate at the point of collision is :math:`(1-\overline{\Gamma})^2`. As this is the probability of a failed collision, the probability of a successful collision is :math:`1-(1-\overline{\Gamma})^2`.  For the corrected form of Equation :eq:`dNc`, the mean collision efficiency factor, :math:`\overline{\alpha}`, will be defined as :math:`2\overline{\Gamma}-\overline{\Gamma}^2` so that it now reads
+
+.. math::
+   :label: dNca
+
+	 \frac{dN_c}{dt}=\frac{\overline{\alpha}}{\overline{t_{c}}}.
+
+
+
+Thus, the relationship originally proposed by \citet{pennock_theoretical_2016} was missing a second-order term.
+
+A relationship for the mean time between collisions :math:`\overline{t_{c}}` was found by proposing an average condition for a collision, successful or unsuccessful, to occur. To define this condition, it was assumed that each non-settleable particle on average occupies a fraction of the reactor volume, :math:`\overline{V}_{Surround}`, inversely proportional to the number concentration of particles. Furthermore, prior to a collision, a particle on average sweeps a volume, :math:`\overline{V}_{Cleared}`, proportional to :math:`\overline{t_c}` and to the mean relative velocity between approaching particles, :math:`\overline{v}_r`. As an average condition, it was posited that for each collision, :math:`\overline{V}_{Cleared}` must equal :math:`\overline{V}_{Surround}`. From this, a relationship for a characteristic collision time, :math:`\overline{t_c}`, was obtained:
+
+.. math::
+   :label: tc
+
+	 \overline{t_{c}}=\frac{\overline{\Lambda}^3}{\pi\overline{d}_{P}^2\overline{v_r}},
+
+
+where :math:`\overline{d}_{P}` is the characteristic diameter of non-settleable particles and :math:`\overline{\Lambda}` is the mean separation distance between non-settleable particles, :math:`\overline{\Lambda}=\sqrt[3]{\overline{V}_{Surround}}`.
+
+To make use of Equation :eq:`tc`, relationships based on dimensional analysis were obtained for the relative velocity between a pair of particles approaching collision, :math:`v_{r}`, with the assumption that they had Stokes numbers approaching zero \citep{pennock_theoretical_2016}. In viscosity-dominated flows, it was determined to be
+
+.. math::
+   :label: vrlam
+
+	 v_r\sim \Lambda G,
+
+
+where :math:`G` is the local velocity gradient
+:math:`\left[\frac{1}{T}\right]`, defined as
+
+.. math::
+
+	 G=\sqrt{\frac{\varepsilon}{\nu}},
+
+
+where :math:`\nu` is the kinematic viscosity and :math:`\varepsilon` is the local energy dissipation rate in units of power per mass, :math:`\left[\frac{L^2}{T^3}\right]`, commonly reported in mW/kg \citep{cleasby_is_1984}.
+
+In isotropic inertia-dominated flows, the velocity relationship was found to be
+
+.. math::
+   :label: vrturb
+
+	 v_r\sim\sqrt[3]{\varepsilon\Lambda},
+
+The use of Equations :eq:`vrlam` and :eq:`vrturb` to describe the relative velocity between particles assumes that fluid shear is dominant over Brownian motion and differential sedimentation as transport mechanisms. Since the model assumes an initially monodisperse population of particles and that collisions between differently-sized particles are unfavorable, differential sedimentation is considered negligible. \citet{benjamin_water_2013} note that Brownian motion is only significant for particles smaller than 1 :math:`\mum`, and so this model makes the assumption that particles are larger than 1 :math:`\mum`. Equations :eq:`vrlam` and :eq:`vrturb` are similar to Equations 4a and 4b in \citet{delichatsios_coagulation_1975}, with the major distinction that while \citeauthor{delichatsios_coagulation_1975} scaled by particle diameter, :math:`d_P`, these equations are scaled by :math:`\Lambda`.
+
+In laminar flocculation, it was posited that Equation :eq:`vrlam` would apply, while for turbulent flocculation, it was posited that both Equations :eq:`vrlam` and :eq:`vrturb` would be applicable. This is because the predominance of one force over another varies over length scales in turbulence, and it is hypothesized that turbulent transport of two particles toward collision is primarily governed by eddies of order :math:`\Lambda`.
+
+The largest turbulent eddies are anisotropic and are affected by the geometry of the flow. These are said to comprise the \emph{energy-containing range} \citep{pope_turbulent_2000}. Eddies in the energy-containing range are too large to be considered in the direct transport of flocculating particles toward collision. At smaller length scales, eddies become isotropic and have a generalizable structure that is independent of the flow geometry, and this is known as the \emph{universal range} \citep{pope_turbulent_2000}. The subset of the largest length scales in the universal range, where inertial forces are more significant than viscous forces, is referred to as the \emph{inertial subrange} \citep{pope_turbulent_2000}. Equation :eq:`vrturb` is expected to apply when mean particle separation distances are within the inertial subrange. The \emph{dissipation range} represents length scales smaller than the inertial subrange where viscous forces are dominant \citep{pope_turbulent_2000}. For this reason, it was hypothesized that Equation :eq:`vrlam` would apply within the dissipation range of turbulence.
+
+The two relative velocity relationships, Equations :eq:`vrlam` and :eq:`vrturb` were then put in terms of spatial averages in order to reflect the mean properties of the flocculation process (i.e., :math:`\overline{v_r}\propto\overline{\varepsilon}^x\overline{\Lambda}^y`, where :math:`x` and :math:`y` represent the exponents pertaining to the viscous and inertial relations). The use of spatial averages makes the assumption that energy dissipation and particle concentration are uniform throughout the flocculator. These averaged equations were then substituted into Equation :eq:`dNca` to obtain differential equations for the rate of successful collisions dominated by viscous or inertial forces. For collisions dominated by viscous forces, the differential relationship was determined by \citet{pennock_theoretical_2016} to be
+
+.. math::
+   :label: Nclam
+
+	 dN_{c}=\pi\overline{\alpha}\frac{\overline{d}_{P}^2}{\overline{\Lambda}^2} \overline{G}dt,
+
+
+where :math:`\overline{G}` is the spatially averaged velocity gradient. For inertial forces, the relationship was found to be
+
+.. math::
+   :label: Ncturb
+
+	 dN_{c}=\pi\overline{\alpha}\frac{\overline{d}_{P}^2}{\overline{\Lambda}^2}\left(\frac{\overline{\varepsilon}}{\overline{\Lambda}^2}\right)^{1/3}dt,
+
+
+
+where :math:`\overline{\varepsilon}` is the spatially averaged energy dissipation rate.
+
+Because the flocculation performance equations will ultimately track particle concentration, the concentration of non-settleable particles, :math:`C_{P}`, was substituted for :math:`\overline{\Lambda}` using
+
+.. math::
+   :label: Ld
+
+	 \overline{\Lambda}^3=\frac{\pi}{6}\frac{\rho_{P}}{C_{P}}\overline{d}_P^3,
+
+
+where :math:`\rho_{P}` is the characteristic density of non-settleable particles. For viscous flocculation, the above equation can be substituted into Equation :eq:`Nclam` to result in:
+
+.. math::
+   :label: Ncld
+
+   dN_{c}=\pi\overline{\alpha}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3}\overline{G}dt.
+
+
+The inertial relation can be similarly modified with the additional substitution of Equation :eq:`Ld` for the :math:`\overline{\Lambda}^{2/3}` quantity in Equation :eq:`Ncturb`, resulting in:
+
+.. math::
+   :label: Nctd
+
+	 dN_{c}=\pi\overline{\alpha}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{8/9}\left(\frac{\overline{\varepsilon}}{\overline{d}_{P}^2}\right)^{1/3}dt.
+
+
+Equations :eq:`Ncld` and :eq:`Nctd` reveal that :math:`\frac{dN_c}{dt}` increases with :math:`C_P`,
+:math:`\overline{\varepsilon}`, and :math:`\overline{\Gamma}`. During flocculation
+:math:`C_P` will decrease and thus :math:`\frac{dN_c}{dt}` will also decrease.
+
+Model
+=====
+Continuing from \citet{pennock_theoretical_2016}, the above Lagrangian differential relationships are further developed to become integrated performance prediction equations. Equations :eq:`Ncld` and :eq:`Nctd` cannot be integrated as written because the concentration of non-settleable particles is expected to change with each collision, and thus that relationship must be specified. This is accomplished by use of another first-order relationship that relates :math:`C_P` to :math:`N_{c}`,
+
+.. math::
+   :label: dCP
+
+	 \frac{dC_{P}}{dN_{c}}=-kC_{P},
+
+
+where :math:`k` is an experimentally-derived constant that physically represents the portion of the non-settleable particles that become settleable particles on average after each collision time, :math:`\overline{t_c}`, and will depend, in part, upon the design capture velocity used for sedimentation, :math:`v_c`. Since :math:`\overline{t_c}` increases over time as :math:`\overline{\Lambda}` increases, the above formulation is not proportional to :math:`\frac{dC_P}{dt}`. Physically, Equation :eq:`dCP` states that, with each progressive non-settleable particle collision, :math:`C_P` decreases by some proportion. Further, Equation :eq:`dCP` states that this decrease is directly proportional to :math:`C_P`. With each successive successful collision, the absolute reduction in :math:`C_P` is less than the prior one. The value of :math:`k` is expected to be less than 1, because not all non-settleable particles will have a collision and grow to a size with a sedimentation velocity greater than :math:`v_c` in the average time required for a collision.
+
+Having Equation :eq:`dCP`, the next step is to substitute it into Equations :eq:`Ncld` and :eq:`Nctd` and integrate. It is not currently known how to make accurate estimates of :math:`\rho_P` and :math:`\overline{d}_P` over the course of the flocculation process, during which the distribution of sizes, composed of fractals of varying densities, increases in both mean and in magnitude of spread. Given reliable estimates, Equations :eq:`Ncld`, :eq:`Nctd`, and :eq:`dCP` could be used directly. However, as a first approximation, they can be expressed in terms of the subset of non-settleable particles which are primary particles, since :math:`\rho_P` and :math:`\overline{d}_P` can be more confidently estimated for this population of particles.
+
+Primary particles are chosen over the minimally-settleable size or any intermediate non-settleable size, because it is hypothesized that, since primary particles must collide with other small non-settleable particles numerous times to attain a settleable size, collisions involving primary particles are the rate-limiting step in flocculation. For the majority of the flocculation process in an initially monodisperse suspension, after the first collisions have been completed, the collision rate of primary particles becomes slower than the collision rates of an equivalent number concentration of primary particles that have already formed flocs containing any other number of primary particles \citep{weber-shirk_flocculation_2010}. Therefore, the final concentration of non-settleable particles is dependent upon the collisions of primary particles, and it is hypothesized that the final concentration of non-settleable particles is proportional to the final concentration of primary particles. Further experimental work will be needed to confirm this hypothesis and detail this relationship, but for the present study, prediction of performance with respect to primary particles will be considered representative of non-settleable particles. The primary particles are defined here as the suspended particles (kaolinite for this study) and the attached nanoparticles of coagulant precipitate.
+
+Solving Equation :eq:`dCP` for :math:`dN_{c}`, substituting it into Equations :eq:`Ncld` and :eq:`Nctd`, and rewriting the equations in terms of primary particles results in Equation :eq:`dCPlam`,
+
+.. math::
+   :label: dCPlam
+
+	 \frac{dC_{P}}{-kC_{P}}=\pi\overline{\alpha}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3}\overline{G}dt,
+
+
+and Equation :eq:`dCPturb`,
+
+.. math::
+   :label: dCPturb
+
+	 \frac{dC_{P}}{-kC_{P}}=\pi\overline{\alpha}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{8/9}\left(\frac{\overline{\varepsilon}}{\overline{d}_{P}^2}\right)^{1/3}dt.
+
+
+From this point forward, variables with the subscript P will represent a property of the primary particle subset of the non-settleable particle population rather than the whole.
+
+It is interesting to note that rearranging Equations :eq:`dCPlam` and :eq:`dCPturb` in terms of :math:`\frac{dC_P}{dt}` gives exponents for :math:`C_P` of :math:`\frac{5}{3}` and :math:`\frac{17}{9}`. Previous flocculation rate equations were second-order, but the observed flocculation rate was less than second-order \citep{benjamin_water_2013}. The slight deviation from an exponent of two comes from the assumption of \citet{pennock_theoretical_2016} that relative velocity between colliding particles scales with :math:`\Lambda` rather than :math:`d_P`. This is to say that, in dilute suspensions characteristic of raw water, where particles are separated by :math:`\overline{\Lambda}\gg \overline{d}_P`, the majority of :math:`\overline{t_c}` is spent with the distance between particles characterized by :math:`\overline{\Lambda}` instead of :math:`\overline{d}_P`. The time required for the final approach for a collision is hypothesized to be insignificant compared the time for :math:`\overline{V}_Cleared` to equal :math:`\overline{V}_Surround`.
+
+From Equations :eq:`dCPlam` and :eq:`dCPturb`, it is possible to integrate and obtain equations for flocculation performance. After separation of variables, one side of the equation is integrated with respect to time from the initial time (:math:`t=0`) to the time of interest, generally taken to be the mean hydraulic residence time (:math:`t=\theta`). The other side of the equation is integrated with respect to the concentration of primary particles from the value at the initial time (:math:`C_{P_0}`), equivalent to the initial concentration of non-settleable particles, to the concentration of primary particles at the time of interest (:math:`C_{P}`). For collisions dominated by viscous forces (Equation :eq:`dCPlam`), the integral becomes:
+
+.. math::
+   :label: intdCPlam
+
+	 \frac{1}{\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\int_{C_{P_0}}^{C_{P}}C_{P}^{-5/3}dC_{P}=-k\overline{\alpha}\overline{G}\int_0^\thetadt.
+
+
+The integral on the left hand side assumes that :math:`\rho_{P}` does not change as :math:`C_P` changes. One assumption on the right side is that :math:`\overline{\Gamma}`, of which :math:`\overline{\alpha}` is a function, does not vary with :math:`t`. This requires that adsorption of coagulant to colloidal particles in rapid mix be fast enough to be approximated as completed by the beginning of flocculation. This assumption may not be valid for high rate flocculators especially under conditions of low :math:`C_P_0`. Further work on the rate and efficacy of rapid mix is merited.
+
+The other assumption on the right hand side is that the mean velocity gradient, :math:`\overline{G}`, does not change over the course of the flocculation process. In mechanically-mixed flocculators, the use of a simple spatial average is not reasonable, as the velocity gradient changes very dramatically from the bulk flow to the tip of the impeller blade and individual particles follow different paths that expose them to different velocity gradient zones in different sequences and durations \citep{boller_particles_1998}. The distribution of residence times in a mechanical flocculator would also need to be taken into account for the integration. For baffled hydraulic flocculators, on the other hand, the use of the spatial average, :math:`\overline{G}`, and considering it constant with :math:`t` is generally a reasonable approximation, as mixing energy in a well-designed hydraulic flocculator is rather uniformly distributed spatially, the zones of higher energy dissipation rate after the baffles do not vary appreciably with time when operating at a constant flow rate, and all particles follow similar paths through the flocculator.
+
+Integration of Equation :eq:`intdCPlam` gives:
+
+.. math::
+   :label: CPlamint
+
+	 \frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)=k\overline{\alpha}\overline{G}\theta.
+
+
+This can be put in terms of :math:`\overline{\Lambda}` for simplicity by using Equation :eq:`Ld` and rearranging in terms of the familiar Camp-Stein parameter, :math:`\overline{G}\theta`, to be
+
+.. math::
+   :label: Gtlam
+
+	 \overline{G}\theta = \frac{3}{2}\frac{{\left( {{\overline{\Lambda} ^2} - \overline{\Lambda} _0^2} \right)}}{{k\pi\overline{\alpha} \overline{d}_P^2}}.
+
+
+Equation :eq:`Gtlam` gives guidance for flocculator design in that higher values of :math:`\overline{G}\theta` are needed for flocculators to achieve greater changes in :math:`\overline{\Lambda}` (or :math:`C_P`) or to overcome low :math:`\overline{\Gamma}`. It should be noted that the :math:`\overline{\Lambda}_0` term in Equation :eq:`Gtlam` will generally be very small compared to the :math:`\overline{\Lambda}` term for most flocculation scenarios. In this case, :math:`\overline{\Lambda}_0` can be considered negligible. While simplifying the equation, this also gives the result that flocculators must be designed not so much for the particle concentrations they will receive but for the particle concentrations they are intended to produce. Modifying Equation :eq:`Gtlam` to be in terms of :math:`C_P` produces:
+
+.. math::
+   :label: GtlamSim
+
+	 \overline{G}\theta = \frac{3}{2k\pi\overline{\alpha}}\left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{2/3}.
+
+
+A desirable way to represent flocculation performance is with the negative log of the fraction of particles remaining (also often referred to as log removal), :math:`pC^*`, given in \citet{swetland_flocculation-sedimentation_2014} as:
+
+.. math::
+   :label: pC
+
+	 p{C^*}=-\log_{10}\left(\frac{C_{P}}{C_{P_0}}\right)
+
+
+Likewise, a way to simplify Equation :eq:`CPlamint` is to put it in terms of the particle volume fraction, :math:`\phi`, defined as:
+
+.. math::
+   :label: phi
+
+	 \phi=\frac{C_P}{\rho_P}=\frac{\pi}{6}\left(\frac{\overline{d}_P}{\overline{\Lambda}}\right)^3.
+
+
+Putting Equation :eq:`CPlamint` in terms of :math:`pC^*` and
+:math:`\phi` results in:
+
+.. math::
+   :label: pClam
+
+	 p{C^*}=\frac{3}{2}\log_{10}\left[\frac{2}{3}\left(\frac{6}{\pi}\right)^{2/3}k\pi\overline{\alpha}\overline{G}\theta\phi_0^{2/3}+1\right].
+
+
+Equation :eq:`pClam` is a predictive performance model for flocculation in flows with long range particle transport toward collisions dominated by viscous forces. It is proposed as applicable to laminar flows, with potential applicability to the dissipation range of turbulent flows. Given the properties of the flocculator (:math:`\overline{G}` and :math:`\theta`) and its influent (:math:`\phi_0` and :math:`\overline{\alpha}`), flocculation performance can be predicted in terms of :math:`pC^*`. The development of Equation :eq:`pClam` was the result of a team effort of Cornell University's AguaClara program and hence it will be subsequently referred to as the AguaClara viscous flocculation model.
+
+
+Validation of Equation :eq:`pClam` will require experiments over a range of conditions. For laminar conditions, data have already been collected by \citet{swetland_flocculation-sedimentation_2014}, and the aptness of Equation :eq:`pClam` can be tested with respect to its predictions for these data. Turbulent flow flocculator performance data can also be compared with data from \citet{swetland_flocculation-sedimentation_2014} in order to see if there is any distinguishable difference between performance for these two different conditions.
+
+Since validation of Equation :eq:`pClam` for turbulent flows requires flocculation experiments in turbulent conditions, it is important to differentiate which experimental conditions will constitute viscosity-dominated flocculation (Equation :eq:`pClam`) and which will constitute inertia-dominated flocculation (Equation :eq:`pCturb`). The distinction is made based on the division between ranges of length scales in turbulent flow. The Kolmogorov microscale (:math:`\eta`) describes the smallest dissipative eddies in a turbulent flow and is defined as
+
+.. math::
+   :label: Kolm
+
+	 \eta=\left(\frac{\nu^3}{\varepsilon}\right)^{1/4}
+
+
+\citep{pope_turbulent_2000}. At the Kolmogorov microscale, the Reynolds number defined by the length scale of eddies is 1, which means that inertial and viscous forces are in balance. At this length scale, Equations :eq:`vrlam` and :eq:`vrturb` predict the same :math:`v_r`, meaning that the successful collision rate for both the viscous and inertial models is the same when :math:`\overline{\Lambda}=\overline{\eta}`, where :math:`\overline{\eta}` is the spatially averaged Kolmogorov microscale for the flow.
+
+Therefore, for this study, when :math:`\frac{\overline{\Lambda}}{\overline{\eta}}\geq1`, flocculation was considered to occur in the inertial subrange, and when :math:`\frac{\overline{\Lambda}}{\overline{\eta}}<1`, flocculation was nominally said to occur in the dissipation range. Turbulence literature indicates that the transition between the inertial subrange and the dissipation range does not occur at the Kolmogorov microscale, but at some length scale that is a multiple, probably order 10, of the Kolmogorov microscale \citep{pope_turbulent_2000}. There does not, however, appear to be a clear value given for this length scale, and for the purposes of this study, the Kolmogorov microscale was utilized to characterize the transition. Experiments to test Equation :eq:`pClam` must therefore occur in conditions where :math:`\frac{\overline{\Lambda}}{\overline{\eta}}<1`, and experiments to test Equation :eq:`pCturb` must occur in conditions where :math:`\frac{\overline{\Lambda}}{\overline{\eta}}\geq1`.
+
+Based on the considerations given above, there were two potential lines of experimentation to prove the validity of both the AguaClara viscous and AguaClara inertial flocculation models. The applicability of Equation :eq:`pClam` to the dissipation range of turbulent flow required experiments performed in conditions where :math:`\frac{\overline{\Lambda}}{\overline{\eta}}` was small (i.e., :math:`<1`). This could be accomplished by performing experiments with high initial primary particle concentration (i.e., small :math:`\overline{\Lambda}_0`) and low mean energy dissipation rate (i.e., large :math:`\overline{\eta}`). It should be noted that it would be necessary for :math:`\frac{\overline{\Lambda}}{\overline{\eta}}` to remain small over the entire process in order for Equation :eq:`pClam` to describe the process. Based on the model, it was not clear that this would be the case, since the model predicts that as flocculation proceeds, :math:`\overline{\Lambda}` will increase, approaching length scales in the inertial subrange.
+
+Likewise, testing Equation :eq:`pCturb` would require conditions where :math:`\frac{\overline{\Lambda}}{\overline{\eta}}` was made large (i.e., :math:`\geq1`) by means of a low primary particle concentration and a high energy dissipation rate, which may even result from conditions in which :math:`\overline{\Lambda}_0` is large. Thus, an efficient way to test the applicability of both equations was to run high primary particle concentration experiments at the lowest energy dissipation rate possible while still maintaining turbulent conditions. If the results proved to be better fit by the inertial model, it would be evidence that inertial forces are dominant for the majority of turbulent flocculation, even for cases where viscous forces are initially dominant.
+
+Experimental Protocols
+======================
+
+In order to conduct the experiments required to test Equations :eq:`pClam` and :eq:`pCturb`, it was necessary to use a lab scale flocculator that operated under turbulent conditions and had flexibility in the parameters that control :math:`\frac{\overline{\Lambda}}{\overline{\eta}}`. The design scheme chosen to meet these requirements was a tube flocculator, illustrated in Figure \ref{1fig:Diagram} and described in \citet{pennock_theoretical_2016}. This tube flocculator operated in the turbulent flow regime, which for pipe flow means that :math:`Re>4,000` \citep{granger_fluid_1995}. Additionally, the ratio :math:`\frac{\overline{\Lambda}}{\overline{\eta}}` can be adjusted by varying influent primary particle concentration (for :math:`\overline{\Lambda}`) as well as the episodic constriction of the tubing, the hydraulic residence time through the system, or the head loss across the system (for :math:`\overline{\eta}`). The latter modifications change :math:`\overline{\varepsilon}`, which then changes :math:`\overline{\eta}` according to Equation :eq:`Kolm`. The change in mean energy dissipation rate due to any modification to the system was approximated by
+
+.. math::
+   :label: EDR
+
+	 \overline{\varepsilon}=\frac{gh_\ell}{\theta},
+
+
+where :math:`g` is the acceleration due to gravitational force and :math:`h_\ell` is the head loss across the flocculator. As mentioned previously, the use of :math:`\overline{\varepsilon}` assumes that the energy dissipation rate throughout the flocculator is completely uniform so that it can be represented with a simple spatial average rather than a weighted average accounting for the proportion of the flow passing through different zones of energy dissipation rate. This approximation requires that the majority of energy dissipation (represented by head loss) is due to fluid shear (minor loss) in the bulk flow. If the head loss across a flocculator were primarily as a result of shear on the reactor walls (major loss), only a small fraction of the flow would experience this energy dissipation rate in the near-wall zone, and estimating the mean energy dissipation rate by this method would be invalid.
+
+It is hypothesized, however, that the constrictions in the tube flocculator created submerged free jets downstream, generating fluid shear across the cross section of the flow \citep{pennock_theoretical_2016}. This hypothesis is supported by a calculation of the head loss due to wall shear using the Darcy-Weisbach equation \citep{granger_fluid_1995}. The turbulent tube flocculator would be expected to have a total head loss of around 7 cm if only wall shear were present, but an average head loss of 90 cm was measured across the flocculator by means of a differential pressure sensor, indicating that significant fluid shear is present.
+
+Referring to Equation :eq:`EDR`, changing the head loss by changing the constriction of the tubes or changing the water elevation difference across the flocculator would change the energy dissipation rate. Likewise, either of the above two modifications would change the mean hydraulic residence time in the flocculator. This could also be accomplished by changing the length of the flocculator.
+
+.. _figure_apparatus:
+
+.. figure:: Images/apparatus.png
+   :width: 500px
+   :align: center
+   :alt: internal figure
+
+   Diagram of Turbulent Tube Flocculator adapted from \citet{pennock_theoretical_2016} with modifications made to the outlet weir system and the addition of strong base solution.
+
+
+
+:numref:`figure_apparatus` illustrates the process sequence used in this study. At the beginning of the process, tap water from the Cornell University Water Filtration Plant came into the system with, on average, a pH of 7.67, a turbidity of 0.056 nephelometric turbidity units (NTU), a total hardness of 150 mg/L, a total alkalinity of 140 mg/L, and a dissolved organic carbon (DOC) concentration of 1.80 mg/L \citep{bp-mws_drinking_2016}. This water was temperature-controlled by means of a PID (proportional-integral-derivative) controller, which regulated the relative fractions of hot water and cold water used to maintain the level in the constant head tank. The temperature-controlled water was passed through a granular activated carbon (GAC) filter to reduce the effect of dissolved organic matter (DOM) on experimental results. The water was then sent to the constant head tank, where it was bubbled with air to strip out supersaturated dissolved gases that might come out of solution during the experiment, resulting in formation of bubbles.
+
+From the constant head tank, this conditioned water was delivered to the turbulent tube flocculator. Before entry to the flocculator, the water was set at a constant primary particle concentration by means of a computer-controlled peristaltic pump that introduced a concentrated kaolinite clay suspension (R.T. Vanderbilt Co., Inc., Norwalk, Connecticut) of about 250 g/L. A fraction of the mixed flow was sampled by a peristaltic pump and analyzed for turbidity with an HF Scientific MicroTOL turbidimeter at a distance of greater than ten diameters downstream from the clay input and then reintroduced at the point where clay suspension was added. This turbidity reading was input into a PID control system which determined the speed of the clay pump according to the discrepancy between the influent turbidity and the experimental target value.
+
+Along with the clay, strong base (NaOH) manufactured by Sigma-Aldrich (St. Louis, MO) was added upstream of the flocculator with a peristaltic pump to keep the pH of the water at :math:`7.5\pm0.5`, which was the criterion set for the pH in these experiments. In the winter, the pH of the tap water dropped close to 7, and so sufficient NaOH was added to account for seasonal variations in the natural base-neutralizing capacity (BNC) of the water and to raise the pH above 7 to around 7.5.  This base addition was also sufficient to neutralize the acidity of the polyaluminum chloride (PACl) coagulant used for this study, which had been found to impact the solubility of PACl at high doses. Base doses were calculated to account for the normality of the PACl solution, based on a titration which found that the PACl solution was approximately 0.025 equivalents of strong acid per gram as Al.
+
+Just prior to entering the flocculator,  PACl coagulant (PCH-180) manufactured by the Holland Company, Inc. (Adams, Massachusetts) was added to the flow by a computer-controlled peristaltic pump which varied the coagulant dose between experiments. After entering the system, the coagulant then entered a small orifice used to accomplish rapid mix by forming a jet downstream. From there, the suspension traveled up through the flocculator made of 3.18 cm (1.25 in) inner diameter tubing. Within the flocculator, the fluid passed through constrictions in the tubing that caused the flow to contract, resulting in flow expansions afterward and achieving increased mixing and energy dissipation.
+
+After leaving the flocculator, the flow passed a vertical tube with a free surface that served as an air release. This removed bubbles in the system so that they would not interfere with settling or analysis of the flocs. A portion of the flow was then diverted for sedimentation by means of a peristaltic pump up a clear one-inch PVC pipe angled at :math:`60^{\circ}`. The flow rate through the pump was selected based on the dimensions of the tube and its angle to achieve a desired capture velocity, :math:`v_c`. The supernatant from this tube settler was passed through an HF Scientific MicroTOL nephelometric turbidimeter to record the effluent turbidity for the duration of the experiment. Recording the settled effluent turbidity made it possible to calculate the :math:`pC^*` term in Equations :eq:`pClam` and :eq:`pCturb` (in terms of non-settleable particles) and also made possible comparison with data from \citep{swetland_flocculation-sedimentation_2014}.
+
+After data from the settled flocs had been collected, the flow from the effluent turbidimeter was sent to the drain along with the bulk flow. The bulk flow traveled past a second air release before exiting the drain. The air release gave the flow exiting the drain a free surface as it flowed over the exit weir so that the exiting water developed into a supercritical flow. Thus, the flow over the weir was not influenced by the flow downstream of the free surface, and the flow rate could be controlled by adjusting the elevation of the free surface before the drain. The outlet weir was a 1-1/4" PVC pipe within an upright 3" clear pipe, which were joined by a flexible coupling adapter. The effluent water accumulated in the clear outer pipe until it reached the elevation of the top of the inner pipe and flowed down through it. The flow rate could be adjusted by loosening the flexible coupling so that the elevation of the top of the inner pipe could be adjusted. As the bulk flow exited down out of the inner pipe to the drain, it passed over a glass electrode sensor to
+measure pH.
+
+Results
+=========
+
+The above process was used to conduct the experiments to test the applicability of Equations :eq:`pClam` and :eq:`pCturb` in turbulent flocculation. The influent turbidity was set at a constant of 900 NTU. The mean energy dissipation rate was about 21.5 mW/kg, which resulted from choosing a flow rate of about 110 mL/s so that the Reynolds number was just above 4,000. These values were chosen to ensure viscous-dominated turbulent initial conditions. For these experiments, coagulant doses ranged from 0.05 to 98 mg/L as Al. A :math:`v_c` of 0.12 mm/s was used for all experiments. Data from these nominally viscous experiments are shown in Figure \ref{1fig:ViscDataFit}. In this graph, the data are plotted in terms of Equation :eq:`pClam` and its corresponding composite parameter taken from Equation :eq:`Nclam`,
+
+.. math::
+   :label: Paramlam
+
+	 N_{c}\propto\overline{\alpha}\theta \overline{G}\phi_0^{2/3}.
+
+
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.6]{PennockFig2}
+\caption{Fit of Equation :eq:`pClam` to data from :math:`Re\approx4,000` experiments. Hollow points indicate data not used in fitting the model.}
+\label{1fig:ViscDataFit}
+\end{figure}
+
+
+In Figure \ref{1fig:ViscDataFit} the data show increasing performance (i.e., :math:`pC^*`) with increasing values of composite parameter. At the highest values, however, a marked decrease begins. For these graphs, the model fits were done for all points where increasing performance was seen, because the model does not currently include a mechanism for the decreasing performance. The values for :math:`k` were determined by the Levenberg-Marquardt algorithm, and the value for the viscous model was 0.030, while the :math:`k` value for the inertial model was 0.031. In Figure \ref{1fig:InertDataFit}, it can be seen that for lower values of the composite parameter, the AguaClara inertial flocculation model fits the data better, while in Figure \ref{1fig:ViscDataFit} the AguaClara viscous flocculation model can be seen to better fit the performance at higher coagulant doses. The :math:`R^2` value for the viscous fit is 0.958, while the :math:`R^2` value for the inertial fit is 0.954. Likewise, the sum of squared errors for the viscous fit is 0.228 (mean error of 0.128), while that for the inertial fit is 0.252 (mean error of 0.134). Thus, the two models give similarly good fits of the data, but the viscous fit is slightly better at predicting :math:`pC^*`.
+
+From the values given previously, the ratio :math:`\frac{\overline{\Lambda}_0}{\overline{\eta}}` can be calculated for the experimental conditions. Equation :eq:`Ld` can be used to compute (:math:`\overline{\Lambda}_0`). For these experiments, :math:`\overline{d}_P` is taken to be the average diameter of kaolinite clay particles, found by \citet{wei_coagulation_2015} and \citet{sun_characterization_2015} to be 7 :math:`\mum`. The concentration can be converted from NTU to the necessary mass/volume (mg/L) unit by using as a proportion the measurement reported by \citet{wei_coagulation_2015} of 68 NTU for 100 mg/L of kaolinite clay. Last, the density was assumed to be 2.65 g/:math:`cm^3` for kaolinite.
+
+The Kolmogorov microscale for the experimental conditions can be calculated using Equation :eq:`Kolm`. The mean kinematic viscosity of water for these experiments was 0.95 :math:`\mathrm{mm^2/s}`, which is calculated from the mean water temperature for the experiments of 22.3:math:`^\circ`C. The mean value of energy dissipation rate, :math:`\overline{\varepsilon}`, can be calculated from Equation :eq:`EDR`. Using the procedure described above, the initial mean separation distance between primary particles (:math:`\overline{\Lambda}_0`) in the above experiments was 71 :math:`\mu m`. The Kolmogorov microscale was 79.5 :math:`\mu m`, and 645 NTU would be the turbidity expected for separation distances matching the Kolmogorov microscale. The above calculations give a ratio of 0.89 for :math:`\frac{\overline{\Lambda}_0}{\overline{\eta}}`, which is less than 1, as intended.
+
+For flocculation in laminar flows, data were used from the work of \citet{swetland_flocculation-sedimentation_2014}. Figure \ref{1fig:Karen} shows Equation :eq:`pClam` fit to results for a capture velocity of 0.12 mm/s at two hydraulic residence times, five influent turbidity values and a range of coagulant doses. \citet{swetland_flocculation-sedimentation_2014} showed that the projected x-axis intercept of the linear region of the data (with a log-log slope of 1 according to her plotting of the data) was proportional to the capture velocity used for sedimentation. Correspondingly, :math:`k` is expected to be a function of capture velocity.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.6]{PennockFig4}
+\caption{Fit of Equation :eq:`pClam` to laminar flocculation data from \citet{swetland_flocculation-sedimentation_2014}. For comparison, turbulent flocculation data from this study (see Figure \ref{1fig:ViscDataFit}) are overlaid on the fit.}
+\label{1fig:Karen}
+\end{figure}
+
+Referring to Figure \ref{1fig:Karen}, Equation :eq:`pClam` fits the data from \citet{swetland_flocculation-sedimentation_2014} well with a :math:`k` value of 0.027. The resulting :math:`R^2` for this fit is 0.844. The sum-squared error is 5.03, giving an average error of 0.034 for the fit. For comparison, the data shown in Figure \ref{1fig:ViscDataFit} are overlaid on the fit in Figure \ref{1fig:Karen}. Although not shown, the AguaClara inertial flocculation model was also applied to these data to confirm the applicability of the AguaClara viscous flocculation model. As expected, the fit was inferior, with an :math:`R^2` value of 0.765 and a sum-squared error of 7.79, giving an average error of 0.052.
+
+Discussion
+==========
+
+The goodness of fit seen in Figures \ref{1fig:ViscDataFit}, \ref{1fig:InertDataFit}, and \ref{1fig:Karen} indicate that the models capture the important mechanisms governing flocculation performance for a wide range of coagulant doses in both laminar and turbulent hydraulic flocculation. One of the challenges in fitting the data pertained to the assumption made for the characteristic diameter of PACl precipitate clusters, :math:`\overline{d}_\mathrm{C}`. This value has significant influence on the value of :math:`\overline{\Gamma}`, which in turn influences the values of the composite parameters (Equations :eq:`Paramlam` and :eq:`Paramturb`).
+
+It is known that PACl contains aluminum monomers and oligomers as well as :math:`\mathrm{Al_{13}}` and :math:`\mathrm{Al_{30}}` nanoclusters, with the larger :math:`\mathrm{Al_{30}}` nanoclusters having a diameter of 1 nm and a length of 2 nm \citep{mertens_polyaluminum_2012}. It has been found, however, that the components of PACl self-aggregate and go on to form larger clusters \citep{swetland_influence_2013}. For these experiments, the value of :math:`\overline{d}_\mathrm{C}` was chosen based on sizing experiments performed by Garland (2015) with a Malvern Zetasizer Nano-ZS to analyze a 138.5 mg/L (as Aluminum) solution of PACl. The results of her experiments showed a large peak at about 90 nm and a smaller peak at 20 nm. It was originally hypothesized that the 90 nm peak could be a result of the aggregation of 20 nm clusters, so 20 nm was originally chosen.
+
+Analysis of the data from this study, however lent more credence to assuming 90 nm, because when model predictions based on an assumption of 20 nm coagulant precipitate clusters were applied to the data, they predicted a leveling off of performance (i.e., due to diminishing returns of adding coagulant as clay platelet surfaces approached full coverage) at coagulant doses where performance continued to improve in the experiments. Selecting 90 nm for :math:`\overline{d}_\mathrm{C}` gave performance predictions that were more consistent with experimental findings for the coagulant doses used in the study, and this value was used in Figures \ref{1fig:ViscDataFit} and \ref{1fig:InertDataFit} along with the analysis associated with them. The difference the choice of :math:`\overline{d}_\mathrm{C}` makes in the estimation of :math:`\overline{\Gamma}` is shown in Figure \ref{1fig:Gammas}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.6]{PennockFig5}
+\caption{Differing estimates of surface coverage by coagulant, :math:`\overline{\Gamma}`, for two choices of characteristic PACl coagulant precipitate cluster diameter.}
+\label{1fig:Gammas}
+\end{figure}
+
+A limitation of the model can be seen in the data in Figures \ref{1fig:ViscDataFit} and \ref{1fig:InertDataFit} at higher values of the composite parameters. After increasing steadily for all of the preceding range of coagulant doses, the performance began to decline after the dose of 10.9 mg/L as Aluminum. A simple hypothesis for the decline in performance (which corresponds with an effluent turbidity increase over the five data points from 2.7 NTU to 11.1 NTU) is that an increase in free PACl precipitates made a significant contribution to the effluent turbidity. As the PACl concentration increased, the coverage of reactor and clay platelet surfaces by coagulant became more complete and the free coagulant concentration also increased. With very high coagulant doses like the ones used in the upper end of the experimental range, it is possible that the formation of PACl self-aggregates was favorable, increasing the turbidity of the suspension. Indeed, calculation of the volume fraction for the 10.9 mg/L experimental PACl dose gives a volume fraction value (for clay and coagulant combined) of :math:`6.1\times10^{-4}`, while for the highest dose of 98 mg/L as Al, the value was :math:`8.3\times10^{-4}`, a 37\% increase due solely to the increased contribution of PACl precipitates.
+
+Another possibility is that as :math:`\overline{\Gamma}` increases above 0.5, the resulting flocs are increasingly formed by PACl-PACl bonds instead of by PACl-kaolinite bonds. If the PACl-PACl bonds are weaker than PACl-kaolinite bonds, it is possible that attachment efficiency decreases for high :math:`\overline{\Gamma}`. The weakness of PACl-PACl bonds compared with PACl-kaolinite bonds is suggested by the relative charges of PACl and kaolinite. While PACl precipitate surfaces are positively charged, the surfaces of kaolinite are mostly negatively charged \citep{wei_coagulation_2015}. Therefore, it follows that PACl precipitates will likely have more affinity for kaolinite surfaces than for other PACl precipitates. The :math:`\overline{\Gamma}` calculated for the peak performance was 0.52, and so it is possible that performance decreased past this point because the strength of bonds for experiments at higher doses were weaker.
+
+Comparison of the fits in Figures \ref{1fig:ViscDataFit} and \ref{1fig:InertDataFit} shows comparable fits for the inertial model (Equation :eq:`pCturb`) and the viscous model (Equation :eq:`pClam`). It is apparent that the behaviors of the two models are not drastically different, and this stems from the fact that the difference between Equation :eq:`vrlam` and :eq:`vrturb` is the difference between an exponent of 1/2 and 1/3 for :math:`\varepsilon` as well as an exponent of 1 and 1/3 for :math:`\Lambda`.
+
+The slightly better performance of the AguaClara viscous flocculation model compared with the AguaClara inertial flocculation model appears to suggest that the mean separation distance between primary particles in these experiments did not grow to be inertially dominated for the majority of the flocculation process. Figure \ref{1fig:Lambdas} shows the predictions by both the inertial and viscous models of :math:`\overline{\Lambda}` with time. If the transition between viscosity-dominated relative velocities and inertia-dominated relative velocities was the Kolmogorov microscale, the velocities would have become inertia-dominated by about three seconds into flocculation, less than one percent of the mean hydraulic residence time, leaving the majority of the process governed by inertial forces. The better fit by the AguaClara viscous flocculation model indicates that the transition happened much later in the process, if it happened at all. This indicates that the transition occurs at a multiple of the Kolmogorov microscale, as suggested in turbulence literature \citep{pope_turbulent_2000}. Notably, the turbulent data from this study show good correspondence with the laminar flocculation data collected by \citet{swetland_flocculation-sedimentation_2014}, as seen in Figure \ref{1fig:Karen}, which indicates that there may be some similarity between the dissipation range of turbulent flocculation and laminar flocculation.
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.6]{PennockFig6}
+\caption{AguaClara viscous and AguaClara inertial flocculation model predictions for :math:`\overline{\Lambda}` as a function of time given the experimental conditions of 900 NTU influent turbidity, 10.93 mg/L as Al PACl dose, and an energy dissipation rate of 22.75 mW/kg up until the flocculator mean hydraulic residence time of 430 seconds.}
+\label{1fig:Lambdas}
+\end{figure}
+
+Figure \ref{1fig:Lambdas} provides a few interesting points for reflection. First, the two models make similar predictions for :math:`\overline{\Lambda}` during flocculation, which relates to the similar relationships used for :math:`v_r`. The models make especially similar predictions near :math:`\overline{\eta}`, since this is where viscous and inertial forces are of similar magnitude. Where both models cross :math:`\overline{\eta}`, they are parallel, as particles have the same :math:`v_r` in either model at this point.
+
+Second, these experiments, which were very turbid and minimally turbulent demonstrated behavior that was more suggestive of viscous influence than inertial influence. Therefore, it is reasonable to hypothesize that Equation :eq:`pClam` is applicable to turbulent flocculation processes with high :math:`\frac{\overline{\Lambda}}{\overline{\eta}}`, and this will require further study. For improved modeling accuracy, it would be possible, once the respective ranges of the viscous and inertial models have been found, to use the viscous model up until the transition and then use the inertial model to account for the remainder of the process. Until further work is done to delineate the applicability of the two models over the range of flocculation regimes, it is reasonable to recommend the use of Equation :eq:`Gtlam` for design and Equation :eq:`pClam` for operation of hydraulic flocculators, since the viscous model gives such similar predictions to the inertial model. Additionally, the Camp-Stein parameter, :math:`\overline{G}\theta` seen in Equation :eq:`Gtlam` has historically been the key design parameter for flocculators.
+
+Applying the AguaClara viscous flocculation model to the design of a hydraulic flocculator indeed gives reasonable results. Assuming that a flocculator is expected to receive sufficiently high turbidities that the influent concentration can be neglected, Equation :eq:`GtlamSim` can be used. In order for it to treat to a settled effluent of 3 NTU (pre-filtration) with sufficient PACl to achieve a surface area coverage fraction of 0.5, it would need to have a :math:`\overline{G}\theta` of 99,600. \citet{davis_introduction_2008} give the range of  :math:`\overline{G}\theta` values pertinent to flocculation of high turbidities as between 36,000 and 96,000, so this result is reasonable. This analysis does not account for removal of particles in a floc blanket that would enable use of a lower value of :math:`\overline{G}\theta`.
+
+Regarding flocculator design, recommended values of :math:`\overline{G}` in flocculation range from :math:`10\:\mathrm{\frac{1}{s}}` to :math:`100\:\mathrm{\frac{1}{s}}`, which correspond to :math:`\overline{\varepsilon}` values of about 0.1 to 10 mW/kg \citep{mcconnachie_design_2000}. However, there is evidence that higher velocity gradients are advantageous, as found by \citet{garland_revisiting_2016} as well as the work done in this study, which made use of energy dissipation rates of about 22 mW/kg. For hydraulic flocculators, at least, designers should consider using higher energy dissipation rates than conventionally used, since they have a much lower ratio of maximum to average energy dissipation rate, leading to less floc breakup at high energy dissipation rates compared to mechanically mixed flocculators.
+
+The assumption that primary particle removal is proportional to non-settleable particle removal appears to be supported by the goodness of fit supplied by the AguaClara viscous and AguaClara inertial flocculation models to the data (see Figures \ref{1fig:ViscDataFit} and \ref{1fig:InertDataFit}). This assumption is likely included in the values of :math:`k` fit by the model. A mechanistic understanding of :math:`k` will require that the proportionality between primary and non-settleable particles be understood explicitly. It is possible that :math:`k` is a function of rapid mix effectiveness, and since :math:`k` predicts :math:`pC^*`, it will also be dependent on :math:`v_c`. Future experiments at varying :math:`v_c` are planned. Currently, :math:`\overline{\alpha}` is calculated assuming that rapid mix was accomplished very early on in the process for these experiments, but if colloid coating by precipitated coagulant in rapid mix is dependent upon diffusion rather than hydraulic shear, it will be a function of :math:`\theta` rather than :math:`\overline{G}\theta`, making flocculation less effective at high flow rates. Additionally, the use of :math:`\overline{\varepsilon}` (or :math:`\overline{G}`) assumes a uniform energy dissipation rate in the flocculator. Any spatial deviation in the laboratory flocculator from a uniform energy dissipation rate would have had an impact on the values of :math:`k` relative to their theoretical values, which are dictated by the rate of conversion of primary particles to flocs.
+
+Summaries
+=========
+
+In this work, two models were proposed for the prediction of the performance of hydraulic flocculators operating in different flocculation regimes for the purpose of drinking water treatment. When the flow is laminar, viscous forces control the relative velocities between particles on a collision path, and the performance equation is :math:`pC^*=\frac{3}{2}\log_{10}\left[\frac{2}{3}\left(\frac{6}{\pi}\right)^{2/3}\pi k\overline{\alpha}\overline{G}\theta\phi_0^{2/3}+1\right]`. When flocculation occurs in turbulent flow, the relative velocities between primary particles could be controlled by viscous forces or inertial forces. The equation for inertially-controlled relative velocities is :math:`pC^*=\frac{9}{8}\log{\left[\frac{8}{9}\left(\frac{6}{\pi}\right)^{8/9}\pi k\overline{\alpha}\left(\frac{\overline{\varepsilon}}{\overline{d}_P^2}\right)^{1/3}\theta\phi_0^{8/9}+1\right]}`.
+
+In order to test the applicability of the first equation to laminar conditions, its predictions were compared with data from \citep{swetland_flocculation-sedimentation_2014}. To validate the first equation and the second equation in turbulent flow, experiments were conducted in turbulent flow for initial conditions of :math:`\frac{\overline{\Lambda}}{\overline{\eta}}<1`. It was found that the viscous equation was slightly more suitable in these conditions. Until further work is done on delineating the relative predominance of viscous and inertial forces over the range of turbulent flocculation conditions, the authors recommend using the AguaClara viscous flocculation model. For design purposes, this model indicates that flocculator design is more sensitive to the desired effluent concentration of particles than the range of influent concentrations that might be encountered. This study also supports the use of higher energy dissipation rates (or velocity gradients) than conventionally recommended for hydraulic flocculators. Further work is needed to characterize the functional dependence of :math:`k` on capture velocity and energy dissipation rate, as well as the relationship between the final concentrations of primary and non-settleable
+particles.
+
+Acknowledgments
+===============
+
+The authors would like to thank Paul Charles and William R. Pennock for their assistance with the experimental apparatus. This material is based upon work supported by the National Science Foundation under Award No. 1437961 and by the National Science Foundation Graduate Research Fellowship Program under Grant No. DGE-1144153. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+
+
+
+\begin{thebibliography}{29}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Adler(1981)}]{adler_heterocoagulation_1981}
+\bibinfo{author}{Adler, P.~M.} (\bibinfo{year}{1981}).
+\newblock \bibinfo{title}{Heterocoagulation in shear flow}.
+\newblock {\it \bibinfo{journal}{Journal of Colloid and Interface Science}\/},
+  {\it \bibinfo{volume}{83}\/}, \bibinfo{pages}{106--115}. %\URLprefix
+  %\url{http://www.sciencedirect.com/science/article/pii/0021979781900151}.
+  \DOIprefix\doi{10.1016/0021-9797(81)90015-1}.
+%Type = Phdthesis
+\bibitem[{Argaman(1968)}]{argaman_turbulence_1968}
+\bibinfo{author}{Argaman, Y.} (\bibinfo{year}{1968}).
+\newblock {\it \bibinfo{title}{Turbulence in {Orthokinetic} {Flocculation}}\/}.
+\newblock \bibinfo{type}{Ph.{D}.} University of California, Berkeley
+  \bibinfo{address}{United States -- California}.
+\newblock %\URLprefix
+  %\url{http://search.proquest.com/docview/302317202/citation/F0652C1B7D914CA1PQ/1}.
+%Type = Book
+\bibitem[{Benjamin \& Lawler(2013)}]{benjamin_water_2013}
+\bibinfo{author}{Benjamin, M.~M.}, \& \bibinfo{author}{Lawler, D.~F.}
+  (\bibinfo{year}{2013}).
+\newblock {\it \bibinfo{title}{Water quality engineering: physical / chemical
+  treatment processes}\/}.
+\newblock \bibinfo{address}{Hoboken, N.J.}: \bibinfo{publisher}{Wiley}.
+\newblock %\URLprefix
+  %\url{http://encompass.library.cornell.edu/cgi-bin/checkIP.cgi?access=gateway_standard%26url=http://search.ebscohost.com/login.aspx?direct=true&scope=site&db=nlebk&db=nlabk&AN=631668}.
+%Type = Article
+\bibitem[{Boller \& Blaser(1998)}]{boller_particles_1998}
+\bibinfo{author}{Boller, M.}, \& \bibinfo{author}{Blaser, S.}
+  (\bibinfo{year}{1998}).
+\newblock \bibinfo{title}{Particles under stress}.
+\newblock {\it \bibinfo{journal}{Water Science and Technology}\/},  {\it
+  \bibinfo{volume}{37}\/}, \bibinfo{pages}{9--29}. %\URLprefix
+  %\url{http://wst.iwaponline.com/content/37/10/9}.
+%Type = Techreport
+\bibitem[{{BP-MWS} et~al.(2016){BP-MWS}, {CIWS} \&
+  {CUWS}}]{bp-mws_drinking_2016}
+\bibinfo{author}{{BP-MWS}}, \bibinfo{author}{{CIWS}}, \&
+  \bibinfo{author}{{CUWS}} (\bibinfo{year}{2016}).
+\newblock {\it \bibinfo{title}{Drinking {Water} {Quality} {Report} 2016}\/}.
+\newblock \bibinfo{type}{Technical Report} Bolton Point Municipal Water System,
+  City of Ithaca Water System, Cornell University Water System
+  \bibinfo{address}{Ithaca, NY}.
+\newblock %\URLprefix
+  %\url{https://energyandsustainability.fs.cornell.edu/file/AWQR_2016%20final.pdf}.
+%Type = Article
+\bibitem[{Bridgeman et~al.(2010)Bridgeman, Jefferson \& Parsons}]{bridgeman_development_2010}
+\bibinfo{author}{Bridgeman, J.}, \bibinfo{author}{Jefferson, B.}, \&
+  \bibinfo{author}{Parsons, S.~A.} (\bibinfo{year}{2010}).
+\newblock \bibinfo{title}{The development and application of {CFD} models for
+  water treatment flocculators}.
+\newblock {\it \bibinfo{journal}{Advances in Engineering Software}\/},  {\it
+  \bibinfo{volume}{41}\/}, \bibinfo{pages}{99--109}. %\URLprefix
+  %\url{http://www.sciencedirect.com/science/article/pii/S0965997808002111}.
+  \DOIprefix\doi{10.1016/j.advengsoft.2008.12.007}.
+%Type = Article
+\bibitem[{Casson \& Lawler(1990)}]{casson_flocculation_1990}
+\bibinfo{author}{Casson, L.~W.}, \& \bibinfo{author}{Lawler, D.~F.}
+  (\bibinfo{year}{1990}).
+\newblock \bibinfo{title}{Flocculation in {Turbulent} {Flow}: {Measurement} and
+  {Modeling} of {Particle} {Size} {Distributions}}.
+\newblock {\it \bibinfo{journal}{Journal (American Water Works
+  Association)}\/},  {\it \bibinfo{volume}{82}\/}, \bibinfo{pages}{54--68}.
+  %\URLprefix %\url{http://www.jstor.org/stable/41293000}.
+%Type = Article
+\bibitem[{Cleasby(1984)}]{cleasby_is_1984}
+\bibinfo{author}{Cleasby, J.} (\bibinfo{year}{1984}).
+\newblock \bibinfo{title}{Is {Velocity} {Gradient} a {Valid} {Turbulent}
+  {Flocculation} {Parameter}?}
+\newblock {\it \bibinfo{journal}{Journal of Environmental Engineering}\/},
+  {\it \bibinfo{volume}{110}\/}, \bibinfo{pages}{875--897}. %\URLprefix
+  %\url{http://dx.doi.org/10.1061/(ASCE)0733-9372(1984)110:5(875)}.
+  \DOIprefix\doi{10.1061/(ASCE)0733-9372(1984)110:5(875)}.
+%Type = Book
+\bibitem[{Davis \& Cornwell(2008)}]{davis_introduction_2008}
+\bibinfo{author}{Davis, M.~L.}, \& \bibinfo{author}{Cornwell, D.~A.}
+  (\bibinfo{year}{2008}).
+\newblock {\it \bibinfo{title}{Introduction to {Environmental}
+  {Engineering}.}\/}.
+\newblock (\bibinfo{edition}{4th} ed.).
+\newblock \bibinfo{address}{Dubuque, IA}: \bibinfo{publisher}{McGraw-Hill
+  Companies}.
+\newblock \bibinfo{note}{OCLC: 70708094}.
+%Type = Article
+\bibitem[{Delichatsios \& Probstein(1975)}]{delichatsios_coagulation_1975}
+\bibinfo{author}{Delichatsios, M.~A.}, \& \bibinfo{author}{Probstein, R.~F.}
+  (\bibinfo{year}{1975}).
+\newblock \bibinfo{title}{Coagulation in turbulent flow: {Theory} and
+  experiment}.
+\newblock {\it \bibinfo{journal}{Journal of Colloid and Interface Science}\/},
+  {\it \bibinfo{volume}{51}\/}, \bibinfo{pages}{394--405}. %\URLprefix
+  %\url{http://www.sciencedirect.com/science/article/pii/0021979775901356}.
+  \DOIprefix\doi{10.1016/0021-9797(75)90135-6}.
+%Type = Article
+\bibitem[{Ducoste(2002)}]{ducoste_two-scale_2002}
+\bibinfo{author}{Ducoste, J.} (\bibinfo{year}{2002}).
+\newblock \bibinfo{title}{A two-scale {PBM} for modeling turbulent flocculation
+  in water treatment processes}.
+\newblock {\it \bibinfo{journal}{Chemical Engineering Science}\/},  {\it
+  \bibinfo{volume}{57}\/}, \bibinfo{pages}{2157--2168}. %\URLprefix
+  %\url{http://www.sciencedirect.com/science/article/pii/S0009250902001082}.
+  \DOIprefix\doi{10.1016/S0009-2509(02)00108-2}.
+%Type = Article
+\bibitem[{Feder(1980)}]{feder_random_1980}
+\bibinfo{author}{Feder, J.} (\bibinfo{year}{1980}).
+\newblock \bibinfo{title}{Random sequential adsorption}.
+\newblock {\it \bibinfo{journal}{Journal of Theoretical Biology}\/},  {\it
+  \bibinfo{volume}{87}\/}, \bibinfo{pages}{237--254}. %\URLprefix
+  %\url{http://www.sciencedirect.com/science/article/pii/0022519380903586}.
+  \DOIprefix\doi{10.1016/0022-5193(80)90358-6}.
+%Type = Article
+\bibitem[{Garland et~al.(2016)Garland, Weber-Shirk \&
+  Lion}]{garland_revisiting_2016}
+\bibinfo{author}{Garland, C.}, \bibinfo{author}{Weber-Shirk, M.}, \&
+  \bibinfo{author}{Lion, L.~W.} (\bibinfo{year}{2016}).
+\newblock \bibinfo{title}{Revisiting {Hydraulic} {Flocculator} {Design} for
+  {Use} in {Water} {Treatment} {Systems} with {Fluidized} {Floc} {Beds}}.
+\newblock {\it \bibinfo{journal}{Environmental Engineering Science}\/},  {\it
+  \bibinfo{volume}{34}\/}, \bibinfo{pages}{122--129}. %\URLprefix
+  %\url{http://online.liebertpub.com/doi/abs/10.1089/ees.2016.0174}.
+  \DOIprefix\doi{10.1089/ees.2016.0174}.
+%Type = Book
+\bibitem[{Granger(1995)}]{granger_fluid_1995}
+\bibinfo{author}{Granger, R.~A.} (\bibinfo{year}{1995}).
+\newblock {\it \bibinfo{title}{Fluid {Mechanics}}\/}.
+\newblock \bibinfo{address}{New York}: \bibinfo{publisher}{Dover Publications}.
+%Type = Article
+\bibitem[{Haarhoff(1998)}]{haarhoff_design_1998}
+\bibinfo{author}{Haarhoff, J.} (\bibinfo{year}{1998}).
+\newblock \bibinfo{title}{Design of {Around}-the-{End} {Hydraulic}
+  {Flocculators}}.
+\newblock {\it \bibinfo{journal}{Journal of Water Supply: Research and
+  Technology - Aqua}\/},  {\it \bibinfo{volume}{47}\/},
+  \bibinfo{pages}{142--152}. %\URLprefix
+  %\url{http://www.iwaponline.com/jws/047/0142/0470142.pdf}.
+%Type = Article
+\bibitem[{Haarhoff \& Joubert(1997)}]{haarhoff_determination_1997}
+\bibinfo{author}{Haarhoff, J.}, \& \bibinfo{author}{Joubert, H.}
+  (\bibinfo{year}{1997}).
+\newblock \bibinfo{title}{Determination of aggregation and breakup constants
+  during flocculation}.
+\newblock {\it \bibinfo{journal}{Water Science and Technology}\/},  {\it
+  \bibinfo{volume}{36}\/}, \bibinfo{pages}{33--40}. %\URLprefix
+  %\url{http://linkinghub.elsevier.com/retrieve/pii/S0273122397004162}.
+  \DOIprefix\doi{10.1016/S0273-1223(97)00416-2}.
+%Type = Article
+\bibitem[{Haarhoff \& van~der Walt(2001)}]{haarhoff_towards_2001}
+\bibinfo{author}{Haarhoff, J.}, \& \bibinfo{author}{van~der Walt, J.~J.}
+  (\bibinfo{year}{2001}).
+\newblock \bibinfo{title}{Towards {Optimal} {Design} {Parameters} for
+  {Around}-the-{End} {Hydraulic} {Flocculators}}.
+\newblock {\it \bibinfo{journal}{Journal of Water Supply: Research and
+  Technology - Aqua}\/},  {\it \bibinfo{volume}{50}\/},
+  \bibinfo{pages}{149--159}.
+%Type = Article
+\bibitem[{Liu et~al.(2004)Liu, Crapper \& McConnachie}]{liu_accurate_2004}
+\bibinfo{author}{Liu, J.}, \bibinfo{author}{Crapper, M.}, \&
+  \bibinfo{author}{McConnachie, G.~L.} (\bibinfo{year}{2004}).
+\newblock \bibinfo{title}{An accurate approach to the design of channel
+  hydraulic flocculators}.
+\newblock {\it \bibinfo{journal}{Water Research}\/},  {\it
+  \bibinfo{volume}{38}\/}, \bibinfo{pages}{875--886}. %\URLprefix
+  %\url{http://www.sciencedirect.com/science/article/pii/S0043135403005815}.
+  \DOIprefix\doi{10.1016/j.watres.2003.10.014}.
+%Type = Article
+\bibitem[{McConnachie \& Liu(2000)}]{mcconnachie_design_2000}
+\bibinfo{author}{McConnachie, G.~L.}, \& \bibinfo{author}{Liu, J.}
+  (\bibinfo{year}{2000}).
+\newblock \bibinfo{title}{Design of baffled hydraulic channels for
+  turbulence-induced flocculation}.
+\newblock {\it \bibinfo{journal}{Water Research}\/},  {\it
+  \bibinfo{volume}{34}\/}, \bibinfo{pages}{1886--1896}. %\URLprefix
+  %\url{http://www.sciencedirect.com/science/article/pii/S0043135499003292}.
+  \DOIprefix\doi{10.1016/S0043-1354(99)00329-2}.
+%Type = Article
+\bibitem[{Mertens et~al.(2012)Mertens, Casentini, Masion, Pöthig, Wehrli \&
+  Furrer}]{mertens_polyaluminum_2012}
+\bibinfo{author}{Mertens, J.}, \bibinfo{author}{Casentini, B.},
+  \bibinfo{author}{Masion, A.}, \bibinfo{author}{Pöthig, R.},
+  \bibinfo{author}{Wehrli, B.}, \& \bibinfo{author}{Furrer, G.}
+  (\bibinfo{year}{2012}).
+\newblock \bibinfo{title}{Polyaluminum chloride with high {Al}30 content as
+  removal agent for arsenic-contaminated well water}.
+\newblock {\it \bibinfo{journal}{Water Research}\/},  {\it
+  \bibinfo{volume}{46}\/}, \bibinfo{pages}{53--62}. %\URLprefix
+  %\url{http://www.sciencedirect.com/science/article/pii/S0043135411006294}.
+  \DOIprefix\doi{10.1016/j.watres.2011.10.031}.
+%Type = Article
+\bibitem[{Pennock et~al.(2016)Pennock, Chan, Weber-Shirk \&
+  Lion}]{pennock_theoretical_2016}
+\bibinfo{author}{Pennock, W.~H.}, \bibinfo{author}{Chan, F.~C.},
+  \bibinfo{author}{Weber-Shirk, M.~L.}, \& \bibinfo{author}{Lion, L.~W.}
+  (\bibinfo{year}{2016}).
+\newblock \bibinfo{title}{Theoretical {Foundation} and {Test} {Apparatus} for
+  an {Agent}-{Based} {Flocculation} {Model}}.
+\newblock {\it \bibinfo{journal}{Environmental Engineering Science}\/}, .
+  %\URLprefix %\url{http://online.liebertpub.com/doi/abs/10.1089/ees.2015.0558}.
+  \DOIprefix\doi{10.1089/ees.2015.0558}.
+%Type = Book
+\bibitem[{Pope(2000)}]{pope_turbulent_2000}
+\bibinfo{author}{Pope, S.~B.} (\bibinfo{year}{2000}).
+\newblock {\it \bibinfo{title}{Turbulent {Flows}}\/}.
+\newblock \bibinfo{address}{Cambridge, Mass.}: \bibinfo{publisher}{Cambridge
+  University Press}.
+%Type = Article
+\bibitem[{Prat \& Ducoste(2007)}]{prat_simulation_2007}
+\bibinfo{author}{Prat, O.}, \& \bibinfo{author}{Ducoste, J.}
+  (\bibinfo{year}{2007}).
+\newblock \bibinfo{title}{Simulation of {Flocculation} in {Stirred} {Vessels}
+  {Lagrangian} {Versus} {Eulerian}}.
+\newblock {\it \bibinfo{journal}{Chemical Engineering Research and Design}\/},
+  {\it \bibinfo{volume}{85}\/}, \bibinfo{pages}{207--219}. %\URLprefix
+  %\url{http://linkinghub.elsevier.com/retrieve/pii/S0263876207730381}.
+  \DOIprefix\doi{10.1205/cherd05001}.
+%Type = Article
+\bibitem[{Smoluchowski(1917)}]{smoluchowski_versuch_1917}
+\bibinfo{author}{Smoluchowski, M.} (\bibinfo{year}{1917}).
+\newblock \bibinfo{title}{Versuch einer mathematischen {Theorie} der
+  {Koagulationskinetik} kolloider {Lösungen}}.
+\newblock {\it \bibinfo{journal}{Zeitschrift fuer Physikalische Chemie}\/},
+  {\it \bibinfo{volume}{92}\/}, \bibinfo{pages}{129--168}. %\URLprefix
+  %\url{http://publikationen.ub.uni-frankfurt.de/frontdoor/index/index/docId/13699}.
+%Type = Article
+\bibitem[{Sun et~al.(2015)Sun, Weber-Shirk \& Lion}]{sun_characterization_2015}
+\bibinfo{author}{Sun, S.}, \bibinfo{author}{Weber-Shirk, M.}, \&
+  \bibinfo{author}{Lion, L.~W.} (\bibinfo{year}{2015}).
+\newblock \bibinfo{title}{Characterization of {Flocs} and {Floc} {Size}
+  {Distributions} {Using} {Image} {Analysis}}.
+\newblock {\it \bibinfo{journal}{Environmental Engineering Science}\/},  {\it
+  \bibinfo{volume}{33}\/}, \bibinfo{pages}{25--34}. %\URLprefix
+  %\url{http://online.liebertpub.com/doi/10.1089/ees.2015.0311}.
+  \DOIprefix\doi{10.1089/ees.2015.0311}.
+%Type = Article
+\bibitem[{Swetland et~al.(2013)Swetland, Weber-Shirk \&
+  Lion}]{swetland_influence_2013}
+\bibinfo{author}{Swetland, K.~A.}, \bibinfo{author}{Weber-Shirk, M.~L.}, \&
+  \bibinfo{author}{Lion, L.~W.} (\bibinfo{year}{2013}).
+\newblock \bibinfo{title}{Influence of {Polymeric} {Aluminum} {Oxyhydroxide}
+  {Precipitate}-{Aggregation} on {Flocculation} {Performance}}.
+\newblock {\it \bibinfo{journal}{Environmental Engineering Science}\/},  {\it
+  \bibinfo{volume}{30}\/}, \bibinfo{pages}{536--545}. %\URLprefix
+  %\url{http://online.liebertpub.com/doi/abs/10.1089/ees.2012.0199}.
+  \DOIprefix\doi{10.1089/ees.2012.0199}.
+%Type = Article
+\bibitem[{Swetland et~al.(2014)Swetland, Weber-Shirk \&
+  Lion}]{swetland_flocculation-sedimentation_2014}
+\bibinfo{author}{Swetland, K.~A.}, \bibinfo{author}{Weber-Shirk, M.~L.}, \&
+  \bibinfo{author}{Lion, L.~W.} (\bibinfo{year}{2014}).
+\newblock \bibinfo{title}{Flocculation-{Sedimentation} {Performance} {Model}
+  for {Laminar}-{Flow} {Hydraulic} {Flocculation} with {Polyaluminum}
+  {Chloride} and {Aluminum} {Sulfate} {Coagulants}}.
+\newblock {\it \bibinfo{journal}{Journal of Environmental Engineering}\/},
+  {\it \bibinfo{volume}{140}\/}, \bibinfo{pages}{04014002}. %\URLprefix
+  %\url{http://ascelibrary.org/doi/10.1061/%28ASCE%29EE.1943-7870.0000814}.
+  \DOIprefix\doi{10.1061/(ASCE)EE.1943-7870.0000814}.
+%Type = Article
+\bibitem[{Weber-Shirk \& Lion(2010)}]{weber-shirk_flocculation_2010}
+\bibinfo{author}{Weber-Shirk, M.~L.}, \& \bibinfo{author}{Lion, L.~W.}
+  (\bibinfo{year}{2010}).
+\newblock \bibinfo{title}{Flocculation model and collision potential for
+  reactors with flows characterized by high {Peclet} numbers}.
+\newblock {\it \bibinfo{journal}{Water Research}\/},  {\it
+  \bibinfo{volume}{44}\/}, \bibinfo{pages}{5180--5187}. %\URLprefix
+  %\url{http://www.sciencedirect.com/science/article/pii/S0043135410004136}.
+  \DOIprefix\doi{10.1016/j.watres.2010.06.026}.
+%Type = Article
+\bibitem[{Wei et~al.(2015)Wei, Zhang, Liu, Wu, Wang \&
+  Wang}]{wei_coagulation_2015}
+\bibinfo{author}{Wei, N.}, \bibinfo{author}{Zhang, Z.}, \bibinfo{author}{Liu,
+  D.}, \bibinfo{author}{Wu, Y.}, \bibinfo{author}{Wang, J.}, \&
+  \bibinfo{author}{Wang, Q.} (\bibinfo{year}{2015}).
+\newblock \bibinfo{title}{Coagulation behavior of polyaluminum chloride:
+  {Effects} of {pH} and coagulant dosage}.
+\newblock {\it \bibinfo{journal}{Chinese Journal of Chemical Engineering}\/},
+  {\it \bibinfo{volume}{23}\/}, \bibinfo{pages}{1041--1046}. %\URLprefix
+  %\url{http://www.sciencedirect.com/science/article/pii/S1004954115000804}.
+  \DOIprefix\doi{10.1016/j.cjche.2015.02.003}.
+
+\end{thebibliography}
+
+
+
+********************************************************************************************************
+Observations and a Geometric Explanation of the Effects of Humic Acid on Flocculation
+********************************************************************************************************
+
+
+
+Dissolved organic matter (DOM) is found in all surface and ground waters and has a significant effect on drinking water treatment, since the presence of DOM can create a need for increased coagulant doses in addition to being a precursor of disinfection byproducts (DBPs). This work evaluated use of polyaluminum chloride (PACl) as a coagulant for a synthetic surface water to determine the effect of DOM on the settled effluent turbidity. Mechanistically-based, scalable algorithms for operation of hydraulic flocculators were developed in this research based on observations of residual turbidity. Data were obtained using a laminar-flow tube flocculator and a lamellar tube settler. The research employed a flocculation model previously published by some of the authors and considered modifications to the model algorithm to incorporate the effects of humic acid. Two adjustable model parameters were used to fit data, one related to at incorporated the capture velocity used for sedimentation, and one that estimated the average size of dissolved humic acid molecules. The modified model that accounted for the presence of humic acid was able to independently predict the experimental results from 60 experiments at a different influent turbidity. The predictive model is expected to provide insights into the interactions between dissolved species and the coagulant nanoparticles.
+
+Introduction
+============
+
+The main objective of this research was to observe and model the effects of dissolved organic matter (DOM) on flocculation to enhance the performance of a hydraulic flocculator in the context of a process train with subsequent unit processes (i.e., sedimentation). Prior research has shown that multiple variables influence the performance of hydraulic flocculators in drinking water treatment, including the concentration and type of suspended particles in the raw water, the concentration of DOM, coagulant type and dose, and hydraulic residence time and energy dissipation rate in the flocculator (Kawamura, 1991).
+
+The design and operation of hydraulic flocculators would be assisted by a predictive model that can characterize performance of flocculator designs. A general scalable model which uses dimensionally correct relationships that are based upon relevant flocculation mechanisms was created by Pennock et al. (2018) and successfully applied to quantify the effect of varying flocculator design and operational parameters on the post-sedimentation residual turbidity that corresponded to a selected sedimentation capture velocity. However, this model did not account for the presence of varying levels of DOM.
+
+Previous researchers have hypothesized that DOM interacts with coagulants through various mechanisms. Jarvis and Jefferson (2007) state that the aggregation mechanisms through which DOM is removed include a combination of charge neutralization, entrapment, adsorption, and complexation with coagulant metal ions into insoluble particulate aggregates. Optimal conditions for turbidity or pathogen removal are not always the same as those for DOM removal (Hua and Reckhow, 2008). Because of the variable composition of DOM, the mechanisms of removal could be different for different types of DOM in water (Sharp and Jarvis, 2006). The hydrophobic fraction of DOM, which includes humic acids, is generally removed in coagulation more effectively than the hydrophilic fraction (Marhaba et al., 2003; Matilainen and Vepsalainen, 2010).
+
+Prehydrolyzed polymer coagulants, such as polyaluminum chloride (PACl), have been reported to have advantages over conventional coagulants such as alum, including less temperature or pH dependence, as well as smaller alkalinity consumption, but the characteristics of the water to be treated (e.g., alkalinity, pH, and DOM content) play a major role in the choice of a proper coagulant. Consequently, prehydrolyzed coagulants have not been consistently observed to enhance the removal efficiency of DOM (Hu, 2006).
+
+The research described in this paper builds on the AguaClara hydraulic flocculation model developed by Pennock et al. (2018) and adds detail to the attachment efficiency coefficient describing geometric and probabilistic interactions between clay, coagulant, DOM, and reactor walls. The synthetic raw water used in experiments added one type of DOM, humic acid, to a previously studied synthetic system (Swetland et al., 2014) with the expectation that the resulting system would be sufficiently well-characterized to develop a predictive model.
+
+The AguaClara flocculation model is based on the observation that coagulant precipitates form nanoparticles that attach to the surfaces of suspended particles (clay) and reactor walls. Swetland et al. (2014) found particle attachment efficiency in a hydraulic flocculator to be proportional to the fractional surface coverage of suspended clay by precipitated coagulant (alum and PACl) nanoparticles. The success of the surface coverage model in explaining the interactions between clay, coagulant nanoparticles, and reactor walls led to the hypothesis that hydrophobic DOM macromolecules may attach to the coagulant nanoparticles and reduce the amount of PACl surface area that is available for attachment.
+
+Experimental Protocols
+======================
+
+Experiments were conducted using the laboratory apparatus illustrated in Figure 1. Cornell University tap water was pumped from an aerated and temperature-controlled reservoir and mixed with a concentrated stock suspension of kaolinite clay (R.T. Vanderbilt Co., Inc.) to form a feed-back regulated constant turbidity raw water source (Weber-Shirk, 2016). Reported Cornell University tap water characteristics are listed in Table 1.
+
+.. _table_CUWTP_Water_Quality:
+
+.. csv-table:: Average properties of tap water provided by Cornell University Water Filtration Plant as reported by BP-MWS, et al., 2016.
+   :header: Property, Average Value
+   :widths: 20, 20
+   :align: center
+
+   Turbidity, 0.056 NTU
+   Total Hardness, 150 mg/L
+   Total Alkalinity (as CaCO:math:`{}_{3}`), 140 mg/L
+   Dissolved Organic Carbon (DOC), 1.80 mg/L
+
+
+
+A concentrated suspension of humic acids was mixed with the raw water source to produce humic acid concentrations ranging from 0 to 15 mg/L. The humic substances used in experiments were obtained in the form of sodium salt from Sigma-Aldrich (H16752).  Polyaluminum chloride (PACl) coagulant doses (Holland Company, Adams, MA) ranging from 0.53 to 2.65 mg/L as Al were used to treat the synthetic raw water.  The coagulant dosage and humic acid concentrations were regulated by adjusting the rotation speed of separate peristaltic pumps. The pH of the treated effluent was monitored in each experiment and was 7.5 :math:`\pm ` 0.3. Influent turbidities of 50 NTU and 100 NTU were tested.  Flocculation was accomplished by laminar flow through a coiled 9.52 mm inner diameter tube. The average velocity gradient in the coiled flocculator,:math:`\ \overline{G}` was calculated according the equation derived by Tse et al. (2011) as
+
+.. math::
+
+   \overline{G}={\overline{G}}_{Straight}\sqrt{1+{{0.033 \left[log\left(\frac{4Q_{Plant}}{\pi D\nu }\sqrt{\frac{D}{R_{c}}}\right)\right]\ }}^{4}}
+
+
+where :math:`{\overline{G}}_{Straight}` is fluid velocity gradient in a straight tube, :math:`Q_{Plant}` is the experimental flow rate, :math:`D` is the inner diameter of the flocculator tube, :math:`R_{c}` is the diameter of curvature of the flocculator coils, and :math:`v` is the kinematic viscosity of water, which is about :math:`1\times \ {10}^{-6}\ \frac{{m}^2}{s}` at 20 :math:`{}^\circ`C (Kundu and Cohen, 2008). The overall experimental flow rate was 6 mL/s and the radius of curvature of the coiled tubing (:math:`R_{c}`) was 15 cm.
+
+The value of :math:`{\overline{G}}_{Straight}` was calculated by first estimating the head loss in a straight tube of the equivalent diameter and material using the Hagen-Poiseuille equation for laminar flow:
+
+.. math::
+
+   h_{L}=\frac{32\nu \overline{u}L}{D^2g}
+
+where :math:`L` is the length of the tube (25.45 m in these experiments), :math:`\overline{u}` is the mean velocity (84 mm/s) of the flow, and :math:`g` is the acceleration due to gravity (Granger, 1995). From this head loss, an average rate of the loss of kinetic energy, :math:`\overline{\varepsilon }` can be estimated using
+
+.. math::
+
+   \overline{\varepsilon }=\frac{gh_{L}}{\theta }
+
+where :math:`\theta ` is the mean hydraulic residence time (Pennock et al., 2018). The hydraulic residence time was 302 s as calculated by
+
+.. math::
+
+   \theta =\frac{L}{\overline{u}}
+
+The energy dissipation rate, which was calculated to be 2.24 mW/kg, can be converted to velocity gradient, :math:`\overline{G}`, by
+
+.. math::
+
+   \overline{G}=\sqrt{\frac{\overline{\varepsilon }}{\nu }}
+
+which gave a velocity gradient of 50.1 s:math:`{}^{-1}`. Using this value for :math:`{\overline{G}}_{Straight}` in Equation 1 resulted in a value of 71.1 s:math:`{}^{-1\ }`for :math:`\overline{G}`.
+
+A coiled tube flocculator was used in this research because it is a high-Peclet-number reactor much like a baffled hydraulic flocculator and also because the average velocity gradient in laminar tube flow is well defined (Weber-Shirk and Lion, 2010). After flowing through the flocculator, a fraction of the flow was passed through a tube settler and the settled water turbidity was recorded continuously for each experiment. The 1.37 m (4.5 ft) tube settler, with an inner diameter of 2.66 cm, had an entry port diameter of 0.95 cm (3/8 in) near the bottom and an exit port diameter of 0.635 cm (1/4 in) near the top. The capture velocity was controlled at 0.102 mm/s using a peristaltic pump with flow set by
+
+.. math::
+
+   Q_S=\frac{\pi}{4} D^2_{S}V_{c}\left(\frac{L_{S}}{D_{S}}{cos {\alpha }_{S}\ }+{sin {\alpha }_{S}\ }\right)
+
+where :math:`V_{c}` is the capture velocity, :math:`L_{S}` is the length of the tube settler, :math:`D_{S}` is the diameter of the tube settler, and :math:`{\alpha }_{S}` is the angle of inclination of the tube settler, which was set at 60 degrees (Schulz and Okun, 1984).
+
+\includegraphics*[width=5.80in, height=4.35in, keepaspectratio=false]{image1}
+
+\textbf{Figure 1: Experimental System Schematic}\textit{}
+
+Model Formation
+================
+
+A flocculation model considering the effects of humic acid should predict the effective collisions between colloids for a given set of conditions. The dimensionless product of the fluid velocity gradient and mean hydraulic residence time, :math:`\overline{G}\theta `, has been used as a measure of the collision potential provided by a flocculator that experiences laminar flow (Camp, 1955; Cleasby, 1984). It is well known that not all collisions between suspended particles result in aggregation, and average attachment efficiency, :math:`\overline{\alpha }`, has been used to denote the fraction of successful collisions (AWWA, 1999).
+
+The initial primary particle volume fraction, :math:`{\phi }_0`, also influences coagulation (Ives, 1968; O'Melia, 1972) and gives the fraction of the volume of the suspension occupied by the influent primary particles,
+
+.. math::
+
+   {\phi }_0=\frac{C_0}{{\rho }_{P}}
+
+where :math:`C_0` is the influent particle concentration (kaolinite clay in these experiments) and :math:`{\rho }_{P}` is the density of influent particles (Swetland et al., 2014).
+
+In laminar-flow flocculators, the velocity of one floc relative to another scales with the average separation distance between flocs (Swetland et al., 2014). The time between floc collisions is inversely proportional to both :math:`\phi ` and the relative velocity between flocs. Because the relative velocity between flocs is proportional to separation distance, the time between collisions is proportional to :math:`{\phi }^{\frac{1}{3}}`, since the average separation distance, :math:`\overline{\Lambda}`, is given by
+
+.. math::
+
+   \overline{\Lambda}=d_{P}{\left(\frac{\pi }{6\phi }\right)}^{\frac{1}{3}}
+
+The result is that, for laminar flow, the average time for primary particle collisions scales with :math:`{\phi }^{-\frac{2}{3}}` (Weber-Shirk and Lion 2010).
+
+A laminar-flow hydraulic flocculator model was developed and validated based on the above analysis in Pennock et al. (2018) with the form
+
+.. math::
+
+   pC^{*}=\frac{3}{2}{{log}_{10} \left[\frac{2}{3}{\left(\frac{6}{\pi }\right)}^{\frac{2}{3}}\pi k\overline{\alpha }\overline{G}\theta {\phi }^{\frac{2}{3}}_0+1\right]\ }
+
+where  :math:`k` is a fitting parameter dependent on the value of :math:`V_{c}` used for sedimentation, :math:`\overline{\alpha }` is the mean fraction of collisions that are successful (i.e., result in aggregation), and :math:`pC^*` is defined as
+
+.. math::
+
+   pC^*=-{log \left(\frac{\mathrm{Effluent\ turbidity}}{\mathrm{Influent\ Turbidity}}\right)\ }
+
+Equation 9, referred to as the AguaClara flocculation model in Pennock et al. (2018), is a Lagrangian hydrodynamic model that assumes that the aggregation of primary particles is rate-limiting. It further assumes that these particles, on average, will collide when the volume of fluid swept out as one particle approaches the other is equal to the average volume occupied by a single particle in the suspension. The time for these collisions to occur increases as flocculation proceeds, since the concentration of primary particles decreases in a way that is assumed to be first order with respect to collisions. Thus, with each successive collision, the average volume occupied by primary particles increases, and it takes longer for the next collision to occur. In Equation 9, performance is linearly proportional to the logarithm of the effective collision potential, :math:`log(\overline{\alpha }\overline{G}\theta {\phi }^{2/3}_0)`.
+
+This group of parameters is the same as the group first described by Swetland et al. (2014), with the exception that they used the estimated fractional coverage of the colloid surface by coagulant, :math:`{\overline{\Gamma}}_{PACl-Clay}`, as a measure of attachment efficiency instead of :math:`\overline{\alpha }`. Pennock et al. (2018) recognized that surface coverage of both particles participating in a collision matters, and introduced :math:`\overline{\alpha }` to convert the geometric information contained in :math:`{\overline{\Gamma}}_{PACl-Clay}` to a probability of a successful collision. Using data gathered by Swetland et al. (2014), Pennock et al. (2018) were able to predict the results of independent laminar flocculation experiments with no adjustable parameters in the absence of added DOM.
+
+Experimental results obtained with added humic acid present are shown in Figure 3 along with predictions based on the AguaClara flocculation model [Eq. 9].  It was evident that the attachment efficiency was adversely affected by the addition of humic acid.  Referencing adsorption measurements by Davis (1982), a minority (his study found 20\%) of added DOM would be adsorbed by kaolinite at the experimental pH of 7.5. Thus, most humic acid macromolecules were available to attach to the added coagulant nanoparticles. The following simplifying assumptions were made to account for the presence of humic acids: 1) humic acid macromolecules attach to coagulant nanoparticles to form nanoaggregates, 2) nanoaggregates attach to clay and to the reactor walls, and 3) the surfaces of precipitated coagulant nanoparticles promote adhesion, while the surfaces of bound humic acids prevent adhesion.
+
+In this study, humic acid macromolecules and PACl nanoparticles were modeled as spheres. Based on the size of coagulant nanoparticles and humic acid macromolecules, their number concentrations, :math:`N_{HA}` and :math:`N_{PACl}` respectively, can be estimated by
+
+.. math::
+
+   N_{HA}=\ \frac{C_{HA}}{{\rho }_{HA}\frac{\pi }{6}{d_{HA}}^3}
+
+and
+
+.. math::
+
+   N_{PACl}=\ \frac{C_{PACl}}{{\rho }_{PACl}\frac{\pi }{6}{d_{PACl}}^3}
+
+where :math:`C_{PACl}` is the dose of coagulant in mg/L as Al; :math:`C_{HA}` is the concentration of humic acid in mg/L; :math:`{\rho }_{PACl}` is the density of the coagulant (Swetland et al. (2013) found :math:`1,138 \frac{kg}{m^3}`); :math:`{\rho }_{HA}` is the density of humic acid, :math:`1,520\frac{kg}{m^3}` (Sigma-Aldrich, 2014); :math:`d_{HA}` is the diameter of humic acid macromolecules (an adjustable model parameter); and :math:`d_{PACl}` is the diameter of precipitated PACl coagulant nanoparticles, taken to be 90 nm as found by Dr. Casey Garland (personal communication).
+
+A key model assumption was that humic acid macromolecules cannot adhere to a coagulant surface that is occupied by a humic acid macromolecule, since humic acid macromolecules are assumed to not appreciably self-aggregate. The outcome of this assumption is that humic acid macromolecules attach to an uncovered surface of coagulant and do not stack on top of one another. The available surface area of the PACl nanoparticle was modeled as the surface area of an equivalent sphere. The amount of that area that is occupied by an attached humic acid macromolecule was estimated as the projected area of a sphere with volume equivalent to a humic acid macromolecule.  A new variable describing the coverage of coagulant nanoparticle surface area by humic acid macromolecules,
+
+.. math::
+
+   {\overline{\Gamma}\mathrm{\ }}_{HA-PACl}=\frac{{{\frac{\pi }{4}d}_{HA}}^2}{{{\pi d}_{PACl}}^2}\frac{N_{HA}}{N_{PACl}}
+
+was created to be incorporated into the model (within :math:`\overline{\alpha }`) to represent the fraction of the PACl nanoparticle surface area that is covered by humic acid macromolecules.
+
+The first two steps in particle aggregation, where humic acid macromolecules attach to coagulant nanoparticles and then the resulting nanoaggregates attach to clay surfaces, were assumed to be rapid because diffusion is an effective transport process for nanoparticles (Benjamin and Lawler, 2013). Subsequent to rapid mix, the clay particles with attached nanoaggregates undergo collisions during the flocculation process and the aggregation process is governed by fluid shear (Pennock et al., 2018). The success of a collision between clay particles is hypothesized to be dependent on the properties of the contact surfaces at the initial point of contact.
+
+The three types of surfaces (PACl, humic acid, clay) have 6 (3!) potential interactions as illustrated in Figure 2.
+
+\includegraphics*[width=4.67in, height=8.07in, keepaspectratio=false]{image2}
+
+\textbf{Figure 2: Modes of collision between particles during flocculation.}
+
+Of these interactions considered in the model, the collisions that will result in attachment are assumed to involve at least one PACl nanoparticle surface (Figure 2 A, B, C). The attachment efficiency is hypothesized to be the sum of probability of these three types of collisions, formally expressed as
+
+.. math::
+
+   \overline{\alpha }\ ={\overline{\alpha }}_{PACl-Clay}+{\overline{\alpha }}_{PACl-PACl}+{\overline{\alpha }}_{HA-PACl}
+
+where the subscripts define the two surfaces that are interacting. The overbars indicate that all of these represent mean probabilities for an entire suspension rather than the probabilities for specific particles.
+
+The probability of a clay surface colliding with a PACl surface (Figure 2 A) is equal to twice the probability that the first surface is clay (:math:`1-{\overline{\Gamma}}_{PACl-Clay}`) and the second surface is the PACl surface of a PACl-HA nanoaggregate (:math:`\left(1-{\overline{\Gamma}}_{HA-PACl}\right){\overline{\Gamma}}_{PACl-Clay}`), since either of two colliding particles could provide the clay surface or the PACl surface,
+
+.. math::
+
+   {\overline{\alpha }}_{PACl-Clay}=2\left(1-{\overline{\Gamma}}_{PACl-Clay}\right)\left[\left(1-{\overline{\Gamma}}_{HA-PACl}\right){\overline{\Gamma}}_{PACl-Clay}\right]
+
+The probability of a collision between the PACl surfaces of two PACl-HA nanoaggregates (:math:`\left(1-{\overline{\Gamma}}_{HA-PACl}\right){\overline{\Gamma}}_{PACl-Clay}`) (Figure 2 B) is given by
+
+.. math::
+
+   {\overline{\alpha}}_{PACl-PACl}={\left[\left(1-{\overline{\Gamma}}_{HA-PACl}\right){\overline{\Gamma}}_{PACl-Clay}\right]}^2
+
+The probability of a collision between a PACl surface of a PACl-HA nanoaggregate (:math:`\left(1-{\overline{\Gamma}}_{HA-PACl}\right){\overline{\Gamma}}_{PACl-Clay}`) and an HA surface of a PACl-HA nanoaggregate (:math:`{\overline{\Gamma}}_{HA-PACl}{\overline{\Gamma}}_{PACl-Clay}`) (Figure 2 C), or vice versa, is given by
+
+.. math::
+
+   {\overline{\alpha }}_{HA-PACl}=2\left[{\overline{\Gamma}}_{PACl-Clay}\left(1-{\overline{\Gamma}}_{HA-PACl}\right)\right]\left[{\overline{\Gamma}}_{HA-PACl}{\overline{\Gamma}}_{PACl-Clay}\right]
+
+where the factor of 2 accounts for the possibility that either colliding particle could contribute either surface type.
+
+The model accounting for the presence of humic acids is modified from the Pennock et al. (2018) model by redefining the attachment efficiency, :math:`\overline{\alpha }`, using Eq. 14 to account for the presence of humic acid.
+
+The physical properties of humic acid vary with composition. The diameter of humic acid macromolecules is estimated to range from 4 nm to 110 nm (\"{O}sterberg, 1993). Because of the variation in the size of humic acid macromolecules, the characteristic diameter of the humic acid macromolecules was used as a fitting parameter. Thus, there are two adjustable model parameters, :math:`k\ `(Eq. 9), which accounts for the sedimentation capture velocity, and :math:`d_{HA}`, which accounts for coagulant precipitate surface coverage by humic acid.  These parameters were fit to results from observations taken with an influent turbidity of 50 NTU; the model was then validated by independently predicting results from experiments with an influent turbidity of 100 NTU.
+
+Results
+=======
+
+The results from 60 experiments, transformed by Eq. 10, are shown in Figure 3 for an inflow turbidity of 50 NTU with PACl doses ranging from 0.53 to 2.65 mg/L as Al and humic acid concentration ranging from 0 to 15 mg/L. A capture velocity of 0.120 mm/s was used in the experiments, which is a conservatively designed lamellar settler capture velocity (Willis, 1978).  Experiments were replicated for each combination of humic acid and PACl dose.                   }
+
+The data show that increased coagulant dose is positively correlated with turbidity removal. The effluent turbidity was greatly increased by the presence of humic acid.  Also shown is a model fit using the AguaClara flocculation model given by Pennock et al. (2018). As shown, the model can fit the performance of the 0 mg/L HA data and even the 3 mg/L HA data reasonably well, but increasing doses of humic acid decrease performance appreciably, necessitating a modification to the original model.
+
+
+\textbf{Figure 3: :math:`\boldsymbol{p}{\boldsymbol{C}}^{\boldsymbol{*}}` as a function of coagulant dose for 50 NTU influent turbidity.}
+
+
+
+To apply the modified model to the raw data, the data points with 0 mg/L HA were fit by :math:`k`, since their performance was not influenced by :math:`d_{HA}`, resulting in :math:`k` = 0.16. Then, the remaining data were fit using :math:`d_{HA}` (with the previously determined :math:`k` value) to minimize the sum squared error, resulting in :math:`d_{HA}=77\ \mathrm{nm}` with a :math:`pC^*` (dimensionless) root-mean-square error, RMSE, of 0.08. Because their performance was essentially indistinguishable from the 0 mg/L HA data. Additionally, to avoid biasing the fit by data for which the coagulant dose was insufficient to overcome the effect of humic acid, data for which performance was lower than :math:`pC^*=0.25` were neglected for the fitting. Figure 4 shows the fit of the model to the observations for the 50 NTU experiments. \includegraphics*[width=5.79in, height=5.37in, keepaspectratio=false]{image4}
+
+\textbf{Figure 4: Model fit for :math:`\boldsymbol{p}{\boldsymbol{C}}^{\boldsymbol{*}}` as function of coagulant dose for}
+
+\textbf{ 50 NTU raw water turbidity.}\textit{}
+
+
+With the given fitted value of :math:`d_{HA}=77 nm`for the 50 NTU influent turbidity data set, the coverage of coagulant nanoparticle surfaces by humic acid (:math:`{\overline{\Gamma}}_{HA-PACl}`) changed as shown in Figure 5. The model predicted complete coverage of the PACl nanoparticles by humic acid for low PACl concentrations, which correlated with very low observed turbidity removal efficiency.
+
+\includegraphics*[width=5.78in, height=3.85in, keepaspectratio=false]{image5}
+
+\textbf{Figure 5: Coverage of coagulant surface by humic acid as a function of}
+
+\textbf{ coagulant dose.}
+
+\noindent
+
+The relationships between the three terms included in attachment efficiency are shown in Figure 6.  The term corresponding to collisions between a clean coagulant nanoparticle surface and clay (:math:`{\overline{\alpha }}_{PACl-Clay}`) was always dominant for the experimental conditions in this dataset, and the other terms became relatively more important but still insignificant small with respect to :math:`{\overline{\alpha }}_{PACl-Clay}` with increasing coagulant dose.\textbf{}
+
+
+
+\textbf{Figure 6: Attachment efficiency as a function of coagulant dose.}
+
+
+
+The model was validated by using it to predict turbidity removal efficiency for different experimental conditions. The predicted :math:`pC^*` and the measured :math:`pC^*` are compared in Figure 7 for an additional 60 experiments with inflow turbidity of 100 NTU, PACl doses ranging from 0.53 to 2.65 mg/L, and humic acid concentration ranging from 0 to 15 mg/L. The resulting fit is almost as good as for the 50 NTU data, with :math:`pC^*` RMSE of 0.11.
+
+
+\textbf{\includegraphics*[width=5.80in, height=5.35in, keepaspectratio=false]{image7}}
+
+Figure 7: Comparison graph between predicted data and observed data{for 100 NTU influent turbidity.}
+
+
+
+When the coagulant dose in Figure 4 and Figure 7 was replaced with the dimensionless group :math:`\overline{\alpha }\overline{G}\theta {\phi }^{\frac{2}{3}}` , the data collapsed to a much narrower band, implying that the composite parameter, :math:`\overline{\alpha }\overline{G}\theta {\phi }^{\frac{2}{3}}`, captures a large fraction of the trends present in the data, as seen in Figure 8.
+
+\includegraphics*[width=5.79in, height=5.27in, keepaspectratio=false]{image8}
+
+\textbf{Figure 8: Model fit of 50 and 100 NTU data for :math:`\boldsymbol{p}{\boldsymbol{C}}^{\boldsymbol{*}}` as function of effective collision potential. The data plotted include two replicates for each experiment.}
+
+
+In summary, the laminar flow hydraulic flocculation model of Pennock et al. (2018) was modified to incorporate the effects of humic acid with the addition of a single fitting parameter: a characteristic dimension of the humic acid macromolecules. The required coagulant dose can be predicted based on the flocculator parameters, humic acid characteristic size and concentration, and influent turbidity. The addition of humic acid to the flocculation model increases the model applicability since natural organic matter is found in all surface and ground waters and influences the coagulant dose needed for effective turbidity removal.
+
+
+Discussion
+=============
+
+For the range of experimental conditions considered in the research, the observed influence of humic acid on flocculation performance could be explained by the fractional coverage of the coagulant nanoparticle surfaces by humic acid, which, in turn, affected the fractional coverage of the suspended clay surfaces by coagulant. It is noteworthy that under the experimental conditions, the predictive success of the model was achieved without incorporating the charges of colloids, coagulant, and humic acids. The reader is cautioned that the observations and predictions were obtained with one test particle, one coagulant, and one form of DOM in the mixed electrolyte represented by Cornell tap water, kept within the narrow pH range where coagulant precipitation is very favorable. While the experimental pH favored PACl precipitation, pH-dependent PACl solubility is accounted for in the model with
+
+.. math::
+
+   N_{perClay}=\frac{\left[C_{PACl}-C_{PACl\left(aq\right)}\right]V_{P}{\rho }_{P}}{\frac{\pi }{6}d^{3}_{PACl}{\rho }_{PACl}C_0}
+
+where :math:`N_{perClay}` is the number of precipitated coagulant aggregates per clay particle, :math:`C_{\mathrm{PACl\ (aq)}}` is the fraction of the coagulant dose that has remained in solution after precipitation using the PACl solubility observed by Van Benschoten and Edzwald (1990), and :math:`V_{P}` is the volume of a single clay platelet (Swetland et al., 2014). Within the model, :math:`N_{perClay}` is used to calculate :math:`\overline{\alpha }`, since it is a component of the calculation for :math:`{\overline{\Gamma}}_{PACl-Clay}`:
+
+.. math::
+
+   {\overline{\Gamma}}_{PACl-Clay}=1-e^{-\frac{d^{2}_{PACl}}{{SA}_{Clay}}\ N_{perClay}R_{Clay}\ }
+
+where :math:`{SA}_{Clay}` is the surface area of the surface area of the suspended clay particles and :math:`R_{Clay}` is the fraction of the available surface area in the reactor (including the surface area of reactor walls) that belongs to suspended clay particles (Swetland et al., 2014).
+
+The solubility of humic acid also is highly pH-dependent, and additional experimental results are needed to test the applicability of the model approach as a function of varying pH. The experimental conditions were designed to keep the pH relatively constant, and the pH change in the experiments was small (7.5 :math:`\pm ` 0.3).
+
+The model considered flocculation in the presence of humic acid as a two-step process. Firstly, humic acid macromolecules attached to precipitated coagulant nanoparticles. Then, the partially-coated coagulant nanoaggregates could bind to clay and reactor wall surfaces.  Humic acid and coagulant nanoparticles were treated as spheres when estimating the attachment efficiency based on surface coverage and probability. The diameter of precipitated PACl nanoparticles was experimentally measured to be 90 nm (Garland, 2016), and a humic acid macromolecule diameter of 77 nm best fit the observations. Wall loss of coagulant precipitates with humic acid nanoaggregates was considered while direct wall loss of humic acid macromolecules was not considered.
+
+The characteristic humic acid dimension, :math:`d_{HA}`, has a physical meaning, with the fitted value, 77 nm, falling within the range (4-110 nm) reported by \"{O}sterberg (1993), and the model fits are well correlated to the observations. The predictive capability of the model was verified by predicting results under different experimental conditions with no additional adjustable parameters.
+
+The flocculation model without the effects of humic acid shows that :math:`pC^*` is directly proportional to the log of the effective collision potential, :math:`log(\overline{\alpha }\overline{G}\theta {\phi }^{\frac{2}{3}})`, and this relationship is still present in the model with a modified attachment efficiency, :math:`\overline{\alpha },` based on clay surface coverage by coagulant nanoparticles as adjusted for the presence of humic acids.
+
+Under experimental conditions, the modified flocculation model provides the fundamental basis for the relationship between coagulant dose, synthetic raw water clay, and humic acid concentrations.  Extension to natural waters will undoubtedly require additional research.
+
+The form of the flocculation model equation sets the interactions between raw water properties (:math:`{\phi }_0`), influent particle surface area (which contributes to:math:`\ {\overline{\Gamma}}_{PACl-Clay}`), coagulant precipitate size and dose (which contributes to :math:`{\overline{\Gamma}}_{PACl-Clay}` and :math:`{\overline{\Gamma}}_{HA-PACl}`) , humic acid molecule size and concentration (which contribute to :math:`{\overline{\Gamma}}_{HA-PACl}`), flocculator design (:math:`\overline{G}\theta `), and sedimentation tank design (:math:`k`). In a gravity-powered water treatment plant operating at constant flow rate, the flocculator and sedimentation tank parameters are constant. An increase in concentration of humic acid causes an increase in :math:`{\overline{\Gamma}}_{HA-PACl}`, which decreases :math:`pC^*` but can be compensated for by increasing coagulant dose.
+
+Summary
+=======
+
+The development of a predictive model for laminar flow hydraulic flocculation of water containing clay and humic acid is described. The study results increase the flexibility and generality of the AguaClara hydraulic flocculation model, and the modified model provides insight into the mechanism by which humic acid causes a decrease in performance of coupled flocculation-sedimentation processes.
+
+The model was able to predict independent experimental results for a different raw water turbidity with no additional adjustable parameters. Further tests should be done to fully validate the laminar-flow model including consideration of different experimental surrogates for DOM, different colloidal surfaces, alternative coagulants and varying solution compositions, including pH.
+
+Acknowledgements
+================
+
+The authors would like to thank Dr. Casey Garland for her assistance in designing the experimental apparatus. This material is based upon work supported by the National Science Foundation under Award No. 1437961 and by the National Science Foundation Graduate Research Fellowship Program under Grant No. DGE-1144153. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+
+
+\textbf{References}
+
+\noindent
+
+Amin, M., Safari, M., Maleki, A., Ghasemian, M., Rezaee, R., \& Hashemi, H. (2012). Feasibility of humic substances removal by enhanced coagulation process in surface water. \textit{International Journal of Environmental Health Engineering}. https://doi.org/10.4103/2277-9183.99323
+
+Benjamin, M. M., \& Lawler, D. F. (2013). \textit{Water quality engineering: physical / chemical treatment processes}. Hoboken, N.J.: Wiley.
+
+BP-MWS, CIWS, \& CUWS. (2016). \textit{Drinking Water Quality Report 2016}. Ithaca, NY: Bolton Point Municipal Water System, City of Ithaca Water System, Cornell University Water System. Retrieved from https://energyandsustainability.fs.cornell.edu/file/AWQR\_2016\%20final.pdf
+
+Camp, T. R. (1953). \textit{Flocculation and Flocculation Basins}. American Society of Civil Engineers.
+
+Chow, C. W. K., Fabris, R., Leeuwen, J. van, Wang, D., \& Drikas, M. (2008). Assessing Natural Organic Matter Treatability Using High Performance Size Exclusion Chromatography. \textit{Environmental Science \& Technology}, \textit{42}\eqref{GrindEQ__17_}, 6683--6689. https://doi.org/10.1021/es800794r
+
+Cleasby, J. (1984). Is Velocity Gradient a Valid Turbulent Flocculation Parameter? \textit{Journal of Environmental Engineering}, \textit{110}\eqref{GrindEQ__5_}, 875--897. https://doi.org/10.1061/(ASCE)0733-9372(1984)110:5\eqref{GrindEQ__875_}
+
+Davis, J. A. (1982). Adsorption of natural dissolved organic matter at the oxide/water interface. \textit{Geochimica et Cosmochimica Acta}, \textit{46}\eqref{GrindEQ__11_}, 2381--2393. https://doi.org/10.1016/0016-7037\eqref{GrindEQ__82_}90209-5
+
+Fosso-Kankeu, E., Webster, A., Ntwampe, I. O., \& Waanders, F. B. (2017). Coagulation/Flocculation Potential of Polyaluminium Chloride and Bentonite Clay Tested in the Removal of Methyl Red and Crystal Violet. \textit{Arabian Journal for Science and Engineering}, \textit{42}\eqref{GrindEQ__4_}, 1389--1397. https://doi.org/10.1007/s13369-016-2244-x
+
+Granger, R. A. (1995). \textit{Fluid Mechanics}. New York: Dover Publications.
+
+Hu, C., Hu, X., Wang, L., Qu, J., \& Wang, A. (2006). Visible-Light-Induced Photocatalytic Degradation of Azodyes in Aqueous AgI/TiO :math:`{}_{2}` Dispersion. \textit{Environmental Science \& Technology}, \textit{40}\eqref{GrindEQ__24_}, 7903--7907. https://doi.org/10.1021/es061599r
+
+Hua, G., \& Reckhow, D. A. (2008). Relationship between Brominated THMs, HAAs, and Total Organic Bromine during Drinking Water Chlorination. In T. Karanfil, S. W. Krasner, P. Westerhoff, \& Y. Xie (Eds.), \textit{Disinfection By-Products in Drinking Water} (Vol. 995, pp. 109--123). Washington, DC: American Chemical Society. https://doi.org/10.1021/bk-2008-0995.ch008
+
+Integrated design of water treatment facilities: Susumu Kawamura. John Wiley \& Sons, Inc.: New York, NY 1991. (pp. 658, ISBN 0-471-61591-9) \:math:`69.95 hardcover. (1992). \textit{Waste Management}, \textit{12}\eqref{GrindEQ__1_}, 101. https://doi.org/10.1016/0956-053X\eqref{GrindEQ__92_}90024-D
+
+Ives, K. J. (1968). Theory of operation of sludge blanket clarifiers. \textit{Proceedings of the Institution of Civil Engineers}, \textit{39}\eqref{GrindEQ__2_}, 243--260. https://doi.org/10.1680/iicep.1968.8090
+
+Jarvis, P., Jefferson, B., Gregory, J., \& Parsons, S. A. (2005). A review of floc strength and breakage. \textit{Water Research}, \textit{39}\eqref{GrindEQ__14_}, 3121--3137. https://doi.org/10.1016/j.watres.2005.05.022\underbar{}
+
+Kundu, P. K., \& Cohen, I. M. (2008). \textit{Fluid mechanics}. Amsterdam; Boston: Academic Press.
+
+Letterman, R. D. (1999). \textit{Water quality and treatment: a handbook of community water supplies} (5th ed.). New York: McGraw-Hill.
+
+Matilainen, A., Veps\"{a}l\"{a}inen, M., \& Sillanp\"{a}\"{a}, M. (2010). Natural organic matter removal by coagulation during drinking water treatment: A review. \textit{Advances in Colloid and Interface Science}, \textit{159}\eqref{GrindEQ__2_}, 189--197. https://doi.org/10.1016/j.cis.2010.06.007\underbar{}
+
+Marhaba, T. F., Pu, Y., \& Bengraine, K. (2003). Modified dissolved organic matter fractionation technique for natural water. \textit{Journal of Hazardous Materials}, \textit{101}\eqref{GrindEQ__1_}, 43--53. https://doi.org/10.1016/S0304-3894\eqref{GrindEQ__03_}00133-X
+
+O'Melia, C. R. (1972). Coagulation and flocculation. In W. J. Weber (Ed.), \textit{Physicochemical processes for water quality control}. New York: Wiley-Interscience.
+
+\"{O}sterberg, R., Lindovist, I., \& Mortensen, K. (1993). Particle Size of Humic Acid. \textit{Soil Science Society of America Journal}, \textit{57}\eqref{GrindEQ__1_}, 283--285. https://doi.org/10.2136/sssaj1993.03615995005700010048x
+
+Pennock, William H., Weber-Shirk, Monroe, \& Lion, Leonard W. (2018). A Hydrodynamic and Surface Coverage Model Capable of Predicting Settled Effluent Turbidity Subsequent to Hydraulic Flocculation. \textit{Environmental Engineering Science}, \textit{35}\eqref{GrindEQ__12_}. https://doi.org/DOI\#10.1089/ees.2017.0332\underbar{}
+
+Schulz, C. R., \& Okun, D. A. (1984). \textit{Surface water treatment for communities in developing countries}. New York: Wiley.
+
+Sharp, E. L., Jarvis, P., Parsons, S. A., \& Jefferson, B. (2006). Impact of fractional character on the coagulation of NOM. \textit{Colloids and Surfaces A: Physicochemical and Engineering Aspects}, \textit{286}(1--3), 104--111. https://doi.org/10.1016/j.colsurfa.2006.03.009
+
+Sigma-Aldrich. (2014). \textit{Humic acid sodium salt (H16752)} (Safety Data Sheet) (p. 7). St. Louis, MO. Retrieved from https://www.sigmaaldrich.com/MSDS/MSDS/DisplayMSDSPage.do?country=US\&language=en\&productNumber=H16752\&brand=ALDRICH\&PageToGoToURL=https\%3A\%2F\%2Fwww.sigmaaldrich.com\%2Fcatalog\%2Fproduct\%2Faldrich\%2Fh16752\%3Flang\%3Den
+
+Soh, Y. C., Roddick, F., \& Leeuwen, J. van. (2008). The impact of alum coagulation on the character, biodegradability and disinfection by-product formation potential of reservoir natural organic matter (NOM) fractions. \textit{Water Science and Technology; London}, \textit{58}\eqref{GrindEQ__6_}, 1173--1179. http://dx.doi.org/10.2166/wst.2008.475
+
+Swetland, K. A., Weber-Shirk, M. L., \& Lion, L. W. (2013). Influence of Polymeric Aluminum Oxyhydroxide Precipitate-Aggregation on Flocculation Performance. \textit{Environmental Engineering Science}, \textit{30}\eqref{GrindEQ__9_}, 536--545. https://doi.org/10.1089/ees.2012.0199
+
+Swetland, K. A., Weber-Shirk, M. L., \& Lion, L. W. (2014). Flocculation-Sedimentation Performance Model for Laminar-Flow Hydraulic Flocculation with Polyaluminum Chloride and Aluminum Sulfate Coagulants. \textit{Journal of Environmental Engineering}, \textit{140}\eqref{GrindEQ__3_}, 04014002. https://doi.org/10.1061/(ASCE)EE.1943-7870.0000814
+
+Tse, I. C., Swetland, K., Weber-Shirk, M. L., \& Lion, L. W. (2011). Method for quantitative analysis of flocculation performance. \textit{Water Research}, \textit{45}\eqref{GrindEQ__10_}, 3075--3084. https://doi.org/10.1016/j.watres.2011.03.021\underbar{}
+
+Van Benschoten, J. E., \& Edzwald, J. K. (1990). Chemical aspects of coagulation using aluminum salts---I. Hydrolytic reactions of alum and polyaluminum chloride. \textit{Water Research}, \textit{24}\eqref{GrindEQ__12_}, 1519--1526. https://doi.org/10.1016/0043-1354\eqref{GrindEQ__90_}90086-L
+
+Weber-Shirk, M. L. (2016). ProCoDA: An Automated Method for Testing Process Parameters. Retrieved October 30, 2015, from https://confluence.cornell.edu/display/AGUACLARA/ProCoDA
+
+Weber-Shirk, M. L., \& Lion, L. W. (2010). Flocculation model and collision potential for reactors with flows characterized by high Peclet numbers. \textit{Water Research}, \textit{44}\eqref{GrindEQ__18_}, 5180--5187. https://doi.org/10.1016/j.watres.2010.06.026
+
+Willis, R. M. (1978). Tubular Settlers---A Technical Review. \textit{Journal (American Water Works Association)}, \textit{70}\eqref{GrindEQ__6_}, 331--335.
