@@ -637,6 +637,21 @@ Now that the sand layer depth is set the Kozeny Head Loss can be determined for 
 
 First use the Kozeny Equation (**ref kozeny** )to find the HL in the central layers and also the bottom layer with :math:`H_{Layer}` and :math:`H_{BottomLayer}`
 
+As the filter has 6 layers there are six possible paths for the water to take.
+
+Overview of the algorithm of this section:
+
+In each path the path headloss is the sum of : inlet plumbing, sand layer, and outlet plumbing (for the relevant flow)
+
+Find the max headloss through the respective paths (Q1 - Q6)
+Find the min headloss through the respective paths (Q1 - Q6)
+Find the average headloss of the paths (sum(HL)/6)
+^^a theoretical term because the flow distrubution will sort itself out because that's how headloss works
+Find Pi_layer. The ratio of  the flow distribution. Goal is close to 1.
+
+Because the flow distribution will change to make the headlosses even, it can be taken as true that :math:`HL_{Path1} = HL_{Path2}` and so on for each path. This assumes the clean bed headlosses and also accounts for the varying flows in each path.
+
+
 
 
 Siphon design
