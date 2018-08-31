@@ -216,7 +216,7 @@ See :numref:`figure_mountain` for a typical mountain view.
 
 \noindent \item 10) )Save the data as: S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}Lab 1 -- Fundamentals{\textbackslash}group\#\_blue
 
-\noindent \item 11) )Measure the absorbance of a methylene blue solution of unknown concentration. Select ``\textbf{measure samples''} from the control palette. Fill in Your Name (group \#), General Description, and change the Setup parameters to Sample Cuvet.  Fill in a Description of the unknown and hit OK.  Follow instructions as you are prompted.
+\noindent \item 11) )Measure the absorbance of a methylene blue solution of unknown concentration. Select 'measure samples' from the control palette. Fill in Your Name (group \#), General Description, and change the Setup parameters to Sample Cuvet.  Fill in a Description of the unknown and hit OK.  Follow instructions as you are prompted.
 
 \noindent \item 12) )Save the data as: S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}Lab 1 -- Fundamentals{\textbackslash}group\#\_blue
 
@@ -310,5 +310,3 @@ C16H18N3SCl & 319.87 & 1 & 100.0 mg \\ \hline
 
 \noindent \item 5) )Disassemble, clean, and lubricate all pipettes.
 \end{enumerate}
-
-\eject
