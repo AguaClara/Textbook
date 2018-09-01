@@ -11,5 +11,7 @@ This text is a collaborative effort involving hundreds of people. Innovation req
 - Monroe Weber-Shirk
 - Clare O'Connor
 - William Pennock
+- Leonard Lion
+- Yingda Du
 
 This text would not have been possible without the advice, mentoring, and publishing system assembled by Ethan Keller.

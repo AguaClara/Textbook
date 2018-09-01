@@ -315,7 +315,7 @@ Within the body of the document, use the following syntax::
 
 And place the directive at the very end of the document::
 
-   .. bibliography:: references.bib
+   .. bibliography:: /references.bib
       :cited:
       :keyprefix: ex-
 
