@@ -636,10 +636,7 @@ The relationships between the three terms included in attachment efficiency are 
 
    Attachment efficiency as a function of coagulant dose.
 
-
-
 The model was validated by using it to predict turbidity removal efficiency for different experimental conditions. The predicted :math:`pC^*` and the measured :math:`pC^*` are compared in :numref:`figure_Du_Fig7` for an additional 60 experiments with inflow turbidity of 100 NTU, PACl doses ranging from 0.53 to 2.65 mg/L, and humic acid concentration ranging from 0 to 15 mg/L. The resulting fit is almost as good as for the 50 NTU data, with :math:`pC^*` RMSE of 0.11.
-
 
 .. _figure_Du_Fig7:
 
@@ -650,10 +647,7 @@ The model was validated by using it to predict turbidity removal efficiency for 
 
    Comparison graph between predicted data and observed data for 100 NTU influent turbidity.
 
-
-
 When the coagulant dose in :numref:`figure_Du_Fig4` and :numref:`figure_Du_Fig7` was replaced with the dimensionless group :math:`\overline{\alpha }\overline{G}\theta {\phi }^{\frac{2}{3}}` , the data collapsed to a much narrower band, implying that the composite parameter, :math:`\overline{\alpha }\overline{G}\theta {\phi }^{\frac{2}{3}}`, captures a large fraction of the trends present in the data, as seen in :numref:`figure_Du_Fig8`.
-
 
 .. _figure_Du_Fig8:
 
@@ -664,9 +658,7 @@ When the coagulant dose in :numref:`figure_Du_Fig4` and :numref:`figure_Du_Fig7`
 
    Model fit of 50 and 100 NTU data for :math:`\boldsymbol{p}{\boldsymbol{C}}^{\boldsymbol{*}}` as function of effective collision potential. The data plotted include two replicates for each experiment.
 
-
 In summary, the laminar flow hydraulic flocculation model of Pennock et al. (2018) was modified to incorporate the effects of humic acid with the addition of a single fitting parameter: a characteristic dimension of the humic acid macromolecules. The required coagulant dose can be predicted based on the flocculator parameters, humic acid characteristic size and concentration, and influent turbidity. The addition of humic acid to the flocculation model increases the model applicability since natural organic matter is found in all surface and ground waters and influences the coagulant dose needed for effective turbidity removal.
-
 
 Discussion
 =============
@@ -723,7 +715,7 @@ Camp, T. R. (1953). Flocculation and Flocculation Basins. American Society of Ci
 
 Chow, C. W. K., Fabris, R., Leeuwen, J. van, Wang, D., & Drikas, M. (2008). Assessing Natural Organic Matter Treatability Using High Performance Size Exclusion Chromatography. Environmental Science & Technology, 42(17), 6683–6689. https://doi.org/10.1021/es800794r
 
-Cleasby, J. (1984). Is Velocity Gradient a Valid Turbulent Flocculation Parameter? Journal of Environmental Engineering, 110(5), 875–897. https://doi.org/10.1061/(ASCE)0733-9372(1984)110:5(875)
+Cleasby, J. (1984). Is Velocity Gradient a Valid Turbulent Flocculation Parameter? Journal of Environmental Engineering, 110(5), 875–897. https://doi-org.proxy.library.cornell.edu/10.1061/(ASCE)0733-9372(1984)110:5(875)
 
 Davis, J. A. (1982). Adsorption of natural dissolved organic matter at the oxide/water interface. Geochimica et Cosmochimica Acta, 46(11), 2381–2393. https://doi.org/10.1016/0016-7037(82)90209-5
 
@@ -752,7 +744,7 @@ O’Melia, C. R. (1972). Coagulation and flocculation. In W. J. Weber (Ed.), Phy
 
 Österberg, R., Lindovist, I., & Mortensen, K. (1993). Particle Size of Humic Acid. Soil Science Society of America Journal, 57(1), 283–285. https://doi.org/10.2136/sssaj1993.03615995005700010048x
 
-Pennock, William H., Weber-Shirk, Monroe, & Lion, Leonard W. (2018). A Hydrodynamic and Surface Coverage Model Capable of Predicting Settled Effluent Turbidity Subsequent to Hydraulic Flocculation. Environmental Engineering Science, 35(12). https://doi.org/DOI#10.1089/ees.2017.0332
+Pennock, William H., Weber-Shirk, Monroe, & Lion, Leonard W. (2018). A Hydrodynamic and Surface Coverage Model Capable of Predicting Settled Effluent Turbidity Subsequent to Hydraulic Flocculation. Environmental Engineering Science, 35(12). https://doi.org/10.1089/ees.2017.0332
 
 Schulz, C. R., & Okun, D. A. (1984). Surface water treatment for communities in developing countries. New York: Wiley.
 
