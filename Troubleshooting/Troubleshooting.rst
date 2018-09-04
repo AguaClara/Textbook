@@ -21,21 +21,21 @@ Drip chlorine into water rather than injecting it to eliminate formation of prec
 
 Use valves at the end of the pipeline to control transmission line flow rate rather than upstream control. Review the transmission line to ensure that all sections of the line have flow controlled by limiting available driving head. Air entrainment occurs when the available head exceeds the head required to transmit the target flow.
 
+.. todo:: create a troubleshooting guide that is hierarchical that covers multiple symptoms and then narrows down again to the potential solutions.
+
 .. _table_Troubleshooting:
 
 .. csv-table:: Table of symptoms, problems, and solutions for AguaClara plant operation.
    :header: "Observation", "Problem", "Solution"
    :align: left
 
-   Air bubbles, Air entrainment in the transmission line and transport to a high pressure zone in the pipeline where the air is dissolved in the water. ,
-   Bubbles in sedimentation tanks,
+   Air bubbles, Air entrainment in the transmission line and transport to a high pressure zone in the pipeline where the air is dissolved in the water, Use downstream head loss to prevent air entrainment in transmission line or add a unit process (TBD) that removes excess dissolved air
+   Bubbles in sedimentation tanks, anaerobic production in methane in settled sludge, clean sedimentation tank and check design to eliminate all settled sludge
    Bubbles in EStaRS, water entering the plant is supersaturated with air and EStaRS filters operate at very low pressure (compared with OStaRS), eliminate air entrainment in transmission line
-    , , add a unit process (TBD) that removes excess dissolved air
-   Rising flocs,
-   Short filter runtimes, poor performance of floc/sed system
-   Gradual increase in post backwash head loss in filters,
-   Scale deposition in the distribution system,
-   Clogging of chlorination system tubes and formation of precipitate at the injection point,
+   Short filter runtimes, poor performance of floc/sed system or clogged slotted pipes or air lock, various solutions
+   Gradual increase in post backwash head loss in filters, slotted pipes are clogging, acid flush by pouring HCl (need the concentration) into the outlet pipes OR disassemble filter and clean with a pressure washer
+   Scale deposition in the distribution system, increase in temperature from groundwater conditions causes supersaturation of calcium carbonate, reduce the pH of the water slightly (perhaps 0.5 pH units) to eliminate the supersaturation
+   Clogging of chlorination system tubes and formation of precipitate at the injection point, dissolution of carbon dioxide from the atmosphere causes precipitation of calcium carbonate, Reduce exposure of the solution to the atmosphere OR drip the chlorine into the filtered water
 
 
 High head loss after backwash in EStaRS
@@ -84,8 +84,11 @@ At pH 6.0 it requires 100 hours.
 For several reasons, routine chemical disinfectants that effectively wipe out other bacteria are only modestly successful against iron bacteria. Iron bacteria build up in thick layers, each forming a slime around bacterial cells that keeps disinfectants from penetrating beyond the surface cells. Chemical reactions occur far slower at the cool temperatures common in wells, and bacterial cell need a long exposure to the chemical for the treatment to be effective. Even if chlorine kills all the bacterial cells in the water, those in the groundwater can be drawn in by pumping or drift back into the well. `Read more about chlorine and iron oxidizing bacteria <http://www.lenntech.com/iron-bacteria.htm#ixzz4ehUFJwO6>`_
 
 
-Proposed solutions
-------------------
+Proposed solutions to eliminate iron oxidizing slime bacteria
+-------------------------------------------------------------
 
- - Move the acid addition point to the end of the plant. This will allow chemical oxidation and removal of the iron. Note that once the iron is oxidized it precipitates as Fe(OH)3 and that is a wonderful coagulant. This is why the Las Vegas plant was shown to produce clean water even without addition of a coagulant!
+The solutions all revolve around oxidizing the iron chemically before the bacteria have a chance to oxidize the iron biologically.
+ - Move the acid addition point to the end of the plant. This will allow chemical oxidation and removal of the iron. Note that once the iron is oxidized it precipitates as :math:`Fe(OH)_3` and that is a wonderful coagulant. This is why the Las Vegas plant was shown to produce clean water even without addition of a coagulant!
+ - It might be possible to move the acid addition point to the exit of the flocculator if the flocculation process provides enough time for iron oxidation
+ - Create an aeration system upstream from the plant in the transmission line
  - Move chlorination to the rapid mix. This might work, but given the chlorine resistance of the slime and the disadvantages of prechlorination for production of disinfection by-products, we don't recommend this.
