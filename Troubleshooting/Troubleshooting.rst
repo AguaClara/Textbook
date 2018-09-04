@@ -27,7 +27,7 @@ Use valves at the end of the pipeline to control transmission line flow rate rat
    :header: "Observation", "Problem", "Solution"
    :align: left
 
-   Air bubbles, Air entrainment in the transmission line and transport to a high pressure zone in the pipeline where the air is dissolved in the water.
+   Air bubbles, Air entrainment in the transmission line and transport to a high pressure zone in the pipeline where the air is dissolved in the water. ,
    Bubbles in sedimentation tanks,
    Bubbles in EStaRS, water entering the plant is supersaturated with air and EStaRS filters operate at very low pressure (compared with OStaRS), eliminate air entrainment in transmission line
     , , add a unit process (TBD) that removes excess dissolved air
