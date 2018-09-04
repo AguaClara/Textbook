@@ -43,7 +43,7 @@ Building RST Locally with Sphinx_
 We use Sphinx_ to build RST locally and remotely. Follow these steps to get Sphinx_ and run it locally:
 
 #. Get `Python 3.5 <https://www.python.org/downloads/>`_
-    * If you have `Anaconda <https://www.anaconda.com/download/#macos>`_ or `Miniconda <https://conda.io/miniconda.html>`_ you'll have to create a virtual environment with python 3.5 with :code:`$conda create -n py35 python=3.5` and then activate it with :code:`$source activate py35` (or just :code:`activate py35` on Windows) and then continue with the instructions **in that terminal**.
+    * (Preferred option.) If you have `Anaconda <https://www.anaconda.com/download/#macos>`_ or `Miniconda <https://conda.io/miniconda.html>`_ you'll have to create a virtual environment with python 3.5 with :code:`$conda create -n py35 python=3.5` and then activate it with :code:`$source activate py35` (or just :code:`activate py35` on Windows) and then continue with the instructions **in that terminal**.
     * If you don't have any package manager, you can use `pyenv <https://github.com/pyenv/pyenv#installation>`_, although we do not officially support this.
     * If you don't have either anaconda or pyenv, download anaconda and follow the first bullet point here.
 #. Install pipenv (:code:`$pip install pipenv`)
