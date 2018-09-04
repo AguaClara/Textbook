@@ -1,9 +1,14 @@
 .. _title_Flocculation_Model:
 
+Outline
+Collision model
 
-**********************************************
-A New Paradigm for Hydraulic Flocculation}
-**********************************************
+
+
+
+*****************************************
+A New Paradigm for Hydraulic Flocculation
+*****************************************
 
 William H. Pennock, Monroe L. Weber-Shirk, Leonard W. Lion
 

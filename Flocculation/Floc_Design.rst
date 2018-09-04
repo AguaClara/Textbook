@@ -9,7 +9,7 @@ Professor Monroe’s class time is limited, so too is the amount of material he 
 understandable. Thus, these summary sheets will supplement the powerpoints by going into further detail on the course concepts
 introduced in the slides.
 
-Equations, universal constants, and other helpful goodies can be found in the `aide_design repository on GitHub <https://github.com/AguaClara/aide_design/tree/master/aide_design>`__. Most equations and constants you find in these summary sheets will already have been coded into aide_design, and will be shown here in the following format:
+Equations, universal constants, and other helpful goodies can be found in the `aide_design repository on GitHub <https://github.com/AguaClara/aguaclara/tree/master/aguaclara>`__. Most equations and constants you find in these summary sheets will already have been coded into aide_design, and will be shown here in the following format:
 
 | Variable: ``pc.gravity``
 | Function: ``pc.area_circle(DiamCircle)``.
