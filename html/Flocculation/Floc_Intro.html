@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Flocculation Design" href="Floc_Design.html" />
+    <link rel="next" title="Flocculation Model" href="Floc_Model.html" />
     <link rel="prev" title="Rapid Mix Theory and Future Work" href="../Rapid_Mix/RM_Theory_and_Future_Work.html" /> 
 
   
@@ -123,9 +123,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#history">History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Model.html#a-new-paradigm-for-hydraulic-flocculation">A New Paradigm for Hydraulic Flocculation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Model.html#observations-and-a-geometric-explanation-of-the-effects-of-humic-acid-on-flocculation">Observations and a Geometric Explanation of the Effects of Humic Acid on Flocculation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Floc_Design.html">Flocculation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Floc_Derivations.html">Flocculation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Examples.html">Flocculation Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
@@ -157,6 +161,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
 </ul>
 
             
@@ -277,181 +282,6 @@ that the electrophoretic mobility which is a measure of the clay particle surfac
 these results.</p>
 <p><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">Figure x. Settled water turbidity (jar tests) for final pH (after coagulant addition) of 6.0 and 7.8.</a></p>
 <p>Electrostatic charge neutralization hypothesis The coagulant precipitate self aggregates – this is inconsistent with the positive charge that the electrostatic hypothesis asserts will prevent aggregation * Electrostatic repulsion extends only a few nm from the surface of a particle – and the coagulant adhesive nanoparticles are many times larger than the reach of the repulsive electrostatic force. The hypothesis that London van der Waals forces result in attachment neglects to account for the presence of water in the system. Water molecules will also be attracted to surfaces by London van der Waals forces and thus there will be competition between the coagulant and water. Thus eliminating repulsion is NOT sufficient to produce a bond between the particles. (see <a class="reference external" href="https://vtechworks.lib.vt.edu/bitstream/handle/10919/30137/Chapter1.pdf?sequence=9">hydration repulsion, page 21</a>) ` “The theory of DLP was a great step forward in that it appeared to circumvent the whole intractable problem of many body forces through its use of measured bulk dielectric response functions. However, it must be stressed again that it is a perturbation theory. That is, it depends on the assumption that an intervening liquid between interacting surfaces has bulk liquid properties up to a molecular distance from the surfaces. This is thermodynamically inconsistent, being equivalent to the statement that surface energies (or alternatively, the positions of the Gibbs dividing surfaces) are changed infinitesimally with distance of separation. This limits the theory to large distances (Young–Laplace vs. Poisson again) where large is undefined.” &lt;<a class="reference external" href="https://doi.org/10.1016/S0001-8686(99)00008-1">https://doi.org/10.1016/S0001-8686(99)00008-1</a>&gt;`__</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># %%</span>
-<span class="c1">#Assumptions</span>
-<span class="n">Pi_VC</span> <span class="o">=</span> <span class="o">.</span><span class="mi">62</span> <span class="c1">#Vena contracta coefficient of an orifice</span>
-<span class="n">Ke</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">Pi_VC</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="c1">#expansion coefficient</span>
-
-<span class="c1">#Functions to calculate key parameters</span>
-
-<span class="k">def</span> <span class="nf">Gave</span><span class="p">(</span><span class="n">G_theta</span><span class="p">,</span><span class="n">h_floc</span><span class="p">,</span><span class="n">Temp</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Calculates average G given target minimum collision potential, total headloss, and design temperature</span>
-<span class="sd">    equation from flocculation slides&quot;&quot;&quot;</span>
-    <span class="n">G_ave</span> <span class="o">=</span> <span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">gravity</span><span class="o">*</span><span class="n">h_floc</span><span class="o">/</span><span class="p">(</span><span class="n">G_theta</span><span class="o">*</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temp</span><span class="p">)))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">G_ave</span>
-
-<span class="k">def</span> <span class="nf">restime</span><span class="p">(</span><span class="n">G_theta</span><span class="p">,</span><span class="n">G_ave</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Calculates residence time given collision potential and average G</span>
-<span class="sd">    equation from flocculation slides&quot;&quot;&quot;</span>
-    <span class="n">theta</span> <span class="o">=</span> <span class="n">G_theta</span><span class="o">/</span><span class="n">G_ave</span>
-    <span class="k">return</span> <span class="n">theta</span>
-
-
-<span class="k">def</span> <span class="nf">Dpipe</span><span class="p">(</span><span class="n">Ke</span><span class="p">,</span><span class="n">Pi_HS</span><span class="p">,</span><span class="n">Q</span><span class="p">,</span><span class="n">G_ave</span><span class="p">,</span><span class="n">Temp</span><span class="p">,</span><span class="n">SDR</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Calculates the actual inner diameter of the pipe</span>
-<span class="sd">    equation from flocculation slides&quot;&quot;&quot;</span>
-    <span class="n">D_pipe</span> <span class="o">=</span> <span class="p">((</span><span class="n">Ke</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">Pi_HS</span><span class="o">*</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temp</span><span class="p">)</span><span class="o">*</span><span class="n">G_ave</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">Q</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">7</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">D_pipe</span>
-
-<span class="k">def</span> <span class="nf">Keactual</span><span class="p">(</span><span class="n">ID_pipe</span><span class="p">,</span><span class="n">G_ave</span><span class="p">,</span><span class="n">Temp</span><span class="p">,</span><span class="n">Pi_HS</span><span class="p">,</span><span class="n">Q</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;estimates actual expansion coefficient given the actual inner diameter and other relevant inputs</span>
-<span class="sd">    equation from flocculation slides&quot;&quot;&quot;</span>
-    <span class="n">Ke_actual</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">ID_pipe</span><span class="o">**</span><span class="mi">7</span><span class="o">*</span><span class="n">G_ave</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temp</span><span class="p">)</span><span class="o">*</span><span class="n">Pi_HS</span><span class="o">/</span><span class="p">(</span><span class="mi">32</span><span class="o">*</span><span class="n">Q</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">Ke_actual</span>
-
-
-
-<span class="k">def</span> <span class="nf">Aorifice</span><span class="p">(</span><span class="n">ID_pipe</span><span class="p">,</span><span class="n">Ke_actual</span><span class="p">,</span><span class="n">Temp</span><span class="p">,</span><span class="n">Q</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Calculates the orifice area given pipe inner diameter, expansion coefficient, Temperature, and flow&quot;&quot;&quot;</span>
-    <span class="n">A1</span> <span class="o">=</span> <span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">ID_pipe</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">magnitude</span> <span class="c1">#Pipe area</span>
-    <span class="n">Nu</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temp</span><span class="p">)</span> <span class="c1">#kinematic viscocity</span>
-    <span class="n">Re</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">re_pipe</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">ID_pipe</span><span class="p">,</span><span class="n">Nu</span><span class="p">)</span> <span class="c1">#reynolds number</span>
-
-    <span class="k">def</span> <span class="nf">f_orif</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span><span class="n">A1</span><span class="p">,</span><span class="n">Ke_actual</span><span class="p">,</span><span class="n">Re</span><span class="p">):</span> <span class="c1">#root of this function is the orifice area</span>
-        <span class="k">return</span> <span class="p">(</span><span class="mf">2.72</span><span class="o">+</span><span class="p">(</span><span class="n">A2</span><span class="o">/</span><span class="n">A1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">4000</span><span class="o">/</span><span class="n">Re</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">A2</span><span class="o">/</span><span class="n">A1</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">A1</span><span class="o">/</span><span class="n">A2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">Ke_actual</span>
-
-    <span class="n">A_orifice</span> <span class="o">=</span> <span class="p">(</span><span class="n">brentq</span><span class="p">(</span><span class="k">lambda</span> <span class="n">A2</span><span class="p">:</span> <span class="n">f_orif</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span><span class="n">A1</span><span class="p">,</span><span class="n">Ke_actual</span><span class="p">,</span><span class="n">Re</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">A1</span><span class="p">))</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="o">**</span><span class="mi">2</span> <span class="c1">#numerical optimization</span>
-
-    <span class="k">return</span> <span class="n">A_orifice</span>
-
-
-<span class="k">def</span> <span class="nf">eave</span><span class="p">(</span><span class="n">G_ave</span><span class="p">,</span><span class="n">Temp</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Calculates the average energy dissipation rate&quot;&quot;&quot;</span>
-    <span class="n">e_ave</span> <span class="o">=</span> <span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temp</span><span class="p">)</span><span class="o">*</span><span class="n">G_ave</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">e_ave</span>
-
-<span class="k">def</span> <span class="nf">Hchip</span><span class="p">(</span><span class="n">A_orifice</span><span class="p">,</span><span class="n">ID_pipe</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This function calculates the height of the chip based on the orifice area and pipe diameter</span>
-<span class="sd">    The function uses numerical optimization to solve the transcendental equation&quot;&quot;&quot;</span>
-    <span class="n">A_flow</span> <span class="o">=</span> <span class="n">A_orifice</span><span class="o">.</span><span class="n">magnitude</span> <span class="c1">#orifice area stripped of units</span>
-    <span class="n">r</span><span class="o">=</span><span class="p">(</span><span class="n">ID_pipe</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">magnitude</span> <span class="c1">#radius stripped of units</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="n">A_flow</span><span class="o">/</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span> <span class="c1">#left hand side of equation</span>
-
-    <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">):</span> <span class="c1">#roots of this function are theta</span>
-        <span class="k">return</span> <span class="n">a</span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">-</span><span class="n">c</span>
-
-    <span class="n">theta</span> <span class="o">=</span> <span class="n">brentq</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span> <span class="c1">#numerical optimization</span>
-    <span class="n">r_u</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="c1">#radius with units</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">r_u</span> <span class="o">-</span> <span class="n">r_u</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="c1">#height of orifice</span>
-
-    <span class="n">H_chip</span> <span class="o">=</span> <span class="n">ID_pipe</span><span class="o">-</span><span class="n">y</span> <span class="c1">#height of chip</span>
-    <span class="k">return</span> <span class="n">H_chip</span>
-
-<span class="k">def</span> <span class="nf">Cost_Length</span><span class="p">(</span><span class="n">L_pipe</span><span class="p">,</span><span class="n">ND_pipe</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This function calculates the total cost of the system and the total length of the system&quot;&quot;&quot;</span>
-    <span class="c1">#Length of pipe and number of fittings needed</span>
-    <span class="n">OD_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">OD</span><span class="p">(</span><span class="n">ND_pipe</span><span class="p">)</span>
-    <span class="n">Total_Pipe</span> <span class="o">=</span> <span class="n">L_pipe</span> <span class="o">+</span> <span class="o">.</span><span class="mi">5</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">m</span>
-    <span class="n">Number_T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">Total_Pipe</span><span class="o">.</span><span class="n">magnitude</span><span class="p">)</span>
-    <span class="n">Number_Elbow</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">Total_Pipe</span><span class="o">.</span><span class="n">magnitude</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">ND_pipe</span><span class="o">.</span><span class="n">magnitude</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-        <span class="n">Cost_T</span> <span class="o">=</span> <span class="mf">3.94</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span>
-        <span class="n">Cost_Elbow</span> <span class="o">=</span> <span class="mf">3.53</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span>
-        <span class="n">Cost_Pipe</span> <span class="o">=</span> <span class="p">(</span><span class="mf">17.14</span><span class="o">/</span><span class="mi">10</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">foot</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
-        <span class="n">Cost_Valve</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span>
-        <span class="n">Width_T</span> <span class="o">=</span> <span class="p">(</span><span class="mf">3.99</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
-        <span class="n">Width_Elbow</span> <span class="o">=</span> <span class="p">(</span><span class="mf">3.97</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
-
-
-    <span class="k">if</span> <span class="n">ND_pipe</span><span class="o">.</span><span class="n">magnitude</span> <span class="o">==</span><span class="mi">4</span><span class="p">:</span>
-        <span class="n">Cost_T</span> <span class="o">=</span> <span class="mf">7.16</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span>
-        <span class="n">Cost_Elbow</span> <span class="o">=</span> <span class="mf">5.40</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span>
-        <span class="n">Cost_Pipe</span> <span class="o">=</span> <span class="p">(</span><span class="mf">21.5</span><span class="o">/</span><span class="mi">10</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">foot</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
-        <span class="n">Cost_Valve</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span>
-        <span class="n">Width_T</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.06</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
-        <span class="n">Width_Elbow</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.06</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">ND_pipe</span><span class="o">.</span><span class="n">magnitude</span> <span class="o">==</span><span class="mi">6</span><span class="p">:</span>
-        <span class="n">Cost_T</span> <span class="o">=</span> <span class="mf">7.16</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span>
-        <span class="n">Cost_Elbow</span> <span class="o">=</span> <span class="mf">5.40</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span>
-        <span class="n">Cost_Pipe</span> <span class="o">=</span> <span class="p">(</span><span class="mf">21.5</span><span class="o">/</span><span class="mi">10</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">foot</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
-        <span class="n">Cost_Valve</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">dollar</span>
-        <span class="n">Width_T</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.06</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
-        <span class="n">Width_Elbow</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.06</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
-
-
-    <span class="n">Total_Cost</span> <span class="o">=</span> <span class="n">Cost_Pipe</span><span class="o">*</span><span class="n">Total_Pipe</span> <span class="o">+</span> <span class="n">Cost_T</span><span class="o">*</span><span class="n">Number_T</span> <span class="o">+</span> <span class="n">Cost_Elbow</span><span class="o">*</span><span class="n">Number_Elbow</span> <span class="o">+</span> <span class="n">Cost_Valve</span><span class="o">*</span><span class="n">Number_Elbow</span>
-    <span class="n">Floor_Length</span> <span class="o">=</span> <span class="n">Number_T</span><span class="o">*</span><span class="p">(</span><span class="n">Width_T</span><span class="o">+</span><span class="n">Width_Elbow</span><span class="o">-</span><span class="n">OD_pipe</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
-    <span class="n">Output</span><span class="o">=</span><span class="p">[</span><span class="n">Total_Cost</span><span class="p">,</span><span class="n">Floor_Length</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">Output</span>
-</pre></div>
-</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Inputs</span>
-<span class="n">D_Sed</span> <span class="o">=</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span>
-<span class="n">A_Sed</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">D_Sed</span><span class="p">)</span>
-<span class="n">v_Sed</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">Q</span> <span class="o">=</span> <span class="p">(</span><span class="n">v_Sed</span><span class="o">*</span><span class="n">A_Sed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The flow rate is&#39;</span><span class="p">,</span><span class="n">Q</span><span class="p">)</span>
-
-<span class="n">Temp</span> <span class="o">=</span> <span class="mi">15</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
-<span class="n">h_floc</span> <span class="o">=</span> <span class="mi">50</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="c1">#standard for Aguaclara plants</span>
-<span class="n">G_theta</span> <span class="o">=</span> <span class="mi">20000</span> <span class="c1">#standard for Aguaclara plants</span>
-<span class="n">Pi_HS</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1">##3-6 is a good range, more research needed</span>
-<span class="n">SDR</span> <span class="o">=</span> <span class="mi">41</span> <span class="c1">#Standard ratio</span>
-</pre></div>
-</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate G average using functions listed above and given inputs</span>
-<span class="n">G_ave</span> <span class="o">=</span> <span class="n">Gave</span><span class="p">(</span><span class="n">G_theta</span><span class="p">,</span><span class="n">h_floc</span><span class="p">,</span><span class="n">Temp</span><span class="p">)</span>
-<span class="n">theta</span> <span class="o">=</span> <span class="n">restime</span><span class="p">(</span><span class="n">G_theta</span><span class="p">,</span><span class="n">G_ave</span><span class="p">)</span>
-<span class="n">e_ave</span> <span class="o">=</span> <span class="n">eave</span><span class="p">(</span><span class="n">G_ave</span><span class="p">,</span><span class="n">Temp</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average G value is &#39;</span><span class="p">,</span><span class="n">G_ave</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The residence time in the flocculator is &#39;</span><span class="p">,</span><span class="n">theta</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average energy dissipation rate is &#39;</span><span class="p">,</span> <span class="n">e_ave</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the pipe diameter, both inner and nominal and determine area of pipe using inner diameter output</span>
-<span class="n">D_pipe</span> <span class="o">=</span> <span class="p">(</span><span class="n">Dpipe</span><span class="p">(</span><span class="n">Ke</span><span class="p">,</span><span class="n">Pi_HS</span><span class="p">,</span><span class="n">Q</span><span class="p">,</span><span class="n">G_ave</span><span class="p">,</span><span class="n">Temp</span><span class="p">,</span><span class="n">SDR</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
-<span class="c1">#Calculate nominal diameter of pipe</span>
-<span class="n">ND_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ND_SDR_available</span><span class="p">(</span><span class="n">D_pipe</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span>
-<span class="c1">#Calculate nominal diameter of pipe</span>
-<span class="n">ID_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_pipe</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
-
-<span class="n">ID_pipe</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span>
-<span class="c1">#Calculate inner diameter of pipe</span>
-<span class="n">A_pipe</span> <span class="o">=</span> <span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">ID_pipe</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The ideal inner diameter of the pipe would be &#39;</span><span class="p">,</span><span class="n">D_pipe</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The nominal diameter of the pipe is &#39;</span><span class="p">,</span><span class="n">ND_pipe</span><span class="p">,</span> <span class="s1">&#39;, and the inner diameter is &#39;</span><span class="p">,</span> <span class="n">ID_pipe</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The area of the pipe is &#39;</span><span class="p">,</span> <span class="n">A_pipe</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the actual Ke as a result of the calculated inner pipe diameter</span>
-<span class="n">Ke_actual</span> <span class="o">=</span> <span class="p">(</span><span class="n">Keactual</span><span class="p">(</span><span class="n">ID_pipe</span><span class="p">,</span><span class="n">G_ave</span><span class="p">,</span><span class="n">Temp</span><span class="p">,</span><span class="n">Pi_HS</span><span class="p">,</span><span class="n">Q</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The initial expansion minor loss coefficient was &#39;</span><span class="p">,</span><span class="n">Ke</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The actual expansion minor loss coefficient is &#39;</span><span class="p">,</span><span class="n">Ke_actual</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the orifice area</span>
-<span class="n">A_orifice</span> <span class="o">=</span> <span class="n">Aorifice</span><span class="p">(</span><span class="n">ID_pipe</span><span class="p">,</span><span class="n">Ke_actual</span><span class="p">,</span><span class="n">Temp</span><span class="p">,</span><span class="n">Q</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The orifice area is &#39;</span><span class="p">,</span><span class="n">A_orifice</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># The following line of code needs to be removed once the orifice area equation is corrected.</span>
-
-<span class="n">H_chip</span> <span class="o">=</span> <span class="n">Hchip</span><span class="p">(</span><span class="n">A_orifice</span><span class="p">,</span><span class="n">ID_pipe</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The height of the chip is &#39;</span><span class="p">,</span> <span class="n">H_chip</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate average velocity</span>
-<span class="n">v_avg</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">ID_pipe</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span> <span class="c1">#first calculate average velocity</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average velocity is &#39;</span><span class="p">,</span><span class="n">v_avg</span><span class="p">)</span>
-
-<span class="c1">#Calculate pipe length</span>
-<span class="n">L_pipe</span> <span class="o">=</span> <span class="p">(</span><span class="n">v_avg</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span> <span class="c1">#then multiply velocity by residence time to get the required length of pipe</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The length of the pipe is &#39;</span><span class="p">,</span><span class="n">L_pipe</span><span class="p">)</span>
-</pre></div>
-</div>
 <p>#references <a class="reference external" href="https://www.iwapublishing.com/news/coagulation-and-flocculation-water-and-wastewater-treatment">Coagulation and Flocculation in Water and Wastewater Treatment</a>,
 iwapublishing</p>
 </div>
@@ -465,7 +295,7 @@ iwapublishing</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Floc_Design.html" class="btn btn-neutral float-right" title="Flocculation Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Floc_Model.html" class="btn btn-neutral float-right" title="Flocculation Model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../Rapid_Mix/RM_Theory_and_Future_Work.html" class="btn btn-neutral" title="Rapid Mix Theory and Future Work" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

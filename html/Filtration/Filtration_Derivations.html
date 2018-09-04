@@ -116,9 +116,13 @@
 <p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html#a-new-paradigm-for-hydraulic-flocculation">A New Paradigm for Hydraulic Flocculation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html#observations-and-a-geometric-explanation-of-the-effects-of-humic-acid-on-flocculation">Observations and a Geometric Explanation of the Effects of Humic Acid on Flocculation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
@@ -175,6 +179,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
 </ul>
 
             
@@ -247,7 +252,7 @@
 </div>
 <p>The pressure from the water:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-0">
-<span class="eqno">(371)<a class="headerlink" href="#equation-filtration-filtration-derivations-0" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}\]</div>
+<span class="eqno">(426)<a class="headerlink" href="#equation-filtration-filtration-derivations-0" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(P_{Manometer} =\)</span> total height from the bottom of the filter to the inlet box</div>
@@ -260,23 +265,23 @@
 </div>
 <p>The pressure from the sand:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-1">
-<span class="eqno">(372)<a class="headerlink" href="#equation-filtration-filtration-derivations-1" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
+<span class="eqno">(427)<a class="headerlink" href="#equation-filtration-filtration-derivations-1" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(h_{l_{FiBw}} =\)</span> the difference in height of the inlet and water surface height during backwash; the backwash head loss</div>
 </div>
 <p>Setting them equal for a force balance:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-2">
-<span class="eqno">(373)<a class="headerlink" href="#equation-filtration-filtration-derivations-2" title="Permalink to this equation">¶</a></span>\[\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
+<span class="eqno">(428)<a class="headerlink" href="#equation-filtration-filtration-derivations-2" title="Permalink to this equation">¶</a></span>\[\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
 <p>Which simplifies to:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-3">
-<span class="eqno">(374)<a class="headerlink" href="#equation-filtration-filtration-derivations-3" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}\\or\\h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\end{aligned}\end{align} \]</div>
+<span class="eqno">(429)<a class="headerlink" href="#equation-filtration-filtration-derivations-3" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}\\or\\h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\end{aligned}\end{align} \]</div>
 <p>This result gives a ratio of the head loss during backwash to the height difference during forward operation. With <span class="math notranslate nohighlight">\(\phi_{FiSand} = 0.4\)</span> and <span class="math notranslate nohighlight">\(\rho_{Sand} = 2650 kg/m^3\)</span> the value of this ratio is:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-4">
-<span class="eqno">(375)<a class="headerlink" href="#equation-filtration-filtration-derivations-4" title="Permalink to this equation">¶</a></span>\[\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\]</div>
+<span class="eqno">(430)<a class="headerlink" href="#equation-filtration-filtration-derivations-4" title="Permalink to this equation">¶</a></span>\[\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\]</div>
 <p>Thus:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-5">
-<span class="eqno">(376)<a class="headerlink" href="#equation-filtration-filtration-derivations-5" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = H_{FiSand} * 0.99\]</div>
+<span class="eqno">(431)<a class="headerlink" href="#equation-filtration-filtration-derivations-5" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = H_{FiSand} * 0.99\]</div>
 <div class="section" id="siphon-derivation">
 <span id="id1"></span><h2>Siphon Derivation<a class="headerlink" href="#siphon-derivation" title="Permalink to this headline">¶</a></h2>
 <p>The siphon is defined by its airtrap!</p>
@@ -313,7 +318,7 @@
 3. Between filter layers</p>
 <p>The relative distribution of the flow through a particular path is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-6">
-<span class="eqno">(377)<a class="headerlink" href="#equation-filtration-filtration-derivations-6" title="Permalink to this equation">¶</a></span>\[\Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{C_{p_{Short}}}{C_{p_{Short}}}}\]</div>
+<span class="eqno">(432)<a class="headerlink" href="#equation-filtration-filtration-derivations-6" title="Permalink to this equation">¶</a></span>\[\Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{C_{p_{Short}}}{C_{p_{Short}}}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\Pi_Q =\)</span> the ratio of flow</div>
@@ -324,7 +329,7 @@
 </div>
 <p><span class="math notranslate nohighlight">\(C_p\)</span> is defined in Fluids review (<strong>Make this actually be defined here</strong>)</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-7">
-<span class="eqno">(378)<a class="headerlink" href="#equation-filtration-filtration-derivations-7" title="Permalink to this equation">¶</a></span>\[\Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{H_{LSand}-PR}{H_{LSand}}}\]</div>
+<span class="eqno">(433)<a class="headerlink" href="#equation-filtration-filtration-derivations-7" title="Permalink to this equation">¶</a></span>\[\Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{H_{LSand}-PR}{H_{LSand}}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(H_LSand =\)</span> the head loss in the sand bed</div>
@@ -351,37 +356,37 @@
 <p>Use the Kozeny equation to find the headloss through the clean bed. Assume the depth of the sand bed as calculated above in the <span class="xref std std-ref">_heading_sand_layer_from_trunk_diam</span> section</p>
 <p>Second Constraint: Pressure recovery in lowest trunk during backwash</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-8">
-<span class="eqno">(379)<a class="headerlink" href="#equation-filtration-filtration-derivations-8" title="Permalink to this equation">¶</a></span>\[V_{BwManTrunkMaxPR} = \sqrt{2g*(HL_{BWSlotsEst}*\Pi_{ManifoldHeadLoss} - PR_{ManBranchEst} )}\]</div>
+<span class="eqno">(434)<a class="headerlink" href="#equation-filtration-filtration-derivations-8" title="Permalink to this equation">¶</a></span>\[V_{BwManTrunkMaxPR} = \sqrt{2g*(HL_{BWSlotsEst}*\Pi_{ManifoldHeadLoss} - PR_{ManBranchEst} )}\]</div>
 <p>This velocity is used to find the flow possible in the pipe, using the inner diameter of the pipe, and is rounded to the nearest 1 L/s.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-9">
-<span class="eqno">(380)<a class="headerlink" href="#equation-filtration-filtration-derivations-9" title="Permalink to this equation">¶</a></span>\[Q_{PRBwTrunk} = \pi*ID_{BwTrunkMax}^2 * V_{BwManTrunkMaxPR}\]</div>
+<span class="eqno">(435)<a class="headerlink" href="#equation-filtration-filtration-derivations-9" title="Permalink to this equation">¶</a></span>\[Q_{PRBwTrunk} = \pi*ID_{BwTrunkMax}^2 * V_{BwManTrunkMaxPR}\]</div>
 <p>The flow set by the maximum pressure recovery is then the lesser of the flow calculated from forward filtration or backwsh. This value is the maximum flow through on filter.</p>
 <p>Knowing the maximum flow through one filter, finding the number of filters is simple.</p>
 <p>If the plant flow is less than 16 L/s, EStaRS should be used, as having two filters is ideal, but the minimum filter flow is 8 L/s, which is not possible below 16 L/s.
 In all other cases at least 2 filters should be used to allow for backwash during low flows.</p>
 <p>Thus the number of filters for plants is:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-10">
-<span class="eqno">(381)<a class="headerlink" href="#equation-filtration-filtration-derivations-10" title="Permalink to this equation">¶</a></span>\[max(\frac{Q_{Plant}}{Q_{MaxPR}}, 2)\]</div>
+<span class="eqno">(436)<a class="headerlink" href="#equation-filtration-filtration-derivations-10" title="Permalink to this equation">¶</a></span>\[max(\frac{Q_{Plant}}{Q_{MaxPR}}, 2)\]</div>
 <p>The flow through each filter given the number of filters:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-11">
-<span class="eqno">(382)<a class="headerlink" href="#equation-filtration-filtration-derivations-11" title="Permalink to this equation">¶</a></span>\[Q_{Fi} = \frac{Q_{Plant}}{N_{Fi}}\]</div>
+<span class="eqno">(437)<a class="headerlink" href="#equation-filtration-filtration-derivations-11" title="Permalink to this equation">¶</a></span>\[Q_{Fi} = \frac{Q_{Plant}}{N_{Fi}}\]</div>
 <p>Within a filter, the flow through each layer:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-12">
-<span class="eqno">(383)<a class="headerlink" href="#equation-filtration-filtration-derivations-12" title="Permalink to this equation">¶</a></span>\[Q_{Layer} = \frac{Q_{Fi}}{N_{Layer}}\]</div>
+<span class="eqno">(438)<a class="headerlink" href="#equation-filtration-filtration-derivations-12" title="Permalink to this equation">¶</a></span>\[Q_{Layer} = \frac{Q_{Fi}}{N_{Layer}}\]</div>
 <p>This is the flow that sets the pipe size for each trunk within each layer of the filter. The Nominal Diameter (ND) of the trunk pipes is then determined using the available pipe sizes. This design assumes SDR 26 to be conservative and avoid looping.</p>
 <p>First, find the diameter based on the flow and velocity. A doubled flow is used because the two middle trunks must carry flow for two layers (<strong>check this for correctness</strong>)</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-13">
-<span class="eqno">(384)<a class="headerlink" href="#equation-filtration-filtration-derivations-13" title="Permalink to this equation">¶</a></span>\[\frac{2Q_{Layer}}{V_{ManTrunkMaxPR}} = A_{TrunkCalc} = \frac{\pi*ID_{TrunkCalc}^2}{4}\]</div>
+<span class="eqno">(439)<a class="headerlink" href="#equation-filtration-filtration-derivations-13" title="Permalink to this equation">¶</a></span>\[\frac{2Q_{Layer}}{V_{ManTrunkMaxPR}} = A_{TrunkCalc} = \frac{\pi*ID_{TrunkCalc}^2}{4}\]</div>
 <p>Within the set of available inner diameters for SDR 26 pipes,  this <span class="math notranslate nohighlight">\(D_{TrunkCalc}\)</span> value is rounded up to the nearest real size. This size is found in the specified pipe database, and kept as a ND. This functioanlly obtained ND value is compared to the maximum filter trunk ND (<span class="math notranslate nohighlight">\(ND_{TrunkMax}\)</span>). The lesser of the two values is chosen. The lesser value is chosen because selecting the maximum pressure recovery in a previous step can result in a filter flow rate slightly larger than the maximum for the max trunk diameter. The max trunk diameter is still used in this case, though it just barely violates the pressure recovery constraint</p>
 <p>That process is repeated to find the size of the backwash trunk, the only difference is the flow rate and velocity used are those for the backwash trunk.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-14">
-<span class="eqno">(385)<a class="headerlink" href="#equation-filtration-filtration-derivations-14" title="Permalink to this equation">¶</a></span>\[\frac{Q_{Fi}}{V_{BwManTrunkMaxPR}} = A_{BwTrunkCalc} = \frac{\pi*ID_{BwTrunkCalc}^2}{4}\]</div>
+<span class="eqno">(440)<a class="headerlink" href="#equation-filtration-filtration-derivations-14" title="Permalink to this equation">¶</a></span>\[\frac{Q_{Fi}}{V_{BwManTrunkMaxPR}} = A_{BwTrunkCalc} = \frac{\pi*ID_{BwTrunkCalc}^2}{4}\]</div>
 <p>Finding the pipe sizes lets the pressure recovery be determiend for the trunk in forward filtration:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-15">
-<span class="eqno">(386)<a class="headerlink" href="#equation-filtration-filtration-derivations-15" title="Permalink to this equation">¶</a></span>\[PR = \frac{V^2}{2g} \longrightarrow \frac{\frac{2Q_{Layer}}{\pi*D_{Trunk}^2}}{2g} = PR_{ForwardTrunk}\]</div>
+<span class="eqno">(441)<a class="headerlink" href="#equation-filtration-filtration-derivations-15" title="Permalink to this equation">¶</a></span>\[PR = \frac{V^2}{2g} \longrightarrow \frac{\frac{2Q_{Layer}}{\pi*D_{Trunk}^2}}{2g} = PR_{ForwardTrunk}\]</div>
 <p>and in backwash:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-16">
-<span class="eqno">(387)<a class="headerlink" href="#equation-filtration-filtration-derivations-16" title="Permalink to this equation">¶</a></span>\[\frac{\frac{2Q_{Fi}}{\pi*D_{TrunkBw}^2}}{2g} = PR_{BwTrunk}\]</div>
+<span class="eqno">(442)<a class="headerlink" href="#equation-filtration-filtration-derivations-16" title="Permalink to this equation">¶</a></span>\[\frac{\frac{2Q_{Fi}}{\pi*D_{TrunkBw}^2}}{2g} = PR_{BwTrunk}\]</div>
 <p>These values allow the necessary height of sand in each layer to be determined, as in the following section.</p>
 </div>
 <div class="section" id="sand-layer-thickness-as-function-of-trunk-diameters">
@@ -389,7 +394,7 @@ In all other cases at least 2 filters should be used to allow for backwash durin
 <p>To make construction easier, all sand depths get rounded up to the nearest centimeter.</p>
 <p>The following are the functions which determine the heights of the all the sand layers.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-17">
-<span class="eqno">(388)<a class="headerlink" href="#equation-filtration-filtration-derivations-17" title="Permalink to this equation">¶</a></span>\[H_{layer} = f(ND_{trunk}) =\]</div>
+<span class="eqno">(443)<a class="headerlink" href="#equation-filtration-filtration-derivations-17" title="Permalink to this equation">¶</a></span>\[H_{layer} = f(ND_{trunk}) =\]</div>
 <p>This relates to the distance between the manifold branches and how the water will distribute amoung the layers.</p>
 <p>&lt;Insert picture of side view of filter&gt;</p>
 </div>
@@ -410,47 +415,47 @@ In all other cases at least 2 filters should be used to allow for backwash durin
 3. allowable <strong>average</strong> flow for pressure recovery term</p>
 <p>First, the maximum pressure recovery in backwash branch:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-18">
-<span class="eqno">(389)<a class="headerlink" href="#equation-filtration-filtration-derivations-18" title="Permalink to this equation">¶</a></span>\[PR_{BwManBranchMax} = HL_{BWSlotsEst}*\Pi_{ManifoldHeadLoss} - PR_{BwTrunk}\]</div>
+<span class="eqno">(444)<a class="headerlink" href="#equation-filtration-filtration-derivations-18" title="Permalink to this equation">¶</a></span>\[PR_{BwManBranchMax} = HL_{BWSlotsEst}*\Pi_{ManifoldHeadLoss} - PR_{BwTrunk}\]</div>
 <p>the resulting velocity from this pressure recovery:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-19">
-<span class="eqno">(390)<a class="headerlink" href="#equation-filtration-filtration-derivations-19" title="Permalink to this equation">¶</a></span>\[V_{BwManBranchMax} = \sqrt{2g*PR_{BwManBranchMax}}\]</div>
+<span class="eqno">(445)<a class="headerlink" href="#equation-filtration-filtration-derivations-19" title="Permalink to this equation">¶</a></span>\[V_{BwManBranchMax} = \sqrt{2g*PR_{BwManBranchMax}}\]</div>
 <p>The maximum allowable flow through this branch is then:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-20">
-<span class="eqno">(391)<a class="headerlink" href="#equation-filtration-filtration-derivations-20" title="Permalink to this equation">¶</a></span>\[Q_{BwBranchMaxPR} = V_{BwManBranchMax}*\pi*IR_{BranchManifold}^2\]</div>
+<span class="eqno">(446)<a class="headerlink" href="#equation-filtration-filtration-derivations-20" title="Permalink to this equation">¶</a></span>\[Q_{BwBranchMaxPR} = V_{BwManBranchMax}*\pi*IR_{BranchManifold}^2\]</div>
 <p>The allowable average flow is also necessary, which is derived thusly:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-21">
-<span class="eqno">(392)<a class="headerlink" href="#equation-filtration-filtration-derivations-21" title="Permalink to this equation">¶</a></span>\[\Pi_{Q} = \frac{Q_{min}}{Q_{max}}\]</div>
+<span class="eqno">(447)<a class="headerlink" href="#equation-filtration-filtration-derivations-21" title="Permalink to this equation">¶</a></span>\[\Pi_{Q} = \frac{Q_{min}}{Q_{max}}\]</div>
 <p>Assume linear flow distrubution between branches:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-22">
-<span class="eqno">(393)<a class="headerlink" href="#equation-filtration-filtration-derivations-22" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}Q_{ave} = \frac{Q_{max} + Q_{min}}{2}\\Q_{ave} = \frac{Q_{max} + \Pi_{Q}Q_{max}}{2}\\Q_{ave} = Q_{max}(\frac{1 + \Pi_{Q}} {2} )\\\Pi_{Q} = \sqrt{1 - \Pi_{HL}}\\Q_{ave} = Q_{max}(\frac{1 + \sqrt{1 - \Pi_{HL}}} {2} )\end{aligned}\end{align} \]</div>
+<span class="eqno">(448)<a class="headerlink" href="#equation-filtration-filtration-derivations-22" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}Q_{ave} = \frac{Q_{max} + Q_{min}}{2}\\Q_{ave} = \frac{Q_{max} + \Pi_{Q}Q_{max}}{2}\\Q_{ave} = Q_{max}(\frac{1 + \Pi_{Q}} {2} )\\\Pi_{Q} = \sqrt{1 - \Pi_{HL}}\\Q_{ave} = Q_{max}(\frac{1 + \sqrt{1 - \Pi_{HL}}} {2} )\end{aligned}\end{align} \]</div>
 <p>Thus, the average allowable flow:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-23">
-<span class="eqno">(394)<a class="headerlink" href="#equation-filtration-filtration-derivations-23" title="Permalink to this equation">¶</a></span>\[Q_{BwBranchAveMaxPR} = Q_{BwBranchMaxPR}(\frac{1 + \sqrt{1-\frac{PR_{BwTrunk}}{HL_{BWSlotsEst}}}} {2} )\]</div>
+<span class="eqno">(449)<a class="headerlink" href="#equation-filtration-filtration-derivations-23" title="Permalink to this equation">¶</a></span>\[Q_{BwBranchAveMaxPR} = Q_{BwBranchMaxPR}(\frac{1 + \sqrt{1-\frac{PR_{BwTrunk}}{HL_{BWSlotsEst}}}} {2} )\]</div>
 <p>Then the number of manifold branches (rounded up to he nearest even number) because of backwash flow distribution:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-24">
-<span class="eqno">(395)<a class="headerlink" href="#equation-filtration-filtration-derivations-24" title="Permalink to this equation">¶</a></span>\[N_{BwManBranchMin} =  \frac{Q_{Fi}}{Q_{BwBranchAveMaxPR}}\]</div>
+<span class="eqno">(450)<a class="headerlink" href="#equation-filtration-filtration-derivations-24" title="Permalink to this equation">¶</a></span>\[N_{BwManBranchMin} =  \frac{Q_{Fi}}{Q_{BwBranchAveMaxPR}}\]</div>
 <p id="heading-n-manifold-for-filt">To determine the minimum for the forward filtration flow distribution is a similar process with flows and PR adjusted for forward flow.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-25">
-<span class="eqno">(396)<a class="headerlink" href="#equation-filtration-filtration-derivations-25" title="Permalink to this equation">¶</a></span>\[PR_{ManBranchMax} = HL_{CleanLayerMin}*\Pi_{ManifoldHeadLoss} - PR_{ForwardTrunk}\]</div>
+<span class="eqno">(451)<a class="headerlink" href="#equation-filtration-filtration-derivations-25" title="Permalink to this equation">¶</a></span>\[PR_{ManBranchMax} = HL_{CleanLayerMin}*\Pi_{ManifoldHeadLoss} - PR_{ForwardTrunk}\]</div>
 <p>The resulting velocity from this pressure recovery:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-26">
-<span class="eqno">(397)<a class="headerlink" href="#equation-filtration-filtration-derivations-26" title="Permalink to this equation">¶</a></span>\[V_{ManBranchMax} = \sqrt{2g*PR_{ManBranchMax}}\]</div>
+<span class="eqno">(452)<a class="headerlink" href="#equation-filtration-filtration-derivations-26" title="Permalink to this equation">¶</a></span>\[V_{ManBranchMax} = \sqrt{2g*PR_{ManBranchMax}}\]</div>
 <p>The maximum allowable flow through this branch is then:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-27">
-<span class="eqno">(398)<a class="headerlink" href="#equation-filtration-filtration-derivations-27" title="Permalink to this equation">¶</a></span>\[Q_{ForwardBranchMaxPR} = V_{ManBranchMax}*\pi*IR_{BranchManifold}^2\]</div>
+<span class="eqno">(453)<a class="headerlink" href="#equation-filtration-filtration-derivations-27" title="Permalink to this equation">¶</a></span>\[Q_{ForwardBranchMaxPR} = V_{ManBranchMax}*\pi*IR_{BranchManifold}^2\]</div>
 <p>The average allowable flow:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-28">
-<span class="eqno">(399)<a class="headerlink" href="#equation-filtration-filtration-derivations-28" title="Permalink to this equation">¶</a></span>\[Q_{ForwardBranchAveMaxPR} = Q_{ForwardBranchMaxPR}(\frac{1 + \sqrt{1 - \frac{PR_{ForwardTrunk}}{HL_{CleanLayer}}}} {2} )\]</div>
+<span class="eqno">(454)<a class="headerlink" href="#equation-filtration-filtration-derivations-28" title="Permalink to this equation">¶</a></span>\[Q_{ForwardBranchAveMaxPR} = Q_{ForwardBranchMaxPR}(\frac{1 + \sqrt{1 - \frac{PR_{ForwardTrunk}}{HL_{CleanLayer}}}} {2} )\]</div>
 <p>Then the number of manifold branches (rounded up to he nearest even number) because of backwash flow distribution:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-29">
-<span class="eqno">(400)<a class="headerlink" href="#equation-filtration-filtration-derivations-29" title="Permalink to this equation">¶</a></span>\[N_{ManBranchMin} =  \frac{2Q_{Layer}}{Q_{ForwardBranchAveMaxPR}}\]</div>
+<span class="eqno">(455)<a class="headerlink" href="#equation-filtration-filtration-derivations-29" title="Permalink to this equation">¶</a></span>\[N_{ManBranchMin} =  \frac{2Q_{Layer}}{Q_{ForwardBranchAveMaxPR}}\]</div>
 <p>Then the design minimum number of branches is the maximum of the two minimums:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-30">
-<span class="eqno">(401)<a class="headerlink" href="#equation-filtration-filtration-derivations-30" title="Permalink to this equation">¶</a></span>\[N_{ManBranchMin} \ and \ N_{BwManBranchMin}:\]</div>
+<span class="eqno">(456)<a class="headerlink" href="#equation-filtration-filtration-derivations-30" title="Permalink to this equation">¶</a></span>\[N_{ManBranchMin} \ and \ N_{BwManBranchMin}:\]</div>
 <p>In addition to the minimums based on the flow constraints, a maximum number of branches exists for geometry reasons, so that the filter box width matches the auxiliary box width (when there is more than one filter)</p>
 <p>This maximum is determined by the following rounded down to a whole number:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-31">
-<span class="eqno">(402)<a class="headerlink" href="#equation-filtration-filtration-derivations-31" title="Permalink to this equation">¶</a></span>\[N_{ManSideBranchMaxMult} = \frac{\frac{A_{Active}}{W_{ActiveMin}} - OD_{BwManBranch} + L_{ManFerncoCoupling} + S_{BranchToWall}}{B_{ManifoldBranch}}\]</div>
+<span class="eqno">(457)<a class="headerlink" href="#equation-filtration-filtration-derivations-31" title="Permalink to this equation">¶</a></span>\[N_{ManSideBranchMaxMult} = \frac{\frac{A_{Active}}{W_{ActiveMin}} - OD_{BwManBranch} + L_{ManFerncoCoupling} + S_{BranchToWall}}{B_{ManifoldBranch}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(N_{ManSideBranchMaxMult} =\)</span> the maximum number of branches per side</div>
@@ -464,7 +469,7 @@ In all other cases at least 2 filters should be used to allow for backwash durin
 <p>(should have a sketch for dimensions!)</p>
 <p>As there are branches on both sides of the trunk, this number id multiplied by 2 to get the total maximum number of branches.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-32">
-<span class="eqno">(403)<a class="headerlink" href="#equation-filtration-filtration-derivations-32" title="Permalink to this equation">¶</a></span>\[N_{ManBranchMaxMult} = 2*N_{ManSideBranchMaxMult}\]</div>
+<span class="eqno">(458)<a class="headerlink" href="#equation-filtration-filtration-derivations-32" title="Permalink to this equation">¶</a></span>\[N_{ManBranchMaxMult} = 2*N_{ManSideBranchMaxMult}\]</div>
 <p><strong>Include only one filter????????? that design is in here?????
 the red text is here with a not from skyler or the error if the geo branches doesn’t meet flow distribtuion constraint????</strong></p>
 </div>
@@ -479,35 +484,35 @@ the red text is here with a not from skyler or the error if the geo branches doe
 <p>In this section several “expert inputs” become relevant. Expert input are parameters that are the same across all plants due to constraints during construction or set sizes of equipment. The other use of expert inputs if for values determined to be functional, but without the same research pressure to make them perfectly correct. An example of this is the spacing between manifold branches.</p>
 <p>The total length of the filter is the sum of several things:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-33">
-<span class="eqno">(404)<a class="headerlink" href="#equation-filtration-filtration-derivations-33" title="Permalink to this equation">¶</a></span>\[L_{Fi} = (\frac{N_{ManBranch}}{2} -1 )B_{ManifoldBranch} + OD_{BwManBranch} + L_{ManFerncoCoupling} + S_{BranchToWall}\]</div>
+<span class="eqno">(459)<a class="headerlink" href="#equation-filtration-filtration-derivations-33" title="Permalink to this equation">¶</a></span>\[L_{Fi} = (\frac{N_{ManBranch}}{2} -1 )B_{ManifoldBranch} + OD_{BwManBranch} + L_{ManFerncoCoupling} + S_{BranchToWall}\]</div>
 <p>The active width of the filter is the active area divided by the length:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-34">
-<span class="eqno">(405)<a class="headerlink" href="#equation-filtration-filtration-derivations-34" title="Permalink to this equation">¶</a></span>\[W_{Active} = \frac{A_{Active}}{L_Fi}\]</div>
+<span class="eqno">(460)<a class="headerlink" href="#equation-filtration-filtration-derivations-34" title="Permalink to this equation">¶</a></span>\[W_{Active} = \frac{A_{Active}}{L_Fi}\]</div>
 <p>This width is the active filter width, which does not include the projected area of the trunk lines, though it is assumed that the space betweent the branch holders contributes to the active area.</p>
 <p>The the total width is:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-35">
-<span class="eqno">(406)<a class="headerlink" href="#equation-filtration-filtration-derivations-35" title="Permalink to this equation">¶</a></span>\[W_{Fi} = W_{Active} + OD_{BWTrunk}\]</div>
+<span class="eqno">(461)<a class="headerlink" href="#equation-filtration-filtration-derivations-35" title="Permalink to this equation">¶</a></span>\[W_{Fi} = W_{Active} + OD_{BWTrunk}\]</div>
 <p>The width of the filter entrance is the sum of half the width of the filter, the outer radius of the cap of the backwash trunk, the minimum space between fittings in a tank or fittings and the wall of the tank, the thickness of the filter walls, and the thickness of the filter box walls. That is:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-36">
-<span class="eqno">(407)<a class="headerlink" href="#equation-filtration-filtration-derivations-36" title="Permalink to this equation">¶</a></span>\[W_{entrance} = \frac{W_{Fi}}{2} + OR_{Fitting} + S_{Fitting} + T_{FiWall} + T_{FiBoxWall}\]</div>
+<span class="eqno">(462)<a class="headerlink" href="#equation-filtration-filtration-derivations-36" title="Permalink to this equation">¶</a></span>\[W_{entrance} = \frac{W_{Fi}}{2} + OR_{Fitting} + S_{Fitting} + T_{FiWall} + T_{FiBoxWall}\]</div>
 <p>The width of the filter overflow depends in the number of filters. If there is one filter, then <span class="math notranslate nohighlight">\(W_{FiOverflow} = W_{FiOverflowMin}\)</span>. In most cases when there are 2 or more filters, the width of the overflow box is:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-37">
-<span class="eqno">(408)<a class="headerlink" href="#equation-filtration-filtration-derivations-37" title="Permalink to this equation">¶</a></span>\[W_{FiOverflow} = W_{Fi} + T_{FiWall} - W_{FiEntrance} - 2T_{FiBoxWall}\]</div>
+<span class="eqno">(463)<a class="headerlink" href="#equation-filtration-filtration-derivations-37" title="Permalink to this equation">¶</a></span>\[W_{FiOverflow} = W_{Fi} + T_{FiWall} - W_{FiEntrance} - 2T_{FiBoxWall}\]</div>
 <p>The length of the filter with regards to the manifold braches is the next calculable attribute:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-38">
-<span class="eqno">(409)<a class="headerlink" href="#equation-filtration-filtration-derivations-38" title="Permalink to this equation">¶</a></span>\[L_{ManBranch} = \frac{W_{Fi}}{2} - OR_{Fitting} - OR_{BranchHolder} + 2L_{ManBranchExt} - S_{ManAssembly}\]</div>
+<span class="eqno">(464)<a class="headerlink" href="#equation-filtration-filtration-derivations-38" title="Permalink to this equation">¶</a></span>\[L_{ManBranch} = \frac{W_{Fi}}{2} - OR_{Fitting} - OR_{BranchHolder} + 2L_{ManBranchExt} - S_{ManAssembly}\]</div>
 <p>This length is the length of the filter per manifold branch.  Thus the total length of the filter where the manifold branches are is this lengths multiplied by the number of branches:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-39">
-<span class="eqno">(410)<a class="headerlink" href="#equation-filtration-filtration-derivations-39" title="Permalink to this equation">¶</a></span>\[L_{ManBranchTot} = L_{ManBranch}N_{ManBranch}\]</div>
+<span class="eqno">(465)<a class="headerlink" href="#equation-filtration-filtration-derivations-39" title="Permalink to this equation">¶</a></span>\[L_{ManBranchTot} = L_{ManBranch}N_{ManBranch}\]</div>
 <p>The length of the backwash manifold is calculated similarly.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-40">
-<span class="eqno">(411)<a class="headerlink" href="#equation-filtration-filtration-derivations-40" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}L_{BwManBranch} = \frac{W_{Fi}}{2} - OR_{BwTrunk} - OR_{FittingBWBranchHolder} - OR_{BWBranchHolder} + 2L_{ManBranchExt} - S_{ManAssembly}\\L_{BwManBranchTot} = L_{BwManBranch}N_{ManBranch}\end{aligned}\end{align} \]</div>
+<span class="eqno">(466)<a class="headerlink" href="#equation-filtration-filtration-derivations-40" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}L_{BwManBranch} = \frac{W_{Fi}}{2} - OR_{BwTrunk} - OR_{FittingBWBranchHolder} - OR_{BWBranchHolder} + 2L_{ManBranchExt} - S_{ManAssembly}\\L_{BwManBranchTot} = L_{BwManBranch}N_{ManBranch}\end{aligned}\end{align} \]</div>
 <p>Next, the length of the trunks:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-41">
-<span class="eqno">(412)<a class="headerlink" href="#equation-filtration-filtration-derivations-41" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}L_{Trunk} = L_{Fi} - \frac{L_{ManFerncoCoupling}}{2} - T_{TrunkCap} - S_{ManAssembly}\\L_{BWTrunk} = L_{Fi} - \frac{L_{ManFerncoCoupling}}{2} - T_{BwTrunkCap} - S_{ManAssembly}\end{aligned}\end{align} \]</div>
+<span class="eqno">(467)<a class="headerlink" href="#equation-filtration-filtration-derivations-41" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}L_{Trunk} = L_{Fi} - \frac{L_{ManFerncoCoupling}}{2} - T_{TrunkCap} - S_{ManAssembly}\\L_{BWTrunk} = L_{Fi} - \frac{L_{ManFerncoCoupling}}{2} - T_{BwTrunkCap} - S_{ManAssembly}\end{aligned}\end{align} \]</div>
 <p>And the lengths of the branch holders:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-42">
-<span class="eqno">(413)<a class="headerlink" href="#equation-filtration-filtration-derivations-42" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}L_{BranchHolder} = L_{Fi} - 2T_{BranchHolder} - 2S_{ManAssembly}\\L_{BwBranchHolder} = L_{Fi} - 2T_{BwBranchHolder} - 2S_{ManAssembly}\end{aligned}\end{align} \]</div>
+<span class="eqno">(468)<a class="headerlink" href="#equation-filtration-filtration-derivations-42" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}L_{BranchHolder} = L_{Fi} - 2T_{BranchHolder} - 2S_{ManAssembly}\\L_{BwBranchHolder} = L_{Fi} - 2T_{BwBranchHolder} - 2S_{ManAssembly}\end{aligned}\end{align} \]</div>
 </div>
 <div class="section" id="manifold-slot-orifice-design">
 <h2>Manifold slot/orifice design<a class="headerlink" href="#manifold-slot-orifice-design" title="Permalink to this headline">¶</a></h2>
@@ -515,23 +520,23 @@ the red text is here with a not from skyler or the error if the geo branches doe
 <p>Now the design has changed to having inlet branches with orifices instead of slots to avoid clogging. Sand is kept out with downward-facing U-channels around the pipes that create gravity exclusion zones. The outlet manifdol are stll slotted because we don’t yet have a design that would keep sand out of the orifices during normal filtration.</p>
 <p>The basis of the design of the orifices is the head loss through the bottom manifold orifices during backwash in order to get good flow distribution along the manifold.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-43">
-<span class="eqno">(414)<a class="headerlink" href="#equation-filtration-filtration-derivations-43" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}HL_{BwOrificeEst} = \frac{PR_{BwManTotal}}{\Pi_{ManifoldHeadLoss}}\\A_BwManOrificeEst = \frac{Q_{Fi}}{\Pi_{VC}\sqrt{2g(HL_{BwOrificeEst})}}\\A_{BwManOrificeEst} = 2A_{BwManOrificeEst}\\A_{TopManOrificeEst} = A_{BwManOrificeEst}\\A_{OutletManSlots} = A_{InletManOrificesEst}\end{aligned}\end{align} \]</div>
+<span class="eqno">(469)<a class="headerlink" href="#equation-filtration-filtration-derivations-43" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}HL_{BwOrificeEst} = \frac{PR_{BwManTotal}}{\Pi_{ManifoldHeadLoss}}\\A_BwManOrificeEst = \frac{Q_{Fi}}{\Pi_{VC}\sqrt{2g(HL_{BwOrificeEst})}}\\A_{BwManOrificeEst} = 2A_{BwManOrificeEst}\\A_{TopManOrificeEst} = A_{BwManOrificeEst}\\A_{OutletManSlots} = A_{InletManOrificesEst}\end{aligned}\end{align} \]</div>
 <p>Outlet Design:</p>
 <p>Parameters:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-44">
-<span class="eqno">(415)<a class="headerlink" href="#equation-filtration-filtration-derivations-44" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}B_{ManSlot} = \frac{1}{8}in = 3.175mm\\N_{SlotRows} = 2\end{aligned}\end{align} \]</div>
+<span class="eqno">(470)<a class="headerlink" href="#equation-filtration-filtration-derivations-44" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}B_{ManSlot} = \frac{1}{8}in = 3.175mm\\N_{SlotRows} = 2\end{aligned}\end{align} \]</div>
 <p>Lengths:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-45">
-<span class="eqno">(416)<a class="headerlink" href="#equation-filtration-filtration-derivations-45" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}L_{OutletManSlotBranchTotal} = \frac{A_{OutletManSlots}}{W_{ManSlots}N_{ManBranch}}\\L_{OutletBranchSlotted} = L_{ManBranch} - 2L_{ManBranchExt} - B_{ManSlot}\end{aligned}\end{align} \]</div>
+<span class="eqno">(471)<a class="headerlink" href="#equation-filtration-filtration-derivations-45" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}L_{OutletManSlotBranchTotal} = \frac{A_{OutletManSlots}}{W_{ManSlots}N_{ManBranch}}\\L_{OutletBranchSlotted} = L_{ManBranch} - 2L_{ManBranchExt} - B_{ManSlot}\end{aligned}\end{align} \]</div>
 <p>Number of outlet slots per branch, then rounded down to the nearest integer:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-46">
-<span class="eqno">(417)<a class="headerlink" href="#equation-filtration-filtration-derivations-46" title="Permalink to this equation">¶</a></span>\[N_{OutletManSlotsPerRow} =  \frac{L_{OutletBranchSlotted}}{B_{ManSlot}}\]</div>
+<span class="eqno">(472)<a class="headerlink" href="#equation-filtration-filtration-derivations-46" title="Permalink to this equation">¶</a></span>\[N_{OutletManSlotsPerRow} =  \frac{L_{OutletBranchSlotted}}{B_{ManSlot}}\]</div>
 <p>Then the number of the slots per branch:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-47">
-<span class="eqno">(418)<a class="headerlink" href="#equation-filtration-filtration-derivations-47" title="Permalink to this equation">¶</a></span>\[N_{OutletManSlotsPerBranch} = N_{OutletManSlotsPerRow}N_{SlotRows}\]</div>
+<span class="eqno">(473)<a class="headerlink" href="#equation-filtration-filtration-derivations-47" title="Permalink to this equation">¶</a></span>\[N_{OutletManSlotsPerBranch} = N_{OutletManSlotsPerRow}N_{SlotRows}\]</div>
 <p>Thus the length of the slot is:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-48">
-<span class="eqno">(419)<a class="headerlink" href="#equation-filtration-filtration-derivations-48" title="Permalink to this equation">¶</a></span>\[L_{OutletManSlotCurvedInner} = \frac{ L_{OutletManSlotBranchTotal}}{N_{OutletManSlotsPerBranch}}\]</div>
+<span class="eqno">(474)<a class="headerlink" href="#equation-filtration-filtration-derivations-48" title="Permalink to this equation">¶</a></span>\[L_{OutletManSlotCurvedInner} = \frac{ L_{OutletManSlotBranchTotal}}{N_{OutletManSlotsPerBranch}}\]</div>
 <p>This amount should be checked to ensure that it does not exceed what is possible given the 1/2 unner circumference of the branch.</p>
 <p>Inlet Design:</p>
 <p>Parameter:
@@ -539,33 +544,33 @@ the red text is here with a not from skyler or the error if the geo branches doe
 .. is this a diameter of the orifice?</p>
 <p>For the backwash branches the maximum number of orifices is (rounded down an integer):</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-49">
-<span class="eqno">(420)<a class="headerlink" href="#equation-filtration-filtration-derivations-49" title="Permalink to this equation">¶</a></span>\[N_{BwManBranchOrificeMax} = \frac{L_{BwManBranch} - 2L_{ManBranchExt} - B_{ManOrificeEst}}{B_{ManOrificeEst}}\]</div>
+<span class="eqno">(475)<a class="headerlink" href="#equation-filtration-filtration-derivations-49" title="Permalink to this equation">¶</a></span>\[N_{BwManBranchOrificeMax} = \frac{L_{BwManBranch} - 2L_{ManBranchExt} - B_{ManOrificeEst}}{B_{ManOrificeEst}}\]</div>
 <p>The maximum number of orifices on the backwas manifold is:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-50">
-<span class="eqno">(421)<a class="headerlink" href="#equation-filtration-filtration-derivations-50" title="Permalink to this equation">¶</a></span>\[N_{BwManOrificeMax} = N_{ManBranch} N_{BwManBranchOrificeMax}\]</div>
+<span class="eqno">(476)<a class="headerlink" href="#equation-filtration-filtration-derivations-50" title="Permalink to this equation">¶</a></span>\[N_{BwManOrificeMax} = N_{ManBranch} N_{BwManBranchOrificeMax}\]</div>
 <p>On the other inlets an identical calculation is done :</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-51">
-<span class="eqno">(422)<a class="headerlink" href="#equation-filtration-filtration-derivations-51" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}N_{ManBranchOrificeMax} = \frac{L_{ManBranch} - 2L_{ManBranchExt} - B_{ManOrificeEst}}{B_{ManOrificeEst}}\\N_{ManOrificeMax} = N_{ManBranch} N_{ManBranchOrificesMax}\\-----\end{aligned}\end{align} \]</div>
+<span class="eqno">(477)<a class="headerlink" href="#equation-filtration-filtration-derivations-51" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}N_{ManBranchOrificeMax} = \frac{L_{ManBranch} - 2L_{ManBranchExt} - B_{ManOrificeEst}}{B_{ManOrificeEst}}\\N_{ManOrificeMax} = N_{ManBranch} N_{ManBranchOrificesMax}\\-----\end{aligned}\end{align} \]</div>
 <p>Determining the diameter of the orifices is next.
 In this design only drill bit sizes of 1/4” and 1/8” are considered. The total area of the orifices is divided by the maximum number of orifices. From this a radius is calculated and double to get a diameter. This diameter is compared to the available  drill bit options and rounded up to the closest size. This is done for the backwash manifold, inner inlet manifolds, and the top inlet manifold as shown below:
 .. why are these the only two drill bit sizes considered?</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-52">
-<span class="eqno">(423)<a class="headerlink" href="#equation-filtration-filtration-derivations-52" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}D_{BwManOrifice} = 2\sqrt{\frac{A_{BwManOrificeEst}}{\pi* N_{BwManBranchOrificesMax}}}\\D_{InletManOrifice} = 2\sqrt{\frac{A_{InletManOrificeEst}}{\pi* N_{ManOrificesMax}}}\\D_{TopManOrifice} = 2\sqrt{\frac{A_{TopManOrificeEst}}{\pi* N_{ManOrificesMax}}}\end{aligned}\end{align} \]</div>
+<span class="eqno">(478)<a class="headerlink" href="#equation-filtration-filtration-derivations-52" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}D_{BwManOrifice} = 2\sqrt{\frac{A_{BwManOrificeEst}}{\pi* N_{BwManBranchOrificesMax}}}\\D_{InletManOrifice} = 2\sqrt{\frac{A_{InletManOrificeEst}}{\pi* N_{ManOrificesMax}}}\\D_{TopManOrifice} = 2\sqrt{\frac{A_{TopManOrificeEst}}{\pi* N_{ManOrificesMax}}}\end{aligned}\end{align} \]</div>
 <p>Thus the hole size is determined!</p>
 <p>The actual number of inlet orifices can then be calculated. A calculation is done for each “type” of inlet, if that number is larger than the maximum allowed number of orifices then the maximum is used. Otherwise the calculated number is used.</p>
 <p>The calculations for number of orifices based on orifice size is:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-53">
-<span class="eqno">(424)<a class="headerlink" href="#equation-filtration-filtration-derivations-53" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}N_{BwManOrificesCalc} = \frac{A_{InletManOrificesEst}}{\frac{\pi}{4}*D_{BwManOrifice}^2}\\N_{InletManOrificesCalc} = \frac{A_{InletManOrificesEst}}{\frac{\pi}{4}*D_{InletManOrifice}^2}\\N_{TopManOrificesCalc} = \frac{A_{FiTopManOrificesEst}}{\frac{\pi}{4}*D_{TopManOrifice}^2}\end{aligned}\end{align} \]</div>
+<span class="eqno">(479)<a class="headerlink" href="#equation-filtration-filtration-derivations-53" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}N_{BwManOrificesCalc} = \frac{A_{InletManOrificesEst}}{\frac{\pi}{4}*D_{BwManOrifice}^2}\\N_{InletManOrificesCalc} = \frac{A_{InletManOrificesEst}}{\frac{\pi}{4}*D_{InletManOrifice}^2}\\N_{TopManOrificesCalc} = \frac{A_{FiTopManOrificesEst}}{\frac{\pi}{4}*D_{TopManOrifice}^2}\end{aligned}\end{align} \]</div>
 <p>Comparing these calculations to the output provides values for <span class="math notranslate nohighlight">\(N_{BwManOrifices}\)</span>, <span class="math notranslate nohighlight">\(N_{InletManOrifices}\)</span>, and <span class="math notranslate nohighlight">\(N_{TopManOrifices}\)</span> which are then used to find the actual areas of the inlet orifices</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-54">
-<span class="eqno">(425)<a class="headerlink" href="#equation-filtration-filtration-derivations-54" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}A_{BwManOrifices} = \frac{\pi}{4}D_{BwManOrifice}^2 * N_{BwManOrifices}\\A_{InletManOrifices} =  \frac{\pi}{4}D_{InletManOrifice}^2 * N_{InletManOrifices}\\A_{TopManOrifices} =  \frac{\pi}{4}D_{TopManOrifice}^2 * N_{TopManOrifices}\end{aligned}\end{align} \]</div>
+<span class="eqno">(480)<a class="headerlink" href="#equation-filtration-filtration-derivations-54" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}A_{BwManOrifices} = \frac{\pi}{4}D_{BwManOrifice}^2 * N_{BwManOrifices}\\A_{InletManOrifices} =  \frac{\pi}{4}D_{InletManOrifice}^2 * N_{InletManOrifices}\\A_{TopManOrifices} =  \frac{\pi}{4}D_{TopManOrifice}^2 * N_{TopManOrifices}\end{aligned}\end{align} \]</div>
 <hr class="docutils" />
 <p>Recalling the outlet area, a conservative headloss calculation can be made accounting for sand blockage. Currently, this is not included inteh total path headloss; it is unclear if it applies.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-55">
-<span class="eqno">(426)<a class="headerlink" href="#equation-filtration-filtration-derivations-55" title="Permalink to this equation">¶</a></span>\[HL_{OutletSlotForward} = \frac{(\frac{2Q_{FiLayer}}{A_{OutletManSlots}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}\]</div>
+<span class="eqno">(481)<a class="headerlink" href="#equation-filtration-filtration-derivations-55" title="Permalink to this equation">¶</a></span>\[HL_{OutletSlotForward} = \frac{(\frac{2Q_{FiLayer}}{A_{OutletManSlots}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}\]</div>
 <p>Additionally the headloss from each of the inlets can be found.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-56">
-<span class="eqno">(427)<a class="headerlink" href="#equation-filtration-filtration-derivations-56" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}HL_{BwManOrifice} = \frac{(\frac{Q_{Fi}}{A_{BwManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}\\HL_{BwManOrificeForward} = \frac{(\frac{Q_{FiLayer}}{A_{BwManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}\\HL_{InletManOrificeForward} = \frac{(\frac{2Q_{FiLayer}}{A_{InletManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}\\HL_{TopManOrificeForward} = \frac{(\frac{Q_{FiLayer}}{A_{TopManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}\end{aligned}\end{align} \]</div>
+<span class="eqno">(482)<a class="headerlink" href="#equation-filtration-filtration-derivations-56" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}HL_{BwManOrifice} = \frac{(\frac{Q_{Fi}}{A_{BwManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}\\HL_{BwManOrificeForward} = \frac{(\frac{Q_{FiLayer}}{A_{BwManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}\\HL_{InletManOrificeForward} = \frac{(\frac{2Q_{FiLayer}}{A_{InletManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}\\HL_{TopManOrificeForward} = \frac{(\frac{Q_{FiLayer}}{A_{TopManOrifices}*\epsilon_{Sand}*\Pi_{VCOrifice}})^2}{2g}\end{aligned}\end{align} \]</div>
 </div>
 <div class="section" id="plumbing-head-losses">
 <h2>Plumbing head losses<a class="headerlink" href="#plumbing-head-losses" title="Permalink to this headline">¶</a></h2>
@@ -575,28 +580,28 @@ In this design only drill bit sizes of 1/4” and 1/8” are considered. The tot
 <p>Here, <span class="math notranslate nohighlight">\(H\)</span> is used as height of sand, though as the filter extends downward it may be more intuitive to think of this as a depth of sand.</p>
 <p>The overall depth of sand is:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-57">
-<span class="eqno">(428)<a class="headerlink" href="#equation-filtration-filtration-derivations-57" title="Permalink to this equation">¶</a></span>\[H_{Sand} = (N_{Layer} - 1)H_{Layer} + H_{BottomLayer} + OR_{BwManBranchFitting} + OR_{ManBranch}\]</div>
+<span class="eqno">(483)<a class="headerlink" href="#equation-filtration-filtration-derivations-57" title="Permalink to this equation">¶</a></span>\[H_{Sand} = (N_{Layer} - 1)H_{Layer} + H_{BottomLayer} + OR_{BwManBranchFitting} + OR_{ManBranch}\]</div>
 <p>During filtration not all of the sand is activiely involved in the process, the amount of sand that is active is all the sand contained in the sand layers.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-58">
-<span class="eqno">(429)<a class="headerlink" href="#equation-filtration-filtration-derivations-58" title="Permalink to this equation">¶</a></span>\[H_{SandActive} = H_{Sand} - OR_{BwManBranch} - OR_{ManBranch}\]</div>
+<span class="eqno">(484)<a class="headerlink" href="#equation-filtration-filtration-derivations-58" title="Permalink to this equation">¶</a></span>\[H_{SandActive} = H_{Sand} - OR_{BwManBranch} - OR_{ManBranch}\]</div>
 <p>The height of the fluidized sand bed is the height of the settled sand bed times the expansion ratio:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-59">
-<span class="eqno">(430)<a class="headerlink" href="#equation-filtration-filtration-derivations-59" title="Permalink to this equation">¶</a></span>\[H_{FluidizedBed} = \Pi_{Fluidized} H_{Sand}\]</div>
+<span class="eqno">(485)<a class="headerlink" href="#equation-filtration-filtration-derivations-59" title="Permalink to this equation">¶</a></span>\[H_{FluidizedBed} = \Pi_{Fluidized} H_{Sand}\]</div>
 <p>Knowing the depth of the fluidized bed allows the steady state headloss to be calculated for backwash.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-60">
-<span class="eqno">(431)<a class="headerlink" href="#equation-filtration-filtration-derivations-60" title="Permalink to this equation">¶</a></span>\[HL_{BwSandSS} = \frac{H_{Sand}(\rho_{Sand} - \rho_{H2O})(1 - \epsilon_{Sand})}  {\rho_{H20}}\]</div>
+<span class="eqno">(486)<a class="headerlink" href="#equation-filtration-filtration-derivations-60" title="Permalink to this equation">¶</a></span>\[HL_{BwSandSS} = \frac{H_{Sand}(\rho_{Sand} - \rho_{H2O})(1 - \epsilon_{Sand})}  {\rho_{H20}}\]</div>
 <p>The value of this HL is very close to the total depth of sand in the filter, though it should be noted that this value does neglect losses in the plumbing.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-61">
-<span class="eqno">(432)<a class="headerlink" href="#equation-filtration-filtration-derivations-61" title="Permalink to this equation">¶</a></span>\[HL_{Terminal} = HL_{CleanLayer} + HL_{Dirty}\]</div>
+<span class="eqno">(487)<a class="headerlink" href="#equation-filtration-filtration-derivations-61" title="Permalink to this equation">¶</a></span>\[HL_{Terminal} = HL_{CleanLayer} + HL_{Dirty}\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-62">
-<span class="eqno">(433)<a class="headerlink" href="#equation-filtration-filtration-derivations-62" title="Permalink to this equation">¶</a></span>\[HL_{BwInitiation} = HL_{BwSF} + HL_{BwSandSS}\]</div>
+<span class="eqno">(488)<a class="headerlink" href="#equation-filtration-filtration-derivations-62" title="Permalink to this equation">¶</a></span>\[HL_{BwInitiation} = HL_{BwSF} + HL_{BwSandSS}\]</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">What are these terms? have them explained! also explain how the terms below are gotten</p>
 </div>
 <p>How much does the filter bed over-fluidize when the entrance box level lowers after backwash initiation!</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-derivations-63">
-<span class="eqno">(434)<a class="headerlink" href="#equation-filtration-filtration-derivations-63" title="Permalink to this equation">¶</a></span>\[H_{FluidizedBedVariation} = \frac{(HL_{BwInitiation}-HL_{BwSandSS})(W_{FiEntrance}L_{FiEntranceEst} - 3 \pi OR_{Trunk}^2 - \pi OR_{BwTrunk}^2)}{A_{FiActive}}\]</div>
+<span class="eqno">(489)<a class="headerlink" href="#equation-filtration-filtration-derivations-63" title="Permalink to this equation">¶</a></span>\[H_{FluidizedBedVariation} = \frac{(HL_{BwInitiation}-HL_{BwSandSS})(W_{FiEntrance}L_{FiEntranceEst} - 3 \pi OR_{Trunk}^2 - \pi OR_{BwTrunk}^2)}{A_{FiActive}}\]</div>
 </div>
 <div class="section" id="path-head-loss-calculations-and-flow-distribution-between-layers">
 <h2>Path head loss calculations and flow distribution between layers<a class="headerlink" href="#path-head-loss-calculations-and-flow-distribution-between-layers" title="Permalink to this headline">¶</a></h2>

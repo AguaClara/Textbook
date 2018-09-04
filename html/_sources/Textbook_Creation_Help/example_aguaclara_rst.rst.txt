@@ -221,6 +221,7 @@ Tables
 Tables should be made using csv for compatibility with excel::
 
   .. _table_an_example_table:
+
   .. csv-table:: This table has a title
      :header: "name", "firstname", "age"
      :widths: 20, 20, 10
@@ -232,7 +233,8 @@ Tables should be made using csv for compatibility with excel::
 The code block above generates the following table:
 
 .. _table_an_example_table:
-.. csv-table:: This table has a title
+
+.. csv-table:: Table caption goes here
    :header: "name", "firstname", "age"
    :widths: 20, 20, 10
    :align: center
@@ -313,7 +315,7 @@ Within the body of the document, use the following syntax::
 
 And place the directive at the very end of the document::
 
-   .. bibliography:: references.bib
+   .. bibliography:: /references.bib
       :cited:
       :keyprefix: ex-
 

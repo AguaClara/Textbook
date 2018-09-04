@@ -144,9 +144,13 @@
 <p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html#a-new-paradigm-for-hydraulic-flocculation">A New Paradigm for Hydraulic Flocculation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html#observations-and-a-geometric-explanation-of-the-effects-of-humic-acid-on-flocculation">Observations and a Geometric Explanation of the Effects of Humic Acid on Flocculation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
@@ -178,6 +182,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
 </ul>
 
             
@@ -376,7 +381,7 @@
 <div class="section" id="id7">
 <h4>How it works<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <p>A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: <a class="reference internal" href="FCM_Derivations.html#heading-design-equations-for-the-cdc"><span class="std std-ref">Design Equations for the Linear Chemical Dose Controller (CDC)</span></a>, and you are very, very strongly encouraged to read them.</p>
-<p>The CDC can be designed manually using the equations from the derivation linked above or via aide_design, using the equations found in <a class="reference external" href="https://github.com/AguaClara/aide_design/blob/master/aide_design/cdc_functions.py">cdc_functions.py</a>. Either way, the design algorithm is roughly the same:</p>
+<p>The CDC can be designed manually using the equations from the derivation linked above or via aide_design, using the equations found in <a class="reference external" href="https://github.com/AguaClara/aguaclara">cdc_functions.py</a>. Either way, the design algorithm is roughly the same:</p>
 <ol class="arabic simple">
 <li>Calculate the maximum flow rate, <span class="math notranslate nohighlight">\(Q_{Max, \, Tube}\)</span>, through each available dosing tube diameter <span class="math notranslate nohighlight">\(D\)</span> that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.</li>
 </ol>
