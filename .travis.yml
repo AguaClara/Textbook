@@ -15,6 +15,7 @@ install:
 script:
   - pipenv run make html
   - pipenv run make doctest
+after_script:
   - htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/Textbook/test/html/index.html
 before_deploy:
   - if [ -n "$TRAVIS_TAG" ]; then ./build_pdf.sh; fi; # If this is tagged, build the latex and the pdf to be released.
