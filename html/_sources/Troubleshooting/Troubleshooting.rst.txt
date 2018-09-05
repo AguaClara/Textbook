@@ -58,7 +58,6 @@ Iron bacteria slime showed up with application of hydrochloric acid at Las Vegas
 .. figure:: Images/Las_Vegas_Slime.jpg
    :width: 400px
    :align: center
-   :rotate: right
    :alt: Oxygenation_vs_time
 
    The slime at Las Vegas showed up in the flocculator and sedimentation tanks.
