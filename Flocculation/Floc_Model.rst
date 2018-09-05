@@ -712,7 +712,7 @@ The physical properties of humic acid vary with composition. The diameter of hum
 Results
 -------
 
-The results from 60 experiments, transformed by Eq. 10, are shown in :numref:`figure_Du_Fig3` for an inflow turbidity of 50 NTU with PACl doses ranging from 0.53 to 2.65 mg/L as Al and humic acid concentration ranging from 0 to 15 mg/L. A capture velocity of 0.120 mm/s was used in the experiments, which is a conservatively designed lamellar settler capture velocity (Willis, 1978).  Experiments were replicated for each combination of humic acid and PACl dose.                   }
+The results from 60 experiments, transformed by Eq. 10, are shown in :numref:`figure_Du_Fig3` for an inflow turbidity of 50 NTU with PACl doses ranging from 0.53 to 2.65 mg/L as Al and humic acid concentration ranging from 0 to 15 mg/L. A capture velocity of 0.120 mm/s was used in the experiments, which is a conservatively designed lamellar settler capture velocity (Willis, 1978).  Experiments were replicated for each combination of humic acid and PACl dose.
 
 The data show that increased coagulant dose is positively correlated with turbidity removal. The effluent turbidity was greatly increased by the presence of humic acid.  Also shown is a model fit using the AguaClara flocculation model given by Pennock et al. (2018). As shown, the model can fit the performance of the 0 mg/L HA data and even the 3 mg/L HA data reasonably well, but increasing doses of humic acid decrease performance appreciably, necessitating a modification to the original model.
 
@@ -726,7 +726,7 @@ The data show that increased coagulant dose is positively correlated with turbid
    :math:`\boldsymbol{p}{\boldsymbol{C}}^{\boldsymbol{*}}` as a function of coagulant dose for 50 NTU influent turbidity.
 
 
-To apply the modified model to the raw data, the data points with 0 mg/L HA were fit by :math:`k`, since their performance was not influenced by :math:`d_{HA}`, resulting in :math:`k` = 0.16. Then, the remaining data were fit using :math:`d_{HA}` (with the previously determined :math:`k` value) to minimize the sum squared error, resulting in :math:`d_{HA}=77\ \mathrm{nm}` with a :math:`pC^*` (dimensionless) root-mean-square error, RMSE, of 0.08. Because their performance was essentially indistinguishable from the 0 mg/L HA data. Additionally, to avoid biasing the fit by data for which the coagulant dose was insufficient to overcome the effect of humic acid, data for which performance was lower than :math:`pC^*=0.25` were neglected for the fitting. :numref:`figure_Du_Fig4` shows the fit of the model to the observations for the 50 NTU experiments.
+To apply the modified model to the raw data, the data points with 0 mg/L HA were fit by :math:`k`, since their performance was not influenced by :math:`d_{HA}`, resulting in :math:`k` = 0.16. Then, the remaining data were fit using :math:`d_{HA}` (with the previously determined :math:`k` value) to minimize the sum squared error, resulting in :math:`d_{HA}=77 \mathrm{nm}` with a :math:`pC^*` (dimensionless) root-mean-square error, RMSE, of 0.08. Because their performance was essentially indistinguishable from the 0 mg/L HA data. Additionally, to avoid biasing the fit by data for which the coagulant dose was insufficient to overcome the effect of humic acid, data for which performance was lower than :math:`pC^*=0.25` were neglected for the fitting. :numref:`figure_Du_Fig4` shows the fit of the model to the observations for the 50 NTU experiments.
 
 .. _figure_Du_Fig4:
 
