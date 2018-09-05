@@ -560,12 +560,12 @@ The coagulant dosage and humic acid concentrations were regulated by adjusting t
 
 .. math::
 
-   \bar G_{CS}={\bar G_{CS}}_{Straight}\sqrt{1+{{0.033 \left[log\left(\frac{4Q_{Plant}}{\pi D\nu }\sqrt{\frac{D}{R_{c}}}\right)\right]\ }}^{4}}
+   \bar G_{CS}= {{\bar G}_{CS_{Straight}}} \sqrt{1+{{0.033 \left[log\left(\frac{4Q_{Plant}}{\pi D\nu }\sqrt{\frac{D}{R_{c}}}\right)\right]\ }}^{4}}
 
 
-where :math:`{\bar G_{CS}}_{Straight}` is fluid velocity gradient in a straight tube, :math:`Q_{Plant}` is the experimental flow rate, :math:`D` is the inner diameter of the flocculator tube, :math:`R_{c}` is the diameter of curvature of the flocculator coils, and :math:`v` is the kinematic viscosity of water, which is about :math:`1\times \ {10}^{-6}\ \frac{{m}^2}{s}` at 20 :math:`{}^\circ` C (Kundu and Cohen, 2008). The overall experimental flow rate was 6 mL/s and the radius of curvature of the coiled tubing (:math:`R_{c}` ) was 15 cm.
+where :math:`{\bar G_{CS_{Straight}}}` is fluid velocity gradient in a straight tube, :math:`Q_{Plant}` is the experimental flow rate, :math:`D` is the inner diameter of the flocculator tube, :math:`R_{c}` is the diameter of curvature of the flocculator coils, and :math:`v` is the kinematic viscosity of water, which is about :math:`1\times \ {10}^{-6}\ \frac{{m}^2}{s}` at 20 :math:`{}^\circ` C (Kundu and Cohen, 2008). The overall experimental flow rate was 6 mL/s and the radius of curvature of the coiled tubing (:math:`R_{c}` ) was 15 cm.
 
-The value of :math:`{\bar G_{CS}}_{Straight}` was calculated by first estimating the head loss in a straight tube of the equivalent diameter and material using the Hagen-Poiseuille equation for laminar flow:
+The value of :math:`{\bar G_{CS_{Straight}}}` was calculated by first estimating the head loss in a straight tube of the equivalent diameter and material using the Hagen-Poiseuille equation for laminar flow:
 
 .. math::
 
@@ -589,7 +589,7 @@ The energy dissipation rate, which was calculated to be 2.24 mW/kg, can be conve
 
    \bar G_{CS}=\sqrt{\frac{\bar{\varepsilon }}{\nu }}
 
-which gave a velocity gradient of 50.1 :math:`{s}^{-1}` . Using this value for :math:`{\bar G_{CS}}_{Straight}` in Equation 1 resulted in a value of 71.1 :math:`{s}^{-1\ }` for :math:`\bar G_{CS}` .
+which gave a velocity gradient of 50.1 :math:`{s}^{-1}` . Using this value for :math:`{\bar G_{CS_{Straight}}}` in Equation 1 resulted in a value of 71.1 :math:`{s}^{-1\ }` for :math:`\bar G_{CS}` .
 
 A coiled tube flocculator was used in this research because it is a high-Peclet-number reactor much like a baffled hydraulic flocculator and also because the average velocity gradient in laminar tube flow is well defined (Weber-Shirk and Lion, 2010). After flowing through the flocculator, a fraction of the flow was passed through a tube settler and the settled water turbidity was recorded continuously for each experiment. The 1.37 m (4.5 ft) tube settler, with an inner diameter of 2.66 cm, had an entry port diameter of 0.95 cm (3/8 in) near the bottom and an exit port diameter of 0.635 cm (1/4 in) near the top. The capture velocity was controlled at 0.102 mm/s using a peristaltic pump with flow set by
 
