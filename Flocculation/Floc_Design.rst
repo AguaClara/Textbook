@@ -9,12 +9,12 @@ Professor Monroe’s class time is limited, so too is the amount of material he 
 understandable. Thus, these summary sheets will supplement the powerpoints by going into further detail on the course concepts
 introduced in the slides.
 
-Equations, universal constants, and other helpful goodies can be found in the `aide_design repository on GitHub <https://github.com/AguaClara/aide_design/tree/master/aide_design>`__. Most equations and constants you find in these summary sheets will already have been coded into aide_design, and will be shown here in the following format:
+Equations, universal constants, and other helpful goodies can be found in the `aide_design repository on GitHub <https://github.com/AguaClara/aguaclara/tree/master/aguaclara>`__. Most equations and constants you find in these summary sheets will already have been coded into aide_design, and will be shown here in the following format:
 
 | Variable: ``pc.gravity``
 | Function: ``pc.area_circle(DiamCircle)``.
 
-The letters before the ``.``, in this case ``pc``, indicate the file within aide_design where the variable or function can be found. In the examples above, ``pc.gravity`` and ``pc.area_circle(DiamCircle)`` show that the variable ``gravity`` and function ``area_circle(DiamCicle)`` are located inside the `physchem.py <https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py>`__ (``pc``) file. You are strongly recommended to look up any aide_design equations you plan to use within in their aide_design file before using them, even if they are given here in this summary sheet. This is because each equation has comments in its original file describing what the specific conditions are to using it.
+The letters before the ``.``, in this case ``pc``, indicate the file within aide_design where the variable or function can be found. In the examples above, ``pc.gravity`` and ``pc.area_circle(DiamCircle)`` show that the variable ``gravity`` and function ``area_circle(DiamCicle)`` are located inside the `physchem.py <https://github.com/AguaClara/aguaclara>`__ (``pc``) file. You are strongly recommended to look up any aide_design equations you plan to use within in their aide_design file before using them, even if they are given here in this summary sheet. This is because each equation has comments in its original file describing what the specific conditions are to using it.
 
 **Important Note:** This chapter introduces uncertainty and empirical design. Some of the parameters used to design AguaClara flocculators are based on what has been shown to work in the field, as opposed to having been derived scientifically. To make sure that the reader is aware of these concepts and parameters that don’t yet have a thorough basis in research, they will be highlighted in red when they appear.
 

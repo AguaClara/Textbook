@@ -70,9 +70,11 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Flocculation/Floc_Intro.rst
+  Flocculation/Floc_Model.rst
   Flocculation/Floc_Design.rst
   Flocculation/Floc_Derivations.rst
   Flocculation/Floc_Theory_and_Future_Work.rst
+  Flocculation/Floc_Examples.rst
 
 .. toctree::
   :caption: Chapter 6: Sedimentation
