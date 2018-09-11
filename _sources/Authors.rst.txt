@@ -10,4 +10,8 @@ This text is a collaborative effort involving hundreds of people. Innovation req
 - Juan Guzman
 - Monroe Weber-Shirk
 - Clare O'Connor
-- Ethan Keller
+- William Pennock
+- Leonard Lion
+- Yingda Du
+
+This text would not have been possible without the advice, mentoring, and publishing system assembled by Ethan Keller.

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Functionality in RST and AguaClara Convention &mdash; AguaClara Textbook 0.0.21 documentation</title>
+  <title>Functionality in RST and AguaClara Convention &mdash; AguaClara Textbook 0.0.26 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.21
+                0.0.26
               </div>
             
           
@@ -151,9 +151,11 @@
 <p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
@@ -164,7 +166,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtratation  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
@@ -185,6 +187,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
 </ul>
 
             
@@ -431,6 +434,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 <span id="heading-tables"></span><h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
 <p>Tables should be made using csv for compatibility with excel:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_table_an_example_table</span><span class="p">:</span>
+
 <span class="o">..</span> <span class="n">csv</span><span class="o">-</span><span class="n">table</span><span class="p">::</span> <span class="n">This</span> <span class="n">table</span> <span class="n">has</span> <span class="n">a</span> <span class="n">title</span>
    <span class="p">:</span><span class="n">header</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;firstname&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span>
    <span class="p">:</span><span class="n">widths</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span>
@@ -442,7 +446,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </div>
 <p>The code block above generates the following table:</p>
 <span id="table-an-example-table"></span><table border="1" class="colwidths-given docutils align-center" id="id6">
-<caption><span class="caption-number">Table 3 </span><span class="caption-text">This table has a title</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Table caption goes here</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="40%" />
 <col width="40%" />
@@ -526,7 +530,7 @@ Currently, only the <code class="docutils literal notranslate"><span class="pre"
 </pre></div>
 </div>
 <p>And place the directive at the very end of the document:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">bibliography</span><span class="p">::</span> <span class="n">references</span><span class="o">.</span><span class="n">bib</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">bibliography</span><span class="p">::</span> <span class="o">/</span><span class="n">references</span><span class="o">.</span><span class="n">bib</span>
    <span class="p">:</span><span class="n">cited</span><span class="p">:</span>
    <span class="p">:</span><span class="n">keyprefix</span><span class="p">:</span> <span class="n">ex</span><span class="o">-</span>
 </pre></div>
@@ -710,7 +714,7 @@ http://dx.doi.org/10.2166/aqua.2006.062</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.21',
+            VERSION:'0.0.26',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

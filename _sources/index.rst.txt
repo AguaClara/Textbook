@@ -1,7 +1,7 @@
 .. _toc:
 
 ====================================
-Welcome to the Aguaclara Textbook!
+Welcome to the AguaClara Textbook!
 ====================================
 This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in `aide_design <https://github.com/AguaClara/aide_design>`_. Listed below are the versions of the programs we use:
 
@@ -70,9 +70,11 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Flocculation/Floc_Intro.rst
+  Flocculation/Floc_Model.rst
   Flocculation/Floc_Design.rst
   Flocculation/Floc_Derivations.rst
   Flocculation/Floc_Theory_and_Future_Work.rst
+  Flocculation/Floc_Examples.rst
 
 .. toctree::
   :caption: Chapter 6: Sedimentation
