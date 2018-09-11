@@ -149,7 +149,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#hydraulic-parameters">Hydraulic Parameters</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#height-between-expansions-and-number-of-obstacles-per-baffle-space">Height Between Expansions <span class="math notranslate nohighlight">\(H_e\)</span> and Number of Obstacles per Baffle Space <span class="math notranslate nohighlight">\(n_{obstacles}\)</span></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#baffle-spacing-math-s"><strong>Baffle Spacing :math:`S`</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#baffle-spacing">Baffle Spacing <span class="math notranslate nohighlight">\(S\)</span></a></li>
 </ul>
 </li>
 </ul>
@@ -174,7 +174,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtratation  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
@@ -389,7 +389,7 @@ Our goal in designing a flocculator is to facilitate particle collisions. How ca
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-10">
 <span class="eqno">(362)<a class="headerlink" href="#equation-flocculation-floc-design-10" title="Permalink to this equation">¶</a></span>\[\frac{H_e}{S} = \Pi_{H_eS}\]</div>
 <p>Where <span class="math notranslate nohighlight">\(H_e\)</span> is the distance between flow expansions in the flocculator and <span class="math notranslate nohighlight">\(S\)</span> is the spacing between baffles. For now, <span class="math notranslate nohighlight">\(H_e\)</span> is approximated as the height of water in the flocculator.</p>
-<p>Since <span class="math notranslate nohighlight">\(G_{Max}\)</span> is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on <span class="math notranslate nohighlight">\(\frac{H_e}{S}\)</span>. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle. We base this on the rule of thumb for flow expansion, _**&lt;font color=”red”&gt;RESEARCHED BY GERHART JIRKA FIND A REFERENCE THAT’S BETTER THAN ONE OF MONROE’S POWERPOINTS**_: a jet doubles its initial diameter/length once it travels 10 times the distance of its original diameter/length&lt;/font&gt;. If this is confusing, refer to the equation and image below:</p>
+<p>Since <span class="math notranslate nohighlight">\(G_{Max}\)</span> is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on <span class="math notranslate nohighlight">\(\frac{H_e}{S}\)</span>. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle. We base this on the rule of thumb for flow expansion, a jet doubles its initial diameter/length once it travels 10 times the distance of its original diameter/length. If this is confusing, refer to the equation and image below:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-11">
 <span class="eqno">(363)<a class="headerlink" href="#equation-flocculation-floc-design-11" title="Permalink to this equation">¶</a></span>\[\frac{x}{10} = D - D_0\]</div>
 <div class="figure align-center" id="id9">
@@ -601,8 +601,8 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-28">
 <span class="eqno">(380)<a class="headerlink" href="#equation-flocculation-floc-design-28" title="Permalink to this equation">¶</a></span>\[n_{obstacles} = \frac{H}{H_e} - 1\]</div>
 </div>
-<div class="section" id="baffle-spacing-math-s">
-<h4><strong>Baffle Spacing :math:`S`</strong><a class="headerlink" href="#baffle-spacing-math-s" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="baffle-spacing">
+<h4>Baffle Spacing <span class="math notranslate nohighlight">\(S\)</span><a class="headerlink" href="#baffle-spacing" title="Permalink to this headline">¶</a></h4>
 <p>Finally, we can find the space between baffles, <span class="math notranslate nohighlight">\(S\)</span>. The equation for <span class="math notranslate nohighlight">\(S\)</span> is taken from an intermediate step in the <span class="math notranslate nohighlight">\(W_{Min, \, \Pi_{H_eS}}\)</span> derivation where we obtained, <span class="math notranslate nohighlight">\(W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\)</span>. Rearranging for <span class="math notranslate nohighlight">\(S\)</span>, we get:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-29">
 <span class="eqno">(381)<a class="headerlink" href="#equation-flocculation-floc-design-29" title="Permalink to this equation">¶</a></span>\[S = \left( \frac{K}{2 H_e \bar G^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}\]</div>
