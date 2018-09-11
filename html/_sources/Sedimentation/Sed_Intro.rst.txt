@@ -14,23 +14,22 @@ The three main steps to sedimentation are:
 
 1) flocs need to be able to settle
 2) flocs need to be able to move from wherever they settle to a lower section of the tank
-3) flocs must be removed from the lower section of the sedimentation tank
-
-***************************************
-Foundational Concepts
-***************************************
-
-- terminal velocity
-- capture velocity
-- floc rollup
-- floc blankets
-- sludge disposal
+3) flocs need to be removed from the lower section of the sedimentation tank
 
 ***************************************
 Conventional Treatment Systems
 ***************************************
 - horizontal sedimentation
 - vertical sedimentation
+- flat bottom tanks (sometimes with mechanized scrapers)
+
+***************************************
+Gaps in Knowledge
+***************************************
+- Empirical standards (10 state standards)
+  - Settle capture velocity guidelines
+
+- No understanding of scaling effects
 
 ***************************************
 AguaClara Innovations
@@ -79,7 +78,3 @@ Plate Settlers
 
 Manifold Hydraulics
 =====================
-
-***************************************
-Sedimentation Failure Modes
-***************************************
