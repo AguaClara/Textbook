@@ -4,11 +4,37 @@
 Sedimentation Introduction
 ***************************************
 
-.. _Sedimentation Unit Processes:
-Sedimentation is the unit process which removes flocs from treatment water. Traditionally, sedimentation processes
+.. _Sedimentation Unit Process Overview:
 
-.. _AguaClara Sedimentation:
-AguaClara sedimentation
+Sedimentation is the unit process in which suspended flocs are settled out from water. Sedimentation is commonly preceded with coagulation/flocculation processes - coagulation/flocculation aim to form flocs which will be large enough to settle in sedimentation - and is commonly followed by sludge consolidation processes to reduce the waste stream.
+
+Sedimentation is a gravity-driven process. Large flocs made up of many primary particles and coagulant will settle if given the opportunity of space and time. The use of sedimentation in water treatment is far-reaching, but the process is very complex with many failure modes. The challenge of sedimentation is in designing reactors with geometries that promote settling and allow for fast treatment with small footprint.
+
+The three main steps to sedimentation are:
+
+1) flocs need to be able to settle
+2) flocs need to be able to move from wherever they settle to a lower section of the tank
+3) flocs must be removed from the lower section of the sedimentation tank
+
+***************************************
+Foundational Concepts
+***************************************
+
+- terminal velocity
+- capture velocity
+- floc rollup
+- floc blankets
+- sludge disposal
+
+***************************************
+Conventional Treatment Systems
+***************************************
+- horizontal sedimentation
+- vertical sedimentation
+
+***************************************
+AguaClara Innovations
+***************************************
 
 The improved performance is due to 3 factors.
 
@@ -53,3 +79,7 @@ Plate Settlers
 
 Manifold Hydraulics
 =====================
+
+***************************************
+Sedimentation Failure Modes
+***************************************
