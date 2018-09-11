@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Flocculation Derivations &mdash; AguaClara Textbook  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Flocculation Theory and Future Work" href="Floc_Theory_and_Future_Work.html" />
+    <link rel="prev" title="Flocculation Design" href="Floc_Design.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1.1: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flocculation Derivations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#design-equations-for-the-flocculator">Design Equations for the Flocculator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#width">Width</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Examples.html">Flocculation Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Wastewater</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Flocculation Derivations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Flocculation/Floc_Derivations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="flocculation-derivations">
+<span id="title-flocculation-derivations"></span><h1>Flocculation Derivations<a class="headerlink" href="#flocculation-derivations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="design-equations-for-the-flocculator">
+<span id="heading-design-equations-for-the-flocculator"></span><h2>Design Equations for the Flocculator<a class="headerlink" href="#design-equations-for-the-flocculator" title="Permalink to this headline">¶</a></h2>
+<p>This document contains the derivation for the minimum allowable width of
+a flocculator channel based on the requirements that
+<span class="math notranslate nohighlight">\(3 &lt; \Pi_{H_eS} &lt; 6\)</span> and that we maintain the <span class="math notranslate nohighlight">\(\bar G\)</span> that
+serves as a basis for design. The final parameter derived is
+<span class="math notranslate nohighlight">\(W_{Min, \, \Pi_{H_eS}}\)</span>.</p>
+<div class="section" id="width">
+<h3>Width<a class="headerlink" href="#width" title="Permalink to this headline">¶</a></h3>
+<p>Our two restrictions are: - Ensuring that we maintain the <span class="math notranslate nohighlight">\(\bar G\)</span>
+we get based on our input parameters - Ensuring that
+<span class="math notranslate nohighlight">\(3 &lt; \frac{H_e}{S} &lt; 6\)</span></p>
+<p>First, we begin by setting the two equations for energy dissipation
+rate, <span class="math notranslate nohighlight">\(\bar \varepsilon = \nu \bar G^2\)</span> and
+<span class="math notranslate nohighlight">\(\bar \varepsilon = \frac{g h_{L_{floc}}}{\theta}\)</span> equal to each
+other to bring <span class="math notranslate nohighlight">\(\bar G\)</span> into the equation.</p>
+<div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-0">
+<span class="eqno">(384)<a class="headerlink" href="#equation-flocculation-floc-derivations-0" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = \frac{g h_{L_{floc}}}{\theta}\]</div>
+<p><strong>Very Important Note:</strong></p>
+<p>For the following steps, we will consider the flow through <strong>*a single
+flow expansion :math:`H_e`, not through the entire flocculator*</strong>. This
+could be from baffle to obstacle, obstacle to baffle, obstacle to
+obstacle, or baffle to baffle depending on how many obstacles are in the
+design. This means that we are briefly redefining <span class="math notranslate nohighlight">\(\theta\)</span> to be
+the time it takes for the flow to fully expand after a flow contraction.
+<span class="math notranslate nohighlight">\(\theta\)</span> no longer represents the time it takes for the flow to go
+through the entire flocculator.</p>
+<p>From here we make three subsequent substitutions: first
+<span class="math notranslate nohighlight">\(h_{L_{floc}} = K \frac{\bar v^2}{2g}\)</span>, then
+<span class="math notranslate nohighlight">\(\theta = \frac{H_e}{\bar v}\)</span>, and finally
+<span class="math notranslate nohighlight">\(\bar v = \frac{Q}{WS}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-1">
+<span class="eqno">(385)<a class="headerlink" href="#equation-flocculation-floc-derivations-1" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = K \frac{\bar v^2}{2 \theta}\]</div>
+<div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-2">
+<span class="eqno">(386)<a class="headerlink" href="#equation-flocculation-floc-derivations-2" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = K \frac{\bar v^3}{2 H_e}\]</div>
+<div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-3">
+<span class="eqno">(387)<a class="headerlink" href="#equation-flocculation-floc-derivations-3" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = \frac{K}{2 H_e} \left( \frac{Q}{WS} \right)^3\]</div>
+<p>Now we can solve this equation for channel width, <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-4">
+<span class="eqno">(388)<a class="headerlink" href="#equation-flocculation-floc-derivations-4" title="Permalink to this equation">¶</a></span>\[W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\]</div>
+<p>From here, we can define <span class="math notranslate nohighlight">\(\Pi_{H_eS} = \frac{H_e}{S}\)</span> and
+substitute <span class="math notranslate nohighlight">\(S = \frac{H_e}{\Pi_{H_eS}}\)</span> into the previous equation
+for <span class="math notranslate nohighlight">\(W\)</span> to get <span class="math notranslate nohighlight">\(W_{Min, \, \Pi_{H_eS}}\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-5">
+<span class="eqno">(389)<a class="headerlink" href="#equation-flocculation-floc-derivations-5" title="Permalink to this equation">¶</a></span>\[W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\]</div>
+<div class="line-block">
+<div class="line">This equation represents the absolute smallest width of a flocculator
+channel if we consider the lowest value of <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> and the
+highest possible value of <span class="math notranslate nohighlight">\(H_e\)</span>:</div>
+<div class="line"><span class="math notranslate nohighlight">\(H_e = H\)</span>, this implies that there are no obstacles between
+baffles</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Pi_{H_eS} = 3\)</span></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Floc_Theory_and_Future_Work.html" class="btn btn-neutral float-right" title="Flocculation Theory and Future Work" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Floc_Design.html" class="btn btn-neutral" title="Flocculation Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
