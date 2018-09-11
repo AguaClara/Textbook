@@ -9,12 +9,12 @@ Professor Monroe’s class time is limited, so too is the amount of material he 
 understandable. Thus, these summary sheets will supplement the powerpoints by going into further detail on the course concepts
 introduced in the slides.
 
-Equations, universal constants, and other helpful goodies can be found in the `aide_design repository on GitHub <https://github.com/AguaClara/aide_design/tree/master/aide_design>`__. Most equations and constants you find in these summary sheets will already have been coded into aide_design, and will be shown here in the following format:
+Equations, universal constants, and other helpful goodies can be found in the `aide_design repository on GitHub <https://github.com/AguaClara/aguaclara/tree/master/aguaclara>`__. Most equations and constants you find in these summary sheets will already have been coded into aide_design, and will be shown here in the following format:
 
 | Variable: ``pc.gravity``
 | Function: ``pc.area_circle(DiamCircle)``.
 
-The letters before the ``.``, in this case ``pc``, indicate the file within aide_design where the variable or function can be found. In the examples above, ``pc.gravity`` and ``pc.area_circle(DiamCircle)`` show that the variable ``gravity`` and function ``area_circle(DiamCicle)`` are located inside the `physchem.py <https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py>`__ (``pc``) file. You are strongly recommended to look up any aide_design equations you plan to use within in their aide_design file before using them, even if they are given here in this summary sheet. This is because each equation has comments in its original file describing what the specific conditions are to using it.
+The letters before the ``.``, in this case ``pc``, indicate the file within aide_design where the variable or function can be found. In the examples above, ``pc.gravity`` and ``pc.area_circle(DiamCircle)`` show that the variable ``gravity`` and function ``area_circle(DiamCicle)`` are located inside the `physchem.py <https://github.com/AguaClara/aguaclara>`__ (``pc``) file. You are strongly recommended to look up any aide_design equations you plan to use within in their aide_design file before using them, even if they are given here in this summary sheet. This is because each equation has comments in its original file describing what the specific conditions are to using it.
 
 **Important Note:** This chapter introduces uncertainty and empirical design. Some of the parameters used to design AguaClara flocculators are based on what has been shown to work in the field, as opposed to having been derived scientifically. To make sure that the reader is aware of these concepts and parameters that don’t yet have a thorough basis in research, they will be highlighted in red when they appear.
 
@@ -213,7 +213,9 @@ We define and optimize a performance metric:
 
 Where :math:`H_e` is the distance between flow expansions in the flocculator and :math:`S` is the spacing between baffles. For now, :math:`H_e` is approximated as the height of water in the flocculator.
 
-Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on :math:`\frac{H_e}{S}`. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle. We base this on the rule of thumb for flow expansion, _**<font color="red">RESEARCHED BY GERHART JIRKA FIND A REFERENCE THAT'S BETTER THAN ONE OF MONROE'S POWERPOINTS**_: a jet doubles its initial diameter/length once it travels 10 times the distance of its original diameter/length</font>. If this is confusing, refer to the equation and image below:
+Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on :math:`\frac{H_e}{S}`. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle. We base this on the rule of thumb for flow expansion, a jet doubles its initial diameter/length once it travels 10 times the distance of its original diameter/length. If this is confusing, refer to the equation and image below:
+
+.. todo:: Find a reference from CorMix to support this rule of thumb.
 
 .. math::
 
@@ -529,8 +531,8 @@ Finally, we can obtain the number of obstacles per baffle space. The :math:`- 1`
 
   n_{obstacles} = \frac{H}{H_e} - 1
 
-**Baffle Spacing :math:`S`**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Baffle Spacing :math:`S`
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Finally, we can find the space between baffles, :math:`S`. The equation for :math:`S` is taken from an intermediate step in the :math:`W_{Min, \, \Pi_{H_eS}}` derivation where we obtained, :math:`W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}`. Rearranging for :math:`S`, we get:
 

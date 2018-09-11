@@ -131,7 +131,7 @@ Here are other commonly used forms of the Reynolds number equation *for circular
 | :math:`\nu` = fluid kinematic viscosity
 | :math:`\mu` = fluid dynamic viscosity
 
-.. seealso:: **Function in aide_design:** ``pc.re_pipe(FlowRate, Diam, Nu)`` Returns the Reynolds number *in a circular pipe*. Functions for finding the Reynolds number through other flow conduits and geometries can also be found in `physchem.py <https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py>`_ within aide_design.
+.. seealso:: **Function in aide_design:** ``pc.re_pipe(FlowRate, Diam, Nu)`` Returns the Reynolds number *in a circular pipe*. Functions for finding the Reynolds number through other flow conduits and geometries can also be found in `physchem.py <https://github.com/AguaClara/aguaclara>`_ within aide_design.
 
 .. note:: **Definition of Flow Regimes:** Laminar and turbulent flow are described as two different **flow regimes**. When there is a characteristic of flow and different categories of the characteristic, each category is referred to as a flow regime. For example, the Reynolds number describes a flow characteristic, and its categories, referred to as flow regimes, are laminar or turbulent.
 
