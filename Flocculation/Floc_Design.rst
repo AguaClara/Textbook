@@ -213,7 +213,9 @@ We define and optimize a performance metric:
 
 Where :math:`H_e` is the distance between flow expansions in the flocculator and :math:`S` is the spacing between baffles. For now, :math:`H_e` is approximated as the height of water in the flocculator.
 
-Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on :math:`\frac{H_e}{S}`. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle. We base this on the rule of thumb for flow expansion, _**<font color="red">RESEARCHED BY GERHART JIRKA FIND A REFERENCE THAT'S BETTER THAN ONE OF MONROE'S POWERPOINTS**_: a jet doubles its initial diameter/length once it travels 10 times the distance of its original diameter/length</font>. If this is confusing, refer to the equation and image below:
+Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on :math:`\frac{H_e}{S}`. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle. We base this on the rule of thumb for flow expansion, a jet doubles its initial diameter/length once it travels 10 times the distance of its original diameter/length. If this is confusing, refer to the equation and image below:
+
+.. todo:: Find a reference from CorMix to support this rule of thumb.
 
 .. math::
 
@@ -529,8 +531,8 @@ Finally, we can obtain the number of obstacles per baffle space. The :math:`- 1`
 
   n_{obstacles} = \frac{H}{H_e} - 1
 
-**Baffle Spacing :math:`S`**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Baffle Spacing :math:`S`
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Finally, we can find the space between baffles, :math:`S`. The equation for :math:`S` is taken from an intermediate step in the :math:`W_{Min, \, \Pi_{H_eS}}` derivation where we obtained, :math:`W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}`. Rearranging for :math:`S`, we get:
 
