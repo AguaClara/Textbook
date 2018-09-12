@@ -31,8 +31,8 @@ other to bring :math:`\bar G` into the equation.
 
 **Very Important Note:**
 
-For the following steps, we will consider the flow through ***a single
-flow expansion :math:`H_e`, not through the entire flocculator***. This
+For the following steps, we will consider the flow through a single
+flow expansion :math:`H_e`, not through the entire flocculator. This
 could be from baffle to obstacle, obstacle to baffle, obstacle to
 obstacle, or baffle to baffle depending on how many obstacles are in the
 design. This means that we are briefly redefining :math:`\theta` to be
