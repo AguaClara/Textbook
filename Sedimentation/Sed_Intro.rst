@@ -30,9 +30,20 @@ Conventional Sedimentation Systems
 
 
 - Examples of systems:
-  - horizontal sedimentation
-  - vertical sedimentation
-  - flat bottom tanks (sometimes with mechanized scrapers)
+  - Two main categories are:
+    - horizontal sedimentation
+    - vertical sedimentation
+
+  - Differences between them include
+    - Bottom type (flat, sloped)
+    - Sludge removal apparatus (mostly mechanical but with different variations)
+    - Flow distribution systems 
+
+Note: this chapter will not deal with other advanced clarification technologies past this point, except in making comparisons with AguaClara technology. Other interesting areas of advanced clarification include:
+
+- ballasted Sedimentation (Actiflow)
+- Superpulsator
+- etc
 
 ***********************************************
 Sedimentation Challenges and Gaps in Knowledge
