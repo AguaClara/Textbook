@@ -553,10 +553,10 @@ Reported Cornell University tap water characteristics are listed in :numref:`tab
 
    Turbidity, 0.056 NTU
    Total Hardness, 150 mg/L
-   Total Alkalinity (as :math:`CaCO_3`), 140 mg/L
+   Total Alkalinity (as CaCO:math:`{}_{3}`), 140 mg/L
    Dissolved Organic Carbon (DOC), 1.80 mg/L
 
-The coagulant dosage and humic acid concentrations were regulated by adjusting the rotation speed of separate peristaltic pumps. The pH of the treated effluent was monitored in each experiment and was 7.5 :math:`\pm` 0.3. Influent turbidities of 50 NTU and 100 NTU were tested.  Flocculation was accomplished by laminar flow through a coiled 9.52 mm inner diameter tube. The average velocity gradient in the coiled flocculator,:math:`\bar G_{CS}` was calculated according the equation derived by Tse et al. (2011) as
+The coagulant dosage and humic acid concentrations were regulated by adjusting the rotation speed of separate peristaltic pumps. The pH of the treated effluent was monitored in each experiment and was 7.5 :math:`\pm` 0.3. Influent turbidities of 50 NTU and 100 NTU were tested.  Flocculation was accomplished by laminar flow through a coiled 9.52 mm inner diameter tube. The average velocity gradient in the coiled flocculator,:math:`\ \bar G_{CS}` was calculated according the equation derived by Tse et al. (2011) as
 
 .. math::
 
@@ -739,7 +739,7 @@ To apply the modified model to the raw data, the data points with 0 mg/L HA were
    Model fit for :math:`\boldsymbol{p}{\boldsymbol{C}}^{\boldsymbol{*}}` as function of coagulant dose for 50 NTU raw water turbidity.
 
 
-With the given fitted value of :math:`d_{HA}=75 nm` for the 50 NTU influent turbidity data set, the coverage of coagulant nanoparticle surfaces by humic acid (:math:`{\bar{\Gamma}}_{HA-PACl}`) changed as shown in :numref:`figure_Du_Fig5`. According to Equation :eq:`eq_Gamma_HA-PACl`, the maximum number of humic acid macromolecules with a diameter of 75 nm that will fit on a PACl precipitate particle of 90 nm diameter when fully coating it is about 6. The model predicted complete coverage of the PACl nanoparticles by humic acid for low PACl concentrations, which correlated with very low observed turbidity removal efficiency.
+With the given fitted value of :math:`d_{HA}=75 nm`for the 50 NTU influent turbidity data set, the coverage of coagulant nanoparticle surfaces by humic acid (:math:`{\bar{\Gamma}}_{HA-PACl}`) changed as shown in :numref:`figure_Du_Fig5`. According to Equation :eq:`eq_Gamma_HA-PACl`, the maximum number of humic acid macromolecules with a diameter of 75 nm that will fit on a PACl precipitate particle of 90 nm diameter when fully coating it is about 6. The model predicted complete coverage of the PACl nanoparticles by humic acid for low PACl concentrations, which correlated with very low observed turbidity removal efficiency.
 
 .. _figure_Du_Fig5:
 
@@ -813,7 +813,7 @@ The flocculation model without the effects of humic acid shows that :math:`pC^*`
 
 Under experimental conditions, the modified flocculation model provides the fundamental basis for the relationship between coagulant dose, synthetic raw water clay, and humic acid concentrations.  Extension to natural waters will undoubtedly require additional research.
 
-The form of the flocculation model equation sets the interactions between raw water properties (:math:`{\phi }_0`), influent particle surface area (which contributes to :math:`{\bar{\Gamma}}_{PACl-Clay}`), coagulant precipitate size and dose (which contributes to :math:`{\bar{\Gamma}}_{PACl-Clay}` and :math:`{\bar{\Gamma}}_{HA-PACl}`) , humic acid molecule size and concentration (which contribute to :math:`{\bar{\Gamma}}_{HA-PACl}`), flocculator design (:math:`\bar G_{CS}\theta`), and sedimentation tank design (:math:`k`). In a gravity-powered water treatment plant operating at constant flow rate, the flocculator and sedimentation tank parameters are constant. An increase in concentration of humic acid causes an increase in :math:`{\bar{\Gamma}}_{HA-PACl}`, which decreases :math:`pC^*` but can be compensated for by increasing coagulant dose.
+The form of the flocculation model equation sets the interactions between raw water properties (:math:`{\phi }_0`), influent particle surface area (which contributes to:math:`\ {\bar{\Gamma}}_{PACl-Clay}`), coagulant precipitate size and dose (which contributes to :math:`{\bar{\Gamma}}_{PACl-Clay}` and :math:`{\bar{\Gamma}}_{HA-PACl}`) , humic acid molecule size and concentration (which contribute to :math:`{\bar{\Gamma}}_{HA-PACl}`), flocculator design (:math:`\bar G_{CS}\theta`), and sedimentation tank design (:math:`k`). In a gravity-powered water treatment plant operating at constant flow rate, the flocculator and sedimentation tank parameters are constant. An increase in concentration of humic acid causes an increase in :math:`{\bar{\Gamma}}_{HA-PACl}`, which decreases :math:`pC^*` but can be compensated for by increasing coagulant dose.
 
 Summary
 -------

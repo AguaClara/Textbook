@@ -207,7 +207,6 @@ Nothing in life is perfect, and the CDC is no exception. It has a few causes of 
 Section Summary
 ================
 1. **Tank with a valve:**
-
 .. math::
 
     \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}

@@ -89,7 +89,7 @@ Plugging this equation for :math:`A_{Valve}` into the equation for :math:`Q` jus
 
     \frac{Q}{Q_0} = 1 - \frac{t Q_0}{2 A_{Tank} h_0}
 
-This next step will eliminate :math:`A_{Tank}`. However, it requires some clever manipulation that has a tendency to cause some confusion. We will define a new parameter, :math:`t_{Design}`, which represents the time it would take to empty the tank if the initial flow rate through the valve, :math:`Q_0`, stays constant in time. Of course, the flow :math:`Q` through the valve does not stay constant in time, which is why this derivation document exists. But imagining this hypothetical :math:`t_{Design}` parameter allows us to form the following equation:
+This next step will eliminate :math:`A_{Tank}`. However, it requires some clever manipulation that has a tendency to cause some confusion. We will define a new parameter, :math:`t_{Design}`, which represents the time it would take to empty the tank **if the initial flow rate through the valve, :math:`Q_0`, stays constant in time**. Of course, the flow :math:`Q` through the valve does not stay constant in time, which is why this derivation document exists. But imagining this hypothetical :math:`t_{Design}` parameter allows us to form the following equation:
 
 .. math::
 
@@ -221,6 +221,7 @@ This document will include the equation derivations required to design a CDC sys
 
 We will use the ‘head loss trick’ that was introduced in the Fluids Review section. Therefore, the elevation difference between the water level in the constant head tank (CHT) and the end of the tube connected to the slider, :math:`\Delta h`, is equal to the head loss between the two points, :math:`h_L`. Thus, :math:`\Delta h = h_L = h_e + h_f`.
 
+.. note:: There are a lot of equations in this section, and they may quickly get confusing. They are color coded in an attempt to make them easier to follow. There are two final design equations: :math:`\color{purple}{\bar v_{Max}}` and math:`\color{purple}{L_{Min}}`, and they will be written in :math:`\color{purple}{\rm{purple \, text \, coloring}}` to make them noticeable.
 
 .. _figure_cdc_derivation:
 
@@ -399,7 +400,7 @@ Now that we know all of the parameters in this equation except for :math:`L`, we
 
 If you decrease the max flow :math:`Q_{Max}` and hold :math:`h_{L_{Max}}` constant, :math:`\color{green}{L_{Min, \, head loss}}` becomes larger. This means that a CDC system for a plant of 40 :math:`\frac{L}{s}` must be different than one for a plant of 20 :math:`\frac{L}{s}`. If we want to maintain the same head loss at maximum flow in both plants, then the dosing tube(s) will need to be a lot longer for the 20 :math:`\frac{L}{s}` plant.
 
-To visualize the distinction between :math:`\color{red}{  L_{Min, \, \Pi_{Error}}}` and :math:`\color{green}{ L_{Min, \, head loss}}`, see the following plot. :math:`\color{green}{ L_{Min, \, head loss}}` is discontinuous because it takes in the smallest allowable tube diameter as an input. As the chemical flow rate through the dosing tube(s) decreases, the dosing tube diameter does as well. Whenever you see a jump in the green points, that means the tubing diameter has changed.
+To visualize the distinction between :math:`\color{red}{  L_{Min, \, \Pi_{Error}}}` and math:`\color{green}{ L_{Min, \, head loss}}`, see the following plot. :math:`\color{green}{ L_{Min, \, head loss}}` is discontinuous because it takes in the smallest allowable tube diameter as an input. As the chemical flow rate through the dosing tube(s) decreases, the dosing tube diameter does as well. Whenever you see a jump in the green points, that means the tubing diameter has changed.
 
 .. _figure_CDC_length_model:
 

@@ -65,7 +65,7 @@ See :numref:`figure_Ching_Electrophoretic_Mobility_vs_Ferric_Chloride` for a typ
     :align: center
     :alt: internal figure
 
-    `Electrophoretic Mobility for final pH <https://doi.org/10.1016/0043-1354(94)90007-8>`__ (after coagulant addition) of 6.0 and 7.8 as a function of :math:`FeCl_3` dose
+    `Electrophoretic_Mobility for final pH (after coagulant addition) of 6.0 and 7.8 as a function of :math:`FeCl_3` dose <https://doi.org/10.1016/0043-1354(94)90007-8>`__
 
 
 .. _figure_Ching_Residual_Turbidity_vs_Ferric_Chloride:
