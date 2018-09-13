@@ -652,6 +652,9 @@ Find Pi_layer. The ratio of  the flow distribution. Goal is close to 1.
 Because the flow distribution will change to make the headlosses even, it can be taken as true that :math:`HL_{Path1} = HL_{Path2}` and so on for each path. This assumes the clean bed headlosses and also accounts for the varying flows in each path.
 
 
+It is also known that the flow must add up to the flow in the filter. Knowing that a system of equations can be set up to use the healoss and total flow requirement to solve for the flow in each layer. Those flows are then taken as the flow through each layer.
+
+
 
 
 Siphon design
