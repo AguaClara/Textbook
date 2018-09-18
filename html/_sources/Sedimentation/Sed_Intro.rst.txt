@@ -10,7 +10,7 @@ Sedimentation a gravity-driven unit process in which suspended flocs are settled
 
 To introduce you to sedimentation, we will begin with a simple example. If a jar of water filled with flocs was left at rest, flocs would begin to settle due to gravitational forces pulling them down. Large flocs would settle first, but if left for long enough, all flocs would settle to the bottom of the jar. In its most basic form, the jar represents a sedimentation tank in which flocculated water is treated. Settled flocs become waste and the water on the top of the jar, referred to as the supernatant, becomes the settled water.
 
-[INCLUDE FIGURE TO DEMONSTRATE EXAMPLE. Show different floc sizes settling over time. Label flocculated water, supernatant and settled water].
+[INCLUDE FIGURE TO DEMONSTRATE EXAMPLE. Show different floc sizes settling over time in jar. Label flocculated water, supernatant and settled water].
 
 Constraints of space, time, and cost make it important to optimize the settling process. It would not be realistic to design water treatment systems that use the basic jar-like system to settle flocs because large flow rates would require unreasonably large reactor volumes and long retention times. The goal of sedimentation reactor design is to employ geometries that promote settling and allow for fast treatment with small footprints.
 
@@ -37,7 +37,7 @@ Conventional Sedimentation Systems
   - Differences between them include
     - Bottom type (flat, sloped)
     - Sludge removal apparatus (mostly mechanical but with different variations)
-    - Flow distribution systems 
+    - Flow distribution systems
 
 Note: this chapter will not deal with other advanced clarification technologies past this point, except in making comparisons with AguaClara technology. Other interesting areas of advanced clarification include:
 

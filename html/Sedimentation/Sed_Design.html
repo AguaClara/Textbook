@@ -230,17 +230,33 @@
 </div>
 <div class="section" id="foundational-concepts">
 <h1>Foundational Concepts<a class="headerlink" href="#foundational-concepts" title="Permalink to this headline">¶</a></h1>
-<ul>
-<li><p class="first">terminal velocity
-+ buoyant forces
-+ drag forces</p>
-<blockquote>
-<div><ul class="simple">
-<li>drag coefficients</li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
+<p>To understand how sedimentation works, a few key concepts must first be developed. This includes understanding how and why flocs move in water. Remember, the goal of sedimentation reactor design is to optimize the floc-settling process.</p>
+<p>Terminal velocity:
+As flocs settle in water, they will fall at a speed dictated by the weight of the floc, the buoyancy of the floc, and the drag from the water. These three forces - the gravitational weight force, the buoyant force, and the drag force - that dictate the speed at which a floc falls are detailed in the following free body diagram. We care about determining the speed at which flocs will fall because [WHY].</p>
+<p>[FLOC FORCES FREE BODY DIAGRAM]</p>
+<p>To determine the force balance on a falling floc, consider:</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-0">
+<span class="eqno">(391)<a class="headerlink" href="#equation-sedimentation-sed-design-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\sum F = m a\\F_{drag} + F_{buoyant} - W_{floc} = 0\end{aligned}\end{align} \]</div>
+<p>Each of the force components can be determined by:</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-1">
+<span class="eqno">(392)<a class="headerlink" href="#equation-sedimentation-sed-design-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}\\F_{buoyant} = V\llap{---}_{floc} \rho_{H_2O} g\\W_{floc} = V\llap{---}_{floc} \rho_{floc} g\end{aligned}\end{align} \]</div>
+<div class="line-block">
+<div class="line">Where:</div>
+<div class="line"><span class="math notranslate nohighlight">\(V\llap{---}_{floc} =\)</span> floc particle volume</div>
+<div class="line"><span class="math notranslate nohighlight">\(A_{floc} =\)</span> particle cross sectional area</div>
+<div class="line"><span class="math notranslate nohighlight">\(\rho_{floc} =\)</span> particle density</div>
+<div class="line"><span class="math notranslate nohighlight">\(\rho_{H_2O} =\)</span> water density</div>
+<div class="line"><span class="math notranslate nohighlight">\(g =\)</span> acceleration due to gravity</div>
+<div class="line"><span class="math notranslate nohighlight">\(C_D =\)</span> drag coefficient</div>
+<div class="line"><span class="math notranslate nohighlight">\(v_t=\)</span> particle terminal velocity</div>
+<div class="line"><span class="math notranslate nohighlight">\(D=\)</span> particle diameter</div>
+</div>
+<p>Plugging into the original mass balance,</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-2">
+<span class="eqno">(393)<a class="headerlink" href="#equation-sedimentation-sed-design-2" title="Permalink to this equation">¶</a></span>\[[C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}]+[V\llap{---}_{floc} \rho_{H_2O} g]-[V\llap{---}_{floc} \rho_{floc} g] =0\]</div>
+<p>Solving for terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>, provides</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-3">
+<span class="eqno">(394)<a class="headerlink" href="#equation-sedimentation-sed-design-3" title="Permalink to this equation">¶</a></span>\[v_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}\]</div>
 <ul class="simple">
 <li>capture velocity
 + k</li>
