@@ -125,7 +125,15 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html#conventional-sedimentation-systems">Conventional Sedimentation Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html#sedimentation-challenges-and-gaps-in-knowledge">Sedimentation Challenges and Gaps in Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html#aguaclara-innovations">AguaClara Innovations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#foundational-concepts">Foundational Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#design-approach">Design Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#design-of-an-aguaclara-sedimentation-tank">Design of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#sedimentation-challenges-confusions-and-failure-modes">Sedimentation Challenges, Confusions, and Failure Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 </ul>
@@ -219,6 +227,132 @@
             
   <div class="section" id="sedimentation-design">
 <span id="title-sed-design"></span><h1>Sedimentation Design<a class="headerlink" href="#sedimentation-design" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="foundational-concepts">
+<h1>Foundational Concepts<a class="headerlink" href="#foundational-concepts" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p class="first">terminal velocity
++ buoyant forces
++ drag forces</p>
+<blockquote>
+<div><ul class="simple">
+<li>drag coefficients</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul class="simple">
+<li>capture velocity
++ k</li>
+</ul>
+<ul class="simple">
+<li>floc rollup</li>
+<li>floc blankets</li>
+<li>sludge disposal</li>
+</ul>
+</div>
+<div class="section" id="design-approach">
+<h1>Design Approach<a class="headerlink" href="#design-approach" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>flow distribution is primary constraint
+- don’t worry about floc breakup
+- avoid flow circulations</li>
+<li>easy operation and maintenance</li>
+</ul>
+</div>
+<div class="section" id="components-of-an-aguaclara-sedimentation-tank">
+<h1>Components of an AguaClara Sedimentation Tank<a class="headerlink" href="#components-of-an-aguaclara-sedimentation-tank" title="Permalink to this headline">¶</a></h1>
+<p>Note: this section should use words and figures to describe the different parts of the tank and what their purpose is, with brief explanation of how they work.</p>
+<ul>
+<li><p class="first">Inlet and outlet channels
+- Flow distribution</p>
+</li>
+<li><p class="first">Inlet manifold</p>
+<p>First, the inlet manifold has a diffuser system that straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the sedimentation tank. Inlet manifolds without flow straightening diffusers are commonly used in vertical flow sedimentation tanks including designs by leading competitors.</p>
+</li>
+<li><p class="first">Diffusers</p>
+<p>Second, the diffusers create a line jet that spans the entire length of the sedimentation tank. The line jet enters a jet reverser and the vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed (floc blanket) with a suspended solids concentrations of approximately 1-5 g/L. The high concentration of particles leads to an increase in collisions and particle aggregation. The floc blanket reduces settled water turbidity by a factor of 10 (Garland et al., 2017) and provides two additional benefits. The floc blanket creates a uniform vertical velocity of water entering the plate settlers and the floc blanket transports excess flocs to a floc hopper for final removal by opening a small drain valve.</p>
+</li>
+</ul>
+<p>Note: discuss “sed tank as a circuit: flow distribution challenge”</p>
+<ul>
+<li><p class="first">Jet reverser and bottom geometry</p>
+<p>Third, the bottom geometry is shaped so that all flocs that settle are transported to the jet reverser. Thus there is no accumulation of settled flocs in the main sedimentation basin. Sludge that is allowed to accumulate in the bottom of sedimentation tanks in tropical and temperate decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the sedimentation tank and cause a reduction in particle removal efficiency.  The AguaClara sedimentation tank bottom geometry prevents sludge accumulation.</p>
+</li>
+<li><p class="first">Floc blankets</p>
+</li>
+<li><p class="first">Floc hopper</p>
+<p>The hydraulic self cleaning sedimentation tank with a high performing floc blanket, zero sludge accumulation, and with no moving parts outperforms conventional sedimentation tanks on capital cost, performance, and maintenance costs. Mechanical sludge removal systems are well known to be costly to install and a challenge to maintain.</p>
+</li>
+<li><p class="first">Plate settlers</p>
+</li>
+<li><p class="first">Submerged outlet manifold</p>
+</li>
+</ul>
+</div>
+<div class="section" id="design-of-an-aguaclara-sedimentation-tank">
+<h1>Design of an AguaClara Sedimentation Tank<a class="headerlink" href="#design-of-an-aguaclara-sedimentation-tank" title="Permalink to this headline">¶</a></h1>
+<p>Note: this section will build off of the conceptual understanding established in the previous section and will explain how the tank works with derivations and mathematical models.</p>
+<ul>
+<li><p class="first">Inlet and outlet channels
+- Exit weir height
+- Drain for flocculated water (waste)
+- Pipe stubs to block certain tanks when they need to be taken offline</p>
+</li>
+<li><p class="first">Inlet manifold</p>
+</li>
+<li><p class="first">Diffusers
+- Width,</p>
+</li>
+<li><p class="first">Jet reverser</p>
+</li>
+<li><p class="first">Floc blankets</p>
+</li>
+<li><p class="first">Floc hopper</p>
+</li>
+<li><p class="first">Plate settlers
+- Capture area
+- Lost triangle
+- Design criteria:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Upflow velocity
+- Set by floc blanket velocity requirement</p>
+</li>
+<li><p class="first">Capture velocity
+- Target turbidity
+- Particle size distribution after floc blanket</p>
+</li>
+<li><p class="first">Plate angle
+- Self cleaning</p>
+</li>
+<li><p class="first">Plate spacing
+- Clogging
+- Floc roll-up</p>
+<blockquote>
+<div><ul class="simple">
+<li>Slide capture velocity</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Plate length
+- Dependent on other parameters</p>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Submerged outlet manifold</p>
+</li>
+</ul>
+</div>
+<div class="section" id="sedimentation-challenges-confusions-and-failure-modes">
+<h1>Sedimentation Challenges, Confusions, and Failure Modes<a class="headerlink" href="#sedimentation-challenges-confusions-and-failure-modes" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Flow circulations</li>
+<li>Floc Volcanoes</li>
+<li>NOM impact on floc density</li>
+<li>Role of floc blanket</li>
+</ul>
 </div>
 
 
