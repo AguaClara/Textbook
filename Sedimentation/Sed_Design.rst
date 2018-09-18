@@ -8,10 +8,53 @@ Sedimentation Design
 Foundational Concepts
 ***************************************
 
-- terminal velocity
-  + buoyant forces
-  + drag forces
-    + drag coefficients
+To understand how sedimentation works, a few key concepts must first be developed. This includes understanding how and why flocs move in water. Remember, the goal of sedimentation reactor design is to optimize the floc-settling process.
+
+Terminal velocity:
+As flocs settle in water, they will fall at a speed dictated by the weight of the floc, the buoyancy of the floc, and the drag from the water. These three forces - the gravitational weight force, the buoyant force, and the drag force - that dictate the speed at which a floc falls are detailed in the following free body diagram. We care about determining the speed at which flocs will fall because [WHY].
+
+[FLOC FORCES FREE BODY DIAGRAM]
+
+To determine the force balance on a falling floc, consider:
+
+.. math::
+
+  \sum F = m a
+
+  F_{drag} + F_{buoyant} - W_{floc} = 0
+
+Each of the force components can be determined by:
+
+.. math::
+
+  F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}
+
+  F_{buoyant} = V\llap{---}_{floc} \rho_{H_2O} g
+
+  W_{floc} = V\llap{---}_{floc} \rho_{floc} g
+
+| Where:
+| :math:`V\llap{---}_{floc} =` floc particle volume
+| :math:`A_{floc} =` particle cross sectional area
+| :math:`\rho_{floc} =` particle density
+| :math:`\rho_{H_2O} =` water density
+| :math:`g =` acceleration due to gravity
+| :math:`C_D =` drag coefficient
+| :math:`v_t=` particle terminal velocity
+| :math:`D=` particle diameter
+
+Plugging into the original mass balance,
+
+.. math::
+
+  [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}]+[V\llap{---}_{floc} \rho_{H_2O} g]-[V\llap{---}_{floc} \rho_{floc} g] =0
+
+Solving for terminal velocity, :math:`v_t`, provides
+
+.. math::
+
+  v_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}
+
 
 * capture velocity
   + k
