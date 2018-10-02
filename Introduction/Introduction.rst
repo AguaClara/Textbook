@@ -125,7 +125,7 @@ Love-based leaders relate to others based on true respect for the other. They wi
 
 As water treatment plant designers it is critical that we spend time with a diverse set of stakeholders including community members and water treatment plant operators. Those relationships must begin with respect and valuing their insights. As we spend time together we can develop trust so that they communicate both the good and bad.
 
-We've learned much from plant operators. They figured out how to reduce rising flocs at Agalteca, Honduras where we learned that conventional sedimentation tank inlet manifolds generate large circulation currents. Plant operators added curtains to the windows at Moroceli, Honduras (see figure_Moroceli_curtains) because they noticed that direct sunlight on the sedimentation tanks caused an increase in settled water turbidity.
+We've learned much from plant operators. They figured out how to reduce rising flocs at Agalteca, Honduras where we learned that conventional sedimentation tank inlet manifolds generate large circulation currents. Plant operators added curtains to the windows at Moroceli, Honduras (see :numref:`figure_Moroceli_curtains`) because they noticed that direct sunlight on the sedimentation tanks caused an increase in settled water turbidity.
 
 .. _figure_Moroceli_curtains:
 
