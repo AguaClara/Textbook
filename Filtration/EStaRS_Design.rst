@@ -17,6 +17,8 @@ The filter flow and backwash velocity are used to find an area, this area is use
 The height of the filter layer is taken as 0.2 meters.
 Some other variables defined here:
 
+These are all minimums!
+
 .. math::
 
   ND_{FiManTrunkMinLow} = 1.5in
@@ -27,9 +29,26 @@ Some other variables defined here:
   ND_{FiAirRelValve} = 0.5in
   ND_{FiBwTrunkMinLow} = 2in
   ND_{FiBwBranchkMinLow} = 1in
-  N_{FiManBranchLow} = 6
-  N_{FiInletPipesLow} = 4
-  N_{FiOutletPipesLow} = 3
+
+
+
+The branch spacing is a function of the size of the EStaRS. The "maximum" spacing is somewhat arbitrarily set 10cm. This value is meant to balance even flow distribution across each layer with ease of fabrication and material use. As a result the expression for number of branches is the following:
+  :math:`B_{FiBranchMax} = 10cm`
+
+.. math::
+
+    N_{FiBranchMin} = round(\frac{ID_{FiPipe}}{B_{FiBranchMax}})
+
+the ID function also takes the SDR for the pipe (26), but in the equation above was left out so the overall mechanism of the calculation is clearer. The value is rounded because an integer number of branches is needed.
+
+The number of inlet and outlet pipes are fixed by the way the filter works and are shown below:
+
+.. math::
+
+
+    N_{FiInletPipesLow} = 4
+
+    N_{FiOutletPipesLow} = 3
 
 
 The area of the filer is defined as: :math:`ID_{pipe}^2 / 4`
@@ -37,13 +56,13 @@ The area of the filer is defined as: :math:`ID_{pipe}^2 / 4`
 Sand Layer Thickness as a Function of Diameter
 ===============================================
 
-Two heights are defined here:
+Two heights are defined here. Both are defined as functions:
 
 :math:`H_{FiLayerF}` the height of a standard filter layer. It is defined as the maximum value between the defined layer height, the outer radius (OR) of the trunk  (as a fucntion of nominal diameter) plus the minimum filter trunk spacing  , the outer diameter of the iftting of the trunk (also as function of ND), and the fernco outer diameter (again a fucntion of ND). Each of these is rounded to the nearest 1cm.
 
 and
 
-:math:`H_{FiBottomLayerF}` the height of hte bottom filter layer. This is defined as the maxiumum value between 1. the defined layer height, the OR of the trunk + OR of the backwash trunk  (as functions of ND's of the trunk and BW trunk) + minimum filter trunk spacing, the sum of fitting OR's for the trunk and BW trunk (function of ND's), and the average of the ferco OD's as a function of NDs. Each rounded to the nearest 1cm.
+:math:`H_{FiBottomLayerF}` the height of The bottom filter layer. This is defined as the maxiumum value between 1. The defined layer height, the OR of the trunk + OR of the backwash trunk  (as functions of ND's of the trunk and BW trunk) + minimum filter trunk spacing, the sum of fitting OR's for the trunk and BW trunk (function of ND's), and the average of the ferco OD's as a function of NDs. Each rounded to the nearest 1cm.
 
 
 Flow Distribution Constraints: ratio of pressure recovery to clean bed head loss
@@ -101,7 +120,11 @@ Though the piezometric head profiles for the inlet and outlet manifolds for the 
 Filter Flow Rates and Layer Height
 ===================================
 
-As the maximum flow of the filter is constrained by the available sizes of the pipe for the filter, the maximum flow of the filter is: :math:`Q_{Max} = V_{Bw}A_{Fi}`
+As the maximum flow of the filter is constrained by the available sizes of the pipe for the filter, the maximum flow of the filter is characterized by: :math:`Q_{Bw} = V_{Bw}A_{Fi}`
+
+However,the actual maximum of flow that the filter would see is actually the larger flow between that value and the :math:`Q_{Fi}` the flow through the filter.
+
+**This makes less sense now that I'm writing it in, why would this be greater than backwash flow?**
 
 Depending on the total flow of the EStaRS and the size of the modules, varying numbers of filters will need to be used.
 
@@ -117,13 +140,37 @@ From the area of the filter and the velocity required for backwash, the backwash
 
 .. this value is the same as the max filte flow, is it useful to have these values specified multiple times??
 
-In this section is also where the filter layer height
-
-
+In this section is also where the filter layer height is actually calculated using the function from the "Sand Layer Thickness As a Function of Diameter" Section: :math:`H_{FiLayer}`
 
 
 Filter Trunk and Branch Diameters
 ==================================
+
+See Figure XXXX for a schematic of the filter layers.
+
+.. image:: Images/figure_flow_distribution_estars.PNG
+
+From the section above it is apparent that the total flow through the filter is the flow through each layer times the number of layers or :math:`Q_{Fi} = N_{Layers}*{Q_{FiLayers}`
+
+In the case of 6 filter layers, this is :math:`6Q_{FiLayer}`
+
+Because the 2 inner inlets (the ones that aren't the backwash trunk or the uppermost trunk) distribute flow to two layers the flow between them is equal to :math:`2Q_{FiLayer}` which is shown in the schematic. In a later section, we will show that the flow within each layer is not exactly even because of the headloss through various paths, but for the calculation of maximum flow, even flow is an appropriate guess (**do we know know this**)
+
+From the schematic we can also see that the maximum flow experienced by any trunk is :math:`2Q_{FiLayer}`, using this value it is possible to calculate the maximum branch through a branch.
+
+On each layer trunk, there are :math:`N_{FiBranch}` branches on **each side** of the trunk. That means the total number of branches on each trunk is :math:`2N_{FiBranch}`
+
+Using the maximum flow in a trunk and the number of branches on a trunk the maximum flow in a branch becomes:
+
+.. math::
+
+    Q_{FiBranchMax} = \frac{2Q_{FiLayer}}{2N_{FiBranch}}
+
+Using the ND of the Filter Manifold Branches, as defined above, the flow area of a branch can be calculated:
+
+.. math::
+
+  A_{FiBranch} = \frac{ID_{FiBranch}}
 
 Manifold Pipe Lengths
 ======================
