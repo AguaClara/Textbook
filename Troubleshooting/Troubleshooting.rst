@@ -49,6 +49,32 @@ The failure was that the water traveling horizontally in the branches and trunk 
 
 There are two improvements required at El PODA. First, the transmission line must be operated with downstream flow control to prevent air entrapment and compression. That will likely be sufficient to solve the problem of air in the filters. The second improvement is to add manual air release valves to the top of each of the trunk lines so that operates can expel air during filtration. Note that these air vents must have a valve that is closed during backwash because the filter is under negative pressure during backwash and would suck air into the filter through those vents if they were open.
 
+EStaRS with the wing inlets make a possible failure mode. At the end of the backwash if the operator closes the valve in the siphon quickly, the water pressure rises quickly inside the filter. When the water rises in the three entry passages it is possible that the water carries the sand inside the branches with wings. And once there is sand inside the pipes, this sand may hinder the flow of water during the filter run.
+
+The solution is in the operation of the system and maybe a change in the design. If the operators are manipulating pipe stubs to do the backwash, then the first step is to remove the pipe stubs before closing the valve. The other way around the problem would be to close the valve slowly to ensure that the water rises very slowly in the inlets.
+
+Encrustation of filter pipes at Las Vegas
+=========================================
+
+Remove the encrustation without disassembling the filter by pouring buckets of hydrochloric acid into pipes that are inserted into the couplings in the filtered water effluent box. The hydrochloric acid at Las Vegas is a 10% solution. Dilute that solution by a factor of 5 to produce a 2% HCl solution. Note that all of the acid and water injected into the filter will simply go into the filter box and increase the water level during this treatment. When diluting acid always add acid to water!
+ 1. Insert pipe stubs into the couplings in the filter inlet box to prevent any water from flowing through the filter
+ 1. Remove the drain pipe stub so that any effluent from the filter goes to drain
+ 1. Insert pipe stubs into the couplings in the filtered water effluent box
+ 1. Fill a 20 L bucket with 16 L of water (mark the bucket level!)
+ 1. Pour 4 L of 10% HCl into the bucket to reach a total of 20 L
+ 1. Mix the diluted acid with a PVC pipe for a couple of minutes
+ 1. Pour the 20 L of 2% HCl into the bottom outlet of the filter
+ 1. Wait 5 minutes
+ 1. Repeat previous 2 steps 5 times to pour a total of 100 L of acid into the bottom outlet pipe (note that the goal is for this total volume to exceed the outlet pipe, trunk, and branch pipes volume)
+ 1. Pour 20 L of water into the bottom outlet pipe
+ 1. Wait 5 minutes
+ 1. Repeat previous 2 steps 5 times to push all (or at least most) of the acid through the outlet pipes and into the sand bed
+Repeat steps 3 to 12 for the middle outlet pipe and then for the top outlet pipe.
+
+With each addition of acid or water there should be a fresh batch of carbon dioxide bubbles released from the filter.
+
+Turn the filter back on and dump all water to waste for at least 5 minutes and until the turbidity is less than 1 NTU.
+
 Slime at Las Vegas
 ==================
 Iron bacteria slime showed up with application of hydrochloric acid at Las Vegas. The acid was needed to slightly reduce the pH to reduce the amount of encrustation in the distribution system. The addition of acid was correlated with the growth of a slime in the flocculator and sedimentation tanks. It was hypothesized that this slime was iron oxidizing bacteria (see :numref:`figure_Las_Vegas_Slime`).
