@@ -572,9 +572,11 @@ Flocculation
 Sedimentation
 -------------
  #. Four channel inlet/outlet system that enables
-    #. dumping flocculated water that doesn't meet specifications
-    #. taking one sedimentation tank offline by placing a pipe stub in the inlet and a cap on the outlet
-    #. dumping settled water that doesn't meet specifications
+
+     #. dumping flocculated water that doesn't meet specifications
+     #. taking one sedimentation tank offline by placing a pipe stub in the inlet and a cap on the outlet
+     #. dumping settled water that doesn't meet specifications
+
  #. Inlet manifold with flow diffusers that straighten the flow into a continuous line jet
  #. Inlet manifold is offset from center to force jet to all go in a consistent direction through the jet reverser
  #. Jet reverser that efficiently reverses the direction of the incoming water to be able to resuspend settled flocs that are sliding down the inclines
