@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flocculation Introduction &mdash; AguaClara Textbook 0.0.26 documentation</title>
+  <title>Flocculation Introduction &mdash; AguaClara Textbook 0.0.29 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.26
+                0.0.29
               </div>
             
           
@@ -88,17 +88,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contributor's guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
-</ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 1.1: Review: Fluid Mechanics and Python</span></p>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
@@ -120,11 +114,10 @@
 <p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Flocculation Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#flocculation">Flocculation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#primary-particles-cant-attach-to-large-flocs">Primary particles can’t attach to large flocs</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#history">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flocs-are-fractals">Flocs are Fractals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flocculation-is-or-used-to-be-a-slow-process">Flocculation is (or used to be) a Slow Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#surface-charge-hypothesis">Surface Charge Hypothesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aguaclara-flocculation-history">AguaClara Flocculation History</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Floc_Model.html">Flocculation Model</a></li>
@@ -140,30 +133,36 @@
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
+<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Fluoride</span></p>
+<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Wastewater</span></p>
+<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
 </ul>
 
             
@@ -230,22 +229,41 @@
             
   <div class="section" id="flocculation-introduction">
 <span id="title-flocculation-introduction"></span><h1>Flocculation Introduction<a class="headerlink" href="#flocculation-introduction" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="flocculation">
-<h2>Flocculation<a class="headerlink" href="#flocculation" title="Permalink to this headline">¶</a></h2>
-<p>Flocculation transform inorganic (clays such as <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0048969708010103">kaolinite, smectite, etc. and metallic oxy-hydroxides such as goethite and gibbsite</a>) and organic (viruses, bacteria and protozoa) primary particles into flocs (particle aggregates). Flocculation doesn’t remove any particles from suspension. Instead it causes particle aggregation and then floc blankets, lamellar sedimentation, and sand filtration will be used to separate those flocs from the water. Sedimentation can remove flocs more easily than it can remove primary particles because flocs have a higher terminal sedimentation velocity. Floc blankets and sand filtration rely primarily on capture based on interception and interception is much more efficient when the particles are larger. Thus the purpose of flocculation is to join <strong>all</strong> of the primary particles together into flocs.</p>
-<p>It is also possible that a difference in a physical property between primary particles and flocs plays a role in enhanced removal of flocs in floc blankets and filters. For example, the many relatively weak connection points between the primary particles in the flocs enables the flocs to deform. It is possible that deformation plays an important role right at the moment of collision. Presumably the bond strength required to lock the colliding particles together is less if the particles can deform as they are colliding.</p>
-<div class="section" id="primary-particles-cant-attach-to-large-flocs">
-<h3>Primary particles can’t attach to large flocs<a class="headerlink" href="#primary-particles-cant-attach-to-large-flocs" title="Permalink to this headline">¶</a></h3>
-<p>One of the mysteries of flocculation has been why it is such a slow process and yet it appears to be a very rapid process. Plant operators observe that with high raw water turbidities that they can see flocculation progressing after about 0.5 minutes of flocculation. We can estimate the collision potential, <span class="math notranslate nohighlight">\(G\theta\)</span> that corresponds to making visible flocs.</p>
+<p>Flocculation transform inorganic (clays such as <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0048969708010103">kaolinite, smectite, etc. and metallic oxy-hydroxides such as goethite and gibbsite</a>) and organic (viruses, bacteria and protozoa) primary particles into flocs (particle aggregates). Flocculation doesn’t remove any particles from suspension. Instead it causes particle aggregation and then floc blankets, lamellar sedimentation, and sand filtration will be used to separate those flocs from the water. Sedimentation can remove flocs more easily than it can remove primary particles because flocs have a higher terminal sedimentation velocity. Floc blankets and sand filtration rely primarily on capture based on interception and interception is much more efficient when the particles are larger. Thus the purpose of flocculation is to join <strong>all</strong> of the primary particles together into flocs (See movie in <a class="reference internal" href="#figure-collisions-in-sequence"><span class="std std-numref">Fig. 67</span></a>).</p>
+<div class="figure align-center" id="id1">
+<span id="figure-collisions-in-sequence"></span><a class="reference external image-reference" href="https://youtu.be/NIgP56htShw"><img alt="Random walk toward a collision" src="../_images/Collisions_in_Sequence.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 67 </span><span class="caption-text">Clay particles with attached coagulant nanoparticles collide due to fluid deformation. They grow in size quickly. The challenge is to catch the last few primary particles that failed to participate in the aggregation process.</span></p>
+</div>
+<p>Given that hydraulic flocculators approach plug flow conditions it is reasonable to assume that at any given location in the flocculator there is a predominance of one size of flocs. Thus collisions between similar sized flocs are most likely because that is what is present. There is also a hydrodynamic reason why similar sized flocs are favored which we will discuss later. For simplicity of modeling let’s assume that flocs repeatedly double in size as suggested by the movie in <a class="reference internal" href="#figure-collisions-in-sequence"><span class="std std-numref">Fig. 67</span></a>. In that case, the number of primary particles in a floc is given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-n-primary-of-n-collisions">
+<span class="eqno">(302)<a class="headerlink" href="#equation-eq-n-primary-of-n-collisions" title="Permalink to this equation">¶</a></span>\[n_{primary} = 2^{n_{collisions}}\]</div>
+<p>If we assume (and we will show this assumption to be wrong in the next step) that the floc volume is directly proportional to the total volume of the primary particles in the floc, then we can rearrange <a class="reference internal" href="#equation-eq-n-primary-of-n-collisions">(302)</a> to solve for the number of sequential collisions required to increase the number of primary particles by a factor of 1000,000,000.</p>
+<div class="math notranslate nohighlight" id="equation-n-collisions-not-fractal">
+<span class="eqno">(303)<a class="headerlink" href="#equation-n-collisions-not-fractal" title="Permalink to this equation">¶</a></span>\[ n_{collisions} = \frac{log(n_{primary})}{log(2)}\]</div>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="n">n_primary</span> <span class="o">=</span> <span class="mi">1000000000</span>
+<span class="n">n_collisions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">n_primary</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n_collisions</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>30 sequential collisions would be required to produce a floc that contains 1 billion primary particles.</p>
+<div class="section" id="flocs-are-fractals">
+<h2>Flocs are Fractals<a class="headerlink" href="#flocs-are-fractals" title="Permalink to this headline">¶</a></h2>
+<p>As flocs combine they don’t coalesce like mist turning into rain drops. Instead they form loose aggregates that contain a higher and higher fraction of water in the voids between the solid primary particles.</p>
+<p>Although the obvious flocculation advantage is that it produces larger aggregates that are easier to remove, it is also <strong>possible</strong> (this is a hypothesis that needs testing) that a difference in a physical property between primary particles and flocs plays a role in enhanced removal of flocs in floc blankets and filters. For example, the many relatively weak connection points between the primary particles in the flocs enables the flocs to deform. It is possible that deformation plays an important role right at the moment of collision. Presumably the bond strength required to lock the colliding particles together is less if the particles can deform as they are colliding.</p>
+<p>The size change produced by flocculation is dramatic. Clay particles and pathogens have sizes that are order <span class="math notranslate nohighlight">\(\mu m\)</span> and they combine to form flocs that are order <span class="math notranslate nohighlight">\(mm\)</span>. A thousand fold increase in diameter suggests a billion fold increase in volume.</p>
+<div class="figure align-center" id="id2">
+<span id="figure-flocs-are-fractals"></span><a class="reference external image-reference" href="https://youtu.be/tAAC-KY8ZgA"><img alt="Flocs are fractals" src="../_images/Flocs_are_fractals.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 68 </span><span class="caption-text">The amount of water contained within a volume defined by the floc increases as the flocs grows.</span></p>
+</div>
+</div>
+<div class="section" id="flocculation-is-or-used-to-be-a-slow-process">
+<h2>Flocculation is (or used to be) a Slow Process<a class="headerlink" href="#flocculation-is-or-used-to-be-a-slow-process" title="Permalink to this headline">¶</a></h2>
+<p>One of the mysteries of flocculation has been why it is such a slow process, requiring 30 minutes according to conventional design, and yet it appears to be a very rapid process. Plant operators observe that with high raw water turbidities that they can see flocculation progressing after about 0.5 minutes of flocculation. We can estimate the collision potential, <span class="math notranslate nohighlight">\(G\theta\)</span> that corresponds to making visible flocs.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-0">
 <span class="eqno">(304)<a class="headerlink" href="#equation-flocculation-floc-intro-0" title="Permalink to this equation">¶</a></span>\[\bar G = \sqrt{ \frac{g h_e}{\theta \nu}}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
 <span class="kn">from</span> <span class="nn">aguaclara_research.play</span> <span class="k">import</span><span class="o">*</span>
-<span class="kn">from</span> <span class="nn">pytexit</span> <span class="k">import</span> <span class="n">py2tex</span>
-<span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span><span class="o">*</span>
-<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="k">import</span> <span class="n">root</span>
-<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="k">import</span> <span class="n">brentq</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">HL_floc</span> <span class="o">=</span> <span class="mi">43</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">HRT</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">min</span>
 <span class="n">Temperature</span> <span class="o">=</span><span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
@@ -259,9 +277,8 @@
 </div>
 <p>Here initial flocculation is visible at a <span class="math notranslate nohighlight">\(G\theta\)</span> of less than 3000. Given that flocculation is visible at this low collision potential, it is unclear why recommended <span class="math notranslate nohighlight">\(G\theta\)</span> are as high as 100,000. This is one of the great mysteries that motivated the search for a flocculation model that was based on hypotheses that were consistent with laboratory and field observations.</p>
 </div>
-</div>
-<div class="section" id="history">
-<h2>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="surface-charge-hypothesis">
+<h2>Surface Charge Hypothesis<a class="headerlink" href="#surface-charge-hypothesis" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>The mechanism of particle-particle aggregation was thought to be controlled by an average surface charge. Apparently no one was able to develop a model of how that mechanism would influence particle attachment efficiency and the result was that no predictive models for flocculation were developed. There were several observations that were at odds with conventional explanations of flocculation.</dt>
 <dd>1. Efficient flocculation at coagulant dosages that led to positive surface charge. This led to a second flocculation mechanism that was called “sweep floc” and that was used to describe any observations that didn’t fit the charge neutralization flocculation hypotheses
@@ -271,19 +288,26 @@
 <p>Evidence that the charge neutralization hypothesis doesn’t explain flocculation of surface waters has been accumulating for decades. <em>Sweep</em> flocculation has been proposed as an alternative “mechanism” that described common observations that didn’t fit the charge neutralization hypothesis. However, similar to the charge neutralization hypothesis, the <em>sweep</em> hypothesis didn’t result in the development of predictive equations to describe the process.</p>
 <p>For example, in 1992 Ching, Tanaka, and Elimelech published their research on <a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">Dynamics of coagulation of kaolin particles with ferric chloride</a>. They found
 that the electrophoretic mobility which is a measure of the clay particle surface charge was never neutralized at pH 7.8 and was neutralized at <span class="math notranslate nohighlight">\(10\mu M\)</span> at pH 6.0. The results were interpreted by the authors to mean that some combination of sweep floc and charge patchiness was responsible for the observed results.</p>
-<p>See <a class="reference internal" href="#figure-ching-electrophoretic-mobility-vs-ferric-chloride"><span class="std std-numref">Fig. 71</span></a> for a typical mountain view.</p>
-<div class="figure align-center" id="id1">
+<p>See <a class="reference internal" href="#figure-ching-electrophoretic-mobility-vs-ferric-chloride"><span class="std std-numref">Fig. 69</span></a> showing that at pH 7.8 the ferric chloride was still negatively charged and yet succeeded in flocculating the water to almost the same extent as the ferric chloride  at ph 6.0 that was postively charged (see <a class="reference internal" href="#figure-ching-residual-turbidity-vs-ferric-chloride"><span class="std std-numref">Fig. 70</span></a>).</p>
+<div class="figure align-center" id="id3">
 <span id="figure-ching-electrophoretic-mobility-vs-ferric-chloride"></span><a class="reference internal image-reference" href="../_images/Ching_Electrophoretic_Mobility_vs_Ferric_Chloride.png"><img alt="internal figure" src="../_images/Ching_Electrophoretic_Mobility_vs_Ferric_Chloride.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 71 </span><span class="caption-text"><cite>Electrophoretic_Mobility for final pH (after coagulant addition) of 6.0 and 7.8 as a function of :math:`FeCl_3</cite> dose &lt;<a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">https://doi.org/10.1016/0043-1354(94)90007-8</a>&gt;`__</span></p>
+<p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text"><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">Electrophoretic Mobility for final pH</a> (after coagulant addition) of 6.0 and 7.8 as a function of <span class="math notranslate nohighlight">\(FeCl_3\)</span> dose</span></p>
 </div>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id4">
 <span id="figure-ching-residual-turbidity-vs-ferric-chloride"></span><a class="reference internal image-reference" href="../_images/Ching_Residual_Turbidity_vs_Ferric_Chloride.png"><img alt="internal figure" src="../_images/Ching_Residual_Turbidity_vs_Ferric_Chloride.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 72 </span><span class="caption-text"><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">The settled water turbidity was almost independent of pH even though the electrophoretic mobility was quite different for the two pH values tested</a>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 70 </span><span class="caption-text"><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">The settled water turbidity was almost independent of pH even though the electrophoretic mobility was quite different for the two pH values tested</a>.</span></p>
 </div>
-<p><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">At pH 6.0 the ferric hydroxide precipitates are positively charged and at pH 7.8 they are close to neutral</a>. Thus it is apparent that neutralization of the clay surface charge can not explain
-these results.</p>
-<p><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">Figure x. Settled water turbidity (jar tests) for final pH (after coagulant addition) of 6.0 and 7.8.</a></p>
-<p>Electrostatic charge neutralization hypothesis The coagulant precipitate self aggregates – this is inconsistent with the positive charge that the electrostatic hypothesis asserts will prevent aggregation * Electrostatic repulsion extends only a few nm from the surface of a particle – and the coagulant adhesive nanoparticles are many times larger than the reach of the repulsive electrostatic force. The hypothesis that London van der Waals forces result in attachment neglects to account for the presence of water in the system. Water molecules will also be attracted to surfaces by London van der Waals forces and thus there will be competition between the coagulant and water. Thus eliminating repulsion is NOT sufficient to produce a bond between the particles. (see <a class="reference external" href="https://vtechworks.lib.vt.edu/bitstream/handle/10919/30137/Chapter1.pdf?sequence=9">hydration repulsion, page 21</a>) ` “The theory of DLP was a great step forward in that it appeared to circumvent the whole intractable problem of many body forces through its use of measured bulk dielectric response functions. However, it must be stressed again that it is a perturbation theory. That is, it depends on the assumption that an intervening liquid between interacting surfaces has bulk liquid properties up to a molecular distance from the surfaces. This is thermodynamically inconsistent, being equivalent to the statement that surface energies (or alternatively, the positions of the Gibbs dividing surfaces) are changed infinitesimally with distance of separation. This limits the theory to large distances (Young–Laplace vs. Poisson again) where large is undefined.” &lt;<a class="reference external" href="https://doi.org/10.1016/S0001-8686(99)00008-1">https://doi.org/10.1016/S0001-8686(99)00008-1</a>&gt;`__</p>
+<p><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">At pH 6.0 the ferric hydroxide precipitates are positively charged and at pH 7.8 they are close to neutral</a>. Thus it is apparent that neutralization of the clay surface charge can not explain these results.</p>
+<p>Electrostatic charge neutralization hypothesis</p>
+<p>The coagulant precipitate self aggregates – this is inconsistent with the positive charge that the electrostatic hypothesis asserts will prevent aggregation * Electrostatic repulsion extends only a few nm from the surface of a particle – and the coagulant adhesive nanoparticles are many times larger than the reach of the repulsive electrostatic force. The hypothesis that London van der Waals forces result in attachment neglects to account for the presence of water in the system. Water molecules will also be attracted to surfaces by London van der Waals forces and thus there will be competition between the coagulant and water. Thus eliminating repulsion is NOT sufficient to produce a bond between the particles. (see <a class="reference external" href="https://vtechworks.lib.vt.edu/bitstream/handle/10919/30137/Chapter1.pdf?sequence=9">hydration repulsion, page 21</a>) ` “The theory of DLP was a great step forward in that it appeared to circumvent the whole intractable problem of many body forces through its use of measured bulk dielectric response functions. However, it must be stressed again that it is a perturbation theory. That is, it depends on the assumption that an intervening liquid between interacting surfaces has bulk liquid properties up to a molecular distance from the surfaces. This is thermodynamically inconsistent, being equivalent to the statement that surface energies (or alternatively, the positions of the Gibbs dividing surfaces) are changed infinitesimally with distance of separation. This limits the theory to large distances (Young–Laplace vs. Poisson again) where large is undefined.” &lt;<a class="reference external" href="https://doi.org/10.1016/S0001-8686(99)00008-1">https://doi.org/10.1016/S0001-8686(99)00008-1</a>&gt;`__</p>
+</div>
+<div class="section" id="aguaclara-flocculation-history">
+<h2>AguaClara Flocculation History<a class="headerlink" href="#aguaclara-flocculation-history" title="Permalink to this headline">¶</a></h2>
+<p>2005 - We used conventional guidelines based on velocity gradient to design the first low flow vertical flocculator</p>
+<p>2010 - We designed using energy dissipation rate and accounted for the nonuniformity of the energy dissipation rate (<span class="math notranslate nohighlight">\(\theta\)</span> = 15 minutes)</p>
+<p>2015 – We added obstacles to decrease the distance between expansions to make all of our flocculators have maximum collision efficiency (<span class="math notranslate nohighlight">\(\theta\)</span> = 8 minutes)</p>
+<p>2016 – Learned that particle/floc collisions are dominated by viscous shear (not by turbulent eddies). Began designing flocculators based on a target head loss of 40 cm. Used a <span class="math notranslate nohighlight">\(G\theta\)</span> of 37,000.</p>
+<p>2017 - Designed a pipe flocculator for the 1 L/s plant with a <span class="math notranslate nohighlight">\(G\theta\)</span> of 20,000 and a residence time of about 100 s.</p>
 <p>#references <a class="reference external" href="https://www.iwapublishing.com/news/coagulation-and-flocculation-water-and-wastewater-treatment">Coagulation and Flocculation in Water and Wastewater Treatment</a>,
 iwapublishing</p>
 </div>
@@ -331,7 +355,7 @@ iwapublishing</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.26',
+            VERSION:'0.0.29',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Filtration Design &mdash; AguaClara Textbook 0.0.26 documentation</title>
+  <title>Filtration Design &mdash; AguaClara Textbook 0.0.29 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.26
+                0.0.29
               </div>
             
           
@@ -88,17 +88,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contributor's guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
-</ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 1.1: Review: Fluid Mechanics and Python</span></p>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
@@ -133,7 +127,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
+<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Filtration Design</a><ul>
@@ -174,23 +168,29 @@
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Fluoride</span></p>
+<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Wastewater</span></p>
+<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
 </ul>
 
             
@@ -280,10 +280,7 @@
 <p>For a multistage filter system, the filter areas for the Dynamic, Roughing, and Slow Sand filters are included in a total area. For a given flow, and the velocity for each filter type the total area is:</p>
 <div class="math notranslate nohighlight" id="equation-area-stuff">
 <span class="eqno">(409)<a class="headerlink" href="#equation-area-stuff" title="Permalink to this equation">¶</a></span>\[ A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}\]</div>
-<p>Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. <a class="reference internal" href="#figure-relative-area-of-filtration"><span class="std std-numref">Fig. 108</span></a> shows the relative area of various filtration technologies.</p>
-<div class="figure align-center" id="figure-relative-area-of-filtration">
-<a class="reference internal image-reference" href="../_images/figure_relative_area_of_filtration.png"><img alt="table showing the relative areas of multistage filtration techniques to AguaClara unit processes" src="../_images/figure_relative_area_of_filtration.png" style="width: 80%;" /></a>
-</div>
+<p>Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. <code class="xref std std-numref docutils literal notranslate"><span class="pre">_table_Net_Velocities</span></code> shows the relative area of various filtration technologies.</p>
 <p>Understanding the amount of area requires for this component makes it easy to see why certain systems would be preferable to others, but also that overall filtration is only a polishing step and cannot treat as well as other unit processes, predominantly the flocculation-sedimentation combination.</p>
 </div>
 </div>
@@ -292,10 +289,10 @@
 <p>In understading how sand filtration works, porosity is one of the most important concepts to be familiar with. Porosity refers to the ratio of the void volume to the total volume of a control volume.</p>
 <div class="math notranslate nohighlight" id="equation-porosity">
 <span class="eqno">(410)<a class="headerlink" href="#equation-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}\]</div>
-<p>Porosity is determined by the geometry of the material in the control volume, but also by the size of the particles involved. If you have three different sized spheres (such as .0um clay, .2mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in <a class="reference internal" href="#figure-porosity"><span class="std std-numref">Fig. 109</span></a>. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.</p>
+<p>Porosity is determined by the geometry of the material in the control volume, but also by the size of the particles involved. If you have three different sized spheres (such as .0um clay, .2mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in <a class="reference internal" href="#figure-porosity"><span class="std std-numref">Fig. 108</span></a>. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-porosity"></span><img alt="This figure illustrates how different sized materials have the same total bulk porosity" src="../_images/figure_porosity.png" />
-<p class="caption"><span class="caption-number">Fig. 109 </span><span class="caption-text">Within each box, the spheres are different sizes. However the total porosity is the same. To minimize the pore space, the smaller particles could be used to fill the spore space between the larger particles, though in a filter this is not necessarily ideal.</span></p>
+<p class="caption"><span class="caption-number">Fig. 108 </span><span class="caption-text">Within each box, the spheres are different sizes. However the total porosity is the same. To minimize the pore space, the smaller particles could be used to fill the spore space between the larger particles, though in a filter this is not necessarily ideal.</span></p>
 </div>
 <p>One way that the relative size of particles is characterized is by describing the size of the smallest 10% of grains, and the smallest 60% of grains. That is:</p>
 <p><span class="math notranslate nohighlight">\(D_{10}\)</span> = the sieve size that passes 10% by mass of sand through</p>
@@ -549,7 +546,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.26',
+            VERSION:'0.0.29',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

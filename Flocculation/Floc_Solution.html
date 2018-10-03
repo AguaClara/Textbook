@@ -1,0 +1,893 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DC Hydraulic Flocculation &mdash; AguaClara Textbook 0.0.29 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.29
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Examples.html">Flocculation Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>DC Hydraulic Flocculation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Flocculation/Floc_Solution.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">from</span> <span class="nn">aide_design</span> <span class="k">import</span> <span class="n">floc_model</span> <span class="k">as</span> <span class="n">floc</span>
+
+<span class="c1">#Below are the items that were imported by the code above so that you know what abbreviations to use in your code.</span>
+
+<span class="c1"># Third-party imports</span>
+<span class="c1">#import numpy as np</span>
+<span class="c1">#import pandas as pd</span>
+<span class="c1">#import matplotlib.pyplot as plt</span>
+<span class="c1">#import matplotlib</span>
+
+<span class="c1"># AIDE imports</span>
+<span class="c1">#import aide_design</span>
+<span class="c1">#import aide_design.pipedatabase as pipe</span>
+<span class="c1">#from aide_design.units import unit_registry as u</span>
+<span class="c1">#from aide_design import physchem as pc</span>
+<span class="c1">#import aide_design.expert_inputs as exp</span>
+<span class="c1">#import aide_design.materials_database as mat</span>
+<span class="c1">#import aide_design.utility as ut</span>
+<span class="c1">#import aide_design.k_value_of_reductions_utility as k</span>
+<span class="c1">#import aide_design.pipeline_utility as pipeline</span>
+<span class="c1">#import warnings</span>
+</pre></div>
+</div>
+<div class="section" id="dc-hydraulic-flocculation">
+<h1>DC Hydraulic Flocculation<a class="headerlink" href="#dc-hydraulic-flocculation" title="Permalink to this headline">¶</a></h1>
+<p>In this design challenge you will design a vertical flow hydraulic
+flocculator. You will use the flow rate of <code class="docutils literal notranslate"><span class="pre">flow_plant</span> <span class="pre">=</span> <span class="pre">20</span> <span class="pre">L/s</span></code> as
+your default design value.</p>
+<p>Although we don’t require that you use the nomenclature from the
+AguaClara variable naming guide, it provides a reasonable basis for
+organizing your variable names. We use the convention that the first
+part of the variable name describes the type of variable and always has
+a unique dimension. The subsequent parts of the variable name start from
+the big picture and slowly add more and more detail to arrive at the
+precise component that you are describing. Thus space_floc_baffle is the
+spacing between baffles in the flocculator and n_floc_channel_baffle
+should be the number of baffles in a flocculator channel.
+width_floc_channel_port should be the width of the port connecting two
+flocculator channels.</p>
+<p><strong>In this design challenge we will use functions to calculate each step
+of the design. Whenever we need to access a previously calculated result
+we will use the function call to access that value. Using this method of
+nested function calls will make the entire design be only a function of
+a few input parameters.</strong> This makes it possible to have flexible design
+code and ease the creation of new plant designs.</p>
+<p>The minimum input parameters to define a flocculator are (flow_plant,
+headloss_floc_BOD, Gt_BOD, T_BOD). We could have included a longer list
+of input parameters (height_floc_end, width_PC_sheet, K_e, etc.) to make
+our functions even more general. But to keep our code more concise we
+will focus on only 4 of the input parameters. This will make it possible
+to easily change the input parameters to obtain new designs. We will use
+this capability to plot the results of varying the design flow rate.</p>
+<div class="section" id="hydraulic-vertical-flow-flocculator-design">
+<h2>Hydraulic Vertical Flow Flocculator Design<a class="headerlink" href="#hydraulic-vertical-flow-flocculator-design" title="Permalink to this headline">¶</a></h2>
+<p>This challenge is design a hydraulic flocculator using the core concepts
+of the AguaClara design methodology.</p>
+<p>Below are the inputs for the design. BOD stands for Basis Of Design.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># head loss through the flocculator</span>
+<span class="n">headloss_floc_BOD</span> <span class="o">=</span> <span class="mi">40</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
+
+<span class="c1"># collision potential based on recent designs for AguaClara Plants</span>
+<span class="n">Gt_BOD</span> <span class="o">=</span> <span class="mi">37000</span>
+
+<span class="c1"># water depth at the end of flocculator where it flows into the inlet channel of the sedimentation tank</span>
+<span class="n">height_floc_end</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+
+<span class="n">flow_plant</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+
+<span class="c1"># This is the estimate for larger plants where the flocculator is as long as the sedimentation tanks.</span>
+<span class="c1"># For lower flow plants we will need to reduce this length because of the constraint that the channels must</span>
+<span class="c1"># be wide enough to construct.</span>
+<span class="n">length_channel_max</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+
+<span class="c1"># minimum and maximum ratios of distance between expansions to baffle spacing</span>
+<span class="n">Pi_HS_min</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">Pi_HS_max</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">Pi_vc</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">RATIO_VC_ORIFICE</span>
+<span class="n">Pi_vc_baffle</span> <span class="o">=</span> <span class="n">Pi_vc</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># width of the polycarbonate sheets used to make baffles</span>
+<span class="n">width_PC_sheet</span> <span class="o">=</span> <span class="mf">1.067</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">m</span>
+
+<span class="c1"># this is a reasonable constraint to keep the channel constructable by humans</span>
+<span class="n">width_floc_min_BOD</span> <span class="o">=</span> <span class="n">width_PC_sheet</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">width_floc_max_BOD</span> <span class="o">=</span> <span class="n">width_PC_sheet</span>
+
+<span class="c1"># expansion minor loss coefficient for 180 degree bend</span>
+<span class="n">K_e</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">Pi_vc_baffle</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># this is the minimum temperature of the raw water</span>
+<span class="n">T_BOD</span> <span class="o">=</span> <span class="mi">15</span><span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
+</pre></div>
+</div>
+<div class="section" id="design-algorithm-steps">
+<h3>Design Algorithm Steps<a class="headerlink" href="#design-algorithm-steps" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Calculate the total volume of flocculator given head loss and
+collision potential</li>
+<li>Calculate the number of channels by taking the total width and
+dividing by the maximum channel width</li>
+<li>Calculate the channel width (total width over number of channels)</li>
+<li>Calculate the minimum number of obstacles and spacing between
+obstacles by assuming a maximum H/S ratio</li>
+<li>Use the actual H/S ratio based on obstacle spacing to calculate the
+spacing between baffles</li>
+<li>Calculate the obstacle width to obtain the same jet expansion
+conditions as produced by the 180 degree bend.</li>
+</ol>
+<p>This algorithm does not yet handle the integer number of baffles in a
+channel or the thickness of the baffles</p>
+<p>For this assignment <strong>create functions for each question</strong> and then use
+those function calls whenever that calculation result is required in a
+subsequent step. Include flow_plant, headloss_floc_BOD, Gt_BOD and T_BOD
+as the inputs that can be varied for each function.</p>
+<p><strong>Whenever you reference a previously calculated value in a function,
+use the function call for that value so that dependency is not broken.</strong></p>
+<p>That way you will be able to easily vary any of the three main input
+parameters (flow, Gt, head loss) to see their effect on the design.</p>
+</div>
+<div class="section" id="id1">
+<h3>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Estimate the average velocity gradient of a flocculator given head loss
+and collision potential. I’m going to solve this problem for you so you
+see how to use function calls.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">G_avg</span><span class="p">(</span><span class="n">hl</span><span class="p">,</span> <span class="n">Gt</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">hl</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">Gt</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_BOD</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">G</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The average velocity gradient of flocculator is&#39;</span><span class="p">,</span> <span class="n">G_avg</span><span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">average</span> <span class="n">velocity</span> <span class="n">gradient</span> <span class="n">of</span> <span class="n">flocculator</span> <span class="ow">is</span> <span class="mf">93.24</span> <span class="o">/</span> <span class="n">second</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-1">
+<span id="id2"></span><h3>2)<a class="headerlink" href="#section-1" title="Permalink to this headline">¶</a></h3>
+<p>Estimate the residence time of flocculator given the target head loss
+and collision potential. (Note that this ignores the decrease in water
+depth caused by head loss. We hope to improve this design process
+further in the near future.)</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">t_floc_est</span><span class="p">(</span><span class="n">hl</span><span class="p">,</span> <span class="n">Gt</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">Gt</span> <span class="o">/</span> <span class="n">G_avg</span><span class="p">(</span><span class="n">hl</span><span class="p">,</span> <span class="n">Gt</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">theta</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The residence time of flocculator is&#39;</span><span class="p">,</span> <span class="n">t_floc_est</span><span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">residence</span> <span class="n">time</span> <span class="n">of</span> <span class="n">flocculator</span> <span class="ow">is</span> <span class="mf">396.8</span> <span class="n">second</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-2">
+<span id="id3"></span><h3>3)<a class="headerlink" href="#section-2" title="Permalink to this headline">¶</a></h3>
+<p>Plot <span class="math notranslate nohighlight">\(G\theta\)</span> as a function of the operating temperature given
+the head loss and residence time for this design. In this step you are
+assuming that you have built this hydraulic flocculator and you want to
+see how the collision potential, <span class="math notranslate nohighlight">\(G\theta\)</span>, varies with
+temperature of operation. Vary the temperature from 0°C to 30°C. The
+following equation makes it clear that the velocity gradient originates
+from head loss creates fluid deformation that is limited by viscosity.</p>
+<p>$:raw-latex:<cite>bar `G:raw-latex:</cite>theta  <cite>=
+:raw-latex:</cite>sqrt {frac{{g{h_e}theta }}{nu }}` $ <span class="math notranslate nohighlight">\(\theta\)</span></p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Gt_operation</span><span class="p">(</span><span class="n">hl</span><span class="p">,</span><span class="n">Gt</span><span class="p">,</span><span class="n">T_BOD</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="n">Gt_operation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">hl</span> <span class="o">*</span> <span class="n">t_floc_est</span><span class="p">(</span><span class="n">hl</span><span class="p">,</span> <span class="n">Gt</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">Gt_operation</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
+<span class="n">Temp_Operation</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
+<span class="n">ypoints</span><span class="o">=</span><span class="p">(</span><span class="n">Gt_operation</span><span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">,</span><span class="n">Temp_Operation</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_Operation</span><span class="p">,</span><span class="n">ypoints</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="c1">#Note the use of latex. The r tells matplotlib to interpret the following strings as raw text.</span>
+<span class="c1">#Without the &quot;r&quot; the \theta would be parsed as a tab (\t) followed by heta!</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Temperature ($^\circ$C)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;G$\theta$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;G$\theta$ vs temperature&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure" id="id41">
+<img alt="png" src="Flocculation/DC_Hydraulic_Flocculation_Solution_files/DC_Hydraulic_Flocculation_Solution_12_0.png" />
+<p class="caption"><span class="caption-text">png</span></p>
+</div>
+</div>
+<div class="section" id="section-3">
+<span id="id4"></span><h3>4)<a class="headerlink" href="#section-3" title="Permalink to this headline">¶</a></h3>
+<p>The following floc model equation creates the link between
+<span class="math notranslate nohighlight">\(\bar Gt\)</span> and flocculator performance.</p>
+<p>$pC^* = <a href="#id5"><span class="problematic" id="id6">:raw-latex:`\frac{3}{2}`</span></a><a href="#id7"><span class="problematic" id="id8">:raw-latex:`\log `:raw-latex:`</span></a>left`(
+{<a href="#id9"><span class="problematic" id="id10">:raw-latex:`\frac{2}{3}`</span></a><a href="#id11"><span class="problematic" id="id12">:raw-latex:`\pi `k:raw-latex:`</span></a>frac{{d_{Clay}^2}}{{Lambda _0^2}}`:raw-latex:<cite>bar `Gt:raw-latex:</cite>alpha  <cite>+
+1} :raw-latex:</cite>right`) $</p>
+<p>What does the floc model and the graph tell you about flocculator
+performance and flocculator design? Explain why performance varies with
+temperature.</p>
+<p>Flocculator performance improves with warmer temperatures because the
+fluid deforms more given the same input energy. Flocculators should be
+designed to perform well based on the coldest operating temperature that
+they will encounter.</p>
+</div>
+<div class="section" id="section-4">
+<span id="id13"></span><h3>5)<a class="headerlink" href="#section-4" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the volume of flocculator. Note that this volume does not take
+into account the extra volume that flocculator will have due to the
+changing water level caused by the head loss. Simply estimate the volume
+based on the residence time and the flow rate.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vol_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+    <span class="n">vol</span> <span class="o">=</span> <span class="n">t_floc_est</span><span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span> <span class="p">)</span><span class="o">*</span><span class="n">flow_plant</span>
+    <span class="k">return</span> <span class="n">vol</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The volume of flocculator is&#39;</span><span class="p">,</span> <span class="n">vol_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">volume</span> <span class="n">of</span> <span class="n">flocculator</span> <span class="ow">is</span> <span class="mf">7.936</span> <span class="n">meter</span> <span class="o">**</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-5">
+<span id="id14"></span><h3>6)<a class="headerlink" href="#section-5" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the actual length of the flocculator channels. This must meet
+two constraints. First, it must be less than or equal to the maximum
+channel length. Second, the channel length is limited by the flocculator
+volume, height, minimum number of channels, and minimum width of the
+channels. This second constraint is important for low flow rates so that
+the flocculator has the correct target volume. Make sure to use this
+floc channel length in subsequent calculations.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">length_channel</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+
+    <span class="c1">#The factor of two below is because the minimum number of channels in the flocculator is two.</span>
+    <span class="c1">#This is a result of the orientation of the sedimentation tanks and the plumbing in the plant.</span>
+    <span class="c1">#Unless the design is for very low flows (&lt;10 L/s), there will always be an even number of flocculator channels.</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="n">vol_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span><span class="o">/</span><span class="n">width_floc_min_BOD</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">height_floc_end</span>
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">length</span><span class="p">,</span><span class="n">length_channel_max</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The maximum channel length is&#39;</span><span class="p">,</span><span class="n">length_channel</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">maximum</span> <span class="n">channel</span> <span class="n">length</span> <span class="ow">is</span> <span class="mf">3.719</span> <span class="n">meter</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-6">
+<span id="id15"></span><h3>7)<a class="headerlink" href="#section-6" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the combined total width of the flocculator channels (not
+including walls) based on the given length and depth.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">width_floc_total</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+    <span class="n">width_floc</span> <span class="o">=</span> <span class="n">vol_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">length_channel</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span><span class="o">*</span><span class="n">height_floc_end</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">width_floc</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The total width of the flocculator channels is is&#39;</span><span class="p">,</span> <span class="n">width_floc_total</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">total</span> <span class="n">width</span> <span class="n">of</span> <span class="n">the</span> <span class="n">flocculator</span> <span class="n">channels</span> <span class="ow">is</span> <span class="ow">is</span> <span class="mf">1.067</span> <span class="n">meter</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-7">
+<span id="id16"></span><h3>8)<a class="headerlink" href="#section-7" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the minimum channel width required to achieve H/S&gt;3. The
+channel can be wider than this, but this is the absolute minimum width
+for a channel. The minimum width occurs when there is only one expansion
+per baffle and thus the distance between expansions is the same as the
+depth of water at the end of the flocculator.</p>
+<p><span class="math notranslate nohighlight">\({W_{Min}} = \frac{{\Pi _{HS}}Q}{H_e}{\left( {\frac{K_e}{2{H_e}\nu {\bar G}^2}} \right)^{\frac{1}{3}}}\)</span></p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">width_floc_min_est</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+    <span class="n">Gavg</span> <span class="o">=</span> <span class="n">G_avg</span><span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+    <span class="n">nu</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_BOD</span><span class="p">)</span>
+    <span class="n">width_floc_min</span> <span class="o">=</span> <span class="n">Pi_HS_min</span><span class="o">*</span><span class="p">((</span><span class="n">K_e</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">height_floc_end</span> <span class="o">*</span> <span class="p">(</span><span class="n">Gavg</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">nu</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span><span class="o">*</span><span class="n">flow_plant</span><span class="o">/</span><span class="n">height_floc_end</span>
+    <span class="k">return</span> <span class="n">width_floc_min</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum channel width is&#39;</span><span class="p">,</span> <span class="n">width_floc_min_est</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">minimum</span> <span class="n">channel</span> <span class="n">width</span> <span class="ow">is</span> <span class="mf">12.05</span> <span class="n">centimeter</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-8">
+<span id="id17"></span><h3>9)<a class="headerlink" href="#section-8" title="Permalink to this headline">¶</a></h3>
+<p>What is the minimum channel width given the additional constraint that
+it be constructable? Use the max function to find the true minimum
+channel width given both constraints.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">width_floc_min</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">width_floc_min_est</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">),</span><span class="n">width_floc_min_BOD</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum channel width is&#39;</span><span class="p">,</span> <span class="n">width_floc_min</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">minimum</span> <span class="n">channel</span> <span class="n">width</span> <span class="ow">is</span> <span class="mf">0.5335</span> <span class="n">meter</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-9">
+<span id="id18"></span><h3>10)<a class="headerlink" href="#section-9" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the number of channels by taking the total flocculator width
+(see step 7) and dividing by the minimum channel width (round down).
+Include the requirement that the number of channels must be even (Use
+the numpy floor function - look it up!). To make this function robust,
+make sure that it can’t ever return zero channels (the max function
+might be useful here)! You can convert the float to an integer with the
+int() function.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">num_channel</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+     <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="n">width_floc_total</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span><span class="o">/</span>
+        <span class="p">(</span><span class="n">width_floc_min</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
+<span class="c1"># floor function with step size 2</span>
+     <span class="n">num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span>
+     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are&#39;</span><span class="p">,</span> <span class="n">num_channel</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">),</span><span class="s1">&#39;channels.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">There</span> <span class="n">are</span> <span class="mi">2</span> <span class="n">channels</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-10">
+<span id="id19"></span><h3>11)<a class="headerlink" href="#section-10" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the actual channel width based on the number of channels the
+total flocculator width.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">width_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+    <span class="n">width_total</span> <span class="o">=</span> <span class="n">width_floc_total</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+    <span class="n">num_c</span> <span class="o">=</span> <span class="n">num_channel</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">width_total</span><span class="o">/</span><span class="n">num_c</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The actual flocculator channel width is&#39;</span><span class="p">,</span> <span class="n">width_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">actual</span> <span class="n">flocculator</span> <span class="n">channel</span> <span class="n">width</span> <span class="ow">is</span> <span class="mf">53.35</span> <span class="n">centimeter</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-11">
+<span id="id20"></span><h3>12)<a class="headerlink" href="#section-11" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the <em>maximum</em> distance between expansions. This occurs for the
+largest allowable H/S ratio. Note that this isn’t accounting for the
+integer requirement for the number of baffle spaces per channel yet.</p>
+<p><span class="math notranslate nohighlight">\({H_{{e_{Max}}}} = {\left[ {\frac{{{K_e}}}{{2\nu {{\bar G}^2}}}{{\left( {\frac{{Q{\Pi _{H{S_{Max}}}}}}{W}} \right)}^3}} \right]^{\frac{1}{4}}}\)</span></p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">height_exp_max</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+
+    <span class="n">g_avg</span> <span class="o">=</span> <span class="n">G_avg</span><span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+    <span class="n">nu</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_BOD</span><span class="p">)</span>
+    <span class="n">term1</span> <span class="o">=</span> <span class="p">(</span><span class="n">K_e</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">g_avg</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">nu</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="n">term2</span> <span class="o">=</span> <span class="p">(</span><span class="n">Pi_HS_max</span><span class="o">*</span><span class="n">flow_plant</span><span class="o">/</span><span class="n">width_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="n">height_exp</span> <span class="o">=</span> <span class="n">term1</span><span class="o">*</span><span class="n">term2</span>
+    <span class="k">return</span> <span class="n">height_exp</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The maximum distance between expansions&#39;</span><span class="p">,</span> <span class="n">height_exp_max</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">maximum</span> <span class="n">distance</span> <span class="n">between</span> <span class="n">expansions</span> <span class="mf">1.102</span> <span class="n">meter</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-12">
+<span id="id21"></span><h3>13)<a class="headerlink" href="#section-12" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the minimum number of expansions per baffle space.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">num_expansions</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">height_floc_end</span><span class="o">/</span><span class="p">(</span><span class="n">height_exp_max</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The number of expansions is&#39;</span><span class="p">,</span> <span class="n">num_expansions</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">expansions</span> <span class="ow">is</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-13">
+<span id="id22"></span><h3>14)<a class="headerlink" href="#section-13" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the actual distance between expansions given the integer
+requirement for the number of expansions per flocculator depth.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">height_exp</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+
+    <span class="k">return</span> <span class="n">height_floc_end</span><span class="o">/</span><span class="n">num_expansions</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The actual distance between expansions is&#39;</span><span class="p">,</span> <span class="n">height_exp</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">actual</span> <span class="n">distance</span> <span class="n">between</span> <span class="n">expansions</span> <span class="ow">is</span> <span class="mi">1</span> <span class="n">meter</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-14">
+<span id="id23"></span><h3>15)<a class="headerlink" href="#section-14" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the spacing between baffles based on the target velocity
+gradient.</p>
+<p>$ {S} = {<a href="#id24"><span class="problematic" id="id25">:raw-latex:`\left`(
+{:raw-latex:`</span></a>frac{{{K_e}}}{{2nu {{bar G}^2}}{H_{{e}}}}`}
+<a href="#id26"><span class="problematic" id="id27">:raw-latex:`\right`</span></a>)^{<a href="#id28"><span class="problematic" id="id29">:raw-latex:`\frac{1}{3}`</span></a>}}
+:raw-latex:<a href="#id30"><span class="problematic" id="id31">`</span></a>frac{Q}{W}`$</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">spacing_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+
+    <span class="n">g_avg</span> <span class="o">=</span> <span class="n">G_avg</span><span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+    <span class="n">nu</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_BOD</span><span class="p">)</span>
+    <span class="n">term1</span> <span class="o">=</span> <span class="p">(</span><span class="n">K_e</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">height_exp</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">g_avg</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">nu</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="n">ans</span> <span class="o">=</span>  <span class="n">term1</span><span class="o">*</span><span class="n">flow_plant</span><span class="o">/</span><span class="n">width_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The spacing between baffles is&#39;</span><span class="p">,</span> <span class="n">spacing_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">spacing</span> <span class="n">between</span> <span class="n">baffles</span> <span class="ow">is</span> <span class="mf">0.1898</span> <span class="n">meter</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-15">
+<span id="id32"></span><h3>16)<a class="headerlink" href="#section-15" title="Permalink to this headline">¶</a></h3>
+<p>How many baffle spaces would fit in the channel(s) given the length of
+the flocculator and the baffle spacing? Round to the nearest integer.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">num_baffles</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">num_channel</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span><span class="o">*</span><span class="n">length_channel</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span><span class="o">/</span><span class="n">spacing_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The number of baffle spaces that would fit in the channels is&#39;</span><span class="p">,</span> <span class="n">num_baffles</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">baffle</span> <span class="n">spaces</span> <span class="n">that</span> <span class="n">would</span> <span class="n">fit</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">channels</span> <span class="ow">is</span> <span class="mi">39</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-16">
+<span id="id33"></span><h3>17)<a class="headerlink" href="#section-16" title="Permalink to this headline">¶</a></h3>
+<p>How many baffle spaces are needed to create the required collision
+potential? Note that this isn’t necessarily the same number as found in
+Problem 16. Calculating the collision potential per baffle space is the
+advised first step.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Gt_baffle</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+
+    <span class="n">term1</span> <span class="o">=</span> <span class="n">spacing_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span><span class="o">*</span><span class="n">width_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">term1</span><span class="o">*</span><span class="n">G_avg</span><span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span><span class="o">*</span><span class="n">height_floc_end</span><span class="o">/</span><span class="n">flow_plant</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The collision potential (Gt) per baffle space is&#39;</span><span class="p">,</span> <span class="n">Gt_baffle</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">num_baffle_min</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+
+    <span class="n">ans</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">Gt_BOD</span><span class="o">/</span><span class="n">Gt_baffle</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The minimum number of baffles required is&#39;</span><span class="p">,</span> <span class="n">num_baffle_min</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">collision</span> <span class="n">potential</span> <span class="p">(</span><span class="n">Gt</span><span class="p">)</span> <span class="n">per</span> <span class="n">baffle</span> <span class="n">space</span> <span class="ow">is</span> <span class="mi">944</span> <span class="n">dimensionless</span>
+<span class="n">The</span> <span class="n">minimum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">baffles</span> <span class="n">required</span> <span class="ow">is</span> <span class="mi">39</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-17">
+<span id="id34"></span><h3>18)<a class="headerlink" href="#section-17" title="Permalink to this headline">¶</a></h3>
+<p>Do the two estimates of the number of baffle spaces agree?</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">num_baffles</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span> <span class="o">==</span> <span class="n">num_baffle_min</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Yes&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Yes</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-18">
+<span id="id35"></span><h3>19)<a class="headerlink" href="#section-18" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the average velocity of the water in the flocculator. This is
+the velocity after the flow has expanded through each baffle/obstacle.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vel_floc_ave</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">flow_plant</span><span class="o">/</span><span class="p">(</span> <span class="n">spacing_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span><span class="o">*</span><span class="n">width_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The average velocity of the water in the flocculator is&#39;</span><span class="p">,</span> <span class="n">vel_floc_ave</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">average</span> <span class="n">velocity</span> <span class="n">of</span> <span class="n">the</span> <span class="n">water</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">flocculator</span> <span class="ow">is</span> <span class="mf">0.1975</span> <span class="n">meter</span> <span class="o">/</span> <span class="n">second</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-19">
+<span id="id36"></span><h3>20)<a class="headerlink" href="#section-19" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the depth of water at the beginning of the flocculator based
+on the design head loss.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HEIGHT_WATER_FLOC_START</span> <span class="o">=</span> <span class="n">height_floc_end</span> <span class="o">+</span> <span class="n">headloss_floc_BOD</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The depth of the water at the beginning of the flocculator is&#39;</span><span class="p">,</span> <span class="n">HEIGHT_WATER_FLOC_START</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">depth</span> <span class="n">of</span> <span class="n">the</span> <span class="n">water</span> <span class="n">at</span> <span class="n">the</span> <span class="n">beginning</span> <span class="n">of</span> <span class="n">the</span> <span class="n">flocculator</span> <span class="ow">is</span> <span class="mf">2.4</span> <span class="n">meter</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-20">
+<span id="id37"></span><h3>21)<a class="headerlink" href="#section-20" title="Permalink to this headline">¶</a></h3>
+<p>Estimate the residence time in the hydraulic flocculator taking head
+loss into account. It is okay if your estimate doesn’t capture all of
+the details of the flocculator. You don’t need to account for the volume
+of the baffles. Simply account for the added water due to head loss. You
+can approximate the extra depth as a triangle.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">theta_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
+
+    <span class="n">theta_est</span> <span class="o">=</span> <span class="n">t_floc_est</span><span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">theta_est</span><span class="o">*</span><span class="p">((</span><span class="n">height_floc_end</span> <span class="o">+</span> <span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="o">/</span><span class="n">height_floc_end</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The residence time in the hydraulic flocculator is&#39;</span><span class="p">,</span> <span class="n">theta_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">residence</span> <span class="n">time</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">hydraulic</span> <span class="n">flocculator</span> <span class="ow">is</span> <span class="mf">7.275</span> <span class="n">minute</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-21">
+<span id="id38"></span><h3>22)<a class="headerlink" href="#section-21" title="Permalink to this headline">¶</a></h3>
+<p>Create plots showing number of channels, number of expansions per water
+depth, total number of baffles, and channel width for a flow range from
+10-100 L/s. Note that the functions that we created in this design
+challenge are not able to handle arrays as inputs. Use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops to
+create the numpy arrays of y data needed for these graphs. Use 100
+points to define each plot. Remember to initialize the numpy arrays
+before</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plot_points</span><span class="o">=</span><span class="mi">100</span>
+<span class="n">flow_plant</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">plot_points</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+
+<span class="n">expansions</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">plot_points</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">plot_points</span><span class="p">):</span>
+    <span class="n">expansions</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_expansions</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">expansions</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Plant Flow Rate (L/s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Expansion per baffle space&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Expansions per baffle space vs plant flow&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="n">channels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">plot_points</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">plot_points</span><span class="p">):</span>
+    <span class="n">channels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">num_channel</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">channels</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Plant Flow Rate (L/s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of channels&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Number of channels vs plant flow&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="n">baffles</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">plot_points</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">plot_points</span><span class="p">):</span>
+    <span class="n">baffles</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">num_baffles</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">baffles</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Plant Flow Rate (L/s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Baffle Spaces&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Number of baffle spaces vs plant flow&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="n">width_floc_channel</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">plot_points</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">plot_points</span><span class="p">):</span>
+    <span class="n">width_floc_channel</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">width_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">width_floc_channel</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Plant Flow Rate (L/s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Floc Channel Width (m)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Floc channel width vs plant flow&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure" id="id42">
+<img alt="png" src="Flocculation/DC_Hydraulic_Flocculation_Solution_files/DC_Hydraulic_Flocculation_Solution_52_0.png" />
+<p class="caption"><span class="caption-text">png</span></p>
+</div>
+<div class="figure" id="id43">
+<img alt="png" src="Flocculation/DC_Hydraulic_Flocculation_Solution_files/DC_Hydraulic_Flocculation_Solution_52_1.png" />
+<p class="caption"><span class="caption-text">png</span></p>
+</div>
+<div class="figure" id="id44">
+<img alt="png" src="Flocculation/DC_Hydraulic_Flocculation_Solution_files/DC_Hydraulic_Flocculation_Solution_52_2.png" />
+<p class="caption"><span class="caption-text">png</span></p>
+</div>
+<div class="figure" id="id45">
+<img alt="png" src="Flocculation/DC_Hydraulic_Flocculation_Solution_files/DC_Hydraulic_Flocculation_Solution_52_3.png" />
+<p class="caption"><span class="caption-text">png</span></p>
+</div>
+</div>
+<div class="section" id="section-22">
+<span id="id39"></span><h3>23)<a class="headerlink" href="#section-22" title="Permalink to this headline">¶</a></h3>
+<p>Read from the graphs to determine</p>
+<ol class="arabic simple">
+<li>At what flow rate is it no longer necessary to add extra obstacles in
+the flocculator?</li>
+<li>At what flow rate does the flocculator switch from 2 channels to 4
+channels?</li>
+<li><strong>Why</strong> did the flocculator switch from 2 to 4 channels?</li>
+<li>No obstacles are needed for flows greater than about 65 L/s.</li>
+<li>The flocculator switches from 2 to 4 channels at 65 L/s.</li>
+<li>The channels had reached their maximum width at that flow rate.</li>
+</ol>
+</div>
+<div class="section" id="section-23">
+<span id="id40"></span><h3>24)<a class="headerlink" href="#section-23" title="Permalink to this headline">¶</a></h3>
+<p>Change Gt_BOD to 20,000 and run the code again. Identify at least 3
+changes in the design.</p>
+<ol class="arabic simple">
+<li>The number of channels would be 2 for all of the flows explored here.</li>
+<li>The value of G increased</li>
+<li>The spacing between baffles decreased</li>
+<li>The flow expansions became closer together (because the spacing
+between baffles decreased)</li>
+<li>The number of baffles decreased</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.29',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

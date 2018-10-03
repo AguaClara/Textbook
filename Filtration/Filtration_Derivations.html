@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Filtration Derivations &mdash; AguaClara Textbook 0.0.26 documentation</title>
+  <title>Filtration Derivations &mdash; AguaClara Textbook 0.0.29 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.26
+                0.0.29
               </div>
             
           
@@ -88,17 +88,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contributor's guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
-</ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 1.1: Review: Fluid Mechanics and Python</span></p>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
@@ -133,7 +127,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Filtration</span></p>
+<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Filtration Design</a></li>
@@ -165,23 +159,29 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Fluoride</span></p>
+<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Wastewater</span></p>
+<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
 </ul>
 
             
@@ -609,6 +609,16 @@ In this design only drill bit sizes of 1/4” and 1/8” are considered. The tot
 <h2>Path head loss calculations and flow distribution between layers<a class="headerlink" href="#path-head-loss-calculations-and-flow-distribution-between-layers" title="Permalink to this headline">¶</a></h2>
 <p>Now that the sand layer depth is set the Kozeny Head Loss can be determined for the clean bed and the headloss through various flow paths can be determined.</p>
 <p>First use the Kozeny Equation (<strong>ref kozeny</strong> )to find the HL in the central layers and also the bottom layer with <span class="math notranslate nohighlight">\(H_{Layer}\)</span> and <span class="math notranslate nohighlight">\(H_{BottomLayer}\)</span></p>
+<p>As the filter has 6 layers there are six possible paths for the water to take.</p>
+<p>Overview of the algorithm of this section:</p>
+<p>In each path the path headloss is the sum of : inlet plumbing, sand layer, and outlet plumbing (for the relevant flow)</p>
+<p>Find the max headloss through the respective paths (Q1 - Q6)
+Find the min headloss through the respective paths (Q1 - Q6)
+Find the average headloss of the paths (sum(HL)/6)
+^^a theoretical term because the flow distrubution will sort itself out because that’s how headloss works
+Find Pi_layer. The ratio of  the flow distribution. Goal is close to 1.</p>
+<p>Because the flow distribution will change to make the headlosses even, it can be taken as true that <span class="math notranslate nohighlight">\(HL_{Path1} = HL_{Path2}\)</span> and so on for each path. This assumes the clean bed headlosses and also accounts for the varying flows in each path.</p>
+<p>It is also known that the flow must add up to the flow in the filter. Knowing that a system of equations can be set up to use the healoss and total flow requirement to solve for the flow in each layer. Those flows are then taken as the flow through each layer.</p>
 </div>
 <div class="section" id="siphon-design">
 <h2>Siphon design<a class="headerlink" href="#siphon-design" title="Permalink to this headline">¶</a></h2>
@@ -687,7 +697,7 @@ In this design only drill bit sizes of 1/4” and 1/8” are considered. The tot
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.26',
+            VERSION:'0.0.29',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
