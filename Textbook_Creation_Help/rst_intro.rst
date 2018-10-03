@@ -91,13 +91,6 @@ To test exactly what will be published, we have a test branch. The test branch i
   script:
       - PDF=True
 
-.. _figure_test_pdf:
-
-.. figure:: Images/trigger_pdf.gif
-    :width: 600px
-    :align: center
-    :alt: Trigger PDF build
-
 `The website output is viewable here <https://rawgit.com/AguaClara/Textbook/test/html/index.html>`_.
 
 Sharing Test Output

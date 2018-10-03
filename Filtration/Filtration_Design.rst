@@ -48,7 +48,7 @@ For a multistage filter system, the filter areas for the Dynamic, Roughing, and 
 
     A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}
 
-Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. This table shows the relative area of various filtration technologies.
+Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. :numref:`_table_Net_Velocities` shows the relative area of various filtration technologies.
 
 
 Understanding the amount of area requires for this component makes it easy to see why certain systems would be preferable to others, but also that overall filtration is only a polishing step and cannot treat as well as other unit processes, predominantly the flocculation-sedimentation combination.
