@@ -21,8 +21,8 @@ These are all minimums!
 
 .. math::
 
-  ND_{FiManTrunkMinLow} = 1.5in
-  ND_{FiManBranchMinLow} = 1in
+  ND_{FiTrunkMinLow} = 1.5in
+  ND_{FiBranchMinLow} = 1in
   ND_{BallValve} = 3in
   ND_{BedTester} = 0.5in
   ND_{BedTesterOuter} = 1in
@@ -146,6 +146,11 @@ In this section is also where the filter layer height is actually calculated usi
 Filter Trunk and Branch Diameters
 ==================================
 
+In determining the size of the trunk and branches of the EStaRS the pressure recovery constraints are the most important design considerations. Having a pressure recovery term that is too high will lead to and uneven flow distribution. The two pressure recovery terms that are of particular concern are those in the trunks and branches during forward filtration, and the pressure recovery in the lowest branch during backwash. To calculate the estimated pressure recovery term the first thing to find is the velocity in the branches during forward filtration and during backwash.
+
+Determining Forward Filtration and Backwash Velocities
+--------------------------------------------------------
+
 See Figure XXXX for a schematic of the filter layers.
 
 .. image:: Images/figure_flow_distribution_estars.PNG
@@ -166,11 +171,78 @@ Using the maximum flow in a trunk and the number of branches on a trunk the maxi
 
     Q_{FiBranchMax} = \frac{2Q_{FiLayer}}{2N_{FiBranch}}
 
-Using the ND of the Filter Manifold Branches, as defined above, the flow area of a branch can be calculated:
+Using the ND of the Filter Manifold Branches, as defined above, the minimum flow area of a branch can be calculated:
 
 .. math::
 
-  A_{FiBranch} = \frac{ID_{FiBranch}}
+  A_{FiBranchMin} = \frac{ID_{FiBranch}^2 *\pi}{4}
+
+
+Knowing the area allows the velocity within a branch to be found.
+
+.. math::
+
+  V_{FiBranchEst} = \frac{Q_{FiBranchMax}}{A_{FiBranchMin}}
+
+From the velocity the pressure recovery term can be determined, this equation comes from the definition of pressure recovery:
+
+.. math::
+
+  PR_{FiManBranchEst} = \frac{V_{FiBranchEst}^2}{2g}
+
+:note: Have i descirbed pressure recovert yet in this section! or does it need to be described here?
+
+A similar series of calcualtions can be done for the backwash branches based on :math:`Q_{FiBw}`:
+
+.. math::
+
+  Q_{FiBwBranchMax} = \frac{Q_{FiBw}}{2N_{FiBranch}}
+
+  A_{FiBwBranchMin} = \frac{ID_{FwBwBranch}^2 *\pi}{4}
+
+  V_{FiBwBranchEst} = \frac{Q_{FiBwBranchMax}}{A_{FiBwBranchMin}}
+
+  PR_{FiBwManBranchEst} = \frac{V_{FiBwBranchEst}^2}{2g}
+
+
+The two pressure recovery terms calculated here are compared against the allowable PR terms.
+
+
+Pressure Recovery in Trunks during forwasrd filtration
+---------------------------------------------------------
+
+The total allowable pressure recovery of the filter manifold is controlled by the headloss in each sand layer and the headloss ratio, :math:`\Pi_{ManifoldHeadLoss}`, as defined above in "Flow Distrbution Constraints".
+
+The head loss through the sand layer, :math:`HL_{FiCleanLayerMin}` is a fuction of layer depth, :math:`H_{FiLayer}` and overall velocity of the filter , :math:`\frac{Q_{FiLayer}}{A_{Fi}}`, using the Kozeny Equation (**link Kozeny**).
+
+Using the definition of the pressure recovery ratio, the maximum allowable pressure recovery in the filter manifold can be calculated:
+
+.. math::
+
+  PR_{FiMax} = HL_{FiCleanLayerMin}*\Pi_{ManifoldHeadLoss}
+
+
+Subtracting the previously calculated branch PR from this maximum determine how much PR 'is left' for the trunks. The maximum trunk PR can then be calculated back to a velocity.
+
+.. math::
+
+  PR_{TrunkEst} = PR_{FiMax} - PR_{FiBwManBranchEst}
+
+  V_{FiTrunkMaxPR} = \sqrt{2g*PR_{TrunkEst}}
+
+
+The velocity is important because it, along with the known flow rate throug the trunk are used to find a theoretical area for the flow. This area sets and ideal ID for a trunk pipe. Using the pipe database allows a search for the closest match.
+
+.. math::
+
+  ID_{TrunkIdeal} = \sqrt{\frac{4*\frac{2*Q_{FiLayer}}{{V_{FiTrunkMaxPR}}}}   {\pi}}
+
+In the pipe database the nearest, larger, pipe size is chosen for SDR 26. The associated ND is compared with :math:`ND_{FiTrunkMinLow}, whichever is larger is chosen as :math:`ND_{FiTrunk}`
+
+Pressure Recovery in lowest trunk during backwash
+----------------------------------------------------------------
+
+
 
 Manifold Pipe Lengths
 ======================
