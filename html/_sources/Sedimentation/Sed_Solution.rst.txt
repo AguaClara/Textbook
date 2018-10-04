@@ -7,55 +7,19 @@ DC Sedimentation
     from aide_design import floc_model as floc
     from pytexit import py2tex
 
-    #Below are the items that were imported by the code above so that you know what abbreviations to use in your code.
-
-    # Third-party imports
-    #import numpy as np
-    #import pandas as pd
-    #import matplotlib.pyplot as plt
-    #import matplotlib
-
-    # AIDE imports
-    #import aide_design
-    #import aide_design.pipedatabase as pipe
-    #from aide_design.units import unit_registry as u
-    #from aide_design import physchem as pc
-    #import aide_design.expert_inputs as exp
-    #import aide_design.materials_database as mat
-    #import aide_design.utility as ut
-    #import aide_design.k_value_of_reductions_utility as k
-    #import aide_design.pipeline_utility as pipeline
-    #import warnings
 
 Introduction
 ============
 
-The AguaClara team would like to understand how to design larger
-sedimentation tanks. In this design challenge you will learn how some of
-the sedimentation tank components work together. The design for an
-entire sedimentation tank is somewhat complex and you are welcome to
-review the sedimentation tank design file to see the latest AguaClara
-design team solution. The sedimentation tank design has evolved rapidly
-over the past 10 years and our fabrication techniques have evolved as
-well.
+The AguaClara team would like to understand how to design larger sedimentation tanks. In this design challenge you will learn how some of the sedimentation tank components work together. The design for an entire sedimentation tank is somewhat complex and you are welcome to review the sedimentation tank design file to see the latest AguaClara design team solution. The sedimentation tank design has evolved rapidly over the past 10 years and our fabrication techniques have evolved as well.
 
-In AguaClara sedimentation tanks the influent and effluent channels are
-located above the space occupied by the floc hopper. If you want to see
-how those geometric constraints are handled you can review the AguaClara
-sedimentation tank design file. AguaClara is currently working with Agua
-Para el Pueblo on a 120 L/s plant for Gracias. This plant would have 2
-treatment trains and thus we can design for 60 L/s. For this design
-challenge you may assume the following:
+In AguaClara sedimentation tanks the influent and effluent channels are located above the space occupied by the floc hopper. If you want to see how those geometric constraints are handled you can review the AguaClara sedimentation tank design file. AguaClara is currently working with Agua Para el Pueblo on a 120 L/s plant for Gracias. This plant would have 2 treatment trains and thus we can design for 60 L/s. For this design challenge you may assume the following:
 
-For each step in the solution define a variable with a name that is
-easily understood so that it can be used later if needed. Consider using
-the AguaClara naming convention.
+For each step in the solution define a variable with a name that is easily understood so that it can be used later if needed. Consider using the AguaClara naming convention.
 
 Use numpy for ceil, floor, sin, and pi.
 
- The following cell has constants defined for you to use in designing
-your sedimentation tank. Read through and run it so you know what
-variables have been defined for you.
+ The following cell has constants defined for you to use in designing your sedimentation tank. Read through and run it so you know what variables have been defined for you.
 
 .. code:: python
 
@@ -111,18 +75,11 @@ Diffusers
 1:
 ~~
 
-We will start our design of the sedimentation tank by considering the
-diffusers.
+We will start our design of the sedimentation tank by considering the diffusers.
 
--  Calculate the maximum velocity of water leaving the diffuser based on
-   the maximum head loss. Assume that the majority of head loss is the
-   kinetic energy of the flow exiting the diffuser slot (this assumption
-   will be checked later). Assume K=1.
+-  Calculate the maximum velocity of water leaving the diffuser based on the maximum head loss. Assume that the majority of head loss is the kinetic energy of the flow exiting the diffuser slot (this assumption will be checked later). Assume K=1.
 
--  Calculate the minimum inner width of the diffuser. Assume that the
-   diffuser slot is continuous over the entire length of the
-   sedimentation tank to get an initial estimate (it isn’t actually
-   continuous because it is made from many flattened diffuser pipes).
+-  Calculate the minimum inner width of the diffuser. Assume that the diffuser slot is continuous over the entire length of the sedimentation tank to get an initial estimate (it isn’t actually continuous because it is made from many flattened diffuser pipes).
 
 Define your answers as variables and then print those variables.
 
@@ -141,23 +98,14 @@ Define your answers as variables and then print those variables.
     The maximum velocity of the sed tank diffusers is 0.4429 meter / second
     The minimum width of the sed tank diffusers is 2.409 millimeter
 
-.. _section-1:
-
 2:
 ~~
 
-Diffusers are made by deforming PVC pipe. Softened PVC pipe is forced
-onto a mold that shapes it into the rectangular shape of the diffuser
-(see slides from the Sedimentation Lecture).
+Diffusers are made by deforming PVC pipe. Softened PVC pipe is forced onto a mold that shapes it into the rectangular shape of the diffuser (see slides from the Sedimentation Lecture).
 
--  What metal plate thickness should be used to make the mold for the
-   diffusers? This value will be the minumum diffuser width. Metal
-   plates are available in 1/16" increments of thickness. The minimum
-   thickness of plate that is strong enough for a mold is 1/16“.
+-  What metal plate thickness should be used to make the mold for the diffusers? This value will be the minumum diffuser width. Metal plates are available in 1/16" increments of thickness. The minimum thickness of plate that is strong enough for a mold is 1/16“.
 
-Note: you can use the ``ceil_nearest`` function defined in
-``utility.py`` to do this elegantly. You can create an array of
-available metal plates using ``numpy.arange``.
+Note: you can use the ``ceil_nearest`` function defined in ``utility.py`` to do this elegantly. You can create an array of available metal plates using ``numpy.arange``.
 
 .. code:: python
 
@@ -172,21 +120,8 @@ available metal plates using ``numpy.arange``.
 Py2tex
 ------
 
-| Show your work for question 3 using pytexit’s py2tex. You will need to
-  `install
-  pytextit <https://confluence.cornell.edu/display/cee4540/Installing+Pytexit>`__
-  if you have not done that yet.
-| 1. Pytexit is a python package which contains Py2tex and: 1. Allows
-  you to write LaTeX formulas directly from the Python expression. 1.
-  Checks Python formulas for correctness: once printed, LaTeX is much
-  more readable than a multiline Python expression. 1. **Note:** Py2tex
-  does not handle references from aide_design files well (ex. pc.(),
-  floc.()) but will handle greek letters,numpy (ex. np.pi, np.sin), and
-  user defined variables and functions. 1. Simply enter your equation to
-  py2tex within ‘apostrophes’. 1. Because py2tex has difficulty with
-  user defined file references, **``py2tex('pc.flow_pipe')`` is not
-  okay, but ``py2tex('flow_pipe')`` is okay** 1. Follow the example
-  offered below.
+| Show your work for question 3 using pytexit’s py2tex. You will need to `install pytextit <https://confluence.cornell.edu/display/cee4540/Installing+Pytexit>`__  if you have not done that yet.
+| 1. Pytexit is a python package which contains Py2tex and: 1. Allows you to write LaTeX formulas directly from the Python expression. 1. Checks Python formulas for correctness: once printed, LaTeX is much more readable than a multiline Python expression. 1. **Note:** Py2tex does not handle references from aide_design files well (ex. pc.(), floc.()) but will handle greek letters,numpy (ex. np.pi, np.sin), and user defined variables and functions. 1. Simply enter your equation to py2tex within ‘apostrophes’. 1. Because py2tex has difficulty with user defined file references, **``py2tex('pc.flow_pipe')`` is not okay, but ``py2tex('flow_pipe')`` is okay** 1. Follow the example offered below.
 
 .. code:: python
 
@@ -205,32 +140,15 @@ Py2tex
 
     '$$Vel_{Tube,Max}=\\left(\\frac{2\\,\\Pi_{Error}\\,Headloss_{DosingTube,Max}\\,g}{K_{Minor}}\\right)^{\\frac{1}{2}}$$'
 
-.. _section-2:
-
 3:
 ~~
 
-The PVC pipe that forms the diffusers changes in shape and wall
-thickness during the molding process. The inner width of the rectangle
-is created by forcing the pipe over a rectangular wedge that is the
-thickness you calculated above. During the molding process, PVC pipe
-wall cross-sectional area is conserved. The pipe wall is stretched in
-total length approximately 20%. Another way to think about this is that
-the thickness of the wall is reduced by a factor of 1/1.2 because the
-mass of PVC is conserved and the density is unchanged. Thus, volume and
-cross-sectional area are conserved.
+The PVC pipe that forms the diffusers changes in shape and wall thickness during the molding process. The inner width of the rectangle is created by forcing the pipe over a rectangular wedge that is the thickness you calculated above. During the molding process, PVC pipe wall cross-sectional area is conserved. The pipe wall is stretched in total length approximately 20%. Another way to think about this is that the thickness of the wall is reduced by a factor of 1/1.2 because the mass of PVC is conserved and the density is unchanged. Thus, volume and cross-sectional area are conserved.
 
--  Start by drawing a picture of what is happening to the deformation of
-   the pipe as it is converted from the circular pipe to the rectangular
-   diffuer slot (assume that the slot is a rectangle with perfectly
-   square corners). You do not need to submit your sketches for this
-   design challenge.
+-  Start by drawing a picture of what is happening to the deformation of the pipe as it is converted from the circular pipe to the rectangular diffuer slot (assume that the slot is a rectangle with perfectly square corners). You do not need to submit your sketches for this design challenge.
 
-   -  Draw the initial circular pipe. Label the diagram with the
-      appropriate variables for inner diameter, outer diameter, and wall
-      thickness.
-   -  Draw the final rectangular diffuser slot. Label the diagram with
-      the appropriate variables for length, width, and wall thickness.
+   -  Draw the initial circular pipe. Label the diagram with the appropriate variables for inner diameter, outer diameter, and wall thickness.
+   -  Draw the final rectangular diffuser slot. Label the diagram with the appropriate variables for length, width, and wall thickness.
 
 Area is given using the following equation:
 
@@ -284,14 +202,10 @@ Answering this question will require using functions from the
     Sed diffuser outer length: 5.736 centimeter
     Sed diffuser inner length: 5.522 centimeter
 
-.. _section-3:
-
 4:
 ~~
 
-Each diffuser serves a certain width and length of the sedimentation
-tank. Assume that the diffusers are installed so that they touch each
-other.
+Each diffuser serves a certain width and length of the sedimentation tank. Assume that the diffusers are installed so that they touch each other.
 
 -  Determine the flow through each diffuser.
 -  Determine the velocity through each diffuser.
@@ -310,15 +224,12 @@ other.
     The flow of water leaving a sed tank diffuser is 61.19 milliliter / second
     The velocity of water leaving the sed tank diffuser is 0.349 meter / second
 
-.. _section-4:
-
 5:
 ~~
 
 What is the Reynolds number of the jet exiting the diffusers?
 
-Note: you will likely need to force Pint to display this as a
-dimensionless number.
+Note: you will likely need to force Pint to display this as a dimensionless number.
 
 .. code:: python
 
@@ -329,13 +240,10 @@ dimensionless number.
 
     The Reynolds number for this jet is 974.6 dimensionless
 
-.. _section-5:
-
 6:
 ~~
 
-What is the Reynolds number of the vertical flow up through the top of
-the floc blanket?
+What is the Reynolds number of the vertical flow up through the top of the floc blanket?
 
 .. code:: python
 
@@ -346,36 +254,20 @@ the floc blanket?
 
     Reynolds number through floc is 938.2 dimensionless
 
-.. _section-6:
-
 7:
 ~~
 
-Compare the two values for Reynolds numbers that you found for Problems
-5 and 6. What do the Reynolds numbers for these very different flows
-tell you?
+Compare the two values for Reynolds numbers that you found for Problems 5 and 6. What do the Reynolds numbers for these very different flows tell you?
 
-The Reynolds number is almost the same because mass conservation
-requires V*W to be a constant. The only difference in the Reynolds
-number is due to the fact that the plane jet isn’t quite continuous. It
-is broken by twice the thickness of the pipe wall between diffusers.
-
-.. _section-7:
+The Reynolds number is almost the same because mass conservation requires V*W to be a constant. The only difference in the Reynolds number is due to the fact that the plane jet isn’t quite continuous. It is broken by twice the thickness of the pipe wall between diffusers.
 
 8:
 ~~
 
-Next, we want to determine the energy dissipation rate for the flow
-leaving the jet reverser. For this process, you can assume that the jet
-remains laminar. The flow spreads to fill the gaps created by the walls
-of the diffuser tubes by the time it traverses the jet reverser. Jet
-velocity and flow rate are conserved as the jet changes direction in the
-jet reverser.
+Next, we want to determine the energy dissipation rate for the flow leaving the jet reverser. For this process, you can assume that the jet remains laminar. The flow spreads to fill the gaps created by the walls of the diffuser tubes by the time it traverses the jet reverser. Jet velocity and flow rate are conserved as the jet changes direction in the jet reverser.
 
--  Calculate the thickness of the jet after it does the 180 degree bend
-   of the jet reverser.
--  Calculate the energy dissipation rate for the flow leaving the jet
-   reverser.
+-  Calculate the thickness of the jet after it does the 180 degree bend of the jet reverser.
+-  Calculate the energy dissipation rate for the flow leaving the jet reverser.
 
 Convert your final answer to milliwatts per kilogram.
 
@@ -397,30 +289,18 @@ Convert your final answer to milliwatts per kilogram.
 
     The energy dissipation rate for inlet jet is 158.5 milliwatt / kilogram
 
-.. _section-8:
-
 9:
 ~~
 
-In desiging AguaClara plants, it is critical to account for all forms of
-significant head loss. In the sedimentation tank, effluent launders
-provide about 4 cm of head loss. We want to calculate the exit head loss
-for water leaving the diffusers to determine whether it is a significant
-addition to the total head loss through the sedimentation tank.
+In designing AguaClara plants, it is critical to account for all forms of significant head loss. In the sedimentation tank, effluent launders provide about 4 cm of head loss. We want to calculate the exit head loss for water leaving the diffusers to determine whether it is a significant addition to the total head loss through the sedimentation tank.
 
-Calculate this diffuser exit head loss in two ways. \* First, calculate
-the head loss making sure to account for the upflow velocity in the sed
-tank. \* Second, calculate the head loss but assume that the upflow
-velocity is negligible.
+Calculate this diffuser exit head loss in two ways. \* First, calculate the head loss making sure to account for the upflow velocity in the sed tank. \* Second, calculate the head loss but assume that the upflow velocity is negligible.
 
--  Is it reasonable to neglect the upflow velocity in the sed tank when
-   calculating this head loss?
+-  Is it reasonable to neglect the upflow velocity in the sed tank when calculating this head loss?
 
-.. math::  h_e = \frac{\left( {{V_{in}} - {V_{out}}} \right)^2}{2g} 
+.. math::  h_e = \frac{\left( {{V_{in}} - {V_{out}}} \right)^2}{2g}
 
-You will find that the exit head loss for water leaving the diffuser is
-high enough that we need to account for head loss in the sed tank inlet
-piping for our designs.
+You will find that the exit head loss for water leaving the diffuser is high enough that we need to account for head loss in the sed tank inlet piping for our designs.
 
 .. code:: python
 
@@ -443,18 +323,9 @@ piping for our designs.
 Manifold and Launders
 ---------------------
 
-Flow distribution between and within sedimentation tanks is an important
-design component to ensure good sedimentation performance. We need to
-distribute flow uniformly between sedimentation tanks and also between
-diffusers on the inlet manifolds.
+Flow distribution between and within sedimentation tanks is an important design component to ensure good sedimentation performance. We need to distribute flow uniformly between sedimentation tanks and also between diffusers on the inlet manifolds.
 
-The following variable definitions and equations will be useful in
-answering later questions. \* :math:`{hl}_{ParallelPath}` is the head
-loss (flow resistance) in the parallel paths leaving the manifold. The
-head loss in the parallel path is the total head loss from where the
-flow leaves the manifold to the point where the parallel flows reunite.
-\* :math:`\Delta{H}_{Manifold}` is the variability in piezometric head
-in the manifold that is driving the flow through the parallel paths.
+The following variable definitions and equations will be useful in answering later questions. \* :math:`{hl}_{ParallelPath}` is the head loss (flow resistance) in the parallel paths leaving the manifold. The head loss in the parallel path is the total head loss from where the flow leaves the manifold to the point where the parallel flows reunite. \* :math:`\Delta{H}_{Manifold}` is the variability in piezometric head in the manifold that is driving the flow through the parallel paths.
 
 -  The ratio of minimum (first diffuser port) to maximum (last diffuser
    port) flow is given by:
@@ -475,28 +346,19 @@ in the manifold that is driving the flow through the parallel paths.
 
 .. math:: \left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} = \frac{{{Velocity}_{Manifold}}^{2}}{4g}
 
-.. _section-9:
 
 10:
 ~~~
 
-Now, we want to find the maximum velocity for an inlet manifold which is
-dependent on the given flow distribution constraint,
+Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint,
 :math:`\Pi_{DiffuserFlow}`, and the head loss in the parallel paths,
 :math:`{hl}_{ParallelPath}`.
 
--  Determine the relationship between diffuser exit velocity and the
-   head loss in the parallel paths.
--  Determine an equation for maximum velocity for an inlet manifold in
-   terms of diffuser exit velocity and the flow distribution constraint.
--  Write a **function** for maximum velocity for an inlet manifold using
-   the equations you just found.
+-  Determine the relationship between diffuser exit velocity and the head loss in the parallel paths.
+-  Determine an equation for maximum velocity for an inlet manifold in terms of diffuser exit velocity and the flow distribution constraint.
+-  Write a **function** for maximum velocity for an inlet manifold using the equations you just found.
 
-Exit losses from the diffusers dominate the head loss because the
-velocity in the diffuser slots is much higher than the velocity at the
-entrance to the diffuser pipes. Using the insight from the previous
-problem, it is reasonable to neglect the effect of the upflow velocity
-when calculating the exit head loss for the manifold diffusers.
+Exit losses from the diffusers dominate the head loss because the velocity in the diffuser slots is much higher than the velocity at the entrance to the diffuser pipes. Using the insight from the previous problem, it is reasonable to neglect the effect of the upflow velocity when calculating the exit head loss for the manifold diffusers.
 
 .. code:: python
 
@@ -508,22 +370,13 @@ when calculating the exit head loss for the manifold diffusers.
                                               )
                                          ))
 
-.. _section-10:
-
 11:
 ~~~
 
-| Head loss in the sedimentation tank is impacted by multiple forms of
-  head loss, inlcuding head loss through the effluent launder and
-  diffusers. Head loss through the effluent launder is about 4 cm. You
-  found head loss through the diffusers in Problem 9.
-| \* Which form of head loss (effluent launder or diffuser) is in the
-  parallel path, :math:`{hl}_{ParallelPath}`?
+| Head loss in the sedimentation tank is impacted by multiple forms of head loss, including head loss through the effluent launder and diffusers. Head loss through the effluent launder is about 4 cm. You found head loss through the diffusers in Problem 9.
+| \* Which form of head loss (effluent launder or diffuser) is in the parallel path, :math:`{hl}_{ParallelPath}`?
 
-Use the function that you wrote for Problem 10 to calculate the maximum
-velocity in the inlet manifold of the sedimentation tank. \* Use the
-value for ``Pi_sed_manifold_flow`` given above. \* Use the diffuser exit
-velocity you found in Problem 4.
+Use the function that you wrote for Problem 10 to calculate the maximum velocity in the inlet manifold of the sedimentation tank. \* Use the value for ``Pi_sed_manifold_flow`` given above. \* Use the diffuser exit velocity you found in Problem 4.
 
 .. code:: python
 
@@ -538,22 +391,15 @@ velocity you found in Problem 4.
     Only the diffuser head loss is in the parallel paths.
     The maximum velocity in the sedimentation tank manifold is 0.2313 meter / second
 
-.. _section-11:
-
 12:
 ~~~
 
-The ratio of manifold pipe cross-sectional area to total diffuser
-cross-sectional area determines the flow distribution between diffusers.
+The ratio of manifold pipe cross-sectional area to total diffuser cross-sectional area determines the flow distribution between diffusers.
 
--  Calculate the ratio of manifold pipe cross-sectional area to total
-   diffuser cross-sectional area. You can use the velocities of the
-   manifold and the diffusers to calculate the areas.
--  What is the significance of the flow area ratio that you found? What
-   does it tell you about the relative areas?
+-  Calculate the ratio of manifold pipe cross-sectional area to total diffuser cross-sectional area. You can use the velocities of the manifold and the diffusers to calculate the areas.
+-  What is the significance of the flow area ratio that you found? What does it tell you about the relative areas?
 
-Note: the flow distribution will be more uniform if the diffuser
-velocity is higher than the manifold velocity.
+Note: the flow distribution will be more uniform if the diffuser velocity is higher than the manifold velocity.
 
 .. code:: python
 
@@ -565,15 +411,10 @@ velocity is higher than the manifold velocity.
     The flow area ratio of manifold pipe to diffusers is 1.509 dimensionless
     This means that the manifold flow area is larger than the total diffuser area.
 
-.. _section-12:
-
 13:
 ~~~
 
-The maximum sed tank flow rate is currently set by the constraint of
-using a single length of pipe for the manifold and launder. The maximum
-length of the upflow region of the sedimentation tank is 5.8 m, as given
-below. \* What is the corresponding sedimentation tank flow rate?
+The maximum sed tank flow rate is currently set by the constraint of using a single length of pipe for the manifold and launder. The maximum length of the upflow region of the sedimentation tank is 5.8 m, as given below. \* What is the corresponding sedimentation tank flow rate?
 
 .. code:: python
 
@@ -588,18 +429,14 @@ below. \* What is the corresponding sedimentation tank flow rate?
 
     The maximum flow rate in one sedimentation tank is 6.187 liter / second
 
-.. _section-13:
 
 14:
 ~~~
 
-The maximum sed tank flow rate dictates the required pipe diameter for
-the manifold and launder.
+The maximum sed tank flow rate dictates the required pipe diameter for the manifold and launder.
 
--  What is the minimum inner diameter of the sedimentation tank
-   manifold?
--  What is the required nominal pipe diameter given this flow rate? Use
-   the ``pipe.ND_SDR_available`` function.
+-  What is the minimum inner diameter of the sedimentation tank manifold?
+-  What is the required nominal pipe diameter given this flow rate? Use the ``pipe.ND_SDR_available`` function.
 
 SDR is the same as given in Problem 3 (SDR = 26).
 
@@ -620,14 +457,10 @@ SDR is the same as given in Problem 3 (SDR = 26).
 Sedimentation Tank Bays and Number of Diffusers
 -----------------------------------------------
 
-.. _section-14:
-
 15:
 ~~~
 
-What is the total required plan area for the sedimentation tanks?
-Calculate this using the design flow rate and the upflow velocity
-between the floc blanket and plate settlers.
+What is the total required plan area for the sedimentation tanks? Calculate this using the design flow rate and the upflow velocity between the floc blanket and plate settlers.
 
 Give your final answer in square meters.
 
@@ -641,17 +474,13 @@ Give your final answer in square meters.
 
     The plant view area of the floc blanket is 60 meter ** 2
 
-.. _section-15:
 
 16:
 ~~~
 
-What is the total length of the floc blanket zone for all tanks?
-Calculate this using the total required plan area for the sedimentation
-tank and the sedimentation tank width.
+What is the total length of the floc blanket zone for all tanks? Calculate this using the total required plan area for the sedimentation tank and the sedimentation tank width.
 
-This total length will enable you to calculate how many sed tanks are
-required.
+This total length will enable you to calculate how many sed tanks are required.
 
 .. code:: python
 
@@ -663,15 +492,11 @@ required.
 
     56.24 meter
 
-.. _section-16:
 
 17:
 ~~~
 
-How many sedimentation tanks are required to treat the total plant flow?
-Calculate this using the the total plant flow rate and the maximum sed
-tank flow rate. The plant flow rate is the basis of design and the
-maximum sed tank flow rate is based on the manifold diameter.
+How many sedimentation tanks are required to treat the total plant flow? Calculate this using the the total plant flow rate and the maximum sed tank flow rate. The plant flow rate is the basis of design and the maximum sed tank flow rate is based on the manifold diameter.
 
 Your answer should be an integer value.
 
@@ -685,13 +510,10 @@ Your answer should be an integer value.
 
     The required number of sedimentation tanks is 10
 
-.. _section-17:
-
 18:
 ~~~
 
-How much water (in L/s) can all of the sedimentation tanks for the plant
-treat? Assume that all tanks have been built to maximum length.
+How much water (in L/s) can all of the sedimentation tanks for the plant treat? Assume that all tanks have been built to maximum length.
 
 .. code:: python
 
@@ -703,14 +525,10 @@ treat? Assume that all tanks have been built to maximum length.
 
     61.87 liter / second
 
-.. _section-18:
-
 19:
 ~~~
 
-How many diffusers are required in each tank? Assume the maximum length
-of the upflow region of the sedimentation tank is used. Use the
-``np.floor`` function to round down to an integer value.
+How many diffusers are required in each tank? Assume the maximum length of the upflow region of the sedimentation tank is used. Use the ``np.floor`` function to round down to an integer value.
 
 .. code:: python
 
@@ -725,20 +543,13 @@ of the upflow region of the sedimentation tank is used. Use the
 Plate Settlers
 --------------
 
-You may assume that the active area of the sedimentation tank is equal
-to the top area of the floc blanket zone. This isn’t quite right because
-of the geometric constraints from the floc hopper, inlet channel,
-settled water channel, and angled plates. However, it is a good
-approximation for these long tanks. We will use this approximation to
-determine the plate settler details.
+You may assume that the active area of the sedimentation tank is equal to the top area of the floc blanket zone. This isn’t quite right because of the geometric constraints from the floc hopper, inlet channel, settled water channel, and angled plates. However, it is a good approximation for these long tanks. We will use this approximation to determine the plate settler details.
 
-.. _section-19:
 
 20:
 ~~~
 
-What is the required length of the plate settlers? Do not neglect the
-thickness of the plate settlers.
+What is the required length of the plate settlers? Do not neglect the thickness of the plate settlers.
 
 .. code:: python
 
@@ -752,8 +563,6 @@ thickness of the plate settlers.
 ::
 
     The minimum length of the plate settlers is 0.4619 meter
-
-.. _section-20:
 
 21:
 ~~~
@@ -771,15 +580,10 @@ What is the horizontal spacing (center to center) of the plate settlers?
 
     The horizontal center to center spacing of the plate settlers is 3.118 centimeter
 
-.. _section-21:
-
 22:
 ~~~
 
-Approximately how many plate settlers spaces are needed in each
-sedimentation tank? Assume the maximum length of the upflow region of
-the sedimentation tank is used. Neglect the lost space at the end of the
-sedimentation tank due to the angle of the plate settlers.
+Approximately how many plate settlers spaces are needed in each sedimentation tank? Assume the maximum length of the upflow region of the sedimentation tank is used. Neglect the lost space at the end of the sedimentation tank due to the angle of the plate settlers.
 
 Round your answer to the closest integer value.
 
@@ -792,13 +596,4 @@ Round your answer to the closest integer value.
 
     The number of plate settlers per sedimentation tank is 180
 
-Congratulations on making it this far! Although we haven’t designed
-every component in the sedimentation tank, you have a good idea of the
-analysis that is required for systematic parametric design. We have not
-covered the topics of the inlet channel, the launder that removes clean
-water from the top of the sedimentation tank, the floc weir or floc
-hopper, or the system of equations used to calculate the final depth of
-the sedimentation tank. The detailed design required to create a
-high-performing sedimentation tank is sophisticated, complicated, and if
-you are successful the resulting sedimentation tank is high-performing
-and easy to maintain!
+Congratulations on making it this far! Although we haven’t designed every component in the sedimentation tank, you have a good idea of the analysis that is required for systematic parametric design. We have not covered the topics of the inlet channel, the launder that removes clean water from the top of the sedimentation tank, the floc weir or floc hopper, or the system of equations used to calculate the final depth of the sedimentation tank. The detailed design required to create a high-performing sedimentation tank is sophisticated, complicated, and if you are successful the resulting sedimentation tank is high-performing and easy to maintain!

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>DC Mechanical Flocculation Solution &mdash; AguaClara Textbook  documentation</title>
+  <title>Fractal Flocculation Model &mdash; AguaClara Textbook  documentation</title>
   
 
   
@@ -196,7 +196,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>DC Mechanical Flocculation Solution</li>
+      <li>Fractal Flocculation Model</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -215,438 +215,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="kn">from</span> <span class="nn">aide_design</span> <span class="k">import</span> <span class="n">physchem</span> <span class="k">as</span> <span class="n">pc</span>
-
-<span class="kn">from</span> <span class="nn">aide_design.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-
-<span class="kn">from</span> <span class="nn">aide_design</span> <span class="k">import</span> <span class="n">utility</span> <span class="k">as</span> <span class="n">ut</span>
-
+  <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
 <span class="kn">from</span> <span class="nn">aide_design</span> <span class="k">import</span> <span class="n">floc_model</span> <span class="k">as</span> <span class="n">floc</span>
 </pre></div>
 </div>
-<div class="section" id="dc-mechanical-flocculation-solution">
-<h1>DC Mechanical Flocculation Solution<a class="headerlink" href="#dc-mechanical-flocculation-solution" title="Permalink to this headline">¶</a></h1>
-<div class="line-block">
-<div class="line">In this design challenge, you will design a mechanical flocculator and
-power unit. You will use a flow rate of 50 L/s as your default design
-value. The coldest temperature that the raw water is expected to have
-is 10°C.</div>
-<div class="line">You will also play with fractal flocculation model equations to get a
-sense of how fast flocs can aggregate. You will also explore the floc
-model predictions.</div>
-</div>
-<p>As you define variables, take care not to redefine parameters. One trick
-is to use a unique name for variables that are estimates. We often add
-“est” to any variable names that aren’t the final values.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> file contains many useful functions which includes
-clay, coagulant and humic acid material properties, fractal model
-equations, and flocculation model equations. <strong>We recommend that you
-open the ``floc_model.py`` and have it side by side with this design
-challenge for easy reference.</strong></p>
-<div class="alert alert-block alert-info"><p>The course slides found on the syllabus will be very useful for
-obtaining and understanding relevant equations for this design challenge
-and ones in the future.</p>
-<div class="section" id="conventional-design-guidelines">
-<h2>Conventional Design Guidelines:<a class="headerlink" href="#conventional-design-guidelines" title="Permalink to this headline">¶</a></h2>
-<p>This table for mechanical flocculators is taken from Sincero and
-Sincero’s 1996 textbook: <em>Environmental Engineering: A Design Approach</em></p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Velocity
-Gradient
-(G) (1/s)</th>
-<th class="head">Energy
-Dissipation
-Rate</th>
-<th class="head">Gt</th>
-<th class="head">t (min)</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Low
-turbidity,
-color
-removal</td>
-<td>20-70</td>
-<td>0.4 - 4.9</td>
-<td>50,000 -
-250,000</td>
-<td>11 - 210</td>
-</tr>
-<tr class="row-odd"><td>High
-turbidity,
-solids
-removal</td>
-<td>70 - 180</td>
-<td>4.9 - 32</td>
-<td>80,000 -
-190,000</td>
-<td>7 - 45</td>
-</tr>
-</tbody>
-</table>
-<p>Dissolved organic matter impacts the color of the water. Perhaps the
-reason for lower G values for color removal is because flocs created
-from dissolved organic matter are weaker or less dense. Hence, a lower G
-is needed to allow them to grow large enough for removal in the
-sedimentation tank.</p>
-</div>
-<div class="section" id="mechanical-flocculator-design">
-<h2>Mechanical Flocculator Design:<a class="headerlink" href="#mechanical-flocculator-design" title="Permalink to this headline">¶</a></h2>
-<p>The conventional design guidelines provide a range of values with little
-guidance on how to select “velocity gradient” or G values. One approach
-is to hope for the best and choose a G value in the middle of the range.
-We will pick the G value that is apparently appropriate for both low and
-high turbidity waters.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flow_plant</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">G_mech</span> <span class="o">=</span> <span class="mi">70</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">temp_design</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
-</pre></div>
-</div>
-<div class="section" id="id1">
-<h3>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>The <a class="reference external" href="http://10statesstandards.com/">Ten State Standards</a> (with the
-hilarious acronym GLUMRB) requires the residence time in a mechanical
-flocculator to be 30 minutes. What is the value of Gt if you use the
-velocity gradient given above as <code class="docutils literal notranslate"><span class="pre">G_mech</span></code>?</p>
-<p>Note: <code class="docutils literal notranslate"><span class="pre">.to(u.dimensionless)</span></code> ensures you don’t get weird dimensions
-like kilometer/inch or minute/second for dimensionless parameters.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="n">time_mech</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">min</span>
-<span class="n">Gtime_mech</span><span class="o">=</span> <span class="p">(</span><span class="n">G_mech</span> <span class="o">*</span> <span class="n">time_mech</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Gt is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">Gtime_mech</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">Gt</span> <span class="ow">is</span> <span class="mi">126000</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="section-1">
-<span id="id2"></span><h3>2)<a class="headerlink" href="#section-1" title="Permalink to this headline">¶</a></h3>
-<p>Calculate the equivalent average energy dissipation rate (in mW/kg) for
-the given velocity gradient at the design temperature.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="n">ed_rate_mech_ave</span> <span class="o">=</span> <span class="p">(</span><span class="n">G_mech</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">temp_design</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">)</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The equivalent average energy dissipation rate is&#39;</span> <span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">ed_rate_mech_ave</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">equivalent</span> <span class="n">average</span> <span class="n">energy</span> <span class="n">dissipation</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">6.4</span> <span class="n">mW</span><span class="o">/</span><span class="n">kg</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="section-2">
-<span id="id3"></span><h3>3)<a class="headerlink" href="#section-2" title="Permalink to this headline">¶</a></h3>
-<p>Create a function to calculate the power requirement for mechanical
-flocculators. Then, use your function to obtain the power requirement
-for the design temperature. The equation for power is the same one that
-we used for mechanical rapid mix units.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="k">def</span> <span class="nf">power_floc_shaft</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">temp</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">G</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">Q</span> <span class="o">*</span> <span class="n">t</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_dynamic</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kW</span><span class="p">)</span>
-<span class="n">power_mech_floc</span> <span class="o">=</span> <span class="n">power_floc_shaft</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">G_mech</span><span class="p">,</span><span class="n">time_mech</span><span class="p">,</span><span class="n">temp_design</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The power requirement is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">power_mech_floc</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">power</span> <span class="n">requirement</span> <span class="ow">is</span> <span class="mf">0.57</span> <span class="n">kW</span>
-</pre></div>
-</div>
-<p>Fun Fact: although the design guidelines would logically predict that
-the power requirements are higher for cold water, there is little
-evidence that mechanical flocculator plants actually increase the power
-input to their flocculators when the water is cold.</p>
-</div>
-<div class="section" id="section-3">
-<span id="id4"></span><h3>4)<a class="headerlink" href="#section-3" title="Permalink to this headline">¶</a></h3>
-<p>We hypothesize that the ** <em>maximum</em> ** energy dissipation rate in a
-flocculator determines the size of the flocs, and those flocs may or may
-not be captured by the sedimentation tank. Sedimentation tank
-performance will deteriorate if the maximum energy dissipation rate
-results in flocs that are so small that their sedimentation velocity is
-lower than the capture velocity of the sedimentation tank. This occurs
-for very high maximum energy dissipation rates. Mechanical flocculators
-have traditionally been designed without insight into the variability of
-the energy dissipation rate and the need to keep the maximum energy
-dissipation rate low enough to prevent the creation of flocs that will
-avoid capture by the sedimentation tanks. At the same time, the
-traditional standards likely evolved to produce designs that were at
-least reasonable even in the absence of an understanding of the fluid
-mechanics of the mixing process.</p>
-<p>According to the Ten State Standards, “Agitators (Flocculators) shall be
-driven by variable speed drives with the peripheral speed of paddles
-ranging from 0.5 to 3.0 feet per second.” Note that they do not specify
-the size of the propeller and yet that is a critical dimension that
-determines the energy dissipation rate in the wake of the spinning
-propeller.</p>
-<div class="line-block">
-<div class="line">The wake behind the propeller or paddle is similar in size to the
-small dimension of the propeller or paddle normal to the velocity.
-Thus we can use the propeller height to estimate the energy
-dissipation rate of the plate wake. The relative velocity between the
-wake and the surrounding fluid is approximately equal to the propeller
-velocity.</div>
-<div class="line">- Calculate the maximum energy dissipation rate that occurs in the
-wake behind the tip of a propeller which has a height of 3 cm and is
-moving at 3 ft/s. In this case, assume that the plate ratio for the
-maximum energy dissipation rate in the wake, <span class="math notranslate nohighlight">\(\Pi_{Plate}\)</span>, is
-0.34.</div>
-</div>
-<div class="math notranslate nohighlight" id="equation-flocculation-floc-model-solution-0">
-<span class="eqno">()<a class="headerlink" href="#equation-flocculation-floc-model-solution-0" title="Permalink to this equation">¶</a></span>\[\epsilon=\frac{\left ( \Pi_{Plate}V  \right )^{3}}{W_{Plate}}\]</div>
-<p>You may assume that the relative velocity between propeller and water is
-equal to 75% of the propeller velocity.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="n">ratio_prop_vel</span> <span class="o">=</span> <span class="mf">0.75</span>
-<span class="n">pi_plate</span> <span class="o">=</span> <span class="mf">0.34</span>
-<span class="n">vel_prop</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">ft</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">height_prop</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
-
-<span class="n">ed_rate_prop_max</span> <span class="o">=</span> <span class="p">((</span><span class="n">ratio_prop_vel</span> <span class="o">*</span> <span class="n">pi_plate</span> <span class="o">*</span> <span class="n">vel_prop</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="n">height_prop</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The maximum energy dissipation rate behind the propeller tip is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">ed_rate_prop_max</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">maximum</span> <span class="n">energy</span> <span class="n">dissipation</span> <span class="n">rate</span> <span class="n">behind</span> <span class="n">the</span> <span class="n">propeller</span> <span class="n">tip</span> <span class="ow">is</span> <span class="mi">423</span> <span class="n">mW</span><span class="o">/</span><span class="n">kg</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="section-4">
-<span id="id5"></span><h3>5)<a class="headerlink" href="#section-4" title="Permalink to this headline">¶</a></h3>
-<p>Calculate the ratio of maximum to average energy dissipation rate
-(henceforth referred to as Max/Ave EDR) and the ratio of maximum to
-average velocity gradient (Max/Ave G) for the mechanical flocculator
-described above. What is the relationship between the two ratios?</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="n">ed_rate_mech_ratio</span> <span class="o">=</span> <span class="n">ed_rate_prop_max</span> <span class="o">/</span> <span class="n">ed_rate_mech_ave</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The ratio of maximum to average energy dissipation rate is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">ed_rate_mech_ratio</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-
-<span class="n">G_mech_ratio</span> <span class="o">=</span> <span class="n">ed_rate_mech_ratio</span><span class="o">**</span><span class="mf">0.5</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The ratio of maximum to average velocity gradient is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">G_mech_ratio</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">ratio</span> <span class="n">of</span> <span class="n">maximum</span> <span class="n">to</span> <span class="n">average</span> <span class="n">energy</span> <span class="n">dissipation</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">66.3</span>
-<span class="n">The</span> <span class="n">ratio</span> <span class="n">of</span> <span class="n">maximum</span> <span class="n">to</span> <span class="n">average</span> <span class="n">velocity</span> <span class="n">gradient</span> <span class="ow">is</span> <span class="mf">8.15</span>
-</pre></div>
-</div>
-<p>SOLUTION NOTE: this information is found on extra slide 48 in the
-Flocculator Design slids, heading is “Results of the the CFD analysis
-and our model equations.”</p>
-<div class="line-block">
-<div class="line">High ratios of Max/Ave for velocity gradients (and therefore also
-energy dissipation rates) are common in both mechanical and hydraulic
-flocculators. A high velocity gradient ratio is a poor design for two
-reasons. - This high Max/Ave G results in significant inefficiency in
-the use of energy for flocculation. This inefficiency requires longer
-residence times and/or more energy input to achieve the same extent of
-flocculation.</div>
-<div class="line">- The high energy dissipation rate in the propeller wake limits the
-amount of energy that can be dissipated without causing excessive floc
-breakup. Excessive floc breakup produces flocs that are too small to
-be captured by the sedimentation tank.</div>
-</div>
-<p>We hypothesize that the maximum G values specified for mechanical
-flocculators were likely set by the constraint of not breaking flocs
-into small sizes. Sedimentation velocity needs to be less than capture
-velocity for a floc to settle - the smallest floc that will settle is
-referred to as the threshold floc because that is the smallest size we
-want to make. Because well-designed hydraulic flocculators have more
-uniform shear rates (as compared to mechanical flocculators), hydraulic
-flocculators are less likely to break up flocs. Therefore, the average G
-values specified for mechanical flocculators are not expected to apply
-to well designed hydraulic flocculators.</p>
-<p>The high energy dissipation rates at the tip of a propeller in a
-flocculator may be high enough to create flocs that are too small to be
-captured by the sedimentation tanks. We will determine if the
-sedimentation tank could capture these flocs in the analysis below.</p>
-<p>These results also suggest that the traditional emphasis on maintaining
-the same or lesser G value for the transport of flocculated water to the
-sedimentation tank may have missed the more important point of not
-exceeding a value of G that produces flocs that are too small to be
-captured by the sedimentation tank.</p>
-</div>
-<div class="section" id="section-5">
-<span id="id6"></span><h3>6)<a class="headerlink" href="#section-5" title="Permalink to this headline">¶</a></h3>
-<p>A mechanical flocculator is treating high turbidity water, and therefore
-is using an * <strong>average</strong> * G value of 180 Hz.</p>
-<p>If the design guidelines for maximum G for mechanical flocculators are
-correct and are based on floc breakup, then what is the largest * **
-average** * G that could be used for a well designed hydraulic
-flocculator with a Max/Ave G of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>?</p>
-<p>Note: important distinctions to make are: - maximum G vs average G -
-mechanical vs hydraulic flocculators. Conceptual thought coupled with
-pencil and paper are recommended.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="n">G_hyd_ratio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">G_mech_ave_max</span> <span class="o">=</span> <span class="mi">180</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Hz</span>
-<span class="n">G_hyd_ave_max</span> <span class="o">=</span> <span class="n">G_mech_ave_max</span> <span class="o">*</span> <span class="p">(</span><span class="n">G_mech_ratio</span><span class="o">/</span><span class="n">G_hyd_ratio</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The maximum G for hydraulic flocculators is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">G_hyd_ave_max</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">maximum</span> <span class="n">G</span> <span class="k">for</span> <span class="n">hydraulic</span> <span class="n">flocculators</span> <span class="ow">is</span> <span class="mi">1037</span> <span class="n">Hz</span>
-</pre></div>
-</div>
-<p>These extremely high average G values are more like traditional rapid
-mix. It is possible that energy use constraints (too much elevation
-difference required to power the flocculation) will prevent use of such
-high G values. It is also possible that these G values would cause
-excessive floc break up even though they appear to meet conventional
-standards.</p>
-</div>
-<div class="section" id="section-6">
-<span id="id7"></span><h3>7)<a class="headerlink" href="#section-6" title="Permalink to this headline">¶</a></h3>
-<p>How much energy in Joules per liter would be required to treat the water
-using this mechanical flocculator?</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="k">def</span> <span class="nf">energy_mech</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">temp</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">power_floc_shaft</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span> <span class="o">/</span> <span class="n">Q</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">J</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The energy required using the mechanical flocculator is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">energy_mech</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">G_mech</span><span class="p">,</span><span class="n">time_mech</span><span class="p">,</span><span class="n">temp_design</span><span class="p">),</span><span class="mi">3</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">energy</span> <span class="n">required</span> <span class="n">using</span> <span class="n">the</span> <span class="n">mechanical</span> <span class="n">flocculator</span> <span class="ow">is</span> <span class="mf">11.5</span> <span class="n">J</span><span class="o">/</span><span class="n">l</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="section-7">
-<span id="id8"></span><h3>8)<a class="headerlink" href="#section-7" title="Permalink to this headline">¶</a></h3>
-<p>How much does the electricity cost to flocculate a million liters? It
-isn’t necessary to actually size an electric motor for this assignment.
-Simply use the shaft power and assume a motor efficiency of 80%. Use the
-price of electricity that you obtained in the Rapid Mix design
-challenge. Hard code this price as a variable.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="n">efficiency_motor</span> <span class="o">=</span> <span class="mf">0.8</span>
-<span class="n">electricity_rate</span> <span class="o">=</span> <span class="p">((</span><span class="mf">0.146</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">USD</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kW</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">hr</span><span class="p">))</span>
-
-
-<span class="n">electricity_cost_mech</span> <span class="o">=</span> <span class="p">(</span><span class="n">electricity_rate</span> <span class="o">*</span> <span class="n">energy_mech</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">G_mech</span><span class="p">,</span><span class="n">time_mech</span><span class="p">,</span><span class="n">temp_design</span><span class="p">)</span> <span class="o">/</span> <span class="n">efficiency_motor</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">USD</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">ML</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The cost of electricity for mechanical flocculation is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">electricity_cost_mech</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">cost</span> <span class="n">of</span> <span class="n">electricity</span> <span class="k">for</span> <span class="n">mechanical</span> <span class="n">flocculation</span> <span class="ow">is</span> <span class="mf">0.58</span> <span class="n">USD</span><span class="o">/</span><span class="n">Ml</span>
-</pre></div>
-</div>
-<p>It doesn’t actually cost very much to flocculate water using
-electricity. We will create cost savings over mechanical flocculators by
-designing smaller, higher performing flocculators that don’t require any
-moving parts and thus don’t require much maintenance. Our capital costs
-will also be lower because we use more efficient plug flow reactors to
-prevent short circuiting of particles through the flocculator.</p>
-</div>
-<div class="section" id="section-8">
-<span id="id9"></span><h3>9)<a class="headerlink" href="#section-8" title="Permalink to this headline">¶</a></h3>
-<p>What is the equivalent amount of potential energy that is used to
-operate this mechanical flocculator (the shaft power) expressed as an
-elevation drop in meters?</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="n">delta_height</span> <span class="o">=</span> <span class="p">(</span><span class="n">power_floc_shaft</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">G_mech</span><span class="p">,</span><span class="n">time_mech</span><span class="p">,</span><span class="n">temp_design</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">flow_plant</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">temp_design</span><span class="p">)</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">gravity</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The equivalent amount of potential energy to run this  mechanical flocculator is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">delta_height</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">power_floc_shaft</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">G_mech</span><span class="p">,</span><span class="n">time_mech</span><span class="p">,</span><span class="n">temp_design</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">equivalent</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">potential</span> <span class="n">energy</span> <span class="n">to</span> <span class="n">run</span> <span class="n">this</span>  <span class="n">mechanical</span> <span class="n">flocculator</span> <span class="ow">is</span> <span class="mf">1.17</span> <span class="n">m</span>
-<span class="mf">0.5730957660614814</span> <span class="n">kilowatt</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="section-9">
-<span id="id10"></span><h3>10)<a class="headerlink" href="#section-9" title="Permalink to this headline">¶</a></h3>
-<p>What is the required reactor volume for the mechanical flocculator?</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="n">vol_mech</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_mech</span> <span class="o">*</span> <span class="n">flow_plant</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The required reactor volume for the mechanical flocculator is&#39;</span><span class="p">,</span> <span class="n">vol_mech</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">required</span> <span class="n">reactor</span> <span class="n">volume</span> <span class="k">for</span> <span class="n">the</span> <span class="n">mechanical</span> <span class="n">flocculator</span> <span class="ow">is</span> <span class="mf">90.0</span> <span class="n">meter</span> <span class="o">**</span> <span class="mi">3</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="section-10">
-<span id="id11"></span><h3>11)<a class="headerlink" href="#section-10" title="Permalink to this headline">¶</a></h3>
-<p>If this flocculator is 4 m deep, then how many square meters of plan
-view area are required per L/s of flow capacity? This is a measure of
-required size of this unit process. For comparison, an AguaClara
-sedimentation tank requires about <span class="math notranslate nohighlight">\(\frac{1m^{2}}{L/s}\)</span> and are
-only 2 m deep.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="n">depth_mech</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
-<span class="n">area_mech</span> <span class="o">=</span> <span class="p">(</span><span class="n">vol_mech</span> <span class="o">/</span> <span class="p">(</span><span class="n">depth_mech</span> <span class="o">*</span> <span class="n">flow_plant</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The required plan view area is&#39;</span><span class="p">,</span> <span class="n">area_mech</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">required</span> <span class="n">plan</span> <span class="n">view</span> <span class="n">area</span> <span class="ow">is</span> <span class="mf">0.45</span> <span class="n">meter</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">second</span> <span class="o">/</span> <span class="n">liter</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="section" id="fractal-flocculation-model">
-<h2>Fractal Flocculation Model<a class="headerlink" href="#fractal-flocculation-model" title="Permalink to this headline">¶</a></h2>
-<p>Many of the fractal floc equations are available in the
-<code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> file in the aide_design repository. You will need to
-look through that code to see what functions are available. The
-following constants are defined in that file. NTU has been defined as an
-approximate empirical relationship between the concentration of kaolin
-clay and the turbidity, such that 1 NTU is equivalent to 1.7 mg/L. The
-diameter of a primary clay particle is assumed to be 7 micrometers. The
-fractal dimension for flocs is defined as <code class="docutils literal notranslate"><span class="pre">DIAM_FRACTAL</span></code> and is equal
-to 2.3. We are using PACl as a coagulant for this analysis, so you shall
-call <code class="docutils literal notranslate"><span class="pre">floc.PACl</span></code>, when a function within <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> requires
-‘coag’ as an input.</p>
-<div class="alert alert-block alert-info"><div class="section" id="look-through-floc-model-py-within-aide-design-you-will-be-using-it-heavily-in-the-following-section">
-<h3>Look through <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> within aide_design. You will be using it heavily in the following section<a class="headerlink" href="#look-through-floc-model-py-within-aide-design-you-will-be-using-it-heavily-in-the-following-section" title="Permalink to this headline">¶</a></h3>
-<p>Whenever possible, use variables defined within <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code>
-instead of redefining them. Relevant variables defined in
-<code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> include: 1. <code class="docutils literal notranslate"><span class="pre">DIAM_FRACTAL</span></code> Recall in class that
-Monroe mentioned that this is not actually a diameter, but rather a
-dimension. It has been incorrectly and misleadingly named in
-aide_design. It’s value is simply 2.3, and it has no units.</p>
+<h1>Fractal Flocculation Model<a class="headerlink" href="#fractal-flocculation-model" title="Permalink to this headline">¶</a></h1>
+<p>Many of the fractal floc equations are available in the <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> file in the aide_design repository. You will need to look through that code to see what functions are available. The following constants are defined in that file. NTU has been defined as an approximate empirical relationship between the concentration of kaolin clay and the turbidity, such that 1 NTU is equivalent to 1.7 mg/L. The diameter of a primary clay particle is assumed to be 7 micrometers. The fractal dimension for flocs is defined as <code class="docutils literal notranslate"><span class="pre">DIAM_FRACTAL</span></code> and is equal to 2.3. We are using PACl as a coagulant for this analysis, so you shall call <code class="docutils literal notranslate"><span class="pre">floc.PACl</span></code>, when a function within <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> requires ‘coag’ as an input.</p>
+<div class="section" id="look-through-floc-model-py-within-aide-design-you-will-be-using-it-heavily-in-the-following-section">
+<h2>Look through <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> within aide_design. You will be using it heavily in the following section<a class="headerlink" href="#look-through-floc-model-py-within-aide-design-you-will-be-using-it-heavily-in-the-following-section" title="Permalink to this headline">¶</a></h2>
+<p>Whenever possible, use variables defined within <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> instead of redefining them. Relevant variables defined in <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> include: 1. <code class="docutils literal notranslate"><span class="pre">DIAM_FRACTAL</span></code> Recall in class that Monroe mentioned that this is not actually a diameter, but rather a dimension. It has been incorrectly and misleadingly named in aide_design. It’s value is simply 2.3, and it has no units.</p>
 <ol class="arabic simple">
 <li><code class="docutils literal notranslate"><span class="pre">PACl</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">Clay</span></code></li>
 </ol>
 </div>
-<div class="section" id="section-11">
-<span id="id12"></span><h3>12)<a class="headerlink" href="#section-11" title="Permalink to this headline">¶</a></h3>
-<p>Estimate the diameter of the flocs that interact with the tip of the
-impeller of the mechanical flocculator analyzed above. We don’t yet have
-a good model to predict maximum floc size as a function of velocity
-gradient or energy dissipation rate. We have a rough estimate,
-<code class="docutils literal notranslate"><span class="pre">floc.diam_floc_max(EDRmax)</span></code> based on a small amount of data.</p>
+<div class="section" id="id1">
+<h2>12)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Estimate the diameter of the flocs that interact with the tip of the impeller of the mechanical flocculator analyzed above. We don’t yet have a good model to predict maximum floc size as a function of velocity gradient or energy dissipation rate. We have a rough estimate, <code class="docutils literal notranslate"><span class="pre">floc.diam_floc_max(EDRmax)</span></code> based on a small amount of data.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
 <span class="n">diam_floc_mech</span> <span class="o">=</span> <span class="n">floc</span><span class="o">.</span><span class="n">diam_floc_max</span><span class="p">(</span><span class="n">ed_rate_prop_max</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">um</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The diameter of the flocs that interact with the impeller is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">diam_floc_mech</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The diameter of the flocs that interact with the impeller is&#39;</span><span class="p">,</span> <span class="n">diam_floc_mech</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">diameter</span> <span class="n">of</span> <span class="n">the</span> <span class="n">flocs</span> <span class="n">that</span> <span class="n">interact</span> <span class="k">with</span> <span class="n">the</span> <span class="n">impeller</span> <span class="ow">is</span> <span class="mi">127</span> <span class="n">um</span><span class="o">.</span>
-</pre></div>
+<p>The diameter of the flocs that interact with the impeller is 127 um.</p>
 </div>
-</div>
-<div class="section" id="section-12">
-<span id="id13"></span><h3>13)<a class="headerlink" href="#section-12" title="Permalink to this headline">¶</a></h3>
-<p>Estimate the terminal sedimentation velocity in mm/s of the flocs that
-interact with the tip of the impeller of the mechanical flocculator
-analyzed above. Use the function <code class="docutils literal notranslate"><span class="pre">floc.vel_term_floc</span></code>. You may assume
-that the flocs were made from a particle suspension that had 1.5 mg/L of
-aluminum and 100 NTU of clay.</p>
+<div class="section" id="id2">
+<h2>13)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Estimate the terminal sedimentation velocity in mm/s of the flocs that interact with the tip of the impeller of the mechanical flocculator analyzed above. Use the function <code class="docutils literal notranslate"><span class="pre">floc.vel_term_floc</span></code>. You may assume that the flocs were made from a particle suspension that had 1.5 mg/L of aluminum and 100 NTU of clay.</p>
 <p>Note: AguaClara has defined the unit NTU as <code class="docutils literal notranslate"><span class="pre">u.NTU</span></code>.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
 <span class="n">conc_Al</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
@@ -655,59 +251,34 @@ aluminum and 100 NTU of clay.</p>
                                        <span class="n">floc</span><span class="o">.</span><span class="n">Clay</span><span class="p">,</span> <span class="n">floc</span><span class="o">.</span><span class="n">DIAM_FRACTAL</span><span class="p">,</span>
                                        <span class="n">diam_floc_mech</span><span class="p">,</span> <span class="n">temp_design</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The terminal velocity of flocs that interact with the impeller tip is estimated to be&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">vel_term_floc_tip</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The terminal velocity of flocs that interact with the impeller tip is estimated to be&#39;</span><span class="p">,</span> <span class="n">vel_term_floc_tip</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">terminal</span> <span class="n">velocity</span> <span class="n">of</span> <span class="n">flocs</span> <span class="n">that</span> <span class="n">interact</span> <span class="k">with</span> <span class="n">the</span> <span class="n">impeller</span> <span class="n">tip</span> <span class="ow">is</span> <span class="n">estimated</span> <span class="n">to</span> <span class="n">be</span> <span class="mf">0.738</span> <span class="n">mm</span><span class="o">/</span><span class="n">s</span>
-</pre></div>
+<p>The terminal velocity of flocs that interact with the impeller tip is estimated to be 0.738 mm/s</p>
 </div>
-</div>
-<div class="section" id="section-13">
-<span id="id14"></span><h3>14)<a class="headerlink" href="#section-13" title="Permalink to this headline">¶</a></h3>
-<p>Would these flocs be captured by a conventional design for a
-sedimentation tank <a class="reference external" href="http://10statesstandards.com/waterrev2012.pdf">(10 State
-Standards)</a> with a
-capture velocity of 1.2 m/hr? The capture velocity is a property of the
-sedimentation tank. If the floc settles faster than the capture
-velocity, then theoretically the floc will be captured by the
-sedimentation tank.</p>
+<div class="section" id="id3">
+<h2>14)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Would these flocs be captured by a conventional design for a sedimentation tank <a class="reference external" href="http://10statesstandards.com/waterrev2012.pdf">(10 State Standards)</a> with a capture velocity of 1.2 m/hr? The capture velocity is a property of the sedimentation tank. If the floc settles faster than the capture velocity, then theoretically the floc will be captured by the sedimentation tank.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
 <span class="n">vel_capture_10_state</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">hr</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The 10 State Standards capture velocity is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">vel_capture_10_state</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The 10 State Standards capture velocity is&#39;</span><span class="p">,</span> <span class="n">vel_capture_10_state</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The 10 State Standards sedimentation tank would capture the flocs that are able to survive the energy dissipation rate at the tip of the propeller. &quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="mi">10</span> <span class="n">State</span> <span class="n">Standards</span> <span class="n">capture</span> <span class="n">velocity</span> <span class="ow">is</span> <span class="mf">0.333</span> <span class="n">mm</span><span class="o">/</span><span class="n">s</span>
-<span class="n">The</span> <span class="mi">10</span> <span class="n">State</span> <span class="n">Standards</span> <span class="n">sedimentation</span> <span class="n">tank</span> <span class="n">would</span> <span class="n">capture</span> <span class="n">the</span> <span class="n">flocs</span> <span class="n">that</span> <span class="n">are</span> <span class="n">able</span> <span class="n">to</span> <span class="n">survive</span> <span class="n">the</span> <span class="n">energy</span> <span class="n">dissipation</span> <span class="n">rate</span> <span class="n">at</span> <span class="n">the</span> <span class="n">tip</span> <span class="n">of</span> <span class="n">the</span> <span class="n">propeller</span><span class="o">.</span>
-</pre></div>
+<p>The 10 State Standards capture velocity is 0.333 mm/s
+The 10 State Standards sedimentation tank would capture the flocs that are able to survive the energy dissipation rate at the tip of the propeller.</p>
+<p>These flocs would be removed easily in an AguaClara sedimentation tank (capture velocity of 0.12 mm/s). However, our use of the empirical equation to predict the size of these flocs is questionable because we are extrapolating way beyond the original data. We need more experiments to characterize the size of flocs as a function of the velocity gradient.</p>
 </div>
-<p>These flocs would be removed easily in an AguaClara sedimentation tank
-(capture velocity of 0.12 mm/s). However, our use of the empirical
-equation to predict the size of these flocs is questionable because we
-are extrapolating way beyond the original data. We need more experiments
-to characterize the size of flocs as a function of the velocity
-gradient.</p>
-</div>
-<div class="section" id="section-14">
-<span id="id15"></span><h3>15)<a class="headerlink" href="#section-14" title="Permalink to this headline">¶</a></h3>
-<p>Estimate the average distance between primary clay particles at the
-beginning and end of flocculation given an initial turbidity of 100 NTU
-and a target effluent unflocculated clay concentration at the end of
-flocculation of less than 1 NTU. Of course, the clay concentration is
-actually constant in flocculation since particles are not actually being
-removed. But here we are referring to the primary clay particles that
-have escaped aggregation and thus are still unattached.</p>
-<p>You can do this by figuring it out empirically (brownie points!) or by
-looking for a function that finds average distance between particles.</p>
-<p>A little extra to think about (not necessary to answer): The AguaClara
-floccuation model assumes that primary clay particles mostly attach to
-other primary clay particles and not to larger flocs (aggregates of clay
-particles). Can you think of why this is?</p>
+<div class="section" id="id4">
+<h2>15)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Estimate the average distance between primary clay particles at the beginning and end of flocculation given an initial turbidity of 100 NTU and a target effluent unflocculated clay concentration at the end of flocculation of less than 1 NTU. Of course, the clay concentration is actually constant in flocculation since particles are not actually being removed. But here we are referring to the primary clay particles that have escaped aggregation and thus are still unattached.</p>
+<p>You can do this by figuring it out empirically (brownie points!) or by looking for a function that finds average distance between particles.</p>
+<p>A little extra to think about (not necessary to answer): The AguaClara floccuation model assumes that primary clay particles mostly attach to other primary clay particles and not to larger flocs (aggregates of clay particles). Can you think of why this is?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
 <span class="n">init_sep_dist_clay</span> <span class="o">=</span> <span class="n">floc</span><span class="o">.</span><span class="n">sep_dist_clay</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">NTU</span><span class="p">,</span> <span class="n">floc</span><span class="o">.</span><span class="n">Clay</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">)</span>
 <span class="n">final_sep_dist_clay</span> <span class="o">=</span> <span class="n">floc</span><span class="o">.</span><span class="n">sep_dist_clay</span><span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">NTU</span><span class="p">,</span> <span class="n">floc</span><span class="o">.</span><span class="n">Clay</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average distance between clay particles at 100 NTU is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">init_sep_dist_clay</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average distance between clay particles at 1 NTU is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">final_sep_dist_clay</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average distance between clay particles at 100 NTU is&#39;</span><span class="p">,</span> <span class="n">init_sep_dist_clay</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average distance between clay particles at 1 NTU is&#39;</span><span class="p">,</span> <span class="n">final_sep_dist_clay</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">average</span> <span class="n">distance</span> <span class="n">between</span> <span class="n">clay</span> <span class="n">particles</span> <span class="n">at</span> <span class="mi">100</span> <span class="n">NTU</span> <span class="ow">is</span> <span class="mf">0.141</span> <span class="n">mm</span>
@@ -715,33 +286,21 @@ particles). Can you think of why this is?</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="section-15">
-<span id="id16"></span><h3>16)<a class="headerlink" href="#section-15" title="Permalink to this headline">¶</a></h3>
-<p>What is the inner viscous length scale in the mechanical flocculator at
-the maximum energy dissipation rate? Given that this is a very high
-energy dissipation rate for flocculation, it corresponds to a very small
-inner viscous length scale. This means that eddies are able to survive
-down to a small size before viscosity damps their motion. If the
-separation distance between clay particles that haven’t turned into
-flocs is less than this inner viscous scale, then it is reasonable to
-assume that all flocculation is dominated by viscosity. The function
-within <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> that does this is confusingly named
+<div class="section" id="id5">
+<h2>16)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>What is the inner viscous length scale in the mechanical flocculator at the maximum energy dissipation rate? Given that this is a very high energy dissipation rate for flocculation, it corresponds to a very small inner viscous length scale. This means that eddies are able to survive down to a small size before viscosity damps their motion. If the separation distance between clay particles that haven’t turned into flocs is less than this inner viscous scale, then it is reasonable to assume that all flocculation is dominated by viscosity. The function within <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> that does this is confusingly named
 <code class="docutils literal notranslate"><span class="pre">lamba_vel()</span></code>.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The inner viscous length scale is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">floc</span><span class="o">.</span><span class="n">lambda_vel</span><span class="p">(</span><span class="n">ed_rate_prop_max</span><span class="p">,</span> <span class="n">temp_design</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The inner viscous length scale is&#39;</span><span class="p">,</span> <span class="n">floc</span><span class="o">.</span><span class="n">lambda_vel</span><span class="p">(</span><span class="n">ed_rate_prop_max</span><span class="p">,</span> <span class="n">temp_design</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">inner</span> <span class="n">viscous</span> <span class="n">length</span> <span class="n">scale</span> <span class="ow">is</span> <span class="mf">2.39</span> <span class="n">mm</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="section-16">
-<span id="id17"></span><h3>17)<a class="headerlink" href="#section-16" title="Permalink to this headline">¶</a></h3>
-<p>Below is a graph showing the inner viscous length scale that divides
-flows that are dominated by inertia (eddies) from flows where viscosity
-is significant. <strong>Add the data point</strong> representing the maximum energy
-dissipation rate vs the maximum clay separation distance at the end of
-flocculation for the mechanical flocculator you have been designing.</p>
+<div class="section" id="id6">
+<h2>17)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Below is a graph showing the inner viscous length scale that divides flows that are dominated by inertia (eddies) from flows where viscosity is significant. <strong>Add the data point</strong> representing the maximum energy dissipation rate vs the maximum clay separation distance at the end of flocculation for the mechanical flocculator you have been designing.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#This code is provided to help you make your graph</span>
 
 <span class="c1">#Creates the array for energy dissipation rates (EDRs)</span>
@@ -750,8 +309,8 @@ flocculation for the mechanical flocculator you have been designing.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="s1">&#39;Inner Viscous Scale&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Inner Viscous Scale vs Energy Dissipation Rate&#39;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Inner Viscous Scale (mm)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Energy Dissipation Rate(mW/kg)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Inner Viscous Scale (mm)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Energy Dissipation Rate(mW/kg)&#39;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
@@ -762,13 +321,13 @@ flocculation for the mechanical flocculator you have been designing.</p>
 <span class="c1">#floc.lambda_vel, which returns the inner viscous length scale,</span>
 <span class="c1">#is being applied to the array of EDRs for our design temperature</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">floc</span><span class="o">.</span><span class="n">lambda_vel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">temp_design</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 
 <span class="c1">#------------------------------------------------------------------------</span>
 <span class="c1">#----------------------------YOUR CODE BELOW-----------------------------</span>
 <span class="c1">#------------------------------------------------------------------------</span>
 <span class="c1">#answer</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ed_rate_prop_max</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">),</span> <span class="n">final_sep_dist_clay</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span> <span class="s1">&#39;ko&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ed_rate_prop_max</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">),</span> <span class="n">final_sep_dist_clay</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">),</span> <span class="s1">&#39;ko&#39;</span><span class="p">)</span>
 
 
 
@@ -782,53 +341,31 @@ flocculation for the mechanical flocculator you have been designing.</p>
 <span class="mf">422.57902694348155</span> <span class="n">milliwatt</span> <span class="o">/</span> <span class="n">kilogram</span>
 </pre></div>
 </div>
-<div class="figure" id="id21">
+<div class="figure" id="id11">
 <img alt="png" src="Flocculation/DC_Mechanical_and_Flocculation_Model_Solution_files/DC_Mechanical_and_Flocculation_Model_Solution_46_1.png" />
 <p class="caption"><span class="caption-text">png</span></p>
 </div>
 </div>
-<div class="section" id="section-17">
-<span id="id18"></span><h3>18)<a class="headerlink" href="#section-17" title="Permalink to this headline">¶</a></h3>
-<p>According to the plot and analysis above, are the collisions between
-clay particles at a concentration of 1 NTU dominated by inertia or by
-viscosity? Explain why!</p>
-<p>The final spacing between clay particles is still smaller than the inner
-viscous length scale at which eddies are damped by viscosity. This
-suggests that all collisions in flocculation are dominated by viscosity.</p>
-<div class="alert alert-block alert-info"></div>
+<div class="section" id="id7">
+<h2>18)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>According to the plot and analysis above, are the collisions between clay particles at a concentration of 1 NTU dominated by inertia or by viscosity? Explain why!</p>
+<p>The final spacing between clay particles is still smaller than the inner viscous length scale at which eddies are damped by viscosity. This suggests that all collisions in flocculation are dominated by viscosity.</p>
 </div>
 </div>
 <div class="section" id="real-world-considerations-of-flocculation">
 <h1>Real-world considerations of flocculation<a class="headerlink" href="#real-world-considerations-of-flocculation" title="Permalink to this headline">¶</a></h1>
-<p>Now that you have an augmented understanding of flocculation theory, we
-can consider a few ways in which the theory applies to real-world
-flocculators.</p>
-<p>In this section, there are no calculations for you to do or code for you
-to write - everything has been provided for you. This was done to
-shorten this design challenge while still detailing relevant and
-important information.</p>
+<p>Now that you have an augmented understanding of flocculation theory, we can consider a few ways in which the theory applies to real-world flocculators.</p>
+<p>In this section, there are no calculations for you to do or code for you to write - everything has been provided for you. This was done to shorten this design challenge while still detailing relevant and important information.</p>
 <blockquote>
-<div><a href="#id19"><span class="problematic" id="id20">**</span></a>There are two conceptual questions for you to answer at the end of</div></blockquote>
-<p>the section.** Read through and focus on understanding the concepts
-before you try to answer the questions.</p>
-<p>The flocculation model accounts for loss of coagulant nanoparticles to
-the reactor walls. The loss of coagulant nanoparticles is assumed to
-scale with the area of the flocculator walls divided by the total area
-of clay and flocculator walls. This loss is significant for low
-turbidity and small scale flocculators, such as the 1 liter per second
-flocculator AguaClara recently designed.</p>
-<p>Here we will consider a flocculator built out of pipe, not one contained
-within a rectangular reactor. The <code class="docutils literal notranslate"><span class="pre">diam_tube</span></code> parameter is the
-flocculator diameter and is needed to estimate how much of the coagulant
-is lost to the walls of the flocculator. We will assume the flocculator
-tube is for the 1 L/s plant and has a diameter of 7.5 cm</p>
-<p>We will evaluate the situation where the turbidity is 10 NTU and the
-coagulant dose is 1 mg/L of aluminum. The code below does the following:</p>
+<div><strong>There are two conceptual questions for you to answer at the end of the section.</strong> Read through and focus on understanding the concepts before you try to answer the questions.</div></blockquote>
+<div class="section" id="coagulant-distribution-in-a-reactor">
+<h2>Coagulant distribution in a reactor<a class="headerlink" href="#coagulant-distribution-in-a-reactor" title="Permalink to this headline">¶</a></h2>
+<p>The flocculation model accounts for loss of coagulant nanoparticles to the reactor walls. The loss of coagulant nanoparticles is assumed to scale with the area of the flocculator walls divided by the total area of clay and flocculator walls. This loss is significant for low turbidity and small scale flocculators, such as the 1 liter per second flocculator AguaClara recently designed.</p>
+<p>Here we will consider a flocculator built out of pipe, not one contained within a rectangular reactor. The <code class="docutils literal notranslate"><span class="pre">diam_tube</span></code> parameter is the flocculator diameter and is needed to estimate how much of the coagulant is lost to the walls of the flocculator. We will assume the flocculator tube is for the 1 L/s plant and has a diameter of 7.5 cm</p>
+<p>We will evaluate the situation where the turbidity is 10 NTU and the coagulant dose is 1 mg/L of aluminum. The code below does the following:</p>
 <ul class="simple">
-<li>Estimates the fraction of coagulant nanoparticles lost to the
-flocculator walls.</li>
-<li>Estimates the fraction of the clay surface area that is coated with
-nanoparticles.</li>
+<li>Estimates the fraction of coagulant nanoparticles lost to the flocculator walls.</li>
+<li>Estimates the fraction of the clay surface area that is coated with nanoparticles.</li>
 </ul>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diam_tube</span> <span class="o">=</span> <span class="mf">7.5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">conc_clay</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">NTU</span>
@@ -839,22 +376,20 @@ nanoparticles.</li>
 <span class="c1">#the clay particle over the sum of the surface area of the clay and reactor walls</span>
 
 <span class="n">wall_loss</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">floc</span><span class="o">.</span><span class="n">ratio_area_clay_total</span><span class="p">(</span><span class="n">conc_clay</span><span class="p">,</span> <span class="n">floc</span><span class="o">.</span><span class="n">Clay</span><span class="p">,</span> <span class="n">diam_tube</span><span class="p">,</span> <span class="n">floc</span><span class="o">.</span><span class="n">RATIO_HEIGHT_DIAM</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The fraction of the coagulant lost to the walls is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">wall_loss</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The fraction of the coagulant lost to the walls is&#39;</span><span class="p">,</span> <span class="n">wall_loss</span><span class="p">)</span>
 
 <span class="c1">#floc.gamma_coag() returns the fraction of clay that is covered by coagulant. This is a very hard parameter</span>
 <span class="c1">#to actually measure, so this is just an estimate.</span>
 
 <span class="n">fraction_coated</span> <span class="o">=</span> <span class="n">floc</span><span class="o">.</span><span class="n">gamma_coag</span><span class="p">(</span><span class="n">conc_clay</span><span class="p">,</span><span class="n">conc_Al</span><span class="p">,</span> <span class="n">floc</span><span class="o">.</span><span class="n">PACl</span><span class="p">,</span>
                                   <span class="n">floc</span><span class="o">.</span><span class="n">Clay</span><span class="p">,</span> <span class="n">diam_tube</span><span class="p">,</span> <span class="n">floc</span><span class="o">.</span><span class="n">RATIO_HEIGHT_DIAM</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The fraction of the clay surface area that is is coated is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">fraction_coated</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The fraction of the clay surface area that is is coated is&#39;</span><span class="p">,</span> <span class="n">fraction_coated</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Now we want to estimate the average time required for an initial
-successful collision between two primary clay particles that are
-partially coated with coagulant nanoclusters. Note that for the first
-collision, the current floc size is the same as the clay size. We will
-use the average energy dissipation rate for the mechanical flocculator
-as found above.</p>
+</div>
+<div class="section" id="time-scale-of-flocculation">
+<h2>Time scale of flocculation<a class="headerlink" href="#time-scale-of-flocculation" title="Permalink to this headline">¶</a></h2>
+<p>Now we want to estimate the average time required for an initial successful collision between two primary clay particles that are partially coated with coagulant nanoclusters. Note that for the first collision, the current floc size is the same as the clay size. We will use the average energy dissipation rate for the mechanical flocculator as found above.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ed_rate_mech_ave</span> <span class="o">=</span> <span class="mf">6.4</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span>
 
 <span class="n">time_first_collision</span> <span class="o">=</span> <span class="n">floc</span><span class="o">.</span><span class="n">time_col_laminar</span><span class="p">(</span><span class="n">ed_rate_mech_ave</span><span class="p">,</span> <span class="mi">10</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span><span class="p">,</span>
@@ -862,15 +397,14 @@ as found above.</p>
                                              <span class="n">floc</span><span class="o">.</span><span class="n">Clay</span><span class="p">,</span> <span class="n">floc</span><span class="o">.</span><span class="n">Clay</span><span class="o">.</span><span class="n">Diameter</span><span class="p">,</span> <span class="n">diam_tube</span><span class="p">,</span>
                                              <span class="n">floc</span><span class="o">.</span><span class="n">DIAM_FRACTAL</span><span class="p">,</span> <span class="n">floc</span><span class="o">.</span><span class="n">RATIO_HEIGHT_DIAM</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time required for the first succesful collision is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">time_first_collision</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time required for the first succesful collision is&#39;</span><span class="p">,</span> <span class="n">time_first_collision</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This collision time is quite fast and is the origin of the question,
-“why does flocculation require 30 minutes?” as mandated in the Ten State
-Standards.</p>
-<p>We will now briefly consider an AguaClara flocculator design with an
-average energy dissipation rate of approximately 11 mW/kg and a
-residence time of 8.1 minutes. The design temperature is 15 degC.</p>
+<p>This collision time is quite fast and is the origin of the question, “why does flocculation require 30 minutes?” as mandated in the Ten State Standards.</p>
+</div>
+<div class="section" id="aguaclara-flocculation-model">
+<h2>AguaClara flocculation model<a class="headerlink" href="#aguaclara-flocculation-model" title="Permalink to this headline">¶</a></h2>
+<p>We will now briefly consider an AguaClara flocculator design with an average energy dissipation rate of approximately 11 mW/kg and a residence time of 8.1 minutes. The design temperature is 15 degC.</p>
 <p>Below is a calculation for the Gt value of this flocculator.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
 <span class="n">ed_rate_floc_aguaclara</span> <span class="o">=</span> <span class="mi">11</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span>
@@ -880,22 +414,17 @@ residence time of 8.1 minutes. The design temperature is 15 degC.</p>
 <span class="c1">#This equation for G can be found in the course slides (all equations you see in design challenges can be found in the slides)</span>
 <span class="n">G_floc_aguaclara</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ed_rate_floc_aguaclara</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">temp_design_aguaclara</span><span class="p">))</span>
 <span class="n">Gtime_floc_aguaclara</span> <span class="o">=</span> <span class="p">(</span><span class="n">G_floc_aguaclara</span><span class="o">*</span><span class="n">time_floc_aguaclara</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The AguaClara Gt value is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">Gtime_floc_aguaclara</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The AguaClara Gt value is&#39;</span><span class="p">,</span> <span class="n">Gtime_floc_aguaclara</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This section solves the integrated flocculation model for
-<span class="math notranslate nohighlight">\(\Gamma\)</span>. We simplify the model by recognizing that the spacing
-between particles at the end of the flocculation process is much greater
-than the initial particle spacing. This means that the raw water
-turbidity drops out of the equation. The value of the rate constant for
-collisions is k = 0.24. We start with the equation below:</p>
-<div class="math notranslate nohighlight" id="equation-flocculation-floc-model-solution-1">
-<span class="eqno">()<a class="headerlink" href="#equation-flocculation-floc-model-solution-1" title="Permalink to this equation">¶</a></span>\[\Gamma = \frac{3}{2}\cdot \frac{\Lambda^2 }{\mathit{k} \pi d_{p}^2 Gt }\]</div>
-<p>We then estimate the required coagulant coverage of clay,
-<span class="math notranslate nohighlight">\(\Gamma\)</span>, for the AguaClara flocculator to achieve a 2 NTU settled
-water turbidity when starting with a raw water that is 50 NTU.</p>
-<p>Note that the specified flocculation model applies to both hydraulic and
-mechanical flocculators.</p>
+</div>
+<div class="section" id="coagulant-coverage-fraction-of-a-particle">
+<h2>Coagulant coverage fraction of a particle<a class="headerlink" href="#coagulant-coverage-fraction-of-a-particle" title="Permalink to this headline">¶</a></h2>
+<p>This section solves the integrated flocculation model for <span class="math notranslate nohighlight">\(\Gamma\)</span>. We simplify the model by recognizing that the spacing between particles at the end of the flocculation process is much greater than the initial particle spacing. This means that the raw water turbidity drops out of the equation. The value of the rate constant for collisions is k = 0.24. We start with the equation below:</p>
+<div class="math notranslate nohighlight" id="equation-flocculation-floc-model-solution-0">
+<span class="eqno">()<a class="headerlink" href="#equation-flocculation-floc-model-solution-0" title="Permalink to this equation">¶</a></span>\[\Gamma = \frac{3}{2}\cdot \frac{\Lambda^2 }{\mathit{k} \pi d_{p}^2 Gt }\]</div>
+<p>We then estimate the required coagulant coverage of clay, <span class="math notranslate nohighlight">\(\Gamma\)</span>, for the AguaClara flocculator to achieve a 2 NTU settled water turbidity when starting with a raw water that is 50 NTU.</p>
+<p>Note that the specified flocculation model applies to both hydraulic and mechanical flocculators.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Fitting constant/Sedimentation tank factor</span>
 <span class="n">k</span> <span class="o">=</span> <span class="mf">0.24</span>
 
@@ -907,24 +436,19 @@ mechanical flocculators.</p>
                              <span class="p">)</span>
                           <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Gamma value is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">gamma_aguaclara_design</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Gamma value is&#39;</span><span class="p">,</span> <span class="n">gamma_aguaclara_design</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If you doubled the residence time of the flocculator, the required
-coagulant coverage of clay changes according to the model. By doubling
-the residence time, the required coagulant coverage is reduced by a
-factor of 2.</p>
-<p>The flocculation model predicts the settled water turbidity given the
-composition of the raw water, the flocculator characteristics, and a
-fitting parameter that must be a function of the sedimentation tank
-characteristics. This fitting parameter is k, which is the same as the
-rate constant for collisions described above. The model is far from
-complete - it doesn’t yet describe the effects of floc blankets. Below
-we have created a plot showing model predictions for a range of
-coagulant and humic acid (dissolved organic matter) concentrations. The
-plot uses our approximation for pC* described in class and shown below:</p>
-<div class="math notranslate nohighlight" id="equation-flocculation-floc-model-solution-2">
-<span class="eqno">()<a class="headerlink" href="#equation-flocculation-floc-model-solution-2" title="Permalink to this equation">¶</a></span>\[pC^*=\frac{3}{2}log{(\frac{2}{3}\pi k \frac{d_p^{2}}{\Lambda_0^{2}}Gt\alpha + 1)}\]</div>
+</div>
+<div class="section" id="residence-time-and-coagulant-coverage">
+<h2>Residence time and coagulant coverage<a class="headerlink" href="#residence-time-and-coagulant-coverage" title="Permalink to this headline">¶</a></h2>
+<p>If you doubled the residence time of the flocculator, the required coagulant coverage of clay changes according to the model. By doubling the residence time, the required coagulant coverage is reduced by a factor of 2.</p>
+</div>
+<div class="section" id="modeling-flocculation-in-the-presence-of-humic-acid-with-pc-as-the-performance-metric">
+<h2>Modeling flocculation in the presence of humic acid, with pC* as the performance metric<a class="headerlink" href="#modeling-flocculation-in-the-presence-of-humic-acid-with-pc-as-the-performance-metric" title="Permalink to this headline">¶</a></h2>
+<p>The flocculation model predicts the settled water turbidity given the composition of the raw water, the flocculator characteristics, and a fitting parameter that must be a function of the sedimentation tank characteristics. This fitting parameter is k, which is the same as the rate constant for collisions described above. The model is far from complete - it doesn’t yet describe the effects of floc blankets. Below we have created a plot showing model predictions for a range of coagulant and humic acid (dissolved organic matter) concentrations. The plot uses our approximation for pC* described in class and shown below:</p>
+<div class="math notranslate nohighlight" id="equation-flocculation-floc-model-solution-1">
+<span class="eqno">()<a class="headerlink" href="#equation-flocculation-floc-model-solution-1" title="Permalink to this equation">¶</a></span>\[pC^*=\frac{3}{2}log{(\frac{2}{3}\pi k \frac{d_p^{2}}{\Lambda_0^{2}}Gt\alpha + 1)}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Define the range of coagulant. This is necessary to create plots of pC* as a function of coagulant dose.</span>
 <span class="n">coag_graph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
 
@@ -934,8 +458,8 @@ plot uses our approximation for pC* described in class and shown below:</p>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">plot_NTU</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">plot_NTU</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; Graph for Various Humic Acid Concentrations&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;pC*&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;coagulant dosage (mg/L)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;pC*&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;coagulant dosage (mg/L)&#39;</span><span class="p">)</span>
 
 <span class="c1"># Create an array of humic acid concentrations</span>
 <span class="n">plot_humic_acid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
@@ -960,7 +484,7 @@ plot uses our approximation for pC* described in class and shown below:</p>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">coag_graph</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">plot_pC</span><span class="p">(</span><span class="n">plot_humic_acid</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">plot_pC</span><span class="p">(</span><span class="n">plot_humic_acid</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span>
          <span class="n">x</span><span class="p">,</span> <span class="n">plot_pC</span><span class="p">(</span><span class="n">plot_humic_acid</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
          <span class="n">x</span><span class="p">,</span> <span class="n">plot_pC</span><span class="p">(</span><span class="n">plot_humic_acid</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span>
          <span class="n">x</span><span class="p">,</span> <span class="n">plot_pC</span><span class="p">(</span><span class="n">plot_humic_acid</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span>
@@ -972,21 +496,18 @@ plot uses our approximation for pC* described in class and shown below:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>There is a lot to learn from this graph!!!!!! It appears that for any
-given coagulant dose, humic acid concentration significantly affects
-pC*. Additionally, notice the diminishing returns of adding more
-coagulant. This effect appears to be independent of humic acid
-concentration (see the red curve).</p>
-<p>We will now display a similar plot which shows settled water turbidity
-instead of pC*. Our initial turbidity is 10 NTU, and we will four curves
-for separate humic acid concentrations.</p>
+<p>There is a lot to learn from this graph!!!!!! It appears that for any given coagulant dose, humic acid concentration significantly affects pC*. Additionally, notice the diminishing returns of adding more coagulant. This effect appears to be independent of humic acid concentration (see the red curve).</p>
+</div>
+<div class="section" id="modeling-flocculation-in-the-presence-of-humic-acid-with-settled-water-turbidity-as-the-performance-metric">
+<h2>Modeling flocculation in the presence of humic acid, with settled water turbidity as the performance metric<a class="headerlink" href="#modeling-flocculation-in-the-presence-of-humic-acid-with-settled-water-turbidity-as-the-performance-metric" title="Permalink to this headline">¶</a></h2>
+<p>We will now display a similar plot which shows settled water turbidity instead of pC*. Our initial turbidity is 10 NTU, and we will four curves for separate humic acid concentrations.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
 <span class="n">plot_NTU</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">NTU</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">plot_NTU</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">plot_NTU</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; Graph&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Settled water turbidity (NTU)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;coagulant dosage (mg/L)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Settled water turbidity (NTU)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;coagulant dosage (mg/L)&#39;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">plot_conc_clay</span><span class="p">(</span><span class="n">conc_clay</span><span class="p">,</span> <span class="n">conc_nat_org_mat</span><span class="p">):</span>
     <span class="n">k</span> <span class="o">=</span> <span class="mf">0.24</span>
@@ -1010,7 +531,7 @@ for separate humic acid concentrations.</p>
 <span class="n">plot_humic_acid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">20</span><span class="p">])</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">coag_graph</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">plot_conc_clay</span><span class="p">(</span><span class="n">plot_NTU</span><span class="p">,</span> <span class="n">plot_humic_acid</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">plot_conc_clay</span><span class="p">(</span><span class="n">plot_NTU</span><span class="p">,</span> <span class="n">plot_humic_acid</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span>
          <span class="n">x</span><span class="p">,</span> <span class="n">plot_conc_clay</span><span class="p">(</span><span class="n">plot_NTU</span><span class="p">,</span> <span class="n">plot_humic_acid</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
          <span class="n">x</span><span class="p">,</span> <span class="n">plot_conc_clay</span><span class="p">(</span><span class="n">plot_NTU</span><span class="p">,</span> <span class="n">plot_humic_acid</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span>
          <span class="n">x</span><span class="p">,</span> <span class="n">plot_conc_clay</span><span class="p">(</span><span class="n">plot_NTU</span><span class="p">,</span> <span class="n">plot_humic_acid</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span>
@@ -1019,25 +540,29 @@ for separate humic acid concentrations.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Looking at the interactions between coagulant, clay, and humic acid from
-this perspective yields even more fun discoveries! For increasing humic
-acid concentration, more coagulant is required to even begin the process
-of flocculation.</p>
-<p>Why does the AguaClara flocculation model predict that adding 1 mg/L of
-aluminum has no effect on turbidity when the humic acid concentration is
-20 mg/L?</p>
-<p>At low concentrations of coagulant every coagulant nanoparticle surface
-is completely coated with humic acid and thus they aren’t sticky at all.</p>
-<p>It is tempting to assume that all the coagulant dosed gets attached to
-clay particles. However, if a plant operator were to make this
-assumption, their plant would produce low-quality water.</p>
-<p>Identify and explain two significant reasons as to why this assumption
-fails.</p>
+<p>Looking at the interactions between coagulant, clay, and humic acid from this perspective yields even more fun discoveries! For increasing humic acid concentration, more coagulant is required to even begin the process of flocculation.</p>
+</div>
+<div class="section" id="id8">
+<h2>19)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>Why does the AguaClara flocculation model predict that adding 1 mg/L of aluminum has no effect on turbidity when the humic acid concentration is 20 mg/L?</p>
+</div>
+<div class="section" id="your-answer-here">
+<h2>Your Answer Here<a class="headerlink" href="#your-answer-here" title="Permalink to this headline">¶</a></h2>
+<p>At low concentrations of coagulant every coagulant nanoparticle surface is completely coated with humic acid and thus they aren’t sticky at all.</p>
+</div>
+<div class="section" id="id9">
+<h2>20)<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>It is tempting to assume that all the coagulant dosed gets attached to clay particles. However, if a plant operator were to make this assumption, their plant would produce low-quality water.</p>
+<p>Identify and explain two significant reasons as to why this assumption fails.</p>
+</div>
+<div class="section" id="id10">
+<h2>Your Answer Here<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Coagulant is lost to the walls of the reactors</li>
 <li>Coagulant is lost to humic acid
 (Students need to write more than this)</li>
 </ol>
+</div>
 </div>
 
 
