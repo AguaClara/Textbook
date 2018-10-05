@@ -21,8 +21,8 @@ A brief Design Challenge guide
  4. Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km*mg/s?
  5. Make sure to review convention and syntax standards, which can be found here:
 
-   -  `Standards Page <https://github.com/AguaClara/aide_design/wiki/Standards>`__ for naming standards.
-   -  `Variable Naming Guide <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`__ for creating variable names.
+    - `Standards Page <https://github.com/AguaClara/aide_design/wiki/Standards>`__ for naming standards.
+    - `Variable Naming Guide <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`__ for creating variable names.
 
 .. code:: python
 
@@ -55,12 +55,12 @@ We want to be able to describe the height of the water in the orifice as relativ
 
 The steps for making the graph are as follows:
 
- -  Use ``np.linspace`` to generate an array of 100 dimensionless water surface elevations. The surface elevations should be normalized (also referred to as nondimensionalized) by the diameter of the orifice, and should range from -1 to 2 orifice diameters.
- -  Create a second array for water elevation (with units) by multiplying the normalized water elevation array by the orifice diameter.
- -  Create two arrays of flow rates through the orifice: one for the horizontal orifice orientation and one for the vertical orifice orientation. Use the two orifice equations ``pc.flow_orifice`` and ``pc.flow_orifice_vert`` in the physchem file, with orifice diameter and the dimensional water elevation array you created as inputs.
- -  Plot the curves for vertical and horizontal orifice flow in L/s as a function of the normalized height of water.
- -  Label the graph with flow rate in L/s as the y-axis and with normalized water elevation above the center of the orifice as the x-axis.
- -  Include a legend for the two curves.
+  - Use ``np.linspace`` to generate an array of 100 dimensionless water surface elevations. The surface elevations should be normalized (also referred to as nondimensionalized) by the diameter of the orifice, and should range from -1 to 2 orifice diameters.
+  - Create a second array for water elevation (with units) by multiplying the normalized water elevation array by the orifice diameter.
+  - Create two arrays of flow rates through the orifice: one for the horizontal orifice orientation and one for the vertical orifice orientation. Use the two orifice equations ``pc.flow_orifice`` and ``pc.flow_orifice_vert`` in the physchem file, with orifice diameter and the dimensional water elevation array you created as inputs.
+  - Plot the curves for vertical and horizontal orifice flow in L/s as a function of the normalized height of water.
+  - Label the graph with flow rate in L/s as the y-axis and with normalized water elevation above the center of the orifice as the x-axis.
+  - Include a legend for the two curves.
 
 .. code:: python
 
@@ -159,13 +159,13 @@ The nominal diameter of the LFOM is 10 in.
 
 **Create a function** that calculates the flow rate through the LFOM as a function of only water elevation using the vertical orifice function. Use the arrays for LFOM key parameters, given above as ``NdLfom``, ``OrificeDiam``, ``LfomOrificeArray``, and ``HeightLfomOrifices``.
 
--  Create an array for depth of submergence for each row of orifices at a given a height of water in the LFOM. This array is dependent on the water elevation (which should be your function input) and the height of the LFOM orifices (which is from the LFOM key parameters). Use this submergence depth array as the “height” input to your vertical orifice function. The array should be created within your function.
+ - Create an array for depth of submergence for each row of orifices at a given a height of water in the LFOM. This array is dependent on the water elevation (which should be your function input) and the height of the LFOM orifices (which is from the LFOM key parameters). Use this submergence depth array as the “height” input to your vertical orifice function. The array should be created within your function.
 
--  To calculate the flow rate through the LFOM, multiply the calculated flow for each row of orifices by the number of orifices in that row (``LfromOrificeArray``) to get an array of flows through each row of orifices. Note: the vertical orifice function will report zero flow for any orifices that aren’t submerged, so you can send the whole array of depth of submergence for each row of orifices.
+ - To calculate the flow rate through the LFOM, multiply the calculated flow for each row of orifices by the number of orifices in that row (``LfromOrificeArray``) to get an array of flows through each row of orifices. Note: the vertical orifice function will report zero flow for any orifices that aren’t submerged, so you can send the whole array of depth of submergence for each row of orifices.
 
--  At the end of your function, sum flows from each row of the LFOM and return that value with the correct units.
+ - At the end of your function, sum flows from each row of the LFOM and return that value with the correct units.
 
--  Add a comment under the function definition to explain what the function does (see any of the aide design files for examples of descriptive comments).
+ - Add a comment under the function definition to explain what the function does (see any of the aide design files for examples of descriptive comments).
 
 .. code:: python
 
@@ -198,13 +198,13 @@ The flow at a depth of 20 cm is 31.49 l/s
 
 We want to compare the actual flow rate through the LFOM to the expected flow rate through the elevation as a function of water depth. Create a graph of the normalized actual and expected flow rates, using the following steps:
 
--  Create an 100-unit long array of water depths using ``np.linspace``. Note: the expected flow rate at elevation zero is zero, which makes the normalized flow rate undefined for zero elevation. An undefined normalized flow will not run and Python will report an error. You can solve this by beginning your water depth array at a very small (nonzero) elevation. You can end your water depth array at the maximum water depth. Recall that an array of elevations should have units of length.
--  Create an array of normalized actual flow rates at each water depth; use the function you created in Problem 4 and a ``for`` loop (the function you created in Problem 4 probably can’t handle an array of depths as input, so you need the ``for`` loop to cycle through each depth value to make your array of flows).
+ - Create an 100-unit long array of water depths using ``np.linspace``. Note: the expected flow rate at elevation zero is zero, which makes the normalized flow rate undefined for zero elevation. An undefined normalized flow will not run and Python will report an error. You can solve this by beginning your water depth array at a very small (nonzero) elevation. You can end your water depth array at the maximum water depth. Recall that an array of elevations should have units of length.
+ - Create an array of normalized actual flow rates at each water depth; use the function you created in Problem 4 and a ``for`` loop (the function you created in Problem 4 probably can’t handle an array of depths as input, so you need the ``for`` loop to cycle through each depth value to make your array of flows).
 
-   -  Start by creating an empty array for actual flow rates that is the same shape as the 100-unit water depth array you just created.
-   -  In your ``for`` loop, normalize the actual flow rates by using the following relationship: normalized actual flow rate = (actual flow rate)/[(water depth \* target flow rate)/maximum water level]
+    - Start by creating an empty array for actual flow rates that is the same shape as the 100-unit water depth array you just created.
+    - In your ``for`` loop, normalize the actual flow rates by using the following relationship: normalized actual flow rate = (actual flow rate)/[(water depth \* target flow rate)/maximum water level]
 
--  Plot a straight horizontal line at y = 1, which is your normalized expected flow value if the LFOM were perfect.
+ - Plot a straight horizontal line at y = 1, which is your normalized expected flow value if the LFOM were perfect.
 
 .. code:: python
 
@@ -249,8 +249,8 @@ The flow rates seem to exceed the target flow by a tiny factor over the majority
 
 Describe at least two failure modes where the design produces very inaccurate flow measurements.
 
--  For very high flow rates (100 L/s) that the LFOM doesn’t reach the target flow until half of the LFOM is submerged.
--  For very low flow rates (1 L/s) the algorithm overshoots with too many orifices in the bottom row.
+ - For very high flow rates (100 L/s) that the LFOM doesn’t reach the target flow until half of the LFOM is submerged.
+ - For very low flow rates (1 L/s) the algorithm overshoots with too many orifices in the bottom row.
 
 
 9)
@@ -369,8 +369,8 @@ Create an array of the maximum flow rates corresponding to the array of tubing d
 
 .. math:: Q_{Max} = \frac{\pi D^2}{4}\sqrt{\frac{2h_{L}g \Pi_{error}}{\sum K_{e}}}
 
--  First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``pc.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
--  Create the array of maximum flow rates using the array of tubing diameters and the maximum head loss through the dosing tubes.
+ - First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``pc.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
+ - Create the array of maximum flow rates using the array of tubing diameters and the maximum head loss through the dosing tubes.
 
 .. code:: python
 
