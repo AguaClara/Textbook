@@ -537,10 +537,11 @@ Baffle Spacing
 Finally, we can find the space between baffles, :math:`S`. The equation for :math:`S` is taken from an intermediate step in the :math:`W_{Min, \, \Pi_{H_eS}}` derivation where we obtained, :math:`W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}`. Rearranging for :math:`S`, we get:
 
 .. math::
+   :label: Floc_baffle_spacing
 
-  S = \left( \frac{K}{2 H_e \bar G^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}
+   S = \left( \frac{K}{2 H_e \bar G^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}
 
-Fortunately, we either know or have already design for all the parameters in this equation
+Fortunately, we either know or have already designed all the parameters in this equation.
 
 Checking the Flocculator Design
 =============================================

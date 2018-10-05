@@ -1,11 +1,10 @@
+Flocculator Design Solution
+===========================
+
 .. code:: python
 
     from aide_design.play import*
 
-
-
-DC Hydraulic Flocculation
-=========================
 
 In this design challenge you will design a vertical flow hydraulic flocculator. You will use the flow rate of ``flow_plant = 20 L/s`` as your default design value.
 
@@ -141,22 +140,15 @@ Plot :math:`G\theta` as a function of the operating temperature given the head l
    :align: center
    :alt: Gtheta_vs_temperature
 
-   The :math:`\bar G\theta` delivered by a flocculator increases with temperature. This is because the fluid becomes less viscous as the temperature increases. Note that the apparent linearity of this graph is because the inverse of the square root of kinematic viscosity varies linearly with temperature over this temperature range.
+   The :math:`\bar G\theta` delivered by a flocculator increases with temperature. Note that the apparent linearity of this graph is because the inverse of the square root of kinematic viscosity varies linearly with temperature over this range!
 
 
 4)
 ~~
 
-The following floc model equation creates the link between :math:`\bar Gt` and flocculator performance.
+The Equation :eq:`pClam` creates the link between :math:`\bar G \theta` and flocculator performance. What does the floc model and :numref:`figure_Gtheta_vs_temperature` tell you about flocculator performance and flocculator design? Explain why performance varies with temperature. Explain how temperature influences collisions between particles. What temperature should be used to design flocculators?
 
-$pC^\* = :raw-latex:`\frac{3}{2}`:raw-latex:`\log `:raw-latex:`\left`(
-{:raw-latex:`\frac{2}{3}`:raw-latex:`\pi `k:raw-latex:`\frac{{d_{Clay}^2}}{{\Lambda _0^2}}`:raw-latex:`\bar `Gt:raw-latex:`\alpha  `+
-1} :raw-latex:`\right`) $
-
-What does the floc model and the graph tell you about flocculator performance and flocculator design? Explain why performance varies with temperature.
-
-Flocculator performance improves with warmer temperatures because the fluid deforms more given the same input energy. Flocculators should be designed to perform well based on the coldest operating temperature that they will encounter.
-
+Flocculator performance improves with warmer temperatures because the fluid deforms more given the same input energy. The fluid deforms more because it is less viscous at higher temperatures. Flocculators should be designed to perform well based on the coldest operating temperature that they will encounter.
 
 5)
 ~~
@@ -224,12 +216,12 @@ Calculate the minimum channel width required to achieve H/S>3. The channel can b
 
     print('The minimum channel width is', width_floc_min_est(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
 
-The minimum channel width is 12.05 centimeter
+The minimum channel width is 11.64 centimeter
 
 9)
 ~~
 
-What is the minimum channel width given the additional constraint that it be constructable? Use the max function to find the true minimum channel width given both constraints.
+What is the minimum channel width given the additional constraint that must be built by humans? Use the max function to find the true minimum channel width given both constraints.
 
 .. code:: python
 
@@ -250,7 +242,7 @@ Calculate the number of channels by taking the total flocculator width (see step
     def num_channel(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
          num = (width_floc_total(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)/
             (width_floc_min(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))).to(u.dimensionless)
-    # floor function with step size 2
+         # floor function with step size 2
          num = np.floor(num/2)*2
          return int(max(num,2))
 
@@ -261,7 +253,7 @@ There are 2 channels.
 11)
 ~~~
 
-Calculate the actual channel width based on the number of channels the total flocculator width.
+Calculate the actual channel width based on the number of channels and the total flocculator width.
 
 .. code:: python
 
@@ -279,7 +271,9 @@ The actual flocculator channel width is 53.35 centimeter
 
 Calculate the *maximum* distance between expansions. This occurs for the largest allowable H/S ratio. Note that this isn’t accounting for the integer requirement for the number of baffle spaces per channel yet.
 
-:math:`{H_{{e_{Max}}}} = {\left[ {\frac{{{K_e}}}{{2\nu {{\bar G}^2}}}{{\left( {\frac{{Q{\Pi _{H{S_{Max}}}}}}{W}} \right)}^3}} \right]^{\frac{1}{4}}}`
+.. math::
+
+  {H_{{e_{Max}}}} = {\left[ {\frac{{{K_e}}}{{2\nu {{\bar G}^2}}}{{\left( {\frac{{Q{\Pi _{H{S_{Max}}}}}}{W}} \right)}^3}} \right]^{\frac{1}{4}}}
 
 .. code:: python
 
@@ -296,7 +290,7 @@ Calculate the *maximum* distance between expansions. This occurs for the largest
 
     print('The maximum distance between expansions', height_exp_max(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
 
-The maximum distance between expansions 1.102 meter
+The maximum distance between expansions 1.074 meter
 
 13)
 ~~~
@@ -331,12 +325,8 @@ The actual distance between expansions is 1 meter
 15)
 ~~~
 
-Calculate the spacing between baffles based on the target velocity gradient.
+Calculate the spacing between baffles based on the target velocity gradient using :eq:`Floc_baffle_spacing`.
 
-$ {S} = {:raw-latex:`\left`(
-{:raw-latex:`\frac{{{K_e}}}{{2\nu {{\bar G}^2}}{H_{{e}}}}`}
-:raw-latex:`\right`)^{:raw-latex:`\frac{1}{3}`}}
-:raw-latex:`\frac{Q}{W}`$
 
 .. code:: python
 
@@ -351,7 +341,7 @@ $ {S} = {:raw-latex:`\left`(
 
     print ('The spacing between baffles is', spacing_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
 
-The spacing between baffles is 0.1898 meter
+The spacing between baffles is 0.1832 meter
 
 16)
 ~~~
@@ -366,7 +356,7 @@ How many baffle spaces would fit in the channel(s) given the length of the flocc
 
     print ('The number of baffle spaces that would fit in the channels is', num_baffles(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
 
-The number of baffle spaces that would fit in the channels is 39
+The number of baffle spaces that would fit in the channels is 41
 
 17)
 ~~~
@@ -390,7 +380,7 @@ How many baffle spaces are needed to create the required collision potential? No
 
     print ('The minimum number of baffles required is', num_baffle_min(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
 
-The collision potential (Gt) per baffle space is 944 dimensionless. The minimum number of baffles required is 39
+The collision potential (Gt) per baffle space is 944 dimensionless. The minimum number of baffles required is 41
 
 18)
 ~~~
@@ -420,7 +410,7 @@ Calculate the average velocity of the water in the flocculator. This is the velo
 
     print ('The average velocity of the water in the flocculator is', vel_floc_ave(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
 
-The average velocity of the water in the flocculator is 0.1975 meter / second
+The average velocity of the water in the flocculator is 0.2046 meter / second
 
 20)
 ~~~
@@ -464,66 +454,79 @@ Create plots showing number of channels, number of expansions per water depth, t
     expansions=np.zeros(plot_points)
     for i in range(plot_points):
         expansions[i] = num_expansions(flow_plant[i], headloss_floc_BOD, Gt_BOD, T_BOD)
+    fig, ax = plt.subplots()
     ax.plot(flow_plant,expansions,'-')
-
     ax.set(xlabel='Plant Flow Rate (L/s)')
     ax.set(ylabel='Expansion per baffle space')
-    plt.title('Expansions per baffle space vs plant flow')
+    fig.savefig('Flocculation/Images/Expansions_per_baffle_space_vs_plant_flow')
     plt.show()
-
 
     channels=np.zeros(plot_points)
     for i in range(plot_points):
         channels[i]=num_channel(flow_plant[i], headloss_floc_BOD, Gt_BOD, T_BOD)
+    fig, ax = plt.subplots()
     ax.plot(flow_plant,channels,'-')
-
     ax.set(xlabel='Plant Flow Rate (L/s)')
     ax.set(ylabel='Number of channels')
-    plt.title('Number of channels vs plant flow')
+    fig.savefig('Flocculation/Images/Number_of_channels_vs_plant_flow')
     plt.show()
-
 
     baffles=np.zeros(plot_points)
     for i in range(plot_points):
         baffles[i]=num_baffles(flow_plant[i], headloss_floc_BOD, Gt_BOD, T_BOD)
+    fig, ax = plt.subplots()
     ax.plot(flow_plant,baffles,'-')
-
     ax.set(xlabel='Plant Flow Rate (L/s)')
     ax.set(ylabel='Number of Baffle Spaces')
-    plt.title('Number of baffle spaces vs plant flow')
+    fig.savefig('Flocculation/Images/Number_of_baffle_spaces_vs_plant_flow')
     plt.show()
-
 
     width_floc_channel=np.zeros(plot_points)*u.m
     for i in range(plot_points):
         width_floc_channel[i]=width_floc(flow_plant[i], headloss_floc_BOD, Gt_BOD, T_BOD)
+    fig, ax = plt.subplots()
     ax.plot(flow_plant,width_floc_channel,'-')
-
     ax.set(xlabel='Plant Flow Rate (L/s)')
     ax.set(ylabel='Floc Channel Width (m)')
     plt.title('Floc channel width vs plant flow')
+    fig.savefig('Flocculation/Images/Floc_channel_width_vs_plant_flow')
     plt.show()
 
-.. figure:: DC_Hydraulic_Flocculation_Solution_files/DC_Hydraulic_Flocculation_Solution_52_0.png
-   :alt: png
+.. _figure_Expansions_per_baffle_space_vs_plant_flow:
 
-   png
+.. figure:: Images/Expansions_per_baffle_space_vs_plant_flow.png
+   :width: 400px
+   :align: center
+   :alt: Expansions per baffle space vs plant flow
 
-.. figure:: DC_Hydraulic_Flocculation_Solution_files/DC_Hydraulic_Flocculation_Solution_52_1.png
-   :alt: png
+   The number of expansions per baffle space decreases rapidly with flow rate. These results are a function of the flocculator depth and of the target head loss used for the design.
 
-   png
+.. _figure_Number_of_channels_vs_plant_flow:
 
-.. figure:: DC_Hydraulic_Flocculation_Solution_files/DC_Hydraulic_Flocculation_Solution_52_2.png
-   :alt: png
+.. figure:: Images/Number_of_channels_vs_plant_flow.png
+   :width: 400px
+   :align: center
+   :alt: Number of channels vs plant flow
 
-   png
+   The number of channels is less than 2 for a wide range of flows. This is because the required residence time in the flocculator is so low. We may eventually want to create a design that makes it possible to have an odd number of flocculator channels so that we can use a single channel for low flow rates.
 
-.. figure:: DC_Hydraulic_Flocculation_Solution_files/DC_Hydraulic_Flocculation_Solution_52_3.png
-   :alt: png
+.. _figure_Number_of_baffle_spaces_vs_plant_flow:
 
-   png
+.. figure:: Images/Number_of_baffle_spaces_vs_plant_flow.png
+   :width: 400px
+   :align: center
+   :alt: Number of baffle spaces vs plant flow
 
+   The number of baffle spaces is lower for low flow rates because those flocculators have additional expansions. At high flow rates the number of baffles spaces increases because the residence time per baffle space decreases. The residence time per baffle space decreases when the number of channels jumps from 2 to 4.
+
+.. _figure_Floc_channel_width_vs_plant_flow:
+
+.. figure:: Images/Floc_channel_width_vs_plant_flow.png
+   :width: 400px
+   :align: center
+   :alt: Floc channel width vs plant flow
+
+   The flocculator channel width varies linearly with flow rate for a constant number of channels. The exception is for flows below about 35 L/s. In that flow rate the requirement of 2 channels that are the length of the sedimentation tank is excessive and results in more collision potential than needed. We need a new design solution to handle this suboptimal design for flows lower than 35 L/s.
 23)
 ~~~
 

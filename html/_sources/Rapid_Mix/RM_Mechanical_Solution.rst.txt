@@ -3,9 +3,8 @@
   from aide_design.play import*
 
 
-
-You should not use any For or While loops in this design challenge.
-===================================================================
+Rapid Mix Mechanical Solution
+=============================
 
 Numpy, fortunately, understands how to do matrix/array operations index by index. So if you have two length 5 arrays that you want to multiply index by index, you can simply multiply them! This will allow you to focus more on the rest of the code rather than frustrating indexing errors.
 
@@ -127,9 +126,7 @@ here. <https://github.com/hgrecco/pint/blob/c5925bfdab09c75a26bb70cd29fb3d34eed5
     RapidMixShaftPower = rapid_mix_shaft_power(FlowPlant,G,t,TempDesign).to(u.hp)
     print('The required shaft power is', RapidMixShaftPower)
 
-::
-
-    The required shaft power is 4.0 hp
+The required shaft power is 4.0 hp
 
 4)
 ~~
@@ -143,9 +140,7 @@ You may assume 100% efficiency in conversion of shaft power to increased potenti
     ElevDrop = (RapidMixShaftPower/ (FlowPlant * pc.density_water(TempDesign) * pc.gravity)).to(u.m)
     print('The equivalent height is',  ElevDrop)
 
-::
-
-    The equivalent height is 6.034 m
+The equivalent height is 6.034 m
 
 5a)
 ~~~
@@ -171,9 +166,7 @@ Our next task is to select a motor that can provide the required shaft power, as
 
     MotorHpArray
 
-::
-
-        Horsepower  Premium Efficiency
+    Horsepower  Premium Efficiency
     0         0.25                  64
     1       0.3333                  68
     2          0.5                  71
@@ -211,9 +204,7 @@ It is common in engineering design to have target design value that must be roun
     MotorDesign = ut.ceil_nearest(RapidMixShaftPower,MotorHpArray)
     print('The rapid mix motor has',  MotorDesign)
 
-::
-
-    The rapid mix motor has 5 hp
+The rapid mix motor has 5 hp
 
 
 6a)
@@ -236,9 +227,7 @@ How to make sense of this? The parentheses around the entire output specify an a
     MotorIndex=(np.where(MotorEfficiencydf['Horsepower'] == MotorDesign.magnitude))[0][0]
     MotorIndex
 
-::
-
-    8
+8
 
 .. _b-1:
 
@@ -262,9 +251,7 @@ Note: it would have been much easier to simply define a variable and type in the
 
     print('The motor efficiency is ',MotorEfficiency,'.')
 
-::
-
-    0.896
+0.896
     The motor efficiency is 0.896.
 
 You might think that the rapid mix unit will take less electrical power when the water is warmer. But that isn’t the case because the Reynolds number for the rapid mix propeller is quite high and thus the drag coefficient is independent of Re. This means that the torque required to spin the propeller doesn’t change as the viscosity of the water changes. It would be possible to run the propeller slower when the water is warmer because the required energy dissipation rate is lower, but that would require a variable speed drive. You could add a variable speed motor controller to take advantage of this. However, the bigger problem is that we don’t yet have a good model explaining what rapid mix does.
@@ -282,6 +269,15 @@ The motor specifications are given below. |Rapid Mix motor|
 
 The `motor specifications <https://www.mcmaster.com/#5990k314/=19d4hod>`__ indicate that the efficiency is 89.5% which is very close to the premium efficiency standard.
 
+.. _figure_Rapid_Mix_motor:
+
+.. figure:: https://www.mcmaster.com/mva/library/20150803/5990k314l.gif
+   :width: 400px
+   :align: center
+   :alt: Rapid Mix motor
+
+   Rapid Mix motor
+
 8)
 ~~
 
@@ -292,9 +288,7 @@ How much does the motor cost? Create a variable showing the cost of the motor in
     COST_MOTOR = 714.64 * u.USD
     print('The cost of the motor is', COST_MOTOR)
 
-::
-
-    The cost of the motor is 714.6 dollar
+The cost of the motor is 714.6 dollar
 
 9)
 ~~
@@ -393,45 +387,3 @@ The cumulative energy costs for a period of 25 years is 105794.0 USD
 ~~~
 
 Write a paragraph describing what you learned from this design challenge. Include reflections on the temptation to use a standard design, the low capital cost of energy wasting designs, and the long term implications of engineering that isn’t guided by a goal of sustainability.
-
-Insert Paragraph Here:
-~~~~~~~~~~~~~~~~~~~~~~
-
-Part 2: Energy dissipation rates in free jets (think flow expansion!)
-=====================================================================
-
-11)
-~~~
-
-Create a function to return maximum energy dissipation rate along the centerline of a free jet given inputs of distance downstream of the jet (along the centerline), jet velocity, and initial jet diameter. You will find the Rapid Mix powerpoint useful in finding a relationship between these variables.
-
-Use your function to create a graph of the centerline (maximum) energy dissipation rate as a function of distance from jet origin. \* Use an initial diameter of DiamJet = 10 cm and a velocity of VelJet = 1 m/s. \* Use a range of 7 to 20 jet diameters when creating the graph. \* Use units of meters for the x-axis and W/kg for the y-axis. Make sure to label your axes correctly.
-
-.. code:: python
-
-    DiamJet = 10*u.cm
-    VelJet = 1*(u.m/u.s)
-
-    def energy_dissipation_rate(x, Diam, Velocity):
-
-        dissipation = (50 * Diam**3 * Velocity**3 / ((x - (2 * Diam))**4))
-        return dissipation.to(u.m**2/(u.s**3))
-
-    DistanceDownstream = (np.array(np.linspace(7,20,100))*DiamJet).to(u.m)
-
-    print(energy_dissipation_rate(DistanceDownstream, DiamJet, VelJet)[1])
-
-    ax.plot(DistanceDownstream, energy_dissipation_rate(DistanceDownstream, DiamJet, VelJet), 'r-')
-    ax.set(xlabel='Distance from jet origin (m)')
-    ax.set(ylabel='Energy dissipation rate (W/kg)')
-    plt.title('Energy dissipation rate vs Distance from jet origin')
-    plt.show()
-
-0.7212 meter \*\* 2 / second \*\* 3
-
-.. figure:: DC_Rapid_Mix_Solution_files/DC_Rapid_Mix_Solution_43_1.png
-   :alt: png
-
-   png
-
-.. |Rapid Mix motor| image:: https://www.mcmaster.com/mva/library/20150803/5990k314l.gif

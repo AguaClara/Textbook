@@ -1,3 +1,6 @@
+Filtration Design Solution
+==========================
+
 .. code:: python
 
     from aide_design.play import*
