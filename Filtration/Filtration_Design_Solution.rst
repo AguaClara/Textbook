@@ -1,5 +1,6 @@
+**************************
 Filtration Design Solution
-==========================
+**************************
 
 .. code:: python
 
@@ -223,7 +224,6 @@ To reiterate, the three components that contribute to the depth of water lost in
 
 The total depth of water that is lost due to refilling the filter box is 1.8 meter
 
-
 12)
 ~~~
 
@@ -299,7 +299,7 @@ Now we will evaluate the very first data set from a full scale SRSF. The perform
    :align: center
    :alt: Filter run time vs removal efficiency
 
-   What is this
+    The pC* for this filter run was not very good and suggests that either some particles were being released by the new sand or the coagulant dose was not optimal.
 
 
 .. _figure_Filter_run_time_vs_effluent_turbidity:
@@ -309,7 +309,7 @@ Now we will evaluate the very first data set from a full scale SRSF. The perform
    :align: center
    :alt: Filter run time vs effluent turbidity
 
-The filter performance deteriorated over the length of the filter run. This does not match the expectations that we have based on laboratory experiments with filters. AguaClara has limited data of filter performance as a function of time. However, the `recent data from Tamara <http://aguaclara.github.io/index.html>`__ (select Tamara from the drop down menu of plants) suggests that filtered water turbidity is consistently lower than in this first run of the filter that you plotted above.
+   The filter performance deteriorated over the length of the filter run. This does not match the expectations that we have based on laboratory experiments with filters. AguaClara has limited data of filter performance as a function of time. However, the `recent data from Tamara <http://aguaclara.github.io/index.html>`__ (select Tamara from the drop down menu of plants) suggests that filtered water turbidity is consistently lower than in this first run of the filter that you plotted above.
 
 16)
 ~~~

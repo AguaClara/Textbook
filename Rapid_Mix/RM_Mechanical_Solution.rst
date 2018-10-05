@@ -1,10 +1,11 @@
+******************************
+Rapid Mix Mechanical Solution
+******************************
+
 .. code:: python
 
   from aide_design.play import*
 
-
-Rapid Mix Mechanical Solution
-=============================
 
 Numpy, fortunately, understands how to do matrix/array operations index by index. So if you have two length 5 arrays that you want to multiply index by index, you can simply multiply them! This will allow you to focus more on the rest of the code rather than frustrating indexing errors.
 
@@ -12,14 +13,10 @@ Numpy, fortunately, understands how to do matrix/array operations index by index
 
 This is more elegant and easier to troubleshoot than:
 
-``array3 = np.empty_like(array1) for i in range (0,len(array1)):     array3[i] = array1[i]*array2[i]``
+``array3 = np.empty_like(array1) for i in range (0,len(array1)): array3[i] = array1[i]*array2[i]``
 
-|
-| Numpy can handle addition, subtraction, multiplication, and division
-  between arrays.
+Numpy can handle addition, subtraction, multiplication, and division between arrays.
 
-DC Rapid Mix Solution
-=====================
 
 This design challenge contains two parts: - In the first section, we will explore the energy requirements and operating costs for conventional mechanized rapid mix. This provides an opportunity to learn about the consequences of failing to design for sustainability. Rapid mix is both poorly understood and potentially very important in determining the successful operation of a water treatment plant. - In the second section, we will explore the energy dissipation rate in a free jet.
 
@@ -184,13 +181,6 @@ Our next task is to select a motor that can provide the required shaft power, as
     14         100                  95
     15         250                95.8
 
-[
-
-.. raw:: latex
-
-   \begin{pmatrix}0.25 & 0.3333333333333333 & 0.5 & 0.75 & 1.0 & 1.5 & 2.0 & 3.0 & 5.0 & 7.5 & 10.0 & 15.0 & 25.0 & 50.0 & 100.0 & 250.0\end{pmatrix}
-
-horsepower]
 
 5b)
 ~~~
@@ -228,8 +218,6 @@ How to make sense of this? The parentheses around the entire output specify an a
     MotorIndex
 
 8
-
-.. _b-1:
 
 6b)
 ~~~

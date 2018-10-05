@@ -1,8 +1,9 @@
+*************************************
 Flow Control and Measurement Solution
-=====================================
+*************************************
 
 A brief programming guide
--------------------------
+=========================
 
  1. Do not use a numerical or iterative solution when an analytical solution is easily available.
  2. Whenever a function has the potential to be used multiple times, create a function call that includes the parameters that could potentially change.
@@ -13,7 +14,7 @@ A brief programming guide
  7. For everyone’s sake, use logical and reasonable variable names. `Here is AguaClara variable naming convention <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`__
 
 A brief Design Challenge guide
-------------------------------
+==============================
 
  1. Read the Problem statement in its entirety before beginning a problem. If you don’t immediately know what to do, read it again, thoroughly. If you are getting stuck, read it a third time. If you have a good understanding of what the problem is asking and are still having trouble, TAs can help through email or office hours.
  2. If you decide to email a TA, make sure the other two are CC’ed. This minimizes the time you will have to wait until one responds.
@@ -29,7 +30,7 @@ A brief Design Challenge guide
   from aide_design.play import*
 
 Vertical orifice equation
--------------------------
+=========================
 
 1)
 ~~
@@ -97,7 +98,7 @@ The steps for making the graph are as follows:
 Write a paragraph about what the graph means by explaining the following two items: - Explain why the vertical orifice equation predicts more flow when the water level is below the center of the orifice and predicts less flow when the water level is above the center of the orifice. It might help to draw a picture of what the equations are describing to understand what is happening here! - Explain how the horizontal orifice equation function from ``physchem.py`` predicts the flow rate for submergence depths that are negative. You will need to find the function and look at the code.
 
 Explanation
-~~~~~~~~~~~
+-----------
 
 The vertical orifice has the lower part of the orifice partially submerged before the horizontal orifice has any part submerged. This explains why the vertical orifice has more flow than the horizontal orifice between -0.5 and 0.
 
@@ -110,7 +111,7 @@ The difference between the two equations becomes negligible for submergence grea
 For negative depths of submergence the horizontal orifice function uses an if statement to set the flow rate through the orifice equal to zero.
 
 Linear Flow Orifice Meter (LFOM)
---------------------------------
+================================
 
 A linear flow orifice meter is used in AguaClara plants to measure the plant flow rate and to provide a linear relationship between flow rate and the depth of water in the entrance tank. Below, we use the LFOM code to obtain a design for a linear flow orifice meter. Your task will be to test this design using the orifice equations to see if it is correct.
 
@@ -269,7 +270,7 @@ Explain why all of the bottom several rows have the same number of orifices for 
 The number of orifices in a row is limited by the circumference of the LFOM. For high flow rates the ideal number of orifices in the first row exceeds the space and thus the flow target is not met for the first several rows. Each of these rows simply has the maximum number that can fit around the pipe.
 
 Laminar Flow Based Flow Controller
-----------------------------------
+==================================
 
 You will design (by completing the following questions) a laminar flow controller for chlorine feed for a plant design flow rate of 50 L/s.
 

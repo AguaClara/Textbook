@@ -1,5 +1,6 @@
+*****************************
 Sedimentation Design Solution
-=============================
+*****************************
 
 .. code:: python
 
@@ -9,7 +10,7 @@ Sedimentation Design Solution
 
 
 Introduction
-------------
+============
 
 The AguaClara team would like to understand how to design larger sedimentation tanks. In this design challenge you will learn how some of the sedimentation tank components work together. The design for an entire sedimentation tank is somewhat complex and you are welcome to review the sedimentation tank design file to see the latest AguaClara design team solution. The sedimentation tank design has evolved rapidly since 2005 and our fabrication techniques have evolved as well.
 
@@ -71,7 +72,7 @@ The following cell has constants defined for you to use in designing your sedime
     g = pc.gravity
 
 Diffusers
----------
+=========
 
 1:
 ~~
@@ -301,7 +302,7 @@ The best estimate of the exit head loss for the diffuser is 0.6176 centimeter
     It is reasonable to neglect the effect of the upflow velocity. The error is 0.005755 dimensionless
 
 Manifold and Launders
----------------------
+=====================
 
 Flow distribution between and within sedimentation tanks is an important design component to ensure good sedimentation performance. We need to distribute flow uniformly between sedimentation tanks and also between diffusers on the inlet manifolds.
 
@@ -435,10 +436,10 @@ SDR is the same as given in Problem 3 (SDR = 26).
     print('The nominal diameter of the sedimentation tank manifold is',ND_sed_manifold)
 
 The minimum inner diameter of the sedimentation tank manifold is 7.266 inch
-    The nominal diameter of the sedimentation tank manifold is 8 inch
+The nominal diameter of the sedimentation tank manifold is 8 inch
 
 Sedimentation Tank Bays and Number of Diffusers
------------------------------------------------
+===============================================
 
 15:
 ~~~
@@ -515,7 +516,7 @@ How many diffusers are required in each tank? Assume the maximum length of the u
 The number of diffuser pipes per sed tank is 98
 
 Plate Settlers
---------------
+==============
 
 You may assume that the active area of the sedimentation tank is equal to the top area of the floc blanket zone. This isn’t quite right because of the geometric constraints from the floc hopper, inlet channel, settled water channel, and angled plates. However, it is a good approximation for these long tanks. We will use this approximation to determine the plate settler details.
 

@@ -1,5 +1,6 @@
+*******************************
 Mechanical Flocculator Solution
-================================
+*******************************
 
 .. code:: python
 
@@ -16,8 +17,8 @@ The ``floc_model.py`` file contains many useful functions which includes clay, c
 
 The course slides found on the syllabus will be very useful for obtaining and understanding relevant equations for this design challenge and ones in the future.
 
-Conventional Design Guidelines:
--------------------------------
+Conventional Design Guidelines
+==============================
 
 This table for mechanical flocculators is taken from Sincero and Sincero’s 1996 textbook: *Environmental Engineering: A Design Approach*
 
@@ -39,8 +40,8 @@ This table for mechanical flocculators is taken from Sincero and Sincero’s 199
 
 Dissolved organic matter impacts the color of the water. Perhaps the reason for lower G values for color removal is because flocs created from dissolved organic matter are weaker or less dense. Hence, a lower G is needed to allow them to grow large enough for removal in the sedimentation tank.
 
-Mechanical Flocculator Design:
-------------------------------
+Mechanical Flocculator Design
+=============================
 
 The conventional design guidelines provide a range of values with little guidance on how to select “velocity gradient” or G values. One approach is to hope for the best and choose a G value in the middle of the range. We will pick the G value that is apparently appropriate for both low and high turbidity waters.
 
