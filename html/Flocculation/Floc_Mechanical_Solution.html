@@ -108,9 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html#dc-rapid-mix-solution">DC Rapid Mix Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html#part-1-temperature-effects-energy-use-and-operating-costs">Part 1: Temperature effects, energy use, and operating costs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Part 2: Energy dissipation rates in free jets (think flow expansion!)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
 <ul class="current">
@@ -121,8 +119,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Floc_Examples.html">Flocculation Examples</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Mechanical Flocculator Solution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#conventional-design-guidelines">Conventional Design Guidelines:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mechanical-flocculator-design">Mechanical Flocculator Design:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#conventional-design-guidelines">Conventional Design Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mechanical-flocculator-design">Mechanical Flocculator Design</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">1)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">2)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">3)</a></li>
@@ -156,8 +154,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html#dc-stacked-rapid-sand-filtration">DC Stacked Rapid Sand Filtration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html#filter-constriction-hypothesis">Filter constriction hypothesis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -257,7 +253,7 @@ You will also play with fractal flocculation model equations to get a sense of h
 <p>The <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> file contains many useful functions which includes clay, coagulant and humic acid material properties, fractal model equations, and flocculation model equations. <strong>We recommend that you open the ``floc_model.py`` and have it side by side with this design challenge for easy reference.</strong></p>
 <p>The course slides found on the syllabus will be very useful for obtaining and understanding relevant equations for this design challenge and ones in the future.</p>
 <div class="section" id="conventional-design-guidelines">
-<h2>Conventional Design Guidelines:<a class="headerlink" href="#conventional-design-guidelines" title="Permalink to this headline">¶</a></h2>
+<h2>Conventional Design Guidelines<a class="headerlink" href="#conventional-design-guidelines" title="Permalink to this headline">¶</a></h2>
 <p>This table for mechanical flocculators is taken from Sincero and Sincero’s 1996 textbook: <em>Environmental Engineering: A Design Approach</em></p>
 <table border="1" class="docutils">
 <colgroup>
@@ -305,7 +301,7 @@ removal</td>
 <p>Dissolved organic matter impacts the color of the water. Perhaps the reason for lower G values for color removal is because flocs created from dissolved organic matter are weaker or less dense. Hence, a lower G is needed to allow them to grow large enough for removal in the sedimentation tank.</p>
 </div>
 <div class="section" id="mechanical-flocculator-design">
-<h2>Mechanical Flocculator Design:<a class="headerlink" href="#mechanical-flocculator-design" title="Permalink to this headline">¶</a></h2>
+<h2>Mechanical Flocculator Design<a class="headerlink" href="#mechanical-flocculator-design" title="Permalink to this headline">¶</a></h2>
 <p>The conventional design guidelines provide a range of values with little guidance on how to select “velocity gradient” or G values. One approach is to hope for the best and choose a G value in the middle of the range. We will pick the G value that is apparently appropriate for both low and high turbidity waters.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flow_plant</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">G_mech</span> <span class="o">=</span> <span class="mi">70</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>

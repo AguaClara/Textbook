@@ -1,5 +1,6 @@
+***************************
 Flocculation Model Solution
-===========================
+***************************
 
 .. code:: python
 
@@ -174,7 +175,7 @@ The final spacing between clay particles is still smaller than the inner viscous
 
 
 Real-world considerations of flocculation
------------------------------------------
+=========================================
 
 Now that you have an augmented understanding of flocculation theory, we can consider a few ways in which the theory applies to real-world flocculators.
 
@@ -183,7 +184,7 @@ In this section, there are no calculations for you to do or code for you to writ
  **There are two conceptual questions for you to answer at the end of the section.** Read through and focus on understanding the concepts before you try to answer the questions.
 
 Coagulant distribution in a reactor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------
 
 The flocculation model accounts for loss of coagulant nanoparticles to the reactor walls. The loss of coagulant nanoparticles is assumed to scale with the area of the flocculator walls divided by the total area of clay and flocculator walls. This loss is significant for low turbidity and small scale flocculators, such as the 1 liter per second flocculator AguaClara recently designed.
 
@@ -215,7 +216,7 @@ We will evaluate the situation where the turbidity is 10 NTU and the coagulant d
     print('The fraction of the clay surface area that is is coated is', fraction_coated)
 
 Time scale of flocculation
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 Now we want to estimate the average time required for an initial successful collision between two primary clay particles that are partially coated with coagulant nanoclusters. Note that for the first collision, the current floc size is the same as the clay size. We will use the average energy dissipation rate for the mechanical flocculator as found above.
 
@@ -233,7 +234,7 @@ Now we want to estimate the average time required for an initial successful coll
 This collision time is quite fast and is the origin of the question, “why does flocculation require 30 minutes?” as mandated in the Ten State Standards.
 
 AguaClara flocculation model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 We will now briefly consider an AguaClara flocculator design with an average energy dissipation rate of approximately 11 mW/kg and a residence time of 8.1 minutes. The design temperature is 15 degC.
 
@@ -252,7 +253,7 @@ Below is a calculation for the Gt value of this flocculator.
     print('The AguaClara Gt value is', Gtime_floc_aguaclara)
 
 Coagulant coverage fraction of a particle
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------
 
 This section solves the integrated flocculation model for :math:`\Gamma`. We simplify the model by recognizing that the spacing between particles at the end of the flocculation process is much greater than the initial particle spacing. This means that the raw water turbidity drops out of the equation. The value of the rate constant for collisions is k = 0.24. We start with the equation below:
 
@@ -278,16 +279,18 @@ Note that the specified flocculation model applies to both hydraulic and mechani
     print('The Gamma value is', gamma_aguaclara_design)
 
 Residence time and coagulant coverage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------
 
 If you doubled the residence time of the flocculator, the required coagulant coverage of clay changes according to the model. By doubling the residence time, the required coagulant coverage is reduced by a factor of 2.
 
 Modeling flocculation in the presence of humic acid, with pC\* as the performance metric
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------------------------------------------------
 
 The flocculation model predicts the settled water turbidity given the composition of the raw water, the flocculator characteristics, and a fitting parameter that must be a function of the sedimentation tank characteristics. This fitting parameter is k, which is the same as the rate constant for collisions described above. The model is far from complete - it doesn’t yet describe the effects of floc blankets. Below we have created a plot showing model predictions for a range of coagulant and humic acid (dissolved organic matter) concentrations. The plot uses our approximation for pC\* described in class and shown below:
 
-.. math:: pC^*=\frac{3}{2}log{(\frac{2}{3}\pi k \frac{d_p^{2}}{\Lambda_0^{2}}Gt\alpha + 1)}
+.. math::
+
+   pC^*=\frac{3}{2}log{(\frac{2}{3}\pi k \frac{d_p^{2}}{\Lambda_0^{2}}Gt\alpha + 1)}
 
 .. code:: python
 
@@ -340,7 +343,7 @@ The flocculation model predicts the settled water turbidity given the compositio
 There is a lot to learn from this graph!!!!!! It appears that for any given coagulant dose, humic acid concentration significantly affects pC*. Additionally, notice the diminishing returns of adding more coagulant. This effect appears to be independent of humic acid concentration (see the red curve).
 
 Modeling flocculation in the presence of humic acid, with settled water turbidity as the performance metric
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------------------------------------------------------------------
 
 We will now display a similar plot which shows settled water turbidity instead of pC*. Our initial turbidity is 10 NTU, and we will four curves for separate humic acid concentrations.
 
@@ -391,8 +394,6 @@ Looking at the interactions between coagulant, clay, and humic acid from this pe
 
 Why does the AguaClara flocculation model predict that adding 1 mg/L of aluminum has no effect on turbidity when the humic acid concentration is 20 mg/L?
 
-Your Answer Here
-~~~~~~~~~~~~~~~~
 
 At low concentrations of coagulant every coagulant nanoparticle surface is completely coated with humic acid and thus they aren’t sticky at all.
 
@@ -404,8 +405,6 @@ It is tempting to assume that all the coagulant dosed gets attached to clay part
 
 Identify and explain two significant reasons as to why this assumption fails.
 
-Your Answer Here
-~~~~~~~~~~~~~~~~
 
 1. Coagulant is lost to the walls of the reactors
 2. Coagulant is lost to humic acid

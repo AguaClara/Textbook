@@ -104,8 +104,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#vertical-orifice-equation">Vertical orifice equation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">1)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">2)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">3)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#explanation">Explanation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#explanation">Explanation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#linear-flow-orifice-meter-lfom">Linear Flow Orifice Meter (LFOM)</a><ul>
@@ -144,9 +146,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html#dc-rapid-mix-solution">DC Rapid Mix Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html#part-1-temperature-effects-energy-use-and-operating-costs">Part 1: Temperature effects, energy use, and operating costs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Part 2: Energy dissipation rates in free jets (think flow expansion!)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
 <ul>
@@ -175,8 +175,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html#dc-stacked-rapid-sand-filtration">DC Stacked Rapid Sand Filtration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html#filter-constriction-hypothesis">Filter constriction hypothesis</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -354,14 +352,14 @@
 <div class="section" id="id3">
 <h3>3)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>Write a paragraph about what the graph means by explaining the following two items: - Explain why the vertical orifice equation predicts more flow when the water level is below the center of the orifice and predicts less flow when the water level is above the center of the orifice. It might help to draw a picture of what the equations are describing to understand what is happening here! - Explain how the horizontal orifice equation function from <code class="docutils literal notranslate"><span class="pre">physchem.py</span></code> predicts the flow rate for submergence depths that are negative. You will need to find the function and look at the code.</p>
-</div>
 <div class="section" id="explanation">
-<h3>Explanation<a class="headerlink" href="#explanation" title="Permalink to this headline">¶</a></h3>
+<h4>Explanation<a class="headerlink" href="#explanation" title="Permalink to this headline">¶</a></h4>
 <p>The vertical orifice has the lower part of the orifice partially submerged before the horizontal orifice has any part submerged. This explains why the vertical orifice has more flow than the horizontal orifice between -0.5 and 0.</p>
 <p>The horizontal orifice has higher flow rates between 0 and 0.5 because it is fully submerged when the vertical orifice is still not fully submerged.</p>
 <p>At the elevation where the vertical orifice is first fully submerged the flow rate through the vertical orifice is less than the flow rate through the horizontal orifice. This is a result of the nonlinear relationships between depth of submergence and velocity.</p>
 <p>The difference between the two equations becomes negligible for submergence greater than 1 diameter.</p>
 <p>For negative depths of submergence the horizontal orifice function uses an if statement to set the flow rate through the orifice equal to zero.</p>
+</div>
 </div>
 </div>
 <div class="section" id="linear-flow-orifice-meter-lfom">

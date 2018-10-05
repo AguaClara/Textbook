@@ -1,5 +1,6 @@
-Part 2: Energy dissipation rates in free jets (think flow expansion!)
-=====================================================================
+*************************
+Rapid Mix Design Solution
+*************************
 
 11)
 ~~~
