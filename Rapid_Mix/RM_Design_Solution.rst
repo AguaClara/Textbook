@@ -2,7 +2,11 @@
 Rapid Mix Design Solution
 *************************
 
-11)
+.. code:: python
+
+    from aide_design.play import*
+
+1)
 ~~~
 
 Create a function to return maximum energy dissipation rate along the centerline of a free jet given inputs of distance downstream of the jet (along the centerline), jet velocity, and initial jet diameter. You will find the Rapid Mix powerpoint useful in finding a relationship between these variables.
@@ -29,7 +33,7 @@ Use your function to create a graph of the centerline (maximum) energy dissipati
     fig.savefig('Rapid_Mix/Images/Energy_dissipation_rate_vs_Distance_from_jet_origin')
     plt.show()
 
-0.7212 meter \*\* 2 / second \*\* 3
+0.7212 meter ** 2 / second ** 3
 
 .. _figure_Energy_dissipation_rate_vs_Distance_from_jet_origin:
 
