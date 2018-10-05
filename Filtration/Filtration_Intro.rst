@@ -4,7 +4,15 @@
 Filtration  Introduction
 ************************
 
-"If the water is dirty, then filter it". That is a common understanding of what we should do if the water is dirty. And that common understanding has led to many, many failures of water treatment technologies. 
+"If the water is dirty, then filter it". That is a common understanding of what we should do if the water is dirty. And that common understanding has led to many, many failures of water treatment technologies. There are slow sand filters and multistage filters abandoned in many corners of Honduras.
+
+.. figure:: Images/Abandoned_Filtration_Plant.jpg
+    :width: 300px
+    :align: center
+    :alt: photomicrograph
+
+    Abandoned multiple stage filtration plant in the valley north of Tegucigalpa, Honduras.
+
 
 History of Filtration
 ======================
@@ -44,3 +52,14 @@ surprising realization that filters remove very small particles
    Floc Hopper, 5, , , ,0.2
    Stacked Rapid, 1.8*6,11 mm/s backwash,3,1,0.093
    AguaClara, 0.6, , 1000, 3.5, 1.67
+
+Filters remove the least amount of contaminants in a surface water treatment plant.
+
+Filters have a huge range in velocities. That corresponds to a huge range in size. This is illustrated in the city of Jesus de Otoro, Honduras. They have both a 20 L/s multiple stage filtration plant and a 20 L/s AguaClara plant serving different sections of the city. The plants can both be seen in `Google Maps <https://www.google.com/maps/d/viewer?mid=1Rjl2cfjMn0Pk7E11KVq9A1mlj2Q&ll=14.4910534465617%2C-87.97365714226817&z=17>`_.
+
+.. figure:: Images/Size_of_Jesus_de_Otoro_Plants.png
+    :width: 400px
+    :align: center
+    :alt: filter set
+
+    Two water treatment plants using different technologies and serving the same city illustrate the high construction cost of low technologies simply based on the scale of the facilities.
