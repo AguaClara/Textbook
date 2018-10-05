@@ -160,11 +160,6 @@ Below is a graph showing the inner viscous length scale that divides flows that 
 0.6541789493547243 millimeter
     422.57902694348155 milliwatt / kilogram
 
-.. figure:: DC_Mechanical_and_Flocculation_Model_Solution_files/DC_Mechanical_and_Flocculation_Model_Solution_46_1.png
-   :alt: png
-
-   png
-
 
 7)
 ~~~
