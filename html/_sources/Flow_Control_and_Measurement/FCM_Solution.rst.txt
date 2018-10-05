@@ -230,12 +230,12 @@ We want to compare the actual flow rate through the LFOM to the expected flow ra
 
 .. _figure_Normalized_Flow_Rate_vs_Water_Depth:
 
-.. figure:: Images/Normalized_Flow_Rate_vs_Water_Depth.png
+.. figure:: Images/CDC_derivation.png
    :width: 400px
    :align: center
    :alt: Normalized Flow Rate vs. Water Depth
 
-   Normalized Flow Rate vs. Water Depth
+   Normalized Flow Rate vs. Water Depth (Note temporary figure is pending update to this file)
 
 7)
 ~~
