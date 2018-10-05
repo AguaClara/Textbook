@@ -1,10 +1,10 @@
+Mechanical Flocculator Solution
+================================
+
 .. code:: python
 
     from aide_design.play import*
 
-
-Mechanical Flocculation Solution
-================================
 
 In this design challenge, you will design a mechanical flocculator and power unit. You will use a flow rate of 50 L/s as your default design value. The coldest temperature that the raw water is expected to have is 10°C.
 You will also play with fractal flocculation model equations to get a sense of how fast flocs can aggregate. You will also explore the floc model predictions.

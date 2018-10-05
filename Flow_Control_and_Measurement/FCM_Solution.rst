@@ -4,28 +4,28 @@ Flow Control and Measurement Solution
 A brief programming guide
 -------------------------
 
-1. Do not use a numerical or iterative solution when an analytical solution is easily available.
-2. Whenever a function has the potential to be used multiple times, create a function call that includes the parameters that could potentially change.
-3. Do not break dependency. That means that if I change an input parameter at the top of your worksheet, that I should get the correct answers for the new parameter for all related calculations in the worksheet.
-4. Always use dimensions (units). All calculations involving physical units must include those units.
-5. Document your design process with comments.
-6. Do not redefine your variables in subsequent problems. This loses valuable digits of precision on your numbers and can cause a lot of trouble and frustration.
-7. For everyone’s sake, use logical and reasonable variable names. `Here is AguaClara variable naming
-   convention <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`__
+ 1. Do not use a numerical or iterative solution when an analytical solution is easily available.
+ 2. Whenever a function has the potential to be used multiple times, create a function call that includes the parameters that could potentially change.
+ 3. Do not break dependency. That means that if I change an input parameter at the top of your worksheet, that I should get the correct answers for the new parameter for all related calculations in the worksheet.
+ 4. Always use dimensions (units). All calculations involving physical units must include those units.
+ 5. Document your design process with comments.
+ 6. Do not redefine your variables in subsequent problems. This loses valuable digits of precision on your numbers and can cause a lot of trouble and frustration.
+ 7. For everyone’s sake, use logical and reasonable variable names. `Here is AguaClara variable naming convention <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`__
 
 A brief Design Challenge guide
 ------------------------------
 
-1. Read the Problem statement in its entirety before beginning a problem. If you don’t immediately know what to do, read it again, thoroughly. If you are getting stuck, read it a third time. If you have a good understanding of what the problem is asking and are still having trouble, TAs can help through email or office hours.
-2. If you decide to email a TA, make sure the other two are CC’ed. This minimizes the time you will have to wait until one responds.
-3. When in doubt, Kernel -> Restart & Run All
-4. Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km*mg/s?
-5. Make sure to review convention and syntax standards, which can be found here:
+ 1. Read the Problem statement in its entirety before beginning a problem. If you don’t immediately know what to do, read it again, thoroughly. If you are getting stuck, read it a third time. If you have a good understanding of what the problem is asking and are still having trouble, TAs can help through email or office hours.
+ 2. If you decide to email a TA, make sure the other two are CC’ed. This minimizes the time you will have to wait until one responds.
+ 3. When in doubt, Kernel -> Restart & Run All
+ 4. Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km*mg/s?
+ 5. Make sure to review convention and syntax standards, which can be found here:
 
    -  `Standards Page <https://github.com/AguaClara/aide_design/wiki/Standards>`__ for naming standards.
    -  `Variable Naming Guide <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`__ for creating variable names.
 
 .. code:: python
+
   from aide_design.play import*
 
 Vertical orifice equation
@@ -40,9 +40,7 @@ Find the vena contract (VC) coefficient ratio for an orifice in the expert_input
 
     print('The vena contracta coefficient for an orifice is ',exp.RATIO_VC_ORIFICE,'.')
 
-::
-
-    The vena contracta coefficient for an orifice is 0.63.
+The vena contracta coefficient for an orifice is 0.63.
 
 2)
 ~~
@@ -57,16 +55,15 @@ We want to be able to describe the height of the water in the orifice as relativ
 
 The steps for making the graph are as follows:
 
--  Use ``np.linspace`` to generate an array of 100 dimensionless water surface elevations. The surface elevations should be normalized (also referred to as nondimensionalized) by the diameter of the orifice, and should range from -1 to 2 orifice diameters.
--  Create a second array for water elevation (with units) by multiplying the normalized water elevation array by the orifice diameter.
--  Create two arrays of flow rates through the orifice: one for the horizontal orifice orientation and one for the vertical orifice orientation. Use the two orifice equations ``pc.flow_orifice`` and ``pc.flow_orifice_vert`` in the physchem file, with orifice diameter and the dimensional water elevation array you created as inputs.
--  Plot the curves for vertical and horizontal orifice flow in L/s as a function of the normalized height of water.
--  Label the graph with flow rate in L/s as the y-axis and with normalized water elevation above the center of the orifice as the x-axis.
--  Include a legend for the two curves.
+ -  Use ``np.linspace`` to generate an array of 100 dimensionless water surface elevations. The surface elevations should be normalized (also referred to as nondimensionalized) by the diameter of the orifice, and should range from -1 to 2 orifice diameters.
+ -  Create a second array for water elevation (with units) by multiplying the normalized water elevation array by the orifice diameter.
+ -  Create two arrays of flow rates through the orifice: one for the horizontal orifice orientation and one for the vertical orifice orientation. Use the two orifice equations ``pc.flow_orifice`` and ``pc.flow_orifice_vert`` in the physchem file, with orifice diameter and the dimensional water elevation array you created as inputs.
+ -  Plot the curves for vertical and horizontal orifice flow in L/s as a function of the normalized height of water.
+ -  Label the graph with flow rate in L/s as the y-axis and with normalized water elevation above the center of the orifice as the x-axis.
+ -  Include a legend for the two curves.
 
 .. code:: python
 
-    # <codecell>
     WaterElevationNormalized = np.linspace(-1,2,100)
 
     DiamOrifice = 5*u.cm
@@ -75,20 +72,24 @@ The steps for making the graph are as follows:
     HorizontalOrificeFlows = (pc.flow_orifice(DiamOrifice, WaterElevation, exp.RATIO_VC_ORIFICE)).to(u.L/u.s)
     VerticalOrificeFlows = pc.flow_orifice_vert(DiamOrifice, WaterElevation, exp.RATIO_VC_ORIFICE).to(u.L/u.s)
 
-    plt.figure(0)
+    fig, ax = plt.subplots()
     ax.plot(WaterElevationNormalized, HorizontalOrificeFlows, 'r-', WaterElevationNormalized, VerticalOrificeFlows, 'b-')
 
     ax.set(xlabel='Normalized height of water above center of the orifice')
     ax.set(ylabel='Flow rate through the orifice (L/s)')
-    plt.title('Horizontal vs. Vertical Orifice Orientation')
-    plt.legend(['Horizontal Orientation', 'Vertical orientation'], loc='best')
-    plt.grid(True)
+    ax.legend(['Horizontal Orientation', 'Vertical orientation'])
+    ax.grid(True)
+    fig.savefig('Flow_Control_and_Measurement/Images/Horizontal_vs_Vertical_Orifice_Orientation')
     plt.show()
 
-.. figure:: DC_Flow_Control_and_Measurement_Solution_files/DC_Flow_Control_and_Measurement_Solution_6_0.png
-   :alt: png
+.. _figure_Horizontal_vs_Vertical_Orifice_Orientation:
 
-   png
+.. figure:: Images/Horizontal_vs_Vertical_Orifice_Orientation.png
+   :width: 400px
+   :align: center
+   :alt: Horizontal vs. Vertical Orifice Orientation
+
+   Horizontal vs. Vertical Orifice Orientation
 
 3)
 ~~
@@ -116,7 +117,7 @@ A linear flow orifice meter is used in AguaClara plants to measure the plant flo
 .. code:: python
 
     #target flow rate that the LFOM should deliver at maximum water height
-    Flow = 31*u.L/u.s
+    Flow = 30*u.L/u.s
 
     #height range for the LFOM measured from the bottom of the first row of orifices.
     HeadlossLfom = 20*u.cm
@@ -145,9 +146,7 @@ A linear flow orifice meter is used in AguaClara plants to measure the plant flo
     print('The height of the center of the orifices measured from the LFOM datum, the bottom of the bottom row of orifices, is')
     print(HeightLfomOrifices.to(u.cm))
 
-::
-
-    The nominal diameter of the LFOM is 10 in.
+The nominal diameter of the LFOM is 10 in.
     The orifice diameter is 15 mm.
     The number of orifices in each row is
     [ 43.  43.  14.  15.  13.  12.  11.  11.   9.  10.]
@@ -177,9 +176,7 @@ A linear flow orifice meter is used in AguaClara plants to measure the plant flo
 
     print(flow_lfom_vert(5*u.cm))
 
-::
-
-    7.839628413633346 liter / second
+7.839628413633346 liter / second
 
 
 5)
@@ -193,9 +190,7 @@ Calculate the total flow through the LFOM using the vertical orifice equation fo
     print('The flow at a depth of ',HeadlossLfom,' is ',FlowMaxVert,'.')
     print('This flow is slightly larger than the target flow of ',Flow,'.')
 
-::
-
-    The flow at a depth of 20 cm is 31.49 l/s
+The flow at a depth of 20 cm is 31.49 l/s
     This flow is slightly larger than the target flow of 31 l/s.
 
 6)
@@ -222,18 +217,24 @@ We want to compare the actual flow rate through the LFOM to the expected flow ra
     for i in range(len(HeightGraph)):
         FlowGraph[i] = (flow_lfom_vert((HeightGraph[i]))/((HeightGraph[i]) / HeadlossLfom * Flow)).magnitude
 
+    fig, ax = plt.subplots()
     ax.plot(HeightGraph, FlowGraph, 'r-', HeightGraph, np.ones(100), 'c-')
     ax.set(xlabel='Water Depth (cm)')
     ax.set(ylabel='Normalized flow rate')
-    plt.title('Normalized Flow Rate vs. Water Depth')
-    plt.legend(['Vertical Orifice', 'Target'], loc='best')
-    plt.grid(True)
+    ax.legend(['Vertical Orifice', 'Target'], loc='best')
+    ax.grid(True)
+    fig.savefig('Flow_Control_and_Measurement/Images/Normalized_Flow_Rate_vs_Water_Depth')
     plt.show()
 
-.. figure:: DC_Flow_Control_and_Measurement_Solution_files/DC_Flow_Control_and_Measurement_Solution_16_0.png
-   :alt: png
 
-   png
+.. _figure_Normalized_Flow_Rate_vs_Water_Depth:
+
+.. figure:: Images/Normalized_Flow_Rate_vs_Water_Depth.png
+   :width: 400px
+   :align: center
+   :alt: Normalized Flow Rate vs. Water Depth
+
+   Normalized Flow Rate vs. Water Depth
 
 7)
 ~~
@@ -276,17 +277,17 @@ For the following steps do NOT use the aide_design.cdc code. Instead, create the
 
 You may assume that the chlorine stock solution kinematic viscosity is approximately the same as water. The dose controller is to have a maximum head loss of 20 cm through the dosing tubes. We will start with commercially available liquid bleach (equivalent to 51.4 gm/L of chlorine gas), which we will use in our chemical stock tanks without dilution. Our goal is to provide a constant chlorine dose of 2 mg/L to the water entering the storage tank. We will be following the guidelines given below.
 
--  Calculate the maximum fow rate through each available dosing tube diameter that keeps error due to minor losses below 10%.
+ 1. Calculate the maximum fow rate through each available dosing tube diameter that keeps error due to minor losses below 10%.
 
--  Calculate the total chemical flow rate that would be required by the treatment system for the maximum chemical dose and the maximum allowable stock concentration.
+ 1. Calculate the total chemical flow rate that would be required by the treatment system for the maximum chemical dose and the maximum allowable stock concentration.
 
--  Calculate the number of dosing tubes required if the tubes flow at maximum capacity (round up).
+ 1. Calculate the number of dosing tubes required if the tubes flow at maximum capacity (round up).
 
--  Calculate the length of the dosing tubes that correspond to each available tube diameter.
+ 1. Calculate the length of the dosing tubes that correspond to each available tube diameter.
 
--  Select the longest dosing tube that is shorter than the maximum tube length allowable based on geometric constraints.
+ 1. Select the longest dosing tube that is shorter than the maximum tube length allowable based on geometric constraints.
 
--  Select the dosing tube diameter, flow rate, and stock concentration corresponding to the selected tube length.
+ 1. Select the dosing tube diameter, flow rate, and stock concentration corresponding to the selected tube length.
 
 .. code:: python
 
@@ -310,9 +311,7 @@ At the given water treatment plant design flow rate, what is the required flow o
     FlowStockClMax = (FlowPlant * DoseCl2 / StockCl2).to(u.mL/u.s)
     print('The required flow of bleach is', FlowStockClMax)
 
-::
-
-    The required flow of bleach is 1.95 ml/s
+The required flow of bleach is 1.95 ml/s
 
 12)
 ~~~
@@ -323,9 +322,7 @@ How many liters of liquid bleach are required in one day? (you can simply change
 
     print('The daily required flow of bleach is',FlowStockClMax.to(u.L/u.day))
 
-::
-
-    The daily required flow of bleach is 168.09 l/day
+The daily required flow of bleach is 168.09 l/day
 
 
 13)
@@ -338,9 +335,7 @@ Our next big goal is to choose a tubing size for the dosing tube (or tubes). Thi
     DiamTubeArray = np.array(np.arange(1/16,6/16,1/16)) * u.inch
     print(DiamTubeArray)
 
-::
-
-    [ 0.0625  0.125   0.1875  0.25    0.3125] inch
+[ 0.0625  0.125   0.1875  0.25    0.3125] inch
 
 14)
 ~~~
@@ -352,9 +347,7 @@ What is the maximum average velocity in a dosing tube based on the constraint th
     VelTubeMax = (((RatioError * 2 * HeadlossDosingTubeMax * pc.gravity) / KMinor)**(1/2)).to(u.meter/u.s)
     print('The maximum average velocity in a dosing tube is', VelTubeMax)
 
-::
-
-    The maximum average velocity in a dosing tube is 0.443 m/s
+The maximum average velocity in a dosing tube is 0.443 m/s
 
 15)
 ~~~
@@ -366,9 +359,7 @@ What is the head loss due to minor losses in the tube when the tube is flowing a
     HeadlossMinorMax = RatioError * HeadlossDosingTubeMax
     print('The head loss due to minor losses when the tube is at maximum capacity is', HeadlossMinorMax)
 
-::
-
-    The head loss due to minor losses when the tube is at maximum capacity is 2.0 cm
+The head loss due to minor losses when the tube is at maximum capacity is 2.0 cm
 
 
 16)
@@ -390,9 +381,7 @@ Create an array of the maximum flow rates corresponding to the array of tubing d
     FlowMaxArray = flow_cdc_max(DiamTubeArray, VelTubeMax).to(u.mL/u.s)
     print(FlowMaxArray)
 
-::
-
-    [  0.87658228   3.5063291    7.88924048  14.02531641  21.91455688] milliliter / second
+[  0.87658228   3.5063291    7.88924048  14.02531641  21.91455688] milliliter / second
 
 
 17)
@@ -405,9 +394,7 @@ Find the minimum number of tubes for each of the available tube diameters that w
     NDosingTubes = np.ceil(FlowStockClMax / FlowMaxArray)
     print('The number of tubes of each diameter is', NDosingTubes)
 
-::
-
-    The number of tubes of each diameter is [ 3.  1.  1.  1.  1.] dimensionless
+The number of tubes of each diameter is [ 3.  1.  1.  1.  1.] dimensionless
 
 
 18)
@@ -421,9 +408,7 @@ Create an array of the maximum flow rate per tube for each of the available tubi
     print('The flow rate per tube is', FlowDosingTubeArray)
     print(FlowStockClMax)
 
-::
-
-    The flow rate per tube is [ 0.64850843  1.94552529  1.94552529  1.94552529  1.94552529] milliliter / second
+The flow rate per tube is [ 0.64850843  1.94552529  1.94552529  1.94552529  1.94552529] milliliter / second
     1.9455252918287937 milliliter / second
 
 19)
@@ -451,9 +436,7 @@ size.
 
     print('The length of each dosing tube would be', LengthDosingTube)
 
-::
-
-    The length of each dosing tube would be [  0.44406171   2.42832361  12.60675229  40.01021413  97.79237081] meter
+The length of each dosing tube would be [  0.44406171   2.42832361  12.60675229  40.01021413  97.79237081] meter
 
 20)
 ~~~
@@ -468,9 +451,7 @@ Which option do you think is best? You can simply set the array index to your ch
     print('The inner diameter of the tube is', DiamTubeArray[MYPICK])
     print('The length of each tube is', LengthDosingTube[MYPICK].to(u.m))
 
-::
-
-    The number of dosing tubes I will need is 1
+The number of dosing tubes I will need is 1
     The flow through each tube is 1.95 ml/s
     The inner diameter of the tube is 0.125 inch
     The length of each tube is 2.43 m
@@ -528,8 +509,6 @@ AguaClara has coded these dosing tube size functions in the CDC Functions (cdc_f
 
     print('The number of CDC tubes is ', NTube)
 
-::
-
-    The length of the CDC tube is  2.43 m
+The length of the CDC tube is  2.43 m
     The diameter of the CDC tube is 0.125 in
     The number of CDC tubes is  1.0
