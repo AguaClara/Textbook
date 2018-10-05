@@ -257,15 +257,6 @@ The motor specifications are given below. |Rapid Mix motor|
 
 The `motor specifications <https://www.mcmaster.com/#5990k314/=19d4hod>`__ indicate that the efficiency is 89.5% which is very close to the premium efficiency standard.
 
-.. _figure_Rapid_Mix_motor:
-
-.. figure:: https://www.mcmaster.com/mva/library/20150803/5990k314l.gif
-   :width: 400px
-   :align: center
-   :alt: Rapid Mix motor
-
-   Rapid Mix motor
-
 8)
 ~~
 
