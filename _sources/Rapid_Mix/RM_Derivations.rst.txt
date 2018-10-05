@@ -1001,3 +1001,5 @@ The maximum velocity gradient is thus
     W = 1*u.m
     Ratio_Jet_Plate = (EDR_Max * W/v**3).to_base_units()
     print(Ratio_Jet_Plate)
+
+The flat plate :math:`\Pi_{Plate}` has a value of 0.04.

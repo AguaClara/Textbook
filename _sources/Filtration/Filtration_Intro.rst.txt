@@ -4,7 +4,7 @@
 Filtration  Introduction
 ************************
 
-If the water is dirty, then filter it.
+"If the water is dirty, then filter it". That is a common understanding of what we should do if the water is dirty. And that common understanding has led to many, many failures of water treatment technologies. 
 
 History of Filtration
 ======================
