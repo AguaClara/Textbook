@@ -69,7 +69,7 @@ The addition of flocculation and sedimentation prior to filtration changes the p
 
 Rapid sand filters rely on a backwash system.  It takes a relatively high velocity of water to fluidize a bed of sand and that water has to come from somewhere. In conventional water treatment plants that water comes from a clearwell that is filled with filtered water. During backwash water from the clearwell is pumped through the filter and then either wasted or returned to the head of the plant for another pass through the treatment processes. The need for pumps is one of the big disadvantages of conventional rapid sand filters. Conventional rapid sand filters fail if they lose power or if there isn't enough filtered water in the clearwell when the filter needs to be backwashed. This raises an interesting question about how rapid sand filters are initially commissioned at water treatment plants given that the clearwell is initially empty and given that filters MUST BE FILLED WITH WATER FROM THE BOTTOM. If you dump water on top of a dry filter bed the water will create a few paths down through the sand and the majority of the sand pores will remain filled with air even when the level of water floods the top of the filter bed. Thus the first operation in rapid sand filter startup must be backwash!
 
-One solution for eliminating the need for backwash pumps is to design a set of filters that work together to backwash one of the filters. This eliminates the need for a clearwell for backwash water. This system of a set of filters is used by `CEPIS <http://cepis.org.pe/sobre-el-cepis/>`_ in their design of `rapid sand filters <../_static/references/CEPIS/CEPIS5_Batería_de_filtros.pdf>`_
+One solution for eliminating the need for backwash pumps is to design a set of filters that work together to backwash one of the filters. This eliminates the need for a clearwell for backwash water. This system of a set of filters is used by `CEPIS <http://cepis.org.pe/sobre-el-cepis/>`_ in their design of `rapid sand filters <../_static/references/CEPIS/CEPIS5_Batería_de_filtros.pdf>`_ This system is an elegant solution that works well for small cities, but the requirement of 6 filters is onerous for towns where 2 filters should have been sufficient.
 
 `Croton Water Treatment Plant <../_static/references/Croton-WFP.pdf>`
 
@@ -84,10 +84,18 @@ One solution for eliminating the need for backwash pumps is to design a set of f
 Stacked Rapid Sand Filters
 --------------------------
 
+Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornell program in response to the need for a new technology that would both eliminate the need for backwash pumps AND not require the construction of 6 filters for small towns. StaRS filters use 6 20 cm deep layers of sand (no dual media here) with the layers stacked vertically. The six layers give a total sand depth of 1.2 m. The filter operates with the same design flow rate for both backwash and filtration modes and uses settled water for backwash. This eliminates the startup problem for rapid sand filters that don't have an initial source of backwash water. The shallow filter layers take advantage of new insights into the filtration mechanisms (more on that soon).
 
+StaRS filters come in two configurations. Open StaRS (OStaRS) are used for flow rates greater than about 8 L/s. An 8 L/s filter has a plan view area of 85 cm x 85 cm. This is considered the minimum size that can be constructed with a human working inside the filter. For lower flow rates Enclosed StaRS (EStaRS) filters can be assembled using PVC pipe as the body of the filter. The inner plumbing can be accessed through openings in the top and bottom of the main filter body.
 
+.. code:: python
 
-
+    from aide_design.play import*
+    Q_Filter = 8 * u.L/u.s
+    V_filter_backwash = 11 * u.mm/u.s
+    A_Filter = Q_Filter/V_filter_backwash
+    W_Filter = np.sqrt(A_Filter).to(u.m)
+    print('The width of a filter designed to treat ',Q_Filter,' is ', W_Filter,'.')
 
 .. _table_Net_Velocities:
 
@@ -101,20 +109,43 @@ Stacked Rapid Sand Filters
    Slow, 0.04, Scrape surface, 10, 0.8, 25
    Multistage,0.03, , 100, 1.3, 33.4
    Rapid, 0.7 - 2.8, 11 mm/s backwash, 5, 1, 0.55
-   Entrance, 8, , , , 0.125
-   Flocculation, 4, , , , 0.25
-   Sedimentation, 1, , , 2.5, 1
-   Floc Hopper, 5, , , ,0.2
-   Stacked Rapid, 1.8*6,11 mm/s backwash,3,1,0.093
-   AguaClara, 0.6, , 1000, 3.5, 1.67
+   AC Entrance, 8, , , , 0.125
+   AC Flocculation, 4, , , , 0.25
+   AC Sedimentation, 1, , , 2.5, 1
+   AC Floc Hopper, 5, , , ,0.2
+   AC Stacked Rapid, 1.8*6,11 mm/s backwash,3,1,0.093
+   AC total, 0.6, , 1000, 3.5, 1.67
+
+The slowest (and hence largest) unit process in the AguaClara surface water treatment train is sedimentation. Thus sedimentation represents the most likely opportunity for significant cost reduction. The entire AguaClara treatment train is a fraction of the size of the dynamic filters that are used in multiple stage filtration plants.
 
 Filters remove the least amount of contaminants in a surface water treatment plant.
 
-Filters have a huge range in velocities. That corresponds to a huge range in size. This is illustrated in the city of Jesus de Otoro, Honduras. They have both a 20 L/s multiple stage filtration plant and a 20 L/s AguaClara plant serving different sections of the city. The plants can both be seen in `Google Maps <https://www.google.com/maps/d/viewer?mid=1Rjl2cfjMn0Pk7E11KVq9A1mlj2Q&ll=14.4910534465617%2C-87.97365714226817&z=17>`_.
+Filters have a huge range in velocities that correspond to a huge range in size. This is illustrated in the city of Jesus de Otoro, Honduras. They have both a 20 L/s multiple stage filtration plant and a 20 L/s AguaClara plant serving different sections of the city. The plants can both be seen in `Google Maps <https://www.google.com/maps/d/u/0/viewer?mid=1Rjl2cfjMn0Pk7E11KVq9A1mlj2Q&ll=14.491993514824715%2C-87.97505904373156&z=16>`_.
 
 .. figure:: Images/Size_of_Jesus_de_Otoro_Plants.png
     :width: 400px
     :align: center
     :alt: filter set
 
-    Two water treatment plants using different technologies and serving the same city illustrate the high construction cost of low technologies simply based on the scale of the facilities.
+    Two water treatment plants using different technologies and serving the same city illustrate the high construction cost of low technologies simply based on the required size of the low tech facilities.
+
+Filtration Theory
+=================
+
+Filters are used to remove particles and thus we'd like to be able to predict particle removal efficiency in a filter. Unfortunately we don't yet have equations that describe particle removal by sand filtration. This is a very unpleasant surprise. It is as if we were designing a suspension bridge and didn't have any equations describing the relationship between the tension in the cables and the load they are supporting.
+
+Reflection: How did we get to 2018 without a model for filter performance? There may be several reasons for the lack of a filtration model. Here are a few ideas.
+ - The lack of data acquisition systems in university laboratories means that very few rapid sand filters were operated and evaluated for full filter runs in laboratory settings
+ - The Environmental Engineering fixation on jar tests as the way to model water treatment plants provided no method to test filtration and thus most university laboratories only experimented with batch operation and not continuous flow.
+ - Filtration models were borrowed from air filtration (`Yao et al, 1971 <https://pubs.acs.org/doi/abs/10.1021/es60058a005>`_) and thus did not take into account that the coagulant nanoparticles made particle attachment to surfaces very favorable.
+ - Filtration models only modeled the clean bed phase(the first few minutes of a filter run) before particles were deposited and began altering the geometry of the pores.
+
+It is quite amazing that we have no useful models for sand filter performance after more than a century of using sand filters as a required process in converting surface waters into safe drinking water. Fortunately we have plenty of clues suggesting what is happening inside filters and at the level of the particles traveling through the pores.
+
+
+
+
+.. figure:: Images/Active_zone_model.png
+   :target: https://youtu.be/II0cfH80nrI
+
+   Movie illustrating how effluent turbidity connects to deposition of particles within a sand bed.
