@@ -199,6 +199,20 @@ The active filtration zone is progressing through the filter at a constant veloc
 
 The poor performance at the beginning of a filter run is because the clean zone isn't a good filter. This suggests that dual media filters are pointless because the smaller media at the downstream end of the filter remains clean and doesn't actually do anything. If this is correct, then multimedia filters can be replaced with a single larger media size.
 
+As coagulant dose increases
+ - flocs are larger and thus they fill the pores faster and thus the active zone moves faster through the filter
+ - large flocs are removed more efficiently and thus the active zone is thinner (fewer active pores in series)
+ - thinner active zone results in faster failure (higher slope of turbidity vs time during failure)
+ - larger flocs results in faster failure (higher slope of turbidity vs time during failure)
+
+As sand size increases
+ - There are fewer pores and thus fewer constrictions and thus less head loss at the end of the filter run
+ - Each constriction requires more particles to build and thus there is less head loss per mass of particles removed.
+
+What about particle removal efficiency?
+---------------------------------------
+
+This is the multi-decade old question that continues to plague us. What determines how many particles sneak through a water treatment plant. We've learned that flocculation runs out of steam because the primary particles only want to collide with other primary particles and thus they start taking forever to collide as they become scarce. The floc blanket likely acts like a series of collectors (can't say it is like a filter because it doesn't have stationary constrictions). This would suggest that more floc blanket is always better. But I'm getting off topic. For some reason some primary particles make it through the floc blanket. What determines how many of those primary particles make it through the filter? It must depend on the geometry of every constriction. That is so complicated. Is there another way to think about this? Large flocs are easy to capture in a sand filter. Primary particles are much more difficult to capture. Large flocs tend to fill up the first unfilled pore they come to. Thus large flocs tend to take active pores out of service. This suggests that the influent floc size distribution might influence filter performance.
 
 
 `Zouboulis et al. <https://doi.org/10.1016/j.desal.2006.02.102>`_ found that dual media filter produced water of slighly higher turbidity and it produced significantly less head loss than a single media filter. This comparison was
