@@ -80,7 +80,6 @@ One solution for eliminating the need for backwash pumps is to design a set of f
 
     6 filters form a complete set such that 5 filters can work together to backwash one filter without using pumps.
 
-Surface plugging
 
 Stacked Rapid Sand Filters
 --------------------------
