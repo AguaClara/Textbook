@@ -447,6 +447,7 @@ The following tables can serve as a convenient reference to the equations descri
    "Straight pipe laminar",":math:`h_{{\rm f}} = \frac{32\nu L\bar v}{ g D^2}`",":math:`\bar\varepsilon =32\nu \left( \frac{\bar v}{D} \right)^2`",":math:`G_{CS} =4\sqrt2 \frac{\bar v}{D}`",":math:`G_{CS} =\frac{16\sqrt2}{\pi} \frac{Q}{D^3}`"
    "Parallel plates laminar",":math:`h_{{\rm f}} = 12\frac{ \nu L \bar v }{gS^2}`",":math:`\bar\varepsilon = 12 \nu \left(\frac{ \bar v}{S} \right)^2`",":math:`G_{CS} = 2\sqrt{3}\frac{ \bar v}{S}`","-"
    "Coiled tube laminar",":math:`h_{L_{coil}} = \frac{32\nu L\bar v}{ g D^2} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]`",":math:`\bar\varepsilon = 32\nu \left( \frac{\bar v}{D} \right)^2 \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]`",":math:`G_{CS_{coil}} = 4\sqrt2 \frac{\bar v}{D}\left[ 1 + 0.033\left(log_{10}De\right)^4 \right]^\frac{1}{2}`","-"
+   "Porous media",:math:`h_f = f^{\phi} \frac{L}{d_{sand}} \frac{v_a^2}{2g} \frac{(1-\phi)}{\phi^3}`,:math:`\bar\epsilon = \frac{f^{\phi}}{2} \frac{v_a^3}{d_{sand}} \frac{(1-\phi)}{\phi^4}`,:math:`G_{CS} = \left(\frac{f^{\phi}}{2\nu} \frac{v_a^3}{d_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}`,"-"
    "Expansions",":math:`h_e = K\frac{\bar v_{out}^2}{2g}`",":math:`\bar\varepsilon = K\frac{\bar v_{out}^3}{2H}`",":math:`G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}`","-"
 
 The equations used to convert between columns in the table above are:
