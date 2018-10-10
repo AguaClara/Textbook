@@ -319,7 +319,7 @@
 <h3>2)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p><strong>Define a function</strong> for the power required to run a rapid mix unit. The rapid mix shaft power function should have flow, velocity gradient, residence time (which can be described with t or <span class="math notranslate nohighlight">\(\theta\)</span>, as in the equation below), and temperature as its only inputs.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-mechanical-solution-0">
-<span class="eqno">(304)<a class="headerlink" href="#equation-rapid-mix-rm-mechanical-solution-0" title="Permalink to this equation">¶</a></span>\[P = G^2Q \theta \nu \rho\]</div>
+<span class="eqno">(312)<a class="headerlink" href="#equation-rapid-mix-rm-mechanical-solution-0" title="Permalink to this equation">¶</a></span>\[P = G^2Q \theta \nu \rho\]</div>
 <p>Using your function, plot the shaft power (kW) required for a conventional rapid mix unit that has a residence time of t = 15s, a velocity gradient of G = 1500/s, and a flow rate of 50 L/s as a function of temperature (Celsius).</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FlowPlant</span> <span class="o">=</span> <span class="mi">50</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 <span class="n">t</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>

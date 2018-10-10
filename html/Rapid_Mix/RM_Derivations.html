@@ -126,6 +126,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#straight-pipe-laminar">Straight Pipe Laminar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#parallel-plates-laminar">Parallel Plates Laminar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#coiled-tubes-laminar-flow">Coiled tubes (laminar flow)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flow-in-porous-media">Flow in porous media</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#expansions">Expansions</a></li>
 </ul>
 </li>
@@ -767,24 +768,51 @@ wall.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-95">
 <span class="eqno">(236)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-95" title="Permalink to this equation">¶</a></span>\[G_{CS_{coil}} = 4\sqrt2 \frac{\bar v}{D}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}\]</div>
 </div>
+<div class="section" id="flow-in-porous-media">
+<span id="heading-flow-in-porous-media"></span><h3>Flow in porous media<a class="headerlink" href="#flow-in-porous-media" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://neutrium.net/fluid_flow/pressure-drop-through-a-packed-bed/">Ergun equation</a> applies to both laminar and turbulent flow through packed beds.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-96">
+<span class="eqno">(237)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-96" title="Permalink to this equation">¶</a></span>\[h_f = \frac{L}{g} \left( 150 \frac{\nu v_a (1-\phi)^2}{d_{sand}^2 \phi^3} + 1.75 \frac{v_a^2 (1-\phi) }{d_{sand} \phi^3} \right)\]</div>
+<p>The Erdun equation can be rewritten to be consistent with the format of the Darcy-Weisbach equation. To do this we add a factor of 2 to the definition of the Erdun friction factor and will divide by the factor of 2 in a subsequent equation. The modified Erdun friction factor is</p>
+<div class="math notranslate nohighlight" id="equation-eq-f-porous-media">
+<span class="eqno">(238)<a class="headerlink" href="#equation-eq-f-porous-media" title="Permalink to this equation">¶</a></span>\[f^{\phi} = \frac{300}{Re^{\phi}} + 3.5\]</div>
+<p>where the <span class="math notranslate nohighlight">\(Re^{\phi}\)</span> includes the porosity effect on the velocity and is given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-re-porous-media">
+<span class="eqno">(239)<a class="headerlink" href="#equation-eq-re-porous-media" title="Permalink to this equation">¶</a></span>\[Re^{\phi} = \frac{v_a d_{sand}}{\nu(1-\phi)}\]</div>
+<p>I added a factor of two into the denominator to be consistent with the Darcy-Weisbach equation to obtain the modified Ergun equation.</p>
+<div class="math notranslate nohighlight" id="equation-eq-erdun">
+<span class="eqno">(240)<a class="headerlink" href="#equation-eq-erdun" title="Permalink to this equation">¶</a></span>\[h_f = f^{\phi} \frac{L}{d_{sand}} \frac{v_a^2}{2g} \frac{(1-\phi)}{\phi^3}\]</div>
+<p>The residence time in a porous media bed is given by</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-97">
+<span class="eqno">(241)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-97" title="Permalink to this equation">¶</a></span>\[\theta = \frac{L\phi} {v_a}\]</div>
+<p>Now we can calculate the average energy dissipation rate in porous media.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-98">
+<span class="eqno">(242)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-98" title="Permalink to this equation">¶</a></span>\[\bar\epsilon = \frac{g h_f}{\theta}\]</div>
+<p>Substituting the equations for head loss and residence times we obtain</p>
+<div class="math notranslate nohighlight" id="equation-eq-edr-cs-porous-media">
+<span class="eqno">(243)<a class="headerlink" href="#equation-eq-edr-cs-porous-media" title="Permalink to this equation">¶</a></span>\[\bar\epsilon = \frac{f^{\phi}}{2} \frac{v_a^3}{d_{sand}} \frac{(1-\phi)}{\phi^4}\]</div>
+<p>The Camp Stein velocity gradient for flow in porous media is</p>
+<div class="math notranslate nohighlight" id="equation-eq-g-cs-porous-media">
+<span class="eqno">(244)<a class="headerlink" href="#equation-eq-g-cs-porous-media" title="Permalink to this equation">¶</a></span>\[G_{CS} = \left(\frac{f^{\phi}}{2\nu} \frac{v_a^3}{d_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}\]</div>
+</div>
 <div class="section" id="expansions">
 <span id="heading-expansions"></span><h3>Expansions<a class="headerlink" href="#expansions" title="Permalink to this headline">¶</a></h3>
 <p>The average energy dissipation rate for a flow expansion really only has meaning if there is a defined control volume where the mechanical energy is lost. Hydraulic flocculators provide such a case because the same flow expansion is repeated and thus the mechanical energy loss can be assumed to happen in the volume associated with one flow expansion. In this case we have</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-96">
-<span class="eqno">(237)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-96" title="Permalink to this equation">¶</a></span>\[h_e =  K\frac{\bar v_{out}^2}{2g}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-99">
+<span class="eqno">(245)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-99" title="Permalink to this equation">¶</a></span>\[h_e =  K\frac{\bar v_{out}^2}{2g}\]</div>
 <p>In this equation <span class="math notranslate nohighlight">\(K\)</span> represents the fraction of the kinetic energy that is dissipated.</p>
 <p>If we define the length of the control volume (in the direction of flow) as <span class="math notranslate nohighlight">\(H\)</span> then the residence time is</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-97">
-<span class="eqno">(238)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-97" title="Permalink to this equation">¶</a></span>\[\theta = \frac{H}{\bar v}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-98">
-<span class="eqno">(239)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-98" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{e}}}{\theta}\]</div>
-<p>Combining the previous equations we obtain</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-99">
-<span class="eqno">(240)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-99" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = K\frac{\bar v_{out}^3}{2H}\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-100">
-<span class="eqno">(241)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-100" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}\]</div>
+<span class="eqno">(246)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-100" title="Permalink to this equation">¶</a></span>\[\theta = \frac{H}{\bar v}\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-101">
-<span class="eqno">(242)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-101" title="Permalink to this equation">¶</a></span>\[G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}\]</div>
+<span class="eqno">(247)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-101" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{e}}}{\theta}\]</div>
+<p>Combining the previous equations we obtain</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-102">
+<span class="eqno">(248)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-102" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = K\frac{\bar v_{out}^3}{2H}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-103">
+<span class="eqno">(249)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-103" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-104">
+<span class="eqno">(250)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-104" title="Permalink to this equation">¶</a></span>\[G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}\]</div>
 </div>
 </div>
 <div class="section" id="maximum-velocity-gradients">
@@ -797,38 +825,38 @@ wall.</p>
 <p class="caption"><span class="caption-number">Fig. 58 </span><span class="caption-text">A fluid flowing from left to right due to a pressure gradient results in wall shear.</span></p>
 </div>
 <p>A force balance for the case of steady flow in a round pipe requires that sum of the forces in the x direction must equal zero. Given a pipe with diameter, D, and length, L, we obtain</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-102">
-<span class="eqno">(243)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-102" title="Permalink to this equation">¶</a></span>\[\left(P_{in}- P_{out}\right)\frac{\pi D^2}{4} = \tau_{wall} \pi D L\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-103">
-<span class="eqno">(244)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-103" title="Permalink to this equation">¶</a></span>\[-\Delta P\frac{D}{4} = \tau_{wall} L\]</div>
-<p>For this control volume the energy equation simplifies to</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-104">
-<span class="eqno">(245)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-104" title="Permalink to this equation">¶</a></span>\[-\Delta P=\rho g h_{{\rm f}}\]</div>
-<p>The relationship between shear and velocity gradient is</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-105">
-<span class="eqno">(246)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-105" title="Permalink to this equation">¶</a></span>\[\tau_{wall} = \mu \frac{du}{dy}_{wall} = \nu \rho G_{wall}\]</div>
-<p>Combining the energy equation, the force balance, and the relationship between shear and velocity gradient we obtain</p>
+<span class="eqno">(251)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-105" title="Permalink to this equation">¶</a></span>\[\left(P_{in}- P_{out}\right)\frac{\pi D^2}{4} = \tau_{wall} \pi D L\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-106">
-<span class="eqno">(247)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-106" title="Permalink to this equation">¶</a></span>\[\rho g h_{{\rm f}}\frac{D}{4} = \nu \rho G_{wall} L\]</div>
+<span class="eqno">(252)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-106" title="Permalink to this equation">¶</a></span>\[-\Delta P\frac{D}{4} = \tau_{wall} L\]</div>
+<p>For this control volume the energy equation simplifies to</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-107">
-<span class="eqno">(248)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-107" title="Permalink to this equation">¶</a></span>\[G_{wall} = \frac{g h_{{\rm f}}D}{4\nu L}\]</div>
-<p>This equation is valid for both laminar flow. For turbulent flow it is necessary to make the approximation that wall shear perpendicular to the direction of flow is insignificant in increasing the magnitude of the wall shear. We can substitute the Darcy Weisbach equation for head loss to obtain</p>
+<span class="eqno">(253)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-107" title="Permalink to this equation">¶</a></span>\[-\Delta P=\rho g h_{{\rm f}}\]</div>
+<p>The relationship between shear and velocity gradient is</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-108">
-<span class="eqno">(249)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-108" title="Permalink to this equation">¶</a></span>\[G_{wall} ={\rm f}  \frac{\bar v^2}{8\nu}\]</div>
-<p>The energy dissipation rate at the wall is</p>
+<span class="eqno">(254)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-108" title="Permalink to this equation">¶</a></span>\[\tau_{wall} = \mu \frac{du}{dy}_{wall} = \nu \rho G_{wall}\]</div>
+<p>Combining the energy equation, the force balance, and the relationship between shear and velocity gradient we obtain</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-109">
-<span class="eqno">(250)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-109" title="Permalink to this equation">¶</a></span>\[\varepsilon_{wall} = G_{wall}^2 \nu\]</div>
+<span class="eqno">(255)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-109" title="Permalink to this equation">¶</a></span>\[\rho g h_{{\rm f}}\frac{D}{4} = \nu \rho G_{wall} L\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-110">
-<span class="eqno">(251)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-110" title="Permalink to this equation">¶</a></span>\[\varepsilon_{wall} = \frac{1}{\nu}\left({\rm f}  \frac{\bar v^2}{8} \right)^2\]</div>
-<p>For laminar flow we can substitute <span class="math notranslate nohighlight">\({\rm f} = \frac{64}{{\rm Re}}\)</span> and the definition of the Reynolds number to obtain</p>
+<span class="eqno">(256)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-110" title="Permalink to this equation">¶</a></span>\[G_{wall} = \frac{g h_{{\rm f}}D}{4\nu L}\]</div>
+<p>This equation is valid for both laminar flow. For turbulent flow it is necessary to make the approximation that wall shear perpendicular to the direction of flow is insignificant in increasing the magnitude of the wall shear. We can substitute the Darcy Weisbach equation for head loss to obtain</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-111">
-<span class="eqno">(252)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-111" title="Permalink to this equation">¶</a></span>\[G_{wall} =  \frac{8\bar v}{D}\]</div>
-<p>This equation is useful for finding the velocity gradient at the wall of a tube settler.</p>
+<span class="eqno">(257)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-111" title="Permalink to this equation">¶</a></span>\[G_{wall} ={\rm f}  \frac{\bar v^2}{8\nu}\]</div>
 <p>The energy dissipation rate at the wall is</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-112">
-<span class="eqno">(253)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-112" title="Permalink to this equation">¶</a></span>\[\varepsilon_{wall} = G_{wall}^2 \nu\]</div>
+<span class="eqno">(258)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-112" title="Permalink to this equation">¶</a></span>\[\varepsilon_{wall} = G_{wall}^2 \nu\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-113">
-<span class="eqno">(254)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-113" title="Permalink to this equation">¶</a></span>\[\varepsilon_{wall} = \left(\frac{8\bar v}{D} \right)^2 \nu\]</div>
+<span class="eqno">(259)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-113" title="Permalink to this equation">¶</a></span>\[\varepsilon_{wall} = \frac{1}{\nu}\left({\rm f}  \frac{\bar v^2}{8} \right)^2\]</div>
+<p>For laminar flow we can substitute <span class="math notranslate nohighlight">\({\rm f} = \frac{64}{{\rm Re}}\)</span> and the definition of the Reynolds number to obtain</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-114">
+<span class="eqno">(260)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-114" title="Permalink to this equation">¶</a></span>\[G_{wall} =  \frac{8\bar v}{D}\]</div>
+<p>This equation is useful for finding the velocity gradient at the wall of a tube settler.</p>
+<p>The energy dissipation rate at the wall is</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-115">
+<span class="eqno">(261)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-115" title="Permalink to this equation">¶</a></span>\[\varepsilon_{wall} = G_{wall}^2 \nu\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-116">
+<span class="eqno">(262)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-116" title="Permalink to this equation">¶</a></span>\[\varepsilon_{wall} = \left(\frac{8\bar v}{D} \right)^2 \nu\]</div>
 </div>
 <div class="section" id="heading-coiled-tubes-laminar-flow-1">
 <span id="id1"></span><h3>Coiled tubes (laminar flow)<a class="headerlink" href="#heading-coiled-tubes-laminar-flow-1" title="Permalink to this headline">¶</a></h3>
@@ -836,8 +864,8 @@ wall.</p>
 <span class="math notranslate nohighlight">\(G_{{CS}_{wall_{coil}}} =\rm{f_{coil}} \frac{\bar v^2}{8\nu}\)</span> and
 <span class="math notranslate nohighlight">\({\rm f}_{coil} = {\rm f} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]\)</span>
 to obtain</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-114">
-<span class="eqno">(255)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-114" title="Permalink to this equation">¶</a></span>\[G_{{CS}_{wall_{coil}}} ={\rm f} \left[ 1 + 0.033 \left(log_{10}De \right)^4 \right]  \frac{\bar v^2}{8\nu}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-117">
+<span class="eqno">(263)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-117" title="Permalink to this equation">¶</a></span>\[G_{{CS}_{wall_{coil}}} ={\rm f} \left[ 1 + 0.033 \left(log_{10}De \right)^4 \right]  \frac{\bar v^2}{8\nu}\]</div>
 </div>
 <div class="section" id="heading-expansions-1">
 <span id="id2"></span><h3>Expansions<a class="headerlink" href="#heading-expansions-1" title="Permalink to this headline">¶</a></h3>
@@ -846,17 +874,17 @@ to obtain</p>
 <div class="section" id="round-jet">
 <span id="heading-round-jet"></span><h3>Round Jet<a class="headerlink" href="#round-jet" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://doi.org/10.1016/0009-2509(95)00049-B">Baldyga, et al. 1995</a></p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-115">
-<span class="eqno">(256)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-115" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Centerline} = \frac{50 D_{Jet}^3 \bar v_{Jet}^3}{ \left( x - 2 D_{Jet} \right)^4}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-116">
-<span class="eqno">(257)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-116" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \frac{\left( \frac{50}{\left( 5 \right)^4} \right) \bar v_{Jet}^3}{D_{Jet}}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-117">
-<span class="eqno">(258)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-117" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \Pi_{JetRound} \frac{\bar v_{Jet} ^3}{D_{Jet}}\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-118">
-<span class="eqno">(259)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-118" title="Permalink to this equation">¶</a></span>\[\Pi_{JetRound} = 0.08\]</div>
-<p>The maximum velocity gradient in a jet is thus</p>
+<span class="eqno">(264)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-118" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Centerline} = \frac{50 D_{Jet}^3 \bar v_{Jet}^3}{ \left( x - 2 D_{Jet} \right)^4}\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-119">
-<span class="eqno">(260)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-119" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}\]</div>
+<span class="eqno">(265)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-119" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \frac{\left( \frac{50}{\left( 5 \right)^4} \right) \bar v_{Jet}^3}{D_{Jet}}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-120">
+<span class="eqno">(266)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-120" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \Pi_{JetRound} \frac{\bar v_{Jet} ^3}{D_{Jet}}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-121">
+<span class="eqno">(267)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-121" title="Permalink to this equation">¶</a></span>\[\Pi_{JetRound} = 0.08\]</div>
+<p>The maximum velocity gradient in a jet is thus</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-122">
+<span class="eqno">(268)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-122" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}\]</div>
 <p>Below we plot the Baldyga et al.&nbsp;equation for the energy dissipation rate as a function of distance from the discharge location for the case of a round jet that is discharging into a large tank.</p>
 <div class="figure align-center" id="id9">
 <span id="figure-jet-centerline-edr"></span><a class="reference internal image-reference" href="../_images/Jet_centerline_EDR.png"><img alt="Pipe pressure and shear force balance" src="../_images/Jet_centerline_EDR.png" style="width: 400px;" /></a>
@@ -866,35 +894,35 @@ to obtain</p>
 <div class="section" id="plane-jet">
 <span id="heading-plane-jet"></span><h3>Plane Jet<a class="headerlink" href="#plane-jet" title="Permalink to this headline">¶</a></h3>
 <p>Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by <a class="reference external" href="http://dx.doi.org/10.1115/1.3627309">Heskestad in 1965</a> and it may be possible to use that data to get a better estimate of $:raw-latex:<cite>Pi</cite>_{JetPlane} $ from that source.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-120">
-<span class="eqno">(261)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-120" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-121">
-<span class="eqno">(262)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-121" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}\]</div>
-<p>The maximum velocity gradient is thus</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-122">
-<span class="eqno">(263)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-122" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-123">
-<span class="eqno">(264)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-123" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{SW}\]</div>
+<span class="eqno">(269)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-123" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-124">
-<span class="eqno">(265)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-124" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}\]</div>
+<span class="eqno">(270)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-124" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}\]</div>
+<p>The maximum velocity gradient is thus</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-125">
-<span class="eqno">(266)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-125" title="Permalink to this equation">¶</a></span>\[S_{Jet} = S \Pi_{VCBaffle}\]</div>
+<span class="eqno">(271)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-125" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-126">
+<span class="eqno">(272)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-126" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{SW}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-127">
+<span class="eqno">(273)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-127" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-128">
+<span class="eqno">(274)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-128" title="Permalink to this equation">¶</a></span>\[S_{Jet} = S \Pi_{VCBaffle}\]</div>
 <p>The average hydraulic residence time for the fluid between two baffles
 is</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-126">
-<span class="eqno">(267)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-126" title="Permalink to this equation">¶</a></span>\[\theta_B = \frac{H}{\bar v}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-129">
+<span class="eqno">(275)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-129" title="Permalink to this equation">¶</a></span>\[\theta_B = \frac{H}{\bar v}\]</div>
 <p>where <span class="math notranslate nohighlight">\(H\)</span> is the depth of water. Substituting into the equation for <span class="math notranslate nohighlight">\(\varepsilon_{Max}\)</span> to get the equation in terms of the average velocity <span class="math notranslate nohighlight">\(\bar v\)</span> and flow dimension <span class="math notranslate nohighlight">\(S\)</span></p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-127">
-<span class="eqno">(268)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-127" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max}= \frac{\Pi_{JetPlane}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-130">
+<span class="eqno">(276)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-130" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max}= \frac{\Pi_{JetPlane}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3\]</div>
 <p>From the control volume analysis the average energy dissipation rate is</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-128">
-<span class="eqno">(269)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-128" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-131">
+<span class="eqno">(277)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-131" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}\]</div>
 <p>where <span class="math notranslate nohighlight">\(K\)</span> is the minor loss coefficient for flow around the end of a baffle with a <span class="math notranslate nohighlight">\(180^\circ\)</span> turn.</p>
 <p>Substitute the values for <span class="math notranslate nohighlight">\(\bar \varepsilon\)</span> and
 <span class="math notranslate nohighlight">\(\varepsilon_{Max}\)</span> to obtain the ratio,
 <span class="math notranslate nohighlight">\(\Pi_{\bar \epsilon}^{\epsilon_{Max}}\)</span></p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-129">
-<span class="eqno">(270)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-129" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-132">
+<span class="eqno">(278)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-132" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\]</div>
 <p><span class="math notranslate nohighlight">\(\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}\)</span> has a value of 2 for
 <span class="math notranslate nohighlight">\(H_e/S &lt;5\)</span> (CFD analysis and <a class="reference external" href="https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267">Haarhoff, 2001</a>)
 The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</span> is at 5 (from CFD analysis, our weakest assumption).</p>
@@ -902,12 +930,12 @@ The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</s
 <span class="math notranslate nohighlight">\(\frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\)</span> for
 <span class="math notranslate nohighlight">\(H_e/S&gt;5\)</span>. Thus we can solve for <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> at
 <span class="math notranslate nohighlight">\(H_e/S=5\)</span></p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-130">
-<span class="eqno">(271)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-130" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = \left(
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-133">
+<span class="eqno">(279)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-133" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = \left(
   \Pi_{\bar \epsilon}^{\epsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
   \right)\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-131">
-<span class="eqno">(272)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-131" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = 0.0124\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-134">
+<span class="eqno">(280)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-134" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = 0.0124\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">con</span><span class="o">.</span><span class="n">RATIO_VC_ORIFICE</span><span class="o">**</span><span class="mi">2</span>
 <span class="n">Ratio_Jet_Plane</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">con</span><span class="o">.</span><span class="n">RATIO_VC_ORIFICE</span><span class="o">**</span><span class="mi">8</span> <span class="o">*</span> <span class="n">con</span><span class="o">.</span><span class="n">K_MINOR_FLOC_BAFFLE</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="mi">5</span>
 <span class="n">Ratio_Jet_Plane</span>
@@ -925,13 +953,13 @@ The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</s
 <span id="figure-cfd-flat-plate"></span><a class="reference internal image-reference" href="../_images/CFD_Flat_Plate.png"><img alt="CFD Flat Plate" src="../_images/CFD_Flat_Plate.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 60 </span><span class="caption-text">The energy dissipation rate and streamlines for a 1 m wide plate in two dimensional flow with an approach velocity of <span class="math notranslate nohighlight">\(1 m/s\)</span>. The maximum energy dissipation rate was approximately <span class="math notranslate nohighlight">\(0.04 W/kg\)</span>.</span></p>
 </div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-132">
-<span class="eqno">(273)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-132" title="Permalink to this equation">¶</a></span>\[\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-135">
+<span class="eqno">(281)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-135" title="Permalink to this equation">¶</a></span>\[\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}\]</div>
 <p>The maximum velocity gradient is thus</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-133">
-<span class="eqno">(274)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-133" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-134">
-<span class="eqno">(275)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-134" title="Permalink to this equation">¶</a></span>\[\Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-136">
+<span class="eqno">(282)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-136" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-137">
+<span class="eqno">(283)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-137" title="Permalink to this equation">¶</a></span>\[\Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;CFD analysis setup used by Ariane Walker-Horn in 2015&quot;&quot;&quot;</span>
 <span class="n">EDR_Max</span> <span class="o">=</span> <span class="mf">0.04</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span>
 <span class="n">v</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>

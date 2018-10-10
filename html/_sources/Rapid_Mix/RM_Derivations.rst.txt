@@ -748,6 +748,66 @@ where :math:`G_{CS} =4\sqrt2 \frac{\bar v}{D}` for laminar flow in a straight pi
 
      G_{CS_{coil}} = 4\sqrt2 \frac{\bar v}{D}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}
 
+
+.. _heading_Flow_in_porous_media:
+
+Flow in porous media
+--------------------
+
+The `Ergun equation <https://neutrium.net/fluid_flow/pressure-drop-through-a-packed-bed/>`_ applies to both laminar and turbulent flow through packed beds.
+
+.. math::
+
+    h_f = \frac{L}{g} \left( 150 \frac{\nu v_a (1-\phi)^2}{d_{sand}^2 \phi^3} + 1.75 \frac{v_a^2 (1-\phi) }{d_{sand} \phi^3} \right)
+
+The Erdun equation can be rewritten to be consistent with the format of the Darcy-Weisbach equation. To do this we add a factor of 2 to the definition of the Erdun friction factor and will divide by the factor of 2 in a subsequent equation. The modified Erdun friction factor is
+
+.. math::
+    :label: eq_f_porous_media
+
+    f^{\phi} = \frac{300}{Re^{\phi}} + 3.5
+
+where the :math:`Re^{\phi}` includes the porosity effect on the velocity and is given by
+
+.. math::
+    :label: eq_Re_porous_media
+
+    Re^{\phi} = \frac{v_a d_{sand}}{\nu(1-\phi)}
+
+I added a factor of two into the denominator to be consistent with the Darcy-Weisbach equation to obtain the modified Ergun equation.
+
+.. math::
+    :label: eq_Erdun
+
+    h_f = f^{\phi} \frac{L}{d_{sand}} \frac{v_a^2}{2g} \frac{(1-\phi)}{\phi^3}
+
+The residence time in a porous media bed is given by
+
+.. math::
+
+    \theta = \frac{L\phi} {v_a}
+
+Now we can calculate the average energy dissipation rate in porous media.
+
+.. math::
+
+    \bar\epsilon = \frac{g h_f}{\theta}
+
+Substituting the equations for head loss and residence times we obtain
+
+.. math::
+    :label: eq_EDR_CS_porous_media
+
+    \bar\epsilon = \frac{f^{\phi}}{2} \frac{v_a^3}{d_{sand}} \frac{(1-\phi)}{\phi^4}
+
+The Camp Stein velocity gradient for flow in porous media is
+
+.. math::
+    :label: eq_G_CS_porous_media
+
+    G_{CS} = \left(\frac{f^{\phi}}{2\nu} \frac{v_a^3}{d_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}
+
+
 .. _heading_Expansions:
 
 Expansions
@@ -777,6 +837,7 @@ Combining the previous equations we obtain
 .. math:: G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}
 
 .. math:: G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}
+
 
 .. _heading_Maximum_velocity_gradients:
 
