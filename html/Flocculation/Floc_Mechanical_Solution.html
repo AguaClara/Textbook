@@ -1,0 +1,533 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mechanical Flocculator Solution &mdash; AguaClara Textbook  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Flocculation Model Solution" href="Floc_Model_Solution.html" />
+    <link rel="prev" title="Flocculation Examples" href="Floc_Examples.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mechanical Flocculator Solution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#conventional-design-guidelines">Conventional Design Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mechanical-flocculator-design">Mechanical Flocculator Design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">7)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">8)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">9)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">10)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">11)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Mechanical Flocculator Solution</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Flocculation/Floc_Mechanical_Solution.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mechanical-flocculator-solution">
+<h1>Mechanical Flocculator Solution<a class="headerlink" href="#mechanical-flocculator-solution" title="Permalink to this headline">¶</a></h1>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>In this design challenge, you will design a mechanical flocculator and power unit. You will use a flow rate of 50 L/s as your default design value. The coldest temperature that the raw water is expected to have is 10°C.
+You will also play with fractal flocculation model equations to get a sense of how fast flocs can aggregate. You will also explore the floc model predictions.</p>
+<p>As you define variables, take care not to redefine parameters. One trick is to use a unique name for variables that are estimates. We often add “est” to any variable names that aren’t the final values.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> file contains many useful functions which includes clay, coagulant and humic acid material properties, fractal model equations, and flocculation model equations. <strong>We recommend that you open the ``floc_model.py`` and have it side by side with this design challenge for easy reference.</strong></p>
+<p>The course slides found on the syllabus will be very useful for obtaining and understanding relevant equations for this design challenge and ones in the future.</p>
+<div class="section" id="conventional-design-guidelines">
+<h2>Conventional Design Guidelines<a class="headerlink" href="#conventional-design-guidelines" title="Permalink to this headline">¶</a></h2>
+<p>This table for mechanical flocculators is taken from Sincero and Sincero’s 1996 textbook: <em>Environmental Engineering: A Design Approach</em></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Velocity
+Gradient
+(G) (1/s)</th>
+<th class="head">Energy
+Dissipation
+Rate</th>
+<th class="head">Gt</th>
+<th class="head">t (min)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Low
+turbidity,
+color
+removal</td>
+<td>20-70</td>
+<td>0.4 - 4.9</td>
+<td>50,000 -
+250,000</td>
+<td>11 - 210</td>
+</tr>
+<tr class="row-odd"><td>High
+turbidity,
+solids
+removal</td>
+<td>70 - 180</td>
+<td>4.9 - 32</td>
+<td>80,000 -
+190,000</td>
+<td>7 - 45</td>
+</tr>
+</tbody>
+</table>
+<p>Dissolved organic matter impacts the color of the water. Perhaps the reason for lower G values for color removal is because flocs created from dissolved organic matter are weaker or less dense. Hence, a lower G is needed to allow them to grow large enough for removal in the sedimentation tank.</p>
+</div>
+<div class="section" id="mechanical-flocculator-design">
+<h2>Mechanical Flocculator Design<a class="headerlink" href="#mechanical-flocculator-design" title="Permalink to this headline">¶</a></h2>
+<p>The conventional design guidelines provide a range of values with little guidance on how to select “velocity gradient” or G values. One approach is to hope for the best and choose a G value in the middle of the range. We will pick the G value that is apparently appropriate for both low and high turbidity waters.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flow_plant</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">G_mech</span> <span class="o">=</span> <span class="mi">70</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">temp_design</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h3>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="http://10statesstandards.com/">Ten State Standards</a> (with the hilarious acronym GLUMRB) requires the residence time in a mechanical flocculator to be 30 minutes. What is the value of Gt if you use the velocity gradient given above as <code class="docutils literal notranslate"><span class="pre">G_mech</span></code>?</p>
+<p>Note: <code class="docutils literal notranslate"><span class="pre">.to(u.dimensionless)</span></code> ensures you don’t get weird dimensions like kilometer/inch or minute/second for dimensionless parameters.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
+<span class="n">time_mech</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">min</span>
+<span class="n">Gtime_mech</span><span class="o">=</span> <span class="p">(</span><span class="n">G_mech</span> <span class="o">*</span> <span class="n">time_mech</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Gt is&#39;</span><span class="p">,</span> <span class="n">Gtime_mech</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The Gt is 126000</p>
+</div>
+<div class="section" id="id2">
+<h3>2)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the equivalent average energy dissipation rate (in mW/kg) for the given velocity gradient at the design temperature.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
+<span class="n">ed_rate_mech_ave</span> <span class="o">=</span> <span class="p">(</span><span class="n">G_mech</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">temp_design</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The equivalent average energy dissipation rate is&#39;</span> <span class="p">,</span> <span class="n">ed_rate_mech_ave</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The equivalent average energy dissipation rate is 6.4 mW/kg</p>
+</div>
+<div class="section" id="id3">
+<h3>3)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Create a function to calculate the power requirement for mechanical flocculators. Then, use your function to obtain the power requirement for the design temperature. The equation for power is the same one that we used for mechanical rapid mix units.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
+<span class="k">def</span> <span class="nf">power_floc_shaft</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">temp</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">G</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">Q</span> <span class="o">*</span> <span class="n">t</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_dynamic</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kW</span><span class="p">)</span>
+<span class="n">power_mech_floc</span> <span class="o">=</span> <span class="n">power_floc_shaft</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">G_mech</span><span class="p">,</span><span class="n">time_mech</span><span class="p">,</span><span class="n">temp_design</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The power requirement is&#39;</span><span class="p">,</span> <span class="n">power_mech_floc</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The power requirement is 0.57 kW</p>
+<p>Fun Fact: although the design guidelines would logically predict that the power requirements are higher for cold water, there is little evidence that mechanical flocculator plants actually increase the power input to their flocculators when the water is cold.</p>
+</div>
+<div class="section" id="id4">
+<h3>4)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>We hypothesize that the maximum energy dissipation rate in a flocculator determines the size of the flocs, and those flocs may or may not be captured by the sedimentation tank. Sedimentation tank performance will deteriorate if the maximum energy dissipation rate results in flocs that are so small that their sedimentation velocity is lower than the capture velocity of the sedimentation tank. This likely occurs for very high maximum energy dissipation rates. Mechanical flocculators have traditionally been designed without insight into the variability of the energy dissipation rate and the need to keep the maximum energy dissipation rate low enough to prevent the creation of flocs that will avoid capture by the sedimentation tanks. At the same time, the traditional standards likely evolved to produce designs that were at least reasonable even in the absence of an understanding of the fluid mechanics of the mixing process.</p>
+<p>According to the Ten State Standards, “Agitators (Flocculators) shall be driven by variable speed drives with the peripheral speed of paddles ranging from 0.5 to 3.0 feet per second.” Note that they do not specify the size of the propeller and yet that is a critical dimension that determines the energy dissipation rate in the wake of the spinning propeller.</p>
+<p>The wake behind the propeller or paddle is similar in size to the small dimension of the propeller or paddle normal to the velocity. Thus we can use the propeller height to estimate the energy dissipation rate of the plate wake. The relative velocity between the wake and the surrounding fluid is approximately equal to the propeller velocity.</p>
+<p>Calculate the maximum energy dissipation rate that occurs in the wake behind the tip of a propeller which has a height of 3 cm and is moving at 3 ft/s. In this case, assume that the plate ratio for the maximum energy dissipation rate in the wake, <span class="math notranslate nohighlight">\(\Pi_{Plate}\)</span>, is 0.04.</p>
+<div class="math notranslate nohighlight" id="equation-flocculation-floc-mechanical-solution-0">
+<span class="eqno">(401)<a class="headerlink" href="#equation-flocculation-floc-mechanical-solution-0" title="Permalink to this equation">¶</a></span>\[\epsilon=\Pi_{Plate}\frac{\left ( V  \right )^{3}}{W_{Plate}}\]</div>
+<p>You may assume that the relative velocity between propeller and water is equal to 75% of the propeller velocity.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
+<span class="n">ratio_prop_vel</span> <span class="o">=</span> <span class="mf">0.75</span>
+<span class="n">pi_plate</span> <span class="o">=</span> <span class="mf">0.04</span>
+<span class="n">vel_prop</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">ft</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">height_prop</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
+
+<span class="n">ed_rate_prop_max</span> <span class="o">=</span> <span class="n">pi_plate</span> <span class="o">*</span> <span class="p">((</span><span class="n">ratio_prop_vel</span> <span class="o">*</span>  <span class="n">vel_prop</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="n">height_prop</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The maximum energy dissipation rate behind the propeller tip is&#39;</span><span class="p">,</span> <span class="n">ed_rate_prop_max</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The maximum energy dissipation rate behind the propeller tip is 430 mW/kg</p>
+</div>
+<div class="section" id="id5">
+<h3>5)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the ratio of maximum to average energy dissipation rate (henceforth referred to as Max/Ave EDR) and the ratio of maximum to average velocity gradient (Max/Ave G) for the mechanical flocculator described above. What is the relationship between the two ratios?</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
+<span class="n">ed_rate_mech_ratio</span> <span class="o">=</span> <span class="n">ed_rate_prop_max</span> <span class="o">/</span> <span class="n">ed_rate_mech_ave</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The ratio of maximum to average energy dissipation rate is&#39;</span><span class="p">,</span> <span class="n">ed_rate_mech_ratio</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+
+<span class="n">G_mech_ratio</span> <span class="o">=</span> <span class="n">ed_rate_mech_ratio</span><span class="o">**</span><span class="mf">0.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The ratio of maximum to average velocity gradient is&#39;</span><span class="p">,</span> <span class="n">G_mech_ratio</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The ratio of maximum to average energy dissipation rate is 66.3
+The ratio of maximum to average velocity gradient is 8.15</p>
+<p>SOLUTION NOTE: this information is found on extra slide 48 in the Flocculator Design slides, heading is “Results of the the CFD analysis and our model equations.”</p>
+<p>High ratios of Max/Ave for velocity gradients (and therefore also energy dissipation rates) are common in both mechanical and hydraulic flocculators. A high velocity gradient ratio is a poor design for two reasons. - This high Max/Ave G results in significant inefficiency in the use of energy for flocculation. This inefficiency requires longer residence times and/or more energy input to achieve the same extent of flocculation.</p>
+<p>The high energy dissipation rate in the propeller wake limits the amount of energy that can be dissipated without causing excessive floc breakup. Excessive floc breakup produces flocs that are too small to be captured by the sedimentation tank.</p>
+<p>We hypothesize that the maximum G values specified for mechanical flocculators were likely set by the constraint of not breaking flocs into small sizes. Sedimentation velocity needs to be less than capture velocity for a floc to settle - the smallest floc that will settle is referred to as the threshold floc because that is the smallest size we want to make. Because well-designed hydraulic flocculators have more uniform shear rates (as compared to mechanical flocculators), hydraulic flocculators are less likely to break up flocs. Therefore, the average G values specified for mechanical flocculators are not expected to apply to well designed hydraulic flocculators.</p>
+<p>The high energy dissipation rates at the tip of a propeller in a flocculator may be high enough to create flocs that are too small to be captured by the sedimentation tanks. We will determine if the sedimentation tank could capture these flocs in the analysis below.</p>
+<p>These results also suggest that the traditional emphasis on maintaining the same or lesser G value for the transport of flocculated water to the sedimentation tank may have missed the more important point of not exceeding a value of G that produces flocs that are too small to be captured by the sedimentation tank.</p>
+</div>
+<div class="section" id="id6">
+<h3>6)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>A mechanical flocculator is treating high turbidity water, and therefore is using an average G value of 180 Hz.</p>
+<p>If the design guidelines for maximum G for mechanical flocculators are correct and are based on floc breakup, then what is the largest average G that could be used for a well designed hydraulic flocculator with a Max/Ave G of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>?</p>
+<p>Note: important distinctions to make are: - maximum G vs average G - mechanical vs hydraulic flocculators. Conceptual thought coupled with pencil and paper are recommended.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
+<span class="n">G_hyd_ratio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">G_mech_ave_max</span> <span class="o">=</span> <span class="mi">180</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Hz</span>
+<span class="n">G_hyd_ave_max</span> <span class="o">=</span> <span class="n">G_mech_ave_max</span> <span class="o">*</span> <span class="p">(</span><span class="n">G_mech_ratio</span><span class="o">/</span><span class="n">G_hyd_ratio</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The maximum G for hydraulic flocculators is&#39;</span><span class="p">,</span> <span class="n">G_hyd_ave_max</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The maximum G for hydraulic flocculators is 1037 Hz</p>
+<p>These extremely high average G values are more like traditional rapid mix. It is possible that energy use constraints (too much elevation difference required to power the flocculation) will prevent use of such high G values. It is also possible that these G values would cause excessive floc break up even though they appear to meet conventional standards. It is also likely that the flocculation time required to achieve a target G <span class="math notranslate nohighlight">\(\theta\)</span> would not be sufficient for the coagulant nanoparticles to be transported to the surfaces of suspended particles.</p>
+</div>
+<div class="section" id="id7">
+<h3>7)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>How much energy in Joules per liter would be required to treat the water using this mechanical flocculator?</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
+<span class="k">def</span> <span class="nf">energy_mech</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">temp</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">power_floc_shaft</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span> <span class="o">/</span> <span class="n">Q</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">J</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The energy required using the mechanical flocculator is&#39;</span><span class="p">,</span> <span class="n">energy_mech</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">G_mech</span><span class="p">,</span><span class="n">time_mech</span><span class="p">,</span><span class="n">temp_design</span><span class="p">),</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The energy required using the mechanical flocculator is 11.5 J/l</p>
+</div>
+<div class="section" id="id8">
+<h3>8)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>How much does the electricity cost to flocculate a million liters? It isn’t necessary to actually size an electric motor for this assignment. Simply use the shaft power and assume a motor efficiency of 80%. You may assume the price of electricity is 0.15 USD/(kW-hr).</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
+<span class="n">efficiency_motor</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">electricity_rate</span> <span class="o">=</span> <span class="p">((</span><span class="mf">0.15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">USD</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kW</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">hr</span><span class="p">))</span>
+<span class="n">electricity_cost_mech</span> <span class="o">=</span> <span class="p">(</span><span class="n">electricity_rate</span> <span class="o">*</span> <span class="n">energy_mech</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">G_mech</span><span class="p">,</span><span class="n">time_mech</span><span class="p">,</span><span class="n">temp_design</span><span class="p">)</span> <span class="o">/</span> <span class="n">efficiency_motor</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">USD</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">ML</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The cost of electricity for mechanical flocculation is&#39;</span><span class="p">,</span> <span class="n">electricity_cost_mech</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The cost of electricity for mechanical flocculation is 0.58 USD/Ml</p>
+<p>It doesn’t actually cost very much to flocculate water using electricity. We will create cost savings over mechanical flocculators by designing smaller, higher performing flocculators that don’t require any moving parts and thus don’t require much maintenance. Our capital costs will also be lower because we use more efficient plug flow reactors to prevent short circuiting of particles through the flocculator. Thus well designed hydraulic flocculators can be smaller than mechanical flocculators.</p>
+</div>
+<div class="section" id="id9">
+<h3>9)<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>What is the equivalent amount of potential energy that is used to operate this mechanical flocculator (the shaft power) expressed as an elevation drop in meters? What is the required shaft power?</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
+<span class="n">delta_height</span> <span class="o">=</span> <span class="p">(</span><span class="n">power_floc_shaft</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">G_mech</span><span class="p">,</span><span class="n">time_mech</span><span class="p">,</span><span class="n">temp_design</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">flow_plant</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">temp_design</span><span class="p">)</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">gravity</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The equivalent amount of potential energy to run this  mechanical flocculator is&#39;</span><span class="p">,</span> <span class="n">delta_height</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shaft power required for this flocculator is &#39;</span><span class="p">,</span> <span class="n">power_floc_shaft</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span><span class="n">G_mech</span><span class="p">,</span><span class="n">time_mech</span><span class="p">,</span><span class="n">temp_design</span><span class="p">),</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The equivalent amount of potential energy to run this  mechanical flocculator is 1.17 m 0.5730957660614814 kilowatt</p>
+</div>
+<div class="section" id="id10">
+<h3>10)<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>What is the required reactor volume for the mechanical flocculator?</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
+<span class="n">vol_mech</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_mech</span> <span class="o">*</span> <span class="n">flow_plant</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The required reactor volume for the mechanical flocculator is&#39;</span><span class="p">,</span> <span class="n">vol_mech</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The required reactor volume for the mechanical flocculator is 90.0 meter ** 3</p>
+</div>
+<div class="section" id="id11">
+<h3>11)<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>If this flocculator is 4 m deep, then how many square meters of plan view area are required per L/s of flow capacity? This is a measure of required size of this unit process. For comparison, an AguaClara sedimentation tank requires about <span class="math notranslate nohighlight">\(\frac{1m^{2}}{L/s}\)</span> and are only 2 m deep.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#answer</span>
+<span class="n">depth_mech</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<span class="n">area_mech</span> <span class="o">=</span> <span class="p">(</span><span class="n">vol_mech</span> <span class="o">/</span> <span class="p">(</span><span class="n">depth_mech</span> <span class="o">*</span> <span class="n">flow_plant</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The required plan view area is&#39;</span><span class="p">,</span> <span class="n">area_mech</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The required plan view area is 0.45 meter ** 2 * second / liter</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Floc_Model_Solution.html" class="btn btn-neutral float-right" title="Flocculation Model Solution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Floc_Examples.html" class="btn btn-neutral" title="Flocculation Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

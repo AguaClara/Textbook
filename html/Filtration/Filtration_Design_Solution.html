@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>DC Stacked Rapid Sand Filtration &mdash; AguaClara Textbook  documentation</title>
+  <title>Filtration Design Solution &mdash; AguaClara Textbook  documentation</title>
   
 
   
@@ -28,7 +28,9 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dissolved Gas Introduction" href="../Dissolved_Gas/DG_Intro.html" />
+    <link rel="prev" title="Filtration Theory and Future Work" href="Filtration_Theory_and_Future_Work.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -96,6 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
 <ul>
@@ -104,6 +107,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
 <ul>
@@ -113,6 +118,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
@@ -120,14 +128,48 @@
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Filtration Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="EStaRS_Design.html">EStaRS Design</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Filtration Design Solution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dc-stacked-rapid-sand-filtration">DC Stacked Rapid Sand Filtration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#remember-dont-break-continuity">Remember: don’t break continuity!</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">4)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">5)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">6)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">7)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">8)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">9)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">10)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">11)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">12)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">13)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">14)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">15)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">16)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">17)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">18)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">19)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">20)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">21)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-constriction-hypothesis">Filter constriction hypothesis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reflection-questions">Reflection questions</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -197,13 +239,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>DC Stacked Rapid Sand Filtration</li>
+      <li>Filtration Design Solution</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/Filtration/Filtration_Solution.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Filtration/Filtration_Design_Solution.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -216,38 +258,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
-<span class="kn">from</span> <span class="nn">aide_design</span> <span class="k">import</span> <span class="n">floc_model</span> <span class="k">as</span> <span class="n">floc</span>
-<span class="kn">from</span> <span class="nn">pytexit</span> <span class="k">import</span> <span class="n">py2tex</span>
-
-<span class="c1">#Below are the items that were imported by the code above so that you know what abbreviations to use in your code.</span>
-
-<span class="c1"># Third-party imports</span>
-<span class="c1">#import numpy as np</span>
-<span class="c1">#import pandas as pd</span>
-<span class="c1">#import matplotlib.pyplot as plt</span>
-<span class="c1">#import matplotlib</span>
-
-<span class="c1"># AIDE imports</span>
-<span class="c1">#import aide_design</span>
-<span class="c1">#import aide_design.pipedatabase as pipe</span>
-<span class="c1">#from aide_design.units import unit_registry as u</span>
-<span class="c1">#from aide_design import physchem as pc</span>
-<span class="c1">#import aide_design.expert_inputs as exp</span>
-<span class="c1">#import aide_design.materials_database as mat</span>
-<span class="c1">#import aide_design.utility as ut</span>
-<span class="c1">#import aide_design.k_value_of_reductions_utility as k</span>
-<span class="c1">#import aide_design.pipeline_utility as pipeline</span>
-<span class="c1">#import warnings</span>
+  <div class="section" id="filtration-design-solution">
+<h1>Filtration Design Solution<a class="headerlink" href="#filtration-design-solution" title="Permalink to this headline">¶</a></h1>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="c1">#  from aide_design import floc_model as floc</span>
+<span class="c1">#  from pytexit import py2tex</span>
 </pre></div>
 </div>
 <div class="section" id="dc-stacked-rapid-sand-filtration">
-<h1>DC Stacked Rapid Sand Filtration<a class="headerlink" href="#dc-stacked-rapid-sand-filtration" title="Permalink to this headline">¶</a></h1>
-<p>The stacked rapid sand filter at Tamara, Hondruas is treating 12 L/s of
-water with six 20 cm deep layers of sand. The sand has an effective size
-of 0.5 mm and a uniformity coefficient of 1.6. The backwash velocity of
-the filter is 11 mm/s. Defined below are many of the necessary inputs
-for the filtration analysis.</p>
+<h2>DC Stacked Rapid Sand Filtration<a class="headerlink" href="#dc-stacked-rapid-sand-filtration" title="Permalink to this headline">¶</a></h2>
+<p>The stacked rapid sand filter at Tamara, Honduras is treating 12 L/s of water with six 20 cm deep layers of sand. The sand has an effective size of 0.5 mm and a uniformity coefficient of 1.6. The backwash velocity of the filter is 11 mm/s. Defined below are many of the necessary inputs for the filtration analysis.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flow_plant</span> <span class="o">=</span> <span class="mi">12</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">density_sand</span> <span class="o">=</span> <span class="mi">2650</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span>
 <span class="n">k_Kozeny</span> <span class="o">=</span> <span class="mi">5</span>
@@ -270,205 +290,138 @@ for the filtration analysis.</p>
 <span class="n">UC_filter_sand</span> <span class="o">=</span> <span class="mf">1.6</span>
 <span class="n">porosity_filter_sand</span> <span class="o">=</span> <span class="mf">0.4</span>
 <span class="n">V_filter_backwash</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">g</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">gravity</span>
 </pre></div>
 </div>
-<div class="alert alert-block alert-info"><div class="section" id="remember-dont-break-continuity">
-<h2>Remember: don’t break continuity!<a class="headerlink" href="#remember-dont-break-continuity" title="Permalink to this headline">¶</a></h2>
-<p>Ensure that you use the variables defined above in your code, do not
-hard code any numbers if you do not have to.</p>
+<div class="section" id="remember-dont-break-continuity">
+<h3>Remember: don’t break continuity!<a class="headerlink" href="#remember-dont-break-continuity" title="Permalink to this headline">¶</a></h3>
+<p>Ensure that you use the variables defined above in your code, do not hard code any numbers if you do not have to.</p>
 <div class="section" id="id1">
-<h3>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h4>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>Calculate the total sand depth of all 6 sand layers.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H_filter_sand_total</span> <span class="o">=</span> <span class="p">(</span><span class="n">H_filter_layer</span> <span class="o">*</span> <span class="n">N_filter_layer</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The total depth of the filter sand is&#39;</span><span class="p">,</span> <span class="n">H_filter_sand_total</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The total depth of the filter sand is&#39;</span><span class="p">,</span> <span class="n">H_filter_sand_total</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">total</span> <span class="n">depth</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">filter</span> <span class="n">sand</span> <span class="ow">is</span> <span class="mf">1.2</span> <span class="n">meter</span>
-</pre></div>
+<p>The total depth of the filter sand is 1.2 meter</p>
 </div>
-</div>
-<div class="section" id="section-1">
-<span id="id2"></span><h3>2)<a class="headerlink" href="#section-1" title="Permalink to this headline">¶</a></h3>
-<p>Calculate the diameter that is larger than 60% of the sand (D60 of the
-filter sand).</p>
+<div class="section" id="id2">
+<h4>2)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Calculate the diameter that is larger than 60% of the sand (D60 of the filter sand).</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D60_filter_sand</span> <span class="o">=</span> <span class="n">D_filter_sand_ES</span> <span class="o">*</span> <span class="n">UC_filter_sand</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The D60 for the sand grain size is&#39;</span><span class="p">,</span> <span class="n">D60_filter_sand</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The D60 for the sand grain size is&#39;</span><span class="p">,</span> <span class="n">D60_filter_sand</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">D60</span> <span class="k">for</span> <span class="n">the</span> <span class="n">sand</span> <span class="n">grain</span> <span class="n">size</span> <span class="ow">is</span> <span class="mf">0.8</span> <span class="n">millimeter</span>
-</pre></div>
+<p>The D60 for the sand grain size is 0.8 millimeter</p>
 </div>
-</div>
-<div class="section" id="section-2">
-<span id="id3"></span><h3>3)<a class="headerlink" href="#section-2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h4>3)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <p>What is the total filter bed plan view area for both filters in Tamara?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A_filter_total</span> <span class="o">=</span> <span class="p">(</span><span class="n">flow_plant</span> <span class="o">/</span> <span class="n">V_filter_backwash</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The filter bed plan view area is &#39;</span><span class="p">,</span><span class="n">A_filter_total</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The filter bed plan view area is &#39;</span><span class="p">,</span><span class="n">A_filter_total</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="nb">filter</span> <span class="n">bed</span> <span class="n">plan</span> <span class="n">view</span> <span class="n">area</span> <span class="ow">is</span>  <span class="mf">1.091</span> <span class="n">meter</span> <span class="o">**</span> <span class="mi">2</span>
-</pre></div>
+<p>The filter bed plan view area is  1.091 meter ** 2</p>
 </div>
-</div>
-<div class="section" id="section-3">
-<span id="id4"></span><h3>4)<a class="headerlink" href="#section-3" title="Permalink to this headline">¶</a></h3>
-<p>What is the velocity of water through a filter during filtration? Recall
-that the flow through the filter is the same in filter and backwash
-modes.</p>
+<div class="section" id="id4">
+<h4>4)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>What is the velocity of water through a filter during filtration? Recall that the flow through the filter is the same in filter and backwash modes.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">V_filter</span> <span class="o">=</span> <span class="n">V_filter_backwash</span> <span class="o">/</span> <span class="n">N_filter_layer</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The filtration velocity is&#39;</span><span class="p">,</span> <span class="n">V_filter</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The filtration velocity is&#39;</span><span class="p">,</span> <span class="n">V_filter</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">filtration</span> <span class="n">velocity</span> <span class="ow">is</span> <span class="mf">1.833</span> <span class="n">millimeter</span> <span class="o">/</span> <span class="n">second</span>
-</pre></div>
+<p>The filtration velocity is 1.833 millimeter / second</p>
 </div>
-</div>
-<div class="section" id="section-4">
-<span id="id5"></span><h3>5)<a class="headerlink" href="#section-4" title="Permalink to this headline">¶</a></h3>
-<p><strong>Create a function</strong> to calculate the head loss through the filter at
-the beginning of filtration with a clean filter bed. Then use that
-function to find the head loss through the clean bed of the Tamara
-filter. Assume that each flow path receives the same flow.</p>
-<p>Recall: - If you have flow paths in parallel, the headloss is NOT the
-sum of the head loss in each path. - Instead, the head loss in each path
-is the same as the total head loss.</p>
+<div class="section" id="id5">
+<h4>5)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p><strong>Create a function</strong> to calculate the head loss through the filter at the beginning of filtration with a clean filter bed. Then use that function to find the head loss through the clean bed of the Tamara filter. Assume that each flow path receives the same flow.</p>
+<p>Recall: - If you have flow paths in parallel, the head loss is NOT the sum of the head loss in each path. - Instead, the head loss in each path is the same as the total head loss.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">headloss_kozeny</span><span class="p">(</span><span class="n">PorosityFilterSand</span><span class="p">,</span> <span class="n">D60_filter_sand</span><span class="p">,</span> <span class="n">VelocityFilter</span><span class="p">,</span> <span class="n">DepthFilter</span><span class="p">):</span>
 
     <span class="k">return</span> <span class="p">(</span><span class="mi">36</span><span class="o">*</span><span class="n">k_Kozeny</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">PorosityFilterSand</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">PorosityFilterSand</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span>
-            <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_design</span><span class="p">)</span> <span class="o">*</span> <span class="n">VelocityFilter</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">g</span> <span class="o">*</span> <span class="n">D_filter_sand_ES</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span> <span class="n">DepthFilter</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
+            <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_design</span><span class="p">)</span> <span class="o">*</span> <span class="n">VelocityFilter</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">D_filter_sand_ES</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span> <span class="n">DepthFilter</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 
 <span class="n">hl_filter_clean</span> <span class="o">=</span> <span class="n">headloss_kozeny</span><span class="p">(</span><span class="n">porosity_filter_sand</span><span class="p">,</span> <span class="n">D60_filter_sand</span><span class="p">,</span> <span class="n">V_filter</span><span class="p">,</span> <span class="n">H_filter_layer</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The headloss through the clean filter sand is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">hl_filter_clean</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The headloss through the clean filter sand is&#39;</span><span class="p">,</span> <span class="n">hl_filter_clean</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">headloss</span> <span class="n">through</span> <span class="n">the</span> <span class="n">clean</span> <span class="nb">filter</span> <span class="n">sand</span> <span class="ow">is</span> <span class="mf">15.20</span> <span class="n">cm</span>
-</pre></div>
+<p>The head loss through the clean filter sand is 15.20 cm</p>
 </div>
-</div>
-<div class="section" id="section-5">
-<span id="id6"></span><h3>6)<a class="headerlink" href="#section-5" title="Permalink to this headline">¶</a></h3>
-<p><strong>Create a function</strong> to estimate the minimum fluidization velocity for
-this filter bed. Then use that function to find the minimum fluidization
-velocity of the Tamara filter. Fluidization occurs at the beginning of
-backwash as all of the water flows through the bottom inlet. Note that
-this is not the actual velocity used for backwashing the sand.</p>
+<div class="section" id="id6">
+<h4>6)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p><strong>Create a function</strong> to estimate the minimum fluidization velocity for this filter bed. Then use that function to find the minimum fluidization velocity of the Tamara filter. Fluidization occurs at the beginning of backwash as all of the water flows through the bottom inlet. Note that this is not the actual velocity used for backwashing the sand.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">velocity_backwash_min</span><span class="p">(</span><span class="n">porosity_sand</span><span class="p">,</span> <span class="n">D60_filter_sand</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">((</span><span class="n">porosity_sand</span><span class="o">**</span><span class="mi">3</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">D60_filter_sand</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span>
+    <span class="k">return</span> <span class="p">((</span><span class="n">porosity_sand</span><span class="o">**</span><span class="mi">3</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">D60_filter_sand</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span>
             <span class="mi">36</span> <span class="o">*</span> <span class="n">k_Kozeny</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">porosity_sand</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span>
             <span class="n">density_sand</span> <span class="o">/</span> <span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum fluidization velocity for this filter bed is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">velocity_backwash_min</span><span class="p">(</span><span class="n">porosity_filter_sand</span><span class="p">,</span> <span class="n">D60_filter_sand</span><span class="p">,</span><span class="n">T_design</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum fluidization velocity for this filter bed is&#39;</span><span class="p">,</span> <span class="n">velocity_backwash_min</span><span class="p">(</span><span class="n">porosity_filter_sand</span><span class="p">,</span> <span class="n">D60_filter_sand</span><span class="p">,</span><span class="n">T_design</span><span class="p">),</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">minimum</span> <span class="n">fluidization</span> <span class="n">velocity</span> <span class="k">for</span> <span class="n">this</span> <span class="nb">filter</span> <span class="n">bed</span> <span class="ow">is</span> <span class="mf">6.1</span> <span class="n">mm</span><span class="o">/</span><span class="n">s</span>
-</pre></div>
+<p>The minimum fluidization velocity for this filter bed is 6.1 mm/s</p>
 </div>
-</div>
-<div class="section" id="section-6">
-<span id="id7"></span><h3>7)<a class="headerlink" href="#section-6" title="Permalink to this headline">¶</a></h3>
-<p>First, plot the minimum backwash velocity as a function of water
-temperature from 0°C to 30°C. Then use your plot to answer the following
-question: if you have a water treatment plant with a single filter and
-there is a drought that is reducing flow to the plant, when should you
-backwash the filter? Double click this cell and bold the correct answer.
-Recall that bolding is done by placing ** around the words you wish to
-bold.</p>
-<ol class="arabic simple">
-<li><strong>At the time of the day when the water is coolest</strong></li>
-<li>At the time of the day when the water is warmest</li>
-</ol>
+<div class="section" id="id7">
+<h4>7)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<p>First, plot the minimum backwash velocity as a function of water temperature from 0°C to 30°C. Then use your plot to answer the following question: if you have a water treatment plant with a single filter and there is a drought that is reducing flow to the plant, when should you backwash the filter? Should you backwash when the water is coolest or when the water is warmest?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">T_graph</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
-
 <span class="n">ypoints</span> <span class="o">=</span> <span class="n">velocity_backwash_min</span><span class="p">(</span><span class="n">porosity_filter_sand</span><span class="p">,</span> <span class="n">D60_filter_sand</span><span class="p">,</span><span class="n">T_graph</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T_graph</span><span class="p">,</span><span class="n">ypoints</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T_graph</span><span class="p">,</span><span class="n">ypoints</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Temperature (°C)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Minimum backwash velocity&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Minimum backwash velocity vs water temperature&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Temperature (°C)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Minimum backwash velocity&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Filtration/Images/Minimum_backwash_velocity_vs_water_temperature&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure" id="id15">
-<img alt="png" src="Filtration/DC_Filtration_Solution_files/DC_Filtration_Solution_17_0.png" />
-<p class="caption"><span class="caption-text">png</span></p>
+<div class="figure align-center" id="id22">
+<span id="figure-minimum-backwash-velocity-vs-water-temperature"></span><a class="reference internal image-reference" href="../_images/Minimum_backwash_velocity_vs_water_temperature.png"><img alt="Minimum backwash velocity vs water temperature" src="../_images/Minimum_backwash_velocity_vs_water_temperature.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 129 </span><span class="caption-text">The minimum backwash velocity increases with temperature. Thus it is best to backwash when the water is coolest.</span></p>
 </div>
 </div>
-<div class="section" id="section-7">
-<span id="id8"></span><h3>8)<a class="headerlink" href="#section-7" title="Permalink to this headline">¶</a></h3>
-<p>What is the residence time of water in the filter during backwash, when
-the bed is fluidized? You may assume the sand bed expansion ratio is
-1.3.</p>
+<div class="section" id="id8">
+<h4>8)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<p>What is the residence time of water in the filter during backwash, when the bed is fluidized? You may assume the sand bed expansion ratio is 1.3.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pi_filter_backwash_expansion</span> <span class="o">=</span> <span class="mf">1.3</span>
 <span class="n">t_res_filter_backwash</span> <span class="o">=</span> <span class="p">((</span><span class="n">porosity_filter_sand</span> <span class="o">*</span> <span class="n">H_filter_sand_total</span> <span class="o">+</span> <span class="p">(</span>
                             <span class="n">Pi_filter_backwash_expansion</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">H_filter_sand_total</span>
                            <span class="p">)</span> <span class="o">/</span> <span class="n">V_filter_backwash</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The residence time in the fluidized bed during backwash is&#39;</span><span class="p">,</span> <span class="n">t_res_filter_backwash</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The residence time in the fluidized bed during backwash is&#39;</span><span class="p">,</span> <span class="n">t_res_filter_backwash</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">residence</span> <span class="n">time</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">fluidized</span> <span class="n">bed</span> <span class="n">during</span> <span class="n">backwash</span> <span class="ow">is</span> <span class="mf">76.36</span> <span class="n">second</span>
-</pre></div>
+<p>The residence time in the fluidized bed during backwash is 76.36 second</p>
+<p>Our next overall goal is to determine the ratio of water wasted in a Stacked Rapid Sand (StaRS) Filter to water treated in a StaRS. Given that the backwash water that ends up above the filter bed never returns to the filter it isn’t necessary to completely clear the water above the filter bed during a backwash cycle. Therefore we anticipate that backwash can be ended after approximately 3 expanded bed residence times. In addition it takes about 1 minute to initiate backwash by lowering the water level above the filter bed.</p>
 </div>
-<p>Our next overall goal is to determine the ratio of water wasted in a
-Stacked Rapid Sand Filter (SRSF) to water treated in a SRSF. Given that
-the backwash water that ends up above the filter bed never returns to
-the filter it isn’t necessary to completely clear the water above the
-filter bed during a backwash cycle. Therefore we anticipate that
-backwash can be ended after approximately 3 expanded bed residence
-times. In addition it takes about 1 minute to initiate backwash by
-lowering the water level above the filter bed.</p>
-</div>
-<div class="section" id="section-8">
-<span id="id9"></span><h3>9)<a class="headerlink" href="#section-8" title="Permalink to this headline">¶</a></h3>
-<p>To start, estimate the time between beginning backwash and finishing the
-cleaning of the bed.</p>
+<div class="section" id="id9">
+<h4>9)<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>To start, estimate the time between beginning backwash and finishing the cleaning of the bed.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t_filter_backwash_drain</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">min</span>
 <span class="n">t_filter_backwash</span> <span class="o">=</span> <span class="p">(</span><span class="n">t_res_filter_backwash</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">t_filter_backwash_drain</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time to backwash the filter is&#39;</span><span class="p">,</span> <span class="n">t_filter_backwash</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time to backwash the filter is&#39;</span><span class="p">,</span> <span class="n">t_filter_backwash</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">time</span> <span class="n">to</span> <span class="n">backwash</span> <span class="n">the</span> <span class="nb">filter</span> <span class="ow">is</span> <span class="mf">289.1</span> <span class="n">second</span>
-</pre></div>
+<p>The time to backwash the filter is 289.1 second</p>
 </div>
-</div>
-<div class="section" id="section-9">
-<span id="id10"></span><h3>10)<a class="headerlink" href="#section-9" title="Permalink to this headline">¶</a></h3>
-<p>Estimate the total <strong>depth</strong> of water that is wasted while backwash is
-occuring.</p>
+<div class="section" id="id10">
+<h4>10)<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p>Estimate the total <strong>depth</strong> of water that is wasted while backwash is occurring.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H_filter_backwash_water</span> <span class="o">=</span> <span class="p">(</span><span class="n">V_filter_backwash</span> <span class="o">*</span> <span class="n">t_filter_backwash</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The total depth of water that is wasted is&#39;</span><span class="p">,</span> <span class="n">H_filter_backwash_water</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The total depth of water that is wasted is&#39;</span><span class="p">,</span> <span class="n">H_filter_backwash_water</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">total</span> <span class="n">depth</span> <span class="n">of</span> <span class="n">water</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">wasted</span> <span class="ow">is</span> <span class="mf">3.18</span> <span class="n">meter</span>
-</pre></div>
+<p>The total depth of water that is wasted is 3.18 meter</p>
 </div>
-</div>
-<div class="section" id="section-10">
-<span id="id11"></span><h3>11)<a class="headerlink" href="#section-10" title="Permalink to this headline">¶</a></h3>
-<p>Estimate the total depth of water that is lost due to refilling the
-filter box at the end of backwash plus the slow refilling to the maximum
-dirty bed height. You may ignore the influence of plumbing head loss and
-you may assume that the dirty bed head loss is about 40 cm. The water
-level in the filter during backwash is lower than the water level at the
-end of filtration by both the head loss during backwash AND the headloss
-at the end of filtration. There is also an additional 20 cm of lost
-water that is required for the hydraulic controls.</p>
-<p>To reiterate, the three components that contribute to the depth of water
-lost in refilling the filter box after backwash are as follows:</p>
+<div class="section" id="id11">
+<h4>11)<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<p>Estimate the total depth of water that is lost due to refilling the filter box at the end of backwash plus the slow refilling to the maximum dirty bed height. You may ignore the influence of plumbing head loss and you may assume that the dirty bed head loss is about 40 cm. The water level in the filter during backwash is lower than the water level at the end of filtration by both the head loss during backwash AND the head loss at the end of filtration. There is also an additional 20 cm of lost water that is required for the hydraulic controls.</p>
+<p>To reiterate, the three components that contribute to the depth of water lost in refilling the filter box after backwash are as follows:</p>
 <ol class="arabic simple">
 <li>Head loss during clean-bed filtration.</li>
-<li>Difference in head loss between clean-bed filtration and dirty-bed
-filtration, just before backwash.</li>
-<li>Height of the pipe that initiates backwash, also called the hydraulic
-control. This is actuall the pipe’s diameter, since it is laying
-sideways in the fitler.</li>
+<li>Difference in head loss between clean-bed filtration and dirty-bed filtration, just before backwash.</li>
+<li>Height of the pipe that initiates backwash, also called the hydraulic control. This is actually the pipe’s diameter, since it is laying sideways in the filter.</li>
 </ol>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hl_filter_final</span> <span class="o">=</span> <span class="mi">40</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">H_hydraulic_controls</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span>
@@ -477,294 +430,215 @@ sideways in the fitler.</li>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The total depth of water that is lost due to refilling the filter box is&#39;</span><span class="p">,</span> <span class="n">H_filter_backwash_water_refill</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">total</span> <span class="n">depth</span> <span class="n">of</span> <span class="n">water</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">lost</span> <span class="n">due</span> <span class="n">to</span> <span class="n">refilling</span> <span class="n">the</span> <span class="nb">filter</span> <span class="n">box</span> <span class="ow">is</span> <span class="mf">1.8</span> <span class="n">meter</span>
-</pre></div>
+<p>The total depth of water that is lost due to refilling the filter box is 1.8 meter</p>
 </div>
-</div>
-<div class="section" id="section-11">
-<span id="id12"></span><h3>12)<a class="headerlink" href="#section-11" title="Permalink to this headline">¶</a></h3>
-<p>Now calculate the total length (or depth) of water that is wasted due to
-backwash by adding the two previous lengths. The lengthh found in
-problem 10 represents water wasted while backwash is occuring, while the
-length in problem 11 represents the water lost in the transition to and
-from backwash.</p>
+<div class="section" id="id12">
+<h4>12)<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<p>Now calculate the total length (or depth) of water that is wasted due to backwash by adding the two previous lengths. The length found in problem 10 represents water wasted while backwash is occurring, while the length in problem 11 represents the water lost in the transition to and from backwash.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H_filter_backwash_water_wasted</span> <span class="o">=</span> <span class="n">H_filter_backwash_water</span> <span class="o">+</span> <span class="n">H_filter_backwash_water_refill</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The depth of the water that is wasted due to backwash is&#39;</span><span class="p">,</span> <span class="n">H_filter_backwash_water_wasted</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">depth</span> <span class="n">of</span> <span class="n">the</span> <span class="n">water</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">wasted</span> <span class="n">due</span> <span class="n">to</span> <span class="n">backwash</span> <span class="ow">is</span> <span class="mf">4.98</span> <span class="n">meter</span>
-</pre></div>
+<p>The depth of the water that is wasted due to backwash is 4.98 meter</p>
 </div>
-</div>
-<div class="section" id="section-12">
-<span id="id13"></span><h3>13)<a class="headerlink" href="#section-12" title="Permalink to this headline">¶</a></h3>
-<p>Assume that the filter is backwashed every 12 hours. This means that the
-filter is producing clean water for 12 hours before it need to be
-backwashed. What is the total height (or length) of water that would be
-treated by the filter during this time? This length when multiplied by
-the area of the filter would give the total volume of water processed by
-a filter.</p>
+<div class="section" id="id13">
+<h4>13)<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<p>Assume that the filter is backwashed every 12 hours. This means that the filter is producing clean water for 12 hours before it need to be backwashed. What is the total height (or length) of water that would be treated by the filter during this time? This length when multiplied by the area of the filter would give the total volume of water processed by a filter.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t_filter_cycle</span> <span class="o">=</span> <span class="mi">12</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">hr</span>
 <span class="n">H_water_filtered_per_cycle</span> <span class="o">=</span> <span class="p">(</span><span class="n">t_filter_cycle</span> <span class="o">*</span> <span class="n">V_filter_backwash</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The height of water that would enter the filter in 12 hours is&#39;</span><span class="p">,</span> <span class="n">H_water_filtered_per_cycle</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">height</span> <span class="n">of</span> <span class="n">water</span> <span class="n">that</span> <span class="n">would</span> <span class="n">enter</span> <span class="n">the</span> <span class="nb">filter</span> <span class="ow">in</span> <span class="mi">12</span> <span class="n">hours</span> <span class="ow">is</span> <span class="mf">475.2</span> <span class="n">meter</span>
-</pre></div>
+<p>The height of water that would enter the filter in 12 hours is 475.2 meter</p>
 </div>
-</div>
-<div class="section" id="section-13">
-<span id="id14"></span><h3>14)<a class="headerlink" href="#section-13" title="Permalink to this headline">¶</a></h3>
-<p>Finally, what is the ratio of water lost due to backwash and related
-water level changes in the filter box to water treated?</p>
+<div class="section" id="id14">
+<h4>14)<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<p>Finally, what is the ratio of water lost due to backwash and related water level changes in the filter box to water treated?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pi_water_wasted</span> <span class="o">=</span> <span class="p">(</span><span class="n">H_filter_backwash_water_wasted</span> <span class="o">/</span> <span class="n">H_water_filtered_per_cycle</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The fraction of the total water that is lost due to backwash is&#39;</span><span class="p">,</span> <span class="n">Pi_water_wasted</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">fraction</span> <span class="n">of</span> <span class="n">the</span> <span class="n">total</span> <span class="n">water</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">lost</span> <span class="n">due</span> <span class="n">to</span> <span class="n">backwash</span> <span class="ow">is</span> <span class="mf">0.01048</span> <span class="n">dimensionless</span>
-</pre></div>
+<p>The fraction of the total water that is lost due to backwash is 0.01048 dimensionless</p>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="extra-analysis-that-is-already-completed-15-now-we-will-evaluate-the-very-first-data-set-from-a-full-scale-srsf-the-performance-data-given-below-is-the-settled-water-turbidity-and-then-the-filtered-water-turbidity-during-one-filter-run-the-time-step-is-5-minutes-plot-pc-for-the-filter-as-well-as-effuent-turbidity-as-a-function-of-time-on-two-separate-graphs">
-<h1>Extra analysis that * is already completed* ### 15: Now we will evaluate the very first data set from a full scale SRSF. The performance data given below is the settled water turbidity and then the filtered water turbidity during one filter run. The time step is 5 minutes. Plot pC* for the filter as well as effuent turbidity as a function of time on two separate graphs.<a class="headerlink" href="#extra-analysis-that-is-already-completed-15-now-we-will-evaluate-the-very-first-data-set-from-a-full-scale-srsf-the-performance-data-given-below-is-the-settled-water-turbidity-and-then-the-filtered-water-turbidity-during-one-filter-run-the-time-step-is-5-minutes-plot-pc-for-the-filter-as-well-as-effuent-turbidity-as-a-function-of-time-on-two-separate-graphs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id15">
+<h4>15)<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<p>Now we will evaluate the very first data set from a full scale SRSF. The performance data given below is the settled water turbidity and then the filtered water turbidity during one filter run. The time step is 5 minutes. Plot pC* for the filter as well as effluent turbidity as a function of time on two separate graphs.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filter_influent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">7.06201</span><span class="p">,</span><span class="mf">7.14465</span><span class="p">,</span><span class="mf">7.00537</span><span class="p">,</span><span class="mf">6.33032</span><span class="p">,</span><span class="mf">5.4502</span><span class="p">,</span><span class="mf">4.98511</span><span class="p">,</span><span class="mf">4.64221</span><span class="p">,</span><span class="mf">4.23853</span><span class="p">,</span><span class="mf">3.93707</span><span class="p">,</span><span class="mf">3.72717</span><span class="p">,</span><span class="mf">3.67126</span><span class="p">,</span><span class="mf">3.55866</span><span class="p">,</span><span class="mf">3.55292</span><span class="p">,</span><span class="mf">3.45593</span><span class="p">,</span><span class="mf">3.48163</span><span class="p">,</span><span class="mf">3.50226</span><span class="p">,</span><span class="mf">3.45093</span><span class="p">,</span><span class="mf">3.50232</span><span class="p">,</span><span class="mf">3.41095</span><span class="p">,</span><span class="mf">3.55341</span><span class="p">,</span><span class="mf">3.46643</span><span class="p">,</span><span class="mf">3.50732</span><span class="p">,</span><span class="mf">3.49146</span><span class="p">,</span><span class="mf">3.51208</span><span class="p">,</span><span class="mf">3.487</span><span class="p">,</span><span class="mf">3.58893</span><span class="p">,</span><span class="mf">3.54315</span><span class="p">,</span><span class="mf">3.61469</span><span class="p">,</span><span class="mf">3.58429</span><span class="p">,</span><span class="mf">3.55835</span><span class="p">,</span><span class="mf">3.72723</span><span class="p">,</span><span class="mf">3.7829</span><span class="p">,</span><span class="mf">3.74201</span><span class="p">,</span><span class="mf">3.82398</span><span class="p">,</span><span class="mf">3.74725</span><span class="p">,</span><span class="mf">3.83423</span><span class="p">,</span><span class="mf">3.72717</span><span class="p">,</span><span class="mf">3.72705</span><span class="p">,</span><span class="mf">3.87079</span><span class="p">,</span><span class="mf">3.77338</span><span class="p">,</span><span class="mf">3.70148</span><span class="p">,</span><span class="mf">3.74762</span><span class="p">,</span><span class="mf">3.76227</span><span class="p">,</span><span class="mf">3.58875</span><span class="p">,</span><span class="mf">3.63477</span><span class="p">,</span><span class="mf">3.67566</span><span class="p">,</span><span class="mf">3.52789</span><span class="p">,</span><span class="mf">3.59296</span><span class="p">,</span><span class="mf">3.66577</span><span class="p">,</span><span class="mf">3.51709</span><span class="p">,</span><span class="mf">3.63965</span><span class="p">,</span><span class="mf">3.57843</span><span class="p">,</span><span class="mf">3.47546</span><span class="p">,</span><span class="mf">3.66016</span><span class="p">,</span><span class="mf">3.58386</span><span class="p">,</span><span class="mf">3.53259</span><span class="p">,</span><span class="mf">3.57886</span><span class="p">,</span><span class="mf">3.51392</span><span class="p">,</span><span class="mf">3.63983</span><span class="p">,</span><span class="mf">3.64972</span><span class="p">,</span><span class="mf">3.64606</span><span class="p">,</span><span class="mf">3.49121</span><span class="p">,</span><span class="mf">3.51691</span><span class="p">,</span><span class="mf">3.5119</span><span class="p">,</span><span class="mf">3.61414</span><span class="p">,</span><span class="mf">3.5835</span><span class="p">,</span><span class="mf">3.46558</span><span class="p">,</span><span class="mf">3.63965</span><span class="p">,</span><span class="mf">3.60962</span><span class="p">,</span><span class="mf">3.50147</span><span class="p">,</span><span class="mf">3.51678</span><span class="p">,</span><span class="mf">3.46039</span><span class="p">,</span><span class="mf">3.49133</span><span class="p">,</span><span class="mf">3.48566</span><span class="p">,</span><span class="mf">3.50104</span><span class="p">,</span><span class="mf">3.5943</span><span class="p">,</span><span class="mf">3.47778</span><span class="p">,</span><span class="mf">3.53766</span><span class="p">,</span><span class="mf">3.55811</span><span class="p">,</span><span class="mf">3.50635</span><span class="p">,</span><span class="mf">3.42535</span><span class="p">,</span><span class="mf">3.48077</span><span class="p">,</span><span class="mf">3.54242</span><span class="p">,</span><span class="mf">3.55274</span><span class="p">,</span><span class="mf">3.59369</span><span class="p">,</span><span class="mf">3.48596</span><span class="p">,</span><span class="mf">3.53296</span><span class="p">,</span><span class="mf">3.51746</span><span class="p">,</span><span class="mf">3.45056</span><span class="p">,</span><span class="mf">3.59387</span><span class="p">,</span><span class="mf">3.5426</span><span class="p">,</span><span class="mf">4.26868</span><span class="p">,</span><span class="mf">3.99201</span><span class="p">,</span><span class="mf">3.45569</span><span class="p">,</span><span class="mf">3.86975</span><span class="p">,</span><span class="mf">3.54407</span><span class="p">,</span><span class="mf">3.49097</span><span class="p">,</span><span class="mf">3.9823</span><span class="p">,</span><span class="mf">3.58325</span><span class="p">,</span><span class="mf">3.77789</span><span class="p">,</span><span class="mf">3.70111</span><span class="p">,</span><span class="mf">3.59839</span><span class="p">,</span><span class="mf">4.09424</span><span class="p">,</span><span class="mf">3.56769</span><span class="p">,</span><span class="mf">3.83325</span><span class="p">,</span><span class="mf">3.76019</span><span class="p">,</span><span class="mf">3.49121</span><span class="p">,</span><span class="mf">4.52917</span><span class="p">,</span><span class="mf">3.63037</span><span class="p">,</span><span class="mf">4.21228</span><span class="p">,</span><span class="mf">3.60858</span><span class="p">,</span><span class="mf">4.72827</span><span class="p">,</span><span class="mf">4.00757</span><span class="p">,</span><span class="mf">3.71674</span><span class="p">,</span><span class="mf">3.87647</span><span class="p">,</span><span class="mf">3.8288</span><span class="p">,</span><span class="mf">3.44067</span><span class="p">,</span><span class="mf">3.74219</span><span class="p">,</span><span class="mf">3.64941</span><span class="p">,</span><span class="mf">3.87439</span><span class="p">,</span><span class="mf">3.79327</span><span class="p">,</span><span class="mf">4.10486</span><span class="p">,</span><span class="mf">4.16638</span><span class="p">,</span><span class="mf">3.84418</span><span class="p">,</span><span class="mf">4.11792</span><span class="p">,</span><span class="mf">3.46082</span><span class="p">,</span><span class="mf">3.71661</span><span class="p">,</span><span class="mf">3.5061</span><span class="p">,</span><span class="mf">3.48596</span><span class="p">,</span><span class="mf">4.42175</span><span class="p">,</span><span class="mf">3.57806</span><span class="p">,</span><span class="mf">4.01294</span><span class="p">,</span><span class="mf">3.63965</span><span class="p">,</span><span class="mf">3.80408</span><span class="p">,</span><span class="mf">3.60431</span><span class="p">,</span><span class="mf">3.67572</span><span class="p">,</span><span class="mf">3.61981</span><span class="p">,</span><span class="mf">3.66022</span><span class="p">,</span><span class="mf">3.67554</span><span class="p">,</span><span class="mf">3.46076</span><span class="p">,</span><span class="mf">3.72669</span><span class="p">,</span><span class="mf">3.56287</span><span class="p">,</span><span class="mf">3.66003</span><span class="p">,</span><span class="mf">3.60004</span><span class="p">,</span><span class="mf">3.4812</span><span class="p">,</span><span class="mf">3.55823</span><span class="p">,</span><span class="mf">6.19641</span><span class="p">,</span><span class="mf">3.74146</span><span class="p">,</span><span class="mf">3.88025</span><span class="p">,</span><span class="mf">4.18713</span><span class="p">,</span><span class="mf">4.27881</span><span class="p">,</span><span class="mf">3.6496</span><span class="p">,</span><span class="mf">3.45111</span><span class="p">,</span><span class="mf">3.8656</span><span class="p">,</span><span class="mf">3.90106</span><span class="p">,</span><span class="mf">3.68597</span><span class="p">,</span><span class="mf">3.66101</span><span class="p">,</span><span class="mf">3.88513</span><span class="p">,</span><span class="mf">3.74652</span><span class="p">,</span><span class="mf">3.70123</span><span class="p">,</span><span class="mf">3.79828</span><span class="p">,</span><span class="mf">3.84369</span><span class="p">,</span><span class="mf">3.59418</span><span class="p">,</span><span class="mf">3.60968</span><span class="p">,</span><span class="mf">3.49127</span><span class="p">,</span><span class="mf">3.45081</span><span class="p">,</span><span class="mf">3.40424</span><span class="p">,</span><span class="mf">3.35852</span><span class="p">,</span><span class="mf">3.32788</span><span class="p">,</span><span class="mf">3.29211</span><span class="p">,</span><span class="mf">3.21008</span><span class="p">,</span><span class="mf">3.79279</span><span class="p">,])</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">NTU</span>
 <span class="n">filter_effluent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.926376</span><span class="p">,</span><span class="mf">0.645981</span><span class="p">,</span><span class="mf">0.69725</span><span class="p">,</span><span class="mf">0.625855</span><span class="p">,</span><span class="mf">0.600449</span><span class="p">,</span><span class="mf">0.472694</span><span class="p">,</span><span class="mf">0.381546</span><span class="p">,</span><span class="mf">0.340439</span><span class="p">,</span><span class="mf">0.309883</span><span class="p">,</span><span class="mf">0.289848</span><span class="p">,</span><span class="mf">0.27813</span><span class="p">,</span><span class="mf">0.254097</span><span class="p">,</span><span class="mf">0.249432</span><span class="p">,</span><span class="mf">0.253769</span><span class="p">,</span><span class="mf">0.203117</span><span class="p">,</span><span class="mf">0.253891</span><span class="p">,</span><span class="mf">0.34063</span><span class="p">,</span><span class="mf">0.223385</span><span class="p">,</span><span class="mf">0.365952</span><span class="p">,</span><span class="mf">0.264389</span><span class="p">,</span><span class="mf">0.259193</span><span class="p">,</span><span class="mf">0.340576</span><span class="p">,</span><span class="mf">0.279671</span><span class="p">,</span><span class="mf">0.309776</span><span class="p">,</span><span class="mf">0.304878</span><span class="p">,</span><span class="mf">0.279404</span><span class="p">,</span><span class="mf">0.299896</span><span class="p">,</span><span class="mf">0.340294</span><span class="p">,</span><span class="mf">0.25399</span><span class="p">,</span><span class="mf">0.350731</span><span class="p">,</span><span class="mf">0.34053</span><span class="p">,</span><span class="mf">0.487877</span><span class="p">,</span><span class="mf">0.391518</span><span class="p">,</span><span class="mf">0.309715</span><span class="p">,</span><span class="mf">0.360901</span><span class="p">,</span><span class="mf">0.442352</span><span class="p">,</span><span class="mf">0.30967</span><span class="p">,</span><span class="mf">0.391251</span><span class="p">,</span><span class="mf">0.457253</span><span class="p">,</span><span class="mf">0.447685</span><span class="p">,</span><span class="mf">0.386322</span><span class="p">,</span><span class="mf">0.549149</span><span class="p">,</span><span class="mf">0.33036</span><span class="p">,</span><span class="mf">0.426437</span><span class="p">,</span><span class="mf">0.513458</span><span class="p">,</span><span class="mf">0.279022</span><span class="p">,</span><span class="mf">0.462692</span><span class="p">,</span><span class="mf">0.589768</span><span class="p">,</span><span class="mf">0.381073</span><span class="p">,</span><span class="mf">0.532669</span><span class="p">,</span><span class="mf">0.538529</span><span class="p">,</span><span class="mf">0.350472</span><span class="p">,</span><span class="mf">0.559036</span><span class="p">,</span><span class="mf">0.51828</span><span class="p">,</span><span class="mf">0.462578</span><span class="p">,</span><span class="mf">0.594772</span><span class="p">,</span><span class="mf">0.47242</span><span class="p">,</span><span class="mf">0.538681</span><span class="p">,</span><span class="mf">0.605087</span><span class="p">,</span><span class="mf">0.402168</span><span class="p">,</span><span class="mf">0.538818</span><span class="p">,</span><span class="mf">0.66658</span><span class="p">,</span><span class="mf">0.447243</span><span class="p">,</span><span class="mf">0.574585</span><span class="p">,</span><span class="mf">0.691544</span><span class="p">,</span><span class="mf">0.513382</span><span class="p">,</span><span class="mf">0.655701</span><span class="p">,</span><span class="mf">0.655884</span><span class="p">,</span><span class="mf">0.605408</span><span class="p">,</span><span class="mf">0.666153</span><span class="p">,</span><span class="mf">0.599976</span><span class="p">,</span><span class="mf">0.651047</span><span class="p">,</span><span class="mf">0.702515</span><span class="p">,</span><span class="mf">0.92572</span><span class="p">,</span><span class="mf">0.90535</span><span class="p">,</span><span class="mf">0.732117</span><span class="p">,</span><span class="mf">0.605026</span><span class="p">,</span><span class="mf">0.849335</span><span class="p">,</span><span class="mf">0.691925</span><span class="p">,</span><span class="mf">0.584976</span><span class="p">,</span><span class="mf">0.803314</span><span class="p">,</span><span class="mf">0.783569</span><span class="p">,</span><span class="mf">0.706787</span><span class="p">,</span><span class="mf">0.783066</span><span class="p">,</span><span class="mf">0.640701</span><span class="p">,</span><span class="mf">0.732269</span><span class="p">,</span><span class="mf">0.803497</span><span class="p">,</span><span class="mf">0.625458</span><span class="p">,</span><span class="mf">0.625687</span><span class="p">,</span><span class="mf">1.00089</span><span class="p">,</span><span class="mf">1.03265</span><span class="p">,</span><span class="mf">1.00687</span><span class="p">,</span><span class="mf">0.834213</span><span class="p">,</span><span class="mf">0.732224</span><span class="p">,</span><span class="mf">0.859665</span><span class="p">,</span><span class="mf">0.559174</span><span class="p">,</span><span class="mf">1.08862</span><span class="p">,</span><span class="mf">0.93634</span><span class="p">,</span><span class="mf">0.722717</span><span class="p">,</span><span class="mf">0.966141</span><span class="p">,</span><span class="mf">1.03278</span><span class="p">,</span><span class="mf">0.890366</span><span class="p">,</span><span class="mf">0.874756</span><span class="p">,</span><span class="mf">0.813675</span><span class="p">,</span><span class="mf">0.864746</span><span class="p">,</span><span class="mf">0.874863</span><span class="p">,</span><span class="mf">0.625504</span><span class="p">,</span><span class="mf">0.874847</span><span class="p">,</span><span class="mf">0.889893</span><span class="p">,</span><span class="mf">0.931473</span><span class="p">,</span><span class="mf">0.880112</span><span class="p">,</span><span class="mf">1.30231</span><span class="p">,</span><span class="mf">0.813965</span><span class="p">,</span><span class="mf">0.961502</span><span class="p">,</span><span class="mf">0.966324</span><span class="p">,</span><span class="mf">0.839432</span><span class="p">,</span><span class="mf">0.889969</span><span class="p">,</span><span class="mf">0.930618</span><span class="p">,</span><span class="mf">1.20074</span><span class="p">,</span><span class="mf">0.93631</span><span class="p">,</span><span class="mf">0.951584</span><span class="p">,</span><span class="mf">0.78331</span><span class="p">,</span><span class="mf">0.961609</span><span class="p">,</span><span class="mf">0.996796</span><span class="p">,</span><span class="mf">0.940994</span><span class="p">,</span><span class="mf">0.966675</span><span class="p">,</span><span class="mf">1.04788</span><span class="p">,</span><span class="mf">0.951645</span><span class="p">,</span><span class="mf">0.966888</span><span class="p">,</span><span class="mf">1.01251</span><span class="p">,</span><span class="mf">0.96167</span><span class="p">,</span><span class="mf">1.0076</span><span class="p">,</span><span class="mf">0.900436</span><span class="p">,</span><span class="mf">0.996628</span><span class="p">,</span><span class="mf">1.12949</span><span class="p">,</span><span class="mf">0.910263</span><span class="p">,</span><span class="mf">1.03256</span><span class="p">,</span><span class="mf">1.04788</span><span class="p">,</span><span class="mf">0.997604</span><span class="p">,</span><span class="mf">1.05817</span><span class="p">,</span><span class="mf">1.05801</span><span class="p">,</span><span class="mf">1.06311</span><span class="p">,</span><span class="mf">1.05805</span><span class="p">,</span><span class="mf">1.00711</span><span class="p">,</span><span class="mf">1.05811</span><span class="p">,</span><span class="mf">1.11896</span><span class="p">,</span><span class="mf">1.06299</span><span class="p">,</span><span class="mf">1.07318</span><span class="p">,</span><span class="mf">0.966049</span><span class="p">,</span><span class="mf">1.07343</span><span class="p">,</span><span class="mf">1.09918</span><span class="p">,</span><span class="mf">1.15497</span><span class="p">,</span><span class="mf">1.07303</span><span class="p">,</span><span class="mf">1.13937</span><span class="p">,</span><span class="mf">1.12402</span><span class="p">,</span><span class="mf">1.155</span><span class="p">,</span><span class="mf">1.15436</span><span class="p">,</span><span class="mf">1.2056</span><span class="p">,</span><span class="mf">1.14954</span><span class="p">,</span><span class="mf">1.17526</span><span class="p">,</span><span class="mf">1.15457</span><span class="p">,</span><span class="mf">1.20569</span><span class="p">,</span><span class="mf">1.17517</span><span class="p">,</span><span class="mf">1.0376</span><span class="p">,</span><span class="mf">0.915253</span><span class="p">,</span><span class="mf">0.935471</span><span class="p">,</span><span class="mf">0.884979</span><span class="p">,</span><span class="mf">0.89035</span><span class="p">,</span><span class="mf">0.940781</span><span class="p">,</span><span class="mf">0.885071</span><span class="p">,</span><span class="mf">0.874817</span><span class="p">,</span><span class="mf">0.828796</span><span class="p">])</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">NTU</span>
-</pre></div>
-</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t_delta</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">min</span>
+
+
+<span class="n">t_delta</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">min</span>
 <span class="n">t_end</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">filter_effluent</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">t_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">t_end</span><span class="p">)</span><span class="o">*</span><span class="n">t_delta</span>
 <span class="n">c_dim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">filter_effluent</span><span class="p">,</span><span class="n">filter_influent</span><span class="p">)</span>
 <span class="n">filter_pc</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">c_dim</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_data</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">hour</span><span class="p">),</span><span class="n">filter_pc</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Filter run time (hrs)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;pC*&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Filter run time vs removal efficiency&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_data</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">hour</span><span class="p">),</span><span class="n">filter_pc</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Filter run time (hrs)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;pC*&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Filtration/Images/Filter_run_time_vs_removal_efficiency&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_data</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">hour</span><span class="p">),</span><span class="n">filter_effluent</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Filter run time (hrs)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Effluent turbidity (NTU)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Filter run time vs effluent turbidity&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_data</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">hour</span><span class="p">),</span><span class="n">filter_effluent</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Filter run time (hrs)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Effluent turbidity (NTU)&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Filtration/Images/Filter_run_time_vs_effluent_turbidity&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure" id="id16">
-<img alt="png" src="Filtration/DC_Filtration_Solution_files/DC_Filtration_Solution_34_0.png" />
-<p class="caption"><span class="caption-text">png</span></p>
+<div class="figure align-center" id="figure-filter-run-time-vs-removal-efficiency">
+<a class="reference internal image-reference" href="../_images/Filter_run_time_vs_removal_efficiency.png"><img alt="Filter run time vs removal efficiency" src="../_images/Filter_run_time_vs_removal_efficiency.png" style="width: 400px;" /></a>
 </div>
-<div class="figure" id="id17">
-<img alt="png" src="Filtration/DC_Filtration_Solution_files/DC_Filtration_Solution_34_1.png" />
-<p class="caption"><span class="caption-text">png</span></p>
+<div class="figure align-center" id="id23">
+<span id="figure-filter-run-time-vs-effluent-turbidity"></span><a class="reference internal image-reference" href="../_images/Filter_run_time_vs_effluent_turbidity.png"><img alt="Filter run time vs effluent turbidity" src="../_images/Filter_run_time_vs_effluent_turbidity.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 131 </span><span class="caption-text">The filter performance deteriorated over the length of the filter run. This does not match the expectations that we have based on laboratory experiments with filters. AguaClara has limited data of filter performance as a function of time. However, the <a class="reference external" href="http://aguaclara.github.io/index.html">recent data from Tamara</a> (select Tamara from the drop down menu of plants) suggests that filtered water turbidity is consistently lower than in this first run of the filter that you plotted above.</span></p>
 </div>
-<p>The filter performance deteriorated over the length of the filter run.
-This does not match the expectations that we have based on laboratory
-experiments with filters. AguaClara has limited data of filter
-performance as a function of time. However, the <a class="reference external" href="http://aguaclara.github.io/index.html">recent data from
-Tamara</a> (select Tamara from
-the drop down menu of plants) suggests that filtered water turbidity is
-consistently lower than in this first run of the filter that you plotted
-above.</p>
-<p>How many kg of suspended solids per square meter of filter were removed
-during this filter run. Use the plan view area for the filter (don’t
-multiply by the number of layers)</p>
+</div>
+<div class="section" id="id16">
+<h4>16)<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<p>How many kg of suspended solids per square meter of filter were removed during this filter run. Use the plan view area for the filter (don’t multiply by the number of layers)</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">M_filter_solids</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">filter_influent</span> <span class="o">-</span> <span class="n">filter_effluent</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span>
                     <span class="n">flow_plant</span> <span class="o">*</span> <span class="n">t_delta</span><span class="p">)</span><span class="o">/</span> <span class="n">A_filter_total</span><span class="p">)</span>
                      <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The mass of the suspended solids removed is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">M_filter_solids</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The mass of the suspended solids removed is&#39;</span><span class="p">,</span> <span class="n">M_filter_solids</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The mass of the suspended solids removed is 2.94 kg/m²
-</pre></div>
+<p>The mass of the suspended solids removed is 2.94 kg/m²</p>
 </div>
-<p>Another useful way to express the solids capacity of the filter is to
-calculate the turbidty removed the run time and then express the results
-with units of NTU hrs. What was the capacity of the filter in NTU hrs?</p>
+<div class="section" id="id17">
+<h4>17)<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<p>Another useful way to express the solids capacity of the filter is to calculate the turbidity removed the run time and then express the results with units of NTU hrs. What was the capacity of the filter in NTU hrs?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solids_capacity_filter</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">filter_influent</span><span class="o">-</span><span class="n">filter_effluent</span><span class="p">)</span> <span class="o">*</span> <span class="n">t_delta</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">NTU</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">hr</span><span class="p">)</span>
 
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The filter capacity is&#39;</span><span class="p">,</span><span class="n">solids_capacity_filter</span><span class="p">,)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="nb">filter</span> <span class="n">capacity</span> <span class="ow">is</span> <span class="mf">43.72</span> <span class="n">NTU</span> <span class="o">*</span> <span class="n">hour</span>
-</pre></div>
+<p>The filter capacity is 43.72 NTU * hour</p>
 </div>
+<div class="section" id="id18">
+<h4>18)<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
 <p>How long was the filter run?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t_filter_cycle</span> <span class="o">=</span> <span class="n">t_data</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">t_data</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The filter was run for&#39;</span><span class="p">,</span> <span class="n">t_filter_cycle</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">hour</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="nb">filter</span> <span class="n">was</span> <span class="n">run</span> <span class="k">for</span> <span class="mf">14.25</span> <span class="n">hour</span>
-</pre></div>
+<p>The filter was run for 14.25 hour</p>
 </div>
-<p>What is the total volume of pores per square meter (plan view area) of
-StarS filter bed (includes all 6 layers) (in L/m^2)?</p>
+<div class="section" id="id19">
+<h4>19)<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<p>What is the total volume of pores per square meter (plan view area) of StarS filter bed (includes all 6 layers) (in L/m^2)?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">volume_filter_pores</span> <span class="o">=</span> <span class="p">(</span><span class="n">H_filter_sand_total</span> <span class="o">*</span> <span class="n">porosity_filter_sand</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The total volume of pores is&#39;</span><span class="p">,</span> <span class="n">volume_filter_pores</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">total</span> <span class="n">volume</span> <span class="n">of</span> <span class="n">pores</span> <span class="ow">is</span> <span class="mi">480</span> <span class="n">liter</span> <span class="o">/</span> <span class="n">meter</span> <span class="o">**</span> <span class="mi">2</span>
-</pre></div>
+<p>The total volume of pores is 480 liter / meter ** 2</p>
 </div>
-<p>The next step is to estimate the volume of flocs per plan view area of
-the filter. Assume the density of the flocs being captured by the filter
-are approximated by the density of flocs that have a sedimentation
-velocity of 0.10 mm/s (slightly less than the capture velocity of the
-plate settlers). (see slides in flocculation notes for size of the floc
-and then density of that floc. I’ve provided this value below to
-simplify the analysis</p>
+<div class="section" id="id20">
+<h4>20)<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<p>The next step is to estimate the volume of flocs per plan view area of the filter. Assume the density of the flocs being captured by the filter are approximated by the density of flocs that have a sedimentation velocity of 0.10 mm/s (slightly less than the capture velocity of the plate settlers). (see slides in flocculation notes for size of the floc and then density of that floc. I’ve provided this value below to simplify the analysis</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">density_floc</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">T_design</span><span class="p">)</span> <span class="o">+</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span>
 <span class="n">density_clay</span> <span class="o">=</span> <span class="mi">2650</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span>
 </pre></div>
 </div>
 <p>Given the floc density, calculate fraction of floc volume that is clay.</p>
-<p>Given that floc mass is the sum of clay mass and water mass and given
-that floc volume is the sum of clay volume and water volume, derive an
-equation for the volume of flocs per plan view area of a stacked rapid
-sand filter (includes all 6 layers) given the floc, clay, and water
-densities and the mass of the clay. Show the equations that you derive
-using Latex</p>
+<p>Given that floc mass is the sum of clay mass and water mass and given that floc volume is the sum of clay volume and water volume, derive an equation for the volume of flocs per plan view area of a stacked rapid sand filter (includes all 6 layers) given the floc, clay, and water densities and the mass of the clay. Show the equations that you derive using Latex</p>
 <p>Mass conservation gives</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-solution-0">
-<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-solution-0" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} \cdot \rho_{Floc} = M_{Clay} + M_{Water}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-0">
+<span class="eqno">(518)<a class="headerlink" href="#equation-filtration-filtration-design-solution-0" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} \cdot \rho_{Floc} = M_{Clay} + M_{Water}\]</div>
 <p><span class="math notranslate nohighlight">\(M_{Water}\)</span> is an unknown.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-solution-1">
-<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-solution-1" title="Permalink to this equation">¶</a></span>\[M_{Water} = Vol_{Floc} \cdot \rho{Floc} - M_{Clay}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-1">
+<span class="eqno">(519)<a class="headerlink" href="#equation-filtration-filtration-design-solution-1" title="Permalink to this equation">¶</a></span>\[M_{Water} = Vol_{Floc} \cdot \rho{Floc} - M_{Clay}\]</div>
 <p>Volume conservation gives</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-solution-2">
-<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-solution-2" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = Vol_{Clay} + Vol_{Water}\]</div>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-solution-3">
-<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-solution-3" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = \frac{M_{Clay}}{\rho_{Clay}} + \frac{M_{Water}}{\rho_{Water}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-2">
+<span class="eqno">(520)<a class="headerlink" href="#equation-filtration-filtration-design-solution-2" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = Vol_{Clay} + Vol_{Water}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-3">
+<span class="eqno">(521)<a class="headerlink" href="#equation-filtration-filtration-design-solution-3" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = \frac{M_{Clay}}{\rho_{Clay}} + \frac{M_{Water}}{\rho_{Water}}\]</div>
 <p>Substitute to eliminate <span class="math notranslate nohighlight">\(M_{Water}\)</span></p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-solution-4">
-<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-solution-4" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = \frac{M_{Clay}}{\rho_{Clay}} + \frac{Vol_{Floc} \cdot \rho_{Floc}}{\rho_{Water}} -\frac{M_{Clay}}{\rho_{Water}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-4">
+<span class="eqno">(522)<a class="headerlink" href="#equation-filtration-filtration-design-solution-4" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = \frac{M_{Clay}}{\rho_{Clay}} + \frac{Vol_{Floc} \cdot \rho_{Floc}}{\rho_{Water}} -\frac{M_{Clay}}{\rho_{Water}}\]</div>
 <p>Solve for <span class="math notranslate nohighlight">\(Vol_{Floc}\)</span></p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-solution-5">
-<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-solution-5" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} - \frac{Vol_{Floc} \cdot \rho_{Floc}}{\rho_{Water}} = \frac{M_{Clay}}{\rho_{Clay}} - \frac{M_{Clay}}{\rho_{Water}}\]</div>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-solution-6">
-<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-solution-6" title="Permalink to this equation">¶</a></span>\[Vol_{Floc}\left ( 1-\frac{\rho_{Floc}}{\rho_{Water}} \right ) = M_{Clay}\left ( \frac{1}{\rho_{Clay}} -\frac{1}{\rho_{Water}}\right )\]</div>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-solution-7">
-<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-solution-7" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = M_{Clay}\left ( \frac{\frac{1}{\rho_{Clay}}-\frac{1}{\rho_{Water}}}{ 1-\frac{\rho_{Floc}}{\rho_{Water}}} \right )\]</div>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-solution-8">
-<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-solution-8" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = { \frac{M_{Clay}\rho_{Water}}{\rho_{Floc}-\rho_{Water}}}\left ( \frac{1}{\rho_{Water}}-\frac{1}{\rho_{Clay}} \right )\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-5">
+<span class="eqno">(523)<a class="headerlink" href="#equation-filtration-filtration-design-solution-5" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} - \frac{Vol_{Floc} \cdot \rho_{Floc}}{\rho_{Water}} = \frac{M_{Clay}}{\rho_{Clay}} - \frac{M_{Clay}}{\rho_{Water}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-6">
+<span class="eqno">(524)<a class="headerlink" href="#equation-filtration-filtration-design-solution-6" title="Permalink to this equation">¶</a></span>\[Vol_{Floc}\left ( 1-\frac{\rho_{Floc}}{\rho_{Water}} \right ) = M_{Clay}\left ( \frac{1}{\rho_{Clay}} -\frac{1}{\rho_{Water}}\right )\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-7">
+<span class="eqno">(525)<a class="headerlink" href="#equation-filtration-filtration-design-solution-7" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = M_{Clay}\left ( \frac{\frac{1}{\rho_{Clay}}-\frac{1}{\rho_{Water}}}{ 1-\frac{\rho_{Floc}}{\rho_{Water}}} \right )\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-8">
+<span class="eqno">(526)<a class="headerlink" href="#equation-filtration-filtration-design-solution-8" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = { \frac{M_{Clay}\rho_{Water}}{\rho_{Floc}-\rho_{Water}}}\left ( \frac{1}{\rho_{Water}}-\frac{1}{\rho_{Clay}} \right )\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vol_floc</span> <span class="o">=</span> <span class="p">((</span><span class="n">M_filter_solids</span> <span class="o">*</span><span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">T_design</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">density_floc</span><span class="o">-</span><span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">T_design</span><span class="p">)))</span> <span class="o">*</span>
             <span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">T_design</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">density_clay</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">l</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The volume of the flocs per plan view area is&#39;</span><span class="p">,</span> <span class="n">vol_floc</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">volume</span> <span class="n">of</span> <span class="n">the</span> <span class="n">flocs</span> <span class="n">per</span> <span class="n">plan</span> <span class="n">view</span> <span class="n">area</span> <span class="ow">is</span> <span class="mf">18.34</span> <span class="n">liter</span> <span class="o">/</span> <span class="n">meter</span> <span class="o">**</span> <span class="mi">2</span>
-</pre></div>
+<p>The volume of the flocs per plan view area is 18.34 liter / meter ** 2</p>
 </div>
-<p>What percent of the filter pore volume is occupied by the flocs? This
-fraction of pore space occupied is quite small and suggests that much of
-the filter bed has a very low particle concentration at the end of a
-filter run.</p>
+<div class="section" id="id21">
+<h4>21)<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<p>What percent of the filter pore volume is occupied by the flocs? This fraction of pore space occupied is quite small and suggests that much of the filter bed has a very low particle concentration at the end of a filter run.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pi_flocvolume_porevolume</span> <span class="o">=</span> <span class="p">(</span><span class="n">vol_floc</span> <span class="o">/</span> <span class="n">volume_filter_pores</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The fraction of filter pore volume that is occupied by flocs is&#39;</span><span class="p">,</span> <span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">Pi_flocvolume_porevolume</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The fraction of filter pore volume that is occupied by flocs is&#39;</span><span class="p">,</span> <span class="n">Pi_flocvolume_porevolume</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">fraction</span> <span class="n">of</span> <span class="nb">filter</span> <span class="n">pore</span> <span class="n">volume</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">occupied</span> <span class="n">by</span> <span class="n">flocs</span> <span class="ow">is</span> <span class="mf">0.0382</span>
-</pre></div>
+<p>The fraction of filter pore volume that is occupied by flocs is 0.0382</p>
+<p>This result is surprising and intriguing. It indicates that the pores in the filters are 96% empty when the filter run is complete! Thus filters don’t fail because the pores get full. There is a different mechanism at play here.</p>
+</div>
 </div>
 </div>
 <div class="section" id="filter-constriction-hypothesis">
-<h1>Filter constriction hypothesis<a class="headerlink" href="#filter-constriction-hypothesis" title="Permalink to this headline">¶</a></h1>
-<p>The following analysis is completed for you and is intended to
-illustrate the hypothesis that flocs that are removed by the filter form
-a small diameter flow constriction at each place where the sand grains
-form a flow constriction.</p>
-<p>Final head loss for the filter was 50cm. Assume that this is caused by
-minor losses due to creation of a floc orifice (constriction) in each
-pore. Find the minor loss contribution by subtracting the clean bed head
-loss to find the head loss created by the flow constrictions that were
-created by the flocs.</p>
+<h2>Filter constriction hypothesis<a class="headerlink" href="#filter-constriction-hypothesis" title="Permalink to this headline">¶</a></h2>
+<p>The following analysis is completed for you and is intended to illustrate the hypothesis that flocs that are removed by the filter form a small diameter flow constriction at each place where the sand grains form a flow constriction.</p>
+<p>Final head loss for the filter was 50cm. Assume that this is caused by minor losses due to creation of a floc orifice (constriction) in each pore. Find the minor loss contribution by subtracting the clean bed head loss to find the head loss created by the flow constrictions that were created by the flocs.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hl_filter_final</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">hl_constriction</span> <span class="o">=</span> <span class="n">hl_filter_final</span><span class="o">-</span><span class="n">hl_filter_clean</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minor loss contribution is&#39;</span><span class="p">,</span> <span class="n">hl_constriction</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">minor</span> <span class="n">loss</span> <span class="n">contribution</span> <span class="ow">is</span> <span class="mf">34.8</span> <span class="n">centimeter</span>
-</pre></div>
-</div>
-<p>If we assume that at the end of the filter run every pore in the filter
-had a flow constricting orifice from the deposition of flocs in the
-pore, then what was the diameter of each of the flow constrictions? We
-will calculate this in several steps. To begin, estimate how many flow
-constrictions are created by the sand grains before any flocs are added
-with the assumption that there is one flow constriction per sand grain.
-How many sand grains are there per cubic meter of filter bed? Use
-D60_filter_sand to estimate the number of sand grains. We will assume
-there is a one to one correspondence between sand grains and flow
-constrictions.</p>
+<p>The minor loss contribution is 34.8 centimeter</p>
+<p>If we assume that at the end of the filter run every pore in the filter had a flow constricting orifice from the deposition of flocs in the pore, then what was the diameter of each of the flow constrictions? We will calculate this in several steps. To begin, estimate how many flow constrictions are created by the sand grains before any flocs are added with the assumption that there is one flow constriction per sand grain. How many sand grains are there per cubic meter of filter bed? Use D60_filter_sand to estimate the number of sand grains. We will assume there is a one to one correspondence between sand grains and flow constrictions.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vol_filter_sand_grain</span> <span class="o">=</span> <span class="n">D60_filter_sand</span><span class="o">**</span><span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span>
-
 <span class="n">vol_filter_sand_grain_and_pore</span> <span class="o">=</span> <span class="n">vol_filter_sand_grain</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">porosity_filter_sand</span><span class="p">)</span>
-
 <span class="n">N_sand_grains</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span><span class="p">(</span><span class="n">vol_filter_sand_grain_and_pore</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are this many sand grains in a cubic millimeter&#39;</span><span class="p">,</span> <span class="n">N_sand_grains</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">**</span><span class="mi">3</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">There</span> <span class="n">are</span> <span class="n">this</span> <span class="n">many</span> <span class="n">sand</span> <span class="n">grains</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">cubic</span> <span class="n">millimeter</span> <span class="mf">2.238</span> <span class="o">/</span> <span class="n">millimeter</span> <span class="o">**</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Estimate the average vertical distance between flow constriction based
-on the cube root of the volume occupied by a sand grain</p>
+<p>There are this many sand grains in a cubic millimeter 2.238 / millimeter ** 3</p>
+<p>Estimate the average vertical distance between flow constriction based on the cube root of the volume occupied by a sand grain</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">L_grain_separation</span> <span class="o">=</span> <span class="p">(</span><span class="n">vol_filter_sand_grain_and_pore</span> <span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The distance between flow constriction is&#39;</span><span class="p">,</span> <span class="n">L_grain_separation</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">distance</span> <span class="n">between</span> <span class="n">flow</span> <span class="n">constriction</span> <span class="ow">is</span> <span class="mf">0.7645</span> <span class="n">millimeter</span>
-</pre></div>
-</div>
-<p>On average, how many sand grain flow constriction does a water molecule
-flow through on its way through the filter?</p>
+<p>The distance between flow constriction is 0.7645 millimeter</p>
+<p>On average, how many sand grain flow constriction does a water molecule flow through on its way through the filter?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N_constriction</span> <span class="o">=</span> <span class="p">(</span><span class="n">H_filter_layer</span><span class="o">/</span><span class="n">L_grain_separation</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A water molecule flows through&#39;</span><span class="p">,</span> <span class="n">N_constriction</span><span class="p">,</span><span class="s1">&#39;constriction through the filter&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A water molecule flows through&#39;</span><span class="p">,</span> <span class="n">N_constriction</span><span class="p">,</span><span class="s1">&#39;constriction through the StaRS filter&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">water</span> <span class="n">molecule</span> <span class="n">flows</span> <span class="n">through</span> <span class="mf">261.6</span> <span class="n">dimensionless</span> <span class="n">constriction</span> <span class="n">through</span> <span class="n">the</span> <span class="nb">filter</span>
-</pre></div>
-</div>
+<p>A water molecule flows through 261.6 dimensionless constriction through the StaRS filter</p>
 <p>What is the head loss per flow constriction?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hl_per_constriction</span> <span class="o">=</span> <span class="p">(</span><span class="n">hl_constriction</span> <span class="o">/</span> <span class="n">N_constriction</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The head loss per constriction is&#39;</span><span class="p">,</span> <span class="n">hl_per_constriction</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">head</span> <span class="n">loss</span> <span class="n">per</span> <span class="n">constriction</span> <span class="ow">is</span> <span class="mf">1.33</span> <span class="n">millimeter</span>
-</pre></div>
-</div>
-<p>If each constriction was partially clogged with flocs at the end of the
-filter run, estimate the velocity in the constriction using the
-expansion head loss equation. You can use the average pore water
-velocity as a good estimate of the expanded flow velocity.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-solution-9">
-<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-solution-9" title="Permalink to this equation">¶</a></span>\[h_{e} = \frac{(V_{in}-V_{out})^2}{2g}\]</div>
+<p>The head loss per constriction is 1.33 millimeter</p>
+<p>If each constriction was partially clogged with flocs at the end of the filter run, estimate the velocity in the constriction using the expansion head loss equation. You can use the average pore water velocity as a good estimate of the expanded flow velocity.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-9">
+<span class="eqno">(527)<a class="headerlink" href="#equation-filtration-filtration-design-solution-9" title="Permalink to this equation">¶</a></span>\[h_{e} = \frac{(V_{in}-V_{out})^2}{2g}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">V_pore</span> <span class="o">=</span> <span class="n">V_filter</span> <span class="o">/</span> <span class="n">porosity_filter_sand</span>
-<span class="n">V_constriction</span> <span class="o">=</span> <span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">hl_per_constriction</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">V_pore</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span> <span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="n">V_constriction</span> <span class="o">=</span> <span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">hl_per_constriction</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">V_pore</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span> <span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The velocity in the constriction is&#39;</span><span class="p">,</span> <span class="n">V_constriction</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">velocity</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">constriction</span> <span class="ow">is</span> <span class="mf">166.1</span> <span class="n">millimeter</span> <span class="o">/</span> <span class="n">second</span>
-</pre></div>
-</div>
-<p>What is flow rate of water through each pore in μL/s? You can estimate
-this from the number of pores per square meter given the average
-separation distance.</p>
+<p>The velocity in the constriction is 166.1 millimeter / second</p>
+<p>What is flow rate of water through each pore in μL/s? You can estimate this from the number of pores per square meter given the average separation distance.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N_pore_per_area</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">L_grain_separation</span><span class="o">**</span><span class="mi">2</span>
 <span class="n">flow_per_pore</span> <span class="o">=</span> <span class="p">(</span><span class="n">V_filter</span><span class="o">/</span> <span class="n">N_pore_per_area</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">microliter</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 
@@ -774,19 +648,16 @@ separation distance.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">flow</span> <span class="n">rate</span> <span class="n">through</span> <span class="n">each</span> <span class="n">pore</span> <span class="ow">is</span> <span class="mf">1.071</span> <span class="n">microliter</span> <span class="o">/</span> <span class="n">second</span>
 </pre></div>
 </div>
-<p>What is the inner diameter of the flow constriction created by the flocs
-if the vena contracta is 0.62?</p>
+<p>What is the inner diameter of the flow constriction created by the flocs if the vena contracta is 0.62?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pi_vena_contracta</span> <span class="o">=</span> <span class="mf">0.62</span>
 <span class="n">A_constriction</span> <span class="o">=</span> <span class="n">flow_per_pore</span> <span class="o">/</span> <span class="n">V_constriction</span><span class="o">/</span><span class="n">Pi_vena_contracta</span>
 <span class="n">D_constriction</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">diam_circle</span><span class="p">(</span><span class="n">A_constriction</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The inner diameter of the flow constriction created by the flocs is&#39;</span><span class="p">,</span> <span class="n">D_constriction</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">micrometer</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">inner</span> <span class="n">diameter</span> <span class="n">of</span> <span class="n">the</span> <span class="n">flow</span> <span class="n">constriction</span> <span class="n">created</span> <span class="n">by</span> <span class="n">the</span> <span class="n">flocs</span> <span class="ow">is</span> <span class="mf">115.1</span> <span class="n">micrometer</span>
-</pre></div>
-</div>
-<p>Plot the fractional removal per constriction as a function of particle
-size.</p>
+<p>The inner diameter of the flow constriction created by the flocs is 115.1 micrometer</p>
+<p>This suggests that this flow constriction is stable because the high velocity results in shear levels that are too high for flocs to attach. Thus once the constriction forms and reaches the shear level that prevents deposition it remains stable.</p>
+<p>Plot the fractional removal per constriction as a function of particle size.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D_clay</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">micrometer</span>
 
 <span class="c1">#create an array of floc sizes from clay diameter up to the diameter of the constriction</span>
@@ -801,22 +672,27 @@ size.</p>
             <span class="o">/</span> <span class="n">D_constriction</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
 
 <span class="n">c_star</span> <span class="o">=</span> <span class="n">c_star_constriction</span><span class="p">(</span><span class="n">D_constriction</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Particle diameter(micrometer)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Fractional remaining&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Diameter vs fractional remaining&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">D_floc</span><span class="p">(</span><span class="n">D_constriction</span><span class="p">),</span> <span class="n">c_star_constriction</span><span class="p">(</span><span class="n">D_constriction</span><span class="p">),</span><span class="s1">&#39;black&#39;</span> <span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">D_floc</span><span class="p">(</span><span class="n">D_constriction</span><span class="p">),</span><span class="n">c_star</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Particle diameter(micrometer)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Fractional remaining&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Filtration/Images/Diameter_vs_fractional_remaining&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure" id="id18">
-<img alt="png" src="Filtration/DC_Filtration_Solution_files/DC_Filtration_Solution_69_0.png" />
-<p class="caption"><span class="caption-text">png</span></p>
+<div class="figure align-center" id="id24">
+<span id="figure-diameter-vs-fractional-remaining"></span><a class="reference internal image-reference" href="../_images/Diameter_vs_fractional_remaining.png"><img alt="Diameter vs fractional remaining" src="../_images/Diameter_vs_fractional_remaining.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 132 </span><span class="caption-text">There are many constrictions in series and the filter fraction remaining is the pore fraction remaining raised to the power of the number of pores in series.</span></p>
 </div>
-<p>There are many constrictions in series and the filter fraction remaining
-is the pore fraction remaining raised to the power of the number of
-pores in series.</p>
+<div class="section" id="reflection-questions">
+<h3>Reflection questions<a class="headerlink" href="#reflection-questions" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>1. An engineer suggests that you should install a roughing filter uphill from an AguaClara plant to improve its ability to treat turbid water. This is a real question from a conference presentation in Honduras. How would you reply to this suggestion. Consider how to answer without offending the questioner. Use the required sizes of the unit processes to guide your response.
+1. Why don’t StaRS filters experience surface clogging?
+1. Explain why particles are captured at flow constrictions inside sand filters.
+1. Explain why a flow constriction has a limited capacity to collect particles.</div></blockquote>
+</div>
+</div>
 </div>
 
 
@@ -824,6 +700,15 @@ pores in series.</p>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Dissolved_Gas/DG_Intro.html" class="btn btn-neutral float-right" title="Dissolved Gas Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Filtration_Theory_and_Future_Work.html" class="btn btn-neutral" title="Filtration Theory and Future Work" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
