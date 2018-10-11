@@ -758,28 +758,28 @@ The `Ergun equation <https://neutrium.net/fluid_flow/pressure-drop-through-a-pac
 
 .. math::
 
-    h_f = \frac{L}{g} \left( 150 \frac{\nu v_a (1-\phi)^2}{d_{sand}^2 \phi^3} + 1.75 \frac{v_a^2 (1-\phi) }{d_{sand} \phi^3} \right)
+    h_f = \frac{L}{2g D_{sand}} \left( 300 \frac{\nu v_a (1-\phi)^2}{D_{sand} \phi^3} + 3.5 \frac{v_a^2 (1-\phi) }{\phi^3} \right)
 
 The Erdun equation can be rewritten to be consistent with the format of the Darcy-Weisbach equation. To do this we add a factor of 2 to the definition of the Erdun friction factor and will divide by the factor of 2 in a subsequent equation. The modified Erdun friction factor is
 
 .. math::
     :label: eq_f_porous_media
 
-    f^{\phi} = \frac{300}{Re^{\phi}} + 3.5
+    f_{\phi} = \frac{300}{Re_{\phi}} + 3.5
 
-where the :math:`Re^{\phi}` includes the porosity effect on the velocity and is given by
+where the :math:`Re_{\phi}` includes the porosity effect on the velocity and is given by
 
 .. math::
     :label: eq_Re_porous_media
 
-    Re^{\phi} = \frac{v_a d_{sand}}{\nu(1-\phi)}
+    Re_{\phi} = \frac{v_a D_{sand}}{\nu(1-\phi)}
 
 I added a factor of two into the denominator to be consistent with the Darcy-Weisbach equation to obtain the modified Ergun equation.
 
 .. math::
     :label: eq_Erdun
 
-    h_f = f^{\phi} \frac{L}{d_{sand}} \frac{v_a^2}{2g} \frac{(1-\phi)}{\phi^3}
+    h_f = f_{\phi} \frac{L}{D_{sand}} \frac{v_a^2}{2g} \frac{(1-\phi)}{\phi^3}
 
 The residence time in a porous media bed is given by
 
@@ -798,14 +798,14 @@ Substituting the equations for head loss and residence times we obtain
 .. math::
     :label: eq_EDR_CS_porous_media
 
-    \bar\epsilon = \frac{f^{\phi}}{2} \frac{v_a^3}{d_{sand}} \frac{(1-\phi)}{\phi^4}
+    \bar\epsilon = \frac{f_{\phi}}{2} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}
 
 The Camp Stein velocity gradient for flow in porous media is
 
 .. math::
     :label: eq_G_CS_porous_media
 
-    G_{CS} = \left(\frac{f^{\phi}}{2\nu} \frac{v_a^3}{d_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}
+    G_{CS} = \left(\frac{f_{\phi}}{2\nu} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}
 
 
 .. _heading_Expansions:
