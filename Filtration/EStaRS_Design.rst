@@ -122,11 +122,12 @@ Filter Flow Rates and Layer Height
 
 As the maximum flow of the filter is constrained by the available sizes of the pipe for the filter, the maximum flow of the filter is characterized by: :math:`Q_{Bw} = V_{Bw}A_{Fi}`
 
-However,the actual maximum of flow that the filter would see is actually the larger flow between that value and the :math:`Q_{Fi}` the flow through the filter.
+However,the actual maximum of flow that the filter would see is actually the larger flow between that value and the :math:`Q_{Fi}` the flow through the filter. For example, if two EStaRS designed for 3.08 L/s each are used for a plant flow of 7 L/s, each filter will actually see 3.5 L/s of flow. This is greater than what the filter was designed for, and this larger flow must be accounted for.
 
-**This makes less sense now that I'm writing it in, why would this be greater than backwash flow?**
+.. note::
+  Knowing which flow is being used to calculate the size of certain components is **extremely** important. For calculations involving the pipe manifold the maximum flow that could be seen by the filter should be used (:math:`Q_{FiMax}`). This is because the pressure recovery term is the limiting characteristic, and so a greater flow corresponds to a greater velocity which increases PR, which is unideal. For calculations concerning the system of weirs required for backwash, which are calculated in "Backwash Control Volume",the backwash flow :math:`Q_{FiBw}` is required because backwash cannot be performed effectively with less flow that the backwash flow. While it is *possible*  that backwash could be necessary in extremely low flow conditions, it has never been an issue in any plant, so this is not accounted for. Additionally, it is possible that these two values are the same, in which case the distinction is not necessary.
 
-Depending on the total flow of the EStaRS and the size of the modules, varying numbers of filters will need to be used.
+Depending on the total flow of the EStaRS and the size of the modules, varying numbers of filters will need to be used, though minimum should always be 2.
 
 This design will focus on flow through one filter, as having several filters in parallel wouldn't alter the flow within one, thought flow will be split between the filters.
 
@@ -159,9 +160,9 @@ From the section above it is apparent that the total flow through the filter is 
 
 In the case of 6 filter layers, this is :math:`6Q_{FiLayer}`
 
-Because the 2 inner inlets (the ones that aren't the backwash trunk or the uppermost trunk) distribute flow to two layers the flow between them is equal to :math:`2Q_{FiLayer}` which is shown in the schematic. In a later section, we will show that the flow within each layer is not exactly even because of the headloss through various paths, but for the calculation of maximum flow, even flow is an appropriate guess (**do we know know this**)
+Because the 2 inner inlets (the ones that aren't the backwash trunk or the uppermost trunk) distribute flow to two layers the flow between them is equal to :math:`2Q_{FiLayer}` which is shown in the schematic. In a later section, we will show that the flow within each layer is not exactly even because of the headloss through various paths, but for the calculation of maximum flow, even flow is an appropriate guess. (**do we know know this**)
 
-From the schematic we can also see that the maximum flow experienced by any trunk is :math:`2Q_{FiLayer}`, using this value it is possible to calculate the maximum branch through a branch.
+From the schematic we can also see that the maximum flow experienced by any trunk is :math:`2Q_{FiLayer}`, using this value it is possible to calculate the maximum branch through a branch. Using :math:`2Q_{FiLayer}` is a conservative estimate, most branches will not see this flow, however because the pressure recovery is the main constraint in the filter pipe manifold, it is best to use the maximum possible flow to determine allowable PR.
 
 On each layer trunk, there are :math:`N_{FiBranch}` branches on **each side** of the trunk. That means the total number of branches on each trunk is :math:`2N_{FiBranch}`
 
@@ -208,21 +209,21 @@ A similar series of calcualtions can be done for the backwash branches based on 
 The two pressure recovery terms calculated here are compared against the allowable PR terms.
 
 
-Pressure Recovery in Trunks during forwasrd filtration
+First Constraint: Pressure Recovery in Trunks during forward filtration
 ---------------------------------------------------------
 
 The total allowable pressure recovery of the filter manifold is controlled by the headloss in each sand layer and the headloss ratio, :math:`\Pi_{ManifoldHeadLoss}`, as defined above in "Flow Distrbution Constraints".
 
 The head loss through the sand layer, :math:`HL_{FiCleanLayerMin}` is a fuction of layer depth, :math:`H_{FiLayer}` and overall velocity of the filter , :math:`\frac{Q_{FiLayer}}{A_{Fi}}`, using the Kozeny Equation (**link Kozeny**).
 
-Using the definition of the pressure recovery ratio, the maximum allowable pressure recovery in the filter manifold can be calculated:
+Using the definition of the pressure recovery ratio, the maximum allowable pressure recovery in the filter manifold can be calculated, this value is not necessarily the actual pressure recovery the system may see, just the allowable maximum:
 
 .. math::
 
   PR_{FiMax} = HL_{FiCleanLayerMin}*\Pi_{ManifoldHeadLoss}
 
 
-Subtracting the previously calculated branch PR from this maximum determine how much PR 'is left' for the trunks. The maximum trunk PR can then be calculated back to a velocity.
+Subtracting the previously calculated branch PR from this maximum determine how much PR is theoretically left for the trunks. The maximum trunk PR can then be calculated back to a velocity.
 
 .. math::
 
@@ -237,12 +238,92 @@ The velocity is important because it, along with the known flow rate throug the 
 
   ID_{TrunkIdeal} = \sqrt{\frac{4*\frac{2*Q_{FiLayer}}{{V_{FiTrunkMaxPR}}}}   {\pi}}
 
-In the pipe database the nearest, larger, pipe size is chosen for SDR 26. The associated ND is compared with :math:`ND_{FiTrunkMinLow}, whichever is larger is chosen as :math:`ND_{FiTrunk}`
+In the pipe database the nearest, larger, pipe size is chosen for SDR 26. The associated ND is compared with :math:`ND_{FiTrunkMinLow}`, whichever is larger is chosen as :math:`ND_{FiTrunk}`. From this ND the ID is found knowin the pipe is SDR 26.
 
-Pressure Recovery in lowest trunk during backwash
+Then the PR term can be found:
+
+.. math::
+
+  PR_{FiTrunk} = \frac{(\frac{2Q_{FiLayer}}{(\pi\frac{ID_{FiTrunk}^2}{4})})^2}{2g}
+
+Knowing the actual (for this flow) PR term provides a better value for determining the allowable PR in the branches.
+
+So now, the :math:`PR_{FiBranchMax}` is the different between the allowable PR and the PR calculated for the trunk:
+
+.. math::
+
+  PR_{FiBranchMax} = PR_{FiMax} - PR_{FiTrunk}
+
+Then the maximum velocity in the branches can be found. Which, as above leads to the actual size of the branches.
+
+.. math::
+
+  V_{FiBranchMax} = \sqrt{2g*PR_{FiBranchMax}}
+
+The ND is found by again comparing the :math:`ND_{FiBranchMin}` with the ND that emerges from taking the ID as calculated from the velocity and the flow:
+
+.. math::
+
+  ID_{FiBranchEst} = \sqrt { \frac{4}{\pi}(\frac{\frac{2Q_{FiLayer}}{2N_{FiBranch}}}{V_{FiBranchMax}})^2}
+
+This ID is compared with available IDs of SDR26 and the nearest value that is above that ID is chosen to compare against :math:`ND_{FiBranchMin}` as defined in the beginning.
+
+**if this can be streamlined in python it should be, because going from ID to ND to actual ND to ID is a pain**
+
+For the chosen ND, the corresponding ID is used to determine the PR in the branches with SDR26.
+
+.. math::
+
+  PR_{FiBranch} = \frac{(\frac{\frac{2Q_{FiLayer}}{2N_{{FiBranch}}}}{(\pi\frac{ID_{FiBranch}^2}{4})})^2}{2g}
+
+
+The sum of the PRs from the branches can then be compared to the maximum allowable PR term. If the design logic worked properly then :math:`(PR_{FiBranch} +  PR_{FiTrunk}) < PR_{FiMax}` with  :math:`PR_{FiBranch} +  PR_{FiTrunk} = PR_{FiMan}` indicating the pressure recovery in the Filter Manifold.
+
+Second Constraint: Pressure Recovery in lowest trunk during backwash
 ----------------------------------------------------------------
 
+The second pressure recovery constraint is in the backwash branch during backwash. During backwash the lowest trunk sees all the flow at a higher velocity than any branch does during forward filtration. Because the velocity is higher, the PR term will also be higher, so it must be constrainted to maintain even flow.
 
+In backwash there is no headloss through the sand bed because the sand is fully fluidized. The startup time in which it takes to fluidize the bed is ignored in this design. Thus the only headloss occurs from the flow expansion as water exits the fiter manifold out of the exits holes.
+
+The initial estimate of headloss through the holes is :math:`HL_{FiBwHoles} = 10cm`.
+
+Using the headloss ratio, :math:`\Pi_{ManifoldHeadLoss}` , the allowable PR canbe determined: :math:`PR_{FiBwManMax} = HL_{FiBwHoles}*\Pi_{ManifoldHeadLoss}`
+
+From above the PR estimate for the Backwash Branches exists.
+
+This allows the maximum velocity in the BW Trunk to be found
+
+.. math::
+
+  V_{FiBwTrunkMaxPR} = \sqrt{2g *(PR_{FiBwMax}-PR_{FiBwBranchEst})}
+
+From the velocity the ND of the backash trunk can be found based on the necessary inner diameter and pipe schedule as calculated using the flow area.
+
+.. math::
+
+  ID_{FiBranchEst} = \sqrt { \frac{4}{\pi}(\frac{Q_{FiBW}}{V_{FiBwTrunkMaxPR}})^2}
+
+The corresponding ND (usign SDR 26) is compared against :math:`ND_{FiBwTrunkMin}`. The larger pipe is chosen for the design. The ID from the chosen pipe size is then used to find the actual backwash PR for the backwash trunk.
+
+.. math::
+
+  PR_{FiBwTrunk} = \frac{(\frac{Q_{FiBw}}{(\pi\frac{ID_{FiBwTrunk}^2}{4})})^2}{2g}
+
+
+Then the actual allowable pressure recovery for the backwsh branches can be found.
+
+  .. math::
+
+    PR_{FiBwBranchMax} = PR_{FiBwMax} - PR_{FiBwTrunk}
+
+Then the branch velocity can be found:
+
+.. math::
+
+  V_{FiBwBranchMax} = \sqrt{2g *(PR_{FiBwBranchMax})}
+
+If it seems like these processes are 1. similar and 2. circular in their logic, you are correct on both counts! The determination of PR for backwash and forward filtration follows the same steps, the only difference is with the flows and conditions required. It seems circular because the initial calculations are done on guesses, if these guesses weren't made solving for other quantities couldn't be done. The step where the trunk calculations are resolved for the branch conditions mainly acts to assess if the initial guesses were reasonable, and corrects the error in the guess, though of course the initial guess could've been correct! Running the final values back through the entire process should yield the same results meaning the iteration found a solution.
 
 Manifold Pipe Lengths
 ======================
