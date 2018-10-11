@@ -140,13 +140,22 @@ Filters have a huge range in velocities that correspond to a huge range in size.
 Filtration Theory
 =================
 
-Filters are used to remove particles and thus we'd like to be able to predict particle removal efficiency in a filter. Unfortunately we don't yet have equations that describe particle removal by sand filtration. This is a very unpleasant surprise. It is as if we were designing a suspension bridge and didn't have any equations describing the relationship between the tension in the cables and the load they are supporting.
+Filters are used to remove particles and thus we'd like to be able to predict particle removal efficiency in a filter. Unfortunately we don't yet have equations that describe particle removal by sand filtration. This is a very unpleasant surprise. It is as if we were designing a suspension bridge and didn't have any equations describing the relationship between the tension in the cables and the load they are supporting. We only have an equation describing what the cables do when there isn't any additional load. In the case of filtration we only have clean bed filtration models that attempt to describe what happens before the filter begins to remove particles.
 
 Reflection: How did we get to 2018 without a model for filter performance? There may be several reasons for the lack of a filtration model. Here are a few ideas.
  - The lack of data acquisition systems in university laboratories means that very few rapid sand filters were operated and evaluated for full filter runs in laboratory settings
  - The Environmental Engineering fixation on jar tests as the way to model water treatment plants provided no method to test filtration and thus most university laboratories only experimented with batch operation and not continuous flow.
  - Filtration models were borrowed from air filtration (`Yao et al, 1971 <https://pubs.acs.org/doi/abs/10.1021/es60058a005>`_) and thus did not take into account that the coagulant nanoparticles made particle attachment to surfaces very favorable.
  - Filtration models only modeled the clean bed phase(the first few minutes of a filter run) before particles were deposited and began altering the geometry of the pores.
+
+Clean bed filtration models include an equation first presented by Iwasaki in 1937 that suggested that particle removal occurred as a first order process with respect to depth. This simplifies to
+
+.. math::
+   :label: filter_Iwasaki
+
+  pC^* \propto \frac{L}{D_{sand}}
+
+where L is the depth of the sand in the column. This suggests that increasing the depth of sand in a filter would dramatically improve performance. 
 
 It is quite amazing that we have no useful models for sand filter performance after more than a century of using sand filters as a required process in converting surface waters into safe drinking water. Fortunately we have plenty of clues suggesting what is happening inside filters and at the level of the particles traveling through the pores.
 
@@ -185,11 +194,19 @@ The data is trying to tell us something. The head loss through a filter does inc
    :width: 300px
    :align: center
 
-   Movie illustrating that particles are transported close to a filter surface where streamlines converge.
+   Movie illustrating that particles are transported closer to sand surfaces where streamlines converge.
 
 If pores clogged completely, then sand filters would clog as soon as one layer of pores was filled. There must be another process that is preventing pores from clogging. We hypothesize that flocs can't attach to the filter surfaces when the fluid drag on the floc exceeds the strength of the bonds between the coagulant nanoparticles and the particle and pore surfaces. Thus as pores grow smaller due to deposition it becomes more difficult for incoming flocs to attach. Instead, the flocs are shoved right through the pore even if it means the floc has to undergo significant deformation to squeeze through.
 
-.. todo:: add a video showing a large floc squeezing through a small pore.
+
+.. _figure_Flocs_teleporting:
+
+.. figure:: Images/Flocs_teleporting.png
+   :target: https://youtu.be/lgfggRX_Wgs
+   :width: 300px
+   :align: center
+
+   Movie showing flocs flowing through a pore created by sand grains. (Credit `Filter_Constrictions team Spring 2018 <https://github.com/AguaClara/filter-constrictions>`_)
 
 The story is beginning to emerge. Converging streamlines result in flocs touching previously deposited particles in the flow constriction and attaching. As the flow constriction becomes even smaller the fluid drag on particles that attempt to attach to the pore becomes too great and the particles are forced through the constriction. At that point the pore is fully loaded. However, fully loaded does not mean that the void is full of flocs. It just means that the constriction is as small as it can get given the strength of the coagulant nanoparticle bonds and the fluid drag on the flocs.
 
@@ -198,6 +215,21 @@ Pores at the upstream end of the filter are fully loaded first and then remain r
 The active filtration zone is progressing through the filter at a constant velocity. The number of fully loaded pores is increasing linearly with time! That is why head loss increases linearly with time.
 
 The poor performance at the beginning of a filter run is because the clean zone isn't a good filter. This suggests that dual media filters are pointless because the smaller media at the downstream end of the filter remains clean and doesn't actually do anything. If this is correct, then multimedia filters can be replaced with a single larger media size.
+
+As coagulant dose increases
+ - flocs are larger and thus they fill the pores faster and thus the active zone moves faster through the filter
+ - large flocs are removed more efficiently and thus the active zone is thinner (fewer active pores in series)
+ - thinner active zone results in faster failure (higher slope of turbidity vs time during failure)
+ - larger flocs results in faster failure (higher slope of turbidity vs time during failure)
+
+As sand size increases
+ - There are fewer pores and thus fewer constrictions and thus less head loss at the end of the filter run
+ - Each constriction requires more particles to build and thus there is less head loss per mass of particles removed.
+
+What about particle removal efficiency?
+---------------------------------------
+
+This is the multi-decade old question that challenges us to continue our research. What determines how many particles sneak through a water treatment plant? We've learned that flocculation runs out of steam because the primary particles only want to collide with other primary particles and thus they start taking forever to collide as they become scarce. The floc blanket likely acts like a series of collectors (can't say it is like a filter because it doesn't have stationary constrictions). This would suggest that more floc blanket is always better. For some reason some primary particles make it through the floc blanket. What determines how many of those primary particles make it through the filter? It must depend on the geometry of every constriction. That is so complicated. Is there another way to think about this? Large flocs are easy to capture in a sand filter. Primary particles are much more difficult to capture. Large flocs tend to fill up the first unfilled pore they come to. Thus large flocs tend to take active pores out of service. This suggests that the influent floc size distribution might influence filter performance. See :ref:`heading_Shear_big_flocs_to_improve_filter_performance` for an analysis of the feasibility of breaking up flocs at the point of injection into the sand bed.
 
 
 
