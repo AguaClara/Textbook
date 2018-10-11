@@ -15,7 +15,9 @@ The hydraulic self cleaning sedimentation tank with a high performing floc blank
 Floc blankets
 ==================
 
-See the Pan American Health Organization, (PAHO) manual on `theory of rapid sand filtration plants rapid sand filters <../_static/references/CEPIS/CEPIS5_Batería_de_filtros.pdf>`_ (page 289) for reasons why floc blankets should not be used! According to PAHO, floc blankets are not recommended for small communities who lack highly trained personal to operate the plant and floc blanket should only be used where plant flow rates and water quality are constant. Each of these constraints was due to the inadequate design of previous floc blanket reactors that made operation difficult.
+.. todo:: download CEPIS design files and create local copies to avoid problems with this hyperlink failing. (bibliotecavirtual.minam.gob.pe/biam/bitstream/id/5657/BIV00012.pdf)
+
+See the Pan American Health Organization, (PAHO) manual on theory of rapid sand filtration plants (page 289) for reasons why floc blankets should not be used! According to PAHO floc blankets are not recommended for small communities who lack highly trained personal to operate the plant and floc blanket should only be used where plant flow rates and water quality are constant. Each of these constraints was due to the inadequate design of previous floc blanket reactors that made operation difficult.
 
 .. _Floc_blanket_hypotheses:
 

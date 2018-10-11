@@ -69,4 +69,3 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
   :math:`\lambda_\nu`,Inner Viscous Length Scale,:math:`[L]`
   :math:`\Pi_{K\nu}`,Ratio of Inner Viscous Length Scale to Kolmogorov Length Scale,Dimensionless
   :math:`\Lambda`,Distance Between Particles,:math:`[L]`
-  :math:`\phi`,Porosity,Dimensionless
