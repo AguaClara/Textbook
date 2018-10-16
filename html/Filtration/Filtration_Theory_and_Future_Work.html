@@ -125,7 +125,15 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#conventional-sedimentation-systems">Conventional Sedimentation Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#sedimentation-challenges-and-gaps-in-knowledge">Sedimentation Challenges and Gaps in Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#aguaclara-innovations">AguaClara Innovations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#foundational-concepts">Foundational Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#design-approach">Design Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#design-of-an-aguaclara-sedimentation-tank">Design of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#sedimentation-challenges-confusions-and-failure-modes">Sedimentation Challenges, Confusions, and Failure Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
@@ -246,7 +254,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <p>The maximum velocity in a constriction is set by the drag on a primary particle that is large enough to prevent the primary particle from attaching. Given that the constriction is likely sharp edged on the upstream face the flow velocity is likely close to uniform at the entrance to the constriction. There is likely a vena contracta effect and that effect would prevent deposition of particles downstream of the leading edge of the constriction because particles are diverted away from the constriction walls.</p>
 <p>The maximum constriction velocity is thus likely independent of the filtration velocity and pore size. The maximum velocity at the inlet to the constrictions is likely proportional to the fractional surface coverage of the primary particles by coagulant nanoparticles. Thus as the coagulant dose increases the head loss per pore and the head loss at the time of particle breakthrough increases.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-0">
-<span class="eqno">(508)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: Filter_head_loss_model\\   h_l = \frac{\bar v_{constriction}^2}{2g}\\- need to connect velocity to drag
+<span class="eqno">(512)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: Filter_head_loss_model\\   h_l = \frac{\bar v_{constriction}^2}{2g}\\- need to connect velocity to drag
 - Use experimental data from filtration to find critical velocity
 - expect velocity to be independent of pore size (sand size)
 - Create model for total head loss in a filter as a function of sand size
@@ -261,7 +269,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <p>We will use the Camp Stein velocity gradient to estimate injection velocity required to create very small flocs. The important parameter for floc break up is a force that can be obtained from the velocity gradient multiplied by the dynamic viscosity.</p>
 <p>Solving <a class="reference internal" href="../Rapid_Mix/RM_Derivations.html#equation-eq-g-cs-porous-media">(244)</a> for the approach velocity, <span class="math notranslate nohighlight">\(v_a\)</span>, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-1">
-<span class="eqno">(509)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-1" title="Permalink to this equation">¶</a></span>\[v_a = \left( G_{CS}^2 \frac{2\nu D_{sand}}{f_{\phi}} \frac{\phi^4}{(1-\phi)} \right)^{\frac{1}{3}}\]</div>
+<span class="eqno">(513)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-1" title="Permalink to this equation">¶</a></span>\[v_a = \left( G_{CS}^2 \frac{2\nu D_{sand}}{f_{\phi}} \frac{\phi^4}{(1-\phi)} \right)^{\frac{1}{3}}\]</div>
 <p>to estimate the injection area that should be used to break up flocs entering the sand bed.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
 <span class="kn">from</span> <span class="nn">aide_design</span> <span class="k">import</span> <span class="n">floc_model</span> <span class="k">as</span> <span class="n">floc</span>
@@ -333,23 +341,23 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <p>We need to know how much energy would be expended to force the water through this high velocity injection zone. Once the water enters the sand it will spread radially in all directions. As the water spreads it will slow down and the head loss per distance traveled will decrease. We need to integrate this head loss over the first few centimeters to get an estimate of the injection head loss.</p>
 <p>The velocity at distance r from the center of the injection line can be calculated from the velocity at <span class="math notranslate nohighlight">\(r_0\)</span> by continuity.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-2">
-<span class="eqno">(510)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[v_{a_r} r= v_{a_{r_0}} r_0\]</div>
+<span class="eqno">(514)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[v_{a_r} r= v_{a_{r_0}} r_0\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-3">
-<span class="eqno">(511)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[v_{a_r}= v_{a_{r_0}} \frac{r_0}{r}\]</div>
+<span class="eqno">(515)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[v_{a_r}= v_{a_{r_0}} \frac{r_0}{r}\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-4">
-<span class="eqno">(512)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[dh_f= \frac{dr}{2g D_{sand}} \left( 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}v_a  + 3.5 \frac{ (1-\phi) }{\phi^3}v_a^2 \right)\]</div>
+<span class="eqno">(516)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[dh_f= \frac{dr}{2g D_{sand}} \left( 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}v_a  + 3.5 \frac{ (1-\phi) }{\phi^3}v_a^2 \right)\]</div>
 <p>Now substitute for the approach velocity</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-5">
-<span class="eqno">(513)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-5" title="Permalink to this equation">¶</a></span>\[\frac{dh_f}{dr}= \frac{1}{2g D_{sand}} \left[ 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\left(v_{a_{r_0}} \frac{r_0}{r}\right)  + 3.5 \frac{ (1-\phi) }{\phi^3} \left(v_{a_{r_0}} \frac{r_0}{r}\right)^2 \right]\]</div>
+<span class="eqno">(517)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-5" title="Permalink to this equation">¶</a></span>\[\frac{dh_f}{dr}= \frac{1}{2g D_{sand}} \left[ 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\left(v_{a_{r_0}} \frac{r_0}{r}\right)  + 3.5 \frac{ (1-\phi) }{\phi^3} \left(v_{a_{r_0}} \frac{r_0}{r}\right)^2 \right]\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-6">
-<span class="eqno">(514)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-6" title="Permalink to this equation">¶</a></span>\[dh_f= \frac{v_{a_{r_0}}r_0}{2g D_{sand}} \left[ 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\left( \frac{1}{r}\right)  + 3.5 \frac{ (1-\phi)v_{a_{r_0}}r_0 }{\phi^3} \left( \frac{1}{r}\right)^2 \right] dr\]</div>
+<span class="eqno">(518)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-6" title="Permalink to this equation">¶</a></span>\[dh_f= \frac{v_{a_{r_0}}r_0}{2g D_{sand}} \left[ 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\left( \frac{1}{r}\right)  + 3.5 \frac{ (1-\phi)v_{a_{r_0}}r_0 }{\phi^3} \left( \frac{1}{r}\right)^2 \right] dr\]</div>
 <p>We will create terms to make the integration easier</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-7">
-<span class="eqno">(515)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-7" title="Permalink to this equation">¶</a></span>\[a_0 = \frac{v_{a_{r_0}}r_0}{2g D_{sand}}\]</div>
+<span class="eqno">(519)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-7" title="Permalink to this equation">¶</a></span>\[a_0 = \frac{v_{a_{r_0}}r_0}{2g D_{sand}}\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-8">
-<span class="eqno">(516)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[a_1 = 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\]</div>
+<span class="eqno">(520)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[a_1 = 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-9">
-<span class="eqno">(517)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-9" title="Permalink to this equation">¶</a></span>\[a_2 = 3.5 \frac{ (1-\phi)v_{a_{r_0}}r_0 }{\phi^3}\]</div>
+<span class="eqno">(521)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-9" title="Permalink to this equation">¶</a></span>\[a_2 = 3.5 \frac{ (1-\phi)v_{a_{r_0}}r_0 }{\phi^3}\]</div>
 <p>Now we set up the numerical integration and integrate from the injection site to the radius where the velocity is equal to the filtration velocity.</p>
 <p>The analysis above suggests that a high velocity and high velocity gradient injection into the sand bed with the goal of breaking flocs into pieces that are 20 <span class="math notranslate nohighlight">\(\mu m\)</span> in diameter would require about 12 cm of head loss. This is based on the assumption that the water would be able to flow radially from the injection point and thus rapidly slow down. Thus the head loss rapidly decreases with distance from the injection point.</p>
 <p>This is an experiment worth trying. It will help us understand if large flocs result in poorer filter performance.</p>
