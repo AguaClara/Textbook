@@ -7,9 +7,9 @@
 #GraphTarray = u.Quantity(np.arange(100),u.degC)
 
 #Note the use of the .to method below to display the results in a particular set of units.
-#plt.plot(GraphTarray, pc.viscosity_kinematic(GraphTarray).to(u.mm**2/u.s), '-')
-#plt.xlabel('Temperature (degrees Celcius)')
-#plt.ylabel('Viscosity (mm^2/s)')
+#ax.plot(GraphTarray, pc.viscosity_kinematic(GraphTarray).to(u.mm**2/u.s), '-')
+#ax.set(xlabel='Temperature (degrees Celcius)')
+#ax.set(ylabel='Viscosity (mm^2/s)')
 #plt.show()
 
 
@@ -23,4 +23,4 @@ import numpy as np
 
 xgraph = np.arange(100)
 ygraph = xgraph + 1
-plt.plot(xgraph, ygraph, '-')
+ax.plot(xgraph, ygraph, '-')

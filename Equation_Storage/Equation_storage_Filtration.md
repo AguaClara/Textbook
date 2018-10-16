@@ -116,7 +116,7 @@ $$\phi_{FiSandBw} = 1 - \frac{1 - \phi_{FiSand}}{\Pi_{FiBw}}$$
 **Off-slide**
 $$V_{MinFluidization} = \Pi_{FiExpansion}
 \frac{ \left( \frac{\varepsilon_{FiSand} - 1}{\Pi_{FiExpansion}} + 1 \right)^3
-g D_{Sand}^2}
+g D_{sand}^2}
 {36 k \nu \left( 1 - \varepsilon_{FiSand} \right)}
 \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)$$
 

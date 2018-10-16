@@ -125,7 +125,7 @@ Love-based leaders relate to others based on true respect for the other. They wi
 
 As water treatment plant designers it is critical that we spend time with a diverse set of stakeholders including community members and water treatment plant operators. Those relationships must begin with respect and valuing their insights. As we spend time together we can develop trust so that they communicate both the good and bad.
 
-We've learned much from plant operators. They figured out how to reduce rising flocs at Agalteca, Honduras where we learned that conventional sedimentation tank inlet manifolds generate large circulation currents. Plant operators added curtains to the windows at Moroceli, Honduras (see figure_Moroceli_curtains) because they noticed that direct sunlight on the sedimentation tanks caused an increase in settled water turbidity.
+We've learned much from plant operators. They figured out how to reduce rising flocs at Agalteca, Honduras where we learned that conventional sedimentation tank inlet manifolds generate large circulation currents. Plant operators added curtains to the windows at Moroceli, Honduras (see :numref:`figure_Moroceli_curtains`) because they noticed that direct sunlight on the sedimentation tanks caused an increase in settled water turbidity.
 
 .. _figure_Moroceli_curtains:
 
@@ -267,9 +267,9 @@ The list of dissolved species that can be present in water in the environment is
 From an aesthetic perspective, NOM absorbs light at short wavelengths and this results in water that looks yellow or brown. While I enjoy drinking tea with a rich brown color, I'd prefer that my water be clear.
 
 NOM plays a supersized role in influencing performance of surface water treatment plants. NOM has three negative effects:
- 1) It requires higher dosages of coagulant for effective particle removal.
- 1) It reduces the disinfection effectiveness of chlorine, ozone, and UV. Chlorine partially oxidizes the NOM and thus more chlorine must be used to maintain a residual level of chlorine.
- 1) It can produce disinfection by-products that are toxic.
+  #. It requires higher dosages of coagulant for effective particle removal.
+  #. It reduces the disinfection effectiveness of chlorine, ozone, and UV. Chlorine partially oxidizes the NOM and thus more chlorine must be used to maintain a residual level of chlorine.
+  #. It can produce disinfection by-products that are toxic.
 
 Thus removal of NOM is a water treatment goal. Fortunately the same coagulants that are used for particle removal also can remove a significant fraction of NOM. The interactions between NOM and coagulants will be discussed in the :ref:`Introduction to Rapid Mix <title_Rapid_Mix_Introduction>`.
 
@@ -303,7 +303,7 @@ Chlorine is widely recognized for reducing mortality from water borne disease in
    Lamellar sedimentation, plate or tube settlers, flocculation or floc blanket, public, `1904 <http://www.hydroflotech.com/inclined-plate-clarifier-basic-theory-of-operation>`_
    Roughing filter, simple sedimentation in a gravel bed, none, public, `unknown <https://www.researchgate.net/publication/237827490_Roughing_filter_for_water_pre-treatment_technology_in_developing_countries_A_review?enrichId=rgreq-bb1d04e6613378d626c78cadb6674ae8&enrichSource=Y292ZXJQYWdlOzIzNzgyNzQ5MDtBUzoyMDAwMDczMDQxMjY0NjdAMTQyNDY5Njg2NTYxMQ%3D%3D&el=1_x_2>`_
    Slow sand filtration, Roughing filter or single step treatment for low NTU water, none, public, `1829 <https://en.wikipedia.org/wiki/Slow_sand_filter>`_
-   Rapid sand filtration, depth filtration, sedimentation, public, `1920 <https://en.wikipedia.org/wiki/Rapid_sand_filter>`_
+   Rapid sand filtration, depth filtration, sedimentation, public, `1920 <https://en.wikipedia.org/wiki/RapiD_sand_filter>`_
    Stacked rapid sand filter, gravity powered backwash, lamellar sedimentation, AguaClara Cornell open source, `2012 <https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EE.1943-7870.0000562>`_
    Floc blanket, upflow fluidized suspension of flocs, flocculation, public, `1930 <https://link.springer.com/chapter/10.1007%2F978-3-642-61196-4_2>`_
    Jet reverser floc blanket, first fully fluidized floc blanket, flocculation, AguaClara Cornell open source, `2012 <http://cuaguaclara.blogspot.com/2012/08/the-floc-blanket-quest.html>`_
@@ -405,9 +405,6 @@ The AguaClara treatment train consists of the following processes
  CWTP uses dissolved air flotation tanks that are located on top of the rapid sand filters. The d
 
  The filter approach velocity (the velocity of water before it enters the sand bed) for CWTP is 4.42 mm/s. This is significantly higher than the 1.85 mm/s filtration velocity currently used in StaRS filters. StaRS filters are a stack of 6 filters and the net filtration velocity is 11 mm/s. Thus by that metric the StaRS filters are significantly smaller than the CWTP filters.
-
-
-
 
  .. code:: python
 
@@ -544,4 +541,55 @@ AguaClara plants have a layout that places the coagulant dose controls within a 
 
 .. todo:: Show the plan view of an AguaClara plant.
 
-.. _heading_Comparison_with_Croton_Water_Treatment_Plant:
+.. _heading_AguaClara_Innovations:
+
+AguaClara Inventions
+=====================
+
+Plant layout
+------------
+ #. Compact layout with processes sharing common walls when possible
+ #. Walkways set at optimal elevation for observation and maintenance of processes
+ #. Open tanks used whenever possible to simplify maintenance
+ #. Building enclosure to protect the entire plant from UV and for security
+
+Chemical dosing
+---------------
+ #. Linear flow orifice meter to both measure the plant flow rate and to turn the entrance tank water surface into a flow sensor input for the chemical dosing system.
+ #. Gravity powered semi-automated dosing system that delivers a constant dose even when plant flow rate changes.
+ #. Slider on a calibrated scale for intuitive changes in chemical dose
+
+Rapid mix
+---------
+ #. Simple orifice for hydraulic rapid mix
+
+Flocculation
+------------
+ #. Obstacles between baffles to create a more uniform distribution of energy dissipation rate and a more efficient use of available energy
+ #. Plastic modules that can easily be removed from channels for maintenance
+ #. Compact vertical flow flocculators for low flow plants
+
+Sedimentation
+-------------
+ #. Four channel inlet/outlet system that enables
+
+     #. dumping flocculated water that doesn't meet specifications
+     #. taking one sedimentation tank offline by placing a pipe stub in the inlet and a cap on the outlet
+     #. dumping settled water that doesn't meet specifications
+
+ #. Inlet manifold with flow diffusers that straighten the flow into a continuous line jet
+ #. Inlet manifold is offset from center to force jet to all go in a consistent direction through the jet reverser
+ #. Jet reverser that efficiently reverses the direction of the incoming water to be able to resuspend settled flocs that are sliding down the inclines
+ #. Zero settled sludge in the main part of the sedimentation tank
+ #. Hydraulically cleaned sedimentation tank with no moving parts
+ #. Floc Hopper that consolidates the floc slurry prior to draining.
+ #. Floc blanket that is stable due to loss to or gain from settled sludge
+
+Filtration
+----------
+ #. Sand drain system to empty sand from filter hydraulically
+ #. Wing and orifice system to inject water into the filter bed
+ #. Stacked Rapid Sand Filtration system that has the same flow rate for filtration and for backwash
+ #. Uses settled water for backwash to eliminate need for pumps and clearwells and to eliminate failure mode of inadequate supply of filtered water for backwash.
+ #. Air valve control system to trigger mode change from backwash to filtration and from filtration to backwash
+ #. No valves needed on inlet and outlet pipes
