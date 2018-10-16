@@ -131,7 +131,11 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#foundational-concepts">Foundational Concepts</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#terminal-velocity">Terminal Velocity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#capture-velocity">Capture Velocity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#capture-velocity">Capture Velocity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#horizontal-flow-sedimentation-tank">Horizontal Flow Sedimentation Tank</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vertical-flow-sedimentation-tank">Vertical Flow Sedimentation Tank</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#floc-rollup">Floc rollup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#floc-blankets">Floc blankets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sludge-disposal">Sludge disposal</a></li>
@@ -310,10 +314,80 @@
 </div>
 <div class="section" id="capture-velocity">
 <h2>Capture Velocity<a class="headerlink" href="#capture-velocity" title="Permalink to this headline">¶</a></h2>
-<p>Settle capture velocity is defined as the slowest settling particle that a sedimentation tank captures reliably. It is a property of the geometry of the sedimentation tank. Because it is a property of geometry, we can use it as an important design tool; because we can control reactor geometry, we can control the sizes of particles that we can settle.</p>
-<p>We will develop our definition of settle capture velocity using an example of a horizontal flow sedimentation tank. It should be noted that there are many idealizations and simplifications made for modeling sedimentation tanks. We assume that water will move through the reactor as expected (in the case of the horizontal flow sedimentation tank, from one end to the other), but we know that there are many more fluids complications than are described here. We assume that there is no turbulence or velocity profiles for our ideal simplification.</p>
+<p>Settle capture velocity is defined as the velocity of the slowest settling particle that a sedimentation tank captures reliably. It is a property of the geometry of the sedimentation tank. Because it is a property of geometry, we can use it as an important design tool; because we can control reactor geometry, we can control the sizes of particles that we can settle.</p>
+<p>Note: there are a couple of different terms used to describe the sedimentation process. We can say that sedimentation tanks “capture” particles when particles are settled out. We can also say that sedimentation tanks “remove” particles. Both terms refer to the process of particles or floc settling out of suspension in water. If a particle is captured or removed by a sedimentation tank, it means that the particle is stuck in the tank and that water leaving the reactor will have fewer particles in it.</p>
+<p>We will develop our definition of settle capture velocity using examples of a horizontal flow and vertical flow sedimentation tanks. It should be noted that there are many idealizations and simplifications made for modeling sedimentation tanks. We assume that water will move through the reactor as expected (in the case of the horizontal flow sedimentation tank, from one end to the other), but we know that there are many more fluids complications than are described here. We assume that everything is moving at the average velocity and there are no turbulence or velocity profiles. For the time being, we will ignore what will happen to particles once they are captured by the sedimentation tank. Our intuition tells us that particles which settle will need to be removed somehow, and that is correct. This will be discussed in later sections. For now, we only care about capturing the particles, and later we will care about what we do with them once they are captured.</p>
+<div class="section" id="horizontal-flow-sedimentation-tank">
+<h3>Horizontal Flow Sedimentation Tank<a class="headerlink" href="#horizontal-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
 <p>[[[[[[[[[show horizontal flow sedimentation tank]]]]]]]]]</p>
-<p>Let’s begin with three simple questions that will describe our horizontal flow sedimentation tank shown above.</p>
+<div class="line-block">
+<div class="line">Where:</div>
+<div class="line"><span class="math notranslate nohighlight">\(L =\)</span> length [L]</div>
+<div class="line"><span class="math notranslate nohighlight">\(W =\)</span> width [L]</div>
+<div class="line"><span class="math notranslate nohighlight">\(H =\)</span> height [L]</div>
+<div class="line"><span class="math notranslate nohighlight">\(A_p =\)</span> plan view area of the tank [<span class="math notranslate nohighlight">\(L^2\)</span>]</div>
+</div>
+<p>Let’s begin with a few questions that will describe our horizontal flow sedimentation tank shown above. We will assume that 1) water travels uniformly from one end of the tank to the other, and 2) the particle that we are discussing is 35 <span class="math notranslate nohighlight">\(\mu m\)</span> (which is the size of particle that AguaClara plate settlers can capture).</p>
+<ol class="arabic simple">
+<li>How much time is required for water to pass through the tank?</li>
+</ol>
+<p>To determine this value, we can use the given volume and flow rate information by the following relationship:</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-7">
+<span class="eqno">(413)<a class="headerlink" href="#equation-sedimentation-sed-design-7" title="Permalink to this equation">¶</a></span>\[\theta = \frac{V\llap{---}_{tank}}{Q}\]</div>
+<div class="line-block">
+<div class="line">Where:</div>
+<div class="line"><span class="math notranslate nohighlight">\(\theta =\)</span> residence time [T]</div>
+<div class="line"><span class="math notranslate nohighlight">\(V\llap{---}_{tank} =\)</span> volume of the sedimentation tank [<span class="math notranslate nohighlight">\(L^3\)</span>]</div>
+<div class="line"><span class="math notranslate nohighlight">\(Q =\)</span> flow rate through the tank [<span class="math notranslate nohighlight">\(\frac{L^3}{T}\)</span>]</div>
+</div>
+<ol class="arabic simple" start="2">
+<li>In the “worst case scenario”, how far must a particle fall to reach the bottom of the tank?</li>
+</ol>
+<p>The “worst case scenario” is the condition in which a particle must travel the furthest in order to be successfully captured by the sedimentation tank. We assume that particles are evenly distributed throughout the height and width of the reactor entrance. Therefore, a particle entering at the top of the entrance of the reactor would need to fall a distance of <span class="math notranslate nohighlight">\(H\)</span> to reach the bottom. Any particle entering from a position lower than the top of the tank would need to fall a distance <span class="math notranslate nohighlight">\(&lt; H\)</span>.</p>
+<ol class="arabic simple" start="3">
+<li>How fast must the particle fall?</li>
+</ol>
+<p>We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, <span class="math notranslate nohighlight">\(V_h\)</span>. gravity is causing the particle to settle at its terminal velocity, <span class="math notranslate nohighlight">\(V_t\)</span>. In order to reach the bottom, that settling velocity needs to be the capture velocity, <span class="math notranslate nohighlight">\(V_c\)</span>, to ensure that the particle will reach the bottom of the reactor. We can see the path that the “worst case scenario” particle will take in the following figure.</p>
+<p>[[[[[[[[[show horizontal flow sedimentation tank with capture velocity]]]]]]]]]</p>
+<p>Capture velocity can be determined by the distance that a particle must travel and the time that the particle has to travel.</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-8">
+<span class="eqno">(414)<a class="headerlink" href="#equation-sedimentation-sed-design-8" title="Permalink to this equation">¶</a></span>\[V_c = \frac{H}{\theta}\]</div>
+<p>We can make some substitutions into the equation for <span class="math notranslate nohighlight">\(V_c\)</span> to solve for it in explicit terms of reactor plan view area. We are interested in plan view area because this will indicate the efficiency and cost of an associated reactor.</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-9">
+<span class="eqno">(415)<a class="headerlink" href="#equation-sedimentation-sed-design-9" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}V_c = \frac{H}{\theta} = \frac{HQ}{V\llap{---}_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}\\V_c = \frac{Q}{A_p}\end{aligned}\end{align} \]</div>
+<p>Thus, we have capture velocity which is a descriptor of a sedimentation tank. It determines how fast a particle has to settle in order to be reliably captured by a particular sedimentation tank, assuming idealized flow. The capture velocity is not a particle property, but rather a sedimentation tank property.</p>
+<ol class="arabic simple" start="4">
+<li>Will any particles that are smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span> be captured in the sedimentation tank?</li>
+</ol>
+<p>This question is important because as stated in the beginning of this section, our discussion assumed that the particle in question was 35 <span class="math notranslate nohighlight">\(\mu m\)</span>. If we design a sedimentation tank to capture particles that are 35 <span class="math notranslate nohighlight">\(\mu m\)</span>, we also have to understand the impact of our design on particles smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span>.</p>
+<p>To answer this question, think about the two extremes of our reactor.</p>
+<ul class="simple">
+<li>We could have a small particle entering the reactor at the top, in the same “worst case scenario”. This particle would not be successfully captured by the tank because its terminal velocity is less than the capture velocity, meaning that it doesn’t have enough time in the reactor to settle.</li>
+<li>We could have a small particle entering the reactor near the bottom, in a “best case scenario”. In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be caputured by a tank designed for particles 35 <span class="math notranslate nohighlight">\(\mu m\)</span> or larger, but it depends on the height at which they enter the reactor.</li>
+</ul>
+<p>[[[[[[[[[show horizontal flow sedimentation tank with capture velocity for small particles compared to the 35 um condition]]]]]]]]]</p>
+</div>
+<div class="section" id="vertical-flow-sedimentation-tank">
+<h3>Vertical Flow Sedimentation Tank<a class="headerlink" href="#vertical-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
+<p>We will complete the same exercise for vertical flow sedimentation tanks.</p>
+<p>[[[[[[[[[show vertical flow sedimentation tank]]]]]]]]]</p>
+<ol class="arabic simple">
+<li>How much time is required for water to pass through the tank?</li>
+</ol>
+<p>The answer is the same for the horizontal flow sedimentation tank because this is a property of reactor flow rate and volume.</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-10">
+<span class="eqno">(416)<a class="headerlink" href="#equation-sedimentation-sed-design-10" title="Permalink to this equation">¶</a></span>\[\theta = \frac{V\llap{---}_{tank}}{Q}\]</div>
+<div class="line-block">
+<div class="line">Where:</div>
+<div class="line"><span class="math notranslate nohighlight">\(\theta =\)</span> residence time [T]</div>
+<div class="line"><span class="math notranslate nohighlight">\(V\llap{---}_{tank} =\)</span> volume of the sedimentation tank [<span class="math notranslate nohighlight">\(L^3\)</span>]</div>
+<div class="line"><span class="math notranslate nohighlight">\(Q =\)</span> flow rate through the tank [<span class="math notranslate nohighlight">\(\frac{L^3}{T}\)</span>]</div>
+</div>
+<ol class="arabic simple" start="2">
+<li>How far must a particle fall relative to the fluid to not be carried out the exit?</li>
+</ol>
+<p>Note how this question is different from the same question for the horizontal flow sedimentation tank. In the horizontal flow sedimentation tank, particles could settle to the bottom of the reactor. We cared about particles settling to the bottom because it means that In the vertical flow sedimentation tank, particles w</p>
+</div>
 </div>
 <div class="section" id="floc-rollup">
 <h2>Floc rollup<a class="headerlink" href="#floc-rollup" title="Permalink to this headline">¶</a></h2>
