@@ -155,7 +155,7 @@ Clean bed filtration models include an equation first presented by Iwasaki in 19
 
   pC^* \propto \frac{L}{D_{sand}}
 
-where L is the depth of the sand in the column. This suggests that increasing the depth of sand in a filter would dramatically improve performance. 
+where L is the depth of the sand in the column. This suggests that increasing the depth of sand in a filter would dramatically improve performance.
 
 It is quite amazing that we have no useful models for sand filter performance after more than a century of using sand filters as a required process in converting surface waters into safe drinking water. Fortunately we have plenty of clues suggesting what is happening inside filters and at the level of the particles traveling through the pores.
 
@@ -177,7 +177,7 @@ The linear increase in head loss with time (see :refnum:`figure_Head_loss_vs_tim
 .. _figure_Head_loss_vs_time:
 
 .. figure:: Images/Head_loss_vs_time.png
-   :width: 400px
+   :width: 800px
    :align: center
    :alt: Head loss increases linearly with time
 

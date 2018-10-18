@@ -28,15 +28,177 @@ The maximum velocity in a constriction is set by the drag on a primary particle 
 The maximum constriction velocity is thus likely independent of the filtration velocity and pore size. The maximum velocity at the inlet to the constrictions is likely proportional to the fractional surface coverage of the primary particles by coagulant nanoparticles. Thus as the coagulant dose increases the head loss per pore and the head loss at the time of particle breakthrough increases.
 
 .. math::
-    :label: Filter_head_loss_model
+    :label: eq_headloss_constriction
 
-    h_l = \frac{\bar v_{constriction}^2}{2g}
+    h_{l_{constriction}} = \frac{\bar v_{constriction}^2}{2g}
 
+
+The maximum drag that a primary particle can
  - need to connect velocity to drag
  - Use experimental data from filtration to find critical velocity
  - expect velocity to be independent of pore size (sand size)
  - Create model for total head loss in a filter as a function of sand size
  - Need a connection between pore size and volume of particles it can hold.
+
+
+The average distance between sand grains in a filter bed is obtained by taking the cube root of the total volume occupied by a sand grain including the pore space. We also assume that there is a one-to-one correspondence between pores and sand grains and thus the distance between pores is the same as the distance between sand grains.
+
+.. math::
+
+    \Lambda_{sand} = \Lambda_{pore} = \left(\frac{\pi}{6(1-\phi)} \right)^\frac{1}{3}D_{sand}
+
+The flow rate per pore is the approach velocity multiplied by :math:`\Lambda^2`.
+
+.. math::
+
+     Q_{pore} = v_a \Lambda_{pore}^2
+
+The velocity through a constriction in a pore is
+
+.. math::
+
+     Q_{pore} = v_a \Lambda_{pore}^2 = \frac{\pi}{4} D_{constriction}^2v_{constriction}
+
+The constriction diameter is thus given by
+
+.. math::
+    :label: eq_D_constriction
+
+    D_{constriction} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction}}
+
+
+The Reynolds number of the jet issuing from the constriction is obtained by using equation :eq:`eq_D_constriction` to eliminate the dependence on diameter.
+
+.. math::
+    :label: eq_Re_constriction
+
+    Re_{jet} = \frac{\Lambda_{pore} }{\nu }\sqrt\frac{4 v_a v_{constriction}}{\pi }
+
+.. code:: python
+
+    from aide_design.play import*
+    D_sand = 0.5 * u.mm
+    porosity = 0.4
+    Temperature = 20 * u.degC
+    v_a = 1.85 *u.mm/u.s
+    he_filter = 40 * u.cm
+    H_filter = 20 * u.cm
+    Lambda_pore = (np.pi/(6*(1-porosity)))**(1/3)*D_sand
+    Lambda_pore
+    v_constriction = (np.sqrt(2*pc.gravity*Lambda_pore*he_filter/H_filter)).to(u.mm/u.s)
+    v_constriction
+    Re_constriction =(Lambda_pore/pc.viscosity_kinematic(Temperature) * np.sqrt(4*v_a*v_constriction/np.pi)).to(u.dimensionless)
+    Re_constriction
+
+
+The maximum velocity in a pore is hypothesized to be set by the bond strength of the coagulant nanoparticles and the fluid drag on the primary particle that is attaching. It is assumed that the last particles that are able to deposit in a pore are primary particles because they can fill in the last available volume before the pore velocity is too high for any other particles to attach. It is possible that the attachment strength of the primary particles is a function of the fraction of their surface area that is covered by coagulant nanoparticles, :math:`\Gamma`. The total force acting downward on a primary particle that attaches to a constriction is the sum of the drag and the particle buoyant weight. These forces are counteracted by the force of the coagulant bonds.
+
+.. math::
+
+    F_{coag_{bonds}} = F_{drag} + F_{weight} - F_{buoyancy}
+
+The drag force on a clay particle that has attached to the
+
+.. math::
+
+    F_{drag} = C_D \frac{\pi}{4} D_{clay}^2 \rho_{H_2O} \frac{v_{constriction}^2}{2}
+
+At Reynolds numbers (based on primary particle diameter) less than about 10 the drag coefficient is given by
+
+.. math::
+
+    C_D = \frac{24}{Re} = \frac{24\nu}{v_{constriction}D_{clay}}
+
+Thus the drag on a clay particle is given by
+
+.. math::
+
+    F_{drag} = 3\pi \nu v_{constriction} D_{clay} \rho_{H_2O}
+
+
+.. math::
+
+    F_{coag_{bonds}} = 3\pi \nu v_{constriction} D_{clay} \rho_{H_2O} + (\rho_{clay} - \rho_{H_2O}) g \frac{\pi}{6}D_{clay}^3
+
+
+The drag force is assumed to be set by the average pore water velocity because the deposition occurs near the entrance to the constriction before the boundary layer on the wall can develop.
+
+The force of the coagulant bonds is presumed to be proportional to the fractional coverage of the clay with coagulant and the intrinsic shear strength of the coagulant bonds to the clay surface
+
+.. math::
+
+    F_{coag_{bonds}} = \Gamma \tau_{bonds} \frac{\pi}{4} D_{clay}^2
+
+where :math:`\tau_{bonds}` is the intrinsic shear strength of the coagulant bonds to the clay surface. Solving for the maximum constriction velocity we obtain
+
+.. math::
+
+    v_{constriction_{max}} = \frac{\Gamma \tau_{bonds}\frac{\pi}{4} D_{clay}^2 - (\rho_{clay} - \rho_{H_2O}) g \frac{\pi}{6}D_{clay}^3}{3\pi \nu  D_{clay} \rho_{H_2O}}
+
+It is likely that the weight of the clay particle is a small contribution to the force balance. In that case the equation simplifies to
+
+.. math::
+
+    v_{constriction_{max}}  = \frac{\Gamma \tau_{bonds} D_{clay} }{12 \nu \rho_{H_2O}}
+
+
+Unfortunately, we do not have a measure of the intrinsic bond strength of the coagulant nanoparticles to clay surfaces, :math:`\tau_{bonds}`. This equation does provide a possible means to back calculate this property.
+
+The minimum diameter of a particle deposition constriction is set by the maximum constriction velocity, :math:`v_{constriction_{max}}`.
+
+.. math::
+    :label: eq_D_constriction_min
+
+    D_{constriction_{min}} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction_{max}}}
+
+The head loss through a flow constriction can be estimated from the head loss through a flow expansion. We will use the form of the expansion equation :eq:`eq_exp_v_in` that is based on the contraction velocity. The expanded dimension, :math:`D_{pore_{exp}}` is a maximum pore size, not the original pore size at the constriction before particles were deposited there.
+
+.. math::
+    :label: eq_exp_v_constriction
+
+     h_{e_{constriction}} = \left( 1 - \frac{D_{constriction}^2}{D_{pore_{exp}}^2} \right)^2 \frac{\bar v_{constriction_{max}}^2}{2g}
+
+The number of deposited constrictions per unit depth in a filter is
+
+.. math::
+
+    N_{constrictions_{series}} = \frac{H_{filter}}{\Lambda_{pore}}
+
+The total head loss in a filter if taken to the point where the active filtration zone exited the filter and all pores were constricted would be
+
+.. math::
+   :label: eq_he_filter1
+
+    h_{e_{filter_{max}}} = \frac{H_{filter}}{\Lambda_{pore}} \left( 1 - \frac{D_{constriction}^2}{D_{pore_{exp}}^2} \right)^2 \frac{\bar v_{constriction_{max}}^2}{2g}
+
+The constriction diameter and the velocity in the constriction are related by equation :eq:`eq_D_constriction_min`. Eliminate
+
+.. math::
+    :label: eq_he_filter2
+
+    h_{e_{filter_{max}}} = \frac{H_{filter}}{2g\Lambda_{pore}} \left( v_{constriction_{max}} - \frac{4 v_a \Lambda_{pore}^2 }{\pi  D_{pore_{exp}}^2} \right)^2
+
+We haven't yet derived an equation relating :math:`D_{pore_{exp}}` and :math:`\Lambda_{pore}`. The expanded diameter of interest here is the characteristic diameter of the expanded flow. Given how close the
+
+.. math::
+    :label: eq_D_pore
+
+    D_pore = D_sand
+
+That ratio is a constant for porous media. Thus the squared term in equation :eq:`eq_he_filter2` is independent of sand grain size.
+
+The effect of increasing the pore size on terminal head loss is to decrease the final head loss because of the effect of :math:`\Lambda_{pore}`in the first term of equation :eq:`eq_he_filter2`. Note that this does not yet address the rate of head loss accumulation which is expected to be a function of sand grain diameter.
+
+We can solve equation :eq:`eq_he_filter2` for maximum constriction velocity based on experimental measurements of the head loss at filter failure.
+
+.. math::
+    :label: eq_he_filter2
+
+    v_{constriction_{max}} = \frac{4 v_a \Lambda_{pore}^2 }{\pi  D_{pore}^2} + \sqrt{ \frac{2g\Lambda_{pore}}{H_{filter}}h_{e_{filter_{max}}}}
+
+From :numref:`figure_Head_loss_vs_time` we have an estimate of 35 to 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand.
+
+
 
 
 
