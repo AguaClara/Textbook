@@ -344,10 +344,12 @@ There are three forms of the minor loss equation that you will see in this class
     {\rm{ \mathbf{First \, form:} }} \quad h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}
 
 .. math::
+    :label: eq_exp_v_in
 
     {\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2
 
 .. math::
+    :label: eq_exp_v_out
 
     \color{purple}{
     {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
