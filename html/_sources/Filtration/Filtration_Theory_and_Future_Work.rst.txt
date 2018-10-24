@@ -8,15 +8,33 @@ Filtration Theory and Future Work
 Filtration model
 ================
 
-The filtration model is based on the insight that rapid sand filters have an active filtration zone that slowly progresses down through the filter as the active zone fills to maximum capacity at the upstream end. A clean bed of sand is ineffective at capturing small particles as evidenced by the poor initial performance after backwash. Thus it is apparently that previously deposited particles play a key role in subsequent capture of particles.
+The filtration model is based on the insight that rapid sand filters have an active filtration zone that slowly progresses down through the filter as it fills to maximum capacity at the upstream end. A clean bed of sand is ineffective at capturing small particles as evidenced by the poor initial performance after backwash. Thus it is apparently that previously deposited particles play a key role in subsequent capture of particles.
 
 Interception!
-Flow constrictions - converging streamlines move particles closer to the pore wall. Previously deposited particles form constrictions. The constrictions are the most likely location for particles to collide with deposited particles.
+Flow constrictions - converging streamlines move particles closer to the pore wall. Previously deposited particles form constrictions. The constrictions are the most likely location for particles to collide with deposited particles. Thus particles do not fill the pores and clog the filter. Instead particle form constrictions where streamlines already converged.
 
 Maximum shear sets a minimum constriction opening size!
 As particles gradually deposit in an ever shrinking flow constriction the velocity through the constriction increases and the velocity gradient at the wall increases. Eventually the bond strength of the coagulant nanoparticles is not great enough to capture suspended particles that collide with the deposited particles. The flow constriction reaches a minimum diameter and subsequent suspended flocs flow right through the constriction.
 
 The gradual creation of more flow constrictions results in an almost linear increase in head loss as a function of the volume of deposited flocs.
+
+Hypotheses, evidence, why it matters
+----------
+
+.. _table_filter_hypotheses:
+
+.. csv-table:: Hypotheses, evidence, and why it matters
+   :header: #,Hypotheses, Evidence, Why it matters
+   :align: center
+
+   1, Particle removal is primarily due to converging streamlines that move particles close to the sand surface or to previously deposited particles, Filtration theory and estimates of void volume occupied by particles, Basis for our filtration model
+   2, The particle size distribution in the filter is set by the shear in the filter (or the particle size distribution is set by the floc/sed system), Estimate of velocity gradient in pores,"Sand size, Approach velocity, and injection method will influence particle size distribution"
+   3, The jets that the constrictions create dissipate almost all of their energy in the downstream void BEFORE entering the next constriction, Laminar flow jets dissipate energy very quickly, Allows a simple relationship between pore head loss and constriction velocity
+   4, Flocs are captured with VERY high efficiency and thus primary particle removal limits filter performance, Clean bed filtration models, Need to optimize filters for primary particle removal
+   5, Constrictions form a continuous barrier across the filter at each sand grain layer, Any gaps would receive higher flow rate and thus higher flux of particles, Filter automatically prevents short circuiting
+   6, Thickness of the
+
+
 
 .. _heading_Filter_Head_loss_model:
 
@@ -74,6 +92,60 @@ The Reynolds number of the jet issuing from the constriction is obtained by usin
 
     Re_{jet} = \frac{\Lambda_{pore} }{\nu }\sqrt\frac{4 v_a v_{constriction}}{\pi }
 
+The jet issuing from the constrictions is laminar. The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. WE don't have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.
+
+The rate of jet expansion can be obtained from an analytical solution of the Navier Stokes equation as shown by `Pai, S.I., Fluid dynamics of jets. (D. Van Nostrand Company, Inc., Princeton, NJ, 1954 (pages 78-79)<https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99>`_
+
+The momentum in the direction of flow is conserved and is given by
+
+.. math::
+
+    M_0 = 2 \pi \rho \int_{0}^{\infty} u^2 r dr
+
+For the case of uniform velocity through the constriction we can replace :math:`\infty` with :math:`r_{constriction}`
+
+.. math::
+
+    M_0 = 2 \pi \rho v_{constriction}^2 \int_{0}^{r_{constriction}}  r dr
+
+.. math::
+
+    M_0 = \pi \rho v_{constriction}^2 r_{constriction}^2 = \rho Q_{pore}v_{constriction}
+
+The velocity in the direction of the jet is given by (equation 4.39 in `Pai, 1954 <https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99>`_)
+
+.. math::
+
+    u = \frac{3M_0}{8\pi \mu} \frac{1}{x} \frac{1}{\left[1+(\frac{\zeta^2}{4})\right]^2}
+
+
+.. math::
+
+    \zeta = \frac{1}{4\nu} \left(\frac{3M_0}{\pi\rho}\right)^{\frac{1}{2}} \frac{r}{x}
+
+and thus :math:`\zeta` is zero at the centerline.  We will use the centerline velocity at distance :math:`\Lambda_{pore}` from the constriction to estimate the head loss caused by one constriction.
+
+.. math::
+
+    v_{exp} = \frac{3\rho Q_{pore}v_{constriction}}{8\pi \mu \Lambda_{pore}}
+
+We can substitute for :math:`Q_{pore}` to obtain
+
+.. math::
+
+    v_{exp} =  \frac{3 v_a \Lambda_{pore} }{8\pi \nu }v_{constriction}
+
+
+We can use mass conservation and the equation for :math:`Q_{pore}` to replace :math:`v_a` with :math:`v_{constriction}`
+
+.. math::
+
+    v_{exp} =  \frac{3}{32}\frac{D_{constriction}}{\Lambda_{pore}}Re_{jet}v_{constriction}
+
+It isn't yet clear if this always means that :math:`v_{exp}` will be very small compared with :math:`v_{constriction}`, but that seems to be the logical conclusion. Thus when calculating the head loss for a pore it is reasonable to assume that the kinetic energy of the jet is all lost before entering the next constriction.
+
+
+
 .. code:: python
 
     from aide_design.play import*
@@ -89,7 +161,29 @@ The Reynolds number of the jet issuing from the constriction is obtained by usin
     v_constriction
     Re_constriction =(Lambda_pore/pc.viscosity_kinematic(Temperature) * np.sqrt(4*v_a*v_constriction/np.pi)).to(u.dimensionless)
     Re_constriction
+    D_constriction = Lambda_pore * np.sqrt(4*v_a/v_constriction/np.pi)
+    Lambda_pore/D_constriction
+    x_over_Re = Lambda_pore/Re_constriction/D_constriction
+    x_over_Re
+    v_exp = (3*v_a*Lambda_pore*v_constriction/(8*np.pi*pc.viscosity_kinematic(Temperature))).to(u.mm/u.s)
+    v_exp
+    (3*v_a*Lambda_pore/(8*np.pi*pc.viscosity_kinematic(Temperature))).to(u.dimensionless)
 
+Constricted pore velocity gradient
+==================================
+
+Almost all of the kinetic energy of the jet issuing from the constriction is dissipated in the downstream pore. We will assume that the majority of the head loss is due to the jet (rather than wall shear). The volume of a pore is given by
+
+.. math::
+
+    \rlap{-} V = \Lambda_{pore}^3
+
+.. math::
+
+    \bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
+    G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
+    G_{CS} = \sqrt{\frac{gh_{\rm{L}}}{\nu \theta}} \qquad\qquad
+    h_{l_{constriction}} = \frac{\bar v_{constriction}^2}{2g}
 
 The maximum velocity in a pore is hypothesized to be set by the bond strength of the coagulant nanoparticles and the fluid drag on the primary particle that is attaching. It is assumed that the last particles that are able to deposit in a pore are primary particles because they can fill in the last available volume before the pore velocity is too high for any other particles to attach. It is possible that the attachment strength of the primary particles is a function of the fraction of their surface area that is covered by coagulant nanoparticles, :math:`\Gamma`. The total force acting downward on a primary particle that attaches to a constriction is the sum of the drag and the particle buoyant weight. These forces are counteracted by the force of the coagulant bonds.
 
@@ -151,12 +245,12 @@ The minimum diameter of a particle deposition constriction is set by the maximum
 
     D_{constriction_{min}} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction_{max}}}
 
-The head loss through a flow constriction can be estimated from the head loss through a flow expansion. We will use the form of the expansion equation :eq:`eq_exp_v_in` that is based on the contraction velocity. The expanded dimension, :math:`D_{pore_{exp}}` is a maximum pore size, not the original pore size at the constriction before particles were deposited there.
+The head loss through a flow constriction can be estimated from the head loss through a flow expansion. We will use the form of the expansion equation :eq:`eq_exp_v_in` that is based on the contraction velocity. The jet is assumed to expand sufficiently so that the residual kinetic energy is insignificant.
 
 .. math::
     :label: eq_exp_v_constriction
 
-     h_{e_{constriction}} = \left( 1 - \frac{D_{constriction}^2}{D_{pore_{exp}}^2} \right)^2 \frac{\bar v_{constriction_{max}}^2}{2g}
+     h_{e_{constriction}} =  \frac{\bar v_{constriction_{max}}^2}{2g}
 
 The number of deposited constrictions per unit depth in a filter is
 
@@ -167,36 +261,27 @@ The number of deposited constrictions per unit depth in a filter is
 The total head loss in a filter if taken to the point where the active filtration zone exited the filter and all pores were constricted would be
 
 .. math::
-   :label: eq_he_filter1
+   :label: eq_he_filter
 
-    h_{e_{filter_{max}}} = \frac{H_{filter}}{\Lambda_{pore}} \left( 1 - \frac{D_{constriction}^2}{D_{pore_{exp}}^2} \right)^2 \frac{\bar v_{constriction_{max}}^2}{2g}
+    h_{e_{filter_{max}}} = \frac{H_{filter}}{\Lambda_{pore}}  \frac{\bar v_{constriction_{max}}^2}{2g}
 
-The constriction diameter and the velocity in the constriction are related by equation :eq:`eq_D_constriction_min`. Eliminate
 
-.. math::
-    :label: eq_he_filter2
 
-    h_{e_{filter_{max}}} = \frac{H_{filter}}{2g\Lambda_{pore}} \left( v_{constriction_{max}} - \frac{4 v_a \Lambda_{pore}^2 }{\pi  D_{pore_{exp}}^2} \right)^2
+The effect of increasing the pore size on terminal head loss is to decrease the *final* head loss when the active zone reaches the bottom of the filter because of the effect of :math:`\Lambda_{pore}`in the first term of equation :eq:`eq_he_filter`. Note that this does not yet address the rate of head loss accumulation which is expected to be a function of sand grain diameter.
 
-We haven't yet derived an equation relating :math:`D_{pore_{exp}}` and :math:`\Lambda_{pore}`. The expanded diameter of interest here is the characteristic diameter of the expanded flow. Given how close the
-
-.. math::
-    :label: eq_D_pore
-
-    D_pore = D_sand
-
-That ratio is a constant for porous media. Thus the squared term in equation :eq:`eq_he_filter2` is independent of sand grain size.
-
-The effect of increasing the pore size on terminal head loss is to decrease the final head loss because of the effect of :math:`\Lambda_{pore}`in the first term of equation :eq:`eq_he_filter2`. Note that this does not yet address the rate of head loss accumulation which is expected to be a function of sand grain diameter.
-
-We can solve equation :eq:`eq_he_filter2` for maximum constriction velocity based on experimental measurements of the head loss at filter failure.
+We can solve equation :eq:`eq_he_filter` for maximum constriction velocity based on experimental measurements of the head loss at filter failure that is due to constrictions. Note that this head loss does NOT include the clean bed head loss.
 
 .. math::
     :label: eq_he_filter2
 
-    v_{constriction_{max}} = \frac{4 v_a \Lambda_{pore}^2 }{\pi  D_{pore}^2} + \sqrt{ \frac{2g\Lambda_{pore}}{H_{filter}}h_{e_{filter_{max}}}}
+    v_{constriction_{max}} = \sqrt{ \frac{2g\Lambda_{pore}}{H_{filter}}h_{e_{filter_{max}}}}
 
-From :numref:`figure_Head_loss_vs_time` we have an estimate of 35 to 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand.
+From :numref:`figure_Head_loss_vs_time` we have an estimate of 35 to 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand. This gives an estimate of 137 mm/s for the constriction velocity. This could be used to obtain an estimate of the bond strength of the coagulant nanoparticles.
+
+Constriction volume
+===================
+
+The volume of solids deposited in one pore can be obtained based on the average diameter of clean pore constrictions, the diameter of the constricted pore after solids deposition, and the thickness of the deposit. We already have an estimate for the diameter of the constricted pore after solids deposition. The
 
 
 

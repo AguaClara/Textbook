@@ -791,14 +791,14 @@ Now we can calculate the average energy dissipation rate in porous media.
 
 .. math::
 
-    \bar\epsilon = \frac{g h_f}{\theta}
+    \bar\varepsilon = \frac{g h_f}{\theta}
 
 Substituting the equations for head loss and residence times we obtain
 
 .. math::
     :label: eq_EDR_CS_porous_media
 
-    \bar\epsilon = \frac{f_{\phi}}{2} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}
+    \bar\varepsilon = \frac{f_{\phi}}{2} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}
 
 The Camp Stein velocity gradient for flow in porous media is
 
@@ -965,7 +965,7 @@ Plane Jet
 
 Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by `Heskestad in 1965 <http://dx.doi.org/10.1115/1.3627309>`__ and it may be possible to use that data to get a better estimate of $:raw-latex:`\Pi`\_{JetPlane} $ from that source.
 
-.. math:: \Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}
+.. math:: \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}
 
 .. math:: \varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}
 
@@ -996,9 +996,9 @@ where :math:`K` is the minor loss coefficient for flow around the end of a baffl
 
 Substitute the values for :math:`\bar \varepsilon` and
 :math:`\varepsilon_{Max}` to obtain the ratio,
-:math:`\Pi_{\bar \epsilon}^{\epsilon_{Max}}`
+:math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`
 
-.. math:: \Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}
+.. math:: \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}
 
 :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value of 2 for
 :math:`H_e/S <5` (CFD analysis and `Haarhoff, 2001 <https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267>`__)
@@ -1012,7 +1012,7 @@ We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value
 .. math::
 
    \Pi_{JetPlane} = \left(
-     \Pi_{\bar \epsilon}^{\epsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
+     \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
      \right)
 
 .. math:: \Pi_{JetPlane} = 0.0124

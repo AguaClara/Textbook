@@ -24,51 +24,56 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :header: Parameter, Description, Units
     :widths: 10, 15, 45
 
-    :math:`m`, Mass, :math:`[M]`
-    :math:`z`,Elevation,:math:`[L]`
-    :math:`L`,Length,:math:`[L]`
-    :math:`W`,Width,:math:`[L]`
-    :math:`H`,Height,:math:`[L]`
-    :math:`D`,Diameter,:math:`[L]`
-    :math:`r`,Radius,:math:`[L]`
+    Uppercase letters, ,
     :math:`A`,Area,:math:`[L]^2`
-    :math:`\rlap{-} V`,Volume,:math:`[L]^3`
-    :math:`v`,Velocity,:math:`\frac{[L]}{[T]}`
-    :math:`Q`,Flow rate,:math:`\frac{[L]^3}{[T]}`
-    :math:`n`,"Number, Amount",Dimensionless
-    :math:`C`,Concentration,:math:`\frac{[M]}{[L]^3}`
-    :math:`p`,Pressure,:math:`\frac{[M]}{[L][T]^2}`
-    :math:`g`,Acceleration due to Gravity,:math:`\frac{[L]}{[T]^2}`
-    :math:`\rho`,Density,:math:`\frac{[M]}{[L]^3}`
-    :math:`\mu`,Dynamic viscosity,:math:`\frac{[M]}{[T][L]}`
-    :math:`\nu`,Kinematic viscosity,:math:`\frac{[L]^2}{[T]}`
-    :math:`h`,"Head, Elevation",:math:`[L]`
-    :math:`h_L`,Headloss,:math:`[L]`
-    :math:`h_{\rm f}`,Major Loss (friction),:math:`[L]`
-    :math:`\epsilon`,Surface roughness,:math:`[L]`
-    :math:`\rm{f}`,Darcy-Weisbach friction factor,Dimensionless
-    :math:`{\rm Re}`,Reynolds Number,Dimensionless
-    :math:`h_e`,Minor Loss (expansion),:math:`[L]`
-    :math:`K`,Minor Loss coefficient,Dimensionless
-    :math:`\Pi`,Dimensionless Proportionality Ratio,Dimensionless
-    :math:`\Pi_{vc}`,Vena Contracta Area Ratio,Dimensionless
-    :math:`\Pi_{Error}`,Linearity Error Ratio,Dimensionless
-    :math:`M`,Fluid Momentum,:math:`\frac{[M][L]}{[T]^2}`
-    :math:`F`,Force,:math:`\frac{[M][L]}{[T]^2}`
-    :math:`t`,Time,:math:`[T]`
-    :math:`\theta`,Residence Time,:math:`[T]`
-    :math:`G`,Velocity Gradient/Fluid Deformation,:math:`\frac{1}{[T]}`
-    :math:`\varepsilon`,Energy Dissipation Rate,:math:`\frac{[L]^2}{[T]^3}`
-    :math:`\Pi_{\bar G}^{G_{Max}}`,:math:`\frac{G_{Max}}{\bar G}` Ratio in a Reactor,Dimensionless
-    :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`,:math:`\frac{\varepsilon_{Max}}{\bar \varepsilon}` Ratio in a Reactor,Dimensionless
-    :math:`\Pi_{HS}`,Height to Baffle Spacing in a Flocculator,Dimensionless
-    :math:`H_e`,Height Between Flow Expansions in a Flocculator,:math:`[L]`
-    :math:`S`,Spacing Between Two Objects,:math:`[L]`
     :math:`B`,Center-to-Center Spacing Between Two Objects,:math:`[L]`
-    :math:`T`,Object Thickness,:math:`[L]`
+    :math:`C`,Concentration,:math:`\frac{[M]}{[L]^3}`
+    :math:`D`,Diameter,:math:`[L]`
+    :math:`F`,Force,:math:`\frac{[M][L]}{[T]^2}`
+    :math:`G`,Velocity Gradient/Fluid Deformation,:math:`\frac{1}{[T]}`
+    :math:`G_{CS}`, Camp Stein velocity gradient
+    :math:`H`,Height,:math:`[L]`
+    :math:`H_e`,Height Between Flow Expansions in a Flocculator,:math:`[L]`
+    :math:`K`,Minor Loss coefficient,Dimensionless
+    :math:`L`,Length,:math:`[L]`
+    :math:`M`,Fluid Momentum,:math:`\frac{[M][L]}{[T]^2}`
     :math:`P`,Power,:math:`\frac{[M][L]^2}{[T]^3}`
+    :math:`Q`,Flow rate,:math:`\frac{[L]^3}{[T]}`
+    :math:`{\rm Re}`,Reynolds Number,Dimensionless
+    :math:`S`,Spacing Between Two Objects,:math:`[L]`
+    :math:`T`,Object Thickness,:math:`[L]`
+    :math:`\rlap{-} V`,Volume,:math:`[L]^3`
+    :math:`W`,Width,:math:`[L]`
+    Lowercase letters, ,
+    :math:`\rm{f}`,Darcy-Weisbach friction factor,Dimensionless
+    :math:`g`,Acceleration due to Gravity,:math:`\frac{[L]}{[T]^2}`
+    :math:`h`,"Head, Elevation",:math:`[L]`
+    :math:`h_e`,Minor Loss (expansion),:math:`[L]`
+    :math:`h_{\rm f}`,Major Loss (friction),:math:`[L]`
+    :math:`h_L`,Total headloss,:math:`[L]`
+    :math:`m`, Mass, :math:`[M]`
+    :math:`n`,"Number, Amount",Dimensionless
+    :math:`p`,Pressure,:math:`\frac{[M]}{[L][T]^2}`
+    :math:`r`,Radius,:math:`[L]`
+    :math:`t`,Time,:math:`[T]`
+    :math:`v`,Velocity,:math:`\frac{[L]}{[T]}`
+    :math:`z`,Elevation,:math:`[L]`
+    Greek lowercase letters, ,
+    :math:`\epsilon`,Surface roughness,:math:`[L]`
+    :math:`\varepsilon`,Energy Dissipation Rate,:math:`\frac{[L]^2}{[T]^3}`
     :math:`\eta_K`,Kolmogorov Length Scale,:math:`[L]`
     :math:`\lambda_\nu`,Inner Viscous Length Scale,:math:`[L]`
-    :math:`\Pi_{K\nu}`,Ratio of Inner Viscous Length Scale to Kolmogorov Length Scale,Dimensionless
-    :math:`\Lambda`,Distance Between Particles,:math:`[L]`
+    :math:`\mu`,Dynamic viscosity,:math:`\frac{[M]}{[T][L]}`
+    :math:`\nu`,Kinematic viscosity,:math:`\frac{[L]^2}{[T]}`
     :math:`\phi`,Porosity,Dimensionless
+    :math:`\rho`,Density,:math:`\frac{[M]}{[L]^3}`
+    :math:`\theta`,Residence Time,:math:`[T]`
+    Greek uppercase letters, ,
+    :math:`\Pi`,Dimensionless Proportionality Ratio,Dimensionless
+    :math:`\Pi_{Error}`,Linearity Error Ratio,Dimensionless
+    :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`,:math:`\frac{\varepsilon_{Max}}{\bar \varepsilon}` Ratio in a Reactor,Dimensionless
+    :math:`\Lambda`,Distance Between Particles,:math:`[L]`
+    :math:`\Pi_{\bar G}^{G_{Max}}`,:math:`\frac{G_{Max}}{\bar G}` Ratio in a Reactor,Dimensionless
+    :math:`\Pi_{HS}`,Height to Baffle Spacing in a Flocculator,Dimensionless
+    :math:`\Pi_{K\nu}`,Ratio of Inner Viscous Length Scale to Kolmogorov Length Scale, Dimensionless
+    :math:`\Pi_{vc}`,Vena Contracta Area Ratio,Dimensionless

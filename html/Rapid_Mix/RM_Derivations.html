@@ -787,10 +787,10 @@ wall.</p>
 <span class="eqno">(241)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-97" title="Permalink to this equation">¶</a></span>\[\theta = \frac{L\phi} {v_a}\]</div>
 <p>Now we can calculate the average energy dissipation rate in porous media.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-98">
-<span class="eqno">(242)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-98" title="Permalink to this equation">¶</a></span>\[\bar\epsilon = \frac{g h_f}{\theta}\]</div>
+<span class="eqno">(242)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-98" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{g h_f}{\theta}\]</div>
 <p>Substituting the equations for head loss and residence times we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-edr-cs-porous-media">
-<span class="eqno">(243)<a class="headerlink" href="#equation-eq-edr-cs-porous-media" title="Permalink to this equation">¶</a></span>\[\bar\epsilon = \frac{f_{\phi}}{2} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\]</div>
+<span class="eqno">(243)<a class="headerlink" href="#equation-eq-edr-cs-porous-media" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{f_{\phi}}{2} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\]</div>
 <p>The Camp Stein velocity gradient for flow in porous media is</p>
 <div class="math notranslate nohighlight" id="equation-eq-g-cs-porous-media">
 <span class="eqno">(244)<a class="headerlink" href="#equation-eq-g-cs-porous-media" title="Permalink to this equation">¶</a></span>\[G_{CS} = \left(\frac{f_{\phi}}{2\nu} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}\]</div>
@@ -895,7 +895,7 @@ to obtain</p>
 <span id="heading-plane-jet"></span><h3>Plane Jet<a class="headerlink" href="#plane-jet" title="Permalink to this headline">¶</a></h3>
 <p>Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by <a class="reference external" href="http://dx.doi.org/10.1115/1.3627309">Heskestad in 1965</a> and it may be possible to use that data to get a better estimate of $:raw-latex:<cite>Pi</cite>_{JetPlane} $ from that source.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-123">
-<span class="eqno">(269)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-123" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}\]</div>
+<span class="eqno">(269)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-123" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-124">
 <span class="eqno">(270)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-124" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}\]</div>
 <p>The maximum velocity gradient is thus</p>
@@ -920,9 +920,9 @@ is</p>
 <p>where <span class="math notranslate nohighlight">\(K\)</span> is the minor loss coefficient for flow around the end of a baffle with a <span class="math notranslate nohighlight">\(180^\circ\)</span> turn.</p>
 <p>Substitute the values for <span class="math notranslate nohighlight">\(\bar \varepsilon\)</span> and
 <span class="math notranslate nohighlight">\(\varepsilon_{Max}\)</span> to obtain the ratio,
-<span class="math notranslate nohighlight">\(\Pi_{\bar \epsilon}^{\epsilon_{Max}}\)</span></p>
+<span class="math notranslate nohighlight">\(\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-132">
-<span class="eqno">(278)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-132" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\]</div>
+<span class="eqno">(278)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-132" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\]</div>
 <p><span class="math notranslate nohighlight">\(\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}\)</span> has a value of 2 for
 <span class="math notranslate nohighlight">\(H_e/S &lt;5\)</span> (CFD analysis and <a class="reference external" href="https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267">Haarhoff, 2001</a>)
 The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</span> is at 5 (from CFD analysis, our weakest assumption).</p>
@@ -932,7 +932,7 @@ The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</s
 <span class="math notranslate nohighlight">\(H_e/S=5\)</span></p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-133">
 <span class="eqno">(279)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-133" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = \left(
-  \Pi_{\bar \epsilon}^{\epsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
+  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
   \right)\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-134">
 <span class="eqno">(280)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-134" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = 0.0124\]</div>

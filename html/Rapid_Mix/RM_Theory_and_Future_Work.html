@@ -310,13 +310,13 @@
 <p>Diffusion transports the coagulant nanoparticles a relatively short distance, a fraction of a <span class="math notranslate nohighlight">\(\mu m\)</span>.</p>
 <p>We need to calculate the rate at which coagulant nanoparticles attach to the clay particles. The long range transport is assumed to be the rate limiting step. The volume cleared is proportional to the area of this ring with the ring thickness equal to the molecular diffusion band thickness. Here we assume that the <span class="math notranslate nohighlight">\(L_{Diff_{CN}} &lt;&lt; d_{Clay}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-2">
-<span class="eqno">(288)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[{\rlap{\kern.08em--}V_{\rm{Cleared}}} \propto \pi \, d_{Clay} \, L_{Diff_{CN}}\]</div>
+<span class="eqno">(288)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[{\rlap{-} V_{\rm{Cleared}}} \propto \pi \, d_{Clay} \, L_{Diff_{CN}}\]</div>
 <p>The volume cleared is proportional to time</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-3">
-<span class="eqno">(289)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[{\rlap{\kern.08em--}V_{\rm{Cleared}}} \propto t\]</div>
+<span class="eqno">(289)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[{\rlap{-} V_{\rm{Cleared}}} \propto t\]</div>
 <p>The volume cleared is proportional to the relative velocity between clay and nanoparticles. This relative velocity is in the viscous layer of fluid in the ring surrounding the clay particle.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-4">
-<span class="eqno">(290)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[{\rlap{\kern.08em--}V_{\rm{Cleared}}} \propto v_r\]</div>
+<span class="eqno">(290)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[{\rlap{-} V_{\rm{Cleared}}} \propto v_r\]</div>
 <p>We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between coagulant nanoparticles and clay particle that they will eventually collide with is assumed to be proportional to the average distance between clay particles. This assumption is both critical for the following derivation and is suspect. It is critical because if we were to assume that the relative velocity caused by shear is proportional to the nanoparticle diameter, the clay diameter, or the diffusion length scale, then the velocity would be extremely small and the time to clear the volume of fluid associated with one clay particle would take a very long time. However, wishing for a speedy process doesn’t justify incorrect scaling. The relative velocity is assumed to be the velocity at which coagulant nanoparticles are transported into the two separate fluid volumes that will deform into the ring around the clay particle in the next few seconds.</p>
 <p>The assumption that the relative velocity scales with the average distance between clay particles leads to the following steps. The first step is just a proposed functional relationship. We could also have jumped to the assumption that the relative velocity is a function of the length scale and the velocity gradient.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-5">
@@ -327,14 +327,14 @@
 <p>The only way to for <span class="math notranslate nohighlight">\(\varepsilon\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> to produce dimensions of time is to combine to create 1/G.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-7">
 <span class="eqno">(293)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-7" title="Permalink to this equation">¶</a></span>\[v_r \approx \Lambda_{Clay} G\]</div>
-<p>Combining the three equations for <span class="math notranslate nohighlight">\({\rlap{\kern.08em--}V_{\rm{Cleared}}}\)</span> and the equation for <span class="math notranslate nohighlight">\(v_r\)</span> we obtain the volume cleared as a function of time.</p>
+<p>Combining the three equations for <span class="math notranslate nohighlight">\({\rlap{-} V_{\rm{Cleared}}}\)</span> and the equation for <span class="math notranslate nohighlight">\(v_r\)</span> we obtain the volume cleared as a function of time.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-8">
-<span class="eqno">(294)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[{\rlap{\kern.08em--}V_{\rm{Cleared}}} \approx \pi  d_{Clay} \, L_{Diff_{CN}}  \Lambda_{Clay} G  t_c\]</div>
+<span class="eqno">(294)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[{\rlap{-} V_{\rm{Cleared}}} \approx \pi  d_{Clay} \, L_{Diff_{CN}}  \Lambda_{Clay} G  t_c\]</div>
 </div>
 </div>
 <div class="section" id="collision-rates">
 <span id="heading-collision-rates"></span><h2>Collision Rates<a class="headerlink" href="#collision-rates" title="Permalink to this headline">¶</a></h2>
-<p>The time for all of the fluid to have had one opportunity for a collision occurs when <span class="math notranslate nohighlight">\({\rlap{\kern.08em--}V_{\rm{Cleared}}} = {\rlap{\kern.08em--}V_{\rm{Occupied}}} = \Lambda_{Clay}^3\)</span></p>
+<p>The time for all of the fluid to have had one opportunity for a collision occurs when <span class="math notranslate nohighlight">\({\rlap{-} V_{\rm{Cleared}}} = {\rlap{-} V_{\rm{Occupied}}} = \Lambda_{Clay}^3\)</span></p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-9">
 <span class="eqno">(295)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-9" title="Permalink to this equation">¶</a></span>\[t_c = \frac{\Lambda_{Clay}^3}{\pi d_{Clay} L_{Diff_{CN}} \Lambda_{Clay} G}\]</div>
 <p>The successful collision rate (the attachment rate) is given by</p>
