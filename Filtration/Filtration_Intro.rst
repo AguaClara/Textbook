@@ -201,7 +201,7 @@ If pores clogged completely, then sand filters would clog as soon as one layer o
 
 .. _figure_Flocs_teleporting:
 
-.. figure:: Images/Flocs_teleporting.png
+.. figure:: Images/Flocs_teleport.png
    :target: https://youtu.be/lgfggRX_Wgs
    :width: 300px
    :align: center
