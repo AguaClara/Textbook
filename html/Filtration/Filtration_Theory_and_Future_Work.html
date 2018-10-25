@@ -136,10 +136,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Filtration Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Filtration Theory and Future Work</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#filtration-model">Filtration model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#hypotheses-evidence-why-it-matters">Hypotheses, evidence, why it matters</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#filtration-model">Filtration model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#filter-head-loss-model">Filter Head loss model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sedimentation-plates-set-the-size-of-the-flocs-in-the-filter">Sedimentation plates set the size of the flocs in the filter</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#sedimentation-tank-floc-diameter">Sedimentation tank floc diameter</a></li>
@@ -255,8 +252,6 @@ Flow constrictions - converging streamlines move particles closer to the pore wa
 <p>Maximum shear sets a minimum constriction opening size!
 As particles gradually deposit in an ever shrinking flow constriction the velocity through the constriction increases and the velocity gradient at the wall increases. Eventually the bond strength of the coagulant nanoparticles is not great enough to capture suspended particles that collide with the deposited particles. The flow constriction reaches a minimum diameter and subsequent suspended flocs flow right through the constriction.</p>
 <p>The gradual creation of more flow constrictions results in an almost linear increase in head loss as a function of the volume of deposited flocs.</p>
-<div class="section" id="hypotheses-evidence-why-it-matters">
-<h3>Hypotheses, evidence, why it matters<a class="headerlink" href="#hypotheses-evidence-why-it-matters" title="Permalink to this headline">¶</a></h3>
 <span id="table-filter-hypotheses"></span><table border="1" class="colwidths-given docutils align-center" id="id1">
 <caption><span class="caption-number">Table 16 </span><span class="caption-text">Hypotheses, evidence, and why it matters</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -279,9 +274,9 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <td>Basis for our filtration model</td>
 </tr>
 <tr class="row-odd"><td>2</td>
-<td>The particle size distribution in the filter is set by the shear in the filter (or the particle size distribution is set by the floc/sed system)</td>
-<td>Estimate of velocity gradient in pores</td>
-<td>Sand size, Approach velocity, and injection method will influence particle size distribution</td>
+<td>The particle size distribution entering the filter is set by the plate settlers</td>
+<td>Estimate of velocity gradient in inlet waterfall and in filter bed</td>
+<td>High velocity injection would be required to reduce the floc size</td>
 </tr>
 <tr class="row-even"><td>3</td>
 <td>The jets that the constrictions create dissipate almost all of their energy in the downstream void BEFORE entering the next constriction</td>
@@ -299,18 +294,12 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <td>Filter automatically prevents short circuiting</td>
 </tr>
 <tr class="row-odd"><td>6</td>
-<td>The initial inlet box waterfall jet velocity gradient &gt; The velocity gradient at the StaRS injection sites &gt; the velocity gradient in the constricted pores</td>
-<td>Calculations below</td>
-<td>maximum floc size entering the filter is initially set by the waterfall and then as head loss through the filter builds it becomes the injection site shear where the water enters the first sand pores.</td>
-</tr>
-<tr class="row-even"><td>7</td>
 <td>The thickness of the deposit scales with the width of the ring or perhaps simply with the pore size or sand size</td>
 <td>Thickness can’t scale with diameter of the flocs because that would predict more total mass retained with increased coagulant dose</td>
 <td>Required to predict head loss vs mass deposited.</td>
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 <div class="section" id="filter-head-loss-model">
 <span id="heading-filter-head-loss-model"></span><h2>Filter Head loss model<a class="headerlink" href="#filter-head-loss-model" title="Permalink to this headline">¶</a></h2>
@@ -344,8 +333,8 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <p>The Reynolds number of the jet issuing from the constriction is obtained by using equation <a class="reference internal" href="#equation-eq-d-constriction">(512)</a> to eliminate the dependence on diameter.</p>
 <div class="math notranslate nohighlight" id="equation-eq-re-constriction">
 <span class="eqno">(513)<a class="headerlink" href="#equation-eq-re-constriction" title="Permalink to this equation">¶</a></span>\[Re_{jet} = \frac{\Lambda_{pore} }{\nu }\sqrt\frac{4 v_a v_{constriction}}{\pi }\]</div>
-<p>The jet issuing from the constrictions is laminar for Reynolds numbers below 500 (<a href="#id4"><span class="problematic" id="id5">`see Ungate et al., 1975 page 13&lt;https://dspace.mit.edu/handle/1721.1/27517&gt;`_</span></a>).  The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. WE don’t have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.</p>
-<p>The rate of jet expansion can be obtained from an analytical solution of the Navier Stokes equation as shown by <a href="#id6"><span class="problematic" id="id7">`Pai, S.I., Fluid dynamics of jets. (D. Van Nostrand Company, Inc., Princeton, NJ, 1954 (pages 78-79)&lt;https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99&gt;`_</span></a></p>
+<p>The jet issuing from the constrictions is laminar for Reynolds numbers below 500 (<a class="reference external" href="https://dspace.mit.edu/handle/1721.1/27517">see Ungate et al., 1975 page 13</a>).  The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. WE don’t have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.</p>
+<p>The rate of jet expansion can be obtained from an analytical solution of the Navier Stokes equation as shown by <a class="reference external" href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99">Pai, S.I., Fluid dynamics of jets. (D. Van Nostrand Company, Inc., Princeton, NJ, 1954 (pages 78-79)</a></p>
 <p>The momentum in the direction of flow is conserved and is given by</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-3">
 <span class="eqno">(514)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[M_0 = 2 \pi \rho \int_{0}^{\infty} u^2 r dr\]</div>

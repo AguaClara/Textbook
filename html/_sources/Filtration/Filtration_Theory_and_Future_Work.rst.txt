@@ -18,8 +18,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 
 The gradual creation of more flow constrictions results in an almost linear increase in head loss as a function of the volume of deposited flocs.
 
-Hypotheses, evidence, why it matters
-----------
+
 
 .. _table_filter_hypotheses:
 
@@ -29,14 +28,11 @@ Hypotheses, evidence, why it matters
    :align: center
 
    1, Particle removal is primarily due to converging streamlines that move particles close to the sand surface or to previously deposited particles, Filtration theory and estimates of void volume occupied by particles, Basis for our filtration model
-   2, The particle size distribution in the filter is set by the shear in the filter (or the particle size distribution is set by the floc/sed system), Estimate of velocity gradient in pores, "Sand size, Approach velocity, and injection method will influence particle size distribution"
+   2, The particle size distribution entering the filter is set by the plate settlers, Estimate of velocity gradient in inlet waterfall and in filter bed, High velocity injection would be required to reduce the floc size
    3, The jets that the constrictions create dissipate almost all of their energy in the downstream void BEFORE entering the next constriction, Laminar flow jets dissipate energy very quickly, Allows a simple relationship between pore head loss and constriction velocity
    4, Flocs are captured with VERY high efficiency and thus primary particle removal limits filter performance, Clean bed filtration models, Need to optimize filters for primary particle removal
    5, Constrictions form a continuous barrier across the filter at each sand grain layer, Any gaps would receive higher flow rate and thus higher flux of particles, Filter automatically prevents short circuiting
-   6, The initial inlet box waterfall jet velocity gradient > The velocity gradient at the StaRS injection sites > the velocity gradient in the constricted pores, Calculations below, maximum floc size entering the filter is initially set by the waterfall and then as head loss through the filter builds it becomes the injection site shear where the water enters the first sand pores.
-   7, The thickness of the deposit scales with the width of the ring or perhaps simply with the pore size or sand size, Thickness can't scale with diameter of the flocs because that would predict more total mass retained with increased coagulant dose, Required to predict head loss vs mass deposited.
-
-
+   6, The thickness of the deposit scales with the width of the ring or perhaps simply with the pore size or sand size, Thickness can't scale with diameter of the flocs because that would predict more total mass retained with increased coagulant dose, Required to predict head loss vs mass deposited.
 
 .. _heading_Filter_Head_loss_model:
 
@@ -93,9 +89,9 @@ The Reynolds number of the jet issuing from the constriction is obtained by usin
 
     Re_{jet} = \frac{\Lambda_{pore} }{\nu }\sqrt\frac{4 v_a v_{constriction}}{\pi }
 
-The jet issuing from the constrictions is laminar for Reynolds numbers below 500 (`see Ungate et al., 1975 page 13<https://dspace.mit.edu/handle/1721.1/27517>`_).  The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. WE don't have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.
+The jet issuing from the constrictions is laminar for Reynolds numbers below 500 (`see Ungate et al., 1975 page 13 <https://dspace.mit.edu/handle/1721.1/27517>`_).  The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. WE don't have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.
 
-The rate of jet expansion can be obtained from an analytical solution of the Navier Stokes equation as shown by `Pai, S.I., Fluid dynamics of jets. (D. Van Nostrand Company, Inc., Princeton, NJ, 1954 (pages 78-79)<https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99>`_
+The rate of jet expansion can be obtained from an analytical solution of the Navier Stokes equation as shown by `Pai, S.I., Fluid dynamics of jets. (D. Van Nostrand Company, Inc., Princeton, NJ, 1954 (pages 78-79) <https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99>`_
 
 The momentum in the direction of flow is conserved and is given by
 
