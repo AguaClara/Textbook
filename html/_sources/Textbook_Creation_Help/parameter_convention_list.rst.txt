@@ -22,7 +22,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
 
 .. csv-table:: Parameter Guide
     :header: Parameter, Description, Units
-    :widths: 10, 15, 45
+    :widths: 10, 30, 10
 
     Uppercase letters, ,
     :math:`A`,Area,:math:`[L]^2`
@@ -31,7 +31,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`D`,Diameter,:math:`[L]`
     :math:`F`,Force,:math:`\frac{[M][L]}{[T]^2}`
     :math:`G`,Velocity Gradient/Fluid Deformation,:math:`\frac{1}{[T]}`
-    :math:`G_{CS}`, Camp Stein velocity gradient
+    :math:`G_{CS}`, Camp Stein velocity gradient,:math:`\frac{1}{[T]}`
     :math:`H`,Height,:math:`[L]`
     :math:`H_e`,Height Between Flow Expansions in a Flocculator,:math:`[L]`
     :math:`K`,Minor Loss coefficient,Dimensionless
@@ -69,10 +69,11 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`\rho`,Density,:math:`\frac{[M]}{[L]^3}`
     :math:`\theta`,Residence Time,:math:`[T]`
     Greek uppercase letters, ,
-    :math:`\Pi`,Dimensionless Proportionality Ratio,Dimensionless
+    :math:`\Lambda`,Distance Between Particles,:math:`[L]`
+    :math:`\Pi`,Dimensionless Proportionality Ratio, Dimensionless
+    :math:`\Pi_{Fractal}`, volume based fractal dimension, Dimensionless
     :math:`\Pi_{Error}`,Linearity Error Ratio,Dimensionless
     :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`,:math:`\frac{\varepsilon_{Max}}{\bar \varepsilon}` Ratio in a Reactor,Dimensionless
-    :math:`\Lambda`,Distance Between Particles,:math:`[L]`
     :math:`\Pi_{\bar G}^{G_{Max}}`,:math:`\frac{G_{Max}}{\bar G}` Ratio in a Reactor,Dimensionless
     :math:`\Pi_{HS}`,Height to Baffle Spacing in a Flocculator,Dimensionless
     :math:`\Pi_{K\nu}`,Ratio of Inner Viscous Length Scale to Kolmogorov Length Scale, Dimensionless

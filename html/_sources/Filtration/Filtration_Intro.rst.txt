@@ -151,9 +151,9 @@ Reflection: How did we get to 2018 without a model for filter performance? There
 Clean bed filtration models include an equation first presented by Iwasaki in 1937 that suggested that particle removal occurred as a first order process with respect to depth. This simplifies to
 
 .. math::
-   :label: filter_Iwasaki
+    :label: filter_Iwasaki
 
-  pC^* \propto \frac{L}{D_{sand}}
+    pC^* \propto \frac{L}{D_{sand}}
 
 where L is the depth of the sand in the column. This suggests that increasing the depth of sand in a filter would dramatically improve performance.
 
