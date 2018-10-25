@@ -286,9 +286,9 @@ The second pressure recovery constraint is in the backwash branch during backwas
 
 In backwash there is no headloss through the sand bed because the sand is fully fluidized. The startup time in which it takes to fluidize the bed is ignored in this design. Thus the only headloss occurs from the flow expansion as water exits the fiter manifold out of the exits holes.
 
-The initial estimate of headloss through the holes is :math:`HL_{FiBwHoles} = 10cm`.
+The initial estimate of headloss through the holes is :math:`HL_{FiBwOrifices} = 10cm`.
 
-Using the headloss ratio, :math:`\Pi_{ManifoldHeadLoss}` , the allowable PR canbe determined: :math:`PR_{FiBwManMax} = HL_{FiBwHoles}*\Pi_{ManifoldHeadLoss}`
+Using the headloss ratio, :math:`\Pi_{ManifoldHeadLoss}` , the allowable PR canbe determined: :math:`PR_{FiBwManMax} = HL_{FiBwOrifices}*\Pi_{ManifoldHeadLoss}`
 
 From above the PR estimate for the Backwash Branches exists.
 
@@ -323,13 +323,114 @@ Then the branch velocity can be found:
 
   V_{FiBwBranchMax} = \sqrt{2g *(PR_{FiBwBranchMax})}
 
+Then, as above this velocity is used to find the area of the backwash branch with:
+
+.. math::
+
+  A_{BwBranchEst}  = \frac{Q_{FiBw}}{2N_{FiBwBranch}}
+
 If it seems like these processes are 1. similar and 2. circular in their logic, you are correct on both counts! The determination of PR for backwash and forward filtration follows the same steps, the only difference is with the flows and conditions required. It seems circular because the initial calculations are done on guesses, if these guesses weren't made solving for other quantities couldn't be done. The step where the trunk calculations are resolved for the branch conditions mainly acts to assess if the initial guesses were reasonable, and corrects the error in the guess, though of course the initial guess could've been correct! Running the final values back through the entire process should yield the same results meaning the iteration found a solution.
 
 Manifold Pipe Lengths
 ======================
 
+Come back to this a little bit...
+
 Inlet Orifice and Outlet Slot Design
 ========================================
+
+Knowing the PR in the BW manifold, the design head loss through the outlet orifices can be determined based on:
+
+.. math::
+
+  HL_{BwOrifices} = \frac{PR_{BwManTotal}}{\Pi_{ManifoldHeadLoss}}
+
+With this head loss the necessary total area of the orifices for the backwash branch can be determined using the orifice equation **REF**, as :math:`HL_{BwOrifices}` , :math:`\Pi_{VCOrifice}`, and :math:`Q_{FiBw}` are known.
+
+This area is doubled to find the area of the slots.
+
+  .. math::
+
+    A_{FiManSlots} = 2*A_{FiBwOrifices}
+
+**why is this? I don't know!**
+
+Also the area of the backwash orifices is equal to :math:`A_{FiTopManSlots}`, which is the area of the **this is the area of something thats for sure**
+
+Outlet Design
+---------------
+
+Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, :math:`B_{slot}` is always .008 inch. *The number of slot rows is also fixed at 2, because each branch has slots on the top and bottom because the outlet pipes are accepting flow from two layers of sand, one above and one below.*
+
+From the cumulative area of slots and the width of the slots **where the hell does the width come from** The total length of slots can be determined. This length of slots is for one side of one branch *yes?*
+
+As the branches are different lengths along one trunk, the number of slots is different per branch depending on the length. Dividing the Length of the
+
+
+
+Inlet Design
+--------------
+
+Regarding the inlets, those for backwash are determined differently than the orifices on the rest of the inlet branches. This section traces the process for the backwash branches and then the rest of the manifold branches.
+
+The spacing of orifices, :math:`B_{OrificeEst}` is estimated at 1cm.
+
+The number of orifices per branch is the floor value of:
+
+.. math::
+
+  N_{BwBranchOrifices} = \frac{L_{FiBwBranchLow} - B_{OrificeEst} - 2*L_{FiBranchExt}}{B_{OrificeEst}}
+
+  and
+
+  N_{BranchOrifices} = \frac{L_{FiBranchLow} - B_{OrificeEst} - 2*L_{FiBranchExt}}{B_{OrificeEst}}
+
+The only difference between the two is the length of the branches. Because the backwash trunk is slightly larger than the rest of the trunks, the branches must be slightly shorter so that the whole manifold fits in the filter body.
+
+Then for each the total number of orifices necessary for a layer of the manifold can be found by summing the array of number of holes (:math:`N_{BranchOrifices}`) and multiplying by 2 to account for the trunks having branches on two sides.
+
+Have the holes close together is important to maintaing an even flow distribution, which is why the holes spacing is determined before hole size (which is also constrained by available drill bit sizes)
+
+The drill bit sizes considered are 1/8 inch and 1/4 inch.
+
+The choice of drill bit size is then determined using the cumulative area of orifice needed for a branch.
+
+Generally, the hole diameter is chosen from the closest (but larger) drill bit based on:
+
+.. math::
+
+  D_{guess} = 2*\sqrt{\frac{A_{OrificeTotal}}{\pi*N_{OrificePerBranch}}}
+
+  Where:
+  A_{OrificeTotal} = (A_{BwOrifices}, A_{FiManSlots}, A_{FiTopManSlots})
+
+These 3 distinct diameters are compared to available drill bits, and actual diameters are chosen.
+
+Because this diameter is likely larger than the calculated diameter, the number of holes must be recalculated for each. The new number of holes is the minimum between the new calculated number (rounded down to the nearest integer) and the original number of holes (which was defined as a maximum). The new calcualtion is done as follows:
+
+.. math::
+
+  N_{OificesEstNew} = \frac{A_{TotalNecessaryArea}}{\frac{\pi}{4}D_{Orifice}^2}
+
+Again using the three areas, but now also with the new corresponding diameters.
+
+This number of holes can be used to check that total area of holes is close to the total area necessary to provide the appropriate amount of headloss.
+
+The head loss calculation can then be checked as well for all 5 branch systems involved: the backwash branches in forward, the backwash branches in backwash, the top inlet pipe during filtration, the other inlet pipes during filtration, and the outlet pipes during filtration.
+
+The head loss for each branch type is:
+
+.. math::
+
+    HL = \frac{\frac{Q}{\Pi*A*\epsilon}^2}{2g}
+
+With the relevant parameters for each type of manifold branch shown below in **this figure**
+
+
+**Make the table not here because formatting yo**
+
+
+
 
 Entrance and Exit Pipe Dimensions
 ==================================
