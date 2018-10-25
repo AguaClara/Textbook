@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Rapid Mix Introduction &mdash; AguaClara Textbook 0.0.35 documentation</title>
+  <title>Rapid Mix Introduction &mdash; AguaClara Textbook 0.0.37 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.35
+                0.0.37
               </div>
             
           
@@ -445,9 +445,9 @@
 <span class="eqno">(125)<a class="headerlink" href="#equation-rapid-mix-rm-intro-5" title="Permalink to this equation">¶</a></span>\[\varepsilon = G^2 \nu\]</div>
 <p>where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the energy dissipation rate, <span class="math notranslate nohighlight">\(G\)</span> is the velocity gradient, and <span class="math notranslate nohighlight">\(\nu\)</span> is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-6">
-<span class="eqno">(126)<a class="headerlink" href="#equation-rapid-mix-rm-intro-6" title="Permalink to this equation">¶</a></span>\[P = \bar\varepsilon \rlap{\kern.08em--}V \rho\]</div>
+<span class="eqno">(126)<a class="headerlink" href="#equation-rapid-mix-rm-intro-6" title="Permalink to this equation">¶</a></span>\[P = \bar\varepsilon \rlap{-} V \rho\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-7">
-<span class="eqno">(127)<a class="headerlink" href="#equation-rapid-mix-rm-intro-7" title="Permalink to this equation">¶</a></span>\[P = \bar G^2 \nu \rlap{\kern.08em--}V \rho\]</div>
+<span class="eqno">(127)<a class="headerlink" href="#equation-rapid-mix-rm-intro-7" title="Permalink to this equation">¶</a></span>\[P = \bar G^2 \nu \rlap{-} V \rho\]</div>
 <p>We can relate reactor volume to a hydraulic residence time, <span class="math notranslate nohighlight">\(\theta\)</span>, and volumetric flow rate, Q.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-8">
 <span class="eqno">(128)<a class="headerlink" href="#equation-rapid-mix-rm-intro-8" title="Permalink to this equation">¶</a></span>\[P = \rho \bar G^2 \nu Q \theta\]</div>
@@ -647,7 +647,16 @@ Sincero. 1996. page 267.</p>
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td>Expansions</td>
+<tr class="row-even"><td>Porous media</td>
+<td><span class="math notranslate nohighlight">\(h_f = f_{\phi} \frac{L}{D_{sand}} \frac{v_a^2}{2g} \frac{(1-\phi)}{\phi^3}\)</span></td>
+<td><span class="math notranslate nohighlight">\(\bar\epsilon = \frac{f_{\phi}}{2} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\)</span></td>
+<td><span class="math notranslate nohighlight">\(G_{CS} = \left(\frac{f_{\phi}}{2\nu} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}\)</span></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>Expansions</td>
 <td><span class="math notranslate nohighlight">\(h_e = K\frac{\bar v_{out}^2}{2g}\)</span></td>
 <td><span class="math notranslate nohighlight">\(\bar\varepsilon = K\frac{\bar v_{out}^3}{2H}\)</span></td>
 <td><span class="math notranslate nohighlight">\(G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}\)</span></td>
@@ -791,7 +800,7 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.0.35',
+            VERSION:'0.0.37',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

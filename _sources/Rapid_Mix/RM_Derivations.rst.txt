@@ -748,6 +748,66 @@ where :math:`G_{CS} =4\sqrt2 \frac{\bar v}{D}` for laminar flow in a straight pi
 
      G_{CS_{coil}} = 4\sqrt2 \frac{\bar v}{D}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}
 
+
+.. _heading_Flow_in_porous_media:
+
+Flow in porous media
+--------------------
+
+The `Ergun equation <https://neutrium.net/fluid_flow/pressure-drop-through-a-packed-bed/>`_ applies to both laminar and turbulent flow through packed beds.
+
+.. math::
+
+    h_f = \frac{L}{2g D_{sand}} \left( 300 \frac{\nu v_a (1-\phi)^2}{D_{sand} \phi^3} + 3.5 \frac{v_a^2 (1-\phi) }{\phi^3} \right)
+
+The Erdun equation can be rewritten to be consistent with the format of the Darcy-Weisbach equation. To do this we add a factor of 2 to the definition of the Erdun friction factor and will divide by the factor of 2 in a subsequent equation. The modified Erdun friction factor is
+
+.. math::
+    :label: eq_f_porous_media
+
+    f_{\phi} = \frac{300}{Re_{\phi}} + 3.5
+
+where the :math:`Re_{\phi}` includes the porosity effect on the velocity and is given by
+
+.. math::
+    :label: eq_Re_porous_media
+
+    Re_{\phi} = \frac{v_a D_{sand}}{\nu(1-\phi)}
+
+I added a factor of two into the denominator to be consistent with the Darcy-Weisbach equation to obtain the modified Ergun equation.
+
+.. math::
+    :label: eq_Erdun
+
+    h_f = f_{\phi} \frac{L}{D_{sand}} \frac{v_a^2}{2g} \frac{(1-\phi)}{\phi^3}
+
+The residence time in a porous media bed is given by
+
+.. math::
+
+    \theta = \frac{L\phi} {v_a}
+
+Now we can calculate the average energy dissipation rate in porous media.
+
+.. math::
+
+    \bar\varepsilon = \frac{g h_f}{\theta}
+
+Substituting the equations for head loss and residence times we obtain
+
+.. math::
+    :label: eq_EDR_CS_porous_media
+
+    \bar\varepsilon = \frac{f_{\phi}}{2} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}
+
+The Camp Stein velocity gradient for flow in porous media is
+
+.. math::
+    :label: eq_G_CS_porous_media
+
+    G_{CS} = \left(\frac{f_{\phi}}{2\nu} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}
+
+
 .. _heading_Expansions:
 
 Expansions
@@ -777,6 +837,7 @@ Combining the previous equations we obtain
 .. math:: G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}
 
 .. math:: G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}
+
 
 .. _heading_Maximum_velocity_gradients:
 
@@ -904,7 +965,7 @@ Plane Jet
 
 Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by `Heskestad in 1965 <http://dx.doi.org/10.1115/1.3627309>`__ and it may be possible to use that data to get a better estimate of $:raw-latex:`\Pi`\_{JetPlane} $ from that source.
 
-.. math:: \Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}
+.. math:: \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}
 
 .. math:: \varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}
 
@@ -935,9 +996,9 @@ where :math:`K` is the minor loss coefficient for flow around the end of a baffl
 
 Substitute the values for :math:`\bar \varepsilon` and
 :math:`\varepsilon_{Max}` to obtain the ratio,
-:math:`\Pi_{\bar \epsilon}^{\epsilon_{Max}}`
+:math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`
 
-.. math:: \Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}
+.. math:: \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}
 
 :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value of 2 for
 :math:`H_e/S <5` (CFD analysis and `Haarhoff, 2001 <https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267>`__)
@@ -951,7 +1012,7 @@ We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value
 .. math::
 
    \Pi_{JetPlane} = \left(
-     \Pi_{\bar \epsilon}^{\epsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
+     \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
      \right)
 
 .. math:: \Pi_{JetPlane} = 0.0124
