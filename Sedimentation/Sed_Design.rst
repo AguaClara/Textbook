@@ -168,7 +168,7 @@ The "worst case scenario" is the condition in which a particle must travel the f
 
 3) How fast must the particle fall?
 
-We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, :math:`V_h`. gravity is causing the particle to settle at its terminal velocity, :math:`V_t`. In order to reach the bottom, that settling velocity needs to be the capture velocity, :math:`V_c`, to ensure that the particle will reach the bottom of the reactor. We can see the path that the "worst case scenario" particle will take in the following figure.
+We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, :math:`V_h`. Gravity is causing the particle to settle at its terminal velocity, :math:`V_t`. In order to reach the bottom, that settling velocity needs to be the capture velocity, :math:`V_c`, to ensure that the particle will reach the bottom of the reactor. We can see the path that the "worst case scenario" particle will take in the following figure.
 
 [[[[[[[[[show horizontal flow sedimentation tank with capture velocity]]]]]]]]]
 
@@ -199,7 +199,7 @@ To answer this question, think about the two extremes of our reactor.
 
 Vertical Flow Sedimentation Tank
 ----------------------------------
-We will complete the same exercise for vertical flow sedimentation tanks.
+We will complete the same exercise for vertical flow sedimentation tanks. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.
 
 [[[[[[[[[show vertical flow sedimentation tank]]]]]]]]]
 
@@ -217,32 +217,67 @@ The answer is the same for the horizontal flow sedimentation tank because this i
 
 2) How far must a particle fall relative to the fluid to not be carried out the exit?
 
-Note how this question is different from the same question for the horizontal flow sedimentation tank. In the horizontal flow sedimentation tank, particles could settle to the bottom of the reactor. We cared about particles settling to the bottom because it means that In the vertical flow sedimentation tank, particles w
+Note how this question is different from the question we asked for the horizontal flow sedimentation tank. In the horizontal flow sedimentation tank, particles could settle to the bottom of the reactor. We care about particles settling to the bottom because we assume that if particles hit the bottom of the reactor, then they would be captured and would not leave the reactor. Remember, the goal of sedimentation is to remove particles from suspension in water. In the vertical flow sedimentation tank, we also want to remove particles from suspension, but because there is a different geometry, we now are interested in the relative movement of particle to water. If a particle is falling due to the forces of gravity, but also water is pushing up on it, the only way for a particle to remain in the reactor is if it either falls at the same velocity or faster than the water is pushing it.
 
-Floc rollup
-===============================
+If a particle is falling at the same velocity that water is moving it, it will be stationary in the reactor. Water flowing through the reactor moves a distance :math:`H` in time :math:`\theta`, which means that a stationary particle must settle the same distance :math:`H` in the same time :math:`\theta`. Therefore, the answer is :math:`H`.
 
-Floc blankets
-===============================
+3) How fast must the particle fall (relative to the fluid)?
 
-Sludge disposal
-===============================
+We determined in the previous question that a particle must fall a distance :math:`H` in time :math:`\theta`. Therefore, we determine the same capture velocity for vertical flow sedimentation tanks as for horizontal flow sedimentation tanks.
+
+.. math::
+  V_c = \frac{H}{\theta}
+
+We can the same substitutions to show,
+
+.. math::
+  V_c = \frac{H}{\theta} = \frac{HQ}{V\llap{---}_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}
+
+Again, we find that capture velocity is,
+
+.. math::
+  V_c = \frac{Q}{A_p}
+
+It doesn't matter whether water is flowing horizontally or vertically in the tank. What determines the capture velocity is the flow rate and the plan view area of the sedimentation tank.
+
+4) Will any particles that are smaller than 35 :math:`\mu m` be captured in the sedimentation tank?
+
+This question is surprisingly complex because we have to consider what we have learned so far about sedimentation and also recall what we have learned about flocculation.
+
+Let's start with the simple sedimentation approach. We can compare the vertical flow sedimentation tank with the horizontal flow sedimentation tank. In a horizontal flow tank, the capture of particles smaller than the design particle (35 :math:`\mu m`) is possible depending on the height which the particle enters the reactor. In a vertical flow tank, all particles enter the reactor at the same height (which is the bottom of the tank). This means that any particle entering the reactor will need to fall the same distance :math:`H` in time :math:`\theta` relative to the water if it will be captured. If particles smaller than 35 :math:`\mu m` enter the reactor, they will not be captured because they are not able to settle fast enough.
+
+However, we must also consider potential flocculation processes that could occur in the sedimentation tank. A sedimentation tank is still subject to the same laws of fluids as the flocculator, meaning that there will still be shear in the reactor. While it may not be as much shear as that introduced in the flocculator, there are still velocity gradients which mean that there could be some additional flocculation happening in the sedimentation tank. In the flocculator, the main mechanism that led to flocculation was the deformation of fluid which caused particles to collide. In the sedimentation tank, the main mechanism that can lead to flocculation is velocity gradients. Flocculation is provided by an opportunity for collision by differences in relative velocities of particles. Big particles in the sedimentation tank settle out but are still in suspension, and small particles continue to move up through the large particles. There is relative velocity between particles based on their terminal velocities.
+
+Understanding relative velocities is very important to understand how vertical flow sedimentation tanks work. Let's consider an example to develop our understanding of differential sedimentation. Imagine that two people are skydiving; one person is 150 lbs and the other person is 300 lbs. Assume that both people are using the same size parachutes and are jumping out of the same stationary helicopter. If the 150 lb person jumps out first and the 300 lb person jumps out a few moments after, what will happen? The 300 lb person will fall faster than the 150 lb person, causing a collision in the air. In a sedimentation tank, we would describe the collision due to differential sedimentation as flocculation because particles are colliding and growing.
+
+Now that we understand differential settling and the potential for flocculation in a sedimentation tank, let's revisit the original question. Can smaller particles be captured? The answer is that smaller particles can be capture only if they collide with other particles and grow so that they have a terminal velocity that is greater than the capture velocity. This flocculation that happens in the sedimentation tank is an additional mechanism for removing particles.
+
+There are some important differences between horizontal and vertical sedimentation tanks. Many of these points will be discussed later when we learn specifically about the AguaClara design process, but it is important to get introduced to these ideas now. We know that vertical flow tanks require careful attention to the delivery of water in the bottom of the tank and the extraction of water in the top of the tank. We know that vertical and horizontal flow tanks may have different velocities and turbulence capacities due to plan view areas.
+[[[[[[[[[[[[[[What is the information on "vertical flow sedimentation tanks and "stagnant water (or ripe for innovation)"]]]]]]]]]]]]]]
+
+Now that we have developed a good understanding of the basic principles of sedimentation, we will transition to a discussion of AguaClara innovations.
 
 ***********************************************
-Design Approach
+AguaClara Design Approach
 ***********************************************
 
-- flow distribution is primary constraint
-  - don't worry about floc breakup
-  - avoid flow circulations
+The AguaClara sedimentation tank is a vertical flow sedimentation tank that was designed with two goals in mind:
 
-- easy operation and maintenance
+1) to use flow distribution as a primary design constraint and,
+
+2) to ensure easy operation and maintenance.
+
+We will go through each part of the sedimentation tank to understand how these goals drive AguaClara designs.
 
 ***********************************************
 Components of an AguaClara Sedimentation Tank
 ***********************************************
 
 Note: this section should use words and figures to describe the different parts of the tank and what their purpose is, with brief explanation of how they work.
+
+In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. In the next section, we will develop the mathematical models that help us explain the design.
+
+[[[[[[[[[[[[[[INCLUDE PICTURE/VIDEO OF SED TANKS WITH FLOW SHOWN BY ARROWS]]]]]]]]]]]]]]
 
 - Inlet and outlet channels
   - Flow distribution
@@ -253,6 +288,9 @@ Note: this section should use words and figures to describe the different parts 
 - Diffusers
 
   Second, the diffusers create a line jet that spans the entire length of the sedimentation tank. The line jet enters a jet reverser and the vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed (floc blanket) with a suspended solids concentrations of approximately 1-5 g/L. The high concentration of particles leads to an increase in collisions and particle aggregation. The floc blanket reduces settled water turbidity by a factor of 10 (Garland et al., 2017) and provides two additional benefits. The floc blanket creates a uniform vertical velocity of water entering the plate settlers and the floc blanket transports excess flocs to a floc hopper for final removal by opening a small drain valve.
+
+  Don't worry about floc breakup.
+  Avoid flow circulations
 
 Note: discuss "sed tank as a circuit: flow distribution challenge"
 
@@ -266,6 +304,7 @@ Note: discuss "sed tank as a circuit: flow distribution challenge"
   The hydraulic self cleaning sedimentation tank with a high performing floc blanket, zero sludge accumulation, and with no moving parts outperforms conventional sedimentation tanks on capital cost, performance, and maintenance costs. Mechanical sludge removal systems are well known to be costly to install and a challenge to maintain.
 
 - Plate settlers
+  - Floc rollup
 - Submerged outlet manifold
 
 ***********************************************

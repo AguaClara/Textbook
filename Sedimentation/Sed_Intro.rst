@@ -82,6 +82,7 @@ Gaps in Knowledge:
 
 - No understanding of scaling effects
 
+- "last significant paper on tube settlers published in 1978" - needs confirmation/more details
 
 ***************************************
 AguaClara Innovations
