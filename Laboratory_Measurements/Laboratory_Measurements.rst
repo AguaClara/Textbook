@@ -17,23 +17,27 @@ Many laboratory procedures require preparation of chemical solutions. Most chemi
 Preparation of dilutions is also frequently required. Many analytical techniques require the preparation of known standards. Standards are generally prepared with concentrations similar to that of the samples being analyzed. In environmental work many of the analyses are for hazardous substances at very low concentrations (mg/L or �g/L levels). It is difficult to accurately weigh a few milligrams of a chemical with an analytical balance. Often dry chemicals are in crystalline or granular form with each crystal weighing several milligrams making it difficult to get close to the desired weight. Thus it is often easier to prepare a low concentration standard by diluting a higher concentration stock solution. For example, 100 mL of a 10 mg/L solution of NaCl could be obtained by first preparing a 1 g/L NaCl solution (100 mg in 100 mL). One mL of the 1 g/L stock solution would then be diluted to 100 mL to obtain a 10 mg/L solution.
 
 Absorption spectroscopy is one analytical technique that can be used to measure the concentration of a compound. Solutions that are colored absorb light in the visible range. The resulting color of the solution is from the light that is transmitted. According to Beer's law the attenuation of light in a chemical solution is related to the concentration and the length of the path that the light passes through.
-\[\log \left(\frac{P_{o} }{P} \right)=\varepsilon bc 2.1\]
-where c is the concentration of the chemical species, b is the distance the light travels through the solution, ? is a constant, placePo is the intensity of the incident light, and P is the intensity of the transmitted light. Absorption, A, is defined as:
-\[A=\log \left(\frac{P_{o} }{P} \right) 2.2\]
-In practice placePo is the intensity of light through a reference sample (such as deionized water) and thus accounts for any losses in the walls of the sample chamber. From equation 2.1 and 2.2 it may be seen that absorption is directly proportional to the concentration of the chemical species.
-\[A=\; \varepsilon bc 2.3\]
 
-\begin{tabular}{|p{0.7in}|p{0.9in}|} \hline
-\multicolumn{2}{|p{1in}|}{Table 2-1. Wavelengths of light\textbf{}} \\ \hline
-\textbf{color} & \textbf{wavelength (nm)} \\ \hline
-ultra violet & 190-380 \\ \hline
-violet & 380-450 \\ \hline
-blue & 450-490 \\ \hline
-green & 490-560 \\ \hline
-yellow & 560-590 \\ \hline
-orange & 590-630 \\ \hline
-red & 630-760 \\ \hline
-\end{tabular}
+.. math::
+
+    \log \left(\frac{P_o }{P} \right)=\varepsilon bc
+
+where c is the concentration of the chemical species, b is the distance the light travels through the solution, :math:`\varepsilon` is a constant, :math:`P_o` is the intensity of the incident light, and :math:`P` is the intensity of the transmitted light. Absorption, A, is defined as:
+
+.. math::
+
+
+
+.. math::
+
+    A=\log \left(\frac{P_{o} }{P} \right)
+
+In practice placePo is the intensity of light through a reference sample (such as deionized water) and thus accounts for any losses in the walls of the sample chamber. From equation 2.1 and 2.2 it may be seen that absorption is directly proportional to the concentration of the chemical species.
+
+.. math::
+
+    A=\; \varepsilon bc
+
 
 
 .. _figure_Spectrophotometer:
@@ -45,9 +49,8 @@ red & 630-760 \\ \hline
 
     Diagram of light path in diode array spectrophotometer
 
-\includegraphics*[width=2.66in, height=1.97in, keepaspectratio=false]{image1}
 
-\noindent Figure  2-1. Diagram of light path in diode array spectrophotometer.
+
 
 One instrument you may use to measure absorbance is a Hewlett Packard (HP) model 8452A diode array spectrophotometer. The diode array spectrophotometer uses a broad-spectrum source of incident light from a deuterium lamp. The light passes through the sample, 1 cm path length, and is split by a grating into a spectrum of light that is measured by an array of diodes. Each diode measures a bandwidth of 2 nm with 316 diodes covering the range from 190 nm to 820 nm. The wavelengths of light and their colors are given in Table 2-1. The light path for the diode array spectrophotometer is shown in :numref:`figure_Spectrophotometer`.
 
@@ -56,11 +59,24 @@ The HP 8452A spectrophotometer has a photometric range of 0.002 - 3.3 absorbance
 When measuring samples of known concentration the Spectrophotometer software (see Appendix A - Diode Array UV Visible Spectrophotometer) calculates the relationship between absorbance and concentration at a selected wavelength. The slope (m), intercept (b), and correlation coefficient (r) are calculated using equations 2.4 through 2.6.
 
 The slope of the best fit line is
-\[m=\frac{\sum xy -{\textstyle\frac{\sum x \sum y }{n}} }{\sum x^{2}  -\frac{\left(\sum x \right)^{2} }{n} }  2.4\]
+.. math::
+
+
+m=\frac{\sum xy -{\textstyle\frac{\sum x \sum y }{n}} }{\sum x^{2}  -\frac{\left(\sum x \right)^{2} }{n} }
+
 The intercept of the line is
-\[{\rm b\; }={\rm \; }\bar{y}-{\rm m}\bar{x} 2.5\]
+
+.. math::
+
+    \rm b\; }={\rm \; }\bar{y}-{\rm m}\bar{x}
+
 The correlation coefficient is defined as
-\[r=\frac{\sum xy -{\textstyle\frac{\sum x \sum y }{n}} }{\sqrt{\left(\sum x^{2}  -\frac{\left(\sum x \right)^{2} }{n} \right)\left(\sum y^{2}  -\frac{\left(\sum y \right)^{2} }{n} \right)} }  2.6\]
+
+
+.. math::
+
+    r=\frac{\sum xy -{\textstyle\frac{\sum x \sum y }{n}} }{\sqrt{\left(\sum x^{2}  -\frac{\left(\sum x \right)^{2} }{n} \right)\left(\sum y^{2}  -\frac{\left(\sum y \right)^{2} }{n} \right)} }  2.6
+
 where x is the concentration of the solute (methylene blue in this exercise), y is the absorbance, and n is the number of samples.
 
 \noindent
@@ -152,8 +168,10 @@ Use a thermistor to measure the temperature of distilled water. The thermistors 
 \item \textbf{ }Use Figure 2-2 to estimate the mass of 990 �L of distilled water (at the measured temperature).
 
 \item  Use a 100-1000 �L digital pipette to transfer 990 �L of distilled water to a tared weighing boat on either the \textit{AdventurerPro} or \textit{Galaxy} analytical balance. Record the mass of the water and compare with the expected value (Figure 2-2). Repeat this step if necessary until your pipetting error is less than 2\%, then measure the mass of 5 replicate 990 �L pipette samples. Calculate the mean ($\bar{x}$ defined in equation 2.7), standard deviation (s defined in equation 2.8), and coefficient of variation, s/$\bar{x}$, for your measurements. The coefficient of variation (c.v.) is a good measure of the precision of your technique. For this test a c.v. $\mathrm{<}$ 1\% should be achievable.
-\[\bar{x}={\rm \; }\frac{\sum x }{n}  2.7\]
-\[{\rm s\; }={\rm \; }\sqrt{\frac{\sum x^{2}  -\frac{(\sum x )^{2} }{n} }{n-1} }  2.8\]
+\[\bar{x}={\rm \; }\frac{\sum x }{n}  2.7
+
+\[{\rm s\; }={\rm \; }\sqrt{\frac{\sum x^{2}  -\frac{(\sum x )^{2} }{n} }{n-1} }  2.8
+
 \end{enumerate}
 Note that these functions are available on most calculators and in Excel.
 

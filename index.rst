@@ -16,27 +16,12 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
    "Anaconda", "4.5.4"
    "Python", "3.6.5"
 
-.. toctree::
-  :caption: Acknowledgements
-  :maxdepth: 1
-
-  Acknowledgements.rst
-  Authors.rst
 
 .. toctree::
-  :caption: Contributor's guide
+  :caption: Title and Preface
   :maxdepth: 1
 
-  Textbook_Creation_Help/rst_intro.rst
-  Textbook_Creation_Help/example_aguaclara_rst.rst
-  Textbook_Creation_Help/parameter_convention_list.rst
-
-
-.. toctree::
-  :caption: Chapter 1: Introduction
-  :maxdepth: 1
-
-  Introduction/Introduction.rst
+  Title_and_Preface/Title_and_Preface.rst
 
 
 .. toctree::

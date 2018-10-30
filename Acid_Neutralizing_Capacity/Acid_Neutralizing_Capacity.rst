@@ -26,7 +26,11 @@
 \noindent 
 
 \noindent 
-\[1\] 
+
+.. math::
+
+    1
+ 
 
 
 \noindent 
@@ -148,7 +152,7 @@ For a sample containing only carbonates, if the pH is below 4 the ANC is approxi
 
 Operationally, the first few titrant volumes can be relatively large increments since the important data lies at pH values less than that of the equivalence point (approximately pH = 4.5 for an Alkalinity titration). As the pH is lowered by addition of acid the ionic strength of the solution increases and the activity of the hydrogen ion deviates from the hydrogen ion concentration. This effect is significant below pH 3 and thus the effective linear range is generally between pH 4.5 and pH 3.0. The maximum incremental titrant volume ($\mathrm{\Delta}$Va) that will yield n points in this linear region is obtained as follows. 
 
-\noindent If Vs » Vt then equation \eqref{ZEqnNum567204} reduces to
+\noindent If Vs ï¿½ Vt then equation \eqref{ZEqnNum567204} reduces to
 \begin{equation} \label{1.14} 
 {\rm N}_{{\rm t}} {\rm \; \; \; }\frac{(V_{t} -V_{e} )}{V_{s} } \cong {\rm \; [H}^{+} {\rm ]} 
 \end{equation} 
@@ -202,7 +206,7 @@ Determine the ANC for all samples collected from the Acid Lake Remediation lab. 
 \subsection{Prelab Questions}
 
 \noindent \begin{enumerate}
-\item 1) )Compare the ability of Cayuga lake and Wolf pond (an placeAdirondack lake) to withstand an acid rain runoff event (from snow melt) that results in 20\% of the original lake water being replaced by acid rain. The acid rain has a pH of 3.5 and is in equilibrium with the atmosphere. The ANC of Cayuga lake is 1.6 meq/L and the ANC of Wolf Pond is 70 µeq/L. Assume that carbonate species are the primary component of ANC in both lakes, and that they are in equilibrium with the atmosphere. What is the pH of both bodies of water after the acid rain input? Remember that ANC is the conservative parameter (not pH!). \textit{Hint: You can use the scipy optimize root finding function called brentq. Scipy can't handle units so the units must be removed using .magnitude.}
+\item 1) )Compare the ability of Cayuga lake and Wolf pond (an placeAdirondack lake) to withstand an acid rain runoff event (from snow melt) that results in 20\% of the original lake water being replaced by acid rain. The acid rain has a pH of 3.5 and is in equilibrium with the atmosphere. The ANC of Cayuga lake is 1.6 meq/L and the ANC of Wolf Pond is 70 ï¿½eq/L. Assume that carbonate species are the primary component of ANC in both lakes, and that they are in equilibrium with the atmosphere. What is the pH of both bodies of water after the acid rain input? Remember that ANC is the conservative parameter (not pH!). \textit{Hint: You can use the scipy optimize root finding function called brentq. Scipy can't handle units so the units must be removed using .magnitude.}
 
 \noindent \item 2) )What is the ANC of a water sample containing only carbonates and a strong acid that is at pH 3.2? This requires that you inspect all of the species in the ANC equation and determine which species are important.
 
