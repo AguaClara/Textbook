@@ -1,0 +1,614 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>EStaRS Design &mdash; AguaClara Textbook  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dissolved Gas Introduction" href="../Dissolved_Gas/DG_Intro.html" />
+    <link rel="prev" title="Filtration Design Solution" href="Filtration_Design_Solution.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Derivations.html">Filtration Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EStaRS Design</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dimensions-and-pipe-size">Dimensions and Pipe Size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sand-layer-thickness-as-a-function-of-diameter">Sand Layer Thickness as a Function of Diameter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flow-distribution-constraints-ratio-of-pressure-recovery-to-clean-bed-head-loss">Flow Distribution Constraints: ratio of pressure recovery to clean bed head loss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-flow-rates-and-layer-height">Filter Flow Rates and Layer Height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-trunk-and-branch-diameters">Filter Trunk and Branch Diameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#determining-forward-filtration-and-backwash-velocities">Determining Forward Filtration and Backwash Velocities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#first-constraint-pressure-recovery-in-trunks-during-forward-filtration">First Constraint: Pressure Recovery in Trunks during forward filtration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#second-constraint-pressure-recovery-in-lowest-trunk-during-backwash">Second Constraint: Pressure Recovery in lowest trunk during backwash</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manifold-pipe-lengths">Manifold Pipe Lengths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inlet-orifice-and-outlet-slot-design">Inlet Orifice and Outlet Slot Design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#outlet-design">Outlet Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inlet-design">Inlet Design</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#entrance-and-exit-pipe-dimensions">Entrance and Exit Pipe Dimensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#total-sand-depth-filter-pipe-length-head-loss">Total Sand Depth, Filter Pipe Length, Head Loss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plumbing-head-loss">Plumbing Head Loss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#path-head-loss-calculations-and-flow-distribution-between-layers">Path head loss calculations and flow distribution between layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#siphon-design">Siphon Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#elevations-and-filter-sizing">Elevations and Filter Sizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backwash-flow-control">Backwash Flow Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sand-volume">Sand Volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-stability">Filter Stability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>EStaRS Design</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Filtration/EStaRS_Design.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="estars-design">
+<span id="title-estars"></span><h1>EStaRS Design<a class="headerlink" href="#estars-design" title="Permalink to this headline">¶</a></h1>
+<p>Some parts of the design are the same!</p>
+<div class="section" id="dimensions-and-pipe-size">
+<h2>Dimensions and Pipe Size<a class="headerlink" href="#dimensions-and-pipe-size" title="Permalink to this headline">¶</a></h2>
+<p>The filter flow and backwash velocity are used to find an area, this area is used to find the Nominal Diameter of the pipe to be used for the filter. If the value is not one of the options, the next largest pipe size is selected.</p>
+<p>The height of the filter layer is taken as 0.2 meters.
+Some other variables defined here:</p>
+<p>These are all minimums!</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-0">
+<span class="eqno">(569)<a class="headerlink" href="#equation-filtration-estars-design-0" title="Permalink to this equation">¶</a></span>\[ND_{FiTrunkMinLow} = 1.5in
+ND_{FiBranchMinLow} = 1in
+ND_{BallValve} = 3in
+ND_{BedTester} = 0.5in
+ND_{BedTesterOuter} = 1in
+ND_{FiAirRelValve} = 0.5in
+ND_{FiBwTrunkMinLow} = 2in
+ND_{FiBwBranchkMinLow} = 1in\]</div>
+<dl class="docutils">
+<dt>The branch spacing is a function of the size of the EStaRS. The “maximum” spacing is somewhat arbitrarily set 10cm. This value is meant to balance even flow distribution across each layer with ease of fabrication and material use. As a result the expression for number of branches is the following:</dt>
+<dd><span class="math notranslate nohighlight">\(B_{FiBranchMax} = 10cm\)</span></dd>
+</dl>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-1">
+<span class="eqno">(570)<a class="headerlink" href="#equation-filtration-estars-design-1" title="Permalink to this equation">¶</a></span>\[N_{FiBranchMin} = round(\frac{ID_{FiPipe}}{B_{FiBranchMax}})\]</div>
+<p>the ID function also takes the SDR for the pipe (26), but in the equation above was left out so the overall mechanism of the calculation is clearer. The value is rounded because an integer number of branches is needed.</p>
+<p>The number of inlet and outlet pipes are fixed by the way the filter works and are shown below:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-2">
+<span class="eqno">(571)<a class="headerlink" href="#equation-filtration-estars-design-2" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}N_{FiInletPipesLow} = 4\\N_{FiOutletPipesLow} = 3\end{aligned}\end{align} \]</div>
+<p>The area of the filer is defined as: <span class="math notranslate nohighlight">\(ID_{pipe}^2 / 4\)</span></p>
+</div>
+<div class="section" id="sand-layer-thickness-as-a-function-of-diameter">
+<h2>Sand Layer Thickness as a Function of Diameter<a class="headerlink" href="#sand-layer-thickness-as-a-function-of-diameter" title="Permalink to this headline">¶</a></h2>
+<p>Two heights are defined here. Both are defined as functions:</p>
+<p><span class="math notranslate nohighlight">\(H_{FiLayerF}\)</span> the height of a standard filter layer. It is defined as the maximum value between the defined layer height, the outer radius (OR) of the trunk  (as a fucntion of nominal diameter) plus the minimum filter trunk spacing  , the outer diameter of the iftting of the trunk (also as function of ND), and the fernco outer diameter (again a fucntion of ND). Each of these is rounded to the nearest 1cm.</p>
+<p>and</p>
+<p><span class="math notranslate nohighlight">\(H_{FiBottomLayerF}\)</span> the height of The bottom filter layer. This is defined as the maxiumum value between 1. The defined layer height, the OR of the trunk + OR of the backwash trunk  (as functions of ND’s of the trunk and BW trunk) + minimum filter trunk spacing, the sum of fitting OR’s for the trunk and BW trunk (function of ND’s), and the average of the ferco OD’s as a function of NDs. Each rounded to the nearest 1cm.</p>
+</div>
+<div class="section" id="flow-distribution-constraints-ratio-of-pressure-recovery-to-clean-bed-head-loss">
+<h2>Flow Distribution Constraints: ratio of pressure recovery to clean bed head loss<a class="headerlink" href="#flow-distribution-constraints-ratio-of-pressure-recovery-to-clean-bed-head-loss" title="Permalink to this headline">¶</a></h2>
+<p>There are three flow distribution problems in the filter design:
+1. Between slots along manifold branches
+2. Between branches along manifold trunks
+3. Between filter layers</p>
+<p>The relative distribution of the flow through a particular path is defined as:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-3">
+<span class="eqno">(572)<a class="headerlink" href="#equation-filtration-estars-design-3" title="Permalink to this equation">¶</a></span>\[\Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{C_{p_{Short}}}{C_{p_{Short}}}}\]</div>
+<div class="line-block">
+<div class="line">Such that:</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Pi_Q =\)</span> the ratio of flow</div>
+<div class="line"><span class="math notranslate nohighlight">\(Q_{long} =\)</span> the flow through the longest filter path (lowest layer, at the furthest slot on the furthest branch)</div>
+<div class="line"><span class="math notranslate nohighlight">\(Q_{Long} =\)</span> the flow through the shortest filter path (top layer, closest slot on the first branch)</div>
+<div class="line"><span class="math notranslate nohighlight">\(C_{p_{short}} =\)</span> pressure coefficient at the end of the shortest path</div>
+<div class="line"><span class="math notranslate nohighlight">\(C_{p_{long}} =\)</span> pressure coefficient at the end of the longest path</div>
+</div>
+<p><span class="math notranslate nohighlight">\(C_p\)</span> is defined in Fluids review (<strong>Make this actually be defined here</strong>)</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-4">
+<span class="eqno">(573)<a class="headerlink" href="#equation-filtration-estars-design-4" title="Permalink to this equation">¶</a></span>\[\Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{H_{LSand}-PR}{H_{LSand}}}\]</div>
+<div class="line-block">
+<div class="line">Such that:</div>
+<div class="line"><span class="math notranslate nohighlight">\(H_LSand =\)</span> the head loss in the sand bed</div>
+<div class="line"><span class="math notranslate nohighlight">\(PR =\)</span> pressure recovery (as defined by: <span class="math notranslate nohighlight">\(\frac{V^2}{2g}\)</span>)</div>
+</div>
+<p><span class="math notranslate nohighlight">\(PR = H_{LSand}(1- \Pi_Q^2)\)</span></p>
+<p>These relationships define the head loss constraints of the filter.</p>
+<p>The ratio, <span class="math notranslate nohighlight">\(\Pi_{ManifoldQ}\)</span> has been arbitrarily given a value of <span class="math notranslate nohighlight">\(0.85\)</span>, meaning the flow exiting the longest path is 85% of the flow exiting from the shortest path.</p>
+<p>Thus from above:</p>
+<p><span class="math notranslate nohighlight">\(1 - \Pi_{ManifoldQ}^2 = .278 = \Pi_{ManifoldHeadLoss}\)</span></p>
+<p>Where the ratio of the pressure recovery in the branches to the head loss through the clean bed (or through just the slots/holes in backwash) is:</p>
+<p><span class="math notranslate nohighlight">\(\Pi_{ManifoldHeadLoss} = \frac{PR}{H_{LSand}}\)</span></p>
+<p>Though the piezometric head profiles for the inlet and outlet manifolds for the middle layers may be parallel, meaning the pressure recovery is less constrained for a good flow distribution, we still need a tight constraint for the outer manifolds where the velocity is 1/2 and the PR is 1/4 that of the inner layer, while smaller still in the bottom-most manifold where the velocity head is tiny as the diameter is larger.</p>
+</div>
+<div class="section" id="filter-flow-rates-and-layer-height">
+<h2>Filter Flow Rates and Layer Height<a class="headerlink" href="#filter-flow-rates-and-layer-height" title="Permalink to this headline">¶</a></h2>
+<p>As the maximum flow of the filter is constrained by the available sizes of the pipe for the filter, the maximum flow of the filter is characterized by: <span class="math notranslate nohighlight">\(Q_{Bw} = V_{Bw}A_{Fi}\)</span></p>
+<p>However,the actual maximum of flow that the filter would see is actually the larger flow between that value and the <span class="math notranslate nohighlight">\(Q_{Fi}\)</span> the flow through the filter. For example, if two EStaRS designed for 3.08 L/s each are used for a plant flow of 7 L/s, each filter will actually see 3.5 L/s of flow. This is greater than what the filter was designed for, and this larger flow must be accounted for.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Knowing which flow is being used to calculate the size of certain components is <strong>extremely</strong> important. For calculations involving the pipe manifold the maximum flow that could be seen by the filter should be used (<span class="math notranslate nohighlight">\(Q_{FiMax}\)</span>). This is because the pressure recovery term is the limiting characteristic, and so a greater flow corresponds to a greater velocity which increases PR, which is unideal. For calculations concerning the system of weirs required for backwash, which are calculated in “Backwash Control Volume”,the backwash flow <span class="math notranslate nohighlight">\(Q_{FiBw}\)</span> is required because backwash cannot be performed effectively with less flow that the backwash flow. While it is <em>possible</em>  that backwash could be necessary in extremely low flow conditions, it has never been an issue in any plant, so this is not accounted for. Additionally, it is possible that these two values are the same, in which case the distinction is not necessary.</p>
+</div>
+<p>Depending on the total flow of the EStaRS and the size of the modules, varying numbers of filters will need to be used, though minimum should always be 2.</p>
+<p>This design will focus on flow through one filter, as having several filters in parallel wouldn’t alter the flow within one, thought flow will be split between the filters.</p>
+<p>The entire area of the filter is assumed to be active and is denoted as <span class="math notranslate nohighlight">\(A_{Fi}\)</span>.</p>
+<p>Within each filter the flow is diverted across six layers. (<span class="math notranslate nohighlight">\(N_{FiLayer} = 6\)</span>)</p>
+<p>Thus the flow through each layer is: <span class="math notranslate nohighlight">\(Q_{FiLayer} = \frac{Q_{Fi}}{N_{FiLayer}}\)</span></p>
+<p>From the area of the filter and the velocity required for backwash, the backwash flow can be determined: <span class="math notranslate nohighlight">\(Q_{FiBw} = V_{FiBw}A_{Fi}\)</span></p>
+<p>In this section is also where the filter layer height is actually calculated using the function from the “Sand Layer Thickness As a Function of Diameter” Section: <span class="math notranslate nohighlight">\(H_{FiLayer}\)</span></p>
+</div>
+<div class="section" id="filter-trunk-and-branch-diameters">
+<h2>Filter Trunk and Branch Diameters<a class="headerlink" href="#filter-trunk-and-branch-diameters" title="Permalink to this headline">¶</a></h2>
+<p>In determining the size of the trunk and branches of the EStaRS the pressure recovery constraints are the most important design considerations. Having a pressure recovery term that is too high will lead to and uneven flow distribution. The two pressure recovery terms that are of particular concern are those in the trunks and branches during forward filtration, and the pressure recovery in the lowest branch during backwash. To calculate the estimated pressure recovery term the first thing to find is the velocity in the branches during forward filtration and during backwash.</p>
+<div class="section" id="determining-forward-filtration-and-backwash-velocities">
+<h3>Determining Forward Filtration and Backwash Velocities<a class="headerlink" href="#determining-forward-filtration-and-backwash-velocities" title="Permalink to this headline">¶</a></h3>
+<p>See Figure XXXX for a schematic of the filter layers.</p>
+<img alt="../_images/figure_flow_distribution_estars.PNG" src="../_images/figure_flow_distribution_estars.PNG" />
+<p>From the section above it is apparent that the total flow through the filter is the flow through each layer times the number of layers or <span class="math notranslate nohighlight">\(Q_{Fi} = N_{Layers}*{Q_{FiLayers}\)</span></p>
+<p>In the case of 6 filter layers, this is <span class="math notranslate nohighlight">\(6Q_{FiLayer}\)</span></p>
+<p>Because the 2 inner inlets (the ones that aren’t the backwash trunk or the uppermost trunk) distribute flow to two layers the flow between them is equal to <span class="math notranslate nohighlight">\(2Q_{FiLayer}\)</span> which is shown in the schematic. In a later section, we will show that the flow within each layer is not exactly even because of the headloss through various paths, but for the calculation of maximum flow, even flow is an appropriate guess. (<strong>do we know know this</strong>)</p>
+<p>From the schematic we can also see that the maximum flow experienced by any trunk is <span class="math notranslate nohighlight">\(2Q_{FiLayer}\)</span>, using this value it is possible to calculate the maximum branch through a branch. Using <span class="math notranslate nohighlight">\(2Q_{FiLayer}\)</span> is a conservative estimate, most branches will not see this flow, however because the pressure recovery is the main constraint in the filter pipe manifold, it is best to use the maximum possible flow to determine allowable PR.</p>
+<p>On each layer trunk, there are <span class="math notranslate nohighlight">\(N_{FiBranch}\)</span> branches on <strong>each side</strong> of the trunk. That means the total number of branches on each trunk is <span class="math notranslate nohighlight">\(2N_{FiBranch}\)</span></p>
+<p>Using the maximum flow in a trunk and the number of branches on a trunk the maximum flow in a branch becomes:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-5">
+<span class="eqno">(574)<a class="headerlink" href="#equation-filtration-estars-design-5" title="Permalink to this equation">¶</a></span>\[Q_{FiBranchMax} = \frac{2Q_{FiLayer}}{2N_{FiBranch}}\]</div>
+<p>Using the ND of the Filter Manifold Branches, as defined above, the minimum flow area of a branch can be calculated:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-6">
+<span class="eqno">(575)<a class="headerlink" href="#equation-filtration-estars-design-6" title="Permalink to this equation">¶</a></span>\[A_{FiBranchMin} = \frac{ID_{FiBranch}^2 *\pi}{4}\]</div>
+<p>Knowing the area allows the velocity within a branch to be found.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-7">
+<span class="eqno">(576)<a class="headerlink" href="#equation-filtration-estars-design-7" title="Permalink to this equation">¶</a></span>\[V_{FiBranchEst} = \frac{Q_{FiBranchMax}}{A_{FiBranchMin}}\]</div>
+<p>From the velocity the pressure recovery term can be determined, this equation comes from the definition of pressure recovery:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-8">
+<span class="eqno">(577)<a class="headerlink" href="#equation-filtration-estars-design-8" title="Permalink to this equation">¶</a></span>\[PR_{FiManBranchEst} = \frac{V_{FiBranchEst}^2}{2g}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">note:</th><td class="field-body">Have i descirbed pressure recovert yet in this section! or does it need to be described here?</td>
+</tr>
+</tbody>
+</table>
+<p>A similar series of calcualtions can be done for the backwash branches based on <span class="math notranslate nohighlight">\(Q_{FiBw}\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-9">
+<span class="eqno">(578)<a class="headerlink" href="#equation-filtration-estars-design-9" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}Q_{FiBwBranchMax} = \frac{Q_{FiBw}}{2N_{FiBranch}}\\A_{FiBwBranchMin} = \frac{ID_{FwBwBranch}^2 *\pi}{4}\\V_{FiBwBranchEst} = \frac{Q_{FiBwBranchMax}}{A_{FiBwBranchMin}}\\PR_{FiBwManBranchEst} = \frac{V_{FiBwBranchEst}^2}{2g}\end{aligned}\end{align} \]</div>
+<p>The two pressure recovery terms calculated here are compared against the allowable PR terms.</p>
+</div>
+<div class="section" id="first-constraint-pressure-recovery-in-trunks-during-forward-filtration">
+<h3>First Constraint: Pressure Recovery in Trunks during forward filtration<a class="headerlink" href="#first-constraint-pressure-recovery-in-trunks-during-forward-filtration" title="Permalink to this headline">¶</a></h3>
+<p>The total allowable pressure recovery of the filter manifold is controlled by the headloss in each sand layer and the headloss ratio, <span class="math notranslate nohighlight">\(\Pi_{ManifoldHeadLoss}\)</span>, as defined above in “Flow Distrbution Constraints”.</p>
+<p>The head loss through the sand layer, <span class="math notranslate nohighlight">\(HL_{FiCleanLayerMin}\)</span> is a fuction of layer depth, <span class="math notranslate nohighlight">\(H_{FiLayer}\)</span> and overall velocity of the filter , <span class="math notranslate nohighlight">\(\frac{Q_{FiLayer}}{A_{Fi}}\)</span>, using the Kozeny Equation (<strong>link Kozeny</strong>).</p>
+<p>Using the definition of the pressure recovery ratio, the maximum allowable pressure recovery in the filter manifold can be calculated, this value is not necessarily the actual pressure recovery the system may see, just the allowable maximum:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-10">
+<span class="eqno">(579)<a class="headerlink" href="#equation-filtration-estars-design-10" title="Permalink to this equation">¶</a></span>\[PR_{FiMax} = HL_{FiCleanLayerMin}*\Pi_{ManifoldHeadLoss}\]</div>
+<p>Subtracting the previously calculated branch PR from this maximum determine how much PR is theoretically left for the trunks. The maximum trunk PR can then be calculated back to a velocity.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-11">
+<span class="eqno">(580)<a class="headerlink" href="#equation-filtration-estars-design-11" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}PR_{TrunkEst} = PR_{FiMax} - PR_{FiBwManBranchEst}\\V_{FiTrunkMaxPR} = \sqrt{2g*PR_{TrunkEst}}\end{aligned}\end{align} \]</div>
+<p>The velocity is important because it, along with the known flow rate throug the trunk are used to find a theoretical area for the flow. This area sets and ideal ID for a trunk pipe. Using the pipe database allows a search for the closest match.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-12">
+<span class="eqno">(581)<a class="headerlink" href="#equation-filtration-estars-design-12" title="Permalink to this equation">¶</a></span>\[ID_{TrunkIdeal} = \sqrt{\frac{4*\frac{2*Q_{FiLayer}}{{V_{FiTrunkMaxPR}}}}   {\pi}}\]</div>
+<p>In the pipe database the nearest, larger, pipe size is chosen for SDR 26. The associated ND is compared with <span class="math notranslate nohighlight">\(ND_{FiTrunkMinLow}\)</span>, whichever is larger is chosen as <span class="math notranslate nohighlight">\(ND_{FiTrunk}\)</span>. From this ND the ID is found knowin the pipe is SDR 26.</p>
+<p>Then the PR term can be found:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-13">
+<span class="eqno">(582)<a class="headerlink" href="#equation-filtration-estars-design-13" title="Permalink to this equation">¶</a></span>\[PR_{FiTrunk} = \frac{(\frac{2Q_{FiLayer}}{(\pi\frac{ID_{FiTrunk}^2}{4})})^2}{2g}\]</div>
+<p>Knowing the actual (for this flow) PR term provides a better value for determining the allowable PR in the branches.</p>
+<p>So now, the <span class="math notranslate nohighlight">\(PR_{FiBranchMax}\)</span> is the different between the allowable PR and the PR calculated for the trunk:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-14">
+<span class="eqno">(583)<a class="headerlink" href="#equation-filtration-estars-design-14" title="Permalink to this equation">¶</a></span>\[PR_{FiBranchMax} = PR_{FiMax} - PR_{FiTrunk}\]</div>
+<p>Then the maximum velocity in the branches can be found. Which, as above leads to the actual size of the branches.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-15">
+<span class="eqno">(584)<a class="headerlink" href="#equation-filtration-estars-design-15" title="Permalink to this equation">¶</a></span>\[V_{FiBranchMax} = \sqrt{2g*PR_{FiBranchMax}}\]</div>
+<p>The ND is found by again comparing the <span class="math notranslate nohighlight">\(ND_{FiBranchMin}\)</span> with the ND that emerges from taking the ID as calculated from the velocity and the flow:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-16">
+<span class="eqno">(585)<a class="headerlink" href="#equation-filtration-estars-design-16" title="Permalink to this equation">¶</a></span>\[ID_{FiBranchEst} = \sqrt { \frac{4}{\pi}(\frac{\frac{2Q_{FiLayer}}{2N_{FiBranch}}}{V_{FiBranchMax}})^2}\]</div>
+<p>This ID is compared with available IDs of SDR26 and the nearest value that is above that ID is chosen to compare against <span class="math notranslate nohighlight">\(ND_{FiBranchMin}\)</span> as defined in the beginning.</p>
+<p><strong>if this can be streamlined in python it should be, because going from ID to ND to actual ND to ID is a pain</strong></p>
+<p>For the chosen ND, the corresponding ID is used to determine the PR in the branches with SDR26.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-17">
+<span class="eqno">(586)<a class="headerlink" href="#equation-filtration-estars-design-17" title="Permalink to this equation">¶</a></span>\[PR_{FiBranch} = \frac{(\frac{\frac{2Q_{FiLayer}}{2N_{{FiBranch}}}}{(\pi\frac{ID_{FiBranch}^2}{4})})^2}{2g}\]</div>
+<p>The sum of the PRs from the branches can then be compared to the maximum allowable PR term. If the design logic worked properly then <span class="math notranslate nohighlight">\((PR_{FiBranch} +  PR_{FiTrunk}) &lt; PR_{FiMax}\)</span> with  <span class="math notranslate nohighlight">\(PR_{FiBranch} +  PR_{FiTrunk} = PR_{FiMan}\)</span> indicating the pressure recovery in the Filter Manifold.</p>
+</div>
+<div class="section" id="second-constraint-pressure-recovery-in-lowest-trunk-during-backwash">
+<h3>Second Constraint: Pressure Recovery in lowest trunk during backwash<a class="headerlink" href="#second-constraint-pressure-recovery-in-lowest-trunk-during-backwash" title="Permalink to this headline">¶</a></h3>
+<p>The second pressure recovery constraint is in the backwash branch during backwash. During backwash the lowest trunk sees all the flow at a higher velocity than any branch does during forward filtration. Because the velocity is higher, the PR term will also be higher, so it must be constrainted to maintain even flow.</p>
+<p>In backwash there is no headloss through the sand bed because the sand is fully fluidized. The startup time in which it takes to fluidize the bed is ignored in this design. Thus the only headloss occurs from the flow expansion as water exits the fiter manifold out of the exits holes.</p>
+<p>The initial estimate of headloss through the holes is <span class="math notranslate nohighlight">\(HL_{FiBwOrifices} = 10cm\)</span>.</p>
+<p>Using the headloss ratio, <span class="math notranslate nohighlight">\(\Pi_{ManifoldHeadLoss}\)</span> , the allowable PR canbe determined: <span class="math notranslate nohighlight">\(PR_{FiBwManMax} = HL_{FiBwOrifices}*\Pi_{ManifoldHeadLoss}\)</span></p>
+<p>From above the PR estimate for the Backwash Branches exists.</p>
+<p>This allows the maximum velocity in the BW Trunk to be found</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-18">
+<span class="eqno">(587)<a class="headerlink" href="#equation-filtration-estars-design-18" title="Permalink to this equation">¶</a></span>\[V_{FiBwTrunkMaxPR} = \sqrt{2g *(PR_{FiBwMax}-PR_{FiBwBranchEst})}\]</div>
+<p>From the velocity the ND of the backash trunk can be found based on the necessary inner diameter and pipe schedule as calculated using the flow area.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-19">
+<span class="eqno">(588)<a class="headerlink" href="#equation-filtration-estars-design-19" title="Permalink to this equation">¶</a></span>\[ID_{FiBranchEst} = \sqrt { \frac{4}{\pi}(\frac{Q_{FiBW}}{V_{FiBwTrunkMaxPR}})^2}\]</div>
+<p>The corresponding ND (usign SDR 26) is compared against <span class="math notranslate nohighlight">\(ND_{FiBwTrunkMin}\)</span>. The larger pipe is chosen for the design. The ID from the chosen pipe size is then used to find the actual backwash PR for the backwash trunk.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-20">
+<span class="eqno">(589)<a class="headerlink" href="#equation-filtration-estars-design-20" title="Permalink to this equation">¶</a></span>\[PR_{FiBwTrunk} = \frac{(\frac{Q_{FiBw}}{(\pi\frac{ID_{FiBwTrunk}^2}{4})})^2}{2g}\]</div>
+<p>Then the actual allowable pressure recovery for the backwsh branches can be found.</p>
+<blockquote>
+<div><div class="math notranslate nohighlight" id="equation-filtration-estars-design-21">
+<span class="eqno">(590)<a class="headerlink" href="#equation-filtration-estars-design-21" title="Permalink to this equation">¶</a></span>\[PR_{FiBwBranchMax} = PR_{FiBwMax} - PR_{FiBwTrunk}\]</div>
+</div></blockquote>
+<p>Then the branch velocity can be found:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-22">
+<span class="eqno">(591)<a class="headerlink" href="#equation-filtration-estars-design-22" title="Permalink to this equation">¶</a></span>\[V_{FiBwBranchMax} = \sqrt{2g *(PR_{FiBwBranchMax})}\]</div>
+<p>Then, as above this velocity is used to find the area of the backwash branch with:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-23">
+<span class="eqno">(592)<a class="headerlink" href="#equation-filtration-estars-design-23" title="Permalink to this equation">¶</a></span>\[A_{BwBranchEst}  = \frac{Q_{FiBw}}{2N_{FiBwBranch}}\]</div>
+<p>If it seems like these processes are 1. similar and 2. circular in their logic, you are correct on both counts! The determination of PR for backwash and forward filtration follows the same steps, the only difference is with the flows and conditions required. It seems circular because the initial calculations are done on guesses, if these guesses weren’t made solving for other quantities couldn’t be done. The step where the trunk calculations are resolved for the branch conditions mainly acts to assess if the initial guesses were reasonable, and corrects the error in the guess, though of course the initial guess could’ve been correct! Running the final values back through the entire process should yield the same results meaning the iteration found a solution.</p>
+</div>
+</div>
+<div class="section" id="manifold-pipe-lengths">
+<h2>Manifold Pipe Lengths<a class="headerlink" href="#manifold-pipe-lengths" title="Permalink to this headline">¶</a></h2>
+<p>Come back to this a little bit…</p>
+</div>
+<div class="section" id="inlet-orifice-and-outlet-slot-design">
+<h2>Inlet Orifice and Outlet Slot Design<a class="headerlink" href="#inlet-orifice-and-outlet-slot-design" title="Permalink to this headline">¶</a></h2>
+<p><em>come back to this once Juan and Bayron have results from their test of how much fabrication matters.</em></p>
+<p>Knowing the PR in the BW manifold, the design head loss through the outlet orifices can be determined based on:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-24">
+<span class="eqno">(593)<a class="headerlink" href="#equation-filtration-estars-design-24" title="Permalink to this equation">¶</a></span>\[HL_{BwOrifices} = \frac{PR_{BwManTotal}}{\Pi_{ManifoldHeadLoss}}\]</div>
+<p>With this head loss the necessary total area of the orifices for the backwash branch can be determined using the orifice equation <strong>REF</strong>, as <span class="math notranslate nohighlight">\(HL_{BwOrifices}\)</span> , <span class="math notranslate nohighlight">\(\Pi_{VCOrifice}\)</span>, and <span class="math notranslate nohighlight">\(Q_{FiBw}\)</span> are known.</p>
+<p>This area is doubled to find the area of the slots.</p>
+<blockquote>
+<div><div class="math notranslate nohighlight" id="equation-filtration-estars-design-25">
+<span class="eqno">(594)<a class="headerlink" href="#equation-filtration-estars-design-25" title="Permalink to this equation">¶</a></span>\[A_{FiManSlots} = 2*A_{FiBwOrifices}\]</div>
+</div></blockquote>
+<p><strong>why is this? I don’t know!</strong></p>
+<p>Also the area of the backwash orifices is equal to <span class="math notranslate nohighlight">\(A_{FiTopManSlots}\)</span>, which is the area of the <strong>this is the area of something thats for sure</strong></p>
+<div class="section" id="outlet-design">
+<h3>Outlet Design<a class="headerlink" href="#outlet-design" title="Permalink to this headline">¶</a></h3>
+<p>Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, <span class="math notranslate nohighlight">\(B_{slot}\)</span> is always .008 inch. <em>The number of slot rows is also fixed at 2, because each branch has slots on the top and bottom because the outlet pipes are accepting flow from two layers of sand, one above and one below.</em></p>
+<p>From the cumulative area of slots and the width of the slots <strong>where does the width come from</strong> The total length of slots can be determined. This length of slots is for one side of one branch <em>yes?</em></p>
+<p>As the branches are different lengths along one trunk, the number of slots is different per branch depending on the length. Dividing the Length of the</p>
+</div>
+<div class="section" id="inlet-design">
+<h3>Inlet Design<a class="headerlink" href="#inlet-design" title="Permalink to this headline">¶</a></h3>
+<p>Regarding the inlets, those for backwash are determined differently than the orifices on the rest of the inlet branches. This section traces the process for the backwash branches and then the rest of the manifold branches.</p>
+<p>The spacing of orifices, <span class="math notranslate nohighlight">\(B_{OrificeEst}\)</span> is estimated at 1cm.</p>
+<p>The number of orifices per branch is the floor value of:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-26">
+<span class="eqno">(595)<a class="headerlink" href="#equation-filtration-estars-design-26" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}N_{BwBranchOrifices} = \frac{L_{FiBwBranchLow} - B_{OrificeEst} - 2*L_{FiBranchExt}}{B_{OrificeEst}}\\and\\N_{BranchOrifices} = \frac{L_{FiBranchLow} - B_{OrificeEst} - 2*L_{FiBranchExt}}{B_{OrificeEst}}\end{aligned}\end{align} \]</div>
+<p>The only difference between the two is the length of the branches. Because the backwash trunk is slightly larger than the rest of the trunks, the branches must be slightly shorter so that the whole manifold fits in the filter body.</p>
+<p>Then for each the total number of orifices necessary for a layer of the manifold can be found by summing the array of number of holes (<span class="math notranslate nohighlight">\(N_{BranchOrifices}\)</span>) and multiplying by 2 to account for the trunks having branches on two sides.</p>
+<p>Have the holes close together is important to maintaing an even flow distribution, which is why the holes spacing is determined before hole size (which is also constrained by available drill bit sizes)</p>
+<p>The drill bit sizes considered are 1/16 inch, 1/8 inch, 3/16 in  and 1/4 inch. The maximum hole size is 1/4in because when the holes are larger they stick out from under the edge of the wings. This is contstrained by the curvature of the wings as shown below in <strong>Figure XYZ</strong></p>
+<p>The choice of drill bit size is then determined using the cumulative area of orifice needed for a branch.</p>
+<p>Generally, the hole diameter is chosen from the closest (but larger) drill bit based on:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-27">
+<span class="eqno">(596)<a class="headerlink" href="#equation-filtration-estars-design-27" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}D_{guess} = 2*\sqrt{\frac{A_{OrificeTotal}}{\pi*N_{OrificePerBranch}}}\\Where:
+A_{OrificeTotal} = (A_{BwOrifices}, A_{FiManSlots}, A_{FiTopManSlots})\end{aligned}\end{align} \]</div>
+<p>The 3 distinct diameters correspsonding with these three areas are compared to available drill bits, and actual diameters are chosen.</p>
+<p>Because this diameter is likely larger than the calculated diameter, the number of holes must be recalculated for each. The new number of holes is the minimum between the new calculated number (rounded down to the nearest integer) and the original number of holes (which was defined as a maximum). The new calcualtion is done as follows:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-28">
+<span class="eqno">(597)<a class="headerlink" href="#equation-filtration-estars-design-28" title="Permalink to this equation">¶</a></span>\[N_{OificesEstNew} = \frac{A_{TotalNecessaryArea}}{\frac{\pi}{4}D_{Orifice}^2}\]</div>
+<p>Again using the three areas, but now also with the new corresponding diameters.</p>
+<p>This number of holes can be used to check that total area of holes is close to the total area necessary to provide the appropriate amount of head loss.</p>
+<p>The head loss calculation can then be checked as well for all 5 branch systems involved: the backwash branches in forward, the backwash branches in backwash, the top inlet pipe during filtration, the other inlet pipes during filtration, and the outlet pipes during filtration.</p>
+<p>The head loss for each branch type is generally:</p>
+<div class="math notranslate nohighlight" id="equation-filtration-estars-design-29">
+<span class="eqno">(598)<a class="headerlink" href="#equation-filtration-estars-design-29" title="Permalink to this equation">¶</a></span>\[HL = \frac{\frac{Q}{\Pi*A*\epsilon}^2}{2g}\]</div>
+<p>With the relevant parameters for each type of manifold branch shown below in <strong>this figure</strong></p>
+<p><strong>Table_Branch_Head_Loss.PNG</strong></p>
+<p>Because the flows and area are different for each of the branches the head loss through each system layer is slighly different. This head loss is also only for the one branch system.  As show in the figure below with numbered branches, there are several pipes that are constructed the same and several that are different.</p>
+<p><strong>figure_numbered_filter_layers.PNG</strong></p>
+<p>Pipes 2, 4, and 6 (the outlet pipes) are all identical and the total head loss through the outlet system is approximately three times the <span class="math notranslate nohighlight">\(HL_{OutletSlotForWard}\)</span> as calculated based on the table above. The outlet pipes are the only pipes where the porosity of hte sand ica accounted for because the outlet slot system is the only place in the filter where the sand interfaces with the pipe openings. The exclusion zones prevents sand at the inlets and as such the porosity is not accounted for in any other head loss calculation. Pipe 7 experiences 2 different head losses depending on whethere the filter is in forward filtration or backwash. Pipes 3 and 5 are also identical.</p>
+<p>Additional note for the image above. The pipes show the overall flow direction at each layer. The each of those numbers pipes, from a vertical cross-sections looks generally like the trunk and branches in <strong>Figure XYZ</strong>.</p>
+<p><strong>figure_circle_branches</strong></p>
+</div>
+</div>
+<div class="section" id="entrance-and-exit-pipe-dimensions">
+<h2>Entrance and Exit Pipe Dimensions<a class="headerlink" href="#entrance-and-exit-pipe-dimensions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="total-sand-depth-filter-pipe-length-head-loss">
+<h2>Total Sand Depth, Filter Pipe Length, Head Loss<a class="headerlink" href="#total-sand-depth-filter-pipe-length-head-loss" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="plumbing-head-loss">
+<h2>Plumbing Head Loss<a class="headerlink" href="#plumbing-head-loss" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="path-head-loss-calculations-and-flow-distribution-between-layers">
+<h2>Path head loss calculations and flow distribution between layers<a class="headerlink" href="#path-head-loss-calculations-and-flow-distribution-between-layers" title="Permalink to this headline">¶</a></h2>
+<p>Now that the sand layer depth is set the Kozeny Head Loss can be determined for the clean bed and the headloss through various flow paths can be determined.</p>
+<p>First use the Kozeny Equation (<strong>ref kozeny</strong> )to find the HL in the central layers and also the bottom layer with <span class="math notranslate nohighlight">\(H_{Layer}\)</span> and <span class="math notranslate nohighlight">\(H_{BottomLayer}\)</span></p>
+<p>As the filter has 6 layers there are six possible paths for the water to take.</p>
+<p>Overview of the algorithm of this section:</p>
+<p>In each path the path headloss is the sum of : inlet plumbing, sand layer, and outlet plumbing (for the relevant flow)</p>
+<p>Find the max headloss through the respective paths (Q1 - Q6)
+Find the min headloss through the respective paths (Q1 - Q6)
+Find the average headloss of the paths (sum(HL)/6)
+^^a theoretical term because the flow distrubution will sort itself out because that’s how headloss works
+Find Pi_layer. The ratio of  the flow distribution. Goal is close to 1.</p>
+<p>Because the flow distribution will change to make the headlosses even, it can be taken as true that <span class="math notranslate nohighlight">\(HL_{Path1} = HL_{Path2}\)</span> and so on for each path. This assumes the clean bed headlosses and also accounts for the varying flows in each path.</p>
+<p>It is also known that the flow must add up to the flow in the filter. Knowing that a system of equations can be set up to use the healoss and total flow requirement to solve for the flow in each layer. Those flows are then taken as the flow through each layer.</p>
+</div>
+<div class="section" id="siphon-design">
+<h2>Siphon Design<a class="headerlink" href="#siphon-design" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="elevations-and-filter-sizing">
+<h2>Elevations and Filter Sizing<a class="headerlink" href="#elevations-and-filter-sizing" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="backwash-flow-control">
+<h2>Backwash Flow Control<a class="headerlink" href="#backwash-flow-control" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="sand-volume">
+<h2>Sand Volume<a class="headerlink" href="#sand-volume" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="filter-stability">
+<h2>Filter Stability<a class="headerlink" href="#filter-stability" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="materials">
+<h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Dissolved_Gas/DG_Intro.html" class="btn btn-neutral float-right" title="Dissolved Gas Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Filtration_Design_Solution.html" class="btn btn-neutral" title="Filtration Design Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
