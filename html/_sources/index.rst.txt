@@ -95,6 +95,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Filtration/Filtration_Derivations.rst
   Filtration/Filtration_Theory_and_Future_Work.rst
   Filtration/Filtration_Design_Solution.rst
+  Filtration/EStaRS_Design.rst
 
 
 .. toctree::
