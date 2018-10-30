@@ -125,7 +125,15 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#conventional-sedimentation-systems">Conventional Sedimentation Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#sedimentation-challenges-and-gaps-in-knowledge">Sedimentation Challenges and Gaps in Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#aguaclara-innovations">AguaClara Innovations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#foundational-concepts">Foundational Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#aguaclara-design-approach">AguaClara Design Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#design-of-an-aguaclara-sedimentation-tank">Design of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#sedimentation-challenges-confusions-and-failure-modes">Sedimentation Challenges, Confusions, and Failure Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
@@ -171,7 +179,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -284,7 +291,7 @@
 <p>The principal difference in various filters is the difference in velocity of water through them. This in turn determines the plan view area of the filter for a particular flow.</p>
 <p>For a multistage filter system, the filter areas for the Dynamic, Roughing, and Slow Sand filters are included in a total area. For a given flow, and the velocity for each filter type the total area is:</p>
 <div class="math notranslate nohighlight" id="equation-area-stuff">
-<span class="eqno">(435)<a class="headerlink" href="#equation-area-stuff" title="Permalink to this equation">¶</a></span>\[ A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}\]</div>
+<span class="eqno">(449)<a class="headerlink" href="#equation-area-stuff" title="Permalink to this equation">¶</a></span>\[ A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}\]</div>
 <p>Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. <code class="xref std std-numref docutils literal notranslate"><span class="pre">_table_Net_Velocities</span></code> shows the relative area of various filtration technologies.</p>
 <p>Understanding the amount of area requires for this component makes it easy to see why certain systems would be preferable to others, but also that overall filtration is only a polishing step and cannot treat as well as other unit processes, predominantly the flocculation-sedimentation combination.</p>
 </div>
@@ -293,7 +300,7 @@
 <span id="heading-porosity"></span><h2>Porosity<a class="headerlink" href="#porosity" title="Permalink to this headline">¶</a></h2>
 <p>In understading how sand filtration works, porosity is one of the most important concepts to be familiar with. Porosity refers to the ratio of the void volume to the total volume of a control volume.</p>
 <div class="math notranslate nohighlight" id="equation-porosity">
-<span class="eqno">(436)<a class="headerlink" href="#equation-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}\]</div>
+<span class="eqno">(450)<a class="headerlink" href="#equation-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}\]</div>
 <p>Porosity is determined by the geometry of the material in the control volume, but also by the size of the particles involved. If you have three different sized spheres (such as .0um clay, .2mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in <a class="reference internal" href="#figure-porosity"><span class="std std-numref">Fig. 125</span></a>. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-porosity"></span><img alt="This figure illustrates how different sized materials have the same total bulk porosity" src="../_images/figure_porosity.png" />
@@ -305,11 +312,11 @@
 <p><span class="math notranslate nohighlight">\(D_{10}\)</span> is used for particle removal models, and <span class="math notranslate nohighlight">\(D_{60}\)</span> is used for hydrualic modeling.</p>
 <p>The ratio of the two is the uniformity coeffecient:</p>
 <div class="math notranslate nohighlight" id="equation-uniformity-coefficient">
-<span class="eqno">(437)<a class="headerlink" href="#equation-uniformity-coefficient" title="Permalink to this equation">¶</a></span>\[ UC = \frac{D_{60}}{D_{10}}\]</div>
+<span class="eqno">(451)<a class="headerlink" href="#equation-uniformity-coefficient" title="Permalink to this equation">¶</a></span>\[ UC = \frac{D_{60}}{D_{10}}\]</div>
 <p>The uniformity coefficient describes the uniformity of the sand. A <span class="math notranslate nohighlight">\(UC = 1\)</span> indicates that every grain of sand is the same size, which is the ideal case. A large <span class="math notranslate nohighlight">\(UC\)</span> is indicative of a wide range of grain sizes which can cause trouble during filter operation and backwash, as stratification occurs and the porosity changes with respect to depth in the filter, which affects the requirements for backwash.</p>
 <p>During backwash, the sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-backwash-porosity">
-<span class="eqno">(438)<a class="headerlink" href="#equation-backwash-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}\]</div>
+<span class="eqno">(452)<a class="headerlink" href="#equation-backwash-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(phi_{FiSandBw}\)</span> = sand porosity during backwash</div>
@@ -320,7 +327,7 @@
 </div>
 <p>From this it becomes possible to directly relate porosity (as above) to the filter expansion ratio, which is simply the ratio of the heights of the expanded sand bed and the settled sand bed:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-0">
-<span class="eqno">(439)<a class="headerlink" href="#equation-filtration-filtration-design-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: filter_expansion_ratio\\\Pi_{FiBw} = \frac{H_{FiSandBw}}{H_{FiSand}}\end{aligned}\end{align} \]</div>
+<span class="eqno">(453)<a class="headerlink" href="#equation-filtration-filtration-design-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: filter_expansion_ratio\\\Pi_{FiBw} = \frac{H_{FiSandBw}}{H_{FiSand}}\end{aligned}\end{align} \]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(Pi_{FiBw}\)</span> = the expansion ratio value</div>
@@ -332,7 +339,7 @@
 <span id="heading-headloss-requirements"></span><h2>Headloss Requirements<a class="headerlink" href="#headloss-requirements" title="Permalink to this headline">¶</a></h2>
 <p>One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen-Pouseille equation (ref from elsewhere, not linked yet) describes the headloss through a clean bed during filtration.</p>
 <div class="math notranslate nohighlight" id="equation-karmen-kozeny-clean-bed">
-<span class="eqno">(440)<a class="headerlink" href="#equation-karmen-kozeny-clean-bed" title="Permalink to this equation">¶</a></span>\[ \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu V_{Fi}}{g D_{60}^2}\]</div>
+<span class="eqno">(454)<a class="headerlink" href="#equation-karmen-kozeny-clean-bed" title="Permalink to this equation">¶</a></span>\[ \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu V_{Fi}}{g D_{60}^2}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(h_l\)</span> = headloss in sand bed</div>
@@ -349,7 +356,7 @@
 <p>The headloss during backwash is taken as the design parameter, so other values are constructed around it.</p>
 <p>The following equation describes the headloss through the fluidized bed:</p>
 <div class="math notranslate nohighlight" id="equation-headloss-fluidzed-bed">
-<span class="eqno">(441)<a class="headerlink" href="#equation-headloss-fluidzed-bed" title="Permalink to this equation">¶</a></span>\[ \frac{h_{l_{FiBw}}}{H_{FiSand}} = \left( 1 - \phi_{FiSand} \right)\left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
+<span class="eqno">(455)<a class="headerlink" href="#equation-headloss-fluidzed-bed" title="Permalink to this equation">¶</a></span>\[ \frac{h_{l_{FiBw}}}{H_{FiSand}} = \left( 1 - \phi_{FiSand} \right)\left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(h_{l_{FiBw}}\)</span> = the headloss in the fluidized bed</div>
@@ -360,7 +367,7 @@
 </div>
 <p>Using these two equations the minimum velocity for snad fluidization can be found!</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-1">
-<span class="eqno">(442)<a class="headerlink" href="#equation-filtration-filtration-design-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: minimum_fluidization_velocity_sand\\V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\end{aligned}\end{align} \]</div>
+<span class="eqno">(456)<a class="headerlink" href="#equation-filtration-filtration-design-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: minimum_fluidization_velocity_sand\\V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\end{aligned}\end{align} \]</div>
 <p>From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter is <strong>not</strong> indicative of fluidization at the bottom.</p>
 <p>This parameter is the most important parameter to consider as it is a property of the sand not of the water!</p>
 </div>
@@ -372,7 +379,7 @@
 <p>Parallel filters would require too much area and wouldn’t work well under low flow conditions:</p>
 <p>Given:</p>
 <div class="math notranslate nohighlight" id="equation-filter-base-conditions">
-<span class="eqno">(443)<a class="headerlink" href="#equation-filter-base-conditions" title="Permalink to this equation">¶</a></span>\[ Q_{Plant} = 6 \, \frac{L}{s} \,\,\,\,\, V_{Fi} = 1.8 \, \frac{mm}{s} \,\,\,\,\, V_{Bw} = 9 \, \frac{mm}{s}\]</div>
+<span class="eqno">(457)<a class="headerlink" href="#equation-filter-base-conditions" title="Permalink to this equation">¶</a></span>\[ Q_{Plant} = 6 \, \frac{L}{s} \,\,\,\,\, V_{Fi} = 1.8 \, \frac{mm}{s} \,\,\,\,\, V_{Bw} = 9 \, \frac{mm}{s}\]</div>
 <p>As the ratio of the backwash velocity to the filter velocity is 5, 5 filters will be needs to provide enough flow to backash one: Therefore the number of parallel filters is 6:</p>
 <p><span class="math notranslate nohighlight">\(N_{Fi} = \frac{V_{Bw}}{V_{Fi}} + 1 = 6\)</span></p>
 <p>In this system, the water exiting five of the filters would be diverted to backwash one of the other filters. In addtion to requiring the plan view area of 6 filters, each filter would need to be backwashed independently, meaning it would take 6x longer and use 6x the water as compared to just having one filter. Another detriment to this system is that in low flows (such as drought conditions) not enough water would be passing through the system to backwash at points since all the water is diverted to backwash.</p>

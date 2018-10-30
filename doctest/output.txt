@@ -1,4 +1,4 @@
-Results of doctest builder run on 2018-10-30 16:45:40
+Results of doctest builder run on 2018-10-30 17:50:02
 =====================================================
 
 Document: Textbook_Creation_Help/example_aguaclara_rst

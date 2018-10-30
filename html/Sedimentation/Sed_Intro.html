@@ -124,17 +124,16 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#floc-blankets">Floc blankets</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#floc-blanket-hypotheses">Floc blanket hypotheses</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#floc-hopper">Floc Hopper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plate-settlers">Plate Settlers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#manifold-hydraulics">Manifold Hydraulics</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#conventional-sedimentation-systems">Conventional Sedimentation Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#sedimentation-challenges-and-gaps-in-knowledge">Sedimentation Challenges and Gaps in Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#aguaclara-innovations">AguaClara Innovations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html#foundational-concepts">Foundational Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html#aguaclara-design-approach">AguaClara Design Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html#design-of-an-aguaclara-sedimentation-tank">Design of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html#sedimentation-challenges-confusions-and-failure-modes">Sedimentation Challenges, Confusions, and Failure Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
@@ -146,7 +145,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -237,29 +235,76 @@
             
   <div class="section" id="sedimentation-introduction">
 <span id="sedimentation-intro"></span><h1>Sedimentation Introduction<a class="headerlink" href="#sedimentation-introduction" title="Permalink to this headline">¶</a></h1>
-<p>The improved performance is due to 3 factors. First, the inlet manifold has a diffuser system that straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the sedimentation tank. Inlet manifolds without flow straightening diffusers are commonly used in vertical flow sedimentation tanks including designs by leading competitors.</p>
-<p>Second, the diffusers create a line jet that spans the entire length of the sedimentation tank. The line jet enters a jet reverser and the vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed (floc blanket) with a suspended solids concentrations of approximately 1-5 g/L. The high concentration of particles leads to an increase in collisions and particle aggregation. The floc blanket reduces settled water turbidity by a factor of 10 (Garland et al., 2017) and provides two additional benefits. The floc blanket creates a uniform vertical velocity of water entering the plate settlers and the floc blanket transports excess flocs to a floc hopper for final removal by opening a small drain valve.
-Third, the bottom geometry is shaped so that all flocs that settle are transported to the jet reverser. Thus there is no accumulation of settled flocs in the main sedimentation basin. Sludge that is allowed to accumulate in the bottom of sedimentation tanks in tropical and temperate decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the sedimentation tank and cause a reduction in particle removal efficiency.  The AguaClara sedimentation tank bottom geometry prevents sludge accumulation.
-The hydraulic self cleaning sedimentation tank with a high performing floc blanket, zero sludge accumulation, and with no moving parts outperforms conventional sedimentation tanks on capital cost, performance, and maintenance costs. Mechanical sludge removal systems are well known to be costly to install and a challenge to maintain.</p>
-<div class="section" id="floc-blankets">
-<span id="id1"></span><h2>Floc blankets<a class="headerlink" href="#floc-blankets" title="Permalink to this headline">¶</a></h2>
-<p>See the Pan American Health Organization, (PAHO) manual on <a class="reference external" href="../_static/references/CEPIS/CEPIS5_Batería_de_filtros.pdf">theory of rapid sand filtration plants rapid sand filters</a> (page 289) for reasons why floc blankets should not be used! According to PAHO, floc blankets are not recommended for small communities who lack highly trained personal to operate the plant and floc blanket should only be used where plant flow rates and water quality are constant. Each of these constraints was due to the inadequate design of previous floc blanket reactors that made operation difficult.</p>
-<div class="section" id="floc-blanket-hypotheses">
-<span id="id2"></span><h3>Floc blanket hypotheses<a class="headerlink" href="#floc-blanket-hypotheses" title="Permalink to this headline">¶</a></h3>
+<p id="sedimentation-unit-process-overview">Sedimentation a gravity-driven unit process in which suspended flocs are settled out from water. Large flocs made up of many primary particles and coagulant will settle if given enough time. Sedimentation is commonly preceded by coagulation/flocculation processes - coagulation/flocculation aim to form flocs which will be large enough to settle in sedimentation - and is commonly followed by filtration processes for further treatment. Sludge consolidation processes are often present alongside sedimentation to reduce the waste stream of settled flocs.</p>
+<p>To introduce you to sedimentation, we will begin with a simple example. If a jar of water filled with flocs was left at rest, flocs would begin to settle due to gravitational forces pulling them down. Large flocs would settle first, but if left for long enough, all flocs would settle to the bottom of the jar. In its most basic form, the jar represents a sedimentation tank in which flocculated water is treated. Settled flocs become waste and the water on the top of the jar, referred to as the supernatant, becomes the settled water.</p>
+<p>[INCLUDE FIGURE TO DEMONSTRATE EXAMPLE. Show different floc sizes settling over time in jar. Label flocculated water, supernatant and settled water].</p>
+<p>Constraints of space, time, and cost make it important to optimize the settling process. It would not be realistic to design water treatment systems that use the basic jar-like system to settle flocs because large flow rates would require unreasonably large reactor volumes and long retention times. The goal of sedimentation reactor design is to employ geometries that promote settling and allow for fast treatment with small footprints.</p>
+<p>The three main steps that need to be accomplished for a sedimentation system to be successful are as follows:</p>
+<ol class="arabic simple">
+<li>Suspended flocs need to be able to settle out of the water.</li>
+<li>Settling flocs need to be able to move from wherever they settle to a lower section of the tank.</li>
+<li>Accumulated flocs at the bottom of the tank need to be removed.</li>
+</ol>
+<p>Sedimentation is ubiquitous in water treatment. Nevertheless,  the process is very complex with many failure modes and there are many active research areas. The following sections will explore the state of conventional sedimentation systems and their challenges, gaps in knowledge, and the AguaClara approach to sedimentation.</p>
+</div>
+<div class="section" id="conventional-sedimentation-systems">
+<h1>Conventional Sedimentation Systems<a class="headerlink" href="#conventional-sedimentation-systems" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p class="first">Components of the reactors</p>
+</li>
+<li><p class="first">Examples of systems:
+- Two main categories are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>horizontal sedimentation</li>
+<li>vertical sedimentation</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>Differences between them include
+- Bottom type (flat, sloped)
+- Sludge removal apparatus (mostly mechanical but with different variations)
+- Flow distribution systems</li>
+</ul>
+</li>
+</ul>
+<p>Note: this chapter will not deal with other advanced clarification technologies past this point, except in making comparisons with AguaClara technology. Other interesting areas of advanced clarification include:</p>
+<ul class="simple">
+<li>ballasted Sedimentation (Actiflow)</li>
+<li>Superpulsator</li>
+<li>etc</li>
+</ul>
+</div>
+<div class="section" id="sedimentation-challenges-and-gaps-in-knowledge">
+<h1>Sedimentation Challenges and Gaps in Knowledge<a class="headerlink" href="#sedimentation-challenges-and-gaps-in-knowledge" title="Permalink to this headline">¶</a></h1>
+<p>Sedimentation Challenges:</p>
+<ul>
+<li><p class="first">Flow circulation (and floc rise) from uneven flow distribution</p>
+</li>
+<li><p class="first">Floc blanket design and use challenges</p>
+<p>See the Pan American Health Organization, (PAHO) manual on theory of rapid sand filtration plants (page 289) for reasons why floc blankets should not be used! According to PAHO floc blankets are not recommended for small communities who lack highly trained personal to operate the plant and floc blanket should only be used where plant flow rates and water quality are constant. Each of these constraints was due to the inadequate design of previous floc blanket reactors that made operation difficult.</p>
 <p>The floc blanket mechanism responsible for reduced settled water turbidity has been elusive.
 - not flocculation between particles delivered from the flocculator because $Gtheta$ generated by the shear of the settling flocs and the hydraulic residence time of the floc blanket is insufficient to cause significant
 - The floc blanket consists of settling flocs that are maintained in suspension by the upwardly flowing water.</p>
+</li>
+<li><p class="first">Sludge accumulation</p>
+</li>
+</ul>
+<p>Gaps in Knowledge:</p>
+<ul class="simple">
+<li>Empirical standards (10 state standards)
+- Settle capture velocity guidelines</li>
+<li>No understanding of scaling effects</li>
+<li>“last significant paper on tube settlers published in 1978” - needs confirmation/more details</li>
+</ul>
 </div>
-</div>
-<div class="section" id="floc-hopper">
-<span id="id3"></span><h2>Floc Hopper<a class="headerlink" href="#floc-hopper" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="plate-settlers">
-<span id="id4"></span><h2>Plate Settlers<a class="headerlink" href="#plate-settlers" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="manifold-hydraulics">
-<span id="id5"></span><h2>Manifold Hydraulics<a class="headerlink" href="#manifold-hydraulics" title="Permalink to this headline">¶</a></h2>
-</div>
+<div class="section" id="aguaclara-innovations">
+<h1>AguaClara Innovations<a class="headerlink" href="#aguaclara-innovations" title="Permalink to this headline">¶</a></h1>
+<p>Note: focus this section on just explaining the 3 problem areas that exist that AguaClara tech focuses on. Do not go into detail about each component because that will be detailed more in Sed_Design</p>
+<p>The improved performance is due to 3 factors.
+- improved inlet system to prevent circulation (inlet manifold with diffusers)
+- self-sustaining floc blanket (bottom geometry and diffusers for floc blanket)
+- prevent sludge accumulation and allow for self-cleaning (bottom geometry jet reverser and floc hopper)</p>
 </div>
 
 
