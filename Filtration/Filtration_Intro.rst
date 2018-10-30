@@ -151,11 +151,11 @@ Reflection: How did we get to 2018 without a model for filter performance? There
 Clean bed filtration models include an equation first presented by Iwasaki in 1937 that suggested that particle removal occurred as a first order process with respect to depth. This simplifies to
 
 .. math::
-   :label: filter_Iwasaki
+    :label: filter_Iwasaki
 
-  pC^* \propto \frac{L}{D_{sand}}
+    pC^* \propto \frac{L}{D_{sand}}
 
-where L is the depth of the sand in the column. This suggests that increasing the depth of sand in a filter would dramatically improve performance. 
+where L is the depth of the sand in the column. This suggests that increasing the depth of sand in a filter would dramatically improve performance.
 
 It is quite amazing that we have no useful models for sand filter performance after more than a century of using sand filters as a required process in converting surface waters into safe drinking water. Fortunately we have plenty of clues suggesting what is happening inside filters and at the level of the particles traveling through the pores.
 
@@ -177,7 +177,7 @@ The linear increase in head loss with time (see :refnum:`figure_Head_loss_vs_tim
 .. _figure_Head_loss_vs_time:
 
 .. figure:: Images/Head_loss_vs_time.png
-   :width: 400px
+   :width: 800px
    :align: center
    :alt: Head loss increases linearly with time
 
@@ -201,7 +201,7 @@ If pores clogged completely, then sand filters would clog as soon as one layer o
 
 .. _figure_Flocs_teleporting:
 
-.. figure:: Images/Flocs_teleporting.png
+.. figure:: Images/Flocs_teleport.png
    :target: https://youtu.be/lgfggRX_Wgs
    :width: 300px
    :align: center
