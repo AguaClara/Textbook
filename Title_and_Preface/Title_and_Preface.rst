@@ -7,24 +7,34 @@ Laboratory Research in Environmental Engineering
 Laboratory Manual
 *****************
 
+.. _figure_apparatus_schematic:
+
+.. figure:: Images/aeration.png
+    :width: 800px
+    :align: center
+    :alt: internal figure
 
 
 
-Monroe L. Weber-Shirk
-Senior Lecturer
+| Monroe L. Weber-Shirk
+| Senior Lecturer
 
-Leonard W. Lion
-Professor Emeritus
+ |
+| Leonard W. Lion
+| Professor Emeritus
 
-James J. Bisogni, Jr.
-Professor Emeritus
+ |
+| James J. Bisogni, Jr.
+| Professor Emeritus
 
-Damian E Helbling
-Assistant Professor
+ |
+| Damian E Helbling
+| Assistant Professor
 
-School of Civil and Environmental Engineering
-Cornell University
-Ithaca, NY 14853
+ |
+| School of Civil and Environmental Engineering
+| Cornell University
+| Ithaca, NY 14853
 
 
 
