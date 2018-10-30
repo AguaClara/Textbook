@@ -36,7 +36,7 @@ In our early modeling work we assumed that collisions between primary particles 
 
 The only transport mechanism that could cause a clay particle to collide with a large floc is the fluid deformation caused by the linear velocity gradient. In our flocculators that linear velocity gradient is caused by turbulent eddies at much larger scales of the flow. We hypothesize that primary particles can not attach to large flocs because primary particles can not collide with large flocs! To understand why this collision is impossible, we need a simple insight.
 
-The insight is that the large flocs drag fluid around as they rotates (due to the linear velocity gradient). The viscous layer around the large flocs creates a flow field in which there is no location far from the flocs that will eventually approach the surface of the flocs or even approach within the clay particle radius. If this is correct, then clay particles never collide with large flocs in a linear velocity gradient flow field.
+The insight is that the large flocs drag fluid around as they rotate (due to the linear velocity gradient). The viscous layer around the large flocs creates a flow field in which there is no location far from the flocs that will eventually approach the surface of the flocs or even approach within the clay particle radius. If this is correct, then clay particles never collide with large flocs in a linear velocity gradient flow field.
 
 .. todo:: Find evidence that proves or disproves the hypothesis that no collisions occur between dissimilar sized particles in a linear velocity gradient.
 
@@ -48,12 +48,12 @@ Relative velocities between particles are dominated by viscous shear because the
 .. math::
    :label: eq_spacing_of_number_concentration
 
-   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{\kern.08em--}V_{\rm{Surround}}}^\frac{1}{3}
+   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{-} V_{\rm{Surround}}}^\frac{1}{3}
 
 | Where:
 | :math:`\bar \Lambda` is the average separation distance
 | :math:`n_P` is the number of particles per volume of suspension
-| :math:`{\rlap{\kern.08em--}V_{\rm{Surround}}}` is the suspension volume occupied by one particle
+| :math:`{\rlap{-} V_{\rm{Surround}}}` is the suspension volume occupied by one particle
 
 The number concentration of particles is given by
 
@@ -207,15 +207,15 @@ Now that we know that the collisions are controlled by viscosity we can begin fo
 
 The volume cleared by the wandering particle is proportional to the area defined by a circle with diameter = sum of the particle diameters. This is because the wandering particle with strike the stationary particle if the wandering particle's center is anywhere within a diameter of the center of the stationary particle.
 
-.. math:: {\rlap{\kern.08em--}V_{\rm{Cleared}}} \propto \pi \bar d_P^2
+.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto \pi \bar d_P^2
 
 The volume cleared is proportional to time
 
-.. math:: {\rlap{\kern.08em--}V_{\rm{Cleared}}} \propto t
+.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto t
 
 The volume cleared is proportional to the relative velocity between the two particles.
 
-.. math:: {\rlap{\kern.08em--}V_{\rm{Cleared}}} \propto \bar v_r
+.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto \bar v_r
 
 We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between the two particles that will eventually collide is assumed to be proportional to the average distance between the two particles.
 
@@ -231,10 +231,10 @@ The only way to for :math:`\bar \varepsilon` and :math:`\nu` to produce dimensio
 
 .. math:: \bar v_r \approx \bar \Lambda \bar G_{CS}
 
-The volume cleared, :math:`{\rlap{\kern.08em--}V_{\rm{Cleared}}}` must equal the volume occupied by one particle, :math:`{\rlap{\kern.08em--}V_{\rm{Surround}}}` for a collision to occur. Combining the three equations for :math:`{\rlap{\kern.08em--}V_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared as a function of time.
+The volume cleared, :math:`{\rlap{-} V_{\rm{Cleared}}}` must equal the volume occupied by one particle, :math:`{\rlap{-} V_{\rm{Surround}}}` for a collision to occur. Combining the three equations for :math:`{\rlap{-} V_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared as a function of time.
 
 .. math::
-   \bar \Lambda^3 = {\rlap{\kern.08em--}V_{\rm{Surround}}} = {\rlap{\kern.08em--}V_{\rm{Cleared}}} \approx \pi \bar d_P^2 \bar \Lambda \bar G_{CS} \bar t_c
+   \bar \Lambda^3 = {\rlap{-} V_{\rm{Surround}}} = {\rlap{-} V_{\rm{Cleared}}} \approx \pi \bar d_P^2 \bar \Lambda \bar G_{CS} \bar t_c
 
 | Where:
 | :math:`\bar t_c` is the average time required for a collision between two particles

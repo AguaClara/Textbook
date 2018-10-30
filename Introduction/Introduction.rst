@@ -303,7 +303,7 @@ Chlorine is widely recognized for reducing mortality from water borne disease in
    Lamellar sedimentation, plate or tube settlers, flocculation or floc blanket, public, `1904 <http://www.hydroflotech.com/inclined-plate-clarifier-basic-theory-of-operation>`_
    Roughing filter, simple sedimentation in a gravel bed, none, public, `unknown <https://www.researchgate.net/publication/237827490_Roughing_filter_for_water_pre-treatment_technology_in_developing_countries_A_review?enrichId=rgreq-bb1d04e6613378d626c78cadb6674ae8&enrichSource=Y292ZXJQYWdlOzIzNzgyNzQ5MDtBUzoyMDAwMDczMDQxMjY0NjdAMTQyNDY5Njg2NTYxMQ%3D%3D&el=1_x_2>`_
    Slow sand filtration, Roughing filter or single step treatment for low NTU water, none, public, `1829 <https://en.wikipedia.org/wiki/Slow_sand_filter>`_
-   Rapid sand filtration, depth filtration, sedimentation, public, `1920 <https://en.wikipedia.org/wiki/Rapid_sand_filter>`_
+   Rapid sand filtration, depth filtration, sedimentation, public, `1920 <https://en.wikipedia.org/wiki/RapiD_sand_filter>`_
    Stacked rapid sand filter, gravity powered backwash, lamellar sedimentation, AguaClara Cornell open source, `2012 <https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EE.1943-7870.0000562>`_
    Floc blanket, upflow fluidized suspension of flocs, flocculation, public, `1930 <https://link.springer.com/chapter/10.1007%2F978-3-642-61196-4_2>`_
    Jet reverser floc blanket, first fully fluidized floc blanket, flocculation, AguaClara Cornell open source, `2012 <http://cuaguaclara.blogspot.com/2012/08/the-floc-blanket-quest.html>`_

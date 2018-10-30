@@ -348,7 +348,7 @@ $$h_{\rm{f}} \approx \frac{32 \mu L V_{pore}}{\rho g d_{pore}^2}$$
 
 $$\nu  = \frac{\mu}{\rho}$$
 
-$$\frac{h_{\rm{f}}}{L} = 36k \frac{\left( 1 - \varepsilon \right)^2}{\varepsilon^3} \frac{\nu V_a}{g d_{sand}^2}$$
+$$\frac{h_{\rm{f}}}{L} = 36k \frac{\left( 1 - \varepsilon \right)^2}{\varepsilon^3} \frac{\nu V_a}{g D_{sand}^2}$$
 
 
 ### Float Valve head loss
