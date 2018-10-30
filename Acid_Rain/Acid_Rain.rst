@@ -17,15 +17,15 @@
 %\selectlanguage{english} %%% remove comment delimiter ('%') and select language if required
 
 
-\noindent C:{\textbackslash}WINNT{\textbackslash}Profiles{\textbackslash}mlws{\textbackslash}Application Data{\textbackslash}Microsoft{\textbackslash}Templates{\textbackslash}lab manual.dot
+ C:{\textbackslash}WINNT{\textbackslash}Profiles{\textbackslash}mlws{\textbackslash}Application Data{\textbackslash}Microsoft{\textbackslash}Templates{\textbackslash}lab manual.dot
 
-\noindent
 
-\noindent
 
-\noindent
 
-\noindent
+
+
+
+
 
 .. math::
 
@@ -33,27 +33,29 @@
 
 
 
-\noindent
 
-\noindent Acid Precipitation and Remediation of Acid Lakes
 
-\noindent CEE 4530: \textit{Laboratory Research in Environmental Engineering}Spring, 2018
+ Acid Precipitation and Remediation of Acid Lakes
 
-\noindent
+ CEE 4530: \textit{Laboratory Research in Environmental Engineering}Spring, 2018
 
-\noindent
 
-\noindent
-\section{Acid Precipitation and Remediation of PlaceNameplaceAcid PlaceTypeLakes}
 
-\noindent
-\subsection{Introduction}
+
+
+
+================
+Acid Precipitation and Remediation of PlaceNameplaceAcid PlaceTypeLakes}
+
+
+------------------
+Introduction}
 
 Acid precipitation has been a serious environmental problem in many areas of the world for the last few decades. Acid precipitation results from the combustion of fossil fuels which produce oxides of sulfur and nitrogen that react in the earth's atmosphere to form sulfuric and nitric acid. One of the most significant impacts of acid rain is the acidification of lakes and streams. In some watersheds the soil doesn't provide ample acid neutralizing capacity to mitigate the effect of incident acid precipitation. These susceptible regions are usually high elevation lakes with small watersheds and shallow non-calcareous soils. The underlying bedrock of acid-sensitive lakes tends to be granite or quartz. These minerals are slow to weather and therefore have little capacity to neutralize acids. The relatively short contact time between the acid precipitation and the watershed soil system exacerbates the problem. Lakes most susceptible to acidification: 1) are located downwind, sometimes hundreds of miles downwind, from major pollution sources--electricity generation, metal refining operations, heavy industry, large population centers, etc.; 2) are surrounded by hard, insoluble bedrock with thin, sandy, infertile soil; 3) have a high runoff to infiltration ratio; 4) have a low watershed to lake surface area. Isopleths of precipitation pH are depicted in Figure \eqref{ZEqnNum895787}.
 
-\noindent \includegraphics*[width=5.77in, height=3.49in, keepaspectratio=false]{image1}
+ \includegraphics*[width=5.77in, height=3.49in, keepaspectratio=false]{image1}
 
-\noindent Figure  \label{ZEqnNum895787}. The pH of precipitation in 2009.
+ Figure  \label{ZEqnNum895787}. The pH of precipitation in 2009.
 
 In acid-sensitive lakes the major parameter of concern is pH (pH = -logcitation$\mathrm{\{}$H+$\mathrm{\}}$, where citation$\mathrm{\{}$H+$\mathrm{\}}$ is the hydrogen ion activity, and activity is approximately equal to concentration in moles/L). In a healthy lake, ecosystem pH should be in the range of 6.5 to 8.5. In most natural freshwater systems, the dominant pH buffering (controlling) system is the carbonate system. The carbonate buffering system is composed of four components: dissolved carbon dioxide (${\rm CO}_{{\rm 2\; aq}} $), carbonic acid (${\rm H}_{{\rm 2}} {\rm CO}_{{\rm 3}} $), bicarbonate (${\rm HCO}_{{\rm 3}}^{{\rm -}} $), and carbonate (${\rm CO}_{{\rm 3}}^{{\rm -2}} $). Carbonic acid exists only at very low levels in aqueous systems and for purposes of acid neutralization is indistinguishable from dissolved carbon dioxide. Thus to simplify things we define
 \begin{equation} \label{ZEqnNum141302}
@@ -68,8 +70,9 @@ The sum of the molar concentrations of all the components of the carbonate syste
 
 The carbonate system can be considered to be a "volatile" system or a "non-volatile" system depending on whether or not aqueous carbon dioxide is allowed to exchange and equilibrate with atmospheric carbon dioxide. Mixing conditions and hydraulic residence time determine whether an aquatic system is volatile or non-volatile relative to atmospheric carbon dioxide equilibrium. First, consider the "non-volatile" system.
 
-\noindent
-\paragraph{ Non-volatile System}
+
+^^^^^^^^^^^^^^^^^^^^^
+ Non-volatile System}
 
  For a fixed CT, the molar concentration of each species of the carbonate system is determined by pH. Equations \eqref{ZEqnNum342954}-\eqref{ZEqnNum931548} show these functional relationships.
 \begin{equation} \label{ZEqnNum342954}
@@ -110,7 +113,7 @@ ANC=C_{T} \left(\alpha _{1} +2\alpha _{2} \right)+{\rm \; }\frac{K_{w} }{\left[{
 
 For the carbonate system, ANC is usually referred to as \textbf{alkalinity}.\footnote{Alkalinity can be expressed as equivalents/L or as mg/L (ppm) of CaCO3. 50,000 mg/L CaCO3 = 1 equivalent/L.}
 
-\noindent
+
 \paragraph{Volatile Systems: }
 
  Now consider the case where aqueous ${\rm CO}_{{\rm 2\; aq}} $ is volatile and in equilibrium with atmospheric carbon dioxide. Henry's Law can be used to describe the equilibrium relationship between atmospheric and dissolved carbon dioxide.
@@ -157,7 +160,7 @@ In essence, the ANC of a system is a result of the reaction of acid inputs to fo
 
 Neutralization of acid precipitation can occur in the watershed or directly in the lake. How much neutralization occurs in the watershed versus the lake is a function of the watershed to lake surface area. Generally, watershed neutralization is dominant. Recently engineered remediation of acid lakes has been accomplished by adding bases such as limestone, lime, or sodium bicarbonate to the watershed or directly to the lakes.
 
-\noindent
+
 \paragraph{Reactor theory applied to PlaceNameplaceAcid PlaceTypeLake Remediation}
 
 In this experiment sodium bicarbonate will be added to a lake to mitigate the deleterious effect of acid rain. Usually sodium bicarbonate is added in batch doses (as opposed to metering in). The quantity of sodium bicarbonate added depends on how long a treatment is desired, the acceptable pH range and the quantity and pH of the incident rainfall. For purposes of this experiment, a 15-minute design period will be used. That is, we would like to add enough sodium bicarbonate to keep the lake at or above its original pH and alkalinity for a period of 15 minutes (\textit{i.e.}, for one hydraulic residence time).
@@ -178,7 +181,7 @@ V = volume of reactor
 
 Q = acid rain input flow rate.
 
-\noindent If the initial ANC in the lake is designated as ANC0, then the solution to the mass balance differential equation is:
+ If the initial ANC in the lake is designated as ANC0, then the solution to the mass balance differential equation is:
 \begin{equation} \label{ZEqnNum453783}
 ANC_{out} \; =\; ANC_{in} \; \cdot \; \left(1\; -\; {\mathop{e}\nolimits^{-t/\theta \; \; }} \right)+\; ANC_{0} \; \cdot \; {\mathop{e}\nolimits^{-t/\theta \; }}
 \end{equation}
@@ -205,60 +208,63 @@ The quantity of sodium bicarbonate required can be calculated from:
 
  [NaHCO3]${}_{0}$ =ANC${}_{0}$ \label{1.25}
 
-\noindent where [NaHCO3]0 = moles of sodium bicarbonate required per liter of lake water
+ where [NaHCO3]0 = moles of sodium bicarbonate required per liter of lake water
 \begin{equation} \label{1.26}
 \frac{{\rm 1.854\; mmole\; NaHCO}_{{\rm 3}} }{{\rm liter}} {\rm \times }\frac{{\rm 84\; mg\; NaHCO}_{{\rm 3}} }{{\rm mmole\; NaHCO}_{{\rm 3}} } {\rm \times \; 4\; Liters\; =\; 623\; mg\; NaHCO}_{{\rm 3}}
 \end{equation}
 
-\subsection{Experimental Objectives}
+------------------
+Experimental Objectives}
 
 Remediation of acid lakes involves addition of ANC so that the pH is raised to an acceptable level and maintained at or above this level for some design period. In this experiment sodium bicarbonate (NaHCO3) will be used as the ANC supplement. Since ANC addition usually occurs as a batch addition, the design pH is initially exceeded. ANC dosage is selected so that at the end of the design period pH is at the acceptable level. Care must be taken to avoid excessive initial pH --- high pH can be as deleterious as low pH.
 
 The most common remediation procedure is to apply the neutralizing agent directly to the lake surface, instead of on the watershed. We will follow that practice in this lab experiment. Sodium bicarbonate will be added directly to the surface of the lake that has an initial ANC of 0 �eq/L and is receiving acid rain with a pH of 3. After the sodium bicarbonate is applied, the lake pH and ANC will be monitored for over two approximately 20 minute periods.
 
-\noindent
-\subsection{Experimental Apparatus}
+
+------------------
+Experimental Apparatus}
 
 The experimental apparatus consists of an acid rain storage reservoir, peristaltic pump, and lake (Figure \eqref{ZEqnNum792377}). The pH of the lake will be monitored using a pH probe connected to a signal-conditioning box that is connected to the laboratory data acquisition system.
 
-\noindent
 
-\noindent Figure  \label{ZEqnNum792377}. Schematic drawing of the experimental setup.
 
-\noindent
-\subsection{Experimental Procedures}
+ Figure  \label{ZEqnNum792377}. Schematic drawing of the experimental setup.
+
+
+------------------
+Experimental Procedures}
 
 The following directions are written for the use of ProCoDA II hardware and software for pH data collection and manual control of the peristaltic pump. It would also be possible to use automate the experiment and control the pump using the ProCoDA II hardware and software.
 
 We will use a pH probe to measure pH in this experiment. The pH probes are stored in a small plastic box.  Each bench has one pH probe. Plug the pH probe into the blue signal-conditioning box (it takes a push and a twist). Connect the blue cable to one of the sensor ports on your ProCoDA box.
 
-\noindent \begin{enumerate}
+ \begin{enumerate}
 \item 1) )Open the ProCoDA II software.
 
-\noindent \item 2) )Navigate to the ``Configuration'' tab and select the ``volts'' button.
+ \item 2) )Navigate to the ``Configuration'' tab and select the ``volts'' button.
 
-\noindent \item 3) )Delete any sensors in the ``Sensor List'' and the insert a new sensor using the ``insert sensor'' button.
+ \item 3) )Delete any sensors in the ``Sensor List'' and the insert a new sensor using the ``insert sensor'' button.
 
-\noindent \item 4) )Select the appropriate channel based on in which sensor port you plugged you pH probe.
+ \item 4) )Select the appropriate channel based on in which sensor port you plugged you pH probe.
 
-\noindent \item 5) )Select ``pH Cal.''
+ \item 5) )Select ``pH Cal.''
 
-\noindent \item 6) )The pH probe should never be dry and is therefore stored with a small vial of pH 4.0 buffer screwed onto the tip.  Unscrew the storage vial cap and place the vial in a place where it will not be tipped over (the cap can stay on the probe).
+ \item 6) )The pH probe should never be dry and is therefore stored with a small vial of pH 4.0 buffer screwed onto the tip.  Unscrew the storage vial cap and place the vial in a place where it will not be tipped over (the cap can stay on the probe).
 
-\noindent \item 7) )Rinse the pH probe with DI water (use a squeeze bottle) into a beaker.
+ \item 7) )Rinse the pH probe with DI water (use a squeeze bottle) into a beaker.
 
-\noindent \item 8) )To calibrate the pH probe, we will use three pH buffer solutions with known pH (red=4.0, yellow=7.0, and blue=10.0).  After rinsing the pH probe, place it into the pH=4.0 buffer.  Stir gently and wait for the pH reading on the software to stabilize.  Once stabilized, press the ``add buffer'' button.  Rinse the pH probe with DI water and repeat for the pH=7.0 and pH=10.0 buffer solutions.
+ \item 8) )To calibrate the pH probe, we will use three pH buffer solutions with known pH (red=4.0, yellow=7.0, and blue=10.0).  After rinsing the pH probe, place it into the pH=4.0 buffer.  Stir gently and wait for the pH reading on the software to stabilize.  Once stabilized, press the ``add buffer'' button.  Rinse the pH probe with DI water and repeat for the pH=7.0 and pH=10.0 buffer solutions.
 
-\noindent \item 9) )When you have tested all calibration buffers, hit, ``OK.'' And ``OK'' again.
+ \item 9) )When you have tested all calibration buffers, hit, ``OK.'' And ``OK'' again.
 
-\noindent \item 10) )Verify that the experimental setup is plumbed so that the ``acid rain'' is pumped directly into the lake.  The lake outflow should discharge into the small drain on the side of your work bench.
+ \item 10) )Verify that the experimental setup is plumbed so that the ``acid rain'' is pumped directly into the lake.  The lake outflow should discharge into the small drain on the side of your work bench.
 
-\noindent \item 11) )Organize the bench setup so that the metal tube discharging the acid rain into the lake is solidly touching the metal stand that is connected to the stirrer. This will ground the solution that is in the lake and reduce voltage fluctuations that are easily measured by the pH probe.
+ \item 11) )Organize the bench setup so that the metal tube discharging the acid rain into the lake is solidly touching the metal stand that is connected to the stirrer. This will ground the solution that is in the lake and reduce voltage fluctuations that are easily measured by the pH probe.
 
-\noindent \item 12) )Preset pump to give desired flow rate of 267 mL/min (4 L/15 minutes) based on the size of pump tubing selected. Do not turn the pump on yet! For each tubing size, different pump speeds will correspond to different flow rates being output by the pump. The peristaltic tubing sizes are rather arbitrary and are labeled by numbers: 13, 14, 16, 17, and 18 in increasing order of size. If you have \#18 tubing, you will want an RPM setting of (267 mL/min) / (3.8 mL/rev) = 70.3 RPM.
+ \item 12) )Preset pump to give desired flow rate of 267 mL/min (4 L/15 minutes) based on the size of pump tubing selected. Do not turn the pump on yet! For each tubing size, different pump speeds will correspond to different flow rates being output by the pump. The peristaltic tubing sizes are rather arbitrary and are labeled by numbers: 13, 14, 16, 17, and 18 in increasing order of size. If you have \#18 tubing, you will want an RPM setting of (267 mL/min) / (3.8 mL/rev) = 70.3 RPM.
 \end{enumerate}
 
-\noindent
+
 
 \begin{tabular}{|p{0.4in}|p{0.9in}|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|} \hline
  & Tubing Size & 13 & 14 & 16 & 17 & 18 \\ \hline
@@ -271,43 +277,43 @@ flow rate in mL/s & 1 & 0.0010 & 0.0035 & 0.0133 & 0.0467 & 0.0633 \\ \hline
 
 
 
-\noindent \begin{enumerate}
+ \begin{enumerate}
 \item 13) )Fill lake with reverse osmosis water and verify that the outflow is set so the lake volume is approximately 4 L.  Place the ``lake'' on top of a magnetic stirrer and add a stir bar.
 
-\noindent \item 14) )Set stirrer speed to 8.
+ \item 14) )Set stirrer speed to 8.
 
-\noindent \item 15) )Add 1 mL of bromocresol green indicator solution to the lake.
+ \item 15) )Add 1 mL of bromocresol green indicator solution to the lake.
 
-\noindent \item 16) )Weigh out 623 mg (not grams!) NaHCO3.
+ \item 16) )Weigh out 623 mg (not grams!) NaHCO3.
 
-\noindent \item 17) )Add NaHCO3 to the lake.
+ \item 17) )Add NaHCO3 to the lake.
 
-\noindent \item 18) )After the lake is well stirred take a 100 mL sample from the lake in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample).
+ \item 18) )After the lake is well stirred take a 100 mL sample from the lake in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample).
 
-\noindent \item 19) )Clip the pH probe to the side of your lake in a more quiescent zone, away from the influent and effluent.
+ \item 19) )Clip the pH probe to the side of your lake in a more quiescent zone, away from the influent and effluent.
 
-\noindent \item 20) )We will continuously measure the pH of the effluent and log the data into a spreadsheet format.  In the pH meter software, set the data interval to 1 second.
+ \item 20) )We will continuously measure the pH of the effluent and log the data into a spreadsheet format.  In the pH meter software, set the data interval to 1 second.
 \end{enumerate}
 
-\noindent Begin logging data to file by clicking on the \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image2} button. Create a new file in S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}Lab 2 -- Acid Rain{\textbackslash} with your netids in the name.
+ Begin logging data to file by clicking on the \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image2} button. Create a new file in S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}Lab 2 -- Acid Rain{\textbackslash} with your netids in the name.
 
-\noindent \begin{enumerate}
+ \begin{enumerate}
 \item 21) )Prepare to write a comment in the file to mark the time when the pump starts by clicking on the \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image3} button. Type in a comment and then wait.
 
-\noindent \item 22) )At time equal zero (t=0) start the peristaltic pump and click on the enter button in the comment dialog box.
+ \item 22) )At time equal zero (t=0) start the peristaltic pump and click on the enter button in the comment dialog box.
 
-\noindent \item 23) )Take 100-mL grab samples from the lake effluent at 5, 10, 15, and 20 minutes in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample). The sample volumes do not need to be measured exactly.
+ \item 23) )Take 100-mL grab samples from the lake effluent at 5, 10, 15, and 20 minutes in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample). The sample volumes do not need to be measured exactly.
 
-\noindent \item 24) )After the 20-minute sample, measure the flow rate by collecting effluent in a beaker for 30 seconds and measuring the volume collected (in a graduated cylinder for more accurate measurement).
+ \item 24) )After the 20-minute sample, measure the flow rate by collecting effluent in a beaker for 30 seconds and measuring the volume collected (in a graduated cylinder for more accurate measurement).
 
-\noindent \item 25) )Turn off the pump and stop measuring pH.
+ \item 25) )Turn off the pump and stop measuring pH.
 
-\noindent \item 26) )Measure the lake volume.  This can be done in a large graduated cylinder OR by taking the mass of the water in the lake.  Which would be more accurate?
+ \item 26) )Measure the lake volume.  This can be done in a large graduated cylinder OR by taking the mass of the water in the lake.  Which would be more accurate?
 
-\noindent \item 27) )Repeat the experiment and change one of the following parameters: stirring, initial ANC, ANC source (use CaCO${}_{3}$ instead of NaHCO${}_{3}$), amount if ANC added.
+ \item 27) )Repeat the experiment and change one of the following parameters: stirring, initial ANC, ANC source (use CaCO${}_{3}$ instead of NaHCO${}_{3}$), amount if ANC added.
 \end{enumerate}
 
-\noindent
+
 \paragraph{Analytical Procedures}
 
 \textbf{pH}. pH (-logcitation$\mathrm{\{}$H+$\mathrm{\}}$) is usually measured electrometrically with a pH meter. The pH meter is a null-point potentiometer that measures the potential difference between an indicator electrode and a reference electrode. The two electrodes commonly used for pH measurement are the glass electrode and a reference electrode. The glass electrode is an indicator electrode that develops a potential across a glass membrane as a function of the activity ($\mathrm{\sim}$ molarity) of H+. Combination pH electrodes, in which the H+-sensitive and reference electrodes are combined within a single electrode body will be used in this lab. The reference electrode portion of a combination pH electrode is a [Ag/AgCl/4M KCl] reference. The response (output voltage) of the electrode follows a "Nernstian" behavior with respect to H+ ion activity.
@@ -329,15 +335,17 @@ A 50 to 100-mL sample is usually titrated while slowly stirred by a magnetic sti
 
 A more accurate technique to measure ANC is the Gran plot analysis. This is the subject of next week's analysis. We will directly measure the ANC of the samples that were taken at t=0, 5, 10, 15, and 20 minutes in both of your experiments by means of a Gran plot analysis.
 
-\noindent
-\subsection{Pre-Laboratory Questions}
 
-\noindent \begin{enumerate}
+------------------
+Pre-Laboratory Questions}
+
+ \begin{enumerate}
 \item 1) )How many grams of NaHCO3 would be required to keep the ANC levels in a lake above 50 �eq/L for 3 hydraulic residence times given an influent pH of 3.0 and a lake volume of 4 L, if the current PlaceTypeplacelake PlaceNameANC is 0 �eq/L?
 \end{enumerate}
 
-\noindent
-\subsection{Data Analysis}
+
+------------------
+Data Analysis}
 
 K1 = 10-6.3, placeK2 = 10-10.3, KH = 10-1.5~mol/atm~L, PCO2~=~10-3.5 atm, and Kw = 10-14.
 
@@ -353,44 +361,47 @@ K1 = 10-6.3, placeK2 = 10-10.3, KH = 10-1.5~mol/atm~L, PCO2~=~10-3.5 atm, and Kw
 \item  Analyze the data from the 2${}^{nd}$ experiment and graph the data appropriately. What did you learn from the 2${}^{nd}$ experiment?
 \end{enumerate}
 
-\noindent
-\subsection{Questions}
 
-\noindent \begin{enumerate}
+------------------
+Questions}
+
+ \begin{enumerate}
 \item 1) )What do you think would happen if enough NaHCO${}_{3}$ were added to the lake to maintain an ANC greater than 50 �eq/L for 3 residence times with the stirrer turned off? How much NaHCO${}_{3}$ would need to be added?
 
-\noindent \item 2) )What are some of the complicating factors you might find in attempting to remediate a lake using CaCO3? Below is a list of issues to consider.
+ \item 2) )What are some of the complicating factors you might find in attempting to remediate a lake using CaCO3? Below is a list of issues to consider.
 
-\noindent \item ? �extent of mixing
+ \item ? �extent of mixing
 
-\noindent \item ? �solubility of CaCO3 (find the solubility and compare with NaHCO${}_{3}$)
+ \item ? �solubility of CaCO3 (find the solubility and compare with NaHCO${}_{3}$)
 
-\noindent \item ? �density of CaCO3 slurry (find the density of CaCO3)
+ \item ? �density of CaCO3 slurry (find the density of CaCO3)
 \end{enumerate}
 
-\noindent
-\subsection{References}
 
-\noindent Driscoll, C.T., Jr. and Bisogni, J.J., Jr., "Weak Acid/Base Systems in Dilute Acidified Lakes and Streams of the Adirondack Region of New York State," in \textit{Modeling of Total Acid Precipitation Impacts} J.L. Schnoor (ed.), Butterworth, Stoneham, MA., 53-72 (1983).
+------------------
+References}
 
-\noindent Driscoll, C.T., Baker, J.P., Bisogni, J.J., And Schofield, C.L., "Aluminum Speciation and Equilibria in Dilute Surface Waters of the Adirondack Region of New York State," in \textit{Geological Aspects of Acid Deposition} O.P. Bricker (ed.), Butterworth, Stoneham, MA., 55-75 (1984).
+ Driscoll, C.T., Jr. and Bisogni, J.J., Jr., "Weak Acid/Base Systems in Dilute Acidified Lakes and Streams of the Adirondack Region of New York State," in \textit{Modeling of Total Acid Precipitation Impacts} J.L. Schnoor (ed.), Butterworth, Stoneham, MA., 53-72 (1983).
 
-\noindent Barnard. T.E., And Bisogni, J.J., Jr., "Errors in Gran Function Analysis of Titration Data for Dilute Acidified Water," \textit{Water Research}, 19, No. 3 393-399 (1985).
+ Driscoll, C.T., Baker, J.P., Bisogni, J.J., And Schofield, C.L., "Aluminum Speciation and Equilibria in Dilute Surface Waters of the Adirondack Region of New York State," in \textit{Geological Aspects of Acid Deposition} O.P. Bricker (ed.), Butterworth, Stoneham, MA., 55-75 (1984).
 
-\noindent Bisogni, J.J., Jr. and Barnard, T.E., "Numerical Technique to Correct for Weak Acid Errors in Gran Function Analysis of Titration Data," \textit{Water Research}, 21, No. 10, 1207-1216 (1987).
+ Barnard. T.E., And Bisogni, J.J., Jr., "Errors in Gran Function Analysis of Titration Data for Dilute Acidified Water," \textit{Water Research}, 19, No. 3 393-399 (1985).
 
-\noindent Bisogni, J.J., Jr., "Fate of Added Alkalinity During Neutralization of an PlaceNameplaceAcid PlaceTypeLake," \textit{Journal Environmental Engineering}, ASCE, 114, No. 5, 1219-1224 (1988).
+ Bisogni, J.J., Jr. and Barnard, T.E., "Numerical Technique to Correct for Weak Acid Errors in Gran Function Analysis of Titration Data," \textit{Water Research}, 21, No. 10, 1207-1216 (1987).
 
-\noindent Bisogni, J.J., Jr., and CityplaceKishbaugh, country-regionS.A., "Alkalinity Destruction by Sediment Organic Matter Dissolution During Neutralization of Acidified Lakes," \textit{Water, Air and Soil Pollution}, 39, 85-95 (1988).
+ Bisogni, J.J., Jr., "Fate of Added Alkalinity During Neutralization of an PlaceNameplaceAcid PlaceTypeLake," \textit{Journal Environmental Engineering}, ASCE, 114, No. 5, 1219-1224 (1988).
 
-\noindent Bisogni, J.J., Jr. and Arroyo, S.L., "The Effect of Carbon Dioxide Equilibrium on pH in PlaceNameplaceDilute PlaceTypeLakes," \textit{Water Research}, 25, No. 2, 185-190 (1991).
+ Bisogni, J.J., Jr., and CityplaceKishbaugh, country-regionS.A., "Alkalinity Destruction by Sediment Organic Matter Dissolution During Neutralization of Acidified Lakes," \textit{Water, Air and Soil Pollution}, 39, 85-95 (1988).
 
-\noindent Olem, H. \textit{Liming Acidic Surface Waters}. Lewis Publishers, Chelsea, MI. (1991).
+ Bisogni, J.J., Jr. and Arroyo, S.L., "The Effect of Carbon Dioxide Equilibrium on pH in PlaceNameplaceDilute PlaceTypeLakes," \textit{Water Research}, 25, No. 2, 185-190 (1991).
 
-\noindent Stumm, W. and Morgan, J.J., \textit{Aquatic Chemistry}, PersonNameJohn Wiley \& Sons, Inc. NY, NY 1981.
+ Olem, H. \textit{Liming Acidic Surface Waters}. Lewis Publishers, Chelsea, MI. (1991).
 
-\noindent
-\subsection{\eject Lab Prep Notes}
+ Stumm, W. and Morgan, J.J., \textit{Aquatic Chemistry}, PersonNameJohn Wiley \& Sons, Inc. NY, NY 1981.
+
+
+------------------
+\eject Lab Prep Notes}
 
 \begin{tabular}{|p{0.7in}|p{0.7in}|p{0.7in}|} \hline
 \multicolumn{3}{|p{1in}|}{Table \label{1}. Reagents\newline \textbf{}} \\ \hline
@@ -428,7 +439,7 @@ PharMed tubing size 18 & Cole Parmer & H-06485-17 \\ \hline
 
 Prepare solution of 400 mg Bromocresol green/100 mL ethanol. Add 0.2 mL of indicator solution per liter of acid rain or lake.
 
-\noindent
+
 \paragraph{Acid rain}
 
 Acid rain is at pH 3.0. Prepare from distilled water. Add 1 meq H2SO4/L ([H+] at pH 3.0) to obtain a pH of 3.0. To acidify 20 liters of distilled water using 10 N H2SO4:
@@ -442,23 +453,23 @@ Acid rain is at pH 3.0. Prepare from distilled water. Add 1 meq H2SO4/L ([H+] at
 
 The residence time of the lake should be 15 minutes. The lake volume is 4 L. thus the flow rate is 267 mL/min. Use \# 18 PharMed tubing.
 
-\noindent
+
 \paragraph{Setup}
 
-\noindent \begin{enumerate}
+ \begin{enumerate}
 \item 1) )Prepare 20-L acid rain for each group.
 
-\noindent \item 2) )Prepare bromocresol green solution if necessary.
+ \item 2) )Prepare bromocresol green solution if necessary.
 
-\noindent \item 3) )Attach one Easy-Load pump head to the pump drives and plumb with \#18 tubing.
+ \item 3) )Attach one Easy-Load pump head to the pump drives and plumb with \#18 tubing.
 
-\noindent \item 4) )Plumb Jerrican to pump to lake using quick connectors (see Figure \eqref{ZEqnNum149406}).
+ \item 4) )Plumb Jerrican to pump to lake using quick connectors (see Figure \eqref{ZEqnNum149406}).
 
-\noindent \item 5) )Verify that pH probes are operational, stable, and can be calibrated.
+ \item 5) )Verify that pH probes are operational, stable, and can be calibrated.
 
-\noindent \item 6) )Verify that buffers (pH = 4, 7, 10) are distributed to each student group.
+ \item 6) )Verify that buffers (pH = 4, 7, 10) are distributed to each student group.
 
-\noindent \item 7) )Provide a effluent cup in which pH can be measured.
+ \item 7) )Provide a effluent cup in which pH can be measured.
 \end{enumerate}
 
 

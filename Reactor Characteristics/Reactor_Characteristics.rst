@@ -97,17 +97,19 @@ Plug flow regimes are impossible to attain because mass transport must be by adv
 
 \includegraphics*[width=3.25in, height=1.63in, keepaspectratio=false]{image4}
 
-\noindent Figure  1-4 Pulse and step input in a plug flow reactor.
+ Figure  1-4 Pulse and step input in a plug flow reactor.
 
 The velocity, U, serves to transform the directional concentration gradient into a temporal concentration gradient. In other words, a conservative substance moves with the advective flow of the fluid. The solutions to this differential equation for a pulse input and for a step input are shown graphically in Figure 1-4. The time for 10\% of the pulse to arrive at the effluent of a PFR is $t^{*} $ since all of the pulse arrives at the same time.
 
-\noindent
-\paragraph{Flow with Dispersion}
+
+^^^^^^^^^^^^^^^^^^^^^
+Flow with Dispersion}
 
 Real flow reactors that aren't completely mixed exhibit behavior that is between plug flow and completely mixed. The reactor flow behavior is a function of the relative strength of the mixing process (or dispersion) compared to the advective flow. Analytical solutions that describe these real reactors are more difficult and in most cases a parameter describing the dispersion is fit to the data rather than predicted \textit{a priori}. Two models for arbitrary mixing levels are described below.
 
-\noindent
-\subparagraph{Open Boundary conditions: One Dimensional Advection-Dispersion Equation}
+
+"""""""""""""""""""
+Open Boundary conditions: One Dimensional Advection-Dispersion Equation}
 
 The governing differential equation for a conservative (\textit{i.e.}, non-reactive) substance in a reactor that has advective transport (\textit{i.e.}, flow) and some mixing (dispersion) in the direction of flow (x - dimension) is given in equation 1.7.
 
@@ -117,11 +119,11 @@ The governing differential equation for a conservative (\textit{i.e.}, non-react
 
 C = concentration of a conservative substance
 
-\noindent U = average fluid velocity in the x direction
+ U = average fluid velocity in the x direction
 
-\noindent Dd = longitudinal dispersion coefficient
+ Dd = longitudinal dispersion coefficient
 
-\noindent t = time
+ t = time
 
 The dispersion is described by a single parameter that is the same in the reactor as it is at the inlet and outlet for open boundary conditions. The solution to equation 1.7 for the case of complete mixing in the y-z plane and advective and dispersive transport only in the x direction for any x and t (after t=0) gives:
 
@@ -175,7 +177,7 @@ Or in dimensionless form:
 
 The variance in concentration over space ($\sigma _{x}^{2} $) is the variance in concentrations taken from many different positions in the reactorreactor at some single moment in time, t. The variance in x ($\sigma _{x}^{2} $) has dimensions of length squared.
 
-\noindent
+
 \subparagraph{Closed Boundary Conditions: Completely Mixed Flow Reactor in Series}
 
 Completely mixed flow reactors are sometimes connected in series to create a reactor system with flow characteristics in between CMFR and PFR. CMFRs in series increase overall process efficiency because the reactants are at higher concentrations in the first reactors than they would be in a single large CMFR. Thus the total reactor volume can be smaller with a series of CMFRs. Similarly the reaction process can be made more efficient given the same reactor volume if it is divided into a series of CMFRs.
@@ -194,10 +196,11 @@ It can be shown that equations 1.14 and 1.19 converge for large N when
 
 Response curves for the advection-dispersion equation are shown in Figure 1-7. Notice that the effluent concentration begins to rise much more quickly in series CMFRs than in the advection-dispersion model for a single CMFR. This distinction between the two models lessens as the number of reactors increases and the \textit{Pe} increases.
 
-\noindent
-\subsection{Reactor Studies}
 
-\noindent
+------------------
+Reactor Studies}
+
+
 \paragraph{Measuring Reactor Characteristics}
 
 One of the easiest methods to determine the mixing (dispersion) characteristics of a reactor is to add a spike input of a conservative material and then monitor the concentration of the material in the reactor effluent. The variance of tracertracer concentration versus time ($\sigma _{t}^{2} $, with dimensions of time squared) can be measured by sampling at a single point in the reactorreactor at many different times and can be computed using the following equations.
@@ -216,26 +219,26 @@ Inlet and outlet boundary conditions affect the response obtained from a reactor
 
 The above equations suggest that from the reactor response to a spike input we can compute the dispersion coefficient for the reactor. We have two options for measuring reactor response:
 
-\noindent \begin{enumerate}
+ \begin{enumerate}
 \item 1) )synoptic measurements: at a fixed time sampling many points along the axis of the reactor will yield a Gaussian curve of concentration vs. distance. In practice synoptic measurements are difficult because it requires sampling devices that are time-coordinated. By combining equations 1.16, 1.23, and 1.24 it is possible to estimate the dispersion coefficient from synoptic measurements.
 
-\noindent \item 2) )single point sampling: measure the concentration at a fixed position along the x axis of the reactor for many times. If the reactor length is fixed at L and measurements are made at the effluent of the reactor (observe the concentration of a tracer at x = L as a function of time) then x is no longer a variable and C(x,t) becomes C(t) only. The response curve obtained through single point sampling is skewed. The curve ``spread'' changes during the sampling period and the response curve is skewed.
+ \item 2) )single point sampling: measure the concentration at a fixed position along the x axis of the reactor for many times. If the reactor length is fixed at L and measurements are made at the effluent of the reactor (observe the concentration of a tracer at x = L as a function of time) then x is no longer a variable and C(x,t) becomes C(t) only. The response curve obtained through single point sampling is skewed. The curve ``spread'' changes during the sampling period and the response curve is skewed.
 \end{enumerate}
 
-\noindent
+
 \paragraph{Peclet Number EstimationPeclet number}
 
 For single point sampling of the effluent response curve, skew increases as the dispersion level in the reactor increases. The degree of skew depends on the dispersion coefficient, the velocity in the x-direction, and the length of the reactor. Peclet values in the range 100$\mathrm{<}$Pe$\mathrm{<}$$\mathrm{\infty}$ result in a symmetric response curve.
 
-\noindent
 
-\noindent Figure 1-8. Relationship between equations 1.25 through 1.26.
+
+ Figure 1-8. Relationship between equations 1.25 through 1.26.
 
 Response curve skew makes the assumption of a symmetrical normal distribution curve inappropriate and a new relationship between the variance and the dispersion coefficient (or \textit{Pe}) has to be determined. Boundary conditions affect the determination of the dispersion coefficient. The relationship between the Peclet number and variance for open systems is given by:
 \[\sigma _{t}^{2} =\left(\frac{2}{Pe} +\frac{8}{Pe^{2} } \right)\cdot \theta ^{2}  1.25\]
 
 
-\noindent For closed systems the relationship is:
+ For closed systems the relationship is:
 
 .. math::
 
@@ -259,26 +262,26 @@ A conservative tracer will be used to characterize your reactors. Typical tracer
 
 Additional constraints for the tracer are that if a highly concentrated tracer is used, then there will be a significant density difference between the tracer and the water in the reactor. If a very dilute tracer is used then a large volume of tracer will need to be added and the volume of tracer could become a large fraction of the reactor volume and thus the pulse could no longer be modeled as having negligible volume.
 
-\noindent
+
 \paragraph{Tracer Design}
 
 The reactors are 30 cm long and 15 cm wide. If the depth is limited to (a maximum of) 5 cm, then the total volume is 2.25 L and with a peristaltic pumping rate of approximately 380 mL/min, the residence time is approximately 6 minutes.
 
 The tracer should be added directly into the first chamber of your reactor. The red dye will also help students qualitatively observe the advective and dispersive transport in the reactors.
 
-\noindent
+
 \paragraph{Mass balance}
 
 Collect data that makes it possible to perform a mass balance on red dye. Note that if it is expedient to shorten an experimental run such that there is a significant quantity of the tracer residual in the reactor, that the mass of the residual (stored) tracer can be measured by pouring the reactor contents into a container and measuring the mass or volume of the mixture. The concentration of red dye in the mixture can be measured be connecting back to the optical probe.
 
-\noindent
+
 \paragraph{Calibration of photometer}
 
 To calibrate the photometer, you will need to connect the peristaltic pump, a 1 L bottle, and the photometer in a closed loop. Use enough tubing so that the flow path of the photometer is oriented in the vertical direction with flow up through the photometer (this ensures that air bubbles are carried up and out of the photometer). Add 1 L of tap water to the bottle and turn the pump on at 380 mL/min. The goal here is to have a total volume of 1 L circulating through the calibration system.
 
-\noindent \includegraphics*[width=4.52in, height=2.72in, keepaspectratio=false, trim=0.63in 0.52in 0.23in 0.80in]{image8}
+ \includegraphics*[width=4.52in, height=2.72in, keepaspectratio=false, trim=0.63in 0.52in 0.23in 0.80in]{image8}
 
-\noindent Figure 1-8. Experimental setup for calibrating photometer. Flow must be up through the photometer to ensure that any air bubbles are removed.
+ Figure 1-8. Experimental setup for calibrating photometer. Flow must be up through the photometer to ensure that any air bubbles are removed.
 
 Connect the probe to the ``Sensor 0'' port of your ProCoDA box. The photometer will read out voltages in the range of +/- 5V, so we will need to let the software know to expect that range. On the Configuration Tab in the ProCoDA II software, find the section for the NI Input/Output device and hit the ``select'' button. Set the voltage for ``Sensor 0'' to 5V.
 
@@ -298,7 +301,7 @@ When you are done, hit \includegraphics*[width=0.27in, height=0.24in, keepaspect
 
 
 
-\noindent
+
 \paragraph{Setting up the reactor for experiments}
 
 In these experiments, we will be pumping tap water from a 20 L Jerrican to the influent of your reactor. Place your reactor on a stir plate and make sure that the 3/8'' push-connect fitting is on the effluent side of your reactor (some may have 3/8'' holes on both sides). The effluent of the reactor should be a straight short tube to the drain.
@@ -313,7 +316,7 @@ Before running an experiment, it is important to determine whether your setup wo
 \item  Is the effluent weir working properly or is the reactor gaining volume? We want to maintain a constant volume throughout the experiment, so let the pump run for ten minutes or so and confirm that the volume is stable (put a line or a piece of tape to mark the water level).
 \end{enumerate}
 
-\noindent
+
 \paragraph{Testing protocol}
 
 To ensure that everything is working properly I recommend that you begin by first testing a CMFR. Use the CMFR data to verify that you obtain mass balance and that you obtain the expected exit age response.
@@ -338,10 +341,11 @@ For each test make sure that you accurately measure the reactor volume, residual
 
 \includegraphics*[width=2.83in, height=2.12in, keepaspectratio=false]{image15} \includegraphics*[width=2.84in, height=2.11in, keepaspectratio=false]{image16}
 
-\noindent
-\subsection{Reactor Design}
 
-\noindent
+------------------
+Reactor Design}
+
+
 \paragraph{Baffle Design}
 
 Baffles can be added to tanks to decrease the ability of the solution to travel quickly from the tank inlet to the tank outlet. The goal of the baffle design depends on whether the tank is designed for a reaction or for separation. The baffles in reactors should generally be designed to achieve mixing in each of the baffled zones. The baffles in tanks designed for separation (clarifiers) should be designed to achieve uniform flow (a much more difficult goal to achieve). Mixing within each baffled zone could be achieved with a propeller mixer or by appropriately sized pores in the baffles. If pore mixing is desired the energy for mixing is provided by the kinetic energy of the fluid flowing through the pores.
@@ -352,7 +356,7 @@ The design goal is to determine the diameter and spacing of the pores required t
 
  $Re_{jet} =\frac{V_{jet} d_{jet} }{\nu } $ or $Re_{jet} =\frac{4Q_{jet} }{\pi d_{jet} \nu } $ or $Re_{jet} =\frac{4Q_{reactor} }{n_{ports} \pi d_{jet} \nu } $ 1.31
 
-\noindent The optimal pore spacing for maximum mixing could be based on the spread of the jet in the distance to the next baffle.  Jets expand in the radial direction at a rate of approximately 10\% of the distance the jet travels axially. Thus the pore spacing could be in a rectangular grid with the distance between pores equal to 10\% of the distance between baffles. This spacing may be smaller than practical since it will require a large number of pores.
+ The optimal pore spacing for maximum mixing could be based on the spread of the jet in the distance to the next baffle.  Jets expand in the radial direction at a rate of approximately 10\% of the distance the jet travels axially. Thus the pore spacing could be in a rectangular grid with the distance between pores equal to 10\% of the distance between baffles. This spacing may be smaller than practical since it will require a large number of pores.
 
 An additional constraint on pore design is that the head loss through the pores not be excessive. The hydraulic grade line (and thus depth of each baffled reactor) will drop by a distance equal to the head loss through the pores. The head loss through the pores is given by the orifice equation
 \[Q_{orifice} =K_{orifice} A_{orifice} \sqrt{2g\Delta h}  1.32 \]
@@ -380,8 +384,9 @@ Perfect (PFR) & 1.0 & Very high length to width ratio (pipeline flow), perforate
 
 
 
-\noindent
-\subsection{Procedures}
+
+------------------
+Procedures}
 
  \includegraphics*[width=1.39in, height=1.38in, keepaspectratio=false]{image17}\includegraphics*[width=1.39in, height=1.38in, keepaspectratio=false]{image18}\includegraphics*[width=1.33in, height=1.38in, keepaspectratio=false]{image19} The reactor you will be working with can be easily modified by installing various configurations of perforated baffles (Figure 1-10). Your objectives are
 
@@ -395,52 +400,56 @@ Perfect (PFR) & 1.0 & Very high length to width ratio (pipeline flow), perforate
 
 Note that you are allowed to collaborate with other teams to obtain the results from additional tests. All data sharing must be documented in your report.
 
-\noindent
+
 \paragraph{Baffle installation}
 
 The baffles can be installed by rolling a 3 mm diameter roll of putty and applying the putty to the bottom and one side of the baffle. Carefully install the baffle by rotating it into place (so the putty on the one side doesn't have to slide) and then pressing it down (so the putty on the bottom doesn't have to slide). Install the two bolts with wing nuts to hold the baffle in place. Add a roll of putty to the corner formed at the unsealed side of the baffle and press the putty into place.
 
-\noindent
-\subsection{Pre-Laboratory Questions}
 
-\noindent \begin{enumerate}
+------------------
+Pre-Laboratory Questions}
+
+ \begin{enumerate}
 \item 1) )Calculate the \textbf{incremental} volume of a 100 g/L red dye stock that would need to be added to 1 L of water to produce 0, 1, 2, 5, 10, 20, 30, 40, and 50 mg/L calibration points. Calculate a numpy array containing the \textbf{cumulative} volume of red dye required. Strip the units from the array using .magnitude. Then create a copy of the array with a zero appended (np.append) in front and the last element deleted (np.delete). Then use numpy subtract to get the different between the two arrays to calculate the incremental volume that you need to add.
 
-\noindent \item 2) )Calculate the change in hydraulic grade line between baffled sections of a reactor with a flow rate of 380 mL/min. The reactor baffles are perforated with 6 holes 1 mm in diameter. Is the flow through these orifices in series or in parallel? Do you multiply the head loss for one orifice by the number of orifices to get the total head loss? Use the pc.head\_orifice function to calculate the head loss through an orifice. The vena contracta for the orifice can be found at exp.RATIO\_VC\_ORIFICE. Why would 6 holes 1 mm in diameter not be a good design for this reactor?
+ \item 2) )Calculate the change in hydraulic grade line between baffled sections of a reactor with a flow rate of 380 mL/min. The reactor baffles are perforated with 6 holes 1 mm in diameter. Is the flow through these orifices in series or in parallel? Do you multiply the head loss for one orifice by the number of orifices to get the total head loss? Use the pc.head\_orifice function to calculate the head loss through an orifice. The vena contracta for the orifice can be found at exp.RATIO\_VC\_ORIFICE. Why would 6 holes 1 mm in diameter not be a good design for this reactor?
 
-\noindent \item 3) )On a single graph plot the exit age distribution (E${}_{(t*)}$) for a reactor that operates as a 1-dimensional advection-dispersion reactor with Peclet numbers of 1, 10, and 100 (there will be three plots on the graph and thus a legend is required). The x-axis should be t* from 0.0 to 3.0. Comment on the shapes of the curves as a function of the Peclet number.
+ \item 3) )On a single graph plot the exit age distribution (E${}_{(t*)}$) for a reactor that operates as a 1-dimensional advection-dispersion reactor with Peclet numbers of 1, 10, and 100 (there will be three plots on the graph and thus a legend is required). The x-axis should be t* from 0.0 to 3.0. Comment on the shapes of the curves as a function of the Peclet number.
 \end{enumerate}
 
-\noindent
-\subsection{Data Analysis}
+
+------------------
+Data Analysis}
 
 You will analyze all of the datasets in the same way. Use a consistent set of units throughout your data analysis and include the units in your python code and discussion!
 
-\noindent \begin{enumerate}
+ \begin{enumerate}
 \item 1) )Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use EPA.Solver\_AD\_Pe and EPA.Solver\_CMFR\_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.
 
-\noindent \item 2) )Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.
+ \item 2) )Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.
 
-\noindent \item 3) ) Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
+ \item 3) ) Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
 
-\noindent \item 4) )Report the values of t${}^{*}$ at F = 0.1 for each of your experiments. Do they meet your expectations?
+ \item 4) )Report the values of t${}^{*}$ at F = 0.1 for each of your experiments. Do they meet your expectations?
 
-\noindent \item 5) )Evaluate whether there is any evidence of ``dead volumes'' or ``short circuiting'' in your reactor.
+ \item 5) )Evaluate whether there is any evidence of ``dead volumes'' or ``short circuiting'' in your reactor.
 
-\noindent \item 6) )Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be.
+ \item 6) )Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be.
 \end{enumerate}
 
-\noindent
-\subsection{References}
 
-\noindent Weber, W. J. J. and F. A. Digiano. 1996. Process Dynamics in Environmental Systems. New York, John Wiley \& Sons, Inc.
+------------------
+References}
 
-\noindent Malcolm Pirnie, Inc., and HDR Engineering, Inc. ``Guidance Manual for Compliance with the Filtration and Disinfection Requirements for Public Water Systems Using Surface Water Sources.'' AWWA, Denver CO, 1991.
+ Weber, W. J. J. and F. A. Digiano. 1996. Process Dynamics in Environmental Systems. New York, John Wiley \& Sons, Inc.
 
-\noindent
-\subsection{\eject Lab Prep Notes}
+ Malcolm Pirnie, Inc., and HDR Engineering, Inc. ``Guidance Manual for Compliance with the Filtration and Disinfection Requirements for Public Water Systems Using Surface Water Sources.'' AWWA, Denver CO, 1991.
 
-\noindent Table \label{2}. Equipment list
+
+------------------
+\eject Lab Prep Notes}
+
+ Table \label{2}. Equipment list
 
 \begin{tabular}{|p{0.7in}|p{0.7in}|p{0.7in}|} \hline
 \textbf{Description} & \textbf{Supplier} & \textbf{Catalog number} \\ \hline
@@ -462,11 +471,11 @@ red dye \#40 & MG Newell & 07704-1 \\ \hline
 \begin{enumerate}
 \item 1) )Create 100 mL of 100 g/L red dye stock (thus use 10 g of red dye) and distribute in small vials to each lab bench.
 
-\noindent \item 2) )Use \# 18 tubing for inlet and \#17 for photometer sampling.
+ \item 2) )Use \# 18 tubing for inlet and \#17 for photometer sampling.
 
-\noindent \item 3) )The maximum concentration of red dye that the photometer can measure accurately is 50 mg/L.
+ \item 3) )The maximum concentration of red dye that the photometer can measure accurately is 50 mg/L.
 
-\noindent \item 4) )Organize team research so they don't use the same materials and so they answer different questions.
+ \item 4) )Organize team research so they don't use the same materials and so they answer different questions.
 \end{enumerate}
 
 
