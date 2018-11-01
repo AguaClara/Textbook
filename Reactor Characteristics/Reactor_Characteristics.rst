@@ -17,7 +17,7 @@ Reactor Classifications
 Dispersion
 ----------
 
-Mixing levels give rise to three categories of reactors; completely mixed flow reactors (CMFR), plug flow reactors (PFR) and flow with dispersion reactors (FDR). The plug flow reactorreactor is an idealized extreme not attainable in practice. All \textit{real} reactors fall under the category of FDR or CMFR.
+Mixing levels give rise to three categories of reactors; completely mixed flow reactors (CMFR), plug flow reactors (PFR) and flow with dispersion reactors (FDR). The plug flow reactor is an idealized extreme not attainable in practice. All real reactors fall under the category of FDR or CMFR.
 
 Boundary Conditions
 -------------------
@@ -41,17 +41,17 @@ as a function of
 
     {t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta }
 
-where \textit{?} is the hydraulic residence time. The term ${t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta } $ will be defined as $t^{*} $. The non-dimensional response curves from pulse inputs and step inputs are known as E curves and F curves, respectively. The E curve is the exit age distribution and represents the actual output of tracer from a reactor.  The F curve is the cumulative age distribution and represents the cumulative fraction of tracer that has exited a reactor at time $t^{*} $. The E and F curves are related by
+where \textit{?} is the hydraulic residence time. The term ${t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta } $ will be defined as $t^{\star} $. The non-dimensional response curves from pulse inputs and step inputs are known as E curves and F curves, respectively. The E curve is the exit age distribution and represents the actual output of tracer from a reactor.  The F curve is the cumulative age distribution and represents the cumulative fraction of tracer that has exited a reactor at time $t^{\star} $. The E and F curves are related by
 
 .. math::
 
-    F_{\left(t^{*} \right)} =\int _{0}^{t^{*} }E_{\left(t^{*} \right)} dt^{*}   1.1
+    F_{\left(t^{\star} \right)} =\int _{0}^{t^{\star} }E_{\left(t^{\star} \right)} dt^{\star}   1.1
 
-The :math:`F_{\left(t^{*} \right)}` curve can either be obtained by integrating :math:`E_{\left(t^{*} \right)}` or by applying a step function change in influent concentration to a reactor and monitoring the effluent concentration. In that case :math:`F_{\left(t^{*} \right)} is defined as
+The :math:`F_{\left(t^{\star} \right)}` curve can either be obtained by integrating :math:`E_{\left(t^{\star} \right)}` or by applying a step function change in influent concentration to a reactor and monitoring the effluent concentration. In that case :math:`F_{\left(t^{\star} \right)} is defined as
 
 .. math::
 
-    F_{\left(t^*\right)}=\frac{C_{\left(t^*\right)}}{C_{in}}
+    F_{\left(t^\star\right)}=\frac{C_{\left(t^\star\right)}}{C_{in}}
 
 The following sections will include typical E and F curves for different reactor types.
 
@@ -78,13 +78,13 @@ or in the dimensionless form
 
 .. math::
 
-    E_{\left(t^{*} \right)} =\frac{C_{\left(t^{*} \right)} \rlap{-} V _{r} }{C_{tr} \rlap{-} V _{tr} } ={\mathop{e}\nolimits^{\left(-t^{*} \right)}}
+    E_{\left(t^{\star} \right)} =\frac{C_{\left(t^{\star} \right)} \rlap{-} V _{r} }{C_{tr} \rlap{-} V _{tr} } ={\mathop{e}\nolimits^{\left(-t^{\star} \right)}}
 
  \includegraphics*[width=3.65in, height=2.23in, keepaspectratio=false]{image3}
 
-where :math:`E_{\left(t^{*} \right)}` is the exit age or residence time distribution curve, :math:`\rlap{-} V _{r}` is the reactor volume, :math:`\rlap{-} V _{tr}` is the tracer volume, and :math:`C_{tr}` is the tracer concentration.  If a reactor has a completely mixed flow regime its response, :math:`E_{\left(t^{*} \right)}`, to a pulse input should plot as a straight line on a semi-logarithmic plot. Response curves for a CMFR are shown in Figure 1-3.
+where :math:`E_{\left(t^{\star} \right)}` is the exit age or residence time distribution curve, :math:`\rlap{-} V _{r}` is the reactor volume, :math:`\rlap{-} V _{tr}` is the tracer volume, and :math:`C_{tr}` is the tracer concentration.  If a reactor has a completely mixed flow regime its response, :math:`E_{\left(t^{\star} \right)}`, to a pulse input should plot as a straight line on a semi-logarithmic plot. Response curves for a CMFR are shown in Figure 1-3.
 
-The time for 10\% of the pulse to arrive at the effluent of a CMFR is approximately 0.1 :math:`t^{*}`.
+The time for 10\% of the pulse to arrive at the effluent of a CMFR is approximately 0.1 :math:`t^{\star}`.
 
 Plug Flow Reactor
 -----------------
@@ -99,7 +99,7 @@ Plug flow regimes are impossible to attain because mass transport must be by adv
 
  Figure  1-4 Pulse and step input in a plug flow reactor.
 
-The velocity, U, serves to transform the directional concentration gradient into a temporal concentration gradient. In other words, a conservative substance moves with the advective flow of the fluid. The solutions to this differential equation for a pulse input and for a step input are shown graphically in Figure 1-4. The time for 10\% of the pulse to arrive at the effluent of a PFR is :math:`t^{*}` since all of the pulse arrives at the same time.
+The velocity, U, serves to transform the directional concentration gradient into a temporal concentration gradient. In other words, a conservative substance moves with the advective flow of the fluid. The solutions to this differential equation for a pulse input and for a step input are shown graphically in Figure 1-4. The time for 10\% of the pulse to arrive at the effluent of a PFR is :math:`t^{\star}` since all of the pulse arrives at the same time.
 
 Flow with Dispersion
 ^^^^^^^^^^^^^^^^^^^^
@@ -146,9 +146,9 @@ The time can be normalized by dividing by the hydraulic residence time.
 
 .. math::
 
-    t^{*} =\frac{tU}{L}  1.10
+    t^{\star} =\frac{tU}{L}  1.10
 
-Combining Equations 1.9 and 1.10 we obtain :math:`$D_{d} t=t^{*} PeL^{2}` for substitution into Equation 1.8. The concentration can be normalized by the mass of the tracer and the volume, :math:`\rlap{-} V`, of the reactor.
+Combining Equations 1.9 and 1.10 we obtain :math:`$D_{d} t=t^{\star} PeL^{2}` for substitution into Equation 1.8. The concentration can be normalized by the mass of the tracer and the volume, :math:`\rlap{-} V`, of the reactor.
 
 .. math::
 
@@ -156,20 +156,19 @@ Combining Equations 1.9 and 1.10 we obtain :math:`$D_{d} t=t^{*} PeL^{2}` for su
 
 .. math::
 
-    E_{\left(t^{*} \right)} =\frac{{\rm C(x,t)}\rlap{-} V }{{\rm M}}
+    E_{\left(t^{\star} \right)} =\frac{{\rm C(x,t)}\rlap{-} V }{{\rm M}}
 
 The position in the reactor where the concentration measurements are made can be changed to the reactor effluent by substituting L for x. Substituting Equation 1.10 into the definition of $x'^{2} $we obtain:
 
 .. math::
 
-
-    x'^{2} =\left(L-Ut\right)^{2} =\left(1-t^{*} \right)^{2} L^{2}
+    x'^{2} =\left(L-Ut\right)^{2} =\left(1-t^{\star} \right)^{2} L^{2}
 
 The resulting dimensionless form of Equation 1.8 is given in Equation 1.14.
 
-..math::
+.. math::
 
-    E_{\left(t^{*} \right)} =\sqrt{\frac{Pe}{4\pi t^{*} } } \exp \left[\frac{-\left(1-t^{*} \right)^{2} Pe}{4t^{*} } \right]
+    E_{\left(t^{\star} \right)} =\sqrt{\frac{Pe}{4\pi t^{\star} } } \exp \left[\frac{-\left(1-t^{\star} \right)^{2} Pe}{4t^{\star} } \right]
 
 
  \includegraphics*[width=2.50in, height=1.49in, keepaspectratio=false, trim=0.11in 0.09in 0.19in 0.14in]{image5} Response curves for the advection-dispersion equation are shown in Figures 1-5 and 1-6. The exit age curve is highly skewed for low \textit{Pe} because tracer that is in the reactor longer has more time for dispersion. As the Peclet number increases the dispersion decreases and the response becomes closer to plug flow.
@@ -192,7 +191,7 @@ Or in dimensionless form:
 
 .. math::
 
-    \frac{\sigma _{x}^{2} }{L^{2} } =2t^{*} Pe 1.17
+    \frac{\sigma _{x}^{2} }{L^{2} } =2t^{\star} Pe 1.17
 
 
 
@@ -214,7 +213,7 @@ The non-dimensional form of equation 1.18 is given in equation 1.19
 
 .. math::
 
-    E_{N} {}_{\left(t^{*} \right)} =\frac{N^{N} }{\left(N-1\right)!} \left(t^{*} \right)^{N-1} {\mathop{e}\nolimits^{{}^{\left(-Nt^{*} \right)} }}  1.19
+    E_{N} {}_{\left(t^{\star} \right)} =\frac{N^{N} }{\left(N-1\right)!} \left(t^{\star} \right)^{N-1} {\mathop{e}\nolimits^{{}^{\left(-Nt^{\star} \right)} }}  1.19
 
 It can be shown that equations 1.14 and 1.19 converge for large N when
 
@@ -447,8 +446,8 @@ The design objective for chlorine contact tanks is to maximize the inactivation 
 
 
 \begin{tabular}{|p{0.8in}|p{0.8in}|p{2.4in}|} \hline
-\multicolumn{3}{|p{1in}|}{Table \label{1}. Comparison of $t^{*} \; at\; F=0.1$ for non-ideal reactors (Malcolm Pirnie, 1991)} \\ \hline
-Baffling Condition  & Guidance manual value of $t^{*} \; at\; F=0.1$ & Extent of Baffles \\ \hline
+\multicolumn{3}{|p{1in}|}{Table \label{1}. Comparison of $t^{\star} \; at\; F=0.1$ for non-ideal reactors (Malcolm Pirnie, 1991)} \\ \hline
+Baffling Condition  & Guidance manual value of $t^{\star} \; at\; F=0.1$ & Extent of Baffles \\ \hline
 Unbaffled (CMFR) & 0.1 & No baffles, agitated basin with low length to width ratio, high inlet and outlet flow velocities \\ \hline
 Poorly baffled & 0.3 & Single or multiple unbaffled inlets and outlets, no intrabasin baffles \\ \hline
 Average & 0.5 & Baffled inlet or outlet with some intrabasin baffles \\ \hline
@@ -485,7 +484,7 @@ Pre-Laboratory Questions
 
  1. Calculate the \textbf{incremental} volume of a 100 g/L red dye stock that would need to be added to 1 L of water to produce 0, 1, 2, 5, 10, 20, 30, 40, and 50 mg/L calibration points. Calculate a numpy array containing the \textbf{cumulative} volume of red dye required. Strip the units from the array using .magnitude. Then create a copy of the array with a zero appended (np.append) in front and the last element deleted (np.delete). Then use numpy subtract to get the different between the two arrays to calculate the incremental volume that you need to add.
  1. Calculate the change in hydraulic grade line between baffled sections of a reactor with a flow rate of 380 mL/min. The reactor baffles are perforated with 6 holes 1 mm in diameter. Is the flow through these orifices in series or in parallel? Do you multiply the head loss for one orifice by the number of orifices to get the total head loss? Use the pc.head\_orifice function to calculate the head loss through an orifice. The vena contracta for the orifice can be found at exp.RATIO\_VC\_ORIFICE. Why would 6 holes 1 mm in diameter not be a good design for this reactor?
- 1. On a single graph plot the exit age distribution (:math:`E_{(t*)}`) for a reactor that operates as a 1-dimensional advection-dispersion reactor with Peclet numbers of 1, 10, and 100 (there will be three plots on the graph and thus a legend is required). The x-axis should be :math:`t^*` from 0.0 to 3.0. Comment on the shapes of the curves as a function of the Peclet number.
+ 1. On a single graph plot the exit age distribution (:math:`E_{(t\star)}`) for a reactor that operates as a 1-dimensional advection-dispersion reactor with Peclet numbers of 1, 10, and 100 (there will be three plots on the graph and thus a legend is required). The x-axis should be :math:`t^\star` from 0.0 to 3.0. Comment on the shapes of the curves as a function of the Peclet number.
 
 
 Data Analysis
@@ -496,7 +495,7 @@ You will analyze all of the datasets in the same way. Use a consistent set of un
  1. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use EPA.Solver\_AD\_Pe and EPA.Solver\_CMFR\_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.
  1. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.
  1. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
- 1. Report the values of :math:`t^{*}` at F = 0.1 for each of your experiments. Do they meet your expectations?
+ 1. Report the values of :math:`t^{\star}` at F = 0.1 for each of your experiments. Do they meet your expectations?
  1. Evaluate whether there is any evidence of "dead volumes" or "short circuiting" in your reactor.
  1. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be.
 
