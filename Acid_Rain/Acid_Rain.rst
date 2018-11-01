@@ -9,11 +9,17 @@ Introduction
 
 Acid precipitation has been a serious environmental problem in many areas of the world for the last few decades. Acid precipitation results from the combustion of fossil fuels which produce oxides of sulfur and nitrogen that react in the earth's atmosphere to form sulfuric and nitric acid. One of the most significant impacts of acid rain is the acidification of lakes and streams. In some watersheds the soil doesn't provide ample acid neutralizing capacity to mitigate the effect of incident acid precipitation. These susceptible regions are usually high elevation lakes with small watersheds and shallow non-calcareous soils. The underlying bedrock of acid-sensitive lakes tends to be granite or quartz. These minerals are slow to weather and therefore have little capacity to neutralize acids. The relatively short contact time between the acid precipitation and the watershed soil system exacerbates the problem. Lakes most susceptible to acidification: 1) are located downwind, sometimes hundreds of miles downwind, from major pollution sources--electricity generation, metal refining operations, heavy industry, large population centers, etc.; 2) are surrounded by hard, insoluble bedrock with thin, sandy, infertile soil; 3) have a high runoff to infiltration ratio; 4) have a low watershed to lake surface area. Isopleths of precipitation pH are depicted in Figure \eqref{ZEqnNum895787}.
 
- \includegraphics*[width=5.77in, height=3.49in, keepaspectratio=false]{image1}
 
- Figure  \label{ZEqnNum895787}. The pH of precipitation in 2009.
+.. _figure_Acid_rain_US:
 
-In acid-sensitive lakes the major parameter of concern is pH (pH = -logcitation$\mathrm{\{}$H+$\mathrm{\}}$, where citation$\mathrm{\{}$H+$\mathrm{\}}$ is the hydrogen ion activity, and activity is approximately equal to concentration in moles/L). In a healthy lake, ecosystem pH should be in the range of 6.5 to 8.5. In most natural freshwater systems, the dominant pH buffering (controlling) system is the carbonate system. The carbonate buffering system is composed of four components: dissolved carbon dioxide (:math:`{CO}_{{2\; aq}}`), carbonic acid (:math:`{H}_{{2}} {CO}_{{3}}`), bicarbonate (:math:`{HCO}_{{3}}^{{-}}`), and carbonate (:math:`{CO}_{{3}}^{{-2}}`). Carbonic acid exists only at very low levels in aqueous systems and for purposes of acid neutralization is indistinguishable from dissolved carbon dioxide. Thus to simplify things we define
+.. figure:: Images/Acid_rain_US.png
+    :width: 300px
+    :align: center
+    :alt: internal figure
+
+  The pH of precipitation in 2009.
+
+In acid-sensitive lakes the major parameter of concern is pH (:math:`pH = -log{\{H^+\}}`, where :math:`\{H^+\}` is the hydrogen ion activity, and activity is approximately equal to concentration in moles/L). In a healthy lake, ecosystem pH should be in the range of 6.5 to 8.5. In most natural freshwater systems, the dominant pH buffering (controlling) system is the carbonate system. The carbonate buffering system is composed of four components: dissolved carbon dioxide (:math:`{CO}_{{2\; aq}}`), carbonic acid (:math:`{H}_{{2}} {CO}_{{3}}`), bicarbonate (:math:`{HCO}_{{3}}^{{-}}`), and carbonate (:math:`{CO}_{{3}}^{{-2}}`). Carbonic acid exists only at very low levels in aqueous systems and for purposes of acid neutralization is indistinguishable from dissolved carbon dioxide. Thus to simplify things we define
 
 .. math::
 
@@ -227,16 +233,24 @@ The most common remediation procedure is to apply the neutralizing agent directl
 Experimental Apparatus
 ======================
 
-The experimental apparatus consists of an acid rain storage reservoir, peristaltic pump, and lake (Figure \eqref{ZEqnNum792377}). The pH of the lake will be monitored using a pH probe connected to a signal-conditioning box that is connected to the laboratory data acquisition system.
+The experimental apparatus consists of an acid rain storage reservoir, peristaltic pump, and lake (Figure \eqref{ZEqnNum792377}). The pH of the lake will be monitored using a pH probe connected to a signal-conditioning box that is connected to ProCoDA.
 
+.. _figure_Acid_rain_apparatus:
 
+.. figure:: Images/Acid_rain_apparatus.png
+    :width: 500px
+    :align: center
+    :alt: internal figure
 
- Figure  \label{ZEqnNum792377}. Schematic drawing of the experimental setup.
+  Schematic drawing of the experimental setup.
 
 
 
 Experimental Procedures
 =======================
+
+.. |ProCoDA_log_data| image:: Images/ProCoDA_log_data.png
+.. |ProCoDA_log_text_comment| image:: Images/ProCoDA_log_text_comment.png
 
 The following directions are written for the use of ProCoDA II hardware and software for pH data collection and manual control of the peristaltic pump. It would also be possible to use automate the experiment and control the pump using the ProCoDA II hardware and software.
 
@@ -279,9 +293,9 @@ flow rate in mL/s & 1 & 0.0010 & 0.0035 & 0.0133 & 0.0467 & 0.0633 \\ \hline
  1. We will continuously measure the pH of the effluent and log the data into a spreadsheet format.  In the pH meter software, set the data interval to 1 second.
 
 
- Begin logging data to file by clicking on the \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image2} button. Create a new file in S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}Lab 2 -- Acid Rain{\textbackslash} with your netids in the name.
+ Begin logging data to file by clicking on the |ProCoDA_log_data| button. Create a new file in S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}Lab 2 -- Acid Rain{\textbackslash} with your netids in the name.
 
- 1. Prepare to write a comment in the file to mark the time when the pump starts by clicking on the \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image3} button. Type in a comment and then wait.
+ 1. Prepare to write a comment in the file to mark the time when the pump starts by clicking on the |ProCoDA_log_text_comment| button. Type in a comment and then wait.
  1. At time equal zero (t=0) start the peristaltic pump and click on the enter button in the comment dialog box.
  1. Take 100-mL grab samples from the lake effluent at 5, 10, 15, and 20 minutes in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample). The sample volumes do not need to be measured exactly.
  1. After the 20-minute sample, measure the flow rate by collecting effluent in a beaker for 30 seconds and measuring the volume collected (in a graduated cylinder for more accurate measurement).
@@ -294,7 +308,7 @@ flow rate in mL/s & 1 & 0.0010 & 0.0035 & 0.0133 & 0.0467 & 0.0633 \\ \hline
 Analytical Procedures
 =====================
 
-*pH*. pH :math:`(-log\mathrm{\{}$H+$\mathrm{\}})` is usually measured electrometrically with a pH meter. The pH meter is a null-point potentiometer that measures the potential difference between an indicator electrode and a reference electrode. The two electrodes commonly used for pH measurement are the glass electrode and a reference electrode. The glass electrode is an indicator electrode that develops a potential across a glass membrane as a function of the activity ($\mathrm{\sim}$ molarity) of H+. Combination pH electrodes, in which the H+-sensitive and reference electrodes are combined within a single electrode body will be used in this lab. The reference electrode portion of a combination pH electrode is a [Ag/AgCl/4M KCl] reference. The response (output voltage) of the electrode follows a "Nernstian" behavior with respect to H+ ion activity.
+*pH*. pH :math:`(-log\mathrm{\{}$H+\mathrm{\}})` is usually measured electrometrically with a pH meter. The pH meter is a null-point potentiometer that measures the potential difference between an indicator electrode and a reference electrode. The two electrodes commonly used for pH measurement are the glass electrode and a reference electrode. The glass electrode is an indicator electrode that develops a potential across a glass membrane as a function of the activity (:math:`\mathrm{\sim}` molarity) of :math:`H^+`. Combination pH electrodes, in which the :math:`H^+`-sensitive and reference electrodes are combined within a single electrode body will be used in this lab. The reference electrode portion of a combination pH electrode is a [Ag/AgCl/4M KCl] reference. The response (output voltage) of the electrode follows a "Nernstian" behavior with respect to :math:`H^+` ion activity.
 
 .. math::
 
@@ -421,7 +435,7 @@ Prepare solution of 400 mg Bromocresol green/100 mL ethanol. Add 0.2 mL of indic
 Acid rain
 ---------
 
-Acid rain is at pH 3.0. Prepare from distilled water. Add 1 meq H2SO4/L ([H+] at pH 3.0) to obtain a pH of 3.0. To acidify 20 liters of distilled water using 10 N H2SO4:
+Acid rain is at pH 3.0. Prepare from distilled water. Add 1 meq H2SO4/L (:math:`[H^+]` at pH 3.0) to obtain a pH of 3.0. To acidify 20 liters of distilled water using 10 N H2SO4:
 
 20~L\bullet \frac{1~meq~H2SO4}{L}\bullet \frac{1}{10~N~H2SO4}\bullet \frac{1~N}{1000~meq}=2~mL~of~10~N~H2SO4
 

@@ -48,6 +48,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Acid_Neutralizing_Capacity/Acid_Neutralizing_Capacity.rst
+  Acid_Neutralizing_Capacity/ProCoDA_Gran_Plot.rst
 
 .. toctree::
   :caption: Chapter 5: Reactor Characteristics
