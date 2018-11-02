@@ -260,8 +260,8 @@ Inlet and outlet boundary conditions affect the response obtained from a reactor
 
 The above equations suggest that from the reactor response to a spike input we can compute the dispersion coefficient for the reactor. We have two options for measuring reactor response:
 
- 1. synoptic measurements: at a fixed time sampling many points along the axis of the reactor will yield a Gaussian curve of concentration vs. distance. In practice synoptic measurements are difficult because it requires sampling devices that are time-coordinated. By combining equations 1.16, 1.23, and 1.24 it is possible to estimate the dispersion coefficient from synoptic measurements.
- 1. single point sampling: measure the concentration at a fixed position along the x axis of the reactor for many times. If the reactor length is fixed at L and measurements are made at the effluent of the reactor (observe the concentration of a tracer at x = L as a function of time) then x is no longer a variable and C(x,t) becomes C(t) only. The response curve obtained through single point sampling is skewed. The curve spread changes during the sampling period and the response curve is skewed.
+ #. synoptic measurements: at a fixed time sampling many points along the axis of the reactor will yield a Gaussian curve of concentration vs. distance. In practice synoptic measurements are difficult because it requires sampling devices that are time-coordinated. By combining equations 1.16, 1.23, and 1.24 it is possible to estimate the dispersion coefficient from synoptic measurements.
+ #. single point sampling: measure the concentration at a fixed position along the x axis of the reactor for many times. If the reactor length is fixed at L and measurements are made at the effluent of the reactor (observe the concentration of a tracer at x = L as a function of time) then x is no longer a variable and C(x,t) becomes C(t) only. The response curve obtained through single point sampling is skewed. The curve spread changes during the sampling period and the response curve is skewed.
 
 
 
@@ -309,7 +309,7 @@ where Q is the flow rate and M is the mass of any substance whose concentration 
 
     M_{out} =Q\Delta t\sum _{i=0}^{n}C_{i}   1.29
 
-Equation 1.29 can be used to determine if all of the tracer was measured in the reactor effluent. Alternately, mass conservation can be checked by plotting the F curve and checking if the plot approaches 1. If some of the tracer is in the reactor at the end of the experiment then the following equation can be used to test for mass closure.
+Equation 1.29 can be used to determine if all of the tracer was measured in the reactor effluent. Alternately, mass conservation can be checked by plotting the F curve and checking if the plot approaches #. If some of the tracer is in the reactor at the end of the experiment then the following equation can be used to test for mass closure.
 
 .. math::
 
@@ -374,8 +374,8 @@ Use a second pump head with \#17 tubing to pull a sample from near the effluent 
 
 Before running an experiment, it is important to determine whether your setup works. Turn the pump to approximately 380 mL/min and get water flowing through the system and off to waste. Two important things to check:
 
- 1. Is your sensor reading a stable voltage of approximately +3.5V? If not, you might have some air bubbles trapped in the sensor cell. Tap it gently to release the air.
- 1. Is the effluent weir working properly or is the reactor gaining volume? We want to maintain a constant volume throughout the experiment, so let the pump run for ten minutes or so and confirm that the volume is stable (put a line or a piece of tape to mark the water level).
+ #. Is your sensor reading a stable voltage of approximately +3.5V? If not, you might have some air bubbles trapped in the sensor cell. Tap it gently to release the air.
+ #. Is the effluent weir working properly or is the reactor gaining volume? We want to maintain a constant volume throughout the experiment, so let the pump run for ten minutes or so and confirm that the volume is stable (put a line or a piece of tape to mark the water level).
 
 .. todo:: Did we switch to a two pump head system with the second pump head using a larger size tubing and removing excess flow from the reactor?
 
@@ -387,12 +387,12 @@ To ensure that everything is working properly I recommend that you begin by firs
 
 For each test make sure that you accurately measure the reactor volume, residual reactor red dye concentration, and the flow rate. The reactor volume can be approximated by taking the mass of the reactor, as you did to estimate the volume of your lakes.  Measure the residual concentration of red dye in the reactor by measuring the completely mixed concentration (this is just the concentration at the end of the experiment for the CMFR, but you will have to remove the baffles and mix for the baffled reactors). The flow rate can be accurately determined by measuring the volume of a timed sample from the pump.
 
- 1. Log data to file so that you have a record of the red dye concentration in the effluent of the reactor as a function of time.
- 1. Prepare to save a text note into the data file indicating the exact moment when you will actually start the experiment.
- 1. Add a volume of red dye \#40 stock that will give a maximum concentration of \textbf{approximately} 30 mg/L near the influent of the reactor. Immediately enter the text note to record when the experiment began. For the CMFR you can easily calculate this. For other reactors you may need to try and if necessary repeat the experiment if the tracer concentration goes above the 50 mg/L or if the maximum tracer concentration is below 10 mg/L.
- 1. Collect data until the majority of the tracer has exited.
- 1. Stop the experiment and pour the contents of the reactor into a container. Weigh the container to determine the exact volume of the reactor.
- 1. Sample the contents of the mixed reactor with the photometer to obtain the average concentration in the reactor at the end of your experiment. This will enable you to do a mass balance on the red dye.
+ #. Log data to file so that you have a record of the red dye concentration in the effluent of the reactor as a function of time.
+ #. Prepare to save a text note into the data file indicating the exact moment when you will actually start the experiment.
+ #. Add a volume of red dye \#40 stock that will give a maximum concentration of \textbf{approximately} 30 mg/L near the influent of the reactor. Immediately enter the text note to record when the experiment began. For the CMFR you can easily calculate this. For other reactors you may need to try and if necessary repeat the experiment if the tracer concentration goes above the 50 mg/L or if the maximum tracer concentration is below 10 mg/L.
+ #. Collect data until the majority of the tracer has exited.
+ #. Stop the experiment and pour the contents of the reactor into a container. Weigh the container to determine the exact volume of the reactor.
+ #. Sample the contents of the mixed reactor with the photometer to obtain the average concentration in the reactor at the end of your experiment. This will enable you to do a mass balance on the red dye.
 
 
 \includegraphics*[width=3.98in, height=2.98in, keepaspectratio=false]{image14}
@@ -464,9 +464,9 @@ Procedures
 
  \includegraphics*[width=1.39in, height=1.38in, keepaspectratio=false]{image17}\includegraphics*[width=1.39in, height=1.38in, keepaspectratio=false]{image18}\includegraphics*[width=1.33in, height=1.38in, keepaspectratio=false]{image19} The reactor you will be working with can be easily modified by installing various configurations of perforated baffles (Figure 1-10). Your objectives are
 
- 1. to modify the reactor to obtain a maximum value of \includegraphics*[width=0.86in, height=0.25in, keepaspectratio=false]{image20}
- 1. to document your progress toward this goal by obtaining appropriate experimental data
- 1. to compare your experimental data with appropriate models
+ #. to modify the reactor to obtain a maximum value of \includegraphics*[width=0.86in, height=0.25in, keepaspectratio=false]{image20}
+ #. to document your progress toward this goal by obtaining appropriate experimental data
+ #. to compare your experimental data with appropriate models
 
 
 Note that you are allowed to collaborate with other teams to obtain the results from additional tests. All data sharing must be documented in your report.
@@ -482,9 +482,9 @@ The baffles can be installed by rolling a 3 mm diameter roll of putty and applyi
 Pre-Laboratory Questions
 ------------------------
 
- 1. Calculate the \textbf{incremental} volume of a 100 g/L red dye stock that would need to be added to 1 L of water to produce 0, 1, 2, 5, 10, 20, 30, 40, and 50 mg/L calibration points. Calculate a numpy array containing the \textbf{cumulative} volume of red dye required. Strip the units from the array using .magnitude. Then create a copy of the array with a zero appended (np.append) in front and the last element deleted (np.delete). Then use numpy subtract to get the different between the two arrays to calculate the incremental volume that you need to add.
- 1. Calculate the change in hydraulic grade line between baffled sections of a reactor with a flow rate of 380 mL/min. The reactor baffles are perforated with 6 holes 1 mm in diameter. Is the flow through these orifices in series or in parallel? Do you multiply the head loss for one orifice by the number of orifices to get the total head loss? Use the pc.head\_orifice function to calculate the head loss through an orifice. The vena contracta for the orifice can be found at exp.RATIO\_VC\_ORIFICE. Why would 6 holes 1 mm in diameter not be a good design for this reactor?
- 1. On a single graph plot the exit age distribution (:math:`E_{(t\star)}`) for a reactor that operates as a 1-dimensional advection-dispersion reactor with Peclet numbers of 1, 10, and 100 (there will be three plots on the graph and thus a legend is required). The x-axis should be :math:`t^\star` from 0.0 to 3.0. Comment on the shapes of the curves as a function of the Peclet number.
+ #. Calculate the \textbf{incremental} volume of a 100 g/L red dye stock that would need to be added to 1 L of water to produce 0, 1, 2, 5, 10, 20, 30, 40, and 50 mg/L calibration points. Calculate a numpy array containing the \textbf{cumulative} volume of red dye required. Strip the units from the array using .magnitude. Then create a copy of the array with a zero appended (np.append) in front and the last element deleted (np.delete). Then use numpy subtract to get the different between the two arrays to calculate the incremental volume that you need to add.
+ #. Calculate the change in hydraulic grade line between baffled sections of a reactor with a flow rate of 380 mL/min. The reactor baffles are perforated with 6 holes 1 mm in diameter. Is the flow through these orifices in series or in parallel? Do you multiply the head loss for one orifice by the number of orifices to get the total head loss? Use the pc.head\_orifice function to calculate the head loss through an orifice. The vena contracta for the orifice can be found at exp.RATIO\_VC\_ORIFICE. Why would 6 holes 1 mm in diameter not be a good design for this reactor?
+ #. On a single graph plot the exit age distribution (:math:`E_{(t\star)}`) for a reactor that operates as a 1-dimensional advection-dispersion reactor with Peclet numbers of 1, 10, and 100 (there will be three plots on the graph and thus a legend is required). The x-axis should be :math:`t^\star` from 0.0 to 3.0. Comment on the shapes of the curves as a function of the Peclet number.
 
 
 Data Analysis
@@ -492,12 +492,12 @@ Data Analysis
 
 You will analyze all of the datasets in the same way. Use a consistent set of units throughout your data analysis and include the units in your python code and discussion!
 
- 1. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use EPA.Solver\_AD\_Pe and EPA.Solver\_CMFR\_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.
- 1. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.
- 1. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
- 1. Report the values of :math:`t^{\star}` at F = 0.1 for each of your experiments. Do they meet your expectations?
- 1. Evaluate whether there is any evidence of "dead volumes" or "short circuiting" in your reactor.
- 1. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be.
+ #. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use EPA.Solver\_AD\_Pe and EPA.Solver\_CMFR\_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.
+ #. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.
+ #. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
+ #. Report the values of :math:`t^{\star}` at F = 0.1 for each of your experiments. Do they meet your expectations?
+ #. Evaluate whether there is any evidence of "dead volumes" or "short circuiting" in your reactor.
+ #. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be.
 
 
 
@@ -533,7 +533,7 @@ Table \label{3}. Reagent list
 red dye \#40 & MG Newell & 07704-1 \\ \hline
 \end{tabular}
 
- 1. Create 100 mL of 100 g/L red dye stock (thus use 10 g of red dye) and distribute in small vials to each lab bench.
- 1. Use \# 18 tubing for inlet and \#17 for photometer sampling.
- 1. The maximum concentration of red dye that the photometer can measure accurately is 50 mg/L.
- 1. Organize team research so they don't use the same materials and so they answer different questions.
+ #. Create 100 mL of 100 g/L red dye stock (thus use 10 g of red dye) and distribute in small vials to each lab bench.
+ #. Use \# 18 tubing for inlet and \#17 for photometer sampling.
+ #. The maximum concentration of red dye that the photometer can measure accurately is 50 mg/L.
+ #. Organize team research so they don't use the same materials and so they answer different questions.

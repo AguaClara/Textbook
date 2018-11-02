@@ -1,9 +1,10 @@
 .. _toc:
 
-====================================
-Welcome to the Aguaclara Textbook!
-====================================
-This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in `aide_design <https://github.com/AguaClara/aide_design>`_. Listed below are the versions of the programs we use:
+**********************************************************************
+Welcome to the Environmental Engineering Laboratory Research Textbook!
+**********************************************************************
+
+This textbook is written and maintained in `Github <https://github.com/monroews/EnvEngLabTextbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in `aide_design <https://github.com/AguaClara/aide_design>`_. Listed below are the versions of the programs we use:
 
 .. _software_versions:
 .. csv-table:: These are the software versions used to compile this textbook
@@ -69,6 +70,12 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Activated_Carbon/Activated_Carbon.rst
+
+.. toctree::
+  :caption: Chapter 7: ProCoDA
+  :maxdepth: 1
+
+  ProCoDA/ProCoDA.rst
 
 
 

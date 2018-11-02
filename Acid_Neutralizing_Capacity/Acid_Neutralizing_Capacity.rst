@@ -1,9 +1,11 @@
+.. _title_Acid_Neutralizing_Capacity:
 
 *****************************************
-Measurement of Acid Neutralizing Capacity
+Acid Neutralizing Capacity
 *****************************************
 
 
+.. _heading_ANC_Introduction:
 
 Introduction
 ============
@@ -11,9 +13,10 @@ Introduction
 Acid neutralizing capacity (ANC) is a measure of the ability of water to neutralize acid inputs. Lakes with high ANC (such as Cayuga Lake) can maintain a neutral pH even with some acid rain input whereas lakes with an ANC less than the acid input will not maintain a neutral pH. In the Adirondack region of New York State, lakes typically receive large inputs of acids during the spring thaw when the accumulated winter snow melts and runs off into the lakes. The ANC of Adirondack lakes is not always sufficient to neutralize these inputs.
 
 
+.. _heading_ANC_Theory:
 
 Theory
-================
+======
 
 The ANC for a typical carbonate-containing sample is defined as:
 
@@ -40,6 +43,7 @@ The titration procedure involves incrementally adding known volumes of standardi
 There are several methods for determining :math:`V_e` (or the equivalence point pH) from titration data (titrant volume versus pH). The shape of the titration curve (:math:`V_t` versus pH) can reveal :math:`V_e`. It can be shown that one inflection point occurs at :math:`V_t= V_e`. In the case of monoprotic acids, there is only one inflection in the pH range of interest. Therefore, an effective method to find the equivalence volume is to plot the titration curve and find the inflection point. Alternately, plot the first derivative of the titration plot and look for a maximum.
 
 
+.. _heading_ANC_Gran_Plot:
 
 Gran Plot
 ---------
@@ -99,6 +103,9 @@ Equation \eqref{ZEqnNum665104} can be rearranged to obtain ANC as a function of 
 
     Gran plot from titration of a weak base with 0.05 N acid. :math:`C_T` = 0.001 moles of carbonate and sample volume is 48 mL. The equivalent volume was 4.8 mL. From equation  \eqref{ZEqnNum755200} the ANC was 5 meq/L.
 
+
+.. _heading_ANC_pH_Measurements:
+
 pH Measurements
 ---------------
 
@@ -116,7 +123,7 @@ where :math:`\gamma` is the activity correction factor and the slope is :math:`N
 
 where the slope is :math:`\frac{\gamma \cdot {N} _{t} }{V_{s} }`.
 
-\textit{(This analysis assumes that the activity correction factor doesn't change appreciably during the titration).}
+This analysis assumes that the activity correction factor doesn't change appreciably during the titration).
 
 There are many other Gran functions that can be derived. For example, one can be derived for Acidity or the concentration of a single weak or strong acid or base.
 
@@ -140,6 +147,7 @@ When the pH is 2 pH units or more below the :math:`pK_a`s of the bases in the sy
 
 For a sample containing only carbonates, if the pH is below 4 the ANC is approximately equal to -[:math:`H^+`] and no titration is necessary.
 
+.. _heading_ANC_Titration_Techniques:
 
 Titration Techniques
 --------------------
@@ -171,8 +179,10 @@ To obtain n data points between :math:`[H^+]_e` - :math:`[H^+]_f` requires the i
 
     \Delta {V}_{{t}} {\; }\cong {\; }\frac{(0.001-0.00003)V_{s} }{n\; N_{t} } \cong {\; }\frac{0.001V_{s} }{n\; N_{t} }
 
-Procedure
-=========
+.. _heading_ANC_Procedures:
+
+Procedures
+==========
 
 .. |ProCoDA_save_gran| image:: Images/ProCoDA_save_gran.png
 
@@ -181,32 +191,38 @@ Determine ANC of Acid Rain Samples
 
 Determine the ANC for all samples collected from the Acid Lake Remediation lab.  Start with 50 mL from the t=0 sample and run through the procedure to learn how the software works. Then repeat the procedure with 50 mL from the t=0 sample and for remaining samples with the goal of making an accurate ANC measurement and creating an accurate titration curve by using 0.100 mL titrant increments throughout the entire titration. Remember that the biggest source of error for this lab will likely be poor pipette techniques.
 
- 1. Measure 50 mL of an acid lake sample in a graduated cylinder or using an electronic balance.
- 1. Add to a 100 mL beaker.
- 1. Place the beaker on the magnetic stirrer, add a stir bar and stir slowly.
- 1. Place the pH electrode in the solution.
- 1. If the initial pH is less than 4.5 no titration is necessary and equation \eqref{ZEqnNum542028} can be used to calculate the ANC.
- 1. Record the initial pH (prior to adding any titrant) and initial sample volume.
- 1. Analyze the sample using :ref:`Gran plot analysis <heading_Gran_Plot>`.  Add 0.05 N HCl (the titrant) using a digital pipette in increments of 0.100 mL.
- 1. Save the Gran data to S:\Courses\4530\Group #\Lab 2 – Acid\group#_gran by selecting |ProCoDA_save_gran|. The data will be saved in a file (tab delimited format) that can be opened by any spreadsheet program. You will use this data to plot a titration curve and to verify that the Gran technique accurately measures the ANC of a sample.
- 1. Record the ANC and the equivalent volume.
+ #. Measure 50 mL of an acid lake sample in a graduated cylinder or using an electronic balance.
+ #. Add to a 100 mL beaker.
+ #. Place the beaker on the magnetic stirrer, add a stir bar and stir slowly.
+ #. Place the pH electrode in the solution.
+ #. If the initial pH is less than 4.5 no titration is necessary and equation \eqref{ZEqnNum542028} can be used to calculate the ANC.
+ #. Record the initial pH (prior to adding any titrant) and initial sample volume.
+ #. Analyze the sample using :ref:`Gran plot analysis <heading_Gran_Plot>`.  Add 0.05 N HCl (the titrant) using a digital pipette in increments of 0.100 mL.
+ #. Save the Gran data to S:\Courses\4530\Group #\Lab 2 – Acid\group#_gran by selecting |ProCoDA_save_gran|. The data will be saved in a file (tab delimited format) that can be opened by any spreadsheet program. You will use this data to plot a titration curve and to verify that the Gran technique accurately measures the ANC of a sample.
+ #. Record the ANC and the equivalent volume.
 
  If the error is greater than 2\% then check your pipette technique using a balance and then repeat the titration.
+
+.. _heading_ANC_Prelab_Questions:
 
 Prelab Questions
 ================
 
- 1. Compare the ability of Cayuga lake and Wolf pond (an Adirondack lake) to withstand an acid rain runoff event (from snow melt) that results in 20\% of the original lake water being replaced by acid rain. The acid rain has a pH of 3.5 and is in equilibrium with the atmosphere. The ANC of Cayuga lake is 1.6 meq/L and the ANC of Wolf Pond is 70 :math:`\mu eq/L`. Assume that carbonate species are the primary component of ANC in both lakes, and that they are in equilibrium with the atmosphere. What is the pH of both bodies of water after the acid rain input? Remember that ANC is the conservative parameter (not pH!). Hint: You can use the scipy optimize root finding function called brentq. Scipy can't handle units so the units must be removed using .magnitude.}
- 1. What is the ANC of a water sample containing only carbonates and a strong acid that is at pH 3.2? This requires that you inspect all of the species in the ANC equation and determine which species are important.
- 1. Why is [:math:`H^+`] not a conserved species?
+ #. Compare the ability of Cayuga lake and Wolf pond (an Adirondack lake) to withstand an acid rain runoff event (from snow melt) that results in 20\% of the original lake water being replaced by acid rain. The acid rain has a pH of 3.5 and is in equilibrium with the atmosphere. The ANC of Cayuga lake is 1.6 meq/L and the ANC of Wolf Pond is 70 :math:`\mu eq/L`. Assume that carbonate species are the primary component of ANC in both lakes, and that they are in equilibrium with the atmosphere. What is the pH of both bodies of water after the acid rain input? Remember that ANC is the conservative parameter (not pH!). Hint: You can use the scipy optimize root finding function called brentq. Scipy can't handle units so the units must be removed using .magnitude.}
+ #. What is the ANC of a water sample containing only carbonates and a strong acid that is at pH 3.2? This requires that you inspect all of the species in the ANC equation and determine which species are important.
+ #. Why is [:math:`H^+`] not a conserved species?
 
 
-Questions
-=========
+.. _heading_ANC_Data_Analysis:
 
- 1. Plot the titration curve of the t=0 sample with 0.05 N HCl (plot pH as a function of titrant volume). Label the equivalent volume of titrant. Label the 2 regions of the graph where pH changes slowly with the dominant reaction that is occurring. (Place labels with the chemical reactions on the graph in the pH regions where each reaction is occurring.) Note that in a third region of slow pH change no significant reactions are occurring (added hydrogen ions contribute directly to change in pH).
- 1. Prepare a Gran plot using the data from the titration curve of the t=0 sample. Use linear regression on the linear region or simply draw a straight line through the linear region of the curve to identify the equivalent volume. Compare your calculation of Ve with that was calculated by ProCoDA.
- 1. Plot the measured ANC of the lake on the same graph as was used to plot the conservative, volatile, and nonvolatile ANC models (see questions 2 to 5 of the Acid Precipitation and Remediation of an Acid Lake lab). Did the measured ANC values agree with the conservative ANC model?
+Data Analysis
+=============
+
+ #. Plot the titration curve of the t=0 sample with 0.05 N HCl (plot pH as a function of titrant volume). Label the equivalent volume of titrant. Label the 2 regions of the graph where pH changes slowly with the dominant reaction that is occurring. (Place labels with the chemical reactions on the graph in the pH regions where each reaction is occurring.) Note that in a third region of slow pH change no significant reactions are occurring (added hydrogen ions contribute directly to change in pH).
+ #. Prepare a Gran plot using the data from the titration curve of the t=0 sample. Use linear regression on the linear region or simply draw a straight line through the linear region of the curve to identify the equivalent volume. Compare your calculation of Ve with that was calculated by ProCoDA.
+ #. Plot the measured ANC of the lake on the same graph as was used to plot the conservative, volatile, and nonvolatile ANC models (see questions 2 to 5 of the Acid Precipitation and Remediation of an Acid Lake lab). Did the measured ANC values agree with the conservative ANC model?
+
+.. _heading_ANC_References:
 
 References
 ==========
@@ -219,6 +235,8 @@ References
 
  Stumm, W. and J.J. Morgan \textit{Aquatic Chemistry} 2nd ed. Wiley Interscience (1981).
 
+
+.. _heading_ANC_Lab_Prep_Notes:
 
 Lab Prep Notes
 ==============
@@ -244,8 +262,10 @@ stirbar 1/2" long & Fisher Scientific & 14-511-62 \\ \hline
 \end{tabular}
 
 
-Setup
------
+.. _heading_ANC_Setup:
 
- 1. Verify that the pH probes are operational, stable, and can be calibrated.
- 1. Verify that buffers (pH = 4, 7, 10) are distributed to each student group
+Setup
+=====
+
+ #. Verify that the pH probes are operational, stable, and can be calibrated.
+ #. Verify that buffers (pH = 4, 7, 10) are distributed to each student group

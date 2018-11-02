@@ -1,8 +1,12 @@
+.. _title_Acid_Rain:
+
 
 ************************************************
 Acid Precipitation and Remediation of Acid Lakes
 ************************************************
 
+
+.. _heading_Acid_Rain_Introduction:
 
 Introduction
 ============
@@ -37,8 +41,9 @@ The sum of the molar concentrations of all the components of the carbonate syste
 The carbonate system can be considered to be a "volatile" system or a "non-volatile" system depending on whether or not aqueous carbon dioxide is allowed to exchange and equilibrate with atmospheric carbon dioxide. Mixing conditions and hydraulic residence time determine whether an aquatic system is volatile or non-volatile relative to atmospheric carbon dioxide equilibrium. First, consider the "non-volatile" system.
 
 
-^^^^^^^^^^^^^^^^^^^^^
- Non-volatile System}
+
+Non-volatile System
+-------------------
 
  For a fixed :math:`C_T`, the molar concentration of each species of the carbonate system is determined by pH. Equations \eqref{ZEqnNum342954}-\eqref{ZEqnNum931548} show these functional relationships.
 
@@ -155,7 +160,9 @@ In essence, the ANC of a system is a result of the reaction of acid inputs to fo
 Neutralization of acid precipitation can occur in the watershed or directly in the lake. How much neutralization occurs in the watershed versus the lake is a function of the watershed to lake surface area. Generally, watershed neutralization is dominant. Recently engineered remediation of acid lakes has been accomplished by adding bases such as limestone, lime, or sodium bicarbonate to the watershed or directly to the lakes.
 
 
-Reactor theory applied to Acid Lake Remediation
+.. _heading_Acid_Rain_Reactor_Theory_Applied_to_Acid_Lake_Remediation:
+
+Reactor Theory Applied to Acid Lake Remediation
 ===============================================
 
 In this experiment sodium bicarbonate will be added to a lake to mitigate the deleterious effect of acid rain. Usually sodium bicarbonate is added in batch doses (as opposed to metering in). The quantity of sodium bicarbonate added depends on how long a treatment is desired, the acceptable pH range and the quantity and pH of the incident rainfall. For purposes of this experiment, a 15-minute design period will be used. That is, we would like to add enough sodium bicarbonate to keep the lake at or above its original pH and alkalinity for a period of 15 minutes (i.e., for one hydraulic residence time).
@@ -221,6 +228,8 @@ where :math:`[NaHCO3]_0` = moles of sodium bicarbonate required per liter of lak
     \frac{{1.854\; mmole\; NaHCO}_3 }{liter} {\times }\frac{{84\; mg\; NaHCO}_3 }{{mmole\; NaHCO}_3 } {\times \; 4\; Liters\; =\; 623\; mg\; NaHCO}_3
 
 
+.. _heading_Acid_Rain_Experimental_Objectives:
+
 Experimental Objectives
 =======================
 
@@ -229,6 +238,7 @@ Remediation of acid lakes involves addition of ANC so that the pH is raised to a
 The most common remediation procedure is to apply the neutralizing agent directly to the lake surface, instead of on the watershed. We will follow that practice in this lab experiment. Sodium bicarbonate will be added directly to the surface of the lake that has an initial ANC of :math:`0\; \mu eq/L` and is receiving acid rain with a pH of 3. After the sodium bicarbonate is applied, the lake pH and ANC will be monitored for over two approximately 20 minute periods.
 
 
+.. _heading_Acid_Rain_Experimental_Apparatus:
 
 Experimental Apparatus
 ======================
@@ -245,21 +255,22 @@ The experimental apparatus consists of an acid rain storage reservoir, peristalt
   Schematic drawing of the experimental setup.
 
 
+.. _heading_Acid_Rain_Procedures:
 
-Experimental Procedures
-=======================
+Procedures
+==========
 
-.. |ProCoDA_log_data| image:: Images/ProCoDA_log_data.png
-.. |ProCoDA_log_text_comment| image:: Images/ProCoDA_log_text_comment.png
+.. |Log_data| image:: ../ProCoDA/Images/Log_data.png
+.. |Log_text_comment| image:: ../ProCoDA/Images/Log_text_comment.png
 
 The following directions are written for the use of ProCoDA II hardware and software for pH data collection and manual control of the peristaltic pump. It would also be possible to use automate the experiment and control the pump using the ProCoDA II hardware and software.
 
 We will use a pH probe to measure pH in this experiment. The pH probes are stored in a small plastic box.  Each bench has one pH probe. Plug the pH probe into the blue signal-conditioning box (it takes a push and a twist). Connect the cable to one of the sensor ports on your ProCoDA box.
 
- 1. :ref:`Setup and calibrate the pH probe <heading_pH_Measurements>`
- 1. Verify that the experimental setup is plumbed so that the acid rain is pumped directly into the lake.  The lake outflow should discharge into the small drain on the side of your work bench.
- 1. Organize the bench setup so that the metal tube discharging the acid rain into the lake is solidly touching the metal stand that is connected to the stirrer. This will ground the solution that is in the lake and reduce voltage fluctuations that are easily measured by the pH probe.
- 1. Preset pump to give desired flow rate of 267 mL/min (4 L/15 minutes) based on the size of pump tubing selected. Do not turn the pump on yet! For each tubing size, different pump speeds will correspond to different flow rates being output by the pump. The peristaltic tubing sizes are rather arbitrary and are labeled by numbers: 13, 14, 16, 17, and 18 in increasing order of size. If you have \#18 tubing, you will want an RPM setting of (267 mL/min) / (3.8 mL/rev) = 70.3 RPM.
+ #. :ref:`Setup and calibrate the pH probe <heading_pH_Measurements>`
+ #. Verify that the experimental setup is plumbed so that the acid rain is pumped directly into the lake.  The lake outflow should discharge into the small drain on the side of your work bench.
+ #. Organize the bench setup so that the metal tube discharging the acid rain into the lake is solidly touching the metal stand that is connected to the stirrer. This will ground the solution that is in the lake and reduce voltage fluctuations that are easily measured by the pH probe.
+ #. Preset pump to give desired flow rate of 267 mL/min (4 L/15 minutes) based on the size of pump tubing selected. Do not turn the pump on yet! For each tubing size, different pump speeds will correspond to different flow rates being output by the pump. The peristaltic tubing sizes are rather arbitrary and are labeled by numbers: 13, 14, 16, 17, and 18 in increasing order of size. If you have \#18 tubing, you will want an RPM setting of (267 mL/min) / (3.8 mL/rev) = 70.3 RPM.
 
 
 
@@ -275,30 +286,32 @@ flow rate in mL/s & 1 & 0.0010 & 0.0035 & 0.0133 & 0.0467 & 0.0633 \\ \hline
 
 
 
- 1. Fill lake with reverse osmosis water and verify that the outflow is set so the lake volume is approximately 4 L.  Place the lake on top of a magnetic stirrer and add a stir bar.
- 1. Set stirrer speed to 8.
- 1. Add 1 mL of bromocresol green indicator solution to the lake.
- 1. Weigh out 623 mg (not grams!) NaHCO3.
- 1. Add NaHCO3 to the lake.
- 1. After the lake is well stirred take a 100 mL sample from the lake in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample).
- 1. Clip the pH probe to the side of your lake in a more quiescent zone, away from the influent and effluent.
- 1. We will continuously measure the pH of the effluent and log the data into a spreadsheet format.  In the pH meter software, set the data interval to 1 second.
+ #. Fill lake with reverse osmosis water and verify that the outflow is set so the lake volume is approximately 4 L.  Place the lake on top of a magnetic stirrer and add a stir bar.
+ #. Set stirrer speed to 8.
+ #. Add 1 mL of bromocresol green indicator solution to the lake.
+ #. Weigh out 623 mg (not grams!) NaHCO3.
+ #. Add NaHCO3 to the lake.
+ #. After the lake is well stirred take a 100 mL sample from the lake in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample).
+ #. Clip the pH probe to the side of your lake in a more quiescent zone, away from the influent and effluent.
+ #. We will continuously measure the pH of the effluent and log the data into a spreadsheet format.  In the pH meter software, set the data interval to 1 second.
 
 
- Begin logging data to file by clicking on the |ProCoDA_log_data| button. Create a new file in S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}Lab 2 -- Acid Rain{\textbackslash} with your netids in the name.
+ Begin logging data to file by clicking on the |Log_data| button. Create a new file in S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}Lab 2 -- Acid Rain{\textbackslash} with your netids in the name.
 
- 1. Prepare to write a comment in the file to mark the time when the pump starts by clicking on the |ProCoDA_log_text_comment| button. Type in a comment and then wait.
- 1. At time equal zero (t=0) start the peristaltic pump and click on the enter button in the comment dialog box.
- 1. Take 100-mL grab samples from the lake effluent at 5, 10, 15, and 20 minutes in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample). The sample volumes do not need to be measured exactly.
- 1. After the 20-minute sample, measure the flow rate by collecting effluent in a beaker for 30 seconds and measuring the volume collected (in a graduated cylinder for more accurate measurement).
- 1. Turn off the pump and stop measuring pH.
- 1. Measure the lake volume.  This can be done in a large graduated cylinder OR by taking the mass of the water in the lake.  Which would be more accurate?
- 1. )Repeat the experiment and change one of the following parameters: stirring, initial ANC, ANC source (use CaCO${}_{3}$ instead of NaHCO${}_{3}$), amount if ANC added.
+ #. Prepare to write a comment in the file to mark the time when the pump starts by clicking on the |Log_text_comment| button. Type in a comment and then wait.
+ #. At time equal zero (t=0) start the peristaltic pump and click on the enter button in the comment dialog box.
+ #. Take 100-mL grab samples from the lake effluent at 5, 10, 15, and 20 minutes in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample). The sample volumes do not need to be measured exactly.
+ #. After the 20-minute sample, measure the flow rate by collecting effluent in a beaker for 30 seconds and measuring the volume collected (in a graduated cylinder for more accurate measurement).
+ #. Turn off the pump and stop measuring pH.
+ #. Measure the lake volume.  This can be done in a large graduated cylinder OR by taking the mass of the water in the lake.  Which would be more accurate?
+ #. )Repeat the experiment and change one of the following parameters: stirring, initial ANC, ANC source (use CaCO${}_{3}$ instead of NaHCO${}_{3}$), amount if ANC added.
 
 
 
-Analytical Procedures
-=====================
+.. _heading_Acid_Rain_pH_Measurement:
+
+pH Measurement
+==============
 
 *pH*. pH :math:`(-log\mathrm{\{}$H+\mathrm{\}})` is usually measured electrometrically with a pH meter. The pH meter is a null-point potentiometer that measures the potential difference between an indicator electrode and a reference electrode. The two electrodes commonly used for pH measurement are the glass electrode and a reference electrode. The glass electrode is an indicator electrode that develops a potential across a glass membrane as a function of the activity (:math:`\mathrm{\sim}` molarity) of :math:`H^+`. Combination pH electrodes, in which the :math:`H^+`-sensitive and reference electrodes are combined within a single electrode body will be used in this lab. The reference electrode portion of a combination pH electrode is a [Ag/AgCl/4M KCl] reference. The response (output voltage) of the electrode follows a "Nernstian" behavior with respect to :math:`H^+` ion activity.
 
@@ -331,35 +344,43 @@ A more accurate technique to measure ANC is the Gran plot analysis. This is the 
 
 
 
+.. _heading_Acid_Rain_Questions:
+
 Pre-Laboratory Questions
 ========================
 
- 1. How many grams of NaHCO3 would be required to keep the ANC levels in a lake above 50 �eq/L for 3 hydraulic residence times given an influent pH of 3.0 and a lake volume of 4 L, if the current lake ANC is 0 :math:`\mu eq/L`?
+ #. How many grams of NaHCO3 would be required to keep the ANC levels in a lake above 50 �eq/L for 3 hydraulic residence times given an influent pH of 3.0 and a lake volume of 4 L, if the current lake ANC is 0 :math:`\mu eq/L`?
 
+
+.. _heading_Acid_Rain_Data_Analysis:
 
 Data Analysis
 =============
 
 K1 = 10-6.3, placeK2 = 10-10.3, KH = 10-1.5~mol/atm~L, PCO2~=~10-3.5 atm, and Kw = 10-14.
 
- 1. Plot measured pH of the lake versus dimensionless hydraulic residence time (t/?).
- 1. Assuming that the lake can be modeled as a completely mixed flow reactor and that ANC is a conservative parameter, equation 1.21 can be used to calculate the expected ANC in the lake effluent as the experiment proceeds. Graph the expected ANC in the lake effluent versus the hydraulic residence time (t/?) based on the completely mixed flow reactor equation with the plot labeled (in the legend) as conservative ANC.
- 1. If we assume that there are no carbonates exchanged with the atmosphere during the experiment, then we can calculate ANC in the lake effluent by using equation 1.11 describing the ANC of a closed system. Calculate the ANC under the assumption of a closed system and plot it on the same graph produced in answering question \#3 with the plot labeled (in the legend) as closed ANC.
- 1. If we assume that there is exchange with the atmosphere and that carbonates are at equilibrium with the atmosphere, then we can calculate ANC in the lake effluent by using equation 1.15 describing the ANC of an open system. Calculate the ANC under the assumption of an open system and plot it on the same graph produced in answering question \#3 with the plot labeled (in the legend) as open ANC.
- 1. Analyze the data from the second experiment and graph the data appropriately. What did you learn from the second experiment?
+ #. Plot measured pH of the lake versus dimensionless hydraulic residence time (t/?).
+ #. Assuming that the lake can be modeled as a completely mixed flow reactor and that ANC is a conservative parameter, equation 1.21 can be used to calculate the expected ANC in the lake effluent as the experiment proceeds. Graph the expected ANC in the lake effluent versus the hydraulic residence time (t/?) based on the completely mixed flow reactor equation with the plot labeled (in the legend) as conservative ANC.
+ #. If we assume that there are no carbonates exchanged with the atmosphere during the experiment, then we can calculate ANC in the lake effluent by using equation 1.11 describing the ANC of a closed system. Calculate the ANC under the assumption of a closed system and plot it on the same graph produced in answering question \#3 with the plot labeled (in the legend) as closed ANC.
+ #. If we assume that there is exchange with the atmosphere and that carbonates are at equilibrium with the atmosphere, then we can calculate ANC in the lake effluent by using equation 1.15 describing the ANC of an open system. Calculate the ANC under the assumption of an open system and plot it on the same graph produced in answering question \#3 with the plot labeled (in the legend) as open ANC.
+ #. Analyze the data from the second experiment and graph the data appropriately. What did you learn from the second experiment?
 
 
 
+
+.. _heading_Acid_Rain_Questions:
 
 Questions
 =========
 
- 1. What do you think would happen if enough :math:`NaHCO_3` were added to the lake to maintain an ANC greater than :math:`50 \mu eq/L` for 3 residence times with the stirrer turned off? How much :math:`NaHCO_3` would need to be added?
- 1. What are some of the complicating factors you might find in attempting to remediate a lake using :math:`CaCO_3`? Below is a list of issues to consider.
- 1.  extent of mixing
- 1.  solubility of :math:`CaCO_3` (find the solubility and compare with :math:`NaHCO_3`)
- 1.  density of :math:`CaCO_3` slurry (find the density of :math:`CaCO_3`)
+ #. What do you think would happen if enough :math:`NaHCO_3` were added to the lake to maintain an ANC greater than :math:`50 \mu eq/L` for 3 residence times with the stirrer turned off? How much :math:`NaHCO_3` would need to be added?
+ #. What are some of the complicating factors you might find in attempting to remediate a lake using :math:`CaCO_3`? Below is a list of issues to consider.
+ #.  extent of mixing
+ #.  solubility of :math:`CaCO_3` (find the solubility and compare with :math:`NaHCO_3`)
+ #.  density of :math:`CaCO_3` slurry (find the density of :math:`CaCO_3`)
 
+
+.. _heading_Acid_Rain_References:
 
 References
 ==========
@@ -382,6 +403,8 @@ References
 
  Stumm, W. and Morgan, J.J., **Aquatic Chemistry**, John Wiley \& Sons, Inc. NY, NY 1981.
 
+
+.. _heading_Acid_Rain_Lab_Prep_Notes:
 
 Lab Prep Notes
 ==============
@@ -438,13 +461,15 @@ Flow Rate
 The residence time of the lake should be 15 minutes. The lake volume is 4 L. thus the flow rate is 267 mL/min. Use \# 18 PharMed tubing.
 
 
-Setup
------
+.. _heading_Acid_Rain_Setup:
 
- 1. Prepare 20-L acid rain for each group.
- 1. Prepare bromocresol green solution if necessary.
- 1. Attach one Easy-Load pump head to the pump drives and plumb with \#18 tubing.
- 1. Plumb Jerrican to pump to lake using quick connectors (see Figure \eqref{ZEqnNum149406}).
- 1. Verify that pH probes are operational, stable, and can be calibrated.
- 1. )Verify that buffers (pH = 4, 7, 10) are distributed to each student group.
- 1. Provide a effluent cup in which pH can be measured.
+Setup
+=====
+
+ #. Prepare 20-L acid rain for each group.
+ #. Prepare bromocresol green solution if necessary.
+ #. Attach one Easy-Load pump head to the pump drives and plumb with \#18 tubing.
+ #. Plumb Jerrican to pump to lake using quick connectors (see Figure \eqref{ZEqnNum149406}).
+ #. Verify that pH probes are operational, stable, and can be calibrated.
+ #. )Verify that buffers (pH = 4, 7, 10) are distributed to each student group.
+ #. Provide a effluent cup in which pH can be measured.

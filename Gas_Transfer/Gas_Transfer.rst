@@ -1,12 +1,18 @@
+.. _title_Gas_Transfer:
+
 ************
 Gas Transfer
 ************
 
 
+.. _heading_Gas_Transfer_Introduction:
+
 Introduction
 ============
 
 Exchange of gases between aqueous and gaseous phases is an essential element of many environmental processes. Wastewater treatment plants require enhanced transfer of oxygen into activated sludge tanks to maintain aerobic degradation. Water treatment plants require gas transfer to dissolve chlorine gas or ozone. Gas transfer can also be used to remove unwanted volatile chemicals such as carbon tetrachloride, tetrachloroethylene, trichloroethylene, chloroform, bromodichloromethane, and bromoform from water (Zander et al., 1989). Exchange of a dissolved compound with the atmosphere is controlled by the extent of mixing in the aqueous and gaseous phase, the surface area of the interface, the concentration of the compound in the two phases, and the equilibrium distribution of the compound. Technologies that have been developed to enhance gas transfer include: aeration diffusers, packed-tower air stripping, and membrane stripping. Each of these technologies creates a high interface surface area to enhance gas transfer.
+
+.. _heading_Gas_Transfer_Theory:
 
 Theory
 ======
@@ -17,11 +23,13 @@ Natural bodies of water may be either supersaturated or undersaturated with oxyg
 
  \includegraphics*[width=2.92in, height=2.25in, keepaspectratio=false]{image1}
 
- Figure  1-1. Dissolved oxygen concentrations in equilibrium with the atmosphere.
+ Figure  1- #. Dissolved oxygen concentrations in equilibrium with the atmosphere.
 
 At high levels of supersaturation dissolved gas will form microbubbles that eventually coalesce, rise, and burst at the water surface. The bubbles provide a very efficient transfer of supersaturated dissolved gas to the gaseous phase, a process that can be observed when the partial pressure of carbon dioxide is decreased by opening a carbonated beverage. Bubble formation by supersaturated gasses also occurs in the environment when cold water in equilibrium with the atmosphere is warmed rapidly. The equilibrium dissolved oxygen concentration decreases as the water is warmed (Figure 1-1).
 
 Supersaturation of dissolved gases can also occur when water carrying gas bubbles from a waterfall or spillway plunges into a deep pool. The pressure increases with depth in the pool and gasses carried deep into the pool dissolve in the water. When the water eventually approaches the surface the pressure decreases and the dissolved gases come out of solution and form bubbles. Bubble formation by supersaturated gases can kill fish (similar to the bends in humans) as the bubbles form in the bloodstream.
+
+.. _heading_Gas_Transfer_Coefficient:
 
 Gas Transfer Coefficient
 ------------------------
@@ -68,6 +76,8 @@ Equation 1.5 can be evaluated using linear regression so that $\hat{k}_{v,l} $ i
 
 The simple gas transfer model given in equation 1.5 is appropriate when the gas transfer coefficient is independent of the dissolved gas concentration. This requirement can be met in systems where the gas bubbles do not change concentration significantly as they rise through the water column. This condition is met when the water column is shallow, the bubbles have large diameters, or the difference between the concentration of dissolved gas and the equilibrium concentration is small.
 
+
+.. _heading_Gas_Transfer_Oxygen_Transfer_Efficiency:
 
 Oxygen Transfer Efficiency
 --------------------------
@@ -119,6 +129,8 @@ If the molar airflow rate is controlled then OTE is based on the ratio of equati
 .. math::
     OTE=\frac{\dot{n}_{aq\; o_{2} } }{f_{O_{2} } \dot{n}_{air} } =\frac{V\hat{k}_{v,l} \left(C^{*} -C\right)}{f_{O_{2} } \dot{n}_{air} MW_{O_{2} } }  1.10
 
+.. _heading_Gas_Transfer_Deoxygenation:
+
 Deoxygenation
 -------------
 
@@ -136,18 +148,22 @@ The mass of sodium sulfite required to deoxygenate 1 mg of oxygen is calculated 
 
  If complete deoxygenation is desired a 10\% excess of sulfite can be added. The sulfite will continue to react with oxygen as oxygen is transferred into the solution. The oxygen concentration can be measured with a dissolved oxygen probe or can be estimated if the temperature is known and equilibrium with the atmosphere assumed (Figure 1-1).
 
+.. _heading_Gas_Transfer_Experimental_Objectives:
+
 Experimental Objectives
 =======================
 
 The objectives of this lab are to:
 
- 1. Illustrate the dependence of gas transfer on gas flow rate.
- 1. Develop a functional relationship between gas flow rate and gas transfer.
- 1. Measure the oxygen transfer efficiency of a course bubble diffuser.
- 1. Explain the theory and use of dissolved oxygen probes.
+ #. Illustrate the dependence of gas transfer on gas flow rate.
+ #. Develop a functional relationship between gas flow rate and gas transfer.
+ #. Measure the oxygen transfer efficiency of a course bubble diffuser.
+ #. Explain the theory and use of dissolved oxygen probes.
 
 
 A small reactor that meets the conditions of a constant gas transfer coefficient will be used to characterize the dependence of the gas transfer coefficient on the gas flow rate through a simple diffuser. The gas transfer coefficient is a function of the gas flow rate because the interface surface area i.e., the surface area of the air bubbles) increases as the gas flow rate increases.
+
+.. _heading_Gas_Transfer_Dissolved_Oxygen_Probes:
 
 Dissolved Oxygen Probes
 =======================
@@ -172,15 +188,17 @@ A calibration routine is available in the ProCoDA II software. Follow the instru
 
 When using the DO probe make sure that there *aren't any air bubbles* on the probe membrane. If you are aerating the sample place the probe as far from the air bubbles as possible. Air bubbles on the membrane will cause inaccurate readings. Note that you do not need to calibrate the DO probe at the beginning of the lab. Build the full setup and then calibrate when it says to calibrate.
 
- 1. Connect a DO probe to the data acquisition system using the gold signal conditioning box.
- 1. Navigate to the Configuration tab and enter you Location in the bottom left corner, then select \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image3} to configure the dissolved oxygen channel(s). Select the DO probe from the sensor list and point the channel to the correct sensor port.
- 1. Use the dissolved oxygen calibration VI \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image4} to calibrate the DO probe.
- 1. Enter the temperature of the sample. This can be measured by using a thermistor or a thermometer. A good estimate is :math:`22^\circ C`.
- 1. If you have typed in your location in the Configuration Tab, you can get the actual barometric pressure for Ithaca, New York by selecting \includegraphics*[width=1.89in, height=0.21in, keepaspectratio=false]{image5}
- 1. Place the probe in oxygen saturated water (use the air jet on your bench to bubble air into water in a 4L container).  The voltage from the DO probe should be between 0.17 and 0.23 volts if the probe is working correctly. If the voltage is lower than 0.17 it may be time to replace the membrane or the solution may not be saturated with oxygen.
- 1. Select \includegraphics*[width=1.12in, height=0.21in, keepaspectratio=false]{image6}to calibrate the DO sensor.
- 1. Select OK \includegraphics*[width=0.91in, height=0.25in, keepaspectratio=false]{image7}when you are satisfied with the calibration.
- 1. If desired you may save the calibration for later use \includegraphics*[width=0.25in, height=0.24in, keepaspectratio=false]{image8}. However, it is not necessary to save the calibration to use the calibration in the current session.~~If you want to save the calibration, save it in your Group folder on the S:/ drive.~~
+ #. Connect a DO probe to the data acquisition system using the gold signal conditioning box.
+ #. Navigate to the Configuration tab and enter you Location in the bottom left corner, then select \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image3} to configure the dissolved oxygen channel(s). Select the DO probe from the sensor list and point the channel to the correct sensor port.
+ #. Use the dissolved oxygen calibration VI \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image4} to calibrate the DO probe.
+ #. Enter the temperature of the sample. This can be measured by using a thermistor or a thermometer. A good estimate is :math:`22^\circ C`.
+ #. If you have typed in your location in the Configuration Tab, you can get the actual barometric pressure for Ithaca, New York by selecting \includegraphics*[width=1.89in, height=0.21in, keepaspectratio=false]{image5}
+ #. Place the probe in oxygen saturated water (use the air jet on your bench to bubble air into water in a 4L container).  The voltage from the DO probe should be between 0.17 and 0.23 volts if the probe is working correctly. If the voltage is lower than 0.17 it may be time to replace the membrane or the solution may not be saturated with oxygen.
+ #. Select \includegraphics*[width=1.12in, height=0.21in, keepaspectratio=false]{image6}to calibrate the DO sensor.
+ #. Select OK \includegraphics*[width=0.91in, height=0.25in, keepaspectratio=false]{image7}when you are satisfied with the calibration.
+ #. If desired you may save the calibration for later use \includegraphics*[width=0.25in, height=0.24in, keepaspectratio=false]{image8}. However, it is not necessary to save the calibration to use the calibration in the current session.~~If you want to save the calibration, save it in your Group folder on the S:/ drive.~~
+
+.. _heading_Gas_Transfer_Experimental_Methods:
 
 Experimental Methods
 ====================
@@ -190,76 +208,80 @@ Experimental Methods
 Initial Setup
 -------------
 
- 1. Assemble the apparatus (don't forget the 1.5 mm x 5 cm restriction).
- 1. Install the head loss orifice as close to the valve as possible (plug it directly into the valve!).
- 1. The ProCoDA II software will be used to control the air flow rate for the aeration experiment. The software will use external code to calculate the calibration constant for the flow restriction, to control valve 1 (the air supply valve), and to regulate the flow of air into the accumulator. The calibration uses the ideal gas law to determine the flow rate as a function of the difference in pressure between the source and the accumulator. Once this calibration is obtained a separate code will set the fraction of time that valve 1 needs to be open to obtain the desired flow rate of air.
+ #. Assemble the apparatus (don't forget the 1.5 mm x 5 cm restriction).
+ #. Install the head loss orifice as close to the valve as possible (plug it directly into the valve!).
+ #. The ProCoDA II software will be used to control the air flow rate for the aeration experiment. The software will use external code to calculate the calibration constant for the flow restriction, to control valve 1 (the air supply valve), and to regulate the flow of air into the accumulator. The calibration uses the ideal gas law to determine the flow rate as a function of the difference in pressure between the source and the accumulator. Once this calibration is obtained a separate code will set the fraction of time that valve 1 needs to be open to obtain the desired flow rate of air.
 
  The software combines 3 elements: sensors (inputs from the real world), set points (inputs from the plant operator and calculated values based on sensors and other set points), and logic (rules that govern how the plant should operate given the sensor data and set points). The software contains a graphical user interface where you can edit, save, and open files containing sensor information and files containing the set point and logic information.
 
  A method file containing the configuration necessary to control airflow is available at S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash} GasTransfer2.pcm. Open the file, using the \includegraphics*[width=0.25in, height=0.24in, keepaspectratio=false]{image10} on the Configuration tab. You will need to adjust the channels for the accumulator pressure and the DO probe to match where you plugged them in your ProCoDA box. You will also need to make sure that your valves are connected to the correct ports on the ProCoDA box.
 
- 1. Navigate to the Process Operation tab.
- 1. Set the \textbf{\textit{operator selected state}} to toggle.  The solenoid valves should click rhythmically if they are working properly.
- 1. Install a membrane on the oxygen probe.
- 1. Add 4 L of tap water to the reactor.
- 1. Set the *mode of operation* to automatic operation and the *operator selected state* to prepare to calibrate. The software should quickly cycle through the calibration step and then begin attempting to control the air flow rate to the target value.  Note:  the purpose of the prepare to calibrate state is to void the accumulator of any pressure.  The state will not change to calibrate until the pressure drops below a predefined threshold.  To speed this up, you may open the top of the air accumulator to release the air *before starting the automatic calibration*.
- 1. Set the stirrer speed to achieve a vortex on the surface of the water.
- 1. Calibrate the DO probe if you haven't already. Use 22�C as the temperature.
+ #. Navigate to the Process Operation tab.
+ #. Set the \textbf{\textit{operator selected state}} to toggle.  The solenoid valves should click rhythmically if they are working properly.
+ #. Install a membrane on the oxygen probe.
+ #. Add 4 L of tap water to the reactor.
+ #. Set the *mode of operation* to automatic operation and the *operator selected state* to prepare to calibrate. The software should quickly cycle through the calibration step and then begin attempting to control the air flow rate to the target value.  Note:  the purpose of the prepare to calibrate state is to void the accumulator of any pressure.  The state will not change to calibrate until the pressure drops below a predefined threshold.  To speed this up, you may open the top of the air accumulator to release the air *before starting the automatic calibration*.
+ #. Set the stirrer speed to achieve a vortex on the surface of the water.
+ #. Calibrate the DO probe if you haven't already. Use 22�C as the temperature.
 
 Test the air flow controller
 ----------------------------
 
 In the following test, the air flow controller should provide a constant flow of air into the accumulator. You can assess how well the air flow controller is working based on the slope of the pressure as a function of time.
 
- 1. Set the **mode of operation** to Manual Locked in State.
- 1. Set the **operator selected state** to off
- 1. Open the accumulator cap to empty the accumulator.
- 1. Close the accumulator cap.
- 1. Close the needle valve.
- 1. We can set the air flow rate based on our calibration be navigating to the Configuration tab and selecting edit rules. We want to control the air flow rate, so select air flow rate from the set points and variables list. Set the air flow rate to a value of 200u (200 ?M/s).
- 1. Begin logging data from the 200kPa pressure sensor (accumulator pressure) at a 1 s interval using the datalog button on the configuration tab. Data is being logged when the icon is green.
- 1. Navigate back to process operation tab and set the **operator selected state** to aerate.
- 1. End logging data when the accumulator pressure is approximately equal to the source pressure.
- 1. Analyze the data to see if the airflow rate is close to the expected value. This can be done using the data obtained and the ideal gas law.  Plot the accumulator air pressure as a function of time.  The slope of the best fit linear line is in units of Pa/s.  The volume of the accumulator is 1 liter.  Solving the ideal gas law for n gives a result in units of moles/s. You set the air flow rate for 200 :math:`\mu M/s` and that is what you are expecting from this calculation.
- 1. If the error is greater than 20\% look for leaks and recalibrate the airflow controller.
+ #. Set the **mode of operation** to Manual Locked in State.
+ #. Set the **operator selected state** to off
+ #. Open the accumulator cap to empty the accumulator.
+ #. Close the accumulator cap.
+ #. Close the needle valve.
+ #. We can set the air flow rate based on our calibration be navigating to the Configuration tab and selecting edit rules. We want to control the air flow rate, so select air flow rate from the set points and variables list. Set the air flow rate to a value of 200u (200 ?M/s).
+ #. Begin logging data from the 200kPa pressure sensor (accumulator pressure) at a 1 s interval using the datalog button on the configuration tab. Data is being logged when the icon is green.
+ #. Navigate back to process operation tab and set the **operator selected state** to aerate.
+ #. End logging data when the accumulator pressure is approximately equal to the source pressure.
+ #. Analyze the data to see if the airflow rate is close to the expected value. This can be done using the data obtained and the ideal gas law.  Plot the accumulator air pressure as a function of time.  The slope of the best fit linear line is in units of Pa/s.  The volume of the accumulator is 1 liter.  Solving the ideal gas law for n gives a result in units of moles/s. You set the air flow rate for 200 :math:`\mu M/s` and that is what you are expecting from this calculation.
+ #. If the error is greater than 20\% look for leaks and recalibrate the airflow controller.
 
 Measure the Gas Transfer
 ------------------------
 
- 1. Call the instructor and/or TA to check the system configuration.
- 1. The instructor or TA will add 1 mg CoCl2� 6H2O (note this only needs to be added once because it is the catalyst). A stock solution of CoCl2� 6H2O (100 mg/mL -- thus add 10 ?L) has been prepared to facilitate measurement of small cobalt doses. (Use gloves when handling cobalt!)
- 1. Prepare to record the dissolved oxygen concentration using ProCoDA software. Use 5-second data intervals and log the data to S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}gastran\_flowrate{\textbackslash} for later analysis. Include the actual flow rate in the file name.
- 1. Set the airflow rate to the desired flow rate.  Each group will investigate six flowrates.  The instructor will assign the flowrates on the day of the lab exercise.
- 1. Set the **operator selected state** to aerate.
- 1. Set the needle valve so the pressure in the accumulator is approximately 75\% of the source pressure.
- 1. Wait until the accumulator pressure reaches steady state.
- 1. Turn the air off by changing the operator selected state to OFF.
- 1. Add enough sodium sulfite to deoxygenate the solution. A stock solution of sodium sulfite (100 mg/mL) has been prepared to facilitate measurement of small sulfite doses. Calculate this dose based on the measured dissolved oxygen concentration. (4 L of water at :math:`C_{oxygen}\; mg \; O_2/L = 4\; C_{oxygen}\; mg\; O_2`, therefore add :math:`4 (7.875) C_{oxygen}` mg sodium sulfite or :math:`4(7.875)(C_{oxygen})/100 mL` of stock solution.)
- 1. Turn the air on by changing the \textbf{\textit{operator selected state}} to Aerate.
- 1. Monitor the dissolved oxygen concentration until it reaches 50\% of saturation value or 10 minutes (whichever is shorter).
- 1. Repeat steps 3-11 to collect data from at least two additional flow rates.
- 1. Consolidate the files into one spreadsheet file with a separate sheet for each flow rate.
- 1. Collect data from the whole class to analyze the full spectrum of flow rates investigated.
+ #. Call the instructor and/or TA to check the system configuration.
+ #. The instructor or TA will add 1 mg CoCl2� 6H2O (note this only needs to be added once because it is the catalyst). A stock solution of CoCl2� 6H2O (100 mg/mL -- thus add 10 ?L) has been prepared to facilitate measurement of small cobalt doses. (Use gloves when handling cobalt!)
+ #. Prepare to record the dissolved oxygen concentration using ProCoDA software. Use 5-second data intervals and log the data to S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}gastran\_flowrate{\textbackslash} for later analysis. Include the actual flow rate in the file name.
+ #. Set the airflow rate to the desired flow rate.  Each group will investigate six flowrates.  The instructor will assign the flowrates on the day of the lab exercise.
+ #. Set the **operator selected state** to aerate.
+ #. Set the needle valve so the pressure in the accumulator is approximately 75\% of the source pressure.
+ #. Wait until the accumulator pressure reaches steady state.
+ #. Turn the air off by changing the operator selected state to OFF.
+ #. Add enough sodium sulfite to deoxygenate the solution. A stock solution of sodium sulfite (100 mg/mL) has been prepared to facilitate measurement of small sulfite doses. Calculate this dose based on the measured dissolved oxygen concentration. (4 L of water at :math:`C_{oxygen}\; mg \; O_2/L = 4\; C_{oxygen}\; mg\; O_2`, therefore add :math:`4 (7.875) C_{oxygen}` mg sodium sulfite or :math:`4(7.875)(C_{oxygen})/100 mL` of stock solution.)
+ #. Turn the air on by changing the \textbf{\textit{operator selected state}} to Aerate.
+ #. Monitor the dissolved oxygen concentration until it reaches 50\% of saturation value or 10 minutes (whichever is shorter).
+ #. Repeat steps 3-11 to collect data from at least two additional flow rates.
+ #. Consolidate the files into one spreadsheet file with a separate sheet for each flow rate.
+ #. Collect data from the whole class to analyze the full spectrum of flow rates investigated.
 
+
+.. _heading_Gas_Transfer_Pre-Laboratory_Questions:
 
 Pre-Laboratory Questions
 ========================
 
- 1. Calculate the mass of sodium sulfite needed to reduce all the dissolved oxygen in 4 L of pure water in equilibrium with the atmosphere and at :math:`30^\circ C`.
- 1. Describe your expectations for dissolved oxygen concentration as a function of time during a reaeration experiment.  Assume you have added enough sodium sulfite to consume all of the oxygen at the start of the experiment. What would the shape of the curve look like?
- 1. Why is :math:`\hat{k}_{v,l}` not zero when the gas flow rate is zero? How can oxygen transfer into the reactor even when no air is pumped into the diffuser?
- 1. )Describe your expectations for :math:`\hat{k}_{v,l}` as a function of gas flow rate. Do you expect a straight line? Why?
- 1. A dissolved oxygen probe was placed in a small vial in such a way that the vial was sealed. The water in the vial was sterile. Over a period of several hours the dissolved oxygen concentration gradually decreased to zero. Why? (You need to know how dissolved oxygen
+ #. Calculate the mass of sodium sulfite needed to reduce all the dissolved oxygen in 4 L of pure water in equilibrium with the atmosphere and at :math:`30^\circ C`.
+ #. Describe your expectations for dissolved oxygen concentration as a function of time during a reaeration experiment.  Assume you have added enough sodium sulfite to consume all of the oxygen at the start of the experiment. What would the shape of the curve look like?
+ #. Why is :math:`\hat{k}_{v,l}` not zero when the gas flow rate is zero? How can oxygen transfer into the reactor even when no air is pumped into the diffuser?
+ #. )Describe your expectations for :math:`\hat{k}_{v,l}` as a function of gas flow rate. Do you expect a straight line? Why?
+ #. A dissolved oxygen probe was placed in a small vial in such a way that the vial was sealed. The water in the vial was sterile. Over a period of several hours the dissolved oxygen concentration gradually decreased to zero. Why? (You need to know how dissolved oxygen
+
+.. _heading_Gas_Transfer_Data_Analysis:
 
 Data Analysis
 =============
 
 This lab requires a significant amount of repetitive data analysis. Plan how you will organize the analysis to be as easy as possible.
 
- 1. Calculate the air flow rate from testing the air flow controller and compare with the target value.
- 1. Eliminate the data from each data set when the dissolved oxygen concentration was less than 0.5 mg/L. This will ensure that all of the sulfite has reacted.
- 1. Plot a representative data set showing dissolved oxygen vs. time.
- 1. Calculate :math:`C^{\star}` based on the average water temperature, barometric pressure, and the following equation.
+ #. Calculate the air flow rate from testing the air flow controller and compare with the target value.
+ #. Eliminate the data from each data set when the dissolved oxygen concentration was less than 0.5 mg/L. This will ensure that all of the sulfite has reacted.
+ #. Plot a representative data set showing dissolved oxygen vs. time.
+ #. Calculate :math:`C^{\star}` based on the average water temperature, barometric pressure, and the following equation.
 
    .. math::
 
@@ -270,26 +292,31 @@ This lab requires a significant amount of repetitive data analysis. Plan how you
     | :math:`P_{O_{2} }` is the partial pressure of oxygen in atmospheres, and
     | :math:`C^{\star} ` is in mg/L. This equation is valid for 278 K < T < 318 K.
 
- 1.  Estimate $\hat{k}_{v,l} $ using linear regression and equation 1.5 for each data set.
- 1. Create a graph with a representative plot showing the linearized data, :math:`\left(\ln \frac{C^{\star} -C}{C^{\star} -C_{0} } \right)` vs. time, and the best-fit line.
- 1. Plot the reaeration model on the same graph as the dissolved oxygen vs. time data.  This is done by solving equation for C.
- 1. Plot :math:`\hat{k}_{v,l}` as a function of airflow rate (:math:`\mu mole/s`).
- 1. Look at each dataset and if necessary (to make more linear plots) eliminate more data from the beginning (or end) of the dataset. You will be able to see when the oxygen level is affected by residual sulfite at the beginning of the experiments.
- 1. Plot OTE as a function of airflow rate (?mole/s) with the oxygen deficit (:math:`C^{\star} -C`) set at 6 mg/L.
- 1. Plot the molar rate of oxygen dissolution into the aqueous phase (:math:`\mu mole/s`) as a function of airflow rate (:math:`\mu mole/s`).
- 1. Comment on results and compare with your expectations and with theory.
- 1. Verify that your report and graphs meet the requirements.
+ #.  Estimate $\hat{k}_{v,l} $ using linear regression and equation 1.5 for each data set.
+ #. Create a graph with a representative plot showing the linearized data, :math:`\left(\ln \frac{C^{\star} -C}{C^{\star} -C_{0} } \right)` vs. time, and the best-fit line.
+ #. Plot the reaeration model on the same graph as the dissolved oxygen vs. time data.  This is done by solving equation for C.
+ #. Plot :math:`\hat{k}_{v,l}` as a function of airflow rate (:math:`\mu mole/s`).
+ #. Look at each dataset and if necessary (to make more linear plots) eliminate more data from the beginning (or end) of the dataset. You will be able to see when the oxygen level is affected by residual sulfite at the beginning of the experiments.
+ #. Plot OTE as a function of airflow rate (?mole/s) with the oxygen deficit (:math:`C^{\star} -C`) set at 6 mg/L.
+ #. Plot the molar rate of oxygen dissolution into the aqueous phase (:math:`\mu mole/s`) as a function of airflow rate (:math:`\mu mole/s`).
+ #. Comment on results and compare with your expectations and with theory.
+ #. Verify that your report and graphs meet the requirements.
+
+.. _heading_Gas_Transfer_References:
 
 ==================
 References}
 
  Weber, W. J. J. and F. A. Digiano. 1996. Process Dynamics in Environmental Systems. New York, John Wiley \& Sons, Inc.Zander, A. K.; M. J. Semmens and R. M. Narbaitz. 1989. **Removing VOCs by membrane stripping** American Water Works Association Journal 81: 76-81.
 
- Lab Prep Notes
-==================
+
+.. _heading_Gas_Transfer_Lab_Prep_Notes:
+
+Lab Prep Notes
+==============
 
 \begin{tabular}{|p{0.7in}|p{0.7in}|p{0.7in}|} \hline
-\multicolumn{3}{|p{1in}|}{Table 1-1. Reagent list\textbf{}} \\ \hline
+\multicolumn{3}{|p{1in}|}{Table 1- #. Reagent list\textbf{}} \\ \hline
 \textbf{Description} & \textbf{Supplier} & \textbf{Catalog number} \\ \hline
 Na2SO3 & Fisher Scientific & S430-500 \\ \hline
 CoCl2� 6H2O & Fisher Scientific & C371-100 \\ \hline
@@ -299,11 +326,11 @@ CoCl2� 6H2O & Fisher Scientific & C371-100 \\ \hline
 Setup
 -----
 
- 1. Prepare the sodium sulfite immediately before class and distribute to groups in 15 mL PP bottles to minimize oxygen dissolution and reaction with the sulfite.
- 1. The cobalt solution can be prepared anytime and stored long term.
- 1. Install the membranes on the DO probes and confirm that all probes are operational.
- 1. Provide clamps to mount DO probes on magnetic stirrers.
- 1. Determine maximum airflow rate that is reasonable given small reactor volume.
+ #. Prepare the sodium sulfite immediately before class and distribute to groups in 15 mL PP bottles to minimize oxygen dissolution and reaction with the sulfite.
+ #. The cobalt solution can be prepared anytime and stored long term.
+ #. Install the membranes on the DO probes and confirm that all probes are operational.
+ #. Provide clamps to mount DO probes on magnetic stirrers.
+ #. Determine maximum airflow rate that is reasonable given small reactor volume.
 
  \begin{tabular}{|p{0.4in}|p{0.3in}|p{0.3in}|p{0.3in}|p{0.3in}|p{0.4in}|} \hline
  \multicolumn{6}{|p{1in}|}{Table 1-2. Stock solutions list} \\ \hline
@@ -328,11 +355,11 @@ Setup
 Major elements of apparatus
 ---------------------------
 
- 1. air flow hardware (built by students)
- 1. reactor hardware (built by students)
- 1. sensors (plugged in to ports by TA)
- 1. solenoid valves (already plugged in to ports by TA)
- 1. software
+ #. air flow hardware (built by students)
+ #. reactor hardware (built by students)
+ #. sensors (plugged in to ports by TA)
+ #. solenoid valves (already plugged in to ports by TA)
+ #. software
 
 
 \begin{tabular}{|p{0.3in}|p{0.9in}|} \hline
@@ -349,14 +376,16 @@ Group & Flows (?M/s) \\ \hline
 Class Plan
 ----------
 
- 1. Show how to calibrate DO probe using Calibrator.
- 1. Assign groups different gas flow rates
+ #. Show how to calibrate DO probe using Calibrator.
+ #. Assign groups different gas flow rates
 
+
+.. _heading_Gas_Transfer_Airflow_Control:
 
 Airflow Control
 ===============
 
- \includegraphics*[width=3.96in, height=1.71in, keepaspectratio=false]{image11} The ProCoDA software can be configured to control the flow of air into the reactor. The hardware required is shown in Figure 1.1. The control algorithm is based on the theoretical relationship between head loss and flow rate for the air flowing into the accumulator. We can empirically measure the head loss coefficient and then use the theoretical relationship to determine what fraction of time the influent valve should be open to obtain the desired flow rate. We can use the change in pressure in the accumulator when the influent valve is open to determine how fast air was flowing into the accumulator. In order to develop an appropriate head loss model we need to know if the flow into the accumulator is laminar or turbulent.
+ \includegraphics*[width=3.96in, height=1.71in, keepaspectratio=false]{image11} The ProCoDA software can be configured to control the flow of air into the reactor. The hardware required is shown in Figure 1. #. The control algorithm is based on the theoretical relationship between head loss and flow rate for the air flowing into the accumulator. We can empirically measure the head loss coefficient and then use the theoretical relationship to determine what fraction of time the influent valve should be open to obtain the desired flow rate. We can use the change in pressure in the accumulator when the influent valve is open to determine how fast air was flowing into the accumulator. In order to develop an appropriate head loss model we need to know if the flow into the accumulator is laminar or turbulent.
 
 .. math::
 
