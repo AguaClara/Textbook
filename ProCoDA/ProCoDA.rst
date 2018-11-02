@@ -5,6 +5,55 @@ ProCoDA: Process Control and Data Acquisition
 *********************************************
 
 
+.. |config_calibrate_pump| image:: Images/config_calibrate_pump.png
+.. |config_data_state_log| image:: Images/config_data_state_log.png
+.. |config_edit_rules| image:: Images/config_edit_rules.png
+.. |config_Logging_data_short_exp| image:: Images/config_Logging_data_short_exp.png
+.. |Config_open_save_export| image:: Images/Config_open_save_export.png
+.. |config_select_daq| image:: Images/config_select_daq.png
+.. |config_sensors| image:: Images/config_sensors.png
+.. |config_share_data| image:: Images/config_share_data.png
+.. |DO_controls| image:: Images/DO_controls.png
+.. |DO_set_barometric| image:: Images/DO_set_barometric.png
+.. |DO_set_to_saturation| image:: Images/DO_set_to_saturation.png
+.. |DO_zero| image:: Images/DO_zero.png
+.. |Gran_accept_pH| image:: Images/Gran_accept_pH.png
+.. |Gran_change_increment| image:: Images/Gran_change_increment.png
+.. |Gran_end_titration| image:: Images/Gran_end_titration.png
+.. |Gran_get_titration_values| image:: Images/Gran_get_titration_values.png
+.. |Gran_incremental_titrant| image:: Images/Gran_incremental_titrant.png
+.. |Gran_save| image:: Images/Gran_save.png
+.. |Gran_start| image:: Images/Gran_start.png
+.. |Logging_data| image:: Images/Logging_data.png
+.. |Mode_of_operation| image:: Images/Mode_of_operation.png
+.. |open_method| image:: Images/open_method.png
+.. |photometer_open_save_export| image:: Images/photometer_open_save_export.png
+.. |photometer_read_blank| image:: Images/photometer_read_blank.png
+.. |photometer_read_dark| image:: Images/photometer_read_dark.png
+.. |pH_add_buffer| image:: Images/pH_add_buffer.png
+.. |pH_clear_buffers| image:: Images/pH_clear_buffers.png
+.. |pH_controls| image:: Images/pH_controls.png
+.. |pH_edit_buffers| image:: Images/pH_edit_buffers.png
+.. |ProCoDA.pptx| image:: Images/ProCoDA.pptx.png
+.. |sensor_clear_offsets| image:: Images/sensor_clear_offsets.png
+.. |sensor_copy| image:: Images/sensor_copy.png
+.. |sensor_delete| image:: Images/sensor_delete.png
+.. |sensor_DO| image:: Images/sensor_DO.png
+.. |sensor_edit_calibration| image:: Images/sensor_edit_calibration.png
+.. |sensor_insert| image:: Images/sensor_insert.png
+.. |sensor_linear_offsets| image:: Images/sensor_linear_offsets.png
+.. |sensor_no_range_error| image:: Images/sensor_no_range_error.png
+.. |sensor_open_calibration_file| image:: Images/sensor_open_calibration_file.png
+.. |sensor_pH| image:: Images/sensor_pH.png
+.. |sensor_photometer| image:: Images/sensor_photometer.png
+.. |sensor_position_system| image:: Images/sensor_position_system.png
+.. |sensor_range_error| image:: Images/sensor_range_error.png
+.. |sensor_save_calibration_file| image:: Images/sensor_save_calibration_file.png
+.. |sensor_set_to_value| image:: Images/sensor_set_to_value.png
+.. |sensor_set_to_zero]| image:: Images/sensor_set_to_zero].png
+
+
+The software combines 3 elements: sensors (inputs from the real world), set points (inputs from the plant operator and calculated values based on sensors and other set points), and logic (rules that govern how the plant should operate given the sensor data and set points). The software contains a graphical user interface where you can edit, save, and open files containing sensor information and files containing the set point and logic information.
 
 .. _heading_ProCoDA_Sensors:
 
@@ -44,12 +93,7 @@ pH Measurement
 Gran Plot
 ---------
 
-.. |Save_gran| image:: Images/Save_gran.png
-.. |Launch_gran_plot| image:: Images/Launch_gran_plot.png
-.. |Get_titration_values| image:: Images/Get_titration_values.png
-.. |Incremental_titrant| image:: Images/Incremental_titrant.png
-.. |Accept_pH_value| image:: Images/Accept_pH_value.png
-.. |End_titration| image:: Images/End_titration.png
+
 
 
  #. Open the ProCoDA II software in the ProCoDA II folder on the desktop.
@@ -63,7 +107,22 @@ Gran Plot
  #. The equivalent volume (:math:`V_e`) is given in the same units as were used for the titrant and sample volumes. The equivalent volume is the abscissa intercept of the line fit to the data in the region of constant slope. The ANC is given in equivalents per liter.
  #. If desired the titration data can be saved in a format that can be read by spreadsheet programs by selecting  |Save_gran|. You will be prompted for a file name and location.
 
+.. _heading_ProCoDA_Dissolved_Oxygen:
 
+Dissolved Oxygen
+----------------
+
+When using the DO probe make sure that there *aren't any air bubbles* on the probe membrane. If you are aerating the sample place the probe as far from the air bubbles as possible. Air bubbles on the membrane will cause inaccurate readings.
+
+ #. Connect a DO probe to one of the sensor ports on the ProCoDA box using the gold signal conditioning box.
+ #. Navigate to the ProCoDA Configuration tab and select \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image3} to configure the dissolved oxygen channel(s). Select the DO probe from the sensor list and point the channel to the correct sensor port.
+ #. Use the dissolved oxygen calibration VI \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image4} to calibrate the DO probe.
+ #. Enter the temperature of the sample. This can be measured by using a thermistor or a thermometer. A good estimate is :math:`22^\circ C`.
+ #. If you have typed in your location in the Configuration Tab, you can get the actual barometric pressure for Ithaca, New York by selecting \includegraphics*[width=1.89in, height=0.21in, keepaspectratio=false]{image5}
+ #. Place the probe in oxygen saturated water (use the air jet on your bench to bubble air into water in a 4L container).  The voltage from the DO probe should be between 0.17 and 0.23 volts if the probe is working correctly. If the voltage is lower than 0.17 it may be time to replace the membrane or the solution may not be saturated with oxygen.
+ #. Select \includegraphics*[width=1.12in, height=0.21in, keepaspectratio=false]{image6}to calibrate the DO sensor.
+ #. Select OK \includegraphics*[width=0.91in, height=0.25in, keepaspectratio=false]{image7}when you are satisfied with the calibration.
+ #. If desired you may save the calibration for later use \includegraphics*[width=0.25in, height=0.24in, keepaspectratio=false]{image8}. However, it is not necessary to save the calibration to use the calibration in the current session.~~If you want to save the calibration, save it in your Group folder on the S:/ drive.~~
 
 
 .. _heading_ProCoDA_Meters:
@@ -77,6 +136,3 @@ Meters
 
 Logging Data
 ============
-
-.. |Log_data| image:: Images/Log_data.png
-.. |Log_text_comment| image:: Images/Log_text_comment.png

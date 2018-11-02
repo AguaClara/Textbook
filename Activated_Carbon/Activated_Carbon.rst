@@ -138,6 +138,15 @@ Adsorption Isotherm Sample Analysis (week 2)
 Contactor Procedures
 ====================
 
+.. _figure_Schematic:
+
+.. figure:: Images/Schematic.png
+    :width: 500px
+    :align: center
+    :alt: internal figure
+
+    Proposed design of the carbon column and feed system.
+
 Continuous-Flow Carbon Contactor Setup (week 1)
 -----------------------------------------------
 

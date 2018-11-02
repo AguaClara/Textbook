@@ -19,11 +19,54 @@ Theory
 
 Oxygen transfer is important in many environmental systems. Oxygen transfer is controlled by the partial pressure of oxygen in the atmosphere (0.21 atm) and the corresponding equilibrium concentration in water (approximately 10 mg/L). According to Henry's Law, the equilibrium concentration of oxygen in water is proportional to the partial pressure of oxygen in the atmosphere.
 
+.. code:: python
+
+    """ importing """
+    from aide_design.play import*
+    # the code below will eventually be in the AguaClara core and should be called directly
+    def O2_sat(P_air, temp):
+      """This equation returns saturaed oxygen concentration in mg/L. It is valid
+      for 278 K < T < 318 K
+      Parameters
+      ----------
+      Pressure_air : float
+          air pressure with appropriate units.
+      Temperature :
+          water temperature with appropriate units
+      Returns
+      -------
+      Saturated oxygen concentration in mg/L
+      Examples
+      --------
+      >>> O2_sat(1*u.atm , 300*u.kelvin)
+      8.093157231428425 milligram/liter
+      """
+      fraction_O2 = 0.21
+      P_O2 = P_air * fraction_O2
+      return ((P_O2.to(u.atm).magnitude) *
+              u.mg/u.L*np.exp(1727 / temp.to(u.K).magnitude - 2.105))
+
+    P_air = 101.3*u.kPa
+    temp = np.linspace(0,40)*u.degC
+    C_Oxygen = O2_sat(P_air,temp)
+
+    fig, ax = plt.subplots()
+    ax.plot(temp,C_Oxygen)
+    ax.set(xlabel='Temperature (degrees Celsius)', ylabel='Oxygen concentration (mg/L)')
+    fig.savefig('Gas_Transfer/Images/Oxygen_vs_T')
+    plt.show()
+
+
+.. _figure_Oxygen_vs_T:
+
+.. figure:: Images/Oxygen_vs_T.png
+    :width: 300px
+    :align: center
+    :alt: internal figure
+
+    Dissolved oxygen concentrations in equilibrium with the atmosphere.
+
 Natural bodies of water may be either supersaturated or undersaturated with oxygen depending on the relative magnitude of the sources and sinks of oxygen. Algae can be a significant source of oxygen during active photosynthesis and can produce supersaturation. Algae also deplete oxygen levels during the night.
-
- \includegraphics*[width=2.92in, height=2.25in, keepaspectratio=false]{image1}
-
- Figure  1- #. Dissolved oxygen concentrations in equilibrium with the atmosphere.
 
 At high levels of supersaturation dissolved gas will form microbubbles that eventually coalesce, rise, and burst at the water surface. The bubbles provide a very efficient transfer of supersaturated dissolved gas to the gaseous phase, a process that can be observed when the partial pressure of carbon dioxide is decreased by opening a carbonated beverage. Bubble formation by supersaturated gasses also occurs in the environment when cold water in equilibrium with the atmosphere is warmed rapidly. The equilibrium dissolved oxygen concentration decreases as the water is warmed (Figure 1-1).
 
@@ -46,9 +89,15 @@ where C is the dissolved gas concentration, C* is the equilibrium dissolved gas 
 
     \hat{k}_{v,l} =f(D,\delta ,A,V) 1.2
 
-\includegraphics*[width=2.98in, height=1.57in, keepaspectratio=false]{image2}
+.. _figure_Single_film_model:
 
- Figure  1-2. Single film model of interphase mass transfer of oxygen.
+.. figure:: Images/Single_film_model.png
+    :width: 300px
+    :align: center
+    :alt: internal figure
+
+    Single film model of interphase mass transfer of oxygen.
+
 
 The overall volumetric gas transfer coefficient is system specific and thus must be evaluated separately for each system of interest (Weber and Digiano, 1996).
 
@@ -184,43 +233,43 @@ Oxygen is reduced to water at a silver (Ag) cathode of the probe. Oxygen reducti
 Calibration
 -----------
 
-A calibration routine is available in the ProCoDA II software. Follow the instructions in the software and use the help as needed. The calibration steps include the following:
-
-When using the DO probe make sure that there *aren't any air bubbles* on the probe membrane. If you are aerating the sample place the probe as far from the air bubbles as possible. Air bubbles on the membrane will cause inaccurate readings. Note that you do not need to calibrate the DO probe at the beginning of the lab. Build the full setup and then calibrate when it says to calibrate.
-
- #. Connect a DO probe to the data acquisition system using the gold signal conditioning box.
- #. Navigate to the Configuration tab and enter you Location in the bottom left corner, then select \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image3} to configure the dissolved oxygen channel(s). Select the DO probe from the sensor list and point the channel to the correct sensor port.
- #. Use the dissolved oxygen calibration VI \includegraphics*[width=0.34in, height=0.34in, keepaspectratio=false]{image4} to calibrate the DO probe.
- #. Enter the temperature of the sample. This can be measured by using a thermistor or a thermometer. A good estimate is :math:`22^\circ C`.
- #. If you have typed in your location in the Configuration Tab, you can get the actual barometric pressure for Ithaca, New York by selecting \includegraphics*[width=1.89in, height=0.21in, keepaspectratio=false]{image5}
- #. Place the probe in oxygen saturated water (use the air jet on your bench to bubble air into water in a 4L container).  The voltage from the DO probe should be between 0.17 and 0.23 volts if the probe is working correctly. If the voltage is lower than 0.17 it may be time to replace the membrane or the solution may not be saturated with oxygen.
- #. Select \includegraphics*[width=1.12in, height=0.21in, keepaspectratio=false]{image6}to calibrate the DO sensor.
- #. Select OK \includegraphics*[width=0.91in, height=0.25in, keepaspectratio=false]{image7}when you are satisfied with the calibration.
- #. If desired you may save the calibration for later use \includegraphics*[width=0.25in, height=0.24in, keepaspectratio=false]{image8}. However, it is not necessary to save the calibration to use the calibration in the current session.~~If you want to save the calibration, save it in your Group folder on the S:/ drive.~~
+:ref: `Calibrate the dissolved oxygen probe <heading_ProCoDA_Dissolved_Oxygen>` after you have assembled the apparatus.
 
 .. _heading_Gas_Transfer_Experimental_Methods:
 
 Experimental Methods
 ====================
 
- \includegraphics*[width=4.33in, height=1.91in, keepaspectratio=false]{image9} The reactors are 4 L containers (Figure 1-3). The DO probe should be placed in a location so as to minimize the risk of air bubbles lodging on the membrane on the bottom of the probe. The aeration stone is connected to a source of regulated air flow. A 7-kPa pressure sensor (optional) can be used to measure the air pressure immediately upstream from the diffuser stone. A 200-kPa pressure sensor is used to measure the air pressure in the accumulator.
+.. _figure_Schematic:
+
+.. figure:: Images/Schematic.png
+    :width: 600px
+    :align: center
+    :alt: internal figure
+
+    Apparatus used to measure reaeration rate.
+
+The reactors are 4 L containers (Figure 1-3). The DO probe should be placed in a location so as to minimize the risk of air bubbles lodging on the membrane on the bottom of the probe. The aeration stone is connected to a source of regulated air flow. A 7-kPa pressure sensor (optional) can be used to measure the air pressure immediately upstream from the diffuser stone. A 200-kPa pressure sensor is used to measure the air pressure in the accumulator.
 
 Initial Setup
 -------------
 
+
+.. |Open_method| image:: ../ProCoDA/Images/Open_method.png
+.. |Logging_data_short_exp| image:: ../ProCoDA/Images/Logging_data_short_exp.png
+.. |Mode_of_operation| image:: ../ProCoDA/Images/Mode_of_operation.png
+
+Follow these steps to set up the experiment.
+
  #. Assemble the apparatus (don't forget the 1.5 mm x 5 cm restriction).
  #. Install the head loss orifice as close to the valve as possible (plug it directly into the valve!).
- #. The ProCoDA II software will be used to control the air flow rate for the aeration experiment. The software will use external code to calculate the calibration constant for the flow restriction, to control valve 1 (the air supply valve), and to regulate the flow of air into the accumulator. The calibration uses the ideal gas law to determine the flow rate as a function of the difference in pressure between the source and the accumulator. Once this calibration is obtained a separate code will set the fraction of time that valve 1 needs to be open to obtain the desired flow rate of air.
-
- The software combines 3 elements: sensors (inputs from the real world), set points (inputs from the plant operator and calculated values based on sensors and other set points), and logic (rules that govern how the plant should operate given the sensor data and set points). The software contains a graphical user interface where you can edit, save, and open files containing sensor information and files containing the set point and logic information.
-
- A method file containing the configuration necessary to control airflow is available at S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash} GasTransfer2.pcm. Open the file, using the \includegraphics*[width=0.25in, height=0.24in, keepaspectratio=false]{image10} on the Configuration tab. You will need to adjust the channels for the accumulator pressure and the DO probe to match where you plugged them in your ProCoDA box. You will also need to make sure that your valves are connected to the correct ports on the ProCoDA box.
-
+ #. The ProCoDA II software will be used to control the air flow rate for the aeration experiment. The software will use external code to calculate the calibration constant for the flow restriction, to control valve 1 (the air supply valve), and to regulate the flow of air into the accumulator. The calibration uses the ideal gas law to determine the flow rate as a function of the difference in pressure between the source and the accumulator. Once this calibration is obtained a separate code will set the fraction of time that valve 1 needs to be open to obtain the desired flow rate of air into the accumulator.
+ #. Use the |Open_Method| on the ProCoDA configuration tab to load a method file containing the configuration necessary to control airflow. The file is at S:\Courses\4530\GasTransfer2.pcm. You will need to adjust the channels for the accumulator pressure and the DO probe to match where you plugged them in your ProCoDA box. You will also need to make sure that your valves are connected to the correct ports on the ProCoDA box.
  #. Navigate to the Process Operation tab.
- #. Set the \textbf{\textit{operator selected state}} to toggle.  The solenoid valves should click rhythmically if they are working properly.
+ #. Set the **operator selected state** to toggle.  The solenoid valves should click rhythmically if they are working properly.
  #. Install a membrane on the oxygen probe.
  #. Add 4 L of tap water to the reactor.
- #. Set the *mode of operation* to automatic operation and the *operator selected state* to prepare to calibrate. The software should quickly cycle through the calibration step and then begin attempting to control the air flow rate to the target value.  Note:  the purpose of the prepare to calibrate state is to void the accumulator of any pressure.  The state will not change to calibrate until the pressure drops below a predefined threshold.  To speed this up, you may open the top of the air accumulator to release the air *before starting the automatic calibration*.
+ #. Set the mode of operation |Mode_of_operation| to automatic operation and the *operator selected state* to "prepare to calibrate". The software should quickly cycle through the calibration step and then begin attempting to control the air flow rate to the target value.  Note:  the purpose of the prepare to calibrate state is to vent excess pressure from the accumulator.  The state will not change to calibrate until the pressure drops below a predefined threshold.  To speed this up, you may open the top of the air accumulator to release the air *before starting the automatic calibration*.
  #. Set the stirrer speed to achieve a vortex on the surface of the water.
  #. Calibrate the DO probe if you haven't already. Use 22�C as the temperature.
 
@@ -385,7 +434,7 @@ Class Plan
 Airflow Control
 ===============
 
- \includegraphics*[width=3.96in, height=1.71in, keepaspectratio=false]{image11} The ProCoDA software can be configured to control the flow of air into the reactor. The hardware required is shown in Figure 1. #. The control algorithm is based on the theoretical relationship between head loss and flow rate for the air flowing into the accumulator. We can empirically measure the head loss coefficient and then use the theoretical relationship to determine what fraction of time the influent valve should be open to obtain the desired flow rate. We can use the change in pressure in the accumulator when the influent valve is open to determine how fast air was flowing into the accumulator. In order to develop an appropriate head loss model we need to know if the flow into the accumulator is laminar or turbulent.
+The ProCoDA software can be configured to control the flow of air into the reactor. The hardware required is shown in Figure 1. The control algorithm is based on the theoretical relationship between head loss and flow rate for the air flowing into the accumulator. We can empirically measure the head loss coefficient and then use the theoretical relationship to determine what fraction of time the influent valve should be open to obtain the desired flow rate. We can use the change in pressure in the accumulator when the influent valve is open to determine how fast air was flowing into the accumulator. In order to develop an appropriate head loss model we need to know if the flow into the accumulator is laminar or turbulent.
 
 .. math::
 
@@ -476,8 +525,16 @@ Since we will be measuring the pressure in the accumulator we can now substitute
 
     t=\frac{4\sqrt{KM_{gas} RT} }{\pi D^{2} } \left(\sin ^{-1} \frac{P_{a_{2} } }{P_{s} } -\sin ^{-1} \frac{P_{a_{1} } }{P_{s} } \right)\frac{\rlap{--}V}{RT}
 
+Airflow_controller_calibration
 
-\includegraphics*[width=2.97in, height=1.94in, keepaspectratio=false]{image12} Taking a data set obtained by filling the accumulator, finding the unknown term :math:`\frac{4\sqrt{KM_{gas} RT} }{\pi D^{2} }` by linear regression and then plotting the resulting model next to the data we obtain the graph in Figure \eqref{ZEqnNum363682}.
+.. _figure_Airflow_controller_calibration:
+
+.. figure:: Images/Airflow_controller_calibration.png
+    :width: 300px
+    :align: center
+    :alt: internal figure
+
+    Taking a data set obtained by filling the accumulator, finding the unknown term :math:`\frac{4\sqrt{KM_{gas} RT} }{\pi D^{2} }` by linear regression and then plotting the resulting model next to the data we obtain this graph.
 
 The final step is to calculate the fraction of time that the valve must be open in order to obtain a desired flow rate into the accumulator. Take the target air flow rate $\dot{n}_{t\arg et} $ and divide by the molar flow rate given by equation \eqref{ZEqnNum773701} to get the fraction of time the valve must be open to get the desired average flow rate.
 
@@ -488,3 +545,10 @@ The final step is to calculate the fraction of time that the valve must be open 
 Equation \eqref{ZEqnNum820776} assumes that inertial effects during flow startup are not significant. Application of equation \eqref{ZEqnNum820776} results in slightly more air being delivered than requested. The reason for this error is that when the valve is closed the volume between the location of the head loss and the valve fills to the pressure of the source. This volume of air quickly discharges through the valve as soon as the valve is opened. This error can be minimized by using small valves and by keeping the head loss orifice as close to the valve as possible.
 
 Equation \eqref{ZEqnNum820776} is used by the air flow control.vi to calculate the fraction of time that the valve should be open. The ability of the control algorithm to create a desired flow rate can be measured by setting the flow rate and closing the effluent valves from the accumulator. The result is that the accumulator will gradually fill and as it fills $f_{valve} $ will gradually increase so the flow rate into the accumulator remains constant. The slope of the pressure vs. time line is proportional to the flow rate.
+
+
+.. code:: python
+
+  import os
+  x = os.listdir('C:/Users/mw24/github/EnvEngLabTextbook/ProCoDA/Images')
+  x

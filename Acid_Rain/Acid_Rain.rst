@@ -332,7 +332,7 @@ The electrical potential that is developed between the glass electrode and the r
 
 To measure pH the electrode(s) are submersed in at least 50 mL of a sample. Samples are generally stirred during pH reading to establish homogeneity, to prevent local accumulation of reference electrode filling solution at the interface near the electrode, and to ensure the diffusive boundary layer thickness at the electrode surface is uniform and small.
 
-*ANC*. The most common method to determine ANC for aqueous samples is titration with a strong acid to an endpoint pH. A pH meter is usually used to determine the endpoint or "equivalence point" of an ANC titration. Determination of the endpoint pH is difficult because it is dependent on the magnitude of the sample ANC. Theoretically this endpoint pH should be the pH where all of the ANC of the system is consumed, but since the ANC is not known \textit{a priori}, a true endpoint cannot be predetermined. However, if most of the ANC is composed of carbonate and bicarbonate this endpoint is approximately pH = 4.5 for a wide range of ANC values.
+*ANC*. The most common method to determine ANC for aqueous samples is titration with a strong acid to an endpoint pH. A pH meter is usually used to determine the endpoint or "equivalence point" of an ANC titration. Determination of the endpoint pH is difficult because it is dependent on the magnitude of the sample ANC. Theoretically this endpoint pH should be the pH where all of the ANC of the system is consumed, but since the ANC is not known *a priori*, a true endpoint cannot be predetermined. However, if most of the ANC is composed of carbonate and bicarbonate this endpoint is approximately pH = 4.5 for a wide range of ANC values.
 
 A 50 to 100-mL sample is usually titrated while slowly stirred by a magnetic stirrer. pH electrodes are ordinarily used to record pH as a function of the volume of strong acid titrant added. The volume of strong acid required to reach the ANC endpoint (pH 4.5) is called the "equivalent volume" and is used in the following equation to compute ANC.
 
@@ -385,23 +385,23 @@ Questions
 References
 ==========
 
- Driscoll, C.T., Jr. and Bisogni, J.J., Jr., "Weak Acid/Base Systems in Dilute Acidified Lakes and Streams of the Adirondack Region of New York State," in **Modeling of Total Acid Precipitation Impacts** J.L. Schnoor (ed.), Butterworth, Stoneham, MA., 53-72 (1983).
+ Driscoll, C.T., Jr. and Bisogni, J.J., Jr., "Weak Acid/Base Systems in Dilute Acidified Lakes and Streams of the Adirondack Region of New York State," in *Modeling of Total Acid Precipitation Impacts* J.L. Schnoor (ed.), Butterworth, Stoneham, MA., 53-72 (1983).
 
- Driscoll, C.T., Baker, J.P., Bisogni, J.J., And Schofield, C.L., "Aluminum Speciation and Equilibria in Dilute Surface Waters of the Adirondack Region of New York State," in **Geological Aspects of Acid Deposition** O.P. Bricker (ed.), Butterworth, Stoneham, MA., 55-75 (1984).
+ Driscoll, C.T., Baker, J.P., Bisogni, J.J., And Schofield, C.L., "Aluminum Speciation and Equilibria in Dilute Surface Waters of the Adirondack Region of New York State," in *Geological Aspects of Acid Deposition* O.P. Bricker (ed.), Butterworth, Stoneham, MA., 55-75 (1984).
 
- Barnard. T.E., And Bisogni, J.J., Jr., "Errors in Gran Function Analysis of Titration Data for Dilute Acidified Water," **Water Research**, 19, No. 3 393-399 (1985).
+ Barnard. T.E., And Bisogni, J.J., Jr., "Errors in Gran Function Analysis of Titration Data for Dilute Acidified Water," *Water Research*, 19, No. 3 393-399 (1985).
 
- Bisogni, J.J., Jr. and Barnard, T.E., "Numerical Technique to Correct for Weak Acid Errors in Gran Function Analysis of Titration Data," **Water Research**, 21, No. 10, 1207-1216 (1987).
+ Bisogni, J.J., Jr. and Barnard, T.E., "Numerical Technique to Correct for Weak Acid Errors in Gran Function Analysis of Titration Data," *Water Research*, 21, No. 10, 1207-1216 (1987).
 
- Bisogni, J.J., Jr., "Fate of Added Alkalinity During Neutralization of an Acid Lake," **Journal Environmental Engineering**, ASCE, 114, No. 5, 1219-1224 (1988).
+ Bisogni, J.J., Jr., "Fate of Added Alkalinity During Neutralization of an Acid Lake," *Journal Environmental Engineering*, ASCE, 114, No. 5, 1219-1224 (1988).
 
- Bisogni, J.J., Jr., and Kishbaugh, S.A., "Alkalinity Destruction by Sediment Organic Matter Dissolution During Neutralization of Acidified Lakes," **Water, Air and Soil Pollution**, 39, 85-95 (1988).
+ Bisogni, J.J., Jr., and Kishbaugh, S.A., "Alkalinity Destruction by Sediment Organic Matter Dissolution During Neutralization of Acidified Lakes," *Water, Air and Soil Pollution*, 39, 85-95 (1988).
 
- Bisogni, J.J., Jr. and Arroyo, S.L., "The Effect of Carbon Dioxide Equilibrium on pH in PlaceNameplaceDilute PlaceTypeLakes," **Water Research**, 25, No. 2, 185-190 (1991).
+ Bisogni, J.J., Jr. and Arroyo, S.L., "The Effect of Carbon Dioxide Equilibrium on pH in PlaceNameplaceDilute PlaceTypeLakes," *Water Research*, 25, No. 2, 185-190 (1991).
 
- Olem, H. **Liming Acidic Surface Waters**. Lewis Publishers, Chelsea, MI. (1991).
+ Olem, H. *Liming Acidic Surface Waters*. Lewis Publishers, Chelsea, MI. (1991).
 
- Stumm, W. and Morgan, J.J., **Aquatic Chemistry**, John Wiley \& Sons, Inc. NY, NY 1981.
+ Stumm, W. and Morgan, J.J., *Aquatic Chemistry*, John Wiley \& Sons, Inc. NY, NY 1981.
 
 
 .. _heading_Acid_Rain_Lab_Prep_Notes:
