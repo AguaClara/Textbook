@@ -187,7 +187,7 @@ Determine the ANC for all samples collected from the Acid Lake Remediation lab. 
  1. Place the pH electrode in the solution.
  1. If the initial pH is less than 4.5 no titration is necessary and equation \eqref{ZEqnNum542028} can be used to calculate the ANC.
  1. Record the initial pH (prior to adding any titrant) and initial sample volume.
- 1. Analyze the sample using Gran plot analysis as detailed in Appendix 4A.  Add 0.05 N HCl (the titrant) using a digital pipette in increments of 0.100 mL.
+ 1. Analyze the sample using :ref:`Gran plot analysis <heading_Gran_Plot>`.  Add 0.05 N HCl (the titrant) using a digital pipette in increments of 0.100 mL.
  1. Save the Gran data to S:\Courses\4530\Group #\Lab 2 – Acid\group#_gran by selecting |ProCoDA_save_gran|. The data will be saved in a file (tab delimited format) that can be opened by any spreadsheet program. You will use this data to plot a titration curve and to verify that the Gran technique accurately measures the ANC of a sample.
  1. Record the ANC and the equivalent volume.
 
