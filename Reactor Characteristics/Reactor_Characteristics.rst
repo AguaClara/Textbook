@@ -336,33 +336,10 @@ Mass balance
 
 Collect data that makes it possible to perform a mass balance on red dye. Note that if it is expedient to shorten an experimental run such that there is a significant quantity of the tracer residual in the reactor, that the mass of the residual (stored) tracer can be measured by pouring the reactor contents into a container and measuring the mass or volume of the mixture. The concentration of red dye in the mixture can be measured be connecting back to the optical probe.
 
+Calibrating the photometer
+""""""""""""""""""""""""""
 
-Calibration of photometer
-"""""""""""""""""""""""""
-
-To calibrate the photometer, you will need to connect the peristaltic pump, a 1 L bottle, and the photometer in a closed loop. Use enough tubing so that the flow path of the photometer is oriented in the vertical direction with flow up through the photometer (this ensures that air bubbles are carried up and out of the photometer). Add 1 L of tap water to the bottle and turn the pump on at 380 mL/min. The goal here is to have a total volume of 1 L circulating through the calibration system.
-
- \includegraphics*[width=4.52in, height=2.72in, keepaspectratio=false, trim=0.63in 0.52in 0.23in 0.80in]{image8}
-
- Figure 1-8. Experimental setup for calibrating photometer. Flow must be up through the photometer to ensure that any air bubbles are removed.
-
-Connect the probe to the "Sensor 0" port of your ProCoDA box. The photometer will read out voltages in the range of +/- 5V, so we will need to let the software know to expect that range. On the Configuration Tab in the ProCoDA II software, find the section for the NI Input/Output device and hit the "select" button. Set the voltage for Sensor 0 to 5V.
-
-Next, in the ProCoDA II software, navigate to volts and then select \includegraphics*[width=0.33in, height=0.33in, keepaspectratio=false]{image9}. You will see a voltage reading in the top right corner. When the LED light in the photometer is off (toggle switch in the middle) the voltage should read approximately -1.3V. When the LED is light in the photometer is on (toggle switch to the left or right) the voltage should read approximately +3.5V. Please verify that this range is being measured and is stable in the off and on configuration.
-
-You will use a 40 g/L stock solution of Red Dye to make a calibration curve for your photometer. Calculate the volume of red dye that will be needed to generate a calibration with points at 0, 1, 2, 5, 10, 20, 30, 40, and 50 mg/L. Turn the LED off and when the voltage is stable and approximately -1.3V, hit \includegraphics*[width=0.64in, height=0.48in, keepaspectratio=false]{image10}. Turn the LED on and when the voltage is stable and approximately +3.5V, hit \includegraphics*[width=0.69in, height=0.48in, keepaspectratio=false]{image11}. The first calibration point is 0 mg/L, so hit read standard next to the 0 mg/L row before adding any red dye. Now add red dye to make the concentration in the reactor 1 mg/L. If necessary, hit "Add Standard" and enter the concentration of the standard you are reading. This approach allows you to see how well the data is fitting to a straight line as you add the standards. Continue to add dye, add standard, equilibrate, read standard until you have a full calibration and all of the standards have been read. The R squared value should be greater than 0.99.
-
-When you are done, hit \includegraphics*[width=0.27in, height=0.24in, keepaspectratio=false]{image12} to save the calibration as a file in your group's folder on the S: drive. This calibration should be good for as long as the LED lasts, which should be a very long time!
-
-
-
-
-
-\includegraphics*[width=4.13in, height=3.59in, keepaspectratio=false]{image13}
-
-
-
-
+See the section on :ref:`calibrate photometer <heading_ProCoDA_Photometer>`.
 
 
 Setting up the reactor for experiments
