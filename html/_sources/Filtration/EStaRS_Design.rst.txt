@@ -339,8 +339,6 @@ Come back to this a little bit...
 Inlet Orifice and Outlet Slot Design
 ========================================
 
-*come back to this once Juan and Bayron have results from their test of how much fabrication matters.*
-
 Knowing the PR in the BW manifold, the design head loss through the outlet orifices can be determined based on:
 
 .. math::
@@ -364,7 +362,7 @@ Outlet Design
 
 Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, :math:`B_{slot}` is always .008 inch. *The number of slot rows is also fixed at 2, because each branch has slots on the top and bottom because the outlet pipes are accepting flow from two layers of sand, one above and one below.*
 
-From the cumulative area of slots and the width of the slots **where does the width come from** The total length of slots can be determined. This length of slots is for one side of one branch *yes?*
+From the cumulative area of slots and the width of the slots **where the hell does the width come from** The total length of slots can be determined. This length of slots is for one side of one branch *yes?*
 
 As the branches are different lengths along one trunk, the number of slots is different per branch depending on the length. Dividing the Length of the
 
@@ -393,7 +391,7 @@ Then for each the total number of orifices necessary for a layer of the manifold
 
 Have the holes close together is important to maintaing an even flow distribution, which is why the holes spacing is determined before hole size (which is also constrained by available drill bit sizes)
 
-The drill bit sizes considered are 1/16 inch, 1/8 inch, 3/16 in  and 1/4 inch. The maximum hole size is 1/4in because when the holes are larger they stick out from under the edge of the wings. This is contstrained by the curvature of the wings as shown below in **Figure XYZ**
+The drill bit sizes considered are 1/8 inch and 1/4 inch.
 
 The choice of drill bit size is then determined using the cumulative area of orifice needed for a branch.
 
@@ -406,7 +404,7 @@ Generally, the hole diameter is chosen from the closest (but larger) drill bit b
   Where:
   A_{OrificeTotal} = (A_{BwOrifices}, A_{FiManSlots}, A_{FiTopManSlots})
 
-The 3 distinct diameters correspsonding with these three areas are compared to available drill bits, and actual diameters are chosen.
+These 3 distinct diameters are compared to available drill bits, and actual diameters are chosen.
 
 Because this diameter is likely larger than the calculated diameter, the number of holes must be recalculated for each. The new number of holes is the minimum between the new calculated number (rounded down to the nearest integer) and the original number of holes (which was defined as a maximum). The new calcualtion is done as follows:
 
@@ -416,11 +414,11 @@ Because this diameter is likely larger than the calculated diameter, the number 
 
 Again using the three areas, but now also with the new corresponding diameters.
 
-This number of holes can be used to check that total area of holes is close to the total area necessary to provide the appropriate amount of head loss.
+This number of holes can be used to check that total area of holes is close to the total area necessary to provide the appropriate amount of headloss.
 
 The head loss calculation can then be checked as well for all 5 branch systems involved: the backwash branches in forward, the backwash branches in backwash, the top inlet pipe during filtration, the other inlet pipes during filtration, and the outlet pipes during filtration.
 
-The head loss for each branch type is generally:
+The head loss for each branch type is:
 
 .. math::
 
@@ -429,23 +427,13 @@ The head loss for each branch type is generally:
 With the relevant parameters for each type of manifold branch shown below in **this figure**
 
 
-**Table_Branch_Head_Loss.PNG**
+**Make the table not here because formatting yo**
 
-Because the flows and area are different for each of the branches the head loss through each system layer is slighly different. This head loss is also only for the one branch system.  As show in the figure below with numbered branches, there are several pipes that are constructed the same and several that are different.
 
-**figure_numbered_filter_layers.PNG**
 
-Pipes 2, 4, and 6 (the outlet pipes) are all identical and the total head loss through the outlet system is approximately three times the :math:`HL_{OutletSlotForWard}` as calculated based on the table above. The outlet pipes are the only pipes where the porosity of hte sand ica accounted for because the outlet slot system is the only place in the filter where the sand interfaces with the pipe openings. The exclusion zones prevents sand at the inlets and as such the porosity is not accounted for in any other head loss calculation. Pipe 7 experiences 2 different head losses depending on whethere the filter is in forward filtration or backwash. Pipes 3 and 5 are also identical.
-
-Additional note for the image above. The pipes show the overall flow direction at each layer. The each of those numbers pipes, from a vertical cross-sections looks generally like the trunk and branches in **Figure XYZ**.
-
-**figure_circle_branches**
 
 Entrance and Exit Pipe Dimensions
 ==================================
-
-
-
 
 Total Sand Depth, Filter Pipe Length, Head Loss
 =================================================
