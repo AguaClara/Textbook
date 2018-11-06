@@ -261,11 +261,13 @@ Now that we have developed a good understanding of the basic principles of sedim
 AguaClara Design Approach
 ***********************************************
 
-The AguaClara sedimentation tank is a vertical flow sedimentation tank that was designed with two goals in mind:
+The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank that was designed with two goals in mind:
 
 1) to use flow distribution as a primary design constraint and,
 
 2) to ensure easy operation and maintenance.
+
+[[[[[[[[[[[QUESTION ABOUT FLOC BREAKUP]]]]]]]]]]]
 
 We will go through each part of the sedimentation tank to understand how these goals drive AguaClara designs.
 
@@ -275,21 +277,31 @@ Components of an AguaClara Sedimentation Tank
 
 Note: this section should use words and figures to describe the different parts of the tank and what their purpose is, with brief explanation of how they work.
 
-In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. In the next section, we will develop the mathematical models that help us explain the design.
+In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.
 
 [[[[[[[[[[[[[[INCLUDE PICTURE/VIDEO OF SED TANKS WITH FLOW SHOWN BY ARROWS]]]]]]]]]]]]]]
 
-- Inlet and outlet channels
-  - Flow distribution
-- Inlet manifold
+1) How water enters the sedimentation tank
+-------------------------------------------
+**Inlet Channel**
 
-  First, the inlet manifold has a diffuser system that straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the sedimentation tank. Inlet manifolds without flow straightening diffusers are commonly used in vertical flow sedimentation tanks including designs by leading competitors.
+After water exits the flocculator, it is ready for sedimentation. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple sedimentation units operating in parallel; we call each of these sedimentation units a 'bay'. Because there may be multiple sedimentation bays, we have to distribute flocculated water evenly between the bays. To do this, we have an **inlet channel**, which receives water from the flocculator and passes it to the sedimentation bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the sedimentation bays without allowing any settling in the floc channel. In the bottom of this channel, there are pipes that lead to the bottom of each sedimentation bay.
 
-- Diffusers
+**Bottom Geometry: Inlet Manifold, Diffusers, and Jet Reverser **
 
-  Second, the diffusers create a line jet that spans the entire length of the sedimentation tank. The line jet enters a jet reverser and the vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed (floc blanket) with a suspended solids concentrations of approximately 1-5 g/L. The high concentration of particles leads to an increase in collisions and particle aggregation. The floc blanket reduces settled water turbidity by a factor of 10 (Garland et al., 2017) and provides two additional benefits. The floc blanket creates a uniform vertical velocity of water entering the plate settlers and the floc blanket transports excess flocs to a floc hopper for final removal by opening a small drain valve.
+Now, we will focus on a single bay of the sedimentation tank. Flocculated water enters a pipe in the bottom of the inlet channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the sedimentation bay. This section of pipe that distributes water at the bottom of the sedimentation bay is referred to as the **inlet manifold**.
 
-  Don't worry about floc breakup.
+Water exits the inlet manifold through a series of orifices and **diffusers** in the bottom of the pipe. Orifices refer to the holes that are drilled into the underside of the manifold while diffusers are what we call short stubs of pipe that extend from the orifice, perpendicular to the inlet manifold. The orifices and diffusers point down, to the bottom of the sedimentation bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay.
+
+The inlet manifold diffuser system straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the sedimentation tank. Inlet manifolds without flow straightening diffusers are commonly used in vertical flow sedimentation tanks including designs by leading competitors.
+
+The diffusers create a line jet that spans the entire length of the sedimentation tank. The water from the inlet manifold and diffusers enter the bay going down, but we want the water to ultimately flow up to make our vertical flow sedimentation tank. To get the flow upwards, we use a **jet reverser**, which is half of pipe that is laid in the bottom of the bay. The line jet from the diffusers enters the jet reverser and the vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed (floc blanket) with a suspended solids concentrations of approximately 1-5 g/L. The high concentration of particles leads to an increase in collisions and particle aggregation. The floc blanket reduces settled water turbidity by a factor of 10 (Garland et al., 2017) and provides two additional benefits. The floc blanket creates a uniform vertical velocity of water entering the plate settlers and the floc blanket transports excess flocs to a floc hopper for final removal by opening a small drain valve.
+
+You may be wondering, why do we need a jet reverser in the first place? Why don't we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components. First, if the diffusers were to point up, they could clog if anything settles in them. Second, if flow were just to point directly up, it would not have an opportunity to sufficiently spread out in the sedimentation bay, which could lead to "short-circuiting."
+
+[[[[[[[[[[[[[[[[MORE INFO ABOUT SHORT CIRCUITING]]]]]]]]]]]]]]]]
+
+[[[[[[[[[[[[[[[[[[[[Don't worry about floc breakup.]]]]]]]]]]]]
   Avoid flow circulations
 
 Note: discuss "sed tank as a circuit: flow distribution challenge"
@@ -306,10 +318,12 @@ Note: discuss "sed tank as a circuit: flow distribution challenge"
 - Plate settlers
   - Floc rollup
 - Submerged outlet manifold
-
+- Outlet channel to filter
+- overflow channel
 ***********************************************
 Design of an AguaClara Sedimentation Tank
 ***********************************************
+In the next section, we will develop the mathematical models that help us explain the design.
 
 Note: this section will build off of the conceptual understanding established in the previous section and will explain how the tank works with derivations and mathematical models.
 
@@ -347,6 +361,8 @@ Note: this section will build off of the conceptual understanding established in
       - Dependent on other parameters
 
 - Submerged outlet manifold
+- overflow channels
+- drain pipe
 
 *******************************************************
 Sedimentation Challenges, Confusions, and Failure Modes
