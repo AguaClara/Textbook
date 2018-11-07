@@ -285,41 +285,83 @@ In this section, we will develop a conceptual understanding of the sedimentation
 -------------------------------------------
 **Inlet Channel**
 
-After water exits the flocculator, it is ready for sedimentation. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple sedimentation units operating in parallel; we call each of these sedimentation units a 'bay'. Because there may be multiple sedimentation bays, we have to distribute flocculated water evenly between the bays. To do this, we have an **inlet channel**, which receives water from the flocculator and passes it to the sedimentation bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the sedimentation bays without allowing any settling in the floc channel. In the bottom of this channel, there are pipes that lead to the bottom of each sedimentation bay.
+After water exits the flocculator, it is ready for sedimentation. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple sedimentation units operating in parallel; we call each of these sedimentation units a 'bay' or a 'tank'. Because there may be multiple sedimentation bays, we have to distribute flocculated water evenly between the bays. To do this, we have an **inlet channel**, which receives water from the flocculator and passes it to the sedimentation bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the sedimentation bays without allowing any settling in the floc channel. In the bottom of this channel, there are pipes that lead to the bottom of each sedimentation bay.
+
+Does the water in the inlet channel get evenly distributed between the different bays? If not, which bay will receive the most water? We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe. This nonuniformity is due to differences in velocity and pressure in different parts of the pipe. At the end of the pipe, there is low velocity and thus high pressure, driving the flow through the orifices at the end. We will revisit this concept later to understand how AguaClara plants attempt to minimize this unequal flow distribution.
+
+Sedimentation units have multiple bays for a few different reasons. Plants with higher flow rates require more sedimentation tanks because the flow through each bay is limited by other design constraints that will be discussed later, namely upflow velocity. Additionally, it is good to have more than one bay for maintenance purposes; if one bay needs to be cleaned, we want to always have another than can be working. Stubs of drain pipes can be used to shut down one bay of a sedimentation system for cleaning.
 
 **Bottom Geometry: Inlet Manifold, Diffusers, and Jet Reverser **
 
 Now, we will focus on a single bay of the sedimentation tank. Flocculated water enters a pipe in the bottom of the inlet channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the sedimentation bay. This section of pipe that distributes water at the bottom of the sedimentation bay is referred to as the **inlet manifold**.
 
-Water exits the inlet manifold through a series of orifices and **diffusers** in the bottom of the pipe. Orifices refer to the holes that are drilled into the underside of the manifold while diffusers are what we call short stubs of pipe that extend from the orifice, perpendicular to the inlet manifold. The orifices and diffusers point down, to the bottom of the sedimentation bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay.
+Water exits the inlet manifold through a series of orifices and **diffusers** in the bottom of the pipe. Orifices refer to the holes that are drilled into the underside of the manifold while diffusers are what we call short stubs of pipe that extend from the orifice, perpendicular to the inlet manifold. The orifices and diffusers point down, to the bottom of the sedimentation bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. The ends of the diffuser tubes are flattened so that they are thin rectangles and when placed side-by-side achieve a line jet effect.
+
+[[[[[[[[[[[NEED TO TALK ABOUT FLOW DISTRIBUTION / MANIFOLDS PPT]]]]]]]]]]]
+Recall the discussion about flow distribution in the inlet channel. We know that the sedimentation bay furthest away from the flocculator would receive the most flow from the inlet channel due to fluids principles. Along this same line, the orifice at the end of the manifold would receive the most flow. However, the diffuser system greatly impacts the overall flow distribution in an attempt to make the flow more equal in all parts of the system. To understand how the diffusers work, we will explain a concept referred to as "sedimentation tank as a circuit".
 
 The inlet manifold diffuser system straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the sedimentation tank. Inlet manifolds without flow straightening diffusers are commonly used in vertical flow sedimentation tanks including designs by leading competitors.
 
-The diffusers create a line jet that spans the entire length of the sedimentation tank. The water from the inlet manifold and diffusers enter the bay going down, but we want the water to ultimately flow up to make our vertical flow sedimentation tank. To get the flow upwards, we use a **jet reverser**, which is half of pipe that is laid in the bottom of the bay. The line jet from the diffusers enters the jet reverser and the vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed (floc blanket) with a suspended solids concentrations of approximately 1-5 g/L. The high concentration of particles leads to an increase in collisions and particle aggregation. The floc blanket reduces settled water turbidity by a factor of 10 (Garland et al., 2017) and provides two additional benefits. The floc blanket creates a uniform vertical velocity of water entering the plate settlers and the floc blanket transports excess flocs to a floc hopper for final removal by opening a small drain valve.
+The diffusers create a line jet that spans the entire length of the sedimentation tank. The water from the inlet manifold and diffusers enter the bay going down, but we want the water to ultimately flow up to make our vertical flow sedimentation tank. To get the flow upwards, we use a **jet reverser**, which is half of a pipe that is laid in the bottom of the bay.
 
-You may be wondering, why do we need a jet reverser in the first place? Why don't we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components. First, if the diffusers were to point up, they could clog if anything settles in them. Second, if flow were just to point directly up, it would not have an opportunity to sufficiently spread out in the sedimentation bay, which could lead to "short-circuiting."
+You may be wondering, why do we need a jet reverser in the first place? Why don't we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components. First, if the diffusers were to point up, they could clog if anything settles in them. Second, if flow were just to point directly up, it would not have an opportunity to sufficiently spread out the flow in the sedimentation bay, which could lead to "short-circuiting" and poor flow distribution overall. Third, the jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc blanket, which will be discussed next. There is a lot of research interest in determining the optimal upflow velocity for floc blankets considering that high velocity is better for resuspension but breaks more flocs. Currently, AguaClara plants use an upflow velocity of 1 mm/s.
+
+[[[[[[[[[[[[PICTURE OF FLAT BOTTOM, CENTERED, and OFFSET JET]]]]]]]]]]]]
+
+As shown above, in a flat bottom geometry, flocs settle in the corners of the tank because there is no direct flow of water to resuspend it. Flocs fall in such a way that the corners of the tank will fill first, with more and more flocs settling on them until the angle of repose is created. This angle that is occupied by flocs suggests that if we want to avoid having flocs settle, we should fill the bottom of the tank in with concrete and create a sloped bottom so that there are no surfaces for settling.
+
+The inlet manifold, diffusers, and jet reverser work with a **sloped bottom geometry**. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can fall into the jet reverser for resuspension. Thus there is no accumulation of settled flocs in the main sedimentation basin. Sludge that is allowed to accumulate in the bottom of sedimentation tanks in tropical and temperate climates decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the sedimentation tank and cause a reduction in particle removal efficiency. The AguaClara sedimentation tank bottom geometry prevents sludge accumulation while also ensuring good flow distribution.
+
+So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates on the bottom by creating a system to resuspend any settled flocs. What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
+
+[[[[[[[[PICTURE SHOWING JET COLLAPSE]]]]]]]]
 
 [[[[[[[[[[[[[[[[MORE INFO ABOUT SHORT CIRCUITING]]]]]]]]]]]]]]]]
 
 [[[[[[[[[[[[[[[[[[[[Don't worry about floc breakup.]]]]]]]]]]]]
   Avoid flow circulations
 
-Note: discuss "sed tank as a circuit: flow distribution challenge"
 
-- Jet reverser and bottom geometry
+2) How water moves through the sedimentation tank
+-------------------------------------------------
+**Floc Blanket and Floc Hopper**
 
-  Third, the bottom geometry is shaped so that all flocs that settle are transported to the jet reverser. Thus there is no accumulation of settled flocs in the main sedimentation basin. Sludge that is allowed to accumulate in the bottom of sedimentation tanks in tropical and temperate decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the sedimentation tank and cause a reduction in particle removal efficiency.  The AguaClara sedimentation tank bottom geometry prevents sludge accumulation.
+The line jet from the diffusers enters the jet reverser to force flow up through the sedimentation bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed which is called a **floc blanket**. The bed is fluidized because flocs are kept in suspension by the upflowing water.
 
-- Floc blankets
-- Floc hopper
+For a floc blanket to form, a sedimentation system requires that all flocs be returned to the bottom of the sedimentation tank and requires that all settled flocs be resuspended by incoming water. As will be discussed soon, plate settlers are used to return flocs to the bottom of the bay, while the jet reverser and sloped bottom geometry allow for floc resuspension. Any surface with a horizontal component in a sedimentation tank must be sloped to allow settled flocs to return to the resuspension zone. A flat bottom geometry does not allow for the fomration of a floc blanket.
 
-  The hydraulic self cleaning sedimentation tank with a high performing floc blanket, zero sludge accumulation, and with no moving parts outperforms conventional sedimentation tanks on capital cost, performance, and maintenance costs. Mechanical sludge removal systems are well known to be costly to install and a challenge to maintain.
+Floc blankets improve the performance of a sedimentation tank and reduces settled water turbidity by a factor of 10 (Garland et al., 2017) for multiple reasons.
+
+- Additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc blanket due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G \theta` cause a large reduction in turbidity? The answer may be that the lower :math:`G` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. Which flocs are active and which flocs are inactive in the floc blanket?
+
+[[[[[[[[[[[[[[[[[[[[[[[[[rhetorical or no?]]]]]]]]]]]]]]]]]]]]]]]]]
+
+[[[[[[[[[[[[FILTER VS FLOCCULATOR QUESTION]]]]]]]]]]]]
+We just explained that flocs in the floc blanket cause shear and energy gradients, thus leading to collisions and growing flocs. This explanation suggests that the floc blanket acts like a flocculator. However, there is another model for floc blanker operation in which the floc blanket acts like a filter. Although you haven't necessarily learned about filters yet, all you need to know for now is that sand in a sand filter creates head loss. The sand is essentially inert and creates shear but isn't "colliding" with particles going past it. So which is it? Are floc blankets like flocculators or filters, and how can we find out? We can delve a little more into the discussion about relative :math:`G \theta` values between the flocculator and the floc blanket. Through laboratory testing, we know that flocculators have :math:`G \theta` values on the order of 20,000 and the floc blanket have on the order of 4,000.  If the filter model of floc blankets was correct and the flocs were just taking up space and causing head loss, we would expect a 24,000 :math:`G \theta` flocculator to function the same as a 20,000 :math:`G \theta` flocculator coupled with a 4,000 :math:`G \theta` floc blanket. However, if we just changed our flocculator to be closer to 24,000 :math:`G \theta`, we would have not gotten the impressive removal efficiency that the floc blankets demonstrate. So, we must assume that large flocs in the floc blanket must be involved in some collisions with the smaller flocs going through it. However, we still do not have a model set of equations to describe floc blanket performance.
+
+- creating a uniform vertical velocity of water entering the plate settlers.
+
+- The floc blanket transports excess flocs to the floc hopper for final removal by opening a small drain valve.  The **floc hopper** is a "weir" that provides an opportunity for floc consolidation. Without the floc blanket transport system, other methods would be required to remove accumulated sludge in the bay. Mechanical sludge removal systems are common alternatives but are well known to be costly to install and a challenge to maintain.
+
+The floc hopper controls the depth of the floc blanket because as the floc blanket grows, it will eventually reach the top of the floc hopper. Because flocs are more dense than water, the flocs "spill" over the edge of the floc hopper which allows the floc blanket to stay a constant height while sludge accumulates and consolodates in the floc hopper. The ideal depth of the floc blanket has not yet been determined. Floc blanket flow into the floc hopper is a function of the mass flux of particles into the sedimentation tank. We need to characterize the consolidation rate of the flocs to optimize the floc hopper design.
+
+The floc hopper allows for a self-cleaning sedimentation tank. By gravity, flocs are sent over to a floc hopper. This means that operators only have to clean the sedimentation tank once every three to six months because there is no stagnant accumulation of anoxic sludge. When operators do clean the sedimentation tank, they are primarily cleaning plate settlers. Under normal operation, operators can open the floc hopper drain valve whenever they want to easily drain the sludge.
+
+A benefit of the floc blanket is that flocs can be removed without mechanical assistance, but why do we need the floc hopper at all? Why can't we just install drain holes in the bottom of the sedimentation tank that any accumulated sludge is removed? This is a question that plagued AguaClara in its early years. At first, before we were able to successfully build and operate a floc blanket, we had sludge accumulate in the bottom of the sedimentation bay. Therefore, we needed to remove the sludge with drain holes at the bottom. However, to have those drain holes where the sludge was accumulating in the tank, designers made a flat bottom tank. But as we now know, the flat bottom tank is part of the reason that there wasn't any floc blanket forming. As soon as we realized that we could grow a floc blanket with a sloped bottom tank and a jet reverser, we could not use drain holes in the bottom of the tank. Why? Because in the bottom of tanks with floc blankets, there is no settling. Drain holes at the bottom of a sloped tank would be draining a combination of flocculated water and floc blanket water, neither of which are consolidated thus making the draining ineffective and inefficient. A benefit of the floc hopper is that  there is no upflow velocity, which means that the sludge is able to settle and become more dense, allowing for less water waste from draining sludge.
+
 
 - Plate settlers
   - Floc rollup
+
+3) How water leaves the sedimentation tank
+-------------------------------------------------
+
 - Submerged outlet manifold
 - Outlet channel to filter
 - overflow channel
+
+The hydraulic self cleaning sedimentation tank with a high performing floc blanket, zero sludge accumulation, and with no moving parts outperforms conventional sedimentation tanks on capital cost, performance, and maintenance costs.
+
 ***********************************************
 Design of an AguaClara Sedimentation Tank
 ***********************************************
@@ -337,6 +379,8 @@ Note: this section will build off of the conceptual understanding established in
   - Width,
 - Jet reverser
 - Floc blankets
+  Neglecting the addition of coagulant, the density of the floc blanket is approximately equal to the mass of clay and water divided by the volume of the sedimentation bay.
+  gtheta? calculate velocity, head loss
 - Floc hopper
 - Plate settlers
   - Capture area
