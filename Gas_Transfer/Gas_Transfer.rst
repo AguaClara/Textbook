@@ -25,7 +25,7 @@ Oxygen transfer is important in many environmental systems. Oxygen transfer is c
     from aide_design.play import*
     # the code below will eventually be in the AguaClara core and should be called directly
     def O2_sat(P_air, temp):
-      """This equation returns saturaed oxygen concentration in mg/L. It is valid
+      """This equation returns saturated oxygen concentration in mg/L. It is valid
       for 278 K < T < 318 K
       Parameters
       ----------
@@ -525,7 +525,8 @@ Since we will be measuring the pressure in the accumulator we can now substitute
 
     t=\frac{4\sqrt{KM_{gas} RT} }{\pi D^{2} } \left(\sin ^{-1} \frac{P_{a_{2} } }{P_{s} } -\sin ^{-1} \frac{P_{a_{1} } }{P_{s} } \right)\frac{\rlap{--}V}{RT}
 
-Airflow_controller_calibration
+
+Taking a data set obtained by filling the accumulator, finding the unknown term :math:`\frac{4\sqrt{KM_{gas} RT} }{\pi D^{2} }` by linear regression and then plotting the resulting model next to the data we obtain :numref:`figure_Airflow_controller_calibration`.
 
 .. _figure_Airflow_controller_calibration:
 
@@ -534,9 +535,11 @@ Airflow_controller_calibration
     :align: center
     :alt: internal figure
 
-    Taking a data set obtained by filling the accumulator, finding the unknown term :math:`\frac{4\sqrt{KM_{gas} RT} }{\pi D^{2} }` by linear regression and then plotting the resulting model next to the data we obtain this graph.
+    The model describing the filling of the accumulator fits the data very well.
 
-The final step is to calculate the fraction of time that the valve must be open in order to obtain a desired flow rate into the accumulator. Take the target air flow rate $\dot{n}_{t\arg et} $ and divide by the molar flow rate given by equation \eqref{ZEqnNum773701} to get the fraction of time the valve must be open to get the desired average flow rate.
+
+
+The final step is to calculate the fraction of time that the valve must be open in order to obtain a desired flow rate into the accumulator. Take the target air flow rate :math:`\dot{n}_{target}` and divide by the molar flow rate given by equation \eqref{ZEqnNum773701} to get the fraction of time the valve must be open to get the desired average flow rate.
 
 .. math::
 
@@ -544,11 +547,4 @@ The final step is to calculate the fraction of time that the valve must be open 
 
 Equation \eqref{ZEqnNum820776} assumes that inertial effects during flow startup are not significant. Application of equation \eqref{ZEqnNum820776} results in slightly more air being delivered than requested. The reason for this error is that when the valve is closed the volume between the location of the head loss and the valve fills to the pressure of the source. This volume of air quickly discharges through the valve as soon as the valve is opened. This error can be minimized by using small valves and by keeping the head loss orifice as close to the valve as possible.
 
-Equation \eqref{ZEqnNum820776} is used by the air flow control.vi to calculate the fraction of time that the valve should be open. The ability of the control algorithm to create a desired flow rate can be measured by setting the flow rate and closing the effluent valves from the accumulator. The result is that the accumulator will gradually fill and as it fills $f_{valve} $ will gradually increase so the flow rate into the accumulator remains constant. The slope of the pressure vs. time line is proportional to the flow rate.
-
-
-.. code:: python
-
-  import os
-  x = os.listdir('C:/Users/mw24/github/EnvEngLabTextbook/ProCoDA/Images')
-  x
+Equation \eqref{ZEqnNum820776} is used by the air flow control.vi to calculate the fraction of time that the valve should be open. The ability of the control algorithm to create a desired flow rate can be measured by setting the flow rate and closing the effluent valves from the accumulator. The result is that the accumulator will gradually fill and as it fills :math:`f_{valve}` will gradually increase so the flow rate into the accumulator remains constant. The slope of the pressure vs. time line is proportional to the flow rate.

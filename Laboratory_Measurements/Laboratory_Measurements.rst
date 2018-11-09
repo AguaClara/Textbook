@@ -153,24 +153,33 @@ Pipette Technique
 
 Note that these functions are defined in most coding environments and that the predefined functions should be used.
 
- \includegraphics*[width=2.84in, height=2.11in, keepaspectratio=false]{image2}
+Measure Density
+---------------
 
- Figure  2-2. Density of water vs. temperature.
 
-See :numref:`figure_mountain` for a typical mountain view.
+.. code:: python
 
-.. _figure_Density_vs_temperature:
+    """ importing """
+    from aide_design.play import*
+    Temp = np.linspace(0,30)*u.degC
+    density = pc.density_water(Temp)
+    fig, ax = plt.subplots()
+    ax.plot(Temp,density)
+    ax.set(xlabel='Temperature (degrees Celsius)', ylabel=r'Density of water (kg/$m^3$)')
+    fig.savefig('Laboratory_Measurements/Images/Density_vs_T')
+    plt.show()
 
-.. figure:: Images/Density_vs_temperature.png
+
+.. _figure_Density_vs_T:
+
+.. figure:: Images/Density_vs_T.png
     :width: 300px
     :align: center
-    :alt: Density of water vs. temperature
+    :alt: Density of water vs. temperature.
 
     Density of water vs. temperature.
 
 
-Measure Density
----------------
 
  #. Weigh a 100 mL volumetric flask with its cap (use either the \textit{Scout Pro 200 g} or the \textit{Galaxy} analytical balance).
  #. Prepare 100 mL of a 1 M solution of sodium chloride in the weighed flask. You can also dissolve the NaCl in a clean beaker and transfer to the volumetric flask.  Make sure to mix the solution and then verify that you have \textbf{exactly 100 mL} of solution. Note that the combined \textbf{volume of NaCl and water decreases} as the salt dissolves.

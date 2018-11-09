@@ -1,8 +1,11 @@
+.. _title_Reactor_Characteristics:
+
 ***********************
 Reactor Characteristics
 ***********************
 
-============
+.. _heading_Reactor_Introduction:
+
 Introduction
 ============
 
@@ -10,9 +13,10 @@ Chemical, biological, and physical processes in nature and in engineered systems
 
 Chlorine contactor tanks are designed to maximize the contact time between chlorine and pathogens before the water is delivered to consumers. Thus the design objective is to maximize the time that it takes for water to travel from the tank influent to the effluent. Tracer studies can be used to determine the hydraulic characteristics of a reactor such as the disinfection contact tanks at water treatment plants. The results from tracer studies are used to obtain accurate estimates of the effective contact time. In this laboratory students will experiment with different reactor designs with the goal of maximizing the contact time.
 
-=======================
-Reactor Classifications
-=======================
+.. _heading_Reactor_Classifications:
+
+Classifications
+===============
 
 Dispersion
 ----------
@@ -22,12 +26,34 @@ Mixing levels give rise to three categories of reactors; completely mixed flow r
 Boundary Conditions
 -------------------
 
- \includegraphics*[width=3.89in, height=0.92in, keepaspectratio=false]{image1} The reactor inlet and outlet boundary conditions significantly affect the reactor response to the addition of a pulse of tracer. If dispersion is possible across a boundary, then the boundary is open. An example of a reactor with open boundaries is a section of a river. If a tracer is added to a section of a river it is possible for some of the tracer to move upstream, illustrating that an arbitrary section of a river is an open reactor (Figure 1-1). This is equivalent to letting the reactor be defined as a section of a long reactor. One of the characteristics of open boundaries is that some of the tracer introduced at the reactor inlet can be carried upstream and thus the residence time for a conservative tracer can be greater than the hydraulic residence time!
+The reactor inlet and outlet boundary conditions significantly affect the reactor response to the addition of a pulse of tracer. If dispersion is possible across a boundary, then the boundary is open. An example of a reactor with open boundaries is a section of a river. If a tracer is added to a section of a river it is possible for some of the tracer to move upstream, illustrating that an arbitrary section of a river is an open reactor (:refnum:`figure_open_boundaries`). This is equivalent to letting the reactor be defined as a section of a long reactor. One of the characteristics of open boundaries is that some of the tracer introduced at the reactor inlet can be carried upstream and thus the residence time for a conservative tracer can be greater than the hydraulic residence time!
 
-A closed reactor is one where the reactor has a diffusion or dispersion coefficient different than those of the entrance or exit (Figure 1-2).  Typically exit and entrance diffusion/dispersion are much less than the diffusion/dispersion in the reactor. An example of a reactor with closed boundaries is a tank with small inlet and outlet pipes. \includegraphics*[width=3.89in, height=0.82in, keepaspectratio=false]{image2}
+.. _figure_open_boundaries:
 
-Reactor Modeling
-================
+.. figure:: Images/open_boundaries.png
+    :width: 300px
+    :align: center
+    :alt: Open boundaries.
+
+    Schematic of a reactor with open boundary conditions.
+
+
+A closed reactor is one where the reactor has a diffusion or dispersion coefficient different than those of the entrance or exit (:refnum:`figure_closed_boundaries`).  Typically exit and entrance diffusion/dispersion are much less than the diffusion/dispersion in the reactor. An example of a reactor with closed boundaries is a tank with small inlet and outlet pipes.
+
+.. _figure_closed_boundaries:
+
+.. figure:: Images/closed_boundaries.png
+    :width: 300px
+    :align: center
+    :alt: Open boundaries.
+
+    Schematic of a reactor with closed boundary conditions.
+
+
+.. _heading_Reactor_Modeling:
+
+Modeling
+--------
 
 Reactors can be studied by measuring the effluent concentration after the addition of a spike or pulse of a tracer in the influent or after a step function change in input concentration. The resulting response curves can be made non-dimensional by plotting
 
@@ -55,8 +81,6 @@ The :math:`F_{\left(t^{\star} \right)}` curve can either be obtained by integrat
 
 The following sections will include typical E and F curves for different reactor types.
 
-
-
 Completely Mixed Flow Reactor
 -----------------------------
 
@@ -82,7 +106,16 @@ or in the dimensionless form
 
  \includegraphics*[width=3.65in, height=2.23in, keepaspectratio=false]{image3}
 
-where :math:`E_{\left(t^{\star} \right)}` is the exit age or residence time distribution curve, :math:`\rlap{-} V _{r}` is the reactor volume, :math:`\rlap{-} V _{tr}` is the tracer volume, and :math:`C_{tr}` is the tracer concentration.  If a reactor has a completely mixed flow regime its response, :math:`E_{\left(t^{\star} \right)}`, to a pulse input should plot as a straight line on a semi-logarithmic plot. Response curves for a CMFR are shown in Figure 1-3.
+where :math:`E_{\left(t^{\star} \right)}` is the exit age or residence time distribution curve, :math:`\rlap{-} V _{r}` is the reactor volume, :math:`\rlap{-} V _{tr}` is the tracer volume, and :math:`C_{tr}` is the tracer concentration.  If a reactor has a completely mixed flow regime its response, :math:`E_{\left(t^{\star} \right)}`, to a pulse input should plot as a straight line on a semi-logarithmic plot. Response curves for a CMFR are shown in :refnum:`figure_CMFR_E_and_F`.
+
+.. _figure_CMFR_E_and_F:
+
+.. figure:: Images/CMFR_E_and_F.png
+    :width: 300px
+    :align: center
+    :alt: CMFR_E_and_F
+
+    Exit age (E) and Cumulative exit age (F) curves for completely mixed flow reactors.
 
 The time for 10\% of the pulse to arrive at the effluent of a CMFR is approximately 0.1 :math:`t^{\star}`.
 
@@ -90,28 +123,35 @@ Plug Flow Reactor
 -----------------
 
 Plug flow regimes are impossible to attain because mass transport must be by advection alone. There can be no differential displacement of tracer relative to the average advective velocity. In practice some mixing will occur due to molecular diffusion, turbulent dispersion, and/or fluid shear. For the case of the plug flow reactor the advection-dispersion equation in 1.7 reduces to:
+
 .. math::
 
 
 \frac{\partial C}{\partial t} =-U\frac{\partial C}{\partial x}  1.6
 
-\includegraphics*[width=3.25in, height=1.63in, keepaspectratio=false]{image4}
+The velocity, U, serves to transform the directional concentration gradient into a temporal concentration gradient. In other words, a conservative substance moves with the advective flow of the fluid. The solutions to this differential equation for a pulse input and for a step input are shown graphically in :refnum:`figure_PFR_pulse_step`. The time for 10\% of the pulse to arrive at the effluent of a PFR is :math:`t^{\star}` since all of the pulse arrives at the same time.
 
- Figure  1-4 Pulse and step input in a plug flow reactor.
 
-The velocity, U, serves to transform the directional concentration gradient into a temporal concentration gradient. In other words, a conservative substance moves with the advective flow of the fluid. The solutions to this differential equation for a pulse input and for a step input are shown graphically in Figure 1-4. The time for 10\% of the pulse to arrive at the effluent of a PFR is :math:`t^{\star}` since all of the pulse arrives at the same time.
+.. _figure_PFR_pulse_step:
+
+.. figure:: Images/PFR_pulse_step.png
+    :width: 300px
+    :align: center
+    :alt: PFR_pulse_step
+
+    Pulse and step input in a plug flow reactor.
 
 Flow with Dispersion
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
-Real flow reactors that aren't completely mixed exhibit behavior that is between plug flow and completely mixed. The reactor flow behavior is a function of the relative strength of the mixing process (or dispersion) compared to the advective flow. Analytical solutions that describe these real reactors are more difficult and in most cases a parameter describing the dispersion is fit to the data rather than predicted \textit{a priori}. Two models for arbitrary mixing levels are described below.
+Real flow reactors that aren't completely mixed exhibit behavior that is between plug flow and completely mixed. The reactor flow behavior is a function of the relative strength of the mixing process (or dispersion) compared to the advective flow. Analytical solutions that describe these real reactors are more difficult and in most cases a parameter describing the dispersion is fit to the data rather than predicted *a priori*. Two models for arbitrary mixing levels are described below.
 
 
 
 Open Boundary conditions: One Dimensional Advection-Dispersion Equation
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+-----------------------------------------------------------------------
 
-The governing differential equation for a conservative (\textit{i.e.}, non-reactive) substance in a reactor that has advective transport (\textit{i.e.}, flow) and some mixing (dispersion) in the direction of flow (x - dimension) is given in equation 1.7.
+The governing differential equation for a conservative (i.e., non-reactive) substance in a reactor that has advective transport (i.e., flow) and some mixing (dispersion) in the direction of flow (x - dimension) is given in equation 1.7.
 
 .. math::
 
@@ -140,7 +180,7 @@ A measure of dispersion can be obtained directly from equation 1.8. From this eq
 
     Pe=\frac{UL}{D_{d}}
 
-where L is the length of the reactor and U is the mean advective velocity. The dimensionless parameter Pe (Peclet number) is used to characterize the level of dispersion in a reactor. The Peclet number is the ratio of advective to dispersive transport. In the limiting cases when \Pe = 0 (very high dispersion) we have a completely mixed regime (CMFR) and when :math:`Pe = $\mathrm{\infty}`, :math:`D_{d}` = 0, no dispersion) we have a plug flow reactor (PFR).
+where L is the length of the reactor and U is the mean advective velocity. The dimensionless parameter Pe (Peclet number) is used to characterize the level of dispersion in a reactor. The Peclet number is the ratio of advective to dispersive transport. In the limiting cases when Pe = 0 (very high dispersion) we have a completely mixed regime (CMFR) and when :math:`Pe = $\mathrm{\infty}`, :math:`D_{d}` = 0, no dispersion) we have a plug flow reactor (PFR).
 
 The time can be normalized by dividing by the hydraulic residence time.
 
@@ -158,7 +198,7 @@ Combining Equations 1.9 and 1.10 we obtain :math:`$D_{d} t=t^{\star} PeL^{2}` fo
 
     E_{\left(t^{\star} \right)} =\frac{{\rm C(x,t)}\rlap{-} V }{{\rm M}}
 
-The position in the reactor where the concentration measurements are made can be changed to the reactor effluent by substituting L for x. Substituting Equation 1.10 into the definition of $x'^{2} $we obtain:
+The position in the reactor where the concentration measurements are made can be changed to the reactor effluent by substituting L for x. Substituting Equation 1.10 into the definition of :math:`x'^{2}` we obtain:
 
 .. math::
 
@@ -171,9 +211,29 @@ The resulting dimensionless form of Equation 1.8 is given in Equation 1.14.
     E_{\left(t^{\star} \right)} =\sqrt{\frac{Pe}{4\pi t^{\star} } } \exp \left[\frac{-\left(1-t^{\star} \right)^{2} Pe}{4t^{\star} } \right]
 
 
- \includegraphics*[width=2.50in, height=1.49in, keepaspectratio=false, trim=0.11in 0.09in 0.19in 0.14in]{image5} Response curves for the advection-dispersion equation are shown in Figures 1-5 and 1-6. The exit age curve is highly skewed for low \textit{Pe} because tracer that is in the reactor longer has more time for dispersion. As the Peclet number increases the dispersion decreases and the response becomes closer to plug flow.
+Response curves for the advection-dispersion equation are shown in :refnum:`figure_E_F_Pe_100` and :refnum:`figure_E_F_Pe_4.png`. The exit age curve is highly skewed for low Pe because tracer that is in the reactor longer has more time for dispersion. As the Peclet number increases the dispersion decreases and the response becomes closer to plug flow.
 
- \includegraphics*[width=2.63in, height=1.66in, keepaspectratio=false, trim=0.12in 0.07in 0.20in 0.06in]{image6} Flow through porous media (such as groundwater through soil) is a type of flow with dispersion. The above equations can be applied by recognizing that the relevant water velocity is the pore water velocity. The pore water velocity is :math:`U = \frac{Q}{A\phi }` where A is the cross sectional area of the porous media and :math:`\phi` (volume of voids/total volume) is the porosity of the porous media.
+.. _figure_E_F_Pe_100:
+
+.. figure:: Images/E_F_Pe_100.png
+    :width: 300px
+    :align: center
+    :alt: E_F_Pe_100
+
+    Exit age (E) and cumulative exit age (F) curves for the advection-dispersion equation with Pe of 100.
+
+
+.. _figure_E_F_Pe_4:
+
+.. figure:: Images/E_F_Pe_4.png
+    :width: 300px
+    :align: center
+    :alt: E_F_Pe_4
+
+    Exit age (E) and cumulative exit age (F) curves for the advection-dispersion equation with Pe of 4.
+
+
+Flow through porous media (such as groundwater through soil) is a type of flow with dispersion. The above equations can be applied by recognizing that the relevant water velocity is the pore water velocity. The pore water velocity is :math:`U = \frac{Q}{A\phi }` where A is the cross sectional area of the porous media and :math:`\phi` (volume of voids/total volume) is the porosity of the porous media.
 
 The form of equation 1.8 is exactly like the normal distribution curve:
 
@@ -195,11 +255,11 @@ Or in dimensionless form:
 
 
 
-The variance in concentration over space ($\sigma _{x}^{2} $) is the variance in concentrations taken from many different positions in the reactor at some single moment in time, t. The variance in x (:math:`\sigma _{x}^{2}`) has dimensions of length squared.
+The variance in concentration over space (:math:`\sigma _{x}^{2}`) is the variance in concentrations taken from many different positions in the reactor at some single moment in time, t. The variance in x (:math:`\sigma _{x}^{2}`) has dimensions of length squared.
 
 
 Closed Boundary Conditions: Completely Mixed Flow Reactor in Series
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+-------------------------------------------------------------------
 
 Completely mixed flow reactors are sometimes connected in series to create a reactor system with flow characteristics in between CMFR and PFR. CMFRs in series increase overall process efficiency because the reactants are at higher concentrations in the first reactors than they would be in a single large CMFR. Thus the total reactor volume can be smaller with a series of CMFRs. Similarly the reaction process can be made more efficient given the same reactor volume if it is divided into a series of CMFRs.
 
@@ -223,15 +283,22 @@ It can be shown that equations 1.14 and 1.19 converge for large N when
 
  \includegraphics*[width=3.65in, height=2.23in, keepaspectratio=false]{image7} Equation 1.18 is limited to integer values of N. The model could be extended to include non-integer values of N if the factorial function (\textit{i.e.}, (N-1)!) were replaced with the ??function. Note that the ? function is not defined as an extension of the factorial function in Excel. Instead one can use the Excel command function =EXP(GAMMALN(N)) to calculate the  ??function as an approximation of (N-1)!.
 
-Response curves for the advection-dispersion equation are shown in Figure 1-7. Notice that the effluent concentration begins to rise much more quickly in series CMFRs than in the advection-dispersion model for a single CMFR. This distinction between the two models lessens as the number of reactors increases and the \textit{Pe} increases.
+Response curves for the advection-dispersion equation are shown in :refnum:`figure_E_F_N_2`. Notice that the effluent concentration begins to rise much more quickly in series CMFRs than in the advection-dispersion model for a single CMFR. This distinction between the two models lessens as the number of reactors increases and the \textit{Pe} increases.
+
+.. _figure_E_F_N_2:
+
+.. figure:: Images/E_F_N_2.png
+    :width: 300px
+    :align: center
+    :alt: E_F_N_2
+
+    Exit age (E) and cumulative exit age (F) curves for series CMFR with N of 2.
 
 
+.. _heading_Reactor_Studies:
 
 Reactor Studies
----------------
-
-Measuring Reactor Characteristics
-"""""""""""""""""""""""""""""""""
+===============
 
 One of the easiest methods to determine the mixing (dispersion) characteristics of a reactor is to add a spike input of a conservative material and then monitor the concentration of the material in the reactor effluent. The variance of tracer concentration versus time (:math:`\sigma _{t}^{2}`, with dimensions of time squared) can be measured by sampling at a single point in the reactor at many different times and can be computed using the following equations.
 
@@ -266,14 +333,12 @@ The above equations suggest that from the reactor response to a spike input we c
 
 
 Peclet Number Estimation
-""""""""""""""""""""""""
+------------------------
 
 
 For single point sampling of the effluent response curve, skew increases as the dispersion level in the reactor increases. The degree of skew depends on the dispersion coefficient, the velocity in the x-direction, and the length of the reactor. Peclet values in the range :math:`100\mathrm{<}$Pe$\mathrm{<}$$\mathrm{\infty}` result in a symmetric response curve.
 
 
-
- Figure 1-8. Relationship between equations 1.25 through 1.26.
 
 Response curve skew makes the assumption of a symmetrical normal distribution curve inappropriate and a new relationship between the variance and the dispersion coefficient (or \textit{Pe}) has to be determined. Boundary conditions affect the determination of the dispersion coefficient. The relationship between the Peclet number and variance for open systems is given by
 
@@ -288,14 +353,25 @@ Response curve skew makes the assumption of a symmetrical normal distribution cu
 
     \sigma _{t}^{2} =\left[\frac{2}{Pe} -\frac{2}{Pe^{2} } \cdot \left(1-{\mathop{e}\nolimits^{-Pe}} \right)\right]\cdot \theta ^{2}  1.26
 
-The term :math:`\frac{2}{Pe}` in equations 1.25 and 1.26 is dominant for Peclet numbers much greater than 10 as is shown in Figure 1-8. The additional terms in equations 1.25 and 1.26 are corrections for skewedness in the response curve. These skewedness corrections are not very significant for Peclet numbers greater than 10. Thus for Peclet numbers greater than 10 the Peclet number can be determined using equation 1.27 for both open and closed systems.
+The term :math:`\frac{2}{Pe}` in equations 1.25 and 1.26 is dominant for Peclet numbers much greater than 10 as is shown in :refnum:`Pe_open_and_closed`. The additional terms in equations 1.25 and 1.26 are corrections for skewedness in the response curve. These skewedness corrections are not very significant for Peclet numbers greater than 10. Thus for Peclet numbers greater than 10 the Peclet number can be determined using equation 1.27 for both open and closed systems.
+
+.. _figure_Pe_open_and_closed:
+
+.. figure:: Images/Pe_open_and_closed.png
+    :width: 300px
+    :align: center
+    :alt: Pe_open_and_closed
+
+    Relationship between equations 1.25 through 1.26.
+
+
 
 .. math::
 
     Pe=\frac{2\theta ^{2} }{\sigma _{t}^{2} }  1.27
 
 Mass Conservation
-"""""""""""""""""
+-----------------
 
 When a pulse of conservative tracer is added to a continuous flow reactor, all of the tracer is expected to leave the reactor eventually. The mass of a substance that has left the reactor is given in equation 1.28.
 
@@ -315,35 +391,32 @@ Equation 1.29 can be used to determine if all of the tracer was measured in the 
 
     M_{in} =M_{out} +\Delta M_{stored}  1.30
 
+.. _heading_Reactor_Tracers:
+
 Tracers
-"""""""
+=======
 
 A conservative tracer will be used to characterize your reactors. Typical tracers include salt and various dyes. For this experiment we will use \#40 Red Dye as the conservative tracer. The red dye concentration will be measured using an optical spectrophotometric probe. The linear range of operation for the probes is from about 0.01 mg/L to 30 mg/L. We will add an amount of red dye near the high end of this range to acquire a dataset that spans multiple orders of magnitude.
 
 Additional constraints for the tracer are that if a highly concentrated tracer is used, then there will be a significant density difference between the tracer and the water in the reactor. If a very dilute tracer is used then a large volume of tracer will need to be added and the volume of tracer could become a large fraction of the reactor volume and thus the pulse could no longer be modeled as having negligible volume.
 
-
-Tracer Design
-"""""""""""""
-
 The reactors are 30 cm long and 15 cm wide. If the depth is limited to (a maximum of) 5 cm, then the total volume is 2.25 L and with a peristaltic pumping rate of approximately 380 mL/min, the residence time is approximately 6 minutes.
 
-The tracer should be added directly into the first chamber of your reactor. The red dye will also help students qualitatively observe the advective and dispersive transport in the reactors.
+The tracer should be added directly into the first chamber of your reactor. The red dye will also make it possible to qualitatively observe the advective and dispersive transport in the reactors.
 
 
 Mass balance
-""""""""""""
+------------
 
 Collect data that makes it possible to perform a mass balance on red dye. Note that if it is expedient to shorten an experimental run such that there is a significant quantity of the tracer residual in the reactor, that the mass of the residual (stored) tracer can be measured by pouring the reactor contents into a container and measuring the mass or volume of the mixture. The concentration of red dye in the mixture can be measured be connecting back to the optical probe.
 
-Calibrating the photometer
-""""""""""""""""""""""""""
 
-See the section on :ref:`calibrate photometer <heading_ProCoDA_Photometer>`.
-
+.. _heading_Reactor_Setting_up_the_reactor_for_experiments:
 
 Setting up the reactor for experiments
-""""""""""""""""""""""""""""""""""""""
+======================================
+
+See the section on :ref:`calibrate photometer <heading_ProCoDA_Photometer>` to set up the photometer
 
 In these experiments, we will be pumping tap water from a 20 L Jerrican to the influent of your reactor. Place your reactor on a stir plate and make sure that the 3/8'' push-connect fitting is on the effluent side of your reactor (some may have 3/8'' holes on both sides). The effluent of the reactor should be a straight short tube to the drain.
 
@@ -357,8 +430,10 @@ Before running an experiment, it is important to determine whether your setup wo
 .. todo:: Did we switch to a two pump head system with the second pump head using a larger size tubing and removing excess flow from the reactor?
 
 
+.. _heading_Reactor_Testing_protocol:
+
 Testing protocol
-""""""""""""""""
+================
 
 To ensure that everything is working properly I recommend that you begin by first testing a CMFR. Use the CMFR data to verify that you obtain mass balance and that you obtain the expected exit age response.
 
@@ -371,16 +446,19 @@ For each test make sure that you accurately measure the reactor volume, residual
  #. Stop the experiment and pour the contents of the reactor into a container. Weigh the container to determine the exact volume of the reactor.
  #. Sample the contents of the mixed reactor with the photometer to obtain the average concentration in the reactor at the end of your experiment. This will enable you to do a mass balance on the red dye.
 
+Reactor_photo
 
 \includegraphics*[width=3.98in, height=2.98in, keepaspectratio=false]{image14}
 
 \includegraphics*[width=2.83in, height=2.12in, keepaspectratio=false]{image15} \includegraphics*[width=2.84in, height=2.11in, keepaspectratio=false]{image16}
 
+.. _heading_Reactor_Design:
+
 Reactor Design
---------------
+==============
 
 Baffle Design
-^^^^^^^^^^^^^
+-------------
 
 Baffles can be added to tanks to decrease the ability of the solution to travel quickly from the tank inlet to the tank outlet. The goal of the baffle design depends on whether the tank is designed for a reaction or for separation. The baffles in reactors should generally be designed to achieve mixing in each of the baffled zones. The baffles in tanks designed for separation (clarifiers) should be designed to achieve uniform flow (a much more difficult goal to achieve). Mixing within each baffled zone could be achieved with a propeller mixer or by appropriately sized pores in the baffles. If pore mixing is desired the energy for mixing is provided by the kinetic energy of the fluid flowing through the pores.
 
@@ -436,8 +514,10 @@ Perfect (PFR) & 1.0 & Very high length to width ratio (pipeline flow), perforate
 
 
 
+.. _heading_Reactor_Procedures:
+
 Procedures
-----------
+==========
 
  \includegraphics*[width=1.39in, height=1.38in, keepaspectratio=false]{image17}\includegraphics*[width=1.39in, height=1.38in, keepaspectratio=false]{image18}\includegraphics*[width=1.33in, height=1.38in, keepaspectratio=false]{image19} The reactor you will be working with can be easily modified by installing various configurations of perforated baffles (Figure 1-10). Your objectives are
 
@@ -456,16 +536,20 @@ The baffles can be installed by rolling a 3 mm diameter roll of putty and applyi
 
 
 
+.. _heading_Reactor_Pre-Laboratory_Questions:
+
 Pre-Laboratory Questions
-------------------------
+========================
 
  #. Calculate the \textbf{incremental} volume of a 100 g/L red dye stock that would need to be added to 1 L of water to produce 0, 1, 2, 5, 10, 20, 30, 40, and 50 mg/L calibration points. Calculate a numpy array containing the \textbf{cumulative} volume of red dye required. Strip the units from the array using .magnitude. Then create a copy of the array with a zero appended (np.append) in front and the last element deleted (np.delete). Then use numpy subtract to get the different between the two arrays to calculate the incremental volume that you need to add.
  #. Calculate the change in hydraulic grade line between baffled sections of a reactor with a flow rate of 380 mL/min. The reactor baffles are perforated with 6 holes 1 mm in diameter. Is the flow through these orifices in series or in parallel? Do you multiply the head loss for one orifice by the number of orifices to get the total head loss? Use the pc.head\_orifice function to calculate the head loss through an orifice. The vena contracta for the orifice can be found at exp.RATIO\_VC\_ORIFICE. Why would 6 holes 1 mm in diameter not be a good design for this reactor?
  #. On a single graph plot the exit age distribution (:math:`E_{(t\star)}`) for a reactor that operates as a 1-dimensional advection-dispersion reactor with Peclet numbers of 1, 10, and 100 (there will be three plots on the graph and thus a legend is required). The x-axis should be :math:`t^\star` from 0.0 to 3.0. Comment on the shapes of the curves as a function of the Peclet number.
 
 
+.. _heading_Reactor_Data_Analysis:
+
 Data Analysis
--------------
+=============
 
 You will analyze all of the datasets in the same way. Use a consistent set of units throughout your data analysis and include the units in your python code and discussion!
 
@@ -479,17 +563,21 @@ You will analyze all of the datasets in the same way. Use a consistent set of un
 
 
 
+.. _heading_Reactor_References:
+
 References
-----------
+==========
 
  Weber, W. J. J. and F. A. Digiano. 1996. Process Dynamics in Environmental Systems. New York, John Wiley \& Sons, Inc.
 
- Malcolm Pirnie, Inc., and HDR Engineering, Inc. ``Guidance Manual for Compliance with the Filtration and Disinfection Requirements for Public Water Systems Using Surface Water Sources.'' AWWA, Denver CO, 1991.
+ Malcolm Pirnie, Inc., and HDR Engineering, Inc. Guidance Manual for Compliance with the Filtration and Disinfection Requirements for Public Water Systems Using Surface Water Sources. AWWA, Denver CO, 1991.
 
 
+
+.. _heading_Reactor_Lab_Prep_Notes:
 
 Lab Prep Notes
---------------
+==============
 
  Table \label{2}. Equipment list
 
