@@ -5,14 +5,19 @@ EStaRS Design
 *******************
 
 
-Some parts of the design are the same!
+The EStaRS: Enclosed Stacked Rapid Sand filter, is a compact filter that can be amended to a 1 L/s floc/sed unit to provide a filter. EStaRS are also used for low flow plants because they are less resource intensive to construct. Because the filter is constructed using only pipes and couplings, the possible EStaRS sizes are discretized as pipes are not available in every concievable size. This constraint means that there are only three available sizes of EStaRS: 1 ft, 2ft, and 3 ft diameter, which treat .764 L/s, 3.07 L/s, and 7.024 L/s. Each plant should have at least 2 filters so that one can still be in use even when the other is in backwash. If the plant flow is more than corresponds with 2 filters additional filters can be added in parallel.
+
+Some parts of the design are the same as for the open StaRS filter! The stacked trunk and branch system is the most notable of these similarities, with key differences being in how the inlet and outlet system can be designed. Both the "traditional" concrete entrance/exit channel and boxes can be used, but more compact is what is called the "Micky Mouse" design. This design features entrance and exit tanks made from large diameter pipes rather than concrete. Most of this design file considers the shared characteristics of the concrete and "Micky Mouse", but places where the design varies will be noted.
 
 
 Dimensions and Pipe Size
 =========================
-.. two filters are assumed
 
-The filter flow and backwash velocity are used to find an area, this area is used to find the Nominal Diameter of the pipe to be used for the filter. If the value is not one of the options, the next largest pipe size is selected.
+Generally 2 filters are considered, so that one can still be in use when one is backwashed. Using more than 2 filters will still work with this design, as long as :math:`N_{Fi}`, the number of filters is changed.
+
+In the design the first step is to determine what size EStaRS is needed because this determines neatly everyparameter.
+
+The filter flow and backwash velocity are used to find an area (:math:`frac{Q}{V}= A`), this area is used to find the Nominal Diameter of the pipe to be used for the filter. If the value is not one of the options, the next largest pipe size is selected.
 
 The height of the filter layer is taken as 0.2 meters.
 Some other variables defined here:
@@ -443,12 +448,15 @@ Additional note for the image above. The pipes show the overall flow direction a
 
 Entrance and Exit Pipe Dimensions
 ==================================
+Theres a lot of confusion for this part
 
-
-
+The head loss in a fluidized bed is:
 
 Total Sand Depth, Filter Pipe Length, Head Loss
 =================================================
+
+
+
 
 Plumbing Head Loss
 =====================
