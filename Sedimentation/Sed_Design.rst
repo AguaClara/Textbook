@@ -164,11 +164,11 @@ To determine this value, we can use the given volume and flow rate information b
 
 2) In the "worst case scenario", how far must a particle fall to reach the bottom of the tank?
 
-The "worst case scenario" is the condition in which a particle must travel the furthest in order to be successfully captured by the sedimentation tank. We assume that particles are evenly distributed throughout the height and width of the reactor entrance. Therefore, a particle entering at the top of the entrance of the reactor would need to fall a distance of :math:`H` to reach the bottom. Any particle entering from a position lower than the top of the tank would need to fall a distance :math:`< H`.
+The "worst case scenario" is the condition in which a particle must travel the furthest in order to be successfully captured by the sedimentation tank. We assume that particles are evenly distributed throughout the height and width of the reactor entrance. Therefore, a particle entering at the top of the entrance of the reactor would need to fall a distance of :math:`H` to reach the bottom. Any particle entering from a position lower than the top of the tank would need to fall a distance :math:`< H`. We refer to the "worst case scenario" pathway as the "critical path" of the particle in the sedimentation tank design because this is the case which we must design to treat. The height that the particle must fall is called the "critical height", :math:`H_c`.
 
 3) How fast must the particle fall?
 
-We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, :math:`V_h`. Gravity is causing the particle to settle at its terminal velocity, :math:`V_t`. In order to reach the bottom, that settling velocity needs to be the capture velocity, :math:`V_c`, to ensure that the particle will reach the bottom of the reactor. We can see the path that the "worst case scenario" particle will take in the following figure.
+We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, :math:`V_h`. Gravity is causing the particle to settle at its terminal velocity, :math:`V_t`. In order to reach the bottom, that settling velocity needs to be the capture velocity, :math:`V_c`, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in the following figure.
 
 [[[[[[[[[show horizontal flow sedimentation tank with capture velocity]]]]]]]]]
 
@@ -192,7 +192,7 @@ This question is important because as stated in the beginning of this section, o
 
 To answer this question, think about the two extremes of our reactor.
 
-- We could have a small particle entering the reactor at the top, in the same "worst case scenario". This particle would not be successfully captured by the tank because its terminal velocity is less than the capture velocity, meaning that it doesn't have enough time in the reactor to settle.
+- We could have a small particle entering the reactor at the top, defining the critical path in the same "worst case scenario". This particle would not be successfully captured by the tank because its terminal velocity is less than the capture velocity, meaning that it doesn't have enough time in the reactor to settle.
 - We could have a small particle entering the reactor near the bottom, in a "best case scenario". In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be caputured by a tank designed for particles 35 :math:`\mu m` or larger, but it depends on the height at which they enter the reactor.
 
 [[[[[[[[[show horizontal flow sedimentation tank with capture velocity for small particles compared to the 35 um condition]]]]]]]]]
@@ -342,7 +342,9 @@ Floc blankets improve the performance of a sedimentation tank and reduces settle
 
 [[[[[[[[[[[[FILTER VS FLOCCULATOR QUESTION]]]]]]]]]]]]
 We just explained that flocs in the floc blanket cause shear and energy gradients, thus leading to collisions and growing flocs. This explanation suggests that the floc blanket acts like a flocculator. However, there is another proposed model for floc blanket operation in which the floc blanket acts like a filter. Although you haven't necessarily learned about filters yet, all you need to know for now is that sand in a sand filter creates head loss. The sand is essentially inert and creates shear but isn't "colliding" with particles going past it. So the two models proposed for floc blankets are the flocculator or filter model; which is it? Are floc blankets like flocculators or filters, and how can we find out? We can learn more by delving into the discussion about relative :math:`G \theta` values between the flocculator and the floc blanket. Through laboratory testing, we know that flocculators have :math:`G \theta` values on the order of 20,000 and the floc blanket have on the order of 4,000.
+
 [[[needhelpquestion what I have written seems wrong]]]
+
 If the filter model of floc blankets was correct and the flocs were just taking up space and causing head loss, we would expect a 24,000 :math:`G \theta` flocculator to function the same as a 20,000 :math:`G \theta` flocculator coupled with a 4,000 :math:`G \theta` floc blanket. However, if we just changed our flocculator to be closer to 24,000 :math:`G \theta`, we would have not gotten the impressive removal efficiency that the floc blankets demonstrate. So, we must assume that large flocs in the floc blanket are involved in some collisions with the smaller flocs going through it. However, we still do not have a model set of equations to describe floc blanket performance.
 
 - creating a uniform vertical velocity of water entering the plate settlers.
@@ -353,9 +355,63 @@ The floc hopper allows for a self-cleaning sedimentation tank. By gravity, flocs
 
 A benefit of the floc blanket is that flocs can be removed without mechanical assistance, but why do we need the floc hopper at all? Why can't we just install drain holes in the bottom of the sedimentation tank so that any accumulated sludge is removed? This is a question that plagued AguaClara in its early years. At first, before we were able to successfully build and operate a floc blanket, we had sludge accumulate in the bottom of the sedimentation bay. Therefore, we needed to remove the sludge with drain holes at the bottom. However, to have those drain holes where the sludge was accumulating in the tank, designers made a flat bottom tank. But as we now know, the flat bottom tank is part of the reason that there wasn't any floc blanket forming. As soon as we realized that we could grow a floc blanket with a sloped bottom tank and a jet reverser, we could not use drain holes in the bottom of the tank. Why? Because in the bottom of tanks with floc blankets created by jet reversers, there is no settling. Drain holes at the bottom of a sloped tank would be draining a combination of flocculated water and floc blanket water, neither of which are consolidated thus making the draining ineffective and inefficient. A benefit of the floc hopper is that there is no upflow velocity, which means that the sludge is able to settle and become more dense, allowing for less water waste from draining sludge.
 
-After flowing through the floc blanket, flocs reach the **plate settlers**. Plate settlers are sloped surfaces that provide additional settling area for flocs.
-- Plate settlers
-  - Floc rollup
+After flowing through the floc blanket, flocs reach the **plate settlers**. Plate settlers are sloped surfaces that provide additional settling area for flocs, thereby increasing the effective settling area of the sedimentation unit without increasing the plan view area. In our discussion of horizontal and vertical flow sedimentation tanks, the important design parameter was capture velocity which was set by flow rate and plan view area of the sedimentation tank. With the introduction of plate settlers, the important design parameter changes. What matters is not just the plan view area of the sedimentation tank, but instead the projected area of all of the surfaces where particles can settle out, which we call the effective settling area. Without plate settlers, the only way we could improve performance and impact the capture velocity was by increasing the plan view area of the sedimentation tank. Now that we know about plate settlers, we can improve performance by just adding plate settlers. This allows for greater treatment efficiency at low cost because we can maintain a small footprint. Note that plate settlers can also be referred to as lamella settlers, or lamellas.
+
+[[[[need information about laminar flow between plates]]]]
+
+[[[[include figure for plate settler and labeled geometry]]]]
+
+The first thing that we will discuss is how flocs can settle on plates. To understand this, we will ask a few questions.
+
+1) What is the critical path?
+
+We need particles to settle on the bottom plate for it to be effectively captured. Thus, the critical path can be shown by a floc that enters the plate settlers closest to the upper plate, because it will have the greatest distance to settle.
+
+2) How far must the particle settle to reach the lower plate?
+
+Let's make a simplification and assume that water is flowing with uniform velocity between the plates, represented by a "top hat" velocity profile. This is a significant assumption, but it is used to help us understand the critical path. As the fluid is carrying the floc between the inclined plates while gravity is pulling the floc down. Therefore, particle must fall the vertical distance between the plates, which is the critical height :math:`H_c`. The plates are positioned at an angle, :math:`\alpha`, to ensure that settling flocs slide down to the floc blanket. The critical height :math:`H_c` can be expressed in terms of plate settler length, :math:`L`, and plate settler angle, :math:`\alpha`, by :math:`H_c=L sin\alpha`.
+
+3) What is the net vertical velocity of a floc between the plate settlers?
+
+The fluid carries the floc between the plate settlers while gravity pulls the floc down. The velocity through the plate settlers has both a horizontal component :math:`V_{P,H}` and vertical component :math:`V_{P,V}`, with a resultant force we call :math:`V_{P,\alpha}`. This means that the net vertical velocity :math:`V_{P,net}` is the vertical component of flow minus the settling velocity of the floc. Recall our previous discussion of terminal velocity and capture velocity; in this case, because we are designing a plate settler specifically to capture the critical particle, the terminal velocity equals the capture velocity. The terminal velocity is a function of the particle which we are setting as the smallest particle that we want to reliably capture and the capture velocity is a function of the reactor geometry which we are designing to capture the critical particle. Thus, :math:`V_{P,net}=V_{P,V}-V_{c}`.
+
+[[[[[need more explanation here help about why capture and terminal are the same here]]]]]
+
+[[[[include figure showing the relevant velocities in the plate settler, including resultant particle velocity]]]]
+
+Now that we have established how flocs settle on the plate, we need to discuss how flocs will act once they are on the plates. We want particles and flocs that settle to agglomerate and slide down the plate settlers to be returned to the floc blanket. However, there are some constraints that we must consider.
+
+Let's start with a basic question. If we know that adding plate settlers improve performance, why don't we just keep adding more and more plate settlers to our system? Why would we want to put plates closer together? This could be for a few reasons. We know that more plates means more effective settling area which means that we could remover more particles and make our tank smaller to save money and limit the use of concrete. We also would .
+
+The Ten State Standard's include that plate settlers should have separations of two inches, with very long plate settlers, which means very deep tanks. Sedimentation tanks are usually 4 meters deep, maybe because filters are also deep. This is a result of the engineering context rather than the basic design principles. The Ten State Standards are primarily based off the modification of existing sedimentation tanks which were usually built deep and then plate settlers were added. This means that there wasn't added incentive to optimize the entire plate settler and tank process because the tanks were already built. However, AguaClara designs are made to use all of the AguaClara innovations in a green field, meaning that we are incentivized to optimize every part of this design process [[[weird way to say this...reword]]].
+
+This means that we can change the depth and plan view area of the tank for optimal plate settler efficiency. We want to have the smallest and shallowest tanks possible for low cost and ease of construction. We know that in the plate settler design, there is a dimensionless parameter of plate spacing to length, :math:`\frac{S}{L}`. The ratio is close to constant, which means that if we double the length of the plate settler, we can double the spacing between the plate settler and get the same performance as when we started. Conversely, if we halve the distance between the plate settlers, we can halve the length of the plate settlers. But how far can we push this? Can we make really compact plate settlers?
+
+What we really want to know is: what is the connection of spacing between plate settlers and performance?
+
+[[[[[[show graphic of large spacing and small spacing with floc rollup]]]]]]
+
+When we were discussed how plate settlers promote settling, we assumed a uniform velocity profile between the plates. However, we know from fluid mechanics and boundary layer rules that in reality, there is a nonuniform velocity profile. The profile resembles a parabola between the plates; the shape of the parabola is affected by the distance between the plates.
+
+There are some cases in which the plates are so close that even if flocs settle on the plate, they do not slide down. This is called **floc rollup**. Consider the following questions:
+
+1) Why do flocs roll up?
+
+It is a force balance! There is a force of gravity pulling the particle down, balanced with the force that the fluid flow exerts through drag related to viscosity. But why does it matter if plates are close together or flow up? The average velocity between plates are the same for any spacing. However, when plates are closer together the velocity profile is much steeper. Compared with  plates with greater spacing, the closer plates cause there to be a higher velocity closer to the surface of the plate. This means that flocs between closely spaced plates will see a greater velocity, which will impact the force balance.
+
+[[[[force balance diagram]]]]
+
+2) How would you define the transition between floc rollup and slide down? What would describe the case for a floc that is stationary on the plate settler (not rolling up or sliding down?)
+
+The transition is defined as when the gravitational forces and the fluid drag forces match.
+
+3) Will little flocs or big flocs be most vulnerable to floc rollup?
+
+This is a very complicated question. We would expect big flocs to slide down because they are heavier and have a greater gravitational force. However, bigger flocs also have a greater drag force and are out further into the flow. They will feel a higher velocity than smaller flocs. This means that it is not clear, and we will determine  this mathematically later.
+
+4) Will large or small spacing between plates cause more floc rollup?
+
+As we have already suggested, small spacing between plates will cause more floc rollup due to the resultng velocity profile between the plates.
 
 3) How water leaves the sedimentation tank
 -------------------------------------------------
@@ -372,6 +428,8 @@ Design of an AguaClara Sedimentation Tank
 In the next section, we will develop the mathematical models that help us explain the design.
 
 Note: this section will build off of the conceptual understanding established in the previous section and will explain how the tank works with derivations and mathematical models.
+
+How do we actually design a sedimentation tank? What are the parameters that actually matter?
 
 - Inlet and outlet channels
   - Exit weir height
