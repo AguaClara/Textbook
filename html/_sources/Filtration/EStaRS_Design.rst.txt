@@ -5,60 +5,56 @@ EStaRS Design
 *******************
 
 
-Some parts of the design are the same!
+The EStaRS: Enclosed Stacked Rapid Sand filter, is a compact filter that can be amended to a 1 L/s floc/sed unit to provide a filter. EStaRS are also used for low flow plants because they are less resource intensive to construct. Because the filter is constructed using only pipes and couplings, the possible EStaRS sizes are discretized as pipes are not available in every concievable size. This constraint means that there are only three available sizes of EStaRS: 1 ft, 2ft, and 3 ft diameter, which treat .764 L/s, 3.07 L/s, and 7.024 L/s. Each plant should have at least 2 filters so that one can still be in use even when the other is in backwash. If the plant flow is more than corresponds with 2 filters additional filters can be added in parallel.
+
+Some parts of the design are the same as for the open StaRS filter! The stacked trunk and branch system is the most notable of these similarities, with key differences being in how the inlet and outlet system can be designed. Both the "traditional" concrete entrance/exit channel and boxes can be used, but more compact is what is called the "Micky Mouse" design. This design features entrance and exit tanks made from large diameter pipes rather than concrete. Most of this design file considers the shared characteristics of the concrete and "Micky Mouse", but places where the design varies will be noted.
+
+.. attention::
+  In this file, many values are functions of pipe nominal diameter and SDR. For the simplicity of reading, those values are written with just the geometric value used. For example, if an outer diameter (OD) is needed, it is written as :math:`OD_{ExamplePipe}` rather than :math:`OD(ND_{ExamplePipe}, SDR26)` which is more similar to how it would be found explicitlty. Some other features that follow this convention are Inner Diameters and Radii, Outer Radii, and wall thicknesses.
+
 
 
 Dimensions and Pipe Size
 =========================
-.. two filters are assumed
 
-The filter flow and backwash velocity are used to find an area, this area is used to find the Nominal Diameter of the pipe to be used for the filter. If the value is not one of the options, the next largest pipe size is selected.
+Generally 2 filters are considered, so that one can still be in use when the other is being backwashed. Using more than 2 filters will still work with this design, as long as :math:`N_{Fi}`, the number of filters, is changed to accomodate the correct number. This step requires some foresight on how many filters may be needed and of what size.
 
-The height of the filter layer is taken as 0.2 meters.
-Some other variables defined here:
+In the design the first step is to determine what size EStaRS is needed because this determines nearly every parameter.
 
-These are all minimums!
-
-.. math::
-
-  ND_{FiTrunkMinLow} = 1.5in
-  ND_{FiBranchMinLow} = 1in
-  ND_{BallValve} = 3in
-  ND_{BedTester} = 0.5in
-  ND_{BedTesterOuter} = 1in
-  ND_{FiAirRelValve} = 0.5in
-  ND_{FiBwTrunkMinLow} = 2in
-  ND_{FiBwBranchkMinLow} = 1in
+The filter flow and backwash velocity are used to find an area (:math:`\frac{Q_{Fi}}{V_{Bw}}= A`), this area is used to find the Nominal Diameter of the pipe to be used for the filter.  If the value is not one of the options, the next largest pipe size is selected.The backwash velocity is a set paramter based on sand characteristics and yields the smallest pipe that can be used for the filter body.
 
 
-
-The branch spacing is a function of the size of the EStaRS. The "maximum" spacing is somewhat arbitrarily set 10cm. This value is meant to balance even flow distribution across each layer with ease of fabrication and material use. As a result the expression for number of branches is the following:
-  :math:`B_{FiBranchMax} = 10cm`
-
-.. math::
-
-    N_{FiBranchMin} = round(\frac{ID_{FiPipe}}{B_{FiBranchMax}})
-
-the ID function also takes the SDR for the pipe (26), but in the equation above was left out so the overall mechanism of the calculation is clearer. The value is rounded because an integer number of branches is needed.
-
-The number of inlet and outlet pipes are fixed by the way the filter works and are shown below:
-
-.. math::
+From the determination of the filter body size the branch and trunk manifolds are the next most important feature of the design. Some relevant variables defined here:
 
 
-    N_{FiInletPipesLow} = 4
+|  :math:`ND_{FiTrunkMinLow} = 1.5in`
+|  :math:`ND_{FiBranchMinLow} = 1in`
+|  :math:`ND_{BallValve} = 3in`
+|  :math:`ND_{BedTester} = 0.5in`
+|  :math:`ND_{BedTesterOuter} = 1in`
+|  :math:`ND_{FiAirRelValve} = 0.5in`
+|  :math:`ND_{FiBwTrunkMinLow} = 2in`
+|  :math:`ND_{FiBwBranchkMinLow} = 1in`
 
-    N_{FiOutletPipesLow} = 3
+All of these values are defined as minimums and current field testing by Juan Guzman suggests that these value may be set too small. Specifically, the :math:`ND_{FiBwTrunkMinLow} = 2in` is under scrutiny as of November 2018, and the minimum diameter may become 3 in.
+
+Another important value determined by the  filter body size is the area of the filter which is defined as: :math:`ID_{pipe}^2 / 4`
+
+Sand Layer Thickness as a Function of Trunk Diameter
+======================================================
+
+**what is this section really used for? Isn't the sand layer height fixed?** Yes vaguely...but knowing the total mass of sand still matters. It probably doesn't need to go here. It could go at the bottom I think.
+
+The height of the filter sand layer is taken as 0.2 meters. This distance is the center to center distance. The total amount of sand in the filter is then the number of layers  - 1 times the spacing of the filter trunks added to the outer radius of the bacwash trunk.
 
 
-The area of the filer is defined as: :math:`ID_{pipe}^2 / 4`
 
-Sand Layer Thickness as a Function of Diameter
-===============================================
+**In the mathcoad code these functions are NOT used** Can they just be deleted
+
 
 Two heights are defined here. Both are defined as functions:
 
-:math:`H_{FiLayerF}` the height of a standard filter layer. It is defined as the maximum value between the defined layer height, the outer radius (OR) of the trunk  (as a fucntion of nominal diameter) plus the minimum filter trunk spacing  , the outer diameter of the iftting of the trunk (also as function of ND), and the fernco outer diameter (again a fucntion of ND). Each of these is rounded to the nearest 1cm.
+:math:`H_{FiLayerF}` the height of a standard filter layer. It is defined as the maximum value between the defined layer height, the outer radius (OR) of the trunk  (as a fucntion of nominal diameter) plus the minimum filter trunk spacing  , the outer diameter of the fitting of the trunk (also as function of ND), and the fernco outer diameter (again a fucntion of ND). Each of these is rounded to the nearest 1cm.
 
 and
 
@@ -68,10 +64,18 @@ and
 Flow Distribution Constraints: ratio of pressure recovery to clean bed head loss
 ===================================================================================
 
-There are three flow distribution problems in the filter design:
+In the EStaRS there are three components where flow distribution must be considered:
 1. Between slots along manifold branches
 2. Between branches along manifold trunks
 3. Between filter layers
+
+Having uneven flow distribution is unwanted for several reasons, the mostly importantly being that the goal is for each parcel of water to spend approximately the same amount of time in the filter. If flow isn't distributed well the distribution of residence times for the parcels will widen which decreases treatment efficiency. Additonally, uneven flow distributions will increase the head loss in certain parts of the system which can perpetuate preferential flow paths.
+
+The basis of this part of the design is using head loss in an analogous way as resistors in an electrical system. If head loss is intentionally high at a certain point in the filter, then other differences between paths (such a length of the pipe, or which orifice along a branch is the outlet) will not matter because the head loss of those differences is comparatively small. Additionally, some variation is taken into account. Creating a system with perfectly identical paths would be extraordinarily complex, so some dissimilarity is allowed for the sake of simplicity.
+
+
+Design
+-------
 
 The relative distribution of the flow through a particular path is defined as:
 
@@ -102,7 +106,7 @@ The relative distribution of the flow through a particular path is defined as:
 
 These relationships define the head loss constraints of the filter.
 
-The ratio, :math:`\Pi_{ManifoldQ}` has been arbitrarily given a value of :math:`0.85`, meaning the flow exiting the longest path is 85% of the flow exiting from the shortest path.
+The ratio, :math:`\Pi_{ManifoldQ}` has been  somewhat arbitrarily given a value of :math:`0.85`, meaning the flow exiting the longest path is 85% of the flow exiting from the shortest path.
 
 Thus from above:
 
@@ -112,8 +116,9 @@ Where the ratio of the pressure recovery in the branches to the head loss throug
 
 :math:`\Pi_{ManifoldHeadLoss} = \frac{PR}{H_{LSand}}`
 
-Though the piezometric head profiles for the inlet and outlet manifolds for the middle layers may be parallel, meaning the pressure recovery is less constrained for a good flow distribution, we still need a tight constraint for the outer manifolds where the velocity is 1/2 and the PR is 1/4 that of the inner layer, while smaller still in the bottom-most manifold where the velocity head is tiny as the diameter is larger.
+Though the piezometric head profiles for the inlet and outlet manifolds for the middle layers may be parallel, meaning the pressure recovery is less constrained for a good flow distribution, a tight constraint is still needed for the outer manifolds where the velocity is 1/2 and the PR is 1/4 that of the inner layer, while smaller still in the bottom-most manifold where the velocity head is tiny as the diameter is larger.
 
+See the section on Pressure Recovery for more infomation if this is unclear.
 
 
 
@@ -129,7 +134,7 @@ However,the actual maximum of flow that the filter would see is actually the lar
 
 Depending on the total flow of the EStaRS and the size of the modules, varying numbers of filters will need to be used, though minimum should always be 2.
 
-This design will focus on flow through one filter, as having several filters in parallel wouldn't alter the flow within one, thought flow will be split between the filters.
+This design will focus on flow through one filter, as having several filters in parallel wouldn't alter the flow within one, though flow will be split between the filters.
 
 The entire area of the filter is assumed to be active and is denoted as :math:`A_{Fi}`.
 
@@ -149,12 +154,36 @@ Filter Trunk and Branch Diameters
 
 In determining the size of the trunk and branches of the EStaRS the pressure recovery constraints are the most important design considerations. Having a pressure recovery term that is too high will lead to and uneven flow distribution. The two pressure recovery terms that are of particular concern are those in the trunks and branches during forward filtration, and the pressure recovery in the lowest branch during backwash. To calculate the estimated pressure recovery term the first thing to find is the velocity in the branches during forward filtration and during backwash.
 
+
+The branch spacing is a function of the size of the EStaRS. The "maximum" spacing is somewhat arbitrarily set 10cm. This value is meant to balance even flow distribution across each layer with ease of fabrication and material use. As a result the expression for number of branches is the following:
+  :math:`B_{FiBranchMax} = 10cm`
+
+.. math::
+
+    N_{FiBranchMin} = round(\frac{ID_{FiPipe}}{B_{FiBranchMax}})
+
+the ID function also takes the SDR for the pipe (26), but in the equation above was left out so the overall mechanism of the calculation is clearer. The value is rounded because an integer number of branches is needed.
+
+The number of inlet and outlet pipes are fixed by the way the filter works and are shown below:
+
+.. math::
+
+
+    N_{FiInletPipesLow} = 4
+
+    N_{FiOutletPipesLow} = 3
+
+
+
+
+
 Determining Forward Filtration and Backwash Velocities
 --------------------------------------------------------
 
 See Figure XXXX for a schematic of the filter layers.
 
 .. image:: Images/figure_flow_distribution_estars.PNG
+
 
 From the section above it is apparent that the total flow through the filter is the flow through each layer times the number of layers or :math:`Q_{Fi} = N_{Layers}*{Q_{FiLayers}`
 
@@ -339,6 +368,8 @@ Come back to this a little bit...
 Inlet Orifice and Outlet Slot Design
 ========================================
 
+*come back to this once Juan and Bayron have results from their test of how much fabrication matters.*
+
 Knowing the PR in the BW manifold, the design head loss through the outlet orifices can be determined based on:
 
 .. math::
@@ -362,7 +393,7 @@ Outlet Design
 
 Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, :math:`B_{slot}` is always .008 inch. *The number of slot rows is also fixed at 2, because each branch has slots on the top and bottom because the outlet pipes are accepting flow from two layers of sand, one above and one below.*
 
-From the cumulative area of slots and the width of the slots **where the hell does the width come from** The total length of slots can be determined. This length of slots is for one side of one branch *yes?*
+From the cumulative area of slots and the width of the slots **where does the width come from** The total length of slots can be determined. This length of slots is for one side of one branch *yes?*
 
 As the branches are different lengths along one trunk, the number of slots is different per branch depending on the length. Dividing the Length of the
 
@@ -391,7 +422,7 @@ Then for each the total number of orifices necessary for a layer of the manifold
 
 Have the holes close together is important to maintaing an even flow distribution, which is why the holes spacing is determined before hole size (which is also constrained by available drill bit sizes)
 
-The drill bit sizes considered are 1/8 inch and 1/4 inch.
+The drill bit sizes considered are 1/16 inch, 1/8 inch, 3/16 in  and 1/4 inch. The maximum hole size is 1/4in because when the holes are larger they stick out from under the edge of the wings. This is contstrained by the curvature of the wings as shown below in **Figure XYZ**
 
 The choice of drill bit size is then determined using the cumulative area of orifice needed for a branch.
 
@@ -404,39 +435,100 @@ Generally, the hole diameter is chosen from the closest (but larger) drill bit b
   Where:
   A_{OrificeTotal} = (A_{BwOrifices}, A_{FiManSlots}, A_{FiTopManSlots})
 
-These 3 distinct diameters are compared to available drill bits, and actual diameters are chosen.
+The 3 distinct diameters correspsonding with these three areas are compared to available drill bits, and actual diameters are chosen.
 
 Because this diameter is likely larger than the calculated diameter, the number of holes must be recalculated for each. The new number of holes is the minimum between the new calculated number (rounded down to the nearest integer) and the original number of holes (which was defined as a maximum). The new calcualtion is done as follows:
 
 .. math::
 
-  N_{OificesEstNew} = \frac{A_{TotalNecessaryArea}}{\frac{\pi}{4}D_{Orifice}^2}
+  N_{OrificesEstNew} = \frac{A_{TotalNecessaryArea}}{\frac{\pi}{4}D_{Orifice}^2}
 
 Again using the three areas, but now also with the new corresponding diameters.
 
-This number of holes can be used to check that total area of holes is close to the total area necessary to provide the appropriate amount of headloss.
+This number of holes can be used to check that total area of holes is close to the total area necessary to provide the appropriate amount of head loss.
 
 The head loss calculation can then be checked as well for all 5 branch systems involved: the backwash branches in forward, the backwash branches in backwash, the top inlet pipe during filtration, the other inlet pipes during filtration, and the outlet pipes during filtration.
 
-The head loss for each branch type is:
+The head loss for each branch type is generally:
 
 .. math::
 
-    HL = \frac{\frac{Q}{\Pi*A*\epsilon}^2}{2g}
+    HL = \frac{(\frac{Q}{\Pi*A*\epsilon})^2}{2g}
 
 With the relevant parameters for each type of manifold branch shown below in **this figure**
 
 
-**Make the table not here because formatting yo**
+**Table_Branch_Head_Loss.PNG**
 
+Because the flows and area are different for each of the branches the head loss through each system layer is slighly different. This head loss is also only for the one branch system.  As show in the figure below with numbered branches, there are several pipes that are constructed the same and several that are different.
 
+**figure_numbered_filter_layers.PNG**
 
+Pipes 2, 4, and 6 (the outlet pipes) are all identical and the total head loss through the outlet system is approximately three times the :math:`HL_{OutletSlotForWard}` as calculated based on the table above. The outlet pipes are the only pipes where the porosity of hte sand ica accounted for because the outlet slot system is the only place in the filter where the sand interfaces with the pipe openings. The exclusion zones prevents sand at the inlets and as such the porosity is not accounted for in any other head loss calculation. Pipe 7 experiences 2 different head losses depending on whethere the filter is in forward filtration or backwash. Pipes 3 and 5 are also identical.
+
+Additional note for the image above. The pipes show the overall flow direction at each layer. The each of those numbers pipes, from a vertical cross-sections looks generally like the trunk and branches in **Figure XYZ**.
+
+**figure_circle_branches**
 
 Entrance and Exit Pipe Dimensions
 ==================================
+Theres a lot of confusion for this part
 
-Total Sand Depth, Filter Pipe Length, Head Loss
+The head loss in a fluidized bed is:
+
+Total Sand Depth, Filter Pipe Length
 =================================================
+
+In determining the total sand depth and total length of the filter pipe several distances are assumed:
+
+| :math:`T_{BottomCap} = 1 in` This is the thickness of the cap at the bottom of the filter, without this cap the pipe would be open on the bottom.
+| :math:`H_{TopCap} = 6 in` **This is the overlap of the cap onto the filter pipe**
+| :math:`H_{FilterValve} = 10 cm` **What is this actually? THe sand drain?**
+| :math:`H_{FiBottom} = 5cm + T_{BottomCap}` This is the elevation at which the sand starts, and exists because the cap has thickness.
+| :math:`H_{FluidizedBedtoSiphon} = 20cm` This is a saftey distance to prevent sand from ever escaping the filter during filtration or backwash.
+
+The minimum height of sand in the filter is the depth of each filter layer times the number of filter layers plus the outer radius of the backwash trunk. The outer radius is added because the layer height is defined as the center-to-center distance of the layer, but on the bottom layer there is an additional radius depth of sand, as shown in the following equation.
+
+:math:`H_{FiSandLow} = N_{Layer}*{H_FiLayerMin} + OR_{BwTrunk}` **the actual height should jsut be calculated here?**
+
+This is a m
+
+The active sand depth (the sand actually used during filtration) is just the number of layer times sand depth. This depth is useful to **do something presumably**
+
+:math:`H_{FiSandActive} = N_{Layer}*{H_FiLayerMin}`
+
+The total height of the filter needs to account for the safety distance to prevernt sand escape in addition to the necessary space for the sand to fluidize. At the velocity backwash occurs, the ratio of the fluidized bed height to the settled bed height is: :math:`\Pi_{FiFluidized} = 1.3`
+
+It is assuemd that all of the sand fluidizes so that:
+
+:math:`H_{FluidizedBed} = \Pi_{FiFluidized}*H_{FiSand}` **make this variable match up**
+
+Then, the height of the filter, characterized a length because it is in the direction of flow is the sum of these components:
+
+.. math::
+
+  L_{FilterBody} = H_{FiBottom} + H_{FluidizedBed} +  H_{FluidizedBedtoSiphon} + OD_{BWTrunkFitting} + S_{Fitting}
+
+Where :math:`S_Fitting` is the spacing of the fitting? **But what does this look like? Add a pic**
+
+This length comes out to be around 2 meters which is much less than that required for an OStaRS!
+
+Fluidized Bed Head Loss and Variation
+======================================
+
+One the depth of the fluidized bed is determined, the steady state head loss during backwash can be determined. Knowing this will inform later assumptions about realtive headloss in the system.
+
+The following expression is used to find this value:
+
+.. math::
+
+  HL_{BwSS} = \frac{H_{FiSand}*(\rho_{Sand} - \rho_{Water})*(1 - \epsilon_{Sand})}{\rho_{Water}}
+
+This head loss value should be very close to the depth of the settled sand bed.  This equation for head loss comes from **...where does it come from....**
+
+
+The head loss of a dirty bed is taken as :math:`HL_{FiDirty} = 0.6m` As a result the height in the filter for backwash initiation to occur is the sum of headl
+
 
 Plumbing Head Loss
 =====================
@@ -467,8 +559,14 @@ Because the flow distribution will change to make the headlosses even, it can be
 
 It is also known that the flow must add up to the flow in the filter. Knowing that a system of equations can be set up to use the healoss and total flow requirement to solve for the flow in each layer. Those flows are then taken as the flow through each layer.
 
-Siphon Design
-==================
+Siphon Design and Head Loss
+==============================
+
+The siphon in the EStaRS system is different from the OStaRS system because it doesn't involve air to create suction.
+
+The pipe size for the siphon is the same as the backwwash trunk: :math:`ND_{Siphon} = ND_{BwTrunk}`
+
+The preliminary estimate of sipone length is twice the length of the filter: :math:`L_{SiphonEst} = 2*L_{FilterBody}`
 
 Elevations and Filter Sizing
 =============================
