@@ -21,10 +21,11 @@ Theory
 The ANC for a typical carbonate-containing sample is defined as:
 
 .. math::
+    :label: eq_ANC_definition
 
     ANC = [HCO_3^-]+2[CO_3^{-2} ]+{[OH}^{-} ] - [H^+]
 
-This equation can be derived from a charge balance if ANC is considered to be the cation contributed by a strong base titrant and if other ions present do not contribute significantly.
+Equation :eq:`eq_ANC_definition` can be derived from a charge balance if ANC is considered to be the cation contributed by a strong base titrant and if other ions present do not contribute significantly.
 
 Determination of ANC or alkalinity involves determination of an equivalence point by titration with a strong acid. The equivalence point is defined as the point in the titration where titrant volume that has been added equals the "equivalent" volume (:math:`V_e`). The equivalent volume is defined as:
 
@@ -51,22 +52,25 @@ Gran Plot
 Another method to find the ANC of an unknown solution is the Gran plot technique. When an ANC determination is being made, titration with a strong acid is used to "cancel" the initial ANC so that at the equivalence point the sample ANC is zero. The Gran plot technique is based on the fact that further titration will result in an increase in the number of moles of :math:`H^+` equal to the number of moles of :math:`H^+` added. Thus after the equivalence point has been attained, the number of moles of :math:`H^+` added equals the number of moles of :math:`H^+` in solution. An equation describing this mass balance is provided as:
 
 .. math::
+    :label: eq_eq_Gran_H_balance
 
     N_{t} \left(V_{t} -V_{e} \right)=\left(V_{s} +V_{t} \right)\left[H^{+} \right]
 
 Solving for the hydrogen ion concentration:
 
 .. math::
+    :label: eq_Gran_hydrogen_ion
 
     \left[H^{+} \right]=\frac{N_{t} \left(V_{t} -V_{e} \right)}{\left(V_{s} +V_{t} \right)}
 
-Equation \eqref{ZEqnNum183328} can also be solved directly for the equivalent volume.
+Equation :eq:`eq_Gran_hydrogen_ion` can also be solved directly for the equivalent volume.
 
 .. math::
+    :label: eq_Gran_ve
 
     V_{e} =V_{t} -\frac{\left[H^{+} \right]\left(V_{s} +V_{t} \right)}{N_{t} }
 
-Equation \eqref{ZEqnNum199885} is valid if enough titrant has been added to neutralize the ANC. A better measure of the equivalent volume can be obtained by rearranging equation 1.5 so that linear regression on multiple titrant volume - pH data pairs can be used.
+Equation :eq:`eq_Gran_ve` is valid if enough titrant has been added to neutralize the ANC. A better measure of the equivalent volume can be obtained by rearranging equation :eq:`eq_Gran_ve` so that linear regression on multiple titrant volume - pH data pairs can be used.
 
 .. math::
 
@@ -74,25 +78,26 @@ Equation \eqref{ZEqnNum199885} is valid if enough titrant has been added to neut
 
 We define F1 (First Gran function) as:
 
-
-
 .. math::
+    :label: eq_Gran_F1
 
-    {F}_{{1}} {\; }={\; }\frac{V_{s} +V_{t} }{V_{s} } {[H}^{+} {]}
+    F_{1} = \frac{V_{s} +V_{t} }{V_{s} } {[H}^{+} {]}
 
-If F1 is plotted as a function of Vt the result is a straight line with slope = $\frac{N_{t} }{V_{s} } $ and abscissa intercept of Ve (Figure \eqref{ZEqnNum245538}).
+If :math:`F_1` is plotted as a function of :math:`V_t` the result is a straight line with slope = :math:`\frac{N_{t} }{V_{s} }` and abscissa intercept of :math:`V_e` (:numref:`_figure_Gran_plot`).
 
 The ANC is readily obtained given the equivalent volume. At the equivalence point:
 
 .. math::
+    :label: eq_Gran_equivalence
 
-    V_{s} \; ANC={\; }V_{e} \; N_{t}
+    V_s ANC= V_e N_t
 
-Equation \eqref{ZEqnNum665104} can be rearranged to obtain ANC as a function of the equivalent volume.
+Equation :eq:`eq_Gran_equivalence` can be rearranged to obtain ANC as a function of the equivalent volume.
 
 .. math::
+    :label: eq_Gran_ANC
 
-    {ANC\; }={\; }\frac{V_{e} \; N_{t} }{V_{s} }
+    ANC=\frac{V_e N_t }{V_s }
 
 .. _figure_Gran_plot:
 
@@ -101,7 +106,7 @@ Equation \eqref{ZEqnNum665104} can be rearranged to obtain ANC as a function of 
     :align: center
     :alt: internal figure
 
-    Gran plot from titration of a weak base with 0.05 N acid. :math:`C_T` = 0.001 moles of carbonate and sample volume is 48 mL. The equivalent volume was 4.8 mL. From equation  \eqref{ZEqnNum755200} the ANC was 5 meq/L.
+    Gran plot from titration of a weak base with 0.05 N acid. :math:`C_T` = 0.001 moles of carbonate and sample volume is 48 mL. The equivalent volume was 4.8 mL. From equation  :eq:`eq_Gran_ANC` the ANC was 5 meq/L.
 
 
 .. _heading_ANC_pH_Measurements:
@@ -113,15 +118,15 @@ The pH can be measured either as activity :math:`\mathrm{\{}H^+\mathrm{\}}` as m
 
 .. math::
 
-    {F}_{{1}} {\; }={\; }\frac{V_{s} +V_{t} }{V_{s} } {\; \; [H}^{+} {]\; }={\; }\frac{V_{s} +V_{t} }{V_{s} } {\; \; }\frac{\{ H^{+} \} }{\gamma } =\; {N} _{t} \frac{V_{t} -V_{e} }{V_{s} }
+    F_1 =\frac{V_s +V_t }{V_s}  [H^+] = \frac{V_s + V_t}{V_s} \frac{\{ H^+ \} }{\gamma} = N _t \frac{V_t - V_e}{V_s}
 
 where :math:`\gamma` is the activity correction factor and the slope is :math:`N_t/V_0`. If :math:`[H^+]` concentration is used then
 
 .. math::
 
-    {F}_{{1}} {\; }={\; }\frac{V_{s} +V_{t} }{V_{s} } {\; \; \{ H}^{+} {\} \; }={\; }\gamma {N}_{{t}} \frac{V_{t} -V_{e} }{V_{s} }
+    F_1 = \frac{V_s +V_t }{V_s } { \{ H}^+ {\}} = \gamma N_t \frac{V_t - V_e}{V_s}
 
-where the slope is :math:`\frac{\gamma \cdot {N} _{t} }{V_{s} }`.
+where the slope is :math:`\frac{\gamma \cdot N_t}{V_s}`.
 
 This analysis assumes that the activity correction factor doesn't change appreciably during the titration).
 
@@ -133,17 +138,19 @@ To facilitate data generation and subsequent Gran plot construction and analysis
 ANC Determination for Samples with pH < 4
 -----------------------------------------
 
-After the equivalence point has been reached (adding more acid than ANC = 0) the only significant terms in equation \eqref{ZEqnNum434822} are :math:`\left[{H}^{+} \right]` and ANC.
+After the equivalence point has been reached (adding more acid than ANC = 0) the only significant terms in equation :eq:`eq_ANC_definition` are :math:`\left[{H}^{+} \right]` and ANC.
 
 .. math::
+    :label: eq_protons_dominate
 
     \left[{H}^{+} \right]>>{\; }\left[{HCO}_{{3}}^{{-}} \right]+{\; 2}\left[{CO}_{{3}}^{{-2}} \right]+\left[{OH}^{{-}} \right]{\; }
 
-When the pH is 2 pH units or more below the :math:`pK_a`s of the bases in the system the only species contributing significantly to ANC is the hydrogen ion (equation \eqref{ZEqnNum293697}) and thus the ANC is simply
+When the pH is 2 pH units or more below the :math:`pK_a`s of the bases in the system the only species contributing significantly to ANC is the hydrogen ion (equation :eq:`eq_protons_dominate`) and thus the ANC is simply
 
 .. math::
+    :label: eq_Gran_pH_lt4
 
-    {ANC}={\; -\; [H}^{+} {]}
+    ANC=[H^+]
 
 For a sample containing only carbonates, if the pH is below 4 the ANC is approximately equal to -[:math:`H^+`] and no titration is necessary.
 
@@ -154,7 +161,7 @@ Titration Techniques
 
 Operationally, the first few titrant volumes can be relatively large increments since the important data lies at pH values less than that of the equivalence point (approximately pH = 4.5 for an Alkalinity titration). As the pH is lowered by addition of acid the ionic strength of the solution increases and the activity of the hydrogen ion deviates from the hydrogen ion concentration. This effect is significant below pH 3 and thus the effective linear range is generally between pH 4.5 and pH 3.0. The maximum incremental titrant volume (:math:`\mathrm{\Delta}V_a`) that will yield n points in this linear region is obtained as follows.
 
-If :math:`V_s` >> :math:`V_t` then equation \eqref{ZEqnNum567204} reduces to
+If :math:`V_s` >> :math:`V_t` then equation :eq:`eq_Gran_H_balance` reduces to
 
 .. math::
 
@@ -165,19 +172,20 @@ Let :math:`[H^+]_e` be the concentration of hydrogen ions at the equivalence poi
 
 .. math::
 
-    {N}_{{t}} {\; \; \; }\frac{(V_{e} -V_{e} )-(V_{f} -V_{e} )}{V_{s} } ={\; [H}^{+} {]}_{{e}} {\; -\; [H}^{+} {]}_{{f}}
+    N_t \frac{(V_e - V_e)-(V_f - V_e)}{V_s} =[H^+]_e [H^+]_f
 
 Thus the volume of acid added to go from :math:`[H^+]_e` to :math:`[H^+]_f` is
 
 .. math::
+    :label: eq_Gran_linear_titrant
 
-   {V}_{{f}} {\; -\; V}_{{e}} {\; }={\; }\frac{V_{s} \left([H^{+} ]_{f} -[H^{+} ]_{e} \right)}{N_{t} }
+   V_f - V_e =\frac{V_s \left([H^+]_f -[H^+]_e \right)}{N_t}
 
-To obtain n data points between :math:`[H^+]_e` - :math:`[H^+]_f` requires the incremental titrant volume (:math:`\mathrm{\Delta} V_t`) be 1/n times the volume of acid added between the equivalence point and the final titrant volume. Thus by substituting :math:`n\mathrm{\Delta}V_t`, and typical hydrogen ion concentrations of :math:`[H^+]_e` = 10-4.5 and :math:`[H^+]_f` = 10-3.0 into equation \eqref{ZEqnNum824828} the maximum incremental titrant volume is obtained.
+To obtain n data points between :math:`[H^+]_e` - :math:`[H^+]_f` requires the incremental titrant volume (:math:`\mathrm{\Delta} V_t`) be 1/n times the volume of acid added between the equivalence point and the final titrant volume. Thus by substituting :math:`n\mathrm{\Delta}V_t`, and typical hydrogen ion concentrations of :math:`[H^+]_e` = 10-4.5 and :math:`[H^+]_f` = 10-3.0 into equation :eq:`eq_Gran_linear_titrant` the maximum incremental titrant volume is obtained.
 
 .. math::
 
-    \Delta {V}_{{t}} {\; }\cong {\; }\frac{(0.001-0.00003)V_{s} }{n\; N_{t} } \cong {\; }\frac{0.001V_{s} }{n\; N_{t} }
+    \Delta V_t\cong \frac{(0.001-0.00003)V_s }{n\; N_t} \cong \frac{0.001V_s}{n\; N_t}
 
 .. _heading_ANC_Procedures:
 
@@ -195,7 +203,7 @@ Determine the ANC for all samples collected from the Acid Lake Remediation lab. 
  #. Add to a 100 mL beaker.
  #. Place the beaker on the magnetic stirrer, add a stir bar and stir slowly.
  #. Place the pH electrode in the solution.
- #. If the initial pH is less than 4.5 no titration is necessary and equation \eqref{ZEqnNum542028} can be used to calculate the ANC.
+ #. If the initial pH is less than 4.5 no titration is necessary and equation :eq:`eq_Gran_pH_lt4` can be used to calculate the ANC.
  #. Record the initial pH (prior to adding any titrant) and initial sample volume.
  #. Analyze the sample using :ref:`Gran plot analysis <heading_Gran_Plot>`.  Add 0.05 N HCl (the titrant) using a digital pipette in increments of 0.100 mL.
  #. Save the Gran data to S:\Courses\4530\Group #\Lab 2 – Acid\group#_gran by selecting |ProCoDA_save_gran|. The data will be saved in a file (tab delimited format) that can be opened by any spreadsheet program. You will use this data to plot a titration curve and to verify that the Gran technique accurately measures the ANC of a sample.
@@ -209,7 +217,7 @@ Prelab Questions
 ================
 
  #. Compare the ability of Cayuga lake and Wolf pond (an Adirondack lake) to withstand an acid rain runoff event (from snow melt) that results in 20\% of the original lake water being replaced by acid rain. The acid rain has a pH of 3.5 and is in equilibrium with the atmosphere. The ANC of Cayuga lake is 1.6 meq/L and the ANC of Wolf Pond is 70 :math:`\mu eq/L`. Assume that carbonate species are the primary component of ANC in both lakes, and that they are in equilibrium with the atmosphere. What is the pH of both bodies of water after the acid rain input? Remember that ANC is the conservative parameter (not pH!). Hint: You can use the scipy optimize root finding function called brentq. Scipy can't handle units so the units must be removed using .magnitude.}
- #. What is the ANC of a water sample containing only carbonates and a strong acid that is at pH 3.2? This requires that you inspect all of the species in the ANC equation and determine which species are important.
+ #. What is the ANC of a water sample containing only carbonates and a strong acid that is at pH 3.2? This requires that you inspect all of the species in the ANC equation (Equation :eq:`eq_ANC_definition`) and determine which species are important.
  #. Why is [:math:`H^+`] not a conserved species?
 
 
@@ -219,7 +227,7 @@ Data Analysis
 =============
 
  #. Plot the titration curve of the t=0 sample with 0.05 N HCl (plot pH as a function of titrant volume). Label the equivalent volume of titrant. Label the 2 regions of the graph where pH changes slowly with the dominant reaction that is occurring. (Place labels with the chemical reactions on the graph in the pH regions where each reaction is occurring.) Note that in a third region of slow pH change no significant reactions are occurring (added hydrogen ions contribute directly to change in pH).
- #. Prepare a Gran plot using the data from the titration curve of the t=0 sample. Use linear regression on the linear region or simply draw a straight line through the linear region of the curve to identify the equivalent volume. Compare your calculation of Ve with that was calculated by ProCoDA.
+ #. Prepare a Gran plot using the data from the titration curve of the t=0 sample. Use linear regression on the linear region or simply draw a straight line through the linear region of the curve to identify the equivalent volume. Compare your calculation of :math:`V_e` with that was calculated by ProCoDA.
  #. Plot the measured ANC of the lake on the same graph as was used to plot the conservative, volatile, and nonvolatile ANC models (see questions 2 to 5 of the Acid Precipitation and Remediation of an Acid Lake lab). Did the measured ANC values agree with the conservative ANC model?
 
 .. _heading_ANC_References:

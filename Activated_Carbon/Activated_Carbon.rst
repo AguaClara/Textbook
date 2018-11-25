@@ -68,20 +68,21 @@ The effective bed porosity can be calculated from
 
 where
 
- | :math:`\rho _b =` apparent bulk density
- | :math:`\rho _{ac}  =  2.1 g/cm^3`
+ | :math:`\rho_b =` apparent bulk density
+ | :math:`\rho_{ac}  =  2.1 g/cm^3`
 
 
 Note that modeling may first involve fitting the isotherm data to the generalized isotherm:
 
 .. math::
+    :label: eq_AC_generalized_isotherm
 
    q=\frac{Q\frac{C}{C_0}}{r+(1-r)\frac{C}{C_0}}
 
 where
  | :math:`q` =  concentration of contaminant in solid phase (mass contaminant/mass activated carbon)
 
-The parameters r and Q should be fit using nonlinear regression on equation\eqref{ZEqnNum671226}. One technique for nonlinear regression is to use Solver (in Excel) to minimize the sum of the residuals while changing the unknown parameters.
+The parameters r and Q should be fit using nonlinear regression on equation :eq:`eq_AC_generalized_isotherm`.
 
 .. _heading_Carbon_Adsorption_Isotherm_Procedures:
 

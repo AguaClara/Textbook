@@ -11,7 +11,7 @@ Acid Precipitation and Remediation of Acid Lakes
 Introduction
 ============
 
-Acid precipitation has been a serious environmental problem in many areas of the world for the last few decades. Acid precipitation results from the combustion of fossil fuels which produce oxides of sulfur and nitrogen that react in the earth's atmosphere to form sulfuric and nitric acid. One of the most significant impacts of acid rain is the acidification of lakes and streams. In some watersheds the soil doesn't provide ample acid neutralizing capacity to mitigate the effect of incident acid precipitation. These susceptible regions are usually high elevation lakes with small watersheds and shallow non-calcareous soils. The underlying bedrock of acid-sensitive lakes tends to be granite or quartz. These minerals are slow to weather and therefore have little capacity to neutralize acids. The relatively short contact time between the acid precipitation and the watershed soil system exacerbates the problem. Lakes most susceptible to acidification: 1) are located downwind, sometimes hundreds of miles downwind, from major pollution sources--electricity generation, metal refining operations, heavy industry, large population centers, etc.; 2) are surrounded by hard, insoluble bedrock with thin, sandy, infertile soil; 3) have a high runoff to infiltration ratio; 4) have a low watershed to lake surface area. Isopleths of precipitation pH are depicted in Figure \eqref{ZEqnNum895787}.
+Acid precipitation has been a serious environmental problem in many areas of the world for the last few decades. Acid precipitation results from the combustion of fossil fuels which produce oxides of sulfur and nitrogen that react in the earth's atmosphere to form sulfuric and nitric acid. One of the most significant impacts of acid rain is the acidification of lakes and streams. In some watersheds the soil doesn't provide ample acid neutralizing capacity to mitigate the effect of incident acid precipitation. These susceptible regions are usually high elevation lakes with small watersheds and shallow non-calcareous soils. The underlying bedrock of acid-sensitive lakes tends to be granite or quartz. These minerals are slow to weather and therefore have little capacity to neutralize acids. The relatively short contact time between the acid precipitation and the watershed soil system exacerbates the problem. Lakes most susceptible to acidification: 1) are located downwind, sometimes hundreds of miles downwind, from major pollution sources--electricity generation, metal refining operations, heavy industry, large population centers, etc.; 2) are surrounded by hard, insoluble bedrock with thin, sandy, infertile soil; 3) have a high runoff to infiltration ratio; 4) have a low watershed to lake surface area. Isopleths of precipitation pH are depicted in :numref:`_figure_Acid_rain_US`.
 
 
 .. _figure_Acid_rain_US:
@@ -19,13 +19,14 @@ Acid precipitation has been a serious environmental problem in many areas of the
 .. figure:: Images/Acid_rain_US.png
     :width: 300px
     :align: center
-    :alt: internal figure
+    :alt: acid rain in the US
 
   The pH of precipitation in 2009.
 
 In acid-sensitive lakes the major parameter of concern is pH (:math:`pH = -log{\{H^+\}}`, where :math:`\{H^+\}` is the hydrogen ion activity, and activity is approximately equal to concentration in moles/L). In a healthy lake, ecosystem pH should be in the range of 6.5 to 8.5. In most natural freshwater systems, the dominant pH buffering (controlling) system is the carbonate system. The carbonate buffering system is composed of four components: dissolved carbon dioxide (:math:`{CO}_{{2\; aq}}`), carbonic acid (:math:`{H}_{{2}} {CO}_{{3}}`), bicarbonate (:math:`{HCO}_{{3}}^{{-}}`), and carbonate (:math:`{CO}_{{3}}^{{-2}}`). Carbonic acid exists only at very low levels in aqueous systems and for purposes of acid neutralization is indistinguishable from dissolved carbon dioxide. Thus to simplify things we define
 
 .. math::
+    :label: eq_total_carbonic
 
     \left[{H}_{{2}} {CO}_{{3}}^{{*}} \right]=\left[{CO}_{{2\; aq}} \right]+\left[{H}_{{2}} {CO}_{{3}} \right]
 
@@ -36,7 +37,7 @@ The sum of the molar concentrations of all the components of the carbonate syste
 
 .. math::
 
-    {C}_{{T}} {\; }={\; }\left[{H}_{{2}} {CO}_{{3}}^{{*}} \right]{\; }+\left[{HCO}_{{3}}^{{-}} \right]+{\; }\left[{CO}_{{3}}^{{-2}} \right]
+    C_T = \left[H_2{CO}_3^* \right] + \left[{HCO}_3^- \right]+\left[{CO}_3^{-2} \right]
 
 The carbonate system can be considered to be a "volatile" system or a "non-volatile" system depending on whether or not aqueous carbon dioxide is allowed to exchange and equilibrate with atmospheric carbon dioxide. Mixing conditions and hydraulic residence time determine whether an aquatic system is volatile or non-volatile relative to atmospheric carbon dioxide equilibrium. First, consider the "non-volatile" system.
 
@@ -45,58 +46,66 @@ The carbonate system can be considered to be a "volatile" system or a "non-volat
 Non-volatile System
 -------------------
 
- For a fixed :math:`C_T`, the molar concentration of each species of the carbonate system is determined by pH. Equations \eqref{ZEqnNum342954}-\eqref{ZEqnNum931548} show these functional relationships.
+For a fixed :math:`C_T`, the molar concentration of each species of the carbonate system is determined by pH. Equations :eq:`eq_carbonic_acid`-:eq:`eq_alpha2` show these functional relationships.
 
 .. math::
+    :label: eq_carbonic_acid
 
-    \left[{H}_{{2}} {CO}_{{3}}^{{*}} \right]{\; }={\; }\frac{C_{T} }{1+\frac{K_{1} }{[H^{+} ]} +\frac{K_{1} K_{2} }{[H^{+} ]^{2} } } ={\; }\alpha _{{0}} C_{T}
+    \left[H_2 {CO}_3^* \right] = \frac{C_T}{1+\frac{K_1}{[H^+]} +\frac{K_1 K_2}{[H^+]^2} } = \alpha_0 C_T
 
 where
 
 .. math::
+    :label: eq_alpha0
 
-    \alpha _{{0}} =\frac{1}{1+\frac{K_{1} }{[H^{+} ]} +\frac{K_{1} K_{2} }{[H^{+} ]^{2} } } {\; }
+    \alpha_0 =\frac{1}{1+\frac{K_1 }{[H^+]} +\frac{K_1 K_2}{[H^+]^2} }
 
 .. math::
+    :label: eq_bicarbonate
 
-   \left[{HCO}_{{3}}^{{-}} \right]={\; }\frac{C_{T} }{\frac{[H^{+} ]}{K_{1} } +1+\frac{K_{2} }{[H^{+} ]} } ={\; }\alpha _{{1}} C_{T}
-
+    \left[{HCO}_3^- \right]=\frac{C_T}{\frac{[H^+ ]}{K_1 } +1+ \frac{K_2}{[H^+]}} =\alpha_1 C_T
 
 where
 
 .. math::
+    :label: eq_alpha1
 
-    \alpha _{{1}} \; =\; \frac{1}{\frac{[{H} ^{+} ]}{{K} _{1} } +1+\frac{{K} _{2} }{[{H} ^{+} ]} }
+    \alpha_1 = \frac{1}{\frac{[H^+]}{K_1} + 1 + \frac{K_2}{[H^+]}}
 
 .. math::
+    :label: eq_carbonate
 
-    \left[{CO}_{{3}}^{{-2}} \right]{\; }={\; }\frac{C_{T} }{\frac{[H^{+} ]^{2} }{K_{1} K_{2} } +\frac{[H^{+} ]}{K_{2} } +1} ={\; }\alpha _{{2}} C_{T}
+    \left[{CO}_3^{-2} \right] = \frac{C_T}{\frac{[H^+]^2}{K_1 K_2} +\frac{[H^+]}{K_2} +1 } =\alpha_2 C_T
 
 where
 
 .. math::
+    :label: eq_alpha2
 
-    \alpha _{{2}} \; =\; \frac{1}{\frac{[{H} ^{+} ]^{2} }{{K} _{1} {K} _{2} } +\frac{[{H} ^{+} ]}{{K} _{2} } +1}
+    \alpha_2 = \frac{1}{\frac{[H^+]^2 }{K_1 K_2} +\frac{[H^+]}{K_2} + 1}
 
 :math:`K_1` and :math:`K_2` are the first and second dissociation constants for carbonic acid and :math:`\alpha_0`, :math:`\alpha_1`, and :math:`\alpha_2` are the fraction of :math:`C_T` in the form :math:`{H}_{{2}} {CO}_{{3}}^{{*}}`,:math:`{HCO}_{{3}}^{{-}}`, and :math:`{CO}_{{3}}^{{-2}}` respectively. Because :math:`K_1` and :math:`K_2` are constants (:math:`K_1 = 10^{-6.3}` and :math:`K_2 = 10^{-10.3}`), :math:`\alpha_0`, :math:`\alpha_1`, and :math:`\alpha_2` are only functions of pH.
 
-A measure of the susceptibility of lakes to acidification is the acid neutralizing capacity (ANC) of the lake water. In the case of the carbonate system, the ANC is exhausted when enough acid has been added to convert the carbonate species :math:`{HCO}_{{3}}^{{-}}`  and :math:`{CO}_{{3}}^{{-2}}` to :math:`{H}_{{2}} {CO}_{{3}}^\star`. A formal definition of total acid neutralizing capacity is given in the equation below
+A measure of the susceptibility of lakes to acidification is the acid neutralizing capacity (ANC) of the lake water. In the case of the carbonate system, the ANC is exhausted when enough acid has been added to convert the carbonate species :math:`{HCO}_{{3}}^{{-}}`  and :math:`{CO}_{{3}}^{{-2}}` to :math:`{H}_{{2}} {CO}_{{3}}^\star`. A formal definition of total acid neutralizing capacity is given by equation :eq:`eq_ANC_definition1`
 
 .. math::
+    :label: eq_ANC_definition1
 
     {ANC\; }={\; }\left[{HCO}_{{3}}^{{-}} \right]+{\; 2}\left[{CO}_{{3}}^{{-2}} \right]+\left[{OH}^{{-}} \right]{\; -}\left[{H}^{+} \right]
 
-ANC has units of equivalents per liter. The hydroxide ion concentration can be obtained from the hydrogen ion concentration and the dissociation constant for water :math:`K_w`.
+ANC has units of equivalents per liter. The hydroxide ion concentration can be obtained from the hydrogen ion concentration and the dissociation constant for water, :math:`K_w`.
 
 .. math::
+    :label: eq_OH_dissociation
 
-    \left[{OH}^{{-}} \right]{\; }={\; }\frac{K_{w} }{\left[{H}^{+} \right]}
+    \left[{OH}^{{-}} \right] = \frac{K_w}{\left[H^+\right]}
 
-Substituting equations \eqref{ZEqnNum144714}, \eqref{ZEqnNum944651}, and \eqref{ZEqnNum397343} into equation \eqref{ZEqnNum880414}, we obtain
+Substituting equations :eq:`eq_bicarbonate`, :eq:`eq_carbonate`, and :eq:`eq_OH_dissociation` into equation :eq:`eq_ANC_definition1`, we obtain
 
 .. math::
+    :label: eq_ANC_nonvolatile
 
-    ANC=C_{T} \left(\alpha _{1} +2\alpha _{2} \right)+{\; }\frac{K_{w} }{\left[{H}^{+} \right]} \; -\left[{H}^{+} \right]
+    ANC=C_T \left(\alpha_1 +2\alpha_2 \right)+\frac{K_w}{\left[H^+ \right]} - \left[H^+ \right]
 
 For the carbonate system, ANC is usually referred to as alkalinity. Alkalinity can be expressed as equivalents/L or as mg/L (ppm) of :math:`CaCO_3`. 50,000 mg/L :math:`CaCO_3` = 1 equivalent/L.
 
@@ -104,43 +113,47 @@ For the carbonate system, ANC is usually referred to as alkalinity. Alkalinity c
 Volatile Systems
 ----------------
 
-Now consider the case where aqueous :math:`{CO}_{{2\; aq}}` is volatile and in equilibrium with atmospheric carbon dioxide. Henry's Law can be used to describe the equilibrium relationship between atmospheric and dissolved carbon dioxide.
+Now consider the case where aqueous :math:`{CO}_{2\; aq}` is volatile and in equilibrium with atmospheric carbon dioxide. Henry's Law can be used to describe the equilibrium relationship between atmospheric and dissolved carbon dioxide.
 
 .. math::
 
     \left[{CO}_{{2\; aq}} \right]={\; P}_{{CO}_{{2}} {\; }} {K}_{{H}}
 
-where :math:`K_H` is Henry's constant for :math:`CO_2` in moles/L-atm and :math:`P_{CO_2}` is partial pressure of :math:`CO_2` in the atmosphere :math:`K_H = 10^{-1.5}`  and :math:`P_{CO_2} = 10^{-3.5}`). Because :math:`\left[{CO}_{{2\; aq}} \right]` is approximately equal to :math:`\left[{H}_{{2}} {CO}_{{3}}^{{/star}} \right]` and from equations \eqref{ZEqnNum141302} and \eqref{ZEqnNum944493}
+where :math:`K_H` is Henry's constant for :math:`CO_2` in moles/L-atm and :math:`P_{CO_2}` is partial pressure of :math:`CO_2` in the atmosphere :math:`K_H = 10^{-1.5}`  and :math:`P_{CO_2} = 10^{-3.5}`). Because :math:`\left[{CO}_{{2\; aq}} \right]` is approximately equal to :math:`\left[{H}_{{2}} {CO}_{{3}}^{{/star}} \right]` and from equations :eq:`eq_total_carbonic` and :eq:`eq_carbonic_acid`
 
 .. math::
 
-    P_{CO_{2} } K_{H} =\alpha _{0} C_{T}
+    P_{CO_2} K_H =\alpha_0 C_T
 
 .. math::
+    :label: eq_CT_volatile
 
-    {C}_{{T}} {\; }={\; }\frac{P_{CO_{2} } K_{H} }{a_{0} }
+    C_T = \frac{P_{CO_2} K_H}{\alpha_0}
 
-Equation \eqref{ZEqnNum240220} gives the equilibrium concentration of carbonate species as a function of pH and the partial pressure of carbon dioxide.
+Equation :eq:`eq_CT_volatile` gives the equilibrium concentration of carbonate species as a function of pH and the partial pressure of carbon dioxide.
 
-The acid neutralizing capacity expression for a volatile system can be obtained by combining equations \eqref{ZEqnNum181354} and \eqref{ZEqnNum745361}.
-
-.. math::
-
-    ANC=\frac{P_{CO_{2} } K_{H} }{a_{0} } (\alpha _{1} +2\alpha _{2} )+{\; }\frac{K_{w} }{\left[{H}^{+} \right]} \; -\left[{H}^{+} \right]
-
- In both non-volatile and volatile systems, equilibrium pH is controlled by system ANC. Addition or depletion of any ANC component in equation \eqref{ZEqnNum209718} or \eqref{ZEqnNum755368} will result in a pH change. Natural bodies of water are most likely to approach equilibrium with the atmosphere (volatile system) if the hydraulic residence time is long and the body of water is shallow.
-
-Lake ANC is a direct reflection of the mineral composition of the watershed. Lake watersheds with hard, insoluble minerals yield lakes with low ANC. Typically watersheds with soluble, calcareous minerals yield lakes with high ANC. ANC of freshwater lakes is generally composed of bicarbonate, carbonate, and sometimes organic matter (:math:`{A}_{{org}}^{{-}}`). Organic matter derives from decaying plant matter in the watershed. When organic matter is significant, the ANC becomes (from equations \eqref{ZEqnNum282864} and \eqref{ZEqnNum568463}):
+The acid neutralizing capacity expression for a volatile system can be obtained by combining equations :eq:`eq_CT_volatile` and :eq:`eq_ANC_nonvolatile`.
 
 .. math::
+    :label: eq_ANC_volatile
+
+    ANC=\frac{P_{CO_2} K_H }{\alpha_0 } (\alpha_1 +2\alpha_2 ) + \frac{K_w }{\left[H^+ \right]} - \left[H^+ \right]
+
+In both non-volatile and volatile systems, equilibrium pH is controlled by system ANC. Addition or depletion of any ANC component in equation :eq:`eq_ANC_nonvolatile` or :eq:`eq_ANC_volatile` will result in a pH change. Natural bodies of water are most likely to approach equilibrium with the atmosphere (volatile system) if the hydraulic residence time is long and the body of water is shallow.
+
+Lake ANC is a direct reflection of the mineral composition of the watershed. Lake watersheds with hard, insoluble minerals yield lakes with low ANC. Typically watersheds with soluble, calcareous minerals yield lakes with high ANC. ANC of freshwater lakes is generally composed of bicarbonate, carbonate, and sometimes organic matter (:math:`{A}_{{org}}^{{-}}`). Organic matter derives from decaying plant matter in the watershed. When organic matter is significant, the ANC becomes (from equations :eq:`eq_ANC_nonvolatile` and :eq:`eq_ANC_volatile`):
+
+.. math::
+    :label: eq_ANC_nonvolatile_org
 
     ANC=C_{T} (\alpha _{1} +2\alpha _{2} )+{\; }\frac{K_{w} }{\left[{H}^{+} \right]} \; -\left[{H}^{+} \right]+\left[{A}_{{org}}^{{-}} \right]
 
 .. math::
+    :label: eq_ANC_volatile_org
 
     ANC=\frac{P_{CO_{2} } K_{H} }{a_{0} } (\alpha _{1} +2\alpha _{2} )+\frac{K_{w} }{\left[{H}^{+} \right]} \; -\left[{H}^{+} \right]+\left[{A}_{{org}}^{{-}} \right]
 
-where equation \eqref{ZEqnNum466508} is for a non-volatile system and equation \eqref{ZEqnNum217701} is for a volatile system.
+where equation :eq:`eq_ANC_nonvolatile_org` is for a non-volatile system and equation :eq:`eq_ANC_volatile_org` is for a volatile system.
 
 During chemical neutralization of acid, the components of ANC associate with added acid to form protonated molecules. For example:
 
@@ -155,9 +168,9 @@ or
     \left[{H}^{+} \right]{\; }+{\; }\left[{A}_{{org}}^{{-}} \right]{\; }\to \; \left[{HA}_{{org}} \right]
 
 
-In essence, the ANC of a system is a result of the reaction of acid inputs to form associated acids from basic anions that were dissolved in the lake water. The ANC (equation \eqref{ZEqnNum961046}) is consumed as the basic anions are converted to associated acids. This conversion is near completion at low pH (approximately pH 4.5 for the bicarbonate and carbonate components of ANC). Neutralizing capacity to another (probably higher) pH may be more useful for natural aquatic systems. Determination of ANC to a particular pH is fundamentally easy --- simply add and measure the amount of acid required to lower the sample pH from its initial value to the pH of interest. Techniques to measure ANC are described under the procedures section of this lab.
+In essence, the ANC of a system is a result of the reaction of acid inputs to form associated acids from basic anions that were dissolved in the lake water. The ANC (equation :eq:`eq_ANC_definition1`) is consumed as the basic anions are converted to associated acids. This conversion is near completion at low pH (approximately pH 4.5 for the bicarbonate and carbonate components of ANC). Neutralizing capacity to another (probably higher) pH may be more useful for natural aquatic systems. Determination of ANC to a particular pH is fundamentally easy --- simply add and measure the amount of acid required to lower the sample pH from its initial value to the pH of interest. Techniques to measure ANC are described under the procedures section of this lab.
 
-Neutralization of acid precipitation can occur in the watershed or directly in the lake. How much neutralization occurs in the watershed versus the lake is a function of the watershed to lake surface area. Generally, watershed neutralization is dominant. Recently engineered remediation of acid lakes has been accomplished by adding bases such as limestone, lime, or sodium bicarbonate to the watershed or directly to the lakes.
+Neutralization of acid precipitation can occur in the watershed or directly in the lake. How much neutralization occurs in the watershed versus the lake is a function of the watershed to lake surface area. Generally, watershed neutralization is dominant. Engineered remediation of acid lakes has been accomplished by adding bases such as limestone, lime, or sodium bicarbonate to the watershed or directly to the lakes.
 
 
 .. _heading_Acid_Rain_Reactor_Theory_Applied_to_Acid_Lake_Remediation:
@@ -195,12 +208,13 @@ where:
 We want to find ANC0 such that ANCout = 50 :math:`\mu eq/L` when t is equal to :math:`\theta`. Solving for :math:`ANC_{0}` we get:
 
 .. math::
+    :label: eq_ANC0_CMFR
 
     {ANC}_{{0}} {\; }=\left[{ANC}_{out} - ANC_{in} \cdot \left(1 - {\mathop{e}\nolimits^{-t/\theta}} \right)\right]{\mathop{e}\nolimits^{t/\theta}}
 
 
 
-The ANC of the acid rain (:math:`ANC_{in}`) can be estimated from its pH. Below pH 6.3 most of the carbonates will be in the form :math:`H_2CO_3^{\star}`  and thus for pH below about 4.3 equation \eqref{ZEqnNum246947} simplifies to
+The ANC of the acid rain (:math:`ANC_{in}`) can be estimated from its pH. Below pH 6.3 most of the carbonates will be in the form :math:`H_2CO_3^{\star}`  and thus for pH below about 4.3 equation :eq:`eq_ANC_definition1` simplifies to
 
 .. math::
 
@@ -209,7 +223,7 @@ The ANC of the acid rain (:math:`ANC_{in}`) can be estimated from its pH. Below 
 
 An influent pH of 3.0 implies the :math:`ANC_{in} = -\left[H^+ \right] = -0.001 eq/L`
 
-Substituting into equation \eqref{ZEqnNum844648}:
+Substituting into equation :eq:`eq_ANC0_CMFR`:
 
 .. math::
 
@@ -219,9 +233,9 @@ The quantity of sodium bicarbonate required can be calculated from:
 
 .. math::
 
-    [NaHCO3]${}_{0}$ =ANC${}_{0}
+    [NaHCO_3]_0 =ANC_0
 
-where :math:`[NaHCO3]_0` = moles of sodium bicarbonate required per liter of lake water
+where :math:`[NaHCO_3]_0` = moles of sodium bicarbonate required per liter of lake water
 
 .. math::
 
@@ -243,14 +257,14 @@ The most common remediation procedure is to apply the neutralizing agent directl
 Experimental Apparatus
 ======================
 
-The experimental apparatus consists of an acid rain storage reservoir, peristaltic pump, and lake (Figure \eqref{ZEqnNum792377}). The pH of the lake will be monitored using a pH probe connected to a signal-conditioning box that is connected to ProCoDA.
+The experimental apparatus consists of an acid rain storage reservoir, peristaltic pump, and lake (:numref:`_figure_Acid_rain_apparatus`). The pH of the lake will be monitored using a pH probe connected to a signal-conditioning box that is connected to ProCoDA.
 
 .. _figure_Acid_rain_apparatus:
 
 .. figure:: Images/Acid_rain_apparatus.png
     :width: 500px
     :align: center
-    :alt: internal figure
+    :alt: acid rain apparatus
 
   Schematic drawing of the experimental setup.
 
@@ -360,12 +374,10 @@ Data Analysis
 K1 = 10-6.3, placeK2 = 10-10.3, KH = 10-1.5~mol/atm~L, PCO2~=~10-3.5 atm, and Kw = 10-14.
 
  #. Plot measured pH of the lake versus dimensionless hydraulic residence time (t/?).
- #. Assuming that the lake can be modeled as a completely mixed flow reactor and that ANC is a conservative parameter, equation 1.21 can be used to calculate the expected ANC in the lake effluent as the experiment proceeds. Graph the expected ANC in the lake effluent versus the hydraulic residence time (t/?) based on the completely mixed flow reactor equation with the plot labeled (in the legend) as conservative ANC.
- #. If we assume that there are no carbonates exchanged with the atmosphere during the experiment, then we can calculate ANC in the lake effluent by using equation 1.11 describing the ANC of a closed system. Calculate the ANC under the assumption of a closed system and plot it on the same graph produced in answering question \#3 with the plot labeled (in the legend) as closed ANC.
- #. If we assume that there is exchange with the atmosphere and that carbonates are at equilibrium with the atmosphere, then we can calculate ANC in the lake effluent by using equation 1.15 describing the ANC of an open system. Calculate the ANC under the assumption of an open system and plot it on the same graph produced in answering question \#3 with the plot labeled (in the legend) as open ANC.
+ #. Assuming that the lake can be modeled as a completely mixed flow reactor and that ANC is a conservative parameter, equation :eq:`eq_ANC0_CMFR` can be used to calculate the expected ANC in the lake effluent as the experiment proceeds. Graph the expected ANC in the lake effluent versus the hydraulic residence time (:math:`t/ \theta`) based on the completely mixed flow reactor equation with the plot labeled (in the legend) as conservative ANC.
+ #. If we assume that there are no carbonates exchanged with the atmosphere during the experiment, then we can calculate ANC in the lake effluent by using equation :eq:`eq_ANC_nonvolatile` describing the ANC of a closed system. Calculate the ANC under the assumption of a closed system and plot it on the same graph produced in answering question \#3 with the plot labeled (in the legend) as closed ANC.
+ #. If we assume that there is exchange with the atmosphere and that carbonates are at equilibrium with the atmosphere, then we can calculate ANC in the lake effluent by using equation :eq:`eq_ANC_volatile` describing the ANC of an open system. Calculate the ANC under the assumption of an open system and plot it on the same graph produced in answering question \#3 with the plot labeled (in the legend) as open ANC.
  #. Analyze the data from the second experiment and graph the data appropriately. What did you learn from the second experiment?
-
-
 
 
 .. _heading_Acid_Rain_Questions:
@@ -450,9 +462,11 @@ Prepare solution of 400 mg Bromocresol green/100 mL ethanol. Add 0.2 mL of indic
 Acid rain
 ---------
 
-Acid rain is at pH 3.0. Prepare from distilled water. Add 1 meq H2SO4/L (:math:`[H^+]` at pH 3.0) to obtain a pH of 3.0. To acidify 20 liters of distilled water using 10 N H2SO4:
+Acid rain is at pH 3.0. Prepare from distilled water. Add 1 meq :math:`H_2SO_4`/L (:math:`[H^+]` at pH 3.0) to obtain a pH of 3.0. To acidify 20 liters of distilled water using 10 N :math:`H_2SO_4`:
 
-20~L\bullet \frac{1~meq~H2SO4}{L}\bullet \frac{1}{10~N~H2SO4}\bullet \frac{1~N}{1000~meq}=2~mL~of~10~N~H2SO4
+.. math::
+
+    20~L\bullet \frac{1~meq~H_2SO_4}{L}\bullet \frac{1}{10~N~H_2SO_4}\bullet \frac{1~N}{1000~meq}=2~mL~of~10~N~H_2SO_4
 
 
 Flow Rate
@@ -469,7 +483,7 @@ Setup
  #. Prepare 20-L acid rain for each group.
  #. Prepare bromocresol green solution if necessary.
  #. Attach one Easy-Load pump head to the pump drives and plumb with \#18 tubing.
- #. Plumb Jerrican to pump to lake using quick connectors (see Figure \eqref{ZEqnNum149406}).
+ #. Plumb Jerrican to pump to lake using quick connectors (see :numref:`_figure_Acid_rain_apparatus`).
  #. Verify that pH probes are operational, stable, and can be calibrated.
  #. )Verify that buffers (pH = 4, 7, 10) are distributed to each student group.
  #. Provide a effluent cup in which pH can be measured.

@@ -62,13 +62,13 @@ Oxygen transfer is important in many environmental systems. Oxygen transfer is c
 .. figure:: Images/Oxygen_vs_T.png
     :width: 300px
     :align: center
-    :alt: internal figure
+    :alt: oxygen vs T
 
     Dissolved oxygen concentrations in equilibrium with the atmosphere.
 
 Natural bodies of water may be either supersaturated or undersaturated with oxygen depending on the relative magnitude of the sources and sinks of oxygen. Algae can be a significant source of oxygen during active photosynthesis and can produce supersaturation. Algae also deplete oxygen levels during the night.
 
-At high levels of supersaturation dissolved gas will form microbubbles that eventually coalesce, rise, and burst at the water surface. The bubbles provide a very efficient transfer of supersaturated dissolved gas to the gaseous phase, a process that can be observed when the partial pressure of carbon dioxide is decreased by opening a carbonated beverage. Bubble formation by supersaturated gasses also occurs in the environment when cold water in equilibrium with the atmosphere is warmed rapidly. The equilibrium dissolved oxygen concentration decreases as the water is warmed (Figure 1-1).
+At high levels of supersaturation dissolved gas will form microbubbles that eventually coalesce, rise, and burst at the water surface. The bubbles provide a very efficient transfer of supersaturated dissolved gas to the gaseous phase, a process that can be observed when the partial pressure of carbon dioxide is decreased by opening a carbonated beverage. Bubble formation by supersaturated gasses also occurs in the environment when cold water in equilibrium with the atmosphere is warmed rapidly. The equilibrium dissolved oxygen concentration decreases as the water is warmed (:numref:`figure_Oxygen_vs_T`).
 
 Supersaturation of dissolved gases can also occur when water carrying gas bubbles from a waterfall or spillway plunges into a deep pool. The pressure increases with depth in the pool and gasses carried deep into the pool dissolve in the water. When the water eventually approaches the surface the pressure decreases and the dissolved gases come out of solution and form bubbles. Bubble formation by supersaturated gases can kill fish (similar to the bends in humans) as the bubbles form in the bloodstream.
 
@@ -80,14 +80,15 @@ Gas Transfer Coefficient
 The gas transfer rate can be modeled as the product of a driving force (the difference between the equilibrium concentration and the actual concentration) and an overall volumetric gas transfer coefficient (a function of the geometry, mixing levels of the system and the solubility of the compound). In equation form
 
 .. math::
+    :label: eq_Gas_first_order
 
-    \frac{dC}{dt} =\hat{k}_{v,l} \left(C^{*} -C\right) 1.1
+    \frac{dC}{dt} =\hat{k}_{v,l} \left(C^{*} -C\right)
 
 where C is the dissolved gas concentration, C* is the equilibrium dissolved gas concentration, and :math:`\hat{k}_{v,l}` is the overall volumetric gas transfer coefficient . Although :math:`\hat{k}_{v,l}` has dimensions of 1/T, it is a function of the interface surface area (A), the liquid volume (V), the oxygen diffusion coefficient in water (D), and the thickness of the laminar boundary layer (?) through which the gas must diffuse before the much faster turbulent mixing process can disperse the dissolved gas throughout the reactor.
 
 .. math::
 
-    \hat{k}_{v,l} =f(D,\delta ,A,V) 1.2
+    \hat{k}_{v,l} =f(D,\delta ,A,V)
 
 .. _figure_Single_film_model:
 
@@ -101,29 +102,30 @@ where C is the dissolved gas concentration, C* is the equilibrium dissolved gas 
 
 The overall volumetric gas transfer coefficient is system specific and thus must be evaluated separately for each system of interest (Weber and Digiano, 1996).
 
-A schematic of the gas transfer process is shown in Figure 1-2. Fickian diffusion controls the gas transfer in the laminar boundary layer. The oxygen concentration in the bulk of the fluid is assumed to be homogeneous due to mixing and the oxygen concentration above the liquid is assumed to be that of the atmosphere.
+A schematic of the gas transfer process is shown in :numref:`figure_Single_film_model`. Fickian diffusion controls the gas transfer in the laminar boundary layer. The oxygen concentration in the bulk of the fluid is assumed to be homogeneous due to mixing and the oxygen concentration above the liquid is assumed to be that of the atmosphere.
 
 The gas transfer coefficient will increase with the interface area and the diffusion coefficient and will decrease with the reactor volume and the thickness of the boundary layer. The functional form of the relationship is given by
 
 .. math::
 
-    \hat{k}_{v,l} =\frac{AD}{V\delta }  1.3
+    \hat{k}_{v,l} =\frac{AD}{V\delta }
 
 
-Equation 1.1 can be integrated with appropriate initial conditions to obtain the concentration of oxygen as a function of time. However, care must be taken to ensure that the overall volumetric gas transfer coefficient is not a function of the dissolved oxygen concentration. This dependency can occur where air is pumped through diffusers on the bottom of activated sludge tanks. Rising air bubbles are significantly depleted of oxygen as they rise through the activated sludge tank and the extent of oxygen depletion is a function of the concentration of oxygen in the activated sludge. Integrating equation 1.1 with initial conditions of C = C0 at t = t0
-
-.. math::
-
-    \int _{C_{0} }^{C}\frac{dC}{C^{*} -C}  =\int _{t_{0} }^{t}\hat{k}_{v,l} dt  1.4
-
+Equation :eq:`eq_Gas_first_order` can be integrated with appropriate initial conditions to obtain the concentration of oxygen as a function of time. However, care must be taken to ensure that the overall volumetric gas transfer coefficient is not a function of the dissolved oxygen concentration. This dependency can occur where air is pumped through diffusers on the bottom of activated sludge tanks. Rising air bubbles are significantly depleted of oxygen as they rise through the activated sludge tank and the extent of oxygen depletion is a function of the concentration of oxygen in the activated sludge. Integrating equation :eq:`eq_Gas_first_order` with initial conditions of C = C0 at t = t0
 
 .. math::
 
-    \ln \frac{C^{*} -C}{C^{*} -C_{0} } =-\hat{k}_{v,l} (t-t_{0} ) 1.5
+    \int _{C_{0} }^{C}\frac{dC}{C^{*} -C}  =\int _{t_{0} }^{t}\hat{k}_{v,l} dt
 
-Equation 1.5 can be evaluated using linear regression so that $\hat{k}_{v,l} $ is the slope of the line.
 
-The simple gas transfer model given in equation 1.5 is appropriate when the gas transfer coefficient is independent of the dissolved gas concentration. This requirement can be met in systems where the gas bubbles do not change concentration significantly as they rise through the water column. This condition is met when the water column is shallow, the bubbles have large diameters, or the difference between the concentration of dissolved gas and the equilibrium concentration is small.
+.. math::
+    :label: eq_Gas_linearized
+
+    \ln \frac{C^{*} -C}{C^{*} -C_{0} } =-\hat{k}_{v,l} (t-t_{0} )
+
+Equation :eq:`eq_Gas_linearized` can be evaluated using linear regression so that $\hat{k}_{v,l} $ is the slope of the line.
+
+The simple gas transfer model given in equation :eq:`eq_Gas_linearized` is appropriate when the gas transfer coefficient is independent of the dissolved gas concentration. This requirement can be met in systems where the gas bubbles do not change concentration significantly as they rise through the water column. This condition is met when the water column is shallow, the bubbles have large diameters, or the difference between the concentration of dissolved gas and the equilibrium concentration is small.
 
 
 .. _heading_Gas_Transfer_Oxygen_Transfer_Efficiency:
@@ -136,8 +138,9 @@ An important parameter in the design of aeration systems for the activated sludg
 The manufacturer typically provides oxygen transfer efficiency for a specific diffuser. In this laboratory we will measure oxygen transfer efficiency for the aeration stone that we will be using in an activated sludge tank. The molar transfer rate of oxygen through the diffuser is
 
 .. math::
+    :label: eq_Gas_air_supply
 
-    \dot{n}_{gas\; o_{2} } =\frac{Q_{air} P_{air} f_{O_{2} } }{RT}  1.6
+    \dot{n}_{gas\; o_{2} } =\frac{Q_{air} P_{air} f_{O_{2} } }{RT}
 
 where
  | :math:`f_{O_2}` is the molar fraction of air that is oxygen (0.21),
@@ -152,31 +155,33 @@ The molar rate of dissolution into the aqueous phase is
 
 .. math::
 
-    \dot{n}_{aq\; o_{2} } =\frac{\rlap{-} V}{MW_{O_{2} } } \frac{dC}{dt}  1.7
+    \dot{n}_{aq\; o_{2} } =\frac{\rlap{-} V}{MW_{O_{2} } } \frac{dC}{dt}
 
 where
  | :math:`MW_{O_2}` is the molecular weight of oxygen,
  | :math:`\rlap{-} V` is the reactor volume, and
  | :math:`\frac{dC}{dt}` is the change in aqueous oxygen concentration with time.
 
-The rate of change of oxygen concentration is a function of the dissolved oxygen concentration and is a maximum when the dissolved oxygen concentration is zero. Oxygen transfer efficiency could be measured for any dissolved oxygen concentration. A better method of analysis is to substitute the right side of equation 1.1 for :math:`\frac{dC}{dt}` .
+The rate of change of oxygen concentration is a function of the dissolved oxygen concentration and is a maximum when the dissolved oxygen concentration is zero. Oxygen transfer efficiency could be measured for any dissolved oxygen concentration. A better method of analysis is to substitute the right side of equation :eq:`eq_Gas_first_order` for :math:`\frac{dC}{dt}` .
 
 .. math::
+    :label: eq_Gas_O2_dissolved
 
-    \dot{n}_{aq\; o_{2} } =\frac{V\hat{k}_{v,l} \left(C^{*} -C\right)}{MW_{O_{2} } }  1.8
+    \dot{n}_{aq\; o_{2} } =\frac{V\hat{k}_{v,l} \left(C^{*} -C\right)}{MW_{O_{2} } }
 
-The oxygen transfer efficiency is the ratio of equation 1.8 to equation 1.6.
-
-.. math::
-
-    OTE=\frac{\hat{k}_{v,l} \left(C^{*} -C\right)VRT}{MW_{O_{2} } Q_{air} P_{air} f_{O_{2} } }  1.9
-
-Measurement of OTE using equation 1.9 requires that the gas transfer coefficient, air flow rate, air pressure, and the air temperature be measured. (:math:`P_{air}` and :math:`Q_{air}` have to correlate and in this experiment the best combination is atmospheric pressure and the flow rate given by the pump.)
-
-If the molar airflow rate is controlled then OTE is based on the ratio of equation 1.8 to the molar transfer rate of supplied oxygen.
+The oxygen transfer efficiency is the ratio of equation :eq:`eq_Gas_O2_dissolved` to equation :eq:`eq_Gas_air_supply`.
 
 .. math::
-    OTE=\frac{\dot{n}_{aq\; o_{2} } }{f_{O_{2} } \dot{n}_{air} } =\frac{V\hat{k}_{v,l} \left(C^{*} -C\right)}{f_{O_{2} } \dot{n}_{air} MW_{O_{2} } }  1.10
+    :label: eq_Gas_OTE
+
+    OTE=\frac{\hat{k}_{v,l} \left(C^{*} -C\right)VRT}{MW_{O_{2} } Q_{air} P_{air} f_{O_{2} } }
+
+Measurement of OTE using equation :eq:`eq_Gas_OTE` requires that the gas transfer coefficient, air flow rate, air pressure, and the air temperature be measured. (:math:`P_{air}` and :math:`Q_{air}` have to correlate and in this experiment the best combination is atmospheric pressure and the flow rate given by the pump.)
+
+If the molar airflow rate is controlled then OTE is based on the ratio of equation :eq:`eq_Gas_O2_dissolved` to the molar transfer rate of supplied oxygen.
+
+.. math::
+    OTE=\frac{\dot{n}_{aq\; o_{2} } }{f_{O_{2} } \dot{n}_{air} } =\frac{V\hat{k}_{v,l} \left(C^{*} -C\right)}{f_{O_{2} } \dot{n}_{air} MW_{O_{2} } }  :eq:`eq_Gas_first_order`0
 
 .. _heading_Gas_Transfer_Deoxygenation:
 
@@ -187,15 +192,15 @@ To measure the reaeration rate it is necessary to first remove the oxygen from t
 
 .. math::
 
-    {O}_{{2}} +{2SO}_{{3}}^{-{2}} \stackrel{{cobalt}}{\longrightarrow}{2SO}_{{4}}^{-{2}}  1.11
+    {O}_{{2}} +{2SO}_{{3}}^{-{2}} \stackrel{{cobalt}}{\longrightarrow}{2SO}_{{4}}^{-{2}}  :eq:`eq_Gas_first_order`1
 
-The mass of sodium sulfite required to deoxygenate 1 mg of oxygen is calculated from the stoichiometry of equation 1.11.
+The mass of sodium sulfite required to deoxygenate 1 mg of oxygen is calculated from the stoichiometry of equation :eq:`eq_Gas_first_order`1.
 
 .. math::
 
-    \frac{{mole\; O}_{{2}} }{{32000\; mg\; O}_{{2}} } \cdot \frac{{2\; mole\; Na}_{{2}} {SO}_{{3}} }{{mole\; O}_{{2}} } \cdot \frac{{126,000\; mg\; Na}_{{2}} {SO}_{{3}} }{{mole\; Na}_{{2}} {SO}_{{3}} } =\frac{{\; 7.875\; mg\; Na}_{{2}} {SO}_{{3}} }{{mg\; O}_{{2}} }  1.12
+    \frac{{mole\; O}_{{2}} }{{32000\; mg\; O}_{{2}} } \cdot \frac{{2\; mole\; Na}_{{2}} {SO}_{{3}} }{{mole\; O}_{{2}} } \cdot \frac{{126,000\; mg\; Na}_{{2}} {SO}_{{3}} }{{mole\; Na}_{{2}} {SO}_{{3}} } =\frac{{\; 7.875\; mg\; Na}_{{2}} {SO}_{{3}} }{{mg\; O}_{{2}} }  :eq:`eq_Gas_first_order`2
 
- If complete deoxygenation is desired a 10\% excess of sulfite can be added. The sulfite will continue to react with oxygen as oxygen is transferred into the solution. The oxygen concentration can be measured with a dissolved oxygen probe or can be estimated if the temperature is known and equilibrium with the atmosphere assumed (Figure 1-1).
+ If complete deoxygenation is desired a 10\% excess of sulfite can be added. The sulfite will continue to react with oxygen as oxygen is transferred into the solution. The oxygen concentration can be measured with a dissolved oxygen probe or can be estimated if the temperature is known and equilibrium with the atmosphere assumed (:numref:`figure_Oxygen_vs_T`).
 
 .. _heading_Gas_Transfer_Experimental_Objectives:
 
@@ -249,7 +254,7 @@ Experimental Methods
 
     Apparatus used to measure reaeration rate.
 
-The reactors are 4 L containers (Figure 1-3). The DO probe should be placed in a location so as to minimize the risk of air bubbles lodging on the membrane on the bottom of the probe. The aeration stone is connected to a source of regulated air flow. A 7-kPa pressure sensor (optional) can be used to measure the air pressure immediately upstream from the diffuser stone. A 200-kPa pressure sensor is used to measure the air pressure in the accumulator.
+The reactors are 4 L containers (:numref:`_figure_Schematic`). The DO probe should be placed in a location so as to minimize the risk of air bubbles lodging on the membrane on the bottom of the probe. The aeration stone is connected to a source of regulated air flow. A 7-kPa pressure sensor (optional) can be used to measure the air pressure immediately upstream from the diffuser stone. A 200-kPa pressure sensor is used to measure the air pressure in the accumulator.
 
 Initial Setup
 -------------
@@ -341,7 +346,7 @@ This lab requires a significant amount of repetitive data analysis. Plan how you
     | :math:`P_{O_{2} }` is the partial pressure of oxygen in atmospheres, and
     | :math:`C^{\star} ` is in mg/L. This equation is valid for 278 K < T < 318 K.
 
- #.  Estimate $\hat{k}_{v,l} $ using linear regression and equation 1.5 for each data set.
+ #.  Estimate $\hat{k}_{v,l} $ using linear regression and equation :eq:`eq_Gas_linearized` for each data set.
  #. Create a graph with a representative plot showing the linearized data, :math:`\left(\ln \frac{C^{\star} -C}{C^{\star} -C_{0} } \right)` vs. time, and the best-fit line.
  #. Plot the reaeration model on the same graph as the dissolved oxygen vs. time data.  This is done by solving equation for C.
  #. Plot :math:`\hat{k}_{v,l}` as a function of airflow rate (:math:`\mu mole/s`).
@@ -434,9 +439,10 @@ Class Plan
 Airflow Control
 ===============
 
-The ProCoDA software can be configured to control the flow of air into the reactor. The hardware required is shown in Figure 1. The control algorithm is based on the theoretical relationship between head loss and flow rate for the air flowing into the accumulator. We can empirically measure the head loss coefficient and then use the theoretical relationship to determine what fraction of time the influent valve should be open to obtain the desired flow rate. We can use the change in pressure in the accumulator when the influent valve is open to determine how fast air was flowing into the accumulator. In order to develop an appropriate head loss model we need to know if the flow into the accumulator is laminar or turbulent.
+The ProCoDA software can be configured to control the flow of air into the reactor. The hardware required is shown in :numref:`_figure_Schematic`. The control algorithm is based on the theoretical relationship between head loss and flow rate for the air flowing into the accumulator. We can empirically measure the head loss coefficient and then use the theoretical relationship to determine what fraction of time the influent valve should be open to obtain the desired flow rate. We can use the change in pressure in the accumulator when the influent valve is open to determine how fast air was flowing into the accumulator. In order to develop an appropriate head loss model we need to know if the flow into the accumulator is laminar or turbulent.
 
 .. math::
+    :label: eq_Gas_Re
 
     {Re}=\frac{\rho VD}{\mu }
 
@@ -453,16 +459,18 @@ If we hold pressure and temperature constant and then take the derivative of the
 and since change in volume with respect to time is a flow rate we have
 
 .. math::
+    :label: eq_Gas_Qair
 
     Q=\frac{\dot{n}RT}{P}
 
 Density of an ideal gas is given by
 
 .. math::
+    :label: eq_Gas_density
 
     \rho =\frac{PM_{gas} }{RT}
 
-Substituting these relationships into the equation for Reynolds number we obtain
+Substituting these relationships into equation :eq:`eq_Gas_Re` for Reynolds number we obtain
 
 .. math::
 
@@ -479,19 +487,22 @@ For the air flow controller used in the lab the following values are obtained
 The flow into the air accumulator will almost certainly be turbulent and thus we can use the turbulent flow equations for minor losses to describe head loss. The equation for minor losses is:
 
 .. math::
+    :label: eq_Gas_minor_losses
 
     h_{minor} =K\frac{8Q^{2} }{g\pi ^{2} D^{4} }
 
-To use equation \eqref{ZEqnNum823776} for air we substitute pressure change for :math:`h_{minor}`, equation \eqref{ZEqnNum261903} for flow rate, and equation \eqref{ZEqnNum758497} for density.
+To use equation :eq:`eq_Gas_minor_losses` for air we substitute pressure change for :math:`h_{minor}`, equation :eq:`eq_Gas_Qair` for flow rate, and equation :eq:`eq_Gas_density` for density.
 
 .. math::
+    :label: eq_Gas_minor_losses_for_gas
 
     \Delta p=K\frac{8M_{gas} RT\dot{n}^{2} }{\pi ^{2} D^{4} P}
 
 
-This change of pressure is occurring between the air supply and the accumulator. The pressure, P, in equation \eqref{ZEqnNum122024} helps determine the velocity of the air and thus head loss is a function of the pressure. The pressure varies between the pressure of the lab air supply, :math:`P_s`, and the pressure in the air accumulator, :math:`P_a`. As a reasonable first approximation we use the average pressure of the supply and the accumulator for P, the difference in pressure for :math:`\Delta p`, and solve equation \eqref{ZEqnNum122024} for the molar flow rate.
+This change of pressure is occurring between the air supply and the accumulator. The pressure, P, in equation :eq:`eq_Gas_minor_losses_for_gas` helps determine the velocity of the air and thus head loss is a function of the pressure. The pressure varies between the pressure of the lab air supply, :math:`P_s`, and the pressure in the air accumulator, :math:`P_a`. As a reasonable first approximation we use the average pressure of the supply and the accumulator for P, the difference in pressure for :math:`\Delta p`, and solve equation :eq:`eq_Gas_minor_losses_for_gas` for the molar flow rate.
 
 .. math::
+    :label: eq_Gas_molar_flow_of_air
 
     \dot{n}=\frac{\pi D^{2} }{4\sqrt{KM_{gas} RT} } \sqrt{\left(P_{s} -P_{a} \right)\left(P_{s} +P_{a} \right)}
 
@@ -533,18 +544,19 @@ Taking a data set obtained by filling the accumulator, finding the unknown term 
 .. figure:: Images/Airflow_controller_calibration.png
     :width: 300px
     :align: center
-    :alt: internal figure
+    :alt: airflow controller calibration
 
     The model describing the filling of the accumulator fits the data very well.
 
 
 
-The final step is to calculate the fraction of time that the valve must be open in order to obtain a desired flow rate into the accumulator. Take the target air flow rate :math:`\dot{n}_{target}` and divide by the molar flow rate given by equation \eqref{ZEqnNum773701} to get the fraction of time the valve must be open to get the desired average flow rate.
+The final step is to calculate the fraction of time that the valve must be open in order to obtain a desired flow rate into the accumulator. Take the target air flow rate :math:`\dot{n}_{target}` and divide by the molar flow rate given by equation :eq:`eq_Gas_molar_flow_of_air` to get the fraction of time the valve must be open to get the desired average flow rate.
 
 .. math::
+    :label: eq_Gas_fvalve
 
     f_{valve} =\frac{\dot{n}_{t\arg et} }{\dot{n}} =\frac{\dot{n}_{t\arg et} }{\frac{\pi D^{2} }{4\sqrt{KM_{gas} RT} } \sqrt{P_{s}^{2} -P_{a}^{2} } }
 
-Equation \eqref{ZEqnNum820776} assumes that inertial effects during flow startup are not significant. Application of equation \eqref{ZEqnNum820776} results in slightly more air being delivered than requested. The reason for this error is that when the valve is closed the volume between the location of the head loss and the valve fills to the pressure of the source. This volume of air quickly discharges through the valve as soon as the valve is opened. This error can be minimized by using small valves and by keeping the head loss orifice as close to the valve as possible.
+Equation :eq:`eq_Gas_fvalve` assumes that inertial effects during flow startup are not significant. Application of equation :eq:`eq_Gas_fvalve` results in slightly more air being delivered than requested. The reason for this error is that when the valve is closed the volume between the location of the head loss and the valve fills to the pressure of the source. This volume of air quickly discharges through the valve as soon as the valve is opened. This error can be minimized by using small valves and by keeping the head loss orifice as close to the valve as possible.
 
-Equation \eqref{ZEqnNum820776} is used by the air flow control.vi to calculate the fraction of time that the valve should be open. The ability of the control algorithm to create a desired flow rate can be measured by setting the flow rate and closing the effluent valves from the accumulator. The result is that the accumulator will gradually fill and as it fills :math:`f_{valve}` will gradually increase so the flow rate into the accumulator remains constant. The slope of the pressure vs. time line is proportional to the flow rate.
+Equation :eq:`eq_Gas_fvalve` is used by the air flow control.vi to calculate the fraction of time that the valve should be open. The ability of the control algorithm to create a desired flow rate can be measured by setting the flow rate and closing the effluent valves from the accumulator. The result is that the accumulator will gradually fill and as it fills :math:`f_{valve}` will gradually increase so the flow rate into the accumulator remains constant. The slope of the pressure vs. time line is proportional to the flow rate.
