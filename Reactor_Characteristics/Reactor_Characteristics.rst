@@ -114,7 +114,6 @@ Plug flow regimes are impossible to attain because mass transport must be by adv
 
 .. math::
 
-
 \frac{\partial C}{\partial t} =-U\frac{\partial C}{\partial x}
 
 The velocity, U, serves to transform the directional concentration gradient into a temporal concentration gradient. In other words, a conservative substance moves with the advective flow of the fluid. The solutions to this differential equation for a pulse input and for a step input are shown graphically in :numref:`figure_PFR_pulse_step`. The time for 10\% of the pulse to arrive at the effluent of a PFR is :math:`t^{\star}` since all of the pulse arrives at the same time.

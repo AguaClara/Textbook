@@ -72,7 +72,13 @@ This textbook is written and maintained in `Github <https://github.com/monroews/
   Activated_Carbon/Activated_Carbon.rst
 
 .. toctree::
-  :caption: Chapter 7: ProCoDA
+  :caption: Chapter 8: Nutrient Removal
+  :maxdepth: 1
+
+  Nutrient_Removal/Nutrient_Removal.rst
+
+.. toctree::
+  :caption: Chapter 9: ProCoDA
   :maxdepth: 1
 
   ProCoDA/ProCoDA.rst
