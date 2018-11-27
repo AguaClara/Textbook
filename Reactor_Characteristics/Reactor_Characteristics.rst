@@ -55,7 +55,7 @@ A closed reactor is one where the reactor has a diffusion or dispersion coeffici
 Modeling
 --------
 
-Reactors can be studied by measuring the effluent concentration after the addition of a spike or pulse of a tracer in the influent or after a step function change in input concentration. The resulting response curves can be made non-dimensional by plotting :math:`\frac{C_{\left({t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta } \right)} \rlap{-} V _{r} }{C_{tr} \rlap{-} V _{tr} }` as a function of :math:`{t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta }` where :math:`\theta` is the hydraulic residence time. The term :math:`{t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta }` will be defined as :math:`t^{\star}`. The non-dimensional response curves from pulse inputs and step inputs are known as E curves and F curves, respectively. The E curve is the exit age distribution and represents the actual output of tracer from a reactor.  The F curve is the cumulative age distribution and represents the cumulative fraction of tracer that has exited a reactor at time :math:`t^{\star}`. The E and F curves are related by
+Reactors can be studied by measuring the effluent concentration after the addition of a spike or pulse of a tracer in the influent or after a step function change in input concentration. The resulting response curves can be made non-dimensional by plotting :math:`\frac{C_t{\rlap{-} V }_r}{C_{tr}{\rlap{-} V }_{tr}}` as a function of :math:`{t/\theta}`. where :math:`\theta` is the hydraulic residence time. The term :math:`{t/\theta}` will be defined as :math:`t^{\star}`. The non-dimensional response curves from pulse inputs and step inputs are known as E curves and F curves, respectively. The E curve is the exit age distribution and represents the actual output of tracer from a reactor.  The F curve is the cumulative age distribution and represents the cumulative fraction of tracer that has exited a reactor at time :math:`t^{\star}`. The E and F curves are related by
 
 .. math::
 
@@ -114,7 +114,7 @@ Plug flow regimes are impossible to attain because mass transport must be by adv
 
 .. math::
 
-\frac{\partial C}{\partial t} =-U\frac{\partial C}{\partial x}
+    \frac{\partial C}{\partial t} =-U\frac{\partial C}{\partial x}
 
 The velocity, U, serves to transform the directional concentration gradient into a temporal concentration gradient. In other words, a conservative substance moves with the advective flow of the fluid. The solutions to this differential equation for a pulse input and for a step input are shown graphically in :numref:`figure_PFR_pulse_step`. The time for 10\% of the pulse to arrive at the effluent of a PFR is :math:`t^{\star}` since all of the pulse arrives at the same time.
 
@@ -303,6 +303,7 @@ One of the easiest methods to determine the mixing (dispersion) characteristics 
     \sigma _{t}^{2} \; =\; \frac{\int _{0}^{\infty }C(t)(t-\bar{t})^{2}  dt}{\int _{0}^{\infty }C(t) dt} =\; \frac{\int _{0}^{\infty }t^{2} \cdot C(t) dt}{\int _{0}^{\infty }C(t) dt} -\; \bar{t}^{2}
 
 where
+
 .. math::
 
     \bar{t}{\rm \; }={\rm \; }\frac{\int _{0}^{\infty }t\; C(t)dt }{\int _{0}^{\infty }C(t)dt }
@@ -447,11 +448,26 @@ For each test make sure that you accurately measure the reactor volume, residual
  #. Stop the experiment and pour the contents of the reactor into a container. Weigh the container to determine the exact volume of the reactor.
  #. Sample the contents of the mixed reactor with the photometer to obtain the average concentration in the reactor at the end of your experiment. This will enable you to do a mass balance on the red dye.
 
-Reactor_photo
 
-\includegraphics*[width=3.98in, height=2.98in, keepaspectratio=false]{image14}
+.. _figure_Reactor_photo_front:
 
-\includegraphics*[width=2.83in, height=2.12in, keepaspectratio=false]{image15} \includegraphics*[width=2.84in, height=2.11in, keepaspectratio=false]{image16}
+.. figure:: Images/Reactor_photo_front.png
+   :width: 300px
+   :align: center
+   :alt: Reactor photo front
+
+   Front view of the reactor setup.
+
+The reactor setup is designed to maintain a constant depth in the tank with an overflow weir. The second pump channel is used to sample the effluent through the photometer without sending air bubbles into the photometer.
+
+.. _figure_Reactor_photo_top:
+
+.. figure:: Images/Reactor_photo_top.png
+    :width: 300px
+    :align: center
+    :alt: Reactor photo front
+
+    Top view of the reactor setup.
 
 .. _heading_Reactor_Design:
 
@@ -508,13 +524,14 @@ The design objective for chlorine contact tanks is to maximize the inactivation 
 
 .. csv-table:: Comparison of :math:`t^{\star}` at F=0.1 for non-ideal reactors (Malcolm Pirnie, 1991).
     :header:  Baffling Condition,  Guidance manual value of :math:`t^{\star}` at F=0.1, Extent of Baffles
+    :widths: 20, 20, 20
     :align: center
 
-    Unbaffled (CMFR), 0.1, No baffles, agitated basin with low length to width ratio, high inlet and outlet flow velocities
-    Poorly baffled, 0.3, Single or multiple unbaffled inlets and outlets, no intrabasin baffles
-    Average, 0.5, Baffled inlet or outlet with some intrabasin baffles
-    Superior, 0.7, Perforated inlet baffles, serpentine or perforated intrabasin baffles, outlet weir or perforated launders
-    Perfect (PFR), 1.0, Very high length to width ratio (pipeline flow), perforated inlet, outlet and intrabasin baffles
+    Unbaffled (CMFR), 0.1, "No baffles, agitated basin with low length to width ratio, high inlet and outlet flow velocities"
+    Poorly baffled, 0.3, "Single or multiple unbaffled inlets and outlets, no intrabasin baffles"
+    Average, 0.5, "Baffled inlet or outlet with some intrabasin baffles"
+    Superior, 0.7, "Perforated inlet baffles, serpentine or perforated intrabasin baffles, outlet weir or perforated launders"
+    Perfect (PFR), 1.0, "Very high length to width ratio (pipeline flow), perforated inlet, outlet and intrabasin baffles"
 
 
 

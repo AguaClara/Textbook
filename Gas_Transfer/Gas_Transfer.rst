@@ -181,7 +181,7 @@ Measurement of OTE using equation :eq:`eq_Gas_OTE` requires that the gas transfe
 If the molar airflow rate is controlled then OTE is based on the ratio of equation :eq:`eq_Gas_O2_dissolved` to the molar transfer rate of supplied oxygen.
 
 .. math::
-    OTE=\frac{\dot{n}_{aq\; o_{2} } }{f_{O_{2} } \dot{n}_{air} } =\frac{V\hat{k}_{v,l} \left(C^{*} -C\right)}{f_{O_{2} } \dot{n}_{air} MW_{O_{2} } }  :eq:`eq_Gas_first_order`0
+    OTE=\frac{\dot{n}_{aq\; o_{2} } }{f_{O_{2} } \dot{n}_{air} } =\frac{V\hat{k}_{v,l} \left(C^{*} -C\right)}{f_{O_{2} } \dot{n}_{air} MW_{O_{2} } }
 
 .. _heading_Gas_Transfer_Deoxygenation:
 
@@ -192,15 +192,15 @@ To measure the reaeration rate it is necessary to first remove the oxygen from t
 
 .. math::
 
-    {O}_{{2}} +{2SO}_{{3}}^{-{2}} \stackrel{{cobalt}}{\longrightarrow}{2SO}_{{4}}^{-{2}}  :eq:`eq_Gas_first_order`1
+    {O}_{{2}} +{2SO}_{{3}}^{-{2}} \stackrel{{cobalt}}{\longrightarrow}{2SO}_{{4}}^{-{2}}
 
 The mass of sodium sulfite required to deoxygenate 1 mg of oxygen is calculated from the stoichiometry of equation :eq:`eq_Gas_first_order`.
 
 .. math::
 
-    \frac{{mole\; O}_{{2}} }{{32000\; mg\; O}_{{2}} } \cdot \frac{{2\; mole\; Na}_{{2}} {SO}_{{3}} }{{mole\; O}_{{2}} } \cdot \frac{{126,000\; mg\; Na}_{{2}} {SO}_{{3}} }{{mole\; Na}_{{2}} {SO}_{{3}} } =\frac{{\; 7.875\; mg\; Na}_{{2}} {SO}_{{3}} }{{mg\; O}_{{2}} }  :eq:`eq_Gas_first_order`2
+    \frac{{mole\; O}_{{2}} }{{32000\; mg\; O}_{{2}} } \cdot \frac{{2\; mole\; Na}_{{2}} {SO}_{{3}} }{{mole\; O}_{{2}} } \cdot \frac{{126,000\; mg\; Na}_{{2}} {SO}_{{3}} }{{mole\; Na}_{{2}} {SO}_{{3}} } =\frac{{\; 7.875\; mg\; Na}_{{2}} {SO}_{{3}} }{{mg\; O}_{{2}} }
 
- If complete deoxygenation is desired a 10\% excess of sulfite can be added. The sulfite will continue to react with oxygen as oxygen is transferred into the solution. The oxygen concentration can be measured with a dissolved oxygen probe or can be estimated if the temperature is known and equilibrium with the atmosphere assumed (:numref:`figure_Oxygen_vs_T`).
+If complete deoxygenation is desired a 10\% excess of sulfite can be added. The sulfite will continue to react with oxygen as oxygen is transferred into the solution. The oxygen concentration can be measured with a dissolved oxygen probe or can be estimated if the temperature is known and equilibrium with the atmosphere assumed (:numref:`figure_Oxygen_vs_T`).
 
 .. _heading_Gas_Transfer_Experimental_Objectives:
 
@@ -229,7 +229,7 @@ The dissolved oxygen probes make use of the fact that an applied potential of 0.
 
 .. math::
 
-   4 e^- + 4 H^+ + O_2 \mathrm{\to} 2 H_2O
+    4 e^- + 4 H^+ + O_2 \mathrm{\to} 2 H_2O
 
 The cell is separated from solution by a gas permeable membrane that allows :math:`O_2` to pass through. The concentration of :math:`O_2` in the cell is kept very low by reduction to :math:`H_2O`. The rate at which oxygen diffuses through the gas permeable membrane is proportional to the difference in oxygen concentration across the membrane. The concentration of oxygen in the cell is :math:`\mathrm{\approx}0` and thus the rate at which oxygen diffuses through the membrane is proportional to the oxygen concentration in the solution.
 
@@ -276,7 +276,7 @@ Follow these steps to set up the experiment.
  #. Add 4 L of tap water to the reactor.
  #. Set the mode of operation |Mode_of_operation| to automatic operation and the *operator selected state* to "prepare to calibrate". The software should quickly cycle through the calibration step and then begin attempting to control the air flow rate to the target value.  Note:  the purpose of the prepare to calibrate state is to vent excess pressure from the accumulator.  The state will not change to calibrate until the pressure drops below a predefined threshold.  To speed this up, you may open the top of the air accumulator to release the air *before starting the automatic calibration*.
  #. Set the stirrer speed to achieve a vortex on the surface of the water.
- #. Calibrate the DO probe if you haven't already. Use 22�C as the temperature.
+ #. Calibrate the DO probe if you haven't already. Use :math:`22^{\circ}C` as the temperature.
 
 Test the air flow controller
 ----------------------------
@@ -319,11 +319,11 @@ Measure the Gas Transfer
 Pre-Laboratory Questions
 ========================
 
- #. Calculate the mass of sodium sulfite needed to reduce all the dissolved oxygen in 4 L of pure water in equilibrium with the atmosphere and at :math:`30^\circ C`.
+ #. Calculate the mass of sodium sulfite needed to reduce all the dissolved oxygen in 600 mL of pure water in equilibrium with the atmosphere and at :math:`22^\circ C`.
  #. Describe your expectations for dissolved oxygen concentration as a function of time during a reaeration experiment.  Assume you have added enough sodium sulfite to consume all of the oxygen at the start of the experiment. What would the shape of the curve look like?
  #. Why is :math:`\hat{k}_{v,l}` not zero when the gas flow rate is zero? How can oxygen transfer into the reactor even when no air is pumped into the diffuser?
- #. )Describe your expectations for :math:`\hat{k}_{v,l}` as a function of gas flow rate. Do you expect a straight line? Why?
- #. A dissolved oxygen probe was placed in a small vial in such a way that the vial was sealed. The water in the vial was sterile. Over a period of several hours the dissolved oxygen concentration gradually decreased to zero. Why? (You need to know how dissolved oxygen
+ #. Describe your expectations for :math:`\hat{k}_{v,l}` as a function of gas flow rate. Do you expect a straight line? Why?
+ #. A dissolved oxygen probe was placed in a small vial in such a way that the vial was sealed. The water in the vial was sterile. Over a period of several hours the dissolved oxygen concentration gradually decreased to zero. Why? (You need to know how dissolved oxygen probes work!)
 
 .. _heading_Gas_Transfer_Data_Analysis:
 
@@ -335,17 +335,7 @@ This lab requires a significant amount of repetitive data analysis. Plan how you
  #. Calculate the air flow rate from testing the air flow controller and compare with the target value.
  #. Eliminate the data from each data set when the dissolved oxygen concentration was less than 0.5 mg/L. This will ensure that all of the sulfite has reacted.
  #. Plot a representative data set showing dissolved oxygen vs. time.
- #. Calculate :math:`C^{\star}` based on the average water temperature, barometric pressure, and the following equation.
-
-   .. math::
-
-       C^{\star} =P_{O_{2} } {\mathop{e}\nolimits^{\left(\frac{1727}{T} -2.105\right)}}
-
-   where
-    | T is in Kelvin,
-    | :math:`P_{O_{2} }` is the partial pressure of oxygen in atmospheres, and
-    | :math:`C^{\star}` is in mg/L. This equation is valid for 278 K < T < 318 K.
-
+ #. Calculate :math:`C^{\star}` based on the average water temperature, barometric pressure, and the following equation. :math:`C^{\star} =P_{O_{2}} {\mathop{e}\nolimits^{\left(\frac{1727}{T} -2.105\right)}}` where T is in Kelvin, :math:`P_{O_{2} }` is the partial pressure of oxygen in atmospheres, and :math:`C^{\star}` is in mg/L. This equation is valid for 278 K < T < 318 K.
  #.  Estimate :math:`\hat{k}_{v,l}` using linear regression and equation :eq:`eq_Gas_linearized` for each data set.
  #. Create a graph with a representative plot showing the linearized data, :math:`\left(\ln \frac{C^{\star} -C}{C^{\star} -C_{0} } \right)` vs. time, and the best-fit line.
  #. Plot the reaeration model on the same graph as the dissolved oxygen vs. time data.  This is done by solving equation for C.

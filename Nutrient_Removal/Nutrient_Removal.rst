@@ -50,6 +50,7 @@ For 6 weeks of operation of 4 plants prepare 20 L of 100x organic stock. Mix in 
 
 .. csv-table:: List of chemicals needed for synthetic waste
    :header: Compound, Chemical Formula,	Molecular Weight (g/mol),	Concentration (mg/L),	total grams required (g),	stock
+   :widths: 20, 20, 20, 20, 20, 5
    :align: center
 
     Starch, , "40,000",	84.40,	162.048,	1
