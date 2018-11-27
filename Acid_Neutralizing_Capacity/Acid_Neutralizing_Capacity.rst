@@ -52,7 +52,7 @@ Gran Plot
 Another method to find the ANC of an unknown solution is the Gran plot technique. When an ANC determination is being made, titration with a strong acid is used to "cancel" the initial ANC so that at the equivalence point the sample ANC is zero. The Gran plot technique is based on the fact that further titration will result in an increase in the number of moles of :math:`H^+` equal to the number of moles of :math:`H^+` added. Thus after the equivalence point has been attained, the number of moles of :math:`H^+` added equals the number of moles of :math:`H^+` in solution. An equation describing this mass balance is provided as:
 
 .. math::
-    :label: eq_eq_Gran_H_balance
+    :label: eq_Gran_H_balance
 
     N_{t} \left(V_{t} -V_{e} \right)=\left(V_{s} +V_{t} \right)\left[H^{+} \right]
 
@@ -83,7 +83,7 @@ We define F1 (First Gran function) as:
 
     F_{1} = \frac{V_{s} +V_{t} }{V_{s} } {[H}^{+} {]}
 
-If :math:`F_1` is plotted as a function of :math:`V_t` the result is a straight line with slope = :math:`\frac{N_{t} }{V_{s} }` and abscissa intercept of :math:`V_e` (:numref:`_figure_Gran_plot`).
+If :math:`F_1` is plotted as a function of :math:`V_t` the result is a straight line with slope = :math:`\frac{N_{t} }{V_{s} }` and abscissa intercept of :math:`V_e` (:numref:`figure_Gran_plot`).
 
 The ANC is readily obtained given the equivalent volume. At the equivalence point:
 
@@ -145,7 +145,7 @@ After the equivalence point has been reached (adding more acid than ANC = 0) the
 
     \left[{H}^{+} \right]>>{\; }\left[{HCO}_{{3}}^{{-}} \right]+{\; 2}\left[{CO}_{{3}}^{{-2}} \right]+\left[{OH}^{{-}} \right]{\; }
 
-When the pH is 2 pH units or more below the :math:`pK_a`s of the bases in the system the only species contributing significantly to ANC is the hydrogen ion (equation :eq:`eq_protons_dominate`) and thus the ANC is simply
+When the pH is 2 pH units or more below the lowest :math:`pK_a` of the bases in the system the only species contributing significantly to ANC is the hydrogen ion (equation :eq:`eq_protons_dominate`) and thus the ANC is simply
 
 .. math::
     :label: eq_Gran_pH_lt4
@@ -179,9 +179,9 @@ Thus the volume of acid added to go from :math:`[H^+]_e` to :math:`[H^+]_f` is
 .. math::
     :label: eq_Gran_linear_titrant
 
-   V_f - V_e =\frac{V_s \left([H^+]_f -[H^+]_e \right)}{N_t}
+    V_f - V_e =\frac{V_s \left([H^+]_f -[H^+]_e \right)}{N_t}
 
-To obtain n data points between :math:`[H^+]_e` - :math:`[H^+]_f` requires the incremental titrant volume (:math:`\mathrm{\Delta} V_t`) be 1/n times the volume of acid added between the equivalence point and the final titrant volume. Thus by substituting :math:`n\mathrm{\Delta}V_t`, and typical hydrogen ion concentrations of :math:`[H^+]_e` = 10-4.5 and :math:`[H^+]_f` = 10-3.0 into equation :eq:`eq_Gran_linear_titrant` the maximum incremental titrant volume is obtained.
+To obtain n data points between :math:`[H^+]_e` - :math:`[H^+]_f` requires the incremental titrant volume (:math:`\mathrm{\Delta} V_t`) be 1/n times the volume of acid added between the equivalence point and the final titrant volume. Thus by substituting :math:`n\mathrm{\Delta}V_t`, and typical hydrogen ion concentrations of :math:`[H^+]_e = 10^{-4.5}` and :math:`[H^+]_f = 10^{-3.0}` into equation :eq:`eq_Gran_linear_titrant` the maximum incremental titrant volume is obtained.
 
 .. math::
 
@@ -205,7 +205,7 @@ Determine the ANC for all samples collected from the Acid Lake Remediation lab. 
  #. Place the pH electrode in the solution.
  #. If the initial pH is less than 4.5 no titration is necessary and equation :eq:`eq_Gran_pH_lt4` can be used to calculate the ANC.
  #. Record the initial pH (prior to adding any titrant) and initial sample volume.
- #. Analyze the sample using :ref:`Gran plot analysis <heading_Gran_Plot>`.  Add 0.05 N HCl (the titrant) using a digital pipette in increments of 0.100 mL.
+ #. Analyze the sample using :ref:`Gran plot analysis <heading_ProCoDA_Gran_Plot>`.  Add 0.05 N HCl (the titrant) using a digital pipette in increments of 0.100 mL.
  #. Save the Gran data to ``S:\Courses\4530\Group #\ANC\Gran`` by selecting |ProCoDA_save_gran|. The data will be saved in a tab delimited format. You will use this data to plot a titration curve and to verify that the Gran technique accurately measures the ANC of a sample.
  #. Record the ANC and the equivalent volume.
 

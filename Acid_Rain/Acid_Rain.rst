@@ -11,7 +11,7 @@ Acid Precipitation and Remediation of Acid Lakes
 Introduction
 ============
 
-Acid precipitation has been a serious environmental problem in many areas of the world for the last few decades. Acid precipitation results from the combustion of fossil fuels which produce oxides of sulfur and nitrogen that react in the earth's atmosphere to form sulfuric and nitric acid. One of the most significant impacts of acid rain is the acidification of lakes and streams. In some watersheds the soil doesn't provide ample acid neutralizing capacity to mitigate the effect of incident acid precipitation. These susceptible regions are usually high elevation lakes with small watersheds and shallow non-calcareous soils. The underlying bedrock of acid-sensitive lakes tends to be granite or quartz. These minerals are slow to weather and therefore have little capacity to neutralize acids. The relatively short contact time between the acid precipitation and the watershed soil system exacerbates the problem. Lakes most susceptible to acidification: 1) are located downwind, sometimes hundreds of miles downwind, from major pollution sources--electricity generation, metal refining operations, heavy industry, large population centers, etc.; 2) are surrounded by hard, insoluble bedrock with thin, sandy, infertile soil; 3) have a high runoff to infiltration ratio; 4) have a low watershed to lake surface area. Isopleths of precipitation pH are depicted in :numref:`_figure_Acid_rain_US`.
+Acid precipitation has been a serious environmental problem in many areas of the world for the last few decades. Acid precipitation results from the combustion of fossil fuels which produce oxides of sulfur and nitrogen that react in the earth's atmosphere to form sulfuric and nitric acid. One of the most significant impacts of acid rain is the acidification of lakes and streams. In some watersheds the soil doesn't provide ample acid neutralizing capacity to mitigate the effect of incident acid precipitation. These susceptible regions are usually high elevation lakes with small watersheds and shallow non-calcareous soils. The underlying bedrock of acid-sensitive lakes tends to be granite or quartz. These minerals are slow to weather and therefore have little capacity to neutralize acids. The relatively short contact time between the acid precipitation and the watershed soil system exacerbates the problem. Lakes most susceptible to acidification: 1) are located downwind, sometimes hundreds of miles downwind, from major pollution sources--electricity generation, metal refining operations, heavy industry, large population centers, etc.; 2) are surrounded by hard, insoluble bedrock with thin, sandy, infertile soil; 3) have a high runoff to infiltration ratio; 4) have a low watershed to lake surface area. Isopleths of precipitation pH are depicted in :numref:`figure_Acid_rain_US`.
 
 
 .. _figure_Acid_rain_US:
@@ -84,7 +84,7 @@ where
 
     \alpha_2 = \frac{1}{\frac{[H^+]^2 }{K_1 K_2} +\frac{[H^+]}{K_2} + 1}
 
-:math:`K_1` and :math:`K_2` are the first and second dissociation constants for carbonic acid and :math:`\alpha_0`, :math:`\alpha_1`, and :math:`\alpha_2` are the fraction of :math:`C_T` in the form :math:`{H}_{{2}} {CO}_{{3}}^{{*}}`,:math:`{HCO}_{{3}}^{{-}}`, and :math:`{CO}_{{3}}^{{-2}}` respectively. Because :math:`K_1` and :math:`K_2` are constants (:math:`K_1 = 10^{-6.3}` and :math:`K_2 = 10^{-10.3}`), :math:`\alpha_0`, :math:`\alpha_1`, and :math:`\alpha_2` are only functions of pH.
+:math:`K_1` and :math:`K_2` are the first and second dissociation constants for carbonic acid and :math:`\alpha_0`, :math:`\alpha_1`, and :math:`\alpha_2` are the fraction of :math:`C_T` in the form :math:`H_2CO_3^\star`, :math:`HCO_3^-`, and :math:`CO_3^{-2}` respectively. Because :math:`K_1` and :math:`K_2` are constants (:math:`K_1 = 10^{-6.3}` and :math:`K_2 = 10^{-10.3}`), :math:`\alpha_0`, :math:`\alpha_1`, and :math:`\alpha_2` are only functions of pH.
 
 A measure of the susceptibility of lakes to acidification is the acid neutralizing capacity (ANC) of the lake water. In the case of the carbonate system, the ANC is exhausted when enough acid has been added to convert the carbonate species :math:`{HCO}_{{3}}^{{-}}`  and :math:`{CO}_{{3}}^{{-2}}` to :math:`{H}_{{2}} {CO}_{{3}}^\star`. A formal definition of total acid neutralizing capacity is given by equation :eq:`eq_ANC_definition1`
 
@@ -119,7 +119,7 @@ Now consider the case where aqueous :math:`{CO}_{2\; aq}` is volatile and in equ
 
     \left[{CO}_{{2\; aq}} \right]={\; P}_{{CO}_{{2}} {\; }} {K}_{{H}}
 
-where :math:`K_H` is Henry's constant for :math:`CO_2` in moles/L-atm and :math:`P_{CO_2}` is partial pressure of :math:`CO_2` in the atmosphere :math:`K_H = 10^{-1.5}`  and :math:`P_{CO_2} = 10^{-3.5}`). Because :math:`\left[{CO}_{{2\; aq}} \right]` is approximately equal to :math:`\left[{H}_{{2}} {CO}_{{3}}^{{/star}} \right]` and from equations :eq:`eq_total_carbonic` and :eq:`eq_carbonic_acid`
+where :math:`K_H` is Henry's constant for :math:`CO_2` in moles/L-atm and :math:`P_{CO_2}` is partial pressure of :math:`CO_2` in the atmosphere :math:`K_H = 10^{-1.5}`  and :math:`P_{CO_2} = 10^{-3.5}`). Because :math:`\left[{CO}_{{2\; aq}} \right]` is approximately equal to :math:`\left[H_2CO_3^{\star} \right]` and from equations :eq:`eq_total_carbonic` and :eq:`eq_carbonic_acid`
 
 .. math::
 
@@ -247,9 +247,9 @@ where :math:`[NaHCO_3]_0` = moles of sodium bicarbonate required per liter of la
 Experimental Objectives
 =======================
 
-Remediation of acid lakes involves addition of ANC so that the pH is raised to an acceptable level and maintained at or above this level for some design period. In this experiment sodium bicarbonate (:math:`NaHCO}_3`) will be used as the ANC supplement. Since ANC addition usually occurs as a batch addition, the design pH is initially exceeded. ANC dosage is selected so that at the end of the design period pH is at the acceptable level. Care must be taken to avoid excessive initial pH --- high pH can be as deleterious as low pH.
+Remediation of acid lakes involves addition of ANC so that the pH is raised to an acceptable level and maintained at or above this level for some design period. In this experiment sodium bicarbonate (:math:`NaHCO_3`) will be used as the ANC supplement. Since ANC addition usually occurs as a batch addition, the design pH is initially exceeded. ANC dosage is selected so that at the end of the design period pH is at the acceptable level. Care must be taken to avoid excessive initial pH --- high pH can be as deleterious as low pH.
 
-The most common remediation procedure is to apply the neutralizing agent directly to the lake surface, instead of on the watershed. We will follow that practice in this lab experiment. Sodium bicarbonate will be added directly to the surface of the lake that has an initial ANC of :math:`0\; \mu eq/L` and is receiving acid rain with a pH of 3. After the sodium bicarbonate is applied, the lake pH and ANC will be monitored for over two approximately 20 minute periods.
+The most common remediation procedure is to apply the neutralizing agent directly to the lake surface, instead of on the watershed. We will follow that practice in this lab experiment. Sodium bicarbonate will be added directly to the surface of the lake that has an initial ANC of :math:`0 \mu eq/L` and is receiving acid rain with a pH of 3. After the sodium bicarbonate is applied, the lake pH and ANC will be monitored for over two approximately 20 minute periods.
 
 
 .. _heading_Acid_Rain_Experimental_Apparatus:
@@ -257,7 +257,7 @@ The most common remediation procedure is to apply the neutralizing agent directl
 Experimental Apparatus
 ======================
 
-The experimental apparatus consists of an acid rain storage reservoir, peristaltic pump, and lake (:numref:`_figure_Acid_rain_apparatus`). The pH of the lake will be monitored using a pH probe connected to a signal-conditioning box that is connected to ProCoDA.
+The experimental apparatus consists of an acid rain storage reservoir, peristaltic pump, and lake (:numref:`figure_Acid_rain_apparatus`). The pH of the lake will be monitored using a pH probe connected to a signal-conditioning box that is connected to ProCoDA.
 
 .. _figure_Acid_rain_apparatus:
 
@@ -281,10 +281,26 @@ The following directions are written for the use of ProCoDA II hardware and soft
 
 We will use a pH probe to measure pH in this experiment. The pH probes are stored in a small plastic box.  Each bench has one pH probe. Plug the pH probe into the blue signal-conditioning box (it takes a push and a twist). Connect the cable to one of the sensor ports on your ProCoDA box.
 
- #. :ref:`Setup and calibrate the pH probe <heading_pH_Measurements>`
+ #. :ref:`Setup and calibrate the pH probe <heading_ProCoDA_pH_Measurement>`
  #. Verify that the experimental setup is plumbed so that the acid rain is pumped directly into the lake.  The lake outflow should discharge into the small drain on the side of your work bench.
  #. Organize the bench setup so that the metal tube discharging the acid rain into the lake is solidly touching the metal stand that is connected to the stirrer. This will ground the solution that is in the lake and reduce voltage fluctuations that are easily measured by the pH probe.
- #. Preset pump to give desired flow rate of 267 mL/min (4 L/15 minutes) based on the size of pump tubing selected. Do not turn the pump on yet! For each tubing size, different pump speeds will correspond to different flow rates being output by the pump. The peristaltic tubing sizes are rather arbitrary and are labeled by numbers: 13, 14, 16, 17, and 18 in increasing order of size. If you have \#18 tubing, you will want an RPM setting of (267 mL/min) / (3.8 mL/rev) = 70.3 RPM.
+ #. Preset pump to give desired flow rate of 267 mL/min (4 L/15 minutes) based on the size of pump tubing selected. Do not turn the pump on yet! For each tubing size, different pump speeds will correspond to different flow rates being output by the pump. The peristaltic tubing sizes are rather arbitrary and are labeled by numbers: 13, 14, 16, 17, and 18 in increasing order of size. If you have \#18 tubing, you will want an RPM setting of (267 mL/min) / (3.8 mL/rev) = 70.3 RPM (see :numref:`table_Acid_pump_tubing`).
+ #. Fill lake with reverse osmosis water and verify that the outflow is set so the lake volume is approximately 4 L.  Place the lake on top of a magnetic stirrer and add a stir bar.
+ #. Set stirrer speed to 8.
+ #. Add 1 mL of bromocresol green indicator solution to the lake.
+ #. Weigh out 623 mg (not grams!) :math:`NaHCO_3`.
+ #. Add :math:`NaHCO_3` to the lake.
+ #. After the lake is well stirred take a 100 mL sample from the lake in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample).
+ #. Clip the pH probe to the side of your lake in a more quiescent zone, away from the influent and effluent.
+ #. We will continuously measure the pH of the effluent and log the data into a tab delimited file. Set the data interval to 1 second. Begin logging data to file by clicking on the |Log_data| button. Create a new file in ``S:\Courses\4530\Group #\Lab 2 – Acid Rain``.
+ #. Prepare to write a comment in the file to mark the time when the pump starts by clicking on the |Log_text_comment| button. Type in a comment and then wait.
+ #. At time equal zero (t=0) start the peristaltic pump and click on the enter button in the comment dialog box.
+ #. Take 100-mL grab samples from the lake effluent at 5, 10, 15, and 20 minutes in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample). The sample volumes do not need to be measured exactly.
+ #. After the 20-minute sample, measure the flow rate by collecting effluent in a beaker for 30 seconds and measuring the volume collected (in a graduated cylinder for more accurate measurement).
+ #. Turn off the pump and stop measuring pH.
+ #. Measure the lake volume.  This can be done in a large graduated cylinder OR by taking the mass of the water in the lake.  Which would be more accurate?
+ #. Repeat the experiment and change one of the following parameters: stirring, initial ANC, ANC source (use :math:`CaCO_3` instead of :math:`NaHCO_3`), or amount of ANC added.
+
 
 .. _table_Acid_pump_tubing:
 
@@ -301,24 +317,6 @@ We will use a pH probe to measure pH in this experiment. The pH probes are store
     mL/s, mL/rev, 0.06 , 0.21 , 0.80 , 2.8 , 3.8
 
 
-
-
- #. Fill lake with reverse osmosis water and verify that the outflow is set so the lake volume is approximately 4 L.  Place the lake on top of a magnetic stirrer and add a stir bar.
- #. Set stirrer speed to 8.
- #. Add 1 mL of bromocresol green indicator solution to the lake.
- #. Weigh out 623 mg (not grams!) NaHCO3.
- #. Add NaHCO3 to the lake.
- #. After the lake is well stirred take a 100 mL sample from the lake in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample).
- #. Clip the pH probe to the side of your lake in a more quiescent zone, away from the influent and effluent.
- #. We will continuously measure the pH of the effluent and log the data into a tab delimited file.  Set the data interval to 1 second.
- Begin logging data to file by clicking on the |Log_data| button. Create a new file in ``S:\Courses\4530\Group #\Lab 2 – Acid Rain``.
- #. Prepare to write a comment in the file to mark the time when the pump starts by clicking on the |Log_text_comment| button. Type in a comment and then wait.
- #. At time equal zero (t=0) start the peristaltic pump and click on the enter button in the comment dialog box.
- #. Take 100-mL grab samples from the lake effluent at 5, 10, 15, and 20 minutes in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample). The sample volumes do not need to be measured exactly.
- #. After the 20-minute sample, measure the flow rate by collecting effluent in a beaker for 30 seconds and measuring the volume collected (in a graduated cylinder for more accurate measurement).
- #. Turn off the pump and stop measuring pH.
- #. Measure the lake volume.  This can be done in a large graduated cylinder OR by taking the mass of the water in the lake.  Which would be more accurate?
- #. )Repeat the experiment and change one of the following parameters: stirring, initial ANC, ANC source (use :math:`CaCO_3` instead of :math:`NaHCO_3`), or amount of ANC added.
 
 .. _heading_Acid_Rain_pH_Measurement:
 
@@ -466,7 +464,7 @@ Setup
  #. Prepare 20-L acid rain for each group.
  #. Prepare bromocresol green solution if necessary.
  #. Attach one Easy-Load pump head to the pump drives and plumb with \#18 tubing.
- #. Plumb Jerrican to pump to lake using quick connectors (see :numref:`_figure_Acid_rain_apparatus`).
+ #. Plumb Jerrican to pump to lake using quick connectors (see :numref:`figure_Acid_rain_apparatus`).
  #. Verify that pH probes are operational, stable, and can be calibrated.
  #. )Verify that buffers (pH = 4, 7, 10) are distributed to each student group.
  #. Provide a effluent cup in which pH can be measured.

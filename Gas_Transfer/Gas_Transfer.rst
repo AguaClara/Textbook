@@ -245,7 +245,7 @@ Calibration
 Experimental Methods
 ====================
 
-.. _figure_Schematic:
+.. _figure_Gas_Schematic:
 
 .. figure:: Images/Schematic.png
     :width: 600px
@@ -254,7 +254,7 @@ Experimental Methods
 
     Apparatus used to measure reaeration rate.
 
-The reactors are 600 mL containers (:numref:`_figure_Schematic`). The DO probe should be placed in a location so as to minimize the risk of air bubbles lodging on the membrane on the bottom of the probe. The aeration stone is connected to a source of regulated air flow. A 7-kPa pressure sensor (optional) can be used to measure the air pressure immediately upstream from the diffuser stone. A 200-kPa pressure sensor is used to measure the air pressure in the accumulator.
+The reactors are 600 mL containers (:numref:`figure_Gas_Schematic`). The DO probe should be placed in a location so as to minimize the risk of air bubbles lodging on the membrane on the bottom of the probe. The aeration stone is connected to a source of regulated air flow. A 7-kPa pressure sensor (optional) can be used to measure the air pressure immediately upstream from the diffuser stone. A 200-kPa pressure sensor is used to measure the air pressure in the accumulator.
 
 Initial Setup
 -------------
@@ -416,7 +416,7 @@ Class Plan
 Airflow Control
 ===============
 
-The ProCoDA software can be configured to control the flow of air into the reactor. The hardware required is shown in :numref:`_figure_Schematic`. The control algorithm is based on the theoretical relationship between head loss and flow rate for the air flowing into the accumulator. We can empirically measure the head loss coefficient and then use the theoretical relationship to determine what fraction of time the influent valve should be open to obtain the desired flow rate. We can use the change in pressure in the accumulator when the influent valve is open to determine how fast air was flowing into the accumulator. In order to develop an appropriate head loss model we need to know if the flow into the accumulator is laminar or turbulent.
+The ProCoDA software can be configured to control the flow of air into the reactor. The hardware required is shown in :numref:`figure_Gas_Schematic`. The control algorithm is based on the theoretical relationship between head loss and flow rate for the air flowing into the accumulator. We can empirically measure the head loss coefficient and then use the theoretical relationship to determine what fraction of time the influent valve should be open to obtain the desired flow rate. We can use the change in pressure in the accumulator when the influent valve is open to determine how fast air was flowing into the accumulator. In order to develop an appropriate head loss model we need to know if the flow into the accumulator is laminar or turbulent.
 
 .. math::
     :label: eq_Gas_Re

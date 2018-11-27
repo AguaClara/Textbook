@@ -145,7 +145,7 @@ The governing differential equation for a conservative (i.e., non-reactive) subs
 
     \frac{\partial C}{\partial t} ={\rm \; -U}\frac{\partial C}{\partial x} +{\rm \; D}_{{\rm d}} \frac{\partial ^{2} C}{\partial x^{2}}
 
-
+Where
  | C = concentration of a conservative substance
  | U = average fluid velocity in the x direction
  | Dd = longitudinal dispersion coefficient
@@ -158,6 +158,7 @@ The dispersion is described by a single parameter that is the same in the reacto
 
     {\rm C(x,t)\; }={\rm \; }\frac{M}{A\sqrt{4\pi D_{d} t} } \exp \left[\frac{-x'^{2} }{4D_{d} t} \right]
 
+Where
  | M = mass of conservative material in the spike
  | :math:`D_{d}` = axial dispersion coefficient [L2/T],
  | x' = x - Ut, U = longitudinal advective velocity in the reactor,
@@ -203,7 +204,7 @@ The resulting dimensionless form of Equation :eq:`eq_Reactor_advect_disperse` is
     E_{\left(t^{\star} \right)} =\sqrt{\frac{Pe}{4\pi t^{\star} } } \exp \left[\frac{-\left(1-t^{\star} \right)^{2} Pe}{4t^{\star} } \right]
 
 
-Response curves for the advection-dispersion equation are shown in :numref:`figure_E_F_Pe_100` and :numref:`figure_E_F_Pe_4.png`. The exit age curve is highly skewed for low Pe because tracer that is in the reactor longer has more time for dispersion. As the Peclet number increases the dispersion decreases and the response becomes closer to plug flow.
+Response curves for the advection-dispersion equation are shown in :numref:`figure_E_F_Pe_100` and :numref:`figure_E_F_Pe_4`. The exit age curve is highly skewed for low Pe because tracer that is in the reactor longer has more time for dispersion. As the Peclet number increases the dispersion decreases and the response becomes closer to plug flow.
 
 .. _figure_E_F_Pe_100:
 
@@ -236,7 +237,7 @@ The form of equation :eq:`eq_Reactor_advect_disperse` is exactly like the normal
 where
 
 .. math::
-    :label: eq_Reactor_sigma
+    :label: eq_Reactor_sigma_dispersion
 
     \sigma _{x}^{2} =2D_{d} t
 
@@ -324,7 +325,7 @@ Inlet and outlet boundary conditions affect the response obtained from a reactor
 
 The above equations suggest that from the reactor response to a spike input we can compute the dispersion coefficient for the reactor. We have two options for measuring reactor response:
 
- #. synoptic measurements: at a fixed time sampling many points along the axis of the reactor will yield a Gaussian curve of concentration vs. distance. In practice synoptic measurements are difficult because it requires sampling devices that are time-coordinated. By combining equations :eq:`eq_Reactor_sigma`, :eq:`eq_Reactor_sigma`, and :eq:`eq_Reactor_tbar` it is possible to estimate the dispersion coefficient from synoptic measurements.
+ #. synoptic measurements: at a fixed time sampling many points along the axis of the reactor will yield a Gaussian curve of concentration vs. distance. In practice synoptic measurements are difficult because it requires sampling devices that are time-coordinated. By combining equations :eq:`eq_Reactor_sigma_dispersion`, :eq:`eq_Reactor_sigma`, and :eq:`eq_Reactor_tbar` it is possible to estimate the dispersion coefficient from synoptic measurements.
  #. single point sampling: measure the concentration at a fixed position along the x axis of the reactor for many times. If the reactor length is fixed at L and measurements are made at the effluent of the reactor (observe the concentration of a tracer at x = L as a function of time) then x is no longer a variable and C(x,t) becomes C(t) only. The response curve obtained through single point sampling is skewed. The curve spread changes during the sampling period and the response curve is skewed.
 
 
@@ -343,14 +344,14 @@ Response curve skew makes the assumption of a symmetrical normal distribution cu
     \sigma _{t}^{2} =\left(\frac{2}{Pe} +\frac{8}{Pe^{2} } \right)\cdot \theta ^{2}
 
 
- For closed systems the relationship is:
+For closed systems the relationship is:
 
 .. math::
     :label: eq_Reactor_sigma_closed
 
     \sigma _{t}^{2} =\left[\frac{2}{Pe} -\frac{2}{Pe^{2} } \cdot \left(1-{\mathop{e}\nolimits^{-Pe}} \right)\right]\cdot \theta ^{2}
 
-The term :math:`\frac{2}{Pe}` in equations :eq:`eq_Reactor_sigma_open` and :eq:`eq_Reactor_sigma_open` is dominant for Peclet numbers much greater than 10 as is shown in :numref:`Pe_open_and_closed`. The additional terms in equations :eq:`eq_Reactor_sigma_open` and :eq:`eq_Reactor_sigma_open` are corrections for skewedness in the response curve. These skewedness corrections are not very significant for Peclet numbers greater than 10. Thus for Peclet numbers greater than 10 the Peclet number can be determined using equation :eq:`eq_Reactor_sigma_approx` for both open and closed systems.
+The term :math:`\frac{2}{Pe}` in equations :eq:`eq_Reactor_sigma_open` and :eq:`eq_Reactor_sigma_open` is dominant for Peclet numbers much greater than 10 as is shown in :numref:`figure_Pe_open_and_closed`. The additional terms in equations :eq:`eq_Reactor_sigma_open` and :eq:`eq_Reactor_sigma_open` are corrections for skewedness in the response curve. These skewedness corrections are not very significant for Peclet numbers greater than 10. Thus for Peclet numbers greater than 10 the Peclet number can be determined using equation :eq:`eq_Reactor_sigma_approx` for both open and closed systems.
 
 .. _figure_Pe_open_and_closed:
 
@@ -365,6 +366,7 @@ The term :math:`\frac{2}{Pe}` in equations :eq:`eq_Reactor_sigma_open` and :eq:`
 
 .. math::
     :label: eq_Reactor_sigma_approx
+
     Pe=\frac{2\theta ^{2} }{\sigma _{t}^{2} }
 
 Mass Conservation

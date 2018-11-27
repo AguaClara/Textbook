@@ -151,17 +151,7 @@ Chemical Labels
 
 All chemicals must be labeled. Unlabeled containers of mystery chemicals or chemical solutions are a nightmare for disposal as well as a potential safety hazard. The OSHA Hazard Communication Standard and the OSHA Lab Standard have specific requirements for the labeling of chemicals. In a laboratory covered under the Lab Standard, if a chemical is designated as a hazardous material, that is having the characteristics of corrosivity, ignitability, toxicity (generally meaning a highly toxic material with an LD50 of 50 mg/kg or less), reactivity, etc., and if it is made into a solution or repackaged as a solid or liquid in a concentration greater than 1\% (0.1\% for a carcinogen) it needs to have a so called Right-To-Know (RTK) label that duplicates the hazard warnings, precautions, and first aid steps found on the original label. All other chemicals must have at minimum a label with the full chemical name (not just the chemical formula), concentration, and date prepared. Right-To-Know labels will be made available for your use when necessary.
 
-National Fire Protection Association (NFPA) ratings are included to indicate the types and severity of the hazards. The NFPA ratings are on a scale of 0-4 with 0 being nonhazardous and 4 being most hazardous. The ratings are described in Table \eqref{ZEqnNum713308}.
-
-\begin{tabular}{|p{0.5in}|p{1.2in}|p{1.2in}|p{1.2in}|} \hline
-\multicolumn{4}{|p{1in}|}{Table  \label{ZEqnNum713308}. NFPA hazard code ratings.\textbf{}} \\ \hline
-\textbf{Code} & \textbf{Health} & \textbf{Fire} & \textbf{Reactivity} \\ \hline
-\textbf{\newline 4} & Very short exposure can cause death or major residual injury & Will rapidly or completely vaporize at normal pressure and temperature & Capable of detonation or explosive reaction at normal temperatures and pressures \\ \hline
-\textbf{\newline 3} & Short exposure can cause serious temporary or residual injury & Can be ignited under almost all ambient temperatures & Capable of detonation or explosive reaction buy requires a strong initiating source or must be heated under confinement before initiation \\ \hline
-\textbf{\newline 2} & Intense or continued exposure can cause temporary incapacitation or possible residual injury & Must be moderately heated or exposed to high temperature before ignition & Undergoes violent chemical change at elevated temperatures and pressures or reacts violently with water. \\ \hline
-\textbf{\newline 1} & Can cause irritation but only minor residual injury & Must be preheated before ignition & Normally stable but can become unstable at elevated temperatures and pressures. \\ \hline
-\textbf{\newline 0} & During a fire offers no hazard beyond combustion & Will not burn & Stable even under fire conditions. \\ \hline
-\end{tabular}
+`National Fire Protection Association (NFPA) ratings <https://www.acs.org/content/acs/en/chemical-safety/guidelines-for-chemical-laboratory-safety/resources-supporting-guidelines-for-chemical-laboratory-safety/national-fire-protection-association-hazard-identification.html>`_ indicate the types and severity of the hazards. The NFPA ratings are on a scale of 0-4 with 0 being nonhazardous and 4 being most hazardous. The ratings are described in
 
 Chemical Storage
 ----------------
@@ -214,11 +204,9 @@ The Environmental Protection Agency (EPA) classifies wastes by their reaction ch
 
 *Toxicity*: Although the EPA has specific procedures for determining toxicity, all chemicals may be toxic in certain concentrations. Appropriate procedures should be established in each laboratory for collection and disposal of these materials.
 
-
-
 The handling of reaction byproducts, surplus and waste chemicals, and contaminated materials is an important part of laboratory safety procedures. Each laboratory worker is responsible for ensuring that wastes are handled in a manner that minimizes personal hazard and recognizes the potential for environmental contamination.
 
-Most instructional laboratories will have clear procedures for students to follow in order to minimize the generation of waste materials. Typically reaction byproducts and surplus chemicals will be neutralized or deactivated as part of the experimental procedure. Waste materials must be handled in specific ways as designated by federal and local regulations. University guidelines for waste disposal can be found in Chapter 7 of the Cornell University Chemical Hygiene Plan (available at http://people.ccmr.cornell.edu/$\mathrm{\sim}$cober/complete.chemical.hygiene.plan.2000.pdf).
+Most instructional laboratories will have clear procedures for students to follow in order to minimize the generation of waste materials. Typically reaction byproducts and surplus chemicals will be neutralized or deactivated as part of the experimental procedure. Waste materials must be handled in specific ways as designated by federal and local regulations. University guidelines for waste disposal can be found in Chapter 7 of the Cornell University `Chemical Hygiene Plan <https://sp.ehs.cornell.edu/lab-research-safety/laboratory-safety-manual/Pages/index.aspx>`_.
 
 Some general guidelines are:
 
@@ -230,7 +218,7 @@ Some general guidelines are:
  #. Peroxides, because of their reactivity, and the unpredictable nature of their formation in laboratory chemicals, have attracted considerable attention. The disposal of large quantities (25 g or more) of peroxides requires expert assistance. Consider each case individually for handling and disposal.
 
 
-A complete list of compounds considered safe for drain disposal can be found in Chapter 7 of the Cornell University Chemical Hygiene Plan (available at http://people.ccmr.cornell.edu/$\mathrm{\sim}$cober/complete.chemical.hygiene.plan.2000.pdf).  Disposal techniques for chemicals not found in this list must be disposed of using techniques approved of by Cornell Environmental Health and Safety. When possible, hazardous chemicals can be neutralized and then disposed. When chemicals are produced that cannot be disposed of using the sanitary sewer, techniques to decrease the volume of the waste should be considered.
+A complete list of compounds considered safe for drain disposal can be found in Chapter 7 of the Cornell University `Chemical Hygiene Plan <https://sp.ehs.cornell.edu/lab-research-safety/laboratory-safety-manual/Pages/index.aspx>`_.  Disposal techniques for chemicals not found in this list must be disposed of using techniques approved of by Cornell Environmental Health and Safety. When possible, hazardous chemicals can be neutralized and then disposed. When chemicals are produced that cannot be disposed of using the sanitary sewer, techniques to decrease the volume of the waste should be considered.
 
 
 
@@ -241,15 +229,6 @@ References
 
  Safety in Academic Chemistry Laboratories. A publication of the American Chemical Society Committee on Chemical Safety. Fifth edition. 1990
 
- PlaceNameplaceCornell PlaceTypeUniversity Chemical Hygiene Plan: Guide to Chemical Safety for Laboratory Workers. A publication of the Office of Environmental Health, 2000. (http://people.ccmr.cornell.edu/$\mathrm{\sim}$cober/complete.chemical.hygiene.plan.2000.pdf)
-
- OSHA Laboratory Standard
-
-
-
-One of the best books to get started with regulatory compliance is a publication from the American Chemical Society entitled, "Laboratory Waste Management. A Guidebook."
-
-.. _heading_Laboratory_Safety_Pre-Laboratory_Questions:
 
 Pre-Laboratory Questions
 ========================

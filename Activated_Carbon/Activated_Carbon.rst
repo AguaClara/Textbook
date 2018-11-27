@@ -77,7 +77,7 @@ Note that modeling may first involve fitting the isotherm data to the generalize
 .. math::
     :label: eq_AC_generalized_isotherm
 
-   q=\frac{Q\frac{C}{C_0}}{r+(1-r)\frac{C}{C_0}}
+    q=\frac{Q\frac{C}{C_0}}{r+(1-r)\frac{C}{C_0}}
 
 where
  | :math:`q` =  concentration of contaminant in solid phase (mass contaminant/mass activated carbon)
@@ -143,7 +143,7 @@ Adsorption Isotherm Sample Analysis (week 2)
 Contactor Procedures
 ====================
 
-.. _figure_Schematic:
+.. _figure_AC_Schematic:
 
 .. figure:: Images/Schematic.png
     :width: 500px
@@ -156,7 +156,7 @@ Continuous-Flow Carbon Contactor Setup (week 1)
 -----------------------------------------------
 
 
-Assemble the system shown in :numref:`figure_Schematic`. Use a peristaltic pump with \#14 tubing at approximately 10 rpm. Prepare 2-20 L jerricans with 50 mg/L of Red dye \#40. Use reverse osmosis water to dilute the dye. The carbon contactor will be operated in down flow mode. The specifications for the carbon contactors are given in Table :numref:`table_carbon_contactor_settings`. Set up a daily sample schedule.
+Assemble the system shown in :numref:`figure_AC_Schematic`. Use a peristaltic pump with \#14 tubing at approximately 10 rpm. Prepare 2-20 L jerricans with 50 mg/L of Red dye \#40. Use reverse osmosis water to dilute the dye. The carbon contactor will be operated in down flow mode. The specifications for the carbon contactors are given in Table :numref:`table_carbon_contactor_settings`. Set up a daily sample schedule.
 
  #. Pump distilled water into the column from the bottom to a depth of 10 cm.
  #. Pour 27 g of activated carbon into a beaker containing distilled water.
