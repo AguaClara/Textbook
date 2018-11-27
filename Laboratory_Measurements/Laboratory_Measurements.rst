@@ -121,6 +121,10 @@ Pipette Technique
 Measure Density
 ---------------
 
+#. Weigh a 100 mL volumetric flask with its cap (use 200 g balance with resolution of 0.001 g}.
+#. Prepare 100 mL of a 1 M solution of sodium chloride in the weighed flask. You can also dissolve the NaCl in a clean beaker and transfer to the volumetric flask.  Make sure to mix the solution and then verify that you have **exactly 100 mL** of solution. Note that the combined **volume of NaCl and water decreases** as the salt dissolves.
+#. Weigh the flask (with its cap) plus the sodium chloride solution and calculate the density of the 1 M NaCl solution.
+
 
 .. code:: python
 
@@ -144,11 +148,6 @@ Measure Density
 
     Density of water vs. temperature.
 
-
-
- #. Weigh a 100 mL volumetric flask with its cap (use 200 g balance with resolution of 0.001 g}.
- #. Prepare 100 mL of a 1 M solution of sodium chloride in the weighed flask. You can also dissolve the NaCl in a clean beaker and transfer to the volumetric flask.  Make sure to mix the solution and then verify that you have **exactly 100 mL** of solution. Note that the combined **volume of NaCl and water decreases** as the salt dissolves.
- #. Weigh the flask (with its cap) plus the sodium chloride solution and calculate the density of the 1 M NaCl solution.
 
 Prepare red dye standards of several concentrations
 ---------------------------------------------------

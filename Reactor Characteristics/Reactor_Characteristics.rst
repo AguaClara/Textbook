@@ -55,7 +55,7 @@ A closed reactor is one where the reactor has a diffusion or dispersion coeffici
 Modeling
 --------
 
-Reactors can be studied by measuring the effluent concentration after the addition of a spike or pulse of a tracer in the influent or after a step function change in input concentration. The resulting response curves can be made non-dimensional by plotting :math:`\frac{C_{\left({t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta } \right)} \rlap{-} V _{r} }{C_{tr} \rlap{-} V _{tr} }` as a function of :math:`{t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta }` where :math:`\theta` is the hydraulic residence time. The term :math:`{t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta }` will be defined as :math:`t^{\star}`. The non-dimensional response curves from pulse inputs and step inputs are known as E curves and F curves, respectively. The E curve is the exit age distribution and represents the actual output of tracer from a reactor.  The F curve is the cumulative age distribution and represents the cumulative fraction of tracer that has exited a reactor at time $t^{\star} $. The E and F curves are related by
+Reactors can be studied by measuring the effluent concentration after the addition of a spike or pulse of a tracer in the influent or after a step function change in input concentration. The resulting response curves can be made non-dimensional by plotting :math:`\frac{C_{\left({t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta } \right)} \rlap{-} V _{r} }{C_{tr} \rlap{-} V _{tr} }` as a function of :math:`{t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta }` where :math:`\theta` is the hydraulic residence time. The term :math:`{t\mathord{\left/ {\vphantom {t \theta }} \right. \kern-\nulldelimiterspace} \theta }` will be defined as :math:`t^{\star}`. The non-dimensional response curves from pulse inputs and step inputs are known as E curves and F curves, respectively. The E curve is the exit age distribution and represents the actual output of tracer from a reactor.  The F curve is the cumulative age distribution and represents the cumulative fraction of tracer that has exited a reactor at time :math:`t^{\star}`. The E and F curves are related by
 
 .. math::
 
@@ -171,7 +171,7 @@ A measure of dispersion can be obtained directly from equation :eq:`eq_Reactor_a
 
     Pe=\frac{UL}{D_{d}}
 
-where L is the length of the reactor and U is the mean advective velocity. The dimensionless parameter Pe (Peclet number) is used to characterize the level of dispersion in a reactor. The Peclet number is the ratio of advective to dispersive transport. In the limiting cases when Pe = 0 (very high dispersion) we have a completely mixed regime (CMFR) and when :math:`Pe = $\mathrm{\infty}`, :math:`D_{d}` = 0, no dispersion) we have a plug flow reactor (PFR).
+where L is the length of the reactor and U is the mean advective velocity. The dimensionless parameter Pe (Peclet number) is used to characterize the level of dispersion in a reactor. The Peclet number is the ratio of advective to dispersive transport. In the limiting cases when Pe = 0 (very high dispersion) we have a completely mixed regime (CMFR) and when :math:`Pe = \mathrm{\infty}`, :math:`D_{d}` = 0, no dispersion) we have a plug flow reactor (PFR).
 
 The time can be normalized by dividing by the hydraulic residence time.
 
@@ -180,7 +180,7 @@ The time can be normalized by dividing by the hydraulic residence time.
 
     t^{\star} =\frac{tU}{L}
 
-Combining Equations :eq:`eq_Reactor_Pe` and :eq:`eq_Reactor_tstar` we obtain :math:`$D_{d} t=t^{\star} PeL^{2}` for substitution into Equation :eq:`eq_Reactor_advect_disperse`. The concentration can be normalized by the mass of the tracer and the volume, :math:`\rlap{-} V`, of the reactor.
+Combining Equations :eq:`eq_Reactor_Pe` and :eq:`eq_Reactor_tstar` we obtain :math:`D_{d} t=t^{\star} PeL^{2}` for substitution into Equation :eq:`eq_Reactor_advect_disperse`. The concentration can be normalized by the mass of the tracer and the volume, :math:`\rlap{-} V`, of the reactor.
 
 .. math::
 
@@ -321,7 +321,7 @@ and
 
     \bar{t}=\; \frac{\sum _{i=0}^{n}t_{i} \cdot C_{i}  \Delta t}{\sum _{i=0}^{n}C_{i}  \Delta t}
 
-Inlet and outlet boundary conditions affect the response obtained from a reactor. Closed reactors have little dispersion across their inlet and outlet boundaries whereas open reactors can have significant dispersion across their inlet and outlet boundaries. Typically open systems have no physical boundaries in the direction of flow. An example of an open system would be a river segment. Closed systems have small inlets and outlets that minimize dispersion across the inlet and outlet regions. An example of a closed system is a tank (or a lake) with a small inlet and outlet. The reactor used in the lab is closed. The $\bar{t}$ in equation :eq:`eq_Reactor_tbar` is the measured average residence time for the tracer in the reactor. For ideal closed reactors the measured residence time, $\bar{t}$, is equal to the theoretical hydraulic residence time (? = reactor volume/flow rate). For open reactors $\bar{t}$ can exceed the hydraulic residence time. If $\bar{t}$ is less than the hydraulic residence time it may indicate that the reactor contains "dead volume" or "short circuiting" such that some volume of the reactor is effectively unused.
+Inlet and outlet boundary conditions affect the response obtained from a reactor. Closed reactors have little dispersion across their inlet and outlet boundaries whereas open reactors can have significant dispersion across their inlet and outlet boundaries. Typically open systems have no physical boundaries in the direction of flow. An example of an open system would be a river segment. Closed systems have small inlets and outlets that minimize dispersion across the inlet and outlet regions. An example of a closed system is a tank (or a lake) with a small inlet and outlet. The reactor used in the lab is closed. The :math:`\bar{t}` in equation :eq:`eq_Reactor_tbar` is the measured average residence time for the tracer in the reactor. For ideal closed reactors the measured residence time, :math:`\bar{t}`, is equal to the theoretical hydraulic residence time (? = reactor volume/flow rate). For open reactors :math:`\bar{t}` can exceed the hydraulic residence time. If :math:`\bar{t}` is less than the hydraulic residence time it may indicate that the reactor contains "dead volume" or "short circuiting" such that some volume of the reactor is effectively unused.
 
 The above equations suggest that from the reactor response to a spike input we can compute the dispersion coefficient for the reactor. We have two options for measuring reactor response:
 
@@ -334,11 +334,9 @@ Peclet Number Estimation
 ------------------------
 
 
-For single point sampling of the effluent response curve, skew increases as the dispersion level in the reactor increases. The degree of skew depends on the dispersion coefficient, the velocity in the x-direction, and the length of the reactor. Peclet values in the range :math:`100\mathrm{<}$Pe$\mathrm{<}$$\mathrm{\infty}` result in a symmetric response curve.
+For single point sampling of the effluent response curve, skew increases as the dispersion level in the reactor increases. The degree of skew depends on the dispersion coefficient, the velocity in the x-direction, and the length of the reactor. Peclet values in the range :math:`100\mathrm{<}Pe \mathrm{<} \mathrm{\infty}` result in a symmetric response curve.
 
-
-
-Response curve skew makes the assumption of a symmetrical normal distribution curve inappropriate and a new relationship between the variance and the dispersion coefficient (or \textit{Pe}) has to be determined. Boundary conditions affect the determination of the dispersion coefficient. The relationship between the Peclet number and variance for open systems is given by
+Response curve skew makes the assumption of a symmetrical normal distribution curve inappropriate and a new relationship between the variance and the dispersion coefficient (or *Pe*) has to be determined. Boundary conditions affect the determination of the dispersion coefficient. The relationship between the Peclet number and variance for open systems is given by
 
 .. math::
     :label: eq_Reactor_sigma_open
@@ -466,11 +464,15 @@ Baffles can be added to tanks to decrease the ability of the solution to travel 
 
 The flow characteristics of a baffled tank are complex and would require computational fluid dynamics (CFD) to model. In lieu of developing a CFD model we will turn to dimensional analysis to help us characterize the mixing efficiency of a baffled reactor segment. The independent parameter that we will measure to characterize the reactor is its Peclet number or the number of N CMFRs in series.
 
-The design goal is to determine the diameter and spacing of the pores required to achieve adequate mixing. The fluid flow out of the pores is jet flow. The jets entrain and mix with the surrounding fluid. To develop effective mixing the jet should be turbulent. The transition between turbulent and laminar behavior for jets occurs at a jet Reynolds number of a few hundred\footnote{Personal\ communication\ with\ Dr.\ Cowen.}.
+The design goal is to determine the diameter and spacing of the pores required to achieve adequate mixing. The fluid flow out of the pores is jet flow. The jets entrain and mix with the surrounding fluid. To develop effective mixing the jet should be turbulent. The transition between turbulent and laminar behavior for jets occurs at a jet Reynolds number of a few hundred (Personal communication with Dr. Cowen).
 
 .. math::
 
-    Re_{jet} =\frac{V_{jet} d_{jet} }{\nu } $ or $Re_{jet} =\frac{4Q_{jet} }{\pi d_{jet} \nu } $ or $Re_{jet} =\frac{4Q_{reactor} }{n_{ports} \pi d_{jet} \nu } $
+    Re_{jet} =\frac{V_{jet} d_{jet} }{\nu }
+
+    Re_{jet} =\frac{4Q_{jet} }{\pi d_{jet} \nu }
+
+    Re_{jet} =\frac{4Q_{reactor} }{n_{ports} \pi d_{jet} \nu }
 
 The optimal pore spacing for maximum mixing could be based on the spread of the jet in the distance to the next baffle.  Jets expand in the radial direction at a rate of approximately 10\% of the distance the jet travels axially. Thus the pore spacing could be in a rectangular grid with the distance between pores equal to 10\% of the distance between baffles. This spacing may be smaller than practical since it will require a large number of pores.
 
@@ -501,17 +503,17 @@ Chlorine Contact Tank Design
 
 The design objective for chlorine contact tanks is to maximize the inactivation of pathogens by maximizing the contact time between the chlorine and the pathogens before the water is sent to the distribution system. This objective has been codified by the EPA with the contact time for a tank defined as the time for the effluent of the tank to reach 10\% of the influent value after a step change in the influent.
 
+.. _table_Reactor_baffling:
 
+.. csv-table:: Comparison of :math:`t^{\star}` at F=0.1 for non-ideal reactors (Malcolm Pirnie, 1991).
+    :header:  Baffling Condition,  Guidance manual value of :math:`t^{\star}` at F=0.1, Extent of Baffles
+    :align: center
 
-\begin{tabular}{|p{0.8in}|p{0.8in}|p{2.4in}|} \hline
-\multicolumn{3}{|p{1in}|}{Table \label{1}. Comparison of $t^{\star} \; at\; F=0.1$ for non-ideal reactors (Malcolm Pirnie, 1991)} \\ \hline
-Baffling Condition  & Guidance manual value of $t^{\star} \; at\; F=0.1$ & Extent of Baffles \\ \hline
-Unbaffled (CMFR) & 0.1 & No baffles, agitated basin with low length to width ratio, high inlet and outlet flow velocities \\ \hline
-Poorly baffled & 0.3 & Single or multiple unbaffled inlets and outlets, no intrabasin baffles \\ \hline
-Average & 0.5 & Baffled inlet or outlet with some intrabasin baffles \\ \hline
-Superior & 0.7 & Perforated inlet baffles, serpentine or perforated intrabasin baffles, outlet weir or perforated launders \\ \hline
-Perfect (PFR) & 1.0 & Very high length to width ratio (pipeline flow), perforated inlet, outlet and intrabasin baffles \\ \hline
-\end{tabular}
+    Unbaffled (CMFR), 0.1, No baffles, agitated basin with low length to width ratio, high inlet and outlet flow velocities
+    Poorly baffled, 0.3, Single or multiple unbaffled inlets and outlets, no intrabasin baffles
+    Average, 0.5, Baffled inlet or outlet with some intrabasin baffles
+    Superior, 0.7, Perforated inlet baffles, serpentine or perforated intrabasin baffles, outlet weir or perforated launders
+    Perfect (PFR), 1.0, Very high length to width ratio (pipeline flow), perforated inlet, outlet and intrabasin baffles
 
 
 
@@ -562,9 +564,6 @@ You will analyze all of the datasets in the same way. Use a consistent set of un
  #. Evaluate whether there is any evidence of "dead volumes" or "short circuiting" in your reactor.
  #. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be.
 
-
-
-
 .. _heading_Reactor_References:
 
 References
@@ -574,31 +573,10 @@ Weber, W. J. J. and F. A. Digiano. 1996. Process Dynamics in Environmental Syste
 
 Malcolm Pirnie, Inc., and HDR Engineering, Inc. Guidance Manual for Compliance with the Filtration and Disinfection Requirements for Public Water Systems Using Surface Water Sources. AWWA, Denver CO, 1991.
 
-
-
 .. _heading_Reactor_Lab_Prep_Notes:
 
 Lab Prep Notes
 ==============
-
- Table \label{2}. Equipment list
-
-\begin{tabular}{|p{0.7in}|p{0.7in}|p{0.7in}|} \hline
-\textbf{Description} & \textbf{Supplier} & \textbf{Catalog number} \\ \hline
- reactor with baffles & CEE shop &  \\ \hline
-variable flow digital drive & Cole Parmer & H-07523-30 \\ \hline
-Easy-Load pump head & Cole Parmer & H-07518-00 \\ \hline
-PharMed tubing size 18 & Cole Parmer & H-06485-18 \\ \hline
-20 liter HDPE Jerrican & Fisher Scientific & 02-961-50C \\ \hline
-\end{tabular}
-
-Table \label{3}. Reagent list
-
-\begin{tabular}{|p{0.7in}|p{0.8in}|p{0.7in}|} \hline
-\textbf{Description} & \textbf{Supplier/Source} & \textbf{Catalog number} \\ \hline
- &  &  \\ \hline
-red dye \#40 & MG Newell & 07704-1 \\ \hline
-\end{tabular}
 
  #. Create 100 mL of 100 g/L red dye stock (thus use 10 g of red dye) and distribute in small vials to each lab bench.
  #. Use \# 18 tubing for inlet and \#17 for photometer sampling.

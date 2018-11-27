@@ -21,7 +21,7 @@ Acid precipitation has been a serious environmental problem in many areas of the
     :align: center
     :alt: acid rain in the US
 
-  The pH of precipitation in 2009.
+    The pH of precipitation in 2009.
 
 In acid-sensitive lakes the major parameter of concern is pH (:math:`pH = -log{\{H^+\}}`, where :math:`\{H^+\}` is the hydrogen ion activity, and activity is approximately equal to concentration in moles/L). In a healthy lake, ecosystem pH should be in the range of 6.5 to 8.5. In most natural freshwater systems, the dominant pH buffering (controlling) system is the carbonate system. The carbonate buffering system is composed of four components: dissolved carbon dioxide (:math:`{CO}_{{2\; aq}}`), carbonic acid (:math:`{H}_{{2}} {CO}_{{3}}`), bicarbonate (:math:`{HCO}_{{3}}^{{-}}`), and carbonate (:math:`{CO}_{{3}}^{{-2}}`). Carbonic acid exists only at very low levels in aqueous systems and for purposes of acid neutralization is indistinguishable from dissolved carbon dioxide. Thus to simplify things we define
 
@@ -266,7 +266,7 @@ The experimental apparatus consists of an acid rain storage reservoir, peristalt
     :align: center
     :alt: acid rain apparatus
 
-  Schematic drawing of the experimental setup.
+    Schematic drawing of the experimental setup.
 
 
 .. _heading_Acid_Rain_Procedures:
@@ -356,7 +356,7 @@ A more accurate technique to measure ANC is the Gran plot analysis. This is the 
 
 
 
-.. _heading_Acid_Rain_Questions:
+.. _heading_Acid_Rain_PreLab:
 
 Pre-Laboratory Questions
 ========================

@@ -212,6 +212,7 @@ To calibrate the photometer, you will need to connect the peristaltic pump, a 1 
 
     Experimental setup for calibrating photometer. Flow must be up through the photometer to ensure that any air bubbles are removed. It may be necessary to lightly tap the photometer to help release any trapped air bubbles.
 
+Calibration steps
  #. Connect the photometer probe to one of the sensor ports of your ProCoDA box.
  #. The photometer will read out voltages in the range of +/- 5V, so we will need to let the software know to expect that range. On the Configuration Tab in the ProCoDA II software, find the section for the NI Input/Output device and hit the |config_select_daq| button. Set the maximum voltage for channel with the photometer to 5V.
  #. Navigate to the ProCoDA configuration tab and then select |config_sensors|.

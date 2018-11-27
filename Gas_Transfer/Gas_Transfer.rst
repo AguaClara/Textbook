@@ -194,7 +194,7 @@ To measure the reaeration rate it is necessary to first remove the oxygen from t
 
     {O}_{{2}} +{2SO}_{{3}}^{-{2}} \stackrel{{cobalt}}{\longrightarrow}{2SO}_{{4}}^{-{2}}  :eq:`eq_Gas_first_order`1
 
-The mass of sodium sulfite required to deoxygenate 1 mg of oxygen is calculated from the stoichiometry of equation :eq:`eq_Gas_first_order`1.
+The mass of sodium sulfite required to deoxygenate 1 mg of oxygen is calculated from the stoichiometry of equation :eq:`eq_Gas_first_order`.
 
 .. math::
 
@@ -261,7 +261,7 @@ Initial Setup
 
 
 .. |Open_method| image:: ../ProCoDA/Images/Config_open_save_export.png
-.. |Logging_data_short_exp| image:: ../ProCoDA/Images/ProCoDA\Images\config_Logging_data_short_exp.png
+.. |Logging_data_short_exp| image:: ../ProCoDA/Images/config_Logging_data_short_exp.png
 .. |Mode_of_operation| image:: ../ProCoDA/Images/Mode_of_operation.png
 
 Follow these steps to set up the experiment.
@@ -344,7 +344,7 @@ This lab requires a significant amount of repetitive data analysis. Plan how you
    where
     | T is in Kelvin,
     | :math:`P_{O_{2} }` is the partial pressure of oxygen in atmospheres, and
-    | :math:`C^{\star} ` is in mg/L. This equation is valid for 278 K < T < 318 K.
+    | :math:`C^{\star}` is in mg/L. This equation is valid for 278 K < T < 318 K.
 
  #.  Estimate :math:`\hat{k}_{v,l}` using linear regression and equation :eq:`eq_Gas_linearized` for each data set.
  #. Create a graph with a representative plot showing the linearized data, :math:`\left(\ln \frac{C^{\star} -C}{C^{\star} -C_{0} } \right)` vs. time, and the best-fit line.
@@ -358,8 +358,8 @@ This lab requires a significant amount of repetitive data analysis. Plan how you
 
 .. _heading_Gas_Transfer_References:
 
-==================
-References}
+References
+==========
 
  Weber, W. J. J. and F. A. Digiano. 1996. Process Dynamics in Environmental Systems. New York, John Wiley \& Sons, Inc.Zander, A. K.; M. J. Semmens and R. M. Narbaitz. 1989. **Removing VOCs by membrane stripping** American Water Works Association Journal 81: 76-81.
 
@@ -389,9 +389,9 @@ Setup
  #. Provide clamps to mount DO probes on magnetic stirrers.
  #. Determine maximum airflow rate that is reasonable given small reactor volume.
 
-.. _table_Gas_reagent_list:
+.. _table_air_flow_rates:
 
-.. csv-table:: Reagent list.
+.. csv-table:: Suggested flow rates.
    :header: Group	Flows, (:math:`\mu M/s`)
    :align: center
 

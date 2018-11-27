@@ -192,7 +192,7 @@ To obtain n data points between :math:`[H^+]_e` - :math:`[H^+]_f` requires the i
 Procedures
 ==========
 
-.. |ProCoDA_save_gran| image:: Images/ProCoDA_save_gran.png
+.. |ProCoDA_save_gran| image:: ../ProCoDA/Images/Gran_save.png
 
 Determine ANC of Acid Rain Samples
 ----------------------------------
