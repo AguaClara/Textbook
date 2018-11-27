@@ -123,7 +123,7 @@ Equation :eq:`eq_Gas_first_order` can be integrated with appropriate initial con
 
     \ln \frac{C^{*} -C}{C^{*} -C_{0} } =-\hat{k}_{v,l} (t-t_{0} )
 
-Equation :eq:`eq_Gas_linearized` can be evaluated using linear regression so that $\hat{k}_{v,l} $ is the slope of the line.
+Equation :eq:`eq_Gas_linearized` can be evaluated using linear regression so that :math:`\hat{k}_{v,l}` is the slope of the line.
 
 The simple gas transfer model given in equation :eq:`eq_Gas_linearized` is appropriate when the gas transfer coefficient is independent of the dissolved gas concentration. This requirement can be met in systems where the gas bubbles do not change concentration significantly as they rise through the water column. This condition is met when the water column is shallow, the bubbles have large diameters, or the difference between the concentration of dissolved gas and the equilibrium concentration is small.
 
@@ -229,7 +229,7 @@ The dissolved oxygen probes make use of the fact that an applied potential of 0.
 
 .. math::
 
-   4 e${}^{-}$ + 4 H${}^{+}$ + O${}_{2}$ $\mathrm{\to}$ 2 H${}_{2}$O
+   4 e^- + 4 H^+ + O_2 \mathrm{\to} 2 H_2O
 
 The cell is separated from solution by a gas permeable membrane that allows :math:`O_2` to pass through. The concentration of :math:`O_2` in the cell is kept very low by reduction to :math:`H_2O`. The rate at which oxygen diffuses through the gas permeable membrane is proportional to the difference in oxygen concentration across the membrane. The concentration of oxygen in the cell is :math:`\mathrm{\approx}0` and thus the rate at which oxygen diffuses through the membrane is proportional to the oxygen concentration in the solution.
 
@@ -254,14 +254,14 @@ Experimental Methods
 
     Apparatus used to measure reaeration rate.
 
-The reactors are 4 L containers (:numref:`_figure_Schematic`). The DO probe should be placed in a location so as to minimize the risk of air bubbles lodging on the membrane on the bottom of the probe. The aeration stone is connected to a source of regulated air flow. A 7-kPa pressure sensor (optional) can be used to measure the air pressure immediately upstream from the diffuser stone. A 200-kPa pressure sensor is used to measure the air pressure in the accumulator.
+The reactors are 600 mL containers (:numref:`_figure_Schematic`). The DO probe should be placed in a location so as to minimize the risk of air bubbles lodging on the membrane on the bottom of the probe. The aeration stone is connected to a source of regulated air flow. A 7-kPa pressure sensor (optional) can be used to measure the air pressure immediately upstream from the diffuser stone. A 200-kPa pressure sensor is used to measure the air pressure in the accumulator.
 
 Initial Setup
 -------------
 
 
-.. |Open_method| image:: ../ProCoDA/Images/Open_method.png
-.. |Logging_data_short_exp| image:: ../ProCoDA/Images/Logging_data_short_exp.png
+.. |Open_method| image:: ../ProCoDA/Images/Config_open_save_export.png
+.. |Logging_data_short_exp| image:: ../ProCoDA/Images/ProCoDA\Images\config_Logging_data_short_exp.png
 .. |Mode_of_operation| image:: ../ProCoDA/Images/Mode_of_operation.png
 
 Follow these steps to set up the experiment.
@@ -269,7 +269,7 @@ Follow these steps to set up the experiment.
  #. Assemble the apparatus (don't forget the 1.5 mm x 5 cm restriction).
  #. Install the head loss orifice as close to the valve as possible (plug it directly into the valve!).
  #. The ProCoDA II software will be used to control the air flow rate for the aeration experiment. The software will use external code to calculate the calibration constant for the flow restriction, to control valve 1 (the air supply valve), and to regulate the flow of air into the accumulator. The calibration uses the ideal gas law to determine the flow rate as a function of the difference in pressure between the source and the accumulator. Once this calibration is obtained a separate code will set the fraction of time that valve 1 needs to be open to obtain the desired flow rate of air into the accumulator.
- #. Use the |Open_Method| on the ProCoDA configuration tab to load a method file containing the configuration necessary to control airflow. The file is at S:\Courses\4530\GasTransfer2.pcm. You will need to adjust the channels for the accumulator pressure and the DO probe to match where you plugged them in your ProCoDA box. You will also need to make sure that your valves are connected to the correct ports on the ProCoDA box.
+ #. Use the |Open_Method| on the ProCoDA configuration tab to load a method file containing the configuration necessary to control airflow. The file is at ``S:\Courses\4530\GasTransfer2.pcm``. You will need to adjust the channels for the accumulator pressure and the DO probe to match where you plugged them in your ProCoDA box. You will also need to make sure that your valves are connected to the correct ports on the ProCoDA box.
  #. Navigate to the Process Operation tab.
  #. Set the **operator selected state** to toggle.  The solenoid valves should click rhythmically if they are working properly.
  #. Install a membrane on the oxygen probe.
@@ -288,7 +288,7 @@ In the following test, the air flow controller should provide a constant flow of
  #. Open the accumulator cap to empty the accumulator.
  #. Close the accumulator cap.
  #. Close the needle valve.
- #. We can set the air flow rate based on our calibration be navigating to the Configuration tab and selecting edit rules. We want to control the air flow rate, so select air flow rate from the set points and variables list. Set the air flow rate to a value of 200u (200 ?M/s).
+ #. We can set the air flow rate based on our calibration be navigating to the Configuration tab and selecting edit rules. We want to control the air flow rate, so select air flow rate from the set points and variables list. Set the air flow rate to a value of 200u (200 :math:`\mu M`/s).
  #. Begin logging data from the 200kPa pressure sensor (accumulator pressure) at a 1 s interval using the datalog button on the configuration tab. Data is being logged when the icon is green.
  #. Navigate back to process operation tab and set the **operator selected state** to aerate.
  #. End logging data when the accumulator pressure is approximately equal to the source pressure.
@@ -299,15 +299,15 @@ Measure the Gas Transfer
 ------------------------
 
  #. Call the instructor and/or TA to check the system configuration.
- #. The instructor or TA will add 1 mg CoCl2� 6H2O (note this only needs to be added once because it is the catalyst). A stock solution of CoCl2� 6H2O (100 mg/mL -- thus add 10 ?L) has been prepared to facilitate measurement of small cobalt doses. (Use gloves when handling cobalt!)
- #. Prepare to record the dissolved oxygen concentration using ProCoDA software. Use 5-second data intervals and log the data to S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}gastran\_flowrate{\textbackslash} for later analysis. Include the actual flow rate in the file name.
+ #. The instructor or TA will add 0.1 mg :math:`CoCl_2 \cdot 6H_2O` (note this only needs to be added once because it is the catalyst). A stock solution of :math:`CoCl_2 \cdot 6H_2O` (1 mg/mL -- thus add 100 :math:`\mu L`) has been prepared to facilitate measurement of small cobalt doses. (Use gloves when handling cobalt!)
+ #. Prepare to record the dissolved oxygen concentration using ProCoDA software. Use 5-second data intervals and log the data to ``S:\Courses\4530\Group #\gastran\x`` where x is the flow rate in :math:`\mu M/s` for later analysis. Include the actual flow rate in the file name.
  #. Set the airflow rate to the desired flow rate.  Each group will investigate six flowrates.  The instructor will assign the flowrates on the day of the lab exercise.
  #. Set the **operator selected state** to aerate.
  #. Set the needle valve so the pressure in the accumulator is approximately 75\% of the source pressure.
  #. Wait until the accumulator pressure reaches steady state.
  #. Turn the air off by changing the operator selected state to OFF.
  #. Add enough sodium sulfite to deoxygenate the solution. A stock solution of sodium sulfite (100 mg/mL) has been prepared to facilitate measurement of small sulfite doses. Calculate this dose based on the measured dissolved oxygen concentration. (4 L of water at :math:`C_{oxygen}\; mg \; O_2/L = 4\; C_{oxygen}\; mg\; O_2`, therefore add :math:`4 (7.875) C_{oxygen}` mg sodium sulfite or :math:`4(7.875)(C_{oxygen})/100 mL` of stock solution.)
- #. Turn the air on by changing the \textbf{\textit{operator selected state}} to Aerate.
+ #. Turn the air on by changing the **operator selected state** to Aerate.
  #. Monitor the dissolved oxygen concentration until it reaches 50\% of saturation value or 10 minutes (whichever is shorter).
  #. Repeat steps 3-11 to collect data from at least two additional flow rates.
  #. Consolidate the files into one spreadsheet file with a separate sheet for each flow rate.
@@ -346,7 +346,7 @@ This lab requires a significant amount of repetitive data analysis. Plan how you
     | :math:`P_{O_{2} }` is the partial pressure of oxygen in atmospheres, and
     | :math:`C^{\star} ` is in mg/L. This equation is valid for 278 K < T < 318 K.
 
- #.  Estimate $\hat{k}_{v,l} $ using linear regression and equation :eq:`eq_Gas_linearized` for each data set.
+ #.  Estimate :math:`\hat{k}_{v,l}` using linear regression and equation :eq:`eq_Gas_linearized` for each data set.
  #. Create a graph with a representative plot showing the linearized data, :math:`\left(\ln \frac{C^{\star} -C}{C^{\star} -C_{0} } \right)` vs. time, and the best-fit line.
  #. Plot the reaeration model on the same graph as the dissolved oxygen vs. time data.  This is done by solving equation for C.
  #. Plot :math:`\hat{k}_{v,l}` as a function of airflow rate (:math:`\mu mole/s`).
@@ -369,12 +369,15 @@ References}
 Lab Prep Notes
 ==============
 
-\begin{tabular}{|p{0.7in}|p{0.7in}|p{0.7in}|} \hline
-\multicolumn{3}{|p{1in}|}{Table 1- #. Reagent list\textbf{}} \\ \hline
-\textbf{Description} & \textbf{Supplier} & \textbf{Catalog number} \\ \hline
-Na2SO3 & Fisher Scientific & S430-500 \\ \hline
-CoCl2� 6H2O & Fisher Scientific & C371-100 \\ \hline
-\end{tabular}
+.. _table_Gas_reagent_list:
+
+.. csv-table:: Reagent list.
+    :header: Description,	Supplier,	Catalog number
+    :widths: 20, 20, 10
+    :align: center
+
+    :math:`Na_2SO_3`, Fisher Scientific, S430-500
+    :math:`CoCl_2 \cdot 6H_2O`, Fisher Scientific, C371-100
 
 
 Setup
@@ -386,45 +389,19 @@ Setup
  #. Provide clamps to mount DO probes on magnetic stirrers.
  #. Determine maximum airflow rate that is reasonable given small reactor volume.
 
- \begin{tabular}{|p{0.4in}|p{0.3in}|p{0.3in}|p{0.3in}|p{0.3in}|p{0.4in}|} \hline
- \multicolumn{6}{|p{1in}|}{Table 1-2. Stock solutions list} \\ \hline
- \textbf{reagent} & M.W. & g/100 mL & mg/ mL & mL/\newline group & solubility g/L \\ \hline
- Na2SO3 & 126.04 & 10 g & 100 & 10 & 125 \\ \hline
- CoCl2� 6H2O & 237.92 & 10 g & 100 & 1 & 770 \\ \hline
- \end{tabular}
+.. _table_Gas_reagent_list:
 
- \begin{tabular}{|p{0.7in}|p{0.7in}|p{0.7in}|} \hline
- \multicolumn{3}{|p{1in}|}{Table 1-3. Equipment list\textbf{}} \\ \hline
- \textbf{Description} & \textbf{Supplier} & \textbf{Catalog number} \\ \hline
- magnetic stirrer & Fisher Scientific & 11-500-7S \\ \hline
- 100-1095 �L pipette & Fisher Scientific & 13-707-5 \\ \hline
- 10-109.5 �L pipette & Fisher Scientific & 13-707-3 \\ \hline
- 15 mL PP bottles & Fisher Scientific & 02-923-8G \\ \hline
- Solenoid valves &  &  \\ \hline
- Stamp control boxes &  &  \\ \hline
- Pressure sensors &  &  \\ \hline
- 1 L airflow accumulators &  &  \\ \hline
- \end{tabular}
+.. csv-table:: Reagent list.
+   :header: Group	Flows, (:math:`\mu M/s`)
+   :align: center
 
-Major elements of apparatus
----------------------------
+   1,	"200, 250, 300"
+   2,	"350, 400, 450"
+   3,	"500, 600, 700"
+   4,	"800, 900, 1000"
+   5,	"1200, 1500, 2000"
+   6,	"3000, 4000, 5000"
 
- #. air flow hardware (built by students)
- #. reactor hardware (built by students)
- #. sensors (plugged in to ports by TA)
- #. solenoid valves (already plugged in to ports by TA)
- #. software
-
-
-\begin{tabular}{|p{0.3in}|p{0.9in}|} \hline
-Group & Flows (?M/s) \\ \hline
-1 & 200, 250, 300 \\ \hline
-2 & 350, 400, 450 \\ \hline
-3 & 500, 600, 700 \\ \hline
-4 & 800, 900, 1000 \\ \hline
-5 & 1200, 1500, 2000 \\ \hline
-6 & 3000, 4000, 5000 \\ \hline
-\end{tabular}
 
 
 Class Plan
@@ -478,7 +455,7 @@ Substituting these relationships into equation :eq:`eq_Gas_Re` for Reynolds numb
 
 For the air flow controller used in the lab the following values are obtained
 
- :math:`\dot{n}` max flow is about 10,000 :math:`\mu M/s` :math:`M_{gas}` is 0.029 kg/M, and :math:`\mu` is :math:`1.8 x 10^{-5} Ns/m${}^{2}`.
+ :math:`\dot{n}` max flow is about 10,000 :math:`\mu M/s` :math:`M_{gas}` is 0.029 kg/M, and :math:`\mu` is :math:`1.8 x 10^{-5} Ns/m^2`.
 
 .. math::
 

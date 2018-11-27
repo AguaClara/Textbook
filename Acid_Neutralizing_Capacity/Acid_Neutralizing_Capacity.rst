@@ -23,7 +23,7 @@ The ANC for a typical carbonate-containing sample is defined as:
 .. math::
     :label: eq_ANC_definition
 
-    ANC = [HCO_3^-]+2[CO_3^{-2} ]+{[OH}^{-} ] - [H^+]
+    ANC = [HCO_3^-]+2[CO_3^{-2} ]+{[OH}^- ] - [H^+]
 
 Equation :eq:`eq_ANC_definition` can be derived from a charge balance if ANC is considered to be the cation contributed by a strong base titrant and if other ions present do not contribute significantly.
 
@@ -206,7 +206,7 @@ Determine the ANC for all samples collected from the Acid Lake Remediation lab. 
  #. If the initial pH is less than 4.5 no titration is necessary and equation :eq:`eq_Gran_pH_lt4` can be used to calculate the ANC.
  #. Record the initial pH (prior to adding any titrant) and initial sample volume.
  #. Analyze the sample using :ref:`Gran plot analysis <heading_Gran_Plot>`.  Add 0.05 N HCl (the titrant) using a digital pipette in increments of 0.100 mL.
- #. Save the Gran data to S:\Courses\4530\Group #\Lab 2 – Acid\group#_gran by selecting |ProCoDA_save_gran|. The data will be saved in a file (tab delimited format) that can be opened by any spreadsheet program. You will use this data to plot a titration curve and to verify that the Gran technique accurately measures the ANC of a sample.
+ #. Save the Gran data to ``S:\Courses\4530\Group #\ANC\Gran`` by selecting |ProCoDA_save_gran|. The data will be saved in a tab delimited format. You will use this data to plot a titration curve and to verify that the Gran technique accurately measures the ANC of a sample.
  #. Record the ANC and the equivalent volume.
 
  If the error is greater than 2\% then check your pipette technique using a balance and then repeat the titration.
@@ -249,25 +249,15 @@ References
 Lab Prep Notes
 ==============
 
- Table \label{1}. Reagent list.
+.. _table_ANC_reagent_list:
 
-\begin{tabular}{|p{0.7in}|p{0.7in}|p{0.7in}|} \hline
-\textbf{Description} & \textbf{Supplier} & \textbf{Catalog number} \\ \hline
-HCl 5.0 N & Fisher Scientific & LC15360-2 \\ \hline
-Buffer-Pac & Fisher Scientific & SB105 \\ \hline
- &  &  \\ \hline
-\end{tabular}
+.. csv-table:: Reagent list.
+    :header: Description,	Supplier,	Catalog number
+    :widths: 20, 20, 10
+    :align: center
 
-Table \label{2}. Equipment list
-
-\begin{tabular}{|p{0.7in}|p{0.7in}|p{0.7in}|} \hline
-\textbf{Description} & \textbf{Supplier} & \textbf{Catalog number} \\ \hline
-Accumet$\mathrm{{}^{TM}}$ 50 pH meter & Fisher Scientific & 13-635-50 \\ \hline
- pH electrode & Fisher Scientific & 13-620-108 \\ \hline
-7x7 stirrer & Fisher Scientific & 11-500-7S \\ \hline
-stirbar 1/2" long & Fisher Scientific & 14-511-62 \\ \hline
-100 mL Fisher beaker & Fisher Scientific & 02-593-50B \\ \hline
-\end{tabular}
+    "HCl 5.0 N",	"Fisher Scientific",	LC15360-2
+    Buffer-Pac,	"Fisher Scientific",	SB105
 
 
 .. _heading_ANC_Setup:

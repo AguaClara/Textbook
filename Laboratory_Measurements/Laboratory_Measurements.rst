@@ -184,7 +184,9 @@ Submit one spreadsheet containing the data sheet, exported absorbance data, grap
  #. Create a graph of absorbance vs. concentration of red dye #40 in Atom using the exported data file. Does absorbance increase linearly with concentration of the red dye?
  #. What is the value of the extinction coefficient, :math:`\varepsilon`?
  #. Did you use interpolation or extrapolation to get the concentration of the unknown?
- #. What measurement controls the accuracy of the density measurement for the NaCl solution? What density did you expect (see prelab 2)? Approximately what should the accuracy be?
+ #. What measurement controls the accuracy of the density measurement for the NaCl solution?
+ #. What density did you expect (see prelab 2)?
+ #. Approximately what should the accuracy be?
  #. Don't forget to write a brief paragraph on conclusions and on suggestions using Markdown.
  #. Verify that your report and graphs meet the requirements as outlined in the course materials.
 
@@ -194,42 +196,14 @@ Submit one spreadsheet containing the data sheet, exported absorbance data, grap
 Lab Prep Notes
 ==============
 
- Table 2-2. Reagent list.
-
-\begin{tabular}{|p{0.7in}|p{0.7in}|p{0.7in}|} \hline
-\textbf{\newline Description} & \textbf{\newline Supplier} & \textbf{Catalog number} \\ \hline
-NaCl & Fisher Scientific &  BP358-1  \\ \hline
-Methylene blue & Fisher Scientific & M291-25 \\ \hline
-\end{tabular}
-
-Table 2-3. Equipment list
-
-\begin{tabular}{|p{1.1in}|p{1.1in}|p{0.8in}|} \hline
-\textbf{\newline Description} & \textbf{\newline Supplier} & \textbf{Catalog number} \\ \hline
-Calibra 100-1095 �L & Fisher Scientific & 13-707-5 \\ \hline
-Calibra 10-109.5 �L & Fisher Scientific & 13-707-3 \\ \hline
-DI 100 analytical toploader & Fisher Scientific & 01-913-1A \\ \hline
-DI-800 Toploader & Fisher Scientific & 01-913-1C \\ \hline
-100 mL volumetric & Fisher Scientific & 10-198-50B \\ \hline
-UV-Vis spectrophotometer & Hewlett-Packard Company & 8452A \\ \hline
-\end{tabular}
-
-Table 2-4. Methylene Blue Stock Solution
-
-\begin{tabular}{|p{0.6in}|p{0.5in}|p{0.6in}|p{0.5in}|} \hline
-\textbf{Description} & \textbf{MW (g/M)} & \textbf{conc. (g/L)} & \textbf{100 mL} \\ \hline
-C16H18N3SCl & 319.87 & 1 & 100.0 mg \\ \hline
-\end{tabular}
-
-
 
 
 .. _heading_Laboratory_Measurements_and_Procedures_Setup:
 
 Setup
 =====
- #. Prepare stock methylene blue solution and distribute to student workstations in 20 mL vials.
- #. Prepare 100 mL of unknown in concentration range of standards. Divide into two bottles (one for each spectrophotometer).
+ #. Prepare stock red dye #40 solution and distribute to student workstations in 20 mL vials.
+ #. Prepare 1 L of unknown in concentration range of standards. Divide into six 150 mL bottles (one for each student bench (teams/2)).
  #. Verify that spectrophotometers are working (prepare a calibration curve as a test).
  #. Verify that balances calibrate easily.
  #. Disassemble, clean, and lubricate all pipettes.

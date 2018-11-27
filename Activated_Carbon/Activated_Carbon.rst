@@ -99,32 +99,36 @@ Red Dye \# 40 Calibration Curve (week 1)
  #. Use the known samples to verify that all of the standards were accurately prepared and measured. This is important because these standards will be used to measure the concentrations in both the isotherm and contactor studies.
 
 
-\begin{tabular}{|p{0.6in}|p{0.5in}|p{0.6in}|p{0.5in}|p{0.6in}|} \hline
-\multicolumn{5}{|p{1in}|}{Table \label{ZEqnNum208070}. Isotherm sample preparation guide.} \\ \hline
-Recommended Mass of AC(mg) & Actual Mass of AC\newline (mg) & Red Dye \#40 initial concentration (mg/L) & Volume of 10 g/L Red Dye in 100 mL (mL) & Red Dye \#40 final concentration (mg/L) \\ \hline
-100 &  & 0 & 0 &  \\ \hline
-100 &  & 50 & 0.5 &  \\ \hline
-100 &  & 60 & 0.6 &  \\ \hline
-100 &  & 70 & 0.7 &  \\ \hline
-100 &  & 85 & 0.85 &  \\ \hline
-100 &  & 100 & 1 &  \\ \hline
-100 &  & 120 & 1.2 &  \\ \hline
-100 &  & 150 & 1.5 &  \\ \hline
-100 &  & 190 & 1.9 &  \\ \hline
-100 &  & 250 & 2.5 &  \\ \hline
-100 &  & 300 & 3 &  \\ \hline
-100 &  & 400 & 4 &  \\ \hline
-\end{tabular}
-
 
 Adsorption Isotherm (week 1)
 ----------------------------
 
 Each group will prepare the following samples so the replicates can be combined to obtain more reliable isotherm data.
 
- #. Prepare 12 120-mL glass serum bottles using Table \eqref{ZEqnNum208070} as a guide.
+ #. Prepare 12 120-mL glass serum bottles using :numref:`table_Isotherm` as a guide.
  #. Seal with Teflon-lined rubber septa and aluminum crimp caps.
  #. Agitate the bottles vigorously on a wrist-action or orbital shaker for 5 to 7 days.
+
+.. _table_Isotherm:
+
+.. csv-table:: Isotherm sample preparation guide.
+    :header: "Recommended Mass of AC (mg)",	"Actual Mass of AC (mg)",	"Red Dye #40 initial concentration (mg/L)",	"Volume of 10 g/L Red Dye in 100 mL (mL)",	"Red Dye #40 final concentration (mg/L)"
+    :widths: 20, 20, 20, 20, 20
+    :align: center
+
+    100, ,0, 0,
+    100, ,50, 0.5,
+    100, ,60, 0.6,
+    100, ,70,	0.7,
+    100, ,85,	0.85,
+    100, ,100,	1,
+    100, ,120,	1.2,
+    100, ,150,	1.5,
+    100, ,190,	1.9,
+    100, ,250,	2.5,
+    100, ,300,	3,
+    100, ,400,	4,
+
 
 
 Adsorption Isotherm Sample Analysis (week 2)
@@ -151,21 +155,34 @@ Contactor Procedures
 Continuous-Flow Carbon Contactor Setup (week 1)
 -----------------------------------------------
 
-\begin{tabular}{|p{2.8in}|} \hline
-\includegraphics*[width=4.11in, height=1.83in, keepaspectratio=false]{image2}\newline Figure \label{ZEqnNum217028}. Schematic of Carbon contactor.\newline  \\ \hline
-\end{tabular}
 
-Assemble the system shown in Figure \eqref{ZEqnNum217028}. Use a peristaltic pump with \#14 tubing at approximately 10 rpm. Prepare 2-20 L jerricans with 50 mg/L of Red dye \#40. Use distilled water to dilute the dye. The carbon contactor will be operated in down flow mode. The specifications for the carbon contactors are given in Table \eqref{ZEqnNum743744}. Set up a daily sample schedule.
+Assemble the system shown in :numref:`figure_Schematic`. Use a peristaltic pump with \#14 tubing at approximately 10 rpm. Prepare 2-20 L jerricans with 50 mg/L of Red dye \#40. Use reverse osmosis water to dilute the dye. The carbon contactor will be operated in down flow mode. The specifications for the carbon contactors are given in Table :numref:`table_carbon_contactor_settings`. Set up a daily sample schedule.
 
  #. Pump distilled water into the column from the bottom to a depth of 10 cm.
  #. Pour 27 g of activated carbon into a beaker containing distilled water.
  #. Swirl the carbon until most of the air is released.
 
-\begin{tabular}{|p{2.1in}|} \hline
-\newline Parameters \newline Influent red dye Concentration        0.050  g/L \newline Depth of carbon 15 cm \newline Influent flow rate 2.5 ml/min \newline ~  ~ \newline Fixed values \newline Column diameter 2.5 cm \newline Carbon bulk density 0.375 g/cm${}^{3}$ \newline ~  ~ \newline Calculated values \newline Mass of carbon 27.61 g \newline q        0.080  g/g \newline g red dye for breakthrough          2.21  g \newline Mass flux of red dye    0.00013  g/min \newline Volume of stock required 44.2 Liters \newline Estimated breakthrough 17671 min \newline ~ 12.3 days \newline Mass of red dye/20 L 1.00 g \newline Table \label{ZEqnNum743744}. Carbon contactor settings. \\ \hline
-\end{tabular}
+.. _table_carbon_contactor_settings:
 
- #. )Use a funnel and a distilled water wash bottle to wash the distilled water from the beaker into the column.
+.. csv-table:: Carbon contactor settings.
+   :header: Parameter,	Value
+   :widths: 20, 20
+   :align: center
+
+  Influent red dye Concentration,        0.050  g/L
+  Depth of carbon, 15 cm
+  Influent flow rate, 2.5 ml/min
+  Column diameter, 2.5 cm
+  Carbon bulk density, 0.375 :math:`g/cm^3`
+  Mass of carbon, 27.61 g
+  q, 0.080  g/g
+  red dye mass at breakthrough, 2.21  g
+  Mass flux of red dye, 0.00013  g/min
+  Volume of stock required, 44.2 Liters
+  Estimated breakthrough, 17671 min (12.3 days)
+  Mass of red dye/20 L, 1.00 g
+
+ #. Use a funnel and a distilled water wash bottle to wash the distilled water from the beaker into the column.
  #. Use a 50 mL syringe to remove excess water from the top of the column if necessary.
  #. Use a long rod to gently stir activated carbon to help release air bubbles.
  #. Assemble the column end fitting.
@@ -211,7 +228,7 @@ Contactor Results and Analysis
 
 Alternatively, note that the Langmuir isotherm fit can be conveniently employed. The Langmuir is a special case of the generalized isotherm, where :math:`r=\frac{1}{1+KC_{0} }` (with K being the Langmuir constant). Q can be estimated from the Langmuir isotherm by substituting the column's influent Red Dye \#40 concentration for :math:`C_0`.
 
-What value of k', the effective mass-transfer coefficient, gives best fit to the shape of your breakthrough curve? [Note: If the observed midpoint of breakthrough was significantly displaced in time (or volume treated) from that predicted from your isotherm, you should use your experimentally observed S value, rather than the theoretically predicted one. That way, you'll only have to deal with effects of k' on shape, rather than absolute position, of breakthrough.] If we had generated breakthrough curves at several values of hydraulic loading, we could empirically relate $k'$ to hydraulic loading for evaluating design and operating alternatives.
+What value of k', the effective mass-transfer coefficient, gives best fit to the shape of your breakthrough curve? [Note: If the observed midpoint of breakthrough was significantly displaced in time (or volume treated) from that predicted from your isotherm, you should use your experimentally observed S value, rather than the theoretically predicted one. That way, you'll only have to deal with effects of k' on shape, rather than absolute position, of breakthrough.] If we had generated breakthrough curves at several values of hydraulic loading, we could empirically relate :math:`k'` to hydraulic loading for evaluating design and operating alternatives.
 
 
  #. Provide the usual discussion of error sources and suggestions for improvement.
@@ -221,6 +238,18 @@ What value of k', the effective mass-transfer coefficient, gives best fit to the
 
 Lab Prep Notes
 ==============
+
+
+.. _table_ANC_reagent_list:
+
+.. csv-table:: Reagent list.
+    :header: Description,	Supplier,	Catalog number
+    :widths: 20, 20, 10
+    :align: center
+
+    activated carbon,	,
+    red dye #40, ,
+
 
  #. Verify that all necessary supplies are in place for the pumps, tanks, column, valves, and tubing.
  #. Prepare the Red Dye \#40 stock solution.

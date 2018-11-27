@@ -274,8 +274,8 @@ The experimental apparatus consists of an acid rain storage reservoir, peristalt
 Procedures
 ==========
 
-.. |Log_data| image:: ../ProCoDA/Images/Log_data.png
-.. |Log_text_comment| image:: ../ProCoDA/Images/Log_text_comment.png
+.. |Log_data| image:: ../ProCoDA/Images/config_Logging_data_short_exp.png
+.. |Log_text_comment| image:: ../ProCoDA/Images/config_log_text_comment.png
 
 The following directions are written for the use of ProCoDA II hardware and software for pH data collection and manual control of the peristaltic pump. It would also be possible to use automate the experiment and control the pump using the ProCoDA II hardware and software.
 
@@ -286,17 +286,20 @@ We will use a pH probe to measure pH in this experiment. The pH probes are store
  #. Organize the bench setup so that the metal tube discharging the acid rain into the lake is solidly touching the metal stand that is connected to the stirrer. This will ground the solution that is in the lake and reduce voltage fluctuations that are easily measured by the pH probe.
  #. Preset pump to give desired flow rate of 267 mL/min (4 L/15 minutes) based on the size of pump tubing selected. Do not turn the pump on yet! For each tubing size, different pump speeds will correspond to different flow rates being output by the pump. The peristaltic tubing sizes are rather arbitrary and are labeled by numbers: 13, 14, 16, 17, and 18 in increasing order of size. If you have \#18 tubing, you will want an RPM setting of (267 mL/min) / (3.8 mL/rev) = 70.3 RPM.
 
+.. _table_Acid_pump_tubing:
+
+.. csv-table:: Pump tubing selection.
+    :header:  ,Tubing Size , 13 , 14 , 16 , 17 , 18
+    :align: center
 
 
 
-\begin{tabular}{|p{0.4in}|p{0.9in}|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|} \hline
- & Tubing Size & 13 & 14 & 16 & 17 & 18 \\ \hline
- & RPM/ID (mm) & 0.8 & 1.6 & 3 & 6.3 & 8 \\ \hline
-flow rate in mL/s & 1 & 0.0010 & 0.0035 & 0.0133 & 0.0467 & 0.0633 \\ \hline
- & 50 & 0.0500 & 0.1750 & 0.6667 & 2.3333 & 3.1667 \\ \hline
- & 100 & 0.1000 & 0.3500 & 1.3333 & 4.6667 & 6.3333 \\ \hline
- & mL/rev & 0.06 & 0.21 & 0.80 & 2.8 & 3.8 \\ \hline
-\end{tabular}
+    ,RPM/ID (mm) , 0.8 , 1.6 , 3 , 6.3 , 8
+    flow, 1, 0.0010 , 0.0035 , 0.0133 , 0.0467 , 0.0633
+    rate, 50, 0.0500 , 0.1750 , 0.6667 , 2.3333 , 3.1667
+    in, 100, 0.1000 , 0.3500 , 1.3333 , 4.6667 , 6.3333
+    mL/s, mL/rev, 0.06 , 0.21 , 0.80 , 2.8 , 3.8
+
 
 
 
@@ -307,27 +310,22 @@ flow rate in mL/s & 1 & 0.0010 & 0.0035 & 0.0133 & 0.0467 & 0.0633 \\ \hline
  #. Add NaHCO3 to the lake.
  #. After the lake is well stirred take a 100 mL sample from the lake in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample).
  #. Clip the pH probe to the side of your lake in a more quiescent zone, away from the influent and effluent.
- #. We will continuously measure the pH of the effluent and log the data into a spreadsheet format.  In the pH meter software, set the data interval to 1 second.
-
-
- Begin logging data to file by clicking on the |Log_data| button. Create a new file in S:{\textbackslash}Courses{\textbackslash}4530{\textbackslash}Group \#{\textbackslash}Lab 2 -- Acid Rain{\textbackslash} with your netids in the name.
-
+ #. We will continuously measure the pH of the effluent and log the data into a tab delimited file.  Set the data interval to 1 second.
+ Begin logging data to file by clicking on the |Log_data| button. Create a new file in ``S:\Courses\4530\Group #\Lab 2 – Acid Rain``.
  #. Prepare to write a comment in the file to mark the time when the pump starts by clicking on the |Log_text_comment| button. Type in a comment and then wait.
  #. At time equal zero (t=0) start the peristaltic pump and click on the enter button in the comment dialog box.
  #. Take 100-mL grab samples from the lake effluent at 5, 10, 15, and 20 minutes in the plastic sample bottle on your bench.  Don't forget to label the sample bottle (include the time of the sample). The sample volumes do not need to be measured exactly.
  #. After the 20-minute sample, measure the flow rate by collecting effluent in a beaker for 30 seconds and measuring the volume collected (in a graduated cylinder for more accurate measurement).
  #. Turn off the pump and stop measuring pH.
  #. Measure the lake volume.  This can be done in a large graduated cylinder OR by taking the mass of the water in the lake.  Which would be more accurate?
- #. )Repeat the experiment and change one of the following parameters: stirring, initial ANC, ANC source (use CaCO${}_{3}$ instead of NaHCO${}_{3}$), amount if ANC added.
-
-
+ #. )Repeat the experiment and change one of the following parameters: stirring, initial ANC, ANC source (use :math:`CaCO_3` instead of :math:`NaHCO_3`), or amount of ANC added.
 
 .. _heading_Acid_Rain_pH_Measurement:
 
 pH Measurement
 ==============
 
-*pH*. pH :math:`(-log\mathrm{\{}$H+\mathrm{\}})` is usually measured electrometrically with a pH meter. The pH meter is a null-point potentiometer that measures the potential difference between an indicator electrode and a reference electrode. The two electrodes commonly used for pH measurement are the glass electrode and a reference electrode. The glass electrode is an indicator electrode that develops a potential across a glass membrane as a function of the activity (:math:`\mathrm{\sim}` molarity) of :math:`H^+`. Combination pH electrodes, in which the :math:`H^+`-sensitive and reference electrodes are combined within a single electrode body will be used in this lab. The reference electrode portion of a combination pH electrode is a [Ag/AgCl/4M KCl] reference. The response (output voltage) of the electrode follows a "Nernstian" behavior with respect to :math:`H^+` ion activity.
+*pH*. pH :math:`\left(-log \left\{ H^+ \right\} \right)` is usually measured electrometrically with a pH meter. The pH meter is a null-point potentiometer that measures the potential difference between an indicator electrode and a reference electrode. The two electrodes commonly used for pH measurement are the glass electrode and a reference electrode. The glass electrode is an indicator electrode that develops a potential across a glass membrane as a function of the activity (:math:`\mathrm{\sim}` molarity) of :math:`H^+`. Combination pH electrodes, in which the :math:`H^+`-sensitive and reference electrodes are combined within a single electrode body will be used in this lab. The reference electrode portion of a combination pH electrode is a [Ag/AgCl/4M KCl] reference. The response (output voltage) of the electrode follows a "Nernstian" behavior with respect to :math:`H^+` ion activity.
 
 .. math::
 
@@ -352,7 +350,7 @@ A 50 to 100-mL sample is usually titrated while slowly stirred by a magnetic sti
 
 .. math::
 
-    {ANC\; =}\frac{{(equivalent\; vol.)(normality\; of\; titrant)}}{{(vol.\; of\; sample)}}
+    ANC = \frac{{(equivalent\; vol.)(normality\; of\; titrant)}}{{(vol.\; of\; sample)}}
 
 A more accurate technique to measure ANC is the Gran plot analysis. This is the subject of next week's analysis. We will directly measure the ANC of the samples that were taken at t=0, 5, 10, 15, and 20 minutes in both of your experiments by means of a Gran plot analysis.
 
@@ -363,7 +361,7 @@ A more accurate technique to measure ANC is the Gran plot analysis. This is the 
 Pre-Laboratory Questions
 ========================
 
- #. How many grams of NaHCO3 would be required to keep the ANC levels in a lake above 50 �eq/L for 3 hydraulic residence times given an influent pH of 3.0 and a lake volume of 4 L, if the current lake ANC is 0 :math:`\mu eq/L`?
+ #. How many grams of :math:`NaHCO_3` would be required to keep the ANC levels in a lake above 50 :math:`\mu eq/L` for 3 hydraulic residence times given an influent pH of 3.0 and a lake volume of 4 L, if the current lake ANC is 0 :math:`\mu eq/L`?
 
 
 .. _heading_Acid_Rain_Data_Analysis:
@@ -371,9 +369,9 @@ Pre-Laboratory Questions
 Data Analysis
 =============
 
-K1 = 10-6.3, placeK2 = 10-10.3, KH = 10-1.5~mol/atm~L, PCO2~=~10-3.5 atm, and Kw = 10-14.
+:math:`K_1 = 10^{-6.3}`, :math:`K_2 = 10^{-10.3}`, :math:`K_H = 10^{-1.5} \frac{mol}{L atm}`, :math:`P_{CO_2}=10^{-3.5} atm`, and :math:`K_w = 10^{-14}`.
 
- #. Plot measured pH of the lake versus dimensionless hydraulic residence time (t/?).
+ #. Plot measured pH of the lake versus dimensionless hydraulic residence time (t/:math:`\theta`).
  #. Assuming that the lake can be modeled as a completely mixed flow reactor and that ANC is a conservative parameter, equation :eq:`eq_ANC0_CMFR` can be used to calculate the expected ANC in the lake effluent as the experiment proceeds. Graph the expected ANC in the lake effluent versus the hydraulic residence time (:math:`t/ \theta`) based on the completely mixed flow reactor equation with the plot labeled (in the legend) as conservative ANC.
  #. If we assume that there are no carbonates exchanged with the atmosphere during the experiment, then we can calculate ANC in the lake effluent by using equation :eq:`eq_ANC_nonvolatile` describing the ANC of a closed system. Calculate the ANC under the assumption of a closed system and plot it on the same graph produced in answering question \#3 with the plot labeled (in the legend) as closed ANC.
  #. If we assume that there is exchange with the atmosphere and that carbonates are at equilibrium with the atmosphere, then we can calculate ANC in the lake effluent by using equation :eq:`eq_ANC_volatile` describing the ANC of an open system. Calculate the ANC under the assumption of an open system and plot it on the same graph produced in answering question \#3 with the plot labeled (in the legend) as open ANC.
@@ -387,9 +385,9 @@ Questions
 
  #. What do you think would happen if enough :math:`NaHCO_3` were added to the lake to maintain an ANC greater than :math:`50 \mu eq/L` for 3 residence times with the stirrer turned off? How much :math:`NaHCO_3` would need to be added?
  #. What are some of the complicating factors you might find in attempting to remediate a lake using :math:`CaCO_3`? Below is a list of issues to consider.
- #.  extent of mixing
- #.  solubility of :math:`CaCO_3` (find the solubility and compare with :math:`NaHCO_3`)
- #.  density of :math:`CaCO_3` slurry (find the density of :math:`CaCO_3`)
+     #.  extent of mixing
+     #.  solubility of :math:`CaCO_3` (find the solubility and compare with :math:`NaHCO_3`)
+     #.  density of :math:`CaCO_3` slurry (find the density of :math:`CaCO_3`)
 
 
 .. _heading_Acid_Rain_References:
@@ -421,36 +419,21 @@ References
 Lab Prep Notes
 ==============
 
-\begin{tabular}{|p{0.7in}|p{0.7in}|p{0.7in}|} \hline
-\multicolumn{3}{|p{1in}|}{Table \label{1}. Reagents\newline \textbf{}} \\ \hline
-\textbf{Description} & \textbf{Supplier} & \textbf{Catalog number} \\ \hline
-HCL 5.0 N & Fisher Scientific & LC15360-2 \\ \hline
-H2SO4 5N & Fisher Scientific & LC25840-2 \\ \hline
-CaCO3 & Fisher Scientific & C63-3 \\ \hline
-Na2CO3 & Fisher Scientific & S263-500 \\ \hline
-Buffer-Pac & Fisher Scientific & SB105 \\ \hline
-NaHCO3 & Fisher Scientific & S233-500 \\ \hline
-Bromocresol Green & Fisher Scientific & B383-5 \\ \hline
-ethanol & Fisher Scientific & A962P-4 \\ \hline
-\end{tabular}
+.. _table_Acid_reagent_list:
 
+.. csv-table:: Reagent list.
+    :header: Description,	Supplier,	Catalog number
+    :widths: 20, 20, 10
+    :align: center
 
-
-\begin{tabular}{|p{0.7in}|p{0.7in}|p{0.7in}|} \hline
-\multicolumn{3}{|p{1in}|}{Table \label{2}. Equipment list\newline \textbf{}} \\ \hline
-\textbf{Description} & \textbf{Supplier} & \textbf{Catalog number} \\ \hline
-magnetic stirrer & Fisher Scientific & 11-500-7S \\ \hline
-floating stir bar & Fisher Scientific & 14-511-99A \\ \hline
-Accumet$\mathrm{{}^{TM}}$ 50 pH meter & Fisher Scientific & 13-635-50 \\ \hline
-100-1095 �L pipette & Fisher Scientific & 13-707-5 \\ \hline
-10-109.5 �L pipette & Fisher Scientific & 13-707-3 \\ \hline
-pH electrode & Fisher Scientific & 13-620-108 \\ \hline
-6 L container (lake) & Fisher Scientific & 03-484-22 \\ \hline
-Easy load pump head & Cole Parmer & H-07518-00 \\ \hline
-digital pump drive & Cole Parmer & H-07523-30\_ \\ \hline
-PharMed tubing size 18 & Cole Parmer & H-06485-17 \\ \hline
-20 liter HDPE Jerrican & Fisher Scientific & 02-961-50C \\ \hline
-\end{tabular}
+    HCL 5.0 N, Fisher Scientific, LC15360-2
+    H2SO4 5N, Fisher Scientific, LC25840-2
+    CaCO3, Fisher Scientific, C63-3
+    Na2CO3, Fisher Scientific, S263-500
+    Buffer-Pac, Fisher Scientific, SB105
+    NaHCO3, Fisher Scientific, S233-500
+    Bromocresol Green, Fisher Scientific, B383-5
+    ethanol, Fisher Scientific, A962P-4
 
 
 Bromocresol Green Indicating Solution
@@ -462,7 +445,7 @@ Prepare solution of 400 mg Bromocresol green/100 mL ethanol. Add 0.2 mL of indic
 Acid rain
 ---------
 
-Acid rain is at pH 3.0. Prepare from distilled water. Add 1 meq :math:`H_2SO_4`/L (:math:`[H^+]` at pH 3.0) to obtain a pH of 3.0. To acidify 20 liters of distilled water using 10 N :math:`H_2SO_4`:
+Acid rain is at pH 3.0. Prepare from reverse osmosis water. Add 1 meq :math:`H_2SO_4`/L (:math:`[H^+]` at pH 3.0) to obtain a pH of 3.0. To acidify 20 liters of distilled water using 10 N :math:`H_2SO_4`:
 
 .. math::
 

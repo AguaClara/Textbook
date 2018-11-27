@@ -44,4 +44,4 @@ References
 Lab Setup
 =========
 
-For 6 weeks of operation of 4 plants prepare 20 L of  100x organic stock. Mix in a 20 L Jerrican and use a power mixer inserted through the opening to mix after the addition of each chemical. Store 100x stock in a refrigerator.
+For 6 weeks of operation of 4 plants prepare 20 L of 100x organic stock. Mix in a 20 L Jerrican and use a power mixer inserted through the opening to mix after the addition of each chemical. Store 100x stock in a refrigerator.
