@@ -44,7 +44,7 @@ From the determination of the filter body size the branch and trunk manifolds ar
 
 All of these values are defined as minimum. Another important value determined by the  filter body size is the area of the filter which is defined as: :math:`ID_{pipe}^2 / 4`. This becomes important later in determination of the mass of sand needed.
 
-The pipe sizes recommended in this section come from certain assumptions of the amount of head required to use the filter. In November 2018, the different in elevation of the water level from the exit tank to the entrance tank was increased to 75cm (from around 45cm) so that extra headloss in the manifold system does not influence filter functionality as has been seen in the field. This additional head will allow smaller manifold pipes to be used, as the added head loss in smaller pipes (from the increase of velocity) will not overcome the entrance and exit heights. Smaller manifold pipes will mean the entrance and exit tanks can stay narrower, though taller.
+The pipe sizes recommended in this section come from certain assumptions of the amount of head required to use the filter. In November 2018, the different in elevation of the water level from the exit tank to the entrance tank was increased to 75cm (from around 45cm) so that extra head loss in the manifold system does not influence filter functionality as has been seen in the field. This additional head will allow smaller manifold pipes to be used, as the added head loss in smaller pipes (from the increase of velocity) will not overcome the entrance and exit heights. Smaller manifold pipes will mean the entrance and exit tanks can stay narrower, though taller.
 
 Sand Layer Thickness
 ===========================
@@ -197,7 +197,7 @@ From the section above it is apparent that the total flow through the filter is 
 
 In the case of 6 filter layers, this is :math:`6Q_{FiLayer}`
 
-Because the 2 inner inlets (the ones that aren't the backwash trunk or the uppermost trunk) distribute flow to two layers the flow between them is equal to :math:`2Q_{FiLayer}` which is shown in the schematic. In a later section, we will show that the flow within each layer is not exactly even because of the headloss through various paths, but for the calculation of maximum flow, even flow is an appropriate guess.
+Because the 2 inner inlets (the ones that aren't the backwash trunk or the uppermost trunk) distribute flow to two layers the flow between them is equal to :math:`2Q_{FiLayer}` which is shown in the schematic. In a later section, we will show that the flow within each layer is not exactly even because of the head loss through various paths, but for the calculation of maximum flow, even flow is an appropriate guess.
 
 From the schematic we can also see that the maximum flow experienced by any trunk during forward filtration is :math:`2Q_{FiLayer}`, using this value it is possible to calculate the maximum flow through a branch. Using :math:`2Q_{FiLayer}` is a conservative estimate, most branches will not see this flow, however because the pressure recovery is the main constraint in the filter pipe manifold, it is best to use the maximum possible flow to determine allowable PR.
 
@@ -255,7 +255,7 @@ The two pressure recovery terms calculated here are compared against the allowab
 First Constraint: Pressure Recovery in Trunks during forward filtration
 ---------------------------------------------------------------------------
 
-The total allowable pressure recovery of the filter manifold is controlled by the headloss in each sand layer and the headloss ratio, :math:`\Pi_{ManifoldHeadLoss}`, as defined above in "Flow Distrbution Constraints".
+The total allowable pressure recovery of the filter manifold is controlled by the head loss in each sand layer and the head loss ratio, :math:`\Pi_{ManifoldHeadLoss}`, as defined above in "Flow Distrbution Constraints".
 
 The head loss through the sand layer, :math:`HL_{FiCleanLayerMin}` is a fuction of layer depth, :math:`H_{FiLayer}` and overall velocity of the filter , :math:`\frac{Q_{FiLayer}}{A_{Fi}}`, using the Kozeny Equation (**link Kozeny**).
 
@@ -327,11 +327,11 @@ Second Constraint: Pressure Recovery in lowest trunk during backwash
 
 The second pressure recovery constraint is in the backwash branch during backwash. During backwash the lowest trunk sees all the flow at a higher velocity than any branch does during forward filtration. Because the velocity is higher, the PR term will also be higher, so it must be constrainted to maintain even flow.
 
-In backwash there is no headloss through the sand bed because the sand is fully fluidized. The startup time in which it takes to fluidize the bed is ignored in this design. Thus the only headloss occurs from the flow expansion as water exits the fiter manifold out of the exits holes.
+In backwash there is no head loss through the sand bed because the sand is fully fluidized. The startup time in which it takes to fluidize the bed is ignored in this design. Thus the only head loss occurs from the flow expansion as water exits the fiter manifold out of the exits holes.
 
-The initial estimate of headloss through the holes is :math:`HL_{FiBwOrifices} = 10cm`.
+The initial estimate of head loss through the holes is :math:`HL_{FiBwOrifices} = 10cm`.
 
-Using the headloss ratio, :math:`\Pi_{ManifoldHeadLoss}` , the allowable PR can be determined: :math:`PR_{FiBwManMax} = HL_{FiBwOrifices}*\Pi_{ManifoldHeadLoss}`
+Using the head loss ratio, :math:`\Pi_{ManifoldHeadLoss}` , the allowable PR can be determined: :math:`PR_{FiBwManMax} = HL_{FiBwOrifices}*\Pi_{ManifoldHeadLoss}`
 
 From above the PR estimate for the Backwash Branches exists.
 
@@ -477,7 +477,7 @@ With the relevant parameters for each type of manifold branch shown below in :nu
 .. figure:: Images/Table_Branch_Head_Loss.PNG
     :width: 100%
     :align: center
-    :alt: table of diferent values used to determine headloss through various parts of the manifold.
+    :alt: table of diferent values used to determine head loss through various parts of the manifold.
 
     This table outline which values are used for various components of the filter manifold. Note how the porosity of sand is only relevant for the outlets during forward filtration. This is because the sand doesn't directy interact with the manifold in any of the other cases.
 
@@ -556,10 +556,12 @@ Where :math:`S_Fitting` is the spacing of the fitting? **But what does this look
 
 This length comes out to be around 2 meters which is much less than that required for an OStaRS!
 
+.. _fluidized_bed_headloss_variation:
+
 Fluidized Bed Head Loss and Variation
 ======================================
 
-One the depth of the fluidized bed is determined, the steady state head loss during backwash can be determined. Knowing this will inform later assumptions about realtive headloss in the system.
+One the depth of the fluidized bed is determined, the steady state head loss during backwash can be determined. Knowing this will inform later assumptions about realtive head loss in the system.
 
 The following expression is used to find this value:
 
@@ -581,35 +583,61 @@ Plumbing Head Loss
 Path head loss calculations and flow distribution between layers
 =================================================================
 
-Now that the sand layer depth is set the Kozeny Head Loss can be determined for the clean bed and the headloss through various flow paths can be determined.
+Now that the sand layer depth is set the Kozeny Head Loss can be determined for the clean bed and the head loss through various flow paths can be determined.
 
-First use the Kozeny Equation (**ref kozeny** )to find the HL in the central layers and also the bottom layer with :math:`H_{Layer}` and :math:`H_{BottomLayer}`
+First use the Kozeny Equation (**ref kozeny** )to find the head loss in each of the sand layers. In the design for the OStaRS a different layer height may be used for the bottom layer to account for the larger backwash pipe, but in the EStaRS that difference does not matter, as that additional depth does not contain head loss that matter for the flow.
 
-As the filter has 6 layers there are six possible paths for the water to take.
-
-Overview of the algorithm of this section:
-
-In each path the path headloss is the sum of : inlet plumbing, sand layer, and outlet plumbing (for the relevant flow)
-
-Find the max headloss through the respective paths (Q1 - Q6)
-Find the min headloss through the respective paths (Q1 - Q6)
-Find the average headloss of the paths (sum(HL)/6)
-^^a theoretical term because the flow distrubution will sort itself out because that's how headloss works
-Find Pi_layer. The ratio of  the flow distribution. Goal is close to 1.
-
-Because the flow distribution will change to make the headlosses even, it can be taken as true that :math:`HL_{Path1} = HL_{Path2}` and so on for each path. This assumes the clean bed headlosses and also accounts for the varying flows in each path.
+As the filter has 6 layers there are six possible paths for the water to take. The calculations for head loss through each layer depends specifcially on which layer when it comes to minor loss coefficients and lengths of flow paths but the overall process is the same. This section outlines the algorithm without going into the specific calculations necessary for the head loss determination.
 
 
-It is also known that the flow must add up to the flow in the filter. Knowing that a system of equations can be set up to use the healoss and total flow requirement to solve for the flow in each layer. Those flows are then taken as the flow through each layer.
+In each path, the path head loss is the sum of : inlet plumbing major and minor losses, sand layer losses, and outlet plumbing (for the relevant flow) minor losses
+
+The desgin steps are as follows:
+
+1. Find the max head loss through the respective paths (Q1 - Q6)
+
+#. Find the min head loss through the respective paths (Q1 - Q6)
+
+#. Find the average head loss of the paths :math:`(\frac{sum(HL)}{6})` (*This average is a theoretical term because the flow distrubution will change slighly to make the head loss pretty much even in each path (other wise flow distribution would be a non-issue) It is expected that each layer will have a head loss close to this average*)
+
+#. Find :math:`\Pi_{layer}`. The ratio of  the flow distribution. The goal is to be close to 1. This term is calulated as the square root of the ratio of the minimum path head loss to the maximum path head loss. :math:`\Pi_{layer}` is a check to ensure all paths provide approiximately the same impediment to flow.
+
+In figuring out the flow for each layer from the head losses, some assumptions should be made to turn the manifold system into a system of equations.
+
+Because the flow distribution will change to make the head losses even, it can be taken as true that :math:`HL_{Path1} = HL_{Path2}` and so on for each path, with head loss being a function of the flow. In each path the clean bed head losses are also accounted for, as from the Kozeny equation mentioned previously.
+
+The other necessary constraint is a mass balance:
+
+The flow in all the layers must add up to the flow in the filter. With this information,  a system of equations can be set up to use the healoss and total flow requirement to solve for the flow in each layer. Those flows are then taken as the flow through each layer.
+
+The 6 equations to be solved are:
+
+.. math::
+
+  Q_1 + Q_2 + Q_3 + Q_4 + Q_5 + Q_6 = Q_{Fi}
+
+  HL_{Path1}(Q_1) = HL_{Path2}(Q_2)
+
+  HL_{Path2}(Q_2) = HL_{Path3}(Q_3)
+
+  HL_{Path3}(Q_3) = HL_{Path4}(Q_4)
+
+  HL_{Path4}(Q_4) = HL_{Path5}(Q_5)
+
+  HL_{Path5}(Q_5) = HL_{Path6}(Q_6)
+
+Each of the head losses as a function of Q in the latter 5 of the equations to be solved are fairly simple to
 
 Siphon Design and Head Loss
 ==============================
+
+**insert schematic of siphon system**
 
 The siphon in the EStaRS system is different from the OStaRS system because it doesn't involve air to create suction.
 
 The pipe size for the siphon is the same as the backwwash trunk: :math:`ND_{Siphon} = ND_{BwTrunk}`
 
-The preliminary estimate of siphon length is twice the length of the filter: :math:`L_{SiphonEst} = 2*L_{FilterBody}`
+The preliminary estimate of siphon length is twice the length of the filter: :math:`L_{SiphonEst} = 2*L_{FilterBody}`. By making this initial assumption the major losses through this length of the siphon piing can be calculated.
 
 There are assumed to be minor losses in the entrance, exit, and in three elbows.
 
@@ -618,6 +646,20 @@ There are assumed to be minor losses in the entrance, exit, and in three elbows.
   K_{FiSiphon} = K_{PipeEnt} + 3*K_{Elbow90} + K_{PipeExit}
 
 
+The headloss required for siphon initiation is the sum of head losses of other predetermined quantitiies including:
+
+:math:`HL_{BWinitiation}` (From head loss section)
+:math:`HL_{FiForwardNoSuckAir}`
+:math:`HL_{FiDirty}`  (as defined in Expert Inputs)
+:math:`HL_{BwInletPlumbing}`
+:math:`HL_{SiphonMax}`
+
+with  :math:`H_{SiphoneNoSuckAir}` subtracted
+
+
+These values are calculated or described in the :ref:`Fluidized Bed and Head Loss Variation <fluidized_bed_headloss_variation>` section or defined as Expert Inputs for the system.
+
+**Get schematic of siphon**
 
 
 
@@ -630,8 +672,48 @@ Backwash Flow Control
 Sand Volume
 ==============
 
+Determining the sand volume allows for cost estimation and stability assessments of the filter. As sand is only in the main filter body that is the volume of largest concern. Most genreally, the amount of sand needed is the volume of sand that would fit into the filter body to the proper height with the volume of the pipe manifold subtracted, because volume containing pipes should not have sand.
+
+The plumbing within the filter body consists of the Backwash Trunk, the other inlet/outlet trunks, and the branches.
+
+Approximating each of these as cylinders and excluding the small volume taken up by pipe caps, this calculation is very straight forward.
+
+The volume of the backwash trunk is: :math:`\frac{\pi}{4}*OD_{BWTrunk}^2*ID_{FiPipe}`
+
+The volume of the rest of the trunks is :math:`\frac{\pi}{4}*OD_{Trunks}^2*ID_{FiPipe}*6`
+where 6 is the number of trunks excluding the backwash trunk.
+
+The volume occupied by the branches is :math:`OD_{Branches}^2 *L_{TotalBranches*7}`
+
+Where 7 is the number of layers of branches, and :math:`L_{TotalBranches}` the total lengths of the branches for one filter layer.
+
+Thus the total plumbing volume is:
+
+:math:`V_{FiPlumbing} = V_{BWTrunk} + V_{Trunks} + V_{Branches}`
+
+Then the total
+
+
 Filter Stability
 ==================
 
+Because the filter components are large and not necessarily stabile, considering the forces and stability of the system is critical in knowing how well it needs to be secured during use, as there are conditions which can cause the filter to tip especially with the "Micky Mouse" design.
+
+Firstly, the center to center distance of the entrance/exit tank to the filter body should be found. This value describes the width of the filter at the top
+
 Materials
 =============
+
+
+For construction and cost estimates the PVC material quantities can be found.
+
+The total length of the largest diameter pipe  for the filter body, :math:`L_{TotalFiPipe}` is equal to the length of one filter times the number of filters: :math:`L_{FilterBody}*N_{Fi}`
+
+The total length of pipe for the entrance and exit tanks is:
+
+:math:`L_{TotalEntExitPipe} = N_{Fi}*(H_{EntranceTank} + H_{ExitTank})`
+
+The total lengths of the branch manifold piping is the sum of the total manifold piping of one layer times 6, times 1.5 The number of branches is multiplied by six because there are six manifold layers, and that *******what*******
+
+
+The number of wings (for sand exclusion in the inlets), :math:`N_{Wing}` is equal to :math:`N_{Fi}*2N_{FiBranchLow}*3.5`.
