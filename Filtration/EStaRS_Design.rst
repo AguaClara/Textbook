@@ -44,7 +44,7 @@ From the determination of the filter body size the branch and trunk manifolds ar
 
 All of these values are defined as minimum. Another important value determined by the  filter body size is the area of the filter which is defined as: :math:`ID_{pipe}^2 / 4`. This becomes important later in determination of the mass of sand needed.
 
-The pipe sizes recommended in this section come from certain assumptions of the amount of head required to use the filter. In November 2018, the different in elevation of the water level from the exit tank to the entrance tank was increased to 75cm (from around 45cm) so that extra head loss in the manifold system does not influence filter functionality as has been seen in the field. This additional head will allow smaller manifold pipes to be used, as the added head loss in smaller pipes (from the increase of velocity) will not overcome the entrance and exit heights. Smaller manifold pipes will mean the entrance and exit tanks can stay narrower, though taller.
+The pipe sizes recommended in this section come from certain assumptions of the amount of head required to use the filter. In November 2018, the difference in elevation of the water level from the exit tank to the entrance tank was increased to 75cm (an additional increase from 60, which was decided a year or so earlier) so that extra head loss in the manifold system does not influence filter functionality as has been seen in the field. This additional head will allow smaller manifold pipes to be used, as the added head loss in smaller pipes (from the increase of velocity) will not overcome the entrance and exit heights. Smaller manifold pipes will mean the entrance and exit tanks can stay narrower, though taller.
 
 Sand Layer Thickness
 ===========================
@@ -574,6 +574,7 @@ This head loss value should be very close to the depth of the settled sand bed. 
 
 The head loss of a dirty bed is taken as :math:`HL_{FiDirty} = 0.6m` As a result the height in the filter for backwash initiation to occur is the sum of headl
 
+.. _plumbing_head_loss:
 
 Plumbing Head Loss
 =====================
@@ -633,11 +634,25 @@ Siphon Design and Head Loss
 
 **insert schematic of siphon system**
 
-The siphon in the EStaRS system is different from the OStaRS system because it doesn't involve air to create suction.
+The siphon in the EStaRS system is different from the OStaRS system because it doesn't involve air to create suction. It acts simply as an exit for water at the top of the filter. This system only works because the entire filter is enclosed, meaning if the head loss out through the siphon pipe is less than going out the other exits, that is the flow path the water will take. Based on this strict definition of the siphon, this system isn't really a siphon to maintain parallel naming to the OStaRS, it is called that.
 
-The pipe size for the siphon is the same as the backwwash trunk: :math:`ND_{Siphon} = ND_{BwTrunk}`
+.. _figure_siphon_schematic:
 
-The preliminary estimate of siphon length is twice the length of the filter: :math:`L_{SiphonEst} = 2*L_{FilterBody}`. By making this initial assumption the major losses through this length of the siphon piing can be calculated.
+.. figure:: Images/figure_siphon_schematic.png
+    :width: 80%
+    :align: center
+    :alt: siphon schematic for EStaRS systems
+
+    This figure shows the important components to the siphon system in an EStaRS system. The component labelled entrance tank either the filter entrance box (for the Micky Mouse design) or the concrete filter entracnce box. In either design the headloss calculations are the same.
+
+
+It works by simply opening the siphon valve as labelled in :numref:`----------`, then the inlet pipes are closed in the entrance tank with pipe stubs starting at the top, eventually leaving only the backwash pipe open. That's it! To end bacwkwash, the process is reversed. Inlets are opened back up one at time, and THEN the valve is closed. Though this process is simple it requires some finesse get right. If all the inlet are closed immediately then the water level in the filter entrance tank will drop too low and air will get in the filter. Air in the filter causes head loss problems and is unwanted. To avoid this the pipe stups to close the inlets are wiggled around to act as valves so that the water level during backwash is around 10cm above the bottom of the filter entrance tank. :numref:`----------` has this value labelled.
+
+It is important to maintain this height because the height of the water level during backwash as compared to the height of the outlet of the siphon pipe controls the backwash flow. If the water level is too low, the sand may not fluidize. If the water level is too high, the sand may over-fluidize and be washed out of the filter.
+
+The pipe size for the siphon is the same as the backwwash trunk: :math:`ND_{Siphon} = ND_{BwTrunk}`, this diameter is really a minimum to ensure the siphon pipe doesnt accumulate too much headloss.
+
+The preliminary estimate of siphon length is twice the length of the filter: :math:`L_{SiphonEst} = 2*L_{FilterBody}`. By making this initial assumption the major losses through this length of the siphon piping can be calculated.
 
 There are assumed to be minor losses in the entrance, exit, and in three elbows.
 
@@ -646,21 +661,41 @@ There are assumed to be minor losses in the entrance, exit, and in three elbows.
   K_{FiSiphon} = K_{PipeEnt} + 3*K_{Elbow90} + K_{PipeExit}
 
 
-The headloss required for siphon initiation is the sum of head losses of other predetermined quantitiies including:
+The maxmimum head loss for siphon initiation is the sum of head losses of other predetermined quantitiies including:
 
 :math:`HL_{BWinitiation}` (From head loss section)
-:math:`HL_{FiForwardNoSuckAir}`
-:math:`HL_{FiDirty}`  (as defined in Expert Inputs)
+:math:`HL_{FiForwardNoSuckAir}` (The height the water level needs to be to stop air from getting into the filter.)
+:math:`HL_{FiDirty}`  (as defined in Expert Inputs) (The height water is allowed to rise in the entrance tank before backwash should be started, this varies on the style of filter. See :mnumref:`--------` for the different values)
 :math:`HL_{BwInletPlumbing}`
-:math:`HL_{SiphonMax}`
+:math:`HL_{SiphonMax}` (as defined in expert inputs) (the maximum headloss allowed throug the siphon at stea)
 
-with  :math:`H_{SiphoneNoSuckAir}` subtracted
+with  :math:`H_{SiphonNoSuckAir}` subtracted
 
+These values are calculated or described in the :ref:`Fluidized Bed and Head Loss Variation <fluidized_bed_headloss_variation>` section or defined as Expert Inputs for the system. This value represents the highest the water can be over the siphon exit.
 
-These values are calculated or described in the :ref:`Fluidized Bed and Head Loss Variation <fluidized_bed_headloss_variation>` section or defined as Expert Inputs for the system.
+To determine a more appropriate siphon head loss the actual head losses are determined.
 
-**Get schematic of siphon**
+The head loss of the siphon pipe is determined by major losses resulting from the backwash flow through the pipe. This pipe is labelled in the schematic.
 
+The outlet system head loss is taken as a head loss from a weir usong the backwash flow and inner diameter of the siphon pipe.
+
+The orifice head loss of the siphon (where it connects from from the filter body into the siphon pipe) is determined using the orifice equation with the inner diamete, the Vena Contracta coefficient, and the backwash flow as inputs.
+
+From those calcualted paramteres the steady state backwash head loss can be found as follows:
+
+.. math::
+
+  HL_{FiBwTotalSS} = HL_{BwInletPlumbing} + HL_{BwSS} + HL_{SiphonOrifice} + HL_{FiSiphonPipe} + HL_{SiphonOutlet}
+
+The first term comes from the :ref:`Plumbing Head Loss <plumbing_head_loss` section the second term comes from the :ref:`Fluidized Bed and Head Loss Variation <fluidized_bed_headloss_variation>` section. The last three were desrcibed just above.
+
+This the distance in height that must exist between the siphon outlet and 10 cm above the bottom of the filter entrance box, as shown in the schematic. Because the backwash system works using the difference in elevation getting these values correct is critical.
+
+Additionally the density of the fluidized sand can be determined.
+
+.. math::
+
+    \rho_{Fluidized} = \rho_{H2O} *\epsilon_{Sand}*\Pi_{Fluidized} + \frac{\rho_{FiSand}*(1-\epsilon_{sand})}{\Pi_{Fluidized}}
 
 
 Elevations and Filter Sizing
@@ -691,7 +726,22 @@ Thus the total plumbing volume is:
 
 :math:`V_{FiPlumbing} = V_{BWTrunk} + V_{Trunks} + V_{Branches}`
 
-Then the total
+Then the total sand volvume in the filter is the volume of the filter (a function of its heigth and area) minus the volume of the plumbing.
+
+:math:`V_{SandTotal} = (A_{Fi}*H_{FiSandLow}) - V_{FiPlumbing}`.
+
+Multplying the density of the sand, :math:`\Rho_{Sand}` by the volume of the sand gives the mass of the sand, :math:`M_{Sand}`
+
+The mass of one sand bag, :math:`M_{SandBag}` is 50 pounds so the number of sand bags can be determined by: :math:`N_{Fi}*\frac{M_{Sand}}{M_{SandBag}}` (rounded up to a whole number).
+
+As a safety factor, this value is multiplied by 1.25 to get the total number of sand bags:
+
+.. math::
+
+  N_{SandBag} = 1.25(N_{Fi}*\frac{M_{Sand}}{M_{SandBag}})
+
+
+Something is volume of sand indicates, is that the filter is quite heavy and will not tip over! The stability of the empty filter can be determined, but is not necessarily critical to the design because if there is water in the filter there will be some extra pipes stabilizing the system.
 
 
 Filter Stability
@@ -713,7 +763,17 @@ The total length of pipe for the entrance and exit tanks is:
 
 :math:`L_{TotalEntExitPipe} = N_{Fi}*(H_{EntranceTank} + H_{ExitTank})`
 
-The total lengths of the branch manifold piping is the sum of the total manifold piping of one layer times 6, times 1.5 The number of branches is multiplied by six because there are six manifold layers, and that *******what*******
+The total lengths of the branch manifold piping is the sum of the total manifold piping of one layer times 3, for the three inlets which are all the same size (the slotted pipes are ordered separately because they cannot be hand fabricated at this point). This value is multiplied by 1.5 to account the wings that create the gravity exclusion zone arond the inlets, wings are half pipes of the same size!  Thus:
+
+.. math::
+
+  L_{TotalBranchManifold} = 1.5*(3*\Sigma L_{FiManBranch})
+
+The lengths of the slotted pipes would be just :math:`3*\Sigma L_{FiManBranch}`, where (in both) :math:`L_{FiManBranch}` is an array of lengths for an entire filter layer
+
+    **note from the writer of this section, at the time of writing is it unclear if the filter manifolds can be constructed with one branch serving both sides of the trunk, this section assumes it can and is being done, so else where in this code the array of branch lengths may just be an array of branches on one side of the trunk! Beware of this as it can cause problems as the lengths will be off by around 2x! If this is resolved in the future all sections will be updated to contain the most correct information**
 
 
-The number of wings (for sand exclusion in the inlets), :math:`N_{Wing}` is equal to :math:`N_{Fi}*2N_{FiBranchLow}*3.5`.
+Lastly, the number wings to be made is the number or filters times the number of branches (per side) per layer times 4, as there are 4 layers which require wings!
+
+:math:`N_{Wing}` is equal to :math:`N_{Fi}*2N_{FiBranchLow}*4`.
