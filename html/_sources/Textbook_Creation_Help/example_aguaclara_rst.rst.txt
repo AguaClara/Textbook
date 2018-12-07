@@ -77,9 +77,11 @@ The following code::
     * It has two items, the second
       item uses two lines. (note the indentation)
 
+    1. This is a numbered list.
+    2. It has two items too.
 
     #. This is a numbered list.
-    #. It has two items.
+    #. It has two items too.
 
 gives:
 
@@ -87,10 +89,13 @@ gives:
 * It has two items, the second
   item uses two lines. (note the indentation)
 
-#. This is a numbered list.
-#. It has two items.
+1. This is a numbered list.
+2. It has two items too.
 
-.. note:: if two lists are separated by a blank line only, then the two lists are not differentiated.
+#. This is a numbered list.
+#. It has two items too.
+
+.. note:: if two lists are separated by a blank line only, then the two lists are not differentiated as you can see above.
 
 
 .. _heading_figures:
