@@ -33,24 +33,48 @@ The filter flow and backwash velocity are used to find an area (:math:`\frac{Q_{
 From the determination of the filter body size the branch and trunk manifolds are the next most important feature of the design. Some relevant variables defined here:
 
 
-|  :math:`ND_{FiTrunkMinLow} = 1.5in`
-|  :math:`ND_{FiBranchMinLow} = 1in`
+
 |  :math:`ND_{BallValve} = 3in`
 |  :math:`ND_{BedTester} = 0.5in`
 |  :math:`ND_{BedTesterOuter} = 1in`
 |  :math:`ND_{FiAirRelValve} = 0.5in`
-|  :math:`ND_{FiBwTrunkMinLow} = 2in`
+
+.. trunk sizes based on Juans recommendation in November 2018
+
+|  :math:`ND_{FiBwTrunkMinLow} = 3in`
 |  :math:`ND_{FiBwBranchkMinLow} = 1in`
+|  :math:`ND_{FiTrunkMinLow} = 2in`
+|  :math:`ND_{FiDrainExit} = 3in`
+|  :math:`ND_{FiOverflowEnt} = 3in`
+|  :math:`ND_{FiBranchMinLow} = 1in`
 
 All of these values are defined as minimum. Another important value determined by the  filter body size is the area of the filter which is defined as: :math:`ID_{pipe}^2 / 4`. This becomes important later in determination of the mass of sand needed.
 
 The pipe sizes recommended in this section come from certain assumptions of the amount of head required to use the filter. In November 2018, the difference in elevation of the water level from the exit tank to the entrance tank was increased to 75cm (an additional increase from 60, which was decided a year or so earlier) so that extra head loss in the manifold system does not influence filter functionality as has been seen in the field. This additional head will allow smaller manifold pipes to be used, as the added head loss in smaller pipes (from the increase of velocity) will not overcome the entrance and exit heights. Smaller manifold pipes will mean the entrance and exit tanks can stay narrower, though taller.
 
+The determination of sizes for the drain and overflow come from using the orifice equation and the maximum flow that could be seen in the filter with a 10 cm safety height due the height of the weirs in the entrance and exits boxes in the concrete design and the height of pipe stubs in the Micky Mouse design. The goal with the drain especially is to allow the water to exit at the same flow it is entering in the event that the outflow isn't working properly.
+
+A schematic of these pipes can be see below in :numref:`figure_micky_mouse_pipe_schematic`. The image is not to scale, but shows generally how pipes are organized within the filter.
+
+
+.. _figure_micky_mouse_pipe_schematic:
+
+.. figure:: Images/figure_micky_mouse_pipe_schematic.png
+    :width: 80%
+    :align: center
+    :alt: filter schematic, micky mouse overflow and other pipes
+
+    This schematic shows the pipe system of the Micky Mouse filter including the drain, overflow, and connections to otehr treatment components
+
+It is imprtant that th heights between the top of the settled water inlet and the overflow are 10 cm apart because if that distance is too small the overflow may not be large enough to handle excess flow.
+
+During operation the height of water in the entrance tank is watched to determine when backwash is necessary.
+
 Sand Layer Thickness
 ===========================
 
 
-In the EStaRS filters, of all three sizes (1ft, 2ft, and 3ft), the sand layer thickness will be 20cm for each layer. In the OStaRS there are functions that define the sand layer depth, but the minimum distance, 20cm is applicable until trunk diameters are larger than 6 inches. Because for EStaRS this variable is unchanging the equations are not included, but it can be found in the OStaRS filter design file in the :ref:`sand layer thickness <heading_sand_layer_thickness>` section.
+In the EStaRS filters, of all three sizes (1ft, 2ft, and 3ft), the sand layer thickness will be 20cm for each layer, except for filters designed to go with 1 L/s plants, then the depth will be 15cm. In the OStaRS there are functions that define the sand layer depth, but the minimum distance, 20cm is applicable until trunk diameters are larger than 6 inches. Because for EStaRS this variable is unchanging the equations are not included, but it can be found in the OStaRS filter design file in the :ref:`sand layer thickness <heading_sand_layer_thickness>` section.
 
 So:
 
@@ -194,6 +218,7 @@ From the section above it is apparent that the total flow through the filter is 
 .. math::
 
   Q_{Fi} = N_{Layers}*{Q_{FiLayers}
+
 
 In the case of 6 filter layers, this is :math:`6Q_{FiLayer}`
 
@@ -378,7 +403,9 @@ If it seems like these processes are 1. similar and 2. circular in their logic, 
 Manifold Pipe Lengths
 ======================
 
-Come back to this a little bit...
+
+
+Come back to this a little bit... depends on fabrication methods
 
 Inlet Orifice and Outlet Slot Design
 ========================================
@@ -406,11 +433,11 @@ Also the area of the backwash orifices is equal to :math:`A_{FiTopManSlots}`, wh
 Outlet Design
 ---------------
 
-Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, :math:`B_{slot}` is always .008 inch. *The number of slot rows is also fixed at 2, because each branch has slots on the top and bottom because the outlet pipes are accepting flow from two layers of sand, one above and one below.*
+Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, :math:`B_{slot}` is always .008 inch. *The number of slot rows is also fixed at 2, because each branch has slots on the top and bottom because the outlet pipes are accepting flow from two layers of sand, one above and one below.* This constrains the minimum size that the slotted pipes can be.
 
-From the cumulative area of slots and the width of the slots **where does the width come from** The total length of slots can be determined. This length of slots is for one side of one branch *yes?*
+From the cumulative area of slots and the width of the slots, the total length of slots can be determined. This length of slots is for one side of one branch *yes?*
 
-As the branches are different lengths along one trunk, the number of slots is different per branch depending on the length. Dividing the Length of the
+As the branches are different lengths along one trunk, the number of slots is different per branch depending on the length. Dividing the length of the
 
 
 
@@ -517,7 +544,11 @@ The constrution of the entrance and exit pipes are the main dfference between th
 
 In this sections the sizes of these tanks are determined.
 
-The head loss in a fluidized bed is:
+The size of the entrance and exit tank pipe dimensions is constrained by the sizes and numbe of the pipes that feed into or out of each tank.
+
+The entrance needs to have space for: 4 inlets, one of which is the bottom, slightly larger pipe for backwash, an inlet from the sedimentation tank, and an overflow pipe, so that if the entrance pipe overflows the water is directly elsewhere rather than just spilling all over the place. The outlet tank pipe requires space for three outlets from the filter, an outlet to the plant exit, and a drain in the even that maintenance needs to be done or if the effluent quality is not sufficient.
+
+The pipes connect legnthwise with the pipe so it is their total area that must fit with the area of the tanks. In addition to the pipe area, they will be connected with ferncos, which add extra space considerations. Additionally, for ease of fabrication the ferncos should not be closer than 1 cm to each outher. The pipe sized determined in this sections come from using Onshape to determine feasible pipe placements (as there are many configurations that may fit)
 
 Total Sand Depth, Filter Pipe Length
 =================================================
@@ -627,7 +658,7 @@ The 6 equations to be solved are:
 
   HL_{Path5}(Q_5) = HL_{Path6}(Q_6)
 
-Each of the head losses as a function of Q in the latter 5 of the equations to be solved are fairly simple to
+Each of the head losses as a function of Q in the latter 5 of the equations to be solved are fairly simple to solve using any kind of solving program (such as Python!)
 
 Siphon Design and Head Loss
 ==============================
@@ -646,7 +677,7 @@ The siphon in the EStaRS system is different from the OStaRS system because it d
     This figure shows the important components to the siphon system in an EStaRS system. The component labelled entrance tank either the filter entrance box (for the Micky Mouse design) or the concrete filter entracnce box. In either design the headloss calculations are the same.
 
 
-It works by simply opening the siphon valve as labelled in :numref:`----------`, then the inlet pipes are closed in the entrance tank with pipe stubs starting at the top, eventually leaving only the backwash pipe open. That's it! To end bacwkwash, the process is reversed. Inlets are opened back up one at time, and THEN the valve is closed. Though this process is simple it requires some finesse get right. If all the inlet are closed immediately then the water level in the filter entrance tank will drop too low and air will get in the filter. Air in the filter causes head loss problems and is unwanted. To avoid this the pipe stups to close the inlets are wiggled around to act as valves so that the water level during backwash is around 10cm above the bottom of the filter entrance tank. :numref:`----------` has this value labelled.
+It works by simply opening the siphon valve as labelled in **XXXXXXXXXXXXXXXX**, then the inlet pipes are closed in the entrance tank with pipe stubs starting at the top, eventually leaving only the backwash pipe open. That's it! To end bacwkwash, the process is reversed. Inlets are opened back up one at time, and THEN the valve is closed. Though this process is simple it requires some finesse get right. If all the inlet are closed immediately then the water level in the filter entrance tank will drop too low and air will get in the filter. Air in the filter causes head loss problems and is unwanted. To avoid this the pipe stups to close the inlets are wiggled around to act as valves so that the water level during backwash is around 10cm above the bottom of the filter entrance tank. **XXXXXXXXXX** has this value labelled.
 
 It is important to maintain this height because the height of the water level during backwash as compared to the height of the outlet of the siphon pipe controls the backwash flow. If the water level is too low, the sand may not fluidize. If the water level is too high, the sand may over-fluidize and be washed out of the filter.
 
@@ -665,7 +696,7 @@ The maxmimum head loss for siphon initiation is the sum of head losses of other 
 
 :math:`HL_{BWinitiation}` (From head loss section)
 :math:`HL_{FiForwardNoSuckAir}` (The height the water level needs to be to stop air from getting into the filter.)
-:math:`HL_{FiDirty}`  (as defined in Expert Inputs) (The height water is allowed to rise in the entrance tank before backwash should be started, this varies on the style of filter. See :mnumref:`--------` for the different values)
+:math:`HL_{FiDirty}`  (as defined in Expert Inputs) (The height water is allowed to rise in the entrance tank before backwash should be started, this varies on the style of filter. See **XXXXXXXXX** for the different values)
 :math:`HL_{BwInletPlumbing}`
 :math:`HL_{SiphonMax}` (as defined in expert inputs) (the maximum headloss allowed throug the siphon at stea)
 
@@ -687,7 +718,8 @@ From those calcualted paramteres the steady state backwash head loss can be foun
 
   HL_{FiBwTotalSS} = HL_{BwInletPlumbing} + HL_{BwSS} + HL_{SiphonOrifice} + HL_{FiSiphonPipe} + HL_{SiphonOutlet}
 
-The first term comes from the :ref:`Plumbing Head Loss <plumbing_head_loss` section the second term comes from the :ref:`Fluidized Bed and Head Loss Variation <fluidized_bed_headloss_variation>` section. The last three were desrcibed just above.
+
+The first term comes from the :ref:`Plumbing Head Loss <plumbing_head_loss>` section the second term comes from the :ref:`Fluidized Bed and Head Loss Variation <fluidized_bed_headloss_variation>` section. The last three were desrcibed just above.
 
 This the distance in height that must exist between the siphon outlet and 10 cm above the bottom of the filter entrance box, as shown in the schematic. Because the backwash system works using the difference in elevation getting these values correct is critical.
 
