@@ -127,10 +127,10 @@ From this it becomes possible to directly relate porosity (as above) to the filt
 
 Headloss Requirements
 ======================
-One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen-Pouseille equation (ref from elsewhere, not linked yet) describes the headloss through a clean bed during filtration.
+One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Carman Kozeny Equation, an adaptation of the Hagen-Pouseille equation (ref from elsewhere, not linked yet) describes the headloss through a clean bed during filtration.
 
 .. math::
-   :label: karmen_kozeny_clean_bed
+   :label: carman_kozeny_clean_bed
 
     \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu V_{Fi}}{g D_{60}^2}
 
