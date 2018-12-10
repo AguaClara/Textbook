@@ -19,7 +19,7 @@ Some parts of the design are the same as for the open StaRS filter! The stacked 
   In this file, many values are functions of pipe nominal diameter and SDR. For the simplicity of reading, those values are written with just the geometric value used. For example, if an outer diameter (OD) is needed, it is written as :math:`OD_{ExamplePipe}` rather than :math:`OD(ND_{ExamplePipe}, SDR26)` which is more similar to how it would be found explicitlty. Some other features that follow this convention are Inner Diameters and Radii, Outer Radii, and wall thicknesses.
 
 
-:numref:`table_comparsion_filters` shows some of the design differences between the different filter types.
+:numref:`table_comparsion_filters` shows some of the design differences between the different filter types. The parameters included in the table will be described throughout this design.
 
 .. _table_comparison_filters:
 
