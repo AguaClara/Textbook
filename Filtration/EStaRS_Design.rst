@@ -68,7 +68,7 @@ A schematic of these pipes can be see below in :numref:`figure_micky_mouse_pipe_
 
 It is important that th heights between the top of the settled water inlet and the overflow are 10 cm apart because if that distance is too small the overflow may not be large enough to handle excess flow as based on the safety height to find the overflow pipe area.
 
-During operation the height of water in the entrance tank is watched to determine when backwash is necessary as it rises as headloss in the filter increases. 
+During operation the height of water in the entrance tank is watched to determine when backwash is necessary as it rises as headloss in the filter increases.
 
 Sand Layer Thickness
 ===========================
@@ -82,7 +82,7 @@ So:
 
   H_{FiSandLayer} = 20cm
 
-This is the center to center distance of the trunks. 
+This is the center to center distance of the trunks.
 
 .. _flow_distribution_constraints:
 
@@ -90,9 +90,9 @@ Flow Distribution Constraints: ratio of pressure recovery to clean bed head loss
 ===================================================================================
 
 In the EStaRS there are three components where flow distribution must be considered:
-1. Between slots along manifold branches 
+1. Between slots along manifold branches
 
-2. Between branches along manifold trunks 
+2. Between branches along manifold trunks
 
 3. Between filter layers
 
@@ -161,7 +161,7 @@ However,the actual maximum of flow that the filter would see is actually the lar
 
 Depending on the total flow of the EStaRS and the size of the modules, varying numbers of filters will need to be used, though minimum should always be 2.
 
-This design will focus on flow through one filter, as having several filters in parallel wouldn't alter the flow within one, though flow will be split between the filters. 
+This design will focus on flow through one filter, as having several filters in parallel wouldn't alter the flow within one, though flow will be split between the filters.
 
 The entire area of the filter is assumed to be active and is denoted as :math:`A_{Fi}`, as calculated previously as a function of ID.
 
@@ -285,7 +285,7 @@ First Constraint: Pressure Recovery in Trunks during forward filtration
 
 The total allowable pressure recovery of the filter manifold is controlled by the head loss in each sand layer and the head loss ratio, :math:`\Pi_{ManifoldHeadLoss}`, as defined above in :ref:`Flow Distrbution Constraints <flow_distribution_constraints>`.
 
-The head loss through the sand layer, :math:`HL_{FiCleanLayerMin}` is a fuction of layer depth, :math:`H_{FiLayer}` and overall velocity of the filter , :math:`\frac{Q_{FiLayer}}{A_{Fi}}`, using the Kozeny Equation in :ref:`Headloss Requirement <heading_headloss_requirements>` in the Filtration Design section. 
+The head loss through the sand layer, :math:`HL_{FiCleanLayerMin}` is a fuction of layer depth, :math:`H_{FiLayer}` and overall velocity of the filter , :math:`\frac{Q_{FiLayer}}{A_{Fi}}`, using the Kozeny Equation in :ref:`Headloss Requirement <heading_headloss_requirements>` in the Filtration Design section.
 
 Using the definition of the pressure recovery ratio, the maximum allowable pressure recovery in the filter manifold can be calculated, this value is not necessarily the actual pressure recovery the system may see, just the allowable maximum:
 
@@ -593,7 +593,7 @@ This length comes out to be around 2 meters which is much less than that require
 .. _fluidized_bed_headloss_variation:
 
 Fluidized Bed Head Loss and Variation
-======================================      
+======================================
 
 One the depth of the fluidized bed is determined, the steady state head loss during backwash can be determined. Knowing this will inform later assumptions about realtive head loss in the system.
 
@@ -620,7 +620,7 @@ Path head loss calculations and flow distribution between layers
 
 Now that the sand layer depth is set the Kozeny Head Loss can be determined for the clean bed and the head loss through various flow paths can be determined.
 
-First use the Kozeny equation from :ref:`Headloss Requirements <heading_headloss_requirements>`to find the head loss in each of the sand layers. In the design for the OStaRS a different layer height may be used for the bottom layer to account for the larger backwash pipe, but in the EStaRS that difference does not matter, as that additional depth does not contain head loss that matter for the flow.
+First use the Kozeny equation from :ref:`Headloss Requirements <heading_headloss_requirements>` to find the head loss in each of the sand layers. In the design for the OStaRS a different layer height may be used for the bottom layer to account for the larger backwash pipe, but in the EStaRS that difference does not matter, as that additional depth does not contain head loss that matter for the flow.
 
 As the filter has 6 layers there are six possible paths for the water to take. The calculations for head loss through each layer depends specifcially on which layer when it comes to minor loss coefficients and lengths of flow paths but the overall process is the same. This section outlines the algorithm without going into the specific calculations necessary for the head loss determination.
 
@@ -629,9 +629,9 @@ In each path, the path head loss is the sum of : inlet plumbing major and minor 
 
 The desgin steps are as follows:
 
-1. Find the max head loss through the respective paths (Q1 - Q6) using the equations specified in :ref:`Plumbing Head Loss <splumbing_head_loss>`
+1. Find the max head loss through the respective paths (Q1 - Q6) using the equations specified in :ref:`Plumbing Head Loss <plumbing_head_loss>`
 
-#. Find the min head loss through the respective paths (Q1 - Q6) using the equations specified in :ref:`Plumbing Head Loss <splumbing_head_loss>`
+#. Find the min head loss through the respective paths (Q1 - Q6) using the equations specified in :ref:`Plumbing Head Loss <plumbing_head_loss>`
 
 #. Find the average head loss of the paths :math:`(\frac{sum(HL)}{6})` (*This average is a theoretical term because the flow distrubution will change slighly to make the head loss pretty much even in each path (otherwise flow distribution would be a non-issue) It is expected that each layer will have a head loss close to this average*)
 
