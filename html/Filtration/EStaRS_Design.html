@@ -269,6 +269,10 @@
 <p class="first admonition-title">Attention</p>
 <p class="last">In this file, many values are functions of pipe nominal diameter and SDR. For the simplicity of reading, those values are written with just the geometric value used. For example, if an outer diameter (OD) is needed, it is written as <span class="math notranslate nohighlight">\(OD_{ExamplePipe}\)</span> rather than <span class="math notranslate nohighlight">\(OD(ND_{ExamplePipe}, SDR26)\)</span> which is more similar to how it would be found explicitlty. Some other features that follow this convention are Inner Diameters and Radii, Outer Radii, and wall thicknesses.</p>
 </div>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">table_comparsion_filters</span></code> shows some of the design differences between the different filter types.</p>
+<div class="figure" id="table-comparison-filters">
+<img alt="../_images/table_comparison_filters.png" src="../_images/table_comparison_filters.png" />
+</div>
 <div class="section" id="dimensions-and-pipe-size">
 <h2>Dimensions and Pipe Size<a class="headerlink" href="#dimensions-and-pipe-size" title="Permalink to this headline">¶</a></h2>
 <p>Generally 2 filters are considered, so that one can still be in use when the other is being backwashed. Using more than 2 filters will still work with this design, as long as <span class="math notranslate nohighlight">\(N_{Fi}\)</span>, the number of filters, is changed to accomodate the correct number. This step requires some foresight on how many filters may be needed and of what size.</p>
@@ -292,10 +296,10 @@
 <p>All of these values are defined as minimum. Another important value determined by the  filter body size is the area of the filter which is defined as: <span class="math notranslate nohighlight">\(ID_{pipe}^2 / 4\)</span>. This becomes important later in determination of the mass of sand needed.</p>
 <p>The pipe sizes recommended in this section come from certain assumptions of the amount of head required to use the filter. In November 2018, the difference in elevation of the water level from the exit tank to the entrance tank was increased to 75cm (an additional increase from 60, which was decided a year or so earlier) so that extra head loss in the manifold system does not influence filter functionality as has been seen in the field. This additional head will allow smaller manifold pipes to be used, as the added head loss in smaller pipes (from the increase of velocity) will not overcome the entrance and exit heights. Smaller manifold pipes will mean the entrance and exit tanks can stay narrower, though taller.</p>
 <p>The determination of sizes for the drain and overflow come from using the orifice equation and the maximum flow that could be seen in the filter with a 10 cm safety height due the height of the weirs in the entrance and exits boxes in the concrete design and the height of pipe stubs in the Micky Mouse design. The goal with the drain especially is to allow the water to exit at the same flow it is entering in the event that the outflow isn’t working properly.</p>
-<p>A schematic of these pipes can be see below in <a class="reference internal" href="#figure-micky-mouse-pipe-schematic"><span class="std std-numref">Fig. 133</span></a>. The image is not to scale, but shows generally how pipes are organized within the filter.</p>
+<p>A schematic of these pipes can be see below in <a class="reference internal" href="#figure-micky-mouse-pipe-schematic"><span class="std std-numref">Fig. 134</span></a>. The image is not to scale, but shows generally how pipes are organized within the filter.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-micky-mouse-pipe-schematic"></span><a class="reference internal image-reference" href="../_images/figure_micky_mouse_pipe_schematic.png"><img alt="filter schematic, micky mouse overflow and other pipes" src="../_images/figure_micky_mouse_pipe_schematic.png" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 133 </span><span class="caption-text">This schematic shows the pipe system of the Micky Mouse filter including the drain, overflow, and connections to otehr treatment components</span></p>
+<p class="caption"><span class="caption-number">Fig. 134 </span><span class="caption-text">This schematic shows the pipe system of the Micky Mouse filter including the drain, overflow, and connections to otehr treatment components</span></p>
 </div>
 <p>It is important that th heights between the top of the settled water inlet and the overflow are 10 cm apart because if that distance is too small the overflow may not be large enough to handle excess flow as based on the safety height to find the overflow pipe area.</p>
 <p>During operation the height of water in the entrance tank is watched to determine when backwash is necessary as it rises as headloss in the filter increases.</p>
@@ -310,9 +314,9 @@
 </div>
 <div class="section" id="flow-distribution-constraints-ratio-of-pressure-recovery-to-clean-bed-head-loss">
 <span id="flow-distribution-constraints"></span><h2>Flow Distribution Constraints: ratio of pressure recovery to clean bed head loss<a class="headerlink" href="#flow-distribution-constraints-ratio-of-pressure-recovery-to-clean-bed-head-loss" title="Permalink to this headline">¶</a></h2>
-<p>In the EStaRS there are three components where flow distribution must be considered:
-1. Between slots along manifold branches</p>
-<ol class="arabic simple" start="2">
+<p>In the EStaRS there are three components where flow distribution must be considered:</p>
+<ol class="arabic simple">
+<li>Between slots along manifold branches</li>
 <li>Between branches along manifold trunks</li>
 <li>Between filter layers</li>
 </ol>
@@ -373,15 +377,20 @@
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-3">
 <span class="eqno">(572)<a class="headerlink" href="#equation-filtration-estars-design-3" title="Permalink to this equation">¶</a></span>\[N_{FiBranchMin} = round(\frac{ID_{FiPipe}}{B_{FiBranchMax}})\]</div>
 <p>the ID function also takes the SDR for the pipe (26), but in the equation above was left out so the overall mechanism of the calculation is clearer. The value is rounded because an integer number of branches is needed.</p>
-<p>The number of inlet and outlet pipes are fixed by the way the filter works and are shown below:</p>
+<p><a class="reference internal" href="#figure-manifold-sizing"><span class="std std-numref">Fig. 135</span></a> shows these dimensions.</p>
+<div class="figure align-center" id="id3">
+<span id="figure-manifold-sizing"></span><a class="reference internal image-reference" href="../_images/figure_manifold_sizing.png"><img alt="filter manifold schematic, interal image" src="../_images/figure_manifold_sizing.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 135 </span><span class="caption-text">This schematic shows the general naming and dimensons for one layer of the filter. This is a top down view.</span></p>
+</div>
+<p>The number of inlet and outlet pipes are fixed by the way the filter works:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-4">
 <span class="eqno">(573)<a class="headerlink" href="#equation-filtration-estars-design-4" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}N_{FiInletPipesLow} = 4\\N_{FiOutletPipesLow} = 3\end{aligned}\end{align} \]</div>
 <div class="section" id="determining-forward-filtration-and-backwash-velocities">
 <h3>Determining Forward Filtration and Backwash Velocities<a class="headerlink" href="#determining-forward-filtration-and-backwash-velocities" title="Permalink to this headline">¶</a></h3>
-<p>See  <a class="reference internal" href="#figure-estars-flow-schematic"><span class="std std-numref">Fig. 134</span></a> for a schematic of the filter layers.</p>
-<div class="figure align-center" id="id3">
+<p>See  <a class="reference internal" href="#figure-estars-flow-schematic"><span class="std std-numref">Fig. 136</span></a> for a schematic of the filter layers.</p>
+<div class="figure align-center" id="id4">
 <span id="figure-estars-flow-schematic"></span><a class="reference internal image-reference" href="../_images/figure_flow_distribution_estars.PNG"><img alt="filter schematic, interal image" src="../_images/figure_flow_distribution_estars.PNG" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 134 </span><span class="caption-text">This schematic shows the flows through every inlet and outlet components of the EStaRS system. Each of the outlets takes in flow from two filter layers as do the inner inlets. The outer inlets provide water for only one layer. The bottom inlet must also accomodate the flow required for backwash and is larger in diameter to account for this.</span></p>
+<p class="caption"><span class="caption-number">Fig. 136 </span><span class="caption-text">This schematic shows the flows through every inlet and outlet components of the EStaRS system. Each of the outlets takes in flow from two filter layers as do the inner inlets. The outer inlets provide water for only one layer. The bottom inlet must also accomodate the flow required for backwash and is larger in diameter to account for this.</span></p>
 </div>
 <p>From the section above it is apparent that the total flow through the filter is the flow through each layer times the number of layers or:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-5">
@@ -524,28 +533,28 @@ A_{OrificeTotal} = (A_{BwOrifices}, A_{FiManSlots}, A_{FiTopManSlots})\end{align
 <p>The head loss for each branch type is generally:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-30">
 <span class="eqno">(599)<a class="headerlink" href="#equation-filtration-estars-design-30" title="Permalink to this equation">¶</a></span>\[HL = \frac{(\frac{Q}{\Pi*A*\epsilon})^2}{2g}\]</div>
-<p>With the relevant parameters for each type of manifold branch shown below in <a class="reference internal" href="#table-branch-head-loss"><span class="std std-numref">Fig. 135</span></a></p>
-<div class="figure align-center" id="id4">
+<p>With the relevant parameters for each type of manifold branch shown below in <a class="reference internal" href="#table-branch-head-loss"><span class="std std-numref">Fig. 137</span></a></p>
+<div class="figure align-center" id="id5">
 <span id="table-branch-head-loss"></span><a class="reference internal image-reference" href="../_images/Table_Branch_Head_Loss.PNG"><img alt="table of diferent values used to determine head loss through various parts of the manifold." src="../_images/Table_Branch_Head_Loss.PNG" style="width: 100%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 135 </span><span class="caption-text">This table outline which values are used for various components of the filter manifold. Note how the porosity of sand is only relevant for the outlets during forward filtration. This is because the sand doesn’t directy interact with the manifold in any of the other cases.</span></p>
+<p class="caption"><span class="caption-number">Fig. 137 </span><span class="caption-text">This table outline which values are used for various components of the filter manifold. Note how the porosity of sand is only relevant for the outlets during forward filtration. This is because the sand doesn’t directy interact with the manifold in any of the other cases.</span></p>
 </div>
 <p>Because the flows and area are different for each of the branches the head loss through each system layer is slighly different. This head loss is also only for the one branch system.  As show in the figure below with numbered branches, there are several pipes that are constructed the same and several that are different.</p>
 <p><strong>figure_numbered_filter_layers.PNG</strong></p>
 <p>Pipes 2, 4, and 6 (the outlet pipes) are all identical and the total head loss through the outlet system is approximately three times the <span class="math notranslate nohighlight">\(HL_{OutletSlotForWard}\)</span> as calculated based on the table above. The outlet pipes are the only pipes where the porosity of the sand is accounted for because the outlet slot system is the only place in the filter where the sand interfaces with the pipe openings. The exclusion zones prevents sand at the inlets and as such the porosity is not accounted for in any other head loss calculation, see <strong>FIGURE SOMETHING OR OTHER FOR IMAGE OF THE EXCLUSION ZONE</strong>. Pipe 7 experiences 2 different head losses depending on whether the filter is in forward filtration or backwash. Pipes 3 and 5 are also identical.</p>
-<p>Additional note for <a class="reference internal" href="#table-branch-head-loss"><span class="std std-numref">Fig. 135</span></a>. The pipes show the overall flow direction at each layer. The each of those numbers pipes, from a vertical cross-sections looks generally like the trunk and branches in <a class="reference internal" href="#figure-circle-branches"><span class="std std-numref">Fig. 136</span></a>.</p>
-<div class="figure align-center" id="id5">
+<p>Additional note for <a class="reference internal" href="#table-branch-head-loss"><span class="std std-numref">Fig. 137</span></a>. The pipes show the overall flow direction at each layer. The each of those numbers pipes, from a vertical cross-sections looks generally like the trunk and branches in <a class="reference internal" href="#figure-circle-branches"><span class="std std-numref">Fig. 138</span></a>.</p>
+<div class="figure align-center" id="id6">
 <span id="figure-circle-branches"></span><a class="reference internal image-reference" href="../_images/figure_circle_branches.PNG"><img alt="basic sketch of flow path within a manifold layer" src="../_images/figure_circle_branches.PNG" style="width: 60%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 136 </span><span class="caption-text">A generic sktch of one layer of a manifold. The yellow arrows indicate this is an influent manifold. The number of branches is variable depending on the size of the filter.</span></p>
+<p class="caption"><span class="caption-number">Fig. 138 </span><span class="caption-text">A generic sktch of one layer of a manifold. The yellow arrows indicate this is an influent manifold. The number of branches is variable depending on the size of the filter.</span></p>
 </div>
 <p>Having these geometries and head losses determined means the parameters for the rest of the system can be determined, as most of it depends on the sizes of the trunks and branches.</p>
 </div>
 </div>
 <div class="section" id="entrance-and-exit-pipe-dimensions-for-micky-mouse-design">
 <h2>Entrance and Exit Pipe Dimensions for “Micky Mouse” design<a class="headerlink" href="#entrance-and-exit-pipe-dimensions-for-micky-mouse-design" title="Permalink to this headline">¶</a></h2>
-<p>The constrution of the entrance and exit pipes are the main dfference between the “convential” filter entrance/exits tanks and the “Micky Mouse” design. The diffference can be seen in the <a class="reference internal" href="#figure-estars-comparison"><span class="std std-numref">Fig. 137</span></a></p>
-<div class="figure align-center" id="id6">
+<p>The constrution of the entrance and exit pipes are the main dfference between the “convential” filter entrance/exits tanks and the “Micky Mouse” design. The diffference can be seen in the <a class="reference internal" href="#figure-estars-comparison"><span class="std std-numref">Fig. 139</span></a></p>
+<div class="figure align-center" id="id7">
 <span id="figure-estars-comparison"></span><a class="reference internal image-reference" href="Filtration/Images/figure_estars_comparison.png"><img alt="CAD &quot;conventional&quot; vs micky mouse photo design" src="Filtration/Images/figure_estars_comparison.png" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 137 </span><span class="caption-text">These images show the difference in the two styles of EStaRS. In the image on the left, the “Micky Mouse” design is shown. the two pipes on the upper right and left are the entrance and exit tanks for the filter. The image on the right shows the EStaRS design that is more similar to the design of the OStaRS with a concrete entrance and exit system. Note that these two systems are for different flow rates which is why the image on the right shows two modules.</span></p>
+<p class="caption"><span class="caption-number">Fig. 139 </span><span class="caption-text">These images show the difference in the two styles of EStaRS. In the image on the left, the “Micky Mouse” design is shown. the two pipes on the upper right and left are the entrance and exit tanks for the filter. The image on the right shows the EStaRS design that is more similar to the design of the OStaRS with a concrete entrance and exit system. Note that these two systems are for different flow rates which is why the image on the right shows two modules.</span></p>
 </div>
 <p>In this sections the sizes of these tanks are determined.</p>
 <p>The size of the entrance and exit tank pipe dimensions is constrained by the sizes and number of the pipes that feed into or out of each tank.</p>
@@ -613,11 +622,11 @@ A_{OrificeTotal} = (A_{BwOrifices}, A_{FiManSlots}, A_{FiTopManSlots})\end{align
 <div class="section" id="siphon-design-and-head-loss">
 <h2>Siphon Design and Head Loss<a class="headerlink" href="#siphon-design-and-head-loss" title="Permalink to this headline">¶</a></h2>
 <p>The siphon in the EStaRS system is different from the OStaRS system because it doesn’t involve air to create suction. It acts simply as an exit for water at the top of the filter. This system only works because the entire filter is enclosed, meaning if the head loss out through the siphon pipe is less than going out the other exits, that is the flow path the water will take. Based on this strict definition of the siphon, this system isn’t really a siphon to maintain parallel naming to the OStaRS, it is called that.</p>
-<div class="figure align-center" id="id7">
+<div class="figure align-center" id="id8">
 <span id="figure-siphon-schematic"></span><a class="reference internal image-reference" href="../_images/figure_siphon_schematic.png"><img alt="siphon schematic for EStaRS systems" src="../_images/figure_siphon_schematic.png" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 138 </span><span class="caption-text">This figure shows the important components to the siphon system in an EStaRS system. The component labelled entrance tank either the filter entrance box (for the Micky Mouse design) or the concrete filter entracnce box. In either design the headloss calculations are the same.</span></p>
+<p class="caption"><span class="caption-number">Fig. 140 </span><span class="caption-text">This figure shows the important components to the siphon system in an EStaRS system. The component labelled entrance tank either the filter entrance box (for the Micky Mouse design) or the concrete filter entracnce box. In either design the headloss calculations are the same.</span></p>
 </div>
-<p>It works by simply opening the siphon valve as labelled in <a class="reference internal" href="#figure-siphon-schematic"><span class="std std-numref">Fig. 138</span></a>, then the inlet pipes are closed in the entrance tank with pipe stubs starting at the top, eventually leaving only the backwash pipe open. That’s it! To end bacwkwash, the process is reversed. Inlets are opened back up one at time, and THEN the valve is closed. Though this process is simple it requires some finesse get right. If all the inlet are closed immediately then the water level in the filter entrance tank will drop too low and air will get in the filter. Air in the filter causes head loss problems and is unwanted. To avoid this the pipe stups to close the inlets are wiggled around to act as valves so that the water level during backwash is around 10cm above the bottom of the filter entrance tank. <a class="reference internal" href="#figure-siphon-schematic"><span class="std std-numref">Fig. 138</span></a> has this value labelled.</p>
+<p>It works by simply opening the siphon valve as labelled in <a class="reference internal" href="#figure-siphon-schematic"><span class="std std-numref">Fig. 140</span></a>, then the inlet pipes are closed in the entrance tank with pipe stubs starting at the top, eventually leaving only the backwash pipe open. That’s it! To end bacwkwash, the process is reversed. Inlets are opened back up one at time, and THEN the valve is closed. Though this process is simple it requires some finesse get right. If all the inlet are closed immediately then the water level in the filter entrance tank will drop too low and air will get in the filter. Air in the filter causes head loss problems and is unwanted. To avoid this the pipe stups to close the inlets are wiggled around to act as valves so that the water level during backwash is around 10cm above the bottom of the filter entrance tank. <a class="reference internal" href="#figure-siphon-schematic"><span class="std std-numref">Fig. 140</span></a> has this value labelled.</p>
 <p>It is important to maintain this height because the height of the water level during backwash as compared to the height of the outlet of the siphon pipe controls the backwash flow. If the water level is too low, the sand may not fluidize. If the water level is too high, the sand may over-fluidize and be washed out of the filter.</p>
 <p>The pipe size for the siphon is the same as the backwwash trunk: <span class="math notranslate nohighlight">\(ND_{Siphon} = ND_{BwTrunk}\)</span>, this diameter is really a minimum to ensure the siphon pipe doesnt accumulate too much headloss.</p>
 <p>The preliminary estimate of siphon length is twice the length of the filter: <span class="math notranslate nohighlight">\(L_{SiphonEst} = 2*L_{FilterBody}\)</span>. By making this initial assumption the major losses through this length of the siphon piping can be calculated.</p>
@@ -627,7 +636,7 @@ A_{OrificeTotal} = (A_{BwOrifices}, A_{FiManSlots}, A_{FiTopManSlots})\end{align
 <p>The maxmimum head loss for siphon initiation is the sum of head losses of other predetermined quantitiies including:</p>
 <p><span class="math notranslate nohighlight">\(HL_{BWinitiation}\)</span> (From head loss section)
 <span class="math notranslate nohighlight">\(HL_{FiForwardNoSuckAir}\)</span> (The height the water level needs to be to stop air from getting into the filter.)
-<span class="math notranslate nohighlight">\(HL_{FiDirty}\)</span>  (as defined in Expert Inputs) (The height water is allowed to rise in the entrance tank before backwash should be started, this varies on the style of filter. See <strong>XXXXXXXXX</strong> for the different values)
+<span class="math notranslate nohighlight">\(HL_{FiDirty}\)</span>  (as defined in Expert Inputs) (The height water is allowed to rise in the entrance tank before backwash should be started, this varies on the style of filter. See <code class="xref std std-numref docutils literal notranslate"><span class="pre">table_comparsion_filters</span></code> for the different values)
 <span class="math notranslate nohighlight">\(HL_{BwInletPlumbing}\)</span>
 <span class="math notranslate nohighlight">\(HL_{SiphonMax}\)</span> (as defined in expert inputs) (the maximum headloss allowed throug the siphon at stea)</p>
 <p>with  <span class="math notranslate nohighlight">\(H_{SiphonNoSuckAir}\)</span> subtracted</p>
