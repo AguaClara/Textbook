@@ -19,6 +19,13 @@ Some parts of the design are the same as for the open StaRS filter! The stacked 
   In this file, many values are functions of pipe nominal diameter and SDR. For the simplicity of reading, those values are written with just the geometric value used. For example, if an outer diameter (OD) is needed, it is written as :math:`OD_{ExamplePipe}` rather than :math:`OD(ND_{ExamplePipe}, SDR26)` which is more similar to how it would be found explicitlty. Some other features that follow this convention are Inner Diameters and Radii, Outer Radii, and wall thicknesses.
 
 
+:numref:`table_comparsion_filters` shows some of the design differences between the different filter types.
+
+.. _table_comparison_filters:
+
+.. figure:: Images/table_comparison_filters.png
+
+
 
 Dimensions and Pipe Size
 =========================
@@ -90,6 +97,7 @@ Flow Distribution Constraints: ratio of pressure recovery to clean bed head loss
 ===================================================================================
 
 In the EStaRS there are three components where flow distribution must be considered:
+
 1. Between slots along manifold branches
 
 2. Between branches along manifold trunks
@@ -190,10 +198,21 @@ The branch spacing is a function of the size of the EStaRS. The "maximum" spacin
 
 the ID function also takes the SDR for the pipe (26), but in the equation above was left out so the overall mechanism of the calculation is clearer. The value is rounded because an integer number of branches is needed.
 
-The number of inlet and outlet pipes are fixed by the way the filter works and are shown below:
+:numref:`figure_manifold_sizing` shows these dimensions.
+
+.. _figure_manifold_sizing:
+
+.. figure:: Images/figure_manifold_sizing.png
+    :width: 70%
+    :align: center
+    :alt: filter manifold schematic, interal image
+
+    This schematic shows the general naming and dimensons for one layer of the filter. This is a top down view.
+
+
+The number of inlet and outlet pipes are fixed by the way the filter works:
 
 .. math::
-
 
     N_{FiInletPipesLow} = 4
 
@@ -698,7 +717,7 @@ The maxmimum head loss for siphon initiation is the sum of head losses of other 
 
 :math:`HL_{BWinitiation}` (From head loss section)
 :math:`HL_{FiForwardNoSuckAir}` (The height the water level needs to be to stop air from getting into the filter.)
-:math:`HL_{FiDirty}`  (as defined in Expert Inputs) (The height water is allowed to rise in the entrance tank before backwash should be started, this varies on the style of filter. See **XXXXXXXXX** for the different values)
+:math:`HL_{FiDirty}`  (as defined in Expert Inputs) (The height water is allowed to rise in the entrance tank before backwash should be started, this varies on the style of filter. See :numref:`table_comparsion_filters` for the different values)
 :math:`HL_{BwInletPlumbing}`
 :math:`HL_{SiphonMax}` (as defined in expert inputs) (the maximum headloss allowed throug the siphon at stea)
 
