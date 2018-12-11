@@ -17,5 +17,7 @@ Flocculation Design Challenge
   #. Why does :math:`G_{CS}\theta` increase with temperature?
   #. How does head loss through a flocculator vary as a function of temperature? Explain why.
 
-3. How far will two clay particles with a diameter of 5 :math:`\mu m` travel relative to each if they are in a uniform velocity gradient of 100 Hz for 400 s and separated (in the direction of the velocity gradient) by their diameter? Note that in a uniform velocity gradient :math:`\bar G = G_{CS}`.
-#. What is the turbidity of a suspension in which each clay particle occupies a volume equal to the volume cleared by a clay particle in the previous problem?
+3.
+3. How far will two clay particles with a diameter of 5 :math:`\mu m` travel relative to each if they are in a uniform velocity gradient of 100 Hz for 400 s and separated (in the direction of the velocity gradient) by their average separation distance based on a turbidity of 1 NTU? Note that in a uniform velocity gradient :math:`\bar G = G_{CS}`.
+#. Use the flocculation model to estimate the settled water turbidity (assuming no floc blanket) given a surface coverage, :math:`\Gamma = 0.3`, no DOM, a :math:`G_{CS}\theta = 40,000`. Use the model that neglects the initial particle concentration.
+#.
