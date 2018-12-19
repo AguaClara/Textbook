@@ -48,7 +48,7 @@ For a multistage filter system, the filter areas for the Dynamic, Roughing, and 
 
     A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}
 
-Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size. :numref:`_table_Net_Velocities` shows the relative area of various filtration technologies.
+Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size.  TABLE:`_table_net_velocities` shows the relative area of various filtration technologies.
 
 
 Understanding the amount of area requires for this component makes it easy to see why certain systems would be preferable to others, but also that overall filtration is only a polishing step and cannot treat as well as other unit processes, predominantly the flocculation-sedimentation combination.
@@ -127,10 +127,10 @@ From this it becomes possible to directly relate porosity (as above) to the filt
 
 Headloss Requirements
 ======================
-One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Karmen Kozeny Equation, an adaptation of the Hagen-Pouseille equation (ref from elsewhere, not linked yet) describes the headloss through a clean bed during filtration.
+One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Carman Kozeny Equation, an adaptation of the Hagen-Pouseille equation (ref from elsewhere, not linked yet) describes the headloss through a clean bed during filtration.
 
 .. math::
-   :label: karmen_kozeny_clean_bed
+   :label: carman_kozeny_clean_bed
 
     \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu V_{Fi}}{g D_{60}^2}
 
@@ -240,9 +240,19 @@ Steps of designing a filter.
 
 
 
+.. _heading_sand_layer_thickness:
 
 
+Layer Thickness as a function of diameter
+==============================================
 
+Two heights are defined here. Both are defined as functions:
+
+:math:`H_{FiLayerF}` the height of a standard filter layer. It is defined as the maximum value between the defined layer height, the outer radius (OR) of the trunk  (as a fucntion of nominal diameter) plus the minimum filter trunk spacing  , the outer diameter of the fitting of the trunk (also as function of ND), and the fernco outer diameter (again a fucntion of ND). Each of these is rounded to the nearest 1cm.
+
+and
+
+:math:`H_{FiBottomLayerF}` the height of The bottom filter layer. This is defined as the maxiumum value between 1. The defined layer height, the OR of the trunk + OR of the backwash trunk  (as functions of ND's of the trunk and BW trunk) + minimum filter trunk spacing, the sum of fitting OR's for the trunk and BW trunk (function of ND's), and the average of the ferco OD's as a function of NDs. Each rounded to the nearest 1cm.
 
 
 

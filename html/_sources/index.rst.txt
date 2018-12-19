@@ -49,7 +49,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flow_Control_and_Measurement/FCM_Design.rst
   Flow_Control_and_Measurement/FCM_Derivations.rst
   Flow_Control_and_Measurement/FCM_Solution.rst
-  Flow_Control_and_Measurement/FCM_DC.rst
 
 .. toctree::
   :caption: Chapter 4: Rapid Mix
@@ -62,7 +61,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Rapid_Mix/RM_Theory_and_Future_Work.rst
   Rapid_Mix/RM_Mechanical_Solution.rst
   Rapid_Mix/RM_Design_Solution.rst
-  Rapid_Mix/RM_DC.rst
 
 .. toctree::
   :caption: Chapter 5: Flocculation
@@ -77,7 +75,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flocculation/Floc_Mechanical_Solution.rst
   Flocculation/Floc_Model_Solution.rst
   Flocculation/Floc_Design_Solution.rst
-  Flocculation/Floc_DC.rst
 
 .. toctree::
   :caption: Chapter 6: Sedimentation
@@ -88,7 +85,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Sedimentation/Sed_Examples.rst
   Sedimentation/Sed_Theory_and_Future_Work.rst
   Sedimentation/Sed_Design_Solution.rst
-  Sedimentation/Sed_DC.rst
 
 .. toctree::
   :caption: Chapter 7: Filtration
@@ -99,7 +95,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Filtration/Filtration_Derivations.rst
   Filtration/Filtration_Theory_and_Future_Work.rst
   Filtration/Filtration_Design_Solution.rst
-  Filtration/Filtration_DC.rst
   Filtration/EStaRS_Design.rst
 
 

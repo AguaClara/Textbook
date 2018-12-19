@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Flow Control and Measurement Design Challenge" href="FCM_DC.html" />
+    <link rel="next" title="Rapid Mix Introduction" href="../Rapid_Mix/RM_Intro.html" />
     <link rel="prev" title="Flow Control and Measurement Derivations" href="FCM_Derivations.html" /> 
 
   
@@ -137,7 +137,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="FCM_DC.html">Flow Control and Measurement Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
 <ul>
@@ -168,7 +167,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_DC.html">Sedimentation Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
 <ul>
@@ -177,7 +175,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_DC.html">Filtration Design Challenge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
@@ -290,7 +287,7 @@
 <li>Read the Problem statement in its entirety before beginning a problem. If you don’t immediately know what to do, read it again, thoroughly. If you are getting stuck, read it a third time. If you have a good understanding of what the problem is asking and are still having trouble, TAs can help through email or office hours.</li>
 <li>If you decide to email a TA, make sure the other two are CC’ed. This minimizes the time you will have to wait until one responds.</li>
 <li>When in doubt, Kernel -&gt; Restart &amp; Run All</li>
-<li>Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km mg/s?</li>
+<li>Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km*mg/s?</li>
 <li>Make sure to review convention and syntax standards, which can be found here:<ul>
 <li><a class="reference external" href="https://github.com/AguaClara/aide_design/wiki/Standards">Standards Page</a> for naming standards.</li>
 <li><a class="reference external" href="https://github.com/AguaClara/aide_design/wiki/Variable-Naming">Variable Naming Guide</a> for creating variable names.</li>
@@ -519,10 +516,20 @@ The height of the center of the orifices measured from the LFOM datum, the botto
 <blockquote>
 <div><ol class="arabic simple">
 <li>Calculate the maximum fow rate through each available dosing tube diameter that keeps error due to minor losses below 10%.</li>
+</ol>
+<ol class="arabic simple">
 <li>Calculate the total chemical flow rate that would be required by the treatment system for the maximum chemical dose and the maximum allowable stock concentration.</li>
+</ol>
+<ol class="arabic simple">
 <li>Calculate the number of dosing tubes required if the tubes flow at maximum capacity (round up).</li>
+</ol>
+<ol class="arabic simple">
 <li>Calculate the length of the dosing tubes that correspond to each available tube diameter.</li>
+</ol>
+<ol class="arabic simple">
 <li>Select the longest dosing tube that is shorter than the maximum tube length allowable based on geometric constraints.</li>
+</ol>
+<ol class="arabic simple">
 <li>Select the dosing tube diameter, flow rate, and stock concentration corresponding to the selected tube length.</li>
 </ol>
 </div></blockquote>
@@ -722,7 +729,7 @@ The number of CDC tubes is  1.0</dd>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="FCM_DC.html" class="btn btn-neutral float-right" title="Flow Control and Measurement Design Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Rapid_Mix/RM_Intro.html" class="btn btn-neutral float-right" title="Rapid Mix Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="FCM_Derivations.html" class="btn btn-neutral" title="Flow Control and Measurement Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

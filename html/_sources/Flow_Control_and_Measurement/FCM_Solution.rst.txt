@@ -5,22 +5,22 @@ Flow Control and Measurement Solution
 A brief programming guide
 =========================
 
- #. Do not use a numerical or iterative solution when an analytical solution is easily available.
- #. Whenever a function has the potential to be used multiple times, create a function call that includes the parameters that could potentially change.
- #. Do not break dependency. That means that if I change an input parameter at the top of your worksheet, that I should get the correct answers for the new parameter for all related calculations in the worksheet.
- #. Always use dimensions (units). All calculations involving physical units must include those units.
- #. Document your design process with comments.
- #. Do not redefine your variables in subsequent problems. This loses valuable digits of precision on your numbers and can cause a lot of trouble and frustration.
- #. For everyone’s sake, use logical and reasonable variable names. `Here is AguaClara variable naming convention <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`__
+ 1. Do not use a numerical or iterative solution when an analytical solution is easily available.
+ 2. Whenever a function has the potential to be used multiple times, create a function call that includes the parameters that could potentially change.
+ 3. Do not break dependency. That means that if I change an input parameter at the top of your worksheet, that I should get the correct answers for the new parameter for all related calculations in the worksheet.
+ 4. Always use dimensions (units). All calculations involving physical units must include those units.
+ 5. Document your design process with comments.
+ 6. Do not redefine your variables in subsequent problems. This loses valuable digits of precision on your numbers and can cause a lot of trouble and frustration.
+ 7. For everyone’s sake, use logical and reasonable variable names. `Here is AguaClara variable naming convention <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`__
 
 A brief Design Challenge guide
 ==============================
 
- #. Read the Problem statement in its entirety before beginning a problem. If you don’t immediately know what to do, read it again, thoroughly. If you are getting stuck, read it a third time. If you have a good understanding of what the problem is asking and are still having trouble, TAs can help through email or office hours.
- #. If you decide to email a TA, make sure the other two are CC’ed. This minimizes the time you will have to wait until one responds.
- #. When in doubt, Kernel -> Restart & Run All
- #. Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km mg/s?
- #. Make sure to review convention and syntax standards, which can be found here:
+ 1. Read the Problem statement in its entirety before beginning a problem. If you don’t immediately know what to do, read it again, thoroughly. If you are getting stuck, read it a third time. If you have a good understanding of what the problem is asking and are still having trouble, TAs can help through email or office hours.
+ 2. If you decide to email a TA, make sure the other two are CC’ed. This minimizes the time you will have to wait until one responds.
+ 3. When in doubt, Kernel -> Restart & Run All
+ 4. Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km*mg/s?
+ 5. Make sure to review convention and syntax standards, which can be found here:
 
     - `Standards Page <https://github.com/AguaClara/aide_design/wiki/Standards>`__ for naming standards.
     - `Variable Naming Guide <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`__ for creating variable names.
@@ -278,17 +278,17 @@ For the following steps do NOT use the aide_design.cdc code. Instead, create the
 
 You may assume that the chlorine stock solution kinematic viscosity is approximately the same as water. The dose controller is to have a maximum head loss of 20 cm through the dosing tubes. We will start with commercially available liquid bleach (equivalent to 51.4 gm/L of chlorine gas), which we will use in our chemical stock tanks without dilution. Our goal is to provide a constant chlorine dose of 2 mg/L to the water entering the storage tank. We will be following the guidelines given below.
 
- #. Calculate the maximum fow rate through each available dosing tube diameter that keeps error due to minor losses below 10%.
+ 1. Calculate the maximum fow rate through each available dosing tube diameter that keeps error due to minor losses below 10%.
 
- #. Calculate the total chemical flow rate that would be required by the treatment system for the maximum chemical dose and the maximum allowable stock concentration.
+ 1. Calculate the total chemical flow rate that would be required by the treatment system for the maximum chemical dose and the maximum allowable stock concentration.
 
- #. Calculate the number of dosing tubes required if the tubes flow at maximum capacity (round up).
+ 1. Calculate the number of dosing tubes required if the tubes flow at maximum capacity (round up).
 
- #. Calculate the length of the dosing tubes that correspond to each available tube diameter.
+ 1. Calculate the length of the dosing tubes that correspond to each available tube diameter.
 
- #. Select the longest dosing tube that is shorter than the maximum tube length allowable based on geometric constraints.
+ 1. Select the longest dosing tube that is shorter than the maximum tube length allowable based on geometric constraints.
 
- #. Select the dosing tube diameter, flow rate, and stock concentration corresponding to the selected tube length.
+ 1. Select the dosing tube diameter, flow rate, and stock concentration corresponding to the selected tube length.
 
 .. code:: python
 
