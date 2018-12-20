@@ -558,11 +558,3 @@ Plot the fractional removal per constriction as a function of particle size.
    :alt: Diameter vs fractional remaining
 
    There are many constrictions in series and the filter fraction remaining is the pore fraction remaining raised to the power of the number of pores in series.
-
-Reflection questions
---------------------
-
- 1. An engineer suggests that you should install a roughing filter uphill from an AguaClara plant to improve its ability to treat turbid water. This is a real question from a conference presentation in Honduras. How would you reply to this suggestion. Consider how to answer without offending the questioner. Use the required sizes of the unit processes to guide your response.
- 1. Why don't StaRS filters experience surface clogging?
- 1. Explain why particles are captured at flow constrictions inside sand filters.
- 1. Explain why a flow constriction has a limited capacity to collect particles.
