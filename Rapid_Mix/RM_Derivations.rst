@@ -1019,11 +1019,11 @@ We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value
 
 .. code:: python
 
-    x=con.RATIO_VC_ORIFICE**2
-    Ratio_Jet_Plane = 2*con.RATIO_VC_ORIFICE**8 * con.K_MINOR_FLOC_BAFFLE/2/5
+    x=con.VC_ORIFICE_RATIO**2
+    Ratio_Jet_Plane = 2*con.VC_ORIFICE_RATIO**8 * con.K_MINOR_FLOC_BAFFLE/2/5
     Ratio_Jet_Plane
 
-    con.RATIO_VC_ORIFICE**8*con.K_MINOR_FLOC_BAFFLE/Ratio_Jet_Plane
+    con.VC_ORIFICE_RATIO**8*con.K_MINOR_FLOC_BAFFLE/Ratio_Jet_Plane
 
 .. _heading_Behind_a_flat_plate:
 
