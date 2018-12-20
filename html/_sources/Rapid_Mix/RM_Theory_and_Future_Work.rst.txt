@@ -70,8 +70,7 @@ This diffusion layer thickness is the length scale over which diffusion becomes 
 
 .. code:: python
 
-    from aide_design.play import*
-    from aguaclara_research.play import*
+    from aguaclara.play import*
     import aguaclara_research.floc_model as fm
     """I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated."""
     imagepath = 'Rapid_Mix/Images/'
