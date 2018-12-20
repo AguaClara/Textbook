@@ -486,7 +486,7 @@ The term ‘vena contracta’ describes the phenomenon of contracting flow due t
 
     \Pi_{vc} = \frac{A_{downstream}}{A_{gate}}
 
-When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter value, 0.62, is in aide_design as ``pc.RATIO_VC_ORIFICE``. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the least contracted area, :math:`\Pi_{vc}` is always less than 1.
+When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter value, 0.62, is in aide_design as ``pc.VC_ORIFICE_RATIO``. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the least contracted area, :math:`\Pi_{vc}` is always less than 1.
 
 .. important:: **A vena contracta coefficient is not a minor loss coefficient.** Though the equations for the two both involve contracted and non-contracted areas, these coefficients are not the same. Minor losses coefficients imply energy loss, and vena contractas do not. Minor losses coefficients deal with flow expansions, and vena contracas deal with flow contractions. Confusing the two coefficients is common mistake that this paragraph will hopefully help you to avoid.
 
@@ -524,7 +524,7 @@ Which, rearranged to solve for :math:`Q` gives **The Orifice Equation:**
     Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}
 
 | Such that:
-| :math:`\Pi_{vc}` = 0.62 = vena contracta coefficient, in aide_design as ``pc.RATIO_VC_ORIFICE``
+| :math:`\Pi_{vc}` = 0.62 = vena contracta coefficient, in aide_design as ``pc.VC_ORIFICE_RATIO``
 | :math:`A_{or}` = orifice area- NOT contracted flow area
 | :math:`\Delta h` = elevation difference between orifice and water level
 

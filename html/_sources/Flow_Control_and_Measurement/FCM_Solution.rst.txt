@@ -39,7 +39,7 @@ Find the vena contract (VC) coefficient ratio for an orifice in the expert_input
 
 .. code:: python
 
-    print('The vena contracta coefficient for an orifice is ',exp.RATIO_VC_ORIFICE,'.')
+    print('The vena contracta coefficient for an orifice is ',exp.VC_ORIFICE_RATIO,'.')
 
 The vena contracta coefficient for an orifice is 0.63.
 
@@ -70,8 +70,8 @@ The steps for making the graph are as follows:
     DiamOrifice = 5*u.cm
     WaterElevation = WaterElevationNormalized*DiamOrifice
 
-    HorizontalOrificeFlows = (pc.flow_orifice(DiamOrifice, WaterElevation, exp.RATIO_VC_ORIFICE)).to(u.L/u.s)
-    VerticalOrificeFlows = pc.flow_orifice_vert(DiamOrifice, WaterElevation, exp.RATIO_VC_ORIFICE).to(u.L/u.s)
+    HorizontalOrificeFlows = (pc.flow_orifice(DiamOrifice, WaterElevation, exp.VC_ORIFICE_RATIO)).to(u.L/u.s)
+    VerticalOrificeFlows = pc.flow_orifice_vert(DiamOrifice, WaterElevation, exp.VC_ORIFICE_RATIO).to(u.L/u.s)
 
     fig, ax = plt.subplots()
     ax.plot(WaterElevationNormalized, HorizontalOrificeFlows, 'r-', WaterElevationNormalized, VerticalOrificeFlows, 'b-')
@@ -172,7 +172,7 @@ The nominal diameter of the LFOM is 10 in.
 
     def flow_lfom_vert(height):
         "Returns the flow through the LFOM as a function of height"
-        Flow = pc.flow_orifice_vert(OrificeDiam, height - HeightLfomOrifices, exp.RATIO_VC_ORIFICE)*LfomOrificeArray
+        Flow = pc.flow_orifice_vert(OrificeDiam, height - HeightLfomOrifices, exp.VC_ORIFICE_RATIO)*LfomOrificeArray
         return (sum(Flow)).to(u.L/u.s)
 
     print(flow_lfom_vert(5*u.cm))

@@ -4,7 +4,9 @@ Flocculator Design Solution
 
 .. code:: python
 
-    from aide_design.play import*
+    import aguaclara
+    import aguaclara.core.
+
 
 
 In this design challenge you will design a vertical flow hydraulic flocculator. You will use the flow rate of ``flow_plant = 20 L/s`` as your default design value.
