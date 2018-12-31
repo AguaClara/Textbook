@@ -71,7 +71,7 @@ This diffusion layer thickness is the length scale over which diffusion becomes 
 .. code:: python
 
     from aguaclara.play import*
-    import aguaclara_research.floc_model as fm
+    import aguaclara.research.floc_model as fm
     """I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated."""
     imagepath = 'Rapid_Mix/Images/'
     T_graph = np.linspace(0,30,4)*u.degC
@@ -221,7 +221,7 @@ Below we estimate the time required to achieve 80% attachment of nanoparticles i
 
     from aide_design.play import*
     from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
+    import aguaclara.research.floc_model as fm
     """I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated."""
 
     imagepath = 'Rapid_Mix/Images/'
@@ -282,7 +282,7 @@ Energy Tradeoff for Coagulant Transport
 
     from aide_design.play import*
     from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
+    import aguaclara.research.floc_model as fm
     Nano_attach_time = Nano_coag_attach_time(pC_CN,C_clay,G,Temperature)
 
     def HL_coag_attach(pC_CN,C_clay,G,Temperature):
@@ -322,7 +322,7 @@ for G given a head loss.
 
     from aide_design.play import*
     from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
+    import aguaclara.research.floc_model as fm
     """find G for target head loss"""
     HL_nano_transport = np.linspace(10,100,10)*u.cm
     def G_max_head_loss(pC_CN,C_clay,HL_nano_transport,Temperature):

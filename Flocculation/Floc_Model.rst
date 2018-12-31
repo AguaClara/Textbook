@@ -91,7 +91,7 @@ Particle separation distance matters because it determines which transport mecha
 
     from aide_design.play import*
     from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
+    import aguaclara.research.floc_model as fm
     C_Clay = np.arange(1,1000,1)*u.NTU
     n_Clay = fm.num_clay(C_Clay,fm.Clay)
     fig, ax = plt.subplots()
@@ -116,7 +116,7 @@ The next step is to calculate the separation distance between the clay particles
 
     from aide_design.play import*
     from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
+    import aguaclara.research.floc_model as fm
     lamda_Clay = fm.sep_dist_clay(C_Clay,fm.Clay)
     fig, ax = plt.subplots()
     ax.semilogx(C_Clay.to(u.NTU),lamda_Clay.to(u.mm))
@@ -154,7 +154,7 @@ We will use the inner viscous length scale, equation :eq:`eq_inner_viscous_lengt
 
     from aide_design.play import*
     from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
+    import aguaclara.research.floc_model as fm
     Temperature = 20 * u.degC
     G=np.arange(1,1000,1)*u.Hz
     EDR = G**2 * pc.viscosity_kinematic(Temperature)

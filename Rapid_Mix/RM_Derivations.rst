@@ -317,10 +317,13 @@ The dividing line between eddy transport and fluid deformation controlled by vis
 .. code:: python
 
     """ importing """
-    from aide_design.play import*
-    from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
+
+    from aguaclara.core.units import unit_registry as u
+    import aguaclara.core.utility as ut
+    import numpy as np
     import matplotlib.pyplot as plt
+    import aguaclara.research.floc_model as fm
+
     from matplotlib.ticker import FormatStrFormatter
     imagepath = 'Rapid_Mix/Images/'
     EDR_array = np.logspace(0,4,num=50)*u.mW/u.kg
@@ -364,9 +367,12 @@ We can plot the eddy turnover time as a function of scale from the inner viscous
 
 .. code:: python
 
-    from aide_design.play import*
+    from aguaclara.core.units import unit_registry as u
+    import aguaclara.core.utility as ut
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import aguaclara.research.floc_model as fm
     EDR_graph = np.array([0.01,0.1,1,10 ])*u.W/u.kg
-    Temperature
     """Use the highest EDR to estimate the smallest length scale"""
     Inner_viscous_graph = Inner_viscous(EDR_graph[2], Temperature)
     Inner_viscous_graph
@@ -435,9 +441,8 @@ Substitute Einstein’s diffusion equation and solve for the length scale that t
 
 .. code:: python
 
-    from aide_design.play import*
-    from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
+    from aguaclara.core import physchem as pc
+    import aguaclara.research.floc_model as fm
     def L_Shear_Diffusion(G,Temperature,d_particle):
       return np.sqrt((u.boltzmann_constant*Temperature/
       (3 * G *  np.pi *pc.viscosity_dynamic(Temperature)* d_particle)).to_base_units())

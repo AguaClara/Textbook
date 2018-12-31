@@ -4,10 +4,13 @@ Flocculator Design Solution
 
 .. code:: python
 
-    import aguaclara
-    import aguaclara.core.
-
-
+    #import statements have been cleaned up
+    from aguaclara.core import physchem as pc
+    from aguaclara.core.units import unit_registry as u
+    import aguaclara.core.constants as constants
+    import numpy as np
+    import matplotlib.pyplot as plt
+    #plt.switch_backend('TKAgg')
 
 In this design challenge you will design a vertical flow hydraulic flocculator. You will use the flow rate of ``flow_plant = 20 L/s`` as your default design value.
 
@@ -46,7 +49,7 @@ Below are the inputs for the design. BOD stands for Basis Of Design.
     Pi_HS_min = 3
     Pi_HS_max = 6
 
-    Pi_vc = con.RATIO_VC_ORIFICE
+    Pi_vc = constants.VC_ORIFICE_RATIO
     Pi_vc_baffle = Pi_vc**2
 
     # width of the polycarbonate sheets used to make baffles
