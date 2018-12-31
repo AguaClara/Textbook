@@ -87,6 +87,8 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction_DC.html">Introduction Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -175,8 +177,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_DC.html">Filtration Design Challenge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_DC.html">Filtration Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -510,7 +512,7 @@ Thus we have</p>
 </div>
 <div class="figure align-center" id="id3">
 <span id="figure-inner-viscous-vs-edr"></span><a class="reference internal image-reference" href="../_images/Inner_viscous_vs_EDR.png"><img alt="Inner viscous vs EDR" src="../_images/Inner_viscous_vs_EDR.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 53 </span><span class="caption-text">Eddies can cause fluid mixing down to the scale of a few millimeters for energy dissipation rates used in rapid mix units and flocculators.</span></p>
+<p class="caption"><span class="caption-number">Fig. 54 </span><span class="caption-text">Eddies can cause fluid mixing down to the scale of a few millimeters for energy dissipation rates used in rapid mix units and flocculators.</span></p>
 </div>
 </div>
 <div class="section" id="turbulent-mixing-time-as-a-function-of-scale">
@@ -548,7 +550,7 @@ Thus we have</p>
 </div>
 <div class="figure align-center" id="id4">
 <span id="figure-eddy-turnover-time"></span><a class="reference internal image-reference" href="../_images/Eddy_turnover_time.png"><img alt="Eddy turnover time" src="../_images/Eddy_turnover_time.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 54 </span><span class="caption-text">Small eddies turn in less time than large eddies. This is why the mixing at the largest scale dominates the mixing time.</span></p>
+<p class="caption"><span class="caption-number">Fig. 55 </span><span class="caption-text">Small eddies turn in less time than large eddies. This is why the mixing at the largest scale dominates the mixing time.</span></p>
 </div>
 </div>
 <div class="section" id="shear-diffusion-transport">
@@ -574,7 +576,7 @@ Thus we have</p>
 <p>Substitute Einstein’s diffusion equation and solve for the length scale that transitions between shear and diffusion transport.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-48">
 <span class="eqno">(188)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-48" title="Permalink to this equation">¶</a></span>\[L_{Diffusion}^{Shear} \approx \sqrt{\frac{k_B T}{3 G \pi \mu  d_P}}\]</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="k">import</span> <span class="n">physchem</span> <span class="k">as</span> <span class="n">pc</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
 <span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
 <span class="k">def</span> <span class="nf">L_Shear_Diffusion</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">Temperature</span><span class="p">,</span><span class="n">d_particle</span><span class="p">):</span>
   <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">u</span><span class="o">.</span><span class="n">boltzmann_constant</span><span class="o">*</span><span class="n">Temperature</span><span class="o">/</span>
@@ -594,7 +596,7 @@ Thus we have</p>
 </div>
 <div class="figure align-center" id="id5">
 <span id="figure-shear-diffusion-length-scale"></span><a class="reference internal image-reference" href="../_images/Shear_diffusion_length_scale.png"><img alt="Shear diffusion length scale" src="../_images/Shear_diffusion_length_scale.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 55 </span><span class="caption-text">The length scale at which diffusion becomes the dominant transport mechanism for coagulant nanoparticles as a function of the velocity gradient. The time scale for the final diffusion to achieve blending of the nanoparticles with the water is simply 1/G.</span></p>
+<p class="caption"><span class="caption-number">Fig. 56 </span><span class="caption-text">The length scale at which diffusion becomes the dominant transport mechanism for coagulant nanoparticles as a function of the velocity gradient. The time scale for the final diffusion to achieve blending of the nanoparticles with the water is simply 1/G.</span></p>
 </div>
 <p>Molecular diffusion finishes the blending process by transporting the coagulant nanoparticles the last few hundred nanometers. The entire mixing process from the coagulant injection point to uniform blending with the raw water takes only a few seconds.</p>
 <dl class="docutils">
@@ -603,7 +605,7 @@ Thus we have</p>
 1. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).</dd>
 </dl>
 <p>The time scale for the fluid shear and molecular diffusion to cause coagulant nanoparticles to collide with particles is estimated in <a class="reference internal" href="RM_Theory_and_Future_Work.html#heading-diffusion-and-shear-transport-coagulant-nanoparticles-to-clay"><span class="std std-ref">Diffusion and Shear Transport Coagulant Nanoparticles to Clay</span></a>.</p>
-<p>Below are the derivations for the equations that appear in <a class="reference internal" href="RM_Intro.html#table-control-volume-equations"><span class="std std-numref">Table 7</span></a> containing equations for <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(\varepsilon\)</span>, and <span class="math notranslate nohighlight">\(h_L\)</span>.</p>
+<p>Below are the derivations for the equations that appear in <a class="reference internal" href="RM_Intro.html#table-control-volume-equations"><span class="std std-numref">Table 10</span></a> containing equations for <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(\varepsilon\)</span>, and <span class="math notranslate nohighlight">\(h_L\)</span>.</p>
 </div>
 <div class="section" id="straight-pipe-wall-shear">
 <span id="heading-straight-pipe-wall-shear"></span><h3>Straight pipe (wall shear)<a class="headerlink" href="#straight-pipe-wall-shear" title="Permalink to this headline">¶</a></h3>
@@ -663,7 +665,7 @@ Thus we have</p>
 <p>Flow between parallel plates occurs in plate settlers in the sedimentation tank. We will derive the velocity gradient at the wall using the Navier Stokes equation.</p>
 <div class="figure align-center" id="id6">
 <span id="figure-parallel-plate-schematic"></span><a class="reference internal image-reference" href="../_images/Parallel_Plate_schematic.png"><img alt="Parallel plate schematic" src="../_images/Parallel_Plate_schematic.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 56 </span><span class="caption-text">A fluid flowing from left to right due to a pressure gradient results in wall shear on the parallel plates. This flow profile is for the case when <span class="math notranslate nohighlight">\(\frac{dp}{dx}\)</span> is negative.</span></p>
+<p class="caption"><span class="caption-number">Fig. 57 </span><span class="caption-text">A fluid flowing from left to right due to a pressure gradient results in wall shear on the parallel plates. This flow profile is for the case when <span class="math notranslate nohighlight">\(\frac{dp}{dx}\)</span> is negative.</span></p>
 </div>
 <p>We start with the Navier-Stokes equation written for flow in the x direction.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-64">
@@ -715,7 +717,7 @@ Thus we have</p>
 <span class="eqno">(217)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-76" title="Permalink to this equation">¶</a></span>\[\varepsilon_{wall} = G_{wall}^2 \nu\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-77">
 <span class="eqno">(218)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-77" title="Permalink to this equation">¶</a></span>\[\varepsilon_{wall} = \left( \frac{6 \bar v}{S}\right)^2 \nu\]</div>
-<p>Head loss due to shear on the plates is obtained from a force balance on a control volume between two parallel plates as shown in <a class="reference internal" href="#figure-parallel-plate-schematic"><span class="std std-numref">Fig. 56</span></a>.</p>
+<p>Head loss due to shear on the plates is obtained from a force balance on a control volume between two parallel plates as shown in <a class="reference internal" href="#figure-parallel-plate-schematic"><span class="std std-numref">Fig. 57</span></a>.</p>
 <p>A force balance on a control volume gives</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-78">
 <span class="eqno">(219)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-78" title="Permalink to this equation">¶</a></span>\[2 \tau L W = -\Delta P W S\]</div>
@@ -752,7 +754,7 @@ Thus we have</p>
 <p>` &lt;<a class="reference external" href="https://confluence.cornell.edu/display/AGUACLARA/Laminar+Tube+Floc?preview=/10422268/258146480/ReportLaminarTubeFlocSpring2014.pdf">https://confluence.cornell.edu/display/AGUACLARA/Laminar+Tube+Floc?preview=/10422268/258146480/ReportLaminarTubeFlocSpring2014.pdf</a>&gt;`__</p>
 <div class="figure align-center" id="id7">
 <span id="figure-coiled-tube-flocculator"></span><a class="reference internal image-reference" href="../_images/Coiled_tube_flocculator.jpg"><img alt="double coiled tube flocculator" src="../_images/Coiled_tube_flocculator.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 57 </span><span class="caption-text">The double coiled laminar flow flocculator creates secondary currents that oscillate in direction. This may be helpful in creating much more mixing than would occur in a straight laminar flow pipe.</span></p>
+<p class="caption"><span class="caption-number">Fig. 58 </span><span class="caption-text">The double coiled laminar flow flocculator creates secondary currents that oscillate in direction. This may be helpful in creating much more mixing than would occur in a straight laminar flow pipe.</span></p>
 </div>
 <p>The ratio of the coiled to straight friction factors is given by <a class="reference external" href="https://doi.org/10.1021/i260069a017">Mishra and Gupta</a></p>
 <p>The Dean number is defined as:</p>
@@ -831,7 +833,7 @@ wall.</p>
 <p>The maximum velocity gradient in pipe flow occurs at the wall. This is true for both laminar and turbulent flow. In either case a force balance on a control volume of pipe gives us the wall shear and the wall shear can then be used to estimate the velocity gradient at the wall.</p>
 <div class="figure align-center" id="id8">
 <span id="figure-pipe-pressure-shear-force-balance"></span><a class="reference internal image-reference" href="../_images/pipe_pressure_shear_force_balance.png"><img alt="Pipe pressure and shear force balance" src="../_images/pipe_pressure_shear_force_balance.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 58 </span><span class="caption-text">A fluid flowing from left to right due to a pressure gradient results in wall shear.</span></p>
+<p class="caption"><span class="caption-number">Fig. 59 </span><span class="caption-text">A fluid flowing from left to right due to a pressure gradient results in wall shear.</span></p>
 </div>
 <p>A force balance for the case of steady flow in a round pipe requires that sum of the forces in the x direction must equal zero. Given a pipe with diameter, D, and length, L, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-105">
@@ -897,7 +899,7 @@ to obtain</p>
 <p>Below we plot the Baldyga et al.&nbsp;equation for the energy dissipation rate as a function of distance from the discharge location for the case of a round jet that is discharging into a large tank.</p>
 <div class="figure align-center" id="id9">
 <span id="figure-jet-centerline-edr"></span><a class="reference internal image-reference" href="../_images/Jet_centerline_EDR.png"><img alt="Pipe pressure and shear force balance" src="../_images/Jet_centerline_EDR.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 59 </span><span class="caption-text">The centerline energy dissipation rate downstream from a round jet. The distance downstream is measured in units of jet diameters. The energy dissipation rate between the jet and 7 jet diameters is developing as the shear between the stationary fluid and the jet propagates toward the center of the jet and turbulence is generated.</span></p>
+<p class="caption"><span class="caption-number">Fig. 60 </span><span class="caption-text">The centerline energy dissipation rate downstream from a round jet. The distance downstream is measured in units of jet diameters. The energy dissipation rate between the jet and 7 jet diameters is developing as the shear between the stationary fluid and the jet propagates toward the center of the jet and turbulence is generated.</span></p>
 </div>
 </div>
 <div class="section" id="plane-jet">
@@ -945,11 +947,13 @@ The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</s
   \right)\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-134">
 <span class="eqno">(280)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-134" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = 0.0124\]</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">con</span><span class="o">.</span><span class="n">VC_ORIFICE_RATIO</span><span class="o">**</span><span class="mi">2</span>
-<span class="n">Ratio_Jet_Plane</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">con</span><span class="o">.</span><span class="n">VC_ORIFICE_RATIO</span><span class="o">**</span><span class="mi">8</span> <span class="o">*</span> <span class="n">con</span><span class="o">.</span><span class="n">K_MINOR_FLOC_BAFFLE</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="mi">5</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.constants</span> <span class="k">as</span> <span class="nn">con</span>
+<span class="n">VC_BAFFLE_RATIO</span><span class="o">=</span><span class="n">con</span><span class="o">.</span><span class="n">VC_ORIFICE_RATIO</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">K_MINOR_FLOC_BAFFLE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">VC_BAFFLE_RATIO</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">Ratio_Jet_Plane</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">con</span><span class="o">.</span><span class="n">VC_ORIFICE_RATIO</span><span class="o">**</span><span class="mi">8</span> <span class="o">*</span> <span class="n">K_MINOR_FLOC_BAFFLE</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="mi">5</span>
 <span class="n">Ratio_Jet_Plane</span>
 
-<span class="n">con</span><span class="o">.</span><span class="n">VC_ORIFICE_RATIO</span><span class="o">**</span><span class="mi">8</span><span class="o">*</span><span class="n">con</span><span class="o">.</span><span class="n">K_MINOR_FLOC_BAFFLE</span><span class="o">/</span><span class="n">Ratio_Jet_Plane</span>
+<span class="n">VC_BAFFLE_RATIO</span><span class="o">**</span><span class="mi">4</span><span class="o">*</span><span class="n">K_MINOR_FLOC_BAFFLE</span><span class="o">/</span><span class="n">Ratio_Jet_Plane</span>
 </pre></div>
 </div>
 </div>
@@ -960,7 +964,7 @@ The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</s
 <p>Ariane Walker-Horn modeled the flat plate using Fluent in 2015.</p>
 <div class="figure align-center" id="id10">
 <span id="figure-cfd-flat-plate"></span><a class="reference internal image-reference" href="../_images/CFD_Flat_Plate.png"><img alt="CFD Flat Plate" src="../_images/CFD_Flat_Plate.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 60 </span><span class="caption-text">The energy dissipation rate and streamlines for a 1 m wide plate in two dimensional flow with an approach velocity of <span class="math notranslate nohighlight">\(1 m/s\)</span>. The maximum energy dissipation rate was approximately <span class="math notranslate nohighlight">\(0.04 W/kg\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 61 </span><span class="caption-text">The energy dissipation rate and streamlines for a 1 m wide plate in two dimensional flow with an approach velocity of <span class="math notranslate nohighlight">\(1 m/s\)</span>. The maximum energy dissipation rate was approximately <span class="math notranslate nohighlight">\(0.04 W/kg\)</span>.</span></p>
 </div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-135">
 <span class="eqno">(281)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-135" title="Permalink to this equation">¶</a></span>\[\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}\]</div>

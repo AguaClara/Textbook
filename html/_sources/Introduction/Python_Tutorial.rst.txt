@@ -1,4 +1,33 @@
-Best practices:
+.. _title_Python_Tutorial:
+
+***************
+Python Tutorial
+***************
+
+What is this place?
+
+
+.. _table_code_resources:
+
+.. csv-table:: Code resources.
+   :header: Description, Import, Example
+   :align: left
+
+    `Pint universal constants <https://github.com/hgrecco/pint/blob/master/pint/constants_en.txt>`_, from aguaclara.core.units import unit_registry as u, wat
+
+junk
+
+.. _table_an_example_table:
+
+.. csv-table:: This table has a title
+
+     :header: "name", "firstname", "age"
+     :widths: 20, 20, 10
+     :align: center
+
+     "Smith", "John", 40
+     "Smith", "John, Junior", 20
+
 
 Import statements that may be required:
 
@@ -7,13 +36,13 @@ Import statements that may be required:
     import aguaclara.core.physchem as pc
     from aguaclara.core.units import unit_registry as u
     import aguaclara.core.constants as con
+    import aguaclara.research.environmental_processes_analysis as epa
+    import aguaclara.research.floc_model as fm
 
     import numpy as np
     import matplotlib.pyplot as plt
+    import pandas as pd
 
-    import aguaclara.research.floc_model as fm
-    3*u.mg/u.L
-    fm.
 
 
 Useful hotkeys for executing code
@@ -30,13 +59,13 @@ Alt+Ctrl+Shift+Enter runs all code in the current file.
 Arrays and units
 ----------------
 
-Use Numpy arrays rather than python lists to enable math with numbers and units.
+Use Numpy arrays rather than Python lists to enable math with numbers and units.
 When creating arrays with units remember that
 
  * Array elements don't have units!
  * Arrays can have units.
 
-Therefore always attach units to the array after the array has been created.
+Therefore always attach units to the array after the array has been created. This means that array elements should be dimensionless and thus arrays must be created using dimensionless values.
 
 We can use numpy linspace with a simple change to make it dimensionless. Usually linspace has
 numpy.linspace(start, stop, num). We can change this to

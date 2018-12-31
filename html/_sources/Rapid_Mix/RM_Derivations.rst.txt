@@ -441,7 +441,7 @@ Substitute Einstein’s diffusion equation and solve for the length scale that t
 
 .. code:: python
 
-    from aguaclara.core import physchem as pc
+    import aguaclara.core.physchem as pc
     import aguaclara.research.floc_model as fm
     def L_Shear_Diffusion(G,Temperature,d_particle):
       return np.sqrt((u.boltzmann_constant*Temperature/
@@ -1024,11 +1024,13 @@ We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value
 
 .. code:: python
 
-    x=con.VC_ORIFICE_RATIO**2
-    Ratio_Jet_Plane = 2*con.VC_ORIFICE_RATIO**8 * con.K_MINOR_FLOC_BAFFLE/2/5
+    import aguaclara.core.constants as con
+    VC_BAFFLE_RATIO=con.VC_ORIFICE_RATIO**2
+    K_MINOR_FLOC_BAFFLE = (1/VC_BAFFLE_RATIO - 1)**2
+    Ratio_Jet_Plane = 2*con.VC_ORIFICE_RATIO**8 * K_MINOR_FLOC_BAFFLE/2/5
     Ratio_Jet_Plane
 
-    con.VC_ORIFICE_RATIO**8*con.K_MINOR_FLOC_BAFFLE/Ratio_Jet_Plane
+    VC_BAFFLE_RATIO**4*K_MINOR_FLOC_BAFFLE/Ratio_Jet_Plane
 
 .. _heading_Behind_a_flat_plate:
 

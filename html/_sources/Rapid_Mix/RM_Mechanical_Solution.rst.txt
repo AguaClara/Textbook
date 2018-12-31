@@ -4,7 +4,10 @@ Rapid Mix Mechanical Solution
 
 .. code:: python
 
-  from aide_design.play import*
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import numpy as np
+  import matplotlib.pyplot as plt
 
 
 Numpy, fortunately, understands how to do matrix/array operations index by index. So if you have two length 5 arrays that you want to multiply index by index, you can simply multiply them! This will allow you to focus more on the rest of the code rather than frustrating indexing errors.

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Useful hotkeys for executing code &mdash; AguaClara Textbook  documentation</title>
+  <title>Python Tutorial &mdash; AguaClara Textbook  documentation</title>
   
 
   
@@ -28,7 +28,9 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction Design Challenge" href="Introduction_DC.html" />
+    <link rel="prev" title="Introduction to AguaClara Water Treatment Design" href="Introduction.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -83,8 +85,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#useful-hotkeys-for-executing-code">Useful hotkeys for executing code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arrays-and-units">Arrays and units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting">Plotting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction_DC.html">Introduction Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -137,8 +146,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_DC.html">Filtration Design Challenge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_DC.html">Filtration Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -208,13 +217,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Useful hotkeys for executing code</li>
+      <li>Python Tutorial</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/Python/Tutorial.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Introduction/Python_Tutorial.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -227,22 +236,102 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>Best practices:</p>
+  <div class="section" id="python-tutorial">
+<span id="title-python-tutorial"></span><h1>Python Tutorial<a class="headerlink" href="#python-tutorial" title="Permalink to this headline">¶</a></h1>
+<p>What is this place?</p>
+<span id="table-code-resources"></span><table border="1" class="docutils align-left" id="id1">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Code resources.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Description</th>
+<th class="head">Import</th>
+<th class="head">Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://github.com/hgrecco/pint/blob/master/pint/constants_en.txt">Pint universal constants</a></td>
+<td>from aguaclara.core.units import unit_registry as u</td>
+<td>wat</td>
+</tr>
+</tbody>
+</table>
+<p>junk</p>
+<span id="table-an-example-table"></span><table border="1" class="docutils" id="id2">
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">This table has a title</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">header:</th><td class="field-body">“name”</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>firstname</td>
+<td>age</td>
+</tr>
+<tr class="row-even"><td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">widths:</th><td class="field-body">20</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>20</td>
+<td>10</td>
+</tr>
+<tr class="row-odd"><td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">align:</th><td class="field-body">center</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Smith</td>
+<td>John</td>
+<td>40</td>
+</tr>
+<tr class="row-even"><td>Smith</td>
+<td>John, Junior</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
 <p>Import statements that may be required:</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
 <span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">aguaclara.core.constants</span> <span class="k">as</span> <span class="nn">con</span>
+<span class="kn">import</span> <span class="nn">aguaclara.research.environmental_processes_analysis</span> <span class="k">as</span> <span class="nn">epa</span>
+<span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
-<span class="mi">3</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
-<span class="n">fm</span><span class="o">.</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 </div>
 <div class="section" id="useful-hotkeys-for-executing-code">
-<h1>Useful hotkeys for executing code<a class="headerlink" href="#useful-hotkeys-for-executing-code" title="Permalink to this headline">¶</a></h1>
+<h2>Useful hotkeys for executing code<a class="headerlink" href="#useful-hotkeys-for-executing-code" title="Permalink to this headline">¶</a></h2>
 <p>Hydrogen hotkeys are listed under Packages-&gt;Hydrogen, and are also detailed here.
 Ctrl+Enter runs the currently selected line of code.
 Shift+Enter works as Ctrl+Enter and also moves the selection to the next line of code.
@@ -253,8 +342,8 @@ Alt+Shift+Enter runs the current code block and moves the selection to the next 
 <p>Alt+Ctrl+Shift+Enter runs all code in the current file.</p>
 </div>
 <div class="section" id="arrays-and-units">
-<h1>Arrays and units<a class="headerlink" href="#arrays-and-units" title="Permalink to this headline">¶</a></h1>
-<p>Use Numpy arrays rather than python lists to enable math with numbers and units.
+<h2>Arrays and units<a class="headerlink" href="#arrays-and-units" title="Permalink to this headline">¶</a></h2>
+<p>Use Numpy arrays rather than Python lists to enable math with numbers and units.
 When creating arrays with units remember that</p>
 <blockquote>
 <div><ul class="simple">
@@ -262,7 +351,7 @@ When creating arrays with units remember that</p>
 <li>Arrays can have units.</li>
 </ul>
 </div></blockquote>
-<p>Therefore always attach units to the array after the array has been created.</p>
+<p>Therefore always attach units to the array after the array has been created. This means that array elements should be dimensionless and thus arrays must be created using dimensionless values.</p>
 <p>We can use numpy linspace with a simple change to make it dimensionless. Usually linspace has
 numpy.linspace(start, stop, num). We can change this to
 numpy.linspace(start/stop, 1, num) * stop.
@@ -271,7 +360,7 @@ Of course, if start is zero, then this gets really simple!</p>
 If start and stop have units we can make sure that the units don’t cause us any problems. Below I used np.linspace to</p>
 </div>
 <div class="section" id="plotting">
-<h1>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h1>
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
 <p>fig is a Figure instance—like a blank canvas
 ax is an AxesSubplot instance—think of a frame for plotting in</p>
 <p>fig, ax = plt.subplots()
@@ -280,12 +369,22 @@ ax.legend(loc=’upper center’)
 plt.show()</p>
 <p>Before submitting a file for others to use, you need to verify that all of the dependencies are defined and that you didn’t accidently delete a definition that is required. You can do this by placing your cursor in a python code section and then clicking on the python 3|idle in the toolbar at the bottom of the Atom window. Select restart Python 3 kernel. Then execute all of the python code in your document from top to bottom and make sure that all of the code performs as expected.</p>
 </div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Introduction_DC.html" class="btn btn-neutral float-right" title="Introduction Design Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Introduction.html" class="btn btn-neutral" title="Introduction to AguaClara Water Treatment Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
