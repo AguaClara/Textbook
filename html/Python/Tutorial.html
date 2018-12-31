@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; AguaClara Textbook  documentation</title>
+  <title>Useful hotkeys for executing code &mdash; AguaClara Textbook  documentation</title>
   
 
   
@@ -208,7 +208,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>Useful hotkeys for executing code</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -227,7 +227,60 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <p>Best practices:</p>
+<p>Import statements that may be required:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.constants</span> <span class="k">as</span> <span class="nn">con</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
+<span class="mi">3</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
+<span class="n">fm</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="section" id="useful-hotkeys-for-executing-code">
+<h1>Useful hotkeys for executing code<a class="headerlink" href="#useful-hotkeys-for-executing-code" title="Permalink to this headline">¶</a></h1>
+<p>Hydrogen hotkeys are listed under Packages-&gt;Hydrogen, and are also detailed here.
+Ctrl+Enter runs the currently selected line of code.
+Shift+Enter works as Ctrl+Enter and also moves the selection to the next line of code.
+Adding an Alt to the sequence will run the entire code block instead of a single line:</p>
+<blockquote>
+<div>Alt+Ctrl+Enter runs the current code block.
+Alt+Shift+Enter runs the current code block and moves the selection to the next block.</div></blockquote>
+<p>Alt+Ctrl+Shift+Enter runs all code in the current file.</p>
+</div>
+<div class="section" id="arrays-and-units">
+<h1>Arrays and units<a class="headerlink" href="#arrays-and-units" title="Permalink to this headline">¶</a></h1>
+<p>Use Numpy arrays rather than python lists to enable math with numbers and units.
+When creating arrays with units remember that</p>
+<blockquote>
+<div><ul class="simple">
+<li>Array elements don’t have units!</li>
+<li>Arrays can have units.</li>
+</ul>
+</div></blockquote>
+<p>Therefore always attach units to the array after the array has been created.</p>
+<p>We can use numpy linspace with a simple change to make it dimensionless. Usually linspace has
+numpy.linspace(start, stop, num). We can change this to
+numpy.linspace(start/stop, 1, num) * stop.
+Of course, if start is zero, then this gets really simple!</p>
+<p>Units can cause real confusion with arrays because linspace simply takes the magnitude
+If start and stop have units we can make sure that the units don’t cause us any problems. Below I used np.linspace to</p>
+</div>
+<div class="section" id="plotting">
+<h1>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h1>
+<p>fig is a Figure instance—like a blank canvas
+ax is an AxesSubplot instance—think of a frame for plotting in</p>
+<p>fig, ax = plt.subplots()
+ax.plot(x, y, ‘r-‘, linewidth=2, label=’sine function’, alpha=0.6)
+ax.legend(loc=’upper center’)
+plt.show()</p>
+<p>Before submitting a file for others to use, you need to verify that all of the dependencies are defined and that you didn’t accidently delete a definition that is required. You can do this by placing your cursor in a python code section and then clicking on the python 3|idle in the toolbar at the bottom of the Atom window. Select restart Python 3 kernel. Then execute all of the python code in your document from top to bottom and make sure that all of the code performs as expected.</p>
+</div>
+
 
            </div>
            

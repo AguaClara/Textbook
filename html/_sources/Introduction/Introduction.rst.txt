@@ -182,7 +182,7 @@ Thus by 2030 we need to provide safe water for at least 3.3 billion people AND m
 
 .. code:: python
 
-  from aide_design.play import*
+  from aguaclara.core.units import unit_registry as u
   import datetime
   People_needing_water_2030 = 3.3*10**9
   now = datetime.datetime.now()
@@ -351,7 +351,9 @@ Sedimentation is the process of particles ‘falling’ because they have a high
 
 .. code:: python
 
-  from aide_design.play import*
+  from aguaclara.core import physchem as pc
+  import numpy as np
+  import matplotlib.pyplot as plt
   def v_t(D_particle,density_particle,Temperature):
     return (D_particle**2*pc.gravity *(density_particle - pc.density_water(Temperature))/(18*pc.viscosity_kinematic(Temperature)*pc.density_water(Temperature))).to(u.m/u.s)
   clay = 2650 * u.kg/u.m**3
@@ -408,11 +410,11 @@ The AguaClara treatment train consists of the following processes
 
  .. code:: python
 
-   from aide_design.play import*
+   #the unit registry has been imported above and does not need to be imported again
    Q_Croton =(290 *u.Mgal/u.day).to(u.L/u.s)
-   Cost_Croton = 3.2 * 10**9 * u.USD
-   Cost_per_Lps = Cost_Croton/Q_Croton
-   Cost_per_Lps
+   #Cost_Croton = 3.2 * 10**9 * u.USD
+   #Cost_per_Lps = Cost_Croton/Q_Croton
+   #Cost_per_Lps
    N_DAF = 48
    Q_per_unit = Q_Croton/N_DAF
    Q_per_unit/6

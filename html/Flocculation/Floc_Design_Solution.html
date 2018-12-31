@@ -263,8 +263,13 @@
             
   <div class="section" id="flocculator-design-solution">
 <h1>Flocculator Design Solution<a class="headerlink" href="#flocculator-design-solution" title="Permalink to this headline">¶</a></h1>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span>
-<span class="kn">import</span> <span class="nn">aguaclara.core.</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#import statements have been cleaned up</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="k">import</span> <span class="n">physchem</span> <span class="k">as</span> <span class="n">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.constants</span> <span class="k">as</span> <span class="nn">constants</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1">#plt.switch_backend(&#39;TKAgg&#39;)</span>
 </pre></div>
 </div>
 <p>In this design challenge you will design a vertical flow hydraulic flocculator. You will use the flow rate of <code class="docutils literal notranslate"><span class="pre">flow_plant</span> <span class="pre">=</span> <span class="pre">20</span> <span class="pre">L/s</span></code> as your default design value.</p>
@@ -295,7 +300,7 @@
 <span class="n">Pi_HS_min</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">Pi_HS_max</span> <span class="o">=</span> <span class="mi">6</span>
 
-<span class="n">Pi_vc</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">RATIO_VC_ORIFICE</span>
+<span class="n">Pi_vc</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">VC_ORIFICE_RATIO</span>
 <span class="n">Pi_vc_baffle</span> <span class="o">=</span> <span class="n">Pi_vc</span><span class="o">**</span><span class="mi">2</span>
 
 <span class="c1"># width of the polycarbonate sheets used to make baffles</span>

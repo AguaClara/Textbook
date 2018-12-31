@@ -483,10 +483,13 @@ Thus we have</p>
 <p>At length scales larger than the inner viscous length scale, <span class="math notranslate nohighlight">\(\lambda_v\)</span>, the dominant transport mechanism is by turbulent eddies. At length scales smaller than <span class="math notranslate nohighlight">\(\lambda_v\)</span> the dominant transport mechanism is fluid deformation due to shear. If the flow regime is completely laminar such as in a small diameter tube flocculator, then the dominant transport mechanism is fluid deformation due to shear at length scales all the way up to the diameter of the tubing.</p>
 <p>The dividing line between eddy transport and fluid deformation controlled by viscosity can be calculated as a function of the energy dissipation rate using <a class="reference internal" href="#equation-eq-inner-viscous-length">(183)</a>.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; importing &quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
-<span class="kn">from</span> <span class="nn">aguaclara_research.play</span> <span class="k">import</span><span class="o">*</span>
-<span class="kn">import</span> <span class="nn">aguaclara_research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
+
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.utility</span> <span class="k">as</span> <span class="nn">ut</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
+
 <span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="k">import</span> <span class="n">FormatStrFormatter</span>
 <span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;Rapid_Mix/Images/&#39;</span>
 <span class="n">EDR_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span>
@@ -517,9 +520,12 @@ Thus we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-t-eddy">
 <span class="eqno">(184)<a class="headerlink" href="#equation-eq-t-eddy" title="Permalink to this equation">¶</a></span>\[t_{eddy} \approx \left( \frac{L_{eddy}^2}{ \bar\varepsilon }\right)^\frac{1}{3}\]</div>
 <p>We can plot the eddy turnover time as a function of scale from the inner viscous length scale up to the scale of the flow. We will discover whether large scale mixing by eddies is faster or slower than small scale mixing by eddies.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.utility</span> <span class="k">as</span> <span class="nn">ut</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
 <span class="n">EDR_graph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span> <span class="p">])</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">W</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span>
-<span class="n">Temperature</span>
 <span class="sd">&quot;&quot;&quot;Use the highest EDR to estimate the smallest length scale&quot;&quot;&quot;</span>
 <span class="n">Inner_viscous_graph</span> <span class="o">=</span> <span class="n">Inner_viscous</span><span class="p">(</span><span class="n">EDR_graph</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">Temperature</span><span class="p">)</span>
 <span class="n">Inner_viscous_graph</span>
@@ -568,9 +574,8 @@ Thus we have</p>
 <p>Substitute Einstein’s diffusion equation and solve for the length scale that transitions between shear and diffusion transport.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-derivations-48">
 <span class="eqno">(188)<a class="headerlink" href="#equation-rapid-mix-rm-derivations-48" title="Permalink to this equation">¶</a></span>\[L_{Diffusion}^{Shear} \approx \sqrt{\frac{k_B T}{3 G \pi \mu  d_P}}\]</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
-<span class="kn">from</span> <span class="nn">aguaclara_research.play</span> <span class="k">import</span><span class="o">*</span>
-<span class="kn">import</span> <span class="nn">aguaclara_research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="k">import</span> <span class="n">physchem</span> <span class="k">as</span> <span class="n">pc</span>
+<span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
 <span class="k">def</span> <span class="nf">L_Shear_Diffusion</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">Temperature</span><span class="p">,</span><span class="n">d_particle</span><span class="p">):</span>
   <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">u</span><span class="o">.</span><span class="n">boltzmann_constant</span><span class="o">*</span><span class="n">Temperature</span><span class="o">/</span>
   <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">G</span> <span class="o">*</span>  <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_dynamic</span><span class="p">(</span><span class="n">Temperature</span><span class="p">)</span><span class="o">*</span> <span class="n">d_particle</span><span class="p">))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
