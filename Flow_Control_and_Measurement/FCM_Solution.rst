@@ -28,7 +28,7 @@ A brief Design Challenge guide
 .. code:: python
 
     from aguaclara.core import constants as con
-    from aguaclara.core import physchem as pc
+    import aguaclara.core.physchem as pc
     from aguaclara.core.units import unit_registry as u
     import aguaclara.core.utility as ut
     import numpy as np

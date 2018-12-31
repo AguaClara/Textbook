@@ -79,13 +79,15 @@ For :math:`Na_2CO_3` \* :math:`\Pi_{ANC}` = 2 because we are adding
 
 Below is the code used to calculate the required base addition.
 
-.. todo:: This code needs to move to aguaclara_research. Then the short code snippits can be doc tested.
+.. todo:: This code needs to move to aguaclara.research. Then the short code snippits can be doc tested.
 
 .. code:: python
 
-    from aide_design.play import*
-    from aguaclara_research.play import*
-    import aguaclara_research.Environmental_Processes_Analysis as epa
+    from aguaclara.core.units import unit_registry as u
+    import aguaclara.research.environmental_processes_analysis as epa
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import pandas as pd
 
     """define molecular weights"""
     m_Ca = 40.078*u.g/u.mol
@@ -271,14 +273,19 @@ A water treatment plant that is treating 120 L/s of water injects the coagulant 
 
 We will use a :ref:`linear flow orifice meter <heading_lfom>` with 20 cm of head loss. The first step is to determine the diameter of the LFOM.
 
+..todo:: This example needs to be updated once the LFOM OO code is fixed.
+
 .. code:: python
 
  """ importing """
- from aide_design.play import*
- from aguaclara_research.play import*
- import aguaclara.research.floc_model as fm
+
+ from aguaclara.core.units import unit_registry as u
+ import aguaclara.research.environmental_processes_analysis as epa
+ import numpy as np
  import matplotlib.pyplot as plt
- from matplotlib.ticker import FormatStrFormatter
+ import aguaclara.research.floc_model as fm
+
+ #from matplotlib.ticker import FormatStrFormatter
  imagepath = 'AguaClara Water Treatment Plant Design/Rapid Mix/Images/'
 
  Q_plant = 120 * u.L/u.s
@@ -308,25 +315,27 @@ Solution scheme
 
 .. code:: python
 
- from aide_design.play import*
- T_water=0*u.degC
- Pipe_roughness = mat.PIPE_ROUGH_PVC
- Pipe_roughness
- Nu_water = pc.viscosity_kinematic(T_water)
- Q_pipe = 120 * u.L/u.s
- ND_pipe = 24*u.inch
- SDR_pipe = 26
- ID_pipe = pipe.ID_SDR(ND_pipe,SDR_pipe)
- f_pipe = pc.fric(Q_pipe,ID_pipe,Nu_water,Pipe_roughness)
- N_pipe_diameters = (2/f_pipe)**(1/3)
- N_pipe_diameters
- """The minimum length for mixing is thus"""
- L_mixing = ID_pipe*N_pipe_diameters
- print('The minimum distance required for mixing across the diameter of the pipe is ',L_mixing.to_base_units())
- v_lfom = (Q_plant/pc.area_circle(pipe.ID_SDR(ND_LFOM,SDR_LFOM))).to_base_units()
- print(v_lfom)
- t_mixing = (L_mixing/v_lfom).to(u.s)
- t_mixing
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.core.materials as mat
+  T_water=0*u.degC
+  Pipe_roughness = mat.PVC_PIPE_ROUGH
+  Pipe_roughness
+  Nu_water = pc.viscosity_kinematic(T_water)
+  Q_pipe = 120 * u.L/u.s
+  ND_pipe = 24*u.inch
+  SDR_pipe = 26
+  ID_pipe = pipe.ID_SDR(ND_pipe,SDR_pipe)
+  f_pipe = pc.fric(Q_pipe,ID_pipe,Nu_water,Pipe_roughness)
+  N_pipe_diameters = (2/f_pipe)**(1/3)
+  N_pipe_diameters
+  """The minimum length for mixing is thus"""
+  L_mixing = ID_pipe*N_pipe_diameters
+  print('The minimum distance required for mixing across the diameter of the pipe is ',L_mixing.to_base_units())
+  v_lfom = (Q_plant/pc.area_circle(pipe.ID_SDR(ND_LFOM,SDR_LFOM))).to_base_units()
+  print(v_lfom)
+  t_mixing = (L_mixing/v_lfom).to(u.s)
+  t_mixing
 
 The previous analysis provides a minimum distance for sufficient mixing so that equal mass flux of coagulant will end up in both treatment trains. This assumes that the coagulant was injected in the pipe centerline. Injection at the wall of the pipe is a poor practice and would require many more pipe diameters because it takes significant time for the coagulant to be mixed out of the slower fluid at the wall. The time required for mixing at the scale of the flow in the plant is thus accomplished in a few seconds. This ends up being the fastest part of the transport of the coagulant nanoparticles on their way to attachment to the clay particles.  Next we will determine a typical flow rate of coagulant. **Aluminum** concentrations for polyaluminum chloride (PACl) typically range from 1 to 10 mg/L. The maximum PACl stock solution concentration is about 70 g/L as **Al**.
 

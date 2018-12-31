@@ -70,36 +70,40 @@ This diffusion layer thickness is the length scale over which diffusion becomes 
 
 .. code:: python
 
-    from aguaclara.play import*
-    import aguaclara.research.floc_model as fm
-    """I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated."""
-    imagepath = 'Rapid_Mix/Images/'
-    T_graph = np.linspace(0,30,4)*u.degC
-    G = np.arange(50,5000,50)*u.Hz
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.research.floc_model as fm
+  import numpy as np
+  import matplotlib.pyplot as plt
 
-    def L_Diff(Temperature,G):
-      return (((2*u.boltzmann_constant*Temperature * fm.Clay.Diameter*u.m)/(3 * np.pi *pc.viscosity_dynamic(Temperature)* (fm.PACl.Diameter*u.m)*G))**(1/3)).to_base_units()
+  """I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated."""
+  imagepath = 'Rapid_Mix/Images/'
+  T_graph = np.linspace(0,30,4)*u.degC
+  G = np.arange(50,5000,50)*u.Hz
 
-    fig, ax = plt.subplots()
-    for i in range(len(T_graph)):
-      ax.semilogx(G,L_Diff(T_graph[i],G).to(u.nm))
+  def L_Diff(Temperature,G):
+    return (((2*u.boltzmann_constant*Temperature * fm.Clay.Diameter*u.m)/(3 * np.pi *pc.viscosity_dynamic(Temperature)* (fm.PACl.Diameter*u.m)*G))**(1/3)).to_base_units()
 
-    ax.legend([*T_graph])
-    """* is used to unpack T_graph so that units are preserved when adding another legend item."""
+  fig, ax = plt.subplots()
+  for i in range(len(T_graph)):
+    ax.semilogx(G,L_Diff(T_graph[i],G).to(u.nm))
+
+  ax.legend([*T_graph])
+  """* is used to unpack T_graph so that units are preserved when adding another legend item."""
 
 
-    ax.set(xlabel='Velocity gradient (Hz)', ylabel='Diffusion band thickness ($nm$)')
-    fig.savefig(imagepath+'Diffusion_band_thickness')
-    plt.show()
+  ax.set(xlabel='Velocity gradient (Hz)', ylabel='Diffusion band thickness ($nm$)')
+  fig.savefig(imagepath+'Diffusion_band_thickness')
+  plt.show()
 
 .. _figure_Diffusion_band_thickness:
 
 .. figure:: Images/Diffusion_band_thickness.png
-    :width: 400px
-    :align: center
-    :alt: Diffusion band thickness
+  :width: 400px
+  :align: center
+  :alt: Diffusion band thickness
 
-    Molecular diffusion band thickness as a function of velocity gradient. This length scale marks the transition between transport by fluid deformation and by diffusion.
+  Molecular diffusion band thickness as a function of velocity gradient. This length scale marks the transition between transport by fluid deformation and by diffusion.
 
 Diffusion transports the coagulant nanoparticles a relatively short distance, a fraction of a :math:`\mu m`.
 
@@ -179,7 +183,7 @@ Solve for the time required to reach a target efficiency of application of coagu
 
 .. math::
 
-    t_{coagulant, \, application} = \frac{2.3p C_{CN} \Lambda_{Clay}^2}{\pi G k \, d_{Clay}  L_{Diff_{CN}} }
+  t_{coagulant, \, application} = \frac{2.3p C_{CN} \Lambda_{Clay}^2}{\pi G k \, d_{Clay}  L_{Diff_{CN}} }
 
 
 Coagulant nanoparticle application
@@ -204,7 +208,7 @@ Solve for the velocity gradient.
 .. math::
 
 
-    G_{coagulant, \, application} =  d_{Clay}\left(\frac{\pi k \,g\Delta h }{2.3p C_{CN} \, \Lambda_{Clay}^2 \nu} \right)^\frac{3}{4} \left( \frac{2k_B T }{3 \pi \,\mu  \, d_{CN} }\right)^\frac{1}{4}
+  G_{coagulant, \, application} =  d_{Clay}\left(\frac{\pi k \,g\Delta h }{2.3p C_{CN} \, \Lambda_{Clay}^2 \nu} \right)^\frac{3}{4} \left( \frac{2k_B T }{3 \pi \,\mu  \, d_{CN} }\right)^\frac{1}{4}
 
 
 
@@ -219,56 +223,58 @@ Below we estimate the time required to achieve 80% attachment of nanoparticles i
 
 .. code:: python
 
-    from aide_design.play import*
-    from aguaclara_research.play import*
-    import aguaclara.research.floc_model as fm
-    """I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated."""
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.research.floc_model as fm
+  import numpy as np
+  import matplotlib.pyplot as plt
+  """I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated."""
 
-    imagepath = 'Rapid_Mix/Images/'
+  imagepath = 'Rapid_Mix/Images/'
 
-    # conventional mechanical design values below
-    Mix_HRT = np.array([0.5,15,25,35,85])*u.s
-    Mix_G = np.array([4000,1500,950,850,750])/u.s
-    Mix_CP = np.multiply(Mix_HRT, np.sqrt(Mix_G))
-    Mix_Gt = np.multiply(Mix_HRT, Mix_G)
-    Mix_EDR = (Mix_G**2*pc.viscosity_kinematic(Temperature))
+  # conventional mechanical design values below
+  Mix_HRT = np.array([0.5,15,25,35,85])*u.s
+  Mix_G = np.array([4000,1500,950,850,750])/u.s
+  Mix_CP = np.multiply(Mix_HRT, np.sqrt(Mix_G))
+  Mix_Gt = np.multiply(Mix_HRT, Mix_G)
+  Mix_EDR = (Mix_G**2*pc.viscosity_kinematic(Temperature))
 
-    def Nano_coag_attach_time(pC_CN,C_clay,G,Temperature):
-      """We assume that 70% of nanoparticles attach in the average time for one collision."""
-      k_nano = 1-np.exp(-1)
-      num=2.3*pC_CN*(fm.sep_dist_clay(C_clay,fm.Clay))**2
-      den = np.pi * G* k_nano * fm.Clay.Diameter*u.m * L_Diff(Temperature,G)
-      return (num/den).to_base_units()
+  def Nano_coag_attach_time(pC_CN,C_clay,G,Temperature):
+    """We assume that 70% of nanoparticles attach in the average time for one collision."""
+    k_nano = 1-np.exp(-1)
+    num=2.3*pC_CN*(fm.sep_dist_clay(C_clay,fm.Clay))**2
+    den = np.pi * G* k_nano * fm.Clay.Diameter*u.m * L_Diff(Temperature,G)
+    return (num/den).to_base_units()
 
-    C_Al = 2 * u.mg/u.L
-    C_clay = 10 * u.NTU
-    pC_CN = -np.log10(1-0.8)
-    """apply 80% of the coagulant nanoparticles to the clay"""
+  C_Al = 2 * u.mg/u.L
+  C_clay = 10 * u.NTU
+  pC_CN = -np.log10(1-0.8)
+  """apply 80% of the coagulant nanoparticles to the clay"""
 
-    G = np.arange(50,5000,10)*u.Hz
+  G = np.arange(50,5000,10)*u.Hz
 
-    fig, ax = plt.subplots()
+  fig, ax = plt.subplots()
 
-    for i in range(len(T_graph)):
-      ax.semilogx(G,Nano_coag_attach_time(pC_CN,C_clay,G,T_graph[i]))
+  for i in range(len(T_graph)):
+    ax.semilogx(G,Nano_coag_attach_time(pC_CN,C_clay,G,T_graph[i]))
 
-    ax.semilogx(Mix_G.to(1/u.s),Mix_HRT.to(u.s),'o')
-    ax.legend([*T_graph, "Conventional rapid mix"])
-    """* is used to unpack T_graph so that units are preserved when adding another legend item."""
+  ax.semilogx(Mix_G.to(1/u.s),Mix_HRT.to(u.s),'o')
+  ax.legend([*T_graph, "Conventional rapid mix"])
+  """* is used to unpack T_graph so that units are preserved when adding another legend item."""
 
 
-    ax.set(xlabel='Velocity gradient (Hz)', ylabel='Nanoparticle attachment time (s)')
-    fig.savefig(imagepath+'Coag_attach_time')
-    plt.show()
+  ax.set(xlabel='Velocity gradient (Hz)', ylabel='Nanoparticle attachment time (s)')
+  fig.savefig(imagepath+'Coag_attach_time')
+  plt.show()
 
 .. _figure_Coag_attach_time:
 
 .. figure:: Images/Coag_attach_time.png
-    :width: 400px
-    :align: center
-    :alt: Coag attach time
+  :width: 400px
+  :align: center
+  :alt: Coag attach time
 
-    An estimate of the time required for 80% of the coagulant nanoparticles to attach to clay particles given a raw water turbidity of 10 NTU.
+  An estimate of the time required for 80% of the coagulant nanoparticles to attach to clay particles given a raw water turbidity of 10 NTU.
 
 
 .. _heading_Energy_Tradeoff_for_Coagulant_Transport:
@@ -280,24 +286,26 @@ Energy Tradeoff for Coagulant Transport
 
 .. code:: python
 
-    from aide_design.play import*
-    from aguaclara_research.play import*
-    import aguaclara.research.floc_model as fm
-    Nano_attach_time = Nano_coag_attach_time(pC_CN,C_clay,G,Temperature)
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.research.floc_model as fm
+  import numpy as np
+  import matplotlib.pyplot as plt
+  Nano_attach_time = Nano_coag_attach_time(pC_CN,C_clay,G,Temperature)
 
-    def HL_coag_attach(pC_CN,C_clay,G,Temperature):
-      return (G**2*pc.viscosity_kinematic(Temperature)*Nano_attach_time/u.gravity).to(u.cm)
+  def HL_coag_attach(pC_CN,C_clay,G,Temperature):
+    return (G**2*pc.viscosity_kinematic(Temperature)*Nano_attach_time/u.gravity).to(u.cm)
 
-    fig, ax = plt.subplots()
+  fig, ax = plt.subplots()
 
-    for i in range(len(T_graph)):
-      ax.loglog(G,HL_coag_attach(pC_CN,C_clay,G,T_graph[i]))
+  for i in range(len(T_graph)):
+    ax.loglog(G,HL_coag_attach(pC_CN,C_clay,G,T_graph[i]))
 
-    ax.legend(T_graph)
+  ax.legend(T_graph)
 
-    ax.set(xlabel='Velocity gradient (Hz)', ylabel='Head loss (cm)')
-    fig.savefig(imagepath+'Coag_attach_head_loss')
-    plt.show()
+  ax.set(xlabel='Velocity gradient (Hz)', ylabel='Head loss (cm)')
+  fig.savefig(imagepath+'Coag_attach_head_loss')
+  plt.show()
 
 .. _figure_Coag_attach_head_loss:
 
@@ -320,28 +328,30 @@ for G given a head loss.
 
 .. code:: python
 
-    from aide_design.play import*
-    from aguaclara_research.play import*
-    import aguaclara.research.floc_model as fm
-    """find G for target head loss"""
-    HL_nano_transport = np.linspace(10,100,10)*u.cm
-    def G_max_head_loss(pC_CN,C_clay,HL_nano_transport,Temperature):
-      k_nano = 1-np.exp(-1)
-      num = u.gravity * HL_nano_transport * np.pi * k_nano
-      den= 2.3 * pC_CN * (fm.sep_dist_clay(C_clay,fm.Clay))**2 * pc.viscosity_kinematic(Temperature)
-      num2 = 2 * u.boltzmann_constant * Temperature
-      den2 = 3 * np.pi * pc.viscosity_dynamic(Temperature) * (fm.PACl.Diameter*u.m)
-      return fm.Clay.Diameter*u.m*((((num/den)**(3) * (num2/den2)).to_base_units())**(1/4))
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.research.floc_model as fm
+  import numpy as np
+  import matplotlib.pyplot as plt
+  """find G for target head loss"""
+  HL_nano_transport = np.linspace(10,100,10)*u.cm
+  def G_max_head_loss(pC_CN,C_clay,HL_nano_transport,Temperature):
+    k_nano = 1-np.exp(-1)
+    num = u.gravity * HL_nano_transport * np.pi * k_nano
+    den= 2.3 * pC_CN * (fm.sep_dist_clay(C_clay,fm.Clay))**2 * pc.viscosity_kinematic(Temperature)
+    num2 = 2 * u.boltzmann_constant * Temperature
+    den2 = 3 * np.pi * pc.viscosity_dynamic(Temperature) * (fm.PACl.Diameter*u.m)
+    return fm.Clay.Diameter*u.m*((((num/den)**(3) * (num2/den2)).to_base_units())**(1/4))
 
-    """Note the use of to_base_units BEFORE raising to the fractional power. This prevents a rounding error in the unit exponent."""
+  """Note the use of to_base_units BEFORE raising to the fractional power. This prevents a rounding error in the unit exponent."""
 
-    G_max = G_max_head_loss(pC_CN,C_clay,50*u.cm,Temperature)
-    print(G_max)
+  G_max = G_max_head_loss(pC_CN,C_clay,50*u.cm,Temperature)
+  print(G_max)
 
-    """The time required?"""
-    Nano_attach_time = Nano_coag_attach_time(pC_CN,C_clay,G_max,Temperature)
-    print(Nano_attach_time)
-    print(G_max*Nano_attach_time)
+  """The time required?"""
+  Nano_attach_time = Nano_coag_attach_time(pC_CN,C_clay,G_max,Temperature)
+  print(Nano_attach_time)
+  print(G_max*Nano_attach_time)
 
 According to the analysis above, the maximum velocity gradient that can be used to achieve 80% coagulant nanoparticle attachment using 50 cm of head loss is 283 Hz. This requires a residence time of 61 seconds. These model results must be experimentally verified and it is very likely that the model will need to be modified.
 

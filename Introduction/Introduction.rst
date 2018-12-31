@@ -351,7 +351,7 @@ Sedimentation is the process of particles ‘falling’ because they have a high
 
 .. code:: python
 
-  from aguaclara.core import physchem as pc
+  import aguaclara.core.physchem as pc
   import numpy as np
   import matplotlib.pyplot as plt
   def v_t(D_particle,density_particle,Temperature):
