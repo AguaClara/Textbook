@@ -11,7 +11,7 @@ A brief programming guide
  #. Always use dimensions (units). All calculations involving physical units must include those units.
  #. Document your design process with comments.
  #. Do not redefine your variables in subsequent problems. This loses valuable digits of precision on your numbers and can cause a lot of trouble and frustration.
- #. For everyone’s sake, use logical and reasonable variable names. `Here is AguaClara variable naming convention <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`__
+ #. For everyone’s sake, use logical and reasonable variable names. `Here is AguaClara variable naming convention <https://github.com/AguaClara/aguaclara/wiki/Design-Variable-Naming-Conventions>`_
 
 A brief Design Challenge guide
 ==============================
@@ -20,10 +20,7 @@ A brief Design Challenge guide
  #. If you decide to email a TA, make sure the other two are CC’ed. This minimizes the time you will have to wait until one responds.
  #. When in doubt, Kernel -> Restart & Run All
  #. Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km mg/s?
- #. Make sure to review convention and syntax standards, which can be found here:
 
-    - `Standards Page <https://github.com/AguaClara/aide_design/wiki/Standards>`__ for naming standards.
-    - `Variable Naming Guide <https://github.com/AguaClara/aide_design/wiki/Variable-Naming>`__ for creating variable names.
 
 .. code:: python
 
@@ -446,7 +443,7 @@ Laminar Flow Based Flow Controller
 
 You will design (by completing the following questions) a laminar flow controller for chlorine feed for a plant design flow rate of 50 L/s.
 
-For the following steps do NOT use the aide_design.cdc code. Instead, create the functions that you need to solve this problem. At the end, we will compare your solution to the aide_design.cdc solution.
+For the following steps do NOT use the aguaclara cdc code. Instead, create the functions that you need to solve this problem. At the end, we will compare your solution to the aguaclara cdc solution.
 
 You may assume that the chlorine stock solution kinematic viscosity is approximately the same as water. The dose controller is to have a maximum head loss of 20 cm through the dosing tubes. We will start with commercially available liquid bleach (equivalent to 51.4 gm/L of chlorine gas), which we will use in our chemical stock tanks without dilution. Our goal is to provide a constant chlorine dose of 2 mg/L to the water entering the storage tank. We will be following the guidelines given below.
 

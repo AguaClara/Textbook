@@ -21,7 +21,7 @@ Left align: `<img src="figure_name.com/things/stuff.jpg" width="600" style="floa
 
 
 ## Equations
-Whenever a new equation is introduced, it should be followed by a list explaining its parameters. If the equation has a counterpart in aide design, that should be included after the parameter explanation. In the example equation below, taken from 'Fluids_Review_Design.md', $Q$ and $g$ where introduced in previous equations and did not need to be reintroduced
+Whenever a new equation is introduced, it should be followed by a list explaining its parameters. If the equation has a counterpart in `aguaclara <https://github.com/AguaClara/aguaclara/tree/master/aguaclara>`_ , that should be included after the parameter explanation. In the example equation below, taken from 'Fluids_Review_Design.md', $Q$ and $g$ where introduced in previous equations and did not need to be reintroduced
 
 $$Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}$$
 
@@ -30,7 +30,7 @@ $\Pi_{vc}$ = 0.62 = vena contracta coefficient, in aide_design as `pc.VC_ORIFICE
 $A_{or}$ = orifice area- NOT contracted flow area  
 $\Delta h$ = elevation difference between orifice and water level
 
-**Equations in aide_design:**  
+**Equations in aguaclara:**  
 `pc.flow_orifice(Diam, Height, RatioVCOrifice)` Returns flow through a horizontal orifice.  
 `pc.flow_orifice_vert(Diam, Height, RatioVCOrifice)` Returns flow through a vertical orifice. The height parameter refers to height above the center of the orifice.
 
