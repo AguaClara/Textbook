@@ -4,17 +4,14 @@
 Flocculation Design
 ********************
 
-Welcome to the **fourth** summary sheet of CEE 4540! These documents will be guides and references for you throughout the semester. Since
-Professor Monroe’s class time is limited, so too is the amount of material he can fit on the slides while ensuring that they remain
-understandable. Thus, these summary sheets will supplement the powerpoints by going into further detail on the course concepts
-introduced in the slides.
+This chapter will supplement the lectures by going into further detail.
 
-Equations, universal constants, and other helpful goodies can be found in the `aide_design repository on GitHub <https://github.com/AguaClara/aguaclara/tree/master/aguaclara>`__. Most equations and constants you find in these summary sheets will already have been coded into aide_design, and will be shown here in the following format:
+Equations, universal constants, and other helpful goodies can be found in the `aguaclara code base <https://github.com/AguaClara/aguaclara/tree/master/aguaclara>`_ . Most equations and constants you find in these summary sheets will already have been coded and will be shown here in the following format:
 
 | Variable: ``pc.gravity``
 | Function: ``pc.area_circle(DiamCircle)``.
 
-The letters before the ``.``, in this case ``pc``, indicate the file within aide_design where the variable or function can be found. In the examples above, ``pc.gravity`` and ``pc.area_circle(DiamCircle)`` show that the variable ``gravity`` and function ``area_circle(DiamCicle)`` are located inside the `physchem.py <https://github.com/AguaClara/aguaclara>`__ (``pc``) file. You are strongly recommended to look up any aide_design equations you plan to use within in their aide_design file before using them, even if they are given here in this summary sheet. This is because each equation has comments in its original file describing what the specific conditions are to using it.
+The letters before the ``.``, in this case ``pc``, indicate the file within aguaclara where the variable or function can be found. In the examples above, ``pc.gravity`` and ``pc.area_circle(DiamCircle)`` show that the variable ``gravity`` and function ``area_circle(DiamCicle)`` are located inside the `physchem.py <https://github.com/AguaClara/aguaclara>`__ (``pc``) file. You are strongly recommended to look up any aguaclara equations before using them, even if they are given here in this summary sheet. This is because each equation has comments in its original file describing what the specific conditions are to using it.
 
 **Important Note:** This chapter introduces uncertainty and empirical design. Some of the parameters used to design AguaClara flocculators are based on what has been shown to work in the field, as opposed to having been derived scientifically. To make sure that the reader is aware of these concepts and parameters that don’t yet have a thorough basis in research, they will be highlighted in red when they appear.
 
@@ -52,10 +49,10 @@ The reason that flocculation is widely used in water treatment is because of sed
 To increase :math:`\bar v_t` and make sedimentation more efficient, flocculation aims to increase the diameter :math:`d` of the particles. This is done by applying a coagulant to the dirty water and helping the coagulant to stick evenly to all particles during Rapid Mix **(DOUBLE CHECK THAT THIS IS IN RAPID MIX ONCE RAPID MIX IS WRITTEN)**. Being covered in coagulant allows the particles to collide, merge, and grow bigger during flocculation.
 Our goal in designing a flocculator is to facilitate particle collisions. How can we do this?
 
-Collision Potential, :math:`\bar G \theta`, and Energy Dissipation Rate, :math:`\varepsilon`
----------------------------------------------------------------------------------------------
+Collision Potential, :math:`G_{CS} \theta`, and Energy Dissipation Rate, :math:`\varepsilon`
+----------------------------------------------------------------------------------------------------
 
-Collision potential :math:`(\bar G \theta)` is a term with a very straightforward name. It represents the magnitude of potential particle collisions in a fluid. It is a *dimensionless* parameter which is often used as a performance metric for flocculators; big :math:`\bar G \theta` values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). AguaClara flocculators usually aim for a collision potential of :math:`(\bar G \theta) = 37,000`, which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying :math:`\bar G`, a parameter for average fluid shear with units of :math:`\frac{1}{[T]}`, and :math:`\theta` , the residence time of water in the flocculator, with units of ::math:`[T]` . :math:`\theta` is intuitive to measure, calculate, and understand. :math:`\bar G` is a bit more difficult. First, an intuitive explanation. See :numref:`figure_G_velocity_profile`, which shows the velocity profile of flowing water.
+Collision potential :math:`(G_{CS} \theta)` is a term with a very straightforward name. It represents the magnitude of potential particle collisions in a fluid. It is a *dimensionless* parameter which is often used as a performance metric for flocculators; big :math:`G_{CS} \theta` values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). AguaClara flocculators usually aim for a collision potential of :math:`(G_{CS} \theta) = 37,000`, which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying :math:`G_{CS}`, a parameter for average fluid shear with units of :math:`\frac{1}{[T]}`, and :math:`\theta` , the residence time of water in the flocculator, with units of ::math:`[T]` . :math:`\theta` is intuitive to measure, calculate, and understand. :math:`G_{CS}` is a bit more difficult. First, an intuitive explanation. See :numref:`figure_G_velocity_profile`, which shows the velocity profile of flowing water.
 
 .. _figure_G_velocity_profile:
 
@@ -72,7 +69,7 @@ Collision potential :math:`(\bar G \theta)` is a term with a very straightforwar
 
 :math:`\bar G` represents the average :math:`\frac{\Delta \bar v}{\Delta h}` for the entire water volume under consideration, and is the parameter we will be using from now on. Unfortunately, it is unrealistic to measure :math:`\frac{\Delta \bar v}{\Delta h}` for every parcel of the water in our flocculator and take an average. We need to approximate :math:`\bar G` using measureable parameters.
 
-The parameter that serves as the basis for obtaining :math:`\bar G` is :math:`\varepsilon`, which represents the **energy dissipation** rate of a fluid *normalized by its mass*. The units of :math:`\varepsilon` are Watts per kilogram:
+The parameter that serves as the basis for obtaining :math:`G_{CS}` is :math:`\varepsilon`, which represents the **energy dissipation** rate of a fluid *normalized by its mass*. The units of :math:`\varepsilon` are Watts per kilogram:
 
 .. math::
 
@@ -96,19 +93,19 @@ Energy dissipation rate is, fortunately, easier to determine than collision pote
 
   \bar \varepsilon = \frac{g h_L}{\theta}
 
-Note that the equation above is for :math:`\bar \varepsilon`, not :math:`\varepsilon`. Since the head loss term we are using, :math:`h_L`, occurs over the entire reactor, it can only be used to find an average energy dissipation rate for the entire reactor. Combining the equations above, :math:`G = \sqrt{\frac{\varepsilon}{\nu}}` and :math:`\bar \varepsilon = \frac{g h_L}{\theta}`, we can get an equation for :math:`\bar G` in terms of easily measureable parameters:
+Note that the equation above is for :math:`\bar \varepsilon`, not :math:`\varepsilon`. Since the head loss term we are using, :math:`h_L`, occurs over the entire reactor, it can only be used to find an average energy dissipation rate for the entire reactor. Combining the equations above, :math:`G = \sqrt{\frac{\varepsilon}{\nu}}` and :math:`\bar \varepsilon = \frac{g h_L}{\theta}`, we can get an equation for :math:`G_{CS}` in terms of easily measureable parameters:
 
 .. math::
 
-  \bar G = \sqrt{\frac{g h_L}{\nu \theta}}
+  G_{CS} = \sqrt{\frac{g h_L}{\nu \theta}}
 
 We can use this to obtain a final equation for collision potential of a reactor:
 
 .. math::
 
-  \bar G \theta = \sqrt{\frac{g h_L \theta}{\nu}}
+  G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}
 
-**Note:** When we say :math:`G \theta` we are almost always referring to :math:`\bar G \theta`.
+**Note:** When we say :math:`G \theta` we are almost always referring to :math:`G_{CS} \theta`.
 
 
 Generating Head Loss with Baffles
@@ -192,18 +189,18 @@ Fortunately for us, both problems can be quantified with a single ratio:
 
 .. math::
 
-  \Pi_{\bar G}^{G_{Max}} = \frac{G_{Max}}{\bar G}
+  \Pi_{G_{CS}}^{G_{Max}} = \frac{G_{Max}}{G_{CS}}
 
 
-High values of :math:`\Pi_{\bar G}^{G_{Max}}` occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local :math:`G` values, then :math:`G_{Max}` becomes large. If the flocculator has a lot of dead space, then :math:`\bar G` becomes small. Either way, :math:`\Pi_{\bar G}^{G_{Max}}` becomes larger.
+High values of :math:`\Pi_{G_{CS}}^{G_{Max}}` occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local :math:`G` values, then :math:`G_{Max}` becomes large. If the flocculator has a lot of dead space, then :math:`G_{CS}` becomes small. Either way, :math:`\Pi_{G_{CS}}^{G_{Max}}` becomes larger.
 
-**Note:** Recall the relationship between :math:`G` and :math:`\varepsilon` : :math:`G = \sqrt{ \frac{\varepsilon}{\nu} }`. From this relationship, we can see that :math:`G \propto \sqrt{\varepsilon}`. Thus, by defining  :math:`\Pi_{\bar G}^{G_{Max}}`, we can also define a ratio for Max to average energy dissipation rate:
+**Note:** Recall the relationship between :math:`G` and :math:`\varepsilon` : :math:`G = \sqrt{ \frac{\varepsilon}{\nu} }`. From this relationship, we can see that :math:`G \propto \sqrt{\varepsilon}`. Thus, by defining  :math:`\Pi_{G_{CS}}^{G_{Max}}`, we can also define a ratio for Max to average energy dissipation rate:
 
 .. math::
 
-  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{\bar G}^{G_{Max}} \right)^2
+  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{G_{CS}}^{G_{Max}} \right)^2
 
-Therefore, by making our :math:`\Pi_{\bar G}^{G_{Max}}` as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. `A paper by Haarhoff and van der Walt in 2001 <https://iwaponline.com/aqua/article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the>`_ (DOI: 10.2166/aqua.2001.0014) uses CFD to show that the minimum :math:`\Pi_{\bar G}^{G_{Max}}` attainable in a hydraulic flocculator is :math:`\Pi_{\bar G}^{G_{Max}} = \sqrt{2} \approx 1.4`, which means that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{\bar G}^{G_{Max}} \right)^2 \approx 2`. So how do we optimize an AguaClara flocculator to make sure :math:`\Pi_{\bar G}^{G_{Max}} = \sqrt{2}`?
+Therefore, by making our :math:`\Pi_{G_{CS}}^{G_{Max}}` as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. `A paper by Haarhoff and van der Walt in 2001 <https://iwaponline.com/aqua/article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the>`_ (DOI: 10.2166/aqua.2001.0014) uses CFD to show that the minimum :math:`\Pi_{G_{CS}}^{G_{Max}}` attainable in a hydraulic flocculator is :math:`\Pi_{G_{CS}}^{G_{Max}} = \sqrt{2} \approx 1.4`, which means that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{G_{CS}}^{G_{Max}} \right)^2 \approx 2`. So how do we optimize an AguaClara flocculator to make sure :math:`\Pi_{G_{CS}}^{G_{Max}} = \sqrt{2}`?
 
 We define and optimize a performance metric:
 
@@ -301,7 +298,7 @@ Finally, we describe a range of :math:`\Pi_{H_eS}` that we can use to design an 
 Obstacles
 ^^^^^^^^^^^^^^^^^^^^^
 
-Knowing that efficient flocculators require an :math:`\frac{H_e}{S}` ratio that lies between 3 and 6, we need to understand how that impacts the flocculator design. Keeping :math:`\frac{H_e}{S}` between two specific values limits the options for baffle spacing and quantity, due to the flocculator having certain size constraints before beginning the design of the baffles. This limitation places an upper limit on the amount of head loss that a baffled flocculator can generate, since the number of baffles is limited by space and baffles are what cause head loss. This is unfortunate, it means that baffled flocculators under certain size specifications can't be designed to generate certain values of :math:`\bar \varepsilon` and :math:`\bar G` *while remaining efficient and maintaining* :math:`3 < \Pi_{H_eS} < 6`. This problem only arises for low flow plants, usually below :math:`Q_{Plant} = 20 {\rm \frac{L}{s}}`.
+Knowing that efficient flocculators require an :math:`\frac{H_e}{S}` ratio that lies between 3 and 6, we need to understand how that impacts the flocculator design. Keeping :math:`\frac{H_e}{S}` between two specific values limits the options for baffle spacing and quantity, due to the flocculator having certain size constraints before beginning the design of the baffles. This limitation places an upper limit on the amount of head loss that a baffled flocculator can generate, since the number of baffles is limited by space and baffles are what cause head loss. This is unfortunate, it means that baffled flocculators under certain size specifications can't be designed to generate certain values of :math:`\bar \varepsilon` and :math:`G_{CS}` *while remaining efficient and maintaining* :math:`3 < \Pi_{H_eS} < 6`. This problem only arises for low flow plants, usually below :math:`Q_{Plant} = 20 {\rm \frac{L}{s}}`.
 
 To get around this problem, AguaClara included 'obstacles,' or half-pipes to contract the flow after the flow expands around one baffle and before it reaches the next baffle. The purpose of these obstacles is to provide extra head loss in between baffles. They also generate head loss via minor losses, and one obstacle is designed to have the same :math:`K` as one baffle. Introducing obstacles slightly alters how we think about :math:`H_e`. In a flocculator where there are just baffles and no obstacles, then :math:`H_e = H`, since the height of water in the flocculator is equal to the distance between expansions. When obstacles are added, however, then :math:`H_e = \frac{H}{1 + n_{obstacles}}`, where :math:`n_{obstacles}` is the number of obstacles between two baffles.
 
@@ -339,13 +336,13 @@ The flocculator is more complex to design than the CDC, as it has more details a
 1. Input parameters
     - Specify:
       - :math:`h_{L_{floc}}`, head loss
-      - :math:`\bar G \theta`, collision potential
+      - :math:`G_{CS} \theta`, collision potential
       - :math:`Q`, plant flow rate
       - :math:`H`, height of water *at the end of the flocculator*
       - :math:`L_{Max, \, sed}`, max length of a flocculator channel based on sedimentation tank length
       - :math:`W_{Min, \, human}` minimum width of a single channel based on the width of the average human hip (someone's got to go down there...)
     - Find:
-      - :math:`\bar G`, average velocity gradient
+      - :math:`G_{CS}`, average velocity gradient
       - :math:`\theta`, hydraulic retention time
       - :math:`\rlap{-}V_{floc}`, flocculator volume
 2. Physical dimensions
@@ -373,9 +370,9 @@ Input Parameters
 
 Specify
 ^^^^^^^^^^^^^^^^^^^^^^^
-We start by making sure that our flocculator will be able to flocculate effectively by defining :math:`h_{L_{floc}}` and :math:`\bar G \theta`. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards in AguaClara flocculators:
+We start by making sure that our flocculator will be able to flocculate effectively by defining :math:`h_{L_{floc}}` and :math:`G_{CS} \theta`. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards in AguaClara flocculators:
 - :math:`h_{L_{floc}} = 40 \, {\rm cm}`
-- :math:`\bar G \theta = 37,000`
+- :math:`G_{CS} \theta = 37,000`
 
 The plant flow rate :math:`Q` is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water *at the end* of the flocculator, :math:`H`, the *maximum* length of the flocculator based on the length of the sedimentation tank length, :math:`L_{Max, \, sed}`, and the *minimum* width of a flocculator channel required for a human to fit inside, :math:`W_{Min, \, human}`, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the sedimentation tanks, which is why the length constraint exists. See :numref:`figure_physical_design_criteria_floc` for a representation of how the flocculator and sedimentation tanks are placed in a plant.
 
@@ -395,17 +392,17 @@ The plant flow rate :math:`Q` is defined by the needs of the community that the 
 
 Find
 ^^^^^^^^^^^^^^^
-We can rearrange the equation for :math:`\bar G` from the section on collision potential, :math:`\bar G = \sqrt{\frac{g h_L}{\nu \theta}}`, to solve for :math:`\bar G` in terms of :math:`\bar G \theta`:
+We can rearrange the equation for :math:`G_{CS}` from the section on collision potential, :math:`G_{CS} = \sqrt{\frac{g h_L}{\nu \theta}}`, to solve for :math:`G_{CS}` in terms of :math:`G_{CS} \theta`:
 
 .. math::
 
-  \bar G = \frac{g h_{L_{floc}}}{\nu (\bar G \theta)}
+  G_{CS} = \frac{g h_{L_{floc}}}{\nu (G_{CS} \theta)}
 
-Now that we have :math:`\bar G`, we can very easily find :math:`theta`:
+Now that we have :math:`G_{CS}`, we can very easily find :math:`theta`:
 
 .. math::
 
-  \theta = \frac{\bar G \theta}{\bar G}
+  \theta = \frac{G_{CS} \theta}{G_{CS}}
 
 Finally, we take retention time :math:`\theta` over plant flow rate :math:`Q` to get the required volume of the flocculator:
 
@@ -453,7 +450,7 @@ Width and Number of Channels
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The width of a single flocculator channel must meet the following conditions:
-- Maintain :math:`\bar G` at the value found in the inputs section
+- Maintain :math:`G_{CS}` at the value found in the inputs section
 - Allow for :math:`3 < \frac{H_e}{S} < 6`. Recall that :math:`\frac{H_e}{S} =  \Pi_{H_eS}`
 - Allow for a human to be able to fit into a flocculator channel
 
@@ -461,7 +458,7 @@ The first two conditions are wrapped up into the following equation, :ref:`which
 
 .. math::
 
-  W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}
+  W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
 
 This equation represents the absolute smallest width of a flocculator channel if we consider the lowest value of :math:`\Pi_{H_eS}` and the highest possible value of :math:`H_e`:
 
@@ -506,11 +503,11 @@ Height Between Expansions :math:`H_e` and Number of Obstacles per Baffle Space :
 
 We have a range of possible :math:`H_e` values based on our window of :math:`3 < \frac{H_e}{S} < 6`. However, we have a limitation and a preference which shape how we design :math:`H_e`. Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want :math:`H_e` to be closer to :math:`6` than it is to :math:`3`; we are looking for :math:`H_{e_{Max}}`.
 
-We calculate :math:`H_{e_{Max}}` based on the physical flocculator dimensions. The equation for :math:`H_e` is obtained by rearranging one of the equations for minimum channel width found above, :math:`W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}`. Because we have already design the channel width, we substitute :math:`W_{channel}` for :math:`W_{Min, \, \Pi_{H_eS}}`. Since we are looking for :math:`H_{e_{Max}}`, we also substitute :math:`\Pi_{{HS}_{Max}}` for :math:`\Pi_{H_eS}`. The result is:
+We calculate :math:`H_{e_{Max}}` based on the physical flocculator dimensions. The equation for :math:`H_e` is obtained by rearranging one of the equations for minimum channel width found above, :math:`W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}`. Because we have already design the channel width, we substitute :math:`W_{channel}` for :math:`W_{Min, \, \Pi_{H_eS}}`. Since we are looking for :math:`H_{e_{Max}}`, we also substitute :math:`\Pi_{{HS}_{Max}}` for :math:`\Pi_{H_eS}`. The result is:
 
 .. math::
 
-  H_{e_{Max}} = \left[ \frac{K}{2 \nu \bar G^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}
+  H_{e_{Max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}
 
 Note that this is the *maximum* distance between flow expansions, and does not account for the limitation that there must be an integer number of obstacles per baffle space. Thus, we need to find the *actual* distance between flow expansions. To do this, we determine and round up the number of expansions per baffle space using the ceiling function:
 
@@ -534,12 +531,12 @@ Finally, we can obtain the number of obstacles per baffle space. The :math:`- 1`
 Baffle Spacing
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Finally, we can find the space between baffles, :math:`S`. The equation for :math:`S` is taken from an intermediate step in the :math:`W_{Min, \, \Pi_{H_eS}}` derivation where we obtained, :math:`W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}`. Rearranging for :math:`S`, we get:
+Finally, we can find the space between baffles, :math:`S`. The equation for :math:`S` is taken from an intermediate step in the :math:`W_{Min, \, \Pi_{H_eS}}` derivation where we obtained, :math:`W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}`. Rearranging for :math:`S`, we get:
 
 .. math::
    :label: Floc_baffle_spacing
 
-   S = \left( \frac{K}{2 H_e \bar G^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}
+   S = \left( \frac{K}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}
 
 Fortunately, we either know or have already designed all the parameters in this equation.
 

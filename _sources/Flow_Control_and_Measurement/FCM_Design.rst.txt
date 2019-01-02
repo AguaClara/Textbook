@@ -163,7 +163,7 @@ How it works
 ^^^^^^^^^^^^^^^^
 A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: :ref:`heading_design_equations_for_the_cdc`, and you are very, very strongly encouraged to read them.
 
-The CDC can be designed manually using the equations from the derivation linked above or via aide_design, using the equations found in `cdc_functions.py <https://github.com/AguaClara/aguaclara>`_. Either way, the design algorithm is roughly the same:
+The CDC can be designed manually using the equations from the derivation linked above or via aguaclara, using the equations found in `cdc_functions.py <https://github.com/AguaClara/aguaclara>`_. Either way, the design algorithm is roughly the same:
 
 1. Calculate the maximum flow rate, :math:`Q_{Max, \, Tube}`, through each available dosing tube diameter :math:`D` that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.
 

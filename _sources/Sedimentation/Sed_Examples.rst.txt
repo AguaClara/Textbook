@@ -19,16 +19,19 @@ Solve for the length of the tube settler.
 
 .. code:: python
 
- from aide_design.play import*
- v_alpha = 3 * u.mm/u.s
- v_c = 1 * u.mm/u.s
- D = 2.54 * u.cm
- alpha = 60 * u.deg
+  from aguaclara.core.units import unit_registry as u
 
- def L_settler(D,alpha,v_alpha,v_c):
+  import numpy as np
+
+  v_alpha = 3 * u.mm/u.s
+  v_c = 1 * u.mm/u.s
+  D = 2.54 * u.cm
+  alpha = 60 * u.deg
+
+  def L_settler(D,alpha,v_alpha,v_c):
    return D/np.cos(alpha)*(v_alpha/v_c - np.sin(alpha))
 
- print(L_settler(D,alpha,v_alpha,1*u.mm/u.s))
- print(L_settler(D,alpha,v_alpha,0.2*u.mm/u.s))
+  print(L_settler(D,alpha,v_alpha,1*u.mm/u.s))
+  print(L_settler(D,alpha,v_alpha,0.2*u.mm/u.s))
 
-The tube settler above the floc hopper needs to be 72 cm long. The tube settler should provide a capture velocity of at least 1 mm/s prior to the floc hopper. Thus there should be 11 cm below the floc hopper.  
+The tube settler above the floc hopper needs to be 72 cm long. The tube settler should provide a capture velocity of at least 1 mm/s prior to the floc hopper. Thus there should be 11 cm below the floc hopper.

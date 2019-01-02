@@ -89,16 +89,23 @@ Particle separation distance matters because it determines which transport mecha
 
 .. code:: python
 
-    from aide_design.play import*
-    from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
-    C_Clay = np.arange(1,1000,1)*u.NTU
-    n_Clay = fm.num_clay(C_Clay,fm.Clay)
-    fig, ax = plt.subplots()
-    ax.loglog(C_Clay.to(u.NTU),n_Clay.to(1/u.L))
-    ax.set(xlabel='Clay concentration ($NTU$)', ylabel='Number of clay per liter')
-    fig.savefig('Flocculation/Images/NClay_vs_CClay')
-    plt.show()
+  import aguaclara
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.core.constants as con
+  import aguaclara.research.environmental_processes_analysis as epa
+  import aguaclara.research.floc_model as fm
+
+  import numpy as np
+  import matplotlib.pyplot as plt
+
+  C_Clay = np.arange(1,1000,1)*u.NTU
+  n_Clay = fm.num_clay(C_Clay,fm.Clay)
+  fig, ax = plt.subplots()
+  ax.loglog(C_Clay.to(u.NTU),n_Clay.to(1/u.L))
+  ax.set(xlabel='Clay concentration ($NTU$)', ylabel='Number of clay per liter')
+  fig.savefig('Flocculation/Images/NClay_vs_CClay')
+  plt.show()
 
 
 .. _figure_NClay_vs_CClay:
@@ -114,15 +121,20 @@ The next step is to calculate the separation distance between the clay particles
 
 .. code:: python
 
-    from aide_design.play import*
-    from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
-    lamda_Clay = fm.sep_dist_clay(C_Clay,fm.Clay)
-    fig, ax = plt.subplots()
-    ax.semilogx(C_Clay.to(u.NTU),lamda_Clay.to(u.mm))
-    ax.set(xlabel='Clay concentration ($NTU$)', ylabel=r'Clay separation distance ($mm$)')
-    fig.savefig('Flocculation/Images/LambdaClay_vs_CClay')
-    plt.show()
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.core.constants as con
+  import aguaclara.research.environmental_processes_analysis as epa
+  import aguaclara.research.floc_model as fm
+
+  import numpy as np
+  import matplotlib.pyplot as plt
+  lamda_Clay = fm.sep_dist_clay(C_Clay,fm.Clay)
+  fig, ax = plt.subplots()
+  ax.semilogx(C_Clay.to(u.NTU),lamda_Clay.to(u.mm))
+  ax.set(xlabel='Clay concentration ($NTU$)', ylabel=r'Clay separation distance ($mm$)')
+  fig.savefig('Flocculation/Images/LambdaClay_vs_CClay')
+  plt.show()
 
 
 .. _figure_LambdaClay_vs_CClay:
@@ -152,20 +164,25 @@ We will use the inner viscous length scale, equation :eq:`eq_inner_viscous_lengt
 
 .. code:: python
 
-    from aide_design.play import*
-    from aguaclara_research.play import*
-    import aguaclara_research.floc_model as fm
-    Temperature = 20 * u.degC
-    G=np.arange(1,1000,1)*u.Hz
-    EDR = G**2 * pc.viscosity_kinematic(Temperature)
-    Inner_viscous = fm.lambda_vel(EDR, Temperature)
-    fig, ax = plt.subplots()
-    ax.semilogx(G.to(u.Hz),Inner_viscous.to(u.mm))
-    ax.set(xlabel='Velocity gradient (Hz)', ylabel='Inner viscous length scale (mm)')
-    ax.text(10, 30, 'Eddies cause mixing', fontsize=12,rotation=-30)
-    ax.text(3, 14, 'Viscous shear', fontsize=12,rotation=-30)
-    fig.savefig('Flocculation/Images/innerviscous_vs_G')
-    plt.show()
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.core.constants as con
+  import aguaclara.research.environmental_processes_analysis as epa
+  import aguaclara.research.floc_model as fm
+
+  import numpy as np
+  import matplotlib.pyplot as plt
+  Temperature = 20 * u.degC
+  G=np.arange(1,1000,1)*u.Hz
+  EDR = G**2 * pc.viscosity_kinematic(Temperature)
+  Inner_viscous = fm.lambda_vel(EDR, Temperature)
+  fig, ax = plt.subplots()
+  ax.semilogx(G.to(u.Hz),Inner_viscous.to(u.mm))
+  ax.set(xlabel='Velocity gradient (Hz)', ylabel='Inner viscous length scale (mm)')
+  ax.text(10, 30, 'Eddies cause mixing', fontsize=12,rotation=-30)
+  ax.text(3, 14, 'Viscous shear', fontsize=12,rotation=-30)
+  fig.savefig('Flocculation/Images/innerviscous_vs_G')
+  plt.show()
 
 
 .. _figure_innerviscous_vs_G:
