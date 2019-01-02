@@ -250,6 +250,13 @@
   <div class="section" id="flow-control-and-measurement-design-challenge">
 <span id="title-flow-control-design-challenge"></span><h1>Flow Control and Measurement Design Challenge<a class="headerlink" href="#flow-control-and-measurement-design-challenge" title="Permalink to this headline">¶</a></h1>
 <p>Researchers in the AguaClara laboratory collected the following head loss data through a 1/8” diameter tube that was 2 m long using water at 22°C. The data is in a comma separated data (.csv) file named <a class="reference external" href="https://raw.githubusercontent.com/AguaClara/CEE4520/master/DC%20Solutions/Markdown/Head_loss_vs_Flow_dosing_tube_data.csv">Head_loss_vs_Flow_dosing_tube_data.csv</a> . Use the pandas read csv function (<code class="docutils literal notranslate"><span class="pre">pd.read_csv('filename.csv')</span></code>) to read the data file. Display the data so you can see how it is formatted.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/AguaClara/CEE4520/master/DC%20Solutions/Markdown/Head_loss_vs_Flow_dosing_tube_data.csv&#39;</span>
+<span class="n">head_loss_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">head_loss_data</span>
+</pre></div>
+</div>
 <div class="section" id="id1">
 <h2>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Using the data table above, assign the head loss and flow rate data to separate 1-D arrays. Attach the correct units. <code class="docutils literal notranslate"><span class="pre">np.array</span></code> can extract the data by simply inputting the text string of the column header. Here is example code to create the first array:</p>

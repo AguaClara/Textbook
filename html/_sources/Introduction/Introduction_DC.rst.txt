@@ -39,7 +39,7 @@ What is the cost of the chemical used in treating 1,000,000 liters of water usin
 
 2)
 ~~
-Labor costs for AguaClara plants are highly variable, but a recent study (see :refnum:`_table_AC_plant_costs`) found a range of total annual wages for the plant operators. Use the data for Moroceli to estimate the labor cost per million liters produced. Note that high flow rate plants would have lower labor costs because a single operator can easily manage a much larger water treatment plant.
+Labor costs for AguaClara plants are highly variable, but a recent study (see :numref:`_table_AC_plant_costs`) found a range of total annual wages for the plant operators. Use the data for Moroceli to estimate the labor cost per million liters produced. Note that high flow rate plants would have lower labor costs because a single operator can easily manage a much larger water treatment plant.
 
 3)
 ~~
