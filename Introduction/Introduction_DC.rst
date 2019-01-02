@@ -15,7 +15,9 @@ Introduction Design Challenge
 
     Comparison of water treatment alternatives with a focus on household options.
 
-#. What is the cost of the chemical used in treating 1,000,000 liters of water using an AguaClara plant that using a chemical coagulant (Poly aluminum chloride or PACl - 6 mg/L as aluminum) and chlorine (calcium hypochlorite - 1 mg/L as :math:`Cl_2`)? The major operation and maintenance costs for an AguaClara surface water treatment plant are the chemicals and labor costs for the plant operators. You may assume the cost of the PACl is 1 USD/kg of aluminum and the cost of calcium hypochlorite is 1.5 USD per kg of equivalent :math:`Cl_2`.
+1)
+~~
+What is the cost of the chemical used in treating 1,000,000 liters of water using an AguaClara plant that using a chemical coagulant (Poly aluminum chloride or PACl - 6 mg/L as aluminum) and chlorine (calcium hypochlorite - 1 mg/L as :math:`Cl_2`)? The major operation and maintenance costs for an AguaClara surface water treatment plant are the chemicals and labor costs for the plant operators. You may assume the cost of the PACl is 1 USD/kg of aluminum and the cost of calcium hypochlorite is 1.5 USD per kg of equivalent :math:`Cl_2`.
 
 .. _table_AC_plant_costs:
 
@@ -35,5 +37,10 @@ Introduction Design Challenge
     Annual tariff income (USD),"$30,529","$51,660","$34,440"
     Annual household water tariff (USD),$35.92,$49.20,$49.20
 
-#. Labor costs for AguaClara plants are highly variable, but a recent study (see :refnum:`_table_AC_plant_costs`) found a range of total annual wages for the plant operators. Use the data for Moroceli to estimate the labor cost per million liters produced. Note that high flow rate plants would have lower labor costs because a single operator can easily manage a much larger water treatment plant.
-#. Given the labor costs and chemical costs for the Moroceli AguaClara plant to produce 1,000,000 liters of water, how much water could be boiled for that same cost? You may assume that electrical heat is used to boil the water. Make reasonable assumptions as needed.
+2)
+~~
+Labor costs for AguaClara plants are highly variable, but a recent study (see :refnum:`_table_AC_plant_costs`) found a range of total annual wages for the plant operators. Use the data for Moroceli to estimate the labor cost per million liters produced. Note that high flow rate plants would have lower labor costs because a single operator can easily manage a much larger water treatment plant.
+
+3)
+~~
+Given the labor costs and chemical costs for the Moroceli AguaClara plant to produce 1,000,000 liters of water, how much water could be boiled for that same cost? You may assume that electrical heat is used to boil the water. Make reasonable assumptions as needed.
