@@ -283,7 +283,7 @@
 <li>Always use dimensions (units). All calculations involving physical units must include those units.</li>
 <li>Document your design process with comments.</li>
 <li>Do not redefine your variables in subsequent problems. This loses valuable digits of precision on your numbers and can cause a lot of trouble and frustration.</li>
-<li>For everyone’s sake, use logical and reasonable variable names. <a class="reference external" href="https://github.com/AguaClara/aide_design/wiki/Variable-Naming">Here is AguaClara variable naming convention</a></li>
+<li>For everyone’s sake, use logical and reasonable variable names. <a class="reference external" href="https://github.com/AguaClara/aguaclara/wiki/Design-Variable-Naming-Conventions">Here is AguaClara variable naming convention</a></li>
 </ol>
 </div></blockquote>
 </div>
@@ -295,11 +295,6 @@
 <li>If you decide to email a TA, make sure the other two are CC’ed. This minimizes the time you will have to wait until one responds.</li>
 <li>When in doubt, Kernel -&gt; Restart &amp; Run All</li>
 <li>Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km mg/s?</li>
-<li>Make sure to review convention and syntax standards, which can be found here:<ul>
-<li><a class="reference external" href="https://github.com/AguaClara/aide_design/wiki/Standards">Standards Page</a> for naming standards.</li>
-<li><a class="reference external" href="https://github.com/AguaClara/aide_design/wiki/Variable-Naming">Variable Naming Guide</a> for creating variable names.</li>
-</ul>
-</li>
 </ol>
 </div></blockquote>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="k">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">con</span>
@@ -684,7 +679,7 @@
 <div class="section" id="laminar-flow-based-flow-controller">
 <h2>Laminar Flow Based Flow Controller<a class="headerlink" href="#laminar-flow-based-flow-controller" title="Permalink to this headline">¶</a></h2>
 <p>You will design (by completing the following questions) a laminar flow controller for chlorine feed for a plant design flow rate of 50 L/s.</p>
-<p>For the following steps do NOT use the aide_design.cdc code. Instead, create the functions that you need to solve this problem. At the end, we will compare your solution to the aide_design.cdc solution.</p>
+<p>For the following steps do NOT use the aguaclara cdc code. Instead, create the functions that you need to solve this problem. At the end, we will compare your solution to the aguaclara cdc solution.</p>
 <p>You may assume that the chlorine stock solution kinematic viscosity is approximately the same as water. The dose controller is to have a maximum head loss of 20 cm through the dosing tubes. We will start with commercially available liquid bleach (equivalent to 51.4 gm/L of chlorine gas), which we will use in our chemical stock tanks without dilution. Our goal is to provide a constant chlorine dose of 2 mg/L to the water entering the storage tank. We will be following the guidelines given below.</p>
 <blockquote>
 <div><ol class="arabic simple">

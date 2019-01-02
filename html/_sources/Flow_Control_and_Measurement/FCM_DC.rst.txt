@@ -112,7 +112,7 @@ Changes to which of the two parameters, minor loss coefficient or tube diameter,
 
 7)
 ~~
-Create a design for a chemical dose controller using AIDE. Then take that design and calculate the maximum coagulant dose that it will deliver.
+Create a design for a `chemical dose controller using aguaclara <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/design/cdc.py>`_ . Then take that design and calculate the maximum coagulant dose that it will deliver.
 
 8)
 ~~

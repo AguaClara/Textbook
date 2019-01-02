@@ -6,6 +6,7 @@ Rapid Mix Mechanical Solution
 
   import aguaclara.core.physchem as pc
   from aguaclara.core.units import unit_registry as u
+  import aguaclara.core.utility as ut
   import numpy as np
   import matplotlib.pyplot as plt
 
@@ -29,7 +30,7 @@ Part 1: Temperature effects, energy use, and operating costs
 1)
 ~~
 
-Create a graph of the kinematic viscosity of water as a function of temperature. Use the ``pc.viscosity_kinematic`` function. 1. Create an array of temperatures (0 to 35) using ``np.linspace`` to create a dimensionless array. Then, attach appropriate temperature dimensions to the array by multiplying by the units. You can do this in one line! 1. Pass the entire array of temperatures to the kinematic viscosity function in aide_design.pc to obtain an array of corresponding viscosities. 1. Plot viscosity (mm^2/s) as a function of temperature (Celsius).
+Create a graph of the kinematic viscosity of water as a function of temperature. Use the ``pc.viscosity_kinematic`` function. 1. Create an array of temperatures (0 to 35) using ``np.linspace`` to create a dimensionless array. Then, attach appropriate temperature dimensions to the array by multiplying by the units. You can do this in one line! 1. Pass the entire array of temperatures to the kinematic viscosity function in aguaclara.core.pc to obtain an array of corresponding viscosities. 1. Plot viscosity (mm^2/s) as a function of temperature (Celsius).
 
 .. code:: python
 
@@ -188,7 +189,7 @@ Our next task is to select a motor that can provide the required shaft power, as
 5b)
 ~~~
 
-It is common in engineering design to have target design value that must be rounded up to the next available manufactured value. In the Flow Control and Measurement Design Challenge, we used this method to take a minimum pipe size required to deliver a target flow rate and then we rounded up to the nearest commonly available pipe size. We wrote a function, ``ceil_nearest`` in aide_design.utility, that we used to select pipe sizes. Use that function to find a motor that is large enough to drive the rapid mix impeller (`What’s an impeller? <https://en.wikipedia.org/wiki/Impeller#In_pumps>`__).
+It is common in engineering design to have target design value that must be rounded up to the next available manufactured value. In the Flow Control and Measurement Design Challenge, we used this method to take a minimum pipe size required to deliver a target flow rate and then we rounded up to the nearest commonly available pipe size. We wrote a function, ``ceil_nearest`` in aguaclara.core.utility, that we used to select pipe sizes. Use that function to find a motor that is large enough to drive the rapid mix impeller (`What’s an impeller? <https://en.wikipedia.org/wiki/Impeller#In_pumps>`__).
 
 ``ut.ceil_nearest`` takes two inputs: the first is the value you are looking to match/exceed. In the pipe sizing example, this would be the smallest pipe that can handle the required flow. The second input is the array through which you are looking to compare the first input. If we continue with the pipe size example, this would be the array of available pipe sizes.
 

@@ -592,7 +592,8 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 <span class="n">HL_LFOM</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">Pi_LFOM_safety</span> <span class="o">=</span> <span class="mf">1.2</span>
 <span class="n">SDR_LFOM</span> <span class="o">=</span> <span class="mi">26</span>
-<span class="kn">from</span> <span class="nn">aide_design.unit_process_design</span> <span class="k">import</span> <span class="n">lfom</span> <span class="k">as</span> <span class="n">lfom</span>
+
+<span class="kn">from</span> <span class="nn">aguaclara.design</span> <span class="k">import</span> <span class="n">lfom</span> <span class="k">as</span> <span class="n">lfom</span>
 <span class="n">ND_LFOM</span> <span class="o">=</span> <span class="n">lfom</span><span class="o">.</span><span class="n">nom_diam_lfom_pipe</span><span class="p">(</span><span class="n">Q_plant</span><span class="p">,</span><span class="n">HL_LFOM</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ND_LFOM</span><span class="p">,</span> <span class="s1">&#39;(&#39;</span><span class="p">,</span><span class="n">ND_LFOM</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">),</span> <span class="s1">&#39;)&#39;</span><span class="p">)</span>
 

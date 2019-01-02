@@ -398,7 +398,7 @@
 <div class="section" id="id7">
 <h4>How it works<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <p>A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: <a class="reference internal" href="FCM_Derivations.html#heading-design-equations-for-the-cdc"><span class="std std-ref">Design Equations for the Linear Chemical Dose Controller (CDC)</span></a>, and you are very, very strongly encouraged to read them.</p>
-<p>The CDC can be designed manually using the equations from the derivation linked above or via aide_design, using the equations found in <a class="reference external" href="https://github.com/AguaClara/aguaclara">cdc_functions.py</a>. Either way, the design algorithm is roughly the same:</p>
+<p>The CDC can be designed manually using the equations from the derivation linked above or via aguaclara, using the equations found in <a class="reference external" href="https://github.com/AguaClara/aguaclara">cdc_functions.py</a>. Either way, the design algorithm is roughly the same:</p>
 <ol class="arabic simple">
 <li>Calculate the maximum flow rate, <span class="math notranslate nohighlight">\(Q_{Max, \, Tube}\)</span>, through each available dosing tube diameter <span class="math notranslate nohighlight">\(D\)</span> that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.</li>
 </ol>

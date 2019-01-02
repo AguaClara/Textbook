@@ -275,9 +275,10 @@
             
   <div class="section" id="sedimentation-design-solution">
 <h1>Sedimentation Design Solution<a class="headerlink" href="#sedimentation-design-solution" title="Permalink to this headline">¶</a></h1>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
-<span class="kn">from</span> <span class="nn">aide_design</span> <span class="k">import</span> <span class="n">floc_model</span> <span class="k">as</span> <span class="n">floc</span>
-<span class="kn">from</span> <span class="nn">pytexit</span> <span class="k">import</span> <span class="n">py2tex</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 <div class="section" id="introduction">
@@ -380,7 +381,6 @@ The minimum width of the sed tank diffusers is 2.409 millimeter</p>
 <span class="n">K_Minor</span> <span class="o">=</span> <span class="mi">2</span>
 
 <span class="n">Vel_Tube_Max</span> <span class="o">=</span> <span class="p">(((</span><span class="n">Pi_Error</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Headloss_DosingTube_Max</span> <span class="o">*</span> <span class="n">g</span><span class="p">)</span> <span class="o">/</span> <span class="n">K_Minor</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">meter</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="n">py2tex</span><span class="p">(</span><span class="s1">&#39;Vel_Tube_Max = (((Pi_Error * 2 * Headloss_DosingTube_Max * g) / K_Minor)**(1/2))&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-0">

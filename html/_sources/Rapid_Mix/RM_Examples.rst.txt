@@ -292,7 +292,8 @@ We will use a :ref:`linear flow orifice meter <heading_lfom>` with 20 cm of head
  HL_LFOM = 20 * u.cm
  Pi_LFOM_safety = 1.2
  SDR_LFOM = 26
- from aide_design.unit_process_design import lfom as lfom
+
+ from aguaclara.design import lfom as lfom
  ND_LFOM = lfom.nom_diam_lfom_pipe(Q_plant,HL_LFOM)
  print(ND_LFOM, '(',ND_LFOM.to(u.cm), ')')
 

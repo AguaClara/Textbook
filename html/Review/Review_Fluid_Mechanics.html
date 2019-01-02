@@ -340,7 +340,7 @@
 <p>A numeric way to determine whether flow is laminar or turbulent is by finding the <a class="reference external" href="https://en.wikipedia.org/wiki/Reynolds_number">Reynolds number</a>, <span class="math notranslate nohighlight">\({\rm Re}\)</span>. The Reynolds number is a dimensionless parameter that compares inertia, represented by the average flow velocity <span class="math notranslate nohighlight">\(\bar v\)</span> times a length scale <span class="math notranslate nohighlight">\(D\)</span> to <a class="reference external" href="https://en.wikipedia.org/wiki/Viscosity">viscosity</a>, represented by the kinematic viscosity <span class="math notranslate nohighlight">\(\nu\)</span>. <a class="reference external" href="https://www.youtube.com/watch?v=DVQw0svRHZA">Click here</a> for a brief video explanation of viscosity. If the Reynolds number is less than 2,100 the flow is considered laminar. If it is more than 2,100, it is considered turbulent.</p>
 <div class="math notranslate nohighlight" id="equation-review-review-fluid-mechanics-3">
 <span class="eqno">(7)<a class="headerlink" href="#equation-review-review-fluid-mechanics-3" title="Permalink to this equation">¶</a></span>\[{\rm Re = \frac{inertia}{viscosity}} = \frac{\bar vD}{\nu}\]</div>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Laminar%E2%80%93turbulent_transition">The transition between laminar and turbulent flow is not yet well understood</a>, which is why the concept of transitional flow is often simplified and neglected to make it possible to code for laminar or turbulent flow, which are better understood. We will assume that the transition occurs at <span class="math notranslate nohighlight">\(\rm{Re} = 2100\)</span>. In aide_design, this parameter shows us as <code class="docutils literal notranslate"><span class="pre">pc.RE_TRANSITION_PIPE</span></code>.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Laminar%E2%80%93turbulent_transition">The transition between laminar and turbulent flow is not yet well understood</a>, which is why the concept of transitional flow is often simplified and neglected to make it possible to code for laminar or turbulent flow, which are better understood. We will assume that the transition occurs at <span class="math notranslate nohighlight">\(\rm{Re} = 2100\)</span>. In aguaclara, this parameter shows us as <code class="docutils literal notranslate"><span class="pre">pc.RE_TRANSITION_PIPE</span></code>.</p>
 <p>Fluid can flow through very many different geometries, like a pipe, a rectangular channel, or any other shape. To account for this, the characteristic length scale for the Reynolds number, which was written in the equation above as <span class="math notranslate nohighlight">\(D\)</span>, is quantified as the <a class="reference external" href="https://www.engineeringtoolbox.com/hydraulic-equivalent-diameter-d_458.html">hydraulic diameter</a>, <span class="math notranslate nohighlight">\(D_h\)</span> when considering a general cross-sectional area. For circular pipes, which are the most common geometry you’ll encounter in this class, the hydraulic diameter is simply the pipe’s diameter, <span class="math notranslate nohighlight">\(D_h = D\)</span>.</p>
 <p>Here are other commonly used forms of the Reynolds number equation <em>for circular pipes</em>. They are the same as the one above, just with the substitutions <span class="math notranslate nohighlight">\(Q = \bar v \frac{\pi D^2}{4}\)</span> and <span class="math notranslate nohighlight">\(\nu = \frac{\mu}{\rho}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-reynolds-number-equation">
@@ -355,7 +355,7 @@
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><strong>Function in aide_design:</strong> <code class="docutils literal notranslate"><span class="pre">pc.re_pipe(FlowRate,</span> <span class="pre">Diam,</span> <span class="pre">Nu)</span></code> Returns the Reynolds number <em>in a circular pipe</em>. Functions for finding the Reynolds number through other flow conduits and geometries can also be found in <a class="reference external" href="https://github.com/AguaClara/aguaclara">physchem.py</a> within aide_design.</p>
+<p class="last"><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">pc.re_pipe(FlowRate,</span> <span class="pre">Diam,</span> <span class="pre">Nu)</span></code> Returns the Reynolds number <em>in a circular pipe</em>. Functions for finding the Reynolds number through other flow conduits and geometries can also be found in <a class="reference external" href="https://github.com/AguaClara/aguaclara">physchem.py</a> within aguaclara.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -393,7 +393,7 @@
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(p\)</span> = pressure</div>
 <div class="line"><span class="math notranslate nohighlight">\(\rho\)</span> = fluid density</div>
-<div class="line"><span class="math notranslate nohighlight">\(g\)</span> = acceleration due to gravity, in aide_design as <code class="docutils literal notranslate"><span class="pre">con.GRAVITY</span></code></div>
+<div class="line"><span class="math notranslate nohighlight">\(g\)</span> = acceleration due to gravity</div>
 <div class="line"><span class="math notranslate nohighlight">\(z\)</span> = elevation relative to a reference</div>
 <div class="line"><span class="math notranslate nohighlight">\(v\)</span> = fluid velocity</div>
 </div>
@@ -446,7 +446,7 @@
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><strong>Function in aide_design:</strong> <code class="docutils literal notranslate"><span class="pre">pc.headloss_fric(FlowRate,</span> <span class="pre">Diam,</span> <span class="pre">Length,</span> <span class="pre">Nu,</span> <span class="pre">PipeRough)</span></code> Returns only major losses. Works for both laminar and turbulent flow. PipeRough describes the pipe roughness <span class="math notranslate nohighlight">\(\epsilon\)</span> described shortly below.</p>
+<p class="last"><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">pc.headloss_fric(FlowRate,</span> <span class="pre">Diam,</span> <span class="pre">Length,</span> <span class="pre">Nu,</span> <span class="pre">PipeRough)</span></code> Returns only major losses. Works for both laminar and turbulent flow. PipeRough describes the pipe roughness <span class="math notranslate nohighlight">\(\epsilon\)</span> described shortly below.</p>
 </div>
 <p>Darcy-Weisbach is wonderful because it applies to both laminar and turbulent flow regimes and contains relatively easy to measure variables. The one exception is the Darcy friction factor, <span class="math notranslate nohighlight">\(\rm{f}\)</span>. This parameter is an approximation for the magnitude of friction between the pipe walls and the fluid, and its value changes depending on the whether or not the flow is laminar or turbulent, and varies with the Reynolds number in both flow regimes.</p>
 <p>For laminar flow, the friction factor can be determined from the following equation:</p>
@@ -462,7 +462,7 @@
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><strong>Function in aide_design:</strong> <code class="docutils literal notranslate"><span class="pre">pc.fric(FlowRate,</span> <span class="pre">Diam,</span> <span class="pre">Nu,</span> <span class="pre">PipeRough)</span></code> Returns <span class="math notranslate nohighlight">\(\rm{f}\)</span> for laminar <em>or</em> turbulent flow. For laminar flow, use zero for the <code class="docutils literal notranslate"><span class="pre">PipeRough</span></code> input.</p>
+<p class="last"><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">pc.fric(FlowRate,</span> <span class="pre">Diam,</span> <span class="pre">Nu,</span> <span class="pre">PipeRough)</span></code> Returns <span class="math notranslate nohighlight">\(\rm{f}\)</span> for laminar <em>or</em> turbulent flow. For laminar flow, use zero for the <code class="docutils literal notranslate"><span class="pre">PipeRough</span></code> input.</p>
 </div>
 <p>The simplicity of the equation for <span class="math notranslate nohighlight">\(\rm{f}\)</span> during laminar flow allows for substitutions to create a very useful, simplified equation for major losses during laminar flow. This simplification combines the Darcy-Weisbach equation, the equation for the Darcy friction factor during laminar flow, and the Reynold’s number formula:</p>
 <div class="math notranslate nohighlight" id="equation-review-review-fluid-mechanics-7">
@@ -506,11 +506,11 @@
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><strong>Function in aide_design:</strong> <code class="docutils literal notranslate"><span class="pre">pc.headloss_exp_general(Vel,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\(h_e\)</span>. Can be either the second or third form due to user input of both velocity and minor loss coefficient. It is up to the user to use consistent <span class="math notranslate nohighlight">\(\bar v\)</span> and <span class="math notranslate nohighlight">\(K_e\)</span>.</p>
+<p class="last"><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">pc.headloss_exp_general(Vel,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\(h_e\)</span>. Can be either the second or third form due to user input of both velocity and minor loss coefficient. It is up to the user to use consistent <span class="math notranslate nohighlight">\(\bar v\)</span> and <span class="math notranslate nohighlight">\(K_e\)</span>.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><strong>Function in aide_design:</strong> <code class="docutils literal notranslate"><span class="pre">pc.headloss_exp(FlowRate,</span> <span class="pre">Diam,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\(h_e\)</span>. Uses third form, <span class="math notranslate nohighlight">\(K_e\)</span>.</p>
+<p class="last"><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">pc.headloss_exp(FlowRate,</span> <span class="pre">Diam,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\(h_e\)</span>. Uses third form, <span class="math notranslate nohighlight">\(K_e\)</span>.</p>
 </div>
 <div class="figure align-center" id="id7">
 <span id="figure-minor-loss-pipe-frd"></span><a class="reference internal image-reference" href="../_images/minor_loss_pipe.png"><img alt="Minor loss displayed in a flow expansion" src="../_images/minor_loss_pipe.png" style="width: 650px;" /></a>
@@ -578,7 +578,7 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 <p>The term ‘vena contracta’ describes the phenomenon of contracting flow due to streamlines being unable to make sharp turns. <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> is a dimensionless ratio comparing the flow area at the point of maximal contraction, <span class="math notranslate nohighlight">\(A_{downstream}\)</span>, and the flow area <em>before</em> the contraction, <span class="math notranslate nohighlight">\(A_{gate}\)</span>. In the figure above, the equation for the vena contracta coefficient would be:</p>
 <div class="math notranslate nohighlight" id="equation-review-review-fluid-mechanics-21">
 <span class="eqno">(33)<a class="headerlink" href="#equation-review-review-fluid-mechanics-21" title="Permalink to this equation">¶</a></span>\[\Pi_{vc} = \frac{A_{downstream}}{A_{gate}}\]</div>
-<p>When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter value, 0.62, is in aide_design as <code class="docutils literal notranslate"><span class="pre">pc.VC_ORIFICE_RATIO</span></code>. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the least contracted area, <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> is always less than 1.</p>
+<p>When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter value, 0.62, is in aguaclara as <code class="docutils literal notranslate"><span class="pre">pc.VC_ORIFICE_RATIO</span></code>. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the least contracted area, <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> is always less than 1.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last"><strong>A vena contracta coefficient is not a minor loss coefficient.</strong> Though the equations for the two both involve contracted and non-contracted areas, these coefficients are not the same. Minor losses coefficients imply energy loss, and vena contractas do not. Minor losses coefficients deal with flow expansions, and vena contracas deal with flow contractions. Confusing the two coefficients is common mistake that this paragraph will hopefully help you to avoid.</p>
@@ -606,17 +606,17 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 <span class="eqno">(36)<a class="headerlink" href="#equation-orifice-equation" title="Permalink to this equation">¶</a></span>\[  Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
-<div class="line"><span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> = 0.62 = vena contracta coefficient, in aide_design as <code class="docutils literal notranslate"><span class="pre">pc.VC_ORIFICE_RATIO</span></code></div>
+<div class="line"><span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> = 0.62 = vena contracta coefficient, as <code class="docutils literal notranslate"><span class="pre">pc.VC_ORIFICE_RATIO</span></code></div>
 <div class="line"><span class="math notranslate nohighlight">\(A_{or}\)</span> = orifice area- NOT contracted flow area</div>
 <div class="line"><span class="math notranslate nohighlight">\(\Delta h\)</span> = elevation difference between orifice and water level</div>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><strong>Equation in aide_design:</strong> <code class="docutils literal notranslate"><span class="pre">pc.flow_orifice(Diam,</span> <span class="pre">Height,</span> <span class="pre">RatioVCOrifice)</span></code> Returns flow through a horizontal orifice.</p>
+<p class="last"><strong>Equation in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">pc.flow_orifice(Diam,</span> <span class="pre">Height,</span> <span class="pre">RatioVCOrifice)</span></code> Returns flow through a horizontal orifice.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><strong>Equation in aide_design:</strong> <code class="docutils literal notranslate"><span class="pre">pc.flow_orifice_vert(Diam,</span> <span class="pre">Height,</span> <span class="pre">RatioVCOrifice)</span></code> Returns flow through a vertical orifice. The height parameter refers to height above the center of the orifice.</p>
+<p class="last"><strong>Equation in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">pc.flow_orifice_vert(Diam,</span> <span class="pre">Height,</span> <span class="pre">RatioVCOrifice)</span></code> Returns flow through a vertical orifice. The height parameter refers to height above the center of the orifice.</p>
 </div>
 <p>There are two configurations for an orifice in the tank holding a fluid: horizontal and vertical. These are both displayed in the figure below. The orifice equation written is for a horizontal orifice; the equation for flow through vertical orifice equation requires integration or the orifice equation across its height to return the correct flow. This is explored in the Flow Control and Measurement Examples section.</p>
 <div class="figure align-center" id="id12">
@@ -730,7 +730,7 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 </table>
 <ol class="arabic simple" start="6">
 <li>The <strong>head loss trick</strong>, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, <span class="math notranslate nohighlight">\(\frac{\bar v_2^2}{2g}\)</span>, into head loss as a minor loss with <span class="math notranslate nohighlight">\(K = 1\)</span>, so the minor loss equation becomes <span class="math notranslate nohighlight">\(\left( 1 + \sum K \right) \frac{\bar v^2}{2g}\)</span>. This is used to be able to say that <span class="math notranslate nohighlight">\(\Delta z = h_L\)</span> and makes many equation simplifications possible in the future.</li>
-<li><strong>Orifice equation and vena contractas:</strong> The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, <span class="math notranslate nohighlight">\(Q \propto \sqrt{\Delta h}\)</span>. Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aide_design should be used.</li>
+<li><strong>Orifice equation and vena contractas:</strong> The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, <span class="math notranslate nohighlight">\(Q \propto \sqrt{\Delta h}\)</span>. Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aguaclara should be used.</li>
 </ol>
 <blockquote>
 <div><p>The Orifice Equation:</p>

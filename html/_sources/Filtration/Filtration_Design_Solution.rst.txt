@@ -4,9 +4,13 @@ Filtration Design Solution
 
 .. code:: python
 
-    from aide_design.play import*
-  #  from aide_design import floc_model as floc
-  #  from pytexit import py2tex
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.research.floc_model as fm
+
+  import numpy as np
+  import matplotlib.pyplot as plt
+
 
 DC Stacked Rapid Sand Filtration
 ================================
