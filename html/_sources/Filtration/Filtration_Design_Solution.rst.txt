@@ -174,6 +174,7 @@ What is the residence time of water in the filter during backwash, when the bed 
 
 
     print('The residence time in the fluidized bed during backwash is', t_res_filter_backwash,'.')
+
 The residence time in the fluidized bed during backwash is 76.36 second
 
 Our next overall goal is to determine the ratio of water wasted in a Stacked Rapid Sand (StaRS) Filter to water treated in a StaRS. Given that the backwash water that ends up above the filter bed never returns to the filter it isn’t necessary to completely clear the water above the filter bed during a backwash cycle. Therefore we anticipate that backwash can be ended after approximately 3 expanded bed residence times. In addition it takes about 1 minute to initiate backwash by lowering the water level above the filter bed.
@@ -237,6 +238,7 @@ Now calculate the total length (or depth) of water that is wasted due to backwas
 
     H_filter_backwash_water_wasted = H_filter_backwash_water + H_filter_backwash_water_refill
     print('The depth of the water that is wasted due to backwash is', H_filter_backwash_water_wasted)
+
 The depth of the water that is wasted due to backwash is 4.98 meter
 
 13)
@@ -249,6 +251,7 @@ Assume that the filter is backwashed every 12 hours. This means that the filter 
     t_filter_cycle = 12 * u.hr
     H_water_filtered_per_cycle = (t_filter_cycle * V_filter_backwash).to(u.m)
     print('The height of water that would enter the filter in 12 hours is', H_water_filtered_per_cycle)
+
 The height of water that would enter the filter in 12 hours is 475.2 meter
 
 14)
@@ -303,7 +306,7 @@ Now we will evaluate the very first data set from a full scale SRSF. The perform
    :align: center
    :alt: Filter run time vs removal efficiency
 
-    The pC* for this filter run was not very good and suggests that either some particles were being released by the new sand or the coagulant dose was not optimal.
+   The pC* for this filter run was not very good and suggests that either some particles were being released by the new sand or the coagulant dose was not optimal.
 
 
 .. _figure_Filter_run_time_vs_effluent_turbidity:
@@ -353,6 +356,7 @@ How long was the filter run?
 
     t_filter_cycle = t_data[np.size(t_data)-1]
     print('The filter was run for', t_filter_cycle.to(u.hour))
+
 The filter was run for 14.25 hour
 
 19)
