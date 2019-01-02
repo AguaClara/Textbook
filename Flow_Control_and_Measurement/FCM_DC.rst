@@ -9,11 +9,12 @@ Flow Control and Measurement Design Challenge
 Researchers in the AguaClara laboratory collected the following head loss data through a 1/8" diameter tube that was 2 m long using water at 22°C. The data is in a comma separated data (.csv) file named `Head_loss_vs_Flow_dosing_tube_data.csv <https://raw.githubusercontent.com/AguaClara/CEE4520/master/DC%20Solutions/Markdown/Head_loss_vs_Flow_dosing_tube_data.csv>`_ . Use the pandas read csv function (``pd.read_csv('filename.csv')``) to read the data file. Display the data so you can see how it is formatted.
 
 .. code:: python
-    import pandas as pd
-    import numpy as np
-    url = 'https://raw.githubusercontent.com/AguaClara/CEE4520/master/DC%20Solutions/Markdown/Head_loss_vs_Flow_dosing_tube_data.csv'
-    head_loss_data = pd.read_csv(url)
-    head_loss_data
+
+  import pandas as pd
+  import numpy as np
+  url = 'https://raw.githubusercontent.com/AguaClara/CEE4520/master/DC%20Solutions/Markdown/Head_loss_vs_Flow_dosing_tube_data.csv'
+  head_loss_data = pd.read_csv(url)
+  head_loss_data
 
 
 
