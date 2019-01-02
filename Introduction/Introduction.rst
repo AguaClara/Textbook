@@ -367,6 +367,7 @@ Sedimentation is the process of particles ‘falling’ because they have a high
   ax.legend(["clay or sand","organic particle"])
   imagepath = 'Introduction/Images/'
   fig.savefig(imagepath+'Terminal_velocity')
+  plt.show()
 
 
 The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (:eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
@@ -411,10 +412,13 @@ The AguaClara treatment train consists of the following processes
  .. code:: python
 
    #the unit registry has been imported above and does not need to be imported again
+   import aguaclara
+   import aguaclara.core.physchem as pc
+   from aguaclara.core.units import unit_registry as u
    Q_Croton =(290 *u.Mgal/u.day).to(u.L/u.s)
-   #Cost_Croton = 3.2 * 10**9 * u.USD
-   #Cost_per_Lps = Cost_Croton/Q_Croton
-   #Cost_per_Lps
+   Cost_Croton = 3.2 * 10**9 * u.USD
+   Cost_per_Lps = Cost_Croton/Q_Croton
+   Cost_per_Lps
    N_DAF = 48
    Q_per_unit = Q_Croton/N_DAF
    Q_per_unit/6
