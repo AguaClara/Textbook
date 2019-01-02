@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Design Challenge 1, learning Python, Jupyter, and some AguaClara Design Functions" href="Python_DC.html" />
+    <link rel="next" title="Python Design Challenge" href="Python_DC.html" />
     <link rel="prev" title="Introduction Design Challenge" href="Introduction_DC.html" /> 
 
   
@@ -95,22 +95,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#useful-hotkeys-for-executing-code">Useful hotkeys for executing code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#units">Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#arrays-and-units">Arrays and units</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plotting">Plotting</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example-problem-and-solution">Example problem and solution.</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting">Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-problem">Example problem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#density-function">Density Function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pipe-database">Pipe Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#physchem">Physchem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#viscosity-functions">Viscosity Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#our-first-graph">Our First Graph!</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#reynolds-number">Reynolds number</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Python_DC.html">Design Challenge 1, learning Python, Jupyter, and some AguaClara Design Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python_DC.html">Python Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -259,8 +250,8 @@
             
   <div class="section" id="python-tutorial">
 <span id="title-python-tutorial"></span><h1>Python Tutorial<a class="headerlink" href="#python-tutorial" title="Permalink to this headline">¶</a></h1>
-<span id="table-code-resources"></span><table border="1" class="docutils align-left" id="id3">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">Code resources.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<span id="table-code-resources"></span><table border="1" class="docutils align-left" id="id1">
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Code resources.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="25%" />
 <col width="25%" />
@@ -292,12 +283,12 @@
 </td>
 <td>5* u.mm/u.s</td>
 </tr>
-<tr class="row-odd"><td>aguaclara.core.`physchem &lt;<a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/physchem.py">https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/physchem.py</a>&gt;`_</td>
+<tr class="row-odd"><td>aguaclara.core. <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/physchem.py">physchem</a></td>
 <td>pipeflow, orifices, viscosity of water, weirs, manifolds, Kozeny equation</td>
 <td>total head loss in a straight pipe</td>
 <td>headloss(FlowRate, Diam, Length, Nu, PipeRough, KMinor)</td>
 </tr>
-<tr class="row-even"><td>aguaclara.research.`floc_model &lt;<a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/floc_model.py">https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/floc_model.py</a>&gt;`_</td>
+<tr class="row-even"><td>aguaclara.research. <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/floc_model.py">floc_model</a></td>
 <td>AguaClara flocculation model, velocity gradients, Kolmogorov length scales</td>
 <td>velocity gradient in a coiled tube</td>
 <td>g_coil(FlowPlant, IDTube, RadiusCoil, Temp)</td>
@@ -309,22 +300,22 @@
 <td>extract data from ProCoDA generated Gran analysis file</td>
 <td>Gran(data_file_path)</td>
 </tr>
-<tr class="row-even"><td>aguaclara.research. <a href="#id7"><span class="problematic" id="id8">`procode_parser&lt;https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/procoda_parser.py&gt;`_</span></a></td>
+<tr class="row-even"><td>aguaclara.research. <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/procoda_parser.py">procoda_parser</a></td>
 <td>Extracts data from multiple ProCoDA files based on the state and data column</td>
 <td>extract a column of data from a ProCoDA data file</td>
 <td>column_of_data(data_file_path, start, column)</td>
 </tr>
-<tr class="row-odd"><td><a href="#id9"><span class="problematic" id="id10">`SciPy&lt;https://docs.scipy.org/doc/scipy/reference/&gt;`_</span></a></td>
+<tr class="row-odd"><td><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/">SciPy</a></td>
 <td>computing integrals numerically, solving differential equations, optimization, and sparse matrices</td>
 <td>root finding</td>
 <td>root(func, 0.3)</td>
 </tr>
-<tr class="row-even"><td><a href="#id11"><span class="problematic" id="id12">`NumPy&lt;https://docs.scipy.org/doc/numpy/user/quickstart.html&gt;`_</span></a></td>
+<tr class="row-even"><td><a class="reference external" href="https://docs.scipy.org/doc/numpy/user/quickstart.html">NumPy</a></td>
 <td>Array manipulation and math functions</td>
 <td>create an array with linearly spaced elements</td>
-<td>np.`linspace&lt;<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html#numpy.linspace">https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html#numpy.linspace</a>&gt;`_(start,stop,num)</td>
+<td>np. <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html#numpy.linspace">linspace</a> (start,stop,num)</td>
 </tr>
-<tr class="row-odd"><td><a href="#id13"><span class="problematic" id="id14">`PyPlot&lt;https://matplotlib.org/tutorials/index.html&gt;`_</span></a></td>
+<tr class="row-odd"><td><a class="reference external" href="https://matplotlib.org/tutorials/index.html">PyPlot</a></td>
 <td>Graphs!</td>
 <td>Create beautiful graphs</td>
 <td>see below</td>
@@ -344,15 +335,9 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">constants</span><span class="p">,</span> <span class="n">interpolate</span>
-
-<span class="c1">#function to force units to always simplify to SI.</span>
-<span class="c1">#u.auto_reduce_dimensions = False</span>
- <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">NTU</span>
 </pre></div>
 </div>
-<p>Hint: If you are typing a function name and want to know what the
-options are for completing what you are typing, just hit the tab key for
-a menu of options.</p>
+<p>Hint: If you are typing a function name and want to know what the options are for completing what you are typing, just hit the tab key for a menu of options.</p>
 <p>Hint: If you want to see the source code associated with a function, you
 can do the following import inspect inspect.getsource(foo)</p>
 <p>Where “foo” is the function that you’d like to learn about.</p>
@@ -360,34 +345,19 @@ can do the following import inspect inspect.getsource(foo)</p>
 <div class="section" id="markdown">
 <h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
 <p>Markdown files allow you to mix code, beautiful Latex equations, nicely formatted text, figures, and tables. To create a markdown file in Atom simply create a new file (File menu) and give it a .md file extension. The .md file extension is critical so that atom knows how to interpret what you are typing!</p>
-<p>Markdown allows you to create very nicely formatted text including Latex
-equations which will show up in the preview pane of Atom (type control - shift - E to display the preview pane of a Markdown file).</p>
+<p>Markdown allows you to create very nicely formatted text including Latex equations which will show up in the preview pane of Atom (type control - shift - E to display the preview pane of a Markdown file).</p>
 <div class="math notranslate nohighlight" id="equation-introduction-python-tutorial-0">
 <span class="eqno">(2)<a class="headerlink" href="#equation-introduction-python-tutorial-0" title="Permalink to this equation">¶</a></span>\[c = \sqrt{a^2 + b^2}\]</div>
 <p>Markdown does not handle automatic numbering of equations, figures, and tables.</p>
-<p>The Python Kernel remembers all definitions (functions and variables) as
-they are defined based on execution. Thus if you fail to execute a line
-of code, the parameters defined in that line won’t be available.
-Similarly, if you define a parameter and then delete that line of code,
-that parameter remains defined until you restart Atom.</p>
+<p>The Python Kernel remembers all definitions (functions and variables) as they are defined based on execution. Thus if you fail to execute a line of code, the parameters defined in that line won’t be available. Similarly, if you define a parameter and then delete that line of code, that parameter remains defined until you restart Atom.</p>
 <p>Before submitting a file for others to use, you need to verify that all of the dependencies are defined and that you didn’t accidently delete a definition that is required. You can do this by placing your cursor in a python code section and then clicking on the python 3|idle in the toolbar at the bottom of the Atom window. Select restart Python 3 kernel. Then execute all of the python code in your document from top to bottom and make sure that all of the code performs as expected.</p>
 </div>
 <div class="section" id="transitioning-from-matlab-to-python">
 <h2>Transitioning From Matlab To Python<a class="headerlink" href="#transitioning-from-matlab-to-python" title="Permalink to this headline">¶</a></h2>
-<p><strong>Indentation</strong> - When writing functions or using statements, Python
-recognizes code blocks from the way they are indented. A code block is a
-group of statements that, together, perform a task. A block begins with
-a header that is followed by one or more statements that are indented
-with respect to the header. The indentation indicates to the Python
-interpreter, and to programmers that are reading the code, that the
-indented statements and the preceding header form a code block.</p>
-<p><strong>Suppressing Statements</strong> - Unlike Matlab, you do not need a semi-colon
-to suppress a statement in Python;</p>
-<p><strong>Indexing</strong> - Matlab starts at index 1 whereas Python starts at index
-0.</p>
-<p><strong>Functions</strong> - In Matlab, functions are written by invoking the keyword
-“function”, the return parameter(s), the equal to sign, the function
-name and the input parameters. A function is terminated with “end”.:</p>
+<p><strong>Indentation</strong> - When writing functions or using statements, Python recognizes code blocks from the way they are indented. A code block is a group of statements that, together, perform a task. A block begins with a header that is followed by one or more statements that are indented with respect to the header. The indentation indicates to the Python interpreter, and to programmers that are reading the code, that the indented statements and the preceding header form a code block.</p>
+<p><strong>Suppressing Statements</strong> - Unlike Matlab, you do not need a semi-colon to suppress a statement in Python;</p>
+<p><strong>Indexing</strong> - Matlab starts at index 1 whereas Python starts at index 0.</p>
+<p><strong>Functions</strong> - In Matlab, functions are written by invoking the keyword “function”, the return parameter(s), the equal to sign, the function name and the input parameters. A function is terminated with “end”.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span>
   <span class="n">y</span> <span class="o">=</span> <span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
   <span class="k">if</span> <span class="o">~</span><span class="n">isvector</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -396,18 +366,14 @@ name and the input parameters. A function is terminated with “end”.:</p>
     <span class="n">end</span>
 </pre></div>
 </div>
-<p>In Python, functions can be written by using the keyword “def”, followed
-by the function name and then the input parameters in parenthesis
-followed by a colon. A function is terminated with “return”.:</p>
+<p>In Python, functions can be written by using the keyword “def”, followed by the function name and then the input parameters in parenthesis followed by a colon. A function is terminated with “return”.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
   <span class="k">if</span> <span class="o">~</span><span class="n">isvector</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
   <span class="k">raise</span> <span class="n">VocationError</span><span class="p">(</span><span class="s2">&quot;Input must be a vector&quot;</span><span class="p">)</span>
   <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">length</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Statements</strong> - for loops and if statements do not require the keyword
-“end” in Python. The loop header in Matlab varies from that of Python.
-Check examples below:</p>
+<p><strong>Statements</strong> - for loops and if statements do not require the keyword “end” in Python. The loop header in Matlab varies from that of Python. Check examples below:</p>
 <p>Matlab code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="n">H</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
@@ -420,40 +386,52 @@ Check examples below:</p>
 </div>
 <p><strong>Printing</strong> - Use “print()” in Python instead of “disp” in Matlab.</p>
 <p><strong>Helpful Documents</strong></p>
-<p><a class="reference external" href="https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html">Numpy for Matlab
-Users</a></p>
-<p><a class="reference external" href="http://stsievert.com/blog/2015/09/01/matlab-to-python/">Stepping from Matlab to
-Python</a></p>
-<p><a class="reference external" href="http://researchcomputing.github.io/meetup_fall_2014/pdfs/fall2014_meetup13_python_matlab.pdf">Python for Matlab Users, UC
-Boulder</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html">Numpy for Matlab Users</a></li>
+<li><a class="reference external" href="http://stsievert.com/blog/2015/09/01/matlab-to-python/">Stepping from Matlab to Python</a></li>
+<li><a class="reference external" href="http://researchcomputing.github.io/meetup_fall_2014/pdfs/fall2014_meetup13_python_matlab.pdf">Python for Matlab Users, UC Boulder</a></li>
+</ul>
+</div></blockquote>
 </div>
 <div class="section" id="useful-hotkeys-for-executing-code">
 <h2>Useful hotkeys for executing code<a class="headerlink" href="#useful-hotkeys-for-executing-code" title="Permalink to this headline">¶</a></h2>
-<p>Hydrogen hotkeys are listed under Packages-&gt;Hydrogen, and are also detailed here.
-Ctrl+Enter runs the currently selected line of code.
-Shift+Enter works as Ctrl+Enter and also moves the selection to the next line of code.
-Adding an Alt to the sequence will run the entire code block instead of a single line:</p>
+<p>Hydrogen hotkeys are listed under Packages-&gt;Hydrogen, and are also detailed here.</p>
 <blockquote>
-<div>Alt+Ctrl+Enter runs the current code block.
-Alt+Shift+Enter runs the current code block and moves the selection to the next block.</div></blockquote>
+<div><ul class="simple">
+<li>Ctrl+Enter runs the currently selected line of code.</li>
+<li>Shift+Enter works as Ctrl+Enter and also moves the selection to the next line of code.</li>
+<li>Alt+Ctrl+Enter runs the current code block.</li>
+<li>Alt+Shift+Enter runs the current code block and moves the selection to the next block.</li>
+</ul>
+</div></blockquote>
 </div>
 <div class="section" id="units">
 <h2>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
 <p>Engineering requires calculations with units. Prior to modern computer languages engineers used paper and pencil, slide rules, calculators, and more recently spreadsheets to do calculations. All of these methods are prone to calculation errors because units aren’t handled as an essential part of each value. Spreadsheets are especially notorious for calculation errors because unit conversions are buried in formulas that are hidden in the cells.</p>
-<p>Operations on values with units follow very clear algebraic rules and thus units can be attached to numerical values and carried through math operations. This capability is implemented in Python using <a href="#id15"><span class="problematic" id="id16">`Pint&lt;https://pint.readthedocs.io/en/latest/&gt;`_</span></a>. The Pint package includes a host of units and prefixes (such as <span class="math notranslate nohighlight">\(\mu\)</span> for <span class="math notranslate nohighlight">\(10^{-6}\)</span>). As you master using Python and Pint you will say goodbye to mindless unit conversions forever!</p>
-<dl class="docutils">
-<dt>Pint can be configured to either report the units as they were given to it or it can simplify the units to the SI base units. This behavior can be set with the command::</dt>
-<dd>u.auto_reduce_dimensions = True</dd>
-</dl>
-<p>The default setting for u.auto_reduce_dimensions is False. If you want to change this so that pint always simplifies the units, then set it to True.</p>
+<p>Operations on values with units follow very clear algebraic rules and thus units can be attached to numerical values and carried through math operations. This capability is implemented in Python using <a class="reference external" href="https://pint.readthedocs.io/en/latest/">Pint</a> . The Pint package includes a host of units and prefixes (such as <span class="math notranslate nohighlight">\(\mu\)</span> for <span class="math notranslate nohighlight">\(10^{-6}\)</span>). As you master using Python and Pint you will say goodbye to mindless unit conversions forever!</p>
 <p>Environmental engineers historically described surface loading rates for sedimentation tanks using units of gal/min per square foot. How fast is <span class="math notranslate nohighlight">\(\frac{1 gpm}{ft^2}\)</span> in <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>?</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">V_surface_loading_rate</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gal</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">min</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">ft</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">V_surface_loading_rate</span><span class="p">)</span>
+<span class="n">aguaclara</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">set_sig_figs</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">V_surface_loading_rate</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The surface loading rate is 0.6791 millimeter / second</p>
 <p>After reducing the number of significant digits to 3 we obtain:
 The surface loading rate is 0.679 millimeter / second</p>
 <p>How long does it take to stop a car that is initially traveling at 60 mph if the coefficient of friction is 0.5?</p>
-<p>The time to stop the car is 120 mile / hour / standard_gravity
-We add the .to_base_units() directive to force pint to simplify the units.
-The time to stop the car is 5.47 second</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v_0</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mile</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">hr</span>
+<span class="n">friction_coefficient</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">deceleration</span> <span class="o">=</span> <span class="n">friction_coefficient</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">standard_gravity</span>
+<span class="n">t_deceleration</span> <span class="o">=</span> <span class="n">v_0</span><span class="o">/</span><span class="n">deceleration</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time to stop the car is&#39;</span><span class="p">,</span><span class="n">t_deceleration</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time to stop the car is&#39;</span><span class="p">,</span><span class="n">t_deceleration</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The time to stop the car is 120 mile / hour / standard_gravity</p>
+<p>We add the .to_base_units() directive to force pint to simplify the units.</p>
+<p>The time to stop the car is 5.47 second</p>
 <p>Many functions written in Python do not yet handle units and thus it is sometimes necessary to remove the units. Examples include graphs (althougth units might be coming to matplotlib), SciPy functions, and the NumPy functions used to populate arrays. For these cases you can strip the units off a number using the .magnitude method. Be careful to make sure you know what the units are before you remove them otherwise you may be confused by the results!</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gal</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">min</span>
 <span class="n">fill_time</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">hr</span>
@@ -465,16 +443,15 @@ The time to stop the car is 5.47 second</p>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The volume is&#39;</span><span class="p">,</span><span class="n">Volume</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kL</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>The volume is 15 gallon * hour / minute
-The magnitude of the Volume is 15.0
-The units of the flow are gallon * hour / minute
-The volume is 3.41 kiloliter</p>
+<p>The volume is 15 gallon * hour / minute</p>
+<p>The magnitude of the Volume is 15.0</p>
+<p>The units of the flow are gallon * hour / minute</p>
+<p>The volume is 3.41 kiloliter</p>
 <p>It is useful to force pint to display the result in the units of your choice.</p>
 </div>
 <div class="section" id="arrays-and-units">
 <h2>Arrays and units<a class="headerlink" href="#arrays-and-units" title="Permalink to this headline">¶</a></h2>
-<p>Use Numpy arrays rather than Python lists to enable math with numbers and units.
-When creating arrays with units remember that</p>
+<p>Use NumPy arrays rather than Python lists to enable math with numbers and units. When creating arrays with units remember that</p>
 <blockquote>
 <div><ul class="simple">
 <li>Array elements don’t have units!</li>
@@ -482,7 +459,7 @@ When creating arrays with units remember that</p>
 </ul>
 </div></blockquote>
 <p>Therefore always attach units to the array after the array has been created. This means that array elements should be dimensionless and thus arrays must be created using dimensionless values.</p>
-<p>We can use numpy linspace with a simple change to make it dimensionless. Usually linspace has start and stop elements that would logically have units: np.linspace(start, stop, num). But elements can’t have units! We can make the inputs to linspace be dimensionless to create a dimensionless array and then multiplies it by the final value that includes the units to scale the array correctly. For evenly spaced arrays starting at the end of the first space we have either:</p>
+<p>We can use NumPy linspace with a simple change to make it dimensionless. Usually linspace has start and stop elements that would logically have units: np.linspace(start, stop, num). But elements can’t have units! We can make the inputs to linspace be dimensionless to create a dimensionless array and then multiplies it by the final value that includes the units to scale the array correctly. For evenly spaced arrays starting at the end of the first space we have either:</p>
 <blockquote>
 <div><ul class="simple">
 <li>np.linspace(start/stop, 1, num) * stop</li>
@@ -512,191 +489,66 @@ When creating arrays with units remember that</p>
 </div>
 <div class="section" id="plotting">
 <h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
-<p>We will use this <a href="#id1"><span class="problematic" id="id2">`</span></a>pyplot coding style`&lt;<a class="reference external" href="https://matplotlib.org/tutorials/introductory/usage.html#coding-styles">https://matplotlib.org/tutorials/introductory/usage.html#coding-styles</a>&gt;._
-fig is a Figure instance—like a blank canvas
-ax is an AxesSubplot instance—think of a frame for plotting in</p>
-<p>fig, ax = plt.subplots()
-ax.plot(x, y, ‘r-‘, linewidth=2, label=’sine function’, alpha=0.6)
-ax.legend(loc=’upper center’)
-plt.show()</p>
-<p>Create a graph showing flow rate vs depth for a linear flow orifice meter that has a depth range of 20 cm and an flow range of 50 L/s.</p>
-<p><a href="#id17"><span class="problematic" id="id18">`Legend location options&lt;https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html&gt;`_</span></a>
-<a href="#id19"><span class="problematic" id="id20">`Colors&lt;https://matplotlib.org/api/colors_api.html&gt;`_</span></a>
-‘b’, ‘g’, ‘r’, ‘c’, ‘m’, ‘y’, ‘k’, ‘w’
-blue, green, red, cyan, magenta, yellow, black, white
-<a href="#id21"><span class="problematic" id="id22">`Data markers (if you are plotting data),https://matplotlib.org/api/markers_api.html#module-matplotlib.markers&gt;`_</span></a></p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H_max</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
-<span class="n">Q_max1</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">Q_max2</span> <span class="o">=</span> <span class="mi">70</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">num</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">H_max</span>
-<span class="n">y1</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">Q_max1</span>
-<span class="n">y2</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">Q_max2</span>
-
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">Q_max1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">Q_max2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;water depth (&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">units</span><span class="p">)</span> <span class="o">+</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Flow rate (&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Q_max1</span><span class="o">.</span><span class="n">units</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
-<span class="c1">#Below is the method for using latex to format the units</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Flow rate &#39;</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;$\left (\frac</span><span class="si">{L}{s}</span><span class="s1">\right )$&#39;</span><span class="p">)</span>
-
-<span class="c1"># options: linear or log</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
-
-<span class="c1">#Grids can be added with the code below.</span>
-<span class="c1">#plt.grid(b=True, which=&#39;major&#39;, color=&#39;k&#39;, linestyle=&#39;-&#39;, linewidth=1)</span>
-<span class="c1">#plt.grid(b=True, which=&#39;minor&#39;, color=&#39;k&#39;, linestyle=&#39;-&#39;, linewidth=0.5)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1">#options:</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Introduction/Images/LFOM_flow_vs_height&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="figure align-center" id="id4">
+<p>We will use this <a class="reference external" href="https://matplotlib.org/tutorials/introductory/usage.html#coding-styles">pyplot coding style</a> .</p>
+<blockquote>
+<div><ul class="simple">
+<li>fig is a Figure instance—like a blank canvas</li>
+<li>ax is an AxesSubplot instance—think of a frame for plotting in</li>
+</ul>
+</div></blockquote>
+<p>Create a graph showing flow rate vs depth for two linear flow orifice meters that have a depth range of 20 cm and flow ranges of 50 and 70 L/s.</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html">Legend location options</a></li>
+<li><a class="reference external" href="https://matplotlib.org/api/colors_api.html">Colors</a><ul>
+<li>‘b’, ‘g’, ‘r’, ‘c’, ‘m’, ‘y’, ‘k’, ‘w’</li>
+<li>blue, green, red, cyan, magenta, yellow, black, white</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://matplotlib.org/api/markers_api.html#module-matplotlib.markers">Data markers (if you are plotting data and not a model or curve fit)</a></li>
+</ul>
+</div></blockquote>
+<div class="figure align-center" id="id2">
 <span id="figure-lfom-flow-vs-height"></span><a class="reference internal image-reference" href="../_images/LFOM_flow_vs_height.png"><img alt="LFOM flow vs height" src="../_images/LFOM_flow_vs_height.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">The flow through an LFOM is directly proportional to the height of the water above the bottom of the first row of orifices.</span></p>
 </div>
-<p>Indexing is done by row and then by column. To call all of the elements
-in a row or column, use a colon. As you can see in the following
-example, indexing in python begins at zero. So <code class="docutils literal notranslate"><span class="pre">b[:,1]</span></code> is calling all
-rows in the second column</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
+<p>Indexing is done by row and then by column. To call all of the elements in a row or column, use a colon. As you can see in the following example, indexing in python begins at zero. So <code class="docutils literal notranslate"><span class="pre">a[:,1]</span></code> is calling all rows in the second column</p>
 </div>
-<p>[</p>
-<p>milliliter]</p>
-<p>If you want a specific range of values in an array, you can also use a
-colon to slice the array, with the number before the colon being the
-index of the first element, and the number after the colon being <strong>one
-greater</strong> than the index of the last element.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>[</p>
-<p>milliliter]</p>
-<p>For lists and 1D arrays, the <code class="docutils literal notranslate"><span class="pre">len()</span></code> command can be used to determine
-the length. Note that the length is NOT equal to the index of the last
-element because the indexes are zero based. The len function can be used
-with lists and arrays. For multiple dimension arrays the <code class="docutils literal notranslate"><span class="pre">len()</span></code>
-command returns the length of the first dimension.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
-</pre></div>
-</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
-</pre></div>
-</div>
-<p>For any higher dimension of array, <code class="docutils literal notranslate"><span class="pre">numpy.size()</span></code> can be used to find
-the total number of elements and <code class="docutils literal notranslate"><span class="pre">numpy.shape()</span></code> can be used to learn
-the dimensions of the array.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span>
-</pre></div>
-</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>For a listing of the commands you can use to manipulate numpy arrays,
-refer to the <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html">scipy
-documentation</a>.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">V_up</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">D_reactor</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span>
-<span class="n">A_reactor</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">D_reactor</span><span class="p">)</span>
-<span class="n">Q_reactor</span> <span class="o">=</span> <span class="n">V_up</span><span class="o">*</span><span class="n">A_reactor</span>
-<span class="n">Q_reactor</span>
-</pre></div>
-</div>
-<p>0.0005067074790974977 meter2 millimeter/second</p>
-<p>The result isn’t formatted very nicely. We can select the units we’d
-like to display by using the <code class="docutils literal notranslate"><span class="pre">.to</span></code> method.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Q_reactor</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>0.5067074790974977 milliliter/second</p>
-<p>We can also force the display to be in the metric base units</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Q_reactor</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>5.067074790974977e-07 meter3/second</p>
-<p>If you need to strip units from a quantity (for example, for
-calculations using funtions that don’t support units) you can use the
-<code class="docutils literal notranslate"><span class="pre">.magnitude</span></code> method. It is important that you force the quantity to be
-in the correct units before stripping the units.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Q_reactor</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">magnitude</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.5067074790974977</span>
-</pre></div>
-</div>
-<div class="section" id="example-problem-and-solution">
-<h3>Example problem and solution.<a class="headerlink" href="#example-problem-and-solution" title="Permalink to this headline">¶</a></h3>
-<p>Calculate the number of moles of methane in a 20 L container at 15 psi
-above atmospheric pressure with a temperature of 30 C.</p>
+<div class="section" id="example-problem">
+<h2>Example problem<a class="headerlink" href="#example-problem" title="Permalink to this headline">¶</a></h2>
+<p>Calculate the number of moles of methane in a 20 L container at 15 psi above atmospheric pressure with a temperature of 30 C.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># First assign the values given in the problem to variables.</span>
 <span class="n">P</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">psi</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">atm</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span><span class="p">)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">V</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span>
 <span class="c1"># Use the equation PV=nRT and solve for n, the number of moles.</span>
 <span class="c1"># The universal gas constant is available in pint.</span>
 <span class="n">nmolesmethane</span> <span class="o">=</span> <span class="p">(</span><span class="n">P</span><span class="o">*</span><span class="n">V</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">R</span><span class="o">*</span><span class="n">T</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kelvin</span><span class="p">)))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">nmolesmethane</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are &#39;</span><span class="p">,</span> <span class="n">nmolesmethane</span> <span class="p">,</span><span class="s1">&#39; of methane in the container.&#39;</span><span class="p">)</span>
-<span class="n">nmolesmethane</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">There</span> <span class="n">are</span> <span class="mf">1.62</span> <span class="n">mol</span> <span class="n">of</span> <span class="n">methane</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">container</span><span class="o">.</span>
-</pre></div>
+<p>There are  1.625 mole  of methane in the container.</p>
 </div>
-<p>1.6246299433154001 mole</p>
-</div>
-</div>
-<hr class="docutils" />
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p>When it becomes necessary to do the same calculation multiple times, it
-is useful to create a function to facilitate the calculation in the
-future.</p>
-<ul class="simple">
-<li>Function blocks begin with the keyword def followed by the function
-name and parentheses ( ).</li>
-<li>Any input parameters or arguments should be placed within these
-parentheses.</li>
-<li>The code block within every function starts with a colon (:) and is
-indented.</li>
-<li>The statement return [expression] exits a function and returns an
-expression to the user. A return statement with no arguments is the
-same as return None.</li>
-<li>(Optional) The first statement of a function can the documentation
-string of the function or docstring, writeen with apostrophes .</li>
+<p>When it becomes necessary to do the same calculation multiple times, it is useful to create a function to facilitate the calculation in the future.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Function blocks begin with the keyword def followed by the function name and parentheses ( ).</li>
+<li>Any input parameters or arguments should be placed within these parentheses.</li>
+<li>The code block within every function starts with a colon (:) and is indented.</li>
+<li>The statement return [expression] exits a function and returns an expression to the user. A return statement with no arguments is the same as return None.</li>
+<li>(Optional) The first statement of a function can the documentation string of the function or docstring, written with apostrophes .</li>
 </ul>
-<p>Below is an example of a function that takes three inputs, pressure,
-volume, and temperature, and returns the number of moles.</p>
+</div></blockquote>
+<p>Below is an example of a function that takes three inputs, pressure, volume, and temperature, and returns the number of moles.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating a function is easy in Python</span>
 <span class="k">def</span> <span class="nf">nmoles</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">V</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">P</span><span class="o">*</span><span class="n">V</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">R</span><span class="o">*</span><span class="n">T</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kelvin</span><span class="p">)))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Try using the new function to solve the same problem as above. You can
-reuse the variables. You can use the new function call inside the print
-statement.</p>
+<p>Try using the new function to solve the same problem as above. You can reuse the variables. You can use the new function call inside the print statement.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are&#39;</span><span class="p">,</span> <span class="n">nmoles</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">V</span><span class="p">,</span><span class="n">T</span><span class="p">),</span><span class="s1">&#39;of methane in the container.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -704,62 +556,16 @@ statement.</p>
 </pre></div>
 </div>
 </div>
-<hr class="docutils" />
-<div class="section" id="density-function">
-<h2>Density Function<a class="headerlink" href="#density-function" title="Permalink to this headline">¶</a></h2>
-<p>We will create and graph functions describing density and viscosity of
-water as a function of temperature. We will use the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html#d-interpolation-interp1d">scipy 1D
-interpolate
-function</a>
-to create smooth interpolation between the known data points to generate
-a smooth function.</p>
-<p><code class="docutils literal notranslate"><span class="pre">density_water</span></code>, defined in
-<code class="docutils literal notranslate"><span class="pre">`physchem</span></code> &lt;<a class="reference external" href="https://github.com/AguaClara/AguaClara_design/blob/master/physchem.py">https://github.com/AguaClara/AguaClara_design/blob/master/physchem.py</a>&gt;`__,
-is a function that returns a fluid’s density at a given temperature. It
-has one input parameter, temperature (in Celsius).</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here is an example of how you could define the function yourself if you chose.</span>
-
-<span class="c1"># Below are corresponding arrays of temperature and water density with appropriate units attached.</span>
-
-<span class="c1"># The 1d interpolation function will use a cubic spline.</span>
-<span class="n">Tarray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
-<span class="n">rhoarray</span> <span class="o">=</span> <span class="p">[</span><span class="mf">999.9</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mf">999.7</span><span class="p">,</span><span class="mf">998.2</span><span class="p">,</span><span class="mf">995.7</span><span class="p">,</span><span class="mf">992.2</span><span class="p">,</span><span class="mf">988.1</span><span class="p">,</span><span class="mf">983.2</span><span class="p">,</span><span class="mf">977.8</span><span class="p">,</span><span class="mf">971.8</span><span class="p">,</span><span class="mf">965.3</span><span class="p">,</span><span class="mf">958.4</span><span class="p">]</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span>
-<span class="k">def</span> <span class="nf">DensityWater</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-
-    <span class="n">rhointerpolated</span><span class="o">=</span><span class="n">interpolate</span><span class="o">.</span><span class="n">interp1d</span><span class="p">(</span><span class="n">Tarray</span><span class="p">,</span> <span class="n">rhoarray</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;cubic&#39;</span><span class="p">)</span>
-    <span class="n">rho</span><span class="o">=</span><span class="n">rhointerpolated</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">rho</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span>
-
-<span class="c1"># You can get the density of water for any temperature using this function call.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The density of water at &#39;</span><span class="p">,</span><span class="mi">20</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span> <span class="p">,</span><span class="s1">&#39;is&#39;</span><span class="p">,</span><span class="n">DensityWater</span><span class="p">(</span><span class="mi">20</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span><span class="p">),</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The density of water at 20.0 celsius is 998.2 kg/m³.
-</pre></div>
-</div>
-</div>
-<hr class="docutils" />
 <div class="section" id="pipe-database">
 <h2>Pipe Database<a class="headerlink" href="#pipe-database" title="Permalink to this headline">¶</a></h2>
-<p>The
-<code class="docutils literal notranslate"><span class="pre">`pipedatabase</span></code> &lt;<a class="reference external" href="https://github.com/AguaClara/AguaClara_design/blob/master/pipedatabase.py">https://github.com/AguaClara/AguaClara_design/blob/master/pipedatabase.py</a>&gt;`__
-file in the <code class="docutils literal notranslate"><span class="pre">AguaClara_design</span></code> has many useful functions concerning
-pipe sizing. It provides functions that calculate actual pipe inner and
-outer diameters given the nominal diameter of the pipe. Note that
-nominal diameter just means the diameter that it is called (hence the
-discriptor “nominal”) and thus a 1 inch nominal diameter pipe might not
-have any dimensions that are actually 1 inch!</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># The OD function in pipedatabase returns the outer diameter of a pipe given the nominal diameter, ND.</span>
+<p>The <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/pipes.py">pipes</a> has many useful functions concerning pipe sizing. It provides functions that calculate actual pipe inner and outer diameters given the nominal diameter of the pipe. Note that nominal diameter just means the diameter that it is called (hence the discriptor “nominal”) and thus a 1 inch nominal diameter pipe might not have any dimensions that are actually 1 inch!</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.pipes</span> <span class="k">as</span> <span class="nn">pipe</span>
+<span class="c1"># The OD function in pipedatabase returns the outer diameter of a pipe given the nominal diameter, ND.</span>
 <span class="n">pipe</span><span class="o">.</span><span class="n">OD</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>6.625 inch</p>
-<p>The ND_SDR_available function returns the nominal diameter of a pipe
-that has an inner diameter equal to or greater than the requested inner
-diameter <a class="reference external" href="http://www.engineeringtoolbox.com/sdr-standard-dimension-ratio-d_318.html">SDR, standard diameter
-ratio</a>.
-Below we find the smallest available pipe that has an inner diameter of
-at least 7 cm</p>
+<p>The ND_SDR_available function returns the nominal diameter of a pipe that has an inner diameter equal to or greater than the requested inner diameter <a class="reference external" href="http://www.engineeringtoolbox.com/sdr-standard-dimension-ratio-d_318.html">SDR, standard diameter ratio</a> . Below we find the smallest available pipe that has an inner diameter of at least 7 cm</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IDmin</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">SDR</span> <span class="o">=</span> <span class="mi">26</span>
 <span class="n">ND_my_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ND_SDR_available</span><span class="p">(</span><span class="n">IDmin</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span>
@@ -769,7 +575,7 @@ at least 7 cm</p>
 <p>3.0 inch</p>
 <p>The actual inner diameter of this pipe is</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ID_my_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_my_pipe</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">ID_my_pipe</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ID_my_pipe</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">8.2</span> <span class="n">cm</span>
@@ -779,103 +585,6 @@ at least 7 cm</p>
 database.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pipe</span><span class="o">.</span><span class="n">ND_all_available</span><span class="p">()</span>
 </pre></div>
-</div>
-<p>[</p>
-<p>inch]</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="physchem">
-<h2>Physchem<a class="headerlink" href="#physchem" title="Permalink to this headline">¶</a></h2>
-<p>The ‘AguaClara_design’
-<a class="reference external" href="https://github.com/AguaClara/AguaClara_design/blob/master/physchem.py">physchem</a>
-has many useful fluids functions including Reynolds number, head loss
-equation, orifice equations, viscosity etc.</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="viscosity-functions">
-<h2>Viscosity Functions<a class="headerlink" href="#viscosity-functions" title="Permalink to this headline">¶</a></h2>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Define the temperature of the fluid so that we can calculate the kinematic viscosity</span>
-<span class="n">temperature</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
-<span class="c1">#Calculate the kinematic viscosity using the function in physchem which we access using &quot;pc&quot;</span>
-<span class="n">nu</span><span class="o">=</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">temperature</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The kinematic viscosity of water at &#39;</span><span class="o">+</span><span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; is &#39;</span><span class="o">+</span><span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The kinematic viscosity of water at 20 celsius is 1.00e-6 m²/s
-</pre></div>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="our-first-graph">
-<h2>Our First Graph!<a class="headerlink" href="#our-first-graph" title="Permalink to this headline">¶</a></h2>
-<p>We will use <a class="reference external" href="https://matplotlib.org/">matplotlib</a> to create a graph
-of water density as a function of temperature.
-<a class="reference external" href="https://matplotlib.org/users/pyplot_tutorial.html">Here</a> is a quick
-tutorial on graphing.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a list of 100 numbers between 0 and 100 and then assign the units of degC to the array.</span>
-<span class="c1"># This array will be the x values of the graph.</span>
-
-<span class="n">GraphTarray</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span><span class="p">)</span>
-
-<span class="c1">#Note the use of the .to method below to display the results in a particular set of units.</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">GraphTarray</span><span class="p">,</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">GraphTarray</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temperature (degrees Celcius)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Viscosity (mm^2/s)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="figure" id="id5">
-<img alt="png" src="Introduction/DC_Python_Tutorial_2_Solution_files/DC_Python_Tutorial_2_Solution_61_0.png" />
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">png</span></p>
-</div>
-<div class="section" id="reynolds-number">
-<h3>Reynolds number<a class="headerlink" href="#reynolds-number" title="Permalink to this headline">¶</a></h3>
-<p>We will use the physchem functions to calculate the Reynolds number for
-flow through a pipe.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">D</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span>
-
-<span class="n">Reynolds_pipe</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">re_pipe</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">nu</span><span class="p">)</span>
-<span class="n">Reynolds_pipe</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">60124.953167297012</span>
-</pre></div>
-</div>
-<p>Now use the sig function to display calulated values to a user specified
-number of significant figures.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Reynolds number is &#39;</span><span class="o">+</span><span class="n">ut</span><span class="o">.</span><span class="n">sig</span><span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">re_pipe</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">nu</span><span class="p">),</span><span class="mi">3</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">Reynolds</span> <span class="n">number</span> <span class="ow">is</span> <span class="mf">6.01e+4</span>
-</pre></div>
-</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a plot that shows both the original data values (plotted as points)</span>
-<span class="c1"># and the smooth curve that shows the density function.</span>
-<span class="c1"># Note that Tarray and rhoarray were defined much earlier in this tutorial.</span>
-
-<span class="c1">#We will plot the data points using circles &#39;o&#39; and the smooth function using a line &#39;-&#39;.</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Tarray</span><span class="p">,</span> <span class="n">rhoarray</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">GraphTarray</span><span class="p">,</span> <span class="p">(</span><span class="n">DensityWater</span><span class="p">(</span><span class="n">GraphTarray</span><span class="p">)),</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-<span class="c1"># For an x axis log scale use plt.semilogx(Tarray, rhoarray, &#39;o&#39;, xnew, f2(xnew), &#39;-&#39;)</span>
-<span class="c1"># For a y axis log scale use plt.semilogy(Tarray, rhoarray, &#39;o&#39;, xnew, f2(xnew), &#39;-&#39;)</span>
-<span class="c1"># For both axis log scale use plt.loglog(Tarray, rhoarray, &#39;o&#39;, xnew, f2(xnew), &#39;-&#39;)</span>
-
-
-<span class="c1">#Below we create the legend and axis labels</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;cubic&#39;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temperature (degrees Celcius)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density (kg/m^3)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-
-
-<span class="c1">#Now we show the graph and we are done!</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="figure" id="id6">
-<img alt="png" src="Introduction/DC_Python_Tutorial_2_Solution_files/DC_Python_Tutorial_2_Solution_68_0.png" />
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">png</span></p>
-</div>
 </div>
 </div>
 </div>
@@ -888,7 +597,7 @@ number of significant figures.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Python_DC.html" class="btn btn-neutral float-right" title="Design Challenge 1, learning Python, Jupyter, and some AguaClara Design Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Python_DC.html" class="btn btn-neutral float-right" title="Python Design Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Introduction_DC.html" class="btn btn-neutral" title="Introduction Design Challenge" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
