@@ -96,12 +96,14 @@ StaRS filters come in two configurations. Open StaRS (OStaRS) are used for flow 
 
 .. code:: python
 
-    from aide_design.play import*
-    Q_Filter = 8 * u.L/u.s
-    V_filter_backwash = 11 * u.mm/u.s
-    A_Filter = Q_Filter/V_filter_backwash
-    W_Filter = np.sqrt(A_Filter).to(u.m)
-    print('The width of a filter designed to treat ',Q_Filter,' is ', W_Filter,'.')
+  from aguaclara.core.units import unit_registry as u
+  import numpy as np
+
+  Q_Filter = 8 * u.L/u.s
+  V_filter_backwash = 11 * u.mm/u.s
+  A_Filter = Q_Filter/V_filter_backwash
+  W_Filter = np.sqrt(A_Filter).to(u.m)
+  print('The width of a filter designed to treat ',Q_Filter,' is ', W_Filter,'.')
 
 .. _table_Net_Velocities:
 

@@ -1,7 +1,10 @@
 """ importing """
-from aide_design.play import*
-from aguaclara_research.play import*
-import aguaclara_research.floc_model as fm
+import aguaclara
+import aguaclara.core.physchem as pc
+from aguaclara.core.units import unit_registry as u
+import aguaclara.research.floc_model as fm
+
+import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FormatStrFormatter
 imagepath = 'AguaClara Water Treatment Plant Design/Energy Dissipation and Velocity Gradients/Images/'
