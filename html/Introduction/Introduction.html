@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Python Tutorial" href="Python_Tutorial.html" />
+    <link rel="next" title="Introduction Design Challenge" href="Introduction_DC.html" />
     <link rel="prev" title="Authors" href="../Authors.html" /> 
 
   
@@ -134,8 +134,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Python_Tutorial.html">Python Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Introduction_DC.html">Introduction Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python_DC.html">Design Challenge 1, learning Python, Jupyter, and some AguaClara Design Functions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -171,6 +172,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_DC.html">Flocculation Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
@@ -188,7 +190,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_DC.html">Filtration Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
@@ -208,6 +209,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Synthesis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Synthesis/Synthesis_DC.html">Synthesis Design Challenges</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
 <ul>
@@ -620,6 +625,7 @@ Which process removes the largest quantity of contaminants?</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">&quot;clay or sand&quot;</span><span class="p">,</span><span class="s2">&quot;organic particle&quot;</span><span class="p">])</span>
 <span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;Introduction/Images/&#39;</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">imagepath</span><span class="o">+</span><span class="s1">&#39;Terminal_velocity&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (<a class="reference internal" href="#equation-eq-laminar-terminal-velocity">(1)</a>) of these particles is given in <a class="reference internal" href="#figure-terminal-velocity"><span class="std std-numref">Fig. 8</span></a>.</p>
@@ -647,10 +653,13 @@ Which process removes the largest quantity of contaminants?</p>
 <p>CWTP uses dissolved air flotation tanks that are located on top of the rapid sand filters. The d</p>
 <p>The filter approach velocity (the velocity of water before it enters the sand bed) for CWTP is 4.42 mm/s. This is significantly higher than the 1.85 mm/s filtration velocity currently used in StaRS filters. StaRS filters are a stack of 6 filters and the net filtration velocity is 11 mm/s. Thus by that metric the StaRS filters are significantly smaller than the CWTP filters.</p>
 <div class="code python last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#the unit registry has been imported above and does not need to be imported again</span>
+<span class="kn">import</span> <span class="nn">aguaclara</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="n">Q_Croton</span> <span class="o">=</span><span class="p">(</span><span class="mi">290</span> <span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">Mgal</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">day</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="c1">#Cost_Croton = 3.2 * 10**9 * u.USD</span>
-<span class="c1">#Cost_per_Lps = Cost_Croton/Q_Croton</span>
-<span class="c1">#Cost_per_Lps</span>
+<span class="n">Cost_Croton</span> <span class="o">=</span> <span class="mf">3.2</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">USD</span>
+<span class="n">Cost_per_Lps</span> <span class="o">=</span> <span class="n">Cost_Croton</span><span class="o">/</span><span class="n">Q_Croton</span>
+<span class="n">Cost_per_Lps</span>
 <span class="n">N_DAF</span> <span class="o">=</span> <span class="mi">48</span>
 <span class="n">Q_per_unit</span> <span class="o">=</span> <span class="n">Q_Croton</span><span class="o">/</span><span class="n">N_DAF</span>
 <span class="n">Q_per_unit</span><span class="o">/</span><span class="mi">6</span>
@@ -813,7 +822,7 @@ Which process removes the largest quantity of contaminants?</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Python_Tutorial.html" class="btn btn-neutral float-right" title="Python Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Introduction_DC.html" class="btn btn-neutral float-right" title="Introduction Design Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../Authors.html" class="btn btn-neutral" title="Authors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

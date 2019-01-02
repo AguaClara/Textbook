@@ -31,8 +31,9 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Introduction/Introduction.rst
-  Introduction/Python_Tutorial.rst
   Introduction/Introduction_DC.rst
+  Introduction/Python_Tutorial.rst
+  Introduction/Python_DC.rst
 
 
 .. toctree::
@@ -64,7 +65,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Rapid_Mix/RM_Theory_and_Future_Work.rst
   Rapid_Mix/RM_Mechanical_Solution.rst
   Rapid_Mix/RM_Design_Solution.rst
-  Rapid_Mix/RM_DC.rst
 
 .. toctree::
   :caption: Chapter 5: Flocculation
@@ -101,7 +101,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Filtration/Filtration_Derivations.rst
   Filtration/Filtration_Theory_and_Future_Work.rst
   Filtration/Filtration_Design_Solution.rst
-  Filtration/EStaRS_Design.rst
   Filtration/Filtration_DC.rst
 
 
@@ -130,6 +129,12 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Troubleshooting/Troubleshooting.rst
+
+.. toctree::
+  :caption: Chapter 12: Synthesis
+  :maxdepth: 1
+
+  Synthesis/Synthesis_DC.rst
 
 .. toctree::
   :caption: Contributor's guide
