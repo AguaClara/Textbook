@@ -18,7 +18,7 @@ RST stands for ReStructured Text. It is the standard markup language used for do
 
 Why RST?
 --------
-In the beginning, we used markdown. As we tried to add different features to markdown (:red:`colored words`, image sizes, citations), we were forced to use raw html and various pre-processors. With these various band-aid solutions came added complexity. Adding sections became cumbersome and awkward as it required ill-defined html. Additionally, providing site-wide style updates was prohibitively time-consuming and complex. Essentially, we were trying to pack too much functionality into markdown. In the search for an alternative, restructured text provided several advantages. Out of the box, RST supports globally-defined styles, figure numbering and referencing, Latex function rendering, image display customization and more. Furthermore, restructured text was already the language of choice for the AIDE ecosystem's documentation.
+In the beginning, we used markdown. As we tried to add different features to markdown (:red:`colored words`, image sizes, citations), we were forced to use raw html and various pre-processors. With these various band-aid solutions came added complexity. Adding sections became cumbersome and awkward as it required ill-defined html. Additionally, providing site-wide style updates was prohibitively time-consuming and complex. Essentially, we were trying to pack too much functionality into markdown. In the search for an alternative, restructured text provided several advantages. Out of the box, RST supports globally-defined styles, figure numbering and referencing, Latex function rendering, image display customization and more. Furthermore, restructured text was already the language of choice for the AguaClara ecosystem's documentation.
 
 
 
@@ -65,7 +65,7 @@ We use Travis_ to ensure this site will always contain functional builds. To pub
 #. To release the master branch, (build the html, pdf, and latex, and upload the pdf to Pages) you'll need to publish a `GitHub release <https://github.com/AguaClara/Textbook/releases/new>`_. Include a `semver <https://semver.org/>`_ version number as the tag (under "Tag: Choose or create"), and a brief description of the updates under "Release Title". Finally, for the description, detail the changes as much as you see fit and when ready, hit "Publish release". Example:
     * Tag name: 0.1.5
     * Release title: Filtration section maintenance
-    * Description: Added filter code from aide_design 0.2.6. Also updated all broken external links.
+    * Description: Added filter code from aguaclara 0.2.6. Also updated all broken external links.
 #. Travis will rebuild the site and push the html to Pages, and the PDF and LaTeX to GitHub Releases under the tag name.
 
 .. important:: If your changes to the master branch aren't pushing to gh-pages, then check the status of the `Travis build here <https://travis-ci.org/AguaClara/Textbook>`_.
