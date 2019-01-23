@@ -130,7 +130,15 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html#conventional-sedimentation-systems">Conventional Sedimentation Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html#sedimentation-challenges-and-gaps-in-knowledge">Sedimentation Challenges and Gaps in Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html#aguaclara-innovations">AguaClara Innovations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html#foundational-concepts">Foundational Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html#aguaclara-design-approach">AguaClara Design Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html#design-of-an-aguaclara-sedimentation-tank">Design of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html#sedimentation-challenges-confusions-and-failure-modes">Sedimentation Challenges, Confusions, and Failure Modes</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
@@ -240,12 +248,12 @@
 <span id="id1"></span><h1>Sedimentation Examples<a class="headerlink" href="#sedimentation-examples" title="Permalink to this headline">¶</a></h1>
 <p>Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, <span class="math notranslate nohighlight">\(V_\alpha\)</span>. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-0">
-<span class="eqno">(407)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{\uparrow}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
+<span class="eqno">(421)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{\uparrow}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-1">
-<span class="eqno">(408)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_\uparrow = \bar v_\alpha\sin \alpha\]</div>
+<span class="eqno">(422)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_\uparrow = \bar v_\alpha\sin \alpha\]</div>
 <p>Solve for the length of the tube settler.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-2">
-<span class="eqno">(409)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
+<span class="eqno">(423)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
