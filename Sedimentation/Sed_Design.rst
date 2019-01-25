@@ -30,7 +30,7 @@ Each of the force components can be determined by:
 
 .. math::
 
-  F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}
+  F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{V_t^2}{2}
 
   F_{buoyant} = V\llap{---}_{floc} \rho_{H_2O} g
 
@@ -43,24 +43,24 @@ Each of the force components can be determined by:
 | :math:`\rho_{H_2O} =` water density
 | :math:`g =` acceleration due to gravity
 | :math:`C_D =` drag coefficient
-| :math:`v_t=` particle terminal velocity
+| :math:`V_t=` particle terminal velocity
 | :math:`D=` particle diameter
 
 Plugging into the original force balance,
 
 .. math::
 
-  [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}]+[V\llap{---}_{floc} \rho_{H_2O} g]-[V\llap{---}_{floc} \rho_{floc} g] =0
+  [C_D A_{floc} \rho_{H_2O} \frac{V_t^2}{2}]+[V\llap{---}_{floc} \rho_{H_2O} g]-[V\llap{---}_{floc} \rho_{floc} g] =0
 
-Solving for terminal velocity, :math:`v_t`, provides
+Solving for terminal velocity, :math:`V_t`, provides
 
 .. math::
 
-  v_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}
+  V_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}
 
 Terminal velocity is a function of fluid density, floc density, gravity, particle diameter, and the drag coefficient. To calculate velocity, all of those inputs must be determined.
 
-The first component that we will focus on is the drag coefficient, :math:`C_D`. The drag coefficient is function of Reynolds Number, :math:`Re`, and the characteristic flow around a particle. As a reminder, :math:`Re = \frac{v_t D}{\nu}` where :math:`v_t` is the velocity of the fluid, :math:`D` is the length scale, and :math:`\nu` is kinematic viscosity.
+The first component that we will focus on is the drag coefficient, :math:`C_D`. The drag coefficient is function of Reynolds Number, :math:`Re`, and the characteristic flow around a particle. As a reminder, :math:`Re = \frac{V_t D}{\nu}` where :math:`V_t` is the velocity of the fluid, :math:`D` is the length scale, and :math:`\nu` is kinematic viscosity.
 
 Drag coefficients are used to describe flow around a particle.
 [[[[INCLUDE FIGURE FOR DRAG COEFFICIENT AND REYNOLDS NUMBER]]]]
@@ -87,7 +87,7 @@ Below is a table to compare the significance of the Moody diagram and the Drag C
 | (:math:`f`, :math:`C_D`)       |                                   |                                                             |
 +--------------------------------+-----------------------------------+-------------------------------------------------------------+
 | High Reynolds number           | head loss increases by velocity in| force of drag increases by velocity in                      |
-| (:math:`h_L`, :math:`F_{drag}`)|  :math:`h_L = \frac{fLv^2}{2Dg}`  |  :math:`F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}`|
+| (:math:`h_L`, :math:`F_{drag}`)|  :math:`h_L = \frac{fLv^2}{2Dg}`  |  :math:`F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{V_t^2}{2}`|
 +--------------------------------+-----------------------------------+-------------------------------------------------------------+
 
 
@@ -100,7 +100,7 @@ Let's consider the drag coefficient diagram at Reynolds numbers of :math:`10^5`.
 
 To understand this phenomenon, think about a golf ball. Golf balls are designed with dimpled surfaces because the dimpled surface forces the transition described above to happen at lower Reynolds numbers. The dimples initiate turbulence in the boundary layer and cause a slight reduction in the drag coefficient. Thus, dimpled golf balls can travel further than smooth ones.
 
-Now, you might think: why aren't more surfaces dimpled? If I want my car to get better mileage, should I dimple its surface to take advantage of the same turbulent boundary layer properties as the golf ball? But before you go and damage some metal, let's think. If a car and golf ball are traveling through air at the same speed, what will be their relative Reynolds numbers? We know that :math:`Re = \frac{v_t D}{\nu}` and :math:`D_{golfball} << D_{car}`. The relative length scales mean that cars have much higher Reynolds numbers than the golf ball. In fact, the Reynolds number for a car is so high that it is already past the point that the boundary layer becomes turbulent. The golf ball needs to be dimpled because its Reynolds numbers are not so large that they will pass the turbulent boundary transition.
+Now, you might think: why aren't more surfaces dimpled? If I want my car to get better mileage, should I dimple its surface to take advantage of the same turbulent boundary layer properties as the golf ball? But before you go and damage some metal, let's think. If a car and golf ball are traveling through air at the same speed, what will be their relative Reynolds numbers? We know that :math:`Re = \frac{V_t D}{\nu}` and :math:`D_{golfball} << D_{car}`. The relative length scales mean that cars have much higher Reynolds numbers than the golf ball. In fact, the Reynolds number for a car is so high that it is already past the point that the boundary layer becomes turbulent. The golf ball needs to be dimpled because its Reynolds numbers are not so large that they will pass the turbulent boundary transition.
 
 Now, let's go back to the realm of water treatment. We care about drag coefficients and terminal velocities because they help describe how flocs will move in water. Flocs tend to exist in the region between 1< :math:`Re` < 10. This region is not perfectly described by Stokes Law, but it is used as an appropriate approximation. We have already solved for the general equation for terminal velocity using the force balance approach. Now, we can solve for a terminal velocity equation specifically in the laminar region.
 
@@ -108,17 +108,17 @@ Plug the drag coefficient and Reynolds numbers for laminar flow into the general
 
 .. math::
 
-  v_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}
+  V_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}
 
   C_D = \frac{24}{Re}
 
-  Re = \frac{v_tD}{\nu}
+  Re = \frac{V_tD}{\nu}
 
 to yield,
 
 .. math::
 
-  v_t = \frac{D^2g}{18\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}}
+  V_t = \frac{D^2g}{18\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}}
 
 Again, we can draw a parallel with the Moody Diagram. The general form of the terminal velocity equation is like the Darcy-Weisbach equation; it is always true. The terminal velocity in the laminar flow region is like the Hagen-Poiselle equation; it is only good for laminar flow. We will use the laminar specific condition because we are working with flocs with low Reynolds numbers.
 
@@ -126,7 +126,7 @@ Our equations for terminal velocity depend on the density of a floc. As discusse
 
 .. math::
 
-  v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}
+  V_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}
 
 | Where:
 | :math:`D_0 =` diameter of clay = 4 :math:`\mu m`
@@ -499,6 +499,7 @@ However, if the plates are closer together, then they will be shorter in length 
 Now, lets discuss a plate settler problem that has not yet been solved, which we call **floc volcanoes**. Floc volcanoes occur when flocs rise preferentially in one side of the sedimentation tank, at points of high velocity where flocs are rising to the surface of the water. Consider the following case: an AguaClara plant in San Nicolas, Honduras, was witnessing intermittent floc volcanoes in the sedimentation tanks. During operation, the plant was treating raw water with 4 NTU with a PACl dose of 3.5 mg/L. The settled water turbidity varied between 0.5 and 4 NTU. What might explain the floc volcanoes and very poor plant performance? Try coming up with a hypothesis that matches the information given to us from the plant. We want to figure out what is causing this problem so we can design a solution. What questions would you want to ask the technicians or engineers in Honduras? This exercise emphasizes the idea that asking the right questions are sometimes the hardest first step to learning more information.
 
 Some hypotheses and questions may include:
+
 1) is the problem related to dissolved air flotation? Dissolved air coming out of flotation can cause flocs to float to the top.
 
 After asking the operators, we are told that there are not any bubbles in the sedimentation tank.
@@ -574,21 +575,21 @@ This is discussed specifically in the section on diffusers [[should the diffuser
 After the water exits the diffusers and jet reverser, it flows through the expanded floc blanket region where:
 
 | :math:`L_{SedFloc} =` length of the sedimentation tank that has a floc blanket
-| :math:`V_{SedUp} =` upflow velocity of the water through the floc blanket
+| :math:`V_{SedFlocUp} =` upflow velocity of the water through the floc blanket
 
-Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}*V_{SedUp}`
+Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}*V_{SedFlocUp}`
 
 3) Velocity and flow entering the plate settlers
 ------------------------------------------------------------
 
 The 'active' sedimentation zone refers to the area of the tank in which water can flow through the plate settlers where:
 
-| :math:`L_{SedActive} =` length of the sedimentation tank that includes entrance to a plate settlers; vertical velocity component beneath the plate settlers
+| :math:`L_{SedActive} =` length of the sedimentation tank that includes entrance to a plate settlers
 | :math:`V_{A,V} =` upflow velocity of the water entering the plate settlers; vertical velocity in 'active' region
 
-The only reason that there is a distinction between this area and the floc blanket area is because plate settlers are built at an angle. This angle creates a "lost triangle" because there is a space in which the plate settlers are not effective and water does not flow through them. Because the active length is less than the floc blanket length, :math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, the average active velocity must be greater than the average upflow velocity through the floc blanket, :math:`V_{A,V} > V_{SedUp}`. The same flow going through less area means that the velocity must increase.
+The only reason that there is a distinction between this area and the floc blanket area is because plate settlers are built at an angle. This angle creates a "lost triangle" because there is a space in which the plate settlers are not effective and water does not flow through them. Because the active length is less than the floc blanket length, :math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, the average active velocity must be greater than the average upflow velocity through the floc blanket, :math:`V_{A,V} > V_{SedFlocUp}`. The same flow going through less area means that the velocity must increase.
 
-Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedActive}*V_{A,V}`, and :math:`V_{A,V} > V_{SedUp}`.
+Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedActive}*V_{A,V}`, and :math:`V_{A,V} > V_{SedFlocUp}`.
 
 4) Velocity and flow in the plate settlers
 -------------------------------------------
@@ -603,7 +604,7 @@ Now, we will discuss flow through plate settlers where:
 
 We know that plate settlers have a certain thickness and take up area, which means that once we reach the plate settler zone, there is less area for water to travel through. Because flow is conserved and there is a decrease in area, we know that the upflow velocity of water through the plate settlers must increase compared to the upflow velocity of water below the plate settlers, :math:`V_{P,V} > V_{A,V}`.
 
-Thus, :math:`V_{P,V} > V_{A,V} > V_{SedUp}`
+Thus, :math:`V_{P,V} > V_{A,V} > V_{SedFlocUp}`
 
 In addition to the vertical velocity component increasing between the plates, the resultant velocity of water between the plates increases compared to :math:`V_{A,V}`. What are the two reasons that this is true?
 
@@ -652,22 +653,22 @@ Now, we can use this form of the capture velocity equation to solve for :math:`B
 
 The AguaClara plate settler design approach is summarized in the following table:
 
-+----------------------+------------------+-------------------------------+----------------------------+--------------------------+
-| Parameter            | Variable         | Determined by:                | Determines:                | Value                    |
-+======================+==================+===============================+============================+==========================+
-| Upflow velocity      | :math:`V_{SedUp}`| floc blanket                  | size of tank               | 1 :math:`\frac{mm}{s}`   |
-|                      |                  | upflow requirements           |                            |                          |
-+----------------------+------------------+-------------------------------+----------------------------+--------------------------+
-| Capture velocity     | :math:`V_c`      | target turbidity              | particle size distribution | 0.12 :math:`\frac{mm}{s}`|
-|                      |                  |                               | after floc blanket         |  **needs research**      |
-+----------------------+------------------+-------------------------------+----------------------------+--------------------------+
-| Plate angle          | :math:`\alpha`   | self-cleaning requirements    | :math:`L`                  | 60 deg                   |
-+----------------------+------------------+-------------------------------+----------------------------+--------------------------+
-| Spacing              | :math:`S`        | clogging and floc             | :math:`L`                  | 2.5 cm                   |
-|                      |                  | rollup constraints            |                            |                          |
-+----------------------+------------------+-------------------------------+----------------------------+--------------------------+
-| Plate settler length | :math:`L`        | :math:`V_{SedUp},V_c,\alpha,S`| tank depth                 | Calculated for each plant|
-+----------------------+------------------+-------------------------------+----------------------------+--------------------------+
++----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
+| Parameter            | Variable             | Determined by:                    | Determines:                | Value                    |
++======================+======================+===================================+============================+==========================+
+| Upflow velocity      | :math:`V_{SedFlocUp}`| floc blanket                      | size of tank               | 1 :math:`\frac{mm}{s}`   |
+|                      |                      | upflow requirements               |                            |                          |
++----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
+| Capture velocity     | :math:`V_c`          | target turbidity                  | particle size distribution | 0.12 :math:`\frac{mm}{s}`|
+|                      |                      |                                   | after floc blanket         |  **needs research**      |
++----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
+| Plate angle          | :math:`\alpha`       | self-cleaning requirements        | :math:`L`                  | 60 deg                   |
++----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
+| Spacing              | :math:`S`            | clogging and floc                 | :math:`L`                  | 2.5 cm                   |
+|                      |                      | rollup constraints                |                            |                          |
++----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
+| Plate settler length | :math:`L`            | :math:`V_{SedFlocUp},V_c,\alpha,S`| tank depth                 | Calculated for each plant|
++----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
 
 Floc Rollup and Slide Velocity
 ------------------------------
@@ -788,13 +789,13 @@ Substituting by the trigonometric relationship :math:`V_{\alpha} = (\frac{V_{P,V
 
 3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Recall from previous sections [[link]] that the terminal velocity, :math:`v_t`, of the floc can be calculated by, [[??]]
+Recall from previous sections [[link]] that the terminal velocity, :math:`V_t`, of the floc can be calculated by, [[??]]
 
-:math:`v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}`
+:math:`V_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}`
 
 We can rearrange this equation to solve for :math:`D` by
 
-:math:`D = D_0 ( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}}) ^{\frac{1}{ D_{fractal} - 1}}`
+:math:`D = D_0 ( \frac{18 V_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}}) ^{\frac{1}{ D_{fractal} - 1}}`
 
 We will need this equation for :math:`D` in the next step.
 
@@ -802,19 +803,19 @@ We will need this equation for :math:`D` in the next step.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The floc settles due to gravitational forces. First, the :math:`\alpha` component of the gravitational settling force, :math:`v_{t,\alpha}`, must be found by trigonometric relationships.
 
- :math:`v_{t,\alpha} = v_t sin\alpha`
+ :math:`v_{t,\alpha} = V_t sin\alpha`
 
 Setting :math:`V_{\alpha} = v_{t,\alpha}` yields,
 
- :math:`\frac{3 V_{P,V} D}{Ssin\alpha} \approx v_t sin\alpha`
+ :math:`\frac{3 V_{P,V} D}{Ssin\alpha} \approx V_t sin\alpha`
 
 Solving for :math:`S` to determine plate spacing,
 
- :math:`S \approx \frac{3 V_{P,V} D}{v_t sin^2\alpha}`
+ :math:`S \approx \frac{3 V_{P,V} D}{V_t sin^2\alpha}`
 
-In this equation, we have both :math:`v_t` and :math:`D`, but we can simplify further because we know that :math:`v_t` and :math:`D` are related by the relationship shown in step 3. Therefore,
+In this equation, we have both :math:`V_t` and :math:`D`, but we can simplify further because we know that :math:`V_t` and :math:`D` are related by the relationship shown in step 3. Therefore,
 
-:math:`S \approx \frac{3}{sin^2\alpha} \frac{V_{P,V}}{v_t} D_0 \left( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}} \right) ^{\frac{1}{ D_{fractal} - 1}} `
+:math:`S \approx \frac{3}{sin^2\alpha} \frac{V_{P,V}}{V_t} D_0 \left( \frac{18 V_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}} \right) ^{\frac{1}{ D_{fractal} - 1}} `
 
 :math:`S` is the smallest spacing that will allow a floc with a given settling velocity to remain stationary on the slope and not be carried upward by rollup.
 
@@ -827,7 +828,7 @@ Finally, we can determine :math:`V_{Slide}` by,
 :math:`V_{Slide}` is the terminal sedimentation velocity of the slowest-settling floc that can slide down an incline. Flocs with with terminal velocity (the slide velocity) will be held stationary on the incline because of a balance between gravitational forces and fluid drag. Flocs with a terminal velocity lower than :math:`V_{Slide}` will be carried out of the top of the settler (i.e., they will rollup) even if they settle onto the settler wall. Thus, the slide terminal velocity represents a constraint on the ability of plate settlers to capture flocs.
 
 What happens if the primary particles are less dense? [[need more explanation]]
-:math:`V_{Slide}` will increase because the particles need to be able to settle faster in order to not experience rollup. 
+:math:`V_{Slide}` will increase because the particles need to be able to settle faster in order to not experience rollup.
 
 
 =============================================================================================
