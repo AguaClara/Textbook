@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sedimentation Design Solution &mdash; AguaClara Textbook 0.038 documentation</title>
+  <title>Sedimentation Design Solution &mdash; AguaClara Textbook 0.039 documentation</title>
   
 
   
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Sedimentation Design Challenge" href="Sed_DC.html" />
+    <link rel="next" title="Filtration Introduction" href="../Filtration/Filtration_Intro.html" />
     <link rel="prev" title="Sedimentation Theory and Future Work" href="Sed_Theory_and_Future_Work.html" /> 
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.038
+                0.039
               </div>
             
           
@@ -91,9 +91,7 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction_DC.html">Introduction Design Challenge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_DC.html">Python Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -106,7 +104,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_DC.html">Flow Control and Measurement Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
 <ul>
@@ -129,7 +126,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_DC.html">Flocculation Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul class="current">
@@ -175,7 +171,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Sed_DC.html">Sedimentation Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
 <ul>
@@ -184,7 +179,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_DC.html">Filtration Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -203,10 +197,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Chapter 12: Synthesis</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Synthesis/Synthesis_DC.html">Synthesis Design Challenges</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
 <ul>
@@ -291,7 +281,7 @@
 <p>In AguaClara sedimentation tanks the influent and effluent channels are located above the space occupied by the floc hopper. If you want to see how those geometric constraints are handled you can review the AguaClara sedimentation tank design file. Agua Para el Pueblo is building a 120 L/s plant for Gracias, the capital of Lempira, Honduras. This plant has 2 treatment trains and thus we can design each train for 60 L/s. For this design challenge you may assume the following:</p>
 <p>For each step in the solution define a variable with a name that is easily understood so that it can be used later if needed. Consider using the AguaClara naming convention.</p>
 <p>Use numpy for ceil, floor, sin, and pi.</p>
-<p>The following cell has constants defined for you to use in designing your sedimentation tank. Read through and run it so you know what variables have been defined for you. See <a class="reference internal" href="../Rapid_Mix/RM_Intro.html#table-edr-g-equations"><span class="std std-numref">Table 11</span></a> for the plane jet constant.</p>
+<p>The following cell has constants defined for you to use in designing your sedimentation tank. Read through and run it so you know what variables have been defined for you. See <a class="reference internal" href="../Rapid_Mix/RM_Intro.html#table-edr-g-equations"><span class="std std-numref">Table 10</span></a> for the plane jet constant.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># We are experimenting with using head loss at the exit of the diffusers as</span>
 <span class="c1"># a reasonable design constraint for the design of the</span>
 <span class="c1"># inlet manifold/diffuser system. This head loss in the exit of the diffuser</span>
@@ -767,7 +757,7 @@ If we use this design approach the plant design capacity will slightly exceed th
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Sed_DC.html" class="btn btn-neutral float-right" title="Sedimentation Design Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Filtration/Filtration_Intro.html" class="btn btn-neutral float-right" title="Filtration Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Sed_Theory_and_Future_Work.html" class="btn btn-neutral" title="Sedimentation Theory and Future Work" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -801,7 +791,7 @@ If we use this design approach the plant design capacity will slightly exceed th
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.038',
+            VERSION:'0.039',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
