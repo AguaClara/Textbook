@@ -1,0 +1,431 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Flow Control and Measurement Design Challenge &mdash; AguaClara Textbook  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Rapid Mix Introduction" href="../Rapid_Mix/RM_Intro.html" />
+    <link rel="prev" title="Flow Control and Measurement Solution" href="FCM_Solution.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction_DC.html">Introduction Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_DC.html">Python Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flow Control and Measurement Design Challenge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">5)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">6)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">7)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">8)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">9)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_DC.html">Flocculation Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#conventional-sedimentation-systems">Conventional Sedimentation Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#sedimentation-challenges-and-gaps-in-knowledge">Sedimentation Challenges and Gaps in Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#aguaclara-innovations">AguaClara Innovations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#foundational-concepts">Foundational Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#aguaclara-design-approach">AguaClara Design Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#design-of-an-aguaclara-sedimentation-tank">Design of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#sedimentation-challenges-confusions-and-failure-modes">Sedimentation Challenges, Confusions, and Failure Modes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_DC.html">Sedimentation Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_DC.html">Filtration Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Synthesis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Synthesis/Synthesis_DC.html">Synthesis Design Challenges</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Flow Control and Measurement Design Challenge</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Flow_Control_and_Measurement/FCM_DC.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="flow-control-and-measurement-design-challenge">
+<span id="title-flow-control-design-challenge"></span><h1>Flow Control and Measurement Design Challenge<a class="headerlink" href="#flow-control-and-measurement-design-challenge" title="Permalink to this headline">¶</a></h1>
+<p>Researchers in the AguaClara laboratory collected the following head loss data through a 1/8” diameter tube that was 2 m long using water at 22°C. The data is in a comma separated data (.csv) file named <a class="reference external" href="https://raw.githubusercontent.com/AguaClara/CEE4520/master/DC%20Solutions/Markdown/Head_loss_vs_Flow_dosing_tube_data.csv">Head_loss_vs_Flow_dosing_tube_data.csv</a> . Use the pandas read csv function (<code class="docutils literal notranslate"><span class="pre">pd.read_csv('filename.csv')</span></code>) to read the data file. Display the data so you can see how it is formatted.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/AguaClara/CEE4520/master/DC%20Solutions/Markdown/Head_loss_vs_Flow_dosing_tube_data.csv&#39;</span>
+<span class="n">head_loss_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">head_loss_data</span>
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h2>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Using the data table above, assign the head loss and flow rate data to separate 1-D arrays. Attach the correct units. <code class="docutils literal notranslate"><span class="pre">np.array</span></code> can extract the data by simply inputting the text string of the column header. Here is example code to create the first array:</p>
+<p><code class="docutils literal notranslate"><span class="pre">HL_data=np.array(head_loss_data['Head</span> <span class="pre">loss</span> <span class="pre">(m)'])*u.m</span></code></p>
+</div>
+<div class="section" id="id2">
+<h2>2)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Calculate and report the maximum and minimum Reynolds number for this data set. Use the tube and temperature parameters specified above. Use the <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code> functions which take arrays as their inputs.</p>
+<p>The Reynolds number varied from 2.9e+2 to 1.0e+3.</p>
+</div>
+<div class="section" id="id3">
+<h2>3)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>You will now create a graph of head loss vs flow for the tube mentioned in the previous problems. This graph will have two sets of data: the real data contained within the csv file and some theoretical data. The theoretical data is what we would expect the head loss through the tube to be in an ideal world for any given flow. When calculating the theoretical head loss, assume that minor losses are negligible. Plot the data from the csv file as individual data points and the theoretical head loss as a continuous curve. Make the y-axis have units of cm and the x-axis have units of mL/s.</p>
+<dl class="docutils">
+<dt>A few hints.</dt>
+<dd><ul class="first last simple">
+<li>To find the theoretical head loss, you will first need to create an array of different flow values. While you could use the values in the csv file that you extracted in Problem 14, we would instead like you to create an array of 50 equally-spaced flow values. These values shall be between the minimum and maximum flows in the csv file.</li>
+<li>You can use the <code class="docutils literal notranslate"><span class="pre">np.linspace(input1,</span> <span class="pre">input2,</span> <span class="pre">input3)</span></code> function to create this set of equally-spaced flows. Inputs for <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> are the same as they were for <code class="docutils literal notranslate"><span class="pre">np.logspace</span></code>, which was used in Problem 12a). Linspace does not work with units; you will need to remove the units (using <code class="docutils literal notranslate"><span class="pre">.magnitude</span></code>) from the inputs to <code class="docutils literal notranslate"><span class="pre">np.logspace</span></code> and then reattach the correct units of flow after creating the array.</li>
+<li>The <code class="docutils literal notranslate"><span class="pre">pc.headloss_fric</span></code> function can handle arrays as inputs, so that makes it easy to produce the theoretical head loss array once you have finished your equally-spaced flow array.</li>
+<li>When using plotting, make sure to convert the flow and head loss data to the desired units.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id4">
+<h2>4)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>The theoretical model doesn’t fit the data very well. We assumed that major losses dominated. But that assumption was wrong. So let’s try a more sophisticated approach where we fit minor losses to the data. Below we demonstrate the use of the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html#scipy.optimize.curve_fit">scipy curve_fit method</a> to fit the minor loss coefficient given this data set. In this example, <code class="docutils literal notranslate"><span class="pre">Q_data</span></code> is the flow rate array for the csv file from problem 13. You should re-name this variable below to whatever you titled this variable.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="k">import</span> <span class="n">curve_fit</span>
+
+<span class="c1"># Define a new function that calculates head loss given the flow rate</span>
+<span class="c1"># and the parameter that we want to use curve fitting to estimate</span>
+<span class="c1"># Define the other known values inside the function because we won&#39;t be passing those parameters to the function.</span>
+
+<span class="k">def</span> <span class="nf">HL_curvefit</span><span class="p">(</span><span class="n">FlowRate</span><span class="p">,</span> <span class="n">KMinor</span><span class="p">):</span>
+    <span class="c1"># The tubing is smooth AND pipe roughness isn&#39;t significant for laminar flow.</span>
+    <span class="n">PipeRough</span> <span class="o">=</span> <span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span>
+    <span class="n">L_tube</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">m</span>
+    <span class="n">T_data</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span><span class="p">)</span>
+    <span class="n">nu_data</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_data</span><span class="p">)</span>
+    <span class="n">D_tube</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">8</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span>
+    <span class="c1"># pass all of the parameters to the head loss function and then strip the units so</span>
+    <span class="c1"># the curve fitting function can handle the data.</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">headloss</span><span class="p">(</span><span class="n">FlowRate</span><span class="p">,</span> <span class="n">D_tube</span><span class="p">,</span> <span class="n">L_tube</span><span class="p">,</span> <span class="n">nu_data</span><span class="p">,</span> <span class="n">PipeRough</span><span class="p">,</span> <span class="n">KMinor</span><span class="p">))</span><span class="o">.</span><span class="n">magnitude</span>
+
+<span class="c1"># The curve fit function will need bounds on the unknown parameters to find a real solution.</span>
+<span class="c1"># The bounds for K minor are 0 and 20.</span>
+
+<span class="c1"># The curve fit function returns a list that includes the optimal parameters and the covariance.</span>
+
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">HL_curvefit</span><span class="p">,</span> <span class="n">Q_data</span><span class="p">,</span> <span class="n">HL_data</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">[[</span><span class="mf">0.</span><span class="p">],[</span><span class="mi">20</span><span class="p">]])</span>
+
+<span class="n">K_minor_fit</span> <span class="o">=</span> <span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Plot the raw data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Q_data</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span> <span class="n">HL_data</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">),</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot the curve fit equation.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Q_data</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span> <span class="p">((</span><span class="n">HL_curvefit</span><span class="p">(</span><span class="n">Q_data</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">))</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">),</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fit&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Flow rate (mL/s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Head loss (cm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">#Calculate the root mean square error to estimate the goodness of fit of the model to the data</span>
+<span class="n">RMSE_Kminor</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">subtract</span><span class="p">((</span><span class="n">HL_curvefit</span><span class="p">(</span><span class="n">Q_data</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">)),</span><span class="n">HL_data</span><span class="o">.</span><span class="n">magnitude</span><span class="p">)))</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The root mean square error for the model fit when adjusting the minor loss coefficient was&#39;</span><span class="p">,</span><span class="n">RMSE_Kminor</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The root mean square error for the model fit when adjusting the minor
+loss coefficient was 0.39 cm</p>
+</div>
+<div class="section" id="id5">
+<h2>5)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Repeat the analysis above, but this time assume that the minor loss coefficient is zero and that diameter is the unknown parameter. The bounds specified in the line beginning with <code class="docutils literal notranslate"><span class="pre">popt,</span> <span class="pre">pcov</span></code> should be changed from the previous question (which had bounds from 0 to 20) to the new bounds of 0.001 to 0.01.</p>
+<p>Hint: You only need to change the name of the defined function (perhaps “<code class="docutils literal notranslate"><span class="pre">HL_curvefit2</span></code>”?) and adjust its
+inputs/values.</p>
+<p>The root mean square error for the model fit when adjusting the diameter
+was 0.47 cm</p>
+</div>
+<div class="section" id="id6">
+<h2>6)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Changes to which of the two parameters, minor loss coefficient or tube diameter, results in a better fit to the data?</p>
+</div>
+<div class="section" id="id7">
+<h2>7)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>Create a design for a <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/design/cdc.py">chemical dose controller using aguaclara</a> . Then take that design and calculate the maximum coagulant dose that it will deliver.</p>
+</div>
+<div class="section" id="id8">
+<h2>8)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>An AguaClara plant will be upgraded from 20 L/s to 30 L/s by adding two sedimentation tanks, increasing the head loss through the flocculator, and adding an additional StaRS filter. Give the current design specs for the CDC. Propose the most cost effective modification to the CDC to handle the additional flow.</p>
+</div>
+<div class="section" id="id9">
+<h2>9)<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>Determine if the LFOM diameter will need to be increased for a 20 L/s to 30 L/s plant upgrade.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Rapid_Mix/RM_Intro.html" class="btn btn-neutral float-right" title="Rapid Mix Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="FCM_Solution.html" class="btn btn-neutral" title="Flow Control and Measurement Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

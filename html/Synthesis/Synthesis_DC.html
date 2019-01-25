@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Synthesis Design Challenges &mdash; AguaClara Textbook  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction to RST and Sphinx for Textbook Contributors" href="../Textbook_Creation_Help/rst_intro.html" />
+    <link rel="prev" title="Problems" href="../Troubleshooting/Troubleshooting.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction_DC.html">Introduction Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_DC.html">Python Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_DC.html">Flow Control and Measurement Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_DC.html">Flocculation Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#conventional-sedimentation-systems">Conventional Sedimentation Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#sedimentation-challenges-and-gaps-in-knowledge">Sedimentation Challenges and Gaps in Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#aguaclara-innovations">AguaClara Innovations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#foundational-concepts">Foundational Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#aguaclara-design-approach">AguaClara Design Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#design-of-an-aguaclara-sedimentation-tank">Design of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#sedimentation-challenges-confusions-and-failure-modes">Sedimentation Challenges, Confusions, and Failure Modes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_DC.html">Sedimentation Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_DC.html">Filtration Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Synthesis</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Synthesis Design Challenges</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Synthesis Design Challenges</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Synthesis/Synthesis_DC.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="synthesis-design-challenges">
+<span id="title-synthesis-dc"></span><h1>Synthesis Design Challenges<a class="headerlink" href="#synthesis-design-challenges" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>Compare the hydraulic residence times for flocculation and sedimentation for AguaClara technologies and the leading commercially available clarification systems.</li>
+<li>What design changes would you make to the Superpulsator to improve its performance? What improvements in performance and maintenance  would your changes make? Would you recommend upgrading existing Superpulsator plants with your proposed changes?</li>
+<li>Analyze the data in Jesus_de_Otoro_data.tsv. A useful way to plot water treatment plant performance data is to plot the turbidity (raw, settled, filtered) as a function of the rank of each of those data sets. Determine the fraction of the filtered and settled water samples that met the Honduran standard of 5 NTU and the USEPA standard of 0.3 NTU. (Switch this to POST data when possible.)</li>
+</ol>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Textbook_Creation_Help/rst_intro.html" class="btn btn-neutral float-right" title="Introduction to RST and Sphinx for Textbook Contributors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Troubleshooting/Troubleshooting.html" class="btn btn-neutral" title="Problems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
