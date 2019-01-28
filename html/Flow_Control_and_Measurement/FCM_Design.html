@@ -87,7 +87,6 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -154,15 +153,7 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#conventional-sedimentation-systems">Conventional Sedimentation Systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#sedimentation-challenges-and-gaps-in-knowledge">Sedimentation Challenges and Gaps in Knowledge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html#aguaclara-innovations">AguaClara Innovations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#foundational-concepts">Foundational Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#aguaclara-design-approach">AguaClara Design Approach</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#design-of-an-aguaclara-sedimentation-tank">Design of an AguaClara Sedimentation Tank</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#sedimentation-challenges-confusions-and-failure-modes">Sedimentation Challenges, Confusions, and Failure Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
@@ -174,6 +165,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -330,7 +322,7 @@
 <p>The LFOM is a weir shape cut into a pipe. It was meant to imitate <a class="reference external" href="https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research">the Sutro Weir</a> while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.</p>
 <div class="figure align-center" id="id9">
 <span id="figure-sutro-v-lfom"></span><a class="reference internal image-reference" href="../_images/sutro_v_lfom.png"><img alt="A sutro weir and an LFOM" src="../_images/sutro_v_lfom.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span></p>
+<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span></p>
 </div>
 </div>
 <div class="section" id="id2">
@@ -386,7 +378,7 @@
 </ol>
 <div class="figure align-center" id="id10">
 <span id="figure-cdc-labelled"></span><a class="reference internal image-reference" href="../_images/cdc_labelled.png"><img alt="CDC Displayed" src="../_images/cdc_labelled.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">This is the setup of the chemical dose controller.</span></p>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">This is the setup of the chemical dose controller.</span></p>
 </div>
 </div>
 <div class="section" id="id6">
@@ -396,27 +388,27 @@
 <div class="section" id="id7">
 <h4>How it works<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <p>A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: <a class="reference internal" href="FCM_Derivations.html#heading-design-equations-for-the-cdc"><span class="std std-ref">Design Equations for the Linear Chemical Dose Controller (CDC)</span></a>, and you are very, very strongly encouraged to read them.</p>
-<p>The CDC can be designed manually using the equations from the derivation linked above or via aguaclara, using the equations found in <a class="reference external" href="https://github.com/AguaClara/aguaclara">cdc_functions.py</a>. Either way, the design algorithm is roughly the same:</p>
+<p>The CDC can be designed manually using the equations from the derivation linked above or via aide_design, using the equations found in <a class="reference external" href="https://github.com/AguaClara/aguaclara">cdc_functions.py</a>. Either way, the design algorithm is roughly the same:</p>
 <ol class="arabic simple">
 <li>Calculate the maximum flow rate, <span class="math notranslate nohighlight">\(Q_{Max, \, Tube}\)</span>, through each available dosing tube diameter <span class="math notranslate nohighlight">\(D\)</span> that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-0">
-<span class="eqno">(72)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
+<span class="eqno">(71)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
 <ol class="arabic simple" start="2">
 <li>Calculate how much flow of chemical needs to pass through the CDC at maximum plant flow and maximum chemical dose. This depends on the concentration of chemicals in the stock tank.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-1">
-<span class="eqno">(73)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
+<span class="eqno">(72)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
 <ol class="arabic simple" start="3">
 <li>Calculate the number of dosing tubes required if the tubes flow at  maximum capacity (round up)</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-2">
-<span class="eqno">(74)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
+<span class="eqno">(73)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
 <ol class="arabic simple" start="4">
 <li>Calculate the length of dosing tube(s) that correspond to each available tube diameter.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-3">
-<span class="eqno">(75)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-3" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
+<span class="eqno">(74)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-3" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
 <ol class="arabic simple" start="5">
 <li>Select a tube length from your array of solutions. Pick the longest dosing tube that you can, keeping in mind that the tube(s) must be able to fit in the plant and can’t be longer than the length of the plant wall it will be placed along.</li>
 <li>Finally, select the dosing tube diameter and flow rate corresponding to the selected tube length.</li>
@@ -437,7 +429,7 @@
 <li><strong>Tank with a valve:</strong></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-4">
-<span class="eqno">(76)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-4" title="Permalink to this equation">¶</a></span>\[\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
+<span class="eqno">(75)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-4" title="Permalink to this equation">¶</a></span>\[\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
 <p>This equation describes flow <span class="math notranslate nohighlight">\(Q\)</span> as a function of time <span class="math notranslate nohighlight">\(t\)</span> of a fluid leaving a tank through a valve. Attempting to get this ‘tank with a valve’ system to yield constant head means raising the tank far, far above the valve that controls the flow. This is unreasonable when designing a flow control system for constant dosing, but can be used to design systems to drain a tank. See the section above for a description of the variables in the equation.</p>
 <ol class="arabic simple" start="2">
 <li><strong>LFOM:</strong> The LFOM makes the water level in the entrance tank linear with respect to the flow out of the entrance tank. This is useful in measuring the flow and is a critical component in AguaClara’s chemical dosing system. The LFOM <em>measures</em> the flow through the plant, it does not <em>control</em> the flow through the plant.</li>
