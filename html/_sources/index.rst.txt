@@ -3,7 +3,7 @@
 ====================================
 Welcome to the AguaClara Textbook!
 ====================================
-This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in `aguaclara <https://github.com/AguaClara/aguaclara>`_. Listed below are the versions of the programs we use:
+This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in `aide_design <https://github.com/AguaClara/aide_design>`_. Listed below are the versions of the programs we use:
 
 .. _software_versions:
 .. csv-table:: These are the software versions used to compile this textbook
@@ -12,7 +12,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
    :align: center
 
    "Sphinx", "1.7.5"
-   "aguaclara", "0.0.16"
+   "aide_design", "0.0.12"
    "Anaconda", "4.5.4"
    "Python", "3.6.5"
 
@@ -31,9 +31,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Introduction/Introduction.rst
-  Introduction/Introduction_DC.rst
-  Introduction/Python_Tutorial.rst
-  Introduction/Python_DC.rst
 
 
 .. toctree::
@@ -52,7 +49,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flow_Control_and_Measurement/FCM_Design.rst
   Flow_Control_and_Measurement/FCM_Derivations.rst
   Flow_Control_and_Measurement/FCM_Solution.rst
-  Flow_Control_and_Measurement/FCM_DC.rst
 
 .. toctree::
   :caption: Chapter 4: Rapid Mix
@@ -79,7 +75,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flocculation/Floc_Mechanical_Solution.rst
   Flocculation/Floc_Model_Solution.rst
   Flocculation/Floc_Design_Solution.rst
-  Flocculation/Floc_DC.rst
 
 .. toctree::
   :caption: Chapter 6: Sedimentation
@@ -90,7 +85,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Sedimentation/Sed_Examples.rst
   Sedimentation/Sed_Theory_and_Future_Work.rst
   Sedimentation/Sed_Design_Solution.rst
-  Sedimentation/Sed_DC.rst
 
 .. toctree::
   :caption: Chapter 7: Filtration
@@ -101,7 +95,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Filtration/Filtration_Derivations.rst
   Filtration/Filtration_Theory_and_Future_Work.rst
   Filtration/Filtration_Design_Solution.rst
-  Filtration/Filtration_DC.rst
+  Filtration/EStaRS_Design.rst
 
 
 .. toctree::
@@ -129,12 +123,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Troubleshooting/Troubleshooting.rst
-
-.. toctree::
-  :caption: Chapter 12: Synthesis
-  :maxdepth: 1
-
-  Synthesis/Synthesis_DC.rst
 
 .. toctree::
   :caption: Contributor's guide
