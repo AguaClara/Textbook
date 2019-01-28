@@ -32,4 +32,13 @@
 
 ## Need algorithms that:
 - take in flow and return number/size (the big one)
+  - 1 LPS --> estars for plantita (smaler sand layers)
+  - >1-3 4-1Ft
+  - >3-6 2-2ft
+  - >6-9 3-2ft
+  - >9-12 4-2ft
+  - >12-14 2-3ft
+  - >14-21 3-3ft
+  - (>16 OStaRS)
+  - these based on max capacity of a single filter of each size.
 - take 
