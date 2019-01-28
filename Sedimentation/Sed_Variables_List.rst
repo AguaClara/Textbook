@@ -19,6 +19,8 @@
      - :math:`V_c`
    * - Center-to-center spacing between plate settlers
      - :math:`B`
+   * - "Change in"
+     - :math:`\Delta`
    * - Collision potential
      - :math:`G\theta`
    * - Critical height
@@ -36,10 +38,16 @@
      - :math:`\rho_{H_2O} `
    * - Drag Coefficient
      - :math:`C_D`
-   * - Drag Force
+   * - Drag force
      - :math:`F_{drag}`
+   * - Dynamic viscosity
+     - :math:`\mu`
 
+   * - Energy dissipation rate
+     - :math:`\epsilon`
 
+   * - Flocculation velocity gradient
+     - :math:`G`
    * - Flow rate
      - :math:`Q`
    * - Flow rate through each sedimentation tank
@@ -58,6 +66,8 @@
      - :math:`h_L`
    * - Height
      - :math:`H`
+   * - Height of the floc blanket
+     - :math:`H_{fb}`
    * - Horizontal velocity
      - :math:`V_h`
    * - Horizontal velocity through plate settlers
@@ -76,10 +86,15 @@
    * - Net velocity through plate settlers
      - :math:`V_{P,net}`
 
-   * - Projected cross sectional area of particle
-     - :math:`A_{floc} `
+
    * - Plan view area
      - :math:`A_p `
+   * - Porosity of floc blanket
+     - :math:`\phi_{fb}`
+   * - Pressure
+     - :math:`P`
+   * - Projected cross sectional area of particle
+     - :math:`A_{floc} `
 
    * - Radius
      - :math:`R`
@@ -92,6 +107,8 @@
 
    * - Sedimentation velocity of floc between plate settlers
      - :math:`V_{Slide}`
+   * - Shear
+     - :math:`\tau`
    * - Spacing between plate settlers
      - :math:`S`
 
@@ -107,8 +124,10 @@
    * - Upflow velocity of the water through the plate settlers
      - :math:`V_{P,V}`
 
-   * - Velocity gradient
-     - :math:`G`
+   * - Velocity gradient between plate settlers
+     - :math:`\frac{du}{dy}`
+   * - Velocity in the x-direction
+     - :math:`u`
    * - Vertical velocity through plate settlers
      - :math:`V_{P,V}`
    * - Volume of particle floc

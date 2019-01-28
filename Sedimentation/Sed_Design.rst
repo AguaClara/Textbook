@@ -357,16 +357,13 @@ For a floc blanket to form, a sedimentation system requires that all flocs be re
 
 Floc blankets improve the performance of a sedimentation tank and reduces settled water turbidity by a factor of 10 (Garland et al., 2017) for multiple reasons:
 
-- providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc blanket due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G \theta` cause a large reduction in turbidity? The answer may be that the lower :math:`G` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. Which flocs are active and which flocs are inactive in the floc blanket?
-
-[[FILTER VS FLOCCULATOR QUESTION]]
-  We just explained that flocs in the floc blanket cause shear and energy gradients, thus leading to collisions and growing flocs. This explanation suggests that the floc blanket acts like a flocculator. However, there is another proposed model for floc blanket operation in which the floc blanket acts like a filter. Although you haven't necessarily learned about filters yet, all you need to know for now is that sand in a sand filter creates head loss. The sand is essentially inert and creates shear but isn't "colliding" with particles going past it. So the two models proposed for floc blankets are the flocculator or filter model; which is it? Are floc blankets like flocculators or filters, and how can we find out? We can learn more by delving into the discussion about relative :math:`G \theta` values between the flocculator and the floc blanket. Through laboratory testing, we know that flocculators have :math:`G \theta` values on the order of 20,000 and the floc blanket have on the order of 4,000.
-
-  If the filter model of floc blankets was correct and the flocs were just taking up space and causing head loss, we would expect a 24,000 :math:`G \theta` flocculator to function the same as a 20,000 :math:`G \theta` flocculator coupled with a 4,000 :math:`G \theta` floc blanket. However, if we just changed our flocculator to be closer to 24,000 :math:`G \theta`, we would have not gotten the impressive removal efficiency that the floc blankets demonstrate. So, we must assume that large flocs in the floc blanket are involved in some collisions with the smaller flocs going through it. However, we still do not have a model set of equations to describe floc blanket performance.
+- providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc blanket due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G \theta` cause a large reduction in turbidity? The two-fold answer may be that the lower :math:`G` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc blanket. [[[[link to derivation]]]]
 
 - creating a uniform vertical velocity of water entering the plate settlers. [[See if references to the sed tank as circuit makes sense]]
 
 - transporting excess flocs to the floc hopper for final removal through a small drain valve. The **floc hopper** is a "weir" that provides an opportunity for floc consolidation. The floc hopper controls the depth of the floc blanket because as the floc blanket grows, it will eventually reach the top of the floc hopper. Because flocs are more dense than water, the flocs "spill" over the edge of the floc hopper which allows the floc blanket to stay a constant height while sludge accumulates and consolidates in the floc hopper. Floc blanket flow into the floc hopper is a function of the mass flux of particles into the sedimentation tank. We need to characterize the consolidation rate of the flocs to optimize the floc hopper design. The ideal depth of the floc blanket has not yet been determined.
+
+It is of interesting note that the suspended solids concentrations in the floc blanket are approximately 1-5 g/L. This concentration corresponds to measurements of thousands of NTU, which is remarkably turbid water. A water treatment plant could have 5 NTU water entering the plant, and water in the bottom of the sedimentation tank could have 1000 NTU. This is one clue that there are interesting things happening in the floc blanket - the bottom of the sedimentation tank can be a completely different world from the rest of the treatment process.
 
 The floc hopper allows for a self-cleaning sedimentation tank. By gravity, flocs are sent over to a floc hopper. This means that operators only have to clean the sedimentation tank once every three to six months because there is no stagnant accumulation of anoxic sludge. When operators do clean the sedimentation tank, they are primarily cleaning plate settlers. Under normal operation, operators can open the floc hopper drain valve whenever they want to easily drain the sludge. Without the floc blanket transport system, other methods would be required to remove accumulated sludge in the bay. Mechanical sludge removal systems are common alternatives but are well known to be costly to install and a challenge to maintain.
 
@@ -494,7 +491,7 @@ One impact of plate settler spacing is on sedimentation tank depth. We know that
 Another impact of plate settler spacing is on flow distribution in the tank. This is related to our previous discussion of pressure recovery and flow distribution. Reduced spacing between plates leads to an increased pressure drop through the plate settlers due to higher head loss. Therefore, plate settlers with small spacing will have more uniform flow distributions because head loss will dominate. The pressure difference between one plate settler and the next would be very small compared to the pressure difference between the bottom of the plate settlers and the top of the plate settlers. This use of head loss gets us better flow distribution.
 [[sed tank as a circuit, include plate settlers in the discussion now]]. When the plates are brought closer together, there is more shear between the plates because the average velocity remains the same. The velocity gradient is higher between closer plates, which leads to higher shear, and thus higher head loss.
 
-However, if the plates are closer together, then they will be shorter in length to keep the capture velocity constant. The decrease in length decreases the total amount of shear. The head loss from the competing impacts to shear can be determined through a force balance and the Navier-Stokes equation, as shown in the derivations section [[[[link]]]]. The important thing to note is that after determining head loss as a function of plate settler spacing, we realize that the plate settlers do not provide much head loss at the design separation of 2.5 cm. Head loss through plate settlers is really small, which means that they do not contribute much to equalizing flow distribution. The velocities of any eddies or mean flow need to be less than 4 mm/s to achieve uniform flow through plate settlers. The upflow velocity through the sedimentation tank is on average 1 mm/s, which fulfills the requirement. However, remember the diffusers that distribute water into the sedimentation tank? They create velocities on the order of 100s of mm/s [[help]]. However, those high initial velocities are damped out by the floc blanket which helps to distribute the flow. If we weren't able to dampen the flow to be less than 4 mm/s, then the plate settlers would not provide any head loss to help with uniform flow distribution. This point about uniform flow is really important.
+However, if the plates are closer together, then they will be shorter in length to keep the capture velocity constant. The decrease in length decreases the total amount of shear. The head loss from the competing impacts to shear can be determined through a force balance and the Navier-Stokes equation, as shown in the derivations section [[[[link and plot]]]]. The important thing to note is that after determining head loss as a function of plate settler spacing, we realize that the plate settlers do not provide much head loss at the design separation of 2.5 cm. Head loss through plate settlers is really small, which means that they do not contribute much to equalizing flow distribution. The velocities of any eddies or mean flow need to be less than 4 mm/s to achieve uniform flow through plate settlers. This means that if there is any flow entering the plate settlers at greater than 4 mm/s, the head loss provided by the plate settlers will not help at all to dampen the nonuniformity and there will not be adequate flow distribution. Luckily for us, the upflow velocity through the sedimentation tank is on average 1 mm/s, which fulfills the requirement of less than 4 mm/s. However, remember the diffusers that distribute water into the sedimentation tank? They create velocities on the order of 100s of mm/s [[help]]. Those high initial velocities are damped out by the floc blanket which helps to distribute the flow. If we weren't able to use the floc blanket to dampen the flow to be less than 4 mm/s, then the plate settlers would not provide any head loss to help with uniform flow distribution. This point about uniform flow is really important.
 
 Now, lets discuss a plate settler problem that has not yet been solved, which we call **floc volcanoes**. Floc volcanoes occur when flocs rise preferentially in one side of the sedimentation tank, at points of high velocity where flocs are rising to the surface of the water. Consider the following case: an AguaClara plant in San Nicolas, Honduras, was witnessing intermittent floc volcanoes in the sedimentation tanks. During operation, the plant was treating raw water with 4 NTU with a PACl dose of 3.5 mg/L. The settled water turbidity varied between 0.5 and 4 NTU. What might explain the floc volcanoes and very poor plant performance? Try coming up with a hypothesis that matches the information given to us from the plant. We want to figure out what is causing this problem so we can design a solution. What questions would you want to ask the technicians or engineers in Honduras? This exercise emphasizes the idea that asking the right questions are sometimes the hardest first step to learning more information.
 
@@ -514,6 +511,17 @@ But why does the temperature difference cause a problem for the plate settlers?
 The problem is that there is warmer water entering the sedimentation tank than what is in it. This temperature difference causes a density difference in the sedimentation tank and plate settlers. The less dense, warmer water rises to the top of the plate settlers while the cold water drops to the bottom of the plate. This creates a current allowing water to flow up on the top and settle on the bottom. The temperature gradient happens slowly over a few hours.
 
 So, now that we think we know what the problem is, how would we try to solve it? One idea would be to paint the entire line to reflect heat, but this is not feasible due to cost. The town Water Board had been maintaining the distribution line by cleaning weeds and brush from the pipe. The solution ended up being to just let the weeds grow over the pipe to provide shade. We haven't yet come up with a real solution. A possible long-term solution could be to design a sedimentation tank that has a really short residence time. The longer the residence time in the sedimentation tank, the worse the problem is because there is a large variation between the water that entered it last night and the water that enters it this afternoon. A tank with a really short residence time, on the order of a few minutes, would ensure that the water coming in would be very close to the water already in the tank.
+
+Let's recap some important conclusions from this section on plate settlers.
+
+1. Reynolds number calculations of flow through plate settlers prove that there is laminar flow between plate settlers. This is important because it allows us to assume that a parabolic velocity profile is established.
+#. There is very low head loss between plate settlers so they will not do a good job of helping to achieve uniform flow between the plate settlers.
+#. The plate settlers are designed to capture flocs with sedimentation velocities greater than the settle capture velocity. AguaClara currently uses :math:`V_c = 0.12` mm/s but this value needs to be further optimized. Future work includes choosing a settle capture velocity based on overall plate performance.
+#. Plate settler spacing:
+
+   a. Plate settler spacing determines the ability of flocs to roll down the incline.
+   b. Smaller spacings between plate setters have diminishing returns in terms of sedimentation tank depth. The current AguaClara spacing is 2.5 cm but there is room for further optimization.
+   c. Flocs made from natural organic matter (NOM) may be less dense, more prone to floc rollup, and may require larger spacing between plate settlers.
 
 
 3) How water leaves the sedimentation tank
@@ -830,6 +838,161 @@ Finally, we can determine :math:`V_{Slide}` by,
 What happens if the primary particles are less dense? [[need more explanation]]
 :math:`V_{Slide}` will increase because the particles need to be able to settle faster in order to not experience rollup.
 
+
+Head Loss through Plate Settlers
+--------------------------------
+
+Flow through the sedimentation tank is controlled by head loss in an attempt to achieve flow uniformity. We have already explained that plate settler spacing impacts head loss [[[[link]]]], but by what mathematical relationship? Will putting plate settlers closer together result in more or less head loss? This question is complicated because closer plate settlers would create more shear and head loss, but shorter plate settlers also mean that they become shorter which would decrease shear and head loss.
+
+Let's start with a force balance. Assume that there is a fully established velocity profile that is parabolic with laminar flow. The forces that we care about are shear forces on the walls of the plate settlers and the differential pressure from flow in the direction of the velocity. [[[[figure]]]]
+
+The shear forces act over the area of the two plates, resulting in :math:`F_{shear} = 2 \tau L W` where :math:`\tau` is the viscous shear component.
+
+The pressure force is exerted over the entire width of the plate and the plate spacing. Pressure at the entrance of the plate settlers is different from the exit of the plate settlers by :math:`\Delta P`. The resulting pressure force is :math:`F_{pressure} = \Delta P W S`. So,
+
+ :math:`F_{shear} = F_{pressure}`
+
+ :math:`2 \tau L W = \Delta P W S `
+
+Dividing both sides by width, :math:`W`, and solving for :math:`\Delta P` yields,
+
+ :math:`\Delta P = \frac{2 \tau L}{S} `
+
+We need to figure out what each of the terms on the right side of the equation is equal to so we can calculate :math:`\Delta P`. Ultimlately, we need :math:`\Delta P` to calculate head loss because :math:`h_L = \frac{\Delta P}{\rho g}`.
+
+:math:`\tau =\mu \frac{du}{dy}`, where :math:`\tau` is shear, :math:`\mu` is the viscosity, and :math:`\frac{du}{dy}` is the velocity gradient. Using the Navier-Stokes equation, we can find the velocity gradient as a function of the average velocity between the plates, yielding shear based on the vertical velocity entering the plates as,
+
+ :math:`\tau = \mu \frac{6 V_{P,V}}{S sin\alpha}`
+
+:math:`L` is found using the equation for capture velocity, :math:`V_c = \frac{S*V_{P,V}}{Lsin\alpha cos\alpha + S}`. Capture velocity is kept constant so we solve for :math:`L`,
+
+ :math:`L = \frac{S \left( \frac{V_{P,V}}{V_c} -1 \right)}{sin\alpha cos\alpha}`
+
+Substituting :math:`\tau` and :math:`L` into the equation for :math:`\Delta P`,
+
+ :math:`\Delta P = 2\mu \left( \frac{6V_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{V_{P,V}}{V_c} -1 \right)`
+
+Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
+
+:math:`h_L = \frac{\Delta P}{\rho g}`
+
+:math:`h_L = 2 \frac{\mu}{\rho g} \left( \frac{6V_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{V_{P,V}}{V_c} -1 \right)`
+
+Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`V = \sqrt{2gh}` [[help]]. The resulting two plots [[[[plate settler head loss]]]] show how head loss and velocity relate to plate settlers.
+
+Floc Blanket Design
+========================================================
+
+Floc Blanket Collision Potential
+--------------------------------
+We have learned that growing a floc blanket leads to better sedimentation tank performance. One explanation for the improved performance is that the floc blanket acts like an additional flocculator because there are additional collisions between particles. To understand the nature and significance of these additional collisions we can calculate the floc blanket velocity gradients and residence time to find collision potential, :math:`G\theta`. In a floc blanket, we expect that :math:`G` is small; however, :math:`\theta` is large, which means that :math:`G\theta` in the floc blanket may be significant.
+
+First, we will find :math:`\theta`. If we simplify the bottom of the sedimentation tank and approximate it as a simple rectangle, we can easily determine the residence time. If the depth of the floc blanket is 1 m and the upflow velocity is 1 mm/s, we determine that
+
+:math:`\theta = 1000 s`
+
+Next, we will find :math:`G`. Before we begin, consider why there a velocity gradient in the floc blanket. What causes it? Water is flowing up through the floc blanket while the flocs in the floc blanket are being pulled down by gravity. The differential velocities are cause by particles settling and rising at different velocities relative to the fluid due to drag, gravity, and fluid flow. In the fluid around each particle, there is a velocity gradient and shear between the particles and the surrounding fluid.
+
+Entering the sedimentation tank, there is a large range of particle sizes in the water. The range exists from big flocs made up with hundreds of millions of clay particles to primary particles that made it through flocculation without successful collision. These differentially sized particles create velocity gradients as the particles and flocs are acted on by both settling forces and upward fluid flow forces.
+
+Large flocs provide velocity gradients that can maybe cause collisions between other small particles that we are still trying to capture. Through our derivation to determine :math:`G` in a floc blanket, we will also test an assumption. We will assume that primary particles coming into the floc blanket are not be interacting with large flocs. Instead,  we will assume that the the fluid shear and differential velocities promote interactions between two primary particles.
+
+So, how can we calculate the velocity gradient? In flocculators, we determined :math:`G` from head loss and residence time. In sedimentation tanks, we determine :math:`G` the same way. Let's calculate the head loss through the floc blanket. To do this, we need to know the density of the floc blanket; we need to know the relationship between head loss a fluidized bed and density of the bed.
+
+Floc blanket density
+^^^^^^^^^^^^^^^^^^^^
+To calculate the density of the floc blanket at steady-state, we will use principles of mass and volume conservation.
+
+:math:`C_{clay} = \frac{m_{clay}}{V\llap{---}_{fb}}`
+
+:math:`\rho = \frac{m_{TOT}}{V\llap{---}}`
+
+We will start by finding the mass of clay and the mass of water in the floc blanket. Some parameters that we need to know include:
+
+1. concentration of clay in the floc blanket, :math:`C_{clay}`
+2. volume of floc blanket, :math:`V\llap{---}_{fb}`
+3. density of clay, :math:`\rho_{clay}`
+4. density of water, :math:`\rho_{H_2O}`
+5. density of floc blanket, :math:`\rho_{fb}`
+
+The mass of clay in the floc blanket is concentration multiplied by volume, shown by :math:`m_{clay} = C_{clay}V\llap{---}_{fb}`
+
+The mass of water in the floc blanket is related to the volume fraction of the floc blanket that is occupied by clay, :math:`\frac{C_{clay}}{\rho_{clay}}`, whic is a very small number. :math:`\left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)` is the fraction of the floc blanket that is occupied by water, also called the water volume fraction. So, :math:`m_{H_2O} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right) \rho_{H_2O} V\llap{---}_{fb}`.
+
+Now, we know how much clay and water is in our system. The density of the system, neglecting the addition of coagulant, is,
+
+ :math:`\rho_{fb} = \frac{m_{clay} + m_{H_2O}}{V\llap{---}_{fb}}`
+
+Substituting for :math:`m_{clay}` and :math:`m_{H_2O}`,
+
+ :math:`\rho_{fb} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\rho_{H_2O} + C_{clay}`
+
+This can be rearranged to yield the following equation derived from first principles,
+
+ :math:`\rho_{fb} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right)C_{clay} + \rho_{H_2O}`
+
+AguaClara researchers in the lab developed an empirical equation through experimental studies to calculate floc blanket density. They determined that,
+
+:math:`\rho_{fb} = 0.687C_{clay} + \rho_{H_2O}`
+
+Comparing the empirical equation to the one determined by first principles, it clear that the coefficient,
+
+:math:`\left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right) = 0.687`
+
+Floc blanket head loss
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Now that we can calculate the density of the floc blanket, we can calculate the head loss through the floc blanket. This topic will be discussed further in the chapter on filtration. For now, all you need to know is that density can be related to head loss in the floc blanket through the height of the floc blanket, :math:`H_{fb}`, and the densities of the floc blanket and water.
+
+:math:`\frac{h_L}{H_{fb}} = \frac{\rho_{fb} - \rho_{H_2O}}{\rho_{H_2O}} `
+
+There will be a small amount of head loss through the floc blanket because the density of the floc blanket is greater than the density of water by only a little bit. Remember that :math:`\frac{C_{clay}}{\rho_{clay}}` is really just the fraction of the floc blanket that is occupied by clay.
+
+Plugging in the equation for :math:`\rho_{fb}` and solving for :math:`h_L`,
+
+ :math:`h_L = H_{fb} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}`
+
+Floc blanket velocity gradient and collision potential
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use the other equations we developed in the chapter on flocculation [[[[link]]]].
+
+ :math:`G = \sqrt{\frac{\epsilon}{\nu}}`
+
+ :math:`\epsilon = \frac{gh_L}{\theta}`
+
+We will start by determining :math:`\epsilon ` by calculating :math:`\theta` using the porosity of the floc blanket, :math:`\phi_{fb}`,
+
+ :math:`\theta = \frac{H_{fb} \phi_{fb}}{V_{A,V}}`
+
+Plugging :math:`\theta` into :math:`\epsilon` yields
+
+ :math:`\epsilon = \frac{gV_{A,V}}{\phi_{fb}} \frac{h_L}{H_{fb}}`
+
+Substituting into our equation for :math:`G`,
+
+ :math:` G =  \sqrt{\frac{gV_{A,V}}{\nu \phi_{fb}} \frac{h_L}{H_{fb}}}`
+
+Using our equation for :math:`h_L`,
+
+ :math:` G =  \sqrt{\frac{gV_{A,V}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }`
+
+ :math:`\phi_{fb} \approx 1` and is a function of :math:`C_{clay}`
+
+We can plot our results for :math:`G` over a range of typical floc blanket concentrations, which is around 1 - 5 g/L. [[[[plot]]]] We find that :math:`G` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`G` provided by the floc blanket is much smaller than :math:`G` provided by the flocculator. This is an important point because in the low :math:`G` environment of the floc blanket where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
+
+We can plot our results for :math:`G\theta` by multiplying :math:`G` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`G\theta` ranges from 2,000 to 6,000. Compare this to the :math:`G\theta = 20,000` for the flocculator used in experiments [[[[Garland]]]].
+
+How does such a small :math:`G\theta` cause such a large reduction in turbidity? The question we are really asking is, is there anything special about the :math:`G\theta` provided by the floc blanket compared to the :math:`G\theta` provided by the flocculator? If so, what is the difference and why is it so beneficial?
+
+Experimental data helps explain this. Two systems were set up: one had a flocculator where :math:`G\theta = 20,000` with a floc blanket where :math:`G\theta = 4,000`; the other just had a flocculator where :math:`G\theta = 24,000`. Using the same influent water quality and coagulant dosing, we find that the first system with the flocculator and floc blanket performed better than the second system, even though the overall :math:`G\theta` values were the same.
+
+To understand this, we have to review assumptions in the derivation for :math:`G`. Recall our assumption that fluid shear promotes the collision of two primary particles instead of the collision of primary particles with existing, large flocs. If our assumption was true, we would expect to see no difference between our two experimental setups. However, because we know that the two experimental setups did have different results, our assumption must be false because the assumption does not explain or account for these differences. There must be another mechanism occuring to explain why the floc blanket greatly improves treatment quality. This leads us to believe that the flocs in the floc blanket must be more involved than simply providing shear and velocity gradients; they must be involved in some collisions with the small particles coming through the floc blanket.
+
+This highlights an important distinction:
+
+#. The model created by the original derivation assumption would suggests that flocs in the floc blanket are inert - simply occupying space and causing there to be head loss in the floc blanket - without being involved in any collisions. This model is disproved through the experimental analysis of the two experimental setups.
+#. The model created after the analysis of experimental results suggests that flocs in the floc blanket are not inert - they are involved in collisions with small particles entering the floc blanket - and are growing in size. The model is supported through the experimental analysis.
 
 =============================================================================================
 
