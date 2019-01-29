@@ -38,7 +38,7 @@ Each of the force components can be determined by:
 
 | Where:
 | :math:`V\llap{---}_{floc} =` floc particle volume
-| :math:`A_{floc} =` particle projected cross sectional area
+| :math:`A_{floc} =` particle projected cross-sectional area
 | :math:`\rho_{floc} =` particle density
 | :math:`\rho_{H_2O} =` water density
 | :math:`g =` acceleration due to gravity
@@ -302,7 +302,7 @@ In this section, we will develop a conceptual understanding of the sedimentation
 Influent Channel
 --------------------
 
-After water exits the flocculator, it is ready for sedimentation. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple sedimentation units operating in parallel; we call each of these sedimentation units a 'bay' or a 'tank'. Because there may be multiple sedimentation bays, we have to distribute flocculated water between the bays. To do this, we have an **influent channel**, which receives water from the flocculator and passes it to the sedimentation bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the sedimentation bays without allowing any settling of flocs in the influent channel. In the bottom of the channel, there are pipes that lead to the bottom of each sedimentation bay.
+After water exits the flocculator, it is ready for sedimentation. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple sedimentation units operating in parallel; we call each of these sedimentation units a 'bay' or a 'tank'. Because there may be multiple sedimentation bays, we have to distribute flocculated water between the bays. To do this, we have an **influent channel**, which receives water from the flocculator and passes it to the sedimentation bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the sedimentation bays without allowing any settling of flocs in the influent channel. The minimum velocity in the influent channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each sedimentation bay.
 
 Does the water in the influent channel get evenly distributed between the different bays? If not, which bay will receive the most water? We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to differences in velocity and pressure in different parts of the pipe. Where else in fluids have we discussed decelerating floc? We have discussed this in flow expansions. And what do we know about pressure in flow expansions? We know that there is higher pressure and slower velocities. At the end of the pipe, there is low velocity and thus high pressure, driving the flow through the orifices at the end. For this same reason, a channel with orifices will have greatest flow delivery to the last orifice. We will revisit this concept later to understand how AguaClara plants attempt to minimize this unequal flow distribution.
 
@@ -328,7 +328,13 @@ The influent manifold diffuser system straightens the fluid jets that are exitin
 
 The diffusers create a line jet that spans the entire length of the sedimentation tank. This line jet enters the bay going down, but we want the water to ultimately flow up to make our vertical flow sedimentation tank. To get the flow to redirect upwards, we use a **jet reverser**, which is half of a pipe that is laid in the bottom of the bay.
 
-You may be wondering, why do we need a jet reverser in the first place? Why don't we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components. First, if the diffusers were to point up, they could clog if anything settles in them. While this is unlikely due to the high velocity of flow exiting the small cross-sectional area diffuser, it is something that is avoided by pointing them down. Second, if flow were just to point directly up, it would not have an opportunity to sufficiently spread in the sedimentation bay, which could lead to "short-circuiting" and poor flow distribution overall. Third, the jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc blanket, which will be discussed next. There is a lot of research interest in determining the optimal upflow velocity for floc blankets considering that high velocity is better for resuspension but breaks more flocs. Currently, AguaClara plants use an upflow velocity of 1 mm/s.
+You may be wondering, why do we need a jet reverser in the first place? Why don't we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components.
+
+- If the diffusers were to point up, they could clog if anything settles in them. While this is unlikely due to the high velocity of flow exiting the small cross-sectional area diffuser, it is something that is avoided by pointing them down.
+- If flow were just to point directly up, it would not have an opportunity to sufficiently spread into the width of the sedimentation bay, which could lead to "short-circuiting" and poor flow distribution overall.
+- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements [[[[link]]]]. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc blanket, which will be discussed next.
+
+There is a lot of research interest in determining the optimal upflow velocity for floc blankets considering that high velocity is better for resuspension but breaks more flocs. Currently, AguaClara plants use an upflow velocity of 1 mm/s.
 
 [[[[PICTURE OF FLAT BOTTOM, CENTERED, and OFFSET JET]]]]
 
@@ -885,19 +891,19 @@ Floc Blanket Design
 
 Floc Blanket Collision Potential
 --------------------------------
-We have learned that growing a floc blanket leads to better sedimentation tank performance. One explanation for the improved performance is that the floc blanket acts like an additional flocculator because there are additional collisions between particles. To understand the nature and significance of these additional collisions we can calculate the floc blanket velocity gradients and residence time to find collision potential, :math:`G\theta`. In a floc blanket, we expect that :math:`G` is small; however, :math:`\theta` is large, which means that :math:`G\theta` in the floc blanket may be significant.
+We have learned that growing a floc blanket leads to better sedimentation tank performance. One explanation for the improved performance is that the floc blanket acts like an additional flocculator because there are additional collisions between particles. To understand the nature and significance of these additional collisions, we can calculate the floc blanket velocity gradients and residence time to find collision potential, :math:`G\theta`. In a floc blanket, we expect that :math:`G` is small; however, :math:`\theta` is large, which means that :math:`G\theta` in the floc blanket may be significant.
 
 First, we will find :math:`\theta`. If we simplify the bottom of the sedimentation tank and approximate it as a simple rectangle, we can easily determine the residence time. If the depth of the floc blanket is 1 m and the upflow velocity is 1 mm/s, we determine that
 
 :math:`\theta = 1000 s`
 
-Next, we will find :math:`G`. Before we begin, consider why there a velocity gradient in the floc blanket. What causes it? Water is flowing up through the floc blanket while the flocs in the floc blanket are being pulled down by gravity. The differential velocities are cause by particles settling and rising at different velocities relative to the fluid due to drag, gravity, and fluid flow. In the fluid around each particle, there is a velocity gradient and shear between the particles and the surrounding fluid.
+Next, we will find :math:`G`. Before we begin, consider why there is a velocity gradient in the floc blanket. What causes it? Water is flowing up through the floc blanket while the flocs in the floc blanket are being pulled down by gravity. The differential velocities are caused by particles settling and rising at different velocities relative to the fluid due to drag, gravity, and fluid flow. In the fluid around each particle, there is a velocity gradient and shear between the particles and the surrounding fluid.
 
 Entering the sedimentation tank, there is a large range of particle sizes in the water. The range exists from big flocs made up with hundreds of millions of clay particles to primary particles that made it through flocculation without successful collision. These differentially sized particles create velocity gradients as the particles and flocs are acted on by both settling forces and upward fluid flow forces.
 
-Large flocs provide velocity gradients that can maybe cause collisions between other small particles that we are still trying to capture. Through our derivation to determine :math:`G` in a floc blanket, we will also test an assumption. We will assume that primary particles coming into the floc blanket are not be interacting with large flocs. Instead,  we will assume that the the fluid shear and differential velocities promote interactions between two primary particles.
+Large flocs provide velocity gradients that can potentially cause collisions between other small particles that we are still trying to capture. Through our derivation to determine :math:`G` in a floc blanket, we will also test an assumption. We will assume that primary particles coming into the floc blanket are not interacting with large flocs. Instead,  we will assume that the the fluid shear and differential velocities promote interactions between two primary particles.
 
-So, how can we calculate the velocity gradient? In flocculators, we determined :math:`G` from head loss and residence time. In sedimentation tanks, we determine :math:`G` the same way. Let's calculate the head loss through the floc blanket. To do this, we need to know the density of the floc blanket; we need to know the relationship between head loss a fluidized bed and density of the bed.
+So, how can we calculate the velocity gradient? In flocculators, we determined :math:`G` from head loss and residence time. In sedimentation tanks, we determine :math:`G` the same way. Let's calculate the head loss through the floc blanket. To do this, we need to know the density of the floc blanket and we need to know the relationship between head loss a fluidized bed and density of the bed.
 
 Floc blanket density
 ^^^^^^^^^^^^^^^^^^^^
@@ -907,13 +913,13 @@ To calculate the density of the floc blanket at steady-state, we will use princi
 
 :math:`\rho = \frac{m_{TOT}}{V\llap{---}}`
 
-We will start by finding the mass of clay and the mass of water in the floc blanket. Some parameters that we need to know include:
+We will start by finding the mass of clay and the mass of water in the floc blanket, where:
 
-1. concentration of clay in the floc blanket, :math:`C_{clay}`
-2. volume of floc blanket, :math:`V\llap{---}_{fb}`
-3. density of clay, :math:`\rho_{clay}`
-4. density of water, :math:`\rho_{H_2O}`
-5. density of floc blanket, :math:`\rho_{fb}`
+| :math:`C_{clay} =` concentration of clay in the floc blanket
+| :math:`V\llap{---}_{fb} =` volume of floc blanket
+| :math:`\rho_{clay} =` density of clay
+| :math:`\rho_{H_2O} =` density of water
+| :math:`\rho_{fb} =` density of floc blanket
 
 The mass of clay in the floc blanket is concentration multiplied by volume, shown by :math:`m_{clay} = C_{clay}V\llap{---}_{fb}`
 
@@ -963,19 +969,19 @@ With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use 
 
 We will start by determining :math:`\epsilon ` by calculating :math:`\theta` using the porosity of the floc blanket, :math:`\phi_{fb}`,
 
- :math:`\theta = \frac{H_{fb} \phi_{fb}}{V_{A,V}}`
+ :math:`\theta = \frac{H_{fb} \phi_{fb}}{V_{SedFlocUp}}`
 
 Plugging :math:`\theta` into :math:`\epsilon` yields
 
- :math:`\epsilon = \frac{gV_{A,V}}{\phi_{fb}} \frac{h_L}{H_{fb}}`
+ :math:`\epsilon = \frac{gV_{SedFlocUp}}{\phi_{fb}} \frac{h_L}{H_{fb}}`
 
 Substituting into our equation for :math:`G`,
 
- :math:` G =  \sqrt{\frac{gV_{A,V}}{\nu \phi_{fb}} \frac{h_L}{H_{fb}}}`
+ :math:` G =  \sqrt{\frac{gV_{SedFlocUp}}{\nu \phi_{fb}} \frac{h_L}{H_{fb}}}`
 
 Using our equation for :math:`h_L`,
 
- :math:` G =  \sqrt{\frac{gV_{A,V}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }`
+ :math:` G =  \sqrt{\frac{gV_{SedFlocUp}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }`
 
  :math:`\phi_{fb} \approx 1` and is a function of :math:`C_{clay}`
 
@@ -993,6 +999,93 @@ This highlights an important distinction:
 
 #. The model created by the original derivation assumption would suggests that flocs in the floc blanket are inert - simply occupying space and causing there to be head loss in the floc blanket - without being involved in any collisions. This model is disproved through the experimental analysis of the two experimental setups.
 #. The model created after the analysis of experimental results suggests that flocs in the floc blanket are not inert - they are involved in collisions with small particles entering the floc blanket - and are growing in size. The model is supported through the experimental analysis.
+
+Diffuser Design
+======================
+
+Diffusers are shaped so that they remain a circular pipe in one end that fits into the inlet manifold orifice, and the other end is deformed to the shape of a thin rectangle. Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the sedimentation tank. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form. This metal form is sized so that the target shape is achieved.
+
+[[[[figure of diffuser]]]]
+
+| :math:`T_{diff} =` thickness of diffuser wall
+| :math:`S_{diff} =` internal width of diffuser
+| :math:`B_{diff} =` center-to-center spacing between diffusers; external width of diffuser
+| :math:`W_{diff} =` internal width of diffuser
+| :math:`V_{jet} =` velocity of the jet exiting the diffuser
+| :math:`Q_{diff} =` flow rate through each diffuser
+| :math:`h_{L,jet} =` head loss in jet leaving the jet reverser
+
+Determining flow through a diffuser
+-----------------------------------
+
+What is the flow rate of a single diffuser in the bottom of the sedimentation tank? Consider a sedimentation tank that is 6 m long, 1 m wide and 2 m deep, with an upflow velocity of 1 mm/s and a diffuser spacing of 5 cm.
+
+ What is this question really asking? This question is asking us to understand that each diffuser "serves" a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let's imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using :math:`Q = VA`. The area, :math:`A`, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so :math:`W_{tank} = 1` m. The length of the slice is dictated by the spacing of the diffusers, :math:`B_{diff}`, so :math:`B_{diff} = 5` cm.
+
+  :math:`A = B_{diff}W_{tank}`
+
+  :math:`A = 5cm * 1m`
+
+  :math:`A = 50,000mm^2`
+
+ The problem statement includes that :math:`V_{SedFlocUp} = 1` mm/s. Plugging into our flow equation,
+
+  :math:`Q_{diff} = V_{SedFlocUp}A `
+
+  :math:`Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)`
+
+  :math:`Q_{diff} = 50,000 \frac{mm^3}{s}`
+
+  :math:`Q_{diff} = 50 \frac{mL}{s}`
+
+ The flow rate of each diffuser is :math:`50 \frac{mL}{s}`.
+
+Properties of :math:`V_{jet}`
+-------------------------------
+:math:`V_{jet}` is defined as the velocity of the water jet exiting the diffuser. After exiting the diffuser, this water jet is sent into the jet reverser to make a 180 degree turn. Does the water jet change pressure or velocity as it exits the jet reverser? Do we need to consider the effects of a *vena contracta*?
+
+Recall that a *vena contracta* is associated with a change in pressure that causes a contraction and subsequent acceleration of the fluid [[[[link to fluids review]]]]. Water exiting the diffuser is pointed directly down and the streamlines are straight and parallel, which means that the pressure across the streamlines is constant. Water exiting the jet reverser is pointed directly up and the streamlines are straight and parallel, which again means that the pressure across the streamlines is constant. Because the pressure is constant at the exit of the diffuser and at the exit of the jet reverser, we assume that the pressure of the water in the space between those two points is also constant because there is no physical barrier. If the pressure in this bottom section of the sedimentation tank is constant from the exit of the diffuser to the exit of the jet reverser, we can infer that they are equal.
+
+By Bernoulli, if the pressures between the exit of the diffuser to the exit of the jet reverser are equal then the velocities must also be equal. Bernoulli is applicable here because there is no flow expansion yet. The shear along the wall of the jet reverser is insignificant due to the short flow path. The water accelerates to account for the directional change but the absolute velocity does not change as it goes around the jet reverser.
+
+Therefore, the velocity at the exit of the diffuser is equal to the velocity at the exit of the jet reverser.
+
+Diffuser Design
+---------------------
+
+What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our sedimentation tank, we want an upflow velocity of 1 mm/s. Additionally, because diffusers are a key component of our "sedimentation tank as a circuit", we want to precisely control head loss in the jet leaving the jet reverser because that will help us achieve uniform flow within and between sedimentation tanks. AguaClara designs set head loss in the jet constant at 1 cm. 
+
+Let's begin by finding the internal width of a single diffuser. Using conservation of flow, we know that,
+
+:math:`Q_{diff} = V_{jet}W_{diff}S_{diff} = V_{SedFlocUp}W_{Sed}B_{diff}`
+
+Solving for :math:`W_{diff}`,
+
+ :math:`W_{diff} = \frac{V_{SedFlocUp}W_{Sed}B_{diff}}{V_{jet}S_{diff}}`
+
+Using the constraint of head loss in the jet and solving for :math:`V_jet`,
+
+ :math:`h_{L,jet} = \frac{V_{jet}^2}{2g}`
+
+ :math:`V_{jet} = \sqrt{2gh_{L,jet}}`
+
+Substituting back into the equation for :math:`W_{diff}`, we can find the minimum diffuser width required to not exceed target head loss as,
+
+:math:`W_{diff,min} = \frac{V_{SedFlocUp}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}`
+
+Now that we have determined the minimum width, we can use known parameters and constraints to find a precise value for :math:`W_{diff}` and :math:`V_{jet}`.
+
+Using known constants for :math:`V_{SedFlocUp} = 1 \frac{mm}{s}`, :math:`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that :math:`W_{diff,min} = 2.7mm`. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to 3.175 mm.
+
+:math:`W_{diff} = 3.175 mm`
+
+Solving for :math:`V_{jet}` from our earlier equations yields,
+
+:math:`V_{jet} = \frac{V_{SedFlocUp}W_{Sed}B_{diff}}{W_{diff}S_{diff}}`
+
+Using known constants,
+
+:math:`V_{jet} \approx 380 \frac{mm}{s}`
 
 =============================================================================================
 

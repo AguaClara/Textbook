@@ -19,6 +19,8 @@
      - :math:`V_c`
    * - Center-to-center spacing between plate settlers
      - :math:`B`
+   * - Center-to-center spacing between diffusers
+     - :math:`B_{diff}`
    * - "Change in"
      - :math:`\Delta`
    * - Collision potential
@@ -50,6 +52,8 @@
      - :math:`G`
    * - Flow rate
      - :math:`Q`
+   * - Flow rate through each diffuser
+     - :math:`Q_{diff}`
    * - Flow rate through each sedimentation tank
      - :math:`Q_{Sed}`
    * - Force
@@ -64,6 +68,8 @@
 
    * - Head loss
      - :math:`h_L`
+   * - Head loss in jet leaving jet reverser
+     - :math:`h_{L,jet}`
    * - Height
      - :math:`H`
    * - Height of the floc blanket
@@ -82,6 +88,9 @@
      - :math:`L_{SedFloc}`
    * - Length of the sedimentation tank that includes entrance to the plate settlers
      - :math:`L_{SedActive}`
+
+   * - Minimum internal width of diffuser
+     - :math:`W_{diff,min} `
 
    * - Net velocity through plate settlers
      - :math:`V_{P,net}`
@@ -111,11 +120,15 @@
      - :math:`\tau`
    * - Spacing between plate settlers
      - :math:`S`
+   * - Spacing between diffusers
+     - :math:`S_{diff}`
 
    * - Terminal velocity of particle
      - :math:`V_t`
    * - Thickness of plate settlers
      - :math:`T`
+   * - Thickness of diffuser
+     - :math:`T_{diff}`
 
    * - Upflow velocity of the water through the floc blanket
      - :math:`V_{SedFlocUp}`
@@ -128,6 +141,8 @@
      - :math:`\frac{du}{dy}`
    * - Velocity in the x-direction
      - :math:`u`
+   * - Velocity of the jet exiting the diffuser
+     - :math:`V_{jet}`
    * - Vertical velocity through plate settlers
      - :math:`V_{P,V}`
    * - Volume of particle floc
@@ -137,6 +152,8 @@
 
    * - Width
      - :math:`W `
+   * - Width of diffuser; internal width
+     - :math:`W_{diff} `
    * - Width of each sedimentation tank
      - :math:`W_{Sed}`
 
