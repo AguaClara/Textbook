@@ -86,6 +86,7 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -124,7 +125,15 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Intro.html#conventional-sedimentation-systems">Conventional Sedimentation Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Intro.html#sedimentation-challenges-and-gaps-in-knowledge">Sedimentation Challenges and Gaps in Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Intro.html#aguaclara-innovations">AguaClara Innovations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html#foundational-concepts">Foundational Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html#aguaclara-design-approach">AguaClara Design Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html#design-of-an-aguaclara-sedimentation-tank">Design of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html#sedimentation-challenges-confusions-and-failure-modes">Sedimentation Challenges, Confusions, and Failure Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
@@ -136,7 +145,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -227,7 +235,7 @@
             
   <div class="section" id="welcome-to-the-aguaclara-textbook">
 <span id="toc"></span><h1>Welcome to the AguaClara Textbook!<a class="headerlink" href="#welcome-to-the-aguaclara-textbook" title="Permalink to this headline">¶</a></h1>
-<p>This textbook is written and maintained in <a class="reference external" href="https://github.com/AguaClara/Textbook">Github</a> via <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>. It uses and refers to AguaClara code and functions in <a class="reference external" href="https://github.com/AguaClara/aide_design">aide_design</a>. Listed below are the versions of the programs we use:</p>
+<p>This textbook is written and maintained in <a class="reference external" href="https://github.com/AguaClara/Textbook">Github</a> via <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>. It uses and refers to AguaClara code and functions in <a class="reference external" href="https://github.com/AguaClara/aguaclara">aguaclara</a>. Listed below are the versions of the programs we use:</p>
 <span id="software-versions"></span><table border="1" class="colwidths-given docutils align-center" id="id2">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">These are the software versions used to compile this textbook</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -243,8 +251,8 @@
 <tr class="row-even"><td>Sphinx</td>
 <td>1.7.5</td>
 </tr>
-<tr class="row-odd"><td>aide_design</td>
-<td>0.0.12</td>
+<tr class="row-odd"><td>aguaclara</td>
+<td>0.0.16</td>
 </tr>
 <tr class="row-even"><td>Anaconda</td>
 <td>4.5.4</td>
@@ -265,6 +273,7 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -313,7 +322,15 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Intro.html#conventional-sedimentation-systems">Conventional Sedimentation Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Intro.html#sedimentation-challenges-and-gaps-in-knowledge">Sedimentation Challenges and Gaps in Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Intro.html#aguaclara-innovations">AguaClara Innovations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html#foundational-concepts">Foundational Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html#aguaclara-design-approach">AguaClara Design Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html#design-of-an-aguaclara-sedimentation-tank">Design of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design.html#sedimentation-challenges-confusions-and-failure-modes">Sedimentation Challenges, Confusions, and Failure Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
@@ -327,7 +344,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">

@@ -4,7 +4,11 @@ Rapid Mix Design Solution
 
 .. code:: python
 
-    from aide_design.play import*
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.core.constants as con
+  import numpy as np
+  import matplotlib.pyplot as plt
 
 1)
 ~~~
