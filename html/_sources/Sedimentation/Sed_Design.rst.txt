@@ -262,7 +262,13 @@ Vertical Flow Sedimentation Tank
 ----------------------------------
 We will complete the same exercise for vertical flow sedimentation tanks. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.
 
-[[[[show vertical flow sedimentation tank]]]]
+.. _figure_vertical_flow_tank_base:
+.. figure:: Images/vertical_flow_tank_base.png
+    :height: 100px
+    :align: center
+    :alt: Vertical flow sedimentation tank.
+
+    Vertical flow sedimentation tank.
 
 1) How much time is required for water to pass through the tank?
 
