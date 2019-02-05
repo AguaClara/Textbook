@@ -22,8 +22,6 @@ As flocs settle in water, they will fall at a speed dictated by the weight of th
 
     Free body diagram of a floc in water.
 
-[[[[FLOC FORCES FREE BODY DIAGRAM]]]]
-
 To determine the force balance on a falling floc, consider:
 
 .. math::
@@ -71,7 +69,14 @@ Terminal velocity is a function of fluid density, floc density, gravity, particl
 The first component that we will focus on is the drag coefficient, :math:`C_D`. The drag coefficient is function of Reynolds Number, :math:`Re`, and the characteristic flow around a particle. As a reminder, :math:`Re = \frac{v_t D}{\nu}` where :math:`v_t` is the velocity of the fluid, :math:`D` is the length scale, and :math:`\nu` is kinematic viscosity.
 
 Drag coefficients are used to describe flow around a particle.
-[[[[INCLUDE FIGURE FOR DRAG COEFFICIENT AND REYNOLDS NUMBER]]]]
+
+.. _figure_drag_coeff_Re_base:
+.. figure:: Images/drag_coeff_Re_base.png
+    :height: 100px
+    :align: center
+    :alt: Drag coefficient as a function of Reynolds number.
+
+    Drag coefficient as a function of Reynolds number.
 
 As an introduction to this drag coefficent diagram, we can compare it to something we've already learned about: the Moody diagram. Drawing parallels between the two will help us understand some important relationships better.
 
