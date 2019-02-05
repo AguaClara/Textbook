@@ -372,7 +372,13 @@ Components of an AguaClara Sedimentation Tank
 
 In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.
 
-[[[[INCLUDE PICTURE/VIDEO OF SED TANKS WITH FLOW SHOWN BY ARROWS]]]]
+.. _figure_sed_tank_overview:
+.. figure:: Images/sed_tank_overview.png
+    :height: 100px
+    :align: center
+    :alt: Overview of an AguaClara Sedimentation tank.
+
+    Overview of an AguaClara Sedimentation tank.
 
 1) How water enters the sedimentation tank
 ============================================
