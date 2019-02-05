@@ -156,7 +156,13 @@ Our equations for terminal velocity depend on the density of a floc. As discusse
 
 The following plot shows the relationship between floc diameter and terminal velocity.
 
-[[[[INCLUDE FIGURE]]]]
+.. _figure_terminal_velocity_floc_diam:
+.. figure:: Images/terminal_velocity_floc_diam.png
+    :height: 100px
+    :align: center
+    :alt: Terminal velocity as a function of floc diameter, taking into account the changing density of flocs.
+
+    Terminal velocity as a function of floc diameter, taking into account the changing density of flocs.
 
 Three important regions are highlighted in the plot. At small floc diameters, less than 10 :math:`\mu m`, terminal velocity is less that 0.1 :math:`\frac{mm}{s}`. A terminal velocity this low would require extremely large sedimentation tanks for reasonable treatment. Because large sedimentation tanks are costly and unfeasible, we use flocculation to aggregate particles and achieve floc sizes of greater diameters and higher terminal velocities.
 
