@@ -721,7 +721,13 @@ To understand how water flows in the sedimentation tank, we must understand how 
 | :math:`Q_{Sed} =` flow rate through each sedimentation tank
 | :math:`W_{Sed} =` width of each sedimentation tank
 
-[[[[Include slides pic "Sedimentation tank geometry, plate settlers have a lost triangle"]]]]
+.. _figure_sed_tank_flow_conserve:
+.. figure:: Images/sed_tank_flow_conserve.png
+    :height: 100px
+    :align: center
+    :alt: AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
+
+    AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
 
 1) Velocity and flow exiting the diffusers
 ------------------------------------------------------------
