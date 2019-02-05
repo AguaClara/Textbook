@@ -446,7 +446,10 @@ particle</td>
 <p>We will develop our definition of settle capture velocity using examples of a horizontal flow and vertical flow sedimentation tanks. It should be noted that there are many idealizations and simplifications made for modeling sedimentation tanks. We assume that water will move through the reactor as expected (in the case of the horizontal flow sedimentation tank, from one end to the other), but we know that there are many more fluids complications than are described here. We assume that everything is moving at the average velocity and there are no turbulence or velocity profiles. For the time being, we will ignore what will happen to particles once they are captured by the sedimentation tank. Our intuition tells us that particles which settle will need to be removed somehow, and that is correct. This will be discussed in later sections. For now, we only care about capturing the particles, and later we will care about what we do with them once they are captured.</p>
 <div class="section" id="horizontal-flow-sedimentation-tank">
 <h3>Horizontal Flow Sedimentation Tank<a class="headerlink" href="#horizontal-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
-<p>[[[[show horizontal flow sedimentation tank]]]]</p>
+<div class="figure align-center" id="id36">
+<span id="figure-horizontal-flow-tank-base"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_base.png"><img alt="Horizontal flow sedimentation tank." src="../_images/horizontal_flow_tank_base.png" style="height: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 120 </span><span class="caption-text">Horizontal flow sedimentation tank.</span></p>
+</div>
 <div class="line-block">
 <div class="line">Where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(L =\)</span> length [L]</div>
@@ -475,7 +478,10 @@ particle</td>
 <li>How fast must the particle fall?</li>
 </ol>
 <p>We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, <span class="math notranslate nohighlight">\(v_H\)</span>. Gravity is causing the particle to settle at its terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>. In order to reach the bottom, that settling velocity needs to be the capture velocity, <span class="math notranslate nohighlight">\(v_c\)</span>, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in the following figure.</p>
-<p>[[[[show horizontal flow sedimentation tank with capture velocity]]]]</p>
+<div class="figure align-center" id="id37">
+<span id="figure-horizontal-flow-tank-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_capture.png"><img alt="Horizontal flow sedimentation tank with capture velocity." src="../_images/horizontal_flow_tank_capture.png" style="height: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 121 </span><span class="caption-text">Horizontal flow sedimentation tank with capture velocity.</span></p>
+</div>
 <p>Capture velocity can be determined by the distance that a particle must travel and the time that the particle has to travel.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-8">
 <span class="eqno">(415)<a class="headerlink" href="#equation-sedimentation-sed-design-8" title="Permalink to this equation">¶</a></span>\[v_c = \frac{H}{\theta}\]</div>
@@ -492,7 +498,10 @@ particle</td>
 <li>We could have a small particle entering the reactor at the top, defining the critical path in the same “worst case scenario”. This particle would not be successfully captured by the tank because its terminal velocity is less than the capture velocity, meaning that it doesn’t have enough time in the reactor to settle.</li>
 <li>We could have a small particle entering the reactor near the bottom, in a “best case scenario”. In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be caputured by a tank designed for particles 35 <span class="math notranslate nohighlight">\(\mu m\)</span> or larger, but it depends on the height at which they enter the reactor.</li>
 </ul>
-<p>[[[[show horizontal flow sedimentation tank with capture velocity for small particles compared to the 35 um condition]]]]</p>
+<div class="figure align-center" id="id38">
+<span id="figure-horizontal-flow-tank-small-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_small_capture.png"><img alt="Horizontal flow sedimentation tank with critical path and small particle." src="../_images/horizontal_flow_tank_small_capture.png" style="height: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 122 </span><span class="caption-text">Horizontal flow sedimentation tank with critical path and small particle.</span></p>
+</div>
 </div>
 <div class="section" id="vertical-flow-sedimentation-tank">
 <h3>Vertical Flow Sedimentation Tank<a class="headerlink" href="#vertical-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
