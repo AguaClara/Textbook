@@ -16,7 +16,7 @@
      - :math:`F_{buoyant}`
 
    * - Capture velocity
-     - :math:`V_c`
+     - :math:`v_c`
    * - Center-to-center spacing between plate settlers
      - :math:`B`
    * - Center-to-center spacing between diffusers
@@ -75,9 +75,9 @@
    * - Height of the floc blanket
      - :math:`H_{fb}`
    * - Horizontal velocity
-     - :math:`V_h`
+     - :math:`v_H`
    * - Horizontal velocity through plate settlers
-     - :math:`V_{P,H}`
+     - :math:`v_{P,H}`
 
    * - Kinematic viscosity
      - :math:`\nu`
@@ -92,8 +92,8 @@
    * - Minimum internal width of diffuser
      - :math:`W_{diff,min} `
 
-   * - Net velocity through plate settlers
-     - :math:`V_{P,net}`
+   * - Net velocity of a particle through plate settlers
+     - :math:`v_{P,net}`
 
 
    * - Plan view area
@@ -109,13 +109,13 @@
      - :math:`R`
    * - Residence time
      - :math:`\theta`
-   * - Resultant velocity up through plate settler
-     - :math:`V_{P,\alpha}`
+   * - Resultant fluid velocity through plate settler
+     - :math:`v_{\alpha}`
    * - Reynolds number
      - :math:`Re`
 
    * - Sedimentation velocity of floc between plate settlers
-     - :math:`V_{Slide}`
+     - :math:`v_{Slide}`
    * - Shear
      - :math:`\tau`
    * - Spacing between plate settlers
@@ -124,31 +124,29 @@
      - :math:`S_{diff}`
 
    * - Terminal velocity of particle
-     - :math:`V_t`
+     - :math:`v_t`
    * - Thickness of plate settlers
      - :math:`T`
    * - Thickness of diffuser
      - :math:`T_{diff}`
 
    * - Upflow velocity of the water through the floc blanket
-     - :math:`V_{SedFlocUp}`
+     - :math:`v_{S,V}`
    * - Upflow velocity of the water entering the plate settlers; vertical velocity in the 'active' region
-     - :math:`V_{A,V}`
+     - :math:`v_{A,V}`
    * - Upflow velocity of the water through the plate settlers
-     - :math:`V_{P,V}`
+     - :math:`v_{P,V}`
 
    * - Velocity gradient between plate settlers
      - :math:`\frac{du}{dy}`
    * - Velocity in the x-direction
      - :math:`u`
    * - Velocity of the jet exiting the diffuser
-     - :math:`V_{jet}`
-   * - Vertical velocity through plate settlers
-     - :math:`V_{P,V}`
+     - :math:`v_{jet}`
    * - Volume of particle floc
-     - :math:`V\llap{---}_{floc} `
+     - :math:`\rlap{-}V_{floc} `
    * - Volume of tank
-     - :math:`V\llap{---}_{tank} `
+     - :math:`\rlap{-}V_{tank} `
 
    * - Width
      - :math:`W `
