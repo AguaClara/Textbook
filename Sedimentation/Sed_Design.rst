@@ -16,7 +16,7 @@ As flocs settle in water, they will fall at a speed dictated by the weight of th
 
 .. _figure_terminal_velocity_FBD:
 .. figure:: Images/terminal_velocity_FBD.png
-    :width: 400px
+    :width: 200px
     :align: center
     :alt: Buyouant force, drag force, and gravitational force shown for floc free body diagram.
 
