@@ -571,17 +571,31 @@ After flowing through the floc blanket, flocs reach the **plate settlers**. Plat
 
 [[need information about laminar flow between plates]]
 
-[[[[need to make a figure here]]]]
-
 The first thing that we will discuss is how flocs can settle on plates. To understand this, we will ask a few questions about how particles and flocs will flow between two plate settlers.
 
 1) What is the critical path?
 
 We need particles to settle on the bottom plate for it to be effectively captured. Thus, the critical path can be shown by a floc that enters the plate settlers closest to the upper plate, because it will have the greatest distance to settle.
 
+.. _figure_plate_settler_critpath:
+.. figure:: Images/plate_settler_critpath.png
+    :height: 100px
+    :align: center
+    :alt: Critical path between two plate settlers.
+
+    Critical path between two plate settlers.
+
 2) How far must the particle settle to reach the lower plate?
 
 Let's make a simplification and assume that water is flowing with uniform velocity between the plates, represented by a "top hat" velocity profile. This is a significant assumption, but it is used to help us understand the critical path. The fluid is carrying the floc between the inclined plates while gravity is pulling the floc down. Therefore, a particle must fall the vertical distance between the plates, which is the critical height, :math:`H_c`. The plates are positioned at an angle, :math:`\alpha`, to ensure that settling flocs slide down to the floc blanket. The critical height :math:`H_c` can be expressed in terms of plate settler length, :math:`L`, and plate settler angle, :math:`\alpha`, by :math:`H_c=\frac{S}{cos\alpha}`.
+
+.. _figure_plate_settler_critheight:
+.. figure:: Images/plate_settler_critheight.png
+    :height: 100px
+    :align: center
+    :alt: Critical height between two plate settlers.
+
+    Critical height between two plate settlers.
 
 3) What is the total vertical distance that the critical particle will travel?
 
@@ -589,7 +603,25 @@ Taking the vertical component of the critical path, we see that the total vertic
 
 4) What is the net vertical velocity of a floc between the plate settlers?
 
-The fluid carries the floc between the plate settlers while gravity pulls the floc down. The velocity through the plate settlers has both a horizontal component, :math:`v_{P,H}`, and vertical component, :math:`v_{P,V}`, with a resultant force we call :math:`v_{\alpha}`. This means that the net vertical velocity :math:`v_{P,net}` is the vertical component of flow minus the settling velocity of the floc. Recall our previous discussion of terminal velocity and capture velocity; in this case, because we are designing a plate settler specifically to capture the critical particle, the terminal velocity equals the capture velocity. The terminal velocity is a function of the velocity that the critical particle settles at and the capture velocity is a function of the reactor geometry which we are designing to capture the critical particle. Thus, :math:`v_{P,net}=v_{P,V}-v_{c}`.
+The fluid carries the floc between the plate settlers while gravity pulls the floc down. The velocity through the plate settlers has both a horizontal component, :math:`v_{P,H}`, and vertical component, :math:`v_{P,V}`, with a resultant force we call :math:`v_{\alpha}`.
+
+.. _figure_plate_settler_valpha:
+.. figure:: Images/plate_settler_valpha.png
+    :height: 100px
+    :align: center
+    :alt: Velocity components between two plate settlers.
+
+    Velocity components between two plate settlers.
+
+This means that the net vertical velocity :math:`v_{P,net}` is the vertical component of flow minus the settling velocity of the floc. Recall our previous discussion of terminal velocity and capture velocity; in this case, because we are designing a plate settler specifically to capture the critical particle, the terminal velocity equals the capture velocity. The terminal velocity is a function of the velocity that the critical particle settles at and the capture velocity is a function of the reactor geometry which we are designing to capture the critical particle. Thus, :math:`v_{P,net}=v_{P,V}-v_{c}`.
+
+.. _figure_plate_settler_vnet:
+.. figure:: Images/plate_settler_vnet.png
+    :height: 100px
+    :align: center
+    :alt: Net velocity between two plate settlers.
+
+    Net velocity between two plate settlers.
 
 From answering the questions above, we know that the particle must fall the distance :math:`H_c` at its terminal velocity in the same amount of time that it rises a distance :math:`H` at its net upward velocity, because otherwise it would not be captured; time to travel :math:`H_c` = time to travel :math:`H`
 
@@ -634,8 +666,6 @@ Solving for :math:`v_c = \frac{Q}{A}`
  :math:`v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}`
 
 We can see that there are five parameters which will impact each other in our design :math:`v_{P,V}, v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`v_{P,V}, v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on how to design a plant [[]].
-
-[[[[include figure showing the relevant velocities in the plate settler, including resultant particle velocity]]]]
 
 Now that we have established how flocs settle on the plate and the increase in plan view area that plate settlers offer, we need to discuss how flocs will act once they are on the plates. We want particles and flocs that settle to agglomerate and slide down the plate settlers to be returned to the floc blanket. We will explore this concept by first considering the desired spacing between plate settlers.
 
@@ -916,6 +946,22 @@ From the relationship that :math:`v_{P,V}*S = v_{A,V}*B`, we can solve for :math
 Let's start with the relationships that we already know:
 
 :math:`v_{P,V}*S = v_{A,V}*B` and :math:`B = S+T`
+
+.. _figure_SvsBplatesettlers:
+.. figure:: Images/SvsBplatesettlers.png
+    :height: 100px
+    :align: center
+    :alt: Thick plate settlers.
+
+    Thick plate settlers.
+
+.. _figure_plate_settler_base:
+.. figure:: Images/plate_settler_base.png
+    :height: 100px
+    :align: center
+    :alt: Plate settlers.
+
+    Plate settlers.
 
 Solving for :math:`v_{P,V}`, we rearrange and substitute by,
 
