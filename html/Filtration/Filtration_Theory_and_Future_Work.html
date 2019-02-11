@@ -497,7 +497,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <p>We can solve equation <a class="reference internal" href="#equation-eq-he-filter">(552)</a> for maximum constriction velocity based on experimental measurements of the head loss at filter failure that is due to constrictions. Note that this head loss does NOT include the clean bed head loss.</p>
 <div class="math notranslate nohighlight" id="equation-eq-he-filter2">
 <span class="eqno">(553)<a class="headerlink" href="#equation-eq-he-filter2" title="Permalink to this equation">¶</a></span>\[v_{constriction_{max}} = \sqrt{ \frac{2g\Lambda_{pore}}{H_{filter}}h_{e_{filter_{max}}}}\]</div>
-<p>From <a class="reference internal" href="Filtration_Intro.html#figure-head-loss-vs-time"><span class="std std-numref">Fig. 158</span></a> we have an estimate of 35 to 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand. This gives an estimate of 137 mm/s for the constriction velocity. This could be used to obtain an estimate of the bond strength of the coagulant nanoparticles.</p>
+<p>From <a class="reference internal" href="Filtration_Intro.html#figure-head-loss-vs-time"><span class="std std-numref">Fig. 161</span></a> we have an estimate of 35 to 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand. This gives an estimate of 137 mm/s for the constriction velocity. This could be used to obtain an estimate of the bond strength of the coagulant nanoparticles.</p>
 </div>
 <div class="section" id="shear-big-flocs-to-improve-filter-performance">
 <span id="heading-shear-big-flocs-to-improve-filter-performance"></span><h2>Shear big flocs to improve filter performance<a class="headerlink" href="#shear-big-flocs-to-improve-filter-performance" title="Permalink to this headline">¶</a></h2>
@@ -563,7 +563,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 </div>
 <div class="figure align-center" id="id2">
 <span id="figure-head-loss-ergun-and-kozeny"></span><a class="reference internal image-reference" href="../_images/Head_loss_Ergun_and_Kozeny.png"><img alt="Head loss Ergun and Kozeny" src="../_images/Head_loss_Ergun_and_Kozeny.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 163 </span><span class="caption-text">The Ergun and Kozeny equations are very similar even at approach velocities that are much larger than are used in rapid sand filtration. At very high velocities the turbulent term in the Ergun equation begins to be significant.</span></p>
+<p class="caption"><span class="caption-number">Fig. 166 </span><span class="caption-text">The Ergun and Kozeny equations are very similar even at approach velocities that are much larger than are used in rapid sand filtration. At very high velocities the turbulent term in the Ergun equation begins to be significant.</span></p>
 </div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Need to use a root finding method here because f_phi is a function of velocity</span>
 <span class="c1"># Will use a graphical solution for now</span>
@@ -578,7 +578,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 </div>
 <div class="figure align-center" id="id3">
 <span id="figure-g-vs-approach-velocity"></span><a class="reference internal image-reference" href="../_images/G_vs_approach_velocity.png"><img alt="G vs approach velocity" src="../_images/G_vs_approach_velocity.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 164 </span><span class="caption-text">The Camp Stein velocity gradient increases rapidly with approach velocity.</span></p>
+<p class="caption"><span class="caption-number">Fig. 167 </span><span class="caption-text">The Camp Stein velocity gradient increases rapidly with approach velocity.</span></p>
 </div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#We guess at a velocity gradient by extrapolating wildly to a 20 um floc.</span>
 <span class="n">G_CS</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">fm</span><span class="o">.</span><span class="n">ener_dis_diam_floc</span><span class="p">(</span><span class="mi">40</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">um</span><span class="p">))</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temperature</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">Hz</span><span class="p">)</span>
