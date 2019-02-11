@@ -549,6 +549,14 @@ Floc Hopper
 
 The **floc hopper** is a "weir" that provides an opportunity for floc consolidation. The floc hopper controls the depth of the floc blanket because as the floc blanket grows, it will eventually reach the top of the floc hopper. Because flocs are more dense than water, the flocs "spill" over the edge of the floc hopper which allows the floc blanket to stay a constant height while sludge accumulates and consolidates in the floc hopper. Consolidated sludge in the bottom of the floc hopper is then removed from the sedimentation tank through small drain valve controlled by the operator. Floc hoppers are currently set at a 45 degree angle, but further optimization is needed.
 
+.. _figure_benchtop_sed:
+.. figure:: Images/benchtop_sed.png
+    :height: 100px
+    :align: center
+    :alt: Benchtop sedimentation tank setup, highlighting the floc blanket and floc hopper.
+
+    Benchtop sedimentation tank setup, highlighting the floc blanket and floc hopper.
+
 The floc hopper allows for a self-cleaning sedimentation tank. By gravity, flocs are sent over to a floc hopper. This means that operators only have to clean the sedimentation tank once every three to six months because there is no stagnant accumulation of anoxic sludge. When operators do clean the sedimentation tank, they are primarily cleaning plate settlers. Under normal operation, operators can open the floc hopper drain valve whenever they want to easily drain the sludge. We don't yet have a method to guide the operation of the floc hopper, so operators determine how frequently to drain the floc hopper from experimental and operational experience. Without the floc blanket transport system, other methods would be required to remove accumulated sludge in the bay. Mechanical sludge removal systems are common alternatives but are well known to be costly to install and a challenge to maintain.
 
 We've stated that a benefit of the floc blanket is that flocs can be removed without mechanical assistance, but why do we need the floc hopper at all? Why can't we just install drain holes in the bottom of the sedimentation tank so that any accumulated sludge is removed? This is a question that plagued AguaClara in its early years. At first, before we were able to successfully build and operate a floc blanket, we had sludge accumulate in the bottom of the sedimentation bay. Therefore, we needed to remove the sludge with drain holes at the bottom. However, to have those drain holes where the sludge was accumulating in the tank, designers made a flat bottom tank. But as we now know, the flat bottom tank is part of the reason that there wasn't any floc blanket forming. As soon as we realized that we could grow a floc blanket with a sloped bottom tank and a jet reverser, we could not use drain holes in the bottom of the tank. Why? Because in the bottom of tanks with floc blankets created by jet reversers, there is no settling. Drain holes at the bottom of a sloped tank would be draining a combination of flocculated water and floc blanket water, neither of which are consolidated thus making the draining ineffective and inefficient. A benefit of the floc hopper is that there is no upflow velocity, which means that the sludge is able to settle and become more dense, allowing for less water waste from draining sludge.
@@ -947,8 +955,16 @@ The AguaClara plate settler design approach is summarized in the following table
 | Spacing              | :math:`S`            | clogging and floc                 | :math:`L`                  | 2.5 cm                   |
 |                      |                      | rollup constraints                |                            |                          |
 +----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
-| Plate settler length | :math:`L`            | :math:`v_{S,V},v_c,\alpha,S`| tank depth                 | Calculated for each plant|
+| Plate settler length | :math:`L`            | :math:`v_{S,V},v_c,\alpha,S`      | tank depth                 | Calculated for each plant|
 +----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
+
+.. _figure_plate_settler_model_table:
+.. figure:: Images/plate_settler_model_table.png
+    :height: 100px
+    :align: center
+    :alt: Plate settler models and relevant equations.
+
+    Plate settler models and relevant equations.
 
 Floc Rollup and Slide Velocity
 ------------------------------
@@ -1310,6 +1326,14 @@ Using our equation for :math:`h_L`,
 We can plot our results for :math:`G` over a range of typical floc blanket concentrations, which is around 1 - 5 g/L. [[[[plot]]]] We find that :math:`G` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`G` provided by the floc blanket is much smaller than :math:`G` provided by the flocculator. This is an important point because in the low :math:`G` environment of the floc blanket where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
 
 We can plot our results for :math:`G\theta` by multiplying :math:`G` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`G\theta` ranges from 2,000 to 6,000. Compare this to the :math:`G\theta = 20,000` for the flocculator used in experiments [[[[Garland]]]].
+
+.. _figure_lab_setup:
+.. figure:: Images/lab_setup.png
+   :height: 100px
+   :align: center
+   :alt: Lab setup for flocculator, half-sedimentation tank, and plate settler testing.
+
+   Lab setup for flocculator, half-sedimentation tank, and plate settler testing.
 
 .. _figure_floc_conc_G:
 .. figure:: Images/floc_conc_G.png
