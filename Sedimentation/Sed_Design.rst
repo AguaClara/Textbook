@@ -388,7 +388,13 @@ Influent Channel
 
 After water exits the flocculator, it is ready for sedimentation. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple sedimentation units operating in parallel; we call each of these sedimentation units a 'bay' or a 'tank'. Because there may be multiple sedimentation bays, we have to distribute flocculated water between the bays. To do this, we have an **influent channel**, which receives water from the flocculator and passes it to the sedimentation bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the sedimentation bays without allowing any settling of flocs in the influent channel. The minimum velocity in the influent channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each sedimentation bay.
 
-[[[[need to create a figure for this]]]]
+.. _figure_influent_channel_bays:
+.. figure:: Images/influent_channel_bays.png
+    :height: 100px
+    :align: center
+    :alt: Influent channel with pipes leading to different sedimentation bays.
+
+    Influent channel with pipes leading to different sedimentation bays.
 
 Does the water in the influent channel get evenly distributed between the different bays? If not, which bay will receive the most water? [[[[link to Manifold chapter]]]] We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to differences in velocity and pressure in different parts of the pipe. Where else in fluids have we discussed decelerating floc? We have discussed this in flow expansions. And what do we know about pressure in flow expansions? We know that there is higher pressure and slower velocities. At the end of the pipe, there is low velocity and thus high pressure, driving the flow through the orifices at the end. For this same reason, a channel with orifices will have greatest flow delivery to the last orifice. Is this type of head loss "good" or "bad"? In our definition of "good" and "bad", we stated that "bad" head loss creates unequal flow in parallel flow paths. The head loss in the influent channel is therefore "bad" head loss because it can lead to different bays in parallel receiving different flows.
 
@@ -401,7 +407,31 @@ Bottom Geometry: Influent Manifold, Diffusers, and Jet Reverser
 
 Now, we will focus on a single bay of the sedimentation system. Flocculated water enters a pipe in the bottom of the influent channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the sedimentation bay. This section of pipe that distributes water at the bottom of the sedimentation bay is referred to as the **influent manifold**.
 
+.. _figure_influent_channel_manifold:
+.. figure:: Images/influent_channel_manifold.png
+    :height: 100px
+    :align: center
+    :alt: Influent channel with pipe leading to one inlet manifold.
+
+    Influent channel with pipe leading to one inlet manifold.
+
 Water exits the influent manifold through a series of orifices and **diffusers** in the bottom of the pipe. Orifices refer to the holes that are drilled into the underside of the manifold while diffusers are what we call short stubs of pipe that extend down from the orifice, perpendicular to the influent manifold. The orifices and diffusers point down to the bottom of the sedimentation bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. The ends of the diffuser tubes are flattened so that they are thin rectangles and when placed side-by-side achieve a line-jet effect. The end of the influent manifold is capped.
+
+.. _figure_influent_manifold_diffuser_base:
+.. figure:: Images/influent_manifold_diffuser_base.png
+    :height: 100px
+    :align: center
+    :alt: Influent manifold with diffusers.
+
+    Influent manifold with diffusers.
+
+.. _figure_influent_manifold_diffuser_flow:
+.. figure:: Images/influent_manifold_diffuser_flow.png
+    :height: 100px
+    :align: center
+    :alt: Influent manifold and diffuser flow paths.
+
+    Influent manifold and diffuser flow paths.
 
 [[need to discuss the energy dissipation rate and floc breakup]]
 
@@ -437,6 +467,14 @@ You may be wondering, why do we need a jet reverser in the first place? Why don'
 - If the diffusers were to point up, they could clog if anything settles in them. While this is unlikely due to the high velocity of flow exiting the small cross-sectional area diffuser, it is something that is avoided by pointing them down.
 - If flow were just to point directly up, it would not have an opportunity to sufficiently spread into the width of the sedimentation bay, which could lead to "short-circuiting" and poor flow distribution overall.
 - The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements [[[[link]]]]. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc blanket, which will be discussed next.
+
+.. _figure_jet_placement:
+.. figure:: Images/jet_placement.png
+    :height: 100px
+    :align: center
+    :alt: The jet reverser and diffuser alignments; the offset jet is the most successful.
+
+    The jet reverser and diffuser alignments; the offset jet is the most successful.
 
 There is a lot of research interest in determining the optimal upflow velocity for floc blankets considering that high velocity is better for resuspension but breaks more flocs. Currently, AguaClara plants use an upflow velocity of 1 mm/s.
 
@@ -489,7 +527,7 @@ While we have just explained three reasons that the floc blanket improves sedime
 
 Consider the requirements that we have stated for the creation of the floc blanket. Could we design for a floc blanket in a treatment plant that experiences flow variability? There are some plants that only run for certain hours of the day. While this intermittent flow would impact many parts of the plant, how would it impact the floc blanket specifically? Can a settled floc blanket be resuspended?
 
-We do not yet have a way to design for variable or intermittent flow rates in a sedimentation tank [[is this true?]]. The ability of a settled floc blanket to resuspend is dependent on the characteristics of the flocs themselves. For example, sticky and clumpy flocs would have a more difficult time resuspending because they tend to settle into hard masses without sufficient upflow velocities. The capacity for resuspension may require site-specific analysis. The AguaClara pilot PF300 in testing at the Cornell Water Treatment Plant is going to determine whether the floc blanket at that site will be able to itermittent flow; the pilot plant and the Cornell Water Treatment Plant will be offline from around 10pm - 5am daily.
+We do not yet have a way to design for variable or intermittent flow rates in a sedimentation tank [[is this true?]]. The ability of a settled floc blanket to resuspend is dependent on the characteristics of the flocs themselves. For example, sticky and clumpy flocs would have a more difficult time resuspending because they tend to settle into hard masses in the absence of sufficient upflow velocities. The capacity for resuspension may require site-specific analysis. The AguaClara pilot PF300 in testing at the Cornell Water Treatment Plant is going to determine whether the floc blanket at that site will be able to itermittent flow; the pilot plant and the Cornell Water Treatment Plant will be offline from around 10pm - 5am daily.
 
 It is of interesting note that the suspended solids concentration in the floc blanket is approximately 1-5 g/L. This concentration corresponds to measurements of thousands of NTU, which is remarkably turbid water. A water treatment plant could have 5 NTU water entering the plant, and water in the bottom of the sedimentation tank could have 1000 NTU. This is one clue that there are interesting things happening in the floc blanket; the bottom of the sedimentation tank can be a completely different world from the rest of the treatment process.
 
@@ -509,7 +547,7 @@ Let's recap some important conclusions from this section on the floc blanket.
 Floc Hopper
 ----------------------------------------
 
-The **floc hopper** is a "weir" that provides an opportunity for floc consolidation. The floc hopper controls the depth of the floc blanket because as the floc blanket grows, it will eventually reach the top of the floc hopper. Because flocs are more dense than water, the flocs "spill" over the edge of the floc hopper which allows the floc blanket to stay a constant height while sludge accumulates and consolidates in the floc hopper. Consolidated sludge in the bottom of the floc hopper is then removed from the sedimentation tank through small drain valve controlled by the operator. Floc hoppers are currently set at a 45 degree angle, but there further optimization is needed.
+The **floc hopper** is a "weir" that provides an opportunity for floc consolidation. The floc hopper controls the depth of the floc blanket because as the floc blanket grows, it will eventually reach the top of the floc hopper. Because flocs are more dense than water, the flocs "spill" over the edge of the floc hopper which allows the floc blanket to stay a constant height while sludge accumulates and consolidates in the floc hopper. Consolidated sludge in the bottom of the floc hopper is then removed from the sedimentation tank through small drain valve controlled by the operator. Floc hoppers are currently set at a 45 degree angle, but further optimization is needed.
 
 The floc hopper allows for a self-cleaning sedimentation tank. By gravity, flocs are sent over to a floc hopper. This means that operators only have to clean the sedimentation tank once every three to six months because there is no stagnant accumulation of anoxic sludge. When operators do clean the sedimentation tank, they are primarily cleaning plate settlers. Under normal operation, operators can open the floc hopper drain valve whenever they want to easily drain the sludge. We don't yet have a method to guide the operation of the floc hopper, so operators determine how frequently to drain the floc hopper from experimental and operational experience. Without the floc blanket transport system, other methods would be required to remove accumulated sludge in the bay. Mechanical sludge removal systems are common alternatives but are well known to be costly to install and a challenge to maintain.
 
