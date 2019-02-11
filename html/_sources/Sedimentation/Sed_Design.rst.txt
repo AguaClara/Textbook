@@ -563,7 +563,7 @@ After flowing through the floc blanket, flocs reach the **plate settlers**. Plat
 
 [[need information about laminar flow between plates]]
 
-[[[[include figure for plate settler and labeled geometry]]]]
+[[[[need to make a figure here]]]]
 
 The first thing that we will discuss is how flocs can settle on plates. To understand this, we will ask a few questions about how particles and flocs will flow between two plate settlers.
 
@@ -641,7 +641,13 @@ AguaClara plants can design for changes in the depth and/or plan view area of th
 
 What we really want to know is: what is the connection of spacing between plate settlers and performance?
 
-[[[[show graphic of large spacing and small spacing with floc rollup]]]]
+.. _figure_plate_settler_depth:
+.. figure:: Images/plate_settler_depth.png
+    :height: 100px
+    :align: center
+    :alt: Relationship between plate settler length and sedimentation tank depth.
+
+    Relationship between plate settler length and sedimentation tank depth.
 
 When we were discussed how plate settlers promote settling, we assumed a uniform velocity profile between the plates. However, we know from fluid mechanics and boundary layer rules that in reality, there is a nonuniform velocity profile. The flow between the plates, as determined by the Reynolds number, is laminar which means that there is a parabolic velocity profile between the plates and the shape of the parabola is affected by the distance between the plates.
 
@@ -649,9 +655,9 @@ There are some cases in which the plates are so close that even if flocs settle 
 
 1) Why would flocs roll up?
 
-It is a force balance! There is a force of gravity pulling the particle down, balanced with the force that the fluid flow exerts through drag related to viscosity. But why does it matter if plates are close together for floc roll up? The average velocity between plates is about 1 mm/s and is the same for any spacing. However, when plates are closer together the velocity profile is much steeper. Compared with plates with greater spacing, the closer plates cause there to be a higher velocity closer to the surface of the plate. This means that flocs between closely spaced plates will see a greater velocity closer to the plate settler, which will impact the force balance. The derivation of the force balance is done in the next chapter. The velocity that the flocs slide down the plate is called :math:`v_{Slide}`.
+It is a force balance! There is a force of gravity pulling the particle down, balanced with the force that the fluid flow exerts through drag related to viscosity. But why does it matter if plates are close together for floc roll up? The average velocity between plates is about 1 mm/s and is the same for any spacing. However, when plates are closer together the velocity profile is much steeper. Compared with plates with greater spacing, the closer plates cause there to be a higher velocity closer to the surface of the plate. This means that flocs between closely spaced plates will see a greater velocity closer to the plate settler, which will impact the force balance. The derivation of the force balance is [[[[link]]]]. The velocity that the flocs slide down the plate is called :math:`v_{Slide}`.
 
-[[[[force balance diagram]]]]
+[[[[need to make. force balance diagram]]]]
 
 2) How would you define the transition between floc rollup and slide down? What would describe the case for a floc that is stationary on the plate settler (not rolling up or sliding down?)
 
@@ -669,7 +675,13 @@ So what does this mean for plate settler spacing? Let's review some results from
 
 Reading the graph, we can see the line for 1 mm/s upflow velocity, :math:`v_{P,V}` [[I don't think this is the right variable name]], at 0.12 mm/s capture velocity requires a minimum plate spacing of about about 2.5 mm to prevent floc rollup. Now, let's interpret this result. If the upflow velocity increases, we see that the required spacing between plates increases. The results from these experiments will help us answer one of our previous questions: will little flocs or big flocs be most vulnerable to floc rollup? From the graph, we know that it is the little ones. Smaller floc terminal velocities indicate smaller particles, and the graph shows that smaller floc terminal velocities require larger distances of floc spacing to not roll up. The bigger the flocs, the smaller the spacing required to not roll up. Little flocs are harder to capture as you move plates closer together. Little flocs roll up first.
 
-[[[[plot of minimum plate spacing, function of floc Vt]]]]
+.. _figure_floc_vsed:
+.. figure:: Images/floc_vsed.png
+    :height: 100px
+    :align: center
+    :alt: Minimum plate settler spacing as a function of floc sedimentation velocity.
+
+    Minimum plate settler spacing as a function of floc sedimentation velocity.
 
 This analysis suggests that the Standard design is nowhere near the constraint of floc roll up (recall that Standard design reports separations of 5 cm). AguaClara plate settlers are currently using separations of 2.5 cm, which is also far above the constraint of floc roll up. So if we determined that the minimum spacing for floc roll up constraints is closer to 2.5 mm, why are we using 2.5 cm? The answer is related to our initial assumptions about the floc composition and terminal velocity. When we calculated terminal velocities, we did so for clay-based flocs. But in reality, there are many kinds of flocs formed in water treatment plants. Dissolved organic matter also interacts with coagulant to form flocs that we assume are much less dense than clay based flocs. We don't currently have a good model to understand how these organic-matter flocs. We don't know what the terminal velocity of flocs is if they are made of organics, coagulant, and clay. But even without knowing specifics, how do we think minimum plate spacing will be impacted by flocs that are formed from organic matter instead of clay? If we use dissolved organic matter, the equation predicts that spacing will change primarily due to the big difference in floc density. As floc density decreases, as we expect for organic matter, minimum spacing increases. However, we don't yet know what that spacing is or where the boundary is because we don't know the properties of the humic acid-coagulant flocs. This prompts us to opt for safety factors, so we have chosen a plate settler spacing of 2.5 cm. There is room to learn more here.
 
@@ -693,12 +705,30 @@ After asking the operators, we are told that there are not any bubbles in the se
 
 2) is the problem regularly intermittent? Is there anything that we can correlate these fluctuations to?
 
-After asking the operators, we are told that the floc volcanoes appear in the early afternoon each day. Using this new information, we have to make another hypothesis about why the floc volcanoes are impacted daily. Perhaps it is related to the sun and daily temperature changes. We can ask the operators to measure the water temperatures so we can do some analysis. The operators measure temperature and we plot the results, providing the following graph.
+After asking the operators, we are told that the floc volcanoes appear in the early afternoon each day.
+
+.. _figure_temp_turbidity:
+.. figure:: Images/temp_turbidity.png
+    :height: 100px
+    :align: center
+    :alt: Turbidity as a function of time in San Nicolas, Honduras.
+
+    Turbidity as a function of time in San Nicolas, Honduras.
+
+Using this new information, we have to make another hypothesis about why the floc volcanoes are impacted daily. Perhaps it is related to the sun and daily temperature changes. We can ask the operators to measure the water temperatures so we can do some analysis. The operators measure temperature and we plot the results, providing the following graph.
 
 We know that this plant brings water from a water source about 14 km away. The water is transported in a galvanized iron pipe that is placed on the surface of the ground because there is no concern about freezing pipes in Honduras (galvanized iron is not damaged by UV like PVC pipe is). The pipe functions as a 14 km water heater, raising the temperature of the water to the plant after noon.
 
 But why does the temperature difference cause a problem for the plate settlers?
 The problem is that there is warmer water entering the sedimentation tank than what is in it. This temperature difference causes a density difference in the sedimentation tank and plate settlers. The less dense, warmer water rises to the top of the plate settlers while the cold water drops to the bottom of the plate. This creates a current, allowing water to flow up on the top and settle on the bottom. The temperature gradient changes slowly over a few hours.
+
+.. _figure_temp_tube_settler:
+.. figure:: Images/temp_tube_settler.png
+    :height: 100px
+    :align: center
+    :alt: Hot water rising and cold water settling in a tube settler.
+
+    Hot water rising and cold water settling in a tube settler.
 
 So, now that we think we know what the problem is, how would we try to solve it? One idea would be to paint the entire line to reflect heat, but this is not feasible due to cost. The town Water Board had been maintaining the distribution line by cleaning weeds and brush from the pipe. The solution ended up being to just let the weeds grow over the pipe to provide shade. We haven't yet come up with a real solution. A possible long-term solution could be to design a sedimentation tank that has a really short residence time. The longer the residence time in the sedimentation tank, the worse the problem is because there is a large variation between the water that entered it last night and the water that enters it this afternoon. A tank with a really short residence time, on the order of a few minutes, would ensure that the water coming in would be very close to the water already in the tank.
 
@@ -739,6 +769,23 @@ Exit Weir and Effluent Channel
 The submerged effluent manifold transports water from the sedimentation tank to a channel that runs perpendicular to the sedimentation bays. The channel collects water from all of the sedimentation bays. Water leaves this channel by flowing over a small wall, called the **exit weir**. The exit weir is used as a flow control device because it is the free-fall that controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and sedimentation tank. In construction, great care is taken to ensure that this wall is precise and level.
 
 After the water flows over the exit weir, it is collected in the **effluent channel**. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box. Like the sedimentation tank influent channel, the effluent channel is located directly next to the drain channel. This allows the operator to remove poorly settled water from the treatment train. If an operator observes poor sedimentation, they can plug the entrance hole to the filter box, allowing the effluent channel to fill with water. Once water reaches the height of the wall separating it from the drain channel, the water will pour over from the influent channel into the drain channel.
+
+.. _figure_channel_labeled:
+.. figure:: Images/channel_labeled.png
+    :height: 100px
+    :align: center
+    :alt: Image of sedimentation channels.
+
+    Image of sedimentation channels.
+
+.. _figure_channel_labeled_cad:
+.. figure:: Images/channel_labeled_cad.png
+    :height: 100px
+    :align: center
+    :alt: Figure of sedimentation channels.
+
+    Figure of sedimentation channels.
+
 
 Sedimentation Conclusions and Review
 =======================================
@@ -924,7 +971,22 @@ We will solve for both the plate settler and tube settler conditions.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Plate Settler
 """""""""""""
-[[[[figure boundary conditions]]]]
+
+.. _figure_plate_settler_boundary_conditions:
+.. figure:: Images/plate_settler_boundary_conditions.png
+    :height: 100px
+    :align: center
+    :alt: Boundary conditions in plate settlers.
+
+    Boundary conditions in plate settlers.
+
+.. _figure_floc_rollup_base:
+.. figure:: Images/floc_rollup_base.png
+    :height: 100px
+    :align: center
+    :alt: Velocity profile between plate settlers.
+
+    Velocity profile between plate settlers.
 
 We begin by describing the conditions of infinite horizontal plates.
 
@@ -980,6 +1042,15 @@ Simplifying the :math:`(\frac{du}{dy})_{y=0}`, we have the velocity gradient as 
 
  :math:`\frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{6 v_{\alpha}}{S} `
 
+.. _figure_floc_rollup_step1:
+.. figure:: Images/floc_rollup_step1.png
+  :height: 100px
+  :align: center
+  :alt: Velocity gradient next to the plate.
+
+  Velocity gradient next to the plate.
+
+
 Tube Settler
 """""""""""""
 For tube settlers, we will assume laminar flow through circular tubes. :math:`R` is the radius of the tube, and we assume that the maximum velocity is when :math:`r = 0`. The velocity distribution is paraboloid of revolution, therefore average velocity, :math:`v`, is half of the maximum velocity, :math:`v_{max}`. So, :math:`v = \frac{1}{2}v_{max}`. We also know that :math:`Q = vA` and :math:`Q = v \pi R^2`. In the case of the tube settler, :math:`\frac{dp}{dx}` is the pressure gradient in the direction of flow, not the pressure gradient due to changes in elevation.
@@ -1020,6 +1091,14 @@ Substituting by the trigonometric relationship :math:`v_{\alpha} = (\frac{v_{P,V
 
  :math:`v_{\alpha} \approx \frac{3 v_{P,V} D}{Ssin\alpha} `
 
+.. _figure_floc_rollup_step2:
+.. figure:: Images/floc_rollup_step2.png
+   :height: 100px
+   :align: center
+   :alt: Fluid velocity at the center of the floc.
+
+   Fluid velocity at the center of the floc.
+
 3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Recall from previous sections [[link]] that the terminal velocity, :math:`v_t`, of the floc can be calculated by, [[??]]
@@ -1031,6 +1110,14 @@ We can rearrange this equation to solve for :math:`D` by
 :math:`D = D_0 ( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}}) ^{\frac{1}{ D_{fractal} - 1}}`
 
 We will need this equation for :math:`D` in the next step.
+
+.. _figure_floc_rollup_step3:
+.. figure:: Images/floc_rollup_step3.png
+   :height: 100px
+   :align: center
+   :alt: Terminal velocity of the floc down the plate (for the case of zero velocity fluid).
+
+   Terminal velocity of the floc down the plate (for the case of zero velocity fluid).
 
 4) Set the fluid velocity at the center of the floc equal to the terminal velocity of the floc to find the critical case of no movement, and the required plate spacing:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1069,7 +1156,15 @@ Head Loss through Plate Settlers
 
 Flow through the sedimentation tank is controlled by head loss in an attempt to achieve flow uniformity. We have already explained that plate settler spacing impacts head loss [[[[link]]]], but by what mathematical relationship? Will putting plate settlers closer together result in more or less head loss? This question is complicated because closer plate settlers would create more shear and head loss, but shorter plate settlers also mean that they become shorter which would decrease shear and head loss.
 
-Let's start with a force balance. Assume that there is a fully established velocity profile that is parabolic with laminar flow. The forces that we care about are shear forces on the walls of the plate settlers and the differential pressure from flow in the direction of the velocity. [[[[figure]]]]
+Let's start with a force balance. Assume that there is a fully established velocity profile that is parabolic with laminar flow. The forces that we care about are shear forces on the walls of the plate settlers and the differential pressure from flow in the direction of the velocity.
+
+.. _figure_plate_settler_headloss_diag:
+.. figure:: Images/plate_settler_headloss_diag.png
+   :height: 100px
+   :align: center
+   :alt: Velocity, shear forces, and pressure loss through plate settlers.
+
+   Velocity, shear forces, and pressure loss through plate settlers.
 
 The shear forces act over the area of the two plates, resulting in :math:`F_{shear} = 2 \tau L W` where :math:`\tau` is the viscous shear component.
 
@@ -1103,7 +1198,15 @@ Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
 
 :math:`h_L = 2 \frac{\mu}{\rho g} \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)`
 
-Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}` [[help]]. The resulting two plots [[[[plate settler head loss]]]] show how head loss and velocity relate to plate settlers.
+Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}` [[help]]. The resulting two plots show how head loss and velocity relate to plate settlers.
+
+.. _figure_plate_settler_headloss_spacing:
+.. figure:: Images/plate_settler_headloss_spacing.png
+   :height: 100px
+   :align: center
+   :alt: Head loss as a function of plate settler spacing.
+
+   Head loss as a function of plate settler spacing.
 
 Floc Blanket Design
 ========================================================
@@ -1208,6 +1311,14 @@ We can plot our results for :math:`G` over a range of typical floc blanket conce
 
 We can plot our results for :math:`G\theta` by multiplying :math:`G` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`G\theta` ranges from 2,000 to 6,000. Compare this to the :math:`G\theta = 20,000` for the flocculator used in experiments [[[[Garland]]]].
 
+.. _figure_floc_conc_G:
+.. figure:: Images/floc_conc_G.png
+   :height: 100px
+   :align: center
+   :alt: Velocity gradient and collision potential as a function of floc blanket concentration.
+
+   Velocity gradient and collision potential as a function of floc blanket concentration.
+
 How does such a small :math:`G\theta` cause such a large reduction in turbidity? The question we are really asking is, is there anything special about the :math:`G\theta` provided by the floc blanket compared to the :math:`G\theta` provided by the flocculator? If so, what is the difference and why is it so beneficial?
 
 Experimental data helps explain this. Two systems were set up: one had a flocculator where :math:`G\theta = 20,000` with a floc blanket where :math:`G\theta = 4,000`; the other just had a flocculator where :math:`G\theta = 24,000`. Using the same influent water quality and coagulant dosing, we find that the first system with the flocculator and floc blanket performed better than the second system, even though the overall :math:`G\theta` values were the same.
@@ -1224,7 +1335,13 @@ Diffuser Design
 
 Diffusers are shaped so that they remain a circular pipe in one end that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle. Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the sedimentation tank. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form. This metal form is sized so that the target shape is achieved.
 
-[[[[figure of diffuser]]]]
+.. _figure_BvsS_diffuser:
+.. figure:: Images/BvsS_diffuser.png
+    :height: 100px
+    :align: center
+    :alt: Diagram of diffuser exit.
+
+    Diagram of diffuser exit.
 
 | :math:`T_{diff} =` thickness of diffuser wall
 | :math:`S_{diff} =` internal width of diffuser
@@ -1266,6 +1383,14 @@ Properties of :math:`v_{jet}`
 Recall that a *vena contracta* is associated with a change in pressure that causes a contraction and subsequent acceleration of the fluid [[[[link to fluids review]]]]. Water exiting the diffuser is pointed directly down and the streamlines are straight and parallel, which means that the pressure across the streamlines is constant. Water exiting the jet reverser is pointed directly up and the streamlines are straight and parallel, which again means that the pressure across the streamlines is constant. Because the pressure is constant at the exit of the diffuser and at the exit of the jet reverser, we assume that the pressure of the water in the space between those two points is also constant because there is no physical barrier. If the pressure in this bottom section of the sedimentation tank is constant from the exit of the diffuser to the exit of the jet reverser, we can infer that they are equal.
 
 By Bernoulli, if the pressures between the exit of the diffuser to the exit of the jet reverser are equal then the velocities must also be equal. Bernoulli is applicable here because there is no flow expansion yet. The shear along the wall of the jet reverser is insignificant due to the short flow path. The water accelerates to account for the directional change but the absolute velocity does not change as it goes around the jet reverser.
+
+.. _figure_Wdiff_Wjet:
+.. figure:: Images/Wdiff_Wjet.png
+    :height: 100px
+    :align: center
+    :alt: Diagram of diffuser exit and jet.
+
+    Diagram of diffuser exit and jet.
 
 Therefore, the velocity at the exit of the diffuser is equal to the velocity at the exit of the jet reverser.
 
