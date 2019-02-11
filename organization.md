@@ -7,7 +7,7 @@
 - possible orifice sizes are 1/16, 1/8, 3/16, 1/4 inch
 - drains must be large enough so they flow can exit with 10cm head
 - head loss in orifices <5 cm (from dec-18 comments)
-- head loss 
+- head loss in sand is 1.2 m (because of the depth of the sand)
 
 ## Inputs
 - plant flow
@@ -32,13 +32,22 @@
 
 ## Need algorithms that:
 - take in flow and return number/size (the big one)
-  - 1 LPS --> estars for plantita (smaler sand layers)
-  - >1-3 4-1Ft
-  - >3-6 2-2ft
-  - >6-9 3-2ft
-  - >9-12 4-2ft
-  - >12-14 2-3ft
-  - >14-21 3-3ft
-  - (>16 OStaRS)
-  - these based on max capacity of a single filter of each size.
-- take 
+    - plant flow --> \[array of pipe diameters] --> \[Q_filter for one filter of each diameter] --> \[Qplant/QFi (N_filt)]
+    - then select the lowest number greater than 2 to the the number of filters chosen of a diameter 
+    - this is the same algorithm that the tubes in the chemical dosing system use
+    - diameters: (1, 1.5, 2, 3); flows: (.764, 1.608, 3.07, 7.024)
+    - determine if we use 1.5 ft!
+- take in size of filter and output dimensions for all components
+  - diameters for all pipes
+  - spacing of components
+  - entrance and exit tank sizes
+  - orifice conditions (number, diameter, spacing)
+    - N_orifice*A_orifice = A_orificetotal
+    - Q_filter/A_orificetotal = V_orifice **this is what needs to be limited to keep orifice headloss small!**
+    - maximum orifice size is 1/4" 
+    - should spacing be half the distance of the branch spacing to keep the relative spacing even between "level"; 5cm?
+    - number of orifices depends on length of branches which is totally from geometry --> (slightly fewer orifices on BW level)
+    - maximum orifice velocity comes from the ratio of the PR to the HL_sand
+  - lengths for pipes (trunks, branches, heights of tanks, inlet + outlet piping)
+  - amt of pipe for inlet wings
+  - number of branches f(velocity) 
