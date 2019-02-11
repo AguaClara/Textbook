@@ -388,6 +388,8 @@ Influent Channel
 
 After water exits the flocculator, it is ready for sedimentation. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple sedimentation units operating in parallel; we call each of these sedimentation units a 'bay' or a 'tank'. Because there may be multiple sedimentation bays, we have to distribute flocculated water between the bays. To do this, we have an **influent channel**, which receives water from the flocculator and passes it to the sedimentation bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the sedimentation bays without allowing any settling of flocs in the influent channel. The minimum velocity in the influent channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each sedimentation bay.
 
+[[[[need to create a figure for this]]]]
+
 Does the water in the influent channel get evenly distributed between the different bays? If not, which bay will receive the most water? [[[[link to Manifold chapter]]]] We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to differences in velocity and pressure in different parts of the pipe. Where else in fluids have we discussed decelerating floc? We have discussed this in flow expansions. And what do we know about pressure in flow expansions? We know that there is higher pressure and slower velocities. At the end of the pipe, there is low velocity and thus high pressure, driving the flow through the orifices at the end. For this same reason, a channel with orifices will have greatest flow delivery to the last orifice. Is this type of head loss "good" or "bad"? In our definition of "good" and "bad", we stated that "bad" head loss creates unequal flow in parallel flow paths. The head loss in the influent channel is therefore "bad" head loss because it can lead to different bays in parallel receiving different flows.
 
 Sedimentation units have multiple bays for a few different reasons. Plants with higher flow rates require more sedimentation bays because the flow through each bay is limited by other design constraints, namely upflow velocity, which will be discussed later. Additionally, it is good to have more than one bay for maintenance purposes; if one bay needs to be cleaned, we want to always have another that can be working. Pipe stubs can be used to plug the entrance hole to a sedimentation bay to shut it down for maintenance.
@@ -412,6 +414,22 @@ However, the diffuser system was designed to greatly impact the overall flow dis
 
 The influent manifold diffuser system straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the sedimentation tank. Influent manifolds without flow straightening diffusers are commonly used in vertical flow sedimentation tanks including designs by leading manufacturers.
 
+.. _figure_flow_circulation:
+.. figure:: Images/flow_circulation.png
+    :height: 100px
+    :align: center
+    :alt: Flow with a horizontal velocity component that causes problematic flow circulation.
+
+    Flow with a horizontal velocity component that causes problematic flow circulation.
+
+.. _figure_flow_straightening:
+.. figure:: Images/flow_straightening.png
+    :height: 100px
+    :align: center
+    :alt: Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation.
+
+    Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation.
+
 The diffusers create a line jet that spans the entire length of the sedimentation tank. This line jet enters the bay going down, but we want the water to ultimately flow up to make our vertical flow sedimentation tank. To get the flow to redirect upwards, we use a **jet reverser**, which is half of a pipe that is laid in the bottom of the bay.
 
 You may be wondering, why do we need a jet reverser in the first place? Why don't we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components.
@@ -428,11 +446,23 @@ As shown above, in a flat bottom geometry, flocs settle in the corners of the ta
 
 The influent manifold, diffusers, and jet reverser work with a **sloped bottom geometry** in an AguaClara plant. The slope on either side of the diffusers is at a 50 degree angle. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can fall into the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the main sedimentation basin. Sludge that is allowed to accumulate in the bottom of sedimentation tanks in tropical and temperate climates decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the sedimentation tank and cause a reduction in particle removal efficiency. The AguaClara sedimentation tank bottom geometry prevents sludge accumulation while also ensuring good flow distribution.
 
+.. _figure_sed_cross_section:
+.. figure:: Images/sed_cross_section.png
+    :height: 100px
+    :align: center
+    :alt: Cross-section of the bottom of the sedimentation tank.
+
+    Cross-section of the bottom of the sedimentation tank.
+
 So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates in the bay by creating a system to resuspend any settled flocs. What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
 
-[[[[PICTURE SHOWING JET COLLAPSE]]]]
+.. _figure_jet_angle:
+.. figure:: Images/jet_angle.png
+    :height: 100px
+    :align: center
+    :alt: Jet diameter and current of settled flocs.
 
-[[[MORE INFO ABOUT SHORT CIRCUITING]]
+    Jet diameter and current of settled flocs.
 
 [[Don't worry about floc breakup.]]
   Avoid flow circulations
