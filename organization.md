@@ -56,7 +56,10 @@
 # Variables
 
 *Requires a "decision" that is external to physical parameters to resolve*
+
 **is not based on other variables/constants that are based on "true", fabrication variables**
+
+\[Is an array of values]
  
 |Names| Depends on/ constant value of|
 |-----|-----------|
@@ -89,10 +92,13 @@
 |  D_{filterexit}   |  Q_{filter}?    |
 |  \[L_{inlets}] |    H_{sandLayers}, H_{entranceTank}, D_{entranceTank}  |
 |  \[L_{outlets}] |     H_{sandLayers}, H_{exitTank}, D_{exitTank}   |
-|     |      |
-|     |      |
-|     |      |
-|     |      |
-|     |      |
-|     |      |
+|   D_{trunk} |      |
+|   D_{BWTrunk}  |      |
+|    D_{Branch} |      |
+|   D_{InletBox}  |      |
+|   D_{ExitBox}  |      |
+|   A_{orificeTotal}  |      |
+| D_{orifice}| |
+| H_{ExitTank} | |
+| H_{entranceTank} | |
 
