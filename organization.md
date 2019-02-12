@@ -65,7 +65,7 @@
 |H_{SandLayers}| 20cm|
 |HL_{Sand}|120cm (HL_{SandLayer}|
 |S_{Branch}|H_{SandLayer}|
-|S_{Orifice}|S_{Branch}|
+|S_{Orifice}|S_{Branch}?|
 |D_{filter}| *Q_{Plant}, N_{Filter}*|
 |N_Filter| *Q_{plant}, D_{filter}*|
 |Pi_{expansion}|1.3 (V_{BW})|
@@ -75,4 +75,24 @@
 |HL_{WeirEntrance}| **3cm**|
 |H_{overflowWater}| **10cm**|
 |N_{Branches| S_{Branch}, D_{Filter}|
+|V_{orificeMax}|   Pi_{man}, HL_{SandLayer}   |
+| \[L_{Branches}] |   D_{filter} , D_{Trunk}   |
+| \[L_{BranchesBW}] |   D_{Filter}, D_{BWTrunk}   |
+|A_{orifice}  | D_{orifice}     |
+|N_{Branches}  |  D_{filter}, S_{branches}, (D_{Trunk}/D_{BWtrunk)?    |
+|L_Trunk  |  D_{Filter}    |
+|L_{BWTrunk)   |  D_{Filter}    |
+|N_{orifices}  | S_{orifices}, L_{branchtotal}     |
+|  D_{overflow}   |   H_{OverflowWater}, Q_{filt} |
+|  D_{drain}   |   H_{OverflowWater}, Q_{filt} |
+|   D_{settledWater}  | Q_{filter}?     |
+|  D_{filterexit}   |  Q_{filter}?    |
+|  \[L_{inlets}] |    H_{sandLayers}, H_{entranceTank}, D_{entranceTank}  |
+|  \[L_{outlets}] |     H_{sandLayers}, H_{exitTank}, D_{exitTank}   |
+|     |      |
+|     |      |
+|     |      |
+|     |      |
+|     |      |
+|     |      |
 
