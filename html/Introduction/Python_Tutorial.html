@@ -1,0 +1,648 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python Tutorial &mdash; AguaClara Textbook  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Review: Fluid Mechanics" href="../Review/Review_Fluid_Mechanics.html" />
+    <link rel="prev" title="Introduction to AguaClara Water Treatment Design" href="Introduction.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-statements">Import statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#markdown">Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transitioning-from-matlab-to-python">Transitioning From Matlab To Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-hotkeys-for-executing-code">Useful hotkeys for executing code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#units">Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arrays-and-units">Arrays and units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting">Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-problem">Example problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pipe-database">Pipe Database</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Python Tutorial</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Introduction/Python_Tutorial.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-tutorial">
+<span id="title-python-tutorial"></span><h1>Python Tutorial<a class="headerlink" href="#python-tutorial" title="Permalink to this headline">¶</a></h1>
+<span id="table-code-resources"></span><table border="1" class="docutils align-left" id="id1">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Code resources.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Description</th>
+<th class="head">Theme</th>
+<th class="head">Example function</th>
+<th class="head">Function call</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="http://docs.python.org/3/library/functions.html">Python functions</a></td>
+<td>low level programming functions</td>
+<td>open a file</td>
+<td>open(file, mode=’r’)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/hgrecco/pint/blob/master/pint/constants_en.txt">Pint universal constants</a></td>
+<td>physical constants with units</td>
+<td>Avogadro’s number</td>
+<td>u.avogadro_number</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/hgrecco/pint/blob/master/pint/default_en.txt">Pint units</a></td>
+<td>units that can be attached to numbers and numpy arrays</td>
+<td><blockquote class="first last">
+<div>5 m/s</div></blockquote>
+</td>
+<td>5* u.mm/u.s</td>
+</tr>
+<tr class="row-odd"><td>aguaclara.core. <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/physchem.py">physchem</a></td>
+<td>pipeflow, orifices, viscosity of water, weirs, manifolds, Kozeny equation</td>
+<td>total head loss in a straight pipe</td>
+<td>headloss(FlowRate, Diam, Length, Nu, PipeRough, KMinor)</td>
+</tr>
+<tr class="row-even"><td>aguaclara.research. <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/floc_model.py">floc_model</a></td>
+<td>AguaClara flocculation model, velocity gradients, Kolmogorov length scales</td>
+<td>velocity gradient in a coiled tube</td>
+<td>g_coil(FlowPlant, IDTube, RadiusCoil, Temp)</td>
+</tr>
+<tr class="row-odd"><td>aguaclara.research. <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/environmental_processes_analysis.py">environmental_processes_analysis</a></td>
+<td><blockquote class="first last">
+<div>carbonate system, CMFR and advection dispersion reactor analysis</div></blockquote>
+</td>
+<td>extract data from ProCoDA generated Gran analysis file</td>
+<td>Gran(data_file_path)</td>
+</tr>
+<tr class="row-even"><td>aguaclara.research. <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/procoda_parser.py">procoda_parser</a></td>
+<td>Extracts data from multiple ProCoDA files based on the state and data column</td>
+<td>extract a column of data from a ProCoDA data file</td>
+<td>column_of_data(data_file_path, start, column)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/">SciPy</a></td>
+<td>computing integrals numerically, solving differential equations, optimization, and sparse matrices</td>
+<td>root finding</td>
+<td>root(func, 0.3)</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://docs.scipy.org/doc/numpy/user/quickstart.html">NumPy</a></td>
+<td>Array manipulation and math functions</td>
+<td>create an array with linearly spaced elements</td>
+<td>np. <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html#numpy.linspace">linspace</a> (start,stop,num)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://matplotlib.org/tutorials/index.html">PyPlot</a></td>
+<td>Graphs!</td>
+<td>Create beautiful graphs</td>
+<td>see below</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="import-statements">
+<h2>Import statements<a class="headerlink" href="#import-statements" title="Permalink to this headline">¶</a></h2>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.constants</span> <span class="k">as</span> <span class="nn">con</span>
+<span class="kn">import</span> <span class="nn">aguaclara.research.environmental_processes_analysis</span> <span class="k">as</span> <span class="nn">epa</span>
+<span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">constants</span><span class="p">,</span> <span class="n">interpolate</span>
+</pre></div>
+</div>
+<p>Hint: If you are typing a function name and want to know what the options are for completing what you are typing, just hit the tab key for a menu of options.</p>
+<p>Hint: If you want to see the source code associated with a function, you
+can do the following import inspect inspect.getsource(foo)</p>
+<p>Where “foo” is the function that you’d like to learn about.</p>
+</div>
+<div class="section" id="markdown">
+<h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
+<p>Markdown files allow you to mix code, beautiful Latex equations, nicely formatted text, figures, and tables. To create a markdown file in Atom simply create a new file (File menu) and give it a .md file extension. The .md file extension is critical so that atom knows how to interpret what you are typing!</p>
+<p>Markdown allows you to create very nicely formatted text including Latex equations which will show up in the preview pane of Atom (type control - shift - E to display the preview pane of a Markdown file).</p>
+<div class="math notranslate nohighlight" id="equation-introduction-python-tutorial-0">
+<span class="eqno">(2)<a class="headerlink" href="#equation-introduction-python-tutorial-0" title="Permalink to this equation">¶</a></span>\[c = \sqrt{a^2 + b^2}\]</div>
+<p>Markdown does not handle automatic numbering of equations, figures, and tables.</p>
+<p>The Python Kernel remembers all definitions (functions and variables) as they are defined based on execution. Thus if you fail to execute a line of code, the parameters defined in that line won’t be available. Similarly, if you define a parameter and then delete that line of code, that parameter remains defined until you restart Atom.</p>
+<p>Before submitting a file for others to use, you need to verify that all of the dependencies are defined and that you didn’t accidently delete a definition that is required. You can do this by placing your cursor in a python code section and then clicking on the python 3|idle in the toolbar at the bottom of the Atom window. Select restart Python 3 kernel. Then execute all of the python code in your document from top to bottom and make sure that all of the code performs as expected.</p>
+</div>
+<div class="section" id="transitioning-from-matlab-to-python">
+<h2>Transitioning From Matlab To Python<a class="headerlink" href="#transitioning-from-matlab-to-python" title="Permalink to this headline">¶</a></h2>
+<p><strong>Indentation</strong> - When writing functions or using statements, Python recognizes code blocks from the way they are indented. A code block is a group of statements that, together, perform a task. A block begins with a header that is followed by one or more statements that are indented with respect to the header. The indentation indicates to the Python interpreter, and to programmers that are reading the code, that the indented statements and the preceding header form a code block.</p>
+<p><strong>Suppressing Statements</strong> - Unlike Matlab, you do not need a semi-colon to suppress a statement in Python;</p>
+<p><strong>Indexing</strong> - Matlab starts at index 1 whereas Python starts at index 0.</p>
+<p><strong>Functions</strong> - In Matlab, functions are written by invoking the keyword “function”, the return parameter(s), the equal to sign, the function name and the input parameters. A function is terminated with “end”.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">average</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="k">if</span> <span class="o">~</span><span class="n">isvector</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">error</span><span class="p">(</span><span class="s1">&#39;Input must be a vector&#39;</span><span class="p">)</span> <span class="n">end</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">length</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+    <span class="n">end</span>
+</pre></div>
+</div>
+<p>In Python, functions can be written by using the keyword “def”, followed by the function name and then the input parameters in parenthesis followed by a colon. A function is terminated with “return”.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">if</span> <span class="o">~</span><span class="n">isvector</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="k">raise</span> <span class="n">VocationError</span><span class="p">(</span><span class="s2">&quot;Input must be a vector&quot;</span><span class="p">)</span>
+  <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">length</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Statements</strong> - for loops and if statements do not require the keyword “end” in Python. The loop header in Matlab varies from that of Python. Check examples below:</p>
+<p>Matlab code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">H</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+  <span class="k">for</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">s</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">s</span>
+    <span class="n">H</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">r</span><span class="o">+</span><span class="n">c</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">end</span>
+  <span class="n">end</span>
+</pre></div>
+</div>
+<p><strong>Printing</strong> - Use “print()” in Python instead of “disp” in Matlab.</p>
+<p><strong>Helpful Documents</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html">Numpy for Matlab Users</a></li>
+<li><a class="reference external" href="http://stsievert.com/blog/2015/09/01/matlab-to-python/">Stepping from Matlab to Python</a></li>
+<li><a class="reference external" href="http://researchcomputing.github.io/meetup_fall_2014/pdfs/fall2014_meetup13_python_matlab.pdf">Python for Matlab Users, UC Boulder</a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="useful-hotkeys-for-executing-code">
+<h2>Useful hotkeys for executing code<a class="headerlink" href="#useful-hotkeys-for-executing-code" title="Permalink to this headline">¶</a></h2>
+<p>Hydrogen hotkeys are listed under Packages-&gt;Hydrogen, and are also detailed here.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Ctrl+Enter runs the currently selected line of code.</li>
+<li>Shift+Enter works as Ctrl+Enter and also moves the selection to the next line of code.</li>
+<li>Alt+Ctrl+Enter runs the current code block.</li>
+<li>Alt+Shift+Enter runs the current code block and moves the selection to the next block.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="units">
+<h2>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
+<p>Engineering requires calculations with units. Prior to modern computer languages engineers used paper and pencil, slide rules, calculators, and more recently spreadsheets to do calculations. All of these methods are prone to calculation errors because units aren’t handled as an essential part of each value. Spreadsheets are especially notorious for calculation errors because unit conversions are buried in formulas that are hidden in the cells.</p>
+<p>Operations on values with units follow very clear algebraic rules and thus units can be attached to numerical values and carried through math operations. This capability is implemented in Python using <a class="reference external" href="https://pint.readthedocs.io/en/latest/">Pint</a> . The Pint package includes a host of units and prefixes (such as <span class="math notranslate nohighlight">\(\mu\)</span> for <span class="math notranslate nohighlight">\(10^{-6}\)</span>). As you master using Python and Pint you will say goodbye to mindless unit conversions forever!</p>
+<p>Environmental engineers historically described surface loading rates for sedimentation tanks using units of gal/min per square foot. How fast is <span class="math notranslate nohighlight">\(\frac{1 gpm}{ft^2}\)</span> in <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>?</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">V_surface_loading_rate</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gal</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">min</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">ft</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">V_surface_loading_rate</span><span class="p">)</span>
+<span class="n">aguaclara</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">set_sig_figs</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">V_surface_loading_rate</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The surface loading rate is 0.6791 millimeter / second</p>
+<p>After reducing the number of significant digits to 3 we obtain:
+The surface loading rate is 0.679 millimeter / second</p>
+<p>How long does it take to stop a car that is initially traveling at 60 mph if the coefficient of friction is 0.5?</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v_0</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mile</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">hr</span>
+<span class="n">friction_coefficient</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">deceleration</span> <span class="o">=</span> <span class="n">friction_coefficient</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">standard_gravity</span>
+<span class="n">t_deceleration</span> <span class="o">=</span> <span class="n">v_0</span><span class="o">/</span><span class="n">deceleration</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time to stop the car is&#39;</span><span class="p">,</span><span class="n">t_deceleration</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time to stop the car is&#39;</span><span class="p">,</span><span class="n">t_deceleration</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The time to stop the car is 120 mile / hour / standard_gravity</p>
+<p>We add the .to_base_units() directive to force pint to simplify the units.</p>
+<p>The time to stop the car is 5.47 second</p>
+<p>Many functions written in Python do not yet handle units and thus it is sometimes necessary to remove the units. Examples include graphs (althougth units might be coming to matplotlib), SciPy functions, and the NumPy functions used to populate arrays. For these cases you can strip the units off a number using the .magnitude method. Be careful to make sure you know what the units are before you remove them otherwise you may be confused by the results!</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gal</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">min</span>
+<span class="n">fill_time</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">hr</span>
+<span class="n">Volume</span> <span class="o">=</span> <span class="n">Q</span> <span class="o">*</span> <span class="n">fill_time</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The volume is&#39;</span><span class="p">,</span><span class="n">Volume</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the Volume is&#39;</span><span class="p">,</span> <span class="n">Volume</span><span class="o">.</span><span class="n">magnitude</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The units of the flow are&#39;</span><span class="p">,</span> <span class="n">Volume</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<span class="c1">#force pint to display in a selected set of Units</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The volume is&#39;</span><span class="p">,</span><span class="n">Volume</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kL</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The volume is 15 gallon * hour / minute</p>
+<p>The magnitude of the Volume is 15.0</p>
+<p>The units of the flow are gallon * hour / minute</p>
+<p>The volume is 3.41 kiloliter</p>
+<p>It is useful to force pint to display the result in the units of your choice.</p>
+</div>
+<div class="section" id="arrays-and-units">
+<h2>Arrays and units<a class="headerlink" href="#arrays-and-units" title="Permalink to this headline">¶</a></h2>
+<p>Use NumPy arrays rather than Python lists to enable math with numbers and units. When creating arrays with units remember that</p>
+<blockquote>
+<div><ul class="simple">
+<li>Array elements don’t have units!</li>
+<li>Arrays can have units.</li>
+</ul>
+</div></blockquote>
+<p>Therefore always attach units to the array after the array has been created. This means that array elements should be dimensionless and thus arrays must be created using dimensionless values.</p>
+<p>We can use NumPy linspace with a simple change to make it dimensionless. Usually linspace has start and stop elements that would logically have units: np.linspace(start, stop, num). But elements can’t have units! We can make the inputs to linspace be dimensionless to create a dimensionless array and then multiplies it by the final value that includes the units to scale the array correctly. For evenly spaced arrays starting at the end of the first space we have either:</p>
+<blockquote>
+<div><ul class="simple">
+<li>np.linspace(start/stop, 1, num) * stop</li>
+<li>np.linspace(1 / num, 1, num) * stop</li>
+</ul>
+</div></blockquote>
+<p>For evenly spaced arrays starting with zero we have:</p>
+<blockquote>
+<div><ul class="simple">
+<li>np.linspace(0, 1, num+1) * stop!</li>
+</ul>
+</div></blockquote>
+<p>The print function can’t currently handle arrays with units. The array can be printed nicely in two steps as shown below.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n_rows</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Flow</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">Flow_array</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">n_rows</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="n">n_rows</span><span class="p">)</span> <span class="o">*</span> <span class="n">Flow</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The array of flow rates is&#39;</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">magnitude</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+
+<span class="n">Flow_array</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">n_rows</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="n">n_rows</span><span class="p">)</span> <span class="o">*</span> <span class="n">Flow</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The array of flow rates is&#39;</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">magnitude</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+
+<span class="n">Flow_array</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="n">n_rows</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">Flow</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The array of flow rates is&#39;</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">magnitude</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>[  2.   4.   6.   8.  10.  12.  14.  16.  18.  20.] liter / second</p>
+</div>
+<div class="section" id="plotting">
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<p>We will use this <a class="reference external" href="https://matplotlib.org/tutorials/introductory/usage.html#coding-styles">pyplot coding style</a> .</p>
+<blockquote>
+<div><ul class="simple">
+<li>fig is a Figure instance—like a blank canvas</li>
+<li>ax is an AxesSubplot instance—think of a frame for plotting in</li>
+</ul>
+</div></blockquote>
+<p>Create a graph showing flow rate vs depth for two linear flow orifice meters that have a depth range of 20 cm and flow ranges of 50 and 70 L/s.</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html">Legend location options</a></li>
+<li><a class="reference external" href="https://matplotlib.org/api/colors_api.html">Colors</a><ul>
+<li>‘b’, ‘g’, ‘r’, ‘c’, ‘m’, ‘y’, ‘k’, ‘w’</li>
+<li>blue, green, red, cyan, magenta, yellow, black, white</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://matplotlib.org/api/markers_api.html#module-matplotlib.markers">Data markers (if you are plotting data and not a model or curve fit)</a></li>
+</ul>
+</div></blockquote>
+<div class="figure align-center" id="id2">
+<span id="figure-lfom-flow-vs-height"></span><a class="reference internal image-reference" href="../_images/LFOM_flow_vs_height.png"><img alt="LFOM flow vs height" src="../_images/LFOM_flow_vs_height.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">The flow through an LFOM is directly proportional to the height of the water above the bottom of the first row of orifices.</span></p>
+</div>
+<p>Indexing is done by row and then by column. To call all of the elements in a row or column, use a colon. As you can see in the following example, indexing in python begins at zero. So <code class="docutils literal notranslate"><span class="pre">a[:,1]</span></code> is calling all rows in the second column</p>
+</div>
+<div class="section" id="example-problem">
+<h2>Example problem<a class="headerlink" href="#example-problem" title="Permalink to this headline">¶</a></h2>
+<p>Calculate the number of moles of methane in a 20 L container at 15 psi above atmospheric pressure with a temperature of 30 C.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># First assign the values given in the problem to variables.</span>
+<span class="n">P</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">psi</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">atm</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
+<span class="n">V</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span>
+<span class="c1"># Use the equation PV=nRT and solve for n, the number of moles.</span>
+<span class="c1"># The universal gas constant is available in pint.</span>
+<span class="n">nmolesmethane</span> <span class="o">=</span> <span class="p">(</span><span class="n">P</span><span class="o">*</span><span class="n">V</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">R</span><span class="o">*</span><span class="n">T</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kelvin</span><span class="p">)))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nmolesmethane</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are &#39;</span><span class="p">,</span> <span class="n">nmolesmethane</span> <span class="p">,</span><span class="s1">&#39; of methane in the container.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>There are  1.625 mole  of methane in the container.</p>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>When it becomes necessary to do the same calculation multiple times, it is useful to create a function to facilitate the calculation in the future.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Function blocks begin with the keyword def followed by the function name and parentheses ( ).</li>
+<li>Any input parameters or arguments should be placed within these parentheses.</li>
+<li>The code block within every function starts with a colon (:) and is indented.</li>
+<li>The statement return [expression] exits a function and returns an expression to the user. A return statement with no arguments is the same as return None.</li>
+<li>(Optional) The first statement of a function can the documentation string of the function or docstring, written with apostrophes .</li>
+</ul>
+</div></blockquote>
+<p>Below is an example of a function that takes three inputs, pressure, volume, and temperature, and returns the number of moles.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating a function is easy in Python</span>
+<span class="k">def</span> <span class="nf">nmoles</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">V</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">P</span><span class="o">*</span><span class="n">V</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">R</span><span class="o">*</span><span class="n">T</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kelvin</span><span class="p">)))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Try using the new function to solve the same problem as above. You can reuse the variables. You can use the new function call inside the print statement.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are&#39;</span><span class="p">,</span> <span class="n">nmoles</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">V</span><span class="p">,</span><span class="n">T</span><span class="p">),</span><span class="s1">&#39;of methane in the container.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">There</span> <span class="n">are</span> <span class="mf">1.62</span> <span class="n">mol</span> <span class="n">of</span> <span class="n">methane</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">container</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pipe-database">
+<h2>Pipe Database<a class="headerlink" href="#pipe-database" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/pipes.py">pipes</a> has many useful functions concerning pipe sizing. It provides functions that calculate actual pipe inner and outer diameters given the nominal diameter of the pipe. Note that nominal diameter just means the diameter that it is called (hence the discriptor “nominal”) and thus a 1 inch nominal diameter pipe might not have any dimensions that are actually 1 inch!</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.pipes</span> <span class="k">as</span> <span class="nn">pipe</span>
+<span class="c1"># The OD function in pipedatabase returns the outer diameter of a pipe given the nominal diameter, ND.</span>
+<span class="n">pipe</span><span class="o">.</span><span class="n">OD</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>6.625 inch</p>
+<p>The ND_SDR_available function returns the nominal diameter of a pipe that has an inner diameter equal to or greater than the requested inner diameter <a class="reference external" href="http://www.engineeringtoolbox.com/sdr-standard-dimension-ratio-d_318.html">SDR, standard diameter ratio</a> . Below we find the smallest available pipe that has an inner diameter of at least 7 cm</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IDmin</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
+<span class="n">SDR</span> <span class="o">=</span> <span class="mi">26</span>
+<span class="n">ND_my_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ND_SDR_available</span><span class="p">(</span><span class="n">IDmin</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span>
+<span class="n">ND_my_pipe</span>
+</pre></div>
+</div>
+<p>3.0 inch</p>
+<p>The actual inner diameter of this pipe is</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ID_my_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_my_pipe</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ID_my_pipe</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">8.2</span> <span class="n">cm</span>
+</pre></div>
+</div>
+<p>We can display the available nominal pipe sizes that are in our
+database.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pipe</span><span class="o">.</span><span class="n">ND_all_available</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Review/Review_Fluid_Mechanics.html" class="btn btn-neutral float-right" title="Review: Fluid Mechanics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Introduction.html" class="btn btn-neutral" title="Introduction to AguaClara Water Treatment Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
