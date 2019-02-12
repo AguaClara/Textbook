@@ -51,3 +51,28 @@
   - lengths for pipes (trunks, branches, heights of tanks, inlet + outlet piping)
   - amt of pipe for inlet wings
   - number of branches f(velocity) 
+
+
+# Variables
+
+*Requires a "decision" that is external to physical parameters to resolve*
+**is not based on other variables/constants that are based on "true", fabrication variables**
+ 
+|Names| Depends on/ constant value of|
+|-----|-----------|
+|Q_{Plant}| - |
+|N_{SandLayeres}|6|
+|H_{SandLayers}| 20cm|
+|HL_{Sand}|120cm (HL_{SandLayer}|
+|S_{Branch}|H_{SandLayer}|
+|S_{Orifice}|S_{Branch}|
+|D_{filter}| *Q_{Plant}, N_{Filter}*|
+|N_Filter| *Q_{plant}, D_{filter}*|
+|Pi_{expansion}|1.3 (V_{BW})|
+|H_{SafetyFilterBody}| |
+|H_{FilterBody}|H_{SafetyFilterBody}, H{SandLayer}, N_{SandLayer}, Pi_{Expansion}|
+|H_{SafetyEntranceTank}| **5cm**|
+|HL_{WeirEntrance}| **3cm**|
+|H_{overflowWater}| **10cm**|
+|N_{Branches| S_{Branch}, D_{Filter}|
+
