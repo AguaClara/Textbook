@@ -87,7 +87,6 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -143,6 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -239,15 +239,15 @@
 The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel. The plant is located in the municipality of Guinope, the department of El Paraiso, Honduras.</p>
 <div class="figure align-center" id="id1">
 <span id="manzaragua-wtp"></span><a class="reference internal image-reference" href="../_images/Manzaragua_WTP.jpg"><img alt="Manzaragua WTP" src="../_images/Manzaragua_WTP.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 62 </span><span class="caption-text">Manzaragua water treatment plant using two of the AguaClara 1 L/s plants in parallel.</span></p>
+<p class="caption"><span class="caption-number">Fig. 61 </span><span class="caption-text">Manzaragua water treatment plant using two of the AguaClara 1 L/s plants in parallel.</span></p>
 </div>
 <p>The plant performed very poorly from the first day of operation. The first attempted fix was to double the flocculator residence time by increasing the number of flocculator pipes (3 inch diameter by 1.5 m long) from 12 to 24. This improved performance, but the plant continued to perform poorly. A raw water sample was analyzed on May 30, 2018 and the following results were obtained.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-manzaragua-water-analysis"></span><a class="reference internal image-reference" href="../_images/Manzaragua_Water_Analysis.jpg"><img alt="Manzaragua Water Analysis" src="../_images/Manzaragua_Water_Analysis.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 63 </span><span class="caption-text">Water quality analysis for Manzaragua.</span></p>
+<p class="caption"><span class="caption-number">Fig. 62 </span><span class="caption-text">Water quality analysis for Manzaragua.</span></p>
 </div>
 <span id="table-manzaragua-water-quality-analysis"></span><table border="1" class="colwidths-given docutils align-center" id="id3">
-<caption><span class="caption-number">Table 11 </span><span class="caption-text">Manzaragua water quality analysis</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 10 </span><span class="caption-text">Manzaragua water quality analysis</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="25%" />
 <col width="25%" />
@@ -316,9 +316,9 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 <p>This water has high color which suggests a high concentration of dissolved organic matter. The pH is a clear problem because the pH is too low for the coagulant nanoparticles to precipitate. As the water sample pH of 5.91 a significant fraction of the coagulant will remain soluble.</p>
 <p>Our goal is to determine how much base will need to be added to raise the pH. We do not have data on the <em>optimal</em> pH for treating high color water with PACl and so we will use pH 7 as the target.</p>
 <p>At circumneutral pH (pH close to 7) the buffering capacity of the water is dominated by carbonate chemistry and specifically by the equilibrium between <span class="math notranslate nohighlight">\({H_2}CO_3^{\star}\)</span> and <span class="math notranslate nohighlight">\(HCO_3^-\)</span> . We will use the acid neutralizing capacity (reported as calcium carbonate alkalinity) and the pH from the sample analysis to estimate the total concentration of carbonates. We will not use the sample analysis carbonate concentrations because they can not be precisely correct.</p>
-<p>We will find the amount of base that must be added using <a class="reference internal" href="RM_Derivations.html#equation-base-for-ph-adjust">(159)</a>.</p>
+<p>We will find the amount of base that must be added using <a class="reference internal" href="RM_Derivations.html#equation-base-for-ph-adjust">(158)</a>.</p>
 <span id="table-anc-and-carbonate-values-for-several-bases-and-acids"></span><table border="1" class="colwidths-given docutils align-center" id="id4">
-<caption><span class="caption-number">Table 12 </span><span class="caption-text">ANC and carbonate values for several bases and acids</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">ANC and carbonate values for several bases and acids</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -359,11 +359,9 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 = 1 because there is one mole of <span class="math notranslate nohighlight">\(CO_3\)</span> per mole of
 <span class="math notranslate nohighlight">\(Na_2CO_3\)</span></p>
 <p>Below is the code used to calculate the required base addition.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">aguaclara.research.environmental_processes_analysis</span> <span class="k">as</span> <span class="nn">epa</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">from</span> <span class="nn">aguaclara_research.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">import</span> <span class="nn">aguaclara_research.Environmental_Processes_Analysis</span> <span class="k">as</span> <span class="nn">epa</span>
 
 <span class="sd">&quot;&quot;&quot;define molecular weights&quot;&quot;&quot;</span>
 <span class="n">m_Ca</span> <span class="o">=</span> <span class="mf">40.078</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">mol</span>
@@ -496,7 +494,7 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 </div>
 <p>The analysis reveals that the choice of base matters. The most efficient (on a mass or mole basis) base is <span class="math notranslate nohighlight">\(NaOH\)</span> because it doesn’t add any carbonates that don’t fully react with the hydrogen ions. The decision about which base to use will be influenced by economics, operator safety, and by whether additional carbonate buffering simplifies plant operation with changing raw water quality.</p>
 <span id="table-calcium-bases"></span><table border="1" class="colwidths-given docutils" id="id5">
-<caption><span class="caption-number">Table 13 </span><span class="caption-text">Calcium base.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 12 </span><span class="caption-text">Calcium base.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -526,15 +524,15 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 <p>The calcium bases are relatively inexpensive and have the disadvantage of lower solubility than sodium bases. Calcium carbonate has a low solubility, carbon dioxide is present in the atmosphere, and thus calcium carbonate precipitation limits the concentration that can be used for chemical feeds.</p>
 <div class="figure align-center" id="id6">
 <span id="figure-mole-base-for-target-ph"></span><a class="reference internal image-reference" href="../_images/mole_base_for_target_pH.png"><img alt="mole base for target pH" src="../_images/mole_base_for_target_pH.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 64 </span><span class="caption-text">Dose of three bases (in mole/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 63 </span><span class="caption-text">Dose of three bases (in mole/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
 </div>
 <div class="figure align-center" id="id7">
 <span id="figure-mg-base-for-target-ph"></span><a class="reference internal image-reference" href="../_images/mg_base_for_target_pH.png"><img alt="mg base for target pH" src="../_images/mg_base_for_target_pH.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 65 </span><span class="caption-text">Dose of two bases (in mg/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 64 </span><span class="caption-text">Dose of two bases (in mg/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span></p>
 </div>
 <p>The required dose for each of the bases is summarized below.</p>
 <span id="table-base-table"></span><table border="1" class="colwidths-given docutils" id="id8">
-<caption><span class="caption-number">Table 14 </span><span class="caption-text">Dose of each base required to change the pH of the Manzaragua water to 7.</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 13 </span><span class="caption-text">Dose of each base required to change the pH of the Manzaragua water to 7.</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="25%" />
 <col width="25%" />
@@ -566,24 +564,19 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 <span id="heading-lfom-and-coag-injection-sizing"></span><h2>LFOM and coagulant injection sizing<a class="headerlink" href="#lfom-and-coagulant-injection-sizing" title="Permalink to this headline">¶</a></h2>
 <p>A water treatment plant that is treating 120 L/s of water injects the coagulant into the middle of the pipe that delivers the raw water to the plant and then splits the flow into 2 parallel treatment trains for subsequent flocculation. The pipe is PVC 24 inch nominal pipe diameter SDR 26. The water temperature is <span class="math notranslate nohighlight">\(0^{\circ}C\)</span>. Estimate the minimum distance between the injection point and the flow split.</p>
 <p>We will use a <a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#heading-lfom"><span class="std std-ref">linear flow orifice meter</span></a> with 20 cm of head loss. The first step is to determine the diameter of the LFOM.</p>
-<p>..todo:: This example needs to be updated once the LFOM OO code is fixed.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; importing &quot;&quot;&quot;</span>
-
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">aguaclara.research.environmental_processes_analysis</span> <span class="k">as</span> <span class="nn">epa</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">from</span> <span class="nn">aguaclara_research.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="kn">import</span> <span class="nn">aguaclara_research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
-
-<span class="c1">#from matplotlib.ticker import FormatStrFormatter</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="k">import</span> <span class="n">FormatStrFormatter</span>
 <span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;AguaClara Water Treatment Plant Design/Rapid Mix/Images/&#39;</span>
 
 <span class="n">Q_plant</span> <span class="o">=</span> <span class="mi">120</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">HL_LFOM</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">Pi_LFOM_safety</span> <span class="o">=</span> <span class="mf">1.2</span>
 <span class="n">SDR_LFOM</span> <span class="o">=</span> <span class="mi">26</span>
-
-<span class="kn">from</span> <span class="nn">aguaclara.design</span> <span class="k">import</span> <span class="n">lfom</span> <span class="k">as</span> <span class="n">lfom</span>
+<span class="kn">from</span> <span class="nn">aide_design.unit_process_design</span> <span class="k">import</span> <span class="n">lfom</span> <span class="k">as</span> <span class="n">lfom</span>
 <span class="n">ND_LFOM</span> <span class="o">=</span> <span class="n">lfom</span><span class="o">.</span><span class="n">nom_diam_lfom_pipe</span><span class="p">(</span><span class="n">Q_plant</span><span class="p">,</span><span class="n">HL_LFOM</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ND_LFOM</span><span class="p">,</span> <span class="s1">&#39;(&#39;</span><span class="p">,</span><span class="n">ND_LFOM</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">),</span> <span class="s1">&#39;)&#39;</span><span class="p">)</span>
 
@@ -601,11 +594,9 @@ The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel
 1) Use <code class="xref eq docutils literal notranslate"><span class="pre">mixing_pipe_diameters</span></code> to estimate the mixing length in pipe diameters
 1) Convert to pipe length in meters.</dd>
 </dl>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">aguaclara.core.materials</span> <span class="k">as</span> <span class="nn">mat</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
 <span class="n">T_water</span><span class="o">=</span><span class="mi">0</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
-<span class="n">Pipe_roughness</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">PVC_PIPE_ROUGH</span>
+<span class="n">Pipe_roughness</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">PIPE_ROUGH_PVC</span>
 <span class="n">Pipe_roughness</span>
 <span class="n">Nu_water</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_water</span><span class="p">)</span>
 <span class="n">Q_pipe</span> <span class="o">=</span> <span class="mi">120</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
