@@ -498,6 +498,14 @@ The influent manifold, diffusers, and jet reverser work with a **sloped bottom g
 
     Cross-section of the bottom of the sedimentation tank.
 
+.. _figure_bottom_of_sed_tank_detail:
+.. figure:: Images/bottom_of_sed_tank_detail.png
+    :height: 100px
+    :align: center
+    :alt: Detail of the bottom of the sedimentation tank.
+
+    Cross-section of the bottom of the sedimentation tank.
+
 So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates in the bay by creating a system to resuspend any settled flocs. What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
 
 .. _figure_jet_angle:
