@@ -353,7 +353,13 @@ The AguaClara treatment train is designed so that flow is driven by potential en
 
 In electrical circuits, electrons will travel the path of least resistance in a parallel path system. Water is similar in that it will flow in the path of least resistance.
 
-[[[[figure]]]]
+.. _figure_circuit_base:
+.. figure:: Images/circuit_base.png
+    :height: 100px
+    :align: center
+    :alt: Sedimentation tank as a circuit.
+
+    Sedimentation tank as a circuit.
 
 The figure shows flow through a sedimentation system in which there are two sedimentation bays working in parallel. Each bay has multiple components through which piezometric head changes; wherever a resistor symbol is shown, it means that there is a difference in piezometric head in that section of pipe. We want to understand what is going on between the influent channel and the effluent channel so that we can design to control head loss and fluid flow.
 
@@ -845,6 +851,13 @@ Let's recap some important points about the sedimentation tank.
 - The AguaClara sedimentation tank design is driven by the need for high treatment capability coupled with easy operation and maintenance.
 - There is "good" head loss introduced by the influent manifold entrance, diffusers, effluent manifold orifices, and effluent manifold exit. There is "bad" head loss introduced by pressure recovery in the influent channel, influent manifold, and effluent manifold. Even flow distribution is achieved by ensuring that "good" head loss dominates through intentional design.
 
+.. _figure_circuit_full:
+.. figure:: Images/circuit_full.png
+    :height: 100px
+    :align: center
+    :alt: Sedimentation tank as a circuit, showing "good" and "bad" head loss.
+
+    Sedimentation tank as a circuit, showing "good" and "bad" head loss.
 
 Review
 --------------------------------
