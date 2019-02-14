@@ -484,7 +484,14 @@ You may be wondering, why do we need a jet reverser in the first place? Why don'
 
 There is a lot of research interest in determining the optimal upflow velocity for floc blankets considering that high velocity is better for resuspension but breaks more flocs. Currently, AguaClara plants use an upflow velocity of 1 mm/s.
 
-[[[[PICTURE OF FLAT BOTTOM, CENTERED, and OFFSET JET]]]]
+.. _figure_flat_bottomed_tank:
+.. figure:: Images/flat_bottomed_tank.png
+   :target: https://www.youtube.com/watch?v=04OksWoRmQI
+   :width: 400px
+   :align: center
+   :alt: Flat bottomed tank with settled flocs.
+
+   Flat bottomed tank with settled flocs.
 
 As shown above, in a flat bottom geometry, flocs settle in the corners of the tank because there is no direct flow of water to resuspend it. Flocs fall in such a way that the corners of the tank will fill first, with more and more flocs settling until the angle of repose is created. This angle that is occupied by flocs suggests that if we want to avoid having flocs settle, we should fill the sides of the tank in with concrete and create a sloped bottom so that there are no surfaces for settling.
 
@@ -506,6 +513,15 @@ The influent manifold, diffusers, and jet reverser work with a **sloped bottom g
 
     Cross-section of the bottom of the sedimentation tank.
 
+.. _figure_Floc_Blanket_Floc_Hopper:
+.. figure:: Images/Floc_Blanket_Floc_Hopper.png
+   :target: https://www.youtube.com/watch?v=2x12wGb7xZE
+   :width: 400px
+   :align: center
+   :alt: Sloped bottom tank with fully suspended flocs.
+
+   Sloped bottom tank with fully suspended flocs.
+
 So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates in the bay by creating a system to resuspend any settled flocs. What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
 
 .. _figure_jet_angle:
@@ -515,6 +531,15 @@ So we know that the diffusers, jet reverser, and sloped bottom ensure that no sl
     :alt: Jet diameter and current of settled flocs.
 
     Jet diameter and current of settled flocs.
+
+.. _figure_diffuser_jet_reverser:
+.. figure:: Images/diffuser_jet_reverser.png
+   :target: https://youtu.be/WEM-YyGITlQ
+   :width: 400px
+   :align: center
+   :alt: Jet reverser resuspending flocs.
+
+   Jet reverser resuspending flocs.
 
 [[Don't worry about floc breakup.]]
   Avoid flow circulations
@@ -528,6 +553,15 @@ Floc Blanket
 The line jet from the diffusers enters the jet reverser to force flow up through the sedimentation bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed which is called a **floc blanket**. The bed is fluidized because flocs are kept in suspension by the upflowing water.
 
 For a floc blanket to form, a sedimentation system requires that 1) all flocs be returned to the bottom of the sedimentation tank and 2) requires that all settled flocs be resuspended by incoming water. As will be discussed soon, plate settlers are used to return flocs to the bottom of the bay, while the jet reverser and sloped bottom geometry allow for floc resuspension. Any surface with a horizontal component in a sedimentation tank must be sloped to allow settled flocs to return to the resuspension zone. A flat bottom geometry does not allow for the formation of a floc blanket, as discussed previously.
+
+.. _figure_floc_blanket_experiment:
+.. figure:: Images/floc_blanket_experiment.png
+   :target: https://www.youtube.com/watch?v=w8ZFCz54IBs
+   :width: 400px
+   :align: center
+   :alt: Floc blanket formation over time.
+
+   Floc blanket formation over time.
 
 Floc blankets improve the performance of a sedimentation tank and reduces settled water turbidity by a factor of 10 (Garland et al., 2017) for multiple reasons:
 
@@ -561,7 +595,18 @@ Let's recap some important conclusions from this section on the floc blanket.
 Floc Hopper
 ----------------------------------------
 
-The **floc hopper** is a "weir" that provides an opportunity for floc consolidation. The floc hopper controls the depth of the floc blanket because as the floc blanket grows, it will eventually reach the top of the floc hopper. Because flocs are more dense than water, the flocs "spill" over the edge of the floc hopper which allows the floc blanket to stay a constant height while sludge accumulates and consolidates in the floc hopper. Consolidated sludge in the bottom of the floc hopper is then removed from the sedimentation tank through small drain valve controlled by the operator. Floc hoppers are currently set at a 45 degree angle, but further optimization is needed.
+The **floc hopper** is a "weir" that provides an opportunity for floc consolidation. The floc hopper controls the depth of the floc blanket because as the floc blanket grows, it will eventually reach the top of the floc hopper. Because flocs are more dense than water, the flocs "spill" over the edge of the floc hopper which allows the floc blanket to stay a constant height while sludge accumulates and consolidates in the floc hopper.
+
+.. _figure_floc_hopper_highlight:
+.. figure:: Images/floc_hopper_highlight.png
+   :target: https://youtu.be/xh9dTjWRoto
+   :width: 400px
+   :align: center
+   :alt: Floc hopper detail with flocs "spilling" over the wall.
+
+   Floc hopper detail with flocs "spilling" over the wall.
+
+Consolidated sludge in the bottom of the floc hopper is then removed from the sedimentation tank through small drain valve controlled by the operator. Floc hoppers in the lab-scale and PF300 setting are currently set at a 45 degree angle, but further optimization is needed.
 
 .. _figure_benchtop_sed:
 .. figure:: Images/benchtop_sed.png
