@@ -524,8 +524,8 @@ The influent manifold, diffusers, and jet reverser work with a **sloped bottom g
 
 So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates in the bay by creating a system to resuspend any settled flocs.
 
-.. _figure_floc_jetreverser:
-.. figure:: Images/floc_jetreverser.png
+.. _figure_diffuser_jetreverser:
+.. figure:: Images/diffuser_jetreverser.png
     :target: https://youtu.be/yJ-8g7vQTSM
     :height: 100px
     :align: center
