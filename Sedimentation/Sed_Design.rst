@@ -522,7 +522,18 @@ The influent manifold, diffusers, and jet reverser work with a **sloped bottom g
 
    Sloped bottom tank with fully suspended flocs.
 
-So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates in the bay by creating a system to resuspend any settled flocs. What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
+So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates in the bay by creating a system to resuspend any settled flocs.
+
+.. _figure_floc_jetreverser:
+.. figure:: Images/floc_jetreverser.png
+    :target: https://youtu.be/yJ-8g7vQTSM
+    :height: 100px
+    :align: center
+    :alt: Distribution of flocculated water and resuspension of settling flocs.
+
+    Distribution of flocculated water and resuspension of settling flocs.
+
+What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
 
 .. _figure_jet_angle:
 .. figure:: Images/jet_angle.png
@@ -767,6 +778,15 @@ This is a very complicated question. We would expect big flocs to slide down bec
 4) Will large or small spacing between plates cause more floc rollup?
 
 As we have already suggested, small spacing between plates will cause more floc rollup due to the steeper resulting velocity profile between the plates.
+
+.. _figure_floc_rollup:
+.. figure:: Images/floc_rollup.png
+    :target: https://youtu.be/cQJxLO0WOPA
+    :height: 100px
+    :align: center
+    :alt: Floc rollup between two plates.
+
+    Floc rollup between two plates.
 
 So what does this mean for plate settler spacing? Let's review some results from lab experiments. The following graph shows minimum plate settler spacing (mm) as a function of floc terminal velocity (mm/s). Some important things to note are that AguaClara plate settlers are designed for a capture velocity of 0.12 mm/s (recall that this capture velocity means that we want to capture flocs that are settling at 0.12 mm/s and faster). Before AguaClara filters were designed and deployed, AguaClara adopted the 0.12 mm/s capture velocity in an effort to reduce effluent turbidity as much as possible.
 
