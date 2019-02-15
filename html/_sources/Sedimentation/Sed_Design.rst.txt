@@ -4,9 +4,6 @@
 Sedimentation Design
 ********************
 
-***************************************
-Foundational Concepts
-***************************************
 
 To understand how sedimentation works, a few key concepts must first be developed. This includes understanding how and why flocs move in water. Remember, the goal of sedimentation reactor design is to optimize the floc-settling process.
 
@@ -15,8 +12,9 @@ Terminal Velocity
 As flocs settle in water, they will fall at a speed dictated by the weight of the floc, the buoyancy of the floc, and drag from the water. These three forces - the gravitational weight force, the buoyant force, and the drag force - dictate the speed at which a floc falls and are detailed in the following free body diagram. We care about determining the speed at which flocs will fall because knowing this information will help inform our sedimentation reactor design criteria.
 
 .. _figure_terminal_velocity_FBD:
+
 .. figure:: Images/terminal_velocity_FBD.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Buyouant force, drag force, and gravitational force shown for floc free body diagram.
 
@@ -56,7 +54,7 @@ Plugging into the original force balance,
 
 .. math::
 
-  [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}]+[\rlap{-}V_{floc} \rho_{H_2O} g]-[\rlap{-}V_{floc} \rho_{floc} g] =0
+  \left [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2} \right]+\left [\rlap{-}V_{floc} \rho_{H_2O} g\right ]-\left [\rlap{-}V_{floc} \rho_{floc} g \right] =0
 
 Solving for terminal velocity, :math:`v_t`, provides
 
@@ -66,19 +64,20 @@ Solving for terminal velocity, :math:`v_t`, provides
 
 Terminal velocity is a function of fluid density, floc density, gravity, particle diameter, and the drag coefficient. To calculate velocity, all of those inputs must be determined.
 
-The first component that we will focus on is the drag coefficient, :math:`C_D`. The drag coefficient is function of Reynolds Number, :math:`Re`, and the characteristic flow around a particle. As a reminder, :math:`Re = \frac{v_t D}{\nu}` where :math:`v_t` is the velocity of the fluid, :math:`D` is the length scale, and :math:`\nu` is kinematic viscosity.
+The first component that we will focus on is the drag coefficient, :math:`C_D`. The drag coefficient is function of Reynolds Number, :math:`Re`, and the characteristic flow around a particle. As a reminder, :math:`Re = \frac{v_t D}{\nu}` where :math:`v_t` is the velocity of the fluid relative to the particle, :math:`D` is the characteristic length scale (in this case the particle diameter), and :math:`\nu` is kinematic viscosity.
 
 Drag coefficients are used to describe flow around a particle.
 
 .. _figure_drag_coeff_Re_base:
+
 .. figure:: Images/drag_coeff_Re_base.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Drag coefficient as a function of Reynolds number.
 
     Drag coefficient as a function of Reynolds number.
 
-As an introduction to this drag coefficent diagram, we can compare it to something we've already learned about: the Moody diagram. Drawing parallels between the two will help us understand some important relationships better.
+As an introduction to this drag coefficient diagram, we can compare it to something we've already learned about: the Moody diagram. Drawing parallels between the two will help us understand some important relationships better.
 
 .. _table_Moody_DragCoefficient:
 
@@ -107,17 +106,20 @@ Below is a table to compare the significance of the Moody diagram and the Drag C
 
 
 
-The flow around the particle and the Reynolds Number can be described in the laminar, turbulent, or turbulent-boundary regions. In the laminar region, which holds when :math:`Re < 1`, :math:`C_D = \frac{24}{Re}`. This region of laminar flow, represented as the straight line on the log-log plot, where :math:`C_D = \frac{24}{Re}` is referred to as Stokes Law. You'll notice that the line for Stokes Law shown in the figure extends past the laminar region. This was done because it highlights that even though Stokes Law is not exactly correct past the turbulent region, it is still a pretty good approximation near :math:`C_D = 1`.
+The flow around the particle and the Reynolds Number can be described in the laminar, turbulent, or turbulent-boundary regions. In the laminar region viscous forces dominate, :math:`Re < 1`,and the coefficient of drag is represented as the straight line with a slope of -1 on the log-log plot. The equation for drag on a sphere in laminar flow :math:`C_D = \frac{24}{Re}` is referred to as Stokes Law. You'll notice that the line for Stokes Law shown in the figure extends past the laminar region. This was done because it highlights that even though Stokes Law is not exactly correct past the turbulent region, it is still a pretty good approximation for  :math:`Re < 10`.
 
 .. _figure_drag_coeff_Re_full:
+
 .. figure:: Images/drag_coeff_Re_full.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Drag coefficient as a function of Reynolds number.
 
     Drag coefficient as a function of Reynolds number.
 
-Let's consider the drag coefficient diagram at Reynolds numbers of :math:`10^5`. We notice that there is a "bump" in the plot, in which drag coefficients drop. This is because at really high Reynolds numbers, the boundary layer around the particle became turbulent. This causes the wake behind the particle to be a little smaller, leading to a slight reduction in drag. The drag coefficient decreases, but the total drag force does not necessarily decrease (and likely keeps on increasing).
+.. note: I'd  suggest removing the Reynolds number definition because it makes it appear that it only applies for turbulent flows. Ideally we'd have the equation for coefficient of drag in the transition region. This paper might be good to cite. https://www.sciencedirect.com/science/article/pii/S2095268615000178. They provide equations for the coefficient of drag in the transition region (analogous to Swamee Jain equations for pipe flow.)
+
+Let's consider the drag coefficient diagram at Reynolds numbers of :math:`10^5`. We notice that there is a "bump" in the plot, in which the drag coefficients drop. This is because at really high Reynolds numbers, the boundary layer around the particle became turbulent. This causes the wake behind the particle to be a little smaller, leading to a slight reduction in drag. The drag coefficient decreases, but the total drag force does not necessarily decrease (and likely keeps on increasing).
 
 To understand this phenomenon, think about a golf ball. Golf balls are designed with dimpled surfaces because the dimpled surface forces the transition described above to happen at lower Reynolds numbers. The dimples initiate turbulence in the boundary layer and cause a slight reduction in the drag coefficient. Thus, dimpled golf balls can travel further than smooth ones.
 
@@ -139,7 +141,7 @@ to yield,
 
 .. math::
 
-  v_t = \frac{D^2g}{18\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}}
+  v_t = \frac{D^2g}{18\nu}\frac{\rho_{floc} -\rho_{H_2O}}{\rho_{H_2O}}
 
 Again, we can draw a parallel with the Moody Diagram. The general form of the terminal velocity equation is like the Darcy-Weisbach equation; it is always true. The terminal velocity in the laminar flow region is like the Hagen-Poiselle equation; it is only good for laminar flow. We will use the laminar specific condition because we are working with flocs with low Reynolds numbers.
 
@@ -147,20 +149,22 @@ Our equations for terminal velocity depend on the density of a floc. As discusse
 
 .. math::
 
-  v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}
+  v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc_0} -\rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}
 
 | Where:
-| :math:`D_0 =` diameter of clay = 4 :math:`\mu m`
-| :math:`D_{fractal} =` 2.3
-| :math:`D =` floc diameter (:math:`\mu m`)
+| :math:`D_0 =` diameter of clay
+| :math:`D_{fractal} =` fractal dimension
+| :math:`D =` floc diameter
+| :math:`\rho_{floc_0} =` density of the primary particle making up the floc
 
 The following plot shows the relationship between floc diameter and terminal velocity.
 
 .. _figure_terminal_velocity_floc_diam:
+
 .. figure:: Images/terminal_velocity_floc_diam.png
-    :height: 100px
+    :height: 300px
     :align: center
-    :alt: Terminal velocity as a function of floc diameter, taking into account the changing density of flocs.
+    :alt: Terminal velocity as a function of floc diameter, taking into account the changing density of flocs formed from clay.
 
     Terminal velocity as a function of floc diameter, taking into account the changing density of flocs.
 
@@ -174,18 +178,19 @@ Our understanding of floc terminal velocity suggests that we can decide the size
 
 Capture Velocity
 ===============================
-Settle capture velocity is defined as the velocity of the slowest settling particle that a sedimentation tank captures reliably. It is a property of the geometry of the sedimentation tank. Because it is a property of geometry, we can use it as an important design tool; because we can control reactor geometry, we can control the sizes of particles that we can settle.
+Settle capture velocity is defined as the velocity of the slowest settling particle that a sedimentation tank captures reliably. It is a property of the geometry of the sedimentation tank. Because it is a property of geometry, we can use it as an important design tool; because we can control reactor geometry, we can control the sizes of particles that we can settle. However, the size of particles that a sedimentation tank can capture is also a function of the viscosity of the water and thus is influenced by temperature.
 
-Note: there are a couple of different terms used to describe the sedimentation process. We can say that sedimentation tanks "capture" particles when particles are settled out. We can also say that sedimentation tanks "remove" particles. Both terms refer to the process of particles or floc settling out of suspension in water. If a particle is captured or removed by a sedimentation tank, it means that the particle is stuck in the tank and that water leaving the reactor will have fewer particles in it.
+Note: there are a couple of different terms used to describe the sedimentation process. We can say that sedimentation tanks "capture" particles when particles settled. We can also say that sedimentation tanks "remove" particles. Both terms refer to the process of particles or floc settling out of suspension in water. Sedimentation tanks separate some particles from the water and eventually divert those captured particles into a waste stream.
 
-We will develop our definition of settle capture velocity using examples of a horizontal flow and vertical flow sedimentation tanks. It should be noted that there are many idealizations and simplifications made for modeling sedimentation tanks. We assume that water will move through the reactor as expected (in the case of the horizontal flow sedimentation tank, from one end to the other), but we know that there are many more fluids complications than are described here. We assume that everything is moving at the average velocity and there are no turbulence or velocity profiles. For the time being, we will ignore what will happen to particles once they are captured by the sedimentation tank. Our intuition tells us that particles which settle will need to be removed somehow, and that is correct. This will be discussed in later sections. For now, we only care about capturing the particles, and later we will care about what we do with them once they are captured.
+We will develop our definition of settle capture velocity using examples of horizontal flow and vertical flow sedimentation tanks. It should be noted that there are many idealizations and simplifications made for modeling sedimentation tanks. We assume that water will move through the reactor as expected (in the case of the horizontal flow sedimentation tank, from one end to the other), but we know that there are many more fluids complications than are described here. We assume that everything is moving at the average velocity and there are no turbulence or velocity profiles. For the time being, we will ignore what will happen to particles once they are captured by the sedimentation tank. Our intuition tells us that particles which settle will need to be removed somehow, and that is correct. This will be discussed in later sections. For now, we only care about capturing the particles, and later we will care about what we do with them once they are captured.
 
 Horizontal Flow Sedimentation Tank
 ----------------------------------
 
 .. _figure_horizontal_flow_tank_base:
+
 .. figure:: Images/horizontal_flow_tank_base.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Horizontal flow sedimentation tank.
 
@@ -204,12 +209,13 @@ Let's begin with a few questions that will describe our horizontal flow sediment
 To determine this value, we can use the given volume and flow rate information by the following relationship:
 
 .. math::
+
   \theta = \frac{\rlap{-}V_{tank}}{Q}
 
 | Where:
-| :math:`\theta =` residence time [T]
-| :math:`\rlap{-}V_{tank} =` volume of the sedimentation tank [:math:`L^3`]
-| :math:`Q =` flow rate through the tank [:math:`\frac{L^3}{T}`]
+| :math:`\theta =` residence time :math:`[T]`
+| :math:`\rlap{-}V_{tank} =` volume of the sedimentation tank :math:`\left[L^3\right]`
+| :math:`Q =` flow rate through the tank :math:`\left[\frac{L^3}{T}\right]`
 
 2) In the "worst case scenario", how far must a particle fall to reach the bottom of the tank?
 
@@ -220,21 +226,25 @@ The "worst case scenario" is the condition in which a particle must travel the f
 We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, :math:`v_H`. Gravity is causing the particle to settle at its terminal velocity, :math:`v_t`. In order to reach the bottom, that settling velocity needs to be the capture velocity, :math:`v_c`, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in the following figure.
 
 .. _figure_horizontal_flow_tank_capture:
+
 .. figure:: Images/horizontal_flow_tank_capture.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Horizontal flow sedimentation tank with capture velocity.
 
     Horizontal flow sedimentation tank with capture velocity.
 
+
 Capture velocity can be determined by the distance that a particle must travel and the time that the particle has to travel.
 
 .. math::
+
   v_c = \frac{H}{\theta}
 
 We can make some substitutions into the equation for :math:`v_c` to solve for it in explicit terms of reactor plan view area. We are interested in plan view area because this will indicate the efficiency and cost of an associated reactor.
 
 .. math::
+
   v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}
 
   v_c = \frac{Q}{A_p}
@@ -251,8 +261,9 @@ To answer this question, think about the two extremes of our reactor.
 - We could have a small particle entering the reactor near the bottom, in a "best case scenario". In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be caputured by a tank designed for particles 35 :math:`\mu m` or larger, but it depends on the height at which they enter the reactor.
 
 .. _figure_horizontal_flow_tank_small_capture:
+
 .. figure:: Images/horizontal_flow_tank_small_capture.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Horizontal flow sedimentation tank with critical path and small particle.
 
@@ -263,8 +274,9 @@ Vertical Flow Sedimentation Tank
 We will complete the same exercise for vertical flow sedimentation tanks. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.
 
 .. _figure_vertical_flow_tank_base:
+
 .. figure:: Images/vertical_flow_tank_base.png
-    :height: 100px
+    :height: 500px
     :align: center
     :alt: Vertical flow sedimentation tank.
 
@@ -275,6 +287,7 @@ We will complete the same exercise for vertical flow sedimentation tanks. In ver
 The answer is the same for the horizontal flow sedimentation tank because this is a property of reactor flow rate and volume.
 
 .. math::
+
   \theta = \frac{\rlap{-}V_{tank}}{Q}
 
 | Where:
@@ -293,16 +306,19 @@ If a particle is falling at the same velocity that water is moving it, it will b
 We determined in the previous question that a particle must fall a distance :math:`H` in time :math:`\theta`. Therefore, we determine the same capture velocity for vertical flow sedimentation tanks as for horizontal flow sedimentation tanks.
 
 .. math::
+
   v_c = \frac{H}{\theta}
 
 We can the same substitutions to show,
 
 .. math::
+
   v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}
 
 Again, we find that capture velocity is,
 
 .. math::
+
   v_c = \frac{Q}{A_p}
 
 It doesn't matter whether water is flowing horizontally or vertically in the tank. What determines the capture velocity is the flow rate and the plan view area of the sedimentation tank.
@@ -354,8 +370,9 @@ The AguaClara treatment train is designed so that flow is driven by potential en
 In electrical circuits, electrons will travel the path of least resistance in a parallel path system. Water is similar in that it will flow in the path of least resistance.
 
 .. _figure_circuit_base:
+
 .. figure:: Images/circuit_base.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Sedimentation tank as a circuit.
 
@@ -379,8 +396,9 @@ Components of an AguaClara Sedimentation Tank
 In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.
 
 .. _figure_sed_tank_overview:
+
 .. figure:: Images/sed_tank_overview.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Overview of an AguaClara Sedimentation tank.
 
@@ -395,8 +413,9 @@ Influent Channel
 After water exits the flocculator, it is ready for sedimentation. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple sedimentation units operating in parallel; we call each of these sedimentation units a 'bay' or a 'tank'. Because there may be multiple sedimentation bays, we have to distribute flocculated water between the bays. To do this, we have an **influent channel**, which receives water from the flocculator and passes it to the sedimentation bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the sedimentation bays without allowing any settling of flocs in the influent channel. The minimum velocity in the influent channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each sedimentation bay.
 
 .. _figure_influent_channel_bays:
+
 .. figure:: Images/influent_channel_bays.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Influent channel with pipes leading to different sedimentation bays.
 
@@ -414,8 +433,9 @@ Bottom Geometry: Influent Manifold, Diffusers, and Jet Reverser
 Now, we will focus on a single bay of the sedimentation system. Flocculated water enters a pipe in the bottom of the influent channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the sedimentation bay. This section of pipe that distributes water at the bottom of the sedimentation bay is referred to as the **influent manifold**.
 
 .. _figure_influent_channel_manifold:
+
 .. figure:: Images/influent_channel_manifold.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Influent channel with pipe leading to one inlet manifold.
 
@@ -424,16 +444,18 @@ Now, we will focus on a single bay of the sedimentation system. Flocculated wate
 Water exits the influent manifold through a series of orifices and **diffusers** in the bottom of the pipe. Orifices refer to the holes that are drilled into the underside of the manifold while diffusers are what we call short stubs of pipe that extend down from the orifice, perpendicular to the influent manifold. The orifices and diffusers point down to the bottom of the sedimentation bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. The ends of the diffuser tubes are flattened so that they are thin rectangles and when placed side-by-side achieve a line-jet effect. The end of the influent manifold is capped.
 
 .. _figure_influent_manifold_diffuser_base:
+
 .. figure:: Images/influent_manifold_diffuser_base.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Influent manifold with diffusers.
 
     Influent manifold with diffusers.
 
 .. _figure_influent_manifold_diffuser_flow:
+
 .. figure:: Images/influent_manifold_diffuser_flow.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Influent manifold and diffuser flow paths.
 
@@ -451,16 +473,18 @@ However, the diffuser system was designed to greatly impact the overall flow dis
 The influent manifold diffuser system straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the sedimentation tank. Influent manifolds without flow straightening diffusers are commonly used in vertical flow sedimentation tanks including designs by leading manufacturers.
 
 .. _figure_flow_circulation:
+
 .. figure:: Images/flow_circulation.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Flow with a horizontal velocity component that causes problematic flow circulation.
 
     Flow with a horizontal velocity component that causes problematic flow circulation.
 
 .. _figure_flow_straightening:
+
 .. figure:: Images/flow_straightening.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation.
 
@@ -475,8 +499,9 @@ You may be wondering, why do we need a jet reverser in the first place? Why don'
 - The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements [[[[link]]]]. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc blanket, which will be discussed next.
 
 .. _figure_jet_placement:
+
 .. figure:: Images/jet_placement.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: The jet reverser and diffuser alignments; the offset jet is the most successful.
 
@@ -485,6 +510,7 @@ You may be wondering, why do we need a jet reverser in the first place? Why don'
 There is a lot of research interest in determining the optimal upflow velocity for floc blankets considering that high velocity is better for resuspension but breaks more flocs. Currently, AguaClara plants use an upflow velocity of 1 mm/s.
 
 .. _figure_flat_bottomed_tank:
+
 .. figure:: Images/flat_bottomed_tank.png
    :target: https://www.youtube.com/watch?v=04OksWoRmQI
    :width: 400px
@@ -498,22 +524,25 @@ As shown above, in a flat bottom geometry, flocs settle in the corners of the ta
 The influent manifold, diffusers, and jet reverser work with a **sloped bottom geometry** in an AguaClara plant. The slope on either side of the diffusers is at a 50 degree angle. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can fall into the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the main sedimentation basin. Sludge that is allowed to accumulate in the bottom of sedimentation tanks in tropical and temperate climates decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the sedimentation tank and cause a reduction in particle removal efficiency. The AguaClara sedimentation tank bottom geometry prevents sludge accumulation while also ensuring good flow distribution.
 
 .. _figure_sed_cross_section:
+
 .. figure:: Images/sed_cross_section.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Cross-section of the bottom of the sedimentation tank.
 
     Cross-section of the bottom of the sedimentation tank.
 
 .. _figure_bottom_of_sed_tank_detail:
+
 .. figure:: Images/bottom_of_sed_tank_detail.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Detail of the bottom of the sedimentation tank.
 
     Cross-section of the bottom of the sedimentation tank.
 
 .. _figure_Floc_Blanket_Floc_Hopper:
+
 .. figure:: Images/Floc_Blanket_Floc_Hopper.png
    :target: https://www.youtube.com/watch?v=2x12wGb7xZE
    :width: 400px
@@ -525,9 +554,10 @@ The influent manifold, diffusers, and jet reverser work with a **sloped bottom g
 So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates in the bay by creating a system to resuspend any settled flocs.
 
 .. _figure_diffuser_jetreverser:
+
 .. figure:: Images/diffuser_jetreverser.png
     :target: https://youtu.be/yJ-8g7vQTSM
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Distribution of flocculated water and resuspension of settling flocs.
 
@@ -536,14 +566,16 @@ So we know that the diffusers, jet reverser, and sloped bottom ensure that no sl
 What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
 
 .. _figure_jet_angle:
+
 .. figure:: Images/jet_angle.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Jet diameter and current of settled flocs.
 
     Jet diameter and current of settled flocs.
 
 .. _figure_diffuser_jet_reverser:
+
 .. figure:: Images/diffuser_jet_reverser.png
    :target: https://youtu.be/WEM-YyGITlQ
    :width: 400px
@@ -557,15 +589,17 @@ What are the failure modes for this system? For one, we need to ensure that the 
 [[needhelpquestion]]
 
 2) How water moves through the sedimentation tank
-==================================================
+
+============
 Floc Blanket
-----------------------------------------
+============
 
 The line jet from the diffusers enters the jet reverser to force flow up through the sedimentation bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed which is called a **floc blanket**. The bed is fluidized because flocs are kept in suspension by the upflowing water.
 
 For a floc blanket to form, a sedimentation system requires that 1) all flocs be returned to the bottom of the sedimentation tank and 2) requires that all settled flocs be resuspended by incoming water. As will be discussed soon, plate settlers are used to return flocs to the bottom of the bay, while the jet reverser and sloped bottom geometry allow for floc resuspension. Any surface with a horizontal component in a sedimentation tank must be sloped to allow settled flocs to return to the resuspension zone. A flat bottom geometry does not allow for the formation of a floc blanket, as discussed previously.
 
 .. _figure_floc_blanket_experiment:
+
 .. figure:: Images/floc_blanket_experiment.png
    :target: https://www.youtube.com/watch?v=w8ZFCz54IBs
    :width: 400px
@@ -604,11 +638,12 @@ Let's recap some important conclusions from this section on the floc blanket.
 - We do not know what exactly contributes to the ability of a floc blanket to resuspend or survive variable flow.
 
 Floc Hopper
-----------------------------------------
+-----------
 
-The **floc hopper** is a "weir" that provides an opportunity for floc consolidation. The floc hopper controls the depth of the floc blanket because as the floc blanket grows, it will eventually reach the top of the floc hopper. Because flocs are more dense than water, the flocs "spill" over the edge of the floc hopper which allows the floc blanket to stay a constant height while sludge accumulates and consolidates in the floc hopper.
+The **floc hopper** provides an opportunity for floc consolidation. The floc weir controls the depth of the floc blanket because as the floc blanket grows, it will eventually reach the top of the floc weir. Because flocs are more dense than water, the flocs "spill" over the edge of the floc weir which allows the floc blanket to stay a constant height while sludge accumulates and consolidates in the floc hopper.
 
 .. _figure_floc_hopper_highlight:
+
 .. figure:: Images/floc_hopper_highlight.png
    :target: https://youtu.be/xh9dTjWRoto
    :width: 400px
@@ -620,8 +655,9 @@ The **floc hopper** is a "weir" that provides an opportunity for floc consolidat
 Consolidated sludge in the bottom of the floc hopper is then removed from the sedimentation tank through small drain valve controlled by the operator. Floc hoppers in the lab-scale and PF300 setting are currently set at a 45 degree angle, but further optimization is needed.
 
 .. _figure_benchtop_sed:
+
 .. figure:: Images/benchtop_sed.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Benchtop sedimentation tank setup, highlighting the floc blanket and floc hopper.
 
@@ -648,8 +684,9 @@ The first thing that we will discuss is how flocs can settle on plates. To under
 We need particles to settle on the bottom plate for it to be effectively captured. Thus, the critical path can be shown by a floc that enters the plate settlers closest to the upper plate, because it will have the greatest distance to settle.
 
 .. _figure_plate_settler_critpath:
+
 .. figure:: Images/plate_settler_critpath.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Critical path between two plate settlers.
 
@@ -660,8 +697,9 @@ We need particles to settle on the bottom plate for it to be effectively capture
 Let's make a simplification and assume that water is flowing with uniform velocity between the plates, represented by a "top hat" velocity profile. This is a significant assumption, but it is used to help us understand the critical path. The fluid is carrying the floc between the inclined plates while gravity is pulling the floc down. Therefore, a particle must fall the vertical distance between the plates, which is the critical height, :math:`H_c`. The plates are positioned at an angle, :math:`\alpha`, to ensure that settling flocs slide down to the floc blanket. The critical height :math:`H_c` can be expressed in terms of plate settler length, :math:`L`, and plate settler angle, :math:`\alpha`, by :math:`H_c=\frac{S}{cos\alpha}`.
 
 .. _figure_plate_settler_critheight:
+
 .. figure:: Images/plate_settler_critheight.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Critical height between two plate settlers.
 
@@ -676,8 +714,9 @@ Taking the vertical component of the critical path, we see that the total vertic
 The fluid carries the floc between the plate settlers while gravity pulls the floc down. The velocity through the plate settlers has both a horizontal component, :math:`v_{P,H}`, and vertical component, :math:`v_{P,V}`, with a resultant force we call :math:`v_{\alpha}`.
 
 .. _figure_plate_settler_valpha:
+
 .. figure:: Images/plate_settler_valpha.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Velocity components between two plate settlers.
 
@@ -686,8 +725,9 @@ The fluid carries the floc between the plate settlers while gravity pulls the fl
 This means that the net vertical velocity :math:`v_{P,net}` is the vertical component of flow minus the settling velocity of the floc. Recall our previous discussion of terminal velocity and capture velocity; in this case, because we are designing a plate settler specifically to capture the critical particle, the terminal velocity equals the capture velocity. The terminal velocity is a function of the velocity that the critical particle settles at and the capture velocity is a function of the reactor geometry which we are designing to capture the critical particle. Thus, :math:`v_{P,net}=v_{P,V}-v_{c}`.
 
 .. _figure_plate_settler_vnet:
+
 .. figure:: Images/plate_settler_vnet.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Net velocity between two plate settlers.
 
@@ -697,23 +737,33 @@ From answering the questions above, we know that the particle must fall the dist
 
 Finding time by dividing by distance by velocity for each travel,
 
- :math:`Time = \frac{H_c}{v_c} = \frac{H}{v_{P,net}}`
+.. math::
 
-Substituting for :math:`v_{P,net} = v_{P,V}-v_{c}`,
+  Time = \frac{H_c}{v_c} = \frac{H}{v_{P,net}}
 
- :math:`Time = \frac{H_c}{v_c} = \frac{H}{v_{P,V}-v_{c}}`
+Substituting for.. math::v_{P,net} = v_{P,V}-v_{c}`,
+
+.. math::
+
+  Time = \frac{H_c}{v_c} = \frac{H}{v_{P,V}-v_{c}}
 
 Using trigonometric substitutions for :math:`H_c` and :math:`H`,
 
- :math:`Time = \frac{S}{v_ccos\alpha} = \frac{Lsin\alpha}{v_{P,V}-v_{c}}`
+.. math::
+
+  Time = \frac{S}{v_ccos\alpha} = \frac{Lsin\alpha}{v_{P,V}-v_{c}}
 
 Rearranging to solve for :math:`v_{c}`,
 
- :math:`v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}`
+.. math::
+
+  v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}
 
 Rearranging to solve for :math:`\frac{v_{P,V}}{v_{c}}`,
 
- :math:`\frac{v_{P,V}}{v_{c}} = 1+\frac{L}{S}cos\alpha sin\alpha`
+.. math::
+
+  \frac{v_{P,V}}{v_{c}} = 1+\frac{L}{S}cos\alpha sin\alpha
 
 The equation that we determined for critical velocity, :math:`v_c`, shows its dependence on plate settler geometry. Through another derivation, we can prove that by considering the total projected area over which particles can settle, we determine the same critical velocity.
 
@@ -721,19 +771,27 @@ Beginning with :math:`Q = vA`, we can can modify the equation to fit the specifi
 
 Using trigonometric substitutions, we know that :math:`\frac{v_{P,V}}{v_{\alpha}} = sin\alpha` and :math:`\frac{v_{P,V}}{sin\alpha} = v_{\alpha}`. So,
 
- :math:`Q = \frac{v_{P,V}SW}{sin\alpha}`
+.. math::
+
+  Q = \frac{v_{P,V}SW}{sin\alpha}
 
 Determining the horizontal projection of the plate settlers,
 
- :math:`S = Lcos\alpha + \frac{S}{sin\alpha}`
+.. math::
+
+  S = Lcos\alpha + \frac{S}{sin\alpha}
 
 Substituting for area, :math:`A`,
 
- :math:`A = (Lcos\alpha + \frac{S}{sin\alpha})W`
+.. math::
+
+  A = (Lcos\alpha + \frac{S}{sin\alpha})W
 
 Solving for :math:`v_c = \frac{Q}{A}`
 
- :math:`v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}`
+.. math::
+
+  v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}
 
 We can see that there are five parameters which will impact each other in our design :math:`v_{P,V}, v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`v_{P,V}, v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on how to design a plant [[]].
 
@@ -750,8 +808,9 @@ AguaClara plants can design for changes in the depth and/or plan view area of th
 What we really want to know is: what is the connection of spacing between plate settlers and performance?
 
 .. _figure_plate_settler_depth:
+
 .. figure:: Images/plate_settler_depth.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Relationship between plate settler length and sedimentation tank depth.
 
@@ -780,9 +839,10 @@ This is a very complicated question. We would expect big flocs to slide down bec
 As we have already suggested, small spacing between plates will cause more floc rollup due to the steeper resulting velocity profile between the plates.
 
 .. _figure_floc_rollup:
+
 .. figure:: Images/floc_rollup.png
     :target: https://youtu.be/cQJxLO0WOPA
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Floc rollup between two plates.
 
@@ -793,8 +853,9 @@ So what does this mean for plate settler spacing? Let's review some results from
 Reading the graph, we can see the line for 1 mm/s upflow velocity, :math:`v_{P,V}` [[I don't think this is the right variable name]], at 0.12 mm/s capture velocity requires a minimum plate spacing of about about 2.5 mm to prevent floc rollup. Now, let's interpret this result. If the upflow velocity increases, we see that the required spacing between plates increases. The results from these experiments will help us answer one of our previous questions: will little flocs or big flocs be most vulnerable to floc rollup? From the graph, we know that it is the little ones. Smaller floc terminal velocities indicate smaller particles, and the graph shows that smaller floc terminal velocities require larger distances of floc spacing to not roll up. The bigger the flocs, the smaller the spacing required to not roll up. Little flocs are harder to capture as you move plates closer together. Little flocs roll up first.
 
 .. _figure_floc_vsed:
+
 .. figure:: Images/floc_vsed.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Minimum plate settler spacing as a function of floc sedimentation velocity.
 
@@ -825,8 +886,9 @@ After asking the operators, we are told that there are not any bubbles in the se
 After asking the operators, we are told that the floc volcanoes appear in the early afternoon each day.
 
 .. _figure_temp_turbidity:
+
 .. figure:: Images/temp_turbidity.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Turbidity as a function of time in San Nicolas, Honduras.
 
@@ -840,8 +902,9 @@ But why does the temperature difference cause a problem for the plate settlers?
 The problem is that there is warmer water entering the sedimentation tank than what is in it. This temperature difference causes a density difference in the sedimentation tank and plate settlers. The less dense, warmer water rises to the top of the plate settlers while the cold water drops to the bottom of the plate. This creates a current, allowing water to flow up on the top and settle on the bottom. The temperature gradient changes slowly over a few hours.
 
 .. _figure_temp_tube_settler:
+
 .. figure:: Images/temp_tube_settler.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Hot water rising and cold water settling in a tube settler.
 
@@ -872,8 +935,9 @@ Submerged Effluent Manifold
 The **submerged effluent manifold**, sometimes called a launder, collects settled water from the sedimentation tank. It is a horizontal pipe that extends along the length of the tank and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the sedimentation tank. Recall that the influent manifold also uses a submerged pipe and orifice design to distribute flow. However, unlike the influent manifold, the effluent manifold does not include diffusers because we do not need to precisely control velocity and flow direction.
 
 .. _figure_effluent_manifold:
+
 .. figure:: Images/effluent_manifold.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Effluent manifold from the side- and top-view.
 
@@ -883,7 +947,13 @@ The orifices in the pipe are evenly distributed along the length of the pipe to 
 
 Are there effluent manifold exit losses? What type of head loss would it be? This head loss is a result of exit loss into its receiving channel. Is it "good" or "bad"? This head loss is also "good" head loss because it impacts all flow paths the same; each sedimentation tank bay and all water within a single bay is subject to the same amount of exit loss.
 
-Why did AguaClara design the effluent manifold to be submerged? It is designed to be submerged because sometimes there are particles or substances that rise to the top of sedimentation tanks and float on the water surface. These particles or substances may be flocs that escaped capture and remain buoyant, or may be foam or scum that results from organic matter in the water. No matter what it is that is rising to the water surface, we want to avoid it entering the settled water effluent pipe. Placing the effluent manifold below the surface allows particles or substances floating on the surface to remain separate from the effluent water headed towards filtration. Operators can then skim the water surface to remove and dispose of anything that floats.
+Why did AguaClara design the effluent manifold to be submerged? There are 3 main reasons.
+
+#. It is designed to be submerged because sometimes there are particles or substances that rise to the top of sedimentation tanks and float on the water surface. These particles or substances may be flocs that escaped capture and remain buoyant, or may be foam or scum that results from organic matter in the water. No matter what it is that is rising to the water surface, we want to avoid it entering the settled water effluent pipe. Placing the effluent manifold below the surface allows particles or substances floating on the surface to remain separate from the effluent water headed towards filtration. Operators can then skim the water surface to remove and dispose of anything that floats.
+
+#. The launders were also designed to be submerged to simplify construction. Effluent launders that also act as weirs must be installed perfectly level. This is difficult to ensure during construction and thus we have elected to use a single weir to regulate the water level in all of the sedimentation tanks. The water from all of the sedimentation tanks in one treatment train joins together in a common channel before flowing over the exit weir.
+
+#. The submerged launder and exit weir system also makes it possible to refil and empty sedimentation tank with clean water. More on this later! [[Need to link to this explanation.]]
 
 Why are the orifices in the effluent manifold located at the top of the pipe?
 They are located on the top to promote even flow collection and for ease of operation and maintenance. The orifices need to be either located on the top or bottom so that they are symmetrical about the tank because if the orifices were put on the sides, then they might not draw water evenly from the entire tank. So, we are to choose between the top or the bottom; which would be better for operation and maintenance? The top is better because orifices located on the top of the pipe can be easily observed and maintained by operators in case any clogging occurs. We also want to limit the number of flocs that rise through the plate settlers and enter the effluent manifold. Locating the orifices on the top discourages that from happening by not drawing up directly from the top of plate settlers and by giving more time for flocs to potentially settle.
@@ -891,21 +961,23 @@ They are located on the top to promote even flow collection and for ease of oper
 Exit Weir and Effluent Channel
 ----------------------------------------
 
-The submerged effluent manifold transports water from the sedimentation tank to a channel that runs perpendicular to the sedimentation bays. The channel collects water from all of the sedimentation bays. Water leaves this channel by flowing over a small wall, called the **exit weir**. The exit weir is used as a flow control device because it is the free-fall that controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and sedimentation tank. In construction, great care is taken to ensure that this wall is precise and level.
+The submerged effluent manifold transports water from the sedimentation tank to a channel that runs perpendicular to the sedimentation bays. The channel collects water from all of the sedimentation bays. Water leaves this channel by flowing over a small wall, called the **exit weir**. The sedimentation tank exit weir controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and sedimentation tank. In construction, great care is taken to ensure that this weir is at the right elevation and is level.
 
-After the water flows over the exit weir, it is collected in the **effluent channel**. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box. Like the sedimentation tank influent channel, the effluent channel is located directly next to the drain channel. This allows the operator to remove poorly settled water from the treatment train. If an operator observes poor sedimentation, they can plug the entrance hole to the filter box, allowing the effluent channel to fill with water. Once water reaches the height of the wall separating it from the drain channel, the water will pour over from the influent channel into the drain channel.
+After the water flows over the exit weir, it is collected in the **effluent channel**. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box. [[ This following explanation isn't correct. It isn't possible for water to cross the wall between inlet and outlet channels Like the sedimentation tank influent channel, the effluent channel is located directly next to the drain channel. This allows the operator to remove poorly settled water from the treatment train. If an operator observes poor sedimentation, they can plug the entrance hole to the filter box, allowing the effluent channel to fill with water. Once water reaches the height of the wall separating it from the drain channel, the water will pour over from the influent channel into the drain channel. Poorly settled water can be drained from the inlet channel to the filters. see https://cad.onshape.com/documents/5a7585ae3248902548b02541/w/349594d2eb30a283f019807e/e/add8912cf760c28f462bd04f.]]
 
 .. _figure_channel_labeled:
+
 .. figure:: Images/channel_labeled.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Image of sedimentation channels.
 
     Image of sedimentation channels.
 
 .. _figure_channel_labeled_cad:
+
 .. figure:: Images/channel_labeled_cad.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Figure of sedimentation channels.
 
@@ -915,8 +987,6 @@ After the water flows over the exit weir, it is collected in the **effluent chan
 Sedimentation Conclusions and Review
 =======================================
 
-Conclusions
---------------------------------
 
 You have now been introduced to the AguaClara sedimentation tank in three parts: 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank. This introduction should allow you to understand the components of the sedimentation unit process, the purpose of each component, and AguaClara-specific innovations.
 
@@ -933,8 +1003,9 @@ Let's recap some important points about the sedimentation tank.
 - There is "good" head loss introduced by the influent manifold entrance, diffusers, effluent manifold orifices, and effluent manifold exit. There is "bad" head loss introduced by pressure recovery in the influent channel, influent manifold, and effluent manifold. Even flow distribution is achieved by ensuring that "good" head loss dominates through intentional design.
 
 .. _figure_circuit_full:
+
 .. figure:: Images/circuit_full.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Sedimentation tank as a circuit, showing "good" and "bad" head loss.
 
@@ -969,8 +1040,9 @@ To understand how water flows in the sedimentation tank, we must understand how 
 | :math:`W_{Sed} =` width of each sedimentation tank
 
 .. _figure_sed_tank_flow_conserve:
+
 .. figure:: Images/sed_tank_flow_conserve.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
 
@@ -1042,24 +1114,32 @@ Let's start with the relationships that we already know:
 :math:`v_{P,V}*S = v_{A,V}*B` and :math:`B = S+T`
 
 .. _figure_SvsBplatesettlers:
+
 .. figure:: Images/SvsBplatesettlers.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Thick plate settlers.
 
     Thick plate settlers.
 
 .. _figure_plate_settler_base:
+
 .. figure:: Images/plate_settler_base.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Plate settlers.
 
     Plate settlers.
 
+[[you are using inline equations rather than equations that are numbered extensively below. I think it is better to use numbered equations]]
+
 Solving for :math:`v_{P,V}`, we rearrange and substitute by,
 
- :math:`v_{P,V}*S = v_{A,V}*(S+T)`
+.. math::
+
+  v_{P,V}*S = v_{A,V}*(S+T)
+
+[[I suggest switching to this format for equations that are on a single line. Reserve the :math: format for equations that are in a sentence.]]
 
  :math:`v_{P,V} = \frac{v_{A,V}*(S+T)}{S}`
 
@@ -1099,8 +1179,9 @@ The AguaClara plate settler design approach is summarized in the following table
 +----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
 
 .. _figure_plate_settler_model_table:
+
 .. figure:: Images/plate_settler_model_table.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Plate settler models and relevant equations.
 
@@ -1124,21 +1205,24 @@ As has been discussed, floc rollup is a failure mode of plate settler performanc
 We will solve for both the plate settler and tube settler conditions.
 
 1) Find the velocity gradient next to the plate:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+^^^^^^^^^^^^^
 Plate Settler
 """""""""""""
 
 .. _figure_plate_settler_boundary_conditions:
+
 .. figure:: Images/plate_settler_boundary_conditions.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Boundary conditions in plate settlers.
 
     Boundary conditions in plate settlers.
 
 .. _figure_floc_rollup_base:
+
 .. figure:: Images/floc_rollup_base.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Velocity profile between plate settlers.
 
@@ -1199,12 +1283,13 @@ Simplifying the :math:`(\frac{du}{dy})_{y=0}`, we have the velocity gradient as 
  :math:`\frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{6 v_{\alpha}}{S} `
 
 .. _figure_floc_rollup_step1:
-.. figure:: Images/floc_rollup_step1.png
-  :height: 100px
-  :align: center
-  :alt: Velocity gradient next to the plate.
 
-  Velocity gradient next to the plate.
+.. figure:: Images/floc_rollup_step1.png
+   :height: 300px
+   :align: center
+   :alt: Velocity gradient next to the plate.
+
+   Velocity gradient next to the plate.
 
 
 Tube Settler
@@ -1248,8 +1333,9 @@ Substituting by the trigonometric relationship :math:`v_{\alpha} = (\frac{v_{P,V
  :math:`v_{\alpha} \approx \frac{3 v_{P,V} D}{Ssin\alpha} `
 
 .. _figure_floc_rollup_step2:
+
 .. figure:: Images/floc_rollup_step2.png
-   :height: 100px
+   :height: 300px
    :align: center
    :alt: Fluid velocity at the center of the floc.
 
@@ -1268,8 +1354,9 @@ We can rearrange this equation to solve for :math:`D` by
 We will need this equation for :math:`D` in the next step.
 
 .. _figure_floc_rollup_step3:
+
 .. figure:: Images/floc_rollup_step3.png
-   :height: 100px
+   :height: 300px
    :align: center
    :alt: Terminal velocity of the floc down the plate (for the case of zero velocity fluid).
 
@@ -1315,8 +1402,9 @@ Flow through the sedimentation tank is controlled by head loss in an attempt to 
 Let's start with a force balance. Assume that there is a fully established velocity profile that is parabolic with laminar flow. The forces that we care about are shear forces on the walls of the plate settlers and the differential pressure from flow in the direction of the velocity.
 
 .. _figure_plate_settler_headloss_diag:
+
 .. figure:: Images/plate_settler_headloss_diag.png
-   :height: 100px
+   :height: 300px
    :align: center
    :alt: Velocity, shear forces, and pressure loss through plate settlers.
 
@@ -1357,8 +1445,9 @@ Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
 Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}` [[help]]. The resulting two plots show how head loss and velocity relate to plate settlers.
 
 .. _figure_plate_settler_headloss_spacing:
+
 .. figure:: Images/plate_settler_headloss_spacing.png
-   :height: 100px
+   :height: 300px
    :align: center
    :alt: Head loss as a function of plate settler spacing.
 
@@ -1405,7 +1494,7 @@ The mass of water in the floc blanket is related to the volume fraction of the f
 
 Now, we know how much clay and water is in our system. The density of the system, neglecting the addition of coagulant, is,
 
- :math:`\rho_{fb} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{fb}}`
+.. math:: \rho_{fb} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{fb}}
 
 Substituting for :math:`m_{clay}` and :math:`m_{H_2O}`,
 
@@ -1419,7 +1508,7 @@ AguaClara researchers in the lab developed an empirical equation through experim
 
 :math:`\rho_{fb} = 0.687C_{clay} + \rho_{H_2O}`
 
-Comparing the empirical equation to the one determined by first principles, it clear that the coefficient,
+Comparing the empirical equation to the one determined by first principles, it is clear that the coefficient,
 
 :math:`\left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right) = 0.687`
 
@@ -1468,16 +1557,18 @@ We can plot our results for :math:`G` over a range of typical floc blanket conce
 We can plot our results for :math:`G\theta` by multiplying :math:`G` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`G\theta` ranges from 2,000 to 6,000. Compare this to the :math:`G\theta = 20,000` for the flocculator used in experiments [[[[Garland]]]].
 
 .. _figure_lab_setup:
+
 .. figure:: Images/lab_setup.png
-   :height: 100px
+   :height: 300px
    :align: center
    :alt: Lab setup for flocculator, half-sedimentation tank, and plate settler testing.
 
    Lab setup for flocculator, half-sedimentation tank, and plate settler testing.
 
 .. _figure_floc_conc_G:
+
 .. figure:: Images/floc_conc_G.png
-   :height: 100px
+   :height: 300px
    :align: center
    :alt: Velocity gradient and collision potential as a function of floc blanket concentration.
 
@@ -1487,12 +1578,39 @@ How does such a small :math:`G\theta` cause such a large reduction in turbidity?
 
 Experimental data helps explain this. Two systems were set up: one had a flocculator where :math:`G\theta = 20,000` with a floc blanket where :math:`G\theta = 4,000`; the other just had a flocculator where :math:`G\theta = 24,000`. Using the same influent water quality and coagulant dosing, we find that the first system with the flocculator and floc blanket performed better than the second system, even though the overall :math:`G\theta` values were the same.
 
-To understand this, we have to review assumptions in the derivation for :math:`G`. Recall our assumption that fluid shear promotes the collision of two primary particles instead of the collision of primary particles with existing, large flocs. If our assumption was true, we would expect to see no difference between our two experimental setups. However, because we know that the two experimental setups did have different results, our assumption must be false because the assumption does not explain or account for these differences. There must be another mechanism occuring to explain why the floc blanket greatly improves treatment quality. This leads us to believe that the flocs in the floc blanket must be more involved than simply providing shear and velocity gradients; they must be involved in some collisions with the small particles coming through the floc blanket.
+To understand this, we have to review assumptions in the derivation for :math:`G`. Recall our assumption that fluid shear promotes the collision of two primary particles instead of the collision of primary particles with existing, large flocs. If our assumption was true, we would expect to see no difference between our two experimental setups. However, because we know that the two experimental setups did have different results, our assumption must be false because the assumption does not explain or account for these differences. There must be another mechanism occurring to explain why the floc blanket greatly improves treatment quality. This leads us to believe that the flocs in the floc blanket must be more involved than simply providing shear and velocity gradients; they must be involved in some collisions with the small particles coming through the floc blanket.
 
 This highlights an important distinction:
 
 #. The model created by the original derivation assumption would suggests that flocs in the floc blanket are inert - simply occupying space and causing there to be head loss in the floc blanket - without being involved in any collisions. This model is disproved through the experimental analysis of the two experimental setups.
 #. The model created after the analysis of experimental results suggests that flocs in the floc blanket are not inert - they are involved in collisions with small particles entering the floc blanket - and are growing in size. The model is supported through the experimental analysis.
+
+Flocculator and Floc Blanket Paradox
+====================================
+
+We now have a very interesting apparent contradiction between our conclusions about flocculation and floc blankets. We previously concluded that primary particles do not collide with and attach to flocs in flocculators. This assumption is required to explain experimental observations. Indeed, if primary particles could attach to flocs in a flocculator, then high turbidity events with appropriate coagulant dosages should result in super performance because there would be so many opportunities for collisions between large flocs and primary particles. This is not what we observe.
+
+The contradiction is that now we conclude that primary particles must be attaching to flocs in the floc blanket! Both of these conclusions are based on a combination of experimental measurements and careful application of models. If these apparently contradictory conclusions are both correct, then there must be some fundamental difference between the particle interactions in flocculators and floc blankets.
+
+In both environments the flow around the flocs is dominated by viscous forces. The source of the fluid deformation is different in these two flows. In the floculator the source of the fluid deformation is from turbulent kinetic energy that is dissipating by deforming (shearing) the fluid. In the floc blanket the source of fluid deformation is from the gravitational pull on the flocs. The flocs are moving relative to the fluid and the fluid is being deformed as the flocs move through the fluid.
+
+.. _table_flocculator_vs_floc_blanket:
+
+.. csv-table:: Comparison between flocculator and floc blanket.
+   :header: "Property", "Flocculator", "Floc blanket"
+   :align: center
+
+   Velocity gradient, ~100 Hz, x Hz
+   :math:`G\theta`, "20,000 - 40,000", "x,000 to y,000"
+   energy source for fluid deformation, turbulence, floc drag
+   flow regime at floc length scale, shear flow, velocity field is perturbed by falling flocs
+   flocs are..., rotating from fluid shear, falling due to gravity
+   flocs have a stagnation point, no, yes
+
+Flocs that are rotating in a shear flow drag a boundary layer of fluid with them as they rotate. This boundary layer of fluid prevents any approaching fluid from penetrating to the surface of the floc. There is no stagnation point on the floc! This means that approaching particles are swept around the floc due to the presence of the boundary layer. The only way for a particle to collide with a large floc is for the particle to be large enough that it can penetrate through the boundary layer even though the center of the particle continues to follow the streamline around the boundary layer of the floc.
+
+Flocs that are falling through a fluid that is not undergoing significant shear have stagnation points on the upstream side of the flocs and thus there exists a small amount of fluid that gets close enough to the floc near the stagnation point for small particles to collide with the floc.
+
 
 Diffuser Design
 ======================
@@ -1500,8 +1618,9 @@ Diffuser Design
 Diffusers are shaped so that they remain a circular pipe in one end that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle. Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the sedimentation tank. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form. This metal form is sized so that the target shape is achieved.
 
 .. _figure_BvsS_diffuser:
+
 .. figure:: Images/BvsS_diffuser.png
-    :height: 100px
+    :height: 300px
     :align: center
     :alt: Diagram of diffuser exit.
 
@@ -1549,8 +1668,9 @@ Recall that a *vena contracta* is associated with a change in pressure that caus
 By Bernoulli, if the pressures between the exit of the diffuser to the exit of the jet reverser are equal then the velocities must also be equal. Bernoulli is applicable here because there is no flow expansion yet. The shear along the wall of the jet reverser is insignificant due to the short flow path. The water accelerates to account for the directional change but the absolute velocity does not change as it goes around the jet reverser.
 
 .. _figure_Wdiff_Wjet:
+
 .. figure:: Images/Wdiff_Wjet.png
-    :height: 100px
+    :height: 600px
     :align: center
     :alt: Diagram of diffuser exit and jet.
 
