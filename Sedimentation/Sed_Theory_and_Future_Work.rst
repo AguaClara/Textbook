@@ -4,12 +4,17 @@
 ***************************************
 Sedimentation Theory and Future Work
 ***************************************
+Unsolved sedimentation tank failure modes:
+
+#. Floc volcanoes and temperature-induced flow circulations [[[[link]]]]
+#. Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.
+#. Slime growth from iron-oxidizing bacteria.
+#. NOM impact on floc density
 
 .. _Floc_recycle:
 
 Floc recycle
 ==================
-
 
 We hypothesize that the flocs in floc blankets serve as collectors that primary particles attach to. We suspect that collisions between primary particles and large flocs are possible in the sedimentation tank because the rotational velocity of the flocs is small relative to the sedimentation velocity of the flocs. If the rotational velocity of the flocs is small, then a stagnation point will exist on the floc and a finite flow of fluid will come within a primary particle radius of the floc. Thus we expect primary particle removal in floc blankets to be proportional to the number of collectors that a primary particle passes while in the floc blanket.
 
