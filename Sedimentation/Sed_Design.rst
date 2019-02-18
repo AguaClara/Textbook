@@ -850,7 +850,7 @@ As we have already suggested, small spacing between plates will cause more floc 
 
 So what does this mean for plate settler spacing? Let's review some results from lab experiments. The following graph shows minimum plate settler spacing (mm) as a function of floc terminal velocity (mm/s). Some important things to note are that AguaClara plate settlers are designed for a capture velocity of 0.12 mm/s (recall that this capture velocity means that we want to capture flocs that are settling at 0.12 mm/s and faster). Before AguaClara filters were designed and deployed, AguaClara adopted the 0.12 mm/s capture velocity in an effort to reduce effluent turbidity as much as possible.
 
-Reading the graph, we can see the line for 1 mm/s upflow velocity, :math:`v_{P,V}` [[I don't think this is the right variable name]], at 0.12 mm/s capture velocity requires a minimum plate spacing of about about 2.5 mm to prevent floc rollup. Now, let's interpret this result. If the upflow velocity increases, we see that the required spacing between plates increases. The results from these experiments will help us answer one of our previous questions: will little flocs or big flocs be most vulnerable to floc rollup? From the graph, we know that it is the little ones. Smaller floc terminal velocities indicate smaller particles, and the graph shows that smaller floc terminal velocities require larger distances of floc spacing to not roll up. The bigger the flocs, the smaller the spacing required to not roll up. Little flocs are harder to capture as you move plates closer together. Little flocs roll up first.
+Reading the graph, we can see the line for 1 mm/s upflow velocity in the sedimentation tank, :math:`v_{S,V}`, at 0.12 mm/s capture velocity requires a minimum plate spacing of about about 2.5 mm to prevent floc rollup. Now, let's interpret this result. If the upflow velocity increases, we see that the required spacing between plates increases. The results from these experiments will help us answer one of our previous questions: will little flocs or big flocs be most vulnerable to floc rollup? From the graph, we know that it is the little ones. Smaller floc terminal velocities indicate smaller particles, and the graph shows that smaller floc terminal velocities require larger distances of floc spacing to not roll up. The bigger the flocs, the smaller the spacing required to not roll up. Little flocs are harder to capture as you move plates closer together. Little flocs roll up first.
 
 .. _figure_floc_vsed:
 
@@ -961,9 +961,7 @@ They are located on the top to promote even flow collection and for ease of oper
 Exit Weir and Effluent Channel
 ----------------------------------------
 
-The submerged effluent manifold transports water from the sedimentation tank to a channel that runs perpendicular to the sedimentation bays. The channel collects water from all of the sedimentation bays. Water leaves this channel by flowing over a small wall, called the **exit weir**. The sedimentation tank exit weir controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and sedimentation tank. In construction, great care is taken to ensure that this weir is at the right elevation and is level.
-
-After the water flows over the exit weir, it is collected in the **effluent channel**. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box. [[ This following explanation isn't correct. It isn't possible for water to cross the wall between inlet and outlet channels Like the sedimentation tank influent channel, the effluent channel is located directly next to the drain channel. This allows the operator to remove poorly settled water from the treatment train. If an operator observes poor sedimentation, they can plug the entrance hole to the filter box, allowing the effluent channel to fill with water. Once water reaches the height of the wall separating it from the drain channel, the water will pour over from the influent channel into the drain channel. Poorly settled water can be drained from the inlet channel to the filters. see https://cad.onshape.com/documents/5a7585ae3248902548b02541/w/349594d2eb30a283f019807e/e/add8912cf760c28f462bd04f.]]
+The submerged effluent manifold transports water from the sedimentation tank to a channel that runs perpendicular to the sedimentation bays. The channel collects water from all of the sedimentation bays. Water leaves this channel by flowing over a small wall, called the **exit weir**. The sedimentation tank exit weir controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and sedimentation tank. In construction, great care is taken to ensure that this weir is at the right elevation and is level. After the water flows over the exit weir, it is collected in the **effluent channel**. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box.
 
 .. _figure_channel_labeled:
 
@@ -1111,7 +1109,9 @@ From the relationship that :math:`v_{P,V}*S = v_{A,V}*B`, we can solve for :math
 
 Let's start with the relationships that we already know:
 
-:math:`v_{P,V}*S = v_{A,V}*B` and :math:`B = S+T`
+.. math::
+
+  v_{P,V}*S = v_{A,V}*B` and :math:`B = S+T
 
 .. _figure_SvsBplatesettlers:
 
@@ -1131,33 +1131,41 @@ Let's start with the relationships that we already know:
 
     Plate settlers.
 
-[[you are using inline equations rather than equations that are numbered extensively below. I think it is better to use numbered equations]]
-
 Solving for :math:`v_{P,V}`, we rearrange and substitute by,
 
 .. math::
 
   v_{P,V}*S = v_{A,V}*(S+T)
 
-[[I suggest switching to this format for equations that are on a single line. Reserve the :math: format for equations that are in a sentence.]]
+.. math::
 
- :math:`v_{P,V} = \frac{v_{A,V}*(S+T)}{S}`
+  v_{P,V} = \frac{v_{A,V}*(S+T)}{S}
 
 We also already know from our discussion of plate settlers that we can relate capture velocity, :math:`v_c`, to :math:`S, L, \alpha`, and :math:`v_{P,V}` by, [[link to previous discussion]]
 
- :math:`v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}`
+.. math::
+
+  v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}
 
 Substitute for :math:`v_{P,V} = \frac{v_{A,V}*(S+T)}{S}` by,
 
- :math:`v_c = (\frac{S}{Lsin\alpha cos\alpha + S})(\frac{v_{A,V}*(S+T)}{S})`
+.. math::
+
+  v_c = (\frac{S}{Lsin\alpha cos\alpha + S})(\frac{v_{A,V}*(S+T)}{S})
 
 Now, we can use this form of the capture velocity equation to solve for :math:`B` or :math:`L`, as shown by,
 
- :math:`B = \frac{Lsin\alpha cos\alpha - T}{\frac{v_{P,V}}{v_c}-1}`
+.. math::
 
- :math:`L = \frac{B(\frac{v_{P,V}}{v_c}-1) + T}{sin\alpha cos\alpha}`
+  B = \frac{Lsin\alpha cos\alpha - T}{\frac{v_{P,V}}{v_c}-1}
 
- :math:`L = \frac{S(\frac{v_{P,V}}{v_c}-1) + T(\frac{v_{P,V}}{v_c})}{sin\alpha cos\alpha}`
+.. math::
+
+  L = \frac{B(\frac{v_{P,V}}{v_c}-1) + T}{sin\alpha cos\alpha}
+
+.. math::
+
+  L = \frac{S(\frac{v_{P,V}}{v_c}-1) + T(\frac{v_{P,V}}{v_c})}{sin\alpha cos\alpha}
 
 The AguaClara plate settler design approach is summarized in the following table:
 
@@ -1230,57 +1238,91 @@ Plate Settler
 
 We begin by describing the conditions of infinite horizontal plates.
 
-:math:`\frac{y^2}{2}\frac{dp}{dx} + Ay + B = \mu u` [[need explanation of variables and where this came from]]
+.. math::
+
+  \frac{y^2}{2}\frac{dp}{dx} + Ay + B = \mu u [[need explanation of variables and where this came from]]
 
 We employ the no-slip condition to solve for the constants A and B. The no-slip condition is that :math:`u = 0` at :math:`y = 0` and :math:`y = S`, where :math:`u` is the horizontal velocity component, :math:`y` is the location in the y-axis direction between plates, and :math:`S` is the spacing between plates.
 
 at :math:`u = 0` and :math:`y = 0`:
 
- :math:`\frac{0}{2}\frac{dp}{dx} + A*0 + B = \mu *0`
+.. math::
 
- :math:`B = 0`
+  \frac{0}{2}\frac{dp}{dx} + A*0 + B = \mu *0
+
+.. math::
+
+  B = 0
 
 at :math:`u = 0` and :math:`y = S`, the solving for A:
 
- :math:`\frac{S^2}{2}\frac{dp}{dx} + AS + 0 = \mu *0`
+.. math::
 
- :math:`\frac{S^2}{2}\frac{dp}{dx} + AS = 0`
+  \frac{S^2}{2}\frac{dp}{dx} + AS + 0 = \mu *0
 
- :math:`A = \frac{-S}{2}\frac{dp}{dx}`
+.. math::
+
+  \frac{S^2}{2}\frac{dp}{dx} + AS = 0
+
+.. math::
+
+  A = \frac{-S}{2}\frac{dp}{dx}
 
 Our initial equation can be updated as,
 
-:math:`\frac{y^2}{2}\frac{dp}{dx} + \frac{-S}{2}\frac{dp}{dx}y + B = \mu u`
+.. math::
+
+  \frac{y^2}{2}\frac{dp}{dx} + \frac{-S}{2}\frac{dp}{dx}y + B = \mu u
 
 If we let :math:`\frac{dp}{dx}` be negative [[??]], then we can solve for :math:`\tau` [[?]].
 
- :math:`\mu(\frac{du}{dy}) = y \frac{dp}{dx} + A`
+.. math::
 
- :math:`\tau = (y - \frac{S}{2}) \frac{dp}{dx}`
+  \mu(\frac{du}{dy}) = y \frac{dp}{dx} + A
+
+.. math::
+
+  \tau = (y - \frac{S}{2}) \frac{dp}{dx}
 
 Determining the average velocity between plates, :math:` v_{\alpha}`, [[??]]
 
- :math:`u = \frac{y(y-S)}{2\mu} \frac{dp}{dx}`
+.. math::
 
- :math:` v_{\alpha} = \frac{q}{S} = \frac{1}{S} \int_{0}^{S}udy = \frac{1}{S} \int_{0}^{S} (\frac{y^2 - Sy}{2\mu} (\frac{dp}{dx}))dy`
+  u = \frac{y(y-S)}{2\mu} \frac{dp}{dx}
+
+.. math::
+
+  v_{\alpha} = \frac{q}{S} = \frac{1}{S} \int_{0}^{S}udy = \frac{1}{S} \int_{0}^{S} (\frac{y^2 - Sy}{2\mu} (\frac{dp}{dx}))dy
 
 Integrating to get average velocity, then solving for :math:`\frac{dp}{dx}`,
 
- :math:` v_{\alpha} = \frac{S^2}{12\mu} \frac{dp}{dx}`
+.. math::
 
- :math:` \frac{dp}{dx} = \frac{12\mu v_{\alpha} }{S^2}`
+  v_{\alpha} = \frac{S^2}{12\mu} \frac{dp}{dx}
+
+.. math::
+
+  \frac{dp}{dx} = \frac{12\mu v_{\alpha} }{S^2}
 
 Using Navier-Stokes to model the flow between the plates, and substituting our equation for :math:` \frac{dp}{dx}`, [[??]]
 
- :math:`(\frac{du}{dy})_{y=0} = \frac{-S}{2\mu} \frac{dp}{dx} `
+.. math::
 
- :math:`(\frac{du}{dy})_{y=0} = \frac{-S}{2\mu} \frac{12\mu v_{\alpha} }{S^2} `
+  (\frac{du}{dy})_{y=0} = \frac{-S}{2\mu} \frac{dp}{dx}
+
+.. math::
+
+  (\frac{du}{dy})_{y=0} = \frac{-S}{2\mu} \frac{12\mu v_{\alpha} }{S^2}
 
 Simplifying the :math:`(\frac{du}{dy})_{y=0}`, we have the velocity gradient as function of average velocity for plate geometry as,
 
- :math:`(\frac{du}{dy})_{y=0} = \frac{6 v_{\alpha}}{S}`
+.. math::
 
- :math:`\frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{6 v_{\alpha}}{S} `
+  (\frac{du}{dy})_{y=0} = \frac{6 v_{\alpha}}{S}
+
+.. math::
+
+  \frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{6 v_{\alpha}}{S}
 
 .. _figure_floc_rollup_step1:
 
@@ -1296,41 +1338,63 @@ Tube Settler
 """""""""""""
 For tube settlers, we will assume laminar flow through circular tubes. :math:`R` is the radius of the tube, and we assume that the maximum velocity is when :math:`r = 0`. The velocity distribution is paraboloid of revolution, therefore average velocity, :math:`v`, is half of the maximum velocity, :math:`v_{max}`. So, :math:`v = \frac{1}{2}v_{max}`. We also know that :math:`Q = vA` and :math:`Q = v \pi R^2`. In the case of the tube settler, :math:`\frac{dp}{dx}` is the pressure gradient in the direction of flow, not the pressure gradient due to changes in elevation.
 
- :math:`v_{\alpha} = \frac{r^2 - R^2}{4\mu} \frac{dp}{dx}`
+.. math::
 
- :math:`v_{max} = - \frac{R^2}{4\mu} \frac{dp}{dx}`
+  v_{\alpha} = \frac{r^2 - R^2}{4\mu} \frac{dp}{dx}
 
- :math:`v = - \frac{R^2}{8\mu} \frac{dp}{dx}`
+.. math::
 
- :math:`Q = - \frac{\pi R^4}{8\mu} \frac{dp}{dx}`
+  `v_{max} = - \frac{R^2}{4\mu} \frac{dp}{dx}
+
+.. math::
+
+  v = - \frac{R^2}{8\mu} \frac{dp}{dx}
+
+.. math::
+
+  Q = - \frac{\pi R^4}{8\mu} \frac{dp}{dx}
 
 Rearranging the flow equation :math:`Q` to solve for :math:`\frac{dp}{dx}`,
 
- :math:`\frac{dp}{dx} = - \frac{8 \mu Q}{\pi R^4}`
+.. math::
+
+  \frac{dp}{dx} = - \frac{8 \mu Q}{\pi R^4}
 
 Plugging :math:`\frac{dp}{dx}` into the original equation fo :math:`v_{\alpha}`,
 
-  :math:`v_{\alpha} = -2Q \frac{r^2 - R^2}{\pi R^4} `
+.. math::
 
-  :math:`\frac{ dv_{\alpha} }{ dr_{r=R} } = \frac{-4Q}{\pi R^3} `
+  v_{\alpha} = -2Q \frac{r^2 - R^2}{\pi R^4}
+
+.. math::
+
+  \frac{ dv_{\alpha} }{ dr_{r=R} } = \frac{-4Q}{\pi R^3}
 
 The resulting velocity gradient as function of average velocity for tube geometry is,
 
-  :math:`\frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{8v_{\alpha}}{D} `
+.. math::
+
+  \frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{8v_{\alpha}}{D}
 
 2) Find the fluid velocity at the center of the floc:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Now, we want to determine the velocity at the center of the floc. For linearized plates, the plate geometry condition, we determined that,
 
-:math:`\frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{6 v_{\alpha}}{S} `
+.. math::
+
+  \frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{6 v_{\alpha}}{S}
 
 The center of the floc is approximately half of the floc diameter, :math:`D`. So, to find the fluid velocity at the center of the floc, we linearize the differential and plug in :math:`\frac{D}{2}` to yield,
 
- :math:`v_{\alpha} \approx (\frac{6 v_{\alpha}}{S}) (\frac{D}{2}) `
+.. math::
+
+  v_{\alpha} \approx (\frac{6 v_{\alpha}}{S}) (\frac{D}{2})
 
 Substituting by the trigonometric relationship :math:`v_{\alpha} = (\frac{v_{P,V}}{sin\alpha})`, we find the fluid velocity at the center of the floc as,
 
- :math:`v_{\alpha} \approx \frac{3 v_{P,V} D}{Ssin\alpha} `
+.. math::
+
+  v_{\alpha} \approx \frac{3 v_{P,V} D}{Ssin\alpha}
 
 .. _figure_floc_rollup_step2:
 
@@ -1345,11 +1409,15 @@ Substituting by the trigonometric relationship :math:`v_{\alpha} = (\frac{v_{P,V
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Recall from previous sections [[link]] that the terminal velocity, :math:`v_t`, of the floc can be calculated by, [[??]]
 
-:math:`v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}`
+.. math::
+
+  v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}
 
 We can rearrange this equation to solve for :math:`D` by
 
-:math:`D = D_0 ( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}}) ^{\frac{1}{ D_{fractal} - 1}}`
+.. math::
+
+  D = D_0 ( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}}) ^{\frac{1}{ D_{fractal} - 1}}
 
 We will need this equation for :math:`D` in the next step.
 
@@ -1366,19 +1434,27 @@ We will need this equation for :math:`D` in the next step.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The floc settles due to gravitational forces. First, the :math:`\alpha` component of the gravitational settling force, :math:`v_{t,\alpha}`, must be found by trigonometric relationships.
 
- :math:`v_{t,\alpha} = v_t sin\alpha`
+.. math::
+
+  v_{t,\alpha} = v_t sin\alpha
 
 Setting :math:`v_{\alpha} = v_{t,\alpha}` yields,
 
- :math:`\frac{3 v_{P,V} D}{Ssin\alpha} \approx v_t sin\alpha`
+.. math::
+
+  \frac{3 v_{P,V} D}{Ssin\alpha} \approx v_t sin\alpha
 
 Solving for :math:`S` to determine plate spacing,
 
- :math:`S \approx \frac{3 v_{P,V} D}{v_t sin^2\alpha}`
+.. math::
+
+  S \approx \frac{3 v_{P,V} D}{v_t sin^2\alpha}
 
 In this equation, we have both :math:`v_t` and :math:`D`, but we can simplify further because we know that :math:`v_t` and :math:`D` are related by the relationship shown in step 3. Therefore,
 
-:math:`S \approx \frac{3}{sin^2\alpha} \frac{v_{P,V}}{v_t} D_0 \left( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}} \right) ^{\frac{1}{ D_{fractal} - 1}} `
+.. math::
+
+  S \approx \frac{3}{sin^2\alpha} \frac{v_{P,V}}{v_t} D_0 \left( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}} \right) ^{\frac{1}{ D_{fractal} - 1}}
 
 :math:`S` is the smallest spacing that will allow a floc with a given settling velocity to remain stationary on the slope and not be carried upward by rollup.
 
@@ -1386,7 +1462,9 @@ In this equation, we have both :math:`v_t` and :math:`D`, but we can simplify fu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Finally, we can determine :math:`v_{Slide}` by,
 
-:math:`v_{Slide} = v_{P,V} \left[ \left( \frac{3D_0}{Ssin^2\alpha} \right)^{D_{fractal} - 1} \left( \frac{18 v_{P,V} \phi \nu }{D_0^2g} \frac{\rho_{H2O}}{\rho_{floc} - \rho_{H2O}} \right) \right] ^ {\frac{1}{ D_{fractal} - 2}} `
+.. math::
+
+  v_{Slide} = v_{P,V} \left[ \left( \frac{3D_0}{Ssin^2\alpha} \right)^{D_{fractal} - 1} \left( \frac{18 v_{P,V} \phi \nu }{D_0^2g} \frac{\rho_{H2O}}{\rho_{floc} - \rho_{H2O}} \right) \right] ^ {\frac{1}{ D_{fractal} - 2}}
 
 :math:`v_{Slide}` is the terminal sedimentation velocity of the slowest-settling floc that can slide down an incline. Flocs with with terminal velocity (the slide velocity) will be held stationary on the incline because of a balance between gravitational forces and fluid drag. Flocs with a terminal velocity lower than :math:`v_{Slide}` will be carried out of the top of the settler (i.e., they will rollup) even if they settle onto the settler wall. Thus, the slide terminal velocity represents a constraint on the ability of plate settlers to capture flocs.
 
@@ -1414,33 +1492,49 @@ The shear forces act over the area of the two plates, resulting in :math:`F_{she
 
 The pressure force is exerted over the entire width of the plate and the plate spacing. Pressure at the entrance of the plate settlers is different from the exit of the plate settlers by :math:`\Delta P`. The resulting pressure force is :math:`F_{pressure} = \Delta P W S`. So,
 
- :math:`F_{shear} = F_{pressure}`
+.. math::
 
- :math:`2 \tau L W = \Delta P W S `
+  F_{shear} = F_{pressure}
+
+.. math::
+
+  2 \tau L W = \Delta P W S
 
 Dividing both sides by width, :math:`W`, and solving for :math:`\Delta P` yields,
 
- :math:`\Delta P = \frac{2 \tau L}{S} `
+.. math::
+
+  \Delta P = \frac{2 \tau L}{S}
 
 We need to figure out what each of the terms on the right side of the equation is equal to so we can calculate :math:`\Delta P`. Ultimlately, we need :math:`\Delta P` to calculate head loss because :math:`h_L = \frac{\Delta P}{\rho g}`.
 
 :math:`\tau =\mu \frac{du}{dy}`, where :math:`\tau` is shear, :math:`\mu` is the viscosity, and :math:`\frac{du}{dy}` is the velocity gradient. Using the Navier-Stokes equation, we can find the velocity gradient as a function of the average velocity between the plates, yielding shear based on the vertical velocity entering the plates as,
 
- :math:`\tau = \mu \frac{6 v_{P,V}}{S sin\alpha}`
+.. math::
+
+  \tau = \mu \frac{6 v_{P,V}}{S sin\alpha}
 
 :math:`L` is found using the equation for capture velocity, :math:`v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}`. Capture velocity is kept constant so we solve for :math:`L`,
 
- :math:`L = \frac{S \left( \frac{v_{P,V}}{v_c} -1 \right)}{sin\alpha cos\alpha}`
+.. math::
+
+  L = \frac{S \left( \frac{v_{P,V}}{v_c} -1 \right)}{sin\alpha cos\alpha}
 
 Substituting :math:`\tau` and :math:`L` into the equation for :math:`\Delta P`,
 
- :math:`\Delta P = 2\mu \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)`
+.. math::
+
+  \Delta P = 2\mu \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)
 
 Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
 
-:math:`h_L = \frac{\Delta P}{\rho g}`
+.. math::
 
-:math:`h_L = 2 \frac{\mu}{\rho g} \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)`
+  h_L = \frac{\Delta P}{\rho g}
+
+.. math::
+
+  h_L = 2 \frac{\mu}{\rho g} \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)
 
 Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}` [[help]]. The resulting two plots show how head loss and velocity relate to plate settlers.
 
@@ -1462,7 +1556,9 @@ We have learned that growing a floc blanket leads to better sedimentation tank p
 
 First, we will find :math:`\theta`. If we simplify the bottom of the sedimentation tank and approximate it as a simple rectangle, we can easily determine the residence time. If the depth of the floc blanket is 1 m and the upflow velocity is 1 mm/s, we determine that
 
-:math:`\theta = 1000 s`
+.. math::
+
+  \theta = 1000 s
 
 Next, we will find :math:`G`. Before we begin, consider why there is a velocity gradient in the floc blanket. What causes it? Water is flowing up through the floc blanket while the flocs in the floc blanket are being pulled down by gravity. The differential velocities are caused by particles settling and rising at different velocities relative to the fluid due to drag, gravity, and fluid flow. In the fluid around each particle, there is a velocity gradient and shear between the particles and the surrounding fluid.
 
@@ -1476,9 +1572,13 @@ Floc blanket density
 ^^^^^^^^^^^^^^^^^^^^
 To calculate the density of the floc blanket at steady-state, we will use principles of mass and volume conservation.
 
-:math:`C_{clay} = \frac{m_{clay}}{\rlap{-}V_{fb}}`
+.. math::
 
-:math:`\rho = \frac{m_{TOT}}{\rlap{-}V}`
+  C_{clay} = \frac{m_{clay}}{\rlap{-}V_{fb}}
+
+.. math::
+
+  \rho = \frac{m_{TOT}}{\rlap{-}V}
 
 We will start by finding the mass of clay and the mass of water in the floc blanket, where:
 
@@ -1494,63 +1594,90 @@ The mass of water in the floc blanket is related to the volume fraction of the f
 
 Now, we know how much clay and water is in our system. The density of the system, neglecting the addition of coagulant, is,
 
-.. math:: \rho_{fb} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{fb}}
+.. math::
+
+  \rho_{fb} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{fb}}
 
 Substituting for :math:`m_{clay}` and :math:`m_{H_2O}`,
 
- :math:`\rho_{fb} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\rho_{H_2O} + C_{clay}`
+.. math::
+
+  \rho_{fb} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\rho_{H_2O} + C_{clay}
 
 This can be rearranged to yield the following equation derived from first principles,
 
- :math:`\rho_{fb} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right)C_{clay} + \rho_{H_2O}`
+.. math::
+
+  \rho_{fb} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right)C_{clay} + \rho_{H_2O}
 
 AguaClara researchers in the lab developed an empirical equation through experimental studies to calculate floc blanket density. They determined that,
 
-:math:`\rho_{fb} = 0.687C_{clay} + \rho_{H_2O}`
+.. math::
+  \rho_{fb} = 0.687C_{clay} + \rho_{H_2O}
 
 Comparing the empirical equation to the one determined by first principles, it is clear that the coefficient,
 
-:math:`\left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right) = 0.687`
+.. math::
+
+  \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right) = 0.687
 
 Floc blanket head loss
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Now that we can calculate the density of the floc blanket, we can calculate the head loss through the floc blanket. This topic will be discussed further in the chapter on filtration. For now, all you need to know is that density can be related to head loss in the floc blanket through the height of the floc blanket, :math:`H_{fb}`, and the densities of the floc blanket and water.
 
-:math:`\frac{h_L}{H_{fb}} = \frac{\rho_{fb} - \rho_{H_2O}}{\rho_{H_2O}} `
+.. math::
+
+  \frac{h_L}{H_{fb}} = \frac{\rho_{fb} - \rho_{H_2O}}{\rho_{H_2O}}
 
 There will be a small amount of head loss through the floc blanket because the density of the floc blanket is greater than the density of water by only a little bit. Remember that :math:`\frac{C_{clay}}{\rho_{clay}}` is really just the fraction of the floc blanket that is occupied by clay.
 
 Plugging in the equation for :math:`\rho_{fb}` and solving for :math:`h_L`,
 
- :math:`h_L = H_{fb} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}`
+.. math::
+
+  h_L = H_{fb} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}
 
 Floc blanket velocity gradient and collision potential
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use the other equations we developed in the chapter on flocculation [[[[link]]]].
 
- :math:`G = \sqrt{\frac{\epsilon}{\nu}}`
+.. math::
 
- :math:`\epsilon = \frac{gh_L}{\theta}`
+  G = \sqrt{\frac{\epsilon}{\nu}}
+
+.. math::
+
+ \epsilon = \frac{gh_L}{\theta}
 
 We will start by determining :math:`\epsilon ` by calculating :math:`\theta` using the porosity of the floc blanket, :math:`\phi_{fb}`,
 
- :math:`\theta = \frac{H_{fb} \phi_{fb}}{v_{S,V}}`
+.. math::
+
+  \theta = \frac{H_{fb} \phi_{fb}}{v_{S,V}}
 
 Plugging :math:`\theta` into :math:`\epsilon` yields
 
- :math:`\epsilon = \frac{gv_{S,V}}{\phi_{fb}} \frac{h_L}{H_{fb}}`
+.. math::
+
+  \epsilon = \frac{gv_{S,V}}{\phi_{fb}} \frac{h_L}{H_{fb}}
 
 Substituting into our equation for :math:`G`,
 
- :math:` G =  \sqrt{\frac{gv_{S,V}}{\nu \phi_{fb}} \frac{h_L}{H_{fb}}}`
+.. math::
+
+  G =  \sqrt{\frac{gv_{S,V}}{\nu \phi_{fb}} \frac{h_L}{H_{fb}}}
 
 Using our equation for :math:`h_L`,
 
- :math:` G =  \sqrt{\frac{gv_{S,V}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }`
+.. math::
 
- :math:`\phi_{fb} \approx 1` and is a function of :math:`C_{clay}`
+  G =  \sqrt{\frac{gv_{S,V}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }
+
+.. math::
+
+  \phi_{fb} \approx 1` and is a function of :math:`C_{clay}
 
 We can plot our results for :math:`G` over a range of typical floc blanket concentrations, which is around 1 - 5 g/L. [[[[plot]]]] We find that :math:`G` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`G` provided by the floc blanket is much smaller than :math:`G` provided by the flocculator. This is an important point because in the low :math:`G` environment of the floc blanket where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
 
@@ -1592,7 +1719,7 @@ We now have a very interesting apparent contradiction between our conclusions ab
 
 The contradiction is that now we conclude that primary particles must be attaching to flocs in the floc blanket! Both of these conclusions are based on a combination of experimental measurements and careful application of models. If these apparently contradictory conclusions are both correct, then there must be some fundamental difference between the particle interactions in flocculators and floc blankets.
 
-In both environments the flow around the flocs is dominated by viscous forces. The source of the fluid deformation is different in these two flows. In the floculator the source of the fluid deformation is from turbulent kinetic energy that is dissipating by deforming (shearing) the fluid. In the floc blanket the source of fluid deformation is from the gravitational pull on the flocs. The flocs are moving relative to the fluid and the fluid is being deformed as the flocs move through the fluid.
+In both environments the flow around the flocs is dominated by viscous forces. The source of the fluid deformation is different in these two flows. In the flocculator the source of the fluid deformation is from turbulent kinetic energy that is dissipating by deforming (shearing) the fluid. In the floc blanket the source of fluid deformation is from the gravitational pull on the flocs. The flocs are moving relative to the fluid and the fluid is being deformed as the flocs move through the fluid.
 
 .. _table_flocculator_vs_floc_blanket:
 
@@ -1641,21 +1768,35 @@ What is the flow rate of a single diffuser in the bottom of the sedimentation ta
 
  What is this question really asking? This question is asking us to understand that each diffuser "serves" a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let's imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using :math:`Q = vA`. The area, :math:`A`, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so :math:`W_{tank} = 1` m. The length of the slice is dictated by the spacing of the diffusers, :math:`B_{diff}`, so :math:`B_{diff} = 5` cm.
 
-  :math:`A = B_{diff}W_{tank}`
+.. math::
 
-  :math:`A = 5cm * 1m`
+  A = B_{diff}W_{tank}
 
-  :math:`A = 50,000mm^2`
+.. math::
+
+  A = 5cm * 1m
+
+.. math::
+
+  A = 50,000mm^2
 
  The problem statement includes that :math:`v_{S,V} = 1` mm/s. Plugging into our flow equation,
 
-  :math:`Q_{diff} = v_{S,V}A `
+.. math::
 
-  :math:`Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)`
+  Q_{diff} = v_{S,V}A
 
-  :math:`Q_{diff} = 50,000 \frac{mm^3}{s}`
+.. math::
 
-  :math:`Q_{diff} = 50 \frac{mL}{s}`
+  Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)
+
+.. math::
+
+  Q_{diff} = 50,000 \frac{mm^3}{s}
+
+.. math::
+
+  Q_{diff} = 50 \frac{mL}{s}
 
  The flow rate of each diffuser is :math:`50 \frac{mL}{s}`.
 
@@ -1685,35 +1826,51 @@ What is the target shape of the diffuser? We know that the diffuser must be size
 
 Let's begin by finding the internal width of a single diffuser. Using conservation of flow, we know that,
 
-:math:`Q_{diff} = v_{jet}W_{diff}S_{diff} = v_{S,V}W_{Sed}B_{diff}`
+.. math::
+
+  Q_{diff} = v_{jet}W_{diff}S_{diff} = v_{S,V}W_{Sed}B_{diff}
 
 Solving for :math:`W_{diff}`,
 
- :math:`W_{diff} = \frac{v_{S,V}W_{Sed}B_{diff}}{v_{jet}S_{diff}}`
+.. math::
+
+  W_{diff} = \frac{v_{S,V}W_{Sed}B_{diff}}{v_{jet}S_{diff}}
 
 Using the constraint of head loss in the jet and solving for :math:`v_{jet}`,
 
- :math:`h_{L,jet} = \frac{v_{jet}^2}{2g}`
+.. math::
 
- :math:`v_{jet} = \sqrt{2gh_{L,jet}}`
+  h_{L,jet} = \frac{v_{jet}^2}{2g}
+
+.. math::
+
+  v_{jet} = \sqrt{2gh_{L,jet}}
 
 Substituting back into the equation for :math:`W_{diff}`, we can find the minimum diffuser width required to not exceed target head loss as,
 
-:math:`W_{diff,min} = \frac{v_{S,V}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}`
+.. math::
+
+  W_{diff,min} = \frac{v_{S,V}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}
 
 Now that we have determined the minimum width, we can use known parameters and constraints to find a precise value for :math:`W_{diff}` and :math:`v_{jet}`.
 
 Using known constants for :math:`v_{S,V} = 1 \frac{mm}{s}`, :math:`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that :math:`W_{diff,min} = 2.7mm`. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to 3.175 mm.
 
-:math:`W_{diff} = 3.175 mm`
+.. math::
+
+  W_{diff} = 3.175 mm
 
 Solving for :math:`v_{jet}` from our earlier equations yields,
 
-:math:`v_{jet} = \frac{v_{S,V}W_{Sed}B_{diff}}{W_{diff}S_{diff}}`
+.. math::
+
+  v_{jet} = \frac{v_{S,V}W_{Sed}B_{diff}}{W_{diff}S_{diff}}
 
 Using known constants,
 
-:math:`v_{jet} \approx 380 \frac{mm}{s}`
+.. math::
+
+  v_{jet} \approx 380 \frac{mm}{s}
 
 
 *******************************************************
