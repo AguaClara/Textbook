@@ -186,7 +186,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#diffuser-design">Diffuser Design</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#determining-flow-through-a-diffuser">Determining flow through a diffuser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#properties-of">Properties of <span class="math notranslate nohighlight">\(v_{jet}\)</span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id31">Diffuser Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Diffuser Design</a></li>
 </ul>
 </li>
 </ul>
@@ -297,7 +297,7 @@
 <div class="section" id="terminal-velocity">
 <h2>Terminal Velocity<a class="headerlink" href="#terminal-velocity" title="Permalink to this headline">¶</a></h2>
 <p>As flocs settle in water, they will fall at a speed dictated by the weight of the floc, the buoyancy of the floc, and drag from the water. These three forces - the gravitational weight force, the buoyant force, and the drag force - dictate the speed at which a floc falls and are detailed in the following free body diagram. We care about determining the speed at which flocs will fall because knowing this information will help inform our sedimentation reactor design criteria.</p>
-<div class="figure align-center" id="id32">
+<div class="figure align-center" id="id2">
 <span id="figure-terminal-velocity-fbd"></span><a class="reference internal image-reference" href="../_images/terminal_velocity_FBD.png"><img alt="Buyouant force, drag force, and gravitational force shown for floc free body diagram." src="../_images/terminal_velocity_FBD.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 116 </span><span class="caption-text">Free body diagram of a floc in water.</span></p>
 </div>
@@ -329,7 +329,7 @@
 <p>Terminal velocity is a function of fluid density, floc density, gravity, particle diameter, and the drag coefficient. To calculate velocity, all of those inputs must be determined.</p>
 <p>The first component that we will focus on is the drag coefficient, <span class="math notranslate nohighlight">\(C_D\)</span>. The drag coefficient is function of Reynolds Number, <span class="math notranslate nohighlight">\(Re\)</span>, and the characteristic flow around a particle. As a reminder, <span class="math notranslate nohighlight">\(Re = \frac{v_t D}{\nu}\)</span> where <span class="math notranslate nohighlight">\(v_t\)</span> is the velocity of the fluid relative to the particle, <span class="math notranslate nohighlight">\(D\)</span> is the characteristic length scale (in this case the particle diameter), and <span class="math notranslate nohighlight">\(\nu\)</span> is kinematic viscosity.</p>
 <p>Drag coefficients are used to describe flow around a particle.</p>
-<div class="figure align-center" id="id33">
+<div class="figure align-center" id="id3">
 <span id="figure-drag-coeff-re-base"></span><a class="reference internal image-reference" href="../_images/drag_coeff_Re_base.png"><img alt="Drag coefficient as a function of Reynolds number." src="../_images/drag_coeff_Re_base.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 117 </span><span class="caption-text">Drag coefficient as a function of Reynolds number.</span></p>
 </div>
@@ -388,7 +388,7 @@ particle</td>
 </tbody>
 </table>
 <p>The flow around the particle and the Reynolds Number can be described in the laminar, turbulent, or turbulent-boundary regions. In the laminar region viscous forces dominate, <span class="math notranslate nohighlight">\(Re &lt; 1\)</span>,and the coefficient of drag is represented as the straight line with a slope of -1 on the log-log plot. The equation for drag on a sphere in laminar flow <span class="math notranslate nohighlight">\(C_D = \frac{24}{Re}\)</span> is referred to as Stokes Law. You’ll notice that the line for Stokes Law shown in the figure extends past the laminar region. This was done because it highlights that even though Stokes Law is not exactly correct past the turbulent region, it is still a pretty good approximation for  <span class="math notranslate nohighlight">\(Re &lt; 10\)</span>.</p>
-<div class="figure align-center" id="id34">
+<div class="figure align-center" id="id4">
 <span id="figure-drag-coeff-re-full"></span><a class="reference internal image-reference" href="../_images/drag_coeff_Re_full.png"><img alt="Drag coefficient as a function of Reynolds number." src="../_images/drag_coeff_Re_full.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 118 </span><span class="caption-text">Drag coefficient as a function of Reynolds number.</span></p>
 </div>
@@ -414,7 +414,7 @@ particle</td>
 <div class="line"><span class="math notranslate nohighlight">\(\rho_{floc_0} =\)</span> density of the primary particle making up the floc</div>
 </div>
 <p>The following plot shows the relationship between floc diameter and terminal velocity.</p>
-<div class="figure align-center" id="id35">
+<div class="figure align-center" id="id5">
 <span id="figure-terminal-velocity-floc-diam"></span><a class="reference internal image-reference" href="../_images/terminal_velocity_floc_diam.png"><img alt="Terminal velocity as a function of floc diameter, taking into account the changing density of flocs formed from clay." src="../_images/terminal_velocity_floc_diam.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 119 </span><span class="caption-text">Terminal velocity as a function of floc diameter, taking into account the changing density of flocs.</span></p>
 </div>
@@ -430,7 +430,7 @@ particle</td>
 <p>We will develop our definition of settle capture velocity using examples of horizontal flow and vertical flow sedimentation tanks. It should be noted that there are many idealizations and simplifications made for modeling sedimentation tanks. We assume that water will move through the reactor as expected (in the case of the horizontal flow sedimentation tank, from one end to the other), but we know that there are many more fluids complications than are described here. We assume that everything is moving at the average velocity and there are no turbulence or velocity profiles. For the time being, we will ignore what will happen to particles once they are captured by the sedimentation tank. Our intuition tells us that particles which settle will need to be removed somehow, and that is correct. This will be discussed in later sections. For now, we only care about capturing the particles, and later we will care about what we do with them once they are captured.</p>
 <div class="section" id="horizontal-flow-sedimentation-tank">
 <h3>Horizontal Flow Sedimentation Tank<a class="headerlink" href="#horizontal-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id36">
+<div class="figure align-center" id="id6">
 <span id="figure-horizontal-flow-tank-base"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_base.png"><img alt="Horizontal flow sedimentation tank." src="../_images/horizontal_flow_tank_base.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 120 </span><span class="caption-text">Horizontal flow sedimentation tank.</span></p>
 </div>
@@ -462,7 +462,7 @@ particle</td>
 <li>How fast must the particle fall?</li>
 </ol>
 <p>We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, <span class="math notranslate nohighlight">\(v_H\)</span>. Gravity is causing the particle to settle at its terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>. In order to reach the bottom, that settling velocity needs to be the capture velocity, <span class="math notranslate nohighlight">\(v_c\)</span>, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in the following figure.</p>
-<div class="figure align-center" id="id37">
+<div class="figure align-center" id="id7">
 <span id="figure-horizontal-flow-tank-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_capture.png"><img alt="Horizontal flow sedimentation tank with capture velocity." src="../_images/horizontal_flow_tank_capture.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 121 </span><span class="caption-text">Horizontal flow sedimentation tank with capture velocity.</span></p>
 </div>
@@ -482,7 +482,7 @@ particle</td>
 <li>We could have a small particle entering the reactor at the top, defining the critical path in the same “worst case scenario”. This particle would not be successfully captured by the tank because its terminal velocity is less than the capture velocity, meaning that it doesn’t have enough time in the reactor to settle.</li>
 <li>We could have a small particle entering the reactor near the bottom, in a “best case scenario”. In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be caputured by a tank designed for particles 35 <span class="math notranslate nohighlight">\(\mu m\)</span> or larger, but it depends on the height at which they enter the reactor.</li>
 </ul>
-<div class="figure align-center" id="id38">
+<div class="figure align-center" id="id8">
 <span id="figure-horizontal-flow-tank-small-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_small_capture.png"><img alt="Horizontal flow sedimentation tank with critical path and small particle." src="../_images/horizontal_flow_tank_small_capture.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 122 </span><span class="caption-text">Horizontal flow sedimentation tank with critical path and small particle.</span></p>
 </div>
@@ -490,7 +490,7 @@ particle</td>
 <div class="section" id="vertical-flow-sedimentation-tank">
 <h3>Vertical Flow Sedimentation Tank<a class="headerlink" href="#vertical-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
 <p>We will complete the same exercise for vertical flow sedimentation tanks. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.</p>
-<div class="figure align-center" id="id39">
+<div class="figure align-center" id="id9">
 <span id="figure-vertical-flow-tank-base"></span><a class="reference internal image-reference" href="../_images/vertical_flow_tank_base.png"><img alt="Vertical flow sedimentation tank." src="../_images/vertical_flow_tank_base.png" style="height: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 123 </span><span class="caption-text">Vertical flow sedimentation tank.</span></p>
 </div>
@@ -558,7 +558,7 @@ particle</td>
 <p>An electrical circuit is a path in which electrons flow from a voltage or current source. Electrical circuits frequently have resistors, which are passive electrical components to create resistance in the flow of electric current. What does this have to do with sedimentation tanks? In our “sedimentation tank as a circuit” concept, we will draw parallels between how electrons flow through a circuit to how water flows through the sedimentation tank.</p>
 <p>The AguaClara treatment train is designed so that flow is driven by potential energy. The entrance of the sedimentation tank, where water comes from the flocculator, is the source of the flow. Water then moves through the sedimentation tank and exits to the filter. At different points throughout the flow of water in the sedimentation tank, there are changes in piezometric head from fluid acceleration/deceleration and head loss. In the development of our circuit concept, piezometric head is like electrical resistance.</p>
 <p>In electrical circuits, electrons will travel the path of least resistance in a parallel path system. Water is similar in that it will flow in the path of least resistance.</p>
-<div class="figure align-center" id="id40">
+<div class="figure align-center" id="id10">
 <span id="figure-circuit-base"></span><a class="reference internal image-reference" href="../_images/circuit_base.png"><img alt="Sedimentation tank as a circuit." src="../_images/circuit_base.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 124 </span><span class="caption-text">Sedimentation tank as a circuit.</span></p>
 </div>
@@ -575,7 +575,7 @@ particle</td>
 <h1>Components of an AguaClara Sedimentation Tank<a class="headerlink" href="#components-of-an-aguaclara-sedimentation-tank" title="Permalink to this headline">¶</a></h1>
 <p>[[Note: this section should use words and figures to describe the different parts of the tank and what their purpose is, with brief explanation of how they work. <strong>Perhaps include the final equation necessary for each component, and just don’t include the derivations? Not sure how it will fit into flow yet</strong> ]]</p>
 <p>In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.</p>
-<div class="figure align-center" id="id41">
+<div class="figure align-center" id="id11">
 <span id="figure-sed-tank-overview"></span><a class="reference internal image-reference" href="../_images/sed_tank_overview.png"><img alt="Overview of an AguaClara Sedimentation tank." src="../_images/sed_tank_overview.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 125 </span><span class="caption-text">Overview of an AguaClara Sedimentation tank.</span></p>
 </div>
@@ -584,7 +584,7 @@ particle</td>
 <div class="section" id="influent-channel">
 <h3>Influent Channel<a class="headerlink" href="#influent-channel" title="Permalink to this headline">¶</a></h3>
 <p>After water exits the flocculator, it is ready for sedimentation. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple sedimentation units operating in parallel; we call each of these sedimentation units a ‘bay’ or a ‘tank’. Because there may be multiple sedimentation bays, we have to distribute flocculated water between the bays. To do this, we have an <strong>influent channel</strong>, which receives water from the flocculator and passes it to the sedimentation bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the sedimentation bays without allowing any settling of flocs in the influent channel. The minimum velocity in the influent channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each sedimentation bay.</p>
-<div class="figure align-center" id="id42">
+<div class="figure align-center" id="id12">
 <span id="figure-influent-channel-bays"></span><a class="reference internal image-reference" href="../_images/influent_channel_bays.png"><img alt="Influent channel with pipes leading to different sedimentation bays." src="../_images/influent_channel_bays.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 126 </span><span class="caption-text">Influent channel with pipes leading to different sedimentation bays.</span></p>
 </div>
@@ -595,16 +595,16 @@ particle</td>
 <div class="section" id="bottom-geometry-influent-manifold-diffusers-and-jet-reverser">
 <h3>Bottom Geometry: Influent Manifold, Diffusers, and Jet Reverser<a class="headerlink" href="#bottom-geometry-influent-manifold-diffusers-and-jet-reverser" title="Permalink to this headline">¶</a></h3>
 <p>Now, we will focus on a single bay of the sedimentation system. Flocculated water enters a pipe in the bottom of the influent channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the sedimentation bay. This section of pipe that distributes water at the bottom of the sedimentation bay is referred to as the <strong>influent manifold</strong>.</p>
-<div class="figure align-center" id="id43">
+<div class="figure align-center" id="id13">
 <span id="figure-influent-channel-manifold"></span><a class="reference internal image-reference" href="../_images/influent_channel_manifold.png"><img alt="Influent channel with pipe leading to one inlet manifold." src="../_images/influent_channel_manifold.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 127 </span><span class="caption-text">Influent channel with pipe leading to one inlet manifold.</span></p>
 </div>
 <p>Water exits the influent manifold through a series of orifices and <strong>diffusers</strong> in the bottom of the pipe. Orifices refer to the holes that are drilled into the underside of the manifold while diffusers are what we call short stubs of pipe that extend down from the orifice, perpendicular to the influent manifold. The orifices and diffusers point down to the bottom of the sedimentation bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. The ends of the diffuser tubes are flattened so that they are thin rectangles and when placed side-by-side achieve a line-jet effect. The end of the influent manifold is capped.</p>
-<div class="figure align-center" id="id44">
+<div class="figure align-center" id="id14">
 <span id="figure-influent-manifold-diffuser-base"></span><a class="reference internal image-reference" href="../_images/influent_manifold_diffuser_base.png"><img alt="Influent manifold with diffusers." src="../_images/influent_manifold_diffuser_base.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 128 </span><span class="caption-text">Influent manifold with diffusers.</span></p>
 </div>
-<div class="figure align-center" id="id45">
+<div class="figure align-center" id="id15">
 <span id="figure-influent-manifold-diffuser-flow"></span><a class="reference internal image-reference" href="../_images/influent_manifold_diffuser_flow.png"><img alt="Influent manifold and diffuser flow paths." src="../_images/influent_manifold_diffuser_flow.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 129 </span><span class="caption-text">Influent manifold and diffuser flow paths.</span></p>
 </div>
@@ -614,11 +614,11 @@ Recall the discussion about flow distribution in the influent channel. We know t
 <p>Is the type of head loss in the influent manifold “good” or “bad”? Like the influent channel, it would be “bad” head loss because it can lead to different flow along the length of the sedimentation tank; the end of the sedimentation tank would receive more flow than the beginning.</p>
 <p>However, the diffuser system was designed to greatly impact the overall flow distribution in an attempt to make the flow more equal in all parts of the system. Diffusers are designed to introduce 1 cm of head loss [[[[link to derivation]]]]. This is “good” head loss because it uniformly increases the head loss through all flow paths. The “good” head loss from the diffusers dominate the “bad” head loss from the influent channel and manifold, making differences between the paths less significant.</p>
 <p>The influent manifold diffuser system straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the sedimentation tank. Influent manifolds without flow straightening diffusers are commonly used in vertical flow sedimentation tanks including designs by leading manufacturers.</p>
-<div class="figure align-center" id="id46">
+<div class="figure align-center" id="id16">
 <span id="figure-flow-circulation"></span><a class="reference internal image-reference" href="../_images/flow_circulation.png"><img alt="Flow with a horizontal velocity component that causes problematic flow circulation." src="../_images/flow_circulation.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 130 </span><span class="caption-text">Flow with a horizontal velocity component that causes problematic flow circulation.</span></p>
 </div>
-<div class="figure align-center" id="id47">
+<div class="figure align-center" id="id17">
 <span id="figure-flow-straightening"></span><a class="reference internal image-reference" href="../_images/flow_straightening.png"><img alt="Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation." src="../_images/flow_straightening.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 131 </span><span class="caption-text">Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation.</span></p>
 </div>
@@ -629,40 +629,40 @@ Recall the discussion about flow distribution in the influent channel. We know t
 <li>If flow were just to point directly up, it would not have an opportunity to sufficiently spread into the width of the sedimentation bay, which could lead to “short-circuiting” and poor flow distribution overall.</li>
 <li>The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements [[[[link]]]]. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc blanket, which will be discussed next.</li>
 </ul>
-<div class="figure align-center" id="id48">
+<div class="figure align-center" id="id18">
 <span id="figure-jet-placement"></span><a class="reference internal image-reference" href="../_images/jet_placement.png"><img alt="The jet reverser and diffuser alignments; the offset jet is the most successful." src="../_images/jet_placement.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 132 </span><span class="caption-text">The jet reverser and diffuser alignments; the offset jet is the most successful.</span></p>
 </div>
 <p>There is a lot of research interest in determining the optimal upflow velocity for floc blankets considering that high velocity is better for resuspension but breaks more flocs. Currently, AguaClara plants use an upflow velocity of 1 mm/s.</p>
-<div class="figure align-center" id="id49">
+<div class="figure align-center" id="id19">
 <span id="figure-flat-bottomed-tank"></span><a class="reference external image-reference" href="https://www.youtube.com/watch?v=04OksWoRmQI"><img alt="Flat bottomed tank with settled flocs." src="../_images/flat_bottomed_tank.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 133 </span><span class="caption-text">Flat bottomed tank with settled flocs.</span></p>
 </div>
 <p>As shown above, in a flat bottom geometry, flocs settle in the corners of the tank because there is no direct flow of water to resuspend it. Flocs fall in such a way that the corners of the tank will fill first, with more and more flocs settling until the angle of repose is created. This angle that is occupied by flocs suggests that if we want to avoid having flocs settle, we should fill the sides of the tank in with concrete and create a sloped bottom so that there are no surfaces for settling.</p>
 <p>The influent manifold, diffusers, and jet reverser work with a <strong>sloped bottom geometry</strong> in an AguaClara plant. The slope on either side of the diffusers is at a 50 degree angle. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can fall into the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the main sedimentation basin. Sludge that is allowed to accumulate in the bottom of sedimentation tanks in tropical and temperate climates decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the sedimentation tank and cause a reduction in particle removal efficiency. The AguaClara sedimentation tank bottom geometry prevents sludge accumulation while also ensuring good flow distribution.</p>
-<div class="figure align-center" id="id50">
+<div class="figure align-center" id="id20">
 <span id="figure-sed-cross-section"></span><a class="reference internal image-reference" href="../_images/sed_cross_section.png"><img alt="Cross-section of the bottom of the sedimentation tank." src="../_images/sed_cross_section.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 134 </span><span class="caption-text">Cross-section of the bottom of the sedimentation tank.</span></p>
 </div>
-<div class="figure align-center" id="id51">
+<div class="figure align-center" id="id21">
 <span id="figure-bottom-of-sed-tank-detail"></span><a class="reference internal image-reference" href="../_images/bottom_of_sed_tank_detail.png"><img alt="Detail of the bottom of the sedimentation tank." src="../_images/bottom_of_sed_tank_detail.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 135 </span><span class="caption-text">Cross-section of the bottom of the sedimentation tank.</span></p>
 </div>
-<div class="figure align-center" id="id52">
+<div class="figure align-center" id="id22">
 <span id="figure-floc-blanket-floc-hopper"></span><a class="reference external image-reference" href="https://www.youtube.com/watch?v=2x12wGb7xZE"><img alt="Sloped bottom tank with fully suspended flocs." src="../_images/Floc_Blanket_Floc_Hopper.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 136 </span><span class="caption-text">Sloped bottom tank with fully suspended flocs.</span></p>
 </div>
 <p>So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates in the bay by creating a system to resuspend any settled flocs.</p>
-<div class="figure align-center" id="id53">
+<div class="figure align-center" id="id23">
 <span id="figure-diffuser-jetreverser"></span><a class="reference external image-reference" href="https://youtu.be/yJ-8g7vQTSM"><img alt="Distribution of flocculated water and resuspension of settling flocs." src="../_images/diffuser_jetreverser.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 137 </span><span class="caption-text">Distribution of flocculated water and resuspension of settling flocs.</span></p>
 </div>
 <p>What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.</p>
-<div class="figure align-center" id="id54">
+<div class="figure align-center" id="id24">
 <span id="figure-jet-angle"></span><a class="reference internal image-reference" href="../_images/jet_angle.png"><img alt="Jet diameter and current of settled flocs." src="../_images/jet_angle.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 138 </span><span class="caption-text">Jet diameter and current of settled flocs.</span></p>
 </div>
-<div class="figure align-center" id="id55">
+<div class="figure align-center" id="id25">
 <span id="figure-diffuser-jet-reverser"></span><a class="reference external image-reference" href="https://youtu.be/WEM-YyGITlQ"><img alt="Jet reverser resuspending flocs." src="../_images/diffuser_jet_reverser.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 139 </span><span class="caption-text">Jet reverser resuspending flocs.</span></p>
 </div>
@@ -678,7 +678,7 @@ Recall the discussion about flow distribution in the influent channel. We know t
 <h4>Floc Blanket<a class="headerlink" href="#floc-blanket" title="Permalink to this headline">¶</a></h4>
 <p>The line jet from the diffusers enters the jet reverser to force flow up through the sedimentation bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed which is called a <strong>floc blanket</strong>. The bed is fluidized because flocs are kept in suspension by the upflowing water.</p>
 <p>For a floc blanket to form, a sedimentation system requires that 1) all flocs be returned to the bottom of the sedimentation tank and 2) requires that all settled flocs be resuspended by incoming water. As will be discussed soon, plate settlers are used to return flocs to the bottom of the bay, while the jet reverser and sloped bottom geometry allow for floc resuspension. Any surface with a horizontal component in a sedimentation tank must be sloped to allow settled flocs to return to the resuspension zone. A flat bottom geometry does not allow for the formation of a floc blanket, as discussed previously.</p>
-<div class="figure align-center" id="id56">
+<div class="figure align-center" id="id26">
 <span id="figure-floc-blanket-experiment"></span><a class="reference external image-reference" href="https://www.youtube.com/watch?v=w8ZFCz54IBs"><img alt="Floc blanket formation over time." src="../_images/floc_blanket_experiment.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 140 </span><span class="caption-text">Floc blanket formation over time.</span></p>
 </div>
@@ -709,12 +709,12 @@ Recall the discussion about flow distribution in the influent channel. We know t
 <div class="section" id="floc-hopper">
 <h3>Floc Hopper<a class="headerlink" href="#floc-hopper" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>floc hopper</strong> provides an opportunity for floc consolidation. The floc weir controls the depth of the floc blanket because as the floc blanket grows, it will eventually reach the top of the floc weir. Because flocs are more dense than water, the flocs “spill” over the edge of the floc weir which allows the floc blanket to stay a constant height while sludge accumulates and consolidates in the floc hopper.</p>
-<div class="figure align-center" id="id57">
+<div class="figure align-center" id="id27">
 <span id="figure-floc-hopper-highlight"></span><a class="reference external image-reference" href="https://youtu.be/xh9dTjWRoto"><img alt="Floc hopper detail with flocs &quot;spilling&quot; over the wall." src="../_images/floc_hopper_highlight.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 141 </span><span class="caption-text">Floc hopper detail with flocs “spilling” over the wall.</span></p>
 </div>
 <p>Consolidated sludge in the bottom of the floc hopper is then removed from the sedimentation tank through small drain valve controlled by the operator. Floc hoppers in the lab-scale and PF300 setting are currently set at a 45 degree angle, but further optimization is needed.</p>
-<div class="figure align-center" id="id58">
+<div class="figure align-center" id="id28">
 <span id="figure-benchtop-sed"></span><a class="reference internal image-reference" href="../_images/benchtop_sed.png"><img alt="Benchtop sedimentation tank setup, highlighting the floc blanket and floc hopper." src="../_images/benchtop_sed.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 142 </span><span class="caption-text">Benchtop sedimentation tank setup, highlighting the floc blanket and floc hopper.</span></p>
 </div>
@@ -731,7 +731,7 @@ Recall the discussion about flow distribution in the influent channel. We know t
 <li>What is the critical path?</li>
 </ol>
 <p>We need particles to settle on the bottom plate for it to be effectively captured. Thus, the critical path can be shown by a floc that enters the plate settlers closest to the upper plate, because it will have the greatest distance to settle.</p>
-<div class="figure align-center" id="id59">
+<div class="figure align-center" id="id29">
 <span id="figure-plate-settler-critpath"></span><a class="reference internal image-reference" href="../_images/plate_settler_critpath.png"><img alt="Critical path between two plate settlers." src="../_images/plate_settler_critpath.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 143 </span><span class="caption-text">Critical path between two plate settlers.</span></p>
 </div>
@@ -739,7 +739,7 @@ Recall the discussion about flow distribution in the influent channel. We know t
 <li>How far must the particle settle to reach the lower plate?</li>
 </ol>
 <p>Let’s make a simplification and assume that water is flowing with uniform velocity between the plates, represented by a “top hat” velocity profile. This is a significant assumption, but it is used to help us understand the critical path. The fluid is carrying the floc between the inclined plates while gravity is pulling the floc down. Therefore, a particle must fall the vertical distance between the plates, which is the critical height, <span class="math notranslate nohighlight">\(H_c\)</span>. The plates are positioned at an angle, <span class="math notranslate nohighlight">\(\alpha\)</span>, to ensure that settling flocs slide down to the floc blanket. The critical height <span class="math notranslate nohighlight">\(H_c\)</span> can be expressed in terms of plate settler length, <span class="math notranslate nohighlight">\(L\)</span>, and plate settler angle, <span class="math notranslate nohighlight">\(\alpha\)</span>, by <span class="math notranslate nohighlight">\(H_c=\frac{S}{cos\alpha}\)</span>.</p>
-<div class="figure align-center" id="id60">
+<div class="figure align-center" id="id30">
 <span id="figure-plate-settler-critheight"></span><a class="reference internal image-reference" href="../_images/plate_settler_critheight.png"><img alt="Critical height between two plate settlers." src="../_images/plate_settler_critheight.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 144 </span><span class="caption-text">Critical height between two plate settlers.</span></p>
 </div>
@@ -751,12 +751,12 @@ Recall the discussion about flow distribution in the influent channel. We know t
 <li>What is the net vertical velocity of a floc between the plate settlers?</li>
 </ol>
 <p>The fluid carries the floc between the plate settlers while gravity pulls the floc down. The velocity through the plate settlers has both a horizontal component, <span class="math notranslate nohighlight">\(v_{P,H}\)</span>, and vertical component, <span class="math notranslate nohighlight">\(v_{P,V}\)</span>, with a resultant force we call <span class="math notranslate nohighlight">\(v_{\alpha}\)</span>.</p>
-<div class="figure align-center" id="id61">
+<div class="figure align-center" id="id31">
 <span id="figure-plate-settler-valpha"></span><a class="reference internal image-reference" href="../_images/plate_settler_valpha.png"><img alt="Velocity components between two plate settlers." src="../_images/plate_settler_valpha.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 145 </span><span class="caption-text">Velocity components between two plate settlers.</span></p>
 </div>
 <p>This means that the net vertical velocity <span class="math notranslate nohighlight">\(v_{P,net}\)</span> is the vertical component of flow minus the settling velocity of the floc. Recall our previous discussion of terminal velocity and capture velocity; in this case, because we are designing a plate settler specifically to capture the critical particle, the terminal velocity equals the capture velocity. The terminal velocity is a function of the velocity that the critical particle settles at and the capture velocity is a function of the reactor geometry which we are designing to capture the critical particle. Thus, <span class="math notranslate nohighlight">\(v_{P,net}=v_{P,V}-v_{c}\)</span>.</p>
-<div class="figure align-center" id="id62">
+<div class="figure align-center" id="id32">
 <span id="figure-plate-settler-vnet"></span><a class="reference internal image-reference" href="../_images/plate_settler_vnet.png"><img alt="Net velocity between two plate settlers." src="../_images/plate_settler_vnet.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 146 </span><span class="caption-text">Net velocity between two plate settlers.</span></p>
 </div>
@@ -797,7 +797,7 @@ Recall the discussion about flow distribution in the influent channel. We know t
 <p>The Ten State Standards report that plate settlers should have a separation of two inches, with very long plate settlers, which means very deep tanks. Sedimentation tanks are usually 4 meters deep, maybe because filters are also deep. This is a result of the engineering context rather than the basic design principles. The Ten State Standards are primarily based off the modification of existing sedimentation tanks which were usually built deep and then plate settlers were added. This means that there wasn’t added incentive to optimize the entire plate settler and tank process because the tanks were already built. However, AguaClara designs are made to use all of the AguaClara innovations in a green field, meaning that we are incentivized to optimize every part of this design process [[weird way to say this…reword]].</p>
 <p>AguaClara plants can design for changes in the depth and/or plan view area of the tank for optimal plate settler efficiency. We want to have the smallest and shallowest tanks possible for low cost and ease of construction. We know that in the plate settler design, there is a dimensionless parameter of plate spacing to length, <span class="math notranslate nohighlight">\(\frac{S}{L}\)</span>. The ratio is close to constant, which means that if we double the length of the plate settler, we can double the spacing between the plate settler and get the same performance as when we started. Conversely, if we halve the distance between the plate settlers, we can halve the length of the plate settlers. But how far can we push this? Can we make really compact plate settlers?</p>
 <p>What we really want to know is: what is the connection of spacing between plate settlers and performance?</p>
-<div class="figure align-center" id="id63">
+<div class="figure align-center" id="id33">
 <span id="figure-plate-settler-depth"></span><a class="reference internal image-reference" href="../_images/plate_settler_depth.png"><img alt="Relationship between plate settler length and sedimentation tank depth." src="../_images/plate_settler_depth.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 147 </span><span class="caption-text">Relationship between plate settler length and sedimentation tank depth.</span></p>
 </div>
@@ -820,13 +820,13 @@ Recall the discussion about flow distribution in the influent channel. We know t
 <li>Will large or small spacing between plates cause more floc rollup?</li>
 </ol>
 <p>As we have already suggested, small spacing between plates will cause more floc rollup due to the steeper resulting velocity profile between the plates.</p>
-<div class="figure align-center" id="id64">
+<div class="figure align-center" id="id34">
 <span id="figure-floc-rollup"></span><a class="reference external image-reference" href="https://youtu.be/cQJxLO0WOPA"><img alt="Floc rollup between two plates." src="../_images/floc_rollup.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 148 </span><span class="caption-text">Floc rollup between two plates.</span></p>
 </div>
 <p>So what does this mean for plate settler spacing? Let’s review some results from lab experiments. The following graph shows minimum plate settler spacing (mm) as a function of floc terminal velocity (mm/s). Some important things to note are that AguaClara plate settlers are designed for a capture velocity of 0.12 mm/s (recall that this capture velocity means that we want to capture flocs that are settling at 0.12 mm/s and faster). Before AguaClara filters were designed and deployed, AguaClara adopted the 0.12 mm/s capture velocity in an effort to reduce effluent turbidity as much as possible.</p>
-<p>Reading the graph, we can see the line for 1 mm/s upflow velocity, <span class="math notranslate nohighlight">\(v_{P,V}\)</span> [[I don’t think this is the right variable name]], at 0.12 mm/s capture velocity requires a minimum plate spacing of about about 2.5 mm to prevent floc rollup. Now, let’s interpret this result. If the upflow velocity increases, we see that the required spacing between plates increases. The results from these experiments will help us answer one of our previous questions: will little flocs or big flocs be most vulnerable to floc rollup? From the graph, we know that it is the little ones. Smaller floc terminal velocities indicate smaller particles, and the graph shows that smaller floc terminal velocities require larger distances of floc spacing to not roll up. The bigger the flocs, the smaller the spacing required to not roll up. Little flocs are harder to capture as you move plates closer together. Little flocs roll up first.</p>
-<div class="figure align-center" id="id65">
+<p>Reading the graph, we can see the line for 1 mm/s upflow velocity in the sedimentation tank, <span class="math notranslate nohighlight">\(v_{S,V}\)</span>, at 0.12 mm/s capture velocity requires a minimum plate spacing of about about 2.5 mm to prevent floc rollup. Now, let’s interpret this result. If the upflow velocity increases, we see that the required spacing between plates increases. The results from these experiments will help us answer one of our previous questions: will little flocs or big flocs be most vulnerable to floc rollup? From the graph, we know that it is the little ones. Smaller floc terminal velocities indicate smaller particles, and the graph shows that smaller floc terminal velocities require larger distances of floc spacing to not roll up. The bigger the flocs, the smaller the spacing required to not roll up. Little flocs are harder to capture as you move plates closer together. Little flocs roll up first.</p>
+<div class="figure align-center" id="id35">
 <span id="figure-floc-vsed"></span><a class="reference internal image-reference" href="../_images/floc_vsed.png"><img alt="Minimum plate settler spacing as a function of floc sedimentation velocity." src="../_images/floc_vsed.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 149 </span><span class="caption-text">Minimum plate settler spacing as a function of floc sedimentation velocity.</span></p>
 </div>
@@ -846,7 +846,7 @@ Recall the discussion about flow distribution in the influent channel. We know t
 <li>is the problem regularly intermittent? Is there anything that we can correlate these fluctuations to?</li>
 </ol>
 <p>After asking the operators, we are told that the floc volcanoes appear in the early afternoon each day.</p>
-<div class="figure align-center" id="id66">
+<div class="figure align-center" id="id36">
 <span id="figure-temp-turbidity"></span><a class="reference internal image-reference" href="../_images/temp_turbidity.png"><img alt="Turbidity as a function of time in San Nicolas, Honduras." src="../_images/temp_turbidity.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 150 </span><span class="caption-text">Turbidity as a function of time in San Nicolas, Honduras.</span></p>
 </div>
@@ -854,7 +854,7 @@ Recall the discussion about flow distribution in the influent channel. We know t
 <p>We know that this plant brings water from a water source about 14 km away. The water is transported in a galvanized iron pipe that is placed on the surface of the ground because there is no concern about freezing pipes in Honduras (galvanized iron is not damaged by UV like PVC pipe is). The pipe functions as a 14 km water heater, raising the temperature of the water to the plant after noon.</p>
 <p>But why does the temperature difference cause a problem for the plate settlers?
 The problem is that there is warmer water entering the sedimentation tank than what is in it. This temperature difference causes a density difference in the sedimentation tank and plate settlers. The less dense, warmer water rises to the top of the plate settlers while the cold water drops to the bottom of the plate. This creates a current, allowing water to flow up on the top and settle on the bottom. The temperature gradient changes slowly over a few hours.</p>
-<div class="figure align-center" id="id67">
+<div class="figure align-center" id="id37">
 <span id="figure-temp-tube-settler"></span><a class="reference internal image-reference" href="../_images/temp_tube_settler.png"><img alt="Hot water rising and cold water settling in a tube settler." src="../_images/temp_tube_settler.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 151 </span><span class="caption-text">Hot water rising and cold water settling in a tube settler.</span></p>
 </div>
@@ -879,7 +879,7 @@ The problem is that there is warmer water entering the sedimentation tank than w
 <div class="section" id="submerged-effluent-manifold">
 <h3>Submerged Effluent Manifold<a class="headerlink" href="#submerged-effluent-manifold" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>submerged effluent manifold</strong>, sometimes called a launder, collects settled water from the sedimentation tank. It is a horizontal pipe that extends along the length of the tank and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the sedimentation tank. Recall that the influent manifold also uses a submerged pipe and orifice design to distribute flow. However, unlike the influent manifold, the effluent manifold does not include diffusers because we do not need to precisely control velocity and flow direction.</p>
-<div class="figure align-center" id="id68">
+<div class="figure align-center" id="id38">
 <span id="figure-effluent-manifold"></span><a class="reference internal image-reference" href="../_images/effluent_manifold.png"><img alt="Effluent manifold from the side- and top-view." src="../_images/effluent_manifold.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 152 </span><span class="caption-text">Effluent manifold from the side- and top-view.</span></p>
 </div>
@@ -896,13 +896,12 @@ They are located on the top to promote even flow collection and for ease of oper
 </div>
 <div class="section" id="exit-weir-and-effluent-channel">
 <h3>Exit Weir and Effluent Channel<a class="headerlink" href="#exit-weir-and-effluent-channel" title="Permalink to this headline">¶</a></h3>
-<p>The submerged effluent manifold transports water from the sedimentation tank to a channel that runs perpendicular to the sedimentation bays. The channel collects water from all of the sedimentation bays. Water leaves this channel by flowing over a small wall, called the <strong>exit weir</strong>. The sedimentation tank exit weir controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and sedimentation tank. In construction, great care is taken to ensure that this weir is at the right elevation and is level.</p>
-<p>After the water flows over the exit weir, it is collected in the <strong>effluent channel</strong>. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box. [[ This following explanation isn’t correct. It isn’t possible for water to cross the wall between inlet and outlet channels Like the sedimentation tank influent channel, the effluent channel is located directly next to the drain channel. This allows the operator to remove poorly settled water from the treatment train. If an operator observes poor sedimentation, they can plug the entrance hole to the filter box, allowing the effluent channel to fill with water. Once water reaches the height of the wall separating it from the drain channel, the water will pour over from the influent channel into the drain channel. Poorly settled water can be drained from the inlet channel to the filters. see <a class="reference external" href="https://cad.onshape.com/documents/5a7585ae3248902548b02541/w/349594d2eb30a283f019807e/e/add8912cf760c28f462bd04f">https://cad.onshape.com/documents/5a7585ae3248902548b02541/w/349594d2eb30a283f019807e/e/add8912cf760c28f462bd04f</a>.]]</p>
-<div class="figure align-center" id="id69">
+<p>The submerged effluent manifold transports water from the sedimentation tank to a channel that runs perpendicular to the sedimentation bays. The channel collects water from all of the sedimentation bays. Water leaves this channel by flowing over a small wall, called the <strong>exit weir</strong>. The sedimentation tank exit weir controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and sedimentation tank. In construction, great care is taken to ensure that this weir is at the right elevation and is level. After the water flows over the exit weir, it is collected in the <strong>effluent channel</strong>. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box.</p>
+<div class="figure align-center" id="id39">
 <span id="figure-channel-labeled"></span><a class="reference internal image-reference" href="../_images/channel_labeled.png"><img alt="Image of sedimentation channels." src="../_images/channel_labeled.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 153 </span><span class="caption-text">Image of sedimentation channels.</span></p>
 </div>
-<div class="figure align-center" id="id70">
+<div class="figure align-center" id="id40">
 <span id="figure-channel-labeled-cad"></span><a class="reference internal image-reference" href="../_images/channel_labeled_cad.png"><img alt="Figure of sedimentation channels." src="../_images/channel_labeled_cad.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 154 </span><span class="caption-text">Figure of sedimentation channels.</span></p>
 </div>
@@ -923,7 +922,7 @@ They are located on the top to promote even flow collection and for ease of oper
 <li>The AguaClara sedimentation tank design is driven by the need for high treatment capability coupled with easy operation and maintenance.</li>
 <li>There is “good” head loss introduced by the influent manifold entrance, diffusers, effluent manifold orifices, and effluent manifold exit. There is “bad” head loss introduced by pressure recovery in the influent channel, influent manifold, and effluent manifold. Even flow distribution is achieved by ensuring that “good” head loss dominates through intentional design.</li>
 </ul>
-<div class="figure align-center" id="id71">
+<div class="figure align-center" id="id41">
 <span id="figure-circuit-full"></span><a class="reference internal image-reference" href="../_images/circuit_full.png"><img alt="Sedimentation tank as a circuit, showing &quot;good&quot; and &quot;bad&quot; head loss." src="../_images/circuit_full.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 155 </span><span class="caption-text">Sedimentation tank as a circuit, showing “good” and “bad” head loss.</span></p>
 </div>
@@ -953,7 +952,7 @@ They are located on the top to promote even flow collection and for ease of oper
 <div class="line"><span class="math notranslate nohighlight">\(Q_{Sed} =\)</span> flow rate through each sedimentation tank</div>
 <div class="line"><span class="math notranslate nohighlight">\(W_{Sed} =\)</span> width of each sedimentation tank</div>
 </div>
-<div class="figure align-center" id="id72">
+<div class="figure align-center" id="id42">
 <span id="figure-sed-tank-flow-conserve"></span><a class="reference internal image-reference" href="../_images/sed_tank_flow_conserve.png"><img alt="AguaClara sedimentation tank showing &quot;lost triangle&quot; and its impact on relevant lengths." src="../_images/sed_tank_flow_conserve.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 156 </span><span class="caption-text">AguaClara sedimentation tank showing “lost triangle” and its impact on relevant lengths.</span></p>
 </div>
@@ -1008,36 +1007,36 @@ They are located on the top to promote even flow collection and for ease of oper
 <h3>Plate Settler Parameters<a class="headerlink" href="#plate-settler-parameters" title="Permalink to this headline">¶</a></h3>
 <p>From the relationship that <span class="math notranslate nohighlight">\(v_{P,V}*S = v_{A,V}*B\)</span>, we can solve for <span class="math notranslate nohighlight">\(B\)</span> or <span class="math notranslate nohighlight">\(L\)</span> in terms of their related parameters. [[figure out how to either link or incorporate this with the discussion of this in the plate settler explanation]].</p>
 <p>Let’s start with the relationships that we already know:</p>
-<p><span class="math notranslate nohighlight">\(v_{P,V}*S = v_{A,V}*B\)</span> and <span class="math notranslate nohighlight">\(B = S+T\)</span></p>
-<div class="figure align-center" id="id73">
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-23">
+<span class="eqno">(430)<a class="headerlink" href="#equation-sedimentation-sed-design-23" title="Permalink to this equation">¶</a></span>\[v_{P,V}*S = v_{A,V}*B` and :math:`B = S+T\]</div>
+<div class="figure align-center" id="id43">
 <span id="figure-svsbplatesettlers"></span><a class="reference internal image-reference" href="../_images/SvsBplatesettlers.png"><img alt="Thick plate settlers." src="../_images/SvsBplatesettlers.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 157 </span><span class="caption-text">Thick plate settlers.</span></p>
 </div>
-<div class="figure align-center" id="id74">
+<div class="figure align-center" id="id44">
 <span id="figure-plate-settler-base"></span><a class="reference internal image-reference" href="../_images/plate_settler_base.png"><img alt="Plate settlers." src="../_images/plate_settler_base.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 158 </span><span class="caption-text">Plate settlers.</span></p>
 </div>
-<p>[[you are using inline equations rather than equations that are numbered extensively below. I think it is better to use numbered equations]]</p>
 <p>Solving for <span class="math notranslate nohighlight">\(v_{P,V}\)</span>, we rearrange and substitute by,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-23">
-<span class="eqno">(430)<a class="headerlink" href="#equation-sedimentation-sed-design-23" title="Permalink to this equation">¶</a></span>\[v_{P,V}*S = v_{A,V}*(S+T)\]</div>
-<p>[[I suggest switching to this format for equations that are on a single line. Reserve the :math: format for equations that are in a sentence.]]</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(v_{P,V} = \frac{v_{A,V}*(S+T)}{S}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-24">
+<span class="eqno">(431)<a class="headerlink" href="#equation-sedimentation-sed-design-24" title="Permalink to this equation">¶</a></span>\[v_{P,V}*S = v_{A,V}*(S+T)\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-25">
+<span class="eqno">(432)<a class="headerlink" href="#equation-sedimentation-sed-design-25" title="Permalink to this equation">¶</a></span>\[v_{P,V} = \frac{v_{A,V}*(S+T)}{S}\]</div>
 <p>We also already know from our discussion of plate settlers that we can relate capture velocity, <span class="math notranslate nohighlight">\(v_c\)</span>, to <span class="math notranslate nohighlight">\(S, L, \alpha\)</span>, and <span class="math notranslate nohighlight">\(v_{P,V}\)</span> by, [[link to previous discussion]]</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-26">
+<span class="eqno">(433)<a class="headerlink" href="#equation-sedimentation-sed-design-26" title="Permalink to this equation">¶</a></span>\[v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}\]</div>
 <p>Substitute for <span class="math notranslate nohighlight">\(v_{P,V} = \frac{v_{A,V}*(S+T)}{S}\)</span> by,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(v_c = (\frac{S}{Lsin\alpha cos\alpha + S})(\frac{v_{A,V}*(S+T)}{S})\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-27">
+<span class="eqno">(434)<a class="headerlink" href="#equation-sedimentation-sed-design-27" title="Permalink to this equation">¶</a></span>\[v_c = (\frac{S}{Lsin\alpha cos\alpha + S})(\frac{v_{A,V}*(S+T)}{S})\]</div>
 <p>Now, we can use this form of the capture velocity equation to solve for <span class="math notranslate nohighlight">\(B\)</span> or <span class="math notranslate nohighlight">\(L\)</span>, as shown by,</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(B = \frac{Lsin\alpha cos\alpha - T}{\frac{v_{P,V}}{v_c}-1}\)</span></p>
-<p><span class="math notranslate nohighlight">\(L = \frac{B(\frac{v_{P,V}}{v_c}-1) + T}{sin\alpha cos\alpha}\)</span></p>
-<p><span class="math notranslate nohighlight">\(L = \frac{S(\frac{v_{P,V}}{v_c}-1) + T(\frac{v_{P,V}}{v_c})}{sin\alpha cos\alpha}\)</span></p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-28">
+<span class="eqno">(435)<a class="headerlink" href="#equation-sedimentation-sed-design-28" title="Permalink to this equation">¶</a></span>\[B = \frac{Lsin\alpha cos\alpha - T}{\frac{v_{P,V}}{v_c}-1}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-29">
+<span class="eqno">(436)<a class="headerlink" href="#equation-sedimentation-sed-design-29" title="Permalink to this equation">¶</a></span>\[L = \frac{B(\frac{v_{P,V}}{v_c}-1) + T}{sin\alpha cos\alpha}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-30">
+<span class="eqno">(437)<a class="headerlink" href="#equation-sedimentation-sed-design-30" title="Permalink to this equation">¶</a></span>\[L = \frac{S(\frac{v_{P,V}}{v_c}-1) + T(\frac{v_{P,V}}{v_c})}{sin\alpha cos\alpha}\]</div>
 <p>The AguaClara plate settler design approach is summarized in the following table:</p>
-<div class="figure align-center" id="id75">
+<div class="figure align-center" id="id45">
 <span id="figure-plate-settler-model-table"></span><a class="reference internal image-reference" href="../_images/plate_settler_model_table.png"><img alt="Plate settler models and relevant equations." src="../_images/plate_settler_model_table.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 159 </span><span class="caption-text">Plate settler models and relevant equations.</span></p>
 </div>
@@ -1056,112 +1055,122 @@ They are located on the top to promote even flow collection and for ease of oper
 <ol class="arabic simple">
 <li>Find the velocity gradient next to the plate:</li>
 </ol>
-<div class="figure align-center" id="id76">
+<div class="figure align-center" id="id46">
 <span id="figure-plate-settler-boundary-conditions"></span><a class="reference internal image-reference" href="../_images/plate_settler_boundary_conditions.png"><img alt="Boundary conditions in plate settlers." src="../_images/plate_settler_boundary_conditions.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 160 </span><span class="caption-text">Boundary conditions in plate settlers.</span></p>
 </div>
-<div class="figure align-center" id="id77">
+<div class="figure align-center" id="id47">
 <span id="figure-floc-rollup-base"></span><a class="reference internal image-reference" href="../_images/floc_rollup_base.png"><img alt="Velocity profile between plate settlers." src="../_images/floc_rollup_base.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 161 </span><span class="caption-text">Velocity profile between plate settlers.</span></p>
 </div>
 <p>We begin by describing the conditions of infinite horizontal plates.</p>
-<p><span class="math notranslate nohighlight">\(\frac{y^2}{2}\frac{dp}{dx} + Ay + B = \mu u\)</span> [[need explanation of variables and where this came from]]</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-31">
+<span class="eqno">(438)<a class="headerlink" href="#equation-sedimentation-sed-design-31" title="Permalink to this equation">¶</a></span>\[\frac{y^2}{2}\frac{dp}{dx} + Ay + B = \mu u [[need explanation of variables and where this came from]]\]</div>
 <p>We employ the no-slip condition to solve for the constants A and B. The no-slip condition is that <span class="math notranslate nohighlight">\(u = 0\)</span> at <span class="math notranslate nohighlight">\(y = 0\)</span> and <span class="math notranslate nohighlight">\(y = S\)</span>, where <span class="math notranslate nohighlight">\(u\)</span> is the horizontal velocity component, <span class="math notranslate nohighlight">\(y\)</span> is the location in the y-axis direction between plates, and <span class="math notranslate nohighlight">\(S\)</span> is the spacing between plates.</p>
 <p>at <span class="math notranslate nohighlight">\(u = 0\)</span> and <span class="math notranslate nohighlight">\(y = 0\)</span>:</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(\frac{0}{2}\frac{dp}{dx} + A*0 + B = \mu *0\)</span></p>
-<p><span class="math notranslate nohighlight">\(B = 0\)</span></p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-32">
+<span class="eqno">(439)<a class="headerlink" href="#equation-sedimentation-sed-design-32" title="Permalink to this equation">¶</a></span>\[\frac{0}{2}\frac{dp}{dx} + A*0 + B = \mu *0\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-33">
+<span class="eqno">(440)<a class="headerlink" href="#equation-sedimentation-sed-design-33" title="Permalink to this equation">¶</a></span>\[B = 0\]</div>
 <p>at <span class="math notranslate nohighlight">\(u = 0\)</span> and <span class="math notranslate nohighlight">\(y = S\)</span>, the solving for A:</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(\frac{S^2}{2}\frac{dp}{dx} + AS + 0 = \mu *0\)</span></p>
-<p><span class="math notranslate nohighlight">\(\frac{S^2}{2}\frac{dp}{dx} + AS = 0\)</span></p>
-<p><span class="math notranslate nohighlight">\(A = \frac{-S}{2}\frac{dp}{dx}\)</span></p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-34">
+<span class="eqno">(441)<a class="headerlink" href="#equation-sedimentation-sed-design-34" title="Permalink to this equation">¶</a></span>\[\frac{S^2}{2}\frac{dp}{dx} + AS + 0 = \mu *0\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-35">
+<span class="eqno">(442)<a class="headerlink" href="#equation-sedimentation-sed-design-35" title="Permalink to this equation">¶</a></span>\[\frac{S^2}{2}\frac{dp}{dx} + AS = 0\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-36">
+<span class="eqno">(443)<a class="headerlink" href="#equation-sedimentation-sed-design-36" title="Permalink to this equation">¶</a></span>\[A = \frac{-S}{2}\frac{dp}{dx}\]</div>
 <p>Our initial equation can be updated as,</p>
-<p><span class="math notranslate nohighlight">\(\frac{y^2}{2}\frac{dp}{dx} + \frac{-S}{2}\frac{dp}{dx}y + B = \mu u\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-37">
+<span class="eqno">(444)<a class="headerlink" href="#equation-sedimentation-sed-design-37" title="Permalink to this equation">¶</a></span>\[\frac{y^2}{2}\frac{dp}{dx} + \frac{-S}{2}\frac{dp}{dx}y + B = \mu u\]</div>
 <p>If we let <span class="math notranslate nohighlight">\(\frac{dp}{dx}\)</span> be negative [[??]], then we can solve for <span class="math notranslate nohighlight">\(\tau\)</span> [[?]].</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(\mu(\frac{du}{dy}) = y \frac{dp}{dx} + A\)</span></p>
-<p><span class="math notranslate nohighlight">\(\tau = (y - \frac{S}{2}) \frac{dp}{dx}\)</span></p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-38">
+<span class="eqno">(445)<a class="headerlink" href="#equation-sedimentation-sed-design-38" title="Permalink to this equation">¶</a></span>\[\mu(\frac{du}{dy}) = y \frac{dp}{dx} + A\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-39">
+<span class="eqno">(446)<a class="headerlink" href="#equation-sedimentation-sed-design-39" title="Permalink to this equation">¶</a></span>\[\tau = (y - \frac{S}{2}) \frac{dp}{dx}\]</div>
 <p>Determining the average velocity between plates, :math:` v_{alpha}`, [[??]]</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(u = \frac{y(y-S)}{2\mu} \frac{dp}{dx}\)</span></p>
-<p>:math:` v_{alpha} = frac{q}{S} = frac{1}{S} int_{0}^{S}udy = frac{1}{S} int_{0}^{S} (frac{y^2 - Sy}{2mu} (frac{dp}{dx}))dy`</p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-40">
+<span class="eqno">(447)<a class="headerlink" href="#equation-sedimentation-sed-design-40" title="Permalink to this equation">¶</a></span>\[u = \frac{y(y-S)}{2\mu} \frac{dp}{dx}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-41">
+<span class="eqno">(448)<a class="headerlink" href="#equation-sedimentation-sed-design-41" title="Permalink to this equation">¶</a></span>\[v_{\alpha} = \frac{q}{S} = \frac{1}{S} \int_{0}^{S}udy = \frac{1}{S} \int_{0}^{S} (\frac{y^2 - Sy}{2\mu} (\frac{dp}{dx}))dy\]</div>
 <p>Integrating to get average velocity, then solving for <span class="math notranslate nohighlight">\(\frac{dp}{dx}\)</span>,</p>
-<blockquote>
-<div><p>:math:` v_{alpha} = frac{S^2}{12mu} frac{dp}{dx}`</p>
-<p>:math:` frac{dp}{dx} = frac{12mu v_{alpha} }{S^2}`</p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-42">
+<span class="eqno">(449)<a class="headerlink" href="#equation-sedimentation-sed-design-42" title="Permalink to this equation">¶</a></span>\[v_{\alpha} = \frac{S^2}{12\mu} \frac{dp}{dx}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-43">
+<span class="eqno">(450)<a class="headerlink" href="#equation-sedimentation-sed-design-43" title="Permalink to this equation">¶</a></span>\[\frac{dp}{dx} = \frac{12\mu v_{\alpha} }{S^2}\]</div>
 <p>Using Navier-Stokes to model the flow between the plates, and substituting our equation for :math:` frac{dp}{dx}`, [[??]]</p>
-<blockquote>
-<div><p>:math:<a href="#id1"><span class="problematic" id="id2">`</span></a>(frac{du}{dy})_{y=0} = frac{-S}{2mu} frac{dp}{dx} `</p>
-<p>:math:<a href="#id3"><span class="problematic" id="id4">`</span></a>(frac{du}{dy})_{y=0} = frac{-S}{2mu} frac{12mu v_{alpha} }{S^2} `</p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-44">
+<span class="eqno">(451)<a class="headerlink" href="#equation-sedimentation-sed-design-44" title="Permalink to this equation">¶</a></span>\[(\frac{du}{dy})_{y=0} = \frac{-S}{2\mu} \frac{dp}{dx}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-45">
+<span class="eqno">(452)<a class="headerlink" href="#equation-sedimentation-sed-design-45" title="Permalink to this equation">¶</a></span>\[(\frac{du}{dy})_{y=0} = \frac{-S}{2\mu} \frac{12\mu v_{\alpha} }{S^2}\]</div>
 <p>Simplifying the <span class="math notranslate nohighlight">\((\frac{du}{dy})_{y=0}\)</span>, we have the velocity gradient as function of average velocity for plate geometry as,</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\((\frac{du}{dy})_{y=0} = \frac{6 v_{\alpha}}{S}\)</span></p>
-<p>:math:<a href="#id5"><span class="problematic" id="id6">`</span></a>frac{ dv_{alpha} }{ dy_{y=0} } = frac{6 v_{alpha}}{S} `</p>
-</div></blockquote>
-<div class="figure align-center" id="id78">
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-46">
+<span class="eqno">(453)<a class="headerlink" href="#equation-sedimentation-sed-design-46" title="Permalink to this equation">¶</a></span>\[(\frac{du}{dy})_{y=0} = \frac{6 v_{\alpha}}{S}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-47">
+<span class="eqno">(454)<a class="headerlink" href="#equation-sedimentation-sed-design-47" title="Permalink to this equation">¶</a></span>\[\frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{6 v_{\alpha}}{S}\]</div>
+<div class="figure align-center" id="id48">
 <span id="figure-floc-rollup-step1"></span><a class="reference internal image-reference" href="../_images/floc_rollup_step1.png"><img alt="Velocity gradient next to the plate." src="../_images/floc_rollup_step1.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 162 </span><span class="caption-text">Velocity gradient next to the plate.</span></p>
 </div>
 <p>For tube settlers, we will assume laminar flow through circular tubes. <span class="math notranslate nohighlight">\(R\)</span> is the radius of the tube, and we assume that the maximum velocity is when <span class="math notranslate nohighlight">\(r = 0\)</span>. The velocity distribution is paraboloid of revolution, therefore average velocity, <span class="math notranslate nohighlight">\(v\)</span>, is half of the maximum velocity, <span class="math notranslate nohighlight">\(v_{max}\)</span>. So, <span class="math notranslate nohighlight">\(v = \frac{1}{2}v_{max}\)</span>. We also know that <span class="math notranslate nohighlight">\(Q = vA\)</span> and <span class="math notranslate nohighlight">\(Q = v \pi R^2\)</span>. In the case of the tube settler, <span class="math notranslate nohighlight">\(\frac{dp}{dx}\)</span> is the pressure gradient in the direction of flow, not the pressure gradient due to changes in elevation.</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(v_{\alpha} = \frac{r^2 - R^2}{4\mu} \frac{dp}{dx}\)</span></p>
-<p><span class="math notranslate nohighlight">\(v_{max} = - \frac{R^2}{4\mu} \frac{dp}{dx}\)</span></p>
-<p><span class="math notranslate nohighlight">\(v = - \frac{R^2}{8\mu} \frac{dp}{dx}\)</span></p>
-<p><span class="math notranslate nohighlight">\(Q = - \frac{\pi R^4}{8\mu} \frac{dp}{dx}\)</span></p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-48">
+<span class="eqno">(455)<a class="headerlink" href="#equation-sedimentation-sed-design-48" title="Permalink to this equation">¶</a></span>\[v_{\alpha} = \frac{r^2 - R^2}{4\mu} \frac{dp}{dx}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-49">
+<span class="eqno">(456)<a class="headerlink" href="#equation-sedimentation-sed-design-49" title="Permalink to this equation">¶</a></span>\[`v_{max} = - \frac{R^2}{4\mu} \frac{dp}{dx}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-50">
+<span class="eqno">(457)<a class="headerlink" href="#equation-sedimentation-sed-design-50" title="Permalink to this equation">¶</a></span>\[v = - \frac{R^2}{8\mu} \frac{dp}{dx}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-51">
+<span class="eqno">(458)<a class="headerlink" href="#equation-sedimentation-sed-design-51" title="Permalink to this equation">¶</a></span>\[Q = - \frac{\pi R^4}{8\mu} \frac{dp}{dx}\]</div>
 <p>Rearranging the flow equation <span class="math notranslate nohighlight">\(Q\)</span> to solve for <span class="math notranslate nohighlight">\(\frac{dp}{dx}\)</span>,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(\frac{dp}{dx} = - \frac{8 \mu Q}{\pi R^4}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-52">
+<span class="eqno">(459)<a class="headerlink" href="#equation-sedimentation-sed-design-52" title="Permalink to this equation">¶</a></span>\[\frac{dp}{dx} = - \frac{8 \mu Q}{\pi R^4}\]</div>
 <p>Plugging <span class="math notranslate nohighlight">\(\frac{dp}{dx}\)</span> into the original equation fo <span class="math notranslate nohighlight">\(v_{\alpha}\)</span>,</p>
-<blockquote>
-<div><p>:math:<a href="#id7"><span class="problematic" id="id8">`</span></a>v_{alpha} = -2Q frac{r^2 - R^2}{pi R^4} `</p>
-<p>:math:<a href="#id9"><span class="problematic" id="id10">`</span></a>frac{ dv_{alpha} }{ dr_{r=R} } = frac{-4Q}{pi R^3} `</p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-53">
+<span class="eqno">(460)<a class="headerlink" href="#equation-sedimentation-sed-design-53" title="Permalink to this equation">¶</a></span>\[v_{\alpha} = -2Q \frac{r^2 - R^2}{\pi R^4}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-54">
+<span class="eqno">(461)<a class="headerlink" href="#equation-sedimentation-sed-design-54" title="Permalink to this equation">¶</a></span>\[\frac{ dv_{\alpha} }{ dr_{r=R} } = \frac{-4Q}{\pi R^3}\]</div>
 <p>The resulting velocity gradient as function of average velocity for tube geometry is,</p>
-<blockquote>
-<div>:math:<a href="#id11"><span class="problematic" id="id12">`</span></a>frac{ dv_{alpha} }{ dy_{y=0} } = frac{8v_{alpha}}{D} `</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-55">
+<span class="eqno">(462)<a class="headerlink" href="#equation-sedimentation-sed-design-55" title="Permalink to this equation">¶</a></span>\[\frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{8v_{\alpha}}{D}\]</div>
 <p>Now, we want to determine the velocity at the center of the floc. For linearized plates, the plate geometry condition, we determined that,</p>
-<p>:math:<a href="#id13"><span class="problematic" id="id14">`</span></a>frac{ dv_{alpha} }{ dy_{y=0} } = frac{6 v_{alpha}}{S} `</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-56">
+<span class="eqno">(463)<a class="headerlink" href="#equation-sedimentation-sed-design-56" title="Permalink to this equation">¶</a></span>\[\frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{6 v_{\alpha}}{S}\]</div>
 <p>The center of the floc is approximately half of the floc diameter, <span class="math notranslate nohighlight">\(D\)</span>. So, to find the fluid velocity at the center of the floc, we linearize the differential and plug in <span class="math notranslate nohighlight">\(\frac{D}{2}\)</span> to yield,</p>
-<blockquote>
-<div>:math:<a href="#id15"><span class="problematic" id="id16">`</span></a>v_{alpha} approx (frac{6 v_{alpha}}{S}) (frac{D}{2}) `</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-57">
+<span class="eqno">(464)<a class="headerlink" href="#equation-sedimentation-sed-design-57" title="Permalink to this equation">¶</a></span>\[v_{\alpha} \approx (\frac{6 v_{\alpha}}{S}) (\frac{D}{2})\]</div>
 <p>Substituting by the trigonometric relationship <span class="math notranslate nohighlight">\(v_{\alpha} = (\frac{v_{P,V}}{sin\alpha})\)</span>, we find the fluid velocity at the center of the floc as,</p>
-<blockquote>
-<div>:math:<a href="#id17"><span class="problematic" id="id18">`</span></a>v_{alpha} approx frac{3 v_{P,V} D}{Ssinalpha} `</div></blockquote>
-<div class="figure align-center" id="id79">
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-58">
+<span class="eqno">(465)<a class="headerlink" href="#equation-sedimentation-sed-design-58" title="Permalink to this equation">¶</a></span>\[v_{\alpha} \approx \frac{3 v_{P,V} D}{Ssin\alpha}\]</div>
+<div class="figure align-center" id="id49">
 <span id="figure-floc-rollup-step2"></span><a class="reference internal image-reference" href="../_images/floc_rollup_step2.png"><img alt="Fluid velocity at the center of the floc." src="../_images/floc_rollup_step2.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 163 </span><span class="caption-text">Fluid velocity at the center of the floc.</span></p>
 </div>
 <p>Recall from previous sections [[link]] that the terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>, of the floc can be calculated by, [[??]]</p>
-<p><span class="math notranslate nohighlight">\(v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-59">
+<span class="eqno">(466)<a class="headerlink" href="#equation-sedimentation-sed-design-59" title="Permalink to this equation">¶</a></span>\[v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}\]</div>
 <p>We can rearrange this equation to solve for <span class="math notranslate nohighlight">\(D\)</span> by</p>
-<p><span class="math notranslate nohighlight">\(D = D_0 ( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}}) ^{\frac{1}{ D_{fractal} - 1}}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-60">
+<span class="eqno">(467)<a class="headerlink" href="#equation-sedimentation-sed-design-60" title="Permalink to this equation">¶</a></span>\[D = D_0 ( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}}) ^{\frac{1}{ D_{fractal} - 1}}\]</div>
 <p>We will need this equation for <span class="math notranslate nohighlight">\(D\)</span> in the next step.</p>
-<div class="figure align-center" id="id80">
+<div class="figure align-center" id="id50">
 <span id="figure-floc-rollup-step3"></span><a class="reference internal image-reference" href="../_images/floc_rollup_step3.png"><img alt="Terminal velocity of the floc down the plate (for the case of zero velocity fluid)." src="../_images/floc_rollup_step3.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 164 </span><span class="caption-text">Terminal velocity of the floc down the plate (for the case of zero velocity fluid).</span></p>
 </div>
 <p>The floc settles due to gravitational forces. First, the <span class="math notranslate nohighlight">\(\alpha\)</span> component of the gravitational settling force, <span class="math notranslate nohighlight">\(v_{t,\alpha}\)</span>, must be found by trigonometric relationships.</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(v_{t,\alpha} = v_t sin\alpha\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-61">
+<span class="eqno">(468)<a class="headerlink" href="#equation-sedimentation-sed-design-61" title="Permalink to this equation">¶</a></span>\[v_{t,\alpha} = v_t sin\alpha\]</div>
 <p>Setting <span class="math notranslate nohighlight">\(v_{\alpha} = v_{t,\alpha}\)</span> yields,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(\frac{3 v_{P,V} D}{Ssin\alpha} \approx v_t sin\alpha\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-62">
+<span class="eqno">(469)<a class="headerlink" href="#equation-sedimentation-sed-design-62" title="Permalink to this equation">¶</a></span>\[\frac{3 v_{P,V} D}{Ssin\alpha} \approx v_t sin\alpha\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(S\)</span> to determine plate spacing,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(S \approx \frac{3 v_{P,V} D}{v_t sin^2\alpha}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-63">
+<span class="eqno">(470)<a class="headerlink" href="#equation-sedimentation-sed-design-63" title="Permalink to this equation">¶</a></span>\[S \approx \frac{3 v_{P,V} D}{v_t sin^2\alpha}\]</div>
 <p>In this equation, we have both <span class="math notranslate nohighlight">\(v_t\)</span> and <span class="math notranslate nohighlight">\(D\)</span>, but we can simplify further because we know that <span class="math notranslate nohighlight">\(v_t\)</span> and <span class="math notranslate nohighlight">\(D\)</span> are related by the relationship shown in step 3. Therefore,</p>
-<p>:math:<a href="#id19"><span class="problematic" id="id20">`</span></a>S approx frac{3}{sin^2alpha} frac{v_{P,V}}{v_t} D_0 left( frac{18 v_t phi nu }{D_0^2g} frac{ rho_{H2O}}{ rho_{floc} - rho_{H2O}} right) ^{frac{1}{ D_{fractal} - 1}} `</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-64">
+<span class="eqno">(471)<a class="headerlink" href="#equation-sedimentation-sed-design-64" title="Permalink to this equation">¶</a></span>\[S \approx \frac{3}{sin^2\alpha} \frac{v_{P,V}}{v_t} D_0 \left( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}} \right) ^{\frac{1}{ D_{fractal} - 1}}\]</div>
 <p><span class="math notranslate nohighlight">\(S\)</span> is the smallest spacing that will allow a floc with a given settling velocity to remain stationary on the slope and not be carried upward by rollup.</p>
 <p>Finally, we can determine <span class="math notranslate nohighlight">\(v_{Slide}\)</span> by,</p>
-<p>:math:<a href="#id21"><span class="problematic" id="id22">`</span></a>v_{Slide} = v_{P,V} left[ left( frac{3D_0}{Ssin^2alpha} right)^{D_{fractal} - 1} left( frac{18 v_{P,V} phi nu }{D_0^2g} frac{rho_{H2O}}{rho_{floc} - rho_{H2O}} right) right] ^ {frac{1}{ D_{fractal} - 2}} `</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-65">
+<span class="eqno">(472)<a class="headerlink" href="#equation-sedimentation-sed-design-65" title="Permalink to this equation">¶</a></span>\[v_{Slide} = v_{P,V} \left[ \left( \frac{3D_0}{Ssin^2\alpha} \right)^{D_{fractal} - 1} \left( \frac{18 v_{P,V} \phi \nu }{D_0^2g} \frac{\rho_{H2O}}{\rho_{floc} - \rho_{H2O}} \right) \right] ^ {\frac{1}{ D_{fractal} - 2}}\]</div>
 <p><span class="math notranslate nohighlight">\(v_{Slide}\)</span> is the terminal sedimentation velocity of the slowest-settling floc that can slide down an incline. Flocs with with terminal velocity (the slide velocity) will be held stationary on the incline because of a balance between gravitational forces and fluid drag. Flocs with a terminal velocity lower than <span class="math notranslate nohighlight">\(v_{Slide}\)</span> will be carried out of the top of the settler (i.e., they will rollup) even if they settle onto the settler wall. Thus, the slide terminal velocity represents a constraint on the ability of plate settlers to capture flocs.</p>
 <p>What happens if the primary particles are less dense? [[need more explanation]]
 <span class="math notranslate nohighlight">\(v_{Slide}\)</span> will increase because the particles need to be able to settle faster in order to not experience rollup.</p>
@@ -1170,34 +1179,36 @@ They are located on the top to promote even flow collection and for ease of oper
 <h3>Head Loss through Plate Settlers<a class="headerlink" href="#head-loss-through-plate-settlers" title="Permalink to this headline">¶</a></h3>
 <p>Flow through the sedimentation tank is controlled by head loss in an attempt to achieve flow uniformity. We have already explained that plate settler spacing impacts head loss [[[[link]]]], but by what mathematical relationship? Will putting plate settlers closer together result in more or less head loss? This question is complicated because closer plate settlers would create more shear and head loss, but shorter plate settlers also mean that they become shorter which would decrease shear and head loss.</p>
 <p>Let’s start with a force balance. Assume that there is a fully established velocity profile that is parabolic with laminar flow. The forces that we care about are shear forces on the walls of the plate settlers and the differential pressure from flow in the direction of the velocity.</p>
-<div class="figure align-center" id="id81">
+<div class="figure align-center" id="id51">
 <span id="figure-plate-settler-headloss-diag"></span><a class="reference internal image-reference" href="../_images/plate_settler_headloss_diag.png"><img alt="Velocity, shear forces, and pressure loss through plate settlers." src="../_images/plate_settler_headloss_diag.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 165 </span><span class="caption-text">Velocity, shear forces, and pressure loss through plate settlers.</span></p>
 </div>
 <p>The shear forces act over the area of the two plates, resulting in <span class="math notranslate nohighlight">\(F_{shear} = 2 \tau L W\)</span> where <span class="math notranslate nohighlight">\(\tau\)</span> is the viscous shear component.</p>
 <p>The pressure force is exerted over the entire width of the plate and the plate spacing. Pressure at the entrance of the plate settlers is different from the exit of the plate settlers by <span class="math notranslate nohighlight">\(\Delta P\)</span>. The resulting pressure force is <span class="math notranslate nohighlight">\(F_{pressure} = \Delta P W S\)</span>. So,</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(F_{shear} = F_{pressure}\)</span></p>
-<p>:math:<a href="#id23"><span class="problematic" id="id24">`</span></a>2 tau L W = Delta P W S `</p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-66">
+<span class="eqno">(473)<a class="headerlink" href="#equation-sedimentation-sed-design-66" title="Permalink to this equation">¶</a></span>\[F_{shear} = F_{pressure}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-67">
+<span class="eqno">(474)<a class="headerlink" href="#equation-sedimentation-sed-design-67" title="Permalink to this equation">¶</a></span>\[2 \tau L W = \Delta P W S\]</div>
 <p>Dividing both sides by width, <span class="math notranslate nohighlight">\(W\)</span>, and solving for <span class="math notranslate nohighlight">\(\Delta P\)</span> yields,</p>
-<blockquote>
-<div>:math:<a href="#id25"><span class="problematic" id="id26">`</span></a>Delta P = frac{2 tau L}{S} `</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-68">
+<span class="eqno">(475)<a class="headerlink" href="#equation-sedimentation-sed-design-68" title="Permalink to this equation">¶</a></span>\[\Delta P = \frac{2 \tau L}{S}\]</div>
 <p>We need to figure out what each of the terms on the right side of the equation is equal to so we can calculate <span class="math notranslate nohighlight">\(\Delta P\)</span>. Ultimlately, we need <span class="math notranslate nohighlight">\(\Delta P\)</span> to calculate head loss because <span class="math notranslate nohighlight">\(h_L = \frac{\Delta P}{\rho g}\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\tau =\mu \frac{du}{dy}\)</span>, where <span class="math notranslate nohighlight">\(\tau\)</span> is shear, <span class="math notranslate nohighlight">\(\mu\)</span> is the viscosity, and <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> is the velocity gradient. Using the Navier-Stokes equation, we can find the velocity gradient as a function of the average velocity between the plates, yielding shear based on the vertical velocity entering the plates as,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(\tau = \mu \frac{6 v_{P,V}}{S sin\alpha}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-69">
+<span class="eqno">(476)<a class="headerlink" href="#equation-sedimentation-sed-design-69" title="Permalink to this equation">¶</a></span>\[\tau = \mu \frac{6 v_{P,V}}{S sin\alpha}\]</div>
 <p><span class="math notranslate nohighlight">\(L\)</span> is found using the equation for capture velocity, <span class="math notranslate nohighlight">\(v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}\)</span>. Capture velocity is kept constant so we solve for <span class="math notranslate nohighlight">\(L\)</span>,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(L = \frac{S \left( \frac{v_{P,V}}{v_c} -1 \right)}{sin\alpha cos\alpha}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-70">
+<span class="eqno">(477)<a class="headerlink" href="#equation-sedimentation-sed-design-70" title="Permalink to this equation">¶</a></span>\[L = \frac{S \left( \frac{v_{P,V}}{v_c} -1 \right)}{sin\alpha cos\alpha}\]</div>
 <p>Substituting <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(L\)</span> into the equation for <span class="math notranslate nohighlight">\(\Delta P\)</span>,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(\Delta P = 2\mu \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-71">
+<span class="eqno">(478)<a class="headerlink" href="#equation-sedimentation-sed-design-71" title="Permalink to this equation">¶</a></span>\[\Delta P = 2\mu \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)\]</div>
 <p>Now that we have an equation for <span class="math notranslate nohighlight">\(\Delta P\)</span>, we can solve for head loss.</p>
-<p><span class="math notranslate nohighlight">\(h_L = \frac{\Delta P}{\rho g}\)</span></p>
-<p><span class="math notranslate nohighlight">\(h_L = 2 \frac{\mu}{\rho g} \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-72">
+<span class="eqno">(479)<a class="headerlink" href="#equation-sedimentation-sed-design-72" title="Permalink to this equation">¶</a></span>\[h_L = \frac{\Delta P}{\rho g}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-73">
+<span class="eqno">(480)<a class="headerlink" href="#equation-sedimentation-sed-design-73" title="Permalink to this equation">¶</a></span>\[h_L = 2 \frac{\mu}{\rho g} \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)\]</div>
 <p>Recall that head loss through plate settlers is really small, on the order of micrometers, <span class="math notranslate nohighlight">\(\mu m\)</span>. We are interested in understanding how the head loss relates to velocity, through the relation <span class="math notranslate nohighlight">\(v = \sqrt{2gh}\)</span> [[help]]. The resulting two plots show how head loss and velocity relate to plate settlers.</p>
-<div class="figure align-center" id="id82">
+<div class="figure align-center" id="id52">
 <span id="figure-plate-settler-headloss-spacing"></span><a class="reference internal image-reference" href="../_images/plate_settler_headloss_spacing.png"><img alt="Head loss as a function of plate settler spacing." src="../_images/plate_settler_headloss_spacing.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 166 </span><span class="caption-text">Head loss as a function of plate settler spacing.</span></p>
 </div>
@@ -1209,14 +1220,17 @@ They are located on the top to promote even flow collection and for ease of oper
 <h3>Floc Blanket Collision Potential<a class="headerlink" href="#floc-blanket-collision-potential" title="Permalink to this headline">¶</a></h3>
 <p>We have learned that growing a floc blanket leads to better sedimentation tank performance. One explanation for the improved performance is that the floc blanket acts like an additional flocculator because there are additional collisions between particles. To understand the nature and significance of these additional collisions, we can calculate the floc blanket velocity gradients and residence time to find collision potential, <span class="math notranslate nohighlight">\(G\theta\)</span>. In a floc blanket, we expect that <span class="math notranslate nohighlight">\(G\)</span> is small; however, <span class="math notranslate nohighlight">\(\theta\)</span> is large, which means that <span class="math notranslate nohighlight">\(G\theta\)</span> in the floc blanket may be significant.</p>
 <p>First, we will find <span class="math notranslate nohighlight">\(\theta\)</span>. If we simplify the bottom of the sedimentation tank and approximate it as a simple rectangle, we can easily determine the residence time. If the depth of the floc blanket is 1 m and the upflow velocity is 1 mm/s, we determine that</p>
-<p><span class="math notranslate nohighlight">\(\theta = 1000 s\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-74">
+<span class="eqno">(481)<a class="headerlink" href="#equation-sedimentation-sed-design-74" title="Permalink to this equation">¶</a></span>\[\theta = 1000 s\]</div>
 <p>Next, we will find <span class="math notranslate nohighlight">\(G\)</span>. Before we begin, consider why there is a velocity gradient in the floc blanket. What causes it? Water is flowing up through the floc blanket while the flocs in the floc blanket are being pulled down by gravity. The differential velocities are caused by particles settling and rising at different velocities relative to the fluid due to drag, gravity, and fluid flow. In the fluid around each particle, there is a velocity gradient and shear between the particles and the surrounding fluid.</p>
 <p>Entering the sedimentation tank, there is a large range of particle sizes in the water. The range exists from big flocs made up with hundreds of millions of clay particles to primary particles that made it through flocculation without successful collision. These differentially sized particles create velocity gradients as the particles and flocs are acted on by both settling forces and upward fluid flow forces.</p>
 <p>Large flocs provide velocity gradients that can potentially cause collisions between other small particles that we are still trying to capture. Through our derivation to determine <span class="math notranslate nohighlight">\(G\)</span> in a floc blanket, we will also test an assumption. We will assume that primary particles coming into the floc blanket are not interacting with large flocs. Instead,  we will assume that the the fluid shear and differential velocities promote interactions between two primary particles.</p>
 <p>So, how can we calculate the velocity gradient? In flocculators, we determined <span class="math notranslate nohighlight">\(G\)</span> from head loss and residence time. In sedimentation tanks, we determine <span class="math notranslate nohighlight">\(G\)</span> the same way. Let’s calculate the head loss through the floc blanket. To do this, we need to know the density of the floc blanket and we need to know the relationship between head loss a fluidized bed and density of the bed.</p>
 <p>To calculate the density of the floc blanket at steady-state, we will use principles of mass and volume conservation.</p>
-<p><span class="math notranslate nohighlight">\(C_{clay} = \frac{m_{clay}}{\rlap{-}V_{fb}}\)</span></p>
-<p><span class="math notranslate nohighlight">\(\rho = \frac{m_{TOT}}{\rlap{-}V}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-75">
+<span class="eqno">(482)<a class="headerlink" href="#equation-sedimentation-sed-design-75" title="Permalink to this equation">¶</a></span>\[C_{clay} = \frac{m_{clay}}{\rlap{-}V_{fb}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-76">
+<span class="eqno">(483)<a class="headerlink" href="#equation-sedimentation-sed-design-76" title="Permalink to this equation">¶</a></span>\[\rho = \frac{m_{TOT}}{\rlap{-}V}\]</div>
 <p>We will start by finding the mass of clay and the mass of water in the floc blanket, where:</p>
 <div class="line-block">
 <div class="line"><span class="math notranslate nohighlight">\(C_{clay} =\)</span> concentration of clay in the floc blanket</div>
@@ -1228,50 +1242,53 @@ They are located on the top to promote even flow collection and for ease of oper
 <p>The mass of clay in the floc blanket is concentration multiplied by volume, shown by <span class="math notranslate nohighlight">\(m_{clay} = C_{clay}\rlap{-}V_{fb}\)</span></p>
 <p>The mass of water in the floc blanket is related to the volume fraction of the floc blanket that is occupied by clay, <span class="math notranslate nohighlight">\(\frac{C_{clay}}{\rho_{clay}}\)</span>, whic is a very small number. <span class="math notranslate nohighlight">\(\left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\)</span> is the fraction of the floc blanket that is occupied by water, also called the water volume fraction. So, <span class="math notranslate nohighlight">\(m_{H_2O} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right) \rho_{H_2O} \rlap{-}V_{fb}\)</span>.</p>
 <p>Now, we know how much clay and water is in our system. The density of the system, neglecting the addition of coagulant, is,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-24">
-<span class="eqno">(431)<a class="headerlink" href="#equation-sedimentation-sed-design-24" title="Permalink to this equation">¶</a></span>\[\rho_{fb} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{fb}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-77">
+<span class="eqno">(484)<a class="headerlink" href="#equation-sedimentation-sed-design-77" title="Permalink to this equation">¶</a></span>\[\rho_{fb} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{fb}}\]</div>
 <p>Substituting for <span class="math notranslate nohighlight">\(m_{clay}\)</span> and <span class="math notranslate nohighlight">\(m_{H_2O}\)</span>,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(\rho_{fb} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\rho_{H_2O} + C_{clay}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-78">
+<span class="eqno">(485)<a class="headerlink" href="#equation-sedimentation-sed-design-78" title="Permalink to this equation">¶</a></span>\[\rho_{fb} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\rho_{H_2O} + C_{clay}\]</div>
 <p>This can be rearranged to yield the following equation derived from first principles,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(\rho_{fb} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right)C_{clay} + \rho_{H_2O}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-79">
+<span class="eqno">(486)<a class="headerlink" href="#equation-sedimentation-sed-design-79" title="Permalink to this equation">¶</a></span>\[\rho_{fb} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right)C_{clay} + \rho_{H_2O}\]</div>
 <p>AguaClara researchers in the lab developed an empirical equation through experimental studies to calculate floc blanket density. They determined that,</p>
-<p><span class="math notranslate nohighlight">\(\rho_{fb} = 0.687C_{clay} + \rho_{H_2O}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-80">
+<span class="eqno">(487)<a class="headerlink" href="#equation-sedimentation-sed-design-80" title="Permalink to this equation">¶</a></span>\[\rho_{fb} = 0.687C_{clay} + \rho_{H_2O}\]</div>
 <p>Comparing the empirical equation to the one determined by first principles, it is clear that the coefficient,</p>
-<p><span class="math notranslate nohighlight">\(\left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right) = 0.687\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-81">
+<span class="eqno">(488)<a class="headerlink" href="#equation-sedimentation-sed-design-81" title="Permalink to this equation">¶</a></span>\[\left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right) = 0.687\]</div>
 <p>Now that we can calculate the density of the floc blanket, we can calculate the head loss through the floc blanket. This topic will be discussed further in the chapter on filtration. For now, all you need to know is that density can be related to head loss in the floc blanket through the height of the floc blanket, <span class="math notranslate nohighlight">\(H_{fb}\)</span>, and the densities of the floc blanket and water.</p>
-<p>:math:<a href="#id27"><span class="problematic" id="id28">`</span></a>frac{h_L}{H_{fb}} = frac{rho_{fb} - rho_{H_2O}}{rho_{H_2O}} `</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-82">
+<span class="eqno">(489)<a class="headerlink" href="#equation-sedimentation-sed-design-82" title="Permalink to this equation">¶</a></span>\[\frac{h_L}{H_{fb}} = \frac{\rho_{fb} - \rho_{H_2O}}{\rho_{H_2O}}\]</div>
 <p>There will be a small amount of head loss through the floc blanket because the density of the floc blanket is greater than the density of water by only a little bit. Remember that <span class="math notranslate nohighlight">\(\frac{C_{clay}}{\rho_{clay}}\)</span> is really just the fraction of the floc blanket that is occupied by clay.</p>
 <p>Plugging in the equation for <span class="math notranslate nohighlight">\(\rho_{fb}\)</span> and solving for <span class="math notranslate nohighlight">\(h_L\)</span>,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(h_L = H_{fb} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-83">
+<span class="eqno">(490)<a class="headerlink" href="#equation-sedimentation-sed-design-83" title="Permalink to this equation">¶</a></span>\[h_L = H_{fb} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}\]</div>
 <p>With the equation for <span class="math notranslate nohighlight">\(h_L\)</span>, we can calculate <span class="math notranslate nohighlight">\(G\)</span>. We will also use the other equations we developed in the chapter on flocculation [[[[link]]]].</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(G = \sqrt{\frac{\epsilon}{\nu}}\)</span></p>
-<p><span class="math notranslate nohighlight">\(\epsilon = \frac{gh_L}{\theta}\)</span></p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-84">
+<span class="eqno">(491)<a class="headerlink" href="#equation-sedimentation-sed-design-84" title="Permalink to this equation">¶</a></span>\[G = \sqrt{\frac{\epsilon}{\nu}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-85">
+<span class="eqno">(492)<a class="headerlink" href="#equation-sedimentation-sed-design-85" title="Permalink to this equation">¶</a></span>\[\epsilon = \frac{gh_L}{\theta}\]</div>
 <p>We will start by determining <span class="math notranslate nohighlight">\(\epsilon ` by calculating :math:\)</span>theta` using the porosity of the floc blanket, <span class="math notranslate nohighlight">\(\phi_{fb}\)</span>,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(\theta = \frac{H_{fb} \phi_{fb}}{v_{S,V}}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-86">
+<span class="eqno">(493)<a class="headerlink" href="#equation-sedimentation-sed-design-86" title="Permalink to this equation">¶</a></span>\[\theta = \frac{H_{fb} \phi_{fb}}{v_{S,V}}\]</div>
 <p>Plugging <span class="math notranslate nohighlight">\(\theta\)</span> into <span class="math notranslate nohighlight">\(\epsilon\)</span> yields</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(\epsilon = \frac{gv_{S,V}}{\phi_{fb}} \frac{h_L}{H_{fb}}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-87">
+<span class="eqno">(494)<a class="headerlink" href="#equation-sedimentation-sed-design-87" title="Permalink to this equation">¶</a></span>\[\epsilon = \frac{gv_{S,V}}{\phi_{fb}} \frac{h_L}{H_{fb}}\]</div>
 <p>Substituting into our equation for <span class="math notranslate nohighlight">\(G\)</span>,</p>
-<blockquote>
-<div>:math:` G =  sqrt{frac{gv_{S,V}}{nu phi_{fb}} frac{h_L}{H_{fb}}}`</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-88">
+<span class="eqno">(495)<a class="headerlink" href="#equation-sedimentation-sed-design-88" title="Permalink to this equation">¶</a></span>\[G =  \sqrt{\frac{gv_{S,V}}{\nu \phi_{fb}} \frac{h_L}{H_{fb}}}\]</div>
 <p>Using our equation for <span class="math notranslate nohighlight">\(h_L\)</span>,</p>
-<blockquote>
-<div><p>:math:` G =  sqrt{frac{gv_{S,V}}{nu phi_{fb}} left( frac{1}{rho_{H_2O}} - frac{1}{rho_{clay}} right) C_{clay} }`</p>
-<p><span class="math notranslate nohighlight">\(\phi_{fb} \approx 1\)</span> and is a function of <span class="math notranslate nohighlight">\(C_{clay}\)</span></p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-89">
+<span class="eqno">(496)<a class="headerlink" href="#equation-sedimentation-sed-design-89" title="Permalink to this equation">¶</a></span>\[G =  \sqrt{\frac{gv_{S,V}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-90">
+<span class="eqno">(497)<a class="headerlink" href="#equation-sedimentation-sed-design-90" title="Permalink to this equation">¶</a></span>\[\phi_{fb} \approx 1` and is a function of :math:`C_{clay}\]</div>
 <p>We can plot our results for <span class="math notranslate nohighlight">\(G\)</span> over a range of typical floc blanket concentrations, which is around 1 - 5 g/L. [[[[plot]]]] We find that <span class="math notranslate nohighlight">\(G\)</span> ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The <span class="math notranslate nohighlight">\(G\)</span> provided by the floc blanket is much smaller than <span class="math notranslate nohighlight">\(G\)</span> provided by the flocculator. This is an important point because in the low <span class="math notranslate nohighlight">\(G\)</span> environment of the floc blanket where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.</p>
 <p>We can plot our results for <span class="math notranslate nohighlight">\(G\theta\)</span> by multiplying <span class="math notranslate nohighlight">\(G\)</span> by the residence time we found earlier, <span class="math notranslate nohighlight">\(\theta = 1000 s\)</span>. The result is that <span class="math notranslate nohighlight">\(G\theta\)</span> ranges from 2,000 to 6,000. Compare this to the <span class="math notranslate nohighlight">\(G\theta = 20,000\)</span> for the flocculator used in experiments [[[[Garland]]]].</p>
-<div class="figure align-center" id="id83">
+<div class="figure align-center" id="id53">
 <span id="figure-lab-setup"></span><a class="reference internal image-reference" href="../_images/lab_setup.png"><img alt="Lab setup for flocculator, half-sedimentation tank, and plate settler testing." src="../_images/lab_setup.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 167 </span><span class="caption-text">Lab setup for flocculator, half-sedimentation tank, and plate settler testing.</span></p>
 </div>
-<div class="figure align-center" id="id84">
+<div class="figure align-center" id="id54">
 <span id="figure-floc-conc-g"></span><a class="reference internal image-reference" href="../_images/floc_conc_G.png"><img alt="Velocity gradient and collision potential as a function of floc blanket concentration." src="../_images/floc_conc_G.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 168 </span><span class="caption-text">Velocity gradient and collision potential as a function of floc blanket concentration.</span></p>
 </div>
@@ -1289,9 +1306,9 @@ They are located on the top to promote even flow collection and for ease of oper
 <h2>Flocculator and Floc Blanket Paradox<a class="headerlink" href="#flocculator-and-floc-blanket-paradox" title="Permalink to this headline">¶</a></h2>
 <p>We now have a very interesting apparent contradiction between our conclusions about flocculation and floc blankets. We previously concluded that primary particles do not collide with and attach to flocs in flocculators. This assumption is required to explain experimental observations. Indeed, if primary particles could attach to flocs in a flocculator, then high turbidity events with appropriate coagulant dosages should result in super performance because there would be so many opportunities for collisions between large flocs and primary particles. This is not what we observe.</p>
 <p>The contradiction is that now we conclude that primary particles must be attaching to flocs in the floc blanket! Both of these conclusions are based on a combination of experimental measurements and careful application of models. If these apparently contradictory conclusions are both correct, then there must be some fundamental difference between the particle interactions in flocculators and floc blankets.</p>
-<p>In both environments the flow around the flocs is dominated by viscous forces. The source of the fluid deformation is different in these two flows. In the floculator the source of the fluid deformation is from turbulent kinetic energy that is dissipating by deforming (shearing) the fluid. In the floc blanket the source of fluid deformation is from the gravitational pull on the flocs. The flocs are moving relative to the fluid and the fluid is being deformed as the flocs move through the fluid.</p>
-<span id="table-flocculator-vs-floc-blanket"></span><table border="1" class="docutils align-center" id="id85">
-<caption><span class="caption-number">Table 16 </span><span class="caption-text">Comparison between flocculator and floc blanket.</span><a class="headerlink" href="#id85" title="Permalink to this table">¶</a></caption>
+<p>In both environments the flow around the flocs is dominated by viscous forces. The source of the fluid deformation is different in these two flows. In the flocculator the source of the fluid deformation is from turbulent kinetic energy that is dissipating by deforming (shearing) the fluid. In the floc blanket the source of fluid deformation is from the gravitational pull on the flocs. The flocs are moving relative to the fluid and the fluid is being deformed as the flocs move through the fluid.</p>
+<span id="table-flocculator-vs-floc-blanket"></span><table border="1" class="docutils align-center" id="id55">
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Comparison between flocculator and floc blanket.</span><a class="headerlink" href="#id55" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -1336,7 +1353,7 @@ They are located on the top to promote even flow collection and for ease of oper
 <div class="section" id="diffuser-design">
 <h2>Diffuser Design<a class="headerlink" href="#diffuser-design" title="Permalink to this headline">¶</a></h2>
 <p>Diffusers are shaped so that they remain a circular pipe in one end that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle. Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the sedimentation tank. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form. This metal form is sized so that the target shape is achieved.</p>
-<div class="figure align-center" id="id86">
+<div class="figure align-center" id="id56">
 <span id="figure-bvss-diffuser"></span><a class="reference internal image-reference" href="../_images/BvsS_diffuser.png"><img alt="Diagram of diffuser exit." src="../_images/BvsS_diffuser.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 169 </span><span class="caption-text">Diagram of diffuser exit.</span></p>
 </div>
@@ -1353,55 +1370,60 @@ They are located on the top to promote even flow collection and for ease of oper
 <h3>Determining flow through a diffuser<a class="headerlink" href="#determining-flow-through-a-diffuser" title="Permalink to this headline">¶</a></h3>
 <p>What is the flow rate of a single diffuser in the bottom of the sedimentation tank? Consider a sedimentation tank that is 6 m long, 1 m wide and 2 m deep, with an upflow velocity of 1 mm/s and a diffuser spacing of 5 cm.</p>
 <blockquote>
-<div><p>What is this question really asking? This question is asking us to understand that each diffuser “serves” a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let’s imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using <span class="math notranslate nohighlight">\(Q = vA\)</span>. The area, <span class="math notranslate nohighlight">\(A\)</span>, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so <span class="math notranslate nohighlight">\(W_{tank} = 1\)</span> m. The length of the slice is dictated by the spacing of the diffusers, <span class="math notranslate nohighlight">\(B_{diff}\)</span>, so <span class="math notranslate nohighlight">\(B_{diff} = 5\)</span> cm.</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(A = B_{diff}W_{tank}\)</span></p>
-<p><span class="math notranslate nohighlight">\(A = 5cm * 1m\)</span></p>
-<p><span class="math notranslate nohighlight">\(A = 50,000mm^2\)</span></p>
-</div></blockquote>
-<p>The problem statement includes that <span class="math notranslate nohighlight">\(v_{S,V} = 1\)</span> mm/s. Plugging into our flow equation,</p>
-<blockquote>
-<div><p>:math:<a href="#id29"><span class="problematic" id="id30">`</span></a>Q_{diff} = v_{S,V}A `</p>
-<p><span class="math notranslate nohighlight">\(Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\)</span></p>
-<p><span class="math notranslate nohighlight">\(Q_{diff} = 50,000 \frac{mm^3}{s}\)</span></p>
-<p><span class="math notranslate nohighlight">\(Q_{diff} = 50 \frac{mL}{s}\)</span></p>
-</div></blockquote>
-<p>The flow rate of each diffuser is <span class="math notranslate nohighlight">\(50 \frac{mL}{s}\)</span>.</p>
-</div></blockquote>
+<div>What is this question really asking? This question is asking us to understand that each diffuser “serves” a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let’s imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using <span class="math notranslate nohighlight">\(Q = vA\)</span>. The area, <span class="math notranslate nohighlight">\(A\)</span>, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so <span class="math notranslate nohighlight">\(W_{tank} = 1\)</span> m. The length of the slice is dictated by the spacing of the diffusers, <span class="math notranslate nohighlight">\(B_{diff}\)</span>, so <span class="math notranslate nohighlight">\(B_{diff} = 5\)</span> cm.</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-91">
+<span class="eqno">(498)<a class="headerlink" href="#equation-sedimentation-sed-design-91" title="Permalink to this equation">¶</a></span>\[A = B_{diff}W_{tank}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-92">
+<span class="eqno">(499)<a class="headerlink" href="#equation-sedimentation-sed-design-92" title="Permalink to this equation">¶</a></span>\[A = 5cm * 1m\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-93">
+<span class="eqno">(500)<a class="headerlink" href="#equation-sedimentation-sed-design-93" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned} A = 50,000mm^2\\The problem statement includes that :math:`v_{S,V} = 1` mm/s. Plugging into our flow equation,\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-94">
+<span class="eqno">(501)<a class="headerlink" href="#equation-sedimentation-sed-design-94" title="Permalink to this equation">¶</a></span>\[Q_{diff} = v_{S,V}A\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-95">
+<span class="eqno">(502)<a class="headerlink" href="#equation-sedimentation-sed-design-95" title="Permalink to this equation">¶</a></span>\[Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-96">
+<span class="eqno">(503)<a class="headerlink" href="#equation-sedimentation-sed-design-96" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50,000 \frac{mm^3}{s}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-97">
+<span class="eqno">(504)<a class="headerlink" href="#equation-sedimentation-sed-design-97" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned} Q_{diff} = 50 \frac{mL}{s}\\The flow rate of each diffuser is :math:`50 \frac{mL}{s}`.\end{aligned}\end{align} \]</div>
 </div>
 <div class="section" id="properties-of">
 <h3>Properties of <span class="math notranslate nohighlight">\(v_{jet}\)</span><a class="headerlink" href="#properties-of" title="Permalink to this headline">¶</a></h3>
 <p><span class="math notranslate nohighlight">\(v_{jet}\)</span> is defined as the velocity of the water jet exiting the diffuser. After exiting the diffuser, this water jet is sent into the jet reverser to make a 180 degree turn. Does the water jet change pressure or velocity as it exits the jet reverser? Do we need to consider the effects of a <em>vena contracta</em>?</p>
 <p>Recall that a <em>vena contracta</em> is associated with a change in pressure that causes a contraction and subsequent acceleration of the fluid [[[[link to fluids review]]]]. Water exiting the diffuser is pointed directly down and the streamlines are straight and parallel, which means that the pressure across the streamlines is constant. Water exiting the jet reverser is pointed directly up and the streamlines are straight and parallel, which again means that the pressure across the streamlines is constant. Because the pressure is constant at the exit of the diffuser and at the exit of the jet reverser, we assume that the pressure of the water in the space between those two points is also constant because there is no physical barrier. If the pressure in this bottom section of the sedimentation tank is constant from the exit of the diffuser to the exit of the jet reverser, we can infer that they are equal.</p>
 <p>By Bernoulli, if the pressures between the exit of the diffuser to the exit of the jet reverser are equal then the velocities must also be equal. Bernoulli is applicable here because there is no flow expansion yet. The shear along the wall of the jet reverser is insignificant due to the short flow path. The water accelerates to account for the directional change but the absolute velocity does not change as it goes around the jet reverser.</p>
-<div class="figure align-center" id="id87">
+<div class="figure align-center" id="id57">
 <span id="figure-wdiff-wjet"></span><a class="reference internal image-reference" href="../_images/Wdiff_Wjet.png"><img alt="Diagram of diffuser exit and jet." src="../_images/Wdiff_Wjet.png" style="height: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 170 </span><span class="caption-text">Diagram of diffuser exit and jet.</span></p>
 </div>
 <p>Therefore, the velocity at the exit of the diffuser is equal to the velocity at the exit of the jet reverser.</p>
 </div>
-<div class="section" id="id31">
-<h3>Diffuser Design<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>Diffuser Design<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our sedimentation tank, we want an upflow velocity of 1 mm/s. Additionally, because diffusers are a key component of our “sedimentation tank as a circuit”, we want to precisely control head loss in the jet leaving the jet reverser because that will help us achieve uniform flow within and between sedimentation tanks. AguaClara designs set head loss in the jet constant at 1 cm.</p>
 <p>Let’s begin by finding the internal width of a single diffuser. Using conservation of flow, we know that,</p>
-<p><span class="math notranslate nohighlight">\(Q_{diff} = v_{jet}W_{diff}S_{diff} = v_{S,V}W_{Sed}B_{diff}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-98">
+<span class="eqno">(505)<a class="headerlink" href="#equation-sedimentation-sed-design-98" title="Permalink to this equation">¶</a></span>\[Q_{diff} = v_{jet}W_{diff}S_{diff} = v_{S,V}W_{Sed}B_{diff}\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(W_{diff}\)</span>,</p>
-<blockquote>
-<div><span class="math notranslate nohighlight">\(W_{diff} = \frac{v_{S,V}W_{Sed}B_{diff}}{v_{jet}S_{diff}}\)</span></div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-99">
+<span class="eqno">(506)<a class="headerlink" href="#equation-sedimentation-sed-design-99" title="Permalink to this equation">¶</a></span>\[W_{diff} = \frac{v_{S,V}W_{Sed}B_{diff}}{v_{jet}S_{diff}}\]</div>
 <p>Using the constraint of head loss in the jet and solving for <span class="math notranslate nohighlight">\(v_{jet}\)</span>,</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(h_{L,jet} = \frac{v_{jet}^2}{2g}\)</span></p>
-<p><span class="math notranslate nohighlight">\(v_{jet} = \sqrt{2gh_{L,jet}}\)</span></p>
-</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-100">
+<span class="eqno">(507)<a class="headerlink" href="#equation-sedimentation-sed-design-100" title="Permalink to this equation">¶</a></span>\[h_{L,jet} = \frac{v_{jet}^2}{2g}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-101">
+<span class="eqno">(508)<a class="headerlink" href="#equation-sedimentation-sed-design-101" title="Permalink to this equation">¶</a></span>\[v_{jet} = \sqrt{2gh_{L,jet}}\]</div>
 <p>Substituting back into the equation for <span class="math notranslate nohighlight">\(W_{diff}\)</span>, we can find the minimum diffuser width required to not exceed target head loss as,</p>
-<p><span class="math notranslate nohighlight">\(W_{diff,min} = \frac{v_{S,V}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-102">
+<span class="eqno">(509)<a class="headerlink" href="#equation-sedimentation-sed-design-102" title="Permalink to this equation">¶</a></span>\[W_{diff,min} = \frac{v_{S,V}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}\]</div>
 <p>Now that we have determined the minimum width, we can use known parameters and constraints to find a precise value for <span class="math notranslate nohighlight">\(W_{diff}\)</span> and <span class="math notranslate nohighlight">\(v_{jet}\)</span>.</p>
 <p>Using known constants for <span class="math notranslate nohighlight">\(v_{S,V} = 1 \frac{mm}{s}\)</span>, <span class="math notranslate nohighlight">\(h_{L,jet} = 1 cm\)</span>, and <span class="math notranslate nohighlight">\(W_{Sed} = 1m\)</span>, we can find that <span class="math notranslate nohighlight">\(W_{diff,min} = 2.7mm\)</span>. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find <span class="math notranslate nohighlight">\(W_{diff}\)</span> we round up to 3.175 mm.</p>
-<p><span class="math notranslate nohighlight">\(W_{diff} = 3.175 mm\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-103">
+<span class="eqno">(510)<a class="headerlink" href="#equation-sedimentation-sed-design-103" title="Permalink to this equation">¶</a></span>\[W_{diff} = 3.175 mm\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(v_{jet}\)</span> from our earlier equations yields,</p>
-<p><span class="math notranslate nohighlight">\(v_{jet} = \frac{v_{S,V}W_{Sed}B_{diff}}{W_{diff}S_{diff}}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-104">
+<span class="eqno">(511)<a class="headerlink" href="#equation-sedimentation-sed-design-104" title="Permalink to this equation">¶</a></span>\[v_{jet} = \frac{v_{S,V}W_{Sed}B_{diff}}{W_{diff}S_{diff}}\]</div>
 <p>Using known constants,</p>
-<p><span class="math notranslate nohighlight">\(v_{jet} \approx 380 \frac{mm}{s}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-105">
+<span class="eqno">(512)<a class="headerlink" href="#equation-sedimentation-sed-design-105" title="Permalink to this equation">¶</a></span>\[v_{jet} \approx 380 \frac{mm}{s}\]</div>
 </div>
 </div>
 </div>
