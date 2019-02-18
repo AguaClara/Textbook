@@ -1481,7 +1481,7 @@ What happens if the primary particles are less dense? [[need more explanation]]
    :align: center
    :alt: Relationship between :math:`v_{Settle}` and :math:`v_{Slide}`.
 
-   Relationship between :math:`v_{Settle}` and :math:`v_{Slide}`.
+   Tube settler performance as a function of capture velocity ratio.
 
 Head Loss through Plate Settlers
 --------------------------------
