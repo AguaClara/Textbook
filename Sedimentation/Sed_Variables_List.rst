@@ -116,6 +116,8 @@
 
    * - Sedimentation velocity of floc between plate settlers
      - :math:`v_{Slide}`
+   * - Settling velocity
+     - :math:`v_{Settle}`
    * - Shear
      - :math:`\tau`
    * - Spacing between plate settlers
