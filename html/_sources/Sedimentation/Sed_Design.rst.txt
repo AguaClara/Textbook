@@ -117,7 +117,7 @@ The flow around the particle and the Reynolds Number can be described in the lam
 
     Drag coefficient as a function of Reynolds number.
 
-.. note: I'd  suggest removing the Reynolds number definition because it makes it appear that it only applies for turbulent flows. Ideally we'd have the equation for coefficient of drag in the transition region. This paper might be good to cite. https://www.sciencedirect.com/science/article/pii/S2095268615000178. They provide equations for the coefficient of drag in the transition region (analogous to Swamee Jain equations for pipe flow.)
+Note that the coefficient of drag in the transition region is an important parameter to understand. Equations for the coefficient of drag are explored in the paper by `Yang et al. in "General formulas for drag coefficient and settling velocity of sphere based on theoretical law" <https://www.sciencedirect.com/science/article/pii/S2095268615000178>`_. They have determined that Oseen law based formulas are recommended for use.
 
 Let's consider the drag coefficient diagram at Reynolds numbers of :math:`10^5`. We notice that there is a "bump" in the plot, in which the drag coefficients drop. This is because at really high Reynolds numbers, the boundary layer around the particle became turbulent. This causes the wake behind the particle to be a little smaller, leading to a slight reduction in drag. The drag coefficient decreases, but the total drag force does not necessarily decrease (and likely keeps on increasing).
 
@@ -824,8 +824,6 @@ There are some cases in which the plates are so close that even if flocs settle 
 
 It is a force balance! There is a force of gravity pulling the particle down, balanced with the force that the fluid flow exerts through drag related to viscosity. But why does it matter if plates are close together for floc roll up? The average velocity between plates is about 1 mm/s and is the same for any spacing. However, when plates are closer together the velocity profile is much steeper. Compared with plates with greater spacing, the closer plates cause there to be a higher velocity closer to the surface of the plate. This means that flocs between closely spaced plates will see a greater velocity closer to the plate settler, which will impact the force balance. The derivation of the force balance is [[[[link]]]]. The velocity that the flocs slide down the plate is called :math:`v_{Slide}`.
 
-[[[[need to make. force balance diagram]]]]
-
 2) How would you define the transition between floc rollup and slide down? What would describe the case for a floc that is stationary on the plate settler (not rolling up or sliding down?)
 
 The transition is defined as when the gravitational forces and the fluid drag forces match.
@@ -1111,7 +1109,13 @@ Let's start with the relationships that we already know:
 
 .. math::
 
-  v_{P,V}*S = v_{A,V}*B` and :math:`B = S+T
+  v_{P,V}*S = v_{A,V}*B
+
+and
+
+.. math::
+
+  B = S+T
 
 .. _figure_SvsBplatesettlers:
 
@@ -1213,8 +1217,8 @@ As has been discussed, floc rollup is a failure mode of plate settler performanc
 We will solve for both the plate settler and tube settler conditions.
 
 1) Find the velocity gradient next to the plate:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-^^^^^^^^^^^^^
 Plate Settler
 """""""""""""
 
@@ -1471,6 +1475,13 @@ Finally, we can determine :math:`v_{Slide}` by,
 What happens if the primary particles are less dense? [[need more explanation]]
 :math:`v_{Slide}` will increase because the particles need to be able to settle faster in order to not experience rollup.
 
+.. _figure_vsettle_vslide:
+.. figure:: Images/vsettle_vslide.png
+   :height: 300px
+   :align: center
+   :alt: Relationship between :math:`v_{Settle}` and :math:`v_{Slide}`.
+
+   Relationship between :math:`v_{Settle}` and :math:`v_{Slide}`.
 
 Head Loss through Plate Settlers
 --------------------------------
