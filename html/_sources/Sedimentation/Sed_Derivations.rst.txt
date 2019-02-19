@@ -456,6 +456,7 @@ What happens if the primary particles are less dense? [[need more explanation]]
 :math:`v_{Slide}` will increase because the particles need to be able to settle faster in order to not experience rollup.
 
 .. _figure_vsettle_vslide:
+
 .. figure:: Images/vsettle_vslide.png
    :height: 300px
    :align: center
