@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flocculation Introduction &mdash; AguaClara Textbook 0.039 documentation</title>
+  <title>Flocculation Introduction &mdash; AguaClara Textbook 0.040 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.039
+                0.040
               </div>
             
           
@@ -238,17 +238,17 @@
             
   <div class="section" id="flocculation-introduction">
 <span id="title-flocculation-introduction"></span><h1>Flocculation Introduction<a class="headerlink" href="#flocculation-introduction" title="Permalink to this headline">¶</a></h1>
-<p>Flocculation transform inorganic (clays such as <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0048969708010103">kaolinite, smectite, etc. and metallic oxy-hydroxides such as goethite and gibbsite</a>) and organic (viruses, bacteria and protozoa) primary particles into flocs (particle aggregates). Flocculation doesn’t remove any particles from suspension. Instead it causes particle aggregation and then floc blankets, lamellar sedimentation, and sand filtration will be used to separate those flocs from the water. Sedimentation can remove flocs more easily than it can remove primary particles because flocs have a higher terminal sedimentation velocity. Floc blankets and sand filtration rely primarily on capture based on interception and interception is much more efficient when the particles are larger. Thus the purpose of flocculation is to join <strong>all</strong> of the primary particles together into flocs (See movie in <a class="reference internal" href="#figure-collisions-in-sequence"><span class="std std-numref">Fig. 73</span></a>).</p>
+<p>Flocculation transform inorganic (clays such as <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0048969708010103">kaolinite, smectite, etc. and metallic oxy-hydroxides such as goethite and gibbsite</a>) and organic (viruses, bacteria and protozoa) primary particles into flocs (particle aggregates). Flocculation doesn’t remove any particles from suspension. Instead it causes particle aggregation and then floc blankets, lamellar sedimentation, and sand filtration will be used to separate those flocs from the water. Sedimentation can remove flocs more easily than it can remove primary particles because flocs have a higher terminal sedimentation velocity. Floc blankets and sand filtration rely primarily on capture based on interception and interception is much more efficient when the particles are larger. Thus the purpose of flocculation is to join <strong>all</strong> of the primary particles together into flocs (See movie in <a class="reference internal" href="#figure-collisions-in-sequence"><span class="std std-numref">Fig. 74</span></a>).</p>
 <div class="figure align-center" id="id1">
 <span id="figure-collisions-in-sequence"></span><a class="reference external image-reference" href="https://youtu.be/NIgP56htShw"><img alt="Random walk toward a collision" src="../_images/Collisions_in_Sequence.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 73 </span><span class="caption-text">Clay particles with attached coagulant nanoparticles collide due to fluid deformation. They grow in size quickly. The challenge is to catch the last few primary particles that failed to participate in the aggregation process.</span></p>
+<p class="caption"><span class="caption-number">Fig. 74 </span><span class="caption-text">Clay particles with attached coagulant nanoparticles collide due to fluid deformation. They grow in size quickly. The challenge is to catch the last few primary particles that failed to participate in the aggregation process.</span></p>
 </div>
-<p>Given that hydraulic flocculators approach plug flow conditions it is reasonable to assume that at any given location in the flocculator there is a predominance of one size of flocs. Thus collisions between similar sized flocs are most likely because that is what is present. There is also a hydrodynamic reason why similar sized flocs are favored which we will discuss later. For simplicity of modeling let’s assume that flocs repeatedly double in size as suggested by the movie in <a class="reference internal" href="#figure-collisions-in-sequence"><span class="std std-numref">Fig. 73</span></a>. In that case, the number of primary particles in a floc is given by</p>
+<p>Given that hydraulic flocculators approach plug flow conditions it is reasonable to assume that at any given location in the flocculator there is a predominance of one size of flocs. Thus collisions between similar sized flocs are most likely because that is what is present. There is also a hydrodynamic reason why similar sized flocs are favored which we will discuss later. For simplicity of modeling let’s assume that flocs repeatedly double in size as suggested by the movie in <a class="reference internal" href="#figure-collisions-in-sequence"><span class="std std-numref">Fig. 74</span></a>. In that case, the number of primary particles in a floc is given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-n-primary-of-n-collisions">
-<span class="eqno">(314)<a class="headerlink" href="#equation-eq-n-primary-of-n-collisions" title="Permalink to this equation">¶</a></span>\[n_{primary} = 2^{n_{collisions}}\]</div>
-<p>If we assume (and we will show this assumption to be wrong in the next step) that the floc volume is directly proportional to the total volume of the primary particles in the floc, then we can rearrange <a class="reference internal" href="#equation-eq-n-primary-of-n-collisions">(314)</a> to solve for the number of sequential collisions required to increase the number of primary particles by a factor of 1000,000,000.</p>
+<span class="eqno">(315)<a class="headerlink" href="#equation-eq-n-primary-of-n-collisions" title="Permalink to this equation">¶</a></span>\[n_{primary} = 2^{n_{collisions}}\]</div>
+<p>If we assume (and we will show this assumption to be wrong in the next step) that the floc volume is directly proportional to the total volume of the primary particles in the floc, then we can rearrange <a class="reference internal" href="#equation-eq-n-primary-of-n-collisions">(315)</a> to solve for the number of sequential collisions required to increase the number of primary particles by a factor of 1000,000,000.</p>
 <div class="math notranslate nohighlight" id="equation-n-collisions-not-fractal">
-<span class="eqno">(315)<a class="headerlink" href="#equation-n-collisions-not-fractal" title="Permalink to this equation">¶</a></span>\[ n_{collisions} = \frac{log(n_{primary})}{log(2)}\]</div>
+<span class="eqno">(316)<a class="headerlink" href="#equation-n-collisions-not-fractal" title="Permalink to this equation">¶</a></span>\[ n_{collisions} = \frac{log(n_{primary})}{log(2)}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">n_primary</span> <span class="o">=</span> <span class="mi">1000000000</span>
@@ -264,14 +264,14 @@
 <p>The size change produced by flocculation is dramatic. Clay particles and pathogens have sizes that are order <span class="math notranslate nohighlight">\(\mu m\)</span> and they combine to form flocs that are order <span class="math notranslate nohighlight">\(mm\)</span>. A thousand fold increase in diameter suggests a billion fold increase in volume.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-flocs-are-fractals"></span><a class="reference external image-reference" href="https://youtu.be/tAAC-KY8ZgA"><img alt="Flocs are fractals" src="../_images/Flocs_are_fractals.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 74 </span><span class="caption-text">The amount of water contained within a volume defined by the floc increases as the flocs grows.</span></p>
+<p class="caption"><span class="caption-number">Fig. 75 </span><span class="caption-text">The amount of water contained within a volume defined by the floc increases as the flocs grows.</span></p>
 </div>
 </div>
 <div class="section" id="flocculation-is-or-used-to-be-a-slow-process">
 <h2>Flocculation is (or used to be) a Slow Process<a class="headerlink" href="#flocculation-is-or-used-to-be-a-slow-process" title="Permalink to this headline">¶</a></h2>
 <p>One of the mysteries of flocculation has been why it is such a slow process, requiring 30 minutes according to conventional design, and yet it appears to be a very rapid process. Plant operators observe that with high raw water turbidities that they can see flocculation progressing after about 0.5 minutes of flocculation. We can estimate the collision potential, <span class="math notranslate nohighlight">\(G\theta\)</span> that corresponds to making visible flocs.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-0">
-<span class="eqno">(316)<a class="headerlink" href="#equation-flocculation-floc-intro-0" title="Permalink to this equation">¶</a></span>\[\bar G = \sqrt{ \frac{g h_e}{\theta \nu}}\]</div>
+<span class="eqno">(317)<a class="headerlink" href="#equation-flocculation-floc-intro-0" title="Permalink to this equation">¶</a></span>\[\bar G = \sqrt{ \frac{g h_e}{\theta \nu}}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
 <span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -302,14 +302,14 @@
 <p>Evidence that the charge neutralization hypothesis doesn’t explain flocculation of surface waters has been accumulating for decades. <em>Sweep</em> flocculation has been proposed as an alternative “mechanism” that described common observations that didn’t fit the charge neutralization hypothesis. However, similar to the charge neutralization hypothesis, the <em>sweep</em> hypothesis didn’t result in the development of predictive equations to describe the process.</p>
 <p>For example, in 1992 Ching, Tanaka, and Elimelech published their research on <a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">Dynamics of coagulation of kaolin particles with ferric chloride</a>. They found
 that the electrophoretic mobility which is a measure of the clay particle surface charge was never neutralized at pH 7.8 and was neutralized at <span class="math notranslate nohighlight">\(10\mu M\)</span> at pH 6.0. The results were interpreted by the authors to mean that some combination of sweep floc and charge patchiness was responsible for the observed results.</p>
-<p>See <a class="reference internal" href="#figure-ching-electrophoretic-mobility-vs-ferric-chloride"><span class="std std-numref">Fig. 75</span></a> showing that at pH 7.8 the ferric chloride was still negatively charged and yet succeeded in flocculating the water to almost the same extent as the ferric chloride  at ph 6.0 that was postively charged (see <a class="reference internal" href="#figure-ching-residual-turbidity-vs-ferric-chloride"><span class="std std-numref">Fig. 76</span></a>).</p>
+<p>See <a class="reference internal" href="#figure-ching-electrophoretic-mobility-vs-ferric-chloride"><span class="std std-numref">Fig. 76</span></a> showing that at pH 7.8 the ferric chloride was still negatively charged and yet succeeded in flocculating the water to almost the same extent as the ferric chloride  at ph 6.0 that was postively charged (see <a class="reference internal" href="#figure-ching-residual-turbidity-vs-ferric-chloride"><span class="std std-numref">Fig. 77</span></a>).</p>
 <div class="figure align-center" id="id3">
 <span id="figure-ching-electrophoretic-mobility-vs-ferric-chloride"></span><a class="reference internal image-reference" href="../_images/Ching_Electrophoretic_Mobility_vs_Ferric_Chloride.png"><img alt="internal figure" src="../_images/Ching_Electrophoretic_Mobility_vs_Ferric_Chloride.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 75 </span><span class="caption-text"><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">Electrophoretic Mobility for final pH</a> (after coagulant addition) of 6.0 and 7.8 as a function of <span class="math notranslate nohighlight">\(FeCl_3\)</span> dose</span></p>
+<p class="caption"><span class="caption-number">Fig. 76 </span><span class="caption-text"><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">Electrophoretic Mobility for final pH</a> (after coagulant addition) of 6.0 and 7.8 as a function of <span class="math notranslate nohighlight">\(FeCl_3\)</span> dose</span></p>
 </div>
 <div class="figure align-center" id="id4">
 <span id="figure-ching-residual-turbidity-vs-ferric-chloride"></span><a class="reference internal image-reference" href="../_images/Ching_Residual_Turbidity_vs_Ferric_Chloride.png"><img alt="internal figure" src="../_images/Ching_Residual_Turbidity_vs_Ferric_Chloride.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 76 </span><span class="caption-text"><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">The settled water turbidity was almost independent of pH even though the electrophoretic mobility was quite different for the two pH values tested</a>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 77 </span><span class="caption-text"><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">The settled water turbidity was almost independent of pH even though the electrophoretic mobility was quite different for the two pH values tested</a>.</span></p>
 </div>
 <p><a class="reference external" href="https://doi.org/10.1016/0043-1354(94)90007-8">At pH 6.0 the ferric hydroxide precipitates are positively charged and at pH 7.8 they are close to neutral</a>. Thus it is apparent that neutralization of the clay surface charge can not explain these results.</p>
 <p>Electrostatic charge neutralization hypothesis</p>
@@ -369,7 +369,7 @@ iwapublishing</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.039',
+            VERSION:'0.040',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
