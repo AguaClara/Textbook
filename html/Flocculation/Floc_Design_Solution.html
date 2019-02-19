@@ -356,7 +356,7 @@
 <h4>3)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <p>Plot <span class="math notranslate nohighlight">\(G\theta\)</span> as a function of the operating temperature given the head loss and residence time for this design. In this step you are assuming that you have built this hydraulic flocculator and you want to see how the collision potential, <span class="math notranslate nohighlight">\(G\theta\)</span>, varies with temperature of operation. Vary the temperature from 0°C to 30°C. The following equation makes it clear that the velocity gradient originates from head loss that creates fluid deformation that is limited by viscosity.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-solution-0">
-<span class="eqno">(396)<a class="headerlink" href="#equation-flocculation-floc-design-solution-0" title="Permalink to this equation">¶</a></span>\[\bar G\theta =\sqrt {\frac{{g{h_e}\theta }}{\nu }}\]</div>
+<span class="eqno">(397)<a class="headerlink" href="#equation-flocculation-floc-design-solution-0" title="Permalink to this equation">¶</a></span>\[\bar G\theta =\sqrt {\frac{{g{h_e}\theta }}{\nu }}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Gt_operation</span><span class="p">(</span><span class="n">hl</span><span class="p">,</span><span class="n">Gt</span><span class="p">,</span><span class="n">T_BOD</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
     <span class="n">Gt_operation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">hl</span> <span class="o">*</span> <span class="n">t_floc_est</span><span class="p">(</span><span class="n">hl</span><span class="p">,</span> <span class="n">Gt</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">Gt_operation</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
@@ -374,12 +374,12 @@
 </div>
 <div class="figure align-center" id="id25">
 <span id="figure-gtheta-vs-temperature"></span><a class="reference internal image-reference" href="../_images/Gtheta_vs_temperature.png"><img alt="Gtheta_vs_temperature" src="../_images/Gtheta_vs_temperature.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 104 </span><span class="caption-text">The <span class="math notranslate nohighlight">\(\bar G\theta\)</span> delivered by a flocculator increases with temperature. Note that the apparent linearity of this graph is because the inverse of the square root of kinematic viscosity varies linearly with temperature over this range!</span></p>
+<p class="caption"><span class="caption-number">Fig. 105 </span><span class="caption-text">The <span class="math notranslate nohighlight">\(\bar G\theta\)</span> delivered by a flocculator increases with temperature. Note that the apparent linearity of this graph is because the inverse of the square root of kinematic viscosity varies linearly with temperature over this range!</span></p>
 </div>
 </div>
 <div class="section" id="id4">
 <h4>4)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
-<p>The Equation <a class="reference internal" href="Floc_Model.html#equation-pclam">(342)</a> creates the link between <span class="math notranslate nohighlight">\(\bar G \theta\)</span> and flocculator performance. What does the floc model and <a class="reference internal" href="#figure-gtheta-vs-temperature"><span class="std std-numref">Fig. 104</span></a> tell you about flocculator performance and flocculator design? Explain why performance varies with temperature. Explain how temperature influences collisions between particles. What temperature should be used to design flocculators?</p>
+<p>The Equation <a class="reference internal" href="Floc_Model.html#equation-pclam">(343)</a> creates the link between <span class="math notranslate nohighlight">\(\bar G \theta\)</span> and flocculator performance. What does the floc model and <a class="reference internal" href="#figure-gtheta-vs-temperature"><span class="std std-numref">Fig. 105</span></a> tell you about flocculator performance and flocculator design? Explain why performance varies with temperature. Explain how temperature influences collisions between particles. What temperature should be used to design flocculators?</p>
 <p>Flocculator performance improves with warmer temperatures because the fluid deforms more given the same input energy. The fluid deforms more because it is less viscous at higher temperatures. Flocculators should be designed to perform well based on the coldest operating temperature that they will encounter.</p>
 </div>
 <div class="section" id="id5">
@@ -480,7 +480,7 @@
 <h4>12)<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <p>Calculate the <em>maximum</em> distance between expansions. This occurs for the largest allowable H/S ratio. Note that this isn’t accounting for the integer requirement for the number of baffle spaces per channel yet.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-solution-1">
-<span class="eqno">(397)<a class="headerlink" href="#equation-flocculation-floc-design-solution-1" title="Permalink to this equation">¶</a></span>\[{H_{{e_{Max}}}} = {\left[ {\frac{{{K_e}}}{{2\nu {{\bar G}^2}}}{{\left( {\frac{{Q{\Pi _{H{S_{Max}}}}}}{W}} \right)}^3}} \right]^{\frac{1}{4}}}\]</div>
+<span class="eqno">(398)<a class="headerlink" href="#equation-flocculation-floc-design-solution-1" title="Permalink to this equation">¶</a></span>\[{H_{{e_{Max}}}} = {\left[ {\frac{{{K_e}}}{{2\nu {{\bar G}^2}}}{{\left( {\frac{{Q{\Pi _{H{S_{Max}}}}}}{W}} \right)}^3}} \right]^{\frac{1}{4}}}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">height_exp_max</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
 
     <span class="n">g_avg</span> <span class="o">=</span> <span class="n">G_avg</span><span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
@@ -523,7 +523,7 @@
 </div>
 <div class="section" id="id15">
 <h4>15)<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
-<p>Calculate the spacing between baffles based on the target velocity gradient using <a class="reference internal" href="Floc_Design.html#equation-floc-baffle-spacing">(384)</a>.</p>
+<p>Calculate the spacing between baffles based on the target velocity gradient using <a class="reference internal" href="Floc_Design.html#equation-floc-baffle-spacing">(385)</a>.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">spacing_floc</span><span class="p">(</span><span class="n">flow_plant</span><span class="p">,</span> <span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">):</span>
 
     <span class="n">g_avg</span> <span class="o">=</span> <span class="n">G_avg</span><span class="p">(</span><span class="n">headloss_floc_BOD</span><span class="p">,</span> <span class="n">Gt_BOD</span><span class="p">,</span> <span class="n">T_BOD</span><span class="p">)</span>
@@ -668,19 +668,19 @@
 </div>
 <div class="figure align-center" id="id26">
 <span id="figure-expansions-per-baffle-space-vs-plant-flow"></span><a class="reference internal image-reference" href="../_images/Expansions_per_baffle_space_vs_plant_flow.png"><img alt="Expansions per baffle space vs plant flow" src="../_images/Expansions_per_baffle_space_vs_plant_flow.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 105 </span><span class="caption-text">The number of expansions per baffle space decreases rapidly with flow rate. These results are a function of the flocculator depth and of the target head loss used for the design.</span></p>
+<p class="caption"><span class="caption-number">Fig. 106 </span><span class="caption-text">The number of expansions per baffle space decreases rapidly with flow rate. These results are a function of the flocculator depth and of the target head loss used for the design.</span></p>
 </div>
 <div class="figure align-center" id="id27">
 <span id="figure-number-of-channels-vs-plant-flow"></span><a class="reference internal image-reference" href="../_images/Number_of_channels_vs_plant_flow.png"><img alt="Number of channels vs plant flow" src="../_images/Number_of_channels_vs_plant_flow.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 106 </span><span class="caption-text">The number of channels is less than 2 for a wide range of flows. This is because the required residence time in the flocculator is so low. We may eventually want to create a design that makes it possible to have an odd number of flocculator channels so that we can use a single channel for low flow rates.</span></p>
+<p class="caption"><span class="caption-number">Fig. 107 </span><span class="caption-text">The number of channels is less than 2 for a wide range of flows. This is because the required residence time in the flocculator is so low. We may eventually want to create a design that makes it possible to have an odd number of flocculator channels so that we can use a single channel for low flow rates.</span></p>
 </div>
 <div class="figure align-center" id="id28">
 <span id="figure-number-of-baffle-spaces-vs-plant-flow"></span><a class="reference internal image-reference" href="../_images/Number_of_baffle_spaces_vs_plant_flow.png"><img alt="Number of baffle spaces vs plant flow" src="../_images/Number_of_baffle_spaces_vs_plant_flow.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 107 </span><span class="caption-text">The number of baffle spaces is lower for low flow rates because those flocculators have additional expansions. At high flow rates the number of baffles spaces increases because the residence time per baffle space decreases. The residence time per baffle space decreases when the number of channels jumps from 2 to 4.</span></p>
+<p class="caption"><span class="caption-number">Fig. 108 </span><span class="caption-text">The number of baffle spaces is lower for low flow rates because those flocculators have additional expansions. At high flow rates the number of baffles spaces increases because the residence time per baffle space decreases. The residence time per baffle space decreases when the number of channels jumps from 2 to 4.</span></p>
 </div>
 <div class="figure align-center" id="id29">
 <span id="figure-floc-channel-width-vs-plant-flow"></span><a class="reference internal image-reference" href="../_images/Floc_channel_width_vs_plant_flow.png"><img alt="Floc channel width vs plant flow" src="../_images/Floc_channel_width_vs_plant_flow.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 108 </span><span class="caption-text">The flocculator channel width varies linearly with flow rate for a constant number of channels. The exception is for flows below about 35 L/s. In that flow rate the requirement of 2 channels that are the length of the sedimentation tank is excessive and results in more collision potential than needed. We need a new design solution to handle this suboptimal design for flows lower than 35 L/s.</span></p>
+<p class="caption"><span class="caption-number">Fig. 109 </span><span class="caption-text">The flocculator channel width varies linearly with flow rate for a constant number of channels. The exception is for flows below about 35 L/s. In that flow rate the requirement of 2 channels that are the length of the sedimentation tank is excessive and results in more collision potential than needed. We need a new design solution to handle this suboptimal design for flows lower than 35 L/s.</span></p>
 </div>
 </div>
 <div class="section" id="id23">
