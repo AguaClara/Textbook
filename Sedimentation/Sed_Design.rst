@@ -50,6 +50,7 @@ In this section, we will develop a conceptual understanding of the sedimentation
 .. _figure_sed_tank_overview:
 
 .. figure:: Images/sed_tank_overview.png
+    :target: https://youtu.be/ca3xVntxEzw
     :height: 300px
     :align: center
     :alt: Overview of an AguaClara Sedimentation tank.
@@ -595,7 +596,17 @@ Why did AguaClara design the effluent manifold to be submerged? There are 3 main
 
 #. The launders were also designed to be submerged to simplify construction. Effluent launders that also act as weirs must be installed perfectly level. This is difficult to ensure during construction and thus we have elected to use a single weir to regulate the water level in all of the sedimentation tanks. The water from all of the sedimentation tanks in one treatment train joins together in a common channel before flowing over the exit weir.
 
-#. The submerged launder and exit weir system also make it possible to refill and empty a sedimentation tank with clean water. More on this later! [[Need to link to this explanation.]]
+#. The submerged launder and exit weir system also make it possible to refill and empty a sedimentation tank with clean water, as shown in the following video.
+
+.. _figure_sed_fill_empty:
+
+.. figure:: Images/sed_fill_empty.png
+    :target: https://youtu.be/B_LEH1ezd6E
+    :height: 300px
+    :align: center
+    :alt: Sedimentation tank filling and emptying with clean water.
+
+    Sedimentation tank filling and emptying with clean water.
 
 Why are the orifices in the effluent manifold located at the top of the pipe?
 They are located on the top to promote even flow collection and for ease of operation and maintenance. The orifices need to be either located on the top or bottom so that they are symmetrical about the tank because if the orifices were put on the sides, then they might not draw water evenly from the entire tank. So, we are to choose between the top or the bottom; which would be better for operation and maintenance? The top is better because orifices located on the top of the pipe can be easily observed and maintained by operators in case any clogging occurs. We also want to limit the number of flocs that rise through the plate settlers and enter the effluent manifold. Locating the orifices on the top discourages that from happening by not drawing up directly from the top of plate settlers and by giving more time for flocs to potentially settle.
