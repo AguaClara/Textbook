@@ -7,6 +7,8 @@ In the next section, we will develop the mathematical models that help us explai
 
 Note: this section will build off of the conceptual understanding established in the previous section and will explain how the tank works with derivations and mathematical models.
 
+.. _heading_Sed_Tank_Velocity_Flow:
+
 Comparison of velocities and flow in sedimentation tank
 ========================================================
 
@@ -27,7 +29,7 @@ To understand how water flows in the sedimentation tank, we must understand how 
 1) Velocity and flow exiting the diffusers
 ------------------------------------------------------------
 
-This is discussed specifically in the section on diffusers [[should the diffuser explanation go here? or elsewhere?]]
+This is discussed specifically in the section on :ref:` diffuser design <_heading_Sed_Tank_Diffuser_Design>`.
 
 2) Velocity and flow in the floc blanket
 ----------------------------------------
@@ -78,12 +80,14 @@ For another example of flow conservation, let's consider the relationship betwee
 
 By using flow conservation and plate settler geometry, we can begin to understand the mathematical relationships that drive design.
 
+.. _heading_Sed_Tank_Plate_Settler_Design:
+
 Plate Settler Design
 ========================================================
 Plate Settler Parameters
 -------------------------
 
-From the relationship that :math:`v_{P,V}*S = v_{A,V}*B`, we can solve for :math:`B` or :math:`L` in terms of their related parameters. [[figure out how to either link or incorporate this with the discussion of this in the plate settler explanation]].
+From the relationship that :math:`v_{P,V}*S = v_{A,V}*B`, we can solve for :math:`B` or :math:`L` in terms of their related parameters.
 
 Let's start with the relationships that we already know:
 
@@ -125,7 +129,7 @@ Solving for :math:`v_{P,V}`, we rearrange and substitute by,
 
   v_{P,V} = \frac{v_{A,V}*(S+T)}{S}
 
-We also already know from our discussion of plate settlers that we can relate capture velocity, :math:`v_c`, to :math:`S, L, \alpha`, and :math:`v_{P,V}` by, [[link to previous discussion]]
+We also already know from our :ref:`discussion of plate settlers <heading_Sed_Tank_Plate_Settlers>` that we can relate capture velocity, :math:`v_c`, to :math:`S, L, \alpha`, and :math:`v_{P,V}` by,
 
 .. math::
 
@@ -151,12 +155,14 @@ Now, we can use this form of the capture velocity equation to solve for :math:`B
 
   L = \frac{S(\frac{v_{P,V}}{v_c}-1) + T(\frac{v_{P,V}}{v_c})}{sin\alpha cos\alpha}
 
+.. _heading_Sed_Tank_Plate_Settler_Design_Review:
+
 The AguaClara plate settler design approach is summarized in the following table:
 
 +----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
 | Parameter            | Variable             | Determined by:                    | Determines:                | Value                    |
 +======================+======================+===================================+============================+==========================+
-| Upflow velocity      | :math:`v_{S,V}`| floc blanket                      | size of tank               | 1 :math:`\frac{mm}{s}`   |
+| Upflow velocity      | :math:`v_{S,V}`      | floc blanket                      | size of tank               | 1 :math:`\frac{mm}{s}`   |
 |                      |                      | upflow requirements               |                            |                          |
 +----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
 | Capture velocity     | :math:`v_c`          | target turbidity                  | particle size distribution | 0.12 :math:`\frac{mm}{s}`|
@@ -179,10 +185,12 @@ The AguaClara plate settler design approach is summarized in the following table
 
     Plate settler models and relevant equations.
 
+.. _heading_Floc_Rollup_Slide_Velocity_Derivation:
+
 Floc Rollup and Slide Velocity
 ------------------------------
 
-As has been discussed, floc rollup is a failure mode of plate settler performance [[link]]. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine this by calculating the floc sedimentation velocity, :math:`v_{Slide}`, that can be captured given a plate spacing. The steps to calculate this are:
+As has been discussed, :ref:`floc rollup <_heading_Floc_Rollup>` is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine this by calculating the floc sedimentation velocity, :math:`v_{Slide}`, that can be captured given a plate spacing. The steps to calculate this are:
 
 1) find the velocity gradient next to the plate
 
@@ -224,7 +232,9 @@ We begin by describing the conditions of infinite horizontal plates.
 
 .. math::
 
-  \frac{y^2}{2}\frac{dp}{dx} + Ay + B = \mu u [[need explanation of variables and where this came from]]
+  \frac{y^2}{2}\frac{dp}{dx} + Ay + B = \mu u
+
+[[need explanation of variables and where this came from]]
 
 We employ the no-slip condition to solve for the constants A and B. The no-slip condition is that :math:`u = 0` at :math:`y = 0` and :math:`y = S`, where :math:`u` is the horizontal velocity component, :math:`y` is the location in the y-axis direction between plates, and :math:`S` is the spacing between plates.
 
@@ -391,7 +401,7 @@ Substituting by the trigonometric relationship :math:`v_{\alpha} = (\frac{v_{P,V
 
 3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Recall from previous sections [[link]] that the terminal velocity, :math:`v_t`, of the floc can be calculated by, [[??]]
+Recall from our :ref:`previous explanation of terminal velocity <_heading_terminal_velocity_equation` that the terminal velocity, :math:`v_t`, of the floc can be calculated by,
 
 .. math::
 
@@ -452,7 +462,7 @@ Finally, we can determine :math:`v_{Slide}` by,
 
 :math:`v_{Slide}` is the terminal sedimentation velocity of the slowest-settling floc that can slide down an incline. Flocs with with terminal velocity (the slide velocity) will be held stationary on the incline because of a balance between gravitational forces and fluid drag. Flocs with a terminal velocity lower than :math:`v_{Slide}` will be carried out of the top of the settler (i.e., they will rollup) even if they settle onto the settler wall. Thus, the slide terminal velocity represents a constraint on the ability of plate settlers to capture flocs.
 
-What happens if the primary particles are less dense? [[need more explanation]]
+What happens if the primary particles are less dense?
 :math:`v_{Slide}` will increase because the particles need to be able to settle faster in order to not experience rollup.
 
 .. _figure_vsettle_vslide:
@@ -464,10 +474,12 @@ What happens if the primary particles are less dense? [[need more explanation]]
 
    Tube settler performance as a function of capture velocity ratio.
 
+.. _heading_Sed_Tank_Hl_thru_Plate_Settlers:
+
 Head Loss through Plate Settlers
 --------------------------------
 
-Flow through the sedimentation tank is controlled by head loss in an attempt to achieve flow uniformity. We have already explained that plate settler spacing impacts head loss [[[[link]]]], but by what mathematical relationship? Will putting plate settlers closer together result in more or less head loss? This question is complicated because closer plate settlers would create more shear and head loss, but shorter plate settlers also mean that they become shorter which would decrease shear and head loss.
+Flow through the sedimentation tank is controlled by head loss in an attempt to achieve flow uniformity. We have already explained that :ref:`plate settler spacing impacts head loss <heading_Sed_Tank_Plate_Settlers_Head_Loss_Intro>`, but by what mathematical relationship? Will putting plate settlers closer together result in more or less head loss? This question is complicated because closer plate settlers would create more shear and head loss, but shorter plate settlers also mean that they become shorter which would decrease shear and head loss.
 
 Let's start with a force balance. Assume that there is a fully established velocity profile that is parabolic with laminar flow. The forces that we care about are shear forces on the walls of the plate settlers and the differential pressure from flow in the direction of the velocity.
 
@@ -528,7 +540,7 @@ Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
 
   h_L = 2 \frac{\mu}{\rho g} \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)
 
-Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}` [[help]]. The resulting two plots show how head loss and velocity relate to plate settlers.
+Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}`. The resulting two plots show how head loss and velocity relate to plate settlers.
 
 .. _figure_plate_settler_headloss_spacing:
 
@@ -538,6 +550,8 @@ Recall that head loss through plate settlers is really small, on the order of mi
    :alt: Head loss as a function of plate settler spacing.
 
    Head loss as a function of plate settler spacing.
+
+.. _heading_Sed_Tank_Floc_Blanket_Design:
 
 Floc Blanket Design
 ========================================================
@@ -633,7 +647,7 @@ Plugging in the equation for :math:`\rho_{fb}` and solving for :math:`h_L`,
 Floc blanket velocity gradient and collision potential
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use the other equations we developed in the chapter on flocculation [[[[link]]]].
+With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use the other equations we developed in the :ref:`chapter on flocculation <_heading_Hydraulic_Flocculation_Design>`.
 
 .. math::
 
@@ -671,7 +685,7 @@ Using our equation for :math:`h_L`,
 
   \phi_{fb} \approx 1` and is a function of :math:`C_{clay}
 
-We can plot our results for :math:`G` over a range of typical floc blanket concentrations, which is around 1 - 5 g/L. [[[[plot]]]] We find that :math:`G` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`G` provided by the floc blanket is much smaller than :math:`G` provided by the flocculator. This is an important point because in the low :math:`G` environment of the floc blanket where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
+We can plot our results for :math:`G` over a range of typical floc blanket concentrations, which is around 1 - 5 g/L. We find that :math:`G` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`G` provided by the floc blanket is much smaller than :math:`G` provided by the flocculator. This is an important point because in the low :math:`G` environment of the floc blanket where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
 
 We can plot our results for :math:`G\theta` by multiplying :math:`G` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`G\theta` ranges from 2,000 to 6,000. Compare this to the :math:`G\theta = 20,000` for the flocculator used in experiments [[[[Garland]]]].
 
@@ -704,6 +718,8 @@ This highlights an important distinction:
 #. The model created by the original derivation assumption would suggests that flocs in the floc blanket are inert - simply occupying space and causing there to be head loss in the floc blanket - without being involved in any collisions. This model is disproved through the experimental analysis of the two experimental setups.
 #. The model created after the analysis of experimental results suggests that flocs in the floc blanket are not inert - they are involved in collisions with small particles entering the floc blanket - and are growing in size. The model is supported through the experimental analysis.
 
+.. _heading_Flocculator_Floc_Blanket_Paradox:
+
 Flocculator and Floc Blanket Paradox
 ====================================
 
@@ -730,6 +746,7 @@ Flocs that are rotating in a shear flow drag a boundary layer of fluid with them
 
 Flocs that are falling through a fluid that is not undergoing significant shear have stagnation points on the upstream side of the flocs and thus there exists a small amount of fluid that gets close enough to the floc near the stagnation point for small particles to collide with the floc.
 
+.. _heading_Sed_Tank_Diffuser_Design:
 
 Diffuser Design
 ======================
@@ -796,7 +813,7 @@ Properties of :math:`v_{jet}`
 -------------------------------
 :math:`v_{jet}` is defined as the velocity of the water jet exiting the diffuser. After exiting the diffuser, this water jet is sent into the jet reverser to make a 180 degree turn. Does the water jet change pressure or velocity as it exits the jet reverser? Do we need to consider the effects of a *vena contracta*?
 
-Recall that a *vena contracta* is associated with a change in pressure that causes a contraction and subsequent acceleration of the fluid [[[[link to fluids review]]]]. Water exiting the diffuser is pointed directly down and the streamlines are straight and parallel, which means that the pressure across the streamlines is constant. Water exiting the jet reverser is pointed directly up and the streamlines are straight and parallel, which again means that the pressure across the streamlines is constant. Because the pressure is constant at the exit of the diffuser and at the exit of the jet reverser, we assume that the pressure of the water in the space between those two points is also constant because there is no physical barrier. If the pressure in this bottom section of the sedimentation tank is constant from the exit of the diffuser to the exit of the jet reverser, we can infer that they are equal.
+Recall that a :ref:`*vena contracta* <heading_what_is_a_vena_contracta>` is associated with a change in pressure that causes a contraction and subsequent acceleration of the fluid. Water exiting the diffuser is pointed directly down and the streamlines are straight and parallel, which means that the pressure across the streamlines is constant. Water exiting the jet reverser is pointed directly up and the streamlines are straight and parallel, which again means that the pressure across the streamlines is constant. Because the pressure is constant at the exit of the diffuser and at the exit of the jet reverser, we assume that the pressure of the water in the space between those two points is also constant because there is no physical barrier. If the pressure in this bottom section of the sedimentation tank is constant from the exit of the diffuser to the exit of the jet reverser, we can infer that they are equal.
 
 By Bernoulli, if the pressures between the exit of the diffuser to the exit of the jet reverser are equal then the velocities must also be equal. Bernoulli is applicable here because there is no flow expansion yet. The shear along the wall of the jet reverser is insignificant due to the short flow path. The water accelerates to account for the directional change but the absolute velocity does not change as it goes around the jet reverser.
 
