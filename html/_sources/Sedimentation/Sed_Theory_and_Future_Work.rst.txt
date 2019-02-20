@@ -4,12 +4,17 @@
 ***************************************
 Sedimentation Theory and Future Work
 ***************************************
+Unsolved sedimentation tank failure modes:
+
+#. Floc volcanoes and temperature-induced flow circulations [[[[link]]]]
+#. Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.
+#. Slime growth from iron-oxidizing bacteria.
+#. NOM impact on floc density
 
 .. _Floc_recycle:
 
 Floc recycle
 ==================
-
 
 We hypothesize that the flocs in floc blankets serve as collectors that primary particles attach to. We suspect that collisions between primary particles and large flocs are possible in the sedimentation tank because the rotational velocity of the flocs is small relative to the sedimentation velocity of the flocs. If the rotational velocity of the flocs is small, then a stagnation point will exist on the floc and a finite flow of fluid will come within a primary particle radius of the floc. Thus we expect primary particle removal in floc blankets to be proportional to the number of collectors that a primary particle passes while in the floc blanket.
 
@@ -137,7 +142,7 @@ Now we can solve for the required tube diameter
 
   import aguaclara.core.physchem as pc
   from aguaclara.core.units import unit_registry as u
-  
+
   import numpy as np
   import matplotlib.pyplot as plt
 
@@ -172,4 +177,4 @@ Floc Volcanoes
 
 Floc volcanoes are caused by differences in temperature between the water that is in a sedimentation tank and the incoming water. If the incoming water is warmer than the water that is already in the sedimentation tank, then the incoming water will be buoyant and will rise quickly to the top of the sedimentation tank and carry flocs to the effluent launder.
 
-Temperature fluctuations can be especially pronounced with small scale water supplies where small streams and small diameter transmission lines can be exposed to the sun and can warm up dramatically oduring a few hours of sunshine. Given that temperature changes and density changes can not easily be engineered, the only solution that we have is to reduce the time that water spends in the sedimentation tank so that the influent water is closer to the average temperature of the water in the sedimentation tank. Solar heating causing the raw water temperature to go from a minimum at 6 am to a maximum at 1 pm. AguaClara sedimentation tanks currently have a residence time of approximately 2 m / (1 mm/s) or 2000 s. We anticipate that by increasing the upflow velocity and by introducing floc recycle that the effects of temperature induced floc volcanoes will be reduced.
+Temperature fluctuations can be especially pronounced with small scale water supplies where small streams and small diameter transmission lines can be exposed to the sun and can warm up dramatically during a few hours of sunshine. Given that temperature changes and density changes can not easily be engineered, the only solution that we have is to reduce the time that water spends in the sedimentation tank so that the influent water is closer to the average temperature of the water in the sedimentation tank. Solar heating causing the raw water temperature to go from a minimum at 6 am to a maximum at 1 pm. AguaClara sedimentation tanks currently have a residence time of approximately 2 m / (1 mm/s) or 2000 s. We anticipate that by increasing the upflow velocity and by introducing floc recycle that the effects of temperature induced floc volcanoes will be reduced.
