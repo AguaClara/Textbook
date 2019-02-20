@@ -258,16 +258,16 @@
 <p>As flocs settle in water, they will fall at a speed dictated by the weight of the floc, the buoyancy of the floc, and drag from the water. These three forces - the gravitational weight force, the buoyant force, and the drag force - dictate the speed at which a floc falls and are detailed in the following free body diagram. We care about determining the speed at which flocs will fall because knowing this information will help inform our sedimentation reactor design criteria.</p>
 <div class="figure align-center" id="id1">
 <span id="figure-terminal-velocity-fbd"></span><a class="reference internal image-reference" href="../_images/terminal_velocity_FBD.png"><img alt="Buyouant force, drag force, and gravitational force shown for floc free body diagram." src="../_images/terminal_velocity_FBD.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 109 </span><span class="caption-text">Free body diagram of a floc in water.</span></p>
+<p class="caption"><span class="caption-number">Fig. 110 </span><span class="caption-text">Free body diagram of a floc in water.</span></p>
 </div>
 <p>To determine the force balance on a falling floc, consider:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-0">
-<span class="eqno">(398)<a class="headerlink" href="#equation-sedimentation-sed-intro-0" title="Permalink to this equation">¶</a></span>\[\sum F = m a\]</div>
+<span class="eqno">(399)<a class="headerlink" href="#equation-sedimentation-sed-intro-0" title="Permalink to this equation">¶</a></span>\[\sum F = m a\]</div>
 <p>At terminal velocity, the floc has been falling for a long period of time so there is no acceleration and the right side of the equation simplifies to zero.</p>
 <p><span class="math notranslate nohighlight">\(F_{drag} + F_{buoyant} - W_{floc} = 0\)</span></p>
 <p>Each of the force components can be determined by:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-1">
-<span class="eqno">(399)<a class="headerlink" href="#equation-sedimentation-sed-intro-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}\\F_{buoyant} = \rlap{-}V_{floc} \rho_{H_2O} g\\W_{floc} = \rlap{-} V_{floc} \rho_{floc} g\end{aligned}\end{align} \]</div>
+<span class="eqno">(400)<a class="headerlink" href="#equation-sedimentation-sed-intro-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}\\F_{buoyant} = \rlap{-}V_{floc} \rho_{H_2O} g\\W_{floc} = \rlap{-} V_{floc} \rho_{floc} g\end{aligned}\end{align} \]</div>
 <div class="line-block">
 <div class="line">Where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\rlap{-}V_{floc} =\)</span> floc particle volume</div>
@@ -281,16 +281,16 @@
 </div>
 <p>Plugging into the original force balance,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-2">
-<span class="eqno">(400)<a class="headerlink" href="#equation-sedimentation-sed-intro-2" title="Permalink to this equation">¶</a></span>\[\left [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2} \right]+\left [\rlap{-}V_{floc} \rho_{H_2O} g\right ]-\left [\rlap{-}V_{floc} \rho_{floc} g \right] =0\]</div>
+<span class="eqno">(401)<a class="headerlink" href="#equation-sedimentation-sed-intro-2" title="Permalink to this equation">¶</a></span>\[\left [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2} \right]+\left [\rlap{-}V_{floc} \rho_{H_2O} g\right ]-\left [\rlap{-}V_{floc} \rho_{floc} g \right] =0\]</div>
 <p>Solving for terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>, provides</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-3">
-<span class="eqno">(401)<a class="headerlink" href="#equation-sedimentation-sed-intro-3" title="Permalink to this equation">¶</a></span>\[v_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}\]</div>
+<span class="eqno">(402)<a class="headerlink" href="#equation-sedimentation-sed-intro-3" title="Permalink to this equation">¶</a></span>\[v_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}\]</div>
 <p>Terminal velocity is a function of fluid density, floc density, gravity, particle diameter, and the drag coefficient. To calculate velocity, all of those inputs must be determined.</p>
 <p>The first component that we will focus on is the drag coefficient, <span class="math notranslate nohighlight">\(C_D\)</span>. The drag coefficient is function of Reynolds Number, <span class="math notranslate nohighlight">\(Re\)</span>, and the characteristic flow around a particle. As a reminder, <span class="math notranslate nohighlight">\(Re = \frac{v_t D}{\nu}\)</span> where <span class="math notranslate nohighlight">\(v_t\)</span> is the velocity of the fluid relative to the particle, <span class="math notranslate nohighlight">\(D\)</span> is the characteristic length scale (in this case the particle diameter), and <span class="math notranslate nohighlight">\(\nu\)</span> is kinematic viscosity.</p>
 <p>Drag coefficients are used to describe flow around a particle.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-drag-coeff-re-base"></span><a class="reference internal image-reference" href="../_images/drag_coeff_Re_base.png"><img alt="Drag coefficient as a function of Reynolds number." src="../_images/drag_coeff_Re_base.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 110 </span><span class="caption-text">Drag coefficient as a function of Reynolds number.</span></p>
+<p class="caption"><span class="caption-number">Fig. 111 </span><span class="caption-text">Drag coefficient as a function of Reynolds number.</span></p>
 </div>
 <p>As an introduction to this drag coefficient diagram, we can compare it to something we’ve already learned about: the Moody diagram. Drawing parallels between the two will help us understand some important relationships better.</p>
 <p id="table-moody-dragcoefficient">Below is a table to compare the significance of the Moody diagram and the Drag Coefficient diagram.</p>
@@ -349,7 +349,7 @@ particle</td>
 <p>The flow around the particle and the Reynolds Number can be described in the laminar, turbulent, or turbulent-boundary regions. In the laminar region viscous forces dominate, <span class="math notranslate nohighlight">\(Re &lt; 1\)</span>,and the coefficient of drag is represented as the straight line with a slope of -1 on the log-log plot. The equation for drag on a sphere in laminar flow <span class="math notranslate nohighlight">\(C_D = \frac{24}{Re}\)</span> is referred to as Stokes Law. You’ll notice that the line for Stokes Law shown in the figure extends past the laminar region. This was done because it highlights that even though Stokes Law is not exactly correct past the turbulent region, it is still a pretty good approximation for  <span class="math notranslate nohighlight">\(Re &lt; 10\)</span>.</p>
 <div class="figure align-center" id="id3">
 <span id="figure-drag-coeff-re-full"></span><a class="reference internal image-reference" href="../_images/drag_coeff_Re_full.png"><img alt="Drag coefficient as a function of Reynolds number." src="../_images/drag_coeff_Re_full.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 111 </span><span class="caption-text">Drag coefficient as a function of Reynolds number.</span></p>
+<p class="caption"><span class="caption-number">Fig. 112 </span><span class="caption-text">Drag coefficient as a function of Reynolds number.</span></p>
 </div>
 <p>Note that the coefficient of drag in the transition region is an important parameter to understand. Equations for the coefficient of drag are explored in the paper by <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2095268615000178">Yang et al. in “General formulas for drag coefficient and settling velocity of sphere based on theoretical law”</a>. They have determined that Oseen law based formulas are recommended for use.</p>
 <p>Let’s consider the drag coefficient diagram at Reynolds numbers of <span class="math notranslate nohighlight">\(10^5\)</span>. We notice that there is a “bump” in the plot, in which the drag coefficients drop. This is because at really high Reynolds numbers, the boundary layer around the particle became turbulent. This causes the wake behind the particle to be a little smaller, leading to a slight reduction in drag. The drag coefficient decreases, but the total drag force does not necessarily decrease (and likely keeps on increasing).</p>
@@ -358,14 +358,14 @@ particle</td>
 <p>Let’s go back to the realm of water treatment. We care about drag coefficients and terminal velocities because they help describe how flocs will move in water. Flocs tend to exist in the region between 1&lt; <span class="math notranslate nohighlight">\(Re\)</span> &lt; 10. This region is not perfectly described by Stokes Law, but it is used as an appropriate approximation. We have already solved for the general equation for terminal velocity using the force balance approach. Now, we can solve for a terminal velocity equation specifically in the laminar region.</p>
 <p>Plug the drag coefficient and Reynolds numbers for laminar flow into the general terminal velocity equation:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-4">
-<span class="eqno">(402)<a class="headerlink" href="#equation-sedimentation-sed-intro-4" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}v_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}\\C_D = \frac{24}{Re}\\Re = \frac{v_tD}{\nu}\end{aligned}\end{align} \]</div>
+<span class="eqno">(403)<a class="headerlink" href="#equation-sedimentation-sed-intro-4" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}v_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}\\C_D = \frac{24}{Re}\\Re = \frac{v_tD}{\nu}\end{aligned}\end{align} \]</div>
 <p>to yield,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-5">
-<span class="eqno">(403)<a class="headerlink" href="#equation-sedimentation-sed-intro-5" title="Permalink to this equation">¶</a></span>\[v_t = \frac{D^2g}{18\nu}\frac{\rho_{floc} -\rho_{H_2O}}{\rho_{H_2O}}\]</div>
+<span class="eqno">(404)<a class="headerlink" href="#equation-sedimentation-sed-intro-5" title="Permalink to this equation">¶</a></span>\[v_t = \frac{D^2g}{18\nu}\frac{\rho_{floc} -\rho_{H_2O}}{\rho_{H_2O}}\]</div>
 <p>Again, we can draw a parallel with the Moody Diagram. The general form of the terminal velocity equation is like the Darcy-Weisbach equation; it is always true. The terminal velocity in the laminar flow region is like the Hagen-Poiselle equation; it is only good for laminar flow. We will use the laminar specific condition because we are working with flocs with low Reynolds numbers.</p>
 <p>Our equations for terminal velocity depend on the density of a floc. As discussed in previous sections, we know that there is a specific relationship between the density of a floc and the diameter of a floc because flocs are fractals and as flocs get bigger, their density gets lower. We can account for the size and density relationship by modifying the terminal velocity equation.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-6">
-<span id="heading-terminal-velocity-equation"></span><span class="eqno">(404)<a class="headerlink" href="#equation-sedimentation-sed-intro-6" title="Permalink to this equation">¶</a></span>\[v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc_0} -\rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}\]</div>
+<span id="heading-terminal-velocity-equation"></span><span class="eqno">(405)<a class="headerlink" href="#equation-sedimentation-sed-intro-6" title="Permalink to this equation">¶</a></span>\[v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc_0} -\rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}\]</div>
 <div class="line-block">
 <div class="line">Where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(D_0 =\)</span> diameter of clay</div>
@@ -376,7 +376,7 @@ particle</td>
 <p>The following plot shows the relationship between floc diameter and terminal velocity.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-terminal-velocity-floc-diam"></span><a class="reference internal image-reference" href="../_images/terminal_velocity_floc_diam.png"><img alt="Terminal velocity as a function of floc diameter, taking into account the changing density of flocs formed from clay." src="../_images/terminal_velocity_floc_diam.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 112 </span><span class="caption-text">Terminal velocity as a function of floc diameter, taking into account the changing density of flocs.</span></p>
+<p class="caption"><span class="caption-number">Fig. 113 </span><span class="caption-text">Terminal velocity as a function of floc diameter, taking into account the changing density of flocs.</span></p>
 </div>
 <p>Three important regions are highlighted in the plot. At small floc diameters, less than 10 <span class="math notranslate nohighlight">\(\mu m\)</span>, terminal velocity is less that 0.1 <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>. A terminal velocity this low would require extremely large sedimentation tanks for reasonable treatment. Because large sedimentation tanks are costly and unfeasible, we use flocculation to aggregate particles and achieve floc sizes of greater diameters and higher terminal velocities.</p>
 <p>For floc diameters around 35 <span class="math notranslate nohighlight">\(\mu m\)</span>, the terminal velocity is about 1.2 <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>. AguaClara plate settlers are designed to settle out flocs of this size (particles dropping at 1.2 <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>) so the smallest floc that we can capture is 35 <span class="math notranslate nohighlight">\(\mu m\)</span>. This will be explored in more detail in later sections.</p>
@@ -392,7 +392,7 @@ particle</td>
 <h3>Horizontal Flow Sedimentation Tank<a class="headerlink" href="#horizontal-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id5">
 <span id="figure-horizontal-flow-tank-base"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_base.png"><img alt="Horizontal flow sedimentation tank." src="../_images/horizontal_flow_tank_base.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 113 </span><span class="caption-text">Horizontal flow sedimentation tank.</span></p>
+<p class="caption"><span class="caption-number">Fig. 114 </span><span class="caption-text">Horizontal flow sedimentation tank.</span></p>
 </div>
 <div class="line-block">
 <div class="line">Where:</div>
@@ -407,7 +407,7 @@ particle</td>
 </ol>
 <p>To determine this value, we can use the given volume and flow rate information by the following relationship:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-7">
-<span class="eqno">(405)<a class="headerlink" href="#equation-sedimentation-sed-intro-7" title="Permalink to this equation">¶</a></span>\[\theta = \frac{\rlap{-}V_{tank}}{Q}\]</div>
+<span class="eqno">(406)<a class="headerlink" href="#equation-sedimentation-sed-intro-7" title="Permalink to this equation">¶</a></span>\[\theta = \frac{\rlap{-}V_{tank}}{Q}\]</div>
 <div class="line-block">
 <div class="line">Where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\theta =\)</span> residence time <span class="math notranslate nohighlight">\([T]\)</span></div>
@@ -424,14 +424,14 @@ particle</td>
 <p>We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, <span class="math notranslate nohighlight">\(v_H\)</span>. Gravity is causing the particle to settle at its terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>. In order to reach the bottom, that settling velocity needs to be the capture velocity, <span class="math notranslate nohighlight">\(v_c\)</span>, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in the following figure.</p>
 <div class="figure align-center" id="id6">
 <span id="figure-horizontal-flow-tank-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_capture.png"><img alt="Horizontal flow sedimentation tank with capture velocity." src="../_images/horizontal_flow_tank_capture.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 114 </span><span class="caption-text">Horizontal flow sedimentation tank with capture velocity.</span></p>
+<p class="caption"><span class="caption-number">Fig. 115 </span><span class="caption-text">Horizontal flow sedimentation tank with capture velocity.</span></p>
 </div>
 <p>Capture velocity can be determined by the distance that a particle must travel and the time that the particle has to travel.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-8">
-<span class="eqno">(406)<a class="headerlink" href="#equation-sedimentation-sed-intro-8" title="Permalink to this equation">¶</a></span>\[v_c = \frac{H}{\theta}\]</div>
+<span class="eqno">(407)<a class="headerlink" href="#equation-sedimentation-sed-intro-8" title="Permalink to this equation">¶</a></span>\[v_c = \frac{H}{\theta}\]</div>
 <p>We can make some substitutions into the equation for <span class="math notranslate nohighlight">\(v_c\)</span> to solve for it in explicit terms of reactor plan view area. We are interested in plan view area because this will indicate the efficiency and cost of an associated reactor.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-9">
-<span class="eqno">(407)<a class="headerlink" href="#equation-sedimentation-sed-intro-9" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}\\v_c = \frac{Q}{A_p}\end{aligned}\end{align} \]</div>
+<span class="eqno">(408)<a class="headerlink" href="#equation-sedimentation-sed-intro-9" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}\\v_c = \frac{Q}{A_p}\end{aligned}\end{align} \]</div>
 <p>Thus, we have capture velocity which is a descriptor of a sedimentation tank. It determines how fast a particle has to settle in order to be reliably captured by a particular sedimentation tank, assuming idealized flow. The capture velocity is not a particle property, but rather a sedimentation tank property.</p>
 <ol class="arabic simple" start="4">
 <li>Will any particles that are smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span> be captured in the sedimentation tank?</li>
@@ -444,7 +444,7 @@ particle</td>
 </ul>
 <div class="figure align-center" id="id7">
 <span id="figure-horizontal-flow-tank-small-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_small_capture.png"><img alt="Horizontal flow sedimentation tank with critical path and small particle." src="../_images/horizontal_flow_tank_small_capture.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 115 </span><span class="caption-text">Horizontal flow sedimentation tank with critical path and small particle.</span></p>
+<p class="caption"><span class="caption-number">Fig. 116 </span><span class="caption-text">Horizontal flow sedimentation tank with critical path and small particle.</span></p>
 </div>
 </div>
 <div class="section" id="vertical-flow-sedimentation-tank">
@@ -452,14 +452,14 @@ particle</td>
 <p>We will complete the same exercise for vertical flow sedimentation tanks. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.</p>
 <div class="figure align-center" id="id8">
 <span id="figure-vertical-flow-tank-base"></span><a class="reference internal image-reference" href="../_images/vertical_flow_tank_base.png"><img alt="Vertical flow sedimentation tank." src="../_images/vertical_flow_tank_base.png" style="height: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 116 </span><span class="caption-text">Vertical flow sedimentation tank.</span></p>
+<p class="caption"><span class="caption-number">Fig. 117 </span><span class="caption-text">Vertical flow sedimentation tank.</span></p>
 </div>
 <ol class="arabic simple">
 <li>How much time is required for water to pass through the tank?</li>
 </ol>
 <p>The answer is the same for the horizontal flow sedimentation tank because this is a property of reactor flow rate and volume.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-10">
-<span class="eqno">(408)<a class="headerlink" href="#equation-sedimentation-sed-intro-10" title="Permalink to this equation">¶</a></span>\[\theta = \frac{\rlap{-}V_{tank}}{Q}\]</div>
+<span class="eqno">(409)<a class="headerlink" href="#equation-sedimentation-sed-intro-10" title="Permalink to this equation">¶</a></span>\[\theta = \frac{\rlap{-}V_{tank}}{Q}\]</div>
 <div class="line-block">
 <div class="line">Where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\theta =\)</span> residence time [T]</div>
@@ -476,13 +476,13 @@ particle</td>
 </ol>
 <p>We determined in the previous question that a particle must fall a distance <span class="math notranslate nohighlight">\(H\)</span> in time <span class="math notranslate nohighlight">\(\theta\)</span>. Therefore, we determine the same capture velocity for vertical flow sedimentation tanks as for horizontal flow sedimentation tanks.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-11">
-<span class="eqno">(409)<a class="headerlink" href="#equation-sedimentation-sed-intro-11" title="Permalink to this equation">¶</a></span>\[v_c = \frac{H}{\theta}\]</div>
+<span class="eqno">(410)<a class="headerlink" href="#equation-sedimentation-sed-intro-11" title="Permalink to this equation">¶</a></span>\[v_c = \frac{H}{\theta}\]</div>
 <p>We can the same substitutions to show,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-12">
-<span class="eqno">(410)<a class="headerlink" href="#equation-sedimentation-sed-intro-12" title="Permalink to this equation">¶</a></span>\[v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}\]</div>
+<span class="eqno">(411)<a class="headerlink" href="#equation-sedimentation-sed-intro-12" title="Permalink to this equation">¶</a></span>\[v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}\]</div>
 <p>Again, we find that capture velocity is,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-13">
-<span class="eqno">(411)<a class="headerlink" href="#equation-sedimentation-sed-intro-13" title="Permalink to this equation">¶</a></span>\[v_c = \frac{Q}{A_p}\]</div>
+<span class="eqno">(412)<a class="headerlink" href="#equation-sedimentation-sed-intro-13" title="Permalink to this equation">¶</a></span>\[v_c = \frac{Q}{A_p}\]</div>
 <p>It doesn’t matter whether water is flowing horizontally or vertically in the tank. What determines the capture velocity is the flow rate and the plan view area of the sedimentation tank.</p>
 <ol class="arabic simple" start="4">
 <li>Will any particles that are smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span> be captured in the sedimentation tank?</li>
