@@ -66,19 +66,31 @@
 |Q_{Plant}| - |
 |N_{SandLayeres}|6|
 |H_{SandLayers}| 20cm|
-|HL_{Sand}|120cm (HL_{SandLayer}|
-|S_{Branch}|H_{SandLayer}|
-|S_{Orifice}|S_{Branch}?|
-|D_{filter}| *Q_{Plant}, N_{Filter}*|
-|N_Filter| *Q_{plant}, D_{filter}*|
-|Pi_{expansion}|1.3 (V_{BW})|
-|H_{SafetyFilterBody}| |
-|H_{FilterBody}|H_{SafetyFilterBody}, H{SandLayer}, N_{SandLayer}, Pi_{Expansion}|
+| V_{BW}| 9.8mm/s|
 |H_{SafetyEntranceTank}| **5cm**|
 |HL_{WeirEntrance}| **3cm**|
 |H_{overflowWater}| **10cm**|
+|ND_{BallValve}	 |	3 in	| 
+|ND_{BedTester}	| 	0.5in	 |
+|ND_{BedTesterOuter}|	 	1in	 |
+|ND_{FiAirRelValve}	 |	0.5in	 |
+|ND_{FiBwTrunkMin}	 |	3in	 |
+|ND_{FiBwBranchkMin}|	 	1in	 |
+|ND_{FiTrunkMin}	 |	2in	 |
+|ND_{FiDrainExit}	 |	3in	 |
+|ND_{FiOverflowEnt}	 |	3in	 |
+|ND_{FiBranchMin}	 |	1in |
+|HL_{Sand}|120cm (HL_{SandLayer}|
+|D_{filter}| *Q_{Plant}, N_{Filter}*|
+|N_Filter| *Q_{plant}, D_{filter}*|
+|S_{Branch}|H_{SandLayer}|
+|S_{Orifice}|S_{Branch}?|
+|Pi_{expansion}|1.3 (V_{BW})|
+|H_{SafetyFilterBody}| 20cm |
+|H_{FilterBody}|H_{SafetyFilterBody}, H{SandLayer}, N_{SandLayer}, Pi_{Expansion}|
 |N_{Branches| S_{Branch}, D_{Filter}|
 |V_{orificeMax}|   Pi_{man}, HL_{SandLayer}   |
+| V_{orificeBW} | Q_{Filter}, HL_{AllowableBWOrifice}|
 | \[L_{Branches}] |   D_{filter} , D_{Trunk}   |
 | \[L_{BranchesBW}] |   D_{Filter}, D_{BWTrunk}   |
 |A_{orifice}  | D_{orifice}     |
