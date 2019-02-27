@@ -87,7 +87,6 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -126,8 +125,7 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">AguaClara Design Approach</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
@@ -152,6 +150,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -245,14 +244,14 @@
 <p>“If the water is dirty, then filter it”. That is a common misunderstanding of what we should do if the water is dirty. And that misunderstanding has led to many, many failures of water treatment technologies. There are slow sand filters and multistage filters abandoned in many corners of Honduras. The first AguaClara plant at Marcala, Honduras was built in an abandoned filtration plant. In many cases the failed filters were installed in locations where the raw water carried far too much sediment to be treated by filtration. This common misunderstanding of the capabilities of sand filters has a long history.</p>
 <div class="figure align-center" id="id3">
 <span id="figure-abandoned-filtration-plant"></span><a class="reference internal image-reference" href="../_images/Abandoned_Filtration_Plant.jpg"><img alt="photomicrograph" src="../_images/Abandoned_Filtration_Plant.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 153 </span><span class="caption-text">Abandoned multiple stage filtration plant in the valley north of Tegucigalpa, Honduras.</span></p>
+<p class="caption"><span class="caption-number">Fig. 116 </span><span class="caption-text">Abandoned multiple stage filtration plant in the valley north of Tegucigalpa, Honduras.</span></p>
 </div>
 <div class="section" id="history-of-filtration">
 <h2>History of Filtration<a class="headerlink" href="#history-of-filtration" title="Permalink to this headline">¶</a></h2>
 <p>Starting in 1829 surface water treatment plants in England used slow sand filters. Decades later in 1885 they discovered that slow sand filters actually remove bacteria. That was quite a surprise given that the pores in slow sand filters are perhaps 50 times larger than the bacteria that they remove! Clearly filters were doing something more interesting than simply straining out particles that were bigger than the pores.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-glass-beads-and-flow-constriction"></span><a class="reference internal image-reference" href="../_images/glass_beads_and_flow_constriction.jpg"><img alt="photomicrograph" src="../_images/glass_beads_and_flow_constriction.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 154 </span><span class="caption-text">Sample taken from the top of a slow sand filter made with glass beads. Note the constriction that is building in the narrowest part of the void between 4 glass beads.</span></p>
+<p class="caption"><span class="caption-number">Fig. 117 </span><span class="caption-text">Sample taken from the top of a slow sand filter made with glass beads. Note the constriction that is building in the narrowest part of the void between 4 glass beads.</span></p>
 </div>
 <p>Slow sand filtration ran into big trouble when they were installed in cities along the Ohio and Mississippi Rivers in the United States. The high sediment load carried by those rivers could not be removed using slow sand filters. The need to treat water with high sediment loads (high turbidities) led to the innovation of coupling flocculation, sedimentation, and a new kind of filter - rapid sand filters. The early emphasis on filtration as the primary process persisted and continues even today. For example, the surface water treatment plant that provides drinking water to the Cornell University campus is called Cornell Water Filtration Plant.</p>
 <p>The process that removes most of the particles in the Cornell Water Filtration Plant is the sedimentation tank with big assistance from the flocculators. The rapid sand filters are a polishing step that removes approximately 1 NTU or about 1 mg/L of solids. This is not to diminish the importance of filtration. After all, this chapter is all about filtration. The goal is to put filtration in context and remind all of us that both slow and rapid sand filters are limited to polishing water that is already very clean.</p>
@@ -263,7 +262,7 @@
 <p>Slow sand filters remove the majority of the particles in the top cm of the sand bed. A schmutzdecke (filter cake or layer of dirt) generally forms on top of the sand and this layer of dirt causes the majority of the head loss thru the filter bed. It is this thin layer that is removed when the head loss is too high to achieve the desired flow rate through the filter. Most slow sand filters are cleaned by hand using shovels to remove a thin layer of the schmutzdecke. The cleaning process is labor intensive and requires taking the filter offline for a day or longer.</p>
 <div class="figure align-center" id="id5">
 <span id="figure-ssf-at-jesus-de-otoro"></span><a class="reference internal image-reference" href="../_images/SSF_at_Jesus_de_Otoro.jpg"><img alt="filter set" src="../_images/SSF_at_Jesus_de_Otoro.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 155 </span><span class="caption-text">Slow sand filters at Jesus de Otoro, Honduras. Slow sand filters require extensive areas of flat terrain or extensive earthwork to create a level spot. In the tropics the filters are open to the sky and that results in nuisance growth of algae. In climates where freezing is a problem the filters are covered.</span></p>
+<p class="caption"><span class="caption-number">Fig. 118 </span><span class="caption-text">Slow sand filters at Jesus de Otoro, Honduras. Slow sand filters require extensive areas of flat terrain or extensive earthwork to create a level spot. In the tropics the filters are open to the sky and that results in nuisance growth of algae. In climates where freezing is a problem the filters are covered.</span></p>
 </div>
 </div>
 <div class="section" id="multistage-filters">
@@ -282,16 +281,14 @@
 <p>One solution for eliminating the need for backwash pumps is to design a set of filters that work together to backwash one of the filters. This eliminates the need for a clearwell for backwash water. This system of a set of filters is used by <a class="reference external" href="http://cepis.org.pe/sobre-el-cepis/">CEPIS</a> in their design of <a class="reference external" href="../_static/references/CEPIS/CEPIS5_Batería_de_filtros.pdf">rapid sand filters</a> This system is an elegant solution that works well for small cities, but the requirement of 6 filters is onerous for towns where 2 filters should have been sufficient.</p>
 <div class="figure align-center" id="id6">
 <span id="figure-cepis-filter-set"></span><a class="reference internal image-reference" href="../_images/CEPIS_filter_set.jpg"><img alt="filter set" src="../_images/CEPIS_filter_set.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 156 </span><span class="caption-text">6 filters form a complete set such that 5 filters can work together to backwash one filter without using pumps.</span></p>
+<p class="caption"><span class="caption-number">Fig. 119 </span><span class="caption-text">6 filters form a complete set such that 5 filters can work together to backwash one filter without using pumps.</span></p>
 </div>
 </div>
 <div class="section" id="stacked-rapid-sand-filters">
 <h3>Stacked Rapid Sand Filters<a class="headerlink" href="#stacked-rapid-sand-filters" title="Permalink to this headline">¶</a></h3>
 <p>Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornell program in response to the need for a new technology that would both eliminate the need for backwash pumps AND not require the construction of 6 filters for small towns. StaRS filters use 6 20 cm deep layers of sand (no dual media here) with the layers stacked vertically. The six layers give a total sand depth of 1.2 m. The filter operates with the same design flow rate for both backwash and filtration modes and uses settled water for backwash. This eliminates the startup problem for rapid sand filters that don’t have an initial source of backwash water. The shallow filter layers take advantage of new insights into the filtration mechanisms (more on that soon).</p>
 <p>StaRS filters come in two configurations. Open StaRS (OStaRS) are used for flow rates greater than about 8 L/s. An 8 L/s filter has a plan view area of 85 cm x 85 cm. This is considered the minimum size that can be constructed with a human working inside the filter. For lower flow rates Enclosed StaRS (EStaRS) filters can be assembled using PVC pipe as the body of the filter. The inner plumbing can be accessed through openings in the top and bottom of the main filter body.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
 <span class="n">Q_Filter</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">V_filter_backwash</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">A_Filter</span> <span class="o">=</span> <span class="n">Q_Filter</span><span class="o">/</span><span class="n">V_filter_backwash</span>
@@ -403,7 +400,7 @@
 <p>Filters have a huge range in velocities that correspond to a huge range in size. This is illustrated in the city of Jesus de Otoro, Honduras. They have both a 20 L/s multiple stage filtration plant and a 20 L/s AguaClara plant serving different sections of the city. The plants can both be seen in <a class="reference external" href="https://www.google.com/maps/d/u/0/viewer?mid=1Rjl2cfjMn0Pk7E11KVq9A1mlj2Q&amp;ll=14.491993514824715%2C-87.97505904373156&amp;z=16">Google Maps</a>.</p>
 <div class="figure align-center" id="id8">
 <span id="figure-size-of-jesus-de-otoro-plants"></span><a class="reference internal image-reference" href="../_images/Size_of_Jesus_de_Otoro_Plants.png"><img alt="filter set" src="../_images/Size_of_Jesus_de_Otoro_Plants.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 157 </span><span class="caption-text">Two water treatment plants using different technologies and serving the same city illustrate the high construction cost of low technologies simply based on the required size of the low tech facilities.</span></p>
+<p class="caption"><span class="caption-number">Fig. 120 </span><span class="caption-text">Two water treatment plants using different technologies and serving the same city illustrate the high construction cost of low technologies simply based on the required size of the low tech facilities.</span></p>
 </div>
 </div>
 </div>
@@ -422,29 +419,29 @@
 </dl>
 <p>Clean bed filtration models include an equation first presented by Iwasaki in 1937 that suggested that particle removal occurred as a first order process with respect to depth. This simplifies to</p>
 <div class="math notranslate nohighlight" id="equation-filter-iwasaki">
-<span class="eqno">(450)<a class="headerlink" href="#equation-filter-iwasaki" title="Permalink to this equation">¶</a></span>\[pC^* \propto \frac{L}{D_{sand}}\]</div>
+<span class="eqno">(434)<a class="headerlink" href="#equation-filter-iwasaki" title="Permalink to this equation">¶</a></span>\[pC^* \propto \frac{L}{D_{sand}}\]</div>
 <p>where L is the depth of the sand in the column. This suggests that increasing the depth of sand in a filter would dramatically improve performance.</p>
 <p>It is quite amazing that we have no useful models for sand filter performance after more than a century of using sand filters as a required process in converting surface waters into safe drinking water. Fortunately we have plenty of clues suggesting what is happening inside filters and at the level of the particles traveling through the pores.</p>
-<p>The movie in <a class="reference internal" href="#figure-active-zone-model"><span class="std std-numref">Fig. 158</span></a> illustrates that the classic performance of a rapid sand filter as a function of time could be explained by the presence of an active filtration zone that slowly progresses down through the filter as the pores become fully loaded. But that begs the question of what determines “fully loaded.”</p>
+<p>The movie in <a class="reference internal" href="#figure-active-zone-model"><span class="std std-numref">Fig. 121</span></a> illustrates that the classic performance of a rapid sand filter as a function of time could be explained by the presence of an active filtration zone that slowly progresses down through the filter as the pores become fully loaded. But that begs the question of what determines “fully loaded.”</p>
 <div class="figure align-center" id="id9">
 <span id="figure-active-zone-model"></span><a class="reference external image-reference" href="https://youtu.be/II0cfH80nrI"><img alt="../_images/Active_zone_model.png" src="../_images/Active_zone_model.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 158 </span><span class="caption-text">Movie illustrating how effluent turbidity connects to deposition of particles within a sand bed.</span></p>
+<p class="caption"><span class="caption-number">Fig. 121 </span><span class="caption-text">Movie illustrating how effluent turbidity connects to deposition of particles within a sand bed.</span></p>
 </div>
-<p>The linear increase in head loss with time (see <a class="reference internal" href="#figure-head-loss-vs-time"><span class="std std-numref">Fig. 159</span></a>) is a remarkable and surprising property of depth filtration. The deposition of particles in a pore would change the flow geometry, increase the flow velocity, and increase the head loss across the pore. As each particle is deposited in the pore it would be expected to have an increasing impact on head loss as the flow area is decreased and the flow velocity increases.  Head loss due to the flow expansion downstream from the flow constriction is proportional to the velocity squared. Thus we would not expect head loss across a pore to increase linearly with time.</p>
+<p>The linear increase in head loss with time (see <a class="reference internal" href="#figure-head-loss-vs-time"><span class="std std-numref">Fig. 122</span></a>) is a remarkable and surprising property of depth filtration. The deposition of particles in a pore would change the flow geometry, increase the flow velocity, and increase the head loss across the pore. As each particle is deposited in the pore it would be expected to have an increasing impact on head loss as the flow area is decreased and the flow velocity increases.  Head loss due to the flow expansion downstream from the flow constriction is proportional to the velocity squared. Thus we would not expect head loss across a pore to increase linearly with time.</p>
 <div class="figure align-center" id="id10">
 <span id="figure-head-loss-vs-time"></span><a class="reference internal image-reference" href="../_images/Head_loss_vs_time.png"><img alt="Head loss increases linearly with time" src="../_images/Head_loss_vs_time.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 159 </span><span class="caption-text">Head loss through a filter increases linearly with time under conditions of constant influent turbidity.</span></p>
+<p class="caption"><span class="caption-number">Fig. 122 </span><span class="caption-text">Head loss through a filter increases linearly with time under conditions of constant influent turbidity.</span></p>
 </div>
 <p>The data is trying to tell us something. The head loss through a filter does increase linearly with time and with the amount of solids that have been captured by the filter. Our hypothesis is that the number of fully loaded pores is increasing linearly with time. To understand how this might be working we need to delve into the filter and imagine what must be happening in the pores as particles are flowing by.</p>
-<p><a class="reference internal" href="#figure-deposition-at-constrictions"><span class="std std-numref">Fig. 160</span></a> illustrates that particles that are carried by the fluid can come into contact with the walls of the pores where the streamlines converge. Clean bed filtration models predict that this process of interception is significant even for clean beds. As a pore begins to fill due to particle deposition, the flow constriction becomes even more severe and thus the capture efficiency increases. This would suggest that a pore would rapidly fill with flocs until it became so clogged that the flow of water through the pore effectively stopped.</p>
+<p><a class="reference internal" href="#figure-deposition-at-constrictions"><span class="std std-numref">Fig. 123</span></a> illustrates that particles that are carried by the fluid can come into contact with the walls of the pores where the streamlines converge. Clean bed filtration models predict that this process of interception is significant even for clean beds. As a pore begins to fill due to particle deposition, the flow constriction becomes even more severe and thus the capture efficiency increases. This would suggest that a pore would rapidly fill with flocs until it became so clogged that the flow of water through the pore effectively stopped.</p>
 <div class="figure align-center" id="id11">
 <span id="figure-deposition-at-constrictions"></span><a class="reference external image-reference" href="https://youtu.be/Odp6uwqJmMc"><img alt="../_images/Deposition_at_constrictions.png" src="../_images/Deposition_at_constrictions.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 160 </span><span class="caption-text">Movie illustrating that particles are transported closer to sand surfaces where streamlines converge.</span></p>
+<p class="caption"><span class="caption-number">Fig. 123 </span><span class="caption-text">Movie illustrating that particles are transported closer to sand surfaces where streamlines converge.</span></p>
 </div>
 <p>If pores clogged completely, then sand filters would clog as soon as one layer of pores was filled. There must be another process that is preventing pores from clogging. We hypothesize that flocs can’t attach to the filter surfaces when the fluid drag on the floc exceeds the strength of the bonds between the coagulant nanoparticles and the particle and pore surfaces. Thus as pores grow smaller due to deposition it becomes more difficult for incoming flocs to attach. Instead, the flocs are shoved right through the pore even if it means the floc has to undergo significant deformation to squeeze through.</p>
 <div class="figure align-center" id="id12">
 <span id="figure-flocs-teleporting"></span><a class="reference external image-reference" href="https://youtu.be/lgfggRX_Wgs"><img alt="../_images/Flocs_teleport.png" src="../_images/Flocs_teleport.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 161 </span><span class="caption-text">Movie showing flocs flowing through a pore created by sand grains. (Credit <a class="reference external" href="https://github.com/AguaClara/filter-constrictions">Filter_Constrictions team Spring 2018</a>)</span></p>
+<p class="caption"><span class="caption-number">Fig. 124 </span><span class="caption-text">Movie showing flocs flowing through a pore created by sand grains. (Credit <a class="reference external" href="https://github.com/AguaClara/filter-constrictions">Filter_Constrictions team Spring 2018</a>)</span></p>
 </div>
 <p>The story is beginning to emerge. Converging streamlines result in flocs touching previously deposited particles in the flow constriction and attaching. As the flow constriction becomes even smaller the fluid drag on particles that attempt to attach to the pore becomes too great and the particles are forced through the constriction. At that point the pore is fully loaded. However, fully loaded does not mean that the void is full of flocs. It just means that the constriction is as small as it can get given the strength of the coagulant nanoparticle bonds and the fluid drag on the flocs.</p>
 <p>Pores at the upstream end of the filter are fully loaded first and then remain relatively unchanged for the duration of the filter run. Thus the active filtration zone is pushed deeper into the filter bed. At any one time there are likely a series of pores that are partially loaded and thus actively filling. The number of pores in series that are actively filling is not yet known, but it is clear that the particle removal efficiency of a filter must be related to the number of actively filling pores in series.</p>

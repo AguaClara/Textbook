@@ -26,7 +26,7 @@ Our contention is that no one has ever optimized the design of a drinking water 
 
 Traditional drinking water treatment textbooks can too easily miss the opportunity to advance the science of drinking water treatment technologies by presenting certainty where there should be skepticism. For example, rapid mix is described as process that occurs in a few seconds, flocculation is described as a process that should be fastest for high turbidity waters and slowest for low turbidity waters, and filtration performance is described by a model that predicts first order removal with respect to filter bed depth. We will demonstrate why each of these assumptions doesn't match observations, we will discuss new insights into these processes, and we will identify high priority research questions that have the potential to lead to major improvements in drinking water treatment.
 
-We want to encourage skepticism and we want to develop insights to guide thoughtful skepticism. A key skill for successful engineering is the ability to identify the location of the edge of knowledge. The ability to distinguish between what is reasonably certain and what is still in question is what powers the scientific method of slowly extending knowledge. New insights are difficult to obtain if the research is based on a faulty premise.
+We want to encourage skepticism and we want to develop insights to guide thoughtful skepticism. A key skill for successful engineering is the ability to identify the location of the edge of knowledge. The ability to distinguish between what is reasonably certain and what is still in question is what powers the scientific method of slowly extending knowledge. New insights are difficult to obtain if the research  is based on a faulty premise.
 
 .. _figure_short_walk:
 
@@ -182,7 +182,7 @@ Thus by 2030 we need to provide safe water for at least 3.3 billion people AND m
 
 .. code:: python
 
-  from aguaclara.core.units import unit_registry as u
+  from aide_design.play import*
   import datetime
   People_needing_water_2030 = 3.3*10**9
   now = datetime.datetime.now()
@@ -351,9 +351,7 @@ Sedimentation is the process of particles ‘falling’ because they have a high
 
 .. code:: python
 
-  import aguaclara.core.physchem as pc
-  import numpy as np
-  import matplotlib.pyplot as plt
+  from aide_design.play import*
   def v_t(D_particle,density_particle,Temperature):
     return (D_particle**2*pc.gravity *(density_particle - pc.density_water(Temperature))/(18*pc.viscosity_kinematic(Temperature)*pc.density_water(Temperature))).to(u.m/u.s)
   clay = 2650 * u.kg/u.m**3
@@ -367,7 +365,6 @@ Sedimentation is the process of particles ‘falling’ because they have a high
   ax.legend(["clay or sand","organic particle"])
   imagepath = 'Introduction/Images/'
   fig.savefig(imagepath+'Terminal_velocity')
-  plt.show()
 
 
 The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (:eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
@@ -411,10 +408,7 @@ The AguaClara treatment train consists of the following processes
 
  .. code:: python
 
-   #the unit registry has been imported above and does not need to be imported again
-   import aguaclara
-   import aguaclara.core.physchem as pc
-   from aguaclara.core.units import unit_registry as u
+   from aide_design.play import*
    Q_Croton =(290 *u.Mgal/u.day).to(u.L/u.s)
    Cost_Croton = 3.2 * 10**9 * u.USD
    Cost_per_Lps = Cost_Croton/Q_Croton
