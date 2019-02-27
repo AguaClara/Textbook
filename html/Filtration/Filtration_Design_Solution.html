@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="EStaRS Design" href="EStaRS_Design.html" />
+    <link rel="next" title="Dissolved Gas Introduction" href="../Dissolved_Gas/DG_Intro.html" />
     <link rel="prev" title="Filtration Theory and Future Work" href="Filtration_Theory_and_Future_Work.html" /> 
 
   
@@ -87,6 +87,7 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -125,7 +126,8 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">AguaClara Design Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
@@ -164,13 +166,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#filter-constriction-hypothesis">Filter constriction hypothesis</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#reflection-questions">Reflection questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-constriction-hypothesis">Filter constriction hypothesis</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -261,9 +259,12 @@
             
   <div class="section" id="filtration-design-solution">
 <h1>Filtration Design Solution<a class="headerlink" href="#filtration-design-solution" title="Permalink to this headline">¶</a></h1>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
-<span class="c1">#  from aide_design import floc_model as floc</span>
-<span class="c1">#  from pytexit import py2tex</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 <div class="section" id="dc-stacked-rapid-sand-filtration">
@@ -376,7 +377,7 @@
 </div>
 <div class="figure align-center" id="id22">
 <span id="figure-minimum-backwash-velocity-vs-water-temperature"></span><a class="reference internal image-reference" href="../_images/Minimum_backwash_velocity_vs_water_temperature.png"><img alt="Minimum backwash velocity vs water temperature" src="../_images/Minimum_backwash_velocity_vs_water_temperature.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 129 </span><span class="caption-text">The minimum backwash velocity increases with temperature. Thus it is best to backwash when the water is coolest.</span></p>
+<p class="caption"><span class="caption-number">Fig. 166 </span><span class="caption-text">The minimum backwash velocity increases with temperature. Thus it is best to backwash when the water is coolest.</span></p>
 </div>
 </div>
 <div class="section" id="id8">
@@ -488,12 +489,13 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="figure-filter-run-time-vs-removal-efficiency">
-<a class="reference internal image-reference" href="../_images/Filter_run_time_vs_removal_efficiency.png"><img alt="Filter run time vs removal efficiency" src="../_images/Filter_run_time_vs_removal_efficiency.png" style="width: 400px;" /></a>
-</div>
 <div class="figure align-center" id="id23">
+<span id="figure-filter-run-time-vs-removal-efficiency"></span><a class="reference internal image-reference" href="../_images/Filter_run_time_vs_removal_efficiency.png"><img alt="Filter run time vs removal efficiency" src="../_images/Filter_run_time_vs_removal_efficiency.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 167 </span><span class="caption-text">The pC* for this filter run was not very good and suggests that either some particles were being released by the new sand or the coagulant dose was not optimal.</span></p>
+</div>
+<div class="figure align-center" id="id24">
 <span id="figure-filter-run-time-vs-effluent-turbidity"></span><a class="reference internal image-reference" href="../_images/Filter_run_time_vs_effluent_turbidity.png"><img alt="Filter run time vs effluent turbidity" src="../_images/Filter_run_time_vs_effluent_turbidity.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 131 </span><span class="caption-text">The filter performance deteriorated over the length of the filter run. This does not match the expectations that we have based on laboratory experiments with filters. AguaClara has limited data of filter performance as a function of time. However, the <a class="reference external" href="http://aguaclara.github.io/index.html">recent data from Tamara</a> (select Tamara from the drop down menu of plants) suggests that filtered water turbidity is consistently lower than in this first run of the filter that you plotted above.</span></p>
+<p class="caption"><span class="caption-number">Fig. 168 </span><span class="caption-text">The filter performance deteriorated over the length of the filter run. This does not match the expectations that we have based on laboratory experiments with filters. AguaClara has limited data of filter performance as a function of time. However, the <a class="reference external" href="http://aguaclara.github.io/index.html">recent data from Tamara</a> (select Tamara from the drop down menu of plants) suggests that filtered water turbidity is consistently lower than in this first run of the filter that you plotted above.</span></p>
 </div>
 </div>
 <div class="section" id="id16">
@@ -548,27 +550,27 @@
 <p>Given that floc mass is the sum of clay mass and water mass and given that floc volume is the sum of clay volume and water volume, derive an equation for the volume of flocs per plan view area of a stacked rapid sand filter (includes all 6 layers) given the floc, clay, and water densities and the mass of the clay. Show the equations that you derive using Latex</p>
 <p>Mass conservation gives</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-0">
-<span class="eqno">(559)<a class="headerlink" href="#equation-filtration-filtration-design-solution-0" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} \cdot \rho_{Floc} = M_{Clay} + M_{Water}\]</div>
+<span class="eqno">(575)<a class="headerlink" href="#equation-filtration-filtration-design-solution-0" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} \cdot \rho_{Floc} = M_{Clay} + M_{Water}\]</div>
 <p><span class="math notranslate nohighlight">\(M_{Water}\)</span> is an unknown.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-1">
-<span class="eqno">(560)<a class="headerlink" href="#equation-filtration-filtration-design-solution-1" title="Permalink to this equation">¶</a></span>\[M_{Water} = Vol_{Floc} \cdot \rho{Floc} - M_{Clay}\]</div>
+<span class="eqno">(576)<a class="headerlink" href="#equation-filtration-filtration-design-solution-1" title="Permalink to this equation">¶</a></span>\[M_{Water} = Vol_{Floc} \cdot \rho{Floc} - M_{Clay}\]</div>
 <p>Volume conservation gives</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-2">
-<span class="eqno">(561)<a class="headerlink" href="#equation-filtration-filtration-design-solution-2" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = Vol_{Clay} + Vol_{Water}\]</div>
+<span class="eqno">(577)<a class="headerlink" href="#equation-filtration-filtration-design-solution-2" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = Vol_{Clay} + Vol_{Water}\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-3">
-<span class="eqno">(562)<a class="headerlink" href="#equation-filtration-filtration-design-solution-3" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = \frac{M_{Clay}}{\rho_{Clay}} + \frac{M_{Water}}{\rho_{Water}}\]</div>
+<span class="eqno">(578)<a class="headerlink" href="#equation-filtration-filtration-design-solution-3" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = \frac{M_{Clay}}{\rho_{Clay}} + \frac{M_{Water}}{\rho_{Water}}\]</div>
 <p>Substitute to eliminate <span class="math notranslate nohighlight">\(M_{Water}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-4">
-<span class="eqno">(563)<a class="headerlink" href="#equation-filtration-filtration-design-solution-4" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = \frac{M_{Clay}}{\rho_{Clay}} + \frac{Vol_{Floc} \cdot \rho_{Floc}}{\rho_{Water}} -\frac{M_{Clay}}{\rho_{Water}}\]</div>
+<span class="eqno">(579)<a class="headerlink" href="#equation-filtration-filtration-design-solution-4" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = \frac{M_{Clay}}{\rho_{Clay}} + \frac{Vol_{Floc} \cdot \rho_{Floc}}{\rho_{Water}} -\frac{M_{Clay}}{\rho_{Water}}\]</div>
 <p>Solve for <span class="math notranslate nohighlight">\(Vol_{Floc}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-5">
-<span class="eqno">(564)<a class="headerlink" href="#equation-filtration-filtration-design-solution-5" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} - \frac{Vol_{Floc} \cdot \rho_{Floc}}{\rho_{Water}} = \frac{M_{Clay}}{\rho_{Clay}} - \frac{M_{Clay}}{\rho_{Water}}\]</div>
+<span class="eqno">(580)<a class="headerlink" href="#equation-filtration-filtration-design-solution-5" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} - \frac{Vol_{Floc} \cdot \rho_{Floc}}{\rho_{Water}} = \frac{M_{Clay}}{\rho_{Clay}} - \frac{M_{Clay}}{\rho_{Water}}\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-6">
-<span class="eqno">(565)<a class="headerlink" href="#equation-filtration-filtration-design-solution-6" title="Permalink to this equation">¶</a></span>\[Vol_{Floc}\left ( 1-\frac{\rho_{Floc}}{\rho_{Water}} \right ) = M_{Clay}\left ( \frac{1}{\rho_{Clay}} -\frac{1}{\rho_{Water}}\right )\]</div>
+<span class="eqno">(581)<a class="headerlink" href="#equation-filtration-filtration-design-solution-6" title="Permalink to this equation">¶</a></span>\[Vol_{Floc}\left ( 1-\frac{\rho_{Floc}}{\rho_{Water}} \right ) = M_{Clay}\left ( \frac{1}{\rho_{Clay}} -\frac{1}{\rho_{Water}}\right )\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-7">
-<span class="eqno">(566)<a class="headerlink" href="#equation-filtration-filtration-design-solution-7" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = M_{Clay}\left ( \frac{\frac{1}{\rho_{Clay}}-\frac{1}{\rho_{Water}}}{ 1-\frac{\rho_{Floc}}{\rho_{Water}}} \right )\]</div>
+<span class="eqno">(582)<a class="headerlink" href="#equation-filtration-filtration-design-solution-7" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = M_{Clay}\left ( \frac{\frac{1}{\rho_{Clay}}-\frac{1}{\rho_{Water}}}{ 1-\frac{\rho_{Floc}}{\rho_{Water}}} \right )\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-8">
-<span class="eqno">(567)<a class="headerlink" href="#equation-filtration-filtration-design-solution-8" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = { \frac{M_{Clay}\rho_{Water}}{\rho_{Floc}-\rho_{Water}}}\left ( \frac{1}{\rho_{Water}}-\frac{1}{\rho_{Clay}} \right )\]</div>
+<span class="eqno">(583)<a class="headerlink" href="#equation-filtration-filtration-design-solution-8" title="Permalink to this equation">¶</a></span>\[Vol_{Floc} = { \frac{M_{Clay}\rho_{Water}}{\rho_{Floc}-\rho_{Water}}}\left ( \frac{1}{\rho_{Water}}-\frac{1}{\rho_{Clay}} \right )\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vol_floc</span> <span class="o">=</span> <span class="p">((</span><span class="n">M_filter_solids</span> <span class="o">*</span><span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">T_design</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">density_floc</span><span class="o">-</span><span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">T_design</span><span class="p">)))</span> <span class="o">*</span>
             <span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">T_design</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">density_clay</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">l</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The volume of the flocs per plan view area is&#39;</span><span class="p">,</span> <span class="n">vol_floc</span><span class="p">)</span>
@@ -631,7 +633,7 @@
 <p>The head loss per constriction is 1.33 millimeter</p>
 <p>If each constriction was partially clogged with flocs at the end of the filter run, estimate the velocity in the constriction using the expansion head loss equation. You can use the average pore water velocity as a good estimate of the expanded flow velocity.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-solution-9">
-<span class="eqno">(568)<a class="headerlink" href="#equation-filtration-filtration-design-solution-9" title="Permalink to this equation">¶</a></span>\[h_{e} = \frac{(V_{in}-V_{out})^2}{2g}\]</div>
+<span class="eqno">(584)<a class="headerlink" href="#equation-filtration-filtration-design-solution-9" title="Permalink to this equation">¶</a></span>\[h_{e} = \frac{(V_{in}-V_{out})^2}{2g}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">V_pore</span> <span class="o">=</span> <span class="n">V_filter</span> <span class="o">/</span> <span class="n">porosity_filter_sand</span>
 <span class="n">V_constriction</span> <span class="o">=</span> <span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">hl_per_constriction</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">V_pore</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span> <span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 
@@ -681,17 +683,9 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id24">
+<div class="figure align-center" id="id25">
 <span id="figure-diameter-vs-fractional-remaining"></span><a class="reference internal image-reference" href="../_images/Diameter_vs_fractional_remaining.png"><img alt="Diameter vs fractional remaining" src="../_images/Diameter_vs_fractional_remaining.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 132 </span><span class="caption-text">There are many constrictions in series and the filter fraction remaining is the pore fraction remaining raised to the power of the number of pores in series.</span></p>
-</div>
-<div class="section" id="reflection-questions">
-<h3>Reflection questions<a class="headerlink" href="#reflection-questions" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div>1. An engineer suggests that you should install a roughing filter uphill from an AguaClara plant to improve its ability to treat turbid water. This is a real question from a conference presentation in Honduras. How would you reply to this suggestion. Consider how to answer without offending the questioner. Use the required sizes of the unit processes to guide your response.
-1. Why don’t StaRS filters experience surface clogging?
-1. Explain why particles are captured at flow constrictions inside sand filters.
-1. Explain why a flow constriction has a limited capacity to collect particles.</div></blockquote>
+<p class="caption"><span class="caption-number">Fig. 169 </span><span class="caption-text">There are many constrictions in series and the filter fraction remaining is the pore fraction remaining raised to the power of the number of pores in series.</span></p>
 </div>
 </div>
 </div>
@@ -704,7 +698,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="EStaRS_Design.html" class="btn btn-neutral float-right" title="EStaRS Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Dissolved_Gas/DG_Intro.html" class="btn btn-neutral float-right" title="Dissolved Gas Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Filtration_Theory_and_Future_Work.html" class="btn btn-neutral" title="Filtration Theory and Future Work" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
