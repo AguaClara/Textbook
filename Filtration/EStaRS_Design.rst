@@ -22,9 +22,9 @@ You can continue with these steps. Make sure that you always know everything req
 
 
 
-The EStaRS: Enclosed Stacked Rapid Sand filter, is a compact filter that can be amended to a 1 L/s floc/sed unit to provide a filter. EStaRS are also used for low flow plants because they are less resource intensive to construct [than what?]. Because the filter is constructed using only pipes and couplings, the possible EStaRS sizes are discretized as pipes are not available in every concievable size. This constraint means that there are only three available sizes of EStaRS: 1 ft, 2ft, and 3 ft diameter, which treat .764 L/s, 3.07 L/s, and 7.024 L/s, respectively [How did you choose these sizes? WHich sizes have been built? What about 1.5 ft? How long can the branches be without requiring end support? What is the maximum length of branch that is used in OStaRS? This is a structural issue. A cantilevered pipe must be less than half as long as a pipe that is held at both ends (as is the case in OStaRS). Thus we need structural testing of our inlet and outlet branches before building EStaRS that require stronger branches than are used in the OStaRS. ]. Each plant should have at least 2 filters so that one can still be in use even when the other is in backwash. If the plant flow is more than corresponds with 2 filters additional filters can be added in parallel to accomodate addtional flow.
+The EStaRS: Enclosed Stacked Rapid Sand filter, is a compact filter that can be amended to a 1 L/s floc/sed unit to provide a filter. EStaRS are also used for low flow plants because they are less resource intensive to construct than a small version of the full-size concrete filter. Because the filter is constructed using only pipes and couplings, the possible EStaRS sizes are discretized as pipes are not available in every concievable size. This constraint means that there are only three available sizes of EStaRS: 1 ft, 2ft, and 3 ft diameter, which treat .764 L/s, 3.07 L/s, and 7.024 L/s, respectively [How did you choose these sizes? WHich sizes have been built? What about 1.5 ft? How long can the branches be without requiring end support? What is the maximum length of branch that is used in OStaRS? This is a structural issue. A cantilevered pipe must be less than half as long as a pipe that is held at both ends (as is the case in OStaRS). Thus we need structural testing of our inlet and outlet branches before building EStaRS that require stronger branches than are used in the OStaRS. ]. Each plant should have at least 2 filters so that one can still be in use even when the other is in backwash. If the plant flow is more than corresponds with 2 filters additional filters can be added in parallel to accomodate addtional flow.
 
-Some parts of the design are the same as for the open StaRS filter! The stacked trunk and branch system is the most notable of these similarities, with key differences being in how the inlet and outlet system can be designed. Both the "traditional" concrete entrance/exit channel and boxes can be used, but more compact is what is called the "Micky Mouse" design [Unclear sentence][link to figure]. This design features entrance and exit tanks made from large diameter pipes rather than concrete making them modular. Most of this design file considers the shared characteristics of the concrete and "Micky Mouse", but places where the design varies will be noted.
+Some parts of the design are the same as for the open StaRS filter! The stacked trunk and branch system is the most notable of these similarities, with key differences being in how the inlet and outlet system can be designed. Both the "traditional" concrete entrance/exit channel and boxes can be used, but a more compact design is what is called the "Micky Mouse" filter [link to figure]. This design features entrance and exit tanks made from large diameter pipes rather than concrete making them modular. Most of this design file considers the shared characteristics of the concrete and "Micky Mouse", but places where the design varies will be noted.
 
 [Discuss flow control for filters in parallel. A team researched a weir system for this about a year ago.]
 
@@ -43,34 +43,51 @@ Some parts of the design are the same as for the open StaRS filter! The stacked 
 
 [Add a section (table or figure) on your proposal for number and size of filters as a function of flow rate over the range of flows that you anticipate EStaRS will be used.]
 
-Dimensions and Pipe Size
-=========================
+Dimensions and Overall Filter Body Pipe Size
+===================================================
 
-Generally 2 filters are considered, [What do you recommend for the PF300? This seems like a bad assumption. Once you create the algorithm for the number and size of filters this should be clearer.] so that one can still be in use when the other is being backwashed. Using more than 2 filters will still work with this design, as long as :math:`N_{Fi}`, the number of filters, is changed to accomodate the correct number. This step requires some foresight on how many filters may be needed and of what size.[Create the algorithm to determing the number and size of the filters as a function of the design flow rate. This follows the design model that we used in CEE 4540.]
+Generally 2 or more filters are considered, so that one can still be in use when the other is being backwashed. The number and size of the filters as a function of the design flow rate and the maximum flow a filter of a particular size can handle.
 
 In the design the first step is to determine what size EStaRS is needed because this determines nearly every parameter.
 
-The filter flow and backwash velocity are used to find an area (:math:`\frac{Q_{Fi}}{V_{Bw}}= A`), this area is used to find the Nominal Diameter (ND) of the pipe to be used for the filter. the backwash velocity is a function of the fluidization velocity of sand and so is unchanging for every design. If the calcualated area is between values, the larger pipe size is chosen.
+The constraint that defines the filter body size is ultimately the backwash velocity. For the sand used in the filters the required upwards velocity to fluidize the sand is 9.8 mm/s. Using this velocity and the flow area of a pipe, as based on the inner diameter, provides a maximum flow for the filter, based on :math:`Q_{Filter} = V_{BW}*A_{Filter}`. This :math:`Q_{Filter}` describes the flow that must be seen for backwash to happen properly. To use these values to determine the number and size of filters required for a specific :nmath:`Q_{Plant}`, the array of pipe diameters is used to yield an array of filter flows. Another array is generated by diving :math:`Q_{Plant}` by :math:`Q_{Filter}`. This array is equal to the required number of filters (:math:`N_{Filter}`) of a partuculatr diameters to serve a plant with a flow of :math:`Q_{Plant}. Selecting the diameter of pipe that yields the smallest number of filters greater than 2 should be chosen. If the number is not an integer, it should be rounded up to the next integer. Rounding up guarantees that the entir eplant flow can be filtered. 
 
 [show the equation here]
+
+Constraints for Inner Parts
+==============================
+
+
 
 From the determination of the filter body size, the branch and trunk manifolds are the next most important feature of the design. Some relevant variables defined here:
 
 [Place these variables in a table that includes name, description, default and constraint that gives the default]
 
-|  :math:`ND_{BallValve} = 3in`
-|  :math:`ND_{BedTester} = 0.5in`
-|  :math:`ND_{BedTesterOuter} = 1in`
-|  :math:`ND_{FiAirRelValve} = 0.5in`
++-----------------------------+-------------+--------------+----------------------------------+
+| Variable Name               | Description | Default Value| What Constrains the Default Value| 
++=============================+=============+==============+==================================+
+| :math:`ND_{BallValve}`      |             |        3 in  |                                  |
++-----------------------------+-------------+--------------+----------------------------------+
+|  :math:`ND_{BedTester}`     |             | 0.5in        |                                  |
++-----------------------------+-------------+--------------+----------------------------------+
+|  :math:`ND_{BedTesterOuter}`|             | 1in          |                                  |
++-----------------------------+-------------+--------------+----------------------------------+
+|  :math:`ND_{FiAirRelValve}` |             |        0.5in |                                  |
++-----------------------------+-------------+--------------+----------------------------------+
+|  :math:`ND_{FiBwTrunkMin}`  |             | 3in          |                                  | 
++-----------------------------+-------------+--------------+----------------------------------+
+|  :math:`ND_{FiBwBranchkMin}`|             |    1in       |                                  |
++-----------------------------+-------------+--------------+----------------------------------+
+|  :math:`ND_{FiTrunkMin}`    |             |   2in        |                                  |
++-----------------------------+-------------+--------------+----------------------------------+
+|  :math:`ND_{FiDrainExit}`   |             | 3in          |                                  |
++-----------------------------+-------------+--------------+----------------------------------+
+|  :math:`ND_{FiOverflowEnt}  |             |  3in         |                                  |
++-----------------------------+-------------+--------------+----------------------------------+
+|  :math:`ND_{FiBranchMin}`   |             |   1in        |                                  |
++-----------------------------+-------------+--------------+----------------------------------+
 
-.. trunk sizes based on Juans recommendation in November 2018
-
-|  :math:`ND_{FiBwTrunkMinLow} = 3in`
-|  :math:`ND_{FiBwBranchkMinLow} = 1in`
-|  :math:`ND_{FiTrunkMin} = 2in`
-|  :math:`ND_{FiDrainExit} = 3in`
-|  :math:`ND_{FiOverflowEnt} = 3in`
-|  :math:`ND_{FiBranchMin} = 1in`
+*trunk sizes based on Juan Guzmán's recommendation in November 2018
 
 All of these values are defined as minimum. Another important value determined by the filter body size is the area of the filter which is defined as: :math:`ID_{pipe}^2 / 4`. This becomes important later in determination of the mass of sand needed.
 
