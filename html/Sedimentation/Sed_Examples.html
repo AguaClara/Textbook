@@ -30,7 +30,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Sedimentation Theory and Future Work" href="Sed_Theory_and_Future_Work.html" />
-    <link rel="prev" title="AguaClara Design Approach" href="Sed_Design.html" /> 
+    <link rel="prev" title="Sedimentation Design" href="Sed_Design.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -87,7 +87,6 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -126,11 +125,7 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html#conventional-sedimentation-systems">Conventional Sedimentation Systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html#sedimentation-challenges-and-gaps-in-knowledge">Sedimentation Challenges and Gaps in Knowledge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html#aguaclara-innovations">AguaClara Innovations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html">AguaClara Design Approach</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html">Sedimentation Design</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
@@ -142,6 +137,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -234,23 +230,20 @@
 <span id="id1"></span><h1>Sedimentation Examples<a class="headerlink" href="#sedimentation-examples" title="Permalink to this headline">¶</a></h1>
 <p>Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, <span class="math notranslate nohighlight">\(V_\alpha\)</span>. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-0">
-<span class="eqno">(422)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{\uparrow}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
+<span class="eqno">(406)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{\uparrow}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-1">
-<span class="eqno">(423)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_\uparrow = \bar v_\alpha\sin \alpha\]</div>
+<span class="eqno">(407)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_\uparrow = \bar v_\alpha\sin \alpha\]</div>
 <p>Solve for the length of the tube settler.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-2">
-<span class="eqno">(424)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
+<span class="eqno">(408)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
 <span class="n">v_alpha</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">v_c</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">D</span> <span class="o">=</span> <span class="mf">2.54</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">alpha</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
 
 <span class="k">def</span> <span class="nf">L_settler</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">v_alpha</span><span class="p">,</span><span class="n">v_c</span><span class="p">):</span>
- <span class="k">return</span> <span class="n">D</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">v_alpha</span><span class="o">/</span><span class="n">v_c</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">alpha</span><span class="p">))</span>
+  <span class="k">return</span> <span class="n">D</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">v_alpha</span><span class="o">/</span><span class="n">v_c</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">alpha</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">L_settler</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">v_alpha</span><span class="p">,</span><span class="mi">1</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">L_settler</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">v_alpha</span><span class="p">,</span><span class="mf">0.2</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
@@ -270,7 +263,7 @@
         <a href="Sed_Theory_and_Future_Work.html" class="btn btn-neutral float-right" title="Sedimentation Theory and Future Work" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Sed_Design.html" class="btn btn-neutral" title="AguaClara Design Approach" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Sed_Design.html" class="btn btn-neutral" title="Sedimentation Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
