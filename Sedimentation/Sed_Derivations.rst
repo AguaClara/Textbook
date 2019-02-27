@@ -234,8 +234,6 @@ We begin by describing the conditions of infinite horizontal plates.
 
   \frac{y^2}{2}\frac{dp}{dx} + Ay + B = \mu u
 
-[[need explanation of variables and where this came from]]
-
 We employ the no-slip condition to solve for the constants A and B. The no-slip condition is that :math:`u = 0` at :math:`y = 0` and :math:`y = S`, where :math:`u` is the horizontal velocity component, :math:`y` is the location in the y-axis direction between plates, and :math:`S` is the spacing between plates.
 
 at :math:`u = 0` and :math:`y = 0`:
@@ -268,7 +266,7 @@ Our initial equation can be updated as,
 
   \frac{y^2}{2}\frac{dp}{dx} + \frac{-S}{2}\frac{dp}{dx}y + B = \mu u
 
-If we let :math:`\frac{dp}{dx}` be negative [[??]], then we can solve for :math:`\tau` [[?]].
+If we let :math:`\frac{dp}{dx}` be negative, then we can solve for :math:`\tau`.
 
 .. math::
 
@@ -278,7 +276,7 @@ If we let :math:`\frac{dp}{dx}` be negative [[??]], then we can solve for :math:
 
   \tau = (y - \frac{S}{2}) \frac{dp}{dx}
 
-Determining the average velocity between plates, :math:` v_{\alpha}`, [[??]]
+Determining the average velocity between plates, :math:` v_{\alpha}`,
 
 .. math::
 
@@ -298,7 +296,7 @@ Integrating to get average velocity, then solving for :math:`\frac{dp}{dx}`,
 
   \frac{dp}{dx} = \frac{12\mu v_{\alpha} }{S^2}
 
-Using Navier-Stokes to model the flow between the plates, and substituting our equation for :math:` \frac{dp}{dx}`, [[??]]
+Using Navier-Stokes to model the flow between the plates, and substituting our equation for :math:` \frac{dp}{dx}`, 
 
 .. math::
 
@@ -687,7 +685,7 @@ Using our equation for :math:`h_L`,
 
 We can plot our results for :math:`G` over a range of typical floc blanket concentrations, which is around 1 - 5 g/L. We find that :math:`G` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`G` provided by the floc blanket is much smaller than :math:`G` provided by the flocculator. This is an important point because in the low :math:`G` environment of the floc blanket where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
 
-We can plot our results for :math:`G\theta` by multiplying :math:`G` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`G\theta` ranges from 2,000 to 6,000. Compare this to the :math:`G\theta = 20,000` for the flocculator used in experiments [[[[Garland]]]].
+We can plot our results for :math:`G\theta` by multiplying :math:`G` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`G\theta` ranges from 2,000 to 6,000. Compare this to the :math:`G\theta = 20,000` for the flocculator used in experiments (`Garland et al., 2017<https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_).
 
 .. _figure_lab_setup:
 
@@ -880,3 +878,8 @@ Using known constants,
 .. math::
 
   v_{jet} \approx 380 \frac{mm}{s}
+
+References
+===========
+
+Garland, Casey, et al. “Revisiting Hydraulic Flocculator Design for Use in Water Treatment Systems with Fluidized Floc Beds.” Environmental Engineering Science, vol. 34, no. 2, 1 Feb. 2017, pp. 122–129., doi:10.1089/ees.2016.0174.

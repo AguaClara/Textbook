@@ -10,8 +10,6 @@ Sedimentation a gravity-driven unit process in which suspended flocs are settled
 
 To introduce you to sedimentation, we will begin with a simple example. If a jar of water filled with flocs was left at rest, flocs would begin to settle due to gravitational forces pulling them down. Large flocs would settle first, but if left for long enough, all flocs would settle to the bottom of the jar. In its most basic form, the jar represents a sedimentation tank in which flocculated water is treated. Settled flocs become waste and the water on the top of the jar, referred to as the supernatant, becomes the settled water.
 
-[INCLUDE FIGURE TO DEMONSTRATE EXAMPLE. Show different floc sizes settling over time in jar. Label flocculated water, supernatant and settled water].
-
 Constraints of space, time, and cost make it important to optimize the settling process. It would not be realistic to design water treatment systems that use the basic jar-like system to settle flocs because large flow rates would require unreasonably large reactor volumes and long retention times. The goal of sedimentation reactor design is to employ geometries that promote settling and allow for fast treatment with small footprints.
 
 What if we were to do the same jar experiment with raw water that did not go through successful coagulation and flocculation? Would we observe the same settling and successful particle removal? To answer this, we must recall information learned in the section on coagulation and flocculation; those two treatment processes serve to destabilize and agglomerate particles to form flocs that will be heavy enough to settle. If the particles are colloids and are not destabilized, no amount of time will allow for the settling. This emphasizes the fact that successful sedimentation can only happen with successful coagulation and flocculation steps before it.
@@ -28,7 +26,7 @@ To understand how sedimentation works, a few key concepts must first be develope
 
 Terminal Velocity
 ===============================
-As flocs settle in water, they will fall at a speed dictated by the weight of the floc, the buoyancy of the floc, and drag from the water. These three forces - the gravitational weight force, the buoyant force, and the drag force - dictate the speed at which a floc falls and are detailed in the following free body diagram. We care about determining the speed at which flocs will fall because knowing this information will help inform our sedimentation reactor design criteria.
+As flocs settle in water, they will fall at a speed dictated by the weight of the floc, the buoyancy of the floc, and drag from the water. These three forces - the gravitational weight force, the buoyant force, and the drag force - dictate the speed at which a floc falls and are detailed in the free body diagram of :numref:`figure_terminal_velocity_FBD`. We care about determining the speed at which flocs will fall because knowing this information will help inform our sedimentation reactor design criteria.
 
 .. _figure_terminal_velocity_FBD:
 
@@ -85,7 +83,7 @@ Terminal velocity is a function of fluid density, floc density, gravity, particl
 
 The first component that we will focus on is the drag coefficient, :math:`C_D`. The drag coefficient is function of Reynolds Number, :math:`Re`, and the characteristic flow around a particle. As a reminder, :math:`Re = \frac{v_t D}{\nu}` where :math:`v_t` is the velocity of the fluid relative to the particle, :math:`D` is the characteristic length scale (in this case the particle diameter), and :math:`\nu` is kinematic viscosity.
 
-Drag coefficients are used to describe flow around a particle.
+Drag coefficients are used to describe flow around a particle and are shown in :numref:`_figure_drag_coeff_Re_base`.
 
 .. _figure_drag_coeff_Re_base:
 
@@ -125,7 +123,7 @@ Below is a table to compare the significance of the Moody diagram and the Drag C
 
 
 
-The flow around the particle and the Reynolds Number can be described in the laminar, turbulent, or turbulent-boundary regions. In the laminar region viscous forces dominate, :math:`Re < 1`,and the coefficient of drag is represented as the straight line with a slope of -1 on the log-log plot. The equation for drag on a sphere in laminar flow :math:`C_D = \frac{24}{Re}` is referred to as Stokes Law. You'll notice that the line for Stokes Law shown in the figure extends past the laminar region. This was done because it highlights that even though Stokes Law is not exactly correct past the turbulent region, it is still a pretty good approximation for  :math:`Re < 10`.
+The flow around the particle and the Reynolds Number can be described in the laminar, turbulent, or turbulent-boundary regions as shown in :numref:`figure_drag_coeff_Re_full`. In the laminar region viscous forces dominate, :math:`Re < 1`,and the coefficient of drag is represented as the straight line with a slope of -1 on the log-log plot. The equation for drag on a sphere in laminar flow :math:`C_D = \frac{24}{Re}` is referred to as Stokes Law. You'll notice that the line for Stokes Law shown in the figure extends past the laminar region. This was done because it highlights that even though Stokes Law is not exactly correct past the turbulent region, it is still a pretty good approximation for  :math:`Re < 10`.
 
 .. _figure_drag_coeff_Re_full:
 
@@ -178,7 +176,7 @@ Our equations for terminal velocity depend on the density of a floc. As discusse
 | :math:`D =` floc diameter
 | :math:`\rho_{floc_0} =` density of the primary particle making up the floc
 
-The following plot shows the relationship between floc diameter and terminal velocity.
+The following plot in :numref:`figure_terminal_velocity_floc_diam` shows the relationship between floc diameter and terminal velocity.
 
 .. _figure_terminal_velocity_floc_diam:
 
@@ -225,7 +223,7 @@ Horizontal Flow Sedimentation Tank
 | :math:`H =` height [L]
 | :math:`A_p =` plan view area of the tank [:math:`L^2`]
 
-Let's begin with a few questions that will describe our horizontal flow sedimentation tank shown above. We will assume that 1) water travels uniformly from one end of the tank to the other, and 2) the particle that we are discussing is 35 :math:`\mu m` (which is the size of particle that AguaClara plate settlers can capture).
+Let's begin with a few questions that will describe our horizontal flow sedimentation tank in :numref:`figure_horizontal_flow_tank_base`. We will assume that 1) water travels uniformly from one end of the tank to the other, and 2) the particle that we are discussing is 35 :math:`\mu m` (which is the size of particle that AguaClara plate settlers can capture).
 
 1) How much time is required for water to pass through the tank?
 
@@ -246,7 +244,7 @@ The "worst case scenario" is the condition in which a particle must travel the f
 
 3) How fast must the particle fall?
 
-We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, :math:`v_H`. Gravity is causing the particle to settle at its terminal velocity, :math:`v_t`. In order to reach the bottom, that settling velocity needs to be the capture velocity, :math:`v_c`, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in the following figure.
+We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, :math:`v_H`. Gravity is causing the particle to settle at its terminal velocity, :math:`v_t`. In order to reach the bottom, that settling velocity needs to be the capture velocity, :math:`v_c`, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in :numref:`figure_horizontal_flow_tank_capture`.
 
 .. _figure_horizontal_flow_tank_capture:
 
@@ -281,7 +279,7 @@ This question is important because as stated in the beginning of this section, o
 To answer this question, think about the two extremes of our reactor.
 
 - We could have a small particle entering the reactor at the top, defining the critical path in the same "worst case scenario". This particle would not be successfully captured by the tank because its terminal velocity is less than the capture velocity, meaning that it doesn't have enough time in the reactor to settle.
-- We could have a small particle entering the reactor near the bottom, in a "best case scenario". In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be caputured by a tank designed for particles 35 :math:`\mu m` or larger, but it depends on the height at which they enter the reactor.
+- We could have a small particle entering the reactor near the bottom, in a "best case scenario". In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be caputured by a tank designed for particles 35 :math:`\mu m` or larger, but it depends on the height at which they enter the reactor as shown in :numref:`figure_horizontal_flow_tank_small_capture`.
 
 .. _figure_horizontal_flow_tank_small_capture:
 
@@ -294,7 +292,7 @@ To answer this question, think about the two extremes of our reactor.
 
 Vertical Flow Sedimentation Tank
 ----------------------------------
-We will complete the same exercise for vertical flow sedimentation tanks. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.
+We will complete the same exercise for vertical flow sedimentation tanks shown in :numref:`figure_vertical_flow_tank_base`. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.
 
 .. _figure_vertical_flow_tank_base:
 
@@ -362,79 +360,12 @@ There are some important differences between horizontal and vertical sedimentati
 
 - vertical flow tanks require careful attention to the delivery of water in the bottom of the tank and the extraction of water in the top of the tank;
 - vertical and horizontal flow tanks may have different velocities and turbulence capacities due to plan view areas;
-- research on tube settlers [[[[cite brentwoodprocess.com]]]] suggests that settle capture velocities should be 0.12 - 0.36 mm/s;
-- research on horizontal flow tanks [[[[cite Schulz and Okun (surface water treatment for communities in developing countries)]]]] suggests that settle capture velocities should be 0.24 - 0.72 mm/s.
+- research on tube settlers by `Brentwood Industries <https://www.brentwoodindustries.com/water-wastewater-products/tube-settlers/>`_ suggests that settle capture velocities should be 0.12 - 0.36 mm/s;
+- research on horizontal flow tanks in *Surface Water Treatment for Communities in Developing Countries* by Schulz and Okun suggests that settle capture velocities should be 0.24 - 0.72 mm/s.
 
-Now that we have developed a good understanding of the basic principles of sedimentation, we will transition to a discussion of AguaClara innovations.
+with this understanding of the basic principles of sedimentation, we will transition to a discussion of AguaClara innovations.
 
+References
+============
 
-***************************************
-Conventional Sedimentation Systems
-***************************************
-- Components of the reactors
-
-
-- Examples of systems:
-  - Two main categories are:
-    - horizontal sedimentation
-    - vertical sedimentation
-
-  - Differences between them include
-    - Bottom type (flat, sloped)
-    - Sludge removal apparatus (mostly mechanical but with different variations)
-    - Flow distribution systems
-
-Note: this chapter will not deal with other advanced clarification technologies past this point, except in making comparisons with AguaClara technology. Other interesting areas of advanced clarification include:
-
-- ballasted Sedimentation (Actiflow)
-- Superpulsator
-- etc
-
-***********************************************
-Sedimentation Challenges and Gaps in Knowledge
-***********************************************
-
-Sedimentation Challenges:
-
-- Flow circulation (and floc rise) from uneven flow distribution
-- Floc blanket design and use challenges
-
-  .. _Floc_blankets:
-
-  Floc blankets
-  ==================
-
-  .. todo:: download CEPIS design files and create local copies to avoid problems with this hyperlink failing. (bibliotecavirtual.minam.gob.pe/biam/bitstream/id/5657/BIV00012.pdf)
-
-  See the Pan American Health Organization, (PAHO) manual on theory of rapid sand filtration plants (page 289) for reasons why floc blankets should not be used! According to PAHO floc blankets are not recommended for small communities who lack highly trained personal to operate the plant and floc blanket should only be used where plant flow rates and water quality are constant. Each of these constraints was due to the inadequate design of previous floc blanket reactors that made operation difficult.
-
-  .. _Floc_blanket_hypotheses:
-
-  Floc blanket hypotheses
-  ------------------------
-
-  The floc blanket mechanism responsible for reduced settled water turbidity has been elusive.
-  - not flocculation between particles delivered from the flocculator because $G\theta$ generated by the shear of the settling flocs and the hydraulic residence time of the floc blanket is insufficient to cause significant
-  - The floc blanket consists of settling flocs that are maintained in suspension by the upwardly flowing water.
-
-- Sludge accumulation
-
-
-Gaps in Knowledge:
-
-- Empirical standards (10 state standards)
-  - Settle capture velocity guidelines
-
-- No understanding of scaling effects
-
-- "last significant paper on tube settlers published in 1978" - needs confirmation/more details
-
-***************************************
-AguaClara Innovations
-***************************************
-Note: focus this section on just explaining the 3 problem areas that exist that AguaClara tech focuses on. Do not go into detail about each component because that will be detailed more in Sed_Design
-
-The improved performance is due to 3 factors.
-- improved inlet system to prevent circulation (inlet manifold with diffusers)
-- self-sustaining floc blanket (bottom geometry and diffusers for floc blanket)
-- prevent sludge accumulation and allow for self-cleaning (bottom geometry jet reverser and floc hopper)
+Schulz, C. R., Okun, D. A., & Water and Sanitation for Health Project (U.S.). (1984). Surface water treatment for communities in developing countries. New York: Wiley.
