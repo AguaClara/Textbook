@@ -296,7 +296,7 @@ Integrating to get average velocity, then solving for :math:`\frac{dp}{dx}`,
 
   \frac{dp}{dx} = \frac{12\mu v_{\alpha} }{S^2}
 
-Using Navier-Stokes to model the flow between the plates, and substituting our equation for :math:` \frac{dp}{dx}`, 
+Using Navier-Stokes to model the flow between the plates, and substituting our equation for :math:` \frac{dp}{dx}`,
 
 .. math::
 
@@ -465,7 +465,7 @@ What happens if the primary particles are less dense?
 
 .. _figure_vsettle_vslide:
 
-.. figure:: Images/vsettle_vslide.png
+.. figure:: Images/vslide_vsettle.png
    :height: 300px
    :align: center
    :alt: Relationship between :math:`v_{Settle}` and :math:`v_{Slide}`.
