@@ -4,29 +4,15 @@
 EStaRS Design
 *******************
 
-[it appears that you don't have a spelling checker installed in atom. I shouldn't see spelling errors.]
-
-[I made it about 2/3 of the way through the file and then I ran out of steam. I suggest beginning by stating in text how the design will proceed. Below is my attempt.]
-
-#. Set the spacing between branches to be 0.5 of the sand layer depth
-inlet branch orifice size set by maximum diameter than can be used without creating holes through the side of the connection between the branch and the wing pipe.
-#. Set the orifice area in the backwash inlet branches based on keeping backwash head loss low. Aim for something between 1 and 5 cm with these numbers chosen to be small relative to the total head loss through an AguaClara plant and assuming that there isn't any reason to waste energy here.
-#. Calculate the spacing between orifices (and make sure it is possible to fabricate)
-You can continue with these steps. Make sure that you always know everything required to get to the next step.
 
 .. attention::
 
   This file is a work in progress and includes notes from the author to the author, all information included here is correct though likely incomplete
 
-.. note:: Explain the limitation of OStaRS and thus define the range of flows that EStaRS must be able to handle.
 
+The EStaRS: Enclosed Stacked Rapid Sand filter, is a compact filter that can be amended to a 1 L/s floc/sed unit to provide a filter. EStaRS are also used for low flow plants because they are less resource intensive to construct. Because the filter is constructed using only pipes and couplings, the possible EStaRS sizes are discretized as pipes are not available in every concievable size. This constraint means that there are only three available sizes of EStaRS: 1 ft, 2ft, and 3 ft diameter, which treat .764 L/s, 3.07 L/s, and 7.024 L/s, respectively. Each plant should have at least 2 filters so that one can still be in use even when the other is in backwash. If the plant flow is more than corresponds with 2 filters additional filters can be added in parallel to accomodate addtional flow.
 
-
-The EStaRS: Enclosed Stacked Rapid Sand filter, is a compact filter that can be amended to a 1 L/s floc/sed unit to provide a filter. EStaRS are also used for low flow plants because they are less resource intensive to construct than a small version of the full-size concrete filter. Because the filter is constructed using only pipes and couplings, the possible EStaRS sizes are discretized as pipes are not available in every concievable size. This constraint means that there are only three available sizes of EStaRS: 1 ft, 2ft, and 3 ft diameter, which treat .764 L/s, 3.07 L/s, and 7.024 L/s, respectively [How did you choose these sizes? WHich sizes have been built? What about 1.5 ft? How long can the branches be without requiring end support? What is the maximum length of branch that is used in OStaRS? This is a structural issue. A cantilevered pipe must be less than half as long as a pipe that is held at both ends (as is the case in OStaRS). Thus we need structural testing of our inlet and outlet branches before building EStaRS that require stronger branches than are used in the OStaRS. ]. Each plant should have at least 2 filters so that one can still be in use even when the other is in backwash. If the plant flow is more than corresponds with 2 filters additional filters can be added in parallel to accomodate addtional flow.
-
-Some parts of the design are the same as for the open StaRS filter! The stacked trunk and branch system is the most notable of these similarities, with key differences being in how the inlet and outlet system can be designed. Both the "traditional" concrete entrance/exit channel and boxes can be used, but a more compact design is what is called the "Micky Mouse" filter [link to figure]. This design features entrance and exit tanks made from large diameter pipes rather than concrete making them modular. Most of this design file considers the shared characteristics of the concrete and "Micky Mouse", but places where the design varies will be noted.
-
-[Discuss flow control for filters in parallel. A team researched a weir system for this about a year ago.]
+Some parts of the design are the same as for the open StaRS filter! The stacked trunk and branch system is the most notable of these similarities, with key differences being in how the inlet and outlet system can be designed. Both the "traditional" concrete entrance/exit channel and boxes can be used, but more compact is what is called the "Micky Mouse" design. This design features entrance and exit tanks made from large diameter pipes rather than concrete making them smaller and more modular. Most of this design file considers the shared characteristics of the concrete and "Micky Mouse", but places where the design varies will be noted.
 
 .. attention::
 
@@ -35,61 +21,41 @@ Some parts of the design are the same as for the open StaRS filter! The stacked 
 
 :numref:`table_comparsion_filters` shows some of the design differences between the different filter types. The parameters included in the table will be described throughout this design.
 
-[create the table in RST so it is easy to edit.]
-
 .. _table_comparison_filters:
 
 .. figure:: Images/table_comparison_filters.png
 
-[Add a section (table or figure) on your proposal for number and size of filters as a function of flow rate over the range of flows that you anticipate EStaRS will be used.]
 
-Dimensions and Overall Filter Body Pipe Size
-===================================================
 
-Generally 2 or more filters are considered, so that one can still be in use when the other is being backwashed. The number and size of the filters as a function of the design flow rate and the maximum flow a filter of a particular size can handle.
+Dimensions and Pipe Size
+=========================
+
+Generally 2 filters are considered, so that one can still be in use when the other is being backwashed. Using more than 2 filters will still work with this design, as long as :math:`N_{Fi}`, the number of filters, is changed to accomodate the correct number. This step requires some foresight on how many filters may be needed and of what size.
 
 In the design the first step is to determine what size EStaRS is needed because this determines nearly every parameter.
 
-The constraint that defines the filter body size is ultimately the backwash velocity. For the sand used in the filters the required upwards velocity to fluidize the sand is 9.8 mm/s. Using this velocity and the flow area of a pipe, as based on the inner diameter, provides a maximum flow for the filter, based on :math:`Q_{Filter} = V_{BW}*A_{Filter}`. This :math:`Q_{Filter}` describes the flow that must be seen for backwash to happen properly. To use these values to determine the number and size of filters required for a specific :nmath:`Q_{Plant}`, the array of pipe diameters is used to yield an array of filter flows. Another array is generated by diving :math:`Q_{Plant}` by :math:`Q_{Filter}`. This array is equal to the required number of filters (:math:`N_{Filter}`) of a partuculatr diameters to serve a plant with a flow of :math:`Q_{Plant}. Selecting the diameter of pipe that yields the smallest number of filters greater than 2 should be chosen. If the number is not an integer, it should be rounded up to the next integer. Rounding up guarantees that the entir eplant flow can be filtered. 
-
-[show the equation here]
-
-Constraints for Inner Parts
-==============================
-
+The filter flow and backwash velocity are used to find an area (:math:`\frac{Q_{Fi}}{V_{Bw}}= A`), this area is used to find the Nominal Diameter (ND) of the pipe to be used for the filter. the backwash velocity is a function of the fluidization velocity of sand and so is unchanging for every design. If the calcualated area is between values, the larger pipe size is chosen.
 
 
 From the determination of the filter body size, the branch and trunk manifolds are the next most important feature of the design. Some relevant variables defined here:
 
-[Place these variables in a table that includes name, description, default and constraint that gives the default]
 
-+-----------------------------+-------------+--------------+----------------------------------+
-| Variable Name               | Description | Default Value| What Constrains the Default Value| 
-+=============================+=============+==============+==================================+
-| :math:`ND_{BallValve}`      |             |        3 in  |                                  |
-+-----------------------------+-------------+--------------+----------------------------------+
-|  :math:`ND_{BedTester}`     |             | 0.5in        |                                  |
-+-----------------------------+-------------+--------------+----------------------------------+
-|  :math:`ND_{BedTesterOuter}`|             | 1in          |                                  |
-+-----------------------------+-------------+--------------+----------------------------------+
-|  :math:`ND_{FiAirRelValve}` |             |        0.5in |                                  |
-+-----------------------------+-------------+--------------+----------------------------------+
-|  :math:`ND_{FiBwTrunkMin}`  |             | 3in          |                                  | 
-+-----------------------------+-------------+--------------+----------------------------------+
-|  :math:`ND_{FiBwBranchkMin}`|             |    1in       |                                  |
-+-----------------------------+-------------+--------------+----------------------------------+
-|  :math:`ND_{FiTrunkMin}`    |             |   2in        |                                  |
-+-----------------------------+-------------+--------------+----------------------------------+
-|  :math:`ND_{FiDrainExit}`   |             | 3in          |                                  |
-+-----------------------------+-------------+--------------+----------------------------------+
-|  :math:`ND_{FiOverflowEnt}` |             |  3in         |                                  |
-+-----------------------------+-------------+--------------+----------------------------------+
-|  :math:`ND_{FiBranchMin}`   |             |   1in        |                                  |
-+-----------------------------+-------------+--------------+----------------------------------+
 
-*trunk sizes based on Juan Guzmán's recommendation in November 2018
+|  :math:`ND_{BallValve} = 3in`
+|  :math:`ND_{BedTester} = 0.5in`
+|  :math:`ND_{BedTesterOuter} = 1in`
+|  :math:`ND_{FiAirRelValve} = 0.5in`
 
-All of these values are defined as minimum. Another important value determined by the filter body size is the area of the filter which is defined as: :math:`ID_{pipe}^2 / 4`. This becomes important later in determination of the mass of sand needed.
+.. trunk sizes based on Juans recommendation in November 2018
+
+|  :math:`ND_{FiBwTrunkMinLow} = 3in`
+|  :math:`ND_{FiBwBranchkMinLow} = 1in`
+|  :math:`ND_{FiTrunkMin} = 2in`
+|  :math:`ND_{FiDrainExit} = 3in`
+|  :math:`ND_{FiOverflowEnt} = 3in`
+|  :math:`ND_{FiBranchMin} = 1in`
+
+All of these values are defined as minimum. Another important value determined by the  filter body size is the area of the filter which is defined as: :math:`ID_{pipe}^2 / 4`. This becomes important later in determination of the mass of sand needed.
 
 The pipe sizes recommended in this section come from certain assumptions of the amount of head required to use the filter. In November 2018, the difference in elevation of the water level from the exit tank to the entrance tank was increased to 75cm (an additional increase from 60, which was decided a year or so earlier) so that extra head loss in the manifold system does not influence filter functionality as has been seen in the field. This additional head will allow smaller manifold pipes to be used, as the added head loss in smaller pipes (from the increase of velocity) will not overcome the entrance and exit heights. Smaller manifold pipes will mean the entrance and exit tanks can stay narrower, though taller.
 
@@ -97,7 +63,6 @@ The determination of sizes for the drain and overflow come from using the orific
 
 A schematic of these pipes can be see below in :numref:`figure_micky_mouse_pipe_schematic`. The image is not to scale, but shows generally how pipes are organized within the filter.
 
-[We need an Onshape drawing! Perhaps early next year. The pipes MUST go to the floor. Exit to distribution starts at the bottom of the exit tank. Possibly the top of the exit and entrance tanks are only 10 cm above the filter body. Filter Body has an air vent. Need flow control weir system. Is it possible to have some of the pipes exit through the side of the entrance and exit tanks so those tanks don't have to be so large? Sand drain? Pipe stubs in entrance and exit tanks for automated switch from filter to backwash. Backwash drain pipe with valve? Considering putting numbers on the inlets and outlets so that you can ]
 
 .. _figure_micky_mouse_pipe_schematic:
 
@@ -116,13 +81,13 @@ Sand Layer Thickness
 ===========================
 
 
-In the EStaRS filters, of all three sizes (1ft, 2ft, and 3ft), the sand layer thickness will be 20cm for each layer, except for filters designed to go with 1 L/s plants, then the depth will be 15cm [Explain why]. In the OStaRS there are functions that define the sand layer depth, but the minimum distance, 20cm is applicable until trunk diameters are larger than 6 inches. Because for EStaRS this variable is unchanging the equations are not included, but it can be found in the OStaRS filter design file in the :ref:`sand layer thickness <heading_sand_layer_thickness>` section. [Explain why the OStaRS filters have an option for increasing the layer depth and why this isn't applicable for EStaRS.]
+In the EStaRS filters, of all three sizes (1ft, 2ft, and 3ft), the sand layer thickness will be 20cm for each layer, except for filters designed to go with 1 L/s plants, then the depth will be 15cm. In the OStaRS there are functions that define the sand layer depth, but the minimum distance, 20cm is applicable until trunk diameters are larger than 6 inches. Because for EStaRS this variable is unchanging the equations are not included, but it can be found in the OStaRS filter design file in the :ref:`sand layer thickness <heading_sand_layer_thickness>` section.
 
 So:
 
 .. math::
 
-  H_{FiSandLayer} = 20cm [Above you state that it can also be 15 cm.]
+  H_{FiSandLayer} = 20cm
 
 This is the center to center distance of the trunks.
 
@@ -133,15 +98,15 @@ Flow Distribution Constraints: ratio of pressure recovery to clean bed head loss
 
 In the EStaRS there are three components where flow distribution must be considered:
 
-1. Between slots along [outlet] manifold branches [and between orifices on inlet branches]
+1. Between slots along manifold branches
 
 2. Between branches along manifold trunks
 
 3. Between filter layers
 
-Having uneven flow distribution is unwanted for several reasons, the mostly importantly being that the goal is for each parcel of water to spend approximately the same amount of time in the filter. If flow isn't distributed well the distribution of residence times for the parcels will widen which decreases treatment efficiency. Additonally, uneven flow distributions will increase the head loss in certain parts of the system which can perpetuate preferential flow paths. [I'm not sure if this is true. In a filter if more water takes a preferential flow path, then pores are filled to capacity more rapidly and flow resistance increases in that path.]
+Having uneven flow distribution is unwanted for several reasons, the mostly importantly being that the goal is for each parcel of water to spend approximately the same amount of time in the filter. If flow isn't distributed well the distribution of residence times for the parcels will widen which decreases treatment efficiency. Additonally, uneven flow distributions will increase the head loss in certain parts of the system which can perpetuate preferential flow paths.
 
-The basis of this part of the design is using head loss in an analogous way as resistors in an electrical system. If head loss is intentionally high at a certain point in the filter, then other differences between paths (such a length of the pipe, or which orifice along a branch is the outlet) will not matter because the head loss of those differences is comparatively small. Additionally, some variation is taken into account. Creating a system with perfectly identical paths would be extraordinarily complex [would require setting the head loss (and pressure recovery) to zero for paths that have different lengths], so some dissimilarity is allowed for the sake of simplicity.
+The basis of this part of the design is using head loss in an analogous way as resistors in an electrical system. If head loss is intentionally high at a certain point in the filter, then other differences between paths (such a length of the pipe, or which orifice along a branch is the outlet) will not matter because the head loss of those differences is comparatively small. Additionally, some variation is taken into account. Creating a system with perfectly identical paths would be extraordinarily complex, so some dissimilarity is allowed for the sake of simplicity.
 
 
 Design
@@ -161,7 +126,6 @@ The relative distribution of the flow through a particular path is defined as:
 | :math:`C_{p_{long}} =` pressure coefficient at the end of the longest path
 
 :math:`C_p` is defined thoroughly in :ref:`Filtration Introduction <title_filtration>`
-[according to our convention https://aguaclara.github.io/Textbook/Textbook_Creation_Help/parameter_convention_list.html. head loss is :math:`h_L` Thus use :math:`h_{L_{sand}}`]
 
 .. math::
 
@@ -187,8 +151,7 @@ Where the ratio of the pressure recovery in the branches to the head loss throug
 
 :math:`\Pi_{ManifoldHeadLoss} = \frac{PR}{H_{LSand}}`
 
-[explain how this equation is used. What does it mean? How is it used to set pipe sizes?]
-Though the piezometric head profiles for the inlet and outlet manifolds for the middle layers may be parallel, meaning the pressure recovery is less constrained for a good flow distribution, a tight constraint is still needed for the outer manifolds where the velocity is 1/2 and the PR is 1/4 (because presseue recovery goes with the square of the velocity) that of the inner layer, while the term is smaller still in the bottom-most manifold where the velocity head is tiny as the diameter is larger.[Explain why the bottom most manifold is larger]
+Though the piezometric head profiles for the inlet and outlet manifolds for the middle layers may be parallel, meaning the pressure recovery is less constrained for a good flow distribution, a tight constraint is still needed for the outer manifolds where the velocity is 1/2 and the PR is 1/4 (because presseue recovery goes with the square of the velocity) that of the inner layer, while the term is smaller still in the bottom-most manifold where the velocity head is tiny as the diameter is larger.
 
 See the section on Pressure Recovery  in :ref:`Filtration Intro <title_filtration>` for more infomation if this is unclear.
 
@@ -197,15 +160,14 @@ See the section on Pressure Recovery  in :ref:`Filtration Intro <title_filtratio
 Filter Flow Rates and Layer Height
 ===================================
 
-As the maximum flow of the filter is constrained by the available sizes of the pipe for the filter, the design flow of the filter is characterized by: :math:`Q_{Bw} = V_{Bw}A_{Fi}`
+As the maximum flow of the filter is constrained by the available sizes of the pipe for the filter, the maximum flow of the filter is characterized by: :math:`Q_{Bw} = V_{Bw}A_{Fi}`
 
-However,the actual maximum of flow that the filter would see is actually the larger flow between that value and the :math:`Q_{Fi}` the flow through the filter. For example, if two EStaRS designed for 3.08 L/s each are used for a plant flow of 7 L/s, each filter will actually see 3.5 L/s of flow. This is greater than what the filter was designed for, and this larger flow must be accounted for. [NOOOO. The filters should not be operated above their design flow rate until we've done tests to demonstrate that it is possible.]
+However,the actual maximum of flow that the filter would see is actually the larger flow between that value and the :math:`Q_{Fi}` the flow through the filter. For example, if two EStaRS designed for 3.08 L/s each are used for a plant flow of 7 L/s, each filter will actually see 3.5 L/s of flow. This is greater than what the filter was designed for, and this larger flow must be accounted for.
 
 .. note::
   Knowing which flow is being used to calculate the size of certain components is **extremely** important. For calculations involving the pipe manifold the maximum flow that could be seen by the filter should be used (:math:`Q_{FiMax}`). This is because the pressure recovery term is the limiting characteristic, and so a greater flow corresponds to a greater velocity which increases PR, which is unideal. For calculations concerning the system of weirs required for backwash, which are calculated in "Backwash Flow Control",the backwash flow :math:`Q_{FiBw}` is required because backwash cannot be performed effectively with less flow that the backwash flow. While it is *possible*  that backwash could be necessary in extremely low flow conditions, it has never been an issue in any plant, so this is not accounted for. Additionally, it is possible that these two values are the same, in which case the distinction is not necessary.
 
-[Always use the design flow based on backwash requirements to design the filter.]
-Depending on the total flow of the EStaRS and the size of the modules, varying numbers of filters will need to be used, though minimum should always be 2. [This will be addressed at the top of the file.]
+Depending on the total flow of the EStaRS and the size of the modules, varying numbers of filters will need to be used, though minimum should always be 2.
 
 This design will focus on flow through one filter, as having several filters in parallel wouldn't alter the flow within one, though flow will be split between the filters.
 
@@ -216,17 +178,17 @@ Within each filter the flow is diverted across six layers. (:math:`N_{FiLayer} =
 Thus the flow through each layer is: :math:`Q_{FiLayer} = \frac{Q_{Fi}}{N_{FiLayer}}`
 
 From the area of the filter and the velocity required for backwash, the backwash flow can be determined: :math:`Q_{FiBw} = V_{FiBw}A_{Fi}`
-[Backwash flow is the design flow. This is going in circles.]
+
 
 
 
 Filter Trunk and Branch Diameters
 ==================================
 
-In determining the size of the trunk and branches of the EStaRS the pressure recovery constraints are the most important design considerations. Having a pressure recovery term that is too high will lead to an uneven flow distribution. The two pressure recovery terms that are of particular concern are those in the trunks and branches during forward filtration, and the pressure recovery in the lowest branch during backwash. To calculate the estimated pressure recovery term the first thing to find is the velocity in the branches [No. First step is to find the flow rate in teh branches. Then you use PR constraint to find the minimum diameter.] during forward filtration and during backwash. Before calculating this, the geomery of the branches should be determined, specifically the number of branches.
+In determining the size of the trunk and branches of the EStaRS the pressure recovery constraints are the most important design considerations. Having a pressure recovery term that is too high will lead to and uneven flow distribution. The two pressure recovery terms that are of particular concern are those in the trunks and branches during forward filtration, and the pressure recovery in the lowest branch during backwash. To calculate the estimated pressure recovery term the first thing to find is the velocity in the branches during forward filtration and during backwash. Before calculating this, the geomery of the branches should be determined, specifically the number of branches.
 
 
-The branch spacing is a function of the size of the EStaRS. The "maximum" spacing is somewhat arbitrarily set 10cm. [The ratio of branch spacing to layer depth was set to be 0.5 to ensure relatively uniform flow through each sand layer.] This value is meant to balance even flow distribution across each layer with ease of fabrication and material use (i.e. having 100 branches would mean very good flow distribution, but would be impossible to fabricate). As a result the expression for number of branches is the following:
+The branch spacing is a function of the size of the EStaRS. The "maximum" spacing is somewhat arbitrarily set 10cm. This value is meant to balance even flow distribution across each layer with ease of fabrication and material use (i.e. having 100 branches would mean very good flow distribution, but would be impossible to fabricate). As a result the expression for number of branches is the following:
 
 :math:`B_{FiBranchMax} = 10cm`
 
@@ -236,7 +198,7 @@ The branch spacing is a function of the size of the EStaRS. The "maximum" spacin
 
 the ID function also takes the SDR for the pipe (26), but in the equation above was left out so the overall mechanism of the calculation is clearer. The value is rounded because an integer number of branches is needed.
 
-:numref:`figure_manifold_sizing` shows these dimensions. [B is the center to center distance. You show it incorrectly as the space between which is the S measurement.]
+:numref:`figure_manifold_sizing` shows these dimensions.
 
 .. _figure_manifold_sizing:
 
@@ -249,7 +211,6 @@ the ID function also takes the SDR for the pipe (26), but in the equation above 
 
 
 The number of inlet and outlet pipes are fixed by the way the filter works:
-[Why do these variables end with the word "low". Delete it.]
 
 .. math::
 
@@ -270,11 +231,11 @@ See  :numref:`figure_estars_flow_schematic` for a schematic of the filter layers
     :align: center
     :alt: filter schematic, interal image
 
-    This schematic shows the flows through every inlet and outlet components of the EStaRS system. Each of the outlets takes in flow from two filter layers as do the inner inlets. The outer inlets provide water for only one layer. The bottom inlet must also accomodate the flow required for backwash and is larger in diameter to account for this.[add a second image that shows what happens during backwash.]
+    This schematic shows the flows through every inlet and outlet components of the EStaRS system. Each of the outlets takes in flow from two filter layers as do the inner inlets. The outer inlets provide water for only one layer. The bottom inlet must also accomodate the flow required for backwash and is larger in diameter to account for this.
 
 
 
-From the section above it is apparent that the total flow through the filter is the flow through each layer times the number of layers or: [This is correct, but not useful for design. The design starts with Qplant, then you calculate the number of filters. Each filter has a design or maximum flow. THe filter filter is designed for that flow. The flow through the filter is based on Qbackwash. The flow through each layer is 1/6 of that.]
+From the section above it is apparent that the total flow through the filter is the flow through each layer times the number of layers or:
 
 .. math::
 
@@ -285,31 +246,31 @@ In the case of 6 filter layers, this is :math:`6Q_{FiLayer}`
 
 Because the 2 inner inlets (the ones that aren't the backwash trunk or the uppermost trunk) distribute flow to two layers the flow between them is equal to :math:`2Q_{FiLayer}` which is shown in the schematic. In a later section, we will show that the flow within each layer is not exactly even because of the head loss through various paths, but for the calculation of maximum flow, even flow is an appropriate guess.
 
-From the schematic we can also see that the maximum flow experienced by any trunk during forward filtration is :math:`2Q_{FiLayer}`, using this value it is possible to calculate the maximum flow through a branch. Using :math:`2Q_{FiLayer}` is a conservative estimate, most branches will not see this flow, however because the pressure recovery is the main constraint in the filter pipe manifold, it is best to use the maximum possible flow to determine allowable PR. [This paragraph seems to confuse flow through the trunks with flow through the branches. YOu need to look at the figure showing a plan view of the filter. Then you can estimate the area of the filter that contributes to the longest branch. You can simplify this! Longest branch is approximately IDfilter/2. The branch serves an area that is 10 cm wide. Now given the filter velocities you can calculate the flow rate through the longest branch in the inlets and outlets that serve two filter layers.]
+From the schematic we can also see that the maximum flow experienced by any trunk during forward filtration is :math:`2Q_{FiLayer}`, using this value it is possible to calculate the maximum flow through a branch. Using :math:`2Q_{FiLayer}` is a conservative estimate, most branches will not see this flow, however because the pressure recovery is the main constraint in the filter pipe manifold, it is best to use the maximum possible flow to determine allowable PR.
 
 
 .. note::
 
-    **Check this design with Juan next time you talk! It might be better to account for the single branch design rathe than this current two branch design!!!** [I don't know what this means.]
+    **Check this design with Juan next time you talk! It might be better to account for the single branch design rathe than this current two branch design!!!**
 
 
 
 On each layer trunk, there are :math:`N_{FiBranch}` branches on **each side** of the trunk. That means the total number of branches on each trunk is :math:`2N_{FiBranch}`
 
-Using the maximum flow in a trunk and the number of branches on a trunk the maximum flow in a branch becomes: [I prefer the method I detailed above to get the maximum branch flow rate. The approach below misses the fact that  the branches are different lengths.]
+Using the maximum flow in a trunk and the number of branches on a trunk the maximum flow in a branch becomes:
 
 .. math::
 
     Q_{FiBranchMax} = \frac{2Q_{FiLayer}}{2N_{FiBranch}}
 
-Using the minimum ND of the Filter Manifold Branches, as defined above, the minimum flow area of a branch can be calculated: [I'm lost here. You haven't calculated the Branch diameter yet. See my approach above for calculating the area served by one branch. The ID of the branch is irrelevant. I now realize that we made a mistake in first creating the text. You can't see the mistakes if you don't actually do the calculations. I always develop a method in a calculation space (now python) AND in an equation derivation space (now RST)].
+Using the minimum ND of the Filter Manifold Branches, as defined above, the minimum flow area of a branch can be calculated:
 
 .. math::
 
   A_{FiBranchMin} = \frac{ID_{FiBranchMin}^2 *\pi}{4}
 
 
-Knowing the area allows the velocity within a branch to be found. [this process is backwards.]
+Knowing the area allows the velocity within a branch to be found.
 
 .. math::
 
@@ -334,15 +295,12 @@ A similar series of calcualtions can be done for the backwash branches based on 
 
   PR_{FiBwManBranchEst} = \frac{V_{FiBwBranchEst}^2}{2g}
 
-[fix this section so you start with the constraints and calculate the branch diameter.]
 
 The two pressure recovery terms calculated here are compared against the allowable PR terms, which are calculated in the next section.
 
 
 First Constraint: Pressure Recovery in Trunks during forward filtration
 ---------------------------------------------------------------------------
-
-[This section needs to go above the section where you calculate the branch diameter given the PR constraint.]
 
 The total allowable pressure recovery of the filter manifold is controlled by the head loss in each sand layer and the head loss ratio, :math:`\Pi_{ManifoldHeadLoss}`, as defined above in :ref:`Flow Distrbution Constraints <flow_distribution_constraints>`.
 
@@ -356,7 +314,6 @@ Using the definition of the pressure recovery ratio, the maximum allowable press
 
 
 Subtracting the previously calculated branch PR from this maximum determine how much PR is theoretically left for the trunks. The maximum trunk PR can then be calculated back to a velocity.
-[The PR in the branches must be low in order to ensure uniform flow along the length of a branch. The PR in the Trunks must be low to ensure that each branch has the same piezometric head driving flow into (or out of) the filter. Also note that there will be another constraint for the trunk that is designed to get uniform flow distribution between filter layers. And you must take into account the flow blockage in the trunk line caused by the branches when calculating the pressure recovery.]
 
 .. math::
 
@@ -414,22 +371,17 @@ The sum of the PRs from the branches can then be compared to the maximum allowab
 Second Constraint: Pressure Recovery in lowest trunk during backwash
 ------------------------------------------------------------------------
 
-The second pressure recovery constraint is in the backwash branch during backwash. During backwash the lowest trunk sees all the flow at a higher velocity than any branch [you are mixing trunks with branches. ] does during forward filtration. Because the velocity is higher, the PR term will also be higher, so it must be constrainted to maintain even flow.
+The second pressure recovery constraint is in the backwash branch during backwash. During backwash the lowest trunk sees all the flow at a higher velocity than any branch does during forward filtration. Because the velocity is higher, the PR term will also be higher, so it must be constrainted to maintain even flow.
 
-In backwash there is no head loss through the sand bed because the sand is fully fluidized [not true. there is 1.2 m of head loss through the sand bed.]. The startup time in which it takes to fluidize the bed is ignored in this design. Thus the only head loss occurs from the flow expansion as water exits the fiter manifold out of the exits [Have you described these holes? Need a figure.] holes. [call them orifices.]
+In backwash there is no head loss through the sand bed because the sand is fully fluidized. The startup time in which it takes to fluidize the bed is ignored in this design. Thus the only head loss occurs from the flow expansion as water exits the fiter manifold out of the exits holes.
 
-The initial estimate of head loss through the holes is :math:`HL_{FiBwOrifices} = 10cm`. [where did this come from? One proposal is the same constraint as we discussed with the horizontal filter. The head loss through the orifice must be close to the distance between orifices. This is to ensure that the entire bed fluidizes. If there is a section of the filter where the sand isn't fluidized, then that sand will form an incline that is the angle of repose of sand in water. Thus the maximum depth that the first covered orifice under the settled sand will be determined by the distance between orifices and the angle of repose of the sand. If we assume conservatively that the angle of repose is 45 degrees, then the depth of sand would equal the spacing between the orifices. And if the head loss through the orifices was equal to that depth of sand, then there would be enough water coming out of the first covered orifice to fluidize the sand above it.
-
-Darn... My analysis in the previous paragraph is flawed because the water flows from the orifices into a big half pipe BEFORE coming into contact with sand. Thus the head loss through the orifices DOES NOT help ensure that the sand fluidizes everywhere in the filter. Similarly, the orifices don't have to be sized to get the same flow out of the first and last orifice in a branch because flow equalization will occur in the half pipe. So perhaps the goal is to get reasonable flow distribution between first and last orifice so that the equalization flow has a much lower velocity than the main flow in the branch. We need to figure this out! and this can go near the top of the design. My sense is that there may be a good deal of flexibility in the total orifice area.   ]
-
-[Need to start by calculating the diameter of these orifices and somehow set the spacing between orifices. This requires a design algorithm. Not sure of the steps yet. I understand that the maximum size hole that can be drilled is something close to 1/4" because larger holes end up coming out the side of the gap between the wing pipe and the branch. Once you know the max diameter that can be used for the orifice (Juan should know this) then you can calculate the total maximum orifice area required (based on an algorithm that we need to invent). Then calculate the spacing between the orifices to get the required number of orifices..  ]
+The initial estimate of head loss through the holes is :math:`HL_{FiBwOrifices} = 10cm`.
 
 Using the head loss ratio, :math:`\Pi_{ManifoldHeadLoss}` , the allowable PR can be determined: :math:`PR_{FiBwManMax} = HL_{FiBwOrifices}*\Pi_{ManifoldHeadLoss}`
 
 From above the PR estimate for the Backwash Branches exists.
 
 This allows the maximum velocity in the BW Trunk to be found
-[Where did you find the diameter of the backwash branches? That must come earlier.]
 
 .. math::
 
@@ -461,7 +413,6 @@ Then the branch velocity can be found:
   V_{FiBwBranchMax} = \sqrt{2g *(PR_{FiBwBranchMax})}
 
 Then, as above this velocity is used to find the area of the backwash branch with:
-[Should be based on the maximum length branch, not the average branch.]
 
 .. math::
 
@@ -469,7 +420,6 @@ Then, as above this velocity is used to find the area of the backwash branch wit
 
 If it seems like these processes are 1. similar and 2. circular in their logic, you are correct on both counts! The determination of PR for backwash and forward filtration follows the same steps, the only difference is with the flows and conditions required. It seems circular because the initial calculations are done on guesses, if these guesses weren't made solving for other quantities couldn't be done. The step where the trunk calculations are resolved for the branch conditions mainly acts to assess if the initial guesses were reasonable, and corrects the error in the guess, though of course the initial guess could've been correct! Running the final values back through the entire process should yield the same results meaning the check was valid.
 
-[what prevents calculating in a step by step approach? I think the logic is convoluted.]
 
 Manifold Pipe Lengths
 ======================
@@ -480,7 +430,6 @@ Come back to this a little bit... depends on fabrication methods
 
 Inlet Orifice and Outlet Slot Design
 ========================================
-[I believe these calculations can go above the pipe size calculations. I believe the orifice area is set by the backwash fluidization of the next covered orifice constraint. And I think that constraint is minimal because the orifices end up being very close together. ]
 
 *come back to this once Juan and Bayron have results from their test of how much fabrication matters.*
 
@@ -518,7 +467,7 @@ Inlet Design
 
 Regarding the inlets, those for backwash are determined differently than the orifices on the rest of the inlet branches. This section traces the process for the backwash branches and then the rest of the manifold branches.
 
-The spacing of orifices, :math:`B_{OrificeEst}` is estimated at 1cm. [why?]
+The spacing of orifices, :math:`B_{OrificeEst}` is estimated at 1cm.
 
 The number of orifices per branch is the floor value of:
 
@@ -534,7 +483,7 @@ The only difference between the two is the length of the branches. Because the b
 
 Then for each the total number of orifices necessary for a layer of the manifold can be found by summing the array of number of holes (:math:`N_{BranchOrifices}`) and multiplying by 2 to account for the trunks having branches on two sides.
 
-Have the holes close together is important to maintaing an even flow distribution, which is why the holes spacing is determined before hole size (which is also constrained by available drill bit sizes) [I don't think so. holes close together doesn't help flow distribution because the water flows into the half pipe.]
+Have the holes close together is important to maintaing an even flow distribution, which is why the holes spacing is determined before hole size (which is also constrained by available drill bit sizes)
 
 The drill bit sizes considered are 1/16 inch, 1/8 inch, 3/16 in  and 1/4 inch. The maximum hole size is 1/4in because when the holes are larger they stick out from under the edge of the wings. This is contstrained by the curvature of the wings as shown below in **Figure XYZ**
 

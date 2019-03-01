@@ -4,7 +4,11 @@ Mechanical Flocculator Solution
 
 .. code:: python
 
-    from aide_design.play import*
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+
+  import numpy as np
+  import matplotlib.pyplot as plt
 
 
 In this design challenge, you will design a mechanical flocculator and power unit. You will use a flow rate of 50 L/s as your default design value. The coldest temperature that the raw water is expected to have is 10°C.
