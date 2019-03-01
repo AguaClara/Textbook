@@ -1,7 +1,7 @@
 .. _title_Sed_Design:
 
 ***********************************************
-AguaClara Design Approach
+AguaClara Design
 ***********************************************
 
 The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank that was designed with two goals in mind:
@@ -41,9 +41,9 @@ Remember, the goal is to have even flow distribution. It is bad if different flo
 
 We can artificially introduce the second form of head loss to dominate the resistance and render small variations due to pressure recovery insignificant. We will go through each part of the sedimentation tank to understand how these goals drive AguaClara designs. As we learn about each component, we will attempt to categorize its contribution into creating "good" or "bad" head loss.
 
-***********************************************
-Components of an AguaClara Sedimentation Tank
-***********************************************
+
+**Components of an AguaClara Sedimentation Tank**
+==================================================
 
 In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.
 
@@ -152,7 +152,7 @@ You may be wondering, why do we need a jet reverser in the first place? Why don'
 
 - If the diffusers were to point up, they could clog if anything settles in them. While this is unlikely due to the high velocity of flow exiting the small cross-sectional area diffuser, it is something that is avoided by pointing them down.
 - If flow were just to point directly up, it would not have an opportunity to sufficiently spread into the width of the sedimentation bay, which could lead to "short-circuiting" and poor flow distribution overall.
-- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements, as derived in the section on :ref:`diffuser design <_heading_Sed_Tank_Diffuser_Design>`. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc blanket, which will be discussed next. :numref:`figure_jet_placement` shows that flat bottomed and centered jets do not create a floc blanket while offset jets are stable. 
+- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements, as derived in the section on :ref:`diffuser design <_heading_Sed_Tank_Diffuser_Design>`. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc blanket, which will be discussed next. :numref:`figure_jet_placement` shows that flat bottomed and centered jets do not create a floc blanket while offset jets are stable.
 
 .. _figure_jet_placement:
 

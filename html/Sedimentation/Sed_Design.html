@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>AguaClara Design Approach &mdash; AguaClara Textbook 0.041 documentation</title>
+  <title>AguaClara Design &mdash; AguaClara Textbook  documentation</title>
   
 
   
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Sedimentation Examples" href="Sed_Examples.html" />
+    <link rel="next" title="Design of an AguaClara Sedimentation Tank" href="Sed_Derivations.html" />
     <link rel="prev" title="Sedimentation Introduction" href="Sed_Intro.html" /> 
 
   
@@ -57,10 +57,6 @@
 
           
             
-            
-              <div class="version">
-                0.041
-              </div>
             
           
 
@@ -130,11 +126,9 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">AguaClara Design Approach</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">AguaClara Design</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#sedimentation-tank-as-a-circuit-introduction">“Sedimentation Tank as a Circuit” Introduction</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="#components-of-an-aguaclara-sedimentation-tank">Components of an AguaClara Sedimentation Tank</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#components-of-an-aguaclara-sedimentation-tank"><strong>Components of an AguaClara Sedimentation Tank</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-water-enters-the-sedimentation-tank">1) How water enters the sedimentation tank</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#influent-channel">Influent Channel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bottom-geometry-influent-manifold-diffusers-and-jet-reverser">Bottom Geometry: Influent Manifold, Diffusers, and Jet Reverser</a></li>
@@ -158,8 +152,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Derivations.html">Design of an AguaClara Sedimentation Tank</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
@@ -238,7 +233,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>AguaClara Design Approach</li>
+      <li>AguaClara Design</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -257,8 +252,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="aguaclara-design-approach">
-<span id="title-sed-design"></span><h1>AguaClara Design Approach<a class="headerlink" href="#aguaclara-design-approach" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="aguaclara-design">
+<span id="title-sed-design"></span><h1>AguaClara Design<a class="headerlink" href="#aguaclara-design" title="Permalink to this headline">¶</a></h1>
 <p>The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank that was designed with two goals in mind:</p>
 <ol class="arabic simple">
 <li>to use flow distribution as a primary design constraint and,</li>
@@ -282,13 +277,13 @@
 </ul>
 <p>We can artificially introduce the second form of head loss to dominate the resistance and render small variations due to pressure recovery insignificant. We will go through each part of the sedimentation tank to understand how these goals drive AguaClara designs. As we learn about each component, we will attempt to categorize its contribution into creating “good” or “bad” head loss.</p>
 </div>
-</div>
 <div class="section" id="components-of-an-aguaclara-sedimentation-tank">
-<h1>Components of an AguaClara Sedimentation Tank<a class="headerlink" href="#components-of-an-aguaclara-sedimentation-tank" title="Permalink to this headline">¶</a></h1>
+<h2><strong>Components of an AguaClara Sedimentation Tank</strong><a class="headerlink" href="#components-of-an-aguaclara-sedimentation-tank" title="Permalink to this headline">¶</a></h2>
 <p>In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-sed-tank-overview"></span><a class="reference external image-reference" href="https://youtu.be/ca3xVntxEzw"><img alt="Overview of an AguaClara Sedimentation tank." src="../_images/sed_tank_overview.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 119 </span><span class="caption-text">Overview of an AguaClara Sedimentation tank.</span></p>
+</div>
 </div>
 <div class="section" id="how-water-enters-the-sedimentation-tank">
 <span id="heading-sed-tank-entrance"></span><h2>1) How water enters the sedimentation tank<a class="headerlink" href="#how-water-enters-the-sedimentation-tank" title="Permalink to this headline">¶</a></h2>
@@ -666,7 +661,7 @@ They are located on the top to promote even flow collection and for ease of oper
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Sed_Examples.html" class="btn btn-neutral float-right" title="Sedimentation Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Sed_Derivations.html" class="btn btn-neutral float-right" title="Design of an AguaClara Sedimentation Tank" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Sed_Intro.html" class="btn btn-neutral" title="Sedimentation Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -700,7 +695,7 @@ They are located on the top to promote even flow collection and for ease of oper
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.041',
+            VERSION:'',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
