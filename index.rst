@@ -83,9 +83,11 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
   Sedimentation/Sed_Intro.rst
   Sedimentation/Sed_Design.rst
-  Sedimentation/Sed_Examples.rst
+  Sedimentation/Sed_Derivations.rst
   Sedimentation/Sed_Theory_and_Future_Work.rst
+  Sedimentation/Sed_Examples.rst
   Sedimentation/Sed_Design_Solution.rst
+  Sedimentation/Sed_Variables_List.rst
 
 .. toctree::
   :caption: Chapter 7: Filtration
