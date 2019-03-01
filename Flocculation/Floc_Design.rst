@@ -15,6 +15,7 @@ The letters before the ``.``, in this case ``pc``, indicate the file within agua
 
 **Important Note:** This chapter introduces uncertainty and empirical design. Some of the parameters used to design AguaClara flocculators are based on what has been shown to work in the field, as opposed to having been derived scientifically. To make sure that the reader is aware of these concepts and parameters that don’t yet have a thorough basis in research, they will be highlighted in red when they appear.
 
+.. _heading_Hydraulic_Flocculation_Design:
 
 Hydraulic Flocculators, the AguaClara Approach
 =======================================================
