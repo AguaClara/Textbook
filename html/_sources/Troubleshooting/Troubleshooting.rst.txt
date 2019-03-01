@@ -57,18 +57,18 @@ Encrustation of filter pipes at Las Vegas
 =========================================
 
 Remove the encrustation without disassembling the filter by pouring buckets of hydrochloric acid into pipes that are inserted into the couplings in the filtered water effluent box. The hydrochloric acid at Las Vegas is a 10% solution. Dilute that solution by a factor of 5 to produce a 2% HCl solution. Note that all of the acid and water injected into the filter will simply go into the filter box and increase the water level during this treatment. When diluting acid always add acid to water!
- #. Insert pipe stubs into the couplings in the filter inlet box to prevent any water from flowing through the filter
- #. Remove the drain pipe stub so that any effluent from the filter goes to drain
- #. Insert pipe stubs into the couplings in the filtered water effluent box
- #. Fill a 20 L bucket with 16 L of water (mark the bucket level!)
- #. Pour 4 L of 10% HCl into the bucket to reach a total of 20 L
- #. Mix the diluted acid with a PVC pipe for a couple of minutes
- #. Pour the 20 L of 2% HCl into the bottom outlet of the filter
- #. Wait 5 minutes
- #. Repeat previous 2 steps 5 times to pour a total of 100 L of acid into the bottom outlet pipe (note that the goal is for this total volume to exceed the outlet pipe, trunk, and branch pipes volume)
- #. Pour 20 L of water into the bottom outlet pipe
- #. Wait 5 minutes
- #. Repeat previous 2 steps 5 times to push all (or at least most) of the acid through the outlet pipes and into the sand bed
+ 1. Insert pipe stubs into the couplings in the filter inlet box to prevent any water from flowing through the filter
+ 1. Remove the drain pipe stub so that any effluent from the filter goes to drain
+ 1. Insert pipe stubs into the couplings in the filtered water effluent box
+ 1. Fill a 20 L bucket with 16 L of water (mark the bucket level!)
+ 1. Pour 4 L of 10% HCl into the bucket to reach a total of 20 L
+ 1. Mix the diluted acid with a PVC pipe for a couple of minutes
+ 1. Pour the 20 L of 2% HCl into the bottom outlet of the filter
+ 1. Wait 5 minutes
+ 1. Repeat previous 2 steps 5 times to pour a total of 100 L of acid into the bottom outlet pipe (note that the goal is for this total volume to exceed the outlet pipe, trunk, and branch pipes volume)
+ 1. Pour 20 L of water into the bottom outlet pipe
+ 1. Wait 5 minutes
+ 1. Repeat previous 2 steps 5 times to push all (or at least most) of the acid through the outlet pipes and into the sand bed
 Repeat steps 3 to 12 for the middle outlet pipe and then for the top outlet pipe.
 
 With each addition of acid or water there should be a fresh batch of carbon dioxide bubbles released from the filter.

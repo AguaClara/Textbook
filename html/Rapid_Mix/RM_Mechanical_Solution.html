@@ -87,7 +87,6 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -149,10 +148,9 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">AguaClara Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Design of an AguaClara Sedimentation Tank</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
@@ -162,6 +160,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -252,11 +251,7 @@
             
   <div class="section" id="rapid-mix-mechanical-solution">
 <h1>Rapid Mix Mechanical Solution<a class="headerlink" href="#rapid-mix-mechanical-solution" title="Permalink to this headline">¶</a></h1>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">aguaclara.core.utility</span> <span class="k">as</span> <span class="nn">ut</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
 </pre></div>
 </div>
 <p>Numpy, fortunately, understands how to do matrix/array operations index by index. So if you have two length 5 arrays that you want to multiply index by index, you can simply multiply them! This will allow you to focus more on the rest of the code rather than frustrating indexing errors.</p>
@@ -269,7 +264,7 @@
 <h2>Part 1: Temperature effects, energy use, and operating costs<a class="headerlink" href="#part-1-temperature-effects-energy-use-and-operating-costs" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Create a graph of the kinematic viscosity of water as a function of temperature. Use the <code class="docutils literal notranslate"><span class="pre">pc.viscosity_kinematic</span></code> function. 1. Create an array of temperatures (0 to 35) using <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> to create a dimensionless array. Then, attach appropriate temperature dimensions to the array by multiplying by the units. You can do this in one line! 1. Pass the entire array of temperatures to the kinematic viscosity function in aguaclara.core.pc to obtain an array of corresponding viscosities. 1. Plot viscosity (mm^2/s) as a function of temperature (Celsius).</p>
+<p>Create a graph of the kinematic viscosity of water as a function of temperature. Use the <code class="docutils literal notranslate"><span class="pre">pc.viscosity_kinematic</span></code> function. 1. Create an array of temperatures (0 to 35) using <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> to create a dimensionless array. Then, attach appropriate temperature dimensions to the array by multiplying by the units. You can do this in one line! 1. Pass the entire array of temperatures to the kinematic viscosity function in aide_design.pc to obtain an array of corresponding viscosities. 1. Plot viscosity (mm^2/s) as a function of temperature (Celsius).</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GraphTempArray</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">35</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">GraphKinematicViscosity</span><span class="o">=</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">GraphTempArray</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -282,7 +277,7 @@
 </div>
 <div class="figure align-center" id="id13">
 <span id="figure-kinematic-vs-t"></span><a class="reference internal image-reference" href="../_images/Kinematic_vs_T.png"><img alt="Kinematic viscosity of water as a function of temperature" src="../_images/Kinematic_vs_T.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 71 </span><span class="caption-text">Kinematic viscosity decreases rapidly with temperature. This will influence the amount of fluid deformation obtained given an input of energy. It will also influence the flow rate in the AguaClara chemical dosing system.</span></p>
+<p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text">Kinematic viscosity decreases rapidly with temperature. This will influence the amount of fluid deformation obtained given an input of energy. It will also influence the flow rate in the AguaClara chemical dosing system.</span></p>
 </div>
 <p>We will design a mechanized rapid mix unit and then analyze the energy costs of mixing for a conventional water treatment plant. Below is a table of conventional design parameters.</p>
 <table border="1" class="docutils">
@@ -325,7 +320,7 @@
 <h3>2)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p><strong>Define a function</strong> for the power required to run a rapid mix unit. The rapid mix shaft power function should have flow, velocity gradient, residence time (which can be described with t or <span class="math notranslate nohighlight">\(\theta\)</span>, as in the equation below), and temperature as its only inputs.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-mechanical-solution-0">
-<span class="eqno">(314)<a class="headerlink" href="#equation-rapid-mix-rm-mechanical-solution-0" title="Permalink to this equation">¶</a></span>\[P = G^2Q \theta \nu \rho\]</div>
+<span class="eqno">(312)<a class="headerlink" href="#equation-rapid-mix-rm-mechanical-solution-0" title="Permalink to this equation">¶</a></span>\[P = G^2Q \theta \nu \rho\]</div>
 <p>Using your function, plot the shaft power (kW) required for a conventional rapid mix unit that has a residence time of t = 15s, a velocity gradient of G = 1500/s, and a flow rate of 50 L/s as a function of temperature (Celsius).</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FlowPlant</span> <span class="o">=</span> <span class="mi">50</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 <span class="n">t</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
@@ -348,7 +343,7 @@
 </div>
 <div class="figure align-center" id="id14">
 <span id="figure-shaft-power"></span><a class="reference internal image-reference" href="../_images/Shaft_Power.png"><img alt="Rapid Mix shaft power" src="../_images/Shaft_Power.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 72 </span><span class="caption-text">Rapid mix shaft power required as a function of temperature. Signfiicantly more power is required at low temperatures to overcome the effects of viscosity. This does assume that the goal for rapid mix is to achieve a target</span></p>
+<p class="caption"><span class="caption-number">Fig. 70 </span><span class="caption-text">Rapid mix shaft power required as a function of temperature. Signfiicantly more power is required at low temperatures to overcome the effects of viscosity. This does assume that the goal for rapid mix is to achieve a target</span></p>
 </div>
 </div>
 <div class="section" id="id3">
@@ -418,7 +413,7 @@ here.</a>. We recommend bookmarking this page!</p>
 </div>
 <div class="section" id="b">
 <h3>5b)<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h3>
-<p>It is common in engineering design to have target design value that must be rounded up to the next available manufactured value. In the Flow Control and Measurement Design Challenge, we used this method to take a minimum pipe size required to deliver a target flow rate and then we rounded up to the nearest commonly available pipe size. We wrote a function, <code class="docutils literal notranslate"><span class="pre">ceil_nearest</span></code> in aguaclara.core.utility, that we used to select pipe sizes. Use that function to find a motor that is large enough to drive the rapid mix impeller (<a class="reference external" href="https://en.wikipedia.org/wiki/Impeller#In_pumps">What’s an impeller?</a>).</p>
+<p>It is common in engineering design to have target design value that must be rounded up to the next available manufactured value. In the Flow Control and Measurement Design Challenge, we used this method to take a minimum pipe size required to deliver a target flow rate and then we rounded up to the nearest commonly available pipe size. We wrote a function, <code class="docutils literal notranslate"><span class="pre">ceil_nearest</span></code> in aide_design.utility, that we used to select pipe sizes. Use that function to find a motor that is large enough to drive the rapid mix impeller (<a class="reference external" href="https://en.wikipedia.org/wiki/Impeller#In_pumps">What’s an impeller?</a>).</p>
 <p><code class="docutils literal notranslate"><span class="pre">ut.ceil_nearest</span></code> takes two inputs: the first is the value you are looking to match/exceed. In the pipe sizing example, this would be the smallest pipe that can handle the required flow. The second input is the array through which you are looking to compare the first input. If we continue with the pipe size example, this would be the array of available pipe sizes.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MotorDesign</span> <span class="o">=</span> <span class="n">ut</span><span class="o">.</span><span class="n">ceil_nearest</span><span class="p">(</span><span class="n">RapidMixShaftPower</span><span class="p">,</span><span class="n">MotorHpArray</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The rapid mix motor has&#39;</span><span class="p">,</span>  <span class="n">MotorDesign</span><span class="p">)</span>

@@ -143,56 +143,51 @@ It isn't yet clear if this always means that :math:`v_{exp}` will be very small 
 
 .. code:: python
 
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.research.floc_model as fm
+    from aide_design.play import*
+    D_sand = 0.5 * u.mm
+    porosity = 0.4
+    Temperature = 20 * u.degC
+    v_a = 1.85 *u.mm/u.s
+    he_filter = 40 * u.cm
+    H_filter = 20 * u.cm
+    Lambda_pore = (np.pi/(6*(1-porosity)))**(1/3)*D_sand
+    Lambda_pore
+    # Use measured fully constricted filter head loss to estimate the constricted velocity
+    v_constriction = (np.sqrt(2*pc.gravity*Lambda_pore*he_filter/H_filter)).to(u.mm/u.s)
+    print('The velocity in the constriction is estimated (for these conditions) to be' ,v_constriction,'.')
+    Re_constriction =(Lambda_pore/pc.viscosity_kinematic(Temperature) * np.sqrt(4*v_a*v_constriction/np.pi)).to(u.dimensionless)
+    print('The jet is laminar because the Reynolds number is ',Re_constriction.magnitude,' which is well within the laminar range because it is less than 500.')
+    D_constriction = Lambda_pore * np.sqrt(4*v_a/v_constriction/np.pi)
 
-  import numpy as np
+    #velocity of the jet after it travels on pore length
+    v_exp = (3*v_a*Lambda_pore*v_constriction/(8*np.pi*pc.viscosity_kinematic(Temperature))).to(u.mm/u.s)
+    print('The velocity of the jet after it travels one pore length is ',v_exp,' which contains an insignificant amount of kinetic energy compared with the original jet.')
 
-  D_sand = 0.5 * u.mm
-  Porosity = 0.4
-  Temperature = 20 * u.degC
-  v_a = 1.85 *u.mm/u.s
-  he_filter = 40 * u.cm
-  H_filter = 20 * u.cm
-  Lambda_pore = (np.pi/(6*(1-porosity)))**(1/3)*D_sand
-  Lambda_pore
-  # Use measured fully constricted filter head loss to estimate the constricted velocity
-  v_constriction = (np.sqrt(2*pc.gravity*Lambda_pore*he_filter/H_filter)).to(u.mm/u.s)
-  print('The velocity in the constriction is estimated (for these conditions) to be' ,v_constriction,'.')
-  Re_constriction =(Lambda_pore/pc.viscosity_kinematic(Temperature) * np.sqrt(4*v_a*v_constriction/np.pi)).to(u.dimensionless)
-  print('The jet is laminar because the Reynolds number is ',Re_constriction.magnitude,' which is well within the laminar range because it is less than 500.')
-  D_constriction = Lambda_pore * np.sqrt(4*v_a/v_constriction/np.pi)
+    #Now find the Camp Stein velocity gradient in the pore
+    G_CS = (v_constriction * np.sqrt(v_a/(2*pc.viscosity_kinematic(Temperature)*porosity * Lambda_pore))).to(u.Hz)
+    print('The constricted jet induced Camp Stein velocity gradient in the pores is ',G_CS,'.')
 
-  #velocity of the jet after it travels on pore length
-  v_exp = (3*v_a*Lambda_pore*v_constriction/(8*np.pi*pc.viscosity_kinematic(Temperature))).to(u.mm/u.s)
-  print('The velocity of the jet after it travels one pore length is ',v_exp,' which contains an insignificant amount of kinetic energy compared with the original jet.')
+    #Calculate the Camp Stein velocity gradient at the StaRS injection site
+    W_inject = 2.5 *u.cm
+    S_inject = 10 *u.cm
+    n_layers_per_inject = 2
+    v_a_inject = v_a * S_inject*n_layers_per_inject/W_inject
+    print('The StaRS injection velocity is ',v_a_inject,'.')
+    #The clean bed camp velocity gradient given this injection approach velocity
+    def Re_Erdon(v_a, D_sand, Temperature, Porosity):
+      return (v_a*D_sand/(pc.viscosity_kinematic(Temperature)*(1-Porosity))).to(u.dimensionless)
 
-  #Now find the Camp Stein velocity gradient in the pore
-  G_CS = (v_constriction * np.sqrt(v_a/(2*pc.viscosity_kinematic(Temperature)*porosity * Lambda_pore))).to(u.Hz)
-  print('The constricted jet induced Camp Stein velocity gradient in the pores is ',G_CS,'.')
+    def f_Erdon(v_a, D_sand, Temperature, Porosity):
+      return 300/Re_Erdon(v_a, D_sand, Temperature, Porosity) + 3.5
 
-  #Calculate the Camp Stein velocity gradient at the StaRS injection site
-  W_inject = 2.5 *u.cm
-  S_inject = 10 *u.cm
-  n_layers_per_inject = 2
-  v_a_inject = v_a * S_inject*n_layers_per_inject/W_inject
-  print('The StaRS injection velocity is ',v_a_inject,'.')
-  #The clean bed camp velocity gradient given this injection approach velocity
-  def Re_Erdon(v_a, D_sand, Temperature, Porosity):
-    return (v_a*D_sand/(pc.viscosity_kinematic(Temperature)*(1-Porosity))).to(u.dimensionless)
+    def hf_Erdon(v_a, D_sand, Temperature, Porosity, L):
+      return (f_Erdon(v_a, D_sand, Temperature, Porosity)*L/D_sand*v_a**2/(2*pc.gravity)*(1-Porosity)/Porosity**3).to(u.m)
 
-  def f_Erdon(v_a, D_sand, Temperature, Porosity):
-    return 300/Re_Erdon(v_a, D_sand, Temperature, Porosity) + 3.5
+    def G_CS_Ergun(v_a, D_sand, Temperature, Porosity):
+      return np.sqrt(f_Erdon(v_a, D_sand, Temperature, Porosity) * v_a**3 * (1-Porosity)/(2 * pc.viscosity_kinematic(Temperature) * D_sand * Porosity**4)).to(u.Hz)
 
-  def hf_Erdon(v_a, D_sand, Temperature, Porosity, L):
-    return (f_Erdon(v_a, D_sand, Temperature, Porosity)*L/D_sand*v_a**2/(2*pc.gravity)*(1-Porosity)/Porosity**3).to(u.m)
-
-  def G_CS_Ergun(v_a, D_sand, Temperature, Porosity):
-    return np.sqrt(f_Erdon(v_a, D_sand, Temperature, Porosity) * v_a**3 * (1-Porosity)/(2 * pc.viscosity_kinematic(Temperature) * D_sand * Porosity**4)).to(u.Hz)
-
-  G_CS_inject = G_CS_Ergun(v_a_inject, D_sand, Temperature, Porosity)
-  print('The velocity gradient at the StaRS injection sites (in the two middle inlets) is ',G_CS_inject)
+    G_CS_inject = G_CS_Ergun(v_a_inject, D_sand, Temperature, Porosity)
+    print('The velocity gradient at the StaRS injection sites (in the two middle inlets) is ',G_CS_inject)
 
 Sedimentation plates set the size of the flocs in the filter
 ============================================================
@@ -372,52 +367,47 @@ Floc size and velocity gradient calculations
 
 .. code:: python
 
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.research.floc_model as fm
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-  N_layers = 6
-  v_filter_backwash = 11 * u.mm/u.s
-  v_a = v_filter_backwash/N_layers
-  Porosity = 0.4
-  D_sand = 0.5 * u.mm
-  # the following is just a guess at pore size
-  D_pore = 0.2 * D_sand
-  Temperature = 20 * u.degC
-  L = 20 * u.cm
-  Q_waterfall = 20 *u.L/u.s
-  v_waterfall=(np.sqrt(pc.gravity*2*40*u.cm)).to(u.m/u.s)
-  v_waterfall
-  #use continuity to get diameter of waterfall
-  D_waterfall = (np.sqrt(Q_waterfall/v_waterfall *4/np.pi)).to(u.cm)
-  D_waterfall
-  Pi_JetRound = 0.08
-  G_Max_waterfall = (v_waterfall*np.sqrt(Pi_JetRound*v_waterfall/(pc.viscosity_kinematic(Temperature)*D_waterfall))).to(u.Hz)
-  print('The maximum velocity gradient in the plunging jet in the filter inlet box is ',G_Max_waterfall,'.')
-  # now estimate the size of this floc
-  EDR_waterfall = (G_Max_waterfall**2*pc.viscosity_kinematic(Temperature)).to(u.mW/u.kg)
-  EDR_waterfall
-  D_floc_waterfall = (fm.diam_floc_max(G_Max_waterfall**2*pc.viscosity_kinematic(Temperature))).to(u.um)
-  print('The diameter of flocs after the waterfall is estimated to be',D_floc_waterfall,'.')
+    from aide_design.play import*
+    from aide_design import floc_model as floc
+    N_layers = 6
+    v_filter_backwash = 11 * u.mm/u.s
+    v_a = v_filter_backwash/N_layers
+    Porosity = 0.4
+    D_sand = 0.5 * u.mm
+    # the following is just a guess at pore size
+    D_pore = 0.2 * D_sand
+    Temperature = 20 * u.degC
+    L = 20 * u.cm
+    Q_waterfall = 20 *u.L/u.s
+    v_waterfall=(np.sqrt(pc.gravity*2*40*u.cm)).to(u.m/u.s)
+    v_waterfall
+    #use continuity to get diameter of waterfall
+    D_waterfall = (np.sqrt(Q_waterfall/v_waterfall *4/np.pi)).to(u.cm)
+    D_waterfall
+    Pi_JetRound = 0.08
+    G_Max_waterfall = (v_waterfall*np.sqrt(Pi_JetRound*v_waterfall/(pc.viscosity_kinematic(Temperature)*D_waterfall))).to(u.Hz)
+    print('The maximum velocity gradient in the plunging jet in the filter inlet box is ',G_Max_waterfall,'.')
+    # now estimate the size of this floc
+    EDR_waterfall = (G_Max_waterfall**2*pc.viscosity_kinematic(Temperature)).to(u.mW/u.kg)
+    EDR_waterfall
+    D_floc_waterfall = (floc.diam_floc_max(G_Max_waterfall**2*pc.viscosity_kinematic(Temperature))).to(u.um)
+    print('The diameter of flocs after the waterfall is estimated to be',D_floc_waterfall,'.')
 
 
-  # Calculate maximum diameter of flocs leaving the sedimentation tank
-  D_floc= fm.diam_floc_vel_term(0*u.mg/u.L,10*u.mg/u.L,fm.PACl,fm.Clay,fm.DIM_FRACTAL, 0.12*u.mm/u.s,20*u.degC)
-  print('The maximum diameter of flocs leaving the sedimentation tank is',D_floc.to(u.um),'.')
+    # Calculate maximum diameter of flocs leaving the sedimentation tank
+    D_floc= floc.diam_floc_vel_term(0*u.mg/u.L,10*u.mg/u.L,floc.PACl,floc.Clay,floc.DIM_FRACTAL, 0.12*u.mm/u.s,20*u.degC)
+    print('The maximum diameter of flocs leaving the sedimentation tank is',D_floc.to(u.um),'.')
 
-  v_graph = np.linspace(0.1, 100, 500) * u.mm/u.s
+    v_graph = np.linspace(0.1, 100, 500) * u.mm/u.s
 
-  fig, ax = plt.subplots()
-  ax.plot(v_graph,(hf_Erdon(v_graph, D_sand, Temperature, Porosity, L)/L).to(u.dimensionless),'-')
-  ax.plot(v_graph,(pc.headloss_kozeny(L,D_sand, v_graph, Porosity, pc.viscosity_kinematic(Temperature) )/L).to(u.dimensionless),'-')
-  ax.set(xlabel='approach velocity (mm/s)')
-  ax.set(ylabel='head loss per m')
-  ax.legend(['Ergun', 'Kozeny'])
-  fig.savefig('Filtration/Images/Head_loss_Ergun_and_Kozeny')
-  plt.show()
+    fig, ax = plt.subplots()
+    ax.plot(v_graph,(hf_Erdon(v_graph, D_sand, Temperature, Porosity, L)/L).to(u.dimensionless),'-')
+    ax.plot(v_graph,(pc.headloss_kozeny(L,D_sand, v_graph, Porosity, pc.viscosity_kinematic(Temperature) )/L).to(u.dimensionless),'-')
+    ax.set(xlabel='approach velocity (mm/s)')
+    ax.set(ylabel='head loss per m')
+    ax.legend(['Ergun', 'Kozeny'])
+    fig.savefig('Filtration/Images/Head_loss_Ergun_and_Kozeny')
+    plt.show()
 
 
 
@@ -432,15 +422,15 @@ Floc size and velocity gradient calculations
 
 .. code:: python
 
-  # Need to use a root finding method here because f_phi is a function of velocity
-  # Will use a graphical solution for now
+    # Need to use a root finding method here because f_phi is a function of velocity
+    # Will use a graphical solution for now
 
-  fig, ax = plt.subplots()
-  ax.plot(v_graph,G_CS_Ergun(v_graph, D_sand, Temperature, Porosity),'-')
-  ax.set(xlabel='approach velocity (mm/s)')
-  ax.set(ylabel='velocity gradient (Hz)')
-  fig.savefig('Filtration/Images/G_vs_approach_velocity')
-  plt.show()
+    fig, ax = plt.subplots()
+    ax.plot(v_graph,G_CS_Ergun(v_graph, D_sand, Temperature, Porosity),'-')
+    ax.set(xlabel='approach velocity (mm/s)')
+    ax.set(ylabel='velocity gradient (Hz)')
+    fig.savefig('Filtration/Images/G_vs_approach_velocity')
+    plt.show()
 
 
 
@@ -456,16 +446,16 @@ Floc size and velocity gradient calculations
 
 .. code:: python
 
-  #We guess at a velocity gradient by extrapolating wildly to a 20 um floc.
-  G_CS =np.sqrt((fm.ener_dis_diam_floc(40*u.um))/pc.viscosity_kinematic(Temperature)).to(u.Hz)
-  print('A wild guess at the velocity gradient required to break up flocs is ',G_CS,'.')
-  #from the graph above we'd need an approach velocity of about 80 mm/s to achieve a G of 10,000 Hz.
-  v_inject = 80*u.mm/u.s
-  (v_inject/v_a).to(u.dimensionless)
-  injection_port_spacing = 10 * u.cm
-  injection_port_width =     (injection_port_spacing/(v_inject/v_a)).to(u.mm)
-  print('The injection port width would be ',injection_port_width,'.')
-  print('The injection velocity would be ',v_inject.to(u.mm/u.s),'.')
+    #We guess at a velocity gradient by extrapolating wildly to a 20 um floc.
+    G_CS =np.sqrt((floc.ener_dis_diam_floc(40*u.um))/pc.viscosity_kinematic(Temperature)).to(u.Hz)
+    print('A wild guess at the velocity gradient required to break up flocs is ',G_CS,'.')
+    #from the graph above we'd need an approach velocity of about 80 mm/s to achieve a G of 10,000 Hz.
+    v_inject = 80*u.mm/u.s
+    (v_inject/v_a).to(u.dimensionless)
+    injection_port_spacing = 10 * u.cm
+    injection_port_width =     (injection_port_spacing/(v_inject/v_a)).to(u.mm)
+    print('The injection port width would be ',injection_port_width,'.')
+    print('The injection velocity would be ',v_inject.to(u.mm/u.s),'.')
 
 
 
@@ -518,28 +508,28 @@ Now we set up the numerical integration and integrate from the injection site to
 
 .. code:: python
 
-  #This is for an inlet that serves 2 layers (up and down)
-  v_filter = (11 * u.mm/u.s)/N_layers*2
-  S_branch = 10 * u.cm
-  v0 = 80 * u.mm/u.s
-  r0 = (2*v_filter/v0 * S_branch/(2*np.pi)).to(u.mm)
-  r0
+    #This is for an inlet that serves 2 layers (up and down)
+    v_filter = (11 * u.mm/u.s)/N_layers*2
+    S_branch = 10 * u.cm
+    v0 = 80 * u.mm/u.s
+    r0 = (2*v_filter/v0 * S_branch/(2*np.pi)).to(u.mm)
+    r0
 
-  #create coefficients for the constant terms in the equation
-  a0 = v0 * r0 /(2*pc.gravity*D_sand)
-  a1 = (300*pc.viscosity_kinematic(Temperature)*(1-Porosity)**2)/(D_sand*Porosity**3)
-  a2 = 3.5*(1-Porosity)* v0 * r0/Porosity**3
-  r1 = S_branch/(2*np.pi)
-  r1
-  #create an array of r values with each value centered in the ring that it represents. #We will use simple
-  n_points = 10000
-  dr = ((r1-r0)/(n_points)).to(u.mm)
-  r_array = np.linspace((r0).to(u.mm),(r1).to(u.mm),n_points)*u.mm
-  y_array = (a0*(np.divide(a1,r_array) + np.divide(a2,np.multiply(r_array,r_array)))).to(u.dimensionless)
-  #Use the trapezoidal rule to integrate
-  #need to reattach units to np.trapz.
-  hf_inlet = np.trapz(y_array,x=r_array, dx = dr)*u.mm
-  print('The head loss through the sand between the injection point and where it reaches the filtration velocity is ', hf_inlet)
+    #create coefficients for the constant terms in the equation
+    a0 = v0 * r0 /(2*pc.gravity*D_sand)
+    a1 = (300*pc.viscosity_kinematic(Temperature)*(1-Porosity)**2)/(D_sand*Porosity**3)
+    a2 = 3.5*(1-Porosity)* v0 * r0/Porosity**3
+    r1 = S_branch/(2*np.pi)
+    r1
+    #create an array of r values with each value centered in the ring that it represents. #We will use simple
+    n_points = 10000
+    dr = ((r1-r0)/(n_points)).to(u.mm)
+    r_array = np.linspace((r0).to(u.mm),(r1).to(u.mm),n_points)*u.mm
+    y_array = (a0*(np.divide(a1,r_array) + np.divide(a2,np.multiply(r_array,r_array)))).to(u.dimensionless)
+    #Use the trapezoidal rule to integrate
+    #need to reattach units to np.trapz.
+    hf_inlet = np.trapz(y_array,x=r_array, dx = dr)*u.mm
+    print('The head loss through the sand between the injection point and where it reaches the filtration velocity is ', hf_inlet)
 
 The analysis above suggests that a high velocity and high velocity gradient injection into the sand bed with the goal of breaking flocs into pieces that are 20 :math:`\mu m` in diameter would require about 12 cm of head loss. This is based on the assumption that the water would be able to flow radially from the injection point and thus rapidly slow down. Thus the head loss rapidly decreases with distance from the injection point.
 
@@ -639,8 +629,8 @@ The flocs form a series of actively growing deposits. The number of actively gro
 Proposed experiments and inventions
 ===================================
 
- #. Compare different sizes of sand media. Expect to get poorer removal efficiency with larger sand sizes, similar mass of particles retained at breakthrough, and much lower head loss.
- #. dual media. expect to find less head loss and poorer performance than single small media. And expect the smaller media to not contribute anything.
- #. How small could the sand media be? We could get better filter performance if we used smaller sand. Shallow sand beds are apparently fine and if we used smaller diameter sand the filter layer depth could be reduced even more. Why not use a 0.2 mm sand and 5 cm sand layers? If we offset the inlet and outlet branches (with branches spaced on 10 cm centers and inlet and outlet branches offset by 5 cm) there would still be a significant path length.
- #. Floc amendment. We could add floc hopper particles to the filter to increase the ratio of flocs to primary particles. Presumably this would reduce effluent turbidity IF there aren't many primary particles in the floc hopper. We could compare the prospects of using smaller sand grains vs adding floc amendment as strategies to get higher performing filters.
- #. Now that we know that sand doesn't remove clay without the help of flocs, could we invent a filter that could capture clay and other primary particles without requiring ripening? We need a filter media that has sharp edges or sudden constrictions that create high velocity near the edge. Washers with holes the size of constrictions aren't available.
+ 1. Compare different sizes of sand media. Expect to get poorer removal efficiency with larger sand sizes, similar mass of particles retained at breakthrough, and much lower head loss.
+ 1. dual media. expect to find less head loss and poorer performance than single small media. And expect the smaller media to not contribute anything.
+ 1. How small could the sand media be? We could get better filter performance if we used smaller sand. Shallow sand beds are apparently fine and if we used smaller diameter sand the filter layer depth could be reduced even more. Why not use a 0.2 mm sand and 5 cm sand layers? If we offset the inlet and outlet branches (with branches spaced on 10 cm centers and inlet and outlet branches offset by 5 cm) there would still be a significant path length.
+ 1. Floc amendment. We could add floc hopper particles to the filter to increase the ratio of flocs to primary particles. Presumably this would reduce effluent turbidity IF there aren't many primary particles in the floc hopper. We could compare the prospects of using smaller sand grains vs adding floc amendment as strategies to get higher performing filters.
+ 1. Now that we know that sand doesn't remove clay without the help of flocs, could we invent a filter that could capture clay and other primary particles without requiring ripening? We need a filter media that has sharp edges or sudden constrictions that create high velocity near the edge. Washers with holes the size of constrictions aren't available.

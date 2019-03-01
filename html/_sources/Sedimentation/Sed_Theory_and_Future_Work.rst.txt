@@ -4,17 +4,12 @@
 ***************************************
 Sedimentation Theory and Future Work
 ***************************************
-Unsolved sedimentation tank failure modes:
-
-#. Floc volcanoes and temperature-induced flow circulations [[[[link]]]]
-#. Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.
-#. Slime growth from iron-oxidizing bacteria.
-#. NOM impact on floc density
 
 .. _Floc_recycle:
 
 Floc recycle
 ==================
+
 
 We hypothesize that the flocs in floc blankets serve as collectors that primary particles attach to. We suspect that collisions between primary particles and large flocs are possible in the sedimentation tank because the rotational velocity of the flocs is small relative to the sedimentation velocity of the flocs. If the rotational velocity of the flocs is small, then a stagnation point will exist on the floc and a finite flow of fluid will come within a primary particle radius of the floc. Thus we expect primary particle removal in floc blankets to be proportional to the number of collectors that a primary particle passes while in the floc blanket.
 
@@ -64,38 +59,33 @@ We estimate the hindered sedimentation velocity to be 1 mm/s since that is what 
 
 .. code:: python
 
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-  D_fb=2.5*u.cm
-  A_fb = pc.area_circle(D_fb)
-  H_fb = 1 * u.m
-  v_hindered = 1 * u.mm/u.s
-  C_fb_conventional = 3 * u.g/u.L
-  C_recycle = 20 * u.g/u.L
-  C_plant = 100 * u.NTU
-  v_up = 3 * u.mm/u.s
+ from aide_design.play import*
+ D_fb=2.5*u.cm
+ A_fb = pc.area_circle(D_fb)
+ H_fb = 1 * u.m
+ v_hindered = 1 * u.mm/u.s
+ C_fb_conventional = 3 * u.g/u.L
+ C_recycle = 20 * u.g/u.L
+ C_plant = 100 * u.NTU
+ v_up = 3 * u.mm/u.s
 
 
-  def CP(H_fb,v_up,v_hindered,Pi_recycle,C_plant,C_recycle):
+ def CP(H_fb,v_up,v_hindered,Pi_recycle,C_plant,C_recycle):
    return (H_fb*v_hindered/v_up*(C_plant+C_recycle*Pi_recycle)/((1+Pi_recycle)*(1+Pi_recycle-v_hindered/v_up))).to_base_units()
-  Pi_recycle_max = 2
-  Pi_recycle = np.arange(0,Pi_recycle_max,0.1)
-  fig, ax = plt.subplots()
-  x=np.array([0,Pi_recycle_max])
-  yscale = (C_fb_conventional*H_fb*v_hindered/(1*u.mm/u.s)).to_base_units()
-  yscale
-  y=np.array([1,1])*yscale
-  ax.plot(x,y)
-  ax.plot(Pi_recycle,CP(H_fb,v_up,v_hindered,Pi_recycle,C_plant,C_recycle))
-  imagepath = 'Sedimentation/Images/'
-  ax.set(xlabel='recycle ratio', ylabel='Collision Potential (kg/m^2)')
-  ax.legend(["no recycle at 1 mm/s","with recycle at 3 mm/s"])
-  fig.savefig(imagepath+'fb_recycle_ratio')
-  plt.show()
+ Pi_recycle_max = 2
+ Pi_recycle = np.arange(0,Pi_recycle_max,0.1)
+ fig, ax = plt.subplots()
+ x=np.array([0,Pi_recycle_max])
+ yscale = (C_fb_conventional*H_fb*v_hindered/(1*u.mm/u.s)).to_base_units()
+ yscale
+ y=np.array([1,1])*yscale
+ ax.plot(x,y)
+ ax.plot(Pi_recycle,CP(H_fb,v_up,v_hindered,Pi_recycle,C_plant,C_recycle))
+ imagepath = 'Sedimentation/Images/'
+ ax.set(xlabel='recycle ratio', ylabel='Collision Potential (kg/m^2)')
+ ax.legend(["no recycle at 1 mm/s","with recycle at 3 mm/s"])
+ fig.savefig(imagepath+'fb_recycle_ratio')
+ plt.show()
 
 Here are the results.
 
@@ -140,29 +130,24 @@ Now we can solve for the required tube diameter
 
 .. code:: python
 
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
+ from aide_design.play import*
+ Temperature= 20*u.degC
+ D_fb=2.5*u.cm
+ A_fb = pc.area_circle(D_fb)
+ H_fb = 1.5 * u.m
+ Angle_tube = 60*u.deg
+ L_tube = H_fb/np.sin(Angle_tube)
+ density_clay=2650*u.kg/u.m**3
 
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-  Temperature= 20*u.degC
-  D_fb=2.5*u.cm
-  A_fb = pc.area_circle(D_fb)
-  H_fb = 1.5 * u.m
-  Angle_tube = 60*u.deg
-  L_tube = H_fb/np.sin(Angle_tube)
-  density_clay=2650*u.kg/u.m**3
-
-  H_l = H_fb*(C_recycle-C_fb)/(C_recycle+((pc.density_water(Temperature)*density_clay)/(density_clay-pc.density_water(Temperature))))
-  H_l
-  Q_plant=v_up*A_fb
-  Pi_recycle=0.5
-  density_recycle = (1 - pc.density_water(Temperature)/density_clay)*C_recycle + pc.density_water(Temperature)
-  nu_recycle = pc.viscosity_dynamic(Temperature)/density_recycle
-  D_recycle = pc.diam_pipe(Q_plant*Pi_recycle,H_l,L_tube,nu_recycle,0.01*u.mm,2)
-  D_recycle.to(u.mm)
-  D_recycle.to(u.inch)
+ H_l = H_fb*(C_recycle-C_fb)/(C_recycle+((pc.density_water(Temperature)*density_clay)/(density_clay-pc.density_water(Temperature))))
+ H_l
+ Q_plant=v_up*A_fb
+ Pi_recycle=0.5
+ density_recycle = (1 - pc.density_water(Temperature)/density_clay)*C_recycle + pc.density_water(Temperature)
+ nu_recycle = pc.viscosity_dynamic(Temperature)/density_recycle
+ D_recycle = pc.diam_pipe(Q_plant*Pi_recycle,H_l,L_tube,nu_recycle,0.01*u.mm,2)
+ D_recycle.to(u.mm)
+ D_recycle.to(u.inch)
 
 The head loss in the recycle tube is approximately 1.6 cm in a 1.5 m deep floc blanket.
 
@@ -177,4 +162,4 @@ Floc Volcanoes
 
 Floc volcanoes are caused by differences in temperature between the water that is in a sedimentation tank and the incoming water. If the incoming water is warmer than the water that is already in the sedimentation tank, then the incoming water will be buoyant and will rise quickly to the top of the sedimentation tank and carry flocs to the effluent launder.
 
-Temperature fluctuations can be especially pronounced with small scale water supplies where small streams and small diameter transmission lines can be exposed to the sun and can warm up dramatically during a few hours of sunshine. Given that temperature changes and density changes can not easily be engineered, the only solution that we have is to reduce the time that water spends in the sedimentation tank so that the influent water is closer to the average temperature of the water in the sedimentation tank. Solar heating causing the raw water temperature to go from a minimum at 6 am to a maximum at 1 pm. AguaClara sedimentation tanks currently have a residence time of approximately 2 m / (1 mm/s) or 2000 s. We anticipate that by increasing the upflow velocity and by introducing floc recycle that the effects of temperature induced floc volcanoes will be reduced.
+Temperature fluctuations can be especially pronounced with small scale water supplies where small streams and small diameter transmission lines can be exposed to the sun and can warm up dramatically oduring a few hours of sunshine. Given that temperature changes and density changes can not easily be engineered, the only solution that we have is to reduce the time that water spends in the sedimentation tank so that the influent water is closer to the average temperature of the water in the sedimentation tank. Solar heating causing the raw water temperature to go from a minimum at 6 am to a maximum at 1 pm. AguaClara sedimentation tanks currently have a residence time of approximately 2 m / (1 mm/s) or 2000 s. We anticipate that by increasing the upflow velocity and by introducing floc recycle that the effects of temperature induced floc volcanoes will be reduced.
