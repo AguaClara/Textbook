@@ -363,7 +363,7 @@ There are some important differences between horizontal and vertical sedimentati
 - research on tube settlers by `Brentwood Industries <https://www.brentwoodindustries.com/water-wastewater-products/tube-settlers/>`_ suggests that settle capture velocities should be 0.12 - 0.36 mm/s;
 - research on horizontal flow tanks in *Surface Water Treatment for Communities in Developing Countries* by Schulz and Okun suggests that settle capture velocities should be 0.24 - 0.72 mm/s.
 
-with this understanding of the basic principles of sedimentation, we will transition to a discussion of AguaClara innovations.
+With this understanding of the basic principles of sedimentation, we will transition to a discussion of AguaClara innovations.
 
 References
 ============
