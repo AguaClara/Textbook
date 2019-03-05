@@ -1,7 +1,7 @@
 .. _title_Sed_Design:
 
 ***********************************************
-AguaClara Design
+Sedimentation Design
 ***********************************************
 
 The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank that was designed with two goals in mind:
@@ -124,7 +124,7 @@ Recall the discussion about flow distribution in the influent channel. We know t
 
 Is the type of head loss in the influent manifold "good" or "bad"? Like the influent channel, it would be "bad" head loss because it can lead to different flow along the length of the sedimentation tank; the end of the sedimentation tank would receive more flow than the beginning.
 
-However, the diffuser system was designed to greatly impact the overall flow distribution in an attempt to make the flow more equal in all parts of the system. Diffusers are designed to introduce 1 cm of head loss (see the section on :ref:`diffuser design <_heading_Sed_Tank_Diffuser_Design>` for more information). This is "good" head loss because it uniformly increases the head loss through all flow paths. The "good" head loss from the diffusers dominate the "bad" head loss from the influent channel and manifold, making differences between the paths less significant.
+However, the diffuser system was designed to greatly impact the overall flow distribution in an attempt to make the flow more equal in all parts of the system. Diffusers are designed to introduce 1 cm of head loss (see the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>` for more information). This is "good" head loss because it uniformly increases the head loss through all flow paths. The "good" head loss from the diffusers dominate the "bad" head loss from the influent channel and manifold, making differences between the paths less significant.
 
 The influent manifold diffuser system straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component as shown in :numref:`figure_flow_straightening`. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the sedimentation tank as shown in :numref:`figure_flow_circulation`. Influent manifolds without flow straightening diffusers are commonly used in vertical flow sedimentation tanks including designs by leading manufacturers.
 
@@ -152,7 +152,7 @@ You may be wondering, why do we need a jet reverser in the first place? Why don'
 
 - If the diffusers were to point up, they could clog if anything settles in them. While this is unlikely due to the high velocity of flow exiting the small cross-sectional area diffuser, it is something that is avoided by pointing them down.
 - If flow were just to point directly up, it would not have an opportunity to sufficiently spread into the width of the sedimentation bay, which could lead to "short-circuiting" and poor flow distribution overall.
-- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements, as derived in the section on :ref:`diffuser design <_heading_Sed_Tank_Diffuser_Design>`. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc blanket, which will be discussed next. :numref:`figure_jet_placement` shows that flat bottomed and centered jets do not create a floc blanket while offset jets are stable.
+- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements, as derived in the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>`. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc blanket, which will be discussed next. :numref:`figure_jet_placement` shows that flat bottomed and centered jets do not create a floc blanket while offset jets are stable.
 
 .. _figure_jet_placement:
 
@@ -264,9 +264,9 @@ For a floc blanket to form, a sedimentation system requires that 1) all flocs be
 
    Floc blanket formation over time.
 
-Studies by AguaClara researchers have found that floc blankets improve the performance of a sedimentation tank and reduces settled water turbidity by a factor of 10 for multiple reasons (`Garland et al., 2017<https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_):
+Studies by AguaClara researchers have found that floc blankets improve the performance of a sedimentation tank and reduces settled water turbidity by a factor of 10 for multiple reasons (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_):
 
-- by providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc blanket due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G \theta` cause a large reduction in turbidity? The two-fold answer may be that the lower :math:`G` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc blanket. See the section on :ref:`floc blanket design <_heading_Sed_Tank_Floc_Blanket_Design>` for more information.
+- by providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc blanket due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G \theta` cause a large reduction in turbidity? The two-fold answer may be that the lower :math:`G` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc blanket. See the section on :ref:`floc blanket design <heading_Sed_Tank_Floc_Blanket_Design>` for more information.
 
 - by creating a uniform vertical velocity of water entering the plate settlers.
 
@@ -454,7 +454,7 @@ Solving for :math:`v_c = \frac{Q}{A}`
 
   v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}
 
-We can see that there are five parameters which will impact each other in our design :math:`v_{P,V}, v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`v_{P,V}, v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on :ref:`plate settler design <_heading_Sed_Tank_Plate_Settler_Design>`.
+We can see that there are five parameters which will impact each other in our design :math:`v_{P,V}, v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`v_{P,V}, v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on :ref:`plate settler design <heading_Sed_Tank_Plate_Settler_Design>`.
 
 Now that we have established how flocs settle on the plate and the increase in plan view area that plate settlers offer, we need to discuss how flocs will act once they are on the plates. We want particles and flocs that settle to agglomerate and slide down the plate settlers to be returned to the floc blanket. We will explore this concept by first considering the desired spacing between plate settlers.
 
@@ -485,7 +485,7 @@ There are some cases in which the plates are so close that even if flocs settle 
 
 1) Why would flocs roll up?
 
-It is a force balance! There is a force of gravity pulling the particle down, balanced with the force that the fluid flow exerts through drag related to viscosity. But why does it matter if plates are close together for floc roll up? The average velocity between plates is about 1 mm/s and is the same for any spacing. However, when plates are closer together the velocity profile is much steeper. Compared with plates with greater spacing, the closer plates cause there to be a higher velocity closer to the surface of the plate. This means that flocs between closely spaced plates will see a greater velocity closer to the plate settler, which will impact the force balance. The derivation of the force balance is found in the section on :ref:`plate settler design <_heading_Floc_Rollup_Slide_Velocity_Derivation>`. The velocity that the flocs slide down the plate is called :math:`v_{Slide}`.
+It is a force balance! There is a force of gravity pulling the particle down, balanced with the force that the fluid flow exerts through drag related to viscosity. But why does it matter if plates are close together for floc roll up? The average velocity between plates is about 1 mm/s and is the same for any spacing. However, when plates are closer together the velocity profile is much steeper. Compared with plates with greater spacing, the closer plates cause there to be a higher velocity closer to the surface of the plate. This means that flocs between closely spaced plates will see a greater velocity closer to the plate settler, which will impact the force balance. The derivation of the force balance is found in the section on :ref:`plate settler design <heading_Floc_Rollup_Slide_Velocity_Derivation>`. The velocity that the flocs slide down the plate is called :math:`v_{Slide}`.
 
 2) How would you define the transition between floc rollup and slide down? What would describe the case for a floc that is stationary on the plate settler (not rolling up or sliding down?)
 

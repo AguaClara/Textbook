@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Design of an AguaClara Sedimentation Tank &mdash; AguaClara Textbook  documentation</title>
+  <title>Sedimentation Derivations &mdash; AguaClara Textbook  documentation</title>
   
 
   
@@ -30,7 +30,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Sedimentation Theory and Future Work" href="Sed_Theory_and_Future_Work.html" />
-    <link rel="prev" title="AguaClara Design" href="Sed_Design.html" /> 
+    <link rel="prev" title="Sedimentation Design" href="Sed_Design.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -126,8 +126,8 @@
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html">AguaClara Design</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Design of an AguaClara Sedimentation Tank</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Derivations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#comparison-of-velocities-and-flow-in-sedimentation-tank">Comparison of velocities and flow in sedimentation tank</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#velocity-and-flow-exiting-the-diffusers">1) Velocity and flow exiting the diffusers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#velocity-and-flow-in-the-floc-blanket">2) Velocity and flow in the floc blanket</a></li>
@@ -247,7 +247,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Design of an AguaClara Sedimentation Tank</li>
+      <li>Sedimentation Derivations</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -266,8 +266,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="design-of-an-aguaclara-sedimentation-tank">
-<span id="title-sed-derivations"></span><h1>Design of an AguaClara Sedimentation Tank<a class="headerlink" href="#design-of-an-aguaclara-sedimentation-tank" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="sedimentation-derivations">
+<span id="title-sed-derivations"></span><h1>Sedimentation Derivations<a class="headerlink" href="#sedimentation-derivations" title="Permalink to this headline">¶</a></h1>
 <p>In the next section, we will develop the mathematical models that help us explain the design.</p>
 <p>Note: this section will build off of the conceptual understanding established in the previous section and will explain how the tank works with derivations and mathematical models.</p>
 <div class="section" id="comparison-of-velocities-and-flow-in-sedimentation-tank">
@@ -283,7 +283,7 @@
 </div>
 <div class="section" id="velocity-and-flow-exiting-the-diffusers">
 <h3>1) Velocity and flow exiting the diffusers<a class="headerlink" href="#velocity-and-flow-exiting-the-diffusers" title="Permalink to this headline">¶</a></h3>
-<p>This is discussed specifically in the section on :ref:` diffuser design &lt;_heading_Sed_Tank_Diffuser_Design&gt;`.</p>
+<p>This is discussed specifically in the section on <a class="reference internal" href="#heading-sed-tank-diffuser-design"><span class="std std-ref">diffuser design</span></a>.</p>
 </div>
 <div class="section" id="velocity-and-flow-in-the-floc-blanket">
 <h3>2) Velocity and flow in the floc blanket<a class="headerlink" href="#velocity-and-flow-in-the-floc-blanket" title="Permalink to this headline">¶</a></h3>
@@ -427,7 +427,7 @@ rollup constraints</td>
 </div>
 <div class="section" id="floc-rollup-and-slide-velocity">
 <span id="heading-floc-rollup-slide-velocity-derivation"></span><h3>Floc Rollup and Slide Velocity<a class="headerlink" href="#floc-rollup-and-slide-velocity" title="Permalink to this headline">¶</a></h3>
-<p>As has been discussed, <span class="xref std std-ref">floc rollup</span> is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine this by calculating the floc sedimentation velocity, <span class="math notranslate nohighlight">\(v_{Slide}\)</span>, that can be captured given a plate spacing. The steps to calculate this are:</p>
+<p>As has been discussed, <a class="reference internal" href="Sed_Design.html#heading-floc-rollup"><span class="std std-ref">floc rollup</span></a> is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine this by calculating the floc sedimentation velocity, <span class="math notranslate nohighlight">\(v_{Slide}\)</span>, that can be captured given a plate spacing. The steps to calculate this are:</p>
 <ol class="arabic simple">
 <li>find the velocity gradient next to the plate</li>
 <li>find the fluid velocity at the center of the floc</li>
@@ -472,7 +472,7 @@ rollup constraints</td>
 <span class="eqno">(438)<a class="headerlink" href="#equation-sedimentation-sed-derivations-16" title="Permalink to this equation">¶</a></span>\[\mu(\frac{du}{dy}) = y \frac{dp}{dx} + A\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-17">
 <span class="eqno">(439)<a class="headerlink" href="#equation-sedimentation-sed-derivations-17" title="Permalink to this equation">¶</a></span>\[\tau = (y - \frac{S}{2}) \frac{dp}{dx}\]</div>
-<p>Determining the average velocity between plates, :math:` v_{alpha}`,</p>
+<p>Determining the average velocity between plates, <span class="math notranslate nohighlight">\(v_{\alpha}\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-18">
 <span class="eqno">(440)<a class="headerlink" href="#equation-sedimentation-sed-derivations-18" title="Permalink to this equation">¶</a></span>\[u = \frac{y(y-S)}{2\mu} \frac{dp}{dx}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-19">
@@ -503,7 +503,7 @@ rollup constraints</td>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-26">
 <span class="eqno">(448)<a class="headerlink" href="#equation-sedimentation-sed-derivations-26" title="Permalink to this equation">¶</a></span>\[v_{\alpha} = \frac{r^2 - R^2}{4\mu} \frac{dp}{dx}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-27">
-<span class="eqno">(449)<a class="headerlink" href="#equation-sedimentation-sed-derivations-27" title="Permalink to this equation">¶</a></span>\[`v_{max} = - \frac{R^2}{4\mu} \frac{dp}{dx}\]</div>
+<span class="eqno">(449)<a class="headerlink" href="#equation-sedimentation-sed-derivations-27" title="Permalink to this equation">¶</a></span>\[v_{max} = - \frac{R^2}{4\mu} \frac{dp}{dx}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-28">
 <span class="eqno">(450)<a class="headerlink" href="#equation-sedimentation-sed-derivations-28" title="Permalink to this equation">¶</a></span>\[v = - \frac{R^2}{8\mu} \frac{dp}{dx}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-29">
@@ -539,7 +539,7 @@ rollup constraints</td>
 </div>
 <div class="section" id="find-terminal-velocity-of-the-floc-down-the-plate-for-the-case-of-zero-velocity-fluid">
 <h4>3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):<a class="headerlink" href="#find-terminal-velocity-of-the-floc-down-the-plate-for-the-case-of-zero-velocity-fluid" title="Permalink to this headline">¶</a></h4>
-<p>Recall from our <span class="xref std std-ref">previous explanation of terminal velocity &lt;_heading_terminal_velocity_equation</span> that the terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>, of the floc can be calculated by,</p>
+<p>Recall from our <a class="reference internal" href="Sed_Intro.html#heading-terminal-velocity-equation"><span class="std std-ref">previous explanation of terminal velocity</span></a> that the terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>, of the floc can be calculated by,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-37">
 <span class="eqno">(459)<a class="headerlink" href="#equation-sedimentation-sed-derivations-37" title="Permalink to this equation">¶</a></span>\[v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}\]</div>
 <p>We can rearrange this equation to solve for <span class="math notranslate nohighlight">\(D\)</span> by</p>
@@ -677,12 +677,12 @@ rollup constraints</td>
 </div>
 <div class="section" id="floc-blanket-velocity-gradient-and-collision-potential">
 <h4>Floc blanket velocity gradient and collision potential<a class="headerlink" href="#floc-blanket-velocity-gradient-and-collision-potential" title="Permalink to this headline">¶</a></h4>
-<p>With the equation for <span class="math notranslate nohighlight">\(h_L\)</span>, we can calculate <span class="math notranslate nohighlight">\(G\)</span>. We will also use the other equations we developed in the <span class="xref std std-ref">chapter on flocculation</span>.</p>
+<p>With the equation for <span class="math notranslate nohighlight">\(h_L\)</span>, we can calculate <span class="math notranslate nohighlight">\(G\)</span>. We will also use the other equations we developed in the <a class="reference internal" href="../Flocculation/Floc_Design.html#heading-hydraulic-flocculation-design"><span class="std std-ref">chapter on flocculation</span></a>.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-62">
 <span class="eqno">(484)<a class="headerlink" href="#equation-sedimentation-sed-derivations-62" title="Permalink to this equation">¶</a></span>\[G = \sqrt{\frac{\epsilon}{\nu}}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-63">
 <span class="eqno">(485)<a class="headerlink" href="#equation-sedimentation-sed-derivations-63" title="Permalink to this equation">¶</a></span>\[\epsilon = \frac{gh_L}{\theta}\]</div>
-<p>We will start by determining <span class="math notranslate nohighlight">\(\epsilon ` by calculating :math:\)</span>theta` using the porosity of the floc blanket, <span class="math notranslate nohighlight">\(\phi_{fb}\)</span>,</p>
+<p>We will start by determining <span class="math notranslate nohighlight">\(\epsilon\)</span> by calculating <span class="math notranslate nohighlight">\(\theta\)</span> using the porosity of the floc blanket, <span class="math notranslate nohighlight">\(\phi_{fb}\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-64">
 <span class="eqno">(486)<a class="headerlink" href="#equation-sedimentation-sed-derivations-64" title="Permalink to this equation">¶</a></span>\[\theta = \frac{H_{fb} \phi_{fb}}{v_{S,V}}\]</div>
 <p>Plugging <span class="math notranslate nohighlight">\(\theta\)</span> into <span class="math notranslate nohighlight">\(\epsilon\)</span> yields</p>
@@ -694,10 +694,9 @@ rollup constraints</td>
 <p>Using our equation for <span class="math notranslate nohighlight">\(h_L\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-67">
 <span class="eqno">(489)<a class="headerlink" href="#equation-sedimentation-sed-derivations-67" title="Permalink to this equation">¶</a></span>\[G =  \sqrt{\frac{gv_{S,V}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-68">
-<span class="eqno">(490)<a class="headerlink" href="#equation-sedimentation-sed-derivations-68" title="Permalink to this equation">¶</a></span>\[\phi_{fb} \approx 1` and is a function of :math:`C_{clay}\]</div>
+<p><span class="math notranslate nohighlight">\(\phi_{fb} \approx 1\)</span> and is a function of <span class="math notranslate nohighlight">\(C_{clay}\)</span></p>
 <p>We can plot our results for <span class="math notranslate nohighlight">\(G\)</span> over a range of typical floc blanket concentrations, which is around 1 - 5 g/L. We find that <span class="math notranslate nohighlight">\(G\)</span> ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The <span class="math notranslate nohighlight">\(G\)</span> provided by the floc blanket is much smaller than <span class="math notranslate nohighlight">\(G\)</span> provided by the flocculator. This is an important point because in the low <span class="math notranslate nohighlight">\(G\)</span> environment of the floc blanket where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.</p>
-<p>We can plot our results for <span class="math notranslate nohighlight">\(G\theta\)</span> by multiplying <span class="math notranslate nohighlight">\(G\)</span> by the residence time we found earlier, <span class="math notranslate nohighlight">\(\theta = 1000 s\)</span>. The result is that <span class="math notranslate nohighlight">\(G\theta\)</span> ranges from 2,000 to 6,000. Compare this to the <span class="math notranslate nohighlight">\(G\theta = 20,000\)</span> for the flocculator used in experiments (<a href="#id19"><span class="problematic" id="id20">`Garland et al., 2017&lt;https://www.liebertpub.com/doi/10.1089/ees.2016.0174&gt;`_</span></a>).</p>
+<p>We can plot our results for <span class="math notranslate nohighlight">\(G\theta\)</span> by multiplying <span class="math notranslate nohighlight">\(G\)</span> by the residence time we found earlier, <span class="math notranslate nohighlight">\(\theta = 1000 s\)</span>. The result is that <span class="math notranslate nohighlight">\(G\theta\)</span> ranges from 2,000 to 6,000. Compare this to the <span class="math notranslate nohighlight">\(G\theta = 20,000\)</span> for the flocculator used in experiments (<a class="reference external" href="https://www.liebertpub.com/doi/10.1089/ees.2016.0174">Garland et al., 2017</a>).</p>
 <div class="figure align-center" id="id14">
 <span id="figure-lab-setup"></span><a class="reference internal image-reference" href="../_images/lab_setup.png"><img alt="Lab setup for flocculator, half-sedimentation tank, and plate settler testing." src="../_images/lab_setup.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 164 </span><span class="caption-text">Lab setup for flocculator, half-sedimentation tank, and plate settler testing.</span></p>
@@ -784,22 +783,23 @@ rollup constraints</td>
 <div class="section" id="determining-flow-through-a-diffuser">
 <h3>Determining flow through a diffuser<a class="headerlink" href="#determining-flow-through-a-diffuser" title="Permalink to this headline">¶</a></h3>
 <p>What is the flow rate of a single diffuser in the bottom of the sedimentation tank? Consider a sedimentation tank that is 6 m long, 1 m wide and 2 m deep, with an upflow velocity of 1 mm/s and a diffuser spacing of 5 cm.</p>
-<blockquote>
-<div>What is this question really asking? This question is asking us to understand that each diffuser “serves” a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let’s imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using <span class="math notranslate nohighlight">\(Q = vA\)</span>. The area, <span class="math notranslate nohighlight">\(A\)</span>, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so <span class="math notranslate nohighlight">\(W_{tank} = 1\)</span> m. The length of the slice is dictated by the spacing of the diffusers, <span class="math notranslate nohighlight">\(B_{diff}\)</span>, so <span class="math notranslate nohighlight">\(B_{diff} = 5\)</span> cm.</div></blockquote>
+<p>What is this question really asking? This question is asking us to understand that each diffuser “serves” a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let’s imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using <span class="math notranslate nohighlight">\(Q = vA\)</span>. The area, <span class="math notranslate nohighlight">\(A\)</span>, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so <span class="math notranslate nohighlight">\(W_{tank} = 1\)</span> m. The length of the slice is dictated by the spacing of the diffusers, <span class="math notranslate nohighlight">\(B_{diff}\)</span>, so <span class="math notranslate nohighlight">\(B_{diff} = 5\)</span> cm.</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-68">
+<span class="eqno">(490)<a class="headerlink" href="#equation-sedimentation-sed-derivations-68" title="Permalink to this equation">¶</a></span>\[A = B_{diff}W_{tank}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-69">
-<span class="eqno">(491)<a class="headerlink" href="#equation-sedimentation-sed-derivations-69" title="Permalink to this equation">¶</a></span>\[A = B_{diff}W_{tank}\]</div>
+<span class="eqno">(491)<a class="headerlink" href="#equation-sedimentation-sed-derivations-69" title="Permalink to this equation">¶</a></span>\[A = 5cm * 1m\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-70">
-<span class="eqno">(492)<a class="headerlink" href="#equation-sedimentation-sed-derivations-70" title="Permalink to this equation">¶</a></span>\[A = 5cm * 1m\]</div>
+<span class="eqno">(492)<a class="headerlink" href="#equation-sedimentation-sed-derivations-70" title="Permalink to this equation">¶</a></span>\[A = 50,000mm^2\]</div>
+<p>The problem statement includes that <span class="math notranslate nohighlight">\(v_{S,V} = 1\)</span> mm/s. Plugging into our flow equation,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-71">
-<span class="eqno">(493)<a class="headerlink" href="#equation-sedimentation-sed-derivations-71" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned} A = 50,000mm^2\\The problem statement includes that :math:`v_{S,V} = 1` mm/s. Plugging into our flow equation,\end{aligned}\end{align} \]</div>
+<span class="eqno">(493)<a class="headerlink" href="#equation-sedimentation-sed-derivations-71" title="Permalink to this equation">¶</a></span>\[Q_{diff} = v_{S,V}A\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-72">
-<span class="eqno">(494)<a class="headerlink" href="#equation-sedimentation-sed-derivations-72" title="Permalink to this equation">¶</a></span>\[Q_{diff} = v_{S,V}A\]</div>
+<span class="eqno">(494)<a class="headerlink" href="#equation-sedimentation-sed-derivations-72" title="Permalink to this equation">¶</a></span>\[Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-73">
-<span class="eqno">(495)<a class="headerlink" href="#equation-sedimentation-sed-derivations-73" title="Permalink to this equation">¶</a></span>\[Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\]</div>
+<span class="eqno">(495)<a class="headerlink" href="#equation-sedimentation-sed-derivations-73" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50,000 \frac{mm^3}{s}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-74">
-<span class="eqno">(496)<a class="headerlink" href="#equation-sedimentation-sed-derivations-74" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50,000 \frac{mm^3}{s}\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-75">
-<span class="eqno">(497)<a class="headerlink" href="#equation-sedimentation-sed-derivations-75" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned} Q_{diff} = 50 \frac{mL}{s}\\The flow rate of each diffuser is :math:`50 \frac{mL}{s}`.\end{aligned}\end{align} \]</div>
+<span class="eqno">(496)<a class="headerlink" href="#equation-sedimentation-sed-derivations-74" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50 \frac{mL}{s}\]</div>
+<p>The flow rate of each diffuser is <span class="math notranslate nohighlight">\(50 \frac{mL}{s}\)</span>.</p>
 </div>
 <div class="section" id="properties-of">
 <h3>Properties of <span class="math notranslate nohighlight">\(v_{jet}\)</span><a class="headerlink" href="#properties-of" title="Permalink to this headline">¶</a></h3>
@@ -816,29 +816,29 @@ rollup constraints</td>
 <h3>Diffuser Design<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our sedimentation tank, we want an upflow velocity of 1 mm/s. Additionally, because diffusers are a key component of our “sedimentation tank as a circuit”, we want to precisely control head loss in the jet leaving the jet reverser because that will help us achieve uniform flow within and between sedimentation tanks. AguaClara designs set head loss in the jet constant at 1 cm.</p>
 <p>Let’s begin by finding the internal width of a single diffuser. Using conservation of flow, we know that,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-76">
-<span class="eqno">(498)<a class="headerlink" href="#equation-sedimentation-sed-derivations-76" title="Permalink to this equation">¶</a></span>\[Q_{diff} = v_{jet}W_{diff}S_{diff} = v_{S,V}W_{Sed}B_{diff}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-75">
+<span class="eqno">(497)<a class="headerlink" href="#equation-sedimentation-sed-derivations-75" title="Permalink to this equation">¶</a></span>\[Q_{diff} = v_{jet}W_{diff}S_{diff} = v_{S,V}W_{Sed}B_{diff}\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(W_{diff}\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-77">
-<span class="eqno">(499)<a class="headerlink" href="#equation-sedimentation-sed-derivations-77" title="Permalink to this equation">¶</a></span>\[W_{diff} = \frac{v_{S,V}W_{Sed}B_{diff}}{v_{jet}S_{diff}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-76">
+<span class="eqno">(498)<a class="headerlink" href="#equation-sedimentation-sed-derivations-76" title="Permalink to this equation">¶</a></span>\[W_{diff} = \frac{v_{S,V}W_{Sed}B_{diff}}{v_{jet}S_{diff}}\]</div>
 <p>Using the constraint of head loss in the jet and solving for <span class="math notranslate nohighlight">\(v_{jet}\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-77">
+<span class="eqno">(499)<a class="headerlink" href="#equation-sedimentation-sed-derivations-77" title="Permalink to this equation">¶</a></span>\[h_{L,jet} = \frac{v_{jet}^2}{2g}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-78">
-<span class="eqno">(500)<a class="headerlink" href="#equation-sedimentation-sed-derivations-78" title="Permalink to this equation">¶</a></span>\[h_{L,jet} = \frac{v_{jet}^2}{2g}\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-79">
-<span class="eqno">(501)<a class="headerlink" href="#equation-sedimentation-sed-derivations-79" title="Permalink to this equation">¶</a></span>\[v_{jet} = \sqrt{2gh_{L,jet}}\]</div>
+<span class="eqno">(500)<a class="headerlink" href="#equation-sedimentation-sed-derivations-78" title="Permalink to this equation">¶</a></span>\[v_{jet} = \sqrt{2gh_{L,jet}}\]</div>
 <p>Substituting back into the equation for <span class="math notranslate nohighlight">\(W_{diff}\)</span>, we can find the minimum diffuser width required to not exceed target head loss as,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-80">
-<span class="eqno">(502)<a class="headerlink" href="#equation-sedimentation-sed-derivations-80" title="Permalink to this equation">¶</a></span>\[W_{diff,min} = \frac{v_{S,V}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-79">
+<span class="eqno">(501)<a class="headerlink" href="#equation-sedimentation-sed-derivations-79" title="Permalink to this equation">¶</a></span>\[W_{diff,min} = \frac{v_{S,V}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}\]</div>
 <p>Now that we have determined the minimum width, we can use known parameters and constraints to find a precise value for <span class="math notranslate nohighlight">\(W_{diff}\)</span> and <span class="math notranslate nohighlight">\(v_{jet}\)</span>.</p>
 <p>Using known constants for <span class="math notranslate nohighlight">\(v_{S,V} = 1 \frac{mm}{s}\)</span>, <span class="math notranslate nohighlight">\(h_{L,jet} = 1 cm\)</span>, and <span class="math notranslate nohighlight">\(W_{Sed} = 1m\)</span>, we can find that <span class="math notranslate nohighlight">\(W_{diff,min} = 2.7mm\)</span>. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find <span class="math notranslate nohighlight">\(W_{diff}\)</span> we round up to 3.175 mm.</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-81">
-<span class="eqno">(503)<a class="headerlink" href="#equation-sedimentation-sed-derivations-81" title="Permalink to this equation">¶</a></span>\[W_{diff} = 3.175 mm\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-80">
+<span class="eqno">(502)<a class="headerlink" href="#equation-sedimentation-sed-derivations-80" title="Permalink to this equation">¶</a></span>\[W_{diff} = 3.175 mm\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(v_{jet}\)</span> from our earlier equations yields,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-82">
-<span class="eqno">(504)<a class="headerlink" href="#equation-sedimentation-sed-derivations-82" title="Permalink to this equation">¶</a></span>\[v_{jet} = \frac{v_{S,V}W_{Sed}B_{diff}}{W_{diff}S_{diff}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-81">
+<span class="eqno">(503)<a class="headerlink" href="#equation-sedimentation-sed-derivations-81" title="Permalink to this equation">¶</a></span>\[v_{jet} = \frac{v_{S,V}W_{Sed}B_{diff}}{W_{diff}S_{diff}}\]</div>
 <p>Using known constants,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-83">
-<span class="eqno">(505)<a class="headerlink" href="#equation-sedimentation-sed-derivations-83" title="Permalink to this equation">¶</a></span>\[v_{jet} \approx 380 \frac{mm}{s}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-82">
+<span class="eqno">(504)<a class="headerlink" href="#equation-sedimentation-sed-derivations-82" title="Permalink to this equation">¶</a></span>\[v_{jet} \approx 380 \frac{mm}{s}\]</div>
 </div>
 </div>
 <div class="section" id="references">
@@ -858,7 +858,7 @@ rollup constraints</td>
         <a href="Sed_Theory_and_Future_Work.html" class="btn btn-neutral float-right" title="Sedimentation Theory and Future Work" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Sed_Design.html" class="btn btn-neutral" title="AguaClara Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Sed_Design.html" class="btn btn-neutral" title="Sedimentation Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
