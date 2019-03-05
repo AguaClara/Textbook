@@ -8,7 +8,7 @@ Sedimentation Introduction
 
 Sedimentation a gravity-driven unit process in which suspended flocs are settled out from water. Large flocs made up of many primary particles and coagulant will settle if given enough time. Sedimentation is commonly preceded by coagulation/flocculation processes - coagulation/flocculation aim to form flocs which will be large enough to settle in sedimentation - and is commonly followed by filtration processes for further treatment. Sludge consolidation processes are often present alongside sedimentation to reduce the waste stream of settled flocs. Optimizing sedimentation is important because the more particles that sedimentation can remove, the fewer particles the filter will have to remove. This is good because filters can only handle a small amount of solids, and cleaning the filters with backwash uses a lot of water so we want to reduce the number of backwashes. The goal of sedimentation is to concentrate a waste stream of flocs, or sludge.
 
-To introduce you to sedimentation, we will begin with a simple example. If a jar of water filled with flocs was left at rest, flocs would begin to settle due to gravitational forces pulling them down. Large flocs would settle first, but if left for long enough, all flocs would settle to the bottom of the jar. In its most basic form, the jar represents a sedimentation tank in which flocculated water is treated. Settled flocs become waste and the water on the top of the jar, referred to as the supernatant, becomes the settled water.
+To introduce you to sedimentation, we will begin with a simple example. If a jar of water filled with flocs was left at rest, flocs would begin to settle due to gravitational forces pulling them down. Large flocs would settle first, but if left for long enough, all flocs would settle to the bottom of the jar. In its most basic form, the jar represents a sedimentation tank in which flocculated water is treated. Settled flocs are waste and the water on the top of the jar, referred to as the supernatant, is the settled water.
 
 Constraints of space, time, and cost make it important to optimize the settling process. It would not be realistic to design water treatment systems that use the basic jar-like system to settle flocs because large flow rates would require unreasonably large reactor volumes and long retention times. The goal of sedimentation reactor design is to employ geometries that promote settling and allow for fast treatment with small footprints.
 
@@ -83,7 +83,7 @@ Terminal velocity is a function of fluid density, floc density, gravity, particl
 
 The first component that we will focus on is the drag coefficient, :math:`C_D`. The drag coefficient is function of Reynolds Number, :math:`Re`, and the characteristic flow around a particle. As a reminder, :math:`Re = \frac{v_t D}{\nu}` where :math:`v_t` is the velocity of the fluid relative to the particle, :math:`D` is the characteristic length scale (in this case the particle diameter), and :math:`\nu` is kinematic viscosity.
 
-Drag coefficients are used to describe flow around a particle and are shown in :numref:`_figure_drag_coeff_Re_base`.
+Drag coefficients are used to describe flow around a particle and are shown in :numref:`figure_drag_coeff_Re_base`.
 
 .. _figure_drag_coeff_Re_base:
 
