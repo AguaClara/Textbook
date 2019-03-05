@@ -1,7 +1,7 @@
 .. _title_Sed_Derivations:
 
 ***********************************************
-Design of an AguaClara Sedimentation Tank
+Sedimentation Derivations
 ***********************************************
 In the next section, we will develop the mathematical models that help us explain the design.
 
@@ -29,7 +29,7 @@ To understand how water flows in the sedimentation tank, we must understand how 
 1) Velocity and flow exiting the diffusers
 ------------------------------------------------------------
 
-This is discussed specifically in the section on :ref:` diffuser design <_heading_Sed_Tank_Diffuser_Design>`.
+This is discussed specifically in the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>`.
 
 2) Velocity and flow in the floc blanket
 ----------------------------------------
@@ -190,7 +190,7 @@ The AguaClara plate settler design approach is summarized in the following table
 Floc Rollup and Slide Velocity
 ------------------------------
 
-As has been discussed, :ref:`floc rollup <_heading_Floc_Rollup>` is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine this by calculating the floc sedimentation velocity, :math:`v_{Slide}`, that can be captured given a plate spacing. The steps to calculate this are:
+As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine this by calculating the floc sedimentation velocity, :math:`v_{Slide}`, that can be captured given a plate spacing. The steps to calculate this are:
 
 1) find the velocity gradient next to the plate
 
@@ -276,7 +276,7 @@ If we let :math:`\frac{dp}{dx}` be negative, then we can solve for :math:`\tau`.
 
   \tau = (y - \frac{S}{2}) \frac{dp}{dx}
 
-Determining the average velocity between plates, :math:` v_{\alpha}`,
+Determining the average velocity between plates, :math:`v_{\alpha}`,
 
 .. math::
 
@@ -336,7 +336,7 @@ For tube settlers, we will assume laminar flow through circular tubes. :math:`R`
 
 .. math::
 
-  `v_{max} = - \frac{R^2}{4\mu} \frac{dp}{dx}
+  v_{max} = - \frac{R^2}{4\mu} \frac{dp}{dx}
 
 .. math::
 
@@ -399,7 +399,7 @@ Substituting by the trigonometric relationship :math:`v_{\alpha} = (\frac{v_{P,V
 
 3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Recall from our :ref:`previous explanation of terminal velocity <_heading_terminal_velocity_equation` that the terminal velocity, :math:`v_t`, of the floc can be calculated by,
+Recall from our :ref:`previous explanation of terminal velocity <heading_terminal_velocity_equation>` that the terminal velocity, :math:`v_t`, of the floc can be calculated by,
 
 .. math::
 
@@ -645,7 +645,7 @@ Plugging in the equation for :math:`\rho_{fb}` and solving for :math:`h_L`,
 Floc blanket velocity gradient and collision potential
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use the other equations we developed in the :ref:`chapter on flocculation <_heading_Hydraulic_Flocculation_Design>`.
+With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use the other equations we developed in the :ref:`chapter on flocculation <heading_Hydraulic_Flocculation_Design>`.
 
 .. math::
 
@@ -655,7 +655,7 @@ With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use 
 
  \epsilon = \frac{gh_L}{\theta}
 
-We will start by determining :math:`\epsilon ` by calculating :math:`\theta` using the porosity of the floc blanket, :math:`\phi_{fb}`,
+We will start by determining :math:`\epsilon` by calculating :math:`\theta` using the porosity of the floc blanket, :math:`\phi_{fb}`,
 
 .. math::
 
@@ -679,13 +679,11 @@ Using our equation for :math:`h_L`,
 
   G =  \sqrt{\frac{gv_{S,V}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }
 
-.. math::
-
-  \phi_{fb} \approx 1` and is a function of :math:`C_{clay}
+:math:`\phi_{fb} \approx 1` and is a function of :math:`C_{clay}`
 
 We can plot our results for :math:`G` over a range of typical floc blanket concentrations, which is around 1 - 5 g/L. We find that :math:`G` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`G` provided by the floc blanket is much smaller than :math:`G` provided by the flocculator. This is an important point because in the low :math:`G` environment of the floc blanket where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
 
-We can plot our results for :math:`G\theta` by multiplying :math:`G` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`G\theta` ranges from 2,000 to 6,000. Compare this to the :math:`G\theta = 20,000` for the flocculator used in experiments (`Garland et al., 2017<https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_).
+We can plot our results for :math:`G\theta` by multiplying :math:`G` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`G\theta` ranges from 2,000 to 6,000. Compare this to the :math:`G\theta = 20,000` for the flocculator used in experiments (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_).
 
 .. _figure_lab_setup:
 
@@ -773,7 +771,7 @@ Determining flow through a diffuser
 
 What is the flow rate of a single diffuser in the bottom of the sedimentation tank? Consider a sedimentation tank that is 6 m long, 1 m wide and 2 m deep, with an upflow velocity of 1 mm/s and a diffuser spacing of 5 cm.
 
- What is this question really asking? This question is asking us to understand that each diffuser "serves" a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let's imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using :math:`Q = vA`. The area, :math:`A`, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so :math:`W_{tank} = 1` m. The length of the slice is dictated by the spacing of the diffusers, :math:`B_{diff}`, so :math:`B_{diff} = 5` cm.
+What is this question really asking? This question is asking us to understand that each diffuser "serves" a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let's imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using :math:`Q = vA`. The area, :math:`A`, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so :math:`W_{tank} = 1` m. The length of the slice is dictated by the spacing of the diffusers, :math:`B_{diff}`, so :math:`B_{diff} = 5` cm.
 
 .. math::
 
@@ -787,7 +785,7 @@ What is the flow rate of a single diffuser in the bottom of the sedimentation ta
 
   A = 50,000mm^2
 
- The problem statement includes that :math:`v_{S,V} = 1` mm/s. Plugging into our flow equation,
+The problem statement includes that :math:`v_{S,V} = 1` mm/s. Plugging into our flow equation,
 
 .. math::
 
@@ -805,7 +803,7 @@ What is the flow rate of a single diffuser in the bottom of the sedimentation ta
 
   Q_{diff} = 50 \frac{mL}{s}
 
- The flow rate of each diffuser is :math:`50 \frac{mL}{s}`.
+The flow rate of each diffuser is :math:`50 \frac{mL}{s}`.
 
 Properties of :math:`v_{jet}`
 -------------------------------

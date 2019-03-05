@@ -83,7 +83,7 @@ Terminal velocity is a function of fluid density, floc density, gravity, particl
 
 The first component that we will focus on is the drag coefficient, :math:`C_D`. The drag coefficient is function of Reynolds Number, :math:`Re`, and the characteristic flow around a particle. As a reminder, :math:`Re = \frac{v_t D}{\nu}` where :math:`v_t` is the velocity of the fluid relative to the particle, :math:`D` is the characteristic length scale (in this case the particle diameter), and :math:`\nu` is kinematic viscosity.
 
-Drag coefficients are used to describe flow around a particle and are shown in :numref:`_figure_drag_coeff_Re_base`.
+Drag coefficients are used to describe flow around a particle and are shown in :numref:`figure_drag_coeff_Re_base`.
 
 .. _figure_drag_coeff_Re_base:
 
