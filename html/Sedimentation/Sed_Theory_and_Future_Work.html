@@ -131,10 +131,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Theory and Future Work</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#floc-recycle">Floc recycle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#floc-volcanoes">Floc Volcanoes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comments-corrections-or-questions">Comments, Corrections, or Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Variables_List.html">Sedimentation Variables List</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
 <ul>
@@ -235,7 +237,7 @@
 <span id="id1"></span><h1>Sedimentation Theory and Future Work<a class="headerlink" href="#sedimentation-theory-and-future-work" title="Permalink to this headline">¶</a></h1>
 <p>Unsolved sedimentation tank failure modes:</p>
 <ol class="arabic simple">
-<li>Floc volcanoes and temperature-induced flow circulations [[[[link]]]]</li>
+<li><a class="reference internal" href="Sed_Design.html#heading-floc-volcano-intro"><span class="std std-ref">Floc volcanoes</span></a> and <span class="xref std std-ref">temperature-induced flow circulations</span></li>
 <li>Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.</li>
 <li>Slime growth from iron-oxidizing bacteria.</li>
 <li>NOM impact on floc density</li>
@@ -250,31 +252,31 @@
 <p>There must be an optimal amount of recycled flocs for a floc blanket. Of course, one possiblity is that the optimal recycle is zero. Recycled flocs increase the floc blanket concentration and thus increase the rate of collisions between primary particles and flocs. The recycled flocs also decrease the residence time in the floc blanket and thus decrease the total number of collisions between primary particles and flocs. It may be more complicated than this because the hindered sedimentation velocity of the flocs in the floc blanket is also a function of their concentration.</p>
 <p>Our goal is to find the optimal recycle ratio. Optimal is defined as the maximum collision potential. Collision potential for the floc blanket is proportional to to the collision rate times the hydraulic residence time. The collision rate is proportional to the solids concentration and the hindered sedimentation velocity of those flocs. The collision potential is thus proportional to the total number of flocs that a primary particle passes on its way through the floc blanket.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-0">
-<span class="eqno">(505)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-0" title="Permalink to this equation">¶</a></span>\[CP_{fb} \propto C_{fb} \theta_{fb} v_{hindered}\]</div>
+<span class="eqno">(498)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-0" title="Permalink to this equation">¶</a></span>\[CP_{fb} \propto C_{fb} \theta_{fb} v_{hindered}\]</div>
 <p>The residence time in the floc blanket is given by</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-1">
-<span class="eqno">(506)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-1" title="Permalink to this equation">¶</a></span>\[\theta_{fb} = \frac{H_{fb}}{v_{fb}}\]</div>
+<span class="eqno">(499)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-1" title="Permalink to this equation">¶</a></span>\[\theta_{fb} = \frac{H_{fb}}{v_{fb}}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-2">
-<span class="eqno">(507)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[v_{fb} = \frac{Q_{plant} + Q_{recycle}}{A_{fb}}\]</div>
+<span class="eqno">(500)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[v_{fb} = \frac{Q_{plant} + Q_{recycle}}{A_{fb}}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-3">
-<span class="eqno">(508)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[Q_{recycle} = \Pi_{recycle}Q_{plant}\]</div>
+<span class="eqno">(501)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[Q_{recycle} = \Pi_{recycle}Q_{plant}\]</div>
 <p>The velocity up through the floc blanket without recycle is defined as</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-4">
-<span class="eqno">(509)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[v_{up} = \frac{Q_{plant}}{A_{fb}}\]</div>
+<span class="eqno">(502)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[v_{up} = \frac{Q_{plant}}{A_{fb}}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-5">
-<span class="eqno">(510)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-5" title="Permalink to this equation">¶</a></span>\[v_{fb} = v_{up}\left( 1 + \Pi_{recycle} \right)\]</div>
+<span class="eqno">(503)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-5" title="Permalink to this equation">¶</a></span>\[v_{fb} = v_{up}\left( 1 + \Pi_{recycle} \right)\]</div>
 <p>Now we need equations for the concentration in the floc blanket. This is based on mass conservation such that the mass in the floc blanket is constant. There is a hindered sedimentation velocity of the flocs that results in a reduction of the mass flux out of the top of the control volume.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-6">
-<span class="eqno">(511)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-6" title="Permalink to this equation">¶</a></span>\[C_{fb}\left(\frac{ Q_{plant}+Q_{recycle} }{A_{fb}}-v_{hindered}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}Q_{recycle}\]</div>
+<span class="eqno">(504)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-6" title="Permalink to this equation">¶</a></span>\[C_{fb}\left(\frac{ Q_{plant}+Q_{recycle} }{A_{fb}}-v_{hindered}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}Q_{recycle}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-7">
-<span class="eqno">(512)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-7" title="Permalink to this equation">¶</a></span>\[C_{fb}\left(\frac{ Q_{plant}+\Pi_{recycle}Q_{plant} }{A_{fb}}-v_{hindered}\frac{Q_{plant}}{Q_{plant}}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}\Pi_{recycle}Q_{plant}\]</div>
+<span class="eqno">(505)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-7" title="Permalink to this equation">¶</a></span>\[C_{fb}\left(\frac{ Q_{plant}+\Pi_{recycle}Q_{plant} }{A_{fb}}-v_{hindered}\frac{Q_{plant}}{Q_{plant}}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}\Pi_{recycle}Q_{plant}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-8">
-<span class="eqno">(513)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[C_{fb}\left( 1+\Pi_{recycle} -\frac{v_{hindered}}{v_{up}}\right) = C_{plant} + C_{recycle}\Pi_{recycle}\]</div>
+<span class="eqno">(506)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[C_{fb}\left( 1+\Pi_{recycle} -\frac{v_{hindered}}{v_{up}}\right) = C_{plant} + C_{recycle}\Pi_{recycle}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-9">
-<span class="eqno">(514)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-9" title="Permalink to this equation">¶</a></span>\[C_{fb} = \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{v_{hindered}}{v_{up}}\right)}\]</div>
+<span class="eqno">(507)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-9" title="Permalink to this equation">¶</a></span>\[C_{fb} = \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{v_{hindered}}{v_{up}}\right)}\]</div>
 <p>Now we can substitute to get the collision potential as a function of the flow rates.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-10">
-<span class="eqno">(515)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-10" title="Permalink to this equation">¶</a></span>\[CP_{fb} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{v_{hindered}}{v_{up}}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{fb}v_{hindered}} {v_{up}}\]</div>
+<span class="eqno">(508)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-10" title="Permalink to this equation">¶</a></span>\[CP_{fb} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{v_{hindered}}{v_{up}}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{fb}v_{hindered}} {v_{up}}\]</div>
 <p>We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc blanket. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc blanket. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland measurements of the solids concentration in the floc hopper sludge.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
 <span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
@@ -315,26 +317,26 @@
 <div></div></blockquote>
 <div class="figure align-center" id="id4">
 <span id="collision-potential-with-sludge-recycle"></span><a class="reference internal image-reference" href="../_images/fb_recycle_ratio.png"><img alt="Collision potential with sludge recycle" src="../_images/fb_recycle_ratio.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 168 </span><span class="caption-text">Collision potential comparison in a 1 m deep floc blanket.</span></p>
+<p class="caption"><span class="caption-number">Fig. 170 </span><span class="caption-text">Collision potential comparison in a 1 m deep floc blanket.</span></p>
 </div>
 <p>This analysis suggest that a recycle flow rate that is between 0.5 and 1.5 at a net upflow velocity of 3 mm/s could produce collision potential that is 2/3 of the collision potential with a 1 mm/s upflow velocity. Thus a 3 mm/s sed tank with 1.5 m of floc blanket and recycle might be able to perform at the same level as a 1 mm/s sed tank with a 1 m floc blanket.</p>
 <p>The next step is to design the recycle tube. The recycle tube could be inclined to promote additional consolidation to reduce the amount of water that is recycled. The slope would need to be about 60 degrees. We could experiment with the design of the recycle line if it were made of flexible tubing.</p>
 <p>It is expected that the consolidated sludge will flow by gravity because of its higher density. The big unknown is what diameter recycle line is needed for a lab scale test with a 2.5 cm diameter sedimentation tank.</p>
 <p>The recycle sludge has a density given by</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-11">
-<span class="eqno">(516)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-11" title="Permalink to this equation">¶</a></span>\[\rho_{sludge} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O}\]</div>
+<span class="eqno">(509)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-11" title="Permalink to this equation">¶</a></span>\[\rho_{sludge} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O}\]</div>
 <p>The piezometric head (measured in equivalent change in height of the recycle line liquid) that is causing the flow through the recycle line is equal to the difference in density between the recycled sludge and the floc blanket times the height of the floc blanket normalized by the recycle line density.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-12">
-<span class="eqno">(517)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-12" title="Permalink to this equation">¶</a></span>\[H_l = H_{fb}\frac{\rho_{sludge} - \rho_{fb}}{\rho_{sludge}}\]</div>
+<span class="eqno">(510)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-12" title="Permalink to this equation">¶</a></span>\[H_l = H_{fb}\frac{\rho_{sludge} - \rho_{fb}}{\rho_{sludge}}\]</div>
 <p>Substitute to replace the sludge and floc blanket densities.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-13">
-<span class="eqno">(518)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-13" title="Permalink to this equation">¶</a></span>\[H_l = H_{fb}\frac{\left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O} -\left[  \left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{fb} + \rho_{H_2O} \right]} {\left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O}}\]</div>
+<span class="eqno">(511)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-13" title="Permalink to this equation">¶</a></span>\[H_l = H_{fb}\frac{\left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O} -\left[  \left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{fb} + \rho_{H_2O} \right]} {\left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O}}\]</div>
 <p>Simplify the equation for the head loss in the recycle tube.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-14">
-<span class="eqno">(519)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-14" title="Permalink to this equation">¶</a></span>\[H_l = H_{fb}\frac{ C_{sludge} -C_{fb}} { C_{sludge} + \frac{\rho_{H_2O}\rho_{Clay}}{  \rho_{Clay} -\rho_{H_2O} }}\]</div>
+<span class="eqno">(512)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-14" title="Permalink to this equation">¶</a></span>\[H_l = H_{fb}\frac{ C_{sludge} -C_{fb}} { C_{sludge} + \frac{\rho_{H_2O}\rho_{Clay}}{  \rho_{Clay} -\rho_{H_2O} }}\]</div>
 <p>The recycle tube is assumed to be sloped at 60 degrees from the horizontal to enable further consolidation. The length of the recycle tube is</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-15">
-<span class="eqno">(520)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-15" title="Permalink to this equation">¶</a></span>\[L_{tube} = H_{fb}/sin(60)\]</div>
+<span class="eqno">(513)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-15" title="Permalink to this equation">¶</a></span>\[L_{tube} = H_{fb}/sin(60)\]</div>
 <p>We will assume that the dynamic viscosity of the sludge is the same as the dynamic viscosity of water. We will calculate the kinematic viscosity of the sludge by dividing the dynamic viscosity of water by the density of the recycle.</p>
 <p>Now we can solve for the required tube diameter</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
@@ -370,6 +372,10 @@
 <span id="id3"></span><h2>Floc Volcanoes<a class="headerlink" href="#floc-volcanoes" title="Permalink to this headline">¶</a></h2>
 <p>Floc volcanoes are caused by differences in temperature between the water that is in a sedimentation tank and the incoming water. If the incoming water is warmer than the water that is already in the sedimentation tank, then the incoming water will be buoyant and will rise quickly to the top of the sedimentation tank and carry flocs to the effluent launder.</p>
 <p>Temperature fluctuations can be especially pronounced with small scale water supplies where small streams and small diameter transmission lines can be exposed to the sun and can warm up dramatically during a few hours of sunshine. Given that temperature changes and density changes can not easily be engineered, the only solution that we have is to reduce the time that water spends in the sedimentation tank so that the influent water is closer to the average temperature of the water in the sedimentation tank. Solar heating causing the raw water temperature to go from a minimum at 6 am to a maximum at 1 pm. AguaClara sedimentation tanks currently have a residence time of approximately 2 m / (1 mm/s) or 2000 s. We anticipate that by increasing the upflow velocity and by introducing floc recycle that the effects of temperature induced floc volcanoes will be reduced.</p>
+</div>
+<div class="section" id="comments-corrections-or-questions">
+<h2>Comments, Corrections, or Questions<a class="headerlink" href="#comments-corrections-or-questions" title="Permalink to this headline">¶</a></h2>
+<p>This textbook is an ever-evolving project. If you find any errors while you are reading, or if you find something unclear, please let the authors know. Write your comment in <a class="reference external" href="https://github.com/AguaClara/Textbook/issues/87">this Github issue</a> and it will be addressed as soon as possible. Please look at other comments before writing your own to avoid duplicate comments.</p>
 </div>
 </div>
 
