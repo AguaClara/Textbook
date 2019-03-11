@@ -1,5 +1,9 @@
 .. _title_Sed_Variables_List:
 
+***********************************************
+Sedimentation Variables List
+***********************************************
+
 .. list-table:: Variable Definition
    :widths: 15 10
    :header-rows: 1
