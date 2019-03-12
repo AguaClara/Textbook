@@ -1,7 +1,5 @@
 .. _title_Sed_Design:
 
-.. _heading_Sed_Design:
-
 ***********************************************
 Sedimentation Design
 ***********************************************
@@ -11,21 +9,6 @@ The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank
 1) to use flow distribution as a primary design constraint and,
 
 2) to ensure easy operation and maintenance.
-
-**Components of an AguaClara Sedimentation Tank**
-==================================================
-
-In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.
-
-.. _figure_sed_tank_overview:
-
-.. figure:: Images/sed_tank_overview.png
-    :target: https://youtu.be/ca3xVntxEzw
-    :height: 300px
-    :align: center
-    :alt: Overview of an AguaClara Sedimentation tank (click to be sent to video).
-
-Overview of an AguaClara Sedimentation tank (click to be sent to video).
 
 .. _heading_Sed_Tank_As_Circuit:
 
@@ -53,12 +36,26 @@ In electrical circuits, electrons will travel the path of least resistance in a 
 
 Remember, the goal is to have even flow distribution. It is bad if different flow paths have different head losses or changes in piezometric head. We must consider this between sedimentation bays (comparing each bay to each other) and within a single sedimentation bay (comparing the flows at different points within the sedimentation bay). We want to limit differences in "resistance" to ensure equal flow distribution. Therefore, we define
 
-.. _heading_Good_v_Bad_Hl:
-
 - anything that makes parallel flow paths different is "bad" head loss.
 - anything that increases head loss through all of the paths, to make differences between the paths less significant, is "good" head loss.
 
 We can artificially introduce the second form of head loss to dominate the resistance and render small variations due to pressure recovery insignificant. We will go through each part of the sedimentation tank to understand how these goals drive AguaClara designs. As we learn about each component, we will attempt to categorize its contribution into creating "good" or "bad" head loss.
+
+
+**Components of an AguaClara Sedimentation Tank**
+==================================================
+
+In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.
+
+.. _figure_sed_tank_overview:
+
+.. figure:: Images/sed_tank_overview.png
+    :target: https://youtu.be/ca3xVntxEzw
+    :height: 300px
+    :align: center
+    :alt: Overview of an AguaClara Sedimentation tank.
+
+    Overview of an AguaClara Sedimentation tank.
 
 .. _heading_Sed_Tank_Entrance:
 
@@ -81,11 +78,7 @@ After water exits the flocculator, it is ready for sedimentation. In AguaClara p
 
     Influent channel with pipes leading to different sedimentation bays.
 
-An important question is consider is whether or not the water in the influent channel gets evenly distributed between the different bays. If it does not get evenly distributed, which bay will receive the most water? We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to differences in velocity and pressure in different parts of the pipe.
-
-Where else in fluids have we discussed decelerating floc? We have discussed this in flow expansions. We know that in flow expansions, there are higher pressures and slower velocities. At the end of the pipe, there is low velocity and thus high pressure, driving the flow through the orifices at the end. For this same reason, a channel with orifices will have greatest flow delivery to the last orifice.
-
-So, is this type of head loss "good" or "bad"? In our :ref:`definition of "good" and "bad" <heading_Good_v_Bad_Hl>`, we stated that "bad" head loss creates unequal flow in parallel flow paths. The head loss in the influent channel is therefore "bad" head loss because it can lead to different bays in parallel receiving different flows.
+Does the water in the influent channel get evenly distributed between the different bays? If not, which bay will receive the most water? We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to differences in velocity and pressure in different parts of the pipe. Where else in fluids have we discussed decelerating floc? We have discussed this in flow expansions. And what do we know about pressure in flow expansions? We know that there is higher pressure and slower velocities. At the end of the pipe, there is low velocity and thus high pressure, driving the flow through the orifices at the end. For this same reason, a channel with orifices will have greatest flow delivery to the last orifice. Is this type of head loss "good" or "bad"? In our definition of "good" and "bad", we stated that "bad" head loss creates unequal flow in parallel flow paths. The head loss in the influent channel is therefore "bad" head loss because it can lead to different bays in parallel receiving different flows.
 
 Sedimentation units have multiple bays for a few different reasons. Plants with higher flow rates require more sedimentation bays because the flow through each bay is limited by other design constraints, namely upflow velocity, which will be discussed later. Additionally, it is good to have more than one bay for maintenance purposes; if one bay needs to be cleaned, we want to always have another that can be working. Pipe stubs can be used to plug the entrance hole to a sedimentation bay to shut it down for maintenance.
 
@@ -178,9 +171,9 @@ There is a lot of research interest in determining the optimal upflow velocity f
    :target: https://www.youtube.com/watch?v=04OksWoRmQI
    :width: 400px
    :align: center
-   :alt: Flat bottomed tank with settled flocs (click to be sent to video).
+   :alt: Flat bottomed tank with settled flocs.
 
-   Flat bottomed tank with settled flocs (click to be sent to video).
+   Flat bottomed tank with settled flocs.
 
 As shown in :numref:`figure_flat_bottomed_tank` and the linked video, in a flat bottom geometry, flocs settle in the corners of the tank because there is no direct flow of water to resuspend it. Flocs fall in such a way that the corners of the tank will fill first, with more and more flocs settling until the angle of repose is created. This angle that is occupied by flocs suggests that if we want to avoid having flocs settle, we should fill the sides of the tank in with concrete and create a sloped bottom so that there are no surfaces for settling.
 
@@ -195,15 +188,24 @@ The influent manifold, diffusers, and jet reverser work with a **sloped bottom g
 
     Cross-section of the bottom of the sedimentation tank.
 
+.. _figure_bottom_of_sed_tank_detail:
+
+.. figure:: Images/bottom_of_sed_tank_detail.png
+    :height: 300px
+    :align: center
+    :alt: Detail of the bottom of the sedimentation tank.
+
+    Cross-section of the bottom of the sedimentation tank.
+
 .. _figure_Floc_Blanket_Floc_Hopper:
 
 .. figure:: Images/Floc_Blanket_Floc_Hopper.png
    :target: https://www.youtube.com/watch?v=2x12wGb7xZE
    :width: 400px
    :align: center
-   :alt: Sloped bottom tank with fully suspended flocs (click to be sent to video).
+   :alt: Sloped bottom tank with fully suspended flocs.
 
-   Sloped bottom tank with fully suspended flocs (click to be sent to video).
+   Sloped bottom tank with fully suspended flocs.
 
 So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates in the bay by creating a system to resuspend any settled flocs.
 
@@ -213,9 +215,9 @@ So we know that the diffusers, jet reverser, and sloped bottom ensure that no sl
     :target: https://youtu.be/yJ-8g7vQTSM
     :height: 300px
     :align: center
-    :alt: Distribution of flocculated water and resuspension of settling flocs (click to be sent to video).
+    :alt: Distribution of flocculated water and resuspension of settling flocs.
 
-    Distribution of flocculated water and resuspension of settling flocs (click to be sent to video).
+    Distribution of flocculated water and resuspension of settling flocs.
 
 What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
 
@@ -234,9 +236,9 @@ What are the failure modes for this system? For one, we need to ensure that the 
    :target: https://youtu.be/WEM-YyGITlQ
    :width: 400px
    :align: center
-   :alt: Jet reverser resuspending flocs (click to be sent to video).
+   :alt: Jet reverser resuspending flocs.
 
-   Jet reverser resuspending flocs (click to be sent to video).
+   Jet reverser resuspending flocs.
 
 .. _heading_Sed_Tank_Middle:
 
@@ -258,9 +260,9 @@ For a floc blanket to form, a sedimentation system requires that 1) all flocs be
    :target: https://www.youtube.com/watch?v=w8ZFCz54IBs
    :width: 400px
    :align: center
-   :alt: Floc blanket formation over time (click to be sent to video).
+   :alt: Floc blanket formation over time.
 
-   Floc blanket formation over time (click to be sent to video).
+   Floc blanket formation over time.
 
 Studies by AguaClara researchers have found that floc blankets improve the performance of a sedimentation tank and reduces settled water turbidity by a factor of 10 for multiple reasons (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_):
 
@@ -304,9 +306,9 @@ The **floc hopper** provides an opportunity for floc consolidation. The floc wei
    :target: https://youtu.be/xh9dTjWRoto
    :width: 400px
    :align: center
-   :alt: Floc hopper detail with flocs "spilling" over the wall (click to be sent to video).
+   :alt: Floc hopper detail with flocs "spilling" over the wall.
 
-   Floc hopper detail with flocs "spilling" over the wall (click to be sent to video).
+   Floc hopper detail with flocs "spilling" over the wall.
 
 Consolidated sludge in the bottom of the floc hopper is then removed from the sedimentation tank through small drain valve controlled by the operator. Floc hoppers in the lab-scale and PF300 setting are currently set at a 45 degree angle, but further optimization is needed.
 
@@ -503,9 +505,9 @@ As we have already suggested, small spacing between plates will cause more floc 
     :target: https://youtu.be/cQJxLO0WOPA
     :height: 300px
     :align: center
-    :alt: Floc rollup between two plates (click to be sent to video).
+    :alt: Floc rollup between two plates.
 
-    Floc rollup between two plates (click to be sent to video).
+    Floc rollup between two plates.
 
 So what does this mean for plate settler spacing? Let's review some results from lab experiments. The following graph shows minimum plate settler spacing (mm) as a function of floc terminal velocity (mm/s). Some important things to note are that AguaClara plate settlers are designed for a capture velocity of 0.12 mm/s (recall that this capture velocity means that we want to capture flocs that are settling at 0.12 mm/s and faster). Before AguaClara filters were designed and deployed, AguaClara adopted the 0.12 mm/s capture velocity in an effort to reduce effluent turbidity as much as possible.
 
@@ -544,8 +546,6 @@ However, if the plates are closer together, then they will be shorter in length 
 The important thing to note is that after determining head loss as a function of plate settler spacing, we realize that the plate settlers do not provide much head loss at the design separation of 2.5 cm. Head loss through plate settlers is really small, which means that they do not contribute much to equalizing flow distribution. So, is this head loss "good" or "bad"? It is neither because it is so small that it is negligible in our overall system.
 
 The velocities of any eddies or mean flow need to be less than 4 mm/s to achieve uniform flow through plate settlers. This means that if there is any flow entering the plate settlers at greater than 4 mm/s, the head loss provided by the plate settlers will not help at all to dampen the nonuniformity and there will not be adequate flow distribution. Luckily for us, the upflow velocity through the sedimentation tank is on average 1 mm/s, which fulfills the requirement of less than 4 mm/s. However, remember the diffusers that distribute water into the sedimentation tank? They create velocities on the order of 100s of mm/s. Those high initial velocities are damped out by the floc blanket which helps to distribute the flow. If we weren't able to use the floc blanket to dampen the flow to be less than 4 mm/s, then the plate settlers would not provide any head loss to help with uniform flow distribution. This point about uniform flow is really important.
-
-.. _heading_Floc_Volcano_Intro:
 
 Now, lets discuss a plate settler problem that has not yet been solved: **floc volcanoes**. Floc volcanoes occur when water and flocs rise preferentially in one part of the sedimentation tank. At points of high velocity, flocs can rise to the surface of the water. Consider the following case: an AguaClara plant in San Nicolas, Honduras, was witnessing intermittent floc volcanoes in the sedimentation tanks. During operation, the plant was treating raw water with 4 NTU with a PACl dose of 3.5 mg/L. The settled water turbidity varied between 0.5 and 4 NTU. What might explain the floc volcanoes and very poor plant performance? Try coming up with a hypothesis that matches the information given to us from the plant. We want to figure out what is causing this problem so we can design a solution. What questions would you want to ask the technicians or engineers in Honduras? This exercise emphasizes the idea that asking the right questions are sometimes the hardest first step to learning more information.
 
@@ -638,9 +638,9 @@ Why did AguaClara design the effluent manifold to be submerged? There are 3 main
     :target: https://youtu.be/B_LEH1ezd6E
     :height: 300px
     :align: center
-    :alt: Sedimentation tank filling and emptying with clean water (click to be sent to video).
+    :alt: Sedimentation tank filling and emptying with clean water.
 
-    Sedimentation tank filling and emptying with clean water (click to be sent to video).
+    Sedimentation tank filling and emptying with clean water.
 
 Why are the orifices in the effluent manifold located at the top of the pipe?
 They are located on the top to promote even flow collection and for ease of operation and maintenance. The orifices need to be either located on the top or bottom so that they are symmetrical about the tank because if the orifices were put on the sides, then they might not draw water evenly from the entire tank. So, we are to choose between the top or the bottom; which would be better for operation and maintenance? The top is better because orifices located on the top of the pipe can be easily observed and maintained by operators in case any clogging occurs. We also want to limit the number of flocs that rise through the plate settlers and enter the effluent manifold. Locating the orifices on the top discourages that from happening by not drawing up directly from the top of plate settlers and by giving more time for flocs to potentially settle.
@@ -717,21 +717,3 @@ References
 ===========
 
 Garland, Casey, et al. “Revisiting Hydraulic Flocculator Design for Use in Water Treatment Systems with Fluidized Floc Beds.” Environmental Engineering Science, vol. 34, no. 2, 1 Feb. 2017, pp. 122–129., doi:10.1089/ees.2016.0174.
-
-Comments, Corrections, or Questions
-====================================
-
-This textbook is an ever-evolving project. If you find any errors while you are reading, or if you find something unclear, please let the authors know. Write your comment in `this Github issue <https://github.com/AguaClara/Textbook/issues/84>`_ and it will be addressed as soon as possible. Please look at other comments before writing your own to avoid duplicate comments.
-
-Appendix Photos
-================
-
-
-.. _figure_bottom_of_sed_tank_detail:
-
-.. figure:: Images/bottom_of_sed_tank_detail.png
-    :height: 300px
-    :align: center
-    :alt: Detail of the bottom of the sedimentation tank.
-
-    Cross-section of the bottom of the sedimentation tank.

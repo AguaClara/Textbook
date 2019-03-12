@@ -747,29 +747,7 @@ Flocs that are falling through a fluid that is not undergoing significant shear 
 Diffuser Design
 ======================
 
-Diffusers are shaped so that one end is a circular pipe that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle, as shown in :numref:`figure_diffuser_side_top_bottom`.
-
-.. _figure_diffuser_side_top_bottom:
-
-.. figure:: Images/diffuser_side_top_bottom.png
-    :height: 300px
-    :align: center
-    :alt: Side, top, and bottom view of a diffuser.
-
-    Side, top, and bottom view of a diffuser.
-
-Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the sedimentation tank. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form, as shown in :numref:`figure_diffuser_fabrication`. This metal form is sized so that the target shape is achieved.
-
-.. _figure_diffuser_fabrication:
-
-.. figure:: Images/diffuser_fabrication.png
-    :height: 300px
-    :align: center
-    :alt: Process of heating the PVC in oil and molding the diffuser shape on the metal forms.
-
-    Process of heating the PVC in oil and molding the diffuser shape on the metal forms.
-
-The bottom-view of the diffuser is shown in :numref:`figure_BvsS_diffuser`.
+Diffusers are shaped so that they remain a circular pipe in one end that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle. Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the sedimentation tank. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form. This metal form is sized so that the target shape is achieved.
 
 .. _figure_BvsS_diffuser:
 
@@ -787,6 +765,45 @@ The bottom-view of the diffuser is shown in :numref:`figure_BvsS_diffuser`.
 | :math:`v_{jet} =` velocity of the jet exiting the diffuser
 | :math:`Q_{diff} =` flow rate through each diffuser
 | :math:`h_{L,jet} =` head loss in jet leaving the jet reverser
+
+Determining flow through a diffuser
+-----------------------------------
+
+What is the flow rate of a single diffuser in the bottom of the sedimentation tank? Consider a sedimentation tank that is 6 m long, 1 m wide and 2 m deep, with an upflow velocity of 1 mm/s and a diffuser spacing of 5 cm.
+
+What is this question really asking? This question is asking us to understand that each diffuser "serves" a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let's imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using :math:`Q = vA`. The area, :math:`A`, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so :math:`W_{tank} = 1` m. The length of the slice is dictated by the spacing of the diffusers, :math:`B_{diff}`, so :math:`B_{diff} = 5` cm.
+
+.. math::
+
+  A = B_{diff}W_{tank}
+
+.. math::
+
+  A = 5cm * 1m
+
+.. math::
+
+  A = 50,000mm^2
+
+The problem statement includes that :math:`v_{S,V} = 1` mm/s. Plugging into our flow equation,
+
+.. math::
+
+  Q_{diff} = v_{S,V}A
+
+.. math::
+
+  Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)
+
+.. math::
+
+  Q_{diff} = 50,000 \frac{mm^3}{s}
+
+.. math::
+
+  Q_{diff} = 50 \frac{mL}{s}
+
+The flow rate of each diffuser is :math:`50 \frac{mL}{s}`.
 
 Properties of :math:`v_{jet}`
 -------------------------------
@@ -817,8 +834,6 @@ Let's begin by finding the internal width of a single diffuser. Using conservati
 .. math::
 
   Q_{diff} = v_{jet}W_{diff}S_{diff} = v_{S,V}W_{Sed}B_{diff}
-
-:math:`Q_{diff}` is determined :ref:`as an example <heading_flow_thru_diffuser>`, where we find that :math:`Q_{diff} = 50 \frac{mL}{s}`.
 
 Solving for :math:`W_{diff}`,
 
@@ -866,9 +881,3 @@ References
 ===========
 
 Garland, Casey, et al. “Revisiting Hydraulic Flocculator Design for Use in Water Treatment Systems with Fluidized Floc Beds.” Environmental Engineering Science, vol. 34, no. 2, 1 Feb. 2017, pp. 122–129., doi:10.1089/ees.2016.0174.
-
-
-Comments, Corrections, or Questions
-====================================
-
-This textbook is an ever-evolving project. If you find any errors while you are reading, or if you find something unclear, please let the authors know. Write your comment in `this Github issue <https://github.com/AguaClara/Textbook/issues/85>`_ and it will be addressed as soon as possible. Please look at other comments before writing your own to avoid duplicate comments.
