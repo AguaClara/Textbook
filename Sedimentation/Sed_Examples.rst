@@ -1,11 +1,10 @@
-.. _Sedimentation_Examples:
-
+.. _title_Sedimentation_Examples:
 
 ***************************************
 Sedimentation Examples
 ***************************************
 
-These are a few short examples of calculations required for sedimentation tank design. More examples can be found in the :ref:`Sedimentation Design Solution <heading_Sed_Design_Challenge_Solution>`. 
+These are a few short examples of calculations required for sedimentation tank design. More examples can be found in the :ref:`Sedimentation Design Solution <heading_Sed_Design_Challenge_Solution>`.
 
 Tube Settler Design
 ===============================

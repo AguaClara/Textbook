@@ -1,10 +1,10 @@
 .. _title_Sed_Design:
 
-.. _heading_Sed_Design:
-
 ***********************************************
 Sedimentation Design
 ***********************************************
+
+.. _heading_Sed_Design:
 
 The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank that was designed with two goals in mind:
 
