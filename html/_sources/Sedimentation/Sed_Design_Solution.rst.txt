@@ -9,6 +9,7 @@ Sedimentation Design Solution
   import numpy as np
   import matplotlib.pyplot as plt
 
+.. _heading_Sed_Design_Challenge_Solution:
 
 Introduction
 ============

@@ -6,7 +6,7 @@ Sedimentation Theory and Future Work
 ***************************************
 Unsolved sedimentation tank failure modes:
 
-#. Floc volcanoes and temperature-induced flow circulations [[[[link]]]]
+#. :ref:`Floc volcanoes <heading_Floc_Volcano_Intro>` and :ref:`temperature-induced flow circulations <heading_Floc_Volcanoes>`
 #. Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.
 #. Slime growth from iron-oxidizing bacteria.
 #. NOM impact on floc density
@@ -178,3 +178,8 @@ Floc Volcanoes
 Floc volcanoes are caused by differences in temperature between the water that is in a sedimentation tank and the incoming water. If the incoming water is warmer than the water that is already in the sedimentation tank, then the incoming water will be buoyant and will rise quickly to the top of the sedimentation tank and carry flocs to the effluent launder.
 
 Temperature fluctuations can be especially pronounced with small scale water supplies where small streams and small diameter transmission lines can be exposed to the sun and can warm up dramatically during a few hours of sunshine. Given that temperature changes and density changes can not easily be engineered, the only solution that we have is to reduce the time that water spends in the sedimentation tank so that the influent water is closer to the average temperature of the water in the sedimentation tank. Solar heating causing the raw water temperature to go from a minimum at 6 am to a maximum at 1 pm. AguaClara sedimentation tanks currently have a residence time of approximately 2 m / (1 mm/s) or 2000 s. We anticipate that by increasing the upflow velocity and by introducing floc recycle that the effects of temperature induced floc volcanoes will be reduced.
+
+Comments, Corrections, or Questions
+====================================
+
+This textbook is an ever-evolving project. If you find any errors while you are reading, or if you find something unclear, please let the authors know. Write your comment in `this Github issue <https://github.com/AguaClara/Textbook/issues/87>`_ and it will be addressed as soon as possible. Please look at other comments before writing your own to avoid duplicate comments.
