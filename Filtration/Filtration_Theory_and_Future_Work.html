@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Filtration Theory and Future Work &mdash; AguaClara Textbook 0.044 documentation</title>
+  <title>Filtration Theory and Future Work &mdash; AguaClara Textbook 0.047 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.044
+                0.047
               </div>
             
           
@@ -135,6 +135,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Variables_List.html">Sedimentation Variables List</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
 <ul class="current">
@@ -494,7 +495,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <p>We can solve equation <a class="reference internal" href="#equation-eq-he-filter">(636)</a> for maximum constriction velocity based on experimental measurements of the head loss at filter failure that is due to constrictions. Note that this head loss does NOT include the clean bed head loss.</p>
 <div class="math notranslate nohighlight" id="equation-eq-he-filter2">
 <span class="eqno">(637)<a class="headerlink" href="#equation-eq-he-filter2" title="Permalink to this equation">¶</a></span>\[v_{constriction_{max}} = \sqrt{ \frac{2g\Lambda_{pore}}{H_{filter}}h_{e_{filter_{max}}}}\]</div>
-<p>From <a class="reference internal" href="Filtration_Intro.html#figure-head-loss-vs-time"><span class="std std-numref">Fig. 175</span></a> we have an estimate of 35 to 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand. This gives an estimate of 137 mm/s for the constriction velocity. This could be used to obtain an estimate of the bond strength of the coagulant nanoparticles.</p>
+<p>From <a class="reference internal" href="Filtration_Intro.html#figure-head-loss-vs-time"><span class="std std-numref">Fig. 178</span></a> we have an estimate of 35 to 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand. This gives an estimate of 137 mm/s for the constriction velocity. This could be used to obtain an estimate of the bond strength of the coagulant nanoparticles.</p>
 </div>
 <div class="section" id="shear-big-flocs-to-improve-filter-performance">
 <span id="heading-shear-big-flocs-to-improve-filter-performance"></span><h2>Shear big flocs to improve filter performance<a class="headerlink" href="#shear-big-flocs-to-improve-filter-performance" title="Permalink to this headline">¶</a></h2>
@@ -560,7 +561,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 </div>
 <div class="figure align-center" id="id2">
 <span id="figure-head-loss-ergun-and-kozeny"></span><a class="reference internal image-reference" href="../_images/Head_loss_Ergun_and_Kozeny.png"><img alt="Head loss Ergun and Kozeny" src="../_images/Head_loss_Ergun_and_Kozeny.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 180 </span><span class="caption-text">The Ergun and Kozeny equations are very similar even at approach velocities that are much larger than are used in rapid sand filtration. At very high velocities the turbulent term in the Ergun equation begins to be significant.</span></p>
+<p class="caption"><span class="caption-number">Fig. 183 </span><span class="caption-text">The Ergun and Kozeny equations are very similar even at approach velocities that are much larger than are used in rapid sand filtration. At very high velocities the turbulent term in the Ergun equation begins to be significant.</span></p>
 </div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Need to use a root finding method here because f_phi is a function of velocity</span>
 <span class="c1"># Will use a graphical solution for now</span>
@@ -575,7 +576,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 </div>
 <div class="figure align-center" id="id3">
 <span id="figure-g-vs-approach-velocity"></span><a class="reference internal image-reference" href="../_images/G_vs_approach_velocity.png"><img alt="G vs approach velocity" src="../_images/G_vs_approach_velocity.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 181 </span><span class="caption-text">The Camp Stein velocity gradient increases rapidly with approach velocity.</span></p>
+<p class="caption"><span class="caption-number">Fig. 184 </span><span class="caption-text">The Camp Stein velocity gradient increases rapidly with approach velocity.</span></p>
 </div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#We guess at a velocity gradient by extrapolating wildly to a 20 um floc.</span>
 <span class="n">G_CS</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">fm</span><span class="o">.</span><span class="n">ener_dis_diam_floc</span><span class="p">(</span><span class="mi">40</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">um</span><span class="p">))</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temperature</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">Hz</span><span class="p">)</span>
@@ -743,7 +744,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.044',
+            VERSION:'0.047',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

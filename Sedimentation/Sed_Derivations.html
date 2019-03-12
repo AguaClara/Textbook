@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sedimentation Derivations &mdash; AguaClara Textbook 0.044 documentation</title>
+  <title>Sedimentation Derivations &mdash; AguaClara Textbook 0.047 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.044
+                0.047
               </div>
             
           
@@ -163,17 +163,18 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#flocculator-and-floc-blanket-paradox">Flocculator and Floc Blanket Paradox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#diffuser-design">Diffuser Design</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#determining-flow-through-a-diffuser">Determining flow through a diffuser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#properties-of">Properties of <span class="math notranslate nohighlight">\(v_{jet}\)</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id1">Diffuser Design</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comments-corrections-or-questions">Comments, Corrections, or Questions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Variables_List.html">Sedimentation Variables List</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
 <ul>
@@ -770,10 +771,20 @@ rollup constraints</td>
 </div>
 <div class="section" id="diffuser-design">
 <span id="heading-sed-tank-diffuser-design"></span><h2>Diffuser Design<a class="headerlink" href="#diffuser-design" title="Permalink to this headline">¶</a></h2>
-<p>Diffusers are shaped so that they remain a circular pipe in one end that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle. Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the sedimentation tank. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form. This metal form is sized so that the target shape is achieved.</p>
+<p>Diffusers are shaped so that one end is a circular pipe that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle, as shown in <a class="reference internal" href="#figure-diffuser-side-top-bottom"><span class="std std-numref">Fig. 166</span></a>.</p>
 <div class="figure align-center" id="id17">
+<span id="figure-diffuser-side-top-bottom"></span><a class="reference internal image-reference" href="../_images/diffuser_side_top_bottom.png"><img alt="Side, top, and bottom view of a diffuser." src="../_images/diffuser_side_top_bottom.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 166 </span><span class="caption-text">Side, top, and bottom view of a diffuser.</span></p>
+</div>
+<p>Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the sedimentation tank. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form, as shown in <a class="reference internal" href="#figure-diffuser-fabrication"><span class="std std-numref">Fig. 167</span></a>. This metal form is sized so that the target shape is achieved.</p>
+<div class="figure align-center" id="id18">
+<span id="figure-diffuser-fabrication"></span><a class="reference internal image-reference" href="../_images/diffuser_fabrication.png"><img alt="Process of heating the PVC in oil and molding the diffuser shape on the metal forms." src="../_images/diffuser_fabrication.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 167 </span><span class="caption-text">Process of heating the PVC in oil and molding the diffuser shape on the metal forms.</span></p>
+</div>
+<p>The bottom-view of the diffuser is shown in <a class="reference internal" href="#figure-bvss-diffuser"><span class="std std-numref">Fig. 168</span></a>.</p>
+<div class="figure align-center" id="id19">
 <span id="figure-bvss-diffuser"></span><a class="reference internal image-reference" href="../_images/BvsS_diffuser.png"><img alt="Diagram of diffuser exit." src="../_images/BvsS_diffuser.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 166 </span><span class="caption-text">Diagram of diffuser exit.</span></p>
+<p class="caption"><span class="caption-number">Fig. 168 </span><span class="caption-text">Diagram of diffuser exit.</span></p>
 </div>
 <div class="line-block">
 <div class="line"><span class="math notranslate nohighlight">\(T_{diff} =\)</span> thickness of diffuser wall</div>
@@ -784,35 +795,14 @@ rollup constraints</td>
 <div class="line"><span class="math notranslate nohighlight">\(Q_{diff} =\)</span> flow rate through each diffuser</div>
 <div class="line"><span class="math notranslate nohighlight">\(h_{L,jet} =\)</span> head loss in jet leaving the jet reverser</div>
 </div>
-<div class="section" id="determining-flow-through-a-diffuser">
-<h3>Determining flow through a diffuser<a class="headerlink" href="#determining-flow-through-a-diffuser" title="Permalink to this headline">¶</a></h3>
-<p>What is the flow rate of a single diffuser in the bottom of the sedimentation tank? Consider a sedimentation tank that is 6 m long, 1 m wide and 2 m deep, with an upflow velocity of 1 mm/s and a diffuser spacing of 5 cm.</p>
-<p>What is this question really asking? This question is asking us to understand that each diffuser “serves” a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let’s imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using <span class="math notranslate nohighlight">\(Q = vA\)</span>. The area, <span class="math notranslate nohighlight">\(A\)</span>, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so <span class="math notranslate nohighlight">\(W_{tank} = 1\)</span> m. The length of the slice is dictated by the spacing of the diffusers, <span class="math notranslate nohighlight">\(B_{diff}\)</span>, so <span class="math notranslate nohighlight">\(B_{diff} = 5\)</span> cm.</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-68">
-<span class="eqno">(490)<a class="headerlink" href="#equation-sedimentation-sed-derivations-68" title="Permalink to this equation">¶</a></span>\[A = B_{diff}W_{tank}\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-69">
-<span class="eqno">(491)<a class="headerlink" href="#equation-sedimentation-sed-derivations-69" title="Permalink to this equation">¶</a></span>\[A = 5cm * 1m\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-70">
-<span class="eqno">(492)<a class="headerlink" href="#equation-sedimentation-sed-derivations-70" title="Permalink to this equation">¶</a></span>\[A = 50,000mm^2\]</div>
-<p>The problem statement includes that <span class="math notranslate nohighlight">\(v_{S,V} = 1\)</span> mm/s. Plugging into our flow equation,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-71">
-<span class="eqno">(493)<a class="headerlink" href="#equation-sedimentation-sed-derivations-71" title="Permalink to this equation">¶</a></span>\[Q_{diff} = v_{S,V}A\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-72">
-<span class="eqno">(494)<a class="headerlink" href="#equation-sedimentation-sed-derivations-72" title="Permalink to this equation">¶</a></span>\[Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-73">
-<span class="eqno">(495)<a class="headerlink" href="#equation-sedimentation-sed-derivations-73" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50,000 \frac{mm^3}{s}\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-74">
-<span class="eqno">(496)<a class="headerlink" href="#equation-sedimentation-sed-derivations-74" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50 \frac{mL}{s}\]</div>
-<p>The flow rate of each diffuser is <span class="math notranslate nohighlight">\(50 \frac{mL}{s}\)</span>.</p>
-</div>
 <div class="section" id="properties-of">
 <h3>Properties of <span class="math notranslate nohighlight">\(v_{jet}\)</span><a class="headerlink" href="#properties-of" title="Permalink to this headline">¶</a></h3>
 <p><span class="math notranslate nohighlight">\(v_{jet}\)</span> is defined as the velocity of the water jet exiting the diffuser. After exiting the diffuser, this water jet is sent into the jet reverser to make a 180 degree turn. Does the water jet change pressure or velocity as it exits the jet reverser? Do we need to consider the effects of a <em>vena contracta</em>?</p>
 <p>Recall that a <a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#heading-what-is-a-vena-contracta"><span class="std std-ref">*vena contracta*</span></a> is associated with a change in pressure that causes a contraction and subsequent acceleration of the fluid. Water exiting the diffuser is pointed directly down and the streamlines are straight and parallel, which means that the pressure across the streamlines is constant. Water exiting the jet reverser is pointed directly up and the streamlines are straight and parallel, which again means that the pressure across the streamlines is constant. Because the pressure is constant at the exit of the diffuser and at the exit of the jet reverser, we assume that the pressure of the water in the space between those two points is also constant because there is no physical barrier. If the pressure in this bottom section of the sedimentation tank is constant from the exit of the diffuser to the exit of the jet reverser, we can infer that they are equal.</p>
 <p>By Bernoulli, if the pressures between the exit of the diffuser to the exit of the jet reverser are equal then the velocities must also be equal. Bernoulli is applicable here because there is no flow expansion yet. The shear along the wall of the jet reverser is insignificant due to the short flow path. The water accelerates to account for the directional change but the absolute velocity does not change as it goes around the jet reverser.</p>
-<div class="figure align-center" id="id18">
+<div class="figure align-center" id="id20">
 <span id="figure-wdiff-wjet"></span><a class="reference internal image-reference" href="../_images/Wdiff_Wjet.png"><img alt="Diagram of diffuser exit and jet." src="../_images/Wdiff_Wjet.png" style="height: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 167 </span><span class="caption-text">Diagram of diffuser exit and jet.</span></p>
+<p class="caption"><span class="caption-number">Fig. 169 </span><span class="caption-text">Diagram of diffuser exit and jet.</span></p>
 </div>
 <p>Therefore, the velocity at the exit of the diffuser is equal to the velocity at the exit of the jet reverser.</p>
 </div>
@@ -820,34 +810,39 @@ rollup constraints</td>
 <h3>Diffuser Design<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our sedimentation tank, we want an upflow velocity of 1 mm/s. Additionally, because diffusers are a key component of our “sedimentation tank as a circuit”, we want to precisely control head loss in the jet leaving the jet reverser because that will help us achieve uniform flow within and between sedimentation tanks. AguaClara designs set head loss in the jet constant at 1 cm.</p>
 <p>Let’s begin by finding the internal width of a single diffuser. Using conservation of flow, we know that,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-75">
-<span class="eqno">(497)<a class="headerlink" href="#equation-sedimentation-sed-derivations-75" title="Permalink to this equation">¶</a></span>\[Q_{diff} = v_{jet}W_{diff}S_{diff} = v_{S,V}W_{Sed}B_{diff}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-68">
+<span class="eqno">(490)<a class="headerlink" href="#equation-sedimentation-sed-derivations-68" title="Permalink to this equation">¶</a></span>\[Q_{diff} = v_{jet}W_{diff}S_{diff} = v_{S,V}W_{Sed}B_{diff}\]</div>
+<p><span class="math notranslate nohighlight">\(Q_{diff}\)</span> is determined <a class="reference internal" href="Sed_Examples.html#heading-flow-thru-diffuser"><span class="std std-ref">as an example</span></a>, where we find that <span class="math notranslate nohighlight">\(Q_{diff} = 50 \frac{mL}{s}\)</span>.</p>
 <p>Solving for <span class="math notranslate nohighlight">\(W_{diff}\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-76">
-<span class="eqno">(498)<a class="headerlink" href="#equation-sedimentation-sed-derivations-76" title="Permalink to this equation">¶</a></span>\[W_{diff} = \frac{v_{S,V}W_{Sed}B_{diff}}{v_{jet}S_{diff}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-69">
+<span class="eqno">(491)<a class="headerlink" href="#equation-sedimentation-sed-derivations-69" title="Permalink to this equation">¶</a></span>\[W_{diff} = \frac{v_{S,V}W_{Sed}B_{diff}}{v_{jet}S_{diff}}\]</div>
 <p>Using the constraint of head loss in the jet and solving for <span class="math notranslate nohighlight">\(v_{jet}\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-77">
-<span class="eqno">(499)<a class="headerlink" href="#equation-sedimentation-sed-derivations-77" title="Permalink to this equation">¶</a></span>\[h_{L,jet} = \frac{v_{jet}^2}{2g}\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-78">
-<span class="eqno">(500)<a class="headerlink" href="#equation-sedimentation-sed-derivations-78" title="Permalink to this equation">¶</a></span>\[v_{jet} = \sqrt{2gh_{L,jet}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-70">
+<span class="eqno">(492)<a class="headerlink" href="#equation-sedimentation-sed-derivations-70" title="Permalink to this equation">¶</a></span>\[h_{L,jet} = \frac{v_{jet}^2}{2g}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-71">
+<span class="eqno">(493)<a class="headerlink" href="#equation-sedimentation-sed-derivations-71" title="Permalink to this equation">¶</a></span>\[v_{jet} = \sqrt{2gh_{L,jet}}\]</div>
 <p>Substituting back into the equation for <span class="math notranslate nohighlight">\(W_{diff}\)</span>, we can find the minimum diffuser width required to not exceed target head loss as,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-79">
-<span class="eqno">(501)<a class="headerlink" href="#equation-sedimentation-sed-derivations-79" title="Permalink to this equation">¶</a></span>\[W_{diff,min} = \frac{v_{S,V}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-72">
+<span class="eqno">(494)<a class="headerlink" href="#equation-sedimentation-sed-derivations-72" title="Permalink to this equation">¶</a></span>\[W_{diff,min} = \frac{v_{S,V}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}\]</div>
 <p>Now that we have determined the minimum width, we can use known parameters and constraints to find a precise value for <span class="math notranslate nohighlight">\(W_{diff}\)</span> and <span class="math notranslate nohighlight">\(v_{jet}\)</span>.</p>
 <p>Using known constants for <span class="math notranslate nohighlight">\(v_{S,V} = 1 \frac{mm}{s}\)</span>, <span class="math notranslate nohighlight">\(h_{L,jet} = 1 cm\)</span>, and <span class="math notranslate nohighlight">\(W_{Sed} = 1m\)</span>, we can find that <span class="math notranslate nohighlight">\(W_{diff,min} = 2.7mm\)</span>. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find <span class="math notranslate nohighlight">\(W_{diff}\)</span> we round up to 3.175 mm.</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-80">
-<span class="eqno">(502)<a class="headerlink" href="#equation-sedimentation-sed-derivations-80" title="Permalink to this equation">¶</a></span>\[W_{diff} = 3.175 mm\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-73">
+<span class="eqno">(495)<a class="headerlink" href="#equation-sedimentation-sed-derivations-73" title="Permalink to this equation">¶</a></span>\[W_{diff} = 3.175 mm\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(v_{jet}\)</span> from our earlier equations yields,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-81">
-<span class="eqno">(503)<a class="headerlink" href="#equation-sedimentation-sed-derivations-81" title="Permalink to this equation">¶</a></span>\[v_{jet} = \frac{v_{S,V}W_{Sed}B_{diff}}{W_{diff}S_{diff}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-74">
+<span class="eqno">(496)<a class="headerlink" href="#equation-sedimentation-sed-derivations-74" title="Permalink to this equation">¶</a></span>\[v_{jet} = \frac{v_{S,V}W_{Sed}B_{diff}}{W_{diff}S_{diff}}\]</div>
 <p>Using known constants,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-82">
-<span class="eqno">(504)<a class="headerlink" href="#equation-sedimentation-sed-derivations-82" title="Permalink to this equation">¶</a></span>\[v_{jet} \approx 380 \frac{mm}{s}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-75">
+<span class="eqno">(497)<a class="headerlink" href="#equation-sedimentation-sed-derivations-75" title="Permalink to this equation">¶</a></span>\[v_{jet} \approx 380 \frac{mm}{s}\]</div>
 </div>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p>Garland, Casey, et al. “Revisiting Hydraulic Flocculator Design for Use in Water Treatment Systems with Fluidized Floc Beds.” Environmental Engineering Science, vol. 34, no. 2, 1 Feb. 2017, pp. 122–129., doi:10.1089/ees.2016.0174.</p>
+</div>
+<div class="section" id="comments-corrections-or-questions">
+<h2>Comments, Corrections, or Questions<a class="headerlink" href="#comments-corrections-or-questions" title="Permalink to this headline">¶</a></h2>
+<p>This textbook is an ever-evolving project. If you find any errors while you are reading, or if you find something unclear, please let the authors know. Write your comment in <a class="reference external" href="https://github.com/AguaClara/Textbook/issues/85">this Github issue</a> and it will be addressed as soon as possible. Please look at other comments before writing your own to avoid duplicate comments.</p>
 </div>
 </div>
 
@@ -893,7 +888,7 @@ rollup constraints</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.044',
+            VERSION:'0.047',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
