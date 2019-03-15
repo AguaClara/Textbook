@@ -87,7 +87,6 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -154,11 +153,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Variables_List.html">Sedimentation Variables List</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
 <ul>
@@ -167,6 +164,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -290,10 +288,10 @@
 <li>Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).</li>
 </ol>
 </div></blockquote>
-<p>These multiple steps cover a wide range of length scales and it is not clear at the onset which processes might be the rate limiting steps. We will develop time scale estimates for several of these steps to help identify which processes will likely require the most attention to design. Many of these transport processes are presumed to occur in parallel. <a class="reference internal" href="#figure-transport-length-scales"><span class="std std-numref">Fig. 44</span></a> shows the range of length scales.</p>
+<p>These multiple steps cover a wide range of length scales and it is not clear at the onset which processes might be the rate limiting steps. We will develop time scale estimates for several of these steps to help identify which processes will likely require the most attention to design. Many of these transport processes are presumed to occur in parallel. <a class="reference internal" href="#figure-transport-length-scales"><span class="std std-numref">Fig. 42</span></a> shows the range of length scales.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-transport-length-scales"></span><a class="reference internal image-reference" href="../_images/rapid_mix_macro_to_nano_scale.png"><img alt="rapid mix macro to nano scale" src="../_images/rapid_mix_macro_to_nano_scale.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 44 </span><span class="caption-text">Transport of coagulant nanoparticles occurs over length scales ranging from meter to a fraction of a nanometer.</span></p>
+<p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">Transport of coagulant nanoparticles occurs over length scales ranging from meter to a fraction of a nanometer.</span></p>
 </div>
 <div class="section" id="chemistry-of-coagulant-nanoparticles">
 <span id="heading-chemistry-of-coagulant-nanoparticles"></span><h2>Chemistry of Coagulant Nanoparticles<a class="headerlink" href="#chemistry-of-coagulant-nanoparticles" title="Permalink to this headline">¶</a></h2>
@@ -312,10 +310,10 @@
 <p>The coagulants used for drinking water treatment are acidic and thus result in a lowering of the pH of the treated water. The optimal pH for aluminum coagulant nanoparticle formation is between pH of 6.5 and 8.5. This is also the <a class="reference external" href="https://www.epa.gov/dwstandardsregulations/secondary-drinking-water-standards-guidance-nuisance-chemicals">pH range set by the EPA secondary standards for drinking water</a>. Although many water sources are within this pH range, there are some waters with more extreme values of pH. The aluminum and iron based coagulants are also acidic and in some waters the pH may drop below the ideal range when adding the coagulant. When the pH is outside the acceptable range it is necessary to adjust the pH by adding either a base or an acid.</p>
 <p>When aluminum sulfate (alum) to water it dissociates and then precipitates as <span class="math notranslate nohighlight">\(Al(OH)_3\)</span>. In the process protons, <span class="math notranslate nohighlight">\(H^+\)</span> are released and thus the pH (<span class="math notranslate nohighlight">\(-log[H^+]\)</span>) decreases.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-0">
-<span class="eqno">(122)<a class="headerlink" href="#equation-rapid-mix-rm-intro-0" title="Permalink to this equation">¶</a></span>\[Al_2(SO_4)_3 + 6H_2O\rightarrow 2Al(OH)_3 + 6H^+ + 3SO_4^{-2}\]</div>
-<p>The release of these protons reduces the acid neutralizing capacity, ANC, (also known as alkalinity) of the water. ANC is traditionally measured with units of mg/L of <span class="math notranslate nohighlight">\(CaCO_3\)</span> rather than eq/L.  <a class="reference internal" href="#table-anc-consumed-by-alum"><span class="std std-numref">Table 6</span></a> shows the relationship between ANC measured as mg/L of <span class="math notranslate nohighlight">\(CaCO_3\)</span> and alum (<span class="math notranslate nohighlight">\(Al_2(SO_4)_3 \cdot 14H_2O\)</span>)</p>
+<span class="eqno">(120)<a class="headerlink" href="#equation-rapid-mix-rm-intro-0" title="Permalink to this equation">¶</a></span>\[Al_2(SO_4)_3 + 6H_2O\rightarrow 2Al(OH)_3 + 6H^+ + 3SO_4^{-2}\]</div>
+<p>The release of these protons reduces the acid neutralizing capacity, ANC, (also known as alkalinity) of the water. ANC is traditionally measured with units of mg/L of <span class="math notranslate nohighlight">\(CaCO_3\)</span> rather than eq/L.  <a class="reference internal" href="#table-anc-consumed-by-alum"><span class="std std-numref">Table 5</span></a> shows the relationship between ANC measured as mg/L of <span class="math notranslate nohighlight">\(CaCO_3\)</span> and alum (<span class="math notranslate nohighlight">\(Al_2(SO_4)_3 \cdot 14H_2O\)</span>)</p>
 <span id="table-anc-consumed-by-alum"></span><table border="1" class="docutils align-left" id="id3">
-<caption><span class="caption-number">Table 6 </span><span class="caption-text">Reduction in ANC caused by addition of alum.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Reduction in ANC caused by addition of alum.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -354,14 +352,14 @@
 <p>Polyaluminum chloride (PACl) is another aluminum based coagulant that performs similarly to alum. PACl is manufactured by slowly titrating an acidic solution containing dissolved aluminum with a base (in the chemical plant) to produce a meta-stable and soluble polymeric aluminum. PACl consumes less alkalinity (ANC) because it is partially neutralized by the titration with a base. In addition, the aluminum mass fraction of PACl is higher than in alum because there are no attached water molecules. The mass of PACl required for flocculation is less than for alum due largely to the higher aluminum fraction. The lower mass of PACl required is an economic benefit when shipping is a significant cost of the coagulant.</p>
 <p>There are many different molecular formulas given for PACl. The molecular formulas are either from the perspective of the chemical supplier or represent the composition of the PACl nanoparticles. The molecular formula from the chemical supplier represents the extent of neutralization and hence the replacement of chloride with hydroxide. In that case the PACl molecular formula is:</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-1">
-<span class="eqno">(123)<a class="headerlink" href="#equation-rapid-mix-rm-intro-1" title="Permalink to this equation">¶</a></span>\[[Al_n(OH)_mCl_{3n-m}]_x\]</div>
+<span class="eqno">(121)<a class="headerlink" href="#equation-rapid-mix-rm-intro-1" title="Permalink to this equation">¶</a></span>\[[Al_n(OH)_mCl_{3n-m}]_x\]</div>
 <p>The extent of the PACl titration with base is defined as basicity. Basicity is the ratio of hydroxyl equivalents to aluminum equivalents. Basicity of 1 would mean that the PACl does not produce any protons when it dissolves in water. Basicity of 0 means it produces 3 protons per Al (like alum). The equation for basicity is:</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-2">
-<span class="eqno">(124)<a class="headerlink" href="#equation-rapid-mix-rm-intro-2" title="Permalink to this equation">¶</a></span>\[Basicity = \left( \frac{m}{3n}\right)\]</div>
+<span class="eqno">(122)<a class="headerlink" href="#equation-rapid-mix-rm-intro-2" title="Permalink to this equation">¶</a></span>\[Basicity = \left( \frac{m}{3n}\right)\]</div>
 <p>The lowest basicity commercial PACl formulations are about 10%. Most PACls are in the medium to high basicity range (50-70%). The highest stable basicity (83%) is aluminum chlorohydrate (<span class="math notranslate nohighlight">\(Al_2(OH)_5Cl\)</span>) that is useful for treating water with very low ANC.</p>
 <p>The ANC of the aluminum coagulant can be obtained from the number of protons it releases:</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-3">
-<span class="eqno">(125)<a class="headerlink" href="#equation-rapid-mix-rm-intro-3" title="Permalink to this equation">¶</a></span>\[ANC_{Al} = 3(Basicity-1)[Al] = \left(\frac{m}{n} - 3\right)[Al] = \Pi_{Al}[Al]\]</div>
+<span class="eqno">(123)<a class="headerlink" href="#equation-rapid-mix-rm-intro-3" title="Permalink to this equation">¶</a></span>\[ANC_{Al} = 3(Basicity-1)[Al] = \left(\frac{m}{n} - 3\right)[Al] = \Pi_{Al}[Al]\]</div>
 <div class="line-block">
 <div class="line">where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\Pi_{Al}=\left(\frac{m}{n} - 3\right)\)</span> is ANC per mole of aluminum for the given coagulant</div>
@@ -369,7 +367,7 @@
 <p>Thus the ANC of alum (with 0 hydroxides) is <span class="math notranslate nohighlight">\(-3[Al]\)</span>. The method of calculating the <span class="math notranslate nohighlight">\(ANC_{Al}\)</span> will be used to calculate the amount of base that must be added to achieve a target pH.</p>
 <p>The molecular formula of the PACl nanoparticles is always some combination of Al, O, and H. One common molecular structure is a Keggin structure with 13 aluminum atoms. This molecule has a tetrahedral Al atom in the center of the cluster coordinated to 4 oxygen atoms. The molecular formula of the Keggin structured aluminum molecule is</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-4">
-<span class="eqno">(126)<a class="headerlink" href="#equation-rapid-mix-rm-intro-4" title="Permalink to this equation">¶</a></span>\[AlO_4Al_{12}(OH)_{24}(H_2O)_{12}^{7+}\]</div>
+<span class="eqno">(124)<a class="headerlink" href="#equation-rapid-mix-rm-intro-4" title="Permalink to this equation">¶</a></span>\[AlO_4Al_{12}(OH)_{24}(H_2O)_{12}^{7+}\]</div>
 <p>The attached water molecules are sometimes omitted. Coagulant nanoparticles are presumably created by aggregation of these Keggin structure molecules.</p>
 </div>
 <div class="section" id="buffering-capacity-of-natural-waters">
@@ -380,10 +378,10 @@
 </div>
 <div class="section" id="ph-range-for-precipitation-of-coagulant-nanoparticles">
 <span id="heading-ph-range-for-precipitation-of-coagulant-nanoparticles"></span><h3>pH Range for Precipitation of Coagulant Nanoparticles<a class="headerlink" href="#ph-range-for-precipitation-of-coagulant-nanoparticles" title="Permalink to this headline">¶</a></h3>
-<p>A critical property of coagulants is that in order to act as an adhesive between particles they must be solid phase at neutral pH. Both Al(III) and Fe(III) have low solubility at neutral pH and thus meet this requirement. The pH region of low solubility sets the range of pH where flocculation is effective. <a class="reference internal" href="#figure-al-solubility"><span class="std std-numref">Fig. 45</span></a> shows the solubilty of aluminum as a function of pH.</p>
+<p>A critical property of coagulants is that in order to act as an adhesive between particles they must be solid phase at neutral pH. Both Al(III) and Fe(III) have low solubility at neutral pH and thus meet this requirement. The pH region of low solubility sets the range of pH where flocculation is effective. <a class="reference internal" href="#figure-al-solubility"><span class="std std-numref">Fig. 43</span></a> shows the solubilty of aluminum as a function of pH.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-al-solubility"></span><a class="reference internal image-reference" href="../_images/Al_solubility.png"><img alt="Al solubility" src="../_images/Al_solubility.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 45 </span><span class="caption-text">Solubility of aluminum as a function of pH. Figure adapted from <a class="reference external" href="http://dx.doi.org/10.2166/aqua.2006.062">Pernitsky and Edzwald</a>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 43 </span><span class="caption-text">Solubility of aluminum as a function of pH. Figure adapted from <a class="reference external" href="http://dx.doi.org/10.2166/aqua.2006.062">Pernitsky and Edzwald</a>.</span></p>
 </div>
 <p>Research is needed to quantify flocculation performance in continuous flow floc/floc blanket/plate settler systems as a function of pH.</p>
 <p>The aluminum concentration range used for flocculation ranges from approximately 0.4 - 10 mg/L and is strongly influenced by the concentration of dissolved organic matter and the concentration of suspended solids. The flocculation and floc blanket capacity to produce collisions between suspended particles also influences the required aluminum concentration.</p>
@@ -399,32 +397,27 @@
 <p>Fluid mixing is the process by which large scale eddies distribute packets of the coagulant stock throughout the raw water. The term “Rapid mix” is probably best used to describe this process. Traditional methods of achieving this fluid mixing include various methods of generating intense turbulence. Fluid mixing is able to rapidly blend the coagulant with the raw water in a matter of a few seconds. The equations describing the fluid mixing process are presented in the section on <a class="reference internal" href="RM_Derivations.html#heading-estimates-of-time-required-for-mixing-processes"><span class="std std-ref">Estimates of time required for mixing processes</span></a>.</p>
 <div class="figure align-center" id="id5">
 <span id="figure-backmix"></span><a class="reference internal image-reference" href="../_images/Backmix.jpg"><img alt="Backmix" src="../_images/Backmix.jpg" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 46 </span><span class="caption-text">Backmix: a mechanical rapid mixer that has a relatively long residence time in a completely mixed flow reactor.</span></p>
+<p class="caption"><span class="caption-number">Fig. 44 </span><span class="caption-text">Backmix: a mechanical rapid mixer that has a relatively long residence time in a completely mixed flow reactor.</span></p>
 </div>
 <div class="figure align-center" id="id6">
 <span id="figure-inline"></span><a class="reference internal image-reference" href="../_images/Inline.jpg"><img alt="Inline" src="../_images/Inline.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 47 </span><span class="caption-text">Inline: a mechanical rapid mixer that has a short residence time in a completely mixed flow reactor that is often built into a pipe.</span></p>
+<p class="caption"><span class="caption-number">Fig. 45 </span><span class="caption-text">Inline: a mechanical rapid mixer that has a short residence time in a completely mixed flow reactor that is often built into a pipe.</span></p>
 </div>
 <div class="figure align-center" id="id7">
 <span id="figure-hydraulic-jump"></span><a class="reference internal image-reference" href="../_images/hydraulic_jump.jpg"><img alt="hydraulic jump" src="../_images/hydraulic_jump.jpg" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 48 </span><span class="caption-text">Hydraulic jump: a hydraulic rapid mixer uses the flow expansion downstream from supercritical open channel flow.</span></p>
+<p class="caption"><span class="caption-number">Fig. 46 </span><span class="caption-text">Hydraulic jump: a hydraulic rapid mixer uses the flow expansion downstream from supercritical open channel flow.</span></p>
 </div>
-<p>The hydraulic jump in <a class="reference internal" href="#figure-hydraulic-jump"><span class="std std-numref">Fig. 48</span></a> uses a flow expansion to generate mixing in an open channel and that suggests that a flow expansion could also be used to generate mixing in a closed conduit. AguaClara rapid mix units consist of an orifice in the bottom of the Linear Flow Orifice Meter (<a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#heading-lfom"><span class="std std-ref">Linear Flow Orifice Meter (LFOM)</span></a>) where the water enters the flocculator (see <a class="reference internal" href="#figure-rapid-mix-orifice"><span class="std std-numref">Fig. 49</span></a>). However, given that fluid mixing is so easy to attain it is unclear if the energy used in the rapid mix orifice is necessary.</p>
+<p>The hydraulic jump in <a class="reference internal" href="#figure-hydraulic-jump"><span class="std std-numref">Fig. 46</span></a> uses a flow expansion to generate mixing in an open channel and that suggests that a flow expansion could also be used to generate mixing in a closed conduit. AguaClara rapid mix units consist of an orifice in the bottom of the Linear Flow Orifice Meter (<a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#heading-lfom"><span class="std std-ref">Linear Flow Orifice Meter (LFOM)</span></a>) where the water enters the flocculator (see <a class="reference internal" href="#figure-rapid-mix-orifice"><span class="std std-numref">Fig. 47</span></a>). However, given that fluid mixing is so easy to attain it is unclear if the energy used in the rapid mix orifice is necessary.</p>
 <div class="figure align-center" id="id8">
 <span id="figure-rapid-mix-orifice"></span><a class="reference internal image-reference" href="../_images/Rapid_mix_orifice.png"><img alt="Rapid mix orifice" src="../_images/Rapid_mix_orifice.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 49 </span><span class="caption-text">The orifice creates a high velocity jet that generates mixing as it expands in the contact chamber prior to flocculation.</span></p>
+<p class="caption"><span class="caption-number">Fig. 47 </span><span class="caption-text">The orifice creates a high velocity jet that generates mixing as it expands in the contact chamber prior to flocculation.</span></p>
 </div>
 <div class="section" id="conventional-mechanical-rapid-mix">
 <span id="heading-conventional-mechanical-rapid-mix"></span><h3>Conventional Mechanical Rapid Mix<a class="headerlink" href="#conventional-mechanical-rapid-mix" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="maximum-velocity-gradients">
 <span id="heading-conventional-maximum-velocity-gradients"></span><h3>Maximum Velocity Gradients<a class="headerlink" href="#maximum-velocity-gradients" title="Permalink to this headline">¶</a></h3>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-
-<span class="n">Mix_HRT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">85</span><span class="p">])</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Mix_HRT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">85</span><span class="p">])</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">Mix_G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4000</span><span class="p">,</span><span class="mi">1500</span><span class="p">,</span><span class="mi">950</span><span class="p">,</span><span class="mi">850</span><span class="p">,</span><span class="mi">750</span><span class="p">])</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">Mix_CP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">Mix_HRT</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Mix_G</span><span class="p">))</span>
 <span class="n">Mix_Gt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">Mix_HRT</span><span class="p">,</span> <span class="n">Mix_G</span><span class="p">)</span>
@@ -441,28 +434,28 @@
 </div>
 <div class="figure align-center" id="id9">
 <span id="figure-mechanical-rm-gt"></span><a class="reference internal image-reference" href="../_images/Mechanical_RM_Gt.png"><img alt="Mechanical RM Gt" src="../_images/Mechanical_RM_Gt.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 50 </span><span class="caption-text">Mechanical rapid mix units use a wide range of velocity gradients and residence times.</span></p>
+<p class="caption"><span class="caption-number">Fig. 48 </span><span class="caption-text">Mechanical rapid mix units use a wide range of velocity gradients and residence times.</span></p>
 </div>
 <p>Conventional rapid mix units use mechanical or potential energy to generate intense turbulence to begin the mixing process. Conventional design is based on the use of <span class="math notranslate nohighlight">\(\bar G\)</span> (an average velocity gradient) as a design parameter. We don’t yet know what the design objective is for rapid mix and thus it isn’t clear which parameters matter. We hypothesize that both velocity gradients that cause deformation of the fluid and time for molecular diffusion are required to ultimately transport coagulant nanoparticles to the surfaces of clay particles.</p>
 <p>The velocity gradient can be obtained from the rate at which mechanical energy is being dissipated and converted to heat by viscosity.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-5">
-<span class="eqno">(127)<a class="headerlink" href="#equation-rapid-mix-rm-intro-5" title="Permalink to this equation">¶</a></span>\[\varepsilon = G^2 \nu\]</div>
+<span class="eqno">(125)<a class="headerlink" href="#equation-rapid-mix-rm-intro-5" title="Permalink to this equation">¶</a></span>\[\varepsilon = G^2 \nu\]</div>
 <p>where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the energy dissipation rate, <span class="math notranslate nohighlight">\(G\)</span> is the velocity gradient, and <span class="math notranslate nohighlight">\(\nu\)</span> is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-6">
-<span class="eqno">(128)<a class="headerlink" href="#equation-rapid-mix-rm-intro-6" title="Permalink to this equation">¶</a></span>\[P = \bar\varepsilon \rlap{-} V \rho\]</div>
+<span class="eqno">(126)<a class="headerlink" href="#equation-rapid-mix-rm-intro-6" title="Permalink to this equation">¶</a></span>\[P = \bar\varepsilon \rlap{-} V \rho\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-7">
-<span class="eqno">(129)<a class="headerlink" href="#equation-rapid-mix-rm-intro-7" title="Permalink to this equation">¶</a></span>\[P = \bar G^2 \nu \rlap{-} V \rho\]</div>
+<span class="eqno">(127)<a class="headerlink" href="#equation-rapid-mix-rm-intro-7" title="Permalink to this equation">¶</a></span>\[P = \bar G^2 \nu \rlap{-} V \rho\]</div>
 <p>We can relate reactor volume to a hydraulic residence time, <span class="math notranslate nohighlight">\(\theta\)</span>, and volumetric flow rate, Q.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-8">
-<span class="eqno">(130)<a class="headerlink" href="#equation-rapid-mix-rm-intro-8" title="Permalink to this equation">¶</a></span>\[P = \rho \bar G^2 \nu Q \theta\]</div>
+<span class="eqno">(128)<a class="headerlink" href="#equation-rapid-mix-rm-intro-8" title="Permalink to this equation">¶</a></span>\[P = \rho \bar G^2 \nu Q \theta\]</div>
 <p>This equation is perfectly useful for estimating electrical motor sizing requirements for mechanical rapid mix units. For gravity powered hydraulic rapid mix units it would be more intuitive to use the change in water surface elevation, <span class="math notranslate nohighlight">\(\Delta h\)</span> instead of power input.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-9">
-<span class="eqno">(131)<a class="headerlink" href="#equation-rapid-mix-rm-intro-9" title="Permalink to this equation">¶</a></span>\[P = \rho g Q \Delta h\]</div>
+<span class="eqno">(129)<a class="headerlink" href="#equation-rapid-mix-rm-intro-9" title="Permalink to this equation">¶</a></span>\[P = \rho g Q \Delta h\]</div>
 <p>Combining the two equations we obtain.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-10">
-<span class="eqno">(132)<a class="headerlink" href="#equation-rapid-mix-rm-intro-10" title="Permalink to this equation">¶</a></span>\[\Delta h =   \frac{G^2 \nu \theta}{g}\]</div>
+<span class="eqno">(130)<a class="headerlink" href="#equation-rapid-mix-rm-intro-10" title="Permalink to this equation">¶</a></span>\[\Delta h =   \frac{G^2 \nu \theta}{g}\]</div>
 <span id="table-conventional-rapid-mix-design-values"></span><table border="1" class="docutils" id="id10">
-<caption><span class="caption-number">Table 7 </span><span class="caption-text">Typical values for conventional rapid mix residence time and average velocity gradients</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Typical values for conventional rapid mix residence time and average velocity gradients</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="25%" />
 <col width="25%" />
@@ -510,10 +503,10 @@ Sincero. 1996. page 267.</p>
 </div>
 <div class="section" id="mixing-time">
 <span id="heading-mixing-time"></span><h3>Mixing time<a class="headerlink" href="#mixing-time" title="Permalink to this headline">¶</a></h3>
-<p>The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see equation <a class="reference internal" href="RM_Derivations.html#equation-eq-t-eddy">(186)</a>) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (<a class="reference internal" href="#figure-eddy-turnover-times"><span class="std std-numref">Fig. 51</span></a>).</p>
+<p>The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see equation <a class="reference internal" href="RM_Derivations.html#equation-eq-t-eddy">(184)</a>) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (<a class="reference internal" href="#figure-eddy-turnover-times"><span class="std std-numref">Fig. 49</span></a>).</p>
 <div class="figure align-center" id="id11">
 <span id="figure-eddy-turnover-times"></span><a class="reference internal image-reference" href="../_images/Eddy_turnover_time.png"><img alt="Eddy turnover time" src="../_images/Eddy_turnover_time.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 51 </span><span class="caption-text">Eddy turnover times as a function of length scale for a range of energy dissipation rates.</span></p>
+<p class="caption"><span class="caption-number">Fig. 49 </span><span class="caption-text">Eddy turnover times as a function of length scale for a range of energy dissipation rates.</span></p>
 </div>
 <p>The eddy turnover times are longest for the largest eddies and this analysis suggests that it only takes a few seconds for turbulent eddies to mix from the scale of the flow down to the inner viscous length scale.</p>
 <p>The large scale mixing time is critical for the design of water treatment plants for the case where the flow is split into multiple treatment trains after coagulant addition. In this case it is critical that the coagulant be mixed equally between all of the treatment trains and thus the mixing times shown in the previous graph represent a minimum time between where the coagulant is added and where the flow is divided into the parallel treatment trains.</p>
@@ -525,10 +518,10 @@ Sincero. 1996. page 267.</p>
 <div class="section" id="coagulant-nanoparticle-interactions">
 <span id="heading-coagulant-nanoparticle-interactions"></span><h2>Coagulant Nanoparticle Interactions<a class="headerlink" href="#coagulant-nanoparticle-interactions" title="Permalink to this headline">¶</a></h2>
 <p>Coagulant nanoparticles are sticky and can attach to suspended particles as well as to each other. Some dissolved substances also adsorb to coagulant nanoparticles. The development of models to describe these interactions has been impeded by the charge neutralization hypothesis that failed to account for the size of the coagulant nanoparticles and by the complexity of modeling all of these competing processes. Although the model describing removal of dissolved organic matter is still nascent, it is possible that a simplified approach that separates fast and slow processes will enable a sequential model.</p>
-<p>Interactions between the various suspended and dissolved substances (see <a class="reference internal" href="#figure-particle-sizes"><span class="std std-numref">Fig. 52</span></a>) can occur simultaneously as soon as the coagulant is blended with the raw water. The rates of these interactions are controlled by the transport processes of fluid deformation and molecular diffusion. Molecular diffusion is fastest for small particles and fluid deformation is most effective for larger particles. Thus the fastest process is hypothesized to be the diffusion of low mass molecules to the coagulant nanoparticles. Transport of the coagulant nanoparticles to attach to suspended solids is expected to be a slower process. Transport of suspended particles to collide with other suspended particles (flocculation) is even slower.</p>
+<p>Interactions between the various suspended and dissolved substances (see <a class="reference internal" href="#figure-particle-sizes"><span class="std std-numref">Fig. 50</span></a>) can occur simultaneously as soon as the coagulant is blended with the raw water. The rates of these interactions are controlled by the transport processes of fluid deformation and molecular diffusion. Molecular diffusion is fastest for small particles and fluid deformation is most effective for larger particles. Thus the fastest process is hypothesized to be the diffusion of low mass molecules to the coagulant nanoparticles. Transport of the coagulant nanoparticles to attach to suspended solids is expected to be a slower process. Transport of suspended particles to collide with other suspended particles (flocculation) is even slower.</p>
 <div class="figure align-center" id="id12">
 <span id="figure-particle-sizes"></span><a class="reference internal image-reference" href="../_images/Particle_sizes.png"><img alt="Particle sizes" src="../_images/Particle_sizes.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 52 </span><span class="caption-text">The size range of particles and nanoparticles that are important in drinking water treatment ranges from approximately a nanometer (for example arsenic <span class="math notranslate nohighlight">\(HAsO_4^{2-}\)</span>) to thousands of nanometers for clay and protozoa.</span></p>
+<p class="caption"><span class="caption-number">Fig. 50 </span><span class="caption-text">The size range of particles and nanoparticles that are important in drinking water treatment ranges from approximately a nanometer (for example arsenic <span class="math notranslate nohighlight">\(HAsO_4^{2-}\)</span>) to thousands of nanometers for clay and protozoa.</span></p>
 </div>
 <div class="section" id="dissolved-organic-matter">
 <span id="heading-dissolved-organic-matter-and-coagulant"></span><h3>Dissolved Organic Matter<a class="headerlink" href="#dissolved-organic-matter" title="Permalink to this headline">¶</a></h3>
@@ -568,22 +561,22 @@ Sincero. 1996. page 267.</p>
 <p><span class="math notranslate nohighlight">\(G\)</span>, or velocity gradient, is a measure of fluid deformation. It is defined by how quickly one point of water along one streamline moves in comparison to another point on another streamline (<span class="math notranslate nohighlight">\(v_A\)</span> compared to <span class="math notranslate nohighlight">\(v_B\)</span>, for example), taking into account the distance between the streamlines, <span class="math notranslate nohighlight">\(\Delta h\)</span>. A visual example of a velocity gradient is shown in the image below:</p>
 <div class="figure align-center" id="id13">
 <span id="figure-velocity-gradient-image"></span><a class="reference internal image-reference" href="../_images/Velocity_gradient_image.jpg"><img alt="Velocity gradient image" src="../_images/Velocity_gradient_image.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 53 </span><span class="caption-text">Velocity gradients cause relative velocities of fluid elements. Those relative velocities form the basis of particle collisions that are essential for the flocculation process.</span></p>
+<p class="caption"><span class="caption-number">Fig. 51 </span><span class="caption-text">Velocity gradients cause relative velocities of fluid elements. Those relative velocities form the basis of particle collisions that are essential for the flocculation process.</span></p>
 </div>
 <p><strong>Note on terminology:</strong> “Fluid deformation” is equivalent to “velocity gradient,” and the two terms can be used interchangeably. They are different ways of thinking about the same concept. Thus, <span class="math notranslate nohighlight">\(G\)</span> is the measure of both terms.</p>
 <p><span class="math notranslate nohighlight">\(\varepsilon\)</span>, or energy dissipation rate, is the rate that the kinetic energy of the fluid is being converted to heat. EDR is a very useful concept because the last step of converting kinetic energy into heat is accomplished by viscosity (<span class="math notranslate nohighlight">\(\nu\)</span>). This kinetic energy being dissipated by viscosity is the energy associated with velocity gradients (<span class="math notranslate nohighlight">\(G\)</span>). Thus, through EDR there is a direct connection between <span class="math notranslate nohighlight">\(\nu\)</span> and <span class="math notranslate nohighlight">\(G\)</span>. This connection will be further covered later on in this introduction.</p>
 <p>As mentioned above, EDR and velocity gradients play an important role in mixing and in causing suspended particles to collide with each other, both of which are important topics in flocculation. Their use is not limited to flocculation, they are also helpful in understanding failure modes of plate settlers and terminal head loss of sand filters</p>
 <p>We will begin by defining the concept of energy dissipation rate for a control volume. In a control volume that does not include pumps, turbines or other external energy sources or sinks, the mechanical energy lost is indicated by a change in elevation and quantified as <span class="math notranslate nohighlight">\(g h_L\)</span>. That mechanical energy is lost in the time that the fluid is in the control volume, <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-11">
-<span class="eqno">(133)<a class="headerlink" href="#equation-rapid-mix-rm-intro-11" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon \theta = g h_L\]</div>
+<span class="eqno">(131)<a class="headerlink" href="#equation-rapid-mix-rm-intro-11" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon \theta = g h_L\]</div>
 <p>This equation simply states that the average rate of energy dissipation times the time over which that dissipation occurs is equal to the total lost mechanical energy. The dimensions of <span class="math notranslate nohighlight">\(\varepsilon\)</span> are:</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-12">
-<span class="eqno">(134)<a class="headerlink" href="#equation-rapid-mix-rm-intro-12" title="Permalink to this equation">¶</a></span>\[\varepsilon = \frac{[m^3]}{[s^3]} = {\rm \frac{W}{kg}}\]</div>
+<span class="eqno">(132)<a class="headerlink" href="#equation-rapid-mix-rm-intro-12" title="Permalink to this equation">¶</a></span>\[\varepsilon = \frac{[m^3]}{[s^3]} = {\rm \frac{W}{kg}}\]</div>
 <p>These dimensions can be understood as a velocity squared per time, otherwise known as a rate of kinetic energy loss (recall that kinetic energy is <span class="math notranslate nohighlight">\({\rm Ke} = \frac{\bar v^2}{2g}\)</span>, or <span class="math notranslate nohighlight">\({\rm Ke} \propto \bar v^2\)</span>), or as power per unit mass, which would be <span class="math notranslate nohighlight">\({\rm  \frac{W}{kg}}\)</span>.</p>
-<p>Velocity gradients are central to flocculation because they cause the deformation of the fluid, and this results in particle collisions. Consider a real-world example via the image below: if everyone on a sidewalk is walking in the same direction at exactly the same velocity, then there will never be any collisions between people (top). If, however, people at one side of the sidewalk stand still and people walk progressively faster as a function of how far they are away from the zero velocity side of the sidewalk, then there will be many collisions between the pedestrians (see <a class="reference internal" href="#figure-pedestrians-on-sidewalk"><span class="std std-numref">Fig. 54</span></a>). Indeed, the rate of collisions is proportional to the velocity gradient.</p>
+<p>Velocity gradients are central to flocculation because they cause the deformation of the fluid, and this results in particle collisions. Consider a real-world example via the image below: if everyone on a sidewalk is walking in the same direction at exactly the same velocity, then there will never be any collisions between people (top). If, however, people at one side of the sidewalk stand still and people walk progressively faster as a function of how far they are away from the zero velocity side of the sidewalk, then there will be many collisions between the pedestrians (see <a class="reference internal" href="#figure-pedestrians-on-sidewalk"><span class="std std-numref">Fig. 52</span></a>). Indeed, the rate of collisions is proportional to the velocity gradient.</p>
 <div class="figure align-center" id="id14">
 <span id="figure-pedestrians-on-sidewalk"></span><a class="reference internal image-reference" href="../_images/Pedestrians_on_sidewalk.jpg"><img alt="Pedestrians on sidewalk" src="../_images/Pedestrians_on_sidewalk.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 54 </span><span class="caption-text">Pedestrians walking on a sidewalk serve as a model for velocity gradients.</span></p>
+<p class="caption"><span class="caption-number">Fig. 52 </span><span class="caption-text">Pedestrians walking on a sidewalk serve as a model for velocity gradients.</span></p>
 </div>
 </div>
 </div>
@@ -604,7 +597,7 @@ Sincero. 1996. page 267.</p>
 </div></blockquote>
 <p>The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants. The <a class="reference internal" href="RM_Derivations.html#heading-equations-varying-flow-geometries"><span class="std std-ref">Equations for  and  in Varying Flow Geometries</span></a> are available as a reference.</p>
 <span id="table-control-volume-equations"></span><table border="1" class="docutils align-left" id="id15">
-<caption><span class="caption-number">Table 8 </span><span class="caption-text">Table of equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.</span><a class="headerlink" href="#id15" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Table of equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.</span><a class="headerlink" href="#id15" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="20%" />
@@ -673,13 +666,13 @@ Sincero. 1996. page 267.</p>
 </table>
 <p>The equations used to convert between columns in the table above are:</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-13">
-<span class="eqno">(135)<a class="headerlink" href="#equation-rapid-mix-rm-intro-13" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
+<span class="eqno">(133)<a class="headerlink" href="#equation-rapid-mix-rm-intro-13" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
 G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 \bar v=\frac{4Q}{\pi D}\]</div>
 <p>Note that the velocity gradient is independent of viscosity (and hence temperature) for laminar flow. This is because the total amount of fluid deformation is simply based on geometry. The no slip condition, the diameter, and the length of the flow passage set the total fluid deformation. Of course, if temperature decreases and viscosity increases the amount of energy required to push the fluid through the flow passage will increase (head loss is proportional to viscosity for laminar flow).</p>
 <p>For turbulent flow and for flow expansions the amount of fluid deformation decreases as the viscosity increases and the total energy required to send the flow through the reactor is almost independent of the viscosity. The “almost” is because for wall shear under turbulent conditions there is a small effect of viscosity that is buried inside the friction factor.</p>
 <span id="table-edr-g-max-equations"></span><table border="1" class="docutils align-left" id="id16">
-<caption><span class="caption-number">Table 9 </span><span class="caption-text">Equations for maximum (wall) energy dissipation rates and wall velocity gradients.</span><a class="headerlink" href="#id16" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 8 </span><span class="caption-text">Equations for maximum (wall) energy dissipation rates and wall velocity gradients.</span><a class="headerlink" href="#id16" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -714,7 +707,7 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 </tbody>
 </table>
 <span id="table-edr-g-equations"></span><table border="1" class="docutils align-left" id="id17">
-<caption><span class="caption-number">Table 10 </span><span class="caption-text">Equations for maximum energy dissipation rates and velocity gradients for flow expansions.</span><a class="headerlink" href="#id17" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 9 </span><span class="caption-text">Equations for maximum energy dissipation rates and velocity gradients for flow expansions.</span><a class="headerlink" href="#id17" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="25%" />
 <col width="25%" />
@@ -748,7 +741,7 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 </table>
 <p>For mechanical mixing where an impeller or other stirring device is adding shaft work to a control volume we have</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-14">
-<span class="eqno">(136)<a class="headerlink" href="#equation-rapid-mix-rm-intro-14" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}\]</div>
+<span class="eqno">(134)<a class="headerlink" href="#equation-rapid-mix-rm-intro-14" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}\]</div>
 <div class="line-block">
 <div class="line">where</div>
 <div class="line"><span class="math notranslate nohighlight">\(P\)</span> = power input into the control volume</div>
@@ -758,7 +751,7 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 </div>
 <p>The Camp-Stein velocity gradient for a mechanically mixed reactor is</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-15">
-<span class="eqno">(137)<a class="headerlink" href="#equation-rapid-mix-rm-intro-15" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}\]</div>
+<span class="eqno">(135)<a class="headerlink" href="#equation-rapid-mix-rm-intro-15" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}\]</div>
 </div>
 </div>
 
