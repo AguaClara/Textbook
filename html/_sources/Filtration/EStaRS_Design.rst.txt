@@ -341,6 +341,48 @@ Though the piezometric head profiles for the inlet and outlet manifolds for the 
 
 See the section on Pressure Recovery  in :ref:`Filtration Intro <title_filtration>` for more infomation if this is unclear.
 
+
+
+
+
+
+Flow in Trunks
+-----------------
+
+As shown above the flow maximum flow in a trunk will be either :math:`Q_{Fi}` or :math:`\frac{Q_{Fi}}{3}` (the equivalent of :math:`2Q_{Layer}`). As we are are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.
+
+Generally it is a better use of space to use an even number of branches on either side of the trunk\* , in this case the longes branch is slightly less than :math:`\frac{ID_{Fi}}{2}`. To keep the calculations simple the maximum fraction of the flow served by any branch would be in the longest branch, the approximate area of the filter layer served would be approximately the length of this branch time the spacing of the branches. :numref:`_figure_fl`
+
+.. _figure_flow_fraction_branch:
+
+  .. figure:: Images/_figure_flow_fraction_branch.png
+      :width: 80%
+      :align: center
+      :alt: filter schematic, interal image
+
+      The red box shows the approximate area served by the longest branch. The area is slightly overestimated, but using a rectangular area and by assuming the branch is exaclty half the length of the inner diameter ensures that the largest fraction possible does not exceed what is designed for.
+
+
+From that area, the fraction of the filter layer served by the hypothetical longest branch can be directly found by dividing that area by the total cross-sectional area of the filter.
+
+.. math::
+
+  \frac{\frac{ID_{Fi}}{2} * S_{Branch}}{\frac{ID_{Fi}^2}*\Pi}{4} = Fraction of area served by longest branch = \Pi_{branch}
+  Then:
+  \Pi_{branch}*Q_{FiLayer} = Q_{BranchMax}
+
+
+
+\* based on maximizing total length of branches?
+
+
+Flow in Branches
+----------------------
+
+
+
+
+
 Determining Forward Filtration and Backwash Velocities
 --------------------------------------------------------
 
