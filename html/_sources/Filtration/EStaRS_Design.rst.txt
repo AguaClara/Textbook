@@ -368,8 +368,8 @@ From that area, the fraction of the filter layer served by the hypothetical long
 
 .. math::
 
-  \frac{\frac{ID_{Fi}}{2} * S_{Branch}}{\Pi*\frac{ID_{Fi}^2}{4}}  = \Pi_{branch}
-  \\ Then: \\
+  \frac{(\frac{ID_{Fi}}{2} * S_{Branch})}{\Pi*\frac{ID_{Fi}^2}{4}}  = \Pi_{branch}
+  \\ \\ Then: \\ \\
   \Pi_{branch}*2Q_{FiLayer} = Q_{BranchMax}
 
 
@@ -378,11 +378,45 @@ This describes the largest flow in any branch during forward filtration. For the
 .. math::
 
   \frac{\frac{ID_{Fi}}{2} * S_{Branch}}{\Pi*\frac{ID_{Fi}^2}{4}} =  \Pi_{branch}
-  \\ Then: \\
+  \\ \\ Then: \\ \\
   \Pi_{branch}*Q_{Fi} = Q_{BranchBWMax}
 
 
 These two flows can be used with the pressure recovery terms to determine the smallest branch sizes that can work.
+
+Using this flow the total area of the inlet orifices can be found for the longest branch, this area can then describe the number of orifices and thir spacing. The spacing then applies to all the branches not just the longest one.
+
+Because the pressure recovery in the branches is the constraint in determining total orifice sizing, it is convenient to fist consider the pressure recovery term:
+
+.. math::
+
+  h_L = \frac{(\frac{Q}{\Pi*A*\epsilon})^2}{2g}
+
+In the equation above the HL is equivalent to the pressure recovery, the velocity term has just been replaced with the flow to area ratio at the inlets or outlets. Depending on which inlet or outlet system is being looked at the porosity term and flow term will vary. Additonally, we are setting the head loss to be small so the term being found is the total area required to keep the head loss small. Thus it can be rearranged to:
+
+.. math::
+
+  A = \frac{1}{\frac{(\sqrt{2g*h_L})*\Pi*\epsilon}{Q}}
+
+The suggested design headloss for the inlets and outlets is 5 cm. The following table shows the other constraints used to solve for the required areas.
+
+**correct Q values as based on steps just above!**
+
+.. _table_branch_head_loss:
+
++--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
+|                                | :math:`Q`           | :math:`h_L`                          | :math:`\epsilon` | :math:`\Pi`     | :math:`g` |
++================================+=====================+================================+==================+=================+===========+
+| :math:`A_{BWorofices }`        | :math:`Q_{Layer}`   | :math:`h_{L_{BWorificesFW}} = 5cm`   | 1                | :math:`\Pi_{VC}`| g         |
++--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
+| :math:`A_{InletOrifices}`      | :math:`2Q_{Layer}`  |:math:`h_{L_{InletOrificesFW}}= 5cm`  | 1                | :math:`\Pi_{VC}`| g         |
++--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
+| :math:`A_{TopInletOrifices}`   | :math:`Q_{Layer}`   |:math:`h_{L_{TopOrificesFW}}= 5cm`    | 1                | :math:`\Pi_{VC}`| g         |
++--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
+| :math:`A_{OutletSlots}`        | :math:`Q_{Layer}`   |:math:`h_{L_{OutletSlotsFW}}= 5cm`    | 1                | :math:`\Pi_{VC}`| g         |
++--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
+| :math:`A_{BWorifices  }`       | :math:`Q_{Fi}`      |:math:`h_{L_{BWorificesBW}}= 5cm`     | 1                | :math:`\Pi_{VC}`| g         |
++--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
 
 
 \* based on maximizing total length of branches?
@@ -411,7 +445,6 @@ See  :numref:`figure_estars_flow_schematic` for a schematic of the filter layers
 
 Because the 2 inner inlets (the ones that aren't the backwash trunk or the uppermost trunk) distribute flow to two layers the flow between them is equal to :math:`2Q_{FiLayer}` which is shown in the schematic. In a later section, we will show that the flow within each layer is not exactly even because of the head loss through various paths, but for the calculation of maximum flow, even flow is an appropriate guess.
 
-From the schematic we can also see that the maximum flow experienced by any trunk during forward filtration is :math:`2Q_{FiLayer}`, using this value it is possible to calculate the maximum flow through a branch. Using :math:`2Q_{FiLayer}` is a conservative estimate, most branches will not see this flow, however because the pressure recovery is the main constraint in the filter pipe manifold, it is best to use the maximum possible flow to determine allowable PR. [This paragraph seems to confuse flow through the trunks with flow through the branches. YOu need to look at the figure showing a plan view of the filter. Then you can estimate the area of the filter that contributes to the longest branch. You can simplify this! Longest branch is approximately IDfilter/2. The branch serves an area that is 10 cm wide. Now given the filter velocities you can calculate the flow rate through the longest branch in the inlets and outlets that serve two filter layers.]
 
 .. _figure_estars_bw_flow_schematic:
 
@@ -424,45 +457,10 @@ From the schematic we can also see that the maximum flow experienced by any trun
 
 On each layer trunk, there are :math:`N_{FiBranch}` branches on **each side** of the trunk. That means the total number of branches on each trunk is :math:`2N_{FiBranch}`
 
-Using the maximum flow in a trunk and the number of branches on a trunk the maximum flow in a branch becomes: [I prefer the method I detailed above to get the maximum branch flow rate. The approach below misses the fact that the branches are different lengths.]
 
-.. math::
-
-    Q_{FiBranchMax} = \frac{2Q_{FiLayer}}{2N_{FiBranch}}
 
 Using the minimum ND of the Filter Manifold Branches, as defined above, the minimum flow area of a branch can be calculated: [I'm lost here. You haven't calculated the Branch diameter yet. See my approach above for calculating the area served by one branch. The ID of the branch is irrelevant. I now realize that we made a mistake in first creating the text. You can't see the mistakes if you don't actually do the calculations. I always develop a method in a calculation space (now python) AND in an equation derivation space (now RST)].
 
-.. math::
-
-  A_{FiBranchMin} = \frac{ID_{FiBranchMin}^2 *\pi}{4}
-
-Knowing the area allows the velocity within a branch to be found. [this process is backwards.]
-
-.. math::
-
-  V_{FiBranchEst} = \frac{Q_{FiBranchMax}}{A_{FiBranchMin}}
-
-From the velocity the pressure recovery term can be determined, this equation comes from the definition of pressure recovery:
-
-.. math::
-
-  PR_{FiManBranchEst} = \frac{V_{FiBranchEst}^2}{2g}
-
-A similar series of calcualtions can be done for the backwash branches based on :math:`Q_{FiBw}`:
-
-.. math::
-
-  Q_{FiBwBranchMax} = \frac{Q_{FiBw}}{2N_{FiBranch}}
-
-  A_{FiBwBranchMin} = \frac{ID_{FwBwBranch}^2 *\pi}{4}
-
-  V_{FiBwBranchEst} = \frac{Q_{FiBwBranchMax}}{A_{FiBwBranchMin}}
-
-  PR_{FiBwManBranchEst} = \frac{V_{FiBwBranchEst}^2}{2g}
-
-[fix this section so you start with the constraints and calculate the branch diameter.]
-
-The two pressure recovery terms calculated here are compared against the allowable PR terms, which are calculated in the next section.
 
 
 First Constraint: Pressure Recovery in Trunks during forward filtration
@@ -608,8 +606,6 @@ Inlet Orifice and Outlet Slot Design
 ========================================
 [I believe these calculations can go above the pipe size calculations. I believe the orifice area is set by the backwash fluidization of the next covered orifice constraint. And I think that constraint is minimal because the orifices end up being very close together. ]
 
-*come back to this once Juan and Bayron have results from their test of how much fabrication matters.*
-
 Knowing the PR in the BW manifold, the design head loss through the outlet orifices can be determined based on:
 
 .. math::
@@ -618,24 +614,24 @@ Knowing the PR in the BW manifold, the design head loss through the outlet orifi
 
 With this head loss the necessary total area of the orifices for the backwash branch can be determined using the orifice equation **REF**, as :math:`HL_{BwOrifices}` , :math:`\Pi_{VCOrifice}`, and :math:`Q_{FiBw}` are known.
 
-This area is doubled to find the area of the slots.
+This area is doubled to find the area of the slots. [I am not sure why this is true? Because two layers are served perhaps?]
 
   .. math::
 
     A_{FiManSlots} = 2*A_{FiBwOrifices}
 
-**why is this? I don't know!**
 
-Also the area of the backwash orifices is equal to :math:`A_{FiTopManSlots}`, which is the area of the **this is the area of something thats for sure**
+
+Also the area of the backwash orifices is equal to :math:`A_{FiTopManSlots}`, which is the area of the manifold that takes in backwash water for removal from the treatment train.
 
 Outlet Design
 ---------------
 
-Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, :math:`B_{slot}` is always .008 inch. *The number of slot rows is also fixed at 2, because each branch has slots on the top and bottom because the outlet pipes are accepting flow from two layers of sand, one above and one below.* This constrains the minimum size that the slotted pipes can be.
+Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, :math:`B_{slot}` is always .008 inch. The number of slot rows is also fixed at 2, because each branch has slots on both sides because the outlet pipes are accepting flow from two layers of sand, one above and one below. This constrains the minimum size that the slotted pipes can be.
 
 From the cumulative area of slots and the width of the slots, the total length of slots can be determined. This length of slots is for one side of one branch *yes?*
 
-As the branches are different lengths along one trunk, the number of slots is different per branch depending on the length. Dividing the length of the
+As the branches are different lengths along one trunk, the number of slots is different per branch depending on the length, but the spacing is the same so the variation is accounted for.
 
 
 
@@ -644,17 +640,7 @@ Inlet Design
 
 Regarding the inlets, those for backwash are determined differently than the orifices on the rest of the inlet branches. This section traces the process for the backwash branches and then the rest of the manifold branches.
 
-The spacing of orifices, :math:`B_{OrificeEst}` is estimated at 1cm. [why?]
 
-The number of orifices per branch is the floor value of:
-
-.. math::
-
-  N_{BwBranchOrifices} = \frac{L_{FiBwBranchLow} - B_{OrificeEst} - 2*L_{FiBranchExt}}{B_{OrificeEst}}
-
-  and
-
-  N_{BranchOrifices} = \frac{L_{FiBranchLow} - B_{OrificeEst} - 2*L_{FiBranchExt}}{B_{OrificeEst}}
 
 The only difference between the two is the length of the branches. Because the backwash trunk is slightly larger than the rest of the trunks, the branches must be slightly shorter so that the whole manifold fits in the filter body.
 
@@ -691,13 +677,13 @@ The head loss calculation can then be checked as well for all 5 branch systems i
 
 The head loss for each branch type is generally:
 
-.. math::
 
-    HL = \frac{(\frac{Q}{\Pi*A*\epsilon})^2}{2g}
 
 With the relevant parameters for each type of manifold branch shown below in :numref:`table_branch_head_loss`
 
-.. _table_branch_head_loss:
+
+
+
 
 .. figure:: Images/Table_Branch_Head_Loss.PNG
     :width: 100%
