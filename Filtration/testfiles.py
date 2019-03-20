@@ -23,9 +23,6 @@ N_orifice
 
 ## for regualr branches
 
-
-
-
 Q_ff = Pi_Branch * Q_fi/3
 HL_ff = 5*u.cm
 g = 9.80665 * u.m / u.s ** 2
