@@ -649,23 +649,23 @@ With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use 
 
 .. math::
 
-  G = \sqrt{\frac{\epsilon}{\nu}}
+  G = \sqrt{\frac{\varepsilon}{\nu}}
 
 .. math::
 
- \epsilon = \frac{gh_L}{\theta}
+ \varepsilon = \frac{gh_L}{\theta}
 
-We will start by determining :math:`\epsilon` by calculating :math:`\theta` using the porosity of the floc blanket, :math:`\phi_{fb}`,
+We will start by determining :math:`\varepsilon` by calculating :math:`\theta` using the porosity of the floc blanket, :math:`\phi_{fb}`,
 
 .. math::
 
   \theta = \frac{H_{fb} \phi_{fb}}{v_{S,V}}
 
-Plugging :math:`\theta` into :math:`\epsilon` yields
+Plugging :math:`\theta` into :math:`\varepsilon` yields
 
 .. math::
 
-  \epsilon = \frac{gv_{S,V}}{\phi_{fb}} \frac{h_L}{H_{fb}}
+  \varepsilon = \frac{gv_{S,V}}{\phi_{fb}} \frac{h_L}{H_{fb}}
 
 Substituting into our equation for :math:`G`,
 
