@@ -4,15 +4,6 @@
 EStaRS Design
 *******************
 
-
-[I made it about 2/3 of the way through the file and then I ran out of steam. I suggest beginning by stating in text how the design will proceed. Below is my attempt.]
-
-#. Set the spacing between branches to be 0.5 of the sand layer depth
-inlet branch orifice size set by maximum diameter than can be used without creating holes through the side of the connection between the branch and the wing pipe.
-#. Set the orifice area in the backwash inlet branches based on keeping backwash head loss low. Aim for something between 1 and 5 cm with these numbers chosen to be small relative to the total head loss through an AguaClara plant and assuming that there isn't any reason to waste energy here.
-#. Calculate the spacing between orifices (and make sure it is possible to fabricate)
-You can continue with these steps. Make sure that you always know everything required to get to the next step.
-
 .. attention::
 
   This file is a work in progress and includes notes from the author to the author, all information included here is correct though likely incomplete
@@ -20,8 +11,7 @@ You can continue with these steps. Make sure that you always know everything req
 .. note:: Explain the limitation of OStaRS and thus define the range of flows that EStaRS must be able to handle.
 
 
-
-The EStaRS: Enclosed Stacked Rapid Sand filter, is a compact filter that can be amended to a 1 L/s floc/sed unit to provide a filter. EStaRS are also used for low flow plants because they are less resource intensive to construct than a small version of the full-size concrete filter, additionally the OStaRS become infeasible in term of maintainence at very low flows because it would very narrow and very deep. This difficutly is noted in OStaRS filters handling less than 8 L/s corresponding to plant flows less than 16 L/s. This challenge invites the EStaRS as an alternative.
+The EStaRS: Enclosed Stacked Rapid Sand filter, is a compact filter that can be amended to a PF300 unit to provide a filter. EStaRS are also used for low flow plants because they are less resource intensive to construct than a small version of the full-size concrete filter, additionally the OStaRS become infeasible in term of maintainence at very low flows because it would very narrow and very deep. This difficutly is noted in OStaRS filters handling less than 8 L/s corresponding to plant flows less than 16 L/s. This challenge invites the EStaRS as an alternative.
 
 Because the EStaRS filter is constructed using only pipes and couplings, the possible EStaRS sizes are discretized as pipes are not available in every conceivable size. This constraint means that there are only three available sizes of EStaRS: 1 ft, 2ft, and 3 ft diameter, which treat .764 L/s, 3.07 L/s, and 7.024 L/s, respectively. Though the design algorithm can account for additional sizes these sizes as well as the 1.5 ft, are the only sizes that have been constructed. The 1.5ft EStaRS was not inlcuded in the list of possible sizes on the recommendation of an AguaClara engineer who helped construct that particular size.
 
@@ -244,7 +234,7 @@ So:
 
 This is the center to center distance of the trunks.
 
-As described in the constraints above, the spacing of the branches must be small compared to the layer depth. In this case, small can be taken to be half the distance, so :math:`\Pi_{Spacing) = 0.5}`. Thus:
+As described in the constraints above, the spacing of the branches must be small compared to the layer depth. In this case, small can be taken to be half the distance, so :math:`\Pi_{Spacing} = 0.5`. Thus:
 
 .. math::
 
@@ -336,7 +326,7 @@ Where the ratio of the pressure recovery in the branches to the head loss throug
 :math:`\Pi_{ManifoldHeadLoss} = \frac{PR}{h_{L_{sand}}}`
 
 
-This equation is used to determine the smallest pipe size that meets the pressure recovery constraint for a certain flow. As the head loss through  the sand is known, the equation can be directly solved for pressure recovery. From the total filter flow the flow throuh any branch can be determined. As the pressure recovery term is directly related to the velocity in the pipe a maximum velocity can be determined from the PR term. This maximum velocity can be used to find the minimum area for the branches from pressure recovery, which can provide a pipe diameter. This value can be compared to the minimum determined by the fabrication constraint of the slotted pipes and the larger of the 2 minimums is used for the design.
+This equation is used to determine the smallest pipe size that meets the pressure recovery constraint for a certain flow. It alost provides a maximum value for head loss within the system, summing the various pressure recovery terms and comparting to this value will show if the design makes sense. As the head loss through  the sand is known, the equation can be directly solved for pressure recovery. From the total filter flow the flow throuh any branch can be determined. As the pressure recovery term is directly related to the velocity in the pipe a maximum velocity can be determined from the PR term. This maximum velocity can be used to find the minimum area for the branches from pressure recovery, which can provide a pipe diameter. This value can be compared to the minimum determined by the fabrication constraint of the slotted pipes and the larger of the 2 minimums is used for the design.
 
 Though the piezometric head profiles for the inlet and outlet manifolds for the middle layers may be parallel, meaning the pressure recovery is less constrained for a good flow distribution, a tight constraint is still needed for the outer manifolds where the velocity is 1/2 and the PR is 1/4 (because presseue recovery goes with the square of the velocity) that of the inner layer, while the term is smaller still in the bottom-most manifold where the velocity head is tiny as the diameter is larger to accomdate for full filter flow during backwash.
 
@@ -347,12 +337,12 @@ See the section on Pressure Recovery  in :ref:`Filtration Intro <title_filtratio
 
 
 
-Flow in Trunks and Branches
--------------------------------
+Flow in branches to find orifice area
+--------------------------------------------------
 
-As shown above the flow maximum flow in a trunk will be either :math:`Q_{Fi}` or :math:`\frac{Q_{Fi}}{3}` (the equivalent of :math:`2Q_{Layer}`). As we are are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.
+As shown above the maximum flow in a trunk will be either :math:`Q_{Fi}` or :math:`\frac{Q_{Fi}}{3}` (the equivalent of :math:`2Q_{Layer}`). As we are are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.
 
-Generally it is a better use of space to use an even number of branches on either side of the trunk\* , in this case the longes branch is slightly less than :math:`\frac{ID_{Fi}}{2}`. To keep the calculations simple the maximum fraction of the flow served by any branch would be in the longest branch, the approximate area of the filter layer served would be approximately the length of this branch time the spacing of the branches. :numref:`_figure_fl`
+In this case the longes branch is slightly less than :math:`\frac{ID_{Fi}}{2}`. To keep the calculations simple the maximum fraction of the flow served by any branch would be in the longest branch, the approximate area of the filter layer served would be approximately the length of this branch time the spacing of the branches. :numref:`_figure_fl`
 
 .. _figure_flow_fraction_branch:
 
@@ -400,39 +390,100 @@ In the equation above the HL is equivalent to the pressure recovery, the velocit
 
 The suggested design headloss for the inlets and outlets is 5 cm. The following table shows the other constraints used to solve for the required areas.
 
-**correct Q values as based on steps just above!**
 
 .. _table_branch_head_loss:
 
-+--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
-|                                | :math:`Q`           | :math:`h_L`                          | :math:`\epsilon` | :math:`\Pi`     | :math:`g` |
-+================================+=====================+================================+==================+=================+===========+
-| :math:`A_{BWorofices }`        | :math:`Q_{Layer}`   | :math:`h_{L_{BWorificesFW}} = 5cm`   | 1                | :math:`\Pi_{VC}`| g         |
-+--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
-| :math:`A_{InletOrifices}`      | :math:`2Q_{Layer}`  |:math:`h_{L_{InletOrificesFW}}= 5cm`  | 1                | :math:`\Pi_{VC}`| g         |
-+--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
-| :math:`A_{TopInletOrifices}`   | :math:`Q_{Layer}`   |:math:`h_{L_{TopOrificesFW}}= 5cm`    | 1                | :math:`\Pi_{VC}`| g         |
-+--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
-| :math:`A_{OutletSlots}`        | :math:`Q_{Layer}`   |:math:`h_{L_{OutletSlotsFW}}= 5cm`    | 1                | :math:`\Pi_{VC}`| g         |
-+--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
-| :math:`A_{BWorifices  }`       | :math:`Q_{Fi}`      |:math:`h_{L_{BWorificesBW}}= 5cm`     | 1                | :math:`\Pi_{VC}`| g         |
-+--------------------------------+---------------------+--------------------------------------+------------------+-----------------+-----------+
++--------------------------------+-------------------------+--------------------------------------+-----------------------+-----------------+-----------+
+|                                | :math:`Q`               | :math:`h_L`                          | :math:`\epsilon`      | :math:`\Pi`     | :math:`g` |
++================================+=========================+======================================+=======================+=================+===========+
+| :math:`A_{InletOrifices}`      | :math:`Q_{BranchMax}`   |:math:`h_{L_{InletOrificesFW}}= 5cm`  | 1                     | :math:`\Pi_{VC}`| g         |
++--------------------------------+-------------------------+--------------------------------------+-----------------------+-----------------+-----------+
+| :math:`A_{OutletSlots}`        | :math:`Q_{BranchMax}`   |:math:`h_{L_{OutletSlotsFW}}= 5cm`    |:math:`\epsilon_{sand}`| :math:`\Pi_{VC}`| g         |
++--------------------------------+-------------------------+--------------------------------------+-----------------------+-----------------+-----------+
+| :math:`A_{BWorifices  }`       | :math:`Q_{BranchBWMax}` |:math:`h_{L_{BWorificesBW}}= 5cm`     | 1                     | :math:`\Pi_{VC}`| g         |
++--------------------------------+-------------------------+--------------------------------------+-----------------------+-----------------+-----------+
+
+Though the bottom inlet layer has two conditions for flow, forward filtration and backwash, the flow is six times higher during backwash, so the forward filtration condition is not considered, as it would not be the limiting head loss. For the same reason the top inlet is not considered because its flow will always be lower than that in the two inner inlets serving two layers.
 
 
-\* based on maximizing total length of branches?
+This area is the total area of inlet/outlet space required along the longest branch.
+
+If we assume that:
+
+.. math::
+
+    D_{Orifice} = D_{OrificeMax} \\ \\ Then: \\ \\ D_{Orifice} = 0.25in
+
+This diameter can be used to find the area of one orifice, :math:`A_orifice`.
+
+Then:
+
+.. math::
+
+    \frac{A_{InletOrifices}}{A_{Orifice}} , \frac{A_{BWorifices}}{A_{Orifice}}
 
 
-Flow in Branches
-----------------------
+are the respective number of orifices necessary on the longest branch for the regular inlet manifolds and the backwash manifold respectively.
+
+Those values divided by the length of the longest branch provides the spacing for the orifices. However here it become important to use the actual longest length of the branch, so that it is clear that all the orifices will fit.
+
+The factors that makes the length of the branch different from simply :math:`ID/2`, are the cap on the end and the width of the trunk. These can both be seen in :numref:`_figure_branch_length`
+
+.. _figure_branch_length
+
+.. figure::Images/figure_branch_length.png
+    :width: 80%
+    :align: center
+    :alt: filter manifold, interal image
+
+    This image shows an old image of a filter inlet manifold. The center dotted line shows the midline of the trunk, and the circle shows the cap on the end of one branch. The radius of the trunk and the depth of the cap at then end must be subtracted from the length to determine the spacing of the orifices. This image also shows how not all of the branch length is used for inlet orifices.
+
+Before getting to the diameter of the trunk, the branch diameter must be found. Following the same process as above it is possible to determine the area necessary to limit the pressure recovery term. Additionally there is a minimum branch constraint due to the fabrication of slotted pipes.
+
+**mention slots as well since they have to be included, they can be in a different section but should still be around here somewhere** They also depend on the size of the branch because of the curvature
 
 
+Flow in trunks to determine branch area
+----------------------------------------
 
+As stated above the maximum flow in a trunk will be either :math:`Q_{Fi}` or :math:`\frac{Q_{Fi}}{3}` (the equivalent of :math:`2Q_{Layer}`). As we are are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.
+
+The number of branches is set based on the spacing constraint, thus all this section aims to find is an acceptable area of the branches to keep pressure recovery low to keep flow distrubtion even.
+
+Again begin with:
+
+.. math::
+
+  h_L = \frac{(\frac{Q}{\Pi*A*\epsilon})^2}{2g}
+
+And then rearrage so solve for area:
+
+.. math::
+
+  A = \frac{1}{\frac{(\sqrt{2g*h_L})*\Pi*\epsilon}{Q}}
+
+
+Where, the conditions are the same as for the :math:`A_{BwOrifices}` above except that :math:`Q = Q_{Fi}` for the backwash condition and :math:`Q = \frac{Q_{Fi}}{3}` for the forward filtration condition.
+
+The areas determined is the minimum total area of the branches, :math:`A_{BranchTotalMinBW}` and :math:`A_{BranchTotalMinFW}`. As the number of branches is determined solely by the size of the filter, dividing this area by the number of branches yields the minimum area of an individual branch. Here is it important to remember that both sides of the trunk have branches!
+
+.. math::
+
+    Remember: \\
+    N_{BranchTrunk} = 2*Round(\frac{ID_{Fi}}{B_{FiBranchMax}})
+    \\ So: \\
+    A_{BranchMinBW} = \frac{A_{BranchTotalMinBW}}{N_{BranchTrunk}}
+    \\ and \\
+    A_{BranchMinFW} = \frac{A_{BranchTotalMinFW}}{N_{BranchTrunk}}
+
+
+Those areas directly correspond to diameters. To keep the design consistent the same size pipe will be used for all branches so the larger of the two sizes (which will be from the backwash calculation) will be used to determine the size of the branches. If both values are smaller than the minimum needed to slot the pipes, then the predefined minimum will be used. If the diameter calculated is not a regular pipe inner diameter the next largest actual pipe size should be used.
 
 
 Determining Forward Filtration and Backwash Velocities
 --------------------------------------------------------
 
-See  :numref:`figure_estars_flow_schematic` for a schematic of the filter layers. For a schematic of flwo during backwash see :numref:`_figure_estars_bw_flow_schematic`.
+See  :numref:`figure_estars_flow_schematic` for a schematic of the filter layers. For a schematic of flow during backwash see :numref:`_figure_estars_bw_flow_schematic`.
 
 .. _figure_estars_flow_schematic:
 
@@ -675,24 +726,6 @@ This number of holes can be used to check that total area of holes is close to t
 
 The head loss calculation can then be checked as well for all 5 branch systems involved: the backwash branches in forward, the backwash branches in backwash, the top inlet pipe during filtration, the other inlet pipes during filtration, and the outlet pipes during filtration.
 
-The head loss for each branch type is generally:
-
-
-
-With the relevant parameters for each type of manifold branch shown below in :numref:`table_branch_head_loss`
-
-
-
-
-
-.. figure:: Images/Table_Branch_Head_Loss.PNG
-    :width: 100%
-    :align: center
-    :alt: table of diferent values used to determine head loss through various parts of the manifold.
-
-    This table outline which values are used for various components of the filter manifold. Note how the porosity of sand is only relevant for the outlets during forward filtration. This is because the sand doesn't directly interact with the manifold in any of the other cases.
-
-Because the flows and area are different for each of the branches the head loss through each system layer is slightly different. This head loss is also only for the one branch system.  As show in the figure below with numbered branches, there are several pipes that are constructed the same and several that are different.
 
 **figure_numbered_filter_layers.PNG**
 
@@ -934,17 +967,17 @@ The volume of the backwash trunk is: :math:`\frac{\pi}{4}*OD_{BWTrunk}^2*ID_{FiP
 The volume of the rest of the trunks is :math:`\frac{\pi}{4}*OD_{Trunks}^2*ID_{FiPipe}*6`
 where 6 is the number of trunks excluding the backwash trunk.
 
-The volume occupied by the branches is :math:`OD_{Branches}^2 *L_{TotalBranches*7}`
+The volume occupied by the branches is :math:`OD_{Branches}^2 *L_{TotalBranches}*7`
 
 Where 7 is the number of layers of branches, and :math:`L_{TotalBranches}` the total lengths of the branches for one filter layer.
 
 Thus the total plumbing volume is:
 
-:math:`V_{FiPlumbing} = V_{BWTrunk} + V_{Trunks} + V_{Branches}`
+:math:`\rlap{-} V_{FiPlumbing} = \rlap{-} V_{BWTrunk} + \rlap{-} V_{Trunks} + \rlap{-} V_{Branches}`
 
 Then the total sand volvume in the filter is the volume of the filter (a function of its heigth and area) minus the volume of the plumbing.
 
-:math:`V_{SandTotal} = (A_{Fi}*H_{FiSandLow}) - V_{FiPlumbing}`.
+:math:`\rlap{-} V_{SandTotal} = (A_{Fi}*H_{FiSandLow}) - \rlap{-} V_{FiPlumbing}`.
 
 Multplying the density of the sand, :math:`\Rho_{Sand}` by the volume of the sand gives the mass of the sand, :math:`M_{Sand}`
 
