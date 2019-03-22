@@ -4,10 +4,12 @@ Sedimentation Design Solution
 
 .. code:: python
 
-    from aide_design.play import*
-    from aide_design import floc_model as floc
-    from pytexit import py2tex
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import numpy as np
+  import matplotlib.pyplot as plt
 
+.. _heading_Sed_Design_Challenge_Solution:
 
 Introduction
 ============
@@ -122,7 +124,6 @@ The width of sed tank diffuser is 0.3175 centimeter
     K_Minor = 2
 
     Vel_Tube_Max = (((Pi_Error * 2 * Headloss_DosingTube_Max * g) / K_Minor)**(1/2)).to(u.meter/u.s)
-    py2tex('Vel_Tube_Max = (((Pi_Error * 2 * Headloss_DosingTube_Max * g) / K_Minor)**(1/2))')
 
 .. math::
 
