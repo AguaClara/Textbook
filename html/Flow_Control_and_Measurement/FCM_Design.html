@@ -87,7 +87,9 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction_DC.html">Introduction Design Challenge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_DC.html">Python Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -118,9 +120,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#id5">What it is</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id6">What it does and why</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id7">How it works</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#kinematic-viscosity-of-coagulants">Kinematic Viscosity of Coagulants</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id8">Notes</a></li>
 </ul>
 </li>
@@ -131,6 +130,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FCM_DC.html">Flow Control and Measurement Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
 <ul>
@@ -153,15 +153,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_DC.html">Flocculation Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_DC.html">Sedimentation Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
 <ul>
@@ -170,6 +171,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_DC.html">Filtration Design Challenge</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -188,6 +190,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Synthesis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Synthesis/Synthesis_DC.html">Synthesis Design Challenges</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
 <ul>
@@ -326,7 +332,7 @@
 <p>The LFOM is a weir shape cut into a pipe. It was meant to imitate <a class="reference external" href="https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research">the Sutro Weir</a> while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.</p>
 <div class="figure align-center" id="id9">
 <span id="figure-sutro-v-lfom"></span><a class="reference internal image-reference" href="../_images/sutro_v_lfom.png"><img alt="A sutro weir and an LFOM" src="../_images/sutro_v_lfom.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span></p>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span></p>
 </div>
 </div>
 <div class="section" id="id2">
@@ -382,7 +388,7 @@
 </ol>
 <div class="figure align-center" id="id10">
 <span id="figure-cdc-labelled"></span><a class="reference internal image-reference" href="../_images/cdc_labelled.png"><img alt="CDC Displayed" src="../_images/cdc_labelled.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">This is the setup of the chemical dose controller.</span></p>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">This is the setup of the chemical dose controller.</span></p>
 </div>
 </div>
 <div class="section" id="id6">
@@ -418,18 +424,6 @@
 <li>Finally, select the dosing tube diameter and flow rate corresponding to the selected tube length.</li>
 </ol>
 </div>
-</div>
-<div class="section" id="kinematic-viscosity-of-coagulants">
-<h3>Kinematic Viscosity of Coagulants<a class="headerlink" href="#kinematic-viscosity-of-coagulants" title="Permalink to this headline">¶</a></h3>
-<p>AguaClara plants currently use either alum (aluminum sulfate) or PACl (polyaluminum chloride) solutions that are prepared from granular chemicals. The viscosity of solutions created from granular alum and PACl were measured using a SV - 10 Vibro Viscometer. The results are shown below.</p>
-<p>The equations for the kinematic viscosities of the two coagulants prepared from granules are given below.</p>
-<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-4">
-<span class="eqno">(76)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-4" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\nu_{Alum} = \left[ 1 + 4.225 \times {10}^{-6}{\left( \frac{C_{Alum}}{\frac{kg}{m^3}} \right)}^{2.289} \right] \nu_{{H_2}O}\\\nu_{PACl} = \left[ 1 + 2.383 \times {10}^{-5}\left(\frac{C_{PACl}}{\frac{kg}{m^3}} \right)^{1.893} \right] \nu_{{H_2}O}\end{aligned}\end{align} \]</div>
-<p>This analysis is incomplete in that we don’t know the aluminum concentration of these coagulant solutions.</p>
-<div class="figure align-center" id="id11">
-<span id="figure-coagulant-viscosity-kinematic"></span><a class="reference internal image-reference" href="../_images/Coagulant_Viscosity.png"><img alt="internal figure" src="../_images/Coagulant_Viscosity.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">The viscosity of solutions prepared from granular aluminum sulfate and polyaluminum chloride. The concentration is the mass of granules per volume of solution.</span></p>
-</div>
 <div class="section" id="id8">
 <h4>Notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <p>Nothing in life is perfect, and the CDC is no exception. It has a few causes of inaccuracy which go beyond non-zero minor losses:
@@ -444,8 +438,8 @@
 <ol class="arabic simple">
 <li><strong>Tank with a valve:</strong></li>
 </ol>
-<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-5">
-<span class="eqno">(77)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-5" title="Permalink to this equation">¶</a></span>\[\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-4">
+<span class="eqno">(76)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-4" title="Permalink to this equation">¶</a></span>\[\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
 <p>This equation describes flow <span class="math notranslate nohighlight">\(Q\)</span> as a function of time <span class="math notranslate nohighlight">\(t\)</span> of a fluid leaving a tank through a valve. Attempting to get this ‘tank with a valve’ system to yield constant head means raising the tank far, far above the valve that controls the flow. This is unreasonable when designing a flow control system for constant dosing, but can be used to design systems to drain a tank. See the section above for a description of the variables in the equation.</p>
 <ol class="arabic simple" start="2">
 <li><strong>LFOM:</strong> The LFOM makes the water level in the entrance tank linear with respect to the flow out of the entrance tank. This is useful in measuring the flow and is a critical component in AguaClara’s chemical dosing system. The LFOM <em>measures</em> the flow through the plant, it does not <em>control</em> the flow through the plant.</li>

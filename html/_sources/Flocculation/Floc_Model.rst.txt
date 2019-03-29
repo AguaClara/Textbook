@@ -503,7 +503,7 @@ Discussion
 
 The goodness of fit seen in :numref:`figure_PennockFig3` and :numref:`figure_PennockFig5` indicate that the model captures the important mechanisms governing flocculation performance for a wide range of coagulant doses in both laminar and turbulent hydraulic flocculation. One of the challenges in fitting the data pertained to the assumption made for the characteristic diameter of PACl precipitate clusters, :math:`\bar{d}_C`. This value has significant influence on the value of :math:`\bar{\Gamma}`, which in turn influences the values of the composite parameter (Equation :eq:`Paramlam`).
 
-It is known that PACl contains aluminum monomers and oligomers as well as :math:`\mathrm{Al_{13}}` and :math:`\mathrm{Al_{30}}` nanoclusters, with the larger :math:`\mathrm{Al_{30}}` nanoclusters having a diameter of 1 nm and a length of 2 nm :cite:`Floc_Model-mertens_polyaluminum_2012`. It has been found, however, that the components of PACl self-aggregate and go on to form larger clusters :cite:`Floc_Model-swetland_influence_2013`. For these experiments, the value of :math:`\bar{d}_\mathrm{C}` was chosen based on sizing experiments performed by Garland (2017) with a Malvern Zetasizer Nano-ZS to analyze a 138.5 mg/L (as Aluminum) solution of PACl.
+It is known that PACl contains aluminum monomers and oligomers as well as :math:`\mathrm{Al_{13}}` and :math:`\mathrm{Al_{30}}` nanoclusters, with the larger :math:`\mathrm{Al_{30}}` nanoclusters having a diameter of 1 nm and a length of 2 nm :cite:`Floc_Model-mertens_polyaluminum_2012`. It has been found, however, that the components of PACl self-aggregate and go on to form larger clusters :cite:`Floc_Model-swetland_influence_2013`. For these experiments, the value of :math:`\bar{d}_\mathrm{C}` was chosen based on sizing experiments performed by Garland (2015) with a Malvern Zetasizer Nano-ZS to analyze a 138.5 mg/L (as Aluminum) solution of PACl.
 
 A limitation of the model can be seen in the data in :numref:`figure_PennockFig3` at higher values of the composite parameters. After increasing steadily for all of the preceding range of coagulant doses, the performance began to decline after the dose of 10.9 mg/L as Aluminum. A simple hypothesis for the decline in performance (which corresponds with an effluent turbidity increase over the five data points from 2.7 NTU to 11.1 NTU) is that an increase in free PACl nanoparticles made a significant contribution to the effluent turbidity. As the PACl concentration increased, the coverage of reactor and clay platelet surfaces by coagulant became more complete and the free coagulant concentration also increased. With very high coagulant doses like the ones used in the upper end of the experimental range, it is possible that the formation of PACl self-aggregates was favorable, increasing the turbidity of the suspension. Indeed, calculation of the volume fraction for the 10.9 mg/L experimental PACl dose gives a volume fraction value (for clay and coagulant combined) of :math:`6.1\times10^{-4}`, while for the highest dose of 98 mg/L as Al, the value was :math:`8.3\times10^{-4}`, a 37\% increase due solely to the increased contribution of PACl precipitates.
 
@@ -526,24 +526,115 @@ particles.
 
 Geometric Explanation of the Effects of Humic Acid on Flocculation
 ==================================================================
-Dissolved organic matter (DOM) is ubiquitous in natural waters and has considerable influence on drinking water treatment, since the presence of DOM can create a need for increased coagulant doses in addition to being a precursor of disinfection byproducts (DBPs). This work evaluated use of polyaluminum chloride (PACl) as a coagulant for a synthetic water to determine the effect of DOM on the settled effluent turbidity. The research employed the hydraulic flocculation performance model previously discussed and made additions to the model algorithm to incorporate the effects of humic acid on flocculation of inorganic particulate matter. Data were obtained using a laminar-flow tube flocculator and a lamellar tube settler. Two adjustable model parameters were used to fit data, one related to the capture velocity used for sedimentation, and one that estimated the average size of dissolved humic acid molecules. The modified model that accounted for the presence of humic acid was able to independently predict the experimental results from 60 experiments at a different influent turbidity. This section is based on *Observations and a Geometric Explanation of the Effects of Humic Acid on Flocculation* published in Environmental Engineering Science in 2019 (DOI#10.1089/ees.2018.0405), and the reader is encouraged to consult this article for more details.
+
+Dissolved organic matter (DOM) is found in all surface and ground waters and has a significant effect on drinking water treatment, since the presence of DOM can create a need for increased coagulant doses in addition to being a precursor of disinfection byproducts (DBPs). This work evaluated use of polyaluminum chloride (PACl) as a coagulant for a synthetic surface water to determine the effect of DOM on the settled effluent turbidity. Mechanistically-based, scalable algorithms for operation of hydraulic flocculators were developed in this research based on observations of residual turbidity. Data were obtained using a laminar-flow tube flocculator and a lamellar tube settler. The research employed a flocculation model previously published by some of the authors and considered modifications to the model algorithm to incorporate the effects of humic acid. Two adjustable model parameters were used to fit data, one related to at incorporated the capture velocity used for sedimentation, and one that estimated the average size of dissolved humic acid molecules. The modified model that accounted for the presence of humic acid was able to independently predict the experimental results from 60 experiments at a different influent turbidity. The predictive model is expected to provide insights into the interactions between dissolved species and the coagulant nanoparticles.
 
 Introduction
 ------------
-Optimal flocculation conditions for turbidity or pathogen removal are not always the same as those for DOM removal (Hua and Reckhow, 2008). Because of the variable composition of DOM, the mechanisms of removal could be different for different types of DOM in water (Sharp and Jarvis, 2006). Jarvis and Jefferson (2007) state that the mechanisms through which DOM is removed include a combination of charge neutralization, adsorption, entrapment, and complexation with coagulant polycations into suspended particulate aggregates. The hydrophobic fraction of DOM, which includes humic acids, is generally removed in coagulation more effectively than the hydrophilic fraction (Marhaba et al., 2003; Matilainen et al., 2010). For the system considered in this research, the mechanisms of DOM (humic acid) attachment to coagulant (PACl with 10.6% Al2O3 w/w and basicity, OH/Al, of 2.1), appear to be adsorption (Yan et al., 2008) or complexation (Lin et al., 2014; Xiong et al., 2018).
 
-Prehydrolyzed polymer coagulants, such as polyaluminum chloride (PACl), have several advantages over conventional coagulants, such as alum, but the characteristics of the raw water (e.g., pH, alkalinity, and DOM content) affect the performance of different coagulants. As a result, prehydrolyzed coagulants do not consistently improve the removal efficiency of DOM (Hu et al., 2006).
+The main objective of this research was to observe and model the effects of dissolved organic matter (DOM) on flocculation to enhance the performance of a hydraulic flocculator in the context of a process train with subsequent unit processes (i.e., sedimentation). Prior research has shown that multiple variables influence the performance of hydraulic flocculators in drinking water treatment, including the concentration and type of suspended particles in the raw water, the concentration of DOM, coagulant type and dose, and hydraulic residence time and energy dissipation rate in the flocculator (Kawamura, 1991).
+
+The design and operation of hydraulic flocculators would be assisted by a predictive model that can characterize performance of flocculator designs. A general scalable model which uses dimensionally correct relationships that are based upon relevant flocculation mechanisms was created by Pennock et al. (2018) and successfully applied to quantify the effect of varying flocculator design and operational parameters on the post-sedimentation residual turbidity that corresponded to a selected sedimentation capture velocity. However, this model did not account for the presence of varying levels of DOM.
+
+Previous researchers have hypothesized that DOM interacts with coagulants through various mechanisms. Jarvis and Jefferson (2007) state that the aggregation mechanisms through which DOM is removed include a combination of charge neutralization, entrapment, adsorption, and complexation with coagulant metal ions into insoluble particulate aggregates. Optimal conditions for turbidity or pathogen removal are not always the same as those for DOM removal (Hua and Reckhow, 2008). Because of the variable composition of DOM, the mechanisms of removal could be different for different types of DOM in water (Sharp and Jarvis, 2006). The hydrophobic fraction of DOM, which includes humic acids, is generally removed in coagulation more effectively than the hydrophilic fraction (Marhaba et al., 2003; Matilainen and Vepsalainen, 2010).
+
+Prehydrolyzed polymer coagulants, such as polyaluminum chloride (PACl), have been reported to have advantages over conventional coagulants such as alum, including less temperature or pH dependence, as well as smaller alkalinity consumption, but the characteristics of the water to be treated (e.g., alkalinity, pH, and DOM content) play a major role in the choice of a proper coagulant. Consequently, prehydrolyzed coagulants have not been consistently observed to enhance the removal efficiency of DOM (Hu, 2006).
 
 The research described in this paper builds on the AguaClara hydraulic flocculation model developed by Pennock et al. (2018) and adds detail to the attachment efficiency coefficient describing geometric and probabilistic interactions between clay, coagulant, DOM, and reactor walls. The synthetic raw water used in experiments added one type of DOM, humic acid, to a previously studied synthetic system (Swetland et al., 2014) with the expectation that the resulting system would be sufficiently well-characterized to develop a predictive model.
+
+The AguaClara flocculation model is based on the observation that coagulant precipitates form nanoparticles that attach to the surfaces of suspended particles (clay) and reactor walls. Swetland et al. (2014) found particle attachment efficiency in a hydraulic flocculator to be proportional to the fractional surface coverage of suspended clay by precipitated coagulant (alum and PACl) nanoparticles. The success of the surface coverage model in explaining the interactions between clay, coagulant nanoparticles, and reactor walls led to the hypothesis that hydrophobic DOM macromolecules may attach to the coagulant nanoparticles and reduce the amount of PACl surface area that is available for attachment.
+
+Experimental Protocols
+----------------------
+
+Experiments were conducted using the laboratory apparatus illustrated in :numref:`figure_Du_Fig1`. Cornell University tap water was pumped from an aerated and temperature-controlled reservoir and mixed with a concentrated stock suspension of kaolinite clay (R.T. Vanderbilt Co., Inc.) to form a feed-back regulated constant turbidity raw water source (Weber-Shirk, 2016).
+
+.. _figure_Du_Fig1:
+
+.. figure:: Images/Du_Fig1.png
+   :width: 400px
+   :align: center
+   :alt: Experimental Apparatus
+
+   Experimental System Schematic
+
+
+Reported Cornell University tap water characteristics are listed in :numref:`table_CUWTP_Water_Quality`. A concentrated suspension of humic acids was mixed with the raw water source to produce humic acid concentrations ranging from 0 to 15 mg/L. The humic substances used in experiments were obtained in the form of sodium salt from Sigma-Aldrich (H16752).  Polyaluminum chloride (PACl) coagulant doses (Holland Company, Adams, MA) ranging from 0.53 to 2.65 mg/L as Al were used to treat the synthetic raw water.
+
+.. _table_CUWTP_Water_Quality:
+
+.. csv-table:: Average properties of tap water provided by Cornell University Water Filtration Plant as reported by BP-MWS, et al., 2016.
+   :header: Property, Average Value
+   :widths: 20, 20
+   :align: center
+
+   Turbidity, 0.056 NTU
+   Total Hardness, 150 mg/L
+   Total Alkalinity (as :math:`CaCO_3`), 140 mg/L
+   Dissolved Organic Carbon (DOC), 1.80 mg/L
+
+The coagulant dosage and humic acid concentrations were regulated by adjusting the rotation speed of separate peristaltic pumps. The pH of the treated effluent was monitored in each experiment and was 7.5 :math:`\pm` 0.3. Influent turbidities of 50 NTU and 100 NTU were tested.  Flocculation was accomplished by laminar flow through a coiled 9.52 mm inner diameter tube. The average velocity gradient in the coiled flocculator,:math:`\bar G_{CS}` was calculated according the equation derived by Tse et al. (2011) as
+
+.. math::
+
+   \bar G_{CS}= {{\bar G}_{CS_{Straight}}} \sqrt{1+{{0.033 \left[log\left(\frac{4Q_{Plant}}{\pi D\nu }\sqrt{\frac{D}{R_{c}}}\right)\right]\ }}^{4}}
+
+
+where :math:`{\bar G_{CS_{Straight}}}` is fluid velocity gradient in a straight tube, :math:`Q_{Plant}` is the experimental flow rate, :math:`D` is the inner diameter of the flocculator tube, :math:`R_{c}` is the diameter of curvature of the flocculator coils, and :math:`v` is the kinematic viscosity of water, which is about :math:`1\times \ {10}^{-6}\ \frac{{m}^2}{s}` at 20 :math:`{}^\circ` C (Kundu and Cohen, 2008). The overall experimental flow rate was 6 mL/s and the radius of curvature of the coiled tubing (:math:`R_{c}` ) was 15 cm.
+
+The value of :math:`{\bar G_{CS_{Straight}}}` was calculated by first estimating the head loss in a straight tube of the equivalent diameter and material using the Hagen-Poiseuille equation for laminar flow:
+
+.. math::
+
+   h_{L}=\frac{32\nu \bar{u}L}{D^2g}
+
+where :math:`L` is the length of the tube (25.45 m in these experiments), :math:`\bar{u}` is the mean velocity (84 mm/s) of the flow, and :math:`g` is the acceleration due to gravity (Granger, 1995). From this head loss, an average rate of the loss of kinetic energy, :math:`\bar{\varepsilon }` can be estimated using
+
+.. math::
+
+   \bar{\varepsilon }=\frac{gh_{L}}{\theta }
+
+where :math:`\theta` is the mean hydraulic residence time (Pennock et al., 2018). The hydraulic residence time was 302 s as calculated by
+
+.. math::
+
+   \theta =\frac{L}{\bar{u}}
+
+The energy dissipation rate, which was calculated to be 2.24 mW/kg, can be converted to velocity gradient, :math:`\bar G_{CS}`, by
+
+.. math::
+
+   \bar G_{CS}=\sqrt{\frac{\bar{\varepsilon }}{\nu }}
+
+which gave a velocity gradient of 50.1 :math:`{s}^{-1}` . Using this value for :math:`{\bar G_{CS_{Straight}}}` in Equation 1 resulted in a value of 71.1 :math:`{s}^{-1\ }` for :math:`\bar G_{CS}` .
+
+A coiled tube flocculator was used in this research because it is a high-Peclet-number reactor much like a baffled hydraulic flocculator and also because the average velocity gradient in laminar tube flow is well defined (Weber-Shirk and Lion, 2010). After flowing through the flocculator, a fraction of the flow was passed through a tube settler and the settled water turbidity was recorded continuously for each experiment. The 1.37 m (4.5 ft) tube settler, with an inner diameter of 2.66 cm, had an entry port diameter of 0.95 cm (3/8 in) near the bottom and an exit port diameter of 0.635 cm (1/4 in) near the top. The capture velocity was controlled at 0.102 mm/s using a peristaltic pump with flow set by
+
+.. math::
+
+   Q_S=\frac{\pi}{4} D^2_{S}V_{c}\left(\frac{L_{S}}{D_{S}}{cos {\alpha }_{S}\ }+{sin {\alpha }_{S}\ }\right)
+
+where :math:`V_{c}` is the capture velocity, :math:`L_{S}` is the length of the tube settler, :math:`D_{S}` is the diameter of the tube settler, and :math:`{\alpha }_{S}` is the angle of inclination of the tube settler, which was set at 60 degrees (Schulz and Okun, 1984).
+
 
 Model Formation
 ---------------
 
-In laminar-flow flocculators, the velocity of one floc relative to another scales with the average separation distance between flocs (Swetland et al., 2014). The time between floc collisions is inversely proportional to both :math:`\phi` and the relative velocity between flocs. Because the relative velocity between flocs is proportional to separation distance, the time between collisions is proportional to :math:`{\phi }^{\frac{1}{3}}`, since the average separation distance, :math:`\overline \Lambda`, is given by
+A flocculation model considering the effects of humic acid should predict the effective collisions between colloids for a given set of conditions. The dimensionless product of the fluid velocity gradient and mean hydraulic residence time, :math:`\bar G_{CS}\theta`, has been used as a measure of the collision potential provided by a flocculator that experiences laminar flow (Camp, 1955; Cleasby, 1984). It is well known that not all collisions between suspended particles result in aggregation, and average attachment efficiency, :math:`\bar{\alpha }`, has been used to denote the fraction of successful collisions (AWWA, 1999).
+
+The initial primary particle volume fraction, :math:`{\phi }_0`, also influences coagulation (Ives, 1968; O'Melia, 1972) and gives the fraction of the volume of the suspension occupied by the influent primary particles,
 
 .. math::
 
-   \overline \Lambda=d_{\mathrm P}{\left(\frac{\pi }{6\phi }\right)}^{\frac{1}{3}}.
+   {\phi }_0=\frac{C_0}{{\rho }_{P}}
+
+where :math:`C_0` is the influent particle concentration (kaolinite clay in these experiments) and :math:`{\rho }_{P}` is the density of influent particles (Swetland et al., 2014).
+
+In laminar-flow flocculators, the velocity of one floc relative to another scales with the average separation distance between flocs (Swetland et al., 2014). The time between floc collisions is inversely proportional to both :math:`\phi` and the relative velocity between flocs. Because the relative velocity between flocs is proportional to separation distance, the time between collisions is proportional to :math:`{\phi }^{\frac{1}{3}}`, since the average separation distance, :math:`\bar \Lambda`, is given by
+
+.. math::
+
+   \bar \Lambda=d_{P}{\left(\frac{\pi }{6\phi }\right)}^{\frac{1}{3}}
 
 The result is that, for laminar flow, the average time for primary particle collisions scales with :math:`{\phi }^{-\frac{2}{3}}` (Weber-Shirk and Lion 2010).
 
@@ -552,43 +643,43 @@ A laminar-flow hydraulic flocculator model was developed and validated based on 
 .. math::
    :label: eq_AguaClara_Flocculation_Model
 
-   \mathrm{p}C^{*}=\frac{3}{2}{{\log}_{10} \left[\frac{2}{3}{\left(\frac{6}{\pi }\right)}^{\frac{2}{3}}\pi k\overline{\alpha }\overline G_{CS}\theta {\phi }^{\frac{2}{3}}_0+1\right]\ },
+   pC^{*}=\frac{3}{2}{{log}_{10} \left[\frac{2}{3}{\left(\frac{6}{\pi }\right)}^{\frac{2}{3}}\pi k\bar{\alpha }\bar G_{CS}\theta {\phi }^{\frac{2}{3}}_0+1\right]\ }
 
-where  :math:`k` is a fitting parameter dependent on the value of :math:`V_{\mathrm c}` used for sedimentation, :math:`\overline{\alpha }` is the mean fraction of collisions that are successful (i.e., result in aggregation), and :math:`\mathrm{p}C^*` is defined as
+where  :math:`k` is a fitting parameter dependent on the value of :math:`V_{c}` used for sedimentation, :math:`\bar{\alpha }` is the mean fraction of collisions that are successful (i.e., result in aggregation), and :math:`pC^*` is defined as
 
 .. math::
    :label: eq_pC_AguaClara_Flocculation_Model
 
-   \mathrm{p}C^*=-{\log \left(\frac{\mathrm{Effluent\ Turbidity}}{\mathrm{Influent\ Turbidity}}\right)\ }.
+   pC^*=-{log \left(\frac{\mathrm{Effluent\ turbidity}}{\mathrm{Influent\ Turbidity}}\right)\ }
 
-Equation :eq:`eq_AguaClara_Flocculation_Model`, referred to as the AguaClara flocculation model in Pennock et al. (2018), is a Lagrangian hydrodynamic model that assumes that the aggregation of primary particles is rate-limiting. It further assumes that these particles, on average, will collide when the volume of fluid swept out as one particle approaches the other is equal to the average volume occupied by a single particle in the suspension. The time for these collisions to occur increases as flocculation proceeds, since the concentration of primary particles decreases in a way that is assumed to be first order with respect to collisions. Thus, with each successive collision, the average volume occupied by primary particles increases, and it takes longer for the next collision to occur. In Equation :eq:`eq_AguaClara_Flocculation_Model`, performance is linearly proportional to the logarithm of the effective collision potential, :math:`\log(\overline{\alpha }\overline G_{CS}\theta {\phi }^{2/3}_0)`.
+Equation :eq:`eq_AguaClara_Flocculation_Model`, referred to as the AguaClara flocculation model in Pennock et al. (2018), is a Lagrangian hydrodynamic model that assumes that the aggregation of primary particles is rate-limiting. It further assumes that these particles, on average, will collide when the volume of fluid swept out as one particle approaches the other is equal to the average volume occupied by a single particle in the suspension. The time for these collisions to occur increases as flocculation proceeds, since the concentration of primary particles decreases in a way that is assumed to be first order with respect to collisions. Thus, with each successive collision, the average volume occupied by primary particles increases, and it takes longer for the next collision to occur. In Equation :eq:`eq_AguaClara_Flocculation_Model`, performance is linearly proportional to the logarithm of the effective collision potential, :math:`log(\bar{\alpha }\bar G_{CS}\theta {\phi }^{2/3}_0)`.
 
-This group of parameters is the same as the group first described by Swetland et al. (2014), with the exception that they used the estimated fractional coverage of the colloid surface by coagulant, :math:`{\overline{\Gamma}}_{\mathrm{PACl-Clay}}`, as a measure of attachment efficiency instead of :math:`\overline{\alpha }`. Pennock et al. (2018) recognized that surface coverage of both particles participating in a collision matters, and introduced :math:`\overline{\alpha }` to convert the geometric information contained in :math:`{\overline{\Gamma}}_{\mathrm{PACl-Clay}}` to a probability of a successful collision. Using data gathered by Swetland et al. (2014), Pennock et al. (2018) were able to predict the results of independent laminar flocculation experiments with no adjustable parameters in the absence of added DOM.
+This group of parameters is the same as the group first described by Swetland et al. (2014), with the exception that they used the estimated fractional coverage of the colloid surface by coagulant, :math:`{\bar{\Gamma}}_{PACl-Clay}`, as a measure of attachment efficiency instead of :math:`\bar{\alpha }`. Pennock et al. (2018) recognized that surface coverage of both particles participating in a collision matters, and introduced :math:`\bar{\alpha }` to convert the geometric information contained in :math:`{\bar{\Gamma}}_{PACl-Clay}` to a probability of a successful collision. Using data gathered by Swetland et al. (2014), Pennock et al. (2018) were able to predict the results of independent laminar flocculation experiments with no adjustable parameters in the absence of added DOM.
 
-Experimental results obtained with added humic acid made clear that the attachment efficiency was adversely affected by the addition of humic acid.  Referencing adsorption measurements by Davis (1982), a minority (his study found 20\%) of added DOM would be adsorbed by kaolinite at the experimental pH of 7.5. Thus, most humic acid macromolecules were available to attach to the added coagulant nanoparticles. The following simplifying assumptions were made to account for the presence of humic acids: 1) humic acid macromolecules attach to coagulant nanoparticles to form nanoaggregates, 2) nanoaggregates attach to clay and to the reactor walls, and 3) the surfaces of precipitated coagulant nanoparticles promote adhesion, while the surfaces of bound humic acids prevent adhesion.
+Experimental results obtained with added humic acid present are shown in :numref:`figure_Du_Fig3` along with predictions based on the AguaClara flocculation model [Equation :eq:`eq_AguaClara_Flocculation_Model`].  It was evident that the attachment efficiency was adversely affected by the addition of humic acid.  Referencing adsorption measurements by Davis (1982), a minority (his study found 20\%) of added DOM would be adsorbed by kaolinite at the experimental pH of 7.5. Thus, most humic acid macromolecules were available to attach to the added coagulant nanoparticles. The following simplifying assumptions were made to account for the presence of humic acids: 1) humic acid macromolecules attach to coagulant nanoparticles to form nanoaggregates, 2) nanoaggregates attach to clay and to the reactor walls, and 3) the surfaces of precipitated coagulant nanoparticles promote adhesion, while the surfaces of bound humic acids prevent adhesion.
 
-In this study, humic acid macromolecules and PACl nanoparticles were modeled as spheres. Based on the size of coagulant nanoparticles and humic acid macromolecules, their number concentrations, :math:`N_{\mathrm HA}` and :math:`N_{\mathrm PACl}` respectively, can be estimated by
+In this study, humic acid macromolecules and PACl nanoparticles were modeled as spheres. Based on the size of coagulant nanoparticles and humic acid macromolecules, their number concentrations, :math:`N_{HA}` and :math:`N_{PACl}` respectively, can be estimated by
 
 .. math::
 
-   N_{\mathrm HA}=\ \frac{C_{\mathrm HA}}{{\rho }_{\mathrm HA}\frac{\pi }{6}{d_{\mathrm HA}}^3}
+   N_{HA}=\ \frac{C_{HA}}{{\rho }_{HA}\frac{\pi }{6}{d_{HA}}^3}
 
 and
 
 .. math::
 
-   N_{\mathrm PACl}=\ \frac{C_{\mathrm PACl}}{{\rho }_{\mathrm PACl}\frac{\pi }{6}{d_{\mathrm PACl}}^3},
+   N_{PACl}=\ \frac{C_{PACl}}{{\rho }_{PACl}\frac{\pi }{6}{d_{PACl}}^3}
 
-where :math:`C_{\mathrm PACl}` is the dose of coagulant in mg/L as Al; :math:`C_{\mathrm HA}` is the concentration of humic acid in mg/L; :math:`{\rho }_{\mathrm PACl}` is the density of the coagulant (Swetland et al. (2013) found :math:`1,138 \frac{\mathrm kg}{\mathrm m^3}`); :math:`{\rho }_{\mathrm HA}` is the density of humic acid, :math:`1,520\frac{\mathrm kg}{\mathrm m^3}` (Sigma-Aldrich, 2014); :math:`d_{\mathrm HA}` is the diameter of humic acid macromolecules (an adjustable model parameter); and :math:`d_{\mathrm PACl}` is the diameter of precipitated PACl coagulant nanoparticles, taken to be 90 nm as found by Dr. Casey Garland (2017).
+where :math:`C_{PACl}` is the dose of coagulant in mg/L as Al; :math:`C_{HA}` is the concentration of humic acid in mg/L; :math:`{\rho }_{PACl}` is the density of the coagulant (Swetland et al. (2013) found :math:`1,138 \frac{kg}{m^3}`); :math:`{\rho }_{HA}` is the density of humic acid, :math:`1,520\frac{kg}{m^3}` (Sigma-Aldrich, 2014); :math:`d_{HA}` is the diameter of humic acid macromolecules (an adjustable model parameter); and :math:`d_{PACl}` is the diameter of precipitated PACl coagulant nanoparticles, taken to be 90 nm as found by Dr. Casey Garland (personal communication).
 
-A key model assumption was that humic acid macromolecules cannot adhere to a coagulant surface that is occupied by a humic acid macromolecule, since humic acid macromolecules are assumed to not appreciably self-aggregate. Li et al. (2018) observed that for humic acid adsorption onto :math:`\mathrm{Al_2O_3}` surfaces, the macromolecules adsorbed in a monolayer. The outcome of this assumption is that humic acid macromolecules attach to an uncovered surface of coagulant and do not stack on top of one another. The available surface area of the PACl nanoparticle was modeled as the surface area of an equivalent sphere. The amount of that area that is occupied by an attached humic acid macromolecule was estimated as the projected area of a sphere with volume equivalent to a humic acid macromolecule.  A new variable describing the coverage of coagulant nanoparticle surface area by humic acid macromolecules,
+A key model assumption was that humic acid macromolecules cannot adhere to a coagulant surface that is occupied by a humic acid macromolecule, since humic acid macromolecules are assumed to not appreciably self-aggregate. The outcome of this assumption is that humic acid macromolecules attach to an uncovered surface of coagulant and do not stack on top of one another. The available surface area of the PACl nanoparticle was modeled as the surface area of an equivalent sphere. The amount of that area that is occupied by an attached humic acid macromolecule was estimated as the projected area of a sphere with volume equivalent to a humic acid macromolecule.  A new variable describing the coverage of coagulant nanoparticle surface area by humic acid macromolecules,
 
 .. math::
    :label: eq_Gamma_HA-PACl
 
-   {\overline{\Gamma}_\mathrm{HA-PACl}}=\frac{{{\frac{\pi }{4}d}_\mathrm{HA}}^2}{{{\pi d}_\mathrm{PACl}}^2}\frac{N_\mathrm{HA}}{N_\mathrm{PACl}},
+   {\bar{\Gamma}\mathrm{\ }}_{HA-PACl}=\frac{{{\frac{\pi }{4}d}_{HA}}^2}{{{\pi d}_{PACl}}^2}\frac{N_{HA}}{N_{PACl}}
 
-was created to be incorporated into the model (within :math:`\overline{\alpha }`) to represent the fraction of the PACl nanoparticle surface area that is covered by humic acid macromolecules.
+was created to be incorporated into the model (within :math:`\bar{\alpha }`) to represent the fraction of the PACl nanoparticle surface area that is covered by humic acid macromolecules.
 
 The first two steps in particle aggregation, where humic acid macromolecules attach to coagulant nanoparticles and then the resulting nanoaggregates attach to clay surfaces, were assumed to be rapid because diffusion is an effective transport process for nanoparticles (Benjamin and Lawler, 2013). Subsequent to rapid mix, the clay particles with attached nanoaggregates undergo collisions during the flocculation process and the aggregation process is governed by fluid shear (Pennock et al., 2018). The success of a collision between clay particles is hypothesized to be dependent on the properties of the contact surfaces at the initial point of contact.
 
@@ -608,46 +699,146 @@ Of these interactions considered in the model, the collisions that will result i
 
 .. math::
 
-   \overline{\alpha }\ ={\overline{\alpha }}_\mathrm{PACl-Clay}+{\overline{\alpha }}_\mathrm{PACl-PACl}+{\overline{\alpha }}_\mathrm{HA-PACl},
+   \bar{\alpha }\ ={\bar{\alpha }}_{PACl-Clay}+{\bar{\alpha }}_{PACl-PACl}+{\bar{\alpha }}_{HA-PACl}
 
 where the subscripts define the two surfaces that are interacting. The overbars indicate that all of these represent mean probabilities for an entire suspension rather than the probabilities for specific particles.
 
-The probability of a clay surface colliding with a PACl surface (:numref:`figure_Du_Fig2` A) is equal to twice the probability that the first surface is clay (:math:`1-{\overline{\Gamma}}_\mathrm{PACl-Clay}`) and the second surface is the PACl surface of a PACl-HA nanoaggregate (:math:`\left(1-{\overline{\Gamma}}_\mathrm{HA-PACl}\right){\overline{\Gamma}}_\mathrm{PACl-Clay}`), since either of two colliding particles could provide the clay surface or the PACl surface,
+The probability of a clay surface colliding with a PACl surface (:numref:`figure_Du_Fig2` A) is equal to twice the probability that the first surface is clay (:math:`1-{\bar{\Gamma}}_{PACl-Clay}`) and the second surface is the PACl surface of a PACl-HA nanoaggregate (:math:`\left(1-{\bar{\Gamma}}_{HA-PACl}\right){\bar{\Gamma}}_{PACl-Clay}`), since either of two colliding particles could provide the clay surface or the PACl surface,
 
 .. math::
 
-   {\overline{\alpha }}_\mathrm{PACl-Clay}=2\left(1-{\overline{\Gamma}}_\mathrm{PACl-Clay}\right)\left[\left(1-{\overline{\Gamma}}_\mathrm{HA-PACl}\right){\overline{\Gamma}}_\mathrm{PACl-Clay}\right].
+   {\bar{\alpha }}_{PACl-Clay}=2\left(1-{\bar{\Gamma}}_{PACl-Clay}\right)\left[\left(1-{\bar{\Gamma}}_{HA-PACl}\right){\bar{\Gamma}}_{PACl-Clay}\right]
 
-The probability of a collision between the PACl surfaces of two PACl-HA nanoaggregates (:math:`\left(1-{\overline{\Gamma}}_\mathrm{HA-PACl}\right){\overline{\Gamma}}_\mathrm{PACl-Clay}`) (:numref:`figure_Du_Fig2` B) is given by
-
-.. math::
-
-   {\overline{\alpha}}_\mathrm{PACl-PACl}={\left[\left(1-{\overline{\Gamma}}_\mathrm{HA-PACl}\right){\overline{\Gamma}}_\mathrm{PACl-Clay}\right]}^2.
-
-The probability of a collision between a PACl surface of a PACl-HA nanoaggregate (:math:`\left(1-{\overline{\Gamma}}_\mathrm{HA-PACl}\right){\overline{\Gamma}}_\mathrm{PACl-Clay}`) and an HA surface of a PACl-HA nanoaggregate (:math:`{\overline{\Gamma}}_\mathrm{HA-PACl}{\overline{\Gamma}}_\mathrm{PACl-Clay}`) (:numref:`figure_Du_Fig2` C), or vice versa, is given by
+The probability of a collision between the PACl surfaces of two PACl-HA nanoaggregates (:math:`\left(1-{\bar{\Gamma}}_{HA-PACl}\right){\bar{\Gamma}}_{PACl-Clay}`) (:numref:`figure_Du_Fig2` B) is given by
 
 .. math::
 
-   {\overline{\alpha }}_\mathrm{HA-PACl}=2\left[{\overline{\Gamma}}_\mathrm{PACl-Clay}\left(1-{\overline{\Gamma}}_\mathrm{HA-PACl}\right)\right]\left[{\overline{\Gamma}}_\mathrm{HA-PACl}{\overline{\Gamma}}_\mathrm{PACl-Clay}\right],
+   {\bar{\alpha}}_{PACl-PACl}={\left[\left(1-{\bar{\Gamma}}_{HA-PACl}\right){\bar{\Gamma}}_{PACl-Clay}\right]}^2
+
+The probability of a collision between a PACl surface of a PACl-HA nanoaggregate (:math:`\left(1-{\bar{\Gamma}}_{HA-PACl}\right){\bar{\Gamma}}_{PACl-Clay}`) and an HA surface of a PACl-HA nanoaggregate (:math:`{\bar{\Gamma}}_{HA-PACl}{\bar{\Gamma}}_{PACl-Clay}`) (:numref:`figure_Du_Fig2` C), or vice versa, is given by
+
+.. math::
+
+   {\bar{\alpha }}_{HA-PACl}=2\left[{\bar{\Gamma}}_{PACl-Clay}\left(1-{\bar{\Gamma}}_{HA-PACl}\right)\right]\left[{\bar{\Gamma}}_{HA-PACl}{\bar{\Gamma}}_{PACl-Clay}\right]
 
 where the factor of 2 accounts for the possibility that either colliding particle could contribute either surface type.
 
-The model accounting for the presence of humic acids is modified from the Pennock et al. (2018) model by redefining the attachment efficiency, :math:`\overline{\alpha }`, using Eq. 14 to account for the presence of humic acid.
+The model accounting for the presence of humic acids is modified from the Pennock et al. (2018) model by redefining the attachment efficiency, :math:`\bar{\alpha }`, using Eq. 14 to account for the presence of humic acid.
 
-The physical properties of humic acid vary with composition. The diameter of humic acid macromolecules is estimated to range from 4 nm to 110 nm (\"{O}sterberg, 1993). Because of the variation in the size of humic acid macromolecules, the characteristic diameter of the humic acid macromolecules was used as a fitting parameter. Thus, there are two adjustable model parameters, :math:`k`(Equation :eq:`eq_AguaClara_Flocculation_Model`,), which accounts for the sedimentation capture velocity, and :math:`d_\mathrm{HA}`, which accounts for coagulant precipitate surface coverage by humic acid.  These parameters were fit to results from observations taken with an influent turbidity of 50 NTU; the model was then validated by independently predicting results from experiments with an influent turbidity of 100 NTU.
+The physical properties of humic acid vary with composition. The diameter of humic acid macromolecules is estimated to range from 4 nm to 110 nm (\"{O}sterberg, 1993). Because of the variation in the size of humic acid macromolecules, the characteristic diameter of the humic acid macromolecules was used as a fitting parameter. Thus, there are two adjustable model parameters, :math:`k`(Equation :eq:`eq_AguaClara_Flocculation_Model`,), which accounts for the sedimentation capture velocity, and :math:`d_{HA}`, which accounts for coagulant precipitate surface coverage by humic acid.  These parameters were fit to results from observations taken with an influent turbidity of 50 NTU; the model was then validated by independently predicting results from experiments with an influent turbidity of 100 NTU.
+
+Results
+-------
+
+The results from 60 experiments, transformed by :eq:`eq_pC_AguaClara_Flocculation_Model`, are shown in :numref:`figure_Du_Fig3` for an inflow turbidity of 50 NTU with PACl doses ranging from 0.53 to 2.65 mg/L as Al and humic acid concentration ranging from 0 to 15 mg/L. A capture velocity of 0.120 mm/s was used in the experiments, which is a conservatively designed lamellar settler capture velocity (Willis, 1978).  Experiments were replicated for each combination of humic acid and PACl dose.
+
+The data show that increased coagulant dose is positively correlated with turbidity removal. The effluent turbidity was greatly increased by the presence of humic acid.  Also shown is a model fit using the AguaClara flocculation model given by Pennock et al. (2018). As shown, the model can fit the performance of the 0 mg/L HA data and even the 3 mg/L HA data reasonably well, but increasing doses of humic acid decrease performance appreciably, necessitating a modification to the original model.
+
+.. _figure_Du_Fig3:
+
+.. figure:: Images/Du_Fig3.png
+   :width: 400px
+   :align: center
+   :alt: Experimental Apparatus
+
+   :math:`\boldsymbol{p}{\boldsymbol{C}}^{\boldsymbol{*}}` as a function of coagulant dose for 50 NTU influent turbidity.
+
+
+To apply the modified model to the raw data, the data points with 0 mg/L HA were fit by :math:`k`, since their performance was not influenced by :math:`d_{HA}`, resulting in :math:`k` = 0.16. Then, the remaining data were fit using :math:`d_{HA}` (with the previously determined :math:`k` value) to minimize the sum squared error, resulting in :math:`d_{HA}=77 \mathrm{nm}` with a :math:`pC^*` (dimensionless) root-mean-square error, RMSE, of 0.08. Because their performance was essentially indistinguishable from the 0 mg/L HA data. Additionally, to avoid biasing the fit by data for which the coagulant dose was insufficient to overcome the effect of humic acid, data for which performance was lower than :math:`pC^*=0.25` were neglected for the fitting. :numref:`figure_Du_Fig4` shows the fit of the model to the observations for the 50 NTU experiments.
+
+.. _figure_Du_Fig4:
+
+.. figure:: Images/Du_Fig4.png
+   :width: 400px
+   :align: center
+   :alt: Experimental Apparatus
+
+   Model fit for :math:`\boldsymbol{p}{\boldsymbol{C}}^{\boldsymbol{*}}` as function of coagulant dose for 50 NTU raw water turbidity.
+
+
+With the given fitted value of :math:`d_{HA}=75 nm` for the 50 NTU influent turbidity data set, the coverage of coagulant nanoparticle surfaces by humic acid (:math:`{\bar{\Gamma}}_{HA-PACl}`) changed as shown in :numref:`figure_Du_Fig5`. According to Equation :eq:`eq_Gamma_HA-PACl`, the maximum number of humic acid macromolecules with a diameter of 75 nm that will fit on a PACl precipitate particle of 90 nm diameter when fully coating it is about 6. The model predicted complete coverage of the PACl nanoparticles by humic acid for low PACl concentrations, which correlated with very low observed turbidity removal efficiency.
+
+.. _figure_Du_Fig5:
+
+.. figure:: Images/Du_Fig5.png
+   :width: 400px
+   :align: center
+   :alt: Experimental Apparatus
+
+   Coverage of coagulant surface by humic acid as a function of coagulant dose.
+
+
+The relationships between the three terms included in attachment efficiency are shown in :numref:`figure_Du_Fig6`.  The term corresponding to collisions between a clean coagulant nanoparticle surface and clay (:math:`{\bar{\alpha }}_{PACl-Clay}`) was always dominant for the experimental conditions in this dataset, and the other terms became relatively more important but still insignificant small with respect to :math:`{\bar{\alpha }}_{PACl-Clay}` with increasing coagulant dose.
+
+.. _figure_Du_Fig6:
+
+.. figure:: Images/Du_Fig6.png
+   :width: 400px
+   :align: center
+   :alt: Experimental Apparatus
+
+   Attachment efficiency as a function of coagulant dose.
+
+The model was validated by using it to predict turbidity removal efficiency for different experimental conditions. The predicted :math:`pC^*` and the measured :math:`pC^*` are compared in :numref:`figure_Du_Fig7` for an additional 60 experiments with inflow turbidity of 100 NTU, PACl doses ranging from 0.53 to 2.65 mg/L, and humic acid concentration ranging from 0 to 15 mg/L. The resulting fit is almost as good as for the 50 NTU data, with :math:`pC^*` RMSE of 0.11.
+
+.. _figure_Du_Fig7:
+
+.. figure:: Images/Du_Fig7.png
+   :width: 400px
+   :align: center
+   :alt: Experimental Apparatus
+
+   Comparison graph between predicted data and observed data for 100 NTU influent turbidity.
+
+When the coagulant dose in :numref:`figure_Du_Fig4` and :numref:`figure_Du_Fig7` was replaced with the dimensionless group :math:`\bar{\alpha }\bar G_{CS}\theta {\phi }^{\frac{2}{3}}` , the data collapsed to a much narrower band, implying that the composite parameter, :math:`\bar{\alpha }\bar G_{CS}\theta {\phi }^{\frac{2}{3}}`, captures a large fraction of the trends present in the data, as seen in :numref:`figure_Du_Fig8`.
+
+.. _figure_Du_Fig8:
+
+.. figure:: Images/Du_Fig8.png
+   :width: 400px
+   :align: center
+   :alt: Experimental Apparatus
+
+   Model fit of 50 and 100 NTU data for :math:`\boldsymbol{p}{\boldsymbol{C}}^{\boldsymbol{*}}` as function of effective collision potential. The data plotted include two replicates for each experiment.
+
+In summary, the laminar flow hydraulic flocculation model of Pennock et al. (2018) was modified to incorporate the effects of humic acid with the addition of a single fitting parameter: a characteristic dimension of the humic acid macromolecules. The required coagulant dose can be predicted based on the flocculator parameters, humic acid characteristic size and concentration, and influent turbidity. The addition of humic acid to the flocculation model increases the model applicability since natural organic matter is found in all surface and ground waters and influences the coagulant dose needed for effective turbidity removal.
 
 Discussion
 ----------
 
-The solubility of humic acid is highly pH-dependent, and additional experimental results are needed to test the applicability of the model approach as a function of varying pH. The experimental conditions were designed to keep the pH relatively constant, and the pH change in the experiments was small (7.5 :math:`\pm` 0.3).
+For the range of experimental conditions considered in the research, the observed influence of humic acid on flocculation performance could be explained by the fractional coverage of the coagulant nanoparticle surfaces by humic acid macromolecules. It is noteworthy that under the experimental conditions, the predictive success of the model was achieved without incorporating the charges of colloids, coagulant, and humic acids. The reader is cautioned that the observations and predictions were obtained with one test particle, one coagulant, and one form of DOM in the mixed electrolyte represented by Cornell tap water, kept within the narrow pH range where coagulant precipitation is very favorable. While the experimental pH favored PACl precipitation, pH-dependent PACl solubility is accounted for in the model with
 
-The model considered flocculation in the presence of humic acid as a two-step process. Firstly, humic acid macromolecules attached to precipitated coagulant nanoparticles. Then, the partially-coated coagulant nanoaggregates could bind to clay and reactor wall surfaces.  Humic acid and coagulant nanoparticles were treated as spheres when estimating the attachment efficiency based on surface coverage and probability. The diameter of precipitated PACl nanoparticles was experimentally measured to be 90 nm (Garland, 2017), and a humic acid macromolecule diameter of 75 nm best fit the observations. Wall loss of coagulant precipitates with humic acid nanoaggregates was considered while direct wall loss of humic acid macromolecules was not considered.
+.. math::
 
-The characteristic humic acid dimension, :math:`d_\mathrm{HA}`, has a physical meaning, with the fitted value, 75 nm, falling within the range (4-110 nm) reported by \"{O}sterberg (1993), and the model fits are well correlated to the observations. The predictive capability of the model was verified by predicting results under different experimental conditions with no additional adjustable parameters.
+   N_{perClay}=\frac{\left[C_{PACl}-C_{PACl\left(aq\right)}\right]V_{P}{\rho }_{P}}{\frac{\pi }{6}d^{3}_{PACl}{\rho }_{PACl}C_0}
 
-The flocculation model without the effects of humic acid shows that :math:`\mathrm{p}C^*` is directly proportional to the log of the effective collision potential, :math:`\log(\overline{\alpha }\overline G_{CS}\theta {\phi }^{\frac{2}{3}})`, and this relationship is still present in the model with a modified attachment efficiency, :math:`\overline{\alpha },` based on clay surface coverage by coagulant nanoparticles as adjusted for the presence of humic acids.
+where :math:`N_{perClay}` is the number of precipitated coagulant aggregates per clay particle, :math:`C_{\mathrm{PACl\ (aq)}}` is the fraction of the coagulant dose that has remained in solution after precipitation using the PACl solubility observed by Van Benschoten and Edzwald (1990), and :math:`V_{P}` is the volume of a single clay platelet (Swetland et al., 2014). Within the model, :math:`N_{perClay}` is used to calculate :math:`\bar{\alpha }`, since it is a component of the calculation for :math:`{\bar{\Gamma}}_{PACl-Clay}`:
 
-The form of the flocculation model equation sets the interactions between raw water properties (:math:`{\phi }_0`), influent particle surface area (which contributes to :math:`{\overline{\Gamma}}_\mathrm{PACl-Clay}`), coagulant precipitate size and dose (which contributes to :math:`{\overline{\Gamma}}_\mathrm{PACl-Clay}` and :math:`{\overline{\Gamma}}_\mathrm{HA-PACl}`) , humic acid molecule size and concentration (which contribute to :math:`{\overline{\Gamma}}_\mathrm{HA-PACl}`), flocculator design (:math:`\overline G_{CS}\theta`), and sedimentation tank design (:math:`k`). In a gravity-powered water treatment plant operating at constant flow rate, the flocculator and sedimentation tank parameters are constant. An increase in concentration of humic acid causes an increase in :math:`{\overline{\Gamma}}_\mathrm{HA-PACl}`, which decreases :math:`\mathrm{p}C^*` but can be compensated for by increasing coagulant dose.
+.. math::
+
+   {\bar{\Gamma}}_{PACl-Clay}=1-e^{-\frac{d^{2}_{PACl}}{{SA}_{Clay}}\ N_{perClay}R_{Clay}\ }
+
+where :math:`{SA}_{Clay}` is the surface area of the surface area of the suspended clay particles and :math:`R_{Clay}` is the fraction of the available surface area in the reactor (including the surface area of reactor walls) that belongs to suspended clay particles (Swetland et al., 2014).
+
+The solubility of humic acid also is highly pH-dependent, and additional experimental results are needed to test the applicability of the model approach as a function of varying pH. The experimental conditions were designed to keep the pH relatively constant, and the pH change in the experiments was small (7.5 :math:`\pm` 0.3).
+
+The model considered flocculation in the presence of humic acid as a two-step process. Firstly, humic acid macromolecules attached to precipitated coagulant nanoparticles. Then, the partially-coated coagulant nanoaggregates could bind to clay and reactor wall surfaces.  Humic acid and coagulant nanoparticles were treated as spheres when estimating the attachment efficiency based on surface coverage and probability. The diameter of precipitated PACl nanoparticles was experimentally measured to be 90 nm (Garland, 2016), and a humic acid macromolecule diameter of 77 nm best fit the observations. Wall loss of coagulant precipitates with humic acid nanoaggregates was considered while direct wall loss of humic acid macromolecules was not considered.
+
+The characteristic humic acid dimension, :math:`d_{HA}`, has a physical meaning, with the fitted value, 77 nm, falling within the range (4-110 nm) reported by \"{O}sterberg (1993), and the model fits are well correlated to the observations. The predictive capability of the model was verified by predicting results under different experimental conditions with no additional adjustable parameters.
+
+The flocculation model without the effects of humic acid shows that :math:`pC^*` is directly proportional to the log of the effective collision potential, :math:`log(\bar{\alpha }\bar G_{CS}\theta {\phi }^{\frac{2}{3}})`, and this relationship is still present in the model with a modified attachment efficiency, :math:`\bar{\alpha },` based on clay surface coverage by coagulant nanoparticles as adjusted for the presence of humic acids.
+
+Under experimental conditions, the modified flocculation model provides the fundamental basis for the relationship between coagulant dose, synthetic raw water clay, and humic acid concentrations.  Extension to natural waters will undoubtedly require additional research.
+
+The form of the flocculation model equation sets the interactions between raw water properties (:math:`{\phi }_0`), influent particle surface area (which contributes to :math:`{\bar{\Gamma}}_{PACl-Clay}`), coagulant precipitate size and dose (which contributes to :math:`{\bar{\Gamma}}_{PACl-Clay}` and :math:`{\bar{\Gamma}}_{HA-PACl}`) , humic acid molecule size and concentration (which contribute to :math:`{\bar{\Gamma}}_{HA-PACl}`), flocculator design (:math:`\bar G_{CS}\theta`), and sedimentation tank design (:math:`k`). In a gravity-powered water treatment plant operating at constant flow rate, the flocculator and sedimentation tank parameters are constant. An increase in concentration of humic acid causes an increase in :math:`{\bar{\Gamma}}_{HA-PACl}`, which decreases :math:`pC^*` but can be compensated for by increasing coagulant dose.
+
+Summary
+-------
+
+The development of a predictive model for laminar flow hydraulic flocculation of water containing clay and humic acid is described. The study results increase the flexibility and generality of the AguaClara hydraulic flocculation model, and the modified model provides insight into the mechanism by which humic acid causes a decrease in performance of coupled flocculation-sedimentation processes.
+
+The model was able to predict independent experimental results for a different raw water turbidity with no additional adjustable parameters. Further tests should be done to fully validate the laminar-flow model including consideration of different experimental surrogates for DOM, different colloidal surfaces, alternative coagulants and varying solution compositions, including pH.
+
 
 References
 ==========
@@ -668,11 +859,9 @@ Davis, J. A. (1982). Adsorption of natural dissolved organic matter at the oxide
 
 Fosso-Kankeu, E., Webster, A., Ntwampe, I. O., & Waanders, F. B. (2017). Coagulation/Flocculation Potential of Polyaluminium Chloride and Bentonite Clay Tested in the Removal of Methyl Red and Crystal Violet. Arabian Journal for Science and Engineering, 42(4), 1389–1397. https://doi.org/10.1007/s13369-016-2244-x
 
-Garland, C. A. (2017). Uncovering the Mysteries of the Floc Blanket: An Exploration with Inlet Jets, Flocculators, and Polyaluminum Chloride Precipitates (Ph.D. thesis). Cornell University, United States -- New York. Retrieved from https://search.proquest.com/docview/1959337645/abstract/A3C1677072644AD5PQ/1
-
 Granger, R. A. (1995). Fluid Mechanics. New York: Dover Publications.
 
-Hu, C., Liu, H., Qu, J., Wang, D., & Ru, J. (2006). Coagulation Behavior of Aluminum Salts in Eutrophic Water:  Significance of Al13 Species and pH Control. Environmental Science & Technology, 40(1), 325–331. https://doi.org/10.1021/es051423+
+Hu, C., Hu, X., Wang, L., Qu, J., & Wang, A. (2006). Visible-Light-Induced Photocatalytic Degradation of Azodyes in Aqueous AgI/TiO 2 Dispersion. Environmental Science & Technology, 40(24), 7903–7907. https://doi.org/10.1021/es061599r
 
 Hua, G., & Reckhow, D. A. (2008). Relationship between Brominated THMs, HAAs, and Total Organic Bromine during Drinking Water Chlorination. In T. Karanfil, S. W. Krasner, P. Westerhoff, & Y. Xie (Eds.), Disinfection By-Products in Drinking Water (Vol. 995, pp. 109–123). Washington, DC: American Chemical Society. https://doi.org/10.1021/bk-2008-0995.ch008
 
@@ -683,12 +872,7 @@ Ives, K. J. (1968). Theory of operation of sludge blanket clarifiers. Proceeding
 Jarvis, P., Jefferson, B., Gregory, J., & Parsons, S. A. (2005). A review of floc strength and breakage. Water Research, 39(14), 3121–3137. https://doi.org/10.1016/j.watres.2005.05.022
 
 Kundu, P. K., & Cohen, I. M. (2008). Fluid mechanics. Amsterdam; Boston: Academic Press.
-
 Letterman, R. D. (1999). Water quality and treatment: a handbook of community water supplies (5th ed.). New York: McGraw-Hill.
-
-Li, W., Liao, P., Oldham, T., Jiang, Y., Pan, C., Yuan, S., & Fortner, J. D. (2018). Real-time evaluation of natural organic matter deposition processes onto model environmental surfaces. Water Research, 129, 231–239. https://doi.org/10.1016/j.watres.2017.11.024
-
-Lin, J.-L., Huang, C., Dempsey, B., & Hu, J.-Y. (2014). Fate of hydrolyzed Al species in humic acid coagulation. Water Research, 56, 314–324. https://doi.org/10.1016/j.watres.2014.03.004
 
 Matilainen, A., Vepsäläinen, M., & Sillanpää, M. (2010). Natural organic matter removal by coagulation during drinking water treatment: A review. Advances in Colloid and Interface Science, 159(2), 189–197. https://doi.org/10.1016/j.cis.2010.06.007
 
@@ -721,10 +905,6 @@ Weber-Shirk, M. L. (2016). ProCoDA: An Automated Method for Testing Process Para
 Weber-Shirk, M. L., & Lion, L. W. (2010). Flocculation model and collision potential for reactors with flows characterized by high Peclet numbers. Water Research, 44(18), 5180–5187. https://doi.org/10.1016/j.watres.2010.06.026
 
 Willis, R. M. (1978). Tubular Settlers—A Technical Review. Journal (American Water Works Association), 70(6), 331–335.
-
-Xiong, X., Wu, X., Zhang, B., Xu, H., & Wang, D. (2018). The interaction between effluent organic matter fractions and Al2(SO4)3 identified by fluorescence parallel factor analysis and FT-IR spectroscopy. Colloids and Surfaces A: Physicochemical and Engineering Aspects, 555, 418–428. https://doi.org/10.1016/j.colsurfa.2018.07.026
-
-Yan, M., Wang, D., Ni, J., Qu, J., Chow, C. W. K., & Liu, H. (2008). Mechanism of natural organic matter removal by polyaluminum chloride: Effect of coagulant particle size and hydrolysis kinetics. Water Research, 42(13), 3361–3370. https://doi.org/10.1016/j.watres.2008.04.017
 
 .. bibliography:: /references.bib
    :cited:

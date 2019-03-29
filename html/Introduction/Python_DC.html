@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python Design Challenge &mdash; AguaClara Textbook  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Review: Fluid Mechanics" href="../Review/Review_Fluid_Mechanics.html" />
+    <link rel="prev" title="Python Tutorial" href="Python_Tutorial.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction_DC.html">Introduction Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python Design Challenge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#section-1">2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">5)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">6)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">7)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">8)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">9)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a">12a)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b">12b)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c">12c)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">13)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#final-pointer">Final Pointer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_DC.html">Flow Control and Measurement Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_DC.html">Flocculation Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_DC.html">Sedimentation Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_DC.html">Filtration Design Challenge</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Synthesis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Synthesis/Synthesis_DC.html">Synthesis Design Challenges</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Python Design Challenge</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Introduction/Python_DC.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-design-challenge">
+<span id="title-python-design-hallenge"></span><h1>Python Design Challenge<a class="headerlink" href="#python-design-challenge" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Calculate the minimum inner diameter of a PVC pipe that can carry a flow of at least 10 L/s for the town of Ojojona. The population is 4000 people. The water source is a dam with a surface elevation of 1500 m. The pipeline connects the reservoir to the discharge into a distribution tank at an elevation of 1440 m. The pipeline length is 2.5 km. The pipeline is made with PVC pipe with an SDR (standard diameter ratio) of 26.</p>
+<p>The pipeline inlet at the dam is a square edge with a minor loss coefficient (<span class="math notranslate nohighlight">\({K_e}\)</span>) of 0.5. The discharge at the top of the distribution tank results in a loss of all of the kinetic energy and thus the exit minor loss coefficient is 1. See the minor loss equation below.</p>
+<p><span class="math notranslate nohighlight">\({h_e} = {K_e}\frac{{{V^2}}}{{2g}}\)</span></p>
+<p>The water temperature ranges from 10 to 30 Celsius. The roughness of a PVC pipe is approximately 0.1 mm. Use the fluids functions to calculate the minimum inner pipe diameter to carry this flow from the dam to the distribution tank.</p>
+<dl class="docutils">
+<dt>Report the following</dt>
+<dd><ul class="first simple">
+<li>critical design temperature</li>
+<li>kinematic viscosity (maximum viscosity will occur at the lowest temperature)</li>
+<li>the minimum inner pipe diameter (in mm).</li>
+</ul>
+<p class="last">Use complete sentences to report the results.</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The critical water temperature for this design is 10 degC.
+The kinematic viscosity of water is 1.3e-6 m²/s.
+The minimum pipe inner diameter is 97 mm.
+</pre></div>
+</div>
+</div>
+<div class="section" id="section-1">
+<span id="id2"></span><h2>2)<a class="headerlink" href="#section-1" title="Permalink to this headline">¶</a></h2>
+<p>Find the nominal diameter of a PVC pipe that is SDR 26. SDR means standard diameter ratio. The thickness of the pipe wall is 1/SDR of the outside diameter. The <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/pipes.py">pipes file</a> has a useful function that returns nominal diameter given SDR and inner diameter.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">nominal</span> <span class="n">diameter</span> <span class="n">of</span> <span class="n">the</span> <span class="n">pipeline</span> <span class="ow">is</span> <span class="mf">4.0</span> <span class="ow">in</span> <span class="p">(</span><span class="mf">1.0e+2</span> <span class="n">mm</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>3)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>What is the actual inner diameter of this pipe in mm? Compare this with the <a class="reference external" href="http://www.cresline.com/pdf/cresline-northwest/pvcpressupipeline_Re/CNWPVC-26.pdf">reported inner diameter for SDR-26 pipe</a> to see if our pipe database is reporting the correct value.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">inner</span> <span class="n">diameter</span> <span class="n">of</span> <span class="n">the</span> <span class="n">pipe</span> <span class="ow">is</span> <span class="mi">106</span> <span class="n">mm</span><span class="o">.</span>
+<span class="n">Cresline</span> <span class="n">reports</span> <span class="n">the</span> <span class="n">inner</span> <span class="n">diameter</span> <span class="ow">is</span> <span class="mi">106</span> <span class="n">mm</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>4)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>What is the maximum flow rate that can be carried by this pipe at the coldest design temperature? Display the flow rate in L/s using the .to method.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">maximum</span> <span class="n">flow</span> <span class="n">rate</span> <span class="n">at</span> <span class="mi">10</span> <span class="n">celsius</span> <span class="ow">is</span> <span class="mi">13</span> <span class="n">l</span><span class="o">/</span><span class="n">s</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>5)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>What is the Reynolds number and friction factor for this maximum flow? Assign these values to variable names so you can plot them later on the Moody diagram.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">Reynolds</span> <span class="n">number</span> <span class="ow">and</span> <span class="n">friction</span> <span class="n">factor</span> <span class="k">for</span> <span class="n">the</span> <span class="n">pipeline</span> <span class="n">flow</span> <span class="n">are</span> <span class="mf">1.2e+5</span> <span class="ow">and</span> <span class="mf">0.022</span> <span class="n">respectively</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>6)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Check to see if the fluids functions are internally consistent by calculating the head loss given the flow rate that you calculated and comparing that head loss with the elevation difference. Display enough significant digits to see the difference in the two values. Note that the Moody diagram has an accuracy of about ±5% for smooth pipes and ±10% for rough pipes <a class="reference external" href="http://user.engineering.uiowa.edu/~me_160/lecture_notes/MoodyLFpaper1944.pdf">Moody, 1944</a> .</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">head</span> <span class="n">loss</span> <span class="ow">is</span> <span class="mf">60.5</span> <span class="n">m</span> <span class="ow">and</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">close</span> <span class="n">to</span> <span class="n">the</span> <span class="n">elevation</span> <span class="n">difference</span> <span class="n">of</span> <span class="mf">60.0</span> <span class="n">m</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>7)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>How much more water (both volumetric and mass rate) will flow through the pipe at the maximum water temperature of 30 C? Take into account both the change in viscosity (changes the flow rate) and the change in density (changes the mass rate). Report the flow rates in L/s.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">increase</span> <span class="ow">in</span> <span class="n">flow</span> <span class="n">rate</span> <span class="n">at</span> <span class="mi">30</span> <span class="n">celsius</span> <span class="ow">is</span> <span class="mf">0.24</span> <span class="n">l</span><span class="o">/</span><span class="n">s</span><span class="o">.</span>
+<span class="n">The</span> <span class="n">increase</span> <span class="ow">in</span> <span class="n">mass</span> <span class="n">rate</span> <span class="n">at</span> <span class="mi">30</span> <span class="n">celsius</span> <span class="ow">is</span> <span class="mf">0.19</span> <span class="n">kg</span><span class="o">/</span><span class="n">s</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>8)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>Why is the flow increase due to this temperature change so small given that viscosity actually changed significantly (see the calculation below)?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">viscosity</span> <span class="n">ratio</span> <span class="k">for</span> <span class="n">the</span> <span class="n">two</span> <span class="n">temperatures</span> <span class="n">was</span> <span class="mf">0.62</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The flow is turbulent and thus viscosity has little influence on the
+flow rate.</p>
+</div>
+<div class="section" id="id9">
+<h2>9)<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>Suppose an AguaClara plant is designed to be built up the hill from the distribution tank. The transmission line will need to be lengthened by 30 m and the elevation of the inlet to the entrance tank will be 1450 m. The rerouting will also require the addition of 3 elbows with a minor loss coefficient of 0.3 each. What is the new maximum flow from the water source?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">new</span> <span class="n">maximum</span> <span class="n">flow</span> <span class="n">rate</span> <span class="n">at</span> <span class="mi">10</span> <span class="n">celsius</span> <span class="ow">is</span> <span class="mi">12</span> <span class="n">l</span><span class="o">/</span><span class="n">s</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>10)<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>How much less water will flow through the transmission line after the line is rerouted?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">reduction</span> <span class="ow">in</span> <span class="n">flow</span> <span class="ow">is</span> <span class="mf">1.3</span> <span class="n">l</span><span class="o">/</span><span class="n">s</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>11)<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>There exists a function within physchem called <code class="docutils literal notranslate"><span class="pre">pc.fric(FlowRate,</span> <span class="pre">Diam,</span> <span class="pre">Nu,</span> <span class="pre">PipeRough)</span></code> that returns the friction factor for both laminar and turbulent flow. In this problem, you will be creating a new function which you shall call <code class="docutils literal notranslate"><span class="pre">fofRe()</span></code> that takes the Reynolds number and the dimensionless pipe roughness (ε/D) as inputs.</p>
+<p>Recall that the format for defining a function is</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fofRe</span><span class="p">(</span><span class="n">input1</span><span class="p">,</span> <span class="n">input2</span><span class="p">):</span>
+  <span class="n">f</span> <span class="o">=</span> <span class="n">buncha</span> <span class="n">stuff</span>
+  <span class="k">return</span> <span class="n">f</span>
+</pre></div>
+</div>
+<p>Since the equation for calculating the friction factor is different for laminar and turbulent flow (with the transition Reynolds number being defined within the physchem file), you will need to use an <code class="docutils literal notranslate"><span class="pre">if,</span> <span class="pre">else</span></code> statement for the two conditions.</p>
+</div>
+<div class="section" id="id12">
+<h2>12)<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>Create a beautiful Moody diagram. Include axes labels and show a legend
+that clearly describes each plot. The result should look like
+<a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#figure-moody"><span class="std std-numref">Fig. 22</span></a> below.</p>
+<div class="figure align-center" id="id14">
+<span id="figure-moody"></span><a class="reference internal image-reference" href="../_images/Moody.png"><img alt="internal figure" src="../_images/Moody.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Moody diagram describing fluid flow in straight pipes.</span></p>
+</div>
+</div>
+<div class="section" id="a">
+<h2>12a)<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h2>
+<p>You will be creating a Moody diagram showing Reynolds number vs friction factor for multiple dimensionless pipe roughnesses. The first step to do this is to define the number of dimensionless pipe roughnesses you want to plot. We will plot 8 curves for the following values: 0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1. We will plot an additional curve, which will be a straight line, for laminar flow, since it is not dependent on the pipe roughness value (see <a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#figure-moody"><span class="std std-numref">Fig. 22</span></a>).</p>
+<ul class="simple">
+<li>Create an array for the dimensionless pipe roughness values, using <code class="docutils literal notranslate"><span class="pre">np.array([])</span></code>.</li>
+<li>Specify the amount of data points you want to plot for each curve. We will be using 50 points.</li>
+</ul>
+<p>Because the Moody diagram is a log-log plot, we need to ensure that all
+50 points on the diagram we are creating are equally spaced in
+log-space. Use the <code class="docutils literal notranslate"><span class="pre">np.logspace(input1,</span> <span class="pre">input2,</span> <span class="pre">input3)</span></code> function to
+create an array for turbulent Reynolds numbers and an array for laminar
+Reynolds numbers.</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">input1</span></code> is the exponent for the lower bound of the range. For example, if you want your lower bound to be 1000, your input should be <code class="docutils literal notranslate"><span class="pre">math.log10(1000)</span></code> which is equal to 3.</li>
+<li><code class="docutils literal notranslate"><span class="pre">input2</span></code> is the exponent for the upper bound of the range. Format this input as you have formatted <code class="docutils literal notranslate"><span class="pre">input1</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">input3</span></code> is the number of data points you are using for each curve. We will be using 50 points.</li>
+</ul>
+</div></blockquote>
+<p><strong>12a) Deliverables</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Array of dimentionless pipe roughnesses. Call this array <code class="docutils literal notranslate"><span class="pre">eGraph</span></code>.</li>
+<li>Variable defining the amount of points on each pipe roughness curve * Two arrays created using <code class="docutils literal notranslate"><span class="pre">np.logspace</span></code> for turbulent and laminar Reynolds numbers, which will be the x-axis values for the Moody diagram</li>
+</ul>
+</div></blockquote>
+<p>Note: The bounds for the laminar Reynolds numbers array should span between 670 and the predefined transition number used in Problem 11. The bounds for the turbulent Reynolds numbers array should span between 3,500 and 100,000,000. These ranges are chosen to make the curves fit well within the graph and to intentionally omit data in the transition range between laminar and turbulent flows.</p>
+</div>
+<div class="section" id="b">
+<h2>12b)<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h2>
+<p>Now you will create the y-axis values for turbulent flow (based on dimensionless pipe roughness) and laminar flow (not based on dimensionless pipe roughness). To do this, you will use the <code class="docutils literal notranslate"><span class="pre">fofRe()</span></code> function you wrote in Problem 11 to find the friction factors.</p>
+<p>Begin by creating an empty 2-dimensional array that will be populated by the turbulent-flow friction factors for each dimensionless pipe roughness. Use <code class="docutils literal notranslate"><span class="pre">np.zeros(number</span> <span class="pre">of</span> <span class="pre">rows,</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">columns)</span></code>. The number of rows should be the number of dimensionless pipe roughness values (<code class="docutils literal notranslate"><span class="pre">len(eGraph)</span></code>), while the number of columns should be the number of data points per curve as defined above. Populating this array with friction factor values may require two <code class="docutils literal notranslate"><span class="pre">for</span></code> loops, one to iterate through rows and one to iterate through columns.</p>
+<p>You will repeat this process to find the friction factors for laminar flow. The only difference between the turbulent and laminar friction flow arrays will be that the laminar array will only have one dimension since it does not affected by the dimensionless pipe roughness. Start by creating an empty 1-dimensional array and then use a single <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
+<dl class="docutils">
+<dt><strong>12b) Deliverables</strong></dt>
+<dd><ul class="first last simple">
+<li>One 1-D array containing friction factor values for laminar flow.</li>
+<li>One 2-D array containing friction factor values for each dimensionless pipe roughness for turbulent flow.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="c">
+<h2>12c)<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
+<p>Now, we are ready to start making the Moody diagram! The plot formatting is included for you in the cell below. You will add to this cell the code that will actually plot the arrays you brought into existence in 12a) and 12b) with a legend. For the sake of your own sanity, please only add code where specified.</p>
+<blockquote>
+<div><ul class="simple">
+<li>First, plot your arrays. See the plots in the tutorial above for the syntax. Recall that each dimensionless pipe roughness is a separate row within the 2-D array you created. To plot these roughnesses as separate curves, use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate through the rows of your array. To plot all columns in a particular row, use the <code class="docutils literal notranslate"><span class="pre">[1,:]</span></code> call on an array, where 1 is the row you are calling.</li>
+<li>Plotting the laminar flow curve does not require a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop because it is a 1-D array.</li>
+<li>Use a linewidth of 4 for all curves.</li>
+<li>Now plot the data point you calculated for the pipeline problem. Use the Reynolds number and friction factor obtained in Problem 5. Because this is a single point, it should be plotted as a circle instead of a line.</li>
+<li>You will need to make a legend for the graph using <code class="docutils literal notranslate"><span class="pre">ax.legend(stringarray,</span> <span class="pre">loc</span> <span class="pre">=</span> <span class="pre">'best')</span></code></li>
+<li><dl class="first docutils">
+<dt>The first input, <code class="docutils literal notranslate"><span class="pre">stringarray</span></code>, must be an array composed of strings instead of numbers. The array you created which contains</dt>
+<dd>the dimensionless pipe roughness values (<code class="docutils literal notranslate"><span class="pre">eGraph</span></code>) can be converted into a string array for your legend (<code class="docutils literal notranslate"><span class="pre">eGraph.astype('str'))</span></code>. You will need to add ‘Laminar’ and ‘Pipeline’ as strings to the new <code class="docutils literal notranslate"><span class="pre">eGraph</span></code> string array. Perhap you will find <code class="docutils literal notranslate"><span class="pre">np.append(basestring,</span> <span class="pre">[('string1','string2')])</span></code> to be useful.</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id13">
+<h2>13)<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p>What did you find most difficult about learning to use Python? Create a brief example as an extension to this tutorial to help students learn the topic that you found most difficult.</p>
+<div class="section" id="final-pointer">
+<h3>Final Pointer<a class="headerlink" href="#final-pointer" title="Permalink to this headline">¶</a></h3>
+<p>Before submitting a file for others to use, you need to verify that all of the dependencies are defined and that you didn’t accidently delete a definition that is required. You can do this by placing your cursor in a python code section and then clicking on the python 3|idle in the toolbar at the bottom of the Atom window. Select restart Python 3 kernel. Then execute all of the python code in your document from top to bottom and make sure that all of the code performs as expected.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Review/Review_Fluid_Mechanics.html" class="btn btn-neutral float-right" title="Review: Fluid Mechanics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Python_Tutorial.html" class="btn btn-neutral" title="Python Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
