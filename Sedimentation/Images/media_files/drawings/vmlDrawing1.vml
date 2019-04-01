@@ -1,0 +1,36 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="78"/>
+ </o:shapelayout><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75"
+  o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas><v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s79908" type="#_x0000_t75" style='position:absolute;left:115pt;top:140pt;width:677pt;height:348pt'>
+  <v:fill color="white [0]" opacity="1" on="f" type="solid"/>
+  <v:stroke startarrow="none" startarrowwidth="wide" startarrowlength="medium"
+   endarrow="none" endarrowwidth="wide" endarrowlength="medium" color="black [1]"
+   opacity="1" filltype="solid" weight="1pt" miterlimit="8" joinstyle="miter"
+   on="f"/>
+  <v:imagedata o:relid="rId1" o:title="" croptop="0" cropbottom="0" cropleft="0"
+   cropright="0" grayscale="f" bilevel="f"/>
+  <v:shadow on="f" type="single" color="#e7e6e6 [2]" opacity="1" obscured="f"
+   origin="0,0" offset="2pt,2pt" matrix="1,0,0,1"/>
+  <o:lock v:ext="edit" aspectratio="t" position="f" selection="f" grouping="f"/>
+ </v:shape></xml>
