@@ -23,7 +23,6 @@ N_orifice
 12*u.inch/N_orifice
 
 # for regualr branches
-
 Q_ff = Pi_Branch * Q_fi/3
 HL_ff = 5*u.cm
 g = 9.80665 * u.m / u.s ** 2
@@ -44,3 +43,11 @@ N_branch
 A_branch_test = (A_BRANCH/N_branch)
 D_branch = pc.diam_circle(A_branch_test)
 D_branch.to(u.inch)
+
+
+
+#slot calculations:
+theta_slot = 45
+B_slot = 0.008*u.inch
+A_slot = np.pi*D_branch*theta_slot*B_slot/360
+S_slot = 0.008*u.inches

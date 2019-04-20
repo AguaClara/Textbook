@@ -307,7 +307,7 @@ The relative distribution of the flow through a particular path is defined as:
 
 
 | Such that:
-| :math:`h_{L_{Sand}| =` the head loss in the sand bed
+| :math:`h_{L_{Sand}} =` the head loss in the sand bed
 | :math:`PR =` pressure recovery (as defined by: :math:`\frac{V^2}{2g}`)
 
 
@@ -325,6 +325,7 @@ Where the ratio of the pressure recovery in the branches to the head loss throug
 
 :math:`\Pi_{ManifoldHeadLoss} = \frac{PR}{h_{L_{sand}}}`
 
+**make this useful**
 
 This equation is used to determine the smallest pipe size that meets the pressure recovery constraint for a certain flow. It alost provides a maximum value for head loss within the system, summing the various pressure recovery terms and comparting to this value will show if the design makes sense. As the head loss through  the sand is known, the equation can be directly solved for pressure recovery. From the total filter flow the flow throuh any branch can be determined. As the pressure recovery term is directly related to the velocity in the pipe a maximum velocity can be determined from the PR term. This maximum velocity can be used to find the minimum area for the branches from pressure recovery, which can provide a pipe diameter. This value can be compared to the minimum determined by the fabrication constraint of the slotted pipes and the larger of the 2 minimums is used for the design.
 
@@ -337,12 +338,22 @@ See the section on Pressure Recovery  in :ref:`Filtration Intro <title_filtratio
 
 
 
-Flow in branches to find orifice area
+Flow in branches to find orifice area and number
 --------------------------------------------------
 
-As shown above the maximum flow in a trunk will be either :math:`Q_{Fi}` or :math:`\frac{Q_{Fi}}{3}` (the equivalent of :math:`2Q_{Layer}`). As we are are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.
 
-In this case the longes branch is slightly less than :math:`\frac{ID_{Fi}}{2}`. To keep the calculations simple the maximum fraction of the flow served by any branch would be in the longest branch, the approximate area of the filter layer served would be approximately the length of this branch time the spacing of the branches. :numref:`_figure_fl`
+The overall steps to find the total orifice area and number of orifices necessary:
+  1. Determine the fraction of flow that comes out of the longest branches
+  2. Set head loss to be low (<5cm)
+  3. Use the flow that will be in the largest branch to determine the area
+  4. Set the area of one orifice to be the largest it can be due to fabrication constraints.
+  5. Divide the area obtains in 3 by the area of one orifice as determined in 4. This is the number of orifices necessary on the longest branch.
+
+*The number of orifices for the other branches requires the spacing of the orifices which requires the trunk size, which is determined later, so hold tight.*
+
+As shown in the previous section maximum flow in a trunk will be either :math:`Q_{Fi}` or :math:`\frac{Q_{Fi}}{3}` (the equivalent of :math:`2Q_{Layer}`). As we are are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.
+
+In this case the longest branch is slightly less than :math:`\frac{ID_{Fi}}{2}`. To keep the calculations simple the maximum fraction of the flow served by any branch would be in the longest branch, the approximate area of the filter layer served would be approximately the length of this branch time the spacing of the branches. :numref:`_figure_flow_fraction_branch`
 
 .. _figure_flow_fraction_branch:
 
@@ -358,16 +369,16 @@ From that area, the fraction of the filter layer served by the hypothetical long
 
 .. math::
 
-  \frac{(\frac{ID_{Fi}}{2} * S_{Branch})}{\Pi*\frac{ID_{Fi}^2}{4}}  = \Pi_{branch}
-  \\ \\ Then: \\ \\
-  \Pi_{branch}*2Q_{FiLayer} = Q_{BranchMax}
+    \frac{(\frac{ID_{Fi}}{2} * S_{Branch})}{\pi*\frac{ID_{Fi}^2}{4}}  = \Pi_{branch}
+    \\ \\ Then: \\ \\
+    \Pi_{branch}*2Q_{FiLayer} = Q_{BranchMax}
 
 
 This describes the largest flow in any branch during forward filtration. For the backwash branches the only difference is with the flow:
 
 .. math::
 
-  \frac{\frac{ID_{Fi}}{2} * S_{Branch}}{\Pi*\frac{ID_{Fi}^2}{4}} =  \Pi_{branch}
+  \frac{\frac{ID_{Fi}}{2} * S_{Branch}}{\pi*\frac{ID_{Fi}^2}{4}} =  \Pi_{branch}
   \\ \\ Then: \\ \\
   \Pi_{branch}*Q_{Fi} = Q_{BranchBWMax}
 
@@ -376,7 +387,7 @@ These two flows can be used with the pressure recovery terms to determine the sm
 
 Using this flow the total area of the inlet orifices can be found for the longest branch, this area can then describe the number of orifices and thir spacing. The spacing then applies to all the branches not just the longest one.
 
-Because the pressure recovery in the branches is the constraint in determining total orifice sizing, it is convenient to fist consider the pressure recovery term:
+Because the pressure recovery in the branches is the constraint in determining total orifice sizing, it is convenient to fist consider the generic pressure recovery term:
 
 .. math::
 
@@ -388,7 +399,7 @@ In the equation above the HL is equivalent to the pressure recovery, the velocit
 
   A = \frac{1}{\frac{(\sqrt{2g*h_L})*\Pi*\epsilon}{Q}}
 
-The suggested design headloss for the inlets and outlets is 5 cm. The following table shows the other constraints used to solve for the required areas.
+The suggested design headloss for the inlets and outlets is 5 cm, but is flexible in the . The following table shows the other constraints used to solve for the required areas.
 
 
 .. _table_branch_head_loss:
@@ -414,7 +425,7 @@ If we assume that:
 
     D_{Orifice} = D_{OrificeMax} \\ \\ Then: \\ \\ D_{Orifice} = 0.25in
 
-This diameter can be used to find the area of one orifice, :math:`A_orifice`.
+This diameter can be used to find the area of one orifice, :math:`A_{Orifice}`.
 
 Then:
 
@@ -454,13 +465,13 @@ Again begin with:
 
 .. math::
 
-  h_L = \frac{(\frac{Q}{\Pi*A*\epsilon})^2}{2g}
+  h_L = \frac{(\frac{Q}{\pi*A*\epsilon})^2}{2g}
 
 And then rearrage so solve for area:
 
 .. math::
 
-  A = \frac{1}{\frac{(\sqrt{2g*h_L})*\Pi*\epsilon}{Q}}
+  A = \frac{1}{\frac{(\sqrt{2g*h_L})*\pi*\epsilon}{Q}}
 
 
 Where, the conditions are the same as for the :math:`A_{BwOrifices}` above except that :math:`Q = Q_{Fi}` for the backwash condition and :math:`Q = \frac{Q_{Fi}}{3}` for the forward filtration condition.
@@ -478,6 +489,55 @@ The areas determined is the minimum total area of the branches, :math:`A_{Branch
 
 
 Those areas directly correspond to diameters. To keep the design consistent the same size pipe will be used for all branches so the larger of the two sizes (which will be from the backwash calculation) will be used to determine the size of the branches. If both values are smaller than the minimum needed to slot the pipes, then the predefined minimum will be used. If the diameter calculated is not a regular pipe inner diameter the next largest actual pipe size should be used.
+
+Outlet area, slots and affirmation of branch sizing
+---------------------------------------------------------
+
+
+Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, :math:`B_{slot}` is always .008 inch. The number of slot rows is also fixed at 2, because each branch has slots on both sides because the outlet pipes are accepting flow from two layers of sand, one above and one below. This constrains the minimum size that the slotted pipes can be, becasue
+
+
+the total slot area for one outlet layer needs to be able to accept :math:`\frac{Q_{Fi}}{3}`, this includes two layers of slots on each branch.
+
+The total area of the slots for one layer should be at least equal to the total orifice area on the inlet manifolds of the the inner two inlet layer (the ones that each serve :math:`\frac{Q_{Fi}}{3}`). Assuming that flow will be distributed on the same way for the outlet manifold as it was on the inlet manifold, in terms of relative flow per branch, it then follows that the area of orifices on the longest outlet branch should be equal to the area of orifices on the longest inlet branch (which are the same length!):
+
+.. math::
+
+    A_{SlotsLongestBranch} = A_{OrificesLongestBranch}
+
+Knowing the slot width makes determining the total slots length of the longest branch easy to find.
+
+.. math::
+
+    \frac{A_{SlotsLongestBranch}}{B_{Slot}} = L_{SlotsLongestBranch}
+From the cumulative area of slots and the width of the slots, the total length of slots can be determined. This length of slots is for one side of one branch *yes?*
+
+As the branches are different lengths along one trunk, the number of slots is different per branch depending on the length, but the spacing is the same so the variation is accounted for.
+
+
+
+Pressure Recovery and branch diameter to determine trunk sizing
+-------------------------------------------------------------------
+
+In determining the trunk size both pressure recovery and the influence of the branches intercepting the trunks must be considered.
+
+.. _figure_branch_configuration:
+
+.. figure:: Images/figure_branch_configuration.png
+    :width: 80%
+    :align: center
+    :alt: branch photograph, interal image
+
+    1. Image 1 shows the use of 1 pipe for the branches on both sides of the trunk, the location of the opening into the branches causes the pipe to act as a valve inside the trunk. This causes massive head loss in the filter. 2. Image 2 shoes an alternate method of connectig branches to trunks, with 2 separate pipes being used. In this design it takes much less force to dislodge the branch from the trunk due to the cantilever of every branch. 3. Image 3 shows a similar branch construction as in image 1 but with the hole in the branch drilled in such a way that it causes a smaller (but still significant) flow constriction. 4. Image 4 shows a branch in a similar orientation to image 1 but, the branch is going through a larger pipe so the flow constriction is not as significant.
+
+
+The images above show some of the challenges with determining the size of the trunks, as well as the importance of thoughtful fabrication.
+
+**Must figure out the importance of the valve effect on this to determine the algorithm**
+
+Trunk sizing and caps: orifice and slot spacing
+------------------------------------------------------
+
 
 
 Determining Forward Filtration and Backwash Velocities
@@ -591,7 +651,7 @@ Second Constraint: Pressure Recovery in lowest trunk during backwash
 
 The second pressure recovery constraint is in the backwash branch during backwash. During backwash the lowest trunk sees all the flow at a higher velocity than any other trunk does during filtration meaning all of its branches experience a higher flow as well. Because the velocity is higher, the PR term will also be higher, so it must be constrained to maintain even flow.
 
-In backwash there is no head loss through the sand bed because the sand is fully fluidized [not true. there is 1.2 m of head loss through the sand bed.]. The startup time in which it takes to fluidize the bed is ignored in this design. Thus, the only head loss occurs from the flow expansion as water exits the filter manifold out of the exits [Have you described these holes? Need a figure.] orifices.
+-there is 1.2 m of head loss through the sand bed.
 
 The initial estimate of head loss through the holes is :math:`HL_{FiBwOrifices} = 10cm`. [where did this come from? One proposal is the same constraint as we discussed with the horizontal filter. The head loss through the orifice must be close to the distance between orifices. This is to ensure that the entire bed fluidizes. If there is a section of the filter where the sand isn't fluidized, then that sand will form an incline that is the angle of repose of sand in water. Thus, the maximum depth that the first covered orifice under the settled sand will be determined by the distance between orifices and the angle of repose of the sand. If we assume conservatively that the angle of repose is 45 degrees, then the depth of sand would equal the spacing between the orifices. And if the head loss through the orifices was equal to that depth of sand, then there would be enough water coming out of the first covered orifice to fluidize the sand above it.
 
@@ -601,50 +661,6 @@ Darn... My analysis in the previous paragraph is flawed because the water flows 
 
 Using the head loss ratio, :math:`\Pi_{ManifoldHeadLoss}` , the allowable PR can be determined: :math:`PR_{FiBwManMax} = HL_{FiBwOrifices}*\Pi_{ManifoldHeadLoss}`
 
-From above the PR estimate for the Backwash Branches exists.
-
-This allows the maximum velocity in the BW Trunk to be found
-[Where did you find the diameter of the backwash branches? That must come earlier.]
-
-.. math::
-
-  V_{FiBwTrunkMaxPR} = \sqrt{2g *(PR_{FiBwMax}-PR_{FiBwBranchEst})}
-
-From the velocity the ND of the backwash trunk can be found based on the necessary inner diameter and pipe schedule as calculated using the flow area.
-
-.. math::
-
-  ID_{FiBranchEst} = \sqrt { \frac{4}{\pi}(\frac{Q_{FiBW}}{V_{FiBwTrunkMaxPR}})^2}
-
-The corresponding ND (using SDR 26) is compared against :math:`ND_{FiBwTrunkMin}`. The larger pipe is chosen for the design. The ID from the chosen pipe size is then used to find the actual backwash PR for the backwash trunk.
-
-.. math::
-
-  PR_{FiBwTrunk} = \frac{(\frac{Q_{FiBw}}{(\pi\frac{ID_{FiBwTrunk}^2}{4})})^2}{2g}
-
-
-Then the actual allowable pressure recovery for the backwsh branches can be found.
-
-  .. math::
-
-    PR_{FiBwBranchMax} = PR_{FiBwMax} - PR_{FiBwTrunk}
-
-Then the branch velocity can be found:
-
-.. math::
-
-  V_{FiBwBranchMax} = \sqrt{2g *(PR_{FiBwBranchMax})}
-
-Then, as above this velocity is used to find the area of the backwash branch with:
-[Should be based on the maximum length branch, not the average branch.]
-
-.. math::
-
-  A_{BwBranchEst}  = \frac{Q_{FiBw}}{2N_{FiBwBranch}}
-
-If it seems like these processes are 1. similar and 2. circular in their logic, you are correct on both counts! The determination of PR for backwash and forward filtration follows the same steps, the only difference is with the flows and conditions required. It seems circular because the initial calculations are done on guesses, if these guesses weren't made solving for other quantities couldn't be done. The step where the trunk calculations are resolved for the branch conditions mainly acts to assess if the initial guesses were reasonable, and corrects the error in the guess, though of course the initial guess could've been correct! Running the final values back through the entire process should yield the same results meaning the check was valid.
-
-[what prevents calculating in a step by step approach? I think the logic is convoluted.]
 
 Manifold Pipe Lengths
 ======================
@@ -675,14 +691,7 @@ This area is doubled to find the area of the slots. [I am not sure why this is t
 
 Also the area of the backwash orifices is equal to :math:`A_{FiTopManSlots}`, which is the area of the manifold that takes in backwash water for removal from the treatment train.
 
-Outlet Design
----------------
 
-Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, :math:`B_{slot}` is always .008 inch. The number of slot rows is also fixed at 2, because each branch has slots on both sides because the outlet pipes are accepting flow from two layers of sand, one above and one below. This constrains the minimum size that the slotted pipes can be.
-
-From the cumulative area of slots and the width of the slots, the total length of slots can be determined. This length of slots is for one side of one branch *yes?*
-
-As the branches are different lengths along one trunk, the number of slots is different per branch depending on the length, but the spacing is the same so the variation is accounted for.
 
 
 
@@ -697,37 +706,9 @@ The only difference between the two is the length of the branches. Because the b
 
 Then for each the total number of orifices necessary for a layer of the manifold can be found by summing the array of number of holes (:math:`N_{BranchOrifices}`) and multiplying by 2 to account for the trunks having branches on two sides.
 
-Have the holes close together is important to maintain an even flow distribution, which is why the holes spacing is determined before hole size (which is also constrained by available drill bit sizes) [I don't think so. holes close together doesn't help flow distribution because the water flows into the half pipe.]
-
 The drill bit sizes considered are 1/16 inch, 1/8 inch, 3/16 in, and 1/4 inch. The maximum hole size is 1/4in because when the holes are larger they stick out from under the edge of the wings. This is constrained by the curvature of the wings as shown below in **Figure XYZ**
 
-The choice of drill bit size is then determined using the cumulative area of orifice needed for a branch.
 
-Generally, the hole diameter is chosen from the closest (but larger) drill bit based on:
-
-.. math::
-
-  D_{guess} = 2*\sqrt{\frac{A_{OrificeTotal}}{\pi*N_{OrificePerBranch}}}
-
-  Where:
-  A_{OrificeTotal} = (A_{BwOrifices}, A_{FiManSlots}, A_{FiTopManSlots})
-
-The 3 distinct diameters corresponding with these three areas are compared to available drill bits, and actual diameters are chosen.
-
-Because this diameter is likely larger than the calculated diameter, the number of holes must be recalculated for each. The new number of holes is the minimum between the new calculated number (rounded down to the nearest integer) and the original number of holes (which was defined as a maximum). The new calculation is done as follows:
-
-.. math::
-
-  N_{OrificesEstNew} = \frac{A_{TotalNecessaryArea}}{\frac{\pi}{4}D_{Orifice}^2}
-
-Again using the three areas, but now also with the new corresponding diameters.
-
-This number of holes can be used to check that total area of holes is close to the total area necessary to provide the appropriate amount of head loss.
-
-The head loss calculation can then be checked as well for all 5 branch systems involved: the backwash branches in forward, the backwash branches in backwash, the top inlet pipe during filtration, the other inlet pipes during filtration, and the outlet pipes during filtration.
-
-
-**figure_numbered_filter_layers.PNG**
 
 Pipes 2, 4, and 6 (the outlet pipes) are all identical and the total head loss through the outlet system is approximately three times the :math:`HL_{OutletSlotForWard}` as calculated based on the table above. The outlet pipes are the only pipes where the porosity of the sand is accounted for because the outlet slot system is the only place in the filter where the sand interfaces with the pipe openings. The exclusion zones prevent sand at the inlets and as such the porosity is not accounted for in any other head loss calculation, see **FIGURE SOMETHING OR OTHER FOR IMAGE OF THE EXCLUSION ZONE**. Pipe 7 experiences 2 different head losses depending on whether the filter is in forward filtration or backwash. Pipes 3 and 5 are also identical.
 
