@@ -4,9 +4,13 @@ Filtration Design Solution
 
 .. code:: python
 
-    from aide_design.play import*
-  #  from aide_design import floc_model as floc
-  #  from pytexit import py2tex
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.research.floc_model as fm
+
+  import numpy as np
+  import matplotlib.pyplot as plt
+
 
 DC Stacked Rapid Sand Filtration
 ================================
@@ -170,6 +174,7 @@ What is the residence time of water in the filter during backwash, when the bed 
 
 
     print('The residence time in the fluidized bed during backwash is', t_res_filter_backwash,'.')
+
 The residence time in the fluidized bed during backwash is 76.36 second
 
 Our next overall goal is to determine the ratio of water wasted in a Stacked Rapid Sand (StaRS) Filter to water treated in a StaRS. Given that the backwash water that ends up above the filter bed never returns to the filter it isn’t necessary to completely clear the water above the filter bed during a backwash cycle. Therefore we anticipate that backwash can be ended after approximately 3 expanded bed residence times. In addition it takes about 1 minute to initiate backwash by lowering the water level above the filter bed.
@@ -233,6 +238,7 @@ Now calculate the total length (or depth) of water that is wasted due to backwas
 
     H_filter_backwash_water_wasted = H_filter_backwash_water + H_filter_backwash_water_refill
     print('The depth of the water that is wasted due to backwash is', H_filter_backwash_water_wasted)
+
 The depth of the water that is wasted due to backwash is 4.98 meter
 
 13)
@@ -245,6 +251,7 @@ Assume that the filter is backwashed every 12 hours. This means that the filter 
     t_filter_cycle = 12 * u.hr
     H_water_filtered_per_cycle = (t_filter_cycle * V_filter_backwash).to(u.m)
     print('The height of water that would enter the filter in 12 hours is', H_water_filtered_per_cycle)
+
 The height of water that would enter the filter in 12 hours is 475.2 meter
 
 14)
@@ -299,7 +306,7 @@ Now we will evaluate the very first data set from a full scale SRSF. The perform
    :align: center
    :alt: Filter run time vs removal efficiency
 
-    The pC* for this filter run was not very good and suggests that either some particles were being released by the new sand or the coagulant dose was not optimal.
+   The pC* for this filter run was not very good and suggests that either some particles were being released by the new sand or the coagulant dose was not optimal.
 
 
 .. _figure_Filter_run_time_vs_effluent_turbidity:
@@ -349,6 +356,7 @@ How long was the filter run?
 
     t_filter_cycle = t_data[np.size(t_data)-1]
     print('The filter was run for', t_filter_cycle.to(u.hour))
+
 The filter was run for 14.25 hour
 
 19)
@@ -558,11 +566,3 @@ Plot the fractional removal per constriction as a function of particle size.
    :alt: Diameter vs fractional remaining
 
    There are many constrictions in series and the filter fraction remaining is the pore fraction remaining raised to the power of the number of pores in series.
-
-Reflection questions
---------------------
-
- 1. An engineer suggests that you should install a roughing filter uphill from an AguaClara plant to improve its ability to treat turbid water. This is a real question from a conference presentation in Honduras. How would you reply to this suggestion. Consider how to answer without offending the questioner. Use the required sizes of the unit processes to guide your response.
- 1. Why don't StaRS filters experience surface clogging?
- 1. Explain why particles are captured at flow constrictions inside sand filters.
- 1. Explain why a flow constriction has a limited capacity to collect particles.

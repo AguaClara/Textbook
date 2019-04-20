@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Sedimentation Theory and Future Work" href="Sed_Theory_and_Future_Work.html" />
-    <link rel="prev" title="Sedimentation Design" href="Sed_Design.html" /> 
+    <link rel="next" title="Sedimentation Design Solution" href="Sed_Design_Solution.html" />
+    <link rel="prev" title="Sedimentation Theory and Future Work" href="Sed_Theory_and_Future_Work.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -87,6 +87,7 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -126,8 +127,15 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html">Sedimentation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Design.html">Sedimentation Design</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sed_Derivations.html">Sedimentation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tube-settler-design">Tube Settler Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#determining-flow-through-a-diffuser">Determining flow through a diffuser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#identify-failure-modes-from-old-design">Identify Failure Modes from Old Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comments-corrections-or-questions">Comments, Corrections, or Questions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
@@ -137,7 +145,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
 <ul>
@@ -227,29 +234,78 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sedimentation-examples">
-<span id="id1"></span><h1>Sedimentation Examples<a class="headerlink" href="#sedimentation-examples" title="Permalink to this headline">¶</a></h1>
-<p>Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, <span class="math notranslate nohighlight">\(V_\alpha\)</span>. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.</p>
+<span id="title-sedimentation-examples"></span><h1>Sedimentation Examples<a class="headerlink" href="#sedimentation-examples" title="Permalink to this headline">¶</a></h1>
+<p>These are a few short examples of calculations required for sedimentation tank design. More examples can be found in the <a class="reference internal" href="Sed_Design_Solution.html#heading-sed-design-challenge-solution"><span class="std std-ref">Sedimentation Design Solution</span></a>.</p>
+<div class="section" id="tube-settler-design">
+<h2>Tube Settler Design<a class="headerlink" href="#tube-settler-design" title="Permalink to this headline">¶</a></h2>
+<p>Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank, <span class="math notranslate nohighlight">\(v_{S,V}\)</span>, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, <span class="math notranslate nohighlight">\(v_{\alpha}\)</span>. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-0">
-<span class="eqno">(406)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{\uparrow}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
+<span class="eqno">(526)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{S,V}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-1">
-<span class="eqno">(407)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_\uparrow = \bar v_\alpha\sin \alpha\]</div>
+<span class="eqno">(527)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_{S,V} = \bar v_\alpha\sin \alpha\]</div>
 <p>Solve for the length of the tube settler.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-2">
-<span class="eqno">(408)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aide_design.play</span> <span class="k">import</span><span class="o">*</span>
+<span class="eqno">(528)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
 <span class="n">v_alpha</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">v_c</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">D</span> <span class="o">=</span> <span class="mf">2.54</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">alpha</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
 
 <span class="k">def</span> <span class="nf">L_settler</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">v_alpha</span><span class="p">,</span><span class="n">v_c</span><span class="p">):</span>
-  <span class="k">return</span> <span class="n">D</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">v_alpha</span><span class="o">/</span><span class="n">v_c</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">alpha</span><span class="p">))</span>
+ <span class="k">return</span> <span class="n">D</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">v_alpha</span><span class="o">/</span><span class="n">v_c</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">alpha</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">L_settler</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">v_alpha</span><span class="p">,</span><span class="mi">1</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">L_settler</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">v_alpha</span><span class="p">,</span><span class="mf">0.2</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>The tube settler above the floc hopper needs to be 72 cm long. The tube settler should provide a capture velocity of at least 1 mm/s prior to the floc hopper. Thus there should be 11 cm below the floc hopper.</p>
+</div>
+<div class="section" id="determining-flow-through-a-diffuser">
+<span id="heading-flow-thru-diffuser"></span><h2>Determining flow through a diffuser<a class="headerlink" href="#determining-flow-through-a-diffuser" title="Permalink to this headline">¶</a></h2>
+<p>What is the flow rate of a single diffuser in the bottom of the sedimentation tank? Consider a sedimentation tank that is 6 m long, 1 m wide and 2 m deep, with an upflow velocity of 1 mm/s and a diffuser spacing of 5 cm.</p>
+<p>What is this question really asking? This question is asking us to understand that each diffuser “serves” a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let’s imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using <span class="math notranslate nohighlight">\(Q = vA\)</span>. The area, <span class="math notranslate nohighlight">\(A\)</span>, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so <span class="math notranslate nohighlight">\(W_{tank} = 1\)</span> m. The length of the slice is dictated by the spacing of the diffusers, <span class="math notranslate nohighlight">\(B_{diff}\)</span>, so <span class="math notranslate nohighlight">\(B_{diff} = 5\)</span> cm.</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-3">
+<span class="eqno">(529)<a class="headerlink" href="#equation-sedimentation-sed-examples-3" title="Permalink to this equation">¶</a></span>\[A = B_{diff}W_{tank}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-4">
+<span class="eqno">(530)<a class="headerlink" href="#equation-sedimentation-sed-examples-4" title="Permalink to this equation">¶</a></span>\[A = 5cm * 1m\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-5">
+<span class="eqno">(531)<a class="headerlink" href="#equation-sedimentation-sed-examples-5" title="Permalink to this equation">¶</a></span>\[A = 50,000mm^2\]</div>
+<p>The problem statement includes that <span class="math notranslate nohighlight">\(v_{S,V} = 1\)</span> mm/s. Plugging into our flow equation,</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-6">
+<span class="eqno">(532)<a class="headerlink" href="#equation-sedimentation-sed-examples-6" title="Permalink to this equation">¶</a></span>\[Q_{diff} = v_{S,V}A\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-7">
+<span class="eqno">(533)<a class="headerlink" href="#equation-sedimentation-sed-examples-7" title="Permalink to this equation">¶</a></span>\[Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-8">
+<span class="eqno">(534)<a class="headerlink" href="#equation-sedimentation-sed-examples-8" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50,000 \frac{mm^3}{s}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-9">
+<span class="eqno">(535)<a class="headerlink" href="#equation-sedimentation-sed-examples-9" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50 \frac{mL}{s}\]</div>
+<p>The flow rate of each diffuser is <span class="math notranslate nohighlight">\(50 \frac{mL}{s}\)</span>.</p>
+</div>
+<div class="section" id="identify-failure-modes-from-old-design">
+<h2>Identify Failure Modes from Old Design<a class="headerlink" href="#identify-failure-modes-from-old-design" title="Permalink to this headline">¶</a></h2>
+<p>Look at a proposed design for the bottom of the sedimentation tank, shown in <a class="reference internal" href="#figure-failure-mode-example"><span class="std std-numref">Fig. 171</span></a>. This design has an influent manifold at the bottom of the tank. Water flows upwards from the influent manifold. At one end of the influent manifold, there is a drain port. Above the influent manifold, there is a single slot that extends the length of the sedimentation tank. There are no diffusers in this design.</p>
+<div class="figure align-center" id="id1">
+<span id="figure-failure-mode-example"></span><a class="reference internal image-reference" href="../_images/failure_mode_example.png"><img alt="Proposed sedimentation tank design." src="../_images/failure_mode_example.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 171 </span><span class="caption-text">Proposed sedimentation tank design.</span></p>
+</div>
+<p>What are the failure modes for this design?</p>
+<p>Some issues are:</p>
+<ul class="simple">
+<li>flocs can settle in the influent manifold, specifically at the end of the influent manifold pipe;</li>
+<li>the upflow line jet may be impacted and bent by settling flocs, allowing for floc settling on one side of the tank;</li>
+<li>without diffusers, there may not be uniform flow distribution from one end of the sedimentation tank to the other;</li>
+<li>without diffusers, there will be large flow circulations inside the sedimentation tank.</li>
+</ul>
+<p>This design has never been built and never will be. Understanding what the problems are with this design will help us design better in the future.</p>
+</div>
+<div class="section" id="comments-corrections-or-questions">
+<h2>Comments, Corrections, or Questions<a class="headerlink" href="#comments-corrections-or-questions" title="Permalink to this headline">¶</a></h2>
+<p>This textbook is an ever-evolving project. If you find any errors while you are reading, or if you find something unclear, please let the authors know. Write your comment in <a class="reference external" href="https://github.com/AguaClara/Textbook/issues/86">this Github issue</a> and it will be addressed as soon as possible. Please look at other comments before writing your own to avoid duplicate comments.</p>
+</div>
 </div>
 
 
@@ -260,10 +316,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Sed_Theory_and_Future_Work.html" class="btn btn-neutral float-right" title="Sedimentation Theory and Future Work" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Sed_Design_Solution.html" class="btn btn-neutral float-right" title="Sedimentation Design Solution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Sed_Design.html" class="btn btn-neutral" title="Sedimentation Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Sed_Theory_and_Future_Work.html" class="btn btn-neutral" title="Sedimentation Theory and Future Work" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
