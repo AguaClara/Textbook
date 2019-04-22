@@ -91,6 +91,58 @@ Some issues are:
 
 This design has never been built and never will be. Understanding what the problems are with this design will help us design better in the future.
 
+Diffuser Design
+================
+
+We will start our design of the sedimentation tank by considering the diffusers.
+
+Calculate the maximum velocity of water leaving the diffuser based on the maximum head loss. Assume that the majority of head loss is the kinetic energy of the flow exiting the diffuser slot (this assumption will be checked later). Assume K=1.
+
+
+
+Calculate the minimum inner width of the diffuser. Assume that the diffuser slot is continuous over the entire length of the sedimentation tank to get an initial estimate (it isn't actually continuous because it is made from many flattened diffuser pipes).
+
+Define your answers as variables and then print those variables.
+
+Given parameters:
+
+.. code:: python
+
+  from aguaclara.core.units import unit_registry as u
+
+  import numpy as np
+
+  #given sedimentation inlet maximum headloss
+  headloss_sed_inlet_max = 1 * u.cm
+  #given sedimentation tank up flow velocity
+  V_sed_up = 1 * u.mm/u.s
+  #given sedimentation tank width
+  W_sed = 42 * u.inch
+
+To find the maximum velocity based on maximum headloss we will use the minor loss equation.
+
+.. math:: hl_{inlet} = K \frac{V_{jet}^{2}}{2g}
+
+To find the minimum width based on the maximum velocity through the diffuser, we will use conservation of mass. Since it is an incompressible fluid the flow rate entering from the diffuser line jet must be equal to the flow rate up through the sedimentation tank.
+
+.. math:: V_{jet}W_{diff} L_{sed} = V_{sed,up}W_{sed}L_{sed}
+
+.. code:: python
+
+
+
+  # minor loss equation with K=1
+  V_diffuser_max = (np.sqrt((2 * g * headloss_sed_inlet_max))).to(u.m / u.s)
+  print('The maximum velocity of the sed tank diffusers is',V_diffuser_max)
+
+  # mass conservation
+  W_diffuser_inner_min = ((V_sed_up / V_diffuser_max) * W_sed).to(u.mm)
+  print('The minimum width of the sed tank diffusers is',W_diffuser_inner_min)
+
+
+The maximum velocity of the sedimentation tank diffusers is 0.4429 meter / second
+The minimum width of the sedimentation tank diffusers is 2.409 millimeter
+
 Comments, Corrections, or Questions
 ====================================
 
