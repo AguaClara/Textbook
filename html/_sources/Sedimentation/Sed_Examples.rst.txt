@@ -239,7 +239,7 @@ The same principle as above can be applied to this question except the length sc
   Re_sed = ((W_sed * V_sed_up) / pc.viscosity_kinematic(T_design)).to(u.dimensionless)
   print('Reynolds number through floc is',Re_sed)
 
-**Answer:** Reynolds number through floc is 938.2 dimensionless. These two Reynold's numbers are similar because conservation of mass requires for a constant length that :math:`V_{1}*W_{1} = V_{2}*W_{2}`. The slight difference in the numbers is due to that fact that diffusers are not a continuous line jet but rather broken up by two times the thickness of the pipe wall between the diffusers.
+**Answer:** Reynolds number through floc is 938.2 dimensionless. These two Reynold's numbers are similar because conservation of mass requires for a constant length that :math:`v_{1}*W_{1} = v_{2}*W_{2}`. The slight difference in the numbers is due to that fact that diffusers are not a continuous line jet but rather broken up by two times the thickness of the pipe wall between the diffusers.
 
 Next, we want to determine the energy dissipation rate for the flow leaving the jet reverser. For this process, you can assume that the jet remains laminar. The flow spreads to fill the gaps created by the walls of the diffuser tubes by the time it traverses the jet reverser. Jet velocity and flow rate are conserved as the jet changes direction in the jet reverser.
 
@@ -292,27 +292,27 @@ Flow distribution between and within sedimentation tanks is an important design 
 
 The following variable definitions and equations will be useful in answering later questions.
 
-:math:`{hl}_{ParallelPath}` is the head loss (flow resistance) in the parallel paths leaving the manifold. The head loss in the parallel path is the total head loss from where the flow leaves the manifold to the point where the parallel flows reunite.
+:math:`{h}_{L,ParallelPath}` is the head loss (flow resistance) in the parallel paths leaving the manifold. The head loss in the parallel path is the total head loss from where the flow leaves the manifold to the point where the parallel flows reunite.
 
 :math:`\Delta{H}_{Manifold}` is the variability in piezometric head in the manifold that is driving the flow through the parallel paths.
 
 The ratio of minimum (first diffuser port) to maximum (last diffuser port) flow is given by:
 
-.. math:: \Pi_{DiffuserFlow} = \sqrt{\frac{{hl}{ParallelPath} - \frac{\Delta{H}{Manifold}}{2}}{{hl}{ParallelPath} + \frac{\Delta{H}{Manifold}}{2}}}
+.. math:: \Pi_{DiffuserFlow} = \sqrt{\frac{h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}}{h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2}}}
 
-The change in piezometric head is given by: :math:`\Delta{H}{Manifold} = \frac{{{Velocity}{Manifold}}^{2}}{2g}`
+The change in piezometric head is given by: :math:`\Delta{H}_{Manifold} = \frac{{v_{manifold}}^{2}}{2g}`
 
 The maximum allowable velocity in the manifold is given by:
 
-.. math:: {\Pi_{DiffuserFlow}}^{2} * \left({hl}{ParallelPath} + \frac{\Delta{H}{Manifold}}{2} \right) = {hl}{ParallelPath} - \frac{\Delta{H}{Manifold}}{2}
+.. math:: {\Pi_{DiffuserFlow}}^{2} * \left(h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2} \right) = h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}
 
-.. math:: \left({\Pi_{DiffuserFlow}}^{2} - 1 \right) {hl}{ParallelPath} + \left({\Pi{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0
+.. math:: \left({\Pi_{DiffuserFlow}}^{2} - 1 \right) h_{L,parallelpath} + \left({\Pi{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0
 
-.. math:: \left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}{ParallelPath} = \frac{\Delta{H}{Manifold}}{2}
+.. math:: \left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{\Delta{H}_{Manifold}}{2}
 
-.. math:: \left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}{ParallelPath} = \frac{{{Velocity}{Manifold}}^{2}}{4g}
+.. math:: \left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{{v_{manifold}}^{2}}{4g}
 
-Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint, :math:`\Pi_{DiffuserFlow}`, and the head loss in the parallel paths, :math:`{hl}_{ParallelPath}``.
+Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint, :math:`\Pi_{DiffuserFlow}`, and the head loss in the parallel paths, :math:`h_{L,ParallelPath}`.
 
 1. Determine the relationship between diffuser exit velocity and the head loss in the parallel paths.
 2. Determine an equation for maximum velocity for an inlet manifold in terms of diffuser exit velocity and the flow distribution constraint.**
@@ -328,7 +328,7 @@ Exit losses from the diffusers dominate the head loss because the velocity in th
 
 Head loss in the sedimentation tank is impacted by multiple forms of head loss, inlcuding head loss through the effluent launder and diffusers. Head loss through the effluent launder is about 4 cm. You found head loss through the diffusers in Problem 9.
 
-3. Which form of head loss (effluent launder or diffuser) is in the parallel path, :math:`{hl}_{ParallelPath}`?
+3. Which form of head loss (effluent launder or diffuser) is in the parallel path, :math:`{h}_{L,ParallelPath}`?
 
 .. code:: python
 
@@ -343,11 +343,11 @@ The ratio of manifold pipe cross-sectional area to total diffuser cross-sectiona
 4. Calculate the ratio of manifold pipe cross-sectional area to total diffuser cross-sectional area. You can use the velocities of the manifold and the diffusers to calculate the areas.
 
 Since the sedimentation tank has a constant volume, the flow rate into the tank is equal to the flow rate out of the tank:
-:math:`Q_{manifold_pipe} = Q_{diffuser}`
+:math:`Q_{manifold,pipe} = Q_{diff}`
 
-:math:`V_{manifold} * A_{manifold} = V_{diffuser} * A_{diffuser}`
+:math:`v_{manifold} * A_{manifold} = v{diff} * A_{diff}`
 
-:math:`\frac{A_{manifold}}{A_{diffuser}} = \frac{V_{diffuser}}{V_{manifold}}`
+:math:`\frac{A_{manifold}}{A_{diff}} = \frac{v_{diff}}{v_{manifold}}`
 
 5. What is the significance of the flow area ratio that you found? What does it tell you about the relative areas?
 
@@ -372,7 +372,7 @@ The maximum sed tank flow rate is currently set by the constraint of using a sin
 The maximum sed tank flow rate dictates the required pipe diameter for the manifold and launder.
 
 7. What is the minimum inner diameter of the sedimentation tank manifold?
-:math:`Q = \frac{V*\pi*D^2}{4}`
+:math:`Q = \frac{v*\pi*D^2}{4}`
 
 8. What is the required nominal pipe diameter given this flow rate?
 The function from the pipe database can return the nominal diameter from the diameter and SDR.
@@ -440,7 +440,9 @@ Plate Settler Design
 
 We will assume that the active area of the sedimentation tank is equal to the top area of the floc blanket zone. This isn't quite right because of the geometric constraints from the floc hopper, inlet channel, settled water channel, and angled plates. However, it is a good approximation for these long tanks.
 
-1. What is the required length of the plate settlers? **Add reference to equations**
+1. What is the required length of the plate settlers?
+
+The equation for this problem can be found in :ref:`Sedimentation Derivations<heading_Plate_Settler_Design>`.
 
 .. code:: python
 
@@ -449,7 +451,9 @@ We will assume that the active area of the sedimentation tank is equal to the to
 
 **Answer:** The minimum length of the plate settlers is 0.4619 meters.
 
-2. What is the horizontal spacing (center to center) of the plate settlers? **Add reference to equation**
+2. What is the horizontal spacing (center to center) of the plate settlers?
+
+The equation for this problem can be found in :ref:`Sedimentation Derivations<heading_Plate_Settler_Design>`.
 
 .. code:: python
 

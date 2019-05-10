@@ -431,7 +431,7 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reynolds number through floc is&#39;</span><span class="p">,</span><span class="n">Re_sed</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Answer:</strong> Reynolds number through floc is 938.2 dimensionless. These two Reynold’s numbers are similar because conservation of mass requires for a constant length that <span class="math notranslate nohighlight">\(V_{1}*W_{1} = V_{2}*W_{2}\)</span>. The slight difference in the numbers is due to that fact that diffusers are not a continuous line jet but rather broken up by two times the thickness of the pipe wall between the diffusers.</p>
+<p><strong>Answer:</strong> Reynolds number through floc is 938.2 dimensionless. These two Reynold’s numbers are similar because conservation of mass requires for a constant length that <span class="math notranslate nohighlight">\(v_{1}*W_{1} = v_{2}*W_{2}\)</span>. The slight difference in the numbers is due to that fact that diffusers are not a continuous line jet but rather broken up by two times the thickness of the pipe wall between the diffusers.</p>
 <p>Next, we want to determine the energy dissipation rate for the flow leaving the jet reverser. For this process, you can assume that the jet remains laminar. The flow spreads to fill the gaps created by the walls of the diffuser tubes by the time it traverses the jet reverser. Jet velocity and flow rate are conserved as the jet changes direction in the jet reverser.</p>
 <p>8. Calculate the thickness of the jet after it does the 180 degree bend of the jet reverser. The change in thickness of the jet after the 180 degree bend is due to the flow spreading out to fill in the gaps created by the diffuser pipe walls.
 <span class="math notranslate nohighlight">\(W_{jet} * v_{diffuser} = W_{sed} * v_{up}\)</span></p>
@@ -472,22 +472,22 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <h2>Manifolds and Launders<a class="headerlink" href="#manifolds-and-launders" title="Permalink to this headline">¶</a></h2>
 <p>Flow distribution between and within sedimentation tanks is an important design component to ensure good sedimentation performance. We need to distribute flow uniformly between sedimentation tanks and also between diffusers on the inlet manifolds.</p>
 <p>The following variable definitions and equations will be useful in answering later questions.</p>
-<p><span class="math notranslate nohighlight">\({hl}_{ParallelPath}\)</span> is the head loss (flow resistance) in the parallel paths leaving the manifold. The head loss in the parallel path is the total head loss from where the flow leaves the manifold to the point where the parallel flows reunite.</p>
+<p><span class="math notranslate nohighlight">\({h}_{L,ParallelPath}\)</span> is the head loss (flow resistance) in the parallel paths leaving the manifold. The head loss in the parallel path is the total head loss from where the flow leaves the manifold to the point where the parallel flows reunite.</p>
 <p><span class="math notranslate nohighlight">\(\Delta{H}_{Manifold}\)</span> is the variability in piezometric head in the manifold that is driving the flow through the parallel paths.</p>
 <p>The ratio of minimum (first diffuser port) to maximum (last diffuser port) flow is given by:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-12">
-<span class="eqno">(526)<a class="headerlink" href="#equation-sedimentation-sed-examples-12" title="Permalink to this equation">¶</a></span>\[\Pi_{DiffuserFlow} = \sqrt{\frac{{hl}{ParallelPath} - \frac{\Delta{H}{Manifold}}{2}}{{hl}{ParallelPath} + \frac{\Delta{H}{Manifold}}{2}}}\]</div>
-<p>The change in piezometric head is given by: <span class="math notranslate nohighlight">\(\Delta{H}{Manifold} = \frac{{{Velocity}{Manifold}}^{2}}{2g}\)</span></p>
+<span class="eqno">(526)<a class="headerlink" href="#equation-sedimentation-sed-examples-12" title="Permalink to this equation">¶</a></span>\[\Pi_{DiffuserFlow} = \sqrt{\frac{h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}}{h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2}}}\]</div>
+<p>The change in piezometric head is given by: <span class="math notranslate nohighlight">\(\Delta{H}_{Manifold} = \frac{{v_{manifold}}^{2}}{2g}\)</span></p>
 <p>The maximum allowable velocity in the manifold is given by:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-13">
-<span class="eqno">(527)<a class="headerlink" href="#equation-sedimentation-sed-examples-13" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left({hl}{ParallelPath} + \frac{\Delta{H}{Manifold}}{2} \right) = {hl}{ParallelPath} - \frac{\Delta{H}{Manifold}}{2}\]</div>
+<span class="eqno">(527)<a class="headerlink" href="#equation-sedimentation-sed-examples-13" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left(h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2} \right) = h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-14">
-<span class="eqno">(528)<a class="headerlink" href="#equation-sedimentation-sed-examples-14" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) {hl}{ParallelPath} + \left({\Pi{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
+<span class="eqno">(528)<a class="headerlink" href="#equation-sedimentation-sed-examples-14" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) h_{L,parallelpath} + \left({\Pi{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-15">
-<span class="eqno">(529)<a class="headerlink" href="#equation-sedimentation-sed-examples-15" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}{ParallelPath} = \frac{\Delta{H}{Manifold}}{2}\]</div>
+<span class="eqno">(529)<a class="headerlink" href="#equation-sedimentation-sed-examples-15" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-16">
-<span class="eqno">(530)<a class="headerlink" href="#equation-sedimentation-sed-examples-16" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}{ParallelPath} = \frac{{{Velocity}{Manifold}}^{2}}{4g}\]</div>
-<p>Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint, <span class="math notranslate nohighlight">\(\Pi_{DiffuserFlow}\)</span>, and the head loss in the parallel paths, <span class="math notranslate nohighlight">\({hl}_{ParallelPath}`\)</span>.</p>
+<span class="eqno">(530)<a class="headerlink" href="#equation-sedimentation-sed-examples-16" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{{v_{manifold}}^{2}}{4g}\]</div>
+<p>Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint, <span class="math notranslate nohighlight">\(\Pi_{DiffuserFlow}\)</span>, and the head loss in the parallel paths, <span class="math notranslate nohighlight">\(h_{L,ParallelPath}\)</span>.</p>
 <ol class="arabic simple">
 <li>Determine the relationship between diffuser exit velocity and the head loss in the parallel paths.</li>
 <li>Determine an equation for maximum velocity for an inlet manifold in terms of diffuser exit velocity and the flow distribution constraint.**</li>
@@ -500,7 +500,7 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 </div>
 <p>Head loss in the sedimentation tank is impacted by multiple forms of head loss, inlcuding head loss through the effluent launder and diffusers. Head loss through the effluent launder is about 4 cm. You found head loss through the diffusers in Problem 9.</p>
 <ol class="arabic simple" start="3">
-<li>Which form of head loss (effluent launder or diffuser) is in the parallel path, <span class="math notranslate nohighlight">\({hl}_{ParallelPath}\)</span>?</li>
+<li>Which form of head loss (effluent launder or diffuser) is in the parallel path, <span class="math notranslate nohighlight">\({h}_{L,ParallelPath}\)</span>?</li>
 </ol>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pi_sed_manifold_flow</span> <span class="o">=</span> <span class="mf">0.8</span>
 <span class="n">V_sed_manifold_max</span> <span class="o">=</span> <span class="n">Vel_sed_manifold_max</span><span class="p">(</span><span class="n">Pi_sed_manifold_flow</span><span class="p">,</span> <span class="n">V_diffuser</span><span class="p">)</span>
@@ -513,9 +513,9 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <li>Calculate the ratio of manifold pipe cross-sectional area to total diffuser cross-sectional area. You can use the velocities of the manifold and the diffusers to calculate the areas.</li>
 </ol>
 <p>Since the sedimentation tank has a constant volume, the flow rate into the tank is equal to the flow rate out of the tank:
-<span class="math notranslate nohighlight">\(Q_{manifold_pipe} = Q_{diffuser}\)</span></p>
-<p><span class="math notranslate nohighlight">\(V_{manifold} * A_{manifold} = V_{diffuser} * A_{diffuser}\)</span></p>
-<p><span class="math notranslate nohighlight">\(\frac{A_{manifold}}{A_{diffuser}} = \frac{V_{diffuser}}{V_{manifold}}\)</span></p>
+<span class="math notranslate nohighlight">\(Q_{manifold,pipe} = Q_{diff}\)</span></p>
+<p><span class="math notranslate nohighlight">\(v_{manifold} * A_{manifold} = v{diff} * A_{diff}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{A_{manifold}}{A_{diff}} = \frac{v_{diff}}{v_{manifold}}\)</span></p>
 <ol class="arabic simple" start="5">
 <li>What is the significance of the flow area ratio that you found? What does it tell you about the relative areas?</li>
 </ol>
@@ -535,7 +535,7 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <p><strong>Answer:</strong> The maximum flow rate in one sedimentation tank is 6.187 liter / second.</p>
 <p>The maximum sed tank flow rate dictates the required pipe diameter for the manifold and launder.</p>
 <p>7. What is the minimum inner diameter of the sedimentation tank manifold?
-<span class="math notranslate nohighlight">\(Q = \frac{V*\pi*D^2}{4}\)</span></p>
+<span class="math notranslate nohighlight">\(Q = \frac{v*\pi*D^2}{4}\)</span></p>
 <p>8. What is the required nominal pipe diameter given this flow rate?
 The function from the pipe database can return the nominal diameter from the diameter and SDR.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D_sed_manifold_min</span><span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">diam_circle</span><span class="p">(</span><span class="n">flow_sed_max</span> <span class="o">/</span> <span class="n">V_sed_manifold_max</span><span class="p">)</span>
@@ -593,16 +593,18 @@ The function from the pipe database can return the nominal diameter from the dia
 <h2>Plate Settler Design<a class="headerlink" href="#plate-settler-design" title="Permalink to this headline">¶</a></h2>
 <p>We will assume that the active area of the sedimentation tank is equal to the top area of the floc blanket zone. This isn’t quite right because of the geometric constraints from the floc hopper, inlet channel, settled water channel, and angled plates. However, it is a good approximation for these long tanks.</p>
 <ol class="arabic simple">
-<li>What is the required length of the plate settlers? <strong>Add reference to equations</strong></li>
+<li>What is the required length of the plate settlers?</li>
 </ol>
+<p>The equation for this problem can be found in <span class="xref std std-ref">Sedimentation Derivations</span>.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">L_sed_plate</span> <span class="o">=</span> <span class="p">((</span><span class="n">s_sed_plate</span> <span class="o">*</span> <span class="p">((</span><span class="n">V_sed_up</span><span class="o">/</span><span class="n">V_sed_capture</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">thickness_sed_plate</span> <span class="o">*</span> <span class="p">(</span><span class="n">V_sed_up</span><span class="o">/</span><span class="n">V_sed_capture</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle_sed_plate</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle_sed_plate</span><span class="p">)))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum length of the plate settlers is&#39;</span><span class="p">,</span><span class="n">L_sed_plate</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><strong>Answer:</strong> The minimum length of the plate settlers is 0.4619 meters.</p>
 <ol class="arabic simple" start="2">
-<li>What is the horizontal spacing (center to center) of the plate settlers? <strong>Add reference to equation</strong></li>
+<li>What is the horizontal spacing (center to center) of the plate settlers?</li>
 </ol>
+<p>The equation for this problem can be found in <span class="xref std std-ref">Sedimentation Derivations</span>.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">B_sed_plate_horizontal</span> <span class="o">=</span> <span class="p">((</span><span class="n">thickness_sed_plate</span> <span class="o">+</span> <span class="n">s_sed_plate</span><span class="p">)</span><span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle_sed_plate</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The horizontal center to center spacing of the plate settlers is&#39;</span><span class="p">,</span><span class="n">B_sed_plate_horizontal</span><span class="p">)</span>
 </pre></div>
