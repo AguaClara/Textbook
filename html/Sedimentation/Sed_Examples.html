@@ -333,10 +333,10 @@
 </div>
 <p>To find the maximum velocity based on maximum headloss we will use the minor loss equation.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-10">
-<span class="eqno">(524)<a class="headerlink" href="#equation-sedimentation-sed-examples-10" title="Permalink to this equation">¶</a></span>\[hl_{inlet} = K \frac{V_{jet}^{2}}{2g}\]</div>
+<span class="eqno">(524)<a class="headerlink" href="#equation-sedimentation-sed-examples-10" title="Permalink to this equation">¶</a></span>\[h_{e,inlet} = K \frac{v_{jet}^2}{2g}\]</div>
 <p>To find the minimum width based on the maximum velocity through the diffuser, we will use conservation of mass. Since it is an incompressible fluid the flow rate entering from the diffuser line jet must be equal to the flow rate up through the sedimentation tank.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-11">
-<span class="eqno">(525)<a class="headerlink" href="#equation-sedimentation-sed-examples-11" title="Permalink to this equation">¶</a></span>\[V_{jet}W_{diff} L_{sed} = V_{sed,up}W_{sed}L_{sed}\]</div>
+<span class="eqno">(525)<a class="headerlink" href="#equation-sedimentation-sed-examples-11" title="Permalink to this equation">¶</a></span>\[v_{jet}W_{diff} L_{sed} = V_{sed,up}W_{sed}L_{sed}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="o">**</span><span class="mi">2</span>
 <span class="c1"># minor loss equation with K=1</span>
 <span class="n">V_diffuser_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">headloss_sed_inlet_max</span><span class="p">)))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
@@ -347,7 +347,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum width of the sed tank diffusers is&#39;</span><span class="p">,</span><span class="n">W_diffuser_inner_min</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Answer:</strong> The maximum velocity of the sedimentation tank diffusers is 0.4429 meter / second.
+<p><strong>Answer:</strong> The maximum velocity of the sedimentation tank diffusers is 0.4429 meters / second.
 The minimum width of the sedimentation tank diffusers is 2.409 millimeter.</p>
 <ol class="arabic simple" start="2">
 <li>Calculate the minimum inner width of the diffuser. Assume that the diffuser slot is continuous over the entire length of the sedimentation tank to get an initial estimate (it isn’t actually continuous because it is made from many flattened diffuser pipes).</li>
@@ -362,9 +362,9 @@ The <cite>ceil_nearest</cite> function defined in utility.py can take in a param
 </div>
 <p><strong>Answer:</strong> The width of sedimentation tank diffuser is 0.3175 centimeter</p>
 <p>The PVC pipe that forms the diffusers changes in shape and wall thickness during the molding process. The inner width of the rectangle is created by forcing the pipe over a rectangular wedge that is the thickness you calculated above. During the molding process, PVC pipe wall cross-sectional area is conserved. The pipe wall is stretched in total length approximately 20%. Another way to think about this is that the thickness of the wall is reduced by a factor of 1/1.2 because the mass of PVC is conserved and the density is unchanged. Thus, volume and cross-sectional area are conserved.</p>
-<p>Area is given using the following equation <span class="math notranslate nohighlight">\(Area_{PVC}=2\left (B_{diffuser}+W_{diffuser} \right )thickness_{wall}\)</span></p>
+<p>Area is given using the following equation <span class="math notranslate nohighlight">\(A_{PVC}=2\left (B_{diffuser}+W_{diffuser} \right)T_{diff}\)</span></p>
 <ol class="arabic simple" start="3">
-<li>Use the equation for <span class="math notranslate nohighlight">\(Area_{PVC}\)</span> to calculate the following</li>
+<li>Use the equation for <span class="math notranslate nohighlight">\(A_{PVC}\)</span> to calculate the following</li>
 </ol>
 <ul class="simple">
 <li>the outer length of the rectangular diffuser slot, <span class="math notranslate nohighlight">\(B_{diffuser}\)</span>.</li>
@@ -397,10 +397,10 @@ The <cite>ceil_nearest</cite> function defined in utility.py can take in a param
 <p>Sedimentation diffuser inner length: 5.522 centimeter</p>
 <p>Each diffuser serves a certain width and length of the sedimentation tank. Assume that the diffusers are installed so that they touch each other.</p>
 <p>4. Determine the flow through each diffuser.
-<span class="math notranslate nohighlight">\(Q_{max diffuser} = V_{up}A\)</span></p>
-<p><span class="math notranslate nohighlight">\(A = W_{sed}* B_{diffuser}\)</span></p>
+<span class="math notranslate nohighlight">\(Q_{max,diff} = v_{up}*A\)</span></p>
+<p><span class="math notranslate nohighlight">\(A = W_{sed}* B_{diff}\)</span></p>
 <p>5. Determine the velocity through each diffuser.
-:math:<a href="#id3"><span class="problematic" id="id4">`</span></a>V_{diffuser} = frac{Q_{max diffuser}}{W_{diffuser} * S_{diffuser}} `</p>
+:math:<a href="#id3"><span class="problematic" id="id4">`</span></a>v_{diff} = frac{Q_{max,diff}}{W_{diff} * S_{diff}} `</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flow_max_diffuser</span> <span class="o">=</span> <span class="n">V_sed_up</span> <span class="o">*</span> <span class="n">W_sed</span> <span class="o">*</span> <span class="n">B_diffuser</span>
 <span class="n">V_diffuser</span> <span class="o">=</span> <span class="p">(</span><span class="n">flow_max_diffuser</span> <span class="o">/</span> <span class="p">(</span><span class="n">W_diffuser</span> <span class="o">*</span> <span class="n">S_diffuser</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The flow of water leaving a sed tank diffuser is&#39;</span><span class="p">,</span><span class="n">flow_max_diffuser</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">ml</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
@@ -414,7 +414,7 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 </ol>
 <p>Recall the formula for Reynold’s number:</p>
 <p><span class="math notranslate nohighlight">\(Re = \frac{vD}{\nu}\)</span> The D is actually just representative of the length scale so we can replace this with the width of the diffuser.
-<span class="math notranslate nohighlight">\(Re = \frac{V_{diffuser}*W_{diffuser}}{\nu}\)</span></p>
+<span class="math notranslate nohighlight">\(Re = \frac{v_{diff}*W_{diff}}{\nu}\)</span></p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="k">import</span> <span class="n">physchem</span> <span class="k">as</span> <span class="n">pc</span>
 <span class="n">T_design</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">Re_diffuser_jet</span> <span class="o">=</span> <span class="p">((</span><span class="n">W_diffuser</span> <span class="o">*</span> <span class="n">V_diffuser</span><span class="p">)</span> <span class="o">/</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_design</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
@@ -426,7 +426,7 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <li>What is the Reynolds number of the vertical flow up through the top of the floc blanket?</li>
 </ol>
 <p>The same principle as above can be applied to this question except the length scale is the width of the sedimentation tank and the velocity is the upwards velocity in the tank.</p>
-<p><span class="math notranslate nohighlight">\(Re = \frac{V_{up}*W_{sed}}{\nu}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Re = \frac{v_{up}*W_{sed}}{\nu}\)</span></p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Re_sed</span> <span class="o">=</span> <span class="p">((</span><span class="n">W_sed</span> <span class="o">*</span> <span class="n">V_sed_up</span><span class="p">)</span> <span class="o">/</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_design</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reynolds number through floc is&#39;</span><span class="p">,</span><span class="n">Re_sed</span><span class="p">)</span>
 </pre></div>
@@ -434,11 +434,11 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <p><strong>Answer:</strong> Reynolds number through floc is 938.2 dimensionless. These two Reynold’s numbers are similar because conservation of mass requires for a constant length that <span class="math notranslate nohighlight">\(V_{1}*W_{1} = V_{2}*W_{2}\)</span>. The slight difference in the numbers is due to that fact that diffusers are not a continuous line jet but rather broken up by two times the thickness of the pipe wall between the diffusers.</p>
 <p>Next, we want to determine the energy dissipation rate for the flow leaving the jet reverser. For this process, you can assume that the jet remains laminar. The flow spreads to fill the gaps created by the walls of the diffuser tubes by the time it traverses the jet reverser. Jet velocity and flow rate are conserved as the jet changes direction in the jet reverser.</p>
 <p>8. Calculate the thickness of the jet after it does the 180 degree bend of the jet reverser. The change in thickness of the jet after the 180 degree bend is due to the flow spreading out to fill in the gaps created by the diffuser pipe walls.
-<span class="math notranslate nohighlight">\(W_{jetreversed} * V_{diffuser} = W_{sed} * V_{up}\)</span></p>
+<span class="math notranslate nohighlight">\(W_{jet} * v_{diffuser} = W_{sed} * v_{up}\)</span></p>
 <ol class="arabic simple" start="9">
 <li>Calculate the energy dissipation rate for the flow leaving the jet reverser. <strong>Add Reference to equation</strong></li>
 </ol>
-<p><span class="math notranslate nohighlight">\(\epsilon_{inlet_jet} = \frac{(\Pi_{jet plane} * V_{diffuser})^3}{W_{jetreversed}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\epsilon_{inlet,jet} = \frac{(\Pi_{jet plane} * v_{diff})^3}{W_{jet}}\)</span></p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pi_jet_plane</span> <span class="o">=</span> <span class="mf">0.225</span>
 <span class="n">W_jet_reversed</span> <span class="o">=</span> <span class="n">W_sed</span> <span class="o">*</span> <span class="n">V_sed_up</span> <span class="o">/</span> <span class="n">V_diffuser</span>
 <span class="n">EDR_inlet_jet</span> <span class="o">=</span> <span class="p">(((</span><span class="n">Pi_jet_plane</span> <span class="o">*</span> <span class="n">V_diffuser</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span> <span class="n">W_jet_reversed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">)</span>
@@ -451,9 +451,9 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <li>Calculate this diffuser exit head loss in two ways.</li>
 </ol>
 <p>First, calculate the head loss making sure to account for the upflow velocity in the sed tank.</p>
-<p><span class="math notranslate nohighlight">\(h_e = \frac{\left( {{V_{diffuser}} - {V_{up}}} \right)^2}{2g}\)</span></p>
+<p><span class="math notranslate nohighlight">\(h_e = \frac{\left( {{v_{diff}} - {v_{up}}} \right)^2}{2g}\)</span></p>
 <p>Second, calculate the head loss but assume that the upflow velocity is negligible.</p>
-<p><span class="math notranslate nohighlight">\(h_e = \frac{\ {V_{diffuser}}^2}{2g}\)</span></p>
+<p><span class="math notranslate nohighlight">\(h_e = \frac{\ {v_{diff}}^2}{2g}\)</span></p>
 <ol class="arabic simple" start="11">
 <li>Is it reasonable to neglect the upflow velocity in the sed tank when calculating this head loss?</li>
 </ol>
