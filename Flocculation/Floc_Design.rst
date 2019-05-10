@@ -404,11 +404,11 @@ Now that we have :math:`G_{CS}`, we can very easily find :math:`theta`:
 
   \theta = \frac{G_{CS} \theta}{G_{CS}}
 
-Finally, we take retention time :math:`\theta` over plant flow rate :math:`Q` to get the required volume of the flocculator:
+Finally, we take retention time :math:`\theta` times the plant flow rate :math:`Q` to get the required volume of the flocculator:
 
 .. math::
 
-  \rlap{-} V_{floc} = \frac{\theta}{Q}
+  \rlap{-} V_{floc} = \theta * Q
 
 Now that we have the basic parameters defined, we can start to design the details of the flocculator, starting from the physical dimensions.
 
