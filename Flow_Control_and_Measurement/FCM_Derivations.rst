@@ -538,3 +538,70 @@ It is assumed that the top row will only have one circular orifice therefore the
     D_{LFOM,toprow,max} = 2 \sqrt{\frac{A_{LFOM, toprow}}{\pi}}
 
 The diameter of the LFOM orifice, :math:`D_{LFOM, or}`, is then the minimum of :math:`D_{LFOM,toprow,max}` and :math:`D_{LFOM, or, max}` rounded to the nearest drill bit size available.  Using the maximum possible diameter size reduces the number of orifices needed. The area of flow from each LFOM orifice is :math:`A_{LFOM,or} = \Pi_{VC}\pi \frac{D_{LFOM, or}}{2}^2`. The radius of the orifice or the height difference from the bottom of the orifice to the center is :math:`H_{LFOM,or,center} = \frac{D_{LFOM, or}}{2}`. The max number of orifices per row (i.e. the number of orifice in the bottom row) is :math:`N_{or, row, max} = \frac{\pi D_{LFOM, min}}{D_{LFOM,or} +S_{or}} `, where :math:`S_{or}`, is the spacing of orifices to maintain structural integrity of the PVC, and then :math:`N_{or, row, max}` will be rounded down to the next integer because there has to be an integer number of orifices.
+
+The number of orifices in each row and the flow through each row is a iterative process that is shown below.
+
+A sample LFOM will be derived based on teh above calculation
+
+.. code:: python
+
+  import aguaclara.core.constants as con
+  import aguaclara.core.physchem as pc
+  import aguaclara.core.pipes as pipe
+  import aguaclara.core.utility as ut
+  import aguaclara.core.drills as drills
+  from aguaclara.core.units import unit_registry as u
+  import numpy as np
+  import math
+
+  n_rows = 10 #expert input
+  Q_plant = 20 * u.L / u.s #sample value
+  h_d_max = 20 * u.cm #sample value
+  f_s = 1.5 #expert input
+  SDR = 26
+  drill_bit_avail = drills.DRILL_BITS_D_IMPERIAL
+  s_or = 0.5 * u.cm
+
+  def width_stout_weir(Q_plant,h_d_max,z):
+    width = 2 * Q_plant / (con.VC_ORIFICE_RATIO * np.pi * h_d_max * np.sqrt(2 * pc.gravity * z))
+    return width
+
+  A_LFOM = f_s * 3 * np.pi * Q_plant / (4 * np.sqrt(2 * pc.gravity * h_d_max))
+  ND_LFOM = pipe.ND_SDR_available(pc.diam_circle(A_LFOM),SDR)
+  S_LFOM_rows = h_d_max / n_rows
+  A_LFOM_toprow = S_LFOM_rows * width_stout_weir(Q_plant,h_d_max,(h_d_max - 0.5 * S_LFOM_rows))
+  D_LFOM_or_max = pc.diam_circle(A_LFOM_toprow)
+  D_LFOM_or = ut.floor_nearest(min(S_LFOM_rows,D_LFOM_or_max),drill_bit_avail)
+  A_LFOM_or = pc.area_circle(D_LFOM_or)
+  H_or_center = D_LFOM_or / 2
+  N_or_row_max = np.floor(np.pi * ND_LFOM / (D_LFOM_or + s_or))
+
+For a stout weir, there is a linear relationship between height and flow rate, therefore the goal flow rate linearly from :math:`\frac{Q_{plant}}{N_{rows}}` to :math:`Q_{ plant}`.
+
+.. code:: python
+
+  flow_goal = np.linspace(1 / n_rows, 1, n_rows) * Q_plant
+
+Next, we need to determine the height of the center of each row, we will assume that when :math:`x=0` the flow rate should also equal zero.
+
+.. math::
+    H_{row,i} = i S_{LFOM,rows} + H_{LFOM,or,center}
+
+.. code:: python
+
+  H_row = np.linspace(0,n_rows-1,n_rows) * S_LFOM_rows + H_or_center
+
+Now that we have these two values we have to iterate through the height of the LFOM to get the correct flow through each row.
+
+.. code:: python
+
+  flow_current = 0 * u.L/u.s
+  N_or_actual = np.zeros(n_rows)
+  error_per_row = np.zeros(n_rows)
+  for i in range(0,n_rows-1):
+    flow_needed = flow_goal[i] - flow_current
+    flow_per_orifice = pc.flow_orifice_vert(D_LFOM_or,H_row[i],con.VC_ORIFICE_RATIO)
+    N_or = (flow_needed/flow_per_orifice).to(u.dimensionless)
+    N_or_actual[i]= min(max(0,round(N_or)),N_or_row_max)
+    flow_current = flow_current + flow_per_orifice * N_or_actual[i]
+    error_per_row[i] = (100* (flow_current - flow_goal[i]) / flow_goal[i]).to(u.dimensionless)
