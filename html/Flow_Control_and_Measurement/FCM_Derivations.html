@@ -99,7 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Flow Control and Measurement Derivations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#for-a-tank-with-a-valve"><span class="math notranslate nohighlight">\(Q(t)\)</span> for a Tank with a Valve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#for-a-tank-with-a-valve"><span class="math notranslate nohighlight">\(Q\left(t\right)\)</span> for a Tank with a Valve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#and-for-tank-drain-equation"><span class="math notranslate nohighlight">\(D(t)\)</span> and <span class="math notranslate nohighlight">\(t(D)\)</span> for Tank Drain Equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#design-equations-for-the-linear-chemical-dose-controller-cdc">Design Equations for the Linear Chemical Dose Controller (CDC)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#cdc-design-equation-derivation">CDC Design Equation Derivation</a><ul>
@@ -108,6 +108,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#cdc-dosing-tube-s-diameter-plots">CDC Dosing Tube(s) Diameter <span class="math notranslate nohighlight">\(D_{Min}\)</span> Plots</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#lfom-design-equation-derivation">LFOM Design Equation Derivation</a></li>
 </ul>
 </li>
 </ul>
@@ -140,9 +141,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
@@ -243,39 +243,39 @@
   <div class="section" id="flow-control-and-measurement-derivations">
 <span id="title-flow-control-derivations"></span><h1>Flow Control and Measurement Derivations<a class="headerlink" href="#flow-control-and-measurement-derivations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="for-a-tank-with-a-valve">
-<span id="heading-flow-for-a-tank-with-a-valve"></span><h2><span class="math notranslate nohighlight">\(Q(t)\)</span> for a Tank with a Valve<a class="headerlink" href="#for-a-tank-with-a-valve" title="Permalink to this headline">¶</a></h2>
-<p>This document contains the derivation of the flow through a tank-with-a-valve over time, <span class="math notranslate nohighlight">\(Q(t)\)</span>. Our reference will be a simple hypochlorinator, shown in the following image. In the image, a hypochlorite solution is slowly dripping and mixing with piped source water, thereby disinfecting it. The valve is almost closed to make sure that the hypochlorite solution drips instead of flows. At the end of this document is an image which shows the variables in the final equation.</p>
+<span id="heading-flow-for-a-tank-with-a-valve"></span><h2><span class="math notranslate nohighlight">\(Q\left(t\right)\)</span> for a Tank with a Valve<a class="headerlink" href="#for-a-tank-with-a-valve" title="Permalink to this headline">¶</a></h2>
+<p>This document contains the derivation of the flow through a tank-with-a-valve over time, <span class="math notranslate nohighlight">\(Q\left(t\right)\)</span>. Our reference will be a simple hypochlorinator, shown in the following image. In the image, a hypochlorite solution is slowly dripping and mixing with piped source water, thereby disinfecting it. The valve is almost closed to make sure that the hypochlorite solution drips instead of flows. At the end of this document is an image which shows the variables in the final equation.</p>
 <div class="figure align-center" id="id1">
 <span id="figure-drip-hypochlorinator"></span><a class="reference internal image-reference" href="../_images/drip_hypochlorinator.png"><img alt="Drip hypochlorinator" src="../_images/drip_hypochlorinator.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">This is a common setup for chlorinating water before distributing it to a nearby community.</span></p>
 </div>
 <p>This derivation begins by finding two equations for flow, <span class="math notranslate nohighlight">\(Q\)</span>, through the hypochlorinator and setting them equal to each other. First, the rate of change of the volume of hypochlorite solution in the tank is equivalent to the flow out of the hypochlorinator. Since the volume of hypochlorite solution in the tank is equal to the tank’s cross-sectional area times it height, we get the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-0">
-<span class="eqno">(78)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-0" title="Permalink to this equation">¶</a></span>\[Q =  - \frac{d\rlap{-}V}{dt} = - \frac{{A_{Tank}}dh}{dt}\]</div>
+<span class="eqno">(78)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-0" title="Permalink to this equation">¶</a></span>\[Q =  -\frac{d\rlap{-}V}{dt} = - \frac{{A_{Tank}}dh}{dt}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
-<div class="line"><span class="math notranslate nohighlight">\(\frac{d\rlap{-}V}{dt}\)</span> = rate of change in volume of solution in the tank</div>
-<div class="line"><span class="math notranslate nohighlight">\(\frac{dh}{dt}\)</span> = rate of change in height of water (hypochlorite solution) level with time</div>
+<div class="line"><span class="math notranslate nohighlight">\(\frac{d\rlap{-}V}{d t}\)</span> = rate of change in volume of solution in the tank</div>
+<div class="line"><span class="math notranslate nohighlight">\(\frac{dh}{d t}\)</span> = rate of change in height of water (hypochlorite solution) level with time</div>
 </div>
 <p>Our other equation for flow is the head loss equation. Since major losses are negligible for a short pipe-low flow rate system, we only need to consider minor losses. The only real minor loss in this system occurs in the almost-closed valve that is dripping the hypochlorite solution. However, we will also use the head loss trick. Therefore, the total driving head of the system <span class="math notranslate nohighlight">\(h\)</span> is equal to the minor losses:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-1">
-<span class="eqno">(79)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-1" title="Permalink to this equation">¶</a></span>\[h = h_e = \left( \sum K \right) \frac{Q^2}{2gA_{Valve}^2}\]</div>
+<span class="eqno">(79)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-1" title="Permalink to this equation">¶</a></span>\[h = h_e = \left(\sum K \right) \frac{Q^2}{2gA_{Valve}^2}\]</div>
 <p>Bear in mind that this is the second form of the minor loss equation as described in <a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html#heading-final-minor-loss-equations"><span class="std std-ref">this derivation</span></a>. Rearranging the minor loss equation to solve for <span class="math notranslate nohighlight">\(Q\)</span>, it looks like this:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-2">
-<span class="eqno">(80)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-2" title="Permalink to this equation">¶</a></span>\[Q = A_{Valve} \sqrt{\frac{2 h_e g}{\sum K}}\]</div>
+<span class="eqno">(80)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-2" title="Permalink to this equation">¶</a></span>\[Q = A_{Valve}\sqrt{\frac{2h_eg}{\sum K}}\]</div>
 <p>Now we can set both equations for <span class="math notranslate nohighlight">\(Q\)</span> equal to each other and move them both to one side:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-3">
-<span class="eqno">(81)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-3" title="Permalink to this equation">¶</a></span>\[A_{Tank} \frac{dh}{dt} + A_{Valve} \sqrt{\frac{2gh}{\sum K}} = 0\]</div>
+<span class="eqno">(81)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-3" title="Permalink to this equation">¶</a></span>\[A_{Tank}\frac{dh}{dt} + A_{Valve} \sqrt{\frac{2gh}{\sum K}} = 0\]</div>
 <p>From here, calculus and equation substitution dominate the derivation. Separating the variables of the equation immediately above, we get the following integral:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-4">
-<span class="eqno">(82)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-4" title="Permalink to this equation">¶</a></span>\[\frac{ -A_{Tank}}{{A_{Valve}} \sqrt{\frac{2g}{\sum K}} }   \int \limits_{h_0}^h \frac{dh}{\sqrt h} = \int \limits_0^t {dt}\]</div>
+<span class="eqno">(82)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-4" title="Permalink to this equation">¶</a></span>\[\frac{-A_{Tank}}{{A_{Valve}} \sqrt{\frac{2g}{\sum K}} }   \int \limits_{h_0}^h \frac{dh}{\sqrt h} = \int \limits_0^t {dt}\]</div>
 <p>Which, when integrated, yields:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-5">
-<span class="eqno">(83)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-5" title="Permalink to this equation">¶</a></span>\[\frac{ -A_{Tank}}{A_{Valve} \sqrt{ \frac{2g}{\sum K}} } \cdot 2 \left( \sqrt{h} - \sqrt{h_0} \right) = t\]</div>
-<p>And solved for <span class="math notranslate nohighlight">\(\sqrt{h}\)</span> returns:</p>
+<span class="eqno">(83)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-5" title="Permalink to this equation">¶</a></span>\[\frac{-A_{Tank}}{A_{Valve} \sqrt{ \frac{2g}{\sum K}} } \cdot 2 \left( \sqrt{h} - \sqrt{h_0} \right) = t\]</div>
+<p>And solved for <span class="math notranslate nohighlight">\(\sqrt{ h}\)</span> returns:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-6">
-<span class="eqno">(84)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-6" title="Permalink to this equation">¶</a></span>\[\sqrt h  = \sqrt{h_0} - t \frac{A_{Valve}}{2 A_{tank}} \sqrt {\frac{2g}{\sum K}}\]</div>
-<p>At this point, the steps and equation substitutions may begin to seem unintuitive. Do not worry if you do not understand why <em>exactly</em> a particular substitution is occurring. Since we determined above that <span class="math notranslate nohighlight">\(h_e = h\)</span>, our equation above for <span class="math notranslate nohighlight">\(\sqrt{h}\)</span> is also an equation for <span class="math notranslate nohighlight">\(\sqrt{h_e}\)</span>. As such, we will plug the equation above back into the minor loss equation solved for <span class="math notranslate nohighlight">\(Q\)</span> from above, <span class="math notranslate nohighlight">\(Q = A_{Valve} \sqrt{\frac{2 h_e g}{\sum K}}\)</span>, to produce:</p>
+<span class="eqno">(84)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-6" title="Permalink to this equation">¶</a></span>\[\sqrt h  = \sqrt{h_0} - t\frac{A_{Valve}}{2 A_{tank}} \sqrt {\frac{2g}{\sum K}}\]</div>
+<p>At this point, the steps and equation substitutions may begin to seem unintuitive. Do not worry if you do not understand why <em>exactly</em> a particular substitution is occurring. Since we determined above that :math:` h_e = h`, our equation above for <span class="math notranslate nohighlight">\(\sqrt{ h}\)</span> is also an equation for <span class="math notranslate nohighlight">\(\sqrt{ h_e}\)</span>. As such, we will plug the equation above back into the minor loss equation solved for <span class="math notranslate nohighlight">\(Q\)</span> from above, <span class="math notranslate nohighlight">\(Q = A_ {Valve} \sqrt{\frac{2 h_e g}{\sum K}}\)</span>, to produce:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-7">
 <span class="eqno">(85)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-7" title="Permalink to this equation">¶</a></span>\[Q = A_{Valve} \sqrt{\frac{2g}{\sum K}} \left( \sqrt{h_0}  - t \frac{A_{Valve}}{2 A_{tank}} \sqrt{\frac{2g}{\sum K}} \right)\]</div>
 <p>Now we can focus on getting rid of the variables <span class="math notranslate nohighlight">\(A_{Valve}\)</span>, <span class="math notranslate nohighlight">\(\sum K\)</span>, and <span class="math notranslate nohighlight">\(A_{tank}\)</span>. By using the minor loss equation once more, we can remove both <span class="math notranslate nohighlight">\(A_{Valve}\)</span> and <span class="math notranslate nohighlight">\(\sum K\)</span>. Consider the initial state of the system, when the hypochlorinator is set up and starts dropping its first few drops of hypochlorite solution into the water. The initial flow rate, <span class="math notranslate nohighlight">\(Q_0\)</span>, and elevation difference between the water level and the valve, <span class="math notranslate nohighlight">\(h_0\)</span>, can be input into the minor loss equation, which can then be solved for <span class="math notranslate nohighlight">\(A_{Valve}\)</span>:</p>
@@ -530,6 +530,108 @@ D_{Min, \, Laminar} = \frac{4 Q_{Max}}{\pi \nu {\rm{Re}}_{Max}}
 <span id="figure-cdc-diameter-model"></span><a class="reference internal image-reference" href="../_images/CDC_diameter_model.png"><img alt="CDC diameter model" src="../_images/CDC_diameter_model.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">CDC diameter modeling in MathCAD.</span></p>
 </div>
+</div>
+</div>
+<div class="section" id="lfom-design-equation-derivation">
+<span id="heading-lfom-design-equation-derivations"></span><h3>LFOM Design Equation Derivation<a class="headerlink" href="#lfom-design-equation-derivation" title="Permalink to this headline">¶</a></h3>
+<p>The LFOM design is based off that of a stout weir. A stout weir is an infinitely tall weir where the width, <span class="math notranslate nohighlight">\(w\)</span>, at any given height, :math:` h` can be given by this equation:
+:math:` w=frac{alpha}{sqrt{h}}`. Where alpha is a scaling parameter.</p>
+<p>The flow through this weir can be solved using the orifice equation.</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-42">
+<span class="eqno">(120)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-42" title="Permalink to this equation">¶</a></span>\[Q = \Pi_{VC} A_{or} \sqrt{ 2g\Deltah}\]</div>
+<p>The parameters of the stout weir can be substituted into this equation to yield:</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-43">
+<span class="eqno">(121)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-43" title="Permalink to this equation">¶</a></span>\[Q(h)  = \Pi_{VC} \int_{0}^{h} \sqrt{ 2g(h-x)}  \frac{\alpha}{\sqrt{ x}} dx\]</div>
+<p>When the flow rate, <span class="math notranslate nohighlight">\(Q\)</span>, is at the plant flow rate, <span class="math notranslate nohighlight">\(Q_{ plant}\)</span>, the height, :math:` h`, is equal to the max height of the LFOM, :math:` h_{d,max}`.</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-44">
+<span class="eqno">(122)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-44" title="Permalink to this equation">¶</a></span>\[\frac{ Q_{plant}}{\alpha}  = \Pi_{VC}\sqrt{2g}\int_{0}^{h_{d,max}} \sqrt{(h_{d,max}-x)}  \frac{1}{\sqrt{ x}} dx\]</div>
+<p>Solving this we can determine a value for alpha</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-45">
+<span class="eqno">(123)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-45" title="Permalink to this equation">¶</a></span>\[\alpha  = \frac{ Q_{plant}}{\Pi_{VC}\sqrt{2g}\int_{0}^{h_{d,max}} \sqrt{(h_{d,max}-x)}  \frac{1}{\sqrt{ x}} dx} = \frac{2 Q_{plant}}{\Pi_{VC} \pi h_{d,max} \sqrt{2g}}\]</div>
+<p>From now on this equation will represent the height in the stout weir:</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-46">
+<span class="eqno">(124)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-46" title="Permalink to this equation">¶</a></span>\[y\left( x \right) = \frac{\alpha}{\sqrt{x}} = \frac{ 2 Q_{plant}}{\Pi_{VC} \pi h_{d,max} \sqrt{2 g x}}\]</div>
+<p>The average velocity exiting the LFOM can be calculated  by using the weight of the falling water from the height, <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-47">
+<span class="eqno">(125)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-47" title="Permalink to this equation">¶</a></span>\[V_{exit} = \frac{ 2g\Pi_{VC}}{Q_{plant}}\int_{0}^{h_{d,max}} \sqrt{x(h_{d,max} -x)} y(x) dx\]</div>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-48">
+<span class="eqno">(126)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-48" title="Permalink to this equation">¶</a></span>\[V_{exit} = \frac{\sqrt{8g}}{\pi h_{d,max}} \int_{0}^{h_{d,max}} \sqrt{(h_{d,max} -x)}  dx = \frac{4 \sqrt{2gh_{d,max}}}{3\pi}\]</div>
+<p>From the conservation of mass equation, <span class="math notranslate nohighlight">\(Q = V A\)</span>, the area of the LFOM can be derived, a factor of safety, :math:` f_s`, will be added.</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-49">
+<span class="eqno">(127)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-49" title="Permalink to this equation">¶</a></span>\[A_{LFOM} = f_s \frac{ Q_{plant}}{ V_{exit}} =  f_s \frac{ 3 \pi Q_{plant}}{4 \sqrt{2gh_{d,max}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-50">
+<span class="eqno">(128)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-50" title="Permalink to this equation">¶</a></span>\[D_{LFOM,min} = 2 \sqrt{\frac{ A_{LFOM}}{ \pi}} =  \sqrt{\frac{3 Q_{plant}}{ \sqrt{2gh_{d,max}}}}\]</div>
+<p>This inner diameter will then be rounded upper to the nearest available PVC pipe inner diameter.</p>
+<p>Now that we have the size of the LFOM pipe, we need to discretize the opening into rows of small orifices.</p>
+<p>The number of rows in the LFOM, <span class="math notranslate nohighlight">\(N_{ rows}\)</span> is currently an expert input in the AguaClara design code with a value of 10. The spacing between the center of each row is then <span class="math notranslate nohighlight">\(S_{LFOM,rows} =\frac{h_{d,max}}{N_{ rows}}\)</span></p>
+<p>The maximum diameter of each orifice is therefore the spacing between the rows.</p>
+<p><span class="math notranslate nohighlight">\(D_{LFOM,or,max} = S_{LFOM, rows}\)</span></p>
+<p>The area of each row of orifices can calculated using by integrating the width function over x</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-51">
+<span class="eqno">(129)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-51" title="Permalink to this equation">¶</a></span>\[A_{LFOM,toprow} = \int_{h_{d,max} - c}^{h_{d,max}} y(x) dx\]</div>
+<p>In the AguaClara plant design code, this area is approximated using the width at the center of the top row, using the equation below.</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-52">
+<span class="eqno">(130)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-52" title="Permalink to this equation">¶</a></span>\[A_{LFOM,toprow} = y(h_{d,max} - 0.5 S_{LFOM,rows}) S_{LFOM,rows}\]</div>
+<p>It is assumed that the top row will only have one circular orifice therefore the maximum diameter of the orifice can be calculated solving for the diameter that equals the area found above.</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-53">
+<span class="eqno">(131)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-53" title="Permalink to this equation">¶</a></span>\[D_{LFOM,toprow,max} = 2 \sqrt{\frac{A_{LFOM, toprow}}{\pi}}\]</div>
+<p>The diameter of the LFOM orifice, <span class="math notranslate nohighlight">\(D_{LFOM, or}\)</span>, is then the minimum of <span class="math notranslate nohighlight">\(D_{LFOM,toprow,max}\)</span> and <span class="math notranslate nohighlight">\(D_{LFOM, or, max}\)</span> rounded to the nearest drill bit size available.  Using the maximum possible diameter size reduces the number of orifices needed. The area of flow from each LFOM orifice is <span class="math notranslate nohighlight">\(A_{LFOM,or} = \Pi_{VC}\pi \frac{D_{LFOM, or}}{2}^2\)</span>. The radius of the orifice or the height difference from the bottom of the orifice to the center is <span class="math notranslate nohighlight">\(H_{LFOM,or,center} = \frac{D_{LFOM, or}}{2}\)</span>. The max number of orifices per row (i.e. the number of orifice in the bottom row) is <span class="math notranslate nohighlight">\(N_{or, row, max} = \frac{\pi D_{LFOM, min}}{D_{LFOM,or} +S_{or}} `, where :math:`S_{or}\)</span>, is the spacing of orifices to maintain structural integrity of the PVC, and then <span class="math notranslate nohighlight">\(N_{or, row, max}\)</span> will be rounded down to the next integer because there has to be an integer number of orifices.</p>
+<p>The number of orifices in each row and the flow through each row is a iterative process that is shown below.</p>
+<p>A sample LFOM will be derived based on teh above calculation</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.constants</span> <span class="k">as</span> <span class="nn">con</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.pipes</span> <span class="k">as</span> <span class="nn">pipe</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.utility</span> <span class="k">as</span> <span class="nn">ut</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.drills</span> <span class="k">as</span> <span class="nn">drills</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">n_rows</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">#expert input</span>
+<span class="n">Q_plant</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span> <span class="c1">#sample value</span>
+<span class="n">h_d_max</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="c1">#sample value</span>
+<span class="n">f_s</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="c1">#expert input</span>
+<span class="n">SDR</span> <span class="o">=</span> <span class="mi">26</span>
+<span class="n">drill_bit_avail</span> <span class="o">=</span> <span class="n">drills</span><span class="o">.</span><span class="n">DRILL_BITS_D_IMPERIAL</span>
+<span class="n">s_or</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
+
+<span class="k">def</span> <span class="nf">width_stout_weir</span><span class="p">(</span><span class="n">Q_plant</span><span class="p">,</span><span class="n">h_d_max</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+  <span class="n">width</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Q_plant</span> <span class="o">/</span> <span class="p">(</span><span class="n">con</span><span class="o">.</span><span class="n">VC_ORIFICE_RATIO</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">h_d_max</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">z</span><span class="p">))</span>
+  <span class="k">return</span> <span class="n">width</span>
+
+<span class="n">A_LFOM</span> <span class="o">=</span> <span class="n">f_s</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">Q_plant</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">h_d_max</span><span class="p">))</span>
+<span class="n">ND_LFOM</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ND_SDR_available</span><span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">diam_circle</span><span class="p">(</span><span class="n">A_LFOM</span><span class="p">),</span><span class="n">SDR</span><span class="p">)</span>
+<span class="n">S_LFOM_rows</span> <span class="o">=</span> <span class="n">h_d_max</span> <span class="o">/</span> <span class="n">n_rows</span>
+<span class="n">A_LFOM_toprow</span> <span class="o">=</span> <span class="n">S_LFOM_rows</span> <span class="o">*</span> <span class="n">width_stout_weir</span><span class="p">(</span><span class="n">Q_plant</span><span class="p">,</span><span class="n">h_d_max</span><span class="p">,(</span><span class="n">h_d_max</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">S_LFOM_rows</span><span class="p">))</span>
+<span class="n">D_LFOM_or_max</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">diam_circle</span><span class="p">(</span><span class="n">A_LFOM_toprow</span><span class="p">)</span>
+<span class="n">D_LFOM_or</span> <span class="o">=</span> <span class="n">ut</span><span class="o">.</span><span class="n">floor_nearest</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">S_LFOM_rows</span><span class="p">,</span><span class="n">D_LFOM_or_max</span><span class="p">),</span><span class="n">drill_bit_avail</span><span class="p">)</span>
+<span class="n">A_LFOM_or</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">D_LFOM_or</span><span class="p">)</span>
+<span class="n">H_or_center</span> <span class="o">=</span> <span class="n">D_LFOM_or</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">N_or_row_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">ND_LFOM</span> <span class="o">/</span> <span class="p">(</span><span class="n">D_LFOM_or</span> <span class="o">+</span> <span class="n">s_or</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>For a stout weir, there is a linear relationship between height and flow rate, therefore the goal flow rate linearly from <span class="math notranslate nohighlight">\(\frac{Q_{plant}}{N_{rows}}\)</span> to <span class="math notranslate nohighlight">\(Q_{ plant}\)</span>.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flow_goal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">n_rows</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n_rows</span><span class="p">)</span> <span class="o">*</span> <span class="n">Q_plant</span>
+</pre></div>
+</div>
+<p>Next, we need to determine the height of the center of each row, we will assume that when <span class="math notranslate nohighlight">\(x=0\)</span> the flow rate should also equal zero.</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-54">
+<span class="eqno">(132)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-54" title="Permalink to this equation">¶</a></span>\[H_{row,i} = i S_{LFOM,rows} + H_{LFOM,or,center}\]</div>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H_row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n_rows</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n_rows</span><span class="p">)</span> <span class="o">*</span> <span class="n">S_LFOM_rows</span> <span class="o">+</span> <span class="n">H_or_center</span>
+</pre></div>
+</div>
+<p>Now that we have these two values we have to iterate through the height of the LFOM to get the correct flow through each row.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flow_current</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">N_or_actual</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_rows</span><span class="p">)</span>
+<span class="n">error_per_row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_rows</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n_rows</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+  <span class="n">flow_needed</span> <span class="o">=</span> <span class="n">flow_goal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">flow_current</span>
+  <span class="n">flow_per_orifice</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">flow_orifice_vert</span><span class="p">(</span><span class="n">D_LFOM_or</span><span class="p">,</span><span class="n">H_row</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">con</span><span class="o">.</span><span class="n">VC_ORIFICE_RATIO</span><span class="p">)</span>
+  <span class="n">N_or</span> <span class="o">=</span> <span class="p">(</span><span class="n">flow_needed</span><span class="o">/</span><span class="n">flow_per_orifice</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
+  <span class="n">N_or_actual</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">N_or</span><span class="p">)),</span><span class="n">N_or_row_max</span><span class="p">)</span>
+  <span class="n">flow_current</span> <span class="o">=</span> <span class="n">flow_current</span> <span class="o">+</span> <span class="n">flow_per_orifice</span> <span class="o">*</span> <span class="n">N_or_actual</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  <span class="n">error_per_row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span> <span class="p">(</span><span class="n">flow_current</span> <span class="o">-</span> <span class="n">flow_goal</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">/</span> <span class="n">flow_goal</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
 </div>

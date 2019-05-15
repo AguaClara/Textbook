@@ -150,9 +150,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
@@ -325,7 +324,7 @@
 <h3>2)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p><strong>Define a function</strong> for the power required to run a rapid mix unit. The rapid mix shaft power function should have flow, velocity gradient, residence time (which can be described with t or <span class="math notranslate nohighlight">\(\theta\)</span>, as in the equation below), and temperature as its only inputs.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-mechanical-solution-0">
-<span class="eqno">(314)<a class="headerlink" href="#equation-rapid-mix-rm-mechanical-solution-0" title="Permalink to this equation">¶</a></span>\[P = G^2Q \theta \nu \rho\]</div>
+<span class="eqno">(327)<a class="headerlink" href="#equation-rapid-mix-rm-mechanical-solution-0" title="Permalink to this equation">¶</a></span>\[P = G^2Q \theta \nu \rho\]</div>
 <p>Using your function, plot the shaft power (kW) required for a conventional rapid mix unit that has a residence time of t = 15s, a velocity gradient of G = 1500/s, and a flow rate of 50 L/s as a function of temperature (Celsius).</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FlowPlant</span> <span class="o">=</span> <span class="mi">50</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 <span class="n">t</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
