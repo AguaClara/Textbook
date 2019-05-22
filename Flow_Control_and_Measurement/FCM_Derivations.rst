@@ -541,7 +541,7 @@ The diameter of the LFOM orifice, :math:`D_{LFOM, or}`, is then the minimum of :
 
 The number of orifices in each row and the flow through each row is a iterative process that is shown below.
 
-A sample LFOM will be derived based on teh above calculation
+A sample LFOM will be derived based on the above calculation
 
 .. code:: python
 
