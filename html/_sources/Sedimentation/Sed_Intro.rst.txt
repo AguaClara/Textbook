@@ -37,6 +37,7 @@ Floc Hopper
 Plate Settlers
 ==================
 
+Plate settler History `Plate Settler History <https://awwa.onlinelibrary.wiley.com/doi/10.5942/jawwa.2014.106.0161>`_
 
 .. _Manifold_Hydraulics:
 
