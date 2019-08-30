@@ -91,7 +91,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#import-statements">Import statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#markdown">Markdown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#transitioning-from-matlab-to-python">Transitioning From Matlab To Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#useful-hotkeys-for-executing-code">Useful hotkeys for executing code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#units">Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#arrays-and-units">Arrays and units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#plotting">Plotting</a></li>
@@ -139,8 +138,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
@@ -314,13 +314,8 @@
 </table>
 <div class="section" id="import-statements">
 <h2>Import statements<a class="headerlink" href="#import-statements" title="Permalink to this headline">¶</a></h2>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span>
-<span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="k">as</span> <span class="nn">ac</span>
 <span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">aguaclara.core.constants</span> <span class="k">as</span> <span class="nn">con</span>
-<span class="kn">import</span> <span class="nn">aguaclara.research.environmental_processes_analysis</span> <span class="k">as</span> <span class="nn">epa</span>
-<span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
-
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -334,13 +329,12 @@ can do the following import inspect inspect.getsource(foo)</p>
 </div>
 <div class="section" id="markdown">
 <h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
-<p>Markdown files allow you to mix code, beautiful Latex equations, nicely formatted text, figures, and tables. To create a markdown file in Atom simply create a new file (File menu) and give it a .md file extension. The .md file extension is critical so that atom knows how to interpret what you are typing!</p>
-<p>Markdown allows you to create very nicely formatted text including Latex equations which will show up in the preview pane of Atom (type control - shift - E to display the preview pane of a Markdown file).</p>
+<p>Markdown allow you to mix code, beautiful Latex equations, nicely formatted text, figures, and tables.</p>
 <div class="math notranslate nohighlight" id="equation-introduction-python-tutorial-0">
 <span class="eqno">(2)<a class="headerlink" href="#equation-introduction-python-tutorial-0" title="Permalink to this equation">¶</a></span>\[c = \sqrt{a^2 + b^2}\]</div>
 <p>Markdown does not handle automatic numbering of equations, figures, and tables.</p>
-<p>The Python Kernel remembers all definitions (functions and variables) as they are defined based on execution. Thus if you fail to execute a line of code, the parameters defined in that line won’t be available. Similarly, if you define a parameter and then delete that line of code, that parameter remains defined until you restart Atom.</p>
-<p>Before submitting a file for others to use, you need to verify that all of the dependencies are defined and that you didn’t accidently delete a definition that is required. You can do this by placing your cursor in a python code section and then clicking on the python 3|idle in the toolbar at the bottom of the Atom window. Select restart Python 3 kernel. Then execute all of the python code in your document from top to bottom and make sure that all of the code performs as expected.</p>
+<p>The Python Kernel remembers all definitions (functions and variables) as they are defined based on execution. Thus if you fail to execute a line of code, the parameters defined in that line won’t be available. Similarly, if you define a parameter and then delete that line of code, that parameter remains defined until you reset all runtimes or restart.</p>
+<p>Before submitting a file for others to use, you need to verify that all of the dependencies are defined and that you didn’t accidently delete a definition that is required. You can do this by resetting all runtimes (Runtime menu) and then running all.</p>
 </div>
 <div class="section" id="transitioning-from-matlab-to-python">
 <h2>Transitioning From Matlab To Python<a class="headerlink" href="#transitioning-from-matlab-to-python" title="Permalink to this headline">¶</a></h2>
@@ -384,18 +378,6 @@ can do the following import inspect inspect.getsource(foo)</p>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="useful-hotkeys-for-executing-code">
-<h2>Useful hotkeys for executing code<a class="headerlink" href="#useful-hotkeys-for-executing-code" title="Permalink to this headline">¶</a></h2>
-<p>Hydrogen hotkeys are listed under Packages-&gt;Hydrogen, and are also detailed here.</p>
-<blockquote>
-<div><ul class="simple">
-<li>Ctrl+Enter runs the currently selected line of code.</li>
-<li>Shift+Enter works as Ctrl+Enter and also moves the selection to the next line of code.</li>
-<li>Alt+Ctrl+Enter runs the current code block.</li>
-<li>Alt+Shift+Enter runs the current code block and moves the selection to the next block.</li>
-</ul>
-</div></blockquote>
-</div>
 <div class="section" id="units">
 <h2>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
 <p>Engineering requires calculations with units. Prior to modern computer languages engineers used paper and pencil, slide rules, calculators, and more recently spreadsheets to do calculations. All of these methods are prone to calculation errors because units aren’t handled as an essential part of each value. Spreadsheets are especially notorious for calculation errors because unit conversions are buried in formulas that are hidden in the cells.</p>
@@ -403,13 +385,12 @@ can do the following import inspect inspect.getsource(foo)</p>
 <p>Environmental engineers historically described surface loading rates for sedimentation tanks using units of gal/min per square foot. How fast is <span class="math notranslate nohighlight">\(\frac{1 gpm}{ft^2}\)</span> in <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">V_surface_loading_rate</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gal</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">min</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">ft</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">V_surface_loading_rate</span><span class="p">)</span>
-<span class="n">aguaclara</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">set_sig_figs</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">V_surface_loading_rate</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">ac</span><span class="o">.</span><span class="n">round_sig_figs</span><span class="p">(</span><span class="n">V_surface_loading_rate</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>The surface loading rate is 0.6791 millimeter / second</p>
-<p>After reducing the number of significant digits to 3 we obtain:
-The surface loading rate is 0.679 millimeter / second</p>
+<p>After reducing the number of significant digits to 2 we obtain:
+The surface loading rate is 0.68 millimeter / second</p>
 <p>How long does it take to stop a car that is initially traveling at 60 mph if the coefficient of friction is 0.5?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v_0</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mile</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">hr</span>
 <span class="n">friction_coefficient</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -558,13 +539,13 @@ The surface loading rate is 0.679 millimeter / second</p>
 <p>The ND_SDR_available function returns the nominal diameter of a pipe that has an inner diameter equal to or greater than the requested inner diameter <a class="reference external" href="http://www.engineeringtoolbox.com/sdr-standard-dimension-ratio-d_318.html">SDR, standard diameter ratio</a> . Below we find the smallest available pipe that has an inner diameter of at least 7 cm</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IDmin</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">SDR</span> <span class="o">=</span> <span class="mi">26</span>
-<span class="n">ND_my_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ND_SDR_available</span><span class="p">(</span><span class="n">IDmin</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span>
+<span class="n">ND_my_pipe</span> <span class="o">=</span> <span class="n">ac</span><span class="o">.</span><span class="n">ND_SDR_available</span><span class="p">(</span><span class="n">IDmin</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span>
 <span class="n">ND_my_pipe</span>
 </pre></div>
 </div>
 <p>3.0 inch</p>
 <p>The actual inner diameter of this pipe is</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ID_my_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_my_pipe</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ID_my_pipe</span> <span class="o">=</span> <span class="n">ac</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_my_pipe</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ID_my_pipe</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -573,7 +554,7 @@ The surface loading rate is 0.679 millimeter / second</p>
 </div>
 <p>We can display the available nominal pipe sizes that are in our
 database.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pipe</span><span class="o">.</span><span class="n">ND_all_available</span><span class="p">()</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ac</span><span class="o">.</span><span class="n">ND_all_available</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>

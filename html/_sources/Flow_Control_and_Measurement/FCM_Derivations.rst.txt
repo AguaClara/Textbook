@@ -8,9 +8,9 @@ Flow Control and Measurement Derivations
 
 .. _heading_flow_for_a_tank_with_a_valve:
 
-:math:`Q\left(t\right)` for a Tank with a Valve
-===============================================
-This document contains the derivation of the flow through a tank-with-a-valve over time, :math:`Q\left(t\right)`. Our reference will be a simple hypochlorinator, shown in the following image. In the image, a hypochlorite solution is slowly dripping and mixing with piped source water, thereby disinfecting it. The valve is almost closed to make sure that the hypochlorite solution drips instead of flows. At the end of this document is an image which shows the variables in the final equation.
+:math:`Q(t)` for a Tank with a Valve
+======================================
+This document contains the derivation of the flow through a tank-with-a-valve over time, :math:`Q(t)`. Our reference will be a simple hypochlorinator, shown in the following image. In the image, a hypochlorite solution is slowly dripping and mixing with piped source water, thereby disinfecting it. The valve is almost closed to make sure that the hypochlorite solution drips instead of flows. At the end of this document is an image which shows the variables in the final equation.
 
 .. _figure_drip_hypochlorinator:
 
@@ -24,49 +24,50 @@ This document contains the derivation of the flow through a tank-with-a-valve ov
 This derivation begins by finding two equations for flow, :math:`Q`, through the hypochlorinator and setting them equal to each other. First, the rate of change of the volume of hypochlorite solution in the tank is equivalent to the flow out of the hypochlorinator. Since the volume of hypochlorite solution in the tank is equal to the tank’s cross-sectional area times it height, we get the following equation:
 
 .. math::
-    Q =  -\frac{d\rlap{-}V}{dt} = - \frac{{A_{Tank}}dh}{dt}
+
+    Q =  - \frac{d\rlap{-}V}{dt} = - \frac{{A_{Tank}}dh}{dt}
 
 | Such that:
-| :math:`\frac{d\rlap{-}V}{d t}` = rate of change in volume of solution in the tank
-| :math:`\frac{dh}{d t}` = rate of change in height of water (hypochlorite solution) level with time
+| :math:`\frac{d\rlap{-}V}{dt}` = rate of change in volume of solution in the tank
+| :math:`\frac{dh}{dt}` = rate of change in height of water (hypochlorite solution) level with time
 
 Our other equation for flow is the head loss equation. Since major losses are negligible for a short pipe-low flow rate system, we only need to consider minor losses. The only real minor loss in this system occurs in the almost-closed valve that is dripping the hypochlorite solution. However, we will also use the head loss trick. Therefore, the total driving head of the system :math:`h` is equal to the minor losses:
 
 .. math::
 
-    h = h_e = \left(\sum K \right) \frac{Q^2}{2gA_{Valve}^2}
+    h = h_e = \left( \sum K \right) \frac{Q^2}{2gA_{Valve}^2}
 
 Bear in mind that this is the second form of the minor loss equation as described in :ref:`this derivation <heading_final_minor_loss_equations>`. Rearranging the minor loss equation to solve for :math:`Q`, it looks like this:
 
 .. math::
 
-    Q = A_{Valve}\sqrt{\frac{2h_eg}{\sum K}}
+    Q = A_{Valve} \sqrt{\frac{2 h_e g}{\sum K}}
 
 Now we can set both equations for :math:`Q` equal to each other and move them both to one side:
 
 .. math::
 
-    A_{Tank}\frac{dh}{dt} + A_{Valve} \sqrt{\frac{2gh}{\sum K}} = 0
+    A_{Tank} \frac{dh}{dt} + A_{Valve} \sqrt{\frac{2gh}{\sum K}} = 0
 
 From here, calculus and equation substitution dominate the derivation. Separating the variables of the equation immediately above, we get the following integral:
 
 .. math::
 
-    \frac{-A_{Tank}}{{A_{Valve}} \sqrt{\frac{2g}{\sum K}} }   \int \limits_{h_0}^h \frac{dh}{\sqrt h} = \int \limits_0^t {dt}
+    \frac{ -A_{Tank}}{{A_{Valve}} \sqrt{\frac{2g}{\sum K}} }   \int \limits_{h_0}^h \frac{dh}{\sqrt h} = \int \limits_0^t {dt}
 
 Which, when integrated, yields:
 
 .. math::
 
-    \frac{-A_{Tank}}{A_{Valve} \sqrt{ \frac{2g}{\sum K}} } \cdot 2 \left( \sqrt{h} - \sqrt{h_0} \right) = t
+    \frac{ -A_{Tank}}{A_{Valve} \sqrt{ \frac{2g}{\sum K}} } \cdot 2 \left( \sqrt{h} - \sqrt{h_0} \right) = t
 
-And solved for :math:`\sqrt{ h}` returns:
+And solved for :math:`\sqrt{h}` returns:
 
 .. math::
 
-    \sqrt h  = \sqrt{h_0} - t\frac{A_{Valve}}{2 A_{tank}} \sqrt {\frac{2g}{\sum K}}
+    \sqrt h  = \sqrt{h_0} - t \frac{A_{Valve}}{2 A_{tank}} \sqrt {\frac{2g}{\sum K}}
 
-At this point, the steps and equation substitutions may begin to seem unintuitive. Do not worry if you do not understand why *exactly* a particular substitution is occurring. Since we determined above that :math:` h_e = h`, our equation above for :math:`\sqrt{ h}` is also an equation for :math:`\sqrt{ h_e}`. As such, we will plug the equation above back into the minor loss equation solved for :math:`Q` from above, :math:`Q = A_ {Valve} \sqrt{\frac{2 h_e g}{\sum K}}`, to produce:
+At this point, the steps and equation substitutions may begin to seem unintuitive. Do not worry if you do not understand why *exactly* a particular substitution is occurring. Since we determined above that :math:`h_e = h`, our equation above for :math:`\sqrt{h}` is also an equation for :math:`\sqrt{h_e}`. As such, we will plug the equation above back into the minor loss equation solved for :math:`Q` from above, :math:`Q = A_{Valve} \sqrt{\frac{2 h_e g}{\sum K}}`, to produce:
 
 .. math::
 
@@ -462,146 +463,3 @@ Combined with the discrete amount of tubing sizes (shown in dark green), we can 
     :alt: CDC diameter model
 
     CDC diameter modeling in MathCAD.
-
-
-.. _heading_lfom_design_equation_derivations:
-
-LFOM Design Equation Derivation
--------------------------------
-
-The LFOM design is based off that of a stout weir. A stout weir is an infinitely tall weir where the width, :math:`w`, at any given height, :math:` h` can be given by this equation:
-:math:` w=\frac{\alpha}{\sqrt{h}}`. Where alpha is a scaling parameter.
-
-The flow through this weir can be solved using the orifice equation.
-
-.. math::
-    Q = \Pi_{VC} A_{or} \sqrt{ 2g\Deltah}
-
-The parameters of the stout weir can be substituted into this equation to yield:
-
-.. math::
-    Q(h)  = \Pi_{VC} \int_{0}^{h} \sqrt{ 2g(h-x)}  \frac{\alpha}{\sqrt{ x}} dx
-
-When the flow rate, :math:`Q`, is at the plant flow rate, :math:`Q_{ plant}`, the height, :math:` h`, is equal to the max height of the LFOM, :math:` h_{d,max}`.
-
-.. math::
-    \frac{ Q_{plant}}{\alpha}  = \Pi_{VC}\sqrt{2g}\int_{0}^{h_{d,max}} \sqrt{(h_{d,max}-x)}  \frac{1}{\sqrt{ x}} dx
-
-Solving this we can determine a value for alpha
-
-.. math::
-  \alpha  = \frac{ Q_{plant}}{\Pi_{VC}\sqrt{2g}\int_{0}^{h_{d,max}} \sqrt{(h_{d,max}-x)}  \frac{1}{\sqrt{ x}} dx} = \frac{2 Q_{plant}}{\Pi_{VC} \pi h_{d,max} \sqrt{2g}}
-
-From now on this equation will represent the height in the stout weir:
-
-.. math::
-    y\left( x \right) = \frac{\alpha}{\sqrt{x}} = \frac{ 2 Q_{plant}}{\Pi_{VC} \pi h_{d,max} \sqrt{2 g x}}
-
-The average velocity exiting the LFOM can be calculated  by using the weight of the falling water from the height, :math:`x`.
-
-.. math::
-    V_{exit} = \frac{ 2g\Pi_{VC}}{Q_{plant}}\int_{0}^{h_{d,max}} \sqrt{x(h_{d,max} -x)} y(x) dx
-
-.. math::
-    V_{exit} = \frac{\sqrt{8g}}{\pi h_{d,max}} \int_{0}^{h_{d,max}} \sqrt{(h_{d,max} -x)}  dx = \frac{4 \sqrt{2gh_{d,max}}}{3\pi}
-
-From the conservation of mass equation, :math:`Q = V A`, the area of the LFOM can be derived, a factor of safety, :math:` f_s`, will be added.
-
-.. math:: A_{LFOM} = f_s \frac{ Q_{plant}}{ V_{exit}} =  f_s \frac{ 3 \pi Q_{plant}}{4 \sqrt{2gh_{d,max}}}
-
-.. math::
-    D_{LFOM,min} = 2 \sqrt{\frac{ A_{LFOM}}{ \pi}} =  \sqrt{\frac{3 Q_{plant}}{ \sqrt{2gh_{d,max}}}}
-
-This inner diameter will then be rounded upper to the nearest available PVC pipe inner diameter.
-
-Now that we have the size of the LFOM pipe, we need to discretize the opening into rows of small orifices.
-
-The number of rows in the LFOM, :math:`N_{ rows}` is currently an expert input in the AguaClara design code with a value of 10. The spacing between the center of each row is then :math:`S_{LFOM,rows} =\frac{h_{d,max}}{N_{ rows}}`
-
-The maximum diameter of each orifice is therefore the spacing between the rows.
-
-:math:`D_{LFOM,or,max} = S_{LFOM, rows}`
-
-The area of each row of orifices can calculated using by integrating the width function over x
-
-.. math::
-    A_{LFOM,toprow} = \int_{h_{d,max} - c}^{h_{d,max}} y(x) dx
-
-In the AguaClara plant design code, this area is approximated using the width at the center of the top row, using the equation below.
-
-.. math::
-    A_{LFOM,toprow} = y(h_{d,max} - 0.5 S_{LFOM,rows}) S_{LFOM,rows}
-
-It is assumed that the top row will only have one circular orifice therefore the maximum diameter of the orifice can be calculated solving for the diameter that equals the area found above.
-
-.. math::
-    D_{LFOM,toprow,max} = 2 \sqrt{\frac{A_{LFOM, toprow}}{\pi}}
-
-The diameter of the LFOM orifice, :math:`D_{LFOM, or}`, is then the minimum of :math:`D_{LFOM,toprow,max}` and :math:`D_{LFOM, or, max}` rounded to the nearest drill bit size available.  Using the maximum possible diameter size reduces the number of orifices needed. The area of flow from each LFOM orifice is :math:`A_{LFOM,or} = \Pi_{VC}\pi \frac{D_{LFOM, or}}{2}^2`. The radius of the orifice or the height difference from the bottom of the orifice to the center is :math:`H_{LFOM,or,center} = \frac{D_{LFOM, or}}{2}`. The max number of orifices per row (i.e. the number of orifice in the bottom row) is :math:`N_{or, row, max} = \frac{\pi D_{LFOM, min}}{D_{LFOM,or} +S_{or}} `, where :math:`S_{or}`, is the spacing of orifices to maintain structural integrity of the PVC, and then :math:`N_{or, row, max}` will be rounded down to the next integer because there has to be an integer number of orifices.
-
-The number of orifices in each row and the flow through each row is a iterative process that is shown below.
-
-A sample LFOM will be derived based on the above calculation
-
-.. code:: python
-
-  import aguaclara.core.constants as con
-  import aguaclara.core.physchem as pc
-  import aguaclara.core.pipes as pipe
-  import aguaclara.core.utility as ut
-  import aguaclara.core.drills as drills
-  from aguaclara.core.units import unit_registry as u
-  import numpy as np
-  import math
-
-  n_rows = 10 #expert input
-  Q_plant = 20 * u.L / u.s #sample value
-  h_d_max = 20 * u.cm #sample value
-  f_s = 1.5 #expert input
-  SDR = 26
-  drill_bit_avail = drills.DRILL_BITS_D_IMPERIAL
-  s_or = 0.5 * u.cm
-
-  def width_stout_weir(Q_plant,h_d_max,z):
-    width = 2 * Q_plant / (con.VC_ORIFICE_RATIO * np.pi * h_d_max * np.sqrt(2 * pc.gravity * z))
-    return width
-
-  A_LFOM = f_s * 3 * np.pi * Q_plant / (4 * np.sqrt(2 * pc.gravity * h_d_max))
-  ND_LFOM = pipe.ND_SDR_available(pc.diam_circle(A_LFOM),SDR)
-  S_LFOM_rows = h_d_max / n_rows
-  A_LFOM_toprow = S_LFOM_rows * width_stout_weir(Q_plant,h_d_max,(h_d_max - 0.5 * S_LFOM_rows))
-  D_LFOM_or_max = pc.diam_circle(A_LFOM_toprow)
-  D_LFOM_or = ut.floor_nearest(min(S_LFOM_rows,D_LFOM_or_max),drill_bit_avail)
-  A_LFOM_or = pc.area_circle(D_LFOM_or)
-  H_or_center = D_LFOM_or / 2
-  N_or_row_max = np.floor(np.pi * ND_LFOM / (D_LFOM_or + s_or))
-
-For a stout weir, there is a linear relationship between height and flow rate, therefore the goal flow rate linearly from :math:`\frac{Q_{plant}}{N_{rows}}` to :math:`Q_{ plant}`.
-
-.. code:: python
-
-  flow_goal = np.linspace(1 / n_rows, 1, n_rows) * Q_plant
-
-Next, we need to determine the height of the center of each row, we will assume that when :math:`x=0` the flow rate should also equal zero.
-
-.. math::
-    H_{row,i} = i S_{LFOM,rows} + H_{LFOM,or,center}
-
-.. code:: python
-
-  H_row = np.linspace(0,n_rows-1,n_rows) * S_LFOM_rows + H_or_center
-
-Now that we have these two values we have to iterate through the height of the LFOM to get the correct flow through each row.
-
-.. code:: python
-
-  flow_current = 0 * u.L/u.s
-  N_or_actual = np.zeros(n_rows)
-  error_per_row = np.zeros(n_rows)
-  for i in range(0,n_rows-1):
-    flow_needed = flow_goal[i] - flow_current
-    flow_per_orifice = pc.flow_orifice_vert(D_LFOM_or,H_row[i],con.VC_ORIFICE_RATIO)
-    N_or = (flow_needed/flow_per_orifice).to(u.dimensionless)
-    N_or_actual[i]= min(max(0,round(N_or)),N_or_row_max)
-    flow_current = flow_current + flow_per_orifice * N_or_actual[i]
-    error_per_row[i] = (100* (flow_current - flow_goal[i]) / flow_goal[i]).to(u.dimensionless)
