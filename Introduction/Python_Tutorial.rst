@@ -29,13 +29,8 @@ Import statements
 
 .. code:: python
 
-  import aguaclara
-  import aguaclara.core.physchem as pc
+  import aguaclara as ac
   from aguaclara.core.units import unit_registry as u
-  import aguaclara.core.constants as con
-  import aguaclara.research.environmental_processes_analysis as epa
-  import aguaclara.research.floc_model as fm
-
   import numpy as np
   import matplotlib.pyplot as plt
   import pandas as pd
@@ -53,17 +48,15 @@ Where “foo” is the function that you’d like to learn about.
 Markdown
 --------
 
-Markdown files allow you to mix code, beautiful Latex equations, nicely formatted text, figures, and tables. To create a markdown file in Atom simply create a new file (File menu) and give it a .md file extension. The .md file extension is critical so that atom knows how to interpret what you are typing!
-
-Markdown allows you to create very nicely formatted text including Latex equations which will show up in the preview pane of Atom (type control - shift - E to display the preview pane of a Markdown file).
+Markdown allow you to mix code, beautiful Latex equations, nicely formatted text, figures, and tables.
 
 .. math:: c = \sqrt{a^2 + b^2}
 
 Markdown does not handle automatic numbering of equations, figures, and tables.
 
-The Python Kernel remembers all definitions (functions and variables) as they are defined based on execution. Thus if you fail to execute a line of code, the parameters defined in that line won’t be available. Similarly, if you define a parameter and then delete that line of code, that parameter remains defined until you restart Atom.
+The Python Kernel remembers all definitions (functions and variables) as they are defined based on execution. Thus if you fail to execute a line of code, the parameters defined in that line won’t be available. Similarly, if you define a parameter and then delete that line of code, that parameter remains defined until you reset all runtimes or restart.
 
-Before submitting a file for others to use, you need to verify that all of the dependencies are defined and that you didn't accidently delete a definition that is required. You can do this by placing your cursor in a python code section and then clicking on the python 3|idle in the toolbar at the bottom of the Atom window. Select restart Python 3 kernel. Then execute all of the python code in your document from top to bottom and make sure that all of the code performs as expected.
+Before submitting a file for others to use, you need to verify that all of the dependencies are defined and that you didn't accidently delete a definition that is required. You can do this by resetting all runtimes (Runtime menu) and then running all.
 
 Transitioning From Matlab To Python
 -----------------------------------
@@ -110,17 +103,6 @@ Matlab code::
  * `Stepping from Matlab to Python <http://stsievert.com/blog/2015/09/01/matlab-to-python/>`_
  * `Python for Matlab Users, UC Boulder <http://researchcomputing.github.io/meetup_fall_2014/pdfs/fall2014_meetup13_python_matlab.pdf>`_
 
-
-Useful hotkeys for executing code
----------------------------------
-
-Hydrogen hotkeys are listed under Packages->Hydrogen, and are also detailed here.
-
- * Ctrl+Enter runs the currently selected line of code.
- * Shift+Enter works as Ctrl+Enter and also moves the selection to the next line of code.
- * Alt+Ctrl+Enter runs the current code block.
- * Alt+Shift+Enter runs the current code block and moves the selection to the next block.
-
 Units
 -----
 
@@ -134,13 +116,12 @@ Environmental engineers historically described surface loading rates for sedimen
 
   V_surface_loading_rate = (1 * u.gal/(u.min * u.ft**2)).to(u.mm/u.s)
   print('The surface loading rate is', V_surface_loading_rate)
-  aguaclara.core.units.set_sig_figs(3)
-  print('The surface loading rate is', V_surface_loading_rate)
+  print('The surface loading rate is', ac.round_sig_figs(V_surface_loading_rate,2))
 
 The surface loading rate is 0.6791 millimeter / second
 
-After reducing the number of significant digits to 3 we obtain:
-The surface loading rate is 0.679 millimeter / second
+After reducing the number of significant digits to 2 we obtain:
+The surface loading rate is 0.68 millimeter / second
 
 How long does it take to stop a car that is initially traveling at 60 mph if the coefficient of friction is 0.5?
 
@@ -376,7 +357,7 @@ The ND_SDR_available function returns the nominal diameter of a pipe that has an
 
     IDmin = 7 * u.cm
     SDR = 26
-    ND_my_pipe = pipe.ND_SDR_available(IDmin,SDR)
+    ND_my_pipe = ac.ND_SDR_available(IDmin,SDR)
     ND_my_pipe
 
 3.0 inch
@@ -385,7 +366,7 @@ The actual inner diameter of this pipe is
 
 .. code:: python
 
-    ID_my_pipe = pipe.ID_SDR(ND_my_pipe,SDR)
+    ID_my_pipe = ac.ID_SDR(ND_my_pipe,SDR)
     print(ID_my_pipe.to(u.cm))
 
 ::
@@ -397,4 +378,4 @@ database.
 
 .. code:: python
 
-    pipe.ND_all_available()
+    ac.ND_all_available()
