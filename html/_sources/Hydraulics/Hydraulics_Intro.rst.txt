@@ -64,9 +64,44 @@ The flow distribution within the filter bed to ensure complete fluidization of t
 
 The factor of two difference in design flow rates for outer and inner inlet trunks requires that the head loss through the trunks be small relative to the head loss through the orifices and sand bed.  The orifices contribute very little to the flow distribution because the orifices also have to deliver the backwash flow which is 6 times the filtration flow for the bottom inlet. That means that the orifice head loss during filtration is 1/36th of the head loss during backwash.
 
-The solution path for design of the requires setting a constraint on how far the flows can diverge from the target, setting the head loss through the two paths from the inlet box through the sand to be equal, and ensuring that mass is conserved.
+The solution path for design of the requires setting a constraint on how far the flows can diverge from the target, setting the head loss through the two paths from the inlet box through the sand to be equal, and ensuring that mass is conserved. With these constraints it is possible to solve for the maximum head loss in the trunks and then calculate the required trunk diameter to meet the head loss constraint.
+
+Nomenclature
+------------
+
+.. _table_Trunk_Nomenclature:
+
+.. csv-table:: Nomenclature for filter trunk design.
+   :header: "Symbol", "Units", "Description"
+   :align: left
+
+   ":math:`\Pi_Q`", "dimensionless", "ratio of minimum layer flow to maximum layer flow"
+   ":math:`Q_{IT_i}`",":math:`\frac{L}{s}`", "actual flow in **I**nlet **T**runk i"
+   ":math:`Q_{L_i}`",":math:`\frac{L}{s}`", "actual flow in filter **L**ayer i"
+   ":math:`\overset{u}{Q}_L`",":math:`\frac{L}{s}`", "ideal uniform flow in each filter layer"
+
+
 
 .. math::
-   :label: Base_for_pH_Adjust
+   :label: Flow_ratio
 
-   C_B= \frac{{C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}}{\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2})}
+    \Pi_Q = \frac{0.5Q_{T_3}}{Q_{T_4}} = \frac{Q_{L_{4,5}}}{Q_{L_6}}
+
+Where :math:`\Pi_Q` is slightly less than 1 and represents the extent of uniform flow distribution. Flows :math:`Q_3` and :math:`Q_4` represent the actual flow through the two trunk lines, not the ideal flows. We need to specify the flow distribution error that we are willing to accept. My initial guess is that a value of about 0.85 would be reasonable. This means that the bottom layer of the filter and the top layer of the filter will receive more flow. That will result in them filling with particles faster which will cause a slight improvement in flow distribution between the layers.
+
+The relationship between :math:`Q_3`, :math:`Q_4`, and the target value of :math:`\overset{u}{Q}_{layer}` can be obtained because 50% of the filter flow goes through the bottom two inlets. The "u" indicates the ideal "uniform" flow. Thus we have:
+
+.. math::
+   :label: Flow_ratio
+
+     3 \overset{u}{Q}_{layer} = Q_3 + Q_4
+
+.. math::
+   :label: Flow_Trunk_3
+
+     3 \overset{u}{Q}_{layer} = (2\Pi_Q +1) Q_4
+
+.. math::
+   :label: Head_loss_Path_6
+
+     h_{L} = h_{L_{sand}} + h_{L_{T}} + h_{L_{Orifices}}

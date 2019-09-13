@@ -379,7 +379,7 @@ The minimum width of the sed tank diffusers is 2.409 millimeter</p>
 </pre></div>
 </div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-0">
-<span class="eqno">(535)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-0" title="Permalink to this equation">¶</a></span>\[Vel_{Tube,Max}=\left(\frac{2\,\Pi_{Error}\,Headloss_{DosingTube,Max}\,g}{K_{Minor}}\right)^{\frac{1}{2}}\]</div>
+<span class="eqno">(536)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-0" title="Permalink to this equation">¶</a></span>\[Vel_{Tube,Max}=\left(\frac{2\,\Pi_{Error}\,Headloss_{DosingTube,Max}\,g}{K_{Minor}}\right)^{\frac{1}{2}}\]</div>
 </div>
 <div class="section" id="id3">
 <h3>3:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
@@ -395,7 +395,7 @@ The minimum width of the sed tank diffusers is 2.409 millimeter</p>
 </div></blockquote>
 <p>Area is given using the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-1">
-<span class="eqno">(536)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}  Area_{PVC}=2\left (B_{diffuser}+W_{diffuser} \right )thickness_{wall}\\- Use the equation for :math:`Area_{PVC}` to calculate the following:\\  - the outer length of the rectangular diffuser slot,
+<span class="eqno">(537)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}  Area_{PVC}=2\left (B_{diffuser}+W_{diffuser} \right )thickness_{wall}\\- Use the equation for :math:`Area_{PVC}` to calculate the following:\\  - the outer length of the rectangular diffuser slot,
      :math:`B_{diffuser}`.
   - the inner length of the rectangular diffuser slot,
      :math:`W_{diffuser}`.\end{aligned}\end{align} \]</div>
@@ -516,7 +516,7 @@ Sed diffuser inner length: 5.522 centimeter</p>
 </ul>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-2">
-<span class="eqno">(537)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-2" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\left( {{V_{in}} - {V_{out}}} \right)^2}{2g}\]</div>
+<span class="eqno">(538)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-2" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\left( {{V_{in}} - {V_{out}}} \right)^2}{2g}\]</div>
 <p>You will find that the exit head loss for water leaving the diffuser is high enough that we need to account for head loss in the sed tank inlet piping for our designs.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hl_sed_diffuser_exit1</span> <span class="o">=</span> <span class="p">(((</span><span class="n">V_diffuser</span> <span class="o">-</span> <span class="n">V_sed_up</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span><span class="n">g</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 
@@ -547,17 +547,17 @@ port) flow is given by:</li>
 </ul>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-3">
-<span class="eqno">(538)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-3" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}  \Pi_{DiffuserFlow} = \sqrt{\frac{{hl}_{ParallelPath}  - \frac{\Delta{H}_{Manifold}}{2}}{{hl}_{ParallelPath} + \frac{\Delta{H}_{Manifold}}{2}}}\\- The change in piezometric head is given by:\end{aligned}\end{align} \]</div>
+<span class="eqno">(539)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-3" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}  \Pi_{DiffuserFlow} = \sqrt{\frac{{hl}_{ParallelPath}  - \frac{\Delta{H}_{Manifold}}{2}}{{hl}_{ParallelPath} + \frac{\Delta{H}_{Manifold}}{2}}}\\- The change in piezometric head is given by:\end{aligned}\end{align} \]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-4">
-<span class="eqno">(539)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-4" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}   \Delta{H}_{Manifold} = \frac{{{Velocity}_{Manifold}}^{2}}{2g}\\- The maximum allowable velocity in the manifold is given by:\end{aligned}\end{align} \]</div>
+<span class="eqno">(540)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-4" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}   \Delta{H}_{Manifold} = \frac{{{Velocity}_{Manifold}}^{2}}{2g}\\- The maximum allowable velocity in the manifold is given by:\end{aligned}\end{align} \]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-5">
-<span class="eqno">(540)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-5" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left({hl}_{ParallelPath} + \frac{\Delta{H}_{Manifold}}{2} \right) = {hl}_{ParallelPath}  - \frac{\Delta{H}_{Manifold}}{2}\]</div>
+<span class="eqno">(541)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-5" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left({hl}_{ParallelPath} + \frac{\Delta{H}_{Manifold}}{2} \right) = {hl}_{ParallelPath}  - \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-6">
-<span class="eqno">(541)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-6" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) {hl}_{ParallelPath} + \left({\Pi_{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
+<span class="eqno">(542)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-6" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) {hl}_{ParallelPath} + \left({\Pi_{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-7">
-<span class="eqno">(542)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-7" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} =  \frac{\Delta{H}_{Manifold}}{2}\]</div>
+<span class="eqno">(543)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-7" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} =  \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-8">
-<span class="eqno">(543)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-8" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} = \frac{{{Velocity}_{Manifold}}^{2}}{4g}\]</div>
+<span class="eqno">(544)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-8" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} = \frac{{{Velocity}_{Manifold}}^{2}}{4g}\]</div>
 <div class="section" id="id10">
 <h3>10:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint,
