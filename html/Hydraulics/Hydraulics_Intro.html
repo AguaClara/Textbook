@@ -28,7 +28,9 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dissolved Gas Introduction" href="../Dissolved_Gas/DG_Intro.html" />
+    <link rel="prev" title="Filtration Design Solution" href="../Filtration/Filtration_Design_Solution.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -138,19 +140,31 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Hydraulics</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hydraulics Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#open-stacked-rapid-sand-filter-design">Open Stacked Rapid Sand Filter Design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#design-steps">Design steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#design-assumptions">Design assumptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maximum-trunk-flows">Maximum Trunk Flows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
+<p class="caption"><span class="caption-text">Chapter 10: Fluoride</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Wastewater</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
@@ -231,12 +245,43 @@
 <p>Municipal water treatment plants</p>
 <div class="figure align-center" id="id1">
 <span id="figure-circuit"></span><a class="reference internal image-reference" href="../_images/circuit.png"><img alt="Sedimentation tank flow circuit" src="../_images/circuit.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">The flow through a sedimentation tank is analogous to an electrical circuit with wires and resistors. Identical resistors in parallel paths help improve flow distribution between the paths. Differences in piezometric head (think voltage) in the manifolds that connect the paralle</span></p>
+<p class="caption"><span class="caption-number">Fig. 189 </span><span class="caption-text">The flow through a sedimentation tank is analogous to an electrical circuit with wires and resistors. Identical resistors in parallel paths help improve flow distribution between the paths. Differences in piezometric head (think voltage) in the manifolds that connect to multiple parallel paths.</span></p>
 </div>
 <div class="section" id="open-stacked-rapid-sand-filter-design">
-<span id="heading-tank-with-a-valve"></span><h2>Open Stacked Rapid Sand Filter Design<a class="headerlink" href="#open-stacked-rapid-sand-filter-design" title="Permalink to this headline">¶</a></h2>
+<span id="ostars-design"></span><h2>Open Stacked Rapid Sand Filter Design<a class="headerlink" href="#open-stacked-rapid-sand-filter-design" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="design-steps">
+<h3>Design steps<a class="headerlink" href="#design-steps" title="Permalink to this headline">¶</a></h3>
+<p>1.  Calculate array of maximum filter flows given available trunk sizes and given constraint of flow distribution between filter layers during filtration
+1.  Calculate the orifice head loss required for each
+1.  Calculate filter flow given minimum number of filters
+1.  Find the available maximum filter flow that is equal or greater than the filter flow required given the minimum number of filters
+1.  Find the corresponding Trunk size.
+1.  Design the branches based on manifold flow distribution requirements
+1.  Design the siphon pipe given a reasonable (help!!) constraint on drain time
+1.  Design the siphon air valve given volume of air in the siphon
+1.  Calculate all elevations
+1.  Design backwash flow control weir</p>
+</div>
+<div class="section" id="design-assumptions">
+<h3>Design assumptions<a class="headerlink" href="#design-assumptions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Simplest design to fabricate will have identical trunk lines for all inlets</li>
+<li></li>
+</ul>
+</div>
+<div class="section" id="maximum-trunk-flows">
+<h3>Maximum Trunk Flows<a class="headerlink" href="#maximum-trunk-flows" title="Permalink to this headline">¶</a></h3>
+<p>The trunks are constrained to both provide similar flow to each filter layer and to provide similar flow to each branch within the sand bed. Providing the same flow to each filter layer during filtration is the key constraint that determines the size of the trunk lines. The most challenging flow distribution is between middle inlets that carry flow for two layers and the top and bottom inlets that carry flow for one sand layer.</p>
+<div class="figure align-center" id="id2">
+<span id="figure-trunk-flows"></span><a class="reference internal image-reference" href="../_images/Trunk_flows.png"><img alt="Trunk flows" src="../_images/Trunk_flows.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 190 </span><span class="caption-text">The flows through the inlet trunks of stacked rapid sand filters are not identical and this requires a careful hydraulic design.</span></p>
+</div>
+<p>The flow distribution within the filter bed to ensure complete fluidization of the sand bed during backwash can be achieved by increasing the head loss through the flow control orifices in the branches. Calculating this required head loss is the second step in designing the filter inlet piping.</p>
+<p>The factor of two difference in design flow rates for outer and inner inlet trunks requires that the head loss through the trunks be small relative to the head loss through the orifices and sand bed.  The orifices contribute very little to the flow distribution because the orifices also have to deliver the backwash flow which is 6 times the filtration flow for the bottom inlet. That means that the orifice head loss during filtration is 1/36th of the head loss during backwash.</p>
+<p>The solution path for design of the requires setting a constraint on how far the flows can diverge from the target, setting the head loss through the two paths from the inlet box through the sand to be equal, and ensuring that mass is conserved.</p>
 <div class="math notranslate nohighlight" id="equation-base-for-ph-adjust">
-<span class="eqno">()<a class="headerlink" href="#equation-base-for-ph-adjust" title="Permalink to this equation">¶</a></span>\[C_B= \frac{{C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}}{\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2})}\]</div>
+<span class="eqno">(679)<a class="headerlink" href="#equation-base-for-ph-adjust" title="Permalink to this equation">¶</a></span>\[C_B= \frac{{C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}}{\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2})}\]</div>
+</div>
 </div>
 </div>
 
@@ -245,6 +290,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Dissolved_Gas/DG_Intro.html" class="btn btn-neutral float-right" title="Dissolved Gas Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Filtration/Filtration_Design_Solution.html" class="btn btn-neutral" title="Filtration Design Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
