@@ -242,10 +242,10 @@
 </div>
 <p>Given that hydraulic flocculators approach plug flow conditions it is reasonable to assume that at any given location in the flocculator there is a predominance of one size of flocs. Thus collisions between similar sized flocs are most likely because that is what is present. There is also a hydrodynamic reason why similar sized flocs are favored which we will discuss later. For simplicity of modeling let’s assume that flocs repeatedly double in size as suggested by the movie in <a class="reference internal" href="#figure-collisions-in-sequence"><span class="std std-numref">Fig. 74</span></a>. In that case, the number of primary particles in a floc is given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-n-primary-of-n-collisions">
-<span class="eqno">(315)<a class="headerlink" href="#equation-eq-n-primary-of-n-collisions" title="Permalink to this equation">¶</a></span>\[n_{primary} = 2^{n_{collisions}}\]</div>
-<p>If we assume (and we will show this assumption to be wrong in the next step) that the floc volume is directly proportional to the total volume of the primary particles in the floc, then we can rearrange <a class="reference internal" href="#equation-eq-n-primary-of-n-collisions">(315)</a> to solve for the number of sequential collisions required to increase the number of primary particles by a factor of 1000,000,000.</p>
+<span class="eqno">(314)<a class="headerlink" href="#equation-eq-n-primary-of-n-collisions" title="Permalink to this equation">¶</a></span>\[n_{primary} = 2^{n_{collisions}}\]</div>
+<p>If we assume (and we will show this assumption to be wrong in the next step) that the floc volume is directly proportional to the total volume of the primary particles in the floc, then we can rearrange <a class="reference internal" href="#equation-eq-n-primary-of-n-collisions">(314)</a> to solve for the number of sequential collisions required to increase the number of primary particles by a factor of 1000,000,000.</p>
 <div class="math notranslate nohighlight" id="equation-n-collisions-not-fractal">
-<span class="eqno">(316)<a class="headerlink" href="#equation-n-collisions-not-fractal" title="Permalink to this equation">¶</a></span>\[ n_{collisions} = \frac{log(n_{primary})}{log(2)}\]</div>
+<span class="eqno">(315)<a class="headerlink" href="#equation-n-collisions-not-fractal" title="Permalink to this equation">¶</a></span>\[ n_{collisions} = \frac{log(n_{primary})}{log(2)}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">n_primary</span> <span class="o">=</span> <span class="mi">1000000000</span>
@@ -268,7 +268,7 @@
 <h2>Flocculation is (or used to be) a Slow Process<a class="headerlink" href="#flocculation-is-or-used-to-be-a-slow-process" title="Permalink to this headline">¶</a></h2>
 <p>One of the mysteries of flocculation has been why it is such a slow process, requiring 30 minutes according to conventional design, and yet it appears to be a very rapid process. Plant operators observe that with high raw water turbidities that they can see flocculation progressing after about 0.5 minutes of flocculation. We can estimate the collision potential, <span class="math notranslate nohighlight">\(G\theta\)</span> that corresponds to making visible flocs.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-0">
-<span class="eqno">(317)<a class="headerlink" href="#equation-flocculation-floc-intro-0" title="Permalink to this equation">¶</a></span>\[\bar G = \sqrt{ \frac{g h_e}{\theta \nu}}\]</div>
+<span class="eqno">(316)<a class="headerlink" href="#equation-flocculation-floc-intro-0" title="Permalink to this equation">¶</a></span>\[\bar G = \sqrt{ \frac{g h_e}{\theta \nu}}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
 <span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
