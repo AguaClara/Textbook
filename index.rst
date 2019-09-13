@@ -12,7 +12,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
    :align: center
 
    "Sphinx", "1.7.5"
-   "aguaclara", "0.0.16"
+   "aguaclara", "0.1.8"
    "Anaconda", "4.5.4"
    "Python", "3.6.5"
 
@@ -98,29 +98,35 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Filtration/Filtration_Theory_and_Future_Work.rst
   Filtration/Filtration_Design_Solution.rst
 
+.. toctree::
+  :caption: Chapter 8: Hydraulics
+  :maxdepth: 1
+
+  Hydraulics/Hydraulics_Intro.rst
+
 
 .. toctree::
-  :caption: Chapter 8: Dissolved Gas
+  :caption: Chapter 9: Dissolved Gas
   :maxdepth: 1
 
   Dissolved_Gas/DG_Intro.rst
 
 
 .. toctree::
-  :caption: Chapter 9: Fluoride
+  :caption: Chapter 10: Fluoride
   :maxdepth: 1
 
   Fluoride/Fluoride_Intro.rst
 
 
 .. toctree::
-  :caption: Chapter 10: Wastewater
+  :caption: Chapter 11: Wastewater
   :maxdepth: 1
 
   WasteWater/WW_Theory_and_Future_Work.rst
 
 .. toctree::
-  :caption: Chapter 11: Troubleshooting
+  :caption: Chapter 12: Troubleshooting
   :maxdepth: 1
 
   Troubleshooting/Troubleshooting.rst
