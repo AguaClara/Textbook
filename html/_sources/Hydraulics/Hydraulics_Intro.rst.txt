@@ -78,30 +78,72 @@ Nomenclature
    ":math:`\Pi_Q`", "dimensionless", "ratio of minimum layer flow to maximum layer flow"
    ":math:`Q_{IT_i}`",":math:`\frac{L}{s}`", "actual flow in **I**nlet **T**runk i"
    ":math:`Q_{L_i}`",":math:`\frac{L}{s}`", "actual flow in filter **L**ayer i"
-   ":math:`\overset{u}{Q}_L`",":math:`\frac{L}{s}`", "ideal uniform flow in each filter layer"
+   ":math:`\overset{u}{Q}_L`",":math:`\frac{L}{s}`", "ideal **u**niform flow in each filter layer"
+   ":math:`h_{L_i}`",":math:`m`", "head loss from inlet tank all the way through the sand in layer i"
 
 
 
 .. math::
    :label: Flow_ratio
 
-    \Pi_Q = \frac{0.5Q_{T_3}}{Q_{T_4}} = \frac{Q_{L_{4,5}}}{Q_{L_6}}
+    \Pi_Q = \frac{0.5Q_{IT_3}}{Q_{IT_4}} = \frac{Q_{L_{4,5}}}{Q_{L_6}}
 
-Where :math:`\Pi_Q` is slightly less than 1 and represents the extent of uniform flow distribution. Flows :math:`Q_3` and :math:`Q_4` represent the actual flow through the two trunk lines, not the ideal flows. We need to specify the flow distribution error that we are willing to accept. My initial guess is that a value of about 0.85 would be reasonable. This means that the bottom layer of the filter and the top layer of the filter will receive more flow. That will result in them filling with particles faster which will cause a slight improvement in flow distribution between the layers.
+Where :math:`\Pi_Q` is slightly less than 1 and represents the extent of uniform flow distribution. Flows :math:`Q_{IT_3}` and :math:`Q_{IT_4}` represent the actual flow through the two inlet trunk lines, not the ideal flows. We need to specify the flow distribution error that we are willing to accept. A value of about 0.85 would be reasonable and experiments to measure the effect of poor flow distribution on filter performance are needed. Non uniform flow distribution means that the bottom layer of the filter and the top layer of the filter will receive more flow. That will result in them filling with particles faster which will cause a slight improvement in flow distribution between the layers.
 
-The relationship between :math:`Q_3`, :math:`Q_4`, and the target value of :math:`\overset{u}{Q}_{layer}` can be obtained because 50% of the filter flow goes through the bottom two inlets. The "u" indicates the ideal "uniform" flow. Thus we have:
+The unknown actual flow rates can be eliminated from subsequent equations for head loss by replacing them with the known target flow through a layer of sand. The next equations develop these relationships.
+
+The relationship between :math:`Q_{IT_3}` and :math:`Q_{IT_4}` and the target value of :math:`\overset{u}{Q}_L` can be obtained because 50% of the filter flow goes through the bottom two inlets and thus we can use a mass balance around the bottom half of the filter. Thus we have:
 
 .. math::
-   :label: Flow_ratio
+   :label: Flow_layer_uniform
 
-     3 \overset{u}{Q}_{layer} = Q_3 + Q_4
+     3 \overset{u}{Q}_L = Q_{IT_3} + Q_{IT_4}
+
+Eliminate :math:`Q_{IT_3}` from equation :eq:`Flow_layer_uniform` by substituting equation :eq:`Flow_ratio` and solve for :math:`Q_{IT_4}`.
+
+.. math::
+   :label: Flow_Trunk_4
+
+     \frac{Q_{IT_4}}{\overset{u}{Q}_L} = \frac{3}{2\Pi_Q +1}
+
 
 .. math::
    :label: Flow_Trunk_3
 
-     3 \overset{u}{Q}_{layer} = (2\Pi_Q +1) Q_4
+    \frac{Q_{IT_3}}{\overset{u}{Q}_L} = \frac{6\Pi_Q}{2\Pi_Q +1}
+
+The actual flows through the filter layers can also be expressed as a function of the ideal uniform flow through a filter layer and the flow ratio. The flow of water through the bottom layer (layer 6) of sand is equal to the flow of water through trunk 4.
 
 .. math::
-   :label: Head_loss_Path_6
+   :label: Flow_Layer_6
 
-     h_{L} = h_{L_{sand}} + h_{L_{T}} + h_{L_{Orifices}}
+    \frac{Q_{L_6}}{\overset{u}{Q}_L} = \frac{Q_{IT_4}}{\overset{u}{Q}_L} = \frac{3}{2\Pi_Q +1}
+
+
+The flow through layers 4 and 5 are identical and from equation :eq:`Flow_ratio` they are equal to :math:`\Pi_Q` times the flow in layer 6, :math:`Q_{L_6}`.
+
+.. math::
+   :label: Flow_Layer_45
+
+    \frac{Q_{L_{4,5}}}{\overset{u}{Q}_L} = \frac{\Pi_Q Q_{IT_4}}{\overset{u}{Q}_L} = \frac{3\Pi_Q}{2\Pi_Q +1}
+
+The next step is to write the equations for the total head loss from the inlet tank to where the water exits the sand layers and enters the outlet system beginning with inlet trunk 4.
+
+.. math::
+   :label: Head_loss_Layer_6
+
+     h_{L_6} = h_{L_{IT_4}} + h_{L_{Orifices_4}} + h_{L_{Sand_6}}
+
+The head loss in the trunk and through the orifices is directly proportional to the square of the flow rate. The head loss through the sand is directly proportional to the flow rate. Thus we can write the equation in terms of the head losses that would be observed under uniform flow conditions.
+
+.. math::
+   :label: Head_loss_Layer_6u
+
+     h_{L_6} = \left(\overset{u}{h}_{L_{IT_4}} + \overset{u}{h}_{L_{Orifices_4}}\right)\left(\frac{Q_{L_6}}{\overset{u}{Q}_L}\right)^2 + \overset{u}{h}_{L_{Sand}}\left(\frac{Q_{L_6}}{\overset{u}{Q}_L}\right)
+
+Now eliminate the unknown flow through layer 6, :math:`Q_{L_6}`, by substituting equations :eq:`Flow_Layer_6`.
+
+.. math::
+   :label: Head_loss_Layer_6u
+
+     h_{L_6} = \left(\overset{u}{h}_{L_{IT_4}} + \overset{u}{h}_{L_{Orifices_4}}\right)\left( \frac{3\Pi_Q}{2\Pi_Q +1}\right)^2 + \overset{u}{h}_{L_{Sand}}\left( \frac{3\Pi_Q}{2\Pi_Q +1}\right)
