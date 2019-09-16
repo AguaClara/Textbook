@@ -108,14 +108,14 @@ Eliminate :math:`Q_{IT_3}` from equation :eq:`Flow_layer_uniform` by substitutin
 
 
 .. math::
-  :label: Flow_Trunk_3
+   :label: Flow_Trunk_3
 
     \frac{Q_{IT_3}}{\overset{u}{Q}_L} = \frac{6\Pi_Q}{2\Pi_Q +1}
 
 The actual flows through the filter layers can also be expressed as a function of the ideal uniform flow through a filter layer and the flow ratio. The flow of water through the bottom layer (layer 6) of sand is equal to the flow of water through trunk 4.
 
 .. math::
-  :label: Flow_Layer_6
+   :label: Flow_Layer_6
 
     \frac{Q_{L_6}}{\overset{u}{Q}_L} = \frac{Q_{IT_4}}{\overset{u}{Q}_L} = \frac{3}{2\Pi_Q +1}
 
@@ -123,11 +123,11 @@ The actual flows through the filter layers can also be expressed as a function o
 The flow through layers 4 and 5 are identical and from equation :eq:`Flow_ratio` they are equal to :math:`\Pi_Q` times the flow in layer 6, :math:`Q_{L_6}`.
 
 .. math::
-  :label: Flow_Layer_45
+   :label: Flow_Layer_45
 
     \frac{Q_{L_{4,5}}}{\overset{u}{Q}_L} = \frac{\Pi_Q Q_{IT_4}}{\overset{u}{Q}_L} = \frac{3\Pi_Q}{2\Pi_Q +1}
 
-The next step is to write the equations for the total head loss from the inlet tank to where the water exits the sand layers and enters the outlet system.
+The next step is to write the equations for the total head loss from the inlet tank to where the water exits the sand layers and enters the outlet system beginning with inlet trunk 4.
 
 .. math::
    :label: Head_loss_Layer_6
@@ -139,4 +139,11 @@ The head loss in the trunk and through the orifices is directly proportional to 
 .. math::
    :label: Head_loss_Layer_6u
 
-     h_{L_6} = \left(\overset{u}{h}_{L_{IT_4}} + \overset{u}{h}_{L_{Orifices_4}}\right)\left(\frac{Q_{L_6}}{\overset{u}{Q}_L}\right)^2 + \overset{u}{h}_{L_{Sand_6}}\left(\frac{Q_{L_6}}{\overset{u}{Q}_L}\right)
+     h_{L_6} = \left(\overset{u}{h}_{L_{IT_4}} + \overset{u}{h}_{L_{Orifices_4}}\right)\left(\frac{Q_{L_6}}{\overset{u}{Q}_L}\right)^2 + \overset{u}{h}_{L_{Sand}}\left(\frac{Q_{L_6}}{\overset{u}{Q}_L}\right)
+
+Now eliminate the unknown flow through layer 6, :math:`Q_{L_6}`, by substituting equations :eq:`Flow_Layer_6`.
+
+.. math::
+   :label: Head_loss_Layer_6u
+
+     h_{L_6} = \left(\overset{u}{h}_{L_{IT_4}} + \overset{u}{h}_{L_{Orifices_4}}\right)\left( \frac{3\Pi_Q}{2\Pi_Q +1}\right)^2 + \overset{u}{h}_{L_{Sand}}\left( \frac{3\Pi_Q}{2\Pi_Q +1}\right)
