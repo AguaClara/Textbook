@@ -139,6 +139,185 @@ Filters have a huge range in velocities that correspond to a huge range in size.
 
     Two water treatment plants using different technologies and serving the same city illustrate the high construction cost of low technologies simply based on the required size of the low tech facilities.
 
+
+
+.. _heading_porosity:
+
+Porosity
+========
+
+Porosity of a sand bed refers to the ratio of the void volume to the total volume of the sand bed.
+
+.. math::
+   :label: porosity
+
+    \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}
+
+
+Porosity is determined by the geometry of the material and the size distribution (or uniformity of the particle sizes) and not by the average size of the particles. If you have three different sized spheres (such as  1 um clay, 0.2 mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in :numref:`figure_porosity`. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.
+
+.. _figure_porosity:
+
+.. figure:: Images/figure_porosity.png
+    :align: center
+    :alt: This figure illustrates how different sized materials have the same total bulk porosity
+
+    Within each box, the spheres are different sizes. However the total porosity is the same. To minimize the pore space, the smaller particles could be used to fill the spore space between the larger particles, though in a filter this is not necessarily ideal.
+
+One way that the relative size of particles is characterized is by describing the size of the smallest 10% of grains, and the smallest 60% of grains. That is:
+
+:math:`D_{10}` = the sieve size that passes 10% by mass of sand through
+
+:math:`D_{60}` = the sieve size that passes 60% by mass of sand through
+
+:math:`D_{10}` is used for particle removal models, and :math:`D_{60}` is used for hydraulic modeling.
+
+The ratio of the two is the uniformity coefficient:
+
+.. math::
+   :label: uniformity_coefficient
+
+    UC = \frac{D_{60}}{D_{10}}
+
+The uniformity coefficient describes the uniformity of the sand. A :math:`UC = 1` indicates that every grain of sand is the same size, which is the ideal case. A large :math:`UC` is indicative of a wide range of grain sizes which will result in stratification of the sand bed after backwash with fine sand on top. This will result in more rapid development of head loss during filtration. The fine sand on top will also expand more during backwash and could result in loss of sand during backwash.
+
+
+During backwash, the sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:
+
+.. math::
+   :label: backwash_porosity
+
+    \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}
+
+| Such that:
+| :math:`phi_{FiSandBw}` = sand porosity during backwash
+| :math:`phi_{FiSand}` = settled sand porosity
+| :math:`H_{FiSand}` = height of sand in the filter
+| :math:`H_{FiSandBw}` = height of sand during backwash
+| :math:`A_{Fi}` = filter area
+
+From this it becomes possible to directly relate porosity (as above) to the filter expansion ratio, which is simply the ratio of the heights of the expanded sand bed and the settled sand bed:
+
+.. math::
+   :label: filter_expansion_ratio
+
+  \Pi_{FiBw} = \frac{H_{FiSandBw}}{H_{FiSand}}
+
+| Such that:
+| :math:`Pi_{FiBw}` = the expansion ratio value
+| :math:`H_{FiSand}` = height of sand in the filter
+| :math:`H_{FiSandBw}` = height of sand during backwash
+
+
+
+.. _CLean_Sand_Head_loss:
+
+Filtration Clean Bed Head loss
+==============================
+
+The Carman Kozeny Equation, an adaptation of the Hagen-Poiseuille equation :eq:`` describes the head loss through a clean bed during filtration. The Ergun equation :eq:`eq_Ergun` can also be used to estimate head loss in porous media.
+
+.. math::
+   :label: eq_Carman_Kozeny
+
+    \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu v_a}{g D_{60}^2}
+
+| where
+| :math:`h_l` = head loss in sand bed
+| :math:`H_{FiSand}` = the sand bed depth/length of flow paths
+| :math:`\phi_{FiSand}` = porosity of sand
+| :math:`\nu` = kinematic viscosity
+| :math:`v_a` = the approach velocity (the velocity the water would have if the filter didn't have any sand!)
+| :math:`D_{60}` = the size of the sand
+| :math:`g` = gravity
+| :math:`k` = Kozeny constant (5 for most filtration cases)
+
+This equation is valid for Reynolds numbers less than 6. Where:
+:math:`{\rm Re}  = \frac{D_{60} V_{Fi}}{\nu}`
+
+
+
+.. _backwash_head_loss_force_balance:
+
+Backwash Head Loss
+==================
+
+To determine the head loss during backwash a force balance can be performed between the water and the sand per unit of filter area (thus pressure values will be yielded). A schematic for this system is shown below:
+
+.. _figure_force_balance:
+
+.. figure:: Images/figure_force_balance.png
+    :align: center
+    :width: 50%
+    :alt: This figure is a simplified schematic of the filter force balance
+
+    The pressure required to hold up the fluidized sand must equal the pressure in the manometer.
+
+
+The pressure from the water in the manometer:
+
+.. math::
+
+  P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}
+
+| Such that:
+| :math:`P_{Manometer} =` total height from the bottom of the filter to the inlet box
+| :math:`\rho_{Water} =` density of water
+| :math:`H_{W_1} =` the distnace from the top of the settled sand bed to the water surface in the filter
+| :math:`H_{W_2} =` the height of the water below the sand bed but within the filter
+| :math:`\phi_{FiSand} =` porosity of sand
+| :math:`H_{FiSand} =` height of the filter bed
+| :math:`\rho_{Sand} =` density of sand
+
+The pressure from the sand and water in the filter:
+
+.. math::
+  P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)
+
+
+| Such that:
+| :math:`h_{l_{FiBw}} =` the difference in height of the inlet and water surface height during backwash; the backwash head loss
+
+
+Setting them equal for a force balance:
+
+.. math::
+
+  \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)
+
+Which simplifies to:
+
+.. math::
+
+  h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}
+
+  or
+
+  h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
+
+This result gives a ratio of the head loss during backwash to the height difference during forward operation. With :math:`\phi_{FiSand} = 0.4` and :math:`\rho_{Sand} = 2650 kg/m^3` the value of this ratio is:
+
+.. math::
+   :label: eq_Min_Fluidization_Velocity
+
+     \left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99
+
+
+Minimum Fluidization Velocity
+=============================
+
+The minimum fluidization velocity for a sand bed can be obtained by setting the head loss through the sand (equation :eq:`eq_Carman_Kozeny`) equal to the head required to suspend the sand bed (equation :eq:`eq_Min_Fluidization_Velocity`).
+
+Using these two equations the minimum velocity for sand fluidization can be found!
+
+.. math::
+   :label: minimum_fluidization_velocity_sand
+
+   V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
+
+From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter does **not** imply that the sand at the bottom of the filter is fluidized.
+
+
 Filtration Theory
 =================
 
@@ -231,7 +410,7 @@ As sand size increases
 What about particle removal efficiency?
 ---------------------------------------
 
-This is the multi-decade old question that challenges us to continue our research. What determines how many particles sneak through a water treatment plant? We've learned that flocculation runs out of steam because the primary particles only want to collide with other primary particles and thus they start taking forever to collide as they become scarce. The floc blanket likely acts like a series of collectors (can't say it is like a filter because it doesn't have stationary constrictions). This would suggest that more floc blanket is always better. For some reason some primary particles make it through the floc blanket. What determines how many of those primary particles make it through the filter? It must depend on the geometry of every constriction. That is so complicated. Is there another way to think about this? Large flocs are easy to capture in a sand filter. Primary particles are much more difficult to capture. Large flocs tend to fill up the first unfilled pore they come to. Thus large flocs tend to take active pores out of service. This suggests that the influent floc size distribution might influence filter performance. See :ref:`heading_Shear_big_flocs_to_improve_filter_performance` for an analysis of the feasibility of breaking up flocs at the point of injection into the sand bed.
+This is the multi-decade old question that challenges us to continue our research. What determines how many particles sneak through a water treatment plant? We've learned that flocculation runs out of steam because the primary particles only want to collide with other primary particles and thus they start taking forever to collide as they become scarce. The floc blanket likely acts like a series of collectors (can't say it is like a filter because it doesn't have stationary constrictions). This would suggest that more floc blanket is always better. Some primary particles make it through the floc blanket. What determines how many of those primary particles make it through the filter? It must depend on the geometry of every constriction. Large flocs are easy to capture in a sand filter. Primary particles are much more difficult to capture. Large flocs tend to fill up the first unfilled pore they come to. Thus large flocs tend to take active pores out of service. This suggests that the influent floc size distribution might influence filter performance. See :ref:`heading_Shear_big_flocs_to_improve_filter_performance` for an analysis of the feasibility of breaking up flocs at the point of injection into the sand bed.
 
 
 

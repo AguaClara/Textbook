@@ -134,7 +134,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Filtration Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
@@ -417,7 +416,7 @@
 </div>
 <div class="section" id="sand-layer-thickness-and-branch-spacing">
 <h2>Sand Layer Thickness and Branch Spacing<a class="headerlink" href="#sand-layer-thickness-and-branch-spacing" title="Permalink to this headline">¶</a></h2>
-<p>In the EStaRS filters, of all three sizes (1ft, 2ft, and 3ft), the sand layer thickness will be 20cm for each layer, except for filters designed to go with PF300 plants, then the depth will be 15cm so that all processes can be at the same elevation. In the OStaRS there are functions that define the sand layer depth, but the minimum distance, 20cm is applicable until trunk diameters are larger than 6 inches. Because for EStaRS this variable is unchanging the equations are not included, but it can be found in the OStaRS filter design file in the <a class="reference internal" href="Filtration_Design.html#heading-sand-layer-thickness"><span class="std std-ref">sand layer thickness</span></a> section.</p>
+<p>In the EStaRS filters, of all three sizes (1ft, 2ft, and 3ft), the sand layer thickness will be 20cm for each layer, except for filters designed to go with PF300 plants, then the depth will be 15cm so that all processes can be at the same elevation. In the OStaRS there are functions that define the sand layer depth, but the minimum distance, 20cm is applicable until trunk diameters are larger than 6 inches. Because for EStaRS this variable is unchanging the equations are not included, but it can be found in the OStaRS filter design file in the <span class="xref std std-ref">sand layer thickness</span> section.</p>
 <p>The OStaRS filters have an option to increase the layer depth to account for the added width of the pipes in a larger filter, but in the EStaRS the trunk sizes will never be large enough because the flow is substantially lower.</p>
 <p>So:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-0">
@@ -461,7 +460,7 @@
 <div class="line"><span class="math notranslate nohighlight">\(C_{p_{short}} =\)</span> pressure coefficient at the end of the shortest path</div>
 <div class="line"><span class="math notranslate nohighlight">\(C_{p_{long}} =\)</span> pressure coefficient at the end of the longest path</div>
 </div>
-<p><span class="math notranslate nohighlight">\(C_p\)</span> is defined thoroughly in <a class="reference internal" href="Filtration_Design.html#title-filtration"><span class="std std-ref">Filtration Introduction</span></a></p>
+<p><span class="math notranslate nohighlight">\(C_p\)</span> is defined thoroughly in <span class="xref std std-ref">Filtration Introduction</span></p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-4">
 <span class="eqno">()<a class="headerlink" href="#equation-filtration-estars-design-4" title="Permalink to this equation">¶</a></span>\[\Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{h_{L_{sand}}-PR}{h_{L_{sand}}}}\]</div>
 <div class="line-block">
@@ -479,7 +478,7 @@
 <p><strong>make this useful</strong></p>
 <p>This equation is used to determine the smallest pipe size that meets the pressure recovery constraint for a certain flow. It almost provides a maximum value for head loss within the system, summing the various pressure recovery terms and comparting to this value will show if the design makes sense. As the head loss through  the sand is known, the equation can be directly solved for pressure recovery. From the total filter flow the flow through any branch can be determined. As the pressure recovery term is directly related to the velocity in the pipe a maximum velocity can be determined from the PR term. This maximum velocity can be used to find the minimum area for the branches from pressure recovery, which can provide a pipe diameter. This value can be compared to the minimum determined by the fabrication constraint of the slotted pipes and the larger of the 2 minimums is used for the design.</p>
 <p>Though the piezometric head profiles for the inlet and outlet manifolds for the middle layers may be parallel, meaning the pressure recovery is less constrained for a good flow distribution, a tight constraint is still needed for the outer manifolds where the velocity is 1/2 and the PR is 1/4 (because pressure recovery goes with the square of the velocity) that of the inner layer, while the term is smaller still in the bottom-most manifold where the velocity head is tiny as the diameter is larger to accommodate for full filter flow during backwash.</p>
-<p>See the section on Pressure Recovery  in <a class="reference internal" href="Filtration_Design.html#title-filtration"><span class="std std-ref">Filtration Intro</span></a> for more infomation if this is unclear.</p>
+<p>See the section on Pressure Recovery  in <span class="xref std std-ref">Filtration Intro</span> for more infomation if this is unclear.</p>
 </div>
 <div class="section" id="flow-in-branches-to-find-orifice-area-and-number">
 <h3>Flow in branches to find orifice area and number<a class="headerlink" href="#flow-in-branches-to-find-orifice-area-and-number" title="Permalink to this headline">¶</a></h3>
@@ -642,7 +641,7 @@ A_{BranchMinFW} = \frac{A_{BranchTotalMinFW}}{N_{BranchTrunk}}\end{split}\]</div
 <h3>First Constraint: Pressure Recovery in Trunks during forward filtration<a class="headerlink" href="#first-constraint-pressure-recovery-in-trunks-during-forward-filtration" title="Permalink to this headline">¶</a></h3>
 <p>[This section needs to go above the section where you calculate the branch diameter given the PR constraint.]</p>
 <p>The total allowable pressure recovery of the filter manifold is controlled by the head loss in each sand layer and the head loss ratio, <span class="math notranslate nohighlight">\(\Pi_{ManifoldHeadLoss}\)</span>, as defined above in <a class="reference internal" href="#flow-distribution-constraints"><span class="std std-ref">Flow Distrbution Constraints</span></a>.</p>
-<p>The head loss through the sand layer, <span class="math notranslate nohighlight">\(HL_{FiCleanLayerMin}\)</span> is a fuction of layer depth, <span class="math notranslate nohighlight">\(H_{FiLayer}\)</span> and overall velocity of the filter , <span class="math notranslate nohighlight">\(\frac{Q_{FiLayer}}{A_{Fi}}\)</span>, using the Kozeny Equation in <a class="reference internal" href="Filtration_Design.html#heading-headloss-requirements"><span class="std std-ref">Headloss Requirement</span></a> in the Filtration Design section.</p>
+<p>The head loss through the sand layer, <span class="math notranslate nohighlight">\(HL_{FiCleanLayerMin}\)</span> is a fuction of layer depth, <span class="math notranslate nohighlight">\(H_{FiLayer}\)</span> and overall velocity of the filter , <span class="math notranslate nohighlight">\(\frac{Q_{FiLayer}}{A_{Fi}}\)</span>, using the Kozeny Equation in <span class="xref std std-ref">Headloss Requirement</span> in the Filtration Design section.</p>
 <p>Using the definition of the pressure recovery ratio, the maximum allowable pressure recovery in the filter manifold can be calculated, this value is not necessarily the actual pressure recovery the system may see, just the allowable maximum:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-16">
 <span class="eqno">()<a class="headerlink" href="#equation-filtration-estars-design-16" title="Permalink to this equation">¶</a></span>\[PR_{FiMax} = HL_{FiCleanLayerMin}*\Pi_{ManifoldHeadLoss}\]</div>
@@ -766,7 +765,7 @@ A_{BranchMinFW} = \frac{A_{BranchTotalMinFW}}{N_{BranchTrunk}}\end{split}\]</div
 <div class="section" id="path-head-loss-calculations-and-flow-distribution-between-layers">
 <h2>Path head loss calculations and flow distribution between layers<a class="headerlink" href="#path-head-loss-calculations-and-flow-distribution-between-layers" title="Permalink to this headline">¶</a></h2>
 <p>Now that the sand layer depth is set the Kozeny Head Loss can be determined for the clean bed and the head loss through various flow paths can be determined.</p>
-<p>First use the Kozeny equation from <a class="reference internal" href="Filtration_Design.html#heading-headloss-requirements"><span class="std std-ref">Headloss Requirements</span></a> to find the head loss in each of the sand layers. In the design for the OStaRS a different layer height may be used for the bottom layer to account for the larger backwash pipe, but in the EStaRS that difference does not matter, as that additional depth does not contain head loss that matter for the flow.</p>
+<p>First use the Kozeny equation from <span class="xref std std-ref">Headloss Requirements</span> to find the head loss in each of the sand layers. In the design for the OStaRS a different layer height may be used for the bottom layer to account for the larger backwash pipe, but in the EStaRS that difference does not matter, as that additional depth does not contain head loss that matter for the flow.</p>
 <p>As the filter has 6 layers there are six possible paths for the water to take. The calculations for head loss through each layer depends specifically on which layer when it comes to minor loss coefficients and lengths of flow paths but the overall process is the same. This section outlines the algorithm without going into the specific calculations necessary for the head loss determination.</p>
 <p>In each path, the path head loss is the sum of : inlet plumbing major and minor losses, sand layer losses, and outlet plumbing (for the relevant flow) minor losses</p>
 <p>The design steps are as follows:</p>
