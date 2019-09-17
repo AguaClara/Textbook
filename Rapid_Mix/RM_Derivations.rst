@@ -762,10 +762,11 @@ Flow in porous media
 The `Ergun equation <https://neutrium.net/fluid_flow/pressure-drop-through-a-packed-bed/>`_ applies to both laminar and turbulent flow through packed beds.
 
 .. math::
+    :label: eq_Ergun
 
     h_f = \frac{L}{2g D_{sand}} \left( 300 \frac{\nu v_a (1-\phi)^2}{D_{sand} \phi^3} + 3.5 \frac{v_a^2 (1-\phi) }{\phi^3} \right)
 
-The Erdun equation can be rewritten to be consistent with the format of the Darcy-Weisbach equation. To do this we add a factor of 2 to the definition of the Erdun friction factor and will divide by the factor of 2 in a subsequent equation. The modified Erdun friction factor is
+The Ergun equation can be rewritten to be consistent with the format of the Darcy-Weisbach equation. To do this we add a factor of 2 to the definition of the Ergun friction factor and will divide by the factor of 2 in a subsequent equation. The modified Ergun friction factor is
 
 .. math::
     :label: eq_f_porous_media
@@ -782,7 +783,7 @@ where the :math:`Re_{\phi}` includes the porosity effect on the velocity and is 
 I added a factor of two into the denominator to be consistent with the Darcy-Weisbach equation to obtain the modified Ergun equation.
 
 .. math::
-    :label: eq_Erdun
+    :label: eq_Ergun_of_f
 
     h_f = f_{\phi} \frac{L}{D_{sand}} \frac{v_a^2}{2g} \frac{(1-\phi)}{\phi^3}
 
