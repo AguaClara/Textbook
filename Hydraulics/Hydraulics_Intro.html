@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flocculation Theory and Future Work &mdash; AguaClara Textbook 0.050 documentation</title>
+  <title>Hydraulics Introduction &mdash; AguaClara Textbook 0.050 documentation</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Flocculation Examples" href="Floc_Examples.html" />
-    <link rel="prev" title="Flocculation Derivations" href="Floc_Derivations.html" /> 
+    <link rel="next" title="Dissolved Gas Introduction" href="../Dissolved_Gas/DG_Intro.html" />
+    <link rel="prev" title="Filtration Design Solution" href="../Filtration/Filtration_Design_Solution.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -116,16 +116,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Floc_Intro.html">Flocculation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Floc_Model.html">Flocculation Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Floc_Design.html">Flocculation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Floc_Derivations.html">Flocculation Derivations</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Flocculation Theory and Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Floc_Examples.html">Flocculation Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Floc_Model_Solution.html">Flocculation Model Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
 <ul>
@@ -144,8 +144,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Hydraulics</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html">Hydraulics Introduction</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hydraulics Introduction</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
 <ul>
@@ -215,13 +215,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Flocculation Theory and Future Work</li>
+      <li>Hydraulics Introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/Flocculation/Floc_Theory_and_Future_Work.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Hydraulics/Hydraulics_Intro.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -234,8 +234,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="flocculation-theory-and-future-work">
-<span id="title-flocculation-theory-and-future-work"></span><h1>Flocculation Theory and Future Work<a class="headerlink" href="#flocculation-theory-and-future-work" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="hydraulics-introduction">
+<span id="title-hydraulics-intro"></span><h1>Hydraulics Introduction<a class="headerlink" href="#hydraulics-introduction" title="Permalink to this headline">¶</a></h1>
+<p>The hydraulic controls provide the basis for efficient and robust water treatment plant operation. Water must move through unit processes and between unit processes and the flow passages must be designed to meet various constraints. One constraint is that water that is carrying a significant amount of sediment (flocculator and sedimentation tank inlet) must have sufficient velocity and turbulence levels to minimize sedimentation.  A more challenging constraint is that the flow must be divided equally between parallel processes. Flow distribution through parallel paths is a key hydraulic design constraint for all municipal scale water treatment plants. The parallel path constraint only goes away for laboratory scale processes where there is a single tube settler and a filter with a single layer of sand.</p>
+<p>Municipal water treatment plants</p>
+<div class="figure align-center" id="id1">
+<span id="figure-circuit"></span><a class="reference internal image-reference" href="../_images/circuit.png"><img alt="Sedimentation tank flow circuit" src="../_images/circuit.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 191 </span><span class="caption-text">The flow through a sedimentation tank is analogous to an electrical circuit with wires and resistors. Identical resistors in parallel paths help improve flow distribution between the paths. Differences in piezometric head (think voltage) in the manifolds that connect to multiple parallel paths.</span></p>
+</div>
 </div>
 
 
@@ -246,10 +252,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Floc_Examples.html" class="btn btn-neutral float-right" title="Flocculation Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Dissolved_Gas/DG_Intro.html" class="btn btn-neutral float-right" title="Dissolved Gas Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Floc_Derivations.html" class="btn btn-neutral" title="Flocculation Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../Filtration/Filtration_Design_Solution.html" class="btn btn-neutral" title="Filtration Design Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

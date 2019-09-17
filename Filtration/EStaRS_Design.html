@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>EStaRS Design &mdash; AguaClara Textbook 0.049 documentation</title>
+  <title>DRAFT EStaRS Design &mdash; AguaClara Textbook 0.050 documentation</title>
   
 
   
@@ -57,7 +57,7 @@
             
             
               <div class="version">
-                0.049
+                0.050
               </div>
             
           
@@ -138,23 +138,26 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Filtration Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Hydraulics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html">Hydraulics Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Dissolved Gas</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
+<p class="caption"><span class="caption-text">Chapter 10: Fluoride</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Wastewater</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
@@ -210,7 +213,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>EStaRS Design</li>
+      <li>DRAFT EStaRS Design</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -229,21 +232,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="estars-design">
-<span id="title-estars"></span><h1>EStaRS Design<a class="headerlink" href="#estars-design" title="Permalink to this headline">¶</a></h1>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">This file is a work in progress and includes notes from the author to the author, all information included here is correct though likely incomplete</p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Explain the limitation of OStaRS and thus define the range of flows that EStaRS must be able to handle.</p>
-</div>
-<p>The EStaRS: Enclosed Stacked Rapid Sand filter, is a compact filter that can be amended to a PF300 unit to provide a filter. EStaRS are also used for low flow plants because they are less resource intensive to construct than a small version of the full-size concrete filter, additionally the OStaRS become infeasible in term of maintainence at very low flows because it would very narrow and very deep. This difficutly is noted in OStaRS filters handling less than 8 L/s corresponding to plant flows less than 16 L/s. This challenge invites the EStaRS as an alternative.</p>
-<p>Because the EStaRS filter is constructed using only pipes and couplings, the possible EStaRS sizes are discretized as pipes are not available in every conceivable size. This constraint means that there are only three available sizes of EStaRS: 1 ft, 2ft, and 3 ft diameter, which treat .764 L/s, 3.07 L/s, and 7.024 L/s, respectively. Though the design algorithm can account for additional sizes these sizes as well as the 1.5 ft, are the only sizes that have been constructed. The 1.5ft EStaRS was not inlcuded in the list of possible sizes on the recommendation of an AguaClara engineer who helped construct that particular size.</p>
-<p>As with the OStaRS, each plant should have at least 2 filters so that one can still be in use even when the other is in backwash. If the plant flow is more than corresponds with 2 filters, additional filters can and should be added in parallel to accommodate additional flow. In additional to requiring multiple filters there are other parts of the design that are the same for both types of filters! The stacked trunk and branch system is the most notable of these similarities, with key differences being in how the inlet and outlet system can be designed. Both the “traditional” concrete entrance/exit channel and boxes can be used, but a more compact design is what is called the “Micky Mouse” filter [link to figure]. This design features entrance and exit tanks made from large diameter pipes rather than concrete making them modular. Most of this design file considers the shared characteristics of the concrete and “Micky Mouse”, but places where the design varies will be noted.</p>
-<p>[ How long can the branches be without requiring end support? What is the maximum length of branch that is used in OStaRS? This is a structural issue. A cantilevered pipe must be less than half as long as a pipe that is held at both ends (as is the case in OStaRS). Thus we need structural testing of our inlet and outlet branches before building EStaRS that require stronger branches than are used in the OStaRS. Also a fatigue analysis.]</p>
-<p>[Discuss flow control for filters in parallel. A team researched a weir system for this about a year ago.]</p>
+  <div class="section" id="draft-estars-design">
+<span id="title-estars"></span><h1>DRAFT EStaRS Design<a class="headerlink" href="#draft-estars-design" title="Permalink to this headline">¶</a></h1>
+<p>The EStaRS: Enclosed Stacked Rapid Sand filter, is a compact filter that can be amended to a PF300 unit to provide a filter. EStaRS are also used for low flow plants because they are less resource intensive to construct than a small version of the full-size concrete filter, additionally the OStaRS become infeasible in term of maintenance at very low flows because it would very narrow and very deep. This difficulty is noted in OStaRS filters handling less than 8 L/s corresponding to plant flows less than 16 L/s. This challenge invites the EStaRS as an alternative.</p>
+<p>Because the EStaRS filter is constructed using only pipes and couplings, the possible EStaRS sizes are discretized as pipes are not available in every conceivable size. This constraint means that there are only three available sizes of EStaRS: 1 ft, 2 ft, and 3 ft diameter, which treat 0.764 L/s, 3.07 L/s, and 7.024 L/s, respectively.</p>
+<p>As with the OStaRS, each plant should have at least 2 filters so that one can still be in use even when the other is in backwash. If the plant flow is more than corresponds with 2 filters, additional filters can and should be added in parallel to accommodate additional flow. In additional to requiring multiple filters there are other parts of the design that are the same for both types of filters! The stacked trunk and branch system is the most notable of these similarities, with key differences being in how the inlet and outlet system can be designed. Both the “traditional” concrete entrance/exit channel and boxes can be used, but a more compact design features entrance and exit tanks made from large diameter pipes making them modular. Most of this design file considers the shared characteristics of the concrete and pipe hydraulic controls.</p>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
 <p class="last">In this file, many values are functions of pipe nominal diameter and SDR. For the simplicity of reading, those values are written with just the geometric value used. For example, if an outer diameter (OD) is needed, it is written as <span class="math notranslate nohighlight">\(OD_{ExamplePipe}\)</span> rather than <span class="math notranslate nohighlight">\(OD(ND_{ExamplePipe}, SDR26)\)</span> which is more similar to how it would be found explicitly. Some other features that follow this convention are Inner Diameters and Radii, Outer Radii, and wall thicknesses.</p>
@@ -301,18 +294,81 @@
 <span id="figure-body-d-and-n"></span><a class="reference internal image-reference" href="../_images/figure_body_d_and_n.png"><img alt="flowchart showing how the filter size is determined, interal image" src="../_images/figure_body_d_and_n.png" style="width: 70%;" /></a>
 <p class="caption"><span class="caption-text">This flowchart shows the way the plant flow is used with the available pipe diameters to determine an appropriate size and number of filters based on the total plant flow.</span></p>
 </div>
-<p>The constraint that defines the filter body size is ultimately the backwash velocity. For the sand used in the filters the required upwards velocity to fluidize the sand is 9.8 mm/s. Using this velocity and the flow area of a pipe, as based on the inner diameter, provides a maximum flow for the filter, based on <span class="math notranslate nohighlight">\(Q_{Filter} = V_{BW}*A_{Filter}\)</span>. This <span class="math notranslate nohighlight">\(Q_{Filter}\)</span> describes the flow that must be seen for backwash to happen properly. Another array is generated by diving <span class="math notranslate nohighlight">\(Q_{Plant}\)</span> by <span class="math notranslate nohighlight">\(Q_{Filter}\)</span>. This array is equal to the required number of filters (<span class="math notranslate nohighlight">\(N_{Filter}\)</span>) of a particulatr diameters to serve a plant with a flow of <span class="math notranslate nohighlight">\(Q_{Plant}\)</span>. The value that is the smallest number of filters greater than or equal to 2 should is chosen, and the corresponding index of pipe diameter yields the size. If the chosen number is not an integer, it is rounded up to the nearest integer to provide the number of filters to be included. Rounding up guarantees that the entire plant flow can be filtered.</p>
-</div>
-<div class="section" id="physical-constants-in-filter-design">
-<h2>Physical Constants in Filter Design<a class="headerlink" href="#physical-constants-in-filter-design" title="Permalink to this headline">¶</a></h2>
+<p>The constraint that defines the filter body size is ultimately the backwash velocity. For the sand used in the filters the required upwards velocity to fluidize the sand is 9.8 mm/s. Using this velocity and the flow area of a pipe, as based on the inner diameter, provides a maximum flow for the filter, based on <span class="math notranslate nohighlight">\(Q_{Filter} = V_{BW}*A_{Filter}\)</span>. This <span class="math notranslate nohighlight">\(Q_{Filter}\)</span> describes the flow that must be seen for backwash to happen properly. Another array is generated by diving <span class="math notranslate nohighlight">\(Q_{Plant}\)</span> by <span class="math notranslate nohighlight">\(Q_{Filter}\)</span>. This array is equal to the required number of filters (<span class="math notranslate nohighlight">\(N_{Filter}\)</span>) of a particular diameters to serve a plant with a flow of <span class="math notranslate nohighlight">\(Q_{Plant}\)</span>. The value that is the smallest number of filters greater than or equal to 2 should is chosen, and the corresponding index of pipe diameter yields the size. If the chosen number is not an integer, it is rounded up to the nearest integer to provide the number of filters to be included. Rounding up guarantees that the entire plant flow can be filtered.</p>
 </div>
 <div class="section" id="constraints-for-inner-parts">
 <h2>Constraints for Inner Parts<a class="headerlink" href="#constraints-for-inner-parts" title="Permalink to this headline">¶</a></h2>
-<p>From the determination of the filter body size, the branch and trunk manifolds are the next most important feature of the design. Some relevant variables defined here. These are constrains that are set before actual componenet dimensions are determined.</p>
-<p>[Place these variables in a table that includes name, description, default and constraint that gives the default]</p>
-<div class="line-block">
-<div class="line">|                                      |              |                                                                   |</div>
-</div>
+<p>From the determination of the filter body size, the branch and trunk manifolds are the next most important feature of the design. Some relevant variables defined here. These are constrains that are set before component dimensions are determined.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="26%" />
+<col width="9%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Variable Name</th>
+<th class="head">Description</th>
+<th class="head">Default Value</th>
+<th class="head">What Constrains the Default Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><span class="math notranslate nohighlight">\(ND_{BallValve}\)</span></td>
+<td>&#160;</td>
+<td>3 in</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><span class="math notranslate nohighlight">\(ND_{BedTester}\)</span></td>
+<td>&#160;</td>
+<td>0.5in</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><span class="math notranslate nohighlight">\(ND_{BedTesterOuter}\)</span></td>
+<td>&#160;</td>
+<td>1in</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><span class="math notranslate nohighlight">\(ND_{FiAirRelValve}\)</span></td>
+<td>Air Valve diameter</td>
+<td>0.5in</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><span class="math notranslate nohighlight">\(ND_{FiBwTrunkMin}\)</span></td>
+<td>Minimum backwash trunk diameter</td>
+<td>3in</td>
+<td>Must fit branches and accommodate full filter flow</td>
+</tr>
+<tr class="row-odd"><td><span class="math notranslate nohighlight">\(ND_{FiBwBranchkMin}\)</span></td>
+<td>Mininmum backwash branch diameter</td>
+<td>1in</td>
+<td>Slotted pipes cannot be fabricated smaller than 1 in</td>
+</tr>
+<tr class="row-even"><td><span class="math notranslate nohighlight">\(ND_{FiTrunkMin}\)</span></td>
+<td>Minimum trunk diameter</td>
+<td>2in</td>
+<td>Must be able to fit branches without significant flow obstruction</td>
+</tr>
+<tr class="row-odd"><td><span class="math notranslate nohighlight">\(ND_{FiDrainExit}\)</span></td>
+<td>Minimum drain pipe diameter</td>
+<td>3in</td>
+<td>Entire filter flow can drain with 10 cm of head</td>
+</tr>
+<tr class="row-even"><td><span class="math notranslate nohighlight">\(ND_{FiOverflowEnt}\)</span></td>
+<td>Minimum overflow pipe diamete</td>
+<td>3in</td>
+<td>Entire filter flow can drain with 10cm of head</td>
+</tr>
+<tr class="row-odd"><td><span class="math notranslate nohighlight">\(ND_{FiBranchMin}\)</span></td>
+<td colspan="3">Minimum branch diameter            |   1in        |  Slotted pipes cannot be fabricated smaller than 1 in</td>
+</tr>
+<tr class="row-even"><td><span class="math notranslate nohighlight">\(D_{OrificeMax}\)</span></td>
+<td>Maximum orifice size on branches</td>
+<td>1/4in</td>
+<td>Larger will leave gaps along the wings for sand to escape</td>
+</tr>
+</tbody>
+</table>
 <p><a href="#id1"><span class="problematic" id="id2">*</span></a>trunk sizes based on Juan Guzmán’s recommendation in November 2018 to account for fabrication problems</p>
 <p>Another important value determined by the filter body size is the area of the filter which is defined as: <span class="math notranslate nohighlight">\(ID_{pipe}^2 / 4\)</span>. This becomes important later in determination of the mass of sand needed.</p>
 <p>The pipe sizes recommended in this section come from certain assumptions of the amount of head required to use the filter. In November 2018, the difference in elevation of the water level from the exit tank to the entrance tank was increased to 75cm (an additional increase from 60, which was decided a year or so earlier) so that extra head loss in the manifold system does not influence filter functionality as has been seen in the field. This additional head will allow smaller manifold pipes to be used, as the added head loss in smaller pipes (from the increase of velocity) will not overcome the entrance and exit heights. Smaller manifold pipes will mean the entrance and exit tanks can stay narrower, though taller.</p>
@@ -320,8 +376,8 @@
 <p>A schematic of these pipes can be see below in {Make a basic drawing of the filter or an Onshape drawing}. The image is not to scale, but shows generally how pipes are organized within the filter.</p>
 <p>[We need an Onshape drawing! Perhaps early next year. The pipes MUST go to the floor. Exit to distribution starts at the bottom of the exit tank. Possibly the top of the exit and entrance tanks are only 10 cm above the filter body. Filter Body has an air vent. Need flow control weir system. Is it possible to have some of the pipes exit through the side of the entrance and exit tanks so those tanks don’t have to be so large? Sand drain? Pipe stubs in entrance and exit tanks for automated switch from filter to backwash. Backwash drain pipe with valve? Considering putting numbers on the inlets and outlets so that you can ]</p>
 <p>It is important that the heights between the top of the settled water inlet and the overflow are 10 cm apart because if that distance is too small the overflow may not be large enough to handle excess flow as based on the safety height to find the overflow pipe area.</p>
-<p>During operation the height of water in the entrance tank is watched to determine when backwash is necessary as it rises as headloss in the filter increases.</p>
-<p>In addition to these numerical constraints there are several other contraints that are more clearly outlined in words.</p>
+<p>During operation the height of water in the entrance tank is watched to determine when backwash is necessary as it rises as head loss in the filter increases.</p>
+<p>In addition to these numerical constraints there are several other constraints that are more clearly outlined in words.</p>
 <ol class="arabic simple" id="word-constraints-of-the-filter">
 <li>All inlet and outlet pipes must bend and rest on the floor before connecting to the entrance or exit tank to prevent air from getting into the filter body.</li>
 <li>The exit branches are slotted pipes and the inlet branches have orifices with wings</li>
@@ -343,28 +399,28 @@
 </div>
 <div class="section" id="filter-flow-rates-and-layer-height">
 <h2>Filter Flow Rates and Layer Height<a class="headerlink" href="#filter-flow-rates-and-layer-height" title="Permalink to this headline">¶</a></h2>
-<p>As the maximum flow of the filter is constrained by the available sizes of the pipe for the filter, the design flow of the filter is characterized by: <span class="math notranslate nohighlight">\(Q_{Bw} = V_{Bw}A_{Fi}\)</span>. Filters <strong>should not</strong> be run at flows above those for which they were designed. In the determination of the size of the internal components of a filter the design flow of the filter shold always be used, this ensures that all parts can handle the maximum flow in the filter</p>
+<p>As the maximum flow of the filter is constrained by the available sizes of the pipe for the filter, the design flow of the filter is characterized by: <span class="math notranslate nohighlight">\(Q_{Bw} = V_{Bw}A_{Fi}\)</span>. Filters <strong>should not</strong> be run at flows above those for which they were designed. In the determination of the size of the internal components of a filter the design flow of the filter should always be used, this ensures that all parts can handle the maximum flow in the filter</p>
 <blockquote>
 <div><div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">It may seem peculiar that there is no minimum flow in the filter. This is because a filter, during forward filtration, will function fine at lower flows. A minimum flow constraint does occur with backwash, but if the flow is that low that less than one filter is needed it is unlikely that it will need to be backwashed regaualrly enough to be a concern. This issue has not been seen in any plant to date and is not accounted for in the design.</p>
+<p class="last">It may seem peculiar that there is no minimum flow in the filter. This is because a filter, during forward filtration, will function fine at lower flows. A minimum flow constraint does occur with backwash, but if the flow is that low that less than one filter is needed it is unlikely that it will need to be backwashed regularly enough to be a concern. This issue has not been seen in any plant to date and is not accounted for in the design.</p>
 </div>
 </div></blockquote>
 <p>This design will focus on flow through one filter, as having several filters in parallel wouldn’t alter the flow within one, though flow will be split between the filters. To do this a weir system is in place to split flow about evenly during forward filtration.</p>
 <p>Within each filter the flow is then further split into the 6 layers of the filter.</p>
 <p>The entire area of the filter is assumed to be active and is denoted as <span class="math notranslate nohighlight">\(A_{Fi}\)</span>, as calculated previously as a function of ID.</p>
 <p>Within each filter the flow is diverted across six layers. (<span class="math notranslate nohighlight">\(N_{FiLayer} = 6\)</span>)</p>
-<p>Thus the flow through each sand layer layer is: <span class="math notranslate nohighlight">\(Q_{FiLayer} = \frac{Q_{Fi}}{N_{FiLayer}}\)</span>.</p>
+<p>Thus the flow through each sand layer is: <span class="math notranslate nohighlight">\(Q_{FiLayer} = \frac{Q_{Fi}}{N_{FiLayer}}\)</span>.</p>
 <p>This is not the flow experienced by all the pipe layers though. As shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">_figure_numbered_filter_layers</span></code> the two inner inlets, I-2 and I-3 each serve 2 filter layers and as a result carry flows that are double <span class="math notranslate nohighlight">\(Q_{FiLayer}\)</span></p>
 <div class="figure align-center" id="id6">
-<span id="figure-numbered-filter-layers"></span><a class="reference internal image-reference" href="../_images/figure_numbered_filter_layers.PNG"><img alt="filter manifold layer schematic, interal image" src="../_images/figure_numbered_filter_layers.PNG" style="width: 70%;" /></a>
+<span id="figure-numbered-filter-layers"></span><a class="reference internal image-reference" href="Filtration/Images/figure_numbered_filter_layers.PNG"><img alt="filter manifold layer schematic, interal image" src="Filtration/Images/figure_numbered_filter_layers.PNG" style="width: 70%;" /></a>
 <p class="caption"><span class="caption-text">This schematic shows the layers of the filter and the amount of flow within each pipe layer.</span></p>
 </div>
-<p>This is important in knowing the maximum flow that will be in a trunk or branch at any given time, as that will be used to determine the orifice area as a function of the allowable headloss in combination with the spacing of branches and as a result the flow in each branch.</p>
+<p>This is important in knowing the maximum flow that will be in a trunk or branch at any given time, as that will be used to determine the orifice area as a function of the allowable head loss in combination with the spacing of branches and as a result the flow in each branch.</p>
 </div>
 <div class="section" id="sand-layer-thickness-and-branch-spacing">
 <h2>Sand Layer Thickness and Branch Spacing<a class="headerlink" href="#sand-layer-thickness-and-branch-spacing" title="Permalink to this headline">¶</a></h2>
-<p>In the EStaRS filters, of all three sizes (1ft, 2ft, and 3ft), the sand layer thickness will be 20cm for each layer, except for filters designed to go with PF300 plants, then the depth will be 15cm so that all processes can be at the same elevation. In the OStaRS there are functions that define the sand layer depth, but the minimum distance, 20cm is applicable until trunk diameters are larger than 6 inches. Because for EStaRS this variable is unchanging the equations are not included, but it can be found in the OStaRS filter design file in the <a class="reference internal" href="Filtration_Design.html#heading-sand-layer-thickness"><span class="std std-ref">sand layer thickness</span></a> section.</p>
+<p>In the EStaRS filters, of all three sizes (1ft, 2ft, and 3ft), the sand layer thickness will be 20cm for each layer, except for filters designed to go with PF300 plants, then the depth will be 15cm so that all processes can be at the same elevation. In the OStaRS there are functions that define the sand layer depth, but the minimum distance, 20cm is applicable until trunk diameters are larger than 6 inches. Because for EStaRS this variable is unchanging the equations are not included, but it can be found in the OStaRS filter design file in the <span class="xref std std-ref">sand layer thickness</span> section.</p>
 <p>The OStaRS filters have an option to increase the layer depth to account for the added width of the pipes in a larger filter, but in the EStaRS the trunk sizes will never be large enough because the flow is substantially lower.</p>
 <p>So:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-0">
@@ -380,7 +436,7 @@
 <p>the ID function also takes the SDR for the pipe (26), but in the equation above was left out so the overall mechanism of the calculation is clearer. The value is rounded because an integer number of branches is needed. The various dimensions of each filter pipe layer can be seen in <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_manifold_sizing</span></code>.</p>
 <div class="figure align-center" id="id7">
 <span id="figure-manifold-sizing"></span><a class="reference internal image-reference" href="../_images/figure_manifold_sizing.png"><img alt="filter manifold schematic, interal image" src="../_images/figure_manifold_sizing.png" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">This schematic shows the general naming and dimensons for one layer of the filter. This is a top down view.</span></p>
+<p class="caption"><span class="caption-text">This schematic shows the general naming and dimensions for one layer of the filter. This is a top down view.</span></p>
 </div>
 <p>Setting the number of branches allows the flow within each branch to be determined, knowing that the area of the inlet orifices can be determined. It will also allow the sizes of branches and trunks to be determined.</p>
 <p>In determining the size of the trunk and branches of the EStaRS the pressure recovery constraints are the most important design considerations. Having a pressure recovery term that is too high will lead to an uneven flow distribution. The two pressure recovery terms that are of particular concern are those in the trunks and branches during forward filtration, and the pressure recovery in the lowest branch during backwash. The first step is to find the flow rate in the branches. Then the PR constraint can be used to find the minimum diameter needed for forward filtration and during backwash.</p>
@@ -408,7 +464,7 @@
 <div class="line"><span class="math notranslate nohighlight">\(C_{p_{short}} =\)</span> pressure coefficient at the end of the shortest path</div>
 <div class="line"><span class="math notranslate nohighlight">\(C_{p_{long}} =\)</span> pressure coefficient at the end of the longest path</div>
 </div>
-<p><span class="math notranslate nohighlight">\(C_p\)</span> is defined thoroughly in <a class="reference internal" href="Filtration_Design.html#title-filtration"><span class="std std-ref">Filtration Introduction</span></a></p>
+<p><span class="math notranslate nohighlight">\(C_p\)</span> is defined thoroughly in <span class="xref std std-ref">Filtration Introduction</span></p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-4">
 <span class="eqno">()<a class="headerlink" href="#equation-filtration-estars-design-4" title="Permalink to this equation">¶</a></span>\[\Pi_Q = \frac{Q_{long}}{Q_{short}} = \sqrt{\frac{h_{L_{sand}}-PR}{h_{L_{sand}}}}\]</div>
 <div class="line-block">
@@ -424,9 +480,9 @@
 <p>Where the ratio of the pressure recovery in the branches to the head loss through the clean bed (or through just the slots/holes in backwash) is:</p>
 <p><span class="math notranslate nohighlight">\(\Pi_{ManifoldHeadLoss} = \frac{PR}{h_{L_{sand}}}\)</span></p>
 <p><strong>make this useful</strong></p>
-<p>This equation is used to determine the smallest pipe size that meets the pressure recovery constraint for a certain flow. It alost provides a maximum value for head loss within the system, summing the various pressure recovery terms and comparting to this value will show if the design makes sense. As the head loss through  the sand is known, the equation can be directly solved for pressure recovery. From the total filter flow the flow throuh any branch can be determined. As the pressure recovery term is directly related to the velocity in the pipe a maximum velocity can be determined from the PR term. This maximum velocity can be used to find the minimum area for the branches from pressure recovery, which can provide a pipe diameter. This value can be compared to the minimum determined by the fabrication constraint of the slotted pipes and the larger of the 2 minimums is used for the design.</p>
-<p>Though the piezometric head profiles for the inlet and outlet manifolds for the middle layers may be parallel, meaning the pressure recovery is less constrained for a good flow distribution, a tight constraint is still needed for the outer manifolds where the velocity is 1/2 and the PR is 1/4 (because presseue recovery goes with the square of the velocity) that of the inner layer, while the term is smaller still in the bottom-most manifold where the velocity head is tiny as the diameter is larger to accomdate for full filter flow during backwash.</p>
-<p>See the section on Pressure Recovery  in <a class="reference internal" href="Filtration_Design.html#title-filtration"><span class="std std-ref">Filtration Intro</span></a> for more infomation if this is unclear.</p>
+<p>This equation is used to determine the smallest pipe size that meets the pressure recovery constraint for a certain flow. It almost provides a maximum value for head loss within the system, summing the various pressure recovery terms and comparting to this value will show if the design makes sense. As the head loss through  the sand is known, the equation can be directly solved for pressure recovery. From the total filter flow the flow through any branch can be determined. As the pressure recovery term is directly related to the velocity in the pipe a maximum velocity can be determined from the PR term. This maximum velocity can be used to find the minimum area for the branches from pressure recovery, which can provide a pipe diameter. This value can be compared to the minimum determined by the fabrication constraint of the slotted pipes and the larger of the 2 minimums is used for the design.</p>
+<p>Though the piezometric head profiles for the inlet and outlet manifolds for the middle layers may be parallel, meaning the pressure recovery is less constrained for a good flow distribution, a tight constraint is still needed for the outer manifolds where the velocity is 1/2 and the PR is 1/4 (because pressure recovery goes with the square of the velocity) that of the inner layer, while the term is smaller still in the bottom-most manifold where the velocity head is tiny as the diameter is larger to accommodate for full filter flow during backwash.</p>
+<p>See the section on Pressure Recovery  in <span class="xref std std-ref">Filtration Intro</span> for more infomation if this is unclear.</p>
 </div>
 <div class="section" id="flow-in-branches-to-find-orifice-area-and-number">
 <h3>Flow in branches to find orifice area and number<a class="headerlink" href="#flow-in-branches-to-find-orifice-area-and-number" title="Permalink to this headline">¶</a></h3>
@@ -442,7 +498,7 @@
 </dd>
 </dl>
 <p><em>The number of orifices for the other branches requires the spacing of the orifices which requires the trunk size, which is determined later, so hold tight.</em></p>
-<p>As shown in the previous section maximum flow in a trunk will be either <span class="math notranslate nohighlight">\(Q_{Fi}\)</span> or <span class="math notranslate nohighlight">\(\frac{Q_{Fi}}{3}\)</span> (the equivalent of <span class="math notranslate nohighlight">\(2Q_{Layer}\)</span>). As we are are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.</p>
+<p>As shown in the previous section maximum flow in a trunk will be either <span class="math notranslate nohighlight">\(Q_{Fi}\)</span> or <span class="math notranslate nohighlight">\(\frac{Q_{Fi}}{3}\)</span> (the equivalent of <span class="math notranslate nohighlight">\(2Q_{Layer}\)</span>). As we are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.</p>
 <p>In this case the longest branch is slightly less than <span class="math notranslate nohighlight">\(\frac{ID_{Fi}}{2}\)</span>. To keep the calculations simple the maximum fraction of the flow served by any branch would be in the longest branch, the approximate area of the filter layer served would be approximately the length of this branch time the spacing of the branches. <code class="xref std std-numref docutils literal notranslate"><span class="pre">_figure_flow_fraction_branch</span></code></p>
 <div class="figure align-center" id="id8">
 <span id="figure-flow-fraction-branch"></span><a class="reference internal image-reference" href="../_images/figure_flow_fraction_branch.png"><img alt="filter schematic, interal image" src="../_images/figure_flow_fraction_branch.png" style="width: 80%;" /></a>
@@ -459,14 +515,14 @@
 \\ \\ Then: \\ \\
 \Pi_{branch}*Q_{Fi} = Q_{BranchBWMax}\end{split}\]</div>
 <p>These two flows can be used with the pressure recovery terms to determine the smallest branch sizes that can work.</p>
-<p>Using this flow the total area of the inlet orifices can be found for the longest branch, this area can then describe the number of orifices and thir spacing. The spacing then applies to all the branches not just the longest one.</p>
-<p>Because the pressure recovery in the branches is the constraint in determining total orifice sizing, it is convenient to fist consider the generic pressure recovery term:</p>
+<p>Using this flow the total area of the inlet orifices can be found for the longest branch, this area can then describe the number of orifices and their spacing. The spacing then applies to all the branches not just the longest one.</p>
+<p>Because the pressure recovery in the branches is the constraint in determining total orifice sizing, it is convenient to first consider the generic pressure recovery term:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-7">
 <span class="eqno">()<a class="headerlink" href="#equation-filtration-estars-design-7" title="Permalink to this equation">¶</a></span>\[h_L = \frac{(\frac{Q}{\Pi*A*\epsilon})^2}{2g}\]</div>
-<p>In the equation above the HL is equivalent to the pressure recovery, the velocity term has just been replaced with the flow to area ratio at the inlets or outlets. Depending on which inlet or outlet system is being looked at the porosity term and flow term will vary. Additonally, we are setting the head loss to be small so the term being found is the total area required to keep the head loss small. Thus it can be rearranged to:</p>
+<p>In the equation above the HL is equivalent to the pressure recovery, the velocity term has just been replaced with the flow to area ratio at the inlets or outlets. Depending on which inlet or outlet system is being looked at the porosity term and flow term will vary. Additionally, we are setting the head loss to be small so the term being found is the total area required to keep the head loss small. Thus it can be rearranged to:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-8">
 <span class="eqno">()<a class="headerlink" href="#equation-filtration-estars-design-8" title="Permalink to this equation">¶</a></span>\[A = \frac{1}{\frac{(\sqrt{2g*h_L})*\Pi*\epsilon}{Q}}\]</div>
-<p>The suggested design headloss for the inlets and outlets is 5 cm, but is flexible in the . The following table shows the other constraints used to solve for the required areas.</p>
+<p>The suggested design head loss for the inlets and outlets is 5 cm, but is flexible in the . The following table shows the other constraints used to solve for the required areas.</p>
 <table border="1" class="docutils" id="table-branch-head-loss">
 <colgroup>
 <col width="22%" />
@@ -526,8 +582,8 @@
 </div>
 <div class="section" id="flow-in-trunks-to-determine-branch-area">
 <h3>Flow in trunks to determine branch area<a class="headerlink" href="#flow-in-trunks-to-determine-branch-area" title="Permalink to this headline">¶</a></h3>
-<p>As stated above the maximum flow in a trunk will be either <span class="math notranslate nohighlight">\(Q_{Fi}\)</span> or <span class="math notranslate nohighlight">\(\frac{Q_{Fi}}{3}\)</span> (the equivalent of <span class="math notranslate nohighlight">\(2Q_{Layer}\)</span>). As we are are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.</p>
-<p>The number of branches is set based on the spacing constraint, thus all this section aims to find is an acceptable area of the branches to keep pressure recovery low to keep flow distrubtion even.</p>
+<p>As stated above the maximum flow in a trunk will be either <span class="math notranslate nohighlight">\(Q_{Fi}\)</span> or <span class="math notranslate nohighlight">\(\frac{Q_{Fi}}{3}\)</span> (the equivalent of <span class="math notranslate nohighlight">\(2Q_{Layer}\)</span>). As we are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.</p>
+<p>The number of branches is set based on the spacing constraint, thus all this section aims to find is an acceptable area of the branches to keep pressure recovery low to keep flow distribution even.</p>
 <p>Again begin with:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-11">
 <span class="eqno">()<a class="headerlink" href="#equation-filtration-estars-design-11" title="Permalink to this equation">¶</a></span>\[h_L = \frac{(\frac{Q}{\pi*A*\epsilon})^2}{2g}\]</div>
@@ -574,13 +630,13 @@ A_{BranchMinFW} = \frac{A_{BranchTotalMinFW}}{N_{BranchTrunk}}\end{split}\]</div
 <h3>Determining Forward Filtration and Backwash Velocities<a class="headerlink" href="#determining-forward-filtration-and-backwash-velocities" title="Permalink to this headline">¶</a></h3>
 <p>See  <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_estars_flow_schematic</span></code> for a schematic of the filter layers. For a schematic of flow during backwash see <code class="xref std std-numref docutils literal notranslate"><span class="pre">_figure_estars_bw_flow_schematic</span></code>.</p>
 <div class="figure align-center" id="id9">
-<span id="figure-estars-flow-schematic"></span><a class="reference internal image-reference" href="../_images/figure_flow_distribution_estars.PNG"><img alt="filter schematic, interal image" src="../_images/figure_flow_distribution_estars.PNG" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-text">This schematic shows the flows through every inlet and outlet components of the EStaRS system. Each of the outlets takes in flow from two filter layers as do the inner inlets. The outer inlets provide water for only one layer. The bottom inlet must also accomodate the flow required for backwash and is larger in diameter to account for this.</span></p>
+<span id="figure-estars-flow-schematic"></span><a class="reference internal image-reference" href="Filtration/Images/figure_flow_distribution_estars.PNG"><img alt="filter schematic, interal image" src="Filtration/Images/figure_flow_distribution_estars.PNG" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-text">This schematic shows the flows through every inlet and outlet components of the EStaRS system. Each of the outlets takes in flow from two filter layers as do the inner inlets. The outer inlets provide water for only one layer. The bottom inlet must also accommodate the flow required for backwash and is larger in diameter to account for this.</span></p>
 </div>
 <p>Because the 2 inner inlets (the ones that aren’t the backwash trunk or the uppermost trunk) distribute flow to two layers the flow between them is equal to <span class="math notranslate nohighlight">\(2Q_{FiLayer}\)</span> which is shown in the schematic. In a later section, we will show that the flow within each layer is not exactly even because of the head loss through various paths, but for the calculation of maximum flow, even flow is an appropriate guess.</p>
 <div class="figure align-center" id="id10">
 <span id="figure-estars-bw-flow-schematic"></span><a class="reference internal image-reference" href="Filtration/Images/figure_bw_flow_distribution.PNG"><img alt="filter schematic, interal image" src="Filtration/Images/figure_bw_flow_distribution.PNG" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-text">This schematic shows the flows through an EStaRS during backwash. For the design, it is assumed that filter is being used to full capacity so that flow total flow during forward filtration is equal to the backwash (design) flow. In practice those values might be different, in which case the flow is the design flow, <strong>not</strong> the sum of the filter layers. Rather than the outlet pipes, a separate backwash manifold is used to discard the water used during bacwash.</span></p>
+<p class="caption"><span class="caption-text">This schematic shows the flows through an EStaRS during backwash. For the design, it is assumed that filter is being used to full capacity so that flow total flow during forward filtration is equal to the backwash (design) flow. In practice those values might be different, in which case the flow is the design flow, <strong>not</strong> the sum of the filter layers. Rather than the outlet pipes, a separate backwash manifold is used to discard the water used during backwash.</span></p>
 </div>
 <p>On each layer trunk, there are <span class="math notranslate nohighlight">\(N_{FiBranch}\)</span> branches on <strong>each side</strong> of the trunk. That means the total number of branches on each trunk is <span class="math notranslate nohighlight">\(2N_{FiBranch}\)</span></p>
 <p>Using the minimum ND of the Filter Manifold Branches, as defined above, the minimum flow area of a branch can be calculated: [I’m lost here. You haven’t calculated the Branch diameter yet. See my approach above for calculating the area served by one branch. The ID of the branch is irrelevant. I now realize that we made a mistake in first creating the text. You can’t see the mistakes if you don’t actually do the calculations. I always develop a method in a calculation space (now python) AND in an equation derivation space (now RST)].</p>
@@ -589,7 +645,7 @@ A_{BranchMinFW} = \frac{A_{BranchTotalMinFW}}{N_{BranchTrunk}}\end{split}\]</div
 <h3>First Constraint: Pressure Recovery in Trunks during forward filtration<a class="headerlink" href="#first-constraint-pressure-recovery-in-trunks-during-forward-filtration" title="Permalink to this headline">¶</a></h3>
 <p>[This section needs to go above the section where you calculate the branch diameter given the PR constraint.]</p>
 <p>The total allowable pressure recovery of the filter manifold is controlled by the head loss in each sand layer and the head loss ratio, <span class="math notranslate nohighlight">\(\Pi_{ManifoldHeadLoss}\)</span>, as defined above in <a class="reference internal" href="#flow-distribution-constraints"><span class="std std-ref">Flow Distrbution Constraints</span></a>.</p>
-<p>The head loss through the sand layer, <span class="math notranslate nohighlight">\(HL_{FiCleanLayerMin}\)</span> is a fuction of layer depth, <span class="math notranslate nohighlight">\(H_{FiLayer}\)</span> and overall velocity of the filter , <span class="math notranslate nohighlight">\(\frac{Q_{FiLayer}}{A_{Fi}}\)</span>, using the Kozeny Equation in <a class="reference internal" href="Filtration_Design.html#heading-headloss-requirements"><span class="std std-ref">Headloss Requirement</span></a> in the Filtration Design section.</p>
+<p>The head loss through the sand layer, <span class="math notranslate nohighlight">\(HL_{FiCleanLayerMin}\)</span> is a fuction of layer depth, <span class="math notranslate nohighlight">\(H_{FiLayer}\)</span> and overall velocity of the filter , <span class="math notranslate nohighlight">\(\frac{Q_{FiLayer}}{A_{Fi}}\)</span>, using the Kozeny Equation in <span class="xref std std-ref">Headloss Requirement</span> in the Filtration Design section.</p>
 <p>Using the definition of the pressure recovery ratio, the maximum allowable pressure recovery in the filter manifold can be calculated, this value is not necessarily the actual pressure recovery the system may see, just the allowable maximum:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-16">
 <span class="eqno">()<a class="headerlink" href="#equation-filtration-estars-design-16" title="Permalink to this equation">¶</a></span>\[PR_{FiMax} = HL_{FiCleanLayerMin}*\Pi_{ManifoldHeadLoss}\]</div>
@@ -656,7 +712,7 @@ A_{BranchMinFW} = \frac{A_{BranchTotalMinFW}}{N_{BranchTrunk}}\end{split}\]</div
 <p>Pipes 2, 4, and 6 (the outlet pipes) are all identical and the total head loss through the outlet system is approximately three times the <span class="math notranslate nohighlight">\(HL_{OutletSlotForWard}\)</span> as calculated based on the table above. The outlet pipes are the only pipes where the porosity of the sand is accounted for because the outlet slot system is the only place in the filter where the sand interfaces with the pipe openings. The exclusion zones prevent sand at the inlets and as such the porosity is not accounted for in any other head loss calculation, see <strong>FIGURE SOMETHING OR OTHER FOR IMAGE OF THE EXCLUSION ZONE</strong>. Pipe 7 experiences 2 different head losses depending on whether the filter is in forward filtration or backwash. Pipes 3 and 5 are also identical.</p>
 <p>Additional note for <code class="xref std std-numref docutils literal notranslate"><span class="pre">table_branch_head_loss</span></code>. The pipes show the overall flow direction at each layer. The each of those numbers pipes, from a vertical cross-sections looks generally like the trunk and branches in <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_circle_branches</span></code>.</p>
 <div class="figure align-center" id="id11">
-<span id="figure-circle-branches"></span><a class="reference internal image-reference" href="../_images/figure_circle_branches.PNG"><img alt="basic sketch of flow path within a manifold layer" src="../_images/figure_circle_branches.PNG" style="width: 60%;" /></a>
+<span id="figure-circle-branches"></span><a class="reference internal image-reference" href="Filtration/Images/figure_circle_branches.PNG"><img alt="basic sketch of flow path within a manifold layer" src="Filtration/Images/figure_circle_branches.PNG" style="width: 60%;" /></a>
 <p class="caption"><span class="caption-text">A generic sketch of one layer of a manifold. The yellow arrows indicate this is an influent manifold. The number of branches is variable depending on the size of the filter.</span></p>
 </div>
 <p>Having these geometries and head losses determined means the parameters for the rest of the system can be determined, as most of it depends on the sizes of the trunks and branches.</p>
@@ -666,13 +722,13 @@ A_{BranchMinFW} = \frac{A_{BranchTotalMinFW}}{N_{BranchTrunk}}\end{split}\]</div
 <h2>Entrance and Exit Pipe Dimensions for “Micky Mouse” design<a class="headerlink" href="#entrance-and-exit-pipe-dimensions-for-micky-mouse-design" title="Permalink to this headline">¶</a></h2>
 <p>The construction of the entrance and exit pipes are the main difference between the “conventional” filter entrance/exits tanks and the “Micky Mouse” design. The difference can be seen in the <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_estars_comparison</span></code></p>
 <div class="figure align-center" id="id12">
-<span id="figure-estars-comparison"></span><a class="reference internal image-reference" href="Filtration/Images/figure_estars_comparison.png"><img alt="CAD &quot;conventional&quot; vs micky mouse photo design" src="Filtration/Images/figure_estars_comparison.png" style="width: 80%;" /></a>
+<span id="figure-estars-comparison"></span><a class="reference internal image-reference" href="../_images/figure_estars_comparison.png"><img alt="CAD &quot;conventional&quot; vs micky mouse photo design" src="../_images/figure_estars_comparison.png" style="width: 80%;" /></a>
 <p class="caption"><span class="caption-text">These images show the difference in the two styles of EStaRS. In the image on the left, the “Micky Mouse” design is shown. the two pipes on the upper right and left are the entrance and exit tanks for the filter. The image on the right shows the EStaRS design that is more similar to the design of the OStaRS with a concrete entrance and exit system. Note that these two systems are for different flow rates which is why the image on the right shows two modules.</span></p>
 </div>
 <p>In this sections the sizes of these tanks are determined.</p>
 <p>The size of the entrance and exit tank pipe dimensions is constrained by the sizes and number of the pipes that feed into or out of each tank.</p>
 <p>The entrance needs to have space for: 4 inlets, one of which is the bottom, slightly larger pipe for backwash, an inlet from the sedimentation tank, and an overflow pipe, so that if the entrance pipe overflows the water is directed elsewhere rather than just spilling all over the place. The outlet tank pipe requires space for three outlets from the filter, an outlet to the plant exit, and a drain in the event that maintenance needs to be done or if the effluent quality is not sufficient.</p>
-<p>The pipes connect lengthwise with the pipe so it is their total area that must fit with the area of the tanks. In addition to the pipe area, they will be connected with ferncos, which add extra space considerations. Additionally, for ease of fabrication the ferncos should not be closer than 1 cm to each other. The pipe sized determined in this section come from using Onshape to determine feasible pipe placements (as there are many configurations that may fit)</p>
+<p>The pipes connect lengthwise with the pipe so it is their total area that must fit with the area of the tanks. In addition to the pipe area, they will be connected with flexible couplings, which add extra space considerations. Additionally, for ease of fabrication the flexible couplings should not be closer than 1 cm to each other. The pipe sized determined in this section come from using Onshape to determine feasible pipe placements (as there are many configurations that may fit)</p>
 <p>The minimum sizes for the trunks and drains specified at the beginning of this file turn out to be sufficient for each design, therefore the entrance tank must accommodate: 4 2” pipes and 1 3” pipes (with the overflow being the only pipe that comes from the side of the tank). These dimensions require a 12in pipe. The exit tank requires 4 2” pipes and 1 3” pipe as well, but the drain is included in that number. Thus a 12” pipe is required for the exit as well.</p>
 </div>
 <div class="section" id="total-sand-depth-filter-pipe-length">
@@ -713,7 +769,7 @@ A_{BranchMinFW} = \frac{A_{BranchTotalMinFW}}{N_{BranchTrunk}}\end{split}\]</div
 <div class="section" id="path-head-loss-calculations-and-flow-distribution-between-layers">
 <h2>Path head loss calculations and flow distribution between layers<a class="headerlink" href="#path-head-loss-calculations-and-flow-distribution-between-layers" title="Permalink to this headline">¶</a></h2>
 <p>Now that the sand layer depth is set the Kozeny Head Loss can be determined for the clean bed and the head loss through various flow paths can be determined.</p>
-<p>First use the Kozeny equation from <a class="reference internal" href="Filtration_Design.html#heading-headloss-requirements"><span class="std std-ref">Headloss Requirements</span></a> to find the head loss in each of the sand layers. In the design for the OStaRS a different layer height may be used for the bottom layer to account for the larger backwash pipe, but in the EStaRS that difference does not matter, as that additional depth does not contain head loss that matter for the flow.</p>
+<p>First use the Kozeny equation from <span class="xref std std-ref">Headloss Requirements</span> to find the head loss in each of the sand layers. In the design for the OStaRS a different layer height may be used for the bottom layer to account for the larger backwash pipe, but in the EStaRS that difference does not matter, as that additional depth does not contain head loss that matter for the flow.</p>
 <p>As the filter has 6 layers there are six possible paths for the water to take. The calculations for head loss through each layer depends specifically on which layer when it comes to minor loss coefficients and lengths of flow paths but the overall process is the same. This section outlines the algorithm without going into the specific calculations necessary for the head loss determination.</p>
 <p>In each path, the path head loss is the sum of : inlet plumbing major and minor losses, sand layer losses, and outlet plumbing (for the relevant flow) minor losses</p>
 <p>The design steps are as follows:</p>
@@ -792,7 +848,6 @@ where 6 is the number of trunks excluding the backwash trunk.</p>
 <p>As a safety factor, this value is multiplied by 1.25 to get the total number of sand bags:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-estars-design-32">
 <span class="eqno">()<a class="headerlink" href="#equation-filtration-estars-design-32" title="Permalink to this equation">¶</a></span>\[N_{SandBag} = 1.25(N_{Fi}*\frac{M_{Sand}}{M_{SandBag}})\]</div>
-<p>Something this volume of sand indicates, is that the filter is quite heavy and will not tip over! The stability of the empty filter can be determined, but is not necessarily critical to the design because if there is water in the filter there will be some extra pipes stabilizing the system.</p>
 </div>
 <div class="section" id="materials">
 <h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
@@ -806,7 +861,7 @@ where 6 is the number of trunks excluding the backwash trunk.</p>
 <p>The lengths of the slotted pipes would be just <span class="math notranslate nohighlight">\(3*\Sigma L_{FiManBranch}\)</span>, where (in both) <span class="math notranslate nohighlight">\(L_{FiManBranch}\)</span> is an array of lengths for an entire filter layer</p>
 <blockquote>
 <div><strong>note from the writer of this section, at the time of writing is it unclear if the filter manifolds can be constructed with one branch serving both sides of the trunk, this section assumes it can and is being done, so elsewhere in this code the array of branch lengths may just be an array of branches on one side of the trunk! Beware of this as it can cause problems as the lengths will be off by around 2x! If this is resolved in the future all sections will be updated to contain the most correct information</strong></div></blockquote>
-<p>Lastly, the number wings to be made is the number or filters times the number of branches (per side) per layer times 4, as there are 4 layers which require wings!</p>
+<p>Lastly, the number of wings to be made is the number or filters times the number of branches (per side) per layer times 4, as there are 4 inlets which require wings!</p>
 <p><span class="math notranslate nohighlight">\(N_{Wing}\)</span> is equal to <span class="math notranslate nohighlight">\(N_{Fi}*2N_{FiBranchLow}*4\)</span>.</p>
 </div>
 </div>
@@ -844,7 +899,7 @@ where 6 is the number of trunks excluding the backwash trunk.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.049',
+            VERSION:'0.050',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
