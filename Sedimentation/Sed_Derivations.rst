@@ -37,9 +37,9 @@ This is discussed specifically in the section on :ref:`diffuser design <heading_
 After the water exits the diffusers and jet reverser, it flows through the expanded floc blanket region where:
 
 | :math:`L_{SedFloc} =` length of the sedimentation tank that has a floc blanket
-| :math:`v_{S,V} =` upflow velocity of the water through the floc blanket
+| :math:`v_{z_{FB}} =` upflow velocity of the water through the floc blanket
 
-Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}*v_{S,V}`
+Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}*v_{z_{FB}}`
 
 3) Velocity and flow entering the plate settlers
 ------------------------------------------------------------
@@ -47,28 +47,28 @@ Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}*v_{S,V}`
 The 'active' sedimentation zone refers to the area of the tank in which water can flow through the plate settlers where:
 
 | :math:`L_{SedActive} =` length of the sedimentation tank that includes entrance to a plate settlers
-| :math:`v_{A,V} =` upflow velocity of the water entering the plate settlers; vertical velocity in 'active' region
+| :math:`v_{z_{Active}} =` upflow velocity of the water entering the plate settlers; vertical velocity in 'active' region
 
-The only reason that there is a distinction between this area and the floc blanket area is because plate settlers are built at an angle. This angle creates a "lost triangle" because there is a space in which the plate settlers are not effective and water does not flow through them. Because the active length is less than the floc blanket length, :math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, the average active velocity must be greater than the average upflow velocity through the floc blanket, :math:`v_{A,V} > v_{S,V}`. The same flow going through less area means that the velocity must increase.
+The only reason that there is a distinction between this area and the floc blanket area is because plate settlers are built at an angle. This angle creates a "lost triangle" because there is a space in which the plate settlers are not effective and water does not flow through them. Because the active length is less than the floc blanket length, :math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, the average active velocity must be greater than the average upflow velocity through the floc blanket, :math:`v_{z_{Active}} > v_{z_{FB}}`. The same flow going through less area means that the velocity must increase.
 
-Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedActive}*v_{A,V}`, and :math:`v_{A,V} > v_{S,V}`.
+Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedActive}*v_{z_{Active}}`, and :math:`v_{z_{Active}} > v_{z_{FB}}`.
 
 4) Velocity and flow in the plate settlers
 -------------------------------------------
 
 Now, we will discuss flow through plate settlers where:
 
-| :math:`v_{P,V} =` upflow velocity of the water in the plate settlers; vertical velocity component between the plate settlers
+| :math:`v_{z_{Plate}} =` upflow velocity of the water in the plate settlers; vertical velocity component between the plate settlers
 | :math:`S =` spacing between plate settlers
 | :math:`B =` center-to-center distance between plate settlers
 | :math:`T =` thickness of plate settlers
 | :math:`L =` length of plate settlers
 
-We know that plate settlers have a certain thickness and take up area, which means that once we reach the plate settler zone, there is less area for water to travel through. Because flow is conserved and there is a decrease in area, we know that the upflow velocity of water through the plate settlers must increase compared to the upflow velocity of water below the plate settlers, :math:`v_{P,V} > v_{A,V}`.
+We know that plate settlers have a certain thickness and take up area, which means that once we reach the plate settler zone, there is less area for water to travel through. Because flow is conserved and there is a decrease in area, we know that the upflow velocity of water through the plate settlers must increase compared to the upflow velocity of water below the plate settlers, :math:`v_{z_{Plate}} > v_{z_{Active}}`.
 
-Thus, :math:`v_{P,V} > v_{A,V} > v_{S,V}`
+Thus, :math:`v_{z_{Plate}} > v_{z_{Active}} > v_{z_{FB}}`
 
-In addition to the vertical velocity component increasing between the plates, the resultant velocity of water between the plates increases compared to :math:`v_{A,V}`. What are the two reasons that this is true?
+In addition to the vertical velocity component increasing between the plates, the resultant velocity of water between the plates increases compared to :math:`v_{z_{Active}}`. What are the two reasons that this is true?
 
 - the first reason, as already discussed, is that the vertical velocity component needs to increase to ensure conservation of flow.
 
@@ -76,7 +76,7 @@ In addition to the vertical velocity component increasing between the plates, th
 
 Now, consider a tube settler used in a lab setting instead of a plate settler. If a tube settler was designed with an angle to mimic a plate settler, would the water change vertical velocity after the angle? How does this compare to the plate settler scenario? In the case of the tube settler, the vertical velocity does not increase because there is no change in flow area; the diameter of the tube is constant throughout, meaning that for the flow to remain constant, the velocity does not change.
 
-For another example of flow conservation, let's consider the relationship between :math:`v_{P,V}*S` and :math:`v_{A,V}*B`. :math:`B` is the center-to-center distance between plate settlers, and does not take into account the thickness of plate settlers. Considering only the center-to-center distance means that the area for water to travel through does to change from before the plate settlers to within the plate settlers because we are not accounting for any thickness. If the area does not change, then velocity should also not change to keep flow conserved. However, if we are to account for thickness, we must discuss :math:`S` which is the spacing between plate settlers. This does take into account the change in area,  which means that the velocity would need to increase through the lesser area. So if we look at the flow through plate settlers, we can confirm that :math:`v_{P,V}*S = v_{A,V}*B`.
+For another example of flow conservation, let's consider the relationship between :math:`v_{z_{Plate}}*S` and :math:`v_{z_{Active}}*B`. :math:`B` is the center-to-center distance between plate settlers, and does not take into account the thickness of plate settlers. Considering only the center-to-center distance means that the area for water to travel through does to change from before the plate settlers to within the plate settlers because we are not accounting for any thickness. If the area does not change, then velocity should also not change to keep flow conserved. However, if we are to account for thickness, we must discuss :math:`S` which is the spacing between plate settlers. This does take into account the change in area,  which means that the velocity would need to increase through the lesser area. So if we look at the flow through plate settlers, we can confirm that :math:`v_{z_{Plate}}*S = v_{z_{Active}}*B`.
 
 By using flow conservation and plate settler geometry, we can begin to understand the mathematical relationships that drive design.
 
@@ -87,13 +87,13 @@ Plate Settler Design
 Plate Settler Parameters
 -------------------------
 
-From the relationship that :math:`v_{P,V}*S = v_{A,V}*B`, we can solve for :math:`B` or :math:`L` in terms of their related parameters.
+From the relationship that :math:`v_{z_{Plate}}*S = v_{z_{Active}}*B`, we can solve for :math:`B` or :math:`L` in terms of their related parameters.
 
 Let's start with the relationships that we already know:
 
 .. math::
 
-  v_{P,V}*S = v_{A,V}*B
+  v_{z_{Plate}}*S = v_{z_{Active}}*B
 
 and
 
@@ -119,41 +119,41 @@ and
 
     Plate settlers.
 
-Solving for :math:`v_{P,V}`, we rearrange and substitute by,
+Solving for :math:`v_{z_{Plate}}`, we rearrange and substitute by,
 
 .. math::
 
-  v_{P,V}*S = v_{A,V}*(S+T)
+  v_{z_{Plate}}*S = v_{z_{Active}}*(S+T)
 
 .. math::
 
-  v_{P,V} = \frac{v_{A,V}*(S+T)}{S}
+  v_{z_{Plate}} = \frac{v_{z_{Active}}*(S+T)}{S}
 
-We also already know from our :ref:`discussion of plate settlers <heading_Sed_Tank_Plate_Settlers>` that we can relate capture velocity, :math:`v_c`, to :math:`S, L, \alpha`, and :math:`v_{P,V}` by,
-
-.. math::
-
-  v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}
-
-Substitute for :math:`v_{P,V} = \frac{v_{A,V}*(S+T)}{S}` by,
+We also already know from our :ref:`discussion of plate settlers <heading_Sed_Tank_Plate_Settlers>` that we can relate capture velocity, :math:`v_c`, to :math:`S, L, \alpha`, and :math:`v_{z_{Plate}}` by,
 
 .. math::
 
-  v_c = (\frac{S}{Lsin\alpha cos\alpha + S})(\frac{v_{A,V}*(S+T)}{S})
+  v_c = \frac{S*v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
+
+Substitute for :math:`v_{z_{Plate}} = \frac{v_{z_{Active}}*(S+T)}{S}` by,
+
+.. math::
+
+  v_c = (\frac{S}{Lsin\alpha cos\alpha + S})(\frac{v_{z_{Active}}*(S+T)}{S})
 
 Now, we can use this form of the capture velocity equation to solve for :math:`B` or :math:`L`, as shown by,
 
 .. math::
 
-  B = \frac{Lsin\alpha cos\alpha - T}{\frac{v_{P,V}}{v_c}-1}
+  B = \frac{Lsin\alpha cos\alpha - T}{\frac{v_{z_{Plate}}}{v_c}-1}
 
 .. math::
 
-  L = \frac{B(\frac{v_{P,V}}{v_c}-1) + T}{sin\alpha cos\alpha}
+  L = \frac{B(\frac{v_{z_{Plate}}}{v_c}-1) + T}{sin\alpha cos\alpha}
 
 .. math::
 
-  L = \frac{S(\frac{v_{P,V}}{v_c}-1) + T(\frac{v_{P,V}}{v_c})}{sin\alpha cos\alpha}
+  L = \frac{S(\frac{v_{z_{Plate}}}{v_c}-1) + T(\frac{v_{z_{Plate}}}{v_c})}{sin\alpha cos\alpha}
 
 .. _heading_Sed_Tank_Plate_Settler_Design_Review:
 
@@ -162,7 +162,7 @@ The AguaClara plate settler design approach is summarized in the following table
 +----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
 | Parameter            | Variable             | Determined by:                    | Determines:                | Value                    |
 +======================+======================+===================================+============================+==========================+
-| Upflow velocity      | :math:`v_{S,V}`      | floc blanket                      | size of tank               | 1 :math:`\frac{mm}{s}`   |
+| Upflow velocity      | :math:`v_{z_{FB}}`      | floc blanket                      | size of tank               | 1 :math:`\frac{mm}{s}`   |
 |                      |                      | upflow requirements               |                            |                          |
 +----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
 | Capture velocity     | :math:`v_c`          | target turbidity                  | particle size distribution | 0.12 :math:`\frac{mm}{s}`|
@@ -173,17 +173,42 @@ The AguaClara plate settler design approach is summarized in the following table
 | Spacing              | :math:`S`            | clogging and floc                 | :math:`L`                  | 2.5 cm                   |
 |                      |                      | rollup constraints                |                            |                          |
 +----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
-| Plate settler length | :math:`L`            | :math:`v_{S,V},v_c,\alpha,S`      | tank depth                 | Calculated for each plant|
+| Plate settler length | :math:`L`            | :math:`v_{z_{FB}},v_c,\alpha,S`      | tank depth                 | Calculated for each plant|
 +----------------------+----------------------+-----------------------------------+----------------------------+--------------------------+
 
-.. _figure_plate_settler_model_table:
+The relationship between the vertical velocity and the velocity in the direction of the sloped tube or plate settlers is given by
 
-.. figure:: Images/plate_settler_model_table.png
-    :height: 300px
-    :align: center
-    :alt: Plate settler models and relevant equations.
+.. math::
 
-    Plate settler models and relevant equations.
+  v_{z} = v_{\alpha} \sin \alpha
+
+.. _table_lamellar_settler_geometry:
+
+.. csv-table:: Lamellar settler geometry and relevant equations.
+   :header: "Settler geometry", "Single tubes", "multiple tubes or plates"
+   :align: left
+
+   ":math:`v_{z}` ratio", ":math:`\frac{v_{z_{Tube}}}{v_{c}}=\frac{L}{D} \cos \alpha \sin \alpha+\sin ^{2} \alpha`", ":math:`\frac{v_{z_{Plate}}}{v_{c}}=\frac{L}{S} \cos \alpha \sin \alpha+1`"
+   ":math:`v_{\alpha}` ratio  ",":math:`\frac{v_{\alpha_{Tube}}}{v_{c}}=\frac{L}{D} \cos \alpha +\sin \alpha`", ":math:`\frac{v_{\alpha_{Plate}}}{v_{c}}=\frac{L}{S} \cos \alpha +\frac{1}{\sin \alpha}`"
+
+For single tube settlers used in laboratory settings the
+
+.. math::
+
+  v_{\alpha_{Tube}}=\frac{4Q_{Tube}}{\pi D^2}
+
+Substituting into the equation for single tube settlers
+
+.. math::
+
+  Q_{Tube}=\frac{v_{c}\pi D^2}{4} \left(\frac{L}{D} \cos \alpha +\sin \alpha \right)
+
+It is common to need to design the length of the tube given a target flow rate and thus we have
+
+.. math::
+
+  L = \frac{4Q_{Tube}}{v_{c}\pi D\cos \alpha} - D\tan\alpha
+
 
 .. _heading_Floc_Rollup_Slide_Velocity_Derivation:
 
@@ -382,11 +407,11 @@ The center of the floc is approximately half of the floc diameter, :math:`D`. So
 
   v_{\alpha} \approx (\frac{6 v_{\alpha}}{S}) (\frac{D}{2})
 
-Substituting by the trigonometric relationship :math:`v_{\alpha} = (\frac{v_{P,V}}{sin\alpha})`, we find the fluid velocity at the center of the floc as,
+Substituting by the trigonometric relationship :math:`v_{\alpha} = (\frac{v_{z_{Plate}}}{sin\alpha})`, we find the fluid velocity at the center of the floc as,
 
 .. math::
 
-  v_{\alpha} \approx \frac{3 v_{P,V} D}{Ssin\alpha}
+  v_{\alpha} \approx \frac{3 v_{z_{Plate}} D}{Ssin\alpha}
 
 .. _figure_floc_rollup_step2:
 
@@ -409,7 +434,7 @@ We can rearrange this equation to solve for :math:`D` by
 
 .. math::
 
-  D = D_0 ( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}}) ^{\frac{1}{ D_{fractal} - 1}}
+  D = D_0 \left( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}}\right) ^{\frac{1}{ D_{fractal} - 1}}
 
 We will need this equation for :math:`D` in the next step.
 
@@ -434,19 +459,19 @@ Setting :math:`v_{\alpha} = v_{t,\alpha}` yields,
 
 .. math::
 
-  \frac{3 v_{P,V} D}{Ssin\alpha} \approx v_t sin\alpha
+  \frac{3 v_{z_{Plate}} D}{Ssin\alpha} \approx v_t sin\alpha
 
 Solving for :math:`S` to determine plate spacing,
 
 .. math::
 
-  S \approx \frac{3 v_{P,V} D}{v_t sin^2\alpha}
+  S \approx \frac{3 v_{z_{Plate}} D}{v_t sin^2\alpha}
 
 In this equation, we have both :math:`v_t` and :math:`D`, but we can simplify further because we know that :math:`v_t` and :math:`D` are related by the relationship shown in step 3. Therefore,
 
 .. math::
 
-  S \approx \frac{3}{sin^2\alpha} \frac{v_{P,V}}{v_t} D_0 \left( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}} \right) ^{\frac{1}{ D_{fractal} - 1}}
+  S \approx \frac{3}{sin^2\alpha} \frac{v_{z_{Plate}}}{v_t} D_0 \left( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}} \right) ^{\frac{1}{ D_{fractal} - 1}}
 
 :math:`S` is the smallest spacing that will allow a floc with a given settling velocity to remain stationary on the slope and not be carried upward by rollup.
 
@@ -456,7 +481,7 @@ Finally, we can determine :math:`v_{Slide}` by,
 
 .. math::
 
-  v_{Slide} = v_{P,V} \left[ \left( \frac{3D_0}{Ssin^2\alpha} \right)^{D_{fractal} - 1} \left( \frac{18 v_{P,V} \phi \nu }{D_0^2g} \frac{\rho_{H2O}}{\rho_{floc} - \rho_{H2O}} \right) \right] ^ {\frac{1}{ D_{fractal} - 2}}
+  v_{Slide} = v_{z_{Plate}} \left[ \left( \frac{3D_0}{Ssin^2\alpha} \right)^{D_{fractal} - 1} \left( \frac{18 v_{z_{Plate}} \phi \nu }{D_0^2g} \frac{\rho_{H2O}}{\rho_{floc} - \rho_{H2O}} \right) \right] ^ {\frac{1}{ D_{fractal} - 2}}
 
 :math:`v_{Slide}` is the terminal sedimentation velocity of the slowest-settling floc that can slide down an incline. Flocs with with terminal velocity (the slide velocity) will be held stationary on the incline because of a balance between gravitational forces and fluid drag. Flocs with a terminal velocity lower than :math:`v_{Slide}` will be carried out of the top of the settler (i.e., they will rollup) even if they settle onto the settler wall. Thus, the slide terminal velocity represents a constraint on the ability of plate settlers to capture flocs.
 
@@ -514,19 +539,19 @@ We need to figure out what each of the terms on the right side of the equation i
 
 .. math::
 
-  \tau = \mu \frac{6 v_{P,V}}{S sin\alpha}
+  \tau = \mu \frac{6 v_{z_{Plate}}}{S sin\alpha}
 
-:math:`L` is found using the equation for capture velocity, :math:`v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}`. Capture velocity is kept constant so we solve for :math:`L`,
+:math:`L` is found using the equation for capture velocity, :math:`v_c = \frac{S*v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}`. Capture velocity is kept constant so we solve for :math:`L`,
 
 .. math::
 
-  L = \frac{S \left( \frac{v_{P,V}}{v_c} -1 \right)}{sin\alpha cos\alpha}
+  L = \frac{S \left( \frac{v_{z_{Plate}}}{v_c} -1 \right)}{sin\alpha cos\alpha}
 
 Substituting :math:`\tau` and :math:`L` into the equation for :math:`\Delta P`,
 
 .. math::
 
-  \Delta P = 2\mu \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)
+  \Delta P = 2\mu \left( \frac{6v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{z_{Plate}}}{v_c} -1 \right)
 
 Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
 
@@ -536,7 +561,7 @@ Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
 
 .. math::
 
-  h_L = 2 \frac{\mu}{\rho g} \left( \frac{6v_{P,V}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{P,V}}{v_c} -1 \right)
+  h_L = 2 \frac{\mu}{\rho g} \left( \frac{6v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{v_{z_{Plate}}}{v_c} -1 \right)
 
 Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}`. The resulting two plots show how head loss and velocity relate to plate settlers.
 
@@ -659,25 +684,25 @@ We will start by determining :math:`\varepsilon` by calculating :math:`\theta` u
 
 .. math::
 
-  \theta = \frac{H_{fb} \phi_{fb}}{v_{S,V}}
+  \theta = \frac{H_{fb} \phi_{fb}}{v_{z_{FB}}}
 
 Plugging :math:`\theta` into :math:`\varepsilon` yields
 
 .. math::
 
-  \varepsilon = \frac{gv_{S,V}}{\phi_{fb}} \frac{h_L}{H_{fb}}
+  \varepsilon = \frac{gv_{z_{FB}}}{\phi_{fb}} \frac{h_L}{H_{fb}}
 
 Substituting into our equation for :math:`G`,
 
 .. math::
 
-  G =  \sqrt{\frac{gv_{S,V}}{\nu \phi_{fb}} \frac{h_L}{H_{fb}}}
+  G =  \sqrt{\frac{gv_{z_{FB}}}{\nu \phi_{fb}} \frac{h_L}{H_{fb}}}
 
 Using our equation for :math:`h_L`,
 
 .. math::
 
-  G =  \sqrt{\frac{gv_{S,V}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }
+  G =  \sqrt{\frac{gv_{z_{FB}}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }
 
 :math:`\phi_{fb} \approx 1` and is a function of :math:`C_{clay}`
 
@@ -816,7 +841,7 @@ Let's begin by finding the internal width of a single diffuser. Using conservati
 
 .. math::
 
-  Q_{diff} = v_{jet}W_{diff}S_{diff} = v_{S,V}W_{Sed}B_{diff}
+  Q_{diff} = v_{jet}W_{diff}S_{diff} = v_{z_{FB}}W_{Sed}B_{diff}
 
 :math:`Q_{diff}` is determined :ref:`as an example <heading_flow_thru_diffuser>`, where we find that :math:`Q_{diff} = 50 \frac{mL}{s}`.
 
@@ -824,7 +849,7 @@ Solving for :math:`W_{diff}`,
 
 .. math::
 
-  W_{diff} = \frac{v_{S,V}W_{Sed}B_{diff}}{v_{jet}S_{diff}}
+  W_{diff} = \frac{v_{z_{FB}}W_{Sed}B_{diff}}{v_{jet}S_{diff}}
 
 Using the constraint of head loss in the jet and solving for :math:`v_{jet}`,
 
@@ -840,11 +865,11 @@ Substituting back into the equation for :math:`W_{diff}`, we can find the minimu
 
 .. math::
 
-  W_{diff,min} = \frac{v_{S,V}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}
+  W_{diff,min} = \frac{v_{z_{FB}}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}
 
 Now that we have determined the minimum width, we can use known parameters and constraints to find a precise value for :math:`W_{diff}` and :math:`v_{jet}`.
 
-Using known constants for :math:`v_{S,V} = 1 \frac{mm}{s}`, :math:`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that :math:`W_{diff,min} = 2.7mm`. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to 3.175 mm.
+Using known constants for :math:`v_{z_{FB}} = 1 \frac{mm}{s}`, :math:`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that :math:`W_{diff,min} = 2.7mm`. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to 3.175 mm.
 
 .. math::
 
@@ -854,7 +879,7 @@ Solving for :math:`v_{jet}` from our earlier equations yields,
 
 .. math::
 
-  v_{jet} = \frac{v_{S,V}W_{Sed}B_{diff}}{W_{diff}S_{diff}}
+  v_{jet} = \frac{v_{z_{FB}}W_{Sed}B_{diff}}{W_{diff}S_{diff}}
 
 Using known constants,
 

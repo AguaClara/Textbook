@@ -223,7 +223,7 @@ The following questions are all answered in one big block of code to make it eas
           return self.hl / self.n_rows
 
       @property
-      def vel_critical(self):
+      def vel_capture(self):
           """The average vertical velocity of the water inside the LFOM pipe
           at the very bottom of the bottom row of orifices The speed of
           falling water is 0.841 m/s for all linear flow orifice meters of
@@ -234,7 +234,7 @@ The following questions are all answered in one big block of code to make it eas
       def area_pipe_min(self):
           """The minimum cross-sectional area of the LFOM pipe that assures
           a safety factor."""
-          return (self.safety_factor * self.q / self.vel_critical).to(u.cm**2)
+          return (self.safety_factor * self.q / self.vel_capture).to(u.cm**2)
 
       @property
       def nom_diam_pipe(self):
@@ -361,7 +361,7 @@ The following questions are all answered in one big block of code to make it eas
   orifice_diameter = my_LFOM.orifice_diameter
   n_orifices_per_row = my_LFOM.n_orifices_per_row
   height_orifices = my_LFOM.height_orifices
-  print('The velocity of the water exiting the bottom of the LFOM is',my_LFOM.vel_critical)
+  print('The velocity of the water exiting the bottom of the LFOM is',my_LFOM.vel_capture)
   print('The flow rate of the LFOM is',my_LFOM.q)
   print('The nominal diameter of the LFOM is',my_LFOM.nom_diam_pipe)
   print('The total height range from zero flow to max flow is', my_LFOM.hl)

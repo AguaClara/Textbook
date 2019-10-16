@@ -98,29 +98,15 @@ As an introduction to this drag coefficient diagram, we can compare it to someth
 
 .. _table_Moody_DragCoefficient:
 
-Below is a table to compare the significance of the Moody diagram and the Drag Coefficient diagram.
+.. csv-table:: Comparison of the Moody diagram and the Drag Coefficient diagram.
+   :header: "Characteristic", "Moody Diagram", "Drag Coefficient Diagram"
+   :align: left
 
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-| Characteristic                 | Moody Diagram                     | Drag Coefficient Diagram                                    |
-+================================+===================================+=============================================================+
-| Relationship to                | friction factor,                  | drag coefficient,                                           |
-| Reynolds number                | :math:`f`                         | :math:`C_D`                                                 |
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-| Type of head loss              | major losses as                   | minor losses as                                             |
-|                                | shear force on                    | expansion around a                                          |
-|                                | pipe walls                        | particle                                                    |
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-| Laminar region                 | :math:`f = \frac{64}{Re}`         |:math:`C_D = \frac{24}{Re}`                                  |
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-| High Reynolds number           | :math:`f` remains constant        | :math:`C_D` remains constant                                |
-| (:math:`f`, :math:`C_D`)       |                                   |                                                             |
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-| High Reynolds number           | head loss increases by velocity in| force of drag increases by velocity in                      |
-| (:math:`h_L`, :math:`F_{drag}`)|  :math:`h_L = \frac{fLv^2}{2Dg}`  |  :math:`F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}`|
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-
-
-
+   Relationship to Reynolds number, "friction factor, :math:`f`", "drag coefficient, :math:`C_D`"
+   Type of head loss, major losses as shear force on pipe walls, shear on sphere and pressure drag from wake
+   Laminar region, ":math:`f = \frac{64}{Re}`", :math:`C_D = \frac{24}{Re}`
+   "High Reynolds number (:math:`f`, :math:`C_D`)", ":math:`f` remains constant", ":math:`C_D` remains constant"
+   "High Reynolds number (:math:`h_L`, :math:`F_{drag}`)", :math:`h_L = \frac{fLv^2}{2Dg}`,:math:`F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}`
 
 
 The flow around the particle and the Reynolds Number can be described in the laminar, turbulent, or turbulent-boundary regions as shown in :numref:`figure_drag_coeff_Re_full`. In the laminar region viscous forces dominate, :math:`Re < 1`,and the coefficient of drag is represented as the straight line with a slope of -1 on the log-log plot. The equation for drag on a sphere in laminar flow :math:`C_D = \frac{24}{Re}` is referred to as Stokes Law. You'll notice that the line for Stokes Law shown in the figure extends past the laminar region. This was done because it highlights that even though Stokes Law is not exactly correct past the turbulent region, it is still a pretty good approximation for  :math:`Re < 10`.
@@ -189,11 +175,11 @@ The following plot in :numref:`figure_terminal_velocity_floc_diam` shows the rel
 
 Three important regions are highlighted in the plot. At small floc diameters, less than 10 :math:`\mu m`, terminal velocity is less that 0.1 :math:`\frac{mm}{s}`. A terminal velocity this low would require extremely large sedimentation tanks for reasonable treatment. Because large sedimentation tanks are costly and unfeasible, we use flocculation to aggregate particles and achieve floc sizes of greater diameters and higher terminal velocities.
 
-For floc diameters around 35 :math:`\mu m`, the terminal velocity is about 1.2 :math:`\frac{mm}{s}`. AguaClara plate settlers are designed to settle out flocs of this size (particles dropping at 1.2 :math:`\frac{mm}{s}`) so the smallest floc that we can capture is 35 :math:`\mu m`. This will be explored in more detail during the discussion on :ref:`capture velocity <heading_capture_velocity>`.
+For floc diameters around 35 :math:`\mu m`, the terminal velocity is about 0.12 :math:`\frac{mm}{s}`. AguaClara plate settlers are designed to settle out flocs of this size (particles dropping at 0.12 :math:`\frac{mm}{s}`) so the smallest floc that we can capture is 35 :math:`\mu m`. This will be explored in more detail during the discussion on :ref:`capture velocity <heading_capture_velocity>`.
 
-Flocs with large diameters around 200 :math:`\mu m` have a terminal velocity of about 1 :math:`\frac{mm}{s}`. In our sedimentation tanks, which are upflow sedimentation tanks, we have water flowing up at about 1 :math:`\frac{mm}{s}` to capture a 200 :math:`\mu m` floc. These flocs are clearly visible but are small. This is what we design our sedimentation tanks to be able to capture.
+Flocs with large diameters around 200 :math:`\mu m` have a terminal velocity of about 1 :math:`\frac{mm}{s}`. In our sedimentation tanks, which are upflow sedimentation tanks, we have water flowing up at about 1 :math:`\frac{mm}{s}` to capture a 200 :math:`\mu m` floc. These flocs are clearly visible but are small.
 
-Our understanding of floc terminal velocity suggests that we can decide the size of the floc that we want our sedimentation tank to capture. If we decide that we want to capture flocs that are 200 :math:`\mu m` or larger, we know that we must design for water flowing at 1 :math:`\frac{mm}{s}`. Alternatively, we know that if we design a reactor in which water flows at 1 :math:`\frac{mm}{s}`, we will only be able to capture flocs that are 200 :math:`\mu m` or larger. This begins our discussion of sedimentation tank design.
+Our understanding of floc terminal velocity suggests that we can decide the size of the floc that we want our sedimentation tank to capture. If we decide that we want to capture flocs that are 200 :math:`\mu m` or larger, we know that we must design for water flowing at 1 :math:`\frac{mm}{s}`. Alternatively, we know that if we design a reactor in which water flows at 1 :math:`\frac{mm}{s}`, we will only be able to capture flocs that are 200 :math:`\mu m` or larger.
 
 .. _heading_capture_velocity:
 

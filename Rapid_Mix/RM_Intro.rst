@@ -444,7 +444,7 @@ The following tables can serve as a convenient reference to the equations descri
 
 .. _table_Control_volume_equations:
 
-.. csv-table:: Table of equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.
+.. csv-table:: Equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.
    :header: "Geometry", ":math:`h_L`", "Energy dissipation rate",":math:`G_{CS}(\bar v)`",":math:`G_{CS}(Q)`"
    :align: left
 

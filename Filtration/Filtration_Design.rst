@@ -7,7 +7,7 @@ Filtration Design
 
 
 1.  Calculate array of maximum filter flows given available trunk sizes and given constraint of flow distribution between filter layers during filtration
-1.  Select the trunk size that gives the minimum number of filters equal to or less than the minimum number of filters.
+1.  Select the trunk size that gives a number of filters equal to or less than the minimum number of filters required for operation and maintenance.
 1.  Calculate filter flow given minimum number of filters
 1.  Calculate the orifice head loss required to provide uniform flow to the sand bed during backwash.
 1.  Design the branches based on manifold flow distribution requirements
@@ -16,16 +16,15 @@ Filtration Design
 1.  Calculate all elevations
 1.  Design backwash flow control weir
 
-Design Assumptions
-==================
 
-* Simplest design to fabricate will have identical trunk lines for all inlets
-*
 
 Potential Changes to the Filter Design
 ======================================
- * Have the siphon manifold exit straight through the side of the filter (perhaps in line with the other inlets and outlets) and the elbow up to the required elevation and elbow and Tee back down again. This would make the siphon install inside the filter be a single straight pipe instead of the large assembly that is currently used. This will have the additional advantage that the connection between this drain manifold and the pipe stub in the wall doesn't have to be leak tight! The connection could be a wrap of stainless steel and two hose clamps.
+ * Have the siphon manifold exit straight through the side of the filter (perhaps in line with the other inlets and outlets) and then elbow up to the required elevation and elbow and Tee back down again. This would make the siphon install inside the filter be a single straight pipe instead of the large assembly that is currently used. This will have the additional advantage that the connection between this drain manifold and the pipe stub in the wall doesn't have to be leak tight! The connection could be a wrap of stainless steel and two hose clamps.
  * Switch to gravity exclusion zones that include orifices to get uniform flow distribution without risk of sand scour.
+ * Simplest design to fabricate will have identical trunk lines for all inlets
+ * Change the inlet and outlet boxes so that all of the inlet trunks have only one elbow
+ * Outlet trunks each have 2 elbows
 
 
 Maximum Trunk Flows
