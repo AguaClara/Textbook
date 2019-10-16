@@ -9,11 +9,11 @@ These are a few short examples of calculations required for sedimentation tank d
 Tube Settler Design
 ===============================
 
-1. Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank, :math:`v_{S,V}`, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, :math:`v_{\alpha}`. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.
+1. Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank, :math:`v_{z_{FB}}`, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, :math:`v_{\alpha}`. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.
 
-.. math:: \frac{\bar v_{S,V}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha
+.. math:: \frac{\bar v_{z_{FB}}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha
 
-.. math:: \bar v_{S,V} = \bar v_\alpha\sin \alpha
+.. math:: \bar v_{z_{FB}} = \bar v_\alpha\sin \alpha
 
 Solve for the length of the tube settler.
 
@@ -54,9 +54,9 @@ What is this question really asking? This question is asking us to understand th
 
 .. math:: A = 50,000mm^2
 
-The problem statement includes that :math:`v_{S,V} = 1` mm/s. Plugging into our flow equation,
+The problem statement includes that :math:`v_{z_{FB}} = 1` mm/s. Plugging into our flow equation,
 
-.. math:: Q_{diff} = v_{S,V}A
+.. math:: Q_{diff} = v_{z_{FB}}A
 
 .. math:: Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)
 

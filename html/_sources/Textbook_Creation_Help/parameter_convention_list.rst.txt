@@ -76,16 +76,16 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`u`,Velocity in the x-direction,:math:`\frac{[L]}{[T]}`
     :math:`v`,Velocity,:math:`\frac{[L]}{[T]}`
     :math:`v_{\alpha}`,Resultant fluid velocity through plate settler,:math:`\frac{[L]}{[T]}`
-    :math:`v_{A,V}`,Upflow velocity of the water entering the plate settlers; vertical velocity in the 'active' region,:math:`\frac{[L]}{[T]}`
+    :math:`v_{z_{Active}}`,Upflow velocity of the water entering the plate settlers; vertical velocity in the 'active' region,:math:`\frac{[L]}{[T]}`
     :math:`v_c`,Capture velocity,:math:`\frac{[L]}{[T]}`
     :math:`v_H`,Horizontal velocity,:math:`\frac{[L]}{[T]}`
     :math:`v_{jet}`,Velocity of the jet exiting the diffuser,:math:`\frac{[L]}{[T]}`
     :math:`v_{P,H}`,Horizontal velocity through plate settlers,:math:`\frac{[L]}{[T]}`
     :math:`v_{P,net}`,Net velocity of a particle through plate settlers,:math:`\frac{[L]}{[T]}`
-    :math:`v_{P,V}`,Upflow velocity of the water through the plate settlers,:math:`\frac{[L]}{[T]}`
+    :math:`v_{z_{Plate}}`,Upflow velocity of the water through the plate settlers,:math:`\frac{[L]}{[T]}`
     :math:`v_{Settle}`,Settling velocity,:math:`\frac{[L]}{[T]}`
     :math:`v_{Slide}`,Sedimentation velocity of floc between plate settlers,:math:`\frac{[L]}{[T]}`
-    :math:`v_{S,V}`,Upflow velocity of the water through the floc blanket,:math:`\frac{[L]}{[T]}`
+    :math:`v_{z_{FB}}`,Upflow velocity of the water through the floc blanket,:math:`\frac{[L]}{[T]}`
     :math:`v_t`,Terminal velocity of particle,:math:`\frac{[L]}{[T]}`
     :math:`z`,Elevation,:math:`[L]`
     Greek lowercase letters, ,
