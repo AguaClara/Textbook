@@ -172,7 +172,7 @@ The ratio of flows from the first filter and the last filter in the channel is g
 .. math::
    :label: Sharp_weir_flow_ratio_messy
 
-   \Pi_Q_{weir} = \frac{Q_{Filter_1}}{Q_{Filter_n}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}
+   \Pi_{Q_{weir}} = \frac{Q_{Filter_1}}{Q_{Filter_n}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}
 
 
 where :math:`\bar H_{channel}` is the average height of water in the channel relative to the top of the weir. Equation :eq:`Sharp_weir_flow_ratio_messy` simplifies to
@@ -180,21 +180,21 @@ where :math:`\bar H_{channel}` is the average height of water in the channel rel
 .. math::
    :label: Sharp_weir_flow_ratio1
 
-   \Pi_Q_{weir} = \frac{ \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}
+   \Pi_{Q_{weir}} = \frac{ \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}
 
 The slower the velocity in the channel the more uniform the flow distribution will be between the filters. Solve for the velocity in the
 
 .. math::
    :label: Sharp_weir_flow_ratio2
 
-    \bar H_{channel}\Pi_Q_{weir}^\frac{2}{3} + \frac{\bar v_{M_1}^2}{4g}\Pi_Q_{weir}^\frac{2}{3}= { \bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}}
+    \bar H_{channel}\Pi_{Q_{weir}}^\frac{2}{3} + \frac{\bar v_{M_1}^2}{4g}\Pi_{Q_{weir}}^\frac{2}{3}= { \bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}}
 
 Simplify more!
 
 .. math::
    :label: Inlet_Channel_v_max
 
-     \bar v_{M_1} =  2\sqrt{g\bar H_{channel}\frac{\left(1-\Pi_Q_{weir}^\frac{2}{3}\right)}{\left(\Pi_Q_{weir}^\frac{2}{3} + 1\right)}}
+     \bar v_{M_1} =  2\sqrt{g\bar H_{channel}\frac{\left(1-\Pi_{Q_{weir}}^\frac{2}{3}\right)}{\left(\Pi_{Q_{weir}}^\frac{2}{3} + 1\right)}}
 
 Backwash Weir Slot Design
 -------------------------
