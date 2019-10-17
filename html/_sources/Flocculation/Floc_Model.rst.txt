@@ -48,12 +48,12 @@ Relative velocities between particles are dominated by viscous shear because the
 .. math::
    :label: eq_spacing_of_number_concentration
 
-   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{-} V_{\rm{Surround}}}^\frac{1}{3}
+   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{--} V_{\rm{Surround}}}^\frac{1}{3}
 
 | Where:
 | :math:`\bar \Lambda` is the average separation distance
 | :math:`n_P` is the number of particles per volume of suspension
-| :math:`{\rlap{-} V_{\rm{Surround}}}` is the suspension volume occupied by one particle
+| :math:`{\rlap{--} V_{\rm{Surround}}}` is the suspension volume occupied by one particle
 
 The number concentration of particles is given by
 
@@ -224,15 +224,15 @@ Now that we know that the collisions are controlled by viscosity we can begin fo
 
 The volume cleared by the wandering particle is proportional to the area defined by a circle with diameter = sum of the particle diameters. This is because the wandering particle with strike the stationary particle if the wandering particle's center is anywhere within a diameter of the center of the stationary particle.
 
-.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto \pi \bar d_P^2
+.. math:: {\rlap{--} V_{\rm{Cleared}}} \propto \pi \bar d_P^2
 
 The volume cleared is proportional to time
 
-.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto t
+.. math:: {\rlap{--} V_{\rm{Cleared}}} \propto t
 
 The volume cleared is proportional to the relative velocity between the two particles.
 
-.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto \bar v_r
+.. math:: {\rlap{--} V_{\rm{Cleared}}} \propto \bar v_r
 
 We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between the two particles that will eventually collide is assumed to be proportional to the average distance between the two particles.
 
@@ -248,10 +248,10 @@ The only way to for :math:`\bar \varepsilon` and :math:`\nu` to produce dimensio
 
 .. math:: \bar v_r \approx \bar \Lambda \bar G_{CS}
 
-The volume cleared, :math:`{\rlap{-} V_{\rm{Cleared}}}` must equal the volume occupied by one particle, :math:`{\rlap{-} V_{\rm{Surround}}}` for a collision to occur. Combining the three equations for :math:`{\rlap{-} V_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared as a function of time.
+The volume cleared, :math:`{\rlap{--} V_{\rm{Cleared}}}` must equal the volume occupied by one particle, :math:`{\rlap{--} V_{\rm{Surround}}}` for a collision to occur. Combining the three equations for :math:`{\rlap{--} V_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared as a function of time.
 
 .. math::
-   \bar \Lambda^3 = {\rlap{-} V_{\rm{Surround}}} = {\rlap{-} V_{\rm{Cleared}}} \approx \pi \bar d_P^2 \bar \Lambda \bar G_{CS} \bar t_c
+   \bar \Lambda^3 = {\rlap{--} V_{\rm{Surround}}} = {\rlap{--} V_{\rm{Cleared}}} \approx \pi \bar d_P^2 \bar \Lambda \bar G_{CS} \bar t_c
 
 | Where:
 | :math:`\bar t_c` is the average time required for a collision between two particles
@@ -328,7 +328,7 @@ Continuing from :cite:`Floc_Model-pennock_theoretical_2016`, the above Lagrangia
 	 \frac{dC_{P}}{dN_{c}}=-kC_{P},
 
 
-where :math:`k` is an experimentally-derived constant that physically represents the portion of the primary particles that become settleable particles on average after each collision time, :math:`\bar{t_c}`, and will depend, in part, upon the design capture velocity, :math:`v_c`, used for sedimentation. Since :math:`\bar{t_c}` increases over time as :math:`\bar \Lambda` increases, the above formulation is not proportional to :math:`\frac{dC_P}{dt}`. Physically, Equation :eq:`dCP` states that, with each progressive primary particle collision, :math:`C_P` decreases by some proportion. Further, Equation :eq:`dCP` states that this decrease is directly proportional to :math:`C_P`. With each successive successful collision, the absolute reduction in :math:`C_P` is less than the prior one. The value of :math:`k` is expected to be less than 1, because not all primary particles will have a collision and grow to a size with a sedimentation velocity greater than :math:`v_c` in the average time required for a collision.
+where :math:`k` is an experimentally-derived constant that physically represents the portion of the primary particles that become settleable particles on average after each collision time, :math:`\bar{t_c}`, and will depend, in part, upon the design capture velocity, :math:`\bar v_c`, used for sedimentation. Since :math:`\bar{t_c}` increases over time as :math:`\bar \Lambda` increases, the above formulation is not proportional to :math:`\frac{dC_P}{dt}`. Physically, Equation :eq:`dCP` states that, with each progressive primary particle collision, :math:`C_P` decreases by some proportion. Further, Equation :eq:`dCP` states that this decrease is directly proportional to :math:`C_P`. With each successive successful collision, the absolute reduction in :math:`C_P` is less than the prior one. The value of :math:`k` is expected to be less than 1, because not all primary particles will have a collision and grow to a size with a sedimentation velocity greater than :math:`\bar v_c` in the average time required for a collision.
 
 Having Equation :eq:`dCP`, the next step is to substitute it into Equation :eq:`Ncld` and integrate. Solving Equation :eq:`dCP` for :math:`dN_{c}`, substituting it into Equation :eq:`Ncld` and rewriting the equations in terms of primary particles results in Equation :eq:`dCPlam`,
 
@@ -442,7 +442,7 @@ Along with the clay, strong base (NaOH) manufactured by Sigma-Aldrich (St. Louis
 
 Just prior to entering the flocculator,  PACl coagulant (PCH-180) manufactured by the Holland Company, Inc. (Adams, Massachusetts) was added to the flow by a computer-controlled peristaltic pump which varied the coagulant dose between experiments. After entering the system, the coagulant then entered a small orifice used to accomplish rapid mix by forming a jet downstream. From there, the suspension traveled up through the flocculator made of 3.18 cm (1.25 in) inner diameter tubing. Within the flocculator, the fluid passed through constrictions in the tubing that caused the flow to contract, resulting in flow expansions afterward and achieving increased mixing and energy dissipation.
 
-After leaving the flocculator, the flow passed a vertical tube with a free surface that served as an air release. This removed bubbles in the system so that they would not interfere with settling or analysis of the flocs. A portion of the flow was then diverted for sedimentation by means of a peristaltic pump up a clear one-inch PVC pipe angled at :math:`60^{\circ}`. The flow rate through the pump was selected based on the dimensions of the tube and its angle to achieve a desired capture velocity, :math:`v_c`. The supernatant from this tube settler was passed through an HF Scientific MicroTOL nephelometric turbidimeter to record the effluent turbidity for the duration of the experiment. Recording the settled effluent turbidity made it possible to calculate the :math:`pC^*` term in Equations :eq:`pClam` (in terms of primary particles) and also made possible comparison with data from :cite:`Floc_Model-swetland_flocculation-sedimentation_2014`.
+After leaving the flocculator, the flow passed a vertical tube with a free surface that served as an air release. This removed bubbles in the system so that they would not interfere with settling or analysis of the flocs. A portion of the flow was then diverted for sedimentation by means of a peristaltic pump up a clear one-inch PVC pipe angled at :math:`60^{\circ}`. The flow rate through the pump was selected based on the dimensions of the tube and its angle to achieve a desired capture velocity, :math:`\bar v_c`. The supernatant from this tube settler was passed through an HF Scientific MicroTOL nephelometric turbidimeter to record the effluent turbidity for the duration of the experiment. Recording the settled effluent turbidity made it possible to calculate the :math:`pC^*` term in Equations :eq:`pClam` (in terms of primary particles) and also made possible comparison with data from :cite:`Floc_Model-swetland_flocculation-sedimentation_2014`.
 
 After data from the settled flocs had been collected, the flow from the effluent turbidimeter was sent to the drain along with the bulk flow. The bulk flow traveled past a second air release before exiting the drain. The air release gave the flow exiting the drain a free surface as it flowed over the exit weir so that the exiting water developed into a supercritical flow. Thus, the flow over the weir was not influenced by the flow downstream of the free surface, and the flow rate could be controlled by adjusting the elevation of the free surface before the drain. The outlet weir was a 1-1/4" PVC pipe within an upright 3" clear pipe, which were joined by a flexible coupling adapter. The effluent water accumulated in the clear outer pipe until it reached the elevation of the top of the inner pipe and flowed down through it. The flow rate could be adjusted by loosening the flexible coupling so that the elevation of the top of the inner pipe could be adjusted. As the bulk flow exited down out of the inner pipe to the drain, it passed over a glass electrode sensor to
 measure pH.
@@ -450,7 +450,7 @@ measure pH.
 Results
 -------
 
-The above process was used to conduct the experiments to test the applicability of Equation :eq:`pClam` in turbulent flocculation. The influent turbidity was set at a constant of 900 NTU. The mean energy dissipation rate was about 21.5 mW/kg, which resulted from choosing a flow rate of about 110 mL/s so that the Reynolds number was just above 4,000. These values were chosen to ensure viscous-dominated turbulent initial conditions. For these experiments, coagulant doses ranged from 0.05 to 98 mg/L as Al. A :math:`v_c` of 0.12 mm/s was used for all experiments. Data from these nominally viscous experiments are shown in :numref:`figure_PennockFig2` as a function of coagulant dose.
+The above process was used to conduct the experiments to test the applicability of Equation :eq:`pClam` in turbulent flocculation. The influent turbidity was set at a constant of 900 NTU. The mean energy dissipation rate was about 21.5 mW/kg, which resulted from choosing a flow rate of about 110 mL/s so that the Reynolds number was just above 4,000. These values were chosen to ensure viscous-dominated turbulent initial conditions. For these experiments, coagulant doses ranged from 0.05 to 98 mg/L as Al. A :math:`\bar v_c` of 0.12 mm/s was used for all experiments. Data from these nominally viscous experiments are shown in :numref:`figure_PennockFig2` as a function of coagulant dose.
 
 
 .. _figure_PennockFig2:
@@ -513,7 +513,7 @@ Applying the AguaClara flocculation model to the design of a hydraulic flocculat
 
 Regarding flocculator design, recommended values of :math:`\bar G_{CS}` in flocculation range from :math:`10\:\mathrm{\frac{1}{s}}` to :math:`100\:\mathrm{\frac{1}{s}}`, which correspond to :math:`\bar{\varepsilon}` values of about 0.1 to 10 mW/kg :cite:`Floc_Model-mcconnachie_design_2000`. However, there is evidence that higher velocity gradients are advantageous, as found by :cite:`Floc_Model-garland_revisiting_2016` as well as the work done in this study, which made use of energy dissipation rates of about 22 mW/kg. For hydraulic flocculators, at least, designers should consider using higher energy dissipation rates than conventionally used, since they have a much lower ratio of maximum to average energy dissipation rate, leading to less floc breakup at high energy dissipation rates compared to mechanically mixed flocculators.
 
-The assumption that nonsettleable particle removal is proportional to primary particle removal appears to be supported by the goodness of fit supplied by the AguaClara  flocculation model to the data (see :numref:`figure_PennockFig3`). This assumption is likely included in the values of :math:`k` fit by the model. A mechanistic understanding of :math:`k` will require that the proportionality between nonsettleable and primary particles be understood explicitly. It is possible that :math:`k` is a function of rapid mix effectiveness, and since :math:`k` predicts :math:`pC^*`, it will also be dependent on :math:`v_c`. Future experiments at varying :math:`v_c` are planned. Currently, :math:`\bar{\alpha}` is calculated assuming that coagulant nanoparticle attachment to the primary particles was accomplished very early on in the flocculator, but if colloid coating by coagulant nanoparticles is dependent upon diffusion rather than exclusively on hydraulic shear, it will be a function of time in addition to :math:`\bar G_{CS}\theta`, making flocculation less effective at high flow rates. Additionally, the use of :math:`\bar{\varepsilon}` (or :math:`\bar G_{CS}`) assumes a uniform energy dissipation rate in the flocculator. Any spatial deviation in the laboratory flocculator from a uniform energy dissipation rate would have had an impact on the values of :math:`k` relative to their theoretical values, which are dictated by the rate of conversion of primary particles to flocs.
+The assumption that nonsettleable particle removal is proportional to primary particle removal appears to be supported by the goodness of fit supplied by the AguaClara  flocculation model to the data (see :numref:`figure_PennockFig3`). This assumption is likely included in the values of :math:`k` fit by the model. A mechanistic understanding of :math:`k` will require that the proportionality between nonsettleable and primary particles be understood explicitly. It is possible that :math:`k` is a function of rapid mix effectiveness, and since :math:`k` predicts :math:`pC^*`, it will also be dependent on :math:`\bar v_c`. Future experiments at varying :math:`\bar v_c` are planned. Currently, :math:`\bar{\alpha}` is calculated assuming that coagulant nanoparticle attachment to the primary particles was accomplished very early on in the flocculator, but if colloid coating by coagulant nanoparticles is dependent upon diffusion rather than exclusively on hydraulic shear, it will be a function of time in addition to :math:`\bar G_{CS}\theta`, making flocculation less effective at high flow rates. Additionally, the use of :math:`\bar{\varepsilon}` (or :math:`\bar G_{CS}`) assumes a uniform energy dissipation rate in the flocculator. Any spatial deviation in the laboratory flocculator from a uniform energy dissipation rate would have had an impact on the values of :math:`k` relative to their theoretical values, which are dictated by the rate of conversion of primary particles to flocs.
 
 Summaries
 ---------

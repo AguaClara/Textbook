@@ -476,7 +476,7 @@ H_e = 6.16S
 <li>Find:
 - <span class="math notranslate nohighlight">\(G_{CS}\)</span>, average velocity gradient
 - <span class="math notranslate nohighlight">\(\theta\)</span>, hydraulic retention time
-- <span class="math notranslate nohighlight">\(\rlap{-}V_{floc}\)</span>, flocculator volume</li>
+- <span class="math notranslate nohighlight">\(\rlap{--}V_{floc}\)</span>, flocculator volume</li>
 </ul>
 </dd>
 </dl>
@@ -536,7 +536,7 @@ H_e = 6.16S
 <span class="eqno">(372)<a class="headerlink" href="#equation-flocculation-floc-design-16" title="Permalink to this equation">¶</a></span>\[\theta = \frac{G_{CS} \theta}{G_{CS}}\]</div>
 <p>Finally, we take retention time <span class="math notranslate nohighlight">\(\theta\)</span> over plant flow rate <span class="math notranslate nohighlight">\(Q\)</span> to get the required volume of the flocculator:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-17">
-<span class="eqno">(373)<a class="headerlink" href="#equation-flocculation-floc-design-17" title="Permalink to this equation">¶</a></span>\[\rlap{-} V_{floc} = \frac{\theta}{Q}\]</div>
+<span class="eqno">(373)<a class="headerlink" href="#equation-flocculation-floc-design-17" title="Permalink to this equation">¶</a></span>\[\rlap{--} V_{floc} = \frac{\theta}{Q}\]</div>
 <p>Now that we have the basic parameters defined, we can start to design the details of the flocculator, starting from the physical dimensions.</p>
 </div>
 </div>
@@ -545,10 +545,10 @@ H_e = 6.16S
 <p>Deriving the equations required to find the physical dimensions now and the hydraulic parameters (baffle/obstacle design) in the next section requires many steps. To simplify this design explanation the equation derivations are developed in <a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html#title-review-fluid-mechanics-derivations"><span class="std std-ref">Review: Fluid Mechanics Derivations</span></a>. All complex equations which seemingly came out of nowhere will be derived in the derivation sheet.</p>
 <div class="section" id="length">
 <h4>Length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h4>
-<p>Flocculator length, <span class="math notranslate nohighlight">\(L_{channel}`\)</span> must meet two constraints: it must be less than or equal to the length of the sedimentation tanks, as the flocculator is adjacent to the sed tanks. This constraint is <span class="math notranslate nohighlight">\(L_{Max, \, sed}\)</span>. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside <span class="math notranslate nohighlight">\(L_{Max, \, \rlap{-} V}\)</span>. <strong>The constraint that wins out is the one that results in the *smaller* length value</strong>.</p>
+<p>Flocculator length, <span class="math notranslate nohighlight">\(L_{channel}`\)</span> must meet two constraints: it must be less than or equal to the length of the sedimentation tanks, as the flocculator is adjacent to the sed tanks. This constraint is <span class="math notranslate nohighlight">\(L_{Max, \, sed}\)</span>. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside <span class="math notranslate nohighlight">\(L_{Max, \, \rlap{--} V}\)</span>. <strong>The constraint that wins out is the one that results in the *smaller* length value</strong>.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-18">
 <span class="eqno">(374)<a class="headerlink" href="#equation-flocculation-floc-design-18" title="Permalink to this equation">¶</a></span>\[L_{Max, \, sed} = 6 \, {\rm m}
-L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human} H}\]</div>
+L_{Max, \, \rlap{--}V} = \frac{\rlap{--} V}{n_{Min, \, channels} W_{Min, \, human} H}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(n_{Min, \, channels} = 2\)</span></div>
@@ -556,7 +556,7 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <p>The reason why <span class="math notranslate nohighlight">\(W_{Min, \, human}\)</span> is used is because it represents the absolute minimum of flocculator channel width. If the width ends up being larger, the length will decrease. <span class="math notranslate nohighlight">\(n_{Min, \, channels} = 2\)</span>  to make sure that the flow ends up on the correct side of the sedimentation tank, as the image below shows. Note that there can only be an even number of flocculator channels, as explained in the image’s caption.</p>
 <p>The equation for <em>actual</em> flocculator length is therefore:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-19">
-<span class="eqno">(375)<a class="headerlink" href="#equation-flocculation-floc-design-19" title="Permalink to this equation">¶</a></span>\[L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \rlap{-} V})\]</div>
+<span class="eqno">(375)<a class="headerlink" href="#equation-flocculation-floc-design-19" title="Permalink to this equation">¶</a></span>\[L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \rlap{--} V})\]</div>
 <div class="figure align-center" id="id18">
 <span id="figure-floc-channels"></span><a class="reference internal image-reference" href="../_images/Floc_channels.jpg"><img alt="floc channels" src="../_images/Floc_channels.jpg" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 103 </span><span class="caption-text">There are an even amount of flocculator channels to keep the AguaClara plant layout consistent for flows greater than 12 L/s. This ensures that the entrance tank, filter box, and filters can be kept in the same places across plants.</span></p>
@@ -579,7 +579,7 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <span class="eqno">(377)<a class="headerlink" href="#equation-flocculation-floc-design-21" title="Permalink to this equation">¶</a></span>\[W_{Min} = {\rm max}(W_{Min, \, \Pi_{H_eS}}, \, W_{Min, \, human})\]</div>
 <p>We can find the number of channels, <span class="math notranslate nohighlight">\(n_{channels}\)</span> and their actual width in one last step, by finding the <em>total flocculator width</em> if there were no channels and dividing that by the minimum flocculator width, <span class="math notranslate nohighlight">\(W_{Min}\)</span>, found above. The equation for total flocculator width is based on our target volume:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-22">
-<span class="eqno">(378)<a class="headerlink" href="#equation-flocculation-floc-design-22" title="Permalink to this equation">¶</a></span>\[W_{total} = \frac{\rlap{-} V}{H L_{channel}}\]</div>
+<span class="eqno">(378)<a class="headerlink" href="#equation-flocculation-floc-design-22" title="Permalink to this equation">¶</a></span>\[W_{total} = \frac{\rlap{--} V}{H L_{channel}}\]</div>
 <p>Finally:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-23">
 <span class="eqno">(379)<a class="headerlink" href="#equation-flocculation-floc-design-23" title="Permalink to this equation">¶</a></span>\[n_{channels} = \frac{W_{total}}{W_{Min}}\]</div>
@@ -631,7 +631,7 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 </div>
 <div class="section" id="residence-time-of-water-in-the-flocculator-check">
 <h3>Residence Time of Water in the Flocculator Check<a class="headerlink" href="#residence-time-of-water-in-the-flocculator-check" title="Permalink to this headline">¶</a></h3>
-<p>It is now time to make our final check. We need to make sure that our actual residence time is <em>at least</em> as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than <span class="math notranslate nohighlight">\(\rlap{-} V_{floc}\)</span>. See <a class="reference internal" href="#figure-flocculator-head-loss"><span class="std std-numref">Fig. 104</span></a> for clarification.</p>
+<p>It is now time to make our final check. We need to make sure that our actual residence time is <em>at least</em> as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than <span class="math notranslate nohighlight">\(\rlap{--} V_{floc}\)</span>. See <a class="reference internal" href="#figure-flocculator-head-loss"><span class="std std-numref">Fig. 104</span></a> for clarification.</p>
 <div class="figure align-center" id="id19">
 <span id="figure-flocculator-head-loss"></span><a class="reference internal image-reference" href="../_images/Flocculator_head_loss.jpg"><img alt="Flocculator_head_loss" src="../_images/Flocculator_head_loss.jpg" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 104 </span><span class="caption-text">The water level in the flocculator decreases due to head loss. Flocculators may occupy multiple channels, but this extra triangle of water exists in any case.</span></p>

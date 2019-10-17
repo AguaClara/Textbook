@@ -151,7 +151,7 @@ Porosity of a sand bed refers to the ratio of the void volume to the total volum
 .. math::
    :label: porosity
 
-    \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}
+    \phi_{FiSand} = \frac{\rlap{--} V_{voids}}{\rlap{--} V_{total}}
 
 
 Porosity is determined by the geometry of the material and the size distribution (or uniformity of the particle sizes) and not by the average size of the particles. If you have three different sized spheres (such as  1 um clay, 0.2 mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in :numref:`figure_porosity`. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.

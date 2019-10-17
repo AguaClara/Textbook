@@ -109,15 +109,15 @@ Diffusion transports the coagulant nanoparticles a relatively short distance, a 
 
 We need to calculate the rate at which coagulant nanoparticles attach to the clay particles. The long range transport is assumed to be the rate limiting step. The volume cleared is proportional to the area of this ring with the ring thickness equal to the molecular diffusion band thickness. Here we assume that the :math:`L_{Diff_{CN}} << d_{Clay}`
 
-.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto \pi \, d_{Clay} \, L_{Diff_{CN}}
+.. math:: {\rlap{--} V_{\rm{Cleared}}} \propto \pi \, d_{Clay} \, L_{Diff_{CN}}
 
 The volume cleared is proportional to time
 
-.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto t
+.. math:: {\rlap{--} V_{\rm{Cleared}}} \propto t
 
 The volume cleared is proportional to the relative velocity between clay and nanoparticles. This relative velocity is in the viscous layer of fluid in the ring surrounding the clay particle.
 
-.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto v_r
+.. math:: {\rlap{--} V_{\rm{Cleared}}} \propto v_r
 
 We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between coagulant nanoparticles and clay particle that they will eventually collide with is assumed to be proportional to the average distance between clay particles. This assumption is both critical for the following derivation and is suspect. It is critical because if we were to assume that the relative velocity caused by shear is proportional to the nanoparticle diameter, the clay diameter, or the diffusion length scale, then the velocity would be extremely small and the time to clear the volume of fluid associated with one clay particle would take a very long time. However, wishing for a speedy process doesn't justify incorrect scaling. The relative velocity is assumed to be the velocity at which coagulant nanoparticles are transported into the two separate fluid volumes that will deform into the ring around the clay particle in the next few seconds.
 
@@ -133,9 +133,9 @@ The only way to for :math:`\varepsilon` and :math:`\nu` to produce dimensions of
 
 .. math:: v_r \approx \Lambda_{Clay} G
 
-Combining the three equations for :math:`{\rlap{-} V_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared as a function of time.
+Combining the three equations for :math:`{\rlap{--} V_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared as a function of time.
 
-.. math::  {\rlap{-} V_{\rm{Cleared}}} \approx \pi  d_{Clay} \, L_{Diff_{CN}}  \Lambda_{Clay} G  t_c
+.. math::  {\rlap{--} V_{\rm{Cleared}}} \approx \pi  d_{Clay} \, L_{Diff_{CN}}  \Lambda_{Clay} G  t_c
 
 
 .. _heading_Collision_Rates:
@@ -143,7 +143,7 @@ Combining the three equations for :math:`{\rlap{-} V_{\rm{Cleared}}}` and the eq
 Collision Rates
 ===============
 
-The time for all of the fluid to have had one opportunity for a collision occurs when :math:`{\rlap{-} V_{\rm{Cleared}}} = {\rlap{-} V_{\rm{Occupied}}} = \Lambda_{Clay}^3`
+The time for all of the fluid to have had one opportunity for a collision occurs when :math:`{\rlap{--} V_{\rm{Cleared}}} = {\rlap{--} V_{\rm{Occupied}}} = \Lambda_{Clay}^3`
 
 .. math:: t_c = \frac{\Lambda_{Clay}^3}{\pi d_{Clay} L_{Diff_{CN}} \Lambda_{Clay} G}
 
