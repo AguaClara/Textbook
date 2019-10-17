@@ -2,7 +2,7 @@
 This file is a temporary storage place for the LaTeX equations used in 4540 slides. Once some progress is made and the equations can be divided into groups, a well-designed file structure will be made.
 
 **Notes for LaTeX math in Atom text editor**
-1. Differentiating velocity ($V$) from volume ($\rlap{-} V$) is done with the `rlap{-}` function before the `V`. Using two dashes inside `\rlap{}`, which is how MathType translates volume,  results in the text losing its color coding in atom.
+1. Differentiating velocity ($V$) from volume ($\rlap{--} V$) is done with the `rlap{-}` function before the `V`. Using two dashes inside `\rlap{}`, which is how MathType translates volume,  results in the text losing its color coding in atom.
 2. Using an asterisk (I will refrain from using one here) in LaTeX equations causes the text coloring to become a bit wonky and quite purple. Instead, use `\ast` when working within the dollar signs that denote math equations.
 
 
@@ -23,7 +23,7 @@ $$G = \sqrt{ \frac{\varepsilon}{\nu} }$$
 
 
 ### Mechanical Design: Mixing with Paddles
-$$G = \sqrt \frac{C_D A_P a^3 V_{pa}^3}{2 \rlap{-} V \nu} $$
+$$G = \sqrt \frac{C_D A_P a^3 V_{pa}^3}{2 \rlap{--} V \nu} $$
 
 $$C_D \approx 1.9$$
 
@@ -50,7 +50,7 @@ $$n = \frac{\log(1,000,000,000)}{\log(2)}$$
 ### Fractals capture the idea that volume isn't conserved
 $$d = d_0 i^\frac{1}{D_{Fractal}}$$
 
-$$\rlap{-} V = \rlap{-} V_0 i^\frac{3}{D_{Fractal}}$$
+$$\rlap{--} V = \rlap{--} V_0 i^\frac{3}{D_{Fractal}}$$
 
 
 ### Buoyant Density of Flocs
@@ -84,9 +84,9 @@ $$V_t = \frac{g d_0}{18 \Phi \nu_{H_2O}}
 
 
 ### Average distance between particles is the cube root of the volume occupied ($\Lambda$)
-$$\rlap{-} V_P = \frac{\pi}{6} d_P^3$$
+$$\rlap{--} V_P = \frac{\pi}{6} d_P^3$$
 
-$$n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
+$$n_P = \frac{C_P}{\rlap{--} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
 
 $$\Lambda  = \frac{1}{n_P^{\frac{1}{3}}}$$
 
@@ -98,13 +98,13 @@ $$n_P = n_{P_0} \left( \frac{d_0}{d_P} \right)^{D_{Fractal}}$$
 $$\phi_{Floc} = \phi_{Floc_0} \left( \frac{d}{d_0} \right)^{3 - D_{Fractal}}$$
 
 $$\begin{array}{l}
-n_{Floc} = \frac{C_{Floc}}{\rlap{-} V_{Floc} \rho_{Floc}} = \frac{\phi_{Floc}}{\rlap{-} V_{Floc}}
+n_{Floc} = \frac{C_{Floc}}{\rlap{--} V_{Floc} \rho_{Floc}} = \frac{\phi_{Floc}}{\rlap{--} V_{Floc}}
 \\
-n_{Floc_0} = \frac{\phi_{Floc_0}}{\rlap{-} V_{Floc_0}}
+n_{Floc_0} = \frac{\phi_{Floc_0}}{\rlap{--} V_{Floc_0}}
 \\
-n_{Floc} = \frac{\phi_{Floc}}{\rlap{-} V_{Floc}} = \frac{\phi_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{\rlap{-} V_{Floc}}
+n_{Floc} = \frac{\phi_{Floc}}{\rlap{--} V_{Floc}} = \frac{\phi_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{\rlap{--} V_{Floc}}
 \\
-= n_{Floc_0} \frac{\rlap{-} V_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{ \rlap{-} V_{Floc}}
+= n_{Floc_0} \frac{\rlap{--} V_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{ \rlap{--} V_{Floc}}
 \\
 = n_{Floc_0} \left( \frac{d_0}{d_{Floc}} \right)^3 \left( \frac{d_{Floc}}{d_0} \right)^{3 - {D_{Fractal}}}
 \\
@@ -137,7 +137,7 @@ $$v_r t$$
 
 $$\pi d_P^2$$
 
-$$\rlap{-} V_{\rm{Cleared}} \propto \pi d_P^2 v_r t$$
+$$\rlap{--} V_{\rm{Cleared}} \propto \pi d_P^2 v_r t$$
 
 
 ### Use dimensional analysis to get a relative velocity
@@ -172,7 +172,7 @@ $$\Pi_{kv} = 50$$
 
 
 ### Collision rates for the two assumptions
-$$\rlap{-} V_{Occupied} = \Lambda^3$$
+$$\rlap{--} V_{Occupied} = \Lambda^3$$
 
 $$t_c = \frac{\Lambda^2}{{\pi d_P^2G}}$$
 
@@ -391,7 +391,7 @@ $$\Gamma = \frac{n_{nc_0} d_{nc}^2}{4 n_{p_0} d_p^2}$$
 
 $$\Gamma = \frac{ \frac{6}{\pi d_{nc}^3} \frac{C_{nc_0}}{\rho_{nc}} \pi d_{nc}^2}{4 \frac{6}{\pi d_P^3} \frac{C_{P_0}}{\rho_P} \pi d_p^2}$$
 
-$$n_P = \frac{C_P}{\rlap{-} V_P} \rho_P
+$$n_P = \frac{C_P}{\rlap{--} V_P} \rho_P
 = \frac{6}{\pi d_P^3}\frac{C_P}{\rho_P}$$
 
 $$\Gamma = \frac{C_{nc_0}}{4 d_{nc}\rho_{nc}} \frac{d_P \rho_P}{C_{P_0}}$$
@@ -437,9 +437,9 @@ $$SA_{Wall} = \pi D_{Tube} L_{Tube}$$
 
 $$SA_{ClayTotal} = \frac{\pi}{4} D_{Tube}^2 L_{Tube} \frac{SA_{Clay}}{V_{Clay}} \phi_{Clay}$$
 
-$$\Pi_{ClaySphere} = \frac{SA_{Clay}}{\rlap{-} V_{Clay}} \frac{ \frac{\pi}{6} D_{Clay}^3}{\pi D_{Clay}^2} = \frac{SA_{Clay}}{\rlap{-} V_{Clay}} \frac{D_{Clay}}{6}$$
+$$\Pi_{ClaySphere} = \frac{SA_{Clay}}{\rlap{--} V_{Clay}} \frac{ \frac{\pi}{6} D_{Clay}^3}{\pi D_{Clay}^2} = \frac{SA_{Clay}}{\rlap{--} V_{Clay}} \frac{D_{Clay}}{6}$$
 
-$$\frac{SA_{Clay}}{\rlap{-} V_{Clay}} = \frac{6 \Pi_{ClaySphere}}{D_{Clay}}$$
+$$\frac{SA_{Clay}}{\rlap{--} V_{Clay}} = \frac{6 \Pi_{ClaySphere}}{D_{Clay}}$$
 
 $$SA_{ClayTotal} = \frac{3 \pi D_{Tube}^2 L_{Tube} \Pi_{ClaySphere}} {2D_{Clay}}{\phi_{Clay}}$$
 
@@ -469,7 +469,7 @@ $$\frac{D_{Coag}^2 N_{CoagPerClay}}{SA_{Clay}} =
 \frac{\phi_{Coag}}{\phi_{Clay}}
 \frac{D_{Clay}}{\pi D_{Coag} \Pi_{ClaySphere}}$$
 
-$$\frac{SA_{Clay}}{\rlap{-} V_{Clay}} = \frac{6 \Pi_{ClaySphere}}{D_{Clay}}$$
+$$\frac{SA_{Clay}}{\rlap{--} V_{Clay}} = \frac{6 \Pi_{ClaySphere}}{D_{Clay}}$$
 
 $$\Gamma = 1 - e^{
  - \frac{D_{Coag}^2 N_{CoagPerClay}}{SA_{Clay}} \Pi_{A_{Clay} A_{Total}}
@@ -487,13 +487,13 @@ $$\Gamma  = 1 - e^{
 ### Clay platelet geometry
 $$\Pi_{HD} = \frac{H_{ClayPlatelet}}{D_{ClayPlatelet}}$$
 
-$$\rlap{-} V_{Platelet} = \frac{\pi}{4} D_{ClayPlatelet}^2 H_{ClayPlatelet}$$
+$$\rlap{--} V_{Platelet} = \frac{\pi}{4} D_{ClayPlatelet}^2 H_{ClayPlatelet}$$
 
-$$\rlap{-} V_{Platelet} = \Pi_{HD} \frac{\pi}{4} D_{ClayPlatelet}^3$$
+$$\rlap{--} V_{Platelet} = \Pi_{HD} \frac{\pi}{4} D_{ClayPlatelet}^3$$
 
-$$\rlap{-} V_{Platelet} = \frac{\pi}{6} D_{Clay}^3$$
+$$\rlap{--} V_{Platelet} = \frac{\pi}{6} D_{Clay}^3$$
 
-$$\rlap{-} V_{Platelet} = \Pi_{HD} \frac{\pi}{4} D_{ClayPlatelet}^3 = \frac{\pi}{6} D_{Clay}^3$$
+$$\rlap{--} V_{Platelet} = \Pi_{HD} \frac{\pi}{4} D_{ClayPlatelet}^3 = \frac{\pi}{6} D_{Clay}^3$$
 
 $$D_{ClayPlatelet} = \left( \frac{2}{3 \Pi_{HD}} \right)^{\frac{1}{3}} D_{Clay}$$
 

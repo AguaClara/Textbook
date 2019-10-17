@@ -907,11 +907,11 @@ Where 7 is the number of layers of branches, and :math:`L_{TotalBranches}` the t
 
 Thus the total plumbing volume is:
 
-:math:`\rlap{-} V_{FiPlumbing} = \rlap{-} V_{BWTrunk} + \rlap{-} V_{Trunks} + \rlap{-} V_{Branches}`
+:math:`\rlap{--} V_{FiPlumbing} = \rlap{--} V_{BWTrunk} + \rlap{--} V_{Trunks} + \rlap{--} V_{Branches}`
 
 Then the total sand volvume in the filter is the volume of the filter (a function of its heigth and area) minus the volume of the plumbing.
 
-:math:`\rlap{-} V_{SandTotal} = (A_{Fi}*H_{FiSandLow}) - \rlap{-} V_{FiPlumbing}`.
+:math:`\rlap{--} V_{SandTotal} = (A_{Fi}*H_{FiSandLow}) - \rlap{--} V_{FiPlumbing}`.
 
 Multplying the density of the sand, :math:`\Rho_{Sand}` by the volume of the sand gives the mass of the sand, :math:`M_{Sand}`
 

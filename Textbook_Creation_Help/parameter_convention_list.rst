@@ -33,19 +33,19 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`C_D`,Drag coefficient,Dimensionless
     :math:`D`,Diameter,:math:`[L]`
     :math:`D_0`,Diameter of clay primary particle,:math:`[L]`
-    :math:`D_{fractal}`,Diameter of fractal,:math:`[L]`
+    :math:`D_{fractal}`,Fractal Dimension,Dimensionless
     :math:`F`,Force,:math:`\frac{[M][L]}{[T]^2}`
     :math:`G`,Velocity Gradient/Fluid Deformation,:math:`\frac{1}{[T]}`
     :math:`G_{CS}`, Camp Stein velocity gradient,:math:`\frac{1}{[T]}`
     :math:`G\theta`,Collision potential,Dimensionless
     :math:`H`,Height,:math:`[L]`
     :math:`H_c`,Critical height,:math:`[L]`
-    :math:`H_e`,Height Between Flow Expansions in a Flocculator,:math:`[L]`
+    :math:`H_e`,Distance Between Flow Expansions in a Flocculator,:math:`[L]`
     :math:`H_{fb}`,Height of the floc blanket,:math:`[L]`
     :math:`K`,Minor Loss coefficient,Dimensionless
     :math:`L`,Length,:math:`[L]`
-    :math:`L_{SedActive}`,Length of the sedimentation tank that includes entrance to the plate settlers,:math:`[L]`
-    :math:`L_{SedFloc}`,Length of the sedimentation tank with a floc blanket,:math:`[L]`
+    :math:`L_{SedActive}`,Length of the plate settlers in the sedimentation tank (not including the triangle at the end of the tank),:math:`[L]`
+    :math:`L_{fb}`,Length of the floc blanket in a sedimentation tank,:math:`[L]`
     :math:`M`,Fluid Momentum,:math:`\frac{[M][L]}{[T]^2}`
     :math:`P`,Power,:math:`\frac{[M][L]^2}{[T]^3}`
     :math:`Q`,Flow rate,:math:`\frac{[L]^3}{[T]}`
@@ -54,9 +54,9 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`{\rm Re}`,Reynolds Number,Dimensionless
     :math:`S`,Spacing Between Two Objects,:math:`[L]`
     :math:`T`,Object Thickness,:math:`[L]`
-    :math:`\rlap{-} V`,Volume,:math:`[L]^3`
+    :math:`\rlap{--} V`,Volume,:math:`[L]^3`
     :math:`W`,Width,:math:`[L]`
-    :math:`W_{diff,min} `,Minimum internal width of diffuser,:math:`[L]`
+    ":math:`W_{diff,min}`",Minimum internal width of diffuser,:math:`[L]`
     :math:`W_{floc}`,Gravitational weight of floc,:math:`\frac{[M][L]}{[T]^2}`
     :math:`W_{Sed}`,Width of each sedimentation tank,:math:`[L]`
     Lowercase letters, ,
@@ -67,7 +67,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`h_e`,Minor Loss (expansion),:math:`[L]`
     :math:`h_{\rm f}`,Major Loss (friction),:math:`[L]`
     :math:`h_L`,Total headloss,:math:`[L]`
-    :math:`h_{L,jet}`,Head loss in jet leaving jet reverser,:math:`[L]`
+    ":math:`h_{L,jet}`",Head loss in jet leaving jet reverser,:math:`[L]`
     :math:`m`, Mass, :math:`[M]`
     :math:`n`,"Number, Amount",Dimensionless
     :math:`p`,Pressure,:math:`\frac{[M]}{[L][T]^2}`
@@ -75,17 +75,17 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`t`,Time,:math:`[T]`
     :math:`u`,Velocity in the x-direction,:math:`\frac{[L]}{[T]}`
     :math:`v`,Velocity,:math:`\frac{[L]}{[T]}`
-    :math:`v_{\alpha}`,Resultant fluid velocity through plate settler,:math:`\frac{[L]}{[T]}`
-    :math:`v_{z_{Active}}`,Upflow velocity of the water entering the plate settlers; vertical velocity in the 'active' region,:math:`\frac{[L]}{[T]}`
-    :math:`v_c`,Capture velocity,:math:`\frac{[L]}{[T]}`
-    :math:`v_H`,Horizontal velocity,:math:`\frac{[L]}{[T]}`
-    :math:`v_{jet}`,Velocity of the jet exiting the diffuser,:math:`\frac{[L]}{[T]}`
-    :math:`v_{P,H}`,Horizontal velocity through plate settlers,:math:`\frac{[L]}{[T]}`
-    :math:`v_{P,net}`,Net velocity of a particle through plate settlers,:math:`\frac{[L]}{[T]}`
-    :math:`v_{z_{Plate}}`,Upflow velocity of the water through the plate settlers,:math:`\frac{[L]}{[T]}`
+    :math:`\bar v_{\alpha_{Plate}}`,average fluid velocity between plate settlers,:math:`\frac{[L]}{[T]}`
+    :math:`\bar v_{z_{Active}}`,Upflow velocity of the water entering the plate settlers; vertical velocity in the 'active' region,:math:`\frac{[L]}{[T]}`
+    :math:`\bar v_c`,Capture velocity,:math:`\frac{[L]}{[T]}`
+    :math:`\bar v_H`,Horizontal velocity,:math:`\frac{[L]}{[T]}`
+    :math:`\bar v_{jet}`,Velocity of the jet exiting the diffuser,:math:`\frac{[L]}{[T]}`
+    :math:`\bar v_{x_{Plate}}`,Horizontal velocity through plate settlers,:math:`\frac{[L]}{[T]}`
+    :math:`v_{particle}`,Net velocity of a particle between plate settlers,:math:`\frac{[L]}{[T]}`
+    :math:`v_{z_{Plate}}`,Average vertical velocity of the water between the plate settlers,:math:`\frac{[L]}{[T]}`
     :math:`v_{Settle}`,Settling velocity,:math:`\frac{[L]}{[T]}`
     :math:`v_{Slide}`,Sedimentation velocity of floc between plate settlers,:math:`\frac{[L]}{[T]}`
-    :math:`v_{z_{FB}}`,Upflow velocity of the water through the floc blanket,:math:`\frac{[L]}{[T]}`
+    :math:`\bar v_{z_{FB}}`,Average vertical velocity of the water through the floc blanket,:math:`\frac{[L]}{[T]}`
     :math:`v_t`,Terminal velocity of particle,:math:`\frac{[L]}{[T]}`
     :math:`z`,Elevation,:math:`[L]`
     Greek lowercase letters, ,
@@ -105,7 +105,6 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`\Delta`,"Change in",Dimensionless
     :math:`\Lambda`,Distance Between Particles,:math:`[L]`
     :math:`\Pi`,Dimensionless Proportionality Ratio, Dimensionless
-    :math:`\Pi_{Fractal}`, volume based fractal dimension, Dimensionless
     :math:`\Pi_{Error}`,Linearity Error Ratio,Dimensionless
     :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`,:math:`\frac{\varepsilon_{Max}}{\bar \varepsilon}` Ratio in a Reactor,Dimensionless
     :math:`\Pi_{\bar G}^{G_{Max}}`,:math:`\frac{G_{Max}}{\bar G}` Ratio in a Reactor,Dimensionless

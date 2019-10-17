@@ -2,7 +2,7 @@
 This file is a temporary storage place for the LaTeX equations used in 4540 slides. Once some progress is made and the equations can be divided into groups, a well-designed file structure will be made.
 
 **Notes for LaTeX math in Atom text editor**
-1. Differentiating velocity ($V$) from volume ($\rlap{-} V$) is done with the `rlap{-}` function before the `V`. Using two dashes inside `\rlap{}`, which is how MathType translates volume,  results in the text losing its color coding in atom.
+1. Differentiating velocity ($V$) from volume ($\rlap{--} V$) is done with the `rlap{-}` function before the `V`. Using two dashes inside `\rlap{}`, which is how MathType translates volume,  results in the text losing its color coding in atom.
 2. Using an asterisk (I will refrain from using one here) in LaTeX equations causes the text coloring to become a bit wonky and quite purple. Instead, use `\ast` when working within the dollar signs that denote math equations.
 
 
@@ -18,7 +18,7 @@ $$V_{Total} = \frac{1}{\frac{1}{V_{Dynamic}} + \frac{1}{V_{Rough}} + \frac{1}{V_
 
 
 ### Porosity
-$$\phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}$$
+$$\phi_{FiSand} = \frac{\rlap{--} V_{voids}}{\rlap{--} V_{total}}$$
 
 
 ### Expanded Bed Porosity
@@ -151,9 +151,9 @@ N_{Fi} = 2 \, \, \, \, \, \,  {\rm Assume \, \, 2 \, \, filters}
 \\
 A_{Fi} = \frac{Q_{Plant}}{V_{Fi} \cdot N_{Fi}} = 1.7 \, {\rm m^2}
 \\
-\rlap{-} V_{Bw} = T_{Bw} V_{Bw} A_{Fi} = 18 \, {\rm m^2}
+\rlap{--} V_{Bw} = T_{Bw} V_{Bw} A_{Fi} = 18 \, {\rm m^2}
 \\
-T_{FillTank} = \frac{\rlap{-} V_{Bw}}{Q_{Plant}} 0.83 \, {\rm hr}
+T_{FillTank} = \frac{\rlap{--} V_{Bw}}{Q_{Plant}} 0.83 \, {\rm hr}
 \\
 H_{Tank} = 1 \, {\rm m}
 \\
@@ -316,23 +316,23 @@ $$\frac{20 \, {\rm cm}}{0.2 \, {\rm mm}} 4 \sqrt{2} = 0.5657$$
 
 
 ### Siphon Geometry for Air trap
-$$P \rlap{-} V = n R T$$
+$$P \rlap{--} V = n R T$$
 
-$$P_0 \rlap{-} V_0 = P_1 \rlap{-} V_1$$
+$$P_0 \rlap{--} V_0 = P_1 \rlap{--} V_1$$
 
 $$\begin{array}{l}
-\rlap{-} V_0 = \left( L1_0 + L2 + L3_0 \right) A_{Siphon}
+\rlap{--} V_0 = \left( L1_0 + L2 + L3_0 \right) A_{Siphon}
 \\
-\rlap{-} V_0 = \left( H_2 - H_3 - HL_{Siphon} + L2 + H_2 - H_3 \right) A_{Siphon}
+\rlap{--} V_0 = \left( H_2 - H_3 - HL_{Siphon} + L2 + H_2 - H_3 \right) A_{Siphon}
 \\
-\rlap{-} V_0 = \left( 2 H_2 - 2 H_3 - HL_{Siphon} + L2 \right) A_{Siphon}
+\rlap{--} V_0 = \left( 2 H_2 - 2 H_3 - HL_{Siphon} + L2 \right) A_{Siphon}
 \\
-\rlap{-} V_1 = \left( H_1 - H_3 + L2 + H_1 + H_2 - H_3 \right) A_{Siphon}
+\rlap{--} V_1 = \left( H_1 - H_3 + L2 + H_1 + H_2 - H_3 \right) A_{Siphon}
 \\
-\rlap{-} V_1 = \left( 2 H_1 - 2 H_3 + L2 + H_2 \right) A_{Siphon}
+\rlap{--} V_1 = \left( 2 H_1 - 2 H_3 + L2 + H_2 \right) A_{Siphon}
 \end{array}$$
 
-$$\rlap{-} V_1 = \frac{P_0 \rlap{-} V_0}{P_1}$$
+$$\rlap{--} V_1 = \frac{P_0 \rlap{--} V_0}{P_1}$$
 
 $$P_0 = 1 \, {\rm atm} $$
 
