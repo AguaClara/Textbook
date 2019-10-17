@@ -75,7 +75,7 @@ Parameters
 |                     $D$                      |                            Diameter                             |          $[L]$           |
 |                     $r$                      |                             Radius                              |          $[L]$           |
 |                     $A$                      |                              Area                               |         $[L]^2$          |
-|                 $\rlap{-} V$                 |                             Volume                              |         $[L]^3$          |
+|                 $\rlap{--} V$                 |                             Volume                              |         $[L]^3$          |
 |                     $v$                      |                            Velocity                             |    $\frac{[L]}{[T]}$     |
 |                     $Q$                      |                            Flow rate                            |   $\frac{[L]^3}{[T]}$    |
 |                     $n$                      |                         Number, Amount                          |            -             |

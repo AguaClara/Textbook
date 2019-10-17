@@ -345,7 +345,7 @@ The flocculator is more complex to design than the CDC, as it has more details a
     - Find:
       - :math:`G_{CS}`, average velocity gradient
       - :math:`\theta`, hydraulic retention time
-      - :math:`\rlap{-}V_{floc}`, flocculator volume
+      - :math:`\rlap{--}V_{floc}`, flocculator volume
 2. Physical dimensions
     - Calculate:
       - :math:`L_{channel}`, actual channel length
@@ -409,7 +409,7 @@ Finally, we take retention time :math:`\theta` over plant flow rate :math:`Q` to
 
 .. math::
 
-  \rlap{-} V_{floc} = \frac{\theta}{Q}
+  \rlap{--} V_{floc} = \frac{\theta}{Q}
 
 Now that we have the basic parameters defined, we can start to design the details of the flocculator, starting from the physical dimensions.
 
@@ -420,12 +420,12 @@ Deriving the equations required to find the physical dimensions now and the hydr
 Length
 ^^^^^^^^^^^^^^^^^^^^^
 
-Flocculator length, :math:`L_{channel}`` must meet two constraints: it must be less than or equal to the length of the sedimentation tanks, as the flocculator is adjacent to the sed tanks. This constraint is :math:`L_{Max, \, sed}`. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside :math:`L_{Max, \, \rlap{-} V}`. **The constraint that wins out is the one that results in the *smaller* length value**.
+Flocculator length, :math:`L_{channel}`` must meet two constraints: it must be less than or equal to the length of the sedimentation tanks, as the flocculator is adjacent to the sed tanks. This constraint is :math:`L_{Max, \, sed}`. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside :math:`L_{Max, \, \rlap{--} V}`. **The constraint that wins out is the one that results in the *smaller* length value**.
 
 .. math::
 
   L_{Max, \, sed} = 6 \, {\rm m}
-  L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human} H}
+  L_{Max, \, \rlap{--}V} = \frac{\rlap{--} V}{n_{Min, \, channels} W_{Min, \, human} H}
 
 | Such that:
 | :math:`n_{Min, \, channels} = 2`
@@ -436,7 +436,7 @@ The equation for *actual* flocculator length is therefore:
 
 .. math::
 
-  L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \rlap{-} V})
+  L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \rlap{--} V})
 
 .. _figure_floc_channels:
 
@@ -476,7 +476,7 @@ We can find the number of channels, :math:`n_{channels}` and their actual width 
 
 .. math::
 
-  W_{total} = \frac{\rlap{-} V}{H L_{channel}}
+  W_{total} = \frac{\rlap{--} V}{H L_{channel}}
 
 Finally:
 
@@ -556,7 +556,7 @@ As water flows through the flocculators, the flocs will get larger and larger. A
 Residence Time of Water in the Flocculator Check
 ------------------------------------------------
 
-It is now time to make our final check. We need to make sure that our actual residence time is *at least* as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than :math:`\rlap{-} V_{floc}`. See :numref:`figure_flocculator_head_loss` for clarification.
+It is now time to make our final check. We need to make sure that our actual residence time is *at least* as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than :math:`\rlap{--} V_{floc}`. See :numref:`figure_flocculator_head_loss` for clarification.
 
 .. _figure_flocculator_head_loss:
 

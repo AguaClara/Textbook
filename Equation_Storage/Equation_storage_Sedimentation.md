@@ -2,7 +2,7 @@
 This file is a temporary storage place for the LaTeX equations used in 4540 slides. Once some progress is made and the equations can be divided into groups, a well-designed file structure will be made.
 
 **Notes for LaTeX math in Atom text editor**
-1. Differentiating velocity ($V$) from volume ($\rlap{-} V$) is done with the `rlap{-}` function before the `V`. Using two dashes inside `\rlap{}`, which is how MathType translates volume,  results in the text losing its color coding in atom.
+1. Differentiating velocity ($V$) from volume ($\rlap{--} V$) is done with the `rlap{-}` function before the `V`. Using two dashes inside `\rlap{}`, which is how MathType translates volume,  results in the text losing its color coding in atom.
 2. Using an asterisk (I will refrain from using one here) in LaTeX equations causes the text coloring to become a bit wonky and quite purple. Instead, use `\ast` when working within the dollar signs that denote math equations.
 
 
@@ -14,16 +14,16 @@ $$F_d + F_b - W = 0$$
 
 $$W = $$
 
-$$\rlap{-} V_{Floc} \rho_{Floc} g$$
+$$\rlap{--} V_{Floc} \rho_{Floc} g$$
 
 $$F_b = $$
 
-$$\rlap{-} V_{Floc} \rho_{H_2O} g$$
+$$\rlap{--} V_{Floc} \rho_{H_2O} g$$
 
 $$F_d = C_D A_{Floc} \rho_{H_2O} \frac{V_t^2}{2}$$
 
 $$\begin{array}{l}
-\rlap{-} V_{Floc} = \rm{particle \, \, volume}
+\rlap{--} V_{Floc} = \rm{particle \, \, volume}
 \\
 A_{Floc} = \rm{particle \, \, cross \, \, sectional \, \, area}
 \\
@@ -56,11 +56,11 @@ $$V_t = \frac{g d_0^2}{18 \Phi \nu_{H_2O}} \frac{\rho_{Floc_0} - \rho_{H_2O}} {\
 
 
 ### Horizontal Flow Sedimentation Tank
-$$\theta  = \frac{\rlap{-} V}{Q}$$
+$$\theta  = \frac{\rlap{--} V}{Q}$$
 
 $$V_c = \frac{H}{\theta}$$
 
-$$ = \frac{H Q}{\rlap{-} V}$$
+$$ = \frac{H Q}{\rlap{--} V}$$
 
 $$ = \frac{Q}{L W}$$
 

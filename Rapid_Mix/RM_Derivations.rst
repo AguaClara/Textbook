@@ -973,11 +973,17 @@ Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet j
 
 .. math:: \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}
 
-.. math:: \varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}
+.. math::
+   :label: eq_EDR_JetPlane
+
+  \varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}
 
 The maximum velocity gradient is thus
 
-.. math:: G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}
+.. math::
+  :label: eq_G_JetPlane
+
+  G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}
 
 .. math:: \bar v = \frac{Q}{SW}
 
