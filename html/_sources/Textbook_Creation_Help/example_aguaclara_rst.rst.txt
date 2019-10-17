@@ -1,4 +1,4 @@
-.. _title_aguaclara_rst_convention:
+.. _title_example_aguaclara_rst:
 
 ***********************************************
 Functionality in RST and AguaClara Convention

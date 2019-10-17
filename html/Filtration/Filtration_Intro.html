@@ -437,8 +437,8 @@
 <span class="eqno">(558)<a class="headerlink" href="#equation-backwash-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
-<div class="line"><span class="math notranslate nohighlight">\(phi_{FiSandBw}\)</span> = sand porosity during backwash</div>
-<div class="line"><span class="math notranslate nohighlight">\(phi_{FiSand}\)</span> = settled sand porosity</div>
+<div class="line"><span class="math notranslate nohighlight">\(\phi_{FiSandBw}\)</span> = sand porosity during backwash</div>
+<div class="line"><span class="math notranslate nohighlight">\(\phi_{FiSand}\)</span> = settled sand porosity</div>
 <div class="line"><span class="math notranslate nohighlight">\(H_{FiSand}\)</span> = height of sand in the filter</div>
 <div class="line"><span class="math notranslate nohighlight">\(H_{FiSandBw}\)</span> = height of sand during backwash</div>
 <div class="line"><span class="math notranslate nohighlight">\(A_{Fi}\)</span> = filter area</div>
@@ -448,7 +448,7 @@
 <span class="eqno">(559)<a class="headerlink" href="#equation-filtration-filtration-intro-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: filter_expansion_ratio\\\Pi_{FiBw} = \frac{H_{FiSandBw}}{H_{FiSand}}\end{aligned}\end{align} \]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
-<div class="line"><span class="math notranslate nohighlight">\(Pi_{FiBw}\)</span> = the expansion ratio value</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Pi_{FiBw}\)</span> = the expansion ratio value</div>
 <div class="line"><span class="math notranslate nohighlight">\(H_{FiSand}\)</span> = height of sand in the filter</div>
 <div class="line"><span class="math notranslate nohighlight">\(H_{FiSandBw}\)</span> = height of sand during backwash</div>
 </div>
@@ -457,20 +457,20 @@
 <span id="clean-sand-head-loss"></span><h2>Filtration Clean Bed Head loss<a class="headerlink" href="#filtration-clean-bed-head-loss" title="Permalink to this headline">¶</a></h2>
 <p>The Carman Kozeny Equation, an adaptation of the Hagen-Poiseuille equation :eq:`` describes the head loss through a clean bed during filtration. The Ergun equation <a class="reference internal" href="../Rapid_Mix/RM_Derivations.html#equation-eq-ergun">(239)</a> can also be used to estimate head loss in porous media.</p>
 <div class="math notranslate nohighlight" id="equation-eq-carman-kozeny">
-<span class="eqno">(560)<a class="headerlink" href="#equation-eq-carman-kozeny" title="Permalink to this equation">¶</a></span>\[ \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu v_a}{g D_{60}^2}\]</div>
+<span class="eqno">(560)<a class="headerlink" href="#equation-eq-carman-kozeny" title="Permalink to this equation">¶</a></span>\[ \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu \bar v_a}{g D_{60}^2}\]</div>
 <div class="line-block">
 <div class="line">where</div>
 <div class="line"><span class="math notranslate nohighlight">\(h_l\)</span> = head loss in sand bed</div>
 <div class="line"><span class="math notranslate nohighlight">\(H_{FiSand}\)</span> = the sand bed depth/length of flow paths</div>
 <div class="line"><span class="math notranslate nohighlight">\(\phi_{FiSand}\)</span> = porosity of sand</div>
 <div class="line"><span class="math notranslate nohighlight">\(\nu\)</span> = kinematic viscosity</div>
-<div class="line"><span class="math notranslate nohighlight">\(v_a\)</span> = the approach velocity (the velocity the water would have if the filter didn’t have any sand!)</div>
+<div class="line"><span class="math notranslate nohighlight">\(\bar v_a\)</span> = the approach velocity (the velocity the water would have if the filter didn’t have any sand!)</div>
 <div class="line"><span class="math notranslate nohighlight">\(D_{60}\)</span> = the size of the sand</div>
 <div class="line"><span class="math notranslate nohighlight">\(g\)</span> = gravity</div>
 <div class="line"><span class="math notranslate nohighlight">\(k\)</span> = Kozeny constant (5 for most filtration cases)</div>
 </div>
 <p>This equation is valid for Reynolds numbers less than 6. Where:
-<span class="math notranslate nohighlight">\({\rm Re}  = \frac{D_{60} V_{Fi}}{\nu}\)</span></p>
+<span class="math notranslate nohighlight">\({\rm Re}  = \frac{D_{60} \bar v_a}{\nu}\)</span></p>
 </div>
 <div class="section" id="backwash-head-loss">
 <span id="backwash-head-loss-force-balance"></span><h2>Backwash Head Loss<a class="headerlink" href="#backwash-head-loss" title="Permalink to this headline">¶</a></h2>
@@ -514,14 +514,14 @@
 <p>The minimum fluidization velocity for a sand bed can be obtained by setting the head loss through the sand (equation <a class="reference internal" href="#equation-eq-carman-kozeny">(560)</a>) equal to the head required to suspend the sand bed (equation <a class="reference internal" href="#equation-eq-min-fluidization-velocity">(565)</a>).</p>
 <p>Using these two equations the minimum velocity for sand fluidization can be found!</p>
 <div class="math notranslate nohighlight" id="equation-minimum-fluidization-velocity-sand">
-<span class="eqno">(566)<a class="headerlink" href="#equation-minimum-fluidization-velocity-sand" title="Permalink to this equation">¶</a></span>\[V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
+<span class="eqno">(566)<a class="headerlink" href="#equation-minimum-fluidization-velocity-sand" title="Permalink to this equation">¶</a></span>\[\bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
 <p>From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter does <strong>not</strong> imply that the sand at the bottom of the filter is fluidized.</p>
 </div>
 <div class="section" id="filtration-theory">
 <h2>Filtration Theory<a class="headerlink" href="#filtration-theory" title="Permalink to this headline">¶</a></h2>
 <p>Filters are used to remove particles and thus we’d like to be able to predict particle removal efficiency in a filter. Unfortunately we don’t yet have equations that describe particle removal by sand filtration. This is a very unpleasant surprise. It is as if we were designing a suspension bridge and didn’t have any equations describing the relationship between the tension in the cables and the load they are supporting. We only have an equation describing what the cables do when there isn’t any additional load. In the case of filtration we only have clean bed filtration models that attempt to describe what happens before the filter begins to remove particles.</p>
 <dl class="docutils">
-<dt>Reflection: How did we get to 2018 without a model for filter performance? There may be several reasons for the lack of a filtration model. Here are a few ideas.</dt>
+<dt>Reflection: How did we get to 2019 without a model for filter performance? There may be several reasons for the lack of a filtration model. Here are a few ideas.</dt>
 <dd><ul class="first last simple">
 <li>The lack of data acquisition systems in university laboratories means that very few rapid sand filters were operated and evaluated for full filter runs in laboratory settings</li>
 <li>The Environmental Engineering fixation on jar tests as the way to model water treatment plants provided no method to test filtration and thus most university laboratories only experimented with batch operation and not continuous flow.</li>
