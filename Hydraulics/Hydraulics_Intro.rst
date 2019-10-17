@@ -213,6 +213,6 @@ The equation is based on the sharp crested weir (Equation :eq:`Sharp_weir_Q_of_c
 Simplify and solve for :math:`H_{slot}`.
 
 .. math::
-   :label: Flow_ratio_backwash
+   :label: backwash_slot_height
 
      H_{slot} = \frac{H_{channel}}{1-\Pi_{Q_{BW}}^\frac{2}{3}} + HL_{Gate}
