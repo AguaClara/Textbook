@@ -405,10 +405,6 @@ Inserting plots using this method should only be done if we can integrate this w
    plt.title(r'Normal: $\mu=%.2f, \sigma=%.2f$'%(x.mean(), x.std()))
    plt.show()
 
-Or insert from a file like so:
-
-.. plot:: pyplots/ellipses_example.py
-   :include-source:
 
 Inserting Video
 ---------------
