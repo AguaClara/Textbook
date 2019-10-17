@@ -222,6 +222,7 @@ Create a graph showing flow rate vs depth for two linear flow orifice meters tha
 
 
 .. code:: python
+
   H_max = 20 * u.cm
   Q_max1 = 50 * u.L/u.s
   Q_max2 = 70 * u.L/u.s
@@ -272,6 +273,7 @@ Create a graph showing flow rate vs depth for two linear flow orifice meters tha
 Indexing is done by row and then by column. To call all of the elements in a row or column, use a colon. As you can see in the following example, indexing in python begins at zero. So ``a[:,1]`` is calling all rows in the second column
 
 .. code:: python
+
   #create an empty array
   a = np.empty((2,5))
   np.shape(a)
