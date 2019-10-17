@@ -55,10 +55,10 @@ Each of the force components can be determined by:
 
   F_{buoyant} = \rlap{--}V_{floc} \rho_{H_2O} g
 
-  W_{floc} = \rlap{_-}V_{floc} \rho_{floc} g
+  W_{floc} = \rlap{--}V_{floc} \rho_{floc} g
 
 | Where:
-| :math:`\rlap{_-}V_{floc} =` floc particle volume
+| :math:`\rlap{--}V_{floc} =` floc particle volume
 | :math:`A_{floc} =` particle projected cross-sectional area
 | :math:`\rho_{floc} =` particle density
 | :math:`\rho_{H_2O} =` water density
