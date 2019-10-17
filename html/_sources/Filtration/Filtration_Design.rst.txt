@@ -58,9 +58,9 @@ Nomenclature
    :align: left
 
    ":math:`\Pi_Q`", "dimensionless", "ratio of minimum layer flow to maximum layer flow"
-   ":math:`Q_{IT_i}`",":math:`\frac{L}{s}`", "actual flow in **I**nlet **T**runk i"
-   ":math:`Q_{L_i}`",":math:`\frac{L}{s}`", "actual flow in filter **L**ayer i"
-   ":math:`\overset{u}{Q}_L`",":math:`\frac{L}{s}`", "ideal **u**niform flow in each filter layer"
+   ":math:`Q_{IT_i}`",":math:`\frac{L}{s}`", "actual flow in Inlet Trunk i"
+   ":math:`Q_{L_i}`",":math:`\frac{L}{s}`", "actual flow in filter Layer i"
+   ":math:`\overset{u}{Q}_L`",":math:`\frac{L}{s}`", "ideal uniform flow in each filter layer"
    ":math:`h_{L_i}`",":math:`m`", "head loss from inlet tank all the way through the sand in layer i"
 
 

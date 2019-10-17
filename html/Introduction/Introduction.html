@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction to AguaClara Water Treatment Design &mdash; AguaClara Textbook 0.055 documentation</title>
+  <title>Introduction to AguaClara Water Treatment Design &mdash; AguaClara Textbook  documentation</title>
   
 
   
@@ -57,10 +57,6 @@
 
           
             
-            
-              <div class="version">
-                0.055
-              </div>
             
           
 
@@ -117,6 +113,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#the-aguaclara-treatment-train">The AguaClara Treatment Train</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#comparison-with-croton-water-treatment-plant">Comparison with Croton Water Treatment Plant</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#design-evolution">Design Evolution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#empirical-design">Empirical Design</a></li>
 </ul>
@@ -634,7 +631,7 @@ Which process removes the largest quantity of contaminants?</p>
 <p>The low terminal velocities of particles that we need to remove from surface waters reveals that sedimentation alone will not work. The time required for a small particle to settle even a few mm would require excessively large sedimentation tanks. This is why flocculation, the process of sticking particles together so that they can attain higher sedimentation velocities, is perhaps the most important unit process in surface water treatment plants.</p>
 <dl class="docutils">
 <dt>The AguaClara treatment train consists of the following processes</dt>
-<dd><ul class="first simple">
+<dd><ul class="first last simple">
 <li>flow measurement</li>
 <li>metering of the coagulant (and chlorine) that will cause particles to stick together</li>
 <li>mixing of the coagulant with the raw water</li>
@@ -644,13 +641,17 @@ Which process removes the largest quantity of contaminants?</p>
 <li>stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed</li>
 <li>disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes</li>
 </ul>
+</dd>
+</dl>
+<div class="section" id="comparison-with-croton-water-treatment-plant">
+<h3>Comparison with Croton Water Treatment Plant<a class="headerlink" href="#comparison-with-croton-water-treatment-plant" title="Permalink to this headline">¶</a></h3>
 <p>As AguaClara technologies extend to larger and larger cities one of the criticisms could be that the technologies are somehow limited to small scale facilities. To address this question we will compare AguaClara unit processes with one of the most recent large scale water treatment plants, the <a class="reference external" href="../_static/references/Croton-WFP.pdf">Croton Water Treatment Plant</a> (CWTP) in NYC.</p>
 <p>The CWTP is designed to treat <a class="reference external" href="https://www.hazenandsawyer.com/work/projects/croton-wtp/">290 mgd</a> (million gallons per day) which is equivalent to 12,700 L/s. The final cost of the project was $3.2bn. The cost per L/s of treatment capacity was thus $250,000. This is approximately 25 times more expensive than AguaClara water treatments. Of course, AguaClara water treatment plants haven’t been constructed underground in the middle of a major city! Nonetheless, the factor of 25 suggests that AguaClara technologies have a significant cost advantage.</p>
 <p>The CWTP has 48 flocculators and 48 dissolved air flotation processes working in parallel. The flow per unit is thus 265 L/s. The current maximum size of the AguaClara Open Stacked Rapid Sand (OStaR) ilter is 20 L/s. It would be possible to design larger OStaR filters by simply including multiple sets of inlet/outlet trunk lines into a single filter box. The CWTP filters appear to have 6 outlet trunk lines per filter and thus the flow per trunk line is 44 L/s.</p>
 <p>The CWTP uses 2 stage mechanical flocculators with a total residence time of 4.8 minutes and a velocity gradient of 100 Hz. This residence time is much shorter than conventional design requirements, about half of the residence time used by the AguaClara plants built around 2017, significantly larger than the 90 second residence time used in the AguaClara 1 L/s plants.</p>
 <p>CWTP uses dissolved air flotation tanks that are located on top of the rapid sand filters. The d</p>
 <p>The filter approach velocity (the velocity of water before it enters the sand bed) for CWTP is 4.42 mm/s. This is significantly higher than the 1.85 mm/s filtration velocity currently used in StaRS filters. StaRS filters are a stack of 6 filters and the net filtration velocity is 11 mm/s. Thus by that metric the StaRS filters are significantly smaller than the CWTP filters.</p>
-<div class="code python last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#the unit registry has been imported above and does not need to be imported again</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#the unit registry has been imported above and does not need to be imported again</span>
 <span class="kn">import</span> <span class="nn">aguaclara</span>
 <span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
 <span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
@@ -664,8 +665,7 @@ Which process removes the largest quantity of contaminants?</p>
 <span class="p">(</span><span class="mf">15.9</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">hr</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
-</dd>
-</dl>
+</div>
 <div class="section" id="design-evolution">
 <h3>Design Evolution<a class="headerlink" href="#design-evolution" title="Permalink to this headline">¶</a></h3>
 <p>During the later half of the 20th century surface water treatment technologies evolved slowly. The slow evolution was likely a product of the regulatory environment, the high cost of water treatment infrastructure, and the low profit margin. The high cost of municipal scale water treatment infrastructure made experiments at scale infeasible and thus there was no mechanism to introduce disruptive innovations. With little opportunity for a significant return on investment there was little incentive to invest in the research and development that could have advanced the technologies. A final disincentive was the widely held belief that surface water treatment was a mature field with little opportunity for significant advancement. The advances of the latter half of the 20th century focused primarily on mechanization and automation (Supervisory Control and Data Acquisition - SCADA).</p>
@@ -854,7 +854,7 @@ Which process removes the largest quantity of contaminants?</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.055',
+            VERSION:'',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
