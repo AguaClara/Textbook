@@ -9,11 +9,11 @@ These are a few short examples of calculations required for sedimentation tank d
 Tube Settler Design
 ===============================
 
-1. Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank, :math:`v_{S,V}`, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, :math:`v_{\alpha}`. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.
+1. Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank, :math:`v_{z_{fb}}`, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, :math:`v_{\alpha}`. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.
 
-.. math:: \frac{\bar v_{S,V}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha
+.. math:: \frac{\bar v_{z_{fb}}}{\bar v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha
 
-.. math:: \bar v_{S,V} = \bar v_\alpha\sin \alpha
+.. math:: \bar v_{z_{fb}} = \bar v_\alpha\sin \alpha
 
 Solve for the length of the tube settler.
 
@@ -46,17 +46,17 @@ Determining flow through a diffuser
 
 1. What is the flow rate of a single diffuser in the bottom of the sedimentation tank? Consider a sedimentation tank that is 6 m long, 1 m wide and 2 m deep, with an upflow velocity of 1 mm/s and a diffuser spacing of 5 cm.
 
-What is this question really asking? This question is asking us to understand that each diffuser "serves" a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let's imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using :math:`Q = vA`. The area, :math:`A`, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so :math:`W_{tank} = 1` m. The length of the slice is dictated by the spacing of the diffusers, :math:`B_{diff}`, so :math:`B_{diff} = 5` cm.
+What is this question really asking? This question is asking us to understand that each diffuser "serves" a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let's imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using :math:`Q = \bar vA`. The area, :math:`A`, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so :math:`W_{tank} = 1` m. The length of the slice is dictated by the spacing of the diffusers, :math:`B_{diff}`, so :math:`B_{diff} = 5` cm.
 
 .. math:: A = B_{diff}W_{tank}
 
-.. math:: A = 5cm * 1m
+.. math:: A = 5 cm * 1 m
 
-.. math:: A = 50,000mm^2
+.. math:: A = 50,000 mm^2
 
-The problem statement includes that :math:`v_{S,V} = 1` mm/s. Plugging into our flow equation,
+The problem statement includes that :math:`\bar v_{z_{fb}} = 1` mm/s. Plugging into our flow equation,
 
-.. math:: Q_{diff} = v_{S,V}A
+.. math:: Q_{diff} = \bar v_{z_{fb}}A
 
 .. math:: Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)
 
@@ -114,11 +114,11 @@ Given parameters:
 
 To find the maximum velocity based on maximum headloss we will use the minor loss equation.
 
-.. math:: h_{e,inlet} = K \frac{v_{jet}^2}{2g}
+.. math:: h_{e,inlet} = K \frac{\bar v_{jet}^2}{2g}
 
 To find the minimum width based on the maximum velocity through the diffuser, we will use conservation of mass. Since it is an incompressible fluid the flow rate entering from the diffuser line jet must be equal to the flow rate up through the sedimentation tank.
 
-.. math:: v_{jet}W_{diff} L_{sed} = V_{sed,up}W_{sed}L_{sed}
+.. math:: \bar v_{jet}W_{diff} L_{sed} = \bar v_{z_{fb}}W_{sed}L_{sed}
 
 .. code:: python
 
@@ -194,12 +194,12 @@ Sedimentation diffuser inner length: 5.522 centimeter
 Each diffuser serves a certain width and length of the sedimentation tank. Assume that the diffusers are installed so that they touch each other.
 
 4. Determine the flow through each diffuser.
-:math:`Q_{max,diff} = v_{up}*A`
+:math:`Q_{max,diff} = \bar v_{z_{fb}} A`
 
-:math:`A = W_{sed}* B_{diff}`
+:math:`A = W_{sed}  B_{diff}`
 
 5. Determine the velocity through each diffuser.
-:math:`v_{diff} = \frac{Q_{max,diff}}{W_{diff} * S_{diff}} `
+:math:`\bar v_{diff} = \frac{Q_{max,diff}}{W_{diff} * S_{diff}} `
 
 
 .. code:: python
@@ -216,8 +216,8 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second
 
 Recall the formula for Reynold's number:
 
-:math:`Re = \frac{vD}{\nu}` The D is actually just representative of the length scale so we can replace this with the width of the diffuser.
-:math:`Re = \frac{v_{diff}*W_{diff}}{\nu}`
+:math:`Re = \frac{\bar v D}{\nu}` The D is actually just representative of the length scale so we can replace this with the width of the diffuser.
+:math:`Re = \frac{\bar v_{diff}*W_{diff}}{\nu}`
 
 .. code:: python
 
@@ -232,30 +232,28 @@ Recall the formula for Reynold's number:
 
 The same principle as above can be applied to this question except the length scale is the width of the sedimentation tank and the velocity is the upwards velocity in the tank.
 
-:math:`Re = \frac{v_{up}*W_{sed}}{\nu}`
+:math:`Re = \frac{\bar v_{z_{fb}} W_{sed}}{\nu}`
 
 .. code:: python
 
   Re_sed = ((W_sed * V_sed_up) / pc.viscosity_kinematic(T_design)).to(u.dimensionless)
   print('Reynolds number through floc is',Re_sed)
 
-**Answer:** Reynolds number through floc is 938.2 dimensionless. These two Reynold's numbers are similar because conservation of mass requires for a constant length that :math:`v_{1}*W_{1} = v_{2}*W_{2}`. The slight difference in the numbers is due to that fact that diffusers are not a continuous line jet but rather broken up by two times the thickness of the pipe wall between the diffusers.
+**Answer:** Reynolds number through floc is 938.2 dimensionless. These two Reynold's numbers are similar because conservation of mass requires for a constant length that :math:`\bar v_{1}*W_{1} = \bar v_{2}*W_{2}`. The slight difference in the numbers is due to that fact that diffusers are not a continuous line jet but rather broken up by two times the thickness of the pipe wall between the diffusers.
 
 Next, we want to determine the energy dissipation rate for the flow leaving the jet reverser. For this process, you can assume that the jet remains laminar. The flow spreads to fill the gaps created by the walls of the diffuser tubes by the time it traverses the jet reverser. Jet velocity and flow rate are conserved as the jet changes direction in the jet reverser.
 
 8. Calculate the thickness of the jet after it does the 180 degree bend of the jet reverser. The change in thickness of the jet after the 180 degree bend is due to the flow spreading out to fill in the gaps created by the diffuser pipe walls.
-:math:`W_{jet} * v_{diffuser} = W_{sed} * v_{up}`
+:math:`W_{jet} * \bar v_{diff} = W_{sed} * \bar v_{z_{fb}}`
 
-9. Calculate the energy dissipation rate for the flow leaving the jet reverser. **Add Reference to equation**
-
-:math:`\epsilon_{inlet,jet} = \frac{(\Pi_{jet plane} * v_{diff})^3}{W_{jet}}`
+9. Calculate the maximum energy dissipation rate for the flow leaving the jet reverser. See Equation :eq:`eq_EDR_JetPlane` for the maximum energy dissipation rate in a plane jet and see :numref:`table_EDR_G_equations` for the value of :math:`\Pi_{JetPlane}`.
 
 
 .. code:: python
 
-  Pi_jet_plane = 0.225
+  Pi_jet_plane = 0.0124
   W_jet_reversed = W_sed * V_sed_up / V_diffuser
-  EDR_inlet_jet = (((Pi_jet_plane * V_diffuser)**3)/ W_jet_reversed).to(u.mW / u.kg)
+  EDR_inlet_jet = Pi_jet_plane* ((V_diffuser**3)/ W_jet_reversed).to(u.mW / u.kg)
   print('The energy dissipation rate for inlet jet is', EDR_inlet_jet)
 
 The energy dissipation rate for inlet jet is 158.5 milliwatt / kilogram
@@ -266,11 +264,11 @@ In designing AguaClara plants, it is critical to account for all forms of signif
 
 First, calculate the head loss making sure to account for the upflow velocity in the sed tank.
 
-:math:`h_e = \frac{\left( {{v_{diff}} - {v_{up}}} \right)^2}{2g}`
+:math:`h_e = \frac{\left( {{\bar v_{diff}} - {\bar v_{z_{fb}}}} \right)^2}{2g}`
 
 Second, calculate the head loss but assume that the upflow velocity is negligible.
 
-:math:`h_e = \frac{\ {v_{diff}}^2}{2g}`
+:math:`h_e = \frac{\ {\bar v_{diff}}^2}{2g}`
 
 11. Is it reasonable to neglect the upflow velocity in the sed tank when calculating this head loss?
 
@@ -359,7 +357,7 @@ Since the sedimentation tank has a constant volume, the flow rate into the tank 
 
 The maximum sed tank flow rate is currently set by the constraint of using a single length of pipe for the manifold and launder. The maximum length of the upflow region of the sedimentation tank is 5.8 m, as given below.
 
-6. What is the corresponding sedimentation tank flow rate? This can be solved using :math:`Q = VA`.
+6. What is the corresponding sedimentation tank flow rate? This can be solved using :math:`Q = \bar v A`.
 
 .. code:: python
 
@@ -372,7 +370,7 @@ The maximum sed tank flow rate is currently set by the constraint of using a sin
 The maximum sed tank flow rate dictates the required pipe diameter for the manifold and launder.
 
 7. What is the minimum inner diameter of the sedimentation tank manifold?
-:math:`Q = \frac{v*\pi*D^2}{4}`
+:math:`Q = \frac{\bar v*\pi*D^2}{4}`
 
 8. What is the required nominal pipe diameter given this flow rate?
 The function from the pipe database can return the nominal diameter from the diameter and SDR.

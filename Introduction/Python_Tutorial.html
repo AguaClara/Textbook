@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Python Tutorial &mdash; AguaClara Textbook 0.050 documentation</title>
+  <title>Python Tutorial &mdash; AguaClara Textbook 0.055 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.050
+                0.055
               </div>
             
           
@@ -486,11 +486,62 @@ The surface loading rate is 0.68 millimeter / second</p>
 <li><a class="reference external" href="https://matplotlib.org/api/markers_api.html#module-matplotlib.markers">Data markers (if you are plotting data and not a model or curve fit)</a></li>
 </ul>
 </div></blockquote>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H_max</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
+<span class="n">Q_max1</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">Q_max2</span> <span class="o">=</span> <span class="mi">70</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">num</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">H_max</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">num</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">Q_max1</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">Q_max2</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">Q_max1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">Q_max2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;water depth (&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">units</span><span class="p">)</span> <span class="o">+</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
+<span class="c1">#ax.set(ylabel=&#39;Flow rate (&#39;+str(Q_max1.units)+&#39;)&#39;)</span>
+<span class="c1">#Below is the method for using latex to format the units</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Flow rate &#39;</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;$\left (\frac</span><span class="si">{L}{s}</span><span class="s1">\right )$&#39;</span><span class="p">)</span>
+
+<span class="c1"># options: linear or log</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">yscale</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xscale</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#options:</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+
+<span class="c1">#alternative method to create a legend instead of using &quot;label=Q_max1 in ax.plot&quot;</span>
+<span class="c1">#ax.legend([Q_max1,Q_max2])</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Introduction/Images/LFOM_flow_vs_height&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="figure align-center" id="id2">
 <span id="figure-lfom-flow-vs-height"></span><a class="reference internal image-reference" href="../_images/LFOM_flow_vs_height.png"><img alt="LFOM flow vs height" src="../_images/LFOM_flow_vs_height.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">The flow through an LFOM is directly proportional to the height of the water above the bottom of the first row of orifices.</span></p>
 </div>
 <p>Indexing is done by row and then by column. To call all of the elements in a row or column, use a colon. As you can see in the following example, indexing in python begins at zero. So <code class="docutils literal notranslate"><span class="pre">a[:,1]</span></code> is calling all rows in the second column</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#create an empty array</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="c1">#Given that I&#39;m going to using np.array to assign the elements I didn&#39;t need to create the empty array first.</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]])</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">a</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span>
+<span class="c1">#access the last row by find the shape, selecting the 2nd element in the shape, and then subtracting one</span>
+<span class="n">a</span><span class="p">[:,</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">a</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="sd">&#39;&#39;&#39;specify a range of values in an array. Use a colon to slice the array, with the number before the colon being the index of the first element, and the number after the colon being **one greater** than the index of the last element&#39;&#39;&#39;</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="example-problem">
 <h2>Example problem<a class="headerlink" href="#example-problem" title="Permalink to this headline">¶</a></h2>
@@ -609,7 +660,7 @@ database.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.050',
+            VERSION:'0.055',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

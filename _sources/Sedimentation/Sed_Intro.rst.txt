@@ -53,12 +53,12 @@ Each of the force components can be determined by:
 
   F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}
 
-  F_{buoyant} = \rlap{-}V_{floc} \rho_{H_2O} g
+  F_{buoyant} = \rlap{--}V_{floc} \rho_{H_2O} g
 
-  W_{floc} = \rlap{-} V_{floc} \rho_{floc} g
+  W_{floc} = \rlap{--}V_{floc} \rho_{floc} g
 
 | Where:
-| :math:`\rlap{-}V_{floc} =` floc particle volume
+| :math:`\rlap{--}V_{floc} =` floc particle volume
 | :math:`A_{floc} =` particle projected cross-sectional area
 | :math:`\rho_{floc} =` particle density
 | :math:`\rho_{H_2O} =` water density
@@ -71,7 +71,7 @@ Plugging into the original force balance,
 
 .. math::
 
-  \left [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2} \right]+\left [\rlap{-}V_{floc} \rho_{H_2O} g\right ]-\left [\rlap{-}V_{floc} \rho_{floc} g \right] =0
+  \left [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2} \right]+\left [\rlap{--}V_{floc} \rho_{H_2O} g\right ]-\left [\rlap{--}V_{floc} \rho_{floc} g \right] =0
 
 Solving for terminal velocity, :math:`v_t`, provides
 
@@ -98,29 +98,15 @@ As an introduction to this drag coefficient diagram, we can compare it to someth
 
 .. _table_Moody_DragCoefficient:
 
-Below is a table to compare the significance of the Moody diagram and the Drag Coefficient diagram.
+.. csv-table:: Comparison of the Moody diagram and the Drag Coefficient diagram.
+   :header: "Characteristic", "Moody Diagram", "Drag Coefficient Diagram"
+   :align: left
 
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-| Characteristic                 | Moody Diagram                     | Drag Coefficient Diagram                                    |
-+================================+===================================+=============================================================+
-| Relationship to                | friction factor,                  | drag coefficient,                                           |
-| Reynolds number                | :math:`f`                         | :math:`C_D`                                                 |
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-| Type of head loss              | major losses as                   | minor losses as                                             |
-|                                | shear force on                    | expansion around a                                          |
-|                                | pipe walls                        | particle                                                    |
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-| Laminar region                 | :math:`f = \frac{64}{Re}`         |:math:`C_D = \frac{24}{Re}`                                  |
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-| High Reynolds number           | :math:`f` remains constant        | :math:`C_D` remains constant                                |
-| (:math:`f`, :math:`C_D`)       |                                   |                                                             |
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-| High Reynolds number           | head loss increases by velocity in| force of drag increases by velocity in                      |
-| (:math:`h_L`, :math:`F_{drag}`)|  :math:`h_L = \frac{fLv^2}{2Dg}`  |  :math:`F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}`|
-+--------------------------------+-----------------------------------+-------------------------------------------------------------+
-
-
-
+   Relationship to Reynolds number, "friction factor, :math:`f`", "drag coefficient, :math:`C_D`"
+   Type of head loss, major losses as shear force on pipe walls, shear on sphere and pressure drag from wake
+   Laminar region, ":math:`f = \frac{64}{Re}`", :math:`C_D = \frac{24}{Re}`
+   "High Reynolds number (:math:`f`, :math:`C_D`)", ":math:`f` remains constant", ":math:`C_D` remains constant"
+   "High Reynolds number (:math:`h_L`, :math:`F_{drag}`)", :math:`h_L = \frac{fL\bar v^2}{2Dg}`,:math:`F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}`
 
 
 The flow around the particle and the Reynolds Number can be described in the laminar, turbulent, or turbulent-boundary regions as shown in :numref:`figure_drag_coeff_Re_full`. In the laminar region viscous forces dominate, :math:`Re < 1`,and the coefficient of drag is represented as the straight line with a slope of -1 on the log-log plot. The equation for drag on a sphere in laminar flow :math:`C_D = \frac{24}{Re}` is referred to as Stokes Law. You'll notice that the line for Stokes Law shown in the figure extends past the laminar region. This was done because it highlights that even though Stokes Law is not exactly correct past the turbulent region, it is still a pretty good approximation for  :math:`Re < 10`.
@@ -189,11 +175,11 @@ The following plot in :numref:`figure_terminal_velocity_floc_diam` shows the rel
 
 Three important regions are highlighted in the plot. At small floc diameters, less than 10 :math:`\mu m`, terminal velocity is less that 0.1 :math:`\frac{mm}{s}`. A terminal velocity this low would require extremely large sedimentation tanks for reasonable treatment. Because large sedimentation tanks are costly and unfeasible, we use flocculation to aggregate particles and achieve floc sizes of greater diameters and higher terminal velocities.
 
-For floc diameters around 35 :math:`\mu m`, the terminal velocity is about 1.2 :math:`\frac{mm}{s}`. AguaClara plate settlers are designed to settle out flocs of this size (particles dropping at 1.2 :math:`\frac{mm}{s}`) so the smallest floc that we can capture is 35 :math:`\mu m`. This will be explored in more detail during the discussion on :ref:`capture velocity <heading_capture_velocity>`.
+For floc diameters around 35 :math:`\mu m`, the terminal velocity is about 0.12 :math:`\frac{mm}{s}`. AguaClara plate settlers are designed to settle out flocs of this size (particles dropping at 0.12 :math:`\frac{mm}{s}`) so the smallest floc that we can capture is 35 :math:`\mu m`. This will be explored in more detail during the discussion on :ref:`capture velocity <heading_capture_velocity>`.
 
-Flocs with large diameters around 200 :math:`\mu m` have a terminal velocity of about 1 :math:`\frac{mm}{s}`. In our sedimentation tanks, which are upflow sedimentation tanks, we have water flowing up at about 1 :math:`\frac{mm}{s}` to capture a 200 :math:`\mu m` floc. These flocs are clearly visible but are small. This is what we design our sedimentation tanks to be able to capture.
+Flocs with large diameters around 200 :math:`\mu m` have a terminal velocity of about 1 :math:`\frac{mm}{s}`. In our sedimentation tanks, which are upflow sedimentation tanks, we have water flowing up at about 1 :math:`\frac{mm}{s}` to capture a 200 :math:`\mu m` floc. These flocs are clearly visible but are small.
 
-Our understanding of floc terminal velocity suggests that we can decide the size of the floc that we want our sedimentation tank to capture. If we decide that we want to capture flocs that are 200 :math:`\mu m` or larger, we know that we must design for water flowing at 1 :math:`\frac{mm}{s}`. Alternatively, we know that if we design a reactor in which water flows at 1 :math:`\frac{mm}{s}`, we will only be able to capture flocs that are 200 :math:`\mu m` or larger. This begins our discussion of sedimentation tank design.
+Our understanding of floc terminal velocity suggests that we can decide the size of the floc that we want our sedimentation tank to capture. If we decide that we want to capture flocs that are 35 :math:`\mu m` or larger, we know that we must design for water flowing at 0.12 :math:`\frac{mm}{s}`. Alternatively, we know that if we design a reactor in which water flows at 1 :math:`\frac{mm}{s}`, we will only be able to capture flocs that are 200 :math:`\mu m` or larger.
 
 .. _heading_capture_velocity:
 
@@ -233,11 +219,11 @@ To determine this value, we can use the given volume and flow rate information b
 
 .. math::
 
-  \theta = \frac{\rlap{-}V_{tank}}{Q}
+  \theta = \frac{\rlap{--}V_{tank}}{Q}
 
 | Where:
 | :math:`\theta =` residence time :math:`[T]`
-| :math:`\rlap{-}V_{tank} =` volume of the sedimentation tank :math:`\left[L^3\right]`
+| :math:`\rlap{--}V_{tank} =` volume of the sedimentation tank :math:`\left[L^3\right]`
 | :math:`Q =` flow rate through the tank :math:`\left[\frac{L^3}{T}\right]`
 
 2) In the "worst case scenario", how far must a particle fall to reach the bottom of the tank?
@@ -246,7 +232,7 @@ The "worst case scenario" is the condition in which a particle must travel the f
 
 3) How fast must the particle fall?
 
-We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, :math:`v_H`. Gravity is causing the particle to settle at its terminal velocity, :math:`v_t`. In order to reach the bottom, that settling velocity needs to be the capture velocity, :math:`v_c`, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in :numref:`figure_horizontal_flow_tank_capture`.
+We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, :math:`v_H`. Gravity is causing the particle to settle at its terminal velocity, :math:`v_t`. In order to reach the bottom, that settling velocity needs to be the capture velocity, :math:`\bar v_c`, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in :numref:`figure_horizontal_flow_tank_capture`.
 
 .. _figure_horizontal_flow_tank_capture:
 
@@ -262,15 +248,15 @@ Capture velocity can be determined by the distance that a particle must travel a
 
 .. math::
 
-  v_c = \frac{H}{\theta}
+  \bar v_c = \frac{H}{\theta}
 
-We can make some substitutions into the equation for :math:`v_c` to solve for it in explicit terms of reactor plan view area. We are interested in plan view area because this will indicate the efficiency and cost of an associated reactor.
+We can make some substitutions into the equation for :math:`\bar v_c` to solve for it in explicit terms of reactor plan view area. We are interested in plan view area because this will indicate the efficiency and cost of an associated reactor.
 
 .. math::
 
-  v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}
+  \bar v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{--}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}
 
-  v_c = \frac{Q}{A_p}
+  \bar v_c = \frac{Q}{A_p}
 
 Thus, we have capture velocity which is a descriptor of a sedimentation tank. It determines how fast a particle has to settle in order to be reliably captured by a particular sedimentation tank, assuming idealized flow. The capture velocity is not a particle property, but rather a sedimentation tank property.
 
@@ -311,11 +297,11 @@ The answer is the same for the horizontal flow sedimentation tank because this i
 
 .. math::
 
-  \theta = \frac{\rlap{-}V_{tank}}{Q}
+  \theta = \frac{\rlap{--}V_{tank}}{Q}
 
 | Where:
 | :math:`\theta =` residence time [T]
-| :math:`\rlap{-}V_{tank} =` volume of the sedimentation tank [:math:`L^3`]
+| :math:`\rlap{--}V_{tank} =` volume of the sedimentation tank [:math:`L^3`]
 | :math:`Q =` flow rate through the tank [:math:`\frac{L^3}{T}`]
 
 2) How far must a particle fall relative to the fluid to not be carried out the exit?
@@ -330,19 +316,19 @@ We determined in the previous question that a particle must fall a distance :mat
 
 .. math::
 
-  v_c = \frac{H}{\theta}
+  \bar v_c = \frac{H}{\theta}
 
 We can the same substitutions to show,
 
 .. math::
 
-  v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}
+  \bar v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{--}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}
 
 Again, we find that capture velocity is,
 
 .. math::
 
-  v_c = \frac{Q}{A_p}
+  \bar v_c = \frac{Q}{A_p}
 
 It doesn't matter whether water is flowing horizontally or vertically in the tank. What determines the capture velocity is the flow rate and the plan view area of the sedimentation tank.
 

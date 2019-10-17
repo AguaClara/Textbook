@@ -255,9 +255,9 @@ The velocity gradient can be obtained from the rate at which mechanical energy i
 
 where :math:`\varepsilon` is the energy dissipation rate, :math:`G` is the velocity gradient, and :math:`\nu` is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.
 
-.. math:: P = \bar\varepsilon \rlap{-} V \rho
+.. math:: P = \bar\varepsilon \rlap{--} V \rho
 
-.. math::  P = \bar G^2 \nu \rlap{-} V \rho
+.. math::  P = \bar G^2 \nu \rlap{--} V \rho
 
 We can relate reactor volume to a hydraulic residence time, :math:`\theta`, and volumetric flow rate, Q.
 
@@ -444,7 +444,7 @@ The following tables can serve as a convenient reference to the equations descri
 
 .. _table_Control_volume_equations:
 
-.. csv-table:: Table of equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.
+.. csv-table:: Equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.
    :header: "Geometry", ":math:`h_L`", "Energy dissipation rate",":math:`G_{CS}(\bar v)`",":math:`G_{CS}(Q)`"
    :align: left
 
@@ -492,14 +492,14 @@ For turbulent flow and for flow expansions the amount of fluid deformation decre
 
 For mechanical mixing where an impeller or other stirring device is adding shaft work to a control volume we have
 
-.. math::  \bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}
+.. math::  \bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{--}V}
 
 | where
 | :math:`P` = power input into the control volume
 | :math:`m` = mass of fluid in the control volume
-| :math:`\rlap{-}V` = volume of the control volume
+| :math:`\rlap{--}V` = volume of the control volume
 | :math:`\rho` = density of the fluid
 
 The Camp-Stein velocity gradient for a mechanically mixed reactor is
 
-.. math::  G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}
+.. math::  G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{--}V}}

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sedimentation Examples &mdash; AguaClara Textbook 0.050 documentation</title>
+  <title>Sedimentation Examples &mdash; AguaClara Textbook 0.055 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.050
+                0.055
               </div>
             
           
@@ -250,15 +250,15 @@
 <div class="section" id="tube-settler-design">
 <h2>Tube Settler Design<a class="headerlink" href="#tube-settler-design" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank, <span class="math notranslate nohighlight">\(v_{S,V}\)</span>, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, <span class="math notranslate nohighlight">\(v_{\alpha}\)</span>. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.</li>
+<li>Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank, <span class="math notranslate nohighlight">\(v_{z_{fb}}\)</span>, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, <span class="math notranslate nohighlight">\(v_{\alpha}\)</span>. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-0">
-<span class="eqno">(526)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{S,V}}{v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
+<span class="eqno">(530)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{z_{fb}}}{\bar v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-1">
-<span class="eqno">(527)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_{S,V} = \bar v_\alpha\sin \alpha\]</div>
+<span class="eqno">(531)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_{z_{fb}} = \bar v_\alpha\sin \alpha\]</div>
 <p>Solve for the length of the tube settler.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-2">
-<span class="eqno">(528)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
+<span class="eqno">(532)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -282,30 +282,30 @@
 <ol class="arabic simple">
 <li>What is the flow rate of a single diffuser in the bottom of the sedimentation tank? Consider a sedimentation tank that is 6 m long, 1 m wide and 2 m deep, with an upflow velocity of 1 mm/s and a diffuser spacing of 5 cm.</li>
 </ol>
-<p>What is this question really asking? This question is asking us to understand that each diffuser “serves” a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let’s imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using <span class="math notranslate nohighlight">\(Q = vA\)</span>. The area, <span class="math notranslate nohighlight">\(A\)</span>, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so <span class="math notranslate nohighlight">\(W_{tank} = 1\)</span> m. The length of the slice is dictated by the spacing of the diffusers, <span class="math notranslate nohighlight">\(B_{diff}\)</span>, so <span class="math notranslate nohighlight">\(B_{diff} = 5\)</span> cm.</p>
+<p>What is this question really asking? This question is asking us to understand that each diffuser “serves” a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let’s imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using <span class="math notranslate nohighlight">\(Q = \bar vA\)</span>. The area, <span class="math notranslate nohighlight">\(A\)</span>, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so <span class="math notranslate nohighlight">\(W_{tank} = 1\)</span> m. The length of the slice is dictated by the spacing of the diffusers, <span class="math notranslate nohighlight">\(B_{diff}\)</span>, so <span class="math notranslate nohighlight">\(B_{diff} = 5\)</span> cm.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-3">
-<span class="eqno">(529)<a class="headerlink" href="#equation-sedimentation-sed-examples-3" title="Permalink to this equation">¶</a></span>\[A = B_{diff}W_{tank}\]</div>
+<span class="eqno">(533)<a class="headerlink" href="#equation-sedimentation-sed-examples-3" title="Permalink to this equation">¶</a></span>\[A = B_{diff}W_{tank}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-4">
-<span class="eqno">(530)<a class="headerlink" href="#equation-sedimentation-sed-examples-4" title="Permalink to this equation">¶</a></span>\[A = 5cm * 1m\]</div>
+<span class="eqno">(534)<a class="headerlink" href="#equation-sedimentation-sed-examples-4" title="Permalink to this equation">¶</a></span>\[A = 5 cm * 1 m\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-5">
-<span class="eqno">(531)<a class="headerlink" href="#equation-sedimentation-sed-examples-5" title="Permalink to this equation">¶</a></span>\[A = 50,000mm^2\]</div>
-<p>The problem statement includes that <span class="math notranslate nohighlight">\(v_{S,V} = 1\)</span> mm/s. Plugging into our flow equation,</p>
+<span class="eqno">(535)<a class="headerlink" href="#equation-sedimentation-sed-examples-5" title="Permalink to this equation">¶</a></span>\[A = 50,000 mm^2\]</div>
+<p>The problem statement includes that <span class="math notranslate nohighlight">\(\bar v_{z_{fb}} = 1\)</span> mm/s. Plugging into our flow equation,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-6">
-<span class="eqno">(532)<a class="headerlink" href="#equation-sedimentation-sed-examples-6" title="Permalink to this equation">¶</a></span>\[Q_{diff} = v_{S,V}A\]</div>
+<span class="eqno">(536)<a class="headerlink" href="#equation-sedimentation-sed-examples-6" title="Permalink to this equation">¶</a></span>\[Q_{diff} = \bar v_{z_{fb}}A\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-7">
-<span class="eqno">(533)<a class="headerlink" href="#equation-sedimentation-sed-examples-7" title="Permalink to this equation">¶</a></span>\[Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\]</div>
+<span class="eqno">(537)<a class="headerlink" href="#equation-sedimentation-sed-examples-7" title="Permalink to this equation">¶</a></span>\[Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-8">
-<span class="eqno">(534)<a class="headerlink" href="#equation-sedimentation-sed-examples-8" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50,000 \frac{mm^3}{s}\]</div>
+<span class="eqno">(538)<a class="headerlink" href="#equation-sedimentation-sed-examples-8" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50,000 \frac{mm^3}{s}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-9">
-<span class="eqno">(535)<a class="headerlink" href="#equation-sedimentation-sed-examples-9" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50 \frac{mL}{s}\]</div>
+<span class="eqno">(539)<a class="headerlink" href="#equation-sedimentation-sed-examples-9" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50 \frac{mL}{s}\]</div>
 <p>The flow rate of each diffuser is <span class="math notranslate nohighlight">\(50 \frac{mL}{s}\)</span>.</p>
 </div>
 <div class="section" id="identify-failure-modes-from-old-design">
 <h2>Identify Failure Modes from Old Design<a class="headerlink" href="#identify-failure-modes-from-old-design" title="Permalink to this headline">¶</a></h2>
-<p>Look at a proposed design for the bottom of the sedimentation tank, shown in <a class="reference internal" href="#figure-failure-mode-example"><span class="std std-numref">Fig. 171</span></a>. This design has an influent manifold at the bottom of the tank. Water flows upwards from the influent manifold. At one end of the influent manifold, there is a drain port. Above the influent manifold, there is a single slot that extends the length of the sedimentation tank. There are no diffusers in this design.</p>
+<p>Look at a proposed design for the bottom of the sedimentation tank, shown in <a class="reference internal" href="#figure-failure-mode-example"><span class="std std-numref">Fig. 170</span></a>. This design has an influent manifold at the bottom of the tank. Water flows upwards from the influent manifold. At one end of the influent manifold, there is a drain port. Above the influent manifold, there is a single slot that extends the length of the sedimentation tank. There are no diffusers in this design.</p>
 <div class="figure align-center" id="id5">
 <span id="figure-failure-mode-example"></span><a class="reference internal image-reference" href="../_images/failure_mode_example.png"><img alt="Proposed sedimentation tank design." src="../_images/failure_mode_example.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 171 </span><span class="caption-text">Proposed sedimentation tank design.</span></p>
+<p class="caption"><span class="caption-number">Fig. 170 </span><span class="caption-text">Proposed sedimentation tank design.</span></p>
 </div>
 <ol class="arabic simple">
 <li>What are the failure modes for this design?</li>
@@ -340,10 +340,10 @@
 </div>
 <p>To find the maximum velocity based on maximum headloss we will use the minor loss equation.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-10">
-<span class="eqno">(536)<a class="headerlink" href="#equation-sedimentation-sed-examples-10" title="Permalink to this equation">¶</a></span>\[h_{e,inlet} = K \frac{v_{jet}^2}{2g}\]</div>
+<span class="eqno">(540)<a class="headerlink" href="#equation-sedimentation-sed-examples-10" title="Permalink to this equation">¶</a></span>\[h_{e,inlet} = K \frac{\bar v_{jet}^2}{2g}\]</div>
 <p>To find the minimum width based on the maximum velocity through the diffuser, we will use conservation of mass. Since it is an incompressible fluid the flow rate entering from the diffuser line jet must be equal to the flow rate up through the sedimentation tank.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-11">
-<span class="eqno">(537)<a class="headerlink" href="#equation-sedimentation-sed-examples-11" title="Permalink to this equation">¶</a></span>\[v_{jet}W_{diff} L_{sed} = V_{sed,up}W_{sed}L_{sed}\]</div>
+<span class="eqno">(541)<a class="headerlink" href="#equation-sedimentation-sed-examples-11" title="Permalink to this equation">¶</a></span>\[\bar v_{jet}W_{diff} L_{sed} = \bar v_{z_{fb}}W_{sed}L_{sed}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="o">**</span><span class="mi">2</span>
 <span class="c1"># minor loss equation with K=1</span>
 <span class="n">V_diffuser_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">headloss_sed_inlet_max</span><span class="p">)))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
@@ -404,10 +404,10 @@ The <cite>ceil_nearest</cite> function defined in utility.py can take in a param
 <p>Sedimentation diffuser inner length: 5.522 centimeter</p>
 <p>Each diffuser serves a certain width and length of the sedimentation tank. Assume that the diffusers are installed so that they touch each other.</p>
 <p>4. Determine the flow through each diffuser.
-<span class="math notranslate nohighlight">\(Q_{max,diff} = v_{up}*A\)</span></p>
-<p><span class="math notranslate nohighlight">\(A = W_{sed}* B_{diff}\)</span></p>
+<span class="math notranslate nohighlight">\(Q_{max,diff} = \bar v_{z_{fb}} A\)</span></p>
+<p><span class="math notranslate nohighlight">\(A = W_{sed}  B_{diff}\)</span></p>
 <p>5. Determine the velocity through each diffuser.
-:math:<a href="#id3"><span class="problematic" id="id4">`</span></a>v_{diff} = frac{Q_{max,diff}}{W_{diff} * S_{diff}} `</p>
+:math:<a href="#id3"><span class="problematic" id="id4">`</span></a>bar v_{diff} = frac{Q_{max,diff}}{W_{diff} * S_{diff}} `</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flow_max_diffuser</span> <span class="o">=</span> <span class="n">V_sed_up</span> <span class="o">*</span> <span class="n">W_sed</span> <span class="o">*</span> <span class="n">B_diffuser</span>
 <span class="n">V_diffuser</span> <span class="o">=</span> <span class="p">(</span><span class="n">flow_max_diffuser</span> <span class="o">/</span> <span class="p">(</span><span class="n">W_diffuser</span> <span class="o">*</span> <span class="n">S_diffuser</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The flow of water leaving a sed tank diffuser is&#39;</span><span class="p">,</span><span class="n">flow_max_diffuser</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">ml</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
@@ -420,8 +420,8 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <li>What is the Reynolds number of the jet exiting the diffusers at the design temperature of 15 degrees Celsius?</li>
 </ol>
 <p>Recall the formula for Reynold’s number:</p>
-<p><span class="math notranslate nohighlight">\(Re = \frac{vD}{\nu}\)</span> The D is actually just representative of the length scale so we can replace this with the width of the diffuser.
-<span class="math notranslate nohighlight">\(Re = \frac{v_{diff}*W_{diff}}{\nu}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Re = \frac{\bar v D}{\nu}\)</span> The D is actually just representative of the length scale so we can replace this with the width of the diffuser.
+<span class="math notranslate nohighlight">\(Re = \frac{\bar v_{diff}*W_{diff}}{\nu}\)</span></p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="k">import</span> <span class="n">physchem</span> <span class="k">as</span> <span class="n">pc</span>
 <span class="n">T_design</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">Re_diffuser_jet</span> <span class="o">=</span> <span class="p">((</span><span class="n">W_diffuser</span> <span class="o">*</span> <span class="n">V_diffuser</span><span class="p">)</span> <span class="o">/</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_design</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
@@ -433,22 +433,21 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <li>What is the Reynolds number of the vertical flow up through the top of the floc blanket?</li>
 </ol>
 <p>The same principle as above can be applied to this question except the length scale is the width of the sedimentation tank and the velocity is the upwards velocity in the tank.</p>
-<p><span class="math notranslate nohighlight">\(Re = \frac{v_{up}*W_{sed}}{\nu}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Re = \frac{\bar v_{z_{fb}} W_{sed}}{\nu}\)</span></p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Re_sed</span> <span class="o">=</span> <span class="p">((</span><span class="n">W_sed</span> <span class="o">*</span> <span class="n">V_sed_up</span><span class="p">)</span> <span class="o">/</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_design</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reynolds number through floc is&#39;</span><span class="p">,</span><span class="n">Re_sed</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Answer:</strong> Reynolds number through floc is 938.2 dimensionless. These two Reynold’s numbers are similar because conservation of mass requires for a constant length that <span class="math notranslate nohighlight">\(v_{1}*W_{1} = v_{2}*W_{2}\)</span>. The slight difference in the numbers is due to that fact that diffusers are not a continuous line jet but rather broken up by two times the thickness of the pipe wall between the diffusers.</p>
+<p><strong>Answer:</strong> Reynolds number through floc is 938.2 dimensionless. These two Reynold’s numbers are similar because conservation of mass requires for a constant length that <span class="math notranslate nohighlight">\(\bar v_{1}*W_{1} = \bar v_{2}*W_{2}\)</span>. The slight difference in the numbers is due to that fact that diffusers are not a continuous line jet but rather broken up by two times the thickness of the pipe wall between the diffusers.</p>
 <p>Next, we want to determine the energy dissipation rate for the flow leaving the jet reverser. For this process, you can assume that the jet remains laminar. The flow spreads to fill the gaps created by the walls of the diffuser tubes by the time it traverses the jet reverser. Jet velocity and flow rate are conserved as the jet changes direction in the jet reverser.</p>
 <p>8. Calculate the thickness of the jet after it does the 180 degree bend of the jet reverser. The change in thickness of the jet after the 180 degree bend is due to the flow spreading out to fill in the gaps created by the diffuser pipe walls.
-<span class="math notranslate nohighlight">\(W_{jet} * v_{diffuser} = W_{sed} * v_{up}\)</span></p>
+<span class="math notranslate nohighlight">\(W_{jet} * \bar v_{diff} = W_{sed} * \bar v_{z_{fb}}\)</span></p>
 <ol class="arabic simple" start="9">
-<li>Calculate the energy dissipation rate for the flow leaving the jet reverser. <strong>Add Reference to equation</strong></li>
+<li>Calculate the maximum energy dissipation rate for the flow leaving the jet reverser. See Equation <code class="xref eq docutils literal notranslate"><span class="pre">eq_EDR_JetPlane</span></code> for the maximum energy dissipation rate in a plane jet and see <a class="reference internal" href="../Rapid_Mix/RM_Intro.html#table-edr-g-equations"><span class="std std-numref">Table 10</span></a> for the value of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span>.</li>
 </ol>
-<p><span class="math notranslate nohighlight">\(\epsilon_{inlet,jet} = \frac{(\Pi_{jet plane} * v_{diff})^3}{W_{jet}}\)</span></p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pi_jet_plane</span> <span class="o">=</span> <span class="mf">0.225</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pi_jet_plane</span> <span class="o">=</span> <span class="mf">0.0124</span>
 <span class="n">W_jet_reversed</span> <span class="o">=</span> <span class="n">W_sed</span> <span class="o">*</span> <span class="n">V_sed_up</span> <span class="o">/</span> <span class="n">V_diffuser</span>
-<span class="n">EDR_inlet_jet</span> <span class="o">=</span> <span class="p">(((</span><span class="n">Pi_jet_plane</span> <span class="o">*</span> <span class="n">V_diffuser</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span> <span class="n">W_jet_reversed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">)</span>
+<span class="n">EDR_inlet_jet</span> <span class="o">=</span> <span class="n">Pi_jet_plane</span><span class="o">*</span> <span class="p">((</span><span class="n">V_diffuser</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span> <span class="n">W_jet_reversed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The energy dissipation rate for inlet jet is&#39;</span><span class="p">,</span> <span class="n">EDR_inlet_jet</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -458,9 +457,9 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <li>Calculate this diffuser exit head loss in two ways.</li>
 </ol>
 <p>First, calculate the head loss making sure to account for the upflow velocity in the sed tank.</p>
-<p><span class="math notranslate nohighlight">\(h_e = \frac{\left( {{v_{diff}} - {v_{up}}} \right)^2}{2g}\)</span></p>
+<p><span class="math notranslate nohighlight">\(h_e = \frac{\left( {{\bar v_{diff}} - {\bar v_{z_{fb}}}} \right)^2}{2g}\)</span></p>
 <p>Second, calculate the head loss but assume that the upflow velocity is negligible.</p>
-<p><span class="math notranslate nohighlight">\(h_e = \frac{\ {v_{diff}}^2}{2g}\)</span></p>
+<p><span class="math notranslate nohighlight">\(h_e = \frac{\ {\bar v_{diff}}^2}{2g}\)</span></p>
 <ol class="arabic simple" start="11">
 <li>Is it reasonable to neglect the upflow velocity in the sed tank when calculating this head loss?</li>
 </ol>
@@ -483,17 +482,17 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <p><span class="math notranslate nohighlight">\(\Delta{H}_{Manifold}\)</span> is the variability in piezometric head in the manifold that is driving the flow through the parallel paths.</p>
 <p>The ratio of minimum (first diffuser port) to maximum (last diffuser port) flow is given by:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-12">
-<span class="eqno">(538)<a class="headerlink" href="#equation-sedimentation-sed-examples-12" title="Permalink to this equation">¶</a></span>\[\Pi_{DiffuserFlow} = \sqrt{\frac{h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}}{h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2}}}\]</div>
+<span class="eqno">(542)<a class="headerlink" href="#equation-sedimentation-sed-examples-12" title="Permalink to this equation">¶</a></span>\[\Pi_{DiffuserFlow} = \sqrt{\frac{h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}}{h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2}}}\]</div>
 <p>The change in piezometric head is given by: <span class="math notranslate nohighlight">\(\Delta{H}_{Manifold} = \frac{{v_{manifold}}^{2}}{2g}\)</span></p>
 <p>The maximum allowable velocity in the manifold is given by:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-13">
-<span class="eqno">(539)<a class="headerlink" href="#equation-sedimentation-sed-examples-13" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left(h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2} \right) = h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}\]</div>
+<span class="eqno">(543)<a class="headerlink" href="#equation-sedimentation-sed-examples-13" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left(h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2} \right) = h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-14">
-<span class="eqno">(540)<a class="headerlink" href="#equation-sedimentation-sed-examples-14" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) h_{L,parallelpath} + \left({\Pi{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
+<span class="eqno">(544)<a class="headerlink" href="#equation-sedimentation-sed-examples-14" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) h_{L,parallelpath} + \left({\Pi{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-15">
-<span class="eqno">(541)<a class="headerlink" href="#equation-sedimentation-sed-examples-15" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{\Delta{H}_{Manifold}}{2}\]</div>
+<span class="eqno">(545)<a class="headerlink" href="#equation-sedimentation-sed-examples-15" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-16">
-<span class="eqno">(542)<a class="headerlink" href="#equation-sedimentation-sed-examples-16" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{{v_{manifold}}^{2}}{4g}\]</div>
+<span class="eqno">(546)<a class="headerlink" href="#equation-sedimentation-sed-examples-16" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{{v_{manifold}}^{2}}{4g}\]</div>
 <p>Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint, <span class="math notranslate nohighlight">\(\Pi_{DiffuserFlow}\)</span>, and the head loss in the parallel paths, <span class="math notranslate nohighlight">\(h_{L,ParallelPath}\)</span>.</p>
 <ol class="arabic simple">
 <li>Determine the relationship between diffuser exit velocity and the head loss in the parallel paths.</li>
@@ -532,7 +531,7 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <p><strong>Answer:</strong> The flow area ratio of manifold pipe to diffusers is 1.509 dimensionless. This means that the manifold flow area is larger than the total diffuser area. The flow distribution is more uniform because the diffuser velocity is higher than the manifold velocity.</p>
 <p>The maximum sed tank flow rate is currently set by the constraint of using a single length of pipe for the manifold and launder. The maximum length of the upflow region of the sedimentation tank is 5.8 m, as given below.</p>
 <ol class="arabic simple" start="6">
-<li>What is the corresponding sedimentation tank flow rate? This can be solved using <span class="math notranslate nohighlight">\(Q = VA\)</span>.</li>
+<li>What is the corresponding sedimentation tank flow rate? This can be solved using <span class="math notranslate nohighlight">\(Q = \bar v A\)</span>.</li>
 </ol>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">L_sed_upflow_max</span> <span class="o">=</span> <span class="mf">5.8</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
 <span class="n">flow_sed_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">L_sed_upflow_max</span> <span class="o">*</span> <span class="n">V_sed_up</span> <span class="o">*</span> <span class="n">W_sed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
@@ -542,7 +541,7 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <p><strong>Answer:</strong> The maximum flow rate in one sedimentation tank is 6.187 liter / second.</p>
 <p>The maximum sed tank flow rate dictates the required pipe diameter for the manifold and launder.</p>
 <p>7. What is the minimum inner diameter of the sedimentation tank manifold?
-<span class="math notranslate nohighlight">\(Q = \frac{v*\pi*D^2}{4}\)</span></p>
+<span class="math notranslate nohighlight">\(Q = \frac{\bar v*\pi*D^2}{4}\)</span></p>
 <p>8. What is the required nominal pipe diameter given this flow rate?
 The function from the pipe database can return the nominal diameter from the diameter and SDR.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D_sed_manifold_min</span><span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">diam_circle</span><span class="p">(</span><span class="n">flow_sed_max</span> <span class="o">/</span> <span class="n">V_sed_manifold_max</span><span class="p">)</span>
@@ -674,7 +673,7 @@ The function from the pipe database can return the nominal diameter from the dia
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.050',
+            VERSION:'0.055',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

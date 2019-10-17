@@ -151,7 +151,7 @@ Porosity of a sand bed refers to the ratio of the void volume to the total volum
 .. math::
    :label: porosity
 
-    \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}
+    \phi_{FiSand} = \frac{\rlap{--} V_{voids}}{\rlap{--} V_{total}}
 
 
 Porosity is determined by the geometry of the material and the size distribution (or uniformity of the particle sizes) and not by the average size of the particles. If you have three different sized spheres (such as  1 um clay, 0.2 mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in :numref:`figure_porosity`. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.
@@ -190,8 +190,8 @@ During backwash, the sand is fluidized and the sand bed expands. This expansion 
     \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}
 
 | Such that:
-| :math:`phi_{FiSandBw}` = sand porosity during backwash
-| :math:`phi_{FiSand}` = settled sand porosity
+| :math:`\phi_{FiSandBw}` = sand porosity during backwash
+| :math:`\phi_{FiSand}` = settled sand porosity
 | :math:`H_{FiSand}` = height of sand in the filter
 | :math:`H_{FiSandBw}` = height of sand during backwash
 | :math:`A_{Fi}` = filter area
@@ -204,7 +204,7 @@ From this it becomes possible to directly relate porosity (as above) to the filt
   \Pi_{FiBw} = \frac{H_{FiSandBw}}{H_{FiSand}}
 
 | Such that:
-| :math:`Pi_{FiBw}` = the expansion ratio value
+| :math:`\Pi_{FiBw}` = the expansion ratio value
 | :math:`H_{FiSand}` = height of sand in the filter
 | :math:`H_{FiSandBw}` = height of sand during backwash
 
@@ -220,20 +220,20 @@ The Carman Kozeny Equation, an adaptation of the Hagen-Poiseuille equation :eq:`
 .. math::
    :label: eq_Carman_Kozeny
 
-    \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu v_a}{g D_{60}^2}
+    \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu \bar v_a}{g D_{60}^2}
 
 | where
 | :math:`h_l` = head loss in sand bed
 | :math:`H_{FiSand}` = the sand bed depth/length of flow paths
 | :math:`\phi_{FiSand}` = porosity of sand
 | :math:`\nu` = kinematic viscosity
-| :math:`v_a` = the approach velocity (the velocity the water would have if the filter didn't have any sand!)
+| :math:`\bar v_a` = the approach velocity (the velocity the water would have if the filter didn't have any sand!)
 | :math:`D_{60}` = the size of the sand
 | :math:`g` = gravity
 | :math:`k` = Kozeny constant (5 for most filtration cases)
 
 This equation is valid for Reynolds numbers less than 6. Where:
-:math:`{\rm Re}  = \frac{D_{60} V_{Fi}}{\nu}`
+:math:`{\rm Re}  = \frac{D_{60} \bar v_a}{\nu}`
 
 
 
@@ -313,7 +313,7 @@ Using these two equations the minimum velocity for sand fluidization can be foun
 .. math::
    :label: minimum_fluidization_velocity_sand
 
-   V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
+   \bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 
 From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter does **not** imply that the sand at the bottom of the filter is fluidized.
 
@@ -323,7 +323,7 @@ Filtration Theory
 
 Filters are used to remove particles and thus we'd like to be able to predict particle removal efficiency in a filter. Unfortunately we don't yet have equations that describe particle removal by sand filtration. This is a very unpleasant surprise. It is as if we were designing a suspension bridge and didn't have any equations describing the relationship between the tension in the cables and the load they are supporting. We only have an equation describing what the cables do when there isn't any additional load. In the case of filtration we only have clean bed filtration models that attempt to describe what happens before the filter begins to remove particles.
 
-Reflection: How did we get to 2018 without a model for filter performance? There may be several reasons for the lack of a filtration model. Here are a few ideas.
+Reflection: How did we get to 2019 without a model for filter performance? There may be several reasons for the lack of a filtration model. Here are a few ideas.
  - The lack of data acquisition systems in university laboratories means that very few rapid sand filters were operated and evaluated for full filter runs in laboratory settings
  - The Environmental Engineering fixation on jar tests as the way to model water treatment plants provided no method to test filtration and thus most university laboratories only experimented with batch operation and not continuous flow.
  - Filtration models were borrowed from air filtration (`Yao et al, 1971 <https://pubs.acs.org/doi/abs/10.1021/es60058a005>`_) and thus did not take into account that the coagulant nanoparticles made particle attachment to surfaces very favorable.

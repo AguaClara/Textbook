@@ -181,35 +181,35 @@ There must be an optimal amount of recycled flocs for a floc blanket. Of course,
 
 Our goal is to find the optimal recycle ratio. Optimal is defined as the maximum collision potential. Collision potential for the floc blanket is proportional to to the collision rate times the hydraulic residence time. The collision rate is proportional to the solids concentration and the hindered sedimentation velocity of those flocs. The collision potential is thus proportional to the total number of flocs that a primary particle passes on its way through the floc blanket.
 
-.. math:: CP_{fb} \propto C_{fb} \theta_{fb} v_{hindered}
+.. math:: CP_{fb} \propto C_{fb} \theta_{fb} \bar v_{hindered}
 
 The residence time in the floc blanket is given by
 
-.. math:: \theta_{fb} = \frac{H_{fb}}{v_{fb}}
+.. math:: \theta_{fb} = \frac{H_{fb}}{\bar v_{fb}}
 
-.. math:: v_{fb} = \frac{Q_{plant} + Q_{recycle}}{A_{fb}}
+.. math:: \bar v_{fb} = \frac{Q_{plant} + Q_{recycle}}{A_{fb}}
 
 .. math:: Q_{recycle} = \Pi_{recycle}Q_{plant}
 
 The velocity up through the floc blanket without recycle is defined as
 
-.. math:: v_{up} = \frac{Q_{plant}}{A_{fb}}
+.. math:: \bar v_z = \frac{Q_{plant}}{A_{fb}}
 
-.. math:: v_{fb} = v_{up}\left( 1 + \Pi_{recycle} \right)
+.. math:: \bar v_{fb} = \bar v_z\left( 1 + \Pi_{recycle} \right)
 
 Now we need equations for the concentration in the floc blanket. This is based on mass conservation such that the mass in the floc blanket is constant. There is a hindered sedimentation velocity of the flocs that results in a reduction of the mass flux out of the top of the control volume.
 
-.. math:: C_{fb}\left(\frac{ Q_{plant}+Q_{recycle} }{A_{fb}}-v_{hindered}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}Q_{recycle}
+.. math:: C_{fb}\left(\frac{ Q_{plant}+Q_{recycle} }{A_{fb}}-\bar v_{hindered}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}Q_{recycle}
 
-.. math:: C_{fb}\left(\frac{ Q_{plant}+\Pi_{recycle}Q_{plant} }{A_{fb}}-v_{hindered}\frac{Q_{plant}}{Q_{plant}}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}\Pi_{recycle}Q_{plant}
+.. math:: C_{fb}\left(\frac{ Q_{plant}+\Pi_{recycle}Q_{plant} }{A_{fb}}-\bar v_{hindered}\frac{Q_{plant}}{Q_{plant}}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}\Pi_{recycle}Q_{plant}
 
-.. math:: C_{fb}\left( 1+\Pi_{recycle} -\frac{v_{hindered}}{v_{up}}\right) = C_{plant} + C_{recycle}\Pi_{recycle}
+.. math:: C_{fb}\left( 1+\Pi_{recycle} -\frac{\bar v_{hindered}}{\bar v_z}\right) = C_{plant} + C_{recycle}\Pi_{recycle}
 
-.. math:: C_{fb} = \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{v_{hindered}}{v_{up}}\right)}
+.. math:: C_{fb} = \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{\bar v_{hindered}}{\bar v_z}\right)}
 
 Now we can substitute to get the collision potential as a function of the flow rates.
 
-.. math:: CP_{fb} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{v_{hindered}}{v_{up}}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{fb}v_{hindered}} {v_{up}}
+.. math:: CP_{fb} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{\bar v_{hindered}}{\bar v_z}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{fb}\bar v_{hindered}} {\bar v_z}
 
 We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc blanket. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc blanket. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland measurements of the solids concentration in the floc hopper sludge.
 
@@ -329,4 +329,3 @@ Floc Volcanoes
 Floc volcanoes are caused by differences in temperature between the water that is in a sedimentation tank and the incoming water. If the incoming water is warmer than the water that is already in the sedimentation tank, then the incoming water will be buoyant and will rise quickly to the top of the sedimentation tank and carry flocs to the effluent launder.
 
 Temperature fluctuations can be especially pronounced with small scale water supplies where small streams and small diameter transmission lines can be exposed to the sun and can warm up dramatically during a few hours of sunshine. Given that temperature changes and density changes can not easily be engineered, the only solution that we have is to reduce the time that water spends in the sedimentation tank so that the influent water is closer to the average temperature of the water in the sedimentation tank. Solar heating causing the raw water temperature to go from a minimum at 6 am to a maximum at 1 pm. AguaClara sedimentation tanks currently have a residence time of approximately 2 m / (1 mm/s) or 2000 s. We anticipate that by increasing the upflow velocity and by introducing floc recycle that the effects of temperature induced floc volcanoes will be reduced.
-

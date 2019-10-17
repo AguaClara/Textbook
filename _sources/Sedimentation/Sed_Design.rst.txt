@@ -6,14 +6,17 @@ Sedimentation Design
 
 .. _heading_Sed_Design:
 
-The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank that was designed with two goals in mind:
+The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank that is designed with the following goals:
 
-1) to use flow distribution as a primary design constraint and,
+1) to minimize secondary currents that could send high velocity flow through some of the plate settlers
+1) to prevent accumulation of sludge that would tend to become anaerobic and release both dissolved organics (taste and order issues) and methane bubbles that would carry flocs to the top of the sedimentation tank
+1) to include a stable floc blanket that reduces the settled water turbidity
+1) to remove the solids without requiring power or moving mechanical parts
+1) to provide a mechanism for the operator to dump poorly flocculated water before it enters the sedimentation tank. This is important to reduce the recovery time when there is a flocculation failure.
+1) to ensure easy operation and maintenance.
 
-2) to ensure easy operation and maintenance.
-
-**Components of an AguaClara Sedimentation Tank**
-==================================================
+Components of an AguaClara Sedimentation Tank
+=============================================
 
 In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.
 
@@ -81,9 +84,9 @@ After water exits the flocculator, it is ready for sedimentation. In AguaClara p
 
     Influent channel with pipes leading to different sedimentation bays.
 
-An important question is consider is whether or not the water in the influent channel gets evenly distributed between the different bays. If it does not get evenly distributed, which bay will receive the most water? We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to differences in velocity and pressure in different parts of the pipe.
+An important question is consider is whether or not the water in the influent channel gets evenly distributed between the different bays. If it does not get evenly distributed, which bay will receive the most water? We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to conversion of kinetic energy into potential energy as the flow decelerates. This deceleration results in an increase in the piezometric head in the direction of flow.
 
-Where else in fluids have we discussed decelerating floc? We have discussed this in flow expansions. We know that in flow expansions, there are higher pressures and slower velocities. At the end of the pipe, there is low velocity and thus high pressure, driving the flow through the orifices at the end. For this same reason, a channel with orifices will have greatest flow delivery to the last orifice.
+Where else in fluids have we discussed decelerating flow? We have discussed this in flow expansions. We know that in flow expansions, there are higher pressures and slower velocities downstream. At the end of the pipe, there is low velocity and thus high pressure, driving the flow through the orifices at the end. For this same reason, a channel with multiple exits will have greatest flow thru the last exit.
 
 So, is this type of head loss "good" or "bad"? In our :ref:`definition of "good" and "bad" <heading_Good_v_Bad_Hl>`, we stated that "bad" head loss creates unequal flow in parallel flow paths. The head loss in the influent channel is therefore "bad" head loss because it can lead to different bays in parallel receiving different flows.
 
@@ -274,7 +277,7 @@ While we have just explained three reasons that the floc blanket improves sedime
 
 Consider the requirements that we have stated for the creation of the floc blanket. Could we design for a floc blanket in a treatment plant that experiences flow variability? There are some plants that only run for certain hours of the day. While this intermittent flow would impact many parts of the plant, how would it impact the floc blanket specifically? Can a settled floc blanket be resuspended?
 
-We do not yet have a way to design for variable or intermittent flow rates in a sedimentation tank. The ability of a settled floc blanket to resuspend is dependent on the characteristics of the flocs themselves. For example, sticky and clumpy flocs would have a more difficult time resuspending because they tend to settle into hard masses in the absence of sufficient upflow velocities. The capacity for resuspension may require site-specific analysis. The AguaClara pilot PF300 in testing at the Cornell Water Treatment Plant is going to determine whether the floc blanket at that site will be able to itermittent flow; the pilot plant and the Cornell Water Treatment Plant will be offline from around 10pm - 5am daily.
+We do not yet have a way to design for variable or intermittent flow rates in a sedimentation tank. The ability of a settled floc blanket to resuspend is dependent on the characteristics of the flocs themselves. For example, sticky and clumpy flocs would have a more difficult time resuspending because they tend to settle into hard masses in the absence of sufficient upflow velocities. The capacity for resuspension may require site-specific analysis. The AguaClara pilot PF300 in testing at the Cornell Water Treatment Plant is going to determine whether the floc blanket at that site will be able to intermittent flow; the pilot plant and the Cornell Water Treatment Plant will be offline from around 10pm - 5am daily.
 
 It is of interesting note that the suspended solids concentration in the floc blanket is approximately 1-5 g/L. This concentration corresponds to measurements of thousands of NTU, which is remarkably turbid water. A water treatment plant could have 5 NTU water entering the plant, and water in the bottom of the sedimentation tank could have 1000 NTU. This is one clue that there are interesting things happening in the floc blanket; the bottom of the sedimentation tank can be a completely different world from the rest of the treatment process.
 
@@ -325,10 +328,6 @@ We've stated that a benefit of the floc blanket is that flocs can be removed wit
 
 Floc blanket flow into the floc hopper is a function of the mass flux of particles into the sedimentation tank. In order to optimize the floc hopper design, we need to characterize the consolidation rate of the flocs. We do not have a good model for this yet; developing one would allow us to optimize design and guide operators for how much and how frequently the floc hopper should be drained.
 
-.. download CEPIS design files and create local copies to avoid problems with this hyperlink failing. (bibliotecavirtual.minam.gob.pe/biam/bitstream/id/5657/BIV00012.pdf)
-
-It is of interesting note that the Pan American Health Organization (PAHO) has published information in a manual on the theory of rapid sand filtration plants (page 289) suggesting that floc blankets should not be used. According to PAHO, floc blankets are not recommended for small communities who lack highly trained personal to operate the plant, and floc blankets should only be used where plant flow rates and water quality are constant. Each of these constraints was due to the inadequate design of previous floc blanket reactors that made operation difficult. AguaClara floc blanket design attempts to address these issues through better design.
-
 .. _heading_Sed_Tank_Plate_Settlers:
 
 Plate Settlers
@@ -370,18 +369,18 @@ Taking the vertical component of the critical path, we see that the total vertic
 
 4) What is the net vertical velocity of a floc between the plate settlers?
 
-The fluid carries the floc between the plate settlers while gravity pulls the floc down. The velocity through the plate settlers has both a horizontal component, :math:`v_{P,H}`, and vertical component, :math:`v_{P,V}`, with a resultant force we call :math:`v_{\alpha}`.
+The fluid carries the floc between the plate settlers while gravity pulls the floc down. The velocity through the plate settlers has both a horizontal component, :math:`\bar v_{x_{Plate}}`, and vertical component, :math:`\bar v_{z_{Plate}}`, with a resultant velocity we call :math:`\bar v_{\alpha_{Plate}}`.
 
 .. _figure_plate_settler_valpha:
 
-.. figure:: Images/plate_settler_valpha.png
+.. figure:: Images/plate_settler_base.png
     :height: 300px
     :align: center
     :alt: Velocity components between two plate settlers.
 
     Velocity components between two plate settlers.
 
-This means that the net vertical velocity :math:`v_{P,net}` is the vertical component of flow minus the settling velocity of the floc. Recall our previous discussion of terminal velocity and capture velocity; in this case, because we are designing a plate settler specifically to capture the critical particle, the terminal velocity equals the capture velocity. The terminal velocity is a function of the velocity that the critical particle settles at and the capture velocity is a function of the reactor geometry which we are designing to capture the critical particle. Thus, :math:`v_{P,net}=v_{P,V}-v_{c}`.
+This means that the net vertical velocity :math:`v_{z_{net}}` is the vertical component of flow minus the settling velocity of the floc. Recall our previous discussion of terminal velocity and capture velocity; in this case, because we are designing a plate settler specifically to capture the critical particle, the terminal velocity equals the capture velocity. The terminal velocity is a function of the velocity that the critical particle settles at and the capture velocity is a function of the reactor geometry which we are designing to capture the critical particle. Thus, :math:`\bar v_{z_{net}} = \bar v_{z_{Plate}} - \bar v_{c}`.
 
 .. _figure_plate_settler_vnet:
 
@@ -398,41 +397,41 @@ Finding time by dividing by distance by velocity for each travel,
 
 .. math::
 
-  Time = \frac{H_c}{v_c} = \frac{H}{v_{P,net}}
+  Time = \frac{H_c}{\bar v_c} = \frac{H}{\bar v_{z_{net}}}
 
-Substituting for :math:`v_{P,net} = v_{P,V}-v_{c}`,
+Substituting for :math:`\bar v_{z_{net}} = \bar v_{z_{Plate}}-v_{c}`,
 
 .. math::
 
-  Time = \frac{H_c}{v_c} = \frac{H}{v_{P,V}-v_{c}}
+  Time = \frac{H_c}{\bar v_c} = \frac{H}{\bar v_{z_{Plate}}- \bar v_{c}}
 
 Using trigonometric substitutions for :math:`H_c` and :math:`H`,
 
 .. math::
 
-  Time = \frac{S}{v_ccos\alpha} = \frac{Lsin\alpha}{v_{P,V}-v_{c}}
+  Time = \frac{S}{\bar v_c cos\alpha} = \frac{L sin\alpha}{\bar v_{z_{Plate}} - \bar v_{c}}
 
-Rearranging to solve for :math:`v_{c}`,
-
-.. math::
-
-  v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}
-
-Rearranging to solve for :math:`\frac{v_{P,V}}{v_{c}}`,
+Rearranging to solve for :math:`\bar v_{c}`,
 
 .. math::
 
-  \frac{v_{P,V}}{v_{c}} = 1+\frac{L}{S}cos\alpha sin\alpha
+  \bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
 
-The equation that we determined for critical velocity, :math:`v_c`, shows its dependence on plate settler geometry. Through another derivation, we can prove that by considering the total projected area over which particles can settle, we determine the same critical velocity.
-
-Beginning with :math:`Q = vA`, we can can modify the equation to fit the specific flow through a plate settler, :math:`Q = v_{\alpha}SW`.
-
-Using trigonometric substitutions, we know that :math:`\frac{v_{P,V}}{v_{\alpha}} = sin\alpha` and :math:`\frac{v_{P,V}}{sin\alpha} = v_{\alpha}`. So,
+Rearranging to solve for :math:`\frac{\bar v_{z_{Plate}}}{\bar v_{c}}`,
 
 .. math::
 
-  Q = \frac{v_{P,V}SW}{sin\alpha}
+  \frac{\bar v_{z_{Plate}}}{\bar v_{c}} = 1+\frac{L}{S}cos\alpha sin\alpha
+
+The equation that we determined for critical velocity, :math:`\bar v_c`, shows its dependence on plate settler geometry. Through another derivation, we can prove that by considering the total projected area over which particles can settle, we determine the same critical velocity.
+
+Beginning with :math:`Q = \bar vA`, we can modify the equation to fit the specific flow through a plate settler, :math:`Q = \bar v_{\alpha_{Plate}}SW`.
+
+Using trigonometric substitutions, we know that :math:`\frac{\bar v_{z_{Plate}}}{\bar v_{\alpha_{Plate}}} = sin\alpha` and :math:`\frac{\bar v_{z_{Plate}}}{sin\alpha} = v_{\alpha}`. So,
+
+.. math::
+
+  Q = \frac{\bar v_{z_{Plate}}SW}{sin\alpha}
 
 Determining the horizontal projection of the plate settlers,
 
@@ -446,13 +445,13 @@ Substituting for area, :math:`A`,
 
   A = (Lcos\alpha + \frac{S}{sin\alpha})W
 
-Solving for :math:`v_c = \frac{Q}{A}`
+Solving for :math:`\bar v_c = \frac{Q}{A}`
 
 .. math::
 
-  v_c = \frac{S*v_{P,V}}{Lsin\alpha cos\alpha + S}
+  \bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
 
-We can see that there are five parameters which will impact each other in our design :math:`v_{P,V}, v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`v_{P,V}, v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on :ref:`plate settler design <heading_Sed_Tank_Plate_Settler_Design>`.
+We can see that there are five parameters which will impact each other in our design :math:`\bar v_{z_{Plate}}, \bar v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`\bar v_{z_{Plate}}, \bar v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on :ref:`plate settler design <heading_Sed_Tank_Plate_Settler_Design>`.
 
 Now that we have established how flocs settle on the plate and the increase in plan view area that plate settlers offer, we need to discuss how flocs will act once they are on the plates. We want particles and flocs that settle to agglomerate and slide down the plate settlers to be returned to the floc blanket. We will explore this concept by first considering the desired spacing between plate settlers.
 
@@ -509,7 +508,7 @@ As we have already suggested, small spacing between plates will cause more floc 
 
 So what does this mean for plate settler spacing? Let's review some results from lab experiments. The following graph shows minimum plate settler spacing (mm) as a function of floc terminal velocity (mm/s). Some important things to note are that AguaClara plate settlers are designed for a capture velocity of 0.12 mm/s (recall that this capture velocity means that we want to capture flocs that are settling at 0.12 mm/s and faster). Before AguaClara filters were designed and deployed, AguaClara adopted the 0.12 mm/s capture velocity in an effort to reduce effluent turbidity as much as possible.
 
-Reading the graph, we can see the line for 1 mm/s upflow velocity in the sedimentation tank, :math:`v_{S,V}`, at 0.12 mm/s capture velocity requires a minimum plate spacing of about about 2.5 mm to prevent floc rollup. Now, let's interpret this result. If the upflow velocity increases, we see that the required spacing between plates increases. The results from these experiments will help us answer one of our previous questions: will little flocs or big flocs be most vulnerable to floc rollup? From the graph, we know that it is the little ones. Smaller floc terminal velocities indicate smaller particles, and the graph shows that smaller floc terminal velocities require larger distances of floc spacing to not roll up. The bigger the flocs, the smaller the spacing required to not roll up. Little flocs are harder to capture as you move plates closer together. Little flocs roll up first.
+Reading the graph, we can see the line for 1 mm/s upflow velocity in the sedimentation tank, :math:`v_{z_{fb}}`, at 0.12 mm/s capture velocity requires a minimum plate spacing of about about 2.5 mm to prevent floc rollup. Now, let's interpret this result. If the upflow velocity increases, we see that the required spacing between plates increases. The results from these experiments will help us answer one of our previous questions: will little flocs or big flocs be most vulnerable to floc rollup? From the graph, we know that it is the little ones. Smaller floc terminal velocities indicate smaller particles, and the graph shows that smaller floc terminal velocities require larger distances of floc spacing to not roll up. The bigger the flocs, the smaller the spacing required to not roll up. Little flocs are harder to capture as you move plates closer together. Little flocs roll up first.
 
 .. _figure_floc_vsed:
 
@@ -590,7 +589,7 @@ Let's recap some important conclusions from this section on plate settlers.
 
 1. Reynolds number calculations of flow through plate settlers prove that there is laminar flow between plate settlers. This is important because it allows us to assume that a parabolic velocity profile is established.
 #. There is very low head loss between plate settlers so they will not do a good job of helping to achieve uniform flow between the plate settlers.
-#. The plate settlers are designed to capture flocs with sedimentation velocities greater than the settle capture velocity. AguaClara currently uses :math:`v_c = 0.12` mm/s but this value needs to be further optimized; we would like to know how settled water turbidity changes with capture velocity. Future work includes choosing a settle capture velocity based on overall plate performance.
+#. The plate settlers are designed to capture flocs with sedimentation velocities greater than the settle capture velocity. AguaClara currently uses :math:`\bar v_c = 0.12` mm/s but this value needs to be further optimized; we would like to know how settled water turbidity changes with capture velocity. Future work includes choosing a settle capture velocity based on overall plate performance.
 #. Plate settler spacing:
 
    a. Plate settler spacing determines the ability of flocs to roll down the incline.

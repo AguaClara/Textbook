@@ -25,10 +25,10 @@ This derivation begins by finding two equations for flow, :math:`Q`, through the
 
 .. math::
 
-    Q =  - \frac{d\rlap{-}V}{dt} = - \frac{{A_{Tank}}dh}{dt}
+    Q =  - \frac{d\rlap{--}V}{dt} = - \frac{{A_{Tank}}dh}{dt}
 
 | Such that:
-| :math:`\frac{d\rlap{-}V}{dt}` = rate of change in volume of solution in the tank
+| :math:`\frac{d\rlap{--}V}{dt}` = rate of change in volume of solution in the tank
 | :math:`\frac{dh}{dt}` = rate of change in height of water (hypochlorite solution) level with time
 
 Our other equation for flow is the head loss equation. Since major losses are negligible for a short pipe-low flow rate system, we only need to consider minor losses. The only real minor loss in this system occurs in the almost-closed valve that is dripping the hypochlorite solution. However, we will also use the head loss trick. Therefore, the total driving head of the system :math:`h` is equal to the minor losses:
