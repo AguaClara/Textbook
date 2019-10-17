@@ -94,7 +94,7 @@ From the determination of the filter body size, the branch and trunk manifolds a
 +-----------------------------+--------------------------------------+--------------+-------------------------------------------------------------------+
 
 
-*trunk sizes based on Juan Guzmán's recommendation in November 2018 to account for fabrication problems
+*trunk sizes based on Juan Guzmán's recommendation in November 2018 to account for fabrication problems*
 
 Another important value determined by the filter body size is the area of the filter which is defined as: :math:`ID_{pipe}^2 / 4`. This becomes important later in determination of the mass of sand needed.
 
@@ -393,7 +393,7 @@ Those values divided by the length of the longest branch provides the spacing fo
 
 The factors that makes the length of the branch different from simply :math:`ID/2`, are the cap on the end and the width of the trunk. These can both be seen in :numref:`_figure_branch_length`
 
-.. _figure_branch_length
+.. _figure_branch_length:
 
 .. figure::Images/figure_branch_length.png
     :width: 80%
@@ -447,7 +447,7 @@ Outlet area, slots and affirmation of branch sizing
 ---------------------------------------------------------
 
 
-Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, :math:`B_{slot}` is always .008 inch. The number of slot rows is also fixed at 2, because each branch has slots on both sides because the outlet pipes are accepting flow from two layers of sand, one above and one below. This constrains the minimum size that the slotted pipes can be, becasue
+Due to fabrication methods for the slotted pipes (manufacturing by machine), the slot width, :math:`B_{slot}` is always 0.2 mm. The number of slot rows is also fixed at 2, because each branch has slots on both sides. This constrains the minimum size that the slotted pipes can be, becasue
 
 
 the total slot area for one outlet layer needs to be able to accept :math:`\frac{Q_{Fi}}{3}`, this includes two layers of slots on each branch.
@@ -463,6 +463,7 @@ Knowing the slot width makes determining the total slots length of the longest b
 .. math::
 
     \frac{A_{SlotsLongestBranch}}{B_{Slot}} = L_{SlotsLongestBranch}
+
 From the cumulative area of slots and the width of the slots, the total length of slots can be determined. This length of slots is for one side of one branch *yes?*
 
 As the branches are different lengths along one trunk, the number of slots is different per branch depending on the length, but the spacing is the same so the variation is accounted for.
