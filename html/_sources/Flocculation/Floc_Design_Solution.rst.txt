@@ -533,6 +533,7 @@ Create plots showing number of channels, number of expansions per water depth, t
    :alt: Floc channel width vs plant flow
 
    The flocculator channel width varies linearly with flow rate for a constant number of channels. The exception is for flows below about 35 L/s. In that flow rate the requirement of 2 channels that are the length of the sedimentation tank is excessive and results in more collision potential than needed. We need a new design solution to handle this suboptimal design for flows lower than 35 L/s.
+
 23)
 ~~~
 
