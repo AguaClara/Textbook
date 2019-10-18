@@ -92,7 +92,7 @@ Drag coefficients are used to describe flow around a particle and are shown in :
     :align: center
     :alt: Drag coefficient as a function of Reynolds number.
 
-    Drag coefficient as a function of Reynolds number.
+    Drag coefficient on a sphere as a function of Reynolds number.
 
 As an introduction to this drag coefficient diagram, we can compare it to something we've already learned about: the Moody diagram. Drawing parallels between the two will help us understand some important relationships better.
 
