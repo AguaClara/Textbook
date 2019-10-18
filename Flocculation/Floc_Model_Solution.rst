@@ -43,6 +43,7 @@ Estimate the diameter of the flocs that interact with the tip of the impeller of
     print('The diameter of the flocs that interact with the impeller is', diam_floc_mech, '.')
     x=fm.DIM_FRACTAL
     x
+
 The diameter of the flocs that interact with the impeller is 127 um.
 
 

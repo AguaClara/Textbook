@@ -199,6 +199,7 @@ Kinematic Viscosity of Coagulants
 AguaClara plants currently use either alum (aluminum sulfate) or PACl (polyaluminum chloride) solutions that are prepared from granular chemicals. The viscosity of solutions created from granular alum and PACl were measured using a SV - 10 Vibro Viscometer. The results are shown below.
 
 .. code:: python
+
   import aguaclara.core.physchem as pc
   from aguaclara.core.units import unit_registry as u
   import numpy as np
