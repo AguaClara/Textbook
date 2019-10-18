@@ -257,7 +257,7 @@ Once you find a sufficient motor, **display the CAD drawing of the motor and cre
 
 Notes: we don’t currently know how to select and link to the correct motor using python, which is why you need to go to the McMaster Carr website to find the correct motor. If you know of an easy way to do this, please let us know!
 
-The motor specifications are given below. |Rapid Mix motor|
+The motor specifications are given below.
 
 The `motor specifications <https://www.mcmaster.com/#5990k314/=19d4hod>`__ indicate that the efficiency is 89.5% which is very close to the premium efficiency standard.
 
