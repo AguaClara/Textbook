@@ -221,9 +221,21 @@ The sedimentation tank outlet manifold collects the clarified water from the top
   ND_Effluent_Manifold = ac.ND_SDR_available(ID_Effluent_Manifold,SDR)
   print('The manifold nominal diameter is',ND_Effluent_Manifold.to(u.inch))
 
+The head loss through the sedimentation tank is due to:
 
-Inlet Channel with Rectangular Weir Flow Distribution
-=====================================================
+* entrance and elbow in influent manifold
+* major losses in influent manifold
+* diffuser exit loss
+* floc blanket (negligible)
+* plate settlers (negligible)
+* effluent manifold orifices
+* effluent manifold major loss
+* effluent manifold exit
+
+It might be convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm. The effluent manifold orifices could be designed for whatever head loss is required to meet that target.
+
+Filter Inlet Channel with Rectangular Weir Flow Distribution
+============================================================
 
 In plants with flow rates large enough to use open stacked rapid sand filters the settled water is delivered to those filters through an open channel. The water exits the channel by flowing across a rectangular weir (see :numref:`figure_Filter_channel`). As is the case in a manifold pipe the water in the channel is decelerating and thus the piezometric head is increasing in the direction of flow. This increase in piezometric head is equivalent to the increase in the depth of water in the channel. This increase in water depth results in more water flowing across the final weir exiting the channel.
 

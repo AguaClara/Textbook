@@ -147,7 +147,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#sedimentation-tank-outlet-manifold">Sedimentation Tank Outlet Manifold</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#inlet-channel-with-rectangular-weir-flow-distribution">Inlet Channel with Rectangular Weir Flow Distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#filter-inlet-channel-with-rectangular-weir-flow-distribution">Filter Inlet Channel with Rectangular Weir Flow Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#side-exit-sharp-crested-weir">Side Exit Sharp Crested Weir</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#inlet-channel-design-for-equal-filter-flow">Inlet Channel Design for Equal Filter Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#backwash-weir-slot-design">Backwash Weir Slot Design</a></li>
@@ -358,10 +358,22 @@
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The manifold nominal diameter is&#39;</span><span class="p">,</span><span class="n">ND_Effluent_Manifold</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">))</span>
 </pre></div>
 </div>
+<p>The head loss through the sedimentation tank is due to:</p>
+<ul class="simple">
+<li>entrance and elbow in influent manifold</li>
+<li>major losses in influent manifold</li>
+<li>diffuser exit loss</li>
+<li>floc blanket (negligible)</li>
+<li>plate settlers (negligible)</li>
+<li>effluent manifold orifices</li>
+<li>effluent manifold major loss</li>
+<li>effluent manifold exit</li>
+</ul>
+<p>It might be convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm. The effluent manifold orifices could be designed for whatever head loss is required to meet that target.</p>
 </div>
 </div>
-<div class="section" id="inlet-channel-with-rectangular-weir-flow-distribution">
-<h2>Inlet Channel with Rectangular Weir Flow Distribution<a class="headerlink" href="#inlet-channel-with-rectangular-weir-flow-distribution" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="filter-inlet-channel-with-rectangular-weir-flow-distribution">
+<h2>Filter Inlet Channel with Rectangular Weir Flow Distribution<a class="headerlink" href="#filter-inlet-channel-with-rectangular-weir-flow-distribution" title="Permalink to this headline">¶</a></h2>
 <p>In plants with flow rates large enough to use open stacked rapid sand filters the settled water is delivered to those filters through an open channel. The water exits the channel by flowing across a rectangular weir (see <a class="reference internal" href="#figure-filter-channel"><span class="std std-numref">Fig. 193</span></a>). As is the case in a manifold pipe the water in the channel is decelerating and thus the piezometric head is increasing in the direction of flow. This increase in piezometric head is equivalent to the increase in the depth of water in the channel. This increase in water depth results in more water flowing across the final weir exiting the channel.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-filter-channel"></span><a class="reference internal image-reference" href="../_images/Filter_channel.png"><img alt="Filter channel" src="../_images/Filter_channel.png" style="width: 400px;" /></a>
