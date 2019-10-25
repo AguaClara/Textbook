@@ -232,7 +232,7 @@ The head loss through the sedimentation tank is due to:
 * effluent manifold major loss
 * effluent manifold exit
 
-It might be convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm. The effluent manifold orifices could be designed for whatever head loss is required to meet that target.
+It might be convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm so that influent and effluent weirs always have the same elevation difference. The effluent manifold orifices could be designed for whatever head loss is required to meet that target.
 
 Filter Inlet Channel with Rectangular Weir Flow Distribution
 ============================================================
