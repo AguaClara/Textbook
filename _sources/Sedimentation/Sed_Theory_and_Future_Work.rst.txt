@@ -36,14 +36,14 @@ From the floc blanket we know that particle removal is first order with respect 
 Separate variables to integrate this rate equation.
 
 .. math::
-   :label: what
+   :label:
 
 	 \frac{dC_{P}}{C_{P}}=-k_{fb}dt
 
 We integrate this to solve for the rate constant.
 
 .. math::
-   :label: what
+   :label:
 
 	 k_{fb} = -\frac{1}{\theta_{fb}}ln{\frac{C_{P}}{C_{P_0}}}
 

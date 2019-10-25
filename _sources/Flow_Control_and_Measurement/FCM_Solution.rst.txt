@@ -24,10 +24,9 @@ A brief Design Challenge guide
 
 .. code:: python
 
-    from aguaclara.core import constants as con
-    import aguaclara.core.physchem as pc
+
+    import aguaclara as ac
     from aguaclara.core.units import unit_registry as u
-    import aguaclara.core.utility as ut
     import numpy as np
     import matplotlib.pyplot as plt
 
@@ -41,7 +40,7 @@ Find the vena contract (VC) coefficient ratio for an orifice in the expert_input
 
 .. code:: python
 
-    print('The vena contracta coefficient for an orifice is ',con.VC_ORIFICE_RATIO,'.')
+    print('The vena contracta coefficient for an orifice is ',ac.VC_ORIFICE_RATIO,'.')
 
 The vena contracta coefficient for an orifice is 0.63.
 
@@ -82,8 +81,8 @@ The steps for making the graph are as follows:
     # we are removing them after all calculations have been made to minimize the
     # severity of floating-point errors.
     for i in range(len(WaterElevation)):
-      HorizontalOrificeFlows[i] = (pc.flow_orifice(DiamOrifice, WaterElevation[i], con.VC_ORIFICE_RATIO).to(u.L/u.s).magnitude)
-      VerticalOrificeFlows[i] = (pc.flow_orifice_vert(DiamOrifice, WaterElevation[i], con.VC_ORIFICE_RATIO).to(u.L/u.s).magnitude)
+      HorizontalOrificeFlows[i] = (ac.flow_orifice(DiamOrifice, WaterElevation[i], ac.VC_ORIFICE_RATIO).to(u.L/u.s).magnitude)
+      VerticalOrificeFlows[i] = (ac.flow_orifice_vert(DiamOrifice, WaterElevation[i], ac.VC_ORIFICE_RATIO).to(u.L/u.s).magnitude)
 
     fig, ax = plt.subplots()
     ax.plot(WaterElevationNormalized, HorizontalOrificeFlows, 'r-', WaterElevationNormalized, VerticalOrificeFlows, 'b-')
@@ -125,7 +124,7 @@ For negative depths of submergence the horizontal orifice function uses an if st
 Linear Flow Orifice Meter (LFOM)
 ================================
 
-A linear flow orifice meter is used in AguaClara plants to measure the plant flow rate and to provide a linear relationship between flow rate and the depth of water in the entrance tank. Below, we use the LFOM code to obtain a design for a linear flow orifice meter. Your task will be to test this design using the orifice equations to see if it is correct. We have a custom `LFOM class<https://aguaclara.github.io/aguaclara/design/lfom.html>`_ that defines the LFOM properties. This code will be updated soon based on the code below. In the meantime, the code below can be used for calculations.
+A linear flow orifice meter is used in AguaClara plants to measure the plant flow rate and to provide a linear relationship between flow rate and the depth of water in the entrance tank. Below, we use the LFOM code to obtain a design for a linear flow orifice meter. Your task will be to test this design using the orifice equations to see if it is correct. We have a custom `LFOM class <https://aguaclara.github.io/aguaclara/design/lfom.html>`_ that defines the LFOM properties. This code will be updated soon based on the code below. In the meantime, the code below can be used for calculations.
 
 The following questions are all answered in one big block of code to make it easy to change values and then see the resulting graph.
 
@@ -163,250 +162,6 @@ The following questions are all answered in one big block of code to make it eas
 
   - Plot a straight horizontal line at y = 1, which is your normalized expected flow value if the LFOM were perfect.
 
-.. code:: python
-
-  """Build an Linear Flow Orifice Meter"""
-  import aguaclara.core.constants as con
-  import aguaclara.core.physchem as pc
-  import aguaclara.core.pipes as pipe
-  import aguaclara.core.utility as ut
-  import aguaclara.core.drills as drills
-  from aguaclara.core.units import unit_registry as u
-  import numpy as np
-  import math
-
-
-  class LFOM:
-
-      def __init__(self, q=20*u.L/u.s, hl=20*u.cm, safety_factor=1.2, sdr=26,
-                   drill_bits=drills.DRILL_BITS_D_IMPERIAL, s_orifice=0.5*u.cm):
-
-          self.q = q
-          self.hl = hl
-          self.safety_factor = safety_factor
-          self.sdr = sdr
-          self.drill_bits = drill_bits
-          self.s_orifice = s_orifice
-
-      def width_stout(self, z):
-          """Return the width of a Stout weir at elevation z. More info
-          here. <https://confluence.cornell.edu/display/AGUACLARA/
-          LFOM+sutro+weir+research>
-          """
-          w_per_flow = 2 / ((2 * pc.gravity * z) ** (1 / 2) *
-                            con.VC_ORIFICE_RATIO * np.pi * self.hl)
-          return w_per_flow
-
-      @property
-      def n_rows(self):
-          """This equation states that the open area corresponding to one row
-          can be set equal to two orifices of diameter=row height. If there
-          are more than two orifices per row at the top of the LFOM then there
-          are more orifices than are convenient to drill and more than
-          necessary for good accuracy. Thus this relationship can be used to
-          increase the spacing between the rows and thus increase the diameter
-          of the orifices. This spacing function also sets the lower depth on
-          the high flow rate LFOM with no accurate flows below a depth equal
-          to the first row height.
-          But it might be better to always set then number of rows to 10.
-          The challenge is to figure out a reasonable system of constraints that
-          reliably returns a valid solution.
-          """
-          N_estimated = (self.hl * np.pi / (2 * self.width_stout(self.hl) * self.q)).to(u.dimensionless)
-          variablerow = min(10, max(4, math.trunc(N_estimated.magnitude)))
-          return variablerow
-
-      @property
-      def b_rows(self):
-          """The distance center to center between each row of orifices.
-          Message how long it took to load everything (minus packages)"""
-          return self.hl / self.n_rows
-
-      @property
-      def vel_capture(self):
-          """The average vertical velocity of the water inside the LFOM pipe
-          at the very bottom of the bottom row of orifices The speed of
-          falling water is 0.841 m/s for all linear flow orifice meters of
-          height 20 cm, independent of total plant flow rate. """
-          return (4 / (3 * math.pi) * (2 * pc.gravity * self.hl) ** (1 / 2)).to(u.m/u.s)
-
-      @property
-      def area_pipe_min(self):
-          """The minimum cross-sectional area of the LFOM pipe that assures
-          a safety factor."""
-          return (self.safety_factor * self.q / self.vel_capture).to(u.cm**2)
-
-      @property
-      def nom_diam_pipe(self):
-          """The nominal diameter of the LFOM pipe"""
-          ID = pc.diam_circle(self.area_pipe_min)
-          return pipe.ND_SDR_available(ID, self.sdr)
-
-      @property
-      def area_top_orifice(self):
-          """Estimate the orifice area corresponding to the top row of orifices.
-          Another solution method is to use integration to solve this problem.
-          Here we use the width of the stout weir in the center of the top row
-          to estimate the area of the top orifice
-          """
-          # Calculate the center of the top row:
-          z = self.hl - 0.5 * self.b_rows
-          # Multiply the stout weir width by the height of one row.
-          return self.width_stout(z) * self.q * self.b_rows
-
-      @property
-      def d_orifice_max(self):
-          """Determine the maximum orifice diameter."""
-          return pc.diam_circle(self.area_top_orifice)
-
-      @property
-      def orifice_diameter(self):
-          """The actual orifice diameter. We don't let the diameter extend
-          beyond its row space. """
-          maxdrill = min(self.b_rows, self.d_orifice_max)
-          return ut.floor_nearest(maxdrill, self.drill_bits)
-
-      @property
-      def drillbit_area(self):
-          """The area of the actual drill bit."""
-          return pc.area_circle(self.orifice_diameter)
-
-      @property
-      def n_orifices_per_row_max(self):
-          """A bound on the number of orifices allowed in each row.
-          The distance between consecutive orifices must be enough to retain
-          structural integrity of the pipe.
-          """
-          c = math.pi * pipe.ID_SDR(self.nom_diam_pipe, self.sdr)
-          b = self.orifice_diameter + self.s_orifice
-
-          return math.floor(c/b)
-
-      @property
-      def flow_ramp(self):
-          """An equally spaced array representing flow at each row."""
-          return np.linspace(1 / self.n_rows, 1, self.n_rows)*self.q
-
-      @property
-      def height_orifices(self):
-          """Calculates the height of the center of each row of orifices.
-          The bottom of the bottom row orifices is at the zero elevation
-          point of the LFOM so that the flow goes to zero when the water height
-          is at zero.
-          """
-
-          return (np.linspace(0, self.n_rows-1, self.n_rows))*self.b_rows + 0.5 * self.orifice_diameter
-
-      def flow_actual(self, Row_Index_Submerged, N_LFOM_Orifices):
-          """Calculates the flow for a given number of submerged rows of orifices
-          harray is the distance from the water level to the center of the
-          orifices when the water is at the max level.
-          Parameters
-          ----------
-          Row_Index_Submerged: int
-            The index of the submerged row. All rows below and including this
-            index are submerged.
-          N_LFOM_Orifices: [int]
-            The number of orifices at each row.
-          Returns
-          --------
-          The flow through all of the orifices that are submerged.
-          """
-
-          flow = 0
-          for i in range(Row_Index_Submerged + 1):
-              flow = flow + (N_LFOM_Orifices[i] * (
-                 pc.flow_orifice_vert(self.orifice_diameter,
-                                      self.b_rows*(Row_Index_Submerged + 1)
-                                      - self.height_orifices[i],
-                                      con.VC_ORIFICE_RATIO)))
-          return flow
-
-      @property
-      def n_orifices_per_row(self):
-          """Calculate number of orifices at each level given an orifice
-          diameter.
-          """
-          # H is distance from the bottom of the next row of orifices to the
-          # center of the current row of orifices
-          H = self.b_rows - 0.5*self.orifice_diameter
-          flow_per_orifice = pc.flow_orifice_vert(self.orifice_diameter, H, con.VC_ORIFICE_RATIO)
-          n = np.zeros(self.n_rows)
-          for i in range(self.n_rows):
-              # calculate the ideal number of orifices at the current row without
-              # constraining to an integer
-              flow_needed = self.flow_ramp[i] - self.flow_actual(i, n)
-              n_orifices_real = (flow_needed / flow_per_orifice).to(u.dimensionless)
-              # constrain number of orifices to be less than the max per row and
-              # greater or equal to 0
-              n[i] = min((max(0, round(n_orifices_real))), self.n_orifices_per_row_max)
-          return n
-
-      @property
-      def error_per_row(self):
-          """This function calculates the error of the design based on the
-          differences between the predicted flow rate
-          and the actual flow rate through the LFOM."""
-          FLOW_lfom_error = np.zeros(self.n_rows)
-          for i in range(self.n_rows):
-              actual_flow = self.flow_actual(i, self.n_orifices_per_row)
-              FLOW_lfom_error[i] = (((actual_flow - self.flow_ramp[i]) / self.flow_ramp[i]).to(u.dimensionless)).magnitude
-          return FLOW_lfom_error
-
-  #Now we design a 60 L/s LFOM.
-  LFOM_hl = 20 * u.cm
-  LFOM_flow = 60 * u.L/u.s
-
-  my_LFOM = LFOM(q=LFOM_flow,hl=LFOM_hl, drill_bits = drills.DRILL_BITS_D_IMPERIAL)
-  orifice_diameter = my_LFOM.orifice_diameter
-  n_orifices_per_row = my_LFOM.n_orifices_per_row
-  height_orifices = my_LFOM.height_orifices
-  print('The velocity of the water exiting the bottom of the LFOM is',my_LFOM.vel_capture)
-  print('The flow rate of the LFOM is',my_LFOM.q)
-  print('The nominal diameter of the LFOM is',my_LFOM.nom_diam_pipe)
-  print('The total height range from zero flow to max flow is', my_LFOM.hl)
-  print('The number of rows of orifices is' ,my_LFOM.n_rows)
-  print('The vertical spacing of the rows of orifices is',my_LFOM.b_rows)
-  print('The orifice diameter is',orifice_diameter.to(u.cm))
-  print('The number of orifices in each row is',n_orifices_per_row)
-  print('The height of the center of the orifices measured from the LFOM datum, the bottom of the bottom row of orifices, is',height_orifices.magnitude,height_orifices.units)
-  print('The error is',my_LFOM.error_per_row)
-
-
-  def flow_lfom_vert(height, orifice_diameter, n_orifices_per_row, height_orifices):
-      "Returns the flow through the LFOM as a function of height above the datum"
-      Flow = np.empty_like(n_orifices_per_row)
-      for i in range(len(n_orifices_per_row)):
-          Flow[i] = ((pc.flow_orifice_vert(orifice_diameter, height - height_orifices[i], con.VC_ORIFICE_RATIO)*n_orifices_per_row[i]).to(u.L/u.s)).magnitude
-      return (sum(Flow))*u.L/u.s
-
-
-  flow_lfom_vert(LFOM_hl, orifice_diameter, n_orifices_per_row, height_orifices)
-
-
-  FlowMaxVert = flow_lfom_vert(LFOM_hl, orifice_diameter, n_orifices_per_row, height_orifices)
-  print('The flow at a depth of ',LFOM_hl,' is ',FlowMaxVert,'.')
-
-
-
-  #Create an array of water depths
-  graph_points=50
-  HeightGraph = np.linspace(0.001, LFOM_hl.to(u.cm),graph_points) * u.cm
-
-  #Create an array that is empty
-  FlowGraph = np.empty_like(HeightGraph)
-  # or FlowGraph = []
-  for i in range(len(HeightGraph)):
-      FlowGraph[i] = (flow_lfom_vert((HeightGraph[i]), orifice_diameter, n_orifices_per_row, height_orifices)/((HeightGraph[i]) / LFOM_hl * LFOM_flow)).magnitude
-
-  fig, ax = plt.subplots()
-  ax.plot(HeightGraph, FlowGraph, 'r-', HeightGraph, np.ones(graph_points), 'c-')
-  ax.set(xlabel='Water Depth (cm)')
-  ax.set(ylabel='Normalized flow rate')
-  ax.legend(['Vertical Orifice', 'Target'], loc='best')
-  ax.grid(True)
-  fig.savefig('Flow_Control_and_Measurement/Images/Normalized_Flow_Rate_vs_Water_Depth')
-  plt.show()
 
 
 .. _figure_Normalized_Flow_Rate_vs_Water_Depth:
@@ -462,10 +217,10 @@ You may assume that the chlorine stock solution kinematic viscosity is approxima
 .. code:: python
 
   FlowPlant = 50*u.L/u.s
-  T = u.Quantity(20,u.degC)
-  NuBleach = pc.viscosity_kinematic(T)
+  T = 20 * u.degC
+  NuBleach = ac.viscosity_kinematic(T)
   HeadlossDosingTubeMax = 20*(u.cm)
-  StockCl2 = 51.4*(u.gram/u.L)
+  StockCl2 = 51.4*(u.g/u.L)
   DoseCl2 = 2*(u.mg/u.L)
   RatioError = 0.1
   KMinor = 2
@@ -514,7 +269,7 @@ What is the maximum average velocity in a dosing tube based on the constraint th
 
 .. code:: python
 
-    VelTubeMax = (((RatioError * 2 * HeadlossDosingTubeMax * pc.gravity) / KMinor)**(1/2)).to(u.meter/u.s)
+    VelTubeMax = (((RatioError * 2 * HeadlossDosingTubeMax * u.gravity) / KMinor)**(1/2)).to(u.m/u.s)
     print('The maximum average velocity in a dosing tube is', VelTubeMax)
 
 The maximum average velocity in a dosing tube is 0.443 m/s
@@ -539,13 +294,13 @@ Create an array of the maximum flow rates corresponding to the array of tubing d
 
 .. math:: Q_{Max} = \frac{\pi D^2}{4}\sqrt{\frac{2h_{L}g \Pi_{error}}{\sum K_{e}}}
 
- - First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``pc.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
+ - First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``ac.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
  - Create the array of maximum flow rates using the array of tubing diameters and the maximum head loss through the dosing tubes.
 
 .. code:: python
 
     def flow_cdc_max(diam, VelTubeMax):
-        Flow = pc.area_circle(diam) * (VelTubeMax)
+        Flow = ac.area_circle(diam) * (VelTubeMax)
         return Flow
 
     FlowMaxArray = flow_cdc_max(DiamTubeArray, VelTubeMax).to(u.mL/u.s)
@@ -595,7 +350,7 @@ size.
 
     def length_tube(flow_max, diam, headloss_max, nu, k_minor):
         "Returns the length of tube necessary to handle the maximum flow."
-        L = (((pc.gravity * headloss_max * np.pi * diam**4)/
+        L = (((ac.gravity * headloss_max * np.pi * diam**4)/
                                (128 * nu * flow_max))-
                         ((k_minor * flow_max)/
                                  (16 * np.pi * nu)))
@@ -636,50 +391,6 @@ The ideal solution will have - a “reasonable” number of tubes and thus one p
 22)
 ~~~
 
-AguaClara has coded these dosing tube size functions in the CDC Functions (cdc_functions). Find the function calls for the length, diameter, and number of dosing tubes and use those functions to calculate the values for the problem that you solved above. Compare your answers. Your answers should agree!
+AguaClara has coded these dosing tube size functions in the CDC Functions (ac.CDC). Find the function calls for the length, diameter, and number of dosing tubes and use those functions to calculate the values for the problem that you solved above. Compare your answers. Your answers should agree!
 
-.. code:: python
-
-    from aguaclara.design import cdc as cdc
-    pc.viscosity_kinematic(22*u.degC)
-
-    #The cdc functions file has an enumerated list for different checmials to obtain the correct kinematic viscosity.
-    # 0 is Alum, 1 is PACl, 2 is water or chlorine
-
-    EnChem = 2
-
-    #see the
-    #viscosity_kinematic_chem(conc_chem, temp, en_chem):
-    #to see how EnChem is used.
-
-.. code:: python
-
-    # The maximum tube length constraint might be based on the length of the available wall where the
-    # dosing tube will be mounted. You might change this depending on which solution
-    # you picked in step 20. Here the wall length is LengthTubeMax.
-
-    LengthTubeMax = 5*u.m
-
-    LengthTubeCheck = cdc.len_cdc_tube(FlowPlant, DoseCl2, StockCl2,
-                                             DiamTubeArray, HeadlossDosingTubeMax,
-                                             LengthTubeMax, T, EnChem, KMinor)
-
-    print('The length of the CDC tube is ', LengthTubeCheck)
-
-    DiamTubeCheck = cdc.diam_cdc_tube(FlowPlant, DoseCl2, StockCl2,
-                                             DiamTubeArray, HeadlossDosingTubeMax,
-                                             LengthTubeMax, T, EnChem, KMinor)
-
-    print('The diameter of the CDC tube is', DiamTubeCheck.to(u.inch))
-
-
-    NTube = cdc.n_cdc_tube(FlowPlant, DoseCl2, StockCl2,
-                                             DiamTubeArray, HeadlossDosingTubeMax,
-                                             LengthTubeMax, T, EnChem, KMinor)
-
-
-    print('The number of CDC tubes is ', NTube)
-
-The length of the CDC tube is  2.43 m
-    The diameter of the CDC tube is 0.125 in
-    The number of CDC tubes is  1.0
+Pending new solution using updated CDC code.
