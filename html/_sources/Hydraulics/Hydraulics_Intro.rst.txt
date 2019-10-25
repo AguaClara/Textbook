@@ -140,12 +140,101 @@ If their is no additional head loss in series to improve flow distribution, then
 
     \frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)}}
 
-Equation :eq:`Manifold_max_v_no_hl_series` can be used to determine the required diameter of inlet manifolds in sedimentation tanks or to determine the required port velocity for the backwash manifold in the StaRS filters.
+Equation :eq:`Manifold_max_v_no_hl_series` (see :numref:`figure_Ratio_port_to_manifold_velocity`) can be used to determine the required diameter of inlet manifolds in sedimentation tanks or to determine the required port velocity for the backwash manifold in the StaRS filters. It can also be used to solve for the maximum manifold velocity given the port velocity in the sedimentation tank diffusers.
+
+
+.. code:: python
+
+  def Ratio_Pipe_Manifold_V_Port_to_V_Man(Ratio_Flow):
+    return np.sqrt((Ratio_Flow**2 + 1)/(2*(1-Ratio_Flow**2)))
+
+.. _figure_Ratio_port_to_manifold_velocity:
+
+.. figure:: Images/Ratio_port_to_manifold_velocity.png
+    :width: 400px
+    :align: center
+    :alt: Filter channel
+
+    The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.
+
+
+Sedimentation Tank Inlet Manifold
+---------------------------------
+
+The port velocity for in inlet manifold diffusers is set by the slot width, the width of the sedimentation tank, and the upflow velocity in the sedimentation tank. From mass conservation we have
+
+.. math::
+   :label: Sed_diffuser_mass_conserve
+
+   Q_{Diffuser} = \bar v_{Jet} W_{Diffuser} S_{Diffuser} = \bar v_{FB} W_{Sed} B_{Diffuser}
+
+Solve for the jet velocity, :math:`\bar v_{Jet}`.
+
+.. math::
+   :label: Sed_diffuser_jet_velocity
+
+   \bar v_{Jet}  = \frac{\bar v_{FB} W_{Sed} B_{Diffuser}}{W_{Diffuser} S_{Diffuser}}
+
+For sedimentation tanks that are 1.07 m wide, an upflow velocity of 1 mm/s, with diffusers that are 3.175 mm wide, and assuming that the diffuser wall thickness is small we have a jet velocity of 0.34 m/s.
+
+The maximum inlet manifold velocity can now be determined from equation :eq:`Manifold_max_v_no_hl_series`. Given a port flow ratio of 85% the maximum manifold velocity is about 0.6 m/s.
+
+.. code:: python
+
+  #Design the sedimentation tank inlet manifold
+  v_FB = 1 * u.mm/u.s
+  W_Diffuser = 3.175 * u.mm
+  W_Sed = 1.07 * u.m
+  v_jet = v_FB * W_Sed/W_Diffuser
+  print('The jet velocity is',v_jet)
+  L_Sed = 6 * u.m
+  Ratio_Flow = 0.85
+  v_Influent_Manifold = v_jet / Ratio_Pipe_Manifold_V_Port_to_V_Man(Ratio_Flow)
+  print('The manifold velocity is',v_Manifold)
+  Q_sed =(L_Sed * W_Sed * v_FB).to(u.L/u.s)
+  ID_min_Influent_Manifold = ac.diam_circle(Q_sed/v_Influent_Manifold)
+  print('The minimum manifold diameter is',ID_min_Influent_Manifold.to(u.inch))
+  SDR = 41
+  ID_Influent_Manifold = ac.ceil_nearest(ID_min_Influent_Manifold,ac.ID_SDR_all_available(SDR))
+  ND_Influent_Manifold = ac.ND_SDR_available(ID_Influent_Manifold,SDR)
+  print('The manifold nominal diameter is',ND_Influent_Manifold.to(u.inch))
+
+
+
+Sedimentation Tank Outlet Manifold
+----------------------------------
+
+The sedimentation tank outlet manifold collects the clarified water from the top of the plate setters. The outlet manifold is required to help ensure uniform flow up through the plate settlers.  The outlet manifold has orifices and it is these orifices that provide the majority of the head loss through the sedimentation tank. The target head loss for those orifices is about 5 cm. This head loss helps ensure that flow divides evenly between sedimentation tanks and divides evenly between the plate settlers.
+
+.. code:: python
+
+  #Design the sedimentation tank inlet manifold
+  HL_orifice = 5 * u.cm
+  v_orifice_contracted = np.sqrt(2 * u.gravity * HL_orifice)
+  v_Effluent_Manifold = (v_orifice_contracted / Ratio_Pipe_Manifold_V_Port_to_V_Man(Ratio_Flow)).to(u.m/u.s)
+  print('The maximum effluent manifold velocity is',v_Effluent_Manifold)
+  Q_sed =(L_Sed * W_Sed * v_FB).to(u.L/u.s)
+  ID_min_Effluent_Manifold = ac.diam_circle(Q_sed/v_Effluent_Manifold)
+  print('The minimum effluent manifold diameter is',ID_min_Effluent_Manifold.to(u.inch))
+  SDR = 41
+  ID_Effluent_Manifold = ac.ceil_nearest(ID_min_Effluent_Manifold,ac.ID_SDR_all_available(SDR))
+  ND_Effluent_Manifold = ac.ND_SDR_available(ID_Effluent_Manifold,SDR)
+  print('The manifold nominal diameter is',ND_Effluent_Manifold.to(u.inch))
+
 
 Inlet Channel with Rectangular Weir Flow Distribution
 =====================================================
 
-In plants with flow rates large enough to use open stacked rapid sand filters the settled water is delivered to those filters through an open channel. The water exits the channel by flowing across a rectangular weir. As is the case in a manifold pipe the water in the channel is decelerating and thus the piezometric head is increasing in the direction of flow. This increase in piezometric head is equivalent to the increase in the depth of water in the channel. This increase in water depth results in more water flowing across the final weir exiting the channel.
+In plants with flow rates large enough to use open stacked rapid sand filters the settled water is delivered to those filters through an open channel. The water exits the channel by flowing across a rectangular weir (see :numref:`figure_Filter_channel`). As is the case in a manifold pipe the water in the channel is decelerating and thus the piezometric head is increasing in the direction of flow. This increase in piezometric head is equivalent to the increase in the depth of water in the channel. This increase in water depth results in more water flowing across the final weir exiting the channel.
+
+.. _figure_Filter_channel:
+
+.. figure:: Images/Filter_channel.png
+    :width: 400px
+    :align: center
+    :alt: Filter channel
+
+    The filter inlet channel distributes flow to all of the filters. The water in the channel flows across sharp crested weirs into the filter inlet boxes. The velocity in the channel decreases in the direction of flow and thus the kinetic energy of the flow is converted into height. That added height results in greater flow into downstream filter inlet boxes.
 
 The flow across the weirs into the filter inlet boxes is complicated by several factors. First, there must be a *vena contracta* as the flow changes direction to flow across the weir and thus the :math:`90^{\circ}` *vena contracta* coefficient should enter the equations. Second, the weirs as they are fabricated are neither sharp nor broad and thus it isn't clear which equations are best suited. Sharp crested weirs are known to have a reduced depth of flow above the weir due to the acceleration of water approaching the weir and this effect is normally ignored and then thrown into the weir coefficient. Given that our weirs do not have a rounded upstream edge required by broad crested weirs we will use the sharp crested weir equation.
 
@@ -182,19 +271,54 @@ where :math:`\bar H_{channel}` is the average height of water in the channel rel
 
    \Pi_{Q_{weir}} = \frac{ \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}
 
-The slower the velocity in the channel the more uniform the flow distribution will be between the filters. Solve for the velocity in the
+The slower the velocity in the channel the more uniform the flow distribution will be between the filters.
+
+Solve for the maximum velocity in the channel given the average depth of water above the weirs and the required flow distribution.
 
 .. math::
    :label: Sharp_weir_flow_ratio2
 
     \bar H_{channel}\Pi_{Q_{weir}}^\frac{2}{3} + \frac{\bar v_{M_1}^2}{4g}\Pi_{Q_{weir}}^\frac{2}{3}= { \bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}}
 
-Simplify more!
+Now we can solve for maximum manifold channel velocity.
 
 .. math::
    :label: Inlet_Channel_v_max
 
      \bar v_{M_1} =  2\sqrt{g\bar H_{channel}\frac{\left(1-\Pi_{Q_{weir}}^\frac{2}{3}\right)}{\left(\Pi_{Q_{weir}}^\frac{2}{3} + 1\right)}}
+
+
+The channel depth of water above the weir, :math:`\bar H_{channel}`, and the flow uniformity target set the maximum velocity in the manifold channel (see :numref:`figure_Filter_channel_v_max`).
+
+.. code:: python
+
+  def Inlet_Channel_V_Max(H_weir,Ratio_Flow):
+  return (2 * np.sqrt(u.gravity*H_weir*(1-Ratio_Flow**(2/3))/(1+Ratio_Flow**(2/3)))).to(u.m/u.s)
+
+  Ratio_Q_graph = np.linspace(0.6,0.95,20)
+
+  H_weir = 5 * u.cm
+  v_graph = np.empty_like(Ratio_Q_graph) * u.m/u.s
+  for i in range(20):
+  v_graph[i] = Inlet_Channel_V_Max(H_weir,Ratio_Q_graph[i])
+
+  plt.plot(Ratio_Q_graph,v_graph)
+  plt.xlabel(r'Flow ratio, $\Pi_{Q_{weir}}$')
+  plt.ylabel(r'Maximum manifold channel velocity, $ \bar v_{M_1} \left(\frac{m}{s} \right)$')
+  plt.show()
+
+
+
+.. _figure_Filter_channel_v_max:
+
+.. figure:: Images/Filter_channel_v_max.png
+    :width: 400px
+    :align: center
+    :alt: Filter channel velocities
+
+    The maximum velocity in the filter inlet channel decreases as the target flow ratio, :math:`\Pi_{Q_{weir}}`, approaches 1. This graph was created assuming :math:`\bar H_{channel}` of 5 cm.
+
+
 
 Backwash Weir Slot Design
 -------------------------
