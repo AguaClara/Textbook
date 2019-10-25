@@ -42,7 +42,7 @@ Overall Filter Size
 
 Generally 2 or more filters are considered, so that one can still be in use when the other is being backwashed. The number and size of the filters as a function of the design flow rate and the maximum flow a filter of a particular size can handle.
 
-In the design the first step is to determine what size EStaRS is needed because this determines nearly every parameter. :numref:`_figure_body_d_and_n` shows the process by which the number and size of EStaRS is determined.
+In the design the first step is to determine what size EStaRS is needed because this determines nearly every parameter. :numref:`figure_body_d_and_n` shows the process by which the number and size of EStaRS is determined.
 
 .. _figure_body_d_and_n:
 
@@ -118,7 +118,7 @@ In addition to these numerical constraints there are several other constraints t
 1. All inlet and outlet pipes must bend and rest on the floor before connecting to the entrance or exit tank to prevent air from getting into the filter body.
 #. The exit branches are slotted pipes and the inlet branches have orifices with wings
 #. The branches on either side of a trunk are composed of one length of pipe meaning the trunk has to be large enough so the branches don't act like valves.
-#. The branch spacing must be small compared to the sand layer depth, to efficiently use the sand. See :numref:`_figure_layer_depth_and_branch_spacing` for a visual. They must however, also be far enough apart so that they can be feasible to fabricate.
+#. The branch spacing must be small compared to the sand layer depth, to efficiently use the sand. See :numref:`figure_layer_depth_and_branch_spacing` for a visual. They must however, also be far enough apart so that they can be feasible to fabricate.
 #. The orifice spacing must be small compared to the branch spacing (for the same reasons as above)
 #. The exit tank contain pipes for: the plant exit, the three filter outlets, and a drain.
 #. The entrance tank contains pipes for: the four inlet pipes, an overflow pipe, and the inlet for the settled water.
@@ -156,7 +156,7 @@ Within each filter the flow is diverted across six layers. (:math:`N_{FiLayer} =
 
 Thus the flow through each sand layer is: :math:`Q_{FiLayer} = \frac{Q_{Fi}}{N_{FiLayer}}`.
 
-This is not the flow experienced by all the pipe layers though. As shown in :numref:`_figure_numbered_filter_layers` the two inner inlets, I-2 and I-3 each serve 2 filter layers and as a result carry flows that are double :math:`Q_{FiLayer}`
+This is not the flow experienced by all the pipe layers though. As shown in :numref:`figure_numbered_filter_layers` the two inner inlets, I-2 and I-3 each serve 2 filter layers and as a result carry flows that are double :math:`Q_{FiLayer}`
 
 .. _figure_numbered_filter_layers:
 
@@ -306,7 +306,7 @@ The overall steps to find the total orifice area and number of orifices necessar
 
 As shown in the previous section maximum flow in a trunk will be either :math:`Q_{Fi}` or :math:`\frac{Q_{Fi}}{3}` (the equivalent of :math:`2Q_{Layer}`). As we are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.
 
-In this case the longest branch is slightly less than :math:`\frac{ID_{Fi}}{2}`. To keep the calculations simple the maximum fraction of the flow served by any branch would be in the longest branch, the approximate area of the filter layer served would be approximately the length of this branch time the spacing of the branches. :numref:`_figure_flow_fraction_branch`
+In this case the longest branch is slightly less than :math:`\frac{ID_{Fi}}{2}`. To keep the calculations simple the maximum fraction of the flow served by any branch would be in the longest branch, the approximate area of the filter layer served would be approximately the length of this branch time the spacing of the branches. :numref:`figure_flow_fraction_branch`
 
 .. _figure_flow_fraction_branch:
 
@@ -391,7 +391,7 @@ are the respective number of orifices necessary on the longest branch for the re
 
 Those values divided by the length of the longest branch provides the spacing for the orifices. However here it become important to use the actual longest length of the branch, so that it is clear that all the orifices will fit.
 
-The factors that makes the length of the branch different from simply :math:`ID/2`, are the cap on the end and the width of the trunk. These can both be seen in :numref:`_figure_branch_length`
+The factors that makes the length of the branch different from simply :math:`ID/2`, are the cap on the end and the width of the trunk. These can both be seen in :numref:`figure_branch_length`
 
 .. _figure_branch_length:
 
@@ -497,7 +497,7 @@ Trunk sizing and caps: orifice and slot spacing
 Determining Forward Filtration and Backwash Velocities
 --------------------------------------------------------
 
-See  :numref:`figure_estars_flow_schematic` for a schematic of the filter layers. For a schematic of flow during backwash see :numref:`_figure_estars_bw_flow_schematic`.
+See  :numref:`figure_estars_flow_schematic` for a schematic of the filter layers. For a schematic of flow during backwash see :numref:`figure_estars_bw_flow_schematic`.
 
 .. _figure_estars_flow_schematic:
 
