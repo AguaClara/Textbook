@@ -69,6 +69,7 @@ Remove the encrustation without disassembling the filter by pouring buckets of h
  #. Pour 20 L of water into the bottom outlet pipe
  #. Wait 5 minutes
  #. Repeat previous 2 steps 5 times to push all (or at least most) of the acid through the outlet pipes and into the sand bed
+
 Repeat steps 3 to 12 for the middle outlet pipe and then for the top outlet pipe.
 
 With each addition of acid or water there should be a fresh batch of carbon dioxide bubbles released from the filter.
