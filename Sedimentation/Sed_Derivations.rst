@@ -422,13 +422,13 @@ Recall from our :ref:`previous explanation of terminal velocity <heading_termina
 
 .. math::
 
-  v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}
+  v_t = \frac{D_0^2g}{18\Phi\nu}\frac{\rho_{floc} -\rho_{H2O}}{\rho_{H2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}
 
 We can rearrange this equation to solve for :math:`D` by
 
 .. math::
 
-  D = D_0 \left( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}}\right) ^{\frac{1}{ D_{fractal} - 1}}
+  D = D_0 \left( \frac{18 v_t \Phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}}\right) ^{\frac{1}{ D_{fractal} - 1}}
 
 We will need this equation for :math:`D` in the next step.
 
@@ -465,7 +465,7 @@ In this equation, we have both :math:`v_t` and :math:`D`, but we can simplify fu
 
 .. math::
 
-  S \approx \frac{3}{sin^2\alpha} \frac{\bar v_{z_{Plate}}}{v_t} D_0 \left( \frac{18 v_t \phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}} \right) ^{\frac{1}{ D_{fractal} - 1}}
+  S \approx \frac{3}{sin^2\alpha} \frac{\bar v_{z_{Plate}}}{v_t} D_0 \left( \frac{18 v_t \Phi \nu }{D_0^2g} \frac{ \rho_{H2O}}{ \rho_{floc} - \rho_{H2O}} \right) ^{\frac{1}{ D_{fractal} - 1}}
 
 :math:`S` is the smallest spacing that will allow a floc with a given settling velocity to remain stationary on the slope and not be carried upward by rollup.
 
@@ -475,7 +475,7 @@ Finally, we can determine :math:`v_{Slide}` by,
 
 .. math::
 
-  v_{Slide} = \bar v_{z_{Plate}} \left[ \left( \frac{3D_0}{Ssin^2\alpha} \right)^{D_{fractal} - 1} \left( \frac{18 v_{z_{Plate}} \phi \nu }{D_0^2g} \frac{\rho_{H2O}}{\rho_{floc} - \rho_{H2O}} \right) \right] ^ {\frac{1}{ D_{fractal} - 2}}
+  v_{Slide} = \bar v_{z_{Plate}} \left[ \left( \frac{3D_0}{Ssin^2\alpha} \right)^{D_{fractal} - 1} \left( \frac{18 v_{z_{Plate}} \Phi \nu }{D_0^2g} \frac{\rho_{H2O}}{\rho_{floc} - \rho_{H2O}} \right) \right] ^ {\frac{1}{ D_{fractal} - 2}}
 
 :math:`v_{Slide}` is the terminal sedimentation velocity of the slowest-settling floc that can slide down an incline. Flocs with with terminal velocity (the slide velocity) will be held stationary on the incline because of a balance between gravitational forces and fluid drag. Flocs with a terminal velocity lower than :math:`v_{Slide}` will be carried out of the top of the settler (i.e., they will rollup) even if they settle onto the settler wall. Thus, the slide terminal velocity represents a constraint on the ability of plate settlers to capture flocs.
 

@@ -1,4 +1,4 @@
-.. _title_Sedimentation_Intro:
+\Phi.. _title_Sedimentation_Intro:
 
 ***************************************
 Sedimentation Introduction
@@ -154,13 +154,14 @@ Our equations for terminal velocity depend on the density of a floc. As discusse
 
 .. math::
 
-  v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc_0} -\rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}
+  v_t = \frac{D_0^2g}{18\Phi\nu}\frac{\rho_{floc_0} -\rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}
 
 | Where:
 | :math:`D_0 =` diameter of clay
 | :math:`D_{fractal} =` fractal dimension
 | :math:`D =` floc diameter
 | :math:`\rho_{floc_0} =` density of the primary particle making up the floc
+| :math:`\Phi = 45/24` based on Tambo N., and Watanabe Y. (1979). Physical characteristics of flocs-I. The floc density function and aluminum floc. Water Res. 13, 409
 
 The following plot in :numref:`figure_terminal_velocity_floc_diam` shows the relationship between floc diameter and terminal velocity.
 
