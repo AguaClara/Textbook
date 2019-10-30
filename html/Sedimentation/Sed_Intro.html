@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sedimentation Introduction &mdash; AguaClara Textbook 0.058 documentation</title>
+  <title>Sedimentation Introduction &mdash; AguaClara Textbook  documentation</title>
   
 
   
@@ -57,10 +57,6 @@
 
           
             
-            
-              <div class="version">
-                0.058
-              </div>
             
           
 
@@ -244,8 +240,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sedimentation-introduction">
-<span id="title-sedimentation-intro"></span><h1>Sedimentation Introduction<a class="headerlink" href="#sedimentation-introduction" title="Permalink to this headline">¶</a></h1>
+  <p>Phi.. _title_Sedimentation_Intro:</p>
+<div class="section" id="sedimentation-introduction">
+<h1>Sedimentation Introduction<a class="headerlink" href="#sedimentation-introduction" title="Permalink to this headline">¶</a></h1>
 <p id="sedimentation-unit-process-overview">Sedimentation is a gravity-driven unit process in which suspended flocs are settled out from water. Large flocs made up of many primary particles and coagulant will settle if given enough time. Sedimentation is commonly preceded by coagulation/flocculation processes - coagulation/flocculation aim to form flocs which will be large enough to settle in sedimentation - and is commonly followed by filtration processes for further treatment. Sludge consolidation processes are often present alongside sedimentation to reduce the waste stream of settled flocs. Optimizing sedimentation is important because the more particles that sedimentation can remove, the fewer particles the filter will have to remove. This is good because filters can only handle a small amount of solids, and cleaning the filters with backwash uses a lot of water so we want to reduce the number of backwashes. The goal of sedimentation is to concentrate a waste stream of flocs, or sludge.</p>
 <p>To introduce you to sedimentation, we will begin with a simple example. If a jar of water filled with flocs was left at rest, flocs would begin to settle due to gravitational forces pulling them down. Large flocs would settle first, but if left for long enough, all flocs would settle to the bottom of the jar. In its most basic form, the jar represents a sedimentation tank in which flocculated water is treated. Settled flocs are waste and the water on the top of the jar, referred to as the supernatant, is the settled water.</p>
 <p>Constraints of space, time, and cost make it important to optimize the settling process. It would not be realistic to design water treatment systems that use the basic jar-like system to settle flocs because large flow rates would require unreasonably large reactor volumes and long retention times. The goal of sedimentation reactor design is to employ geometries that promote settling and allow for fast treatment with small footprints.</p>
@@ -353,13 +350,14 @@
 <p>Again, we can draw a parallel with the Moody Diagram. The general form of the terminal velocity equation is like the Darcy-Weisbach equation; it is always true. The terminal velocity in the laminar flow region is like the Hagen-Poiselle equation; it is only good for laminar flow. We will use the laminar specific condition because we are working with flocs with low Reynolds numbers.</p>
 <p>Our equations for terminal velocity depend on the density of a floc. As discussed in previous sections, we know that there is a specific relationship between the density of a floc and the diameter of a floc because flocs are fractals and as flocs get bigger, their density gets lower. We can account for the size and density relationship by modifying the terminal velocity equation.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-6">
-<span id="heading-terminal-velocity-equation"></span><span class="eqno">(405)<a class="headerlink" href="#equation-sedimentation-sed-intro-6" title="Permalink to this equation">¶</a></span>\[v_t = \frac{D_0^2g}{18\phi\nu}\frac{\rho_{floc_0} -\rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}\]</div>
+<span id="heading-terminal-velocity-equation"></span><span class="eqno">(405)<a class="headerlink" href="#equation-sedimentation-sed-intro-6" title="Permalink to this equation">¶</a></span>\[v_t = \frac{D_0^2g}{18\Phi\nu}\frac{\rho_{floc_0} -\rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}\]</div>
 <div class="line-block">
 <div class="line">Where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(D_0 =\)</span> diameter of clay</div>
 <div class="line"><span class="math notranslate nohighlight">\(D_{fractal} =\)</span> fractal dimension</div>
 <div class="line"><span class="math notranslate nohighlight">\(D =\)</span> floc diameter</div>
 <div class="line"><span class="math notranslate nohighlight">\(\rho_{floc_0} =\)</span> density of the primary particle making up the floc</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Phi = 45/24\)</span> based on Tambo N., and Watanabe Y. (1979). Physical characteristics of flocs-I. The floc density function and aluminum floc. Water Res. 13, 409</div>
 </div>
 <p>The following plot in <a class="reference internal" href="#figure-terminal-velocity-floc-diam"><span class="std std-numref">Fig. 113</span></a> shows the relationship between floc diameter and terminal velocity.</p>
 <div class="figure align-center" id="id5">
@@ -543,7 +541,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.058',
+            VERSION:'',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
