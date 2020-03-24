@@ -229,7 +229,7 @@ We treat water because it doesn't meet the requirements for its intended use. We
 Water Contaminants
 ------------------
 
-Many substances are able to dissolve in water and with it's high density, water is able to carry suspended solids. The substances may be naturally occurring, anthropogenic, benign, or harmful. The types of contaminants are influenced by the water source. Contaminant concentrations are often highly variable over time.
+Many substances are able to dissolve in water. Additionally, water is able to carry suspended solids because of its high density. The substances may be naturally occurring, anthropogenic, benign, or harmful. The types of contaminants are influenced by the water source. Contaminant concentrations are often highly variable over time.
 
 A water treatment system must be able to handle the likely range of contaminant levels and produce treated water that meets the user requirements. In some cases the user may have the option of switching sources or reducing demand when a source becomes excessively contaminated for a limited period of time. For example, a municipal water supplier may be able to shut the plant down for a few hours to avoid having to treat a very dirty water after a rainstorm. This strategy can work well for water sources that have small watersheds and hence a rapid return to better water after the storm passes. In other cases the water treatment processes must be capable of treating the most contaminated water that the water source provides. In any case, selecting the best unit processes to treat a given water source for a particular use case can be challenging. It is common to find water treatment plants that are unable to adequately treat their water source.
 
