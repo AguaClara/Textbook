@@ -127,6 +127,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#section-summary">Section Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#important-equations">Important Equations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
@@ -503,6 +504,37 @@
 * a lever to link the two linear relationships</li>
 </ol>
 <p>To keep the chemical dose constant by automatically adjusting the addition of coagulant and chlorine as the plant flow rate varies. Two sliders on the lever allows the operator to change the dose of coagulant and chlorine independently of the plant flow rate.</p>
+</div>
+<div class="section" id="important-equations">
+<span id="heading-fcm-important-equations"></span><h2>Important Equations<a class="headerlink" href="#important-equations" title="Permalink to this headline">¶</a></h2>
+<p>Below are a handful of equations relevant to the design of the different flow control and measurement technologies outlined in this chapter. For more context for these equations, please refer to the appropriate section in the chapter above; these equations have been copied verbatim for ease of reference. This list is not exhaustive—if there is an equation missing, please share it in the appropriate <a class="reference external" href="https://github.com/AguaClara/Textbook/issues/6">GitHub issue</a>.</p>
+<ol class="arabic simple">
+<li><strong>Tank with a valve:</strong></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math notranslate nohighlight">\(\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\)</span></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><strong>LFOM:</strong></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math notranslate nohighlight">\(Q \propto h\)</span></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><strong>Linear CDC:</strong></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math notranslate nohighlight">\(Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\)</span></li>
+<li><span class="math notranslate nohighlight">\(Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\)</span></li>
+<li><span class="math notranslate nohighlight">\(n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\)</span></li>
+<li><span class="math notranslate nohighlight">\(L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\)</span></li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 
