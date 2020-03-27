@@ -149,7 +149,7 @@ Which can be slightly rearranged to yield:
 =========================================================
 This document contains the derivation of :math:`D_{Pipe}`, which is the pipe diameter necessary to install in a drain system to entirely drain a tank in time :math:`t_{Drain}`.
 
-First, it is necessary to understand how AguaClara tank drains work and what they look like. Many tanks, including the flocculator and entrance tank, have a hole in their bottoms which are fitted with `pipe couplings <https://www.mrpoolman.com.au/assets/thumbL/16057.jpg>`_. During normal operation, these couplings have pipe stubs in them, and the pipe stubs are tall enough to go above the water level in the tank and not allow water to flow into the drain. When the pipe stub is removed, the water begins to flow out of the drain, as the image below indicates. The drain pipe consists of pipe and one elbow, shown in the image.
+First, it is necessary to understand how AguaClara tank drains work and what they look like. Many tanks, including the flocculator and entrance tank, have a hole in their bottoms which are fitted with pipe couplings. During normal operation, these couplings have pipe stubs in them, and the pipe stubs are tall enough to go above the water level in the tank and not allow water to flow into the drain. When the pipe stub is removed, the water begins to flow out of the drain, as the image below indicates. The drain pipe consists of pipe and one elbow, shown in the image.
 
 .. _figure_pipe_stub_drainage:
 
