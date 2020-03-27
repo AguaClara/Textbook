@@ -52,7 +52,7 @@ Before diving into the technologies, recall the purpose of the chemicals that we
 
 What it is
 ^^^^^^^^^^^^^^
-This device consists of a bottle of chemical solution, called the **Constant Head Tank** (CHT), a float valve to keep a solution in the CHT at a constant water level, a flexible tube starting at the bottom of the CHT, and many precisely placed and equally spaced holes in a pipe, as the image below shows. The holes in the pipe hold the other end of the tube that starts at the CHT.
+This device consists of a bottle of chemical solution, called the **Constant Head Tank** (CHT), a float valve to keep a solution in the CHT at a constant water level, a flexible tube starting at the bottom of the CHT, and many precisely placed and equally spaced holes in a pipes. The holes in the pipe hold the other end of the tube that starts at the CHT.
 
 Chemical solution, either coagulant or chlorine, is stored in a stock tank somewhere above the CHT. A different tube connects the stock tank to the float valve within the CHT.
 
@@ -73,7 +73,7 @@ It is easy to design for laminar flow, but the “Almost Linear” Flow Controll
 Notes
 ^^^^^^^^^
 -  This flow controller is **no longer used by AguaClara.**
--  The tube connecting the CHT to the outlet of chemicals must really belong and, more importantly, **straight** to form a linear relationship between driving head and flow. This was not true for the “Almost Linear” Flow Controller. When you read about the Linear Chemical Flow Controller (CDC), you will be learning about the replacement to the “Almost Linear” Flow Controller’s replacement.
+-  The tube connecting the CHT to the outlet of chemicals must be very long and, more importantly, **straight** to form a linear relationship between driving head and flow. This linear relationship was not true for the “Almost Linear” Flow Controller, and is why it was replaced by the Linear Chemical Dose Controller (CDC). The CDC will be covered in more depth later on in this section.
 
 
 .. _heading_lfom:
@@ -265,6 +265,7 @@ This analysis is incomplete in that we don't know the aluminum concentration of 
 Notes
 ^^^^^^^^^
 Nothing in life is perfect, and the CDC is no exception. It has a few causes of inaccuracy which go beyond non-zero minor losses:
+
 * Float valves are not perfect. There will still be minor fluctuations of the fluid level in the CHT which will result in imperfect dosing.
 * Surface tension may resist the flow of chemicals from the dosing tube into the drop tube during low flows. Since the CDC design does not consider surface tension, this is a potential source of error.
 * The lever and everything attached to it are not weightless. Changing the dose of coagulant or chlorine means moving the slider along the lever. Since the slider and tubes attached to it (drop tube, dosing tube) have mass, moving the slider means that the torque of the lever is altered. This means that the depth that the float is submerged is changed, which affects :math:`\Delta h` of the system. This can be remedied by making the float’s diameter as large as possible, which makes these fluctuations small. This problem can not be avoided entirely.
@@ -291,3 +292,29 @@ This equation describes flow :math:`Q` as a function of time :math:`t` of a flui
    * a lever to link the two linear relationships
 
 To keep the chemical dose constant by automatically adjusting the addition of coagulant and chlorine as the plant flow rate varies. Two sliders on the lever allows the operator to change the dose of coagulant and chlorine independently of the plant flow rate.
+
+
+
+.. _heading_FCM_important_equations:
+
+Important Equations
+===================
+Below are a handful of equations relevant to the design of the different flow control and measurement technologies outlined in this chapter. For more context for these equations, please refer to the appropriate section in the chapter above; these equations have been copied verbatim for ease of reference. This list is not exhaustive—if there is an equation missing, please share it in the appropriate `GitHub issue <https://github.com/AguaClara/Textbook/issues/6>`_.
+
+1. **Tank with a valve:**
+
+ * :math:`\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}`
+
+2. **LFOM:**
+
+ * :math:`Q \propto h`
+
+3. **Linear CDC:**
+
+ * :math:`Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}`
+
+ * :math:`Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}`
+
+ * :math:`n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)`
+
+ * :math:`L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)`

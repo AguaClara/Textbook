@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flow Control and Measurement Design &mdash; AguaClara Textbook 0.059 documentation</title>
+  <title>Flow Control and Measurement Design &mdash; AguaClara Textbook 0.060 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.059
+                0.060
               </div>
             
           
@@ -131,6 +131,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#section-summary">Section Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#important-equations">Important Equations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
@@ -304,7 +305,7 @@
 <span id="heading-almost-linear-flow-controller"></span><h3>“Almost Linear” Flow Controller<a class="headerlink" href="#almost-linear-flow-controller" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="what-it-is">
 <h4>What it is<a class="headerlink" href="#what-it-is" title="Permalink to this headline">¶</a></h4>
-<p>This device consists of a bottle of chemical solution, called the <strong>Constant Head Tank</strong> (CHT), a float valve to keep a solution in the CHT at a constant water level, a flexible tube starting at the bottom of the CHT, and many precisely placed and equally spaced holes in a pipe, as the image below shows. The holes in the pipe hold the other end of the tube that starts at the CHT.</p>
+<p>This device consists of a bottle of chemical solution, called the <strong>Constant Head Tank</strong> (CHT), a float valve to keep a solution in the CHT at a constant water level, a flexible tube starting at the bottom of the CHT, and many precisely placed and equally spaced holes in a pipes. The holes in the pipe hold the other end of the tube that starts at the CHT.</p>
 <p>Chemical solution, either coagulant or chlorine, is stored in a stock tank somewhere above the CHT. A different tube connects the stock tank to the float valve within the CHT.</p>
 </div>
 <div class="section" id="what-it-does-and-why">
@@ -322,7 +323,7 @@
 <h4>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>This flow controller is <strong>no longer used by AguaClara.</strong></li>
-<li>The tube connecting the CHT to the outlet of chemicals must really belong and, more importantly, <strong>straight</strong> to form a linear relationship between driving head and flow. This was not true for the “Almost Linear” Flow Controller. When you read about the Linear Chemical Flow Controller (CDC), you will be learning about the replacement to the “Almost Linear” Flow Controller’s replacement.</li>
+<li>The tube connecting the CHT to the outlet of chemicals must be very long and, more importantly, <strong>straight</strong> to form a linear relationship between driving head and flow. This linear relationship was not true for the “Almost Linear” Flow Controller, and is why it was replaced by the Linear Chemical Dose Controller (CDC). The CDC will be covered in more depth later on in this section.</li>
 </ul>
 </div>
 </div>
@@ -482,10 +483,12 @@
 </div>
 <div class="section" id="id8">
 <h4>Notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
-<p>Nothing in life is perfect, and the CDC is no exception. It has a few causes of inaccuracy which go beyond non-zero minor losses:
-* Float valves are not perfect. There will still be minor fluctuations of the fluid level in the CHT which will result in imperfect dosing.
-* Surface tension may resist the flow of chemicals from the dosing tube into the drop tube during low flows. Since the CDC design does not consider surface tension, this is a potential source of error.
-* The lever and everything attached to it are not weightless. Changing the dose of coagulant or chlorine means moving the slider along the lever. Since the slider and tubes attached to it (drop tube, dosing tube) have mass, moving the slider means that the torque of the lever is altered. This means that the depth that the float is submerged is changed, which affects <span class="math notranslate nohighlight">\(\Delta h\)</span> of the system. This can be remedied by making the float’s diameter as large as possible, which makes these fluctuations small. This problem can not be avoided entirely.</p>
+<p>Nothing in life is perfect, and the CDC is no exception. It has a few causes of inaccuracy which go beyond non-zero minor losses:</p>
+<ul class="simple">
+<li>Float valves are not perfect. There will still be minor fluctuations of the fluid level in the CHT which will result in imperfect dosing.</li>
+<li>Surface tension may resist the flow of chemicals from the dosing tube into the drop tube during low flows. Since the CDC design does not consider surface tension, this is a potential source of error.</li>
+<li>The lever and everything attached to it are not weightless. Changing the dose of coagulant or chlorine means moving the slider along the lever. Since the slider and tubes attached to it (drop tube, dosing tube) have mass, moving the slider means that the torque of the lever is altered. This means that the depth that the float is submerged is changed, which affects <span class="math notranslate nohighlight">\(\Delta h\)</span> of the system. This can be remedied by making the float’s diameter as large as possible, which makes these fluctuations small. This problem can not be avoided entirely.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -505,6 +508,37 @@
 * a lever to link the two linear relationships</li>
 </ol>
 <p>To keep the chemical dose constant by automatically adjusting the addition of coagulant and chlorine as the plant flow rate varies. Two sliders on the lever allows the operator to change the dose of coagulant and chlorine independently of the plant flow rate.</p>
+</div>
+<div class="section" id="important-equations">
+<span id="heading-fcm-important-equations"></span><h2>Important Equations<a class="headerlink" href="#important-equations" title="Permalink to this headline">¶</a></h2>
+<p>Below are a handful of equations relevant to the design of the different flow control and measurement technologies outlined in this chapter. For more context for these equations, please refer to the appropriate section in the chapter above; these equations have been copied verbatim for ease of reference. This list is not exhaustive—if there is an equation missing, please share it in the appropriate <a class="reference external" href="https://github.com/AguaClara/Textbook/issues/6">GitHub issue</a>.</p>
+<ol class="arabic simple">
+<li><strong>Tank with a valve:</strong></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math notranslate nohighlight">\(\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\)</span></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><strong>LFOM:</strong></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math notranslate nohighlight">\(Q \propto h\)</span></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><strong>Linear CDC:</strong></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math notranslate nohighlight">\(Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\)</span></li>
+<li><span class="math notranslate nohighlight">\(Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\)</span></li>
+<li><span class="math notranslate nohighlight">\(n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\)</span></li>
+<li><span class="math notranslate nohighlight">\(L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\)</span></li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 
@@ -528,7 +562,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, AguaClara Cornell.
+        &copy; Copyright 2020, AguaClara Cornell.
 
     </p>
   </div>
@@ -550,7 +584,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.059',
+            VERSION:'0.060',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
