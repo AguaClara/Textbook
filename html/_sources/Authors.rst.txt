@@ -13,5 +13,6 @@ This text is a collaborative effort involving hundreds of people. Innovation req
 - Leonard Lion
 - Yingda Du
 - Zoe Maisel
+- Justin Conneely
 
 This text would not have been possible without the advice, mentoring, and publishing system assembled by Ethan Keller.
