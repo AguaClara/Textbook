@@ -162,7 +162,7 @@ A **control volume** is just an imaginary 3-dimensional shape in space. Its boun
     :align: center
     :alt: Image control volumes
 
-    On the left, a control volume is applied to a hydraulic system. On the right, a streamline is applied to a hydraulic system. A figure-convention for control volumes and streamlines will be very helpful throughout this course as there will be very, very many figures.
+    On the right, a control volume is applied to a hydraulic system. On the left, a streamline is applied to a hydraulic system. A figure-convention for control volumes and streamlines will be very helpful throughout this course as there will be very, very many figures.
 
 
 
@@ -239,7 +239,7 @@ You’ll also notice the :math:`\alpha` term attached to the velocity head. This
 
 Headloss
 =========
-**Head(L)oss**, :math:`h_L` is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through space. There are two components to head loss: major losses caused by (f)riction between the fluid and the surface it's flowing over, :math:`h_{\rm{f}}`, and minor losses caused by fluid-fluid internal friction resulting from flow (e)xpansions, :math:`h_e`. These two components combine such that :math:`h_L = h_{\rm{f}} + h_e`.
+**Head(L)oss**, :math:`h_L` is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through space. There are two components to head loss: major losses caused by (f)riction between the fluid the surface it's flowing over, :math:`h_{\rm{f}}`, and minor losses caused by fluid-fluid internal friction resulting from flow (e)xpansions, :math:`h_e`. These two components combine such that :math:`h_L = h_{\rm{f}} + h_e`.
 
 
 .. _heading_major_losses:
@@ -318,7 +318,7 @@ To form the `Hagen-Poiseuille equation <https://en.wikipedia.org/wiki/Hagen%E2%8
 
 The significance of this equation lies in its relationship between :math:`h_{\rm{f}}` and :math:`Q`. Hagen-Poiseuille shows that the terms are directly proportional (:math:`h_{\rm{f}} \propto Q`) during laminar flow, while Darcy-Weisbach shows that :math:`h_{\rm{f}}` grows with the square of :math:`Q` during turbulent flow (:math:`h_{\rm{f}} \propto Q^2`). As you will soon see, minor losses, :math:`h_e`, will grow with the square of :math:`Q` in both laminar and turbulent flow. This has implications that will be discussed in a future chapter: :ref:`title_flow_control_design`.
 
-In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gathered by many people, on the Darcy-Weisbach friction factor to create what we now call the `Moody diagram <https://en.wikipedia.org/wiki/Moody_chart>`_. This diagram makes it easy to find the friction factor :math:`f`. :math:`\rm{f}` is plotted on the left-hand y-axis, relative pipe roughness :math:`\frac{\epsilon}{D}` is on the right-hand y-axis, and Reynolds number :math:`\rm{Re}` is on the x-axis. The Moody diagram is an alternative to computational methods for finding :math:`\rm{f}`.
+In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gathered by many people, on the Darcy-Weisbach friction factor to create what we now call the `Moody diagram <https://en.wikipedia.org/wiki/Moody_chart>`_. This diagram has makes it easy to find the friction factor :math:`f`. :math:`\rm{f}` is plotted on the left-hand y-axis, relative pipe roughness :math:`\frac{\epsilon}{D}` is on the right-hand y-axis, and Reynolds number :math:`\rm{Re}` is on the x-axis. The Moody diagram is an alternative to computational methods for finding :math:`\rm{f}`.
 
 .. _figure_moody:
 .. figure:: Images/Moody.jpg
@@ -352,7 +352,7 @@ There are three forms of the minor loss equation that you will see in this class
     :label: eq_exp_v_out
 
     \color{purple}{
-    {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left(\frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
+    {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
     }
 
 | Such that:
@@ -385,7 +385,7 @@ one <https://www.engineeringtoolbox.com/minor-loss-coefficients-pipes-d_626.html
 
     Flow around a pipe elbow results in a minor loss. 'Control surface 1' can be abbreviated as 'CS 1'
 
-In order to find :math:`\bar v_{out}`, we first need to know what (or where) is :math:`out` and what is :math:`in`. A simple way to distinguish the two surfaces is that :math:`in` occurs when the flow is most contracted, and :math:`out` occurs when the flow has fully expanded after that maximal contraction. Going on these guidelines, Control surface '2' (CS 2) in the figure above would be :math:`in`, since it represents the most contracted flow in the elbow-pipe system. Therefore, CS 3 would be :math:`out`, as it represents the flow having fully expanded after its compression at CS 2.
+In order to find :math:`\bar v_{out}`, we first need to know what (or where) is :math:`out` and what is :math:`in`. A simple way to distinguish the two surfaces is that :math:`in` occurs when the flow is most contracted, and :math:`out` occurs when the flow has fully expanded after that maximal contraction. Going on these guidelines, Control surface '2' (CS 2) in the figure above above would be :math:`in`, since it represents the most contracted flow in the elbow-pipe system. Therefore, CS 3 would be :math:`out`, as it represents the flow having fully expanded after its compression at CS 2.
 
 :math:`\bar v_{out}` is easy to determine because it is the velocity of the fluid as it flows through the entire area of the pipe. Thus, :math:`\bar v_{out}` can be found with the continuity equation, since the flow through the pipe and its diameter are easy to measure, :math:`\bar v_{out} = \frac{4 Q}{\pi D^2}`. On the other hand, :math:`\bar v_{in}` is difficult to find, as the area of the contracted flow is dependent on the exact geometry of the elbow. This is why the third form of the minor loss equation, as we have defined it, is the most common:
 
@@ -551,7 +551,7 @@ Section Summary
 
     * **Continuity** means that the mass of a fluid is conserved as it flows, and implies a constant density. The continuity equation has two purposes:
 
-        #. Relating the average velocity of a fluid, :math:`\bar v`, to its flow rate, :math:`Q`, via the cross-sectional area, :math:`A`, that it flows through. When the fluid is flowing in a pipe, we can simply expand this even further to relate the flow rate and velocity to the pipe's diameter, :math:`D`. The final equation below is only used for circular pipes, as it includes a pipe diameter.
+        #. Relating the average velocity of a fluid, :math:`\bar v`, to its flow rate, :math:`Q`, via the cross-sectional area, :math:`A`, that it flows through. When the fluid is flowing in a pipe, we can simply this even further to relate the flow rate and velocity to the pipe's diameter, :math:`D`. The final equation below is only used for circular pipes, as it includes a pipe diameter.
 
         .. math::
 

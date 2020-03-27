@@ -58,7 +58,7 @@ Aluminum based coagulants are commonly used in drinking water treatment plants. 
  - Iron (1.83) and Oxygen (3.44) is 1.61
  - Hydrogen (2.20) and Oxygen (3.44) is 1.24
 
-Thus both aluminum and iron coagulants are more polar than water. It is possible that their strong polarity enables them to displace the water that is bound to particles' surfaces and then form bonds with those surfaces. In order to displace water molecules that are bound to the particles surfaces, the coagulants must have stronger bonds to particles surfaces than the polar water molecules and thus it seems likely that coagulants must be more polar than water.
+Thus both aluminum and iron coagulants are more polar than water and it is possibly that it is their strong polarity that enables them to displace water that is bound to particles surfaces and then form bonds with that surface. In order to displace water molecules that are bound to the particles surfaces, the coagulants must have stronger bonds to particles surfaces than the polar water molecules and thus it seems likely that coagulants must be more polar than water.
 
 
 
@@ -69,9 +69,9 @@ pH Effects of Adding Coagulant
 
 The coagulants used for drinking water treatment are acidic and thus result in a lowering of the pH of the treated water. The optimal pH for aluminum coagulant nanoparticle formation is between pH of 6.5 and 8.5. This is also the `pH range set by the EPA secondary standards for drinking water <https://www.epa.gov/dwstandardsregulations/secondary-drinking-water-standards-guidance-nuisance-chemicals>`__. Although many water sources are within this pH range, there are some waters with more extreme values of pH. The aluminum and iron based coagulants are also acidic and in some waters the pH may drop below the ideal range when adding the coagulant. When the pH is outside the acceptable range it is necessary to adjust the pH by adding either a base or an acid.
 
-When aluminum sulfate (alum) is added to water it dissociates and then precipitates as :math:`Al(OH)_3`. In the process, protons (:math:`H^+`) are released and thus the pH (:math:`-log[H^+]`) decreases.
+When aluminum sulfate (alum) to water it dissociates and then precipitates as :math:`Al(OH)_3`. In the process protons, :math:`H^+` are released and thus the pH (:math:`-log[H^+]`) decreases.
 
-.. math:: Al_2(SO_4)_3 (aq) + 6H_2O (l) \rightarrow 2Al(OH)_3 (s) + 6H^+ (aq) + 3SO_4^{-2} (aq)
+.. math:: Al_2(SO_4)_3 + 6H_2O\rightarrow 2Al(OH)_3 + 6H^+ + 3SO_4^{-2}
 
 The release of these protons reduces the acid neutralizing capacity, ANC, (also known as alkalinity) of the water. ANC is traditionally measured with units of mg/L of :math:`CaCO_3` rather than eq/L.  :numref:`table_ANC_consumed_by_alum` shows the relationship between ANC measured as mg/L of :math:`CaCO_3` and alum (:math:`Al_2(SO_4)_3 \cdot 14H_2O`)
 
@@ -91,7 +91,7 @@ The release of these protons reduces the acid neutralizing capacity, ANC, (also 
 
 Low ANC waters (See section on :ref:`heading_Buffering_Capacity_of_Natural_Waters`.) could have their ANC increased by addition of a base. A simpler approach is often to use a different coagulant that is less acidic.
 
-Polyaluminum chloride (PACl) is another aluminum based coagulant that performs similarly to alum. PACl is manufactured by slowly titrating an acidic solution containing dissolved aluminum with a base (in the chemical plant) to produce a meta-stable and soluble polymeric aluminum. PACl consumes less alkalinity (ANC) because it is partially neutralized by the titration with a base. In addition, the aluminum mass fraction of PACl is higher than in alum because there are no attached water molecules. The mass of PACl required for flocculation is less the mass of alum required. This is due largely to the higher aluminum fraction. The lower mass of PACl required is an economic benefit when shipping is a significant portion of the cost of the coagulant.
+Polyaluminum chloride (PACl) is another aluminum based coagulant that performs similarly to alum. PACl is manufactured by slowly titrating an acidic solution containing dissolved aluminum with a base (in the chemical plant) to produce a meta-stable and soluble polymeric aluminum. PACl consumes less alkalinity (ANC) because it is partially neutralized by the titration with a base. In addition, the aluminum mass fraction of PACl is higher than in alum because there are no attached water molecules. The mass of PACl required for flocculation is less than for alum due largely to the higher aluminum fraction. The lower mass of PACl required is an economic benefit when shipping is a significant cost of the coagulant.
 
 There are many different molecular formulas given for PACl. The molecular formulas are either from the perspective of the chemical supplier or represent the composition of the PACl nanoparticles. The molecular formula from the chemical supplier represents the extent of neutralization and hence the replacement of chloride with hydroxide. In that case the PACl molecular formula is:
 
@@ -126,7 +126,7 @@ The attached water molecules are sometimes omitted. Coagulant nanoparticles are 
 Buffering Capacity of Natural Waters
 ----------------------------------------
 
-When acid is added to a water containing bicarbonate, :math:`HCO_3^-`, one of the potential reactions is for a proton to combine with :math:`HCO_3^-` to form carbonic acid, :math:`{H_2}CO_3`. If a base is added to water the reaction will proceed in the opposite direction. Carbonic acid, :math:`{H_2}CO_3`, is indistinguishable from dissolved carbon dioxide, :math:`CO_{2_{aq}}` and the total of carbonic acid and dissolved carbon dioxide is represented as :math:`{H_2}CO_3^{\star}`. The reaction of bicarbonate to form carbonic acid removes one proton from solution and thus the concentration of protons doesn’t increase as fast as we might have first expected as acid is added to the water.
+When acid is added to a water containing bicarbonate, :math:`HCO_3^-`, one of the potential reactions is for a proton to combine with :math:`HCO_3^-` to form carbonic acid, :math:`{H_2}CO_3`. If a base is added to water the reaction will proceed in the opposite direction. Carbonic acid, :math:`{H_2}CO_3`, is chemical indistinguishable from dissolved carbon dioxide, :math:`CO_{2_{aq}}` and the total of carbonic acid and dissolved carbon dioxide is represented as :math:`{H_2}CO_3^{\star}`. The reaction of bicarbonate to form carbonic acid removes one proton from solution and thus the concentration of protons doesn’t increase as fast as we might have first expected as acid is added to the water.
 
 The reactions of carbonate species with protons provides pH buffering capacity that must be considered when calculating the effect of acid or base addition. Since carbonates are the dominant buffering agents in natural waters it is essential to account for their influence on pH.
 
@@ -159,7 +159,7 @@ pH Adjustment in Water Treatment Plants
 
 In drinking water treatment plant operation it is sometimes necessary to add a base (or acid) to increase (or decrease) the pH of the raw water. The added coagulant tends to reduce the pH. The carbonate system is most important in understanding how the base will adjust the pH because the reaction between carbonic acid and bicarbonate occurs around pH 6.3, the pK (negative log of the dissociation constant is the pH where that reaction is centered) for that reaction. Carbon dioxide exchange with the atmosphere is insignificant in drinking water treatment unit processes unless there is an aeration stage. Thus we can use the ANC equation for the case with no :math:`CO_2` exchange with the atmosphere.
 
-In the :ref:`heading_pH_Adjustment` section of the textbook, we evaluate the case where we add a base to the influent water. Doing so will increase the ANC of the raw water and it may also increase the total carbonate concentration. We then calculate how much of that base needs to be added to reach a given target pH.
+In the section, :ref:`heading_pH_Adjustment` we evaluate the case where we add a base that will increase the ANC of the raw water and it might also increase the total carbonate concentration. We calculate how much of that base to add to reach a target pH.
 
 .. _Fluid_Mixing:
 
@@ -195,7 +195,7 @@ Fluid mixing is the process by which large scale eddies distribute packets of th
 
     Hydraulic jump: a hydraulic rapid mixer uses the flow expansion downstream from supercritical open channel flow.
 
-The hydraulic jump in :numref:`figure_hydraulic_jump` uses a flow expansion to generate mixing in an open channel and that suggests that a flow expansion could also be used to generate mixing in a closed conduit. AguaClara rapid mix units consist of an orifice in the bottom of the :ref:`heading_lfom` where the water enters the flocculator (see :numref:`figure_Rapid_mix_orifice`). However, given that fluid mixing is so easy to attain it is unclear if the energy used in the rapid mix orifice is necessary.
+The hydraulic jump in :numref:`figure_hydraulic_jump` uses a flow expansion to generate mixing in an open channel and that suggests that a flow expansion could also be used to generate mixing in a closed conduit. AguaClara rapid mix units consist of an orifice in the bottom of the Linear Flow Orifice Meter (:ref:`heading_lfom`) where the water enters the flocculator (see :numref:`figure_Rapid_mix_orifice`). However, given that fluid mixing is so easy to attain it is unclear if the energy used in the rapid mix orifice is necessary.
 
 .. _figure_Rapid_mix_orifice:
 
@@ -309,14 +309,14 @@ The large scale mixing time is critical for the design of water treatment plants
 
 It is possible that this process of mixing from the scale of the flow down to the inner viscous length scale is referred to as “rapid mix.” Here we showed that this mixing is indeed rapid and is really only a concern in the case where the coagulant injection point is very close to the location where the flow is split into multiple treatment trains.
 
-The time required for mixing the coagulant nanoparticles with the fluid is typically only a few seconds, and will be accomplished whether or not the rapid mix unit is turned on. The turbulent eddies created either from the water flowing in the channel or from the water flowing through the pipe between the coagulant injection point and the flocculator will achieve the required fluid mixing in most cases. However, the step of the :ref:`coagulant nanoparticles attaching to the suspended particles<heading_Diffusion_and_Shear_Transport_Coagulant_Nanoparticles_to_Clay>` may be aided by the high energy of the rapid mix unit.
+The time required for mixing the coagulant nanoparticles with the fluid typically only requires a few seconds and will be accomplished whether or not the rapid mix unit is turned on. The turbulent eddies from the water flowing in a the channel or a pipe between the coagulant injection point and the flocculator in most cases will be sufficient to achieve the fluid mixing. However, the step of the :ref:`coagulant nanoparticles attaching to the suspended particles<heading_Diffusion_and_Shear_Transport_Coagulant_Nanoparticles_to_Clay>` may be aided by the high energy of the rapid mix unit.
 
 .. _heading__Coagulant_Nanoparticle_Interactions:
 
 Coagulant Nanoparticle Interactions
 ========================================
 
-Coagulant nanoparticles are sticky and can attach to suspended particles as well as to each other. Some dissolved substances also adsorb to coagulant nanoparticles. The development of models to describe these interactions has been impeded by the widespread acceptance of the `charge neutralization hypothesis <https://projects.ncsu.edu/project/hubbepaperchem/Defnitns/Neutrlzn.htm>`_ as the mechanism that governs these interactions. However, this hypothesis fails to account for the size of  coagulant nanoparticles and the various contaminants in the raw water influent. Instead, a simplified the model describing removal of these differently sized contaminants is proposed below; this simplified model posits that it is possible to separate fast and slow processes, which allows for a sequential model.
+Coagulant nanoparticles are sticky and can attach to suspended particles as well as to each other. Some dissolved substances also adsorb to coagulant nanoparticles. The development of models to describe these interactions has been impeded by the charge neutralization hypothesis that failed to account for the size of the coagulant nanoparticles and by the complexity of modeling all of these competing processes. Although the model describing removal of dissolved organic matter is still nascent, it is possible that a simplified approach that separates fast and slow processes will enable a sequential model.
 
 Interactions between the various suspended and dissolved substances (see :numref:`figure_Particle_sizes`) can occur simultaneously as soon as the coagulant is blended with the raw water. The rates of these interactions are controlled by the transport processes of fluid deformation and molecular diffusion. Molecular diffusion is fastest for small particles and fluid deformation is most effective for larger particles. Thus the fastest process is hypothesized to be the diffusion of low mass molecules to the coagulant nanoparticles. Transport of the coagulant nanoparticles to attach to suspended solids is expected to be a slower process. Transport of suspended particles to collide with other suspended particles (flocculation) is even slower.
 
@@ -403,7 +403,7 @@ As mentioned above, EDR and velocity gradients play an important role in mixing 
 
 .. todo:: Add links to textbook sections for plate settlers and filtration
 
-We will begin by defining the concept of energy dissipation rate for a control volume. In a control volume that does not include pumps, turbines or other external energy sources or sinks, the mechanical energy lost is indicated by a change in elevation and quantified as :math:`g h_L`. That mechanical energy is lost in the time, :math:`\theta`, that the fluid is in the control volume.
+We will begin by defining the concept of energy dissipation rate for a control volume. In a control volume that does not include pumps, turbines or other external energy sources or sinks, the mechanical energy lost is indicated by a change in elevation and quantified as :math:`g h_L`. That mechanical energy is lost in the time that the fluid is in the control volume, :math:`\theta`.
 
 .. math::  \bar\varepsilon \theta = g h_L
 
@@ -434,9 +434,9 @@ Water treatment plants at research and municipal scales deploy a wide range of f
   -  Series of expansions (expansions) - [hydraulic flocculators]
   -  Mechanical mixing - [mechanical rapid mix and flocculators]
   -  Between flat plates (wall shear) - [plate settlers]
-  -  Round jet (expansion) - [hydraulic rapid mix]
-  -  Plane jet (expansion) - [inlet into sedimentation tank]
-  -  Behind a flat plate (expansion) - [mechanical mixers]
+  -  Round jet - (expansion) - [hydraulic rapid mix]
+  -  Plane jet - (expansion) - [inlet into sedimentation tank]
+  -  Behind a flat plate - (expansion) - [mechanical mixers]
 
 The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants. The :ref:`heading_Equations_Varying_Flow_Geometries` are available as a reference.
 
