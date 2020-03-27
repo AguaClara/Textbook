@@ -1,8 +1,8 @@
 .. _title_hydraulics_intro:
 
-********************************************
+***********************
 Hydraulics Introduction
-********************************************
+***********************
 
 The hydraulic controls provide the basis for efficient and robust water treatment plant operation. Water must move through unit processes and between unit processes and the flow passages must be designed to meet various constraints. One constraint is that water that is carrying a significant amount of sediment (flocculator and sedimentation tank inlet) must have sufficient velocity and turbulence levels to minimize sedimentation.  A more challenging constraint is that the flow must be divided equally between parallel processes. Flow distribution through parallel paths is a key hydraulic design constraint for all municipal scale water treatment plants. The parallel path constraint only goes away for laboratory scale processes where there is a single tube settler and a filter with a single layer of sand. A schematic illustrating the electrical circuit analogy is shown in :numref:`figure_circuit`.
 
@@ -17,7 +17,41 @@ Municipal water treatment plants
 
     The flow through a sedimentation tank is analogous to an electrical circuit with wires and resistors. Identical resistors in parallel paths help improve flow distribution between the paths. Differences in piezometric head (think voltage) in the manifolds that connect to multiple parallel paths.
 
+.. _heading_piezometric_head:
 
+Piezometric Head
+================
+
+The sum of the pressure and elevation term in the energy equation is the piezometric head, :math:`\Psi`. Fluid will move in the direction of decreasing piezometric head. Note that fluid does NOT always move from high pressure to low pressure nor does it always move from high elevation to low elevation. You can prove this to yourself by placing a sloped pipe in a swimming pool!
+
+.. math::
+   :label: piezometric_head_defined
+
+    \Psi = \frac{p}{\rho g}+z
+
+
+.. _figure_Sloped_Manifold_no_flow:
+
+.. figure:: Images/Sloped_Manifold_no_flow.png
+    :width: 400px
+    :align: center
+    :alt: Sloped manifold with no flow
+
+    Piezometric head is constant in a stationary body of water. The piezometric head inside the enclosed sloped pipe is greater (by height H) than the piezometric head in the tank. Thus if we add an orifice to this sloped pipe, water will from the sloped pipe into the tank.
+
+Add multiple outlets to this sloped pipe to create a sloped manifold (:numref:`figure_Sloped_Manifold_with_flow`). The energy equation applied between control surface 1 and n  shows that the piezometric head in an inlet manifold increases in the direction of flow for cases where head loss is smaller than :math:`\frac{\bar v_{M_1}^2}{2 g}`.
+
+
+.. _figure_Sloped_Manifold_with_flow:
+
+.. figure:: Images/Sloped_Manifold_with_flow.png
+    :width: 400px
+    :align: center
+    :alt: Sloped manifold with flow
+
+     Sloped inlet manifold showing that the piezometric head increases in the direction of flow for the case where head loss due to wall shear is smaller than :math:`\frac{\bar v_{M_1}^2}{2 g}`.
+
+.. _heading_inlet_manifold_flow_distribution:
 
 Inlet Manifold Flow Distribution
 ================================
@@ -35,12 +69,6 @@ Flow distribution from ports exiting a manifold is controlled by the change in p
 
     \frac{p_{M_1}}{\rho g}+z_{M_1}+\frac{\bar v_{M_1}^2}{2 g}=\frac{p_{M_n}}{\rho g}+z_{M_n}+\frac{\bar v_{M_n}^2}{2g} + h_{L}
 
-The sum of the pressure and elevation term is the piezometric head, :math:`\Psi`. Fluid will move in the direction of decreasing piezometric head. Note that fluid does NOT always move from high pressure to low pressure nor does it always move from high elevation to low elevation. You can prove this to yourself by placing a vertical pipe in a swimming pool!
-
-.. math::
-   :label: piezometric_head_defined
-
-    \Psi = \frac{p}{\rho g}+z
 
 The energy control volume equation :eq:`energy_cv_manifold` can be simplified with the definition of piezometric head (equation :eq:`piezometric_head_defined`).
 
@@ -133,7 +161,7 @@ The port head loss is given by :math:`\bar v_{P} = \sqrt{2gh_e}` where the port 
 
     \bar v_{M_1}= 2\sqrt{g (h_{e_{port}} + h_{l_{series}})\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
 
-If their is no additional head loss in series to improve flow distribution, then equation :eq:`Manifold_max_v_with_hl_series` simplifies to
+If there is no additional head loss in series to improve flow distribution, then equation :eq:`Manifold_max_v_with_hl_series` simplifies to
 
 .. math::
    :label: Manifold_max_v_no_hl_series
@@ -157,6 +185,9 @@ Equation :eq:`Manifold_max_v_no_hl_series` (see :numref:`figure_Ratio_port_to_ma
 
     The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.
 
+
+
+.. _heading_sedimentation_tank_inlet_manifold:
 
 Sedimentation Tank Inlet Manifold
 ---------------------------------
@@ -199,7 +230,7 @@ The maximum inlet manifold velocity can now be determined from equation :eq:`Man
   ND_Influent_Manifold = ac.ND_SDR_available(ID_Influent_Manifold,SDR)
   print('The manifold nominal diameter is',ND_Influent_Manifold.to(u.inch))
 
-
+.. _heading_sedimentation_tank_outlet_manifold:
 
 Sedimentation Tank Outlet Manifold
 ----------------------------------
@@ -233,6 +264,61 @@ The head loss through the sedimentation tank is due to:
 * effluent manifold exit
 
 It might be convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm so that influent and effluent weirs always have the same elevation difference. The effluent manifold orifices could be designed for whatever head loss is required to meet that target.
+
+.. _heading_sedimentor_inlet_channel:
+
+Sedimentor Inlet Channel
+========================
+
+The sedimentor inlet channel is designed to distribute the flow uniformly between the sedimentation tanks. The flow paths through the various sedimentation tanks are identical except for the difference in the length of the path in the sedimentor inlet channel. Thus the difference in piezometric head in the sedimentor inlet channel must be small compared with the head loss through a sedimentation tank. The head loss through a sedimentation tank is dominated by the outlet manifold which is designed to have a head loss of 5 cm. This 5 cm of head loss is in turn dominated by the orifice head loss as required to achieve uniform flow distribution between the orifices (see :ref:`sedimentation tank outlet manifold <heading_sedimentation_tank_outlet_manifold>`)
+
+For a simple conservative design we calculate the maximum channel velocity assuming that the channel cross section is constant. In our designs we slope the bottom of this channel to maintain a constant velocity to ensure that flocs are scoured and don't accumulate at the end of this channel where the velocities would be lower if the cross section were constant.
+
+We can use :eq:`Energy_and_Pi_Q_no_manifold_hl` to calculate maximum velocity in the sedimentor inlet channel. In this case the average manifold piezometric head, :math:`\bar \Psi_M` ,is measured relative to the water level in the sedimentor that is above the sedimentor exit weir. This difference in elevation is dominated by the 5 cm of head loss created by the orifices in the sedimentor outlet manifold. Solving for the maximum channel velocity we obtain
+
+.. math::
+   :label: Energy_and_Pi_Q_no_manifold_hl
+
+   \bar v_{M_1} = 2\sqrt{g\bar \Psi_{Sed}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
+
+where :math:`\Pi_{Q}` represents the uniformity of flow distribution taken as the minimum sedimentation tank flow divided by the maximum sedimentation tank flow.
+
+The Ten State Standards states, "The velocity of flocculated water through conduits to settling basins shall not be less than 0.15 m/s nor greater than 0.45 m/s." The lower velocity matches the constraint of ensuring that the velocity is high enough to scour flocs along the bottom of the channel and thus prevent sedimentation. The maximum velocity was presumably set to achieve reasonable flow distribution, but that values is dependent on the head loss through the sedimentation tanks.
+
+Below we calculate the maximum sedimentor inlet channel velocity as a function of the flow distribution uniformity.
+
+.. code:: python
+
+  Pi_Q_min = 0.8
+  Pi_Q = np.linspace(Pi_Q_min,0.99,50)
+  Psi_Sed = 5 * u.cm
+
+  def v_man(Psi,Pi_Q):
+    v_man = (2 * np.sqrt(u.gravity * Psi * (1 - Pi_Q**2)/(Pi_Q**2 + 1) )).to(u.m/u.s)
+    return v_man
+
+  v_man(Psi_Sed,Pi_Q)
+
+  plt.plot(Pi_Q,v_man(Psi_Sed,Pi_Q),linewidth=2, color='blue')
+  plt.plot([Pi_Q_min,1],[0.45,0.45],linewidth=2, color='black')
+  plt.plot([Pi_Q_min,1],[0.15,0.15],linewidth=2, color='black', linestyle='dashed')
+  plt.ylabel('Channel water velocity (m/s)')
+  plt.xlabel('Flow uniformity')
+  plt.ylim((0,0.7))
+  plt.legend(['Max channel velocity','10 State Standards Max','10 State Standards Min'])
+  plt.show()
+
+
+.. _figure_Sedimentor_channel_max_v:
+
+.. figure:: Images/Sedimentor_channel_max_v.png
+    :width: 400px
+    :align: center
+    :alt: Sedimentor inlet channel velocity constraints
+
+    The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.
+
+The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the sedimentor head loss is 5 cm.
 
 Filter Inlet Channel with Rectangular Weir Flow Distribution
 ============================================================
@@ -335,7 +421,7 @@ The channel depth of water above the weir, :math:`\bar H_{channel}`, and the flo
 Backwash Weir Slot Design
 -------------------------
 
-The goal of the backwash weir slot is to provide close to the design flow rate to a filter while it is in backwash mode. To accomplish this the wide gate weir is opened and the weir slot controls the flow of water into the inlet box. During backwash the water level in the inlet box is much lower and thus the backwash weir slot can extend deep into the box. The design constraint for this slot is that it must deliver the design flow when the water level in the inlet channel is at the design flow height and it must deliver at least 80% of the design flow  when their is no flow going to any of the other filters. The difference in water level between the two cases is :math:`H_{channel}` because this is the height of water flowing over the wide weir at the design flow rate. The height of the slot, :math:`H_{slot}`, is measured relative to the design flow water level in the inlet channel.
+The goal of the backwash weir slot is to provide close to the design flow rate to a filter while it is in backwash mode. To accomplish this the wide gate weir is opened and the weir slot controls the flow of water into the inlet box. During backwash the water level in the inlet box is much lower and thus the backwash weir slot can extend deep into the box. The design constraint for this slot is that it must deliver the design flow when the water level in the inlet channel is at the design flow height and it must deliver at least 80% of the design flow  when there is no flow going to any of the other filters. The difference in water level between the two cases is :math:`H_{channel}` because this is the height of water flowing over the wide weir at the design flow rate. The height of the slot, :math:`H_{slot}`, is measured relative to the design flow water level in the inlet channel.
 
 This design will result in more water available for backwash than is absolutely needed and if it turns out that too much water is directed to this filter than the bottom of the slot can be elevated by adding a few stop logs.
 
