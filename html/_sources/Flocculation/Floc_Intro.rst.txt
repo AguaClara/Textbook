@@ -17,12 +17,100 @@ Flocculation transform inorganic (clays such as `kaolinite, smectite, etc. and m
 
    Clay particles with attached coagulant nanoparticles collide due to fluid deformation. They grow in size quickly. The challenge is to catch the last few primary particles that failed to participate in the aggregation process.
 
-Given that hydraulic flocculators approach plug flow conditions it is reasonable to assume that at any given location in the flocculator there is a predominance of one size of flocs. Thus collisions between similar sized flocs are most likely because that is what is present. There is also a hydrodynamic reason why similar sized flocs are favored which we will discuss later. For simplicity of modeling let's assume that flocs repeatedly double in size as suggested by the movie in :numref:`figure_Collisions_in_Sequence`. In that case, the number of primary particles in a floc is given by
+Flocculation History
+====================
+
+Historically flocculation was assumed to involve collisions between all particles in the suspension. The Smoluchowski coagulation equation was published in 1916 and uses a population balance approach to track the number of particles of each size based on the probability of collisions between all possible combinations of particle sizes. The Smoluchowski equation is a statement of the conservation of mass and as such it certainly applies to flocculation in drinking water treatment plants. The challenge is that the probability of collisions between all possible combinations of particle sizes must be somehow known in order to use the model. The complexity of obtaining the collision probabilities and the complexity of solving the equation have preventing use of the Smoluchowski equation for design or operation of flocculators.
+
+For most of the past century there have been two explanations for the particle interactions during flocculation based on the addition of a coagulant. The first explanation was that the positive charge of the coagulant neutralizes the negative charge of naturally occurring particles and thus eliminates the electrostatic repulsion that was preventing aggregation. The second explanation was called sweep flocculation and was the catch all explanation that was used to describe observations that didn't fit the charge neutralization explanation. Particles were presumed to be swept into a mesh of coagulant precipitate at coagulant dosages that are typically used in drinking water treatment.
+
+Surface Charge and Sweep Floc
+-----------------------------
+
+The mechanism of particle-particle aggregation was thought to be controlled by the average surface charge. Unfortunately no one was able to develop a model of how that mechanism would influence particle attachment efficiency and no predictive models for flocculation were developed. Indeed, there were several observations that were at odds with the charge neutralization hypothesis.
+
+    1. Flocculation was observed to be efficient even at coagulant dosages that led to positive surface charge. This unexpected result was attributed to “sweep floc”.
+    2. Flocculation began to be effective even when the surface charge was still negative.
+    3. Flocculation time for highly turbid suspensions was expected to proceed very rapidly and produce very low turbidity settled water. This expectation was not observed and led to the hypothesis that flocs were continually breaking up and producing primary particles or at least very small flocs.
+    4. The floc break up hypotheses led to the expectation that high turbidity suspensions would have significantly higher settled water turbidity than low turbidity suspensions. This expectation was also not observed.
+    5. The coagulant precipitate self aggregates – this is inconsistent with the positive charge that the electrostatic hypothesis asserts will prevent aggregation
+    6. Electrostatic repulsion extends only a few nm from the surface of a particle – and the coagulant nanoparticles are many times larger than the reach of the repulsive electrostatic force. Thus there is no need to neutralize surface charge when using coagulant nanoparticles.
+    7. Charge neutralization explanation neglects to fully account for the presence of water in the system. Water molecules will also be attracted to surfaces by London van der Waals forces and thus there will be competition between particle-particle bonds and water-particle bonds. Thus eliminating repulsion is NOT sufficient to produce a bond between the particles. It is also necessary for the particle-particle bonds to be stronger than the water-particle bonds. (see `hydration repulsion, page 21 <https://vtechworks.lib.vt.edu/bitstream/handle/10919/30137/Chapter1.pdf?sequence=9>`__) ` "The theory of DLP was a great step forward in that it appeared to circumvent the whole intractable problem of many body forces through its use of measured bulk dielectric response functions. However, it must be stressed again that it is a perturbation theory. That is, it depends on the assumption that an intervening liquid between interacting surfaces has bulk liquid properties up to a molecular distance from the surfaces. This is thermodynamically inconsistent, being equivalent to the statement that surface energies (or alternatively, the positions of the Gibbs dividing surfaces) are changed infinitesimally with distance of separation. This limits the theory to large distances (Young–Laplace vs. Poisson again) where large is undefined." <https://doi.org/10.1016/S0001-8686(99)00008-1>`__
+
+Evidence that the charge neutralization hypothesis doesn’t explain flocculation of surface waters has been accumulating for decades. *Sweep* flocculation has been proposed as an alternative "mechanism" that described common observations that didn’t fit the charge neutralization hypothesis. However, similar to the charge neutralization hypothesis, the *sweep* hypothesis didn’t result in the development of predictive equations to describe the process.
+
+For example, in 1992 Ching, Tanaka, and Elimelech published their research on `Dynamics of coagulation of kaolin particles with ferric chloride <https://doi.org/10.1016/0043-1354(94)90007-8>`__. They found that the electrophoretic mobility, a measure of the clay particle surface charge, was never neutralized at pH 7.8 and was neutralized at :math:`10\mu M` at pH 6.0. The results were interpreted by the authors to mean that some combination of sweep floc and charge patchiness was responsible for the observed results.
+
+See :numref:`figure_Ching_Electrophoretic_Mobility_vs_Ferric_Chloride` showing that at pH 7.8 the ferric chloride was still negatively charged and yet succeeded in flocculating the suspension to almost the same extent as the ferric chloride at ph 6.0 that was positively charged (see :numref:`figure_Ching_Residual_Turbidity_vs_Ferric_Chloride`).
+
+.. _figure_Ching_Electrophoretic_Mobility_vs_Ferric_Chloride:
+
+.. figure:: Images/Ching_Electrophoretic_Mobility_vs_Ferric_Chloride.png
+    :width: 300px
+    :align: center
+    :alt: internal figure
+
+    `Electrophoretic Mobility for final pH <https://doi.org/10.1016/0043-1354(94)90007-8>`__ (after coagulant addition) of 6.0 and 7.8 as a function of :math:`FeCl_3` dose
+
+
+.. _figure_Ching_Residual_Turbidity_vs_Ferric_Chloride:
+
+.. figure:: Images/Ching_Residual_Turbidity_vs_Ferric_Chloride.png
+    :width: 300px
+    :align: center
+    :alt: internal figure
+
+    `The settled water turbidity was almost independent of pH even though the electrophoretic mobility was quite different for the two pH values tested <https://doi.org/10.1016/0043-1354(94)90007-8>`__.
+
+
+`At pH 6.0 the ferric hydroxide precipitates are positively charged and at pH 7.8 they are close to neutral <https://doi.org/10.1016/0043-1354(94)90007-8>`__. Thus it is apparent that neutralization of the clay surface charge can not explain these results.
+
+AguaClara Hydraulic Flocculation Model
+======================================
+
+The AguaClara hydraulic flocculation model was developed over 15 years of extensive laboratory and field research and is based on the physics of interactions between particles in the raw water, dissolved organic molecules, and coagulant nanoparticles in a shear flow. The AguaClara model is based on the physics of these interactions and is the first non-empirical flocculation model. The AguaClara Hydraulic Flocculation model is described in detail in :ref:`title_Flocculation_Model`.
+
+Collisions in Shear Flow
+------------------------
+
+Given that hydraulic flocculators approach plug flow conditions it is reasonable to assume that at any given location in the flocculator there is a predominance of one size of flocs. Thus collisions between similar sized flocs are most likely because that is what is present. There is also a hydrodynamic reason why collisions between similar sized flocs are favored.
+
+In a shear flow the particles rotate and a boundary layer is created all around the rotating particles. The boundary layer prevents collisions between different sized particles (see :numref:`figure_No_Dissimilar_Collisions_in_Shear`) because the smaller of the two particles is unable to extend through the boundary layer of the larger particle. Only particles that are large enough to extend through each other's boundary layers can collide (see :numref:`figure_Similar_Size_Collisions_in_Shear`). Thus the particles must be similar in size because the boundary layer also scales with the diameter of the particle.
+
+
+.. _figure_No_Dissimilar_Collisions_in_Shear:
+
+.. figure:: Images/no_collisions_when_different_sizes.png
+   :target: https://youtu.be/f095r0Tvgoc
+   :width: 400px
+   :align: center
+   :alt: No collisions between different sized particles
+
+   Particles that are very different in size don't even get close enough to make contact because of the boundary layer around the larger particle. This is because the thickness of the boundary layer also scales with the diameter of the particle.
+
+Collisions between similar sized particles are possible because the particles are able to extend through the boundary layers.
+
+.. _figure_Similar_Size_Collisions_in_Shear:
+
+.. figure:: Images/Similar_Size_Collisions_in_Shear.png
+   :target: https://youtu.be/zP-CK5fNH6Y
+   :width: 400px
+   :align: center
+   :alt: Favorable collisions between similar sized particles
+
+   In a shear flow the particles rotate and a boundary layer is created all around the rotating particle. Similar sized particles are able to extend through the boundary layers and make contact.
+
+The rotating boundary layers in a shear flow limit collisions to similar sized particles. Given that flocculation is an environment specifically designed to create fluid shear it is reasonable to assume that only collisions between similar sized particles are able to occur. This simplifies the Smoluchowski equation tremendously.
+
+Number of particles in a floc
+=============================
+
+For simplicity of modeling let's assume that flocs repeatedly double in size as suggested by the movie in :numref:`figure_Collisions_in_Sequence`. In that case, the number of primary particles in a floc is given by
 
 .. math::
    :label: eq_n_primary_of_n_collisions
 
-   n_{primary} = 2^{n_{collisions}}
+    n_{primary} = 2^{n_{collisions}}
 
 If we assume (and we will show this assumption to be wrong in the next step) that the floc volume is directly proportional to the total volume of the primary particles in the floc, then we can rearrange :eq:`eq_n_primary_of_n_collisions` to solve for the number of sequential collisions required to increase the number of primary particles by a factor of 1000,000,000.
 
@@ -71,63 +159,21 @@ One of the mysteries of flocculation has been why it is such a slow process, req
 
 .. code:: python
 
-  import aguaclara.core.physchem as pc
+  import aguaclara as sc
   from aguaclara.core.units import unit_registry as u
   import numpy as np
 
   HL_floc = 43*u.cm
   HRT = 8 * u.min
   Temperature =20 * u.degC
-  G_floc = ((pc.gravity*HL_floc/(HRT*pc.viscosity_kinematic(Temperature)))**0.5).to_base_units()
+  G_floc = ((u.gravity*HL_floc/(HRT*ac.viscosity_kinematic(Temperature)))**0.5).to_base_units()
   print(G_floc)
   Gt_floc = G_floc*HRT
   HRT_floc_visible = 0.5*u.min
   Gt_floc_visible = (G_floc*HRT_floc_visible).to_base_units()
   print(Gt_floc_visible)
 
-Here initial flocculation is visible at a :math:`G\theta` of less than 3000. Given that flocculation is visible at this low collision potential, it is unclear why recommended :math:`G\theta` are as high as 100,000. This is one of the great mysteries that motivated the search for a flocculation model that was based on hypotheses that were consistent with laboratory and field observations.
-
-Surface Charge Hypothesis
-=========================
-
-The mechanism of particle-particle aggregation was thought to be controlled by an average surface charge. Apparently no one was able to develop a model of how that mechanism would influence particle attachment efficiency and the result was that no predictive models for flocculation were developed. There were several observations that were at odds with conventional explanations of flocculation.
-
-    1. Efficient flocculation at coagulant dosages that led to positive surface charge. This led to a second flocculation mechanism that was called “sweep floc” and that was used to describe any observations that didn’t fit the charge neutralization flocculation hypotheses.
-    2. Flocculation time for highly turbid suspensions was expected to proceed very rapidly and produce very low turbidity settled water. This expectation was not observed and led to the hypothesis that flocs were continually breaking up and producing primary particles or at least very small flocs.
-    3. The floc break up hypotheses led to the expectation that high turbidity suspensions would have significantly higher settled water turbidity than low turbidity suspensions. This expectation was also not observed.
-
-Evidence that the charge neutralization hypothesis doesn’t explain flocculation of surface waters has been accumulating for decades. *Sweep* flocculation has been proposed as an alternative "mechanism" that described common observations that didn’t fit the charge neutralization hypothesis. However, similar to the charge neutralization hypothesis, the *sweep* hypothesis didn’t result in the development of predictive equations to describe the process.
-
-For example, in 1992 Ching, Tanaka, and Elimelech published their research on `Dynamics of coagulation of kaolin particles with ferric chloride <https://doi.org/10.1016/0043-1354(94)90007-8>`__. They found
-that the electrophoretic mobility which is a measure of the clay particle surface charge was never neutralized at pH 7.8 and was neutralized at :math:`10\mu M` at pH 6.0. The results were interpreted by the authors to mean that some combination of sweep floc and charge patchiness was responsible for the observed results.
-
-See :numref:`figure_Ching_Electrophoretic_Mobility_vs_Ferric_Chloride` showing that at pH 7.8 the ferric chloride was still negatively charged and yet succeeded in flocculating the water to almost the same extent as the ferric chloride  at ph 6.0 that was postively charged (see :numref:`figure_Ching_Residual_Turbidity_vs_Ferric_Chloride`).
-
-.. _figure_Ching_Electrophoretic_Mobility_vs_Ferric_Chloride:
-
-.. figure:: Images/Ching_Electrophoretic_Mobility_vs_Ferric_Chloride.png
-    :width: 300px
-    :align: center
-    :alt: internal figure
-
-    `Electrophoretic Mobility for final pH <https://doi.org/10.1016/0043-1354(94)90007-8>`__ (after coagulant addition) of 6.0 and 7.8 as a function of :math:`FeCl_3` dose
-
-
-.. _figure_Ching_Residual_Turbidity_vs_Ferric_Chloride:
-
-.. figure:: Images/Ching_Residual_Turbidity_vs_Ferric_Chloride.png
-    :width: 300px
-    :align: center
-    :alt: internal figure
-
-    `The settled water turbidity was almost independent of pH even though the electrophoretic mobility was quite different for the two pH values tested <https://doi.org/10.1016/0043-1354(94)90007-8>`__.
-
-
-`At pH 6.0 the ferric hydroxide precipitates are positively charged and at pH 7.8 they are close to neutral <https://doi.org/10.1016/0043-1354(94)90007-8>`__. Thus it is apparent that neutralization of the clay surface charge can not explain these results.
-
-Electrostatic charge neutralization hypothesis
-
-The coagulant precipitate self aggregates – this is inconsistent with the positive charge that the electrostatic hypothesis asserts will prevent aggregation \* Electrostatic repulsion extends only a few nm from the surface of a particle – and the coagulant adhesive nanoparticles are many times larger than the reach of the repulsive electrostatic force. The hypothesis that London van der Waals forces result in attachment neglects to account for the presence of water in the system. Water molecules will also be attracted to surfaces by London van der Waals forces and thus there will be competition between the coagulant and water. Thus eliminating repulsion is NOT sufficient to produce a bond between the particles. (see `hydration repulsion, page 21 <https://vtechworks.lib.vt.edu/bitstream/handle/10919/30137/Chapter1.pdf?sequence=9>`__) ` "The theory of DLP was a great step forward in that it appeared to circumvent the whole intractable problem of many body forces through its use of measured bulk dielectric response functions. However, it must be stressed again that it is a perturbation theory. That is, it depends on the assumption that an intervening liquid between interacting surfaces has bulk liquid properties up to a molecular distance from the surfaces. This is thermodynamically inconsistent, being equivalent to the statement that surface energies (or alternatively, the positions of the Gibbs dividing surfaces) are changed infinitesimally with distance of separation. This limits the theory to large distances (Young–Laplace vs. Poisson again) where large is undefined." <https://doi.org/10.1016/S0001-8686(99)00008-1>`__
+Here initial flocculation is visible at a :math:`G\theta` of less than 3000. Given that flocculation is visible at this low collision potential, it is unclear why recommended :math:`G\theta` are as high as 100,000. This is one of the great mysteries that motivated the search for a flocculation model that is based on physics and consistent with laboratory and field observations.
 
 
 AguaClara Flocculation History
@@ -142,6 +188,24 @@ AguaClara Flocculation History
 2016 – Learned that particle/floc collisions are dominated by viscous shear (not by turbulent eddies). Began designing flocculators based on a target head loss of 40 cm. Used a :math:`G\theta` of 37,000.
 
 2017 - Designed a pipe flocculator for the 1 L/s plant with a :math:`G\theta` of 20,000 and a residence time of about 100 s.
+
+Conventional vs AguaClara flocculation
+======================================
+
+
+.. csv-table:: Conventional vs AguaClara flocculation
+   :header: "Characteristic", "Conventional - Mechanical", "AguaClara - Hydraulic"
+   :align: center
+
+   Goal, produce large flocs to be captured by sedimentation, reduce the concentration of primary particles
+   Residence time (min), 30, 2 to 7.5
+   Velocity gradient (Hz), 20 - 180, 100+
+   :math:`G\theta`, "50,000 - 250,000", "20,000 - 37,000"
+   Velocity gradient variability, approximately 8, approximately 1.4
+   reactor type, approaching completely mixed, approaching plug flow
+
+
+
 
 
 #references `Coagulation and Flocculation in Water and Wastewater Treatment <https://www.iwapublishing.com/news/coagulation-and-flocculation-water-and-wastewater-treatment>`__,
