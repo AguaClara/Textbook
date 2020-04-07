@@ -43,12 +43,12 @@ The insight is that the large flocs drag fluid around as they rotate (due to the
 Key understanding: Relative velocities between particles are dominated by viscous shear
 ---------------------------------------------------------------------------------------
 
-Relative velocities between particles are dominated by viscous shear because the separation distances are smaller than the inner viscous length scale. The average particle separation distance is given by 
+Relative velocities between particles are dominated by viscous shear because the separation distances are smaller than the inner viscous length scale. The average particle separation distance is given by
 
 .. math::
    :label: eq_spacing_of_number_concentration
 
-    \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{--} V_{\rm{Surround}}}^\frac{1}{3}
+   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{--} V_{\rm{Surround}}}^\frac{1}{3}
 
 | Where:
 | :math:`\bar \Lambda` is the average separation distance

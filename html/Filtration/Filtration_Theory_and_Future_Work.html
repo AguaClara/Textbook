@@ -26,7 +26,7 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Filtration Design Solution" href="Filtration_Design_Solution.html" />
@@ -268,7 +268,7 @@ Flow constrictions - converging streamlines move particles closer to the pore wa
 As particles gradually deposit in an ever shrinking flow constriction the velocity through the constriction increases and the velocity gradient at the wall increases. Eventually the bond strength of the coagulant nanoparticles is not great enough to capture suspended particles that collide with the deposited particles. The flow constriction reaches a minimum diameter and subsequent suspended flocs flow right through the constriction.</p>
 <p>The gradual creation of more flow constrictions results in an almost linear increase in head loss as a function of the volume of deposited flocs.</p>
 <span id="table-filter-hypotheses"></span><table border="1" class="colwidths-given docutils align-center" id="id1">
-<caption><span class="caption-number">Table 21 </span><span class="caption-text">Hypotheses, evidence, and why it matters</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 20 </span><span class="caption-text">Hypotheses, evidence, and why it matters</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="3%" />
 <col width="48%" />
@@ -503,14 +503,14 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <p>We can solve equation <a class="reference internal" href="#equation-eq-he-filter">(598)</a> for maximum constriction velocity based on experimental measurements of the head loss at filter failure that is due to constrictions. Note that this head loss does NOT include the clean bed head loss.</p>
 <div class="math notranslate nohighlight" id="equation-eq-he-filter2">
 <span class="eqno">(599)<a class="headerlink" href="#equation-eq-he-filter2" title="Permalink to this equation">¶</a></span>\[v_{constriction_{max}} = \sqrt{ \frac{2g\Lambda_{pore}}{H_{filter}}h_{e_{filter_{max}}}}\]</div>
-<p>From <a class="reference internal" href="Filtration_Intro.html#figure-head-loss-vs-time"><span class="std std-numref">Fig. 181</span></a> we have an estimate of 35 to 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand. This gives an estimate of 137 mm/s for the constriction velocity. This could be used to obtain an estimate of the bond strength of the coagulant nanoparticles.</p>
+<p>From <a class="reference internal" href="Filtration_Intro.html#figure-head-loss-vs-time"><span class="std std-numref">Fig. 179</span></a> we have an estimate of 35 to 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand. This gives an estimate of 137 mm/s for the constriction velocity. This could be used to obtain an estimate of the bond strength of the coagulant nanoparticles.</p>
 </div>
 <div class="section" id="shear-big-flocs-to-improve-filter-performance">
 <span id="heading-shear-big-flocs-to-improve-filter-performance"></span><h2>Shear big flocs to improve filter performance<a class="headerlink" href="#shear-big-flocs-to-improve-filter-performance" title="Permalink to this headline">¶</a></h2>
 <p>Here we explore the possibility of breaking flocs as they enter the filter bed to eliminate large flocs that may be reducing filter performance.</p>
 <p>Primary particles have the lowest probability of hitting the wall in a constriction. Thus primary particles can travel the greatest distance through the active zone and still have a very small chance of being deposited near the end of the active zone. Thus it is possible that primary particles set the maximum length of the active zone and flocs tend to fill in the active zone at the upstream end. The larger the floc the more likely it will fill in an upstream constriction and thus shorten the active zone.</p>
 <p>This suggests that one way to improve filter performance is to have a zone of very high shear that rips flocs apart so that they don’t fill in the upstream pores in the active zone so quickly. This is because smaller flocs will not be removed as efficiently by each constriction and thus they will penetrate deeper into the active zone. One possible method to create a high shear zone is to size the flow injection area to achieve high shear through the first sand grains. The idea is to shred incoming flocs so they have a lower probability of being removed per pore and thus more of these small flocs penetrate deeper into the active filtration zone before being captured. Smaller flocs are also more dense and thus don’t fill up the available volume in the constrictions as fast as the large flocs that they came from.</p>
-<p>We need an estimate of the shear through the first pores as the water enters the sand. The Kozeny equation is valid up to a particle Reynolds number of 1 (<a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-re-porous-media">(207)</a>). The Reynolds number at this proposed flow injection site will be much larger than 1 and thus the Ergun equation (<a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-ergun">(205)</a>) that is valid for laminar and turbulent flow in porous media will be used.</p>
+<p>We need an estimate of the shear through the first pores as the water enters the sand. The Kozeny equation is valid up to a particle Reynolds number of 1 (<a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-re-porous-media">(207)</a>). The Reynolds number at this proposed flow injection site will be much larger than 1 and thus the Erdun equation (<code class="xref eq docutils literal notranslate"><span class="pre">eq_Erdun</span></code>) that is valid for laminar and turbulent flow in porous media will be used.</p>
 <p>We will use the Camp Stein velocity gradient to estimate injection velocity required to create very small flocs. The important parameter for floc break up is a force that can be obtained from the velocity gradient multiplied by the dynamic viscosity.</p>
 <p>Solving <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-g-cs-porous-media">(212)</a> for the approach velocity, <span class="math notranslate nohighlight">\(v_a\)</span>, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-24">
@@ -569,7 +569,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 </div>
 <div class="figure align-center" id="id2">
 <span id="figure-head-loss-ergun-and-kozeny"></span><a class="reference internal image-reference" href="../_images/Head_loss_Ergun_and_Kozeny.png"><img alt="Head loss Ergun and Kozeny" src="../_images/Head_loss_Ergun_and_Kozeny.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 185 </span><span class="caption-text">The Ergun and Kozeny equations are very similar even at approach velocities that are much larger than are used in rapid sand filtration. At very high velocities the turbulent term in the Ergun equation begins to be significant.</span></p>
+<p class="caption"><span class="caption-number">Fig. 183 </span><span class="caption-text">The Ergun and Kozeny equations are very similar even at approach velocities that are much larger than are used in rapid sand filtration. At very high velocities the turbulent term in the Ergun equation begins to be significant.</span></p>
 </div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Need to use a root finding method here because f_phi is a function of velocity</span>
 <span class="c1"># Will use a graphical solution for now</span>
@@ -584,7 +584,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 </div>
 <div class="figure align-center" id="id3">
 <span id="figure-g-vs-approach-velocity"></span><a class="reference internal image-reference" href="../_images/G_vs_approach_velocity.png"><img alt="G vs approach velocity" src="../_images/G_vs_approach_velocity.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 186 </span><span class="caption-text">The Camp Stein velocity gradient increases rapidly with approach velocity.</span></p>
+<p class="caption"><span class="caption-number">Fig. 184 </span><span class="caption-text">The Camp Stein velocity gradient increases rapidly with approach velocity.</span></p>
 </div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#We guess at a velocity gradient by extrapolating wildly to a 20 um floc.</span>
 <span class="n">G_CS</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">fm</span><span class="o">.</span><span class="n">ener_dis_diam_floc</span><span class="p">(</span><span class="mi">40</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">um</span><span class="p">))</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temperature</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">Hz</span><span class="p">)</span>

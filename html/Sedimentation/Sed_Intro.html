@@ -26,7 +26,7 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Sedimentation Design" href="Sed_Design.html" />
@@ -267,10 +267,10 @@
 <p>To understand how sedimentation works, a few key concepts must first be developed. This includes understanding how and why flocs move in water. Remember, the goal of sedimentation reactor design is to optimize the floc-settling process.</p>
 <div class="section" id="terminal-velocity">
 <h2>Terminal Velocity<a class="headerlink" href="#terminal-velocity" title="Permalink to this headline">¶</a></h2>
-<p>As flocs settle in water, they will fall at a speed dictated by the weight of the floc, the buoyancy of the floc, and drag from the water. These three forces - the gravitational weight force, the buoyant force, and the drag force - dictate the speed at which a floc falls and are detailed in the free body diagram of <a class="reference internal" href="#figure-terminal-velocity-fbd"><span class="std std-numref">Fig. 112</span></a>. We care about determining the speed at which flocs will fall because knowing this information will help inform our sedimentation reactor design criteria.</p>
+<p>As flocs settle in water, they will fall at a speed dictated by the weight of the floc, the buoyancy of the floc, and drag from the water. These three forces - the gravitational weight force, the buoyant force, and the drag force - dictate the speed at which a floc falls and are detailed in the free body diagram of <a class="reference internal" href="#figure-terminal-velocity-fbd"><span class="std std-numref">Fig. 110</span></a>. We care about determining the speed at which flocs will fall because knowing this information will help inform our sedimentation reactor design criteria.</p>
 <div class="figure align-center" id="id1">
 <span id="figure-terminal-velocity-fbd"></span><a class="reference internal image-reference" href="../_images/terminal_velocity_FBD.png"><img alt="Buyouant force, drag force, and gravitational force shown for floc free body diagram." src="../_images/terminal_velocity_FBD.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 112 </span><span class="caption-text">Free body diagram of a floc in water.</span></p>
+<p class="caption"><span class="caption-number">Fig. 110 </span><span class="caption-text">Free body diagram of a floc in water.</span></p>
 </div>
 <p>To determine the force balance on a falling floc, consider:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-0">
@@ -299,14 +299,14 @@
 <span class="eqno">(402)<a class="headerlink" href="#equation-sedimentation-sed-intro-3" title="Permalink to this equation">¶</a></span>\[v_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}\]</div>
 <p>Terminal velocity is a function of fluid density, floc density, gravity, particle diameter, and the drag coefficient. To calculate velocity, all of those inputs must be determined.</p>
 <p>The first component that we will focus on is the drag coefficient, <span class="math notranslate nohighlight">\(C_D\)</span>. The drag coefficient is function of Reynolds Number, <span class="math notranslate nohighlight">\(Re\)</span>, and the characteristic flow around a particle. As a reminder, <span class="math notranslate nohighlight">\(Re = \frac{v_t D}{\nu}\)</span> where <span class="math notranslate nohighlight">\(v_t\)</span> is the velocity of the fluid relative to the particle, <span class="math notranslate nohighlight">\(D\)</span> is the characteristic length scale (in this case the particle diameter), and <span class="math notranslate nohighlight">\(\nu\)</span> is kinematic viscosity.</p>
-<p>Drag coefficients are used to describe flow around a particle and are shown in <a class="reference internal" href="#figure-drag-coeff-re-base"><span class="std std-numref">Fig. 113</span></a>.</p>
+<p>Drag coefficients are used to describe flow around a particle and are shown in <a class="reference internal" href="#figure-drag-coeff-re-base"><span class="std std-numref">Fig. 111</span></a>.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-drag-coeff-re-base"></span><a class="reference internal image-reference" href="../_images/drag_coeff_Re_base.png"><img alt="Drag coefficient as a function of Reynolds number." src="../_images/drag_coeff_Re_base.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 113 </span><span class="caption-text">Drag coefficient on a sphere as a function of Reynolds number.</span></p>
+<p class="caption"><span class="caption-number">Fig. 111 </span><span class="caption-text">Drag coefficient on a sphere as a function of Reynolds number.</span></p>
 </div>
 <p>As an introduction to this drag coefficient diagram, we can compare it to something we’ve already learned about: the Moody diagram. Drawing parallels between the two will help us understand some important relationships better.</p>
 <span id="table-moody-dragcoefficient"></span><table border="1" class="docutils align-left" id="id3">
-<caption><span class="caption-number">Table 16 </span><span class="caption-text">Comparison of the Moody diagram and the Drag Coefficient diagram.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Comparison of the Moody diagram and the Drag Coefficient diagram.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -341,10 +341,10 @@
 </tr>
 </tbody>
 </table>
-<p>The flow around the particle and the Reynolds Number can be described in the laminar, turbulent, or turbulent-boundary regions as shown in <a class="reference internal" href="#figure-drag-coeff-re-full"><span class="std std-numref">Fig. 114</span></a>. In the laminar region viscous forces dominate, <span class="math notranslate nohighlight">\(Re &lt; 1\)</span>,and the coefficient of drag is represented as the straight line with a slope of -1 on the log-log plot. The equation for drag on a sphere in laminar flow <span class="math notranslate nohighlight">\(C_D = \frac{24}{Re}\)</span> is referred to as Stokes Law. You’ll notice that the line for Stokes Law shown in the figure extends past the laminar region. This was done because it highlights that even though Stokes Law is not exactly correct past the turbulent region, it is still a pretty good approximation for  <span class="math notranslate nohighlight">\(Re &lt; 10\)</span>.</p>
+<p>The flow around the particle and the Reynolds Number can be described in the laminar, turbulent, or turbulent-boundary regions as shown in <a class="reference internal" href="#figure-drag-coeff-re-full"><span class="std std-numref">Fig. 112</span></a>. In the laminar region viscous forces dominate, <span class="math notranslate nohighlight">\(Re &lt; 1\)</span>,and the coefficient of drag is represented as the straight line with a slope of -1 on the log-log plot. The equation for drag on a sphere in laminar flow <span class="math notranslate nohighlight">\(C_D = \frac{24}{Re}\)</span> is referred to as Stokes Law. You’ll notice that the line for Stokes Law shown in the figure extends past the laminar region. This was done because it highlights that even though Stokes Law is not exactly correct past the turbulent region, it is still a pretty good approximation for  <span class="math notranslate nohighlight">\(Re &lt; 10\)</span>.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-drag-coeff-re-full"></span><a class="reference internal image-reference" href="../_images/drag_coeff_Re_full.png"><img alt="Drag coefficient as a function of Reynolds number." src="../_images/drag_coeff_Re_full.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 114 </span><span class="caption-text">Drag coefficient as a function of Reynolds number.</span></p>
+<p class="caption"><span class="caption-number">Fig. 112 </span><span class="caption-text">Drag coefficient as a function of Reynolds number.</span></p>
 </div>
 <p>Note that the coefficient of drag in the transition region is an important parameter to understand. Equations for the coefficient of drag are explored in the paper by <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2095268615000178">Yang et al. in “General formulas for drag coefficient and settling velocity of sphere based on theoretical law”</a>. They have determined that Oseen law based formulas are recommended for use.</p>
 <p>Let’s consider the drag coefficient diagram at Reynolds numbers of <span class="math notranslate nohighlight">\(10^5\)</span>. We notice that there is a “bump” in the plot, in which the drag coefficients drop. This is because at really high Reynolds numbers, the boundary layer around the particle became turbulent. This causes the wake behind the particle to be a little smaller, leading to a slight reduction in drag. The drag coefficient decreases, but the total drag force does not necessarily decrease (and likely keeps on increasing).</p>
@@ -369,10 +369,10 @@
 <div class="line"><span class="math notranslate nohighlight">\(\rho_{floc_0} =\)</span> density of the primary particle making up the floc</div>
 <div class="line"><span class="math notranslate nohighlight">\(\Phi = 45/24\)</span> based on Tambo N., and Watanabe Y. (1979). Physical characteristics of flocs-I. The floc density function and aluminum floc. Water Res. 13, 409</div>
 </div>
-<p>The following plot in <a class="reference internal" href="#figure-terminal-velocity-floc-diam"><span class="std std-numref">Fig. 115</span></a> shows the relationship between floc diameter and terminal velocity.</p>
+<p>The following plot in <a class="reference internal" href="#figure-terminal-velocity-floc-diam"><span class="std std-numref">Fig. 113</span></a> shows the relationship between floc diameter and terminal velocity.</p>
 <div class="figure align-center" id="id5">
 <span id="figure-terminal-velocity-floc-diam"></span><a class="reference internal image-reference" href="../_images/terminal_velocity_floc_diam.png"><img alt="Terminal velocity as a function of floc diameter, taking into account the changing density of flocs formed from clay." src="../_images/terminal_velocity_floc_diam.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 115 </span><span class="caption-text">Terminal velocity as a function of floc diameter, taking into account the changing density of flocs.</span></p>
+<p class="caption"><span class="caption-number">Fig. 113 </span><span class="caption-text">Terminal velocity as a function of floc diameter, taking into account the changing density of flocs.</span></p>
 </div>
 <p>Three important regions are highlighted in the plot. At small floc diameters, less than 10 <span class="math notranslate nohighlight">\(\mu m\)</span>, terminal velocity is less that 0.1 <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>. A terminal velocity this low would require extremely large sedimentation tanks for reasonable treatment. Because large sedimentation tanks are costly and unfeasible, we use flocculation to aggregate particles and achieve floc sizes of greater diameters and higher terminal velocities.</p>
 <p>For floc diameters around 35 <span class="math notranslate nohighlight">\(\mu m\)</span>, the terminal velocity is about 0.12 <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>. AguaClara plate settlers are designed to settle out flocs of this size (particles dropping at 0.12 <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>) so the smallest floc that we can capture is 35 <span class="math notranslate nohighlight">\(\mu m\)</span>. This will be explored in more detail during the discussion on <a class="reference internal" href="#heading-capture-velocity"><span class="std std-ref">capture velocity</span></a>.</p>
@@ -389,7 +389,7 @@
 <h3>Horizontal Flow Sedimentation Tank<a class="headerlink" href="#horizontal-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id6">
 <span id="figure-horizontal-flow-tank-base"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_base.png"><img alt="Horizontal flow sedimentation tank." src="../_images/horizontal_flow_tank_base.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 116 </span><span class="caption-text">Horizontal flow sedimentation tank.</span></p>
+<p class="caption"><span class="caption-number">Fig. 114 </span><span class="caption-text">Horizontal flow sedimentation tank.</span></p>
 </div>
 <div class="line-block">
 <div class="line">Where:</div>
@@ -398,7 +398,7 @@
 <div class="line"><span class="math notranslate nohighlight">\(H =\)</span> height [L]</div>
 <div class="line"><span class="math notranslate nohighlight">\(A_p =\)</span> plan view area of the tank [<span class="math notranslate nohighlight">\(L^2\)</span>]</div>
 </div>
-<p>Let’s begin with a few questions that will describe our horizontal flow sedimentation tank in <a class="reference internal" href="#figure-horizontal-flow-tank-base"><span class="std std-numref">Fig. 116</span></a>. We will assume that 1) water travels uniformly from one end of the tank to the other, and 2) the particle that we are discussing is 35 <span class="math notranslate nohighlight">\(\mu m\)</span> (which is the size of particle that AguaClara plate settlers can capture).</p>
+<p>Let’s begin with a few questions that will describe our horizontal flow sedimentation tank in <a class="reference internal" href="#figure-horizontal-flow-tank-base"><span class="std std-numref">Fig. 114</span></a>. We will assume that 1) water travels uniformly from one end of the tank to the other, and 2) the particle that we are discussing is 35 <span class="math notranslate nohighlight">\(\mu m\)</span> (which is the size of particle that AguaClara plate settlers can capture).</p>
 <ol class="arabic simple">
 <li>How much time is required for water to pass through the tank?</li>
 </ol>
@@ -418,10 +418,10 @@
 <ol class="arabic simple" start="3">
 <li>How fast must the particle fall?</li>
 </ol>
-<p>We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, <span class="math notranslate nohighlight">\(v_H\)</span>. Gravity is causing the particle to settle at its terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>. In order to reach the bottom, that settling velocity needs to be the capture velocity, <span class="math notranslate nohighlight">\(\bar v_c\)</span>, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in <a class="reference internal" href="#figure-horizontal-flow-tank-capture"><span class="std std-numref">Fig. 117</span></a>.</p>
+<p>We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, <span class="math notranslate nohighlight">\(v_H\)</span>. Gravity is causing the particle to settle at its terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>. In order to reach the bottom, that settling velocity needs to be the capture velocity, <span class="math notranslate nohighlight">\(\bar v_c\)</span>, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in <a class="reference internal" href="#figure-horizontal-flow-tank-capture"><span class="std std-numref">Fig. 115</span></a>.</p>
 <div class="figure align-center" id="id7">
 <span id="figure-horizontal-flow-tank-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_capture.png"><img alt="Horizontal flow sedimentation tank with capture velocity." src="../_images/horizontal_flow_tank_capture.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 117 </span><span class="caption-text">Horizontal flow sedimentation tank with capture velocity.</span></p>
+<p class="caption"><span class="caption-number">Fig. 115 </span><span class="caption-text">Horizontal flow sedimentation tank with capture velocity.</span></p>
 </div>
 <p>Capture velocity can be determined by the distance that a particle must travel and the time that the particle has to travel.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-8">
@@ -437,19 +437,19 @@
 <p>To answer this question, think about the two extremes of our reactor.</p>
 <ul class="simple">
 <li>We could have a small particle entering the reactor at the top, defining the critical path in the same “worst case scenario”. This particle would not be successfully captured by the tank because its terminal velocity is less than the capture velocity, meaning that it doesn’t have enough time in the reactor to settle.</li>
-<li>We could have a small particle entering the reactor near the bottom, in a “best case scenario”. In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be captured by a tank designed for particles 35 <span class="math notranslate nohighlight">\(\mu m\)</span> or larger, but it depends on the height at which they enter the reactor as shown in <a class="reference internal" href="#figure-horizontal-flow-tank-small-capture"><span class="std std-numref">Fig. 118</span></a>.</li>
+<li>We could have a small particle entering the reactor near the bottom, in a “best case scenario”. In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be captured by a tank designed for particles 35 <span class="math notranslate nohighlight">\(\mu m\)</span> or larger, but it depends on the height at which they enter the reactor as shown in <a class="reference internal" href="#figure-horizontal-flow-tank-small-capture"><span class="std std-numref">Fig. 116</span></a>.</li>
 </ul>
 <div class="figure align-center" id="id8">
 <span id="figure-horizontal-flow-tank-small-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_small_capture.png"><img alt="Horizontal flow sedimentation tank with critical path and small particle." src="../_images/horizontal_flow_tank_small_capture.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 118 </span><span class="caption-text">Horizontal flow sedimentation tank with critical path and small particle.</span></p>
+<p class="caption"><span class="caption-number">Fig. 116 </span><span class="caption-text">Horizontal flow sedimentation tank with critical path and small particle.</span></p>
 </div>
 </div>
 <div class="section" id="vertical-flow-sedimentation-tank">
 <h3>Vertical Flow Sedimentation Tank<a class="headerlink" href="#vertical-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
-<p>We will complete the same exercise for vertical flow sedimentation tanks shown in <a class="reference internal" href="#figure-vertical-flow-tank-base"><span class="std std-numref">Fig. 119</span></a>. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.</p>
+<p>We will complete the same exercise for vertical flow sedimentation tanks shown in <a class="reference internal" href="#figure-vertical-flow-tank-base"><span class="std std-numref">Fig. 117</span></a>. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.</p>
 <div class="figure align-center" id="id9">
 <span id="figure-vertical-flow-tank-base"></span><a class="reference internal image-reference" href="../_images/vertical_flow_tank_base.png"><img alt="Vertical flow sedimentation tank." src="../_images/vertical_flow_tank_base.png" style="height: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 119 </span><span class="caption-text">Vertical flow sedimentation tank.</span></p>
+<p class="caption"><span class="caption-number">Fig. 117 </span><span class="caption-text">Vertical flow sedimentation tank.</span></p>
 </div>
 <ol class="arabic simple">
 <li>How much time is required for water to pass through the tank?</li>
