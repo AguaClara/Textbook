@@ -4,21 +4,18 @@ Flocculation Model Solution
 
 .. code:: python
 
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-
-  import aguaclara.research.floc_model as fm
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-
+    from aide_design.play import*
+    from aide_design import floc_model as floc
 
 
 .. todo:: Review this file after the new AguaClara code is released.
 
-Many of the fractal floc equations are available in the ``floc_model.py`` file in the aguaclara repository. Look through ```floc_model.py`` <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/floc_model.py>`_ within the aguaclara repository. The following constants are defined in that file. NTU has been defined as an approximate empirical relationship between the concentration of kaolin clay and the turbidity, such that 1 NTU is equivalent to 1.7 mg/L. The diameter of a primary clay particle is assumed to be 7 micrometers. The fractal dimension for flocs is defined as ``DIM_FRACTAL`` and is equal to 2.3. We are using PACl as a coagulant for this analysis, so you shall call ``fm.PACl``, when a function within ``floc_model.py`` requires ‘coag’ as an input.
+Many of the fractal floc equations are available in the ``floc_model.py`` file in the aide_design repository. You will need to look through that code to see what functions are available. The following constants are defined in that file. NTU has been defined as an approximate empirical relationship between the concentration of kaolin clay and the turbidity, such that 1 NTU is equivalent to 1.7 mg/L. The diameter of a primary clay particle is assumed to be 7 micrometers. The fractal dimension for flocs is defined as ``DIAM_FRACTAL`` and is equal to 2.3. We are using PACl as a coagulant for this analysis, so you shall call ``floc.PACl``, when a function within ``floc_model.py`` requires ‘coag’ as an input.
 
-Whenever possible, use variables defined within ``floc_model.py`` instead of redefining them. Relevant variables defined in ``floc_model.py`` include: 1. ``DIM_FRACTAL`` with an estimated value of 2.3.
+Look through ``floc_model.py`` within aide_design. You will be using it heavily in the following section
+
+
+Whenever possible, use variables defined within ``floc_model.py`` instead of redefining them. Relevant variables defined in ``floc_model.py`` include: 1. ``DIAM_FRACTAL`` Recall in class that Monroe mentioned that this is not actually a diameter, but rather a dimension. It has been incorrectly and misleadingly named in aide_design. It’s value is simply 2.3, and it has no units.
 
 1. ``PACl``
 2. ``Clay``
@@ -27,7 +24,7 @@ Whenever possible, use variables defined within ``floc_model.py`` instead of red
 1)
 ~~~
 
-Estimate the diameter of the flocs that interact with the tip of the impeller of the mechanical flocculator analyzed above. We don’t yet have a good model to predict maximum floc size as a function of velocity gradient or energy dissipation rate. We have a rough estimate, ``fm.diam_floc_max(EDRmax)`` based on a small amount of data.
+Estimate the diameter of the flocs that interact with the tip of the impeller of the mechanical flocculator analyzed above. We don’t yet have a good model to predict maximum floc size as a function of velocity gradient or energy dissipation rate. We have a rough estimate, ``floc.diam_floc_max(EDRmax)`` based on a small amount of data.
 
 .. code:: python
 
@@ -39,18 +36,17 @@ Estimate the diameter of the flocs that interact with the tip of the impeller of
     ed_rate_prop_max = pi_plate * ((ratio_prop_vel *  vel_prop)**3 / height_prop).to(u.mW/u.kg)
 
     #answer
-    diam_floc_mech = fm.diam_floc_max(ed_rate_prop_max).to(u.um)
+    diam_floc_mech = floc.diam_floc_max(ed_rate_prop_max).to(u.um)
     print('The diameter of the flocs that interact with the impeller is', diam_floc_mech, '.')
-    x=fm.DIM_FRACTAL
+    x=floc.diam_fractal
     x
-
 The diameter of the flocs that interact with the impeller is 127 um.
 
 
 2)
 ~~~
 
-Estimate the terminal sedimentation velocity in mm/s of the flocs that interact with the tip of the impeller of the mechanical flocculator analyzed above. Use the function ``fm.vel_term_floc``. You may assume that the flocs were made from a particle suspension that had 1.5 mg/L of aluminum and 100 NTU of clay.
+Estimate the terminal sedimentation velocity in mm/s of the flocs that interact with the tip of the impeller of the mechanical flocculator analyzed above. Use the function ``floc.vel_term_floc``. You may assume that the flocs were made from a particle suspension that had 1.5 mg/L of aluminum and 100 NTU of clay.
 
 Note: AguaClara has defined the unit NTU as ``u.NTU``.
 
@@ -59,8 +55,8 @@ Note: AguaClara has defined the unit NTU as ``u.NTU``.
     #answer
     conc_Al = 1.5 * u.mg/u.L
     conc_clay=100*u.NTU
-    vel_term_floc_tip = fm.vel_term_floc(conc_Al, conc_clay, fm.PACl,
-                                           fm.Clay, fm.DIM_FRACTAL,
+    vel_term_floc_tip = floc.vel_term_floc(conc_Al, conc_clay, floc.PACl,
+                                           floc.Clay, floc.DIAM_FRACTAL,
                                            diam_floc_mech, temp_design).to(u.mm/u.s)
 
     print('The terminal velocity of flocs that interact with the impeller tip is estimated to be', vel_term_floc_tip)
@@ -97,8 +93,8 @@ A little extra to think about (not necessary to answer): The AguaClara floccuati
 .. code:: python
 
     #answer
-    init_sep_dist_clay = fm.sep_dist_clay(100 * u.NTU, fm.Clay).to(u.mm)
-    final_sep_dist_clay = fm.sep_dist_clay(1 * u.NTU, fm.Clay).to(u.mm)
+    init_sep_dist_clay = floc.sep_dist_clay(100 * u.NTU, floc.Clay).to(u.mm)
+    final_sep_dist_clay = floc.sep_dist_clay(1 * u.NTU, floc.Clay).to(u.mm)
     print('The average distance between clay particles at 100 NTU is', init_sep_dist_clay)
     print('The average distance between clay particles at 1 NTU is', final_sep_dist_clay)
 
@@ -114,7 +110,7 @@ What is the inner viscous length scale in the mechanical flocculator at the maxi
 .. code:: python
 
     #answer
-    print('The inner viscous length scale is', fm.lambda_vel(ed_rate_prop_max, temp_design).to(u.mm))
+    print('The inner viscous length scale is', floc.lambda_vel(ed_rate_prop_max, temp_design).to(u.mm))
 
 The inner viscous length scale is 2.39 mm
 
@@ -143,9 +139,9 @@ Below is a graph showing the inner viscous length scale that divides flows that 
     plt.grid(b=True, which='major', color='k', linestyle='-', linewidth=1)
     plt.grid(b=True, which='minor', color='k', linestyle='-', linewidth=0.5)
 
-    #fm.lambda_vel, which returns the inner viscous length scale,
+    #floc.lambda_vel, which returns the inner viscous length scale,
     #is being applied to the array of EDRs for our design temperature
-    y = fm.lambda_vel(x,temp_design)
+    y = floc.lambda_vel(x,temp_design)
     ax.plot(x, y.to(u.mm), 'r')
 
     #------------------------------------------------------------------------
@@ -201,17 +197,17 @@ We will evaluate the situation where the turbidity is 10 NTU and the coagulant d
     conc_Al = 0.5*u.mg/u.L
 
 
-    #fm.ratio_area_clay_total() returns fraction (between 0 and 1) that represents the surface area of
+    #floc.ratio_area_clay_total() returns fraction (between 0 and 1) that represents the surface area of
     #the clay particle over the sum of the surface area of the clay and reactor walls
 
-    wall_loss = 1 - fm.ratio_area_clay_total(conc_clay, fm.Clay, diam_tube, fm.RATIO_HEIGHT_DIAM)
+    wall_loss = 1 - floc.ratio_area_clay_total(conc_clay, floc.Clay, diam_tube, floc.RATIO_HEIGHT_DIAM)
     print('The fraction of the coagulant lost to the walls is', wall_loss)
 
-    #fm.gamma_coag() returns the fraction of clay that is covered by coagulant. This is a very hard parameter
+    #floc.gamma_coag() returns the fraction of clay that is covered by coagulant. This is a very hard parameter
     #to actually measure, so this is just an estimate.
 
-    fraction_coated = fm.gamma_coag(conc_clay,conc_Al, fm.PACl,
-                                      fm.Clay, diam_tube, fm.RATIO_HEIGHT_DIAM)
+    fraction_coated = floc.gamma_coag(conc_clay,conc_Al, floc.PACl,
+                                      floc.Clay, diam_tube, floc.RATIO_HEIGHT_DIAM)
     print('The fraction of the clay surface area that is is coated is', fraction_coated)
 
 Time scale of flocculation
@@ -223,10 +219,10 @@ Now we want to estimate the average time required for an initial successful coll
 
     ed_rate_mech_ave = 6.4*u.mW/u.kg
 
-    time_first_collision = fm.time_col_laminar(ed_rate_mech_ave, 10*u.degC,
-                                                 conc_Al, conc_clay, fm.PACl,
-                                                 fm.Clay, fm.Clay.Diameter, diam_tube,
-                                                 fm.DIM_FRACTAL, fm.RATIO_HEIGHT_DIAM).to(u.s)
+    time_first_collision = floc.time_col_laminar(ed_rate_mech_ave, 10*u.degC,
+                                                 conc_Al, conc_clay, floc.PACl,
+                                                 floc.Clay, floc.Clay.Diameter, diam_tube,
+                                                 floc.DIAM_FRACTAL, floc.RATIO_HEIGHT_DIAM).to(u.s)
 
     print('The time required for the first succesful collision is', time_first_collision)
 
@@ -267,10 +263,10 @@ Note that the specified flocculation model applies to both hydraulic and mechani
     #Fitting constant/Sedimentation tank factor
     k = 0.24
 
-    #gamma_aguaclara_design uses functions in floc_model.py to solve the equation in the problem statement
+    #gamma_aguaclara_design uses functions in floc.py to solve the equation in the problem statement
     conc_clay_goal = 2 * u.NTU
-    gamma_aguaclara_design = (3/2) * (fm.sep_dist_clay(conc_clay_goal, fm.Clay)**2
-                               / (k * np.pi * (fm.Clay.Diameter * u.m)**2
+    gamma_aguaclara_design = (3/2) * (floc.sep_dist_clay(conc_clay_goal, floc.Clay)**2
+                               / (k * np.pi * (floc.Clay.Diameter * u.m)**2
                                   * Gtime_floc_aguaclara
                                  )
                               ).to(u.dimensionless)
@@ -320,10 +316,10 @@ The flocculation model predicts the settled water turbidity given the compositio
         time_floc = 8.1 * u.minute
         temp = 15 * u.degC
         #pc_viscous is the solution for the equation in the problem statement. It returns pC*
-        plot_pC = fm.pc_viscous(ed_rate, temp, time_floc, tube_diam,
+        plot_pC = floc.pc_viscous(ed_rate, temp, time_floc, tube_diam,
                                 plot_NTU, coag_graph, conc_humic_acid,
-                                fm.HumicAcid, fm.PACl, fm.Clay,
-                                k, fm.RATIO_HEIGHT_DIAM)
+                                floc.HumicAcid, floc.PACl, floc.Clay,
+                                k, floc.RATIO_HEIGHT_DIAM)
         return plot_pC
 
     x = coag_graph.to(u.mg/u.L)
@@ -365,11 +361,11 @@ We will now display a similar plot which shows settled water turbidity instead o
         conc_clay = plot_NTU
         time_floc = 8.1 * u.minute
         temp = 15 * u.degC
-        #s_t calls on fm.pc_viscous() like the previous cell of code, but also uses the fm.invp()
+        #s_t calls on floc.pc_viscous() like the previous cell of code, but also uses the floc.invp()
         #function to turn pC* back into units of settled water turbididty.
-        s_t = fm.invp(fm.pc_viscous(ed_rate, temp, time_floc, tube_diam,
-                   conc_clay, coag_graph, conc_nat_org_mat, fm.HumicAcid, fm.PACl, fm.Clay,
-                                k, fm.RATIO_HEIGHT_DIAM),conc_clay)
+        s_t = floc.invp(floc.pc_viscous(ed_rate, temp, time_floc, tube_diam,
+                   conc_clay, coag_graph, conc_nat_org_mat, floc.HumicAcid, floc.PACl, floc.Clay,
+                                k, floc.RATIO_HEIGHT_DIAM),conc_clay)
 
         return s_t
 

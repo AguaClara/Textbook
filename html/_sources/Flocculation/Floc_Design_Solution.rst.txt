@@ -4,13 +4,8 @@ Flocculator Design Solution
 
 .. code:: python
 
-    #import statements have been cleaned up
-    import aguaclara.core.physchem as pc
-    from aguaclara.core.units import unit_registry as u
-    import aguaclara.core.constants as constants
-    import numpy as np
-    import matplotlib.pyplot as plt
-    #plt.switch_backend('TKAgg')
+    from aide_design.play import*
+
 
 In this design challenge you will design a vertical flow hydraulic flocculator. You will use the flow rate of ``flow_plant = 20 L/s`` as your default design value.
 
@@ -49,7 +44,7 @@ Below are the inputs for the design. BOD stands for Basis Of Design.
     Pi_HS_min = 3
     Pi_HS_max = 6
 
-    Pi_vc = constants.VC_ORIFICE_RATIO
+    Pi_vc = con.RATIO_VC_ORIFICE
     Pi_vc_baffle = Pi_vc**2
 
     # width of the polycarbonate sheets used to make baffles
@@ -533,7 +528,6 @@ Create plots showing number of channels, number of expansions per water depth, t
    :alt: Floc channel width vs plant flow
 
    The flocculator channel width varies linearly with flow rate for a constant number of channels. The exception is for flows below about 35 L/s. In that flow rate the requirement of 2 channels that are the length of the sedimentation tank is excessive and results in more collision potential than needed. We need a new design solution to handle this suboptimal design for flows lower than 35 L/s.
-
 23)
 ~~~
 
