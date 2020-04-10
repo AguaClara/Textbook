@@ -3,7 +3,7 @@
 ====================================
 Welcome to the AguaClara Textbook!
 ====================================
-This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in `aide_design <https://github.com/AguaClara/aide_design>`_. Listed below are the versions of the programs we use:
+This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in `aguaclara <https://github.com/AguaClara/aguaclara>`_. Listed below are the versions of the programs we use:
 
 .. _software_versions:
 .. csv-table:: These are the software versions used to compile this textbook
@@ -12,7 +12,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
    :align: center
 
    "Sphinx", "1.7.5"
-   "aide_design", "0.0.12"
+   "aguaclara", "0.1.8"
    "Anaconda", "4.5.4"
    "Python", "3.6.5"
 
@@ -31,6 +31,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Introduction/Introduction.rst
+  Introduction/Python_Tutorial.rst
 
 
 .. toctree::
@@ -51,7 +52,21 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flow_Control_and_Measurement/FCM_Solution.rst
 
 .. toctree::
-  :caption: Chapter 4: Rapid Mix
+  :caption: Chapter 5: Fluid Deformation and Energy Dissipation
+  :maxdepth: 1
+
+  Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst
+  Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst
+
+.. toctree::
+  :caption: Chapter 6: Chemistry of Water Treatment
+  :maxdepth: 1
+
+  Chemistry_of_Water_Treatment/Chemistry_Intro.rst
+  Chemistry_of_Water_Treatment/Chemistry_Derivations.rst
+
+.. toctree::
+  :caption: Chapter 7: Rapid Mix
   :maxdepth: 1
 
   Rapid_Mix/RM_Intro.rst
@@ -63,7 +78,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Rapid_Mix/RM_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 5: Flocculation
+  :caption: Chapter 8: Flocculation
   :maxdepth: 1
 
   Flocculation/Floc_Intro.rst
@@ -77,49 +92,54 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flocculation/Floc_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 6: Sedimentation
+  :caption: Chapter 9: Sedimentation
   :maxdepth: 1
 
   Sedimentation/Sed_Intro.rst
   Sedimentation/Sed_Design.rst
-  Sedimentation/Sed_Examples.rst
+  Sedimentation/Sed_Derivations.rst
   Sedimentation/Sed_Theory_and_Future_Work.rst
+  Sedimentation/Sed_Examples.rst
   Sedimentation/Sed_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 7: Filtration
+  :caption: Chapter 10: Filtration
   :maxdepth: 1
 
   Filtration/Filtration_Intro.rst
   Filtration/Filtration_Design.rst
-  Filtration/Filtration_Derivations.rst
   Filtration/Filtration_Theory_and_Future_Work.rst
   Filtration/Filtration_Design_Solution.rst
-  Filtration/EStaRS_Design.rst
+
+.. toctree::
+  :caption: Chapter 11: Hydraulics
+  :maxdepth: 1
+
+  Hydraulics/Hydraulics_Intro.rst
 
 
 .. toctree::
-  :caption: Chapter 8: Dissolved Gas
+  :caption: Chapter 12: Dissolved Gas
   :maxdepth: 1
 
   Dissolved_Gas/DG_Intro.rst
 
 
 .. toctree::
-  :caption: Chapter 9: Fluoride
+  :caption: Chapter 13: Fluoride
   :maxdepth: 1
 
   Fluoride/Fluoride_Intro.rst
 
 
 .. toctree::
-  :caption: Chapter 10: Wastewater
+  :caption: Chapter 14: Wastewater
   :maxdepth: 1
 
   WasteWater/WW_Theory_and_Future_Work.rst
 
 .. toctree::
-  :caption: Chapter 11: Troubleshooting
+  :caption: Chapter 15: Troubleshooting
   :maxdepth: 1
 
   Troubleshooting/Troubleshooting.rst

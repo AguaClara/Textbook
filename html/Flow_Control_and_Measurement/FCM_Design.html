@@ -26,7 +26,7 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Flow Control and Measurement Derivations" href="FCM_Derivations.html" />
@@ -87,6 +87,7 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -117,18 +118,32 @@
 <li class="toctree-l4"><a class="reference internal" href="#id5">What it is</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id6">What it does and why</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id7">How it works</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#kinematic-viscosity-of-coagulants">Kinematic Viscosity of Coagulants</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id8">Notes</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#section-summary">Section Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#important-equations">Important Equations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<p class="caption"><span class="caption-text">Chapter 5: Fluid Deformation and Energy Dissipation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Water Treatment Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Chemistry of Water Treatment Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Rapid Mix</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
@@ -138,7 +153,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Flocculation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
@@ -150,36 +165,39 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<p class="caption"><span class="caption-text">Chapter 9: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
+<p class="caption"><span class="caption-text">Chapter 10: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Hydraulics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html">Hydraulics Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Dissolved Gas</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
+<p class="caption"><span class="caption-text">Chapter 13: Fluoride</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
+<p class="caption"><span class="caption-text">Chapter 14: Wastewater</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 15: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
@@ -293,7 +311,7 @@
 <span id="heading-almost-linear-flow-controller"></span><h3>“Almost Linear” Flow Controller<a class="headerlink" href="#almost-linear-flow-controller" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="what-it-is">
 <h4>What it is<a class="headerlink" href="#what-it-is" title="Permalink to this headline">¶</a></h4>
-<p>This device consists of a bottle of chemical solution, called the <strong>Constant Head Tank</strong> (CHT), a float valve to keep a solution in the CHT at a constant water level, a flexible tube starting at the bottom of the CHT, and many precisely placed and equally spaced holes in a pipe, as the image below shows. The holes in the pipe hold the other end of the tube that starts at the CHT.</p>
+<p>This device consists of a bottle of chemical solution, called the <strong>Constant Head Tank</strong> (CHT), a float valve to keep a solution in the CHT at a constant water level, a flexible tube starting at the bottom of the CHT, and many precisely placed and equally spaced holes in a pipes. The holes in the pipe hold the other end of the tube that starts at the CHT.</p>
 <p>Chemical solution, either coagulant or chlorine, is stored in a stock tank somewhere above the CHT. A different tube connects the stock tank to the float valve within the CHT.</p>
 </div>
 <div class="section" id="what-it-does-and-why">
@@ -311,7 +329,7 @@
 <h4>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>This flow controller is <strong>no longer used by AguaClara.</strong></li>
-<li>The tube connecting the CHT to the outlet of chemicals must really belong and, more importantly, <strong>straight</strong> to form a linear relationship between driving head and flow. This was not true for the “Almost Linear” Flow Controller. When you read about the Linear Chemical Flow Controller (CDC), you will be learning about the replacement to the “Almost Linear” Flow Controller’s replacement.</li>
+<li>The tube connecting the CHT to the outlet of chemicals must be very long and, more importantly, <strong>straight</strong> to form a linear relationship between driving head and flow. This linear relationship was not true for the “Almost Linear” Flow Controller, and is why it was replaced by the Linear Chemical Dose Controller (CDC). The CDC will be covered in more depth later on in this section.</li>
 </ul>
 </div>
 </div>
@@ -322,7 +340,7 @@
 <p>The LFOM is a weir shape cut into a pipe. It was meant to imitate <a class="reference external" href="https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research">the Sutro Weir</a> while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.</p>
 <div class="figure align-center" id="id9">
 <span id="figure-sutro-v-lfom"></span><a class="reference internal image-reference" href="../_images/sutro_v_lfom.png"><img alt="A sutro weir and an LFOM" src="../_images/sutro_v_lfom.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span></p>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span></p>
 </div>
 </div>
 <div class="section" id="id2">
@@ -378,7 +396,7 @@
 </ol>
 <div class="figure align-center" id="id10">
 <span id="figure-cdc-labelled"></span><a class="reference internal image-reference" href="../_images/cdc_labelled.png"><img alt="CDC Displayed" src="../_images/cdc_labelled.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">This is the setup of the chemical dose controller.</span></p>
+<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">This is the setup of the chemical dose controller.</span></p>
 </div>
 </div>
 <div class="section" id="id6">
@@ -388,38 +406,95 @@
 <div class="section" id="id7">
 <h4>How it works<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <p>A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: <a class="reference internal" href="FCM_Derivations.html#heading-design-equations-for-the-cdc"><span class="std std-ref">Design Equations for the Linear Chemical Dose Controller (CDC)</span></a>, and you are very, very strongly encouraged to read them.</p>
-<p>The CDC can be designed manually using the equations from the derivation linked above or via aide_design, using the equations found in <a class="reference external" href="https://github.com/AguaClara/aguaclara">cdc_functions.py</a>. Either way, the design algorithm is roughly the same:</p>
+<p>The CDC can be designed manually using the equations from the derivation linked above or via aguaclara, using the equations found in <a class="reference external" href="https://github.com/AguaClara/aguaclara">cdc_functions.py</a>. Either way, the design algorithm is roughly the same:</p>
 <ol class="arabic simple">
 <li>Calculate the maximum flow rate, <span class="math notranslate nohighlight">\(Q_{Max, \, Tube}\)</span>, through each available dosing tube diameter <span class="math notranslate nohighlight">\(D\)</span> that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-0">
-<span class="eqno">(71)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
+<span class="eqno">(72)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
 <ol class="arabic simple" start="2">
 <li>Calculate how much flow of chemical needs to pass through the CDC at maximum plant flow and maximum chemical dose. This depends on the concentration of chemicals in the stock tank.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-1">
-<span class="eqno">(72)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
+<span class="eqno">(73)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
 <ol class="arabic simple" start="3">
 <li>Calculate the number of dosing tubes required if the tubes flow at  maximum capacity (round up)</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-2">
-<span class="eqno">(73)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
+<span class="eqno">(74)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
 <ol class="arabic simple" start="4">
 <li>Calculate the length of dosing tube(s) that correspond to each available tube diameter.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-3">
-<span class="eqno">(74)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-3" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
+<span class="eqno">(75)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-3" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
 <ol class="arabic simple" start="5">
 <li>Select a tube length from your array of solutions. Pick the longest dosing tube that you can, keeping in mind that the tube(s) must be able to fit in the plant and can’t be longer than the length of the plant wall it will be placed along.</li>
 <li>Finally, select the dosing tube diameter and flow rate corresponding to the selected tube length.</li>
 </ol>
 </div>
+</div>
+<div class="section" id="kinematic-viscosity-of-coagulants">
+<h3>Kinematic Viscosity of Coagulants<a class="headerlink" href="#kinematic-viscosity-of-coagulants" title="Permalink to this headline">¶</a></h3>
+<p>AguaClara plants currently use either alum (aluminum sulfate) or PACl (polyaluminum chloride) solutions that are prepared from granular chemicals. The viscosity of solutions created from granular alum and PACl were measured using a SV - 10 Vibro Viscometer. The results are shown below.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># the following concentrations were prepared for each chemical</span>
+<span class="n">Measured_C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
+<span class="n">Measured_C</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
+<span class="c1"># the following dynamic viscosities were measured</span>
+<span class="n">Measured_Viscosity_Dynamic_Alum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.00097</span><span class="p">,</span> <span class="mf">0.00114</span><span class="p">,</span><span class="mf">0.00143</span><span class="p">,</span><span class="mf">0.00178</span><span class="p">,</span><span class="mf">0.00208</span><span class="p">,</span><span class="mf">0.00253</span><span class="p">,</span><span class="mf">0.00349</span><span class="p">,</span><span class="mf">0.00451</span><span class="p">,</span><span class="mf">0.00532</span><span class="p">,</span><span class="mf">0.00691</span><span class="p">,</span><span class="mf">0.00901</span><span class="p">,</span><span class="mf">0.0117</span><span class="p">,</span><span class="mf">0.0133</span><span class="p">])</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<span class="n">Measured_Viscosity_Dynamic_PACl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.001</span><span class="p">,</span><span class="mf">0.00108</span><span class="p">,</span><span class="mf">0.00122</span><span class="p">,</span><span class="mf">0.00145</span><span class="p">,</span><span class="mf">0.00171</span><span class="p">,</span><span class="mf">0.00231</span><span class="p">,</span><span class="mf">0.00256</span><span class="p">,</span><span class="mf">0.00301</span><span class="p">,</span><span class="mf">0.00392</span><span class="p">,</span><span class="mf">0.00378</span><span class="p">,</span><span class="mf">0.00476</span><span class="p">,</span><span class="mf">0.00486</span><span class="p">,</span><span class="mf">0.00768</span><span class="p">])</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<span class="n">Density_PACl_400gperL</span> <span class="o">=</span> <span class="mf">58.88</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="p">(</span><span class="mi">50</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="p">)</span>
+<span class="n">Density_Alum_600gperL</span> <span class="o">=</span> <span class="mf">63.2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="p">(</span><span class="mi">50</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="p">)</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="mi">22</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
+
+<span class="k">def</span> <span class="nf">Density_Alum</span><span class="p">(</span><span class="n">Alum_C</span><span class="p">,</span> <span class="n">temperature</span><span class="p">):</span>
+  <span class="c1">#Alum_C is concentration of aluminum sulfate with attached waters (not concentration of aluminum)</span>
+  <span class="k">return</span> <span class="n">Density_Alum_600gperL</span> <span class="o">*</span> <span class="n">Alum_C</span><span class="o">/</span><span class="p">(</span><span class="mi">600</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="p">)</span> <span class="o">+</span> <span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">temperature</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">600</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span> <span class="o">-</span> <span class="n">Alum_C</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">600</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">Density_PACl</span><span class="p">(</span><span class="n">PACl_C</span><span class="p">,</span> <span class="n">temperature</span><span class="p">):</span>
+  <span class="c1">#PACl_C is concentration of poly aluminum chloride granules (not concentration of aluminum</span>
+  <span class="k">return</span> <span class="n">Density_PACl_400gperL</span> <span class="o">*</span> <span class="n">PACl_C</span><span class="o">/</span><span class="p">(</span><span class="mi">400</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="p">)</span> <span class="o">+</span> <span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">temperature</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">400</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span> <span class="o">-</span> <span class="n">PACl_C</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">400</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
+
+<span class="n">Measured_Viscosity_Kinematic_Alum</span> <span class="o">=</span> <span class="n">Measured_Viscosity_Dynamic_Alum</span><span class="o">/</span><span class="n">Density_Alum</span><span class="p">(</span><span class="n">Measured_C</span><span class="p">,</span> <span class="n">temperature</span><span class="p">)</span>
+<span class="n">Measured_Viscosity_Kinematic_PACl</span> <span class="o">=</span> <span class="n">Measured_Viscosity_Dynamic_PACl</span><span class="o">/</span><span class="n">Density_PACl</span><span class="p">(</span><span class="n">Measured_C</span><span class="p">,</span> <span class="n">temperature</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">Alum_Viscosity_Kinematic</span><span class="p">(</span><span class="n">Alum_C</span><span class="p">,</span> <span class="n">temperature</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="mf">4.225</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">Alum_C</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">magnitude</span><span class="p">)</span><span class="o">**</span><span class="mf">2.289</span><span class="p">))</span><span class="o">*</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">temperature</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">PACl_Viscosity_Kinematic</span><span class="p">(</span><span class="n">PACl_C</span><span class="p">,</span> <span class="n">temperature</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="mf">2.383</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">PACl_C</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">magnitude</span><span class="p">)</span><span class="o">**</span><span class="mf">1.893</span><span class="p">))</span><span class="o">*</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">temperature</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Measured_C</span><span class="p">,</span> <span class="n">Measured_Viscosity_Kinematic_Alum</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Measured_C</span><span class="p">,</span> <span class="n">Alum_Viscosity_Kinematic</span><span class="p">(</span><span class="n">Measured_C</span><span class="p">,</span> <span class="n">temperature</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span> <span class="s1">&#39;r-&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Measured_C</span><span class="p">,</span> <span class="n">Measured_Viscosity_Kinematic_PACl</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Measured_C</span><span class="p">,</span> <span class="n">PACl_Viscosity_Kinematic</span><span class="p">(</span><span class="n">Measured_C</span><span class="p">,</span> <span class="n">temperature</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Coagulant concentration prepared from granules &#39;</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;$\left[\frac</span><span class="si">{g}{L}</span><span class="s1">\right]$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Kinematic Viscosity &#39;</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;$\left[\frac{mm^2}</span><span class="si">{s}</span><span class="s1">\right]$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Alum data&#39;</span><span class="p">,</span><span class="s1">&#39;Alum model&#39;</span><span class="p">,</span> <span class="s1">&#39;PACl data&#39;</span><span class="p">,</span><span class="s1">&#39;PACl model&#39;</span><span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Flow_Control_and_Measurement/Images/Coagulant_Viscosity&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The equations for the kinematic viscosities of the two coagulants prepared from granules are given below.</p>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-4">
+<span class="eqno">(76)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-4" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\nu_{Alum} = \left[ 1 + 4.225 \times {10}^{-6}{\left( \frac{C_{Alum}}{\frac{kg}{m^3}} \right)}^{2.289} \right] \nu_{{H_2}O}\\\nu_{PACl} = \left[ 1 + 2.383 \times {10}^{-5}\left(\frac{C_{PACl}}{\frac{kg}{m^3}} \right)^{1.893} \right] \nu_{{H_2}O}\end{aligned}\end{align} \]</div>
+<p>This analysis is incomplete in that we don’t know the aluminum concentration of these coagulant solutions.</p>
+<div class="figure align-center" id="id11">
+<span id="figure-coagulant-viscosity-kinematic"></span><a class="reference internal image-reference" href="../_images/Coagulant_Viscosity.png"><img alt="internal figure" src="../_images/Coagulant_Viscosity.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">The viscosity of solutions prepared from granular aluminum sulfate and polyaluminum chloride. The concentration is the mass of granules per volume of solution.</span></p>
+</div>
 <div class="section" id="id8">
 <h4>Notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
-<p>Nothing in life is perfect, and the CDC is no exception. It has a few causes of inaccuracy which go beyond non-zero minor losses:
-* Float valves are not perfect. There will still be minor fluctuations of the fluid level in the CHT which will result in imperfect dosing.
-* Surface tension may resist the flow of chemicals from the dosing tube into the drop tube during low flows. Since the CDC design does not consider surface tension, this is a potential source of error.
-* The lever and everything attached to it are not weightless. Changing the dose of coagulant or chlorine means moving the slider along the lever. Since the slider and tubes attached to it (drop tube, dosing tube) have mass, moving the slider means that the torque of the lever is altered. This means that the depth that the float is submerged is changed, which affects <span class="math notranslate nohighlight">\(\Delta h\)</span> of the system. This can be remedied by making the float’s diameter as large as possible, which makes these fluctuations small. This problem can not be avoided entirely.</p>
+<p>Nothing in life is perfect, and the CDC is no exception. It has a few causes of inaccuracy which go beyond non-zero minor losses:</p>
+<ul class="simple">
+<li>Float valves are not perfect. There will still be minor fluctuations of the fluid level in the CHT which will result in imperfect dosing.</li>
+<li>Surface tension may resist the flow of chemicals from the dosing tube into the drop tube during low flows. Since the CDC design does not consider surface tension, this is a potential source of error.</li>
+<li>The lever and everything attached to it are not weightless. Changing the dose of coagulant or chlorine means moving the slider along the lever. Since the slider and tubes attached to it (drop tube, dosing tube) have mass, moving the slider means that the torque of the lever is altered. This means that the depth that the float is submerged is changed, which affects <span class="math notranslate nohighlight">\(\Delta h\)</span> of the system. This can be remedied by making the float’s diameter as large as possible, which makes these fluctuations small. This problem can not be avoided entirely.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -428,8 +503,8 @@
 <ol class="arabic simple">
 <li><strong>Tank with a valve:</strong></li>
 </ol>
-<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-4">
-<span class="eqno">(75)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-4" title="Permalink to this equation">¶</a></span>\[\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-5">
+<span class="eqno">(77)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-5" title="Permalink to this equation">¶</a></span>\[\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
 <p>This equation describes flow <span class="math notranslate nohighlight">\(Q\)</span> as a function of time <span class="math notranslate nohighlight">\(t\)</span> of a fluid leaving a tank through a valve. Attempting to get this ‘tank with a valve’ system to yield constant head means raising the tank far, far above the valve that controls the flow. This is unreasonable when designing a flow control system for constant dosing, but can be used to design systems to drain a tank. See the section above for a description of the variables in the equation.</p>
 <ol class="arabic simple" start="2">
 <li><strong>LFOM:</strong> The LFOM makes the water level in the entrance tank linear with respect to the flow out of the entrance tank. This is useful in measuring the flow and is a critical component in AguaClara’s chemical dosing system. The LFOM <em>measures</em> the flow through the plant, it does not <em>control</em> the flow through the plant.</li>
@@ -439,6 +514,37 @@
 * a lever to link the two linear relationships</li>
 </ol>
 <p>To keep the chemical dose constant by automatically adjusting the addition of coagulant and chlorine as the plant flow rate varies. Two sliders on the lever allows the operator to change the dose of coagulant and chlorine independently of the plant flow rate.</p>
+</div>
+<div class="section" id="important-equations">
+<span id="heading-fcm-important-equations"></span><h2>Important Equations<a class="headerlink" href="#important-equations" title="Permalink to this headline">¶</a></h2>
+<p>Below are a handful of equations relevant to the design of the different flow control and measurement technologies outlined in this chapter. For more context for these equations, please refer to the appropriate section in the chapter above; these equations have been copied verbatim for ease of reference. This list is not exhaustive—if there is an equation missing, please share it in the appropriate <a class="reference external" href="https://github.com/AguaClara/Textbook/issues/6">GitHub issue</a>.</p>
+<ol class="arabic simple">
+<li><strong>Tank with a valve:</strong></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math notranslate nohighlight">\(\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\)</span></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><strong>LFOM:</strong></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math notranslate nohighlight">\(Q \propto h\)</span></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><strong>Linear CDC:</strong></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="math notranslate nohighlight">\(Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\)</span></li>
+<li><span class="math notranslate nohighlight">\(Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\)</span></li>
+<li><span class="math notranslate nohighlight">\(n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\)</span></li>
+<li><span class="math notranslate nohighlight">\(L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\)</span></li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 
@@ -462,7 +568,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, AguaClara Cornell.
+        &copy; Copyright 2020, AguaClara Cornell.
 
     </p>
   </div>

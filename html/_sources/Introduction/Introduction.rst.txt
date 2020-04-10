@@ -26,7 +26,7 @@ Our contention is that no one has ever optimized the design of a drinking water 
 
 Traditional drinking water treatment textbooks can too easily miss the opportunity to advance the science of drinking water treatment technologies by presenting certainty where there should be skepticism. For example, rapid mix is described as process that occurs in a few seconds, flocculation is described as a process that should be fastest for high turbidity waters and slowest for low turbidity waters, and filtration performance is described by a model that predicts first order removal with respect to filter bed depth. We will demonstrate why each of these assumptions doesn't match observations, we will discuss new insights into these processes, and we will identify high priority research questions that have the potential to lead to major improvements in drinking water treatment.
 
-We want to encourage skepticism and we want to develop insights to guide thoughtful skepticism. A key skill for successful engineering is the ability to identify the location of the edge of knowledge. The ability to distinguish between what is reasonably certain and what is still in question is what powers the scientific method of slowly extending knowledge. New insights are difficult to obtain if the research  is based on a faulty premise.
+We want to encourage skepticism and we want to develop insights to guide thoughtful skepticism. A key skill for successful engineering is the ability to identify the location of the edge of knowledge. The ability to distinguish between what is reasonably certain and what is still in question is what powers the scientific method of slowly extending knowledge. New insights are difficult to obtain if the research is based on a faulty premise.
 
 .. _figure_short_walk:
 
@@ -182,7 +182,7 @@ Thus by 2030 we need to provide safe water for at least 3.3 billion people AND m
 
 .. code:: python
 
-  from aide_design.play import*
+  from aguaclara.core.units import unit_registry as u
   import datetime
   People_needing_water_2030 = 3.3*10**9
   now = datetime.datetime.now()
@@ -229,7 +229,7 @@ We treat water because it doesn't meet the requirements for its intended use. We
 Water Contaminants
 ------------------
 
-Many substances are able to dissolve in water and with it's high density, water is able to carry suspended solids. The substances may be naturally occurring, anthropogenic, benign, or harmful. The types of contaminants are influenced by the water source. Contaminant concentrations are often highly variable over time.
+Many substances are able to dissolve in water. Additionally, water is able to carry suspended solids because of its high density. The substances may be naturally occurring, anthropogenic, benign, or harmful. The types of contaminants are influenced by the water source. Contaminant concentrations are often highly variable over time.
 
 A water treatment system must be able to handle the likely range of contaminant levels and produce treated water that meets the user requirements. In some cases the user may have the option of switching sources or reducing demand when a source becomes excessively contaminated for a limited period of time. For example, a municipal water supplier may be able to shut the plant down for a few hours to avoid having to treat a very dirty water after a rainstorm. This strategy can work well for water sources that have small watersheds and hence a rapid return to better water after the storm passes. In other cases the water treatment processes must be capable of treating the most contaminated water that the water source provides. In any case, selecting the best unit processes to treat a given water source for a particular use case can be challenging. It is common to find water treatment plants that are unable to adequately treat their water source.
 
@@ -251,7 +251,7 @@ Pathogens include viruses (100 nm), bacteria (1 :math:`\mu m`), and protozoa (se
 Turbidity
 ^^^^^^^^^
 
-Turbidity or cloudiness is an indirect measure of particle concentration. Turbidity is an optical measurement of scattered light. Light scattering by refraction is primarily caused by particles that are smaller than but close to the wavelength of light. Particles that are close larger than the wavelength of light can reflect light. Turbidity measures both of these effects by shining a light into a water sample and then measuring the scattered light with a photodetector at 90°. The meter is then calibrated with standard suspensions.
+Turbidity or cloudiness is an indirect measure of particle concentration. Turbidity is an optical measurement of scattered light. Light scattering by refraction is primarily caused by particles that are smaller than but close to the wavelength of light. Particles that are close to but larger than the wavelength of light can reflect light. Turbidity measures both of these effects by shining a light into a water sample and then measuring the scattered light with a photodetector at 90°. The meter is then calibrated with standard suspensions.
 
 For a given suspension the turbidity can be directly correlated with the suspended solids concentration. However, that relationship is complicated because the amount of scattered light is related to the particle size distribution because given the same mass concentration, smaller particles have more surface area and thus reflect more light.
 
@@ -351,7 +351,9 @@ Sedimentation is the process of particles ‘falling’ because they have a high
 
 .. code:: python
 
-  from aide_design.play import*
+  import aguaclara.core.physchem as pc
+  import numpy as np
+  import matplotlib.pyplot as plt
   def v_t(D_particle,density_particle,Temperature):
     return (D_particle**2*pc.gravity *(density_particle - pc.density_water(Temperature))/(18*pc.viscosity_kinematic(Temperature)*pc.density_water(Temperature))).to(u.m/u.s)
   clay = 2650 * u.kg/u.m**3
@@ -365,9 +367,10 @@ Sedimentation is the process of particles ‘falling’ because they have a high
   ax.legend(["clay or sand","organic particle"])
   imagepath = 'Introduction/Images/'
   fig.savefig(imagepath+'Terminal_velocity')
+  plt.show()
 
 
-The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (:eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
+The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take care of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (:eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
 
 
 .. _figure_Terminal_velocity:
@@ -391,24 +394,27 @@ The AguaClara treatment train consists of the following processes
  - stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed
  - disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes
 
- Comparison with Croton Water Treatment Plant
- ---------------------------------------------
+Comparison with Croton Water Treatment Plant
+---------------------------------------------
 
- As AguaClara technologies extend to larger and larger cities one of the criticisms could be that the technologies are somehow limited to small scale facilities. To address this question we will compare AguaClara unit processes with one of the most recent large scale water treatment plants, the `Croton Water Treatment Plant <../_static/references/Croton-WFP.pdf>`_ (CWTP) in NYC.
+As AguaClara technologies extend to larger and larger cities one of the criticisms could be that the technologies are somehow limited to small scale facilities. To address this question we will compare AguaClara unit processes with one of the most recent large scale water treatment plants, the `Croton Water Treatment Plant <../_static/references/Croton-WFP.pdf>`_ (CWTP) in NYC.
 
- The CWTP is designed to treat `290 mgd <https://www.hazenandsawyer.com/work/projects/croton-wtp/>`_ (million gallons per day) which is equivalent to 12,700 L/s. The final cost of the project was $3.2bn. The cost per L/s of treatment capacity was thus $250,000. This is approximately 25 times more expensive than AguaClara water treatments. Of course, AguaClara water treatment plants haven't been constructed underground in the middle of a major city! Nonetheless, the factor of 25 suggests that AguaClara technologies have a significant cost advantage.
+The CWTP is designed to treat `290 mgd <https://www.hazenandsawyer.com/work/projects/croton-wtp/>`_ (million gallons per day) which is equivalent to 12,700 L/s. The final cost of the project was $3.2bn. The cost per L/s of treatment capacity was thus $250,000. This is approximately 25 times more expensive than AguaClara water treatments. Of course, AguaClara water treatment plants haven't been constructed underground in the middle of a major city! Nonetheless, the factor of 25 suggests that AguaClara technologies have a significant cost advantage.
 
- The CWTP has 48 flocculators and 48 dissolved air flotation processes working in parallel. The flow per unit is thus 265 L/s. The current maximum size of the AguaClara Open Stacked Rapid Sand (OStaR) ilter is 20 L/s. It would be possible to design larger OStaR filters by simply including multiple sets of inlet/outlet trunk lines into a single filter box. The CWTP filters appear to have 6 outlet trunk lines per filter and thus the flow per trunk line is 44 L/s.
+The CWTP has 48 flocculators and 48 dissolved air flotation processes working in parallel. The flow per unit is thus 265 L/s. The current maximum size of the AguaClara Open Stacked Rapid Sand (OStaR) ilter is 20 L/s. It would be possible to design larger OStaR filters by simply including multiple sets of inlet/outlet trunk lines into a single filter box. The CWTP filters appear to have 6 outlet trunk lines per filter and thus the flow per trunk line is 44 L/s.
 
- The CWTP uses 2 stage mechanical flocculators with a total residence time of 4.8 minutes and a velocity gradient of 100 Hz. This residence time is much shorter than conventional design requirements, about half of the residence time used by the AguaClara plants built around 2017, significantly larger than the 90 second residence time used in the AguaClara 1 L/s plants.
+The CWTP uses 2 stage mechanical flocculators with a total residence time of 4.8 minutes and a velocity gradient of 100 Hz. This residence time is much shorter than conventional design requirements, about half of the residence time used by the AguaClara plants built around 2017, significantly larger than the 90 second residence time used in the AguaClara 1 L/s plants.
 
- CWTP uses dissolved air flotation tanks that are located on top of the rapid sand filters. The d
+CWTP uses dissolved air flotation tanks that are located on top of the rapid sand filters.
 
- The filter approach velocity (the velocity of water before it enters the sand bed) for CWTP is 4.42 mm/s. This is significantly higher than the 1.85 mm/s filtration velocity currently used in StaRS filters. StaRS filters are a stack of 6 filters and the net filtration velocity is 11 mm/s. Thus by that metric the StaRS filters are significantly smaller than the CWTP filters.
+The filter approach velocity (the velocity of water before it enters the sand bed) for CWTP is 4.42 mm/s. This is significantly higher than the 1.85 mm/s filtration velocity currently used in StaRS filters. StaRS filters are a stack of 6 filters and the net filtration velocity is 11 mm/s. Thus by that metric the StaRS filters are significantly smaller than the CWTP filters.
 
- .. code:: python
+.. code:: python
 
-   from aide_design.play import*
+   #the unit registry has been imported above and does not need to be imported again
+   import aguaclara
+   import aguaclara.core.physchem as pc
+   from aguaclara.core.units import unit_registry as u
    Q_Croton =(290 *u.Mgal/u.day).to(u.L/u.s)
    Cost_Croton = 3.2 * 10**9 * u.USD
    Cost_per_Lps = Cost_Croton/Q_Croton
@@ -423,7 +429,7 @@ Design Evolution
 
 During the later half of the 20th century surface water treatment technologies evolved slowly. The slow evolution was likely a product of the regulatory environment, the high cost of water treatment infrastructure, and the low profit margin. The high cost of municipal scale water treatment infrastructure made experiments at scale infeasible and thus there was no mechanism to introduce disruptive innovations. With little opportunity for a significant return on investment there was little incentive to invest in the research and development that could have advanced the technologies. A final disincentive was the widely held belief that surface water treatment was a mature field with little opportunity for significant advancement. The advances of the latter half of the 20th century focused primarily on mechanization and automation (Supervisory Control and Data Acquisition - SCADA).
 
-Design standards such as the [Great Lakes - Upper Mississippi River Board 10 States Standards](http://10statesstandards.com/) are evolving very slowly and retain an empirical approach to design. The empirical design methodology is a direct result of two confounding factors. The physics of particle interactions based on diffusion, fluid shear, and gravity are complex and given the challenges of characterizing surface water particle suspensions it was natural to assume that a mathematical description of the processes would be intractable.
+Design standards such as the `Great Lakes - Upper Mississippi River Board 10 States Standards <http://10statesstandards.com/>`_ are evolving very slowly and retain an empirical approach to design. The empirical design methodology is a direct result of two confounding factors. The physics of particle interactions based on diffusion, fluid shear, and gravity are complex and given the challenges of characterizing surface water particle suspensions it was natural to assume that a mathematical description of the processes would be intractable.
 
 Mechanized and automated water treatment plants performed reasonably well in communities with ready access to technical support services and supply chains that could reliably deliver replacement parts. In the global south municipal water treatment plants haven't faired as well. In 2012, one of the main water treatment plants serving Kathmandu, Nepal had failed chlorine pumps and were using a red garden hose to siphon chlorine from the stock tank. They crimped the end of the hose to control the flow rate of the chlorine solution.
 
@@ -434,7 +440,7 @@ Mechanized and automated water treatment plants performed reasonably well in com
     :align: center
     :alt: Kathmandu chemical feed room
 
-    Failed chlorine doing system bypassed with a red tube that siphons the chlorine solution at a plant in Kathmandu, Nepal in 2012.
+    Failed chlorine dosing system bypassed with a red tube that siphons the chlorine solution at a plant in Kathmandu, Nepal in 2012.
 
 
 The ingenious and simple chemical dosing system that uses a siphon to completely bypass the failed pumps begs the question of whether design engineers could have invented a better option than the short lived pumps that they specified. We will investigate a gravity powered chemical dosing system that is far more reliable than chemical dosing pumps and that borrows from the simplicity of the garden hose solution used by the Nepali plant operators.

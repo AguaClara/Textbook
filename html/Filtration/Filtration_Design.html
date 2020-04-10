@@ -26,10 +26,10 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Filtration Derivations" href="Filtration_Derivations.html" />
+    <link rel="next" title="Filtration Theory and Future Work" href="Filtration_Theory_and_Future_Work.html" />
     <link rel="prev" title="Filtration Introduction" href="Filtration_Intro.html" /> 
 
   
@@ -87,6 +87,7 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
 <ul>
@@ -100,7 +101,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 4: Rapid Mix</span></p>
+<p class="caption"><span class="caption-text">Chapter 5: Fluid Deformation and Energy Dissipation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Water Treatment Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Chemistry of Water Treatment Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Rapid Mix</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
@@ -110,7 +121,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 5: Flocculation</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Flocculation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
@@ -122,71 +133,43 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 6: Sedimentation</span></p>
+<p class="caption"><span class="caption-text">Chapter 9: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 7: Filtration</span></p>
+<p class="caption"><span class="caption-text">Chapter 10: Filtration</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Filtration Design</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#important-terms-and-equations">Important Terms and Equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#aguaclara-flow-control-and-measurement-technologies">AguaClara Flow Control and Measurement Technologies</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#filter-types">Filter Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#potential-changes-to-the-filter-design">Potential Changes to the Filter Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#maximum-trunk-flows">Maximum Trunk Flows</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#porosity">Porosity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#headloss-requirements">Headloss Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#backwash">Backwash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#layer-thickness-as-a-function-of-diameter">Layer Thickness as a function of diameter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#siphon">Siphon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#design-from-mathcad-adapted-for-me">Design from MathCad adapted for me</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sand-layer-thickness-as-function-of-trunk-diameters">Sand Layer Thickness as Function of trunk diameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#flow-distribution-constraint-ratio-of-pressure-recovery-to-clean-bed-head-loss">Flow Distribution constraint: ratio of pressure recovery to clean bed head loss</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#number-of-filters">Number of filters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#clean-bed-head-loss">Clean bed head loss</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#auxilliary-box-widths-and-plumbing">Auxilliary box widths and plumbing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#number-of-manifold-branches">Number of manifold branches</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#filter-box-dimensions-and-manifold-inlet-pipes">Filter box dimensions and manifold inlet pipes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#manifold-slot-orifice-design">Manifold slot/orifice design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plumbing-head-losses">Plumbing head losses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#total-sand-depth-and-backwash-head-loss">Total Sand depth and backwash head loss</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#path-head-loss-calculations-and-flow-distribution-between-layers">Path head loss calculations and flow distribution between layers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#siphon-design">Siphon design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#inlet-channel-and-elevations">Inlet channel and elevations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#elevations">Elevations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#inlet-weir-design">Inlet Weir Design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#entrance-and-overflow-box-lengths-x-direction">Entrance and overflow box lengths (X-direction)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#siphon-valve-sizes">Siphon Valve sizes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sand-removal-pipe">Sand Removal Pipe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#trunk-line-purge-valves">Trunk Line purge valves</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#main-plant-drain-channel">Main plant drain channel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sand-volume">Sand Volume</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#backwash-lagoon">Backwash Lagoon</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Filtration_Derivations.html">Filtration Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="EStaRS_Design.html">EStaRS Design</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Dissolved Gas</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Hydraulics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html">Hydraulics Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Dissolved Gas</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 9: Fluoride</span></p>
+<p class="caption"><span class="caption-text">Chapter 13: Fluoride</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Wastewater</span></p>
+<p class="caption"><span class="caption-text">Chapter 14: Wastewater</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 15: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
@@ -262,258 +245,37 @@
            <div itemprop="articleBody">
             
   <div class="section" id="filtration-design">
-<span id="title-filtration"></span><h1>Filtration Design<a class="headerlink" href="#filtration-design" title="Permalink to this headline">¶</a></h1>
-<p>This section deals with search for a self-backwashing filter which is functional over a wide range of flows. While in basic concept, running water through a sand bed, filters are the simplest of the unit processes, the are probably the most complex in design within an AguaClara plant because they are not inherently self-cleaning. Additionally. The search to overcome this problem has led to the development of a Stacked Rapid Sand Filter (StaRS Filter) a novel filter design which provides a hydraulic backwash system and works over a large range of flows with some adaptation for small flows.</p>
-<div class="section" id="important-terms-and-equations">
-<span id="heading-filtration-terms"></span><h2>Important Terms and Equations<a class="headerlink" href="#important-terms-and-equations" title="Permalink to this headline">¶</a></h2>
-<p>Terms:</p>
+<span id="title-filtration-design"></span><h1>Filtration Design<a class="headerlink" href="#filtration-design" title="Permalink to this headline">¶</a></h1>
 <ol class="arabic simple">
-<li>Porosity</li>
-<li>StaRS Filter</li>
-<li>Backwash</li>
-<li>Pressure Recovery</li>
+<li>Calculate array of maximum filter flows given available trunk sizes and given constraint of maximum allowable head loss in the trunk line during backwash. Note that the outer inlet trunk minor loss coefficient is set (by adding a flow restriction at the inlet to the trunk line) to be 4 times the minor loss coefficient for the inner inlet trunks so that during filtration they have the same head loss when the outer trunks have 1/2 the flow of the inner trunks.</li>
+<li>Select the trunk size that gives a number of filters equal to or less than the minimum number of filters required for operation and maintenance.</li>
+<li>Calculate filter flow given minimum number of filters</li>
+<li>Calculate the orifice head loss required to provide uniform flow to the sand bed during backwash. This is based on the required ratio of port to manifold velocity (see equation <a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html#equation-manifold-max-v-no-hl-series">(643)</a>).</li>
+<li>Design the branches based on manifold flow distribution requirements</li>
+<li>Set the siphon drain time (assuming no inflow!) to equal the time required to refill the filter box after backwash.</li>
+<li>Design the siphon pipe given the constraint on drain time</li>
+<li>Design the siphon air valve given volume of air in the siphon</li>
+<li>Calculate all elevations</li>
+<li>Design backwash flow control weirs</li>
 </ol>
-<p>Equations:</p>
-<ol class="arabic simple">
-<li></li>
-</ol>
+<div class="section" id="potential-changes-to-the-filter-design">
+<h2>Potential Changes to the Filter Design<a class="headerlink" href="#potential-changes-to-the-filter-design" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Have the siphon manifold exit straight through the side of the filter (perhaps in line with the other inlets and outlets) and then elbow up to the required elevation and elbow and Tee back down again. This would make the siphon install inside the filter be a single straight pipe instead of the large assembly that is currently used. This will have the additional advantage that the connection between this drain manifold and the pipe stub in the wall doesn’t have to be leak tight! The connection could be a wrap of stainless steel and two hose clamps.</li>
+<li>Switch to gravity exclusion zones that include orifices to get uniform flow distribution without risk of sand scour.</li>
+<li>Simplest design to fabricate will have identical trunk lines for all inlets</li>
+<li>Change the inlet and outlet boxes so that all of the inlet trunks have only one elbow</li>
+<li>Outlet trunks each have 2 elbows</li>
+</ul>
 </div>
-<div class="section" id="aguaclara-flow-control-and-measurement-technologies">
-<span id="heading-aguaclara-filtration-technologies"></span><h2>AguaClara Flow Control and Measurement Technologies<a class="headerlink" href="#aguaclara-flow-control-and-measurement-technologies" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="filter-types">
-<span id="heading-filter-types"></span><h3>Filter Types<a class="headerlink" href="#filter-types" title="Permalink to this headline">¶</a></h3>
-<p>The principal difference in various filters is the difference in velocity of water through them. This in turn determines the plan view area of the filter for a particular flow.</p>
-<p>For a multistage filter system, the filter areas for the Dynamic, Roughing, and Slow Sand filters are included in a total area. For a given flow, and the velocity for each filter type the total area is:</p>
-<div class="math notranslate nohighlight" id="equation-area-stuff">
-<span class="eqno">(435)<a class="headerlink" href="#equation-area-stuff" title="Permalink to this equation">¶</a></span>\[ A_{Total} = \frac{Q}{v_{Dynamic}} + \frac{Q}{v_{Rough}} + \frac{Q}{v_{Slow}}\]</div>
-<p>Using this formula it becomes easy to see the relative sizes of different filter systems, we as how complex filter system quickly add up in terms of size.  TABLE:<cite>_table_net_velocities</cite> shows the relative area of various filtration technologies.</p>
-<p>Understanding the amount of area requires for this component makes it easy to see why certain systems would be preferable to others, but also that overall filtration is only a polishing step and cannot treat as well as other unit processes, predominantly the flocculation-sedimentation combination.</p>
+<div class="section" id="maximum-trunk-flows">
+<h2>Maximum Trunk Flows<a class="headerlink" href="#maximum-trunk-flows" title="Permalink to this headline">¶</a></h2>
+<p>The trunks are constrained to both provide similar flow to each filter layer and to provide similar flow to each branch within the sand bed. Providing the same flow to each filter layer during filtration is the key constraint that determines the size of the trunk lines. The most challenging flow distribution is between middle inlets that carry flow for two layers and the top and bottom inlets that carry flow for one sand layer. This flow distribution is ensured by making the head loss through the outer inlet trunks to be equal to the head loss through the inner inlet trunks when the outer inlet trunks have 1/2 the flow of the inner inlet trunks.</p>
+<div class="figure align-center" id="id1">
+<span id="figure-filter-max-q-given-nd"></span><a class="reference internal image-reference" href="../_images/Filter_Max_Q_given_ND.png"><img alt="Trunk flows" src="../_images/Filter_Max_Q_given_ND.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 184 </span><span class="caption-text">The flows through the inlet trunks of stacked rapid sand filters are not identical and this requires a careful hydraulic design.</span></p>
 </div>
-</div>
-<div class="section" id="porosity">
-<span id="heading-porosity"></span><h2>Porosity<a class="headerlink" href="#porosity" title="Permalink to this headline">¶</a></h2>
-<p>In understading how sand filtration works, porosity is one of the most important concepts to be familiar with. Porosity refers to the ratio of the void volume to the total volume of a control volume.</p>
-<div class="math notranslate nohighlight" id="equation-porosity">
-<span class="eqno">(436)<a class="headerlink" href="#equation-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}\]</div>
-<p>Porosity is determined by the geometry of the material in the control volume, but also by the size of the particles involved. If you have three different sized spheres (such as .0um clay, .2mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in <a class="reference internal" href="#figure-porosity"><span class="std std-numref">Fig. 125</span></a>. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.</p>
-<div class="figure align-center" id="id2">
-<span id="figure-porosity"></span><img alt="This figure illustrates how different sized materials have the same total bulk porosity" src="../_images/figure_porosity.png" />
-<p class="caption"><span class="caption-number">Fig. 125 </span><span class="caption-text">Within each box, the spheres are different sizes. However the total porosity is the same. To minimize the pore space, the smaller particles could be used to fill the spore space between the larger particles, though in a filter this is not necessarily ideal.</span></p>
-</div>
-<p>One way that the relative size of particles is characterized is by describing the size of the smallest 10% of grains, and the smallest 60% of grains. That is:</p>
-<p><span class="math notranslate nohighlight">\(D_{10}\)</span> = the sieve size that passes 10% by mass of sand through</p>
-<p><span class="math notranslate nohighlight">\(D_{60}\)</span> = the sieve sixe that passes 60% by mass of sand through</p>
-<p><span class="math notranslate nohighlight">\(D_{10}\)</span> is used for particle removal models, and <span class="math notranslate nohighlight">\(D_{60}\)</span> is used for hydrualic modeling.</p>
-<p>The ratio of the two is the uniformity coeffecient:</p>
-<div class="math notranslate nohighlight" id="equation-uniformity-coefficient">
-<span class="eqno">(437)<a class="headerlink" href="#equation-uniformity-coefficient" title="Permalink to this equation">¶</a></span>\[ UC = \frac{D_{60}}{D_{10}}\]</div>
-<p>The uniformity coefficient describes the uniformity of the sand. A <span class="math notranslate nohighlight">\(UC = 1\)</span> indicates that every grain of sand is the same size, which is the ideal case. A large <span class="math notranslate nohighlight">\(UC\)</span> is indicative of a wide range of grain sizes which can cause trouble during filter operation and backwash, as stratification occurs and the porosity changes with respect to depth in the filter, which affects the requirements for backwash.</p>
-<p>During backwash, the sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:</p>
-<div class="math notranslate nohighlight" id="equation-backwash-porosity">
-<span class="eqno">(438)<a class="headerlink" href="#equation-backwash-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}\]</div>
-<div class="line-block">
-<div class="line">Such that:</div>
-<div class="line"><span class="math notranslate nohighlight">\(phi_{FiSandBw}\)</span> = sand porosity during backwash</div>
-<div class="line"><span class="math notranslate nohighlight">\(phi_{FiSand}\)</span> = settled sand porosity</div>
-<div class="line"><span class="math notranslate nohighlight">\(H_{FiSand}\)</span> = height of sand in the filter</div>
-<div class="line"><span class="math notranslate nohighlight">\(H_{FiSandBw}\)</span> = height of sand during backwash</div>
-<div class="line"><span class="math notranslate nohighlight">\(A_{Fi}\)</span> = filter area</div>
-</div>
-<p>From this it becomes possible to directly relate porosity (as above) to the filter expansion ratio, which is simply the ratio of the heights of the expanded sand bed and the settled sand bed:</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-0">
-<span class="eqno">(439)<a class="headerlink" href="#equation-filtration-filtration-design-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: filter_expansion_ratio\\\Pi_{FiBw} = \frac{H_{FiSandBw}}{H_{FiSand}}\end{aligned}\end{align} \]</div>
-<div class="line-block">
-<div class="line">Such that:</div>
-<div class="line"><span class="math notranslate nohighlight">\(Pi_{FiBw}\)</span> = the expansion ratio value</div>
-<div class="line"><span class="math notranslate nohighlight">\(H_{FiSand}\)</span> = height of sand in the filter</div>
-<div class="line"><span class="math notranslate nohighlight">\(H_{FiSandBw}\)</span> = height of sand during backwash</div>
-</div>
-</div>
-<div class="section" id="headloss-requirements">
-<span id="heading-headloss-requirements"></span><h2>Headloss Requirements<a class="headerlink" href="#headloss-requirements" title="Permalink to this headline">¶</a></h2>
-<p>One of the key parameters in design of a filter is the headloss through the system because it determines the required fluid velocity for backwash. The Carman Kozeny Equation, an adaptation of the Hagen-Pouseille equation (ref from elsewhere, not linked yet) describes the headloss through a clean bed during filtration.</p>
-<div class="math notranslate nohighlight" id="equation-carman-kozeny-clean-bed">
-<span class="eqno">(440)<a class="headerlink" href="#equation-carman-kozeny-clean-bed" title="Permalink to this equation">¶</a></span>\[ \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu V_{Fi}}{g D_{60}^2}\]</div>
-<div class="line-block">
-<div class="line">Such that:</div>
-<div class="line"><span class="math notranslate nohighlight">\(h_l\)</span> = headloss in sand bed</div>
-<div class="line"><span class="math notranslate nohighlight">\(H_{FiSand}\)</span> = the sand bed depth/length of flow paths</div>
-<div class="line"><span class="math notranslate nohighlight">\(phi_{FiSand}\)</span> = porosity of sand</div>
-<div class="line"><span class="math notranslate nohighlight">\(nu\)</span> = kinematic viscosity</div>
-<div class="line"><span class="math notranslate nohighlight">\(V_{Fi}\)</span> = the water velocity in the filter</div>
-<div class="line"><span class="math notranslate nohighlight">\(D_{60}\)</span> = the size of the sand</div>
-<div class="line"><span class="math notranslate nohighlight">\(g\)</span> = gravity</div>
-<div class="line"><span class="math notranslate nohighlight">\(k\)</span> = Kozeny constant (5 for most filtration cases)</div>
-</div>
-<p>This equation is valid for Reynolds numbers less than 6. Where:
-<span class="math notranslate nohighlight">\({\rm Re}  = \frac{D_{60} V_{Fi}}{\nu}\)</span></p>
-<p>The headloss during backwash is taken as the design parameter, so other values are constructed around it.</p>
-<p>The following equation describes the headloss through the fluidized bed:</p>
-<div class="math notranslate nohighlight" id="equation-headloss-fluidzed-bed">
-<span class="eqno">(441)<a class="headerlink" href="#equation-headloss-fluidzed-bed" title="Permalink to this equation">¶</a></span>\[ \frac{h_{l_{FiBw}}}{H_{FiSand}} = \left( 1 - \phi_{FiSand} \right)\left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
-<div class="line-block">
-<div class="line">Such that:</div>
-<div class="line"><span class="math notranslate nohighlight">\(h_{l_{FiBw}}\)</span> = the headloss in the fluidized bed</div>
-<div class="line"><span class="math notranslate nohighlight">\(H_{FiSand}\)</span> =  the depth of the settled sand bed</div>
-<div class="line"><span class="math notranslate nohighlight">\(phi_{FiSand}\)</span> = the settled sand porosity</div>
-<div class="line"><span class="math notranslate nohighlight">\(rho_{Sand}\)</span>  = the sand density</div>
-<div class="line"><span class="math notranslate nohighlight">\(rho_{Water}\)</span> = the water density</div>
-</div>
-<p>Using these two equations the minimum velocity for snad fluidization can be found!</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-1">
-<span class="eqno">(442)<a class="headerlink" href="#equation-filtration-filtration-design-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: minimum_fluidization_velocity_sand\\V_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\end{aligned}\end{align} \]</div>
-<p>From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter is <strong>not</strong> indicative of fluidization at the bottom.</p>
-<p>This parameter is the most important parameter to consider as it is a property of the sand not of the water!</p>
-</div>
-<div class="section" id="backwash">
-<span id="heading-backwash"></span><h2>Backwash<a class="headerlink" href="#backwash" title="Permalink to this headline">¶</a></h2>
-<p>When considering backwash design, there are two main factors that constitute a dilemma. The first, backwash velocity must be must greater than filtration velocity (to expand the sand bed), and second, the backwash water must be clean water (cleaning with dirty water introduces more particles into the filter). This limits the paths water can take during the backwash process. The conventional options include pumping it back from the storage tank, using a set of parallel filters to backwash one filter at a time, or storing the filtered water at an adequate elevation. Due to energy limitations and space constraints, the conventional solutions are simply not feasible for this system. Examples that illustrate why they cannot work can be found in the derivations sections(?)(or the examples?)</p>
-<p><strong>brief example here?</strong></p>
-<p>To avoid electricity, pumps can be immediately ruled out.</p>
-<p>Parallel filters would require too much area and wouldn’t work well under low flow conditions:</p>
-<p>Given:</p>
-<div class="math notranslate nohighlight" id="equation-filter-base-conditions">
-<span class="eqno">(443)<a class="headerlink" href="#equation-filter-base-conditions" title="Permalink to this equation">¶</a></span>\[ Q_{Plant} = 6 \, \frac{L}{s} \,\,\,\,\, V_{Fi} = 1.8 \, \frac{mm}{s} \,\,\,\,\, V_{Bw} = 9 \, \frac{mm}{s}\]</div>
-<p>As the ratio of the backwash velocity to the filter velocity is 5, 5 filters will be needs to provide enough flow to backash one: Therefore the number of parallel filters is 6:</p>
-<p><span class="math notranslate nohighlight">\(N_{Fi} = \frac{V_{Bw}}{V_{Fi}} + 1 = 6\)</span></p>
-<p>In this system, the water exiting five of the filters would be diverted to backwash one of the other filters. In addtion to requiring the plan view area of 6 filters, each filter would need to be backwashed independently, meaning it would take 6x longer and use 6x the water as compared to just having one filter. Another detriment to this system is that in low flows (such as drought conditions) not enough water would be passing through the system to backwash at points since all the water is diverted to backwash.</p>
-<p>The third option, elevating the filtered water to provide enough head to cause backwash, is also unfeasible.</p>
-<p><strong>add the third one at some later point if it’s useful</strong></p>
-<p>How can we find a solution?</p>
-<p>If the velocities could be more similar the filter could work!</p>
-<p>This could be accomplished in several ways: such as decreasing the media density thus lowering velocity to fluidize it, decrease the media diameter thus lowering the fluidization velocity, or make a more compact filter which filters in parallel and backwashes in series.</p>
-<p>As changing the material characteristics of the sand is challenging, a more compact filter is the chosen design. As it happens this innovation results in a more conceptually difficult filter. In the design, six layers of sand are stacked, there are four inlets, and three outlets which are all in use during filtration. During backwash only one inlet is used and the backwash water is discarded through a separate manifold. Throughout this section, figures and images will be the best methods to understand the design flow through the system, and will be supplemented by the text.</p>
-<p>This overall design can be seen in Figure XXXXX.</p>
-<p>(figure of the full system)</p>
-<p>Tasks for Clare for Thursday + Friday morning: insert images! none of them are in yet. Save as pngs. streamline the way you want this to work as well. like overall structure</p>
-<p>In is most basic schema, the filter is a series of pipes leading into a deep box with 1.2 meters of sand (for most filters)</p>
-<p>As a parcel of water traveling in the filter the first part of the filter is the inlet box. The inlet box is a shallow box with four holes in the bottom. The holes lead into four pipes which lead into different levels of the sand filter. At the outlet of each of these pipes into the sand filter is a structure designed to spread the flow over the entire footprint area of the filter. These structures have slots which allow water out of the inlet pipes into the sand bed. Across a layer of sand from the inlet is an outlet pipe in the same shapes as the slotted pipe inlets. Water passes into the pipes and up to the filter outlet box where it only needs to be chlorinated before being distributed.</p>
-<p>Steps of designing a filter.
-1. Calculate backwash velocity from sand diameter
-- complicating factors:
-– wall shear
-– lift as a unit and fall together
-— stratification will always occur if a range of sizes exists
-2.</p>
-</div>
-<div class="section" id="layer-thickness-as-a-function-of-diameter">
-<span id="heading-sand-layer-thickness"></span><h2>Layer Thickness as a function of diameter<a class="headerlink" href="#layer-thickness-as-a-function-of-diameter" title="Permalink to this headline">¶</a></h2>
-<p>Two heights are defined here. Both are defined as functions:</p>
-<p><span class="math notranslate nohighlight">\(H_{FiLayerF}\)</span> the height of a standard filter layer. It is defined as the maximum value between the defined layer height, the outer radius (OR) of the trunk  (as a fucntion of nominal diameter) plus the minimum filter trunk spacing  , the outer diameter of the fitting of the trunk (also as function of ND), and the fernco outer diameter (again a fucntion of ND). Each of these is rounded to the nearest 1cm.</p>
-<p>and</p>
-<p><span class="math notranslate nohighlight">\(H_{FiBottomLayerF}\)</span> the height of The bottom filter layer. This is defined as the maxiumum value between 1. The defined layer height, the OR of the trunk + OR of the backwash trunk  (as functions of ND’s of the trunk and BW trunk) + minimum filter trunk spacing, the sum of fitting OR’s for the trunk and BW trunk (function of ND’s), and the average of the ferco OD’s as a function of NDs. Each rounded to the nearest 1cm.</p>
-</div>
-<div class="section" id="siphon">
-<span id="id1"></span><h2>Siphon<a class="headerlink" href="#siphon" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>Backwash is initiated through the activation of a siphons system. In the siphoning process two things must happen for a success.</dt>
-<dd><ol class="first arabic simple">
-<li>Backwash can be initiated at any point in time</li>
-<li>Backwash can be prevented with the siphon as well</li>
-</ol>
-<p class="last">In under the siphon, the ideal gas law, <strong>Add a ref</strong>, is the most important equation to understand how siphoning works..</p>
-</dd>
-</dl>
-</div>
-<hr class="docutils" />
-<div class="section" id="design-from-mathcad-adapted-for-me">
-<h2>Design from MathCad adapted for me<a class="headerlink" href="#design-from-mathcad-adapted-for-me" title="Permalink to this headline">¶</a></h2>
-<p>Overall Goals:
-- Uniformity in the sand bed through appropriate headloss</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Pressure recovery occurs when fluid velocity slows down. This happens in the filter at the end of a manifold pipe, ebcause the fluid must stop at the end. This stoppage causes the pressure to increase locally, which then, when the fluid passes into the outlet, increases the local velocity leading to non-uniform flow.</p>
-</div>
-<p>Constraints:</p>
-<p>Filtration Constraints
-- inlet manifolds need to have small piezometric head relative to clean sand bed
-- trunk and branches are short manifolds (fL/d) (<strong>friction factor, L, diam?</strong>), therefore: piezometric head variability dominated by pressure recovery as given by <span class="math notranslate nohighlight">\(\frac{V^2}{2g}\)</span> with the velocity as the initial velocity of the manifold
-– this is the limiting constraint for the velocity in the trunk and branches, which can be relaxed with added headloss in the slots
-- limit the imbalance between inlets that carry water for two layers and inlets that carry water for one layer.
-– <em>perhaps top/bottom inlet should have half the number of slots</em>
-– current assumption: backwash branches will have half the slot areas
-- if slots are used to generate head loss (to improve flow distribution) sand blocking, <span class="math notranslate nohighlight">\((1-\epsilon)\)</span> during filtration must be accounted for
-- the slots are not blocked during backwash (excepy maybe at initiation)</p>
-<p>Backwash Constraints:
-- flow rate from each slot/hole must be close to average (within <em>20%</em>)
-- as there is not head loss in fluidized bed, the manifold must be designed with the appropriate head loss for indpendent uniform flow distribution
-- headloss through slots/holes will be 36x greater during backwash because of 6x increase in velocity
-- to make flow more uniform:
-– decrease head loss + pressure recovery in manifold
-– increase head loss in slots
-- slot head loss must not impede the filtration mode capacity
-- this sets maximum headloss for each mode.
-– during filtration &lt;10% clean bed head loss
-– during backwash &lt;36x the filtration limits</p>
-<blockquote>
-<div>Additional concerns:
-- there are two manifold systems, the trunks into the branches and the branches into the slots. Thus pressure recovery must be small in both trunk and branches so that the slots can reconcile the changes in flow, because flow distribution is fairly uniform in short manifold systems when total port area is equal to or less than manifold area.</div></blockquote>
-</div>
-<div class="section" id="sand-layer-thickness-as-function-of-trunk-diameters">
-<h2>Sand Layer Thickness as Function of trunk diameters<a class="headerlink" href="#sand-layer-thickness-as-function-of-trunk-diameters" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="flow-distribution-constraint-ratio-of-pressure-recovery-to-clean-bed-head-loss">
-<h2>Flow Distribution constraint: ratio of pressure recovery to clean bed head loss<a class="headerlink" href="#flow-distribution-constraint-ratio-of-pressure-recovery-to-clean-bed-head-loss" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="number-of-filters">
-<h2>Number of filters<a class="headerlink" href="#number-of-filters" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="clean-bed-head-loss">
-<h2>Clean bed head loss<a class="headerlink" href="#clean-bed-head-loss" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="auxilliary-box-widths-and-plumbing">
-<h2>Auxilliary box widths and plumbing<a class="headerlink" href="#auxilliary-box-widths-and-plumbing" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="number-of-manifold-branches">
-<h2>Number of manifold branches<a class="headerlink" href="#number-of-manifold-branches" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="filter-box-dimensions-and-manifold-inlet-pipes">
-<h2>Filter box dimensions and manifold inlet pipes<a class="headerlink" href="#filter-box-dimensions-and-manifold-inlet-pipes" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="manifold-slot-orifice-design">
-<h2>Manifold slot/orifice design<a class="headerlink" href="#manifold-slot-orifice-design" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="plumbing-head-losses">
-<h2>Plumbing head losses<a class="headerlink" href="#plumbing-head-losses" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="total-sand-depth-and-backwash-head-loss">
-<h2>Total Sand depth and backwash head loss<a class="headerlink" href="#total-sand-depth-and-backwash-head-loss" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="path-head-loss-calculations-and-flow-distribution-between-layers">
-<h2>Path head loss calculations and flow distribution between layers<a class="headerlink" href="#path-head-loss-calculations-and-flow-distribution-between-layers" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="siphon-design">
-<h2>Siphon design<a class="headerlink" href="#siphon-design" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="inlet-channel-and-elevations">
-<h2>Inlet channel and elevations<a class="headerlink" href="#inlet-channel-and-elevations" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="elevations">
-<h2>Elevations<a class="headerlink" href="#elevations" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="inlet-weir-design">
-<h2>Inlet Weir Design<a class="headerlink" href="#inlet-weir-design" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="entrance-and-overflow-box-lengths-x-direction">
-<h2>Entrance and overflow box lengths (X-direction)<a class="headerlink" href="#entrance-and-overflow-box-lengths-x-direction" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="siphon-valve-sizes">
-<h2>Siphon Valve sizes<a class="headerlink" href="#siphon-valve-sizes" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="sand-removal-pipe">
-<h2>Sand Removal Pipe<a class="headerlink" href="#sand-removal-pipe" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="trunk-line-purge-valves">
-<h2>Trunk Line purge valves<a class="headerlink" href="#trunk-line-purge-valves" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="main-plant-drain-channel">
-<h2>Main plant drain channel<a class="headerlink" href="#main-plant-drain-channel" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="sand-volume">
-<h2>Sand Volume<a class="headerlink" href="#sand-volume" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="backwash-lagoon">
-<h2>Backwash Lagoon<a class="headerlink" href="#backwash-lagoon" title="Permalink to this headline">¶</a></h2>
+<p>The flow distribution within the filter bed to ensure complete fluidization of the sand bed during backwash can be achieved by increasing the head loss through the flow control orifices in the branches. Calculating this required head loss is the second step in designing the filter inlet piping.</p>
 </div>
 </div>
 
@@ -525,7 +287,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Filtration_Derivations.html" class="btn btn-neutral float-right" title="Filtration Derivations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Filtration_Theory_and_Future_Work.html" class="btn btn-neutral float-right" title="Filtration Theory and Future Work" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Filtration_Intro.html" class="btn btn-neutral" title="Filtration Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -537,7 +299,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, AguaClara Cornell.
+        &copy; Copyright 2020, AguaClara Cornell.
 
     </p>
   </div>

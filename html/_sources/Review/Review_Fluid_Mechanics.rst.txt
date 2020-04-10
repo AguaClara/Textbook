@@ -113,7 +113,7 @@ A numeric way to determine whether flow is laminar or turbulent is by finding th
 
     {\rm Re = \frac{inertia}{viscosity}} = \frac{\bar vD}{\nu}
 
-`The transition between laminar and turbulent flow is not yet well understood <https://en.wikipedia.org/wiki/Laminar%E2%80%93turbulent_transition>`_, which is why the concept of transitional flow is often simplified and neglected to make it possible to code for laminar or turbulent flow, which are better understood. We will assume that the transition occurs at :math:`\rm{Re} = 2100`. In aide_design, this parameter shows us as ``pc.RE_TRANSITION_PIPE``.
+`The transition between laminar and turbulent flow is not yet well understood <https://en.wikipedia.org/wiki/Laminar%E2%80%93turbulent_transition>`_, which is why the concept of transitional flow is often simplified and neglected to make it possible to code for laminar or turbulent flow, which are better understood. We will assume that the transition occurs at :math:`\rm{Re} = 2100`. In aguaclara, this parameter shows us as ``pc.RE_TRANSITION_PIPE``.
 
 Fluid can flow through very many different geometries, like a pipe, a rectangular channel, or any other shape. To account for this, the characteristic length scale for the Reynolds number, which was written in the equation above as :math:`D`, is quantified as the `hydraulic diameter <https://www.engineeringtoolbox.com/hydraulic-equivalent-diameter-d_458.html>`_, :math:`D_h` when considering a general cross-sectional area. For circular pipes, which are the most common geometry you’ll encounter in this class, the hydraulic diameter is simply the pipe's diameter, :math:`D_h = D`.
 
@@ -131,7 +131,7 @@ Here are other commonly used forms of the Reynolds number equation *for circular
 | :math:`\nu` = fluid kinematic viscosity
 | :math:`\mu` = fluid dynamic viscosity
 
-.. seealso:: **Function in aide_design:** ``pc.re_pipe(FlowRate, Diam, Nu)`` Returns the Reynolds number *in a circular pipe*. Functions for finding the Reynolds number through other flow conduits and geometries can also be found in `physchem.py <https://github.com/AguaClara/aguaclara>`_ within aide_design.
+.. seealso:: **Function in aguaclara:** ``pc.re_pipe(FlowRate, Diam, Nu)`` Returns the Reynolds number *in a circular pipe*. Functions for finding the Reynolds number through other flow conduits and geometries can also be found in `physchem.py <https://github.com/AguaClara/aguaclara>`_ within aguaclara.
 
 .. note:: **Definition of Flow Regimes:** Laminar and turbulent flow are described as two different **flow regimes**. When there is a characteristic of flow and different categories of the characteristic, each category is referred to as a flow regime. For example, the Reynolds number describes a flow characteristic, and its categories, referred to as flow regimes, are laminar or turbulent.
 
@@ -162,7 +162,7 @@ A **control volume** is just an imaginary 3-dimensional shape in space. Its boun
     :align: center
     :alt: Image control volumes
 
-    On the right, a control volume is applied to a hydraulic system. On the left, a streamline is applied to a hydraulic system. A figure-convention for control volumes and streamlines will be very helpful throughout this course as there will be very, very many figures.
+    On the left, a control volume is applied to a hydraulic system. On the right, a streamline is applied to a hydraulic system. A figure-convention for control volumes and streamlines will be very helpful throughout this course as there will be very, very many figures.
 
 
 
@@ -187,7 +187,7 @@ These three forms of energy expressed above make up the Bernoulli equation:
 | Such that:
 | :math:`p` = pressure
 | :math:`\rho` = fluid density
-| :math:`g` = acceleration due to gravity, in aide_design as ``con.GRAVITY``
+| :math:`g` = acceleration due to gravity
 | :math:`z` = elevation relative to a reference
 | :math:`v` = fluid velocity
 
@@ -239,7 +239,7 @@ You’ll also notice the :math:`\alpha` term attached to the velocity head. This
 
 Headloss
 =========
-**Head(L)oss**, :math:`h_L` is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through space. There are two components to head loss: major losses caused by (f)riction between the fluid the surface it's flowing over, :math:`h_{\rm{f}}`, and minor losses caused by fluid-fluid internal friction resulting from flow (e)xpansions, :math:`h_e`. These two components combine such that :math:`h_L = h_{\rm{f}} + h_e`.
+**Head(L)oss**, :math:`h_L` is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through space. There are two components to head loss: major losses caused by (f)riction between the fluid and the surface it's flowing over, :math:`h_{\rm{f}}`, and minor losses caused by fluid-fluid internal friction resulting from flow (e)xpansions, :math:`h_e`. These two components combine such that :math:`h_L = h_{\rm{f}} + h_e`.
 
 
 .. _heading_major_losses:
@@ -268,7 +268,7 @@ Substituting the continuity equation :math:`Q = \bar vA` in the form of :math:`\
 | :math:`Q` = pipe flow rate
 | :math:`D` = pipe diameter
 
-.. seealso:: **Function in aide_design:** ``pc.headloss_fric(FlowRate, Diam, Length, Nu, PipeRough)`` Returns only major losses. Works for both laminar and turbulent flow. PipeRough describes the pipe roughness :math:`\epsilon` described shortly below.
+.. seealso:: **Function in aguaclara:** ``pc.headloss_fric(FlowRate, Diam, Length, Nu, PipeRough)`` Returns only major losses. Works for both laminar and turbulent flow. PipeRough describes the pipe roughness :math:`\epsilon` described shortly below.
 
 Darcy-Weisbach is wonderful because it applies to both laminar and turbulent flow regimes and contains relatively easy to measure variables. The one exception is the Darcy friction factor, :math:`\rm{f}`. This parameter is an approximation for the magnitude of friction between the pipe walls and the fluid, and its value changes depending on the whether or not the flow is laminar or turbulent, and varies with the Reynolds number in both flow regimes.
 
@@ -289,7 +289,7 @@ For turbulent flow, the friction factor is more difficult to determine. In this 
 | :math:`\epsilon` = pipe roughness, :math:`[L]`
 | :math:`D` = pipe diameter, :math:`[L]`
 
-.. seealso:: **Function in aide_design:** ``pc.fric(FlowRate, Diam, Nu, PipeRough)`` Returns :math:`\rm{f}` for laminar *or* turbulent flow. For laminar flow, use zero for the ``PipeRough`` input.
+.. seealso:: **Function in aguaclara:** ``pc.fric(FlowRate, Diam, Nu, PipeRough)`` Returns :math:`\rm{f}` for laminar *or* turbulent flow. For laminar flow, use zero for the ``PipeRough`` input.
 
 The simplicity of the equation for :math:`\rm{f}` during laminar flow allows for substitutions to create a very useful, simplified equation for major losses during laminar flow. This simplification combines the Darcy-Weisbach equation, the equation for the Darcy friction factor during laminar flow, and the Reynold’s number formula:
 
@@ -318,7 +318,7 @@ To form the `Hagen-Poiseuille equation <https://en.wikipedia.org/wiki/Hagen%E2%8
 
 The significance of this equation lies in its relationship between :math:`h_{\rm{f}}` and :math:`Q`. Hagen-Poiseuille shows that the terms are directly proportional (:math:`h_{\rm{f}} \propto Q`) during laminar flow, while Darcy-Weisbach shows that :math:`h_{\rm{f}}` grows with the square of :math:`Q` during turbulent flow (:math:`h_{\rm{f}} \propto Q^2`). As you will soon see, minor losses, :math:`h_e`, will grow with the square of :math:`Q` in both laminar and turbulent flow. This has implications that will be discussed in a future chapter: :ref:`title_flow_control_design`.
 
-In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gathered by many people, on the Darcy-Weisbach friction factor to create what we now call the `Moody diagram <https://en.wikipedia.org/wiki/Moody_chart>`_. This diagram has makes it easy to find the friction factor :math:`f`. :math:`\rm{f}` is plotted on the left-hand y-axis, relative pipe roughness :math:`\frac{\epsilon}{D}` is on the right-hand y-axis, and Reynolds number :math:`\rm{Re}` is on the x-axis. The Moody diagram is an alternative to computational methods for finding :math:`\rm{f}`.
+In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gathered by many people, on the Darcy-Weisbach friction factor to create what we now call the `Moody diagram <https://en.wikipedia.org/wiki/Moody_chart>`_. This diagram makes it easy to find the friction factor :math:`f`. :math:`\rm{f}` is plotted on the left-hand y-axis, relative pipe roughness :math:`\frac{\epsilon}{D}` is on the right-hand y-axis, and Reynolds number :math:`\rm{Re}` is on the x-axis. The Moody diagram is an alternative to computational methods for finding :math:`\rm{f}`.
 
 .. _figure_moody:
 .. figure:: Images/Moody.jpg
@@ -352,7 +352,7 @@ There are three forms of the minor loss equation that you will see in this class
     :label: eq_exp_v_out
 
     \color{purple}{
-    {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
+    {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left(\frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
     }
 
 | Such that:
@@ -360,9 +360,9 @@ There are three forms of the minor loss equation that you will see in this class
 
 .. note:: You will most often see :math:`K_e^{'}` and :math:`K_e` used without the :math:`e` subscript,  as :math:`K^{'}` and :math:`K`.
 
-.. seealso:: **Function in aide_design:** ``pc.headloss_exp_general(Vel, KMinor)`` Returns :math:`h_e`. Can be either the second or third form due to user input of both velocity and minor loss coefficient. It is up to the user to use consistent :math:`\bar v` and :math:`K_e`.
+.. seealso:: **Function in aguaclara:** ``pc.headloss_exp_general(Vel, KMinor)`` Returns :math:`h_e`. Can be either the second or third form due to user input of both velocity and minor loss coefficient. It is up to the user to use consistent :math:`\bar v` and :math:`K_e`.
 
-.. seealso:: **Function in aide_design:** ``pc.headloss_exp(FlowRate, Diam, KMinor)`` Returns :math:`h_e`. Uses third form, :math:`K_e`.
+.. seealso:: **Function in aguaclara:** ``pc.headloss_exp(FlowRate, Diam, KMinor)`` Returns :math:`h_e`. Uses third form, :math:`K_e`.
 
 .. _figure_minor_loss_pipe_FRD:
 .. figure:: Images/minor_loss_pipe.png
@@ -385,7 +385,7 @@ one <https://www.engineeringtoolbox.com/minor-loss-coefficients-pipes-d_626.html
 
     Flow around a pipe elbow results in a minor loss. 'Control surface 1' can be abbreviated as 'CS 1'
 
-In order to find :math:`\bar v_{out}`, we first need to know what (or where) is :math:`out` and what is :math:`in`. A simple way to distinguish the two surfaces is that :math:`in` occurs when the flow is most contracted, and :math:`out` occurs when the flow has fully expanded after that maximal contraction. Going on these guidelines, Control surface '2' (CS 2) in the figure above above would be :math:`in`, since it represents the most contracted flow in the elbow-pipe system. Therefore, CS 3 would be :math:`out`, as it represents the flow having fully expanded after its compression at CS 2.
+In order to find :math:`\bar v_{out}`, we first need to know what (or where) is :math:`out` and what is :math:`in`. A simple way to distinguish the two surfaces is that :math:`in` occurs when the flow is most contracted, and :math:`out` occurs when the flow has fully expanded after that maximal contraction. Going on these guidelines, Control surface '2' (CS 2) in the figure above would be :math:`in`, since it represents the most contracted flow in the elbow-pipe system. Therefore, CS 3 would be :math:`out`, as it represents the flow having fully expanded after its compression at CS 2.
 
 :math:`\bar v_{out}` is easy to determine because it is the velocity of the fluid as it flows through the entire area of the pipe. Thus, :math:`\bar v_{out}` can be found with the continuity equation, since the flow through the pipe and its diameter are easy to measure, :math:`\bar v_{out} = \frac{4 Q}{\pi D^2}`. On the other hand, :math:`\bar v_{in}` is difficult to find, as the area of the contracted flow is dependent on the exact geometry of the elbow. This is why the third form of the minor loss equation, as we have defined it, is the most common:
 
@@ -486,7 +486,7 @@ The term ‘vena contracta’ describes the phenomenon of contracting flow due t
 
     \Pi_{vc} = \frac{A_{downstream}}{A_{gate}}
 
-When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter value, 0.62, is in aide_design as ``pc.RATIO_VC_ORIFICE``. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the least contracted area, :math:`\Pi_{vc}` is always less than 1.
+When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter value, 0.62, is in aguaclara as ``pc.VC_ORIFICE_RATIO``. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the least contracted area, :math:`\Pi_{vc}` is always less than 1.
 
 .. important:: **A vena contracta coefficient is not a minor loss coefficient.** Though the equations for the two both involve contracted and non-contracted areas, these coefficients are not the same. Minor losses coefficients imply energy loss, and vena contractas do not. Minor losses coefficients deal with flow expansions, and vena contracas deal with flow contractions. Confusing the two coefficients is common mistake that this paragraph will hopefully help you to avoid.
 
@@ -524,13 +524,13 @@ Which, rearranged to solve for :math:`Q` gives **The Orifice Equation:**
     Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}
 
 | Such that:
-| :math:`\Pi_{vc}` = 0.62 = vena contracta coefficient, in aide_design as ``pc.RATIO_VC_ORIFICE``
+| :math:`\Pi_{vc}` = 0.62 = vena contracta coefficient, as ``pc.VC_ORIFICE_RATIO``
 | :math:`A_{or}` = orifice area- NOT contracted flow area
 | :math:`\Delta h` = elevation difference between orifice and water level
 
-.. seealso:: **Equation in aide_design:** ``pc.flow_orifice(Diam, Height, RatioVCOrifice)`` Returns flow through a horizontal orifice.
+.. seealso:: **Equation in aguaclara:** ``pc.flow_orifice(Diam, Height, RatioVCOrifice)`` Returns flow through a horizontal orifice.
 
-.. seealso:: **Equation in aide_design:** ``pc.flow_orifice_vert(Diam, Height, RatioVCOrifice)`` Returns flow through a vertical orifice. The height parameter refers to height above the center of the orifice.
+.. seealso:: **Equation in aguaclara:** ``pc.flow_orifice_vert(Diam, Height, RatioVCOrifice)`` Returns flow through a vertical orifice. The height parameter refers to height above the center of the orifice.
 
 There are two configurations for an orifice in the tank holding a fluid: horizontal and vertical. These are both displayed in the figure below. The orifice equation written is for a horizontal orifice; the equation for flow through vertical orifice equation requires integration or the orifice equation across its height to return the correct flow. This is explored in the Flow Control and Measurement Examples section.
 
@@ -551,7 +551,7 @@ Section Summary
 
     * **Continuity** means that the mass of a fluid is conserved as it flows, and implies a constant density. The continuity equation has two purposes:
 
-        #. Relating the average velocity of a fluid, :math:`\bar v`, to its flow rate, :math:`Q`, via the cross-sectional area, :math:`A`, that it flows through. When the fluid is flowing in a pipe, we can simply this even further to relate the flow rate and velocity to the pipe's diameter, :math:`D`. The final equation below is only used for circular pipes, as it includes a pipe diameter.
+        #. Relating the average velocity of a fluid, :math:`\bar v`, to its flow rate, :math:`Q`, via the cross-sectional area, :math:`A`, that it flows through. When the fluid is flowing in a pipe, we can simply expand this even further to relate the flow rate and velocity to the pipe's diameter, :math:`D`. The final equation below is only used for circular pipes, as it includes a pipe diameter.
 
         .. math::
 
@@ -655,7 +655,7 @@ Section Summary
 
 6. The **head loss trick**, also called the control volume trick, can be used to incorporate the ‘kinetic energy out’ term of the energy equation, :math:`\frac{\bar v_2^2}{2g}`, into head loss as a minor loss with :math:`K = 1`, so the minor loss equation becomes :math:`\left( 1 + \sum K \right) \frac{\bar v^2}{2g}`. This is used to be able to say that :math:`\Delta z = h_L` and makes many equation simplifications possible in the future.
 
-7. **Orifice equation and vena contractas:** The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, :math:`Q \propto \sqrt{\Delta h}`. Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aide_design should be used.
+7. **Orifice equation and vena contractas:** The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, :math:`Q \propto \sqrt{\Delta h}`. Depending on the orientation of the orifice, vertical (like a hole in the side of a bucket) or horizontal (like a hole in the bottom of a bucket), a different equation in aguaclara should be used.
 
   The Orifice Equation:
 

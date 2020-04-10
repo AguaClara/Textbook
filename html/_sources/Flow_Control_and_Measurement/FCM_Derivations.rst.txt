@@ -25,10 +25,10 @@ This derivation begins by finding two equations for flow, :math:`Q`, through the
 
 .. math::
 
-    Q =  - \frac{d\rlap{-}V}{dt} = - \frac{{A_{Tank}}dh}{dt}
+    Q =  - \frac{d\rlap{--}V}{dt} = - \frac{{A_{Tank}}dh}{dt}
 
 | Such that:
-| :math:`\frac{d\rlap{-}V}{dt}` = rate of change in volume of solution in the tank
+| :math:`\frac{d\rlap{--}V}{dt}` = rate of change in volume of solution in the tank
 | :math:`\frac{dh}{dt}` = rate of change in height of water (hypochlorite solution) level with time
 
 Our other equation for flow is the head loss equation. Since major losses are negligible for a short pipe-low flow rate system, we only need to consider minor losses. The only real minor loss in this system occurs in the almost-closed valve that is dripping the hypochlorite solution. However, we will also use the head loss trick. Therefore, the total driving head of the system :math:`h` is equal to the minor losses:
@@ -149,7 +149,7 @@ Which can be slightly rearranged to yield:
 =========================================================
 This document contains the derivation of :math:`D_{Pipe}`, which is the pipe diameter necessary to install in a drain system to entirely drain a tank in time :math:`t_{Drain}`.
 
-First, it is necessary to understand how AguaClara tank drains work and what they look like. Many tanks, including the flocculator and entrance tank, have a hole in their bottoms which are fitted with `pipe couplings <https://www.mrpoolman.com.au/assets/thumbL/16057.jpg>`_. During normal operation, these couplings have pipe stubs in them, and the pipe stubs are tall enough to go above the water level in the tank and not allow water to flow into the drain. When the pipe stub is removed, the water begins to flow out of the drain, as the image below indicates. The drain pipe consists of pipe and one elbow, shown in the image.
+First, it is necessary to understand how AguaClara tank drains work and what they look like. Many tanks, including the flocculator and entrance tank, have a hole in their bottoms which are fitted with pipe couplings. During normal operation, these couplings have pipe stubs in them, and the pipe stubs are tall enough to go above the water level in the tank and not allow water to flow into the drain. When the pipe stub is removed, the water begins to flow out of the drain, as the image below indicates. The drain pipe consists of pipe and one elbow, shown in the image.
 
 .. _figure_pipe_stub_drainage:
 
@@ -354,7 +354,7 @@ Unfortunately, both :math:`L_{Min, \, \Pi_{Error}}` and :math:`Q_{Max}` are unkn
 
     Q_{Max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_{L_{Max}} g \Pi_{Error}}{\sum K }}
 
-.. seealso:: **Function in aide_design** ``cdc.max_linear_flow(Diam, HeadlossCDC, Ratio_Error, KMinor)`` Returns the maximum flow :math:`Q_{Max}` that can go through a dosing tube will making sure that linearity between head loss and flow is conserved.
+.. seealso:: **Function in aguaclara** ``cdc.max_linear_flow(Diam, HeadlossCDC, Ratio_Error, KMinor)`` Returns the maximum flow :math:`Q_{Max}` that can go through a dosing tube will making sure that linearity between head loss and flow is conserved.
 
 From this equation for :math:`Q_{Max}`, we can get to our first design equation, :math:`\color{purple}{\bar v_{Max}}` by using the continuity equation :math:`\bar v_{Max} = \frac{Q_{Max}}{\frac{\pi D^2}{4}}`
 
@@ -393,9 +393,9 @@ Now that we know all of the parameters in this equation except for :math:`L`, we
      L_{Min, \, head loss} = L = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)
      }
 
-.. seealso:: **Function in aide_design:** ``cdc._length_cdc_tube_array(FlowPlant, ConcDoseMax, ConcStock, DiamTubeAvail, HeadlossCDC, temp, en_chem, KMinor)`` Returns :math:`\color{purple}{L_{Min}}`, takes in the flow rate input of *plant design flow rate*.
+.. seealso:: **Function in aguaclara:** ``cdc._length_cdc_tube_array(FlowPlant, ConcDoseMax, ConcStock, DiamTubeAvail, HeadlossCDC, temp, en_chem, KMinor)`` Returns :math:`\color{purple}{L_{Min}}`, takes in the flow rate input of *plant design flow rate*.
 
-.. seealso:: **Function in aide_design:** ``cdc._len_tube(Flow, Diam, HeadLoss, conc_chem, temp, en_chem, KMinor)`` Returns :math:`\color{purple}{L_{Min}}`, takes in the flow rate input of *max flow rate through the dosing tube(s)*.
+.. seealso:: **Function in aguaclara:** ``cdc._len_tube(Flow, Diam, HeadLoss, conc_chem, temp, en_chem, KMinor)`` Returns :math:`\color{purple}{L_{Min}}`, takes in the flow rate input of *max flow rate through the dosing tube(s)*.
 
 If you decrease the max flow :math:`Q_{Max}` and hold :math:`h_{L_{Max}}` constant, :math:`\color{green}{L_{Min, \, head loss}}` becomes larger. This means that a CDC system for a plant of 40 :math:`\frac{L}{s}` must be different than one for a plant of 20 :math:`\frac{L}{s}`. If we want to maintain the same head loss at maximum flow in both plants, then the dosing tube(s) will need to be a lot longer for the 20 :math:`\frac{L}{s}` plant.
 
