@@ -273,8 +273,9 @@
 <p class="caption"><span class="caption-number">Fig. 192 </span><span class="caption-text">Piezometric head is constant in a stationary body of water. The piezometric head inside the enclosed sloped pipe is greater (by height H) than the piezometric head in the tank. Thus if we add an orifice to this sloped pipe, water will from the sloped pipe into the tank.</span></p>
 </div>
 <p>Add multiple outlets to this sloped pipe to create a sloped manifold (<a class="reference internal" href="#figure-sloped-manifold-with-flow"><span class="std std-numref">Fig. 193</span></a>). The energy equation applied between control surface 1 and n  shows that the piezometric head in an inlet manifold increases in the direction of flow for cases where head loss is smaller than <span class="math notranslate nohighlight">\(\frac{\bar v_{M_1}^2}{2 g}\)</span>.</p>
-<div class="figure align-center" id="figure-sloped-manifold-with-flow">
-<a class="reference internal image-reference" href="../_images/Sloped_Manifold_with_flow.png"><img alt="Sloped manifold with flow" src="../_images/Sloped_Manifold_with_flow.png" style="width: 400px;" /></a>
+<div class="figure align-center" id="id3">
+<span id="figure-sloped-manifold-with-flow"></span><a class="reference internal image-reference" href="../_images/Sloped_Manifold_with_flow.png"><img alt="Sloped manifold with flow" src="../_images/Sloped_Manifold_with_flow.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 193 </span><span class="caption-text">Sloped inlet manifold showing that the piezometric head increases in the direction of flow for the case where head loss due to wall shear is smaller than <span class="math notranslate nohighlight">\(\frac{\bar v_{M_1}^2}{2 g}\)</span>.</span></p>
 </div>
 </div>
 <div class="section" id="inlet-manifold-flow-distribution">
@@ -291,7 +292,7 @@
 <p>The change in piezometric head is the important parameter and is given by</p>
 <div class="math notranslate nohighlight" id="equation-delta-piezometric-cv-manifold">
 <span class="eqno">(633)<a class="headerlink" href="#equation-delta-piezometric-cv-manifold" title="Permalink to this equation">¶</a></span>\[ \Delta\Psi_M = \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L}\]</div>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id4">
 <span id="figure-inlet-manifold"></span><a class="reference internal image-reference" href="../_images/inlet_manifold.png"><img alt="Sedimentation tank flow circuit" src="../_images/inlet_manifold.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 194 </span><span class="caption-text">The piezometric head can either increase due to conversion of kinetic energy to pressure or the piezometric head can decrease due to major losses.</span></p>
 </div>
@@ -330,7 +331,7 @@
   <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">Ratio_Flow</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">Ratio_Flow</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id5">
 <span id="figure-ratio-port-to-manifold-velocity"></span><a class="reference internal image-reference" href="../_images/Ratio_port_to_manifold_velocity.png"><img alt="Filter channel" src="../_images/Ratio_port_to_manifold_velocity.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 195 </span><span class="caption-text">The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.</span></p>
 </div>
@@ -425,7 +426,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id6">
 <span id="figure-sedimentor-channel-max-v"></span><a class="reference internal image-reference" href="../_images/Sedimentor_channel_max_v.png"><img alt="Sedimentor inlet channel velocity constraints" src="../_images/Sedimentor_channel_max_v.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 196 </span><span class="caption-text">The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.</span></p>
 </div>
@@ -434,7 +435,7 @@
 <div class="section" id="filter-inlet-channel-with-rectangular-weir-flow-distribution">
 <h2>Filter Inlet Channel with Rectangular Weir Flow Distribution<a class="headerlink" href="#filter-inlet-channel-with-rectangular-weir-flow-distribution" title="Permalink to this headline">¶</a></h2>
 <p>In plants with flow rates large enough to use open stacked rapid sand filters the settled water is delivered to those filters through an open channel. The water exits the channel by flowing across a rectangular weir (see <a class="reference internal" href="#figure-filter-channel"><span class="std std-numref">Fig. 197</span></a>). As is the case in a manifold pipe the water in the channel is decelerating and thus the piezometric head is increasing in the direction of flow. This increase in piezometric head is equivalent to the increase in the depth of water in the channel. This increase in water depth results in more water flowing across the final weir exiting the channel.</p>
-<div class="figure align-center" id="id6">
+<div class="figure align-center" id="id7">
 <span id="figure-filter-channel"></span><a class="reference internal image-reference" href="../_images/Filter_channel.png"><img alt="Filter channel" src="../_images/Filter_channel.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 197 </span><span class="caption-text">The filter inlet channel distributes flow to all of the filters. The water in the channel flows across sharp crested weirs into the filter inlet boxes. The velocity in the channel decreases in the direction of flow and thus the kinetic energy of the flow is converted into height. That added height results in greater flow into downstream filter inlet boxes.</span></p>
 </div>
@@ -478,7 +479,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id7">
+<div class="figure align-center" id="id8">
 <span id="figure-filter-channel-v-max"></span><a class="reference internal image-reference" href="../_images/Filter_channel_v_max.png"><img alt="Filter channel velocities" src="../_images/Filter_channel_v_max.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 198 </span><span class="caption-text">The maximum velocity in the filter inlet channel decreases as the target flow ratio, <span class="math notranslate nohighlight">\(\Pi_{Q_{weir}}\)</span>, approaches 1. This graph was created assuming <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span> of 5 cm.</span></p>
 </div>

@@ -49,7 +49,7 @@ Add multiple outlets to this sloped pipe to create a sloped manifold (:numref:`f
     :align: center
     :alt: Sloped manifold with flow
 
-     Sloped inlet manifold showing that the piezometric head increases in the direction of flow for the case where head loss due to wall shear is smaller than :math:`\frac{\bar v_{M_1}^2}{2 g}`.
+    Sloped inlet manifold showing that the piezometric head increases in the direction of flow for the case where head loss due to wall shear is smaller than :math:`\frac{\bar v_{M_1}^2}{2 g}`.
 
 .. _heading_inlet_manifold_flow_distribution:
 
