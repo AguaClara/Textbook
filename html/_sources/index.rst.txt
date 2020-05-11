@@ -52,21 +52,21 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flow_Control_and_Measurement/FCM_Solution.rst
 
 .. toctree::
-  :caption: Chapter 5: Fluid Deformation and Energy Dissipation
+  :caption: Chapter 4: Fluid Deformation and Energy Dissipation
   :maxdepth: 1
 
   Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst
   Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst
 
 .. toctree::
-  :caption: Chapter 6: Chemistry of Water Treatment
+  :caption: Chapter 5: Chemistry of Water Treatment
   :maxdepth: 1
 
   Chemistry_of_Water_Treatment/Chemistry_Intro.rst
   Chemistry_of_Water_Treatment/Chemistry_Derivations.rst
 
 .. toctree::
-  :caption: Chapter 7: Rapid Mix
+  :caption: Chapter 6: Rapid Mix
   :maxdepth: 1
 
   Rapid_Mix/RM_Intro.rst
@@ -78,7 +78,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Rapid_Mix/RM_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 8: Flocculation
+  :caption: Chapter 7: Flocculation
   :maxdepth: 1
 
   Flocculation/Floc_Intro.rst
@@ -92,7 +92,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flocculation/Floc_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 9: Sedimentation
+  :caption: Chapter 8: Sedimentation
   :maxdepth: 1
 
   Sedimentation/Sed_Intro.rst
@@ -103,7 +103,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Sedimentation/Sed_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 10: Filtration
+  :caption: Chapter 9: Filtration
   :maxdepth: 1
 
   Filtration/Filtration_Intro.rst
@@ -112,34 +112,34 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Filtration/Filtration_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 11: Hydraulics
+  :caption: Chapter 10: Hydraulics
   :maxdepth: 1
 
   Hydraulics/Hydraulics_Intro.rst
 
 
 .. toctree::
-  :caption: Chapter 12: Dissolved Gas
+  :caption: Chapter 11: Dissolved Gas
   :maxdepth: 1
 
   Dissolved_Gas/DG_Intro.rst
 
 
 .. toctree::
-  :caption: Chapter 13: Fluoride
+  :caption: Chapter 12: Fluoride
   :maxdepth: 1
 
   Fluoride/Fluoride_Intro.rst
 
 
 .. toctree::
-  :caption: Chapter 14: Wastewater
+  :caption: Chapter 13: Wastewater
   :maxdepth: 1
 
   WasteWater/WW_Theory_and_Future_Work.rst
 
 .. toctree::
-  :caption: Chapter 15: Troubleshooting
+  :caption: Chapter 14: Troubleshooting
   :maxdepth: 1
 
   Troubleshooting/Troubleshooting.rst

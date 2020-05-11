@@ -9,11 +9,13 @@ Review: Fluid Mechanics Derivations
 .. _heading_minor_loss_equation_derivation:
 
 Minor Loss Equation
-====================
+===================
+
 This section contains the derivation of the minor loss equation using the following figure as a reference. The derivation begins with a slightly simplified energy equation across the control volume shown. Our energy equation begins with :math:`h_P` and :math:`h_T` having been
 eliminated.
 
 .. _figure_minor_loss_pipe:
+
 .. figure:: Images/minor_loss_pipe.png
     :width: 700px
     :align: center
@@ -100,7 +102,8 @@ Now we will combine the two terms. The numerator and denominator of the first te
 .. _heading_final_minor_loss_equations:
 
 Final Forms of the Minor Loss Equation
------------------------------------------
+--------------------------------------
+
 Factoring the numerator yields to the first ‘final’ form of the minor loss equation:
 
 .. math::

@@ -51,6 +51,7 @@ Substituting the previous equation for the eddy length scale, :math:`L_{eddy}`, 
 The flow rate that can be served with a single injection port is a function of how much energy we use for the mixing process.
 
 .. code:: python
+
   n_points = 50
   h_e_graph = np.logspace(-1,1,n_points) * u.m
 
