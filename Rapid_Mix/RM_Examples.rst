@@ -9,10 +9,9 @@ Rapid Mix Appendix C: Examples
 Example: pH Adjustment
 ======================
 
-Find the required dose of several bases to raise the pH at the Manzaragua Water Treatment Plant
-The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel. The plant is located in the municipality of Guinope, the department of El Paraiso, Honduras.
+Find the required dose of several bases to raise the pH at the Manzaragua Water Treatment Plant. The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel. The plant is located in the municipality of Guinope, the department of El Paraiso, Honduras.
 
-.. _Manzaragua_WTP:
+.. _figure_Manzaragua_WTP:
 
 .. figure::    Images/Manzaragua_WTP.jpg
     :width: 700px
