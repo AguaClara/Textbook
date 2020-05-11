@@ -1,0 +1,436 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chemistry of Water Treatment Introduction &mdash; AguaClara Textbook 0.064 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Rapid Mix Introduction" href="../Rapid_Mix/RM_Intro.html" />
+    <link rel="prev" title="Chemistry of Water Treatment Derivations" href="Chemistry_Intro.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.064
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Chemistry of Water Treatment</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Chemistry_Intro.html">Chemistry of Water Treatment Derivations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Chemistry of Water Treatment Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#carbonate-reactions-buffering-and-ph">Carbonate reactions, buffering, and pH</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#carbonic-acid-and-bicarbonate">Carbonic Acid and Bicarbonate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bicarbonate-and-carbonate">Bicarbonate and Carbonate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#total-concentration-of-carbonates">Total Concentration of Carbonates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alpha-notation">Alpha Notation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#acid-neutralizing-capacity-anc-or-alkalinity">Acid Neutralizing Capacity (ANC) or Alkalinity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ph-adjustment">pH Adjustment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Hydraulics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html">Hydraulics Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 13: Wastewater</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 14: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Chemistry of Water Treatment Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Chemistry_of_Water_Treatment/Chemistry_Derivations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chemistry-of-water-treatment-introduction">
+<span id="title-chemistry-of-water-treatment-derivations"></span><h1>Chemistry of Water Treatment Introduction<a class="headerlink" href="#chemistry-of-water-treatment-introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="carbonate-reactions-buffering-and-ph">
+<span id="heading-carbonate-reactions-buffering-and-ph"></span><h2>Carbonate reactions, buffering, and pH<a class="headerlink" href="#carbonate-reactions-buffering-and-ph" title="Permalink to this headline">¶</a></h2>
+<p>Carbonates provide the majority of the buffering for drinking water as long as the pH is close to neutral. These equations provide a basis to calculate how much base or acid must be added to a natural water to achieve a target pH.</p>
+<div class="section" id="carbonic-acid-and-bicarbonate">
+<span id="heading-carbonic-acid-and-bicarbonate"></span><h3>Carbonic Acid and Bicarbonate<a class="headerlink" href="#carbonic-acid-and-bicarbonate" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight" id="equation-carbonate">
+<span class="eqno">(257)<a class="headerlink" href="#equation-carbonate" title="Permalink to this equation">¶</a></span>\[{H_2}CO_3^{\star} \overset {K_1} \longleftrightarrow {H^+} + HCO_3^-\]</div>
+<dl class="docutils">
+<dt>Where:</dt>
+<dd><div class="first last line-block">
+<div class="line"><span class="math notranslate nohighlight">\(K_1\)</span> is the dissociation constant defined below.</div>
+</div>
+</dd>
+</dl>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-0">
+<span class="eqno">(258)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-0" title="Permalink to this equation">¶</a></span>\[{K_1} = \frac{{\left[ {{H^ + }} \right]\left[ {HCO_3^ - } \right]}}{{\left[ {{H_2}CO_3^{\star} } \right]}}\]</div>
+<p>Where the [ ] indicates concentration in mole/L. We will use the p function, <span class="math notranslate nohighlight">\(p(x)=-log_{10}(x)\)</span>, to define the dissociation constant.</p>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-1">
+<span class="eqno">(259)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-1" title="Permalink to this equation">¶</a></span>\[p{K_1} = 6.3\]</div>
+<p>At the point of equal concentrations of bicarbonate and carbonic acid the dissociation constant, <span class="math notranslate nohighlight">\(K_1\)</span>, is equal to the hydrogen ion concentration, <span class="math notranslate nohighlight">\(H^ +\)</span>. Thus we have equal concentrations at <span class="math notranslate nohighlight">\(p{K_1} = pH\)</span>. This reaction is “centered” at pH = 6.3 and thus there is maximum buffering due to this reaction at pH = 6.3.</p>
+</div>
+<div class="section" id="bicarbonate-and-carbonate">
+<span id="heading-bicarbonate-and-carbonate"></span><h3>Bicarbonate and Carbonate<a class="headerlink" href="#bicarbonate-and-carbonate" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-2">
+<span class="eqno">(260)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-2" title="Permalink to this equation">¶</a></span>\[HCO_3^ - \overset {{K_2}} \longleftrightarrow {H^ + } + CO_3^{ - 2}\]</div>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-3">
+<span class="eqno">(261)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-3" title="Permalink to this equation">¶</a></span>\[{K_2} = \frac{{\left[ {{H^ + }} \right]\left[ {CO_3^{ - 2}} \right]}}{{\left[ {HCO_3^ - } \right]}}\]</div>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-4">
+<span class="eqno">(262)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-4" title="Permalink to this equation">¶</a></span>\[p{K_2} = 10.3\]</div>
+<p>Thus the carbonate system also provides buffering around pH 10.3.</p>
+</div>
+<div class="section" id="total-concentration-of-carbonates">
+<span id="heading-total-concentration-of-carbonates"></span><h3>Total Concentration of Carbonates<a class="headerlink" href="#total-concentration-of-carbonates" title="Permalink to this headline">¶</a></h3>
+<p>The total concentration of carbonate species is given by</p>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-5">
+<span class="eqno">(263)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-5" title="Permalink to this equation">¶</a></span>\[{C_T} = \left[ {{H_2}CO_3^{\star} } \right] + \left[ {HCO_3^ - } \right] + \left[ {CO_3^{ - 2}} \right]\]</div>
+<p>Where: <span class="math notranslate nohighlight">\({C_T}\)</span> is the total concentration of carbonates.</p>
+<p>The total concentration of carbonates, <span class="math notranslate nohighlight">\({C_T}\)</span>, is useful because it is conservative (in a closed system) even though the individual species concentrations change as pH changes.</p>
+</div>
+<div class="section" id="alpha-notation">
+<span id="heading-alpha-notation"></span><h3>Alpha Notation<a class="headerlink" href="#alpha-notation" title="Permalink to this headline">¶</a></h3>
+<p>The alpha notation is used to show the concentration dependence on pH and to make the equations simpler.</p>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-6">
+<span class="eqno">(264)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-6" title="Permalink to this equation">¶</a></span>\[\left[ {{H_2}CO_3^{\star} } \right] = {\alpha_0}{C_T}\]</div>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-7">
+<span class="eqno">(265)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-7" title="Permalink to this equation">¶</a></span>\[\left[ {HCO_3^-} \right] = {\alpha_1}{C_T}\]</div>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-8">
+<span class="eqno">(266)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-8" title="Permalink to this equation">¶</a></span>\[\left[ {CO_3^{-2}} \right] = {\alpha_2}{C_T}\]</div>
+<p>The alphas sum to 1 because each <span class="math notranslate nohighlight">\(\alpha\)</span> is the fraction of the carbonates corresponding to that species. The alphas are each a function of the proton concentration and the dissociation constants of the carbonate reactions.</p>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-9">
+<span class="eqno">(267)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-9" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}} + \frac{{{K_1}{K_2}}}{{{{[{H^ + }]}^2}}}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-10">
+<span class="eqno">(268)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-10" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}}\left( {1 + \frac{{{K_2}}}{{[{H^ + }]}}} \right)}}\]</div>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-11">
+<span class="eqno">(269)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-11" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{1}}} = \frac{1}{{\frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}} + 1 + \frac{{{{\rm K}_2}}}{{[{{\rm H}^ + }]}}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-12">
+<span class="eqno">(270)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-12" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{2}}} = \frac{1}{{\frac{{{{[{{\rm H}^ + }]}^2}}}{{{{\rm K}_1}{{\rm K}_2}}} + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}} + 1}}\]</div>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-13">
+<span class="eqno">(271)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-13" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{2}}} = \frac{1}{{1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}}\left( {1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}}} \right)}}\]</div>
+</div>
+<div class="section" id="acid-neutralizing-capacity-anc-or-alkalinity">
+<span id="heading-acid-neutralizing-capacity-anc-or-alkalinity"></span><h3>Acid Neutralizing Capacity (ANC) or Alkalinity<a class="headerlink" href="#acid-neutralizing-capacity-anc-or-alkalinity" title="Permalink to this headline">¶</a></h3>
+<p>Acid neutralizing capacity or alkalinity is the ability of a water sample to react with and neutralize an input of acid. The units of ANC are equivalents (or protons) per liter. Bicarbonate, <span class="math notranslate nohighlight">\(HCO_3^-\)</span>, can react with one proton, <span class="math notranslate nohighlight">\(H^+\)</span>, and thus each mole of <span class="math notranslate nohighlight">\(HCO_3^-\)</span> provides one equivalent per liter of ANC. The other terms in the equation have similar explanations.</p>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-14">
+<span class="eqno">(272)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-14" title="Permalink to this equation">¶</a></span>\[{\text{ANC}} = [HCO_3^ - {\text{] + 2[CO}}_3^{ - 2}{\text{] + [O}}{{\text{H}}^{\text{ - }}}{\text{] - [}}{{\text{H}}^{\text{ + }}}{\text{]}}\]</div>
+<p>Note that carbonic acid and dissolved carbon dioxide are not in the ANC equation because they have no ability to neutralize protons.</p>
+<p>We can write the ANC equation using alpha notation</p>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-15">
+<span class="eqno">(273)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-15" title="Permalink to this equation">¶</a></span>\[ANC = {C_T}({\alpha_1} + 2{\alpha_2}) + \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
+<p>For completeness we include acid neutralizing capacity for the case where the system is in equilibrium with atmospheric carbon dioxide,
+<span class="math notranslate nohighlight">\(CO_2\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-16">
+<span class="eqno">(274)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-16" title="Permalink to this equation">¶</a></span>\[ANC_{atm\,equilibrium} = \frac{{{P{C{O_2}}}{K_H}}}{{{\alpha_0}}}({\alpha_1} + 2{\alpha_2}) + \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
+</div>
+<div class="section" id="ph-adjustment">
+<span id="heading-ph-adjustment"></span><h3>pH Adjustment<a class="headerlink" href="#ph-adjustment" title="Permalink to this headline">¶</a></h3>
+<p>The final ANC, <span class="math notranslate nohighlight">\(ANC_1\)</span>, after base addition and aluminum coagulant addition is given by</p>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-17">
+<span class="eqno">(275)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-17" title="Permalink to this equation">¶</a></span>\[ANC_1 = ANC_0 + \Pi_{base}C_B + \Pi_{Al}C_{Al}\]</div>
+<div class="line-block">
+<div class="line">where:</div>
+<div class="line"><span class="math notranslate nohighlight">\(ANC_0\)</span> is the initial acid neutralizing capacity of the water sample.</div>
+<div class="line"><span class="math notranslate nohighlight">\(ANC_1\)</span> is the final acid neutralizing capacity of the mixture after the base and aluminum coagulant is added.</div>
+<div class="line"><span class="math notranslate nohighlight">\(C_B\)</span> is concentration of base in mole/liter</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Pi_{base}\)</span> is ANC per mole of base</div>
+<div class="line"><span class="math notranslate nohighlight">\(C_{Al}\)</span> is the concentration of coagulant in mole of aluminum/liter</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Pi_{Al}\)</span> is ANC per mole of aluminum</div>
+</div>
+<p>The final carbonate concentration is given by</p>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-18">
+<span class="eqno">(276)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-18" title="Permalink to this equation">¶</a></span>\[C_{T_1} ={C_{T_0}}+ \Pi_{CO_3^{-2}}C_B\]</div>
+<div class="line-block">
+<div class="line">where:</div>
+<div class="line"><span class="math notranslate nohighlight">\(C_{T_1}\)</span> is the final total carbonate concentration of the mixture after the base is added.</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Pi_{CO_3^{-2}}\)</span> is mole of carbonate per mole of base (0 for <span class="math notranslate nohighlight">\(NaOH\)</span> and 1 for <span class="math notranslate nohighlight">\(Na_2CO_3\)</span>)</div>
+</div>
+<p>Substituting these values into the ANC equation we obtain</p>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-19">
+<span class="eqno">(277)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-19" title="Permalink to this equation">¶</a></span>\[ANC_0 + \Pi_{base}C_B + \Pi_{Al}C_{Al} = ({C_{T_0}}+ \Pi_{CO_3^{-2}}C_B)({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
+<p>Now we solve for <span class="math notranslate nohighlight">\(C_B\)</span>, the concentration of base that must be added to reach a target pH.</p>
+<div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-20">
+<span class="eqno">(278)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-20" title="Permalink to this equation">¶</a></span>\[(\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2}) )C_B= {C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}\]</div>
+<div class="math notranslate nohighlight" id="equation-base-for-ph-adjust">
+<span class="eqno">(279)<a class="headerlink" href="#equation-base-for-ph-adjust" title="Permalink to this equation">¶</a></span>\[C_B= \frac{{C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}}{\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2})}\]</div>
+<p>Note that the equations above can also be used for the case where acid is added to reduce the pH. In that case <span class="math notranslate nohighlight">\(\Pi_{base}\)</span> will have a negative value.</p>
+<p>An example using this equation to find the required amount of base addition is given in <a class="reference internal" href="../Rapid_Mix/RM_Examples.html#heading-example-ph-adjustment"><span class="std std-ref">Example: pH Adjustment</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Rapid_Mix/RM_Intro.html" class="btn btn-neutral float-right" title="Rapid Mix Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Chemistry_Intro.html" class="btn btn-neutral" title="Chemistry of Water Treatment Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.064',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
