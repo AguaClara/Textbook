@@ -24,10 +24,11 @@ Piezometric Head
 
 The sum of the pressure and elevation term in the energy equation is the piezometric head, :math:`\Psi`. Fluid will move in the direction of decreasing piezometric head. Note that fluid does NOT always move from high pressure to low pressure nor does it always move from high elevation to low elevation. You can prove this to yourself by placing a sloped pipe in a swimming pool!
 
+
 .. math::
    :label: piezometric_head_defined
 
-    \Psi = \frac{p}{\rho g}+z
+   \Psi = \frac{p}{\rho g} + z
 
 
 .. _figure_Sloped_Manifold_no_flow:
@@ -277,7 +278,7 @@ For a simple conservative design we calculate the maximum channel velocity assum
 We can use :eq:`Energy_and_Pi_Q_no_manifold_hl` to calculate maximum velocity in the sedimentor inlet channel. In this case the average manifold piezometric head, :math:`\bar \Psi_M` ,is measured relative to the water level in the sedimentor that is above the sedimentor exit weir. This difference in elevation is dominated by the 5 cm of head loss created by the orifices in the sedimentor outlet manifold. Solving for the maximum channel velocity we obtain
 
 .. math::
-   :label: Energy_and_Pi_Q_no_manifold_hl
+   :label: vM_Energy_and_Pi_Q_no_manifold_hl
 
    \bar v_{M_1} = 2\sqrt{g\bar \Psi_{Sed}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
 
