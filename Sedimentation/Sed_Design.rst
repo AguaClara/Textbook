@@ -269,11 +269,30 @@ The floc will break apart when the :math:`F_{shear_{max}}` exceeds the coagulant
 
 	 \Pi_{Bond}^{Fluid} = \frac{F_{shear_{max}}}{F_{covalent}} = \frac{3 \tau A_{floc}}{F_{covalent}}
 
-The expectation is that the flocs will break for values of :math:`\Pi_{Bond}^{Fluid}>1`. This analysis shows that the maximum size of a floc is set by he fluid shear stress, :math:`\tau`. Previously it wasn't clear if floc size was limited by energy dissipation rate or by the velocity gradient. Neither of those parameters captures the physics because ultimately it is a force that breaks the covalent bond and thus it must be a fluid force (not energy dissipation rate or velocity gradient) that can be used as a design parameter. By recognizing that the shear stress :math:`:math:`\tau` must be limited we can now develop design equations for the jet reverser.
+The expectation is that the flocs will break for values of :math:`\Pi_{Bond}^{Fluid}>1`. This analysis shows that the maximum size of a floc is set by the fluid shear stress, :math:`\tau`. Previously it wasn't clear if floc size was limited by energy dissipation rate or by the velocity gradient. Neither of those parameters captures the physics because ultimately it is a force that breaks the covalent bond and thus it must be a fluid force (not energy dissipation rate or velocity gradient) that can be used as a design parameter. By recognizing that the shear stress :math:`:math:`\tau` must be limited we can now develop design equations for the jet reverser and account for the effects of viscosity and temperature on the design.
 
-When flocs are broken by the shearing action of the fluid it is possible that a primary particle is torn off or that the floc is broken in half. The method of breaking matters because if primary particles are dislodged from a floc then any breaking will lead to a deterioration of the sedimentation tank performance because some of those primary particles will make it through the floc blanket and won't be captured by the plate settlers. Conventional wisdom would suggest that flocs will be broken into little pieces. If that were the case then any floc breakup would cause the settled water turbidity to increase.
+When flocs are broken by the shearing action of the fluid it is possible that a primary particle is torn off or that the floc is broken in half. The method of breaking matters because if primary particles are dislodged from a floc then any breaking will lead to a deterioration of the sedimentation tank performance because some of those primary particles will make it through the floc blanket and won't be captured by the plate settlers. Conventional wisdom would suggest that flocs will be broken into little pieces. If that were the case then any floc breakup would cause the settled water turbidity to increase. `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that there was no sign of increased settled water turbidity up to an energy dissipation rate of 300 mw/kg (:numref:`figure_sed_performance_vs_jet_edr`).
 
+.. _figure_sed_performance_vs_jet_edr:
 
+.. figure:: Images/Sed_performance_vs_jet_edr.png
+   :width: 400px
+   :align: center
+   :alt: Sed tank performance as a function of jet energy dissipation rate
+
+   System suspended solids concentrations during steady state as a function of jet energy dissipation rate for 1.2 mm/s (top).  Results shown are averaged over 2 residence times (1200 seconds) of the sedimentation tank (`Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_).
+
+Using equation :eq:`fluid_shear_stress` the energy dissipation rate obtained by Garland can be converted into a fluid shear stress of 0.55 Pa.
+
+Given bond strength solve for the diameter of the floc.
+
+.. math::
+   :label: d_floc_shear_stress
+
+   d_{floc}=\sqrt{\frac{4F_{covalent}}{3 \pi \tau}}
+
+Get a floc diameter of 35 micrometers.
+For clay dominated flocs this gives a 0.13 mm/s sedimentation velocity which 
 
 .. _heading_Sed_Tank_Middle:
 
