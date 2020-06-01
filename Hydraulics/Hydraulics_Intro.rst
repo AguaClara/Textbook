@@ -192,7 +192,7 @@ Equation :eq:`Manifold_max_v_no_hl_series` (see :numref:`figure_Ratio_port_to_ma
 Sedimentation Tank Inlet Manifold
 ---------------------------------
 
-The port velocity for in inlet manifold diffusers is set by the slot width, the width of the sedimentation tank, and the upflow velocity in the sedimentation tank. From mass conservation we have
+The port velocity for inlet manifold diffusers is set by the slot width, the width of the sedimentation tank, and the upflow velocity in the sedimentation tank. From mass conservation we have
 
 .. math::
    :label: Sed_diffuser_mass_conserve

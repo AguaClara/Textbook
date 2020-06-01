@@ -244,7 +244,7 @@ What are the failure modes for this system? For one, we need to ensure that the 
 Jet Reverser Shear Stress
 -------------------------
 
-The jet reverser is an AguaClara invention for producing stable floc blankets. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see equation :eq:`eq_EDR_JetPlane`) and a high energy dissipation rate undoubtedly breaks up flocs.
+The jet reverser is an AguaClara invention for producing stable floc blankets. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see equation :eq:`eq_EDR_JetPlane`) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the sedimentation tank performance will deteriorate.
 
 Conventional wisdom suggests that breaking up flocs on the way to the sedimentation tank is counter productive. The traditional goal of not breaking flocs led to design of tapered flocculators and guidelines suggesting maximum velocities for transport of those flocs to the sedimentation tank. Dimensional analysis provides the insight that if the constraint for not breaking flocs is actually a velocity, that there must be some way to make that velocity dimensionless if that constraint is rational. In order to identify and characterize the constraint related to floc break up we need to understand the physics of the processes and clearly identify the failure mode.
 
@@ -265,11 +265,11 @@ The shear stress is a function of the rate of turbulent energy dissipation and t
 The floc will break apart when the :math:`F_{shear_{max}}` exceeds the coagulant bond strength. The coagulant bonds are likely covalent bonds with an estimated strength :math:`F_{covalent}` of 1.6 nN. Thus we can create a dimensionless parameter describing the ratio of the fluid shear stress to the bond strength by dividing equation :eq:`fluid_shear_stress_on_doublet` by :math:`F_{covalent}`.
 
 .. math::
-   :label: fluid_shear_stress_on_doublet
+   :label: fluid_shear_stress_to_bond_ratio
 
 	 \Pi_{Bond}^{Fluid} = \frac{F_{shear_{max}}}{F_{covalent}} = \frac{3 \tau A_{floc}}{F_{covalent}}
 
-The expectation is that the flocs will break for values of :math:`\Pi_{Bond}^{Fluid}>1`. This analysis shows that the maximum size of a floc is set by the fluid shear stress, :math:`\tau`. Previously it wasn't clear if floc size was limited by energy dissipation rate or by the velocity gradient. Neither of those parameters captures the physics because ultimately it is a force that breaks the covalent bond and thus it must be a fluid force (not energy dissipation rate or velocity gradient) that can be used as a design parameter. By recognizing that the shear stress :math:`:math:`\tau` must be limited we can now develop design equations for the jet reverser and account for the effects of viscosity and temperature on the design.
+The expectation is that the flocs will break for values of :math:`\Pi_{Bond}^{Fluid}>1`. This analysis shows that the maximum size of a floc is set by the fluid shear stress, :math:`\tau`. Previously it wasn't clear if floc size was limited by energy dissipation rate or by the velocity gradient. Neither of those parameters captures the physics because ultimately it is a force that breaks the covalent bond and thus it must be a fluid force (not energy dissipation rate or velocity gradient) that can be used as a design parameter. By recognizing that the shear stress :math:`\tau` must be limited we can now develop design equations for the jet reverser and account for the effects of viscosity and temperature on the design.
 
 When flocs are broken by the shearing action of the fluid it is possible that a primary particle is torn off or that the floc is broken in half. The method of breaking matters because if primary particles are dislodged from a floc then any breaking will lead to a deterioration of the sedimentation tank performance because some of those primary particles will make it through the floc blanket and won't be captured by the plate settlers. Conventional wisdom would suggest that flocs will be broken into little pieces. If that were the case then any floc breakup would cause the settled water turbidity to increase. `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that there was no sign of increased settled water turbidity up to an energy dissipation rate of 300 mw/kg (:numref:`figure_sed_performance_vs_jet_edr`).
 
@@ -282,17 +282,108 @@ When flocs are broken by the shearing action of the fluid it is possible that a 
 
    System suspended solids concentrations during steady state as a function of jet energy dissipation rate for 1.2 mm/s (top).  Results shown are averaged over 2 residence times (1200 seconds) of the sedimentation tank (`Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_).
 
-Using equation :eq:`fluid_shear_stress` the energy dissipation rate obtained by Garland can be converted into a fluid shear stress of 0.55 Pa.
-
-Given bond strength solve for the diameter of the floc.
+Using equation :eq:`fluid_shear_stress` the maximum energy dissipation rate below the performance deterioration obtained by Garland (300 mW/kg) can be converted into a fluid shear stress of 0.55 Pa. The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using equation :eq:`fluid_shear_stress_on_doublet`.
 
 .. math::
    :label: d_floc_shear_stress
 
    d_{floc}=\sqrt{\frac{4F_{covalent}}{3 \pi \tau}}
 
-Get a floc diameter of 35 micrometers.
-For clay dominated flocs this gives a 0.13 mm/s sedimentation velocity which 
+The floc size that corresponds to 300 mW/kg is 35 micrometers. The terminal velocity of a floc that is dominated by the primary particles rather than by coagulant or dissolved organic matter is given by
+
+.. math::
+   :label: vt_of_clay_floc
+
+   \bar v_t = \frac{g d_0^2}{18 \nu_{H_2O}}
+   \frac{ \left( \rho_{Floc_0} - \rho_{H_2O} \right)}{\rho_{H_2O}}
+   \left( \frac{d}{d_0} \right)^{D_{Fractal} - 1}
+
+For clay dominated flocs equation :eq:`vt_of_clay_floc` gives a 0.13 mm/s sedimentation velocity which is just slightly higher than the 0.1 mm/s capture velocity used by Garland.
+
+Garland's experiment with the result of floc breakup at the sedimentation tank inlet is consistent with several hypotheses.
+
+#. The bonds holding flocs together are likely strong (order 1.6 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012<doi: 10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
+#. Flocs are broken where there is the largest force per bond. This would logically occur at the connection between the two subunits that form the floc. Thus when flocs break they would not be expected to produce tiny fragments.
+#. The fluid shear stress determines the force acting to tear a floc apart. Thus given a constant energy dissipation rate the force acting to break up flocs will increase as the temperature drops (see equation :eq:`fluid_shear_stress`)
+#. Settled water turbidity increases when the floc terminal velocity is less than the capture velocity of the plate settlers.
+
+The maximum shear stress that should be used for design of jet reversers requires further analysis. Flocs composed of less clay and more organic matter or more coagulant nanoparticles will have a lower density and would still be sheared to the same diameter by the fluid shear stress. These flocs would have a lower sedimentation velocity than clay based flocs and thus they would not be captured by the plate settlers. Thus the design constraint for the fluid shear stress should be based on the lowest density floc that is to be captured by the plate settlers.
+
+Different coagulants may well have different bond strengths and flocculant aids that increase the bond strength all merit study with the jet reverser experiment to determine an appropriate fluid shear stress. The shear stress of 0.55 Pa is likely an upper limit for operation without using flocculant aids.
+
+The maximum fluid shear stress for conservative basis of design should be calculated based on minimum water temperature, plate settler capture velocity, and minimum floc density. The solution path is
+
+#. Calculate the diameter of the lowest density floc that has a terminal velocity equal to the capture velocity of the plate settlers.
+#. Solve equation :eq:`d_floc_shear_stress` for the shear stress given the floc diameter.
+
+
+.. _Jet_Reverser_Design:
+
+Jet Reverser Design
+-------------------
+
+The jet reverser can be designed given a maximum fluid shear stress that is calculated based on minimum operating temperature, plate settler capture velocity, and floc density. We do not yet have a comprehensive model for floc properties and thus we are not yet able to calculate floc terminal velocity as a function of composition. We do anticipate that floc density decreases dramatically for flocs that consist primarily of dissolved organics and coagulant.
+
+The goal is to derive an equation that will calculate the maximum jet velocity given the upflow velocity, :math:`v_{z_{fb}}`, and width, :math:`W_{Sed}`, of the sedimentation tank. Begin by eliminating the energy dissipation rate from the fluid shear stress, equation :eq:`fluid_shear_stress`, by substituting the plane jet energy dissipation rate, equation :eq:`eq_EDR_JetPlane`.
+
+.. math::
+   :label: shear_stress_plane_jet
+
+   \tau_{max} = \rho \sqrt{\nu \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{W_{Jet}}}
+
+The volumetric flow rate of the plane jet is the same as the volumetric flow rate through the sedimentation tank.
+
+.. math::
+   :label: jet_sed_tank_continuity
+
+   \bar v_{Jet} W_{Jet} = \bar v_{z_{fb}} W_{Sed}
+
+Use equation :eq:`jet_sed_tank_continuity` to eliminate the thickness of the jet, :math:`W_{Jet}` in equation :eq:`shear_stress_plane_jet`
+
+.. math::
+   :label: shear_stress_jet_sed_tank
+
+   \tau_{max} = \rho \bar v_{Jet} ^2 \sqrt{ \frac{\nu \Pi_{JetPlane}}{\bar v_{z_{fb}} W_{Sed}}}
+
+Solve for the maximum permissible jet velocity, equation :eq:`\bar v_{Jet}`.
+
+.. math::
+   :label: max_sed_tank_jet_velocity
+
+   \bar v_{Jet} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{fb}} W_{Sed}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}
+
+The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases. The maximum jet velocity, :refnum:`figure_Jet_velocity_vs_sed_valley_width`, and head loss, :refnum:`_figure_Jet_head_loss_vs_sed_valley_width`, increases with temperature because as the viscosity decreases the fluid shear stress decreases. Floc breakup will be most problematic in low temperatures when the raw water has low turbidity and high concentration of dissolved organics.
+
+
+.. _figure_Jet_velocity_vs_sed_valley_width:
+
+.. figure:: Images/Jet_velocity_vs_sed_valley_width.png
+   :width: 400px
+   :align: center
+   :alt: Maximum jet velocity as a function of sed valley width and temperature
+
+   The maximum jet velocity increases with width of the sedimentation tank valley and with temperature.
+
+
+.. _figure_Jet_head_loss_vs_sed_valley_width:
+
+.. figure:: Images/Jet_head_loss_vs_sed_valley_width.png
+   :width: 400px
+   :align: center
+   :alt: Maximum jet head loss as a function of sed valley width and temperature
+
+   The maximum jet head loss increases with width of the sedimentation tank valley and with temperature.
+
+Sedimentation tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The floc size velocity restriction limits the velocity of the water in the manifold that delivers water to the diffuser jets. The ratio of manifold velocity to port velocity can be obtained as the inverse of equation :eq:`Manifold_max_v_no_hl_series`.
+
+.. math::
+   :label: max_sed_tank_manifold_velocity
+
+   \frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}
+
+Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity.
+
+Further works is required to determine the maximum shear stress that will not cause a deterioration on performance especially for flocs that consist of coagulant nanoparticles and dissolved organics.
 
 .. _heading_Sed_Tank_Middle:
 
