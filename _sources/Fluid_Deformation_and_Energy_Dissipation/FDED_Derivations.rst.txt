@@ -14,7 +14,10 @@ Estimation of velocity gradients for various flow geometries is the basis for th
 The first approach would be ideal but is difficult in practice because Navier Stokes solutions are only available for limited geometries and laminar flow. CFD could be used but is difficult to use as a general engineering design approach given the large number of geometries that are used in drinking water treatment plants. For these reasons we will use the control volume approach to estimate the average velocity gradient. This method incorrectly assumes that the energy dissipation rate is completely uniform in the control volume and hence the velocity gradient is also uniform. This method results in an over estimation of the velocity gradient.
 The Camp-Stein estimate of :math:`G_{CS}` is based on a control volume where the velocity gradient is uniform. Consider a layer of fluid of depth :math:`H` and apply a velocity, :math:`v` at the top of the fluid. The velocity gradient, :math:`G`, is thus :math:`\frac{v}{H}` everywhere in the fluid. The force required to move the top of the fluid at velocity v can be obtained from the required shear, :math:`\tau`. From Newtons Law of Friction we have
 
-.. math:: \tau = \mu \frac{v}{H} = \mu G = \nu\rho G
+.. math::
+   :label: tau_of_mu_G
+
+  \tau = \mu \frac{v}{H} = \mu G = \nu\rho G
 
 Where :math:`\tau` is the force required per unit plan view area. The power per unit area required to move the fluid at velocity :math:`v` is :math:`\tau v`. The mass per unit area is :math:`\rho H`. Thus the energy dissipation rate or the power per mass is
 
@@ -65,7 +68,10 @@ where :math:`\Pi_{CS}` is 1 for a uniform velocity gradient and is less than one
 
 The conventional approach to design of flocculators uses the Camp Stein definition of
 
-.. math:: G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}
+.. math::
+  :label: G_Camp_Stein
+
+  G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}
 
 where :math:`G_{CS}` is **not** the average velocity gradient, but is larger than the average velocity gradient by a factor of :math:`\Pi_{CS}`. Thus we have
 
@@ -827,7 +833,7 @@ Below we plot the Baldyga et al. equation for the energy dissipation rate as a 
 Plane Jet
 ---------
 
-Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by `Heskestad in 1965 <http://dx.doi.org/10.1115/1.3627309>`__ and it may be possible to use that data to get a better estimate of $:raw-latex:`\Pi`\_{JetPlane} $ from that source.
+Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by `Heskestad in 1965 <http://dx.doi.org/10.1115/1.3627309>`__ and it may be possible to use that data to get a better estimate of :math:`\Pi_{JetPlane}` from that source.
 
 .. math:: \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}
 
@@ -839,9 +845,9 @@ Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet j
 The maximum velocity gradient is thus
 
 .. math::
-  :label: eq_G_JetPlane
+   :label: eq_G_JetPlane
 
-  G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}
+   G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}
 
 .. math:: \bar v = \frac{Q}{SW}
 
