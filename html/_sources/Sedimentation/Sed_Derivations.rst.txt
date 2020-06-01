@@ -560,16 +560,8 @@ Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
 
   h_L = 2 \frac{\mu}{\rho g} \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)
 
-Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}`. The resulting two plots show how head loss and velocity relate to plate settlers.
+Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}`. The resulting two plots show how head loss and velocity relate to plate settlers (see :numref:`figure_plate_settler_headloss_spacing`).
 
-.. _figure_plate_settler_headloss_spacing:
-
-.. figure:: Images/plate_settler_headloss_spacing.png
-   :height: 300px
-   :align: center
-   :alt: Head loss as a function of plate settler spacing.
-
-   Head loss as a function of plate settler spacing.
 
 .. _heading_Sed_Tank_Floc_Blanket_Design:
 

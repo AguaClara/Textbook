@@ -1,7 +1,7 @@
 .. _title_Chemistry_of_Water_Treatment_derivations:
 
 *******************************************
-Chemistry of Water Treatment Introduction
+Chemistry of Water Treatment Derivations
 *******************************************
 
 .. _heading_Carbonate_reactions_buffering_and_pH:

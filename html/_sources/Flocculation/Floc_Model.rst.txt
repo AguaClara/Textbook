@@ -43,7 +43,7 @@ The insight is that the large flocs drag fluid around as they rotate (due to the
 Key understanding: Relative velocities between particles are dominated by viscous shear
 ---------------------------------------------------------------------------------------
 
-Relative velocities between particles are dominated by viscous shear because the separation distances are smaller than the inner viscous length scale. The average particle separation distance is given by 
+Relative velocities between particles are dominated by viscous shear because the separation distances are smaller than the inner viscous length scale. The average particle separation distance is given by
 
 .. math::
    :label: eq_spacing_of_number_concentration
@@ -265,7 +265,7 @@ Solving for the collision time we obtain
 
 In summary, a relationship for the mean time between collisions :math:`\bar{t_{c}}` was found by proposing an average condition for a collision, successful or unsuccessful, to occur. To define this condition, it was assumed that each primary particle on average occupies a fraction of the reactor volume, :math:`\bar{V}_{Surround}`, inversely proportional to the number concentration of particles. Furthermore, prior to a collision, a particle on average sweeps a volume, :math:`\bar{V}_{Cleared}`, proportional to :math:`\bar{t_c}` and to the mean relative velocity between approaching particles, :math:`\bar{v}_r`. As an average condition, it was posited that for each collision, :math:`\bar{V}_{Cleared}` must equal :math:`\bar{V}_{Surround}`. From this, a relationship for a characteristic collision time, :math:`\bar{t_c}`, was obtained:
 
-.. _heading_Collision_Rates:
+.. _heading_Floc_Collision_Rates:
 
 Collision Rates
 ---------------

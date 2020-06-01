@@ -26,7 +26,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
 
     Uppercase letters, ,
     :math:`A`,Area,:math:`[L]^2`
-    :math:`A_{floc} `,Projected cross sectional area of particle,:math:`[L]^2`
+    :math:`A_{floc}`,Projected cross sectional area of particle,:math:`[L]^2`
     :math:`A_p `,Plan view area,:math:`[L]^2`
     :math:`B`,Center-to-Center Spacing Between Two Objects,:math:`[L]`
     :math:`C`,Concentration,:math:`\frac{[M]}{[L]^3}`

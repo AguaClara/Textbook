@@ -187,7 +187,7 @@ Area is given using the following equation :math:`A_{PVC}=2\left (B_{diffuser}+W
   print("Sed diffuser inner length:", S_diffuser)
 
 
-**Answer: ** The sedimentation diffuser outer length: 5.736 centimeter
+**Answer:** The sedimentation diffuser outer length: 5.736 centimeter
 
 Sedimentation diffuser inner length: 5.522 centimeter
 
@@ -199,7 +199,7 @@ Each diffuser serves a certain width and length of the sedimentation tank. Assum
 :math:`A = W_{sed}  B_{diff}`
 
 5. Determine the velocity through each diffuser.
-:math:`\bar v_{diff} = \frac{Q_{max,diff}}{W_{diff} * S_{diff}} `
+:math:`\bar v_{diff} = \frac{Q_{max,diff}}{W_{diff} * S_{diff}}`
 
 
 .. code:: python
@@ -246,7 +246,7 @@ Next, we want to determine the energy dissipation rate for the flow leaving the 
 8. Calculate the thickness of the jet after it does the 180 degree bend of the jet reverser. The change in thickness of the jet after the 180 degree bend is due to the flow spreading out to fill in the gaps created by the diffuser pipe walls.
 :math:`W_{jet} * \bar v_{diff} = W_{sed} * \bar v_{z_{fb}}`
 
-9. Calculate the maximum energy dissipation rate for the flow leaving the jet reverser. See Equation :eq:`eq_EDR_JetPlane` for the maximum energy dissipation rate in a plane jet and see :numref:`table_EDR_G_equations` for the value of :math:`\Pi_{JetPlane}`.
+9. Calculate the maximum energy dissipation rate for the flow leaving the jet reverser. See Equation :eq:`EDR_JetPlane` for the maximum energy dissipation rate in a plane jet and see :numref:`table_EDR_G_equations` for the value of :math:`\Pi_{JetPlane}`.
 
 
 .. code:: python

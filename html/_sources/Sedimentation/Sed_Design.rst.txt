@@ -244,7 +244,7 @@ What are the failure modes for this system? For one, we need to ensure that the 
 Jet Reverser Shear Stress
 -------------------------
 
-The jet reverser is an AguaClara invention for producing stable floc blankets. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see equation :eq:`eq_EDR_JetPlane`) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the sedimentation tank performance will deteriorate.
+The jet reverser is an AguaClara invention for producing stable floc blankets. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see equation :eq:`EDR_JetPlane`) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the sedimentation tank performance will deteriorate.
 
 Conventional wisdom suggests that breaking up flocs on the way to the sedimentation tank is counter productive. The traditional goal of not breaking flocs led to design of tapered flocculators and guidelines suggesting maximum velocities for transport of those flocs to the sedimentation tank. Dimensional analysis provides the insight that if the constraint for not breaking flocs is actually a velocity, that there must be some way to make that velocity dimensionless if that constraint is rational. In order to identify and characterize the constraint related to floc break up we need to understand the physics of the processes and clearly identify the failure mode.
 
@@ -280,7 +280,8 @@ When flocs are broken by the shearing action of the fluid it is possible that a 
    :align: center
    :alt: Sed tank performance as a function of jet energy dissipation rate
 
-   System suspended solids concentrations during steady state as a function of jet energy dissipation rate for 1.2 mm/s (top).  Results shown are averaged over 2 residence times (1200 seconds) of the sedimentation tank (`Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_).
+   System suspended solids concentrations during steady state as a function of jet energy dissipation rate for 1.2 mm/s.  Results shown are averaged over 2 residence times (1200 seconds) of the sedimentation tank (`Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_).
+
 
 Using equation :eq:`fluid_shear_stress` the maximum energy dissipation rate below the performance deterioration obtained by Garland (300 mW/kg) can be converted into a fluid shear stress of 0.55 Pa. The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using equation :eq:`fluid_shear_stress_on_doublet`.
 
@@ -302,7 +303,7 @@ For clay dominated flocs equation :eq:`vt_of_clay_floc` gives a 0.13 mm/s sedime
 
 Garland's experiment with the result of floc breakup at the sedimentation tank inlet is consistent with several hypotheses.
 
-#. The bonds holding flocs together are likely strong (order 1.6 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012<doi: 10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
+#. The bonds holding flocs together are likely strong (order 1.6 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012 <https://doi.org/10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
 #. Flocs are broken where there is the largest force per bond. This would logically occur at the connection between the two subunits that form the floc. Thus when flocs break they would not be expected to produce tiny fragments.
 #. The fluid shear stress determines the force acting to tear a floc apart. Thus given a constant energy dissipation rate the force acting to break up flocs will increase as the temperature drops (see equation :eq:`fluid_shear_stress`)
 #. Settled water turbidity increases when the floc terminal velocity is less than the capture velocity of the plate settlers.
@@ -324,7 +325,7 @@ Jet Reverser Design
 
 The jet reverser can be designed given a maximum fluid shear stress that is calculated based on minimum operating temperature, plate settler capture velocity, and floc density. We do not yet have a comprehensive model for floc properties and thus we are not yet able to calculate floc terminal velocity as a function of composition. We do anticipate that floc density decreases dramatically for flocs that consist primarily of dissolved organics and coagulant.
 
-The goal is to derive an equation that will calculate the maximum jet velocity given the upflow velocity, :math:`v_{z_{fb}}`, and width, :math:`W_{Sed}`, of the sedimentation tank. Begin by eliminating the energy dissipation rate from the fluid shear stress, equation :eq:`fluid_shear_stress`, by substituting the plane jet energy dissipation rate, equation :eq:`eq_EDR_JetPlane`.
+The goal is to derive an equation that will calculate the maximum jet velocity given the upflow velocity, :math:`v_{z_{fb}}`, and width, :math:`W_{Sed}`, of the sedimentation tank. Begin by eliminating the energy dissipation rate from the fluid shear stress, equation :eq:`fluid_shear_stress`, by substituting the plane jet energy dissipation rate, equation :eq:`EDR_JetPlane`.
 
 .. math::
    :label: shear_stress_plane_jet
@@ -345,14 +346,14 @@ Use equation :eq:`jet_sed_tank_continuity` to eliminate the thickness of the jet
 
    \tau_{max} = \rho \bar v_{Jet} ^2 \sqrt{ \frac{\nu \Pi_{JetPlane}}{\bar v_{z_{fb}} W_{Sed}}}
 
-Solve for the maximum permissible jet velocity, equation :eq:`\bar v_{Jet}`.
+Solve for the maximum permissible jet velocity, :math:`\bar v_{Jet}`.
 
 .. math::
    :label: max_sed_tank_jet_velocity
 
    \bar v_{Jet} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{fb}} W_{Sed}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}
 
-The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases. The maximum jet velocity, :refnum:`figure_Jet_velocity_vs_sed_valley_width`, and head loss, :refnum:`_figure_Jet_head_loss_vs_sed_valley_width`, increases with temperature because as the viscosity decreases the fluid shear stress decreases. Floc breakup will be most problematic in low temperatures when the raw water has low turbidity and high concentration of dissolved organics.
+The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases. The maximum jet velocity, :numref:`figure_Jet_velocity_vs_sed_valley_width`, and head loss, :numref:`_figure_Jet_head_loss_vs_sed_valley_width`, increases with temperature because as the viscosity decreases the fluid shear stress decreases. Floc breakup will be most problematic in low temperatures when the raw water has low turbidity and high concentration of dissolved organics.
 
 
 .. _figure_Jet_velocity_vs_sed_valley_width:
