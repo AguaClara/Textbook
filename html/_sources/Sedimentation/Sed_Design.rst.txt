@@ -241,6 +241,40 @@ What are the failure modes for this system? For one, we need to ensure that the 
 
    Jet reverser resuspending flocs (click to be sent to video).
 
+Jet Reverser Shear Stress
+-------------------------
+
+The jet reverser is an AguaClara invention for producing stable floc blankets. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see equation :eq:`eq_EDR_JetPlane`) and a high energy dissipation rate undoubtedly breaks up flocs.
+
+Conventional wisdom suggests that breaking up flocs on the way to the sedimentation tank is counter productive. The traditional goal of not breaking flocs led to design of tapered flocculators and guidelines suggesting maximum velocities for transport of those flocs to the sedimentation tank. Dimensional analysis provides the insight that if the constraint for not breaking flocs is actually a velocity, that there must be some way to make that velocity dimensionless if that constraint is rational. In order to identify and characterize the constraint related to floc break up we need to understand the physics of the processes and clearly identify the failure mode.
+
+Flocs will break when the fluid forces acting on the floc exceed the strength of the bonds that hold the floc together. The fluid shear stress is given by equation :eq:`tau_of_mu_G`. The velocity gradient is caused by turbulent kinetic energy dissipation as given by equation :eq:`G_Camp_Stein`. Equation :eq:`tau_of_mu_G` and equation :eq:`G_Camp_Stein` can be combined to obtain an estimate of the fluid shear stress, :math:`\tau`.
+
+.. math::
+   :label: fluid_shear_stress
+
+	 \tau = \rho \sqrt{\varepsilon \nu} = \mu G
+
+The shear stress is a function of the rate of turbulent energy dissipation and the viscosity of the fluid. The shear stress increases as the water temperature decreases. The shear force acting to pull a doublet floc apart is given in equation :eq:`shear_force_on_doublet` and can be combined with equation :eq:`tau_of_mu_G` to obtain
+
+.. math::
+   :label: fluid_shear_stress_on_doublet
+
+	 F_{shear_{max}} = 3 \tau \frac{ \pi d_{floc}^2}{4} = 3 \tau A_{floc}
+
+The floc will break apart when the :math:`F_{shear_{max}}` exceeds the coagulant bond strength. The coagulant bonds are likely covalent bonds with an estimated strength :math:`F_{covalent}` of 1.6 nN. Thus we can create a dimensionless parameter describing the ratio of the fluid shear stress to the bond strength by dividing equation :eq:`fluid_shear_stress_on_doublet` by :math:`F_{covalent}`.
+
+.. math::
+   :label: fluid_shear_stress_on_doublet
+
+	 \Pi_{Bond}^{Fluid} = \frac{F_{shear_{max}}}{F_{covalent}} = \frac{3 \tau A_{floc}}{F_{covalent}}
+
+The expectation is that the flocs will break for values of :math:`\Pi_{Bond}^{Fluid}>1`. This analysis shows that the maximum size of a floc is set by he fluid shear stress, :math:`\tau`. Previously it wasn't clear if floc size was limited by energy dissipation rate or by the velocity gradient. Neither of those parameters captures the physics because ultimately it is a force that breaks the covalent bond and thus it must be a fluid force (not energy dissipation rate or velocity gradient) that can be used as a design parameter. By recognizing that the shear stress :math:`:math:`\tau` must be limited we can now develop design equations for the jet reverser.
+
+When flocs are broken by the shearing action of the fluid it is possible that a primary particle is torn off or that the floc is broken in half. The method of breaking matters because if primary particles are dislodged from a floc then any breaking will lead to a deterioration of the sedimentation tank performance because some of those primary particles will make it through the floc blanket and won't be captured by the plate settlers. Conventional wisdom would suggest that flocs will be broken into little pieces. If that were the case then any floc breakup would cause the settled water turbidity to increase.
+
+
+
 .. _heading_Sed_Tank_Middle:
 
 2) How water moves through the sedimentation tank
