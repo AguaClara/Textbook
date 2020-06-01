@@ -17,7 +17,7 @@ The Camp-Stein estimate of :math:`G_{CS}` is based on a control volume where the
 .. math::
    :label: tau_of_mu_G
 
-  \tau = \mu \frac{v}{H} = \mu G = \nu\rho G
+   \tau = \mu \frac{v}{H} = \mu G = \nu\rho G
 
 Where :math:`\tau` is the force required per unit plan view area. The power per unit area required to move the fluid at velocity :math:`v` is :math:`\tau v`. The mass per unit area is :math:`\rho H`. Thus the energy dissipation rate or the power per mass is
 
@@ -351,11 +351,13 @@ The average energy dissipation rate, :math:`\bar\varepsilon`, in a control volum
 .. math::
    :label: eq_EDR_straight_pipe
 
-    \bar\varepsilon = \frac{gh_{\rm{L}}}{\theta}
+   \bar\varepsilon = \frac{gh_{\rm{L}}}{\theta}
 
 The residence time can be expressed as a function of length and average velocity.
 
-.. math::  \theta = \frac{L}{\bar v}
+.. math::
+
+   \theta = \frac{L}{\bar v}
 
 For straight pipe flow the only head loss is due to wall shear and thus we have the Darcy Weisbach equation.
 
@@ -368,22 +370,26 @@ Combining the 3 previous equations we obtain the energy dissipation rate for pip
 
 .. math::
 
-     \bar\varepsilon = \frac{{\rm f}}{2} \frac{\bar v^3}{D}
+   \bar\varepsilon = \frac{{\rm f}}{2} \frac{\bar v^3}{D}
 
 
 The average velocity gradient was defined by Camp and Stein as
 
-.. math::  G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}
+.. math::
+
+   G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}
 
 where this approximation neglects the fact that square root of an average is not the same as the average of the square roots.
 
 .. math::
 
-     G_{CS} = \left(\frac{{\rm f}}{2\nu} \frac{\bar v^3}{D} \right)^\frac{1}{2}
+   G_{CS} = \left(\frac{{\rm f}}{2\nu} \frac{\bar v^3}{D} \right)^\frac{1}{2}
 
 or in terms of flow rate, we have:
 
-.. math::   G_{CS} = \left(\frac{\rm{32f}}{ \pi^3\nu} \frac{Q^3}{D^7} \right)^\frac{1}{2}
+.. math::
+
+   G_{CS} = \left(\frac{\rm{32f}}{ \pi^3\nu} \frac{Q^3}{D^7} \right)^\frac{1}{2}
 
 .. _heading_Straight_Pipe_Laminar:
 
@@ -392,44 +398,56 @@ Straight Pipe Laminar
 
 Laboratory scale apparatus is often limited to laminar flow where viscosity effects dominate. The equations describing laminar flow conditions always include viscosity. For the case of laminar flow in a straight pipe, we have:
 
-.. math:: {\rm f} = \frac{64}{Re}
+.. math::
+
+   {\rm f} = \frac{64}{Re}
 
 Reynolds number is defined as
 
-.. math:: Re= \frac{\bar vD}{\nu}
+.. math::
+
+   Re= \frac{\bar vD}{\nu}
 
 The Darcy Weisbach head loss equation simplifies to the Hagen–Poiseuille equation for the case of laminar flow.
 
 .. math::
 
-     h_{{\rm f}} = \frac{32\nu L\bar v}{gD^2}
+   h_{{\rm f}} = \frac{32\nu L\bar v}{gD^2}
 
 and thus the energy dissipation rate in a straight pipe under conditions of laminar flow is
 
 .. math::
 
-     \bar\varepsilon =32\nu \left( \frac{\bar v}{D} \right)^2
+   \bar\varepsilon =32\nu \left( \frac{\bar v}{D} \right)^2
 
 The Camp-Stein velocity gradient in a long straight laminar flow tube is thus
 
-.. math::  G_{CS}^2 =32 \left( \frac{\bar v}{D} \right)^2
+.. math::
+
+   G_{CS}^2 =32 \left( \frac{\bar v}{D} \right)^2
 
 .. math::
 
-     G_{CS} =4\sqrt2 \frac{\bar v}{D}
+   G_{CS} =4\sqrt2 \frac{\bar v}{D}
 
 
 Our estimate of :math:`G_{CS}` based on :math:`\bar \varepsilon` is an overestimate because it assumes that the energy dissipation is completely uniform through the control volume. The true spatial average velocity gradient, :math:`\bar G`, for laminar flow in a pipe is (`Gregory, 1981 <https://doi.org/10.1016/0009-2509(81)80126-1>`__),
 
-.. math:: \bar G = \frac{8}{3}\frac{\bar v}{D}
+.. math::
+
+   \bar G = \frac{8}{3}\frac{\bar v}{D}
 
 Our estimate of :math:`G_{CS}` for the case of laminar flow in a pipe is too high by a factor of :math:`\frac{3}{\sqrt2}`.
 
 As a function of flow rate we have
 
-.. math::  \bar v=\frac{Q}{A} = \frac{4Q}{\pi D^2}
+.. math::
 
-.. math::  G_{CS} =\frac{16\sqrt2}{\pi} \frac{Q}{D^3}
+   \bar v=\frac{Q}{A} = \frac{4Q}{\pi D^2}
+
+.. math::
+
+   G_{CS} =\frac{16\sqrt2}{\pi} \frac{Q}{D^3}
 
 .. _heading_Parallel_Plates_Laminar:
 
@@ -440,39 +458,49 @@ Flow between parallel plates occurs in plate settlers in the sedimentation tank.
 
 .. _figure_Parallel_Plate_schematic:
 
-.. figure::    Images/Parallel_Plate_schematic.png
+.. figure:: Images/Parallel_Plate_schematic.png
    :width: 700px
    :align: center
    :alt: Parallel plate schematic
 
-   A fluid flowing from left to right due to a pressure gradient results in wall shear on the parallel plates. This flow profile is for the case when :math:`\frac{dp}{dx}` is negative.
+   A fluid flowing from left to right due to a pressure gradient results in wall shear on the parallel plates. This flow profile is for the case when the pressure gradient is negative.
 
 
 We start with the Navier-Stokes equation written for flow in the x direction.
 
-.. math:: \frac{y^2}{2} \frac{dp}{dx} + Ay + B = \mu u
+.. math::
+
+   \frac{y^2}{2} \frac{dp}{dx} + Ay + B = \mu u
 
 where :math:`u` is the velocity in the x direction.
 
 Apply the no slip condition at bottom plate.
 
-.. math:: u=0 \quad at \quad y=0
+.. math::
+
+   u=0 \quad at \quad y=0
 
 Thus the constant :math:`B=0`.
 
 Apply the no slip condition at top plate.
 
-.. math:: u=0 \quad at \quad y=S
+.. math::
+
+   u=0 \quad at \quad y=S
 
 Thus the constant :math:`A = \frac{- S}{2} \frac{dp}{dx}`
 
 Substitute the values for constants :math:`A` and :math:`B` into the original equation.
 
-.. math:: \frac{y^2}{2} \frac{dp}{dx} - \frac{S}{2} \frac{dp}{dx} y = \mu \,u
+.. math::
+
+   \frac{y^2}{2} \frac{dp}{dx} - \frac{S}{2} \frac{dp}{dx} y = \mu \,u
 
 Simply the equation to obtain
 
-.. math:: u = \frac{y \left( y - S \right)}{2 \mu} \frac{dp}{dx}
+.. math::
+
+   u = \frac{y \left( y - S \right)}{2 \mu} \frac{dp}{dx}
 
 We need a relationship between average velocity and :math:`\frac{dp}{dx}`. We can obtain this by integrating from 0 to
 :math:`S`.
@@ -486,78 +514,108 @@ We need a relationship between average velocity and :math:`\frac{dp}{dx}`. We ca
      \frac{y^2 - S y}{2 \mu} \left( \frac{dp}{dx} \right)
    \right) dy
 
-.. math:: \bar v = - \frac{S^2}{12 \mu} \frac{dp}{dx}
+.. math::
+
+   \bar v = - \frac{S^2}{12 \mu} \frac{dp}{dx}
 
 Solving for :math:`\frac{dp}{dx}`
 
-.. math:: \frac{dp}{dx} = - \frac{12 \mu \bar v}{S^2}
+.. math::
+
+   \frac{dp}{dx} = - \frac{12 \mu \bar v}{S^2}
 
 From the Navier Stokes equation after integrating once we get
 
-.. math:: \mu \,\left( \frac{du}{dy} \right) = y \frac{dp}{dx} + A
+.. math::
+
+   \mu \,\left( \frac{du}{dy} \right) = y \frac{dp}{dx} + A
 
 Substituting our boundary condition,
 :math:`A = \frac{- S}{2} \frac{dp}{dx}` we obtain
 
-.. math:: \frac{du}{dy}_{y = 0} = - \frac{S}{2 \mu} \frac{dp}{dx}
+.. math::
+
+   \frac{du}{dy}_{y = 0} = - \frac{S}{2 \mu} \frac{dp}{dx}
 
 Substituting the result for :math:`\frac{dp}{dx}` we obtain
 
-.. math:: \frac{du}{dy}_{y = 0} = \frac{6 \bar v}{S}
+.. math::
+
+   \frac{du}{dy}_{y = 0} = \frac{6 \bar v}{S}
 
 Therefore in velocity gradient notation we have
 
-.. math:: G_{wall} = \frac{6 \bar v}{S}
+.. math::
+
+   G_{wall} = \frac{6 \bar v}{S}
 
 The energy dissipation rate at the wall
 
 .. math:: \varepsilon_{wall} = G_{wall}^2 \nu
 
-.. math:: \varepsilon_{wall} = \left( \frac{6 \bar v}{S}\right)^2 \nu
+.. math::
+
+   \varepsilon_{wall} = \left( \frac{6 \bar v}{S}\right)^2 \nu
 
 Head loss due to shear on the plates is obtained from a force balance on a control volume between two parallel plates as shown in :numref:`figure_Parallel_Plate_schematic`.
 
 A force balance on a control volume gives
 
-.. math:: 2 \tau L W = -\Delta P W S
+.. math::
 
-.. math:: \Delta P = -\frac{2 \tau L}{S}
+   2 \tau L W = -\Delta P W S
+
+.. math::
+
+   \Delta P = -\frac{2 \tau L}{S}
 
 The equation relating shear and velocity gradient is
 
-.. math:: \tau = \nu \rho \frac{du}{dy} = \nu \rho G
+.. math::
+
+   \tau = \nu \rho \frac{du}{dy} = \nu \rho G
 
 The velocity gradient at the wall is
 
-.. math:: G_{wall} = \frac{6 \bar v}{S}
+.. math::
 
-.. math:: \tau  = \nu \rho \frac{6 \bar v}{S}
+   G_{wall} = \frac{6 \bar v}{S}
+
+.. math::
+
+   \tau  = \nu \rho \frac{6 \bar v}{S}
 
 Substituting into the force balance equation
 
-.. math:: \Delta P = -\frac{2 \nu \rho 6 \bar v L}{S^2}
+.. math::
+
+   \Delta P = -\frac{2 \nu \rho 6 \bar v L}{S^2}
 
 The head loss for horizontal flow at uniform velocity simplifies too
 
-.. math:: h_{{\rm f}} = \frac{-\Delta P}{\rho g}
+.. math::
+
+   h_{{\rm f}} = \frac{-\Delta P}{\rho g}
 
 .. math::
 
-     h_{{\rm f}} = 12\frac{ \nu \bar v L}{gS^2}
+   h_{{\rm f}} = 12\frac{ \nu \bar v L}{gS^2}
 
 The average energy dissipation rate is
 
-.. math::  \bar\varepsilon = \frac{gh_{\rm{L}}}{\theta}
+.. math::
+
+   \bar\varepsilon = \frac{gh_{\rm{L}}}{\theta}
 
 .. math::
 
-     \bar\varepsilon = 12 \nu \left(\frac{  \bar v}{S} \right)^2
+   \bar\varepsilon = 12 \nu \left(\frac{  \bar v}{S} \right)^2
 
 The Camp-Stein velocity gradient for laminar flow between parallel plates is
 
 .. math::
 
-     G_{CS} = 2\sqrt{3}\frac{  \bar v}{S}
+   G_{CS} = 2\sqrt{3}\frac{  \bar v}{S}
 
 .. _heading_Coiled_tubes_(laminar_flow):
 
@@ -583,39 +641,44 @@ The ratio of the coiled to straight friction factors is given by `Mishra and Gup
 
 The Dean number is defined as:
 
-.. math:: De = Re\left(\frac{D}{D_c}\right)^\frac{1}{2}
+.. math::
+
+   De = Re\left(\frac{D}{D_c}\right)^\frac{1}{2}
 
 where :math:`D` is the inner diameter of the tube and :math:`D_c` is the diameter of the coil. Note that the tubing coils are actually helixes and that for the tubing diameters and coil diameters used for flocculators that the helix doesn’t significantly change the radius of curvature.
 
-.. math:: \frac{{\rm f}_{coil}}{{\rm f}} = 1 + 0.033\left(log_{10}De\right)^4
+.. math::
 
-.. math:: h_{L_{coil}} = h_{{\rm f}} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]
+   \frac{{\rm f}_{coil}}{{\rm f}} = 1 + 0.033\left(log_{10}De\right)^4
+
+.. math::
+
+   h_{L_{coil}} = h_{{\rm f}} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]
 
 where :math:`h_{{\rm f}} = \frac{32\nu L\bar v}{ g D^2}`. Note that we switch from major losses to total head loss here because the head loss from flowing around the coil is no longer simply due to shear on the
 wall.
 
 .. math::
 
-     h_{L_{coil}} = \frac{32\nu L\bar v}{ g D^2} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]
+   h_{L_{coil}} = \frac{32\nu L\bar v}{ g D^2} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]
 
 The average energy dissipation rate is
 
 .. math::
 
-     \bar\varepsilon = 32\nu \left( \frac{\bar v}{D} \right)^2 \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]
+   \bar\varepsilon = 32\nu \left( \frac{\bar v}{D} \right)^2 \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]
 
 The average velocity gradient is proportional to the square root of the head loss and thus we obtain
 
 .. math::
 
-
-     G_{CS_{coil}} = G_{CS}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}
+   G_{CS_{coil}} = G_{CS}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}
 
 where :math:`G_{CS} =4\sqrt2 \frac{\bar v}{D}` for laminar flow in a straight pipe.
 
 .. math::
 
-     G_{CS_{coil}} = 4\sqrt2 \frac{\bar v}{D}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}
+   G_{CS_{coil}} = 4\sqrt2 \frac{\bar v}{D}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}
 
 
 .. _heading_Flow_in_porous_media:
@@ -655,13 +718,13 @@ The residence time in a porous media bed is given by
 
 .. math::
 
-    \theta = \frac{L\phi} {v_a}
+   \theta = \frac{L\phi} {v_a}
 
 Now we can calculate the average energy dissipation rate in porous media.
 
 .. math::
 
-    \bar\varepsilon = \frac{g h_f}{\theta}
+   \bar\varepsilon = \frac{g h_f}{\theta}
 
 Substituting the equations for head loss and residence times we obtain
 
@@ -687,26 +750,33 @@ The average energy dissipation rate for a flow expansion really only has meaning
 
 .. math::
 
-
-     h_e =  K\frac{\bar v_{out}^2}{2g}
+   h_e =  K\frac{\bar v_{out}^2}{2g}
 
 In this equation :math:`K` represents the fraction of the kinetic energy that is dissipated.
 
 If we define the length of the control volume (in the direction of flow) as :math:`H` then the residence time is
 
-.. math:: \theta = \frac{H}{\bar v}
+.. math::
 
-.. math::  \bar\varepsilon = \frac{gh_{\rm{e}}}{\theta}
+   \theta = \frac{H}{\bar v}
+
+.. math::
+
+   \bar\varepsilon = \frac{gh_{\rm{e}}}{\theta}
 
 Combining the previous equations we obtain
 
 .. math::
 
-     \bar\varepsilon = K\frac{\bar v_{out}^3}{2H}
+   \bar\varepsilon = K\frac{\bar v_{out}^3}{2H}
 
-.. math:: G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}
+.. math::
 
-.. math:: G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}
+   G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}
+
+.. math::
+
+   G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}
 
 
 .. _heading_Maximum_velocity_gradients:
@@ -732,48 +802,72 @@ The maximum velocity gradient in pipe flow occurs at the wall. This is true for 
 
 A force balance for the case of steady flow in a round pipe requires that sum of the forces in the x direction must equal zero. Given a pipe with diameter, D, and length, L, we obtain
 
-.. math::  \left(P_{in}- P_{out}\right)\frac{\pi D^2}{4} = \tau_{wall} \pi D L
+.. math::
 
-.. math::  -\Delta P\frac{D}{4} = \tau_{wall} L
+   \left(P_{in}- P_{out}\right)\frac{\pi D^2}{4} = \tau_{wall} \pi D L
+
+.. math::
+
+   -\Delta P\frac{D}{4} = \tau_{wall} L
 
 For this control volume the energy equation simplifies to
 
-.. math:: -\Delta P=\rho g h_{{\rm f}}
+.. math::
+
+   -\Delta P=\rho g h_{{\rm f}}
 
 The relationship between shear and velocity gradient is
 
-.. math:: \tau_{wall} = \mu \frac{du}{dy}_{wall} = \nu \rho G_{wall}
+.. math::
+
+   \tau_{wall} = \mu \frac{du}{dy}_{wall} = \nu \rho G_{wall}
 
 Combining the energy equation, the force balance, and the relationship between shear and velocity gradient we obtain
 
-.. math::  \rho g h_{{\rm f}}\frac{D}{4} = \nu \rho G_{wall} L
+.. math::
 
-.. math::  G_{wall} = \frac{g h_{{\rm f}}D}{4\nu L}
+   \rho g h_{{\rm f}}\frac{D}{4} = \nu \rho G_{wall} L
+
+.. math::
+
+   G_{wall} = \frac{g h_{{\rm f}}D}{4\nu L}
 
 This equation is valid for both laminar flow. For turbulent flow it is necessary to make the approximation that wall shear perpendicular to the direction of flow is insignificant in increasing the magnitude of the wall shear. We can substitute the Darcy Weisbach equation for head loss to obtain
 
-.. math:: G_{wall} ={\rm f}  \frac{\bar v^2}{8\nu}
+.. math::
+
+   G_{wall} ={\rm f}  \frac{\bar v^2}{8\nu}
 
 
 The energy dissipation rate at the wall is
 
-.. math:: \varepsilon_{wall} = G_{wall}^2 \nu
+.. math::
 
-.. math:: \varepsilon_{wall} = \frac{1}{\nu}\left({\rm f}  \frac{\bar v^2}{8} \right)^2
+   \varepsilon_{wall} = G_{wall}^2 \nu
+
+.. math::
+
+   \varepsilon_{wall} = \frac{1}{\nu}\left({\rm f}  \frac{\bar v^2}{8} \right)^2
 
 
 For laminar flow we can substitute :math:`{\rm f} = \frac{64}{{\rm Re}}` and the definition of the Reynolds number to obtain
 
-.. math:: G_{wall} =  \frac{8\bar v}{D}
+.. math::
+
+   G_{wall} =  \frac{8\bar v}{D}
 
 
 This equation is useful for finding the velocity gradient at the wall of a tube settler.
 
 The energy dissipation rate at the wall is
 
-.. math:: \varepsilon_{wall} = G_{wall}^2 \nu
+.. math::
 
-.. math:: \varepsilon_{wall} = \left(\frac{8\bar v}{D} \right)^2 \nu
+   \varepsilon_{wall} = G_{wall}^2 \nu
+
+.. math::
+
+   \varepsilon_{wall} = \left(\frac{8\bar v}{D} \right)^2 \nu
 
 .. _heading_coiled-tubes-laminar-flow-1:
 
@@ -785,7 +879,9 @@ The shear on the wall of a coiled tube is not uniform. The outside of the curve 
 :math:`{\rm f}_{coil} = {\rm f} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]`
 to obtain
 
-.. math:: G_{{CS}_{wall_{coil}}} ={\rm f} \left[ 1 + 0.033 \left(log_{10}De \right)^4 \right]  \frac{\bar v^2}{8\nu}
+.. math::
+
+   G_{{CS}_{wall_{coil}}} ={\rm f} \left[ 1 + 0.033 \left(log_{10}De \right)^4 \right]  \frac{\bar v^2}{8\nu}
 
 .. _heading_Expansions-1:
 
@@ -802,19 +898,29 @@ Round Jet
 
 `Baldyga, et al. 1995 <https://doi.org/10.1016/0009-2509(95)00049-B>`__
 
-.. math:: \varepsilon_{Centerline} = \frac{50 D_{Jet}^3 \bar v_{Jet}^3}{ \left( x - 2 D_{Jet} \right)^4}
+.. math::
+
+   \varepsilon_{Centerline} = \frac{50 D_{Jet}^3 \bar v_{Jet}^3}{ \left( x - 2 D_{Jet} \right)^4}
 
 
 
-.. math::  \varepsilon_{Max} = \frac{\left( \frac{50}{\left( 5 \right)^4} \right) \bar v_{Jet}^3}{D_{Jet}}
+.. math::
 
-.. math:: \varepsilon_{Max} = \Pi_{JetRound} \frac{\bar v_{Jet} ^3}{D_{Jet}}
+   \varepsilon_{Max} = \frac{\left( \frac{50}{\left( 5 \right)^4} \right) \bar v_{Jet}^3}{D_{Jet}}
 
-.. math:: \Pi_{JetRound} = 0.08
+.. math::
+
+   \varepsilon_{Max} = \Pi_{JetRound} \frac{\bar v_{Jet} ^3}{D_{Jet}}
+
+.. math::
+
+   \Pi_{JetRound} = 0.08
 
 The maximum velocity gradient in a jet is thus
 
-.. math:: G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}
+.. math::
+
+   G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}
 
 Below we plot the Baldyga et al. equation for the energy dissipation rate as a function of distance from the discharge location for the case of a round jet that is discharging into a large tank.
 
@@ -835,12 +941,14 @@ Plane Jet
 
 Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by `Heskestad in 1965 <http://dx.doi.org/10.1115/1.3627309>`__ and it may be possible to use that data to get a better estimate of :math:`\Pi_{JetPlane}` from that source.
 
-.. math:: \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}
+.. math::
+
+   \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}
 
 .. math::
-   :label: eq_EDR_JetPlane
+   :label: EDR_JetPlane
 
-  \varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}
+   \varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}
 
 The maximum velocity gradient is thus
 
@@ -849,24 +957,36 @@ The maximum velocity gradient is thus
 
    G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}
 
-.. math:: \bar v = \frac{Q}{SW}
+.. math::
 
-.. math:: \bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}
+   \bar v = \frac{Q}{SW}
 
-.. math:: S_{Jet} = S \Pi_{VCBaffle}
+.. math::
+
+   \bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}
+
+.. math::
+
+   S_{Jet} = S \Pi_{VCBaffle}
 
 The average hydraulic residence time for the fluid between two baffles
 is
 
-.. math:: \theta_B = \frac{H}{\bar v}
+.. math::
+
+   \theta_B = \frac{H}{\bar v}
 
 where :math:`H` is the depth of water. Substituting into the equation for :math:`\varepsilon_{Max}` to get the equation in terms of the average velocity :math:`\bar v` and flow dimension :math:`S`
 
-.. math:: \varepsilon_{Max}= \frac{\Pi_{JetPlane}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3
+.. math::
+
+   \varepsilon_{Max}= \frac{\Pi_{JetPlane}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3
 
 From the control volume analysis the average energy dissipation rate is
 
-.. math:: \bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}
+.. math::
+
+   \bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}
 
 where :math:`K` is the minor loss coefficient for flow around the end of a baffle with a :math:`180^\circ` turn.
 
@@ -874,7 +994,9 @@ Substitute the values for :math:`\bar \varepsilon` and
 :math:`\varepsilon_{Max}` to obtain the ratio,
 :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`
 
-.. math:: \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}
+.. math::
+
+   \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}
 
 :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value of 2 for
 :math:`H_e/S <5` (CFD analysis and `Haarhoff, 2001 <https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267>`__)
@@ -891,7 +1013,9 @@ We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value
      \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
      \right)
 
-.. math:: \Pi_{JetPlane} = 0.0124
+.. math::
+
+   \Pi_{JetPlane} = 0.0124
 
 .. code:: python
 
@@ -923,14 +1047,20 @@ Ariane Walker-Horn modeled the flat plate using Fluent in 2015.
 
       The energy dissipation rate and streamlines for a 1 m wide plate in two dimensional flow with an approach velocity of :math:`1 m/s`. The maximum energy dissipation rate was approximately :math:`0.04 W/kg`.
 
-.. math:: \varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}
+.. math::
+
+   \varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}
 
 
 The maximum velocity gradient is thus
 
-.. math:: G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}
+.. math::
 
-.. math:: \Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}
+   G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}
+
+.. math::
+
+   \Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}
 
 .. code:: python
 
