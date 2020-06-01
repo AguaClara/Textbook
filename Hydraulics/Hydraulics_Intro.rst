@@ -144,7 +144,7 @@ If head loss in the manifold is small, then we have
 .. math::
    :label: Energy_and_Pi_Q_no_manifold_hl
 
-    \frac{\bar v_{M_1}^{2}}{2 g} = 2\bar \Psi_{M}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}
+    \frac{\bar v_{M_1}^{2}}{2 g} = 2\bar \Psi_M\frac{1 - \Pi_Q^2}{\Pi_Q^2 + 1}
 
 The average piezometric head in the manifold is also influenced by any head loss that is in series with the port head loss. Here we assume that the piezometric head datum is in the receiving tank. If the receiving tank is a filter, then there could be head loss through the sand on the way to the outlet of the filter. This head loss in series will help provide more uniform flow out of the manifold if there aren't any paths for flow to blend between the first and last ports. This is the case for division of flow between sand layers in a stacked rapid sand filter where the head loss through the sand plays a key role in helping to divide the flow evenly between the 6 layers of sand. The average piezometric head in the manifold, :math:`\bar \Psi_{M}` is equal to the head from the port kinetic energy plus any downstream head loss.
 

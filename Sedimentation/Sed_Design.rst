@@ -302,7 +302,7 @@ For clay dominated flocs equation :eq:`vt_of_clay_floc` gives a 0.13 mm/s sedime
 
 Garland's experiment with the result of floc breakup at the sedimentation tank inlet is consistent with several hypotheses.
 
-#. The bonds holding flocs together are likely strong (order 1.6 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012<doi: 10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
+#. The bonds holding flocs together are likely strong (order 1.6 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012 <doi:10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
 #. Flocs are broken where there is the largest force per bond. This would logically occur at the connection between the two subunits that form the floc. Thus when flocs break they would not be expected to produce tiny fragments.
 #. The fluid shear stress determines the force acting to tear a floc apart. Thus given a constant energy dissipation rate the force acting to break up flocs will increase as the temperature drops (see equation :eq:`fluid_shear_stress`)
 #. Settled water turbidity increases when the floc terminal velocity is less than the capture velocity of the plate settlers.
@@ -345,7 +345,7 @@ Use equation :eq:`jet_sed_tank_continuity` to eliminate the thickness of the jet
 
    \tau_{max} = \rho \bar v_{Jet} ^2 \sqrt{ \frac{\nu \Pi_{JetPlane}}{\bar v_{z_{fb}} W_{Sed}}}
 
-Solve for the maximum permissible jet velocity, equation :eq:`\bar v_{Jet}`.
+Solve for the maximum permissible jet velocity, :math:`\bar v_{Jet}`.
 
 .. math::
    :label: max_sed_tank_jet_velocity
