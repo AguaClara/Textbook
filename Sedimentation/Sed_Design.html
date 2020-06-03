@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sedimentation Design &mdash; AguaClara Textbook 0.068 documentation</title>
+  <title>Sedimentation Design &mdash; AguaClara Textbook 0.069 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.068
+                0.069
               </div>
             
           
@@ -406,9 +406,10 @@
 <div class="math notranslate nohighlight" id="equation-fluid-shear-stress-to-bond-ratio">
 <span class="eqno">(428)<a class="headerlink" href="#equation-fluid-shear-stress-to-bond-ratio" title="Permalink to this equation">¶</a></span>\[      \Pi_{Bond}^{Fluid} = \frac{F_{shear_{max}}}{F_{covalent}} = \frac{3 \tau A_{floc}}{F_{covalent}}\]</div>
 <p>The expectation is that the flocs will break for values of <span class="math notranslate nohighlight">\(\Pi_{Bond}^{Fluid}&gt;1\)</span>. This analysis shows that the maximum size of a floc is set by the fluid shear stress, <span class="math notranslate nohighlight">\(\tau\)</span>. Previously it wasn’t clear if floc size was limited by energy dissipation rate or by the velocity gradient. Neither of those parameters captures the physics because ultimately it is a force that breaks the covalent bond and thus it must be a fluid force (not energy dissipation rate or velocity gradient) that can be used as a design parameter. By recognizing that the shear stress <span class="math notranslate nohighlight">\(\tau\)</span> must be limited we can now develop design equations for the jet reverser and account for the effects of viscosity and temperature on the design.</p>
-<p>When flocs are broken by the shearing action of the fluid it is possible that a primary particle is torn off or that the floc is broken in half. The method of breaking matters because if primary particles are dislodged from a floc then any breaking will lead to a deterioration of the sedimentation tank performance because some of those primary particles will make it through the floc blanket and won’t be captured by the plate settlers. Conventional wisdom would suggest that flocs will be broken into little pieces. If that were the case then any floc breakup would cause the settled water turbidity to increase. <a class="reference external" href="https://doi.org/10.1089/ees.2015.0314">Garland, 2016</a> showed that there was no sign of increased settled water turbidity up to an energy dissipation rate of 300 mw/kg (<a class="reference internal" href="#figure-sed-performance-vs-jet-edr"><span class="std std-numref">Fig. 137</span></a>).</p>
-<div class="figure align-center" id="figure-sed-performance-vs-jet-edr">
-<a class="reference internal image-reference" href="../_images/Sed_performance_vs_jet_edr.png"><img alt="Sed tank performance as a function of jet energy dissipation rate" src="../_images/Sed_performance_vs_jet_edr.png" style="width: 400px;" /></a>
+<p>When flocs are broken by the shearing action of the fluid it is possible that a primary particle is torn off or that the floc is broken in half. The method of breaking matters because if primary particles are dislodged from a floc then any breaking will lead to a deterioration of the sedimentation tank performance because some of those primary particles will make it through the floc blanket and won’t be captured by the plate settlers. Conventional wisdom would suggest that flocs will be broken into little pieces. If that were the case then any floc breakup would cause the settled water turbidity to increase. <a class="reference external" href="https://doi.org/10.1089/ees.2015.0314">Garland, 2016</a> showed that there was no sign of increased settled water turbidity up to an energy dissipation rate of 300 mw/kg (<a class="reference internal" href="#figure-sed-performance-vs-jet-edr"><span class="std std-numref">Fig. 137</span></a> adapted from <a class="reference external" href="https://doi.org/10.1089/ees.2015.0314">Garland, 2016</a>).</p>
+<div class="figure align-center" id="id17">
+<span id="figure-sed-performance-vs-jet-edr"></span><a class="reference internal image-reference" href="../_images/Sed_performance_vs_jet_edr.png"><img alt="Sed tank performance as a function of jet energy dissipation rate" src="../_images/Sed_performance_vs_jet_edr.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 137 </span><span class="caption-text">System suspended solids concentrations during steady state as a function of jet energy dissipation rate for 1.2 mm/s.  Results shown are averaged over 2 residence times (1200 seconds) of the sedimentation tank.</span></p>
 </div>
 <p>Using equation <a class="reference internal" href="#equation-fluid-shear-stress">(426)</a> the maximum energy dissipation rate below the performance deterioration obtained by Garland (300 mW/kg) can be converted into a fluid shear stress of 0.55 Pa. The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using equation <a class="reference internal" href="#equation-fluid-shear-stress-on-doublet">(427)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-d-floc-shear-stress">
@@ -449,12 +450,12 @@
 <p>Solve for the maximum permissible jet velocity, <span class="math notranslate nohighlight">\(\bar v_{Jet}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-max-sed-tank-jet-velocity">
 <span class="eqno">(434)<a class="headerlink" href="#equation-max-sed-tank-jet-velocity" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{fb}} W_{Sed}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}\]</div>
-<p>The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases. The maximum jet velocity, <a class="reference internal" href="#figure-jet-velocity-vs-sed-valley-width"><span class="std std-numref">Fig. 138</span></a>, and head loss, <code class="xref std std-numref docutils literal notranslate"><span class="pre">_figure_Jet_head_loss_vs_sed_valley_width</span></code>, increases with temperature because as the viscosity decreases the fluid shear stress decreases. Floc breakup will be most problematic in low temperatures when the raw water has low turbidity and high concentration of dissolved organics.</p>
-<div class="figure align-center" id="id17">
+<p>The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases. The maximum jet velocity, <a class="reference internal" href="#figure-jet-velocity-vs-sed-valley-width"><span class="std std-numref">Fig. 138</span></a>, and head loss, <a class="reference internal" href="#figure-jet-head-loss-vs-sed-valley-width"><span class="std std-numref">Fig. 139</span></a>, increases with temperature because as the viscosity decreases the fluid shear stress decreases. Floc breakup will be most problematic in low temperatures when the raw water has low turbidity and high concentration of dissolved organics.</p>
+<div class="figure align-center" id="id18">
 <span id="figure-jet-velocity-vs-sed-valley-width"></span><a class="reference internal image-reference" href="../_images/Jet_velocity_vs_sed_valley_width.png"><img alt="Maximum jet velocity as a function of sed valley width and temperature" src="../_images/Jet_velocity_vs_sed_valley_width.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 138 </span><span class="caption-text">The maximum jet velocity increases with width of the sedimentation tank valley and with temperature.</span></p>
 </div>
-<div class="figure align-center" id="id18">
+<div class="figure align-center" id="id19">
 <span id="figure-jet-head-loss-vs-sed-valley-width"></span><a class="reference internal image-reference" href="../_images/Jet_head_loss_vs_sed_valley_width.png"><img alt="Maximum jet head loss as a function of sed valley width and temperature" src="../_images/Jet_head_loss_vs_sed_valley_width.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 139 </span><span class="caption-text">The maximum jet head loss increases with width of the sedimentation tank valley and with temperature.</span></p>
 </div>
@@ -471,7 +472,7 @@
 <span id="heading-sed-tank-floc-blanket"></span><h3>Floc Blanket<a class="headerlink" href="#floc-blanket" title="Permalink to this headline">¶</a></h3>
 <p>The line jet from the diffusers enters the jet reverser to force flow up through the sedimentation bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed which is called a <strong>floc blanket</strong>. The bed is fluidized because flocs are kept in suspension by the upflowing water.</p>
 <p>For a floc blanket to form, a sedimentation system requires that 1) all flocs be returned to the bottom of the sedimentation tank and 2) requires that all settled flocs be resuspended by incoming water. As will be discussed soon, plate settlers are used to return flocs to the bottom of the bay, while the jet reverser and sloped bottom geometry allow for floc resuspension. Any surface with a horizontal component in a sedimentation tank must be sloped to allow settled flocs to return to the resuspension zone. A flat bottom geometry does not allow for the formation of a floc blanket, as discussed previously.</p>
-<div class="figure align-center" id="id19">
+<div class="figure align-center" id="id20">
 <span id="figure-floc-blanket-experiment"></span><a class="reference external image-reference" href="https://www.youtube.com/watch?v=w8ZFCz54IBs"><img alt="Floc blanket formation over time (click to be sent to video)." src="../_images/floc_blanket_experiment.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 140 </span><span class="caption-text">Floc blanket formation over time (click to be sent to video).</span></p>
 </div>
@@ -501,12 +502,12 @@
 <div class="section" id="floc-hopper">
 <span id="heading-sed-tank-floc-hopper"></span><h3>Floc Hopper<a class="headerlink" href="#floc-hopper" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>floc hopper</strong> provides an opportunity for floc consolidation. The floc weir controls the depth of the floc blanket because as the floc blanket grows, it will eventually reach the top of the floc weir. Because flocs are more dense than water, the flocs “spill” over the edge of the floc weir which allows the floc blanket to stay a constant height while sludge accumulates and consolidates in the floc hopper.</p>
-<div class="figure align-center" id="id20">
+<div class="figure align-center" id="id21">
 <span id="figure-floc-hopper-highlight"></span><a class="reference external image-reference" href="https://youtu.be/xh9dTjWRoto"><img alt="Floc hopper detail with flocs &quot;spilling&quot; over the wall (click to be sent to video)." src="../_images/floc_hopper_highlight.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 141 </span><span class="caption-text">Floc hopper detail with flocs “spilling” over the wall (click to be sent to video).</span></p>
 </div>
 <p>Consolidated sludge in the bottom of the floc hopper is then removed from the sedimentation tank through small drain valve controlled by the operator. Floc hoppers in the lab-scale and PF300 setting are currently set at a 45 degree angle, but further optimization is needed.</p>
-<div class="figure align-center" id="id21">
+<div class="figure align-center" id="id22">
 <span id="figure-benchtop-sed"></span><a class="reference internal image-reference" href="../_images/benchtop_sed.png"><img alt="Benchtop sedimentation tank setup, highlighting the floc blanket and floc hopper." src="../_images/benchtop_sed.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 142 </span><span class="caption-text">Benchtop sedimentation tank setup, highlighting the floc blanket and floc hopper.</span></p>
 </div>
@@ -522,7 +523,7 @@
 <li>What is the critical path?</li>
 </ol>
 <p>We need particles to settle on the bottom plate for it to be effectively captured. Thus, the critical path can be shown by a floc that enters the plate settlers closest to the upper plate, because it will have the greatest distance to settle.</p>
-<div class="figure align-center" id="id22">
+<div class="figure align-center" id="id23">
 <span id="figure-plate-settler-critpath"></span><a class="reference internal image-reference" href="../_images/plate_settler_critpath.png"><img alt="Critical path between two plate settlers." src="../_images/plate_settler_critpath.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 143 </span><span class="caption-text">Critical path between two plate settlers.</span></p>
 </div>
@@ -530,7 +531,7 @@
 <li>How far must the particle settle to reach the lower plate?</li>
 </ol>
 <p>Let’s make a simplification and assume that water is flowing with uniform velocity between the plates, represented by a “top hat” velocity profile. This is a significant assumption, but it is used to help us understand the critical path. The fluid is carrying the floc between the inclined plates while gravity is pulling the floc down. Therefore, a particle must fall the vertical distance between the plates, which is the critical height, <span class="math notranslate nohighlight">\(H_c\)</span>. The plates are positioned at an angle, <span class="math notranslate nohighlight">\(\alpha\)</span>, to ensure that settling flocs slide down to the floc blanket. The critical height <span class="math notranslate nohighlight">\(H_c\)</span> can be expressed in terms of plate settler length, <span class="math notranslate nohighlight">\(L\)</span>, and plate settler angle, <span class="math notranslate nohighlight">\(\alpha\)</span>, by <span class="math notranslate nohighlight">\(H_c=\frac{S}{cos\alpha}\)</span>.</p>
-<div class="figure align-center" id="id23">
+<div class="figure align-center" id="id24">
 <span id="figure-plate-settler-critheight"></span><a class="reference internal image-reference" href="../_images/plate_settler_critheight.png"><img alt="Critical height between two plate settlers." src="../_images/plate_settler_critheight.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 144 </span><span class="caption-text">Critical height between two plate settlers.</span></p>
 </div>
@@ -542,12 +543,12 @@
 <li>What is the net vertical velocity of a floc between the plate settlers?</li>
 </ol>
 <p>The fluid carries the floc between the plate settlers while gravity pulls the floc down. The velocity through the plate settlers has both a horizontal component, <span class="math notranslate nohighlight">\(\bar v_{x_{Plate}}\)</span>, and vertical component, <span class="math notranslate nohighlight">\(\bar v_{z_{Plate}}\)</span>, with a resultant velocity we call <span class="math notranslate nohighlight">\(\bar v_{\alpha_{Plate}}\)</span>.</p>
-<div class="figure align-center" id="id24">
+<div class="figure align-center" id="id25">
 <span id="figure-plate-settler-valpha"></span><a class="reference internal image-reference" href="../_images/plate_settler_base.png"><img alt="Velocity components between two plate settlers." src="../_images/plate_settler_base.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 145 </span><span class="caption-text">Velocity components between two plate settlers.</span></p>
 </div>
 <p>This means that the net vertical velocity <span class="math notranslate nohighlight">\(v_{z_{net}}\)</span> is the vertical component of flow minus the settling velocity of the floc. Recall our previous discussion of terminal velocity and capture velocity; in this case, because we are designing a plate settler specifically to capture the critical particle, the terminal velocity equals the capture velocity. The terminal velocity is a function of the velocity that the critical particle settles at and the capture velocity is a function of the reactor geometry which we are designing to capture the critical particle. Thus, <span class="math notranslate nohighlight">\(\bar v_{z_{net}} = \bar v_{z_{Plate}} - \bar v_{c}\)</span>.</p>
-<div class="figure align-center" id="id25">
+<div class="figure align-center" id="id26">
 <span id="figure-plate-settler-vnet"></span><a class="reference internal image-reference" href="../_images/plate_settler_vnet.png"><img alt="Net velocity between two plate settlers." src="../_images/plate_settler_vnet.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 146 </span><span class="caption-text">Net velocity between two plate settlers.</span></p>
 </div>
@@ -588,7 +589,7 @@
 <p>The Ten State Standards report that plate settlers should have a separation of two inches, with very long plate settlers, which means very deep tanks. Sedimentation tanks are usually 4 meters deep, maybe because filters are also deep. This is a result of the engineering context rather than the basic design principles. The Ten State Standards are primarily based off the modification of existing sedimentation tanks which were usually built deep and then plate settlers were added. This means that there wasn’t added incentive to optimize the entire plate settler and tank process because the tanks were already built. However, AguaClara designs are made to use all of the AguaClara innovations in a green field, meaning that we are incentivized to optimize every part of this design process.</p>
 <p>AguaClara plants can design for changes in the depth and/or plan view area of the tank for optimal plate settler efficiency. We want to have the smallest and shallowest tanks possible for low cost and ease of construction. We know that in the plate settler design, there is a dimensionless parameter of plate spacing to length, <span class="math notranslate nohighlight">\(\frac{S}{L}\)</span>. The ratio is close to constant, which means that if we double the length of the plate settler, we can double the spacing between the plate settler and get the same performance as when we started. Conversely, if we halve the distance between the plate settlers, we can halve the length of the plate settlers. But how far can we push this? Can we make really compact plate settlers?</p>
 <p>What we really want to know is: what is the connection of spacing between plate settlers and performance?</p>
-<div class="figure align-center" id="id26">
+<div class="figure align-center" id="id27">
 <span id="figure-plate-settler-depth"></span><a class="reference internal image-reference" href="../_images/plate_settler_depth.png"><img alt="Relationship between plate settler length and sedimentation tank depth." src="../_images/plate_settler_depth.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 147 </span><span class="caption-text">Relationship between plate settler length and sedimentation tank depth.</span></p>
 </div>
@@ -610,13 +611,13 @@
 <li>Will large or small spacing between plates cause more floc rollup?</li>
 </ol>
 <p>As we have already suggested, small spacing between plates will cause more floc rollup due to the steeper resulting velocity profile between the plates.</p>
-<div class="figure align-center" id="id27">
+<div class="figure align-center" id="id28">
 <span id="figure-floc-rollup"></span><a class="reference external image-reference" href="https://youtu.be/cQJxLO0WOPA"><img alt="Floc rollup between two plates (click to be sent to video)." src="../_images/floc_rollup.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 148 </span><span class="caption-text">Floc rollup between two plates (click to be sent to video).</span></p>
 </div>
 <p>So what does this mean for plate settler spacing? Let’s review some results from lab experiments. The following graph shows minimum plate settler spacing (mm) as a function of floc terminal velocity (mm/s). Some important things to note are that AguaClara plate settlers are designed for a capture velocity of 0.12 mm/s (recall that this capture velocity means that we want to capture flocs that are settling at 0.12 mm/s and faster). Before AguaClara filters were designed and deployed, AguaClara adopted the 0.12 mm/s capture velocity in an effort to reduce effluent turbidity as much as possible.</p>
 <p>Reading the graph, we can see the line for 1 mm/s upflow velocity in the sedimentation tank, <span class="math notranslate nohighlight">\(v_{z_{fb}}\)</span>, at 0.12 mm/s capture velocity requires a minimum plate spacing of about about 2.5 mm to prevent floc rollup. Now, let’s interpret this result. If the upflow velocity increases, we see that the required spacing between plates increases. The results from these experiments will help us answer one of our previous questions: will little flocs or big flocs be most vulnerable to floc rollup? From the graph, we know that it is the little ones. Smaller floc terminal velocities indicate smaller particles, and the graph shows that smaller floc terminal velocities require larger distances of floc spacing to not roll up. The bigger the flocs, the smaller the spacing required to not roll up. Little flocs are harder to capture as you move plates closer together. Little flocs roll up first.</p>
-<div class="figure align-center" id="id28">
+<div class="figure align-center" id="id29">
 <span id="figure-floc-vsed"></span><a class="reference internal image-reference" href="../_images/floc_vsed.png"><img alt="Minimum plate settler spacing as a function of floc sedimentation velocity." src="../_images/floc_vsed.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 149 </span><span class="caption-text">Minimum plate settler spacing as a function of floc sedimentation velocity.</span></p>
 </div>
@@ -625,7 +626,7 @@
 <p>One impact of plate settler spacing is on sedimentation tank depth. We know that the spacing between plate settlers has a strong influence on sedimentation tank depth and closer plate settlers allows for shallower tanks. There is a diminishing effect for small spacings, meaning that the difference in depth between 5 and 2.5 cm spacing is greater than the different in depth between 2.5 and 1 cm spacing. Because AguaClara does not yet have a good model for non-clay flocs, we cannot optimize our plate settler spacing and thus cannot optimize for the shallowest tanks possible.</p>
 <p id="heading-sed-tank-plate-settlers-head-loss-intro">Another impact of plate settler spacing is on flow distribution in the tank. This is related to our previous discussion of pressure recovery and flow distribution. Reduced spacing between plates leads to an increased pressure drop through the plate settlers due to higher head loss. Therefore, plate settlers with small spacing will have more uniform flow distributions because head loss will dominate. The pressure difference between one plate settler and the next would be very small compared to the pressure difference between the bottom of the plate settlers and the top of the plate settlers. This use of head loss can potentially get us better flow distribution. When the plates are brought closer together, there is more shear between the plates because the average velocity remains the same. The velocity gradient is higher between closer plates, which leads to higher shear, and thus higher head loss.</p>
 <p>However, if the plates are closer together, then they will be shorter in length to keep the capture velocity constant. The decrease in length decreases the total amount of shear. The head loss from the competing impacts to shear can be determined through a force balance and the Navier-Stokes equation, as shown in the derivation of <a class="reference internal" href="Sed_Derivations.html#heading-sed-tank-hl-thru-plate-settlers"><span class="std std-ref">head loss through a plate settler</span></a>.</p>
-<div class="figure align-center" id="id29">
+<div class="figure align-center" id="id30">
 <span id="figure-plate-settler-headloss-spacing"></span><a class="reference internal image-reference" href="../_images/plate_settler_headloss_spacing.png"><img alt="Head loss as a function of plate settler spacing." src="../_images/plate_settler_headloss_spacing.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 150 </span><span class="caption-text">Head loss as a function of plate settler spacing.</span></p>
 </div>
@@ -641,7 +642,7 @@
 <li>is the problem regularly intermittent? Is there anything that we can correlate these fluctuations to?</li>
 </ol>
 <p>After asking the operators, we are told that the floc volcanoes appear in the early afternoon each day.</p>
-<div class="figure align-center" id="id30">
+<div class="figure align-center" id="id31">
 <span id="figure-temp-turbidity"></span><a class="reference internal image-reference" href="../_images/temp_turbidity.png"><img alt="Turbidity as a function of time in San Nicolas, Honduras." src="../_images/temp_turbidity.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 151 </span><span class="caption-text">Turbidity as a function of time in San Nicolas, Honduras.</span></p>
 </div>
@@ -649,7 +650,7 @@
 <p>We know that this plant brings water from a water source about 14 km away. The water is transported in a galvanized iron pipe that is placed on the surface of the ground because there is no concern about freezing pipes in Honduras (galvanized iron is not damaged by UV like PVC pipe is). The pipe functions as a 14 km water heater, raising the temperature of the water to the plant after noon.</p>
 <p>But why does the temperature difference cause a problem for the plate settlers?
 The problem is that there is warmer water entering the sedimentation tank than what is in it. This temperature difference causes a density difference in the sedimentation tank and plate settlers. The less dense, warmer water rises to the top of the plate settlers while the cold water drops to the bottom of the plate. This creates a current, allowing water to flow up on the top and settle on the bottom. The temperature gradient changes slowly over a few hours.</p>
-<div class="figure align-center" id="id31">
+<div class="figure align-center" id="id32">
 <span id="figure-temp-tube-settler"></span><a class="reference internal image-reference" href="../_images/temp_tube_settler.png"><img alt="Hot water rising and cold water settling in a tube settler." src="../_images/temp_tube_settler.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 152 </span><span class="caption-text">Hot water rising and cold water settling in a tube settler.</span></p>
 </div>
@@ -674,7 +675,7 @@ The problem is that there is warmer water entering the sedimentation tank than w
 <div class="section" id="submerged-effluent-manifold">
 <span id="heading-sed-tank-effluent-manifold"></span><h3>Submerged Effluent Manifold<a class="headerlink" href="#submerged-effluent-manifold" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>submerged effluent manifold</strong>, sometimes called a launder, collects settled water from the sedimentation tank. It is a horizontal pipe that extends along the length of the tank and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the sedimentation tank. Recall that the influent manifold also uses a submerged pipe and orifice design to distribute flow. However, unlike the influent manifold, the effluent manifold does not include diffusers because we do not need to precisely control velocity and flow direction.</p>
-<div class="figure align-center" id="id32">
+<div class="figure align-center" id="id33">
 <span id="figure-effluent-manifold"></span><a class="reference internal image-reference" href="../_images/effluent_manifold.png"><img alt="Effluent manifold from the side- and top-view." src="../_images/effluent_manifold.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 153 </span><span class="caption-text">Effluent manifold from the side- and top-view.</span></p>
 </div>
@@ -686,7 +687,7 @@ The problem is that there is warmer water entering the sedimentation tank than w
 <li>The launders were also designed to be submerged to simplify construction. Effluent launders that also act as weirs must be installed perfectly level. This is difficult to ensure during construction and thus we have elected to use a single weir to regulate the water level in all of the sedimentation tanks. The water from all of the sedimentation tanks in one treatment train joins together in a common channel before flowing over the exit weir.</li>
 <li>The submerged launder and exit weir system also make it possible to refill and empty a sedimentation tank with clean water, as shown in the following video.</li>
 </ol>
-<div class="figure align-center" id="id33">
+<div class="figure align-center" id="id34">
 <span id="figure-sed-fill-empty"></span><a class="reference external image-reference" href="https://youtu.be/B_LEH1ezd6E"><img alt="Sedimentation tank filling and emptying with clean water (click to be sent to video)." src="../_images/sed_fill_empty.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 154 </span><span class="caption-text">Sedimentation tank filling and emptying with clean water (click to be sent to video).</span></p>
 </div>
@@ -696,11 +697,11 @@ They are located on the top to promote even flow collection and for ease of oper
 <div class="section" id="exit-weir-and-effluent-channel">
 <span id="heading-sed-tank-exit-weir-channel"></span><h3>Exit Weir and Effluent Channel<a class="headerlink" href="#exit-weir-and-effluent-channel" title="Permalink to this headline">¶</a></h3>
 <p>The submerged effluent manifold transports water from the sedimentation tank to a channel that runs perpendicular to the sedimentation bays. The channel collects water from all of the sedimentation bays. Water leaves this channel by flowing over a small wall, called the <strong>exit weir</strong>. The sedimentation tank exit weir controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and sedimentation tank. In construction, great care is taken to ensure that this weir is at the right elevation and is level. After the water flows over the exit weir, it is collected in the <strong>effluent channel</strong>. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box.</p>
-<div class="figure align-center" id="id34">
+<div class="figure align-center" id="id35">
 <span id="figure-channel-labeled"></span><a class="reference internal image-reference" href="../_images/channel_labeled.png"><img alt="Image of sedimentation channels." src="../_images/channel_labeled.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 155 </span><span class="caption-text">Image of sedimentation channels.</span></p>
 </div>
-<div class="figure align-center" id="id35">
+<div class="figure align-center" id="id36">
 <span id="figure-channel-labeled-cad"></span><a class="reference internal image-reference" href="../_images/channel_labeled_cad.png"><img alt="Figure of sedimentation channels." src="../_images/channel_labeled_cad.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 156 </span><span class="caption-text">Figure of sedimentation channels.</span></p>
 </div>
@@ -721,7 +722,7 @@ They are located on the top to promote even flow collection and for ease of oper
 <li>The AguaClara sedimentation tank design is driven by the need for high treatment capability coupled with easy operation and maintenance.</li>
 <li>There is “good” head loss introduced by the influent manifold entrance, diffusers, effluent manifold orifices, and effluent manifold exit. There is “bad” head loss introduced by pressure recovery in the influent channel, influent manifold, and effluent manifold. Even flow distribution is achieved by ensuring that “good” head loss dominates through intentional design.</li>
 </ul>
-<div class="figure align-center" id="id36">
+<div class="figure align-center" id="id37">
 <span id="figure-circuit-full"></span><a class="reference internal image-reference" href="../_images/circuit_full.png"><img alt="Sedimentation tank as a circuit, showing &quot;good&quot; and &quot;bad&quot; head loss." src="../_images/circuit_full.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 157 </span><span class="caption-text">Sedimentation tank as a circuit, showing “good” and “bad” head loss.</span></p>
 </div>
@@ -749,7 +750,7 @@ They are located on the top to promote even flow collection and for ease of oper
 </div>
 <div class="section" id="appendix-photos">
 <h2>Appendix Photos<a class="headerlink" href="#appendix-photos" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id37">
+<div class="figure align-center" id="id38">
 <span id="figure-bottom-of-sed-tank-detail"></span><a class="reference internal image-reference" href="../_images/bottom_of_sed_tank_detail.png"><img alt="Detail of the bottom of the sedimentation tank." src="../_images/bottom_of_sed_tank_detail.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 158 </span><span class="caption-text">Cross-section of the bottom of the sedimentation tank.</span></p>
 </div>
@@ -798,7 +799,7 @@ They are located on the top to promote even flow collection and for ease of oper
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.068',
+            VERSION:'0.069',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
