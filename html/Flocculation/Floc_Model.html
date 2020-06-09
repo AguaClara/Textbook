@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flocculation Model &mdash; AguaClara Textbook 0.069 documentation</title>
+  <title>Flocculation Model &mdash; AguaClara Textbook  documentation</title>
   
 
   
@@ -57,10 +57,6 @@
 
           
             
-            
-              <div class="version">
-                0.069
-              </div>
             
           
 
@@ -494,21 +490,21 @@
 <span class="eqno">(351)<a class="headerlink" href="#equation-cplamint" title="Permalink to this equation">¶</a></span>\[      \frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)=k\bar{\alpha}\bar G_{CS}\theta.\]</div>
 <p>This can be put in terms of <span class="math notranslate nohighlight">\(\bar \Lambda\)</span> for simplicity by using Equation <a class="reference internal" href="#equation-ld">(346)</a> and rearranging in terms of the familiar Camp-Stein parameter, <span class="math notranslate nohighlight">\(\bar G_{CS}\theta\)</span>, to be</p>
 <div class="math notranslate nohighlight" id="equation-gtlam">
-<span class="eqno">(352)<a class="headerlink" href="#equation-gtlam" title="Permalink to this equation">¶</a></span>\[      \bar G_{CS}\theta = \frac{3}{2}\frac{{\left( {{\bar \Lambda ^2} - \bar \Lambda _0^2} \right)}}{{k\pi\bar{\alpha} \bar{d}_P^2}}.\]</div>
+<span class="eqno">(352)<a class="headerlink" href="#equation-gtlam" title="Permalink to this equation">¶</a></span>\[      \bar G_{CS}\theta = \frac{3}{2}\frac{{\left( {{\bar \Lambda ^2} - \bar \Lambda_0^2} \right)}}{{k\pi\bar{\alpha} \bar{d}_P^2}}.\]</div>
 <p>Equation <a class="reference internal" href="#equation-gtlam">(352)</a> gives guidance for flocculator design in that higher values of <span class="math notranslate nohighlight">\(\bar G_{CS}\theta\)</span> are needed for flocculators to achieve greater changes in <span class="math notranslate nohighlight">\(\bar \Lambda\)</span> (or <span class="math notranslate nohighlight">\(C_P\)</span>) or to overcome low <span class="math notranslate nohighlight">\(\bar{\Gamma}\)</span>. It should be noted that the <span class="math notranslate nohighlight">\(\bar \Lambda_0\)</span> term in Equation <a class="reference internal" href="#equation-gtlam">(352)</a> will generally be very small compared to the <span class="math notranslate nohighlight">\(\bar \Lambda\)</span> term for most flocculation scenarios. In this case the initial particle separation distance, <span class="math notranslate nohighlight">\(\bar \Lambda_0\)</span> can be considered negligible. While simplifying the equation, this also gives the result that <strong>flocculators must be designed</strong> not so much for the particle concentrations they will receive but <strong>for the particle concentrations they are intended to produce</strong>.</p>
 <p>Modifying Equation <a class="reference internal" href="#equation-gtlam">(352)</a> to be in terms of <span class="math notranslate nohighlight">\(C_P\)</span> produces:</p>
 <div class="math notranslate nohighlight" id="equation-gtlamsim">
 <span class="eqno">(353)<a class="headerlink" href="#equation-gtlamsim" title="Permalink to this equation">¶</a></span>\[      \bar G_{CS}\theta = \frac{3}{2k\pi\bar{\alpha}}\left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{2/3}.\]</div>
-<p>A desirable way to represent flocculation performance is with the negative log of the fraction of particles remaining (also often referred to as log removal), <span class="math notranslate nohighlight">\(pC^*\)</span>, given in <a class="reference internal" href="#floc-model-swetland-flocculation-sedimentation-2014" id="id7">[SWSL14]</a> as:</p>
+<p>A desirable way to represent flocculation performance is with the negative log of the fraction of particles remaining (also often referred to as log removal), <span class="math notranslate nohighlight">\(pC^\star\)</span>, given in <a class="reference internal" href="#floc-model-swetland-flocculation-sedimentation-2014" id="id7">[SWSL14]</a> as:</p>
 <div class="math notranslate nohighlight" id="equation-pc">
-<span class="eqno">(354)<a class="headerlink" href="#equation-pc" title="Permalink to this equation">¶</a></span>\[      p{C^*}=-\log_{10}\left(\frac{C_{P}}{C_{P_0}}\right)\]</div>
+<span class="eqno">(354)<a class="headerlink" href="#equation-pc" title="Permalink to this equation">¶</a></span>\[      p{C^\star}=-\log_{10}\left(\frac{C_{P}}{C_{P_0}}\right)\]</div>
 <p>Likewise, a way to simplify Equation <a class="reference internal" href="#equation-cplamint">(351)</a> is to put it in terms of the particle volume fraction, <span class="math notranslate nohighlight">\(\phi\)</span>, defined as:</p>
 <div class="math notranslate nohighlight" id="equation-phi">
 <span class="eqno">(355)<a class="headerlink" href="#equation-phi" title="Permalink to this equation">¶</a></span>\[      \phi=\frac{C_P}{\rho_P}=\frac{\pi}{6}\left(\frac{\bar{d}_P}{\bar \Lambda}\right)^3.\]</div>
-<p>Putting Equation <a class="reference internal" href="#equation-cplamint">(351)</a> in terms of <span class="math notranslate nohighlight">\(pC^*\)</span> and
+<p>Putting Equation <a class="reference internal" href="#equation-cplamint">(351)</a> in terms of <span class="math notranslate nohighlight">\(pC^\star\)</span> and
 <span class="math notranslate nohighlight">\(\phi\)</span> results in:</p>
 <div class="math notranslate nohighlight" id="equation-pclam">
-<span class="eqno">(356)<a class="headerlink" href="#equation-pclam" title="Permalink to this equation">¶</a></span>\[      p{C^*}=\frac{3}{2}\log_{10}\left[\frac{2}{3}\left(\frac{6}{\pi}\right)^{2/3}k\pi\bar{\alpha}\bar G_{CS}\theta\phi_0^{2/3}+1\right].\]</div>
+<span class="eqno">(356)<a class="headerlink" href="#equation-pclam" title="Permalink to this equation">¶</a></span>\[      p{C^\star}=\frac{3}{2}\log_{10}\left[\frac{2}{3}\left(\frac{6}{\pi}\right)^{2/3}k\pi\bar{\alpha}\bar G_{CS}\theta\phi_0^{2/3}+1\right].\]</div>
 <p>Equation <a class="reference internal" href="#equation-pclam">(356)</a> is a predictive performance model for flocculation in flows with long range particle transport toward collisions dominated by viscous forces. It is proposed as applicable to both laminar and turbulent hydraulic flocculators. Given the properties of the flocculator (<span class="math notranslate nohighlight">\(\bar G_{CS}\)</span> and <span class="math notranslate nohighlight">\(\theta\)</span>) and its influent (<span class="math notranslate nohighlight">\(\phi_0\)</span> and <span class="math notranslate nohighlight">\(\bar{\alpha}\)</span>), flocculation performance can be predicted in terms of <span class="math notranslate nohighlight">\(pC^*\)</span>. The development of Equation <a class="reference internal" href="#equation-pclam">(356)</a> was the result of a team effort of Cornell University’s AguaClara program and hence it will be subsequently referred to as the AguaClara flocculation model.</p>
 </div>
 <div class="section" id="experimental-protocols">
@@ -516,7 +512,7 @@
 <p>Equation <a class="reference internal" href="#equation-pclam">(356)</a> was tested under turbulent conditions. The design scheme chosen to meet these requirements was a tube flocculator, illustrated in <a class="reference internal" href="#figure-apparatus"><span class="std std-numref">Fig. 88</span></a> and described in <a class="reference internal" href="#floc-model-pennock-theoretical-2016" id="id8">[PCWSL16]</a>. This tube flocculator operated in the turbulent flow regime, which for pipe flow means that <span class="math notranslate nohighlight">\(Re&gt;4,000\)</span> <a class="reference internal" href="#floc-model-granger-fluid-1995" id="id9">[Gra95]</a>. The change in mean energy dissipation rate due to any modification to the system was approximated by</p>
 <div class="math notranslate nohighlight" id="equation-edr">
 <span class="eqno">(357)<a class="headerlink" href="#equation-edr" title="Permalink to this equation">¶</a></span>\[      \bar{\varepsilon}=\frac{gh_\ell}{\theta},\]</div>
-<p>where <span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravitational force and <span class="math notranslate nohighlight">\(h_\ell\)</span> is the head loss across the flocculator. As mentioned previously, the use of <span class="math notranslate nohighlight">\(\bar{\varepsilon}\)</span> assumes that the energy dissipation rate throughout the flocculator is completely uniform so that it can be represented with a simple spatial average rather than a weighted average accounting for the proportion of the flow passing through different zones of energy dissipation rate. This approximation requires that the majority of energy dissipation (represented by head loss) is due to fluid shear (minor loss) in the bulk flow. If the head loss across a flocculator were primarily as a result of shear on the reactor walls (major loss), only a small fraction of the flow would experience this energy dissipation rate in the near-wall zone, and estimating the mean energy dissipation rate by this method would be invalid.</p>
+<p>where <span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravitational force and <span class="math notranslate nohighlight">\(h_\ell\)</span> is the head loss across the flocculator. As mentioned previously, the use of <span class="math notranslate nohighlight">\(\bar \varepsilon\)</span> assumes that the energy dissipation rate throughout the flocculator is completely uniform so that it can be represented with a simple spatial average rather than a weighted average accounting for the proportion of the flow passing through different zones of energy dissipation rate. This approximation requires that the majority of energy dissipation (represented by head loss) is due to fluid shear (minor loss) in the bulk flow. If the head loss across a flocculator were primarily as a result of shear on the reactor walls (major loss), only a small fraction of the flow would experience this energy dissipation rate in the near-wall zone, and estimating the mean energy dissipation rate by this method would be invalid.</p>
 <p>It is hypothesized, however, that the constrictions in the tube flocculator created submerged free jets downstream, generating fluid shear across the cross section of the flow <a class="reference internal" href="#floc-model-pennock-theoretical-2016" id="id10">[PCWSL16]</a>. This hypothesis is supported by a calculation of the head loss due to wall shear using the Darcy-Weisbach equation <a class="reference internal" href="#floc-model-granger-fluid-1995" id="id11">[Gra95]</a>. The turbulent tube flocculator would be expected to have a total head loss of around 7 cm if only wall shear were present, but an average head loss of 90 cm was measured across the flocculator by means of a differential pressure sensor, indicating that significant fluid shear is present.</p>
 <p>Referring to Equation <a class="reference internal" href="#equation-edr">(357)</a>, changing the head loss by changing the constriction of the tubes or changing the water elevation difference across the flocculator would change the energy dissipation rate. Likewise, either of the above two modifications would change the mean hydraulic residence time in the flocculator. This could also be accomplished by changing the length of the flocculator.</p>
 <div class="figure align-center" id="id36">
@@ -802,7 +798,7 @@ particles.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.069',
+            VERSION:'',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
