@@ -18,34 +18,20 @@ serves as a basis for design. The final parameter derived is
 Width
 -----
 
-Our two restrictions are: - Ensuring that we maintain the :math:`\bar G`
-we get based on our input parameters - Ensuring that
-:math:`3 < \frac{H_e}{S} < 6`
+Our two restrictions are: - Ensuring that we maintain the :math:`\bar G` we get based on our input parameters - Ensuring that :math:`3 < \frac{H_e}{S} < 6`
 
-First, we begin by setting the two equations for energy dissipation
-rate, :math:`\bar \varepsilon = \nu \bar G^2` and
-:math:`\bar \varepsilon = \frac{g h_{L_{floc}}}{\theta}` equal to each
-other to bring :math:`\bar G` into the equation.
+First, we begin by setting the two equations for energy dissipation rate, :math:`\bar \varepsilon = \nu \bar G^2` and :math:`\bar \varepsilon = \frac{g h_{L_{floc}}}{\theta}` equal to each other to bring :math:`\bar G` into the equation.
 
 .. math:: \nu \bar G^2 = \frac{g h_{L_{floc}}}{\theta}
 
-**Very Important Note:**
-
-For the following steps, we will consider the flow through a single
-flow expansion :math:`H_e`, not through the entire flocculator. This
-could be from baffle to obstacle, obstacle to baffle, obstacle to
-obstacle, or baffle to baffle depending on how many obstacles are in the
-design. This means that we are briefly redefining :math:`\theta` to be
-the time it takes for the flow to fully expand after a flow contraction.
-:math:`\theta` no longer represents the time it takes for the flow to go
-through the entire flocculator.
+For the following steps, we will consider the flow through a single flow expansion :math:`H_e`, not through the entire flocculator. This could be from baffle to obstacle, obstacle to baffle, obstacle to obstacle, or baffle to baffle depending on how many obstacles are in the design. This means that the residence time is the time between expansions, :math:`\theta_e`, and the head loss is for one expansion, :math:`h_{L_{e}}`.
 
 From here we make three subsequent substitutions: first
-:math:`h_{L_{floc}} = K \frac{\bar v^2}{2g}`, then
-:math:`\theta = \frac{H_e}{\bar v}`, and finally
+:math:`h_{L_{e}} = K \frac{\bar v^2}{2g}`, then
+:math:`\theta_e = \frac{H_e}{\bar v}`, and finally
 :math:`\bar v = \frac{Q}{WS}`
 
-.. math:: \nu \bar G^2 = K \frac{\bar v^2}{2 \theta}
+.. math:: \nu \bar G^2 = K \frac{\bar v^2}{2 \theta_e}
 
 .. math:: \nu \bar G^2 = K \frac{\bar v^3}{2 H_e}
 
