@@ -1,0 +1,655 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, AguaClara Cornell
+# This file is distributed under the same license as the AguaClara Textbook
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: AguaClara Textbook EXPERIMENTAL\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-19 16:17-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:5
+msgid "Functionality in RST and AguaClara Convention"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:6
+msgid ""
+"This file will explain how to use RST functionality including images, "
+"tables, code, equations, and both internal and cross-document references."
+" Additionally, this document is intended to define convention for this "
+"textbook project. Any syntax included in this document should be used "
+"when contributing to the textbook project. If you come across a function "
+"for which there is no convention, please edit this file to include it "
+"here."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:13
+msgid "How to use this file:"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:14
+msgid ""
+"Open the source code of the file next to the rendered code. The source "
+"code is found by clicking \"View page source\" at the top of the page. "
+"Follow along with the source code and rendered code, using the source "
+"code as a reference for the proper syntax."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:16
+msgid ""
+"You will often see this format ``.. word::``. The 'word' in this case is "
+"called a directive. Directives are what RST uses to format text. "
+"Directives allow the inclusion of figures, math, tables, references, "
+"color, and much more."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:18
+msgid ""
+"You will also often see this format ``.. "
+"_words_separated_by_underscores:``. These are called tags, and they exist"
+" so that the location of the tag can be referenced during some other "
+"section or document in the textbook. They are defined by ``.. _`` at the "
+"beginning of the tag and ``:`` at the end of the tag. There is convention"
+" for how to name tags. So before you go off writing tags all willy-nilly "
+"in your textbook documents, read the entirety of this document and use it"
+" as your convention bible. For tags and everything else."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:20
+msgid ""
+"**Proper indentation and line spacing is extremely important when writing"
+" in RST**"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:26
+msgid "Headings, Bullet Points, and Numbered Lists"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:29
+msgid "Headings"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:30
+msgid ""
+"Headings are defined by an underline and sometimes overline consisting of"
+" one of the following characters: ``*,  =,  -,  ^, and \"``. RST does not"
+" give any particular character hierarchy over another for defining "
+"titles, sections, subsections, or so on. The user indicates character "
+"hierarchy for headings and can use whatever order they want, and the "
+"order can change between documents. However, it is better to stick to the"
+" same convention throughout a project. **This is the convention for the "
+"AguaClara textbook:**"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:32
+msgid "`*` with overline, for document titles"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:33
+msgid "`=`, for sections"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:34
+msgid "`-`, for subsections"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:35
+msgid "`^`, for subsubsections"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:36
+msgid "`\"`, for subsubsubsections"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:38
+msgid ""
+"Each title, section and subsection should have a tag before it. Tags for "
+"document titles **must** begin with ``title`` and tags for headings "
+"**must** begin with ``heading``. For example, this document's title tag "
+"is ``title_aguaclara_rst_convention`` and this heading's tag is "
+"``heading_headings_bullets_and_lists``. There should always be a blank "
+"line between the tag and the actual heading, else references to the tag "
+"will not work. For the sake of document readability, include 3 blank "
+"lines before the section tag and 2 blank lines before the subsection tag."
+" Lesser headings (subsubsections and beyond) do not need to have tags, "
+"and there should be one blank line between lower headings and the "
+"preceding content. Here is an example. Note the amount and location of "
+"blank lines::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:66
+msgid "Two rules:"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:68
+msgid "If under and overlines are used, their length must be identical"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:69
+msgid "The length of the underline must be at least as long as the title itself."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:72
+msgid "Lists and Bullets"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:73
+msgid ""
+"This section is lifted from `this rst cheatsheet <https://thomas-"
+"cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-"
+"literal-blocks>`_. The following code::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:84
+msgid "gives:"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:86
+msgid "This is a bulleted list."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:87
+msgid "It has two items, the second item uses two lines. (note the indentation)"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:90
+msgid "This is a numbered list."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:91
+msgid "It has two items."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:93
+msgid ""
+"if two lists are separated by a blank line only, then the two lists are "
+"not differentiated."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:99
+msgid "Figures"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:100
+msgid ""
+"Every figure should have a tag, alternative text, and a caption. Figure "
+"tags must begin with ``figure``.  Below, the two figures are labelled "
+"``figure_fluffy_cat`` and ``figure_mountain``. The alternative text is a "
+"very short description of the figure. A caption is written below all of "
+"the figure specifications, with a blank line to separate the specs from "
+"the caption."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:102
+msgid "Use the following syntax for including figures from online sources::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:114
+msgid ""
+"Use this syntax for figures located within the /Textbook repository on "
+"GitHub::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:127
+msgid ""
+":numref:`figure_fluffy_cat` and :numref:`figure_mountain` are the two "
+"figures generated using the code above."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:136
+msgid "This is a caption."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:138
+msgid "See :numref:`figure_mountain` for a typical mountain view."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:147
+msgid ""
+"Here is a figure tagged ``figure_mountain``. Specify the figure location "
+"with folder/image.jpg. The base directory for figure location is the "
+"directory of the file you are writing. In this case, that is "
+"Textbook/Textbook_Creation_Help."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:159
+msgid ""
+"Plant operator removing plate settlers from an AguaClara sedimentation "
+"tank."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:164
+msgid "Math and Equations"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:165
+msgid ""
+"Math is very cool, and works natively in RST using LaTeX math syntax. In-"
+"line math can be written with the following syntax: ``:math:`y = ax^2 + "
+"bx + c``` which displays :math:`y = ax^2 + bx + c`. To display equations "
+"in their own line, use the following syntax::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:172
+msgid "Which displays as:"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:179
+msgid ""
+"Equations do not have tags, they can be referenced via their labels, as "
+"you can see above. Equation labels don't need to begin with any "
+"particular word, unlike tags. Not every equation needs a label. Only "
+"label equations that you need to reference. If you need to reference an "
+"equation that does not have a label, give it an intuitive one. All "
+"equations are numbered, regardless of whether or not they are labelled. "
+"Complex equations can be generated as well, since RST uses LaTeX math."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:185
+msgid ""
+"When introducing a new equation, Make sure to specify what the parameters"
+" in the equation mean. Once the equation has been introduced, its "
+"parameters do not need to be explained when displayed in the future. Use "
+"the following syntax for introducing equations::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:204
+msgid "Such that:"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:205
+msgid ":math:`Q =` fluid flow rate"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:206
+msgid ":math:`\\bar v =` fluid average velocity"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:207
+msgid ":math:`A =` pipe area"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:208
+msgid ":math:`r =` pipe radius"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:209
+msgid ":math:`D =` pipe diameter"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:215
+msgid "Tables"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:216
+msgid "Tables should be made using csv for compatibility with excel::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:228
+msgid "The code block above generates the following table:"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:232
+msgid "Table caption goes here"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:1
+msgid "name"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:1
+msgid "firstname"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:1
+msgid "age"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:1
+msgid "Smith"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:1
+msgid "John"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:1
+msgid "40"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:1
+msgid "John, Junior"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:1
+msgid "20"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:240
+msgid ""
+"Every table should have a tag, shown in the example above as "
+"``table_an_example_table``. A table's tag must begin with ``table``"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:246
+msgid "Links and References"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:249
+msgid "Links"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:250
+msgid ""
+"Links are fairly straightforward, use the following syntax, ```hyperlink "
+"word display <https://www.aguaclarareach.org/>`_``, and look like this "
+"`hyperlink word display <https://www.aguaclarareach.org/>`_. If you will "
+"be using the same link many times in a document, you can place this line "
+"at the end of the document::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:254
+msgid "Now, the syntax ``AguaClara_`` will link to the specified site: AguaClara_"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:257
+msgid "References"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:258
+msgid ""
+"References work by calling any \"target\"- either tags (titles, headings,"
+" figures, and tables) or labels (equations). These reference formats work"
+" internally- calling something within the same document and externally- "
+"calling content in some other document within this same project."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:260
+msgid ""
+"Before you start tagging and labelling content with any degree of willy-"
+"nilly-ness, make sure that you are not repeating tags or labels. You can "
+"check to see if your tag or label is taken by visiting libraries on "
+"GitHub. :download:`Check here for tags and labels: "
+"</_static/text_documents/heading_index.txt>`."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:263
+msgid "Document Titles and Headings"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:264
+msgid ""
+"This content should be called with the ``:ref:`tag``` functionality. You "
+"can also choose what text will be shown. For example, ``:ref:`This text "
+"<heading_links_and_references>``` gives :ref:`This text "
+"<heading_links_and_references>`."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:267
+msgid "Figures and Tables"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:268
+msgid ""
+"These can be referenced in the exact same way as titles and headings. "
+"However, they can *also* be referenced using the ``:numref:`tag``` "
+"syntax. When this is done, there cannot be text written that will link to"
+" the figure. Instead, what shows up is 'Fig. 3' or 'Table 3'."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:270
+msgid "Figures: ``:numref:`figure_fluffy_cat``` gives :numref:`figure_fluffy_cat`"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:271
+msgid ""
+"Tables: ``:numref:`table_an_example_table``` gives "
+":numref:`table_an_example_table`"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:276
+msgid "Equations"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:278
+msgid ""
+"Equations are a little different, ``:ref:`label``` does not work. They "
+"are instead called with the ``:eq:`label``` syntax. You cannot choose "
+"what text displays in the reference like you can with titles, headings, "
+"figures, and tables. Whenever you reference an equation, parentheses "
+"surrounding the equation's number will be the linked-text."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:280
+msgid ""
+"Equations: ``:eq:`quadratic_equation``` only generates a number in "
+"parentheses. Thus, this reference is usually preceeded by the word: "
+"'equation.' Like this: equation :eq:`quadratic_equation`."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:284
+msgid "Citations"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:286
+msgid ""
+"Heavily used `this reference <http://build-me-the-docs-"
+"please.readthedocs.io/en/latest/Using_Sphinx/UsingBibTeXCitationsInSphinx.html>`_"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:288
+msgid ""
+"Parenthetical referencing can be produced in Sphinx_ using the "
+"sphinxcontrib-bibtex_ extension."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:291
+msgid ""
+"The sphinxcontrib-bibtex_ extension allows BibTeX_ citations to be "
+"inserted into documentation generated by Sphinx."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:294
+msgid ""
+"The extension defines a new ``bibliography`` directive and a new ``cite``"
+" role."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:296
+msgid ""
+"These work similarly to the LaTeX's ``thebibliography`` environment and "
+"``\\cite`` command."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:299
+msgid ""
+"The references are stored in a separate plain text BibTeX format file. "
+"Currently, only the ``unsrt`` and ``plain`` BibTeX styles are supported."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:302
+msgid ""
+"Additionally, PDFs of sources are stored in the \"_static/references\" "
+"folder, which then uses internal links, ensures we never lose access, and"
+"  keeps everything in one place."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:305
+msgid "Example"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:307
+msgid "Within the body of the document, use the following syntax::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:311
+msgid "And place the directive at the very end of the document::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:317
+msgid ""
+"The \"keyprefix\" should be related to the type of document. For example,"
+" when within flocculator_design documents, the keyprefix should be "
+"`floc_design-` and all citations should be prefixed with `floc_design`, "
+"and on this example page is \"ex\". Every page will require its own "
+"keyprefix which prevents confusion of repeat citations in Travis."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:319
+msgid ""
+"The ``references.bib`` file should contain a BibTex_ bibliography, "
+"including an entry for:"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:332
+msgid "A working example: :cite:`ex-Strunk1979`."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:339
+msgid "Writing Code Blocks (not actual, executable code)"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:340
+msgid ""
+"You can write code in-line or as a code block. Note that these ways of "
+"showing code *only display code*, they do not generate a code block that "
+"actually runs. There are two ways of doing each. For in-line code, use "
+"````this syntax```` or ``:code:`this syntax```. For code blocks, use this"
+" syntax:"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:348
+msgid "Or this syntax::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:358
+msgid "Writing Python and Including Doctests"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:361
+msgid "Doctests"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:363
+msgid ""
+"When writing code for the textbook, some sections will be written in "
+"executable code to demonstrate functions or run calculations. They will "
+"not, however, run automatically in the webpage, so to ensure that they "
+"are correct before they are published they are tested with doctests. "
+"Doctests compare the written code with the expected result typed manually"
+" below it. In the Anaconda Prompt, simply run the :code:`make doctest` in"
+" the correct directory and branch. When run, you see where your "
+"executable code doesn't match up with the \"answer\" provided by you, the"
+" contributor. One reason this is important is because if functions in "
+"aguaclara change, their outputs might alter from old versions. Doctests "
+"will show where this happens. Additionally, typos and other mistakes can "
+"be seen. Further documentation on running doctest can be found `here "
+"<http://docs.sphinxdocs.com/en/latest/step-3.html>`_."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:365
+msgid ""
+"The way to ensure a doctest will run is to precede each line of code with"
+" '>>>', the default Python prompt. When a doctest is run, every line of "
+"code with '>>>' in front of it will be run within a directory. The "
+"testing becomes relevant for lines which do not have '>>>' in front of "
+"them. Any line that is directly below a line beginning with '>>>' is "
+"assumed to be an output of the line of code just above it. In the example"
+" below, :code:`19` is the expected output of the line :code:`>>> "
+"print(5+14)`. If the output of that line did not match the line below, "
+"doctests would alert you! Below are some examples of doctestable code."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:371
+msgid "You can even print and test tables in doctests:"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:384
+msgid "Python will also \"remember\" variables from one block to the next:"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:389
+msgid ""
+"To get doctests to pass through Travis, you'll have to add any packages "
+"you use to the install step in \".travis.yml\". Under install, add a line"
+" that says :code:`pip install my_package==0.0.0`. When doing this, make "
+"sure to specify the version as functionality can change!"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:391
+msgid ""
+"Though there are other ways to include code in an RST document, this "
+"method makes doctesting possible, and will make it easy to change the "
+"documents should aguaclara functions change, therefore this is the best "
+"way to include code! Additionally it makes it easy to see the difference "
+"between the code and the output, whereas other methods are less clear in "
+"this distinction."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:394
+msgid "Inserting Plots"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:396
+msgid ""
+"Inserting plots using this method should only be done if we can integrate"
+" this with figures."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:7
+msgid ""
+"(`Source code <../Textbook_Creation_Help/example_aguaclara_rst-1.py>`__, "
+"`png <../Textbook_Creation_Help/example_aguaclara_rst-1.png>`__, "
+"`hires.png "
+"<../Textbook_Creation_Help/example_aguaclara_rst-1.hires.png>`__, `pdf "
+"<../Textbook_Creation_Help/example_aguaclara_rst-1.pdf>`__)"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:410
+msgid "Inserting Video"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:412
+msgid ""
+"To insert a video and use it like a figure, take an instructive snapshot "
+"of the video. Save that as an image, and create a figure linking to that "
+"image. Then, make the video open when the video is clicked on by setting "
+"the video url as the \"target\" for the image. To indicate it is a video,"
+" include the play bar. Here is the relevant code::"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:420
+msgid "And here is a working example:"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:425
+msgid "This is a floc blanket forming"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:431
+msgid "Assorted Other Convention"
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:432
+msgid ""
+"Colored :red:`text`. Add colors/styles by using roles defined in /conf.py"
+" and /_static/css/custom.css."
+msgstr ""
+
+#: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:445
+msgid ""
+"Convert a DOI into a URL Given the following DOI. "
+"DOI:10.2166/aqua.2006.062 This is the url. "
+"http://dx.doi.org/10.2166/aqua.2006.062"
+msgstr ""
+
