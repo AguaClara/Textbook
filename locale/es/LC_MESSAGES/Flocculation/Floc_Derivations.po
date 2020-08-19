@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, AguaClara Cornell
+# This file is distributed under the same license as the AguaClara Textbook
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: AguaClara Textbook EXPERIMENTAL\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-19 16:17-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../Flocculation/Floc_Derivations.rst:5
+msgid "Flocculation Derivations"
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:10
+msgid "Design Equations for the Flocculator"
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:12
+msgid ""
+"This document contains the derivation for the minimum allowable width of "
+"a flocculator channel based on the requirements that :math:`3 < "
+"\\Pi_{H_eS} < 6` and that we maintain the :math:`\\bar G` that serves as "
+"a basis for design. The final parameter derived is :math:`W_{Min, \\, "
+"\\Pi_{H_eS}}`."
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:19
+msgid "Width"
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:21
+msgid ""
+"Our two restrictions are: - Ensuring that we maintain the :math:`\\bar G`"
+" we get based on our input parameters - Ensuring that :math:`3 < "
+"\\frac{H_e}{S} < 6`"
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:23
+msgid ""
+"First, we begin by setting the two equations for energy dissipation rate,"
+" :math:`\\bar \\varepsilon = \\nu \\bar G^2` and :math:`\\bar "
+"\\varepsilon = \\frac{g h_{L_{floc}}}{\\theta}` equal to each other to "
+"bring :math:`\\bar G` into the equation."
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:27
+msgid ""
+"For the following steps, we will consider the flow through a single flow "
+"expansion :math:`H_e`, not through the entire flocculator. This could be "
+"from baffle to obstacle, obstacle to baffle, obstacle to obstacle, or "
+"baffle to baffle depending on how many obstacles are in the design. This "
+"means that the residence time is the time between expansions, "
+":math:`\\theta_e`, and the head loss is for one expansion, "
+":math:`h_{L_{e}}`."
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:29
+msgid ""
+"From here we make three subsequent substitutions: first :math:`h_{L_{e}} "
+"= K \\frac{\\bar v^2}{2g}`, then :math:`\\theta_e = \\frac{H_e}{\\bar "
+"v}`, and finally :math:`\\bar v = \\frac{Q}{WS}`"
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:40
+msgid "Now we can solve this equation for channel width, :math:`W`."
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:44
+msgid ""
+"From here, we can define :math:`\\Pi_{H_eS} = \\frac{H_e}{S}` and "
+"substitute :math:`S = \\frac{H_e}{\\Pi_{H_eS}}` into the previous "
+"equation for :math:`W` to get :math:`W_{Min, \\, \\Pi_{H_eS}}`:"
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:56
+msgid ""
+"This equation represents the absolute smallest width of a flocculator "
+"channel if we consider the lowest value of :math:`\\Pi_{H_eS}` and the "
+"highest possible value of :math:`H_e`:"
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:58
+msgid ":math:`H_e = H`, this implies that there are no obstacles between baffles"
+msgstr ""
+
+#: ../../Flocculation/Floc_Derivations.rst:59
+msgid ":math:`\\Pi_{H_eS} = 3`"
+msgstr ""
+

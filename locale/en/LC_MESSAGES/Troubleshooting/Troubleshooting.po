@@ -1,0 +1,439 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, AguaClara Cornell
+# This file is distributed under the same license as the AguaClara Textbook
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: AguaClara Textbook EXPERIMENTAL\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-19 16:17-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../Troubleshooting/Troubleshooting.rst:2
+msgid ""
+"Can we make some sort of a diagnostic guide based on symptoms? Make the "
+"following into a giant table."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:9
+msgid "Problems"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:12
+msgid "Temperature fluctuations"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:14
+msgid ""
+"Calcium from calcium hypochlorite combines with carbonate in the water to"
+" form low solubility calcium carbonate."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:18
+msgid "Solutions"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:20
+msgid ""
+"Drip chlorine into water rather than injecting it to eliminate formation "
+"of precipitate at the injection point"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:22
+msgid ""
+"Use valves at the end of the pipeline to control transmission line flow "
+"rate rather than upstream control. Review the transmission line to ensure"
+" that all sections of the line have flow controlled by limiting available"
+" driving head. Air entrainment occurs when the available head exceeds the"
+" head required to transmit the target flow."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:28
+msgid "Table of symptoms, problems, and solutions for AguaClara plant operation."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "Observation"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "Problem"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "Solution"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "Air bubbles"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid ""
+"Air entrainment in the transmission line and transport to a high pressure"
+" zone in the pipeline where the air is dissolved in the water"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid ""
+"Use downstream head loss to prevent air entrainment in transmission line "
+"or add a unit process (TBD) that removes excess dissolved air"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "Bubbles in sedimentation tanks"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "anaerobic production in methane in settled sludge"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "clean sedimentation tank and check design to eliminate all settled sludge"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "Bubbles in EStaRS"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid ""
+"water entering the plant is supersaturated with air and EStaRS filters "
+"operate at very low pressure (compared with OStaRS)"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "eliminate air entrainment in transmission line"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "Short filter runtimes"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "poor performance of floc/sed system or clogged slotted pipes or air lock"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "various solutions"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "Gradual increase in post backwash head loss in filters"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "slotted pipes are clogging"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid ""
+"acid flush by pouring HCl (need the concentration) into the outlet pipes "
+"OR disassemble filter and clean with a pressure washer"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid "Scale deposition in the distribution system"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid ""
+"increase in temperature from groundwater conditions causes "
+"supersaturation of calcium carbonate"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid ""
+"reduce the pH of the water slightly (perhaps 0.5 pH units) to eliminate "
+"the supersaturation"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid ""
+"Clogging of chlorination system tubes and formation of precipitate at the"
+" injection point"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid ""
+"dissolution of carbon dioxide from the atmosphere causes precipitation of"
+" calcium carbonate"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:1
+msgid ""
+"Reduce exposure of the solution to the atmosphere OR drip the chlorine "
+"into the filtered water"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:42
+msgid "High head loss after backwash in EStaRS"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:44
+msgid ""
+"The 60 cm diameter EStaRS filters at El PODA had a very high head loss of"
+" 43 cm within a few minutes of ending backwash. The maximum available "
+"head is only 50 cm and thus filter runs lasted only a few hours. El PODA "
+"was the 2nd site where 60 cm diameter EStaRS filters were used. Given "
+"that the filter backwashed just fine without excess head required it "
+"appeared that the inlet system was performing as expected and did not "
+"have excessive head loss."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:46
+msgid ""
+"The key insight was that the top two layers of sand stopped producing "
+"filter water soon after beginning a filter run. A complete stoppage means"
+" that clogging ISN'T the issue! Clogging would decrease the flow rate, "
+"but it wouldn't stop flow because the clogging would have to be absolute "
+"to stop the flow."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:48
+msgid ""
+"The failure was that the water traveling horizontally in the branches and"
+" trunk carries air bubbles to the vertically downward flowing pipe (see a"
+" photo here). The air accumulates in that pipe and the water falls "
+"through the air losing energy like a waterfall. Water completely stops "
+"flowing through the layers of the filter that exit through that trunk "
+"line when the height of the air is equal to the available energy driving "
+"water through the StaRS filter."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:50
+msgid ""
+"There are two improvements required at El PODA. First, the transmission "
+"line must be operated with downstream flow control to prevent air "
+"entrapment and compression. That will likely be sufficient to solve the "
+"problem of air in the filters. The second improvement is to add manual "
+"air release valves to the top of each of the trunk lines so that operates"
+" can expel air during filtration. Note that these air vents must have a "
+"valve that is closed during backwash because the filter is under negative"
+" pressure during backwash and would suck air into the filter through "
+"those vents if they were open."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:52
+msgid ""
+"EStaRS with the wing inlets make a possible failure mode. At the end of "
+"the backwash if the operator closes the valve in the siphon quickly, the "
+"water pressure rises quickly inside the filter. When the water rises in "
+"the three entry passages it is possible that the water carries the sand "
+"inside the branches with wings. And once there is sand inside the pipes, "
+"this sand may hinder the flow of water during the filter run."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:54
+msgid ""
+"The solution is in the operation of the system and maybe a change in the "
+"design. If the operators are manipulating pipe stubs to do the backwash, "
+"then the first step is to remove the pipe stubs before closing the valve."
+" The other way around the problem would be to close the valve slowly to "
+"ensure that the water rises very slowly in the inlets."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:57
+msgid "Encrustation of filter pipes at Las Vegas"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:71
+#, python-format
+msgid ""
+"Remove the encrustation without disassembling the filter by pouring "
+"buckets of hydrochloric acid into pipes that are inserted into the "
+"couplings in the filtered water effluent box. The hydrochloric acid at "
+"Las Vegas is a 10% solution. Dilute that solution by a factor of 5 to "
+"produce a 2% HCl solution. Note that all of the acid and water injected "
+"into the filter will simply go into the filter box and increase the water"
+" level during this treatment. When diluting acid always add acid to "
+"water!"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:60
+msgid ""
+"Insert pipe stubs into the couplings in the filter inlet box to prevent "
+"any water from flowing through the filter"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:61
+msgid ""
+"Remove the drain pipe stub so that any effluent from the filter goes to "
+"drain"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:62
+msgid "Insert pipe stubs into the couplings in the filtered water effluent box"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:63
+msgid "Fill a 20 L bucket with 16 L of water (mark the bucket level!)"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:64
+msgid "Pour 4 L of 10% HCl into the bucket to reach a total of 20 L"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:65
+msgid "Mix the diluted acid with a PVC pipe for a couple of minutes"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:66
+msgid "Pour the 20 L of 2% HCl into the bottom outlet of the filter"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:67
+#: ../../Troubleshooting/Troubleshooting.rst:70
+msgid "Wait 5 minutes"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:68
+msgid ""
+"Repeat previous 2 steps 5 times to pour a total of 100 L of acid into the"
+" bottom outlet pipe (note that the goal is for this total volume to "
+"exceed the outlet pipe, trunk, and branch pipes volume)"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:69
+msgid "Pour 20 L of water into the bottom outlet pipe"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:71
+msgid ""
+"Repeat previous 2 steps 5 times to push all (or at least most) of the "
+"acid through the outlet pipes and into the sand bed"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:73
+msgid ""
+"Repeat steps 3 to 12 for the middle outlet pipe and then for the top "
+"outlet pipe."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:75
+msgid ""
+"With each addition of acid or water there should be a fresh batch of "
+"carbon dioxide bubbles released from the filter."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:77
+msgid ""
+"Turn the filter back on and dump all water to waste for at least 5 "
+"minutes and until the turbidity is less than 1 NTU."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:80
+msgid "Slime at Las Vegas"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:81
+msgid ""
+"Iron bacteria slime showed up with application of hydrochloric acid at "
+"Las Vegas. The acid was needed to slightly reduce the pH to reduce the "
+"amount of encrustation in the distribution system. The addition of acid "
+"was correlated with the growth of a slime in the flocculator and "
+"sedimentation tanks. It was hypothesized that this slime was iron "
+"oxidizing bacteria (see :numref:`figure_Las_Vegas_Slime`)."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:90
+msgid ""
+"The slime at Las Vegas showed up in the flocculator and sedimentation "
+"tanks."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:92
+msgid ""
+"Iron oxidizing bacteria need oxygen and reduced iron. The Las Vegas water"
+" source is a stream that is clearly groundwater given its propensity to "
+"deposit calcium carbonate on everything in the stream. Thus the stream "
+"water is likely poor in oxygen."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:94
+msgid ""
+"We are adding oxygen at the LFOM. That oxygen can chemically oxidize the "
+"iron, but the rate of oxidation is a function of pH (see "
+":numref:`figure_Oxygenation_vs_time`). When we decrease the pH it slows "
+"the oxidation of iron and thus keeps a higher concentration of reduced "
+"iron available for bacteria to oxidize. Thus the LFOM adds oxygen needed "
+"by the iron oxidizing bacteria and the acid prevents the iron from being "
+"chemically oxidized."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:96
+#, python-format
+msgid ""
+"`The rate of iron oxidation is strongly pH dependent "
+"<https://njaes.rutgers.edu/pubs/fs516/>`_ At pH 7.0, 90% Fe+2 oxidation "
+"requires 1 hour at 21°C and 10 hours at 5°C. At pH 8.0, 90% Fe+2 "
+"oxidation occurs in 30 seconds. At pH 6.0 it requires 100 hours."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:108
+msgid ""
+"The time required for oxidation is strongly dependent on pH. From "
+"`Lenntech <http://www.lenntech.com/iron-bacteria.htm>`_."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:110
+msgid ""
+"For several reasons, routine chemical disinfectants that effectively wipe"
+" out other bacteria are only modestly successful against iron bacteria. "
+"Iron bacteria build up in thick layers, each forming a slime around "
+"bacterial cells that keeps disinfectants from penetrating beyond the "
+"surface cells. Chemical reactions occur far slower at the cool "
+"temperatures common in wells, and bacterial cell need a long exposure to "
+"the chemical for the treatment to be effective. Even if chlorine kills "
+"all the bacterial cells in the water, those in the groundwater can be "
+"drawn in by pumping or drift back into the well. `Read more about "
+"chlorine and iron oxidizing bacteria <http://www.lenntech.com/iron-"
+"bacteria.htm#ixzz4ehUFJwO6>`_"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:114
+msgid "Proposed solutions to eliminate iron oxidizing slime bacteria"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:119
+msgid ""
+"The solutions all revolve around oxidizing the iron chemically before the"
+" bacteria have a chance to oxidize the iron biologically."
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:117
+msgid ""
+"Move the acid addition point to the end of the plant. This will allow "
+"chemical oxidation and removal of the iron. Note that once the iron is "
+"oxidized it precipitates as :math:`Fe(OH)_3` and that is a wonderful "
+"coagulant. This is why the Las Vegas plant was shown to produce clean "
+"water even without addition of a coagulant!"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:118
+msgid ""
+"It might be possible to move the acid addition point to the exit of the "
+"flocculator if the flocculation process provides enough time for iron "
+"oxidation"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:119
+msgid "Create an aeration system upstream from the plant in the transmission line"
+msgstr ""
+
+#: ../../Troubleshooting/Troubleshooting.rst:120
+msgid ""
+"Move chlorination to the rapid mix. This might work, but given the "
+"chlorine resistance of the slime and the disadvantages of prechlorination"
+" for production of disinfection by-products, we don't recommend this."
+msgstr ""
+
