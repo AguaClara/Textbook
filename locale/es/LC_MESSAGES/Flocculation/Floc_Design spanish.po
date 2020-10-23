@@ -1,0 +1,1694 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, AguaClara Cornell
+# This file is distributed under the same license as the AguaClara Textbook
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: AguaClara Textbook EXPERIMENTAL\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-19 16:17-0400\n"
+"PO-Revision-Date: 2020-10-18 16:33-0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: textbook subteam\n"
+"Language: es\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: ../../Flocculation/Floc_Design.rst:5
+#, fuzzy
+msgid "Flocculation Design"
+msgstr "Diseño de la floculación"
+
+#: ../../Flocculation/Floc_Design.rst:7
+#, fuzzy
+msgid "This chapter will supplement the lectures by going into further detail."
+msgstr "Este capítulo complementará las conferencias entrando en más detalles."
+
+#: ../../Flocculation/Floc_Design.rst:9
+#, fuzzy
+msgid ""
+"Equations, universal constants, and other helpful goodies can be found in the "
+"`aguaclara code base <https://github.com/AguaClara/aguaclara/tree/master/"
+"aguaclara>`_ . Most equations and constants you find in these summary sheets "
+"will already have been coded and will be shown here in the following format:"
+msgstr ""
+"Las ecuaciones, constantes universales y otras cosas útiles se pueden "
+"encontrar en el \"código base de Aaguaclara\" <https://github.com/AguaClara/"
+"aguaclara/tree/master/aguaclara>`_ . La mayoría de las ecuaciones y constantes "
+"que se encuentran en estas hojas de resumen ya han sido codificadas y se "
+"mostrarán aquí en el siguiente formato:"
+
+#: ../../Flocculation/Floc_Design.rst:11
+#, fuzzy
+msgid "Function: ``ac.area_circle(DiamCircle)``."
+msgstr "Función: ``ac.area_circulo(DiamCircle)``."
+
+#: ../../Flocculation/Floc_Design.rst:13
+#, fuzzy
+msgid ""
+"You are strongly recommended to look up any aguaclara equations before using "
+"them, even if they are given here in this summary sheet. This is because each "
+"equation has comments in its original file describing what the specific "
+"conditions are to using it."
+msgstr ""
+"Se recomienda encarecidamente que busque cualquier ecuación de aguaclara antes "
+"de usarlas, aunque se den aquí en esta hoja de resumen. Esto se debe a que "
+"cada ecuación tiene comentarios en su archivo original que describen cuáles "
+"son las condiciones específicas para usarla."
+
+#: ../../Flocculation/Floc_Design.rst:15
+#, fuzzy
+msgid ""
+"**Important Note:** This chapter introduces uncertainty and empirical design. "
+"Some of the parameters used to design AguaClara flocculators are based on what "
+"has been shown to work in the field, as opposed to having been derived "
+"scientifically. To make sure that the reader is aware of these concepts and "
+"parameters that don’t yet have a thorough basis in research, they will be "
+"highlighted in red when they appear."
+msgstr ""
+"**Nota importante:** Este capítulo introduce la incertidumbre y el diseño "
+"empírico. Algunos de los parámetros utilizados para diseñar los floculadores "
+"AguaClara se basan en lo que se ha demostrado que funciona en el campo, en "
+"lugar de haber sido derivados científicamente. Para asegurarse de que el "
+"lector conozca estos conceptos y parámetros que aún no tienen una base "
+"exhaustiva en la investigación, se resaltarán en rojo cuando aparezcan."
+
+#: ../../Flocculation/Floc_Design.rst:20
+#, fuzzy
+msgid "Hydraulic Flocculators, the AguaClara Approach"
+msgstr "Floculadores hidráulicos, el enfoque AguaClara"
+
+#: ../../Flocculation/Floc_Design.rst:23
+#, fuzzy
+msgid "Important Terms"
+msgstr "Términos importantes"
+
+#: ../../Flocculation/Floc_Design.rst:25
+#, fuzzy
+msgid "Collision potential"
+msgstr "Potencial de colisión"
+
+#: ../../Flocculation/Floc_Design.rst:26
+#, fuzzy
+msgid "Energy dissipation rate"
+msgstr "Tasa de disipación de energía"
+
+#: ../../Flocculation/Floc_Design.rst:27
+#, fuzzy
+msgid "Baffle"
+msgstr "Desconcertar"
+
+#: ../../Flocculation/Floc_Design.rst:28
+#, fuzzy
+msgid "Baffle module"
+msgstr "Módulo de deflectores"
+
+#: ../../Flocculation/Floc_Design.rst:29
+#, fuzzy
+msgid "Baffle space"
+msgstr "El espacio de los bafles"
+
+#: ../../Flocculation/Floc_Design.rst:30
+#, fuzzy
+msgid "Obstacle"
+msgstr "Obstáculo"
+
+#: ../../Flocculation/Floc_Design.rst:33
+#, fuzzy
+msgid "Important Equations"
+msgstr "Ecuaciones importantes"
+
+#: ../../Flocculation/Floc_Design.rst:35
+#, fuzzy
+msgid "Minor Loss equation"
+msgstr "Ecuación de pérdida menor"
+
+#: ../../Flocculation/Floc_Design.rst:38
+#, fuzzy
+msgid "Introduction to Hydraulic Flocculation"
+msgstr "Introducción a la Floculación Hidráulica"
+
+#: ../../Flocculation/Floc_Design.rst:39
+#, fuzzy
+msgid ""
+"The reason that flocculation is widely used in water treatment is because of "
+"sedimentation. Sedimentation is the process that actually removes particles "
+"like clay, dirt, organic matter, and bacteria from water. As you learned in "
+"the :ref:`introduction on treatment trains <heading_Treatment_Trains>`, "
+"sedimentation is the process of particles ‘falling’ because they have a higher "
+"density then the water, and its governing equation is:"
+msgstr ""
+"La razón por la que la floculación se utiliza ampliamente en el tratamiento "
+"del agua es la sedimentación. La sedimentación es el proceso que realmente "
+"elimina partículas como la arcilla, la suciedad, la materia orgánica y las "
+"bacterias del agua. Como aprendiste en la :ref:`introducción en los trenes de "
+"tratamiento <heading_Treatment_Trains>`, la sedimentación es el proceso de "
+"\"caída\" de partículas porque tienen una mayor densidad que el agua, y su "
+"ecuación gobernante es:"
+
+#: ../../Flocculation/Floc_Design.rst:44 ../../Flocculation/Floc_Design.rst:430
+#: ../../Flocculation/Floc_Design.rst:488
+#, fuzzy
+msgid "Such that:"
+msgstr "Así que..:"
+
+#: ../../Flocculation/Floc_Design.rst:45
+#, fuzzy
+msgid ""
+":math:`\\bar v_t` = terminal velocity of a particle, its downwards speed if it "
+"were in quiescent (still) water"
+msgstr ""
+":matemáticas:`\\bar v_t` = velocidad terminal de una partícula, su velocidad "
+"hacia abajo si estuviera en agua quieta"
+
+#: ../../Flocculation/Floc_Design.rst:46
+#, fuzzy
+msgid ":math:`D_{particle}` = particle diameter"
+msgstr ":matemáticas:`D_{particle}` = diámetro de la partícula"
+
+#: ../../Flocculation/Floc_Design.rst:47
+#, fuzzy
+msgid ""
+":math:`\\rho` = density. The :math:`p` subscript stands for particle, while :"
+"math:`w` stands for water"
+msgstr ""
+":matemáticas:`\\rho` = densidad. El subíndice :math:`p` significa partícula, "
+"mientras que :math:`w` significa agua"
+
+#: ../../Flocculation/Floc_Design.rst:49
+#, fuzzy
+msgid ""
+"To increase :math:`\\bar v_t` and make sedimentation more efficient, "
+"flocculation aims to increase the diameter :math:`d` of the particles. This is "
+"done by applying a coagulant to the dirty water and helping the coagulant to "
+"stick evenly to all particles during Rapid Mix **(DOUBLE CHECK THAT THIS IS IN "
+"RAPID MIX ONCE RAPID MIX IS WRITTEN)**. Being covered in coagulant allows the "
+"particles to collide, merge, and grow bigger during flocculation. Our goal in "
+"designing a flocculator is to facilitate particle collisions. How can we do "
+"this?"
+msgstr ""
+"Para aumentar :math:``bar v_t`` y hacer más eficiente la sedimentación, la "
+"floculación apunta a aumentar el diámetro :math:``d`` de las partículas. Esto "
+"se hace aplicando un coagulante al agua sucia y ayudando a que el coagulante "
+"se adhiera uniformemente a todas las partículas durante la mezcla rápida "
+"**(DOBLE VERIFICACIÓN DE QUE ESTA EN LA MEZCLA RÁPIDA UNA VEZ QUE LA MEZCLA "
+"RÁPIDA SE ESCRIBA)**. Estar cubierto de coagulante permite que las partículas "
+"colisionen, se fusionen y crezcan durante la floculación. Nuestro objetivo al "
+"diseñar un floculador es facilitar las colisiones de partículas. ¿Cómo podemos "
+"hacer esto?"
+
+#: ../../Flocculation/Floc_Design.rst:53
+#, fuzzy
+msgid ""
+"Collision Potential, :math:`G_{CS} \\theta`, and Energy Dissipation Rate, :"
+"math:`\\varepsilon`"
+msgstr ""
+"Potencial de colisión, :matemáticas:`G_{CS} \\y la tasa de disipación de "
+"energía.."
+
+#: ../../Flocculation/Floc_Design.rst:55
+#, fuzzy
+msgid ""
+"Collision potential :math:`(G_{CS} \\theta)` is a term with a very "
+"straightforward name. It represents the magnitude of potential particle "
+"collisions in a fluid. It is a *dimensionless* parameter which is often used "
+"as a performance metric for flocculators; big :math:`G_{CS} \\theta` values "
+"indicate lots of collisions (good) while small values indicate fewer "
+"collisions (not so good). AguaClara flocculators usually aim for a collision "
+"potential of :math:`(G_{CS} \\theta) = 37,000`, which has worked well in "
+"AguaClara plants historically. However, this value may change as research "
+"continues. The value for collision potential is obtained by multiplying :math:"
+"`G_{CS}`, a parameter for average fluid shear with units of :math:`\\frac{1}"
+"{[T]}`, and :math:`\\theta` , the residence time of water in the flocculator, "
+"with units of ::math:`[T]` . :math:`\\theta` is intuitive to measure, "
+"calculate, and understand. :math:`G_{CS}` is a bit more difficult. First, an "
+"intuitive explanation. See :numref:`figure_G_velocity_profile`, which shows "
+"the velocity profile of flowing water."
+msgstr ""
+"Potencial de colisión :matemáticas:`(G_{CS} \\ ~ -theta)` es un término con un "
+"nombre muy sencillo. Representa la magnitud de las potenciales colisiones de "
+"partículas en un fluido. Es un parámetro \"sin dimensiones\" que a menudo se "
+"utiliza como una métrica de rendimiento para los floculadores; grande :math:"
+"`G_{CS} \\Los valores de \"Theta\" indican muchas colisiones (bueno) mientras "
+"que los valores pequeños indican menos colisiones (no tan bueno). Los "
+"floculadores AguaClara usualmente apuntan a un potencial de colisión de :"
+"matemáticas:`(G_{CS} \\theta) = 37,000`, lo cual ha funcionado bien en las "
+"plantas AguaClara históricamente. Sin embargo, este valor puede cambiar a "
+"medida que la investigación continúa. El valor del potencial de colisión se "
+"obtiene multiplicando :math:`G_{CS}`, un parámetro para el promedio de "
+"cizallamiento del fluido con unidades de :math:`frac{1}{[T]}`, y :math:`"
+"\\theta` , el tiempo de residencia del agua en el floculador, con unidades "
+"de ::math:`[T]` . :matemáticas:``theta`` es intuitivo para medir, calcular y "
+"comprender. :matemáticas:`G_{CS}` es un poco más difícil. Primero, una "
+"explicación intuitiva. Ver :numref:`figure_G_velocity_profile`, que muestra el "
+"perfil de velocidad del agua que fluye."
+
+#: ../../Flocculation/Floc_Design.rst:64
+#, fuzzy
+msgid "The velocity profile of flowing fluid with uniform shear"
+msgstr ""
+"El perfil de velocidad del fluido que fluye con un cizallamiento uniforme"
+
+#: ../../Flocculation/Floc_Design.rst:68
+#, fuzzy
+msgid ""
+":math:`G` measures the magnitude of shear by using the velocity gradient of a "
+"fluid in space, :math:`\\frac{\\Delta \\bar v}{\\Delta h}`. This is "
+"essentially the same as the :math:`\\frac{\\delta u}{\\delta y}` term in fluid "
+"mechanics, which is found in the ubiquitous `fluid-shear problem <http://"
+"polymerdatabase.com/polymer%20physics/images/Visc.png>`_ as sourced from "
+"`here. <http://polymerdatabase.com/polymer%20physics/Viscosity.html>`_"
+msgstr ""
+"La G mide la magnitud del cizallamiento usando el gradiente de velocidad de un "
+"fluido en el espacio. Esto es esencialmente lo mismo que el término :math:"
+"`frac{\\frac{\\delta u}{\\delta y}` en la mecánica de fluidos, que se "
+"encuentra en el omnipresente `problema de cizallamiento de fluidos <http://"
+"polymerdatabase.com/polymer%20physics/images/Visc.png>`_ como se obtiene de "
+"``aquí''. <http://polymerdatabase.com/polymer%20pfísica/Viscosidad.html>`_"
+
+#: ../../Flocculation/Floc_Design.rst:70
+#, fuzzy
+msgid ""
+":math:`\\bar G` represents the average :math:`\\frac{\\Delta \\bar v}{\\Delta "
+"h}` for the entire water volume under consideration, and is the parameter we "
+"will be using from now on. Unfortunately, it is unrealistic to measure :math:`"
+"\\frac{\\Delta \\bar v}{\\Delta h}` for every parcel of the water in our "
+"flocculator and take an average. We need to approximate :math:`\\bar G` using "
+"measureable parameters."
+msgstr ""
+":matemáticas:``bar G`` representa el promedio :matemáticas:``frac{\\Ndelta "
+"\\Nbarra v}{\\Ndelta h}` para todo el volumen de agua considerado, y es el "
+"parámetro que usaremos de ahora en adelante. Desafortunadamente, no es "
+"realista medir la :matemática:`frac{\\N-Delta }bar v}{\\N-Delta h} para cada "
+"parcela de agua en nuestro floculador y tomar un promedio. Necesitamos "
+"aproximar :matemáticas:``bar G`` usando parámetros medibles."
+
+#: ../../Flocculation/Floc_Design.rst:72
+#, fuzzy
+msgid ""
+"The parameter that serves as the basis for obtaining :math:`G_{CS}` is :math:`"
+"\\varepsilon`, which represents the **energy dissipation** rate of a fluid "
+"*normalized by its mass*. The units of :math:`\\varepsilon` are Watts per "
+"kilogram:"
+msgstr ""
+"El parámetro que sirve de base para obtener :matemáticas:`G_{CS}` es :"
+"matemáticas:`varepsilon`, que representa la tasa de **disipación de energía** "
+"de un fluido *normalizado por su masa*. Las unidades de :matemáticas:"
+"`varepsilon` son vatios por kilogramo:"
+
+#: ../../Flocculation/Floc_Design.rst:78
+#, fuzzy, python-format
+msgid ""
+"There are at least two ways to think about :math:`\\varepsilon`. One is "
+"through :math:`G`. Imagine that a fluid has *no viscosity* ; there is no "
+"internal friction caused by fluid flow. No matter how high :math:`G` becomes, "
+"no energy is dissipated. Now image a honey, which has a very high viscosity. "
+"Making honey flow fast requires a lot of energy over a short period of time, "
+"which means a high energy dissipation rate. This explanation allows us to "
+"understand the equation for :math:`\\varepsilon` in terms of :math:`G` and :"
+"math:`\\nu`. `See this textbook <https://app.knovel.com/web/view/khtml/show.v/"
+"rcid:kpMWHWTPD1/cid:kt00AD4KW1/viewerType:khtml/root_slug:mwh-s-water-"
+"treatment/url_slug:principles-reactor-analysis?&b-toc-cid=kpMWHWTPD1&b-toc-url-"
+"slug=coagulation-flocculation&b-toc-title=MWH%E2%80%99s%20Water%20Treatment%20-"
+"%20Principles%20and%20Design%20(3rd"
+"%20Edition)&page=80&view=collapsed&zoom=1)>`_ for the derivation of the "
+"following equation:"
+msgstr ""
+"Hay al menos dos maneras de pensar en las matemáticas: \"Varepsilon\". Una es "
+"a través de :math:`G`. Imagina que un fluido no tiene viscosidad; no hay "
+"fricción interna causada por el flujo del fluido. No importa cuán alto llegue "
+"a ser :matemáticas:`G`, no se disipa ninguna energía. Ahora imagina una miel, "
+"que tiene una viscosidad muy alta. Hacer que la miel fluya rápidamente "
+"requiere mucha energía en un corto período de tiempo, lo que significa una "
+"alta tasa de disipación de energía. Esta explicación nos permite entender la "
+"ecuación de :matemáticas:`varepsilon` en términos de :matemáticas:`G` y :"
+"matemáticas:`nu`. `Ve este libro de texto <https://app.knovel.com/web/view/"
+"khtml/show.v/rcid:kpMWHWTPD1/cid:kt00AD4KW1/viewerType:khtml/root_slug:mwh-s-"
+"water-treatment/url_slug:principles-reactor-analysis?&b-toc-cid=kpMWHWTPD1&b-"
+"toc-url-slug=coagulation-flocculation&b-toc-title=MWH%E2%80%99s%20Water"
+"%20Treatment%20-%20Principles%20y%20Design%20(3ª%20E "
+"condición)&page=80&view=collapsed&zoom=1)>`_ para la derivación de la "
+"siguiente ecuación:"
+
+#: ../../Flocculation/Floc_Design.rst:84
+#, fuzzy
+msgid "Which means we can solve for :math:`G`:"
+msgstr "Lo que significa que podemos resolver para :matemáticas:`G`:"
+
+#: ../../Flocculation/Floc_Design.rst:90
+#, fuzzy
+msgid ""
+"Energy dissipation rate is, fortunately, easier to determine than collision "
+"potential. This is due to the second way to think about :math:`\\varepsilon`, "
+"which is using head loss. In any reactor, a flocculator in this case, the "
+"total energy dissipated is simply the head loss, :math:`h_L`. The amount of "
+"time required to dissipate that energy is the residence time of the water in "
+"the reactor, :math:`\\theta`. Accounting for the fact that 'head' energy is "
+"due to gravity :math:`g`, we have all the parameters needed to determine "
+"another equation for energy dissipation rate:"
+msgstr ""
+"La tasa de disipación de energía es, afortunadamente, más fácil de determinar "
+"que el potencial de colisión. Esto se debe a la segunda forma de pensar en :"
+"matemáticas:`varepsilon`, que es usando la pérdida de cabeza. En cualquier "
+"reactor, un floculador en este caso, la energía total disipada es simplemente "
+"la pérdida de carga, :math:`h_L`. La cantidad de tiempo requerida para disipar "
+"esa energía es el tiempo de residencia del agua en el reactor, :math:"
+"``theta``. Teniendo en cuenta el hecho de que la energía de \"cabeza\" se debe "
+"a la gravedad :math:``g``, tenemos todos los parámetros necesarios para "
+"determinar otra ecuación para la tasa de disipación de energía:"
+
+#: ../../Flocculation/Floc_Design.rst:97
+#, fuzzy
+msgid ""
+"Note that the equation above is for :math:`\\bar \\varepsilon`, not :math:`"
+"\\varepsilon`. Since the head loss term we are using, :math:`h_L`, occurs over "
+"the entire reactor, it can only be used to find an average energy dissipation "
+"rate for the entire reactor. Combining the equations above, :math:`G = "
+"\\sqrt{\\frac{\\varepsilon}{\\nu}}` and :math:`\\bar \\varepsilon = \\frac{g "
+"h_L}{\\theta}`, we can get an equation for :math:`G_{CS}` in terms of easily "
+"measureable parameters:"
+msgstr ""
+"Note que la ecuación de arriba es para :math:`bar \\varepsilon`, no :math:"
+"`varepsilon`. Dado que el término de pérdida de carga que estamos usando, :"
+"math:`h_L`, ocurre en todo el reactor, sólo puede ser usado para encontrar una "
+"tasa promedio de disipación de energía para todo el reactor. Combinando las "
+"ecuaciones anteriores, :matemáticas:`G = \\frac{varepsilon}{\\nu}` y :"
+"matemáticas:`bar \\varepsilon = \\frac{g h_L}{\\theta}`, podemos obtener una "
+"ecuación para :matemáticas:`G_{CS}` en términos de parámetros fácilmente "
+"medibles:"
+
+#: ../../Flocculation/Floc_Design.rst:103
+#, fuzzy
+msgid ""
+"We can use this to obtain a final equation for collision potential of a "
+"reactor:"
+msgstr ""
+"Podemos usar esto para obtener una ecuación final para el potencial de "
+"colisión de un reactor:"
+
+#: ../../Flocculation/Floc_Design.rst:109
+#, fuzzy
+msgid ""
+"**Note:** When we say :math:`G \\theta` we are almost always referring to :"
+"math:`G_{CS} \\theta`."
+msgstr ""
+"**Nota:** Cuando decimos :matemáticas:`G \\theta` casi siempre nos referimos "
+"a :matemáticas:`G_{CS} \\La... la..."
+
+#: ../../Flocculation/Floc_Design.rst:113
+#, fuzzy
+msgid "Generating Head Loss with Baffles"
+msgstr "Generando pérdida de cabeza con los bafles"
+
+#: ../../Flocculation/Floc_Design.rst:116
+#, fuzzy
+msgid "**What are Baffles?**"
+msgstr "**¿Qué son los Baffles?*"
+
+#: ../../Flocculation/Floc_Design.rst:118
+#, fuzzy
+msgid ""
+"Now that we know how to measure collision potential with head loss, we need a "
+"way to actually generate head loss. While both major or minor losses can be "
+"the design basis, it generally makes more sense to use major losses only for "
+"very low-flow flocculation (lab-scale) and minor losses for higher flows, as "
+"flocculation with minor losses tends to be more space-efficient. Since this "
+"book focuses on town and village-scale water treatment (5 L/S to 120 L/S), we "
+"will use minor losses as our design basis."
+msgstr ""
+"Ahora que sabemos cómo medir el potencial de colisión con la pérdida de "
+"cabeza, necesitamos una forma de generar realmente la pérdida de cabeza. "
+"Aunque tanto las pérdidas mayores como las menores pueden ser la base del "
+"diseño, generalmente tiene más sentido utilizar las pérdidas mayores sólo para "
+"la floculación de muy bajo flujo (a escala de laboratorio) y las pérdidas "
+"menores para los flujos mayores, ya que la floculación con pérdidas menores "
+"tiende a ser más eficiente en cuanto al espacio. Dado que este libro se centra "
+"en el tratamiento de agua a escala de ciudad y pueblo (5 L/S a 120 L/S), "
+"utilizaremos las pérdidas menores como base de diseño."
+
+#: ../../Flocculation/Floc_Design.rst:120
+#, fuzzy
+msgid ""
+"To generate minor losses, we need to create flow expansions. AguaClara does "
+"this with **baffles**, which are obstructions in the channel of a flocculator "
+"to force the flow to switch directions by 180°. Baffles in AguaClara plants "
+"are plastic sheets, and all of the baffles in one flocculator channel are "
+"connected to form a **baffle module.** :numref:`figure_AC_flocculator` shows "
+"an AguaClara flocculator and :numref:`figure_baffle_module` shows the assembly "
+"of a baffle module."
+msgstr ""
+"Para generar pérdidas menores, necesitamos crear expansiones de flujo. "
+"AguaClara hace esto con **bafles**, que son obstrucciones en el canal de un "
+"floculador para forzar el flujo a cambiar de dirección en 180°. Los "
+"deflectores en las plantas de AguaClara son láminas de plástico, y todos los "
+"deflectores en un canal de floculador están conectados para formar un **módulo "
+"deflector.** :numref:`figure_AC_flocculator` muestra un floculador AguaClara "
+"y :numref:`figure_baffle_module` muestra el montaje de un módulo deflector."
+
+#: ../../Flocculation/Floc_Design.rst:129
+#, fuzzy
+msgid ""
+"Clockwise from the top left the images show: the outline of the entire "
+"flocculator, some top and bottom baffles in the channels, the 4 flocculator "
+"channels in this flocculator, and the flow path of water through the "
+"flocculator"
+msgstr ""
+"En el sentido de las agujas del reloj, desde la parte superior izquierda, las "
+"imágenes muestran: el contorno de todo el floculador, algunos deflectores "
+"superiores e inferiores en los canales, los 4 canales del floculador en este "
+"floculador, y la trayectoria del flujo de agua a través del floculador"
+
+#: ../../Flocculation/Floc_Design.rst:138
+#, fuzzy
+msgid ""
+"Before being inserted into the floccualtor channel, the baffle module is "
+"constructed as a unit as shown here."
+msgstr ""
+"Antes de ser insertado en el canal del floculador, el módulo deflector se "
+"construye como una unidad como se muestra aquí."
+
+#: ../../Flocculation/Floc_Design.rst:140
+#, fuzzy
+msgid ""
+"AguaClara flocculators, like the one pictured above, are called **vertical "
+"hydraulic flocculators** because the baffles force the flow vertically up and "
+"down. If the baffles were instead arranged to force the flow side-to-side, the "
+"flocculator would be called a **horizontal hydraulic flocculator**. AguaClara "
+"uses vertical flocculators because they are more efficient when considering "
+"plant area. They are deeper than horizontal flocculators, which allows them to "
+"have a smaller `plan-view area <https://simple.wikipedia.org/wiki/Plan_view>`_ "
+"and thus to be cheaper."
+msgstr ""
+"Los floculadores AguaClara, como el de la foto de arriba, se llaman "
+"**floculadores hidráulicos verticales** porque los deflectores fuerzan el "
+"flujo verticalmente hacia arriba y hacia abajo. Si los deflectores se "
+"dispusieran para forzar el flujo de lado a lado, el floculador se llamaría "
+"**floculador hidráulico horizontal**. AguaClara utiliza floculadores "
+"verticales porque son más eficientes cuando se considera el área de la planta. "
+"Son más profundos que los floculadores horizontales, lo que les permite tener "
+"una menor \"superficie de plantación\" <https://simple.wikipedia.org/wiki/"
+"Plan_view>`_ y por lo tanto ser más baratos."
+
+#: ../../Flocculation/Floc_Design.rst:143
+#, fuzzy
+msgid "**Finding the Minor Loss of a Baffle**"
+msgstr "**Encontrando la menor pérdida de un bafle*"
+
+#: ../../Flocculation/Floc_Design.rst:145
+#, fuzzy
+msgid ""
+"Before beginning this section, it is important to understand how water flows "
+"through a baffled flocculator. This flow path is shown in :numref:"
+"`figure_flocculator_flow`. Take note of the thin red arrows; they indicate the "
+"compression of the flow around a baffle."
+msgstr ""
+"Antes de comenzar esta sección, es importante entender cómo el agua fluye a "
+"través de un desconcertado floculador. Esta ruta de flujo se muestra en :"
+"numref:`figurar_floculador_flujo`. Toma nota de las flechas rojas delgadas; "
+"indican la compresión del flujo alrededor de un deflector."
+
+#: ../../Flocculation/Floc_Design.rst:154
+#, fuzzy
+msgid "Flow path through a vertical flow hydraulic flocculator"
+msgstr ""
+"La trayectoria del flujo a través de un floculador hidráulico de flujo vertical"
+
+#: ../../Flocculation/Floc_Design.rst:156
+#, fuzzy
+msgid ""
+"Since baffles are the source of head loss via minor losses, we need to find "
+"the minor loss coefficient of one baffle if we want to be able to quantify its "
+"head loss. To do this, we apply fluid mechanics intuition and check it against "
+"a computational fluid dynamics (CFD) simulation. Flow around a 90° bend has a "
+"vena contracta value of around :math:`\\Pi_{vc} = 0.62`. Flow around a 180° "
+"bend therefore has a value of :math:`\\color{red}{\\Pi_{vc, \\, baffle} = "
+"\\Pi_{vc}^2 = 0.384}`. This number is roughly confirmed with CFD, as shown in "
+"the image below."
+msgstr ""
+"Dado que los bafles son la fuente de pérdida de carga por pérdidas menores, "
+"necesitamos encontrar el coeficiente de pérdida menor de un bafle si queremos "
+"ser capaces de cuantificar su pérdida de carga. Para ello, aplicamos la "
+"intuición de la mecánica de fluidos y la comparamos con una simulación de "
+"dinámica de fluidos computacional (CFD). El flujo alrededor de una curva de "
+"90° tiene un valor de vena contracta de alrededor de :matemáticas:`\\Pi_{vc} = "
+"0.62`. Por lo tanto, el flujo alrededor de una curva de 180° tiene un valor "
+"de :math:``color{red}{\\N-Pi_{vc, \\N-, baffle} = \\N- Pi_{vc}^2 = 0.384}`. "
+"Este número se confirma aproximadamente con CFD, como se muestra en la imagen "
+"de abajo."
+
+#: ../../Flocculation/Floc_Design.rst:165
+#, fuzzy, python-format
+msgid ""
+"The 180° bend at the end of a baffle results in a dramatic flow contraction "
+"with all of the flow passing through less than 40% of the space between the "
+"baffles."
+msgstr ""
+"La curva de 180° al final de un deflector resulta en una dramática contracción "
+"del flujo con todo el flujo pasando a través de menos de 40% o del espacio "
+"entre los deflectores."
+
+#: ../../Flocculation/Floc_Design.rst:167
+#, fuzzy, python-format
+msgid ""
+"We can therefore state with reasonable accuracy that, when most contracted, "
+"the flow around a baffle goes through 38.4% of the area it does when expanded, "
+"or :math:`A_{contracted} = \\Pi_{vc, \\, baffle} A_{expanded}`. Through the `:"
+"ref:`third form of the minor loss equation <heading_minor_losses>`, :math:`h_e "
+"= K \\frac{\\bar v_{out}^2}{2g}` and its definition of the minor loss "
+"coefficient, :math:`K = \\left( \\frac{A_{out}}{A_{in}} -1 \\right)^2`, we can "
+"determine a :math:`k` for flow around a single baffle:"
+msgstr ""
+"Por lo tanto, podemos afirmar con razonable precisión que, cuando más se "
+"contrae, el flujo alrededor de un deflector pasa a través de 38,4 º º de la "
+"zona que hace cuando se expande, o :matemáticas:`A_{contracted} = \\Pi_{vc, \\ "
+"~, deflector} A_{expanded}`. A través de la `:ref:`tercera forma de la "
+"ecuación de la pérdida menor <heading_minor_losses>`, :math:`h_e = K "
+"\\frac{\\bar v_{out}^2}{2g}` y su definición del coeficiente de pérdida "
+"menor, :matemáticas:`K = \\frac{A_{out}}{A_{in}} -1 \\Derecha)^2`, podemos "
+"determinar un :matemáticas:`k` para el flujo alrededor de un solo deflector:"
+
+#: ../../Flocculation/Floc_Design.rst:179
+#, fuzzy
+msgid ""
+"This :math:`K_{baffle}` has been used to design many flocculators in AguaClara "
+"plants. However, its value has not yet been rigorously tested for AguaClara "
+"plants the field. Therefore it might actually deviate from :math:`2.56`. "
+"Research and testing the :math:`K` of a baffle in an AguaClara plant is "
+"ongoing, but for now the designs made under the assumption that :math:`"
+"\\color{red}{K_{baffle} = 2.56}` are functioning very well in AguaClara "
+"plants. Although research has been done by many academics on the minor loss "
+"coefficient, including `this paper by Haarhoff in 1998 <https://iwaponline.com/"
+"aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-"
+"flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values "
+"found are context dependent and empirically based. For AguaClara flocculator "
+"parameters, literature suggest a :math:`K_{baffle}` value between :math:`2.5` "
+"and :math:`4`."
+msgstr ""
+"Esta :matemática:`K_{baffle}` ha sido usada para diseñar muchos floculadores "
+"en las plantas de AguaClara. Sin embargo, su valor aún no ha sido "
+"rigurosamente probado para las plantas de AguaClara en el campo. Por lo tanto, "
+"en realidad podría desviarse de :math:``2.56``. La investigación y las pruebas "
+"de la :matemática:`K` de un deflector en una planta AguaClara está en curso, "
+"pero por ahora los diseños hechos bajo la suposición de que :matemática:"
+"``color{red}{K_{baffle} = 2.56}` están funcionando muy bien en las plantas "
+"AguaClara. Aunque la investigación ha sido hecha por muchos académicos sobre "
+"el coeficiente de pérdida menor, incluyendo \"este trabajo de Haarhoff en 1998 "
+"<https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-"
+"hydraulic-flocculators>`_ (DOI: 10.2166/aqua.1998.20), los valores :math:"
+"`K_{baffle}` encontrados son dependientes del contexto y basados "
+"empíricamente. Para los parámetros del floculador AguaClara, la literatura "
+"sugiere un valor :math:`K_{baffle}` entre :math:`2.5` y :math:`4`."
+
+#: ../../Flocculation/Floc_Design.rst:182
+#, fuzzy
+msgid "Flocculator Efficiency"
+msgstr "Eficiencia del Floculador"
+
+#: ../../Flocculation/Floc_Design.rst:184
+#, fuzzy
+msgid ""
+"When designing an effective and efficient flocculator, there are two main "
+"problems that we seek to avoid:"
+msgstr ""
+"Al diseñar un floculador efectivo y eficiente, hay dos problemas principales "
+"que tratamos de evitar:"
+
+#: ../../Flocculation/Floc_Design.rst:186
+#, fuzzy
+msgid ""
+"Having certain sections in the flocculator with such high local :math:`G` "
+"values that our big, fluffy flocs are sheared apart into smaller flocs."
+msgstr ""
+"Tener ciertas secciones en el floculador con valores tan altos de :matemáticas:"
+"`G` que nuestros grandes y esponjosos flóculos se separan en flóculos más "
+"pequeños."
+
+#: ../../Flocculation/Floc_Design.rst:187
+#, fuzzy
+msgid ""
+"Having dead space. Dead space means volume within the flocculator that is not "
+"being used to facilitate collisions. Dead space occurs after the flow has "
+"fully expanded from flowing around a baffle and before it reaches the next "
+"baffle."
+msgstr ""
+"Teniendo espacio muerto. El espacio muerto significa el volumen dentro del "
+"floculador que no se utiliza para facilitar las colisiones. El espacio muerto "
+"se produce después de que el flujo se ha expandido completamente de fluir "
+"alrededor de un deflector y antes de que llegue al siguiente deflector."
+
+#: ../../Flocculation/Floc_Design.rst:189
+#, fuzzy
+msgid "Fortunately for us, both problems can be quantified with a single ratio:"
+msgstr ""
+"Afortunadamente para nosotros, ambos problemas pueden ser cuantificados con "
+"una sola proporción:"
+
+#: ../../Flocculation/Floc_Design.rst:196
+#, fuzzy
+msgid ""
+"High values of :math:`\\Pi_{G_{CS}}^{G_{Max}}` occur when one or both of the "
+"previous problems is present. If certain sections in the flocculator have very "
+"high local :math:`G` values, then :math:`G_{Max}` becomes large. If the "
+"flocculator has a lot of dead space, then :math:`G_{CS}` becomes small. Either "
+"way, :math:`\\Pi_{G_{CS}}^{G_{Max}}` becomes larger."
+msgstr ""
+"Los altos valores de :matemáticas:`\\Pi_{G_{CS}}^{G_{Max}` ocurren cuando uno "
+"o ambos problemas anteriores están presentes. Si ciertas secciones del "
+"floculador tienen valores locales muy altos de :math:`G`, entonces :math:"
+"`G_{Max}` se vuelve grande. Si el floculador tiene mucho espacio muerto, "
+"entonces :math:`G_{CS}` se vuelve pequeño. De cualquier manera, :math:"
+"`Pi_{G_{CS}}^{G_{Max}` se vuelve más grande."
+
+#: ../../Flocculation/Floc_Design.rst:198
+#, fuzzy
+msgid ""
+"**Note:** Recall the relationship between :math:`G` and :math:`"
+"\\varepsilon` : :math:`G = \\sqrt{ \\frac{\\varepsilon}{\\nu} }`. From this "
+"relationship, we can see that :math:`G \\propto \\sqrt{\\varepsilon}`. Thus, "
+"by defining  :math:`\\Pi_{G_{CS}}^{G_{Max}}`, we can also define a ratio for "
+"Max to average energy dissipation rate:"
+msgstr ""
+"**Nota:** Recuerda la relación entre :matemáticas:`G` y :matemáticas:"
+"`varepsilon` : :matemáticas:`G = \\sqrt{{\\i} {\\i1}frac{\\i} {\\i1}decir que "
+"es un juego de palabras* }`. De esta relación, podemos ver que :matemáticas:`G "
+"\\Npropto \\Nsqrt{\\Nvarepsilon}`. Por lo tanto, al definir :math:`Pi_{G_{CS}}"
+"^{G_{Max}, también podemos definir una relación para Max a la tasa promedio de "
+"disipación de energía:"
+
+#: ../../Flocculation/Floc_Design.rst:204
+#, fuzzy
+msgid ""
+"Therefore, by making our :math:`\\Pi_{G_{CS}}^{G_{Max}}` as small as possible, "
+"we can be sure that our flocculator is efficient, and we no longer have to "
+"account for the previously mentioned problems. `A paper by Haarhoff and van "
+"der Walt in 2001 <https://iwaponline.com/aqua/article/50/3/149/30498/Towards-"
+"optimal-design-parameters-for-around-the>`_ (DOI: 10.2166/aqua.2001.0014) uses "
+"CFD to show that the minimum :math:`\\Pi_{G_{CS}}^{G_{Max}}` attainable in a "
+"hydraulic flocculator is :math:`\\Pi_{G_{CS}}^{G_{Max}} = \\sqrt{2} \\approx "
+"1.4`, which means that :math:`\\Pi_{\\bar \\varepsilon}^{\\varepsilon_{Max}} = "
+"\\left( \\Pi_{G_{CS}}^{G_{Max}} \\right)^2 \\approx 2`. So how do we optimize "
+"an AguaClara flocculator to make sure :math:`\\Pi_{G_{CS}}^{G_{Max}} = "
+"\\sqrt{2}`?"
+msgstr ""
+"Por lo tanto, haciendo nuestras :matemáticas:``Pi_{G_{CS}}^{G_{Max} lo más "
+"pequeño posible, podemos estar seguros de que nuestro floculador es eficiente, "
+"y ya no tenemos que dar cuenta de los problemas mencionados anteriormente. Un "
+"artículo de Haarhoff y van der Walt en 2001 <https://iwaponline.com/aqua/"
+"article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the>`_ "
+"(DOI: 10.2166/aqua.2001.0014) utiliza CFD para mostrar que el mínimo :"
+"matemáticas:``Pi_{G_{CS}}^{G_{Max}}que se puede alcanzar en un floculador "
+"hidráulico es :matemáticas:``Pi_{G_{CS}}^{G_{Max}} = \\ ~ 7} \\aproximadamente "
+"1.4, lo que significa que las matemáticas... Entonces, ¿cómo optimizamos un "
+"floculador AguaClara para asegurarnos de que.."
+
+#: ../../Flocculation/Floc_Design.rst:206
+#, fuzzy
+msgid "We define and optimize a performance metric:"
+msgstr "Definimos y optimizamos una métrica de rendimiento:"
+
+#: ../../Flocculation/Floc_Design.rst:212
+#, fuzzy
+msgid ""
+"Where :math:`H_e` is the distance between flow expansions in the flocculator "
+"and :math:`S` is the spacing between baffles. For now, :math:`H_e` is "
+"approximated as the height of water in the flocculator."
+msgstr ""
+"Donde :math:`H_e` es la distancia entre las expansiones de flujo en el "
+"floculador y :math:`S` es el espacio entre los deflectores. Por ahora, :math:"
+"`H_e` se aproxima a la altura del agua en el floculador."
+
+#: ../../Flocculation/Floc_Design.rst:214
+#, fuzzy
+msgid ""
+"Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a "
+"baffle, our main concern is eliminating dead space in the flocculator. We do "
+"this by placing an upper limit on :math:`\\frac{H_e}{S}`. To determine this "
+"upper limit, we need to find the distance it takes for the flow to fully "
+"expand after it has contracted around a baffle. We base this on the rule of "
+"thumb for flow expansion, a jet doubles its initial diameter/length once it "
+"travels 10 times the distance of its original diameter/length. If this is "
+"confusing, refer to the equation and image below:"
+msgstr ""
+"Dado que :matemáticas:`G_{Max}` está determinado por la mecánica de fluidos "
+"del flujo alrededor de un deflector, nuestra principal preocupación es "
+"eliminar el espacio muerto en el floculador. Lo hacemos poniendo un límite "
+"superior en :math:`frac{H_e}{S}`. Para determinar este límite superior, "
+"necesitamos encontrar la distancia que le toma al flujo expandirse "
+"completamente después de que se ha contraído alrededor de un deflector. Nos "
+"basamos en la regla empírica para la expansión del flujo, un chorro duplica su "
+"diámetro/longitud inicial una vez que viaja 10 veces la distancia de su "
+"diámetro/longitud original. Si esto es confuso, refiérase a la ecuación y a la "
+"imagen de abajo:"
+
+#: ../../Flocculation/Floc_Design.rst:229
+#, fuzzy
+msgid ""
+"A turbulent jet expands in width by one unit for every 10 units downstream."
+msgstr ""
+"Un chorro turbulento se expande en anchura por una unidad por cada 10 unidades "
+"río abajo."
+
+#: ../../Flocculation/Floc_Design.rst:231
+#, fuzzy
+msgid ""
+"Using the equation and image above, we can find the distance required for the "
+"flow to fully expand around a baffle as a function of baffle spacing :math:"
+"`S`. We do this by substituting  :math:`D_0 = (0.384 S)` along with :math:`D = "
+"S` to approximate how much distance, :math:`x = H_e`, the contracted flow has "
+"to cover."
+msgstr ""
+"Usando la ecuación y la imagen de arriba, podemos encontrar la distancia "
+"requerida para que el flujo se expanda completamente alrededor de un bafle en "
+"función del espacio del bafle :matemáticas:`S`. Lo hacemos sustituyendo :math:"
+"`D_0 = (0.384 S)` junto con :math:`D = S` para aproximar cuánta distancia, :"
+"math:`x = H_e`, tiene que cubrir el flujo contraído."
+
+#: ../../Flocculation/Floc_Design.rst:241
+#, fuzzy
+msgid ""
+"This is the highest allowable :math:`\\Pi_{H_eS}` that we can design while "
+"ensuring that there is no dead space in the flocculator."
+msgstr ""
+"Esta es la mayor cantidad permitida de matemáticas que podemos diseñar, "
+"asegurándonos de que no hay espacio muerto en el floculador."
+
+#: ../../Flocculation/Floc_Design.rst:250
+#, fuzzy
+msgid ""
+"High :math:`\\frac{H_e}{S}` ratios result in flocculator zones with low "
+"velocity gradients that don't contribute effectively."
+msgstr ""
+"Las altas proporciones de :matemáticas:`frac{H_e}{S}` resultan en zonas de "
+"floculadores con gradientes de baja velocidad que no contribuyen de manera "
+"efectiva."
+
+#: ../../Flocculation/Floc_Design.rst:259
+#, fuzzy
+msgid ""
+"Each bend creates a flow contraction and when the flow expands it converts "
+"kinetic energy into turbulent eddies and fluid deformation. The fluid "
+"deformation is what ultimately creates collisions between particles."
+msgstr ""
+"Cada curva crea una contracción de flujo y cuando el flujo se expande "
+"convierte la energía cinética en remolinos turbulentos y en deformación de "
+"fluidos. La deformación del fluido es lo que finalmente crea colisiones entre "
+"las partículas."
+
+#: ../../Flocculation/Floc_Design.rst:261
+#, fuzzy
+msgid ""
+"In order to have a robust design process for a baffle module, we need to have "
+"some flexibility in the :math:`\\Pi_{H_eS} = \\frac{H_e}{S}` ratio. Since we "
+"found :math:`\\Pi_{H_eS_{Max}}` previously, we must now find the lowest "
+"functional :math:`\\frac{H_e}{S}` ratio, :math:`\\Pi_{H_eS_{Min}}`."
+msgstr ""
+"Para tener un proceso de diseño robusto para un módulo bafle, necesitamos "
+"tener cierta flexibilidad en la proporción :matemática:``Pi_{H_eS} = "
+"\\frac{H_e}{S}`. Ya que encontramos :math:`Pi_{H_eS_{Max}` previamente, ahora "
+"debemos encontrar la más baja proporción :math:`frac{H_e}{S}` funcional, :math:"
+"`\\NPi_{H_eS_{Min}`."
+
+#: ../../Flocculation/Floc_Design.rst:263
+#, fuzzy
+msgid ""
+"AguaClara uses a fairly straightforward way of setting :math:`\\Pi_{H_eS_{Min}}"
+"`. It is based on the distance between the water level and the bottom baffle "
+"(which is the same distance between the flocculator floor and a top baffle). "
+"This distance is referred to as the slot width (`Haarhoff 1998 <http://aqua."
+"iwaponline.com/content/47/3/142>`_)  DOI: 10.2166/aqua.1998.20\") and is "
+"defined by the slot width ratio, which describes the slot width as a function "
+"of baffle spacing :math:`S`. Slot width is shown in the following image:"
+msgstr ""
+"AguaClara utiliza una forma bastante directa de establecer :matemáticas:"
+"``Pi_{{H_eS_{Min}`. Se basa en la distancia entre el nivel del agua y el "
+"deflector inferior (que es la misma distancia entre el suelo del floculador y "
+"el deflector superior). Esta distancia se conoce como el ancho de la ranura "
+"(`Haarhoff 1998 <http://aqua.iwaponline.com/content/47/3/142>`_) DOI: 10.2166/"
+"aqua.1998.20\") y se define por la relación de ancho de la ranura, que "
+"describe el ancho de la ranura en función del espacio del deflector :math:`S`. "
+"El ancho de la ranura se muestra en la siguiente imagen:"
+
+#: ../../Flocculation/Floc_Design.rst:272
+#, fuzzy
+msgid ""
+"The space between the bottom of the upper baffle and the floor of the "
+"flocculator is defined as the slot width."
+msgstr ""
+"El espacio entre la parte inferior del deflector superior y el suelo del "
+"floculador se define como el ancho de la ranura."
+
+#: ../../Flocculation/Floc_Design.rst:274
+#, fuzzy
+msgid ""
+"AguaClara uses a slot width ratio of 1 for its flocculators. This number has "
+"been the topic of much hydraulic flocculation research, and values between 1 "
+"and 1.5 are generally accepted for hydraulic flocculators. See the following "
+"paper and book respectively for more data on slot width ratios and other "
+"hydraulic flocculator parameters: :cite:`floc-haarhoff_design_1998`, :cite:"
+"`schulz_surface_1992`. We base our slot width ratio of 1 on research done by :"
+"cite:`floc-haarhoff_towards_2001` on optimizing hydraulic flocculator "
+"parameters to maximize flocculator efficiency."
+msgstr ""
+"AguaClara utiliza una relación de ancho de ranura de 1 para sus floculadores. "
+"Este número ha sido objeto de muchas investigaciones sobre la floculación "
+"hidráulica, y los valores entre 1 y 1,5 son generalmente aceptados para los "
+"floculadores hidráulicos. Véase el siguiente documento y libro, "
+"respectivamente, para obtener más datos sobre las relaciones de ancho de "
+"ranura y otros parámetros de los floculadores hidráulicos: :cite:`floc-"
+"haarhoff_design_1998`, :cite:`schulz_surface_1992`. Basamos nuestra relación "
+"de ancho de ranura de 1 en la investigación realizada por :cite:`floc-"
+"haarhoff_towards_2001` en la optimización de los parámetros del floculador "
+"hidráulico para maximizar la eficiencia del mismo."
+
+#: ../../Flocculation/Floc_Design.rst:276
+#, fuzzy
+msgid ""
+"The minimum :math:`\\Pi_{H_eS}` allowable depends on the slot with ratio. If :"
+"math:`\\Pi_{H_eS}` is less than twice the slot width ratio, the water would "
+"flow straight through the flocculator without having to bend around the "
+"baffles. This means that the flocculator would not be generating almost any "
+"head loss, and the top and bottom of the flocculator will largely be dead "
+"space. See the following image for an example:"
+msgstr ""
+"El mínimo :matemático:``Pi_{H_eS}` permitido depende de la ranura con ratio. "
+"Si :math:`Pi_{H_eS}` es menos del doble de la proporción del ancho de la "
+"ranura, el agua fluirá directamente a través del floculador sin tener que "
+"doblar los deflectores. Esto significa que el floculador no generaría casi "
+"ninguna pérdida de carga, y la parte superior e inferior del floculador serán "
+"en gran parte espacio muerto. Véase la siguiente imagen como ejemplo:"
+
+#: ../../Flocculation/Floc_Design.rst:285
+#, fuzzy
+msgid ""
+"The minimum :math:`\\frac{H_e}{S}` ratio is set by the need to prevent short "
+"circuiting through the flocculator."
+msgstr ""
+"La proporción mínima :matemática:`frac{H_e}{S}` se establece por la necesidad "
+"de evitar un cortocircuito a través del floculador."
+
+#: ../../Flocculation/Floc_Design.rst:287
+#, fuzzy
+msgid ""
+"Thus, :math:`\\Pi_{H_eS_{Min}}` should be at least twice the slot width "
+"ratio, :math:`\\Pi_{H_eS_{Min}} = 2`. Historically, AguaClara plants have been "
+"designed using :math:`\\Pi_{H_eS_{Min}} = 3`. This adds a safety factor of "
+"sorts, ensuring that the flow does not short-circuit through the flocculator "
+"and also allowing more space for the flow to expand after each contraction."
+msgstr ""
+"Por lo tanto, :matemáticas:``Pi_{H_eS_{Min}} debe ser al menos el doble de la "
+"relación de ancho de la ranura, :matemáticas:``Pi_{H_eS_{Min}} = 2`. "
+"Históricamente, las plantas AguaClara han sido diseñadas usando :math:"
+"``Pi_{H_eS_{Min}} = 3`. Esto añade una especie de factor de seguridad, "
+"asegurando que el flujo no se cortocircuite a través del floculador y también "
+"permitiendo más espacio para que el flujo se expanda después de cada "
+"contracción."
+
+#: ../../Flocculation/Floc_Design.rst:293
+#, fuzzy
+msgid ""
+"Finally, we describe a range of :math:`\\Pi_{H_eS}` that we can use to design "
+"an AguaClara flocculator:"
+msgstr ""
+"Finalmente, describimos un rango de :matemáticas:``Pi_{H_eS}` que podemos usar "
+"para diseñar un floculador de AguaClara:"
+
+#: ../../Flocculation/Floc_Design.rst:300
+msgid "Obstacles"
+msgstr "Obstáculos"
+
+#: ../../Flocculation/Floc_Design.rst:302
+#, fuzzy
+msgid ""
+"Knowing that efficient flocculators require an :math:`\\frac{H_e}{S}` ratio "
+"that lies between 3 and 6, we need to understand how that impacts the "
+"flocculator design. Keeping :math:`\\frac{H_e}{S}` between two specific values "
+"limits the options for baffle spacing and quantity, due to the flocculator "
+"having certain size constraints before beginning the design of the baffles. "
+"This limitation places an upper limit on the amount of head loss that a "
+"baffled flocculator can generate, since the number of baffles is limited by "
+"space and baffles are what cause head loss. This is unfortunate, it means that "
+"baffled flocculators under certain size specifications can't be designed to "
+"generate certain values of :math:`\\bar \\varepsilon` and :math:`G_{CS}` "
+"*while remaining efficient and maintaining* :math:`3 < \\Pi_{H_eS} < 6`. This "
+"problem only arises for low flow plants, usually below :math:`Q_{Plant} = 20 "
+"{\\rm \\frac{L}{s}}`."
+msgstr ""
+"Sabiendo que los floculadores eficientes requieren una proporción :matemática:"
+"`frac{H_e}{S}` que se encuentra entre 3 y 6, necesitamos entender cómo eso "
+"impacta en el diseño del floculador. Mantener la relación :matemática:"
+"`frac{H_e}{S}` entre dos valores específicos limita las opciones de espacio y "
+"cantidad de los bafles, debido a que el floculador tiene ciertas limitaciones "
+"de tamaño antes de comenzar el diseño de los bafles. Esta limitación pone un "
+"límite superior a la cantidad de pérdida de carga que puede generar un "
+"floculador desconcertado, ya que el número de bafles está limitado por el "
+"espacio y los bafles son los que causan la pérdida de carga. Esto es "
+"desafortunado, significa que los floculadores desconcertados bajo ciertas "
+"especificaciones de tamaño no pueden ser diseñados para generar ciertos "
+"valores de :math:`bar \\varepsilon` y :math:`G_{CS}` *mientras se mantienen "
+"eficientes y se mantienen* :math:`3 < \\Pi_{H_eS} < 6`. Este problema sólo "
+"surge para plantas de bajo flujo, generalmente por debajo de :matemáticas:"
+"`Q_{Plant} = 20 {\\rm \\frac{L}{s}}`."
+
+#: ../../Flocculation/Floc_Design.rst:304
+#, fuzzy
+msgid ""
+"To get around this problem, AguaClara included 'obstacles,' or half-pipes to "
+"contract the flow after the flow expands around one baffle and before it "
+"reaches the next baffle. The purpose of these obstacles is to provide extra "
+"head loss in between baffles. They also generate head loss via minor losses, "
+"and one obstacle is designed to have the same :math:`K` as one baffle. "
+"Introducing obstacles slightly alters how we think about :math:`H_e`. In a "
+"flocculator where there are just baffles and no obstacles, then :math:`H_e = "
+"H`, since the height of water in the flocculator is equal to the distance "
+"between expansions. When obstacles are added, however, then :math:`H_e = "
+"\\frac{H}{1 + n_{obstacles}}`, where :math:`n_{obstacles}` is the number of "
+"obstacles between two baffles."
+msgstr ""
+"Para evitar este problema, AguaClara incluyó \"obstáculos\" o medias tuberías "
+"para contraer el flujo después de que éste se expande alrededor de un "
+"deflector y antes de que llegue al siguiente deflector. El propósito de estos "
+"obstáculos es proporcionar una pérdida de carga adicional entre los "
+"deflectores. También generan pérdida de carga a través de pérdidas menores, y "
+"un obstáculo está diseñado para tener la misma :matemática:`K` que un "
+"deflector. La introducción de obstáculos altera ligeramente la forma en que "
+"pensamos acerca de :math:`H_e`. En un floculador donde sólo hay deflectores y "
+"ningún obstáculo, entonces :math:`H_e = H`, ya que la altura del agua en el "
+"floculador es igual a la distancia entre expansiones. Sin embargo, cuando se "
+"suman los obstáculos, entonces :matemáticas:`H_e = \\frac{H}{1 + n_{obstacles}"
+"`, donde :matemáticas:`n_{obstacles}` es el número de obstáculos entre dos "
+"deflectores."
+
+#: ../../Flocculation/Floc_Design.rst:306
+#, fuzzy
+msgid ""
+"**Baffle space** is the term we use for the space between two baffles. The "
+"number of flow expansions per baffle space is :math:`n_{expansions} = 1 + "
+"n_{obstacles}`. The :math:`1` is because the baffle itself causes a flow "
+"expansion."
+msgstr ""
+"**Baffle space** es el término que usamos para el espacio entre dos bafles. El "
+"número de expansiones de flujo por espacio de bafle es :matemáticas:"
+"`n_{expansions} = 1 + n_{obstacles}`. La :matemática:`1` es porque el bafle en "
+"sí mismo causa una expansión de flujo."
+
+#: ../../Flocculation/Floc_Design.rst:308
+#, fuzzy
+msgid ""
+"These obstacles serve as 'pseudo-baffles'. They allow for :math:`\\frac{H}{S}"
+"`` to exceed 6, while maintaining maximum flocculator efficiency since, :math:`"
+"\\frac{H_e}{S}` can still be between 3 and 6. Obstacles make it possible to "
+"design smaller flocculators without compromising flocculation efficiency. :"
+"numref:`figure_Floc_module_with_obstacles` and :numref:"
+"`figure_Floc_flow_with_obstacles` show these obstacles and how they affect the "
+"flow in a flocculator."
+msgstr ""
+"Estos obstáculos sirven como \"pseudo-afafiches\". Permiten que :matemáticas:"
+"`frac{H}{S}` exceda de 6, manteniendo la máxima eficiencia del floculador ya "
+"que, :matemáticas:`frac{H_e}{S}` aún puede estar entre 3 y 6. Los obstáculos "
+"permiten diseñar floculadores más pequeños sin comprometer la eficiencia de la "
+"floculación. :numref:`figure_Floc_module_with_obstacles` y :numref:"
+"`figure_Floc_flow_with_obstacles` muestran estos obstáculos y cómo afectan el "
+"flujo en un floculador."
+
+#: ../../Flocculation/Floc_Design.rst:317
+#, fuzzy
+msgid ""
+"Obstacles are added so that the flow continually contracts and expands. "
+"Additional obstacles are needed for low flow plants where the spacing between "
+"baffles is small realtive to the flocculator depth."
+msgstr ""
+"Se añaden obstáculos para que el flujo se contraiga y se expanda "
+"continuamente. Se necesitan obstáculos adicionales para las plantas de bajo "
+"flujo, donde el espacio entre los deflectores es pequeño en relación con la "
+"profundidad del floculador."
+
+#: ../../Flocculation/Floc_Design.rst:326
+#, fuzzy
+msgid "Obstacles ensure that there aren't any zones with low velocity gradients."
+msgstr ""
+"Los obstáculos aseguran que no haya zonas con gradientes de baja velocidad."
+
+#: ../../Flocculation/Floc_Design.rst:329
+#, fuzzy
+msgid "AguaClara Design of Hydraulic, Vertical Flow Flocculators"
+msgstr "AguaClara Diseño de Floculadores hidráulicos de flujo vertical"
+
+#: ../../Flocculation/Floc_Design.rst:331
+#, fuzzy
+msgid ""
+"AguaClara's approach to flocculator design is the same as it is for any other "
+"unit process. First, critical design criteria, called inputs, are established. "
+"These criteria represent the priorities that the rest of the design will be "
+"based around. Once these parameters are established, then the other parameters "
+"of the design, which are dependent on the inputs, are calculated based on "
+"certain constraints."
+msgstr ""
+"El enfoque de AguaClara para el diseño del floculador es el mismo que para "
+"cualquier otro proceso de la unidad. Primero se establecen criterios de diseño "
+"críticos, llamados insumos. Estos criterios representan las prioridades en las "
+"que se basará el resto del diseño. Una vez que se establecen estos parámetros, "
+"entonces los otros parámetros del diseño, que dependen de los insumos, se "
+"calculan en base a ciertas restricciones."
+
+#: ../../Flocculation/Floc_Design.rst:333
+#, fuzzy
+msgid ""
+"Take the CDC as an example of this design process in :ref:"
+"`title_flow_control_design`; its inputs are :math:`h_{L_{Max}}`, :math:`\\sum "
+"K`, :math:`\\Pi_{Error}`, and the discrete dosing tube diameters  :math:`D` "
+"that are available at hardware stores or pipe suppliers. Its dependent "
+"variables include the number and length of the dosing tubes and the flow "
+"through the CDC system."
+msgstr ""
+"Tomemos el CDC como ejemplo de este proceso de diseño en :ref:"
+"`title_flow_control_design`; sus entradas son :math:`h_{L_{Max}`, :math:`\\sum "
+"K`, :math:`\\Pi_{Error}`, y los diámetros de los tubos dosificadores "
+"discretos :math:`D` que están disponibles en las ferreterías o en los "
+"proveedores de tubos. Sus variables dependientes incluyen el número y la "
+"longitud de los tubos dosificadores y el flujo a través del sistema CDC."
+
+#: ../../Flocculation/Floc_Design.rst:335
+#, fuzzy
+msgid ""
+"The flocculator is more complex to design than the CDC, as it has more details "
+"and parameters and the equations for those details and parameters are very "
+"interdependent. Therefore, there are many ways to design an AguaClara "
+"flocculator, and many different sets of critical design criteria to begin "
+"with. Enumerated below is the current AguaClara approach."
+msgstr ""
+"El diseño del floculador es más complejo que el del CDC, ya que tiene más "
+"detalles y parámetros y las ecuaciones para esos detalles y parámetros son muy "
+"interdependientes. Por lo tanto, hay muchas maneras de diseñar un floculador "
+"AguaClara, y muchos conjuntos diferentes de criterios de diseño críticos para "
+"empezar. A continuación se enumera el enfoque actual de AguaClara."
+
+#: ../../Flocculation/Floc_Design.rst:347
+#, fuzzy
+msgid "Input parameters"
+msgstr "Parámetros de entrada"
+
+#: ../../Flocculation/Floc_Design.rst:338
+#, fuzzy
+msgid ""
+"Specify: - :math:`h_{L_{floc}}`, head loss - :math:`G_{CS} \\theta`, collision "
+"potential - :math:`Q`, plant flow rate - :math:`H`, height of water *at the "
+"end of the flocculator* - :math:`L_{Max, \\, sed}`, max length of a "
+"flocculator channel based on sedimentation tank length - :math:`W_{Min, \\, "
+"human}` minimum width of a single channel based on the width of the average "
+"human hip (someone's got to go down there...)"
+msgstr ""
+"Especifica: - :matemáticas:`h_{L_{floc}}, pérdida de cabeza - :matemáticas:"
+"`G_{CS} \\ ~ Theta, potencial de colisión - :math:`Q`, tasa de flujo de la "
+"planta - :math:`H`, altura del agua *al final del floculador* - :math:"
+"`L_{{{Max, \\, sed}`, longitud máxima de un canal de floculador basado en la "
+"longitud del tanque de sedimentación - :math:`W_{Min, \\ ~, humano}` ancho "
+"mínimo de un solo canal basado en el ancho de la cadera humana promedio "
+"(alguien tiene que ir allí abajo...)"
+
+#: ../../Flocculation/Floc_Design.rst:345
+#, fuzzy
+msgid ""
+"Find: - :math:`G_{CS}`, average velocity gradient - :math:`\\theta`, hydraulic "
+"retention time - :math:`\\rlap{--}V_{floc}`, flocculator volume"
+msgstr ""
+"Hallazgo: - :matemáticas:`G_{CS}`, gradiente de velocidad promedio - :"
+"matemáticas:`\\theta`, tiempo de retención hidráulica - :matemáticas:`rlap{--}"
+"V_{floc}`, volumen del floculador"
+
+#: ../../Flocculation/Floc_Design.rst:352
+#, fuzzy
+msgid "Physical dimensions"
+msgstr "Dimensiones físicas"
+
+#: ../../Flocculation/Floc_Design.rst:350
+#, fuzzy
+msgid ""
+"Calculate: - :math:`L_{channel}`, actual channel length - :math:`n_{channels}"
+"`, amount of channels - :math:`W_{channel}`, actual channel width"
+msgstr ""
+"Calcular: - :matemáticas:`L_{channel}`, longitud real del canal - :matemáticas:"
+"`n_{channels}`, cantidad de canales - :matemáticas:`W_{channel}`, ancho real "
+"del canal"
+
+#: ../../Flocculation/Floc_Design.rst:358
+#, fuzzy
+msgid "Hydraulic parameters"
+msgstr "Parámetros hidráulicos"
+
+#: ../../Flocculation/Floc_Design.rst:355
+#, fuzzy
+msgid ""
+"Calculate: - :math:`H_e`, distance between baffle/obstacle induced flow "
+"expansions - :math:`n_{obstacles}`, amount of obstacles per baffle space - :"
+"math:`S`, baffle spacing, distance between baffles"
+msgstr ""
+"Calcular: - :matemáticas:`H_e`, distancia entre las expansiones de flujo "
+"inducidas por el deflector/obstáculo - :matemáticas:`n_{obstacles}`, cantidad "
+"de obstáculos por espacio del deflector - :matemáticas:`S`, espacio del "
+"deflector, distancia entre los deflectores"
+
+#: ../../Flocculation/Floc_Design.rst:367
+#, fuzzy
+msgid ""
+"Flocculator geometry definition including the effect of baffle thickness. "
+"Accounting for baffle thickness would be particularly important if "
+"`ferrocement <https://en.wikipedia.org/wiki/Ferrocement>`_ or wood were used "
+"for baffles."
+msgstr ""
+"Definición de la geometría del floculador, incluyendo el efecto del grosor del "
+"deflector. Tener en cuenta el grosor del bafle sería particularmente "
+"importante si el `ferrocemento <https://en.wikipedia.org/wiki/Ferrocement>`_ o "
+"la madera se utilizara para los bafles."
+
+#: ../../Flocculation/Floc_Design.rst:370
+#, fuzzy
+msgid "Input Parameters"
+msgstr "Parámetros de entrada"
+
+#: ../../Flocculation/Floc_Design.rst:373
+msgid "Specify"
+msgstr "Especificar"
+
+#: ../../Flocculation/Floc_Design.rst:374
+#, fuzzy
+msgid ""
+"We start by making sure that our flocculator will be able to flocculate "
+"effectively by defining :math:`h_{L_{floc}}` and :math:`G_{CS} \\theta`. "
+"Fixing these two parameters initially allows us to easily find all other "
+"parameters which determine flocculator performance. Here are the current "
+"standards in AguaClara flocculators: - :math:`h_{L_{floc}} = 40 \\, {\\rm cm}` "
+"- :math:`G_{CS} \\theta = 37,000`"
+msgstr ""
+"Empezamos asegurándonos de que nuestro floculador sea capaz de flocular "
+"eficazmente definiendo :math:`h_{L_{floc}` y :math:`G_{CS} \\La... la... Fijar "
+"estos dos parámetros inicialmente nos permite encontrar fácilmente todos los "
+"demás parámetros que determinan el rendimiento del floculador. Aquí están los "
+"estándares actuales en los floculadores de AguaClara: - :matemáticas:"
+"`h_{L_{floc}} = 40 \\, {\\rm cm}` - :matemáticas:`G_{CS} \\theta = 37,000`"
+
+#: ../../Flocculation/Floc_Design.rst:378
+#, fuzzy
+msgid ""
+"The plant flow rate :math:`Q` is defined by the needs of the community that "
+"the plant is being desiged for. Additionally, the height of water *at the end* "
+"of the flocculator, :math:`H`, the *maximum* length of the flocculator based "
+"on the length of the sedimentation tank length, :math:`L_{Max, \\, sed}`, and "
+"the *minimum* width of a flocculator channel required for a human to fit "
+"inside, :math:`W_{Min, \\, human}`, are also defined initially. Ordinarilly in "
+"AguaClara plants, the flocculator occupies the same length dimension as the "
+"sedimentation tanks, which is why the length constraint exists. See :numref:"
+"`figure_physical_design_criteria_floc` for a representation of how the "
+"flocculator and sedimentation tanks are placed in a plant."
+msgstr ""
+"La tasa de flujo de la planta :matemáticas:`Q` se define por las necesidades "
+"de la comunidad para la que se diseña la planta. Además, la altura del agua en "
+"el extremo del floculador, matemáticas: \"H\", la longitud máxima del "
+"floculador basada en la longitud del tanque de sedimentación, matemáticas: \"L"
+"\", máximo, sed, y el ancho mínimo del canal del floculador requerido para que "
+"un humano quepa dentro, matemáticas: \"W\", mínimo, humano, también se definen "
+"inicialmente. Normalmente en las plantas de AguaClara, el floculador ocupa la "
+"misma dimensión de longitud que los tanques de sedimentación, por lo que "
+"existe la restricción de longitud. Ver :numref:"
+"`figure_physical_design_criteria_floc` para una representación de cómo el "
+"floculador y los tanques de sedimentación se colocan en una planta."
+
+#: ../../Flocculation/Floc_Design.rst:380
+#, fuzzy
+msgid ":math:`H = 2 \\, {\\rm m}`"
+msgstr ":matemáticas:`H = 2 \\ ~, {\\ ~ -rm m}`"
+
+#: ../../Flocculation/Floc_Design.rst:381
+#, fuzzy
+msgid ":math:`L_{Max, \\, sed} = 6 \\, {\\rm m}`"
+msgstr ":matemáticas:`L_{{\\N-Max, \\N-sed} = 6 \\N, {\\N-hmm}`"
+
+#: ../../Flocculation/Floc_Design.rst:382
+#, fuzzy
+msgid ":math:`W_{Min, \\, human} = 45 \\, {\\rm cm}`"
+msgstr "Matemáticas: `W_{\\N-Min, \\N-humano} = 45 \\N-"
+
+#: ../../Flocculation/Floc_Design.rst:391
+#, fuzzy
+msgid ""
+"Layout of flocculator and sedimentation tanks that was adopted starting with "
+"the 2nd AguaClara plant in Tamara, Honduras in 2008."
+msgstr ""
+"Disposición de tanques de floculación y sedimentación que se adoptó a partir "
+"de la 2ª planta AguaClara en Tamara (Honduras) en 2008."
+
+#: ../../Flocculation/Floc_Design.rst:395
+msgid "Find"
+msgstr "Encontrar"
+
+#: ../../Flocculation/Floc_Design.rst:396
+#, fuzzy
+msgid ""
+"We can rearrange the equation for :math:`G_{CS}` from the section on collision "
+"potential, :math:`G_{CS} = \\sqrt{\\frac{g h_L}{\\nu \\theta}}`, to solve for :"
+"math:`G_{CS}` in terms of :math:`G_{CS} \\theta`:"
+msgstr ""
+"Podemos reorganizar la ecuación para :matemáticas:`G_{CS}` desde la sección de "
+"potencial de colisión, :matemáticas:`G_{CS} = \\frac{\\Nfrac{\\N}{\\Nnu "
+"\\Ntheta}`, para resolver para :matemáticas:`G_{CS}` en términos de :"
+"matemáticas:`G_{CS}} \\La... la..:"
+
+#: ../../Flocculation/Floc_Design.rst:402
+#, fuzzy
+msgid "Now that we have :math:`G_{CS}`, we can very easily find :math:`theta`:"
+msgstr ""
+"Ahora que tenemos :math:`G_{CS}`, podemos encontrar muy fácilmente :math:"
+"`theta`:"
+
+#: ../../Flocculation/Floc_Design.rst:408
+#, fuzzy
+msgid ""
+"Finally, we take retention time :math:`\\theta` over plant flow rate :math:`Q` "
+"to get the required volume of the flocculator:"
+msgstr ""
+"Finalmente, tomamos el tiempo de retención :matemáticas:``theta`` sobre la "
+"tasa de flujo de la planta :matemáticas:``Q`` para obtener el volumen "
+"requerido del floculador:"
+
+#: ../../Flocculation/Floc_Design.rst:414
+#, fuzzy
+msgid ""
+"Now that we have the basic parameters defined, we can start to design the "
+"details of the flocculator, starting from the physical dimensions."
+msgstr ""
+"Ahora que tenemos los parámetros básicos definidos, podemos empezar a diseñar "
+"los detalles del floculador, a partir de las dimensiones físicas."
+
+#: ../../Flocculation/Floc_Design.rst:417
+#, fuzzy
+msgid "Physical Dimensions"
+msgstr "Dimensiones físicas"
+
+#: ../../Flocculation/Floc_Design.rst:418
+#, fuzzy
+msgid ""
+"Deriving the equations required to find the physical dimensions now and the "
+"hydraulic parameters (baffle/obstacle design) in the next section requires "
+"many steps. To simplify this design explanation the equation derivations are "
+"developed in :ref:`title_review_fluid_mechanics_derivations`. All complex "
+"equations which seemingly came out of nowhere will be derived in the "
+"derivation sheet."
+msgstr ""
+"La derivación de las ecuaciones necesarias para encontrar las dimensiones "
+"físicas ahora y los parámetros hidráulicos (diseño de deflectores/obstáculos) "
+"en la siguiente sección requiere muchos pasos. Para simplificar esta "
+"explicación del diseño, las derivaciones de la ecuación se desarrollan en :ref:"
+"`title_review_fluid_mechanics_derivations`. Todas las ecuaciones complejas que "
+"aparentemente surgieron de la nada se derivarán en la hoja de derivación."
+
+#: ../../Flocculation/Floc_Design.rst:421
+msgid "Length"
+msgstr "Longitud"
+
+#: ../../Flocculation/Floc_Design.rst:423
+#, fuzzy
+msgid ""
+"Flocculator length, :math:`L_{channel}`` must meet two constraints: it must be "
+"less than or equal to the length of the sedimentation tanks, as the "
+"flocculator is adjacent to the sed tanks. This constraint is :math:`L_{Max, "
+"\\, sed}`. Next, the flocculator must be short enough to make sure the target "
+"volume of the flocculator is met, while still allowing for a human to fit "
+"inside :math:`L_{Max, \\, \\rlap{--} V}`. **The constraint that wins out is "
+"the one that results in the *smaller* length value**."
+msgstr ""
+"La longitud del floculador, :math:`L_{channel}`` debe cumplir dos "
+"restricciones: debe ser menor o igual a la longitud de los tanques de "
+"sedimentación, ya que el floculador está adyacente a los tanques de "
+"sedimentación. Esta restricción es :matemáticas:`L_{Max, \\, sed}`. A "
+"continuación, el floculador debe ser lo suficientemente corto como para "
+"asegurar que el volumen objetivo del floculador se cumple, mientras que "
+"todavía permite que un humano quepa dentro :math:`L_{Max, \\, \\ ~ rlap{--} V}"
+"`. **La restricción que gana es la que resulta en el valor de longitud *más "
+"pequeño*."
+
+#: ../../Flocculation/Floc_Design.rst:431
+#, fuzzy
+msgid ":math:`n_{Min, \\, channels} = 2`"
+msgstr ":matemáticas:`n_{{{min, \\, canales} = 2`"
+
+#: ../../Flocculation/Floc_Design.rst:433
+#, fuzzy
+msgid ""
+"The reason why :math:`W_{Min, \\, human}` is used is because it represents the "
+"absolute minimum of flocculator channel width. If the width ends up being "
+"larger, the length will decrease. :math:`n_{Min, \\, channels} = 2`  to make "
+"sure that the flow ends up on the correct side of the sedimentation tank, as "
+"the image below shows. Note that there can only be an even number of "
+"flocculator channels, as explained in the image's caption."
+msgstr ""
+"La razón por la que :matemáticas:`W_{{Min, \\, humano}` se utiliza es porque "
+"representa el mínimo absoluto del ancho del canal del floculador. Si el ancho "
+"termina siendo mayor, la longitud disminuirá. :math:`n_{Min, \\, channels} = "
+"2` para asegurarse de que el flujo termina en el lado correcto del tanque de "
+"sedimentación, como muestra la imagen de abajo. Tenga en cuenta que sólo puede "
+"haber un número par de canales de floculador, como se explica en el pie de "
+"foto de la imagen."
+
+#: ../../Flocculation/Floc_Design.rst:435
+#, fuzzy
+msgid "The equation for *actual* flocculator length is therefore:"
+msgstr "La ecuación para la longitud del floculador *real* es, por lo tanto:"
+
+#: ../../Flocculation/Floc_Design.rst:448
+#, fuzzy
+msgid ""
+"There are an even amount of flocculator channels to keep the AguaClara plant "
+"layout consistent for flows greater than 12 L/s. This ensures that the "
+"entrance tank, filter box, and filters can be kept in the same places across "
+"plants."
+msgstr ""
+"Hay una cantidad uniforme de canales de floculación para mantener la "
+"disposición de la planta AguaClara consistente para flujos mayores de 12 L/s. "
+"Esto asegura que el tanque de entrada, la caja de filtros y los filtros pueden "
+"mantenerse en los mismos lugares en todas las plantas."
+
+#: ../../Flocculation/Floc_Design.rst:451
+#, fuzzy
+msgid "Width and Number of Channels"
+msgstr "Ancho y número de canales"
+
+#: ../../Flocculation/Floc_Design.rst:453
+#, fuzzy
+msgid ""
+"The width of a single flocculator channel must meet the following conditions: "
+"- Maintain :math:`G_{CS}` at the value found in the inputs section - Allow "
+"for :math:`3 < \\frac{H_e}{S} < 6`. Recall that :math:`\\frac{H_e}{S} =  "
+"\\Pi_{H_eS}` - Allow for a human to be able to fit into a flocculator channel"
+msgstr ""
+"El ancho de un solo canal de floculador debe cumplir las siguientes "
+"condiciones: - Mantener :math:`G_{CS}` al valor encontrado en la sección de "
+"entradas - Permitir :math:`3 < \\frac{H_e}{S} < 6`. Recuerde que :matemáticas:"
+"`frac{H_e}{S} = \\Pi_{H_eS}` - Permiten que un humano pueda entrar en un canal "
+"de floculador"
+
+#: ../../Flocculation/Floc_Design.rst:458
+#, fuzzy
+msgid ""
+"The first two conditions are wrapped up into the following equation, :ref:"
+"`which is derived here <title_Flocculation_Derivations>`"
+msgstr ""
+"Las dos primeras condiciones se envuelven en la siguiente ecuación, :ref:`que "
+"se deduce aquí <título_Floculación_Derivaciones>`"
+
+#: ../../Flocculation/Floc_Design.rst:464
+#, fuzzy
+msgid ""
+"This equation represents the absolute smallest width of a flocculator channel "
+"if we consider the lowest value of :math:`\\Pi_{H_eS}` and the highest "
+"possible value of :math:`H_e`:"
+msgstr ""
+"Esta ecuación representa el menor ancho absoluto de un canal de floculador si "
+"consideramos el valor más bajo de :math:`\\Pi_{H_eS}` y el valor más alto "
+"posible de :math:`H_e`:"
+
+#: ../../Flocculation/Floc_Design.rst:466
+#, fuzzy
+msgid ""
+":math:`H_e = H_{e_{Max}} = H = 2 \\, {\\rm m}`, this implies that there are no "
+"obstacles between baffles :math:`\\Pi_{H_eS} = \\Pi_{ {HS}_{Min} } = 3`"
+msgstr ""
+":matemáticas:`H_e = H_{e_{Max}} = H = 2 \\ ~, { {\\rm m}`, esto implica que no "
+"hay obstáculos entre los bafles :matemáticas:``Pi_{H_eS} = \\ ~ -Pi_{{HS}"
+"_{Min} } = 3`"
+
+#: ../../Flocculation/Floc_Design.rst:469
+#, fuzzy
+msgid ""
+"Recall our other width constraint, :math:`W_{Min, \\, human} = 45 \\, {\\rm cm}"
+"`, which is based on our desire to have a human be able to fit into the "
+"channels. The governing constraint is the *larger* value of :math:`W_{Min}`:"
+msgstr ""
+"Recordemos nuestra otra restricción de ancho, :matemáticas:`W_{{min, \\ ~, "
+"humano} = 45 \\ ~, { {\\rm cm}`, que se basa en nuestro deseo de que un humano "
+"sea capaz de encajar en los canales. La restricción gobernante es el valor "
+"*más grande* de :math:`W_{Min}`:"
+
+#: ../../Flocculation/Floc_Design.rst:475
+#, fuzzy
+msgid ""
+"We can find the number of channels, :math:`n_{channels}` and their actual "
+"width in one last step, by finding the *total flocculator width* if there were "
+"no channels and dividing that by the minimum flocculator width, :math:`W_{Min}"
+"`, found above. The equation for total flocculator width is based on our "
+"target volume:"
+msgstr ""
+"Podemos encontrar el número de canales, :math:`n_{channels}` y su ancho real "
+"en un último paso, encontrando el *ancho total del floculador* si no hubiera "
+"canales y dividiéndolo por el ancho mínimo del floculador, :math:`W_{Min}`, "
+"encontrado arriba. La ecuación para el ancho total del floculador se basa en "
+"nuestro volumen objetivo:"
+
+#: ../../Flocculation/Floc_Design.rst:481
+#, fuzzy
+msgid "Finally:"
+msgstr "Finalmente:"
+
+#: ../../Flocculation/Floc_Design.rst:489
+#, fuzzy
+msgid ""
+":math:`n_{channels}` is an even number and is not 0. Usually, :math:"
+"`n_{channels}` is either 2 or 4."
+msgstr ""
+":matemáticas:`n_{channels}` es un número par y no es 0. Normalmente, :math:"
+"`n_{channels}` es 2 o 4."
+
+#: ../../Flocculation/Floc_Design.rst:491
+#, fuzzy
+msgid ""
+"Now that we know :math:`n_{channels}`, we can find the actual width of a "
+"channel, :math:`W_{channel}`."
+msgstr ""
+"Ahora que sabemos :math:`n_{channels}`, podemos encontrar el ancho real de un "
+"canal, :math:`W_{channel}`."
+
+#: ../../Flocculation/Floc_Design.rst:498
+#, fuzzy
+msgid "Hydraulic Parameters"
+msgstr "Parámetros hidráulicos"
+
+#: ../../Flocculation/Floc_Design.rst:500
+#, fuzzy
+msgid ""
+"Now that the physical dimensions of the flocculator have been defined, the "
+"baffle module needs to be designed. The parameter on which most others are "
+"based is the distance between flow expansions, :math:`H_e`. Recall that :math:"
+"`H_e = H` when there are no obstacles in between baffles."
+msgstr ""
+"Ahora que se han definido las dimensiones físicas del floculador, es necesario "
+"diseñar el módulo deflector. El parámetro en el que se basan la mayoría de los "
+"otros es la distancia entre las expansiones de flujo, :math:`H_e`. Recordemos "
+"que :math:`H_e = H` cuando no hay obstáculos entre los bafles."
+
+#: ../../Flocculation/Floc_Design.rst:503
+#, fuzzy
+msgid ""
+"Height Between Expansions :math:`H_e` and Number of Obstacles per Baffle "
+"Space :math:`n_{obstacles}`"
+msgstr ""
+"Altura entre expansiones: matemáticas: \"H_e\" y número de obstáculos por "
+"espacio de deflector: matemáticas: \"n_{0\""
+
+#: ../../Flocculation/Floc_Design.rst:505
+#, fuzzy
+msgid ""
+"We have a range of possible :math:`H_e` values based on our window of :math:`3 "
+"< \\frac{H_e}{S} < 6`. However, we have a limitation and a preference which "
+"shape how we design :math:`H_e`. Our limitation is that there can only be an "
+"integer number of obstacles. Our preference is to have as few obstacles as "
+"possible to make the baffle module as easy to fabricate as possible. "
+"Therefore, we want :math:`H_e` to be closer to :math:`6` than it is to :math:"
+"`3`; we are looking for :math:`H_{e_{Max}}`."
+msgstr ""
+"Tenemos un rango de posibles valores de :math:`H_e` basados en nuestra ventana "
+"de :math:`3 < \\frac{H_e}{S} < 6`. Sin embargo, tenemos una limitación y una "
+"preferencia que determinan la forma en que diseñamos :matemáticas:`H_e`. "
+"Nuestra limitación es que sólo puede haber un número entero de obstáculos. "
+"Nuestra preferencia es tener el menor número posible de obstáculos para que el "
+"módulo de desviador sea lo más fácil de fabricar. Por lo tanto, queremos que :"
+"math:`H_e` esté más cerca de :math:`6` que de :math:`3`; buscamos :math:"
+"`H_{e_{Max}`."
+
+#: ../../Flocculation/Floc_Design.rst:507
+#, fuzzy
+msgid ""
+"We calculate :math:`H_{e_{Max}}` based on the physical flocculator dimensions. "
+"The equation for :math:`H_e` is obtained by rearranging one of the equations "
+"for minimum channel width found above, :math:`W_{Min, \\, \\Pi_{H_eS}} = "
+"\\frac{\\Pi_{H_eS}Q}{H_e}\\left( \\frac{K}{2 H_e \\nu G_{CS}^2} \\right)^"
+"\\frac{1}{3}`. Because we have already design the channel width, we "
+"substitute :math:`W_{channel}` for :math:`W_{Min, \\, \\Pi_{H_eS}}`. Since we "
+"are looking for :math:`H_{e_{Max}}`, we also substitute :math:`\\Pi_{{HS}"
+"_{Max}}` for :math:`\\Pi_{H_eS}`. The result is:"
+msgstr ""
+"Calculamos :matemáticas:`H_{e_{Max}} basado en las dimensiones físicas del "
+"floculador.  Como ya hemos diseñado el ancho del canal, sustituimos :math:"
+"`W_{channel}` por :math:`W_{Min, \\ ~ \\ ~ -Pi_{H_eS}`. Ya que estamos "
+"buscando :math:`H_{e_{Max}`, también sustituimos :math:`Pi_{HS}_{Max}` por :"
+"math:`Pi_{H_eS}`. El resultado es:"
+
+#: ../../Flocculation/Floc_Design.rst:513
+#, fuzzy
+msgid ""
+"Note that this is the *maximum* distance between flow expansions, and does not "
+"account for the limitation that there must be an integer number of obstacles "
+"per baffle space. Thus, we need to find the *actual* distance between flow "
+"expansions. To do this, we determine and round up the number of expansions per "
+"baffle space using the ceiling function:"
+msgstr ""
+"Tenga en cuenta que esta es la *máxima* distancia entre las expansiones de "
+"flujo, y no tiene en cuenta la limitación de que debe haber un número entero "
+"de obstáculos por espacio de deflector. Por lo tanto, necesitamos encontrar la "
+"distancia *real* entre las expansiones de flujo. Para ello, determinamos y "
+"redondeamos el número de expansiones por espacio de deflector utilizando la "
+"función de techo:"
+
+#: ../../Flocculation/Floc_Design.rst:519
+#, fuzzy
+msgid ""
+"If we had used the floor() function instead, we would find that :math:`H_e` "
+"would be larger than our upper bound, :math:`H_{e_{Max}}`. From here, we can "
+"easily get to the actual number of flow expansions per baffle spacing:"
+msgstr ""
+"Si hubiéramos usado la función floor() en su lugar, encontraríamos que :math:"
+"`H_e` sería más grande que nuestro límite superior, :math:`H_{e_{Max}}`. A "
+"partir de aquí, podemos llegar fácilmente al número real de expansiones de "
+"flujo por el espacio de los bafles:"
+
+#: ../../Flocculation/Floc_Design.rst:526
+#, fuzzy
+msgid ""
+"Finally, we can obtain the number of obstacles per baffle space. The :math:`- "
+"1` in the equation is because the baffles themselves provide one flow "
+"expansion per baffle space."
+msgstr ""
+"Finalmente, podemos obtener el número de obstáculos por espacio de deflector. "
+"La :matemática:`- 1` de la ecuación se debe a que los propios deflectores "
+"proporcionan una expansión de flujo por espacio de deflector."
+
+#: ../../Flocculation/Floc_Design.rst:533
+#, fuzzy
+msgid "Baffle Spacing"
+msgstr "Espacios entre los bafles.."
+
+#: ../../Flocculation/Floc_Design.rst:535
+#, fuzzy
+msgid ""
+"Finally, we can find the space between baffles, :math:`S`. The equation for :"
+"math:`S` is taken from an intermediate step in the :math:`W_{Min, \\, "
+"\\Pi_{H_eS}}` derivation where we obtained, :math:`W = \\frac{Q}"
+"{S}\\left( \\frac{K}{2 H_e \\nu G_{CS}^2} \\right)^\\frac{1}{3}`. Rearranging "
+"for :math:`S`, we get:"
+msgstr ""
+"Finalmente, podemos encontrar el espacio entre los bafles, :matemáticas:`S`.  "
+"Reordenando para las :matemáticas:`S`, tenemos:"
+
+#: ../../Flocculation/Floc_Design.rst:542
+#, fuzzy
+msgid ""
+"Fortunately, we either know or have already designed all the parameters in "
+"this equation."
+msgstr ""
+"Afortunadamente, conocemos o ya hemos diseñado todos los parámetros de esta "
+"ecuación."
+
+#: ../../Flocculation/Floc_Design.rst:545
+#, fuzzy
+msgid "Checking the Flocculator Design"
+msgstr "Comprobando el diseño del floculador"
+
+#: ../../Flocculation/Floc_Design.rst:547
+#, fuzzy
+msgid ""
+"We then compare :math:`n_{spaces, \\, required}` to :math:`n_{spaces, \\, "
+"actual}` to make sure that they are equal."
+msgstr ""
+"Luego comparamos las :matemáticas:`n_{espacios, \\ ~ requerido}` a :"
+"matemáticas:`n_{espacios, \\ ~ real}` para asegurarnos de que son iguales."
+
+#: ../../Flocculation/Floc_Design.rst:550
+#, fuzzy
+msgid "Average Velocity in the Flocculator Check"
+msgstr "Velocidad media en el control del floculador"
+
+#: ../../Flocculation/Floc_Design.rst:552
+#, fuzzy
+msgid ""
+"As water flows through the flocculators, the flocs will get larger and larger. "
+"As a result, their terminal sedimentation velocity will increase. This is what "
+"we want. However, we need to make sure that the flocs don’t settle in the "
+"flocculator; that they instead all settle in the sedimentation tank. To make "
+"sure of this, we need to make sure that the velocity of water in the "
+"flocculator is high enough to scour any flocs that fall to the bottom of the "
+"flocculator. The velocity required to scour flocs from the bottom and avoid "
+"floc accumulation is around :math:`v_{scour} = 15 \\, {\\rm \\frac{cm}{s}}`. "
+"We need to check our average velocity :math:`\\bar v` against this value."
+msgstr ""
+"A medida que el agua fluye a través de los floculadores, los flóculos se harán "
+"cada vez más grandes. Como resultado, su velocidad de sedimentación terminal "
+"aumentará. Esto es lo que queremos. Sin embargo, tenemos que asegurarnos de "
+"que los flóculos no se asienten en el floculador, sino que todos se asienten "
+"en el tanque de sedimentación. Para asegurarnos de esto, necesitamos "
+"asegurarnos de que la velocidad del agua en el floculador es lo "
+"suficientemente alta como para barrer cualquier flóculo que caiga al fondo del "
+"floculador. La velocidad requerida para barrer los flóculos del fondo y evitar "
+"la acumulación de flóculos es alrededor de: matemáticas: `v_{scour} = 15 \\, "
+"{\\rm \\frac{cm}{s}. Tenemos que comprobar nuestra velocidad media :math:``bar "
+"v`` contra este valor."
+
+#: ../../Flocculation/Floc_Design.rst:557
+#, fuzzy
+msgid "Residence Time of Water in the Flocculator Check"
+msgstr "Tiempo de residencia del agua en el control del floculador"
+
+#: ../../Flocculation/Floc_Design.rst:559
+#, fuzzy
+msgid ""
+"It is now time to make our final check. We need to make sure that our actual "
+"residence time is *at least* as much as we designed for. Fortunately, in our "
+"design we did not account for the change in water level throughout the "
+"flocculator due to head loss. Therefore, the actual volume of water in the "
+"flocculator is actually greater than :math:`\\rlap{--} V_{floc}`. See :numref:"
+"`figure_flocculator_head_loss` for clarification."
+msgstr ""
+"Es hora de hacer nuestra última comprobación. Tenemos que asegurarnos de que "
+"nuestro tiempo de residencia real es al menos tan grande como el que "
+"diseñamos. Afortunadamente, en nuestro diseño no tuvimos en cuenta el cambio "
+"en el nivel de agua en todo el floculador debido a la pérdida de carga. Por lo "
+"tanto, el volumen real de agua en el floculador es en realidad mayor que: "
+"matemáticas: `rlap{--} V_{floc}`. Ver :numref:`figure_flocculator_head_loss` "
+"para aclarar."
+
+#: ../../Flocculation/Floc_Design.rst:568
+#, fuzzy
+msgid ""
+"The water level in the flocculator decreases due to head loss. Flocculators "
+"may occupy multiple channels, but this extra triangle of water exists in any "
+"case."
+msgstr ""
+"El nivel de agua en el floculador disminuye debido a la pérdida de carga. Los "
+"floculadores pueden ocupar múltiples canales, pero este triángulo extra de "
+"agua existe en cualquier caso."
+
+#: ../../Flocculation/Floc_Design.rst:571
+#, fuzzy
+msgid ""
+"Thus, the actual average water level in the flocculator is :math:`H + "
+"\\frac{h_{L_{floc}}}{2}`. Thus, the actual residence time is:"
+msgstr ""
+"Por lo tanto, el nivel medio real de agua en el floculador es :matemático:`H + "
+"\\frac{h_{L_{floc}}{2}. Por lo tanto, el tiempo de residencia real es:"
+
+#: ../../Flocculation/Floc_Design.rst:575
+#, fuzzy
+msgid "Check to see if :math:`\\theta_{actual}` is greater than :math:`\\theta`."
+msgstr "Comprueba si :math:``theta_{\\i}` es mayor que :math:``theta``."
