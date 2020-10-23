@@ -4,1126 +4,1728 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: AguaClara Textbook EXPERIMENTAL\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-19 16:17-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2020-10-18 17:06-0400\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: Textbook Subteam\n"
+"Language: es\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:5
+#, fuzzy
 msgid "Fluid Deformation and Energy Dissipation Derivations"
-msgstr ""
+msgstr "Deformación de fluidos y derivaciones de disipación de energía"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:10
+#, fuzzy
 msgid ""
-"Equations for :math:`\\varepsilon` and :math:`G` in Varying Flow "
-"Geometries"
+"Equations for :math:`\\varepsilon` and :math:`G` in Varying Flow Geometries"
 msgstr ""
+"Ecuaciones para :math:`varepsilon` y :math:`G` en Geometrías de flujo variable"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:12
+#, fuzzy
 msgid ""
-"Estimation of velocity gradients for various flow geometries is the basis"
-" for the design of rapid mix, flocculators, and plate settlers. Thus, our"
-" goal is to define the velocity gradients consistently across a range of "
-"possible flow regimes. There are three approaches to calculating the "
-"average velocity gradient within a control volume. 1) Use the Navier "
-"Stokes equations and solve for the spatially averaged velocity gradient. "
-"1) Use Computational Fluid Dynamics (CFD) to solve for the spatially "
-"averaged velocity gradient. 1) Use the total mechanical energy loss in "
-"the control volume to calculate the energy dissipation rate. Estimate the"
-" velocity gradient directly from the energy dissipation rate, "
-":math:`G_{CS} = \\sqrt{\\frac{\\bar\\varepsilon}{\\nu}}`, as defined by "
-"Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity "
-"Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil "
-"Eng., 30, 203–221.)."
+"Estimation of velocity gradients for various flow geometries is the basis for "
+"the design of rapid mix, flocculators, and plate settlers. Thus, our goal is "
+"to define the velocity gradients consistently across a range of possible flow "
+"regimes. There are three approaches to calculating the average velocity "
+"gradient within a control volume. 1) Use the Navier Stokes equations and solve "
+"for the spatially averaged velocity gradient. 1) Use Computational Fluid "
+"Dynamics (CFD) to solve for the spatially averaged velocity gradient. 1) Use "
+"the total mechanical energy loss in the control volume to calculate the energy "
+"dissipation rate. Estimate the velocity gradient directly from the energy "
+"dissipation rate, :math:`G_{CS} = \\sqrt{\\frac{\\bar\\varepsilon}{\\nu}}`, as "
+"defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) "
+"‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. "
+"Civil Eng., 30, 203–221.)."
 msgstr ""
+"La estimación de los gradientes de velocidad para varias geometrías de flujo "
+"es la base para el diseño de la mezcla rápida, los floculadores y los "
+"sedimentadores de placas. Por lo tanto, nuestro objetivo es definir los "
+"gradientes de velocidad de forma consistente a través de un rango de posibles "
+"regímenes de flujo. Hay tres enfoques para calcular el gradiente de velocidad "
+"promedio dentro de un volumen de control. 1) Usar las ecuaciones de Navier "
+"Stokes y resolver el gradiente de velocidad promediado espacialmente. 1) Usar "
+"la Dinámica de Fluidos Computacional (CFD) para resolver el gradiente de "
+"velocidad promediado espacialmente. 1) Usar la pérdida total de energía "
+"mecánica en el volumen de control para calcular la tasa de disipación de "
+"energía. Estimar el gradiente de velocidad directamente a partir de la tasa de "
+"disipación de energía, :math:`G_{CS} = \\sqrt{\\frac{\\bar\\varepsilon}"
+"{\\nu}}, como lo definieron Camp y Stein en 1943 (Camp, T. R., and Stein, P. "
+"C. (1943) ''Gradientes de Velocidad y Trabajo Hidráulico en Movimiento de "
+"Fluidos,'' J. Boston Soc. Civil Eng., 30, 203-221.)."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:14
+#, fuzzy
 msgid ""
-"The first approach would be ideal but is difficult in practice because "
-"Navier Stokes solutions are only available for limited geometries and "
-"laminar flow. CFD could be used but is difficult to use as a general "
-"engineering design approach given the large number of geometries that are"
-" used in drinking water treatment plants. For these reasons we will use "
-"the control volume approach to estimate the average velocity gradient. "
-"This method incorrectly assumes that the energy dissipation rate is "
-"completely uniform in the control volume and hence the velocity gradient "
-"is also uniform. This method results in an over estimation of the "
-"velocity gradient. The Camp-Stein estimate of :math:`G_{CS}` is based on "
-"a control volume where the velocity gradient is uniform. Consider a layer"
-" of fluid of depth :math:`H` and apply a velocity, :math:`v` at the top "
-"of the fluid. The velocity gradient, :math:`G`, is thus "
-":math:`\\frac{v}{H}` everywhere in the fluid. The force required to move "
-"the top of the fluid at velocity v can be obtained from the required "
-"shear, :math:`\\tau`. From Newtons Law of Friction we have"
+"The first approach would be ideal but is difficult in practice because Navier "
+"Stokes solutions are only available for limited geometries and laminar flow. "
+"CFD could be used but is difficult to use as a general engineering design "
+"approach given the large number of geometries that are used in drinking water "
+"treatment plants. For these reasons we will use the control volume approach to "
+"estimate the average velocity gradient. This method incorrectly assumes that "
+"the energy dissipation rate is completely uniform in the control volume and "
+"hence the velocity gradient is also uniform. This method results in an over "
+"estimation of the velocity gradient. The Camp-Stein estimate of :math:`G_{CS}` "
+"is based on a control volume where the velocity gradient is uniform. Consider "
+"a layer of fluid of depth :math:`H` and apply a velocity, :math:`v` at the top "
+"of the fluid. The velocity gradient, :math:`G`, is thus :math:`\\frac{v}{H}` "
+"everywhere in the fluid. The force required to move the top of the fluid at "
+"velocity v can be obtained from the required shear, :math:`\\tau`. From "
+"Newtons Law of Friction we have"
 msgstr ""
+"El primer enfoque sería ideal pero es difícil en la práctica porque las "
+"soluciones de Navier Stokes sólo están disponibles para geometrías limitadas y "
+"flujo laminar. Podría utilizarse el CFD, pero es difícil de utilizar como "
+"enfoque general de diseño de ingeniería, dado el gran número de geometrías que "
+"se utilizan en las plantas de tratamiento de agua potable. Por estas razones "
+"utilizaremos el enfoque de volumen de control para estimar el gradiente de "
+"velocidad media. Este método supone incorrectamente que la tasa de disipación "
+"de energía es completamente uniforme en el volumen de control y, por lo tanto, "
+"el gradiente de velocidad también es uniforme. Este método da como resultado "
+"una sobreestimación del gradiente de velocidad. La estimación de Camp-Stein "
+"de :math:`G_{CS}` se basa en un volumen de control donde el gradiente de "
+"velocidad es uniforme. Considera una capa de fluido de profundidad :math:`H` y "
+"aplica una velocidad, :math:`v` en la parte superior del fluido. El gradiente "
+"de velocidad, :math:`G`, es por lo tanto :math:`frac{v}{H}` en todo el fluido. "
+"La fuerza requerida para mover la parte superior del fluido a la velocidad v "
+"se puede obtener de la cizalla requerida, :math:`\\tau`. De la Ley de Fricción "
+"de Newtons tenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:22
+#, fuzzy
 msgid ""
-"Where :math:`\\tau` is the force required per unit plan view area. The "
-"power per unit area required to move the fluid at velocity :math:`v` is "
-":math:`\\tau v`. The mass per unit area is :math:`\\rho H`. Thus the "
-"energy dissipation rate or the power per mass is"
+"Where :math:`\\tau` is the force required per unit plan view area. The power "
+"per unit area required to move the fluid at velocity :math:`v` is :math:`\\tau "
+"v`. The mass per unit area is :math:`\\rho H`. Thus the energy dissipation "
+"rate or the power per mass is"
 msgstr ""
+"Donde :matemáticas:``tau`` es la fuerza requerida por unidad de plan de área "
+"de vista. La fuerza por unidad de área requerida para mover el fluido a "
+"velocidad :math:`v` es :math:`\\tau v`. La masa por unidad de área es :math:"
+"`rho H`. Por lo tanto, la tasa de disipación de energía o la potencia por masa "
+"es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:26
+#, fuzzy
 msgid ""
-"This equation has no approximations, but has one very important "
-"assumption. We derived this equation for a control volume where the "
-"velocity gradient was **uniform**. The reactors and control volumes that "
-"we will be using as we design water treatment plants will **not** have "
-"uniform velocity gradients. Indeed, several of the water treatment "
-"processes will be turbulent and thus the velocity gradients in the fluid "
-"will vary in both space and time. Even in laminar flow in a pipe the "
-"velocity gradient is far from uniform with high velocity gradients at the"
-" wall and zero velocity gradient at the center of the pipe."
+"This equation has no approximations, but has one very important assumption. We "
+"derived this equation for a control volume where the velocity gradient was "
+"**uniform**. The reactors and control volumes that we will be using as we "
+"design water treatment plants will **not** have uniform velocity gradients. "
+"Indeed, several of the water treatment processes will be turbulent and thus "
+"the velocity gradients in the fluid will vary in both space and time. Even in "
+"laminar flow in a pipe the velocity gradient is far from uniform with high "
+"velocity gradients at the wall and zero velocity gradient at the center of the "
+"pipe."
 msgstr ""
+"Esta ecuación no tiene aproximaciones, pero tiene una suposición muy "
+"importante. Derivamos esta ecuación para un volumen de control donde el "
+"gradiente de velocidad era **uniforme**. Los reactores y volúmenes de control "
+"que usaremos al diseñar las plantas de tratamiento de agua **no** tendrán "
+"gradientes de velocidad uniformes. De hecho, varios de los procesos de "
+"tratamiento de agua serán turbulentos y, por lo tanto, los gradientes de "
+"velocidad en el fluido variarán tanto en el espacio como en el tiempo. Incluso "
+"en el flujo laminar de una tubería el gradiente de velocidad está lejos de ser "
+"uniforme, con gradientes de alta velocidad en la pared y un gradiente de "
+"velocidad cero en el centro de la tubería."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:28
+#, fuzzy
 msgid "We’d like to know if we can apply the previous equation"
-msgstr ""
+msgstr "Nos gustaría saber si podemos aplicar la ecuación anterior"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:33
+#, fuzzy
 msgid ""
 "to the case where the energy dissipation rate and velocity gradients are "
 "nonuniform by simply introducing average values of both quantities."
 msgstr ""
+"al caso en que la tasa de disipación de energía y los gradientes de velocidad "
+"no son uniformes, simplemente introduciendo valores medios de ambas cantidades."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:37
+#, fuzzy
 msgid ""
-"We will test this option with a simple case. Consider a hypothetical "
-"reactor (case 2) that is 4 times as large in plan view area as the "
-"uniform velocity gradient case explored above (case 1). In addition, "
-"assume that 3/4 of the reactor has a velocity gradient of zero. The "
-"average energy dissipation rate for case 1 is"
+"We will test this option with a simple case. Consider a hypothetical reactor "
+"(case 2) that is 4 times as large in plan view area as the uniform velocity "
+"gradient case explored above (case 1). In addition, assume that 3/4 of the "
+"reactor has a velocity gradient of zero. The average energy dissipation rate "
+"for case 1 is"
 msgstr ""
+"Probaremos esta opción con un caso sencillo. Consideremos un reactor "
+"hipotético (caso 2) que es 4 veces más grande en el área de visión en planta "
+"que el caso de gradiente de velocidad uniforme explicado anteriormente (caso "
+"1). Además, suponga que 3/4 del reactor tiene un gradiente de velocidad de "
+"cero. La tasa media de disipación de energía para el caso 1 es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:41
+#, fuzzy
 msgid "The average energy dissipation rate for case 2 is"
-msgstr ""
+msgstr "La tasa media de disipación de energía para el caso 2 es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:45
+#, fuzzy
 msgid ""
-"This makes sense because we are putting in the same amount of energy into"
-" a control volume that is 4 times bigger."
+"This makes sense because we are putting in the same amount of energy into a "
+"control volume that is 4 times bigger."
 msgstr ""
+"Esto tiene sentido porque estamos poniendo la misma cantidad de energía en un "
+"volumen de control que es 4 veces mayor."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:47
+#, fuzzy
 msgid "Now we calculate the velocity gradients. As previously determined,"
 msgstr ""
+"Ahora calculamos los gradientes de velocidad. Como se determinó anteriormente,"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:51
+#, fuzzy
 msgid ""
 "The average velocity gradient in the second control volume is simply the "
 "volume weighted average"
 msgstr ""
+"El gradiente de velocidad media en el segundo volumen de control es "
+"simplemente el promedio ponderado del volumen"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:55
+#, fuzzy
 msgid ""
-"where 1/4 of the case 2 control volume has the same velocity gradient as "
-"the case 1 control volume and 3/4 of the control volume has a velocity "
-"gradient of 0. The Camp Stein method would suggest that :math:`\\bar G_2`"
-" is equal to"
+"where 1/4 of the case 2 control volume has the same velocity gradient as the "
+"case 1 control volume and 3/4 of the control volume has a velocity gradient of "
+"0. The Camp Stein method would suggest that :math:`\\bar G_2` is equal to"
 msgstr ""
+"donde 1/4 del volumen de control del caso 2 tiene el mismo gradiente de "
+"velocidad que el volumen de control del caso 1 y 3/4 del volumen de control "
+"tiene un gradiente de velocidad de 0. El método de Camp Stein sugeriría que :"
+"matemáticas:`\\bar G_2` es igual a"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:59
+#, fuzzy
 msgid ""
 "Now we check to see if the Camp Stein method of estimating the average "
 "velocity gradient, :math:`\\bar G`, is correct."
 msgstr ""
+"Ahora comprobamos si el método de Camp Stein para estimar el gradiente de "
+"velocidad promedio, :matemáticas:``bar G``, es correcto."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:63
+#, fuzzy
 msgid ""
-"Given that the energy dissipation rate is proportional to the square of "
-"the velocity gradient the mean of the energy dissipation rate is **not** "
-"proportional to the mean of the velocity gradient. Thus the Camp Stein "
-"method of calculating the average velocity gradient is not correct except"
-" in the case of uniform velocity gradient. The Camp Stein equation is "
-"dimensionally correct and could be corrected by adding a dimensionless "
-"constant :math:`\\Pi_{CS}` that is a function of the energy dissipation "
-"rate distribution within the control volume."
+"Given that the energy dissipation rate is proportional to the square of the "
+"velocity gradient the mean of the energy dissipation rate is **not** "
+"proportional to the mean of the velocity gradient. Thus the Camp Stein method "
+"of calculating the average velocity gradient is not correct except in the case "
+"of uniform velocity gradient. The Camp Stein equation is dimensionally correct "
+"and could be corrected by adding a dimensionless constant :math:`\\Pi_{CS}` "
+"that is a function of the energy dissipation rate distribution within the "
+"control volume."
 msgstr ""
+"Dado que la tasa de disipación de energía es proporcional al cuadrado del "
+"gradiente de velocidad, la media de la tasa de disipación de energía es **no** "
+"proporcional a la media del gradiente de velocidad. Por lo tanto, el método de "
+"Camp Stein para calcular el gradiente de velocidad medio no es correcto, "
+"excepto en el caso de un gradiente de velocidad uniforme. La ecuación de Camp "
+"Stein es dimensionalmente correcta y podría corregirse añadiendo una constante "
+"adimensional: matemáticas: \"Pi_{CS}\" que es una función de la distribución "
+"de la tasa de disipación de energía dentro del volumen de control."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:67
+#, fuzzy
 msgid ""
-"where :math:`\\Pi_{CS}` is 1 for a uniform velocity gradient and is less "
-"than one for non uniform velocity gradients. We can think "
-":math:`\\Pi_{CS}` as a measure of the efficiency of using energy to "
-"deform the fluid. We can calculate :math:`\\Pi_{CS}` for cases where we "
-"have either a Navier Stokes or a computation fluid dynamics estimate of "
-":math:`\\bar G`."
+"where :math:`\\Pi_{CS}` is 1 for a uniform velocity gradient and is less than "
+"one for non uniform velocity gradients. We can think :math:`\\Pi_{CS}` as a "
+"measure of the efficiency of using energy to deform the fluid. We can "
+"calculate :math:`\\Pi_{CS}` for cases where we have either a Navier Stokes or "
+"a computation fluid dynamics estimate of :math:`\\bar G`."
 msgstr ""
+"donde :matemáticas:``Pi_{CS}` es 1 para un gradiente de velocidad uniforme y "
+"es menos de uno para gradientes de velocidad no uniformes. Podemos pensar en "
+"las matemáticas como una medida de la eficiencia del uso de la energía para "
+"deformar el fluido. Podemos calcular :math:``Pi_{CS}` para los casos en que "
+"tenemos un Navier Stokes o una estimación de dinámica de fluidos de cálculo "
+"de :math:``bar G``."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:69
+#, fuzzy
 msgid ""
 "The conventional approach to design of flocculators uses the Camp Stein "
 "definition of"
 msgstr ""
+"El enfoque convencional para el diseño de los floculadores utiliza la "
+"definición de Camp Stein de"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:76
+#, fuzzy
 msgid ""
-"where :math:`G_{CS}` is **not** the average velocity gradient, but is "
-"larger than the average velocity gradient by a factor of "
-":math:`\\Pi_{CS}`. Thus we have"
+"where :math:`G_{CS}` is **not** the average velocity gradient, but is larger "
+"than the average velocity gradient by a factor of :math:`\\Pi_{CS}`. Thus we "
+"have"
 msgstr ""
+"donde :matemáticas:`G_{CS}` es **no** el gradiente de velocidad promedio, pero "
+"es mayor que el gradiente de velocidad promedio por un factor de :matemáticas:`"
+"\\Pi_{CS}`. Por lo tanto, tenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:80
+#, fuzzy
 msgid ""
 "Use of the Camp Stein velocity gradient in design of mixing units and "
-"flocculators results in an error when applying results from one reactor "
-"to another. If the energy dissipation rate distribution within the "
-"reactors is different, then :math:`\\Pi_{CS}` will be different for the "
-"two reactors and the actual average velocity gradient, :math:`\\bar G` "
-"will be different for the two reactors."
+"flocculators results in an error when applying results from one reactor to "
+"another. If the energy dissipation rate distribution within the reactors is "
+"different, then :math:`\\Pi_{CS}` will be different for the two reactors and "
+"the actual average velocity gradient, :math:`\\bar G` will be different for "
+"the two reactors."
 msgstr ""
+"El uso del gradiente de velocidad de Camp Stein en el diseño de unidades de "
+"mezcla y floculadores da lugar a un error al aplicar los resultados de un "
+"reactor a otro. Si la distribución de la tasa de disipación de energía dentro "
+"de los reactores es diferente, entonces :math:``Pi_{CS}` será diferente para "
+"los dos reactores y el gradiente de velocidad promedio real, :math:`\\bar G`` "
+"será diferente para los dos reactores."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:82
+#, fuzzy
 msgid ""
-"Given that energy is used more efficiently to produce velocity gradients "
-"if the velocity gradients are uniform, our goal is to design mixing and "
-"flocculation units that have relatively uniform velocity gradients. If "
-"all of our reactors at both research scale and municipal scale have "
-"similar values of :math:`\\Pi_{CS}`, then we can use the Camp Stein "
-"definition of :math:`G_{CS}` and not introduce any significant errors. It"
-" will not be reasonable, however, to expect similar performance based on "
-"similar values of :math:`G_{CS}` if one reactor has relatively uniform "
-"energy dissipation rates and the other reactor has zones with very high "
-"energy dissipation rates and zones with very low energy dissipation "
-"rates."
+"Given that energy is used more efficiently to produce velocity gradients if "
+"the velocity gradients are uniform, our goal is to design mixing and "
+"flocculation units that have relatively uniform velocity gradients. If all of "
+"our reactors at both research scale and municipal scale have similar values "
+"of :math:`\\Pi_{CS}`, then we can use the Camp Stein definition of :math:"
+"`G_{CS}` and not introduce any significant errors. It will not be reasonable, "
+"however, to expect similar performance based on similar values of :math:`G_{CS}"
+"` if one reactor has relatively uniform energy dissipation rates and the other "
+"reactor has zones with very high energy dissipation rates and zones with very "
+"low energy dissipation rates."
 msgstr ""
+"Dado que la energía se utiliza de forma más eficiente para producir gradientes "
+"de velocidad si éstos son uniformes, nuestro objetivo es diseñar unidades de "
+"mezcla y floculación que tengan gradientes de velocidad relativamente "
+"uniformes. Si todos nuestros reactores, tanto a escala de investigación como a "
+"escala municipal, tienen valores similares de :math:`\\Pi_{CS}`, entonces "
+"podemos usar la definición de Camp Stein de :math:`G_{CS}` y no introducir "
+"ningún error significativo. No será razonable, sin embargo, esperar un "
+"rendimiento similar basado en valores similares de :math:`G_{CS}` si un "
+"reactor tiene tasas de disipación de energía relativamente uniformes y el otro "
+"reactor tiene zonas con tasas de disipación de energía muy altas y zonas con "
+"tasas de disipación de energía muy bajas."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:84
+#, fuzzy
 msgid ""
-"We will demonstrate later that mechanically mixed reactors typically have"
-" a much wider range of energy dissipation rates than do well designed "
-"hydraulically mixed reactors. Thus comparisons between mechanically mixed"
-" and hydraulically mixed reactors must account for differences in "
-":math:`\\Pi_{CS}`."
+"We will demonstrate later that mechanically mixed reactors typically have a "
+"much wider range of energy dissipation rates than do well designed "
+"hydraulically mixed reactors. Thus comparisons between mechanically mixed and "
+"hydraulically mixed reactors must account for differences in :math:`\\Pi_{CS}`."
 msgstr ""
+"Demostraremos más adelante que los reactores de mezcla mecánica suelen tener "
+"un rango mucho más amplio de tasas de disipación de energía que los reactores "
+"de mezcla hidráulica bien diseñados. Por lo tanto, las comparaciones entre "
+"reactores mecánicamente mezclados e hidráulicamente mezclados deben tener en "
+"cuenta las diferencias en :matemáticas:``Pi_{CS}`."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:86
 msgid ""
-"We will use the Camp Stein definition :math:`G_{CS} = "
-"\\sqrt{\\frac{\\bar\\varepsilon}{\\nu}}` as the design parameter of "
-"convenience in this textbook."
+"We will use the Camp Stein definition :math:`G_{CS} = \\sqrt{\\frac{\\bar"
+"\\varepsilon}{\\nu}}` as the design parameter of convenience in this textbook."
 msgstr ""
+"Usaremos la definición de Camp Stein  :math:`G_{CS} = \\sqrt{\\frac{\\bar"
+"\\varepsilon}{\\nu}}` como el parámetro de diseño de conveniencia en este "
+"libro de texto."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:92
+#, fuzzy
 msgid "Estimates of time required for mixing processes"
-msgstr ""
+msgstr "Estimaciones del tiempo necesario para los procesos de mezcla"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:97
+#, fuzzy
 msgid "Turbulent Large Scale Eddies"
-msgstr ""
+msgstr "Turbulentos remolinos a gran escala"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:99
+#, fuzzy
 msgid ""
-"The first step in mixing is at the scale of the largest eddies. The "
-"largest eddies are limited in size by the smallest dimension normal to "
-"the direction of flow. Thus in a pipe the dimension of the largest eddies"
-" is set by the pipe diameter. In a open channel the dimension of the "
-"largest eddies is usually the water depth although it could be the width "
-"of the channel for the case of a narrow, deep channel."
+"The first step in mixing is at the scale of the largest eddies. The largest "
+"eddies are limited in size by the smallest dimension normal to the direction "
+"of flow. Thus in a pipe the dimension of the largest eddies is set by the pipe "
+"diameter. In a open channel the dimension of the largest eddies is usually the "
+"water depth although it could be the width of the channel for the case of a "
+"narrow, deep channel."
 msgstr ""
+"El primer paso en la mezcla es a la escala de los remolinos más grandes. Los "
+"mayores remolinos están limitados en tamaño por la dimensión más pequeña "
+"normal a la dirección del flujo. Por lo tanto, en una tubería la dimensión de "
+"los mayores remolinos se establece por el diámetro de la tubería. En un canal "
+"abierto, la dimensión de los mayores remolinos suele ser la profundidad del "
+"agua, aunque podría ser el ancho del canal en el caso de un canal estrecho y "
+"profundo."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:101
+#, fuzzy
 msgid ""
-"Eddy turnover time, :math:`t_{eddy}`, is the time it takes for the eddy "
-"to travel a distance equal to its length-scale. Thus the eddy turnover "
-"time provides a good estimate of the time required for mixing to occur at"
-" the length scale of the eddy. We assume that the energy of the large "
-"eddy is dissipated into smaller length scales in the time "
-":math:`t_{eddy}`:"
+"Eddy turnover time, :math:`t_{eddy}`, is the time it takes for the eddy to "
+"travel a distance equal to its length-scale. Thus the eddy turnover time "
+"provides a good estimate of the time required for mixing to occur at the "
+"length scale of the eddy. We assume that the energy of the large eddy is "
+"dissipated into smaller length scales in the time :math:`t_{eddy}`:"
 msgstr ""
+"El tiempo de rotación del remolino, :math:`t_{eddy}`, es el tiempo que tarda "
+"el remolino en recorrer una distancia igual a su escala de longitud. Por lo "
+"tanto, el tiempo de rotación del remolino proporciona una buena estimación del "
+"tiempo necesario para que la mezcla se produzca en la escala de longitud del "
+"remolino. Asumimos que la energía del gran remolino se disipa en escalas de "
+"longitud más pequeñas en el tiempo :matemáticas:`t_{eddy}`:"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:105
+#, fuzzy
 msgid "The rate of energy loss to smaller scales is"
-msgstr ""
+msgstr "La tasa de pérdida de energía a escalas más pequeñas es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:109
+#, fuzzy
 msgid "Combining the two equations"
-msgstr ""
+msgstr "Combinando las dos ecuaciones"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:113
+#, fuzzy
 msgid ""
 "We can use this equation to estimate the eddy velocity given an energy "
 "dissipation rate."
 msgstr ""
+"Podemos usar esta ecuación para estimar la velocidad de remolino dada una tasa "
+"de disipación de energía."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:117
+#, fuzzy
 msgid ""
-"Now we can solve for the eddy turnover time which is a measure of the "
-"mixing time at the eddy scale."
+"Now we can solve for the eddy turnover time which is a measure of the mixing "
+"time at the eddy scale."
 msgstr ""
+"Ahora podemos resolver el tiempo de rotación del remolino, que es una medida "
+"del tiempo de mezcla en la escala de remolinos."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:123
+#, fuzzy
 msgid ""
-"This provides a simple insight that the time required for an eddy to turn"
-" over scales with the size of the eddy raised to the 2/3 power. Thus "
-"large eddies take more time to turn over than do small eddies. Thus if we"
-" calculate the time required for large scale mixing using the dimension "
-"of the eddies, it will provide a reasonable estimate of the total time "
-"for mixing because mixing at all smaller scales requires much less time. "
-"A notable exception to this is the case of mixing in rivers. Rivers are "
-"usually shallow and wide. The largest eddies in a river are limited by "
-"the depth of the river. Mixing over the width of the river takes much "
-"longer than vertical mixing because multiple eddies are required to "
-"transport a substance from one side of the river to the other."
+"This provides a simple insight that the time required for an eddy to turn over "
+"scales with the size of the eddy raised to the 2/3 power. Thus large eddies "
+"take more time to turn over than do small eddies. Thus if we calculate the "
+"time required for large scale mixing using the dimension of the eddies, it "
+"will provide a reasonable estimate of the total time for mixing because mixing "
+"at all smaller scales requires much less time. A notable exception to this is "
+"the case of mixing in rivers. Rivers are usually shallow and wide. The largest "
+"eddies in a river are limited by the depth of the river. Mixing over the width "
+"of the river takes much longer than vertical mixing because multiple eddies "
+"are required to transport a substance from one side of the river to the other."
 msgstr ""
+"Esto proporciona una simple idea de que el tiempo requerido para que un "
+"remolino se convierta en una escala con el tamaño del remolino elevado a los "
+"2/3 de la potencia. Por lo tanto, los grandes remolinos toman más tiempo para "
+"girar que los pequeños. Por lo tanto, si calculamos el tiempo necesario para "
+"la mezcla a gran escala utilizando la dimensión de los remolinos, se obtendrá "
+"una estimación razonable del tiempo total de mezcla porque la mezcla a todas "
+"las escalas más pequeñas requiere mucho menos tiempo. Una notable excepción a "
+"esto es el caso de la mezcla en los ríos. Los ríos suelen ser poco profundos y "
+"anchos. Los remolinos más grandes de un río están limitados por la profundidad "
+"del río. La mezcla a lo ancho del río lleva mucho más tiempo que la mezcla "
+"vertical porque se necesitan múltiples remolinos para transportar una "
+"sustancia de un lado del río al otro."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:125
+#, fuzzy
 msgid ""
-"We can use the eddy velocity to estimate how long it will take for an "
-"eddy to cross the smallest dimension of flow. Eddy velocity is "
-":math:`v_{eddy} \\approx \\left( \\bar\\varepsilon \\, L_{eddy} "
-"\\right)^\\frac{1}{3}`. The “:math:`\\approx`” indicates that this "
-"relationship is the same order of magnitude."
+"We can use the eddy velocity to estimate how long it will take for an eddy to "
+"cross the smallest dimension of flow. Eddy velocity is :math:`v_{eddy} "
+"\\approx \\left( \\bar\\varepsilon \\, L_{eddy} \\right)^\\frac{1}{3}`. The “:"
+"math:`\\approx`” indicates that this relationship is the same order of "
+"magnitude."
 msgstr ""
+"Podemos usar la velocidad del remolino para estimar cuánto tiempo le tomará a "
+"un remolino cruzar la dimensión más pequeña del flujo. La velocidad de los "
+"remolinos es :math:`v_{eddy} \\Aproximadamente a la izquierda, a la derecha, a "
+"la derecha. La \":matemática:``aprox`` indica que esta relación es del mismo "
+"orden de magnitud."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:128
+#, fuzzy
 msgid ""
 "Chemical injection into the center of a pipe is common in drinking water "
-"treatment plants. We can develop equations to estimate the distance "
-"required for full mixing with the fluid in the pipe. In a pipe we have"
+"treatment plants. We can develop equations to estimate the distance required "
+"for full mixing with the fluid in the pipe. In a pipe we have"
 msgstr ""
+"La inyección de químicos en el centro de una tubería es común en las plantas "
+"de tratamiento de agua potable. Podemos desarrollar ecuaciones para estimar la "
+"distancia requerida para la mezcla completa con el fluido en la tubería. En "
+"una tubería tenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:132
+#, fuzzy
 msgid ""
 "For a long straight pipe :math:`\\bar\\varepsilon = \\frac{{\\rm f}}{2} "
-"\\frac{\\bar v^3}{D}` (Equation :eq:`eq_EDR_straight_pipe`) and thus we "
-"can obtain the ratio between mean velocity and the velocity of the large "
-"scale eddies."
+"\\frac{\\bar v^3}{D}` (Equation :eq:`eq_EDR_straight_pipe`) and thus we can "
+"obtain the ratio between mean velocity and the velocity of the large scale "
+"eddies."
 msgstr ""
+"Para un largo tubo recto :math:``bar\\varepsilon = \\Nfrac{{\\N} {\\i1}{\\i} "
+"\\frac{\\bar v^3}{D}(Ecuación :eq:`eq_EDR_straight_pipe`) y así podemos "
+"obtener la relación entre la velocidad media y la velocidad de los remolinos a "
+"gran escala."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:139
-#, python-format
+#, fuzzy, python-format
 msgid ""
-"Given a friction factor of 0.02, the eddy velocity is approximately 20% "
-"of the mean velocity. We can use this ratio to estimate how many pipe "
-"diameters downstream from an injection point will the coagulant be mixed "
-"across the diameter of the pipe."
+"Given a friction factor of 0.02, the eddy velocity is approximately 20% of the "
+"mean velocity. We can use this ratio to estimate how many pipe diameters "
+"downstream from an injection point will the coagulant be mixed across the "
+"diameter of the pipe."
 msgstr ""
+"Dado un factor de fricción de 0,02, la velocidad de remolino es "
+"aproximadamente 20% o de la velocidad media. Podemos usar esta relación para "
+"estimar cuántos diámetros de tubería aguas abajo de un punto de inyección se "
+"mezclará el coagulante a través del diámetro de la tubería."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:146
+#, fuzzy
 msgid ""
 "Where :math:`N_{D_{pipe}}` is the distance in number of pipe diameters "
-"downstream of the injection point where complete mixing will have "
-"occurred. This estimate is a minimum distance and a factor of safety of 2"
-" or more would reasonably be applied. In addition it is best practice to "
-"inject the coagulant in the center of the pipe. Injecting the coagulant "
-"at the side of the pipe will require considerably greater distance "
-"downstream for mixing across the pipe."
+"downstream of the injection point where complete mixing will have occurred. "
+"This estimate is a minimum distance and a factor of safety of 2 or more would "
+"reasonably be applied. In addition it is best practice to inject the coagulant "
+"in the center of the pipe. Injecting the coagulant at the side of the pipe "
+"will require considerably greater distance downstream for mixing across the "
+"pipe."
 msgstr ""
+"Donde :matemáticas:`N_{D_{pipe}}` es la distancia en número de diámetros de "
+"tubería aguas abajo del punto de inyección donde se habrá producido la mezcla "
+"completa. Esta estimación es una distancia mínima y se aplicaría "
+"razonablemente un factor de seguridad de 2 o más. Además, es la mejor práctica "
+"inyectar el coagulante en el centro de la tubería. Inyectar el coagulante en "
+"el lateral del tubo requerirá una distancia considerablemente mayor aguas "
+"abajo para la mezcla a través del tubo."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:155
+#, fuzzy
 msgid "Inner Viscous Length Scale"
-msgstr ""
+msgstr "Escala de longitud de la viscosidad interna"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:157
+#, fuzzy
 msgid ""
-"The smallest scale at which inertia containing eddies causes mixing is "
-"set by the final damping of inertia by viscosity. Turbulence occurs when "
-"fluid inertia is too large to be damped by viscosity. The ratio of "
-"inertia to viscosity is given by the Reynolds number, :math:`\\rm Re`:"
+"The smallest scale at which inertia containing eddies causes mixing is set by "
+"the final damping of inertia by viscosity. Turbulence occurs when fluid "
+"inertia is too large to be damped by viscosity. The ratio of inertia to "
+"viscosity is given by the Reynolds number, :math:`\\rm Re`:"
 msgstr ""
+"La escala más pequeña en la que la inercia que contiene los remolinos causa la "
+"mezcla se establece por la amortiguación final de la inercia por la "
+"viscosidad. La turbulencia se produce cuando la inercia del fluido es "
+"demasiado grande para ser amortiguada por la viscosidad. La relación entre "
+"inercia y viscosidad viene dada por el número de Reynolds, :math:``rm Re`:"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:161
+#, fuzzy
 msgid ""
-"Flows with high Reynolds numbers are turbulent (inertia dominated) and "
-"with low Reynolds are laminar (viscosity dominated). The transition "
-"Reynolds number is a function of the flow geometry and the velocity and "
-"length scale that are used to characterize the flow. In all turbulent "
-"flows there is a length scale at which inertia finally loses to "
-"viscosity. The scale where viscosity wins is some multiple of the "
-"Kolmogorov length scale, which is defined as:"
+"Flows with high Reynolds numbers are turbulent (inertia dominated) and with "
+"low Reynolds are laminar (viscosity dominated). The transition Reynolds number "
+"is a function of the flow geometry and the velocity and length scale that are "
+"used to characterize the flow. In all turbulent flows there is a length scale "
+"at which inertia finally loses to viscosity. The scale where viscosity wins is "
+"some multiple of the Kolmogorov length scale, which is defined as:"
 msgstr ""
+"Los flujos con altos números de Reynolds son turbulentos (dominados por la "
+"inercia) y con bajos números de Reynolds son laminares (dominados por la "
+"viscosidad). El número de Reynolds de transición es una función de la "
+"geometría del flujo y de la escala de velocidad y longitud que se utiliza para "
+"caracterizar el flujo. En todos los flujos turbulentos hay una escala de "
+"longitud en la que la inercia pierde finalmente la viscosidad. La escala en la "
+"que la viscosidad gana es algún múltiplo de la escala de longitud de "
+"Kolmogorov, que se define como:"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:165
+#, fuzzy
 msgid ""
-"where :math:`\\eta_K` is the Kolmogorov length scale. At the Kolmogorov "
-"length scale viscosity completely dampens the inertia of the eddies and "
-"effectively “kills” the turbulence."
+"where :math:`\\eta_K` is the Kolmogorov length scale. At the Kolmogorov length "
+"scale viscosity completely dampens the inertia of the eddies and effectively "
+"“kills” the turbulence."
 msgstr ""
+"donde :matemáticas:`\\eta_K` es la escala de longitud de Kolmogorov. En la "
+"escala de longitud de Kolmogorov la viscosidad amortigua completamente la "
+"inercia de los remolinos y efectivamente \"mata\" la turbulencia."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:167
+#, fuzzy
 msgid ""
-"The length scale at which most of the kinetic energy contained in the "
-"small eddies is dissipated by viscosity is the inner viscous length "
-"scale, :math:`\\lambda_v`, which according to Dimotakis (2000) is about "
-"`50 times larger than <https://doi.org/10.1017/S0022112099007946>`_ Thus "
-"we have"
+"The length scale at which most of the kinetic energy contained in the small "
+"eddies is dissipated by viscosity is the inner viscous length scale, :math:`"
+"\\lambda_v`, which according to Dimotakis (2000) is about `50 times larger "
+"than <https://doi.org/10.1017/S0022112099007946>`_ Thus we have"
 msgstr ""
+"La escala de longitud en la que la mayor parte de la energía cinética "
+"contenida en los pequeños remolinos se disipa por la viscosidad es la escala "
+"de longitud de la viscosidad interna, :math:`\\lambda_v`, que según Dimotakis "
+"(2000) es aproximadamente `50 veces más grande que <https://doi.org/10.1017/"
+"S0022112099007946>`_ Así tenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:175
+#, fuzzy
 msgid "where :math:`\\Pi_{K\\nu} = 50`"
-msgstr ""
+msgstr "donde :matemáticas:`\\Pi_{K\\nu} = 50`"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:177
+#, fuzzy
 msgid ""
-"At length scales larger than the inner viscous length scale, "
-":math:`\\lambda_v`, the dominant transport mechanism is by turbulent "
-"eddies. At length scales smaller than :math:`\\lambda_v` the dominant "
-"transport mechanism is fluid deformation due to shear. If the flow regime"
-" is completely laminar such as in a small diameter tube flocculator, then"
-" the dominant transport mechanism is fluid deformation due to shear at "
-"length scales all the way up to the diameter of the tubing."
+"At length scales larger than the inner viscous length scale, :math:`"
+"\\lambda_v`, the dominant transport mechanism is by turbulent eddies. At "
+"length scales smaller than :math:`\\lambda_v` the dominant transport mechanism "
+"is fluid deformation due to shear. If the flow regime is completely laminar "
+"such as in a small diameter tube flocculator, then the dominant transport "
+"mechanism is fluid deformation due to shear at length scales all the way up to "
+"the diameter of the tubing."
 msgstr ""
+"En escalas de longitud mayores que la escala de longitudes de la viscosidad "
+"interna, :math:`\\lambda_v`, el mecanismo de transporte dominante es por medio "
+"de remolinos turbulentos. En escalas de longitud menores que :math:`"
+"\\lambda_v` el mecanismo de transporte dominante es la deformación del fluido "
+"debido al cizallamiento. Si el régimen de flujo es completamente laminar como "
+"en un floculador de tubo de pequeño diámetro, entonces el mecanismo de "
+"transporte dominante es la deformación del fluido debido al cizallamiento en "
+"escalas de longitud hasta el diámetro del tubo."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:179
+#, fuzzy
 msgid ""
-"The dividing line between eddy transport and fluid deformation controlled"
-" by viscosity can be calculated as a function of the energy dissipation "
-"rate using :eq:`eq_inner_viscous_length`."
+"The dividing line between eddy transport and fluid deformation controlled by "
+"viscosity can be calculated as a function of the energy dissipation rate "
+"using :eq:`eq_inner_viscous_length`."
 msgstr ""
+"La línea divisoria entre el transporte de los remolinos y la deformación del "
+"fluido controlada por la viscosidad puede calcularse en función de la tasa de "
+"disipación de energía utilizando :eq:`eq_inner_viscous_length`."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:215
+#, fuzzy
 msgid ""
 "Eddies can cause fluid mixing down to the scale of a few millimeters for "
 "energy dissipation rates used in rapid mix units and flocculators."
 msgstr ""
+"Los remolinos pueden causar la mezcla de fluidos hasta la escala de unos pocos "
+"milímetros para las tasas de disipación de energía utilizadas en las unidades "
+"de mezcla rápida y los floculadores."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:220
+#, fuzzy
 msgid "Turbulent Mixing Time as a Function of Scale"
-msgstr ""
+msgstr "El tiempo de mezcla turbulenta como función de la escala"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:222
+#, fuzzy
 msgid ""
 "We are searching for the rate limiting step in the mixing process as we "
 "transition from the scale of the flow down to the scale of the coagulant "
-"nanoparticles. We can estimate the time required for eddies to mix at "
-"their length scales by assuming that the eddies pass all of their energy "
-"to smaller scales in the time it takes for an eddy to travel the distance"
-" equal to the length scale of the eddy. This time is known as the **`eddy"
-" turnover time "
-"<http://ceeserver.cee.cornell.edu/eac20/cee637/handouts/TURBFLOW_1.pdf>`__**,"
-" :math:`t_{eddy}`. :ref:`The derivation for the equation below is found "
-"here <heading_Estimates_of_time_required_for_mixing_processes>`."
+"nanoparticles. We can estimate the time required for eddies to mix at their "
+"length scales by assuming that the eddies pass all of their energy to smaller "
+"scales in the time it takes for an eddy to travel the distance equal to the "
+"length scale of the eddy. This time is known as the **`eddy turnover time "
+"<http://ceeserver.cee.cornell.edu/eac20/cee637/handouts/TURBFLOW_1.pdf>`__**, :"
+"math:`t_{eddy}`. :ref:`The derivation for the equation below is found here "
+"<heading_Estimates_of_time_required_for_mixing_processes>`."
 msgstr ""
+"Estamos buscando el paso limitante de la tasa en el proceso de mezcla a medida "
+"que pasamos de la escala del flujo a la escala de las nanopartículas "
+"coagulantes. Podemos estimar el tiempo necesario para que los remolinos se "
+"mezclen a sus escalas de longitud asumiendo que los remolinos pasan toda su "
+"energía a escalas más pequeñas en el tiempo que tarda un remolino en recorrer "
+"la distancia igual a la escala de longitud del remolino. Este tiempo se conoce "
+"como el **`tiempo de rotación de los remolinos <http://ceeserver.cee.cornell."
+"edu/eac20/cee637/handouts/TURBFLOW_1.pdf>`__**, :math:`t_{eddy}`. :ref:`La "
+"derivación de la ecuación que sigue se encuentra aquí "
+"<heading_Estimates_of_time_required_for_mixing_processes>`."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:230
+#, fuzzy
 msgid ""
 "We can plot the eddy turnover time as a function of scale from the inner "
-"viscous length scale up to the scale of the flow. We will discover "
-"whether large scale mixing by eddies is faster or slower than small scale"
-" mixing by eddies."
+"viscous length scale up to the scale of the flow. We will discover whether "
+"large scale mixing by eddies is faster or slower than small scale mixing by "
+"eddies."
 msgstr ""
+"Podemos trazar el tiempo de rotación del remolino en función de la escala de "
+"la longitud de la viscosidad interna hasta la escala del flujo. Descubriremos "
+"si la mezcla a gran escala por los remolinos es más rápida o más lenta que la "
+"mezcla a pequeña escala por los remolinos."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:266
+#, fuzzy
 msgid ""
-"Small eddies turn in less time than large eddies. This is why the mixing "
-"at the largest scale dominates the mixing time."
+"Small eddies turn in less time than large eddies. This is why the mixing at "
+"the largest scale dominates the mixing time."
 msgstr ""
+"Los pequeños remolinos giran en menos tiempo que los grandes. Por eso la "
+"mezcla a mayor escala domina el tiempo de mezcla."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:272
+#, fuzzy
 msgid "Shear-Diffusion Transport"
-msgstr ""
+msgstr "Transporte de cizalla-difusión"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:274
+#, fuzzy
 msgid ""
-"After the first few seconds in which mixing occurs from the length scale "
-"of the flow down to the inner viscous length scale the next step in the "
-"transport process is blending of the coagulant uniformly with the raw "
-"water. At the end of the turbulent transport the coagulant stock has been"
-" stretched out into thin bands throughout the raw water, but the two "
-"fluids are not actually blended together by turbulence. The blending is "
-"accomplished by a combination of fluid deformation controlled by viscous "
-"shear and then by molecular diffusion."
+"After the first few seconds in which mixing occurs from the length scale of "
+"the flow down to the inner viscous length scale the next step in the transport "
+"process is blending of the coagulant uniformly with the raw water. At the end "
+"of the turbulent transport the coagulant stock has been stretched out into "
+"thin bands throughout the raw water, but the two fluids are not actually "
+"blended together by turbulence. The blending is accomplished by a combination "
+"of fluid deformation controlled by viscous shear and then by molecular "
+"diffusion."
 msgstr ""
+"Después de los primeros segundos en los que se produce la mezcla desde la "
+"escala de longitudes del flujo hasta la escala de longitudes de la viscosidad "
+"interna, el siguiente paso en el proceso de transporte es la mezcla del "
+"coagulante de manera uniforme con el agua cruda. Al final del transporte "
+"turbulento, la reserva de coagulante se ha estirado en finas bandas a lo largo "
+"del agua cruda, pero los dos fluidos no se mezclan realmente por la "
+"turbulencia. La mezcla se logra mediante una combinación de deformación del "
+"fluido controlada por el cizallamiento viscoso y luego por difusión molecular."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:279
+#, fuzzy
 msgid "Fluid Deformation by Shear"
-msgstr ""
+msgstr "Deformación del fluido por cizallamiento"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:281
+#, fuzzy
 msgid ""
-"The time scale for fluid deformation is :math:`1/G` where :math:`G` is "
-"the velocity gradient. This simple relationship is because the velocity "
-"of fluid deformation is proportional to the length scale and thus the "
-"time to travel any given distance in a linear velocity gradient is always"
-" the same. Velocity gradients in conventional mechanized rapid mix units "
-"are order 1000 Hz and thus the time for fluid deformation to blur "
-"concentration gradients is approximately 1 ms. This confirms the idea "
-"that blending the coagulant with the raw water is actually a very fast "
-"process with the slowest phase being the transport by turbulent eddies at"
-" the scale of reactor."
+"The time scale for fluid deformation is :math:`1/G` where :math:`G` is the "
+"velocity gradient. This simple relationship is because the velocity of fluid "
+"deformation is proportional to the length scale and thus the time to travel "
+"any given distance in a linear velocity gradient is always the same. Velocity "
+"gradients in conventional mechanized rapid mix units are order 1000 Hz and "
+"thus the time for fluid deformation to blur concentration gradients is "
+"approximately 1 ms. This confirms the idea that blending the coagulant with "
+"the raw water is actually a very fast process with the slowest phase being the "
+"transport by turbulent eddies at the scale of reactor."
 msgstr ""
+"La escala de tiempo para la deformación del fluido es :matemática:`1/G` donde :"
+"matemática:`G` es el gradiente de velocidad. Esta simple relación se debe a "
+"que la velocidad de la deformación del fluido es proporcional a la escala de "
+"longitudes y, por lo tanto, el tiempo para recorrer cualquier distancia dada "
+"en un gradiente de velocidad lineal es siempre el mismo. Los gradientes de "
+"velocidad en las unidades de mezcla rápida mecanizadas convencionales son del "
+"orden de 1000 Hz y, por lo tanto, el tiempo para que la deformación del fluido "
+"difumine los gradientes de concentración es de aproximadamente 1 ms. Esto "
+"confirma la idea de que la mezcla del coagulante con el agua cruda es en "
+"realidad un proceso muy rápido, siendo la fase más lenta el transporte por "
+"remolinos turbulentos a escala de reactor."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:283
+#, fuzzy
 msgid ""
-"The full time required for fluid deformation to achieve blending down to "
-"the scale where molecular diffusion takes over is likely a multiple of "
-"1/G where the multiple is determined by the number of different "
-"directions that the fluid must be sheared in to reach close to uniform "
-"blending. However, even multiplying 1/G by a factor of 10 still results "
-"in very rapid mixing."
+"The full time required for fluid deformation to achieve blending down to the "
+"scale where molecular diffusion takes over is likely a multiple of 1/G where "
+"the multiple is determined by the number of different directions that the "
+"fluid must be sheared in to reach close to uniform blending. However, even "
+"multiplying 1/G by a factor of 10 still results in very rapid mixing."
 msgstr ""
+"El tiempo completo requerido para que la deformación del fluido logre la "
+"mezcla hasta la escala en la que la difusión molecular toma el control es "
+"probablemente un múltiplo de 1/G, donde el múltiplo está determinado por el "
+"número de direcciones diferentes en las que el fluido debe ser cortado para "
+"alcanzar una mezcla casi uniforme. Sin embargo, incluso multiplicando 1/G por "
+"un factor de 10 se obtiene una mezcla muy rápida."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:288
+#, fuzzy
 msgid "Einstein’s Diffusion Equation"
-msgstr ""
+msgstr "La ecuación de difusión de Einstein"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:290
+#, fuzzy
 msgid ""
-"The final step of mixing is mediated by molecular diffusion. We can "
-"estimate the length scale at which fluid shear and diffusion provide "
-"transport at the same rate. Einstein’s diffusion equation is"
+"The final step of mixing is mediated by molecular diffusion. We can estimate "
+"the length scale at which fluid shear and diffusion provide transport at the "
+"same rate. Einstein’s diffusion equation is"
 msgstr ""
+"El paso final de la mezcla está mediado por la difusión molecular. Podemos "
+"estimar la escala de longitud en la que el cizallamiento y la difusión del "
+"fluido proporcionan el transporte a la misma velocidad. La ecuación de "
+"difusión de Einstein es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:294
+#, fuzzy
 msgid ""
-"where :math:`k_B` is the Boltzmann constant and :math:`d_P` is the "
-"diameter of the particle that is diffusion in a fluid with viscosity "
-":math:`\\nu` and density :math:`\\rho`. The diffusion coefficient "
-":math:`D_{Diffusion}` has dimensions of :math:`\\frac{[L^2]}{[T]}` and "
-"can be understood as the velocity of the particle multiplied by the "
-"length of the mean free path. From dimensional analysis the time for "
-"diffusion to blur a concentration gradient over a length scale, "
-":math:`L_{Diffusion}` is"
+"where :math:`k_B` is the Boltzmann constant and :math:`d_P` is the diameter of "
+"the particle that is diffusion in a fluid with viscosity :math:`\\nu` and "
+"density :math:`\\rho`. The diffusion coefficient :math:`D_{Diffusion}` has "
+"dimensions of :math:`\\frac{[L^2]}{[T]}` and can be understood as the velocity "
+"of the particle multiplied by the length of the mean free path. From "
+"dimensional analysis the time for diffusion to blur a concentration gradient "
+"over a length scale, :math:`L_{Diffusion}` is"
 msgstr ""
+"donde :matemática:`k_B` es la constante de Boltzmann y :matemática:`d_P` es el "
+"diámetro de la partícula que se difunde en un fluido con viscosidad :"
+"matemática:`nu` y densidad :matemática:`rho`. El coeficiente de difusión :math:"
+"`D_{Diffusion}` tiene dimensiones de :math:`frac{[L^2]}{[T]}` y puede "
+"entenderse como la velocidad de la partícula multiplicada por la longitud del "
+"camino libre medio. Desde el análisis dimensional el tiempo de difusión para "
+"difuminar un gradiente de concentración en una escala de longitud, :math:"
+"`L_{Diffusion}` es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:298
+#, fuzzy
 msgid ""
-"The shear time scale is :math:`1/G` and thus we can solve for the length "
-"scale at which diffusion and shear have equivalent transport rates."
+"The shear time scale is :math:`1/G` and thus we can solve for the length scale "
+"at which diffusion and shear have equivalent transport rates."
 msgstr ""
+"La escala de tiempo de cizallamiento es :matemática:`1/G` y así podemos "
+"resolver para la escala de longitud en la que la difusión y el cizallamiento "
+"tienen tasas de transporte equivalentes."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:302
+#, fuzzy
 msgid ""
-"Substitute Einstein’s diffusion equation and solve for the length scale "
-"that transitions between shear and diffusion transport."
+"Substitute Einstein’s diffusion equation and solve for the length scale that "
+"transitions between shear and diffusion transport."
 msgstr ""
+"Sustituye la ecuación de difusión de Einstein y resuelve la escala de longitud "
+"que transiciona entre el corte y el transporte de difusión."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:332
+#, fuzzy
 msgid ""
-"The length scale at which diffusion becomes the dominant transport "
-"mechanism for coagulant nanoparticles as a function of the velocity "
-"gradient. The time scale for the final diffusion to achieve blending of "
-"the nanoparticles with the water is simply 1/G."
+"The length scale at which diffusion becomes the dominant transport mechanism "
+"for coagulant nanoparticles as a function of the velocity gradient. The time "
+"scale for the final diffusion to achieve blending of the nanoparticles with "
+"the water is simply 1/G."
 msgstr ""
+"La escala de longitud en la que la difusión se convierte en el mecanismo de "
+"transporte dominante para las nanopartículas coagulantes en función del "
+"gradiente de velocidad. La escala de tiempo para la difusión final para lograr "
+"la mezcla de las nanopartículas con el agua es simplemente 1/G."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:334
+#, fuzzy
 msgid ""
 "Molecular diffusion finishes the blending process by transporting the "
-"coagulant nanoparticles the last few hundred nanometers. The entire "
-"mixing process from the coagulant injection point to uniform blending "
-"with the raw water takes only a few seconds."
+"coagulant nanoparticles the last few hundred nanometers. The entire mixing "
+"process from the coagulant injection point to uniform blending with the raw "
+"water takes only a few seconds."
 msgstr ""
+"La difusión molecular termina el proceso de mezcla transportando las "
+"nanopartículas coagulantes los últimos cientos de nanómetros. Todo el proceso "
+"de mezcla, desde el punto de inyección del coagulante hasta la mezcla uniforme "
+"con el agua cruda, toma sólo unos segundos."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:338
+#, fuzzy
 msgid ""
 "We have demonstrated that all of the steps for mixing of the coagulant "
 "nanoparticles with the raw water are very fast. Compared with the time "
-"required for flocculation, 10s to 1000s of seconds, the time required for"
-" this mixing (blending the nanoparticles uniformly with the water) is "
-"insignificant. The remaining steps are:"
+"required for flocculation, 10s to 1000s of seconds, the time required for this "
+"mixing (blending the nanoparticles uniformly with the water) is insignificant. "
+"The remaining steps are:"
 msgstr ""
+"Hemos demostrado que todos los pasos para la mezcla de las nanopartículas "
+"coagulantes con el agua cruda son muy rápidos. Comparado con el tiempo "
+"requerido para la floculación, de 10 a 1000 segundos, el tiempo requerido para "
+"esta mezcla (mezclar las nanopartículas uniformemente con el agua) es "
+"insignificante. Los pasos restantes son:"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:337
+#, fuzzy
 msgid ""
-"1. Molecular diffusion causes some dissolved species and Al nanoparticles"
-" to aggregate. 1. Fluid shear and molecular diffusion cause Al "
-"nanoparticles with attached formerly dissolved species to collide with "
-"inorganic particles (such as clay) and organic particles (such as "
-"viruses, bacteria, and protozoans)."
+"1. Molecular diffusion causes some dissolved species and Al nanoparticles to "
+"aggregate. 1. Fluid shear and molecular diffusion cause Al nanoparticles with "
+"attached formerly dissolved species to collide with inorganic particles (such "
+"as clay) and organic particles (such as viruses, bacteria, and protozoans)."
 msgstr ""
+"1. La difusión molecular hace que algunas especies disueltas y las "
+"nanopartículas de Al se agreguen. 1. La cizalla de los fluidos y la difusión "
+"molecular hacen que las nanopartículas de Al con especies adheridas "
+"anteriormente disueltas colisionen con partículas inorgánicas (como la "
+"arcilla) y orgánicas (como virus, bacterias y protozoos)."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:340
+#, fuzzy
 msgid ""
-"The time scale for the fluid shear and molecular diffusion to cause "
-"coagulant nanoparticles to collide with particles is estimated in "
-":ref:`heading_Diffusion_and_Shear_Transport_Coagulant_Nanoparticles_to_Clay`."
+"The time scale for the fluid shear and molecular diffusion to cause coagulant "
+"nanoparticles to collide with particles is estimated in :ref:"
+"`heading_Diffusion_and_Shear_Transport_Coagulant_Nanoparticles_to_Clay`."
 msgstr ""
+"La escala de tiempo para que la cizalla del fluido y la difusión molecular "
+"provoque que las nanopartículas coagulantes colisionen con las partículas se "
+"estima en :ref:"
+"``Difusión_y_Cizalla_Transporte_Coagulante_Nanopartículas_a_Clay`."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:342
+#, fuzzy
 msgid ""
-"Below are the derivations for the equations that appear in "
-":numref:`table_Control_volume_equations` containing equations for "
-":math:`G`, :math:`\\varepsilon`, and :math:`h_L`."
+"Below are the derivations for the equations that appear in :numref:"
+"`table_Control_volume_equations` containing equations for :math:`G`, :math:`"
+"\\varepsilon`, and :math:`h_L`."
 msgstr ""
+"A continuación están las derivaciones de las ecuaciones que aparecen en :"
+"numref:`tabla_de_control_de_ecuaciones_de_volumen` que contienen ecuaciones "
+"para :matemáticas:`G`, :matemáticas:`varepsilon`, y :matemáticas:`h_L`."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:347
+#, fuzzy
 msgid "Straight pipe (wall shear)"
-msgstr ""
+msgstr "Tubo recto (cizalla de pared)"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:349
+#, fuzzy
 msgid ""
-"The average energy dissipation rate, :math:`\\bar\\varepsilon`, in a "
-"control volume with residence time :math:`\\theta` is"
+"The average energy dissipation rate, :math:`\\bar\\varepsilon`, in a control "
+"volume with residence time :math:`\\theta` is"
 msgstr ""
+"El promedio de la tasa de disipación de energía, en un volumen de control con "
+"tiempo de residencia es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:356
+#, fuzzy
 msgid ""
 "The residence time can be expressed as a function of length and average "
 "velocity."
 msgstr ""
+"El tiempo de residencia puede expresarse en función de la longitud y la "
+"velocidad media."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:362
+#, fuzzy
 msgid ""
-"For straight pipe flow the only head loss is due to wall shear and thus "
-"we have the Darcy Weisbach equation."
+"For straight pipe flow the only head loss is due to wall shear and thus we "
+"have the Darcy Weisbach equation."
 msgstr ""
+"Para el flujo de tubería recta la única pérdida de carga se debe al corte de "
+"la pared y por lo tanto tenemos la ecuación de Darcy Weisbach."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:369
+#, fuzzy
 msgid ""
-"Combining the 3 previous equations we obtain the energy dissipation rate "
-"for pipe flow"
+"Combining the 3 previous equations we obtain the energy dissipation rate for "
+"pipe flow"
 msgstr ""
+"Combinando las 3 ecuaciones anteriores obtenemos la tasa de disipación de "
+"energía para el flujo de la tubería"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:376
+#, fuzzy
 msgid "The average velocity gradient was defined by Camp and Stein as"
-msgstr ""
+msgstr "El gradiente de velocidad promedio fue definido por Camp y Stein como"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:382
+#, fuzzy
 msgid ""
-"where this approximation neglects the fact that square root of an average"
-" is not the same as the average of the square roots."
+"where this approximation neglects the fact that square root of an average is "
+"not the same as the average of the square roots."
 msgstr ""
+"donde esta aproximación descuida el hecho de que la raíz cuadrada de un "
+"promedio no es la misma que la media de las raíces cuadradas."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:388
+#, fuzzy
 msgid "or in terms of flow rate, we have:"
-msgstr ""
+msgstr "o en términos de tasa de flujo, lo hemos hecho:"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:397
+#, fuzzy
 msgid "Straight Pipe Laminar"
-msgstr ""
+msgstr "Tubo recto Laminar"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:399
+#, fuzzy
 msgid ""
-"Laboratory scale apparatus is often limited to laminar flow where "
-"viscosity effects dominate. The equations describing laminar flow "
-"conditions always include viscosity. For the case of laminar flow in a "
-"straight pipe, we have:"
+"Laboratory scale apparatus is often limited to laminar flow where viscosity "
+"effects dominate. The equations describing laminar flow conditions always "
+"include viscosity. For the case of laminar flow in a straight pipe, we have:"
 msgstr ""
+"Los aparatos a escala de laboratorio suelen limitarse a un flujo laminar en el "
+"que predominan los efectos de la viscosidad. Las ecuaciones que describen las "
+"condiciones de flujo laminar siempre incluyen la viscosidad. Para el caso del "
+"flujo laminar en una tubería recta, tenemos:"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:405
+#, fuzzy
 msgid "Reynolds number is defined as"
-msgstr ""
+msgstr "El número de Reynolds se define como"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:411
+#, fuzzy
 msgid ""
 "The Darcy Weisbach head loss equation simplifies to the Hagen–Poiseuille "
 "equation for the case of laminar flow."
 msgstr ""
+"La ecuación de pérdida de cabeza de Darcy Weisbach se simplifica a la ecuación "
+"de Hagen-Poiseuille para el caso de flujo laminar."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:417
+#, fuzzy
 msgid ""
-"and thus the energy dissipation rate in a straight pipe under conditions "
-"of laminar flow is"
+"and thus the energy dissipation rate in a straight pipe under conditions of "
+"laminar flow is"
 msgstr ""
+"y por lo tanto la tasa de disipación de energía en una tubería recta en "
+"condiciones de flujo laminar es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:423
+#, fuzzy
 msgid ""
-"The Camp-Stein velocity gradient in a long straight laminar flow tube is "
-"thus"
+"The Camp-Stein velocity gradient in a long straight laminar flow tube is thus"
 msgstr ""
+"El gradiente de velocidad de Camp-Stein en un largo tubo de flujo laminar "
+"recto es así"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:434
+#, fuzzy
 msgid ""
 "Our estimate of :math:`G_{CS}` based on :math:`\\bar \\varepsilon` is an "
-"overestimate because it assumes that the energy dissipation is completely"
-" uniform through the control volume. The true spatial average velocity "
+"overestimate because it assumes that the energy dissipation is completely "
+"uniform through the control volume. The true spatial average velocity "
 "gradient, :math:`\\bar G`, for laminar flow in a pipe is (`Gregory, 1981 "
 "<https://doi.org/10.1016/0009-2509(81)80126-1>`__),"
 msgstr ""
+"Nuestra estimación de :math:`G_{CS}` basada en :math:`\\bar \\varepsilon`` es "
+"una sobreestimación porque asume que la disipación de energía es completamente "
+"uniforme a través del volumen de control. El verdadero gradiente de velocidad "
+"promedio espacial, :math:`\\bar G`, para el flujo laminar en una tubería es "
+"(`Gregory, 1981 <https://doi.org/10.1016/0009-2509(81)80126-1>`__),"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:440
+#, fuzzy
 msgid ""
-"Our estimate of :math:`G_{CS}` for the case of laminar flow in a pipe is "
-"too high by a factor of :math:`\\frac{3}{\\sqrt2}`."
+"Our estimate of :math:`G_{CS}` for the case of laminar flow in a pipe is too "
+"high by a factor of :math:`\\frac{3}{\\sqrt2}`."
 msgstr ""
+"Nuestra estimación de :matemáticas:`G_{CS}` para el caso de flujo laminar en "
+"una tubería es demasiado alta por un factor de :matemáticas:`frac{3}{\\sqrt2}`."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:442
+#, fuzzy
 msgid "As a function of flow rate we have"
-msgstr ""
+msgstr "En función de la tasa de flujo tenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:455
+#, fuzzy
 msgid "Parallel Plates Laminar"
-msgstr ""
+msgstr "Placas paralelas laminares"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:457
+#, fuzzy
 msgid ""
-"Flow between parallel plates occurs in plate settlers in the "
-"sedimentation tank. We will derive the velocity gradient at the wall "
-"using the Navier Stokes equation."
+"Flow between parallel plates occurs in plate settlers in the sedimentation "
+"tank. We will derive the velocity gradient at the wall using the Navier Stokes "
+"equation."
 msgstr ""
+"El flujo entre las placas paralelas se produce en los sedimentadores de placas "
+"en el tanque de sedimentación. Derivaremos el gradiente de velocidad en la "
+"pared usando la ecuación de Navier Stokes."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:466
+#, fuzzy
 msgid ""
-"A fluid flowing from left to right due to a pressure gradient results in "
-"wall shear on the parallel plates. This flow profile is for the case when"
-" the pressure gradient is negative."
+"A fluid flowing from left to right due to a pressure gradient results in wall "
+"shear on the parallel plates. This flow profile is for the case when the "
+"pressure gradient is negative."
 msgstr ""
+"Un fluido que fluye de izquierda a derecha debido a un gradiente de presión "
+"resulta en el corte de la pared en las placas paralelas. Este perfil de flujo "
+"es para el caso en que el gradiente de presión es negativo."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:469
+#, fuzzy
 msgid ""
-"We start with the Navier-Stokes equation written for flow in the x "
-"direction."
+"We start with the Navier-Stokes equation written for flow in the x direction."
 msgstr ""
+"Empezamos con la ecuación de Navier-Stokes escrita para el flujo en la "
+"dirección x."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:475
+#, fuzzy
 msgid "where :math:`u` is the velocity in the x direction."
-msgstr ""
+msgstr "donde :matemáticas:`u` es la velocidad en la dirección x."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:477
+#, fuzzy
 msgid "Apply the no slip condition at bottom plate."
-msgstr ""
+msgstr "Aplica la condición de no resbalar en la placa inferior."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:483
+#, fuzzy
 msgid "Thus the constant :math:`B=0`."
-msgstr ""
+msgstr "Por lo tanto, la constante :matemática:`B=0`."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:485
+#, fuzzy
 msgid "Apply the no slip condition at top plate."
-msgstr ""
+msgstr "Aplica la condición de no resbalar en la placa superior."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:491
+#, fuzzy
 msgid "Thus the constant :math:`A = \\frac{- S}{2} \\frac{dp}{dx}`"
 msgstr ""
+"Por lo tanto, la constante :matemática:`A = \\frac{- S}{2} \\N - \\N - {\\i1}"
+"{\\i1} {\\i1}{\\i1}Fraccionaria*{\\i}"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:493
+#, fuzzy
 msgid ""
-"Substitute the values for constants :math:`A` and :math:`B` into the "
-"original equation."
+"Substitute the values for constants :math:`A` and :math:`B` into the original "
+"equation."
 msgstr ""
+"Sustituye los valores de las constantes :matemáticas:`A` y :matemáticas:`B` en "
+"la ecuación original."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:499
+#, fuzzy
 msgid "Simply the equation to obtain"
-msgstr ""
+msgstr "Simplemente la ecuación para obtener"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:505
+#, fuzzy
 msgid ""
-"We need a relationship between average velocity and "
-":math:`\\frac{dp}{dx}`. We can obtain this by integrating from 0 to "
-":math:`S`."
+"We need a relationship between average velocity and :math:`\\frac{dp}{dx}`. We "
+"can obtain this by integrating from 0 to :math:`S`."
 msgstr ""
+"Necesitamos una relación entre la velocidad media y las matemáticas. Podemos "
+"obtenerla integrando de 0 a :math:`S`."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:521
+#, fuzzy
 msgid "Solving for :math:`\\frac{dp}{dx}`"
-msgstr ""
+msgstr "Resolviendo para :matemáticas:`\\frac{dp}{dx}"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:527
+#, fuzzy
 msgid "From the Navier Stokes equation after integrating once we get"
-msgstr ""
+msgstr "De la ecuación de Navier Stokes después de integrar una vez que tenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:533
+#, fuzzy
 msgid ""
-"Substituting our boundary condition, :math:`A = \\frac{- S}{2} "
-"\\frac{dp}{dx}` we obtain"
+"Substituting our boundary condition, :math:`A = \\frac{- S}{2} \\frac{dp}{dx}` "
+"we obtain"
 msgstr ""
+"Sustituyendo nuestra condición límite, :matemáticas:`A = \\frac{- S}{2} \\N - "
+"{\\i1}{\\i1}{\\i1}que obtenemos*{\\i}{\\i}"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:540
+#, fuzzy
 msgid "Substituting the result for :math:`\\frac{dp}{dx}` we obtain"
-msgstr ""
+msgstr "Sustituyendo el resultado por :math:`\\frac{dp}{dx}` obtenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:546
+#, fuzzy
 msgid "Therefore in velocity gradient notation we have"
-msgstr ""
+msgstr "Por lo tanto, en la notación de gradiente de velocidad tenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:552
+#, fuzzy
 msgid "The energy dissipation rate at the wall"
-msgstr ""
+msgstr "La tasa de disipación de energía en la pared"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:560
+#, fuzzy
 msgid ""
-"Head loss due to shear on the plates is obtained from a force balance on "
-"a control volume between two parallel plates as shown in "
-":numref:`figure_Parallel_Plate_schematic`."
+"Head loss due to shear on the plates is obtained from a force balance on a "
+"control volume between two parallel plates as shown in :numref:"
+"`figure_Parallel_Plate_schematic`."
 msgstr ""
+"La pérdida de carga por cizallamiento en las placas se obtiene a partir de un "
+"balance de fuerzas en un volumen de control entre dos placas paralelas como se "
+"muestra en :numref:`figure_Parallel_Plate_schematic`."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:562
+#, fuzzy
 msgid "A force balance on a control volume gives"
-msgstr ""
+msgstr "Un balance de fuerza en un volumen de control da"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:572
+#, fuzzy
 msgid "The equation relating shear and velocity gradient is"
 msgstr ""
+"La ecuación que relaciona el cizallamiento y el gradiente de velocidad es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:578
+#, fuzzy
 msgid "The velocity gradient at the wall is"
-msgstr ""
+msgstr "El gradiente de velocidad en la pared es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:588
+#, fuzzy
 msgid "Substituting into the force balance equation"
-msgstr ""
+msgstr "Sustituyendo en la ecuación de equilibrio de fuerzas"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:594
+#, fuzzy
 msgid "The head loss for horizontal flow at uniform velocity simplifies too"
 msgstr ""
+"La pérdida de altura para el flujo horizontal a velocidad uniforme también "
+"simplifica"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:604
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:665
+#, fuzzy
 msgid "The average energy dissipation rate is"
-msgstr ""
+msgstr "La tasa media de disipación de energía es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:614
+#, fuzzy
 msgid ""
-"The Camp-Stein velocity gradient for laminar flow between parallel plates"
-" is"
+"The Camp-Stein velocity gradient for laminar flow between parallel plates is"
 msgstr ""
+"El gradiente de velocidad de Camp-Stein para el flujo laminar entre las placas "
+"paralelas es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:623
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:875
+#, fuzzy
 msgid "Coiled tubes (laminar flow)"
-msgstr ""
+msgstr "Tubos enrollados (flujo laminar)"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:625
+#, fuzzy
 msgid ""
-"Coiled tubes are used as flocculators at laboratory scale. The one shown "
-"below is a doubled coil. A single coil would only go around one cylinder"
+"Coiled tubes are used as flocculators at laboratory scale. The one shown below "
+"is a doubled coil. A single coil would only go around one cylinder"
 msgstr ""
+"Los tubos en espiral se utilizan como floculadores a escala de laboratorio. El "
+"que se muestra a continuación es una bobina doble. Una bobina simple sólo iría "
+"alrededor de un cilindro"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:627
+#, fuzzy
 msgid ""
-"` "
-"<https://confluence.cornell.edu/display/AGUACLARA/Laminar+Tube+Floc?preview=/10422268/258146480/ReportLaminarTubeFlocSpring2014.pdf>`__"
+"` <https://confluence.cornell.edu/display/AGUACLARA/Laminar+Tube+Floc?"
+"preview=/10422268/258146480/ReportLaminarTubeFlocSpring2014.pdf>`__"
 msgstr ""
+"` <https://confluence.cornell.edu/display/AGUACLARA/Laminar+Tube+Floc?"
+"preview=/10422268/258146480/ReportLaminarTubeFlocSpring2014.pdf>`__"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:638
+#, fuzzy
 msgid ""
-"The double coiled laminar flow flocculator creates secondary currents "
-"that oscillate in direction. This may be helpful in creating much more "
-"mixing than would occur in a straight laminar flow pipe."
+"The double coiled laminar flow flocculator creates secondary currents that "
+"oscillate in direction. This may be helpful in creating much more mixing than "
+"would occur in a straight laminar flow pipe."
 msgstr ""
+"El floculador de flujo laminar doblemente enrollado crea corrientes "
+"secundarias que oscilan en dirección. Esto puede ser útil para crear mucha más "
+"mezcla que la que se produciría en una tubería de flujo laminar recta."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:640
+#, fuzzy
 msgid ""
-"The ratio of the coiled to straight friction factors is given by `Mishra "
-"and Gupta <https://doi.org/10.1021/i260069a017>`__"
+"The ratio of the coiled to straight friction factors is given by `Mishra and "
+"Gupta <https://doi.org/10.1021/i260069a017>`__"
 msgstr ""
+"La relación entre los factores de fricción de la bobina y los rectos viene "
+"dada por `Mishra y Gupta <https://doi.org/10.1021/i260069a017>`__"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:642
+#, fuzzy
 msgid "The Dean number is defined as:"
-msgstr ""
+msgstr "El número de Dean se define como:"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:648
+#, fuzzy
 msgid ""
 "where :math:`D` is the inner diameter of the tube and :math:`D_c` is the "
-"diameter of the coil. Note that the tubing coils are actually helixes and"
-" that for the tubing diameters and coil diameters used for flocculators "
-"that the helix doesn’t significantly change the radius of curvature."
+"diameter of the coil. Note that the tubing coils are actually helixes and that "
+"for the tubing diameters and coil diameters used for flocculators that the "
+"helix doesn’t significantly change the radius of curvature."
 msgstr ""
+"donde :matemáticas:`D` es el diámetro interior del tubo y :matemáticas:`D_c` "
+"es el diámetro de la bobina. Obsérvese que las bobinas de los tubos son en "
+"realidad hélices y que para los diámetros de los tubos y los diámetros de las "
+"bobinas utilizados para los floculadores que la hélice no cambia "
+"significativamente el radio de curvatura."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:658
+#, fuzzy
 msgid ""
-"where :math:`h_{{\\rm f}} = \\frac{32\\nu L\\bar v}{ g D^2}`. Note that "
-"we switch from major losses to total head loss here because the head loss"
-" from flowing around the coil is no longer simply due to shear on the "
-"wall."
+"where :math:`h_{{\\rm f}} = \\frac{32\\nu L\\bar v}{ g D^2}`. Note that we "
+"switch from major losses to total head loss here because the head loss from "
+"flowing around the coil is no longer simply due to shear on the wall."
 msgstr ""
+" Note que aquí pasamos de pérdidas mayores a pérdida total de cabeza porque la "
+"pérdida de cabeza por fluir alrededor de la bobina ya no se debe simplemente a "
+"la cizalla en la pared."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:671
+#, fuzzy
 msgid ""
-"The average velocity gradient is proportional to the square root of the "
-"head loss and thus we obtain"
+"The average velocity gradient is proportional to the square root of the head "
+"loss and thus we obtain"
 msgstr ""
+"El gradiente de velocidad promedio es proporcional a la raíz cuadrada de la "
+"pérdida de la cabeza y así obtenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:677
+#, fuzzy
 msgid ""
 "where :math:`G_{CS} =4\\sqrt2 \\frac{\\bar v}{D}` for laminar flow in a "
 "straight pipe."
 msgstr ""
+"donde :matemáticas:`G_{CS} =4\\sqrt2 \\frac{\\bar v}{D}para el flujo laminar "
+"en una tubería recta."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:687
+#, fuzzy
 msgid "Flow in porous media"
-msgstr ""
+msgstr "Flujo en medios porosos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:689
+#, fuzzy
 msgid ""
-"The `Ergun equation <https://neutrium.net/fluid_flow/pressure-drop-"
-"through-a-packed-bed/>`_ applies to both laminar and turbulent flow "
-"through packed beds."
+"The `Ergun equation <https://neutrium.net/fluid_flow/pressure-drop-through-a-"
+"packed-bed/>`_ applies to both laminar and turbulent flow through packed beds."
 msgstr ""
+"La ecuación de Ergun <https://neutrium.net/fluid_flow/pressure-drop-through-a-"
+"packed-bed/>`_ se aplica tanto al flujo laminar como al turbulento a través de "
+"los lechos empacados."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:696
+#, fuzzy
 msgid ""
-"The Ergun equation can be rewritten to be consistent with the format of "
-"the Darcy-Weisbach equation. To do this we add a factor of 2 to the "
-"definition of the Ergun friction factor and will divide by the factor of "
-"2 in a subsequent equation. The modified Ergun friction factor is"
+"The Ergun equation can be rewritten to be consistent with the format of the "
+"Darcy-Weisbach equation. To do this we add a factor of 2 to the definition of "
+"the Ergun friction factor and will divide by the factor of 2 in a subsequent "
+"equation. The modified Ergun friction factor is"
 msgstr ""
+"La ecuación de Ergun puede ser reescrita para ser consistente con el formato "
+"de la ecuación de Darcy-Weisbach. Para ello añadimos un factor de 2 a la "
+"definición del factor de fricción de Ergun y lo dividiremos por el factor de 2 "
+"en una ecuación posterior. El factor de fricción de Ergun modificado es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:703
+#, fuzzy
 msgid ""
-"where the :math:`Re_{\\phi}` includes the porosity effect on the velocity"
-" and is given by"
+"where the :math:`Re_{\\phi}` includes the porosity effect on the velocity and "
+"is given by"
 msgstr ""
+"donde las :matemáticas:`Re_{\\phi}` incluyen el efecto de porosidad en la "
+"velocidad y está dado por"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:710
+#, fuzzy
 msgid ""
-"I added a factor of two into the denominator to be consistent with the "
-"Darcy-Weisbach equation to obtain the modified Ergun equation."
+"I added a factor of two into the denominator to be consistent with the Darcy-"
+"Weisbach equation to obtain the modified Ergun equation."
 msgstr ""
+"Añadí un factor de dos en el denominador para ser consistente con la ecuación "
+"de Darcy-Weisbach para obtener la ecuación de Ergun modificada."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:717
+#, fuzzy
 msgid "The residence time in a porous media bed is given by"
-msgstr ""
+msgstr "El tiempo de residencia en una cama media porosa está dado por"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:723
+#, fuzzy
 msgid "Now we can calculate the average energy dissipation rate in porous media."
 msgstr ""
+"Ahora podemos calcular la tasa promedio de disipación de energía en medios "
+"porosos."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:729
+#, fuzzy
 msgid "Substituting the equations for head loss and residence times we obtain"
 msgstr ""
+"Sustituyendo las ecuaciones por la pérdida de cabeza y los tiempos de "
+"residencia obtenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:736
+#, fuzzy
 msgid "The Camp Stein velocity gradient for flow in porous media is"
 msgstr ""
+"El gradiente de velocidad de Camp Stein para el flujo en medios porosos es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:747
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:889
+#, fuzzy
 msgid "Expansions"
-msgstr ""
+msgstr "Expansiones"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:749
+#, fuzzy
 msgid ""
 "The average energy dissipation rate for a flow expansion really only has "
-"meaning if there is a defined control volume where the mechanical energy "
-"is lost. Hydraulic flocculators provide such a case because the same flow"
-" expansion is repeated and thus the mechanical energy loss can be assumed"
-" to happen in the volume associated with one flow expansion. In this case"
-" we have"
+"meaning if there is a defined control volume where the mechanical energy is "
+"lost. Hydraulic flocculators provide such a case because the same flow "
+"expansion is repeated and thus the mechanical energy loss can be assumed to "
+"happen in the volume associated with one flow expansion. In this case we have"
 msgstr ""
+"La tasa media de disipación de energía para una expansión de flujo realmente "
+"sólo tiene sentido si hay un volumen de control definido donde se pierde la "
+"energía mecánica. Los floculadores hidráulicos proporcionan tal caso porque la "
+"misma expansión de flujo se repite y, por lo tanto, se puede suponer que la "
+"pérdida de energía mecánica se produce en el volumen asociado a una expansión "
+"de flujo. En este caso tenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:755
+#, fuzzy
 msgid ""
-"In this equation :math:`K` represents the fraction of the kinetic energy "
-"that is dissipated."
+"In this equation :math:`K` represents the fraction of the kinetic energy that "
+"is dissipated."
 msgstr ""
+"En esta ecuación :matemáticas:`K` representa la fracción de la energía "
+"cinética que se disipa."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:757
+#, fuzzy
 msgid ""
-"If we define the length of the control volume (in the direction of flow) "
-"as :math:`H` then the residence time is"
+"If we define the length of the control volume (in the direction of flow) as :"
+"math:`H` then the residence time is"
 msgstr ""
+"Si definimos la longitud del volumen de control (en la dirección del flujo) "
+"como :matemáticas:`H` entonces el tiempo de residencia es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:767
+#, fuzzy
 msgid "Combining the previous equations we obtain"
-msgstr ""
+msgstr "Combinando las ecuaciones anteriores obtenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:785
+#, fuzzy
 msgid "Maximum velocity gradients"
-msgstr ""
+msgstr "Gradientes de velocidad máxima"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:790
+#, fuzzy
 msgid "Straight pipe (major losses)"
-msgstr ""
+msgstr "Tubería recta (grandes pérdidas)"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:792
+#, fuzzy
 msgid ""
-"The maximum velocity gradient in pipe flow occurs at the wall. This is "
-"true for both laminar and turbulent flow. In either case a force balance "
-"on a control volume of pipe gives us the wall shear and the wall shear "
-"can then be used to estimate the velocity gradient at the wall."
+"The maximum velocity gradient in pipe flow occurs at the wall. This is true "
+"for both laminar and turbulent flow. In either case a force balance on a "
+"control volume of pipe gives us the wall shear and the wall shear can then be "
+"used to estimate the velocity gradient at the wall."
 msgstr ""
+"El gradiente de velocidad máximo en el flujo de la tubería se produce en la "
+"pared. Esto es cierto tanto para el flujo laminar como para el turbulento. En "
+"cualquier caso, un equilibrio de fuerzas en un volumen de control de la "
+"tubería nos da la cizalla de la pared y la cizalla de la pared puede "
+"utilizarse para estimar el gradiente de velocidad en la pared."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:801
+#, fuzzy
 msgid ""
-"A fluid flowing from left to right due to a pressure gradient results in "
-"wall shear."
+"A fluid flowing from left to right due to a pressure gradient results in wall "
+"shear."
 msgstr ""
+"Un fluido que fluye de izquierda a derecha debido a un gradiente de presión "
+"provoca el cizallamiento de la pared."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:803
+#, fuzzy
 msgid ""
-"A force balance for the case of steady flow in a round pipe requires that"
-" sum of the forces in the x direction must equal zero. Given a pipe with "
-"diameter, D, and length, L, we obtain"
+"A force balance for the case of steady flow in a round pipe requires that sum "
+"of the forces in the x direction must equal zero. Given a pipe with diameter, "
+"D, and length, L, we obtain"
 msgstr ""
+"Un balance de fuerzas para el caso de un flujo constante en un tubo redondo "
+"requiere que la suma de las fuerzas en la dirección x sea igual a cero. Dada "
+"una tubería con diámetro, D, y longitud, L, obtenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:813
+#, fuzzy
 msgid "For this control volume the energy equation simplifies to"
-msgstr ""
+msgstr "Para este volumen de control la ecuación de energía se simplifica a"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:819
+#, fuzzy
 msgid "The relationship between shear and velocity gradient is"
-msgstr ""
+msgstr "La relación entre el cizallamiento y el gradiente de velocidad es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:825
+#, fuzzy
 msgid ""
-"Combining the energy equation, the force balance, and the relationship "
-"between shear and velocity gradient we obtain"
+"Combining the energy equation, the force balance, and the relationship between "
+"shear and velocity gradient we obtain"
 msgstr ""
+"Combinando la ecuación de energía, el balance de fuerza y la relación entre el "
+"cizallamiento y el gradiente de velocidad obtenemos"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:835
+#, fuzzy
 msgid ""
 "This equation is valid for both laminar flow. For turbulent flow it is "
 "necessary to make the approximation that wall shear perpendicular to the "
-"direction of flow is insignificant in increasing the magnitude of the "
-"wall shear. We can substitute the Darcy Weisbach equation for head loss "
-"to obtain"
+"direction of flow is insignificant in increasing the magnitude of the wall "
+"shear. We can substitute the Darcy Weisbach equation for head loss to obtain"
 msgstr ""
+"Esta ecuación es válida para ambos flujos laminares. Para el flujo turbulento "
+"es necesario hacer la aproximación de que la cizalla de la pared perpendicular "
+"a la dirección del flujo es insignificante para aumentar la magnitud de la "
+"cizalla de la pared. Podemos sustituir la ecuación de Darcy Weisbach por la "
+"pérdida de carga para obtener"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:842
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:862
+#, fuzzy
 msgid "The energy dissipation rate at the wall is"
-msgstr ""
+msgstr "La tasa de disipación de energía en la pared es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:853
+#, fuzzy
 msgid ""
-"For laminar flow we can substitute :math:`{\\rm f} = \\frac{64}{{\\rm "
-"Re}}` and the definition of the Reynolds number to obtain"
+"For laminar flow we can substitute :math:`{\\rm f} = \\frac{64}{{\\rm Re}}` "
+"and the definition of the Reynolds number to obtain"
 msgstr ""
+"Para el flujo laminar podemos sustituir :matemáticas:`{{\\\\N- f} = \\N-"
+"fraccionaria{\\N}{{\\N- Re}} y la definición del número de Reynolds para "
+"obtener"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:860
+#, fuzzy
 msgid ""
-"This equation is useful for finding the velocity gradient at the wall of "
-"a tube settler."
+"This equation is useful for finding the velocity gradient at the wall of a "
+"tube settler."
 msgstr ""
+"Esta ecuación es útil para encontrar el gradiente de velocidad en la pared de "
+"un colono de tubo."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:877
+#, fuzzy
 msgid ""
-"The shear on the wall of a coiled tube is not uniform. The outside of the"
-" curve has a higher velocity gradient than the inside of the curve and "
-"there are secondary currents that results in wall shear that is not "
-"purely in the locally defined upstream direction. We do not have a "
-"precise equation for the wall shear. The best we can do currently is "
-"define an average wall shear in the locally defined direction of flow by "
-"combining :math:`G_{{CS}_{wall_{coil}}} =\\rm{f_{coil}} \\frac{\\bar "
-"v^2}{8\\nu}` and :math:`{\\rm f}_{coil} = {\\rm f} \\left[ 1 + "
-"0.033\\left(log_{10}De\\right)^4 \\right]` to obtain"
+"The shear on the wall of a coiled tube is not uniform. The outside of the "
+"curve has a higher velocity gradient than the inside of the curve and there "
+"are secondary currents that results in wall shear that is not purely in the "
+"locally defined upstream direction. We do not have a precise equation for the "
+"wall shear. The best we can do currently is define an average wall shear in "
+"the locally defined direction of flow by combining :math:`G_{{CS}"
+"_{wall_{coil}}} =\\rm{f_{coil}} \\frac{\\bar v^2}{8\\nu}` and :math:`{\\rm f}"
+"_{coil} = {\\rm f} \\left[ 1 + 0.033\\left(log_{10}De\\right)^4 \\right]` to "
+"obtain"
 msgstr ""
+"La cizalla en la pared de un tubo en espiral no es uniforme. El exterior de la "
+"curva tiene un gradiente de velocidad mayor que el interior de la curva y hay "
+"corrientes secundarias que dan lugar a un cizallamiento de la pared que no es "
+"puramente en la dirección ascendente localmente definida. No tenemos una "
+"ecuación precisa para el corte de la pared. Lo mejor que podemos hacer "
+"actualmente es definir un corte de pared promedio en la dirección de flujo "
+"localmente definida combinando :matemáticas:`G_{{CS}_{wall_{coil}} ="
+"\\rm{f_{coil}} \\frac{\\barrera v^2}{8\\nu}` y :matemáticas:`{\\barrera f}"
+"_{coil} = {\\barrera f} \\izquierda [1 + 0.033] izquierda (log_{10}De"
+"\\Nright)^4 derecho]` para obtener"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:891
+#, fuzzy
 msgid ""
-"Flow expansions are used intentionally or unavoidable in multiple "
-"locations in hydraulically optimized water treatment plants. Rapid mix "
-"and hydraulic flocculation use flow expansions to generate fluid mixing "
-"and collisions between particles."
+"Flow expansions are used intentionally or unavoidable in multiple locations in "
+"hydraulically optimized water treatment plants. Rapid mix and hydraulic "
+"flocculation use flow expansions to generate fluid mixing and collisions "
+"between particles."
 msgstr ""
+"Las expansiones de flujo se utilizan intencionalmente o son inevitables en "
+"múltiples lugares en plantas de tratamiento de agua optimizadas "
+"hidráulicamente. La mezcla rápida y la floculación hidráulica utilizan las "
+"expansiones de flujo para generar la mezcla de fluidos y las colisiones entre "
+"partículas."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:896
+#, fuzzy
 msgid "Round Jet"
-msgstr ""
+msgstr "Round Jet"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:899
+#, fuzzy
 msgid "`Baldyga, et al. 1995 <https://doi.org/10.1016/0009-2509(95)00049-B>`__"
-msgstr ""
+msgstr "`Baldyga, et al. 1995 <https://doi.org/10.1016/0009-2509(95)00049-B>`__"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:919
+#, fuzzy
 msgid "The maximum velocity gradient in a jet is thus"
-msgstr ""
+msgstr "El gradiente de velocidad máximo en un jet es por lo tanto"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:925
+#, fuzzy
 msgid ""
-"Below we plot the Baldyga et al. equation for the energy dissipation rate"
-" as a function of distance from the discharge location for the case of a "
-"round jet that is discharging into a large tank."
+"Below we plot the Baldyga et al. equation for the energy dissipation rate as a "
+"function of distance from the discharge location for the case of a round jet "
+"that is discharging into a large tank."
 msgstr ""
+"A continuación se traza la ecuación de Baldyga y otros para la tasa de "
+"disipación de energía en función de la distancia del lugar de descarga para el "
+"caso de un chorro redondo que se descarga en un gran tanque."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:935
+#, fuzzy
 msgid ""
 "The centerline energy dissipation rate downstream from a round jet. The "
 "distance downstream is measured in units of jet diameters. The energy "
-"dissipation rate between the jet and 7 jet diameters is developing as the"
-" shear between the stationary fluid and the jet propagates toward the "
-"center of the jet and turbulence is generated."
+"dissipation rate between the jet and 7 jet diameters is developing as the "
+"shear between the stationary fluid and the jet propagates toward the center of "
+"the jet and turbulence is generated."
 msgstr ""
+"La tasa de disipación de la energía de la línea central, aguas abajo de un "
+"chorro redondo. La distancia aguas abajo se mide en unidades de diámetro de "
+"chorro. La tasa de disipación de energía entre el chorro y los 7 diámetros de "
+"chorro se desarrolla a medida que la cizalla entre el fluido estacionario y el "
+"chorro se propaga hacia el centro del chorro y se genera turbulencia."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:940
+#, fuzzy
 msgid "Plane Jet"
-msgstr ""
+msgstr "Avión a reacción"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:942
+#, fuzzy
 msgid ""
-"Plane jets occur in hydraulic flocculators and in the sedimentation tank "
-"inlet jet system. We haven’t been able to find a literature estimate of "
-"the maximum energy dissipation rate in a plane jet. Original measurements"
-" of a plane turbulent jet have been made by `Heskestad in 1965 "
-"<http://dx.doi.org/10.1115/1.3627309>`__ and it may be possible to use "
-"that data to get a better estimate of :math:`\\Pi_{JetPlane}` from that "
-"source."
+"Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet "
+"jet system. We haven’t been able to find a literature estimate of the maximum "
+"energy dissipation rate in a plane jet. Original measurements of a plane "
+"turbulent jet have been made by `Heskestad in 1965 <http://dx.doi."
+"org/10.1115/1.3627309>`__ and it may be possible to use that data to get a "
+"better estimate of :math:`\\Pi_{JetPlane}` from that source."
 msgstr ""
+"Los chorros planos se producen en los floculadores hidráulicos y en el sistema "
+"de chorros de entrada del tanque de sedimentación. No hemos podido encontrar "
+"una estimación en la literatura de la máxima tasa de disipación de energía en "
+"un chorro de avión. Las mediciones originales de un chorro turbulento de avión "
+"han sido hechas por `Heskestad en 1965 <http://dx.doi."
+"org/10.1115/1.3627309>`__ y puede ser posible usar esos datos para obtener una "
+"mejor estimación de :math:`\\Pi_{JetPlane}` de esa fuente."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:953
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:1055
+#, fuzzy
 msgid "The maximum velocity gradient is thus"
-msgstr ""
+msgstr "El gradiente de velocidad máximo es así"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:972
+#, fuzzy
 msgid "The average hydraulic residence time for the fluid between two baffles is"
 msgstr ""
+"El tiempo medio de residencia hidráulica del fluido entre dos deflectores es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:979
+#, fuzzy
 msgid ""
-"where :math:`H` is the depth of water. Substituting into the equation for"
-" :math:`\\varepsilon_{Max}` to get the equation in terms of the average "
+"where :math:`H` is the depth of water. Substituting into the equation for :"
+"math:`\\varepsilon_{Max}` to get the equation in terms of the average "
 "velocity :math:`\\bar v` and flow dimension :math:`S`"
 msgstr ""
+"donde :matemáticas:`H` es la profundidad del agua. Sustituyendo en la ecuación "
+"por :math:`varepsilon_{Max}` para obtener la ecuación en términos de la "
+"velocidad promedio :math:`\\bar v` y la dimensión del flujo :math:`S`"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:985
+#, fuzzy
 msgid "From the control volume analysis the average energy dissipation rate is"
 msgstr ""
+"Según el análisis del volumen de control, la tasa media de disipación de "
+"energía es"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:991
+#, fuzzy
 msgid ""
-"where :math:`K` is the minor loss coefficient for flow around the end of "
-"a baffle with a :math:`180^\\circ` turn."
+"where :math:`K` is the minor loss coefficient for flow around the end of a "
+"baffle with a :math:`180^\\circ` turn."
 msgstr ""
+"donde :math:`K` es el coeficiente de pérdida menor para el flujo alrededor del "
+"final de un deflector con un :math:`180^\\circ` giro."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:993
+#, fuzzy
 msgid ""
-"Substitute the values for :math:`\\bar \\varepsilon` and "
-":math:`\\varepsilon_{Max}` to obtain the ratio, :math:`\\Pi_{\\bar "
-"\\varepsilon}^{\\varepsilon_{Max}}`"
+"Substitute the values for :math:`\\bar \\varepsilon` and :math:`"
+"\\varepsilon_{Max}` to obtain the ratio, :math:`\\Pi_{\\bar \\varepsilon}"
+"^{\\varepsilon_{Max}}`"
 msgstr ""
+"Sustituye los valores de :math:``bar \\varepsilon`` y :math:``varepsilon_{Max}"
+"` para obtener el ratio, :math:``Pi_{\\bar \\varepsilon}^{\\N-{\\Nvariable}}"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:1001
+#, fuzzy
 msgid ""
-":math:`\\Pi_{\\bar \\varepsilon}^{\\varepsilon_{Max}}` has a value of 2 "
-"for :math:`H_e/S <5` (CFD analysis and `Haarhoff, 2001 <https://search-"
-"proquest-"
-"com.proxy.library.cornell.edu/docview/1943098053?accountid=10267>`__) The"
-" transition value for :math:`H_e/S` is at 5 (from CFD analysis, our "
-"weakest assumption)."
+":math:`\\Pi_{\\bar \\varepsilon}^{\\varepsilon_{Max}}` has a value of 2 for :"
+"math:`H_e/S <5` (CFD analysis and `Haarhoff, 2001 <https://search-proquest-com."
+"proxy.library.cornell.edu/docview/1943098053?accountid=10267>`__) The "
+"transition value for :math:`H_e/S` is at 5 (from CFD analysis, our weakest "
+"assumption)."
 msgstr ""
+":math:``Pi_{\\bar \\varepsilon}}^{\\\\Nvarepsilon_{Max}` tiene un valor de 2 "
+"para :math:`H_e/S <5` (análisis CFD y `Haarhoff, 2001 <https://search-proquest-"
+"com.proxy.library.cornell.edu/docview/1943098053?accountid=10267>`__) El valor "
+"de transición para :math:`H_e/S` está en 5 (del análisis CFD, nuestra "
+"suposición más débil)."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:1005
+#, fuzzy
 msgid ""
-"We also have that :math:`\\Pi_{\\bar \\varepsilon}^{\\varepsilon_{Max}}` "
-"has a value of :math:`\\frac{\\Pi_{JetPlane}}{\\Pi_{VCBaffle}^4} \\frac{2"
-" H_e}{K S}` for :math:`H_e/S>5`. Thus we can solve for "
-":math:`\\Pi_{JetPlane}` at :math:`H_e/S=5`"
+"We also have that :math:`\\Pi_{\\bar \\varepsilon}^{\\varepsilon_{Max}}` has a "
+"value of :math:`\\frac{\\Pi_{JetPlane}}{\\Pi_{VCBaffle}^4} \\frac{2 H_e}{K S}` "
+"for :math:`H_e/S>5`. Thus we can solve for :math:`\\Pi_{JetPlane}` at :math:"
+"`H_e/S=5`"
 msgstr ""
+"También tenemos que las matemáticas tienen un valor de fracción de fracción.. "
+"\\frac{2 H_e}{K S}` para :matemáticas:`H_e/S>5`. Así podemos resolver para :"
+"math:``Pi_{JetPlane}` en :math:`H_e/S=5`"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:1033
+#, fuzzy
 msgid "Behind a flat plate"
-msgstr ""
+msgstr "Detrás de un plato plano"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:1035
+#, fuzzy
 msgid ""
-"A flat plate normal to the direction of flow could be used in a hydraulic"
-" flocculator. In vertical flow flocculators it would create a space where"
-" flocs can settle and thus it is not a recommended design."
+"A flat plate normal to the direction of flow could be used in a hydraulic "
+"flocculator. In vertical flow flocculators it would create a space where flocs "
+"can settle and thus it is not a recommended design."
 msgstr ""
+"Una placa plana normal a la dirección del flujo podría ser usada en un "
+"floculador hidráulico. En los floculadores de flujo vertical se crearía un "
+"espacio donde los flóculos pueden asentarse y por lo tanto no es un diseño "
+"recomendado."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:1037
+#, fuzzy
 msgid ""
-"The impellers used in mechanical flocculators could be modeled as a "
-"rotating flat plate. The energy dissipation rate in the wake behind the "
-"flat plate is often quite high in mechanical flocculators and this may be"
-" responsible for breaking previously formed flocs."
+"The impellers used in mechanical flocculators could be modeled as a rotating "
+"flat plate. The energy dissipation rate in the wake behind the flat plate is "
+"often quite high in mechanical flocculators and this may be responsible for "
+"breaking previously formed flocs."
 msgstr ""
+"Los impulsores utilizados en los floculadores mecánicos podrían ser modelados "
+"como una placa plana giratoria. La tasa de disipación de energía en la estela "
+"detrás de la placa plana suele ser bastante alta en los floculadores mecánicos "
+"y esto puede ser responsable de la ruptura de los flóculos previamente "
+"formados."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:1039
+#, fuzzy
 msgid "Ariane Walker-Horn modeled the flat plate using Fluent in 2015."
-msgstr ""
+msgstr "Ariane Walker-Horn modeló la placa plana usando Fluent en 2015."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:1048
+#, fuzzy
 msgid ""
 "The energy dissipation rate and streamlines for a 1 m wide plate in two "
 "dimensional flow with an approach velocity of :math:`1 m/s`. The maximum "
 "energy dissipation rate was approximately :math:`0.04 W/kg`."
 msgstr ""
+"La tasa de disipación de energía y se agiliza para una placa de 1 m de ancho "
+"en un flujo bidimensional con una velocidad de aproximación de :matemáticas:`1 "
+"m/s`. La máxima velocidad de disipación de energía fue aproximadamente :"
+"matemáticas:`0.04 W/kg`."
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:1074
+#, fuzzy
 msgid "The flat plate :math:`\\Pi_{Plate}` has a value of 0.04."
-msgstr ""
-
+msgstr "La placa plana :matemáticas:``Pi_{Plate}` tiene un valor de 0.04."
