@@ -1,0 +1,1046 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, AguaClara Cornell
+# This file is distributed under the same license as the AguaClara Textbook
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: AguaClara Textbook EXPERIMENTAL\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-19 16:17-0400\n"
+"PO-Revision-Date: 2020-10-18 16:39-0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: textbook subteam\n"
+"Language: es\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: ../../Flocculation/Floc_Intro.rst:5
+#, fuzzy
+msgid "Flocculation Introduction"
+msgstr "Floculación Introducción"
+
+#: ../../Flocculation/Floc_Intro.rst:8
+#, fuzzy
+msgid ""
+"Flocculation transform inorganic (clays such as `kaolinite, smectite, etc. "
+"and metallic oxy-hydroxides such as goethite and gibbsite <https://www."
+"sciencedirect.com/science/article/pii/S0048969708010103>`_) and organic "
+"(viruses, bacteria and protozoa) primary particles into flocs (particle "
+"aggregates). Flocculation doesn’t remove any particles from suspension. "
+"Instead it causes particle aggregation and then floc blankets, lamellar "
+"sedimentation, and sand filtration will be used to separate those flocs "
+"from the water. Sedimentation can remove flocs more easily than it can "
+"remove primary particles because flocs have a higher terminal sedimentation "
+"velocity. Floc blankets and sand filtration rely primarily on capture based "
+"on interception and interception is much more efficient when the particles "
+"are larger. Thus the purpose of flocculation is to join **all** of the "
+"primary particles together into flocs (See movie in :numref:"
+"`figure_Collisions_in_Sequence`)."
+msgstr ""
+"La floculación transforma las partículas primarias inorgánicas (arcillas "
+"como `caolinita, esmectita, etc. y óxidos metálicos como goethita y "
+"gibbsite <https://www.sciencedirect.com/science/article/pii/"
+"S0048969708010103>`_) y orgánicas (virus, bacterias y protozoos) en "
+"flóculos (agregados de partículas). La floculación no elimina ninguna "
+"partícula de la suspensión. En su lugar, causa agregación de partículas y "
+"luego se utilizan mantas de flóculos, sedimentación laminar y filtración de "
+"arena para separar esos flóculos del agua. La sedimentación puede remover "
+"los flóculos más fácilmente que las partículas primarias porque los "
+"flóculos tienen una velocidad de sedimentación terminal más alta. Los "
+"mantos de flóculos y la filtración de arena dependen principalmente de la "
+"captura basada en la interceptación y la interceptación es mucho más "
+"eficiente cuando las partículas son más grandes. Por lo tanto, el propósito "
+"de la floculación es unir **todas** las partículas primarias en flóculos "
+"(Ver película en :numref:`figure_Collisions_in_Sequence`)."
+
+#: ../../Flocculation/Floc_Intro.rst:18
+#, fuzzy
+msgid ""
+"Clay particles with attached coagulant nanoparticles collide due to fluid "
+"deformation. They grow in size quickly. The challenge is to catch the last "
+"few primary particles that failed to participate in the aggregation process."
+msgstr ""
+"Las partículas de arcilla con nanopartículas coagulantes adheridas "
+"colisionan debido a la deformación del fluido. Crecen de tamaño "
+"rápidamente. El desafío es atrapar las últimas partículas primarias que no "
+"participaron en el proceso de agregación."
+
+#: ../../Flocculation/Floc_Intro.rst:21
+#, fuzzy
+msgid "Flocculation History"
+msgstr "Historia de la floculación"
+
+#: ../../Flocculation/Floc_Intro.rst:23
+#, fuzzy
+msgid ""
+"Historically flocculation was assumed to involve collisions between all "
+"particles in the suspension. The Smoluchowski coagulation equation was "
+"published in 1916 and uses a population balance approach to track the "
+"number of particles of each size based on the probability of collisions "
+"between all possible combinations of particle sizes. The Smoluchowski "
+"equation is a statement of the conservation of mass and as such it "
+"certainly applies to flocculation in drinking water treatment plants. The "
+"challenge is that the probability of collisions between all possible "
+"combinations of particle sizes must be somehow known in order to use the "
+"model. The complexity of obtaining the collision probabilities and the "
+"complexity of solving the equation have preventing use of the Smoluchowski "
+"equation for design or operation of flocculators."
+msgstr ""
+"Históricamente se asumía que la floculación implicaba colisiones entre "
+"todas las partículas de la suspensión. La ecuación de coagulación de "
+"Smoluchowski se publicó en 1916 y utiliza un enfoque de equilibrio de la "
+"población para rastrear el número de partículas de cada tamaño basándose en "
+"la probabilidad de colisiones entre todas las combinaciones posibles de "
+"tamaños de partículas. La ecuación de Smoluchowski es una declaración de la "
+"conservación de la masa y, como tal, se aplica ciertamente a la floculación "
+"en las plantas de tratamiento de agua potable. El reto es que la "
+"probabilidad de colisiones entre todas las combinaciones posibles de "
+"tamaños de partículas debe conocerse de alguna manera para poder utilizar "
+"el modelo. La complejidad de la obtención de las probabilidades de colisión "
+"y la complejidad de la resolución de la ecuación han impedido el uso de la "
+"ecuación de Smoluchowski para el diseño o el funcionamiento de los "
+"floculadores."
+
+#: ../../Flocculation/Floc_Intro.rst:25
+#, fuzzy
+msgid ""
+"For most of the past century there have been two explanations for the "
+"particle interactions during flocculation based on the addition of a "
+"coagulant. The first explanation was that the positive charge of the "
+"coagulant neutralizes the negative charge of naturally occurring particles "
+"and thus eliminates the electrostatic repulsion that was preventing "
+"aggregation. The second explanation was called sweep flocculation and was "
+"the catch all explanation that was used to describe observations that "
+"didn't fit the charge neutralization explanation. Particles were presumed "
+"to be swept into a mesh of coagulant precipitate at coagulant dosages that "
+"are typically used in drinking water treatment."
+msgstr ""
+"Durante la mayor parte del siglo pasado ha habido dos explicaciones para "
+"las interacciones de las partículas durante la floculación basadas en la "
+"adición de un coagulante. La primera explicación fue que la carga positiva "
+"del coagulante neutraliza la carga negativa de las partículas que se "
+"producen naturalmente y, por lo tanto, elimina la repulsión electrostática "
+"que impedía la agregación. La segunda explicación se denominó floculación "
+"de barrido y fue la explicación de \"catch all\" que se utilizó para "
+"describir las observaciones que no encajaban en la explicación de la "
+"neutralización de la carga. Se presumía que las partículas eran barridas en "
+"una malla de precipitado coagulante en dosis coagulantes que se utilizan "
+"típicamente en el tratamiento del agua potable."
+
+#: ../../Flocculation/Floc_Intro.rst:28
+#, fuzzy
+msgid "Surface Charge and Sweep Floc"
+msgstr "Flocaje de carga y barrido de superficie"
+
+#: ../../Flocculation/Floc_Intro.rst:30
+#, fuzzy
+msgid ""
+"The mechanism of particle-particle aggregation was thought to be controlled "
+"by the average surface charge. Unfortunately no one was able to develop a "
+"model of how that mechanism would influence particle attachment efficiency "
+"and no predictive models for flocculation were developed. Indeed, there "
+"were several observations that were at odds with the charge neutralization "
+"hypothesis."
+msgstr ""
+"Se creía que el mecanismo de agregación de partículas y partículas estaba "
+"controlado por la carga superficial media. Lamentablemente, nadie pudo "
+"desarrollar un modelo de cómo ese mecanismo influiría en la eficiencia de "
+"la agregación de partículas y no se desarrollaron modelos predictivos para "
+"la floculación. De hecho, hubo varias observaciones que estaban en "
+"desacuerdo con la hipótesis de la neutralización de la carga."
+
+#: ../../Flocculation/Floc_Intro.rst:32
+#, fuzzy
+msgid ""
+"Flocculation was observed to be efficient even at coagulant dosages that "
+"led to positive surface charge. This unexpected result was attributed to "
+"“sweep floc”."
+msgstr ""
+"Se observó que la floculación era eficiente incluso con dosis de "
+"coagulantes que daban lugar a una carga superficial positiva. Este "
+"resultado inesperado se atribuyó a la \"floculación de barrido\"."
+
+#: ../../Flocculation/Floc_Intro.rst:33
+#, fuzzy
+msgid ""
+"Flocculation began to be effective even when the surface charge was still "
+"negative."
+msgstr ""
+"La floculación comenzó a ser efectiva incluso cuando la carga superficial "
+"era todavía negativa."
+
+#: ../../Flocculation/Floc_Intro.rst:34
+#, fuzzy
+msgid ""
+"Flocculation time for highly turbid suspensions was expected to proceed "
+"very rapidly and produce very low turbidity settled water. This expectation "
+"was not observed and led to the hypothesis that flocs were continually "
+"breaking up and producing primary particles or at least very small flocs."
+msgstr ""
+"Se esperaba que el tiempo de floculación de las suspensiones altamente "
+"turbias procediera muy rápidamente y produjera agua sedimentada de muy baja "
+"turbidez. Esta expectativa no se observó y llevó a la hipótesis de que los "
+"flóculos se rompían continuamente y producían partículas primarias o al "
+"menos flóculos muy pequeños."
+
+#: ../../Flocculation/Floc_Intro.rst:35
+#, fuzzy
+msgid ""
+"The floc break up hypotheses led to the expectation that high turbidity "
+"suspensions would have significantly higher settled water turbidity than "
+"low turbidity suspensions. This expectation was also not observed."
+msgstr ""
+"Las hipótesis de ruptura de los flóculos llevaron a la expectativa de que "
+"las suspensiones de alta turbidez tendrían una turbidez del agua "
+"sedimentada significativamente mayor que las suspensiones de baja turbidez. "
+"Esta expectativa tampoco se cumplió."
+
+#: ../../Flocculation/Floc_Intro.rst:36
+#, fuzzy
+msgid ""
+"The coagulant precipitate self aggregates – this is inconsistent with the "
+"positive charge that the electrostatic hypothesis asserts will prevent "
+"aggregation"
+msgstr ""
+"El coagulante precipita los auto-agregados - esto es inconsistente con la "
+"carga positiva que la hipótesis electrostática afirma que evitará la "
+"agregación"
+
+#: ../../Flocculation/Floc_Intro.rst:37
+#, fuzzy
+msgid ""
+"Electrostatic repulsion extends only a few nm from the surface of a "
+"particle – and the coagulant nanoparticles are many times larger than the "
+"reach of the repulsive electrostatic force. Thus there is no need to "
+"neutralize surface charge when using coagulant nanoparticles."
+msgstr ""
+"La repulsión electrostática se extiende sólo a unos pocos nm de la "
+"superficie de una partícula - y las nanopartículas coagulantes son muchas "
+"veces más grandes que el alcance de la fuerza electrostática de repulsión. "
+"Por lo tanto, no hay necesidad de neutralizar la carga superficial cuando "
+"se utilizan nanopartículas coagulantes."
+
+#: ../../Flocculation/Floc_Intro.rst:38
+#, fuzzy
+msgid ""
+"Charge neutralization explanation neglects to fully account for the "
+"presence of water in the system. Water molecules will also be attracted to "
+"surfaces by London van der Waals forces and thus there will be competition "
+"between particle-particle bonds and water-particle bonds. Thus eliminating "
+"repulsion is NOT sufficient to produce a bond between the particles. It is "
+"also necessary for the particle-particle bonds to be stronger than the "
+"water-particle bonds. (see `hydration repulsion, page 21 <https://"
+"vtechworks.lib.vt.edu/bitstream/handle/10919/30137/Chapter1.pdf?"
+"sequence=9>`__) ` \"The theory of DLP was a great step forward in that it "
+"appeared to circumvent the whole intractable problem of many body forces "
+"through its use of measured bulk dielectric response functions. However, it "
+"must be stressed again that it is a perturbation theory. That is, it "
+"depends on the assumption that an intervening liquid between interacting "
+"surfaces has bulk liquid properties up to a molecular distance from the "
+"surfaces. This is thermodynamically inconsistent, being equivalent to the "
+"statement that surface energies (or alternatively, the positions of the "
+"Gibbs dividing surfaces) are changed infinitesimally with distance of "
+"separation. This limits the theory to large distances (Young–Laplace vs. "
+"Poisson again) where large is undefined.\" <https://doi.org/10.1016/"
+"S0001-8686(99)00008-1>`__"
+msgstr ""
+"La explicación de la neutralización de la carga no tiene en cuenta la "
+"presencia de agua en el sistema. Las moléculas de agua también serán "
+"atraídas a las superficies por las fuerzas de London van der Waals y por lo "
+"tanto habrá competencia entre los enlaces de partículas y los enlaces de "
+"agua y partículas. Por lo tanto, la eliminación de la repulsión no es "
+"suficiente para producir un enlace entre las partículas. También es "
+"necesario que los enlaces entre partículas sean más fuertes que los de las "
+"partículas de agua. (ver \"repulsión por hidratación, página 21 <https://"
+"vtechworks.lib.vt.edu/bitstream/handle/10919/30137/Chapter1.pdf?"
+"sequence=9>`__) `\"La teoría del DLP fue un gran paso adelante en el "
+"sentido de que pareció sortear todo el problema intratable de muchas "
+"fuerzas corporales a través de su uso de funciones de respuesta dieléctrica "
+"de volumen medido. Sin embargo, debe destacarse nuevamente que es una "
+"teoría de perturbaciones. Es decir, depende de la suposición de que un "
+"líquido que interviene entre superficies que interactúan tiene propiedades "
+"de líquido a granel hasta una distancia molecular de las superficies. Esto "
+"es termodinámicamente inconsistente, siendo equivalente a la afirmación de "
+"que las energías superficiales (o alternativamente, las posiciones de las "
+"superficies divisorias de Gibbs) cambian infinitesimalmente con la "
+"distancia de separación. Esto limita la teoría a las grandes distancias "
+"(Young-Laplace vs. Poisson de nuevo) donde lo grande es indefinido\" "
+"<https://doi.org/10.1016/S0001-8686(99)00008-1>`__"
+
+#: ../../Flocculation/Floc_Intro.rst:40
+#, fuzzy
+msgid ""
+"Evidence that the charge neutralization hypothesis doesn’t explain "
+"flocculation of surface waters has been accumulating for decades. *Sweep* "
+"flocculation has been proposed as an alternative \"mechanism\" that "
+"described common observations that didn’t fit the charge neutralization "
+"hypothesis. However, similar to the charge neutralization hypothesis, the "
+"*sweep* hypothesis didn’t result in the development of predictive equations "
+"to describe the process."
+msgstr ""
+"La evidencia de que la hipótesis de la neutralización de la carga no "
+"explica la floculación de las aguas superficiales se ha ido acumulando "
+"durante décadas. *La floculación de barrido* se ha propuesto como un "
+"\"mecanismo\" alternativo que describe observaciones comunes que no encajan "
+"en la hipótesis de la neutralización de la carga. Sin embargo, de manera "
+"similar a la hipótesis de neutralización de cargas, la hipótesis de "
+"*barrido* no dio lugar al desarrollo de ecuaciones predictivas para "
+"describir el proceso."
+
+#: ../../Flocculation/Floc_Intro.rst:42
+#, fuzzy
+msgid ""
+"For example, in 1992 Ching, Tanaka, and Elimelech published their research "
+"on `Dynamics of coagulation of kaolin particles with ferric chloride "
+"<https://doi.org/10.1016/0043-1354(94)90007-8>`__. They found that the "
+"electrophoretic mobility, a measure of the clay particle surface charge, "
+"was never neutralized at pH 7.8 and was neutralized at :math:`10\\mu M` at "
+"pH 6.0. The results were interpreted by the authors to mean that some "
+"combination of sweep floc and charge patchiness was responsible for the "
+"observed results."
+msgstr ""
+"Por ejemplo, en 1992 Ching, Tanaka y Elimelech publicaron su investigación "
+"sobre la \"Dinámica de la coagulación de las partículas de caolín con "
+"cloruro férrico\" <https://doi.org/10.1016/0043-1354(94)90007-8>`__. "
+"Encontraron que la movilidad electroforética, una medida de la carga "
+"superficial de las partículas de arcilla, nunca fue neutralizada a un pH de "
+"7,8 y fue neutralizada a :matemáticas:`10\\mu M` a un pH de 6,0. Los "
+"resultados fueron interpretados por los autores en el sentido de que alguna "
+"combinación de floc de barrido y parcheo de carga fue responsable de los "
+"resultados observados."
+
+#: ../../Flocculation/Floc_Intro.rst:44
+#, fuzzy
+msgid ""
+"See :numref:`figure_Ching_Electrophoretic_Mobility_vs_Ferric_Chloride` "
+"showing that at pH 7.8 the ferric chloride was still negatively charged and "
+"yet succeeded in flocculating the suspension to almost the same extent as "
+"the ferric chloride at ph 6.0 that was positively charged (see :numref:"
+"`figure_Ching_Residual_Turbidity_vs_Ferric_Chloride`)."
+msgstr ""
+"Véase :numref:`figure_Ching_Electrophoretic_Mobility_vs_Ferric_Chloride` "
+"que muestra que a pH 7,8 el cloruro férrico seguía estando cargado "
+"negativamente y, sin embargo, logró flocular la suspensión casi en la misma "
+"medida que el cloruro férrico a pH 6,0 que estaba cargado positivamente "
+"(véase :numref:`figure_Ching_Residual_Turbidity_vs_Ferric_Chloride`)."
+
+#: ../../Flocculation/Floc_Intro.rst:53
+#, fuzzy
+msgid ""
+"`Electrophoretic Mobility for final pH <https://doi."
+"org/10.1016/0043-1354(94)90007-8>`__ (after coagulant addition) of 6.0 and "
+"7.8 as a function of :math:`FeCl_3` dose"
+msgstr ""
+"\"Movilidad Electroforética para el pH final\" <https://doi."
+"org/10.1016/0043-1354(94)90007-8>`__ (después de la adición de coagulante) "
+"de 6.0 y 7.8 en función de :matemáticas:`FeCl_3` dosis"
+
+#: ../../Flocculation/Floc_Intro.rst:63
+#, fuzzy
+msgid ""
+"`The settled water turbidity was almost independent of pH even though the "
+"electrophoretic mobility was quite different for the two pH values tested "
+"<https://doi.org/10.1016/0043-1354(94)90007-8>`__."
+msgstr ""
+"\"La turbidez del agua sedimentada era casi independiente del pH, aunque la "
+"movilidad electroforética era bastante diferente para los dos valores de pH "
+"probados <https://doi.org/10.1016/0043-1354(94)90007-8>`__."
+
+#: ../../Flocculation/Floc_Intro.rst:66
+#, fuzzy
+msgid ""
+"`At pH 6.0 the ferric hydroxide precipitates are positively charged and at "
+"pH 7.8 they are close to neutral <https://doi."
+"org/10.1016/0043-1354(94)90007-8>`__. Thus it is apparent that "
+"neutralization of the clay surface charge can not explain these results."
+msgstr ""
+"\"A pH 6.0 los precipitados de hidróxido férrico están cargados "
+"positivamente y a pH 7.8 están cerca del neutro\" <https://doi."
+"org/10.1016/0043-1354(94)90007-8>`__. Por lo tanto, es evidente que la "
+"neutralización de la carga de la superficie de la arcilla no puede explicar "
+"estos resultados."
+
+#: ../../Flocculation/Floc_Intro.rst:69
+#, fuzzy
+msgid "Polymers"
+msgstr "Polímeros"
+
+#: ../../Flocculation/Floc_Intro.rst:71
+#, fuzzy
+msgid ""
+"Synthetic polymers often made with repeating units of acrylic acid and its "
+"derivatives are used to aid flocculation by bridging between particles. For "
+"polymer bridging to occur the polymer chains must be able to span the "
+"length scale of double-layer repulsion. The thickness of the diffuse layer "
+"is about 10 nm at an ionic strength of 1 mM (Coagulants and Flocculants: "
+"Theory & Practice by Yong Kim, 1995). The length of linear polymers ranges "
+"from 100 to 1500 nm (`Table 3 of Ying and Chu, 1987 <https://doi."
+"org/10.1021/ma00168a023>`_) and thus both synthetic polymers and coagulant "
+"nanoparticles can easily span the length scale of double-layer repulsion."
+msgstr ""
+"Los polímeros sintéticos, a menudo fabricados con unidades repetidas de "
+"ácido acrílico y sus derivados, se utilizan para ayudar a la floculación "
+"mediante el establecimiento de un puente entre las partículas. Para que se "
+"produzca el puente de polímeros, las cadenas de polímeros deben poder "
+"abarcar la escala de longitud de la repulsión de doble capa. El grosor de "
+"la capa difusa es de unos 10 nm con una fuerza iónica de 1 mM (Coagulantes "
+"y Floculantes: Teoría y Práctica por Yong Kim, 1995). La longitud de los "
+"polímeros lineales oscila entre 100 y 1500 nm (`Tabla 3 de Ying y Chu, 1987 "
+"<https://doi.org/10.1021/ma00168a023>`_) y por lo tanto tanto tanto los "
+"polímeros sintéticos y las nanopartículas coagulantes pueden abarcar "
+"fácilmente la escala de longitud de la repulsión de doble capa."
+
+#: ../../Flocculation/Floc_Intro.rst:73
+#, fuzzy
+msgid ""
+"The shortest synthetic polymers are similar in size to the coagulant "
+"nanoparticles and the longest synthetic polymers are similar in length to "
+"bacteria. These polymers could create additional connections between "
+"primary particles and coagulant nanoparticles or they could connect primary "
+"particles. In either case the polymers can add connections (more bonds!) "
+"that likely have some elasticity and thus there can be more than 3 bonds "
+"connecting two particles."
+msgstr ""
+"Los polímeros sintéticos más cortos son similares en tamaño a las "
+"nanopartículas coagulantes y los polímeros sintéticos más largos son "
+"similares en longitud a las bacterias. Estos polímeros podrían crear "
+"conexiones adicionales entre las partículas primarias y las nanopartículas "
+"coagulantes o podrían conectar las partículas primarias. En cualquier caso, "
+"los polímeros pueden añadir conexiones (¡más enlaces!) que probablemente "
+"tengan cierta elasticidad y, por lo tanto, puede haber más de 3 enlaces que "
+"conecten dos partículas."
+
+#: ../../Flocculation/Floc_Intro.rst:75
+#, fuzzy
+msgid ""
+"Polymers undoubtedly increase the connections that bind flocs together and "
+"thus enable flocs to grow larger. The stronger flocs created by polymer "
+"addition may have unintended consequences in subsequent treatment steps. "
+"Large strong flocs are great for improved removal in plate or tube "
+"settlers. In sedimentation tanks with floc blankets they may form sludge "
+"that is more difficult to suspend after a brief shutdown. In filters it is "
+"possible that large flocs are more rigid and fail to enter the pore spaces "
+"of the filter. Thus the use of polymers may require using large media size "
+"for depth filtration. The polymers may also form mudballs in granular "
+"filters and thus require more aggressive washing."
+msgstr ""
+"Los polímeros indudablemente aumentan las conexiones que unen los flóculos "
+"y así permiten que los flóculos crezcan más. Los flóculos más fuertes "
+"creados por la adición de polímeros pueden tener consecuencias imprevistas "
+"en las etapas posteriores del tratamiento. Los grandes y fuertes flóculos "
+"son ideales para mejorar la remoción en los sedimentadores de placas o "
+"tubos. En los tanques de sedimentación con mantas de flóculos pueden formar "
+"lodos que son más difíciles de suspender después de una breve parada. En "
+"los filtros es posible que los grandes flóculos sean más rígidos y no "
+"entren en los espacios porosos del filtro. Por lo tanto, el uso de "
+"polímeros puede requerir el uso de medios de gran tamaño para la filtración "
+"en profundidad. Los polímeros también pueden formar bolas de lodo en los "
+"filtros granulares y por lo tanto requieren un lavado más agresivo."
+
+#: ../../Flocculation/Floc_Intro.rst:78
+#, fuzzy
+msgid "Shear Forces and Chemical Bonds"
+msgstr "Fuerzas de corte y enlaces químicos"
+
+#: ../../Flocculation/Floc_Intro.rst:79
+#, fuzzy
+msgid ""
+"The hydrodynamic force caused by a velocity gradient for two identically "
+"sized particles is given by `Goren, 1971 <https://doi."
+"org/10.1016/0021-9797(71)90244-X>`_"
+msgstr ""
+"La fuerza hidrodinámica causada por un gradiente de velocidad para dos "
+"partículas de idéntico tamaño viene dada por `Goren, 1971 <https://doi."
+"org/10.1016/0021-9797(71)90244-X>`_"
+
+#: ../../Flocculation/Floc_Intro.rst:86
+#, fuzzy
+msgid ""
+"where :math:`d_{floc}` is the diameter of each of the two flocs that have "
+"joined and :math:`G` is the uniform velocity gradient."
+msgstr ""
+"donde :matemáticas:`d_{floc}` es el diámetro de cada uno de los dos "
+"flóculos que se han unido y :matemáticas:`G` es el gradiente de velocidad "
+"uniforme."
+
+#: ../../Flocculation/Floc_Intro.rst:88
+#, fuzzy
+msgid ""
+"The chemical bonds formed by the polymers or the coagulant nanoparticles "
+"could be strong, intramolecular bonds such as covalent bonds in which "
+"valence electrons are shared, or a non-covalent bond that does not involve "
+"sharing electrons. Non-covalent bonds include hydrogen bonding, and Van der "
+"Waals forces."
+msgstr ""
+"Los enlaces químicos formados por los polímeros o las nanopartículas "
+"coagulantes podrían ser fuertes, enlaces intramoleculares como los enlaces "
+"covalentes en los que se comparten los electrones de valencia, o un enlace "
+"no covalente que no implique compartir electrones. Los enlaces no "
+"covalentes incluyen el enlace de hidrógeno, y las fuerzas de Van der Waals."
+
+#: ../../Flocculation/Floc_Intro.rst:90
+#, fuzzy
+msgid ""
+"The strength of a polymer chain with carbon-carbon bonds is of the order of "
+"1 to 10 nN (`Levinthal and Davison, 1961 <https://doi.org/10.1016/"
+"S0022-2836(61)80030-2>`_). Covalent bonds rupture at approximately 1600 pN, "
+"noncovalent bonds break at about 160 pN, and hydrogen bonds break at about "
+"4 pN (`Forces involved at the biological level <http://www.picotwist.com/"
+"index.php?content=smb&option=odg>`_)."
+msgstr ""
+"La resistencia de una cadena de polímeros con enlaces carbono-carbono es "
+"del orden de 1 a 10 nN (`Levinthal and Davison, 1961 <https://doi."
+"org/10.1016/S0022-2836(61)80030-2>`_). Los enlaces covalentes se rompen a "
+"aproximadamente 1600 pN, los enlaces no covalentes se rompen a "
+"aproximadamente 160 pN, y los enlaces de hidrógeno se rompen a "
+"aproximadamente 4 pN (`Fuerzas involucradas a nivel biológico <http://www."
+"picotwist.com/index.php?content=smb&option=odg>`_)."
+
+#: ../../Flocculation/Floc_Intro.rst:92
+#, fuzzy
+msgid ""
+"If we assume that the flocs are joined by 3 bonds to create a constrained "
+"connection then we can compare the fluid shear forces that are pulling "
+"flocs apart to the strength of potential bonds. The result of this force "
+"comparison is shown in :numref:`figure_Shear_force_and_bond_strength`."
+msgstr ""
+"Si asumimos que los flóculos están unidos por 3 enlaces para crear una "
+"conexión restringida, entonces podemos comparar las fuerzas de "
+"cizallamiento del fluido que están separando los flóculos con la fuerza de "
+"los enlaces potenciales. El resultado de esta comparación de fuerzas se "
+"muestra en :numref:`figure_Shear_force_and_bond_strength`."
+
+#: ../../Flocculation/Floc_Intro.rst:94
+#, fuzzy
+msgid ""
+"Given that flocs grow to be approximately 1 mm in a 100 Hz flocculator it "
+"suggests that the bonds holding the flocs together are either covalent "
+"bonds or noncovalent bonds that are stronger than hydrogen bonds. Van der "
+"Waals interactions are weaker than hydrogen bonds and thus Van der Waals "
+"interactions are not significant for flocculation when using coagulants."
+msgstr ""
+"Dado que los flóculos crecen hasta aproximadamente 1 mm en un floculador de "
+"100 Hz, esto sugiere que los enlaces que mantienen a los flóculos unidos "
+"son enlaces covalentes o no covalentes que son más fuertes que los enlaces "
+"de hidrógeno. Las interacciones de Van der Waals son más débiles que los "
+"enlaces de hidrógeno y, por lo tanto, las interacciones de Van der Waals no "
+"son significativas para la floculación cuando se utilizan coagulantes."
+
+#: ../../Flocculation/Floc_Intro.rst:103
+#, fuzzy
+msgid ""
+"Fluid forces at two uniform velocity gradients compared with the strength "
+"of 3 covalent, noncovalent, or hydrogen bonds. Floc growth in a shear "
+"environment is limited by the strength of the chemical bonds that can form "
+"as two particles collide."
+msgstr ""
+"Fuerzas de fluidos a dos gradientes de velocidad uniformes comparadas con "
+"la fuerza de 3 enlaces covalentes, no covalentes o de hidrógeno. El "
+"crecimiento del floc en un entorno de cizallamiento está limitado por la "
+"fuerza de los enlaces químicos que pueden formarse cuando dos partículas "
+"colisionan."
+
+#: ../../Flocculation/Floc_Intro.rst:105
+#, fuzzy
+msgid ""
+"Van der Waals forces have traditionally been viewed as the primary force "
+"responsible for holding flocs together after the repulsive electrostatic "
+"force was neutralized. The analysis of the forces shown above reveals that "
+"Van der Waals forces are too weak to allow the formation of large easily "
+"settled flocs in the shear environment of a flocculator. Instead "
+"flocculation is based on stronger noncovalent bonds or perhaps even "
+"covalent bonds."
+msgstr ""
+"Las fuerzas de Van der Waals han sido tradicionalmente consideradas como la "
+"fuerza primaria responsable de mantener unidos los flóculos después de que "
+"la fuerza electrostática repulsiva fuera neutralizada. El análisis de las "
+"fuerzas mostradas anteriormente revela que las fuerzas de Van der Waals son "
+"demasiado débiles para permitir la formación de grandes flóculos fácilmente "
+"asentados en el entorno de cizallamiento de un floculador. En su lugar, la "
+"floculación se basa en enlaces no covalentes más fuertes o tal vez incluso "
+"en enlaces covalentes."
+
+#: ../../Flocculation/Floc_Intro.rst:107
+#, fuzzy
+msgid ""
+"Hydrated oxides of polyvalent metals like Fe(III), Al(III), Ti(IV) and "
+"Zr(IV) exhibit ligand sorption properties by forming inner-sphere complexes "
+"(`Sarkar et al, 2007 <https://doi.org/10.1016/j."
+"reactfunctpolym.2007.07.047>`_). In inner-sphere complexes the coagulant "
+"nanoparticle forms covalent bonds with the molecules in the surface of the "
+"raw water particles. Inner sphere bonds are strong and stable. In contrast, "
+"outer sphere bonds include a molecule of water between the two surfaces and "
+"form a transient bond."
+msgstr ""
+"Los óxidos hidratados de metales polivalentes como el Fe(III), Al(III), "
+"Ti(IV) y Zr(IV) exhiben propiedades de absorción de ligandos al formar "
+"complejos en la esfera interna (`Sarkar et al, 2007 <https://doi."
+"org/10.1016/j.reactfunctpolym.2007.07.047>`_). En los complejos de la "
+"esfera interna, la nanopartícula coagulante forma enlaces covalentes con "
+"las moléculas de la superficie de las partículas de agua cruda. Los enlaces "
+"de la esfera interior son fuertes y estables. Por el contrario, los enlaces "
+"de la esfera externa incluyen una molécula de agua entre las dos "
+"superficies y forman un enlace transitorio."
+
+#: ../../Flocculation/Floc_Intro.rst:109
+#, fuzzy
+msgid ""
+"Given that 1) aluminum and iron coagulant nanoparticles form covalent bonds "
+"with arsenic 1) outer sphere complexes are transient 1) the shear forces "
+"acting on flocs suggest strong bonds we conclude that the coagulant "
+"nanoparticles likely form covalent bonds with inorganic particles present "
+"in raw water."
+msgstr ""
+"Dado que 1) las nanopartículas coagulantes de aluminio y hierro forman "
+"enlaces covalentes con los complejos de la esfera exterior de arsénico 1) "
+"los complejos de la esfera exterior son transitorios 1) las fuerzas de "
+"cizallamiento que actúan sobre los flóculos sugieren fuertes enlaces, "
+"concluimos que las nanopartículas coagulantes probablemente forman enlaces "
+"covalentes con las partículas inorgánicas presentes en el agua cruda."
+
+#: ../../Flocculation/Floc_Intro.rst:118
+#, fuzzy
+msgid "AguaClara Hydraulic Flocculation Model"
+msgstr "Modelo de Floculación Hidráulica AguaClara"
+
+#: ../../Flocculation/Floc_Intro.rst:120
+#, fuzzy
+msgid ""
+"The AguaClara hydraulic flocculation model was developed over 15 years of "
+"extensive laboratory and field research and is based on the physics of "
+"interactions between particles in the raw water, dissolved organic "
+"molecules, and coagulant nanoparticles in a shear flow. The AguaClara model "
+"is based on the physics of these interactions and is the first non-"
+"empirical flocculation model. The AguaClara Hydraulic Flocculation model is "
+"described in detail in :ref:`title_Flocculation_Model`."
+msgstr ""
+"El modelo de floculación hidráulica AguaClara fue desarrollado a lo largo "
+"de 15 años de extensas investigaciones de laboratorio y de campo y se basa "
+"en la física de las interacciones entre las partículas del agua cruda, las "
+"moléculas orgánicas disueltas y las nanopartículas coagulantes en un flujo "
+"de cizallamiento. El modelo AguaClara se basa en la física de estas "
+"interacciones y es el primer modelo de floculación no empírico. El modelo "
+"de floculación hidráulica AguaClara se describe en detalle en :ref:"
+"`title_Flocculation_Model`."
+
+#: ../../Flocculation/Floc_Intro.rst:123
+#, fuzzy
+msgid "Collisions in Shear Flow"
+msgstr "Colisiones en el flujo de cizallamiento"
+
+#: ../../Flocculation/Floc_Intro.rst:125
+#, fuzzy
+msgid ""
+"Given that hydraulic flocculators approach plug flow conditions it is "
+"reasonable to assume that at any given location in the flocculator there is "
+"a predominance of one size of flocs. Thus collisions between similar sized "
+"flocs are most likely because that is what is present. There is also a "
+"hydrodynamic reason why collisions between similar sized flocs are favored."
+msgstr ""
+"Dado que los floculadores hidráulicos se acercan a las condiciones de flujo "
+"de tapón, es razonable suponer que en cualquier lugar determinado del "
+"floculador predomina un tamaño de flóculos. Por lo tanto, las colisiones "
+"entre flóculos de tamaño similar son más probables porque eso es lo que "
+"está presente. También hay una razón hidrodinámica por la que se favorecen "
+"las colisiones entre flóculos de tamaño similar."
+
+#: ../../Flocculation/Floc_Intro.rst:127
+#, fuzzy
+msgid ""
+"In a shear flow the particles rotate and a boundary layer is created all "
+"around the rotating particles. The boundary layer prevents collisions "
+"between different sized particles (see :numref:"
+"`figure_No_Dissimilar_Collisions_in_Shear`) because the smaller of the two "
+"particles is unable to extend through the boundary layer of the larger "
+"particle. Only particles that are large enough to extend through each "
+"other's boundary layers can collide (see :numref:"
+"`figure_Similar_Size_Collisions_in_Shear`). Thus the particles must be "
+"similar in size because the boundary layer also scales with the diameter of "
+"the particle."
+msgstr ""
+"En un flujo de cizallamiento las partículas rotan y se crea una capa límite "
+"alrededor de las partículas en rotación. La capa límite evita las "
+"colisiones entre partículas de diferente tamaño (ver :numref:"
+"`figure_No_Dissimilar_Collisions_in_Shear`) porque la más pequeña de las "
+"dos partículas es incapaz de extenderse a través de la capa límite de la "
+"partícula más grande. Sólo las partículas que son lo suficientemente "
+"grandes como para extenderse a través de las capas límite de cada una "
+"pueden colisionar (ver :numref:`figure_Similar_Size_Collisions_in_Shear`). "
+"Por lo tanto, las partículas deben ser similares en tamaño porque la capa "
+"límite también se escala con el diámetro de la partícula."
+
+#: ../../Flocculation/Floc_Intro.rst:138
+#, fuzzy
+msgid ""
+"Particles that are very different in size don't even get close enough to "
+"make contact because of the boundary layer around the larger particle. This "
+"is because the thickness of the boundary layer also scales with the "
+"diameter of the particle."
+msgstr ""
+"Las partículas que son muy diferentes en tamaño ni siquiera se acercan lo "
+"suficiente para hacer contacto debido a la capa límite alrededor de la "
+"partícula más grande. Esto se debe a que el grosor de la capa límite "
+"también se escala con el diámetro de la partícula."
+
+#: ../../Flocculation/Floc_Intro.rst:140
+#, fuzzy
+msgid ""
+"Collisions between similar sized particles are possible because the "
+"particles are able to extend through the boundary layers."
+msgstr ""
+"Las colisiones entre partículas de tamaño similar son posibles porque las "
+"partículas son capaces de extenderse a través de las capas límite."
+
+#: ../../Flocculation/Floc_Intro.rst:150
+#, fuzzy
+msgid ""
+"In a shear flow the particles rotate and a boundary layer is created all "
+"around the rotating particle. Similar sized particles are able to extend "
+"through the boundary layers and make contact."
+msgstr ""
+"En un flujo de cizallamiento las partículas rotan y se crea una capa límite "
+"alrededor de la partícula en rotación. Las partículas de tamaño similar son "
+"capaces de extenderse a través de las capas límite y hacer contacto."
+
+#: ../../Flocculation/Floc_Intro.rst:152
+#, fuzzy
+msgid ""
+"The rotating boundary layers in a shear flow limit collisions to similar "
+"sized particles. Given that flocculation is an environment specifically "
+"designed to create fluid shear it is reasonable to assume that only "
+"collisions between similar sized particles are able to occur. This "
+"simplifies the Smoluchowski equation tremendously."
+msgstr ""
+"Las capas límite rotatorias en un flujo de cizallamiento limitan las "
+"colisiones con partículas de tamaño similar. Dado que la floculación es un "
+"entorno específicamente diseñado para crear cizallamiento de fluidos, es "
+"razonable suponer que sólo pueden producirse colisiones entre partículas de "
+"tamaño similar. Esto simplifica enormemente la ecuación de Smoluchowski."
+
+#: ../../Flocculation/Floc_Intro.rst:155
+#, fuzzy
+msgid "Number of particles in a floc"
+msgstr "El número de partículas en un flóculo"
+
+#: ../../Flocculation/Floc_Intro.rst:157
+#, fuzzy
+msgid ""
+"For simplicity of modeling let's assume that flocs repeatedly double in "
+"size as suggested by the movie in :numref:`figure_Collisions_in_Sequence`. "
+"In that case, the number of primary particles in a floc is given by"
+msgstr ""
+"Para simplificar el modelado, asumamos que los flóculos se duplican "
+"repetidamente en tamaño, como sugiere la película en :numref:"
+"`figure_Collisions_in_Sequence`. En ese caso, el número de partículas "
+"primarias en un flóculo viene dado por"
+
+#: ../../Flocculation/Floc_Intro.rst:164
+#, fuzzy
+msgid ""
+"If we assume (and we will show this assumption to be wrong in the next "
+"step) that the floc volume is directly proportional to the total volume of "
+"the primary particles in the floc, then we can rearrange :eq:"
+"`eq_n_primary_of_n_collisions` to solve for the number of sequential "
+"collisions required to increase the number of primary particles by a factor "
+"of 1000,000,000."
+msgstr ""
+"Si asumimos (y demostraremos que esta suposición es errónea en el siguiente "
+"paso) que el volumen del flóculo es directamente proporcional al volumen "
+"total de las partículas primarias del flóculo, entonces podemos reordenar :"
+"eq:`eq_n_primario_de_n_colisiones` para resolver el número de colisiones "
+"secuenciales necesarias para aumentar el número de partículas primarias en "
+"un factor de 1000.000.000."
+
+#: ../../Flocculation/Floc_Intro.rst:179
+#, fuzzy
+msgid ""
+"30 sequential collisions would be required to produce a floc that contains "
+"1 billion primary particles."
+msgstr ""
+"Se necesitarían 30 colisiones secuenciales para producir un flóculo que "
+"contenga mil millones de partículas primarias."
+
+#: ../../Flocculation/Floc_Intro.rst:182
+#, fuzzy
+msgid "Flocs are Fractals"
+msgstr "Los flóculos son fractales"
+
+#: ../../Flocculation/Floc_Intro.rst:184
+#, fuzzy
+msgid ""
+"As flocs combine they don't coalesce like mist turning into rain drops. "
+"Instead they form loose aggregates that contain a higher and higher "
+"fraction of water in the voids between the solid primary particles."
+msgstr ""
+"Al combinarse los flóculos no se unen como la niebla que se convierte en "
+"gotas de lluvia. En su lugar, forman agregados sueltos que contienen una "
+"fracción cada vez mayor de agua en los vacíos entre las partículas "
+"primarias sólidas."
+
+#: ../../Flocculation/Floc_Intro.rst:186
+#, fuzzy
+msgid ""
+"Although the obvious flocculation advantage is that it produces larger "
+"aggregates that are easier to remove, it is also **possible** (this is a "
+"hypothesis that needs testing) that a difference in a physical property "
+"between primary particles and flocs plays a role in enhanced removal of "
+"flocs in floc blankets and filters. For example, the many relatively weak "
+"connection points between the primary particles in the flocs enables the "
+"flocs to deform. It is possible that deformation plays an important role "
+"right at the moment of collision. Presumably the bond strength required to "
+"lock the colliding particles together is less if the particles can deform "
+"as they are colliding."
+msgstr ""
+"Aunque la ventaja obvia de la floculación es que produce agregados más "
+"grandes que son más fáciles de remover, también es **posible** (esta es una "
+"hipótesis que necesita ser probada) que una diferencia en una propiedad "
+"física entre las partículas primarias y los flóculos juegue un papel en la "
+"mejora de la remoción de los flóculos en las mantas y filtros de flóculos. "
+"Por ejemplo, los numerosos puntos de conexión relativamente débiles entre "
+"las partículas primarias de los flóculos permiten que éstos se deformen. Es "
+"posible que la deformación desempeñe un papel importante justo en el "
+"momento de la colisión. Presumiblemente, la fuerza de adhesión necesaria "
+"para unir las partículas que colisionan es menor si las partículas pueden "
+"deformarse al colisionar."
+
+#: ../../Flocculation/Floc_Intro.rst:188
+#, fuzzy
+msgid ""
+"The size change produced by flocculation is dramatic. Clay particles and "
+"pathogens have sizes that are order :math:`\\mu m` and they combine to form "
+"flocs that are order :math:`mm`. A thousand fold increase in diameter "
+"suggests a billion fold increase in volume."
+msgstr ""
+"El cambio de tamaño producido por la floculación es dramático. Las "
+"partículas de arcilla y los patógenos tienen tamaños que son ordenados: "
+"\"matemáticas\", y se combinan para formar flóculos que son ordenados: "
+"\"matemáticas\". Un aumento de mil veces en el diámetro sugiere un aumento "
+"de mil millones de veces en el volumen."
+
+#: ../../Flocculation/Floc_Intro.rst:200
+#, fuzzy
+msgid ""
+"The amount of water contained within a volume defined by the floc increases "
+"as the flocs grows."
+msgstr ""
+"La cantidad de agua contenida dentro de un volumen definido por el flóculo "
+"aumenta a medida que los flóculos crecen."
+
+#: ../../Flocculation/Floc_Intro.rst:203
+#, fuzzy
+msgid "Flocculation is (or used to be) a Slow Process"
+msgstr "La floculación es (o solía ser) un proceso lento"
+
+#: ../../Flocculation/Floc_Intro.rst:205
+#, fuzzy
+msgid ""
+"One of the mysteries of flocculation has been why it is such a slow "
+"process, requiring 30 minutes according to conventional design, and yet it "
+"appears to be a very rapid process. Plant operators observe that with high "
+"raw water turbidities that they can see flocculation progressing after "
+"about 0.5 minutes of flocculation. We can estimate the collision "
+"potential, :math:`G\\theta` that corresponds to making visible flocs."
+msgstr ""
+"Uno de los misterios de la floculación ha sido por qué es un proceso tan "
+"lento, que requiere 30 minutos según el diseño convencional, y sin embargo "
+"parece ser un proceso muy rápido. Los operadores de plantas observan que "
+"con altas turbulencias de agua cruda pueden ver que la floculación progresa "
+"después de unos 0,5 minutos de floculación. Podemos estimar el potencial de "
+"colisión, :matemáticas:`G\\theta` que corresponde a hacer visibles los "
+"flóculos."
+
+#: ../../Flocculation/Floc_Intro.rst:225
+#, fuzzy
+msgid ""
+"Here initial flocculation is visible at a :math:`G\\theta` of less than "
+"3000. Given that flocculation is visible at this low collision potential, "
+"it is unclear why recommended :math:`G\\theta` are as high as 100,000. This "
+"is one of the great mysteries that motivated the search for a flocculation "
+"model that is based on physics and consistent with laboratory and field "
+"observations."
+msgstr ""
+"Aquí la floculación inicial es visible en una :matemática:`G\\theta` de "
+"menos de 3000. Dado que la floculación es visible a este bajo potencial de "
+"colisión, no está claro por qué las matemáticas recomendadas para Gtheta "
+"son tan altas como 100.000. Este es uno de los grandes misterios que "
+"motivaron la búsqueda de un modelo de floculación basado en la física y "
+"consistente con las observaciones de laboratorio y de campo."
+
+#: ../../Flocculation/Floc_Intro.rst:229
+#, fuzzy
+msgid "AguaClara Flocculation History"
+msgstr "Historia de la floculación de AguaClara"
+
+#: ../../Flocculation/Floc_Intro.rst:231
+#, fuzzy
+msgid ""
+"2005 - We used conventional guidelines based on velocity gradient to design "
+"the first low flow vertical flocculator"
+msgstr ""
+"2005 - Utilizamos las directrices convencionales basadas en el gradiente de "
+"velocidad para diseñar el primer floculador vertical de bajo flujo"
+
+#: ../../Flocculation/Floc_Intro.rst:233
+#, fuzzy
+msgid ""
+"2010 - We designed using energy dissipation rate and accounted for the "
+"nonuniformity of the energy dissipation rate (:math:`\\theta` = 15 minutes)"
+msgstr ""
+"2010 - Diseñamos usando la tasa de disipación de energía y tuvimos en "
+"cuenta la falta de uniformidad de la tasa de disipación de energía (:math:`"
+"\\theta` = 15 minutos)"
+
+#: ../../Flocculation/Floc_Intro.rst:235
+#, fuzzy
+msgid ""
+"2015 – We added obstacles to decrease the distance between expansions to "
+"make all of our flocculators have maximum collision efficiency (:math:`"
+"\\theta` = 8 minutes)"
+msgstr ""
+"2015 - Añadimos obstáculos para disminuir la distancia entre expansiones "
+"para que todos nuestros floculadores tengan la máxima eficiencia en las "
+"colisiones (:matemáticas:`\\theta` = 8 minutos)"
+
+#: ../../Flocculation/Floc_Intro.rst:237
+#, fuzzy
+msgid ""
+"2016 – Learned that particle/floc collisions are dominated by viscous shear "
+"(not by turbulent eddies). Began designing flocculators based on a target "
+"head loss of 40 cm. Used a :math:`G\\theta` of 37,000."
+msgstr ""
+"2016 - Aprendí que las colisiones entre partículas y bloques están "
+"dominadas por la cizalla viscosa (no por los remolinos turbulentos). "
+"Comenzó a diseñar floculadores basados en una pérdida de cabeza del "
+"objetivo de 40 cm. Utilizó una :matemática:`G\\theta` de 37.000."
+
+#: ../../Flocculation/Floc_Intro.rst:239
+#, fuzzy
+msgid ""
+"2017 - Designed a pipe flocculator for the 1 L/s plant with a :math:`G"
+"\\theta` of 20,000 and a residence time of about 100 s."
+msgstr ""
+"2017 - Diseñó un floculador de tubería para la planta de 1 L/s con una :"
+"matemática:`G\\theta` de 20.000 y un tiempo de residencia de unos 100 s."
+
+#: ../../Flocculation/Floc_Intro.rst:242 ../../Flocculation/Floc_Intro.rst:245
+#, fuzzy
+msgid "Conventional vs AguaClara flocculation"
+msgstr "Floculación convencional vs. AguaClara"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+msgid "Characteristic"
+msgstr "Característica"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "Conventional - Mechanical"
+msgstr "Convencional - Mecánica"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "AguaClara - Hydraulic"
+msgstr "AguaClara - Hidráulica"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+msgid "Goal"
+msgstr "Objetivo"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "produce large flocs to be captured by sedimentation"
+msgstr "producen grandes flóculos para ser capturados por la sedimentación"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "reduce the concentration of primary particles"
+msgstr "reducir la concentración de partículas primarias"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "Residence time (min)"
+msgstr "Tiempo de residencia (min)"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+msgid "30"
+msgstr "30"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "2 to 7.5"
+msgstr "2 a 7,5"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "Velocity gradient (Hz)"
+msgstr "Gradiente de velocidad (Hz)"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "20 - 180"
+msgstr "20 - 180"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+msgid "100+"
+msgstr "100+"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid ":math:`G\\theta`"
+msgstr ":matemáticas:`G\\theta`"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "50,000 - 250,000"
+msgstr "50,000 - 250,000"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "20,000 - 37,000"
+msgstr "20,000 - 37,000"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "Velocity gradient variability"
+msgstr "Variabilidad del gradiente de velocidad"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "approximately 8"
+msgstr "aproximadamente 8"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "approximately 1.4"
+msgstr "aproximadamente 1,4"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "reactor type"
+msgstr "tipo de reactor"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "approaching completely mixed"
+msgstr "se aproxima completamente mezclado"
+
+#: ../../Flocculation/Floc_Intro.rst:1
+#, fuzzy
+msgid "approaching plug flow"
+msgstr "acercándose al flujo de tapón"
+
+#: ../../Flocculation/Floc_Intro.rst:260
+#, fuzzy
+msgid ""
+"#references `Coagulation and Flocculation in Water and Wastewater Treatment "
+"<https://www.iwapublishing.com/news/coagulation-and-flocculation-water-and-"
+"wastewater-treatment>`__, iwapublishing"
+msgstr ""
+"#Referencias: \"Coagulación y Floculación en el Tratamiento de Aguas y "
+"Aguas Residuales\", https://www.iwapublishing.com/news/coagulation-and-"
+"flocculation-water-and-wastewater-treatment, iwapublishing"
