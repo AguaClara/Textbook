@@ -791,8 +791,8 @@ msgstr ""
 
 #: ../../Filtration/Filtration_Theory_and_Future_Work.rst:587
 msgid ""
-"Where :math:`D_{fractal}` is the volume based fractal dimension of a "
-"floc. We estimate :math:`D_{fractal}` to have a value of 2.3. We can "
+"Where :math:`\Pi_{fractal}` is the volume based fractal dimension of a "
+"floc. We estimate :math:`\Pi_{fractal}` to have a value of 2.3. We can "
 "rearrange this equation and solve for the number of clay particles in a "
 "floc."
 msgstr ""

@@ -747,7 +747,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:472
 msgid ""
 "The minimum spacing increases as the size of the primary particle, "
-":math:`D_0`, decreases. This is an important insight because flocs that "
+":math:`D_{cp}`, decreases. This is an important insight because flocs that "
 "are made of coagulant nanoparticles (no clay) are the most difficult "
 "flocs to capture. Flocs made of coagulant nanoparticles are less dense "
 "than flocs made of clay. Coagulant nanoparticle flocs are produced when "

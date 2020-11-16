@@ -426,11 +426,11 @@ msgid ""
 msgstr ""
 
 #: ../../Sedimentation/Sed_Intro.rst:160
-msgid ":math:`D_0 =` diameter of clay"
+msgid ":math:`D_{cp} =` diameter of clay"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Intro.rst:161
-msgid ":math:`D_{fractal} =` fractal dimension"
+msgid ":math:`\Pi_{fractal} =` fractal dimension"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Intro.rst:162

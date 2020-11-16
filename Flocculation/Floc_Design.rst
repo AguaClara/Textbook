@@ -217,7 +217,7 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
 
 .. math::
 
-  \frac{x}{10} = D - D_0
+  \frac{x}{10} = D - D_{cp}
 
 .. _figure_jet_expansion_flocculator:
 
@@ -228,7 +228,7 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
 
    A turbulent jet expands in width by one unit for every 10 units downstream.
 
-Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing :math:`S`. We do this by substituting  :math:`D_0 = (0.384 S)` along with :math:`D = S` to approximate how much distance, :math:`x = H_e`, the contracted flow has to cover.
+Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing :math:`S`. We do this by substituting  :math:`D_{cp} = (0.384 S)` along with :math:`D = S` to approximate how much distance, :math:`x = H_e`, the contracted flow has to cover.
 
 .. math::
 

@@ -52,7 +52,7 @@ $${\rm Re} = \frac{V_t d}{\nu}$$
 
 
 ### Floc Terminal Velocity
-$$V_t = \frac{g d_0^2}{18 \Phi \nu_{H_2O}} \frac{\rho_{Floc_0} - \rho_{H_2O}} {\rho_{H_2O}} \left( \frac{d}{d_0} \right)^{D_{Fractal} - 1}$$
+$$V_t = \frac{g D_{cp}^2}{18 \Phi \nu_{H_2O}} \frac{\rho_{Floc_0} - \rho_{H_2O}} {\rho_{H_2O}} \left( \frac{d}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
 
 
 ### Horizontal Flow Sedimentation Tank
@@ -292,39 +292,39 @@ u = \frac{3}{2 h^2} V_\alpha \left( y^2 - h^2 \right)
 u ( d_{Floc} ) \approx \frac{6 d_{Floc}}{S} V_\alpha
 \end{array}$$
 
-$$\frac{3 d_{Floc}}{S} \frac{V_{Plate \uparrow}}{\sin \alpha} = \frac{g \sin (\alpha ) d_0^2}{18 \Phi \nu_{H_2O}} \frac{\rho_{Floc_0} - \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{d}{d_0} \right)^{D_{Fractal} - 1}$$
+$$\frac{3 d_{Floc}}{S} \frac{V_{Plate \uparrow}}{\sin \alpha} = \frac{g \sin (\alpha ) D_{cp}^2}{18 \Phi \nu_{H_2O}} \frac{\rho_{Floc_0} - \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{d}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
 
-$$V_{Plate \uparrow} = \frac{S g \sin^2(\alpha) d_0^{3 - D_{Fractal}} d^{D_{Fractal} - 2}}{54 \Phi \nu_{H_2O}}
+$$V_{Plate \uparrow} = \frac{S g \sin^2(\alpha) D_{cp}^{3 - \Pi_{fractal}} d^{\Pi_{fractal} - 2}}{54 \Phi \nu_{H_2O}}
 \frac{\rho_{Floc_0} - \rho_{H_2O}} {\rho_{H_2O}}$$
 
-$$S = V_{Plate \uparrow} \frac{54 \Phi \nu_{H_2O}}{g \sin^2(\alpha) d_0^{3 - D_{Fractal}} d^{D_{Fractal} - 2}}
+$$S = V_{Plate \uparrow} \frac{54 \Phi \nu_{H_2O}}{g \sin^2(\alpha) D_{cp}^{3 - \Pi_{fractal}} d^{\Pi_{fractal} - 2}}
 \frac{\rho_{H_2O}}{\rho_{Floc_0} - \rho_{H_2O}}$$
 
 
 ### Spacing as a function of floc terminal velocity
 $$S \approx \frac{3 V_{Plate \uparrow} d}{V_t \sin^2 \alpha}$$
 
-$$d = d_0 \left( \frac{18 V_t \Phi \nu_{H_2O}}{g d_0^2} \frac{\rho_{H_2O}}{\rho_{Floc_0} - \rho_{H_2O}} \right)^\frac{1}{D_{Fractal} - 1}$$
+$$d = D_{cp} \left( \frac{18 V_t \Phi \nu_{H_2O}}{g D_{cp}^2} \frac{\rho_{H_2O}}{\rho_{Floc_0} - \rho_{H_2O}} \right)^\frac{1}{\Pi_{fractal} - 1}$$
 
-$$S \approx \frac{3}{\sin^2 \alpha} \frac{V_{Plate \uparrow }}{V_t} d_0
-\left( \frac{18 V_t \Phi \nu_{H_2O}}{g d_0^2} \frac{\rho_{H_2O}}{\rho_{Floc_0} - \rho_{H_2O}}
-\right)^{\frac{1}{D_{Fractal} - 1}}$$
+$$S \approx \frac{3}{\sin^2 \alpha} \frac{V_{Plate \uparrow }}{V_t} D_{cp}
+\left( \frac{18 V_t \Phi \nu_{H_2O}}{g D_{cp}^2} \frac{\rho_{H_2O}}{\rho_{Floc_0} - \rho_{H_2O}}
+\right)^{\frac{1}{\Pi_{fractal} - 1}}$$
 
 
 ### Minimum plate settler spacing (function of $V_t$)
 **Off-slide**
-$$\frac{S}{d_0} \frac{V_t}{V_{Plate \uparrow}} \approx \frac{3}{\sin^2 \alpha}{\left( \frac{18 V_t \Phi \nu_{H_2O}}{g d_0^2} \frac{\rho_{H_2O}}{\rho_{Floc_0} - \rho_{H_2O}} \right)^\frac{1}{D_{Fractal} - 1}}$$
+$$\frac{S}{D_{cp}} \frac{V_t}{V_{Plate \uparrow}} \approx \frac{3}{\sin^2 \alpha}{\left( \frac{18 V_t \Phi \nu_{H_2O}}{g D_{cp}^2} \frac{\rho_{H_2O}}{\rho_{Floc_0} - \rho_{H_2O}} \right)^\frac{1}{\Pi_{fractal} - 1}}$$
 
 
 ### Slide Capture Velocity
 $$V_{Slide} \approx V_{Plate \uparrow}
 \left[
-  \left( \frac{3 d_0}{S \sin^2 \alpha} \right)^{D_{Fractal} - 1}
+  \left( \frac{3 D_{cp}}{S \sin^2 \alpha} \right)^{\Pi_{fractal} - 1}
   \left(
-    \frac{18 \Phi V_{Plate \uparrow } \nu_{H_2O}}{g d_0^2}
+    \frac{18 \Phi V_{Plate \uparrow } \nu_{H_2O}}{g D_{cp}^2}
     \frac{\rho_{H_2O}}{\rho_{Floc_0} - \rho_{H_2O}}
   \right)
-\right]^\frac{1}{D_{Fractal} - 2}$$
+\right]^\frac{1}{\Pi_{fractal} - 2}$$
 
 
 ### Pressure drop (from head loss) through plate settlers
