@@ -72,45 +72,9 @@ Synthetic polymers often made with repeating units of acrylic acid and its deriv
 
 The shortest synthetic polymers are similar in size to the coagulant nanoparticles and the longest synthetic polymers are similar in length to bacteria. These polymers could create additional connections between primary particles and coagulant nanoparticles or they could connect primary particles. In either case the polymers can add connections (more bonds!) that likely have some elasticity and thus there can be more than 3 bonds connecting two particles.
 
-Polymers undoubtedly increase the connections that bind flocs together and thus enable flocs to grow larger. The stronger flocs created by polymer addition may have unintended consequences in subsequent treatment steps. Large strong flocs are great for improved removal in plate or tube settlers. In sedimentation tanks with floc blankets they may form sludge that is more difficult to suspend after a brief shutdown. In filters it is possible that large flocs are more rigid and fail to enter the pore spaces of the filter. Thus the use of polymers may require using large media size for depth filtration. The polymers may also form mudballs in granular filters and thus require more aggressive washing. 
+Polymers undoubtedly increase the connections that bind flocs together and thus enable flocs to grow larger. The stronger flocs created by polymer addition may have unintended consequences in subsequent treatment steps. Large strong flocs are great for improved removal in plate or tube settlers. In sedimentation tanks with floc blankets they may form sludge that is more difficult to suspend after a brief shutdown. In filters it is possible that large flocs are more rigid and fail to enter the pore spaces of the filter. Thus the use of polymers may require using large media size for depth filtration. The polymers may also form mudballs in granular filters and thus require more aggressive washing.
 
-Shear Forces and Chemical Bonds
-===============================
-The hydrodynamic force caused by a velocity gradient for two identically sized particles is given by `Goren, 1971 <https://doi.org/10.1016/0021-9797(71)90244-X>`_
 
-.. math::
-   :label: shear_force_on_doublet
-
-    F_{shear_{max}} = \frac{3 \pi}{4} \mu d_{floc}^2 G
-
-where :math:`d_{floc}` is the diameter of each of the two flocs that have joined and :math:`G` is the uniform velocity gradient.
-
-The chemical bonds formed by the polymers or the coagulant nanoparticles could be strong, intramolecular bonds such as covalent bonds in which valence electrons are shared, or a non-covalent bond that does not involve sharing electrons. Non-covalent bonds include hydrogen bonding, and Van der Waals forces.
-
-The strength of a polymer chain with carbon-carbon bonds is of the order of 1 to 10 nN (`Levinthal and Davison, 1961 <https://doi.org/10.1016/S0022-2836(61)80030-2>`_). Covalent bonds rupture at approximately 1600 pN, noncovalent bonds break at about 160 pN, and hydrogen bonds break at about 4 pN (`Forces involved at the biological level <http://www.picotwist.com/index.php?content=smb&option=odg>`_).
-
-If we assume that the flocs are joined by 3 bonds to create a constrained connection then we can compare the fluid shear forces that are pulling flocs apart to the strength of potential bonds. The result of this force comparison is shown in :numref:`figure_Shear_force_and_bond_strength`.
-
-Given that flocs grow to be approximately 1 mm in a 100 Hz flocculator it suggests that the bonds holding the flocs together are either covalent bonds or noncovalent bonds that are stronger than hydrogen bonds. Van der Waals interactions are weaker than hydrogen bonds and thus Van der Waals interactions are not significant for flocculation when using coagulants.
-
-.. _figure_Shear_force_and_bond_strength:
-
-.. figure:: Images/Shear_force_and_bond_strength.png
-    :width: 300px
-    :align: center
-    :alt: internal figure
-
-    Fluid forces at two uniform velocity gradients compared with the strength of 3 covalent, noncovalent, or hydrogen bonds. Floc growth in a shear environment is limited by the strength of the chemical bonds that can form as two particles collide.
-
-Van der Waals forces have traditionally been viewed as the primary force responsible for holding flocs together after the repulsive electrostatic force was neutralized. The analysis of the forces shown above reveals that Van der Waals forces are too weak to allow the formation of large easily settled flocs in the shear environment of a flocculator. Instead flocculation is based on stronger noncovalent bonds or perhaps even covalent bonds.
-
-Hydrated oxides of polyvalent metals like Fe(III), Al(III), Ti(IV) and Zr(IV) exhibit ligand sorption properties by forming inner-sphere complexes (`Sarkar et al, 2007 <https://doi.org/10.1016/j.reactfunctpolym.2007.07.047>`_). In inner-sphere complexes the coagulant nanoparticle forms covalent bonds with the molecules in the surface of the raw water particles. Inner sphere bonds are strong and stable. In contrast, outer sphere bonds include a molecule of water between the two surfaces and form a transient bond.
-
-Given that
-1) aluminum and iron coagulant nanoparticles form covalent bonds with arsenic
-1) outer sphere complexes are transient
-1) the shear forces acting on flocs suggest strong bonds
-we conclude that the coagulant nanoparticles likely form covalent bonds with inorganic particles present in raw water.
 
 
 
