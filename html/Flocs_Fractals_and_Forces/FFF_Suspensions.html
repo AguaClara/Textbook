@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Fluidized Suspensions &mdash; AguaClara Textbook  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Water Treatment Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Chemistry of Water Treatment Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Hydraulics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html">Hydraulics Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 13: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 14: Wastewater</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WasteWater/WW_Theory_and_Future_Work.html">WasteWater Theory and Future Work</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 15: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Fluidized Suspensions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Flocs_Fractals_and_Forces/FFF_Suspensions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fluidized-suspensions">
+<span id="title-fluidized-suspensions"></span><h1>Fluidized Suspensions<a class="headerlink" href="#fluidized-suspensions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="suspension-density">
+<h2>Suspension Density<a class="headerlink" href="#suspension-density" title="Permalink to this headline">¶</a></h2>
+<p>Suspension densities will be of interest both in understanding the physics of flocnets fluidized sand beds. The density of a suspension of particles is equal to the mass of the particles and water divided by the suspension volume. In the case of flocs we can track the concentration of the core particles in the suspension and ignore the diameter of the flocs when calculating the suspension density.</p>
+<div class="math notranslate nohighlight" id="equation-density-suspension-1">
+<span class="eqno">()<a class="headerlink" href="#equation-density-suspension-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\rho_{suspension}
+= \frac{M_{H_2O} + M_{particles}}{\rlap{--} V_{suspension}}\\=\frac{M_{H_2O} }{\rlap{--} V_{suspension}} + C_{particles}\end{aligned}\end{align} \]</div>
+<p>The mass of water in a suspension, <span class="math notranslate nohighlight">\(M_{H_2O}\)</span>, must take into account the fraction of the suspension volume occupied by the particles.</p>
+<div class="math notranslate nohighlight" id="equation-water-mass-in-suspension">
+<span class="eqno">()<a class="headerlink" href="#equation-water-mass-in-suspension" title="Permalink to this equation">¶</a></span>\[\frac{M_{H_2O}}{\rlap{--} V_{suspension} } =
+\rho_{H_2O} \left( 1 - \frac{C_{particles}}{\rho_{particles}} \right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\frac{C_{particles}}{\rho_{particles}}\)</span> is the fraction of the suspension volume occupied by the particles. Substituting equation <a class="reference internal" href="#equation-water-mass-in-suspension">()</a> into equation <a class="reference internal" href="#equation-density-suspension-1">()</a> we obtain the density of the suspension.</p>
+<div class="math notranslate nohighlight" id="equation-density-suspension-2">
+<span class="eqno">()<a class="headerlink" href="#equation-density-suspension-2" title="Permalink to this equation">¶</a></span>\[\rho_{suspension} =
+\rho_{H_2O} \left( 1 - \frac{C_{particles}}{\rho_{particles}} \right) + C_{particles}\]</div>
+<p>Equation <a class="reference internal" href="#equation-density-suspension-2">()</a> can be rewritten in terms of the buoyant density to obtain</p>
+<div class="math notranslate nohighlight" id="equation-buoyant-density-suspension">
+<span class="eqno">()<a class="headerlink" href="#equation-buoyant-density-suspension" title="Permalink to this equation">¶</a></span>\[\rho_{suspension} - \rho_{H_2O} =
+  C_{particles}\left(1 - \frac{\rho_{H_2O}}{\rho_{particles}}\right)\]</div>
+</div>
+<div class="section" id="fluidized-bed-porosity">
+<h2>Fluidized Bed Porosity<a class="headerlink" href="#fluidized-bed-porosity" title="Permalink to this headline">¶</a></h2>
+<p>AguaClara plants have two fluidized beds. The first is the flocnet that forms in the bottom of the clarifiers and the second is the sand in the filters during backwash. The equations describing fluidized beds require multiple steps in the calculations and are easily handled in Python. The following equations are available in a <a class="reference external" href="https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb">Colab worksheet</a>.</p>
+<p>The hydraulic diameter is needed to account for wall effects for small reactors.</p>
+<div class="math notranslate nohighlight" id="equation-hydraulic-diameter">
+<span class="eqno">()<a class="headerlink" href="#equation-hydraulic-diameter" title="Permalink to this equation">¶</a></span>\[D_{H}={\frac {4A}{P}}\]</div>
+<div class="line-block">
+<div class="line">where</div>
+<div class="line"><span class="math notranslate nohighlight">\(D_{H}\)</span> is the hydraulic diameter</div>
+<div class="line"><span class="math notranslate nohighlight">\(A\)</span> is the plan view area</div>
+<div class="line"><span class="math notranslate nohighlight">\(P\)</span> is the wetted perimeter</div>
+</div>
+<p>For reactors with dimensions that are not much larger than the dimensions of the flocs it is necessary to correct for wall effects. This correction will be important for laboratory scale and some pilot scale reactors. The terminal velocity of a particle corrected for wall effects is</p>
+<div class="math notranslate nohighlight" id="equation-v-t-wall">
+<span class="eqno">()<a class="headerlink" href="#equation-v-t-wall" title="Permalink to this equation">¶</a></span>\[v_{t_w} = \frac{v_t}{10^{\frac{D_{particle}}{D_H}}}\]</div>
+<div class="line-block">
+<div class="line">where</div>
+<div class="line"><span class="math notranslate nohighlight">\(v_t\)</span> terminal velocity in an infinite fluid obtained from equation <a class="reference internal" href="FFF_Intro.html#equation-v-t-general">()</a></div>
+</div>
+<p>The Reynolds number <span class="math notranslate nohighlight">\(Re_t\)</span> is based on the terminal velocity of the particle.</p>
+<div class="math notranslate nohighlight" id="equation-re-terminal">
+<span class="eqno">()<a class="headerlink" href="#equation-re-terminal" title="Permalink to this equation">¶</a></span>\[Re_t = \frac{v_t D__{particle}}{\nu}\]</div>
+<p>The fluidization index, z, is a function of the Reynolds number at the terminal velocity.</p>
+<div class="math notranslate nohighlight" id="equation-fluidization-index">
+<span class="eqno">()<a class="headerlink" href="#equation-fluidization-index" title="Permalink to this equation">¶</a></span>\[z=\frac{0.65\left(2+0.5 Re_t^{0.65}\right)}{\left(1+0.5 Re_t^{0.65}\right)}\]</div>
+<p>The following equation is used to find the porosity of a fluidized bed.</p>
+<div class="math notranslate nohighlight" id="equation-flocs-fractals-and-forces-fff-suspensions-0">
+<span class="eqno">()<a class="headerlink" href="#equation-flocs-fractals-and-forces-fff-suspensions-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: fluidized_bed_porosity\\\phi=\left(\frac{\bar v_z}{v_{t_w}}\right)^{1 / z}\left(1-\phi_{\mathrm{SB}}\right)+\phi_{\mathrm{SB}}\end{aligned}\end{align} \]</div>
+<div class="line-block">
+<div class="line">where</div>
+<div class="line"><span class="math notranslate nohighlight">\(v_{t_w}\)</span> particle terminal velocity corrected for wall effect</div>
+<div class="line"><span class="math notranslate nohighlight">\(\bar v_z\)</span> superficial liquid velocity (our upflow velocity)</div>
+<div class="line"><span class="math notranslate nohighlight">\(z\)</span> is the fluidization index</div>
+<div class="line"><span class="math notranslate nohighlight">\(\phi_{\mathrm{SB}}\)</span> is the static bed pore volume fraction which we will assume is 0.4</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
