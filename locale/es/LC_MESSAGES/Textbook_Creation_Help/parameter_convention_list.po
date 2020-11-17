@@ -217,9 +217,10 @@ msgid "Diameter"
 msgstr "Diámetro"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-#, fuzzy
-msgid ":math:`D_0`"
-msgstr ":matemáticas:`D_0`"
+
+msgid ":math:`D_{cp}`"
+msgstr ""
+
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy
@@ -227,9 +228,9 @@ msgid "Diameter of clay primary particle"
 msgstr "Diámetro de la partícula primaria de arcilla"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-#, fuzzy
-msgid ":math:`D_{fractal}`"
-msgstr ":matemáticas:`D_{{fractal}`"
+
+msgid ":math:`\Pi_{fractal}`"
+msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy

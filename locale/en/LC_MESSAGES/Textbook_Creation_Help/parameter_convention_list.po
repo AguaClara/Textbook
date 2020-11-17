@@ -173,7 +173,7 @@ msgid "Diameter"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid ":math:`D_0`"
+msgid ":math:`D_{cp}`"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
@@ -181,7 +181,7 @@ msgid "Diameter of clay primary particle"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid ":math:`D_{fractal}`"
+msgid ":math:`\Pi_{fractal}`"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1

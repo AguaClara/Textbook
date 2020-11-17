@@ -191,23 +191,23 @@ $$\Lambda  = \frac{1}{n_P^{\frac{1}{3}}}$$
 
 $$\Lambda  = d_P \left( \frac{\pi }{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}}$$
 
-$$n_P = n_{P_0} \left( \frac{d_0}{d_P} \right)^{D_{Fractal}}$$
+$$n_P = n_{P_0} \left( \frac{D_{cp}}{d_P} \right)^{\Pi_{fractal}}$$
 
 **Off-slide**
-$$\phi_{Floc} = \phi_{Floc_0} \left( \frac{d}{d_0} \right)^{3 - D_{Fractal}}$$
+$$\phi_{Floc} = \phi_{Floc_0} \left( \frac{d}{D_{cp}} \right)^{3 - \Pi_{fractal}}$$
 
 $$\begin{array}{l}
 n_{Floc} = \frac{C_{Floc}}{\rlap{--} V_{Floc} \rho_{Floc}} = \frac{\phi_{Floc}}{\rlap{--} V_{Floc}}
 \\
 n_{Floc_0} = \frac{\phi_{Floc_0}}{\rlap{--} V_{Floc_0}}
 \\
-n_{Floc} = \frac{\phi_{Floc}}{\rlap{--} V_{Floc}} = \frac{\phi_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{\rlap{--} V_{Floc}}
+n_{Floc} = \frac{\phi_{Floc}}{\rlap{--} V_{Floc}} = \frac{\phi_{Floc_0} \left( \frac{d_{Floc}}{D_{cp}} \right)^{3 - \Pi_{fractal}}}{\rlap{--} V_{Floc}}
 \\
-= n_{Floc_0} \frac{\rlap{--} V_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{ \rlap{--} V_{Floc}}
+= n_{Floc_0} \frac{\rlap{--} V_{Floc_0} \left( \frac{d_{Floc}}{D_{cp}} \right)^{3 - \Pi_{fractal}}}{ \rlap{--} V_{Floc}}
 \\
-= n_{Floc_0} \left( \frac{d_0}{d_{Floc}} \right)^3 \left( \frac{d_{Floc}}{d_0} \right)^{3 - {D_{Fractal}}}
+= n_{Floc_0} \left( \frac{D_{cp}}{d_{Floc}} \right)^3 \left( \frac{d_{Floc}}{D_{cp}} \right)^{3 - {\Pi_{fractal}}}
 \\
-n_{Floc} = n_{Floc_0} \left( \frac{d_0}{d_{Floc}} \right)^{D_{Fractal}}
+n_{Floc} = n_{Floc_0} \left( \frac{D_{cp}}{d_{Floc}} \right)^{\Pi_{fractal}}
 \end{array}$$
 
 

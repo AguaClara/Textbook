@@ -638,6 +638,7 @@ msgstr ":matemáticas:`D_0 =` diámetro de la arcilla"
 msgid ":math:`D_{fractal} =` fractal dimension"
 msgstr ":matemáticas:`D_{fractal} =` dimensión fractal"
 
+
 #: ../../Sedimentation/Sed_Intro.rst:162
 #, fuzzy
 msgid ":math:`D =` floc diameter"

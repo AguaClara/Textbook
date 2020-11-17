@@ -48,13 +48,13 @@ $$n = \frac{\log(1,000,000,000)}{\log(2)}$$
 
 
 ### Fractals capture the idea that volume isn't conserved
-$$d = d_0 i^\frac{1}{D_{Fractal}}$$
+$$d = D_{cp} i^\frac{1}{\Pi_{fractal}}$$
 
-$$\rlap{--} V = \rlap{--} V_0 i^\frac{3}{D_{Fractal}}$$
+$$\rlap{--} V = \rlap{--} V_0 i^\frac{3}{\Pi_{fractal}}$$
 
 
 ### Buoyant Density of Flocs
-$$\rho_{Floc} - \rho_{H_2O} = \left( \rho_{Floc_0} - \rho_{H_2O} \right) \left( \frac{d_0}{d} \right)^{3 - D_{Fractal}}$$
+$$\rho_{Floc} - \rho_{H_2O} = \left( \rho_{Floc_0} - \rho_{H_2O} \right) \left( \frac{D_{cp}}{d} \right)^{3 - \Pi_{fractal}}$$
 
 
 ### Fractal Terminal Velocity Equations
@@ -63,24 +63,24 @@ $$V_t = \frac{g d^2}{18 \nu_{H_2O}}
 
 $$V_t = \frac{g d^2}{18 \nu_{H_2O}}
 \frac{ \left( \rho_{Floc_0} - \rho_{H_2O} \right) }{\rho_{H_2O}}
-\left( \frac{d_0}{d} \right)^{3 - D_{Fractal}}$$
+\left( \frac{D_{cp}}{d} \right)^{3 - \Pi_{fractal}}$$
 
 $$V_t = \frac{g d^2}{18 \nu_{H_2O}}
-\left( \frac{d_0}{d} \right)^2
+\left( \frac{D_{cp}}{d} \right)^2
 \frac{ \left( \rho_{Floc} - \rho_{H_2O} \right) }{\rho_{H_2O}}
-\left( \frac{d}{d_0} \right)^2
-\left( \frac{d}{d_0} \right)^{D_{Fractal} -3 }$$
+\left( \frac{d}{D_{cp}} \right)^2
+\left( \frac{d}{D_{cp}} \right)^{\Pi_{fractal} -3 }$$
 
 
-$$V_t = \frac{g d_0}{18 \nu_{H_2O}}
+$$V_t = \frac{g D_{cp}}{18 \nu_{H_2O}}
 \frac{ \left( \rho_{Floc_0} - \rho_{H_2O} \right)}{\rho_{H_2O}}
-\left( \frac{d}{d_0} \right)^{D_{Fractal} - 1}$$
+\left( \frac{d}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
 
 
 ### Floc Terminal Velocity
-$$V_t = \frac{g d_0}{18 \Phi \nu_{H_2O}}
+$$V_t = \frac{g D_{cp}}{18 \Phi \nu_{H_2O}}
 \frac{ \rho_{Floc_0} - \rho_{H_2O}}{\rho_{H_2O}}
-\left( \frac{d}{d_0} \right)^{D_{Fractal} - 1}$$
+\left( \frac{d}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
 
 
 ### Average distance between particles is the cube root of the volume occupied ($\Lambda$)
@@ -92,23 +92,23 @@ $$\Lambda  = \frac{1}{n_P^{\frac{1}{3}}}$$
 
 $$\Lambda  = d_P \left( \frac{\pi }{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}}$$
 
-$$n_P = n_{P_0} \left( \frac{d_0}{d_P} \right)^{D_{Fractal}}$$
+$$n_P = n_{P_0} \left( \frac{D_{cp}}{d_P} \right)^{\Pi_{fractal}}$$
 
 **Off-slide**
-$$\phi_{Floc} = \phi_{Floc_0} \left( \frac{d}{d_0} \right)^{3 - D_{Fractal}}$$
+$$\phi_{Floc} = \phi_{Floc_0} \left( \frac{d}{D_{cp}} \right)^{3 - \Pi_{fractal}}$$
 
 $$\begin{array}{l}
 n_{Floc} = \frac{C_{Floc}}{\rlap{--} V_{Floc} \rho_{Floc}} = \frac{\phi_{Floc}}{\rlap{--} V_{Floc}}
 \\
 n_{Floc_0} = \frac{\phi_{Floc_0}}{\rlap{--} V_{Floc_0}}
 \\
-n_{Floc} = \frac{\phi_{Floc}}{\rlap{--} V_{Floc}} = \frac{\phi_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{\rlap{--} V_{Floc}}
+n_{Floc} = \frac{\phi_{Floc}}{\rlap{--} V_{Floc}} = \frac{\phi_{Floc_0} \left( \frac{d_{Floc}}{D_{cp}} \right)^{3 - \Pi_{fractal}}}{\rlap{--} V_{Floc}}
 \\
-= n_{Floc_0} \frac{\rlap{--} V_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{ \rlap{--} V_{Floc}}
+= n_{Floc_0} \frac{\rlap{--} V_{Floc_0} \left( \frac{d_{Floc}}{D_{cp}} \right)^{3 - \Pi_{fractal}}}{ \rlap{--} V_{Floc}}
 \\
-= n_{Floc_0} \left( \frac{d_0}{d_{Floc}} \right)^3 \left( \frac{d_{Floc}}{d_0} \right)^{3 - {D_{Fractal}}}
+= n_{Floc_0} \left( \frac{D_{cp}}{d_{Floc}} \right)^3 \left( \frac{d_{Floc}}{D_{cp}} \right)^{3 - {\Pi_{fractal}}}
 \\
-n_{Floc} = n_{Floc_0} \left( \frac{d_0}{d_{Floc}} \right)^{D_{Fractal}}
+n_{Floc} = n_{Floc_0} \left( \frac{D_{cp}}{d_{Floc}} \right)^{\Pi_{fractal}}
 \end{array}$$
 
 
