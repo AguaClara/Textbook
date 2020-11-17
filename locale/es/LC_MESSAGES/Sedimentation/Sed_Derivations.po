@@ -4,748 +4,1087 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: AguaClara Textbook EXPERIMENTAL\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-19 16:17-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2020-10-18 16:21-0400\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 
 #: ../../Sedimentation/Sed_Derivations.rst:5
+#, fuzzy
 msgid "Sedimentation Derivations"
-msgstr ""
+msgstr "Derivaciones de sedimentación"
 
 #: ../../Sedimentation/Sed_Derivations.rst:6
+#, fuzzy
 msgid ""
-"In the next section, we will develop the mathematical models that help us"
-" explain the design."
+"In the next section, we will develop the mathematical models that help us "
+"explain the design."
 msgstr ""
+"En la siguiente sección, desarrollaremos los modelos matemáticos que nos "
+"ayudan a explicar el diseño."
 
 #: ../../Sedimentation/Sed_Derivations.rst:8
+#, fuzzy
 msgid ""
 "Note: this section will build off of the conceptual understanding "
-"established in the previous section and will explain how the tank works "
-"with derivations and mathematical models."
+"established in the previous section and will explain how the tank works with "
+"derivations and mathematical models."
 msgstr ""
+"Nota: esta sección se basará en la comprensión conceptual establecida en la "
+"sección anterior y explicará cómo funciona el tanque con las derivaciones y "
+"los modelos matemáticos."
 
 #: ../../Sedimentation/Sed_Derivations.rst:13
+#, fuzzy
 msgid "Comparison of velocities and flow in sedimentation tank"
 msgstr ""
+"Comparación de las velocidades y el flujo en el tanque de sedimentación"
 
 #: ../../Sedimentation/Sed_Derivations.rst:15
+#, fuzzy
 msgid ""
-"To understand how water flows in the sedimentation tank, we must "
-"understand how the water velocity changes with the geometry. There are "
-"four distinct zones in the sedimentation tank: 1) the velocity of water "
-"exiting the diffusers, 2) the velocity of water moving through the floc "
-"blanket, 3) the velocity of water that enters the plate settlers, and 4) "
-"the velocity of water through the plate settlers. The geometry of the "
-"sedimentation tank changes in these four zones, so we will follow these "
-"changes to make sure that we understand the conservation of flow. The "
-"flow going through the sedimentation tank is the same everywhere, but "
-"average velocities are different. The fact that flow rate is velocity "
-"multiplied by area, :math:`Q = \\bar v * A`, will be our guiding "
-"principle. In all cases,"
+"To understand how water flows in the sedimentation tank, we must understand "
+"how the water velocity changes with the geometry. There are four distinct "
+"zones in the sedimentation tank: 1) the velocity of water exiting the "
+"diffusers, 2) the velocity of water moving through the floc blanket, 3) the "
+"velocity of water that enters the plate settlers, and 4) the velocity of "
+"water through the plate settlers. The geometry of the sedimentation tank "
+"changes in these four zones, so we will follow these changes to make sure "
+"that we understand the conservation of flow. The flow going through the "
+"sedimentation tank is the same everywhere, but average velocities are "
+"different. The fact that flow rate is velocity multiplied by area, :math:`Q "
+"= \\bar v * A`, will be our guiding principle. In all cases,"
 msgstr ""
+"Para entender cómo fluye el agua en el tanque de sedimentación, debemos "
+"entender cómo la velocidad del agua cambia con la geometría. Hay cuatro "
+"zonas distintas en el tanque de sedimentación: 1) la velocidad del agua que "
+"sale de los difusores, 2) la velocidad del agua que se mueve a través del "
+"manto de flóculos, 3) la velocidad del agua que entra en los sedimentadores "
+"de placas, y 4) la velocidad del agua a través de los sedimentadores de "
+"placas. La geometría del tanque de sedimentación cambia en estas cuatro "
+"zonas, así que seguiremos estos cambios para asegurarnos de que entendemos "
+"la conservación del flujo. El flujo que pasa por el tanque de sedimentación "
+"es el mismo en todas partes, pero las velocidades medias son diferentes. El "
+"hecho de que la velocidad del flujo es la velocidad multiplicada por el "
+"área, :matemáticas:`Q = \\bar v * A`, será nuestro principio rector. En "
+"todos los casos,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:17
+#, fuzzy
 msgid ":math:`Q_{Sed} =` flow rate through each sedimentation tank"
 msgstr ""
+":matemáticas:`Q_{Sed} =` tasa de flujo a través de cada tanque de "
+"sedimentación"
 
 #: ../../Sedimentation/Sed_Derivations.rst:18
+#, fuzzy
 msgid ":math:`W_{Sed} =` width of each sedimentation tank"
-msgstr ""
+msgstr ":matemáticas:`W_{Sed} =` ancho de cada tanque de sedimentación"
 
 #: ../../Sedimentation/Sed_Derivations.rst:27
+#, fuzzy
 msgid ""
 "AguaClara sedimentation tank showing \"lost triangle\" and its impact on "
 "relevant lengths."
 msgstr ""
+"Tanque de sedimentación AguaClara mostrando el \"triángulo perdido\" y su "
+"impacto en las longitudes pertinentes."
 
 #: ../../Sedimentation/Sed_Derivations.rst:30
+#, fuzzy
 msgid "1) Velocity and flow exiting the diffusers"
-msgstr ""
+msgstr "1) La velocidad y el flujo que salen de los difusores"
 
 #: ../../Sedimentation/Sed_Derivations.rst:32
+#, fuzzy
 msgid ""
 "This is discussed specifically in the section on :ref:`diffuser design "
 "<heading_Sed_Tank_Diffuser_Design>`."
 msgstr ""
+"Esto se discute específicamente en la sección de :ref:`diseño del difusor "
+"<heading_Sed_Tank_Diffuser_Design>`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:35
+#, fuzzy
 msgid "2) Velocity and flow in the floc blanket"
-msgstr ""
+msgstr "2) La velocidad y el flujo en el manto de flóculos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:37
+#, fuzzy
 msgid ""
-"After the water exits the diffusers and jet reverser, it flows through "
-"the expanded floc blanket region where:"
+"After the water exits the diffusers and jet reverser, it flows through the "
+"expanded floc blanket region where:"
 msgstr ""
+"Después de que el agua sale de los difusores y del inversor de chorro, fluye "
+"a través de la región de la manta de flóculos expandida donde:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:39
+#, fuzzy
 msgid ""
 ":math:`L_{SedFloc} =` length of the sedimentation tank that has a floc "
 "blanket"
 msgstr ""
+":matemáticas:`L_{SedFloc} =` longitud del tanque de sedimentación que tiene "
+"una manta de flóculos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:40
+#, fuzzy
 msgid ""
 ":math:`\\bar v_{z_{fb}} =` upflow velocity of the water through the floc "
 "blanket"
 msgstr ""
+":matemáticas:`\\bar v_{z_{fb}} =` velocidad de subida del agua a través de "
+"la manta de flóculos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:42
+#, fuzzy
 msgid "Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \\bar v_{z_{fb}}`"
-msgstr ""
+msgstr "Así, :matemáticas:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \\bar v_{z_{fb}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:45
+#, fuzzy
 msgid "3) Velocity and flow entering the plate settlers"
-msgstr ""
+msgstr "3) La velocidad y el flujo que entra en los colonos de las placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:47
+#, fuzzy
 msgid ""
 "The 'active' sedimentation zone refers to the area of the tank in which "
 "water can flow through the plate settlers where:"
 msgstr ""
+"La zona de sedimentación \"activa\" se refiere a la zona del tanque en la "
+"que el agua puede fluir a través de las placas de sedimentación donde:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:49
+#, fuzzy
 msgid ""
 ":math:`L_{SedActive} =` length of the sedimentation tank that includes "
 "entrance to a plate settlers"
 msgstr ""
+":matemáticas:`L_{SedActive} =` longitud del tanque de sedimentación que "
+"incluye la entrada a una placa de colonos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:50
+#, fuzzy
 msgid ""
 ":math:`\\bar v_{z_{Active}} =` upflow velocity of the water entering the "
 "plate settlers; vertical velocity in 'active' region"
 msgstr ""
+":matemáticas:`\\bar v_{z_{Active}} =` velocidad de flujo ascendente del agua "
+"que entra en los colonos de las placas; velocidad vertical en la región "
+"\"activa"
 
 #: ../../Sedimentation/Sed_Derivations.rst:52
+#, fuzzy
 msgid ""
-"The only reason that there is a distinction between this area and the "
-"floc blanket area is because plate settlers are built at an angle. This "
-"angle creates a \"lost triangle\" because there is a space in which the "
-"plate settlers are not effective and water does not flow through them. "
-"Because the active length is less than the floc blanket length, "
-":math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, "
-"the average active velocity must be greater than the average upflow "
-"velocity through the floc blanket, :math:`\\bar v_{z_{Active}} > \\bar "
-"v_{z_{fb}}`. The same flow going through less area means that the "
-"velocity must increase."
+"The only reason that there is a distinction between this area and the floc "
+"blanket area is because plate settlers are built at an angle. This angle "
+"creates a \"lost triangle\" because there is a space in which the plate "
+"settlers are not effective and water does not flow through them. Because the "
+"active length is less than the floc blanket length, :math:`L_{SedActive} < "
+"L_{SedFloc}`, and because flow must be conserved, the average active "
+"velocity must be greater than the average upflow velocity through the floc "
+"blanket, :math:`\\bar v_{z_{Active}} > \\bar v_{z_{fb}}`. The same flow "
+"going through less area means that the velocity must increase."
 msgstr ""
+"La única razón por la que hay una distinción entre esta área y el área de la "
+"manta de flóculos es porque los colonos de placas están construidos en un "
+"ángulo. Este ángulo crea un \"triángulo perdido\" porque hay un espacio en "
+"el que los colonos de placas no son efectivos y el agua no fluye a través de "
+"ellos. Debido a que la longitud activa es menor que la longitud de la manta "
+"de flóculos, :matemáticas:`L_{SedActive} < L_{SedFloc}`, y como el flujo "
+"debe ser conservado, la velocidad activa promedio debe ser mayor que la "
+"velocidad promedio de ascenso a través de la manta de flóculos, :math:`\\bar "
+"v_{z_{Active}} > \\bar v_{z_{fb}`. El mismo flujo que pasa por menos área "
+"significa que la velocidad debe aumentar."
 
 #: ../../Sedimentation/Sed_Derivations.rst:54
+#, fuzzy
 msgid ""
-"Thus, :math:`Q_{Sed} = W_{Sed} L_{SedActive} \\bar v_{z_{Active}}`, and "
-":math:`\\bar v_{z_{Active}} > \\bar v_{z_{fb}}`."
+"Thus, :math:`Q_{Sed} = W_{Sed} L_{SedActive} \\bar v_{z_{Active}}`, and :"
+"math:`\\bar v_{z_{Active}} > \\bar v_{z_{fb}}`."
 msgstr ""
+"Así, :matemáticas:`Q_{Sed} = W_{Sed} L_{SedActive} \\bar v_{z_{Active}`, y :"
+"matemáticas:`\\bar v_{z_{Active}} > \\bar v_{z_{fb}`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:57
+#, fuzzy
 msgid "4) Velocity and flow in the plate settlers"
-msgstr ""
+msgstr "4) La velocidad y el flujo en los colonos de las placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:59
+#, fuzzy
 msgid "Now, we will discuss flow through plate settlers where:"
-msgstr ""
+msgstr "Ahora, discutiremos el flujo a través de los colonos de placas donde:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:61
+#, fuzzy
 msgid ""
 ":math:`\\bar v_{z_{Plate}} =` upflow velocity of the water in the plate "
 "settlers; vertical velocity component between the plate settlers"
 msgstr ""
+":matemáticas:`\\bar v_{z_{Plate}} =` velocidad de subida del agua en los "
+"colonos de placas; componente de velocidad vertical entre los colonos de "
+"placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:62
+#, fuzzy
 msgid ":math:`S =` spacing between plate settlers"
-msgstr ""
+msgstr ":matemáticas:`S =` espacio entre los colonos de las placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:63
+#, fuzzy
 msgid ":math:`B =` center-to-center distance between plate settlers"
 msgstr ""
+":matemáticas:`B =` distancia de centro a centro entre los colonos de las "
+"placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:64
+#, fuzzy
 msgid ":math:`T =` thickness of plate settlers"
-msgstr ""
+msgstr ":matemáticas:`T =` espesor de los colonos de placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:65
+#, fuzzy
 msgid ":math:`L =` length of plate settlers"
-msgstr ""
+msgstr ":matemáticas:`L =` longitud de los colonos de la placa"
 
 #: ../../Sedimentation/Sed_Derivations.rst:67
+#, fuzzy
 msgid ""
-"We know that plate settlers have a certain thickness and take up area, "
-"which means that once we reach the plate settler zone, there is less area"
-" for water to travel through. Because flow is conserved and there is a "
-"decrease in area, we know that the upflow velocity of water through the "
-"plate settlers must increase compared to the upflow velocity of water "
-"below the plate settlers, :math:`\\bar v_{z_{Plate}} > \\bar "
-"v_{z_{Active}}`."
+"We know that plate settlers have a certain thickness and take up area, which "
+"means that once we reach the plate settler zone, there is less area for "
+"water to travel through. Because flow is conserved and there is a decrease "
+"in area, we know that the upflow velocity of water through the plate "
+"settlers must increase compared to the upflow velocity of water below the "
+"plate settlers, :math:`\\bar v_{z_{Plate}} > \\bar v_{z_{Active}}`."
 msgstr ""
+"Sabemos que los colonos de las placas tienen un cierto espesor y área de "
+"ocupación, lo que significa que una vez que llegamos a la zona de colonos de "
+"las placas, hay menos área para que el agua viaje a través de ella. Debido a "
+"que el flujo se conserva y hay una disminución de área, sabemos que la "
+"velocidad de ascenso del agua a través de los sedimentadores de placas debe "
+"aumentar en comparación con la velocidad de ascenso del agua por debajo de "
+"los sedimentadores de placas, :math:`\\bar v_{z_{Plate}} > \\bar "
+"v_{z_{Active}`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:69
+#, fuzzy
 msgid ""
-"Thus, :math:`\\bar v_{z_{Plate}} > \\bar v_{z_{Active}} > \\bar "
-"v_{z_{fb}}`"
+"Thus, :math:`\\bar v_{z_{Plate}} > \\bar v_{z_{Active}} > \\bar v_{z_{fb}}`"
 msgstr ""
+"Por lo tanto, :math:`\\bar v_{z_{Plate}} > \\bar v_{z_{Active}} > \\bar "
+"v_{z_{fb}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:71
+#, fuzzy
 msgid ""
 "In addition to the vertical velocity component increasing between the "
 "plates, the resultant velocity of water between the plates increases "
-"compared to :math:`\\bar v_{z_{Active}}`. What are the two reasons that "
-"this is true?"
+"compared to :math:`\\bar v_{z_{Active}}`. What are the two reasons that this "
+"is true?"
 msgstr ""
+"Además de que el componente de la velocidad vertical aumenta entre las "
+"placas, la velocidad resultante del agua entre las placas aumenta en "
+"comparación con :math:`\\bar v_{z_{Active}}`. ¿Cuáles son las dos razones "
+"por las que esto es cierto?"
 
 #: ../../Sedimentation/Sed_Derivations.rst:73
+#, fuzzy
 msgid ""
 "the first reason, as already discussed, is that the vertical velocity "
 "component needs to increase to ensure conservation of flow."
 msgstr ""
+"la primera razón, como ya se ha discutido, es que el componente de velocidad "
+"vertical debe aumentar para asegurar la conservación del flujo."
 
 #: ../../Sedimentation/Sed_Derivations.rst:75
+#, fuzzy
 msgid ""
 "the second reason has to do with the fact that the resultant velocity of "
 "water between the plates is at an angle. This means that there is a "
-"horizontal component introduced. Because we know that the vertical "
-"velocity increases, and there is a new positive horizontal velocity "
-"component, the resultant velocity must also increase."
+"horizontal component introduced. Because we know that the vertical velocity "
+"increases, and there is a new positive horizontal velocity component, the "
+"resultant velocity must also increase."
 msgstr ""
+"la segunda razón tiene que ver con el hecho de que la velocidad resultante "
+"del agua entre las placas está en un ángulo. Esto significa que se introduce "
+"un componente horizontal. Como sabemos que la velocidad vertical aumenta, y "
+"hay una nueva componente de velocidad horizontal positiva, la velocidad "
+"resultante también debe aumentar."
 
 #: ../../Sedimentation/Sed_Derivations.rst:77
+#, fuzzy
 msgid ""
 "Now, consider a tube settler used in a lab setting instead of a plate "
 "settler. If a tube settler was designed with an angle to mimic a plate "
-"settler, would the water change vertical velocity after the angle? How "
-"does this compare to the plate settler scenario? In the case of the tube "
-"settler, the vertical velocity does not increase because there is no "
-"change in flow area; the diameter of the tube is constant throughout, "
-"meaning that for the flow to remain constant, the velocity does not "
-"change."
+"settler, would the water change vertical velocity after the angle? How does "
+"this compare to the plate settler scenario? In the case of the tube settler, "
+"the vertical velocity does not increase because there is no change in flow "
+"area; the diameter of the tube is constant throughout, meaning that for the "
+"flow to remain constant, the velocity does not change."
 msgstr ""
+"Ahora, consideren un sedimentador tubular usado en un laboratorio en lugar "
+"de un sedimentador de placas. Si un sedimentador tubular fue diseñado con un "
+"ángulo para imitar un sedimentador de placas, ¿cambiaría el agua la "
+"velocidad vertical después del ángulo? ¿Cómo se compara esto con el "
+"escenario de los sedimentadores de placas? En el caso del sedimentador "
+"tubular, la velocidad vertical no aumenta porque no hay cambio en el área "
+"del flujo; el diámetro del tubo es constante en todo su recorrido, lo que "
+"significa que para que el flujo permanezca constante, la velocidad no cambia."
 
 #: ../../Sedimentation/Sed_Derivations.rst:79
+#, fuzzy
 msgid ""
-"For another example of flow conservation, let's consider the relationship"
-" between :math:`\\bar v_{z_{Plate}}*S` and :math:`\\bar "
-"v_{z_{Active}}*B`. :math:`B` is the center-to-center distance between "
-"plate settlers, and does not take into account the thickness of plate "
-"settlers. Considering only the center-to-center distance means that the "
-"area for water to travel through does to change from before the plate "
-"settlers to within the plate settlers because we are not accounting for "
-"any thickness. If the area does not change, then velocity should also not"
-" change to keep flow conserved. However, if we are to account for "
-"thickness, we must discuss :math:`S` which is the spacing between plate "
-"settlers. This does take into account the change in area,  which means "
-"that the velocity would need to increase through the lesser area. So if "
-"we look at the flow through plate settlers, we can confirm that "
-":math:`\\bar v_{z_{Plate}}*S = \\bar v_{z_{Active}}*B`."
+"For another example of flow conservation, let's consider the relationship "
+"between :math:`\\bar v_{z_{Plate}}*S` and :math:`\\bar v_{z_{Active}}*B`. :"
+"math:`B` is the center-to-center distance between plate settlers, and does "
+"not take into account the thickness of plate settlers. Considering only the "
+"center-to-center distance means that the area for water to travel through "
+"does to change from before the plate settlers to within the plate settlers "
+"because we are not accounting for any thickness. If the area does not "
+"change, then velocity should also not change to keep flow conserved. "
+"However, if we are to account for thickness, we must discuss :math:`S` which "
+"is the spacing between plate settlers. This does take into account the "
+"change in area,  which means that the velocity would need to increase "
+"through the lesser area. So if we look at the flow through plate settlers, "
+"we can confirm that :math:`\\bar v_{z_{Plate}}*S = \\bar v_{z_{Active}}*B`."
 msgstr ""
+"Para otro ejemplo de conservación del flujo, consideremos la relación entre :"
+"math:`\\bar v_{z_{Plate}}*S` y :math:`\\bar v_{z_{Active}*B`. :math:`B` es "
+"la distancia de centro a centro entre los sedimentadores de placas, y no "
+"tiene en cuenta el espesor de los sedimentadores de placas. Si consideramos "
+"sólo la distancia de centro a centro, el área por la que viaja el agua "
+"cambia de antes de los decantadores a dentro de los decantadores porque no "
+"tenemos en cuenta el espesor. Si el área no cambia, entonces la velocidad "
+"tampoco debería cambiar para mantener el flujo conservado. Sin embargo, si "
+"vamos a tener en cuenta el espesor, debemos discutir :matemáticas:`S` que es "
+"el espacio entre los sedimentadores de placas. Esto tiene en cuenta el "
+"cambio de área, lo que significa que la velocidad tendría que aumentar a "
+"través de la zona menor. Así que si miramos el flujo a través de los "
+"sedimentadores de placas, podemos confirmar que :matemáticas:``bar "
+"v_{z_{Plate}}*S = \\bar v_{z_{Active}}*B`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:81
+#, fuzzy
 msgid ""
 "By using flow conservation and plate settler geometry, we can begin to "
 "understand the mathematical relationships that drive design."
 msgstr ""
+"Utilizando la conservación del flujo y la geometría de los sedimentadores de "
+"placas, podemos empezar a entender las relaciones matemáticas que impulsan "
+"el diseño."
 
 #: ../../Sedimentation/Sed_Derivations.rst:86
+#, fuzzy
 msgid "Plate Settler Design"
-msgstr ""
+msgstr "Diseño de los colonos de placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:88
+#, fuzzy
 msgid "Plate Settler Parameters"
-msgstr ""
+msgstr "Parámetros del Colocador de Placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:90
+#, fuzzy
 msgid ""
 "From the relationship that :math:`\\bar v_{z_{Plate}}*S = \\bar "
-"v_{z_{Active}}*B`, we can solve for :math:`B` or :math:`L` in terms of "
-"their related parameters."
+"v_{z_{Active}}*B`, we can solve for :math:`B` or :math:`L` in terms of their "
+"related parameters."
 msgstr ""
+"A partir de la relación que :math:`\\bar v_{z_{Plate}}*S = \\bar "
+"v_{z_{Active}*B`, podemos resolver para :math:`B` o :math:`L` en términos de "
+"sus parámetros relacionados."
 
 #: ../../Sedimentation/Sed_Derivations.rst:92
+#, fuzzy
 msgid "Let's start with the relationships that we already know:"
-msgstr ""
+msgstr "Empecemos con las relaciones que ya conocemos:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:98
+#, fuzzy
 msgid "and"
-msgstr ""
+msgstr "y"
 
 #: ../../Sedimentation/Sed_Derivations.rst:111
+#, fuzzy
 msgid "Thick plate settlers."
-msgstr ""
+msgstr "Los colonos de la placa gruesa."
 
 #: ../../Sedimentation/Sed_Derivations.rst:120
+#, fuzzy
 msgid "Plate settlers."
-msgstr ""
+msgstr "Colonos de placas."
 
 #: ../../Sedimentation/Sed_Derivations.rst:122
-msgid "Solving for :math:`\\bar v_{z_{Plate}}`, we rearrange and substitute by,"
+#, fuzzy
+msgid ""
+"Solving for :math:`\\bar v_{z_{Plate}}`, we rearrange and substitute by,"
 msgstr ""
+"Resolviendo para :math:`\\bar v_{z_{Plate}`, nos reorganizamos y sustituimos "
+"por,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:132
+#, fuzzy
 msgid ""
 "We also already know from our :ref:`discussion of plate settlers "
-"<heading_Sed_Tank_Plate_Settlers>` that we can relate capture velocity, "
-":math:`\\bar v_c`, to :math:`S, L, \\alpha`, and :math:`\\bar "
-"v_{z_{Plate}}` by,"
+"<heading_Sed_Tank_Plate_Settlers>` that we can relate capture velocity, :"
+"math:`\\bar v_c`, to :math:`S, L, \\alpha`, and :math:`\\bar v_{z_{Plate}}` "
+"by,"
 msgstr ""
+"También sabemos por nuestra :ref:`discusión de los colonos de placas "
+"<heading_Sed_Tank_Plate_Settlers>` que podemos relacionar la velocidad de "
+"captura, :math:`\\bar v_c`, con :math:`S, L, \\alpha`, y :math:`\\bar "
+"v_{z_{Plate}` por,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:138
+#, fuzzy
 msgid ""
-"Substitute for :math:`\\bar v_{z_{Plate}} = \\frac{\\bar "
-"v_{z_{Active}}(S+T)}{S}` by,"
-msgstr ""
+"Substitute for :math:`\\bar v_{z_{Plate}} = \\frac{\\bar v_{z_{Active}}(S+T)}"
+"{S}` by,"
+msgstr "Sustituye a :math:`\\bar v_{z_{Plate}} = \\frac{{\\N}(S+T)}{S}por,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:144
+#, fuzzy
 msgid ""
-"Now, we can use this form of the capture velocity equation to solve for "
-":math:`B` or :math:`L`, as shown by,"
+"Now, we can use this form of the capture velocity equation to solve for :"
+"math:`B` or :math:`L`, as shown by,"
 msgstr ""
+"Ahora, podemos usar esta forma de la ecuación de la velocidad de captura "
+"para resolver para :matemáticas:`B` o :matemáticas:`L`, como se muestra,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:160
+#, fuzzy
 msgid "AguaClara plate settler design approach."
-msgstr ""
+msgstr "Enfoque de diseño de los colonos de la placa AguaClara."
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Parameter"
-msgstr ""
+msgstr "Parámetro"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Variable"
-msgstr ""
+msgstr "Variable"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Determined by:"
-msgstr ""
+msgstr "Determinado por:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Determines:"
-msgstr ""
+msgstr "Determina:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Value"
-msgstr ""
+msgstr "Valor"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Upflow velocity"
-msgstr ""
+msgstr "Velocidad de ascenso"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ":math:`\\bar v_{z_{fb}}`"
-msgstr ""
+msgstr ":math:`\\bar v_{z_{fb}}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "floc blanket"
-msgstr ""
+msgstr "manta de floc"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "plan view area of tank"
-msgstr ""
+msgstr "vista de plano del área del tanque"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "1 :math:`\\frac{mm}{s}`"
-msgstr ""
+msgstr "1 :matemáticas:`\\frac{mm}{s}"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Capture velocity"
-msgstr ""
+msgstr "Velocidad de captura"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ":math:`\\bar v_c`"
-msgstr ""
+msgstr ":math:`\\bar v_c`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "target turbidity"
-msgstr ""
+msgstr "la turbiedad del objetivo"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "particle size distribution"
-msgstr ""
+msgstr "distribución del tamaño de las partículas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "0.12 :math:`\\frac{mm}{s}`"
-msgstr ""
+msgstr "0.12 :matemáticas:`\\frac{mm}{s}"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Plate angle"
-msgstr ""
+msgstr "El ángulo de la placa"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ":math:`\\alpha`"
-msgstr ""
+msgstr ":matemáticas:`\\\\N-alfa`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "self-cleaning requirements"
-msgstr ""
+msgstr "requisitos de autolimpieza"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ":math:`L`"
-msgstr ""
+msgstr ":matemáticas:`L`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "60 deg"
-msgstr ""
+msgstr "60 grados"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Plate spacing"
-msgstr ""
+msgstr "El espacio entre las placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ":math:`S`"
-msgstr ""
+msgstr ":matemáticas:`S`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "clogging and floc rollup constraints"
-msgstr ""
+msgstr "obstrucción y restricciones de enrollamiento del flóculo"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "2.5 cm"
-msgstr ""
+msgstr "2.5 cm"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Plate settler length"
-msgstr ""
+msgstr "Longitud de la placa de asentamiento"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ":math:`\\bar v_{z_{fb}}, \\bar v_c, \\alpha, S`"
-msgstr ""
+msgstr ":matemáticas:``bar v_{z_{fb}}, \\bar v_c, \\alpha, S`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "tank depth"
-msgstr ""
+msgstr "profundidad del tanque"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Calculated for each plant"
-msgstr ""
+msgstr "Calculado para cada planta"
 
 #: ../../Sedimentation/Sed_Derivations.rst:170
+#, fuzzy
 msgid ""
 "The relationship between the vertical velocity and the velocity in the "
 "direction of the sloped tube or plate settlers is given by"
 msgstr ""
+"La relación entre la velocidad vertical y la velocidad en la dirección de "
+"los sedimentadores de tubo inclinado o de placas está dada por"
 
 #: ../../Sedimentation/Sed_Derivations.rst:178
+#, fuzzy
 msgid "Lamellar settler geometry and relevant equations."
-msgstr ""
+msgstr "Geometría laminar de los colonos y ecuaciones relevantes."
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Settler geometry"
-msgstr ""
+msgstr "Geometría de los colonos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Single tubes"
-msgstr ""
+msgstr "Tubos individuales"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "multiple tubes or plates"
-msgstr ""
+msgstr "múltiples tubos o placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ":math:`\\bar v_{z}` ratio"
-msgstr ""
+msgstr ":matemáticas:`\\bar v_{z}` ratio"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ""
-":math:`\\frac{\\bar v_{z_{Tube}}}{\\bar v_{c}}=\\frac{L}{D} \\cos \\alpha"
-" \\sin \\alpha+\\sin ^{2} \\alpha`"
+":math:`\\frac{\\bar v_{z_{Tube}}}{\\bar v_{c}}=\\frac{L}{D} \\cos \\alpha "
+"\\sin \\alpha+\\sin ^{2} \\alpha`"
 msgstr ""
+":matemáticas:``frac{\\N-barra v_{z_{Tube}}{\\N-barra v_{c}}=frac{\\N3}{D} \\ "
+"~ - \\ ~ - \\ ~ - Alfa \\ ~ en el seno de Alfa + \\ ~ - 5 \\N - \\N - \\N - "
+"Alfa.."
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ""
-":math:`\\frac{\\bar v_{z_{Plate}}}{\\bar v_{c}}=\\frac{L}{S} \\cos "
-"\\alpha \\sin \\alpha+1`"
+":math:`\\frac{\\bar v_{z_{Plate}}}{\\bar v_{c}}=\\frac{L}{S} \\cos \\alpha "
+"\\sin \\alpha+1`"
 msgstr ""
+":matemáticas:``frac{\\N-barra v_{z_{Plate}}{\\N-barra v_{c}}==frac{\\N2}{S} "
+"\\N - \\N - \\N - en el que se encuentra \\N - \\N - alfa + 1"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ":math:`\\bar v_{\\alpha}` ratio"
-msgstr ""
+msgstr ":matemáticas:`\\bar v_{\\alpha}` ratio"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ""
 ":math:`\\frac{\\bar v_{\\alpha_{Tube}}}{\\bar v_{c}}=\\frac{L}{D} \\cos "
 "\\alpha +\\sin \\alpha`"
 msgstr ""
+":matemáticas:``frac{\\N-barra v_{alpha_{Tube}}}{\\N-barra v_{\\N1}}"
+"=frac{\\N2}{D} \\N - \\N - \\N - Alfa +sin alfa"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ""
 ":math:`\\frac{\\bar v_{\\alpha_{Plate}}}{\\bar v_{c}}=\\frac{L}{S} \\cos "
 "\\alpha +\\frac{1}{\\sin \\alpha}`"
 msgstr ""
+":matemáticas:``frac{\\N-barra v_{alpha_{Plate}}}{\\N-barra v_{c}}==frac{\\N3}"
+"{S} \\N - \\N - \\N - Fracaso + 5 en la alfombra"
 
 #: ../../Sedimentation/Sed_Derivations.rst:185
+#, fuzzy
 msgid "For single tube settlers used in laboratory settings the"
 msgstr ""
+"Para los sedimentadores de tubo simple utilizados en el laboratorio, el"
 
 #: ../../Sedimentation/Sed_Derivations.rst:191
+#, fuzzy
 msgid "Substituting into the equation for single tube settlers"
-msgstr ""
+msgstr "Sustituyendo en la ecuación a los colonos de un solo tubo"
 
 #: ../../Sedimentation/Sed_Derivations.rst:197
+#, fuzzy
 msgid ""
-"It is common to need to design the length of the tube given a target flow"
-" rate and thus we have"
+"It is common to need to design the length of the tube given a target flow "
+"rate and thus we have"
 msgstr ""
+"Es común la necesidad de diseñar la longitud del tubo dada una tasa de flujo "
+"objetivo y por lo tanto tenemos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:207
+#, fuzzy
 msgid "Floc Rollup and Slide Velocity"
-msgstr ""
+msgstr "Floc Rollup y velocidad de deslizamiento"
 
 #: ../../Sedimentation/Sed_Derivations.rst:209
+#, fuzzy
 msgid ""
-"As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a "
-"failure mode of plate settler performance. To determine the appropriate "
-"spacing between plate settlers, we must consider the potential for flocs "
-"to rollup because we want to minimize rollup and promote settling. We "
-"will determine this by calculating the floc sedimentation velocity, "
-":math:`v_{Slide}`, that can be captured given a plate spacing. The steps "
-"to calculate this are:"
+"As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a failure "
+"mode of plate settler performance. To determine the appropriate spacing "
+"between plate settlers, we must consider the potential for flocs to rollup "
+"because we want to minimize rollup and promote settling. We will determine "
+"this by calculating the floc sedimentation velocity, :math:`v_{Slide}`, that "
+"can be captured given a plate spacing. The steps to calculate this are:"
 msgstr ""
+"Como se ha discutido, :ref:`floc rollup <heading_Floc_Rollup>` es un modo de "
+"fallo en el rendimiento de los colonos de placas. Para determinar el espacio "
+"apropiado entre los sedimentadores de placas, debemos considerar la "
+"posibilidad de que los flóculos se enrollen porque queremos minimizar el "
+"enrollamiento y promover la sedimentación. Determinaremos esto calculando la "
+"velocidad de sedimentación de los flóculos, :math:`v_{Slide}`, que puede ser "
+"capturada dado un espaciamiento entre placas. Los pasos para calcular esto "
+"son:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:211
+#, fuzzy
 msgid "find the velocity gradient next to the plate"
-msgstr ""
+msgstr "encontrar el gradiente de velocidad junto a la placa"
 
 #: ../../Sedimentation/Sed_Derivations.rst:213
+#, fuzzy
 msgid "find the fluid velocity at the center of the floc"
-msgstr ""
+msgstr "encontrar la velocidad del fluido en el centro del flóculo"
 
 #: ../../Sedimentation/Sed_Derivations.rst:215
+#, fuzzy
 msgid ""
 "find terminal velocity of the floc down the plate (for the case of zero "
 "velocity fluid)"
 msgstr ""
+"encontrar la velocidad terminal del flóculo en la placa (para el caso de un "
+"fluido de velocidad cero)"
 
 #: ../../Sedimentation/Sed_Derivations.rst:217
+#, fuzzy
 msgid ""
-"set those two velocities equal for the critical case of no movement, and "
-"the required plate spacing"
+"set those two velocities equal for the critical case of no movement, and the "
+"required plate spacing"
 msgstr ""
+"...establecer esas dos velocidades iguales para el caso crítico de no "
+"movimiento, y el espacio de placa requerido.."
 
 #: ../../Sedimentation/Sed_Derivations.rst:219
+#, fuzzy
 msgid "find the floc sedimentation velocity, :math:`v_{Slide}`"
-msgstr ""
+msgstr "encontrar la velocidad de sedimentación del flóculo, :math:`v_{Slide}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:221
+#, fuzzy
 msgid "We will solve for both the plate settler and tube settler conditions."
 msgstr ""
+"Resolveremos tanto las condiciones de los colonos de placas como las de los "
+"colonos de tubos."
 
 #: ../../Sedimentation/Sed_Derivations.rst:224
+#, fuzzy
 msgid "1) Find the velocity gradient next to the plate:"
-msgstr ""
+msgstr "1) Encuentra el gradiente de velocidad junto a la placa:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:227
+#, fuzzy
 msgid "Plate Settler"
-msgstr ""
+msgstr "Colocador de placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:236
+#, fuzzy
 msgid "Boundary conditions in plate settlers."
-msgstr ""
+msgstr "Las condiciones de los límites en los colonos de las placas."
 
 #: ../../Sedimentation/Sed_Derivations.rst:245
+#, fuzzy
 msgid "Velocity profile between plate settlers."
-msgstr ""
+msgstr "Perfil de velocidad entre los colonos de las placas."
 
 #: ../../Sedimentation/Sed_Derivations.rst:247
+#, fuzzy
 msgid "We begin by describing the conditions of infinite horizontal plates."
 msgstr ""
+"Comenzamos describiendo las condiciones de las placas horizontales infinitas."
 
 #: ../../Sedimentation/Sed_Derivations.rst:253
+#, fuzzy
 msgid ""
-"We employ the no-slip condition to solve for the constants A and B. The "
-"no-slip condition is that :math:`u = 0` at :math:`y = 0` and :math:`y = "
-"S`, where :math:`u` is the horizontal velocity component, :math:`y` is "
-"the location in the y-axis direction between plates, and :math:`S` is the"
-" spacing between plates."
+"We employ the no-slip condition to solve for the constants A and B. The no-"
+"slip condition is that :math:`u = 0` at :math:`y = 0` and :math:`y = S`, "
+"where :math:`u` is the horizontal velocity component, :math:`y` is the "
+"location in the y-axis direction between plates, and :math:`S` is the "
+"spacing between plates."
 msgstr ""
+"Empleamos la condición de no deslizamiento para resolver para las constantes "
+"A y B. La condición de no deslizamiento es que :math:`u = 0` en :math:`y = "
+"0` y :math:`y = S`, donde :math:`u` es la componente de velocidad "
+"horizontal, :math:`y` es la ubicación en la dirección del eje y entre las "
+"placas, y :math:`S` es el espacio entre las placas."
 
 #: ../../Sedimentation/Sed_Derivations.rst:255
+#, fuzzy
 msgid "at :math:`u = 0` and :math:`y = 0`:"
-msgstr ""
+msgstr "en :math:`u = 0` y :math:`y = 0`:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:265
+#, fuzzy
 msgid "at :math:`u = 0` and :math:`y = S`, the solving for A:"
-msgstr ""
+msgstr "en :math:`u = 0` y :math:`y = S`, la solución para la A:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:279
+#, fuzzy
 msgid "Our initial equation can be updated as,"
-msgstr ""
+msgstr "Nuestra ecuación inicial puede ser actualizada como,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:285
+#, fuzzy
 msgid ""
-"If we let :math:`\\frac{dp}{dx}` be negative, then we can solve for "
-":math:`\\tau`."
+"If we let :math:`\\frac{dp}{dx}` be negative, then we can solve for :math:`"
+"\\tau`."
 msgstr ""
+"Si dejamos que :math:`frac{dp}{dx}sea negativo, entonces podemos resolver "
+"para :math:`tau``."
 
 #: ../../Sedimentation/Sed_Derivations.rst:295
+#, fuzzy
 msgid ""
 "Determining the average velocity between plates, :math:`\\bar "
 "v_{\\alpha_{Plate}}`,"
 msgstr ""
+"Determinando la velocidad media entre las placas, :math:`\\bar "
+"v_{\\alpha_{Plate}`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:305
+#, fuzzy
 msgid ""
-"Integrating to get average velocity, then solving for "
-":math:`\\frac{dp}{dx}`,"
+"Integrating to get average velocity, then solving for :math:`\\frac{dp}{dx}`,"
 msgstr ""
+"Integrando para obtener la velocidad promedio, luego resolviendo para :"
+"matemáticas:`\\frac{dp}{dx}`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:315
+#, fuzzy
 msgid ""
-"Using Navier-Stokes to model the flow between the plates, and "
-"substituting our equation for :math:` \\frac{dp}{dx}`,"
+"Using Navier-Stokes to model the flow between the plates, and substituting "
+"our equation for :math:` \\frac{dp}{dx}`,"
 msgstr ""
+"Usando Navier-Stokes para modelar el flujo entre las placas, y sustituyendo "
+"nuestra ecuación por :math:` \\frac{dp}{dx}`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:325
+#, fuzzy
 msgid ""
 "Simplifying the :math:`\\left(\\frac{du}{dy}\\right)_{y=0}`, we have the "
 "velocity gradient as function of average velocity for plate geometry as,"
 msgstr ""
+"Simplificando las :matemáticas:``izquierda(}{\\Nfraccionaria}{\\N1}"
+"derecha)_{y=0}`, tenemos el gradiente de velocidad en función de la "
+"velocidad media para la geometría de la placa como,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:342
+#, fuzzy
 msgid "Velocity gradient next to the plate."
-msgstr ""
+msgstr "Gradiente de velocidad junto a la placa."
 
 #: ../../Sedimentation/Sed_Derivations.rst:346
+#, fuzzy
 msgid "Tube Settler"
-msgstr ""
+msgstr "Colono de tubo"
 
 #: ../../Sedimentation/Sed_Derivations.rst:347
+#, fuzzy
 msgid ""
-"For tube settlers, we will assume laminar flow through circular tubes. "
-":math:`R` is the radius of the tube, and we assume that the maximum "
-"velocity is when :math:`r = 0`. The velocity distribution is a paraboloid"
-" of revolution, therefore average velocity, :math:`\\bar "
-"v_{\\alpha_{Tube}}`, is half of the maximum velocity, "
-":math:`v_{\\alpha_{max}}`. So, :math:`\\bar v_{\\alpha_{Tube}} = "
-"\\frac{1}{2}v_{\\alpha_{max}}`. We also know that :math:`Q = \\bar v A` "
-"and :math:`Q = \\bar v \\pi R^2`. In the case of the tube settler, "
-":math:`\\frac{dp}{dx}` is the pressure gradient in the direction of flow,"
-" not the pressure gradient due to changes in elevation."
+"For tube settlers, we will assume laminar flow through circular tubes. :math:"
+"`R` is the radius of the tube, and we assume that the maximum velocity is "
+"when :math:`r = 0`. The velocity distribution is a paraboloid of revolution, "
+"therefore average velocity, :math:`\\bar v_{\\alpha_{Tube}}`, is half of the "
+"maximum velocity, :math:`v_{\\alpha_{max}}`. So, :math:`\\bar "
+"v_{\\alpha_{Tube}} = \\frac{1}{2}v_{\\alpha_{max}}`. We also know that :math:"
+"`Q = \\bar v A` and :math:`Q = \\bar v \\pi R^2`. In the case of the tube "
+"settler, :math:`\\frac{dp}{dx}` is the pressure gradient in the direction of "
+"flow, not the pressure gradient due to changes in elevation."
 msgstr ""
+"Para los colonos de tubo, asumiremos un flujo laminar a través de tubos "
+"circulares. :matemáticas:`R` es el radio del tubo, y asumimos que la máxima "
+"velocidad es cuando :matemáticas:`r = 0`. La distribución de la velocidad es "
+"un paraboloide de la revolución, por lo tanto la velocidad media, :math:"
+"``bar v_{\\alpha_{Tube}`, es la mitad de la velocidad máxima, :math:"
+"`v_{\\alpha_{max}`. Así que, :math:``bar v_{\\alpha_{Tube}} = \\frac{1}{2}"
+"v_{\\alpha_{max}`. También sabemos que :math:`Q = \\bar v A` y :math:`Q = "
+"\\bar v \\pi R^2`. En el caso del sedimentador tubular, :math:`\\frac{dp}{dx}"
+"` es el gradiente de presión en la dirección del flujo, no el gradiente de "
+"presión debido a los cambios de elevación."
 
 #: ../../Sedimentation/Sed_Derivations.rst:358
+#, fuzzy
 msgid "The average velocity is 1/2 of the maximum velocity."
-msgstr ""
+msgstr "La velocidad media es la mitad de la velocidad máxima."
 
 #: ../../Sedimentation/Sed_Derivations.rst:368
+#, fuzzy
 msgid ""
-"Rearranging the flow equation :math:`Q` to solve for "
-":math:`\\frac{dp}{dx}`,"
+"Rearranging the flow equation :math:`Q` to solve for :math:`\\frac{dp}{dx}`,"
 msgstr ""
+"Reordenando la ecuación de flujo :matemáticas:`Q` para resolver para :"
+"matemáticas:`frac{dp}{dx}`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:374
+#, fuzzy
 msgid ""
-"Plugging :math:`\\frac{dp}{dx}` into the original equation for "
-":math:`\\bar v_{\\alpha_{Tube}}`,"
+"Plugging :math:`\\frac{dp}{dx}` into the original equation for :math:`\\bar "
+"v_{\\alpha_{Tube}}`,"
 msgstr ""
+"Conectando :math:`frac{dp}{dx}en la ecuación original para :math:`\\bar "
+"v_{\\alpha_{Tube}}`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:384
+#, fuzzy
 msgid ""
 "The resulting velocity gradient as function of average velocity for tube "
 "geometry is,"
 msgstr ""
+"El gradiente de velocidad resultante en función de la velocidad media para "
+"la geometría del tubo es,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:391
+#, fuzzy
 msgid "2) Find the fluid velocity at the center of the floc:"
-msgstr ""
+msgstr "2) Encuentra la velocidad del fluido en el centro del flóculo:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:392
+#, fuzzy
 msgid ""
-"Now, we want to determine the velocity at the center of the floc. For "
-"flow between parallel plates we determined that,"
+"Now, we want to determine the velocity at the center of the floc. For flow "
+"between parallel plates we determined that,"
 msgstr ""
+"Ahora, queremos determinar la velocidad en el centro del flóculo. Para el "
+"flujo entre las placas paralelas hemos determinado que,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:398
+#, fuzzy
 msgid ""
-"The center of the floc is approximately half of the floc diameter, "
-":math:`D`. So, to find the fluid velocity at the center of the floc, we "
-"linearize the differential and plug in :math:`\\frac{D}{2}` to yield,"
+"The center of the floc is approximately half of the floc diameter, :math:"
+"`D`. So, to find the fluid velocity at the center of the floc, we linearize "
+"the differential and plug in :math:`\\frac{D}{2}` to yield,"
 msgstr ""
+"El centro del flóculo es aproximadamente la mitad del diámetro del flóculo, :"
+"matemáticas:`D`. Así que, para encontrar la velocidad del fluido en el "
+"centro del flóculo, linealizamos el diferencial y conectamos :math:`frac{D}"
+"{2}` para obtenerlo,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:404
+#, fuzzy
 msgid ""
 "Substituting by the trigonometric relationship :math:`\\bar "
-"v_{\\alpha_{Plate}} = (\\frac{\\bar v_{z_{Plate}}}{sin\\alpha})`, we find"
-" the fluid velocity at the center of the floc as,"
+"v_{\\alpha_{Plate}} = (\\frac{\\bar v_{z_{Plate}}}{sin\\alpha})`, we find "
+"the fluid velocity at the center of the floc as,"
 msgstr ""
+"Sustituyendo por la relación trigonométrica :math:`\\bar v_{alpha_{Plate}} = "
+"(\\frac{\\bar v_{z_{Plate}}{sin\\alpha})`, encontramos la velocidad del "
+"fluido en el centro del flóculo como,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:417
+#, fuzzy
 msgid "Fluid velocity at the center of the floc."
-msgstr ""
+msgstr "La velocidad del fluido en el centro del flóculo."
 
 #: ../../Sedimentation/Sed_Derivations.rst:420
+#, fuzzy
 msgid ""
-"3) Find terminal velocity of the floc down the plate (for the case of "
-"zero velocity fluid):"
+"3) Find terminal velocity of the floc down the plate (for the case of zero "
+"velocity fluid):"
 msgstr ""
+"3) Encontrar la velocidad terminal del flóbulo que baja por la placa (para "
+"el caso del fluido de velocidad cero):"
 
 #: ../../Sedimentation/Sed_Derivations.rst:421
+#, fuzzy
 msgid ""
 "Recall from our :ref:`previous explanation of terminal velocity "
-"<heading_terminal_velocity_equation>` that the terminal velocity, "
-":math:`v_t`, of the floc can be calculated by,"
+"<heading_terminal_velocity_equation>` that the terminal velocity, :math:"
+"`v_t`, of the floc can be calculated by,"
 msgstr ""
+"Recordemos de nuestra :ref:`explicación anterior de la velocidad terminal "
+"<heading_terminal_velocity_equation>` que la velocidad terminal, :math:"
+"`v_t`, del floc puede ser calculada por,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:427
+#, fuzzy
 msgid "We can rearrange this equation to solve for :math:`D` by"
 msgstr ""
+"Podemos reordenar esta ecuación para resolver para :matemáticas:`D` por"
 
 #: ../../Sedimentation/Sed_Derivations.rst:433
+#, fuzzy
 msgid "We will need this equation for :math:`D` in the next step."
 msgstr ""
+"Necesitaremos esta ecuación para :matemáticas:`D` en el siguiente paso."
 
 #: ../../Sedimentation/Sed_Derivations.rst:442
+#, fuzzy
 msgid ""
-"Terminal velocity of the floc down the plate (for the case of zero "
-"velocity fluid)."
+"Terminal velocity of the floc down the plate (for the case of zero velocity "
+"fluid)."
 msgstr ""
+"La velocidad terminal del flóculo hacia abajo de la placa (para el caso del "
+"fluido de velocidad cero)."
 
 #: ../../Sedimentation/Sed_Derivations.rst:445
+#, fuzzy
 msgid ""
-"4) Set the fluid velocity at the center of the floc equal to the terminal"
-" velocity of the floc to find the critical case of no movement, and the "
+"4) Set the fluid velocity at the center of the floc equal to the terminal "
+"velocity of the floc to find the critical case of no movement, and the "
 "required plate spacing:"
 msgstr ""
+"4) Establezca la velocidad del fluido en el centro del flóculo igual a la "
+"velocidad terminal del flóculo para encontrar el caso crítico de no "
+"movimiento, y el espacio de placa requerido:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:446
+#, fuzzy
 msgid ""
 "The floc settles due to gravitational forces. First, the :math:`\\alpha` "
-"component of the gravitational settling force, :math:`v_{t,\\alpha}`, "
-"must be found by trigonometric relationships."
+"component of the gravitational settling force, :math:`v_{t,\\alpha}`, must "
+"be found by trigonometric relationships."
 msgstr ""
+"El flóculo se asienta debido a las fuerzas gravitacionales. Primero, el "
+"componente :matemático:`alfa` de la fuerza de sedimentación gravitatoria, :"
+"matemático:`v_{t,\\alfa}`, debe ser encontrado por relaciones "
+"trigonométricas."
 
 #: ../../Sedimentation/Sed_Derivations.rst:452
+#, fuzzy
 msgid "Setting :math:`v_{\\alpha} = v_{t,\\alpha}` yields,"
-msgstr ""
+msgstr "Ajustando :math:`v_{\\alpha} = v_{t,\\alpha}` rendimientos,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:458
+#, fuzzy
 msgid "Solving for :math:`S` to determine plate spacing,"
 msgstr ""
+"Resolviendo para :matemáticas:`S` para determinar el espacio de la placa,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:464
+#, fuzzy
 msgid ""
 "In this equation, we have both :math:`v_t` and :math:`D`, but we can "
-"simplify further because we know that :math:`v_t` and :math:`D` are "
-"related by the relationship shown in step 3. The goal is to ensure that "
-"flocs that settle to the plates do not roll up. We replace the unknown "
-"diameter of the floc with its terminal velocity and set that to be the "
-"capture velocity, :math:`v_c` for the plate settler."
+"simplify further because we know that :math:`v_t` and :math:`D` are related "
+"by the relationship shown in step 3. The goal is to ensure that flocs that "
+"settle to the plates do not roll up. We replace the unknown diameter of the "
+"floc with its terminal velocity and set that to be the capture velocity, :"
+"math:`v_c` for the plate settler."
 msgstr ""
+"En esta ecuación, tenemos tanto :math:`v_t` como :math:`D`, pero podemos "
+"simplificar más porque sabemos que :math:`v_t` y :math:`D` están "
+"relacionados por la relación que se muestra en el paso 3. El objetivo es "
+"asegurar que los flóculos que se asientan en las placas no se enrollen. "
+"Reemplazamos el diámetro desconocido del flóculo con su velocidad terminal y "
+"establecemos que esa sea la velocidad de captura, :math:`v_c` para el "
+"asentador de placas."
 
 #: ../../Sedimentation/Sed_Derivations.rst:470
+#, fuzzy
 msgid ""
-":math:`S_{min}` is the smallest spacing that will allow a floc with a "
-"given settling velocity to remain stationary on the slope and not be "
-"carried upward by rollup."
+":math:`S_{min}` is the smallest spacing that will allow a floc with a given "
+"settling velocity to remain stationary on the slope and not be carried "
+"upward by rollup."
 msgstr ""
+":matemáticas:`S_{min}` es el espacio más pequeño que permitirá a un flóculo "
+"con una velocidad de asentamiento dada permanecer estacionario en la "
+"pendiente y no ser llevado hacia arriba por el enrollamiento."
 
 #: ../../Sedimentation/Sed_Derivations.rst:472
+#, fuzzy
 msgid ""
+
 "The minimum spacing increases as the size of the primary particle, "
 ":math:`D_{cp}`, decreases. This is an important insight because flocs that "
 "are made of coagulant nanoparticles (no clay) are the most difficult "
@@ -753,809 +1092,1262 @@ msgid ""
 "than flocs made of clay. Coagulant nanoparticle flocs are produced when "
 "water treatment plants are used to remove dissolved organics or arsenic "
 "or when high coagulant dosages are used."
+
 msgstr ""
+"El espacio mínimo aumenta a medida que el tamaño de la partícula primaria, :"
+"matemáticas:`D_0`, disminuye. Este es un dato importante porque los flóculos "
+"que están hechos de nanopartículas coagulantes (no de arcilla) son los más "
+"difíciles de capturar. Los flóculos hechos de nanopartículas coagulantes son "
+"menos densos que los de arcilla. Los flóculos de nanopartículas coagulantes "
+"se producen cuando se utilizan plantas de tratamiento de agua para eliminar "
+"los orgánicos disueltos o el arsénico o cuando se utilizan altas dosis de "
+"coagulantes."
+
 
 #: ../../Sedimentation/Sed_Derivations.rst:476
+#, fuzzy
 msgid "5) Find the floc sedimentation velocity, :math:`v_{Slide}`:"
 msgstr ""
+"5) Encuentra la velocidad de sedimentación del flóculo, :math:`v_{Slide}`:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:477
+#, fuzzy
 msgid "Finally, we can determine :math:`v_{Slide}` by,"
-msgstr ""
+msgstr "Finalmente, podemos determinar :math:`v_{Slide}` por,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:483
+#, fuzzy
 msgid ""
 ":math:`v_{Slide}` is the terminal sedimentation velocity of the slowest-"
 "settling floc that can slide down an incline. Flocs with with terminal "
-"velocity (the slide velocity) will be held stationary on the incline "
-"because of a balance between gravitational forces and fluid drag. Flocs "
-"with a terminal velocity lower than :math:`v_{Slide}` will be carried out"
-" of the top of the settler (i.e., they will rollup) even if they settle "
-"onto the settler wall. Thus, the slide terminal velocity represents a "
-"constraint on the ability of plate settlers to capture flocs."
+"velocity (the slide velocity) will be held stationary on the incline because "
+"of a balance between gravitational forces and fluid drag. Flocs with a "
+"terminal velocity lower than :math:`v_{Slide}` will be carried out of the "
+"top of the settler (i.e., they will rollup) even if they settle onto the "
+"settler wall. Thus, the slide terminal velocity represents a constraint on "
+"the ability of plate settlers to capture flocs."
 msgstr ""
+":math:`v_{Slide}` es la velocidad de sedimentación terminal del flóculo de "
+"asentamiento más lento que puede deslizarse por una pendiente. Los flóculos "
+"con velocidad terminal (la velocidad de deslizamiento) se mantendrán "
+"estacionarios en la pendiente debido al equilibrio entre las fuerzas "
+"gravitatorias y la resistencia del fluido. Los flóculos con una velocidad "
+"terminal inferior a :math:`v_{Slide}` se llevarán a cabo desde la parte "
+"superior del colono (es decir, se enrollarán) aunque se asienten en la pared "
+"del colono. Por lo tanto, la velocidad terminal de la diapositiva representa "
+"una limitación en la capacidad de los colonos de placas para capturar "
+"flóculos."
 
 #: ../../Sedimentation/Sed_Derivations.rst:485
+#, fuzzy
 msgid ""
-"What happens if the primary particles are less dense? :math:`v_{Slide}` "
-"will increase because the particles need to be able to settle faster in "
-"order to not experience rollup."
+"What happens if the primary particles are less dense? :math:`v_{Slide}` will "
+"increase because the particles need to be able to settle faster in order to "
+"not experience rollup."
 msgstr ""
+"¿Qué pasa si las partículas primarias son menos densas? :matemáticas:"
+"`v_{Slide}` aumentará porque las partículas necesitan poder asentarse más "
+"rápido para no experimentar el rollup."
 
 #: ../../Sedimentation/Sed_Derivations.rst:495
+#, fuzzy
 msgid "Tube settler performance as a function of capture velocity ratio."
 msgstr ""
+"El rendimiento de los colonos de tubo en función de la relación de velocidad "
+"de captura."
 
 #: ../../Sedimentation/Sed_Derivations.rst:500
+#, fuzzy
 msgid "Head Loss through Plate Settlers"
-msgstr ""
+msgstr "Pérdida de cabeza por los colonos de las placas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:502
+#, fuzzy
 msgid ""
-"Flow through the sedimentation tank is controlled by head loss in an "
-"attempt to achieve flow uniformity. We have already explained that "
-":ref:`plate settler spacing impacts head loss "
-"<heading_Sed_Tank_Plate_Settlers_Head_Loss_Intro>`, but by what "
-"mathematical relationship? Will putting plate settlers closer together "
-"result in more or less head loss? This question is complicated because "
-"closer plate settlers would create more shear and head loss, but shorter "
-"plate settlers also mean that they become shorter which would decrease "
-"shear and head loss."
+"Flow through the sedimentation tank is controlled by head loss in an attempt "
+"to achieve flow uniformity. We have already explained that :ref:`plate "
+"settler spacing impacts head loss "
+"<heading_Sed_Tank_Plate_Settlers_Head_Loss_Intro>`, but by what mathematical "
+"relationship? Will putting plate settlers closer together result in more or "
+"less head loss? This question is complicated because closer plate settlers "
+"would create more shear and head loss, but shorter plate settlers also mean "
+"that they become shorter which would decrease shear and head loss."
 msgstr ""
+"El flujo a través del tanque de sedimentación es controlado por la pérdida "
+"de carga en un intento de lograr la uniformidad del flujo. Ya hemos "
+"explicado que :ref:`el espaciamiento de los sedimentadores de placas impacta "
+"la pérdida de carga <heading_Sed_Tank_Plate_Settlers_Head_Loss_Intro>`, pero "
+"¿por qué relación matemática? ¿Poner a los colonos de placas más cerca unos "
+"de otros resultará en más o menos pérdida de cabeza? Esta pregunta es "
+"complicada porque los colonos de placas más cercanos crearían más "
+"cizallamiento y pérdida de cabeza, pero los colonos de placas más cortos "
+"también significan que se hacen más cortos lo que disminuiría el "
+"cizallamiento y la pérdida de cabeza."
 
 #: ../../Sedimentation/Sed_Derivations.rst:504
+#, fuzzy
 msgid ""
-"Let's start with a force balance. Assume that there is a fully "
-"established velocity profile that is parabolic with laminar flow. The "
-"forces that we care about are shear forces on the walls of the plate "
-"settlers and the differential pressure from flow in the direction of the "
-"velocity."
+"Let's start with a force balance. Assume that there is a fully established "
+"velocity profile that is parabolic with laminar flow. The forces that we "
+"care about are shear forces on the walls of the plate settlers and the "
+"differential pressure from flow in the direction of the velocity."
 msgstr ""
+"Empecemos con un balance de fuerzas. Supongamos que hay un perfil de "
+"velocidad completamente establecido que es parabólico con flujo laminar. Las "
+"fuerzas que nos preocupan son las fuerzas de corte en las paredes de los "
+"sedimentadores de placas y la presión diferencial del flujo en la dirección "
+"de la velocidad."
 
 #: ../../Sedimentation/Sed_Derivations.rst:513
+#, fuzzy
 msgid "Velocity, shear forces, and pressure loss through plate settlers."
 msgstr ""
+"Velocidad, fuerzas de corte y pérdida de presión a través de los "
+"sedimentadores de placas."
 
 #: ../../Sedimentation/Sed_Derivations.rst:515
+#, fuzzy
 msgid ""
-"The shear forces act over the area of the two plates, resulting in "
-":math:`F_{shear} = 2 \\tau L W` where :math:`\\tau` is the viscous shear "
-"component."
+"The shear forces act over the area of the two plates, resulting in :math:"
+"`F_{shear} = 2 \\tau L W` where :math:`\\tau` is the viscous shear component."
 msgstr ""
+"Las fuerzas de cizallamiento actúan sobre el área de las dos placas, "
+"resultando en :matemáticas:`F_{shear} = 2 \\tau L W` donde :matemáticas:`"
+"\\tau` es el componente de cizallamiento viscoso."
 
 #: ../../Sedimentation/Sed_Derivations.rst:517
+#, fuzzy
 msgid ""
 "The pressure force is exerted over the entire width of the plate and the "
-"plate spacing. Pressure at the entrance of the plate settlers is "
-"different from the exit of the plate settlers by :math:`\\Delta P`. The "
-"resulting pressure force is :math:`F_{pressure} = \\Delta P W S`. So,"
+"plate spacing. Pressure at the entrance of the plate settlers is different "
+"from the exit of the plate settlers by :math:`\\Delta P`. The resulting "
+"pressure force is :math:`F_{pressure} = \\Delta P W S`. So,"
 msgstr ""
+"La fuerza de presión se ejerce sobre todo el ancho de la placa y el espacio "
+"de la placa. La presión en la entrada de los colonos de placas es diferente "
+"a la salida de los colonos de placas por :matemáticas:``Delta P``. La fuerza "
+"de presión resultante es :matemáticas:`F_{pressure} = \\Delta P W S`. Así "
+"que..,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:527
+#, fuzzy
 msgid ""
-"Dividing both sides by width, :math:`W`, and solving for :math:`\\Delta "
-"P` yields,"
+"Dividing both sides by width, :math:`W`, and solving for :math:`\\Delta P` "
+"yields,"
 msgstr ""
+"Dividiendo ambos lados por el ancho, :matemáticas:`W`, y resolviendo para :"
+"matemáticas:``Delta P`` rendimientos,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:533
+#, fuzzy
 msgid ""
 "We need to figure out what each of the terms on the right side of the "
-"equation is equal to so we can calculate :math:`\\Delta P`. Ultimlately, "
-"we need :math:`\\Delta P` to calculate head loss because :math:`h_L = "
+"equation is equal to so we can calculate :math:`\\Delta P`. Ultimlately, we "
+"need :math:`\\Delta P` to calculate head loss because :math:`h_L = "
 "\\frac{\\Delta P}{\\rho g}`."
 msgstr ""
+"Necesitamos averiguar a qué es igual cada uno de los términos en el lado "
+"derecho de la ecuación para poder calcular :matemáticas:``Delta P``. En "
+"última instancia, necesitamos :math:``Delta P`` para calcular la pérdida de "
+"cabeza porque :math:``L = \\Nfrac{\\N-Delta P}{\\N-ro g}`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:535
+#, fuzzy
 msgid ""
-":math:`\\tau =\\mu \\frac{du}{dy}`, where :math:`\\tau` is shear, "
-":math:`\\mu` is the viscosity, and :math:`\\frac{du}{dy}` is the velocity"
-" gradient. Using the Navier-Stokes equation, we can find the velocity "
-"gradient as a function of the average velocity between the plates, "
-"yielding shear based on the vertical velocity entering the plates as,"
+":math:`\\tau =\\mu \\frac{du}{dy}`, where :math:`\\tau` is shear, :math:`"
+"\\mu` is the viscosity, and :math:`\\frac{du}{dy}` is the velocity gradient. "
+"Using the Navier-Stokes equation, we can find the velocity gradient as a "
+"function of the average velocity between the plates, yielding shear based on "
+"the vertical velocity entering the plates as,"
 msgstr ""
+"donde \"matemáticas\" es el cizallamiento, \"matemáticas\" es la viscosidad "
+"y \"matemáticas\" es el gradiente de velocidad. Usando la ecuación de Navier-"
+"Stokes, podemos encontrar el gradiente de velocidad como una función de la "
+"velocidad media entre las placas, produciendo cizallamiento basado en la "
+"velocidad vertical que entra en las placas como,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:541
+#, fuzzy
 msgid ""
-":math:`L` is found using the equation for capture velocity, :math:`\\bar "
-"v_c = \\frac{S*\\bar v_{z_{Plate}}}{Lsin\\alpha cos\\alpha + S}`. Capture"
-" velocity is kept constant so we solve for :math:`L`,"
+":math:`L` is found using the equation for capture velocity, :math:`\\bar v_c "
+"= \\frac{S*\\bar v_{z_{Plate}}}{Lsin\\alpha cos\\alpha + S}`. Capture "
+"velocity is kept constant so we solve for :math:`L`,"
 msgstr ""
+":matemáticas:`L` se encuentra usando la ecuación para la velocidad de "
+"captura, :matemáticas:`\\bar v_c = \\frac{S*\\bar v_{z_{Plate}}{Lsin\\alpha "
+"cos\\alpha + S}`. La velocidad de captura se mantiene constante, así que "
+"resolvemos para :math:`L`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:547
+#, fuzzy
 msgid ""
-"Substituting :math:`\\tau` and :math:`L` into the equation for "
-":math:`\\Delta P`,"
+"Substituting :math:`\\tau` and :math:`L` into the equation for :math:`"
+"\\Delta P`,"
 msgstr ""
+"Sustituyendo :math:``tau`` y :math:``L`` en la ecuación por :math:``Delta "
+"P``,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:553
+#, fuzzy
 msgid ""
-"Now that we have an equation for :math:`\\Delta P`, we can solve for head"
-" loss."
+"Now that we have an equation for :math:`\\Delta P`, we can solve for head "
+"loss."
 msgstr ""
+"Ahora que tenemos una ecuación para :matemáticas:``Delta P``, podemos "
+"resolver la pérdida de cabeza."
 
 #: ../../Sedimentation/Sed_Derivations.rst:563
+#, fuzzy
 msgid ""
-"Recall that head loss through plate settlers is really small, on the "
-"order of micrometers, :math:`\\mu m`. We are interested in understanding "
-"how the head loss relates to velocity, through the relation :math:`v = "
-"\\sqrt{2gh}`. The resulting two plots show how head loss and velocity "
-"relate to plate settlers (see "
-":numref:`figure_plate_settler_headloss_spacing`)."
+"Recall that head loss through plate settlers is really small, on the order "
+"of micrometers, :math:`\\mu m`. We are interested in understanding how the "
+"head loss relates to velocity, through the relation :math:`v = \\sqrt{2gh}`. "
+"The resulting two plots show how head loss and velocity relate to plate "
+"settlers (see :numref:`figure_plate_settler_headloss_spacing`)."
 msgstr ""
+"Recordemos que la pérdida de cabeza por los colonos de placas es muy "
+"pequeña, del orden de los micrómetros, :matemáticas:`mu m`. Estamos "
+"interesados en entender cómo la pérdida de cabeza se relaciona con la "
+"velocidad, a través de la relación :matemática:`v = \\sqrt{2gh}`. Las dos "
+"gráficas resultantes muestran cómo la pérdida de carga y la velocidad se "
+"relacionan con los sedimentadores de placas (ver :numref:"
+"`figure_plate_settler_headloss_spacing`)."
 
 #: ../../Sedimentation/Sed_Derivations.rst:569
+#, fuzzy
 msgid "Floc Blanket Design"
-msgstr ""
+msgstr "Diseño de la manta Floc"
 
 #: ../../Sedimentation/Sed_Derivations.rst:572
+#, fuzzy
 msgid "Floc Blanket Collision Potential"
-msgstr ""
+msgstr "Potencial de colisión de la manta Floc"
 
 #: ../../Sedimentation/Sed_Derivations.rst:573
+#, fuzzy
 msgid ""
-"We have learned that growing a floc blanket leads to better sedimentation"
-" tank performance. One explanation for the improved performance is that "
-"the floc blanket acts like an additional flocculator because there are "
+"We have learned that growing a floc blanket leads to better sedimentation "
+"tank performance. One explanation for the improved performance is that the "
+"floc blanket acts like an additional flocculator because there are "
 "additional collisions between particles. To understand the nature and "
 "significance of these additional collisions, we can calculate the floc "
-"blanket velocity gradients and residence time to find collision "
-"potential, :math:`G\\theta`. In a floc blanket, we expect that :math:`G` "
-"is small; however, :math:`\\theta` is large, which means that "
-":math:`G\\theta` in the floc blanket may be significant."
+"blanket velocity gradients and residence time to find collision potential, :"
+"math:`G\\theta`. In a floc blanket, we expect that :math:`G` is small; "
+"however, :math:`\\theta` is large, which means that :math:`G\\theta` in the "
+"floc blanket may be significant."
 msgstr ""
+"Hemos aprendido que el cultivo de una manta de flóculos conduce a un mejor "
+"rendimiento del tanque de sedimentación. Una explicación del mejor "
+"rendimiento es que la manta de flóculos actúa como un floculador adicional "
+"porque hay colisiones adicionales entre las partículas. Para entender la "
+"naturaleza y el significado de estas colisiones adicionales, podemos "
+"calcular los gradientes de velocidad de la manta de flóculo y el tiempo de "
+"residencia para encontrar el potencial de colisión, :matemáticas:`G\\theta`. "
+"En una manta de flóculos, esperamos que :matemáticas:`G` sea pequeña; sin "
+"embargo, :matemáticas:``theta` es grande, lo que significa que :matemáticas:"
+"``G\\theta` en la manta de flóculos puede ser significativo."
 
 #: ../../Sedimentation/Sed_Derivations.rst:575
+#, fuzzy
 msgid ""
 "First, we will find :math:`\\theta`. If we simplify the bottom of the "
-"sedimentation tank and approximate it as a simple rectangle, we can "
-"easily determine the residence time. If the depth of the floc blanket is "
-"1 m and the upflow velocity is 1 mm/s, we determine that"
+"sedimentation tank and approximate it as a simple rectangle, we can easily "
+"determine the residence time. If the depth of the floc blanket is 1 m and "
+"the upflow velocity is 1 mm/s, we determine that"
 msgstr ""
+"Primero, encontraremos :matemáticas:``theta``. Si simplificamos el fondo del "
+"tanque de sedimentación y lo aproximamos como un simple rectángulo, podemos "
+"determinar fácilmente el tiempo de residencia. Si la profundidad del manto "
+"de flóculos es de 1 m y la velocidad de ascenso es de 1 mm/s, determinamos "
+"que"
 
 #: ../../Sedimentation/Sed_Derivations.rst:581
+#, fuzzy
 msgid ""
 "Next, we will find :math:`G`. Before we begin, consider why there is a "
-"velocity gradient in the floc blanket. What causes it? Water is flowing "
-"up through the floc blanket while the flocs in the floc blanket are being"
-" pulled down by gravity. The differential velocities are caused by "
-"particles settling and rising at different velocities relative to the "
-"fluid due to drag, gravity, and fluid flow. In the fluid around each "
-"particle, there is a velocity gradient and shear between the particles "
-"and the surrounding fluid."
+"velocity gradient in the floc blanket. What causes it? Water is flowing up "
+"through the floc blanket while the flocs in the floc blanket are being "
+"pulled down by gravity. The differential velocities are caused by particles "
+"settling and rising at different velocities relative to the fluid due to "
+"drag, gravity, and fluid flow. In the fluid around each particle, there is a "
+"velocity gradient and shear between the particles and the surrounding fluid."
 msgstr ""
+"A continuación, encontraremos :matemáticas:`G`. Antes de empezar, considera "
+"por qué hay un gradiente de velocidad en la manta de flóculos. ¿Qué lo "
+"causa? El agua fluye hacia arriba a través de la manta de flóculos mientras "
+"que los flóculos en la manta de flóculos son arrastrados hacia abajo por la "
+"gravedad. Las velocidades diferenciales son causadas por las partículas que "
+"se asientan y se elevan a diferentes velocidades en relación con el fluido "
+"debido a la resistencia, la gravedad y el flujo del fluido. En el fluido "
+"alrededor de cada partícula, hay un gradiente de velocidad y un "
+"cizallamiento entre las partículas y el fluido circundante."
 
 #: ../../Sedimentation/Sed_Derivations.rst:583
+#, fuzzy
 msgid ""
-"Entering the sedimentation tank, there is a large range of particle sizes"
-" in the water. The range exists from big flocs made up with hundreds of "
-"millions of clay particles to primary particles that made it through "
-"flocculation without successful collision. These differentially sized "
-"particles create velocity gradients as the particles and flocs are acted "
-"on by both settling forces and upward fluid flow forces."
+"Entering the sedimentation tank, there is a large range of particle sizes in "
+"the water. The range exists from big flocs made up with hundreds of millions "
+"of clay particles to primary particles that made it through flocculation "
+"without successful collision. These differentially sized particles create "
+"velocity gradients as the particles and flocs are acted on by both settling "
+"forces and upward fluid flow forces."
 msgstr ""
+"Al entrar en el tanque de sedimentación, hay una gran variedad de tamaños de "
+"partículas en el agua. El rango existe desde grandes flóculos formados por "
+"cientos de millones de partículas de arcilla hasta partículas primarias que "
+"pasaron por la floculación sin llegar a colisionar. Estas partículas de "
+"diferente tamaño crean gradientes de velocidad a medida que las partículas y "
+"los flóculos son actuados tanto por las fuerzas de sedimentación como por "
+"las fuerzas ascendentes del flujo de fluido."
 
 #: ../../Sedimentation/Sed_Derivations.rst:585
+#, fuzzy
 msgid ""
-"Large flocs provide velocity gradients that can potentially cause "
-"collisions between other small particles that we are still trying to "
-"capture. Through our derivation to determine :math:`G` in a floc blanket,"
-" we will also test an assumption. We will assume that primary particles "
-"coming into the floc blanket are not interacting with large flocs. "
-"Instead,  we will assume that the the fluid shear and differential "
-"velocities promote interactions between two primary particles."
+"Large flocs provide velocity gradients that can potentially cause collisions "
+"between other small particles that we are still trying to capture. Through "
+"our derivation to determine :math:`G` in a floc blanket, we will also test "
+"an assumption. We will assume that primary particles coming into the floc "
+"blanket are not interacting with large flocs. Instead,  we will assume that "
+"the the fluid shear and differential velocities promote interactions between "
+"two primary particles."
 msgstr ""
+"Los grandes flóculos proveen gradientes de velocidad que pueden "
+"potencialmente causar colisiones entre otras pequeñas partículas que aún "
+"estamos tratando de capturar. A través de nuestra derivación para "
+"determinar :matemáticas:`G` en una manta de flóculos, también probaremos una "
+"suposición. Asumiremos que las partículas primarias que entran en el manto "
+"de flóculos no interactúan con los grandes flóculos. En su lugar, asumiremos "
+"que el cizallamiento del fluido y las velocidades diferenciales promueven "
+"interacciones entre dos partículas primarias."
 
 #: ../../Sedimentation/Sed_Derivations.rst:587
+#, fuzzy
 msgid ""
 "So, how can we calculate the velocity gradient? In flocculators, we "
 "determined :math:`G` from head loss and residence time. In sedimentation "
-"tanks, we determine :math:`G` the same way. Let's calculate the head loss"
-" through the floc blanket. To do this, we need to know the density of the"
-" floc blanket and we need to know the relationship between head loss a "
+"tanks, we determine :math:`G` the same way. Let's calculate the head loss "
+"through the floc blanket. To do this, we need to know the density of the "
+"floc blanket and we need to know the relationship between head loss a "
 "fluidized bed and density of the bed."
 msgstr ""
+"Entonces, ¿cómo podemos calcular el gradiente de velocidad? En los "
+"floculadores, determinamos :matemáticas:`G` a partir de la pérdida de cabeza "
+"y el tiempo de residencia. En los tanques de sedimentación, determinamos :"
+"matemáticas:`G` de la misma manera. Vamos a calcular la pérdida de carga a "
+"través de la manta de flóculos. Para ello, necesitamos saber la densidad de "
+"la manta de flóculos y la relación entre la pérdida de carga en un lecho "
+"fluidizado y la densidad del lecho."
 
 #: ../../Sedimentation/Sed_Derivations.rst:590
+#, fuzzy
 msgid "Floc blanket density"
-msgstr ""
+msgstr "Densidad de la manta de flocalización"
 
 #: ../../Sedimentation/Sed_Derivations.rst:591
+#, fuzzy
 msgid ""
-"To calculate the density of the floc blanket at steady-state, we will use"
-" principles of mass and volume conservation."
+"To calculate the density of the floc blanket at steady-state, we will use "
+"principles of mass and volume conservation."
 msgstr ""
+"Para calcular la densidad del manto de flóculos en estado estable, usaremos "
+"los principios de conservación de masa y volumen."
 
 #: ../../Sedimentation/Sed_Derivations.rst:601
+#, fuzzy
 msgid ""
-"We will start by finding the mass of clay and the mass of water in the "
-"floc blanket, where:"
+"We will start by finding the mass of clay and the mass of water in the floc "
+"blanket, where:"
 msgstr ""
+"Empezaremos por encontrar la masa de arcilla y la masa de agua en el manto "
+"de flóculos, donde:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:603
+#, fuzzy
 msgid ":math:`C_{clay} =` concentration of clay in the floc blanket"
-msgstr ""
+msgstr ":matemáticas:`C_{clay} =` concentración de arcilla en la manta de floc"
 
 #: ../../Sedimentation/Sed_Derivations.rst:604
+#, fuzzy
 msgid ":math:`\\rlap{--}V_{fb} =` volume of floc blanket"
-msgstr ""
+msgstr ":matemáticas:`\\rlap{--}V_{fb} =` volumen de la manta de flóculos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:605
+#, fuzzy
 msgid ":math:`\\rho_{clay} =` density of clay"
-msgstr ""
+msgstr ":matemáticas:`\\rho_{clay} =` densidad de la arcilla"
 
 #: ../../Sedimentation/Sed_Derivations.rst:606
+#, fuzzy
 msgid ":math:`\\rho_{H_2O} =` density of water"
-msgstr ""
+msgstr ":matemáticas:`\\rho_{H_2O} =` densidad del agua"
 
 #: ../../Sedimentation/Sed_Derivations.rst:607
+#, fuzzy
 msgid ":math:`\\rho_{fb} =` density of floc blanket"
-msgstr ""
+msgstr ":matemáticas:`\\rho_{fb} =` densidad de la manta de flóculos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:609
+#, fuzzy
 msgid ""
-"The mass of clay in the floc blanket is concentration multiplied by "
-"volume, shown by :math:`m_{clay} = C_{clay}\\rlap{--}V_{fb}`"
+"The mass of clay in the floc blanket is concentration multiplied by volume, "
+"shown by :math:`m_{clay} = C_{clay}\\rlap{--}V_{fb}`"
 msgstr ""
+"La masa de arcilla en el manto de flóculos es la concentración multiplicada "
+"por el volumen, mostrado por :matemáticas:`m_{clay} = C_{clay}\\rlap{--}"
+"V_{fb}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:611
+#, fuzzy
 msgid ""
-"The mass of water in the floc blanket is related to the volume fraction "
-"of the floc blanket that is occupied by clay, "
-":math:`\\frac{C_{clay}}{\\rho_{clay}}`, whic is a very small number. "
-":math:`\\left( 1 - \\frac{C_{clay}}{\\rho_{clay}} \\right)` is the "
-"fraction of the floc blanket that is occupied by water, also called the "
-"water volume fraction. So, :math:`m_{H_2O} = \\left( 1 - "
-"\\frac{C_{clay}}{\\rho_{clay}} \\right) \\rho_{H_2O} \\rlap{--}V_{fb}`."
+"The mass of water in the floc blanket is related to the volume fraction of "
+"the floc blanket that is occupied by clay, :math:`\\frac{C_{clay}}"
+"{\\rho_{clay}}`, whic is a very small number. :math:`\\left( 1 - "
+"\\frac{C_{clay}}{\\rho_{clay}} \\right)` is the fraction of the floc blanket "
+"that is occupied by water, also called the water volume fraction. So, :math:"
+"`m_{H_2O} = \\left( 1 - \\frac{C_{clay}}{\\rho_{clay}} \\right) \\rho_{H_2O} "
+"\\rlap{--}V_{fb}`."
 msgstr ""
+"La masa de agua en el manto de flóculo está relacionada con la fracción de "
+"volumen del manto de flóculo que está ocupada por la arcilla, :matemáticas:"
+"`frac{{{{clay}}{rho_{clay}}, que es un número muy pequeño. :matemáticas:`\\N-"
+"izquierda( 1 - \\frac{C_{clay}{rho_{clay}} {\\a6}} {\\a6}}es la fracción del "
+"manto de flóculo que está ocupada por el agua, también llamada la fracción "
+"de volumen de agua. Así que, :matemáticas:`m_{H_2O} = \\Nizquierda( 1 - "
+"\\Nfrac{C_{clay}}{\\Nrho_{clay}} {\\i1}derecha} \\ ~ - V_{fb}`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:613
+#, fuzzy
 msgid ""
-"Now, we know how much clay and water is in our system. The density of the"
-" system, neglecting the addition of coagulant, is,"
+"Now, we know how much clay and water is in our system. The density of the "
+"system, neglecting the addition of coagulant, is,"
 msgstr ""
+"Ahora sabemos cuánta arcilla y agua hay en nuestro sistema. La densidad del "
+"sistema, sin tener en cuenta la adición de coagulante, es,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:619
+#, fuzzy
 msgid "Substituting for :math:`m_{clay}` and :math:`m_{H_2O}`,"
-msgstr ""
+msgstr "Sustituyendo :math:`m_{clay}` y :math:`m_{H_2O}`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:625
+#, fuzzy
 msgid ""
-"This can be rearranged to yield the following equation derived from first"
-" principles,"
+"This can be rearranged to yield the following equation derived from first "
+"principles,"
 msgstr ""
+"Esto se puede reordenar para obtener la siguiente ecuación derivada de los "
+"primeros principios,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:631
+#, fuzzy
 msgid ""
 "AguaClara researchers in the lab developed an empirical equation through "
-"experimental studies to calculate floc blanket density. They determined "
-"that,"
+"experimental studies to calculate floc blanket density. They determined that,"
 msgstr ""
+"Los investigadores de AguaClara en el laboratorio desarrollaron una ecuación "
+"empírica a través de estudios experimentales para calcular la densidad de la "
+"manta de flóculos. Ellos determinaron que,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:636
+#, fuzzy
 msgid ""
-"Comparing the empirical equation to the one determined by first "
-"principles, it is clear that the coefficient,"
+"Comparing the empirical equation to the one determined by first principles, "
+"it is clear that the coefficient,"
 msgstr ""
+"Comparando la ecuación empírica con la determinada por los primeros "
+"principios, está claro que el coeficiente,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:643
+#, fuzzy
 msgid "Floc blanket head loss"
-msgstr ""
+msgstr "Pérdida de la cabeza de la manta de Floc"
 
 #: ../../Sedimentation/Sed_Derivations.rst:645
+#, fuzzy
 msgid ""
-"Now that we can calculate the density of the floc blanket, we can "
-"calculate the head loss through the floc blanket. This topic will be "
-"discussed further in the chapter on filtration. For now, all you need to "
-"know is that density can be related to head loss in the floc blanket "
-"through the height of the floc blanket, :math:`H_{fb}`, and the densities"
-" of the floc blanket and water."
+"Now that we can calculate the density of the floc blanket, we can calculate "
+"the head loss through the floc blanket. This topic will be discussed further "
+"in the chapter on filtration. For now, all you need to know is that density "
+"can be related to head loss in the floc blanket through the height of the "
+"floc blanket, :math:`H_{fb}`, and the densities of the floc blanket and "
+"water."
 msgstr ""
+"Ahora que podemos calcular la densidad de la manta de flóculos, podemos "
+"calcular la pérdida de carga a través de la manta de flóculos. Este tema se "
+"discutirá más adelante en el capítulo sobre la filtración. Por ahora, todo "
+"lo que necesitas saber es que la densidad puede estar relacionada con la "
+"pérdida de carga en la manta de flóculos a través de la altura de la manta "
+"de flóculos, :math:`H_{fb}`, y las densidades de la manta de flóculos y del "
+"agua."
 
 #: ../../Sedimentation/Sed_Derivations.rst:651
+#, fuzzy
 msgid ""
-"There will be a small amount of head loss through the floc blanket "
-"because the density of the floc blanket is greater than the density of "
-"water by only a little bit. Remember that "
-":math:`\\frac{C_{clay}}{\\rho_{clay}}` is really just the fraction of the"
-" floc blanket that is occupied by clay."
+"There will be a small amount of head loss through the floc blanket because "
+"the density of the floc blanket is greater than the density of water by only "
+"a little bit. Remember that :math:`\\frac{C_{clay}}{\\rho_{clay}}` is really "
+"just the fraction of the floc blanket that is occupied by clay."
 msgstr ""
+"Habrá una pequeña cantidad de pérdida de cabeza a través de la manta de "
+"flóculos porque la densidad de la manta de flóculos es mayor que la densidad "
+"del agua por sólo un poco. Recuerden que la :matemática:`frac{{{clay}} "
+"{\\rho_{clay}es en realidad sólo la fracción de la manta de flóculo que está "
+"ocupada por la arcilla."
 
 #: ../../Sedimentation/Sed_Derivations.rst:653
+#, fuzzy
 msgid ""
-"Plugging in the equation for :math:`\\rho_{fb}` and solving for "
-":math:`h_L`,"
+"Plugging in the equation for :math:`\\rho_{fb}` and solving for :math:`h_L`,"
 msgstr ""
+"Conectando la ecuación para :math:`rho_{fb}` y resolviendo para :math:`h_L`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:660
+#, fuzzy
 msgid "Floc blanket velocity gradient and collision potential"
 msgstr ""
+"El gradiente de velocidad de la manta de Floc y el potencial de colisión"
 
 #: ../../Sedimentation/Sed_Derivations.rst:662
+#, fuzzy
 msgid ""
-"With the equation for :math:`h_L`, we can calculate :math:`G`. We will "
-"also use the other equations we developed in the :ref:`chapter on "
-"flocculation <heading_Hydraulic_Flocculation_Design>`."
+"With the equation for :math:`h_L`, we can calculate :math:`G`. We will also "
+"use the other equations we developed in the :ref:`chapter on flocculation "
+"<heading_Hydraulic_Flocculation_Design>`."
 msgstr ""
+"Con la ecuación para :math:`h_L`, podemos calcular :math:`G`. También "
+"usaremos las otras ecuaciones que desarrollamos en el :ref:`capítulo sobre "
+"floculación <heading_Hydraulic_Flocculation_Design>`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:672
+#, fuzzy
 msgid ""
-"We will start by determining :math:`\\varepsilon` by calculating "
-":math:`\\theta` using the porosity of the floc blanket, "
-":math:`\\phi_{fb}`,"
+"We will start by determining :math:`\\varepsilon` by calculating :math:`"
+"\\theta` using the porosity of the floc blanket, :math:`\\phi_{fb}`,"
 msgstr ""
+"Empezaremos determinando :matemáticas:`varepsilon` calculando :matemáticas:"
+"``la porosidad de la manta de flóculos, :matemáticas:``phi_{fb}`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:678
+#, fuzzy
 msgid "Plugging :math:`\\theta` into :math:`\\varepsilon` yields"
-msgstr ""
+msgstr "Conectando :math:``theta`` a :math:``varepsilon`` rendimientos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:684
+#, fuzzy
 msgid "Substituting into our equation for :math:`G`,"
-msgstr ""
+msgstr "Sustituyendo en nuestra ecuación por :matemáticas:`G`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:690
+#, fuzzy
 msgid "Using our equation for :math:`h_L`,"
-msgstr ""
+msgstr "Usando nuestra ecuación para :math:`h_L`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:696
+#, fuzzy
 msgid ":math:`\\phi_{fb} \\approx 1` and is a function of :math:`C_{clay}`"
 msgstr ""
+":matemáticas:`\\phi_{fb} \\aproximadamente 1` y es una función de :"
+"matemáticas:`C_{clay}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:698
+#, fuzzy
 msgid ""
 "We can plot our results for :math:`G_{CS}` over a range of typical floc "
-"blanket concentrations, which is around 1 - 5 g/L. We find that "
-":math:`G_{CS}` ranges from 2 to 6 Hz. Recall that for flocculator design,"
-" we get anywhere from 70 to several hundred Hz. The :math:`G_{CS}` "
-"provided by the floc blanket is much smaller than :math:`G_{CS}` provided"
-" by the flocculator. This is an important point because in the low "
-":math:`G_{CS}` environment of the floc blanket where there are low levels"
-" of energy dissipation, we can grow larger flocs. The flocs are "
-"experiencing less shear so they can grow close to millimeter size."
+"blanket concentrations, which is around 1 - 5 g/L. We find that :math:`G_{CS}"
+"` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere "
+"from 70 to several hundred Hz. The :math:`G_{CS}` provided by the floc "
+"blanket is much smaller than :math:`G_{CS}` provided by the flocculator. "
+"This is an important point because in the low :math:`G_{CS}` environment of "
+"the floc blanket where there are low levels of energy dissipation, we can "
+"grow larger flocs. The flocs are experiencing less shear so they can grow "
+"close to millimeter size."
 msgstr ""
+"Podemos graficar nuestros resultados para :math:`G_{CS}` sobre un rango de "
+"concentraciones típicas de manta de flóculos, que es alrededor de 1 - 5 g/L. "
+"Encontramos que :math:`G_{CS}` tiene un rango de 2 a 6 Hz. Recordemos que "
+"para el diseño del floculador, obtenemos entre 70 y varios cientos de Hz. "
+"La :matemática:`G_{CS}` proporcionada por la manta de floc es mucho más "
+"pequeña que la :matemática:`G_{CS}` proporcionada por el floculador. Este es "
+"un punto importante porque en el entorno bajo de :math:`G_{CS}` de la manta "
+"de flóculos donde hay bajos niveles de disipación de energía, podemos hacer "
+"crecer flóculos más grandes. Los flóculos están experimentando menos "
+"cizallamiento para que puedan crecer cerca de un tamaño milimétrico."
 
 #: ../../Sedimentation/Sed_Derivations.rst:700
+#, fuzzy
 msgid ""
-"We can plot our results for :math:`G_{CS}\\theta` by multiplying "
-":math:`G_{CS}` by the residence time we found earlier, :math:`\\theta = "
-"1000 s`. The result is that :math:`Gv\\theta` ranges from 2,000 to 6,000."
-" Compare this to the :math:`G_{CS}\\theta = 20,000` for the flocculator "
-"used in experiments (`Garland et al., 2017 "
-"<https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_)."
+"We can plot our results for :math:`G_{CS}\\theta` by multiplying :math:"
+"`G_{CS}` by the residence time we found earlier, :math:`\\theta = 1000 s`. "
+"The result is that :math:`Gv\\theta` ranges from 2,000 to 6,000. Compare "
+"this to the :math:`G_{CS}\\theta = 20,000` for the flocculator used in "
+"experiments (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/"
+"ees.2016.0174>`_)."
 msgstr ""
+" El resultado es que :math:`Gv\\theta` va de 2.000 a 6.000. Compara esto con "
+"la :math:`G_{CS}\\theta = 20,000` del floculador usado en los experimentos "
+"(`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/"
+"ees.2016.0174>`__)."
 
 #: ../../Sedimentation/Sed_Derivations.rst:709
+#, fuzzy
 msgid ""
 "Lab setup for flocculator, half-sedimentation tank, and plate settler "
 "testing."
 msgstr ""
+"Configuración del laboratorio para el floculador, el tanque de "
+"semisedimentación y la prueba del sedimentador de placas."
 
 #: ../../Sedimentation/Sed_Derivations.rst:718
+#, fuzzy
 msgid ""
 "Velocity gradient and collision potential as a function of floc blanket "
 "concentration."
 msgstr ""
+"Gradiente de velocidad y potencial de colisión en función de la "
+"concentración de la manta de flóculos."
 
 #: ../../Sedimentation/Sed_Derivations.rst:720
+#, fuzzy
 msgid ""
-"How does such a small :math:`G_{CS}\\theta` cause such a large reduction "
-"in turbidity? The question we are really asking is, is there anything "
-"special about the :math:`G_{CS}\\theta` provided by the floc blanket "
-"compared to the :math:`G_{CS}\\theta` provided by the flocculator? If so,"
-" what is the difference and why is it so beneficial?"
+"How does such a small :math:`G_{CS}\\theta` cause such a large reduction in "
+"turbidity? The question we are really asking is, is there anything special "
+"about the :math:`G_{CS}\\theta` provided by the floc blanket compared to "
+"the :math:`G_{CS}\\theta` provided by the flocculator? If so, what is the "
+"difference and why is it so beneficial?"
 msgstr ""
+"¿Cómo es que una :matemática tan pequeña:`G_{CS}\\Ncausa una reducción tan "
+"grande de la turbidez? La pregunta que realmente estamos haciendo es, ¿hay "
+"algo especial sobre la :matemática:`G_{CS}la que proporciona la manta de "
+"floc en comparación con la :matemática:`G_{CS} {\\a6} {\\a6} proporcionada "
+"por el floculador? Si es así, ¿cuál es la diferencia y por qué es tan "
+"beneficioso?"
 
 #: ../../Sedimentation/Sed_Derivations.rst:722
+#, fuzzy
 msgid ""
 "Experimental data helps explain this. Two systems were set up: one had a "
-"flocculator where :math:`G_{CS}\\theta = 20,000` with a floc blanket "
-"where :math:`G_{CS}\\theta = 4,000`; the other just had a flocculator "
-"where :math:`G_{CS}\\theta = 24,000`. Using the same influent water "
-"quality and coagulant dosing, we find that the first system with the "
-"flocculator and floc blanket performed better than the second system, "
-"even though the overall :math:`G_{CS}\\theta` values were the same."
+"flocculator where :math:`G_{CS}\\theta = 20,000` with a floc blanket where :"
+"math:`G_{CS}\\theta = 4,000`; the other just had a flocculator where :math:"
+"`G_{CS}\\theta = 24,000`. Using the same influent water quality and "
+"coagulant dosing, we find that the first system with the flocculator and "
+"floc blanket performed better than the second system, even though the "
+"overall :math:`G_{CS}\\theta` values were the same."
 msgstr ""
+"Los datos experimentales ayudan a explicar esto. Se establecieron dos "
+"sistemas: uno tenía un floculador donde :matemáticas:`G_{CS}\\theta = "
+"20.000` con una manta de floc donde :matemáticas:`G_{CS}\\theta = 4.000`; el "
+"otro sólo tenía un floculador donde :matemáticas:`G_{CS}\\theta = 24.000`. "
+"Usando la misma calidad del agua de influencia y la dosificación del "
+"coagulante, encontramos que el primer sistema con el floculador y la manta "
+"de floc funcionó mejor que el segundo sistema, a pesar de que los valores "
+"totales :math:`G_{CS}\\theta` eran los mismos."
 
 #: ../../Sedimentation/Sed_Derivations.rst:724
+#, fuzzy
 msgid ""
-"To understand this, we have to review assumptions in the derivation for "
-":math:`G_{CS}`. Recall our assumption that fluid shear promotes the "
-"collision of two primary particles instead of the collision of primary "
-"particles with existing, large flocs. If our assumption was true, we "
-"would expect to see no difference between our two experimental setups. "
-"However, because we know that the two experimental setups did have "
-"different results, our assumption must be false because the assumption "
-"does not explain or account for these differences. There must be another "
-"mechanism occurring to explain why the floc blanket greatly improves "
-"treatment quality. This leads us to believe that the flocs in the floc "
-"blanket must be more involved than simply providing shear and velocity "
-"gradients; they must be involved in some collisions with the small "
-"particles coming through the floc blanket."
+"To understand this, we have to review assumptions in the derivation for :"
+"math:`G_{CS}`. Recall our assumption that fluid shear promotes the collision "
+"of two primary particles instead of the collision of primary particles with "
+"existing, large flocs. If our assumption was true, we would expect to see no "
+"difference between our two experimental setups. However, because we know "
+"that the two experimental setups did have different results, our assumption "
+"must be false because the assumption does not explain or account for these "
+"differences. There must be another mechanism occurring to explain why the "
+"floc blanket greatly improves treatment quality. This leads us to believe "
+"that the flocs in the floc blanket must be more involved than simply "
+"providing shear and velocity gradients; they must be involved in some "
+"collisions with the small particles coming through the floc blanket."
 msgstr ""
+"Para entender esto, tenemos que revisar las suposiciones en la derivación "
+"para :math:`G_{CS}`. Recordemos nuestra suposición de que la cizalla de los "
+"fluidos promueve la colisión de dos partículas primarias en lugar de la "
+"colisión de las partículas primarias con los grandes flóculos existentes. Si "
+"nuestra suposición fuera cierta, esperaríamos no ver ninguna diferencia "
+"entre nuestras dos configuraciones experimentales. Sin embargo, como sabemos "
+"que los dos montajes experimentales tuvieron resultados diferentes, nuestra "
+"suposición debe ser falsa porque la suposición no explica o explica estas "
+"diferencias. Tiene que haber otro mecanismo que explique por qué la manta de "
+"flóculos mejora enormemente la calidad del tratamiento. Esto nos lleva a "
+"creer que los flóculos en la capa de flóculos deben estar más involucrados "
+"que simplemente proporcionar gradientes de cizallamiento y velocidad; deben "
+"estar involucrados en algunas colisiones con las pequeñas partículas que "
+"atraviesan la capa de flóculos."
 
 #: ../../Sedimentation/Sed_Derivations.rst:726
+#, fuzzy
 msgid "This highlights an important distinction:"
-msgstr ""
+msgstr "Esto pone de relieve una importante distinción:"
 
 #: ../../Sedimentation/Sed_Derivations.rst:728
+#, fuzzy
 msgid ""
-"The model created by the original derivation assumption would suggests "
-"that flocs in the floc blanket are inert - simply occupying space and "
-"causing there to be head loss in the floc blanket - without being "
-"involved in any collisions. This model is disproved through the "
-"experimental analysis of the two experimental setups."
+"The model created by the original derivation assumption would suggests that "
+"flocs in the floc blanket are inert - simply occupying space and causing "
+"there to be head loss in the floc blanket - without being involved in any "
+"collisions. This model is disproved through the experimental analysis of the "
+"two experimental setups."
 msgstr ""
+"El modelo creado por el supuesto de derivación original sugeriría que los "
+"flóculos de la manta de flóculos son inertes - simplemente ocupando espacio "
+"y causando que haya pérdida de cabeza en la manta de flóculos - sin estar "
+"involucrados en ninguna colisión. Este modelo es refutado a través del "
+"análisis experimental de las dos configuraciones experimentales."
 
 #: ../../Sedimentation/Sed_Derivations.rst:729
+#, fuzzy
 msgid ""
-"The model created after the analysis of experimental results suggests "
-"that flocs in the floc blanket are not inert - they are involved in "
-"collisions with small particles entering the floc blanket - and are "
-"growing in size. The model is supported through the experimental "
-"analysis."
+"The model created after the analysis of experimental results suggests that "
+"flocs in the floc blanket are not inert - they are involved in collisions "
+"with small particles entering the floc blanket - and are growing in size. "
+"The model is supported through the experimental analysis."
 msgstr ""
+"El modelo creado después del análisis de los resultados experimentales "
+"sugiere que los flóculos en la manta de flóculos no son inertes - están "
+"involucrados en colisiones con pequeñas partículas que entran en la manta de "
+"flóculos - y están creciendo en tamaño. El modelo se apoya en el análisis "
+"experimental."
 
 #: ../../Sedimentation/Sed_Derivations.rst:734
+#, fuzzy
 msgid "Flocculator and Floc Blanket Paradox"
-msgstr ""
+msgstr "La paradoja del floculador y la manta de floculación"
 
 #: ../../Sedimentation/Sed_Derivations.rst:736
+#, fuzzy
 msgid ""
 "We now have a very interesting apparent contradiction between our "
-"conclusions about flocculation and floc blankets. We previously concluded"
-" that primary particles do not collide with and attach to flocs in "
+"conclusions about flocculation and floc blankets. We previously concluded "
+"that primary particles do not collide with and attach to flocs in "
 "flocculators. This assumption is required to explain experimental "
 "observations. Indeed, if primary particles could attach to flocs in a "
-"flocculator, then high turbidity events with appropriate coagulant "
-"dosages should result in super performance because there would be so many"
-" opportunities for collisions between large flocs and primary particles. "
-"This is not what we observe."
+"flocculator, then high turbidity events with appropriate coagulant dosages "
+"should result in super performance because there would be so many "
+"opportunities for collisions between large flocs and primary particles. This "
+"is not what we observe."
 msgstr ""
+"Ahora tenemos una aparente contradicción muy interesante entre nuestras "
+"conclusiones sobre la floculación y las mantas de floc. Anteriormente "
+"concluimos que las partículas primarias no colisionan y se adhieren a los "
+"flóculos en los floculadores. Esta suposición es necesaria para explicar las "
+"observaciones experimentales. De hecho, si las partículas primarias pudieran "
+"adherirse a los flóculos en un floculador, entonces los eventos de alta "
+"turbidez con dosis adecuadas de coagulantes deberían dar lugar a un súper "
+"rendimiento porque habría muchas oportunidades de colisiones entre grandes "
+"flóculos y partículas primarias. Esto no es lo que observamos."
 
 #: ../../Sedimentation/Sed_Derivations.rst:738
+#, fuzzy
 msgid ""
 "The contradiction is that now we conclude that primary particles must be "
-"attaching to flocs in the floc blanket! Both of these conclusions are "
-"based on a combination of experimental measurements and careful "
-"application of models. If these apparently contradictory conclusions are "
-"both correct, then there must be some fundamental difference between the "
-"particle interactions in flocculators and floc blankets."
+"attaching to flocs in the floc blanket! Both of these conclusions are based "
+"on a combination of experimental measurements and careful application of "
+"models. If these apparently contradictory conclusions are both correct, then "
+"there must be some fundamental difference between the particle interactions "
+"in flocculators and floc blankets."
 msgstr ""
+"La contradicción es que ahora concluimos que las partículas primarias deben "
+"adherirse a los flóculos en la manta de flóculos Ambas conclusiones se basan "
+"en una combinación de mediciones experimentales y una cuidadosa aplicación "
+"de modelos. Si estas conclusiones aparentemente contradictorias son ambas "
+"correctas, entonces debe haber alguna diferencia fundamental entre las "
+"interacciones de las partículas en los floculadores y los mantos de flóculos."
 
 #: ../../Sedimentation/Sed_Derivations.rst:740
+#, fuzzy
 msgid ""
 "In both environments the flow around the flocs is dominated by viscous "
-"forces. The source of the fluid deformation is different in these two "
-"flows. In the flocculator the source of the fluid deformation is from "
-"turbulent kinetic energy that is dissipating by deforming (shearing) the "
-"fluid. In the floc blanket the source of fluid deformation is from the "
-"gravitational pull on the flocs. The flocs are moving relative to the "
-"fluid and the fluid is being deformed as the flocs move through the "
-"fluid."
+"forces. The source of the fluid deformation is different in these two flows. "
+"In the flocculator the source of the fluid deformation is from turbulent "
+"kinetic energy that is dissipating by deforming (shearing) the fluid. In the "
+"floc blanket the source of fluid deformation is from the gravitational pull "
+"on the flocs. The flocs are moving relative to the fluid and the fluid is "
+"being deformed as the flocs move through the fluid."
 msgstr ""
+"En ambos ambientes el flujo alrededor de los flóculos está dominado por "
+"fuerzas viscosas. La fuente de la deformación del fluido es diferente en "
+"estos dos flujos. En el floculador, la fuente de la deformación del fluido "
+"es la energía cinética turbulenta que se disipa al deformar (cizallar) el "
+"fluido. En el manto de flóculos, la fuente de la deformación del fluido es "
+"la atracción gravitatoria de los flóculos. Los flóculos se mueven en "
+"relación con el fluido y éste se deforma a medida que los flóculos se mueven "
+"a través del fluido."
 
 #: ../../Sedimentation/Sed_Derivations.rst:744
+#, fuzzy
 msgid "Comparison between flocculator and floc blanket."
-msgstr ""
+msgstr "Comparación entre el floculador y la manta de floc."
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Property"
-msgstr ""
+msgstr "Propiedad"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Flocculator"
-msgstr ""
+msgstr "Floculador"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Floc blanket"
-msgstr ""
+msgstr "Manta Floc"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "Velocity gradient"
-msgstr ""
+msgstr "Gradiente de velocidad"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "~100 Hz"
-msgstr ""
+msgstr "~100 Hz"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "x Hz"
-msgstr ""
+msgstr "x Hz"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid ":math:`G_{CS}\\theta`"
-msgstr ""
+msgstr ":matemáticas:`G_{CS} {\\a6} {\\a6}"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "20,000 - 40,000"
-msgstr ""
+msgstr "20,000 - 40,000"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "x,000 to y,000"
-msgstr ""
+msgstr "de x.000 a y.000"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "energy source for fluid deformation"
-msgstr ""
+msgstr "fuente de energía para la deformación de fluidos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "turbulence"
-msgstr ""
+msgstr "turbulencia"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "floc drag"
-msgstr ""
+msgstr "arrastre del floc"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "flow regime at floc length scale"
-msgstr ""
+msgstr "régimen de flujo en la escala de longitudes de flóculos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "shear flow"
-msgstr ""
+msgstr "flujo de cizallamiento"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "velocity field is perturbed by falling flocs"
-msgstr ""
+msgstr "el campo de velocidad se ve perturbado por la caída de los flóculos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "flocs are..."
-msgstr ""
+msgstr "los flóculos son..."
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "rotating from fluid shear"
-msgstr ""
+msgstr "que gira a partir de la cizalla de fluidos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "falling due to gravity"
-msgstr ""
+msgstr "cayendo debido a la gravedad"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "flocs have a stagnation point"
-msgstr ""
+msgstr "los flóculos tienen un punto de estancamiento"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "no"
-msgstr ""
+msgstr "no"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
+#, fuzzy
 msgid "yes"
-msgstr ""
+msgstr "sí"
 
 #: ../../Sedimentation/Sed_Derivations.rst:755
+#, fuzzy
 msgid ""
-"Flocs that are rotating in a shear flow drag a boundary layer of fluid "
-"with them as they rotate. This boundary layer of fluid prevents any "
-"approaching fluid from penetrating to the surface of the floc. There is "
-"no stagnation point on the floc! This means that approaching particles "
-"are swept around the floc due to the presence of the boundary layer. The "
-"only way for a particle to collide with a large floc is for the particle "
-"to be large enough that it can penetrate through the boundary layer even "
-"though the center of the particle continues to follow the streamline "
-"around the boundary layer of the floc."
+"Flocs that are rotating in a shear flow drag a boundary layer of fluid with "
+"them as they rotate. This boundary layer of fluid prevents any approaching "
+"fluid from penetrating to the surface of the floc. There is no stagnation "
+"point on the floc! This means that approaching particles are swept around "
+"the floc due to the presence of the boundary layer. The only way for a "
+"particle to collide with a large floc is for the particle to be large enough "
+"that it can penetrate through the boundary layer even though the center of "
+"the particle continues to follow the streamline around the boundary layer of "
+"the floc."
 msgstr ""
+"Los flóculos que están rotando en un flujo de cizallamiento arrastran una "
+"capa límite de fluido con ellos mientras giran. Esta capa límite de fluido "
+"impide que cualquier fluido que se aproxime penetre en la superficie del "
+"flóculo. No hay ningún punto de estancamiento en el flóculo Esto significa "
+"que las partículas que se acercan son barridas alrededor del flóculo debido "
+"a la presencia de la capa límite. La única manera de que una partícula "
+"colisione con un gran flóculo es que la partícula sea lo suficientemente "
+"grande como para que pueda penetrar a través de la capa límite, aunque el "
+"centro de la partícula continúe siguiendo la corriente alrededor de la capa "
+"límite del flóculo."
 
 #: ../../Sedimentation/Sed_Derivations.rst:757
+#, fuzzy
 msgid ""
-"Flocs that are falling through a fluid that is not undergoing significant"
-" shear have stagnation points on the upstream side of the flocs and thus "
-"there exists a small amount of fluid that gets close enough to the floc "
-"near the stagnation point for small particles to collide with the floc."
+"Flocs that are falling through a fluid that is not undergoing significant "
+"shear have stagnation points on the upstream side of the flocs and thus "
+"there exists a small amount of fluid that gets close enough to the floc near "
+"the stagnation point for small particles to collide with the floc."
 msgstr ""
+"Los flóculos que están cayendo a través de un fluido que no está sufriendo "
+"un cizallamiento significativo tienen puntos de estancamiento en el lado "
+"corriente arriba de los flóculos y, por lo tanto, existe una pequeña "
+"cantidad de fluido que se acerca lo suficiente al flóculo cerca del punto de "
+"estancamiento para que las pequeñas partículas colisionen con el flóculo."
 
 #: ../../Sedimentation/Sed_Derivations.rst:762
 #: ../../Sedimentation/Sed_Derivations.rst:826
+#, fuzzy
 msgid "Diffuser Design"
-msgstr ""
+msgstr "Diseño del difusor"
 
 #: ../../Sedimentation/Sed_Derivations.rst:764
+#, fuzzy
 msgid ""
-"Diffusers are shaped so that one end is a circular pipe that fits into "
-"the influent manifold orifice, and the other end is deformed to the shape"
-" of a thin rectangle, as shown in "
-":numref:`figure_diffuser_side_top_bottom`."
+"Diffusers are shaped so that one end is a circular pipe that fits into the "
+"influent manifold orifice, and the other end is deformed to the shape of a "
+"thin rectangle, as shown in :numref:`figure_diffuser_side_top_bottom`."
 msgstr ""
+"Los difusores tienen una forma tal que un extremo es un tubo circular que "
+"encaja en el orificio del colector de entrada, y el otro extremo se deforma "
+"en forma de un fino rectángulo, como se muestra en :numref:"
+"`figure_diffuser_side_top_bottom`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:773
+#, fuzzy
 msgid "Side, top, and bottom view of a diffuser."
-msgstr ""
+msgstr "Vista lateral, superior e inferior de un difusor."
 
 #: ../../Sedimentation/Sed_Derivations.rst:775
+#, fuzzy
 msgid ""
-"Recall that this deformation is done to create a line jet entering the "
-"jet reverser in the bottom of the sedimentation tank. Diffusers are "
-"shaped by dipping the pipe stubs in hot oil, and then pushing the "
-"maleable and heated pipe onto a metal form, as shown in "
-":numref:`figure_diffuser_fabrication`. This metal form is sized so that "
-"the target shape is achieved."
+"Recall that this deformation is done to create a line jet entering the jet "
+"reverser in the bottom of the sedimentation tank. Diffusers are shaped by "
+"dipping the pipe stubs in hot oil, and then pushing the maleable and heated "
+"pipe onto a metal form, as shown in :numref:`figure_diffuser_fabrication`. "
+"This metal form is sized so that the target shape is achieved."
 msgstr ""
+"Recordemos que esta deformación se hace para crear un chorro de línea que "
+"entra en el inversor de chorro en el fondo del tanque de sedimentación. Los "
+"difusores se forman sumergiendo los tubos en aceite caliente, y luego "
+"empujando el tubo maleable y calentado en una forma de metal, como se "
+"muestra en :numref:`figure_diffuser_fabrication`. Esta forma metálica se "
+"dimensiona de tal manera que se logra la forma deseada."
 
 #: ../../Sedimentation/Sed_Derivations.rst:784
+#, fuzzy
 msgid ""
 "Process of heating the PVC in oil and molding the diffuser shape on the "
 "metal forms."
 msgstr ""
+"Proceso de calentar el PVC en aceite y moldear la forma del difusor en las "
+"formas metálicas."
 
 #: ../../Sedimentation/Sed_Derivations.rst:786
+#, fuzzy
 msgid ""
-"The bottom-view of the diffuser is shown in "
-":numref:`figure_BvsS_diffuser`."
+"The bottom-view of the diffuser is shown in :numref:`figure_BvsS_diffuser`."
 msgstr ""
+"La vista inferior del difusor se muestra en :numref:`figure_BvsS_diffuser`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:795
+#, fuzzy
 msgid "Diagram of diffuser exit."
-msgstr ""
+msgstr "Diagrama de la salida del difusor."
 
 #: ../../Sedimentation/Sed_Derivations.rst:797
+#, fuzzy
 msgid ":math:`T_{diff} =` thickness of diffuser wall"
-msgstr ""
+msgstr ":matemáticas:`T_{diff} =` espesor de la pared del difusor"
 
 #: ../../Sedimentation/Sed_Derivations.rst:798
+#, fuzzy
 msgid ":math:`S_{diff} =` internal width of diffuser"
-msgstr ""
+msgstr ":matemáticas:`S_{diff} =` ancho interno del difusor"
 
 #: ../../Sedimentation/Sed_Derivations.rst:799
+#, fuzzy
 msgid ""
 ":math:`B_{diff} =` center-to-center spacing between diffusers; external "
 "width of diffuser"
 msgstr ""
+":matemáticas:`B_{diff} =` espacio de centro a centro entre difusores; ancho "
+"externo del difusor"
 
 #: ../../Sedimentation/Sed_Derivations.rst:800
+#, fuzzy
 msgid ":math:`W_{diff} =` internal width of diffuser"
-msgstr ""
+msgstr ":matemáticas:`W_{diff} =` ancho interno del difusor"
 
 #: ../../Sedimentation/Sed_Derivations.rst:801
+#, fuzzy
 msgid ":math:`\\bar v_{jet} =` velocity of the jet exiting the diffuser"
 msgstr ""
+":matemáticas:`\\bar v_{jet} =` velocidad del chorro que sale del difusor"
 
 #: ../../Sedimentation/Sed_Derivations.rst:802
+#, fuzzy
 msgid ":math:`Q_{diff} =` flow rate through each diffuser"
-msgstr ""
+msgstr ":matemáticas:`Q_{diff} =` tasa de flujo a través de cada difusor"
 
 #: ../../Sedimentation/Sed_Derivations.rst:803
+#, fuzzy
 msgid ":math:`h_{L,jet} =` head loss in jet leaving the jet reverser"
 msgstr ""
+":matemáticas:`h_{L,jet} =` pérdida de cabeza en el jet que sale del inversor "
+"del jet"
 
 #: ../../Sedimentation/Sed_Derivations.rst:806
+#, fuzzy
 msgid "Properties of :math:`\\bar v_{jet}`"
-msgstr ""
+msgstr "Propiedades de :math:`\\bar v_{jet}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:808
+#, fuzzy
 msgid ""
-":math:`\\bar v_{jet}` is defined as the velocity of the water jet exiting"
-" the diffuser. After exiting the diffuser, this water jet is sent into "
-"the jet reverser to make a 180 degree turn. Does the water jet change "
-"pressure or velocity as it exits the jet reverser? Do we need to consider"
-" the effects of a *vena contracta*?"
+":math:`\\bar v_{jet}` is defined as the velocity of the water jet exiting "
+"the diffuser. After exiting the diffuser, this water jet is sent into the "
+"jet reverser to make a 180 degree turn. Does the water jet change pressure "
+"or velocity as it exits the jet reverser? Do we need to consider the effects "
+"of a *vena contracta*?"
 msgstr ""
+":matemáticas:`\\bar v_{jet}` se define como la velocidad del chorro de agua "
+"que sale del difusor. Después de salir del difusor, este chorro de agua se "
+"envía al inversor de chorro para hacer un giro de 180 grados. ¿Cambia el "
+"chorro de agua la presión o la velocidad al salir del inversor de chorro? "
+"¿Necesitamos considerar los efectos de una *vena contracta*?"
 
 #: ../../Sedimentation/Sed_Derivations.rst:810
+#, fuzzy
 msgid ""
-"Recall that a :ref:`*vena contracta* <heading_what_is_a_vena_contracta>` "
-"is associated with a change in pressure that causes a contraction and "
-"subsequent acceleration of the fluid. Water exiting the diffuser is "
-"pointed directly down and the streamlines are straight and parallel, "
-"which means that the pressure across the streamlines is constant. Water "
-"exiting the jet reverser is pointed directly up and the streamlines are "
-"straight and parallel, which again means that the pressure across the "
-"streamlines is constant. Because the pressure is constant at the exit of "
-"the diffuser and at the exit of the jet reverser, we assume that the "
-"pressure of the water in the space between those two points is also "
-"constant because there is no physical barrier. If the pressure in this "
-"bottom section of the sedimentation tank is constant from the exit of the"
-" diffuser to the exit of the jet reverser, we can infer that they are "
-"equal."
+"Recall that a :ref:`*vena contracta* <heading_what_is_a_vena_contracta>` is "
+"associated with a change in pressure that causes a contraction and "
+"subsequent acceleration of the fluid. Water exiting the diffuser is pointed "
+"directly down and the streamlines are straight and parallel, which means "
+"that the pressure across the streamlines is constant. Water exiting the jet "
+"reverser is pointed directly up and the streamlines are straight and "
+"parallel, which again means that the pressure across the streamlines is "
+"constant. Because the pressure is constant at the exit of the diffuser and "
+"at the exit of the jet reverser, we assume that the pressure of the water in "
+"the space between those two points is also constant because there is no "
+"physical barrier. If the pressure in this bottom section of the "
+"sedimentation tank is constant from the exit of the diffuser to the exit of "
+"the jet reverser, we can infer that they are equal."
 msgstr ""
+"Recordemos que un :ref:`*vena contracta* <heading_what_is_a_vena_contracta>` "
+"se asocia con un cambio de presión que provoca una contracción y la "
+"consiguiente aceleración del fluido. El agua que sale del difusor apunta "
+"directamente hacia abajo y las corrientes son rectas y paralelas, lo que "
+"significa que la presión a través de las corrientes es constante. El agua "
+"que sale del inversor del chorro apunta directamente hacia arriba y las "
+"líneas de corriente son rectas y paralelas, lo que también significa que la "
+"presión a través de las líneas de corriente es constante. Debido a que la "
+"presión es constante a la salida del difusor y a la salida del inversor de "
+"chorro, asumimos que la presión del agua en el espacio entre esos dos puntos "
+"también es constante porque no hay ninguna barrera física. Si la presión en "
+"esta sección inferior del tanque de sedimentación es constante desde la "
+"salida del difusor hasta la salida del inversor de chorro, podemos inferir "
+"que son iguales."
 
 #: ../../Sedimentation/Sed_Derivations.rst:812
+#, fuzzy
 msgid ""
-"By Bernoulli, if the pressures between the exit of the diffuser to the "
-"exit of the jet reverser are equal then the velocities must also be "
-"equal. Bernoulli is applicable here because there is no flow expansion "
-"yet. The shear along the wall of the jet reverser is insignificant due to"
-" the short flow path. The water accelerates to account for the "
-"directional change but the absolute velocity does not change as it goes "
-"around the jet reverser."
+"By Bernoulli, if the pressures between the exit of the diffuser to the exit "
+"of the jet reverser are equal then the velocities must also be equal. "
+"Bernoulli is applicable here because there is no flow expansion yet. The "
+"shear along the wall of the jet reverser is insignificant due to the short "
+"flow path. The water accelerates to account for the directional change but "
+"the absolute velocity does not change as it goes around the jet reverser."
 msgstr ""
+"Por Bernoulli, si las presiones entre la salida del difusor y la salida del "
+"inversor de chorro son iguales, entonces las velocidades también deben ser "
+"iguales. Bernoulli es aplicable aquí porque todavía no hay expansión del "
+"flujo. La cizalla a lo largo de la pared del inversor de chorro es "
+"insignificante debido a la corta trayectoria del flujo. El agua se acelera "
+"para explicar el cambio de dirección pero la velocidad absoluta no cambia al "
+"rodear el inversor de chorro."
 
 #: ../../Sedimentation/Sed_Derivations.rst:821
+#, fuzzy
 msgid "Diagram of diffuser exit and jet."
-msgstr ""
+msgstr "Diagrama de la salida del difusor y el chorro."
 
 #: ../../Sedimentation/Sed_Derivations.rst:823
+#, fuzzy
 msgid ""
-"Therefore, the velocity at the exit of the diffuser is equal to the "
-"velocity at the exit of the jet reverser."
+"Therefore, the velocity at the exit of the diffuser is equal to the velocity "
+"at the exit of the jet reverser."
 msgstr ""
+"Por lo tanto, la velocidad a la salida del difusor es igual a la velocidad a "
+"la salida del inversor de chorro."
 
 #: ../../Sedimentation/Sed_Derivations.rst:828
+#, fuzzy
 msgid ""
-"What is the target shape of the diffuser? We know that the diffuser must "
-"be sized so that our velocity constraints will be achieved. The minimum "
-"velocity constraint comes from the need to keep flocs resuspended. We "
-"also know that in the active region of our sedimentation tank, we want an"
-" upflow velocity of 1 mm/s. Additionally, because diffusers are a key "
-"component of our \"sedimentation tank as a circuit\", we want to "
-"precisely control head loss in the jet leaving the jet reverser because "
-"that will help us achieve uniform flow within and between sedimentation "
-"tanks. AguaClara designs set head loss in the jet constant at 1 cm."
+"What is the target shape of the diffuser? We know that the diffuser must be "
+"sized so that our velocity constraints will be achieved. The minimum "
+"velocity constraint comes from the need to keep flocs resuspended. We also "
+"know that in the active region of our sedimentation tank, we want an upflow "
+"velocity of 1 mm/s. Additionally, because diffusers are a key component of "
+"our \"sedimentation tank as a circuit\", we want to precisely control head "
+"loss in the jet leaving the jet reverser because that will help us achieve "
+"uniform flow within and between sedimentation tanks. AguaClara designs set "
+"head loss in the jet constant at 1 cm."
 msgstr ""
+"¿Cuál es la forma del objetivo del difusor? Sabemos que el difusor debe "
+"tener el tamaño adecuado para que se cumplan nuestras limitaciones de "
+"velocidad. La restricción de velocidad mínima viene de la necesidad de "
+"mantener los flóculos resuspendidos. También sabemos que en la región activa "
+"de nuestro tanque de sedimentación, queremos una velocidad de flujo "
+"ascendente de 1 mm/s. Además, como los difusores son un componente clave de "
+"nuestro \"tanque de sedimentación como circuito\", queremos controlar con "
+"precisión la pérdida de carga en el chorro que sale del inversor de chorro, "
+"porque eso nos ayudará a lograr un flujo uniforme dentro y entre los tanques "
+"de sedimentación. Los diseños de AguaClara establecen la pérdida de carga en "
+"la constante del chorro en 1 cm."
 
 #: ../../Sedimentation/Sed_Derivations.rst:830
+#, fuzzy
 msgid ""
 "Let's begin by finding the internal width of a single diffuser. Using "
 "conservation of flow, we know that,"
 msgstr ""
+"Comencemos por encontrar el ancho interno de un solo difusor. Usando la "
+"conservación del flujo, sabemos que,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:836
+#, fuzzy
 msgid ""
 ":math:`Q_{diff}` is determined :ref:`as an example "
 "<heading_flow_thru_diffuser>`, where we find that :math:`Q_{diff} = 50 "
 "\\frac{mL}{s}`."
 msgstr ""
+":matemáticas:`Q_{diff}` se determina :ref:`` como un ejemplo "
+"<heading_flow_thru_diffuser>`, donde encontramos que :matemáticas:`Q_{diff} "
+"= 50 \\frac{mL}{s}`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:838
+#, fuzzy
 msgid "Solving for :math:`W_{diff}`,"
-msgstr ""
+msgstr "Resolviendo para :math:`W_{diff}`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:844
+#, fuzzy
 msgid ""
-"Using the constraint of head loss in the jet and solving for :math:`\\bar"
-" v_{jet}`,"
+"Using the constraint of head loss in the jet and solving for :math:`\\bar "
+"v_{jet}`,"
 msgstr ""
+"Usando la restricción de la pérdida de cabeza en el avión y resolviendo "
+"para :math:``bar v_{jet}`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:854
+#, fuzzy
 msgid ""
-"Substituting back into the equation for :math:`W_{diff}`, we can find the"
-" minimum diffuser width required to not exceed target head loss as,"
+"Substituting back into the equation for :math:`W_{diff}`, we can find the "
+"minimum diffuser width required to not exceed target head loss as,"
 msgstr ""
+"Sustituyendo de nuevo en la ecuación por :math:`W_{diff}`, podemos encontrar "
+"el ancho mínimo del difusor requerido para no exceder la pérdida de carga "
+"del objetivo como,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:860
+#, fuzzy
 msgid ""
-"Now that we have determined the minimum width, we can use known "
-"parameters and constraints to find a precise value for :math:`W_{diff}` "
-"and :math:`v_{jet}`."
+"Now that we have determined the minimum width, we can use known parameters "
+"and constraints to find a precise value for :math:`W_{diff}` and :math:"
+"`v_{jet}`."
 msgstr ""
+"Ahora que hemos determinado el ancho mínimo, podemos usar parámetros y "
+"restricciones conocidas para encontrar un valor preciso para :math:`W_{diff}"
+"` y :math:`v_{jet}`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:862
+#, fuzzy
 msgid ""
-"Using known constants for :math:`\\bar v_{z_{fb}} = 1 \\frac{mm}{s}`, "
-":math:`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that "
-":math:`W_{diff,min} = 2.7 mm`. The mold used to create diffusers in "
-"Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find "
-":math:`W_{diff}` we round up to 3.175 mm."
+"Using known constants for :math:`\\bar v_{z_{fb}} = 1 \\frac{mm}{s}`, :math:"
+"`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that :math:"
+"`W_{diff,min} = 2.7 mm`. The mold used to create diffusers in Honduras comes "
+"in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to "
+"3.175 mm."
 msgstr ""
+"Usando las constantes conocidas para :math:``bar v_{z_{fb}} = 1 \\frac{mm}{s}"
+"`, :math:`h_{L,jet} = 1 cm`, y :math:`W_{Sed} = 1m`, podemos encontrar que :"
+"math:`W_{diff,min} = 2.7 mm`. El molde usado para crear difusores en "
+"Honduras viene en tamaños de 1/8 pulg. o 3.175 mm, así que para encontrar :"
+"math:`W_{diff}` redondeamos hasta 3.175 mm."
 
 #: ../../Sedimentation/Sed_Derivations.rst:868
+#, fuzzy
 msgid "Solving for :math:`\\bar v_{jet}` from our earlier equations yields,"
 msgstr ""
+"Resolviendo para :math:`\\bar v_{jet}` de nuestras ecuaciones anteriores "
+"rendimientos,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:874
+#, fuzzy
 msgid "Using known constants,"
-msgstr ""
+msgstr "Usando constantes conocidas,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:881
+#, fuzzy
 msgid "References"
-msgstr ""
+msgstr "Referencias"
 
 #: ../../Sedimentation/Sed_Derivations.rst:883
+#, fuzzy
 msgid ""
-"Garland, Casey, et al. “Revisiting Hydraulic Flocculator Design for Use "
-"in Water Treatment Systems with Fluidized Floc Beds.” Environmental "
-"Engineering Science, vol. 34, no. 2, 1 Feb. 2017, pp. 122–129., "
-"doi:10.1089/ees.2016.0174."
+"Garland, Casey, et al. “Revisiting Hydraulic Flocculator Design for Use in "
+"Water Treatment Systems with Fluidized Floc Beds.” Environmental Engineering "
+"Science, vol. 34, no. 2, 1 Feb. 2017, pp. 122–129., doi:10.1089/"
+"ees.2016.0174."
 msgstr ""
+"Garland, Casey, y otros. \"Revisando el diseño del floculador hidráulico "
+"para su uso en sistemas de tratamiento de agua con lechos de flocalización "
+"fluidizados\" Environmental Engineering Science, vol. 34, no. 2, 1 Feb. "
+"2017, pp. 122-129., doi:10.1089/ees.2016.0174."
 
 #: ../../Sedimentation/Sed_Derivations.rst:887
+#, fuzzy
 msgid "Comments, Corrections, or Questions"
-msgstr ""
+msgstr "Comentarios, correcciones o preguntas"
 
 #: ../../Sedimentation/Sed_Derivations.rst:889
+#, fuzzy
 msgid ""
-"This textbook is an ever-evolving project. If you find any errors while "
-"you are reading, or if you find something unclear, please let the authors"
-" know. Write your comment in `this Github issue "
-"<https://github.com/AguaClara/Textbook/issues/85>`_ and it will be "
-"addressed as soon as possible. Please look at other comments before "
-"writing your own to avoid duplicate comments."
+"This textbook is an ever-evolving project. If you find any errors while you "
+"are reading, or if you find something unclear, please let the authors know. "
+"Write your comment in `this Github issue <https://github.com/AguaClara/"
+"Textbook/issues/85>`_ and it will be addressed as soon as possible. Please "
+"look at other comments before writing your own to avoid duplicate comments."
 msgstr ""
-
+"Este libro de texto es un proyecto en constante evolución. Si encuentra "
+"algún error mientras está leyendo, o si encuentra algo poco claro, por "
+"favor, hágaselo saber a los autores. Escriba su comentario en \"este número "
+"de Github\" <https://github.com/AguaClara/Textbook/issues/85>`_ y será "
+"tratado lo antes posible. Por favor, miren los otros comentarios antes de "
+"escribir el suyo propio para evitar comentarios duplicados."
