@@ -141,59 +141,6 @@ We can use mass conservation and the equation for :math:`Q_{pore}` to replace :m
 
 It isn't yet clear if this always means that :math:`v_{exp}` will be very small compared with :math:`v_{constriction}`, but that seems to be the logical conclusion. Thus when calculating the head loss for a pore it is reasonable to assume that the kinetic energy of the jet is all lost before entering the next constriction.
 
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.research.floc_model as fm
-
-  import numpy as np
-
-  D_sand = 0.5 * u.mm
-  Porosity = 0.4
-  Temperature = 20 * u.degC
-  v_a = 1.85 *u.mm/u.s
-  he_filter = 40 * u.cm
-  H_filter = 20 * u.cm
-  Lambda_pore = (np.pi/(6*(1-porosity)))**(1/3)*D_sand
-  Lambda_pore
-  # Use measured fully constricted filter head loss to estimate the constricted velocity
-  v_constriction = (np.sqrt(2*pc.gravity*Lambda_pore*he_filter/H_filter)).to(u.mm/u.s)
-  print('The velocity in the constriction is estimated (for these conditions) to be' ,v_constriction,'.')
-  Re_constriction =(Lambda_pore/pc.viscosity_kinematic(Temperature) * np.sqrt(4*v_a*v_constriction/np.pi)).to(u.dimensionless)
-  print('The jet is laminar because the Reynolds number is ',Re_constriction.magnitude,' which is well within the laminar range because it is less than 500.')
-  D_constriction = Lambda_pore * np.sqrt(4*v_a/v_constriction/np.pi)
-
-  #velocity of the jet after it travels on pore length
-  v_exp = (3*v_a*Lambda_pore*v_constriction/(8*np.pi*pc.viscosity_kinematic(Temperature))).to(u.mm/u.s)
-  print('The velocity of the jet after it travels one pore length is ',v_exp,' which contains an insignificant amount of kinetic energy compared with the original jet.')
-
-  #Now find the Camp Stein velocity gradient in the pore
-  G_CS = (v_constriction * np.sqrt(v_a/(2*pc.viscosity_kinematic(Temperature)*porosity * Lambda_pore))).to(u.Hz)
-  print('The constricted jet induced Camp Stein velocity gradient in the pores is ',G_CS,'.')
-
-  #Calculate the Camp Stein velocity gradient at the StaRS injection site
-  W_inject = 2.5 *u.cm
-  S_inject = 10 *u.cm
-  n_layers_per_inject = 2
-  v_a_inject = v_a * S_inject*n_layers_per_inject/W_inject
-  print('The StaRS injection velocity is ',v_a_inject,'.')
-  #The clean bed camp velocity gradient given this injection approach velocity
-  def Re_Erdon(v_a, D_sand, Temperature, Porosity):
-    return (v_a*D_sand/(pc.viscosity_kinematic(Temperature)*(1-Porosity))).to(u.dimensionless)
-
-  def f_Erdon(v_a, D_sand, Temperature, Porosity):
-    return 300/Re_Erdon(v_a, D_sand, Temperature, Porosity) + 3.5
-
-  def hf_Erdon(v_a, D_sand, Temperature, Porosity, L):
-    return (f_Erdon(v_a, D_sand, Temperature, Porosity)*L/D_sand*v_a**2/(2*pc.gravity)*(1-Porosity)/Porosity**3).to(u.m)
-
-  def G_CS_Ergun(v_a, D_sand, Temperature, Porosity):
-    return np.sqrt(f_Erdon(v_a, D_sand, Temperature, Porosity) * v_a**3 * (1-Porosity)/(2 * pc.viscosity_kinematic(Temperature) * D_sand * Porosity**4)).to(u.Hz)
-
-  G_CS_inject = G_CS_Ergun(v_a_inject, D_sand, Temperature, Porosity)
-  print('The velocity gradient at the StaRS injection sites (in the two middle inlets) is ',G_CS_inject)
-
 Sedimentation plates set the size of the flocs in the filter
 ============================================================
 
@@ -252,10 +199,18 @@ Maximum velocity in constrictions
 The maximum velocity in a pore is hypothesized to be set by the bond strength of the coagulant nanoparticles and the fluid drag on the primary particle that is attaching. It is assumed that the last particles that are able to deposit in a pore are primary particles because they can fill in the last available volume before the pore velocity is too high for any other particles to attach. It is possible that the attachment strength of the primary particles is a function of the fraction of their surface area that is covered by coagulant nanoparticles, :math:`\Gamma`. The total force acting downward on a primary particle that attaches to a constriction is the sum of the drag and the particle buoyant weight. These forces are counteracted by the force of the coagulant bonds.
 
 .. math::
+    :label: Fbond_drag_gravity
 
-    F_{coag_{bonds}} = F_{drag} + F_{weight} - F_{buoyancy}
+    F_{bond} = F_{drag} + F_{weight} - F_{buoyancy}
 
-The drag force on a clay particle that has attached to the
+The flocs and particles that are captured in a filter are small in diameter and the strength of the coagulant bonds is large compared with forces of their buoyant weight. Equation :eq:`Fbond_drag_gravity` can be simplified to
+
+.. math::
+    :label: Fbond_drag
+
+    F_{bond} = F_{drag}
+
+The drag force is assumed to be set by the average pore water velocity because the deposition occurs near the entrance to the constriction before the boundary layer on the wall can develop. The velocity profile through the constriction could be uniform or the boundary layer could be developing and then the velocity at the wall could be significantly reduced. The particles are expected to attach at the sharp edge at the entrance to the constriction and the boundary layer is not expected to have grown significantly. Thus the velocity through the constriction is assumed to be uniform. The drag force on a clay particle that has attached to the wall of the constriction is
 
 .. math::
 
@@ -267,40 +222,11 @@ At Reynolds numbers (based on primary particle diameter) less than about 10 the 
 
     C_D = \frac{24}{Re} = \frac{24\nu}{v_{constriction}D_{clay}}
 
-Thus the drag on a clay particle is given by
+Thus the drag on a clay particle is equal to the bond force and is given by
 
 .. math::
-
-    F_{drag} = 3\pi \nu v_{constriction} D_{clay} \rho_{H_2O}
-
-
-.. math::
-
-    F_{coag_{bonds}} = 3\pi \nu v_{constriction} D_{clay} \rho_{H_2O} + (\rho_{clay} - \rho_{H_2O}) g \frac{\pi}{6}D_{clay}^3
-
-
-The drag force is assumed to be set by the average pore water velocity because the deposition occurs near the entrance to the constriction before the boundary layer on the wall can develop.
-
-The force of the coagulant bonds is presumed to be proportional to the fractional coverage of the clay with coagulant and the intrinsic shear strength of the coagulant bonds to the clay surface
-
-.. math::
-
-    F_{coag_{bonds}} = \Gamma \tau_{bonds} \frac{\pi}{4} D_{clay}^2
-
-where :math:`\tau_{bonds}` is the intrinsic shear strength of the coagulant bonds to the clay surface. Solving for the maximum constriction velocity we obtain
-
-.. math::
-
-    v_{constriction_{max}} = \frac{\Gamma \tau_{bonds}\frac{\pi}{4} D_{clay}^2 - (\rho_{clay} - \rho_{H_2O}) g \frac{\pi}{6}D_{clay}^3}{3\pi \nu  D_{clay} \rho_{H_2O}}
-
-It is likely that the weight of the clay particle is a small contribution to the force balance. In that case the equation simplifies to
-
-.. math::
-
-    v_{constriction_{max}}  = \frac{\Gamma \tau_{bonds} D_{clay} }{12 \nu \rho_{H_2O}}
-
-
-Unfortunately, we do not have a measure of the intrinsic bond strength of the coagulant nanoparticles to clay surfaces, :math:`\tau_{bonds}`. This equation does provide a possible means to back calculate this property.
+    :label: Fbond_of_v_constriction
+    F_{bond} = 3\pi \nu v_{constriction} D_{clay} \rho_{H_2O}
 
 The minimum diameter of a particle deposition constriction is set by the maximum constriction velocity, :math:`v_{constriction_{max}}`.
 
@@ -338,7 +264,7 @@ We can solve equation :eq:`eq_he_filter` for maximum constriction velocity based
 
     v_{constriction_{max}} = \sqrt{ \frac{2g\Lambda_{pore}}{H_{filter}}h_{e_{filter_{max}}}}
 
-From :numref:`figure_Head_loss_vs_time` we have an estimate of 35 to 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand. This gives an estimate of 137 mm/s for the constriction velocity. This could be used to obtain an estimate of the bond strength of the coagulant nanoparticles.
+From :numref:`figure_Head_loss_vs_time` we have an estimate of 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand. This gives an estimate of 163 mm/s for the constriction velocity. This can be combined with Equation :eq:`Fbond_of_v_constriction` to estimate the coagulant bond strength to be 3.9 nN.
 
 
 .. _heading_Shear_big_flocs_to_improve_filter_performance:

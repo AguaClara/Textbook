@@ -4,7 +4,9 @@
 Flocs, Fractals, Forces, and Fluidized Suspensions Introduction
 ****************************************************************
 
-The physics of flocs, fractals, fluids, and forces define the processes of flocculation, flocnets, lamellar sedimentation, and filters. The chemical bonds that hold flocs together determine the maximum diameter that a floc can grow to in the fluid shear of a flocculator. The force of gravity is also strong enough to break flocs and determines the maximum size that a floc can grow to on planet earth or, for that matter, in the flocnet that forms in the bottom of the AguaClara clarifiers. The three forces of chemical bonds, gravity, and shear can be grouped into two dimensionless parameters that will define the relationships between floc size, floc density, and these forces.
+The physics of flocs, fractals, fluids, and forces define the processes of flocculation, flocnets, lamellar sedimentation, and filters. The chemical bonds that hold flocs together determine the maximum diameter that a floc can grow to in the fluid shear of a flocculator. The force of gravity is strong enough to break flocs and determines the maximum size that a floc can grow to on planet earth or, for that matter, in the flocnet that forms in the bottom of the AguaClara clarifiers. The maximum diameter that a floc can grow to without being pulled apart by gravity sets a maximum terminal velocity for flocs and that has direct implications for the maximum upflow velocity than can be used in upflow clarifiers.
+
+The three forces of chemical bonds, gravity, and shear can be grouped into two dimensionless parameters that will define the relationships between floc size, floc density, and these forces.
 
 Characteristic Core Particle
 ============================
@@ -192,6 +194,7 @@ Plugging into the original force balance,
 Solving for terminal velocity, :math:`v_t`, we obtain
 
 .. math::
+  :label: v_t_general
 
   v_t = \sqrt{\frac{4}{3}\frac{g D_{floc}}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}
 
@@ -246,17 +249,7 @@ You might think: why aren't more surfaces dimpled? If I want my car to get bette
 
 Let's go back to the realm of water treatment. We care about drag coefficients and terminal velocities because they help describe how flocs will move in water. Flocs tend to exist in the region between 1< :math:`Re` < 10. This region is not perfectly described by Stokes Law, but it is used as an appropriate approximation. We have already solved for the general equation for terminal velocity using the force balance approach. Now, we can solve for a terminal velocity equation specifically in the laminar region.
 
-Plug the drag coefficient and Reynolds numbers for laminar flow into the general terminal velocity equation:
-
-.. math::
-
-  v_t = \sqrt{\frac{4}{3}\frac{g D_{floc}}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}
-
-  C_D = \frac{24}{Re}
-
-  Re = \frac{v_t D_{floc}}{\nu}
-
-to yield,
+Plug the drag coefficient for laminar flow, :math:`C_D = \frac{24}{Re}`, and Reynolds number, :math:`Re = \frac{v_t D_{floc}}{\nu}`,  into the general terminal velocity equation (:eq:`v_t_general`) to obtain
 
 .. math::
 
@@ -269,7 +262,7 @@ Our equations for terminal velocity depend on the density of a floc. As discusse
 .. math::
   :label: vt_of_floc
 
-  v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} -\rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}
+  v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} -       \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}
 
 | Where:
 | :math:`D_{cp} =` diameter of core particle
@@ -282,19 +275,19 @@ The following plot in :numref:`figure_terminal_velocity_floc_diam` shows the rel
 .. _figure_terminal_velocity_floc_diam:
 
 .. figure:: Images/terminal_velocity_floc_diam.png
-    :height: 300px
+    :width: 400px
     :align: center
     :alt: Terminal velocity as a function of floc diameter, taking into account the changing density of flocs formed from clay.
 
-    Terminal velocity as a function of floc diameter, taking into account the changing density of flocs.
+    Terminal velocity as a function of floc diameter taking into account the changing density of flocs.
 
 Three important regions are highlighted in the plot. At small floc diameters, less than 10 :math:`\mu m`, terminal velocity is less that 0.1 :math:`\frac{mm}{s}`. A terminal velocity this low would require extremely large sedimentation tanks for reasonable treatment. Because large sedimentation tanks are costly and unfeasible, we use flocculation to aggregate particles and achieve floc sizes of greater diameters and higher terminal velocities.
 
-For floc diameters around 35 :math:`\mu m`, the terminal velocity is about 0.12 :math:`\frac{mm}{s}`. AguaClara plate settlers are designed to settle out flocs of this size (particles dropping at 0.12 :math:`\frac{mm}{s}`) so the smallest floc that we can capture is 35 :math:`\mu m`. This will be explored in more detail during the discussion on :ref:`capture velocity <heading_capture_velocity>`.
+For flocs made of clay and with diameters around 35 :math:`\mu m`, the terminal velocity is about 0.12 :math:`\frac{mm}{s}`. AguaClara plate settlers are designed to settle out flocs of this size (particles dropping at 0.12 :math:`\frac{mm}{s}`) so the smallest floc that the plate settlers can reliably capture is 35 :math:`\mu m`. This will be explored in more detail during the discussion on :ref:`capture velocity <heading_capture_velocity>`.
 
-Flocs with large diameters around 200 :math:`\mu m` have a terminal velocity of about 1 :math:`\frac{mm}{s}`. In our sedimentation tanks, which are upflow sedimentation tanks, we have water flowing up at about 1 :math:`\frac{mm}{s}` to capture a 200 :math:`\mu m` floc. These flocs are clearly visible but are small.
+Clay based flocs with diameters around 200 :math:`\mu m` have a terminal velocity of about 1 :math:`\frac{mm}{s}`. In our sedimentation tanks, which are upflow sedimentation tanks, we have water flowing up at about 1 :math:`\frac{mm}{s}` to capture a 200 :math:`\mu m` floc. These flocs are clearly visible but are small.
 
-Our understanding of floc terminal velocity suggests that we can decide the size of the floc that we want our sedimentation tank to capture. If we decide that we want to capture flocs that are 35 :math:`\mu m` or larger, we know that we must design for water flowing at 0.12 :math:`\frac{mm}{s}`. Alternatively, we know that if we design a reactor in which water flows at 1 :math:`\frac{mm}{s}`, we will only be able to capture flocs that are 200 :math:`\mu m` or larger.
+Our understanding of floc terminal velocity suggests that we can decide the size of the floc that we want the plate settlers to capture. If we decide that we want to capture flocs that are 35 :math:`\mu m` or larger, we know that we must design the plate settlers to capture flocs falling at 0.12 :math:`\frac{mm}{s}`.
 
 Chemical Bond Strength
 ======================
@@ -307,15 +300,6 @@ If we assume that the flocs are joined by 3 bonds to create a constrained connec
 
 Given that flocs grow to be approximately 1 mm in a 100 Hz flocculator it suggests that the bonds holding the flocs together are either covalent bonds or noncovalent bonds that are stronger than hydrogen bonds. Van der Waals interactions are weaker than hydrogen bonds and thus Van der Waals interactions likely are not significant for flocculation when using coagulants.
 
-.. _figure_Shear_force_and_bond_strength:
-
-.. figure:: Images/Shear_force_and_bond_strength.png
-    :width: 300px
-    :align: center
-    :alt: internal figure
-
-    Fluid forces at two uniform velocity gradients compared with the strength of 3 covalent, noncovalent, or hydrogen bonds. Floc growth in a shear environment is limited by the strength of the chemical bonds that can form as two particles collide.
-
 Van der Waals forces have traditionally been viewed as the primary force responsible for holding flocs together after the repulsive electrostatic force was neutralized. The analysis of the forces shown above reveals that Van der Waals forces are too weak to allow the formation of large easily settled flocs in the shear environment of a flocculator. Instead flocculation is based on stronger noncovalent bonds or perhaps even covalent bonds.
 
 Hydrated oxides of polyvalent metals like Fe(III), Al(III), Ti(IV) and Zr(IV) exhibit ligand sorption properties by forming inner-sphere complexes (`Sarkar et al, 2007 <https://doi.org/10.1016/j.reactfunctpolym.2007.07.047>`_). In inner-sphere complexes the coagulant nanoparticle forms covalent bonds with the molecules in the surface of the raw water particles. Inner sphere bonds are strong and stable. In contrast, outer sphere bonds include a molecule of water between the two surfaces and form a transient bond.
@@ -326,7 +310,6 @@ Given that
 1) the shear forces acting on flocs suggest strong bonds
 we conclude that the coagulant nanoparticles likely form covalent bonds with inorganic particles present in raw water.
 
-
 Shear Force Acting on Flocs
 ===========================
 
@@ -335,7 +318,8 @@ The hydrodynamic force caused by a velocity gradient for two identically sized p
 .. math::
    :label: shear_force_on_doublet
 
-    F_{shear_{max}} = \frac{3 \pi}{4} \mu D_{floc}^2 G
+    F_{shear_{max}} =
+      \frac{3 \pi}{4} \mu D_{floc}^2 G
 
 where :math:`D_{floc}` is the diameter of each of the two flocs that have joined and :math:`G` is the uniform velocity gradient.
 
@@ -344,21 +328,27 @@ Flocs will break (or will not grow larger) when the fluid forces acting on the f
 .. math::
    :label: fluid_shear_stress
 
-	 \tau = \rho \sqrt{\varepsilon \nu} = \mu G
+	 \tau =
+     \rho \sqrt{\varepsilon \nu} =
+     \mu G
 
 The shear stress is a function of the rate of turbulent energy dissipation and the viscosity of the fluid. The shear stress increases as the water temperature decreases. The shear force acting to pull a doublet floc apart is given in equation :eq:`shear_force_on_doublet` and can be combined with equation :eq:`tau_of_mu_G` to obtain
 
 .. math::
    :label: fluid_shear_stress_on_doublet
 
-	 F_{shear_{max}} = 3 \tau \frac{ \pi D_{floc}^2}{4} = 3 \tau A_{floc}
+	 F_{shear_{max}} =
+     3 \tau \frac{ \pi D_{floc}^2}{4} =
+     3 \tau A_{floc}
 
 The floc will break apart when the :math:`F_{shear_{max}}` exceeds the coagulant bond strength of the coagulant nanoparticles and the particles they attach to. Thus we can create a dimensionless parameter describing the ratio of the fluid shear stress to the bond strength by dividing equation :eq:`fluid_shear_stress_on_doublet` by :math:`F_{covalent}`.
 
 .. math::
    :label: fluid_shear_stress_to_bond_ratio
 
-	 \Pi_{bond}^{shear} = \frac{F_{shear_{max}}}{F_{bond}} = \frac{3 \tau A_{floc}}{F_{bond}}
+	 \Pi_{bond}^{shear} =
+     \frac{F_{shear_{max}}}{F_{bond}} =
+     \frac{3 \tau A_{floc}}{F_{bond}}
 
 The expectation is that the flocs will break for values of :math:`\Pi_{bond}^{shear}>1`. The value of :math:`\Pi_{bond}^{shear}` will ideally be measured experimentally since there are a number of unknowns buried in the term including a characteristic length of the lever arm that the coagulant bond is acting on.  This analysis shows that the maximum size of a floc is set by the fluid shear stress, :math:`\tau`. Previously it wasn't clear if floc size was limited by energy dissipation rate or by the velocity gradient. Neither of those parameters captures the physics because ultimately it is a force that breaks the covalent bond and thus it must be a fluid force (not energy dissipation rate or velocity gradient) that can be used as a design parameter. By recognizing that the shear stress :math:`\tau` must be limited we can now develop design equations that account for the effects of viscosity and temperature on the design.
 
@@ -379,7 +369,8 @@ Using equation :eq:`fluid_shear_stress` the maximum energy dissipation rate belo
 .. math::
    :label: d_floc_shear_stress
 
-   D_{floc_{max}}=\sqrt{\frac{4F_{bond}}{3 \pi \tau}}
+   D_{floc_{max}} =
+   \sqrt{\frac{4F_{bond}}{3 \pi \tau}}
 
 The floc size that corresponds to 300 mW/kg is 35 micrometers. For clay dominated flocs equation :eq:`vt_of_floc` gives a 0.13 mm/s sedimentation velocity which is just slightly higher than the 0.1 mm/s capture velocity used by Garland.
 
@@ -395,9 +386,39 @@ Equation :eq:`d_floc_shear_stress` can be written as a function of the velocity 
 .. math::
    :label: d_floc_G
 
-   D_{floc_{max}}=\sqrt{\frac{4F_{bond}}{3 \pi \mu G_{max}}}
+   D_{floc_{max}} =
+   \sqrt{\frac{4F_{bond}}{3 \pi \mu G_{max}}}
 
 Equation :eq:`d_floc_G` must be based on the maximum velocity gradient in a reactor and not the average value. This is particularly important for flocculators that are not designed to have uniform velocity gradients.
+
+.. math::
+  :label: Gmax_of_d_floc
+
+  G_{max} =
+  \frac{4F_{bond}}{3 \pi \mu D_{floc_{max}}^2}
+
+.. _figure_GmaxofFlocD:
+
+.. figure:: Images/GmaxofFlocD.png
+    :width: 400px
+    :align: center
+    :alt: internal figure
+
+    The maximum velocity gradient that flocs can withstand decreases rapidly as flocs increase in diameter.
+
+The maximum floc diameter is influenced by temperature because as the viscosity increases the shear force exerted on the floc decreases. Equation :eq:`d_floc_G` shows this dependency and illustrates one of the reasons (see :numref:`figure_DmaxofGandTemp`) why temperature is a critical parameter in the design of drinking water treatment plants.
+
+.. _figure_DmaxofGandTemp:
+
+.. figure:: Images/DmaxofGandTemp.png
+    :width: 400px
+    :align: center
+    :alt: internal figure
+
+    The maximum floc size at a maximum velocity gradient of 100 Hz increases with temperature due to a decrease in the viscosity.
+
+Drag Force on a Floc in a Filter Constriction
+=============================================
 
 Gravity Acting on Flocs
 =======================
@@ -447,8 +468,24 @@ Unit calculations are problematic when the exponent on the units isn't an intege
     D_{floc_{max}}^g = D_{cp}
     \left[\frac {6 F_{bond} \Pi_{bond}^g} {\pi  g\left( \rho_{cp}  - \rho_{H_2O} \right) D_{cp}^3}\right]^{\frac{1}{\Pi_{fractal}}}
 
-Maximum Floc Size in a Gravity Field
-====================================
+
+The value of :math:`\Pi_{bond}^g` will need to be determined experimentally. A preliminary force analysis by Kevin Sarmiento suggests that this dimensionless factor may be approximately 8 based on reasonable assumptions for the length of the moment arm acting on one coagulant nanoparticle bond.
+
+The maximum floc size that can be obtained based on a :math:`\Pi_{bond}^g = 8` as a function of the core particle density is shown in :numref:`figure_DmaxofFbondandGravity`.
+
+.. _figure_DmaxofFbondandGravity:
+
+.. figure:: Images/DmaxofFbondandGravity.png
+    :width: 400px
+    :align: center
+    :alt: internal figure
+
+    The maximum floc size deceases rapidly as the density of the core particle increases.
+
+The maximum size of flocs that can be obtained with aluminum-based coagulants is thus limited due to the force of gravity. This has direct implications for the use of ballasted sand flocculation that uses micro-sand (size 40–150 µm) to increase the sedimentation velocity of the flocs. Equation :eq:`D_floc_of_bong` reveals that aluminum-based coagulants aren't strong enough to hold two micro-sand particles together. Ballasted sand flocculation requires additional polymers that increase the bond strength to create flocs around the micro-sand.
+
+Maximum Floc Terminal Velocity
+==============================
 
 Given that the maximum floc size is limited by gravity we can determine the maximum terminal velocity that can be obtained by a floc. Then we can use the terminal velocity equation to find the maximum diameter of a floc that is falling through water under the influence of gravity. The force balance requires that the buoyant force be equal to :math:`F_{bond} \Pi_{bond}^g` in the terminal velocity equation.
 
@@ -477,8 +514,21 @@ Solving for terminal velocity, :math:`v_t`, we obtain
 The maximum floc diameter and the bond strength are related through equation :eq:`D_floc_of_bong` and that relationship can be used to eliminate the floc diameter from equation :eq:`v_t_of_F_bond_3`.
 
 .. math::
-  :label:
+  :label: v_t_of_F_bond
 
   v_t  =
-  \frac{F_{bond} \Pi_{bond}^g}{3 \pi \nu D_{cp}
-  \left[\frac {6 F_{bond} \Pi_{bond}^g} {\pi  g\left( \rho_{cp}  - \rho_{H_2O} \right) D_{cp}^3}\right]^{\frac{1}{\Pi_{fractal}}} \rho_{H_2O}}
+  \frac{F_{bond} \Pi_{bond}^g}{3 \pi \nu \rho_{H_2O} D_{cp}
+  \left[\frac {6 F_{bond} \Pi_{bond}^g} {\pi  g\left( \rho_{cp}  - \rho_{H_2O} \right) D_{cp}^3}\right]^{\frac{1}{\Pi_{fractal}}} }
+
+The maximum terminal velocity (equation :eq:`v_t_of_F_bond`) that can be obtained based on a :math:`\Pi_{bond}^g = 8` as a function of the core particle density is shown in :numref:`figure_vtmaxofFbondandGravity`.
+
+.. _figure_vtmaxofFbondandGravity:
+
+.. figure:: Images/vtmaxofFbondandGravity.png
+    :width: 400px
+    :align: center
+    :alt: internal figure
+
+    The maximum terminal velocity increases as the density of the core particle increases.
+
+The maximum upflow velocity in the bottom of an upflow clarifier is limited by the maximum terminal velocity of the flocs. The flocs can grow to an even larger size while sliding down the plate settlers, but when they begin freefall they break apart and reach this maximum terminal velocity. The terminal velocity will also have direct influence on the concentration of the flocnet.

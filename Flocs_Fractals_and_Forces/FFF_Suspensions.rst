@@ -46,10 +46,9 @@ Equation :eq:`density_suspension_2` can be rewritten in terms of the buoyant den
 Fluidized Bed Porosity
 ======================
 
-AguaClara plants have two fluidized beds. The first is the flocnet that forms in the bottom of the clarifiers and the second is the sand in the filters during backwash. The equations describing fluidized beds are complicated. The
+AguaClara plants have two fluidized beds. The first is the flocnet that forms in the bottom of the clarifiers and the second is the sand in the filters during backwash. The equations describing fluidized beds require multiple steps in the calculations and are easily handled in Python. The following equations are available in a `Colab worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb>`_.
 
-Hydraulic Diameter
-------------------
+The hydraulic diameter is needed to account for wall effects for small reactors.
 
 .. math::
   :label: hydraulic_diameter
@@ -66,8 +65,24 @@ For reactors with dimensions that are not much larger than the dimensions of the
 .. math::
   :label: v_t_wall
 
-  v_{t_w} = \frac{v_t}{10^{\frac{D_{particle}}{D_h}}}
+  v_{t_w} = \frac{v_t}{10^{\frac{D_{particle}}{D_H}}}
 
+| where
+| :math:`v_t` terminal velocity in an infinite fluid obtained from equation :eq:`v_t_general`
+
+The Reynolds number :math:`Re_t` is based on the terminal velocity of the particle.
+
+.. math::
+  :label: Re_terminal
+
+  Re_t = \frac{v_t D__{particle}}{\nu}
+
+The fluidization index, z, is a function of the Reynolds number at the terminal velocity.
+
+.. math::
+  :label: fluidization_index
+
+  z=\frac{0.65\left(2+0.5 Re_t^{0.65}\right)}{\left(1+0.5 Re_t^{0.65}\right)}
 
 The following equation is used to find the porosity of a fluidized bed.
 
@@ -77,24 +92,7 @@ The following equation is used to find the porosity of a fluidized bed.
  \phi=\left(\frac{\bar v_z}{v_{t_w}}\right)^{1 / z}\left(1-\phi_{\mathrm{SB}}\right)+\phi_{\mathrm{SB}}
 
 | where
-| :math:`v_t` terminal velocity in an infinite fluid
 | :math:`v_{t_w}` particle terminal velocity corrected for wall effect
 | :math:`\bar v_z` superficial liquid velocity (our upflow velocity)
 | :math:`z` is the fluidization index
 | :math:`\phi_{\mathrm{SB}}` is the static bed pore volume fraction which we will assume is 0.4
-
-
-
-The fluidization index is a function of the Reynolds number
-
-.. math::
-  :label: fluidization_index
-
-  z=\frac{0.65\left(2+0.5 Re_t^{0.65}\right)}{\left(1+0.5 Re_t^{0.65}\right)}
-
-The Reynolds number :math:`Re_t` is based on the terminal velocity of the particle.
-
-.. math::
-  :label: Re_terminal
-
-  Re_t = \frac{v_t D_{\mathrm{P}}}{\nu}
