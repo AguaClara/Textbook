@@ -1,8 +1,8 @@
-.. _title_Flocs_Fractals_and_Forces_Suspensions:
+.. _title_Fluidized_Suspensions:
 
-****************************************
-Flocs, Fractals, and Forces Suspensions
-****************************************
+*********************
+Fluidized Suspensions
+*********************
 
 Suspension Density
 ==================

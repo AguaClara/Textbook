@@ -1,8 +1,8 @@
-.. _title_Flocs_Fractals_and_Forces_Introduction:
+.. _title_Flocs_Fractals_Forces_and_Fluidized_Suspensions_Introduction:
 
-****************************************
-Flocs, Fractals, and Forces Introduction
-****************************************
+****************************************************************
+Flocs, Fractals, Forces, and Fluidized Suspensions Introduction
+****************************************************************
 
 The physics of flocs, fractals, fluids, and forces define the processes of flocculation, flocnets, lamellar sedimentation, and filters. The chemical bonds that hold flocs together determine the maximum diameter that a floc can grow to in the fluid shear of a flocculator. The force of gravity is also strong enough to break flocs and determines the maximum size that a floc can grow to on planet earth or, for that matter, in the flocnet that forms in the bottom of the AguaClara clarifiers. The three forces of chemical bonds, gravity, and shear can be grouped into two dimensionless parameters that will define the relationships between floc size, floc density, and these forces.
 
@@ -447,8 +447,11 @@ Unit calculations are problematic when the exponent on the units isn't an intege
     D_{floc_{max}}^g = D_{cp}
     \left[\frac {6 F_{bond} \Pi_{bond}^g} {\pi  g\left( \rho_{cp}  - \rho_{H_2O} \right) D_{cp}^3}\right]^{\frac{1}{\Pi_{fractal}}}
 
-Given that the maximum floc size is limited by gravity we can determine the maximum terminal velocity that can be obtained by a floc by setting the buoyant force equal to :math:`F_{bond} \Pi_{bond}^g` in the terminal velocity equation.
-==============================================
+Maximum Floc Size in a Gravity Field
+====================================
+
+Given that the maximum floc size is limited by gravity we can determine the maximum terminal velocity that can be obtained by a floc. Then we can use the terminal velocity equation to find the maximum diameter of a floc that is falling through water under the influence of gravity. The force balance requires that the buoyant force be equal to :math:`F_{bond} \Pi_{bond}^g` in the terminal velocity equation.
+
 
 .. math::
   :label: v_t_of_F_bond_1
@@ -456,7 +459,7 @@ Given that the maximum floc size is limited by gravity we can determine the maxi
   F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2} = F_{bond} \Pi_{bond}^g
 
 
-Plugging into the original force balance and assuming laminar flow we obtain
+Plugging into the force balance between buoyant weight and bond force and assuming laminar flow we obtain
 
 .. math::
   :label: v_t_of_F_bond_2
