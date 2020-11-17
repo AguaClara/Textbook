@@ -24,7 +24,163 @@ Sedimentation is ubiquitous in water treatment. Nevertheless, the process is ver
 
 To understand how sedimentation works, a few key concepts must first be developed. This includes understanding how and why flocs move in water. Remember, the goal of sedimentation reactor design is to optimize the floc-settling process.
 
+Terminal Velocity
+===============================
+As flocs settle in water, they will fall at a speed dictated by the weight of the floc, the buoyancy of the floc, and drag from the water. These three forces - the gravitational weight force, the buoyant force, and the drag force - dictate the speed at which a floc falls and are detailed in the free body diagram of :numref:`figure_terminal_velocity_FBD`. We care about determining the speed at which flocs will fall because knowing this information will help inform our sedimentation reactor design criteria.
 
+.. _figure_terminal_velocity_FBD:
+
+.. figure:: Images/terminal_velocity_FBD.png
+    :height: 300px
+    :align: center
+    :alt: Buyouant force, drag force, and gravitational force shown for floc free body diagram.
+
+    Free body diagram of a floc in water.
+
+To determine the force balance on a falling floc, consider:
+
+.. math::
+
+  \sum F = m a
+
+At terminal velocity, the floc has been falling for a long period of time so there is no acceleration and the right side of the equation simplifies to zero.
+
+:math:`F_{drag} + F_{buoyant} - W_{floc} = 0`
+
+Each of the force components can be determined by:
+
+.. math::
+
+  F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}
+
+  F_{buoyant} = \rlap{--}V_{floc} \rho_{H_2O} g
+
+  W_{floc} = \rlap{--}V_{floc} \rho_{floc} g
+
+| Where:
+| :math:`\rlap{--}V_{floc} =` floc particle volume
+| :math:`A_{floc} =` particle projected cross-sectional area
+| :math:`\rho_{floc} =` particle density
+| :math:`\rho_{H_2O} =` water density
+| :math:`g =` acceleration due to gravity
+| :math:`C_D =` drag coefficient
+| :math:`v_t=` particle terminal velocity
+| :math:`D=` particle diameter
+
+Plugging into the original force balance,
+
+.. math::
+
+  \left [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2} \right]+\left [\rlap{--}V_{floc} \rho_{H_2O} g\right ]-\left [\rlap{--}V_{floc} \rho_{floc} g \right] =0
+
+Solving for terminal velocity, :math:`v_t`, provides
+
+.. math::
+
+  v_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}
+
+Terminal velocity is a function of fluid density, floc density, gravity, particle diameter, and the drag coefficient. To calculate velocity, all of those inputs must be determined.
+
+The first component that we will focus on is the drag coefficient, :math:`C_D`. The drag coefficient is function of Reynolds Number, :math:`Re`, and the characteristic flow around a particle. As a reminder, :math:`Re = \frac{v_t D}{\nu}` where :math:`v_t` is the velocity of the fluid relative to the particle, :math:`D` is the characteristic length scale (in this case the particle diameter), and :math:`\nu` is kinematic viscosity.
+
+Drag coefficients are used to describe flow around a particle and are shown in :numref:`figure_drag_coeff_Re_base`.
+
+.. _figure_drag_coeff_Re_base:
+
+.. figure:: Images/drag_coeff_Re_base.png
+    :height: 300px
+    :align: center
+    :alt: Drag coefficient as a function of Reynolds number.
+
+    Drag coefficient on a sphere as a function of Reynolds number.
+
+As an introduction to this drag coefficient diagram, we can compare it to something we've already learned about: the Moody diagram. Drawing parallels between the two will help us understand some important relationships better.
+
+.. _table_Moody_DragCoefficient:
+
+.. csv-table:: Comparison of the Moody diagram and the Drag Coefficient diagram.
+   :header: "Characteristic", "Moody Diagram", "Drag Coefficient Diagram"
+   :align: left
+
+   Relationship to Reynolds number, "friction factor, :math:`f`", "drag coefficient, :math:`C_D`"
+   Type of head loss, major losses as shear force on pipe walls, shear on sphere and pressure drag from wake
+   Laminar region, ":math:`f = \frac{64}{Re}`", :math:`C_D = \frac{24}{Re}`
+   "High Reynolds number (:math:`f`, :math:`C_D`)", ":math:`f` remains constant", ":math:`C_D` remains constant"
+   "High Reynolds number (:math:`h_L`, :math:`F_{drag}`)", :math:`h_L = \frac{fL\bar v^2}{2Dg}`,:math:`F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}`
+
+
+The flow around the particle and the Reynolds Number can be described in the laminar, turbulent, or turbulent-boundary regions as shown in :numref:`figure_drag_coeff_Re_full`. In the laminar region viscous forces dominate, :math:`Re < 1`,and the coefficient of drag is represented as the straight line with a slope of -1 on the log-log plot. The equation for drag on a sphere in laminar flow :math:`C_D = \frac{24}{Re}` is referred to as Stokes Law. You'll notice that the line for Stokes Law shown in the figure extends past the laminar region. This was done because it highlights that even though Stokes Law is not exactly correct past the turbulent region, it is still a pretty good approximation for  :math:`Re < 10`.
+
+.. _figure_drag_coeff_Re_full:
+
+.. figure:: Images/drag_coeff_Re_full.png
+    :height: 300px
+    :align: center
+    :alt: Drag coefficient as a function of Reynolds number.
+
+    Drag coefficient as a function of Reynolds number.
+
+Note that the coefficient of drag in the transition region is an important parameter to understand. Equations for the coefficient of drag are explored in the paper by `Yang et al. in "General formulas for drag coefficient and settling velocity of sphere based on theoretical law" <https://www.sciencedirect.com/science/article/pii/S2095268615000178>`_. They have determined that Oseen law based formulas are recommended for use.
+
+Let's consider the drag coefficient diagram at Reynolds numbers of :math:`10^5`. We notice that there is a "bump" in the plot, in which the drag coefficients drop. This is because at really high Reynolds numbers, the boundary layer around the particle became turbulent. This causes the wake behind the particle to be a little smaller, leading to a slight reduction in drag. The drag coefficient decreases, but the total drag force does not necessarily decrease (and likely keeps on increasing).
+
+To understand this phenomenon, think about a golf ball. Golf balls are designed with dimpled surfaces because the dimpled surface forces the transition described above to happen at lower Reynolds numbers. The dimples initiate turbulence in the boundary layer and cause a slight reduction in the drag coefficient. Thus, dimpled golf balls can travel further than smooth ones.
+
+You might think: why aren't more surfaces dimpled? If I want my car to get better mileage, should I dimple its surface to take advantage of the same turbulent boundary layer properties as the golf ball? But before you go and damage some metal, let's think. If a car and golf ball are traveling through air at the same speed, what will be their relative Reynolds numbers? We know that :math:`Re = \frac{v_t D}{\nu}` and :math:`D_{golfball} << D_{car}`. The relative length scales mean that cars have much higher Reynolds numbers than the golf ball. In fact, the Reynolds number for a car is so high that it is already past the point that the boundary layer becomes turbulent. The golf ball needs to be dimpled because its Reynolds numbers are not so large that they will pass the turbulent boundary transition.
+
+Let's go back to the realm of water treatment. We care about drag coefficients and terminal velocities because they help describe how flocs will move in water. Flocs tend to exist in the region between 1< :math:`Re` < 10. This region is not perfectly described by Stokes Law, but it is used as an appropriate approximation. We have already solved for the general equation for terminal velocity using the force balance approach. Now, we can solve for a terminal velocity equation specifically in the laminar region.
+
+Plug the drag coefficient and Reynolds numbers for laminar flow into the general terminal velocity equation:
+
+.. math::
+
+  v_t = \sqrt{\frac{4}{3}\frac{gD}{C_D}\frac{(\rho_{floc}-\rho_{H_2O})}{\rho_{H_2O}}}
+
+  C_D = \frac{24}{Re}
+
+  Re = \frac{v_tD}{\nu}
+
+to yield,
+
+.. math::
+
+  v_t = \frac{D^2g}{18\nu}\frac{\rho_{floc} -\rho_{H_2O}}{\rho_{H_2O}}
+
+Again, we can draw a parallel with the Moody Diagram. The general form of the terminal velocity equation is like the Darcy-Weisbach equation; it is always true. The terminal velocity in the laminar flow region is like the Hagen-Poiselle equation; it is only good for laminar flow. We will use the laminar specific condition because we are working with flocs with low Reynolds numbers.
+
+Our equations for terminal velocity depend on the density of a floc. As discussed in previous sections, we know that there is a specific relationship between the density of a floc and the diameter of a floc because flocs are fractals and as flocs get bigger, their density gets lower. We can account for the size and density relationship by modifying the terminal velocity equation.
+
+.. _heading_terminal_velocity_equation:
+
+.. math::
+
+  v_t = \frac{D_0^2g}{18\Phi\nu}\frac{\rho_{floc_0} -\rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D}{D_0} \right) ^{D_{fractal}-1}
+
+| Where:
+| :math:`D_0 =` diameter of clay
+| :math:`D_{fractal} =` fractal dimension
+| :math:`D =` floc diameter
+| :math:`\rho_{floc_0} =` density of the primary particle making up the floc
+| :math:`\Phi = 45/24` based on Tambo N., and Watanabe Y. (1979). Physical characteristics of flocs-I. The floc density function and aluminum floc. Water Res. 13, 409
+
+The following plot in :numref:`figure_terminal_velocity_floc_diam` shows the relationship between floc diameter and terminal velocity.
+
+.. _figure_terminal_velocity_floc_diam:
+
+.. figure:: Images/terminal_velocity_floc_diam.png
+    :height: 300px
+    :align: center
+    :alt: Terminal velocity as a function of floc diameter, taking into account the changing density of flocs formed from clay.
+
+    Terminal velocity as a function of floc diameter, taking into account the changing density of flocs.
+
+Three important regions are highlighted in the plot. At small floc diameters, less than 10 :math:`\mu m`, terminal velocity is less that 0.1 :math:`\frac{mm}{s}`. A terminal velocity this low would require extremely large sedimentation tanks for reasonable treatment. Because large sedimentation tanks are costly and unfeasible, we use flocculation to aggregate particles and achieve floc sizes of greater diameters and higher terminal velocities.
+
+For floc diameters around 35 :math:`\mu m`, the terminal velocity is about 0.12 :math:`\frac{mm}{s}`. AguaClara plate settlers are designed to settle out flocs of this size (particles dropping at 0.12 :math:`\frac{mm}{s}`) so the smallest floc that we can capture is 35 :math:`\mu m`. This will be explored in more detail during the discussion on :ref:`capture velocity <heading_capture_velocity>`.
+
+Flocs with large diameters around 200 :math:`\mu m` have a terminal velocity of about 1 :math:`\frac{mm}{s}`. In our sedimentation tanks, which are upflow sedimentation tanks, we have water flowing up at about 1 :math:`\frac{mm}{s}` to capture a 200 :math:`\mu m` floc. These flocs are clearly visible but are small.
+
+Our understanding of floc terminal velocity suggests that we can decide the size of the floc that we want our sedimentation tank to capture. If we decide that we want to capture flocs that are 35 :math:`\mu m` or larger, we know that we must design for water flowing at 0.12 :math:`\frac{mm}{s}`. Alternatively, we know that if we design a reactor in which water flows at 1 :math:`\frac{mm}{s}`, we will only be able to capture flocs that are 200 :math:`\mu m` or larger.
 
 .. _heading_capture_velocity:
 

@@ -582,36 +582,36 @@ We need a method to connect turbidity removed by a filter into volume of deposit
 
 .. math::
 
-    D_{floc} = D_{clay} n_{clay}^\frac{1}{\Pi_{fractal}}
+    D_{floc} = D_{clay} n_{clay}^\frac{1}{D_{fractal}}
 
-Where :math:`\Pi_{fractal}` is the volume based fractal dimension of a floc. We estimate :math:`\Pi_{fractal}` to have a value of 2.1. We can rearrange this equation and solve for the number of clay particles in a floc.
+Where :math:`D_{fractal}` is the volume based fractal dimension of a floc. We estimate :math:`D_{fractal}` to have a value of 2.3. We can rearrange this equation and solve for the number of clay particles in a floc.
 
 .. math::
 
-    n_{clay} = \left(\frac{D_{floc}}{D_{clay}}\right)^{\Pi_{fractal}}
+    n_{clay} = \left(\frac{D_{floc}}{D_{clay}}\right)^{D_{fractal}}
 
 Now we can create a relationship for the concentration of clay in a floc dividing the mass of clay by the volume of the floc.
 
 .. math::
 
-    C_{clay_{floc}} = \frac{n_{clay}\rlap{--} V_{clay}\rho_{clay}}{\rlap{--} V_{floc}} = \frac{n_{clay}D_{clay}^3\rho_{clay}}{D_{floc}^3}= \frac{D_{clay}^3\rho_{clay}}{D_{floc}^3}\left(\frac{D_{floc}}{D_{clay}}\right)^{\Pi_{fractal}}
+    C_{clay_{floc}} = \frac{n_{clay}\rlap{--} V_{clay}\rho_{clay}}{\rlap{--} V_{floc}} = \frac{n_{clay}D_{clay}^3\rho_{clay}}{D_{floc}^3}= \frac{D_{clay}^3\rho_{clay}}{D_{floc}^3}\left(\frac{D_{floc}}{D_{clay}}\right)^{D_{fractal}}
 
 With one more simplification we obtain the desired equation for the clay concentration in a floc of given diameter.
 
 .. math::
-    C_{clay_{floc}} = \rho_{clay} \left(\frac{D_{clay}}{D_{floc}}\right)^{3-\Pi_{fractal}}
+    C_{clay_{floc}} = \rho_{clay} \left(\frac{D_{clay}}{D_{floc}}\right)^{3-D_{fractal}}
 
 The mass of clay per pore is obtained by multiplying the deposit volume by the concentration of the flocs.
 
 .. math::
 
-    M_{clay_{pore}} =\rho_{clay}  \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)\left(\frac{D_{clay}}{D_{floc}}\right)^{3-\Pi_{fractal}}
+    M_{clay_{pore}} =\rho_{clay}  \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)\left(\frac{D_{clay}}{D_{floc}}\right)^{3-D_{fractal}}
 
 The mass of clay per plan view area of the filter is obtained by multiplying by the number of pores per depth of the filter and dividing by the plan view area of a pore, :math:`\Lambda_{pore}^2`.
 
 .. math::
 
-    M_{clay_{filter}} =H_{filter} \rho_{clay}  \Pi_{pore}^{deposit}\left(\phi-\frac{v_a}{ v_{constriction}} \right)\left(\frac{D_{clay}}{D_{floc}}\right)^{3-\Pi_{fractal}}
+    M_{clay_{filter}} =H_{filter} \rho_{clay}  \Pi_{pore}^{deposit}\left(\phi-\frac{v_a}{ v_{constriction}} \right)\left(\frac{D_{clay}}{D_{floc}}\right)^{3-D_{fractal}}
 
 According to this model, the mass of clay that can be held by a filter increases linearly with filter depth. The retained mass is independent of the sand size. This is an easy hypothesis to test. Note, however, that this model does not account for the depth of the active zone. Presumably the active zone depth may be greater for larger diameter media and thus breakthrough may occur sooner for larger diameter media.
 
@@ -623,7 +623,7 @@ The head loss per mass of particles deposited can be obtained by dividing the he
 
 .. math::
 
-      h_{e_{permassclay}} = \frac{\bar v_{constriction_{max}}^2}{2g\rho_{clay}  \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)}\left(\frac{D_{floc}}{D_{clay}}\right)^{3-\Pi_{fractal}}
+      h_{e_{permassclay}} = \frac{\bar v_{constriction_{max}}^2}{2g\rho_{clay}  \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)}\left(\frac{D_{floc}}{D_{clay}}\right)^{3-D_{fractal}}
 
 The head loss per mass of solids removed is significantly lower for larger sand sizes. When the coagulant dose increases the head loss increases rapidly because the constricted velocity increases and the floc diameter increases. Unfortunately we do not yet have a model describing floc size as a function of both velocity gradient and coagulant nanoparticle coverage.
 

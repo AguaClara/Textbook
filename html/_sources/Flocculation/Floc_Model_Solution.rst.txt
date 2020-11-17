@@ -16,9 +16,9 @@ Flocculation Model Solution
 
 .. todo:: Review this file after the new AguaClara code is released.
 
-Many of the fractal floc equations are available in the ``floc_model.py`` file in the aguaclara repository. Look through ```floc_model.py`` <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/floc_model.py>`_ within the aguaclara repository. The following constants are defined in that file. NTU has been defined as an approximate empirical relationship between the concentration of kaolin clay and the turbidity, such that 1 NTU is equivalent to 1.7 mg/L. The diameter of a primary clay particle is assumed to be 7 micrometers. The fractal dimension for flocs is defined as ``DIM_FRACTAL`` and is equal to 2.1. We are using PACl as a coagulant for this analysis, so you shall call ``fm.PACl``, when a function within ``floc_model.py`` requires ‘coag’ as an input.
+Many of the fractal floc equations are available in the ``floc_model.py`` file in the aguaclara repository. Look through ```floc_model.py`` <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/floc_model.py>`_ within the aguaclara repository. The following constants are defined in that file. NTU has been defined as an approximate empirical relationship between the concentration of kaolin clay and the turbidity, such that 1 NTU is equivalent to 1.7 mg/L. The diameter of a primary clay particle is assumed to be 7 micrometers. The fractal dimension for flocs is defined as ``DIM_FRACTAL`` and is equal to 2.3. We are using PACl as a coagulant for this analysis, so you shall call ``fm.PACl``, when a function within ``floc_model.py`` requires ‘coag’ as an input.
 
-Whenever possible, use variables defined within ``floc_model.py`` instead of redefining them. Relevant variables defined in ``floc_model.py`` include: 1. ``DIM_FRACTAL`` with an estimated value of 2.1.
+Whenever possible, use variables defined within ``floc_model.py`` instead of redefining them. Relevant variables defined in ``floc_model.py`` include: 1. ``DIM_FRACTAL`` with an estimated value of 2.3.
 
 1. ``PACl``
 2. ``Clay``

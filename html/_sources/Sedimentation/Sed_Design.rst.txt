@@ -248,6 +248,66 @@ The jet reverser is an AguaClara invention for producing stable floc blankets. T
 
 Conventional wisdom suggests that breaking up flocs on the way to the sedimentation tank is counter productive. The traditional goal of not breaking flocs led to design of tapered flocculators and guidelines suggesting maximum velocities for transport of those flocs to the sedimentation tank. Dimensional analysis provides the insight that if the constraint for not breaking flocs is actually a velocity, that there must be some way to make that velocity dimensionless if that constraint is rational. In order to identify and characterize the constraint related to floc break up we need to understand the physics of the processes and clearly identify the failure mode.
 
+Flocs will break when the fluid forces acting on the floc exceed the strength of the bonds that hold the floc together. The fluid shear stress is given by equation :eq:`tau_of_mu_G`. The velocity gradient is caused by turbulent kinetic energy dissipation as given by equation :eq:`G_Camp_Stein`. Equation :eq:`tau_of_mu_G` and equation :eq:`G_Camp_Stein` can be combined to obtain an estimate of the fluid shear stress, :math:`\tau`.
+
+.. math::
+   :label: fluid_shear_stress
+
+	 \tau = \rho \sqrt{\varepsilon \nu} = \mu G
+
+The shear stress is a function of the rate of turbulent energy dissipation and the viscosity of the fluid. The shear stress increases as the water temperature decreases. The shear force acting to pull a doublet floc apart is given in equation :eq:`shear_force_on_doublet` and can be combined with equation :eq:`tau_of_mu_G` to obtain
+
+.. math::
+   :label: fluid_shear_stress_on_doublet
+
+	 F_{shear_{max}} = 3 \tau \frac{ \pi d_{floc}^2}{4} = 3 \tau A_{floc}
+
+The floc will break apart when the :math:`F_{shear_{max}}` exceeds the coagulant bond strength. The coagulant bonds are likely covalent bonds with an estimated strength :math:`F_{covalent}` of 1.6 nN. Thus we can create a dimensionless parameter describing the ratio of the fluid shear stress to the bond strength by dividing equation :eq:`fluid_shear_stress_on_doublet` by :math:`F_{covalent}`.
+
+.. math::
+   :label: fluid_shear_stress_to_bond_ratio
+
+	 \Pi_{Bond}^{Fluid} = \frac{F_{shear_{max}}}{F_{covalent}} = \frac{3 \tau A_{floc}}{F_{covalent}}
+
+The expectation is that the flocs will break for values of :math:`\Pi_{Bond}^{Fluid}>1`. This analysis shows that the maximum size of a floc is set by the fluid shear stress, :math:`\tau`. Previously it wasn't clear if floc size was limited by energy dissipation rate or by the velocity gradient. Neither of those parameters captures the physics because ultimately it is a force that breaks the covalent bond and thus it must be a fluid force (not energy dissipation rate or velocity gradient) that can be used as a design parameter. By recognizing that the shear stress :math:`\tau` must be limited we can now develop design equations for the jet reverser and account for the effects of viscosity and temperature on the design.
+
+When flocs are broken by the shearing action of the fluid it is possible that a primary particle is torn off or that the floc is broken in half. The method of breaking matters because if primary particles are dislodged from a floc then any breaking will lead to a deterioration of the sedimentation tank performance because some of those primary particles will make it through the floc blanket and won't be captured by the plate settlers. Conventional wisdom would suggest that flocs will be broken into little pieces. If that were the case then any floc breakup would cause the settled water turbidity to increase. `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that there was no sign of increased settled water turbidity up to an energy dissipation rate of 300 mw/kg (:numref:`figure_sed_performance_vs_jet_edr` adapted from `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_).
+
+.. _figure_sed_performance_vs_jet_edr:
+
+.. figure:: Images/Sed_performance_vs_jet_edr.png
+   :width: 400px
+   :align: center
+   :alt: Sed tank performance as a function of jet energy dissipation rate
+
+   System suspended solids concentrations during steady state as a function of jet energy dissipation rate for 1.2 mm/s.  Results shown are averaged over 2 residence times (1200 seconds) of the sedimentation tank.
+
+
+Using equation :eq:`fluid_shear_stress` the maximum energy dissipation rate below the performance deterioration obtained by Garland (300 mW/kg) can be converted into a fluid shear stress of 0.55 Pa. The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using equation :eq:`fluid_shear_stress_on_doublet`.
+
+.. math::
+   :label: d_floc_shear_stress
+
+   d_{floc}=\sqrt{\frac{4F_{covalent}}{3 \pi \tau}}
+
+The floc size that corresponds to 300 mW/kg is 35 micrometers. The terminal velocity of a floc that is dominated by the primary particles rather than by coagulant or dissolved organic matter is given by
+
+.. math::
+   :label: vt_of_clay_floc
+
+   \bar v_t = \frac{g d_0^2}{18 \nu_{H_2O}}
+   \frac{ \left( \rho_{Floc_0} - \rho_{H_2O} \right)}{\rho_{H_2O}}
+   \left( \frac{d}{d_0} \right)^{D_{Fractal} - 1}
+
+For clay dominated flocs equation :eq:`vt_of_clay_floc` gives a 0.13 mm/s sedimentation velocity which is just slightly higher than the 0.1 mm/s capture velocity used by Garland.
+
+Garland's experiment with the result of floc breakup at the sedimentation tank inlet is consistent with several hypotheses.
+
+#. The bonds holding flocs together are likely strong (order 1.6 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012 <https://doi.org/10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
+#. Flocs are broken where there is the largest force per bond. This would logically occur at the connection between the two subunits that form the floc. Thus when flocs break they would not be expected to produce tiny fragments.
+#. The fluid shear stress determines the force acting to tear a floc apart. Thus given a constant energy dissipation rate the force acting to break up flocs will increase as the temperature drops (see equation :eq:`fluid_shear_stress`)
+#. Settled water turbidity increases when the floc terminal velocity is less than the capture velocity of the plate settlers.
+
 The maximum shear stress that should be used for design of jet reversers requires further analysis. Flocs composed of less clay and more organic matter or more coagulant nanoparticles will have a lower density and would still be sheared to the same diameter by the fluid shear stress. These flocs would have a lower sedimentation velocity than clay based flocs and thus they would not be captured by the plate settlers. Thus the design constraint for the fluid shear stress should be based on the lowest density floc that is to be captured by the plate settlers.
 
 Different coagulants may well have different bond strengths and flocculant aids that increase the bond strength all merit study with the jet reverser experiment to determine an appropriate fluid shear stress. The shear stress of 0.55 Pa is likely an upper limit for operation without using flocculant aids.

@@ -32,7 +32,8 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`C`,Concentration,:math:`\frac{[M]}{[L]^3}`
     :math:`C_D`,Drag coefficient,Dimensionless
     :math:`D`,Diameter,:math:`[L]`
-    :math:`D_{cp}`,Diameter of core particle,:math:`[L]`
+    :math:`D_0`,Diameter of clay primary particle,:math:`[L]`
+    :math:`D_{fractal}`,Fractal Dimension,Dimensionless
     :math:`F`,Force,:math:`\frac{[M][L]}{[T]^2}`
     :math:`G`,Velocity Gradient/Fluid Deformation,:math:`\frac{1}{[T]}`
     :math:`G_{CS}`, Camp Stein velocity gradient,:math:`\frac{1}{[T]}`
@@ -95,19 +96,18 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`\lambda_\nu`,Inner Viscous Length Scale,:math:`[L]`
     :math:`\mu`,Dynamic viscosity,:math:`\frac{[M]}{[T][L]}`
     :math:`\nu`,Kinematic viscosity,:math:`\frac{[L]^2}{[T]}`
-    :math:`\phi`,Porosity, Dimensionless
-    :math:`\phi_{fb}`,Porosity of floc blanket, Dimensionless
+    :math:`\phi`,Porosity,Dimensionless
+    :math:`\phi_{fb}`,Porosity of floc blanket,Dimensionless
     :math:`\rho`,Density,:math:`\frac{[M]}{[L]^3}`
     :math:`\theta`,Residence Time,:math:`[T]`
     :math:`\tau`,Shear,:math:`\frac{[L]}{[M][T]^2}`
     Greek uppercase letters, ,
-    :math:`\Delta`,"Change in", Dimensionless
+    :math:`\Delta`,"Change in",Dimensionless
     :math:`\Lambda`,Distance Between Particles,:math:`[L]`
     :math:`\Pi`,Dimensionless Proportionality Ratio, Dimensionless
-    :math:`\Pi_{Error}`,Linearity Error Ratio, Dimensionless
-    :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`,:math:`\frac{\varepsilon_{Max}}{\bar \varepsilon}` Ratio in a Reactor, Dimensionless
-    :math:`\Pi_{\bar G}^{G_{Max}}`,:math:`\frac{G_{Max}}{\bar G}` Ratio in a Reactor, Dimensionless
-    :math:`\Pi_{HS}`,Height to Baffle Spacing in a Flocculator, Dimensionless
+    :math:`\Pi_{Error}`,Linearity Error Ratio,Dimensionless
+    :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`,:math:`\frac{\varepsilon_{Max}}{\bar \varepsilon}` Ratio in a Reactor,Dimensionless
+    :math:`\Pi_{\bar G}^{G_{Max}}`,:math:`\frac{G_{Max}}{\bar G}` Ratio in a Reactor,Dimensionless
+    :math:`\Pi_{HS}`,Height to Baffle Spacing in a Flocculator,Dimensionless
     :math:`\Pi_{K\nu}`,Ratio of Inner Viscous Length Scale to Kolmogorov Length Scale, Dimensionless
-    :math:`\Pi_{vc}`,Vena Contracta Area Ratio, Dimensionless
-    :math:`\Pi_{fractal}`,Fractal Dimension, Dimensionless
+    :math:`\Pi_{vc}`,Vena Contracta Area Ratio,Dimensionless

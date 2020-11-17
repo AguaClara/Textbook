@@ -129,6 +129,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#polymers">Polymers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shear-forces-and-chemical-bonds">Shear Forces and Chemical Bonds</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#aguaclara-hydraulic-flocculation-model">AguaClara Hydraulic Flocculation Model</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#collisions-in-shear-flow">Collisions in Shear Flow</a></li>
 </ul>
@@ -301,21 +302,43 @@
 <p>The shortest synthetic polymers are similar in size to the coagulant nanoparticles and the longest synthetic polymers are similar in length to bacteria. These polymers could create additional connections between primary particles and coagulant nanoparticles or they could connect primary particles. In either case the polymers can add connections (more bonds!) that likely have some elasticity and thus there can be more than 3 bonds connecting two particles.</p>
 <p>Polymers undoubtedly increase the connections that bind flocs together and thus enable flocs to grow larger. The stronger flocs created by polymer addition may have unintended consequences in subsequent treatment steps. Large strong flocs are great for improved removal in plate or tube settlers. In sedimentation tanks with floc blankets they may form sludge that is more difficult to suspend after a brief shutdown. In filters it is possible that large flocs are more rigid and fail to enter the pore spaces of the filter. Thus the use of polymers may require using large media size for depth filtration. The polymers may also form mudballs in granular filters and thus require more aggressive washing.</p>
 </div>
+<div class="section" id="shear-forces-and-chemical-bonds">
+<h2>Shear Forces and Chemical Bonds<a class="headerlink" href="#shear-forces-and-chemical-bonds" title="Permalink to this headline">¶</a></h2>
+<p>The hydrodynamic force caused by a velocity gradient for two identically sized particles is given by <a class="reference external" href="https://doi.org/10.1016/0021-9797(71)90244-X">Goren, 1971</a></p>
+<div class="math notranslate nohighlight" id="equation-shear-force-on-doublet">
+<span class="eqno">(327)<a class="headerlink" href="#equation-shear-force-on-doublet" title="Permalink to this equation">¶</a></span>\[ F_{shear_{max}} = \frac{3 \pi}{4} \mu d_{floc}^2 G\]</div>
+<p>where <span class="math notranslate nohighlight">\(d_{floc}\)</span> is the diameter of each of the two flocs that have joined and <span class="math notranslate nohighlight">\(G\)</span> is the uniform velocity gradient.</p>
+<p>The chemical bonds formed by the polymers or the coagulant nanoparticles could be strong, intramolecular bonds such as covalent bonds in which valence electrons are shared, or a non-covalent bond that does not involve sharing electrons. Non-covalent bonds include hydrogen bonding, and Van der Waals forces.</p>
+<p>The strength of a polymer chain with carbon-carbon bonds is of the order of 1 to 10 nN (<a class="reference external" href="https://doi.org/10.1016/S0022-2836(61)80030-2">Levinthal and Davison, 1961</a>). Covalent bonds rupture at approximately 1600 pN, noncovalent bonds break at about 160 pN, and hydrogen bonds break at about 4 pN (<a class="reference external" href="http://www.picotwist.com/index.php?content=smb&amp;option=odg">Forces involved at the biological level</a>).</p>
+<p>If we assume that the flocs are joined by 3 bonds to create a constrained connection then we can compare the fluid shear forces that are pulling flocs apart to the strength of potential bonds. The result of this force comparison is shown in <a class="reference internal" href="#figure-shear-force-and-bond-strength"><span class="std std-numref">Fig. 78</span></a>.</p>
+<p>Given that flocs grow to be approximately 1 mm in a 100 Hz flocculator it suggests that the bonds holding the flocs together are either covalent bonds or noncovalent bonds that are stronger than hydrogen bonds. Van der Waals interactions are weaker than hydrogen bonds and thus Van der Waals interactions are not significant for flocculation when using coagulants.</p>
+<div class="figure align-center" id="id4">
+<span id="figure-shear-force-and-bond-strength"></span><a class="reference internal image-reference" href="../_images/Shear_force_and_bond_strength.png"><img alt="internal figure" src="../_images/Shear_force_and_bond_strength.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 78 </span><span class="caption-text">Fluid forces at two uniform velocity gradients compared with the strength of 3 covalent, noncovalent, or hydrogen bonds. Floc growth in a shear environment is limited by the strength of the chemical bonds that can form as two particles collide.</span></p>
+</div>
+<p>Van der Waals forces have traditionally been viewed as the primary force responsible for holding flocs together after the repulsive electrostatic force was neutralized. The analysis of the forces shown above reveals that Van der Waals forces are too weak to allow the formation of large easily settled flocs in the shear environment of a flocculator. Instead flocculation is based on stronger noncovalent bonds or perhaps even covalent bonds.</p>
+<p>Hydrated oxides of polyvalent metals like Fe(III), Al(III), Ti(IV) and Zr(IV) exhibit ligand sorption properties by forming inner-sphere complexes (<a class="reference external" href="https://doi.org/10.1016/j.reactfunctpolym.2007.07.047">Sarkar et al, 2007</a>). In inner-sphere complexes the coagulant nanoparticle forms covalent bonds with the molecules in the surface of the raw water particles. Inner sphere bonds are strong and stable. In contrast, outer sphere bonds include a molecule of water between the two surfaces and form a transient bond.</p>
+<p>Given that
+1) aluminum and iron coagulant nanoparticles form covalent bonds with arsenic
+1) outer sphere complexes are transient
+1) the shear forces acting on flocs suggest strong bonds
+we conclude that the coagulant nanoparticles likely form covalent bonds with inorganic particles present in raw water.</p>
+</div>
 <div class="section" id="aguaclara-hydraulic-flocculation-model">
 <h2>AguaClara Hydraulic Flocculation Model<a class="headerlink" href="#aguaclara-hydraulic-flocculation-model" title="Permalink to this headline">¶</a></h2>
 <p>The AguaClara hydraulic flocculation model was developed over 15 years of extensive laboratory and field research and is based on the physics of interactions between particles in the raw water, dissolved organic molecules, and coagulant nanoparticles in a shear flow. The AguaClara model is based on the physics of these interactions and is the first non-empirical flocculation model. The AguaClara Hydraulic Flocculation model is described in detail in <a class="reference internal" href="Floc_Model.html#title-flocculation-model"><span class="std std-ref">Flocculation Model</span></a>.</p>
 <div class="section" id="collisions-in-shear-flow">
 <h3>Collisions in Shear Flow<a class="headerlink" href="#collisions-in-shear-flow" title="Permalink to this headline">¶</a></h3>
 <p>Given that hydraulic flocculators approach plug flow conditions it is reasonable to assume that at any given location in the flocculator there is a predominance of one size of flocs. Thus collisions between similar sized flocs are most likely because that is what is present. There is also a hydrodynamic reason why collisions between similar sized flocs are favored.</p>
-<p>In a shear flow the particles rotate and a boundary layer is created all around the rotating particles. The boundary layer prevents collisions between different sized particles (see <a class="reference internal" href="#figure-no-dissimilar-collisions-in-shear"><span class="std std-numref">Fig. 78</span></a>) because the smaller of the two particles is unable to extend through the boundary layer of the larger particle. Only particles that are large enough to extend through each other’s boundary layers can collide (see <a class="reference internal" href="#figure-similar-size-collisions-in-shear"><span class="std std-numref">Fig. 79</span></a>). Thus the particles must be similar in size because the boundary layer also scales with the diameter of the particle.</p>
-<div class="figure align-center" id="id4">
+<p>In a shear flow the particles rotate and a boundary layer is created all around the rotating particles. The boundary layer prevents collisions between different sized particles (see <a class="reference internal" href="#figure-no-dissimilar-collisions-in-shear"><span class="std std-numref">Fig. 79</span></a>) because the smaller of the two particles is unable to extend through the boundary layer of the larger particle. Only particles that are large enough to extend through each other’s boundary layers can collide (see <a class="reference internal" href="#figure-similar-size-collisions-in-shear"><span class="std std-numref">Fig. 80</span></a>). Thus the particles must be similar in size because the boundary layer also scales with the diameter of the particle.</p>
+<div class="figure align-center" id="id5">
 <span id="figure-no-dissimilar-collisions-in-shear"></span><a class="reference external image-reference" href="https://youtu.be/f095r0Tvgoc"><img alt="No collisions between different sized particles" src="../_images/no_collisions_when_different_sizes.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 78 </span><span class="caption-text">Particles that are very different in size don’t even get close enough to make contact because of the boundary layer around the larger particle. This is because the thickness of the boundary layer also scales with the diameter of the particle.</span></p>
+<p class="caption"><span class="caption-number">Fig. 79 </span><span class="caption-text">Particles that are very different in size don’t even get close enough to make contact because of the boundary layer around the larger particle. This is because the thickness of the boundary layer also scales with the diameter of the particle.</span></p>
 </div>
 <p>Collisions between similar sized particles are possible because the particles are able to extend through the boundary layers.</p>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id6">
 <span id="figure-similar-size-collisions-in-shear"></span><a class="reference external image-reference" href="https://youtu.be/zP-CK5fNH6Y"><img alt="Favorable collisions between similar sized particles" src="../_images/Similar_Size_Collisions_in_Shear.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 79 </span><span class="caption-text">In a shear flow the particles rotate and a boundary layer is created all around the rotating particle. Similar sized particles are able to extend through the boundary layers and make contact.</span></p>
+<p class="caption"><span class="caption-number">Fig. 80 </span><span class="caption-text">In a shear flow the particles rotate and a boundary layer is created all around the rotating particle. Similar sized particles are able to extend through the boundary layers and make contact.</span></p>
 </div>
 <p>The rotating boundary layers in a shear flow limit collisions to similar sized particles. Given that flocculation is an environment specifically designed to create fluid shear it is reasonable to assume that only collisions between similar sized particles are able to occur. This simplifies the Smoluchowski equation tremendously.</p>
 </div>
@@ -324,10 +347,10 @@
 <h2>Number of particles in a floc<a class="headerlink" href="#number-of-particles-in-a-floc" title="Permalink to this headline">¶</a></h2>
 <p>For simplicity of modeling let’s assume that flocs repeatedly double in size as suggested by the movie in <a class="reference internal" href="#figure-collisions-in-sequence"><span class="std std-numref">Fig. 75</span></a>. In that case, the number of primary particles in a floc is given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-n-primary-of-n-collisions">
-<span class="eqno">(327)<a class="headerlink" href="#equation-eq-n-primary-of-n-collisions" title="Permalink to this equation">¶</a></span>\[ n_{primary} = 2^{n_{collisions}}\]</div>
-<p>If we assume (and we will show this assumption to be wrong in the next step) that the floc volume is directly proportional to the total volume of the primary particles in the floc, then we can rearrange <a class="reference internal" href="#equation-eq-n-primary-of-n-collisions">(327)</a> to solve for the number of sequential collisions required to increase the number of primary particles by a factor of 1000,000,000.</p>
+<span class="eqno">(328)<a class="headerlink" href="#equation-eq-n-primary-of-n-collisions" title="Permalink to this equation">¶</a></span>\[ n_{primary} = 2^{n_{collisions}}\]</div>
+<p>If we assume (and we will show this assumption to be wrong in the next step) that the floc volume is directly proportional to the total volume of the primary particles in the floc, then we can rearrange <a class="reference internal" href="#equation-eq-n-primary-of-n-collisions">(328)</a> to solve for the number of sequential collisions required to increase the number of primary particles by a factor of 1000,000,000.</p>
 <div class="math notranslate nohighlight" id="equation-n-collisions-not-fractal">
-<span class="eqno">(328)<a class="headerlink" href="#equation-n-collisions-not-fractal" title="Permalink to this equation">¶</a></span>\[ n_{collisions} = \frac{log(n_{primary})}{log(2)}\]</div>
+<span class="eqno">(329)<a class="headerlink" href="#equation-n-collisions-not-fractal" title="Permalink to this equation">¶</a></span>\[ n_{collisions} = \frac{log(n_{primary})}{log(2)}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">n_primary</span> <span class="o">=</span> <span class="mi">1000000000</span>
@@ -342,16 +365,16 @@
 <p>As flocs combine they don’t coalesce like mist turning into rain drops. Instead they form loose aggregates that contain a higher and higher fraction of water in the voids between the solid primary particles.</p>
 <p>Although the obvious flocculation advantage is that it produces larger aggregates that are easier to remove, it is also <strong>possible</strong> (this is a hypothesis that needs testing) that a difference in a physical property between primary particles and flocs plays a role in enhanced removal of flocs in floc blankets and filters. For example, the many relatively weak connection points between the primary particles in the flocs enables the flocs to deform. It is possible that deformation plays an important role right at the moment of collision. Presumably the bond strength required to lock the colliding particles together is less if the particles can deform as they are colliding.</p>
 <p>The size change produced by flocculation is dramatic. Clay particles and pathogens have sizes that are order <span class="math notranslate nohighlight">\(\mu m\)</span> and they combine to form flocs that are order <span class="math notranslate nohighlight">\(mm\)</span>. A thousand fold increase in diameter suggests a billion fold increase in volume.</p>
-<div class="figure align-center" id="id6">
+<div class="figure align-center" id="id7">
 <span id="figure-flocs-are-fractals"></span><a class="reference external image-reference" href="https://youtu.be/tAAC-KY8ZgA"><img alt="Flocs are fractals" src="../_images/Flocs_are_fractals.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 80 </span><span class="caption-text">The amount of water contained within a volume defined by the floc increases as the flocs grows.</span></p>
+<p class="caption"><span class="caption-number">Fig. 81 </span><span class="caption-text">The amount of water contained within a volume defined by the floc increases as the flocs grows.</span></p>
 </div>
 </div>
 <div class="section" id="flocculation-is-or-used-to-be-a-slow-process">
 <h2>Flocculation is (or used to be) a Slow Process<a class="headerlink" href="#flocculation-is-or-used-to-be-a-slow-process" title="Permalink to this headline">¶</a></h2>
 <p>One of the mysteries of flocculation has been why it is such a slow process, requiring 30 minutes according to conventional design, and yet it appears to be a very rapid process. Plant operators observe that with high raw water turbidities that they can see flocculation progressing after about 0.5 minutes of flocculation. We can estimate the collision potential, <span class="math notranslate nohighlight">\(G\theta\)</span> that corresponds to making visible flocs.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-0">
-<span class="eqno">(329)<a class="headerlink" href="#equation-flocculation-floc-intro-0" title="Permalink to this equation">¶</a></span>\[\bar G = \sqrt{ \frac{g h_e}{\theta \nu}}\]</div>
+<span class="eqno">(330)<a class="headerlink" href="#equation-flocculation-floc-intro-0" title="Permalink to this equation">¶</a></span>\[\bar G = \sqrt{ \frac{g h_e}{\theta \nu}}\]</div>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="k">as</span> <span class="nn">sc</span>
 <span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -379,8 +402,8 @@
 </div>
 <div class="section" id="conventional-vs-aguaclara-flocculation">
 <h2>Conventional vs AguaClara flocculation<a class="headerlink" href="#conventional-vs-aguaclara-flocculation" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils align-center" id="id7">
-<caption><span class="caption-number">Table 15 </span><span class="caption-text">Conventional vs AguaClara flocculation</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<table border="1" class="docutils align-center" id="id8">
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Conventional vs AguaClara flocculation</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
