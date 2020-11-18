@@ -8,10 +8,9 @@ This chapter will supplement the lectures by going into further detail.
 
 Equations, universal constants, and other helpful goodies can be found in the `aguaclara code base <https://github.com/AguaClara/aguaclara/tree/master/aguaclara>`_ . Most equations and constants you find in these summary sheets will already have been coded and will be shown here in the following format:
 
-| Variable: ``pc.gravity``
-| Function: ``pc.area_circle(DiamCircle)``.
+| Function: ``ac.area_circle(DiamCircle)``.
 
-The letters before the ``.``, in this case ``pc``, indicate the file within aguaclara where the variable or function can be found. In the examples above, ``pc.gravity`` and ``pc.area_circle(DiamCircle)`` show that the variable ``gravity`` and function ``area_circle(DiamCicle)`` are located inside the `physchem.py <https://github.com/AguaClara/aguaclara>`__ (``pc``) file. You are strongly recommended to look up any aguaclara equations before using them, even if they are given here in this summary sheet. This is because each equation has comments in its original file describing what the specific conditions are to using it.
+You are strongly recommended to look up any aguaclara equations before using them, even if they are given here in this summary sheet. This is because each equation has comments in its original file describing what the specific conditions are to using it.
 
 **Important Note:** This chapter introduces uncertainty and empirical design. Some of the parameters used to design AguaClara flocculators are based on what has been shown to work in the field, as opposed to having been derived scientifically. To make sure that the reader is aware of these concepts and parameters that don’t yet have a thorough basis in research, they will be highlighted in red when they appear.
 
@@ -91,6 +90,7 @@ Which means we can solve for :math:`G`:
 Energy dissipation rate is, fortunately, easier to determine than collision potential. This is due to the second way to think about :math:`\varepsilon`, which is using head loss. In any reactor, a flocculator in this case, the total energy dissipated is simply the head loss, :math:`h_L`. The amount of time required to dissipate that energy is the residence time of the water in the reactor, :math:`\theta`. Accounting for the fact that 'head' energy is due to gravity :math:`g`, we have all the parameters needed to determine another equation for energy dissipation rate:
 
 .. math::
+  :label: EDR_of_headloss
 
   \bar \varepsilon = \frac{g h_L}{\theta}
 
@@ -217,7 +217,7 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
 
 .. math::
 
-  \frac{x}{10} = D - D_0
+  \frac{x}{10} = D - D_{cp}
 
 .. _figure_jet_expansion_flocculator:
 
@@ -228,7 +228,7 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
 
    A turbulent jet expands in width by one unit for every 10 units downstream.
 
-Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing :math:`S`. We do this by substituting  :math:`D_0 = (0.384 S)` along with :math:`D = S` to approximate how much distance, :math:`x = H_e`, the contracted flow has to cover.
+Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing :math:`S`. We do this by substituting  :math:`D_{cp} = (0.384 S)` along with :math:`D = S` to approximate how much distance, :math:`x = H_e`, the contracted flow has to cover.
 
 .. math::
 
