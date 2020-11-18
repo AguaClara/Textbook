@@ -4,436 +4,649 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: AguaClara Textbook EXPERIMENTAL\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-19 16:17-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2020-10-12 17:37-0400\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"Last-Translator: \n"
+"Language-Team: Textbook Subteam 2020\n"
+"Language: es\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: ../../Troubleshooting/Troubleshooting.rst:2
+#, fuzzy
 msgid ""
 "Can we make some sort of a diagnostic guide based on symptoms? Make the "
 "following into a giant table."
 msgstr ""
+"¿Podemos hacer una especie de guía de diagnóstico basada en los síntomas? Haz "
+"lo siguiente en una tabla gigante."
 
 #: ../../Troubleshooting/Troubleshooting.rst:9
+#, fuzzy
 msgid "Problems"
-msgstr ""
+msgstr "Problemas"
 
 #: ../../Troubleshooting/Troubleshooting.rst:12
+#, fuzzy
 msgid "Temperature fluctuations"
-msgstr ""
+msgstr "Las fluctuaciones de temperatura"
 
 #: ../../Troubleshooting/Troubleshooting.rst:14
+#, fuzzy
 msgid ""
-"Calcium from calcium hypochlorite combines with carbonate in the water to"
-" form low solubility calcium carbonate."
+"Calcium from calcium hypochlorite combines with carbonate in the water to form "
+"low solubility calcium carbonate."
 msgstr ""
+"El calcio del hipoclorito de calcio se combina con el carbonato en el agua para "
+"formar carbonato de calcio de baja solubilidad."
 
 #: ../../Troubleshooting/Troubleshooting.rst:18
+#, fuzzy
 msgid "Solutions"
-msgstr ""
+msgstr "Soluciones"
 
 #: ../../Troubleshooting/Troubleshooting.rst:20
+#, fuzzy
 msgid ""
-"Drip chlorine into water rather than injecting it to eliminate formation "
-"of precipitate at the injection point"
+"Drip chlorine into water rather than injecting it to eliminate formation of "
+"precipitate at the injection point"
 msgstr ""
+"Gotear cloro en el agua en lugar de inyectarlo para eliminar la formación de "
+"precipitado en el punto de inyección"
 
 #: ../../Troubleshooting/Troubleshooting.rst:22
+#, fuzzy
 msgid ""
-"Use valves at the end of the pipeline to control transmission line flow "
-"rate rather than upstream control. Review the transmission line to ensure"
-" that all sections of the line have flow controlled by limiting available"
-" driving head. Air entrainment occurs when the available head exceeds the"
-" head required to transmit the target flow."
+"Use valves at the end of the pipeline to control transmission line flow rate "
+"rather than upstream control. Review the transmission line to ensure that all "
+"sections of the line have flow controlled by limiting available driving head. "
+"Air entrainment occurs when the available head exceeds the head required to "
+"transmit the target flow."
 msgstr ""
+"Usar válvulas al final de la tubería para controlar el flujo de la línea de "
+"transmisión en lugar de controlarlo río arriba. Revise la línea de transmisión "
+"para asegurarse de que todas las secciones de la línea tienen el flujo "
+"controlado limitando la cabeza de conducción disponible. El arrastre de aire se "
+"produce cuando la cabeza disponible supera la altura necesaria para transmitir "
+"el flujo objetivo."
 
 #: ../../Troubleshooting/Troubleshooting.rst:28
+#, fuzzy
 msgid "Table of symptoms, problems, and solutions for AguaClara plant operation."
 msgstr ""
+"Tabla de síntomas, problemas y soluciones para el funcionamiento de la planta "
+"AguaClara."
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "Observation"
-msgstr ""
+msgstr "Observación"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "Problem"
-msgstr ""
+msgstr "Problema"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "Solution"
-msgstr ""
+msgstr "Solución"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "Air bubbles"
-msgstr ""
+msgstr "Burbujas de aire"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid ""
-"Air entrainment in the transmission line and transport to a high pressure"
-" zone in the pipeline where the air is dissolved in the water"
+"Air entrainment in the transmission line and transport to a high pressure zone "
+"in the pipeline where the air is dissolved in the water"
 msgstr ""
+"Arrastre de aire en la línea de transmisión y transporte a una zona de alta "
+"presión en la tubería donde el aire se disuelve en el agua"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid ""
-"Use downstream head loss to prevent air entrainment in transmission line "
-"or add a unit process (TBD) that removes excess dissolved air"
+"Use downstream head loss to prevent air entrainment in transmission line or add "
+"a unit process (TBD) that removes excess dissolved air"
 msgstr ""
+"Usar la pérdida de carga aguas abajo para evitar el arrastre de aire en la "
+"línea de transmisión o añadir un proceso unitario (TBD) que elimine el exceso "
+"de aire disuelto"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "Bubbles in sedimentation tanks"
-msgstr ""
+msgstr "Burbujas en los tanques de sedimentación"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "anaerobic production in methane in settled sludge"
-msgstr ""
+msgstr "producción anaeróbica de metano en el lodo sedimentado"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "clean sedimentation tank and check design to eliminate all settled sludge"
 msgstr ""
+"limpiar el tanque de sedimentación y comprobar el diseño para eliminar todos "
+"los lodos sedimentados"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "Bubbles in EStaRS"
-msgstr ""
+msgstr "Burbujas en EStaRS"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid ""
-"water entering the plant is supersaturated with air and EStaRS filters "
-"operate at very low pressure (compared with OStaRS)"
+"water entering the plant is supersaturated with air and EStaRS filters operate "
+"at very low pressure (compared with OStaRS)"
 msgstr ""
+"el agua que entra en la planta está supersaturada con aire y los filtros EStaRS "
+"funcionan a muy baja presión (comparados con los OStaRS)"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "eliminate air entrainment in transmission line"
-msgstr ""
+msgstr "eliminar el arrastre de aire en la línea de transmisión"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "Short filter runtimes"
-msgstr ""
+msgstr "Cortos tiempos de ejecución de los filtros"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "poor performance of floc/sed system or clogged slotted pipes or air lock"
 msgstr ""
+"mal funcionamiento del sistema floc/sed o tubos ranurados o esclusas de aire "
+"obstruidos"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "various solutions"
-msgstr ""
+msgstr "varias soluciones"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "Gradual increase in post backwash head loss in filters"
 msgstr ""
+"Aumento gradual de la pérdida de carga después del retrolavado en los filtros"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "slotted pipes are clogging"
-msgstr ""
+msgstr "las ranuras de los tubos se están obstruyendo"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid ""
-"acid flush by pouring HCl (need the concentration) into the outlet pipes "
-"OR disassemble filter and clean with a pressure washer"
+"acid flush by pouring HCl (need the concentration) into the outlet pipes OR "
+"disassemble filter and clean with a pressure washer"
 msgstr ""
+"lavado ácido vertiendo HCl (necesita la concentración) en los tubos de salida O "
+"desmontar el filtro y limpiarlo con una lavadora a presión"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid "Scale deposition in the distribution system"
-msgstr ""
+msgstr "Depósito de escamas en el sistema de distribución"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid ""
-"increase in temperature from groundwater conditions causes "
-"supersaturation of calcium carbonate"
+"increase in temperature from groundwater conditions causes supersaturation of "
+"calcium carbonate"
 msgstr ""
+"el aumento de la temperatura debido a las condiciones de las aguas subterráneas "
+"causa la supersaturación del carbonato de calcio"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid ""
-"reduce the pH of the water slightly (perhaps 0.5 pH units) to eliminate "
-"the supersaturation"
+"reduce the pH of the water slightly (perhaps 0.5 pH units) to eliminate the "
+"supersaturation"
 msgstr ""
+"reducir el pH del agua ligeramente (quizás 0,5 unidades de pH) para eliminar la "
+"supersaturación"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid ""
-"Clogging of chlorination system tubes and formation of precipitate at the"
-" injection point"
+"Clogging of chlorination system tubes and formation of precipitate at the "
+"injection point"
 msgstr ""
+"Obstrucción de los tubos del sistema de cloración y formación de precipitado en "
+"el punto de inyección"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid ""
-"dissolution of carbon dioxide from the atmosphere causes precipitation of"
-" calcium carbonate"
+"dissolution of carbon dioxide from the atmosphere causes precipitation of "
+"calcium carbonate"
 msgstr ""
+"la disolución del dióxido de carbono de la atmósfera causa la precipitación del "
+"carbonato de calcio"
 
 #: ../../Troubleshooting/Troubleshooting.rst:1
+#, fuzzy
 msgid ""
-"Reduce exposure of the solution to the atmosphere OR drip the chlorine "
-"into the filtered water"
+"Reduce exposure of the solution to the atmosphere OR drip the chlorine into the "
+"filtered water"
 msgstr ""
+"Reducir la exposición de la solución a la atmósfera O gotear el cloro en el "
+"agua filtrada"
 
 #: ../../Troubleshooting/Troubleshooting.rst:42
+#, fuzzy
 msgid "High head loss after backwash in EStaRS"
-msgstr ""
+msgstr "Alta pérdida de cabeza después del lavado a contracorriente en EStaRS"
 
 #: ../../Troubleshooting/Troubleshooting.rst:44
+#, fuzzy
 msgid ""
-"The 60 cm diameter EStaRS filters at El PODA had a very high head loss of"
-" 43 cm within a few minutes of ending backwash. The maximum available "
-"head is only 50 cm and thus filter runs lasted only a few hours. El PODA "
-"was the 2nd site where 60 cm diameter EStaRS filters were used. Given "
-"that the filter backwashed just fine without excess head required it "
-"appeared that the inlet system was performing as expected and did not "
-"have excessive head loss."
+"The 60 cm diameter EStaRS filters at El PODA had a very high head loss of 43 cm "
+"within a few minutes of ending backwash. The maximum available head is only 50 "
+"cm and thus filter runs lasted only a few hours. El PODA was the 2nd site where "
+"60 cm diameter EStaRS filters were used. Given that the filter backwashed just "
+"fine without excess head required it appeared that the inlet system was "
+"performing as expected and did not have excessive head loss."
 msgstr ""
+"Los filtros EStaRS de 60 cm de diámetro en El PODA tuvieron una pérdida de "
+"cabeza muy alta de 43 cm a los pocos minutos de terminar el retrolavado. La "
+"máxima cabeza disponible es de sólo 50 cm y por lo tanto las pasadas de los "
+"filtros duraron sólo unas pocas horas. El PODA fue el segundo sitio donde se "
+"usaron filtros EStaRS de 60 cm de diámetro. Dado que el filtro se lavó a "
+"contracorriente muy bien sin necesidad de un exceso de cabeza, parecía que el "
+"sistema de entrada estaba funcionando como se esperaba y no tenía una pérdida "
+"excesiva de cabeza."
 
 #: ../../Troubleshooting/Troubleshooting.rst:46
+#, fuzzy
 msgid ""
-"The key insight was that the top two layers of sand stopped producing "
-"filter water soon after beginning a filter run. A complete stoppage means"
-" that clogging ISN'T the issue! Clogging would decrease the flow rate, "
-"but it wouldn't stop flow because the clogging would have to be absolute "
-"to stop the flow."
+"The key insight was that the top two layers of sand stopped producing filter "
+"water soon after beginning a filter run. A complete stoppage means that "
+"clogging ISN'T the issue! Clogging would decrease the flow rate, but it "
+"wouldn't stop flow because the clogging would have to be absolute to stop the "
+"flow."
 msgstr ""
+"La clave fue que las dos capas superiores de arena dejaron de producir agua de "
+"filtro poco después de comenzar una operación de filtrado. ¡Un paro completo "
+"significa que la obstrucción no es el problema! La obstrucción disminuiría la "
+"velocidad de flujo, pero no detendría el flujo porque la obstrucción tendría "
+"que ser absoluta para detener el flujo."
 
 #: ../../Troubleshooting/Troubleshooting.rst:48
+#, fuzzy
 msgid ""
-"The failure was that the water traveling horizontally in the branches and"
-" trunk carries air bubbles to the vertically downward flowing pipe (see a"
-" photo here). The air accumulates in that pipe and the water falls "
-"through the air losing energy like a waterfall. Water completely stops "
-"flowing through the layers of the filter that exit through that trunk "
-"line when the height of the air is equal to the available energy driving "
-"water through the StaRS filter."
+"The failure was that the water traveling horizontally in the branches and trunk "
+"carries air bubbles to the vertically downward flowing pipe (see a photo here). "
+"The air accumulates in that pipe and the water falls through the air losing "
+"energy like a waterfall. Water completely stops flowing through the layers of "
+"the filter that exit through that trunk line when the height of the air is "
+"equal to the available energy driving water through the StaRS filter."
 msgstr ""
+"El fallo fue que el agua que viajaba horizontalmente en las ramas y el tronco "
+"lleva burbujas de aire al tubo que fluye verticalmente hacia abajo (ver una "
+"foto aquí). El aire se acumula en ese tubo y el agua cae a través del aire "
+"perdiendo energía como una cascada. El agua deja de fluir por completo a través "
+"de las capas del filtro que salen por ese tronco cuando la altura del aire es "
+"igual a la energía disponible que impulsa al agua a través del filtro StaRS."
 
 #: ../../Troubleshooting/Troubleshooting.rst:50
+#, fuzzy
 msgid ""
-"There are two improvements required at El PODA. First, the transmission "
-"line must be operated with downstream flow control to prevent air "
-"entrapment and compression. That will likely be sufficient to solve the "
-"problem of air in the filters. The second improvement is to add manual "
-"air release valves to the top of each of the trunk lines so that operates"
-" can expel air during filtration. Note that these air vents must have a "
-"valve that is closed during backwash because the filter is under negative"
-" pressure during backwash and would suck air into the filter through "
-"those vents if they were open."
+"There are two improvements required at El PODA. First, the transmission line "
+"must be operated with downstream flow control to prevent air entrapment and "
+"compression. That will likely be sufficient to solve the problem of air in the "
+"filters. The second improvement is to add manual air release valves to the top "
+"of each of the trunk lines so that operates can expel air during filtration. "
+"Note that these air vents must have a valve that is closed during backwash "
+"because the filter is under negative pressure during backwash and would suck "
+"air into the filter through those vents if they were open."
 msgstr ""
+"Hay dos mejoras necesarias en El PODA. Primero, la línea de transmisión debe "
+"funcionar con un control de flujo descendente para evitar el atrapamiento y la "
+"compresión del aire. Eso probablemente será suficiente para resolver el "
+"problema del aire en los filtros. La segunda mejora es añadir válvulas de "
+"liberación de aire manual en la parte superior de cada una de las líneas "
+"troncales para que los operadores puedan expulsar el aire durante la "
+"filtración. Tenga en cuenta que estos respiraderos de aire deben tener una "
+"válvula que esté cerrada durante el retrolavado porque el filtro está bajo "
+"presión negativa durante el retrolavado y aspiraría aire al filtro a través de "
+"esos respiraderos si estuvieran abiertos."
 
 #: ../../Troubleshooting/Troubleshooting.rst:52
+#, fuzzy
 msgid ""
-"EStaRS with the wing inlets make a possible failure mode. At the end of "
-"the backwash if the operator closes the valve in the siphon quickly, the "
-"water pressure rises quickly inside the filter. When the water rises in "
-"the three entry passages it is possible that the water carries the sand "
-"inside the branches with wings. And once there is sand inside the pipes, "
-"this sand may hinder the flow of water during the filter run."
+"EStaRS with the wing inlets make a possible failure mode. At the end of the "
+"backwash if the operator closes the valve in the siphon quickly, the water "
+"pressure rises quickly inside the filter. When the water rises in the three "
+"entry passages it is possible that the water carries the sand inside the "
+"branches with wings. And once there is sand inside the pipes, this sand may "
+"hinder the flow of water during the filter run."
 msgstr ""
+"EStaRS con las entradas de las alas hacen un posible modo de fallo. Al final "
+"del retrolavado si el operador cierra rápidamente la válvula del sifón, la "
+"presión del agua aumenta rápidamente dentro del filtro. Cuando el agua sube en "
+"los tres pasajes de entrada es posible que el agua lleve la arena dentro de las "
+"ramas con alas. Y una vez que hay arena dentro de las tuberías, esta arena "
+"puede obstaculizar el flujo de agua durante el recorrido del filtro."
 
 #: ../../Troubleshooting/Troubleshooting.rst:54
+#, fuzzy
 msgid ""
 "The solution is in the operation of the system and maybe a change in the "
-"design. If the operators are manipulating pipe stubs to do the backwash, "
-"then the first step is to remove the pipe stubs before closing the valve."
-" The other way around the problem would be to close the valve slowly to "
-"ensure that the water rises very slowly in the inlets."
+"design. If the operators are manipulating pipe stubs to do the backwash, then "
+"the first step is to remove the pipe stubs before closing the valve. The other "
+"way around the problem would be to close the valve slowly to ensure that the "
+"water rises very slowly in the inlets."
 msgstr ""
+"La solución está en el funcionamiento del sistema y tal vez un cambio en el "
+"diseño. Si los operarios están manipulando los tubos para hacer el retrolavado, "
+"entonces el primer paso es quitar los tubos antes de cerrar la válvula. La otra "
+"forma de solucionar el problema sería cerrar la válvula lentamente para "
+"asegurar que el agua suba muy lentamente en las entradas."
 
 #: ../../Troubleshooting/Troubleshooting.rst:57
+#, fuzzy
 msgid "Encrustation of filter pipes at Las Vegas"
-msgstr ""
+msgstr "Incrustación de tuberías de filtro en Las Vegas"
 
 #: ../../Troubleshooting/Troubleshooting.rst:71
-#, python-format
+#, fuzzy, python-format
 msgid ""
-"Remove the encrustation without disassembling the filter by pouring "
-"buckets of hydrochloric acid into pipes that are inserted into the "
-"couplings in the filtered water effluent box. The hydrochloric acid at "
-"Las Vegas is a 10% solution. Dilute that solution by a factor of 5 to "
-"produce a 2% HCl solution. Note that all of the acid and water injected "
-"into the filter will simply go into the filter box and increase the water"
-" level during this treatment. When diluting acid always add acid to "
-"water!"
+"Remove the encrustation without disassembling the filter by pouring buckets of "
+"hydrochloric acid into pipes that are inserted into the couplings in the "
+"filtered water effluent box. The hydrochloric acid at Las Vegas is a "
+"10% solution. Dilute that solution by a factor of 5 to produce a 2% HCl "
+"solution. Note that all of the acid and water injected into the filter will "
+"simply go into the filter box and increase the water level during this "
+"treatment. When diluting acid always add acid to water!"
 msgstr ""
+"Elimine las incrustaciones sin desmontar el filtro vertiendo cubos de ácido "
+"clorhídrico en las tuberías que se insertan en los acoplamientos de la caja de "
+"efluentes de agua filtrada. El ácido clorhídrico de Las Vegas es una solución "
+"al 10%. Diluya esa solución en un factor de 5 para producir una solución de HCl "
+"al 2%. Tenga en cuenta que todo el ácido y el agua inyectada en el filtro "
+"simplemente irá a la caja de filtro y aumentará el nivel del agua durante este "
+"tratamiento. Cuando diluya el ácido siempre añada ácido al agua!"
 
 #: ../../Troubleshooting/Troubleshooting.rst:60
+#, fuzzy
 msgid ""
-"Insert pipe stubs into the couplings in the filter inlet box to prevent "
-"any water from flowing through the filter"
+"Insert pipe stubs into the couplings in the filter inlet box to prevent any "
+"water from flowing through the filter"
 msgstr ""
+"Insertar los trozos de tubo en los acoplamientos de la caja de entrada del "
+"filtro para evitar que el agua fluya a través del filtro"
 
 #: ../../Troubleshooting/Troubleshooting.rst:61
+#, fuzzy
 msgid ""
-"Remove the drain pipe stub so that any effluent from the filter goes to "
-"drain"
+"Remove the drain pipe stub so that any effluent from the filter goes to drain"
 msgstr ""
+"Quitar el tubo de desagüe para que cualquier efluente del filtro vaya a parar "
+"al desagüe"
 
 #: ../../Troubleshooting/Troubleshooting.rst:62
+#, fuzzy
 msgid "Insert pipe stubs into the couplings in the filtered water effluent box"
 msgstr ""
+"Insertar los tubos en los acoplamientos de la caja de efluentes de agua filtrada"
 
 #: ../../Troubleshooting/Troubleshooting.rst:63
+#, fuzzy
 msgid "Fill a 20 L bucket with 16 L of water (mark the bucket level!)"
-msgstr ""
+msgstr "Llena un cubo de 20 L con 16 L de agua (¡marca el nivel del cubo!)"
 
 #: ../../Troubleshooting/Troubleshooting.rst:64
+#, fuzzy
 msgid "Pour 4 L of 10% HCl into the bucket to reach a total of 20 L"
-msgstr ""
+msgstr "Vierta 4 L de HCl al 10% en el cubo para alcanzar un total de 20 L"
 
 #: ../../Troubleshooting/Troubleshooting.rst:65
+#, fuzzy
 msgid "Mix the diluted acid with a PVC pipe for a couple of minutes"
-msgstr ""
+msgstr "Mezclar el ácido diluido con un tubo de PVC durante un par de minutos"
 
 #: ../../Troubleshooting/Troubleshooting.rst:66
+#, fuzzy
 msgid "Pour the 20 L of 2% HCl into the bottom outlet of the filter"
-msgstr ""
+msgstr "Vierta los 20 L de HCl al 2% en la salida inferior del filtro"
 
 #: ../../Troubleshooting/Troubleshooting.rst:67
 #: ../../Troubleshooting/Troubleshooting.rst:70
+#, fuzzy
 msgid "Wait 5 minutes"
-msgstr ""
+msgstr "Espera 5 minutos"
 
 #: ../../Troubleshooting/Troubleshooting.rst:68
+#, fuzzy
 msgid ""
-"Repeat previous 2 steps 5 times to pour a total of 100 L of acid into the"
-" bottom outlet pipe (note that the goal is for this total volume to "
-"exceed the outlet pipe, trunk, and branch pipes volume)"
+"Repeat previous 2 steps 5 times to pour a total of 100 L of acid into the "
+"bottom outlet pipe (note that the goal is for this total volume to exceed the "
+"outlet pipe, trunk, and branch pipes volume)"
 msgstr ""
+"Repita los dos pasos anteriores 5 veces para verter un total de 100 L de ácido "
+"en el tubo de salida del fondo (tenga en cuenta que el objetivo es que este "
+"volumen total supere el volumen del tubo de salida, del tronco y de los tubos "
+"de derivación)"
 
 #: ../../Troubleshooting/Troubleshooting.rst:69
+#, fuzzy
 msgid "Pour 20 L of water into the bottom outlet pipe"
-msgstr ""
+msgstr "Vierte 20 L de agua en el tubo de salida del fondo"
 
 #: ../../Troubleshooting/Troubleshooting.rst:71
+#, fuzzy
 msgid ""
-"Repeat previous 2 steps 5 times to push all (or at least most) of the "
-"acid through the outlet pipes and into the sand bed"
+"Repeat previous 2 steps 5 times to push all (or at least most) of the acid "
+"through the outlet pipes and into the sand bed"
 msgstr ""
+"Repita los dos pasos anteriores 5 veces para empujar todo el ácido (o al menos "
+"la mayor parte) a través de los tubos de salida y hacia el lecho de arena"
 
 #: ../../Troubleshooting/Troubleshooting.rst:73
+#, fuzzy
 msgid ""
-"Repeat steps 3 to 12 for the middle outlet pipe and then for the top "
-"outlet pipe."
+"Repeat steps 3 to 12 for the middle outlet pipe and then for the top outlet "
+"pipe."
 msgstr ""
+"Repita los pasos 3 a 12 para el tubo de salida del medio y luego para el tubo "
+"de salida superior."
 
 #: ../../Troubleshooting/Troubleshooting.rst:75
+#, fuzzy
 msgid ""
-"With each addition of acid or water there should be a fresh batch of "
-"carbon dioxide bubbles released from the filter."
+"With each addition of acid or water there should be a fresh batch of carbon "
+"dioxide bubbles released from the filter."
 msgstr ""
+"Con cada adición de ácido o agua debería haber un nuevo lote de burbujas de "
+"dióxido de carbono liberadas del filtro."
 
 #: ../../Troubleshooting/Troubleshooting.rst:77
+#, fuzzy
 msgid ""
-"Turn the filter back on and dump all water to waste for at least 5 "
-"minutes and until the turbidity is less than 1 NTU."
+"Turn the filter back on and dump all water to waste for at least 5 minutes and "
+"until the turbidity is less than 1 NTU."
 msgstr ""
+"Vuelva a encender el filtro y vierta toda el agua a la basura durante al menos "
+"5 minutos y hasta que la turbiedad sea inferior a 1 NTU."
 
 #: ../../Troubleshooting/Troubleshooting.rst:80
+#, fuzzy
 msgid "Slime at Las Vegas"
-msgstr ""
+msgstr "Baba en Las Vegas"
 
 #: ../../Troubleshooting/Troubleshooting.rst:81
+#, fuzzy
 msgid ""
-"Iron bacteria slime showed up with application of hydrochloric acid at "
-"Las Vegas. The acid was needed to slightly reduce the pH to reduce the "
-"amount of encrustation in the distribution system. The addition of acid "
-"was correlated with the growth of a slime in the flocculator and "
-"sedimentation tanks. It was hypothesized that this slime was iron "
-"oxidizing bacteria (see :numref:`figure_Las_Vegas_Slime`)."
+"Iron bacteria slime showed up with application of hydrochloric acid at Las "
+"Vegas. The acid was needed to slightly reduce the pH to reduce the amount of "
+"encrustation in the distribution system. The addition of acid was correlated "
+"with the growth of a slime in the flocculator and sedimentation tanks. It was "
+"hypothesized that this slime was iron oxidizing bacteria (see :numref:"
+"`figure_Las_Vegas_Slime`)."
 msgstr ""
+"El limo de bacterias de hierro apareció con la aplicación de ácido clorhídrico "
+"en Las Vegas. El ácido era necesario para reducir ligeramente el pH para "
+"reducir la cantidad de incrustaciones en el sistema de distribución. La adición "
+"de ácido se correlacionó con el crecimiento de un lodo en los tanques de "
+"floculación y sedimentación. Se planteó la hipótesis de que este lodo era una "
+"bacteria oxidante del hierro (ver :numref:`figure_Las_Vegas_Slime`)."
 
 #: ../../Troubleshooting/Troubleshooting.rst:90
+#, fuzzy
 msgid ""
-"The slime at Las Vegas showed up in the flocculator and sedimentation "
-"tanks."
+"The slime at Las Vegas showed up in the flocculator and sedimentation tanks."
 msgstr ""
+"El lodo de Las Vegas apareció en los tanques de floculación y sedimentación."
 
 #: ../../Troubleshooting/Troubleshooting.rst:92
+#, fuzzy
 msgid ""
-"Iron oxidizing bacteria need oxygen and reduced iron. The Las Vegas water"
-" source is a stream that is clearly groundwater given its propensity to "
-"deposit calcium carbonate on everything in the stream. Thus the stream "
-"water is likely poor in oxygen."
+"Iron oxidizing bacteria need oxygen and reduced iron. The Las Vegas water "
+"source is a stream that is clearly groundwater given its propensity to deposit "
+"calcium carbonate on everything in the stream. Thus the stream water is likely "
+"poor in oxygen."
 msgstr ""
+"Las bacterias que oxidan el hierro necesitan oxígeno y hierro reducido. La "
+"fuente de agua de Las Vegas es un arroyo que es claramente agua subterránea "
+"dada su propensión a depositar carbonato de calcio en todo el arroyo. Por lo "
+"tanto, el agua del arroyo es probablemente pobre en oxígeno."
 
 #: ../../Troubleshooting/Troubleshooting.rst:94
+#, fuzzy
 msgid ""
-"We are adding oxygen at the LFOM. That oxygen can chemically oxidize the "
-"iron, but the rate of oxidation is a function of pH (see "
-":numref:`figure_Oxygenation_vs_time`). When we decrease the pH it slows "
-"the oxidation of iron and thus keeps a higher concentration of reduced "
-"iron available for bacteria to oxidize. Thus the LFOM adds oxygen needed "
-"by the iron oxidizing bacteria and the acid prevents the iron from being "
-"chemically oxidized."
+"We are adding oxygen at the LFOM. That oxygen can chemically oxidize the iron, "
+"but the rate of oxidation is a function of pH (see :numref:"
+"`figure_Oxygenation_vs_time`). When we decrease the pH it slows the oxidation "
+"of iron and thus keeps a higher concentration of reduced iron available for "
+"bacteria to oxidize. Thus the LFOM adds oxygen needed by the iron oxidizing "
+"bacteria and the acid prevents the iron from being chemically oxidized."
 msgstr ""
+"Estamos añadiendo oxígeno en el LFOM. Ese oxígeno puede oxidar químicamente el "
+"hierro, pero la velocidad de oxidación es una función del pH (ver :numref:"
+"`figurar_Oxigenación_vs_tiempo`). Cuando disminuimos el pH, se ralentiza la "
+"oxidación del hierro y así se mantiene una mayor concentración de hierro "
+"reducido disponible para que las bacterias se oxiden. Así, el LFOM añade el "
+"oxígeno que necesitan las bacterias que oxidan el hierro y el ácido evita que "
+"el hierro se oxide químicamente."
 
 #: ../../Troubleshooting/Troubleshooting.rst:96
-#, python-format
+#, fuzzy, python-format
 msgid ""
-"`The rate of iron oxidation is strongly pH dependent "
-"<https://njaes.rutgers.edu/pubs/fs516/>`_ At pH 7.0, 90% Fe+2 oxidation "
-"requires 1 hour at 21°C and 10 hours at 5°C. At pH 8.0, 90% Fe+2 "
-"oxidation occurs in 30 seconds. At pH 6.0 it requires 100 hours."
+"`The rate of iron oxidation is strongly pH dependent <https://njaes.rutgers.edu/"
+"pubs/fs516/>`_ At pH 7.0, 90% Fe+2 oxidation requires 1 hour at 21°C and 10 "
+"hours at 5°C. At pH 8.0, 90% Fe+2 oxidation occurs in 30 seconds. At pH 6.0 it "
+"requires 100 hours."
 msgstr ""
+"\"La velocidad de oxidación del hierro es fuertemente dependiente del pH\" "
+"<https://njaes.rutgers.edu/pubs/fs516/>`_ A un pH de 7,0, la oxidación del "
+"90% de Fe+2 requiere 1 hora a 21°C y 10 horas a 5°C. A un pH de 8,0, la "
+"oxidación del 90% de Fe+2 se produce en 30 segundos. A pH 6.0 requiere 100 "
+"horas."
 
 #: ../../Troubleshooting/Troubleshooting.rst:108
+#, fuzzy
 msgid ""
-"The time required for oxidation is strongly dependent on pH. From "
-"`Lenntech <http://www.lenntech.com/iron-bacteria.htm>`_."
+"The time required for oxidation is strongly dependent on pH. From `Lenntech "
+"<http://www.lenntech.com/iron-bacteria.htm>`_."
 msgstr ""
+"El tiempo requerido para la oxidación depende fuertemente del pH. De `Lenntech "
+"<http://www.lenntech.com/iron-bacteria.htm>`_."
 
 #: ../../Troubleshooting/Troubleshooting.rst:110
+#, fuzzy
 msgid ""
-"For several reasons, routine chemical disinfectants that effectively wipe"
-" out other bacteria are only modestly successful against iron bacteria. "
-"Iron bacteria build up in thick layers, each forming a slime around "
-"bacterial cells that keeps disinfectants from penetrating beyond the "
-"surface cells. Chemical reactions occur far slower at the cool "
-"temperatures common in wells, and bacterial cell need a long exposure to "
-"the chemical for the treatment to be effective. Even if chlorine kills "
-"all the bacterial cells in the water, those in the groundwater can be "
-"drawn in by pumping or drift back into the well. `Read more about "
-"chlorine and iron oxidizing bacteria <http://www.lenntech.com/iron-"
-"bacteria.htm#ixzz4ehUFJwO6>`_"
+"For several reasons, routine chemical disinfectants that effectively wipe out "
+"other bacteria are only modestly successful against iron bacteria. Iron "
+"bacteria build up in thick layers, each forming a slime around bacterial cells "
+"that keeps disinfectants from penetrating beyond the surface cells. Chemical "
+"reactions occur far slower at the cool temperatures common in wells, and "
+"bacterial cell need a long exposure to the chemical for the treatment to be "
+"effective. Even if chlorine kills all the bacterial cells in the water, those "
+"in the groundwater can be drawn in by pumping or drift back into the well. "
+"`Read more about chlorine and iron oxidizing bacteria <http://www.lenntech.com/"
+"iron-bacteria.htm#ixzz4ehUFJwO6>`_"
 msgstr ""
+"Por varias razones, los desinfectantes químicos de rutina que eliminan "
+"eficazmente otras bacterias sólo tienen un éxito modesto contra las bacterias "
+"del hierro. Las bacterias de hierro se acumulan en capas gruesas, cada una de "
+"ellas formando un limo alrededor de las células bacterianas que impide que los "
+"desinfectantes penetren más allá de las células de la superficie. Las "
+"reacciones químicas se producen mucho más lentamente a las bajas temperaturas "
+"habituales en los pozos, y las células bacterianas necesitan una larga "
+"exposición a la sustancia química para que el tratamiento sea eficaz. Incluso "
+"si el cloro mata todas las células bacterianas del agua, las de las aguas "
+"subterráneas pueden ser arrastradas por el bombeo o volver al pozo. \"Lea más "
+"sobre las bacterias oxidantes del cloro y el hierro\". http://www.lenntech.com/"
+"iron-bacteria.htm#ixzz4ehUFJwO6"
 
 #: ../../Troubleshooting/Troubleshooting.rst:114
+#, fuzzy
 msgid "Proposed solutions to eliminate iron oxidizing slime bacteria"
 msgstr ""
+"Soluciones propuestas para eliminar las bacterias del limo oxidante del hierro"
 
 #: ../../Troubleshooting/Troubleshooting.rst:119
+#, fuzzy
 msgid ""
-"The solutions all revolve around oxidizing the iron chemically before the"
-" bacteria have a chance to oxidize the iron biologically."
+"The solutions all revolve around oxidizing the iron chemically before the "
+"bacteria have a chance to oxidize the iron biologically."
 msgstr ""
+"Todas las soluciones giran en torno a la oxidación química del hierro antes de "
+"que las bacterias tengan la oportunidad de oxidarlo biológicamente."
 
 #: ../../Troubleshooting/Troubleshooting.rst:117
+#, fuzzy
 msgid ""
-"Move the acid addition point to the end of the plant. This will allow "
-"chemical oxidation and removal of the iron. Note that once the iron is "
-"oxidized it precipitates as :math:`Fe(OH)_3` and that is a wonderful "
-"coagulant. This is why the Las Vegas plant was shown to produce clean "
-"water even without addition of a coagulant!"
+"Move the acid addition point to the end of the plant. This will allow chemical "
+"oxidation and removal of the iron. Note that once the iron is oxidized it "
+"precipitates as :math:`Fe(OH)_3` and that is a wonderful coagulant. This is why "
+"the Las Vegas plant was shown to produce clean water even without addition of a "
+"coagulant!"
 msgstr ""
+"Mueve el punto de adición de ácido al final de la planta. Esto permitirá la "
+"oxidación química y la eliminación del hierro. Observe que una vez que el "
+"hierro se oxida se precipita como :matemáticas:`Fe(OH)_3` y eso es un "
+"maravilloso coagulante. Por eso se demostró que la planta de Las Vegas produce "
+"agua limpia incluso sin la adición de un coagulante!"
 
 #: ../../Troubleshooting/Troubleshooting.rst:118
+#, fuzzy
 msgid ""
 "It might be possible to move the acid addition point to the exit of the "
-"flocculator if the flocculation process provides enough time for iron "
-"oxidation"
+"flocculator if the flocculation process provides enough time for iron oxidation"
 msgstr ""
+"Podría ser posible mover el punto de adición de ácido a la salida del "
+"floculador si el proceso de floculación proporciona suficiente tiempo para la "
+"oxidación del hierro"
 
 #: ../../Troubleshooting/Troubleshooting.rst:119
+#, fuzzy
 msgid "Create an aeration system upstream from the plant in the transmission line"
 msgstr ""
+"Crear un sistema de aireación aguas arriba de la planta en la línea de "
+"transmisión"
 
 #: ../../Troubleshooting/Troubleshooting.rst:120
+#, fuzzy
 msgid ""
-"Move chlorination to the rapid mix. This might work, but given the "
-"chlorine resistance of the slime and the disadvantages of prechlorination"
-" for production of disinfection by-products, we don't recommend this."
+"Move chlorination to the rapid mix. This might work, but given the chlorine "
+"resistance of the slime and the disadvantages of prechlorination for production "
+"of disinfection by-products, we don't recommend this."
 msgstr ""
-
+"Mueva la cloración a la mezcla rápida. Esto podría funcionar, pero dada la "
+"resistencia al cloro de la baba y las desventajas de la precloración para la "
+"producción de subproductos de la desinfección, no recomendamos esto."
