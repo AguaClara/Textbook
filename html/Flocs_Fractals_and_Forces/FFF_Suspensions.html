@@ -28,7 +28,9 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chemistry of Water Treatment Introduction" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html" />
+    <link rel="prev" title="Flocs, Fractals, Forces, and Fluidized Suspensions Introduction" href="FFF_Intro.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -98,11 +100,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocs, Fractals, and Forces</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="FFF_Intro.html">Flocs, Fractals, Forces, and Fluidized Suspensions Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fluidized Suspensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#suspension-density">Suspension Density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fluidized-bed-porosity">Fluidized Bed Porosity</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
 <ul>
@@ -244,19 +256,19 @@
 <h2>Suspension Density<a class="headerlink" href="#suspension-density" title="Permalink to this headline">¶</a></h2>
 <p>Suspension densities will be of interest both in understanding the physics of flocnets fluidized sand beds. The density of a suspension of particles is equal to the mass of the particles and water divided by the suspension volume. In the case of flocs we can track the concentration of the core particles in the suspension and ignore the diameter of the flocs when calculating the suspension density.</p>
 <div class="math notranslate nohighlight" id="equation-density-suspension-1">
-<span class="eqno">()<a class="headerlink" href="#equation-density-suspension-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\rho_{suspension}
+<span class="eqno">(288)<a class="headerlink" href="#equation-density-suspension-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\rho_{suspension}
 = \frac{M_{H_2O} + M_{particles}}{\rlap{--} V_{suspension}}\\=\frac{M_{H_2O} }{\rlap{--} V_{suspension}} + C_{particles}\end{aligned}\end{align} \]</div>
 <p>The mass of water in a suspension, <span class="math notranslate nohighlight">\(M_{H_2O}\)</span>, must take into account the fraction of the suspension volume occupied by the particles.</p>
 <div class="math notranslate nohighlight" id="equation-water-mass-in-suspension">
-<span class="eqno">()<a class="headerlink" href="#equation-water-mass-in-suspension" title="Permalink to this equation">¶</a></span>\[\frac{M_{H_2O}}{\rlap{--} V_{suspension} } =
+<span class="eqno">(289)<a class="headerlink" href="#equation-water-mass-in-suspension" title="Permalink to this equation">¶</a></span>\[\frac{M_{H_2O}}{\rlap{--} V_{suspension} } =
 \rho_{H_2O} \left( 1 - \frac{C_{particles}}{\rho_{particles}} \right)\]</div>
-<p>where <span class="math notranslate nohighlight">\(\frac{C_{particles}}{\rho_{particles}}\)</span> is the fraction of the suspension volume occupied by the particles. Substituting equation <a class="reference internal" href="#equation-water-mass-in-suspension">()</a> into equation <a class="reference internal" href="#equation-density-suspension-1">()</a> we obtain the density of the suspension.</p>
+<p>where <span class="math notranslate nohighlight">\(\frac{C_{particles}}{\rho_{particles}}\)</span> is the fraction of the suspension volume occupied by the particles. Substituting equation <a class="reference internal" href="#equation-water-mass-in-suspension">(289)</a> into equation <a class="reference internal" href="#equation-density-suspension-1">(288)</a> we obtain the density of the suspension.</p>
 <div class="math notranslate nohighlight" id="equation-density-suspension-2">
-<span class="eqno">()<a class="headerlink" href="#equation-density-suspension-2" title="Permalink to this equation">¶</a></span>\[\rho_{suspension} =
+<span class="eqno">(290)<a class="headerlink" href="#equation-density-suspension-2" title="Permalink to this equation">¶</a></span>\[\rho_{suspension} =
 \rho_{H_2O} \left( 1 - \frac{C_{particles}}{\rho_{particles}} \right) + C_{particles}\]</div>
-<p>Equation <a class="reference internal" href="#equation-density-suspension-2">()</a> can be rewritten in terms of the buoyant density to obtain</p>
+<p>Equation <a class="reference internal" href="#equation-density-suspension-2">(290)</a> can be rewritten in terms of the buoyant density to obtain</p>
 <div class="math notranslate nohighlight" id="equation-buoyant-density-suspension">
-<span class="eqno">()<a class="headerlink" href="#equation-buoyant-density-suspension" title="Permalink to this equation">¶</a></span>\[\rho_{suspension} - \rho_{H_2O} =
+<span class="eqno">(291)<a class="headerlink" href="#equation-buoyant-density-suspension" title="Permalink to this equation">¶</a></span>\[\rho_{suspension} - \rho_{H_2O} =
   C_{particles}\left(1 - \frac{\rho_{H_2O}}{\rho_{particles}}\right)\]</div>
 </div>
 <div class="section" id="fluidized-bed-porosity">
@@ -264,7 +276,7 @@
 <p>AguaClara plants have two fluidized beds. The first is the flocnet that forms in the bottom of the clarifiers and the second is the sand in the filters during backwash. The equations describing fluidized beds require multiple steps in the calculations and are easily handled in Python. The following equations are available in a <a class="reference external" href="https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb">Colab worksheet</a>.</p>
 <p>The hydraulic diameter is needed to account for wall effects for small reactors.</p>
 <div class="math notranslate nohighlight" id="equation-hydraulic-diameter">
-<span class="eqno">()<a class="headerlink" href="#equation-hydraulic-diameter" title="Permalink to this equation">¶</a></span>\[D_{H}={\frac {4A}{P}}\]</div>
+<span class="eqno">(292)<a class="headerlink" href="#equation-hydraulic-diameter" title="Permalink to this equation">¶</a></span>\[D_{H}={\frac {4A}{P}}\]</div>
 <div class="line-block">
 <div class="line">where</div>
 <div class="line"><span class="math notranslate nohighlight">\(D_{H}\)</span> is the hydraulic diameter</div>
@@ -273,20 +285,20 @@
 </div>
 <p>For reactors with dimensions that are not much larger than the dimensions of the flocs it is necessary to correct for wall effects. This correction will be important for laboratory scale and some pilot scale reactors. The terminal velocity of a particle corrected for wall effects is</p>
 <div class="math notranslate nohighlight" id="equation-v-t-wall">
-<span class="eqno">()<a class="headerlink" href="#equation-v-t-wall" title="Permalink to this equation">¶</a></span>\[v_{t_w} = \frac{v_t}{10^{\frac{D_{particle}}{D_H}}}\]</div>
+<span class="eqno">(293)<a class="headerlink" href="#equation-v-t-wall" title="Permalink to this equation">¶</a></span>\[v_{t_w} = \frac{v_t}{10^{\frac{D_{particle}}{D_H}}}\]</div>
 <div class="line-block">
 <div class="line">where</div>
-<div class="line"><span class="math notranslate nohighlight">\(v_t\)</span> terminal velocity in an infinite fluid obtained from equation <a class="reference internal" href="FFF_Intro.html#equation-v-t-general">()</a></div>
+<div class="line"><span class="math notranslate nohighlight">\(v_t\)</span> terminal velocity in an infinite fluid obtained from equation <a class="reference internal" href="FFF_Intro.html#equation-v-t-general">(270)</a></div>
 </div>
 <p>The Reynolds number <span class="math notranslate nohighlight">\(Re_t\)</span> is based on the terminal velocity of the particle.</p>
 <div class="math notranslate nohighlight" id="equation-re-terminal">
-<span class="eqno">()<a class="headerlink" href="#equation-re-terminal" title="Permalink to this equation">¶</a></span>\[Re_t = \frac{v_t D__{particle}}{\nu}\]</div>
+<span class="eqno">(294)<a class="headerlink" href="#equation-re-terminal" title="Permalink to this equation">¶</a></span>\[Re_t = \frac{v_t D__{particle}}{\nu}\]</div>
 <p>The fluidization index, z, is a function of the Reynolds number at the terminal velocity.</p>
 <div class="math notranslate nohighlight" id="equation-fluidization-index">
-<span class="eqno">()<a class="headerlink" href="#equation-fluidization-index" title="Permalink to this equation">¶</a></span>\[z=\frac{0.65\left(2+0.5 Re_t^{0.65}\right)}{\left(1+0.5 Re_t^{0.65}\right)}\]</div>
+<span class="eqno">(295)<a class="headerlink" href="#equation-fluidization-index" title="Permalink to this equation">¶</a></span>\[z=\frac{0.65\left(2+0.5 Re_t^{0.65}\right)}{\left(1+0.5 Re_t^{0.65}\right)}\]</div>
 <p>The following equation is used to find the porosity of a fluidized bed.</p>
 <div class="math notranslate nohighlight" id="equation-flocs-fractals-and-forces-fff-suspensions-0">
-<span class="eqno">()<a class="headerlink" href="#equation-flocs-fractals-and-forces-fff-suspensions-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: fluidized_bed_porosity\\\phi=\left(\frac{\bar v_z}{v_{t_w}}\right)^{1 / z}\left(1-\phi_{\mathrm{SB}}\right)+\phi_{\mathrm{SB}}\end{aligned}\end{align} \]</div>
+<span class="eqno">(296)<a class="headerlink" href="#equation-flocs-fractals-and-forces-fff-suspensions-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label: fluidized_bed_porosity\\\phi=\left(\frac{\bar v_z}{v_{t_w}}\right)^{1 / z}\left(1-\phi_{\mathrm{SB}}\right)+\phi_{\mathrm{SB}}\end{aligned}\end{align} \]</div>
 <div class="line-block">
 <div class="line">where</div>
 <div class="line"><span class="math notranslate nohighlight">\(v_{t_w}\)</span> particle terminal velocity corrected for wall effect</div>
@@ -302,6 +314,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html" class="btn btn-neutral float-right" title="Chemistry of Water Treatment Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="FFF_Intro.html" class="btn btn-neutral" title="Flocs, Fractals, Forces, and Fluidized Suspensions Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
