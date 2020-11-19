@@ -435,7 +435,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <p>The total head loss in a filter if taken to the point where the active filtration zone exited the filter and all pores were constricted would be</p>
 <div class="math notranslate nohighlight" id="equation-eq-he-filter">
 <span class="eqno">(604)<a class="headerlink" href="#equation-eq-he-filter" title="Permalink to this equation">¶</a></span>\[ h_{e_{filter_{max}}} = \frac{H_{filter}}{\Lambda_{pore}}  \frac{\bar v_{constriction_{max}}^2}{2g}\]</div>
-<p>The effect of increasing the pore size on terminal head loss is to decrease the <em>final</em> head loss when the active zone reaches the bottom of the filter because of the effect of <span class="math notranslate nohighlight">\(\Lambda_{pore}`in the first term of equation :eq:`eq_he_filter\)</span>. Note that this does not yet address the rate of head loss accumulation which is expected to be a function of sand grain diameter.</p>
+<p>The effect of increasing the pore size on terminal head loss is to decrease the <em>final</em> head loss when the active zone reaches the bottom of the filter because of the effect of <span class="math notranslate nohighlight">\(\Lambda_{pore}\)</span>. Note that this does not yet address the rate of head loss accumulation which is expected to be a function of sand grain diameter.</p>
 <p>We can solve equation <a class="reference internal" href="#equation-eq-he-filter">(604)</a> for maximum constriction velocity based on experimental measurements of the head loss at filter failure that is due to constrictions. Note that this head loss does NOT include the clean bed head loss.</p>
 <div class="math notranslate nohighlight" id="equation-eq-he-filter2">
 <span class="eqno">(605)<a class="headerlink" href="#equation-eq-he-filter2" title="Permalink to this equation">¶</a></span>\[v_{constriction_{max}} = \sqrt{ \frac{2g\Lambda_{pore}}{H_{filter}}h_{e_{filter_{max}}}}\]</div>
@@ -456,7 +456,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <div class="section" id="floc-size-and-velocity-gradient-calculations">
 <span id="heading-floc-size-and-velocity-gradient-calculations"></span><h2>Floc size and velocity gradient calculations<a class="headerlink" href="#floc-size-and-velocity-gradient-calculations" title="Permalink to this headline">¶</a></h2>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>

@@ -265,7 +265,7 @@
 <p>Solve for the length of the tube settler.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-2">
 <span class="eqno">(543)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -331,8 +331,8 @@
 <li>Calculate the maximum velocity of water leaving the diffuser based on the maximum head loss. Assume that the majority of head loss is the kinetic energy of the flow exiting the diffuser slot (this assumption will be checked later). Assume K=1.</li>
 </ol>
 <p>Given parameters:</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="k">import</span> <span class="n">utility</span> <span class="k">as</span> <span class="n">ut</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="kn">import</span> <span class="n">utility</span> <span class="k">as</span> <span class="n">ut</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -383,7 +383,7 @@ The <cite>ceil_nearest</cite> function defined in utility.py can take in a param
 <li>the outer length of the rectangular diffuser slot, <span class="math notranslate nohighlight">\(B_{diffuser}\)</span>.</li>
 <li>the inner length of the rectangular diffuser slot, <span class="math notranslate nohighlight">\(W_{diffuser}\)</span>.</li>
 </ul>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="k">import</span> <span class="n">pipes</span> <span class="k">as</span> <span class="n">pipe</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="kn">import</span> <span class="n">pipes</span> <span class="k">as</span> <span class="n">pipe</span>
 <span class="n">SDR</span><span class="o">=</span><span class="mi">26</span>
 
 <span class="c1"># Assumed stretch of the PVC pipes as they are heated and molded:</span>
@@ -428,7 +428,7 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <p>Recall the formula for Reynold’s number:</p>
 <p><span class="math notranslate nohighlight">\(Re = \frac{\bar v D}{\nu}\)</span> The D is actually just representative of the length scale so we can replace this with the width of the diffuser.
 <span class="math notranslate nohighlight">\(Re = \frac{\bar v_{diff}*W_{diff}}{\nu}\)</span></p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="k">import</span> <span class="n">physchem</span> <span class="k">as</span> <span class="n">pc</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core</span> <span class="kn">import</span> <span class="n">physchem</span> <span class="k">as</span> <span class="n">pc</span>
 <span class="n">T_design</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">Re_diffuser_jet</span> <span class="o">=</span> <span class="p">((</span><span class="n">W_diffuser</span> <span class="o">*</span> <span class="n">V_diffuser</span><span class="p">)</span> <span class="o">/</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_design</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Reynolds number for this jet is&#39;</span><span class="p">,</span><span class="n">Re_diffuser_jet</span><span class="p">)</span>

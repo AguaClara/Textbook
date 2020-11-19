@@ -152,7 +152,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#find-the-fluid-velocity-at-the-center-of-the-floc">2) Find the fluid velocity at the center of the floc:</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#find-terminal-velocity-of-the-floc-down-the-plate-for-the-case-of-zero-velocity-fluid">3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#set-the-fluid-velocity-at-the-center-of-the-floc-equal-to-the-terminal-velocity-of-the-floc-to-find-the-critical-case-of-no-movement-and-the-required-plate-spacing">4) Set the fluid velocity at the center of the floc equal to the terminal velocity of the floc to find the critical case of no movement, and the required plate spacing:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#find-the-floc-sedimentation-velocity">5) Find the floc sedimentation velocity, <span class="math notranslate nohighlight">\(v_{Slide}\)</span>:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#find-the-floc-sedimentation-velocity-v-slide">5) Find the floc sedimentation velocity, <span class="math notranslate nohighlight">\(v_{Slide}\)</span>:</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#head-loss-through-plate-settlers">Head Loss through Plate Settlers</a></li>
@@ -169,7 +169,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#flocculator-and-floc-blanket-paradox">Flocculator and Floc Blanket Paradox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#diffuser-design">Diffuser Design</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#properties-of">Properties of <span class="math notranslate nohighlight">\(\bar v_{jet}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#properties-of-bar-v-jet">Properties of <span class="math notranslate nohighlight">\(\bar v_{jet}\)</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id1">Diffuser Design</a></li>
 </ul>
 </li>
@@ -607,8 +607,8 @@
 <p><span class="math notranslate nohighlight">\(S_{min}\)</span> is the smallest spacing that will allow a floc with a given settling velocity to remain stationary on the slope and not be carried upward by rollup.</p>
 <p>The minimum spacing increases as the size of the primary particle, <span class="math notranslate nohighlight">\(D_{cp}\)</span>, decreases. This is an important insight because flocs that are made of coagulant nanoparticles (no clay) are the most difficult flocs to capture. Flocs made of coagulant nanoparticles are less dense than flocs made of clay. Coagulant nanoparticle flocs are produced when water treatment plants are used to remove dissolved organics or arsenic or when high coagulant dosages are used.</p>
 </div>
-<div class="section" id="find-the-floc-sedimentation-velocity">
-<h4>5) Find the floc sedimentation velocity, <span class="math notranslate nohighlight">\(v_{Slide}\)</span>:<a class="headerlink" href="#find-the-floc-sedimentation-velocity" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="find-the-floc-sedimentation-velocity-v-slide">
+<h4>5) Find the floc sedimentation velocity, <span class="math notranslate nohighlight">\(v_{Slide}\)</span>:<a class="headerlink" href="#find-the-floc-sedimentation-velocity-v-slide" title="Permalink to this headline">¶</a></h4>
 <p>Finally, we can determine <span class="math notranslate nohighlight">\(v_{Slide}\)</span> by,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-47">
 <span class="eqno">(479)<a class="headerlink" href="#equation-sedimentation-sed-derivations-47" title="Permalink to this equation">¶</a></span>\[v_{Slide} = \bar v_{z_{Plate}} \left[ \left( \frac{3D_{cp}}{Ssin^2\alpha} \right)^{\Pi_{fractal} - 1} \left( \frac{18 v_{z_{Plate}} \Phi \nu }{D_{cp}^2g} \frac{\rho_{H_2O}}{\rho_{floc_0} - \rho_{H_2O}} \right) \right] ^ {\frac{1}{ \Pi_{fractal} - 2}}\]</div>
@@ -826,8 +826,8 @@
 <div class="line"><span class="math notranslate nohighlight">\(Q_{diff} =\)</span> flow rate through each diffuser</div>
 <div class="line"><span class="math notranslate nohighlight">\(h_{L,jet} =\)</span> head loss in jet leaving the jet reverser</div>
 </div>
-<div class="section" id="properties-of">
-<h3>Properties of <span class="math notranslate nohighlight">\(\bar v_{jet}\)</span><a class="headerlink" href="#properties-of" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="properties-of-bar-v-jet">
+<h3>Properties of <span class="math notranslate nohighlight">\(\bar v_{jet}\)</span><a class="headerlink" href="#properties-of-bar-v-jet" title="Permalink to this headline">¶</a></h3>
 <p><span class="math notranslate nohighlight">\(\bar v_{jet}\)</span> is defined as the velocity of the water jet exiting the diffuser. After exiting the diffuser, this water jet is sent into the jet reverser to make a 180 degree turn. Does the water jet change pressure or velocity as it exits the jet reverser? Do we need to consider the effects of a <em>vena contracta</em>?</p>
 <p>Recall that a <a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#heading-what-is-a-vena-contracta"><span class="std std-ref">*vena contracta*</span></a> is associated with a change in pressure that causes a contraction and subsequent acceleration of the fluid. Water exiting the diffuser is pointed directly down and the streamlines are straight and parallel, which means that the pressure across the streamlines is constant. Water exiting the jet reverser is pointed directly up and the streamlines are straight and parallel, which again means that the pressure across the streamlines is constant. Because the pressure is constant at the exit of the diffuser and at the exit of the jet reverser, we assume that the pressure of the water in the space between those two points is also constant because there is no physical barrier. If the pressure in this bottom section of the sedimentation tank is constant from the exit of the diffuser to the exit of the jet reverser, we can infer that they are equal.</p>
 <p>By Bernoulli, if the pressures between the exit of the diffuser to the exit of the jet reverser are equal then the velocities must also be equal. Bernoulli is applicable here because there is no flow expansion yet. The shear along the wall of the jet reverser is insignificant due to the short flow path. The water accelerates to account for the directional change but the absolute velocity does not change as it goes around the jet reverser.</p>

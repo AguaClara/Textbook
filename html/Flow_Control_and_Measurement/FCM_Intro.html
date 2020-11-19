@@ -98,7 +98,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Flow Control and Measurement Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#tank-with-a-valve">Tank with a Valve</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#flow-and-water-level-as-a-function-of-time">Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flow-q-and-water-level-h-as-a-function-of-time">Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#drain-system-for-a-tank">Drain System for a Tank</a></li>
 </ul>
 </li>
@@ -251,10 +251,10 @@
 <span id="title-flow-control-intro"></span><h1>Flow Control and Measurement Introduction<a class="headerlink" href="#flow-control-and-measurement-introduction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="tank-with-a-valve">
 <span id="heading-tank-with-a-valve"></span><h2>Tank with a Valve<a class="headerlink" href="#tank-with-a-valve" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="flow-and-water-level-as-a-function-of-time">
-<span id="heading-qh-as-a-function-of-t"></span><h3>Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time<a class="headerlink" href="#flow-and-water-level-as-a-function-of-time" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="flow-q-and-water-level-h-as-a-function-of-time">
+<span id="heading-qh-as-a-function-of-t"></span><h3>Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time<a class="headerlink" href="#flow-q-and-water-level-h-as-a-function-of-time" title="Permalink to this headline">¶</a></h3>
 <p>Our first step is to see if we can get constant head out of a simple system. The most simple flow control system is a bucket or tank with a hole in it. This system is too coarse to provide constant head. One step above that is a bucket or tank with a valve. This is where we begin our search for constant head.</p>
-<p>Using the setup described in the image below, we derive the following equation for flow <span class="math notranslate nohighlight">\(Q\)</span> through the valve as a function of time <span class="math notranslate nohighlight">\(t\)</span>. The derivation is found here: <a class="reference internal" href="FCM_Derivations.html#heading-flow-for-a-tank-with-a-valve"><span class="std std-ref"> for a Tank with a Valve</span></a>. You are advised to read through it if you are at all confused about this equation.</p>
+<p>Using the setup described in the image below, we derive the following equation for flow <span class="math notranslate nohighlight">\(Q\)</span> through the valve as a function of time <span class="math notranslate nohighlight">\(t\)</span>. The derivation is found here: <a class="reference internal" href="FCM_Derivations.html#heading-flow-for-a-tank-with-a-valve"><span class="std std-ref">Q(t) for a Tank with a Valve</span></a>. You are advised to read through it if you are at all confused about this equation.</p>
 <div class="math notranslate nohighlight" id="equation-q-tank-with-valve">
 <span class="eqno">(69)<a class="headerlink" href="#equation-q-tank-with-valve" title="Permalink to this equation">¶</a></span>\[  \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
 <div class="line-block">
@@ -284,7 +284,7 @@
 </div>
 <div class="section" id="drain-system-for-a-tank">
 <span id="heading-drain-system-for-a-tank"></span><h3>Drain System for a Tank<a class="headerlink" href="#drain-system-for-a-tank" title="Permalink to this headline">¶</a></h3>
-<p>While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they are just tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: <a class="reference internal" href="FCM_Derivations.html#heading-diameter-and-time-tank-drain-equation"><span class="std std-ref"> and  for Tank Drain Equation</span></a>. The derived ‘Tank Drain’ equation is as follows:</p>
+<p>While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they are just tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: <a class="reference internal" href="FCM_Derivations.html#heading-diameter-and-time-tank-drain-equation"><span class="std std-ref">D(t) and t(D) for Tank Drain Equation</span></a>. The derived ‘Tank Drain’ equation is as follows:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-intro-0">
 <span class="eqno">(70)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-intro-0" title="Permalink to this equation">¶</a></span>\[D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{4}}}\]</div>
 <p>The equation can also be rearranged to solve for the time it would take to drain a tank given its dimensions and a certain drain pipe size:</p>

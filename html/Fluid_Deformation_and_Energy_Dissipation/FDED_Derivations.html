@@ -105,7 +105,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Fluid Deformation and Energy Dissipation Derivations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#equations-for-and-in-varying-flow-geometries">Equations for <span class="math notranslate nohighlight">\(\varepsilon\)</span> and <span class="math notranslate nohighlight">\(G\)</span> in Varying Flow Geometries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#equations-for-varepsilon-and-g-in-varying-flow-geometries">Equations for <span class="math notranslate nohighlight">\(\varepsilon\)</span> and <span class="math notranslate nohighlight">\(G\)</span> in Varying Flow Geometries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#estimates-of-time-required-for-mixing-processes">Estimates of time required for mixing processes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#turbulent-large-scale-eddies">Turbulent Large Scale Eddies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#inner-viscous-length-scale">Inner Viscous Length Scale</a></li>
@@ -269,8 +269,8 @@
             
   <div class="section" id="fluid-deformation-and-energy-dissipation-derivations">
 <span id="title-fluid-deformation-and-energy-dissipation-derivations"></span><h1>Fluid Deformation and Energy Dissipation Derivations<a class="headerlink" href="#fluid-deformation-and-energy-dissipation-derivations" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="equations-for-and-in-varying-flow-geometries">
-<span id="heading-equations-varying-flow-geometries"></span><h2>Equations for <span class="math notranslate nohighlight">\(\varepsilon\)</span> and <span class="math notranslate nohighlight">\(G\)</span> in Varying Flow Geometries<a class="headerlink" href="#equations-for-and-in-varying-flow-geometries" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="equations-for-varepsilon-and-g-in-varying-flow-geometries">
+<span id="heading-equations-varying-flow-geometries"></span><h2>Equations for <span class="math notranslate nohighlight">\(\varepsilon\)</span> and <span class="math notranslate nohighlight">\(G\)</span> in Varying Flow Geometries<a class="headerlink" href="#equations-for-varepsilon-and-g-in-varying-flow-geometries" title="Permalink to this headline">¶</a></h2>
 <p>Estimation of velocity gradients for various flow geometries is the basis for the design of rapid mix, flocculators, and plate settlers. Thus, our goal is to define the velocity gradients consistently across a range of possible flow regimes. There are three approaches to calculating the average velocity gradient within a control volume. 1) Use the Navier Stokes equations and solve for the spatially averaged velocity gradient. 1) Use Computational Fluid Dynamics (CFD) to solve for the spatially averaged velocity gradient. 1) Use the total mechanical energy loss in the control volume to calculate the energy dissipation rate. Estimate the velocity gradient directly from the energy dissipation rate, <span class="math notranslate nohighlight">\(G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}\)</span>, as defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil Eng., 30, 203–221.).</p>
 <p>The first approach would be ideal but is difficult in practice because Navier Stokes solutions are only available for limited geometries and laminar flow. CFD could be used but is difficult to use as a general engineering design approach given the large number of geometries that are used in drinking water treatment plants. For these reasons we will use the control volume approach to estimate the average velocity gradient. This method incorrectly assumes that the energy dissipation rate is completely uniform in the control volume and hence the velocity gradient is also uniform. This method results in an over estimation of the velocity gradient.
 The Camp-Stein estimate of <span class="math notranslate nohighlight">\(G_{CS}\)</span> is based on a control volume where the velocity gradient is uniform. Consider a layer of fluid of depth <span class="math notranslate nohighlight">\(H\)</span> and apply a velocity, <span class="math notranslate nohighlight">\(v\)</span> at the top of the fluid. The velocity gradient, <span class="math notranslate nohighlight">\(G\)</span>, is thus <span class="math notranslate nohighlight">\(\frac{v}{H}\)</span> everywhere in the fluid. The force required to move the top of the fluid at velocity v can be obtained from the required shear, <span class="math notranslate nohighlight">\(\tau\)</span>. From Newtons Law of Friction we have</p>
@@ -378,13 +378,13 @@ Thus we have</p>
 <p>The dividing line between eddy transport and fluid deformation controlled by viscosity can be calculated as a function of the energy dissipation rate using <a class="reference internal" href="#equation-eq-inner-viscous-length">(151)</a>.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; importing &quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">aguaclara.core.utility</span> <span class="k">as</span> <span class="nn">ut</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
 
-<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="k">import</span> <span class="n">FormatStrFormatter</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">FormatStrFormatter</span>
 <span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;Rapid_Mix/Images/&#39;</span>
 <span class="n">EDR_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span>
 <span class="n">Temperature</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
@@ -414,7 +414,7 @@ Thus we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-t-eddy">
 <span class="eqno">(152)<a class="headerlink" href="#equation-eq-t-eddy" title="Permalink to this equation">¶</a></span>\[t_{eddy} \approx \left( \frac{L_{eddy}^2}{ \bar\varepsilon }\right)^\frac{1}{3}\]</div>
 <p>We can plot the eddy turnover time as a function of scale from the inner viscous length scale up to the scale of the flow. We will discover whether large scale mixing by eddies is faster or slower than small scale mixing by eddies.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">aguaclara.core.utility</span> <span class="k">as</span> <span class="nn">ut</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
