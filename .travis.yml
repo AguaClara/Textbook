@@ -1,7 +1,7 @@
 # Heavily aided by: https://gist.github.com/brenns10/f48e1021e8befd2221a2
 language: python
 python:
-  - 3.5
+  - 3.8
 before_install:
  - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 addons:
