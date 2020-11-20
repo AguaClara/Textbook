@@ -912,7 +912,7 @@ msgstr "La velocidad media es la mitad de la velocidad máxima."
 #: ../../Sedimentation/Sed_Derivations.rst:368
 #, fuzzy
 msgid ""
-"Rearranging the flow equation :math:`Q` to solve for :math:`\\frac{dp}{dx}`,"
+"Rearranging the flow Equation :math:`Q` to solve for :math:`\\frac{dp}{dx}`,"
 msgstr ""
 "Reordenando la ecuación de flujo :matemáticas:`Q` para resolver para :"
 "matemáticas:`frac{dp}{dx}`,"
@@ -1468,8 +1468,8 @@ msgstr ":matemáticas:`C_{clay} =` concentración de arcilla en la manta de floc
 
 #: ../../Sedimentation/Sed_Derivations.rst:604
 #, fuzzy
-msgid ":math:`\\rlap{--}V_{fb} =` volume of floc blanket"
-msgstr ":matemáticas:`\\rlap{--}V_{fb} =` volumen de la manta de flóculos"
+msgid ":math:`\\rlap{-}V_{fb} =` volume of floc blanket"
+msgstr ":matemáticas:`\\rlap{-}V_{fb} =` volumen de la manta de flóculos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:605
 #, fuzzy
@@ -1490,10 +1490,10 @@ msgstr ":matemáticas:`\\rho_{fb} =` densidad de la manta de flóculos"
 #, fuzzy
 msgid ""
 "The mass of clay in the floc blanket is concentration multiplied by volume, "
-"shown by :math:`m_{clay} = C_{clay}\\rlap{--}V_{fb}`"
+"shown by :math:`m_{clay} = C_{clay}\\rlap{-}V_{fb}`"
 msgstr ""
 "La masa de arcilla en el manto de flóculos es la concentración multiplicada "
-"por el volumen, mostrado por :matemáticas:`m_{clay} = C_{clay}\\rlap{--}"
+"por el volumen, mostrado por :matemáticas:`m_{clay} = C_{clay}\\rlap{-}"
 "V_{fb}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:611
@@ -1505,7 +1505,7 @@ msgid ""
 "\\frac{C_{clay}}{\\rho_{clay}} \\right)` is the fraction of the floc blanket "
 "that is occupied by water, also called the water volume fraction. So, :math:"
 "`m_{H_2O} = \\left( 1 - \\frac{C_{clay}}{\\rho_{clay}} \\right) \\rho_{H_2O} "
-"\\rlap{--}V_{fb}`."
+"\\rlap{-}V_{fb}`."
 msgstr ""
 "La masa de agua en el manto de flóculo está relacionada con la fracción de "
 "volumen del manto de flóculo que está ocupada por la arcilla, :matemáticas:"

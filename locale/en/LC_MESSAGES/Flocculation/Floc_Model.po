@@ -172,7 +172,7 @@ msgstr ""
 
 #: ../../Flocculation/Floc_Model.rst:56
 msgid ""
-":math:`{\\rlap{--} V_{\\rm{Surround}}}` is the suspension volume occupied"
+":math:`{\\rlap{-} V_{\\rm{Surround}}}` is the suspension volume occupied"
 " by one particle"
 msgstr ""
 
@@ -185,7 +185,7 @@ msgid ":math:`C_P` is the particle concentration"
 msgstr ""
 
 #: ../../Flocculation/Floc_Model.rst:67
-msgid ":math:`\\rlap{--} V_P` is the volume of a single particle"
+msgid ":math:`\\rlap{-} V_P` is the volume of a single particle"
 msgstr ""
 
 #: ../../Flocculation/Floc_Model.rst:68
@@ -378,10 +378,10 @@ msgstr ""
 
 #: ../../Flocculation/Floc_Model.rst:251
 msgid ""
-"The volume cleared, :math:`{\\rlap{--} V_{\\rm{Cleared}}}` must equal the"
-" volume occupied by one particle, :math:`{\\rlap{--} V_{\\rm{Surround}}}`"
+"The volume cleared, :math:`{\\rlap{-} V_{\\rm{Cleared}}}` must equal the"
+" volume occupied by one particle, :math:`{\\rlap{-} V_{\\rm{Surround}}}`"
 " for a collision to occur. Combining the three equations for "
-":math:`{\\rlap{--} V_{\\rm{Cleared}}}` and the equation for :math:`v_r` "
+":math:`{\\rlap{-} V_{\\rm{Cleared}}}` and the equation for :math:`v_r` "
 "we obtain the volume cleared as a function of time."
 msgstr ""
 
@@ -478,7 +478,7 @@ msgstr ""
 #: ../../Flocculation/Floc_Model.rst:290
 msgid ""
 "The collision rate :cite:`Floc_Model-pennock_theoretical_2016` can be "
-"obtained by substituting equation :eq:`tc` into equation :eq:`dNc`."
+"obtained by substituting Equation :eq:`tc` into Equation :eq:`dNc`."
 msgstr ""
 
 #: ../../Flocculation/Floc_Model.rst:298

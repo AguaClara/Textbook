@@ -24,7 +24,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :header: Parameter, Description, Units
     :widths: 10, 30, 10
 
-    Uppercase letters, ,
+    Uppercase letters, - , -
     :math:`A`,Area,:math:`[L]^2`
     :math:`A_{floc}`,Projected cross sectional area of particle,:math:`[L]^2`
     :math:`A_p `,Plan view area,:math:`[L]^2`
@@ -53,7 +53,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`{\rm Re}`,Reynolds Number,Dimensionless
     :math:`S`,Spacing Between Two Objects,:math:`[L]`
     :math:`T`,Object Thickness,:math:`[L]`
-    :math:`\rlap{--} V`,Volume,:math:`[L]^3`
+    :math:`\rlap{-} V`,Volume,:math:`[L]^3`
     :math:`W`,Width,:math:`[L]`
     ":math:`W_{diff,min}`",Minimum internal width of diffuser,:math:`[L]`
     :math:`W_{floc}`,Gravitational weight of floc,:math:`\frac{[M][L]}{[T]^2}`

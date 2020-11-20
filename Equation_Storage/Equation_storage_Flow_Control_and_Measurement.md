@@ -2,7 +2,7 @@
 This file is a temporary storage place for the LaTeX equations used in 4540 slides. Once some progress is made and the equations can be divided into groups, a well-designed file structure will be made.
 
 **Notes for LaTeX math in Atom text editor**
-1. Differentiating velocity ($V$) from volume ($\rlap{--} V$) is done with the `rlap{-}` function before the `V`. Using two dashes inside `\rlap{}`, which is how MathType translates volume,  results in the text losing its color coding in atom.
+1. Differentiating velocity ($V$) from volume ($\rlap{-} V$) is done with the `rlap{-}` function before the `V`. Using two dashes inside `\rlap{}`, which is how MathType translates volume,  results in the text losing its color coding in atom.
 2. Using an asterisk (I will refrain from using one here) in LaTeX equations causes the text coloring to become a bit wonky and quite purple. Instead, use `\ast` when working within the dollar signs that denote math equations.
 
 
@@ -79,7 +79,7 @@ h_e = \frac{V_{in}^2}{2g}  \left( 1 -
 \\
 V_{in} = \frac{V_{out} A_{out}} {A_{in}}
 \\
-h_e = \frac{V_{out}^2}{2g}   \left( \frac{{{A_{out}}}}{{{A_{in}}}} - 1 \right)^2
+h_e = \frac{V_{out}^2}{2g}  \left( \frac{{{A_{out}}}}{{{A_{in}}}} - 1 \right)^2
 \end{array}$$
 
 
@@ -105,7 +105,7 @@ $$Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}$$
 
 
 ### Use Conservation of Mass and Minor Loss equation
-$$Q =  - \frac{d\rlap{--}V}{dt} = - \frac{{A_{Tank}}dh}{dt}$$
+$$Q =  - \frac{d\rlap{-}V}{dt} = - \frac{{A_{Tank}}dh}{dt}$$
 
 $$h_e = K_e \frac{Q^2}{2gA_{Valve}^2}$$
 
@@ -114,11 +114,11 @@ $$Q = A_{Valve} \sqrt{\frac{2 h_e g}{K_e}}$$
 $$A_{Tank} \frac{dh}{dt} + A_{Valve} \sqrt{\frac{2gh}{K_e}} = 0$$
 
 
-$$Q =  - \frac{d\rlap{--}V}{dt} = - \frac{{A_{Tank}}dh}{dt}$$
+$$Q =  - \frac{d\rlap{-}V}{dt} = - \frac{{A_{Tank}}dh}{dt}$$
 
 
 ### Finding the chlorine depth as f(t)
-$$\frac{ -A_{Tank}}{{A_{Valve}} \sqrt{\frac{2g}{K_e}} }   \int \limits_{h_0}^h \frac{dh}{\sqrt h} = \int \limits_0^t {dt}$$
+$$\frac{ -A_{Tank}}{{A_{Valve}} \sqrt{\frac{2g}{K_e}} }  \int \limits_{h_0}^h \frac{dh}{\sqrt h} = \int \limits_0^t {dt}$$
 
 $$\frac{ -A_{Tank}}{A_{Valve} \sqrt{ \frac{2g}{K_e}} } 2 \left( h^{1/2} - h_0^{1/2} \right) = t$$
 
@@ -200,7 +200,7 @@ $$h_L(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q}{g \pi ^2 D^4} \sum{K_e}
 ### Relationship between Q and L given minor loss error constraints
 $$\Pi_{Error} = \frac{h_{Linear} - h_L}{h_{Linear}} = 1 - \frac{h_L}{h_{Linear}}$$
 
-$$1 - \Pi_{Error} = \frac{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8Q}{g \pi^2 D^4} \sum{K_e} \right)}   {\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K_e} \right)}     =     \frac{\left( \frac{128 \nu L}{g \pi D^4} \right)}{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K_e} \right)}$$
+$$1 - \Pi_{Error} = \frac{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8Q}{g \pi^2 D^4} \sum{K_e} \right)}   {\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K_e} \right)}     =  \frac{\left( \frac{128 \nu L}{g \pi D^4} \right)}{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K_e} \right)}$$
 
 $$\left( 1 - \Pi_{Error} \right)  \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{Max}}{g \pi ^2 D^4} \sum{K_e}  =  \frac{128 \nu L}{g \pi D^4}$$
 

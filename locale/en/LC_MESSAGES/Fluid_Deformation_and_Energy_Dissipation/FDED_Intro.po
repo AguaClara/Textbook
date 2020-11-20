@@ -473,7 +473,7 @@ msgstr ""
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst:1
 msgid ""
-":math:`\\varepsilon_{Max} = \\Pi_{JetRound}\\frac{   \\bar v_{Jet} "
+":math:`\\varepsilon_{Max} = \\Pi_{JetRound}\\frac{  \\bar v_{Jet} "
 "^3}{D_{Jet}}`"
 msgstr ""
 
@@ -540,7 +540,7 @@ msgid ":math:`m` = mass of fluid in the control volume"
 msgstr ""
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst:138
-msgid ":math:`\\rlap{--}V` = volume of the control volume"
+msgid ":math:`\\rlap{-}V` = volume of the control volume"
 msgstr ""
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst:139

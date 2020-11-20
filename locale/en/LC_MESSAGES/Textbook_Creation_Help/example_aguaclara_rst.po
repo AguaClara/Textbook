@@ -434,7 +434,7 @@ msgstr ""
 msgid ""
 "Equations: ``:eq:`quadratic_equation``` only generates a number in "
 "parentheses. Thus, this reference is usually preceeded by the word: "
-"'equation.' Like this: equation :eq:`quadratic_equation`."
+"'equation.' Like this: Equation :eq:`quadratic_equation`."
 msgstr ""
 
 #: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:284

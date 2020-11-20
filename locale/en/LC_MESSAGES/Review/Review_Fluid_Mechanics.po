@@ -99,27 +99,27 @@ msgid "Reynolds number :eq:`reynolds_number_equation`"
 msgstr ""
 
 #: ../../Review/Review_Fluid_Mechanics.rst:34
-msgid "Bernoulli equation :eq:`bernoulli_equation`"
+msgid "Bernoulli Equation :eq:`bernoulli_equation`"
 msgstr ""
 
 #: ../../Review/Review_Fluid_Mechanics.rst:35
-msgid "Energy equation :eq:`energy_equation`"
+msgid "Energy Equation :eq:`energy_equation`"
 msgstr ""
 
 #: ../../Review/Review_Fluid_Mechanics.rst:36
-msgid "Darcy-Weisbach equation :eq:`darcy_weisbach`"
+msgid "Darcy-Weisbach Equation :eq:`darcy_weisbach`"
 msgstr ""
 
 #: ../../Review/Review_Fluid_Mechanics.rst:37
-msgid "Swamee-Jain equation :eq:`swamee_jain`"
+msgid "Swamee-Jain Equation :eq:`swamee_jain`"
 msgstr ""
 
 #: ../../Review/Review_Fluid_Mechanics.rst:38
-msgid "Hagen-Poiseuille equation :eq:`hagen_poiseuille`"
+msgid "Hagen-Poiseuille Equation :eq:`hagen_poiseuille`"
 msgstr ""
 
 #: ../../Review/Review_Fluid_Mechanics.rst:39
-msgid "Orifice equation :eq:`orifice_equation`"
+msgid "Orifice Equation :eq:`orifice_equation`"
 msgstr ""
 
 #: ../../Review/Review_Fluid_Mechanics.rst:46
@@ -603,7 +603,7 @@ msgstr ""
 
 #: ../../Review/Review_Fluid_Mechanics.rst:276
 msgid ""
-"Substituting the continuity equation :math:`Q = \\bar vA` in the form of "
+"Substituting the continuity Equation :math:`Q = \\bar vA` in the form of "
 ":math:`\\bar v^2 = \\frac{16Q^2}{\\pi^2 D^4}` gives another, equivalent "
 "form of Darcy-Weisbach which uses flow, :math:`Q`, instead of velocity, "
 ":math:`\\bar v`:"
@@ -1042,7 +1042,7 @@ msgstr ""
 
 #: ../../Review/Review_Fluid_Mechanics.rst:542
 msgid ""
-"Substituting the continuity equation :math:`Q = \\bar v A` in the form of"
+"Substituting the continuity Equation :math:`Q = \\bar v A` in the form of"
 " :math:`\\bar v_2^2 = \\frac{Q^2}{A_{vc}^2}`, the vena contracta "
 "coefficient in the form of :math:`A_{vc} = \\Pi_{vc} A_{or}` yields:"
 msgstr ""

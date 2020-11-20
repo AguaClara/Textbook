@@ -247,8 +247,8 @@ msgstr "Dónde:"
 
 #: ../../Sedimentation/Sed_Intro.rst:61
 #, fuzzy
-msgid ":math:`\\rlap{--}V_{floc} =` floc particle volume"
-msgstr ":matemáticas:`\\rlap{--}V_{floc} =` volumen de partículas del floc"
+msgid ":math:`\\rlap{-}V_{floc} =` floc particle volume"
+msgstr ":matemáticas:`\\rlap{-}V_{floc} =` volumen de partículas del floc"
 
 #: ../../Sedimentation/Sed_Intro.rst:62
 #, fuzzy
@@ -920,10 +920,10 @@ msgstr ":matemáticas:`\\theta =` tiempo de residencia :matemáticas:`[T]`"
 #: ../../Sedimentation/Sed_Intro.rst:227
 #, fuzzy
 msgid ""
-":math:`\\rlap{--}V_{tank} =` volume of the sedimentation tank :math:`"
+":math:`\\rlap{-}V_{tank} =` volume of the sedimentation tank :math:`"
 "\\left[L^3\\right]`"
 msgstr ""
-":math:`\\rlap{--}V_{tank} =` volumen del tanque de sedimentación :math:`\\"
+":math:`\\rlap{-}V_{tank} =` volumen del tanque de sedimentación :math:`\\"
 "\\Nizquierda[L^3\\N-derecha]``"
 
 #: ../../Sedimentation/Sed_Intro.rst:228
@@ -1153,9 +1153,9 @@ msgstr ":matemáticas:`\\theta =` tiempo de residencia [T]"
 #: ../../Sedimentation/Sed_Intro.rst:305
 #, fuzzy
 msgid ""
-":math:`\\rlap{--}V_{tank} =` volume of the sedimentation tank [:math:`L^3`]"
+":math:`\\rlap{-}V_{tank} =` volume of the sedimentation tank [:math:`L^3`]"
 msgstr ""
-":math:`\\rlap{--}V_{tank} =` volumen del tanque de sedimentación [:math:`L^3`]"
+":math:`\\rlap{-}V_{tank} =` volumen del tanque de sedimentación [:math:`L^3`]"
 
 #: ../../Sedimentation/Sed_Intro.rst:306
 #, fuzzy

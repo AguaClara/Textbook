@@ -144,7 +144,7 @@ msgstr ""
 
 #: ../../Hydraulics/Hydraulics_Intro.rst:74
 msgid ""
-"The energy control volume equation :eq:`energy_cv_manifold` can be "
+"The energy control volume Equation :eq:`energy_cv_manifold` can be "
 "simplified with the definition of piezometric head (equation "
 ":eq:`piezometric_head_defined`)."
 msgstr ""
@@ -186,7 +186,7 @@ msgstr ""
 
 #: ../../Hydraulics/Hydraulics_Intro.rst:121
 msgid ""
-"Substitute equations :eq:`Piezo_ports` into equation :eq:`Pi_Q_ports` to "
+"Substitute equations :eq:`Piezo_ports` into Equation :eq:`Pi_Q_ports` to "
 "obtain the relationship between piezometric head and the flow "
 "distribution ratio."
 msgstr ""
@@ -204,7 +204,7 @@ msgstr ""
 #: ../../Hydraulics/Hydraulics_Intro.rst:135
 msgid ""
 "The energy equation also yields an equation for the change in piezometric"
-" head (see equation :eq:`delta_piezometric_cv_manifold`) and we can "
+" head (see Equation :eq:`delta_piezometric_cv_manifold`) and we can "
 "equate those two to"
 msgstr ""
 
@@ -240,7 +240,7 @@ msgstr ""
 #: ../../Hydraulics/Hydraulics_Intro.rst:165
 msgid ""
 "If there is no additional head loss in series to improve flow "
-"distribution, then equation :eq:`Manifold_max_v_with_hl_series` "
+"distribution, then Equation :eq:`Manifold_max_v_with_hl_series` "
 "simplifies to"
 msgstr ""
 

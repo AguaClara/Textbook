@@ -634,7 +634,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:368
 msgid ""
-"Rearranging the flow equation :math:`Q` to solve for "
+"Rearranging the flow Equation :math:`Q` to solve for "
 ":math:`\\frac{dp}{dx}`,"
 msgstr ""
 
@@ -976,7 +976,7 @@ msgid ":math:`C_{clay} =` concentration of clay in the floc blanket"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:604
-msgid ":math:`\\rlap{--}V_{fb} =` volume of floc blanket"
+msgid ":math:`\\rlap{-}V_{fb} =` volume of floc blanket"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:605
@@ -994,7 +994,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:609
 msgid ""
 "The mass of clay in the floc blanket is concentration multiplied by "
-"volume, shown by :math:`m_{clay} = C_{clay}\\rlap{--}V_{fb}`"
+"volume, shown by :math:`m_{clay} = C_{clay}\\rlap{-}V_{fb}`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:611
@@ -1005,7 +1005,7 @@ msgid ""
 ":math:`\\left( 1 - \\frac{C_{clay}}{\\rho_{clay}} \\right)` is the "
 "fraction of the floc blanket that is occupied by water, also called the "
 "water volume fraction. So, :math:`m_{H_2O} = \\left( 1 - "
-"\\frac{C_{clay}}{\\rho_{clay}} \\right) \\rho_{H_2O} \\rlap{--}V_{fb}`."
+"\\frac{C_{clay}}{\\rho_{clay}} \\right) \\rho_{H_2O} \\rlap{-}V_{fb}`."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:613

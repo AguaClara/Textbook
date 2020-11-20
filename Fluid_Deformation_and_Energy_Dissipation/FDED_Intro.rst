@@ -97,9 +97,9 @@ The equations used to convert between columns in the table above are:
 
 .. math::
 
-   \bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
+  \bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
    G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
-   \bar v=\frac{4Q}{\pi D}
+  \bar v=\frac{4Q}{\pi D}
 
 Note that the velocity gradient is independent of viscosity (and hence temperature) for laminar flow. This is because the total amount of fluid deformation is simply based on geometry. The no slip condition, the diameter, and the length of the flow passage set the total fluid deformation. Of course, if temperature decreases and viscosity increases the amount of energy required to push the fluid through the flow passage will increase (head loss is proportional to viscosity for laminar flow).
 
@@ -124,20 +124,20 @@ For turbulent flow and for flow expansions the amount of fluid deformation decre
    :header: "Geometry", ":math:`\Pi_{Jet}`", "Maximum energy dissipation rate", "Maximum velocity gradient"
    :align: left
 
-   "Round jet", "0.08", ":math:`\varepsilon_{Max} = \Pi_{JetRound}\frac{   \bar v_{Jet} ^3}{D_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}`"
+   "Round jet", "0.08", ":math:`\varepsilon_{Max} = \Pi_{JetRound}\frac{  \bar v_{Jet} ^3}{D_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}`"
    "Plane jet", "0.0124", ":math:`\varepsilon_{Max} = \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{S_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}`"
    "Behind a flat plate", "0.04", ":math:`\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}`", ":math:`G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}`"
 
 For mechanical mixing where an impeller or other stirring device is adding shaft work to a control volume we have
 
-.. math::  \bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{--}V}
+.. math::  \bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}
 
 | where
 | :math:`P` = power input into the control volume
 | :math:`m` = mass of fluid in the control volume
-| :math:`\rlap{--}V` = volume of the control volume
+| :math:`\rlap{-}V` = volume of the control volume
 | :math:`\rho` = density of the fluid
 
 The Camp-Stein velocity gradient for a mechanically mixed reactor is
 
-.. math::  G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{--}V}}
+.. math::  G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}

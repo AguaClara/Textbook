@@ -142,9 +142,9 @@ The velocity gradient can be obtained from the rate at which mechanical energy i
 
 where :math:`\varepsilon` is the energy dissipation rate, :math:`G` is the velocity gradient, and :math:`\nu` is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.
 
-.. math:: P = \bar\varepsilon \rlap{--} V \rho
+.. math:: P = \bar\varepsilon \rlap{-} V \rho
 
-.. math::  P = \bar G^2 \nu \rlap{--} V \rho
+.. math::  P = \bar G^2 \nu \rlap{-} V \rho
 
 We can relate reactor volume to a hydraulic residence time, :math:`\theta`, and volumetric flow rate, Q.
 
@@ -156,7 +156,7 @@ This equation is perfectly useful for estimating electrical motor sizing require
 
 Combining the two equations we obtain.
 
-.. math::   \Delta h =   \frac{G^2 \nu \theta}{g}
+.. math::  \Delta h =  \frac{G^2 \nu \theta}{g}
 
 .. _Table_Conventional_Rapid_Mix_Design_Values:
 
@@ -179,7 +179,7 @@ Rotating propellers can either be installed in open tanks or enclosed in pipes. 
 Mixing time
 -----------
 
-The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see equation :eq:`eq_t_eddy`) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (:numref:`figure_Eddy_turnover_times`).
+The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see Equation :eq:`eq_t_eddy`) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (:numref:`figure_Eddy_turnover_times`).
 
 .. _figure_Eddy_turnover_times:
 

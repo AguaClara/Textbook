@@ -2,7 +2,7 @@
 This file is a temporary storage place for the LaTeX equations used in 4540 slides. Once some progress is made and the equations can be divided into groups, a well-designed file structure will be made.
 
 **Notes for LaTeX math in Atom text editor**
-1. Differentiating velocity ($V$) from volume ($\rlap{--} V$) is done with the `rlap{-}` function before the `V`. Using two dashes inside `\rlap{}`, which is how MathType translates volume,  results in the text losing its color coding in atom.
+1. Differentiating velocity ($V$) from volume ($\rlap{-} V$) is done with the `rlap{-}` function before the `V`. Using two dashes inside `\rlap{}`, which is how MathType translates volume,  results in the text losing its color coding in atom.
 2. Using an asterisk (I will refrain from using one here) in LaTeX equations causes the text coloring to become a bit wonky and quite purple. Instead, use `\ast` when working within the dollar signs that denote math equations.
 
 
@@ -20,7 +20,7 @@ $$Al \left( OH \right)^{+2}$$
 ### This is the traditional approach: Power, Height, and G
 $$G = \sqrt{ \frac{\varepsilon}{\nu}} $$
 
-$$G = \left( \frac{P}{\rlap{--}V \rho \nu} \right)^{\frac{1}{2}}$$
+$$G = \left( \frac{P}{\rlap{-}V \rho \nu} \right)^{\frac{1}{2}}$$
 
 $$P = G^2 \nu Q \theta \rho $$
 
@@ -141,7 +141,7 @@ $$d_P = \left( \frac{6MW}{\pi \rho_P N_A} \right)^{\frac{1}{3}}$$
 
 $$D_{Diffusion} = \frac{k_B T}{3 \pi \mu} \left( \frac{\pi \rho_P N_A}{6 M W} \right)^{\frac{1}{3}}$$
 
-$$M W = \rho_P \rlap{--}V_P N_A$$
+$$M W = \rho_P \rlap{-}V_P N_A$$
 
 
 ### Turbulent Mixing so that Molecular Diffusion can finish the job
@@ -183,9 +183,9 @@ k_v \eta_K = 0.125
 
 
 ### Average distance between particles is the cube root of the volume occupied (L)
-$$\rlap{--} V_P = \frac{\pi}{6} d_P^3$$
+$$\rlap{-} V_P = \frac{\pi}{6} d_P^3$$
 
-$$n_P = \frac{C_P}{\rlap{--} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
+$$n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
 
 $$\Lambda  = \frac{1}{n_P^{\frac{1}{3}}}$$
 
@@ -197,13 +197,13 @@ $$n_P = n_{P_0} \left( \frac{D_{cp}}{d_P} \right)^{\Pi_{fractal}}$$
 $$\phi_{Floc} = \phi_{Floc_0} \left( \frac{d}{D_{cp}} \right)^{3 - \Pi_{fractal}}$$
 
 $$\begin{array}{l}
-n_{Floc} = \frac{C_{Floc}}{\rlap{--} V_{Floc} \rho_{Floc}} = \frac{\phi_{Floc}}{\rlap{--} V_{Floc}}
+n_{Floc} = \frac{C_{Floc}}{\rlap{-} V_{Floc} \rho_{Floc}} = \frac{\phi_{Floc}}{\rlap{-} V_{Floc}}
 \\
-n_{Floc_0} = \frac{\phi_{Floc_0}}{\rlap{--} V_{Floc_0}}
+n_{Floc_0} = \frac{\phi_{Floc_0}}{\rlap{-} V_{Floc_0}}
 \\
-n_{Floc} = \frac{\phi_{Floc}}{\rlap{--} V_{Floc}} = \frac{\phi_{Floc_0} \left( \frac{d_{Floc}}{D_{cp}} \right)^{3 - \Pi_{fractal}}}{\rlap{--} V_{Floc}}
+n_{Floc} = \frac{\phi_{Floc}}{\rlap{-} V_{Floc}} = \frac{\phi_{Floc_0} \left( \frac{d_{Floc}}{D_{cp}} \right)^{3 - \Pi_{fractal}}}{\rlap{-} V_{Floc}}
 \\
-= n_{Floc_0} \frac{\rlap{--} V_{Floc_0} \left( \frac{d_{Floc}}{D_{cp}} \right)^{3 - \Pi_{fractal}}}{ \rlap{--} V_{Floc}}
+= n_{Floc_0} \frac{\rlap{-} V_{Floc_0} \left( \frac{d_{Floc}}{D_{cp}} \right)^{3 - \Pi_{fractal}}}{ \rlap{-} V_{Floc}}
 \\
 = n_{Floc_0} \left( \frac{D_{cp}}{d_{Floc}} \right)^3 \left( \frac{d_{Floc}}{D_{cp}} \right)^{3 - {\Pi_{fractal}}}
 \\
@@ -261,13 +261,13 @@ $$L_{Diff_{NC}} \approx \sqrt{ \frac{k_B T}{3 \pi \,\nu \rho_{NC} \, d_{NC} G}} 
 
 
 ### Collision Rates
-$${\rlap{--} V_{\rm{Cleared}}} \propto \pi d_{Clay} L_{Diff_{NC}} v_r t$$
+$${\rlap{-} V_{\rm{Cleared}}} \propto \pi d_{Clay} L_{Diff_{NC}} v_r t$$
 
 $$t_c = \frac{\Lambda_{NC}^3}{\pi d_{Clay} L_{Diff_{NC} v_r}}$$
 
 $$v_r \approx \Lambda_{Clay} G$$
 
-$$\rlap{--} V_{Occupied} = \Lambda_{NC}^3$$
+$$\rlap{-} V_{Occupied} = \Lambda_{NC}^3$$
 
 $$t_c = \frac{\Lambda_{NC}^3}{\pi d_{Clay} L_{Diff_{NC}} \Lambda_{Clay} G}$$
 

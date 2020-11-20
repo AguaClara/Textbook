@@ -314,13 +314,13 @@ The following variable definitions and equations will be useful in answering lat
 
 .. math::
 
-   \Pi_{DiffuserFlow} = \sqrt{\frac{{hl}_{ParallelPath}  - \frac{\Delta{H}_{Manifold}}{2}}{{hl}_{ParallelPath} + \frac{\Delta{H}_{Manifold}}{2}}}
+  \Pi_{DiffuserFlow} = \sqrt{\frac{{hl}_{ParallelPath}  - \frac{\Delta{H}_{Manifold}}{2}}{{hl}_{ParallelPath} + \frac{\Delta{H}_{Manifold}}{2}}}
 
  - The change in piezometric head is given by:
 
 .. math::
 
-    \Delta{H}_{Manifold} = \frac{{{Velocity}_{Manifold}}^{2}}{2g}
+   \Delta{H}_{Manifold} = \frac{{{Velocity}_{Manifold}}^{2}}{2g}
 
  - The maximum allowable velocity in the manifold is given by:
 
@@ -330,15 +330,15 @@ The following variable definitions and equations will be useful in answering lat
 
 .. math::
 
-   \left({\Pi_{DiffuserFlow}}^{2} - 1 \right) {hl}_{ParallelPath} + \left({\Pi_{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0
+  \left({\Pi_{DiffuserFlow}}^{2} - 1 \right) {hl}_{ParallelPath} + \left({\Pi_{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0
 
 .. math::
 
-   \left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} =  \frac{\Delta{H}_{Manifold}}{2}
+  \left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} =  \frac{\Delta{H}_{Manifold}}{2}
 
 .. math::
 
-   \left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} = \frac{{{Velocity}_{Manifold}}^{2}}{4g}
+  \left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} = \frac{{{Velocity}_{Manifold}}^{2}}{4g}
 
 
 10:

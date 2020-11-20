@@ -322,9 +322,9 @@ From that area, the fraction of the filter layer served by the hypothetical long
 
 .. math::
 
-    \frac{(\frac{ID_{Fi}}{2} * S_{Branch})}{\pi*\frac{ID_{Fi}^2}{4}}  = \Pi_{branch}
-    \\ \\ Then: \\ \\
-    \Pi_{branch}*2Q_{FiLayer} = Q_{BranchMax}
+   \frac{(\frac{ID_{Fi}}{2} * S_{Branch})}{\pi*\frac{ID_{Fi}^2}{4}}  = \Pi_{branch}
+   \\ \\ Then: \\ \\
+   \Pi_{branch}*2Q_{FiLayer} = Q_{BranchMax}
 
 
 This describes the largest flow in any branch during forward filtration. For the backwash branches the only difference is with the flow:
@@ -384,7 +384,7 @@ Then:
 
 .. math::
 
-    \frac{A_{InletOrifices}}{A_{Orifice}} , \frac{A_{BWorifices}}{A_{Orifice}}
+   \frac{A_{InletOrifices}}{A_{Orifice}} , \frac{A_{BWorifices}}{A_{Orifice}}
 
 
 are the respective number of orifices necessary on the longest branch for the regular inlet manifolds and the backwash manifold respectively.
@@ -435,9 +435,9 @@ The areas determined is the minimum total area of the branches, :math:`A_{Branch
 
     Remember: \\
     N_{BranchTrunk} = 2*Round(\frac{ID_{Fi}}{B_{FiBranchMax}})
-    \\ So: \\
+   \\ So: \\
     A_{BranchMinBW} = \frac{A_{BranchTotalMinBW}}{N_{BranchTrunk}}
-    \\ and \\
+   \\ and \\
     A_{BranchMinFW} = \frac{A_{BranchTotalMinFW}}{N_{BranchTrunk}}
 
 
@@ -462,7 +462,7 @@ Knowing the slot width makes determining the total slots length of the longest b
 
 .. math::
 
-    \frac{A_{SlotsLongestBranch}}{B_{Slot}} = L_{SlotsLongestBranch}
+   \frac{A_{SlotsLongestBranch}}{B_{Slot}} = L_{SlotsLongestBranch}
 
 From the cumulative area of slots and the width of the slots, the total length of slots can be determined. This length of slots is for one side of one branch *yes?*
 
@@ -879,7 +879,7 @@ Additionally, the density of the fluidized sand can be determined.
 
 .. math::
 
-    \rho_{Fluidized} = \rho_{H2O}*\epsilon_{Sand}*\Pi_{Fluidized} + \frac{\rho_{FiSand}*(1-\epsilon_{sand})}{\Pi_{Fluidized}}
+   \rho_{Fluidized} = \rho_{H2O}*\epsilon_{Sand}*\Pi_{Fluidized} + \frac{\rho_{FiSand}*(1-\epsilon_{sand})}{\Pi_{Fluidized}}
 
 
 Elevations and Filter Sizing
@@ -908,11 +908,11 @@ Where 7 is the number of layers of branches, and :math:`L_{TotalBranches}` the t
 
 Thus the total plumbing volume is:
 
-:math:`\rlap{--} V_{FiPlumbing} = \rlap{--} V_{BWTrunk} + \rlap{--} V_{Trunks} + \rlap{--} V_{Branches}`
+:math:`\rlap{-} V_{FiPlumbing} = \rlap{-} V_{BWTrunk} + \rlap{-} V_{Trunks} + \rlap{-} V_{Branches}`
 
 Then the total sand volvume in the filter is the volume of the filter (a function of its heigth and area) minus the volume of the plumbing.
 
-:math:`\rlap{--} V_{SandTotal} = (A_{Fi}*H_{FiSandLow}) - \rlap{--} V_{FiPlumbing}`.
+:math:`\rlap{-} V_{SandTotal} = (A_{Fi}*H_{FiSandLow}) - \rlap{-} V_{FiPlumbing}`.
 
 Multplying the density of the sand, :math:`\Rho_{Sand}` by the volume of the sand gives the mass of the sand, :math:`M_{Sand}`
 

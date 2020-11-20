@@ -48,7 +48,7 @@ msgstr ""
 msgid ""
 "Calculate the orifice head loss required to provide uniform flow to the "
 "sand bed during backwash. This is based on the required ratio of port to "
-"manifold velocity (see equation :eq:`Manifold_max_v_no_hl_series`)."
+"manifold velocity (see Equation :eq:`Manifold_max_v_no_hl_series`)."
 msgstr ""
 
 #: ../../Filtration/Filtration_Design.rst:13

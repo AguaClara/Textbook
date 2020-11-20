@@ -229,7 +229,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:157
 msgid ""
-"Area is given using the following equation :math:`A_{PVC}=2\\left "
+"Area is given using the following Equation :math:`A_{PVC}=2\\left "
 "(B_{diffuser}+W_{diffuser} \\right)T_{diff}`"
 msgstr ""
 

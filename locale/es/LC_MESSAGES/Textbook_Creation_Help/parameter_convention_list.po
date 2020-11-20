@@ -458,7 +458,7 @@ msgstr "Espesor del objeto"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy
-msgid ":math:`\\rlap{--} V`"
+msgid ":math:`\\rlap{-} V`"
 msgstr ":matemáticas:`rlap{\\N-} V`"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1

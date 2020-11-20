@@ -363,7 +363,7 @@ msgid "Object Thickness"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid ":math:`\\rlap{--} V`"
+msgid ":math:`\\rlap{-} V`"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
