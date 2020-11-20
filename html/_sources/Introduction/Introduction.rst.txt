@@ -304,10 +304,10 @@ Chlorine is widely recognized for reducing mortality from water borne disease in
    Roughing filter, simple sedimentation in a gravel bed, none, public, `unknown <https://www.researchgate.net/publication/237827490_Roughing_filter_for_water_pre-treatment_technology_in_developing_countries_A_review?enrichId=rgreq-bb1d04e6613378d626c78cadb6674ae8&enrichSource=Y292ZXJQYWdlOzIzNzgyNzQ5MDtBUzoyMDAwMDczMDQxMjY0NjdAMTQyNDY5Njg2NTYxMQ%3D%3D&el=1_x_2>`_
    Slow sand filtration, Roughing filter or single step treatment for low NTU water, none, public, `1829 <https://en.wikipedia.org/wiki/Slow_sand_filter>`_
    Rapid sand filtration, depth filtration, sedimentation, public, `1920 <https://en.wikipedia.org/wiki/RapiD_sand_filter>`_
-   Stacked rapid sand filter, gravity powered backwash, lamellar sedimentation, AguaClara Cornell open source, `2012 <https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EE.1943-7870.0000562>`_
+   Stacked rapid sand filter, gravity powered backwash, lamellar sedimentation, AguaClara Cornell open source, `2012a <https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EE.1943-7870.0000562>`_
    Floc blanket, upflow fluidized suspension of flocs, flocculation, public, `1930 <https://link.springer.com/chapter/10.1007%2F978-3-642-61196-4_2>`_
-   Jet reverser floc blanket, first fully fluidized floc blanket, flocculation, AguaClara Cornell open source, `2012 <http://cuaguaclara.blogspot.com/2012/08/the-floc-blanket-quest.html>`_
-   Ballasted sedimentation, small sand carry particles downward, -, `Actiflo Veolia <http://www.veoliawatertechnologies.com.au/medias/topics/focus_actiflo.htm>`_, `1995 <https://patents.google.com/patent/US5840195>`_
+   Jet reverser floc blanket, first fully fluidized floc blanket, flocculation, AguaClara Cornell open source, `2012b <http://cuaguaclara.blogspot.com/2012/08/the-floc-blanket-quest.html>`_
+   Ballasted sedimentation, micro sand increases floc density, -, `Actiflo Veolia <http://www.veoliawatertechnologies.com.au/medias/topics/focus_actiflo.htm>`_, `1995 <https://patents.google.com/patent/US5840195>`_
    Superpulsator, pulsing flow through floc blanket, rapid mix, `Degremont <http://www.degremont-technologies.com/SUPERPULSATOR-R>`_, `1958 <https://patents.google.com/patent/US3038608A>`_  `1991 <https://patents.google.com/patent/US5143625>`_
    Dissolved air flotation, bubbles carry particles upward, flocculation, Public, `1905 <https://iwaponline.com/wst/article-abstract/31/3-4/1/4138/Principles-and-applications-of-dissolved-air>`_
 
@@ -340,9 +340,9 @@ Which process removes the largest quantity of contaminants?
 Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
 
 .. math::
-   :label: eq_laminar_terminal_velocity
+  :label: eq_laminar_terminal_velocity
 
-   \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
+  \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
 
 | Such that:
 | :math:`\bar v_t` = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water

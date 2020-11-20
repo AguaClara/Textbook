@@ -413,24 +413,24 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 <span id="heading-math-and-equations"></span><h3>Math and Equations<a class="headerlink" href="#math-and-equations" title="Permalink to this headline">¶</a></h3>
 <p>Math is very cool, and works natively in RST using LaTeX math syntax. In-line math can be written with the following syntax: <code class="docutils literal notranslate"><span class="pre">:math:`y</span> <span class="pre">=</span> <span class="pre">ax^2</span> <span class="pre">+</span> <span class="pre">bx</span> <span class="pre">+</span> <span class="pre">c`</span></code> which displays <span class="math notranslate nohighlight">\(y = ax^2 + bx + c\)</span>. To display equations in their own line, use the following syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">math</span><span class="p">::</span>
-  <span class="p">:</span><span class="n">label</span><span class="p">:</span> <span class="n">quadratic_equation</span>
+<span class="p">:</span><span class="n">label</span><span class="p">:</span> <span class="n">quadratic_equation</span>
 
     <span class="n">y</span> <span class="o">=</span> <span class="n">ax</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">bx</span> <span class="o">+</span> <span class="n">c</span>
 </pre></div>
 </div>
 <p>Which displays as:</p>
 <div class="math notranslate nohighlight" id="equation-quadratic-equation">
-<span class="eqno">(705)<a class="headerlink" href="#equation-quadratic-equation" title="Permalink to this equation">¶</a></span>\[y = ax^2 + bx + c\]</div>
+<span class="eqno">(709)<a class="headerlink" href="#equation-quadratic-equation" title="Permalink to this equation">¶</a></span>\[ y = ax^2 + bx + c\]</div>
 <p>Equations do not have tags, they can be referenced via their labels, as you can see above. Equation labels don’t need to begin with any particular word, unlike tags. Not every equation needs a label. Only label equations that you need to reference. If you need to reference an equation that does not have a label, give it an intuitive one. All equations are numbered, regardless of whether or not they are labelled. Complex equations can be generated as well, since RST uses LaTeX math.</p>
 <blockquote>
 <div><div class="math notranslate nohighlight" id="equation-textbook-creation-help-example-aguaclara-rst-0">
-<span class="eqno">(706)<a class="headerlink" href="#equation-textbook-creation-help-example-aguaclara-rst-0" title="Permalink to this equation">¶</a></span>\[n_{\rm{offset}} = \sum_{k=0}^{N-1} \frac{s_k}{n_k} \ln \left( \frac{k}{k!} \right)\]</div>
+<span class="eqno">(710)<a class="headerlink" href="#equation-textbook-creation-help-example-aguaclara-rst-0" title="Permalink to this equation">¶</a></span>\[n_{\rm{offset}} = \sum_{k=0}^{N-1} \frac{s_k}{n_k} \ln \left( \frac{k}{k!} \right)\]</div>
 </div></blockquote>
 <p>When introducing a new equation, Make sure to specify what the parameters in the equation mean. Once the equation has been introduced, its parameters do not need to be explained when displayed in the future. Use the following syntax for introducing equations:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. math::
-  :label: continuity_equation_example
+:label: continuity_equation_example
 
-    \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
+ \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
 
 | Such that:
 | :math:`Q =` fluid flow rate
@@ -441,7 +441,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </pre></div>
 </div>
 <div class="math notranslate nohighlight" id="equation-continuity-equation-example">
-<span class="eqno">(707)<a class="headerlink" href="#equation-continuity-equation-example" title="Permalink to this equation">¶</a></span>\[ \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}\]</div>
+<span class="eqno">(711)<a class="headerlink" href="#equation-continuity-equation-example" title="Permalink to this equation">¶</a></span>\[ \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(Q =\)</span> fluid flow rate</div>
@@ -528,7 +528,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 <span id="citations"></span><h2>Equations<a class="headerlink" href="#equations" title="Permalink to this headline">¶</a></h2>
 <p>Equations are a little different, <code class="docutils literal notranslate"><span class="pre">:ref:`label`</span></code> does not work. They are instead called with the <code class="docutils literal notranslate"><span class="pre">:eq:`label`</span></code> syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation’s number will be the linked-text.</p>
 <ul class="simple">
-<li>Equations: <code class="docutils literal notranslate"><span class="pre">:eq:`quadratic_equation`</span></code> only generates a number in parentheses. Thus, this reference is usually preceeded by the word: ‘equation.’ Like this: equation <a class="reference internal" href="#equation-quadratic-equation">(705)</a>.</li>
+<li>Equations: <code class="docutils literal notranslate"><span class="pre">:eq:`quadratic_equation`</span></code> only generates a number in parentheses. Thus, this reference is usually preceeded by the word: ‘equation.’ Like this: Equation <a class="reference internal" href="#equation-quadratic-equation">(709)</a>.</li>
 </ul>
 </div>
 <div class="section" id="id1">

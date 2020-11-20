@@ -22,7 +22,7 @@ Using the setup described in the image below, we derive the following equation f
 .. math::
   :label: Q_tank_with_valve
 
-    \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
+   \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
 
 | Such that:
 | :math:`Q` = :math:`Q(t)` = flow of hypochlorite through valve at time :math:`t`
@@ -45,9 +45,9 @@ This equation has historically give students some trouble, and while its nuances
 * :math:`t_{Design}` is **NOT** the time it takes to drain the tank. It is the time that it *would* take to drain the tank *if* the flow rate at time :math:`t = 0`, :math:`Q_0`, were the flow rate forever, which it is not. :math:`t_{Design}` was used in the derivation to simplify the equation, which is why this potentially-confusing parameter exists. The actual time it takes to drain the tank lies somewhere between :math:`t_{Design}` and :math:`2 \, t_{Design}` and depends on the ratio :math:`\frac{h_{Tank}}{h_0}`.
 * :math:`h_{Tank}` is not the same as :math:`h_{0}`. :math:`h_{Tank}` is the height of water level in the tank with reference to the tank bottom. :math:`h_{0}` is the water level in the tank with reference to the valve. Neither change with time, they both refer to the water level at one instance in time, :math:`t = 0`. Therefore, :math:`h_{0} \geq h_{Tank}` is always true. If the tank is elevated far above the valve, then the :math:`h_{0} > > h_{Tank}`. If the valve is at the same elevation as the bottom of the tank, then :math:`h_{0} = h_{Tank}`. Please refer to the figure above to clarify :math:`h_{0}` and :math:`h_{Tank}`.
 
-We can use the proportionality :math:`Q \propto \sqrt{h}`, which applies to both minor losses and orifices to form a relationship between water level in the tank :math:`h` and time :math:`t`. This proportionality comes from rearranging the minor loss equation :math:`h = K \frac{Q^2}{2 g A^2}` for :math:`Q` instead of :math:`h`. A table of proportionality between :math:`Q` and :math:`h` can be found in :numref:`table_h_Q_proportionality`
+We can use the proportionality :math:`Q \propto \sqrt{h}`, which applies to both minor losses and orifices to form a relationship between water level in the tank :math:`h` and time :math:`t`. This proportionality comes from rearranging the minor loss Equation :math:`h = K \frac{Q^2}{2 g A^2}` for :math:`Q` instead of :math:`h`. A table of proportionality between :math:`Q` and :math:`h` can be found in :numref:`table_h_Q_proportionality`
 
-Using equation :eq:`Q_tank_with_valve` and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or :math:`h_{Tank} = h_0`. Our attempt to get a continuous flow rate out of this system is to make :math:`\frac{h_{Tank}}{h_0}` very small by elevating the tank far above the valve. On the right, :math:`\frac{h_{Tank}}{h_0} = \frac{1}{50}`. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.
+Using Equation :eq:`Q_tank_with_valve` and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or :math:`h_{Tank} = h_0`. Our attempt to get a continuous flow rate out of this system is to make :math:`\frac{h_{Tank}}{h_0}` very small by elevating the tank far above the valve. On the right, :math:`\frac{h_{Tank}}{h_0} = \frac{1}{50}`. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.
 
 .. _figure_tank_valve_play:
 .. figure:: Images/tank_valve_play.png

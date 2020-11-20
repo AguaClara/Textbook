@@ -298,12 +298,12 @@
 <ol class="arabic simple">
 <li>Continuity equation: <a class="reference internal" href="#equation-continuity-equation">(3)</a></li>
 <li>Reynolds number <a class="reference internal" href="#equation-reynolds-number-equation">(8)</a></li>
-<li>Bernoulli equation <a class="reference internal" href="#equation-bernoulli-equation">(9)</a></li>
-<li>Energy equation <a class="reference internal" href="#equation-energy-equation">(11)</a></li>
-<li>Darcy-Weisbach equation <a class="reference internal" href="#equation-darcy-weisbach">(12)</a></li>
-<li>Swamee-Jain equation <a class="reference internal" href="#equation-swamee-jain">(15)</a></li>
-<li>Hagen-Poiseuille equation <a class="reference internal" href="#equation-hagen-poiseuille">(19)</a></li>
-<li>Orifice equation <a class="reference internal" href="#equation-orifice-equation">(36)</a></li>
+<li>Bernoulli Equation <a class="reference internal" href="#equation-bernoulli-equation">(9)</a></li>
+<li>Energy Equation <a class="reference internal" href="#equation-energy-equation">(11)</a></li>
+<li>Darcy-Weisbach Equation <a class="reference internal" href="#equation-darcy-weisbach">(12)</a></li>
+<li>Swamee-Jain Equation <a class="reference internal" href="#equation-swamee-jain">(15)</a></li>
+<li>Hagen-Poiseuille Equation <a class="reference internal" href="#equation-hagen-poiseuille">(19)</a></li>
+<li>Orifice Equation <a class="reference internal" href="#equation-orifice-equation">(36)</a></li>
 </ol>
 </div>
 <div class="section" id="introductory-concepts">
@@ -398,7 +398,7 @@
 <span id="heading-bernoulli-equation"></span><h3>The Bernoulli Equation<a class="headerlink" href="#the-bernoulli-equation" title="Permalink to this headline">¶</a></h3>
 <p>These three forms of energy expressed above make up the Bernoulli equation:</p>
 <div class="math notranslate nohighlight" id="equation-bernoulli-equation">
-<span class="eqno">(9)<a class="headerlink" href="#equation-bernoulli-equation" title="Permalink to this equation">¶</a></span>\[  \frac{p_1}{\rho g} + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{v_2^2}{2g}\]</div>
+<span class="eqno">(9)<a class="headerlink" href="#equation-bernoulli-equation" title="Permalink to this equation">¶</a></span>\[ \frac{p_1}{\rho g} + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{v_2^2}{2g}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(p\)</span> = pressure</div>
@@ -430,7 +430,7 @@
 <span class="eqno">(10)<a class="headerlink" href="#equation-review-review-fluid-mechanics-4" title="Permalink to this equation">¶</a></span>\[\frac{p_{1}}{\rho g} + z_{1} + \alpha_{1} \frac{\bar v_{1}^2}{2g} + h_P = \frac{p_{2}}{\rho g} + z_{2} + {\alpha_{2}} \frac{\bar v_{2}^2}{2g} + h_T + h_L\]</div>
 <p>You’ll also notice the <span class="math notranslate nohighlight">\(\alpha\)</span> term attached to the velocity head. This is a correction factor for kinetic energy, and will be neglected in this class; we assume that its value is 1. In the Bernoulli equation, the velocity of a streamline of the fluid is considered, <span class="math notranslate nohighlight">\(v\)</span>. The energy equation, however compares control surfaces instead of streamlines, and the velocities across a control surface many not all be the same. Hence, <span class="math notranslate nohighlight">\(\bar v\)</span> is used to represent the average velocity. Since AguaClara does not use pumps nor turbines, <span class="math notranslate nohighlight">\(h_P = h_T = 0\)</span>. With these simplifications, the energy equation can be written as follows:</p>
 <div class="math notranslate nohighlight" id="equation-energy-equation">
-<span class="eqno">(11)<a class="headerlink" href="#equation-energy-equation" title="Permalink to this equation">¶</a></span>\[  \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L\]</div>
+<span class="eqno">(11)<a class="headerlink" href="#equation-energy-equation" title="Permalink to this equation">¶</a></span>\[ \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L\]</div>
 <p><strong>This is the form of the energy equation that you will see over and over again in this book.</strong> To summarize, the main difference between the Bernoulli equation and the energy equation for the purposes of this class is energy loss. The energy equation accounts for the fluid’s loss of energy over time while the Bernoulli equation does not. So how can the fluid lose energy?</p>
 </div>
 </div>
@@ -443,7 +443,7 @@
 <p>In this class, we will be dealing primarily with major losses in circular pipes, as opposed to channels or pipes with other geometries. Fortunately for us, Henry Darcy and Julius Weisbach came up with a handy equation to determine the major losses in a circular pipe <em>under both laminar and turbulent flow conditions</em>. Their equation is logically and unoriginally named the <a class="reference external" href="https://en.wikipedia.org/wiki/Darcy%E2%80%93Weisbach_equation">Darcy-Weisbach equation</a>. It is shown below:</p>
 <div class="math notranslate nohighlight" id="equation-darcy-weisbach">
 <span class="eqno">(12)<a class="headerlink" href="#equation-darcy-weisbach" title="Permalink to this equation">¶</a></span>\[  h_{\rm{f}} \, = \, {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}\]</div>
-<p>Substituting the continuity equation <span class="math notranslate nohighlight">\(Q = \bar vA\)</span> in the form of <span class="math notranslate nohighlight">\(\bar v^2 = \frac{16Q^2}{\pi^2 D^4}\)</span> gives another, equivalent form of Darcy-Weisbach which uses flow, <span class="math notranslate nohighlight">\(Q\)</span>, instead of velocity, <span class="math notranslate nohighlight">\(\bar v\)</span>:</p>
+<p>Substituting the continuity Equation <span class="math notranslate nohighlight">\(Q = \bar vA\)</span> in the form of <span class="math notranslate nohighlight">\(\bar v^2 = \frac{16Q^2}{\pi^2 D^4}\)</span> gives another, equivalent form of Darcy-Weisbach which uses flow, <span class="math notranslate nohighlight">\(Q\)</span>, instead of velocity, <span class="math notranslate nohighlight">\(\bar v\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-review-review-fluid-mechanics-5">
 <span class="eqno">(13)<a class="headerlink" href="#equation-review-review-fluid-mechanics-5" title="Permalink to this equation">¶</a></span>\[h_{\rm{f}} \, = \,{\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}\]</div>
 <div class="line-block">
@@ -501,11 +501,11 @@
 <div class="math notranslate nohighlight" id="equation-review-review-fluid-mechanics-11">
 <span class="eqno">(21)<a class="headerlink" href="#equation-review-review-fluid-mechanics-11" title="Permalink to this equation">¶</a></span>\[{\rm{ \mathbf{First \, form:} }} \quad h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-exp-v-in">
-<span class="eqno">(22)<a class="headerlink" href="#equation-eq-exp-v-in" title="Permalink to this equation">¶</a></span>\[{\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2\]</div>
+<span class="eqno">(22)<a class="headerlink" href="#equation-eq-exp-v-in" title="Permalink to this equation">¶</a></span>\[  {\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-exp-v-out">
-<span class="eqno">(23)<a class="headerlink" href="#equation-eq-exp-v-out" title="Permalink to this equation">¶</a></span>\[\color{purple}{
-{\rm{ \mathbf{Third \, form:} }} \quad h_e = \left(\frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
-}\]</div>
+<span class="eqno">(23)<a class="headerlink" href="#equation-eq-exp-v-out" title="Permalink to this equation">¶</a></span>\[ \color{purple}{
+  {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left(\frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
+  }\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(K_e^{'}, \,\, K_e\)</span> = minor loss coefficients, dimensionless</div>
@@ -608,7 +608,7 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 <p>At point 1, the pressure is atmospheric and the instantaneous velocity is negligible as the water level in the bucket drops slowly. At point 2, the pressure is also atmospheric. We define the difference in elevations between the two points, <span class="math notranslate nohighlight">\(z_1 - z_2\)</span>, to be <span class="math notranslate nohighlight">\(\Delta h\)</span>. With these simplifications <span class="math notranslate nohighlight">\((p_1 = \bar v_1 = p_2 = 0)\)</span> and assumptions <span class="math notranslate nohighlight">\((z_A - z_B = \Delta h)\)</span>, the Bernoulli equation becomes:</p>
 <div class="math notranslate nohighlight" id="equation-review-review-fluid-mechanics-22">
 <span class="eqno">(34)<a class="headerlink" href="#equation-review-review-fluid-mechanics-22" title="Permalink to this equation">¶</a></span>\[\Delta h = \frac{\bar v_2^2}{2g}\]</div>
-<p>Substituting the continuity equation <span class="math notranslate nohighlight">\(Q = \bar v A\)</span> in the form of <span class="math notranslate nohighlight">\(\bar v_2^2 = \frac{Q^2}{A_{vc}^2}\)</span>, the vena contracta coefficient in the form of <span class="math notranslate nohighlight">\(A_{vc} = \Pi_{vc} A_{or}\)</span> yields:</p>
+<p>Substituting the continuity Equation <span class="math notranslate nohighlight">\(Q = \bar v A\)</span> in the form of <span class="math notranslate nohighlight">\(\bar v_2^2 = \frac{Q^2}{A_{vc}^2}\)</span>, the vena contracta coefficient in the form of <span class="math notranslate nohighlight">\(A_{vc} = \Pi_{vc} A_{or}\)</span> yields:</p>
 <div class="math notranslate nohighlight" id="equation-review-review-fluid-mechanics-23">
 <span class="eqno">(35)<a class="headerlink" href="#equation-review-review-fluid-mechanics-23" title="Permalink to this equation">¶</a></span>\[\Delta h = \frac{Q^2}{2g \Pi_{vc}^2 A_{or}^2}\]</div>
 <p>Which, rearranged to solve for <span class="math notranslate nohighlight">\(Q\)</span> gives <strong>The Orifice Equation:</strong></p>
@@ -678,7 +678,8 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 <span class="eqno">(42)<a class="headerlink" href="#equation-review-review-fluid-mechanics-29" title="Permalink to this equation">¶</a></span>\[\frac{p_1}{\rho g} + {z_1} + \frac{\bar v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{\bar v_2^2}{2g}\]</div>
 <p>Energy equation, simplified to remove pumps, turbines, and <span class="math notranslate nohighlight">\(\alpha\)</span> factors:</p>
 <div class="math notranslate nohighlight" id="equation-review-review-fluid-mechanics-30">
-<span class="eqno">(43)<a class="headerlink" href="#equation-review-review-fluid-mechanics-30" title="Permalink to this equation">¶</a></span>\[\frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L\]</div>
+<span class="eqno">(43)<a class="headerlink" href="#equation-review-review-fluid-mechanics-30" title="Permalink to this equation">¶</a></span>\[\]</div>
+<p>frac{p_{1}}{rho g} + z_{1} + frac{bar v_{1}^2}{2g} = frac{p_{2}}{rho g} + z_{2} + frac{bar v_{2}^2}{2g} + h_L</p>
 </div></blockquote>
 <ol class="arabic simple" start="3">
 <li><strong>Major losses:</strong> Defined as the energy loss due to shear between the walls of the pipe/flow conduit and the fluid. The Darcy-Weisbach equation is used to find major losses in both laminar and turbulent flow regimes. The equation for finding the Darcy friction factor, <span class="math notranslate nohighlight">\(\rm{f}\)</span>, changes depending on whether the flow is laminar or turbulent. The Moody diagram is a common graphical method for finding <span class="math notranslate nohighlight">\(\rm{f}\)</span>. During laminar flow, the Hagen-Poiseuille equation, which is just a combination of Darcy-Weisbach, Reynolds number, and <span class="math notranslate nohighlight">\({\rm{f}} = \frac{64}{\rm{Re}}\)</span>, can be used</li>
@@ -709,8 +710,8 @@ one</a>, and they almost all have coefficients greater than 1. This implies that
 <span class="eqno">(50)<a class="headerlink" href="#equation-review-review-fluid-mechanics-37" title="Permalink to this equation">¶</a></span>\[{\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2\]</div>
 <div class="math notranslate nohighlight" id="equation-review-review-fluid-mechanics-38">
 <span class="eqno">(51)<a class="headerlink" href="#equation-review-review-fluid-mechanics-38" title="Permalink to this equation">¶</a></span>\[\color{purple}{
-{\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
-}\]</div>
+ {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
+ }\]</div>
 <ol class="arabic simple" start="5">
 <li><strong>Major and minor losses vary with flow:</strong> While it is generally important to know how increasing or decreasing flow will affect head loss, it is even more important for this class to understand exactly how flow will affect head loss. As the table below shows, head loss will always be proportional to flow squared during turbulent flow. During laminar flow, however, the exponent on <span class="math notranslate nohighlight">\(Q\)</span> will be between 1 and 2 depending on the proportion of major to minor losses.</li>
 </ol>

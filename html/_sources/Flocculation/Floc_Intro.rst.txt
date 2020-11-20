@@ -121,14 +121,14 @@ Number of particles in a floc
 For simplicity of modeling let's assume that flocs repeatedly double in size as suggested by the movie in :numref:`figure_Collisions_in_Sequence`. In that case, the number of primary particles in a floc is given by
 
 .. math::
-   :label: eq_n_primary_of_n_collisions
+  :label: eq_n_primary_of_n_collisions
 
     n_{primary} = 2^{n_{collisions}}
 
 If we assume (and we will show this assumption to be wrong in the next step) that the floc volume is directly proportional to the total volume of the primary particles in the floc, then we can rearrange :eq:`eq_n_primary_of_n_collisions` to solve for the number of sequential collisions required to increase the number of primary particles by a factor of 1000,000,000.
 
 .. math::
-   :label: n_collisions_not_fractal
+  :label: n_collisions_not_fractal
 
     n_{collisions} = \frac{log(n_{primary})}{log(2)}
 

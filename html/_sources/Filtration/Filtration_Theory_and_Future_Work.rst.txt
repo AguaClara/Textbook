@@ -44,7 +44,7 @@ The maximum velocity in a constriction is set by the drag on a primary particle 
 The maximum constriction velocity is thus likely independent of the filtration velocity and pore size. The maximum velocity at the inlet to the constrictions is likely proportional to the fractional surface coverage of the primary particles by coagulant nanoparticles. Thus as the coagulant dose increases the head loss per pore and the head loss at the time of particle breakthrough increases.
 
 .. math::
-    :label: eq_headloss_constriction
+  :label: eq_headloss_constriction
 
     h_{l_{constriction}} = \frac{\bar v_{constriction}^2}{2g}
 
@@ -60,7 +60,7 @@ The average distance between sand grains in a filter bed is obtained by taking t
 
 .. math::
 
-    \Lambda_{sand} = \Lambda_{pore} = \left(\frac{\pi}{6(1-\phi)} \right)^\frac{1}{3}D_{sand}
+   \Lambda_{sand} = \Lambda_{pore} = \left(\frac{\pi}{6(1-\phi)} \right)^\frac{1}{3}D_{sand}
 
 The flow rate per pore is the approach velocity multiplied by :math:`\Lambda^2`.
 
@@ -77,15 +77,15 @@ The velocity through a constriction in a pore is
 The constriction diameter is thus given by
 
 .. math::
-    :label: eq_D_constriction
+  :label: eq_D_constriction
 
     D_{constriction} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction}}
 
 
-The Reynolds number of the jet issuing from the constriction is obtained by using equation :eq:`eq_D_constriction` to eliminate the dependence on diameter.
+The Reynolds number of the jet issuing from the constriction is obtained by using Equation :eq:`eq_D_constriction` to eliminate the dependence on diameter.
 
 .. math::
-    :label: eq_Re_constriction
+  :label: eq_Re_constriction
 
     Re_{jet} = \frac{\Lambda_{pore} }{\nu }\sqrt\frac{4 v_a v_{constriction}}{\pi }
 
@@ -118,7 +118,7 @@ The velocity in the direction of the jet is given by (equation 4.39 in `Pai, 195
 
 .. math::
 
-    \zeta = \frac{1}{4\nu} \left(\frac{3M_0}{\pi\rho}\right)^{\frac{1}{2}} \frac{r}{x}
+   \zeta = \frac{1}{4\nu} \left(\frac{3M_0}{\pi\rho}\right)^{\frac{1}{2}} \frac{r}{x}
 
 and thus :math:`\zeta` is zero at the centerline.  We will use the centerline velocity at distance :math:`\Lambda_{pore}` from the constriction to estimate the head loss caused by one constriction.
 
@@ -159,13 +159,13 @@ Almost all of the kinetic energy of the jet issuing from the constriction is dis
 
 .. math::
 
-    \rlap{--} V_{pore} = \phi\Lambda_{pore}^3
+   \rlap{-} V_{pore} = \phi\Lambda_{pore}^3
 
 The hydraulic residence time in a pore is obtained from the volume and flow rate through a pore.
 
 .. math::
 
-    \theta_{pore} = \frac{\rlap{--} V_{pore}}{Q_{pore}} = \frac{\phi\Lambda_{pore}^3}{v_a \Lambda_{pore}^2} = \frac{\phi\Lambda_{pore}}{v_a}
+   \theta_{pore} = \frac{\rlap{-} V_{pore}}{Q_{pore}} = \frac{\phi\Lambda_{pore}^3}{v_a \Lambda_{pore}^2} = \frac{\phi\Lambda_{pore}}{v_a}
 
 The Camp Stein velocity gradient in a pore is obtained by assuming that all of the input kinetic energy is dissipated through viscosity during the time that the water spends in the pore.
 
@@ -196,49 +196,19 @@ Note that the water fall height diminishes during a filter run as the water leve
 Maximum velocity in constrictions
 =================================
 
-The maximum velocity in a pore is hypothesized to be set by the bond strength of the coagulant nanoparticles and the fluid drag on the primary particle that is attaching. It is assumed that the last particles that are able to deposit in a pore are primary particles because they can fill in the last available volume before the pore velocity is too high for any other particles to attach. It is possible that the attachment strength of the primary particles is a function of the fraction of their surface area that is covered by coagulant nanoparticles, :math:`\Gamma`. The total force acting downward on a primary particle that attaches to a constriction is the sum of the drag and the particle buoyant weight. These forces are counteracted by the force of the coagulant bonds.
-
-.. math::
-    :label: Fbond_drag_gravity
-
-    F_{bond} = F_{drag} + F_{weight} - F_{buoyancy}
-
-The flocs and particles that are captured in a filter are small in diameter and the strength of the coagulant bonds is large compared with forces of their buoyant weight. Equation :eq:`Fbond_drag_gravity` can be simplified to
-
-.. math::
-    :label: Fbond_drag
-
-    F_{bond} = F_{drag}
-
-The drag force is assumed to be set by the average pore water velocity because the deposition occurs near the entrance to the constriction before the boundary layer on the wall can develop. The velocity profile through the constriction could be uniform or the boundary layer could be developing and then the velocity at the wall could be significantly reduced. The particles are expected to attach at the sharp edge at the entrance to the constriction and the boundary layer is not expected to have grown significantly. Thus the velocity through the constriction is assumed to be uniform. The drag force on a clay particle that has attached to the wall of the constriction is
-
-.. math::
-
-    F_{drag} = C_D \frac{\pi}{4} D_{clay}^2 \rho_{H_2O} \frac{v_{constriction}^2}{2}
-
-At Reynolds numbers (based on primary particle diameter) less than about 10 the drag coefficient is given by
-
-.. math::
-
-    C_D = \frac{24}{Re} = \frac{24\nu}{v_{constriction}D_{clay}}
-
-Thus the drag on a clay particle is equal to the bond force and is given by
-
-.. math::
-    :label: Fbond_of_v_constriction
-    F_{bond} = 3\pi \nu v_{constriction} D_{clay} \rho_{H_2O}
+The maximum velocity in a pore is set by the strength of the coagulant bonds and the size of the core particles that are being captured by the filter. The drag force on the core particle must be balanced by the chemical bond strength and that relationship is given by Equation :eq:`Fbond_of_v_constriction`.
 
 The minimum diameter of a particle deposition constriction is set by the maximum constriction velocity, :math:`v_{constriction_{max}}`.
 
 .. math::
-    :label: eq_D_constriction_min
+  :label: eq_D_constriction_min
 
     D_{constriction_{min}} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction_{max}}}
 
-The head loss through a flow constriction can be estimated from the head loss through a flow expansion. We will use the form of the expansion equation :eq:`eq_exp_v_in` that is based on the contraction velocity. The jet is assumed to expand sufficiently so that the residual kinetic energy is insignificant.
+The head loss through a flow constriction can be estimated from the head loss through a flow expansion. We will use the form of the expansion Equation :eq:`eq_exp_v_in` that is based on the contraction velocity. The jet is assumed to expand sufficiently so that the residual kinetic energy is insignificant.
 
 .. math::
-    :label: eq_exp_v_constriction
+  :label: eq_exp_v_constriction
 
      h_{e_{constriction}} =  \frac{\bar v_{constriction_{max}}^2}{2g}
 
@@ -251,16 +221,16 @@ The number of deposited constrictions per unit depth in a filter is
 The total head loss in a filter if taken to the point where the active filtration zone exited the filter and all pores were constricted would be
 
 .. math::
-   :label: eq_he_filter
+  :label: eq_he_filter
 
     h_{e_{filter_{max}}} = \frac{H_{filter}}{\Lambda_{pore}}  \frac{\bar v_{constriction_{max}}^2}{2g}
 
-The effect of increasing the pore size on terminal head loss is to decrease the *final* head loss when the active zone reaches the bottom of the filter because of the effect of :math:`\Lambda_{pore}`in the first term of equation :eq:`eq_he_filter`. Note that this does not yet address the rate of head loss accumulation which is expected to be a function of sand grain diameter.
+The effect of increasing the pore size on terminal head loss is to decrease the *final* head loss when the active zone reaches the bottom of the filter because of the effect of :math:`\Lambda_{pore}`in the first term of Equation :eq:`eq_he_filter`. Note that this does not yet address the rate of head loss accumulation which is expected to be a function of sand grain diameter.
 
-We can solve equation :eq:`eq_he_filter` for maximum constriction velocity based on experimental measurements of the head loss at filter failure that is due to constrictions. Note that this head loss does NOT include the clean bed head loss.
+We can solve Equation :eq:`eq_he_filter` for maximum constriction velocity based on experimental measurements of the head loss at filter failure that is due to constrictions. Note that this head loss does NOT include the clean bed head loss.
 
 .. math::
-    :label: eq_he_filter2
+  :label: eq_he_filter2
 
     v_{constriction_{max}} = \sqrt{ \frac{2g\Lambda_{pore}}{H_{filter}}h_{e_{filter_{max}}}}
 
@@ -419,7 +389,7 @@ Now substitute for the approach velocity
 
 .. math::
 
-    \frac{dh_f}{dr}= \frac{1}{2g D_{sand}} \left[ 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\left(v_{a_{r_0}} \frac{r_0}{r}\right)  + 3.5 \frac{ (1-\phi) }{\phi^3} \left(v_{a_{r_0}} \frac{r_0}{r}\right)^2 \right]
+   \frac{dh_f}{dr}= \frac{1}{2g D_{sand}} \left[ 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\left(v_{a_{r_0}} \frac{r_0}{r}\right)  + 3.5 \frac{ (1-\phi) }{\phi^3} \left(v_{a_{r_0}} \frac{r_0}{r}\right)^2 \right]
 
 
 .. math::
@@ -492,7 +462,7 @@ The volume of the deposit is thus
 
 .. math::
 
-    \rlap{--} V_{deposit} = \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)
+   \rlap{-} V_{deposit} = \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)
 
 where :math:`\Pi_{pore}^{deposit}` a number much less than 1 that represents the fixed ratio between the thickness of the deposit and the pore separation distance.
 
@@ -520,7 +490,7 @@ Now we can create a relationship for the concentration of clay in a floc dividin
 
 .. math::
 
-    C_{clay_{floc}} = \frac{n_{clay}\rlap{--} V_{clay}\rho_{clay}}{\rlap{--} V_{floc}} = \frac{n_{clay}D_{clay}^3\rho_{clay}}{D_{floc}^3}= \frac{D_{clay}^3\rho_{clay}}{D_{floc}^3}\left(\frac{D_{floc}}{D_{clay}}\right)^{\Pi_{fractal}}
+    C_{clay_{floc}} = \frac{n_{clay}\rlap{-} V_{clay}\rho_{clay}}{\rlap{-} V_{floc}} = \frac{n_{clay}D_{clay}^3\rho_{clay}}{D_{floc}^3}= \frac{D_{clay}^3\rho_{clay}}{D_{floc}^3}\left(\frac{D_{floc}}{D_{clay}}\right)^{\Pi_{fractal}}
 
 With one more simplification we obtain the desired equation for the clay concentration in a floc of given diameter.
 

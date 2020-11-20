@@ -25,17 +25,17 @@ eliminated.
 
 .. math::
 
-    \frac{p_{in}}{\rho g} + {z_{in}} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{\bar v_{out}^2}{2g} + h_L
+   \frac{p_{in}}{\rho g} + {z_{in}} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{\bar v_{out}^2}{2g} + h_L
 
 Since the elevations at the center of the :math:`in` and :math:`out` control surfaces are the same, we can eliminate :math:`z_{in}` and :math:`z_{out}`. As we are considering such a small length of pipe, we will neglect the major loss component of head loss. Thus, :math:`h_L = h_e + \cancel{h_f}`. The following three equations are all the same, simply rearranged to solve for :math:`h_e`.
 
 .. math::
 
-    \frac{p_{in}}{\rho g} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + \frac{\bar v_{out}^2}{2g} + h_e
+   \frac{p_{in}}{\rho g} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + \frac{\bar v_{out}^2}{2g} + h_e
 
 .. math::
 
-    \frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2}{2g} + h_e
+   \frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2}{2g} + h_e
 
 .. math::
   :label: minor_loss_energy_eq
@@ -52,7 +52,7 @@ This last equation has :math:`h_e` as a function of four variables :math:`(p_{in
 | :math:`M_{x}` = momentum flowing through the control volume in the x-direction
 | :math:`F_{p_x}` = force due to pressure acting on the boundaries of the control volume in the x-direction
 
-Recall that momentum is mass times velocity for solids, :math:`m v`, with units of :math:`\frac{[M][L]}{[T]}`. Since we consider water flowing through a pipe, there is not one singular mass or one singular velocity. Instead, there is a mass flow rate, or a mass per time indicated by :math:`\dot m = \rho Q`, which has units of :math:`\frac{[M]}{[T]}`. Therefore, the momentum for a fluid is :math:`\rho Q \bar v`. Applying the continuity equation :math:`Q = \bar v A`, we get to the following equation for the momentum of a fluid flowing through a pipe which we will use in this derivation, :math:`M = \rho \bar v^2 A`. The pressure force is simply the pressure at the centroid of the flow multiplied by the area the pressure is acting upon, :math:`p A`.
+Recall that momentum is mass times velocity for solids, :math:`m v`, with units of :math:`\frac{[M][L]}{[T]}`. Since we consider water flowing through a pipe, there is not one singular mass or one singular velocity. Instead, there is a mass flow rate, or a mass per time indicated by :math:`\dot m = \rho Q`, which has units of :math:`\frac{[M]}{[T]}`. Therefore, the momentum for a fluid is :math:`\rho Q \bar v`. Applying the continuity Equation :math:`Q = \bar v A`, we get to the following equation for the momentum of a fluid flowing through a pipe which we will use in this derivation, :math:`M = \rho \bar v^2 A`. The pressure force is simply the pressure at the centroid of the flow multiplied by the area the pressure is acting upon, :math:`p A`.
 
 To ensure correct sign convention, we will make each side of the equation negative for reasons discussed shortly. Since :math:`\bar v_{in} > \bar v_{out}`, the left hand side will be :math:`M_{out} - M_{in}` in order to be negative. The reduction in velocity from :math:`in` to :math:`out` causes an increase in pressure, therefore :math:`p_{in} - p_{out}` is negative. With these substitutions, the conservation of momentum equation becomes as follows:
 
@@ -62,15 +62,15 @@ To ensure correct sign convention, we will make each side of the equation negati
 
 .. math::
 
-    \rho \bar v_{out}^2 A_{out} - \rho \bar v_{in}^2 A_{in} = p_{in} A_{out} - p_{out} A_{out}
+   \rho \bar v_{out}^2 A_{out} - \rho \bar v_{in}^2 A_{in} = p_{in} A_{out} - p_{out} A_{out}
 
 Note that the area term attached to :math:`p_{in}` is actually :math:`A_{out}` instead of :math:`A_{in}`, as one might think. This is because :math:`A_{out} = A_{in}`. We chose our control volume to start a few millimeters into the larger pipe, which means that the cross-sectional area does not change over the course of the control volume.
 
-Dividing both sides of the equation by :math:`A_{out} \rho g`, we obtain the following equation, which contains the very same pressure term as our adjusted energy equation above, equation :eq:`minor_loss_energy_eq`. This is why we chose a negative sign convention.
+Dividing both sides of the equation by :math:`A_{out} \rho g`, we obtain the following equation, which contains the very same pressure term as our adjusted energy equation above, Equation :eq:`minor_loss_energy_eq`. This is why we chose a negative sign convention.
 
 .. math::
 
-    \frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2 \frac{A_{in}}{A_{out}}}{g}
+   \frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2 \frac{A_{in}}{A_{out}}}{g}
 
 Now, we combine the momentum, continuity, and adjusted energy equations:
 
@@ -110,7 +110,7 @@ Factoring the numerator yields to the first ‘final’ form of the minor loss e
 
     {\rm{ \mathbf{First \, form:} }} \quad h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}
 
-From here, the two other forms of the minor loss equation can be derived by solving for either :math:`\bar v_{in}` or :math:`\bar v_{out}` using the ubiquitous continuity equation :math:`\bar v_{in} A_{in} = \bar v_{out} A_{out}`:
+From here, the two other forms of the minor loss equation can be derived by solving for either :math:`\bar v_{in}` or :math:`\bar v_{out}` using the ubiquitous continuity Equation :math:`\bar v_{in} A_{in} = \bar v_{out} A_{out}`:
 
 .. math::
 
@@ -119,7 +119,7 @@ From here, the two other forms of the minor loss equation can be derived by solv
 .. math::
  :label: minor_loss_equation
 
-    \color{purple}{
+   \color{purple}{
     {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
     }
 

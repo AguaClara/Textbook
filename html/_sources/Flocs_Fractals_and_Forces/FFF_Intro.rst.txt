@@ -23,26 +23,26 @@ Fractal Flocs
 
 Flocs are fractals. Fractals describe structures in which similar patterns occur over a range of scales. During flocculation flocs grow larger and larger by combining similar sized flocs. Flocs do not combine like raindrops! As raindrops combine they conserve both volume and mass.  With each subsequent collision the floc incorporates more water and thus its density gradually approaches the density of water. The inclusion of more and more water as the floc grows means that the floc mass is NOT conserved as it grows. Likewise, the volume of the floc is not conserved as it grows.
 
-When :math:`n_{raindrops}` of equal volume :math:`\rlap{--} V_0` combine the resulting volume is :math:`\rlap{--} V = \rlap{--} V_0 n_{raindrops}`. When flocs combine the equation is slightly more complicated.
+When :math:`n_{raindrops}` of equal volume :math:`\rlap{-} V_0` combine the resulting volume is :math:`\rlap{-} V = \rlap{-} V_0 n_{raindrops}`. When flocs combine the equation is slightly more complicated.
 
 .. math::
   :label: V_floc_of_n_cp
 
-  \rlap{--} V_{floc} = \rlap{--} V_{cp} n_{cp}^\frac{3}{\Pi_{fractal}}
+  \rlap{-} V_{floc} = \rlap{-} V_{cp} n_{cp}^\frac{3}{\Pi_{fractal}}
 
 | Where
-| :math:`\rlap{--} V_{floc}` is the floc volume
+| :math:`\rlap{-} V_{floc}` is the floc volume
 | :math:`n_{cp}` is the number of core particles in the floc
-| :math:`\rlap{--} V_{cp}` is the core particle volume
+| :math:`\rlap{-} V_{cp}` is the core particle volume
 | :math:`\Pi_{fractal}` is the floc volume-based fractal dimension
 
 Raindrops conserve volume when they collide and have a :math:`\Pi_{fractal}` of 3. If a particle would conserve its projected area when it combines, then it would have a :math:`\Pi_{fractal}` of 2. If a particle would conserve its diameter when it combines, then it would have a :math:`\Pi_{fractal}` of 1. A fractal dimension of 1 could occur if the particles all attached into a single long chain.
 
-The fractal dimension of the resulting floc is a function of the difference in size of the colliding particles. We will show in the chapter on flocculation that the aggregation of flocs in a shear environment is limited to flocs that are of similar size. The sequential collisions of similar sized particles is the basis of the hierarchical model decribed by [Meakin (1988)](https://www-sciencedirect-com.proxy.library.cornell.edu/science/article/pii/0001868687800167). The fractal dimension of flocs that form from collisions of similarly sized flocs has a slightly lower value than would be obtained from collisions between differently sized flocs.
+The fractal dimension of the resulting floc is a function of the difference in size of the colliding particles. We will show in the chapter on flocculation that the aggregation of flocs in a shear environment is limited to flocs that are of similar size. The sequential collisions of similar sized particles is the basis of the hierarchical model described by `Meakin (1988) <https://www-sciencedirect-com.proxy.library.cornell.edu/science/article/pii/0001868687800167>`_. The fractal dimension of flocs that form from collisions of similarly sized flocs has a slightly lower value than would be obtained from collisions between differently sized flocs.
 
-The fractal dimension of flocs formed through hierarchical (same size) collisions has been bracketed between about 1.89 and 2.13. The fractal dimension of 1.89 is the result of aggregation where the flocs only attach at one point and do not rotate and make additional attachments after the initial collision. [Meakin (1988)](https://www-sciencedirect-com.proxy.library.cornell.edu/science/article/pii/0001868687800167) simulated floc cluster aggregation that considered potential relative rotation of the two flocs and the formation of additional attachment points. After the initial collision with one attachment point the flocs rotate until they collide again and make a second attachment. The two attachment points will still allow rotation about an axis defined by the two attachment points. The flocs can rotate about that axis until a 3rd point of attachment is formed. With 3 points of attachment the relative motion of the 2 flocs is completely constrained.
+The fractal dimension of flocs formed through hierarchical (same size) collisions has been bracketed between about 1.89 and 2.13. The fractal dimension of 1.89 is the result of aggregation where the flocs only attach at one point and do not rotate and make additional attachments after the initial collision. `Meakin (1988) <https://www-sciencedirect-com.proxy.library.cornell.edu/science/article/pii/0001868687800167>`_ simulated floc cluster aggregation that considered potential relative rotation of the two flocs and the formation of additional attachment points. After the initial collision with one attachment point the flocs rotate until they collide again and make a second attachment. The two attachment points will still allow rotation about an axis defined by the two attachment points. The flocs can rotate about that axis until a 3rd point of attachment is formed. With 3 points of attachment the relative motion of the 2 flocs is completely constrained.
 
-The fractal dimension increases with each additional attachment point. [Meakin (1988)](https://www-sciencedirect-com.proxy.library.cornell.edu/science/article/pii/0001868687800167) found  fractal dimensions :math:`\Pi_{fractal}` of 1.89, 2.08, and 2.13 were obtained for initial contact, rotation until contact in a direction that decreases the distance between the centers of mass of the two flocs, and then rotation about the axis defined by the two contact points in a direction that would again move their centers of mass to be closer.
+The fractal dimension increases with each additional attachment point. `Meakin (1988) <https://www-sciencedirect-com.proxy.library.cornell.edu/science/article/pii/0001868687800167>`_ found  fractal dimensions :math:`\Pi_{fractal}` of 1.89, 2.08, and 2.13 were obtained for initial contact, rotation until contact in a direction that decreases the distance between the centers of mass of the two flocs, and then rotation about the axis defined by the two contact points in a direction that would again move their centers of mass to be closer.
 
 .. math::
   :label: D_floc_of_n_cp
@@ -55,7 +55,7 @@ The fractal dimension increases with each additional attachment point. [Meakin (
 | :math:`D_{cp}` is the core particle diameter
 | :math:`\Pi_{fractal}` is the floc volume-based fractal dimension
 
-The number of core particles in a floc is obtained by solving equation :eq:`D_floc_of_n_cp` for :math:`n_{cp}`.
+The number of core particles in a floc is obtained by solving Equation :eq:`D_floc_of_n_cp` for :math:`n_{cp}`.
 
 .. math::
   :label: n_cp_of_D_floc
@@ -77,31 +77,31 @@ Mass conservation can be written in terms of density as
 .. math::
   :label:
 
-  \rho_{mix} \rlap{--} V_{mix} =
-  \rho_1 \rlap{--} V_1 + \rho_2 \rlap{--} V_2
+  \rho_{mix} \rlap{-} V_{mix} =
+  \rho_1 \rlap{-} V_1 + \rho_2 \rlap{-} V_2
 
 Written in terms of water and core particles the floc mass conservation and taking into account that the water volume is equal to the floc volume minus the core particle volume we obtain
 
 .. math::
   :label: floc_mass_conservation
 
-  \rho_{floc} \rlap{--} V_{floc} =
-  \rho_{H_2O} \rlap{--} V_{floc} - \rho_{H_2O}\rlap{--} V_{n_{cp}} + \rho_{cp} \rlap{--} V_{n_{cp}}
+  \rho_{floc} \rlap{-} V_{floc} =
+  \rho_{H_2O} \rlap{-} V_{floc} - \rho_{H_2O}\rlap{-} V_{n_{cp}} + \rho_{cp} \rlap{-} V_{n_{cp}}
 
-where :math:`\rlap{--} V_{n_{cp}}` is the total volume of the core particles in the floc. The buoyant density is the parameter of interest when calculating terminal velocity and thus equation :eq:`floc_mass_conservation` can be rewritten as
+where :math:`\rlap{-} V_{n_{cp}}` is the total volume of the core particles in the floc. The buoyant density is the parameter of interest when calculating terminal velocity and thus Equation :eq:`floc_mass_conservation` can be rewritten as
 
 .. math::
   :label: floc_buoyant_density_1
 
   \left( \rho_{floc} - \rho_{H_2O} \right)  =
-  \left( \rho_{cp}  - \rho_{H_2O} \right) \frac{\rlap{--} V_{n_{cp}}}{ \rlap{--} V_{floc}}
+  \left( \rho_{cp}  - \rho_{H_2O} \right) \frac{\rlap{-} V_{n_{cp}}}{ \rlap{-} V_{floc}}
 
 The floc volume can be rewritten as a function of the floc diameter.
 
 .. math::
   :label: volume_floc_of_D
 
-  \rlap{--}V_{floc} =
+  \rlap{-}V_{floc} =
   \frac{\pi}{6} D_{floc}^3
 
 The volume of core particles in the floc is a function of the number of core particles.
@@ -109,19 +109,19 @@ The volume of core particles in the floc is a function of the number of core par
 .. math::
   :label: volume_core_particles_of_D_1
 
-  \rlap{--}V_{n_{cp}} =
+  \rlap{-}V_{n_{cp}} =
   n_{cp} \frac{\pi}{6} D_{cp}^3
 
-The number of core particles can be eliminated from equation :eq:`volume_core_particles_of_D_1` by substituting equation :eq:`n_cp_of_D_floc`.
+The number of core particles can be eliminated from Equation :eq:`volume_core_particles_of_D_1` by substituting Equation :eq:`n_cp_of_D_floc`.
 
 .. math::
   :label: volume_core_particles_of_D
 
-  \rlap{--}V_{n_{cp}} =
+  \rlap{-}V_{n_{cp}} =
   \frac{\pi}{6} D_{cp}^3 \left(\frac{D_{floc}}{D_{cp}}\right)^{\Pi_{fractal}}
 
 
-Substituting the floc volume and the core particle volume into equation :eq:`floc_buoyant_density_1`
+Substituting the floc volume and the core particle volume into Equation :eq:`floc_buoyant_density_1`
 
 .. math::
   :label: floc_buoyant_density_2
@@ -165,18 +165,29 @@ At terminal velocity, the floc has been falling for a long period of time so the
 
 :math:`F_{drag} + F_{buoyant} - W_{floc} = 0`
 
-Each of the force components can be determined by:
+The drag force is determined by:
 
 .. math::
+  :label: drag_force_on_sphere
 
   F_{drag} = C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2}
 
-  F_{buoyant} = \rlap{--}V_{floc} \rho_{H_2O} g
+The buoyant force is given by:
 
-  W_{floc} = \rlap{--}V_{floc} \rho_{floc} g
+.. math::
+  :label: buoyant_force_on_sphere
+
+  F_{buoyant} = \rlap{-}V_{floc} \rho_{H_2O} g
+
+The weight of the sphere is given by:
+
+.. math::
+  :label: gravity_force_on_sphere
+
+  W_{floc} = \rlap{-}V_{floc} \rho_{floc} g
 
 | Where:
-| :math:`\rlap{--}V_{floc} =` floc particle volume
+| :math:`\rlap{-}V_{floc} =` floc particle volume
 | :math:`A_{floc} =` particle projected cross-sectional area
 | :math:`\rho_{floc} =` particle density
 | :math:`\rho_{H_2O} =` water density
@@ -189,7 +200,7 @@ Plugging into the original force balance,
 
 .. math::
 
-  \left [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2} \right]+\left [\rlap{--}V_{floc} \rho_{H_2O} g\right ]-\left [\rlap{--}V_{floc} \rho_{floc} g \right] =0
+  \left [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2} \right]+\left [\rlap{-}V_{floc} \rho_{H_2O} g\right ]-\left [\rlap{-}V_{floc} \rho_{floc} g \right] =0
 
 Solving for terminal velocity, :math:`v_t`, we obtain
 
@@ -257,12 +268,12 @@ Plug the drag coefficient for laminar flow, :math:`C_D = \frac{24}{Re}`, and Rey
 
 Again, we can draw a parallel with the Moody Diagram. The general form of the terminal velocity equation is like the Darcy-Weisbach equation; it is always true. The terminal velocity in the laminar flow region is like the Hagen-Poiselle equation; it is only good for laminar flow. We will use the laminar specific condition because we are working with flocs with low Reynolds numbers.
 
-Our equations for terminal velocity depend on the density of a floc. As discussed in previous sections, we know that there is a specific relationship between the density of a floc and the diameter of a floc because flocs are fractals and as flocs get bigger, their density gets lower. We can account for the size and density relationship by substitution equation :eq:`floc_buoyant_density` into the terminal velocity equation.
+Our equations for terminal velocity depend on the density of a floc. As discussed in previous sections, we know that there is a specific relationship between the density of a floc and the diameter of a floc because flocs are fractals and as flocs get bigger, their density gets lower. We can account for the size and density relationship by substitution Equation :eq:`floc_buoyant_density` into the terminal velocity equation.
 
 .. math::
   :label: vt_of_floc
 
-  v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} -       \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}
+  v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} -    \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}
 
 | Where:
 | :math:`D_{cp} =` diameter of core particle
@@ -316,39 +327,39 @@ Shear Force Acting on Flocs
 The hydrodynamic force caused by a velocity gradient for two identically sized particles is given by `Goren, 1971 <https://doi.org/10.1016/0021-9797(71)90244-X>`_
 
 .. math::
-   :label: shear_force_on_doublet
+  :label: shear_force_on_doublet
 
-    F_{shear_{max}} =
-      \frac{3 \pi}{4} \mu D_{floc}^2 G
+  F_{shear_{max}} =
+  \frac{3 \pi}{4} \mu D_{floc}^2 G
 
 where :math:`D_{floc}` is the diameter of each of the two flocs that have joined and :math:`G` is the uniform velocity gradient.
 
-Flocs will break (or will not grow larger) when the fluid forces acting on the floc exceed the strength of the bonds that hold the floc together. The fluid shear stress is given by equation :eq:`tau_of_mu_G`. The velocity gradient is caused by turbulent kinetic energy dissipation as given by equation :eq:`G_Camp_Stein`. Equation :eq:`tau_of_mu_G` and equation :eq:`G_Camp_Stein` can be combined to obtain an estimate of the fluid shear stress, :math:`\tau`.
+Flocs will break (or will not grow larger) when the fluid forces acting on the floc exceed the strength of the bonds that hold the floc together. The fluid shear stress is given by Equation :eq:`tau_of_mu_G`. The velocity gradient is caused by turbulent kinetic energy dissipation as given by Equation :eq:`G_Camp_Stein`. Equation :eq:`tau_of_mu_G` and Equation :eq:`G_Camp_Stein` can be combined to obtain an estimate of the fluid shear stress, :math:`\tau`.
 
 .. math::
-   :label: fluid_shear_stress
+  :label: fluid_shear_stress
 
 	 \tau =
-     \rho \sqrt{\varepsilon \nu} =
-     \mu G
+   \rho \sqrt{\varepsilon \nu} =
+   \mu G
 
-The shear stress is a function of the rate of turbulent energy dissipation and the viscosity of the fluid. The shear stress increases as the water temperature decreases. The shear force acting to pull a doublet floc apart is given in equation :eq:`shear_force_on_doublet` and can be combined with equation :eq:`tau_of_mu_G` to obtain
+The shear stress is a function of the rate of turbulent energy dissipation and the viscosity of the fluid. The shear stress increases as the water temperature decreases. The shear force acting to pull a doublet floc apart is given in Equation :eq:`shear_force_on_doublet` and can be combined with Equation :eq:`tau_of_mu_G` to obtain
 
 .. math::
-   :label: fluid_shear_stress_on_doublet
+  :label: fluid_shear_stress_on_doublet
 
 	 F_{shear_{max}} =
      3 \tau \frac{ \pi D_{floc}^2}{4} =
      3 \tau A_{floc}
 
-The floc will break apart when the :math:`F_{shear_{max}}` exceeds the coagulant bond strength of the coagulant nanoparticles and the particles they attach to. Thus we can create a dimensionless parameter describing the ratio of the fluid shear stress to the bond strength by dividing equation :eq:`fluid_shear_stress_on_doublet` by :math:`F_{covalent}`.
+The floc will break apart when the :math:`F_{shear_{max}}` exceeds the coagulant bond strength of the coagulant nanoparticles and the particles they attach to. Thus we can create a dimensionless parameter describing the ratio of the fluid shear stress to the bond strength by dividing Equation :eq:`fluid_shear_stress_on_doublet` by :math:`F_{covalent}`.
 
 .. math::
-   :label: fluid_shear_stress_to_bond_ratio
+  :label: fluid_shear_stress_to_bond_ratio
 
 	 \Pi_{bond}^{shear} =
-     \frac{F_{shear_{max}}}{F_{bond}} =
-     \frac{3 \tau A_{floc}}{F_{bond}}
+   \frac{F_{shear_{max}}}{F_{bond}} =
+   \frac{3 \tau A_{floc}}{F_{bond}}
 
 The expectation is that the flocs will break for values of :math:`\Pi_{bond}^{shear}>1`. The value of :math:`\Pi_{bond}^{shear}` will ideally be measured experimentally since there are a number of unknowns buried in the term including a characteristic length of the lever arm that the coagulant bond is acting on.  This analysis shows that the maximum size of a floc is set by the fluid shear stress, :math:`\tau`. Previously it wasn't clear if floc size was limited by energy dissipation rate or by the velocity gradient. Neither of those parameters captures the physics because ultimately it is a force that breaks the covalent bond and thus it must be a fluid force (not energy dissipation rate or velocity gradient) that can be used as a design parameter. By recognizing that the shear stress :math:`\tau` must be limited we can now develop design equations that account for the effects of viscosity and temperature on the design.
 
@@ -364,27 +375,27 @@ When flocs are broken by the shearing action of the fluid it is possible that a 
    System suspended solids concentrations during steady state as a function of jet energy dissipation rate for 1.2 mm/s.  Results shown are averaged over 2 residence times (1200 seconds) of the sedimentation tank.
 
 
-Using equation :eq:`fluid_shear_stress` the maximum energy dissipation rate below the performance deterioration obtained by Garland (300 mW/kg) can be converted into a fluid shear stress of 0.55 Pa. The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using equation :eq:`fluid_shear_stress_on_doublet`.
+Using Equation :eq:`fluid_shear_stress` the maximum energy dissipation rate below the performance deterioration obtained by Garland (300 mW/kg) can be converted into a fluid shear stress of 0.55 Pa. The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using Equation :eq:`fluid_shear_stress_on_doublet`.
 
 .. math::
-   :label: d_floc_shear_stress
+  :label: d_floc_shear_stress
 
    D_{floc_{max}} =
    \sqrt{\frac{4F_{bond}}{3 \pi \tau}}
 
-The floc size that corresponds to 300 mW/kg is 35 micrometers. For clay dominated flocs equation :eq:`vt_of_floc` gives a 0.13 mm/s sedimentation velocity which is just slightly higher than the 0.1 mm/s capture velocity used by Garland.
+The floc size that corresponds to 300 mW/kg is 35 micrometers. For clay dominated flocs Equation :eq:`vt_of_floc` gives a 0.13 mm/s sedimentation velocity which is just slightly higher than the 0.1 mm/s capture velocity used by Garland.
 
 Garland's experiment with the result of floc breakup at the sedimentation tank inlet is consistent with several hypotheses.
 
 #. The bonds holding flocs together are likely strong (order 1.6 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012 <https://doi.org/10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
 #. Flocs are broken where there is the largest force per bond. This would logically occur at the connection between the two subunits that form the floc. Thus when flocs break they would not be expected to produce tiny fragments.
-#. The fluid shear stress determines the force acting to tear a floc apart. Thus given a constant energy dissipation rate the force acting to break up flocs will increase as the temperature drops (see equation :eq:`fluid_shear_stress`)
+#. The fluid shear stress determines the force acting to tear a floc apart. Thus given a constant energy dissipation rate the force acting to break up flocs will increase as the temperature drops (see Equation :eq:`fluid_shear_stress`)
 #. Settled water turbidity increases when the floc terminal velocity is less than the capture velocity of the plate settlers.
 
-Equation :eq:`d_floc_shear_stress` can be written as a function of the velocity gradient by substituting equation :eq:`fluid_shear_stress` for the fluid shear.
+Equation :eq:`d_floc_shear_stress` can be written as a function of the velocity gradient by substituting Equation :eq:`fluid_shear_stress` for the fluid shear.
 
 .. math::
-   :label: d_floc_G
+  :label: d_floc_G
 
    D_{floc_{max}} =
    \sqrt{\frac{4F_{bond}}{3 \pi \mu G_{max}}}
@@ -420,6 +431,42 @@ The maximum floc diameter is influenced by temperature because as the viscosity 
 Drag Force on a Floc in a Filter Constriction
 =============================================
 
+The drag force on a floc or core particle that has attached to a constriction wall in a sand filter can be modeled as the drag on a sphere in uniform flow. The uniform flow approximation is reasonable because the constriction is expected to have a sharp entrance as particles preferentially deposit there. The drag force, Equation :eq:`drag_force_on_sphere`, is counteracted by the chemical bond force.
+
+The maximum velocity in a pore is hypothesized to be set by the bond strength of the coagulant nanoparticles and the fluid drag on the primary particle that is attaching. It is assumed that the last particles that are able to deposit in a pore are primary particles because they can fill in the last available volume before the pore velocity is too high for any other particles to attach. It is possible that the attachment strength of the primary particles is a function of the fraction of their surface area that is covered by coagulant nanoparticles, :math:`\Gamma`. The total force acting downward on a primary particle that attaches to a constriction is the sum of the drag and the particle buoyant weight. These forces are counteracted by the force of the coagulant bonds.
+
+.. math::
+  :label: Fbond_drag_gravity
+
+    F_{bond} = F_{drag} + F_{weight} - F_{buoyancy}
+
+The flocs and particles that are captured in a filter are small in diameter and the strength of the coagulant bonds is large compared with forces of their buoyant weight. Equation :eq:`Fbond_drag_gravity` can be simplified to
+
+.. math::
+  :label: Fbond_drag
+
+    F_{bond} = F_{drag}
+
+The drag force is assumed to be set by the average pore water velocity because the deposition occurs near the entrance to the constriction before the boundary layer on the wall can develop. The velocity profile through the constriction could be uniform or the boundary layer could be developing and then the velocity at the wall could be significantly reduced. The particles are expected to attach at the sharp edge at the entrance to the constriction and the boundary layer is not expected to have grown significantly. Thus the velocity through the constriction is assumed to be uniform. The drag force on a clay particle that has attached to the wall of the constriction is
+
+.. math::
+
+  F_{drag} = C_D \frac{\pi}{4} D_{cp}^2 \rho_{H_2O} \frac{v_{constriction}^2}{2}
+
+At Reynolds numbers (based on core particle diameter) less than about 10 the drag coefficient is given by
+
+.. math::
+
+  C_D = \frac{24}{Re} = \frac{24\nu}{v_{constriction}D_{cp}}
+
+Thus the drag on a core particle is equal to the bond force and is given by
+
+.. math::
+  :label: Fbond_of_v_constriction
+
+
+  F_{bond} = 3\pi \nu v_{constriction} D_{cp} \rho_{H_2O}
+
 Gravity Acting on Flocs
 =======================
 
@@ -432,9 +479,9 @@ We can create a dimensionless number that is the ratio of the bond strength to t
 .. math::
   :label: bong_1
 
-  \Pi_{bond}^g = \frac {\rlap{--} V_{floc} \left(\rho_{floc} - \rho_{H_2O} \right) g} {F_{bond}}
+  \Pi_{bond}^g = \frac {\rlap{-} V_{floc} \left(\rho_{floc} - \rho_{H_2O} \right) g} {F_{bond}}
 
-To obtain an equation that is a function of the floc diameter we substitute the floc volume (equation :eq:`volume_floc_of_D`) and the floc buoyant density (equation :eq:`floc_buoyant_density_2`) into equation :eq:`bong_1`.
+To obtain an equation that is a function of the floc diameter we substitute the floc volume (Equation :eq:`volume_floc_of_D`) and the floc buoyant density (Equation :eq:`floc_buoyant_density_2`) into Equation :eq:`bong_1`.
 
 .. math::
   :label: bong_of_D_floc_1
@@ -452,21 +499,21 @@ Separate the floc diameter term and simplify as much as possible.
   \Pi_{bond}^g =
   \frac {\pi  g\left( \rho_{cp}  - \rho_{H_2O} \right) D_{cp}^{3-\Pi_{fractal}}} {6 F_{bond}} D_{floc}^{\Pi_{fractal}}
 
-The maximum size of a floc that is under the influence of gravity can be obtained by solving equation :eq:`bong_of_D_floc` for :math:`D_{floc}`.
+The maximum size of a floc that is under the influence of gravity can be obtained by solving Equation :eq:`bong_of_D_floc` for :math:`D_{floc}`.
 
 .. math::
-  :label: D_floc_of_bong
+  :label: D_floc_of_bong_1
 
-    D_{floc} =
-    \left[\frac {6 F_{bond} \Pi_{bond}^g} {\pi  g\left( \rho_{cp}  - \rho_{H_2O} \right) D_{cp}^{3-\Pi_{fractal}}}\right]^{\frac{1}{\Pi_{fractal}}}
+  D_{floc} =
+  \left[\frac {6 F_{bond} \Pi_{bond}^g} {\pi  g\left( \rho_{cp}  - \rho_{H_2O} \right) D_{cp}^{3-\Pi_{fractal}}}\right]^{\frac{1}{\Pi_{fractal}}}
 
 Unit calculations are problematic when the exponent on the units isn't an integer. To avoid that dilemma with the volume-based fractal dimension we will make the term that is raised to a fractional power be dimensionless by factoring out the diameter of the core particle.
 
 .. math::
   :label: D_floc_of_bong
 
-    D_{floc_{max}}^g = D_{cp}
-    \left[\frac {6 F_{bond} \Pi_{bond}^g} {\pi  g\left( \rho_{cp}  - \rho_{H_2O} \right) D_{cp}^3}\right]^{\frac{1}{\Pi_{fractal}}}
+  D_{floc_{max}}^g = D_{cp}
+  \left[\frac {6 F_{bond} \Pi_{bond}^g} {\pi  g\left( \rho_{cp}  - \rho_{H_2O} \right) D_{cp}^3}\right]^{\frac{1}{\Pi_{fractal}}}
 
 
 The value of :math:`\Pi_{bond}^g` will need to be determined experimentally. A preliminary force analysis by Kevin Sarmiento suggests that this dimensionless factor may be approximately 8 based on reasonable assumptions for the length of the moment arm acting on one coagulant nanoparticle bond.
@@ -511,7 +558,7 @@ Solving for terminal velocity, :math:`v_t`, we obtain
   v_t  =
   \frac{F_{bond} \Pi_{bond}^g}{3 \pi \nu D_{floc} \rho_{H_2O}}
 
-The maximum floc diameter and the bond strength are related through equation :eq:`D_floc_of_bong` and that relationship can be used to eliminate the floc diameter from equation :eq:`v_t_of_F_bond_3`.
+The maximum floc diameter and the bond strength are related through Equation :eq:`D_floc_of_bong` and that relationship can be used to eliminate the floc diameter from Equation :eq:`v_t_of_F_bond_3`.
 
 .. math::
   :label: v_t_of_F_bond
@@ -520,7 +567,7 @@ The maximum floc diameter and the bond strength are related through equation :eq
   \frac{F_{bond} \Pi_{bond}^g}{3 \pi \nu \rho_{H_2O} D_{cp}
   \left[\frac {6 F_{bond} \Pi_{bond}^g} {\pi  g\left( \rho_{cp}  - \rho_{H_2O} \right) D_{cp}^3}\right]^{\frac{1}{\Pi_{fractal}}} }
 
-The maximum terminal velocity (equation :eq:`v_t_of_F_bond`) that can be obtained based on a :math:`\Pi_{bond}^g = 8` as a function of the core particle density is shown in :numref:`figure_vtmaxofFbondandGravity`.
+The maximum terminal velocity (Equation :eq:`v_t_of_F_bond`) that can be obtained based on a :math:`\Pi_{bond}^g = 8` as a function of the core particle density is shown in :numref:`figure_vtmaxofFbondandGravity`.
 
 .. _figure_vtmaxofFbondandGravity:
 
