@@ -154,7 +154,7 @@ The `ceil_nearest` function defined in utility.py can take in a parameter and an
 The PVC pipe that forms the diffusers changes in shape and wall thickness during the molding process. The inner width of the rectangle is created by forcing the pipe over a rectangular wedge that is the thickness you calculated above. During the molding process, PVC pipe wall cross-sectional area is conserved. The pipe wall is stretched in total length approximately 20%. Another way to think about this is that the thickness of the wall is reduced by a factor of 1/1.2 because the mass of PVC is conserved and the density is unchanged. Thus, volume and cross-sectional area are conserved.
 
 
-Area is given using the following equation :math:`A_{PVC}=2\left (B_{diffuser}+W_{diffuser} \right)T_{diff}`
+Area is given using the following Equation :math:`A_{PVC}=2\left (B_{diffuser}+W_{diffuser} \right)T_{diff}`
 
 3. Use the equation for :math:`A_{PVC}` to calculate the following
 

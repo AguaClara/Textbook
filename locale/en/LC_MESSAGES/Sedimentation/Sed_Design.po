@@ -519,7 +519,7 @@ msgstr ""
 msgid ""
 "Flocs will break when the fluid forces acting on the floc exceed the "
 "strength of the bonds that hold the floc together. The fluid shear stress"
-" is given by equation :eq:`tau_of_mu_G`. The velocity gradient is caused "
+" is given by Equation :eq:`tau_of_mu_G`. The velocity gradient is caused "
 "by turbulent kinetic energy dissipation as given by equation "
 ":eq:`G_Camp_Stein`. Equation :eq:`tau_of_mu_G` and equation "
 ":eq:`G_Camp_Stein` can be combined to obtain an estimate of the fluid "
@@ -531,8 +531,8 @@ msgid ""
 "The shear stress is a function of the rate of turbulent energy "
 "dissipation and the viscosity of the fluid. The shear stress increases as"
 " the water temperature decreases. The shear force acting to pull a "
-"doublet floc apart is given in equation :eq:`shear_force_on_doublet` and "
-"can be combined with equation :eq:`tau_of_mu_G` to obtain"
+"doublet floc apart is given in Equation :eq:`shear_force_on_doublet` and "
+"can be combined with Equation :eq:`tau_of_mu_G` to obtain"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Design.rst:265
@@ -586,11 +586,11 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Design.rst:286
 msgid ""
-"Using equation :eq:`fluid_shear_stress` the maximum energy dissipation "
+"Using Equation :eq:`fluid_shear_stress` the maximum energy dissipation "
 "rate below the performance deterioration obtained by Garland (300 mW/kg) "
 "can be converted into a fluid shear stress of 0.55 Pa. The fluid shear "
 "combined with the strength of covalent bonds can be used to solve for the"
-" floc diameter using equation :eq:`fluid_shear_stress_on_doublet`."
+" floc diameter using Equation :eq:`fluid_shear_stress_on_doublet`."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Design.rst:293
@@ -602,7 +602,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Design.rst:302
 msgid ""
-"For clay dominated flocs equation :eq:`vt_of_clay_floc` gives a 0.13 mm/s"
+"For clay dominated flocs Equation :eq:`vt_of_clay_floc` gives a 0.13 mm/s"
 " sedimentation velocity which is just slightly higher than the 0.1 mm/s "
 "capture velocity used by Garland."
 msgstr ""
@@ -685,7 +685,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Design.rst:318
 msgid ""
-"Solve equation :eq:`d_floc_shear_stress` for the shear stress given the "
+"Solve Equation :eq:`d_floc_shear_stress` for the shear stress given the "
 "floc diameter."
 msgstr ""
 
@@ -711,7 +711,7 @@ msgid ""
 ":math:`W_{Sed}`, of the sedimentation tank. Begin by eliminating the "
 "energy dissipation rate from the fluid shear stress, equation "
 ":eq:`fluid_shear_stress`, by substituting the plane jet energy "
-"dissipation rate, equation :eq:`EDR_JetPlane`."
+"dissipation rate, Equation :eq:`EDR_JetPlane`."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Design.rst:335
@@ -722,8 +722,8 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Design.rst:342
 msgid ""
-"Use equation :eq:`jet_sed_tank_continuity` to eliminate the thickness of "
-"the jet, :math:`W_{Jet}` in equation :eq:`shear_stress_plane_jet`"
+"Use Equation :eq:`jet_sed_tank_continuity` to eliminate the thickness of "
+"the jet, :math:`W_{Jet}` in Equation :eq:`shear_stress_plane_jet`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Design.rst:349
@@ -762,7 +762,7 @@ msgid ""
 "settlers. The floc size velocity restriction limits the velocity of the "
 "water in the manifold that delivers water to the diffuser jets. The ratio"
 " of manifold velocity to port velocity can be obtained as the inverse of "
-"equation :eq:`Manifold_max_v_no_hl_series`."
+"Equation :eq:`Manifold_max_v_no_hl_series`."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Design.rst:385

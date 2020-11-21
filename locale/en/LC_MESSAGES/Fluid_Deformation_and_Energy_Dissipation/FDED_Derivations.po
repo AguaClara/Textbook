@@ -895,7 +895,7 @@ msgstr ""
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:755
 msgid ""
-"In this equation :math:`K` represents the fraction of the kinetic energy "
+"In this Equation :math:`K` represents the fraction of the kinetic energy "
 "that is dissipated."
 msgstr ""
 

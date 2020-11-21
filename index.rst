@@ -14,7 +14,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
    "Sphinx", "1.7.5"
    "aguaclara", "0.2.6"
    "Anaconda", "4.5.4"
-   "Python", "3.6.5"
+   "Python", "3.8"
 
 .. toctree::
   :caption: Acknowledgements
@@ -50,6 +50,8 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flow_Control_and_Measurement/FCM_Design.rst
   Flow_Control_and_Measurement/FCM_Derivations.rst
   Flow_Control_and_Measurement/FCM_Solution.rst
+  Flow_Control_and_Measurement/ET_Design.rst
+
 
 .. toctree::
   :caption: Chapter 4: Fluid Deformation and Energy Dissipation
@@ -58,12 +60,14 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst
   Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst
 
-.. toctree::
-   :caption: Chapter 5: Flocs, Fractals, and Forces
-   :maxdepth: 1
 
-    Flocs_Fractals_and_Forces/FFF_Intro.rst
-    Flocs_Fractals_and_Forces/FFF_Suspensions.rst
+.. toctree::
+  :caption: Chapter 5: Flocs, Fractals, and Forces
+  :maxdepth: 1
+
+  Flocs_Fractals_and_Forces/FFF_Intro.rst
+  Flocs_Fractals_and_Forces/FFF_Suspensions.rst
+
 
 .. toctree::
   :caption: Chapter 6: Chemistry of Water Treatment

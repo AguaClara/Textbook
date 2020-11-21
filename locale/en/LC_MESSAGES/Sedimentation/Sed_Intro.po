@@ -164,7 +164,7 @@ msgid "Where:"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Intro.rst:61
-msgid ":math:`\\rlap{--}V_{floc} =` floc particle volume"
+msgid ":math:`\\rlap{-}V_{floc} =` floc particle volume"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Intro.rst:62
@@ -610,7 +610,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Intro.rst:227
 msgid ""
-":math:`\\rlap{--}V_{tank} =` volume of the sedimentation tank "
+":math:`\\rlap{-}V_{tank} =` volume of the sedimentation tank "
 ":math:`\\left[L^3\\right]`"
 msgstr ""
 
@@ -756,7 +756,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Intro.rst:305
 msgid ""
-":math:`\\rlap{--}V_{tank} =` volume of the sedimentation tank "
+":math:`\\rlap{-}V_{tank} =` volume of the sedimentation tank "
 "[:math:`L^3`]"
 msgstr ""
 

@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../../Flow_Control_and_Measurement/FCM_Derivations.rst:31
 msgid ""
-":math:`\\frac{d\\rlap{--}V}{dt}` = rate of change in volume of solution "
+":math:`\\frac{d\\rlap{-}V}{dt}` = rate of change in volume of solution "
 "in the tank"
 msgstr ""
 
@@ -533,7 +533,7 @@ msgstr ""
 msgid ""
 "From this equation for :math:`Q_{Max}`, we can get to our first design "
 "equation, :math:`\\color{purple}{\\bar v_{Max}}` by using the continuity "
-"equation :math:`\\bar v_{Max} = \\frac{Q_{Max}}{\\frac{\\pi D^2}{4}}`"
+"Equation :math:`\\bar v_{Max} = \\frac{Q_{Max}}{\\frac{\\pi D^2}{4}}`"
 msgstr ""
 
 #: ../../Flow_Control_and_Measurement/FCM_Derivations.rst:368

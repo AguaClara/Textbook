@@ -123,7 +123,6 @@ Example to Start From
 ---------------------
 This file is written in RST. You can start there! Just click on "View page source" at the top of the page.
 
-Also, the next page contains the convention, and is where we specify all AguaClara RST best practices: :ref:`Functionality in RST and AguaClara Convention <title_aguaclara_rst_convention>`. I recommend looking at the raw RST and the rendered html side by side.
 
 
 

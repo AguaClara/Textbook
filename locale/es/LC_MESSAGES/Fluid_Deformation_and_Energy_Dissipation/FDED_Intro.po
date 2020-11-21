@@ -694,7 +694,7 @@ msgstr "0.08"
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst:1
 #, fuzzy
 msgid ""
-":math:`\\varepsilon_{Max} = \\Pi_{JetRound}\\frac{   \\bar v_{Jet} ^3}{D_{Jet}}`"
+":math:`\\varepsilon_{Max} = \\Pi_{JetRound}\\frac{  \\bar v_{Jet} ^3}{D_{Jet}}`"
 msgstr ""
 ":math:``varepsilon_{Max} = \\Pi_{JetRound}frac{{\\i} {\\i1}fraccionaria "
 "v_{\\i}} ^3}{D_{Jet}}`"
@@ -786,8 +786,8 @@ msgstr ":matemáticas:`m` = masa de fluido en el volumen de control"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst:138
 #, fuzzy
-msgid ":math:`\\rlap{--}V` = volume of the control volume"
-msgstr ":matemáticas:`\\rlap{--}V` = volumen del volumen de control"
+msgid ":math:`\\rlap{-}V` = volume of the control volume"
+msgstr ":matemáticas:`\\rlap{-}V` = volumen del volumen de control"
 
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst:139
 #, fuzzy

@@ -18,7 +18,7 @@ Carbonic Acid and Bicarbonate
 -----------------------------
 
 .. math:: {H_2}CO_3^{\star} \overset {K_1} \longleftrightarrow {H^+} + HCO_3^-
-   :label: carbonate
+  :label: carbonate
 
 Where:
  | :math:`K_1` is the dissociation constant defined below.
@@ -138,7 +138,7 @@ Now we solve for :math:`C_B`, the concentration of base that must be added to re
 .. math::  (\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2}) )C_B= {C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}
 
 .. math::
-   :label: Base_for_pH_Adjust
+  :label: Base_for_pH_Adjust
 
    C_B= \frac{{C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}}{\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2})}
 

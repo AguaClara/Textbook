@@ -162,7 +162,7 @@ msgstr ""
 #: ../../Rapid_Mix/RM_Theory_and_Future_Work.rst:65
 msgid ""
 "We can eliminate the diffusion time in equation "
-":eq:`Diffusion_Length_scale` using equation :eq:`Diffusion_Layer_time`."
+":eq:`Diffusion_Length_scale` using Equation :eq:`Diffusion_Layer_time`."
 msgstr ""
 
 #: ../../Rapid_Mix/RM_Theory_and_Future_Work.rst:69
@@ -247,7 +247,7 @@ msgstr ""
 
 #: ../../Rapid_Mix/RM_Theory_and_Future_Work.rst:136
 msgid ""
-"Combining the three equations for :math:`{\\rlap{--} V_{\\rm{Cleared}}}` "
+"Combining the three equations for :math:`{\\rlap{-} V_{\\rm{Cleared}}}` "
 "and the equation for :math:`v_r` we obtain the volume cleared as a "
 "function of time."
 msgstr ""
@@ -259,7 +259,7 @@ msgstr ""
 #: ../../Rapid_Mix/RM_Theory_and_Future_Work.rst:146
 msgid ""
 "The time for all of the fluid to have had one opportunity for a collision"
-" occurs when :math:`{\\rlap{--} V_{\\rm{Cleared}}} = {\\rlap{--} "
+" occurs when :math:`{\\rlap{-} V_{\\rm{Cleared}}} = {\\rlap{-} "
 "V_{\\rm{Occupied}}} = \\Lambda_{Clay}^3`"
 msgstr ""
 

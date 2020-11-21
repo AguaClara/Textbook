@@ -264,8 +264,8 @@ msgstr ""
 #: ../../Rapid_Mix/RM_Theory_and_Future_Work.rst:65
 #, fuzzy
 msgid ""
-"We can eliminate the diffusion time in equation :eq:"
-"`Diffusion_Length_scale` using equation :eq:`Diffusion_Layer_time`."
+"We can eliminate the diffusion time in Equation :eq:"
+"`Diffusion_Length_scale` using Equation :eq:`Diffusion_Layer_time`."
 msgstr ""
 "Podemos eliminar el tiempo de difusión en la ecuación :eq:"
 "`Difusión_Longitud_Escala` usando la ecuación :eq:`Difusión_Capa_Tiempo`."
@@ -406,11 +406,11 @@ msgstr ""
 #: ../../Rapid_Mix/RM_Theory_and_Future_Work.rst:136
 #, fuzzy
 msgid ""
-"Combining the three equations for :math:`{\\rlap{--} V_{\\rm{Cleared}}}` "
+"Combining the three equations for :math:`{\\rlap{-} V_{\\rm{Cleared}}}` "
 "and the equation for :math:`v_r` we obtain the volume cleared as a "
 "function of time."
 msgstr ""
-"Combinando las tres ecuaciones de :math:`{rlap{--} V_{{\\N}} y la "
+"Combinando las tres ecuaciones de :math:`{rlap{-} V_{{\\N}} y la "
 "ecuación de :math:`v_r`` obtenemos el volumen despejado en función del "
 "tiempo."
 
@@ -423,12 +423,12 @@ msgstr "Tasas de colisión"
 #, fuzzy
 msgid ""
 "The time for all of the fluid to have had one opportunity for a collision "
-"occurs when :math:`{\\rlap{--} V_{\\rm{Cleared}}} = {\\rlap{--} "
+"occurs when :math:`{\\rlap{-} V_{\\rm{Cleared}}} = {\\rlap{-} "
 "V_{\\rm{Occupied}}} = \\Lambda_{Clay}^3`"
 msgstr ""
 "El momento en que todo el fluido ha tenido una oportunidad para una "
-"colisión ocurre cuando :matemáticas:`{{rlap{--} V_{\\\\\\Nrm{Cleared}} = "
-"{\\rlap{--} V_{\\\\N->>> = \\N-Lambda_{Clay}^3`"
+"colisión ocurre cuando :matemáticas:`{{rlap{-} V_{\\\\\\Nrm{Cleared}} = "
+"{\\rlap{-} V_{\\\\N->>> = \\N-Lambda_{Clay}^3`"
 
 #: ../../Rapid_Mix/RM_Theory_and_Future_Work.rst:150
 #, fuzzy

@@ -13,19 +13,19 @@ Suspension densities will be of interest both in understanding the physics of fl
   :label: density_suspension_1
 
   \rho_{suspension}
-  = \frac{M_{H_2O} + M_{particles}}{\rlap{--} V_{suspension}}
+  = \frac{M_{H_2O} + M_{particles}}{\rlap{-} V_{suspension}}
 
-  =\frac{M_{H_2O} }{\rlap{--} V_{suspension}} + C_{particles}
+  =\frac{M_{H_2O} }{\rlap{-} V_{suspension}} + C_{particles}
 
 The mass of water in a suspension, :math:`M_{H_2O}`, must take into account the fraction of the suspension volume occupied by the particles.
 
 .. math::
   :label: water_mass_in_suspension
 
-  \frac{M_{H_2O}}{\rlap{--} V_{suspension} } =
+  \frac{M_{H_2O}}{\rlap{-} V_{suspension} } =
   \rho_{H_2O} \left( 1 - \frac{C_{particles}}{\rho_{particles}} \right)
 
-where :math:`\frac{C_{particles}}{\rho_{particles}}` is the fraction of the suspension volume occupied by the particles. Substituting equation :eq:`water_mass_in_suspension` into equation :eq:`density_suspension_1` we obtain the density of the suspension.
+where :math:`\frac{C_{particles}}{\rho_{particles}}` is the fraction of the suspension volume occupied by the particles. Substituting Equation :eq:`water_mass_in_suspension` into Equation :eq:`density_suspension_1` we obtain the density of the suspension.
 
 .. math::
   :label: density_suspension_2
@@ -68,7 +68,7 @@ For reactors with dimensions that are not much larger than the dimensions of the
   v_{t_w} = \frac{v_t}{10^{\frac{D_{particle}}{D_H}}}
 
 | where
-| :math:`v_t` terminal velocity in an infinite fluid obtained from equation :eq:`v_t_general`
+| :math:`v_t` terminal velocity in an infinite fluid obtained from Equation :eq:`v_t_general`
 
 The Reynolds number :math:`Re_t` is based on the terminal velocity of the particle.
 

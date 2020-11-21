@@ -94,19 +94,19 @@ where con = contracted control surface and exp = expanded control surface. We ca
 
 .. math::
 
-    \frac{A_{exp}}{A_{con}}=\frac{\sqrt{2gh_e}}{\bar  v_{exp}} + 1
+   \frac{A_{exp}}{A_{con}}=\frac{\sqrt{2gh_e}}{\bar  v_{exp}} + 1
 
 Here the area ratio is also equal to the width ratio because the depth of flow is the other dimension. We assume here that the depth of flow is large compared with the head loss.
 
 .. math::
 
-    \frac{A_{exp}}{A_{con}} = \frac{\bar v_{con}}{\bar v_{exp}}
+   \frac{A_{exp}}{A_{con}} = \frac{\bar v_{con}}{\bar v_{exp}}
 
 
 
 .. math::
 
-    \frac{W_{con}}{W_{exp}} = \frac{A_{con}}{A_{exp}}
+   \frac{W_{con}}{W_{exp}} = \frac{A_{con}}{A_{exp}}
 
 The width of the expanded flow, :math:`W_{exp}`, is equal to the large eddy length scale, :math:`L_{eddy}`.
 
