@@ -1040,10 +1040,10 @@ msgstr "¿Cuál es la longitud requerida de los colonos de la placa?"
 #, fuzzy
 msgid ""
 "The equation for this problem can be found in :ref:`Sedimentation "
-"Derivations<heading_Plate_Settler_Design>`."
+"Derivations<heading_Sed_Tank_Plate_Settlers>`."
 msgstr ""
 "La ecuación para este problema se puede encontrar en :ref:`Derivaciones de "
-"sedimentación<heading_Plate_Settler_Design>`."
+"sedimentación<heading_Sed_Tank_Plate_Settlers>`."
 
 #: ../../Sedimentation/Sed_Examples.rst:450
 #, fuzzy
