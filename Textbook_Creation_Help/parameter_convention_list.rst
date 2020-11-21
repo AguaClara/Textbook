@@ -24,7 +24,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :header: Parameter, Description, Units
     :widths: 10, 30, 10
 
-    Uppercase letters, - , -
+    Uppercase letters,   , 
     :math:`A`,Area,:math:`[L]^2`
     :math:`A_{floc}`,Projected cross sectional area of particle,:math:`[L]^2`
     :math:`A_p `,Plan view area,:math:`[L]^2`

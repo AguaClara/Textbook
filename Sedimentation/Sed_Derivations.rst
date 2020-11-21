@@ -417,7 +417,8 @@ Substituting by the trigonometric relationship :math:`\bar v_{\alpha_{Plate}} = 
    Fluid velocity at the center of the floc.
 
 3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 Recall from our :ref:`previous explanation of terminal velocity <heading_terminal_velocity_equation>` that the terminal velocity, :math:`v_t`, of the floc can be calculated by,
 
 .. math::

@@ -109,7 +109,8 @@ When writing RST, there are often many ways to write the same thing. Almost alwa
 
 How do I write RST?
 -------------------
-RST is friendly to learn and powerful. There are many useful cheatsheets, like `this one <https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks>`_ and the next page on this site: :ref:`Functionality in RST and AguaClara Convention <title_aguaclara_rst_convention>`, which is specifically for AguaClara and this textbook project. When you start writing RST, look at the cheat sheets all the time. Use :code:`ctrl-f` all the time to find whatever you need.
+
+RST is friendly to learn and powerful. There are many useful cheatsheets, like `this one <https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks>`_. When you start writing RST, look at the cheat sheets all the time. Use :code:`ctrl-f` all the time to find whatever you need.
 
 **Things not covered in most cheat sheets which are of critical importance:**
 

@@ -683,7 +683,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Examples.rst:454
 msgid ""
 "The equation for this problem can be found in :ref:`Sedimentation "
-"Derivations<heading_Plate_Settler_Design>`."
+"Derivations<heading_Sed_Tank_Plate_Settlers>`."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:450
