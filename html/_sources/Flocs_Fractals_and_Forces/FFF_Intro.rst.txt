@@ -126,9 +126,9 @@ Substituting the floc volume and the core particle volume into Equation :eq:`flo
 .. math::
   :label: floc_buoyant_density_2
 
- \left( \rho_{floc} - \rho_{H_2O} \right)  =
- \left( \rho_{cp}  - \rho_{H_2O} \right) \frac{\frac{\pi}{6} D_{cp}^3
- \left(\frac{D_{floc}}{D_{cp}}\right)^{\Pi_{fractal}} }{ \frac{\pi}{6} D_{floc}^3}
+  \left( \rho_{floc} - \rho_{H_2O} \right)  =
+  \left( \rho_{cp}  - \rho_{H_2O} \right) \frac{\frac{\pi}{6} D_{cp}^3
+  \left(\frac{D_{floc}}{D_{cp}}\right)^{\Pi_{fractal}} }{ \frac{\pi}{6} D_{floc}^3}
 
 Simplifying :eq:`floc_buoyant_density_2` we obtain
 
@@ -260,7 +260,7 @@ You might think: why aren't more surfaces dimpled? If I want my car to get bette
 
 Let's go back to the realm of water treatment. We care about drag coefficients and terminal velocities because they help describe how flocs will move in water. Flocs tend to exist in the region between 1< :math:`Re` < 10. This region is not perfectly described by Stokes Law, but it is used as an appropriate approximation. We have already solved for the general equation for terminal velocity using the force balance approach. Now, we can solve for a terminal velocity equation specifically in the laminar region.
 
-Plug the drag coefficient for laminar flow, :math:`C_D = \frac{24}{Re}`, and Reynolds number, :math:`Re = \frac{v_t D_{floc}}{\nu}`,  into the general terminal velocity equation (:eq:`v_t_general`) to obtain
+Plug the drag coefficient for laminar flow, :math:`C_D = \frac{24}{Re}`, and Reynolds number, :math:`Re = \frac{v_t D_{floc}}{\nu}`,  into the general terminal velocity Equation :eq:`v_t_general` to obtain
 
 .. math::
 
@@ -308,6 +308,15 @@ The chemical bonds formed by the polymers or the coagulant nanoparticles could b
 The strength of a polymer chain with carbon-carbon bonds is of the order of 1 to 10 nN (`Levinthal and Davison, 1961 <https://doi.org/10.1016/S0022-2836(61)80030-2>`_). Covalent bonds rupture at approximately 1600 pN, noncovalent bonds break at about 160 pN, and hydrogen bonds break at about 4 pN (`Forces involved at the biological level <http://www.picotwist.com/index.php?content=smb&option=odg>`_).
 
 If we assume that the flocs are joined by 3 bonds to create a constrained connection then we can compare the fluid shear forces that are pulling flocs apart to the strength of potential bonds. The result of this force comparison is shown in :numref:`figure_Shear_force_and_bond_strength`.
+
+.. _figure_Shear_force_and_bond_strength:
+
+.. figure:: Images/Shear_force_and_bond_strength.png
+   :width: 400px
+   :align: center
+   :alt: figure_Shear_force_and_bond_strength
+
+   The diameter of flocs after flocculation suggests that covalent bonds are likely responsible for holding flocs together.
 
 Given that flocs grow to be approximately 1 mm in a 100 Hz flocculator it suggests that the bonds holding the flocs together are either covalent bonds or noncovalent bonds that are stronger than hydrogen bonds. Van der Waals interactions are weaker than hydrogen bonds and thus Van der Waals interactions likely are not significant for flocculation when using coagulants.
 

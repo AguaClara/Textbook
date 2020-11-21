@@ -86,7 +86,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction_to_The_Physics_of_Water_Treatment_Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
@@ -280,7 +280,7 @@
 <h3>Horizontal Flow Sedimentation Tank<a class="headerlink" href="#horizontal-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id1">
 <span id="figure-horizontal-flow-tank-base"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_base.png"><img alt="Horizontal flow sedimentation tank." src="../_images/horizontal_flow_tank_base.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 122 </span><span class="caption-text">Horizontal flow sedimentation tank.</span></p>
+<p class="caption"><span class="caption-number">Fig. 123 </span><span class="caption-text">Horizontal flow sedimentation tank.</span></p>
 </div>
 <div class="line-block">
 <div class="line">Where:</div>
@@ -289,7 +289,7 @@
 <div class="line"><span class="math notranslate nohighlight">\(H =\)</span> height [L]</div>
 <div class="line"><span class="math notranslate nohighlight">\(A_p =\)</span> plan view area of the tank [<span class="math notranslate nohighlight">\(L^2\)</span>]</div>
 </div>
-<p>Let’s begin with a few questions that will describe our horizontal flow sedimentation tank in <a class="reference internal" href="#figure-horizontal-flow-tank-base"><span class="std std-numref">Fig. 122</span></a>. We will assume that 1) water travels uniformly from one end of the tank to the other, and 2) the particle that we are discussing is 35 <span class="math notranslate nohighlight">\(\mu m\)</span> (which is the size of particle that AguaClara plate settlers can capture).</p>
+<p>Let’s begin with a few questions that will describe our horizontal flow sedimentation tank in <a class="reference internal" href="#figure-horizontal-flow-tank-base"><span class="std std-numref">Fig. 123</span></a>. We will assume that 1) water travels uniformly from one end of the tank to the other, and 2) the particle that we are discussing is 35 <span class="math notranslate nohighlight">\(\mu m\)</span> (which is the size of particle that AguaClara plate settlers can capture).</p>
 <ol class="arabic simple">
 <li>How much time is required for water to pass through the tank?</li>
 </ol>
@@ -309,10 +309,10 @@
 <ol class="arabic simple" start="3">
 <li>How fast must the particle fall?</li>
 </ol>
-<p>We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, <span class="math notranslate nohighlight">\(v_H\)</span>. Gravity is causing the particle to settle at its terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>. In order to reach the bottom, that settling velocity needs to be the capture velocity, <span class="math notranslate nohighlight">\(\bar v_c\)</span>, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in <a class="reference internal" href="#figure-horizontal-flow-tank-capture"><span class="std std-numref">Fig. 123</span></a>.</p>
+<p>We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, <span class="math notranslate nohighlight">\(v_H\)</span>. Gravity is causing the particle to settle at its terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>. In order to reach the bottom, that settling velocity needs to be the capture velocity, <span class="math notranslate nohighlight">\(\bar v_c\)</span>, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in <a class="reference internal" href="#figure-horizontal-flow-tank-capture"><span class="std std-numref">Fig. 124</span></a>.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-horizontal-flow-tank-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_capture.png"><img alt="Horizontal flow sedimentation tank with capture velocity." src="../_images/horizontal_flow_tank_capture.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 123 </span><span class="caption-text">Horizontal flow sedimentation tank with capture velocity.</span></p>
+<p class="caption"><span class="caption-number">Fig. 124 </span><span class="caption-text">Horizontal flow sedimentation tank with capture velocity.</span></p>
 </div>
 <p>Capture velocity can be determined by the distance that a particle must travel and the time that the particle has to travel.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-1">
@@ -328,19 +328,19 @@
 <p>To answer this question, think about the two extremes of our reactor.</p>
 <ul class="simple">
 <li>We could have a small particle entering the reactor at the top, defining the critical path in the same “worst case scenario”. This particle would not be successfully captured by the tank because its terminal velocity is less than the capture velocity, meaning that it doesn’t have enough time in the reactor to settle.</li>
-<li>We could have a small particle entering the reactor near the bottom, in a “best case scenario”. In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be captured by a tank designed for particles 35 <span class="math notranslate nohighlight">\(\mu m\)</span> or larger, but it depends on the height at which they enter the reactor as shown in <a class="reference internal" href="#figure-horizontal-flow-tank-small-capture"><span class="std std-numref">Fig. 124</span></a>.</li>
+<li>We could have a small particle entering the reactor near the bottom, in a “best case scenario”. In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be captured by a tank designed for particles 35 <span class="math notranslate nohighlight">\(\mu m\)</span> or larger, but it depends on the height at which they enter the reactor as shown in <a class="reference internal" href="#figure-horizontal-flow-tank-small-capture"><span class="std std-numref">Fig. 125</span></a>.</li>
 </ul>
 <div class="figure align-center" id="id3">
 <span id="figure-horizontal-flow-tank-small-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_small_capture.png"><img alt="Horizontal flow sedimentation tank with critical path and small particle." src="../_images/horizontal_flow_tank_small_capture.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 124 </span><span class="caption-text">Horizontal flow sedimentation tank with critical path and small particle.</span></p>
+<p class="caption"><span class="caption-number">Fig. 125 </span><span class="caption-text">Horizontal flow sedimentation tank with critical path and small particle.</span></p>
 </div>
 </div>
 <div class="section" id="vertical-flow-sedimentation-tank">
 <h3>Vertical Flow Sedimentation Tank<a class="headerlink" href="#vertical-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
-<p>We will complete the same exercise for vertical flow sedimentation tanks shown in <a class="reference internal" href="#figure-vertical-flow-tank-base"><span class="std std-numref">Fig. 125</span></a>. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.</p>
+<p>We will complete the same exercise for vertical flow sedimentation tanks shown in <a class="reference internal" href="#figure-vertical-flow-tank-base"><span class="std std-numref">Fig. 126</span></a>. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-vertical-flow-tank-base"></span><a class="reference internal image-reference" href="../_images/vertical_flow_tank_base.png"><img alt="Vertical flow sedimentation tank." src="../_images/vertical_flow_tank_base.png" style="height: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 125 </span><span class="caption-text">Vertical flow sedimentation tank.</span></p>
+<p class="caption"><span class="caption-number">Fig. 126 </span><span class="caption-text">Vertical flow sedimentation tank.</span></p>
 </div>
 <ol class="arabic simple">
 <li>How much time is required for water to pass through the tank?</li>

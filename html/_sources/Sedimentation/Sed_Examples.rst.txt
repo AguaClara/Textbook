@@ -440,7 +440,7 @@ We will assume that the active area of the sedimentation tank is equal to the to
 
 1. What is the required length of the plate settlers?
 
-The equation for this problem can be found in :ref:`Sedimentation Derivations<heading_Plate_Settler_Design>`.
+The equation for this problem can be found in :ref:`Sedimentation Derivations<heading_Sed_Tank_Plate_Settlers>`.
 
 .. code:: python
 
@@ -451,7 +451,7 @@ The equation for this problem can be found in :ref:`Sedimentation Derivations<he
 
 2. What is the horizontal spacing (center to center) of the plate settlers?
 
-The equation for this problem can be found in :ref:`Sedimentation Derivations<heading_Plate_Settler_Design>`.
+The equation for this problem can be found in :ref:`Sedimentation Derivations<heading_Sed_Tank_Plate_Settlers>`.
 
 .. code:: python
 

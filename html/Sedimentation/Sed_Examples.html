@@ -86,7 +86,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction_to_The_Physics_of_Water_Treatment_Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
@@ -314,10 +314,10 @@
 </div>
 <div class="section" id="identify-failure-modes-from-old-design">
 <h2>Identify Failure Modes from Old Design<a class="headerlink" href="#identify-failure-modes-from-old-design" title="Permalink to this headline">¶</a></h2>
-<p>Look at a proposed design for the bottom of the sedimentation tank, shown in <a class="reference internal" href="#figure-failure-mode-example"><span class="std std-numref">Fig. 179</span></a>. This design has an influent manifold at the bottom of the tank. Water flows upwards from the influent manifold. At one end of the influent manifold, there is a drain port. Above the influent manifold, there is a single slot that extends the length of the sedimentation tank. There are no diffusers in this design.</p>
+<p>Look at a proposed design for the bottom of the sedimentation tank, shown in <a class="reference internal" href="#figure-failure-mode-example"><span class="std std-numref">Fig. 180</span></a>. This design has an influent manifold at the bottom of the tank. Water flows upwards from the influent manifold. At one end of the influent manifold, there is a drain port. Above the influent manifold, there is a single slot that extends the length of the sedimentation tank. There are no diffusers in this design.</p>
 <div class="figure align-center" id="id1">
 <span id="figure-failure-mode-example"></span><a class="reference internal image-reference" href="../_images/failure_mode_example.png"><img alt="Proposed sedimentation tank design." src="../_images/failure_mode_example.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 179 </span><span class="caption-text">Proposed sedimentation tank design.</span></p>
+<p class="caption"><span class="caption-number">Fig. 180 </span><span class="caption-text">Proposed sedimentation tank design.</span></p>
 </div>
 <ol class="arabic simple">
 <li>What are the failure modes for this design?</li>
@@ -613,7 +613,7 @@ The function from the pipe database can return the nominal diameter from the dia
 <ol class="arabic simple">
 <li>What is the required length of the plate settlers?</li>
 </ol>
-<p>The equation for this problem can be found in <span class="xref std std-ref">Sedimentation Derivations</span>.</p>
+<p>The equation for this problem can be found in <a class="reference internal" href="Sed_Design.html#heading-sed-tank-plate-settlers"><span class="std std-ref">Sedimentation Derivations</span></a>.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">L_sed_plate</span> <span class="o">=</span> <span class="p">((</span><span class="n">s_sed_plate</span> <span class="o">*</span> <span class="p">((</span><span class="n">V_sed_up</span><span class="o">/</span><span class="n">V_sed_capture</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">thickness_sed_plate</span> <span class="o">*</span> <span class="p">(</span><span class="n">V_sed_up</span><span class="o">/</span><span class="n">V_sed_capture</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle_sed_plate</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle_sed_plate</span><span class="p">)))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum length of the plate settlers is&#39;</span><span class="p">,</span><span class="n">L_sed_plate</span><span class="p">)</span>
 </pre></div>
@@ -622,7 +622,7 @@ The function from the pipe database can return the nominal diameter from the dia
 <ol class="arabic simple" start="2">
 <li>What is the horizontal spacing (center to center) of the plate settlers?</li>
 </ol>
-<p>The equation for this problem can be found in <span class="xref std std-ref">Sedimentation Derivations</span>.</p>
+<p>The equation for this problem can be found in <a class="reference internal" href="Sed_Design.html#heading-sed-tank-plate-settlers"><span class="std std-ref">Sedimentation Derivations</span></a>.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">B_sed_plate_horizontal</span> <span class="o">=</span> <span class="p">((</span><span class="n">thickness_sed_plate</span> <span class="o">+</span> <span class="n">s_sed_plate</span><span class="p">)</span><span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle_sed_plate</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The horizontal center to center spacing of the plate settlers is&#39;</span><span class="p">,</span><span class="n">B_sed_plate_horizontal</span><span class="p">)</span>
 </pre></div>
