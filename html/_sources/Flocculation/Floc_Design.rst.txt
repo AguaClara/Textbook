@@ -46,7 +46,7 @@ The reason that flocculation is widely used in water treatment is because of sed
 | :math:`D_{particle}` = particle diameter
 | :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
 
-To increase :math:`\bar v_t` and make sedimentation more efficient, flocculation aims to increase the diameter :math:`d` of the particles. This is done by applying a coagulant to the dirty water and helping the coagulant to stick evenly to all particles during :ref:`_title_Rapid_Mix_Introduction`. Being covered in coagulant allows the particles to collide, merge, and grow bigger during flocculation.
+To increase :math:`\bar v_t` and make sedimentation more efficient, flocculation aims to increase the diameter :math:`d` of the particles. This is done by applying a coagulant to the dirty water and helping the coagulant to stick evenly to all particles during Rapid Mix **(DOUBLE CHECK THAT THIS IS IN RAPID MIX ONCE RAPID MIX IS WRITTEN)**. Being covered in coagulant allows the particles to collide, merge, and grow bigger during flocculation.
 Our goal in designing a flocculator is to facilitate particle collisions. How can we do this?
 
 Collision Potential, :math:`G_{CS} \theta`, and Energy Dissipation Rate, :math:`\varepsilon`
@@ -176,7 +176,7 @@ We can therefore state with reasonable accuracy that, when most contracted, the 
 
   \color{red}{K_{baffle} = 2.56}
 
-This :math:`K_{baffle}` has been used to design many flocculators in AguaClara plants. However, its value has not yet been rigorously tested for AguaClara plants in the field. Therefore it might actually deviate from :math:`2.56`. Research and testing the :math:`K` of a baffle in an AguaClara plant is ongoing, but for now the designs made under the assumption that :math:`\color{red}{K_{baffle} = 2.56}` are functioning very well in AguaClara plants. Although research has been done by many academics on the minor loss coefficient, including `this paper by Haarhoff in 1998 <https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a :math:`K_{baffle}` value between :math:`2.5` and :math:`4`.
+This :math:`K_{baffle}` has been used to design many flocculators in AguaClara plants. However, its value has not yet been rigorously tested for AguaClara plants the field. Therefore it might actually deviate from :math:`2.56`. Research and testing the :math:`K` of a baffle in an AguaClara plant is ongoing, but for now the designs made under the assumption that :math:`\color{red}{K_{baffle} = 2.56}` are functioning very well in AguaClara plants. Although research has been done by many academics on the minor loss coefficient, including `this paper by Haarhoff in 1998 <https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a :math:`K_{baffle}` value between :math:`2.5` and :math:`4`.
 
 Flocculator Efficiency
 ---------------------------
@@ -502,7 +502,7 @@ Now that the physical dimensions of the flocculator have been defined, the baffl
 Height Between Expansions :math:`H_e` and Number of Obstacles per Baffle Space :math:`n_{obstacles}`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We have a range of possible :math:`H_e` values based on our window of :math:`3 < \frac{H_e}{S} < 6`. However, we have a limitation and a preference which shape how we design :math:`H_e`. Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want :math:`\frac{H_e}{S}` to be closer to :math:`6` than it is to :math:`3`; we are looking for :math:`H_{e_{Max}}`.
+We have a range of possible :math:`H_e` values based on our window of :math:`3 < \frac{H_e}{S} < 6`. However, we have a limitation and a preference which shape how we design :math:`H_e`. Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want :math:`H_e` to be closer to :math:`6` than it is to :math:`3`; we are looking for :math:`H_{e_{Max}}`.
 
 We calculate :math:`H_{e_{Max}}` based on the physical flocculator dimensions. The equation for :math:`H_e` is obtained by rearranging one of the equations for minimum channel width found above, :math:`W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}`. Because we have already design the channel width, we substitute :math:`W_{channel}` for :math:`W_{Min, \, \Pi_{H_eS}}`. Since we are looking for :math:`H_{e_{Max}}`, we also substitute :math:`\Pi_{{HS}_{Max}}` for :math:`\Pi_{H_eS}`. The result is:
 

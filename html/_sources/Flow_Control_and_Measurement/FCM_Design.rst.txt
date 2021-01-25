@@ -270,6 +270,16 @@ Nothing in life is perfect, and the CDC is no exception. It has a few causes of 
 * Surface tension may resist the flow of chemicals from the dosing tube into the drop tube during low flows. Since the CDC design does not consider surface tension, this is a potential source of error.
 * The lever and everything attached to it are not weightless. Changing the dose of coagulant or chlorine means moving the slider along the lever. Since the slider and tubes attached to it (drop tube, dosing tube) have mass, moving the slider means that the torque of the lever is altered. This means that the depth that the float is submerged is changed, which affects :math:`\Delta h` of the system. This can be remedied by making the float’s diameter as large as possible, which makes these fluctuations small. This problem can not be avoided entirely.
 
+Design of Chemical Feed Systems
+===============================
+
+The AguaClara plants in Honduras have used chlorine stock concentrations between 9 and 11 g/L of calcium hypochlorite. The stainless steel cotter pin in the float valve only lasts about 4 months when the stock concentration is 11 g/L. Thus a maximum calcium hypochlorite concentration of 9 g/L is recommended. A supply of stainless steel cotter pins should be maintained at each plant or a chlorine and acid resistant replacement should be developed. Given the low cost of the stainless steel cotter pins it is likely most cost effective to simply put those pins on a regular replacement schedule. A PVC pin could be used, but PVC is weak in comparison with stainless steel. A larger pin diameter would be needed and could be used by enlarging the hole in the valve. Unfortunately there isn't much material available in the float valve to allow a significant increase in pin diameter.
+
+The maximum coagulant stock concentrations had been 120 g/L as granular PACl prior to the plant at Gracias, Honduras. At Gracias the coagulant stock concentration was 150 g/L of granular PACl. As the concentration of PACl increases it becomes more difficult to mix, the viscosity of the solution increases, and the rate of incrustation of the float valve and dosing tubes increases. 
+
+At Gracias with 11 g/L of calcium hypochlorite and 150 g/L of granular PACl the operators need to disassemble and clean the dosing systems for both chlorine and PACl once per week. At other AguaClara plants the maintenance interval varies between 2 and 4 weeks. Maintenance includes removal of the float valve and the dosing tubes and then cleaning those with vinegar to dissolve the deposition of calcium carbonate.
+
+The dosing systems should either be designed to be cleaned with vinegar in place or to be easily disassembled and cleaned. Given the relatively large volume of 1/2" diameter PVC piping that connects the components of the system the preferred option thus far has been to remove the dosing tubes and the float valves for cleaning. We have used barbed fittings for the dosing tubes, but it is quite challenging to remove tubing from barbed fittings and the result has been premature failure of those fittings. For future chemical dosing systems our goal is to use an easy to disconnect coupling that doesn't require taking the tubing off of the barbed fittings for cleaning.
 
 
 .. _heading_FCM_section_summary:
