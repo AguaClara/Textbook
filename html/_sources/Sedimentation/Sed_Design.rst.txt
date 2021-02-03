@@ -763,7 +763,7 @@ You have now been introduced to the AguaClara sedimentation tank in three parts:
 
 Let's recap some important points about the sedimentation tank.
 
-- The AguaClara sedimentation tank includes three process in one tank: flocculation, sedimentation, and consolidation.
+- The AguaClara sedimentation tank includes three process in one tank: filtration, sedimentation, and consolidation.
 - Floc blankets improve sedimentation tank performance.
 - The floc blanket and floc hopper design eliminate the need for mechanized sludge removal by using hydraulic sludge removal.
 - Plate settlers make it possible to significantly reduce the plan-view area of the sedimentation tank.
