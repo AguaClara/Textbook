@@ -46,34 +46,34 @@ Key understanding: Relative velocities between particles are dominated by viscou
 Relative velocities between particles are dominated by viscous shear because the separation distances are smaller than the inner viscous length scale. The average particle separation distance is given by
 
 .. math::
-   :label: eq_spacing_of_number_concentration
+  :label: eq_spacing_of_number_concentration
 
-    \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{--} V_{\rm{Surround}}}^\frac{1}{3}
+   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{-} V_{\rm{Surround}}}^\frac{1}{3}
 
 | Where:
 | :math:`\bar \Lambda` is the average separation distance
 | :math:`n_P` is the number of particles per volume of suspension
-| :math:`{\rlap{--} V_{\rm{Surround}}}` is the suspension volume occupied by one particle
+| :math:`{\rlap{-} V_{\rm{Surround}}}` is the suspension volume occupied by one particle
 
 The number concentration of particles is given by
 
 .. math::
-   :label: eq_number_concentration_of_diameter
+  :label: eq_number_concentration_of_diameter
 
-   n_P = \frac{C_P}{\rlap{--} V_P \rho_P} = \frac{6}{\pi \bar{d_P}^3} \frac{C_P}{\rho_P}
+   n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi \bar{d_P}^3} \frac{C_P}{\rho_P}
 
 | Where:
 | :math:`C_P` is the particle concentration
-| :math:`\rlap{--} V_P` is the volume of a single particle
+| :math:`\rlap{-} V_P` is the volume of a single particle
 | :math:`\rho_P` is the particle density
 | :math:`\bar{d_P}` is the average particle diameter
 
 Equations :eq:`eq_spacing_of_number_concentration` and :eq:`eq_number_concentration_of_diameter` can be combined to obtain the relationship between separation distance and particle diameter.
 
 .. math::
-   :label: eq_spacing_of_diameter
+  :label: eq_spacing_of_diameter
 
-    \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} =  \bar{d_P} \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{\frac{1}{3}}
+   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} =  \bar{d_P} \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{\frac{1}{3}}
 
 
 .. _figure_Particle_separation:
@@ -117,7 +117,7 @@ Particle separation distance matters because it determines which transport mecha
 
    Diagram of number of clay particles per liter as a function of the clay concentration. Note that even 1 NTU water has millions of primary particles per liter.
 
-The next step is to calculate the separation distance between the clay particles over this range of clay concentrations using equation :eq:`eq_spacing_of_diameter`.
+The next step is to calculate the separation distance between the clay particles over this range of clay concentrations using Equation :eq:`eq_spacing_of_diameter`.
 
 .. code:: python
 
@@ -158,9 +158,9 @@ Solving for the average energy dissipation rate, :math:`\bar \varepsilon`, we ob
 
 .. math::
 
-   \bar \varepsilon = \nu G_{CS}^2
+  \bar \varepsilon = \nu G_{CS}^2
 
-We will use the inner viscous length scale, equation :eq:`eq_inner_viscous_length` to determine whether viscous or inertial transport dominates particle collisions in surface water treatment given the range of particle separation distances (see :numref:`figure_LambdaClay_vs_CClay`).
+We will use the inner viscous length scale, Equation :eq:`eq_inner_viscous_length` to determine whether viscous or inertial transport dominates particle collisions in surface water treatment given the range of particle separation distances (see :numref:`figure_LambdaClay_vs_CClay`).
 
 .. code:: python
 
@@ -224,15 +224,15 @@ Now that we know that the collisions are controlled by viscosity we can begin fo
 
 The volume cleared by the wandering particle is proportional to the area defined by a circle with diameter = sum of the particle diameters. This is because the wandering particle with strike the stationary particle if the wandering particle's center is anywhere within a diameter of the center of the stationary particle.
 
-.. math:: {\rlap{--} V_{\rm{Cleared}}} \propto \pi \bar d_P^2
+.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto \pi \bar d_P^2
 
 The volume cleared is proportional to time
 
-.. math:: {\rlap{--} V_{\rm{Cleared}}} \propto t
+.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto t
 
 The volume cleared is proportional to the relative velocity between the two particles.
 
-.. math:: {\rlap{--} V_{\rm{Cleared}}} \propto \bar v_r
+.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto \bar v_r
 
 We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between the two particles that will eventually collide is assumed to be proportional to the average distance between the two particles.
 
@@ -248,10 +248,10 @@ The only way to for :math:`\bar \varepsilon` and :math:`\nu` to produce dimensio
 
 .. math:: \bar v_r \approx \bar \Lambda \bar G_{CS}
 
-The volume cleared, :math:`{\rlap{--} V_{\rm{Cleared}}}` must equal the volume occupied by one particle, :math:`{\rlap{--} V_{\rm{Surround}}}` for a collision to occur. Combining the three equations for :math:`{\rlap{--} V_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared as a function of time.
+The volume cleared, :math:`{\rlap{-} V_{\rm{Cleared}}}` must equal the volume occupied by one particle, :math:`{\rlap{-} V_{\rm{Surround}}}` for a collision to occur. Combining the three equations for :math:`{\rlap{-} V_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared as a function of time.
 
 .. math::
-   \bar \Lambda^3 = {\rlap{--} V_{\rm{Surround}}} = {\rlap{--} V_{\rm{Cleared}}} \approx \pi \bar d_P^2 \bar \Lambda \bar G_{CS} \bar t_c
+  \bar \Lambda^3 = {\rlap{-} V_{\rm{Surround}}} = {\rlap{-} V_{\rm{Cleared}}} \approx \pi \bar d_P^2 \bar \Lambda \bar G_{CS} \bar t_c
 
 | Where:
 | :math:`\bar t_c` is the average time required for a collision between two particles
@@ -259,9 +259,9 @@ The volume cleared, :math:`{\rlap{--} V_{\rm{Cleared}}}` must equal the volume o
 Solving for the collision time we obtain
 
 .. math::
-   :label: tc
+  :label: tc
 
-   \bar t_c \approx \frac{\bar \Lambda^2}{\pi \bar d_P^2 \bar G_{CS}}
+  \bar t_c \approx \frac{\bar \Lambda^2}{\pi \bar d_P^2 \bar G_{CS}}
 
 In summary, a relationship for the mean time between collisions :math:`\bar{t_{c}}` was found by proposing an average condition for a collision, successful or unsuccessful, to occur. To define this condition, it was assumed that each primary particle on average occupies a fraction of the reactor volume, :math:`\bar{V}_{Surround}`, inversely proportional to the number concentration of particles. Furthermore, prior to a collision, a particle on average sweeps a volume, :math:`\bar{V}_{Cleared}`, proportional to :math:`\bar{t_c}` and to the mean relative velocity between approaching particles, :math:`\bar{v}_r`. As an average condition, it was posited that for each collision, :math:`\bar{V}_{Cleared}` must equal :math:`\bar{V}_{Surround}`. From this, a relationship for a characteristic collision time, :math:`\bar{t_c}`, was obtained:
 
@@ -273,7 +273,7 @@ Collision Rates
 The change in the number of successful collisions (from a single particle's perspective) with respect to time is equal to the mean probability that a collision will result in an attachment, :math:`\bar{\alpha}`, divided by time for one collision, :math:`\bar t_c`.
 
 .. math::
-   :label: dNc
+  :label: dNc
 
 	 \frac{dN_c}{dt}=\frac{\bar{\alpha}}{\bar{t_{c}}},
 
@@ -287,10 +287,10 @@ The probability that two primary particles attach is expected to be equal to the
 
 Since the model assumes an initially monodisperse population of primary particles and that collisions between differently-sized particles are unfavorable, differential sedimentation is considered negligible.  Brownian motion is only significant for particles smaller than 1 :math:`\mu m` :cite:`Floc_Model-benjamin_water_2013`, and so this model makes the assumption that primary particles are larger than 1 :math:`\mu m`.
 
-The collision rate :cite:`Floc_Model-pennock_theoretical_2016` can be obtained by substituting equation :eq:`tc` into equation :eq:`dNc`.
+The collision rate :cite:`Floc_Model-pennock_theoretical_2016` can be obtained by substituting Equation :eq:`tc` into Equation :eq:`dNc`.
 
 .. math::
-   :label: Nclam
+  :label: Nclam
 
 	  \frac{dN_{c}}{dt}=\pi\bar{\alpha}\frac{\bar{d}_{P}^2}{\bar \Lambda^2} \bar G_{CS}
 
@@ -300,7 +300,7 @@ where :math:`\bar G_{CS}` is the Camp Stein velocity gradient.
 Because the flocculation performance equation will ultimately track particle concentration, the concentration of primary particles, :math:`C_{P}`, was substituted for :math:`\bar \Lambda` using
 
 .. math::
-   :label: Ld
+  :label: Ld
 
 	 \bar \Lambda^3=\frac{\pi}{6}\frac{\rho_{P}}{C_{P}}\bar{d}_P^3,
 
@@ -308,7 +308,7 @@ Because the flocculation performance equation will ultimately track particle con
 where :math:`\rho_{P}` is the characteristic density of primary particles. Equation :eq:`Ld` can be substituted into Equation :eq:`Nclam` to result in:
 
 .. math::
-   :label: Ncld
+  :label: Ncld
 
    dN_{c}=\pi\bar{\alpha}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3}\bar G_{CS}dt.
 
@@ -323,7 +323,7 @@ Coagulant nanoparticle and primary particle Model
 Continuing from :cite:`Floc_Model-pennock_theoretical_2016`, the above Lagrangian differential relationships are further developed to become integrated performance prediction equations. Equation :eq:`Ncld` cannot be integrated as written because the concentration of primary particles is expected to change with each collision, and thus that relationship must be specified. During the average time required for one collision it is expected that approximately :math:`e^{-1}` of the particles will undergo at least one collision. The time required for a collision will change as flocculation proceeds as the average distance between primary particles increases. The rate of loss of primary particles due to successful collisions will be first order with respect to the number of successful collisions.
 
 .. math::
-   :label: dCP
+  :label: dCP
 
 	 \frac{dC_{P}}{dN_{c}}=-kC_{P},
 
@@ -333,7 +333,7 @@ where :math:`k` is an experimentally-derived constant that physically represents
 Having Equation :eq:`dCP`, the next step is to substitute it into Equation :eq:`Ncld` and integrate. Solving Equation :eq:`dCP` for :math:`dN_{c}`, substituting it into Equation :eq:`Ncld` and rewriting the equations in terms of primary particles results in Equation :eq:`dCPlam`,
 
 .. math::
-   :label: dCPlam
+  :label: dCPlam
 
 	 \frac{dC_{P}}{-kC_{P}}=\pi\bar{\alpha}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3}\bar G_{CS}dt,
 
@@ -343,7 +343,7 @@ It is interesting to note that rearranging Equation :eq:`dCPlam` in terms of :ma
 From Equation :eq:`dCPlam` it is possible to integrate and obtain equations for flocculation performance. After separation of variables, one side of the equation is integrated with respect to time from the initial time (:math:`t=0`) to the time of interest, generally taken to be the mean hydraulic residence time (:math:`t=\theta`). The other side of the equation is integrated with respect to the concentration of primary particles from the value at the initial time (:math:`C_{P_0}`), equivalent to the initial concentration of primary particles, to the concentration of primary particles at the time of interest (:math:`C_{P}`). The integral becomes:
 
 .. math::
-   :label: intdCPlam
+  :label: intdCPlam
 
 	 \frac{1}{\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\int_{C_{P_0}}^{C_{P}}C_{P}^{-5/3}dC_{P}=-k\bar{\alpha}\bar G_{CS}\int_0^\theta dt.
 
@@ -355,7 +355,7 @@ The other assumption on the right hand side is that the mean velocity gradient, 
 Integration of Equation :eq:`intdCPlam` gives:
 
 .. math::
-   :label: CPlamint
+  :label: CPlamint
 
 	 \frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)=k\bar{\alpha}\bar G_{CS}\theta.
 
@@ -363,7 +363,7 @@ Integration of Equation :eq:`intdCPlam` gives:
 This can be put in terms of :math:`\bar \Lambda` for simplicity by using Equation :eq:`Ld` and rearranging in terms of the familiar Camp-Stein parameter, :math:`\bar G_{CS}\theta`, to be
 
 .. math::
-   :label: Gtlam
+  :label: Gtlam
 
 	 \bar G_{CS}\theta = \frac{3}{2}\frac{{\left( {{\bar \Lambda ^2} - \bar \Lambda_0^2} \right)}}{{k\pi\bar{\alpha} \bar{d}_P^2}}.
 
@@ -373,7 +373,7 @@ Equation :eq:`Gtlam` gives guidance for flocculator design in that higher values
 Modifying Equation :eq:`Gtlam` to be in terms of :math:`C_P` produces:
 
 .. math::
-   :label: GtlamSim
+  :label: GtlamSim
 
 	 \bar G_{CS}\theta = \frac{3}{2k\pi\bar{\alpha}}\left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{2/3}.
 
@@ -381,7 +381,7 @@ Modifying Equation :eq:`Gtlam` to be in terms of :math:`C_P` produces:
 A desirable way to represent flocculation performance is with the negative log of the fraction of particles remaining (also often referred to as log removal), :math:`pC^\star`, given in :cite:`Floc_Model-swetland_flocculation-sedimentation_2014` as:
 
 .. math::
-   :label: pC
+  :label: pC
 
 	 p{C^\star}=-\log_{10}\left(\frac{C_{P}}{C_{P_0}}\right)
 
@@ -389,7 +389,7 @@ A desirable way to represent flocculation performance is with the negative log o
 Likewise, a way to simplify Equation :eq:`CPlamint` is to put it in terms of the particle volume fraction, :math:`\phi`, defined as:
 
 .. math::
-   :label: phi
+  :label: phi
 
 	 \phi=\frac{C_P}{\rho_P}=\frac{\pi}{6}\left(\frac{\bar{d}_P}{\bar \Lambda}\right)^3.
 
@@ -398,7 +398,7 @@ Putting Equation :eq:`CPlamint` in terms of :math:`pC^\star` and
 :math:`\phi` results in:
 
 .. math::
-   :label: pClam
+  :label: pClam
 
 	 p{C^\star}=\frac{3}{2}\log_{10}\left[\frac{2}{3}\left(\frac{6}{\pi}\right)^{2/3}k\pi\bar{\alpha}\bar G_{CS}\theta\phi_0^{2/3}+1\right].
 
@@ -412,14 +412,14 @@ Experimental Protocols
 Equation :eq:`pClam` was tested under turbulent conditions. The design scheme chosen to meet these requirements was a tube flocculator, illustrated in :numref:`figure_apparatus` and described in :cite:`Floc_Model-pennock_theoretical_2016`. This tube flocculator operated in the turbulent flow regime, which for pipe flow means that :math:`Re>4,000` :cite:`Floc_Model-granger_fluid_1995`. The change in mean energy dissipation rate due to any modification to the system was approximated by
 
 .. math::
-   :label: EDR
+  :label: EDR
 
 	 \bar{\varepsilon}=\frac{gh_\ell}{\theta},
 
 
 where :math:`g` is the acceleration due to gravitational force and :math:`h_\ell` is the head loss across the flocculator. As mentioned previously, the use of :math:`\bar \varepsilon` assumes that the energy dissipation rate throughout the flocculator is completely uniform so that it can be represented with a simple spatial average rather than a weighted average accounting for the proportion of the flow passing through different zones of energy dissipation rate. This approximation requires that the majority of energy dissipation (represented by head loss) is due to fluid shear (minor loss) in the bulk flow. If the head loss across a flocculator were primarily as a result of shear on the reactor walls (major loss), only a small fraction of the flow would experience this energy dissipation rate in the near-wall zone, and estimating the mean energy dissipation rate by this method would be invalid.
 
-It is hypothesized, however, that the constrictions in the tube flocculator created submerged free jets downstream, generating fluid shear across the cross section of the flow :cite:`Floc_Model-pennock_theoretical_2016`. This hypothesis is supported by a calculation of the head loss due to wall shear using the Darcy-Weisbach equation :cite:`Floc_Model-granger_fluid_1995`. The turbulent tube flocculator would be expected to have a total head loss of around 7 cm if only wall shear were present, but an average head loss of 90 cm was measured across the flocculator by means of a differential pressure sensor, indicating that significant fluid shear is present.
+It is hypothesized, however, that the constrictions in the tube flocculator created submerged free jets downstream, generating fluid shear across the cross section of the flow :cite:`Floc_Model-pennock_theoretical_2016`. This hypothesis is supported by a calculation of the head loss due to wall shear using the Darcy-Weisbach Equation :cite:`Floc_Model-granger_fluid_1995`. The turbulent tube flocculator would be expected to have a total head loss of around 7 cm if only wall shear were present, but an average head loss of 90 cm was measured across the flocculator by means of a differential pressure sensor, indicating that significant fluid shear is present.
 
 Referring to Equation :eq:`EDR`, changing the head loss by changing the constriction of the tubes or changing the water elevation difference across the flocculator would change the energy dissipation rate. Likewise, either of the above two modifications would change the mean hydraulic residence time in the flocculator. This could also be accomplished by changing the length of the flocculator.
 
@@ -460,14 +460,14 @@ The above process was used to conduct the experiments to test the applicability 
    :align: center
    :alt: internal figure
 
-   Effluent turbidity as a function of coagulant dose for experiments performed with influent turbidity of 900 NTU, velocity gradient of 147/s, and hydraulic residence time of about 413 s.
+   Effluent turbidity as a function of coagulant dose for experiments performed with influent turbidity of 900 NTU, velocity gradient of 147 Hz, and hydraulic residence time of about 413 s.
 
 
 The data shown in :numref:`figure_PennockFig2` were compared with the viscous model, as shown in :numref:`figure_PennockFig3`.
 In this graph, the data are plotted in terms of Equation :eq:`pClam` and its corresponding composite parameter taken from Equation :eq:`Nclam`,
 
 .. math::
-   :label: Paramlam
+  :label: Paramlam
 
 	 N_{c}\propto\bar{\alpha}\theta \bar G_{CS}\phi_0^{2/3}.
 
@@ -543,23 +543,23 @@ In laminar-flow flocculators, the velocity of one floc relative to another scale
 
 .. math::
 
-   \overline \Lambda=d_{\mathrm P}{\left(\frac{\pi }{6\phi }\right)}^{\frac{1}{3}}.
+  \overline \Lambda=d_{\mathrm P}{\left(\frac{\pi }{6\phi }\right)}^{\frac{1}{3}}.
 
 The result is that, for laminar flow, the average time for primary particle collisions scales with :math:`{\phi }^{-\frac{2}{3}}` (Weber-Shirk and Lion 2010).
 
 A laminar-flow hydraulic flocculator model was developed and validated based on the above analysis in Pennock et al. (2018) with the form
 
 .. math::
-   :label: eq_AguaClara_Flocculation_Model
+  :label: eq_AguaClara_Flocculation_Model
 
-   \mathrm{p}C^{*}=\frac{3}{2}{{\log}_{10} \left[\frac{2}{3}{\left(\frac{6}{\pi }\right)}^{\frac{2}{3}}\pi k\overline{\alpha }\overline G_{CS}\theta {\phi }^{\frac{2}{3}}_0+1\right]\ },
+  \mathrm{p}C^{*}=\frac{3}{2}{{\log}_{10} \left[\frac{2}{3}{\left(\frac{6}{\pi }\right)}^{\frac{2}{3}}\pi k\overline{\alpha }\overline G_{CS}\theta {\phi }^{\frac{2}{3}}_0+1\right]\ },
 
 where  :math:`k` is a fitting parameter dependent on the value of :math:`V_{\mathrm c}` used for sedimentation, :math:`\overline{\alpha }` is the mean fraction of collisions that are successful (i.e., result in aggregation), and :math:`\mathrm{p}C^*` is defined as
 
 .. math::
-   :label: eq_pC_AguaClara_Flocculation_Model
+  :label: eq_pC_AguaClara_Flocculation_Model
 
-   \mathrm{p}C^*=-{\log \left(\frac{\mathrm{Effluent\ Turbidity}}{\mathrm{Influent\ Turbidity}}\right)\ }.
+  \mathrm{p}C^*=-{\log \left(\frac{\mathrm{Effluent\ Turbidity}}{\mathrm{Influent\ Turbidity}}\right)\ }.
 
 Equation :eq:`eq_AguaClara_Flocculation_Model`, referred to as the AguaClara flocculation model in Pennock et al. (2018), is a Lagrangian hydrodynamic model that assumes that the aggregation of primary particles is rate-limiting. It further assumes that these particles, on average, will collide when the volume of fluid swept out as one particle approaches the other is equal to the average volume occupied by a single particle in the suspension. The time for these collisions to occur increases as flocculation proceeds, since the concentration of primary particles decreases in a way that is assumed to be first order with respect to collisions. Thus, with each successive collision, the average volume occupied by primary particles increases, and it takes longer for the next collision to occur. In Equation :eq:`eq_AguaClara_Flocculation_Model`, performance is linearly proportional to the logarithm of the effective collision potential, :math:`\log(\overline{\alpha }\overline G_{CS}\theta {\phi }^{2/3}_0)`.
 
@@ -584,7 +584,7 @@ where :math:`C_{\mathrm PACl}` is the dose of coagulant in mg/L as Al; :math:`C_
 A key model assumption was that humic acid macromolecules cannot adhere to a coagulant surface that is occupied by a humic acid macromolecule, since humic acid macromolecules are assumed to not appreciably self-aggregate. Li et al. (2018) observed that for humic acid adsorption onto :math:`\mathrm{Al_2O_3}` surfaces, the macromolecules adsorbed in a monolayer. The outcome of this assumption is that humic acid macromolecules attach to an uncovered surface of coagulant and do not stack on top of one another. The available surface area of the PACl nanoparticle was modeled as the surface area of an equivalent sphere. The amount of that area that is occupied by an attached humic acid macromolecule was estimated as the projected area of a sphere with volume equivalent to a humic acid macromolecule.  A new variable describing the coverage of coagulant nanoparticle surface area by humic acid macromolecules,
 
 .. math::
-   :label: eq_Gamma_HA-PACl
+  :label: eq_Gamma_HA-PACl
 
    {\overline{\Gamma}_\mathrm{HA-PACl}}=\frac{{{\frac{\pi }{4}d}_\mathrm{HA}}^2}{{{\pi d}_\mathrm{PACl}}^2}\frac{N_\mathrm{HA}}{N_\mathrm{PACl}},
 
@@ -608,7 +608,7 @@ Of these interactions considered in the model, the collisions that will result i
 
 .. math::
 
-   \overline{\alpha }\ ={\overline{\alpha }}_\mathrm{PACl-Clay}+{\overline{\alpha }}_\mathrm{PACl-PACl}+{\overline{\alpha }}_\mathrm{HA-PACl},
+  \overline{\alpha }\ ={\overline{\alpha }}_\mathrm{PACl-Clay}+{\overline{\alpha }}_\mathrm{PACl-PACl}+{\overline{\alpha }}_\mathrm{HA-PACl},
 
 where the subscripts define the two surfaces that are interacting. The overbars indicate that all of these represent mean probabilities for an entire suspension rather than the probabilities for specific particles.
 

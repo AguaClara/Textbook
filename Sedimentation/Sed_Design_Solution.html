@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sedimentation Design Solution &mdash; AguaClara Textbook 0.070 documentation</title>
+  <title>Sedimentation Design Solution &mdash; AguaClara Textbook 0.074 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.070
+                0.074
               </div>
             
           
@@ -90,7 +90,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
@@ -104,11 +105,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocs, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces, and Fluidized Suspensions Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
 <ul>
@@ -284,7 +291,7 @@
   <div class="section" id="sedimentation-design-solution">
 <h1>Sedimentation Design Solution<a class="headerlink" href="#sedimentation-design-solution" title="Permalink to this headline">¶</a></h1>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
@@ -392,7 +399,7 @@ The minimum width of the sed tank diffusers is 2.409 millimeter</p>
 </pre></div>
 </div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-0">
-<span class="eqno">(558)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-0" title="Permalink to this equation">¶</a></span>\[Vel_{Tube,Max}=\left(\frac{2\,\Pi_{Error}\,Headloss_{DosingTube,Max}\,g}{K_{Minor}}\right)^{\frac{1}{2}}\]</div>
+<span class="eqno">(611)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-0" title="Permalink to this equation">¶</a></span>\[Vel_{Tube,Max}=\left(\frac{2\,\Pi_{Error}\,Headloss_{DosingTube,Max}\,g}{K_{Minor}}\right)^{\frac{1}{2}}\]</div>
 </div>
 <div class="section" id="id3">
 <h3>3:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
@@ -408,7 +415,7 @@ The minimum width of the sed tank diffusers is 2.409 millimeter</p>
 </div></blockquote>
 <p>Area is given using the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-1">
-<span class="eqno">(559)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}  Area_{PVC}=2\left (B_{diffuser}+W_{diffuser} \right )thickness_{wall}\\- Use the equation for :math:`Area_{PVC}` to calculate the following:\\  - the outer length of the rectangular diffuser slot,
+<span class="eqno">(612)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-1" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}  Area_{PVC}=2\left (B_{diffuser}+W_{diffuser} \right )thickness_{wall}\\- Use the equation for :math:`Area_{PVC}` to calculate the following:\\  - the outer length of the rectangular diffuser slot,
      :math:`B_{diffuser}`.
   - the inner length of the rectangular diffuser slot,
      :math:`W_{diffuser}`.\end{aligned}\end{align} \]</div>
@@ -529,7 +536,7 @@ Sed diffuser inner length: 5.522 centimeter</p>
 </ul>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-2">
-<span class="eqno">(560)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-2" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\left( {{V_{in}} - {V_{out}}} \right)^2}{2g}\]</div>
+<span class="eqno">(613)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-2" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\left( {{V_{in}} - {V_{out}}} \right)^2}{2g}\]</div>
 <p>You will find that the exit head loss for water leaving the diffuser is high enough that we need to account for head loss in the sed tank inlet piping for our designs.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hl_sed_diffuser_exit1</span> <span class="o">=</span> <span class="p">(((</span><span class="n">V_diffuser</span> <span class="o">-</span> <span class="n">V_sed_up</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span><span class="n">g</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 
@@ -560,17 +567,17 @@ port) flow is given by:</li>
 </ul>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-3">
-<span class="eqno">(561)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-3" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}  \Pi_{DiffuserFlow} = \sqrt{\frac{{hl}_{ParallelPath}  - \frac{\Delta{H}_{Manifold}}{2}}{{hl}_{ParallelPath} + \frac{\Delta{H}_{Manifold}}{2}}}\\- The change in piezometric head is given by:\end{aligned}\end{align} \]</div>
+<span class="eqno">(614)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-3" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned} \Pi_{DiffuserFlow} = \sqrt{\frac{{hl}_{ParallelPath}  - \frac{\Delta{H}_{Manifold}}{2}}{{hl}_{ParallelPath} + \frac{\Delta{H}_{Manifold}}{2}}}\\- The change in piezometric head is given by:\end{aligned}\end{align} \]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-4">
-<span class="eqno">(562)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-4" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}   \Delta{H}_{Manifold} = \frac{{{Velocity}_{Manifold}}^{2}}{2g}\\- The maximum allowable velocity in the manifold is given by:\end{aligned}\end{align} \]</div>
+<span class="eqno">(615)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-4" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}  \Delta{H}_{Manifold} = \frac{{{Velocity}_{Manifold}}^{2}}{2g}\\- The maximum allowable velocity in the manifold is given by:\end{aligned}\end{align} \]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-5">
-<span class="eqno">(563)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-5" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left({hl}_{ParallelPath} + \frac{\Delta{H}_{Manifold}}{2} \right) = {hl}_{ParallelPath}  - \frac{\Delta{H}_{Manifold}}{2}\]</div>
+<span class="eqno">(616)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-5" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left({hl}_{ParallelPath} + \frac{\Delta{H}_{Manifold}}{2} \right) = {hl}_{ParallelPath}  - \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-6">
-<span class="eqno">(564)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-6" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) {hl}_{ParallelPath} + \left({\Pi_{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
+<span class="eqno">(617)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-6" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) {hl}_{ParallelPath} + \left({\Pi_{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-7">
-<span class="eqno">(565)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-7" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} =  \frac{\Delta{H}_{Manifold}}{2}\]</div>
+<span class="eqno">(618)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-7" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} =  \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-8">
-<span class="eqno">(566)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-8" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} = \frac{{{Velocity}_{Manifold}}^{2}}{4g}\]</div>
+<span class="eqno">(619)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-8" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) {hl}_{ParallelPath} = \frac{{{Velocity}_{Manifold}}^{2}}{4g}\]</div>
 <div class="section" id="id10">
 <h3>10:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint,
@@ -783,7 +790,7 @@ If we use this design approach the plant design capacity will slightly exceed th
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
@@ -805,7 +812,7 @@ If we use this design approach the plant design capacity will slightly exceed th
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.070',
+            VERSION:'0.074',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

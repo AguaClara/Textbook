@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flow Control and Measurement Derivations &mdash; AguaClara Textbook 0.070 documentation</title>
+  <title>Flow Control and Measurement Derivations &mdash; AguaClara Textbook 0.074 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.070
+                0.074
               </div>
             
           
@@ -90,7 +90,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
@@ -103,13 +104,13 @@
 <li class="toctree-l1"><a class="reference internal" href="FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Flow Control and Measurement Derivations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#for-a-tank-with-a-valve"><span class="math notranslate nohighlight">\(Q(t)\)</span> for a Tank with a Valve</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#and-for-tank-drain-equation"><span class="math notranslate nohighlight">\(D(t)\)</span> and <span class="math notranslate nohighlight">\(t(D)\)</span> for Tank Drain Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#q-t-for-a-tank-with-a-valve"><span class="math notranslate nohighlight">\(Q(t)\)</span> for a Tank with a Valve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#d-t-and-t-d-for-tank-drain-equation"><span class="math notranslate nohighlight">\(D(t)\)</span> and <span class="math notranslate nohighlight">\(t(D)\)</span> for Tank Drain Equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#design-equations-for-the-linear-chemical-dose-controller-cdc">Design Equations for the Linear Chemical Dose Controller (CDC)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#cdc-design-equation-derivation">CDC Design Equation Derivation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#designing-for-the-error-constraint">Designing for the error constraint, <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#designing-for-the-proper-amount-of-head-loss">Designing for the proper amount of head loss, <span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cdc-dosing-tube-s-diameter-plots">CDC Dosing Tube(s) Diameter <span class="math notranslate nohighlight">\(D_{Min}\)</span> Plots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#designing-for-the-error-constraint-pi-error">Designing for the error constraint, <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#designing-for-the-proper-amount-of-head-loss-h-l-max">Designing for the proper amount of head loss, <span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cdc-dosing-tube-s-diameter-d-min-plots">CDC Dosing Tube(s) Diameter <span class="math notranslate nohighlight">\(D_{Min}\)</span> Plots</a></li>
 </ul>
 </li>
 </ul>
@@ -117,11 +118,17 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ET_Design.html">Entrance Tank Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocs, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces, and Fluidized Suspensions Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
 <ul>
@@ -259,8 +266,8 @@
             
   <div class="section" id="flow-control-and-measurement-derivations">
 <span id="title-flow-control-derivations"></span><h1>Flow Control and Measurement Derivations<a class="headerlink" href="#flow-control-and-measurement-derivations" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="for-a-tank-with-a-valve">
-<span id="heading-flow-for-a-tank-with-a-valve"></span><h2><span class="math notranslate nohighlight">\(Q(t)\)</span> for a Tank with a Valve<a class="headerlink" href="#for-a-tank-with-a-valve" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="q-t-for-a-tank-with-a-valve">
+<span id="heading-flow-for-a-tank-with-a-valve"></span><h2><span class="math notranslate nohighlight">\(Q(t)\)</span> for a Tank with a Valve<a class="headerlink" href="#q-t-for-a-tank-with-a-valve" title="Permalink to this headline">¶</a></h2>
 <p>This document contains the derivation of the flow through a tank-with-a-valve over time, <span class="math notranslate nohighlight">\(Q(t)\)</span>. Our reference will be a simple hypochlorinator, shown in the following image. In the image, a hypochlorite solution is slowly dripping and mixing with piped source water, thereby disinfecting it. The valve is almost closed to make sure that the hypochlorite solution drips instead of flows. At the end of this document is an image which shows the variables in the final equation.</p>
 <div class="figure align-center" id="id1">
 <span id="figure-drip-hypochlorinator"></span><a class="reference internal image-reference" href="../_images/drip_hypochlorinator.png"><img alt="Drip hypochlorinator" src="../_images/drip_hypochlorinator.png" style="width: 600px;" /></a>
@@ -268,10 +275,10 @@
 </div>
 <p>This derivation begins by finding two equations for flow, <span class="math notranslate nohighlight">\(Q\)</span>, through the hypochlorinator and setting them equal to each other. First, the rate of change of the volume of hypochlorite solution in the tank is equivalent to the flow out of the hypochlorinator. Since the volume of hypochlorite solution in the tank is equal to the tank’s cross-sectional area times it height, we get the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-0">
-<span class="eqno">(78)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-0" title="Permalink to this equation">¶</a></span>\[Q =  - \frac{d\rlap{--}V}{dt} = - \frac{{A_{Tank}}dh}{dt}\]</div>
+<span class="eqno">(78)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-0" title="Permalink to this equation">¶</a></span>\[Q =  - \frac{d\rlap{-}V}{dt} = - \frac{{A_{Tank}}dh}{dt}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
-<div class="line"><span class="math notranslate nohighlight">\(\frac{d\rlap{--}V}{dt}\)</span> = rate of change in volume of solution in the tank</div>
+<div class="line"><span class="math notranslate nohighlight">\(\frac{d\rlap{-}V}{dt}\)</span> = rate of change in volume of solution in the tank</div>
 <div class="line"><span class="math notranslate nohighlight">\(\frac{dh}{dt}\)</span> = rate of change in height of water (hypochlorite solution) level with time</div>
 </div>
 <p>Our other equation for flow is the head loss equation. Since major losses are negligible for a short pipe-low flow rate system, we only need to consider minor losses. The only real minor loss in this system occurs in the almost-closed valve that is dripping the hypochlorite solution. However, we will also use the head loss trick. Therefore, the total driving head of the system <span class="math notranslate nohighlight">\(h\)</span> is equal to the minor losses:</p>
@@ -285,7 +292,7 @@
 <span class="eqno">(81)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-3" title="Permalink to this equation">¶</a></span>\[A_{Tank} \frac{dh}{dt} + A_{Valve} \sqrt{\frac{2gh}{\sum K}} = 0\]</div>
 <p>From here, calculus and equation substitution dominate the derivation. Separating the variables of the equation immediately above, we get the following integral:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-4">
-<span class="eqno">(82)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-4" title="Permalink to this equation">¶</a></span>\[\frac{ -A_{Tank}}{{A_{Valve}} \sqrt{\frac{2g}{\sum K}} }   \int \limits_{h_0}^h \frac{dh}{\sqrt h} = \int \limits_0^t {dt}\]</div>
+<span class="eqno">(82)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-4" title="Permalink to this equation">¶</a></span>\[\frac{ -A_{Tank}}{{A_{Valve}} \sqrt{\frac{2g}{\sum K}} }  \int \limits_{h_0}^h \frac{dh}{\sqrt h} = \int \limits_0^t {dt}\]</div>
 <p>Which, when integrated, yields:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-5">
 <span class="eqno">(83)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-5" title="Permalink to this equation">¶</a></span>\[\frac{ -A_{Tank}}{A_{Valve} \sqrt{ \frac{2g}{\sum K}} } \cdot 2 \left( \sqrt{h} - \sqrt{h_0} \right) = t\]</div>
@@ -322,12 +329,12 @@
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-13">
 <span class="eqno">(91)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-13" title="Permalink to this equation">¶</a></span>\[\color{purple}{
 \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
-}\]</div>
+ }\]</div>
 <p>Which can be slightly rearranged to yield:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-14">
 <span class="eqno">(92)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-14" title="Permalink to this equation">¶</a></span>\[\color{purple}{
-Q(t) = Q_0 \left( 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0} \right)
-}\]</div>
+ Q(t) = Q_0 \left( 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0} \right)
+ }\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(Q = Q(t)\)</span> = flow of hypochlorite through valve at time <span class="math notranslate nohighlight">\(t\)</span></div>
@@ -338,8 +345,8 @@ Q(t) = Q_0 \left( 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0} \rig
 </div>
 <p>“How does this ‘tank with a valve’ scenario differ from the ‘hole in a bucket’ scenario?” some might ask. If you are interested, you may go through the derivation on your own using the orifice equation instead of the minor loss equation for the first step. If you do so you’ll find that the equation remains almost the same, the only difference being that the <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span> term drops out for an orifice, as <span class="math notranslate nohighlight">\(h_{Tank} = h_0\)</span>. The big difference in the systems lies with the flexibility of having a valve. It can be tightened or loosened to change the flow rate, whereas changing the size of an orifice multiple times in a row is not recommended and is usually irreversible.</p>
 </div>
-<div class="section" id="and-for-tank-drain-equation">
-<span id="heading-diameter-and-time-tank-drain-equation"></span><h2><span class="math notranslate nohighlight">\(D(t)\)</span> and <span class="math notranslate nohighlight">\(t(D)\)</span> for Tank Drain Equation<a class="headerlink" href="#and-for-tank-drain-equation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="d-t-and-t-d-for-tank-drain-equation">
+<span id="heading-diameter-and-time-tank-drain-equation"></span><h2><span class="math notranslate nohighlight">\(D(t)\)</span> and <span class="math notranslate nohighlight">\(t(D)\)</span> for Tank Drain Equation<a class="headerlink" href="#d-t-and-t-d-for-tank-drain-equation" title="Permalink to this headline">¶</a></h2>
 <p>This document contains the derivation of <span class="math notranslate nohighlight">\(D_{Pipe}\)</span>, which is the pipe diameter necessary to install in a drain system to entirely drain a tank in time <span class="math notranslate nohighlight">\(t_{Drain}\)</span>.</p>
 <p>First, it is necessary to understand how AguaClara tank drains work and what they look like. Many tanks, including the flocculator and entrance tank, have a hole in their bottoms which are fitted with pipe couplings. During normal operation, these couplings have pipe stubs in them, and the pipe stubs are tall enough to go above the water level in the tank and not allow water to flow into the drain. When the pipe stub is removed, the water begins to flow out of the drain, as the image below indicates. The drain pipe consists of pipe and one elbow, shown in the image.</p>
 <div class="figure align-center" id="id3">
@@ -347,7 +354,7 @@ Q(t) = Q_0 \left( 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0} \rig
 <p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">This is AguaClara’s alternatives to having valves.</span></p>
 </div>
 <p>While AguaClara sedimentation tanks use valves instead of pipe to begin the process of draining, the actual drain piping system is the same, pipe and an elbow. The equation that will soon be derived applies to both pipe stub and valve drains.</p>
-<p>We will start the derivation from the following equation, which is found in an intermediate step from the ‘<span class="math notranslate nohighlight">\(Q(t)\)</span> <a class="reference internal" href="#heading-flow-for-a-tank-with-a-valve"><span class="std std-ref"> for a Tank with a Valve</span></a>.’ While this system does not have a valve, it has other sources of minor loss and therefore the equation is still valid.</p>
+<p>We will start the derivation from the following equation, which is found in an intermediate step from the ‘<span class="math notranslate nohighlight">\(Q(t)\)</span> <a class="reference internal" href="#heading-flow-for-a-tank-with-a-valve"><span class="std std-ref">Q(t) for a Tank with a Valve</span></a>.’ While this system does not have a valve, it has other sources of minor loss and therefore the equation is still valid.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-15">
 <span class="eqno">(93)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-15" title="Permalink to this equation">¶</a></span>\[\sqrt h  = \sqrt{h_0} - t \frac{A_{Valve}}{2 A_{Tank}} \sqrt {\frac{2g}{K}}\]</div>
 <p>We need to make some adjustments to this equation before proceeding, to make it applicable for this new drain-system scenario. First, we want to assume that the tank has fully drained. Thus, <span class="math notranslate nohighlight">\(t = t_{Drain}\)</span> and <span class="math notranslate nohighlight">\(h = 0\)</span>. Next, we recall that the tank drain is not actually a valve, but just pipe and an elbow, so <span class="math notranslate nohighlight">\(A_{Valve} = A_{Pipe}\)</span>. Additionally, there can be multiple points of minor loss in the drain system: the entrance from the tank into the drain pipe, the elbow, and potentially the exit of the water out of the drain pipe. When considering a sedimentation tank, the open valve required to begin drainage also has a minor loss associated with it. Therefore, it is necessary to substitute <span class="math notranslate nohighlight">\(\sum K\)</span> for <span class="math notranslate nohighlight">\(K\)</span> With these substitutions, the equation becomes:</p>
@@ -364,13 +371,13 @@ Q(t) = Q_0 \left( 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0} \rig
 <p>Finally, we arrive at the equation for drain pipe sizing:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-18">
 <span class="eqno">(96)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-18" title="Permalink to this equation">¶</a></span>\[\color{purple}{
-D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} \left( \frac{H_{Tank} \sum K}{2g} \right)^{\frac{1}{4}}
-}\]</div>
+ D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} \left( \frac{H_{Tank} \sum K}{2g} \right)^{\frac{1}{4}}
+ }\]</div>
 <p>We can also easily rearrange to find the time required to drain a tank given a drain diameter:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-19">
 <span class="eqno">(97)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-19" title="Permalink to this equation">¶</a></span>\[\color{purple}{
-t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \sum K}{2g} }
-}\]</div>
+ t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \sum K}{2g} }
+ }\]</div>
 <p>Such that the variables are as the appear in the image below.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-pipe-stub-drainage-variables"></span><a class="reference internal image-reference" href="../_images/pipe_stub_drainage_variables.png"><img alt="Pipe stub drainage variables" src="../_images/pipe_stub_drainage_variables.png" style="width: 600px;" /></a>
@@ -399,8 +406,8 @@ t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \su
 <p>We begin by defining the head loss through the system <span class="math notranslate nohighlight">\(h_L\)</span>, which is equivalent to defining the driving head <span class="math notranslate nohighlight">\(\Delta h\)</span>. Major losses will be coded as red.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-20">
 <span class="eqno">(98)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-20" title="Permalink to this equation">¶</a></span>\[\color{red}{
-  h_{\rm{f}} = \frac{128\nu LQ}{g\pi D^4}
-  }\]</div>
+   h_{\rm{f}} = \frac{128\nu LQ}{g\pi D^4}
+   }\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\nu\)</span> = kinematic viscosity <em>of the solution going through the dosing tube(s)</em>. This is either coagulant or chlorine</div>
@@ -416,27 +423,27 @@ t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \su
 <span class="eqno">(99)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-21" title="Permalink to this equation">¶</a></span>\[h_e = \frac{8 Q^2}{g \pi^2 D^4} \sum{K}\]</div>
 <p>Therefore, the total head loss is a function of flow, and is shown in the following equation.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-22">
-<span class="eqno">(100)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-22" title="Permalink to this equation">¶</a></span>\[h_L(Q) =
-{\color{red}{
-  \frac{128\nu L Q}{g \pi D^4}}} +
-  \frac{8Q^2}{g \pi^2 D^4} \sum K\]</div>
+<span class="eqno">(100)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-22" title="Permalink to this equation">¶</a></span>\[ h_L(Q) =
+ {\color{red}{
+\frac{128\nu L Q}{g \pi D^4}}} +
+\frac{8Q^2}{g \pi^2 D^4} \sum K\]</div>
 <p>Blue will be used to reference <em>actual</em> head loss from now on. This is the same equation as above.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-23">
 <span class="eqno">(101)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-23" title="Permalink to this equation">¶</a></span>\[\color{blue}{
-  h_L(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q}{g \pi ^2 D^4} \sum{K} \right) Q
-  }\]</div>
+   h_L(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q}{g \pi ^2 D^4} \sum{K} \right) Q
+   }\]</div>
 <p>This equation is not linear with respect to flow. We can make it linear by turning the variable <span class="math notranslate nohighlight">\(Q\)</span> in the <span class="math notranslate nohighlight">\(\frac{8Q}{g \pi ^2 D^4} \sum{K}\)</span> term into a constant. To do this, we pick a maximum flow rate of coagulant/chlorine through the dose controller, <span class="math notranslate nohighlight">\(Q_{Max}\)</span>, and put that into the term in place of <span class="math notranslate nohighlight">\(Q\)</span>. The term becomes <span class="math notranslate nohighlight">\(\frac{8Q_{Max}}{g \pi ^2 D^4} \sum{K}\)</span>, and our linearized model of head loss, coded as green, becomes:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-24">
 <span class="eqno">(102)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-24" title="Permalink to this equation">¶</a></span>\[\color{green}{
-  h_{L_{linear}}(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q_{Max}}{g \pi ^2 D^4} \sum{K} \right) Q
-  }\]</div>
+   h_{L_{linear}}(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q_{Max}}{g \pi ^2 D^4} \sum{K} \right) Q
+   }\]</div>
 <p>Here is a plot of the three colored equations above. Our goal is to minimize the minor losses in the system; to bring the red and blue curves as close as possible to the green one.</p>
 <div class="figure align-center" id="id6">
 <span id="figure-cdc-linearity-model"></span><a class="reference internal image-reference" href="../_images/CDC_linearity_model.png"><img alt="CDC linearity model" src="../_images/CDC_linearity_model.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">MathCAD generated graph for linearity error analysis. TODO: make this in python</span></p>
 </div>
-<div class="section" id="designing-for-the-error-constraint">
-<h4>Designing for the error constraint, <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span><a class="headerlink" href="#designing-for-the-error-constraint" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="designing-for-the-error-constraint-pi-error">
+<h4>Designing for the error constraint, <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span><a class="headerlink" href="#designing-for-the-error-constraint-pi-error" title="Permalink to this headline">¶</a></h4>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last">The first step in the design is to make sure that major losses far exceed minor losses. This will result in an equation for the maximum velocity that can go through the dosing tube(s), <span class="math notranslate nohighlight">\(\color{purple}{\bar v_{Max} }\)</span>.</p>
@@ -448,16 +455,16 @@ t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \su
 <span class="eqno">(104)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-26" title="Permalink to this equation">¶</a></span>\[1 - \Pi_{Error} = \frac{\color{blue}{ h_L }}{\color{green}{ h_{L_{linear}} }}\]</div>
 <p>Now we plug <span class="math notranslate nohighlight">\(\color{blue}{ h_L(Q) }\)</span> and <span class="math notranslate nohighlight">\(\color{green}{ h_{L_{linear}} }\)</span> back into the equation for <span class="math notranslate nohighlight">\(1 - \Pi_{Error}\)</span> and take the limit as <span class="math notranslate nohighlight">\(Q \rightarrow 0\)</span>, as that is when the relative difference between actual head loss and our linear model for head loss is the greatest.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-27">
-<span class="eqno">(105)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-27" title="Permalink to this equation">¶</a></span>\[1 - \Pi_{Error} =
-  \frac{ \color{blue}{
-  \left( \frac{128 \nu L}{g \pi D^4} +
-  \cancel{\frac{8Q}{g \pi^2 D^4} \sum{K}}
-  \right) Q
-  }}
-  {\color{green}{
-  \left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right) Q
-  }}
-  =     \frac{\left( \frac{128 \nu L}{g \pi D^4} \right)}{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right)}\]</div>
+<span class="eqno">(105)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-27" title="Permalink to this equation">¶</a></span>\[ 1 - \Pi_{Error} =
+\frac{ \color{blue}{
+\left( \frac{128 \nu L}{g \pi D^4} +
+\cancel{\frac{8Q}{g \pi^2 D^4} \sum{K}}
+\right) Q
+   }}
+   {\color{green}{
+\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right) Q
+   }}
+   =  \frac{\left( \frac{128 \nu L}{g \pi D^4} \right)}{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right)}\]</div>
 <p>The next steps are algebraic rearrangements to solve for <span class="math notranslate nohighlight">\(L\)</span>. This <span class="math notranslate nohighlight">\(L\)</span> describes the <em>minimum</em> length of dosing tube necessary to meet our error constraint at <em>maximum</em> flow. Thus, we will refer to it as <span class="math notranslate nohighlight">\(L_{Min, \, \Pi_{Error}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-28">
 <span class="eqno">(106)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-28" title="Permalink to this equation">¶</a></span>\[\left( 1 - \Pi_{Error} \right)  \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{Max}}{g \pi ^2 D^4} \sum{K}  =  \frac{128 \nu L}{g \pi D^4}\]</div>
@@ -477,14 +484,14 @@ t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \su
 <p class="first admonition-title">See also</p>
 <p class="last"><strong>Function in aguaclara</strong> <code class="docutils literal notranslate"><span class="pre">cdc.max_linear_flow(Diam,</span> <span class="pre">HeadlossCDC,</span> <span class="pre">Ratio_Error,</span> <span class="pre">KMinor)</span></code> Returns the maximum flow <span class="math notranslate nohighlight">\(Q_{Max}\)</span> that can go through a dosing tube will making sure that linearity between head loss and flow is conserved.</p>
 </div>
-<p>From this equation for <span class="math notranslate nohighlight">\(Q_{Max}\)</span>, we can get to our first design equation, <span class="math notranslate nohighlight">\(\color{purple}{\bar v_{Max}}\)</span> by using the continuity equation <span class="math notranslate nohighlight">\(\bar v_{Max} = \frac{Q_{Max}}{\frac{\pi D^2}{4}}\)</span></p>
+<p>From this equation for <span class="math notranslate nohighlight">\(Q_{Max}\)</span>, we can get to our first design equation, <span class="math notranslate nohighlight">\(\color{purple}{\bar v_{Max}}\)</span> by using the continuity Equation <span class="math notranslate nohighlight">\(\bar v_{Max} = \frac{Q_{Max}}{\frac{\pi D^2}{4}}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-33">
 <span class="eqno">(111)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-33" title="Permalink to this equation">¶</a></span>\[\color{purple}{
-  \bar v_{Max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K} }}
-  }\]</div>
+\bar v_{Max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K} }}
+   }\]</div>
 </div>
-<div class="section" id="designing-for-the-proper-amount-of-head-loss">
-<h4>Designing for the proper amount of head loss, <span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span><a class="headerlink" href="#designing-for-the-proper-amount-of-head-loss" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="designing-for-the-proper-amount-of-head-loss-h-l-max">
+<h4>Designing for the proper amount of head loss, <span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span><a class="headerlink" href="#designing-for-the-proper-amount-of-head-loss-h-l-max" title="Permalink to this headline">¶</a></h4>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last">The second step in the design is to make sure that the maximum head loss corresponds to the maximum flow of chemicals. This will result in an equation for the length of the dosing tube(s), <span class="math notranslate nohighlight">\(\color{purple}{L_{Min} }\)</span>.</p>
@@ -492,8 +499,8 @@ t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \su
 <p>We previously derived an equation for the minimum length of the dosing tube(s), <span class="math notranslate nohighlight">\(L_{Min, \, \Pi_{Error}}\)</span>, which was the minimum length needed to ensure that our linearity constraint was met. This equation is shown again below, in red:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-34">
 <span class="eqno">(112)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-34" title="Permalink to this equation">¶</a></span>\[\color{red}{
-  L_{Min, \, \Pi_{Error}} = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{Max}}{16 \nu \pi} \sum{K}
-  }\]</div>
+   L_{Min, \, \Pi_{Error}} = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{Max}}{16 \nu \pi} \sum{K}
+   }\]</div>
 <p>This equation does not, however, account for getting to the proper amount of head loss. If we were to use this equation to design the dosing tubes, we might not end up with the proper amount of flow <span class="math notranslate nohighlight">\(Q_{Max}\)</span> at the maximum head loss <span class="math notranslate nohighlight">\(h_{L{Max}}\)</span>. So we need to double check to make sure that we get our desired head loss.</p>
 <p>First, consider the head loss at maximum flow that was used to get the equation for <span class="math notranslate nohighlight">\(Q_{Max}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-35">
@@ -520,18 +527,18 @@ t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \su
 <p>As you can see, the head loss constraint is more limiting than the linearity constraint when designing for tube length. Therefore, the design equation for tube length is the one which accounts for head loss. This is the second and final design equation for designing the CDC:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-37">
 <span class="eqno">(115)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-37" title="Permalink to this equation">¶</a></span>\[\color{purple}{
-L_{Min} = L_{Min, \, head loss} = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)
-}\]</div>
+ L_{Min} = L_{Min, \, head loss} = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)
+ }\]</div>
 <p>The equations for <span class="math notranslate nohighlight">\(\color{purple}{\bar v_{Max}}\)</span> and <span class="math notranslate nohighlight">\(\color{purple}{L_{Min}}\)</span> are the only ones you <strong>need</strong> to manually design a CDC.</p>
 </div>
-<div class="section" id="cdc-dosing-tube-s-diameter-plots">
-<h4>CDC Dosing Tube(s) Diameter <span class="math notranslate nohighlight">\(D_{Min}\)</span> Plots<a class="headerlink" href="#cdc-dosing-tube-s-diameter-plots" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="cdc-dosing-tube-s-diameter-d-min-plots">
+<h4>CDC Dosing Tube(s) Diameter <span class="math notranslate nohighlight">\(D_{Min}\)</span> Plots<a class="headerlink" href="#cdc-dosing-tube-s-diameter-d-min-plots" title="Permalink to this headline">¶</a></h4>
 <p>Below are equations which also govern the CDC and greatly aid in understanding the physics behind it, but are not strictly necessary in design.</p>
 <p>By rearranging <span class="math notranslate nohighlight">\(Q_{Max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum K }}\)</span>, we can solve for <span class="math notranslate nohighlight">\(D\)</span> to get the <em>minimum</em> diameter we can use assuming the shortest tube possible that meets the error constraint, <span class="math notranslate nohighlight">\(\color{red}{L_{Min, \, \Pi_{Error}}}\)</span>. If we use a diameter smaller than <span class="math notranslate nohighlight">\(D_{Min, \, \Pi_{Error}}\)</span>, we will not be able to simultaneously reach <span class="math notranslate nohighlight">\(Q_{Max}\)</span> and meet the error constraint <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-38">
 <span class="eqno">(116)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-38" title="Permalink to this equation">¶</a></span>\[\color{blue}{
-D_{Min, \, \Pi_{Error}} = \left[ \frac{8 Q_{Max}^2 \sum K}{\Pi_{Error} h_l g \pi^2} \right]^{\frac{1}{4}}
-}\]</div>
+ D_{Min, \, \Pi_{Error}} = \left[ \frac{8 Q_{Max}^2 \sum K}{\Pi_{Error} h_l g \pi^2} \right]^{\frac{1}{4}}
+ }\]</div>
 <p>We can also find the minimum diameter needed to guarantee laminar flow, which is another critical condition in the CDC design. We can do this by combining the equation for Reynolds number at the maximum <span class="math notranslate nohighlight">\(\rm{Re}\)</span> for laminar flow, <span class="math notranslate nohighlight">\({\rm{Re}}_{Max} = 2100\)</span> with the continuity equation at maximum flow:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-39">
 <span class="eqno">(117)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-39" title="Permalink to this equation">¶</a></span>\[{\rm Re}_{Max}  = \frac{\bar v_{Max} D}{\nu}\]</div>
@@ -540,8 +547,8 @@ D_{Min, \, \Pi_{Error}} = \left[ \frac{8 Q_{Max}^2 \sum K}{\Pi_{Error} h_l g \pi
 <p>To get:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-41">
 <span class="eqno">(119)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-41" title="Permalink to this equation">¶</a></span>\[\color{red}{
-D_{Min, \, Laminar} = \frac{4 Q_{Max}}{\pi \nu {\rm{Re}}_{Max}}
-}\]</div>
+ D_{Min, \, Laminar} = \frac{4 Q_{Max}}{\pi \nu {\rm{Re}}_{Max}}
+ }\]</div>
 <p>Combined with the discrete amount of tubing sizes (shown in dark green), we can create a graph of the three diameter constraints:</p>
 <div class="figure align-center" id="id8">
 <span id="figure-cdc-diameter-model"></span><a class="reference internal image-reference" href="../_images/CDC_diameter_model.png"><img alt="CDC diameter model" src="../_images/CDC_diameter_model.png" style="width: 600px;" /></a>
@@ -572,7 +579,7 @@ D_{Min, \, Laminar} = \frac{4 Q_{Max}}{\pi \nu {\rm{Re}}_{Max}}
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
@@ -594,7 +601,7 @@ D_{Min, \, Laminar} = \frac{4 Q_{Max}}{\pi \nu {\rm{Re}}_{Max}}
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.070',
+            VERSION:'0.074',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

@@ -31,12 +31,12 @@ Important Terms and Equations
 
 #. Continuity equation: :eq:`continuity_equation`
 #. Reynolds number :eq:`reynolds_number_equation`
-#. Bernoulli equation :eq:`bernoulli_equation`
-#. Energy equation :eq:`energy_equation`
-#. Darcy-Weisbach equation :eq:`darcy_weisbach`
-#. Swamee-Jain equation :eq:`swamee_jain`
-#. Hagen-Poiseuille equation :eq:`hagen_poiseuille`
-#. Orifice equation :eq:`orifice_equation`
+#. Bernoulli Equation :eq:`bernoulli_equation`
+#. Energy Equation :eq:`energy_equation`
+#. Darcy-Weisbach Equation :eq:`darcy_weisbach`
+#. Swamee-Jain Equation :eq:`swamee_jain`
+#. Hagen-Poiseuille Equation :eq:`hagen_poiseuille`
+#. Orifice Equation :eq:`orifice_equation`
 
 
 
@@ -72,11 +72,11 @@ The continuity equation is also useful when flow is going from one geometry to a
 
 .. math::
 
-    \bar v_1 A_1 = \bar v_2 A_2
+   \bar v_1 A_1 = \bar v_2 A_2
 
 .. math::
 
-    \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
+   \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
 
 | Such that:
 | :math:`Q =` fluid flow rate
@@ -91,7 +91,6 @@ An example of changing flow geometries is when a change in pipe size occurs in a
 .. _figure_continuity_pipes:
 
 .. figure:: Images/continuity_pipes.png
-    :width: 700px
     :align: center
     :alt: internal figure
 
@@ -194,7 +193,7 @@ These three forms of energy expressed above make up the Bernoulli equation:
 .. math::
   :label: bernoulli_equation
 
-    \frac{p_1}{\rho g} + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{v_2^2}{2g}
+   \frac{p_1}{\rho g} + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{v_2^2}{2g}
 
 | Such that:
 | :math:`p` = pressure
@@ -238,14 +237,14 @@ The assumption necessary to use the Bernoulli equation, which is stated above, r
 
 .. math::
 
-    \frac{p_{1}}{\rho g} + z_{1} + \alpha_{1} \frac{\bar v_{1}^2}{2g} + h_P = \frac{p_{2}}{\rho g} + z_{2} + {\alpha_{2}} \frac{\bar v_{2}^2}{2g} + h_T + h_L
+   \frac{p_{1}}{\rho g} + z_{1} + \alpha_{1} \frac{\bar v_{1}^2}{2g} + h_P = \frac{p_{2}}{\rho g} + z_{2} + {\alpha_{2}} \frac{\bar v_{2}^2}{2g} + h_T + h_L
 
 You’ll also notice the :math:`\alpha` term attached to the velocity head. This is a correction factor for kinetic energy, and will be neglected in this class; we assume that its value is 1. In the Bernoulli equation, the velocity of a streamline of the fluid is considered, :math:`v`. The energy equation, however compares control surfaces instead of streamlines, and the velocities across a control surface many not all be the same. Hence, :math:`\bar v` is used to represent the average velocity. Since AguaClara does not use pumps nor turbines, :math:`h_P = h_T = 0`. With these simplifications, the energy equation can be written as follows:
 
 .. math::
   :label: energy_equation
 
-    \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
+   \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
 
 **This is the form of the energy equation that you will see over and over again in this book.** To summarize, the main difference between the Bernoulli equation and the energy equation for the purposes of this class is energy loss. The energy equation accounts for the fluid’s loss of energy over time while the Bernoulli equation does not. So how can the fluid lose energy?
 
@@ -273,7 +272,7 @@ In this class, we will be dealing primarily with major losses in circular pipes,
 
     h_{\rm{f}} \, = \, {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}
 
-Substituting the continuity equation :math:`Q = \bar vA` in the form of :math:`\bar v^2 = \frac{16Q^2}{\pi^2 D^4}` gives another, equivalent form of Darcy-Weisbach which uses flow, :math:`Q`, instead of velocity, :math:`\bar v`:
+Substituting the continuity Equation :math:`Q = \bar vA` in the form of :math:`\bar v^2 = \frac{16Q^2}{\pi^2 D^4}` gives another, equivalent form of Darcy-Weisbach which uses flow, :math:`Q`, instead of velocity, :math:`\bar v`:
 
 .. math::
 
@@ -364,14 +363,14 @@ There are three forms of the minor loss equation that you will see in this class
     {\rm{ \mathbf{First \, form:} }} \quad h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}
 
 .. math::
-    :label: eq_exp_v_in
+  :label: eq_exp_v_in
 
     {\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2
 
 .. math::
-    :label: eq_exp_v_out
+  :label: eq_exp_v_out
 
-    \color{purple}{
+   \color{purple}{
     {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left(\frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
     }
 
@@ -442,41 +441,41 @@ The figure is technically violating the energy equation by saying that the eleva
 
 .. math::
 
-    \cancel{ \frac{p_{1}}{\rho g} } + z_{1} + \cancel{ \frac{\bar v_{1}^2}{2g} } = \cancel{ \frac{p_{2}}{\rho g} } + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
+   \cancel{ \frac{p_{1}}{\rho g} } + z_{1} + \cancel{ \frac{\bar v_{1}^2}{2g} } = \cancel{ \frac{p_{2}}{\rho g} } + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
 
 We now get:
 
 .. math::
 
-    \Delta z = \frac{\bar v_2^2}{2g} + h_L
+   \Delta z = \frac{\bar v_2^2}{2g} + h_L
 
 This equation contradicts the figure above, which says that :math:`\Delta z = h_L` and neglects :math:`\frac{\bar v_2^2}{2g}`. The figure above is correct, however, if you apply the head loss trick. The trick incorporates the :math:`\frac{\bar v_2^2}{2g}` term *into* the :math:`h_L` term as a minor loss. See the math below:
 
 .. math::
 
-    \Delta z = \frac{\bar v_2^2}{2g} + h_e + h_f
+   \Delta z = \frac{\bar v_2^2}{2g} + h_e + h_f
 
 .. math::
 
-    \Delta z = \frac{\bar v_2^2}{2g} + \left( \sum K \right) \frac{\bar v_2^2}{2g} + h_f
+   \Delta z = \frac{\bar v_2^2}{2g} + \left( \sum K \right) \frac{\bar v_2^2}{2g} + h_f
 
 .. math::
 
-    \Delta z = \left( 1 + \sum K \right) \frac{\bar v_2^2}{2g} + h_f
+   \Delta z = \left( 1 + \sum K \right) \frac{\bar v_2^2}{2g} + h_f
 
 .. math::
 
-    \Delta z = \left( \sum K \right) \frac{\bar v_2^2}{2g} + h_f
+   \Delta z = \left( \sum K \right) \frac{\bar v_2^2}{2g} + h_f
 
 This last step incorporated the kinetic energy term of the energy equation, :math:`\frac{\bar v_2^2}{2g}`, into the minor loss equation by saying that its :math:`K` is 1 and incorporating that 1 into :math:`\sum K`. From here, we reverse our steps to get :math:`\Delta z = h_L`, starting with :math:`h_e = \left( \sum K \right) \frac{\bar v_2^2}{2g}`
 
 .. math::
 
-    \Delta z = h_e + h_f
+   \Delta z = h_e + h_f
 
 .. math::
 
-    \Delta z = h_L
+   \Delta z = h_L
 
 By applying the head loss trick, you are considering the entire flow of the fluid out of a control volume as energy lost via minor losses. This is just an algebraic trick, the only thing to remember when applying this trick is that :math:`\sum K` will always be at least 1, even if there are no ‘real’ minor losses in the system.
 
@@ -511,7 +510,7 @@ The term ‘vena contracta’ describes the phenomenon of contracting flow due t
 
 .. math::
 
-    \Pi_{vc} = \frac{A_{downstream}}{A_{gate}}
+   \Pi_{vc} = \frac{A_{downstream}}{A_{gate}}
 
 When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter value, 0.62, is in aguaclara as ``pc.VC_ORIFICE_RATIO``. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the least contracted area, :math:`\Pi_{vc}` is always less than 1.
 
@@ -537,13 +536,13 @@ At point 1, the pressure is atmospheric and the instantaneous velocity is neglig
 
 .. math::
 
-    \Delta h = \frac{\bar v_2^2}{2g}
+   \Delta h = \frac{\bar v_2^2}{2g}
 
-Substituting the continuity equation :math:`Q = \bar v A` in the form of :math:`\bar v_2^2 = \frac{Q^2}{A_{vc}^2}`, the vena contracta coefficient in the form of :math:`A_{vc} = \Pi_{vc} A_{or}` yields:
+Substituting the continuity Equation :math:`Q = \bar v A` in the form of :math:`\bar v_2^2 = \frac{Q^2}{A_{vc}^2}`, the vena contracta coefficient in the form of :math:`A_{vc} = \Pi_{vc} A_{or}` yields:
 
 .. math::
 
-   \Delta h = \frac{Q^2}{2g \Pi_{vc}^2 A_{or}^2}
+  \Delta h = \frac{Q^2}{2g \Pi_{vc}^2 A_{or}^2}
 
 Which, rearranged to solve for :math:`Q` gives **The Orifice Equation:**
 
@@ -596,11 +595,11 @@ Section Summary
 
         .. math::
 
-            \bar v_1 A_1 = \bar v_2 A_2
+         \bar v_1 A_1 = \bar v_2 A_2
 
         .. math::
 
-            \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
+         \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
 
     * **Laminar and Turbulent flow** describe the disorder and chaos of fluid flow. The **Reynolds number,** :math:`{\rm Re}` is used to distinguish laminar from turbulent flow. For :math:`{\rm Re} < 2100`, flow is considered laminar. For :math:`{\rm Re} > 2100`, flow is considered turbulent. The equations for the Reynolds number are below:
 
@@ -617,13 +616,13 @@ Section Summary
 
   .. math::
 
-      \frac{p_1}{\rho g} + {z_1} + \frac{\bar v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{\bar v_2^2}{2g}
+   \frac{p_1}{\rho g} + {z_1} + \frac{\bar v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{\bar v_2^2}{2g}
 
   Energy equation, simplified to remove pumps, turbines, and :math:`\alpha` factors:
 
   .. math::
 
-     \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
+  \frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L
 
 3. **Major losses:** Defined as the energy loss due to shear between the walls of the pipe/flow conduit and the fluid. The Darcy-Weisbach equation is used to find major losses in both laminar and turbulent flow regimes. The equation for finding the Darcy friction factor, :math:`\rm{f}`, changes depending on whether the flow is laminar or turbulent. The Moody diagram is a common graphical method for finding :math:`\rm{f}`. During laminar flow, the Hagen-Poiseuille equation, which is just a combination of Darcy-Weisbach, Reynolds number, and :math:`{\rm{f}} = \frac{64}{\rm{Re}}`, can be used
 
@@ -669,7 +668,7 @@ Section Summary
 
 .. math::
 
-    \color{purple}{
+   \color{purple}{
     {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
     }
 

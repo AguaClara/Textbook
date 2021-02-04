@@ -244,7 +244,7 @@ What are the failure modes for this system? For one, we need to ensure that the 
 Jet Reverser Shear Stress
 -------------------------
 
-The jet reverser is an AguaClara invention for producing stable floc blankets. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see equation :eq:`EDR_JetPlane`) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the sedimentation tank performance will deteriorate.
+The jet reverser is an AguaClara invention for producing stable floc blankets. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see Equation :eq:`EDR_JetPlane`) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the sedimentation tank performance will deteriorate.
 
 Conventional wisdom suggests that breaking up flocs on the way to the sedimentation tank is counter productive. The traditional goal of not breaking flocs led to design of tapered flocculators and guidelines suggesting maximum velocities for transport of those flocs to the sedimentation tank. Dimensional analysis provides the insight that if the constraint for not breaking flocs is actually a velocity, that there must be some way to make that velocity dimensionless if that constraint is rational. In order to identify and characterize the constraint related to floc break up we need to understand the physics of the processes and clearly identify the failure mode.
 
@@ -255,7 +255,7 @@ Different coagulants may well have different bond strengths and flocculant aids 
 The maximum fluid shear stress for conservative basis of design should be calculated based on minimum water temperature, plate settler capture velocity, and minimum floc density. The solution path is
 
 #. Calculate the diameter of the lowest density floc that has a terminal velocity equal to the capture velocity of the plate settlers.
-#. Solve equation :eq:`d_floc_shear_stress` for the shear stress given the floc diameter.
+#. Solve Equation :eq:`d_floc_shear_stress` for the shear stress given the floc diameter.
 
 
 .. _Jet_Reverser_Design:
@@ -265,33 +265,33 @@ Jet Reverser Design
 
 The jet reverser can be designed given a maximum fluid shear stress that is calculated based on minimum operating temperature, plate settler capture velocity, and floc density. We do not yet have a comprehensive model for floc properties and thus we are not yet able to calculate floc terminal velocity as a function of composition. We do anticipate that floc density decreases dramatically for flocs that consist primarily of dissolved organics and coagulant.
 
-The goal is to derive an equation that will calculate the maximum jet velocity given the upflow velocity, :math:`v_{z_{fb}}`, and width, :math:`W_{Sed}`, of the sedimentation tank. Begin by eliminating the energy dissipation rate from the fluid shear stress, equation :eq:`fluid_shear_stress`, by substituting the plane jet energy dissipation rate, equation :eq:`EDR_JetPlane`.
+The goal is to derive an equation that will calculate the maximum jet velocity given the upflow velocity, :math:`v_{z_{fb}}`, and width, :math:`W_{Sed}`, of the sedimentation tank. Begin by eliminating the energy dissipation rate from the fluid shear stress, Equation :eq:`fluid_shear_stress`, by substituting the plane jet energy dissipation rate, Equation :eq:`EDR_JetPlane`.
 
 .. math::
-   :label: shear_stress_plane_jet
+  :label: shear_stress_plane_jet
 
-   \tau_{max} = \rho \sqrt{\nu \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{W_{Jet}}}
+  \tau_{max} = \rho \sqrt{\nu \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{W_{Jet}}}
 
 The volumetric flow rate of the plane jet is the same as the volumetric flow rate through the sedimentation tank.
 
 .. math::
-   :label: jet_sed_tank_continuity
+  :label: jet_sed_tank_continuity
 
-   \bar v_{Jet} W_{Jet} = \bar v_{z_{fb}} W_{Sed}
+  \bar v_{Jet} W_{Jet} = \bar v_{z_{fb}} W_{Sed}
 
-Use equation :eq:`jet_sed_tank_continuity` to eliminate the thickness of the jet, :math:`W_{Jet}` in equation :eq:`shear_stress_plane_jet`
+Use Equation :eq:`jet_sed_tank_continuity` to eliminate the thickness of the jet, :math:`W_{Jet}` in Equation :eq:`shear_stress_plane_jet`
 
 .. math::
-   :label: shear_stress_jet_sed_tank
+  :label: shear_stress_jet_sed_tank
 
-   \tau_{max} = \rho \bar v_{Jet} ^2 \sqrt{ \frac{\nu \Pi_{JetPlane}}{\bar v_{z_{fb}} W_{Sed}}}
+  \tau_{max} = \rho \bar v_{Jet} ^2 \sqrt{ \frac{\nu \Pi_{JetPlane}}{\bar v_{z_{fb}} W_{Sed}}}
 
 Solve for the maximum permissible jet velocity, :math:`\bar v_{Jet}`.
 
 .. math::
-   :label: max_sed_tank_jet_velocity
+  :label: max_sed_tank_jet_velocity
 
-   \bar v_{Jet} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{fb}} W_{Sed}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}
+  \bar v_{Jet} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{fb}} W_{Sed}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}
 
 The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases. The maximum jet velocity, :numref:`figure_Jet_velocity_vs_sed_valley_width`, and head loss, :numref:`figure_Jet_head_loss_vs_sed_valley_width`, increases with temperature because as the viscosity decreases the fluid shear stress decreases. Floc breakup will be most problematic in low temperatures when the raw water has low turbidity and high concentration of dissolved organics.
 
@@ -315,12 +315,12 @@ The maximum jet velocity increases with width of the sedimentation tank valley b
 
    The maximum jet head loss increases with width of the sedimentation tank valley and with temperature.
 
-Sedimentation tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The floc size velocity restriction limits the velocity of the water in the manifold that delivers water to the diffuser jets. The ratio of manifold velocity to port velocity can be obtained as the inverse of equation :eq:`Manifold_max_v_no_hl_series`.
+Sedimentation tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The floc size velocity restriction limits the velocity of the water in the manifold that delivers water to the diffuser jets. The ratio of manifold velocity to port velocity can be obtained as the inverse of Equation :eq:`Manifold_max_v_no_hl_series`.
 
 .. math::
-   :label: max_sed_tank_manifold_velocity
+  :label: max_sed_tank_manifold_velocity
 
-   \frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}
+  \frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}
 
 Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity.
 
@@ -763,7 +763,7 @@ You have now been introduced to the AguaClara sedimentation tank in three parts:
 
 Let's recap some important points about the sedimentation tank.
 
-- The AguaClara sedimentation tank includes three process in one tank: flocculation, sedimentation, and consolidation.
+- The AguaClara sedimentation tank includes three process in one tank: filtration, sedimentation, and consolidation.
 - Floc blankets improve sedimentation tank performance.
 - The floc blanket and floc hopper design eliminate the need for mechanized sludge removal by using hydraulic sludge removal.
 - Plate settlers make it possible to significantly reduce the plan-view area of the sedimentation tank.

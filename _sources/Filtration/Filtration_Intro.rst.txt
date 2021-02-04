@@ -149,9 +149,9 @@ Porosity
 Porosity of a sand bed refers to the ratio of the void volume to the total volume of the sand bed.
 
 .. math::
-   :label: porosity
+  :label: porosity
 
-    \phi_{FiSand} = \frac{\rlap{--} V_{voids}}{\rlap{--} V_{total}}
+   \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}
 
 
 Porosity is determined by the geometry of the material and the size distribution (or uniformity of the particle sizes) and not by the average size of the particles. If you have three different sized spheres (such as  1 um clay, 0.2 mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in :numref:`figure_porosity`. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.
@@ -175,7 +175,7 @@ One way that the relative size of particles is characterized is by describing th
 The ratio of the two is the uniformity coefficient:
 
 .. math::
-   :label: uniformity_coefficient
+  :label: uniformity_coefficient
 
     UC = \frac{D_{60}}{D_{10}}
 
@@ -185,9 +185,9 @@ The uniformity coefficient describes the uniformity of the sand. A :math:`UC = 1
 During backwash, the sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:
 
 .. math::
-   :label: backwash_porosity
+  :label: backwash_porosity
 
-    \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}
+   \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}
 
 | Such that:
 | :math:`\phi_{FiSandBw}` = sand porosity during backwash
@@ -199,7 +199,7 @@ During backwash, the sand is fluidized and the sand bed expands. This expansion 
 From this it becomes possible to directly relate porosity (as above) to the filter expansion ratio, which is simply the ratio of the heights of the expanded sand bed and the settled sand bed:
 
 .. math::
-   :label: filter_expansion_ratio
+  :label: filter_expansion_ratio
 
   \Pi_{FiBw} = \frac{H_{FiSandBw}}{H_{FiSand}}
 
@@ -215,12 +215,12 @@ From this it becomes possible to directly relate porosity (as above) to the filt
 Filtration Clean Bed Head loss
 ==============================
 
-The Carman Kozeny Equation, an adaptation of the Hagen-Poiseuille equation :eq:`` describes the head loss through a clean bed during filtration. The Ergun equation :eq:`eq_Ergun` can also be used to estimate head loss in porous media.
+The Carman Kozeny Equation, an adaptation of the Hagen-Poiseuille Equation :eq:`` describes the head loss through a clean bed during filtration. The Ergun Equation :eq:`eq_Ergun` can also be used to estimate head loss in porous media.
 
 .. math::
-   :label: eq_Carman_Kozeny
+  :label: eq_Carman_Kozeny
 
-    \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu \bar v_a}{g D_{60}^2}
+   \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu \bar v_a}{g D_{60}^2}
 
 | where
 | :math:`h_l` = head loss in sand bed
@@ -298,22 +298,22 @@ Which simplifies to:
 This result gives a ratio of the head loss during backwash to the height difference during forward operation. With :math:`\phi_{FiSand} = 0.4` and :math:`\rho_{Sand} = 2650 kg/m^3` the value of this ratio is:
 
 .. math::
-   :label: eq_Min_Fluidization_Velocity
+  :label: eq_Min_Fluidization_Velocity
 
-     \left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99
+  \left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99
 
 
 Minimum Fluidization Velocity
 =============================
 
-The minimum fluidization velocity for a sand bed can be obtained by setting the head loss through the sand (equation :eq:`eq_Carman_Kozeny`) equal to the head required to suspend the sand bed (equation :eq:`eq_Min_Fluidization_Velocity`).
+The minimum fluidization velocity for a sand bed can be obtained by setting the head loss through the sand (Equation :eq:`eq_Carman_Kozeny`) equal to the head required to suspend the sand bed (Equation :eq:`eq_Min_Fluidization_Velocity`).
 
 Using these two equations the minimum velocity for sand fluidization can be found!
 
 .. math::
-   :label: minimum_fluidization_velocity_sand
+  :label: minimum_fluidization_velocity_sand
 
-   \bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
+  \bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 
 From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter does **not** imply that the sand at the bottom of the filter is fluidized.
 
@@ -332,7 +332,7 @@ Reflection: How did we get to 2019 without a model for filter performance? There
 Clean bed filtration models include an equation first presented by Iwasaki in 1937 that suggested that particle removal occurred as a first order process with respect to depth. This simplifies to
 
 .. math::
-    :label: filter_Iwasaki
+  :label: filter_Iwasaki
 
     pC^* \propto \frac{L}{D_{sand}}
 

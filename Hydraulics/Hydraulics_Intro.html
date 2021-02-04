@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Hydraulics Introduction &mdash; AguaClara Textbook 0.070 documentation</title>
+  <title>Hydraulics Introduction &mdash; AguaClara Textbook 0.074 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.070
+                0.074
               </div>
             
           
@@ -90,7 +90,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
@@ -104,11 +105,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocs, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces, and Fluidized Suspensions Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
 <ul>
@@ -261,25 +268,25 @@
             
   <div class="section" id="hydraulics-introduction">
 <span id="title-hydraulics-intro"></span><h1>Hydraulics Introduction<a class="headerlink" href="#hydraulics-introduction" title="Permalink to this headline">¶</a></h1>
-<p>The hydraulic controls provide the basis for efficient and robust water treatment plant operation. Water must move through unit processes and between unit processes and the flow passages must be designed to meet various constraints. One constraint is that water that is carrying a significant amount of sediment (flocculator and sedimentation tank inlet) must have sufficient velocity and turbulence levels to minimize sedimentation.  A more challenging constraint is that the flow must be divided equally between parallel processes. Flow distribution through parallel paths is a key hydraulic design constraint for all municipal scale water treatment plants. The parallel path constraint only goes away for laboratory scale processes where there is a single tube settler and a filter with a single layer of sand. A schematic illustrating the electrical circuit analogy is shown in <a class="reference internal" href="#figure-circuit"><span class="std std-numref">Fig. 189</span></a>.</p>
+<p>The hydraulic controls provide the basis for efficient and robust water treatment plant operation. Water must move through unit processes and between unit processes and the flow passages must be designed to meet various constraints. One constraint is that water that is carrying a significant amount of sediment (flocculator and sedimentation tank inlet) must have sufficient velocity and turbulence levels to minimize sedimentation.  A more challenging constraint is that the flow must be divided equally between parallel processes. Flow distribution through parallel paths is a key hydraulic design constraint for all municipal scale water treatment plants. The parallel path constraint only goes away for laboratory scale processes where there is a single tube settler and a filter with a single layer of sand. A schematic illustrating the electrical circuit analogy is shown in <a class="reference internal" href="#figure-circuit"><span class="std std-numref">Fig. 199</span></a>.</p>
 <p>Municipal water treatment plants</p>
 <div class="figure align-center" id="id1">
 <span id="figure-circuit"></span><a class="reference internal image-reference" href="../_images/circuit.png"><img alt="Sedimentation tank flow circuit" src="../_images/circuit.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 189 </span><span class="caption-text">The flow through a sedimentation tank is analogous to an electrical circuit with wires and resistors. Identical resistors in parallel paths help improve flow distribution between the paths. Differences in piezometric head (think voltage) in the manifolds that connect to multiple parallel paths.</span></p>
+<p class="caption"><span class="caption-number">Fig. 199 </span><span class="caption-text">The flow through a sedimentation tank is analogous to an electrical circuit with wires and resistors. Identical resistors in parallel paths help improve flow distribution between the paths. Differences in piezometric head (think voltage) in the manifolds that connect to multiple parallel paths.</span></p>
 </div>
 <div class="section" id="piezometric-head">
 <span id="heading-piezometric-head"></span><h2>Piezometric Head<a class="headerlink" href="#piezometric-head" title="Permalink to this headline">¶</a></h2>
 <p>The sum of the pressure and elevation term in the energy equation is the piezometric head, <span class="math notranslate nohighlight">\(\Psi\)</span>. Fluid will move in the direction of decreasing piezometric head. Note that fluid does NOT always move from high pressure to low pressure nor does it always move from high elevation to low elevation. You can prove this to yourself by placing a sloped pipe in a swimming pool!</p>
 <div class="math notranslate nohighlight" id="equation-piezometric-head-defined">
-<span class="eqno">(636)<a class="headerlink" href="#equation-piezometric-head-defined" title="Permalink to this equation">¶</a></span>\[\Psi = \frac{p}{\rho g} + z\]</div>
+<span class="eqno">(685)<a class="headerlink" href="#equation-piezometric-head-defined" title="Permalink to this equation">¶</a></span>\[\Psi = \frac{p}{\rho g} + z\]</div>
 <div class="figure align-center" id="id2">
 <span id="figure-sloped-manifold-no-flow"></span><a class="reference internal image-reference" href="../_images/Sloped_Manifold_no_flow.png"><img alt="Sloped manifold with no flow" src="../_images/Sloped_Manifold_no_flow.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 190 </span><span class="caption-text">Piezometric head is constant in a stationary body of water. The piezometric head inside the enclosed sloped pipe is greater (by height H) than the piezometric head in the tank. Thus if we add an orifice to this sloped pipe, water will from the sloped pipe into the tank.</span></p>
+<p class="caption"><span class="caption-number">Fig. 200 </span><span class="caption-text">Piezometric head is constant in a stationary body of water. The piezometric head inside the enclosed sloped pipe is greater (by height H) than the piezometric head in the tank. Thus if we add an orifice to this sloped pipe, water will from the sloped pipe into the tank.</span></p>
 </div>
-<p>Add multiple outlets to this sloped pipe to create a sloped manifold (<a class="reference internal" href="#figure-sloped-manifold-with-flow"><span class="std std-numref">Fig. 191</span></a>). The energy equation applied between control surface 1 and n  shows that the piezometric head in an inlet manifold increases in the direction of flow for cases where head loss is smaller than <span class="math notranslate nohighlight">\(\frac{\bar v_{M_1}^2}{2 g}\)</span>.</p>
+<p>Add multiple outlets to this sloped pipe to create a sloped manifold (<a class="reference internal" href="#figure-sloped-manifold-with-flow"><span class="std std-numref">Fig. 201</span></a>). The energy equation applied between control surface 1 and n  shows that the piezometric head in an inlet manifold increases in the direction of flow for cases where head loss is smaller than <span class="math notranslate nohighlight">\(\frac{\bar v_{M_1}^2}{2 g}\)</span>.</p>
 <div class="figure align-center" id="id3">
 <span id="figure-sloped-manifold-with-flow"></span><a class="reference internal image-reference" href="../_images/Sloped_Manifold_with_flow.png"><img alt="Sloped manifold with flow" src="../_images/Sloped_Manifold_with_flow.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 191 </span><span class="caption-text">Sloped inlet manifold showing that the piezometric head increases in the direction of flow for the case where head loss due to wall shear is smaller than <span class="math notranslate nohighlight">\(\frac{\bar v_{M_1}^2}{2 g}\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 201 </span><span class="caption-text">Sloped inlet manifold showing that the piezometric head increases in the direction of flow for the case where head loss due to wall shear is smaller than <span class="math notranslate nohighlight">\(\frac{\bar v_{M_1}^2}{2 g}\)</span>.</span></p>
 </div>
 </div>
 <div class="section" id="inlet-manifold-flow-distribution">
@@ -287,68 +294,68 @@
 <p>There is disagreement in the literature about the physics of manifolds. One school of thought postulates that the flow out of the ports exiting a manifold are controlled by the total energy of the flow inside the manifold. The other school of thought postulates that the flow of water out of the ports is controlled by the difference in piezometric head between the manifold and the receiving reservoir. These two approaches are mutually exclusive and make completely different predictions about how manifolds will perform especially for the case where head loss in the manifold is small compared with the pressure recovery caused by the gradual flow expansion in the manifold.</p>
 <p>Fortunately it is relatively easy to check the physics to see which approach is correct. A venturi (gradual flow contraction in a pipe) is used to generate a low pressure region in a pipe by converting pressure into kinetic energy. Venturis can be used to generate low pressure inside the pipe and then pull fluid <strong>into</strong> the pipe even though the total energy of the fluid in the pipe far exceeds the energy of the fluid that was outside of the pipe! This proves that flow out of a manifold is due to the difference in piezometric head and NOT due to the difference in total energy.</p>
 <p>If manifolds were built using pitot type exits with the exit facing upstream and into the flow of the fluid then the exit from the manifold would be based on the total energy. The manifolds that we use in water treatment plants do not have pitot tube style ports and thus our analysis of manifolds is based on piezometric head.</p>
-<p>Flow distribution from ports exiting a manifold is controlled by the change in piezometric head inside the manifold and the change in piezometric head as the water exits through a port. The reason that the flow from each port is not identical is because of changes in piezometric head in the manifold. These changes are caused by major losses due to shear on the manifold walls and due to pressure recovery as the velocity in the manifold decreases. The control volume is shown in <a class="reference internal" href="#figure-inlet-manifold"><span class="std std-numref">Fig. 192</span></a></p>
+<p>Flow distribution from ports exiting a manifold is controlled by the change in piezometric head inside the manifold and the change in piezometric head as the water exits through a port. The reason that the flow from each port is not identical is because of changes in piezometric head in the manifold. These changes are caused by major losses due to shear on the manifold walls and due to pressure recovery as the velocity in the manifold decreases. The control volume is shown in <a class="reference internal" href="#figure-inlet-manifold"><span class="std std-numref">Fig. 202</span></a></p>
 <div class="math notranslate nohighlight" id="equation-energy-cv-manifold">
-<span class="eqno">(637)<a class="headerlink" href="#equation-energy-cv-manifold" title="Permalink to this equation">¶</a></span>\[ \frac{p_{M_1}}{\rho g}+z_{M_1}+\frac{\bar v_{M_1}^2}{2 g}=\frac{p_{M_n}}{\rho g}+z_{M_n}+\frac{\bar v_{M_n}^2}{2g} + h_{L}\]</div>
-<p>The energy control volume equation <a class="reference internal" href="#equation-energy-cv-manifold">(637)</a> can be simplified with the definition of piezometric head (equation <a class="reference internal" href="#equation-piezometric-head-defined">(636)</a>).</p>
+<span class="eqno">(686)<a class="headerlink" href="#equation-energy-cv-manifold" title="Permalink to this equation">¶</a></span>\[ \frac{p_{M_1}}{\rho g}+z_{M_1}+\frac{\bar v_{M_1}^2}{2 g}=\frac{p_{M_n}}{\rho g}+z_{M_n}+\frac{\bar v_{M_n}^2}{2g} + h_{L}\]</div>
+<p>The energy control volume Equation <a class="reference internal" href="#equation-energy-cv-manifold">(686)</a> can be simplified with the definition of piezometric head (Equation <a class="reference internal" href="#equation-piezometric-head-defined">(685)</a>).</p>
 <div class="math notranslate nohighlight" id="equation-piezometric-cv-manifold">
-<span class="eqno">(638)<a class="headerlink" href="#equation-piezometric-cv-manifold" title="Permalink to this equation">¶</a></span>\[ \Psi_{M_1}+\frac{\bar v_{M_1}^2}{2 g}=\Psi_{M_n}+\frac{\bar v_{M_n}^2}{2 g}+h_{L}\]</div>
+<span class="eqno">(687)<a class="headerlink" href="#equation-piezometric-cv-manifold" title="Permalink to this equation">¶</a></span>\[ \Psi_{M_1}+\frac{\bar v_{M_1}^2}{2 g}=\Psi_{M_n}+\frac{\bar v_{M_n}^2}{2 g}+h_{L}\]</div>
 <p>The change in piezometric head is the important parameter and is given by</p>
 <div class="math notranslate nohighlight" id="equation-delta-piezometric-cv-manifold">
-<span class="eqno">(639)<a class="headerlink" href="#equation-delta-piezometric-cv-manifold" title="Permalink to this equation">¶</a></span>\[ \Delta\Psi_M = \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L}\]</div>
+<span class="eqno">(688)<a class="headerlink" href="#equation-delta-piezometric-cv-manifold" title="Permalink to this equation">¶</a></span>\[ \Delta\Psi_M = \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L}\]</div>
 <div class="figure align-center" id="id4">
 <span id="figure-inlet-manifold"></span><a class="reference internal image-reference" href="../_images/inlet_manifold.png"><img alt="Sedimentation tank flow circuit" src="../_images/inlet_manifold.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 192 </span><span class="caption-text">The piezometric head can either increase due to conversion of kinetic energy to pressure or the piezometric head can decrease due to major losses.</span></p>
+<p class="caption"><span class="caption-number">Fig. 202 </span><span class="caption-text">The piezometric head can either increase due to conversion of kinetic energy to pressure or the piezometric head can decrease due to major losses.</span></p>
 </div>
 <p>For short <span class="math notranslate nohighlight">\(f\frac{L}{d}&lt;&lt;1\)</span>, straight (minor loss coefficient = 0), inlet manifolds the change in piezometric head, <span class="math notranslate nohighlight">\(\Delta\Psi_M\)</span> is equal the initial velocity head.</p>
 <div class="math notranslate nohighlight" id="equation-delta-piezometric-is-velocity-head">
-<span class="eqno">(640)<a class="headerlink" href="#equation-delta-piezometric-is-velocity-head" title="Permalink to this equation">¶</a></span>\[ \Delta\Psi_M = \frac{\bar v_{M_1}^{2}}{2 g}\]</div>
+<span class="eqno">(689)<a class="headerlink" href="#equation-delta-piezometric-is-velocity-head" title="Permalink to this equation">¶</a></span>\[ \Delta\Psi_M = \frac{\bar v_{M_1}^{2}}{2 g}\]</div>
 <p>To simplify analysis we assume the middle port gets the average flow (this isn’t quite right because the velocity is squared) and the average piezometric head, <span class="math notranslate nohighlight">\(\bar \Psi_M\)</span>. The first port has mean piezometric head – ½ delta piezometric head and the last port has an increase in the piezometric head.</p>
 <div class="math notranslate nohighlight" id="equation-piezo-ports">
-<span class="eqno">(641)<a class="headerlink" href="#equation-piezo-ports" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned} \Psi_{M_1} = \bar \Psi_{M} - \frac{1}{2}\Delta \Psi_M\\ \Psi_{M_n} = \bar \Psi_{M} + \frac{1}{2}\Delta \Psi_M\end{aligned}\end{align} \]</div>
+<span class="eqno">(690)<a class="headerlink" href="#equation-piezo-ports" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned} \Psi_{M_1} = \bar \Psi_{M} - \frac{1}{2}\Delta \Psi_M\\ \Psi_{M_n} = \bar \Psi_{M} + \frac{1}{2}\Delta \Psi_M\end{aligned}\end{align} \]</div>
 <p>where the piezometric head at each port is also proportional to the port velocity squared. A design constraint for a manifold is the target ratio of flow from port one, <span class="math notranslate nohighlight">\(Q_{P_1}\)</span>, divided by the flow from the last port, <span class="math notranslate nohighlight">\(Q_{P_n}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-pi-q-ports">
-<span class="eqno">(642)<a class="headerlink" href="#equation-pi-q-ports" title="Permalink to this equation">¶</a></span>\[ \Pi_{Q} = \frac{Q_{P_1}}{Q_{P_n}}=\sqrt{\frac{\Psi_{M_1}}{\Psi_{M_n}}}\]</div>
-<p>Substitute equations <a class="reference internal" href="#equation-piezo-ports">(641)</a> into equation <a class="reference internal" href="#equation-pi-q-ports">(642)</a> to obtain the relationship between piezometric head and the flow distribution ratio.</p>
+<span class="eqno">(691)<a class="headerlink" href="#equation-pi-q-ports" title="Permalink to this equation">¶</a></span>\[ \Pi_{Q} = \frac{Q_{P_1}}{Q_{P_n}}=\sqrt{\frac{\Psi_{M_1}}{\Psi_{M_n}}}\]</div>
+<p>Substitute equations <a class="reference internal" href="#equation-piezo-ports">(690)</a> into Equation <a class="reference internal" href="#equation-pi-q-ports">(691)</a> to obtain the relationship between piezometric head and the flow distribution ratio.</p>
 <div class="math notranslate nohighlight" id="equation-pi-q-ports2">
-<span class="eqno">(643)<a class="headerlink" href="#equation-pi-q-ports2" title="Permalink to this equation">¶</a></span>\[ \Pi_{Q}^2 = \frac{\bar \Psi_{M} - \frac{1}{2}\Delta \Psi_M}{\bar \Psi_{M} + \frac{1}{2}\Delta \Psi_M}\]</div>
+<span class="eqno">(692)<a class="headerlink" href="#equation-pi-q-ports2" title="Permalink to this equation">¶</a></span>\[ \Pi_{Q}^2 = \frac{\bar \Psi_{M} - \frac{1}{2}\Delta \Psi_M}{\bar \Psi_{M} + \frac{1}{2}\Delta \Psi_M}\]</div>
 <p>This equation shows that the flow distribution will approach 1 when <span class="math notranslate nohighlight">\(\bar \Psi_{M}\)</span> is much larger than <span class="math notranslate nohighlight">\(\Delta \Psi_M\)</span>. This can be achieved by having the manifold velocities be small compared with the port velocities. Solving for the change in piezometric head in the manifold we obtain the relationship between change in piezometric head and uniformity of port flow.</p>
 <div class="math notranslate nohighlight" id="equation-pi-q-ports3">
-<span class="eqno">(644)<a class="headerlink" href="#equation-pi-q-ports3" title="Permalink to this equation">¶</a></span>\[ \Delta \Psi_M = 2\bar \Psi_{M}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}\]</div>
-<p>The energy equation also yields an equation for the change in piezometric head (see equation <a class="reference internal" href="#equation-delta-piezometric-cv-manifold">(639)</a>) and we can equate those two to</p>
+<span class="eqno">(693)<a class="headerlink" href="#equation-pi-q-ports3" title="Permalink to this equation">¶</a></span>\[ \Delta \Psi_M = 2\bar \Psi_{M}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}\]</div>
+<p>The energy equation also yields an equation for the change in piezometric head (see Equation <a class="reference internal" href="#equation-delta-piezometric-cv-manifold">(688)</a>) and we can equate those two to</p>
 <div class="math notranslate nohighlight" id="equation-energy-and-pi-q">
-<span class="eqno">(645)<a class="headerlink" href="#equation-energy-and-pi-q" title="Permalink to this equation">¶</a></span>\[ \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L} = 2\bar \Psi_{M}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}\]</div>
+<span class="eqno">(694)<a class="headerlink" href="#equation-energy-and-pi-q" title="Permalink to this equation">¶</a></span>\[ \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L} = 2\bar \Psi_{M}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}\]</div>
 <p>If head loss in the manifold is small, then we have</p>
 <div class="math notranslate nohighlight" id="equation-energy-and-pi-q-no-manifold-hl">
-<span class="eqno">(646)<a class="headerlink" href="#equation-energy-and-pi-q-no-manifold-hl" title="Permalink to this equation">¶</a></span>\[ \frac{\bar v_{M_1}^{2}}{2 g} = 2\bar \Psi_M\frac{1 - \Pi_Q^2}{\Pi_Q^2 + 1}\]</div>
+<span class="eqno">(695)<a class="headerlink" href="#equation-energy-and-pi-q-no-manifold-hl" title="Permalink to this equation">¶</a></span>\[ \frac{\bar v_{M_1}^{2}}{2 g} = 2\bar \Psi_M\frac{1 - \Pi_Q^2}{\Pi_Q^2 + 1}\]</div>
 <p>The average piezometric head in the manifold is also influenced by any head loss that is in series with the port head loss. Here we assume that the piezometric head datum is in the receiving tank. If the receiving tank is a filter, then there could be head loss through the sand on the way to the outlet of the filter. This head loss in series will help provide more uniform flow out of the manifold if there aren’t any paths for flow to blend between the first and last ports. This is the case for division of flow between sand layers in a stacked rapid sand filter where the head loss through the sand plays a key role in helping to divide the flow evenly between the 6 layers of sand. The average piezometric head in the manifold, <span class="math notranslate nohighlight">\(\bar \Psi_{M}\)</span> is equal to the head from the port kinetic energy plus any downstream head loss.</p>
 <div class="math notranslate nohighlight" id="equation-manifold-piezometric-head-port-ke-and-hl">
-<span class="eqno">(647)<a class="headerlink" href="#equation-manifold-piezometric-head-port-ke-and-hl" title="Permalink to this equation">¶</a></span>\[ \bar \Psi_M \cong \frac{\bar v_{P}^{2}}{2 g} + h_{l_{series}} \cong h_{e_{port}} + h_{l_{series}}\]</div>
-<p>The port head loss is given by <span class="math notranslate nohighlight">\(\bar v_{P} = \sqrt{2gh_e}\)</span> where the port velocity is the true contracted velocity if there is a <em>vena contracta</em>. If the head loss in series, <span class="math notranslate nohighlight">\(h_{l_{series}}\)</span>, is significant, then equations <a class="reference internal" href="#equation-energy-and-pi-q-no-manifold-hl">(646)</a> and <a class="reference internal" href="#equation-manifold-piezometric-head-port-ke-and-hl">(647)</a> combine to produce</p>
+<span class="eqno">(696)<a class="headerlink" href="#equation-manifold-piezometric-head-port-ke-and-hl" title="Permalink to this equation">¶</a></span>\[ \bar \Psi_M \cong \frac{\bar v_{P}^{2}}{2 g} + h_{l_{series}} \cong h_{e_{port}} + h_{l_{series}}\]</div>
+<p>The port head loss is given by <span class="math notranslate nohighlight">\(\bar v_{P} = \sqrt{2gh_e}\)</span> where the port velocity is the true contracted velocity if there is a <em>vena contracta</em>. If the head loss in series, <span class="math notranslate nohighlight">\(h_{l_{series}}\)</span>, is significant, then equations <a class="reference internal" href="#equation-energy-and-pi-q-no-manifold-hl">(695)</a> and <a class="reference internal" href="#equation-manifold-piezometric-head-port-ke-and-hl">(696)</a> combine to produce</p>
 <div class="math notranslate nohighlight" id="equation-manifold-max-v-with-hl-series">
-<span class="eqno">(648)<a class="headerlink" href="#equation-manifold-max-v-with-hl-series" title="Permalink to this equation">¶</a></span>\[ \bar v_{M_1}= 2\sqrt{g (h_{e_{port}} + h_{l_{series}})\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}\]</div>
-<p>If there is no additional head loss in series to improve flow distribution, then equation <a class="reference internal" href="#equation-manifold-max-v-with-hl-series">(648)</a> simplifies to</p>
+<span class="eqno">(697)<a class="headerlink" href="#equation-manifold-max-v-with-hl-series" title="Permalink to this equation">¶</a></span>\[ \bar v_{M_1}= 2\sqrt{g (h_{e_{port}} + h_{l_{series}})\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}\]</div>
+<p>If there is no additional head loss in series to improve flow distribution, then Equation <a class="reference internal" href="#equation-manifold-max-v-with-hl-series">(697)</a> simplifies to</p>
 <div class="math notranslate nohighlight" id="equation-manifold-max-v-no-hl-series">
-<span class="eqno">(649)<a class="headerlink" href="#equation-manifold-max-v-no-hl-series" title="Permalink to this equation">¶</a></span>\[ \frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)}}\]</div>
-<p>Equation <a class="reference internal" href="#equation-manifold-max-v-no-hl-series">(649)</a> (see <a class="reference internal" href="#figure-ratio-port-to-manifold-velocity"><span class="std std-numref">Fig. 193</span></a>) can be used to determine the required diameter of inlet manifolds in sedimentation tanks or to determine the required port velocity for the backwash manifold in the StaRS filters. It can also be used to solve for the maximum manifold velocity given the port velocity in the sedimentation tank diffusers.</p>
+<span class="eqno">(698)<a class="headerlink" href="#equation-manifold-max-v-no-hl-series" title="Permalink to this equation">¶</a></span>\[ \frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)}}\]</div>
+<p>Equation <a class="reference internal" href="#equation-manifold-max-v-no-hl-series">(698)</a> (see <a class="reference internal" href="#figure-ratio-port-to-manifold-velocity"><span class="std std-numref">Fig. 203</span></a>) can be used to determine the required diameter of inlet manifolds in sedimentation tanks or to determine the required port velocity for the backwash manifold in the StaRS filters. It can also be used to solve for the maximum manifold velocity given the port velocity in the sedimentation tank diffusers.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Ratio_Pipe_Manifold_V_Port_to_V_Man</span><span class="p">(</span><span class="n">Ratio_Flow</span><span class="p">):</span>
   <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">Ratio_Flow</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">Ratio_Flow</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
 </pre></div>
 </div>
 <div class="figure align-center" id="id5">
 <span id="figure-ratio-port-to-manifold-velocity"></span><a class="reference internal image-reference" href="../_images/Ratio_port_to_manifold_velocity.png"><img alt="Filter channel" src="../_images/Ratio_port_to_manifold_velocity.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 193 </span><span class="caption-text">The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.</span></p>
+<p class="caption"><span class="caption-number">Fig. 203 </span><span class="caption-text">The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.</span></p>
 </div>
 <div class="section" id="sedimentation-tank-inlet-manifold">
 <span id="heading-sedimentation-tank-inlet-manifold"></span><h3>Sedimentation Tank Inlet Manifold<a class="headerlink" href="#sedimentation-tank-inlet-manifold" title="Permalink to this headline">¶</a></h3>
 <p>The port velocity for inlet manifold diffusers is set by the slot width, the width of the sedimentation tank, and the upflow velocity in the sedimentation tank. From mass conservation we have</p>
 <div class="math notranslate nohighlight" id="equation-sed-diffuser-mass-conserve">
-<span class="eqno">(650)<a class="headerlink" href="#equation-sed-diffuser-mass-conserve" title="Permalink to this equation">¶</a></span>\[Q_{Diffuser} = \bar v_{Jet} W_{Diffuser} S_{Diffuser} = \bar v_{FB} W_{Sed} B_{Diffuser}\]</div>
+<span class="eqno">(699)<a class="headerlink" href="#equation-sed-diffuser-mass-conserve" title="Permalink to this equation">¶</a></span>\[ Q_{Diffuser} = \bar v_{Jet} W_{Diffuser} S_{Diffuser} = \bar v_{FB} W_{Sed} B_{Diffuser}\]</div>
 <p>Solve for the jet velocity, <span class="math notranslate nohighlight">\(\bar v_{Jet}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-sed-diffuser-jet-velocity">
-<span class="eqno">(651)<a class="headerlink" href="#equation-sed-diffuser-jet-velocity" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet}  = \frac{\bar v_{FB} W_{Sed} B_{Diffuser}}{W_{Diffuser} S_{Diffuser}}\]</div>
+<span class="eqno">(700)<a class="headerlink" href="#equation-sed-diffuser-jet-velocity" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet}  = \frac{\bar v_{FB} W_{Sed} B_{Diffuser}}{W_{Diffuser} S_{Diffuser}}\]</div>
 <p>For sedimentation tanks that are 1.07 m wide, an upflow velocity of 1 mm/s, with diffusers that are 3.175 mm wide, and assuming that the diffuser wall thickness is small we have a jet velocity of 0.34 m/s.</p>
-<p>The maximum inlet manifold velocity can now be determined from equation <a class="reference internal" href="#equation-manifold-max-v-no-hl-series">(649)</a>. Given a port flow ratio of 85% the maximum manifold velocity is about 0.6 m/s.</p>
+<p>The maximum inlet manifold velocity can now be determined from Equation <a class="reference internal" href="#equation-manifold-max-v-no-hl-series">(698)</a>. Given a port flow ratio of 85% the maximum manifold velocity is about 0.6 m/s.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Design the sedimentation tank inlet manifold</span>
 <span class="n">v_FB</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">W_Diffuser</span> <span class="o">=</span> <span class="mf">3.175</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span>
@@ -404,9 +411,9 @@
 <span id="heading-sedimentor-inlet-channel"></span><h2>Sedimentor Inlet Channel<a class="headerlink" href="#sedimentor-inlet-channel" title="Permalink to this headline">¶</a></h2>
 <p>The sedimentor inlet channel is designed to distribute the flow uniformly between the sedimentation tanks. The flow paths through the various sedimentation tanks are identical except for the difference in the length of the path in the sedimentor inlet channel. Thus the difference in piezometric head in the sedimentor inlet channel must be small compared with the head loss through a sedimentation tank. The head loss through a sedimentation tank is dominated by the outlet manifold which is designed to have a head loss of 5 cm. This 5 cm of head loss is in turn dominated by the orifice head loss as required to achieve uniform flow distribution between the orifices (see <a class="reference internal" href="#heading-sedimentation-tank-outlet-manifold"><span class="std std-ref">sedimentation tank outlet manifold</span></a>)</p>
 <p>For a simple conservative design we calculate the maximum channel velocity assuming that the channel cross section is constant. In our designs we slope the bottom of this channel to maintain a constant velocity to ensure that flocs are scoured and don’t accumulate at the end of this channel where the velocities would be lower if the cross section were constant.</p>
-<p>We can use <a class="reference internal" href="#equation-energy-and-pi-q-no-manifold-hl">(646)</a> to calculate maximum velocity in the sedimentor inlet channel. In this case the average manifold piezometric head, <span class="math notranslate nohighlight">\(\bar \Psi_M\)</span> ,is measured relative to the water level in the sedimentor that is above the sedimentor exit weir. This difference in elevation is dominated by the 5 cm of head loss created by the orifices in the sedimentor outlet manifold. Solving for the maximum channel velocity we obtain</p>
+<p>We can use <a class="reference internal" href="#equation-energy-and-pi-q-no-manifold-hl">(695)</a> to calculate maximum velocity in the sedimentor inlet channel. In this case the average manifold piezometric head, <span class="math notranslate nohighlight">\(\bar \Psi_M\)</span> ,is measured relative to the water level in the sedimentor that is above the sedimentor exit weir. This difference in elevation is dominated by the 5 cm of head loss created by the orifices in the sedimentor outlet manifold. Solving for the maximum channel velocity we obtain</p>
 <div class="math notranslate nohighlight" id="equation-vm-energy-and-pi-q-no-manifold-hl">
-<span class="eqno">(652)<a class="headerlink" href="#equation-vm-energy-and-pi-q-no-manifold-hl" title="Permalink to this equation">¶</a></span>\[\bar v_{M_1} = 2\sqrt{g\bar \Psi_{Sed}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}\]</div>
+<span class="eqno">(701)<a class="headerlink" href="#equation-vm-energy-and-pi-q-no-manifold-hl" title="Permalink to this equation">¶</a></span>\[\bar v_{M_1} = 2\sqrt{g\bar \Psi_{Sed}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Pi_{Q}\)</span> represents the uniformity of flow distribution taken as the minimum sedimentation tank flow divided by the maximum sedimentation tank flow.</p>
 <p>The Ten State Standards states, “The velocity of flocculated water through conduits to settling basins shall not be less than 0.15 m/s nor greater than 0.45 m/s.” The lower velocity matches the constraint of ensuring that the velocity is high enough to scour flocs along the bottom of the channel and thus prevent sedimentation. The maximum velocity was presumably set to achieve reasonable flow distribution, but that values is dependent on the head loss through the sedimentation tanks.</p>
 <p>Below we calculate the maximum sedimentor inlet channel velocity as a function of the flow distribution uniformity.</p>
@@ -432,22 +439,22 @@
 </div>
 <div class="figure align-center" id="id6">
 <span id="figure-sedimentor-channel-max-v"></span><a class="reference internal image-reference" href="../_images/Sedimentor_channel_max_v.png"><img alt="Sedimentor inlet channel velocity constraints" src="../_images/Sedimentor_channel_max_v.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 194 </span><span class="caption-text">The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.</span></p>
+<p class="caption"><span class="caption-number">Fig. 204 </span><span class="caption-text">The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.</span></p>
 </div>
 <p>The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the sedimentor head loss is 5 cm.</p>
 </div>
 <div class="section" id="filter-inlet-channel-with-rectangular-weir-flow-distribution">
 <h2>Filter Inlet Channel with Rectangular Weir Flow Distribution<a class="headerlink" href="#filter-inlet-channel-with-rectangular-weir-flow-distribution" title="Permalink to this headline">¶</a></h2>
-<p>In plants with flow rates large enough to use open stacked rapid sand filters the settled water is delivered to those filters through an open channel. The water exits the channel by flowing across a rectangular weir (see <a class="reference internal" href="#figure-filter-channel"><span class="std std-numref">Fig. 195</span></a>). As is the case in a manifold pipe the water in the channel is decelerating and thus the piezometric head is increasing in the direction of flow. This increase in piezometric head is equivalent to the increase in the depth of water in the channel. This increase in water depth results in more water flowing across the final weir exiting the channel.</p>
+<p>In plants with flow rates large enough to use open stacked rapid sand filters the settled water is delivered to those filters through an open channel. The water exits the channel by flowing across a rectangular weir (see <a class="reference internal" href="#figure-filter-channel"><span class="std std-numref">Fig. 205</span></a>). As is the case in a manifold pipe the water in the channel is decelerating and thus the piezometric head is increasing in the direction of flow. This increase in piezometric head is equivalent to the increase in the depth of water in the channel. This increase in water depth results in more water flowing across the final weir exiting the channel.</p>
 <div class="figure align-center" id="id7">
 <span id="figure-filter-channel"></span><a class="reference internal image-reference" href="../_images/Filter_channel.png"><img alt="Filter channel" src="../_images/Filter_channel.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 195 </span><span class="caption-text">The filter inlet channel distributes flow to all of the filters. The water in the channel flows across sharp crested weirs into the filter inlet boxes. The velocity in the channel decreases in the direction of flow and thus the kinetic energy of the flow is converted into height. That added height results in greater flow into downstream filter inlet boxes.</span></p>
+<p class="caption"><span class="caption-number">Fig. 205 </span><span class="caption-text">The filter inlet channel distributes flow to all of the filters. The water in the channel flows across sharp crested weirs into the filter inlet boxes. The velocity in the channel decreases in the direction of flow and thus the kinetic energy of the flow is converted into height. That added height results in greater flow into downstream filter inlet boxes.</span></p>
 </div>
 <p>The flow across the weirs into the filter inlet boxes is complicated by several factors. First, there must be a <em>vena contracta</em> as the flow changes direction to flow across the weir and thus the <span class="math notranslate nohighlight">\(90^{\circ}\)</span> <em>vena contracta</em> coefficient should enter the equations. Second, the weirs as they are fabricated are neither sharp nor broad and thus it isn’t clear which equations are best suited. Sharp crested weirs are known to have a reduced depth of flow above the weir due to the acceleration of water approaching the weir and this effect is normally ignored and then thrown into the weir coefficient. Given that our weirs do not have a rounded upstream edge required by broad crested weirs we will use the sharp crested weir equation.</p>
 <div class="section" id="side-exit-sharp-crested-weir">
 <h3>Side Exit Sharp Crested Weir<a class="headerlink" href="#side-exit-sharp-crested-weir" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight" id="equation-sharp-weir-q-of-channel-depth">
-<span class="eqno">(653)<a class="headerlink" href="#equation-sharp-weir-q-of-channel-depth" title="Permalink to this equation">¶</a></span>\[Q = \Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{channel}\right)^\frac{3}{2}\]</div>
+<span class="eqno">(702)<a class="headerlink" href="#equation-sharp-weir-q-of-channel-depth" title="Permalink to this equation">¶</a></span>\[ Q = \Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{channel}\right)^\frac{3}{2}\]</div>
 <p>where <span class="math notranslate nohighlight">\(H_{channel}\)</span> is the height of the water in the channel above the top of the weir. (see equation 10.30 in Fundamentals of Fluid Mechanics, Fifth Edition by Munson, Young, and Okiishi)</p>
 </div>
 <div class="section" id="inlet-channel-design-for-equal-filter-flow">
@@ -455,18 +462,18 @@
 <p>We will simplify this manifold problem by assuming that the average water height in the channel above the weirs corresponds to the average flow across the weirs and that the upstream depth is decreased by 1/2 of the channel velocity head and the downstream depth is increased by 1/2 the channel velocity head.</p>
 <p>The ratio of flows from the first filter and the last filter in the channel is given by</p>
 <div class="math notranslate nohighlight" id="equation-sharp-weir-flow-ratio-messy">
-<span class="eqno">(654)<a class="headerlink" href="#equation-sharp-weir-flow-ratio-messy" title="Permalink to this equation">¶</a></span>\[\Pi_{Q_{weir}} = \frac{Q_{Filter_1}}{Q_{Filter_n}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span> is the average height of water in the channel relative to the top of the weir. Equation <a class="reference internal" href="#equation-sharp-weir-flow-ratio-messy">(654)</a> simplifies to</p>
+<span class="eqno">(703)<a class="headerlink" href="#equation-sharp-weir-flow-ratio-messy" title="Permalink to this equation">¶</a></span>\[\Pi_{Q_{weir}} = \frac{Q_{Filter_1}}{Q_{Filter_n}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span> is the average height of water in the channel relative to the top of the weir. Equation <a class="reference internal" href="#equation-sharp-weir-flow-ratio-messy">(703)</a> simplifies to</p>
 <div class="math notranslate nohighlight" id="equation-sharp-weir-flow-ratio1">
-<span class="eqno">(655)<a class="headerlink" href="#equation-sharp-weir-flow-ratio1" title="Permalink to this equation">¶</a></span>\[\Pi_{Q_{weir}} = \frac{ \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}\]</div>
+<span class="eqno">(704)<a class="headerlink" href="#equation-sharp-weir-flow-ratio1" title="Permalink to this equation">¶</a></span>\[\Pi_{Q_{weir}} = \frac{ \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}\]</div>
 <p>The slower the velocity in the channel the more uniform the flow distribution will be between the filters.</p>
 <p>Solve for the maximum velocity in the channel given the average depth of water above the weirs and the required flow distribution.</p>
 <div class="math notranslate nohighlight" id="equation-sharp-weir-flow-ratio2">
-<span class="eqno">(656)<a class="headerlink" href="#equation-sharp-weir-flow-ratio2" title="Permalink to this equation">¶</a></span>\[ \bar H_{channel}\Pi_{Q_{weir}}^\frac{2}{3} + \frac{\bar v_{M_1}^2}{4g}\Pi_{Q_{weir}}^\frac{2}{3}= { \bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}}\]</div>
+<span class="eqno">(705)<a class="headerlink" href="#equation-sharp-weir-flow-ratio2" title="Permalink to this equation">¶</a></span>\[ \bar H_{channel}\Pi_{Q_{weir}}^\frac{2}{3} + \frac{\bar v_{M_1}^2}{4g}\Pi_{Q_{weir}}^\frac{2}{3}= { \bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}}\]</div>
 <p>Now we can solve for maximum manifold channel velocity.</p>
 <div class="math notranslate nohighlight" id="equation-inlet-channel-v-max">
-<span class="eqno">(657)<a class="headerlink" href="#equation-inlet-channel-v-max" title="Permalink to this equation">¶</a></span>\[  \bar v_{M_1} =  2\sqrt{g\bar H_{channel}\frac{\left(1-\Pi_{Q_{weir}}^\frac{2}{3}\right)}{\left(\Pi_{Q_{weir}}^\frac{2}{3} + 1\right)}}\]</div>
-<p>The channel depth of water above the weir, <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span>, and the flow uniformity target set the maximum velocity in the manifold channel (see <a class="reference internal" href="#figure-filter-channel-v-max"><span class="std std-numref">Fig. 196</span></a>).</p>
+<span class="eqno">(706)<a class="headerlink" href="#equation-inlet-channel-v-max" title="Permalink to this equation">¶</a></span>\[\bar v_{M_1} =  2\sqrt{g\bar H_{channel}\frac{\left(1-\Pi_{Q_{weir}}^\frac{2}{3}\right)}{\left(\Pi_{Q_{weir}}^\frac{2}{3} + 1\right)}}\]</div>
+<p>The channel depth of water above the weir, <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span>, and the flow uniformity target set the maximum velocity in the manifold channel (see <a class="reference internal" href="#figure-filter-channel-v-max"><span class="std std-numref">Fig. 206</span></a>).</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Inlet_Channel_V_Max</span><span class="p">(</span><span class="n">H_weir</span><span class="p">,</span><span class="n">Ratio_Flow</span><span class="p">):</span>
 <span class="k">return</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">gravity</span><span class="o">*</span><span class="n">H_weir</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">Ratio_Flow</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Ratio_Flow</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">))))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 
@@ -485,19 +492,19 @@
 </div>
 <div class="figure align-center" id="id8">
 <span id="figure-filter-channel-v-max"></span><a class="reference internal image-reference" href="../_images/Filter_channel_v_max.png"><img alt="Filter channel velocities" src="../_images/Filter_channel_v_max.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 196 </span><span class="caption-text">The maximum velocity in the filter inlet channel decreases as the target flow ratio, <span class="math notranslate nohighlight">\(\Pi_{Q_{weir}}\)</span>, approaches 1. This graph was created assuming <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span> of 5 cm.</span></p>
+<p class="caption"><span class="caption-number">Fig. 206 </span><span class="caption-text">The maximum velocity in the filter inlet channel decreases as the target flow ratio, <span class="math notranslate nohighlight">\(\Pi_{Q_{weir}}\)</span>, approaches 1. This graph was created assuming <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span> of 5 cm.</span></p>
 </div>
 </div>
 <div class="section" id="backwash-weir-slot-design">
 <h3>Backwash Weir Slot Design<a class="headerlink" href="#backwash-weir-slot-design" title="Permalink to this headline">¶</a></h3>
 <p>The goal of the backwash weir slot is to provide close to the design flow rate to a filter while it is in backwash mode. To accomplish this the wide gate weir is opened and the weir slot controls the flow of water into the inlet box. During backwash the water level in the inlet box is much lower and thus the backwash weir slot can extend deep into the box. The design constraint for this slot is that it must deliver the design flow when the water level in the inlet channel is at the design flow height and it must deliver at least 80% of the design flow  when there is no flow going to any of the other filters. The difference in water level between the two cases is <span class="math notranslate nohighlight">\(H_{channel}\)</span> because this is the height of water flowing over the wide weir at the design flow rate. The height of the slot, <span class="math notranslate nohighlight">\(H_{slot}\)</span>, is measured relative to the design flow water level in the inlet channel.</p>
 <p>This design will result in more water available for backwash than is absolutely needed and if it turns out that too much water is directed to this filter than the bottom of the slot can be elevated by adding a few stop logs.</p>
-<p>The equation is based on the sharp crested weir (Equation <a class="reference internal" href="#equation-sharp-weir-q-of-channel-depth">(653)</a>). The head loss through the gate weir should be subtracted from both the top and bottom terms</p>
+<p>The equation is based on the sharp crested weir (Equation <a class="reference internal" href="#equation-sharp-weir-q-of-channel-depth">(702)</a>). The head loss through the gate weir should be subtracted from both the top and bottom terms</p>
 <div class="math notranslate nohighlight" id="equation-flow-ratio-backwash">
-<span class="eqno">(658)<a class="headerlink" href="#equation-flow-ratio-backwash" title="Permalink to this equation">¶</a></span>\[  \Pi_{Q_{BW}} = \frac{Q_{BW_{min}}}{Q_{BW_{max}}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot} - H_{channel} - HL_{Gate}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot}- HL_{Gate}\right)^\frac{3}{2}}\]</div>
+<span class="eqno">(707)<a class="headerlink" href="#equation-flow-ratio-backwash" title="Permalink to this equation">¶</a></span>\[\Pi_{Q_{BW}} = \frac{Q_{BW_{min}}}{Q_{BW_{max}}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot} - H_{channel} - HL_{Gate}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot}- HL_{Gate}\right)^\frac{3}{2}}\]</div>
 <p>Simplify and solve for <span class="math notranslate nohighlight">\(H_{slot}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-backwash-slot-height">
-<span class="eqno">(659)<a class="headerlink" href="#equation-backwash-slot-height" title="Permalink to this equation">¶</a></span>\[  H_{slot} = \frac{H_{channel}}{1-\Pi_{Q_{BW}}^\frac{2}{3}} + HL_{Gate}\]</div>
+<span class="eqno">(708)<a class="headerlink" href="#equation-backwash-slot-height" title="Permalink to this equation">¶</a></span>\[   H_{slot} = \frac{H_{channel}}{1-\Pi_{Q_{BW}}^\frac{2}{3}} + HL_{Gate}\]</div>
 </div>
 </div>
 </div>
@@ -522,7 +529,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
@@ -544,7 +551,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.070',
+            VERSION:'0.074',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flow Control and Measurement Solution &mdash; AguaClara Textbook 0.070 documentation</title>
+  <title>Flow Control and Measurement Solution &mdash; AguaClara Textbook 0.074 documentation</title>
   
 
   
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Fluid Deformation and Energy Dissipation Derivations" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html" />
+    <link rel="next" title="Entrance Tank Design" href="ET_Design.html" />
     <link rel="prev" title="Flow Control and Measurement Derivations" href="FCM_Derivations.html" /> 
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.070
+                0.074
               </div>
             
           
@@ -90,7 +90,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
@@ -141,11 +142,17 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="ET_Design.html">Entrance Tank Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocs, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces, and Fluidized Suspensions Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
 <ul>
@@ -308,7 +315,7 @@
 </ol>
 </div></blockquote>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="k">as</span> <span class="nn">ac</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
@@ -326,7 +333,7 @@
 </div>
 <div class="section" id="id2">
 <h3>2)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>The simple orifice equation <span class="math notranslate nohighlight">\(Q = {\Pi _{vc}}{A_{or}}\sqrt {2g\Delta h}\)</span> that we normally use is not applicable for vertically oriented orifices that are partially or barely submerged. The <a class="reference external" href="https://il.water.usgs.gov/proj/feq/fequtl98.i2h/4_7aupdate.html">USGS published a great solution</a> for flow through partially submerged vertically oriented orifices. AguaClara uses a general solution for a vertically oriented orifice, which is available in the physchem file as <code class="docutils literal notranslate"><span class="pre">pc.flow_orifice_vert</span></code>. That function handles vertically oriented orifices even if they are only partially submerged.</p>
+<p>The simple orifice Equation <span class="math notranslate nohighlight">\(Q = {\Pi _{vc}}{A_{or}}\sqrt {2g\Delta h}\)</span> that we normally use is not applicable for vertically oriented orifices that are partially or barely submerged. The <a class="reference external" href="https://il.water.usgs.gov/proj/feq/fequtl98.i2h/4_7aupdate.html">USGS published a great solution</a> for flow through partially submerged vertically oriented orifices. AguaClara uses a general solution for a vertically oriented orifice, which is available in the physchem file as <code class="docutils literal notranslate"><span class="pre">pc.flow_orifice_vert</span></code>. That function handles vertically oriented orifices even if they are only partially submerged.</p>
 <p>The vertical orifice equation is based on the concept that the velocity through the orifice at any point is equal to <span class="math notranslate nohighlight">\(\sqrt{2gh}\)</span>, where h is the local depth of submergence. The total flow can be obtained by integration of that velocity over the submerged area of the orifice.</p>
 <p>For this question, you will create a well formatted graph with two curves to display flow rate through a 5 cm diameter orifice oriented <strong>vertically and horizontally</strong>.</p>
 <p>We want to be able to describe the height of the water in the orifice as relative to the orifice diameter size. The relationship between velocity and orifice diameter is true for orifices of any size, so it is valuable to create a nondimensional model that can be understood for all diameters. The flow rate that you will use for this question is as a function of the normalized depth of water from 1 diameter below the center of the orifice to 2 diameters above the center of the orifice.</p>
@@ -617,7 +624,7 @@ The length of each tube is 2.43 m</dd>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html" class="btn btn-neutral float-right" title="Fluid Deformation and Energy Dissipation Derivations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ET_Design.html" class="btn btn-neutral float-right" title="Entrance Tank Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="FCM_Derivations.html" class="btn btn-neutral" title="Flow Control and Measurement Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -629,7 +636,7 @@ The length of each tube is 2.43 m</dd>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
@@ -651,7 +658,7 @@ The length of each tube is 2.43 m</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.070',
+            VERSION:'0.074',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

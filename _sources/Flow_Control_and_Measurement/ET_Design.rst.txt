@@ -25,7 +25,7 @@ The trash rack is specifically designed to remove low density debris that could 
 The minimum trash rack area is set by a goal of minimizing head loss through the plant while maintaining a trash rack size that is reasonably compact. We recommend that the trash rack be designed to reach a terminal head loss of 5 cm when it is 90% clogged. The design follows directly from that constraint. The guiding equation is the orifice equation with the simple addition of the fractions of the area that is actually available for the water to flow through the trash rack. The area is reduced by the porosity, the vena contracta, and the clogging.
 
 .. math::
-   :label: trashrack_flow
+  :label: trashrack_flow
 
    Q = (1-\Pi_{clogged})\Pi_{vc} \phi A_{trashrack}\sqrt{2gh}
 
@@ -34,7 +34,7 @@ where :math:`\phi_{trashrack}` is the fraction of clean trash rack that is open,
 Solve for the area of the trash rack
 
 .. math::
-   :label: trashrack_area
+  :label: trashrack_area
 
    A_{trashrack} = \frac{Q}{(1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}}
 
@@ -45,7 +45,7 @@ For AguaClara plants recommend a head loss of 5 cm max.
 Also of interest is the effective velocity taking into account the whole area of the trash rack.
 
 .. math::
-   :label: trashrack_velocity
+  :label: trashrack_velocity
 
    v_{trashrack} = \frac{Q}{A_{trashrack} } = (1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}
 

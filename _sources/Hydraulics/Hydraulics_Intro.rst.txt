@@ -26,9 +26,9 @@ The sum of the pressure and elevation term in the energy equation is the piezome
 
 
 .. math::
-   :label: piezometric_head_defined
+  :label: piezometric_head_defined
 
-   \Psi = \frac{p}{\rho g} + z
+  \Psi = \frac{p}{\rho g} + z
 
 
 .. _figure_Sloped_Manifold_no_flow:
@@ -66,24 +66,24 @@ If manifolds were built using pitot type exits with the exit facing upstream and
 Flow distribution from ports exiting a manifold is controlled by the change in piezometric head inside the manifold and the change in piezometric head as the water exits through a port. The reason that the flow from each port is not identical is because of changes in piezometric head in the manifold. These changes are caused by major losses due to shear on the manifold walls and due to pressure recovery as the velocity in the manifold decreases. The control volume is shown in :numref:`figure_inlet_manifold`
 
 .. math::
-   :label: energy_cv_manifold
+  :label: energy_cv_manifold
 
-    \frac{p_{M_1}}{\rho g}+z_{M_1}+\frac{\bar v_{M_1}^2}{2 g}=\frac{p_{M_n}}{\rho g}+z_{M_n}+\frac{\bar v_{M_n}^2}{2g} + h_{L}
+   \frac{p_{M_1}}{\rho g}+z_{M_1}+\frac{\bar v_{M_1}^2}{2 g}=\frac{p_{M_n}}{\rho g}+z_{M_n}+\frac{\bar v_{M_n}^2}{2g} + h_{L}
 
 
-The energy control volume equation :eq:`energy_cv_manifold` can be simplified with the definition of piezometric head (equation :eq:`piezometric_head_defined`).
+The energy control volume Equation :eq:`energy_cv_manifold` can be simplified with the definition of piezometric head (Equation :eq:`piezometric_head_defined`).
 
 .. math::
-   :label: piezometric_cv_manifold
+  :label: piezometric_cv_manifold
 
-    \Psi_{M_1}+\frac{\bar v_{M_1}^2}{2 g}=\Psi_{M_n}+\frac{\bar v_{M_n}^2}{2 g}+h_{L}
+   \Psi_{M_1}+\frac{\bar v_{M_1}^2}{2 g}=\Psi_{M_n}+\frac{\bar v_{M_n}^2}{2 g}+h_{L}
 
 The change in piezometric head is the important parameter and is given by
 
 .. math::
-   :label: delta_piezometric_cv_manifold
+  :label: delta_piezometric_cv_manifold
 
-    \Delta\Psi_M = \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L}
+   \Delta\Psi_M = \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L}
 
 .. _figure_inlet_manifold:
 
@@ -97,77 +97,77 @@ The change in piezometric head is the important parameter and is given by
 For short :math:`f\frac{L}{d}<<1`, straight (minor loss coefficient = 0), inlet manifolds the change in piezometric head, :math:`\Delta\Psi_M` is equal the initial velocity head.
 
 .. math::
-   :label: delta_piezometric_is_velocity_head
+  :label: delta_piezometric_is_velocity_head
 
-    \Delta\Psi_M = \frac{\bar v_{M_1}^{2}}{2 g}
+   \Delta\Psi_M = \frac{\bar v_{M_1}^{2}}{2 g}
 
 To simplify analysis we assume the middle port gets the average flow (this isn’t quite right because the velocity is squared) and the average piezometric head, :math:`\bar \Psi_M`. The first port has mean piezometric head – ½ delta piezometric head and the last port has an increase in the piezometric head.
 
 .. math::
-   :label: Piezo_ports
+  :label: Piezo_ports
 
-    \Psi_{M_1} = \bar \Psi_{M} - \frac{1}{2}\Delta \Psi_M
+   \Psi_{M_1} = \bar \Psi_{M} - \frac{1}{2}\Delta \Psi_M
 
-    \Psi_{M_n} = \bar \Psi_{M} + \frac{1}{2}\Delta \Psi_M
+   \Psi_{M_n} = \bar \Psi_{M} + \frac{1}{2}\Delta \Psi_M
 
 where the piezometric head at each port is also proportional to the port velocity squared. A design constraint for a manifold is the target ratio of flow from port one, :math:`Q_{P_1}`, divided by the flow from the last port, :math:`Q_{P_n}`.
 
 
 .. math::
-   :label: Pi_Q_ports
+  :label: Pi_Q_ports
 
-    \Pi_{Q} = \frac{Q_{P_1}}{Q_{P_n}}=\sqrt{\frac{\Psi_{M_1}}{\Psi_{M_n}}}
+   \Pi_{Q} = \frac{Q_{P_1}}{Q_{P_n}}=\sqrt{\frac{\Psi_{M_1}}{\Psi_{M_n}}}
 
-Substitute equations :eq:`Piezo_ports` into equation :eq:`Pi_Q_ports` to obtain the relationship between piezometric head and the flow distribution ratio.
+Substitute equations :eq:`Piezo_ports` into Equation :eq:`Pi_Q_ports` to obtain the relationship between piezometric head and the flow distribution ratio.
 
 .. math::
-   :label: Pi_Q_ports2
+  :label: Pi_Q_ports2
 
-    \Pi_{Q}^2 = \frac{\bar \Psi_{M} - \frac{1}{2}\Delta \Psi_M}{\bar \Psi_{M} + \frac{1}{2}\Delta \Psi_M}
+   \Pi_{Q}^2 = \frac{\bar \Psi_{M} - \frac{1}{2}\Delta \Psi_M}{\bar \Psi_{M} + \frac{1}{2}\Delta \Psi_M}
 
 This equation shows that the flow distribution will approach 1 when :math:`\bar \Psi_{M}` is much larger than :math:`\Delta \Psi_M`. This can be achieved by having the manifold velocities be small compared with the port velocities. Solving for the change in piezometric head in the manifold we obtain the relationship between change in piezometric head and uniformity of port flow.
 
 .. math::
-   :label: Pi_Q_ports3
+  :label: Pi_Q_ports3
 
-    \Delta \Psi_M = 2\bar \Psi_{M}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}
+   \Delta \Psi_M = 2\bar \Psi_{M}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}
 
-The energy equation also yields an equation for the change in piezometric head (see equation :eq:`delta_piezometric_cv_manifold`) and we can equate those two to
+The energy equation also yields an equation for the change in piezometric head (see Equation :eq:`delta_piezometric_cv_manifold`) and we can equate those two to
 
 .. math::
-   :label: Energy_and_Pi_Q
+  :label: Energy_and_Pi_Q
 
-    \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L} = 2\bar \Psi_{M}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}
+   \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L} = 2\bar \Psi_{M}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}
 
 
 If head loss in the manifold is small, then we have
 
 .. math::
-   :label: Energy_and_Pi_Q_no_manifold_hl
+  :label: Energy_and_Pi_Q_no_manifold_hl
 
-    \frac{\bar v_{M_1}^{2}}{2 g} = 2\bar \Psi_M\frac{1 - \Pi_Q^2}{\Pi_Q^2 + 1}
+   \frac{\bar v_{M_1}^{2}}{2 g} = 2\bar \Psi_M\frac{1 - \Pi_Q^2}{\Pi_Q^2 + 1}
 
 The average piezometric head in the manifold is also influenced by any head loss that is in series with the port head loss. Here we assume that the piezometric head datum is in the receiving tank. If the receiving tank is a filter, then there could be head loss through the sand on the way to the outlet of the filter. This head loss in series will help provide more uniform flow out of the manifold if there aren't any paths for flow to blend between the first and last ports. This is the case for division of flow between sand layers in a stacked rapid sand filter where the head loss through the sand plays a key role in helping to divide the flow evenly between the 6 layers of sand. The average piezometric head in the manifold, :math:`\bar \Psi_{M}` is equal to the head from the port kinetic energy plus any downstream head loss.
 
 .. math::
-   :label: Manifold_piezometric_head_port_KE_and_HL
+  :label: Manifold_piezometric_head_port_KE_and_HL
 
-    \bar \Psi_M \cong \frac{\bar v_{P}^{2}}{2 g} + h_{l_{series}} \cong h_{e_{port}} + h_{l_{series}}
+   \bar \Psi_M \cong \frac{\bar v_{P}^{2}}{2 g} + h_{l_{series}} \cong h_{e_{port}} + h_{l_{series}}
 
 
 The port head loss is given by :math:`\bar v_{P} = \sqrt{2gh_e}` where the port velocity is the true contracted velocity if there is a *vena contracta*. If the head loss in series, :math:`h_{l_{series}}`, is significant, then equations :eq:`Energy_and_Pi_Q_no_manifold_hl` and :eq:`Manifold_piezometric_head_port_KE_and_HL` combine to produce
 
 .. math::
-   :label: Manifold_max_v_with_hl_series
+  :label: Manifold_max_v_with_hl_series
 
-    \bar v_{M_1}= 2\sqrt{g (h_{e_{port}} + h_{l_{series}})\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
+   \bar v_{M_1}= 2\sqrt{g (h_{e_{port}} + h_{l_{series}})\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
 
-If there is no additional head loss in series to improve flow distribution, then equation :eq:`Manifold_max_v_with_hl_series` simplifies to
+If there is no additional head loss in series to improve flow distribution, then Equation :eq:`Manifold_max_v_with_hl_series` simplifies to
 
 .. math::
-   :label: Manifold_max_v_no_hl_series
+  :label: Manifold_max_v_no_hl_series
 
-    \frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)}}
+   \frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)}}
 
 Equation :eq:`Manifold_max_v_no_hl_series` (see :numref:`figure_Ratio_port_to_manifold_velocity`) can be used to determine the required diameter of inlet manifolds in sedimentation tanks or to determine the required port velocity for the backwash manifold in the StaRS filters. It can also be used to solve for the maximum manifold velocity given the port velocity in the sedimentation tank diffusers.
 
@@ -196,20 +196,20 @@ Sedimentation Tank Inlet Manifold
 The port velocity for inlet manifold diffusers is set by the slot width, the width of the sedimentation tank, and the upflow velocity in the sedimentation tank. From mass conservation we have
 
 .. math::
-   :label: Sed_diffuser_mass_conserve
+  :label: Sed_diffuser_mass_conserve
 
    Q_{Diffuser} = \bar v_{Jet} W_{Diffuser} S_{Diffuser} = \bar v_{FB} W_{Sed} B_{Diffuser}
 
 Solve for the jet velocity, :math:`\bar v_{Jet}`.
 
 .. math::
-   :label: Sed_diffuser_jet_velocity
+  :label: Sed_diffuser_jet_velocity
 
-   \bar v_{Jet}  = \frac{\bar v_{FB} W_{Sed} B_{Diffuser}}{W_{Diffuser} S_{Diffuser}}
+  \bar v_{Jet}  = \frac{\bar v_{FB} W_{Sed} B_{Diffuser}}{W_{Diffuser} S_{Diffuser}}
 
 For sedimentation tanks that are 1.07 m wide, an upflow velocity of 1 mm/s, with diffusers that are 3.175 mm wide, and assuming that the diffuser wall thickness is small we have a jet velocity of 0.34 m/s.
 
-The maximum inlet manifold velocity can now be determined from equation :eq:`Manifold_max_v_no_hl_series`. Given a port flow ratio of 85% the maximum manifold velocity is about 0.6 m/s.
+The maximum inlet manifold velocity can now be determined from Equation :eq:`Manifold_max_v_no_hl_series`. Given a port flow ratio of 85% the maximum manifold velocity is about 0.6 m/s.
 
 .. code:: python
 
@@ -278,9 +278,9 @@ For a simple conservative design we calculate the maximum channel velocity assum
 We can use :eq:`Energy_and_Pi_Q_no_manifold_hl` to calculate maximum velocity in the sedimentor inlet channel. In this case the average manifold piezometric head, :math:`\bar \Psi_M` ,is measured relative to the water level in the sedimentor that is above the sedimentor exit weir. This difference in elevation is dominated by the 5 cm of head loss created by the orifices in the sedimentor outlet manifold. Solving for the maximum channel velocity we obtain
 
 .. math::
-   :label: vM_Energy_and_Pi_Q_no_manifold_hl
+  :label: vM_Energy_and_Pi_Q_no_manifold_hl
 
-   \bar v_{M_1} = 2\sqrt{g\bar \Psi_{Sed}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
+  \bar v_{M_1} = 2\sqrt{g\bar \Psi_{Sed}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
 
 where :math:`\Pi_{Q}` represents the uniformity of flow distribution taken as the minimum sedimentation tank flow divided by the maximum sedimentation tank flow.
 
@@ -341,7 +341,7 @@ Side Exit Sharp Crested Weir
 ----------------------------
 
 .. math::
-   :label: Sharp_weir_Q_of_channel_depth
+  :label: Sharp_weir_Q_of_channel_depth
 
    Q = \Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{channel}\right)^\frac{3}{2}
 
@@ -358,33 +358,33 @@ We will simplify this manifold problem by assuming that the average water height
 The ratio of flows from the first filter and the last filter in the channel is given by
 
 .. math::
-   :label: Sharp_weir_flow_ratio_messy
+  :label: Sharp_weir_flow_ratio_messy
 
-   \Pi_{Q_{weir}} = \frac{Q_{Filter_1}}{Q_{Filter_n}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}
+  \Pi_{Q_{weir}} = \frac{Q_{Filter_1}}{Q_{Filter_n}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}
 
 
 where :math:`\bar H_{channel}` is the average height of water in the channel relative to the top of the weir. Equation :eq:`Sharp_weir_flow_ratio_messy` simplifies to
 
 .. math::
-   :label: Sharp_weir_flow_ratio1
+  :label: Sharp_weir_flow_ratio1
 
-   \Pi_{Q_{weir}} = \frac{ \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}
+  \Pi_{Q_{weir}} = \frac{ \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}
 
 The slower the velocity in the channel the more uniform the flow distribution will be between the filters.
 
 Solve for the maximum velocity in the channel given the average depth of water above the weirs and the required flow distribution.
 
 .. math::
-   :label: Sharp_weir_flow_ratio2
+  :label: Sharp_weir_flow_ratio2
 
-    \bar H_{channel}\Pi_{Q_{weir}}^\frac{2}{3} + \frac{\bar v_{M_1}^2}{4g}\Pi_{Q_{weir}}^\frac{2}{3}= { \bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}}
+   \bar H_{channel}\Pi_{Q_{weir}}^\frac{2}{3} + \frac{\bar v_{M_1}^2}{4g}\Pi_{Q_{weir}}^\frac{2}{3}= { \bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}}
 
 Now we can solve for maximum manifold channel velocity.
 
 .. math::
-   :label: Inlet_Channel_v_max
+  :label: Inlet_Channel_v_max
 
-     \bar v_{M_1} =  2\sqrt{g\bar H_{channel}\frac{\left(1-\Pi_{Q_{weir}}^\frac{2}{3}\right)}{\left(\Pi_{Q_{weir}}^\frac{2}{3} + 1\right)}}
+  \bar v_{M_1} =  2\sqrt{g\bar H_{channel}\frac{\left(1-\Pi_{Q_{weir}}^\frac{2}{3}\right)}{\left(\Pi_{Q_{weir}}^\frac{2}{3} + 1\right)}}
 
 
 The channel depth of water above the weir, :math:`\bar H_{channel}`, and the flow uniformity target set the maximum velocity in the manifold channel (see :numref:`figure_Filter_channel_v_max`).
@@ -429,13 +429,13 @@ This design will result in more water available for backwash than is absolutely 
 The equation is based on the sharp crested weir (Equation :eq:`Sharp_weir_Q_of_channel_depth`). The head loss through the gate weir should be subtracted from both the top and bottom terms
 
 .. math::
-   :label: Flow_ratio_backwash
+  :label: Flow_ratio_backwash
 
-     \Pi_{Q_{BW}} = \frac{Q_{BW_{min}}}{Q_{BW_{max}}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot} - H_{channel} - HL_{Gate}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot}- HL_{Gate}\right)^\frac{3}{2}}
+  \Pi_{Q_{BW}} = \frac{Q_{BW_{min}}}{Q_{BW_{max}}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot} - H_{channel} - HL_{Gate}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot}- HL_{Gate}\right)^\frac{3}{2}}
 
 Simplify and solve for :math:`H_{slot}`.
 
 .. math::
-   :label: backwash_slot_height
+  :label: backwash_slot_height
 
      H_{slot} = \frac{H_{channel}}{1-\Pi_{Q_{BW}}^\frac{2}{3}} + HL_{Gate}

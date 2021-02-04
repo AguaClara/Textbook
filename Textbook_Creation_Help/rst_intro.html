@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction to RST and Sphinx for Textbook Contributors &mdash; AguaClara Textbook 0.070 documentation</title>
+  <title>Introduction to RST and Sphinx for Textbook Contributors &mdash; AguaClara Textbook 0.074 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.070
+                0.074
               </div>
             
           
@@ -90,7 +90,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
@@ -104,11 +105,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocs, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces, and Fluidized Suspensions Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
 <ul>
@@ -185,8 +192,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-rst-for-development">Setting up RST for Development</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#installing-the-atom-plugins">Installing the Atom Plugins</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#building-rst-locally-with-sphinx">Building RST Locally with Sphinx</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#publishing-online">Publishing Online</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#building-pdf-locally">Building PDF Locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publishing-online">Publishing Online</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#testing-online">Testing Online</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sharing-test-output">Sharing Test Output</a></li>
 </ul>
@@ -297,6 +304,18 @@
 <p class="last">Regarding <strong>1.</strong> the master branch for the package implementing disqus in sphinx <a class="reference external" href="https://github.com/Robpol86/sphinxcontrib-disqus/pull/7">is broken</a>, which is why we use a non-standard pip/online installation. If you already have the incorrect sphinx-disqus version installed, uninstall it with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span> <span class="pre">sphinxcontrib-disqus</span></code> before installing the functioning version.</p>
 </div>
 </div>
+<div class="section" id="building-pdf-locally">
+<span id="heading-building-pdf-locally"></span><h3>Building PDF Locally<a class="headerlink" href="#building-pdf-locally" title="Permalink to this headline">¶</a></h3>
+<p>To check errors with the PDF generation more quickly, it may be worthwhile to setup your local machine to build the PDF.</p>
+<blockquote>
+<div><ul class="simple">
+<li>install <a href="#id1"><span class="problematic" id="id2">`MikTeX&lt;https://miktex.org/howto/install-miktex&gt;`_</span></a></li>
+<li>install <a class="reference external" href="https://strawberryperl.com/">Perl</a></li>
+<li>run the command make latexpdf</li>
+<li>the PDF will be created in the latex folder inside the _build folder</li>
+</ul>
+</div></blockquote>
+</div>
 <div class="section" id="publishing-online">
 <span id="heading-publishing-online"></span><h3>Publishing Online<a class="headerlink" href="#publishing-online" title="Permalink to this headline">¶</a></h3>
 <p>We use <a class="reference external" href="https://travis-ci.org/">Travis</a> to ensure this site will always contain functional builds. To publish online, you need to:</p>
@@ -323,12 +342,6 @@
 <p class="last">If your changes to the master branch aren’t pushing to gh-pages, then check the status of the <a class="reference external" href="https://travis-ci.org/AguaClara/Textbook">Travis build here</a>.</p>
 </div>
 </div>
-<div class="section" id="building-pdf-locally">
-<span id="heading-building-pdf-locally"></span><h3>Building PDF Locally<a class="headerlink" href="#building-pdf-locally" title="Permalink to this headline">¶</a></h3>
-<p>To check errors with the PDF generation more quickly, it may be worthwhile to setup your local machine to build the PDF.</p>
-<p>Now you should be able to run <code class="code docutils literal notranslate"><span class="pre">./build_pdf</span></code> to run the build_pdf bash script within the root of the Textbook repo.</p>
-<p><strong>If you are on Windows, you’ll need to use a POSIX shell, such as git bash, Cygwin, etc…</strong></p>
-</div>
 <div class="section" id="testing-online">
 <span id="heading-testing-online"></span><h3>Testing Online<a class="headerlink" href="#testing-online" title="Permalink to this headline">¶</a></h3>
 <p>To test exactly what will be published, we have a test branch. The test branch is built by Travis and contains all the processed html that Travis produces in _build/html. This branch is populated when ANY COMMIT IS PUSHED. Meaning, the last commit to be pushed, if it passes the Travis tests, will be built and the output will be placed in the test branch. Also, if the PDF=True environment variable is triggered for a Travis build, the PDF will also be generated and placed in the test branch. To do this, use the “Trigger Build” option in Travis and put:</p>
@@ -348,7 +361,7 @@
 <p>When writing RST, there are often many ways to write the same thing. Almost always, the way with the fewest number of characters is the best way. Ideally, never copy and paste.</p>
 <div class="section" id="how-do-i-write-rst">
 <span id="heading-how-do-i-write-rst"></span><h3>How do I write RST?<a class="headerlink" href="#how-do-i-write-rst" title="Permalink to this headline">¶</a></h3>
-<p>RST is friendly to learn and powerful. There are many useful cheatsheets, like <a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks">this one</a> and the next page on this site: <span class="xref std std-ref">Functionality in RST and AguaClara Convention</span>, which is specifically for AguaClara and this textbook project. When you start writing RST, look at the cheat sheets all the time. Use <code class="code docutils literal notranslate"><span class="pre">ctrl-f</span></code> all the time to find whatever you need.</p>
+<p>RST is friendly to learn and powerful. There are many useful cheatsheets, like <a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks">this one</a>. When you start writing RST, look at the cheat sheets all the time. Use <code class="code docutils literal notranslate"><span class="pre">ctrl-f</span></code> all the time to find whatever you need.</p>
 <p><strong>Things not covered in most cheat sheets which are of critical importance:</strong></p>
 <ul class="simple">
 <li>A document is referred to by its title, as defined between the <code class="docutils literal notranslate"><span class="pre">*****</span></code> signs at the top of the page, <strong>NOT</strong> the filename. So it is critical to have a title.</li>
@@ -358,7 +371,6 @@
 <div class="section" id="example-to-start-from">
 <span id="heading-example-to-start-from"></span><h3>Example to Start From<a class="headerlink" href="#example-to-start-from" title="Permalink to this headline">¶</a></h3>
 <p>This file is written in RST. You can start there! Just click on “View page source” at the top of the page.</p>
-<p>Also, the next page contains the convention, and is where we specify all AguaClara RST best practices: <span class="xref std std-ref">Functionality in RST and AguaClara Convention</span>. I recommend looking at the raw RST and the rendered html side by side.</p>
 </div>
 </div>
 <div class="section" id="converting-markdown-to-rst">
@@ -389,7 +401,7 @@ You’ll need to carefully review any page converted with pandoc.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
@@ -411,7 +423,7 @@ You’ll need to carefully review any page converted with pandoc.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.070',
+            VERSION:'0.074',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

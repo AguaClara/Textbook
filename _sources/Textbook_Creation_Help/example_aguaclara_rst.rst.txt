@@ -165,14 +165,14 @@ Math and Equations
 Math is very cool, and works natively in RST using LaTeX math syntax. In-line math can be written with the following syntax: ``:math:`y = ax^2 + bx + c``` which displays :math:`y = ax^2 + bx + c`. To display equations in their own line, use the following syntax::
 
   .. math::
-    :label: quadratic_equation
+  :label: quadratic_equation
 
       y = ax^2 + bx + c
 
 Which displays as:
 
 .. math::
-   :label: quadratic_equation
+  :label: quadratic_equation
 
    y = ax^2 + bx + c
 
@@ -185,9 +185,9 @@ Equations do not have tags, they can be referenced via their labels, as you can 
 When introducing a new equation, Make sure to specify what the parameters in the equation mean. Once the equation has been introduced, its parameters do not need to be explained when displayed in the future. Use the following syntax for introducing equations::
 
   .. math::
-    :label: continuity_equation_example
+  :label: continuity_equation_example
 
-      \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
+   \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
 
   | Such that:
   | :math:`Q =` fluid flow rate
@@ -197,9 +197,9 @@ When introducing a new equation, Make sure to specify what the parameters in the
   | :math:`D =` pipe diameter
 
 .. math::
-   :label: continuity_equation_example
+  :label: continuity_equation_example
 
-    \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
+   \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}
 
 | Such that:
 | :math:`Q =` fluid flow rate
@@ -277,7 +277,7 @@ Equations
 
 Equations are a little different, ``:ref:`label``` does not work. They are instead called with the ``:eq:`label``` syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation's number will be the linked-text.
 
-* Equations: ``:eq:`quadratic_equation``` only generates a number in parentheses. Thus, this reference is usually preceeded by the word: 'equation.' Like this: equation :eq:`quadratic_equation`.
+* Equations: ``:eq:`quadratic_equation``` only generates a number in parentheses. Thus, this reference is usually preceeded by the word: 'equation.' Like this: Equation :eq:`quadratic_equation`.
 
 
 Citations

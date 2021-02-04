@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Fluid Deformation and Energy Dissipation Derivations &mdash; AguaClara Textbook 0.070 documentation</title>
+  <title>Fluid Deformation and Energy Dissipation Derivations &mdash; AguaClara Textbook 0.074 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Fluid Deformation and Energy Dissipation Derivations" href="FDED_Derivations.html" />
-    <link rel="prev" title="Flow Control and Measurement Solution" href="../Flow_Control_and_Measurement/FCM_Solution.html" /> 
+    <link rel="prev" title="Entrance Tank Design" href="../Flow_Control_and_Measurement/ET_Design.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.070
+                0.074
               </div>
             
           
@@ -90,7 +90,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
@@ -104,18 +105,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Fluid Deformation and Energy Dissipation Derivations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#energy-dissipation-rate-velocity-gradient-and-mixing">Energy Dissipation Rate, Velocity Gradient, and Mixing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#understanding-and">Understanding <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#understanding-g-and-varepsilon">Understanding <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#common-flow-geometries-that-dissipate-energy">Common Flow Geometries that Dissipate Energy</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocs, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces, and Fluidized Suspensions Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
 <ul>
@@ -268,8 +275,8 @@
 </dl>
 <p>Knowledge of these concepts and how they interact is critical to understand rapid mix, flocculation, filtration, and disinfection. These concepts and their interactions first become relevant in rapid mix, the step in which the coagulant gets added to the raw water.</p>
 <p>The two concepts that were not covered in the previous chapter, <a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#title-review-fluid-mechanics"><span class="std std-ref">Review: Fluid Mechanics</span></a>, are velocity gradient <span class="math notranslate nohighlight">\(G\)</span> and energy dissipation rate <span class="math notranslate nohighlight">\(\varepsilon\)</span>. While these will be very thoroughly described over the course of this introduction, a brief and simple explanation is included to help get the ball rolling.</p>
-<div class="section" id="understanding-and">
-<h3>Understanding <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span><a class="headerlink" href="#understanding-and" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="understanding-g-and-varepsilon">
+<h3>Understanding <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span><a class="headerlink" href="#understanding-g-and-varepsilon" title="Permalink to this headline">¶</a></h3>
 <p><span class="math notranslate nohighlight">\(G\)</span>, or velocity gradient, is a measure of fluid deformation. It is defined by how quickly one point of water along one streamline moves in comparison to another point on another streamline (<span class="math notranslate nohighlight">\(v_A\)</span> compared to <span class="math notranslate nohighlight">\(v_B\)</span>, for example), taking into account the distance between the streamlines, <span class="math notranslate nohighlight">\(\Delta h\)</span>. A visual example of a velocity gradient is shown in the image below:</p>
 <div class="figure align-center" id="id1">
 <span id="figure-velocity-gradient-image"></span><a class="reference internal image-reference" href="../_images/Velocity_gradient_image.jpg"><img alt="Velocity gradient image" src="../_images/Velocity_gradient_image.jpg" style="width: 700px;" /></a>
@@ -280,10 +287,10 @@
 <p>As mentioned above, EDR and velocity gradients play an important role in mixing and in causing suspended particles to collide with each other, both of which are important topics in flocculation. Their use is not limited to flocculation, they are also helpful in understanding failure modes of plate settlers and terminal head loss of sand filters</p>
 <p>We will begin by defining the concept of energy dissipation rate for a control volume. In a control volume that does not include pumps, turbines or other external energy sources or sinks, the mechanical energy lost is indicated by a change in elevation and quantified as <span class="math notranslate nohighlight">\(g h_L\)</span>. That mechanical energy is lost in the time, <span class="math notranslate nohighlight">\(\theta\)</span>, that the fluid is in the control volume.</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-0">
-<span class="eqno">(122)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-0" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon \theta = g h_L\]</div>
+<span class="eqno">(125)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-0" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon \theta = g h_L\]</div>
 <p>This equation simply states that the average rate of energy dissipation times the time over which that dissipation occurs is equal to the total lost mechanical energy. The dimensions of <span class="math notranslate nohighlight">\(\varepsilon\)</span> are:</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-1">
-<span class="eqno">(123)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-1" title="Permalink to this equation">¶</a></span>\[\varepsilon = \frac{[m^3]}{[s^3]} = {\rm \frac{W}{kg}}\]</div>
+<span class="eqno">(126)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-1" title="Permalink to this equation">¶</a></span>\[\varepsilon = \frac{[m^3]}{[s^3]} = {\rm \frac{W}{kg}}\]</div>
 <p>These dimensions can be understood as a velocity squared per time, otherwise known as a rate of kinetic energy loss (recall that kinetic energy is <span class="math notranslate nohighlight">\({\rm Ke} = \frac{\bar v^2}{2g}\)</span>, or <span class="math notranslate nohighlight">\({\rm Ke} \propto \bar v^2\)</span>), or as power per unit mass, which would be <span class="math notranslate nohighlight">\({\rm  \frac{W}{kg}}\)</span>.</p>
 <p>Velocity gradients are central to flocculation because they cause the deformation of the fluid, and this results in particle collisions. Consider a real-world example via the image below: if everyone on a sidewalk is walking in the same direction at exactly the same velocity, then there will never be any collisions between people (top). If, however, people at one side of the sidewalk stand still and people walk progressively faster as a function of how far they are away from the zero velocity side of the sidewalk, then there will be many collisions between the pedestrians (see <a class="reference internal" href="#figure-pedestrians-on-sidewalk"><span class="std std-numref">Fig. 45</span></a>). Indeed, the rate of collisions is proportional to the velocity gradient.</p>
 <div class="figure align-center" id="id2">
@@ -307,7 +314,7 @@
 <li>Behind a flat plate (expansion) - [mechanical mixers]</li>
 </ul>
 </div></blockquote>
-<p>The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants. The <a class="reference internal" href="FDED_Derivations.html#heading-equations-varying-flow-geometries"><span class="std std-ref">Equations for  and  in Varying Flow Geometries</span></a> are available as a reference.</p>
+<p>The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants. The <a class="reference internal" href="FDED_Derivations.html#heading-equations-varying-flow-geometries"><span class="std std-ref">Equations for \varepsilon and G in Varying Flow Geometries</span></a> are available as a reference.</p>
 <span id="table-control-volume-equations"></span><table border="1" class="docutils align-left" id="id3">
 <caption><span class="caption-number">Table 6 </span><span class="caption-text">Equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -378,8 +385,8 @@
 </table>
 <p>The equations used to convert between columns in the table above are:</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-2">
-<span class="eqno">(124)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-2" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
-G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
+<span class="eqno">(127)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-2" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
+ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 \bar v=\frac{4Q}{\pi D}\]</div>
 <p>Note that the velocity gradient is independent of viscosity (and hence temperature) for laminar flow. This is because the total amount of fluid deformation is simply based on geometry. The no slip condition, the diameter, and the length of the flow passage set the total fluid deformation. Of course, if temperature decreases and viscosity increases the amount of energy required to push the fluid through the flow passage will increase (head loss is proportional to viscosity for laminar flow).</p>
 <p>For turbulent flow and for flow expansions the amount of fluid deformation decreases as the viscosity increases and the total energy required to send the flow through the reactor is almost independent of the viscosity. The “almost” is because for wall shear under turbulent conditions there is a small effect of viscosity that is buried inside the friction factor.</p>
@@ -436,7 +443,7 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 <tbody valign="top">
 <tr class="row-even"><td>Round jet</td>
 <td>0.08</td>
-<td><span class="math notranslate nohighlight">\(\varepsilon_{Max} = \Pi_{JetRound}\frac{   \bar v_{Jet} ^3}{D_{Jet}}\)</span></td>
+<td><span class="math notranslate nohighlight">\(\varepsilon_{Max} = \Pi_{JetRound}\frac{  \bar v_{Jet} ^3}{D_{Jet}}\)</span></td>
 <td><span class="math notranslate nohighlight">\(G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}\)</span></td>
 </tr>
 <tr class="row-odd"><td>Plane jet</td>
@@ -453,17 +460,17 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 </table>
 <p>For mechanical mixing where an impeller or other stirring device is adding shaft work to a control volume we have</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-3">
-<span class="eqno">(125)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-3" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{--}V}\]</div>
+<span class="eqno">(128)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-3" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}\]</div>
 <div class="line-block">
 <div class="line">where</div>
 <div class="line"><span class="math notranslate nohighlight">\(P\)</span> = power input into the control volume</div>
 <div class="line"><span class="math notranslate nohighlight">\(m\)</span> = mass of fluid in the control volume</div>
-<div class="line"><span class="math notranslate nohighlight">\(\rlap{--}V\)</span> = volume of the control volume</div>
+<div class="line"><span class="math notranslate nohighlight">\(\rlap{-}V\)</span> = volume of the control volume</div>
 <div class="line"><span class="math notranslate nohighlight">\(\rho\)</span> = density of the fluid</div>
 </div>
 <p>The Camp-Stein velocity gradient for a mechanically mixed reactor is</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-4">
-<span class="eqno">(126)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-4" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{--}V}}\]</div>
+<span class="eqno">(129)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-4" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}\]</div>
 </div>
 </div>
 
@@ -478,7 +485,7 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
         <a href="FDED_Derivations.html" class="btn btn-neutral float-right" title="Fluid Deformation and Energy Dissipation Derivations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../Flow_Control_and_Measurement/FCM_Solution.html" class="btn btn-neutral" title="Flow Control and Measurement Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../Flow_Control_and_Measurement/ET_Design.html" class="btn btn-neutral" title="Entrance Tank Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -487,7 +494,7 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
@@ -509,7 +516,7 @@ G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.070',
+            VERSION:'0.074',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

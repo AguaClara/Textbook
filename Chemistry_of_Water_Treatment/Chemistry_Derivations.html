@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Chemistry of Water Treatment Derivations &mdash; AguaClara Textbook 0.070 documentation</title>
+  <title>Chemistry of Water Treatment Derivations &mdash; AguaClara Textbook 0.074 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.070
+                0.074
               </div>
             
           
@@ -90,7 +90,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
@@ -104,11 +105,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocs, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces, and Fluidized Suspensions Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
 <ul class="current">
@@ -263,7 +270,7 @@
 <div class="section" id="carbonic-acid-and-bicarbonate">
 <span id="heading-carbonic-acid-and-bicarbonate"></span><h3>Carbonic Acid and Bicarbonate<a class="headerlink" href="#carbonic-acid-and-bicarbonate" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight" id="equation-carbonate">
-<span class="eqno">(257)<a class="headerlink" href="#equation-carbonate" title="Permalink to this equation">¶</a></span>\[{H_2}CO_3^{\star} \overset {K_1} \longleftrightarrow {H^+} + HCO_3^-\]</div>
+<span class="eqno">(310)<a class="headerlink" href="#equation-carbonate" title="Permalink to this equation">¶</a></span>\[{H_2}CO_3^{\star} \overset {K_1} \longleftrightarrow {H^+} + HCO_3^-\]</div>
 <dl class="docutils">
 <dt>Where:</dt>
 <dd><div class="first last line-block">
@@ -272,27 +279,27 @@
 </dd>
 </dl>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-0">
-<span class="eqno">(258)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-0" title="Permalink to this equation">¶</a></span>\[{K_1} = \frac{{\left[ {{H^ + }} \right]\left[ {HCO_3^ - } \right]}}{{\left[ {{H_2}CO_3^{\star} } \right]}}\]</div>
+<span class="eqno">(311)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-0" title="Permalink to this equation">¶</a></span>\[{K_1} = \frac{{\left[ {{H^ + }} \right]\left[ {HCO_3^ - } \right]}}{{\left[ {{H_2}CO_3^{\star} } \right]}}\]</div>
 <p>Where the [ ] indicates concentration in mole/L. We will use the p function, <span class="math notranslate nohighlight">\(p(x)=-log_{10}(x)\)</span>, to define the dissociation constant.</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-1">
-<span class="eqno">(259)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-1" title="Permalink to this equation">¶</a></span>\[p{K_1} = 6.3\]</div>
+<span class="eqno">(312)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-1" title="Permalink to this equation">¶</a></span>\[p{K_1} = 6.3\]</div>
 <p>At the point of equal concentrations of bicarbonate and carbonic acid the dissociation constant, <span class="math notranslate nohighlight">\(K_1\)</span>, is equal to the hydrogen ion concentration, <span class="math notranslate nohighlight">\(H^ +\)</span>. Thus we have equal concentrations at <span class="math notranslate nohighlight">\(p{K_1} = pH\)</span>. This reaction is “centered” at pH = 6.3 and thus there is maximum buffering due to this reaction at pH = 6.3.</p>
 </div>
 <div class="section" id="bicarbonate-and-carbonate">
 <span id="heading-bicarbonate-and-carbonate"></span><h3>Bicarbonate and Carbonate<a class="headerlink" href="#bicarbonate-and-carbonate" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-2">
-<span class="eqno">(260)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-2" title="Permalink to this equation">¶</a></span>\[HCO_3^ - \overset {{K_2}} \longleftrightarrow {H^ + } + CO_3^{ - 2}\]</div>
+<span class="eqno">(313)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-2" title="Permalink to this equation">¶</a></span>\[HCO_3^ - \overset {{K_2}} \longleftrightarrow {H^ + } + CO_3^{ - 2}\]</div>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-3">
-<span class="eqno">(261)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-3" title="Permalink to this equation">¶</a></span>\[{K_2} = \frac{{\left[ {{H^ + }} \right]\left[ {CO_3^{ - 2}} \right]}}{{\left[ {HCO_3^ - } \right]}}\]</div>
+<span class="eqno">(314)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-3" title="Permalink to this equation">¶</a></span>\[{K_2} = \frac{{\left[ {{H^ + }} \right]\left[ {CO_3^{ - 2}} \right]}}{{\left[ {HCO_3^ - } \right]}}\]</div>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-4">
-<span class="eqno">(262)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-4" title="Permalink to this equation">¶</a></span>\[p{K_2} = 10.3\]</div>
+<span class="eqno">(315)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-4" title="Permalink to this equation">¶</a></span>\[p{K_2} = 10.3\]</div>
 <p>Thus the carbonate system also provides buffering around pH 10.3.</p>
 </div>
 <div class="section" id="total-concentration-of-carbonates">
 <span id="heading-total-concentration-of-carbonates"></span><h3>Total Concentration of Carbonates<a class="headerlink" href="#total-concentration-of-carbonates" title="Permalink to this headline">¶</a></h3>
 <p>The total concentration of carbonate species is given by</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-5">
-<span class="eqno">(263)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-5" title="Permalink to this equation">¶</a></span>\[{C_T} = \left[ {{H_2}CO_3^{\star} } \right] + \left[ {HCO_3^ - } \right] + \left[ {CO_3^{ - 2}} \right]\]</div>
+<span class="eqno">(316)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-5" title="Permalink to this equation">¶</a></span>\[{C_T} = \left[ {{H_2}CO_3^{\star} } \right] + \left[ {HCO_3^ - } \right] + \left[ {CO_3^{ - 2}} \right]\]</div>
 <p>Where: <span class="math notranslate nohighlight">\({C_T}\)</span> is the total concentration of carbonates.</p>
 <p>The total concentration of carbonates, <span class="math notranslate nohighlight">\({C_T}\)</span>, is useful because it is conservative (in a closed system) even though the individual species concentrations change as pH changes.</p>
 </div>
@@ -300,42 +307,42 @@
 <span id="heading-alpha-notation"></span><h3>Alpha Notation<a class="headerlink" href="#alpha-notation" title="Permalink to this headline">¶</a></h3>
 <p>The alpha notation is used to show the concentration dependence on pH and to make the equations simpler.</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-6">
-<span class="eqno">(264)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-6" title="Permalink to this equation">¶</a></span>\[\left[ {{H_2}CO_3^{\star} } \right] = {\alpha_0}{C_T}\]</div>
+<span class="eqno">(317)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-6" title="Permalink to this equation">¶</a></span>\[\left[ {{H_2}CO_3^{\star} } \right] = {\alpha_0}{C_T}\]</div>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-7">
-<span class="eqno">(265)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-7" title="Permalink to this equation">¶</a></span>\[\left[ {HCO_3^-} \right] = {\alpha_1}{C_T}\]</div>
+<span class="eqno">(318)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-7" title="Permalink to this equation">¶</a></span>\[\left[ {HCO_3^-} \right] = {\alpha_1}{C_T}\]</div>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-8">
-<span class="eqno">(266)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-8" title="Permalink to this equation">¶</a></span>\[\left[ {CO_3^{-2}} \right] = {\alpha_2}{C_T}\]</div>
+<span class="eqno">(319)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-8" title="Permalink to this equation">¶</a></span>\[\left[ {CO_3^{-2}} \right] = {\alpha_2}{C_T}\]</div>
 <p>The alphas sum to 1 because each <span class="math notranslate nohighlight">\(\alpha\)</span> is the fraction of the carbonates corresponding to that species. The alphas are each a function of the proton concentration and the dissociation constants of the carbonate reactions.</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-9">
-<span class="eqno">(267)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-9" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}} + \frac{{{K_1}{K_2}}}{{{{[{H^ + }]}^2}}}}}\]</div>
+<span class="eqno">(320)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-9" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}} + \frac{{{K_1}{K_2}}}{{{{[{H^ + }]}^2}}}}}\]</div>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-10">
-<span class="eqno">(268)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-10" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}}\left( {1 + \frac{{{K_2}}}{{[{H^ + }]}}} \right)}}\]</div>
+<span class="eqno">(321)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-10" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{0}}} = \frac{1}{{1 + \frac{{{K_1}}}{{[{H^ + }]}}\left( {1 + \frac{{{K_2}}}{{[{H^ + }]}}} \right)}}\]</div>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-11">
-<span class="eqno">(269)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-11" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{1}}} = \frac{1}{{\frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}} + 1 + \frac{{{{\rm K}_2}}}{{[{{\rm H}^ + }]}}}}\]</div>
+<span class="eqno">(322)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-11" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{1}}} = \frac{1}{{\frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}} + 1 + \frac{{{{\rm K}_2}}}{{[{{\rm H}^ + }]}}}}\]</div>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-12">
-<span class="eqno">(270)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-12" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{2}}} = \frac{1}{{\frac{{{{[{{\rm H}^ + }]}^2}}}{{{{\rm K}_1}{{\rm K}_2}}} + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}} + 1}}\]</div>
+<span class="eqno">(323)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-12" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{2}}} = \frac{1}{{\frac{{{{[{{\rm H}^ + }]}^2}}}{{{{\rm K}_1}{{\rm K}_2}}} + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}} + 1}}\]</div>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-13">
-<span class="eqno">(271)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-13" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{2}}} = \frac{1}{{1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}}\left( {1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}}} \right)}}\]</div>
+<span class="eqno">(324)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-13" title="Permalink to this equation">¶</a></span>\[{\alpha_{\text{2}}} = \frac{1}{{1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_2}}}\left( {1 + \frac{{[{{\rm H}^ + }]}}{{{{\rm K}_1}}}} \right)}}\]</div>
 </div>
 <div class="section" id="acid-neutralizing-capacity-anc-or-alkalinity">
 <span id="heading-acid-neutralizing-capacity-anc-or-alkalinity"></span><h3>Acid Neutralizing Capacity (ANC) or Alkalinity<a class="headerlink" href="#acid-neutralizing-capacity-anc-or-alkalinity" title="Permalink to this headline">¶</a></h3>
 <p>Acid neutralizing capacity or alkalinity is the ability of a water sample to react with and neutralize an input of acid. The units of ANC are equivalents (or protons) per liter. Bicarbonate, <span class="math notranslate nohighlight">\(HCO_3^-\)</span>, can react with one proton, <span class="math notranslate nohighlight">\(H^+\)</span>, and thus each mole of <span class="math notranslate nohighlight">\(HCO_3^-\)</span> provides one equivalent per liter of ANC. The other terms in the equation have similar explanations.</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-14">
-<span class="eqno">(272)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-14" title="Permalink to this equation">¶</a></span>\[{\text{ANC}} = [HCO_3^ - {\text{] + 2[CO}}_3^{ - 2}{\text{] + [O}}{{\text{H}}^{\text{ - }}}{\text{] - [}}{{\text{H}}^{\text{ + }}}{\text{]}}\]</div>
+<span class="eqno">(325)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-14" title="Permalink to this equation">¶</a></span>\[{\text{ANC}} = [HCO_3^ - {\text{] + 2[CO}}_3^{ - 2}{\text{] + [O}}{{\text{H}}^{\text{ - }}}{\text{] - [}}{{\text{H}}^{\text{ + }}}{\text{]}}\]</div>
 <p>Note that carbonic acid and dissolved carbon dioxide are not in the ANC equation because they have no ability to neutralize protons.</p>
 <p>We can write the ANC equation using alpha notation</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-15">
-<span class="eqno">(273)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-15" title="Permalink to this equation">¶</a></span>\[ANC = {C_T}({\alpha_1} + 2{\alpha_2}) + \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
+<span class="eqno">(326)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-15" title="Permalink to this equation">¶</a></span>\[ANC = {C_T}({\alpha_1} + 2{\alpha_2}) + \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
 <p>For completeness we include acid neutralizing capacity for the case where the system is in equilibrium with atmospheric carbon dioxide,
 <span class="math notranslate nohighlight">\(CO_2\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-16">
-<span class="eqno">(274)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-16" title="Permalink to this equation">¶</a></span>\[ANC_{atm\,equilibrium} = \frac{{{P{C{O_2}}}{K_H}}}{{{\alpha_0}}}({\alpha_1} + 2{\alpha_2}) + \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
+<span class="eqno">(327)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-16" title="Permalink to this equation">¶</a></span>\[ANC_{atm\,equilibrium} = \frac{{{P{C{O_2}}}{K_H}}}{{{\alpha_0}}}({\alpha_1} + 2{\alpha_2}) + \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
 </div>
 <div class="section" id="ph-adjustment">
 <span id="heading-ph-adjustment"></span><h3>pH Adjustment<a class="headerlink" href="#ph-adjustment" title="Permalink to this headline">¶</a></h3>
 <p>The final ANC, <span class="math notranslate nohighlight">\(ANC_1\)</span>, after base addition and aluminum coagulant addition is given by</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-17">
-<span class="eqno">(275)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-17" title="Permalink to this equation">¶</a></span>\[ANC_1 = ANC_0 + \Pi_{base}C_B + \Pi_{Al}C_{Al}\]</div>
+<span class="eqno">(328)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-17" title="Permalink to this equation">¶</a></span>\[ANC_1 = ANC_0 + \Pi_{base}C_B + \Pi_{Al}C_{Al}\]</div>
 <div class="line-block">
 <div class="line">where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(ANC_0\)</span> is the initial acid neutralizing capacity of the water sample.</div>
@@ -347,7 +354,7 @@
 </div>
 <p>The final carbonate concentration is given by</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-18">
-<span class="eqno">(276)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-18" title="Permalink to this equation">¶</a></span>\[C_{T_1} ={C_{T_0}}+ \Pi_{CO_3^{-2}}C_B\]</div>
+<span class="eqno">(329)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-18" title="Permalink to this equation">¶</a></span>\[C_{T_1} ={C_{T_0}}+ \Pi_{CO_3^{-2}}C_B\]</div>
 <div class="line-block">
 <div class="line">where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(C_{T_1}\)</span> is the final total carbonate concentration of the mixture after the base is added.</div>
@@ -355,12 +362,12 @@
 </div>
 <p>Substituting these values into the ANC equation we obtain</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-19">
-<span class="eqno">(277)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-19" title="Permalink to this equation">¶</a></span>\[ANC_0 + \Pi_{base}C_B + \Pi_{Al}C_{Al} = ({C_{T_0}}+ \Pi_{CO_3^{-2}}C_B)({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
+<span class="eqno">(330)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-19" title="Permalink to this equation">¶</a></span>\[ANC_0 + \Pi_{base}C_B + \Pi_{Al}C_{Al} = ({C_{T_0}}+ \Pi_{CO_3^{-2}}C_B)({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right]\]</div>
 <p>Now we solve for <span class="math notranslate nohighlight">\(C_B\)</span>, the concentration of base that must be added to reach a target pH.</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-derivations-20">
-<span class="eqno">(278)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-20" title="Permalink to this equation">¶</a></span>\[(\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2}) )C_B= {C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}\]</div>
+<span class="eqno">(331)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-derivations-20" title="Permalink to this equation">¶</a></span>\[(\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2}) )C_B= {C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}\]</div>
 <div class="math notranslate nohighlight" id="equation-base-for-ph-adjust">
-<span class="eqno">(279)<a class="headerlink" href="#equation-base-for-ph-adjust" title="Permalink to this equation">¶</a></span>\[C_B= \frac{{C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}}{\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2})}\]</div>
+<span class="eqno">(332)<a class="headerlink" href="#equation-base-for-ph-adjust" title="Permalink to this equation">¶</a></span>\[ C_B= \frac{{C_{T_0}}({\alpha_1} + 2{\alpha_2}) +  \frac{{{K_w}}}{{\left[ {{H^ + }} \right]}} - \left[ {{H^ + }} \right] - ANC_0 - \Pi_{Al}C_{Al}}{\Pi_{base} -\Pi_{CO_3^{-2}}({\alpha_1} + 2{\alpha_2})}\]</div>
 <p>Note that the equations above can also be used for the case where acid is added to reduce the pH. In that case <span class="math notranslate nohighlight">\(\Pi_{base}\)</span> will have a negative value.</p>
 <p>An example using this equation to find the required amount of base addition is given in <a class="reference internal" href="../Rapid_Mix/RM_Examples.html#heading-example-ph-adjustment"><span class="std std-ref">Example: pH Adjustment</span></a>.</p>
 </div>
@@ -387,7 +394,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
@@ -409,7 +416,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.070',
+            VERSION:'0.074',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

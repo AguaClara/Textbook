@@ -64,11 +64,11 @@ To determine this value, we can use the given volume and flow rate information b
 
 .. math::
 
-  \theta = \frac{\rlap{--}V_{tank}}{Q}
+  \theta = \frac{\rlap{-}V_{tank}}{Q}
 
 | Where:
 | :math:`\theta =` residence time :math:`[T]`
-| :math:`\rlap{--}V_{tank} =` volume of the sedimentation tank :math:`\left[L^3\right]`
+| :math:`\rlap{-}V_{tank} =` volume of the sedimentation tank :math:`\left[L^3\right]`
 | :math:`Q =` flow rate through the tank :math:`\left[\frac{L^3}{T}\right]`
 
 2) In the "worst case scenario", how far must a particle fall to reach the bottom of the tank?
@@ -99,7 +99,7 @@ We can make some substitutions into the equation for :math:`\bar v_c` to solve f
 
 .. math::
 
-  \bar v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{--}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}
+  \bar v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}
 
   \bar v_c = \frac{Q}{A_p}
 
@@ -142,11 +142,11 @@ The answer is the same for the horizontal flow sedimentation tank because this i
 
 .. math::
 
-  \theta = \frac{\rlap{--}V_{tank}}{Q}
+  \theta = \frac{\rlap{-}V_{tank}}{Q}
 
 | Where:
 | :math:`\theta =` residence time [T]
-| :math:`\rlap{--}V_{tank} =` volume of the sedimentation tank [:math:`L^3`]
+| :math:`\rlap{-}V_{tank} =` volume of the sedimentation tank [:math:`L^3`]
 | :math:`Q =` flow rate through the tank [:math:`\frac{L^3}{T}`]
 
 2) How far must a particle fall relative to the fluid to not be carried out the exit?
@@ -167,7 +167,7 @@ We can the same substitutions to show,
 
 .. math::
 
-  \bar v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{--}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}
+  \bar v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}
 
 Again, we find that capture velocity is,
 

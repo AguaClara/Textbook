@@ -25,10 +25,10 @@ This derivation begins by finding two equations for flow, :math:`Q`, through the
 
 .. math::
 
-    Q =  - \frac{d\rlap{--}V}{dt} = - \frac{{A_{Tank}}dh}{dt}
+    Q =  - \frac{d\rlap{-}V}{dt} = - \frac{{A_{Tank}}dh}{dt}
 
 | Such that:
-| :math:`\frac{d\rlap{--}V}{dt}` = rate of change in volume of solution in the tank
+| :math:`\frac{d\rlap{-}V}{dt}` = rate of change in volume of solution in the tank
 | :math:`\frac{dh}{dt}` = rate of change in height of water (hypochlorite solution) level with time
 
 Our other equation for flow is the head loss equation. Since major losses are negligible for a short pipe-low flow rate system, we only need to consider minor losses. The only real minor loss in this system occurs in the almost-closed valve that is dripping the hypochlorite solution. However, we will also use the head loss trick. Therefore, the total driving head of the system :math:`h` is equal to the minor losses:
@@ -53,19 +53,19 @@ From here, calculus and equation substitution dominate the derivation. Separatin
 
 .. math::
 
-    \frac{ -A_{Tank}}{{A_{Valve}} \sqrt{\frac{2g}{\sum K}} }   \int \limits_{h_0}^h \frac{dh}{\sqrt h} = \int \limits_0^t {dt}
+   \frac{ -A_{Tank}}{{A_{Valve}} \sqrt{\frac{2g}{\sum K}} }  \int \limits_{h_0}^h \frac{dh}{\sqrt h} = \int \limits_0^t {dt}
 
 Which, when integrated, yields:
 
 .. math::
 
-    \frac{ -A_{Tank}}{A_{Valve} \sqrt{ \frac{2g}{\sum K}} } \cdot 2 \left( \sqrt{h} - \sqrt{h_0} \right) = t
+   \frac{ -A_{Tank}}{A_{Valve} \sqrt{ \frac{2g}{\sum K}} } \cdot 2 \left( \sqrt{h} - \sqrt{h_0} \right) = t
 
 And solved for :math:`\sqrt{h}` returns:
 
 .. math::
 
-    \sqrt h  = \sqrt{h_0} - t \frac{A_{Valve}}{2 A_{tank}} \sqrt {\frac{2g}{\sum K}}
+   \sqrt h  = \sqrt{h_0} - t \frac{A_{Valve}}{2 A_{tank}} \sqrt {\frac{2g}{\sum K}}
 
 At this point, the steps and equation substitutions may begin to seem unintuitive. Do not worry if you do not understand why *exactly* a particular substitution is occurring. Since we determined above that :math:`h_e = h`, our equation above for :math:`\sqrt{h}` is also an equation for :math:`\sqrt{h_e}`. As such, we will plug the equation above back into the minor loss equation solved for :math:`Q` from above, :math:`Q = A_{Valve} \sqrt{\frac{2 h_e g}{\sum K}}`, to produce:
 
@@ -87,7 +87,7 @@ Plugging this equation for :math:`A_{Valve}` into the equation for :math:`Q` jus
 
 .. math::
 
-    \frac{Q}{Q_0} = 1 - \frac{t Q_0}{2 A_{Tank} h_0}
+   \frac{Q}{Q_0} = 1 - \frac{t Q_0}{2 A_{Tank} h_0}
 
 This next step will eliminate :math:`A_{Tank}`. However, it requires some clever manipulation that has a tendency to cause some confusion. We will define a new parameter, :math:`t_{Design}`, which represents the time it would take to empty the tank if the initial flow rate through the valve, :math:`Q_0`, stays constant in time. Of course, the flow :math:`Q` through the valve does not stay constant in time, which is why this derivation document exists. But imagining this hypothetical :math:`t_{Design}` parameter allows us to form the following equation:
 
@@ -99,7 +99,7 @@ This equation describes draining all the hypochlorite solution from the tank. Th
 
 .. math::
 
-    \frac{Q_0}{A_{Tank}} = \frac{h_{Tank}}{t_{Design}}
+   \frac{Q_0}{A_{Tank}} = \frac{h_{Tank}}{t_{Design}}
 
 | Such that:
 | :math:`h_{Tank}` = elevation of water level in the tank with reference to tank bottom at the initial state, :math:`t = 0`
@@ -119,15 +119,15 @@ Finally, our fabricated equivalence, :math:`\frac{Q_0}{A_{Tank}} = \frac{h_{Tank
 
 .. math::
 
-   \color{purple}{
-   \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
+  \color{purple}{
+  \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
    }
 
 Which can be slightly rearranged to yield:
 
 .. math::
 
-   \color{purple}{
+  \color{purple}{
    Q(t) = Q_0 \left( 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0} \right)
    }
 
@@ -166,13 +166,13 @@ We will start the derivation from the following equation, which is found in an i
 
 .. math::
 
-    \sqrt h  = \sqrt{h_0} - t \frac{A_{Valve}}{2 A_{Tank}} \sqrt {\frac{2g}{K}}
+   \sqrt h  = \sqrt{h_0} - t \frac{A_{Valve}}{2 A_{Tank}} \sqrt {\frac{2g}{K}}
 
 We need to make some adjustments to this equation before proceeding, to make it applicable for this new drain-system scenario. First, we want to assume that the tank has fully drained. Thus, :math:`t = t_{Drain}` and :math:`h = 0`. Next, we recall that the tank drain is not actually a valve, but just pipe and an elbow, so :math:`A_{Valve} = A_{Pipe}`. Additionally, there can be multiple points of minor loss in the drain system: the entrance from the tank into the drain pipe, the elbow, and potentially the exit of the water out of the drain pipe. When considering a sedimentation tank, the open valve required to begin drainage also has a minor loss associated with it. Therefore, it is necessary to substitute :math:`\sum K` for :math:`K` With these substitutions, the equation becomes:
 
 .. math::
 
-    \sqrt{h_0}  = t_{Drain} \frac{A_{Pipe}}{2 A_{Tank}} \sqrt {\frac{2g}{\sum K}}
+   \sqrt{h_0}  = t_{Drain} \frac{A_{Pipe}}{2 A_{Tank}} \sqrt {\frac{2g}{\sum K}}
 
 Now, with the knowledge that :math:`A_{Pipe} = \frac{\pi D_{Pipe}^2}{4}` and rearranging to solve for :math:`D_{Pipe}`, we obtain the following equation:
 
@@ -188,7 +188,7 @@ Finally, we arrive at the equation for drain pipe sizing:
 
 .. math::
 
-   \color{purple}{
+  \color{purple}{
    D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} \left( \frac{H_{Tank} \sum K}{2g} \right)^{\frac{1}{4}}
    }
 
@@ -196,7 +196,7 @@ We can also easily rearrange to find the time required to drain a tank given a d
 
 .. math::
 
-   \color{purple}{
+  \color{purple}{
    t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \sum K}{2g} }
    }
 
@@ -246,7 +246,7 @@ We begin by defining the head loss through the system :math:`h_L`, which is equi
 
 .. math::
 
-   \color{red}{
+  \color{red}{
      h_{\rm{f}} = \frac{128\nu LQ}{g\pi D^4}
      }
 
@@ -269,14 +269,14 @@ Therefore, the total head loss is a function of flow, and is shown in the follow
 
    h_L(Q) =
    {\color{red}{
-     \frac{128\nu L Q}{g \pi D^4}}} +
-     \frac{8Q^2}{g \pi^2 D^4} \sum K
+  \frac{128\nu L Q}{g \pi D^4}}} +
+  \frac{8Q^2}{g \pi^2 D^4} \sum K
 
 Blue will be used to reference *actual* head loss from now on. This is the same equation as above.
 
 .. math::
 
-   \color{blue}{
+  \color{blue}{
      h_L(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q}{g \pi ^2 D^4} \sum{K} \right) Q
      }
 
@@ -284,7 +284,7 @@ This equation is not linear with respect to flow. We can make it linear by turni
 
 .. math::
 
-   \color{green}{
+  \color{green}{
      h_{L_{linear}}(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q_{Max}}{g \pi ^2 D^4} \sum{K} \right) Q
      }
 
@@ -307,7 +307,7 @@ Minor losses will never be 0, so how much error in our linearity are we willing 
 
 .. math::
 
-    \Pi_{Error} = \frac{\color{green}{ h_{L_{linear}} } - \color{blue}{ h_L }}{\color{green}{ h_{L_{linear}} }} = 1 - \frac{\color{blue}{ h_L }}{\color{green}{ h_{L_{linear}} }}
+   \Pi_{Error} = \frac{\color{green}{ h_{L_{linear}} } - \color{blue}{ h_L }}{\color{green}{ h_{L_{linear}} }} = 1 - \frac{\color{blue}{ h_L }}{\color{green}{ h_{L_{linear}} }}
 
 .. math::
 
@@ -318,21 +318,21 @@ Now we plug :math:`\color{blue}{ h_L(Q) }` and :math:`\color{green}{ h_{L_{linea
 .. math::
 
    1 - \Pi_{Error} =
-     \frac{ \color{blue}{
-     \left( \frac{128 \nu L}{g \pi D^4} +
-     \cancel{\frac{8Q}{g \pi^2 D^4} \sum{K}}
-     \right) Q
+  \frac{ \color{blue}{
+  \left( \frac{128 \nu L}{g \pi D^4} +
+  \cancel{\frac{8Q}{g \pi^2 D^4} \sum{K}}
+  \right) Q
      }}
      {\color{green}{
-     \left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right) Q
+  \left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right) Q
      }}
-     =     \frac{\left( \frac{128 \nu L}{g \pi D^4} \right)}{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right)}
+     =  \frac{\left( \frac{128 \nu L}{g \pi D^4} \right)}{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right)}
 
 The next steps are algebraic rearrangements to solve for :math:`L`. This :math:`L` describes the *minimum* length of dosing tube necessary to meet our error constraint at *maximum* flow. Thus, we will refer to it as :math:`L_{Min, \, \Pi_{Error}}`.
 
 .. math::
 
-    \left( 1 - \Pi_{Error} \right)  \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{Max}}{g \pi ^2 D^4} \sum{K}  =  \frac{128 \nu L}{g \pi D^4}
+   \left( 1 - \Pi_{Error} \right)  \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{Max}}{g \pi ^2 D^4} \sum{K}  =  \frac{128 \nu L}{g \pi D^4}
 
 .. math::
 
@@ -356,12 +356,12 @@ Unfortunately, both :math:`L_{Min, \, \Pi_{Error}}` and :math:`Q_{Max}` are unkn
 
 .. seealso:: **Function in aguaclara** ``cdc.max_linear_flow(Diam, HeadlossCDC, Ratio_Error, KMinor)`` Returns the maximum flow :math:`Q_{Max}` that can go through a dosing tube will making sure that linearity between head loss and flow is conserved.
 
-From this equation for :math:`Q_{Max}`, we can get to our first design equation, :math:`\color{purple}{\bar v_{Max}}` by using the continuity equation :math:`\bar v_{Max} = \frac{Q_{Max}}{\frac{\pi D^2}{4}}`
+From this equation for :math:`Q_{Max}`, we can get to our first design equation, :math:`\color{purple}{\bar v_{Max}}` by using the continuity Equation :math:`\bar v_{Max} = \frac{Q_{Max}}{\frac{\pi D^2}{4}}`
 
 .. math::
 
-   \color{purple}{
-     \bar v_{Max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K} }}
+  \color{purple}{
+  \bar v_{Max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K} }}
      }
 
 Designing for the proper amount of head loss, :math:`h_{L_{Max}}`
@@ -372,7 +372,7 @@ We previously derived an equation for the minimum length of the dosing tube(s), 
 
 .. math::
 
-   \color{red}{
+  \color{red}{
      L_{Min, \, \Pi_{Error}} = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{Max}}{16 \nu \pi} \sum{K}
      }
 
@@ -414,7 +414,7 @@ As you can see, the head loss constraint is more limiting than the linearity con
 
 .. math::
 
-   \color{purple}{
+  \color{purple}{
    L_{Min} = L_{Min, \, head loss} = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)
    }
 
@@ -431,7 +431,7 @@ By rearranging :math:`Q_{Max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error
 
 .. math::
 
-   \color{blue}{
+  \color{blue}{
    D_{Min, \, \Pi_{Error}} = \left[ \frac{8 Q_{Max}^2 \sum K}{\Pi_{Error} h_l g \pi^2} \right]^{\frac{1}{4}}
    }
 
@@ -443,13 +443,13 @@ We can also find the minimum diameter needed to guarantee laminar flow, which is
 
 .. math::
 
-    \bar v_{Max} = \frac{4 Q_{Max}}{\pi D^2}
+   \bar v_{Max} = \frac{4 Q_{Max}}{\pi D^2}
 
 To get:
 
 .. math::
 
-   \color{red}{
+  \color{red}{
    D_{Min, \, Laminar} = \frac{4 Q_{Max}}{\pi \nu {\rm{Re}}_{Max}}
    }
 

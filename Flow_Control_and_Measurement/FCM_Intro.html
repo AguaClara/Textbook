@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flow Control and Measurement Introduction &mdash; AguaClara Textbook 0.070 documentation</title>
+  <title>Flow Control and Measurement Introduction &mdash; AguaClara Textbook 0.074 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.070
+                0.074
               </div>
             
           
@@ -90,7 +90,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction to AguaClara Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
@@ -102,7 +103,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Flow Control and Measurement Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#tank-with-a-valve">Tank with a Valve</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#flow-and-water-level-as-a-function-of-time">Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flow-q-and-water-level-h-as-a-function-of-time">Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#drain-system-for-a-tank">Drain System for a Tank</a></li>
 </ul>
 </li>
@@ -111,11 +112,17 @@
 <li class="toctree-l1"><a class="reference internal" href="FCM_Design.html">Flow Control and Measurement Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ET_Design.html">Entrance Tank Design</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocs, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces, and Fluidized Suspensions Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
 <ul>
@@ -255,12 +262,12 @@
 <span id="title-flow-control-intro"></span><h1>Flow Control and Measurement Introduction<a class="headerlink" href="#flow-control-and-measurement-introduction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="tank-with-a-valve">
 <span id="heading-tank-with-a-valve"></span><h2>Tank with a Valve<a class="headerlink" href="#tank-with-a-valve" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="flow-and-water-level-as-a-function-of-time">
-<span id="heading-qh-as-a-function-of-t"></span><h3>Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time<a class="headerlink" href="#flow-and-water-level-as-a-function-of-time" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="flow-q-and-water-level-h-as-a-function-of-time">
+<span id="heading-qh-as-a-function-of-t"></span><h3>Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time<a class="headerlink" href="#flow-q-and-water-level-h-as-a-function-of-time" title="Permalink to this headline">¶</a></h3>
 <p>Our first step is to see if we can get constant head out of a simple system. The most simple flow control system is a bucket or tank with a hole in it. This system is too coarse to provide constant head. One step above that is a bucket or tank with a valve. This is where we begin our search for constant head.</p>
-<p>Using the setup described in the image below, we derive the following equation for flow <span class="math notranslate nohighlight">\(Q\)</span> through the valve as a function of time <span class="math notranslate nohighlight">\(t\)</span>. The derivation is found here: <a class="reference internal" href="FCM_Derivations.html#heading-flow-for-a-tank-with-a-valve"><span class="std std-ref"> for a Tank with a Valve</span></a>. You are advised to read through it if you are at all confused about this equation.</p>
+<p>Using the setup described in the image below, we derive the following equation for flow <span class="math notranslate nohighlight">\(Q\)</span> through the valve as a function of time <span class="math notranslate nohighlight">\(t\)</span>. The derivation is found here: <a class="reference internal" href="FCM_Derivations.html#heading-flow-for-a-tank-with-a-valve"><span class="std std-ref">Q(t) for a Tank with a Valve</span></a>. You are advised to read through it if you are at all confused about this equation.</p>
 <div class="math notranslate nohighlight" id="equation-q-tank-with-valve">
-<span class="eqno">(69)<a class="headerlink" href="#equation-q-tank-with-valve" title="Permalink to this equation">¶</a></span>\[  \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
+<span class="eqno">(69)<a class="headerlink" href="#equation-q-tank-with-valve" title="Permalink to this equation">¶</a></span>\[ \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(Q\)</span> = <span class="math notranslate nohighlight">\(Q(t)\)</span> = flow of hypochlorite through valve at time <span class="math notranslate nohighlight">\(t\)</span></div>
@@ -279,8 +286,8 @@
 <li><span class="math notranslate nohighlight">\(t_{Design}\)</span> is <strong>NOT</strong> the time it takes to drain the tank. It is the time that it <em>would</em> take to drain the tank <em>if</em> the flow rate at time <span class="math notranslate nohighlight">\(t = 0\)</span>, <span class="math notranslate nohighlight">\(Q_0\)</span>, were the flow rate forever, which it is not. <span class="math notranslate nohighlight">\(t_{Design}\)</span> was used in the derivation to simplify the equation, which is why this potentially-confusing parameter exists. The actual time it takes to drain the tank lies somewhere between <span class="math notranslate nohighlight">\(t_{Design}\)</span> and <span class="math notranslate nohighlight">\(2 \, t_{Design}\)</span> and depends on the ratio <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span>.</li>
 <li><span class="math notranslate nohighlight">\(h_{Tank}\)</span> is not the same as <span class="math notranslate nohighlight">\(h_{0}\)</span>. <span class="math notranslate nohighlight">\(h_{Tank}\)</span> is the height of water level in the tank with reference to the tank bottom. <span class="math notranslate nohighlight">\(h_{0}\)</span> is the water level in the tank with reference to the valve. Neither change with time, they both refer to the water level at one instance in time, <span class="math notranslate nohighlight">\(t = 0\)</span>. Therefore, <span class="math notranslate nohighlight">\(h_{0} \geq h_{Tank}\)</span> is always true. If the tank is elevated far above the valve, then the <span class="math notranslate nohighlight">\(h_{0} &gt; &gt; h_{Tank}\)</span>. If the valve is at the same elevation as the bottom of the tank, then <span class="math notranslate nohighlight">\(h_{0} = h_{Tank}\)</span>. Please refer to the figure above to clarify <span class="math notranslate nohighlight">\(h_{0}\)</span> and <span class="math notranslate nohighlight">\(h_{Tank}\)</span>.</li>
 </ul>
-<p>We can use the proportionality <span class="math notranslate nohighlight">\(Q \propto \sqrt{h}\)</span>, which applies to both minor losses and orifices to form a relationship between water level in the tank <span class="math notranslate nohighlight">\(h\)</span> and time <span class="math notranslate nohighlight">\(t\)</span>. This proportionality comes from rearranging the minor loss equation <span class="math notranslate nohighlight">\(h = K \frac{Q^2}{2 g A^2}\)</span> for <span class="math notranslate nohighlight">\(Q\)</span> instead of <span class="math notranslate nohighlight">\(h\)</span>. A table of proportionality between <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(h\)</span> can be found in <a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#table-h-q-proportionality"><span class="std std-numref">Table 5</span></a></p>
-<p>Using equation <a class="reference internal" href="#equation-q-tank-with-valve">(69)</a> and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or <span class="math notranslate nohighlight">\(h_{Tank} = h_0\)</span>. Our attempt to get a continuous flow rate out of this system is to make <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span> very small by elevating the tank far above the valve. On the right, <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0} = \frac{1}{50}\)</span>. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.</p>
+<p>We can use the proportionality <span class="math notranslate nohighlight">\(Q \propto \sqrt{h}\)</span>, which applies to both minor losses and orifices to form a relationship between water level in the tank <span class="math notranslate nohighlight">\(h\)</span> and time <span class="math notranslate nohighlight">\(t\)</span>. This proportionality comes from rearranging the minor loss Equation <span class="math notranslate nohighlight">\(h = K \frac{Q^2}{2 g A^2}\)</span> for <span class="math notranslate nohighlight">\(Q\)</span> instead of <span class="math notranslate nohighlight">\(h\)</span>. A table of proportionality between <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(h\)</span> can be found in <a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#table-h-q-proportionality"><span class="std std-numref">Table 5</span></a></p>
+<p>Using Equation <a class="reference internal" href="#equation-q-tank-with-valve">(69)</a> and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or <span class="math notranslate nohighlight">\(h_{Tank} = h_0\)</span>. Our attempt to get a continuous flow rate out of this system is to make <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span> very small by elevating the tank far above the valve. On the right, <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0} = \frac{1}{50}\)</span>. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-tank-valve-play"></span><a class="reference internal image-reference" href="../_images/tank_valve_play.png"><img alt="Manipulating hypochlorinator heights" src="../_images/tank_valve_play.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">These graphs show how manipulation of the variables in the <span class="math notranslate nohighlight">\(Q(t)\)</span> expression can result in effectively constant head.</span></p>
@@ -288,7 +295,7 @@
 </div>
 <div class="section" id="drain-system-for-a-tank">
 <span id="heading-drain-system-for-a-tank"></span><h3>Drain System for a Tank<a class="headerlink" href="#drain-system-for-a-tank" title="Permalink to this headline">¶</a></h3>
-<p>While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they are just tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: <a class="reference internal" href="FCM_Derivations.html#heading-diameter-and-time-tank-drain-equation"><span class="std std-ref"> and  for Tank Drain Equation</span></a>. The derived ‘Tank Drain’ equation is as follows:</p>
+<p>While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they are just tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: <a class="reference internal" href="FCM_Derivations.html#heading-diameter-and-time-tank-drain-equation"><span class="std std-ref">D(t) and t(D) for Tank Drain Equation</span></a>. The derived ‘Tank Drain’ equation is as follows:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-intro-0">
 <span class="eqno">(70)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-intro-0" title="Permalink to this equation">¶</a></span>\[D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{4}}}\]</div>
 <p>The equation can also be rearranged to solve for the time it would take to drain a tank given its dimensions and a certain drain pipe size:</p>
@@ -329,7 +336,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
@@ -351,7 +358,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.070',
+            VERSION:'0.074',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

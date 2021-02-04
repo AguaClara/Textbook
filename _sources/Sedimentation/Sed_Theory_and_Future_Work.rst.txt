@@ -1,17 +1,17 @@
 
-.. _Sedimentation_Theory_and_Future_Work:
+.. _title_Sedimentation_Theory_and_Future_Work:
 
 ***************************************
 Sedimentation Theory and Future Work
 ***************************************
 Unsolved sedimentation tank failure modes:
 
-#. :ref:`Floc volcanoes <heading_Floc_Volcano_Intro>` and :ref:`temperature-induced flow circulations <heading_Floc_Volcanoes>`
+#. :ref:`Floc volcanoes <heading_Floc_Volcanoes>`
 #. Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.
 #. Slime growth from iron-oxidizing bacteria.
 #. NOM impact on floc density
 
-.. _Floc_Floc_Blanket:
+.. _heading_Floc_Floc_Blanket:
 
 Optimizing the transition from flocculator to floc blanket
 ==========================================================
@@ -21,7 +21,7 @@ We now how a published flocculator model and we have strong evidence that primar
 From the floc model we have
 
 .. math::
-   :label: dCPdt_floc
+  :label: dCPdt_floc
 
 	 \frac{dC_{P}}{dt}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} G_{CS}
 
@@ -29,21 +29,21 @@ From the floc model we have
 From the floc blanket we know that particle removal is first order with respect to depth of the floc blanket or time in the floc blanket. We can use floc blanket data to estimate the first order rate constant.
 
 .. math::
-   :label: dCPdt_fb
+  :label: dCPdt_fb
 
 	 \frac{dC_{P}}{dt}=-k_{fb}C_{P}
 
 Separate variables to integrate this rate equation.
 
 .. math::
-   :label:
+  :label:
 
 	 \frac{dC_{P}}{C_{P}}=-k_{fb}dt
 
 We integrate this to solve for the rate constant.
 
 .. math::
-   :label:
+  :label:
 
 	 k_{fb} = -\frac{1}{\theta_{fb}}ln{\frac{C_{P}}{C_{P_0}}}
 
@@ -52,14 +52,14 @@ We will use the previous equation to estimate the rate constant for the floc bla
 We can obtain a minimum volume design by setting the rate of primary particle loss at the end of the flocculator to be equal to the rate of primary particle loss at the beginning of the floc blanket.
 
 .. math::
-   :label:
+  :label:
 
 	 -k_{fb}C_{P}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} G_{CS}
 
 Now we solve the previous equation for the target concentration of primary particles that we should design for at the end of the flocculator.
 
 .. math::
-   :label:
+  :label:
 
 	C_{P_{floc out}} = \frac{\pi \rho_P}{6} \left( \frac{k_{fb}}{\pi\bar{\alpha}k G_{CS}}\right)^{3/2}
 
@@ -69,7 +69,7 @@ The concentration of primary particles at the flocculator effluent will be a fun
 The next step is to determine the Gt for the flocculator given this effluent flocculator particle concentration. The approximate equation for
 
 .. math::
-   :label:
+  :label:
 
    G_{CS}\theta \approx \frac{3}{2} \frac{\Lambda^2}{k \pi d_P^2 \alpha}
 
@@ -77,21 +77,21 @@ The next step is to determine the Gt for the flocculator given this effluent flo
 where the particle separation distance is given by
 
 .. math::
-   :label:
+  :label:
 
-   \Lambda = \left( \frac{\pi d_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{1}{3}
+  \Lambda = \left( \frac{\pi d_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{1}{3}
 
 Putting the previous two equations together we have:
 
 .. math::
-   :label:
+  :label:
 
    G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi d_P^2 \alpha} \left( \frac{\pi d_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}
 
 We can simplify this equation because the particle size cancels out.
 
 .. math::
-   :label:
+  :label:
 
    G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}
 
@@ -99,16 +99,16 @@ We can simplify this equation because the particle size cancels out.
 Now we can substitute the equation for the optimal flocculated water primary particle concentrations into the flocculator performance equation.
 
 .. math::
-   :label:
+  :label:
 
    G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi\bar{\alpha}k G_{CS}}{k_{fb}}\right)
 
 This simplifies to a very simple relationship that gives the optimal flocculator residence time. This analysis assumes that the cost per volume of flocculator is the same as the cost per volume of floc blanket.
 
 .. math::
-   :label:
+  :label:
 
-   \theta \approx \frac{3}{2} \left( \frac{1}{k_{fb}}\right)
+  \theta \approx \frac{3}{2} \left( \frac{1}{k_{fb}}\right)
 
 We now have an equation for the optimal flocculator residence time! It is a function of the floc blanket rate constant. The analysis below suggests that the optimal flocculator residence time is about 300 seconds (5 minutes). This analysis does not provide guidance on the optimal amount of energy to be used in that flocculator. Overall plant performance is a function of how much energy is used in flocculation and so that would need to be an economic analysis. Startup performance when the floc blanket is not yet formed is a function of the energy dissipation rate.
 
@@ -118,7 +118,7 @@ High velocity gradients for flocculators with this long of a residence time will
 The flocculator head loss is given by
 
 .. math::
-   :label:
+  :label:
 
    h_{Floc} = G_{CS} \theta \frac{\nu G_{CS}}{g}
 
@@ -162,7 +162,7 @@ This analysis suggests that the primary particle concentration after flocculatio
 
 
 
-.. _Floc_recycle:
+.. _heading_Floc_recycle:
 
 Floc recycle
 ==================
@@ -321,7 +321,7 @@ The recycle line will be installed between the bottom of the tube settler and th
 
 It is possible that it will be necessary to prevent flow in the recycle line initially so that it doesn't flow upward. Once the tube begins filling with solids it should be possible for it to start flowing downwards.
 
-.. _Floc_Volcanoes:
+.. _heading_Floc_Volcanoes:
 
 Floc Volcanoes
 ==================
