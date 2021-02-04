@@ -50,6 +50,18 @@ We use Sphinx_ to build RST locally and remotely. Follow these steps to get Sphi
 
 .. note:: Regarding **1.** the master branch for the package implementing disqus in sphinx `is broken <https://github.com/Robpol86/sphinxcontrib-disqus/pull/7>`_, which is why we use a non-standard pip/online installation. If you already have the incorrect sphinx-disqus version installed, uninstall it with ``pip uninstall sphinxcontrib-disqus`` before installing the functioning version.
 
+.. _heading_building_pdf_locally:
+
+Building PDF Locally
+--------------------
+To check errors with the PDF generation more quickly, it may be worthwhile to setup your local machine to build the PDF.
+
+  * install `MikTeX<https://miktex.org/howto/install-miktex>`_
+  * install `Perl <https://strawberryperl.com/>`_
+  * run the command make latexpdf
+  * the PDF will be created in the latex folder inside the _build folder
+
+
 
 .. _heading_publishing_online:
 
@@ -70,15 +82,6 @@ We use Travis_ to ensure this site will always contain functional builds. To pub
 
 .. important:: If your changes to the master branch aren't pushing to gh-pages, then check the status of the `Travis build here <https://travis-ci.org/AguaClara/Textbook>`_.
 
-.. _heading_building_pdf_locally:
-
-Building PDF Locally
---------------------
-To check errors with the PDF generation more quickly, it may be worthwhile to setup your local machine to build the PDF.
-
-Now you should be able to run :code:`./build_pdf` to run the build_pdf bash script within the root of the Textbook repo.
-
-**If you are on Windows, you'll need to use a POSIX shell, such as git bash, Cygwin, etc...**
 
 .. _heading_testing_online:
 

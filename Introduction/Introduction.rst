@@ -1,7 +1,7 @@
 .. _title_Introduction_to_The_Physics_of_Water_Treatment_Design:
 
 *****************************************************
-Introduction_to_The_Physics_of_Water_Treatment_Design
+The Physics of Water Treatment Design
 *****************************************************
 
 .. _heading_A_Different_Kind_of_Textbook:
@@ -46,8 +46,7 @@ We need the brightest and the best to create new and better solutions so we can 
 Tools to Find the Edge of Knowledge
 -----------------------------------
 
- - Don't believe everything we say
- - Ask lots of questions
+Don't believe everything we say. Ask lots of questions:
 
   - How do you know that? The goal here is to identify the difference between what is known and what is hypothesized.
   - What is the equation that describes the physics of this process? If there isn't an equation that describes the process and that can be used to design the reactor for the process, then it is likely that the physics of the process is not yet understood.
@@ -55,7 +54,7 @@ Tools to Find the Edge of Knowledge
   - Is the process design based on "rules of thumb" or on physics? "Rules of thumb" or empirical design guidelines often can be identified by the use of physical parameters that have units. For example, if the design guideline specifies a length, time, or velocity then it is likely that the guideline is not based on physics. If the design guidelines are based on a dimensionless parameter then it is possible that it is based on physics.
 
  - Evaluate the data to see if it matches predictions of the hypothesized model. Assess whether the authors acknowledge when their data doesn't match hypothesized models.
- - Beware of the use of words that are poorly defined and that hide uncertainty. For example, creating a name for a supposed mechanism to describe all of the observations that don't fit with your theory does NOT mean that you understand that mechanism. The ability to name something doesn't mean it is understood.
+ - Beware of the use of words that are poorly defined and that hide uncertainty. For example, creating a name for a supposed mechanism to describe all of the observations that don't fit with your theory does NOT mean that you understand that mechanism. The ability to name something doesn't mean it is understood (see "sweep" flocculation as an example).
  - Does this “theory” provide insights that have led to new discoveries or new applications?
  - Does the “theory” include equations that are based on the fundamental laws of nature?
  - Does the “theory” use dimensionless constants that are close to one?
@@ -68,6 +67,7 @@ Myth in Environmental Engineering
 ---------------------------------
 
 The following list is designed to get you thinking. These are concepts that are present in the Environmental Engineering community and that may capture some elements of truth and that may also further misconceptions.
+
  - Dead bodies cause disease
  - Slow sand filters ripen (improve in ability to remove contaminants over time) because of biological growth in the filter bed
  - If a 20 cm deep sand filter removes 90% of influent particles, then a 40 cm deep filter will remove 99% of influent particles
@@ -113,6 +113,7 @@ The AguaClara network of organizations has been methodically inventing improved 
 Curiosity can flourish in a culture of love, respect, and empathy. Asking why and why not and pondering an ever growing number of questions has empowered student teams to take on the quest for new knowledge and new solutions.
 
 Any large organization will require a leadership hierarchy and any hierarchy will rely on respect based on fear or respect based on love. `Fear-based hierarchies <https://www.forbes.com/sites/lizryan/2015/11/25/the-five-characteristics-of-fear-based-leaders/#a6179f38a968>`_ impede the accurate sharing of information and can easily devolve into data-free and low-truth decision-making schemes. According to `Liz Ryan <https://www.forbes.com/sites/lizryan/2015/11/25/the-five-characteristics-of-fear-based-leaders/#a6179f38a968>`_, the characteristics of fear-based leaders include:
+
   - They'll Teach You, Whether You Like It or Not
   - Everyone is a Friend or a Foe
   - It's All about the Trophies
@@ -267,6 +268,7 @@ The list of dissolved species that can be present in water in the environment is
 From an aesthetic perspective, NOM absorbs light at short wavelengths and this results in water that looks yellow or brown. While I enjoy drinking tea with a rich brown color, I'd prefer that my water be clear.
 
 NOM plays a supersized role in influencing performance of surface water treatment plants. NOM has three negative effects:
+
   #. It requires higher dosages of coagulant for effective particle removal.
   #. It reduces the disinfection effectiveness of chlorine, ozone, and UV. Chlorine partially oxidizes the NOM and thus more chlorine must be used to maintain a residual level of chlorine.
   #. It can produce disinfection by-products that are toxic.
