@@ -506,7 +506,7 @@ If each constriction was partially clogged with flocs at the end of the filter r
 
 The velocity in the constriction is 166.1 millimeter / second
 
-What is flow rate of water through each pore in μL/s? You can estimate this from the number of pores per square meter given the average separation distance.
+The flow rate of water through each pore can be estimated from the number of pores per square meter given the average separation distance.
 
 .. code:: python
 

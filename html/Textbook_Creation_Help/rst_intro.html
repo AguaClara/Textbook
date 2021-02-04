@@ -86,7 +86,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">Introduction_to_The_Physics_of_Water_Treatment_Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
@@ -187,8 +188,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-rst-for-development">Setting up RST for Development</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#installing-the-atom-plugins">Installing the Atom Plugins</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#building-rst-locally-with-sphinx">Building RST Locally with Sphinx</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#publishing-online">Publishing Online</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#building-pdf-locally">Building PDF Locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publishing-online">Publishing Online</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#testing-online">Testing Online</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sharing-test-output">Sharing Test Output</a></li>
 </ul>
@@ -299,6 +300,18 @@
 <p class="last">Regarding <strong>1.</strong> the master branch for the package implementing disqus in sphinx <a class="reference external" href="https://github.com/Robpol86/sphinxcontrib-disqus/pull/7">is broken</a>, which is why we use a non-standard pip/online installation. If you already have the incorrect sphinx-disqus version installed, uninstall it with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span> <span class="pre">sphinxcontrib-disqus</span></code> before installing the functioning version.</p>
 </div>
 </div>
+<div class="section" id="building-pdf-locally">
+<span id="heading-building-pdf-locally"></span><h3>Building PDF Locally<a class="headerlink" href="#building-pdf-locally" title="Permalink to this headline">¶</a></h3>
+<p>To check errors with the PDF generation more quickly, it may be worthwhile to setup your local machine to build the PDF.</p>
+<blockquote>
+<div><ul class="simple">
+<li>install <a href="#id1"><span class="problematic" id="id2">`MikTeX&lt;https://miktex.org/howto/install-miktex&gt;`_</span></a></li>
+<li>install <a class="reference external" href="https://strawberryperl.com/">Perl</a></li>
+<li>run the command make latexpdf</li>
+<li>the PDF will be created in the latex folder inside the _build folder</li>
+</ul>
+</div></blockquote>
+</div>
 <div class="section" id="publishing-online">
 <span id="heading-publishing-online"></span><h3>Publishing Online<a class="headerlink" href="#publishing-online" title="Permalink to this headline">¶</a></h3>
 <p>We use <a class="reference external" href="https://travis-ci.org/">Travis</a> to ensure this site will always contain functional builds. To publish online, you need to:</p>
@@ -324,12 +337,6 @@
 <p class="first admonition-title">Important</p>
 <p class="last">If your changes to the master branch aren’t pushing to gh-pages, then check the status of the <a class="reference external" href="https://travis-ci.org/AguaClara/Textbook">Travis build here</a>.</p>
 </div>
-</div>
-<div class="section" id="building-pdf-locally">
-<span id="heading-building-pdf-locally"></span><h3>Building PDF Locally<a class="headerlink" href="#building-pdf-locally" title="Permalink to this headline">¶</a></h3>
-<p>To check errors with the PDF generation more quickly, it may be worthwhile to setup your local machine to build the PDF.</p>
-<p>Now you should be able to run <code class="code docutils literal notranslate"><span class="pre">./build_pdf</span></code> to run the build_pdf bash script within the root of the Textbook repo.</p>
-<p><strong>If you are on Windows, you’ll need to use a POSIX shell, such as git bash, Cygwin, etc…</strong></p>
 </div>
 <div class="section" id="testing-online">
 <span id="heading-testing-online"></span><h3>Testing Online<a class="headerlink" href="#testing-online" title="Permalink to this headline">¶</a></h3>
@@ -390,7 +397,7 @@ You’ll need to carefully review any page converted with pandoc.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>

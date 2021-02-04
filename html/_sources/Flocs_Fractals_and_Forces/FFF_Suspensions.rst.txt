@@ -75,7 +75,7 @@ The Reynolds number :math:`Re_t` is based on the terminal velocity of the partic
 .. math::
   :label: Re_terminal
 
-  Re_t = \frac{v_t D__{particle}}{\nu}
+  Re_t = \frac{v_t D_{particle}}{\nu}
 
 The fluidization index, z, is a function of the Reynolds number at the terminal velocity.
 

@@ -91,7 +91,6 @@ An example of changing flow geometries is when a change in pipe size occurs in a
 .. _figure_continuity_pipes:
 
 .. figure:: Images/continuity_pipes.png
-    :width: 700px
     :align: center
     :alt: internal figure
 
