@@ -18,10 +18,10 @@ Python Tutorial
    "aguaclara.core. `physchem <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/physchem.py>`_", "pipeflow, orifices, viscosity of water, weirs, manifolds, Kozeny equation", "total head loss in a straight pipe", "headloss(FlowRate, Diam, Length, Nu, PipeRough, KMinor)"
    "aguaclara.research. `floc_model <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/floc_model.py>`_","AguaClara flocculation model, velocity gradients, Kolmogorov length scales","velocity gradient in a coiled tube", "g_coil(FlowPlant, IDTube, RadiusCoil, Temp)"
    aguaclara.research. `environmental_processes_analysis <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/environmental_processes_analysis.py>`_," carbonate system, CMFR and advection dispersion reactor analysis ", "extract data from ProCoDA generated Gran analysis file", "Gran(data_file_path)"
-   aguaclara.research. `procoda_parser <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/procoda_parser.py>`_,"Extracts data from multiple ProCoDA files based on the state and data column", extract a column of data from a ProCoDA data file, "column_of_data(data_file_path, start, column)"
-   `SciPy <https://docs.scipy.org/doc/scipy/reference/>`_,"computing integrals numerically, solving differential equations, optimization, and sparse matrices", root finding, "root(func, 0.3)"
-   `NumPy <https://docs.scipy.org/doc/numpy/user/quickstart.html>`_,"Array manipulation and math functions",create an array with linearly spaced elements,"np. `linspace <https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html#numpy.linspace>`_ (start,stop,num)"
-   `PyPlot <https://matplotlib.org/tutorials/index.html>`_, Graphs!,Create beautiful graphs,"see below"
+   aguaclara.research. `procoda_parser <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/procoda_parser.py>`_,"Extracts data from multiple ProCoDA files based on the state and data column", extract a column of data from a ProCoDA data file, "column_of_data (data_file_path, start, column)"
+   `SciPy <https://docs.scipy.org/doc/scipy/reference/>`_, "computing integrals numerically, solving differential equations, optimization, and sparse matrices", root finding, "root(func, 0.3)"
+   `NumPy <https://docs.scipy.org/doc/numpy/user/quickstart.html>`_, "Array manipulation and math functions", create an array with linearly spaced elements, "np. `linspace <https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html#numpy.linspace>`_ (start,stop,num)"
+   `PyPlot <https://matplotlib.org/tutorials/index.html>`_, Graphs!, Create beautiful graphs, "see below"
 
 
 Import statements

@@ -31,6 +31,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Introduction/Introduction.rst
+  Introduction/Grand_Challenges.rst
   Introduction/Python_Tutorial.rst
 
 

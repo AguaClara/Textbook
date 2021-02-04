@@ -460,7 +460,7 @@ The above process was used to conduct the experiments to test the applicability 
    :align: center
    :alt: internal figure
 
-   Effluent turbidity as a function of coagulant dose for experiments performed with influent turbidity of 900 NTU, velocity gradient of 147/s, and hydraulic residence time of about 413 s.
+   Effluent turbidity as a function of coagulant dose for experiments performed with influent turbidity of 900 NTU, velocity gradient of 147 Hz, and hydraulic residence time of about 413 s.
 
 
 The data shown in :numref:`figure_PennockFig2` were compared with the viscous model, as shown in :numref:`figure_PennockFig3`.
