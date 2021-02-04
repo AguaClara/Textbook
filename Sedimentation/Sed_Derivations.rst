@@ -83,7 +83,8 @@ By using flow conservation and plate settler geometry, we can begin to understan
 .. _heading_Sed_Tank_Plate_Settler_Design:
 
 Plate Settler Design
-========================================================
+====================
+
 Plate Settler Parameters
 -------------------------
 
@@ -419,7 +420,7 @@ Substituting by the trigonometric relationship :math:`\bar v_{\alpha_{Plate}} = 
 3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):
 
 
-Recall from our :ref:`previous explanation of terminal velocity <heading_terminal_velocity_equation>` that the terminal velocity, :math:`v_t`, of the floc can be calculated by,
+Recall from our :ref:`previous explanation of terminal velocity <heading_Floc_Terminal_Velocity>` that the terminal velocity, :math:`v_t`, of the floc can be calculated by,
 
 .. math::
 

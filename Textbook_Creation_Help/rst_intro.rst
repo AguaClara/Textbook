@@ -56,7 +56,7 @@ Building PDF Locally
 --------------------
 To check errors with the PDF generation more quickly, it may be worthwhile to setup your local machine to build the PDF.
 
-  * install `MikTeX<https://miktex.org/howto/install-miktex>`_
+  * install `MikTeX <https://miktex.org/howto/install-miktex>`_
   * install `Perl <https://strawberryperl.com/>`_
   * run the command make latexpdf
   * the PDF will be created in the latex folder inside the _build folder

@@ -390,22 +390,6 @@ The way to ensure a doctest will run is to precede each line of code with '>>>',
 
 Though there are other ways to include code in an RST document, this method makes doctesting possible, and will make it easy to change the documents should aguaclara functions change, therefore this is the best way to include code! Additionally it makes it easy to see the difference between the code and the output, whereas other methods are less clear in this distinction.
 
-Inserting Plots
----------------
-
-Inserting plots using this method should only be done if we can integrate this with figures.
-
-.. plot::
-
-   import matplotlib.pyplot as plt
-   import numpy as np
-   x = np.random.randn(1000000)
-   plt.hist( x, 20)
-   plt.grid()
-   plt.title(r'Normal: $\mu=%.2f, \sigma=%.2f$'%(x.mean(), x.std()))
-   plt.show()
-
-
 Inserting Video
 ---------------
 
