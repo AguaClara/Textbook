@@ -1,0 +1,32 @@
+name: Test
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Install Dependencies
+      run: |
+        pip install pipenv
+        pipenv install --dev
+    - name: Build HTML Docs
+      run: |
+        pipenv run make html
+        touch _build/html/.nojekyll
+    - name: Run HTML Proofer
+      uses: chabad360/htmlproofer@master
+      with:
+        directory: _build/html
+        arguments: --allow_hash_href --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/Textbook/test/html/index.html
+    - name: Publish Docs Test
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: test # The branch the action should deploy to.
+        FOLDER: _build/html/ # The folder the action should deploy.
