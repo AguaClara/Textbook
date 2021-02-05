@@ -20,7 +20,7 @@ jobs:
         pip install -r requirements-dev.txt
     - name: Generate Docs
       run: |
-        pipenv run make html
+        make html
         touch _build/html/.nojekyll
     - name: Publish Docs Master
       uses: JamesIves/github-pages-deploy-action@releases/v3

@@ -24,7 +24,7 @@ jobs:
         gem install html-proofer
     - name: Build HTML Docs
       run: |
-        pipenv run make html
+        make html
         touch _build/html/.nojekyll
     - name: Run HTML Proofer
       run: |
