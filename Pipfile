@@ -37,7 +37,7 @@ sphinxcontrib-disqus = {git = "https://github.com/rmk135/sphinxcontrib-disqus"}
 "urllib3" = "==1.23"
 Babel = "==2.6.0"
 Cycler = "==0.10.0"
-"Jinja2" = "==2.10"
+"Jinja2" = "==2.10.1"
 
 [dev-packages]
 
