@@ -21,6 +21,7 @@ jobs:
       run: |
         pip install pipenv
         pipenv install --dev
+        gem install html-proofer
     - name: Build HTML Docs
       run: |
         pipenv run make html
