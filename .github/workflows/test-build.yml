@@ -7,6 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.6' # Version range or exact version of a Ruby version to use, using semvers version range syntax.
+    - name: Install Ruby Dependencies
+      run: sudo apt install libcurl4-openssl-dev
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
@@ -19,11 +25,11 @@ jobs:
       run: |
         pipenv run make html
         touch _build/html/.nojekyll
+    - name: Build PDF
+      run: python make_pdf.py
     - name: Run HTML Proofer
-      uses: chabad360/htmlproofer@master
-      with:
-        directory: _build/html
-        arguments: --allow_hash_href --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/Textbook/test/html/index.html
+      run: |
+        htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/aide_design_specs/test/html/index.html
     - name: Publish Docs Test
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
