@@ -20,7 +20,7 @@ jobs:
     - name: Install Dependencies
       run: |
         pip install pipenv
-        pipenv shell
+        pipenv install
         gem install html-proofer
     - name: Build HTML Docs
       run: |

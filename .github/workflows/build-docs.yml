@@ -17,7 +17,7 @@ jobs:
     - name: Install Dependencies
       run: |
         pip install pipenv
-        pipenv shell
+        pipenv install
     - name: Generate Docs
       run: |
         pipenv run make html
