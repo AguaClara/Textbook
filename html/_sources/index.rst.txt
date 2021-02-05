@@ -11,9 +11,8 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
    :widths: 10, 10
    :align: center
 
-   "Sphinx", "1.7.5"
-   "aguaclara", "0.2.6"
-   "Anaconda", "4.5.4"
+   "Sphinx", "1.8.1"
+   "aguaclara", "0.3.0"
    "Python", "3.8"
 
 .. toctree::
@@ -145,13 +144,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
 
 .. toctree::
-  :caption: Chapter 14: Wastewater
-  :maxdepth: 1
-
-  WasteWater/WW_Theory_and_Future_Work.rst
-
-.. toctree::
-  :caption: Chapter 15: Troubleshooting
+  :caption: Chapter 14: Troubleshooting
   :maxdepth: 1
 
   Troubleshooting/Troubleshooting.rst
