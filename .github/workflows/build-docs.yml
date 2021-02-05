@@ -16,8 +16,7 @@ jobs:
         python-version: 3.8
     - name: Install Dependencies
       run: |
-        pip install pipenv
-        pipenv install --dev
+        pipenv shell
     - name: Generate Docs
       run: |
         pipenv run make html
