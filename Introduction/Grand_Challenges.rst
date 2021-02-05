@@ -172,13 +172,13 @@ Trickling filters are an old wastewater treatment technology that is much more e
 
 The measured hydraulic residence time for trickling filters is very short. This suggests that with proper design the ASD could be very compact. `Hinton and Stense (1991) <https://www-sciencedirect-com.proxy.library.cornell.edu/science/article/pii/0043135491901179>`_ measured the residence time per unit length to be 30 seconds/meter. Thus for a 4 meter deep trickling filter the residence time would be 120 seconds. If this is accurate, then we may be able to achieve a compact design if we can pack stainless steel cables close together (order 4 mm spacing) AND achieve uniform flow distribution. In addition, `Hinton and Stense (1991) <https://www-sciencedirect-com.proxy.library.cornell.edu/science/article/pii/0043135491901179>`_ used a hydraulic application rate of 4 m/hr (1.1 mm/s). This velocity confirms that a compact, well-designed ASD may be smaller than AguaClara sedimentation tanks that traditionally have operated at 1 mm/s.
 
-Modular plastic trickling filter media are typically manufactured with the `following specific surface areas <http://dx.doi.org/10.2175/106143010X12681059117210>`_:
+Modular plastic trickling filter media are typically manufactured with the `following specific surface areas <https://onlinelibrary.wiley.com/doi/abs/10.2175/106143010X12681059117210>`_:
 
 - 223 :math:`m^2/m^3` as high density
 - 138 :math:`m^2/m^3` as medium density
 - 100 :math:`m^2/m^3` as low density
 
-Vertical-flow media require an average hydraulic approach velocities greater than 1.8 m/h (0.5 mm/s) to maximize BOD5 removal efficiency. Shallow towers using cross-flow media have used hydraulic approach velocities in the range 0.4 to 1.1 m/h (0.1 to 0.3 mm/s) (`Daigger and Boltz, 2011 <http://dx.doi.org/10.2175/106143010X12681059117210>`_)
+Vertical-flow media require an average hydraulic approach velocities greater than 1.8 m/h (0.5 mm/s) to maximize BOD5 removal efficiency. Shallow towers using cross-flow media have used hydraulic approach velocities in the range 0.4 to 1.1 m/h (0.1 to 0.3 mm/s) (`Daigger and Boltz, 2011 <https://onlinelibrary.wiley.com/doi/abs/10.2175/106143010X12681059117210>`_)
 
 `Crine et al. (1990) <https://doi.org/10.2166/wst.1990.0149>`_ found that the wetted area-to-specific-surface-area ratio ranged from 0.2 to 0.6 with the lowest values for high-density random pack trickling filter media. This confirms that conventional trickling filters are unable to efficiently wet all biofilm surfaces and thus the trickling filters must be substantially over-designed (by a factor of 2 to 5) to accommodate this poor wetting efficiency.
 

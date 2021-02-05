@@ -26,8 +26,9 @@ jobs:
       run: |
         make html
         touch _build/html/.nojekyll
-    - name: Run HTML Proofer
+    - name: Run HTML Proofer and Doctest
       run: |
+        make doctest
         htmlproofer _build/html --allow_hash_href --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/aide_design_specs/test/html/index.html
     - name: Publish Docs Test
       uses: JamesIves/github-pages-deploy-action@releases/v3
