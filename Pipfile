@@ -32,10 +32,10 @@ sphinxcontrib-bibtex = "==0.4.2"
 sphinxcontrib-websupport = "==1.1.0"
 sphinx_rtd_theme = "==0.4.0"
 sphinxcontrib-disqus = {git = "https://github.com/rmk135/sphinxcontrib-disqus"}
-"urllib3" = "==1.23"
+"urllib3" = "==1.24.2"
 Babel = "==2.6.0"
 Cycler = "==0.10.0"
-"Jinja2" = "==2.10"
+"Jinja2" = "==2.10.1"
 
 [dev-packages]
 
