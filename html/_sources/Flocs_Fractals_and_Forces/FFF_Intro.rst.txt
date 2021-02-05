@@ -141,6 +141,8 @@ Simplifying :eq:`floc_buoyant_density_2` we obtain
 
 For volume-based fractal dimension less than 3 the buoyant density decreases as the floc size increases. The smaller than fractal dimension the less dense the resulting floc.
 
+.. _heading_Floc_Terminal_Velocity:
+
 Floc Terminal Velocity
 ======================
 
