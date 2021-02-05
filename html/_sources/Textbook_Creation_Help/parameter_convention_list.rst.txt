@@ -24,7 +24,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :header: Parameter, Description, Units
     :widths: 10, 30, 10
 
-    "Uppercase letters"
+    Uppercase letters,   , 
     :math:`A`,Area,:math:`[L]^2`
     :math:`A_{floc}`,Projected cross sectional area of particle,:math:`[L]^2`
     :math:`A_p `,Plan view area,:math:`[L]^2`
@@ -55,7 +55,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`T`,Object Thickness,:math:`[L]`
     :math:`\rlap{-} V`,Volume,:math:`[L]^3`
     :math:`W`,Width,:math:`[L]`
-    :math:`W_{diff_{min}}`,Minimum internal width of diffuser,:math:`[L]`
+    ":math:`W_{diff,min}`",Minimum internal width of diffuser,:math:`[L]`
     :math:`W_{floc}`,Gravitational weight of floc,:math:`\frac{[M][L]}{[T]^2}`
     :math:`W_{Sed}`,Width of each sedimentation tank,:math:`[L]`
     Lowercase letters, ,
@@ -66,7 +66,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`h_e`,Minor Loss (expansion),:math:`[L]`
     :math:`h_{\rm f}`,Major Loss (friction),:math:`[L]`
     :math:`h_L`,Total headloss,:math:`[L]`
-    :math:`h_{L_{jet}}`,Head loss in jet leaving jet reverser,:math:`[L]`
+    ":math:`h_{L,jet}`",Head loss in jet leaving jet reverser,:math:`[L]`
     :math:`m`, Mass, :math:`[M]`
     :math:`n`,"Number, Amount",Dimensionless
     :math:`p`,Pressure,:math:`\frac{[M]}{[L][T]^2}`
