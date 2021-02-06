@@ -1,0 +1,526 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Rapid Mix Introduction &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Rapid Mix Design" href="RM_Design.html" />
+    <link rel="prev" title="Chemistry of Water Treatment Derivations" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                EXPERIMENTAL
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics and Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Flocs, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces, and Fluidized Suspensions Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Chemistry of Water Treatment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Water Treatment Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Chemistry of Water Treatment Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Rapid Mix</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid Mix Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fluid-mixing">Fluid Mixing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#conventional-mechanical-rapid-mix">Conventional Mechanical Rapid Mix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maximum-velocity-gradients">Maximum Velocity Gradients</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mixing-time">Mixing time</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#coagulant-nanoparticle-interactions">Coagulant Nanoparticle Interactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dissolved-organic-matter">Dissolved Organic Matter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#suspended-solids">Suspended Solids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pathogens">Pathogens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rate-estimates-for-coagulant-nanoparticle-transport-to-suspended-solids">Rate Estimates for Coagulant Nanoparticle Transport to Suspended Solids</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Hydraulics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html">Hydraulics Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 13: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 14: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Rapid Mix Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Rapid_Mix/RM_Intro.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rapid-mix-introduction">
+<span id="title-rapid-mix-introduction"></span><h1>Rapid Mix Introduction<a class="headerlink" href="#rapid-mix-introduction" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>This chapter is currently home for the prerequisites of successful flocculation. Those prerequisites include:</dt>
+<dd><ul class="first last simple">
+<li>ensuring that the pH is in the correct range for coagulant nanoparticle formation after the coagulant has been added to the raw water.</li>
+<li>increasing the coagulant dose to account for the coagulant interactions with dissolved species that effectively cover some of the coagulant nanoparticle surfaces.</li>
+<li>increasing the coagulant dose to account for the available surface area of suspended particles to achieve</li>
+<li>If there are multiple treatment trains, mixing the coagulant with the raw water so that parallel treatment trains receive the same concentration of coagulant (perhaps the conventional role of rapid mix)</li>
+<li>transporting the coagulant nanoparticles to attach to suspended particles</li>
+</ul>
+</dd>
+</dl>
+<p>Rapid mix is the term commonly used to describe the processes that occur between the coagulant addition to the raw water and the flocculation process. The processes that occur are not well understood and thus design guidelines have been empirical.</p>
+<p>“In summary, little is known about rapid mix, much less any sensitivity to scale. However, the models and data reviewed suggest the need to be on the lookout for certain effects. From what is presently known, it can be speculated that since coagulant precipitation is sensitive to both micro- and macro-mixing, scale-up must consider not only energy dissipation rate, but also the reaction injection point and the contacting method.” - <a class="reference external" href="https://books.google.com/books/about/Mixing_in_coagulation_and_flocculation.html?id=dkFSAAAAMAAJ">Mixing in Coagulation and Flocculation 1991 page 292</a>.</p>
+<p>Although the processes have not been well characterized, the energy that is invested for rapid mix processes is significant. In many cases the amount of energy used isn’t practical for gravity powered water treatment plants. The high energy consumption of rapid mix units has led some municipal water treatment plant operators to experiment with turning off rapid mix units. They have found that at least under some conditions there is no indication that the energy used in rapid mix improved plant performance. Thus there is a need to understand the physical and chemical processes that occur when a concentrated liquid coagulant is added to water.</p>
+<p>Rapid mix sets the stage for aggregation of both suspended particles and dissolved substances. Particle and dissolve substance aggregation is mediated by coagulant nanoparticles. The nanoparticles attach to raw water particles as well as to some dissolved species. After the nanoparticles have been mixed with the raw water and have attached to raw water particles the next process, flocculation, can begin.  <a class="reference internal" href="../Flocculation/Floc_Intro.html#title-flocculation-introduction"><span class="std std-ref">Flocculation</span></a> is the process of producing collisions between particles to create flocs (aggregates of particles).</p>
+<p>Coagulant nanoparticle application includes multiple steps that must occur before the raw water particles can begin to aggregate. The sticky nanoparticles can be aluminum <span class="math notranslate nohighlight">\((Al^{+3})\)</span> or iron <span class="math notranslate nohighlight">\((Fe^{+3})\)</span> based and in either case the nanoparticles are formed from precipitated hydroxide species (<span class="math notranslate nohighlight">\(Al(OH)_3\)</span> or <span class="math notranslate nohighlight">\(Fe(OH)_3\)</span>). The series of events that are contained in the broad designation of “rapid mix” are:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Liquid coagulant stock solution with a low pH is injected into the raw water</li>
+<li>Fluid Mixing: Turbulent eddies randomize the fluids (but don’t blend them)<ol class="arabic">
+<li>Large scale eddies mix the coagulant with the raw water by creating large fluid deformations. This stretching and turning of the raw water and coagulant is analogous to shuffling a deck of cards. The cards are randomized, but the cards maintain their identity. The original liquids retain their chemical composition. This step must be completed before any flow splitting for parallel treatment trains.</li>
+<li>Turbulent eddies disintegrate into smaller and smaller eddies.</li>
+<li>At a very small scale (Inner viscous length scale) viscosity becomes significant and the kinetic energy of the eddies begins to be converted to heat by viscosity.</li>
+</ol>
+</li>
+<li>The coagulant is blended with the raw water by molecular diffusion</li>
+<li>The higher pH of the raw water causes the coagulant to begin to precipitate as <span class="math notranslate nohighlight">\(Al_{12}AlO_4(OH)_{24}(H_2O)_{12}^{7+}\)</span>, an aluminum, Al, nanoparticle.</li>
+<li>The precipitating <span class="math notranslate nohighlight">\(Al_{13}\)</span> molecules aggregates with other nearby <span class="math notranslate nohighlight">\(Al_{13}\)</span> molecules to form aluminum hydroxide nanoparticles. It is also possible that the nanoparticles are already formed in the coagulant stock suspension. Polyaluminum chloride stock solutions turn white in about a year at room temperature and this suggests that nanoparticles form in the stock solution.</li>
+<li>The Al nanoparticles attach to other dissolved species and suspended particles.</li>
+<li>Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.</li>
+<li>Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).</li>
+</ol>
+</div></blockquote>
+<p>These multiple steps cover a wide range of length scales and it is not clear at the onset which processes might be the rate limiting steps. We will develop time scale estimates for several of these steps to help identify which processes will likely require the most attention to design. Many of these transport processes are presumed to occur in parallel. <a class="reference internal" href="#figure-transport-length-scales"><span class="std std-numref">Fig. 65</span></a> shows the range of length scales.</p>
+<div class="figure align-center" id="id2">
+<span id="figure-transport-length-scales"></span><a class="reference internal image-reference" href="../_images/rapid_mix_macro_to_nano_scale.png"><img alt="rapid mix macro to nano scale" src="../_images/rapid_mix_macro_to_nano_scale.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 65 </span><span class="caption-text">Transport of coagulant nanoparticles occurs over length scales ranging from meter to a fraction of a nanometer.</span></p>
+</div>
+<div class="section" id="fluid-mixing">
+<span id="id1"></span><h2>Fluid Mixing<a class="headerlink" href="#fluid-mixing" title="Permalink to this headline">¶</a></h2>
+<p>Fluid mixing is the process by which large scale eddies distribute packets of the coagulant stock throughout the raw water. The term “Rapid mix” is probably best used to describe this process. Traditional methods of achieving this fluid mixing include various methods of generating intense turbulence. Fluid mixing is able to rapidly blend the coagulant with the raw water in a matter of a few seconds. The equations describing the fluid mixing process are presented in the section on <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#heading-estimates-of-time-required-for-mixing-processes"><span class="std std-ref">Estimates of time required for mixing processes</span></a>.</p>
+<div class="figure align-center" id="id3">
+<span id="figure-backmix"></span><a class="reference internal image-reference" href="../_images/Backmix.jpg"><img alt="Backmix" src="../_images/Backmix.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 66 </span><span class="caption-text">Backmix: a mechanical rapid mixer that has a relatively long residence time in a completely mixed flow reactor.</span></p>
+</div>
+<div class="figure align-center" id="id4">
+<span id="figure-inline"></span><a class="reference internal image-reference" href="../_images/Inline.jpg"><img alt="Inline" src="../_images/Inline.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 67 </span><span class="caption-text">Inline: a mechanical rapid mixer that has a short residence time in a completely mixed flow reactor that is often built into a pipe.</span></p>
+</div>
+<div class="figure align-center" id="id5">
+<span id="figure-hydraulic-jump"></span><a class="reference internal image-reference" href="../_images/hydraulic_jump.jpg"><img alt="hydraulic jump" src="../_images/hydraulic_jump.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 68 </span><span class="caption-text">Hydraulic jump: a hydraulic rapid mixer uses the flow expansion downstream from supercritical open channel flow.</span></p>
+</div>
+<p>The hydraulic jump in <a class="reference internal" href="#figure-hydraulic-jump"><span class="std std-numref">Fig. 68</span></a> uses a flow expansion to generate mixing in an open channel and that suggests that a flow expansion could also be used to generate mixing in a closed conduit. AguaClara rapid mix units consist of an orifice in the bottom of the <a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#heading-lfom"><span class="std std-ref">Linear Flow Orifice Meter (LFOM)</span></a> where the water enters the flocculator (see <a class="reference internal" href="#figure-rapid-mix-orifice"><span class="std std-numref">Fig. 69</span></a>). However, given that fluid mixing is so easy to attain it is unclear if the energy used in the rapid mix orifice is necessary.</p>
+<div class="figure align-center" id="id6">
+<span id="figure-rapid-mix-orifice"></span><a class="reference internal image-reference" href="../_images/Rapid_mix_orifice.png"><img alt="Rapid mix orifice" src="../_images/Rapid_mix_orifice.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text">The orifice creates a high velocity jet that generates mixing as it expands in the contact chamber prior to flocculation.</span></p>
+</div>
+<div class="section" id="conventional-mechanical-rapid-mix">
+<span id="heading-conventional-mechanical-rapid-mix"></span><h3>Conventional Mechanical Rapid Mix<a class="headerlink" href="#conventional-mechanical-rapid-mix" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="maximum-velocity-gradients">
+<span id="heading-conventional-maximum-velocity-gradients"></span><h3>Maximum Velocity Gradients<a class="headerlink" href="#maximum-velocity-gradients" title="Permalink to this headline">¶</a></h3>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">aguaclara</span> <span class="k">as</span> <span class="nn">ac</span>
+
+<span class="n">Mix_HRT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">85</span><span class="p">])</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">Mix_G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4000</span><span class="p">,</span><span class="mi">1500</span><span class="p">,</span><span class="mi">950</span><span class="p">,</span><span class="mi">850</span><span class="p">,</span><span class="mi">750</span><span class="p">])</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<span class="n">Mix_CP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">Mix_HRT</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Mix_G</span><span class="p">))</span>
+<span class="n">Mix_Gt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">Mix_HRT</span><span class="p">,</span> <span class="n">Mix_G</span><span class="p">)</span>
+<span class="n">Mix_EDR</span> <span class="o">=</span> <span class="p">(</span><span class="n">Mix_G</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">ac</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temperature</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Mix_G</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span><span class="n">Mix_HRT</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;%.f&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;%.f&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Velocity gradient (Hz)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Residence time (s)&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">imagepath</span><span class="o">+</span><span class="s1">&#39;Mechanical_RM_Gt&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure align-center" id="id7">
+<span id="figure-mechanical-rm-gt"></span><a class="reference internal image-reference" href="../_images/Mechanical_RM_Gt.png"><img alt="Mechanical RM Gt" src="../_images/Mechanical_RM_Gt.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 70 </span><span class="caption-text">Mechanical rapid mix units use a wide range of velocity gradients and residence times.</span></p>
+</div>
+<p>Conventional rapid mix units use mechanical or potential energy to generate intense turbulence to begin the mixing process. Conventional design is based on the use of <span class="math notranslate nohighlight">\(\bar G\)</span> (an average velocity gradient) as a design parameter. We don’t yet know what the design objective is for rapid mix and thus it isn’t clear which parameters matter. We hypothesize that both velocity gradients that cause deformation of the fluid and time for molecular diffusion are required to ultimately transport coagulant nanoparticles to the surfaces of clay particles.</p>
+<p>The velocity gradient can be obtained from the rate at which mechanical energy is being dissipated and converted to heat by viscosity.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-0">
+<span class="eqno">(333)<a class="headerlink" href="#equation-rapid-mix-rm-intro-0" title="Permalink to this equation">¶</a></span>\[\varepsilon = G^2 \nu\]</div>
+<p>where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the energy dissipation rate, <span class="math notranslate nohighlight">\(G\)</span> is the velocity gradient, and <span class="math notranslate nohighlight">\(\nu\)</span> is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-1">
+<span class="eqno">(334)<a class="headerlink" href="#equation-rapid-mix-rm-intro-1" title="Permalink to this equation">¶</a></span>\[P = \bar\varepsilon \rlap{-} V \rho\]</div>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-2">
+<span class="eqno">(335)<a class="headerlink" href="#equation-rapid-mix-rm-intro-2" title="Permalink to this equation">¶</a></span>\[P = \bar G^2 \nu \rlap{-} V \rho\]</div>
+<p>We can relate reactor volume to a hydraulic residence time, <span class="math notranslate nohighlight">\(\theta\)</span>, and volumetric flow rate, Q.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-3">
+<span class="eqno">(336)<a class="headerlink" href="#equation-rapid-mix-rm-intro-3" title="Permalink to this equation">¶</a></span>\[P = \rho \bar G^2 \nu Q \theta\]</div>
+<p>This equation is perfectly useful for estimating electrical motor sizing requirements for mechanical rapid mix units. For gravity powered hydraulic rapid mix units it would be more intuitive to use the change in water surface elevation, <span class="math notranslate nohighlight">\(\Delta h\)</span> instead of power input.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-4">
+<span class="eqno">(337)<a class="headerlink" href="#equation-rapid-mix-rm-intro-4" title="Permalink to this equation">¶</a></span>\[P = \rho g Q \Delta h\]</div>
+<p>Combining the two equations we obtain.</p>
+<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-5">
+<span class="eqno">(338)<a class="headerlink" href="#equation-rapid-mix-rm-intro-5" title="Permalink to this equation">¶</a></span>\[\Delta h =  \frac{G^2 \nu \theta}{g}\]</div>
+<span id="table-conventional-rapid-mix-design-values"></span><table border="1" class="docutils" id="id8">
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">Typical values for conventional rapid mix residence time and average velocity gradients</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Residence Time (s)</th>
+<th class="head">Velocity gradient G (1/s)</th>
+<th class="head">Energy dissipation rate (W/kg)</th>
+<th class="head">Equivalent height (m)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0.5</td>
+<td>4000</td>
+<td>16</td>
+<td>0.8</td>
+</tr>
+<tr class="row-odd"><td>10 - 20</td>
+<td>1500</td>
+<td>2.25</td>
+<td>2.3 - 4.6</td>
+</tr>
+<tr class="row-even"><td>20 - 30</td>
+<td>950</td>
+<td>0.9</td>
+<td>1.8 - 2.8</td>
+</tr>
+<tr class="row-odd"><td>30 - 40</td>
+<td>850</td>
+<td>0.72</td>
+<td>2.2 - 2.9</td>
+</tr>
+<tr class="row-even"><td>40 - 130</td>
+<td>750</td>
+<td>0.56</td>
+<td>2.3 - 7.5</td>
+</tr>
+</tbody>
+</table>
+<p>From Environmental Engineering: A Design Approach by Sincero and
+Sincero. 1996. page 267.</p>
+<p>Rotating propellers can either be installed in open tanks or enclosed in pipes. From a mixing and fluids perspective it doesn’t make any difference whether the tank is open to the atmosphere or not. The parameters of interest are the rate of fluid deformation and the residence time in the mixing zone.</p>
+</div>
+<div class="section" id="mixing-time">
+<span id="heading-mixing-time"></span><h3>Mixing time<a class="headerlink" href="#mixing-time" title="Permalink to this headline">¶</a></h3>
+<p>The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-t-eddy">(155)</a>) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (<a class="reference internal" href="#figure-eddy-turnover-times"><span class="std std-numref">Fig. 71</span></a>).</p>
+<div class="figure align-center" id="id9">
+<span id="figure-eddy-turnover-times"></span><a class="reference internal image-reference" href="../_images/Eddy_turnover_time1.png"><img alt="Eddy turnover time" src="../_images/Eddy_turnover_time1.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 71 </span><span class="caption-text">Eddy turnover times as a function of length scale for a range of energy dissipation rates.</span></p>
+</div>
+<p>The eddy turnover times are longest for the largest eddies and this analysis suggests that it only takes a few seconds for turbulent eddies to mix from the scale of the flow down to the inner viscous length scale.</p>
+<p>The large scale mixing time is critical for the design of water treatment plants for the case where the flow is split into multiple treatment trains after coagulant addition. In this case it is critical that the coagulant be mixed equally between all of the treatment trains and thus the mixing times shown in the previous graph represent a minimum time between where the coagulant is added and where the flow is divided into the parallel treatment trains.</p>
+<p>It is possible that this process of mixing from the scale of the flow down to the inner viscous length scale is referred to as “rapid mix.” Here we showed that this mixing is indeed rapid and is really only a concern in the case where the coagulant injection point is very close to the location where the flow is split into multiple treatment trains.</p>
+<p>The time required for mixing the coagulant nanoparticles with the fluid is typically only a few seconds, and will be accomplished whether or not the rapid mix unit is turned on. The turbulent eddies created either from the water flowing in the channel or from the water flowing through the pipe between the coagulant injection point and the flocculator will achieve the required fluid mixing in most cases. However, the step of the <a class="reference internal" href="RM_Theory_and_Future_Work.html#heading-diffusion-and-shear-transport-coagulant-nanoparticles-to-clay"><span class="std std-ref">coagulant nanoparticles attaching to the suspended particles</span></a> may be aided by the high energy of the rapid mix unit.</p>
+</div>
+</div>
+<div class="section" id="coagulant-nanoparticle-interactions">
+<span id="heading-coagulant-nanoparticle-interactions"></span><h2>Coagulant Nanoparticle Interactions<a class="headerlink" href="#coagulant-nanoparticle-interactions" title="Permalink to this headline">¶</a></h2>
+<p>Coagulant nanoparticles are sticky and can attach to suspended particles as well as to each other. Some dissolved substances also adsorb to coagulant nanoparticles. The development of models to describe these interactions has been impeded by the widespread acceptance of the <a class="reference external" href="https://projects.ncsu.edu/project/hubbepaperchem/Defnitns/Neutrlzn.htm">charge neutralization hypothesis</a> as the mechanism that governs these interactions. However, this hypothesis fails to account for the size of  coagulant nanoparticles and the various contaminants in the raw water influent. Instead, a simplified the model describing removal of these differently sized contaminants is proposed below; this simplified model posits that it is possible to separate fast and slow processes, which allows for a sequential model.</p>
+<p>Interactions between the various suspended and dissolved substances (see <a class="reference internal" href="#figure-particle-sizes"><span class="std std-numref">Fig. 72</span></a>) can occur simultaneously as soon as the coagulant is blended with the raw water. The rates of these interactions are controlled by the transport processes of fluid deformation and molecular diffusion. Molecular diffusion is fastest for small particles and fluid deformation is most effective for larger particles. Thus the fastest process is hypothesized to be the diffusion of low mass molecules to the coagulant nanoparticles. Transport of the coagulant nanoparticles to attach to suspended solids is expected to be a slower process. Transport of suspended particles to collide with other suspended particles (flocculation) is even slower.</p>
+<div class="figure align-center" id="id10">
+<span id="figure-particle-sizes"></span><a class="reference internal image-reference" href="../_images/Particle_sizes.png"><img alt="Particle sizes" src="../_images/Particle_sizes.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 72 </span><span class="caption-text">The size range of particles and nanoparticles that are important in drinking water treatment ranges from approximately a nanometer (for example arsenic <span class="math notranslate nohighlight">\(HAsO_4^{2-}\)</span>) to thousands of nanometers for clay and protozoa.</span></p>
+</div>
+<div class="section" id="dissolved-organic-matter">
+<span id="heading-dissolved-organic-matter-and-coagulant"></span><h3>Dissolved Organic Matter<a class="headerlink" href="#dissolved-organic-matter" title="Permalink to this headline">¶</a></h3>
+<p>Dissolved organic matter (DOM) includes humic substances, fulvic acids, and other organic molecules. The distinction between dissolved and particulate organic matter is somewhat arbitrary and often 450 nm is used as the transition.  The dissolved organic matter could also be referred to as macromolecules or as nanoparticles.</p>
+<p>Because of its small size the DOM has a large surface per unit mass. Water that contains high DOM concentrations requires much higher coagulant dosages to achieve effective flocculation. Removal of DOM is a high priority for drinking water treatment plants because DOM both interferes with disinfection processes and produces disinfection by products. A significant fraction of DOM can be removed by coagulant nanoparticles.</p>
+</div>
+<div class="section" id="suspended-solids">
+<span id="heading-suspended-solids-and-coagulant"></span><h3>Suspended Solids<a class="headerlink" href="#suspended-solids" title="Permalink to this headline">¶</a></h3>
+<p>Suspended solids include both organic and inorganic particles. Organic particles of concern include virus, bacteria, and protozoa. Inorganic particles include clay and other minerals. Naturally occurring suspended solids tend to have negative surface charge at neutral pH. The negative surface charge effectively prevents particle aggregation and thus these particles can remain suspended for a very long time.</p>
+</div>
+<div class="section" id="pathogens">
+<span id="heading-pathogens-and-coagulant"></span><h3>Pathogens<a class="headerlink" href="#pathogens" title="Permalink to this headline">¶</a></h3>
+<p>Virus particles readily attach to coagulant nanoparticles (see <a class="reference external" href="https://link-springer-com.proxy.library.cornell.edu/chapter/10.1007/978-3-642-76093-8_5">“Effects of Floc-Virus Association on Chlorine Disinfection Efficiency by Shinichiro Ohgaki and Prasang Mongkonsiri</a>) and this attachment makes it possible to efficiently remove virus particles by flocculation followed by sedimentation. Bacteria (cite Yolanda Brook paper when it is published) and protozoans (need reference) are also removed by flocculation by coagulant nanoparticles.</p>
+</div>
+<div class="section" id="rate-estimates-for-coagulant-nanoparticle-transport-to-suspended-solids">
+<span id="heading-rate-estimates-for-coagulant-nanoparticle-transport-to-suspended-solids"></span><h3>Rate Estimates for Coagulant Nanoparticle Transport to Suspended Solids<a class="headerlink" href="#rate-estimates-for-coagulant-nanoparticle-transport-to-suspended-solids" title="Permalink to this headline">¶</a></h3>
+<p>Coagulant nanoparticles require significant time to attach to the surfaces of suspended solids. The time required is estimated in <a class="reference internal" href="RM_Theory_and_Future_Work.html#heading-diffusion-and-shear-transport-coagulant-nanoparticles-to-clay"><span class="std std-ref">Diffusion and Shear Transport Coagulant Nanoparticles to Clay</span></a>. It is quite possible that this stage of the rapid mix/flocculation process has been overlooked in the past. Transport of the nanoparticles to the suspended solids is accomplished by a combination of fluid deformation and diffusion.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="RM_Design.html" class="btn btn-neutral float-right" title="Rapid Mix Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html" class="btn btn-neutral" title="Chemistry of Water Treatment Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, AguaClara Cornell.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'EXPERIMENTAL',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
