@@ -29,7 +29,7 @@ jobs:
     - name: Run HTML Proofer and Doctest
       run: |
         make doctest
-        htmlproofer _build/html --allow_hash_href --only_4xx --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/aide_design_specs/test/html/index.html
+        htmlproofer _build/html --allow_hash_href --only_4xx --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/Textbook/test/html/index.html
     - name: Test Publish Docs
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
