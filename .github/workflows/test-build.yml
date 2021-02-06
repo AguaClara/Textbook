@@ -31,11 +31,13 @@ jobs:
         make doctest
         htmlproofer _build/html --allow_hash_href --only_4xx --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/aide_design_specs/test/html/index.html
     - name: Test Publish Docs
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: test # The branch the action should deploy to.
-        FOLDER: _build/html/ # The folder the action should deploy.
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: _build/html/
+        publish_branch: test
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
     - name: Test Build PDF
       run: |
         make latex
