@@ -22,14 +22,13 @@ jobs:
       run: |
         make html
         touch _build/html/.nojekyll
-    - name: Test Publish Docs
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Publish Docs Master
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: _build/html/
-        publish_branch: gh-pages
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: master # The branch the action should deploy from.
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: _build/html/ # The folder the action should deploy.
     # - name: Create Release
     #   id: create_release
     #   uses: actions/create-release@v1
