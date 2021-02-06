@@ -696,7 +696,7 @@ Marhaba, T. F., Pu, Y., & Bengraine, K. (2003). Modified dissolved organic matte
 
 O’Melia, C. R. (1972). Coagulation and flocculation. In W. J. Weber (Ed.), Physicochemical processes for water quality control. New York: Wiley-Interscience.
 
-Österberg, R., Lindovist, I., & Mortensen, K. (1993). Particle Size of Humic Acid. Soil Science Society of America Journal, 57(1), 283–285. https://doi.org/10.2136/sssaj1993.03615995005700010048x
+Österberg, R., Lindovist, I., & Mortensen, K. (1993). Particle Size of Humic Acid. Soil Science Society of America Journal, 57(1), 283–285. https://www.nbi.dk/~kell/publ/1993_SoilSciSocAJ_HumicAcid.pdf
 
 Pennock, William H., Weber-Shirk, Monroe, & Lion, Leonard W. (2018). A Hydrodynamic and Surface Coverage Model Capable of Predicting Settled Effluent Turbidity Subsequent to Hydraulic Flocculation. Environmental Engineering Science, 35(12). https://doi.org/10.1089/ees.2017.0332
 
