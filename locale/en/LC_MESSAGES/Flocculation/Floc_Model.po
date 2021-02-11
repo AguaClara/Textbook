@@ -880,7 +880,7 @@ msgstr ""
 msgid ""
 "Effluent turbidity as a function of coagulant dose for experiments "
 "performed with influent turbidity of 900 NTU, velocity gradient of 147/s,"
-" and hydraulic residence time of about 413 s."
+" and hydraulic residence time of about 413 s."
 msgstr ""
 
 #: ../../Flocculation/Floc_Model.rst:466
@@ -1781,4 +1781,3 @@ msgid ""
 "Effect of coagulant particle size and hydrolysis kinetics. Water "
 "Research, 42(13), 3361–3370. https://doi.org/10.1016/j.watres.2008.04.017"
 msgstr ""
-

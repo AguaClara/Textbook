@@ -540,7 +540,7 @@ The maximum floc size that can be obtained based on a :math:`\Pi_{bond}^g = 8` a
 
     The maximum floc size deceases rapidly as the density of the core particle increases.
 
-The maximum size of flocs that can be obtained with aluminum-based coagulants is thus limited due to the force of gravity. This has direct implications for the use of ballasted sand flocculation that uses micro-sand (size 40 - 150 µm) to increase the sedimentation velocity of the flocs. Equation :eq:`D_floc_of_bong` reveals that aluminum-based coagulants aren't strong enough to hold two micro-sand particles together. Ballasted sand flocculation requires additional polymers that increase the bond strength to create flocs around the micro-sand.
+The maximum size of flocs that can be obtained with aluminum-based coagulants is thus limited due to the force of gravity. This has direct implications for the use of ballasted sand flocculation that uses micro-sand (size 40 - 150 µm) to increase the sedimentation velocity of the flocs. Equation :eq:`D_floc_of_bong` reveals that aluminum-based coagulants aren't strong enough to hold two micro-sand particles together. Ballasted sand flocculation requires additional polymers that increase the bond strength to create flocs around the micro-sand.
 
 Maximum Floc Terminal Velocity
 ==============================

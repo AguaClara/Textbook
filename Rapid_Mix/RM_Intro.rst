@@ -227,7 +227,6 @@ Because of its small size the DOM has a large surface per unit mass. Water that 
 
 .. todo:: cite William's paper with model for flocculation of humic acid and clay suspension.
 
-
 .. _heading_Suspended_Solids_and_Coagulant:
 
 Suspended Solids

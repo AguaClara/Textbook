@@ -5,8 +5,6 @@ Functionality in RST and AguaClara Convention
 ***********************************************
 This file will explain how to use RST functionality including images, tables, code, equations, and both internal and cross-document references. Additionally, this document is intended to define convention for this textbook project. Any syntax included in this document should be used when contributing to the textbook project. If you come across a function for which there is no convention, please edit this file to include it here.
 
-
-
 .. _heading_how_to_use_this_file:
 
 How to use this file:
@@ -18,7 +16,6 @@ You will often see this format ``.. word::``. The 'word' in this case is called 
 You will also often see this format ``.. _words_separated_by_underscores:``. These are called tags, and they exist so that the location of the tag can be referenced during some other section or document in the textbook. They are defined by ``.. _`` at the beginning of the tag and ``:`` at the end of the tag. There is convention for how to name tags. So before you go off writing tags all willy-nilly in your textbook documents, read the entirety of this document and use it as your convention bible. For tags and everything else.
 
 .. important:: **Proper indentation and line spacing is extremely important when writing in RST**
-
 
 .. _heading_headings_bullets_and_lists:
 
@@ -360,7 +357,7 @@ Writing Python and Including Doctests
 Doctests
 ^^^^^^^^^^^^
 
-When writing code for the textbook, some sections will be written in executable code to demonstrate functions or run calculations. They will not, however, run automatically in the webpage, so to ensure that they are correct before they are published they are tested with doctests. Doctests compare the written code with the expected result typed manually below it. In the Anaconda Prompt, simply run the :code:`make doctest` in the correct directory and branch. When run, you see where your executable code doesn't match up with the "answer" provided by you, the contributor. One reason this is important is because if functions in aguaclara change, their outputs might alter from old versions. Doctests will show where this happens. Additionally, typos and other mistakes can be seen. Further documentation on running doctest can be found `here <http://docs.sphinxdocs.com/en/latest/step-3.html>`_.
+When writing code for the textbook, some sections will be written in executable code to demonstrate functions or run calculations. They will not, however, run automatically in the webpage, so to ensure that they are correct before they are published they are tested with doctests. Doctests compare the written code with the expected result typed manually below it. In the Anaconda Prompt, simply run the :code:`make doctest` in the correct directory and branch. When run, you see where your executable code doesn't match up with the "answer" provided by you, the contributor. One reason this is important is because if functions in aguaclara change, their outputs might alter from old versions. Doctests will show where this happens. Additionally, typos and other mistakes can be seen. Further documentation on running doctest can be found `here <https://web.archive.org/web/20190306065814/http://docs.sphinxdocs.com/en/latest/step-3.html>`_.
 
 The way to ensure a doctest will run is to precede each line of code with '>>>', the default Python prompt. When a doctest is run, every line of code with '>>>' in front of it will be run within a directory. The testing becomes relevant for lines which do not have '>>>' in front of them. Any line that is directly below a line beginning with '>>>' is assumed to be an output of the line of code just above it. In the example below, :code:`19` is the expected output of the line :code:`>>> print(5+14)`. If the output of that line did not match the line below, doctests would alert you! Below are some examples of doctestable code.
 
