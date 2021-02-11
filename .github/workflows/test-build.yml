@@ -36,5 +36,5 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: test # The branch the action should deploy to.
         FOLDER: _build/html/ # The folder the action should deploy.
-    # - name: Test Build PDF
-    #   run: make latexpdf
+    - name: Test Build PDF
+      run: make latexpdf
