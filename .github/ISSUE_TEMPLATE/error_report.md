@@ -3,7 +3,7 @@
 name: Error Report
 about: 'Something''s wrong...'
 title: 'ERR:'
-labels: 'Error, Needs Triage'
+labels: 'bug, needs triage'
 
 ---
 
