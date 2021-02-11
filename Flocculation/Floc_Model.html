@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flocculation Model &mdash; AguaClara Textbook 0.076 documentation</title>
+  <title>Flocculation Model &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.076
+                EXPERIMENTAL
               </div>
             
           
@@ -332,7 +332,7 @@
 <p>Particle separation distance matters because it determines which transport mechanisms are at play when two particles approach for a collision. The particle separation distance is a function of the particle concentration. Surface water treatment plants commonly treat water with turbidity between 1 and 1000 NTU. We will first find the number of clay particles per liter in typical raw water suspensions.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span>
 <span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">aguaclara.core.constants</span> <span class="k">as</span> <span class="nn">con</span>
 <span class="kn">import</span> <span class="nn">aguaclara.research.environmental_processes_analysis</span> <span class="k">as</span> <span class="nn">epa</span>
 <span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
@@ -355,7 +355,7 @@
 </div>
 <p>The next step is to calculate the separation distance between the clay particles over this range of clay concentrations using Equation <a class="reference internal" href="#equation-eq-spacing-of-diameter">(385)</a>.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">aguaclara.core.constants</span> <span class="k">as</span> <span class="nn">con</span>
 <span class="kn">import</span> <span class="nn">aguaclara.research.environmental_processes_analysis</span> <span class="k">as</span> <span class="nn">epa</span>
 <span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
@@ -383,7 +383,7 @@
 <span class="eqno">(387)<a class="headerlink" href="#equation-flocculation-floc-model-1" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = \nu G_{CS}^2\]</div>
 <p>We will use the inner viscous length scale, Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-inner-viscous-length">(154)</a> to determine whether viscous or inertial transport dominates particle collisions in surface water treatment given the range of particle separation distances (see <a class="reference internal" href="#figure-lambdaclay-vs-cclay"><span class="std std-numref">Fig. 93</span></a>).</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">aguaclara.core.constants</span> <span class="k">as</span> <span class="nn">con</span>
 <span class="kn">import</span> <span class="nn">aguaclara.research.environmental_processes_analysis</span> <span class="k">as</span> <span class="nn">epa</span>
 <span class="kn">import</span> <span class="nn">aguaclara.research.floc_model</span> <span class="k">as</span> <span class="nn">fm</span>
@@ -539,7 +539,7 @@ measure pH.</p>
 <p>The above process was used to conduct the experiments to test the applicability of Equation <a class="reference internal" href="#equation-pclam">(408)</a> in turbulent flocculation. The influent turbidity was set at a constant of 900 NTU. The mean energy dissipation rate was about 21.5 mW/kg, which resulted from choosing a flow rate of about 110 mL/s so that the Reynolds number was just above 4,000. These values were chosen to ensure viscous-dominated turbulent initial conditions. For these experiments, coagulant doses ranged from 0.05 to 98 mg/L as Al. A <span class="math notranslate nohighlight">\(\bar v_c\)</span> of 0.12 mm/s was used for all experiments. Data from these nominally viscous experiments are shown in <a class="reference internal" href="#figure-pennockfig2"><span class="std std-numref">Fig. 98</span></a> as a function of coagulant dose.</p>
 <div class="figure align-center" id="id37">
 <span id="figure-pennockfig2"></span><a class="reference internal image-reference" href="../_images/PennockFig2.png"><img alt="internal figure" src="../_images/PennockFig2.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 98 </span><span class="caption-text">Effluent turbidity as a function of coagulant dose for experiments performed with influent turbidity of 900 NTU, velocity gradient of 147 Hz, and hydraulic residence time of about 413 s.</span></p>
+<p class="caption"><span class="caption-number">Fig. 98 </span><span class="caption-text">Effluent turbidity as a function of coagulant dose for experiments performed with influent turbidity of 900 NTU, velocity gradient of 147 Hz, and hydraulic residence time of about 413 s.</span></p>
 </div>
 <p>The data shown in <a class="reference internal" href="#figure-pennockfig2"><span class="std std-numref">Fig. 98</span></a> were compared with the viscous model, as shown in <a class="reference internal" href="#figure-pennockfig3"><span class="std std-numref">Fig. 99</span></a>.
 In this graph, the data are plotted in terms of Equation <a class="reference internal" href="#equation-pclam">(408)</a> and its corresponding composite parameter taken from Equation <a class="reference internal" href="#equation-nclam">(397)</a>,</p>
@@ -666,7 +666,7 @@ particles.</p>
 <p>Matilainen, A., Vepsäläinen, M., &amp; Sillanpää, M. (2010). Natural organic matter removal by coagulation during drinking water treatment: A review. Advances in Colloid and Interface Science, 159(2), 189–197. <a class="reference external" href="https://doi.org/10.1016/j.cis.2010.06.007">https://doi.org/10.1016/j.cis.2010.06.007</a></p>
 <p>Marhaba, T. F., Pu, Y., &amp; Bengraine, K. (2003). Modified dissolved organic matter fractionation technique for natural water. Journal of Hazardous Materials, 101(1), 43–53. <a class="reference external" href="https://doi.org/10.1016/S0304-3894(03)00133-X">https://doi.org/10.1016/S0304-3894(03)00133-X</a></p>
 <p>O’Melia, C. R. (1972). Coagulation and flocculation. In W. J. Weber (Ed.), Physicochemical processes for water quality control. New York: Wiley-Interscience.</p>
-<p>Österberg, R., Lindovist, I., &amp; Mortensen, K. (1993). Particle Size of Humic Acid. Soil Science Society of America Journal, 57(1), 283–285. <a class="reference external" href="https://doi.org/10.2136/sssaj1993.03615995005700010048x">https://doi.org/10.2136/sssaj1993.03615995005700010048x</a></p>
+<p>Österberg, R., Lindovist, I., &amp; Mortensen, K. (1993). Particle Size of Humic Acid. Soil Science Society of America Journal, 57(1), 283–285. <a class="reference external" href="https://www.nbi.dk/~kell/publ/1993_SoilSciSocAJ_HumicAcid.pdf">https://www.nbi.dk/~kell/publ/1993_SoilSciSocAJ_HumicAcid.pdf</a></p>
 <p>Pennock, William H., Weber-Shirk, Monroe, &amp; Lion, Leonard W. (2018). A Hydrodynamic and Surface Coverage Model Capable of Predicting Settled Effluent Turbidity Subsequent to Hydraulic Flocculation. Environmental Engineering Science, 35(12). <a class="reference external" href="https://doi.org/10.1089/ees.2017.0332">https://doi.org/10.1089/ees.2017.0332</a></p>
 <p>Schulz, C. R., &amp; Okun, D. A. (1984). Surface water treatment for communities in developing countries. New York: Wiley.</p>
 <p>Sharp, E. L., Jarvis, P., Parsons, S. A., &amp; Jefferson, B. (2006). Impact of fractional character on the coagulation of NOM. Colloids and Surfaces A: Physicochemical and Engineering Aspects, 286(1–3), 104–111. <a class="reference external" href="https://doi.org/10.1016/j.colsurfa.2006.03.009">https://doi.org/10.1016/j.colsurfa.2006.03.009</a></p>
@@ -805,7 +805,7 @@ particles.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.076',
+            VERSION:'EXPERIMENTAL',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

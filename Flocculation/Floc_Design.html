@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Flocculation Design &mdash; AguaClara Textbook 0.076 documentation</title>
+  <title>Flocculation Design &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.076
+                EXPERIMENTAL
               </div>
             
           
@@ -331,7 +331,7 @@
 <div class="line"><span class="math notranslate nohighlight">\(D_{particle}\)</span> = particle diameter</div>
 <div class="line"><span class="math notranslate nohighlight">\(\rho\)</span> = density. The <span class="math notranslate nohighlight">\(p\)</span> subscript stands for particle, while <span class="math notranslate nohighlight">\(w\)</span> stands for water</div>
 </div>
-<p>To increase <span class="math notranslate nohighlight">\(\bar v_t\)</span> and make sedimentation more efficient, flocculation aims to increase the diameter <span class="math notranslate nohighlight">\(d\)</span> of the particles. This is done by applying a coagulant to the dirty water and helping the coagulant to stick evenly to all particles during Rapid Mix <strong>(DOUBLE CHECK THAT THIS IS IN RAPID MIX ONCE RAPID MIX IS WRITTEN)</strong>. Being covered in coagulant allows the particles to collide, merge, and grow bigger during flocculation.
+<p>To increase <span class="math notranslate nohighlight">\(\bar v_t\)</span> and make sedimentation more efficient, flocculation aims to increase the diameter <span class="math notranslate nohighlight">\(d\)</span> of the particles. This is done by applying a coagulant to the dirty water and helping the coagulant to stick evenly to all particles during <a class="reference internal" href="../Rapid_Mix/RM_Intro.html#title-rapid-mix-introduction"><span class="std std-ref">Rapid Mix Introduction</span></a>. Being covered in coagulant allows the particles to collide, merge, and grow bigger during flocculation.
 Our goal in designing a flocculator is to facilitate particle collisions. How can we do this?</p>
 <div class="section" id="collision-potential-g-cs-theta-and-energy-dissipation-rate-varepsilon">
 <h3>Collision Potential, <span class="math notranslate nohighlight">\(G_{CS} \theta\)</span>, and Energy Dissipation Rate, <span class="math notranslate nohighlight">\(\varepsilon\)</span><a class="headerlink" href="#collision-potential-g-cs-theta-and-energy-dissipation-rate-varepsilon" title="Permalink to this headline">¶</a></h3>
@@ -393,7 +393,7 @@ Our goal in designing a flocculator is to facilitate particle collisions. How ca
 <p>We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or <span class="math notranslate nohighlight">\(A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}\)</span>. Through the <cite>:ref:`third form of the minor loss equation &lt;heading_minor_losses&gt;</cite>, <span class="math notranslate nohighlight">\(h_e = K \frac{\bar v_{out}^2}{2g}\)</span> and its definition of the minor loss coefficient, <span class="math notranslate nohighlight">\(K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2\)</span>, we can determine a <span class="math notranslate nohighlight">\(k\)</span> for flow around a single baffle:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-6">
 <span class="eqno">(428)<a class="headerlink" href="#equation-flocculation-floc-design-6" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}K_{baffle} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2\\K_{baffle} = \left( \frac{\rlap{\Big/} A_{expanded}}{\Pi_{vc, \, baffle} \rlap{\Big/} A_{expanded}} -1 \right)^2\\K_{baffle} = \left( \frac{1}{0.384} -1 \right)^2\\\color{red}{K_{baffle} = 2.56}\end{aligned}\end{align} \]</div>
-<p>This <span class="math notranslate nohighlight">\(K_{baffle}\)</span> has been used to design many flocculators in AguaClara plants. However, its value has not yet been rigorously tested for AguaClara plants the field. Therefore it might actually deviate from <span class="math notranslate nohighlight">\(2.56\)</span>. Research and testing the <span class="math notranslate nohighlight">\(K\)</span> of a baffle in an AguaClara plant is ongoing, but for now the designs made under the assumption that <span class="math notranslate nohighlight">\(\color{red}{K_{baffle} = 2.56}\)</span> are functioning very well in AguaClara plants. Although research has been done by many academics on the minor loss coefficient, including <a class="reference external" href="https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators">this paper by Haarhoff in 1998</a>  (DOI: 10.2166/aqua.1998.20), the <span class="math notranslate nohighlight">\(K_{baffle}\)</span> values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a <span class="math notranslate nohighlight">\(K_{baffle}\)</span> value between <span class="math notranslate nohighlight">\(2.5\)</span> and <span class="math notranslate nohighlight">\(4\)</span>.</p>
+<p>This <span class="math notranslate nohighlight">\(K_{baffle}\)</span> has been used to design many flocculators in AguaClara plants. However, its value has not yet been rigorously tested for AguaClara plants in the field. Therefore it might actually deviate from <span class="math notranslate nohighlight">\(2.56\)</span>. Research and testing the <span class="math notranslate nohighlight">\(K\)</span> of a baffle in an AguaClara plant is ongoing, but for now the designs made under the assumption that <span class="math notranslate nohighlight">\(\color{red}{K_{baffle} = 2.56}\)</span> are functioning very well in AguaClara plants. Although research has been done by many academics on the minor loss coefficient, including <a class="reference external" href="https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators">this paper by Haarhoff in 1998</a>  (DOI: 10.2166/aqua.1998.20), the <span class="math notranslate nohighlight">\(K_{baffle}\)</span> values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a <span class="math notranslate nohighlight">\(K_{baffle}\)</span> value between <span class="math notranslate nohighlight">\(2.5\)</span> and <span class="math notranslate nohighlight">\(4\)</span>.</p>
 </div>
 </div>
 <div class="section" id="flocculator-efficiency">
@@ -444,7 +444,7 @@ H_e = 6.16S
 <span id="figure-slot-width-description"></span><a class="reference internal image-reference" href="../_images/Slot_width_description.jpg"><img alt="image showing the dimensiond of spacing within the flocculator" src="../_images/Slot_width_description.jpg" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 110 </span><span class="caption-text">The space between the bottom of the upper baffle and the floor of the flocculator is defined as the slot width.</span></p>
 </div>
-<p>AguaClara uses a slot width ratio of 1 for its flocculators. This number has been the topic of much hydraulic flocculation research, and values between 1 and 1.5 are generally accepted for hydraulic flocculators. See the following paper and book respectively for more data on slot width ratios and other hydraulic flocculator parameters: <a class="reference internal" href="#floc-haarhoff-design-1998" id="id1">[Haa98]</a>, [schulz_surface_1984]. We base our slot width ratio of 1 on research done by <a class="reference internal" href="#floc-haarhoff-towards-2001" id="id3">[HvdW01]</a> on optimizing hydraulic flocculator parameters to maximize flocculator efficiency.</p>
+<p>AguaClara uses a slot width ratio of 1 for its flocculators. This number has been the topic of much hydraulic flocculation research, and values between 1 and 1.5 are generally accepted for hydraulic flocculators. See the following paper and book respectively for more data on slot width ratios and other hydraulic flocculator parameters: <a class="reference internal" href="#floc-haarhoff-design-1998" id="id1">[Haa98]</a>, <a class="reference internal" href="#floc-schulz-surface-1984" id="id2">[SO84]</a>. We base our slot width ratio of 1 on research done by <a class="reference internal" href="#floc-haarhoff-towards-2001" id="id3">[HvdW01]</a> on optimizing hydraulic flocculator parameters to maximize flocculator efficiency.</p>
 <p>The minimum <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> allowable depends on the slot with ratio. If <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> is less than twice the slot width ratio, the water would flow straight through the flocculator without having to bend around the baffles. This means that the flocculator would not be generating almost any head loss, and the top and bottom of the flocculator will largely be dead space. See the following image for an example:</p>
 <div class="figure align-center" id="id13">
 <span id="figure-hes-ratio-min"></span><a class="reference internal image-reference" href="../_images/HeS_ratio_min.jpg"><img alt="minimum H S ratio" src="../_images/HeS_ratio_min.jpg" style="width: 600px;" /></a>
@@ -613,7 +613,7 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <p>Now that the physical dimensions of the flocculator have been defined, the baffle module needs to be designed. The parameter on which most others are based is the distance between flow expansions, <span class="math notranslate nohighlight">\(H_e\)</span>. Recall that <span class="math notranslate nohighlight">\(H_e = H\)</span> when there are no obstacles in between baffles.</p>
 <div class="section" id="height-between-expansions-h-e-and-number-of-obstacles-per-baffle-space-n-obstacles">
 <h4>Height Between Expansions <span class="math notranslate nohighlight">\(H_e\)</span> and Number of Obstacles per Baffle Space <span class="math notranslate nohighlight">\(n_{obstacles}\)</span><a class="headerlink" href="#height-between-expansions-h-e-and-number-of-obstacles-per-baffle-space-n-obstacles" title="Permalink to this headline">¶</a></h4>
-<p>We have a range of possible <span class="math notranslate nohighlight">\(H_e\)</span> values based on our window of <span class="math notranslate nohighlight">\(3 &lt; \frac{H_e}{S} &lt; 6\)</span>. However, we have a limitation and a preference which shape how we design <span class="math notranslate nohighlight">\(H_e\)</span>. Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want <span class="math notranslate nohighlight">\(H_e\)</span> to be closer to <span class="math notranslate nohighlight">\(6\)</span> than it is to <span class="math notranslate nohighlight">\(3\)</span>; we are looking for <span class="math notranslate nohighlight">\(H_{e_{Max}}\)</span>.</p>
+<p>We have a range of possible <span class="math notranslate nohighlight">\(H_e\)</span> values based on our window of <span class="math notranslate nohighlight">\(3 &lt; \frac{H_e}{S} &lt; 6\)</span>. However, we have a limitation and a preference which shape how we design <span class="math notranslate nohighlight">\(H_e\)</span>. Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want <span class="math notranslate nohighlight">\(\frac{H_e}{S}\)</span> to be closer to <span class="math notranslate nohighlight">\(6\)</span> than it is to <span class="math notranslate nohighlight">\(3\)</span>; we are looking for <span class="math notranslate nohighlight">\(H_{e_{Max}}\)</span>.</p>
 <p>We calculate <span class="math notranslate nohighlight">\(H_{e_{Max}}\)</span> based on the physical flocculator dimensions. The equation for <span class="math notranslate nohighlight">\(H_e\)</span> is obtained by rearranging one of the equations for minimum channel width found above, <span class="math notranslate nohighlight">\(W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\)</span>. Because we have already design the channel width, we substitute <span class="math notranslate nohighlight">\(W_{channel}\)</span> for <span class="math notranslate nohighlight">\(W_{Min, \, \Pi_{H_eS}}\)</span>. Since we are looking for <span class="math notranslate nohighlight">\(H_{e_{Max}}\)</span>, we also substitute <span class="math notranslate nohighlight">\(\Pi_{{HS}_{Max}}\)</span> for <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span>. The result is:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-24">
 <span class="eqno">(446)<a class="headerlink" href="#equation-flocculation-floc-design-24" title="Permalink to this equation">¶</a></span>\[H_{e_{Max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}\]</div>
@@ -668,6 +668,12 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <tr><td class="label"><a class="fn-backref" href="#id3">[HvdW01]</a></td><td>Johannes Haarhoff and Jeremia&nbsp;J. van&nbsp;der Walt. Towards Optimal Design Parameters for Around-the-End Hydraulic Flocculators. <em>Journal of Water Supply: Research and Technology - Aqua</em>, 50(3):149–159, 2001.</td></tr>
 </tbody>
 </table>
+<table class="docutils citation" frame="void" id="floc-schulz-surface-1984" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[SO84]</a></td><td>Christopher&nbsp;R. Schulz and Daniel&nbsp;A. Okun. <em>Surface water treatment for communities in developing countries</em>. Wiley, New York, 1984. ISBN 978-0-471-80261-7.</td></tr>
+</tbody>
+</table>
 </p>
 </div>
 </div>
@@ -715,7 +721,7 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.076',
+            VERSION:'EXPERIMENTAL',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

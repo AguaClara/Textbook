@@ -22,9 +22,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Acknowledgements.rst
   Authors.rst
 
-
-
-
 .. toctree::
   :caption: Chapter 1: Introduction
   :maxdepth: 1
@@ -33,14 +30,12 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Introduction/Grand_Challenges.rst
   Introduction/Python_Tutorial.rst
 
-
 .. toctree::
   :caption: Chapter 2: Review: Fluid Mechanics and Python
   :maxdepth: 1
 
   Review/Review_Fluid_Mechanics.rst
   Review/Review_Fluid_Mechanics_Derivations.rst
-
 
 .. toctree::
   :caption: Chapter 3: Flow Control and Measurement
@@ -52,7 +47,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flow_Control_and_Measurement/FCM_Solution.rst
   Flow_Control_and_Measurement/ET_Design.rst
 
-
 .. toctree::
   :caption: Chapter 4: Fluid Deformation and Energy Dissipation
   :maxdepth: 1
@@ -60,14 +54,12 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst
   Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst
 
-
 .. toctree::
   :caption: Chapter 5: Flocs, Fractals, and Forces
   :maxdepth: 1
 
   Flocs_Fractals_and_Forces/FFF_Intro.rst
   Flocs_Fractals_and_Forces/FFF_Suspensions.rst
-
 
 .. toctree::
   :caption: Chapter 6: Chemistry of Water Treatment
@@ -128,20 +120,17 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
   Hydraulics/Hydraulics_Intro.rst
 
-
 .. toctree::
   :caption: Chapter 12: Dissolved Gas
   :maxdepth: 1
 
   Dissolved_Gas/DG_Intro.rst
 
-
 .. toctree::
   :caption: Chapter 13: Fluoride
   :maxdepth: 1
 
   Fluoride/Fluoride_Intro.rst
-
 
 .. toctree::
   :caption: Chapter 14: Troubleshooting

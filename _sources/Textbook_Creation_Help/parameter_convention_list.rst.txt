@@ -24,10 +24,10 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :header: Parameter, Description, Units
     :widths: 10, 30, 10
 
-    "Uppercase letters"
+    *Uppercase letters*, ,
     :math:`A`,Area,:math:`[L]^2`
     :math:`A_{floc}`,Projected cross sectional area of particle,:math:`[L]^2`
-    :math:`A_p `,Plan view area,:math:`[L]^2`
+    :math:`A_p`,Plan view area,:math:`[L]^2`
     :math:`B`,Center-to-Center Spacing Between Two Objects,:math:`[L]`
     :math:`C`,Concentration,:math:`\frac{[M]}{[L]^3}`
     :math:`C_D`,Drag coefficient,Dimensionless
@@ -58,7 +58,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`W_{diff_{min}}`,Minimum internal width of diffuser,:math:`[L]`
     :math:`W_{floc}`,Gravitational weight of floc,:math:`\frac{[M][L]}{[T]^2}`
     :math:`W_{Sed}`,Width of each sedimentation tank,:math:`[L]`
-    Lowercase letters, ,
+    *Lowercase letters*, ,
     :math:`\rm{f}`,Darcy-Weisbach friction factor,Dimensionless
     :math:`\frac{du}{dy}`,Velocity gradient between plate settlers,:math:`\frac{1}{[T]}`
     :math:`g`,Acceleration due to Gravity,:math:`\frac{[L]}{[T]^2}`
@@ -87,7 +87,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`\bar v_{z_{FB}}`,Average vertical velocity of the water through the floc blanket,:math:`\frac{[L]}{[T]}`
     :math:`v_t`,Terminal velocity of particle,:math:`\frac{[L]}{[T]}`
     :math:`z`,Elevation,:math:`[L]`
-    Greek lowercase letters, ,
+    *Greek lowercase letters*, ,
     :math:`\alpha`,Angle of plate settler, Degrees
     :math:`\epsilon`,Surface roughness,:math:`[L]`
     :math:`\varepsilon`,Energy Dissipation Rate,:math:`\frac{[L]^2}{[T]^3}`
@@ -100,7 +100,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`\rho`,Density,:math:`\frac{[M]}{[L]^3}`
     :math:`\theta`,Residence Time,:math:`[T]`
     :math:`\tau`,Shear,:math:`\frac{[L]}{[M][T]^2}`
-    Greek uppercase letters, ,
+    *Greek uppercase letters*, ,
     :math:`\Delta`,"Change in", Dimensionless
     :math:`\Lambda`,Distance Between Particles,:math:`[L]`
     :math:`\Pi`,Dimensionless Proportionality Ratio, Dimensionless

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The Physics of Water Treatment Design &mdash; AguaClara Textbook 0.076 documentation</title>
+  <title>The Physics of Water Treatment Design &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.076
+                EXPERIMENTAL
               </div>
             
           
@@ -411,7 +411,7 @@
 <p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">1.2 billion people will be added to the global population between 2015 and 2030.</span></p>
 </div>
 <p>Thus by 2030 we need to provide safe water for at least 3.3 billion people AND maintain the water supply systems for the 5.2 billion who currently have access to safe water. That is a daunting number that requires some exploration!</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="n">People_needing_water_2030</span> <span class="o">=</span> <span class="mf">3.3</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span>
 <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
@@ -542,7 +542,7 @@
 <td>depth filtration</td>
 <td>sedimentation</td>
 <td>public</td>
-<td><a class="reference external" href="https://en.wikipedia.org/wiki/RapiD_sand_filter">1920</a></td>
+<td><a class="reference external" href="https://en.wikipedia.org/wiki/Rapid_sand_filter">1920</a></td>
 </tr>
 <tr class="row-odd"><td>Stacked rapid sand filter</td>
 <td>gravity powered backwash</td>
@@ -568,7 +568,7 @@
 <li></li>
 </ul>
 </td>
-<td><a class="reference external" href="http://www.veoliawatertechnologies.com.au/medias/topics/focus_actiflo.htm">Actiflo Veolia</a></td>
+<td><a class="reference external" href="https://www.veoliawatertechnologies.com/en/technologies/actiflo">Actiflo Veolia</a></td>
 <td><a class="reference external" href="https://patents.google.com/patent/US5840195">1995</a></td>
 </tr>
 <tr class="row-odd"><td>Superpulsator</td>
@@ -665,7 +665,7 @@ Which process removes the largest quantity of contaminants?</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#the unit registry has been imported above and does not need to be imported again</span>
 <span class="kn">import</span> <span class="nn">aguaclara</span>
 <span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="n">Q_Croton</span> <span class="o">=</span><span class="p">(</span><span class="mi">290</span> <span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">Mgal</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">day</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 <span class="n">Cost_Croton</span> <span class="o">=</span> <span class="mf">3.2</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">USD</span>
 <span class="n">Cost_per_Lps</span> <span class="o">=</span> <span class="n">Cost_Croton</span><span class="o">/</span><span class="n">Q_Croton</span>
@@ -865,7 +865,7 @@ Which process removes the largest quantity of contaminants?</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.076',
+            VERSION:'EXPERIMENTAL',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
