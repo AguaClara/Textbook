@@ -41,4 +41,5 @@ jobs:
     - name: Test Build PDF
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: _build/latex/AguaClaraTextbook.tex
+        working_directory: _build/latex
+        root_file: AguaClaraTextbook.tex
