@@ -31,7 +31,6 @@ Contains the details of an AguaClara design for the unit process. Goes over logi
 Contains working theories in the AguaClara lab and future research projects to better understand the physics of water treatment and improve plant design.
 
 ## Publishing
-
 To publish, first ensure all of your changes have been merged into master by following the Pull Request best practices [here](https://github.com/AguaClara/Textbook/wiki/Contributing-by-writing). Then follow these steps:
 
 1. `git checkout master`
