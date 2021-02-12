@@ -24,9 +24,10 @@ PyYAML==5.1
 requests==2.24.0
 six==1.11.0
 snowballstemmer==1.2.1
-Sphinx==1.8.1
-sphinx-rtd-theme==0.4.0
-sphinxcontrib-bibtex==0.4.0
+Sphinx==3.4.3
+sphinx-intl==2.4.7
+sphinx-rtd-theme==0.5.1
+sphinxcontrib-bibtex==2.4.1
 git+https://github.com/rmk135/sphinxcontrib-disqus#egg=sphinxcontrib-disqus
 sphinxcontrib-websupport==1.1.0
 urllib3==1.24.2
