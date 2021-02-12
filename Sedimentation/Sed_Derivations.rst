@@ -5,12 +5,10 @@ Sedimentation Derivations
 ***********************************************
 In the next section, we will develop the mathematical models that help us explain the design.
 
-Note: this section will build off of the conceptual understanding established in the previous section and will explain how the tank works with derivations and mathematical models.
+Note: this section will build off of the conceptual understanding established in the previous section and will explain how the tank works with derivations and mathematical models.efsfes
 
 .. _heading_Sed_Tank_Velocity_Flow:
-
-Comparison of velocities and flow in sedimentation tank
-========================================================
+sDVSKDJHB;OSDIHB:OIHD
 
 To understand how water flows in the sedimentation tank, we must understand how the water velocity changes with the geometry. There are four distinct zones in the sedimentation tank: 1) the velocity of water exiting the diffusers, 2) the velocity of water moving through the floc blanket, 3) the velocity of water that enters the plate settlers, and 4) the velocity of water through the plate settlers. The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v * A`, will be our guiding principle. In all cases,
 
