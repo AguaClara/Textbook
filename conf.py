@@ -39,7 +39,9 @@ extensions = ['sphinx.ext.doctest',
               'sphinxcontrib.disqus',
               ]
 
+# https://sphinxcontrib-bibtex.readthedocs.io/en/2.0.0/usage.html#configuration
 bibtex_bibfiles = ['references.bib']
+bibtex_default_style = 'alpha'
 
 # To setup mathjax with required extensions for all files
 mathjax_path = "mathjax_config.js"
