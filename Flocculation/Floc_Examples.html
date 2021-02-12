@@ -1,51 +1,57 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Flocculation Examples &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="../_static/mathjax_config.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Mechanical Flocculator Solution" href="Floc_Mechanical_Solution.html" />
     <link rel="prev" title="Flocculation Theory and Future Work" href="Floc_Theory_and_Future_Work.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -76,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -191,6 +198,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -225,18 +233,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Flocculation Examples</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/Flocculation/Floc_Examples.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -255,7 +265,7 @@
 <div class="section" id="pipe-flocculator">
 <h2>Pipe flocculator<a class="headerlink" href="#pipe-flocculator" title="Permalink to this headline">¶</a></h2>
 <p>The following analysis requires complete reworking.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># %%</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># %%</span>
 <span class="c1">#Assumptions</span>
 <span class="n">Pi_VC</span> <span class="o">=</span> <span class="o">.</span><span class="mi">62</span> <span class="c1">#Vena contracta coefficient of an orifice</span>
 <span class="n">Ke</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">Pi_VC</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="c1">#expansion coefficient</span>
@@ -365,12 +375,12 @@
     <span class="k">return</span> <span class="n">Output</span>
 </pre></div>
 </div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Inputs</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Inputs</span>
 <span class="n">D_Sed</span> <span class="o">=</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">A_Sed</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">D_Sed</span><span class="p">)</span>
 <span class="n">v_Sed</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">Q</span> <span class="o">=</span> <span class="p">(</span><span class="n">v_Sed</span><span class="o">*</span><span class="n">A_Sed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The flow rate is&#39;</span><span class="p">,</span><span class="n">Q</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The flow rate is&#39;</span><span class="p">,</span><span class="n">Q</span><span class="p">)</span>
 
 <span class="n">Temp</span> <span class="o">=</span> <span class="mi">15</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">h_floc</span> <span class="o">=</span> <span class="mi">50</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span> <span class="c1">#standard for Aguaclara plants</span>
@@ -379,16 +389,16 @@
 <span class="n">SDR</span> <span class="o">=</span> <span class="mi">41</span> <span class="c1">#Standard ratio</span>
 </pre></div>
 </div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate G average using functions listed above and given inputs</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate G average using functions listed above and given inputs</span>
 <span class="n">G_ave</span> <span class="o">=</span> <span class="n">Gave</span><span class="p">(</span><span class="n">G_theta</span><span class="p">,</span><span class="n">h_floc</span><span class="p">,</span><span class="n">Temp</span><span class="p">)</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="n">restime</span><span class="p">(</span><span class="n">G_theta</span><span class="p">,</span><span class="n">G_ave</span><span class="p">)</span>
 <span class="n">e_ave</span> <span class="o">=</span> <span class="n">eave</span><span class="p">(</span><span class="n">G_ave</span><span class="p">,</span><span class="n">Temp</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average G value is &#39;</span><span class="p">,</span><span class="n">G_ave</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The residence time in the flocculator is &#39;</span><span class="p">,</span><span class="n">theta</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average energy dissipation rate is &#39;</span><span class="p">,</span> <span class="n">e_ave</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The average G value is &#39;</span><span class="p">,</span><span class="n">G_ave</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The residence time in the flocculator is &#39;</span><span class="p">,</span><span class="n">theta</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The average energy dissipation rate is &#39;</span><span class="p">,</span> <span class="n">e_ave</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the pipe diameter, both inner and nominal and determine area of pipe using inner diameter output</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the pipe diameter, both inner and nominal and determine area of pipe using inner diameter output</span>
 <span class="n">D_pipe</span> <span class="o">=</span> <span class="p">(</span><span class="n">Dpipe</span><span class="p">(</span><span class="n">Ke</span><span class="p">,</span><span class="n">Pi_HS</span><span class="p">,</span><span class="n">Q</span><span class="p">,</span><span class="n">G_ave</span><span class="p">,</span><span class="n">Temp</span><span class="p">,</span><span class="n">SDR</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 <span class="c1">#Calculate nominal diameter of pipe</span>
 <span class="n">ND_pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ND_SDR_available</span><span class="p">(</span><span class="n">D_pipe</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span>
@@ -399,35 +409,35 @@
 <span class="c1">#Calculate inner diameter of pipe</span>
 <span class="n">A_pipe</span> <span class="o">=</span> <span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">ID_pipe</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The ideal inner diameter of the pipe would be &#39;</span><span class="p">,</span><span class="n">D_pipe</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The nominal diameter of the pipe is &#39;</span><span class="p">,</span><span class="n">ND_pipe</span><span class="p">,</span> <span class="s1">&#39;, and the inner diameter is &#39;</span><span class="p">,</span> <span class="n">ID_pipe</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The area of the pipe is &#39;</span><span class="p">,</span> <span class="n">A_pipe</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The ideal inner diameter of the pipe would be &#39;</span><span class="p">,</span><span class="n">D_pipe</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The nominal diameter of the pipe is &#39;</span><span class="p">,</span><span class="n">ND_pipe</span><span class="p">,</span> <span class="s1">&#39;, and the inner diameter is &#39;</span><span class="p">,</span> <span class="n">ID_pipe</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The area of the pipe is &#39;</span><span class="p">,</span> <span class="n">A_pipe</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the actual Ke as a result of the calculated inner pipe diameter</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the actual Ke as a result of the calculated inner pipe diameter</span>
 <span class="n">Ke_actual</span> <span class="o">=</span> <span class="p">(</span><span class="n">Keactual</span><span class="p">(</span><span class="n">ID_pipe</span><span class="p">,</span><span class="n">G_ave</span><span class="p">,</span><span class="n">Temp</span><span class="p">,</span><span class="n">Pi_HS</span><span class="p">,</span><span class="n">Q</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The initial expansion minor loss coefficient was &#39;</span><span class="p">,</span><span class="n">Ke</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The actual expansion minor loss coefficient is &#39;</span><span class="p">,</span><span class="n">Ke_actual</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The initial expansion minor loss coefficient was &#39;</span><span class="p">,</span><span class="n">Ke</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The actual expansion minor loss coefficient is &#39;</span><span class="p">,</span><span class="n">Ke_actual</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the orifice area</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the orifice area</span>
 <span class="n">A_orifice</span> <span class="o">=</span> <span class="n">Aorifice</span><span class="p">(</span><span class="n">ID_pipe</span><span class="p">,</span><span class="n">Ke_actual</span><span class="p">,</span><span class="n">Temp</span><span class="p">,</span><span class="n">Q</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The orifice area is &#39;</span><span class="p">,</span><span class="n">A_orifice</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The orifice area is &#39;</span><span class="p">,</span><span class="n">A_orifice</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># The following line of code needs to be removed once the orifice area equation is corrected.</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The following line of code needs to be removed once the orifice area equation is corrected.</span>
 
 <span class="n">H_chip</span> <span class="o">=</span> <span class="n">Hchip</span><span class="p">(</span><span class="n">A_orifice</span><span class="p">,</span><span class="n">ID_pipe</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The height of the chip is &#39;</span><span class="p">,</span> <span class="n">H_chip</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The height of the chip is &#39;</span><span class="p">,</span> <span class="n">H_chip</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate average velocity</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate average velocity</span>
 <span class="n">v_avg</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q</span><span class="o">/</span><span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">ID_pipe</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span> <span class="c1">#first calculate average velocity</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average velocity is &#39;</span><span class="p">,</span><span class="n">v_avg</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The average velocity is &#39;</span><span class="p">,</span><span class="n">v_avg</span><span class="p">)</span>
 
 <span class="c1">#Calculate pipe length</span>
 <span class="n">L_pipe</span> <span class="o">=</span> <span class="p">(</span><span class="n">v_avg</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span> <span class="c1">#then multiply velocity by residence time to get the required length of pipe</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The length of the pipe is &#39;</span><span class="p">,</span><span class="n">L_pipe</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The length of the pipe is &#39;</span><span class="p">,</span><span class="n">L_pipe</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -438,29 +448,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="Floc_Mechanical_Solution.html" class="btn btn-neutral float-right" title="Mechanical Flocculator Solution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Floc_Theory_and_Future_Work.html" class="btn btn-neutral" title="Flocculation Theory and Future Work" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="Floc_Mechanical_Solution.html" class="btn btn-neutral float-right" title="Mechanical Flocculator Solution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Floc_Theory_and_Future_Work.html" class="btn btn-neutral float-left" title="Flocculation Theory and Future Work" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2021, AguaClara Cornell.
+        &#169; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -469,34 +479,16 @@
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'EXPERIMENTAL',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

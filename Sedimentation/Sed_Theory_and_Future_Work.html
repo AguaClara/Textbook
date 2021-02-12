@@ -1,51 +1,57 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Sedimentation Theory and Future Work &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="../_static/mathjax_config.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Sedimentation Examples" href="Sed_Examples.html" />
     <link rel="prev" title="Sedimentation Derivations" href="Sed_Derivations.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -76,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -193,6 +200,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -227,18 +235,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Sedimentation Theory and Future Work</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/Sedimentation/Sed_Theory_and_Future_Work.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -256,10 +266,10 @@
 <span id="title-sedimentation-theory-and-future-work"></span><h1>Sedimentation Theory and Future Work<a class="headerlink" href="#sedimentation-theory-and-future-work" title="Permalink to this headline">¶</a></h1>
 <p>Unsolved sedimentation tank failure modes:</p>
 <ol class="arabic simple">
-<li><a class="reference internal" href="#heading-floc-volcanoes"><span class="std std-ref">Floc volcanoes</span></a></li>
-<li>Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.</li>
-<li>Slime growth from iron-oxidizing bacteria.</li>
-<li>NOM impact on floc density</li>
+<li><p><a class="reference internal" href="#heading-floc-volcanoes"><span class="std std-ref">Floc volcanoes</span></a></p></li>
+<li><p>Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.</p></li>
+<li><p>Slime growth from iron-oxidizing bacteria.</p></li>
+<li><p>NOM impact on floc density</p></li>
 </ol>
 <div class="section" id="optimizing-the-transition-from-flocculator-to-floc-blanket">
 <span id="heading-floc-floc-blanket"></span><h2>Optimizing the transition from flocculator to floc blanket<a class="headerlink" href="#optimizing-the-transition-from-flocculator-to-floc-blanket" title="Permalink to this headline">¶</a></h2>
@@ -308,11 +318,11 @@ High velocity gradients for flocculators with this long of a residence time will
 <p>The flocculator head loss is given by</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-10">
 <span class="eqno">(577)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-10" title="Permalink to this equation">¶</a></span>\[ h_{Floc} = G_{CS} \theta \frac{\nu G_{CS}}{g}\]</div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="kn">as</span> <span class="nn">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="c1">#I played with the velocity gradient to get a reasonable head loss of 50 cm.</span>
 <span class="n">G_CS</span> <span class="o">=</span> <span class="mi">123</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Hz</span>
 <span class="n">density_clay</span> <span class="o">=</span> <span class="mi">2650</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span>
@@ -326,17 +336,17 @@ High velocity gradients for flocculators with this long of a residence time will
 <span class="n">t_fb</span> <span class="o">=</span> <span class="mi">800</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">k_fb</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">t_fb</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">C_outfb</span><span class="o">/</span><span class="n">C_infb</span><span class="p">))</span>
 <span class="n">C_out_f</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span> <span class="n">density_clay</span><span class="o">/</span><span class="mi">6</span> <span class="o">*</span> <span class="p">(</span><span class="n">k_fb</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">alpha</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">G_CS</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">NTU</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The concentration of primary particles in the flocculated water is&#39;</span><span class="p">,</span><span class="n">C_out_f</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The concentration of primary particles in the flocculated water is&#39;</span><span class="p">,</span><span class="n">C_out_f</span><span class="p">)</span>
 
 <span class="n">Gt</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span> <span class="o">*</span> <span class="n">density_clay</span><span class="o">/</span><span class="n">C_out_f</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The flocculator Gt value is &#39;</span><span class="p">,</span><span class="n">Gt</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The flocculator Gt value is &#39;</span><span class="p">,</span><span class="n">Gt</span><span class="p">)</span>
 <span class="n">t_floc</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="n">k_fb</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The flocculator residence time is&#39;</span><span class="p">,</span><span class="n">t_floc</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The flocculator residence time is&#39;</span><span class="p">,</span><span class="n">t_floc</span><span class="p">)</span>
 
 <span class="n">Temp</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 
 <span class="n">Floc_HL</span> <span class="o">=</span> <span class="p">(</span><span class="n">G_CS</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">t_floc</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temp</span><span class="p">)</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">standard_gravity</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The head loss through the flocculator is&#39;</span><span class="p">,</span><span class="n">Floc_HL</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The head loss through the flocculator is&#39;</span><span class="p">,</span><span class="n">Floc_HL</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The target flocculator Gt of 39,000 is crazy close to the current design. This value will undoubtedly change somewhat as we get better measurements for the floc blanket rate constant.</p>
@@ -378,11 +388,11 @@ High velocity gradients for flocculators with this long of a residence time will
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-21">
 <span class="eqno">(588)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-21" title="Permalink to this equation">¶</a></span>\[CP_{fb} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{\bar v_{hindered}}{\bar v_z}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{fb}\bar v_{hindered}} {\bar v_z}\]</div>
 <p>We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc blanket. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc blanket. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland measurements of the solids concentration in the floc hopper sludge.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="kn">as</span> <span class="nn">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 
 <span class="n">D_fb</span><span class="o">=</span><span class="mf">2.5</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">A_fb</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">D_fb</span><span class="p">)</span>
@@ -417,7 +427,7 @@ High velocity gradients for flocculators with this long of a residence time will
 <div></div></blockquote>
 <div class="figure align-center" id="id1">
 <span id="collision-potential-with-sludge-recycle"></span><a class="reference internal image-reference" href="../_images/fb_recycle_ratio.png"><img alt="Collision potential with sludge recycle" src="../_images/fb_recycle_ratio.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 179 </span><span class="caption-text">Collision potential comparison in a 1 m deep floc blanket.</span></p>
+<p class="caption"><span class="caption-number">Fig. 177 </span><span class="caption-text">Collision potential comparison in a 1 m deep floc blanket.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>This analysis suggest that a recycle flow rate that is between 0.5 and 1.5 at a net upflow velocity of 3 mm/s could produce collision potential that is 2/3 of the collision potential with a 1 mm/s upflow velocity. Thus a 3 mm/s sed tank with 1.5 m of floc blanket and recycle might be able to perform at the same level as a 1 mm/s sed tank with a 1 m floc blanket.</p>
 <p>The next step is to design the recycle tube. The recycle tube could be inclined to promote additional consolidation to reduce the amount of water that is recycled. The slope would need to be about 60 degrees. We could experiment with the design of the recycle line if it were made of flexible tubing.</p>
@@ -439,11 +449,11 @@ High velocity gradients for flocculators with this long of a residence time will
 <span class="eqno">(593)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-26" title="Permalink to this equation">¶</a></span>\[L_{tube} = H_{fb}/sin(60)\]</div>
 <p>We will assume that the dynamic viscosity of the sludge is the same as the dynamic viscosity of water. We will calculate the kinematic viscosity of the sludge by dividing the dynamic viscosity of water by the density of the recycle.</p>
 <p>Now we can solve for the required tube diameter</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="kn">as</span> <span class="nn">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 
 <span class="n">Temperature</span><span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">D_fb</span><span class="o">=</span><span class="mf">2.5</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span>
@@ -480,29 +490,29 @@ High velocity gradients for flocculators with this long of a residence time will
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="Sed_Examples.html" class="btn btn-neutral float-right" title="Sedimentation Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Sed_Derivations.html" class="btn btn-neutral" title="Sedimentation Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="Sed_Examples.html" class="btn btn-neutral float-right" title="Sedimentation Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Sed_Derivations.html" class="btn btn-neutral float-left" title="Sedimentation Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2021, AguaClara Cornell.
+        &#169; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -511,34 +521,16 @@ High velocity gradients for flocculators with this long of a residence time will
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'EXPERIMENTAL',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

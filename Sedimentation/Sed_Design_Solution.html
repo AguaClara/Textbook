@@ -1,51 +1,57 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Sedimentation Design Solution &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="../_static/mathjax_config.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Filtration Introduction" href="../Filtration/Filtration_Intro.html" />
     <link rel="prev" title="Sedimentation Examples" href="Sed_Examples.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -76,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -225,6 +232,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -259,18 +267,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Sedimentation Design Solution</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/Sedimentation/Sed_Design_Solution.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -286,10 +296,10 @@
             
   <div class="section" id="sedimentation-design-solution">
 <h1>Sedimentation Design Solution<a class="headerlink" href="#sedimentation-design-solution" title="Permalink to this headline">¶</a></h1>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="kn">as</span> <span class="nn">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 <div class="section" id="introduction">
@@ -299,7 +309,7 @@
 <p>For each step in the solution define a variable with a name that is easily understood so that it can be used later if needed. Consider using the AguaClara naming convention.</p>
 <p>Use numpy for ceil, floor, sin, and pi.</p>
 <p>The following cell has constants defined for you to use in designing your sedimentation tank. Read through and run it so you know what variables have been defined for you. See <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html#table-edr-g-equations"><span class="std std-numref">Table 8</span></a> for the plane jet constant.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># We are experimenting with using head loss at the exit of the diffusers as</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># We are experimenting with using head loss at the exit of the diffusers as</span>
 <span class="c1"># a reasonable design constraint for the design of the</span>
 <span class="c1"># inlet manifold/diffuser system. This head loss in the exit of the diffuser</span>
 <span class="c1"># will allow higher velocities (and pressure recovery) in the manifold pipe</span>
@@ -355,18 +365,18 @@
 <p>We will start our design of the sedimentation tank by considering the diffusers.</p>
 <blockquote>
 <div><ul class="simple">
-<li>Calculate the maximum velocity of water leaving the diffuser based on the maximum head loss. Assume that the majority of head loss is the kinetic energy of the flow exiting the diffuser slot (this assumption will be checked later). Assume K=1.</li>
-<li>Calculate the minimum inner width of the diffuser. Assume that the diffuser slot is continuous over the entire length of the sedimentation tank to get an initial estimate (it isn’t actually continuous because it is made from many flattened diffuser pipes).</li>
+<li><p>Calculate the maximum velocity of water leaving the diffuser based on the maximum head loss. Assume that the majority of head loss is the kinetic energy of the flow exiting the diffuser slot (this assumption will be checked later). Assume K=1.</p></li>
+<li><p>Calculate the minimum inner width of the diffuser. Assume that the diffuser slot is continuous over the entire length of the sedimentation tank to get an initial estimate (it isn’t actually continuous because it is made from many flattened diffuser pipes).</p></li>
 </ul>
 </div></blockquote>
 <p>Define your answers as variables and then print those variables.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># minor loss equation with K=1</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># minor loss equation with K=1</span>
 <span class="n">V_diffuser_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">headloss_sed_inlet_max</span><span class="p">)))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The maximum velocity of the sed tank diffusers is&#39;</span><span class="p">,</span><span class="n">V_diffuser_max</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The maximum velocity of the sed tank diffusers is&#39;</span><span class="p">,</span><span class="n">V_diffuser_max</span><span class="p">)</span>
 
 <span class="c1"># mass conservation</span>
 <span class="n">W_diffuser_inner_min</span> <span class="o">=</span> <span class="p">((</span><span class="n">V_sed_up</span> <span class="o">/</span> <span class="n">V_diffuser_max</span><span class="p">)</span> <span class="o">*</span> <span class="n">W_sed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum width of the sed tank diffusers is&#39;</span><span class="p">,</span><span class="n">W_diffuser_inner_min</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The minimum width of the sed tank diffusers is&#39;</span><span class="p">,</span><span class="n">W_diffuser_inner_min</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The maximum velocity of the sed tank diffusers is 0.4429 meter / second
@@ -377,17 +387,17 @@ The minimum width of the sed tank diffusers is 2.409 millimeter</p>
 <p>Diffusers are made by deforming PVC pipe. Softened PVC pipe is forced onto a mold that shapes it into the rectangular shape of the diffuser (see slides from the Sedimentation Lecture).</p>
 <blockquote>
 <div><ul class="simple">
-<li>What metal plate thickness should be used to make the mold for the diffusers? This value will be the minimum diffuser width. Metal plates are available in 1/16” increments of thickness. The minimum thickness of plate that is strong enough for a mold is 1/16“.</li>
+<li><p>What metal plate thickness should be used to make the mold for the diffusers? This value will be the minimum diffuser width. Metal plates are available in 1/16” increments of thickness. The minimum thickness of plate that is strong enough for a mold is 1/16“.</p></li>
 </ul>
 </div></blockquote>
 <p>Note: you can use the <code class="docutils literal notranslate"><span class="pre">ceil_nearest</span></code> function defined in <code class="docutils literal notranslate"><span class="pre">utility.py</span></code> to do this elegantly. You can create an array of available metal plates using <code class="docutils literal notranslate"><span class="pre">numpy.arange</span></code>.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">W_diffuser</span> <span class="o">=</span> <span class="n">ut</span><span class="o">.</span><span class="n">ceil_nearest</span><span class="p">(</span><span class="n">W_diffuser_inner_min</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">16</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">16</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">W_diffuser</span> <span class="o">=</span> <span class="n">ut</span><span class="o">.</span><span class="n">ceil_nearest</span><span class="p">(</span><span class="n">W_diffuser_inner_min</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">16</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">16</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The width of sed tank diffuser is&#39;</span><span class="p">,</span><span class="n">W_diffuser</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The width of sed tank diffuser is&#39;</span><span class="p">,</span><span class="n">W_diffuser</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>The width of sed tank diffuser is 0.3175 centimeter</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pi_Error</span> <span class="o">=</span> <span class="mf">0.1</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Pi_Error</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">Headloss_DosingTube_Max</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 <span class="n">K_Minor</span> <span class="o">=</span> <span class="mi">2</span>
 
@@ -402,9 +412,10 @@ The minimum width of the sed tank diffusers is 2.409 millimeter</p>
 <p>The PVC pipe that forms the diffusers changes in shape and wall thickness during the molding process. The inner width of the rectangle is created by forcing the pipe over a rectangular wedge that is the thickness you calculated above. During the molding process, PVC pipe wall cross-sectional area is conserved. The pipe wall is stretched in total length approximately 20%. Another way to think about this is that the thickness of the wall is reduced by a factor of 1/1.2 because the mass of PVC is conserved and the density is unchanged. Thus, volume and cross-sectional area are conserved.</p>
 <blockquote>
 <div><ul class="simple">
-<li>Start by drawing a picture of what is happening to the deformation of the pipe as it is converted from the circular pipe to the rectangular diffuser slot (assume that the slot is a rectangle with perfectly square corners). You do not need to submit your sketches for this design challenge.<ul>
-<li>Draw the initial circular pipe. Label the diagram with the appropriate variables for inner diameter, outer diameter, and wall thickness.</li>
-<li>Draw the final rectangular diffuser slot. Label the diagram with the appropriate variables for length, width, and wall thickness.</li>
+<li><p>Start by drawing a picture of what is happening to the deformation of the pipe as it is converted from the circular pipe to the rectangular diffuser slot (assume that the slot is a rectangle with perfectly square corners). You do not need to submit your sketches for this design challenge.</p>
+<ul>
+<li><p>Draw the initial circular pipe. Label the diagram with the appropriate variables for inner diameter, outer diameter, and wall thickness.</p></li>
+<li><p>Draw the final rectangular diffuser slot. Label the diagram with the appropriate variables for length, width, and wall thickness.</p></li>
 </ul>
 </li>
 </ul>
@@ -417,7 +428,7 @@ The minimum width of the sed tank diffusers is 2.409 millimeter</p>
      :math:`W_{diffuser}`.\end{aligned}\end{align} \]</div>
 <p>Answering this question will require using functions from the
 <code class="docutils literal notranslate"><span class="pre">pipedatabase</span></code> file, imported here as <code class="docutils literal notranslate"><span class="pre">pipe</span></code>.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SDR</span><span class="o">=</span><span class="mi">26</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SDR</span><span class="o">=</span><span class="mi">26</span>
 
 <span class="c1"># Assumed stretch of the PVC pipes as they are heated and molded:</span>
 <span class="n">Pi_PVC_stretch</span> <span class="o">=</span> <span class="mf">1.2</span>
@@ -426,7 +437,7 @@ The minimum width of the sed tank diffusers is 2.409 millimeter</p>
 <span class="n">ND_sed_diffuser</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">inch</span>
 </pre></div>
 </div>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#The cross-sectional area of the pipe wall is:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#The cross-sectional area of the pipe wall is:</span>
 <span class="n">area_PVC</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">pipe</span><span class="o">.</span><span class="n">OD</span><span class="p">(</span><span class="n">ND_sed_diffuser</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
                           <span class="o">-</span> <span class="p">(</span><span class="n">pipe</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_sed_diffuser</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
                           <span class="p">)</span>
@@ -442,10 +453,10 @@ The minimum width of the sed tank diffusers is 2.409 millimeter</p>
                             <span class="o">-</span> <span class="n">W_diffuser</span>
                             <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sed diffuser outer length:&quot;</span><span class="p">,</span> <span class="n">B_diffuser</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sed diffuser outer length:&quot;</span><span class="p">,</span> <span class="n">B_diffuser</span><span class="p">)</span>
 
 <span class="n">S_diffuser</span> <span class="o">=</span> <span class="n">B_diffuser</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">thickness_sed_diffuser_wall</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sed diffuser inner length:&quot;</span><span class="p">,</span> <span class="n">S_diffuser</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sed diffuser inner length:&quot;</span><span class="p">,</span> <span class="n">S_diffuser</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Sed diffuser outer length: 5.736 centimeter
@@ -456,29 +467,29 @@ Sed diffuser inner length: 5.522 centimeter</p>
 <p>Each diffuser serves a certain width and length of the sedimentation tank. Assume that the diffusers are installed so that they touch each other.</p>
 <blockquote>
 <div><ul class="simple">
-<li>Determine the flow through each diffuser.</li>
-<li>Determine the velocity through each diffuser.</li>
+<li><p>Determine the flow through each diffuser.</p></li>
+<li><p>Determine the velocity through each diffuser.</p></li>
 </ul>
 </div></blockquote>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flow_max_diffuser</span> <span class="o">=</span> <span class="n">V_sed_up</span> <span class="o">*</span> <span class="n">W_sed</span> <span class="o">*</span> <span class="n">B_diffuser</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">flow_max_diffuser</span> <span class="o">=</span> <span class="n">V_sed_up</span> <span class="o">*</span> <span class="n">W_sed</span> <span class="o">*</span> <span class="n">B_diffuser</span>
 
 <span class="n">V_diffuser</span> <span class="o">=</span> <span class="p">(</span><span class="n">flow_max_diffuser</span>
                     <span class="o">/</span> <span class="p">(</span><span class="n">W_diffuser</span> <span class="o">*</span> <span class="n">S_diffuser</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The flow of water leaving a sed tank diffuser is&#39;</span><span class="p">,</span><span class="n">flow_max_diffuser</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">ml</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The velocity of water leaving the sed tank diffuser is&#39;</span><span class="p">,</span><span class="n">V_diffuser</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The flow of water leaving a sed tank diffuser is&#39;</span><span class="p">,</span><span class="n">flow_max_diffuser</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">ml</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The velocity of water leaving the sed tank diffuser is&#39;</span><span class="p">,</span><span class="n">V_diffuser</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>The flow of water leaving a sed tank diffuser is 61.19 milliliter / second</dt>
-<dd>The velocity of water leaving the sed tank diffuser is 0.349 meter / second</dd>
+<dl class="simple">
+<dt>The flow of water leaving a sed tank diffuser is 61.19 milliliter / second</dt><dd><p>The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id5">
 <h3>5:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>What is the Reynolds number of the jet exiting the diffusers?</p>
 <p>Note: you will likely need to force Pint to display this as a dimensionless number.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Re_diffuser_jet</span> <span class="o">=</span> <span class="p">((</span><span class="n">W_diffuser</span> <span class="o">*</span> <span class="n">V_diffuser</span><span class="p">)</span> <span class="o">/</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_design</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Reynolds number for this jet is&#39;</span><span class="p">,</span><span class="n">Re_diffuser_jet</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Re_diffuser_jet</span> <span class="o">=</span> <span class="p">((</span><span class="n">W_diffuser</span> <span class="o">*</span> <span class="n">V_diffuser</span><span class="p">)</span> <span class="o">/</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_design</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The Reynolds number for this jet is&#39;</span><span class="p">,</span><span class="n">Re_diffuser_jet</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The Reynolds number for this jet is 974.6 dimensionless</p>
@@ -486,8 +497,8 @@ Sed diffuser inner length: 5.522 centimeter</p>
 <div class="section" id="id6">
 <h3>6:<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>What is the Reynolds number of the vertical flow up through the top of the floc blanket?</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Re_sed</span> <span class="o">=</span> <span class="p">((</span><span class="n">W_sed</span> <span class="o">*</span> <span class="n">V_sed_up</span><span class="p">)</span> <span class="o">/</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_design</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reynolds number through floc is&#39;</span><span class="p">,</span><span class="n">Re_sed</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Re_sed</span> <span class="o">=</span> <span class="p">((</span><span class="n">W_sed</span> <span class="o">*</span> <span class="n">V_sed_up</span><span class="p">)</span> <span class="o">/</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T_design</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Reynolds number through floc is&#39;</span><span class="p">,</span><span class="n">Re_sed</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Reynolds number through floc is 938.2 dimensionless.</p>
@@ -502,12 +513,12 @@ Sed diffuser inner length: 5.522 centimeter</p>
 <p>Next, we want to determine the energy dissipation rate for the flow leaving the jet reverser. For this process, you can assume that the jet remains laminar. The flow spreads to fill the gaps created by the walls of the diffuser tubes by the time it traverses the jet reverser. Jet velocity and flow rate are conserved as the jet changes direction in the jet reverser.</p>
 <blockquote>
 <div><ul class="simple">
-<li>Calculate the thickness of the jet after it does the 180 degree bend of the jet reverser.</li>
-<li>Calculate the energy dissipation rate for the flow leaving the jet reverser.</li>
+<li><p>Calculate the thickness of the jet after it does the 180 degree bend of the jet reverser.</p></li>
+<li><p>Calculate the energy dissipation rate for the flow leaving the jet reverser.</p></li>
 </ul>
 </div></blockquote>
 <p>Convert your final answer to milliwatts per kilogram.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the thickness of the jet when it leaves the diffuser. B_diff = S_diff</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the thickness of the jet when it leaves the diffuser. B_diff = S_diff</span>
 
 <span class="n">W_jet_reversed</span> <span class="o">=</span> <span class="n">W_sed</span> <span class="o">*</span> <span class="n">V_sed_up</span> <span class="o">/</span> <span class="n">V_diffuser</span>
 
@@ -517,7 +528,7 @@ Sed diffuser inner length: 5.522 centimeter</p>
                         <span class="o">/</span> <span class="n">W_jet_reversed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mW</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">)</span>
 
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The energy dissipation rate for inlet jet is&#39;</span><span class="p">,</span> <span class="n">EDR_inlet_jet</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The energy dissipation rate for inlet jet is&#39;</span><span class="p">,</span> <span class="n">EDR_inlet_jet</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The energy dissipation rate for inlet jet is 172.5 milliwatt / kilogram</p>
@@ -528,27 +539,27 @@ Sed diffuser inner length: 5.522 centimeter</p>
 <p>Calculate this diffuser exit head loss in two ways. * First, calculate the head loss making sure to account for the upflow velocity in the sed tank. * Second, calculate the head loss but assume that the upflow velocity is negligible.</p>
 <blockquote>
 <div><ul class="simple">
-<li>Is it reasonable to neglect the upflow velocity in the sed tank when calculating this head loss?</li>
+<li><p>Is it reasonable to neglect the upflow velocity in the sed tank when calculating this head loss?</p></li>
 </ul>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-2">
 <span class="eqno">(613)<a class="headerlink" href="#equation-sedimentation-sed-design-solution-2" title="Permalink to this equation">¶</a></span>\[h_e = \frac{\left( {{V_{in}} - {V_{out}}} \right)^2}{2g}\]</div>
 <p>You will find that the exit head loss for water leaving the diffuser is high enough that we need to account for head loss in the sed tank inlet piping for our designs.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hl_sed_diffuser_exit1</span> <span class="o">=</span> <span class="p">(((</span><span class="n">V_diffuser</span> <span class="o">-</span> <span class="n">V_sed_up</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span><span class="n">g</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hl_sed_diffuser_exit1</span> <span class="o">=</span> <span class="p">(((</span><span class="n">V_diffuser</span> <span class="o">-</span> <span class="n">V_sed_up</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span><span class="n">g</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 
 <span class="n">hl_sed_diffuser_exit2</span> <span class="o">=</span> <span class="p">(((</span><span class="n">V_diffuser</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span><span class="n">g</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 
 <span class="n">hl_sed_diffuser_error</span><span class="o">=</span><span class="p">(</span><span class="n">hl_sed_diffuser_exit2</span><span class="o">-</span><span class="n">hl_sed_diffuser_exit1</span><span class="p">)</span><span class="o">/</span><span class="n">hl_sed_diffuser_exit1</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The best estimate of the exit head loss for the diffuser is&#39;</span><span class="p">,</span> <span class="n">hl_sed_diffuser_exit1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The 2nd estimate of the exit head loss for the diffuser ignoring the upflow velocity is&#39;</span><span class="p">,</span> <span class="n">hl_sed_diffuser_exit2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;It is reasonable to neglect the effect of the upflow velocity. The error is&#39;</span><span class="p">,</span><span class="n">hl_sed_diffuser_error</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The best estimate of the exit head loss for the diffuser is&#39;</span><span class="p">,</span> <span class="n">hl_sed_diffuser_exit1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The 2nd estimate of the exit head loss for the diffuser ignoring the upflow velocity is&#39;</span><span class="p">,</span> <span class="n">hl_sed_diffuser_exit2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;It is reasonable to neglect the effect of the upflow velocity. The error is&#39;</span><span class="p">,</span><span class="n">hl_sed_diffuser_error</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>The best estimate of the exit head loss for the diffuser is 0.6176 centimeter</dt>
-<dd>The 2nd estimate of the exit head loss for the diffuser ignoring the upflow velocity is 0.6211 centimeter
-It is reasonable to neglect the effect of the upflow velocity. The error is 0.005755 dimensionless</dd>
+<dl class="simple">
+<dt>The best estimate of the exit head loss for the diffuser is 0.6176 centimeter</dt><dd><p>The 2nd estimate of the exit head loss for the diffuser ignoring the upflow velocity is 0.6211 centimeter
+It is reasonable to neglect the effect of the upflow velocity. The error is 0.005755 dimensionless</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -558,8 +569,8 @@ It is reasonable to neglect the effect of the upflow velocity. The error is 0.00
 <p>The following variable definitions and equations will be useful in answering later questions. * <span class="math notranslate nohighlight">\({hl}_{ParallelPath}\)</span> is the head loss (flow resistance) in the parallel paths leaving the manifold. The head loss in the parallel path is the total head loss from where the flow leaves the manifold to the point where the parallel flows reunite. * <span class="math notranslate nohighlight">\(\Delta{H}_{Manifold}\)</span> is the variability in piezometric head in the manifold that is driving the flow through the parallel paths.</p>
 <blockquote>
 <div><ul class="simple">
-<li>The ratio of minimum (first diffuser port) to maximum (last diffuser
-port) flow is given by:</li>
+<li><p>The ratio of minimum (first diffuser port) to maximum (last diffuser
+port) flow is given by:</p></li>
 </ul>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-solution-3">
@@ -581,13 +592,13 @@ port) flow is given by:</li>
 <span class="math notranslate nohighlight">\({hl}_{ParallelPath}\)</span>.</p>
 <blockquote>
 <div><ul class="simple">
-<li>Determine the relationship between diffuser exit velocity and the head loss in the parallel paths.</li>
-<li>Determine an equation for maximum velocity for an inlet manifold in terms of diffuser exit velocity and the flow distribution constraint.</li>
-<li>Write a <strong>function</strong> for maximum velocity for an inlet manifold using the equations you just found.</li>
+<li><p>Determine the relationship between diffuser exit velocity and the head loss in the parallel paths.</p></li>
+<li><p>Determine an equation for maximum velocity for an inlet manifold in terms of diffuser exit velocity and the flow distribution constraint.</p></li>
+<li><p>Write a <strong>function</strong> for maximum velocity for an inlet manifold using the equations you just found.</p></li>
 </ul>
 </div></blockquote>
 <p>Exit losses from the diffusers dominate the head loss because the velocity in the diffuser slots is much higher than the velocity at the entrance to the diffuser pipes. Using the insight from the previous problem, it is reasonable to neglect the effect of the upflow velocity when calculating the exit head loss for the manifold diffusers.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#h_jet = V_jet^2/(2*g)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#h_jet = V_jet^2/(2*g)</span>
 
 <span class="k">def</span> <span class="nf">Vel_sed_manifold_max</span><span class="p">(</span><span class="n">Pi_diffuser_flow</span><span class="p">,</span> <span class="n">V_diffuser</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">V_diffuser</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="n">Pi_diffuser_flow</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
@@ -602,20 +613,20 @@ port) flow is given by:</li>
 <p>Head loss in the sedimentation tank is impacted by multiple forms of head loss, including head loss through the effluent launder and diffusers. Head loss through the effluent launder is about 4 cm. You found head loss through the diffusers in Problem 9.</p>
 <blockquote>
 <div><ul class="simple">
-<li>Which form of head loss (effluent launder or diffuser) is in the parallel path, <span class="math notranslate nohighlight">\({hl}_{ParallelPath}\)</span>?</li>
+<li><p>Which form of head loss (effluent launder or diffuser) is in the parallel path, <span class="math notranslate nohighlight">\({hl}_{ParallelPath}\)</span>?</p></li>
 </ul>
 </div></blockquote>
 <p>Use the function that you wrote for Problem 10 to calculate the maximum velocity in the inlet manifold of the sedimentation tank. Use the value for <code class="docutils literal notranslate"><span class="pre">Pi_sed_manifold_flow</span></code> given above. Use the diffuser exit velocity you found in Problem 4.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Only the diffuser head loss is in the parallel paths.&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Only the diffuser head loss is in the parallel paths.&quot;</span><span class="p">)</span>
 
 <span class="n">V_sed_manifold_max</span> <span class="o">=</span> <span class="n">Vel_sed_manifold_max</span><span class="p">(</span><span class="n">Pi_sed_manifold_flow</span><span class="p">,</span> <span class="n">V_diffuser</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The maximum velocity in the sedimentation tank manifold is&#39;</span><span class="p">,</span><span class="n">V_sed_manifold_max</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The maximum velocity in the sedimentation tank manifold is&#39;</span><span class="p">,</span><span class="n">V_sed_manifold_max</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>Only the diffuser head loss is in the parallel paths.</dt>
-<dd>The maximum velocity in the sedimentation tank manifold is 0.2313 meter / second</dd>
+<dl class="simple">
+<dt>Only the diffuser head loss is in the parallel paths.</dt><dd><p>The maximum velocity in the sedimentation tank manifold is 0.2313 meter / second</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id12">
@@ -623,13 +634,13 @@ port) flow is given by:</li>
 <p>The ratio of manifold pipe cross-sectional area to total diffuser cross-sectional area determines the flow distribution between diffusers.</p>
 <blockquote>
 <div><ul class="simple">
-<li>Calculate the ratio of manifold pipe cross-sectional area to total diffuser cross-sectional area. You can use the velocities of the manifold and the diffusers to calculate the areas.</li>
-<li>What is the significance of the flow area ratio that you found? What does it tell you about the relative areas?</li>
+<li><p>Calculate the ratio of manifold pipe cross-sectional area to total diffuser cross-sectional area. You can use the velocities of the manifold and the diffusers to calculate the areas.</p></li>
+<li><p>What is the significance of the flow area ratio that you found? What does it tell you about the relative areas?</p></li>
 </ul>
 </div></blockquote>
 <p>Note: the flow distribution will be more uniform if the diffuser velocity is higher than the manifold velocity.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The flow area ratio of manifold pipe to diffusers is&#39;</span><span class="p">,(</span><span class="n">V_diffuser</span> <span class="o">/</span> <span class="n">V_sed_manifold_max</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This means that the manifold flow area is larger than the total diffuser area.&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;The flow area ratio of manifold pipe to diffusers is&#39;</span><span class="p">,(</span><span class="n">V_diffuser</span> <span class="o">/</span> <span class="n">V_sed_manifold_max</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;This means that the manifold flow area is larger than the total diffuser area.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The flow area ratio of manifold pipe to diffusers is 1.509 dimensionless
@@ -638,10 +649,10 @@ This means that the manifold flow area is larger than the total diffuser area.</
 <div class="section" id="id13">
 <h3>13:<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <p>The maximum sed tank flow rate is currently set by the constraint of using a single length of pipe for the manifold and launder. The maximum length of the upflow region of the sedimentation tank is 5.8 m, as given below. What is the corresponding sedimentation tank flow rate?</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">L_sed_upflow_max</span> <span class="o">=</span> <span class="mf">5.8</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L_sed_upflow_max</span> <span class="o">=</span> <span class="mf">5.8</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
 
 <span class="n">flow_sed_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">L_sed_upflow_max</span> <span class="o">*</span> <span class="n">V_sed_up</span> <span class="o">*</span> <span class="n">W_sed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The maximum flow rate in one sedimentation tank is&quot;</span><span class="p">,</span><span class="n">flow_sed_max</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;The maximum flow rate in one sedimentation tank is&quot;</span><span class="p">,</span><span class="n">flow_sed_max</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The maximum flow rate in one sedimentation tank is 6.187 liter / second</p>
@@ -651,17 +662,17 @@ This means that the manifold flow area is larger than the total diffuser area.</
 <p>The maximum sed tank flow rate dictates the required pipe diameter for the manifold and launder.</p>
 <blockquote>
 <div><ul class="simple">
-<li>What is the minimum inner diameter of the sedimentation tank manifold?</li>
-<li>What is the required nominal pipe diameter given this flow rate? Use the <code class="docutils literal notranslate"><span class="pre">pipe.ND_SDR_available</span></code> function.</li>
+<li><p>What is the minimum inner diameter of the sedimentation tank manifold?</p></li>
+<li><p>What is the required nominal pipe diameter given this flow rate? Use the <code class="docutils literal notranslate"><span class="pre">pipe.ND_SDR_available</span></code> function.</p></li>
 </ul>
 </div></blockquote>
 <p>SDR is the same as given in Problem 3 (SDR = 26).</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D_sed_manifold_min</span><span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">diam_circle</span><span class="p">(</span><span class="n">flow_sed_max</span> <span class="o">/</span> <span class="n">V_sed_manifold_max</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">D_sed_manifold_min</span><span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">diam_circle</span><span class="p">(</span><span class="n">flow_sed_max</span> <span class="o">/</span> <span class="n">V_sed_manifold_max</span><span class="p">)</span>
 
 <span class="n">ND_sed_manifold</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">ND_SDR_available</span><span class="p">(</span><span class="n">D_sed_manifold_min</span><span class="p">,</span> <span class="n">SDR</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum inner diameter of the sedimentation tank manifold is&#39;</span><span class="p">,</span><span class="n">D_sed_manifold_min</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The nominal diameter of the sedimentation tank manifold is&#39;</span><span class="p">,</span><span class="n">ND_sed_manifold</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The minimum inner diameter of the sedimentation tank manifold is&#39;</span><span class="p">,</span><span class="n">D_sed_manifold_min</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The nominal diameter of the sedimentation tank manifold is&#39;</span><span class="p">,</span><span class="n">ND_sed_manifold</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The minimum inner diameter of the sedimentation tank manifold is 7.266 inch
@@ -674,9 +685,9 @@ The nominal diameter of the sedimentation tank manifold is 8 inch</p>
 <h3>15:<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <p>What is the total required plan area for the sedimentation tanks? Calculate this using the design flow rate and the upflow velocity between the floc blanket and plate settlers.</p>
 <p>Give your final answer in square meters.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A_sed_flocblanket_total</span> <span class="o">=</span> <span class="p">(</span><span class="n">flow_plant</span> <span class="o">/</span> <span class="n">V_sed_up</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">A_sed_flocblanket_total</span> <span class="o">=</span> <span class="p">(</span><span class="n">flow_plant</span> <span class="o">/</span> <span class="n">V_sed_up</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The plant view area of the floc blanket is&#39;</span><span class="p">,</span><span class="n">A_sed_flocblanket_total</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The plant view area of the floc blanket is&#39;</span><span class="p">,</span><span class="n">A_sed_flocblanket_total</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The plant view area of the floc blanket is 60 meter ** 2</p>
@@ -685,9 +696,9 @@ The nominal diameter of the sedimentation tank manifold is 8 inch</p>
 <h3>16:<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <p>What is the total length of the floc blanket zone for all tanks? Calculate this using the total required plan area for the sedimentation tank and the sedimentation tank width.</p>
 <p>This total length will enable you to calculate how many sed tanks are required.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">L_sed_flocblanket_total</span> <span class="o">=</span> <span class="p">(</span><span class="n">A_sed_flocblanket_total</span> <span class="o">/</span> <span class="n">W_sed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L_sed_flocblanket_total</span> <span class="o">=</span> <span class="p">(</span><span class="n">A_sed_flocblanket_total</span> <span class="o">/</span> <span class="n">W_sed</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">L_sed_flocblanket_total</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">L_sed_flocblanket_total</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>56.24 meter</p>
@@ -696,9 +707,9 @@ The nominal diameter of the sedimentation tank manifold is 8 inch</p>
 <h3>17:<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <p>How many sedimentation tanks are required to treat the total plant flow? Calculate this using the the total plant flow rate and the maximum sed tank flow rate. The plant flow rate is the basis of design and the maximum sed tank flow rate is based on the manifold diameter.</p>
 <p>Your answer should be an integer value.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N_sed_tanks</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">flow_plant</span> <span class="o">/</span> <span class="n">flow_sed_max</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">N_sed_tanks</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">flow_plant</span> <span class="o">/</span> <span class="n">flow_sed_max</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The required number of sedimentation tanks is&#39;</span><span class="p">,</span><span class="n">N_sed_tanks</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The required number of sedimentation tanks is&#39;</span><span class="p">,</span><span class="n">N_sed_tanks</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The required number of sedimentation tanks is 10</p>
@@ -706,9 +717,9 @@ The nominal diameter of the sedimentation tank manifold is 8 inch</p>
 <div class="section" id="id18">
 <h3>18:<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <p>How much water (in L/s) can all of the sedimentation tanks for the plant treat? Assume that all tanks have been built to maximum length.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flow_sed_tanks_total</span> <span class="o">=</span> <span class="n">flow_sed_max</span> <span class="o">*</span> <span class="n">N_sed_tanks</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">flow_sed_tanks_total</span> <span class="o">=</span> <span class="n">flow_sed_max</span> <span class="o">*</span> <span class="n">N_sed_tanks</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">flow_sed_tanks_total</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">flow_sed_tanks_total</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>61.87 liter / second
@@ -717,9 +728,9 @@ If we use this design approach the plant design capacity will slightly exceed th
 <div class="section" id="id19">
 <h3>19:<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <p>How many diffusers are required in each tank? Assume the maximum length of the upflow region of the sedimentation tank is used. Use the <code class="docutils literal notranslate"><span class="pre">np.floor</span></code> function to round down to an integer value.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N_sed_tank_diffusers</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(((</span><span class="n">L_sed_flocblanket_total</span><span class="o">/</span><span class="n">N_sed_tanks</span><span class="p">)</span> <span class="o">/</span> <span class="n">B_diffuser</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">N_sed_tank_diffusers</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(((</span><span class="n">L_sed_flocblanket_total</span><span class="o">/</span><span class="n">N_sed_tanks</span><span class="p">)</span> <span class="o">/</span> <span class="n">B_diffuser</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The number of diffuser pipes per sed tank is&#39;</span><span class="p">,</span><span class="n">N_sed_tank_diffusers</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The number of diffuser pipes per sed tank is&#39;</span><span class="p">,</span><span class="n">N_sed_tank_diffusers</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The number of diffuser pipes per sed tank is 98</p>
@@ -731,12 +742,12 @@ If we use this design approach the plant design capacity will slightly exceed th
 <div class="section" id="id20">
 <h3>20:<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <p>What is the required length of the plate settlers? Do not neglect the thickness of the plate settlers.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">L_sed_plate</span> <span class="o">=</span> <span class="p">((</span><span class="n">s_sed_plate</span> <span class="o">*</span> <span class="p">((</span><span class="n">V_sed_up</span><span class="o">/</span><span class="n">V_sed_capture</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L_sed_plate</span> <span class="o">=</span> <span class="p">((</span><span class="n">s_sed_plate</span> <span class="o">*</span> <span class="p">((</span><span class="n">V_sed_up</span><span class="o">/</span><span class="n">V_sed_capture</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
                   <span class="o">+</span> <span class="n">thickness_sed_plate</span> <span class="o">*</span> <span class="p">(</span><span class="n">V_sed_up</span><span class="o">/</span><span class="n">V_sed_capture</span><span class="p">))</span>
                  <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle_sed_plate</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle_sed_plate</span><span class="p">))</span>
                  <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The minimum length of the plate settlers is&#39;</span><span class="p">,</span><span class="n">L_sed_plate</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The minimum length of the plate settlers is&#39;</span><span class="p">,</span><span class="n">L_sed_plate</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The minimum length of the plate settlers is 0.4619 meter</p>
@@ -744,10 +755,10 @@ If we use this design approach the plant design capacity will slightly exceed th
 <div class="section" id="id21">
 <h3>21:<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 <p>What is the horizontal spacing (center to center) of the plate settlers?</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">B_sed_plate_horizontal</span> <span class="o">=</span> <span class="p">((</span><span class="n">thickness_sed_plate</span> <span class="o">+</span> <span class="n">s_sed_plate</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">B_sed_plate_horizontal</span> <span class="o">=</span> <span class="p">((</span><span class="n">thickness_sed_plate</span> <span class="o">+</span> <span class="n">s_sed_plate</span><span class="p">)</span>
                                     <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle_sed_plate</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The horizontal center to center spacing of the plate settlers is&#39;</span><span class="p">,</span><span class="n">B_sed_plate_horizontal</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The horizontal center to center spacing of the plate settlers is&#39;</span><span class="p">,</span><span class="n">B_sed_plate_horizontal</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The horizontal center to center spacing of the plate settlers is 3.118 centimeter</p>
@@ -756,8 +767,8 @@ If we use this design approach the plant design capacity will slightly exceed th
 <h3>22:<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <p>Approximately how many plate settlers spaces are needed in each sedimentation tank? Assume the maximum length of the upflow region of the sedimentation tank is used. Neglect the lost space at the end of the sedimentation tank due to the angle of the plate settlers.</p>
 <p>Round your answer to the closest integer value.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N_sed_plates_pertank</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">((((</span><span class="n">L_sed_flocblanket_total</span><span class="o">/</span><span class="n">N_sed_tanks</span><span class="p">)</span> <span class="o">/</span> <span class="n">B_sed_plate_horizontal</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The number of plate settlers per sedimentation tank is&#39;</span><span class="p">,</span><span class="n">N_sed_plates_pertank</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">N_sed_plates_pertank</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">((((</span><span class="n">L_sed_flocblanket_total</span><span class="o">/</span><span class="n">N_sed_tanks</span><span class="p">)</span> <span class="o">/</span> <span class="n">B_sed_plate_horizontal</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The number of plate settlers per sedimentation tank is&#39;</span><span class="p">,</span><span class="n">N_sed_plates_pertank</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The number of plate settlers per sedimentation tank is 180</p>
@@ -771,29 +782,29 @@ If we use this design approach the plant design capacity will slightly exceed th
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../Filtration/Filtration_Intro.html" class="btn btn-neutral float-right" title="Filtration Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Sed_Examples.html" class="btn btn-neutral" title="Sedimentation Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="../Filtration/Filtration_Intro.html" class="btn btn-neutral float-right" title="Filtration Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Sed_Examples.html" class="btn btn-neutral float-left" title="Sedimentation Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2021, AguaClara Cornell.
+        &#169; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -802,34 +813,16 @@ If we use this design approach the plant design capacity will slightly exceed th
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'EXPERIMENTAL',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

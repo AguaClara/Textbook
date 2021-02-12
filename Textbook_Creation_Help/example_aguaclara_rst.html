@@ -1,51 +1,58 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Functionality in RST and AguaClara Convention &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="../_static/mathjax_config.js"></script>
+        <script src="../_static/disqus.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Parameter Convention List" href="parameter_convention_list.html" />
     <link rel="prev" title="Introduction to RST and Sphinx for Textbook Contributors" href="rst_intro.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -76,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -218,6 +226,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -252,18 +261,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Functionality in RST and AguaClara Convention</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/Textbook_Creation_Help/example_aguaclara_rst.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -286,8 +297,8 @@
 <p>You will often see this format <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">word::</span></code>. The ‘word’ in this case is called a directive. Directives are what RST uses to format text. Directives allow the inclusion of figures, math, tables, references, color, and much more.</p>
 <p>You will also often see this format <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_words_separated_by_underscores:</span></code>. These are called tags, and they exist so that the location of the tag can be referenced during some other section or document in the textbook. They are defined by <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_</span></code> at the beginning of the tag and <code class="docutils literal notranslate"><span class="pre">:</span></code> at the end of the tag. There is convention for how to name tags. So before you go off writing tags all willy-nilly in your textbook documents, read the entirety of this document and use it as your convention bible. For tags and everything else.</p>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last"><strong>Proper indentation and line spacing is extremely important when writing in RST</strong></p>
+<p class="admonition-title">Important</p>
+<p><strong>Proper indentation and line spacing is extremely important when writing in RST</strong></p>
 </div>
 <div class="section" id="headings-bullet-points-and-numbered-lists">
 <span id="heading-headings-bullets-and-lists"></span><h3>Headings, Bullet Points, and Numbered Lists<a class="headerlink" href="#headings-bullet-points-and-numbered-lists" title="Permalink to this headline">¶</a></h3>
@@ -295,11 +306,11 @@
 <h4>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h4>
 <p>Headings are defined by an underline and sometimes overline consisting of one of the following characters: <code class="docutils literal notranslate"><span class="pre">*,</span>&#160; <span class="pre">=,</span>&#160; <span class="pre">-,</span>&#160; <span class="pre">^,</span> <span class="pre">and</span> <span class="pre">&quot;</span></code>. RST does not give any particular character hierarchy over another for defining titles, sections, subsections, or so on. The user indicates character hierarchy for headings and can use whatever order they want, and the order can change between documents. However, it is better to stick to the same convention throughout a project. <strong>This is the convention for the AguaClara textbook:</strong></p>
 <ul class="simple">
-<li><cite>*</cite> with overline, for document titles</li>
-<li><cite>=</cite>, for sections</li>
-<li><cite>-</cite>, for subsections</li>
-<li><cite>^</cite>, for subsubsections</li>
-<li><cite>“</cite>, for subsubsubsections</li>
+<li><p><cite>*</cite> with overline, for document titles</p></li>
+<li><p><cite>=</cite>, for sections</p></li>
+<li><p><cite>-</cite>, for subsections</p></li>
+<li><p><cite>^</cite>, for subsubsections</p></li>
+<li><p><cite>“</cite>, for subsubsubsections</p></li>
 </ul>
 <p>Each title, section and subsection should have a tag before it. Tags for document titles <strong>must</strong> begin with <code class="docutils literal notranslate"><span class="pre">title</span></code> and tags for headings <strong>must</strong> begin with <code class="docutils literal notranslate"><span class="pre">heading</span></code>. For example, this document’s title tag is <code class="docutils literal notranslate"><span class="pre">title_aguaclara_rst_convention</span></code> and this heading’s tag is <code class="docutils literal notranslate"><span class="pre">heading_headings_bullets_and_lists</span></code>. There should always be a blank line between the tag and the actual heading, else references to the tag will not work. For the sake of document readability, include 3 blank lines before the section tag and 2 blank lines before the subsection tag. Lesser headings (subsubsections and beyond) do not need to have tags, and there should be one blank line between lower headings and the preceding content. Here is an example. Note the amount and location of blank lines:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. _title_example_document_title:
@@ -331,8 +342,8 @@ Even more words
 </div>
 <p>Two rules:</p>
 <ul class="simple">
-<li>If under and overlines are used, their length must be identical</li>
-<li>The length of the underline must be at least as long as the title itself.</li>
+<li><p>If under and overlines are used, their length must be identical</p></li>
+<li><p>The length of the underline must be at least as long as the title itself.</p></li>
 </ul>
 </div>
 <div class="section" id="lists-and-bullets">
@@ -350,17 +361,17 @@ The following code:</p>
 </div>
 <p>gives:</p>
 <ul class="simple">
-<li>This is a bulleted list.</li>
-<li>It has two items, the second
-item uses two lines. (note the indentation)</li>
+<li><p>This is a bulleted list.</p></li>
+<li><p>It has two items, the second
+item uses two lines. (note the indentation)</p></li>
 </ul>
 <ol class="arabic simple">
-<li>This is a numbered list.</li>
-<li>It has two items.</li>
+<li><p>This is a numbered list.</p></li>
+<li><p>It has two items.</p></li>
 </ol>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">if two lists are separated by a blank line only, then the two lists are not differentiated.</p>
+<p class="admonition-title">Note</p>
+<p>if two lists are separated by a blank line only, then the two lists are not differentiated.</p>
 </div>
 </div>
 </div>
@@ -392,21 +403,21 @@ item uses two lines. (note the indentation)</li>
     In this case, that is Textbook/Textbook_Creation_Help.
 </pre></div>
 </div>
-<p><a class="reference internal" href="#figure-fluffy-cat"><span class="std std-numref">Fig. 209</span></a> and <a class="reference internal" href="#figure-mountain"><span class="std std-numref">Fig. 210</span></a> are the two figures generated using the code above.</p>
-<div class="figure align-center" id="id3">
+<p><a class="reference internal" href="#figure-fluffy-cat"><span class="std std-numref">Fig. 207</span></a> and <a class="reference internal" href="#figure-mountain"><span class="std std-numref">Fig. 208</span></a> are the two figures generated using the code above.</p>
+<div class="figure align-center" id="id39">
 <span id="figure-fluffy-cat"></span><a class="reference internal image-reference" href="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"><img alt="external figure" src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 209 </span><span class="caption-text">This is a caption.</span></p>
+<p class="caption"><span class="caption-number">Fig. 207 </span><span class="caption-text">This is a caption.</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
 </div>
-<p>See <a class="reference internal" href="#figure-mountain"><span class="std std-numref">Fig. 210</span></a> for a typical mountain view.</p>
-<div class="figure align-center" id="id4">
+<p>See <a class="reference internal" href="#figure-mountain"><span class="std std-numref">Fig. 208</span></a> for a typical mountain view.</p>
+<div class="figure align-center" id="id40">
 <span id="figure-mountain"></span><a class="reference internal image-reference" href="../_images/mountain.jpg"><img alt="internal figure" src="../_images/mountain.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 210 </span><span class="caption-text">Here is a figure tagged <code class="docutils literal notranslate"><span class="pre">figure_mountain</span></code>. Specify the figure location with folder/image.jpg.
+<p class="caption"><span class="caption-number">Fig. 208 </span><span class="caption-text">Here is a figure tagged <code class="docutils literal notranslate"><span class="pre">figure_mountain</span></code>. Specify the figure location with folder/image.jpg.
 The base directory for figure location is the directory of the file you are writing.
-In this case, that is Textbook/Textbook_Creation_Help.</span></p>
+In this case, that is Textbook/Textbook_Creation_Help.</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id41">
 <span id="figure-youtube"></span><a class="reference external image-reference" href="http://www.youtube.com/watch?v=vZ2f6mduEls"><img alt="Removing Plate Settlers from an AguaClara Sedimentation tank" src="http://img.youtube.com/vi/vZ2f6mduEls/0.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 211 </span><span class="caption-text">Plant operator removing plate settlers from an AguaClara sedimentation tank.</span></p>
+<p class="caption"><span class="caption-number">Fig. 209 </span><span class="caption-text">Plant operator removing plate settlers from an AguaClara sedimentation tank.</span><a class="headerlink" href="#id41" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="math-and-equations">
@@ -466,27 +477,27 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 </pre></div>
 </div>
 <p>The code block above generates the following table:</p>
-<span id="table-an-example-table"></span><table border="1" class="colwidths-given docutils align-center" id="id6">
-<caption><span class="caption-number">Table 23 </span><span class="caption-text">Table caption goes here</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<span id="table-an-example-table"></span><table class="colwidths-given docutils align-center" id="id42">
+<caption><span class="caption-number">Table 23 </span><span class="caption-text">Table caption goes here</span><a class="headerlink" href="#id42" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="40%" />
-<col width="40%" />
-<col width="20%" />
+<col style="width: 40%" />
+<col style="width: 40%" />
+<col style="width: 20%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">name</th>
-<th class="head">firstname</th>
-<th class="head">age</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>name</p></th>
+<th class="head"><p>firstname</p></th>
+<th class="head"><p>age</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>Smith</td>
-<td>John</td>
-<td>40</td>
+<tbody>
+<tr class="row-even"><td><p>Smith</p></td>
+<td><p>John</p></td>
+<td><p>40</p></td>
 </tr>
-<tr class="row-odd"><td>Smith</td>
-<td>John, Junior</td>
-<td>20</td>
+<tr class="row-odd"><td><p>Smith</p></td>
+<td><p>John, Junior</p></td>
+<td><p>20</p></td>
 </tr>
 </tbody>
 </table>
@@ -506,8 +517,8 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 <h4>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h4>
 <p>References work by calling any “target”- either tags (titles, headings, figures, and tables) or labels (equations). These reference formats work internally- calling something within the same document and externally- calling content in some other document within this same project.</p>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">Before you start tagging and labelling content with any degree of willy-nilly-ness, make sure that you are not repeating tags or labels. You can check to see if your tag or label is taken by visiting libraries on GitHub. <a class="reference download internal" download="" href="../_downloads/abab2461066697906f131d1c98d0b1c5/heading_index.txt"><code class="xref download docutils literal notranslate"><span class="pre">Check</span> <span class="pre">here</span> <span class="pre">for</span> <span class="pre">tags</span> <span class="pre">and</span> <span class="pre">labels:</span></code></a>.</p>
+<p class="admonition-title">Important</p>
+<p>Before you start tagging and labelling content with any degree of willy-nilly-ness, make sure that you are not repeating tags or labels. You can check to see if your tag or label is taken by visiting libraries on GitHub. <a class="reference download internal" download="" href="../_downloads/0b167678af805e4b21a52dae48db7c77/heading_index.txt"><code class="xref download docutils literal notranslate"><span class="pre">Check</span> <span class="pre">here</span> <span class="pre">for</span> <span class="pre">tags</span> <span class="pre">and</span> <span class="pre">labels:</span></code></a>.</p>
 </div>
 <div class="section" id="document-titles-and-headings">
 <h5>Document Titles and Headings<a class="headerlink" href="#document-titles-and-headings" title="Permalink to this headline">¶</a></h5>
@@ -517,8 +528,8 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 <h5>Figures and Tables<a class="headerlink" href="#figures-and-tables" title="Permalink to this headline">¶</a></h5>
 <p>These can be referenced in the exact same way as titles and headings. However, they can <em>also</em> be referenced using the <code class="docutils literal notranslate"><span class="pre">:numref:`tag`</span></code> syntax. When this is done, there cannot be text written that will link to the figure. Instead, what shows up is ‘Fig. 3’ or ‘Table 3’.</p>
 <ul class="simple">
-<li>Figures: <code class="docutils literal notranslate"><span class="pre">:numref:`figure_fluffy_cat`</span></code> gives <a class="reference internal" href="#figure-fluffy-cat"><span class="std std-numref">Fig. 209</span></a></li>
-<li>Tables: <code class="docutils literal notranslate"><span class="pre">:numref:`table_an_example_table`</span></code> gives <a class="reference internal" href="#table-an-example-table"><span class="std std-numref">Table 23</span></a></li>
+<li><p>Figures: <code class="docutils literal notranslate"><span class="pre">:numref:`figure_fluffy_cat`</span></code> gives <a class="reference internal" href="#figure-fluffy-cat"><span class="std std-numref">Fig. 207</span></a></p></li>
+<li><p>Tables: <code class="docutils literal notranslate"><span class="pre">:numref:`table_an_example_table`</span></code> gives <a class="reference internal" href="#table-an-example-table"><span class="std std-numref">Table 23</span></a></p></li>
 </ul>
 </div>
 </div>
@@ -528,7 +539,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span></p>
 <span id="citations"></span><h2>Equations<a class="headerlink" href="#equations" title="Permalink to this headline">¶</a></h2>
 <p>Equations are a little different, <code class="docutils literal notranslate"><span class="pre">:ref:`label`</span></code> does not work. They are instead called with the <code class="docutils literal notranslate"><span class="pre">:eq:`label`</span></code> syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation’s number will be the linked-text.</p>
 <ul class="simple">
-<li>Equations: <code class="docutils literal notranslate"><span class="pre">:eq:`quadratic_equation`</span></code> only generates a number in parentheses. Thus, this reference is usually preceeded by the word: ‘equation.’ Like this: Equation <a class="reference internal" href="#equation-quadratic-equation">(709)</a>.</li>
+<li><p>Equations: <code class="docutils literal notranslate"><span class="pre">:eq:`quadratic_equation`</span></code> only generates a number in parentheses. Thus, this reference is usually preceeded by the word: ‘equation.’ Like this: Equation <a class="reference internal" href="#equation-quadratic-equation">(709)</a>.</p></li>
 </ul>
 </div>
 <div class="section" id="id1">
@@ -568,12 +579,12 @@ including an entry for:</p>
 <span class="nb">}</span>
 </pre></div>
 </div>
-<p>A working example: <a class="reference internal" href="#ex-strunk1979" id="id2">[SW79]</a>.</p>
+<p>A working example: <span id="id2">[<a class="reference internal" href="#id4"><span>SW79</span></a>]</span>.</p>
 </div>
 <div class="section" id="writing-code-blocks-not-actual-executable-code">
 <span id="heading-writing-code-blocks"></span><h3>Writing Code Blocks (not actual, executable code)<a class="headerlink" href="#writing-code-blocks-not-actual-executable-code" title="Permalink to this headline">¶</a></h3>
 <p>You can write code in-line or as a code block. Note that these ways of showing code <em>only display code</em>, they do not generate a code block that actually runs. There are two ways of doing each. For in-line code, use <code class="docutils literal notranslate"><span class="pre">``this</span> <span class="pre">syntax``</span></code> or <code class="docutils literal notranslate"><span class="pre">:code:`this</span> <span class="pre">syntax`</span></code>. For code blocks, use this syntax:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="p">::</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="p">::</span>
 
   <span class="n">This</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">code</span> <span class="n">block</span><span class="o">.</span>
 </pre></div>
@@ -591,14 +602,14 @@ including an entry for:</p>
 <h4>Doctests<a class="headerlink" href="#doctests" title="Permalink to this headline">¶</a></h4>
 <p>When writing code for the textbook, some sections will be written in executable code to demonstrate functions or run calculations. They will not, however, run automatically in the webpage, so to ensure that they are correct before they are published they are tested with doctests. Doctests compare the written code with the expected result typed manually below it. In the Anaconda Prompt, simply run the <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code> in the correct directory and branch. When run, you see where your executable code doesn’t match up with the “answer” provided by you, the contributor. One reason this is important is because if functions in aguaclara change, their outputs might alter from old versions. Doctests will show where this happens. Additionally, typos and other mistakes can be seen. Further documentation on running doctest can be found <a class="reference external" href="https://web.archive.org/web/20190306065814/http://docs.sphinxdocs.com/en/latest/step-3.html">here</a>.</p>
 <p>The way to ensure a doctest will run is to precede each line of code with ‘&gt;&gt;&gt;’, the default Python prompt. When a doctest is run, every line of code with ‘&gt;&gt;&gt;’ in front of it will be run within a directory. The testing becomes relevant for lines which do not have ‘&gt;&gt;&gt;’ in front of them. Any line that is directly below a line beginning with ‘&gt;&gt;&gt;’ is assumed to be an output of the line of code just above it. In the example below, <code class="code docutils literal notranslate"><span class="pre">19</span></code> is the expected output of the line <code class="code docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(5+14)</span></code>. If the output of that line did not match the line below, doctests would alert you! Below are some examples of doctestable code.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">python</span><span class="o">=</span><span class="s2">&quot;code&quot;</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">python</span><span class="o">=</span><span class="s2">&quot;code&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">14</span><span class="p">)</span>
 <span class="go">19</span>
 </pre></div>
 </div>
 <ul>
-<li><p class="first">You can even print and test tables in doctests:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<li><p>You can even print and test tables in doctests:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">names_male</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;Barack&#39;</span><span class="p">,</span> <span class="s1">&#39;Monroe&#39;</span><span class="p">,</span> <span class="s1">&#39;Jack&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">names_female</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;Michelle&#39;</span><span class="p">,</span> <span class="s1">&#39;Juanita&#39;</span><span class="p">,</span> <span class="s1">&#39;Jill&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">var_names</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span> <span class="n">female_names</span> <span class="o">=</span> <span class="n">names_female</span><span class="p">,</span> <span class="n">male_names</span> <span class="o">=</span> <span class="n">names_male</span><span class="p">)</span>
@@ -611,14 +622,13 @@ including an entry for:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Python will also “remember” variables from one block to the next:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">python</span><span class="p">)</span>
+<li><p>Python will also “remember” variables from one block to the next:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">python</span><span class="p">)</span>
 <span class="go">code</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">To get doctests to pass through Travis, you’ll have to add any packages you use to the install step in “.travis.yml”. Under install, add a line that says <code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">my_package==0.0.0</span></code>. When doing this, make sure to specify the version as functionality can change!</p>
-</li>
+<li><p>To get doctests to pass through Travis, you’ll have to add any packages you use to the install step in “.travis.yml”. Under install, add a line that says <code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">my_package==0.0.0</span></code>. When doing this, make sure to specify the version as functionality can change!</p></li>
 </ul>
 <p>Though there are other ways to include code in an RST document, this method makes doctesting possible, and will make it easy to change the documents should aguaclara functions change, therefore this is the best way to include code! Additionally it makes it easy to see the difference between the code and the output, whereas other methods are less clear in this distinction.</p>
 </div>
@@ -633,22 +643,21 @@ including an entry for:</p>
 </pre></div>
 </div>
 <p>And here is a working example:</p>
-<div class="figure" id="id7">
+<div class="figure align-default" id="id43">
 <a class="reference external image-reference" href="https://www.youtube.com/watch?v=Xp8ygnIOgi0"><img alt="../_images/floc_blanket.png" src="../_images/floc_blanket.png" /></a>
-<p class="caption"><span class="caption-number">Fig. 212 </span><span class="caption-text">This is a floc blanket forming</span></p>
+<p class="caption"><span class="caption-number">Fig. 210 </span><span class="caption-text">This is a floc blanket forming</span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="assorted-other-convention">
 <span id="heading-assorted-convention"></span><h3>Assorted Other Convention<a class="headerlink" href="#assorted-other-convention" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Colored <span class="red">text</span>. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.</li>
+<li><p>Colored <span class="red">text</span>. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.</p></li>
 </ul>
-<div data-disqus-identifier="Functionality in RST and AguaClara Convention" data-disqus-shortname="AguaClara" id="disqus_thread"></div><p id="bibtex-bibliography-Textbook_Creation_Help/example_aguaclara_rst-0"><table class="docutils citation" frame="void" id="ex-strunk1979" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[SW79]</a></td><td>William Strunk, Jr. and E.&nbsp;B. White. <em>The Elements of Style</em>. Macmillan, third edition, 1979.</td></tr>
-</tbody>
-</table>
+<div data-disqus-identifier="Functionality in RST and AguaClara Convention" data-disqus-shortname="AguaClara" id="disqus_thread"></div><p id="id3"><dl class="citation">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">SW79</a></span></dt>
+<dd><p>William Strunk, Jr. and E. B. White. <em>The Elements of Style</em>. Macmillan, third edition, 1979.</p>
+</dd>
+</dl>
 </p>
 <p>Convert a DOI into a URL
 Given the following DOI.
@@ -664,29 +673,29 @@ http://dx.doi.org/10.2166/aqua.2006.062</p>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="parameter_convention_list.html" class="btn btn-neutral float-right" title="Parameter Convention List" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="rst_intro.html" class="btn btn-neutral" title="Introduction to RST and Sphinx for Textbook Contributors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="parameter_convention_list.html" class="btn btn-neutral float-right" title="Parameter Convention List" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="rst_intro.html" class="btn btn-neutral float-left" title="Introduction to RST and Sphinx for Textbook Contributors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2021, AguaClara Cornell.
+        &#169; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -695,35 +704,16 @@ http://dx.doi.org/10.2166/aqua.2006.062</p>
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'EXPERIMENTAL',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
-      <script type="text/javascript" src="../_static/disqus.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

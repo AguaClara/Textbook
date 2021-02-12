@@ -1,51 +1,57 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Flow Control and Measurement Derivations &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="../_static/mathjax_config.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Flow Control and Measurement Solution" href="FCM_Solution.html" />
     <link rel="prev" title="Flow Control and Measurement Design" href="FCM_Design.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -76,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -201,6 +208,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -235,18 +243,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Flow Control and Measurement Derivations</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/Flow_Control_and_Measurement/FCM_Derivations.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -267,7 +277,7 @@
 <p>This document contains the derivation of the flow through a tank-with-a-valve over time, <span class="math notranslate nohighlight">\(Q(t)\)</span>. Our reference will be a simple hypochlorinator, shown in the following image. In the image, a hypochlorite solution is slowly dripping and mixing with piped source water, thereby disinfecting it. The valve is almost closed to make sure that the hypochlorite solution drips instead of flows. At the end of this document is an image which shows the variables in the final equation.</p>
 <div class="figure align-center" id="id1">
 <span id="figure-drip-hypochlorinator"></span><a class="reference internal image-reference" href="../_images/drip_hypochlorinator.png"><img alt="Drip hypochlorinator" src="../_images/drip_hypochlorinator.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">This is a common setup for chlorinating water before distributing it to a nearby community.</span></p>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">This is a common setup for chlorinating water before distributing it to a nearby community.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>This derivation begins by finding two equations for flow, <span class="math notranslate nohighlight">\(Q\)</span>, through the hypochlorinator and setting them equal to each other. First, the rate of change of the volume of hypochlorite solution in the tank is equivalent to the flow out of the hypochlorinator. Since the volume of hypochlorite solution in the tank is equal to the tank’s cross-sectional area times it height, we get the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-0">
@@ -319,7 +329,7 @@
 <p>Here lies another common source of confusion. <span class="math notranslate nohighlight">\(h_{Tank}\)</span> is not the same as <span class="math notranslate nohighlight">\(h_{0}\)</span>. <span class="math notranslate nohighlight">\(h_{Tank}\)</span> is the height of water level in the tank with reference to the tank bottom. <span class="math notranslate nohighlight">\(h_{0}\)</span> is the water level in the tank with reference to the valve. Therefore, <span class="math notranslate nohighlight">\(h_{0} \geq h_{Tank}\)</span> is true if the valve is located at or below the bottom of the tank. If the tank is elevated far above the valve, then the <span class="math notranslate nohighlight">\(h_{0} &gt; &gt; h_{Tank}\)</span>. If the valve is at the same elevation as the bottom of the tank, then <span class="math notranslate nohighlight">\(h_{0} = h_{Tank}\)</span>. Please refer to the following image to clarify <span class="math notranslate nohighlight">\(h_{0}\)</span> and <span class="math notranslate nohighlight">\(h_{Tank}\)</span>. Also note that both <span class="math notranslate nohighlight">\(h_{Tank}\)</span> and <span class="math notranslate nohighlight">\(h_{0}\)</span> are not variables, they are constants which are defined by the initial state of the hypochlorinator, when the solution just begins to flow.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-hypochlorinator-variable-explanation"></span><a class="reference internal image-reference" href="../_images/hypochlorinator_variable_explanation.png"><img alt="Hypochlorinator variables" src="../_images/hypochlorinator_variable_explanation.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text"><span class="math notranslate nohighlight">\(Q_0 =\)</span> initial flow rate of hypochlorite solution at time <span class="math notranslate nohighlight">\(t = 0\)</span>, <span class="math notranslate nohighlight">\(t_{Design} =\)</span> time it would take to drain the tank if flow was held constant at <span class="math notranslate nohighlight">\(Q_0\)</span></span></p>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text"><span class="math notranslate nohighlight">\(Q_0 =\)</span> initial flow rate of hypochlorite solution at time <span class="math notranslate nohighlight">\(t = 0\)</span>, <span class="math notranslate nohighlight">\(t_{Design} =\)</span> time it would take to drain the tank if flow was held constant at <span class="math notranslate nohighlight">\(Q_0\)</span></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Finally, our fabricated equivalence, <span class="math notranslate nohighlight">\(\frac{Q_0}{A_{Tank}} = \frac{h_{Tank}}{t_{Design}}\)</span> can be plugged into <span class="math notranslate nohighlight">\(\frac{Q}{Q_0} = 1 - \frac{t Q_0}{2 A_{Tank} h_0}\)</span> to create the highly useful equation for flow rate as a function of time for a drip hypochlorinator:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-13">
@@ -347,7 +357,7 @@
 <p>First, it is necessary to understand how AguaClara tank drains work and what they look like. Many tanks, including the flocculator and entrance tank, have a hole in their bottoms which are fitted with pipe couplings. During normal operation, these couplings have pipe stubs in them, and the pipe stubs are tall enough to go above the water level in the tank and not allow water to flow into the drain. When the pipe stub is removed, the water begins to flow out of the drain, as the image below indicates. The drain pipe consists of pipe and one elbow, shown in the image.</p>
 <div class="figure align-center" id="id3">
 <span id="figure-pipe-stub-drainage"></span><a class="reference internal image-reference" href="../_images/pipe_stub_drainage.png"><img alt="Pipe stub drainage" src="../_images/pipe_stub_drainage.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">This is AguaClara’s alternatives to having valves.</span></p>
+<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">This is AguaClara’s alternatives to having valves.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>While AguaClara sedimentation tanks use valves instead of pipe to begin the process of draining, the actual drain piping system is the same, pipe and an elbow. The equation that will soon be derived applies to both pipe stub and valve drains.</p>
 <p>We will start the derivation from the following equation, which is found in an intermediate step from the ‘<span class="math notranslate nohighlight">\(Q(t)\)</span> <a class="reference internal" href="#heading-flow-for-a-tank-with-a-valve"><span class="std std-ref">Q(t) for a Tank with a Valve</span></a>.’ While this system does not have a valve, it has other sources of minor loss and therefore the equation is still valid.</p>
@@ -361,8 +371,8 @@
 <span class="eqno">(95)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-17" title="Permalink to this equation">¶</a></span>\[D_{Pipe} = \sqrt{ \frac{8 A_{Tank}}{\pi t_{Drain}} \sqrt{ \frac{h_0 \sum K}{2g} } }\]</div>
 <p>To get the equation in terms of easily measureable tank parameters, we substitute <span class="math notranslate nohighlight">\(L_{Tank} W_{Tank}\)</span> for <span class="math notranslate nohighlight">\(A_{Tank}\)</span>. To maintain consistency in variable names, we substitute <span class="math notranslate nohighlight">\(H_{Tank}\)</span> for <span class="math notranslate nohighlight">\(h_0\)</span>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">By saying that <span class="math notranslate nohighlight">\(h_0 = H_{Tank}\)</span>, we are making the assumption that the pipe drain is at the same elevation as the bottom of the tank. The pipe drain is actually a little lower than the bottom of the tank, but that would make the tank drain faster than <span class="math notranslate nohighlight">\(t_{Drain}\)</span>, which is preferred. Therefore, we are designing a slight safety factor when we say that <span class="math notranslate nohighlight">\(h_0 = H_{Tank}\)</span>.</p>
+<p class="admonition-title">Note</p>
+<p>By saying that <span class="math notranslate nohighlight">\(h_0 = H_{Tank}\)</span>, we are making the assumption that the pipe drain is at the same elevation as the bottom of the tank. The pipe drain is actually a little lower than the bottom of the tank, but that would make the tank drain faster than <span class="math notranslate nohighlight">\(t_{Drain}\)</span>, which is preferred. Therefore, we are designing a slight safety factor when we say that <span class="math notranslate nohighlight">\(h_0 = H_{Tank}\)</span>.</p>
 </div>
 <p>Finally, we arrive at the equation for drain pipe sizing:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-18">
@@ -377,7 +387,7 @@
 <p>Such that the variables are as the appear in the image below.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-pipe-stub-drainage-variables"></span><a class="reference internal image-reference" href="../_images/pipe_stub_drainage_variables.png"><img alt="Pipe stub drainage variables" src="../_images/pipe_stub_drainage_variables.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text"><span class="math notranslate nohighlight">\(L_{Tank}\)</span> is the length of the tank which goes the page. <span class="math notranslate nohighlight">\(K\)</span> is the aggregate minor loss coefficient of the drain system.</span></p>
+<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text"><span class="math notranslate nohighlight">\(L_{Tank}\)</span> is the length of the tank which goes the page. <span class="math notranslate nohighlight">\(K\)</span> is the aggregate minor loss coefficient of the drain system.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="design-equations-for-the-linear-chemical-dose-controller-cdc">
@@ -386,18 +396,18 @@
 <p>We will use the ‘head loss trick’ that was introduced in the Fluids Review section. Therefore, the elevation difference between the water level in the constant head tank (CHT) and the end of the tube connected to the slider, <span class="math notranslate nohighlight">\(\Delta h\)</span>, is equal to the head loss between the two points, <span class="math notranslate nohighlight">\(h_L\)</span>. Thus, <span class="math notranslate nohighlight">\(\Delta h = h_L = h_e + h_f\)</span>.</p>
 <div class="figure align-center" id="id5">
 <span id="figure-cdc-derivation"></span><a class="reference internal image-reference" href="../_images/CDC_derivation.png"><img alt="CDC Derivation" src="../_images/CDC_derivation.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">Visual representation of CDC.</span></p>
+<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">Visual representation of CDC.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="cdc-design-equation-derivation">
 <span id="heading-cdc-design-equation-derivations"></span><h3>CDC Design Equation Derivation<a class="headerlink" href="#cdc-design-equation-derivation" title="Permalink to this headline">¶</a></h3>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last"><strong>When designing the CDC, there are a few parameters which are picked and set initially, before applying any equations. These parameters are:</strong></p>
+<p class="admonition-title">Important</p>
+<p><strong>When designing the CDC, there are a few parameters which are picked and set initially, before applying any equations. These parameters are:</strong></p>
 </div>
 <ol class="arabic simple">
-<li><span class="math notranslate nohighlight">\(D\)</span> = tube diameter. only certain tubing diameters are manufactured (like <span class="math notranslate nohighlight">\(\frac{x}{16}\)</span> inch), so an array of available tube diameters is set initially.</li>
-<li><span class="math notranslate nohighlight">\(\sum K\)</span> = sum of minor loss coefficients for the whole system. This is also set initially, it is usually 2.</li>
-<li><span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span> = maximum elevation difference between CHT water level and outlet of solution. This parameter is usually 20 cm.</li>
+<li><p><span class="math notranslate nohighlight">\(D\)</span> = tube diameter. only certain tubing diameters are manufactured (like <span class="math notranslate nohighlight">\(\frac{x}{16}\)</span> inch), so an array of available tube diameters is set initially.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum K\)</span> = sum of minor loss coefficients for the whole system. This is also set initially, it is usually 2.</p></li>
+<li><p><span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span> = maximum elevation difference between CHT water level and outlet of solution. This parameter is usually 20 cm.</p></li>
 </ol>
 <p>We begin by defining the head loss through the system <span class="math notranslate nohighlight">\(h_L\)</span>, which is equivalent to defining the driving head <span class="math notranslate nohighlight">\(\Delta h\)</span>. Major losses will be coded as red.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-20">
@@ -411,8 +421,8 @@
 <div class="line"><span class="math notranslate nohighlight">\(L\)</span> = length of the dosing tube(s)</div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">‘Tube(s)’ is used because there may be 1 or more dosing tubes depending on the particular design.</p>
+<p class="admonition-title">Note</p>
+<p>‘Tube(s)’ is used because there may be 1 or more dosing tubes depending on the particular design.</p>
 </div>
 <p>Minor losses are equal to:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-21">
@@ -436,13 +446,13 @@
 <p>Here is a plot of the three colored equations above. Our goal is to minimize the minor losses in the system; to bring the red and blue curves as close as possible to the green one.</p>
 <div class="figure align-center" id="id6">
 <span id="figure-cdc-linearity-model"></span><a class="reference internal image-reference" href="../_images/CDC_linearity_model.png"><img alt="CDC linearity model" src="../_images/CDC_linearity_model.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">MathCAD generated graph for linearity error analysis. TODO: make this in python</span></p>
+<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">MathCAD generated graph for linearity error analysis. TODO: make this in python</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="designing-for-the-error-constraint-pi-error">
 <h4>Designing for the error constraint, <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span><a class="headerlink" href="#designing-for-the-error-constraint-pi-error" title="Permalink to this headline">¶</a></h4>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">The first step in the design is to make sure that major losses far exceed minor losses. This will result in an equation for the maximum velocity that can go through the dosing tube(s), <span class="math notranslate nohighlight">\(\color{purple}{\bar v_{Max} }\)</span>.</p>
+<p class="admonition-title">Important</p>
+<p>The first step in the design is to make sure that major losses far exceed minor losses. This will result in an equation for the maximum velocity that can go through the dosing tube(s), <span class="math notranslate nohighlight">\(\color{purple}{\bar v_{Max} }\)</span>.</p>
 </div>
 <p>Minor losses will never be 0, so how much error in our linearity are we willing to accept? Let’s define a new parameter, <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span>, as the maximum amount of error we are willing to accept. We are ok with 10% error or less, so <span class="math notranslate nohighlight">\(\Pi_{Error} = 0.1\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-25">
@@ -477,8 +487,8 @@
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-32">
 <span class="eqno">(110)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-32" title="Permalink to this equation">¶</a></span>\[Q_{Max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_{L_{Max}} g \Pi_{Error}}{\sum K }}\]</div>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><strong>Function in aguaclara</strong> <code class="docutils literal notranslate"><span class="pre">cdc.max_linear_flow(Diam,</span> <span class="pre">HeadlossCDC,</span> <span class="pre">Ratio_Error,</span> <span class="pre">KMinor)</span></code> Returns the maximum flow <span class="math notranslate nohighlight">\(Q_{Max}\)</span> that can go through a dosing tube will making sure that linearity between head loss and flow is conserved.</p>
+<p class="admonition-title">See also</p>
+<p><strong>Function in aguaclara</strong> <code class="docutils literal notranslate"><span class="pre">cdc.max_linear_flow(Diam,</span> <span class="pre">HeadlossCDC,</span> <span class="pre">Ratio_Error,</span> <span class="pre">KMinor)</span></code> Returns the maximum flow <span class="math notranslate nohighlight">\(Q_{Max}\)</span> that can go through a dosing tube will making sure that linearity between head loss and flow is conserved.</p>
 </div>
 <p>From this equation for <span class="math notranslate nohighlight">\(Q_{Max}\)</span>, we can get to our first design equation, <span class="math notranslate nohighlight">\(\color{purple}{\bar v_{Max}}\)</span> by using the continuity Equation <span class="math notranslate nohighlight">\(\bar v_{Max} = \frac{Q_{Max}}{\frac{\pi D^2}{4}}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-33">
@@ -489,8 +499,8 @@
 <div class="section" id="designing-for-the-proper-amount-of-head-loss-h-l-max">
 <h4>Designing for the proper amount of head loss, <span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span><a class="headerlink" href="#designing-for-the-proper-amount-of-head-loss-h-l-max" title="Permalink to this headline">¶</a></h4>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">The second step in the design is to make sure that the maximum head loss corresponds to the maximum flow of chemicals. This will result in an equation for the length of the dosing tube(s), <span class="math notranslate nohighlight">\(\color{purple}{L_{Min} }\)</span>.</p>
+<p class="admonition-title">Important</p>
+<p>The second step in the design is to make sure that the maximum head loss corresponds to the maximum flow of chemicals. This will result in an equation for the length of the dosing tube(s), <span class="math notranslate nohighlight">\(\color{purple}{L_{Min} }\)</span>.</p>
 </div>
 <p>We previously derived an equation for the minimum length of the dosing tube(s), <span class="math notranslate nohighlight">\(L_{Min, \, \Pi_{Error}}\)</span>, which was the minimum length needed to ensure that our linearity constraint was met. This equation is shown again below, in red:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-34">
@@ -507,18 +517,18 @@
    L_{Min, \, head loss} = L = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)
    }\]</div>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">cdc._length_cdc_tube_array(FlowPlant,</span> <span class="pre">ConcDoseMax,</span> <span class="pre">ConcStock,</span> <span class="pre">DiamTubeAvail,</span> <span class="pre">HeadlossCDC,</span> <span class="pre">temp,</span> <span class="pre">en_chem,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\(\color{purple}{L_{Min}}\)</span>, takes in the flow rate input of <em>plant design flow rate</em>.</p>
+<p class="admonition-title">See also</p>
+<p><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">cdc._length_cdc_tube_array(FlowPlant,</span> <span class="pre">ConcDoseMax,</span> <span class="pre">ConcStock,</span> <span class="pre">DiamTubeAvail,</span> <span class="pre">HeadlossCDC,</span> <span class="pre">temp,</span> <span class="pre">en_chem,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\(\color{purple}{L_{Min}}\)</span>, takes in the flow rate input of <em>plant design flow rate</em>.</p>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">cdc._len_tube(Flow,</span> <span class="pre">Diam,</span> <span class="pre">HeadLoss,</span> <span class="pre">conc_chem,</span> <span class="pre">temp,</span> <span class="pre">en_chem,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\(\color{purple}{L_{Min}}\)</span>, takes in the flow rate input of <em>max flow rate through the dosing tube(s)</em>.</p>
+<p class="admonition-title">See also</p>
+<p><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">cdc._len_tube(Flow,</span> <span class="pre">Diam,</span> <span class="pre">HeadLoss,</span> <span class="pre">conc_chem,</span> <span class="pre">temp,</span> <span class="pre">en_chem,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\(\color{purple}{L_{Min}}\)</span>, takes in the flow rate input of <em>max flow rate through the dosing tube(s)</em>.</p>
 </div>
 <p>If you decrease the max flow <span class="math notranslate nohighlight">\(Q_{Max}\)</span> and hold <span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span> constant, <span class="math notranslate nohighlight">\(\color{green}{L_{Min, \, head loss}}\)</span> becomes larger. This means that a CDC system for a plant of 40 <span class="math notranslate nohighlight">\(\frac{L}{s}\)</span> must be different than one for a plant of 20 <span class="math notranslate nohighlight">\(\frac{L}{s}\)</span>. If we want to maintain the same head loss at maximum flow in both plants, then the dosing tube(s) will need to be a lot longer for the 20 <span class="math notranslate nohighlight">\(\frac{L}{s}\)</span> plant.</p>
 <p>To visualize the distinction between <span class="math notranslate nohighlight">\(\color{red}{  L_{Min, \, \Pi_{Error}}}\)</span> and <span class="math notranslate nohighlight">\(\color{green}{ L_{Min, \, head loss}}\)</span>, see the following plot. <span class="math notranslate nohighlight">\(\color{green}{ L_{Min, \, head loss}}\)</span> is discontinuous because it takes in the smallest allowable tube diameter as an input. As the chemical flow rate through the dosing tube(s) decreases, the dosing tube diameter does as well. Whenever you see a jump in the green points, that means the tubing diameter has changed.</p>
 <div class="figure align-center" id="id7">
 <span id="figure-cdc-length-model"></span><a class="reference internal image-reference" href="../_images/CDC_length_model.png"><img alt="CDC length model" src="../_images/CDC_length_model.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">CDC length modeling in MathCAD.</span></p>
+<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">CDC length modeling in MathCAD.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <p>As you can see, the head loss constraint is more limiting than the linearity constraint when designing for tube length. Therefore, the design equation for tube length is the one which accounts for head loss. This is the second and final design equation for designing the CDC:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-37">
@@ -548,7 +558,7 @@
 <p>Combined with the discrete amount of tubing sizes (shown in dark green), we can create a graph of the three diameter constraints:</p>
 <div class="figure align-center" id="id8">
 <span id="figure-cdc-diameter-model"></span><a class="reference internal image-reference" href="../_images/CDC_diameter_model.png"><img alt="CDC diameter model" src="../_images/CDC_diameter_model.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">CDC diameter modeling in MathCAD.</span></p>
+<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">CDC diameter modeling in MathCAD.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -560,29 +570,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="FCM_Solution.html" class="btn btn-neutral float-right" title="Flow Control and Measurement Solution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="FCM_Design.html" class="btn btn-neutral" title="Flow Control and Measurement Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="FCM_Solution.html" class="btn btn-neutral float-right" title="Flow Control and Measurement Solution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="FCM_Design.html" class="btn btn-neutral float-left" title="Flow Control and Measurement Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2021, AguaClara Cornell.
+        &#169; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -591,34 +601,16 @@
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'EXPERIMENTAL',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
