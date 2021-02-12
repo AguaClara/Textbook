@@ -1,57 +1,51 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Sedimentation Introduction &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script async="async" src="../_static/mathjax_config.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Sedimentation Design" href="Sed_Design.html" />
     <link rel="prev" title="Flocculator Design Solution" href="../Flocculation/Floc_Design_Solution.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -82,7 +76,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -204,7 +197,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -239,20 +231,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
       <li>Sedimentation Introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/Sedimentation/Sed_Intro.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -275,9 +265,9 @@
 <p>What if we were to do the same jar experiment with raw water that did not go through successful coagulation and flocculation? Would we observe the same settling and successful particle removal? To answer this, we must recall information learned in the section on coagulation and flocculation; those two treatment processes serve to destabilize and agglomerate particles to form flocs that will be heavy enough to settle. If the particles are colloids and are not destabilized, no amount of time will allow for the settling. This emphasizes the fact that successful sedimentation can only happen with successful coagulation and flocculation steps before it.</p>
 <p>The three main steps that need to be accomplished for a sedimentation system to be successful are as follows:</p>
 <ol class="arabic simple">
-<li><p>Suspended flocs need to be able to settle out of the water.</p></li>
-<li><p>Settling flocs need to be able to move from wherever they settle to a lower section of the tank.</p></li>
-<li><p>Accumulated flocs at the bottom of the tank need to be removed.</p></li>
+<li>Suspended flocs need to be able to settle out of the water.</li>
+<li>Settling flocs need to be able to move from wherever they settle to a lower section of the tank.</li>
+<li>Accumulated flocs at the bottom of the tank need to be removed.</li>
 </ol>
 <p>Sedimentation is ubiquitous in water treatment. Nevertheless, the process is very complex with many failure modes and there are many active research areas. The following sections will explore the state of conventional sedimentation systems and their challenges, gaps in knowledge, and the AguaClara approach to sedimentation.</p>
 <p>To understand how sedimentation works, a few key concepts must first be developed. This includes understanding how and why flocs move in water. Remember, the goal of sedimentation reactor design is to optimize the floc-settling process.</p>
@@ -291,7 +281,7 @@
 <h3>Horizontal Flow Sedimentation Tank<a class="headerlink" href="#horizontal-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id1">
 <span id="figure-horizontal-flow-tank-base"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_base.png"><img alt="Horizontal flow sedimentation tank." src="../_images/horizontal_flow_tank_base.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 122 </span><span class="caption-text">Horizontal flow sedimentation tank.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 123 </span><span class="caption-text">Horizontal flow sedimentation tank.</span></p>
 </div>
 <div class="line-block">
 <div class="line">Where:</div>
@@ -300,9 +290,9 @@
 <div class="line"><span class="math notranslate nohighlight">\(H =\)</span> height [L]</div>
 <div class="line"><span class="math notranslate nohighlight">\(A_p =\)</span> plan view area of the tank [<span class="math notranslate nohighlight">\(L^2\)</span>]</div>
 </div>
-<p>Let’s begin with a few questions that will describe our horizontal flow sedimentation tank in <a class="reference internal" href="#figure-horizontal-flow-tank-base"><span class="std std-numref">Fig. 122</span></a>. We will assume that 1) water travels uniformly from one end of the tank to the other, and 2) the particle that we are discussing is 35 <span class="math notranslate nohighlight">\(\mu m\)</span> (which is the size of particle that AguaClara plate settlers can capture).</p>
+<p>Let’s begin with a few questions that will describe our horizontal flow sedimentation tank in <a class="reference internal" href="#figure-horizontal-flow-tank-base"><span class="std std-numref">Fig. 123</span></a>. We will assume that 1) water travels uniformly from one end of the tank to the other, and 2) the particle that we are discussing is 35 <span class="math notranslate nohighlight">\(\mu m\)</span> (which is the size of particle that AguaClara plate settlers can capture).</p>
 <ol class="arabic simple">
-<li><p>How much time is required for water to pass through the tank?</p></li>
+<li>How much time is required for water to pass through the tank?</li>
 </ol>
 <p>To determine this value, we can use the given volume and flow rate information by the following relationship:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-0">
@@ -314,16 +304,16 @@
 <div class="line"><span class="math notranslate nohighlight">\(Q =\)</span> flow rate through the tank <span class="math notranslate nohighlight">\(\left[\frac{L^3}{T}\right]\)</span></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>In the “worst case scenario”, how far must a particle fall to reach the bottom of the tank?</p></li>
+<li>In the “worst case scenario”, how far must a particle fall to reach the bottom of the tank?</li>
 </ol>
 <p>The “worst case scenario” is the condition in which a particle must travel the furthest in order to be successfully captured by the sedimentation tank. We assume that particles are evenly distributed throughout the height and width of the reactor entrance. Therefore, a particle entering at the top of the entrance of the reactor would need to fall a distance of <span class="math notranslate nohighlight">\(H\)</span> to reach the bottom. Any particle entering from a position lower than the top of the tank would need to fall a distance <span class="math notranslate nohighlight">\(&lt; H\)</span>. We refer to the “worst case scenario” pathway as the “critical path” of the particle in the sedimentation tank design because this is the case which we must design to treat. The height that the particle must fall is called the “critical height”, <span class="math notranslate nohighlight">\(H_c\)</span>.</p>
 <ol class="arabic simple" start="3">
-<li><p>How fast must the particle fall?</p></li>
+<li>How fast must the particle fall?</li>
 </ol>
-<p>We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, <span class="math notranslate nohighlight">\(v_H\)</span>. Gravity is causing the particle to settle at its terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>. In order to reach the bottom, that settling velocity needs to be the capture velocity, <span class="math notranslate nohighlight">\(\bar v_c\)</span>, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in <a class="reference internal" href="#figure-horizontal-flow-tank-capture"><span class="std std-numref">Fig. 123</span></a>.</p>
+<p>We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, <span class="math notranslate nohighlight">\(v_H\)</span>. Gravity is causing the particle to settle at its terminal velocity, <span class="math notranslate nohighlight">\(v_t\)</span>. In order to reach the bottom, that settling velocity needs to be the capture velocity, <span class="math notranslate nohighlight">\(\bar v_c\)</span>, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in <a class="reference internal" href="#figure-horizontal-flow-tank-capture"><span class="std std-numref">Fig. 124</span></a>.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-horizontal-flow-tank-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_capture.png"><img alt="Horizontal flow sedimentation tank with capture velocity." src="../_images/horizontal_flow_tank_capture.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 123 </span><span class="caption-text">Horizontal flow sedimentation tank with capture velocity.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 124 </span><span class="caption-text">Horizontal flow sedimentation tank with capture velocity.</span></p>
 </div>
 <p>Capture velocity can be determined by the distance that a particle must travel and the time that the particle has to travel.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-1">
@@ -333,28 +323,28 @@
 <span class="eqno">(466)<a class="headerlink" href="#equation-sedimentation-sed-intro-2" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\bar v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}\\\bar v_c = \frac{Q}{A_p}\end{aligned}\end{align} \]</div>
 <p>Thus, we have capture velocity which is a descriptor of a sedimentation tank. It determines how fast a particle has to settle in order to be reliably captured by a particular sedimentation tank, assuming idealized flow. The capture velocity is not a particle property, but rather a sedimentation tank property.</p>
 <ol class="arabic simple" start="4">
-<li><p>Will any particles that are smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span> be captured in the sedimentation tank?</p></li>
+<li>Will any particles that are smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span> be captured in the sedimentation tank?</li>
 </ol>
 <p>This question is important because as stated in the beginning of this section, our discussion assumed that the particle in question was 35 <span class="math notranslate nohighlight">\(\mu m\)</span>. If we design a sedimentation tank to capture particles that are 35 <span class="math notranslate nohighlight">\(\mu m\)</span>, we also have to understand the impact of our design on particles smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span>.</p>
 <p>To answer this question, think about the two extremes of our reactor.</p>
 <ul class="simple">
-<li><p>We could have a small particle entering the reactor at the top, defining the critical path in the same “worst case scenario”. This particle would not be successfully captured by the tank because its terminal velocity is less than the capture velocity, meaning that it doesn’t have enough time in the reactor to settle.</p></li>
-<li><p>We could have a small particle entering the reactor near the bottom, in a “best case scenario”. In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be captured by a tank designed for particles 35 <span class="math notranslate nohighlight">\(\mu m\)</span> or larger, but it depends on the height at which they enter the reactor as shown in <a class="reference internal" href="#figure-horizontal-flow-tank-small-capture"><span class="std std-numref">Fig. 124</span></a>.</p></li>
+<li>We could have a small particle entering the reactor at the top, defining the critical path in the same “worst case scenario”. This particle would not be successfully captured by the tank because its terminal velocity is less than the capture velocity, meaning that it doesn’t have enough time in the reactor to settle.</li>
+<li>We could have a small particle entering the reactor near the bottom, in a “best case scenario”. In this case, the particle does not have a large distance to fall because it is already close to the bottom of the tank. Small particles entering the reactor may be able to be captured by a tank designed for particles 35 <span class="math notranslate nohighlight">\(\mu m\)</span> or larger, but it depends on the height at which they enter the reactor as shown in <a class="reference internal" href="#figure-horizontal-flow-tank-small-capture"><span class="std std-numref">Fig. 125</span></a>.</li>
 </ul>
 <div class="figure align-center" id="id3">
 <span id="figure-horizontal-flow-tank-small-capture"></span><a class="reference internal image-reference" href="../_images/horizontal_flow_tank_small_capture.png"><img alt="Horizontal flow sedimentation tank with critical path and small particle." src="../_images/horizontal_flow_tank_small_capture.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 124 </span><span class="caption-text">Horizontal flow sedimentation tank with critical path and small particle.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 125 </span><span class="caption-text">Horizontal flow sedimentation tank with critical path and small particle.</span></p>
 </div>
 </div>
 <div class="section" id="vertical-flow-sedimentation-tank">
 <h3>Vertical Flow Sedimentation Tank<a class="headerlink" href="#vertical-flow-sedimentation-tank" title="Permalink to this headline">¶</a></h3>
-<p>We will complete the same exercise for vertical flow sedimentation tanks shown in <a class="reference internal" href="#figure-vertical-flow-tank-base"><span class="std std-numref">Fig. 125</span></a>. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.</p>
+<p>We will complete the same exercise for vertical flow sedimentation tanks shown in <a class="reference internal" href="#figure-vertical-flow-tank-base"><span class="std std-numref">Fig. 126</span></a>. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-vertical-flow-tank-base"></span><a class="reference internal image-reference" href="../_images/vertical_flow_tank_base.png"><img alt="Vertical flow sedimentation tank." src="../_images/vertical_flow_tank_base.png" style="height: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 125 </span><span class="caption-text">Vertical flow sedimentation tank.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 126 </span><span class="caption-text">Vertical flow sedimentation tank.</span></p>
 </div>
 <ol class="arabic simple">
-<li><p>How much time is required for water to pass through the tank?</p></li>
+<li>How much time is required for water to pass through the tank?</li>
 </ol>
 <p>The answer is the same for the horizontal flow sedimentation tank because this is a property of reactor flow rate and volume.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-3">
@@ -366,12 +356,12 @@
 <div class="line"><span class="math notranslate nohighlight">\(Q =\)</span> flow rate through the tank [<span class="math notranslate nohighlight">\(\frac{L^3}{T}\)</span>]</div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>How far must a particle fall relative to the fluid to not be carried out the exit?</p></li>
+<li>How far must a particle fall relative to the fluid to not be carried out the exit?</li>
 </ol>
 <p>Note how this question is different from the question we asked for the horizontal flow sedimentation tank. In the horizontal flow sedimentation tank, particles could settle to the bottom of the reactor. We care about particles settling to the bottom because we assume that if particles hit the bottom of the reactor, then they would be captured and would not leave the reactor. Remember, the goal of sedimentation is to remove particles from suspension in water. In the vertical flow sedimentation tank, we also want to remove particles from suspension, but because there is a different geometry, we are now interested in the relative movement of particle to water. If a particle is falling due to the forces of gravity, but also water is pushing up on it, the only way for a particle to remain in the reactor is if it either falls at the same velocity or faster than the water is pushing it.</p>
 <p>If a particle is falling at the same velocity that water is moving it, it will be stationary in the reactor. Water flowing through the reactor moves a distance <span class="math notranslate nohighlight">\(H\)</span> in time <span class="math notranslate nohighlight">\(\theta\)</span>, which means that a stationary particle must settle the same distance <span class="math notranslate nohighlight">\(H\)</span> in the same time <span class="math notranslate nohighlight">\(\theta\)</span>. Therefore, the answer is <span class="math notranslate nohighlight">\(H\)</span>.</p>
 <ol class="arabic simple" start="3">
-<li><p>How fast must the particle fall (relative to the fluid)?</p></li>
+<li>How fast must the particle fall (relative to the fluid)?</li>
 </ol>
 <p>We determined in the previous question that a particle must fall a distance <span class="math notranslate nohighlight">\(H\)</span> in time <span class="math notranslate nohighlight">\(\theta\)</span>. Therefore, we determine the same capture velocity for vertical flow sedimentation tanks as for horizontal flow sedimentation tanks.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-intro-4">
@@ -384,7 +374,7 @@
 <span class="eqno">(470)<a class="headerlink" href="#equation-sedimentation-sed-intro-6" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{Q}{A_p}\]</div>
 <p>It doesn’t matter whether water is flowing horizontally or vertically in the tank. What determines the capture velocity is the flow rate and the plan view area of the sedimentation tank.</p>
 <ol class="arabic simple" start="4">
-<li><p>Will any particles that are smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span> be captured in the sedimentation tank?</p></li>
+<li>Will any particles that are smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span> be captured in the sedimentation tank?</li>
 </ol>
 <p>This question is surprisingly complex because we have to consider what we have learned so far about sedimentation and also recall what we have learned about flocculation.</p>
 <p>Let’s start with the simple sedimentation approach. We can compare the vertical flow sedimentation tank with the horizontal flow sedimentation tank. In a horizontal flow tank, the capture of particles smaller than the design particle (35 <span class="math notranslate nohighlight">\(\mu m\)</span>) is possible depending on the height which the particle enters the reactor. In a vertical flow tank, all particles enter the reactor at the same height (which is the bottom of the tank). This means that any particle entering the reactor will need to fall the same distance <span class="math notranslate nohighlight">\(H\)</span> in time <span class="math notranslate nohighlight">\(\theta\)</span> relative to the water if it will be captured. If particles smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span> enter the reactor, they will not be captured because they are not able to settle fast enough.</p>
@@ -393,10 +383,10 @@
 <p>Now that we understand differential settling and the potential for flocculation in a sedimentation tank, let’s revisit the original question. Can smaller particles be captured? The answer is that smaller particles can be captured only if they collide with other particles and grow so that they have a terminal velocity that is greater than the capture velocity. This flocculation that happens in the sedimentation tank is an additional mechanism for removing particles.</p>
 <p>There are some important differences between horizontal and vertical sedimentation tanks. Many of these points will be discussed next when we learn specifically about the <a class="reference internal" href="Sed_Design.html#heading-sed-design"><span class="std std-ref">AguaClara design process</span></a>, but it is important to get introduced to these ideas now:</p>
 <ul class="simple">
-<li><p>vertical flow tanks require careful attention to the delivery of water in the bottom of the tank and the extraction of water in the top of the tank;</p></li>
-<li><p>vertical and horizontal flow tanks may have different velocities and turbulence capacities due to plan view areas;</p></li>
-<li><p>research on tube settlers by <a class="reference external" href="https://www.brentwoodindustries.com/water-wastewater-products/tube-settlers/">Brentwood Industries</a> suggests that settle capture velocities should be 0.12 - 0.36 mm/s;</p></li>
-<li><p>research on horizontal flow tanks in <em>Surface Water Treatment for Communities in Developing Countries</em> by Schulz and Okun suggests that settle capture velocities should be 0.24 - 0.72 mm/s.</p></li>
+<li>vertical flow tanks require careful attention to the delivery of water in the bottom of the tank and the extraction of water in the top of the tank;</li>
+<li>vertical and horizontal flow tanks may have different velocities and turbulence capacities due to plan view areas;</li>
+<li>research on tube settlers by <a class="reference external" href="https://www.brentwoodindustries.com/water-wastewater-products/tube-settlers/">Brentwood Industries</a> suggests that settle capture velocities should be 0.12 - 0.36 mm/s;</li>
+<li>research on horizontal flow tanks in <em>Surface Water Treatment for Communities in Developing Countries</em> by Schulz and Okun suggests that settle capture velocities should be 0.24 - 0.72 mm/s.</li>
 </ul>
 <p>With this understanding of the basic principles of sedimentation, we will transition to a discussion of AguaClara innovations.</p>
 </div>
@@ -416,29 +406,29 @@
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Sed_Design.html" class="btn btn-neutral float-right" title="Sedimentation Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../Flocculation/Floc_Design_Solution.html" class="btn btn-neutral float-left" title="Flocculator Design Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+        <a href="Sed_Design.html" class="btn btn-neutral float-right" title="Sedimentation Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Flocculation/Floc_Design_Solution.html" class="btn btn-neutral" title="Flocculator Design Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -447,16 +437,34 @@
   </div>
   
 
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'EXPERIMENTAL',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

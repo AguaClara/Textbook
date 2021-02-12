@@ -1,57 +1,51 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Flow Control and Measurement Design &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script async="async" src="../_static/mathjax_config.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Flow Control and Measurement Derivations" href="FCM_Derivations.html" />
     <link rel="prev" title="Flow Control and Measurement Introduction" href="FCM_Intro.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -82,7 +76,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -228,7 +221,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -263,20 +255,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
       <li>Flow Control and Measurement Design</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/Flow_Control_and_Measurement/FCM_Design.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -298,32 +288,32 @@
 <span id="heading-fcm-terms-eqs"></span><h2>Important Terms and Equations<a class="headerlink" href="#important-terms-and-equations" title="Permalink to this headline">¶</a></h2>
 <p><strong>Terms:</strong></p>
 <ol class="arabic simple">
-<li><p>Dose</p></li>
-<li><p>Coagulant</p></li>
-<li><p>Chlorination</p></li>
-<li><p>Turbidity</p></li>
-<li><p>Organic Matter</p></li>
-<li><p>Constant Head Tank</p></li>
-<li><p>Sutro weir</p></li>
+<li>Dose</li>
+<li>Coagulant</li>
+<li>Chlorination</li>
+<li>Turbidity</li>
+<li>Organic Matter</li>
+<li>Constant Head Tank</li>
+<li>Sutro weir</li>
 </ol>
 <p><strong>Equations:</strong></p>
 <ol class="arabic simple">
-<li><p>Hagen-Poiseuille equation</p></li>
+<li>Hagen-Poiseuille equation</li>
 </ol>
 </div>
 <div class="section" id="aguaclara-flow-control-and-measurement-technologies">
 <span id="heading-aguaclara-flow-control-and-measurement-technologies"></span><h2>AguaClara Flow Control and Measurement Technologies<a class="headerlink" href="#aguaclara-flow-control-and-measurement-technologies" title="Permalink to this headline">¶</a></h2>
 <p>Each technology or component for this section will have five subsections:</p>
 <ul class="simple">
-<li><p><strong>What it is</strong></p></li>
-<li><p><strong>What it does and why</strong></p></li>
-<li><p><strong>How it works</strong></p></li>
-<li><p><strong>Notes</strong></p></li>
+<li><strong>What it is</strong></li>
+<li><strong>What it does and why</strong></li>
+<li><strong>How it works</strong></li>
+<li><strong>Notes</strong></li>
 </ul>
 <p>Before diving into the technologies, recall the purpose of the chemicals that we are seeking to constantly <strong>dose</strong>, and why it is important to keep a constant, specific dose. Also recall that ‘dose’ means ‘concentration of chemical’ <em>in the water we are trying to treat</em>, not in the stock tanks of the chemicals. <a class="reference external" href="https://en.wikipedia.org/wiki/Coagulation_(water_treatment)">Coagulant</a> like alum, PAC, and some iron-based chemicals are used to turn small particles into bigger particles, allowing them to be captured more easily. Waters with high <a class="reference external" href="https://en.wikipedia.org/wiki/Turbidity">turbidity</a>, indicative of a lot of particles like clay and bacteria, require more coagulant to treat effectively. Additionally, waters with a lot of <a class="reference external" href="https://en.wikipedia.org/wiki/Organic_matter">organic matter</a> require significantly more coagulant to treat. <a class="reference external" href="https://en.wikipedia.org/wiki/Water_chlorination">Chlorine</a> is used to disinfect water that has already been fully treated. A proper and consistent chlorine dose is required, as too low of a dose creates a risk of reintroduction of pathogens in the distribution system and too high of a dose increases the risk of carcinogenic <a class="reference external" href="https://en.wikipedia.org/wiki/Disinfection_by-product">disinfection byproduct</a> formation.</p>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>This section will often refer to the proportionality between flow <span class="math notranslate nohighlight">\(Q\)</span> and head <span class="math notranslate nohighlight">\(\Delta h\)</span> (recall that <span class="math notranslate nohighlight">\(\Delta h = h_L\)</span> after applying the head loss trick) by using the ‘proportional to’ symbol, <span class="math notranslate nohighlight">\(\propto\)</span>. It is important to remember that it doesn’t necessarily matter whether <span class="math notranslate nohighlight">\(Q\)</span> or <span class="math notranslate nohighlight">\(h_L\)</span> goes first, <span class="math notranslate nohighlight">\(Q \propto \sqrt{h_L}\)</span> is equivalent to saying that <span class="math notranslate nohighlight">\(h_L \propto Q^2\)</span>.</p>
+<p class="first admonition-title">Important</p>
+<p class="last">This section will often refer to the proportionality between flow <span class="math notranslate nohighlight">\(Q\)</span> and head <span class="math notranslate nohighlight">\(\Delta h\)</span> (recall that <span class="math notranslate nohighlight">\(\Delta h = h_L\)</span> after applying the head loss trick) by using the ‘proportional to’ symbol, <span class="math notranslate nohighlight">\(\propto\)</span>. It is important to remember that it doesn’t necessarily matter whether <span class="math notranslate nohighlight">\(Q\)</span> or <span class="math notranslate nohighlight">\(h_L\)</span> goes first, <span class="math notranslate nohighlight">\(Q \propto \sqrt{h_L}\)</span> is equivalent to saying that <span class="math notranslate nohighlight">\(h_L \propto Q^2\)</span>.</p>
 </div>
 <div class="section" id="almost-linear-flow-controller">
 <span id="heading-almost-linear-flow-controller"></span><h3>“Almost Linear” Flow Controller<a class="headerlink" href="#almost-linear-flow-controller" title="Permalink to this headline">¶</a></h3>
@@ -346,8 +336,8 @@
 <div class="section" id="notes">
 <h4>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><p>This flow controller is <strong>no longer used by AguaClara.</strong></p></li>
-<li><p>The tube connecting the CHT to the outlet of chemicals must be very long and, more importantly, <strong>straight</strong> to form a linear relationship between driving head and flow. This linear relationship was not true for the “Almost Linear” Flow Controller, and is why it was replaced by the Linear Chemical Dose Controller (CDC). The CDC will be covered in more depth later on in this section.</p></li>
+<li>This flow controller is <strong>no longer used by AguaClara.</strong></li>
+<li>The tube connecting the CHT to the outlet of chemicals must be very long and, more importantly, <strong>straight</strong> to form a linear relationship between driving head and flow. This linear relationship was not true for the “Almost Linear” Flow Controller, and is why it was replaced by the Linear Chemical Dose Controller (CDC). The CDC will be covered in more depth later on in this section.</li>
 </ul>
 </div>
 </div>
@@ -358,7 +348,7 @@
 <p>The LFOM is a weir shape cut into a pipe. It was meant to imitate <a class="reference external" href="https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research">the Sutro Weir</a> while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.</p>
 <div class="figure align-center" id="id9">
 <span id="figure-sutro-v-lfom"></span><a class="reference internal image-reference" href="../_images/sutro_v_lfom.png"><img alt="A sutro weir and an LFOM" src="../_images/sutro_v_lfom.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span></p>
 </div>
 </div>
 <div class="section" id="id2">
@@ -368,8 +358,8 @@
 <p><strong>The LFOM creates a linear relationship between water level in the entrance tank and the flow out of the entrance tank.</strong> <em>It does not control the flow through the plant</em>. If the LFOM were replaced with a hole in the bottom of the entrance tank, the same flow rate would go through the plant, the only difference being that the water level in the entrance tank would scale with flow squared <span class="math notranslate nohighlight">\(h \propto Q^2\)</span> instead of <span class="math notranslate nohighlight">\(h \propto Q\)</span>. For example, if an LFOM has 10 rows of holes and has been designed for a plant whose maximum flow rate is 10 L/s, then the operator knows that the number of rows submerged in water is equal to the flow rate of the plant in L/s. So if the water were up to the third row of holes, there would be 3 L/s of water flowing through the plant.</p>
 <p>Why it is useful:</p>
 <ol class="arabic simple">
-<li><p>Allows the operator to measure the flow through the plant quickly and easily, explained above.</p></li>
-<li><p>Allows for the Linear Chemical Dose Controller, which will be explained next, to automatically adjust the flow of coagulant/chlorine into the plant as the plant flow rate changes. This means the operator would only need to adjust the flow of coagulant when there is a change in turbidity or organic matter.</p></li>
+<li>Allows the operator to measure the flow through the plant quickly and easily, explained above.</li>
+<li>Allows for the Linear Chemical Dose Controller, which will be explained next, to automatically adjust the flow of coagulant/chlorine into the plant as the plant flow rate changes. This means the operator would only need to adjust the flow of coagulant when there is a change in turbidity or organic matter.</li>
 </ol>
 </div>
 <div class="section" id="id3">
@@ -382,8 +372,8 @@
 <div class="section" id="id4">
 <h4>Notes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><p>The LFOM is not perfect. Before the water level reaches the second row of holes, the LFOM is simulating a rectangular weir, and thus <span class="math notranslate nohighlight">\(h \not\propto Q\)</span>. The Sutro weir also experiences this problem.</p></li>
-<li><p>If the water level exceeds the topmost row of the LFOM’s orifices, the linearity also breaks down. The entire LFOM begins to act like an orifice, the exponent of <span class="math notranslate nohighlight">\(Q\)</span> in <span class="math notranslate nohighlight">\(h \propto Q\)</span> becomes greater than 1. This is because the LFOM approaches orifice behavior, and for orifices, <span class="math notranslate nohighlight">\(h \propto Q^2\)</span>.</p></li>
+<li>The LFOM is not perfect. Before the water level reaches the second row of holes, the LFOM is simulating a rectangular weir, and thus <span class="math notranslate nohighlight">\(h \not\propto Q\)</span>. The Sutro weir also experiences this problem.</li>
+<li>If the water level exceeds the topmost row of the LFOM’s orifices, the linearity also breaks down. The entire LFOM begins to act like an orifice, the exponent of <span class="math notranslate nohighlight">\(Q\)</span> in <span class="math notranslate nohighlight">\(h \propto Q\)</span> becomes greater than 1. This is because the LFOM approaches orifice behavior, and for orifices, <span class="math notranslate nohighlight">\(h \propto Q^2\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -394,28 +384,27 @@
 <h4>What it is<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <p>The CDC brings together the LFOM and many improvements to the “Almost Linear” Flow Controller. Let’s break it down, with the image below as a guide.</p>
 <ol class="arabic simple">
-<li><p>Start at the Constant Head Tank (CHT). This is the same set up as the “Almost Linear” Flow Controller. The stock tank feeds into the CHT, and the float valve makes sure that the water level in the constant head tank is always the same.</p></li>
+<li>Start at the Constant Head Tank (CHT). This is the same set up as the “Almost Linear” Flow Controller. The stock tank feeds into the CHT, and the float valve makes sure that the water level in the constant head tank is always the same.</li>
 </ol>
 <p>2. Now the tubes. These fix the linearity problems that were the main problem in the “Almost Linear” Flow Controller.
 * The tube connected to the bottom of the CHT is large diameter to minimize any head loss through it.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>The three thin, straight tubes are designed to generate a lot of major losses and to minimize any minor losses. This is to make sure that major losses far exceed any minor losses, which will ensure that the Hagen-Poiseuille equation is applicable and that flow will be directly proportional to the head, <span class="math notranslate nohighlight">\(Q \propto \Delta h\)</span>. Why are there 3 tubes?</p>
-<ol class="arabic simple">
-<li><p><strong>3 short instead of 1 short</strong> Removing 2 of the 3 tubes would mean 3 times the flow through the remaining tube. This means the velocity in the tube would be 3 times as fast. Since minor losses scale with <span class="math notranslate nohighlight">\(v^2\)</span> and major losses only scale with <span class="math notranslate nohighlight">\(v\)</span>, this would increase the ratio of <span class="math notranslate nohighlight">\(\rm{\frac{minor \, losses}{major \, losses}}\)</span>, which would break the linearity we’re trying to achieve. It would also increase the total head loss through the system, resulting in a lower maximum flow rate than before.</p></li>
-<li><p><strong>1 long instead of 3 short</strong> One tube whose length is equal to the three combined would be inconveniently long, and would suffer from the same problems as above. There would be even more head loss through the tube, since its length would be longer.</p></li>
+<li>The three thin, straight tubes are designed to generate a lot of major losses and to minimize any minor losses. This is to make sure that major losses far exceed any minor losses, which will ensure that the Hagen-Poiseuille equation is applicable and that flow will be directly proportional to the head, <span class="math notranslate nohighlight">\(Q \propto \Delta h\)</span>. Why are there 3 tubes?<ol class="arabic">
+<li><strong>3 short instead of 1 short</strong> Removing 2 of the 3 tubes would mean 3 times the flow through the remaining tube. This means the velocity in the tube would be 3 times as fast. Since minor losses scale with <span class="math notranslate nohighlight">\(v^2\)</span> and major losses only scale with <span class="math notranslate nohighlight">\(v\)</span>, this would increase the ratio of <span class="math notranslate nohighlight">\(\rm{\frac{minor \, losses}{major \, losses}}\)</span>, which would break the linearity we’re trying to achieve. It would also increase the total head loss through the system, resulting in a lower maximum flow rate than before.</li>
+<li><strong>1 long instead of 3 short</strong> One tube whose length is equal to the three combined would be inconveniently long, and would suffer from the same problems as above. There would be even more head loss through the tube, since its length would be longer.</li>
 </ol>
 </li>
-<li><p>The large-diameter tube on the right of the three thin, straight tubes is where the chemicals flow out. The end of the tube is connected to both a slider and a ‘drop tube.’ The drop tube allows for supercritical flow of the chemical leaving the dosing tubes; once the chemical enters the drop tube it falls freely and no longer affects the CDC system.</p></li>
+<li>The large-diameter tube on the right of the three thin, straight tubes is where the chemicals flow out. The end of the tube is connected to both a slider and a ‘drop tube.’ The drop tube allows for supercritical flow of the chemical leaving the dosing tubes; once the chemical enters the drop tube it falls freely and no longer affects the CDC system.</li>
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li><p>The slider rests on a lever. This lever is the critical part of the CDC, it connects the water level in the entrance tank, which is adjusted by the LFOM, to the difference in head between the CHT and the end of the dosing tube. This allows the flow of chemicals to automatically adjust to a change in the plant flow rate, maintaining a constant dose in the plant water. One end of the lever tracks the water level in the entrance tank by using a float. The counterweight on the other side of the lever is to make sure the float ‘floats,’ since this float is usually made of PVC, which is more dense than water.</p></li>
-<li><p>The slider itself controls the dose of chemicals. For any given plant flow rate, the slider can be adjusted to increase or decrease the amount of chemical flowing through the plant.</p></li>
+<li>The slider rests on a lever. This lever is the critical part of the CDC, it connects the water level in the entrance tank, which is adjusted by the LFOM, to the difference in head between the CHT and the end of the dosing tube. This allows the flow of chemicals to automatically adjust to a change in the plant flow rate, maintaining a constant dose in the plant water. One end of the lever tracks the water level in the entrance tank by using a float. The counterweight on the other side of the lever is to make sure the float ‘floats,’ since this float is usually made of PVC, which is more dense than water.</li>
+<li>The slider itself controls the dose of chemicals. For any given plant flow rate, the slider can be adjusted to increase or decrease the amount of chemical flowing through the plant.</li>
 </ol>
 <div class="figure align-center" id="id10">
 <span id="figure-cdc-labelled"></span><a class="reference internal image-reference" href="../_images/cdc_labelled.png"><img alt="CDC Displayed" src="../_images/cdc_labelled.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">This is the setup of the chemical dose controller.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">This is the setup of the chemical dose controller.</span></p>
 </div>
 </div>
 <div class="section" id="id6">
@@ -427,38 +416,38 @@
 <p>A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: <a class="reference internal" href="FCM_Derivations.html#heading-design-equations-for-the-cdc"><span class="std std-ref">Design Equations for the Linear Chemical Dose Controller (CDC)</span></a>, and you are very, very strongly encouraged to read them.</p>
 <p>The CDC can be designed manually using the equations from the derivation linked above or via aguaclara, using the equations found in <a class="reference external" href="https://github.com/AguaClara/aguaclara">cdc_functions.py</a>. Either way, the design algorithm is roughly the same:</p>
 <ol class="arabic simple">
-<li><p>Calculate the maximum flow rate, <span class="math notranslate nohighlight">\(Q_{Max, \, Tube}\)</span>, through each available dosing tube diameter <span class="math notranslate nohighlight">\(D\)</span> that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.</p></li>
+<li>Calculate the maximum flow rate, <span class="math notranslate nohighlight">\(Q_{Max, \, Tube}\)</span>, through each available dosing tube diameter <span class="math notranslate nohighlight">\(D\)</span> that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-0">
 <span class="eqno">(72)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
 <ol class="arabic simple" start="2">
-<li><p>Calculate how much flow of chemical needs to pass through the CDC at maximum plant flow and maximum chemical dose. This depends on the concentration of chemicals in the stock tank.</p></li>
+<li>Calculate how much flow of chemical needs to pass through the CDC at maximum plant flow and maximum chemical dose. This depends on the concentration of chemicals in the stock tank.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-1">
 <span class="eqno">(73)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
 <ol class="arabic simple" start="3">
-<li><p>Calculate the number of dosing tubes required if the tubes flow at  maximum capacity (round up)</p></li>
+<li>Calculate the number of dosing tubes required if the tubes flow at  maximum capacity (round up)</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-2">
 <span class="eqno">(74)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
 <ol class="arabic simple" start="4">
-<li><p>Calculate the length of dosing tube(s) that correspond to each available tube diameter.</p></li>
+<li>Calculate the length of dosing tube(s) that correspond to each available tube diameter.</li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-3">
 <span class="eqno">(75)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-3" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
 <ol class="arabic simple" start="5">
-<li><p>Select a tube length from your array of solutions. Pick the longest dosing tube that you can, keeping in mind that the tube(s) must be able to fit in the plant and can’t be longer than the length of the plant wall it will be placed along.</p></li>
-<li><p>Finally, select the dosing tube diameter and flow rate corresponding to the selected tube length.</p></li>
+<li>Select a tube length from your array of solutions. Pick the longest dosing tube that you can, keeping in mind that the tube(s) must be able to fit in the plant and can’t be longer than the length of the plant wall it will be placed along.</li>
+<li>Finally, select the dosing tube diameter and flow rate corresponding to the selected tube length.</li>
 </ol>
 </div>
 </div>
 <div class="section" id="kinematic-viscosity-of-coagulants">
 <h3>Kinematic Viscosity of Coagulants<a class="headerlink" href="#kinematic-viscosity-of-coagulants" title="Permalink to this headline">¶</a></h3>
 <p>AguaClara plants currently use either alum (aluminum sulfate) or PACl (polyaluminum chloride) solutions that are prepared from granular chemicals. The viscosity of solutions created from granular alum and PACl were measured using a SV - 10 Vibro Viscometer. The results are shown below.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="kn">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="c1"># the following concentrations were prepared for each chemical</span>
 <span class="n">Measured_C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
 <span class="n">Measured_C</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
@@ -491,8 +480,8 @@
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Measured_C</span><span class="p">,</span> <span class="n">Measured_Viscosity_Kinematic_PACl</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Measured_C</span><span class="p">,</span> <span class="n">PACl_Viscosity_Kinematic</span><span class="p">(</span><span class="n">Measured_C</span><span class="p">,</span> <span class="n">temperature</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Coagulant concentration prepared from granules &#39;</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;$\left[\frac{g}{L}\right]$&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Kinematic Viscosity &#39;</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;$\left[\frac{mm^2}{s}\right]$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Coagulant concentration prepared from granules &#39;</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;$\left[\frac</span><span class="si">{g}{L}</span><span class="s1">\right]$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Kinematic Viscosity &#39;</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;$\left[\frac{mm^2}</span><span class="si">{s}</span><span class="s1">\right]$&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Alum data&#39;</span><span class="p">,</span><span class="s1">&#39;Alum model&#39;</span><span class="p">,</span> <span class="s1">&#39;PACl data&#39;</span><span class="p">,</span><span class="s1">&#39;PACl model&#39;</span><span class="p">])</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Flow_Control_and_Measurement/Images/Coagulant_Viscosity&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -504,15 +493,15 @@
 <p>This analysis is incomplete in that we don’t know the aluminum concentration of these coagulant solutions.</p>
 <div class="figure align-center" id="id11">
 <span id="figure-coagulant-viscosity-kinematic"></span><a class="reference internal image-reference" href="../_images/Coagulant_Viscosity.png"><img alt="internal figure" src="../_images/Coagulant_Viscosity.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">The viscosity of solutions prepared from granular aluminum sulfate and polyaluminum chloride. The concentration is the mass of granules per volume of solution.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">The viscosity of solutions prepared from granular aluminum sulfate and polyaluminum chloride. The concentration is the mass of granules per volume of solution.</span></p>
 </div>
 <div class="section" id="id8">
 <h4>Notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <p>Nothing in life is perfect, and the CDC is no exception. It has a few causes of inaccuracy which go beyond non-zero minor losses:</p>
 <ul class="simple">
-<li><p>Float valves are not perfect. There will still be minor fluctuations of the fluid level in the CHT which will result in imperfect dosing.</p></li>
-<li><p>Surface tension may resist the flow of chemicals from the dosing tube into the drop tube during low flows. Since the CDC design does not consider surface tension, this is a potential source of error.</p></li>
-<li><p>The lever and everything attached to it are not weightless. Changing the dose of coagulant or chlorine means moving the slider along the lever. Since the slider and tubes attached to it (drop tube, dosing tube) have mass, moving the slider means that the torque of the lever is altered. This means that the depth that the float is submerged is changed, which affects <span class="math notranslate nohighlight">\(\Delta h\)</span> of the system. This can be remedied by making the float’s diameter as large as possible, which makes these fluctuations small. This problem can not be avoided entirely.</p></li>
+<li>Float valves are not perfect. There will still be minor fluctuations of the fluid level in the CHT which will result in imperfect dosing.</li>
+<li>Surface tension may resist the flow of chemicals from the dosing tube into the drop tube during low flows. Since the CDC design does not consider surface tension, this is a potential source of error.</li>
+<li>The lever and everything attached to it are not weightless. Changing the dose of coagulant or chlorine means moving the slider along the lever. Since the slider and tubes attached to it (drop tube, dosing tube) have mass, moving the slider means that the torque of the lever is altered. This means that the depth that the float is submerged is changed, which affects <span class="math notranslate nohighlight">\(\Delta h\)</span> of the system. This can be remedied by making the float’s diameter as large as possible, which makes these fluctuations small. This problem can not be avoided entirely.</li>
 </ul>
 </div>
 </div>
@@ -527,17 +516,17 @@
 <div class="section" id="section-summary">
 <span id="heading-fcm-section-summary"></span><h2>Section Summary<a class="headerlink" href="#section-summary" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><p><strong>Tank with a valve:</strong></p></li>
+<li><strong>Tank with a valve:</strong></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-5">
 <span class="eqno">(77)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-5" title="Permalink to this equation">¶</a></span>\[\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\]</div>
 <p>This equation describes flow <span class="math notranslate nohighlight">\(Q\)</span> as a function of time <span class="math notranslate nohighlight">\(t\)</span> of a fluid leaving a tank through a valve. Attempting to get this ‘tank with a valve’ system to yield constant head means raising the tank far, far above the valve that controls the flow. This is unreasonable when designing a flow control system for constant dosing, but can be used to design systems to drain a tank. See the section above for a description of the variables in the equation.</p>
 <ol class="arabic simple" start="2">
-<li><p><strong>LFOM:</strong> The LFOM makes the water level in the entrance tank linear with respect to the flow out of the entrance tank. This is useful in measuring the flow and is a critical component in AguaClara’s chemical dosing system. The LFOM <em>measures</em> the flow through the plant, it does not <em>control</em> the flow through the plant.</p></li>
-<li><p><strong>The Linear Chemical Dose Controller (CDC)</strong> combines the:
+<li><strong>LFOM:</strong> The LFOM makes the water level in the entrance tank linear with respect to the flow out of the entrance tank. This is useful in measuring the flow and is a critical component in AguaClara’s chemical dosing system. The LFOM <em>measures</em> the flow through the plant, it does not <em>control</em> the flow through the plant.</li>
+<li><strong>The Linear Chemical Dose Controller (CDC)</strong> combines the:
 * linear relationship between water level and flow in the entrance tank caused by the LFOM,
 * linear relationship between elevation difference and flow caused by the Hagen-Poiseuille equation, which is only valid for major losses under laminar flow, and
-* a lever to link the two linear relationships</p></li>
+* a lever to link the two linear relationships</li>
 </ol>
 <p>To keep the chemical dose constant by automatically adjusting the addition of coagulant and chlorine as the plant flow rate varies. Two sliders on the lever allows the operator to change the dose of coagulant and chlorine independently of the plant flow rate.</p>
 </div>
@@ -545,30 +534,30 @@
 <span id="heading-fcm-important-equations"></span><h2>Important Equations<a class="headerlink" href="#important-equations" title="Permalink to this headline">¶</a></h2>
 <p>Below are a handful of equations relevant to the design of the different flow control and measurement technologies outlined in this chapter. For more context for these equations, please refer to the appropriate section in the chapter above; these equations have been copied verbatim for ease of reference. This list is not exhaustive—if there is an equation missing, please share it in the appropriate <a class="reference external" href="https://github.com/AguaClara/Textbook/issues/6">GitHub issue</a>.</p>
 <ol class="arabic simple">
-<li><p><strong>Tank with a valve:</strong></p></li>
+<li><strong>Tank with a valve:</strong></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\)</span></p></li>
+<li><span class="math notranslate nohighlight">\(\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\)</span></li>
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li><p><strong>LFOM:</strong></p></li>
+<li><strong>LFOM:</strong></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(Q \propto h\)</span></p></li>
+<li><span class="math notranslate nohighlight">\(Q \propto h\)</span></li>
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li><p><strong>Linear CDC:</strong></p></li>
+<li><strong>Linear CDC:</strong></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\)</span></p></li>
+<li><span class="math notranslate nohighlight">\(Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\)</span></li>
+<li><span class="math notranslate nohighlight">\(Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\)</span></li>
+<li><span class="math notranslate nohighlight">\(n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\)</span></li>
+<li><span class="math notranslate nohighlight">\(L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\)</span></li>
 </ul>
 </div></blockquote>
 </div>
@@ -579,29 +568,29 @@
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="FCM_Derivations.html" class="btn btn-neutral float-right" title="Flow Control and Measurement Derivations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="FCM_Intro.html" class="btn btn-neutral float-left" title="Flow Control and Measurement Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+        <a href="FCM_Derivations.html" class="btn btn-neutral float-right" title="Flow Control and Measurement Derivations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="FCM_Intro.html" class="btn btn-neutral" title="Flow Control and Measurement Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -610,16 +599,34 @@
   </div>
   
 
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'EXPERIMENTAL',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

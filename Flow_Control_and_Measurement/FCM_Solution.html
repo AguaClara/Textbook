@@ -1,57 +1,51 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Flow Control and Measurement Solution &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script async="async" src="../_static/mathjax_config.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Entrance Tank Design" href="ET_Design.html" />
     <link rel="prev" title="Flow Control and Measurement Derivations" href="FCM_Derivations.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -82,7 +76,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -232,7 +225,6 @@
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -267,20 +259,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
       <li>Flow Control and Measurement Solution</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/Flow_Control_and_Measurement/FCM_Solution.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -300,13 +290,13 @@
 <h2>A brief programming guide<a class="headerlink" href="#a-brief-programming-guide" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Do not use a numerical or iterative solution when an analytical solution is easily available.</p></li>
-<li><p>Whenever a function has the potential to be used multiple times, create a function call that includes the parameters that could potentially change.</p></li>
-<li><p>Do not break dependency. That means that if I change an input parameter at the top of your worksheet, that I should get the correct answers for the new parameter for all related calculations in the worksheet.</p></li>
-<li><p>Always use dimensions (units). All calculations involving physical units must include those units.</p></li>
-<li><p>Document your design process with comments.</p></li>
-<li><p>Do not redefine your variables in subsequent problems. This loses valuable digits of precision on your numbers and can cause a lot of trouble and frustration.</p></li>
-<li><p>For everyone’s sake, use logical and reasonable variable names. <a class="reference external" href="https://github.com/AguaClara/aguaclara/wiki/Design-Variable-Naming-Conventions">Here is AguaClara variable naming convention</a></p></li>
+<li>Do not use a numerical or iterative solution when an analytical solution is easily available.</li>
+<li>Whenever a function has the potential to be used multiple times, create a function call that includes the parameters that could potentially change.</li>
+<li>Do not break dependency. That means that if I change an input parameter at the top of your worksheet, that I should get the correct answers for the new parameter for all related calculations in the worksheet.</li>
+<li>Always use dimensions (units). All calculations involving physical units must include those units.</li>
+<li>Document your design process with comments.</li>
+<li>Do not redefine your variables in subsequent problems. This loses valuable digits of precision on your numbers and can cause a lot of trouble and frustration.</li>
+<li>For everyone’s sake, use logical and reasonable variable names. <a class="reference external" href="https://github.com/AguaClara/aguaclara/wiki/Design-Variable-Naming-Conventions">Here is AguaClara variable naming convention</a></li>
 </ol>
 </div></blockquote>
 </div>
@@ -314,16 +304,16 @@
 <h2>A brief Design Challenge guide<a class="headerlink" href="#a-brief-design-challenge-guide" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Read the Problem statement in its entirety before beginning a problem. If you don’t immediately know what to do, read it again, thoroughly. If you are getting stuck, read it a third time. If you have a good understanding of what the problem is asking and are still having trouble, TAs can help through email or office hours.</p></li>
-<li><p>If you decide to email a TA, make sure the other two are CC’ed. This minimizes the time you will have to wait until one responds.</p></li>
-<li><p>When in doubt, Kernel -&gt; Restart &amp; Run All</p></li>
-<li><p>Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km mg/s?</p></li>
+<li>Read the Problem statement in its entirety before beginning a problem. If you don’t immediately know what to do, read it again, thoroughly. If you are getting stuck, read it a third time. If you have a good understanding of what the problem is asking and are still having trouble, TAs can help through email or office hours.</li>
+<li>If you decide to email a TA, make sure the other two are CC’ed. This minimizes the time you will have to wait until one responds.</li>
+<li>When in doubt, Kernel -&gt; Restart &amp; Run All</li>
+<li>Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km mg/s?</li>
 </ol>
 </div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="kn">as</span> <span class="nn">ac</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="k">as</span> <span class="nn">ac</span>
+<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="k">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
@@ -332,7 +322,7 @@
 <div class="section" id="id1">
 <h3>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Find the vena contract (VC) coefficient ratio for an orifice in the expert_inputs and print the result in a sentence. Please display 2 significant figures.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;The vena contracta coefficient for an orifice is &#39;</span><span class="p">,</span><span class="n">ac</span><span class="o">.</span><span class="n">VC_ORIFICE_RATIO</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The vena contracta coefficient for an orifice is &#39;</span><span class="p">,</span><span class="n">ac</span><span class="o">.</span><span class="n">VC_ORIFICE_RATIO</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The vena contracta coefficient for an orifice is 0.63.</p>
@@ -346,15 +336,15 @@
 <p>The steps for making the graph are as follows:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> to generate an array of 100 dimensionless water surface elevations. The surface elevations should be normalized (also referred to as nondimensionalized) by the diameter of the orifice, and should range from -1 to 2 orifice diameters.</p></li>
-<li><p>Create a second array for water elevation (with units) by multiplying the normalized water elevation array by the orifice diameter.</p></li>
-<li><p>Create two arrays of flow rates through the orifice: one for the horizontal orifice orientation and one for the vertical orifice orientation. Use the two orifice equations <code class="docutils literal notranslate"><span class="pre">pc.flow_orifice</span></code> and <code class="docutils literal notranslate"><span class="pre">pc.flow_orifice_vert</span></code> in the physchem file, with orifice diameter and the dimensional water elevation array you created as inputs.</p></li>
-<li><p>Plot the curves for vertical and horizontal orifice flow in L/s as a function of the normalized height of water.</p></li>
-<li><p>Label the graph with flow rate in L/s as the y-axis and with normalized water elevation above the center of the orifice as the x-axis.</p></li>
-<li><p>Include a legend for the two curves.</p></li>
+<li>Use <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> to generate an array of 100 dimensionless water surface elevations. The surface elevations should be normalized (also referred to as nondimensionalized) by the diameter of the orifice, and should range from -1 to 2 orifice diameters.</li>
+<li>Create a second array for water elevation (with units) by multiplying the normalized water elevation array by the orifice diameter.</li>
+<li>Create two arrays of flow rates through the orifice: one for the horizontal orifice orientation and one for the vertical orifice orientation. Use the two orifice equations <code class="docutils literal notranslate"><span class="pre">pc.flow_orifice</span></code> and <code class="docutils literal notranslate"><span class="pre">pc.flow_orifice_vert</span></code> in the physchem file, with orifice diameter and the dimensional water elevation array you created as inputs.</li>
+<li>Plot the curves for vertical and horizontal orifice flow in L/s as a function of the normalized height of water.</li>
+<li>Label the graph with flow rate in L/s as the y-axis and with normalized water elevation above the center of the orifice as the x-axis.</li>
+<li>Include a legend for the two curves.</li>
 </ul>
 </div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">WaterElevationNormalized</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WaterElevationNormalized</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">DiamOrifice</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">WaterElevation</span> <span class="o">=</span> <span class="n">WaterElevationNormalized</span><span class="o">*</span><span class="n">DiamOrifice</span>
 
@@ -378,14 +368,14 @@
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Normalized height of water above center of the orifice&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Flow rate through the orifice (L/s)&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Horizontal Orientation&#39;</span><span class="p">,</span> <span class="s1">&#39;Vertical orientation&#39;</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Flow_Control_and_Measurement/Images/Horizontal_vs_Vertical_Orifice_Orientation&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="figure align-center" id="id22">
 <span id="figure-horizontal-vs-vertical-orifice-orientation"></span><a class="reference internal image-reference" href="../_images/Horizontal_vs_Vertical_Orifice_Orientation.png"><img alt="Horizontal vs. Vertical Orifice Orientation" src="../_images/Horizontal_vs_Vertical_Orifice_Orientation.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">Horizontal vs. Vertical Orifice Orientation</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">Horizontal vs. Vertical Orifice Orientation</span></p>
 </div>
 </div>
 <div class="section" id="id3">
@@ -410,18 +400,17 @@
 <p><strong>Create a function</strong> that calculates the flow rate through the LFOM as a function of only water elevation using the vertical orifice function. Use the arrays for LFOM key parameters, given above as <code class="docutils literal notranslate"><span class="pre">my_LFOM.orifice_diameter</span></code>, <code class="docutils literal notranslate"><span class="pre">my_LFOM.n_orifices_per_row</span></code>, and <code class="docutils literal notranslate"><span class="pre">my_LFOM.height_orifices</span></code>.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Create an array for depth of submergence for each row of orifices at a given a height of water in the LFOM. This array is dependent on the water elevation (which should be your function input) and the height of the LFOM orifices (which is from the LFOM key parameters). Use this submergence depth array as the “height” input to your vertical orifice function. The array should be created within your function.</p></li>
-<li><p>To calculate the flow rate through the LFOM, multiply the calculated flow for each row of orifices by the number of orifices in that row (<code class="docutils literal notranslate"><span class="pre">my_LFOM.n_orifices_per_row</span></code>) to get an array of flows through each row of orifices. Note: the vertical orifice function will report zero flow for any orifices that aren’t submerged, so you can send the whole array of depth of submergence for each row of orifices.</p></li>
-<li><p>At the end of your function, sum flows from each row of the LFOM and return that value with the correct units.</p></li>
-<li><p>Add a comment under the function definition to explain what the function does (see any of the aguaclara design files for examples of descriptive comments).</p></li>
+<li>Create an array for depth of submergence for each row of orifices at a given a height of water in the LFOM. This array is dependent on the water elevation (which should be your function input) and the height of the LFOM orifices (which is from the LFOM key parameters). Use this submergence depth array as the “height” input to your vertical orifice function. The array should be created within your function.</li>
+<li>To calculate the flow rate through the LFOM, multiply the calculated flow for each row of orifices by the number of orifices in that row (<code class="docutils literal notranslate"><span class="pre">my_LFOM.n_orifices_per_row</span></code>) to get an array of flows through each row of orifices. Note: the vertical orifice function will report zero flow for any orifices that aren’t submerged, so you can send the whole array of depth of submergence for each row of orifices.</li>
+<li>At the end of your function, sum flows from each row of the LFOM and return that value with the correct units.</li>
+<li>Add a comment under the function definition to explain what the function does (see any of the aguaclara design files for examples of descriptive comments).</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="id5">
 <h3>5)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>Calculate the total flow through the LFOM using the vertical orifice equation for the case when the water level is at the maximum water level for the LFOM, <code class="docutils literal notranslate"><span class="pre">HeadlossLfom</span></code>. You are checking to make sure that the LFOM produces the correct target flow (given as <code class="docutils literal notranslate"><span class="pre">Flow</span></code>) at the maximum height. Does it?</p>
-</div></blockquote>
+<div>Calculate the total flow through the LFOM using the vertical orifice equation for the case when the water level is at the maximum water level for the LFOM, <code class="docutils literal notranslate"><span class="pre">HeadlossLfom</span></code>. You are checking to make sure that the LFOM produces the correct target flow (given as <code class="docutils literal notranslate"><span class="pre">Flow</span></code>) at the maximum height. Does it?</div></blockquote>
 </div>
 <div class="section" id="id6">
 <h3>6)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
@@ -429,22 +418,24 @@
 <div><p>We want to compare the actual flow rate through the LFOM to the expected flow rate through the elevation as a function of water depth. Create a graph of the normalized actual and expected flow rates, using the following steps:</p>
 <blockquote>
 <div><ul>
-<li><p>Create an 100-unit long array of water depths using <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code>. Note: the expected flow rate at elevation zero is zero, which makes the normalized flow rate undefined for zero elevation. An undefined normalized flow will not run and Python will report an error. You can solve this by beginning your water depth array at a very small (nonzero) elevation. You can end your water depth array at the maximum water depth. Recall that an array of elevations should have units of length.</p></li>
-<li><p>Create an array of normalized actual flow rates at each water depth; use the function you created in Problem 4 and a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop (the function you created in Problem 4 probably can’t handle an array of depths as input, so you need the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to cycle through each depth value to make your array of flows).</p>
+<li><p class="first">Create an 100-unit long array of water depths using <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code>. Note: the expected flow rate at elevation zero is zero, which makes the normalized flow rate undefined for zero elevation. An undefined normalized flow will not run and Python will report an error. You can solve this by beginning your water depth array at a very small (nonzero) elevation. You can end your water depth array at the maximum water depth. Recall that an array of elevations should have units of length.</p>
+</li>
+<li><p class="first">Create an array of normalized actual flow rates at each water depth; use the function you created in Problem 4 and a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop (the function you created in Problem 4 probably can’t handle an array of depths as input, so you need the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to cycle through each depth value to make your array of flows).</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Start by creating an empty array for actual flow rates that is the same shape as the 100-unit water depth array you just created.</p></li>
-<li><p>In your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, normalize the actual flow rates by using the following relationship: normalized actual flow rate = (actual flow rate)/[(water depth * target flow rate)/maximum water level]</p></li>
+<li>Start by creating an empty array for actual flow rates that is the same shape as the 100-unit water depth array you just created.</li>
+<li>In your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, normalize the actual flow rates by using the following relationship: normalized actual flow rate = (actual flow rate)/[(water depth * target flow rate)/maximum water level]</li>
 </ul>
 </div></blockquote>
 </li>
-<li><p>Plot a straight horizontal line at y = 1, which is your normalized expected flow value if the LFOM were perfect.</p></li>
+<li><p class="first">Plot a straight horizontal line at y = 1, which is your normalized expected flow value if the LFOM were perfect.</p>
+</li>
 </ul>
 </div></blockquote>
 </div></blockquote>
 <div class="figure align-center" id="id23">
 <span id="figure-normalized-flow-rate-vs-water-depth"></span><a class="reference internal image-reference" href="../_images/Normalized_Flow_Rate_vs_Water_Depth.png"><img alt="Normalized Flow Rate vs. Water Depth" src="../_images/Normalized_Flow_Rate_vs_Water_Depth.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">Normalized Flow Rate vs. Water Depth</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 43 </span><span class="caption-text">Normalized Flow Rate vs. Water Depth</span></p>
 </div>
 </div>
 <div class="section" id="id7">
@@ -468,15 +459,15 @@
 <p>You may assume that the chlorine stock solution kinematic viscosity is approximately the same as water. The dose controller is to have a maximum head loss of 20 cm through the dosing tubes. We will start with commercially available liquid bleach (equivalent to 51.4 gm/L of chlorine gas), which we will use in our chemical stock tanks without dilution. Our goal is to provide a constant chlorine dose of 2 mg/L to the water entering the storage tank. We will be following the guidelines given below.</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Calculate the maximum fow rate through each available dosing tube diameter that keeps error due to minor losses below 10%.</p></li>
-<li><p>Calculate the total chemical flow rate that would be required by the treatment system for the maximum chemical dose and the maximum allowable stock concentration.</p></li>
-<li><p>Calculate the number of dosing tubes required if the tubes flow at maximum capacity (round up).</p></li>
-<li><p>Calculate the length of the dosing tubes that correspond to each available tube diameter.</p></li>
-<li><p>Select the longest dosing tube that is shorter than the maximum tube length allowable based on geometric constraints.</p></li>
-<li><p>Select the dosing tube diameter, flow rate, and stock concentration corresponding to the selected tube length.</p></li>
+<li>Calculate the maximum fow rate through each available dosing tube diameter that keeps error due to minor losses below 10%.</li>
+<li>Calculate the total chemical flow rate that would be required by the treatment system for the maximum chemical dose and the maximum allowable stock concentration.</li>
+<li>Calculate the number of dosing tubes required if the tubes flow at maximum capacity (round up).</li>
+<li>Calculate the length of the dosing tubes that correspond to each available tube diameter.</li>
+<li>Select the longest dosing tube that is shorter than the maximum tube length allowable based on geometric constraints.</li>
+<li>Select the dosing tube diameter, flow rate, and stock concentration corresponding to the selected tube length.</li>
 </ol>
 </div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">FlowPlant</span> <span class="o">=</span> <span class="mi">50</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FlowPlant</span> <span class="o">=</span> <span class="mi">50</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">T</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">NuBleach</span> <span class="o">=</span> <span class="n">ac</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
 <span class="n">HeadlossDosingTubeMax</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
@@ -489,8 +480,8 @@
 <div class="section" id="id10">
 <h3>11)<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>At the given water treatment plant design flow rate, what is the required flow of bleach (the chlorine stock solution)?</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">FlowStockClMax</span> <span class="o">=</span> <span class="p">(</span><span class="n">FlowPlant</span> <span class="o">*</span> <span class="n">DoseCl2</span> <span class="o">/</span> <span class="n">StockCl2</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The required flow of bleach is&#39;</span><span class="p">,</span> <span class="n">FlowStockClMax</span><span class="p">)</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FlowStockClMax</span> <span class="o">=</span> <span class="p">(</span><span class="n">FlowPlant</span> <span class="o">*</span> <span class="n">DoseCl2</span> <span class="o">/</span> <span class="n">StockCl2</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The required flow of bleach is&#39;</span><span class="p">,</span> <span class="n">FlowStockClMax</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The required flow of bleach is 1.95 ml/s</p>
@@ -498,7 +489,7 @@
 <div class="section" id="id11">
 <h3>12)<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <p>How many liters of liquid bleach are required in one day? (you can simply change the units on the flow rate!)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;The daily required flow of bleach is&#39;</span><span class="p">,</span><span class="n">FlowStockClMax</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The daily required flow of bleach is&#39;</span><span class="p">,</span><span class="n">FlowStockClMax</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>The daily required flow of bleach is 168.09 l/day</p>
@@ -506,8 +497,8 @@
 <div class="section" id="id12">
 <h3>13)<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <p>Our next big goal is to choose a tubing size for the dosing tube (or tubes). This requires multiple steps. Begin by first creating a numpy array of tubing sizes between 1/16” and 5/16” with a 1/16” interval. Your list should contain 5 elements. Does <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> work here? What about <code class="docutils literal notranslate"><span class="pre">np.arange</span></code>? Remember to always attach the units to the entire array and not to array elements!</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DiamTubeArray</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">16</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">inch</span>
-<span class="k">print</span><span class="p">(</span><span class="n">DiamTubeArray</span><span class="o">.</span><span class="n">magnitude</span><span class="p">,</span> <span class="n">DiamTubeArray</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DiamTubeArray</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">16</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">inch</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">DiamTubeArray</span><span class="o">.</span><span class="n">magnitude</span><span class="p">,</span> <span class="n">DiamTubeArray</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>[ 0.0625  0.125   0.1875  0.25    0.3125] inch</p>
@@ -515,8 +506,8 @@
 <div class="section" id="id13">
 <h3>14)<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <p>What is the maximum average velocity in a dosing tube based on the constraint that minor losses must be small? This means that the minor losses account for <code class="docutils literal notranslate"><span class="pre">RatioError</span></code> fraction of the total losses (10% when <code class="docutils literal notranslate"><span class="pre">RatioError</span></code> is 0.1). Note that this velocity is independent of the tube diameter.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">VelTubeMax</span> <span class="o">=</span> <span class="p">(((</span><span class="n">RatioError</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">HeadlossDosingTubeMax</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gravity</span><span class="p">)</span> <span class="o">/</span> <span class="n">KMinor</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The maximum average velocity in a dosing tube is&#39;</span><span class="p">,</span> <span class="n">VelTubeMax</span><span class="p">)</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VelTubeMax</span> <span class="o">=</span> <span class="p">(((</span><span class="n">RatioError</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">HeadlossDosingTubeMax</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gravity</span><span class="p">)</span> <span class="o">/</span> <span class="n">KMinor</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The maximum average velocity in a dosing tube is&#39;</span><span class="p">,</span> <span class="n">VelTubeMax</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The maximum average velocity in a dosing tube is 0.443 m/s</p>
@@ -524,8 +515,8 @@
 <div class="section" id="id14">
 <h3>15)<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <p>What is the head loss due to minor losses in the tube when the tube is flowing at maximum capacity? Solve for this value algebraically by substituting your equation for the velocity in the tube into the minor loss equation and then calculate the value.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HeadlossMinorMax</span> <span class="o">=</span> <span class="n">RatioError</span> <span class="o">*</span> <span class="n">HeadlossDosingTubeMax</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The head loss due to minor losses when the tube is at maximum capacity is&#39;</span><span class="p">,</span> <span class="n">HeadlossMinorMax</span><span class="p">)</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HeadlossMinorMax</span> <span class="o">=</span> <span class="n">RatioError</span> <span class="o">*</span> <span class="n">HeadlossDosingTubeMax</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The head loss due to minor losses when the tube is at maximum capacity is&#39;</span><span class="p">,</span> <span class="n">HeadlossMinorMax</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The head loss due to minor losses when the tube is at maximum capacity is 2.0 cm</p>
@@ -536,12 +527,12 @@
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-solution-0">
 <span class="eqno">(120)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-solution-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}Q_{Max} = \frac{\pi D^2}{4}\sqrt{\frac{2h_{L}g \Pi_{error}}{\sum K_{e}}}\\- First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``ac.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
 - Create the array of maximum flow rates using the array of tubing diameters and the maximum head loss through the dosing tubes.\end{aligned}\end{align} \]</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flow_cdc_max</span><span class="p">(</span><span class="n">diam</span><span class="p">,</span> <span class="n">VelTubeMax</span><span class="p">):</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flow_cdc_max</span><span class="p">(</span><span class="n">diam</span><span class="p">,</span> <span class="n">VelTubeMax</span><span class="p">):</span>
     <span class="n">Flow</span> <span class="o">=</span> <span class="n">ac</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">diam</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">VelTubeMax</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Flow</span>
 
 <span class="n">FlowMaxArray</span> <span class="o">=</span> <span class="n">flow_cdc_max</span><span class="p">(</span><span class="n">DiamTubeArray</span><span class="p">,</span> <span class="n">VelTubeMax</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mL</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">FlowMaxArray</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">FlowMaxArray</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>[  0.87658228   3.5063291    7.88924048  14.02531641  21.91455688] milliliter / second</p>
@@ -549,8 +540,8 @@
 <div class="section" id="id16">
 <h3>17)<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <p>Find the minimum number of tubes for each of the available tube diameters that would be required to deliver the maximum flow of bleach.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">NDosingTubes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">FlowStockClMax</span> <span class="o">/</span> <span class="n">FlowMaxArray</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The number of tubes of each diameter is&#39;</span><span class="p">,</span> <span class="n">NDosingTubes</span><span class="p">)</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NDosingTubes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">FlowStockClMax</span> <span class="o">/</span> <span class="n">FlowMaxArray</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The number of tubes of each diameter is&#39;</span><span class="p">,</span> <span class="n">NDosingTubes</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The number of tubes of each diameter is [ 3.  1.  1.  1.  1.] dimensionless</p>
@@ -558,14 +549,14 @@
 <div class="section" id="id17">
 <h3>18)<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <p>Create an array of the maximum flow rate per tube for each of the available tubing diameters, given the number of tubes that would be used. This will be the flow through each dosing tube at the maximum flow of bleach.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">FlowDosingTubeArray</span> <span class="o">=</span> <span class="n">FlowStockClMax</span> <span class="o">/</span> <span class="n">NDosingTubes</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The flow rate per tube is&#39;</span><span class="p">,</span> <span class="n">FlowDosingTubeArray</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">FlowStockClMax</span><span class="p">)</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FlowDosingTubeArray</span> <span class="o">=</span> <span class="n">FlowStockClMax</span> <span class="o">/</span> <span class="n">NDosingTubes</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The flow rate per tube is&#39;</span><span class="p">,</span> <span class="n">FlowDosingTubeArray</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">FlowStockClMax</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The flow rate per tube is [ 0.64850843  1.94552529  1.94552529  1.94552529  1.94552529] milliliter / second</dt><dd><p>1.9455252918287937 milliliter / second</p>
-</dd>
+<dl class="docutils">
+<dt>The flow rate per tube is [ 0.64850843  1.94552529  1.94552529  1.94552529  1.94552529] milliliter / second</dt>
+<dd>1.9455252918287937 milliliter / second</dd>
 </dl>
 </div>
 <div class="section" id="id18">
@@ -575,7 +566,7 @@
 <span class="eqno">(121)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-solution-1" title="Permalink to this equation">¶</a></span>\[L = \frac{g h_{L}\pi D^4}{128 \nu Q_{Max}}-\frac{Q_{Max}}{16 \pi \nu}\sum K_{e}\]</div>
 <p>Call your function to return the length of tubing required for each tube
 size.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">length_tube</span><span class="p">(</span><span class="n">flow_max</span><span class="p">,</span> <span class="n">diam</span><span class="p">,</span> <span class="n">headloss_max</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">k_minor</span><span class="p">):</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">length_tube</span><span class="p">(</span><span class="n">flow_max</span><span class="p">,</span> <span class="n">diam</span><span class="p">,</span> <span class="n">headloss_max</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">k_minor</span><span class="p">):</span>
     <span class="s2">&quot;Returns the length of tube necessary to handle the maximum flow.&quot;</span>
     <span class="n">L</span> <span class="o">=</span> <span class="p">(((</span><span class="n">ac</span><span class="o">.</span><span class="n">gravity</span> <span class="o">*</span> <span class="n">headloss_max</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">diam</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span><span class="o">/</span>
                            <span class="p">(</span><span class="mi">128</span> <span class="o">*</span> <span class="n">nu</span> <span class="o">*</span> <span class="n">flow_max</span><span class="p">))</span><span class="o">-</span>
@@ -586,7 +577,7 @@ size.</p>
 <span class="n">LengthDosingTube</span> <span class="o">=</span> <span class="n">length_tube</span><span class="p">(</span><span class="n">FlowDosingTubeArray</span><span class="p">,</span> <span class="n">DiamTubeArray</span><span class="p">,</span>
                                  <span class="n">HeadlossDosingTubeMax</span><span class="p">,</span> <span class="n">NuBleach</span><span class="p">,</span> <span class="n">KMinor</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The length of each dosing tube would be&#39;</span><span class="p">,</span> <span class="n">LengthDosingTube</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The length of each dosing tube would be&#39;</span><span class="p">,</span> <span class="n">LengthDosingTube</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The length of each dosing tube would be [  0.44406171   2.42832361  12.60675229  40.01021413  97.79237081] meter</p>
@@ -594,18 +585,18 @@ size.</p>
 <div class="section" id="id19">
 <h3>20)<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <p>Which option do you think is best? You can simply set the array index to your choice and then display your solution by using that index value on your arrays for number of tubes, flow rates, tube diameters, and length of tubes.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">MYPICK</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The number of dosing tubes I will need is&#39;</span><span class="p">,</span><span class="n">NDosingTubes</span><span class="p">[</span><span class="n">MYPICK</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The flow through each tube is&#39;</span><span class="p">,</span> <span class="n">FlowDosingTubeArray</span><span class="p">[</span><span class="n">MYPICK</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The inner diameter of the tube is&#39;</span><span class="p">,</span> <span class="n">DiamTubeArray</span><span class="p">[</span><span class="n">MYPICK</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The length of each tube is&#39;</span><span class="p">,</span> <span class="n">LengthDosingTube</span><span class="p">[</span><span class="n">MYPICK</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">))</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MYPICK</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The number of dosing tubes I will need is&#39;</span><span class="p">,</span><span class="n">NDosingTubes</span><span class="p">[</span><span class="n">MYPICK</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The flow through each tube is&#39;</span><span class="p">,</span> <span class="n">FlowDosingTubeArray</span><span class="p">[</span><span class="n">MYPICK</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The inner diameter of the tube is&#39;</span><span class="p">,</span> <span class="n">DiamTubeArray</span><span class="p">[</span><span class="n">MYPICK</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The length of each tube is&#39;</span><span class="p">,</span> <span class="n">LengthDosingTube</span><span class="p">[</span><span class="n">MYPICK</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">))</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>The number of dosing tubes I will need is 1</dt><dd><p>The flow through each tube is 1.95 ml/s
+<dl class="docutils">
+<dt>The number of dosing tubes I will need is 1</dt>
+<dd>The flow through each tube is 1.95 ml/s
 The inner diameter of the tube is 0.125 inch
-The length of each tube is 2.43 m</p>
-</dd>
+The length of each tube is 2.43 m</dd>
 </dl>
 </div>
 <div class="section" id="id20">
@@ -626,29 +617,29 @@ The length of each tube is 2.43 m</p>
            
           </div>
           <footer>
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ET_Design.html" class="btn btn-neutral float-right" title="Entrance Tank Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="FCM_Derivations.html" class="btn btn-neutral float-left" title="Flow Control and Measurement Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+        <a href="ET_Design.html" class="btn btn-neutral float-right" title="Entrance Tank Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="FCM_Derivations.html" class="btn btn-neutral" title="Flow Control and Measurement Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, AguaClara Cornell.
+        &copy; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
@@ -657,16 +648,34 @@ The length of each tube is 2.43 m</p>
   </div>
   
 
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'EXPERIMENTAL',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
