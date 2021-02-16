@@ -793,6 +793,7 @@ The maximum velocity gradient in pipe flow occurs at the wall. This is true for 
 
 
 .. _figure_pipe_pressure_shear_force_balance:
+
 .. figure:: Images/pipe_pressure_shear_force_balance.png
       :width: 400px
       :align: center
@@ -888,25 +889,27 @@ to obtain
 Expansions
 ----------
 
-Flow expansions are used intentionally or unavoidable in multiple locations in hydraulically optimized water treatment plants. Rapid mix and hydraulic flocculation use flow expansions to generate fluid mixing and collisions between particles.
+Flow expansions are used intentionally or unavoidable in multiple locations in hydraulically optimized water treatment plants. Rapid mix and hydraulic flocculation use flow expansions to generate fluid mixing and collisions between particles. Flow expansions are responsible for minor losses and the rate at which expansions dissipate energy increases as the dimension of the jet decreases.
 
 .. _heading_Round_Jet:
 
 Round Jet
 -----------
 
+The energy dissipation rate at the centerline of a round jet is a well studied phenomenon (`Baldyga, et al. 1995 <https://doi.org/10.1016/0009-2509(95)00049-B>`__).
 
-`Baldyga, et al. 1995 <https://doi.org/10.1016/0009-2509(95)00049-B>`__
 
 .. math::
 
   \varepsilon_{Centerline} = \frac{50 D_{Jet}^3 \bar v_{Jet}^3}{ \left( x - 2 D_{Jet} \right)^4}
 
-
+The maximum energy dissipation rate occurs at approximately 7D downstream from the origin of the jet.
 
 .. math::
 
   \varepsilon_{Max} = \frac{\left( \frac{50}{\left( 5 \right)^4} \right) \bar v_{Jet}^3}{D_{Jet}}
+
+The measured dimensionless coefficient, :math:`\Pi_{JetRound}`, is proportional to the fraction of the kinetic energy that is dissipate in the time required for the jet to travel a distance equal to its original diameter. The higher this coefficient the faster the jet dissipates its energy. The coefficient is only a function of the geometry of the jet and thus round jets and plane jets have different coefficients.
 
 .. math::
 
