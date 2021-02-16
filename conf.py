@@ -39,6 +39,10 @@ extensions = ['sphinx.ext.doctest',
               'sphinxcontrib.disqus',
               ]
 
+# https://sphinxcontrib-bibtex.readthedocs.io/en/2.0.0/usage.html#configuration
+bibtex_bibfiles = ['references.bib']
+bibtex_default_style = 'alpha'
+
 # To setup mathjax with required extensions for all files
 mathjax_path = "mathjax_config.js"
 
@@ -208,8 +212,6 @@ math_number_all = True
 
 # -- Inclusion of Plots? --------------------------------------------------
 
-
-
 # -- Custom roles ---------------------------------------------------------
 rst_prolog = """
 .. role:: red
@@ -220,4 +222,4 @@ rst_prolog = """
 
 # Here's a function to define custom styles to be used with the roles:
 def setup(app):
-    app.add_stylesheet('css/custom.css')
+    app.add_css_file('css/custom.css')
