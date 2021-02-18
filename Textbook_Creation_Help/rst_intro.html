@@ -1,51 +1,57 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Introduction to RST and Sphinx for Textbook Contributors &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="../_static/mathjax_config.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Functionality in RST and AguaClara Convention" href="example_aguaclara_rst.html" />
     <link rel="prev" title="Problems" href="../Troubleshooting/Troubleshooting.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -76,6 +82,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -209,6 +216,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -243,18 +251,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Introduction to RST and Sphinx for Textbook Contributors</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/Textbook_Creation_Help/rst_intro.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -289,15 +299,15 @@
 <span id="heading-building-rst-locally"></span><h3>Building RST Locally with <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a><a class="headerlink" href="#building-rst-locally-with-sphinx" title="Permalink to this headline">¶</a></h3>
 <p>We use <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> to build RST locally and remotely. Follow these steps to get <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a> and run it locally:</p>
 <ol class="arabic simple">
-<li>Get <a class="reference external" href="https://www.python.org/downloads/">Python 3.5+</a> and pipenv (<code class="code docutils literal notranslate"><span class="pre">$pip</span> <span class="pre">install</span> <span class="pre">pipenv</span></code>)</li>
-<li>Install all dependencies and setup a virtual environment with <code class="code docutils literal notranslate"><span class="pre">$pipenv</span> <span class="pre">install</span></code></li>
-<li>Whenever you want to issue commands, start your virtual environment with <code class="code docutils literal notranslate"><span class="pre">$pipenv</span> <span class="pre">shell</span></code> - exit it with <code class="code docutils literal notranslate"><span class="pre">$exit</span></code></li>
-<li>Generate all the html by navigating in the command line to the source directory /Textbook and creating the build in that directory with the command line <code class="code docutils literal notranslate"><span class="pre">$make</span> <span class="pre">html</span></code>.</li>
-<li>View the html generated in the /Textbook/_build directory by copying the full file path of /Textbook/_build/html/index.html and pasting it into your browser.</li>
+<li><p>Get <a class="reference external" href="https://www.python.org/downloads/">Python 3.5+</a> and pipenv (<code class="code docutils literal notranslate"><span class="pre">$pip</span> <span class="pre">install</span> <span class="pre">pipenv</span></code>)</p></li>
+<li><p>Install all dependencies and setup a virtual environment with <code class="code docutils literal notranslate"><span class="pre">$pipenv</span> <span class="pre">install</span></code></p></li>
+<li><p>Whenever you want to issue commands, start your virtual environment with <code class="code docutils literal notranslate"><span class="pre">$pipenv</span> <span class="pre">shell</span></code> - exit it with <code class="code docutils literal notranslate"><span class="pre">$exit</span></code></p></li>
+<li><p>Generate all the html by navigating in the command line to the source directory /Textbook and creating the build in that directory with the command line <code class="code docutils literal notranslate"><span class="pre">$make</span> <span class="pre">html</span></code>.</p></li>
+<li><p>View the html generated in the /Textbook/_build directory by copying the full file path of /Textbook/_build/html/index.html and pasting it into your browser.</p></li>
 </ol>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Regarding <strong>1.</strong> the master branch for the package implementing disqus in sphinx <a class="reference external" href="https://github.com/Robpol86/sphinxcontrib-disqus/pull/7">is broken</a>, which is why we use a non-standard pip/online installation. If you already have the incorrect sphinx-disqus version installed, uninstall it with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span> <span class="pre">sphinxcontrib-disqus</span></code> before installing the functioning version.</p>
+<p class="admonition-title">Note</p>
+<p>Regarding <strong>1.</strong> the master branch for the package implementing disqus in sphinx <a class="reference external" href="https://github.com/Robpol86/sphinxcontrib-disqus/pull/7">is broken</a>, which is why we use a non-standard pip/online installation. If you already have the incorrect sphinx-disqus version installed, uninstall it with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span> <span class="pre">sphinxcontrib-disqus</span></code> before installing the functioning version.</p>
 </div>
 </div>
 <div class="section" id="building-pdf-locally">
@@ -305,10 +315,10 @@
 <p>To check errors with the PDF generation more quickly, it may be worthwhile to setup your local machine to build the PDF.</p>
 <blockquote>
 <div><ul class="simple">
-<li>install <a class="reference external" href="https://miktex.org/howto/install-miktex">MikTeX</a></li>
-<li>install <a class="reference external" href="https://strawberryperl.com/">Perl</a></li>
-<li>run the command make latexpdf</li>
-<li>the PDF will be created in the latex folder inside the _build folder</li>
+<li><p>install <a class="reference external" href="https://miktex.org/howto/install-miktex">MikTeX</a></p></li>
+<li><p>install <a class="reference external" href="https://strawberryperl.com/">Perl</a></p></li>
+<li><p>run the command make latexpdf</p></li>
+<li><p>the PDF will be created in the latex folder inside the _build folder</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -316,32 +326,31 @@
 <span id="heading-publishing-online"></span><h3>Publishing Online<a class="headerlink" href="#publishing-online" title="Permalink to this headline">¶</a></h3>
 <p>We use <a class="reference external" href="https://travis-ci.org/">Travis</a> to ensure this site will always contain functional builds. To publish online, you need to:</p>
 <ol class="arabic simple">
-<li>Always test your build by first :ref:` building RST locally &lt;heading_building_rst_locally&gt;`, and then following the <a class="reference internal" href="#heading-testing-online"><span class="std std-ref">testing online</span></a> instructions. Once you like how your build looks, follow the steps below to introduce it into the master branch.</li>
-<li>Submit a <a class="reference external" href="https://github.com/AguaClara/Textbook/pulls">pull request to master</a>. You’ll need to ask for someone else to review your work at this stage- “request reviewers”. Every pull request <strong>must</strong> be reviewed by at least one other person.</li>
-<li><a class="reference external" href="https://travis-ci.org/">Travis</a> will build the site using <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, and if there aren’t any errors, Travis will report success to GitHub on the “checks” part of the pull request.</li>
-<li>All your requested reviewers must now approve and comment on  your commit before the merge is allowed.</li>
-<li>Once the PR passes Travis and is approved by another author, feel free to “merge to master.”</li>
-<li><dl class="first docutils">
-<dt>To release the master branch, (build the html, pdf, and latex, and upload the pdf to Pages) you’ll need to publish a <a class="reference external" href="https://github.com/AguaClara/Textbook/releases/new">GitHub release</a>. Include a <a class="reference external" href="https://semver.org/">semver</a> version number as the tag (under “Tag: Choose or create”), and a brief description of the updates under “Release Title”. Finally, for the description, detail the changes as much as you see fit and when ready, hit “Publish release”. Example:</dt>
-<dd><ul class="first last">
-<li>Tag name: 0.1.5</li>
-<li>Release title: Filtration section maintenance</li>
-<li>Description: Added filter code from aguaclara 0.2.6. Also updated all broken external links.</li>
+<li><p>Always test your build by first :ref:` building RST locally &lt;heading_building_rst_locally&gt;`, and then following the <a class="reference internal" href="#heading-testing-online"><span class="std std-ref">testing online</span></a> instructions. Once you like how your build looks, follow the steps below to introduce it into the master branch.</p></li>
+<li><p>Submit a <a class="reference external" href="https://github.com/AguaClara/Textbook/pulls">pull request to master</a>. You’ll need to ask for someone else to review your work at this stage- “request reviewers”. Every pull request <strong>must</strong> be reviewed by at least one other person.</p></li>
+<li><p><a class="reference external" href="https://travis-ci.org/">Travis</a> will build the site using <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, and if there aren’t any errors, Travis will report success to GitHub on the “checks” part of the pull request.</p></li>
+<li><p>All your requested reviewers must now approve and comment on  your commit before the merge is allowed.</p></li>
+<li><p>Once the PR passes Travis and is approved by another author, feel free to “merge to master.”</p></li>
+<li><dl class="simple">
+<dt>To release the master branch, (build the html, pdf, and latex, and upload the pdf to Pages) you’ll need to publish a <a class="reference external" href="https://github.com/AguaClara/Textbook/releases/new">GitHub release</a>. Include a <a class="reference external" href="https://semver.org/">semver</a> version number as the tag (under “Tag: Choose or create”), and a brief description of the updates under “Release Title”. Finally, for the description, detail the changes as much as you see fit and when ready, hit “Publish release”. Example:</dt><dd><ul class="simple">
+<li><p>Tag name: 0.1.5</p></li>
+<li><p>Release title: Filtration section maintenance</p></li>
+<li><p>Description: Added filter code from aguaclara 0.2.6. Also updated all broken external links.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li>Travis will rebuild the site and push the html to Pages, and the PDF and LaTeX to GitHub Releases under the tag name.</li>
+<li><p>Travis will rebuild the site and push the html to Pages, and the PDF and LaTeX to GitHub Releases under the tag name.</p></li>
 </ol>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">If your changes to the master branch aren’t pushing to gh-pages, then check the status of the <a class="reference external" href="https://travis-ci.org/AguaClara/Textbook">Travis build here</a>.</p>
+<p class="admonition-title">Important</p>
+<p>If your changes to the master branch aren’t pushing to gh-pages, then check the status of the <a class="reference external" href="https://travis-ci.org/AguaClara/Textbook">Travis build here</a>.</p>
 </div>
 </div>
 <div class="section" id="testing-online">
 <span id="heading-testing-online"></span><h3>Testing Online<a class="headerlink" href="#testing-online" title="Permalink to this headline">¶</a></h3>
 <p>To test exactly what will be published, we have a test branch. The test branch is built by Travis and contains all the processed html that Travis produces in _build/html. This branch is populated when ANY COMMIT IS PUSHED. Meaning, the last commit to be pushed, if it passes the Travis tests, will be built and the output will be placed in the test branch. Also, if the PDF=True environment variable is triggered for a Travis build, the PDF will also be generated and placed in the test branch. To do this, use the “Trigger Build” option in Travis and put:</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">script</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">script</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">PDF</span><span class="o">=</span><span class="kc">True</span>
 </pre></div>
 </div>
@@ -360,8 +369,8 @@
 <p>RST is friendly to learn and powerful. There are many useful cheatsheets, like <a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#inserting-code-and-literal-blocks">this one</a>. When you start writing RST, look at the cheat sheets all the time. Use <code class="code docutils literal notranslate"><span class="pre">ctrl-f</span></code> all the time to find whatever you need.</p>
 <p><strong>Things not covered in most cheat sheets which are of critical importance:</strong></p>
 <ul class="simple">
-<li>A document is referred to by its title, as defined between the <code class="docutils literal notranslate"><span class="pre">*****</span></code> signs at the top of the page, <strong>NOT</strong> the filename. So it is critical to have a title.</li>
-<li>Anything else you’d like to add for the future…</li>
+<li><p>A document is referred to by its title, as defined between the <code class="docutils literal notranslate"><span class="pre">*****</span></code> signs at the top of the page, <strong>NOT</strong> the filename. So it is critical to have a title.</p></li>
+<li><p>Anything else you’d like to add for the future…</p></li>
 </ul>
 </div>
 <div class="section" id="example-to-start-from">
@@ -382,29 +391,29 @@ You’ll need to carefully review any page converted with pandoc.</p>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="example_aguaclara_rst.html" class="btn btn-neutral float-right" title="Functionality in RST and AguaClara Convention" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../Troubleshooting/Troubleshooting.html" class="btn btn-neutral" title="Problems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="example_aguaclara_rst.html" class="btn btn-neutral float-right" title="Functionality in RST and AguaClara Convention" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../Troubleshooting/Troubleshooting.html" class="btn btn-neutral float-left" title="Problems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2021, AguaClara Cornell.
+        &#169; Copyright 2021, AguaClara Cornell.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -413,34 +422,16 @@ You’ll need to carefully review any page converted with pandoc.</p>
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'EXPERIMENTAL',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/mathjax_config.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
