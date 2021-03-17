@@ -28,24 +28,22 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
   Introduction/Introduction.rst
   Introduction/Grand_Challenges.rst
-  Introduction/Python_Tutorial.rst
+
 
 .. toctree::
-  :caption: Chapter 2: Review: Fluid Mechanics and Python
+  :caption: Chapter 2: Review: Fluid Mechanics
   :maxdepth: 1
 
   Review/Review_Fluid_Mechanics.rst
   Review/Review_Fluid_Mechanics_Derivations.rst
 
+
 .. toctree::
-  :caption: Chapter 3: Flow Control and Measurement
+  :caption: Chapter 3: Flocs, Fractals, and Forces
   :maxdepth: 1
 
-  Flow_Control_and_Measurement/FCM_Intro.rst
-  Flow_Control_and_Measurement/FCM_Design.rst
-  Flow_Control_and_Measurement/FCM_Derivations.rst
-  Flow_Control_and_Measurement/FCM_Solution.rst
-  Flow_Control_and_Measurement/ET_Design.rst
+  Flocs_Fractals_and_Forces/FFF_Intro.rst
+  Flocs_Fractals_and_Forces/FFF_Suspensions.rst
 
 .. toctree::
   :caption: Chapter 4: Fluid Deformation and Energy Dissipation
@@ -54,19 +52,23 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst
   Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst
 
-.. toctree::
-  :caption: Chapter 5: Flocs, Fractals, and Forces
-  :maxdepth: 1
-
-  Flocs_Fractals_and_Forces/FFF_Intro.rst
-  Flocs_Fractals_and_Forces/FFF_Suspensions.rst
 
 .. toctree::
-  :caption: Chapter 6: Chemistry of Water Treatment
+  :caption: Chapter 5: Chemistry of Water Treatment
   :maxdepth: 1
 
-  Chemistry_of_Water_Treatment/Chemistry_Intro.rst
-  Chemistry_of_Water_Treatment/Chemistry_Derivations.rst
+    Chemistry_of_Water_Treatment/Chemistry_Intro.rst
+    Chemistry_of_Water_Treatment/Chemistry_Derivations.rst
+
+.. toctree::
+  :caption: Chapter 6: Flow Control and Measurement
+  :maxdepth: 1
+
+  Flow_Control_and_Measurement/FCM_Intro.rst
+  Flow_Control_and_Measurement/FCM_Design.rst
+  Flow_Control_and_Measurement/FCM_Derivations.rst
+  Flow_Control_and_Measurement/FCM_Solution.rst
+  Flow_Control_and_Measurement/ET_Design.rst
 
 .. toctree::
   :caption: Chapter 7: Rapid Mix
@@ -137,6 +139,17 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Troubleshooting/Troubleshooting.rst
+
+.. toctree::
+  :caption: Chapter 15: Wastewater
+  :maxdepth: 1
+
+
+.. toctree::
+  :caption: Appendix 1
+  :maxdepth: 1
+  Introduction/Python_Tutorial.rst
+
 
 .. toctree::
   :caption: Contributor's guide
