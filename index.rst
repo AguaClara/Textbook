@@ -52,13 +52,12 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst
   Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst
 
-
 .. toctree::
   :caption: Chapter 5: Chemistry of Water Treatment
   :maxdepth: 1
 
-    Chemistry_of_Water_Treatment/Chemistry_Intro.rst
-    Chemistry_of_Water_Treatment/Chemistry_Derivations.rst
+  Chemistry_of_Water_Treatment/Chemistry_Intro.rst
+  Chemistry_of_Water_Treatment/Chemistry_Derivations.rst
 
 .. toctree::
   :caption: Chapter 6: Flow Control and Measurement
@@ -140,14 +139,14 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
   Troubleshooting/Troubleshooting.rst
 
-.. toctree::
+<!-- .. toctree::
   :caption: Chapter 15: Wastewater
-  :maxdepth: 1
-
+  :maxdepth: 1 -->
 
 .. toctree::
   :caption: Appendix 1
   :maxdepth: 1
+
   Introduction/Python_Tutorial.rst
 
 
