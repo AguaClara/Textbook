@@ -115,6 +115,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Chapter 5: Chemistry of Water Treatment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Water Treatment Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Chemistry of Water Treatment Derivations</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Chapter 6: Flow Control and Measurement</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
@@ -181,6 +186,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
 <ul>
@@ -270,17 +279,17 @@
 <p>The trash rack is specifically designed to remove low density debris that could easily be carried through the plant and clog any small flow passages. In an AguaClara plant there are critical flow passages in the sedimentation tank inlet manifold diffusers and in the flow injection system in the stacked rapid sand filters. The inlet manifold diffusers have flared nozzles with a minimum dimension that currently has a minimum value of about 4 mm. This sets a requirement that the opening dimension for the trash rack be less than the opening size of the inlet manifold nozzles.</p>
 <p>The minimum trash rack area is set by a goal of minimizing head loss through the plant while maintaining a trash rack size that is reasonably compact. We recommend that the trash rack be designed to reach a terminal head loss of 5 cm when it is 90% clogged. The design follows directly from that constraint. The guiding equation is the orifice equation with the simple addition of the fractions of the area that is actually available for the water to flow through the trash rack. The area is reduced by the porosity, the vena contracta, and the clogging.</p>
 <div class="math notranslate nohighlight" id="equation-trashrack-flow">
-<span class="eqno">(301)<a class="headerlink" href="#equation-trashrack-flow" title="Permalink to this equation">¶</a></span>\[ Q = (1-\Pi_{clogged})\Pi_{vc} \phi A_{trashrack}\sqrt{2gh}\]</div>
+<span class="eqno">(329)<a class="headerlink" href="#equation-trashrack-flow" title="Permalink to this equation">¶</a></span>\[ Q = (1-\Pi_{clogged})\Pi_{vc} \phi A_{trashrack}\sqrt{2gh}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi_{trashrack}\)</span> is the fraction of clean trash rack that is open, <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> is the vena contracta coefficient, <span class="math notranslate nohighlight">\(\Pi_{clogged}\)</span> is the clogged fraction of the trash rack. The ideal trash rack has a high porosity and a large vena contracta coefficient. The vena contracta coefficient is set by the geometry of the entrance into the opening through the trash rack. If the entrance has a sharp edge, then the vena contract coefficient will have a value of approximately 0.62. If the entrance is rounded then the vena contracta could approach 1.0. Thus the idea trash rack will have rounded openings.</p>
 <p>Solve for the area of the trash rack</p>
 <div class="math notranslate nohighlight" id="equation-trashrack-area">
-<span class="eqno">(302)<a class="headerlink" href="#equation-trashrack-area" title="Permalink to this equation">¶</a></span>\[ A_{trashrack} = \frac{Q}{(1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}}\]</div>
+<span class="eqno">(330)<a class="headerlink" href="#equation-trashrack-area" title="Permalink to this equation">¶</a></span>\[ A_{trashrack} = \frac{Q}{(1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}}\]</div>
 <p>Set the fraction clogged to between 80 and 90%. Vena contracta coefficient is 0.62 for sharp edged orifices and could be 1 for round wire.
 Porosity varies widely depending on the fabrication method.
 For AguaClara plants recommend a head loss of 5 cm max.</p>
 <p>Also of interest is the effective velocity taking into account the whole area of the trash rack.</p>
 <div class="math notranslate nohighlight" id="equation-trashrack-velocity">
-<span class="eqno">(303)<a class="headerlink" href="#equation-trashrack-velocity" title="Permalink to this equation">¶</a></span>\[ v_{trashrack} = \frac{Q}{A_{trashrack} } = (1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}\]</div>
+<span class="eqno">(331)<a class="headerlink" href="#equation-trashrack-velocity" title="Permalink to this equation">¶</a></span>\[ v_{trashrack} = \frac{Q}{A_{trashrack} } = (1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}\]</div>
 <p>The trash rack characteristic velocity is 50 mm/s for 50% porosity, 90% clogged, vena contracta of 1 and a maximum head loss of 5 cm.</p>
 </div>
 </div>
