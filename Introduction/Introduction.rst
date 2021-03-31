@@ -13,6 +13,8 @@ This textbook represents our cumulative insights from our journey that has been 
 
 Engineering textbooks provide a venue for authors to share what they've learned, to organize ideas, and to provide a guide for engineers as they design solutions for real world problems. Engineering textbooks are often intended to document the established core of knowledge. It seems reasonable to assume that what is in textbooks and in peer reviewed literature is mostly true.
 
+
+
 .. _heading_Edge_of_Knowledge:
 
 The edge of knowledge may be closer than we thought
