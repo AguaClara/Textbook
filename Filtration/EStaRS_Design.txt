@@ -528,7 +528,7 @@ Using the minimum ND of the Filter Manifold Branches, as defined above, the mini
 
 
 
-First Constraint: Pressure Recovery in Trunks during forward filtration
+First Constraint: Pressure Recovery in Trunks During Forward Filtration
 ---------------------------------------------------------------------------
 
 [This section needs to go above the section where you calculate the branch diameter given the PR constraint.]
