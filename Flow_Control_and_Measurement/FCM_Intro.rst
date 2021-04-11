@@ -33,7 +33,7 @@ Using the setup described in the image below, we derive the following equation f
 | :math:`h_0` = elevation of water level with reference to the valve at time :math:`t = 0`
 
 .. _figure_hypochlorinator_variable_explanation_design:
-.. figure:: Images/hypochlorinator_variable_explanation.png
+.. figure:: ../Images/hypochlorinator_variable_explanation.png
     :width: 600px
     :align: center
     :alt: Drip hypochlorinator variables
@@ -50,7 +50,7 @@ We can use the proportionality :math:`Q \propto \sqrt{h}`, which applies to both
 Using Equation :eq:`Q_tank_with_valve` and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or :math:`h_{Tank} = h_0`. Our attempt to get a continuous flow rate out of this system is to make :math:`\frac{h_{Tank}}{h_0}` very small by elevating the tank far above the valve. On the right, :math:`\frac{h_{Tank}}{h_0} = \frac{1}{50}`. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.
 
 .. _figure_tank_valve_play:
-.. figure:: Images/tank_valve_play.png
+.. figure:: ../Images/tank_valve_play.png
     :width: 600px
     :align: center
     :alt: Manipulating hypochlorinator heights
@@ -81,7 +81,7 @@ The equation can also be rearranged to solve for the time it would take to drain
 | :math:`\sum K` = Sum of all the minor loss coefficients in the system
 
 .. _figure_pipe_stub_drainage_variables_in_derivation:
-.. figure:: Images/pipe_stub_drainage_variables.png
+.. figure:: ../Images/pipe_stub_drainage_variables.png
     :width: 600px
     :align: center
     :alt: Variables for draining a tank

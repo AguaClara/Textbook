@@ -91,12 +91,12 @@ The steps for making the graph are as follows:
     ax.set(ylabel='Flow rate through the orifice (L/s)')
     ax.legend(['Horizontal Orientation', 'Vertical orientation'])
     ax.grid(True)
-    fig.savefig('Flow_Control_and_Measurement/Images/Horizontal_vs_Vertical_Orifice_Orientation')
+    fig.savefig('Flow_Control_and_Measurement/../Images/Horizontal_vs_Vertical_Orifice_Orientation')
     plt.show()
 
 .. _figure_Horizontal_vs_Vertical_Orifice_Orientation:
 
-.. figure:: Images/Horizontal_vs_Vertical_Orifice_Orientation.png
+.. figure:: ../Images/Horizontal_vs_Vertical_Orifice_Orientation.png
    :width: 400px
    :align: center
    :alt: Horizontal vs. Vertical Orifice Orientation
@@ -166,7 +166,7 @@ The following questions are all answered in one big block of code to make it eas
 
 .. _figure_Normalized_Flow_Rate_vs_Water_Depth:
 
-.. figure:: Images/Normalized_Flow_Rate_vs_Water_Depth.png
+.. figure:: ../Images/Normalized_Flow_Rate_vs_Water_Depth.png
    :width: 400px
    :align: center
    :alt: Normalized Flow Rate vs. Water Depth

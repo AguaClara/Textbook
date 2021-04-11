@@ -86,7 +86,7 @@ What it is
 The LFOM is a weir shape cut into a pipe. It was meant to imitate `the Sutro Weir <https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research>`_ while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.
 
 .. _figure_sutro_v_lfom:
-.. figure:: Images/sutro_v_lfom.png
+.. figure:: ../Images/sutro_v_lfom.png
     :width: 600px
     :align: center
     :alt: A sutro weir and an LFOM
@@ -148,7 +148,7 @@ The CDC brings together the LFOM and many improvements to the â€œAlmost Linearâ€
 4. The slider itself controls the dose of chemicals. For any given plant flow rate, the slider can be adjusted to increase or decrease the amount of chemical flowing through the plant.
 
 .. _figure_cdc_labelled:
-.. figure:: Images/cdc_labelled.png
+.. figure:: ../Images/cdc_labelled.png
     :width: 600px
     :align: center
     :alt: CDC Displayed
@@ -239,7 +239,7 @@ AguaClara plants currently use either alum (aluminum sulfate) or PACl (polyalumi
   ax.set(xlabel=r'Coagulant concentration prepared from granules ' + r'$\left[\frac{g}{L}\right]$')
   ax.set(ylabel='Kinematic Viscosity ' + r'$\left[\frac{mm^2}{s}\right]$')
   ax.legend(['Alum data','Alum model', 'PACl data','PACl model'])
-  fig.savefig('Flow_Control_and_Measurement/Images/Coagulant_Viscosity')
+  fig.savefig('Flow_Control_and_Measurement/../Images/Coagulant_Viscosity')
   plt.show()
 
 
@@ -255,7 +255,7 @@ This analysis is incomplete in that we don't know the aluminum concentration of 
 
 .. _figure_coagulant_viscosity_kinematic:
 
-.. figure:: Images/Coagulant_Viscosity.png
+.. figure:: ../Images/Coagulant_Viscosity.png
     :width: 400px
     :align: center
     :alt: internal figure
