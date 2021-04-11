@@ -56,7 +56,7 @@ Collision potential :math:`(G_{CS} \theta)` is a term with a very straightforwar
 
 .. _figure_G_velocity_profile:
 
-.. figure:: ..Images/G_velocity_profile.jpg
+.. figure:: ../Images/G_velocity_profile.jpg
     :width: 50%
     :align: center
     :alt: external figure
@@ -65,7 +65,7 @@ Collision potential :math:`(G_{CS} \theta)` is a term with a very straightforwar
 
 
 
-:math:`G` measures the magnitude of shear by using the velocity gradient of a fluid in space, :math:`\frac{\Delta \bar v}{\Delta h}`. This is essentially the same as the :math:`\frac{\delta u}{\delta y}` term in fluid mechanics, which is found in the ubiquitous `fluid-shear problem <http://polymerdatabase.com/polymer%20physics/..Images/Visc.png>`_ as sourced from `here. <http://polymerdatabase.com/polymer%20physics/Viscosity.html>`_
+:math:`G` measures the magnitude of shear by using the velocity gradient of a fluid in space, :math:`\frac{\Delta \bar v}{\Delta h}`. This is essentially the same as the :math:`\frac{\delta u}{\delta y}` term in fluid mechanics, which is found in the ubiquitous `fluid-shear problem <http://polymerdatabase.com/polymer%20physics/../Images/Visc.png>`_ as sourced from `here. <http://polymerdatabase.com/polymer%20physics/Viscosity.html>`_
 
 :math:`\bar G` represents the average :math:`\frac{\Delta \bar v}{\Delta h}` for the entire water volume under consideration, and is the parameter we will be using from now on. Unfortunately, it is unrealistic to measure :math:`\frac{\Delta \bar v}{\Delta h}` for every parcel of the water in our flocculator and take an average. We need to approximate :math:`\bar G` using measureable parameters.
 
@@ -121,7 +121,7 @@ To generate minor losses, we need to create flow expansions. AguaClara does this
 
 .. _figure_AC_flocculator:
 
-.. figure:: ..Images/AC_flocculator.jpg
+.. figure:: ../Images/AC_flocculator.jpg
    :width: 100%
    :align: center
    :alt: AC Flocculator
@@ -130,7 +130,7 @@ To generate minor losses, we need to create flow expansions. AguaClara does this
 
 .. _figure_baffle_module:
 
-.. figure:: ..Images/Baffle_module.jpg
+.. figure:: ../Images/Baffle_module.jpg
    :width: 50%
    :align: center
    :alt: this image shows the floc baffle module out of the water within a plant.
@@ -146,7 +146,7 @@ Before beginning this section, it is important to understand how water flows thr
 
 .. _figure_flocculator_flow:
 
-.. figure:: ..Images/Flocculator_flow.jpg
+.. figure:: ../Images/Flocculator_flow.jpg
    :width: 600px
    :align: center
    :alt: flocculator flow image
@@ -157,7 +157,7 @@ Since baffles are the source of head loss via minor losses, we need to find the 
 
 .. _figure_cfd_VC_baffle:
 
-.. figure:: ..Images/CFD_vc_baffle.jpg
+.. figure:: ../Images/CFD_vc_baffle.jpg
    :align: center
    :width: 100px
    :alt: CFD vc baffle
@@ -221,7 +221,7 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
 
 .. _figure_jet_expansion_flocculator:
 
-.. figure:: ..Images/Jet_expansion_flocculator.jpg
+.. figure:: ../Images/Jet_expansion_flocculator.jpg
    :align: center
    :width: 400px
    :alt: jet expansion in the flocculator
@@ -242,7 +242,7 @@ This is the highest allowable :math:`\Pi_{H_eS}` that we can design while ensuri
 
 .. _figure_CFD_baffle_image:
 
-.. figure:: ..Images/CFD_baffle_image.jpg
+.. figure:: ../Images/CFD_baffle_image.jpg
    :align: center
    :width: 50%
    :alt: CFD baffle image
@@ -251,7 +251,7 @@ This is the highest allowable :math:`\Pi_{H_eS}` that we can design while ensuri
 
 .. _figure_CFD_full_channel:
 
-.. figure:: ..Images/CFD_full_channel.jpg
+.. figure:: ../Images/CFD_full_channel.jpg
    :width: 700px
    :align: center
    :alt: CFD full channel
@@ -264,7 +264,7 @@ AguaClara uses a fairly straightforward way of setting :math:`\Pi_{H_eS_{Min}}`.
 
 .. _figure_slot_width_description:
 
-.. figure:: ..Images/Slot_width_description.jpg
+.. figure:: ../Images/Slot_width_description.jpg
    :align: center
    :width: 600px
    :alt: image showing the dimensiond of spacing within the flocculator
@@ -277,7 +277,7 @@ The minimum :math:`\Pi_{H_eS}` allowable depends on the slot with ratio. If :mat
 
 .. _figure_HeS_ratio_min:
 
-.. figure:: ..Images/HeS_ratio_min.jpg
+.. figure:: ../Images/HeS_ratio_min.jpg
    :align: center
    :width: 600px
    :alt: minimum H S ratio
@@ -309,7 +309,7 @@ These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` t
 
 .. _figure_floc_module_with_obstacles:
 
-.. figure:: ..Images/Floc_module_with_obstacles.jpg
+.. figure:: ../Images/Floc_module_with_obstacles.jpg
    :width: 800px
    :align: center
    :alt: floc module with obstacles
@@ -318,7 +318,7 @@ These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` t
 
 .. _figure_floc_flow_with_obstacles:
 
-.. figure:: ..Images/Floc_flow_with_obstacles.jpg
+.. figure:: ../Images/Floc_flow_with_obstacles.jpg
    :align: center
    :width: 900px
    :alt: floc flow with obstacles
@@ -359,7 +359,7 @@ The flocculator is more complex to design than the CDC, as it has more details a
 
 .. _figure_floculator_physical_parameters:
 
-.. figure:: ..Images/Flocculator_physical_parameters.jpg
+.. figure:: ../Images/Flocculator_physical_parameters.jpg
    :width: 600px
    :align: center
    :alt: physical floccuation parameter
@@ -383,7 +383,7 @@ The plant flow rate :math:`Q` is defined by the needs of the community that the 
 
 .. _figure_physical_design_criteria_floc:
 
-.. figure:: ..Images/Physical_design_criteria.jpg
+.. figure:: ../Images/Physical_design_criteria.jpg
    :align: center
    :width: 600px
    :alt: physical design criteria
@@ -440,7 +440,7 @@ The equation for *actual* flocculator length is therefore:
 
 .. _figure_floc_channels:
 
-.. figure:: ..Images/Floc_channels.jpg
+.. figure:: ../Images/Floc_channels.jpg
    :align: center
    :width: 600px
    :alt: floc channels
@@ -560,7 +560,7 @@ It is now time to make our final check. We need to make sure that our actual res
 
 .. _figure_flocculator_head_loss:
 
-.. figure:: ..Images/Flocculator_head_loss.jpg
+.. figure:: ../Images/Flocculator_head_loss.jpg
     :width: 400px
     :align: center
     :alt: Flocculator_head_loss
