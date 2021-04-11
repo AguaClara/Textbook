@@ -4,11 +4,11 @@
 Filtration  Introduction
 ************************
 
-"If the water is dirty, then filter it." That is a common misunderstanding of what we should do if the water is dirty. And that misunderstanding has led to many, many failures of water treatment technologies. There are slow sand filters and multistage filters abandoned in many corners of Honduras. The first AguaClara plant at Marcala, Honduras was built in an abandoned filtration plant. In many cases the failed filters were installed in locations where the raw water carried far too much sediment to be treated by filtration. This common misunderstanding of the capabilities of sand filters has a long history.
+"If the water is dirty, then filter it." That is a common misunderstanding of what we should do if the water is dirty. And that misunderstanding has led to many, many failures of water treatment technologies. There are slow sand filters and multistage filters abandoned in many corners of Honduras. The first AguaClara plant at Marcala, Honduras was built in an abandoned filtration plant. In many cases the failed filters were installed in locations where the raw water carried far too much sediment to be treated by filtration. This common misunderstanding of the capabilities of sand filters has a long history. 
 
 .. _figure_Abandoned_Filtration_Plant:
 
-.. figure:: //Images/Abandoned_Filtration_Plant.jpg
+.. figure:: ../Images/Abandoned_Filtration_Plant.jpg
     :width: 300px
     :align: center
     :alt: photomicrograph
@@ -24,7 +24,7 @@ Starting in 1829 surface water treatment plants in England used slow sand filter
 
 .. _figure_glass_beads_and_flow_constriction:
 
-.. figure:: Images/glass_beads_and_flow_constriction.jpg
+.. figure:: ../Images/glass_beads_and_flow_constriction.jpg
     :width: 300px
     :align: center
     :alt: photomicrograph
@@ -46,7 +46,7 @@ Slow sand filters remove the majority of the particles in the top cm of the sand
 
 .. _figure_SSF_at_Jesus_de_Otoro:
 
-.. figure:: Images/SSF_at_Jesus_de_Otoro.jpg
+.. figure:: ../Images/SSF_at_Jesus_de_Otoro.jpg
     :width: 400px
     :align: center
     :alt: filter set
@@ -79,7 +79,7 @@ One solution for eliminating the need for backwash pumps is to design a set of f
 
 .. _figure_CEPIS_filter_set:
 
-.. figure:: Images/CEPIS_filter_set.jpg
+.. figure:: ../Images/CEPIS_filter_set.jpg
     :width: 300px
     :align: center
     :alt: filter set
@@ -132,7 +132,7 @@ Filters have a huge range in velocities that correspond to a huge range in size.
 
 .. _figure_Size_of_Jesus_de_Otoro_Plants:
 
-.. figure:: Images/Size_of_Jesus_de_Otoro_Plants.png
+.. figure:: ../Images/Size_of_Jesus_de_Otoro_Plants.png
     :width: 400px
     :align: center
     :alt: filter set
@@ -158,7 +158,7 @@ Porosity is determined by the geometry of the material and the size distribution
 
 .. _figure_porosity:
 
-.. figure:: Images/figure_porosity.png
+.. figure:: ../Images/figure_porosity.png
     :align: center
     :alt: This figure illustrates how different sized materials have the same total bulk porosity
 
@@ -246,7 +246,7 @@ To determine the head loss during backwash a force balance can be performed betw
 
 .. _figure_force_balance:
 
-.. figure:: Images/figure_force_balance.png
+.. figure:: ../Images/figure_force_balance.png
     :align: center
     :width: 50%
     :alt: This figure is a simplified schematic of the filter force balance
@@ -345,7 +345,7 @@ The movie in :numref:`figure_Active_zone_model` illustrates that the classic per
 
 .. _figure_Active_zone_model:
 
-.. figure:: Images/Active_zone_model.png
+.. figure:: ../Images/Active_zone_model.png
    :target: https://youtu.be/II0cfH80nrI
    :width: 400px
    :align: center
@@ -357,7 +357,7 @@ The linear increase in head loss with time (see :numref:`figure_Head_loss_vs_tim
 
 .. _figure_Head_loss_vs_time:
 
-.. figure:: Images/Head_loss_vs_time.png
+.. figure:: ../Images/Head_loss_vs_time.png
    :width: 800px
    :align: center
    :alt: Head loss increases linearly with time
@@ -370,7 +370,7 @@ The data is trying to tell us something. The head loss through a filter does inc
 
 .. _figure_Deposition_at_constrictions:
 
-.. figure:: Images/Deposition_at_constrictions.png
+.. figure:: ../Images/Deposition_at_constrictions.png
    :target: https://youtu.be/Odp6uwqJmMc
    :width: 300px
    :align: center
@@ -382,7 +382,7 @@ If pores clogged completely, then sand filters would clog as soon as one layer o
 
 .. _figure_Flocs_teleporting:
 
-.. figure:: Images/Flocs_teleport.png
+.. figure:: ../Images/Flocs_teleport.png
    :target: https://youtu.be/lgfggRX_Wgs
    :width: 300px
    :align: center
