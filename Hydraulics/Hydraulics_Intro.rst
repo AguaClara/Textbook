@@ -10,7 +10,7 @@ Municipal water treatment plants
 
 .. _figure_circuit:
 
-.. figure:: Images/circuit.png
+.. figure:: ../Images/circuit.png
     :width: 400px
     :align: center
     :alt: Sedimentation tank flow circuit
@@ -33,7 +33,7 @@ The sum of the pressure and elevation term in the energy equation is the piezome
 
 .. _figure_Sloped_Manifold_no_flow:
 
-.. figure:: Images/Sloped_Manifold_no_flow.png
+.. figure:: ../Images/Sloped_Manifold_no_flow.png
     :width: 400px
     :align: center
     :alt: Sloped manifold with no flow
@@ -45,7 +45,7 @@ Add multiple outlets to this sloped pipe to create a sloped manifold (:numref:`f
 
 .. _figure_Sloped_Manifold_with_flow:
 
-.. figure:: Images/Sloped_Manifold_with_flow.png
+.. figure:: ../Images/Sloped_Manifold_with_flow.png
     :width: 400px
     :align: center
     :alt: Sloped manifold with flow
@@ -87,7 +87,7 @@ The change in piezometric head is the important parameter and is given by
 
 .. _figure_inlet_manifold:
 
-.. figure:: Images/inlet_manifold.png
+.. figure:: ../Images/inlet_manifold.png
     :width: 400px
     :align: center
     :alt: Sedimentation tank flow circuit
@@ -179,7 +179,7 @@ Equation :eq:`Manifold_max_v_no_hl_series` (see :numref:`figure_Ratio_port_to_ma
 
 .. _figure_Ratio_port_to_manifold_velocity:
 
-.. figure:: Images/Ratio_port_to_manifold_velocity.png
+.. figure:: ../Images/Ratio_port_to_manifold_velocity.png
     :width: 400px
     :align: center
     :alt: Filter channel
@@ -312,7 +312,7 @@ Below we calculate the maximum sedimentor inlet channel velocity as a function o
 
 .. _figure_Sedimentor_channel_max_v:
 
-.. figure:: Images/Sedimentor_channel_max_v.png
+.. figure:: ../Images/Sedimentor_channel_max_v.png
     :width: 400px
     :align: center
     :alt: Sedimentor inlet channel velocity constraints
@@ -328,7 +328,7 @@ In plants with flow rates large enough to use open stacked rapid sand filters th
 
 .. _figure_Filter_channel:
 
-.. figure:: Images/Filter_channel.png
+.. figure:: ../Images/Filter_channel.png
     :width: 400px
     :align: center
     :alt: Filter channel
@@ -410,7 +410,7 @@ The channel depth of water above the weir, :math:`\bar H_{channel}`, and the flo
 
 .. _figure_Filter_channel_v_max:
 
-.. figure:: Images/Filter_channel_v_max.png
+.. figure:: ../Images/Filter_channel_v_max.png
     :width: 400px
     :align: center
     :alt: Filter channel velocities

@@ -30,7 +30,7 @@ We want to encourage skepticism and we want to develop insights to guide thought
 
 .. _figure_short_walk:
 
-.. figure:: Images/Short_walk_to_the_edge.jpg
+.. figure:: ../Images/Short_walk_to_the_edge.jpg
     :width: 500px
     :align: center
     :alt: internal figure
@@ -130,7 +130,7 @@ We've learned much from plant operators. They figured out how to reduce rising f
 
 .. _figure_Moroceli_curtains:
 
-.. figure:: Images/Moroceli_curtains.jpg
+.. figure:: ../Images/Moroceli_curtains.jpg
     :width: 500px
     :align: center
     :alt: Moroceli curtains
@@ -148,7 +148,7 @@ The `Sustainable Development Goals: SDGs <https://www.un.org/sustainabledevelopm
 
 .. _figure_SDG6:
 
-.. figure:: Images/SDG6.png
+.. figure:: ../Images/SDG6.png
     :width: 100px
     :align: center
     :alt: SDG6
@@ -159,7 +159,7 @@ The number of people who currently lack access to reliable safe water on tap is 
 
 .. _figure_CDC_Global_Safe_Tap_Water:
 
-.. figure:: Images/CDC_Global_Safe_Tap_Water.png
+.. figure:: ../Images/CDC_Global_Safe_Tap_Water.png
     :width: 600px
     :align: center
     :alt: CDC Global Safe Tap Water
@@ -171,7 +171,7 @@ The `UN estimate in 2017 <https://www.un.org/sustainabledevelopment/blog/2017/07
 
 .. _figure_Population_Infographic_01:
 
-.. figure:: Images/Population_Infographic_01.jpg
+.. figure:: ../Images/Population_Infographic_01.jpg
     :width: 400px
     :align: center
     :alt: Population infographic
@@ -286,7 +286,7 @@ Chlorine is widely recognized for reducing mortality from water borne disease in
 
 .. _figure_US_death_rate:
 
-.. figure:: Images/US_infectious_diseases_death_rate.jpg
+.. figure:: ../Images/US_infectious_diseases_death_rate.jpg
     :width: 500px
     :align: center
     :alt: US_infectious_diseases_death_rate
@@ -367,7 +367,7 @@ Sedimentation is the process of particles ‘falling’ because they have a high
   ax.loglog(D_particle.to(u.m),v_t(D_particle,organic,Temperature).to(u.m/u.s))
   ax.set(xlabel='Particle diameter (m)', ylabel='Terminal velocity (m/s)')
   ax.legend(["clay or sand","organic particle"])
-  imagepath = 'Introduction/Images/'
+  imagepath = 'Introduction/../Images/'
   fig.savefig(imagepath+'Terminal_velocity')
   plt.show()
 
@@ -377,7 +377,7 @@ The terminal velocities of particles in surface waters range over many orders of
 
 .. _figure_Terminal_velocity:
 
-.. figure:: Images/Terminal_velocity.png
+.. figure:: ../Images/Terminal_velocity.png
     :width: 500px
     :align: center
     :alt: Terminal Velocity
@@ -437,7 +437,7 @@ Mechanized and automated water treatment plants performed reasonably well in com
 
 .. _figure_Kathmandu_chemical_feed_room:
 
-.. figure:: Images/Kathmandu_chemical_feed_room.png
+.. figure:: ../Images/Kathmandu_chemical_feed_room.png
     :width: 300px
     :align: center
     :alt: Kathmandu chemical feed room
@@ -451,7 +451,7 @@ Chemical dosing systems are particularly vulnerable and their failures make plan
 
 .. _figure_Kathmandu_alum_dosing:
 
-.. figure:: Images/Kathmandu_alum_dosing.jpg
+.. figure:: ../Images/Kathmandu_alum_dosing.jpg
     :width: 300px
     :align: center
     :alt: Kathmandu alum dosing
@@ -484,7 +484,7 @@ An example of design for the operator is the elevation of the walkways in AguaCl
 
 .. _figure:
 
-.. figure:: Images/Improvised_ladder_access_to_sed_tank.jpg
+.. figure:: ../Images/Improvised_ladder_access_to_sed_tank.jpg
     :width: 300px
     :align: center
     :alt: Improvised ladder access to sed tank

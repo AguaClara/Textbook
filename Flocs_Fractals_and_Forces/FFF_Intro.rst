@@ -150,7 +150,7 @@ As flocs settle in water, they will fall at a speed dictated by the weight of th
 
 .. _figure_terminal_velocity_FBD:
 
-.. figure:: Images/terminal_velocity_FBD.png
+.. figure:: ../Images/terminal_velocity_FBD.png
     :height: 300px
     :align: center
     :alt: Buyouant force, drag force, and gravitational force shown for floc free body diagram.
@@ -219,7 +219,7 @@ Drag coefficients are used to describe flow around a particle and are shown in :
 
 .. _figure_drag_coeff_Re_base:
 
-.. figure:: Images/drag_coeff_Re_base.png
+.. figure:: ../Images/drag_coeff_Re_base.png
     :height: 300px
     :align: center
     :alt: Drag coefficient as a function of Reynolds number.
@@ -245,7 +245,7 @@ The flow around the particle and the Reynolds Number can be described in the lam
 
 .. _figure_drag_coeff_Re_full:
 
-.. figure:: Images/drag_coeff_Re_full.png
+.. figure:: ../Images/drag_coeff_Re_full.png
     :height: 300px
     :align: center
     :alt: Drag coefficient as a function of Reynolds number.
@@ -287,7 +287,7 @@ The following plot in :numref:`figure_terminal_velocity_floc_diam` shows the rel
 
 .. _figure_terminal_velocity_floc_diam:
 
-.. figure:: Images/terminal_velocity_floc_diam.png
+.. figure:: ../Images/terminal_velocity_floc_diam.png
     :width: 400px
     :align: center
     :alt: Terminal velocity as a function of floc diameter, taking into account the changing density of flocs formed from clay.
@@ -313,7 +313,7 @@ If we assume that the flocs are joined by 3 bonds to create a constrained connec
 
 .. _figure_Shear_force_and_bond_strength:
 
-.. figure:: Images/Shear_force_and_bond_strength.png
+.. figure:: ../Images/Shear_force_and_bond_strength.png
    :width: 400px
    :align: center
    :alt: figure_Shear_force_and_bond_strength
@@ -378,7 +378,7 @@ When flocs are broken by the shearing action of the fluid it is possible that a 
 
 .. _figure_sed_performance_vs_jet_edr:
 
-.. figure:: Images/Sed_performance_vs_jet_edr.png
+.. figure:: ../Images/Sed_performance_vs_jet_edr.png
    :width: 400px
    :align: center
    :alt: Sed tank performance as a function of jet energy dissipation rate
@@ -421,7 +421,7 @@ Equation :eq:`d_floc_G` must be based on the maximum velocity gradient in a reac
 
 .. _figure_GmaxofFlocD:
 
-.. figure:: Images/GmaxofFlocD.png
+.. figure:: ../Images/GmaxofFlocD.png
     :width: 400px
     :align: center
     :alt: internal figure
@@ -432,7 +432,7 @@ The maximum floc diameter is influenced by temperature because as the viscosity 
 
 .. _figure_DmaxofGandTemp:
 
-.. figure:: Images/DmaxofGandTemp.png
+.. figure:: ../Images/DmaxofGandTemp.png
     :width: 400px
     :align: center
     :alt: internal figure
@@ -533,7 +533,7 @@ The maximum floc size that can be obtained based on a :math:`\Pi_{bond}^g = 8` a
 
 .. _figure_DmaxofFbondandGravity:
 
-.. figure:: Images/DmaxofFbondandGravity.png
+.. figure:: ../Images/DmaxofFbondandGravity.png
     :width: 400px
     :align: center
     :alt: internal figure
@@ -582,7 +582,7 @@ The maximum terminal velocity (Equation :eq:`v_t_of_F_bond`) that can be obtaine
 
 .. _figure_vtmaxofFbondandGravity:
 
-.. figure:: Images/vtmaxofFbondandGravity.png
+.. figure:: ../Images/vtmaxofFbondandGravity.png
     :width: 400px
     :align: center
     :alt: internal figure

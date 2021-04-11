@@ -40,7 +40,7 @@ These multiple steps cover a wide range of length scales and it is not clear at 
 
 .. _figure_transport_length_scales:
 
-.. figure::    Images/rapid_mix_macro_to_nano_scale.png
+.. figure::    ../Images/rapid_mix_macro_to_nano_scale.png
     :width: 700px
     :align: center
     :alt: rapid mix macro to nano scale
@@ -57,7 +57,7 @@ Fluid mixing is the process by which large scale eddies distribute packets of th
 
 .. _figure_Backmix:
 
-.. figure:: Images/Backmix.jpg
+.. figure:: ../Images/Backmix.jpg
     :width: 200px
     :align: center
     :alt: Backmix
@@ -66,7 +66,7 @@ Fluid mixing is the process by which large scale eddies distribute packets of th
 
 .. _figure_Inline:
 
-.. figure:: Images/Inline.jpg
+.. figure:: ../Images/Inline.jpg
     :width: 400px
     :align: center
     :alt: Inline
@@ -75,7 +75,7 @@ Fluid mixing is the process by which large scale eddies distribute packets of th
 
 .. _figure_hydraulic_jump:
 
-.. figure:: Images/hydraulic_jump.jpg
+.. figure:: ../Images/hydraulic_jump.jpg
     :width: 200px
     :align: center
     :alt: hydraulic jump
@@ -86,7 +86,7 @@ The hydraulic jump in :numref:`figure_hydraulic_jump` uses a flow expansion to g
 
 .. _figure_Rapid_mix_orifice:
 
-.. figure:: Images/Rapid_mix_orifice.png
+.. figure:: ../Images/Rapid_mix_orifice.png
     :width: 400px
     :align: center
     :alt: Rapid mix orifice
@@ -127,7 +127,7 @@ Maximum Velocity Gradients
 
 .. _figure_Mechanical_RM_Gt:
 
-.. figure:: Images/Mechanical_RM_Gt.png
+.. figure:: ../Images/Mechanical_RM_Gt.png
     :width: 400px
     :align: center
     :alt: Mechanical RM Gt
@@ -183,7 +183,7 @@ The time required for mixing in a turbulent environment is a function of the rat
 
 .. _figure_Eddy_turnover_times:
 
-.. figure:: Images/Eddy_turnover_time.png
+.. figure:: ../Images/Eddy_turnover_time.png
     :width: 400px
     :align: center
     :alt: Eddy turnover time
@@ -209,7 +209,7 @@ Interactions between the various suspended and dissolved substances (see :numref
 
 .. _figure_Particle_sizes:
 
-.. figure:: Images/Particle_sizes.png
+.. figure:: ../Images/Particle_sizes.png
     :width: 400px
     :align: center
     :alt: Particle sizes

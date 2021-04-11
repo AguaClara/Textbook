@@ -43,7 +43,7 @@ Horizontal Flow Sedimentation Tank
 
 .. _figure_horizontal_flow_tank_base:
 
-.. figure:: Images/horizontal_flow_tank_base.png
+.. figure:: ../Images/horizontal_flow_tank_base.png
     :height: 300px
     :align: center
     :alt: Horizontal flow sedimentation tank.
@@ -81,7 +81,7 @@ We know that for a particle to fall to the bottom successfully, it needs to fall
 
 .. _figure_horizontal_flow_tank_capture:
 
-.. figure:: Images/horizontal_flow_tank_capture.png
+.. figure:: ../Images/horizontal_flow_tank_capture.png
     :height: 300px
     :align: center
     :alt: Horizontal flow sedimentation tank with capture velocity.
@@ -116,7 +116,7 @@ To answer this question, think about the two extremes of our reactor.
 
 .. _figure_horizontal_flow_tank_small_capture:
 
-.. figure:: Images/horizontal_flow_tank_small_capture.png
+.. figure:: ../Images/horizontal_flow_tank_small_capture.png
     :height: 300px
     :align: center
     :alt: Horizontal flow sedimentation tank with critical path and small particle.
@@ -129,7 +129,7 @@ We will complete the same exercise for vertical flow sedimentation tanks shown i
 
 .. _figure_vertical_flow_tank_base:
 
-.. figure:: Images/vertical_flow_tank_base.png
+.. figure:: ../Images/vertical_flow_tank_base.png
     :height: 500px
     :align: center
     :alt: Vertical flow sedimentation tank.

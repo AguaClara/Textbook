@@ -254,13 +254,13 @@ Create a graph showing flow rate vs depth for two linear flow orifice meters tha
   #alternative method to create a legend instead of using "label=Q_max1 in ax.plot"
   #ax.legend([Q_max1,Q_max2])
 
-  fig.savefig('Introduction/Images/LFOM_flow_vs_height')
+  fig.savefig('Introduction/../Images/LFOM_flow_vs_height')
   plt.show()
 
 
 .. _figure_LFOM_flow_vs_height:
 
-.. figure:: Images/LFOM_flow_vs_height.png
+.. figure:: ../Images/LFOM_flow_vs_height.png
    :width: 400px
    :align: center
    :alt: LFOM flow vs height
