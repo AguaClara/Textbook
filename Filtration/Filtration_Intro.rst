@@ -8,7 +8,7 @@ Filtration  Introduction
 
 .. _figure_Abandoned_Filtration_Plant:
 
-.. figure:: Images/Abandoned_Filtration_Plant.jpg
+.. figure:: //Images/Abandoned_Filtration_Plant.jpg
     :width: 300px
     :align: center
     :alt: photomicrograph
