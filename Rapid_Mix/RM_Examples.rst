@@ -1,7 +1,7 @@
 .. _title_rapid_mix_examples:
 
 ***************************************************
-Rapid Mix Appendix C: Examples
+Rapid Mix: Examples
 ***************************************************
 
 .. _heading_Example_pH_Adjustment:
@@ -272,7 +272,7 @@ A water treatment plant that is treating 120 L/s of water injects the coagulant 
 
 We will use a :ref:`linear flow orifice meter <heading_lfom>` with 20 cm of head loss. The first step is to determine the diameter of the LFOM.
 
-..todo:: This example needs to be updated once the LFOM OO code is fixed.
+.. todo:: This example needs to be updated once the LFOM OO code is fixed.
 
 .. code:: python
 
@@ -309,9 +309,9 @@ Example problem: Energy dissipation rate in a straight pipe
 
 
 Solution scheme
- 1) Calculate the friction factor
- 1) Use :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters
- 1) Convert to pipe length in meters.
+| 1) Calculate the friction factor
+| 2) Use :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters
+| 3) Convert to pipe length in meters.
 
 .. code:: python
 
