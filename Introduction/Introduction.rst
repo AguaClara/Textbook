@@ -1,8 +1,8 @@
 .. _title_Introduction_to_The_Physics_of_Water_Treatment_Design:
 
-**************************************************
+**************************************
 The Physics of Water Treatment Design
-**************************************************
+**************************************
 
 .. _heading_A_Different_Kind_of_Textbook:
 
