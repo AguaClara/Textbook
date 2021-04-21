@@ -62,9 +62,6 @@ Don't believe everything we say. Ask lots of questions:
 Myth in Environmental Engineering
 ---------------------------------
 
-..
-    To be sprinkled throughout chapters
-
 The following list is designed to get you thinking. These are concepts that are present in the Environmental Engineering community and that may capture some elements of truth and that may also further misconceptions.
 
  - Dead bodies cause disease
