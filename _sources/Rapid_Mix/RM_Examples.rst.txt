@@ -309,9 +309,9 @@ Example problem: Energy dissipation rate in a straight pipe
 
 
 Solution scheme
-| 1) Calculate the friction factor
-| 2) Use :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters
-| 3) Convert to pipe length in meters.
+#. Calculate the friction factor
+#. Use :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters
+#. Convert to pipe length in meters.
 
 .. code:: python
 

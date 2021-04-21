@@ -111,7 +111,7 @@ We need to calculate the rate at which coagulant nanoparticles attach to the cla
 
 .. math:: {\rlap{-} V_{\rm{Cleared}}} \propto \pi \, d_{Clay} \, L_{Diff_{CN}}
 
-The volume cleared is proportional to time
+The volume cleared is proportional to time.
 
 .. math:: {\rlap{-} V_{\rm{Cleared}}} \propto t
 
@@ -143,11 +143,12 @@ Combining the three equations for :math:`{\rlap{-} V_{\rm{Cleared}}}` and the eq
 Collision Rates
 ===============
 
-The time for all of the fluid to have had one opportunity for a collision occurs when :math:`{\rlap{-} V_{\rm{Cleared}}} = {\rlap{-} V_{\rm{Occupied}}} = \Lambda_{Clay}^3`
+The time for all of the fluid to have had one opportunity for a collision occurs when 
+.. math:: {\rlap{-} V_{\rm{Cleared}}} = {\rlap{-} V_{\rm{Occupied}}} = \Lambda_{Clay}^3`
 
 .. math:: t_c = \frac{\Lambda_{Clay}^3}{\pi d_{Clay} L_{Diff_{CN}} \Lambda_{Clay} G}
 
-The successful collision rate (the attachment rate) is given by
+The successful collision rate (the attachment rate) is given by:
 
 .. math:: \frac{dN_c}{dt} = \frac{1}{t_c}
 
