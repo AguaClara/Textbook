@@ -26,11 +26,11 @@ Our analysis suggests that this critical step may require significant time espec
 
 The following is a very preliminary estimate of the time required for attachment of the nanoparticles to the clay particles. This analysis includes multiple simplifying assumptions and there is a reasonable possibility that some of those assumptions are wrong. However, the core assumption that coagulant nanoparticles are transported to clay particles by a combination of fluid deformation (shear) and molecular diffusion is reasonable.
 
-The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. The core idea is that viscous shear dominated fluid deformation causes relative motion between the coagulant nanoparticles and the clay particles (or other suspended particles) with which they eventually will collide. The collision between these particles that are very different in size is difficult to achieve because there is a viscous layer of fluid around the clay particles that the clay particle drags with it as it rotates in deforming fluid. Diffusion helps transport the coagulant nanoparticles through this viscous layer.
+The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. The core idea is that viscous shear dominated fluid deformation causes relative motion between the coagulant nanoparticles and the clay particles (or other suspended particles) with which they eventually will collide. The collision between these particles that are very different in size is difficult to achieve because there is a viscous layer of fluid around the clay particles that the clay particles drag with them as they rotate in deforming fluid. Diffusion helps transport the coagulant nanoparticles through this viscous layer.
 
-The volume of the suspension that is cleared of nanoparticles is proportional to a collision area defined by a ring around the clay particle with width of the diameter of the nanoparticle diffusion band. This diffusion band is the length scale over which diffusion is able to transport coagulant particles to the clay surface during the time that the nanoparticles are sliding past the clay particle.
+The volume of the suspension that is cleared of nanoparticles is proportional to a collision area defined by a ring around the clay particles with width of the diameter of the nanoparticle diffusion band. This diffusion band is the length scale over which diffusion is able to transport coagulant particles to the clay surface during the time that the nanoparticles are sliding past the clay particles.
 
-If we go backwards in time, the ring of fluid around the clay particle would deform into two separate highly distorted volumes of fluid, one located to the left of the clay particle and one to the right (see figure :numref:`figure_Coagulant_nanoparticle_clay_collisions`). This volume of fluid is assumed to receive nanoparticles that are transported in by fluid deformation.
+If we go backwards in time, the ring of fluid around the clay particles would deform into two separate highly distorted volumes of fluid, one located to the left of the clay particle and one to the right (see figure :numref:`figure_Coagulant_nanoparticle_clay_collisions`). This volume of fluid is assumed to receive nanoparticles that are transported in by fluid deformation.
 
 .. _figure_Coagulant_nanoparticle_clay_collisions:
 
@@ -55,7 +55,7 @@ where :math:`d_{cn}` is the diameter of the coagulant nanoparticles. The length 
 
    L_{Diff} \approx \sqrt{D_{Diffusion} t_{Diffusion}}
 
-The time for coagulant nanoparticles to diffuse through the boundary layer around the clay particle is equal to the distance they travel around the clay particle divided by their velocity. The distance they travel scales with :math:`d_{Clay}` and their average velocity scales with the thickness of the diffusion layer/2 \* the velocity gradient.
+The time for coagulant nanoparticles to diffuse through the boundary layer around the clay particles is equal to the distance they travel around the clay particles divided by their velocity. The distance they travel scales with :math:`d_{Clay}` and their average velocity scales with the thickness of the diffusion layer/2 \* the velocity gradient.
 
 .. math::
   :label: Diffusion_Layer_time
@@ -119,7 +119,7 @@ The volume cleared is proportional to the relative velocity between clay and nan
 
 .. math:: {\rlap{-} V_{\rm{Cleared}}} \propto v_r
 
-We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between coagulant nanoparticles and clay particle that they will eventually collide with is assumed to be proportional to the average distance between clay particles. This assumption is both critical for the following derivation and is suspect. It is critical because if we were to assume that the relative velocity caused by shear is proportional to the nanoparticle diameter, the clay diameter, or the diffusion length scale, then the velocity would be extremely small and the time to clear the volume of fluid associated with one clay particle would take a very long time. However, wishing for a speedy process doesn't justify incorrect scaling. The relative velocity is assumed to be the velocity at which coagulant nanoparticles are transported into the two separate fluid volumes that will deform into the ring around the clay particle in the next few seconds.
+We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between coagulant nanoparticles and clay particle that they will eventually collide with is assumed to be proportional to the average distance between clay particles. This assumption is both critical for the following derivation and is suspect. It is critical because if we were to assume that the relative velocity caused by shear is proportional to the nanoparticle diameter, the clay diameter, or the diffusion length scale, then the velocity would be extremely small and the time to clear the volume of fluid associated with one clay particle would take a very long time. However, wishing for a speedy process doesn't justify incorrect scaling. The relative velocity is assumed to be the velocity at which coagulant nanoparticles are transported into the two separate fluid volumes that will deform into the ring around the clay particles in the next few seconds.
 
 The assumption that the relative velocity scales with the average distance between clay particles leads to the following steps. The first step is just a proposed functional relationship. We could also have jumped to the assumption that the relative velocity is a function of the length scale and the velocity gradient.
 
@@ -161,7 +161,7 @@ Substitute the equation for :math:`t_c`.
 Collision Rate and Particle Removal
 -----------------------------------
 
-A fraction of the remaining coagulant nanoparticles are removed during the time required for one sweep past the clay particle.
+A fraction of the remaining coagulant nanoparticles are removed during the time required for one sweep past the clay particles.
 
 .. math:: \frac{dn_{CN}}{ - k \, n_{CN}} = dN_c
 
