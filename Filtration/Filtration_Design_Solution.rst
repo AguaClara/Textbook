@@ -147,7 +147,7 @@ First, plot the minimum backwash velocity as a function of water temperature fro
 
     ax.set(xlabel=r'Temperature (°C)')
     ax.set(ylabel='Minimum backwash velocity')
-    fig.savefig('Filtration/../Images/Minimum_backwash_velocity_vs_water_temperature')
+    fig.savefig('../Images/Minimum_backwash_velocity_vs_water_temperature')
     plt.show()
 
 
@@ -288,14 +288,14 @@ Now we will evaluate the very first data set from a full scale SRSF. The perform
     ax.plot(t_data.to(u.hour),filter_pc)
     ax.set(xlabel='Filter run time (hrs)')
     ax.set(ylabel='pC*')
-    fig.savefig('Filtration/../Images/Filter_run_time_vs_removal_efficiency')
+    fig.savefig('../Images/Filter_run_time_vs_removal_efficiency')
     plt.show()
 
     fig, ax = plt.subplots()
     ax.plot(t_data.to(u.hour),filter_effluent)
     ax.set(xlabel='Filter run time (hrs)')
     ax.set(ylabel='Effluent turbidity (NTU)')
-    fig.savefig('Filtration/../Images/Filter_run_time_vs_effluent_turbidity')
+    fig.savefig('../Images/Filter_run_time_vs_effluent_turbidity')
     plt.show()
 
 .. _figure_Filter_run_time_vs_removal_efficiency:

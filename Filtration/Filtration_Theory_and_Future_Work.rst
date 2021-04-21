@@ -312,7 +312,7 @@ Floc size and velocity gradient calculations
   ax.set(xlabel='approach velocity (mm/s)')
   ax.set(ylabel='head loss per m')
   ax.legend(['Ergun', 'Kozeny'])
-  fig.savefig('Filtration/../Images/Head_loss_Ergun_and_Kozeny')
+  fig.savefig('../Images/Head_loss_Ergun_and_Kozeny')
   plt.show()
 
 
@@ -335,7 +335,7 @@ Floc size and velocity gradient calculations
   ax.plot(v_graph,G_CS_Ergun(v_graph, D_sand, Temperature, Porosity),'-')
   ax.set(xlabel='approach velocity (mm/s)')
   ax.set(ylabel='velocity gradient (Hz)')
-  fig.savefig('Filtration/../Images/G_vs_approach_velocity')
+  fig.savefig('../Images/G_vs_approach_velocity')
   plt.show()
 
 
