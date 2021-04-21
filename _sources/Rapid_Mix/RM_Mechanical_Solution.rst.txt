@@ -28,6 +28,7 @@ Part 1: Temperature effects, energy use, and operating costs
 ============================================================
 
 **1) Create a graph** of the kinematic viscosity of water as a function of temperature. Use the ``pc.viscosity_kinematic`` function. 
+
   #. Create an array of temperatures (0 to 35) using ``np.linspace`` to create a dimensionless array. Then, attach appropriate temperature dimensions to the array by multiplying by the units. You can do this in one line! 
   #. Pass the entire array of temperatures to the kinematic viscosity function in aguaclara.core.pc to obtain an array of corresponding viscosities. 
   #. Plot viscosity (mm^2/s) as a function of temperature (Celsius).
@@ -308,7 +309,7 @@ The power required by the motor is 3.30 kW.
     print(PowerElectricity)
     print(ElectricityRate)
 
-The cost of electricity to operate the rapid mix unit is 4232 USD/year 3.302 kilowatt 0.1462 dollar / kilowatt_hour.
+The cost of electricity to operate the rapid mix unit is 4232 USD/year per 3.302 kilowatts, or 0.1462 USD/kilowatt_hour.
 
 9f) What is the total cumulative energy costs for the rapid mix unit over a period of 25 years? Note that we are not including the projected increase in electricity costs over the next 25 years. That would be a nice addition to this analysis that would make the need for energy efficiency all the more apparent, but we are ignoring that complexity for this problem.
 

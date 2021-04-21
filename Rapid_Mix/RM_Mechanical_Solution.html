@@ -280,14 +280,14 @@
 <p>This design challenge contains two parts: - In the first section, we will explore the energy requirements and operating costs for conventional mechanized rapid mix. This provides an opportunity to learn about the consequences of failing to design for sustainability. Rapid mix is both poorly understood and potentially very important in determining the successful operation of a water treatment plant. - In the second section, we will explore the energy dissipation rate in a free jet.</p>
 <div class="section" id="part-1-temperature-effects-energy-use-and-operating-costs">
 <h2>Part 1: Temperature effects, energy use, and operating costs<a class="headerlink" href="#part-1-temperature-effects-energy-use-and-operating-costs" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt><strong>1) Create a graph</strong> of the kinematic viscosity of water as a function of temperature. Use the <code class="docutils literal notranslate"><span class="pre">pc.viscosity_kinematic</span></code> function.</dt><dd><ol class="arabic simple">
+<p><strong>1) Create a graph</strong> of the kinematic viscosity of water as a function of temperature. Use the <code class="docutils literal notranslate"><span class="pre">pc.viscosity_kinematic</span></code> function.</p>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>Create an array of temperatures (0 to 35) using <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> to create a dimensionless array. Then, attach appropriate temperature dimensions to the array by multiplying by the units. You can do this in one line!</p></li>
 <li><p>Pass the entire array of temperatures to the kinematic viscosity function in aguaclara.core.pc to obtain an array of corresponding viscosities.</p></li>
 <li><p>Plot viscosity (mm^2/s) as a function of temperature (Celsius).</p></li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">GraphTempArray</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">35</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">GraphKinematicViscosity</span><span class="o">=</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">GraphTempArray</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -507,7 +507,7 @@ It is common in engineering design to have target design value that must be roun
 <span class="k">print</span><span class="p">(</span><span class="n">ElectricityRate</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The cost of electricity to operate the rapid mix unit is 4232 USD/year 3.302 kilowatt 0.1462 dollar / kilowatt_hour.</p>
+<p>The cost of electricity to operate the rapid mix unit is 4232 USD/year per 3.302 kilowatts, or 0.1462 USD/kilowatt_hour.</p>
 <p>9f) What is the total cumulative energy costs for the rapid mix unit over a period of 25 years? Note that we are not including the projected increase in electricity costs over the next 25 years. That would be a nice addition to this analysis that would make the need for energy efficiency all the more apparent, but we are ignoring that complexity for this problem.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">YR25Electricity</span> <span class="o">=</span> <span class="n">RMElectricityCost</span><span class="o">*</span><span class="p">(</span><span class="mi">25</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
 <span class="k">print</span> <span class="p">(</span><span class="s1">&#39;The cumulative energy costs for a period of 25 years is&#39;</span><span class="p">,</span> <span class="n">YR25Electricity</span><span class="p">)</span>
