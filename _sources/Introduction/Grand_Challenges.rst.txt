@@ -49,7 +49,7 @@ The potential to make a dramatic improvement in the quality of life of communiti
 
 * Why is reducing the turbidity to less than 0.01 NTU not currently possible for most surface water treatment plants that rely on flocculation, sedimentation and sand filtration? Or stated another way, what controls the particle removal efficiency of surface water treatment plants?
 * How can we take measurements of raw water quality and use that to optimize the design of a water treatment plant? This will require creating the models that describe the physics of each unit process and that is a recurring theme of the research introduced below.
-* How can we invent new and improved technologies that enable communities to reliably produce high quality drinking water without needing to rely on expensive, expendable proprietary components.
+* How can we invent new and improved technologies that enable communities to reliably produce high quality drinking water without needing to rely on expensive, expendable proprietary components?
 
 Fractal Floc Model
 ------------------
