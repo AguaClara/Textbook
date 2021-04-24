@@ -330,7 +330,6 @@ The following list is designed to get you thinking. These are concepts that are 
 The AguaClara Treatment Train
 =============================
 
-
 Why does flocculation precedes sedimentation?
 Which process removes the largest quantity of contaminants?
 
