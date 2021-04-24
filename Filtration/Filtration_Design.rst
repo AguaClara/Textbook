@@ -12,7 +12,16 @@ The hydraulic design of both the enclosed and open stacked rapid sand filter is 
 
 There are two possible constraints on the trunk size. Either the trunk size is dictated by backwash flow distribution requirements or the trunk size is dictated by the need to have uniform flow distribution between filter layers and hence to have exactly twice the flow rate through the inner inlets.
 
-An analysis of the design reveals that the extra orifice head loss required to achieve the flow distribution between inner and outer trunks during filtration is greater than the head loss required to achieve uniform flow from the orifices during backwash.
+There are 4 levels of flow distribution in StaRS filters.
+
+  * between filters: will be handled by design of the weirs into the filter inlet boxes
+  * between sand layers: easily obtained by simply requiring that inlet head losses be identical in the 4 inlets under conditions of the target flow and accounting for the fact that the inner inlets have double the flow of the outer inlets.
+  * between branches (trunkPortQ_pi): aided considerably by the head loss through the sand and is helped by increasing the head loss though the orifices. Suggest using a value of 0.9 for this constraint.
+  * between orifices (branchPortQ_pi): made less important by the winged design that allows correcting flow in the winged space before the water enters the sand bed. Suggest using a value of 0.8 for this constraint.
+
+
+The clean bed sand head loss and including the head loss right at the point where the water enters the sand helps with the flow distribution between branches and between orifices. We are not currently including the benefit of the high velocity at the point where the water enters the sand.
+
 
 Design Steps
 ============
@@ -23,7 +32,7 @@ Design Steps
 Trunk Diameter
 -----------------------
 
-The first design step is to calculate the diameter of the trunk lines which is set by the filtration flow distribution between layers. The maximum acceptable inlet head loss during backwash sets the required depth of the open filter box and so is an important constraint for O-StaRS. The inlet head loss during filtration is :math:`\frac{1}{N_{layers}^2}` because the head loss is proportional to the flow ratio squared.
+The first design step is to calculate the diameter of the trunk lines which is set by the filtration flow distribution between layers. The maximum acceptable inlet head loss during backwash sets the required depth of the open filter box and so is an important constraint for O-StaRS. The outer inlet head loss during filtration is :math:`\frac{1}{N_{layers}^2}` because the head loss is proportional to the flow ratio squared.
 
 To simplify the analysis we will neglect major losses and calculate the minor losses using the trunk velocity during backwash. If the branch area is large compared with the trunk diameter, then the flow distribution between the branches is set by the head loss through the orifices and we can treat this as a single flow distribution problem rather than having two flow distribution events (branches and then orifices) in series.
 
@@ -90,6 +99,32 @@ Simplify more!
 
 
 
+Inner manifold orifice diameter
+-------------------------------
+
+Apply conservation of mass to obtain the port velocity to filter velocity ratio. Each port serves an area equal to the branch spacing times the port spacing.
+
+.. math::
+  :label: v_port_to_v_Fi
+
+  \frac{\bar v_{P_{Fi}}}{v_{Fi}} = \frac{2 B_{branch} B_{orifice_{outer}}}{\Pi_{vc}\frac{\pi}{4} D_{orifice}^2}
+
+where the factor of 2 is because the inner trunks serve two layers of sand. The orifice diameter for the inner inlets is given by
+
+
+Outer manifold orifice diameter
+-------------------------------
+
+
+
+Inner branch diameter
+---------------------
+Also, max branch diameter
+
+
+Outer branch diameter
+---------------------
+Also, max branch diameter
 
 
 
