@@ -313,8 +313,8 @@ Example treatment trains include:
 
 .. _heading_Textbook_Philosophy:
 
-Integrating Educational Philosophy with an Evolving Textbook
---------------------------------------------------------------
+An Evolving Research Approach
+-----------------------------
 
 This is an evolving textbook. We don't intend to ever print this book. This book has version numbers just like software with the idea that revisions are rapid and frequent. We commit to helping to accelerate the pace of knowledge generation and to revising this text as you help us identify places where we have presented hypotheses as theory and places where research provides a basis for better theoretical models of the water treatment processes.
 
