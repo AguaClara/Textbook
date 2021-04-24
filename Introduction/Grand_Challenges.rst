@@ -320,7 +320,7 @@ The filter approach velocity (the velocity of water before it enters the sand be
    Q_per_unit/6
    (15.9 * u.m/u.hr).to(u.mm/u.s)
 
-
+[SECTIONS BELOW TO BE MOVED OUT OF CHAPTER]
 
 Wastewater Treatment
 ====================
