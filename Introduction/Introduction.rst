@@ -243,7 +243,7 @@ The removal of other dissolved species is beyond the scope of the first release 
 
 .. _heading_Chlorine_Saved_the_World:
 
-Chlorine Saves the World
+Chlorination
 ------------------------
 
 Chlorine is widely recognized for reducing mortality from water borne disease in the United States. A more careful review of the mortality data and of the ability of chlorine to inactive various pathogens makes it difficult to assess the role of chlorine. A classic graph (see :numref:`figure_US_death_rate`) has been used to suggest that chlorination of drinking water supplies resulted in a significant reduction in mortality
@@ -256,6 +256,11 @@ Chlorine is widely recognized for reducing mortality from water borne disease in
     :alt: US_infectious_diseases_death_rate
 
     `Classic graph showing the reduction in the death rate for the United States from 1900 to 1996. <https://www.cdc.gov/mmwr/preview/mmwrhtml/mm4829a1.htm>`_
+
+.. _heading_Treatment_Trains:
+
+Treatment Trains
+----------------
 
 .. _table_Surface_Water_Treatment_Technologies:
 
@@ -278,12 +283,6 @@ Chlorine is widely recognized for reducing mortality from water borne disease in
    Dissolved air flotation, bubbles carry particles upward, flocculation, Public, `1905 <https://iwaponline.com/wst/article-abstract/31/3-4/1/4138/Principles-and-applications-of-dissolved-air>`_
 
 See `Pretreatment Processes for Potable Water Treatment Plants by Jeff Lindgren for an excellent overview of available technologies, May 2014 (not including AguaClara innovations) <https://www.pnws-awwa.org/uploads/PDFs/conferences/2014/2.%20PNWS%20AWWA%20WTC%20Precon%2005%2007%202014%20Pretreatment%20by%20B&V%201&2%20-%20R1.pdf>`_.
-
-
-.. _heading_Treatment_Trains:
-
-Treatment Trains
-----------------
 
 The prerequisites for the unit processes in :numref:`table_Surface_Water_Treatment_Technologies` reveal that surface water treatment almost always requires a series of treatment steps. A treatment train is a series of treatment steps (or unit processes) designed to convert a contaminated source water into a purified water meeting the use requirements.
 
