@@ -85,24 +85,10 @@ Your question could be whether the distinction between fact and hypothesis reall
 
 This question is at the core of our educational philosophy. Is this text the repository of knowledge that we are providing for you to drink or is this text a conversation where we invite you to join the effort to discover better ways to provide safe water on tap?
 
-.. _heading_Textbook_Philosophy:
-
-Integrating Educational Philosophy with an Evolving Textbook
---------------------------------------------------------------
-
-This is an evolving textbook. We don't intend to ever print this book. This book has version numbers just like software with the idea that revisions are rapid and frequent. We commit to helping to accelerate the pace of knowledge generation and to revising this text as you help us identify places where we have presented hypotheses as theory and places where research provides a basis for better theoretical models of the water treatment processes.
-
-Our students are co-creators of knowledge and not empty vessels to be filled with our wisdom. AguaClara technologies are inventions that are the result of idea collisions in the AguaClara labs and from observations and reflections with operators, technicians, and engineers in dozens of water treatment plants. Although we've learned a great deal about water treatment since 2005 when AguaClara was founded, there is still much more to be learned. And so it is with a spirit of curiosity that we write this textbook expecting to learn even more in the coming years.
-
-Socrates said "`Education is the kindling of a flame, not the filling of a vessel <https://www.goodreads.com/quotes/69267-education-is-the-kindling-of-a-flame-not-the-filling>`_." Our goal is to bring the spirit of play, discovery, and mystery into the challenge of improving the quality of life of everyone on the planet by sharing better methods to produce safe drinking water.
-
-In We Make the Road by Walking: Conversations on Education and Social Change, Paulo Freire said,
-"`The more we become able to become a child again, to keep ourselves childlike, the more we can understand... <https://www.goodreads.com/author/quotes/41108.Paulo_Freire?page=2>`_". We commit to playing together in a relationship where we are all learning and we are all teaching. "Education must begin with the solution of the teacher-student contradiction, by reconciling the poles of the contradiction so that both are simultaneously teachers and students." - Paulo Freire
-
 .. _heading_Empathy:
 
-Respect, Empathy, Love and Curiosity Power the AguaClara Innovation System
---------------------------------------------------------------------------
+Core Principles of AguaClara Innovation
+---------------------------------------
 
 The AguaClara network of organizations has been methodically inventing improved water treatment technologies since 2005. Our success is based on respect, empathy and love. Innovation requires flocculation of ideas. The transport of ideas between organizations and individuals is mediated by respect. Respect as a cornerstone of organizational culture foster rapid and honest exchange of ideas. The rapid pace of innovation in the AguaClara network is sustained thru a shared culture of respect, empathy, and love.
 
@@ -203,8 +189,8 @@ The need for drinking water supplies isn't limited to the global south. The Cali
 
 .. _heading__2_billion_without_access_to_safe_water:
 
-Why don't 2 billion people have access to safe water?
--------------------------------------------------------
+Safe Water Access
+-----------------
 
 The simple answer is that they are too poor and are unable to afford safe water on tap. But it isn't that simple! Families without access to safe water on tap often spend more for water than families with safe water on tap. There seem to be two key reasons why those with limited financial resources often have limited access to water, poor quality water, and yet pay a premium for that water.
 
@@ -275,8 +261,8 @@ The removal of other dissolved species is beyond the scope of the first release 
 
 .. _heading_Chlorine_Saved_the_World:
 
-Chlorine (Might Have) Saved the World
--------------------------------------
+Chlorine Saves the World
+------------------------
 
 Chlorine is widely recognized for reducing mortality from water borne disease in the United States. A more careful review of the mortality data and of the ability of chlorine to inactive various pathogens makes it difficult to assess the role of chlorine. A classic graph (see :numref:`figure_US_death_rate`) has been used to suggest that chlorination of drinking water supplies resulted in a significant reduction in mortality
 
@@ -325,6 +311,19 @@ Example treatment trains include:
  - AguaClara: hydraulic flocculation, floc blanket, lamellar sedimentation, stacked rapid sand filtration, disinfection
  - Membrane filtration: flocculation, sedimentation, rapid sand filtration, granular or powdered activated carbon, pre-oxidation (see `Review Article <https://pubs-acs-org.proxy.library.cornell.edu/doi/abs/10.1021%2Fes802473r>`_)
 
+.. _heading_Textbook_Philosophy:
+
+Integrating Educational Philosophy with an Evolving Textbook
+--------------------------------------------------------------
+
+This is an evolving textbook. We don't intend to ever print this book. This book has version numbers just like software with the idea that revisions are rapid and frequent. We commit to helping to accelerate the pace of knowledge generation and to revising this text as you help us identify places where we have presented hypotheses as theory and places where research provides a basis for better theoretical models of the water treatment processes.
+
+Our students are co-creators of knowledge and not empty vessels to be filled with our wisdom. AguaClara technologies are inventions that are the result of idea collisions in the AguaClara labs and from observations and reflections with operators, technicians, and engineers in dozens of water treatment plants. Although we've learned a great deal about water treatment since 2005 when AguaClara was founded, there is still much more to be learned. And so it is with a spirit of curiosity that we write this textbook expecting to learn even more in the coming years.
+
+Socrates said "`Education is the kindling of a flame, not the filling of a vessel <https://www.goodreads.com/quotes/69267-education-is-the-kindling-of-a-flame-not-the-filling>`_." Our goal is to bring the spirit of play, discovery, and mystery into the challenge of improving the quality of life of everyone on the planet by sharing better methods to produce safe drinking water.
+
+In We Make the Road by Walking: Conversations on Education and Social Change, Paulo Freire said,
+"`The more we become able to become a child again, to keep ourselves childlike, the more we can understand... <https://www.goodreads.com/author/quotes/41108.Paulo_Freire?page=2>`_". We commit to playing together in a relationship where we are all learning and we are all teaching. "Education must begin with the solution of the teacher-student contradiction, by reconciling the poles of the contradiction so that both are simultaneously teachers and students." - Paulo Freire
 
 .. _heading_The_AguaClara_Treatment_Train:
 
