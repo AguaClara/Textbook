@@ -477,7 +477,7 @@ When the most extreme turn a streamline must make is 90°, the value of the vena
 
 .. note:: Note that what this class calls :math:`\Pi_{vc}` is often referred to as a ‘Coefficient of Contraction,’ :math:`C_c`, in other engineering courses and settings.
 
-Origin of the Orifice Equation
+The Orifice Equation
 ------------------------------
 
 The orifice equation is derived from the Bernoulli equation as applied to the purple points in the following image:
