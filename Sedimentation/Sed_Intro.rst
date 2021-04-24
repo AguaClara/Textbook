@@ -4,6 +4,8 @@
 Sedimentation Introduction
 ***************************************
 
+.. _Sedimentation Unit Process Overview:
+
 [THIS SECTION MOVED FROM INTRO CHAPTER - NEEDS TO BE INCORPORATED]
 
 Why does flocculation precedes sedimentation?
@@ -56,7 +58,7 @@ The terminal velocities of particles in surface waters range over many orders of
 
 The low terminal velocities of particles that we need to remove from surface waters reveals that sedimentation alone will not work. The time required for a small particle to settle even a few mm would require excessively large sedimentation tanks. This is why flocculation, the process of sticking particles together so that they can attain higher sedimentation velocities, is perhaps the most important unit process in surface water treatment plants.
 
-.. _Sedimentation Unit Process Overview:
+[END OF RELOCATED SECTION]
 
 Sedimentation is a gravity-driven unit process in which suspended flocs are settled out from water. Large flocs made up of many primary particles and coagulant will settle if given enough time. Sedimentation is commonly preceded by coagulation/flocculation processes - coagulation/flocculation aim to form flocs which will be large enough to settle in sedimentation - and is commonly followed by filtration processes for further treatment. Sludge consolidation processes are often present alongside sedimentation to reduce the waste stream of settled flocs. Optimizing sedimentation is important because the more particles that sedimentation can remove, the fewer particles the filter will have to remove. This is good because filters can only handle a small amount of solids, and cleaning the filters with backwash uses a lot of water so we want to reduce the number of backwashes. The goal of sedimentation is to concentrate a waste stream of flocs, or sludge.
 
