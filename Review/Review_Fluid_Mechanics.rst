@@ -1,7 +1,7 @@
 .. _title_review_fluid_mechanics:
 
 ***********************
-Review: Fluid Mechanics
+Fluid Mechanics Review
 ***********************
 
 This document is meant to be a refresher on fluid mechanics. It will only cover the topics in fluids mechanics that will be used heavily in the course.
