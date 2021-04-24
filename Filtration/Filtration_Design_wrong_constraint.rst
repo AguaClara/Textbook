@@ -20,188 +20,30 @@ Design Steps
 #. Apply a maximum head loss during backwash and flow distribution between filter layers during filtration to set the maximum velocity in the trunk during backwash
 
 
-Trunk Diameter
+Backwash Trunk Diameter
 -----------------------
 
-The first design step is to calculate the diameter of the trunk lines which is set by the filtration flow distribution between layers. The maximum acceptable inlet head loss during backwash sets the required depth of the open filter box and so is an important constraint for O-StaRS. The inlet head loss during filtration is :math:`\frac{1}{N_{layers}^2}` because the head loss is proportional to the flow ratio squared.
+The first design step is to calculate the diameter of the trunk lines which is set by the backwash flow distribution requirement. The maximum acceptable head loss during backwash sets the required depth of the open filter box and so is an important constraint for O-StaRS. To simplify the analysis we will neglect major losses and calculate the minor losses using the trunk velocity during backwash.
 
-To simplify the analysis we will neglect major losses and calculate the minor losses using the trunk velocity during backwash. If the branch area is large compared with the trunk diameter, then the flow distribution between the branches is set by the head loss through the orifices and we can treat this as a single flow distribution problem rather than having two flow distribution events (branches and then orifices) in series.
+If the branch area is large compared with the trunk diameter, then the flow distribution between the branches is set by the head loss through the orifices and we can treat this as a single flow distribution problem rather than having two flow distribution events (branches and then orifices) in series.
 
-We will also use the manifold velocity to obtain the minor loss coefficients for the orifices. This will simplify the analysis. The minor loss coefficient associated with the orifices, :math:`K_{e_{innerOrifices}}`, can be obtained from the minor loss equation written for port exit head loss. All of the kinetic energy in the port jet is lost.
+The total head loss in the inlet trunk and branches during backwash is
+
+.. math::
+  :label: eq_he_inlet_Bw
+
+  h_{e_{inlet_{Bw}}} = \left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{outerOrifices}}\right)\frac{\bar v_{M_{Bw}}^2}{2g}
+
+where :math:`K_{e_{trunk}}` is the minor loss coefficient for all of the inlet trunks. The inlet trunks will be designed to have the same number of elbows. It is possible that we can design this so that the :math:`K_{e_{branch}}` is small by having the branch area larger than the trunk area. The minor loss coefficient associated with the orifices, :math:`K_{e_{outerOrifices}}`, can be obtained from the minor loss equation written for port exit head loss. All of the kinetic energy in the port jet is lost.
 
 The head loss through a port can be expressed in the minor loss equation form.
 
 .. math::
   :label: eq_he_port
 
-  h_{e_P} = \frac{\bar v_{P}^2}{2g} = K_{e_{innerOrifices}}\frac{\bar v_{M_{inner}}^2}{2g}
+  h_{e_P} = \frac{\bar v_{P}^2}{2g}
 
-where the port velocity :math:`\bar v_{P}` is the *contracted* velocity out of the port. Substitute equation :eq:`eq_he_port` into equation :eq:`Manifold_max_v_with_hl_series`.
-
-.. math::
-  :label: Manifold_max_v_with_hl_sand
-
-   \frac{\bar v_{M_{inner}}^2}{2g}=  \left(K_{e_{innerOrifices}}\frac{\bar v_{M_{inner}}^2}{2g} + h_{l_{sand}}\right)\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}
-
-We have two unknowns, the manifold velocity and the orifice minor loss coefficient that scales with the manifold velocity. The second relationship we can apply is the maximum head loss that we are willing to accommodate during backwash.
-
-.. math::
-  :label:
-
-  h_{e_{outerInlet_{Bw}}} = \frac{N_{layer}^2}{4} h_{e_{innerInlet_{Fi}}} =  \frac{N_{layer}^2}{4} \left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{innerOrifices}}\right)\frac{\bar v_{M_{inner}}^2}{2g}
-
-We now have two equations in two unknowns and can solve for whichever term we choose. Arbitrarily we will eliminate :math:`K_{e_{innerOrifices}}` by first solving the previous equation for :math:`K_{e_{innerOrifices}}`.
-
-.. math::
-  :label:
-
-    K_{e_{innerOrifices}} = \frac{8 g h_{e_{outerInlet_{Bw}}}}{N_{layer}^2 \bar v_{M_{inner}}^2} - K_{e_{trunk}} - K_{e_{branch}}
-
-Now solve equation :eq:`Manifold_max_v_with_hl_sand` for the manifold velocity
-
-.. math::
-  :label: K_e_innerOrifices
-
-   \frac{\bar v_{M_{inner}}^2}{2g} -  \left(K_{e_{innerOrifices}}\frac{\bar v_{M_{inner}}^2}{2g} \right)\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1} = h_{l_{sand}}\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}
-
-Now eliminate :math:`K_{e_{innerOrifices}}` in equation :eq:`Manifold_max_v_with_hl_sand`.
-
-
-.. math::
-  :label: K_e_innerOrifices
-
-   \frac{\bar v_{M_{inner}}^2}{2g} -  \left( \frac{8 g h_{e_{outerInlet_{Bw}}}}{N_{layer}^2 \bar v_{M_{inner}}^2}\frac{\bar v_{M_{inner}}^2}{2g} - \left(K_{e_{trunk}} + K_{e_{branch}}\right)\frac{\bar v_{M_{inner}}^2}{2g} \right)\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1} = h_{l_{sand}}\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}
-
-
-Simplify more!
-
-.. math::
-  :label: K_e_innerOrifices
-
-   \frac{\bar v_{M_{inner}}^2}{2g}\left(\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)} +   \left(K_{e_{trunk}} + K_{e_{branch}}\right)\right)  = h_{l_{sand}} +\frac{4 h_{e_{outerInlet_{Bw}}}}{N_{layer}^2}
-
-
-Simplify more!
-
-.. math::
-  :label: K_e_innerOrifices
-
-   \bar v_{M_{inner}} = \left[\frac{2g\left(h_{l_{sand}} +\frac{4 h_{e_{outerInlet_{Bw}}}}{N_{layer}^2}\right)}{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)} +   K_{e_{trunk}} + K_{e_{branch}}}\right]^\frac{1}{2}
-
-
-
-
-
-
-
-
-
-JUNK BELOW
-==========
-
-
-Simplify more!
-
-.. math::
- :label: Manifold_max_v_with_hl_sand_of_K_orifice
-
-  \bar v_{M_{inner}} =\sqrt{\frac{2gh_{l_{sand}}}{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)} -  \left(K_{e_{innerOrifices}}\right)}}
-
-Now eliminate :math:`K_{e_{innerOrifices}}` in equation :eq:`Manifold_max_v_with_hl_sand`.
-
-.. math::
- :label:
-
-  \bar v_{M_{inner}} =\sqrt{\frac{2gh_{l_{sand}}}{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)} + K_{e_{trunk}} + K_{e_{branch}} -   \frac{2 g h_{e_{outerInletBw}}}{N_{layer}^2 \bar v_{M_{inner}}^2}}}
-
-
-Now solve for :math:`\bar v_{M_{inner}}`.
-
-.. math::
- :label: Manifold_max_v_with_hl_sand_of_K_orifice
-
-  {\bar v_{M_{inner}}}^2 =\frac{2gh_{l_{sand}}}{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)} + K_{e_{trunk}} + K_{e_{branch}} -   \frac{2 g h_{e_{outerInletBw}}}{N_{layer}^2 \bar v_{M_{inner}}^2}}
-
-The head loss thru the sand is a function of the filter layer thickness. The filter layer thickness will need to increase for trunk lines that are larger than about 6 inches. This creates a need to iterate to obtain a solution. We will simplify this by neglecting the conservative effect of increasing the filter layer depth.
-
-Next solve for the orifice loss coefficient using equation :eq:`K_e_innerOrifices`.
-
-
-
-
-
-
-whatis worng
-
-.. math::
-  :label:
-
-  \frac{2 g h_{e_{outerInletBw}}}{N_{layer}^2 \bar v_{M_{inner}}^2} - K_{e_{trunk}} - K_{e_{branch}}
-
-
-
-
-
-
-
-
-
-Next equate the head loss in the inner and outer inlets during filtration. We will use the velocity corresponding to all of the flow going through a single trunk as our reference velocity. First the head loss from the inlet box to the orifices in the outer inlets is given by
-
-.. math::
-  :label:
-
-  h_{e_{outerInlet_{Fi}}} = \left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{outerOrifices}}\right)\frac{\bar v_{M_{Bw}}^2}{2g N_{layer}^2}
-
-where the factor of :math:`N_{layer}` comes from the fact that the velocity in the outer inlets during filtration is :math:`1/N_{layer}` the velocity during backwash.
-
-Now the inner inlets
-
-.. math::
-  :label:
-
-  h_{e_{innerInlet_{Fi}}} = \left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{innerOrifices}}\right)\frac{2\bar v_{M_{Bw}}^2}{g N_{layer}^2}
-
-where the factor of 4 difference is because the velocity in the inner inlet is double the outer inlets because each inner inlet serves 2 filter layers.
-
-The manifold - port flow distribution constraint (equation :eq:`Manifold_max_v_with_hl_series`) during filtration can include the head loss through the sand. The clean bed filter head loss helps improve flow distribution. It is not yet clear how critical the flow distribution constraint is because the outlet system has a matching piezometric head distribution such that the difference in piezometric head is uniform across the filter bed. In addition the winged inlet system provides an opportunity for some balancing flow in the winged area.
-
-Set the head loss for the inner and outer inlets to be equal.
-
-.. math::
-  :label:
-
-  \left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{outerOrifices}}\right)\frac{\bar v_{M_{Bw}}^2}{2g N_{layer}^2} = \left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{innerOrifices}}\right)\frac{2\bar v_{M_{Bw}}^2}{g N_{layer}^2}
-
-Eliminate the identical terms.
-
-.. math::
-  :label:
-
-  \left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{outerOrifices}}\right) = 4\left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{innerOrifices}}\right)
-
-
-
-
-
-
-
-Solve for :math:`K_{e_{innerOrifices}}`.
-
-.. math::
-  :label:
-
- K_{e_{innerOrifices}} = \frac{K_{e_{outerOrifices}} - 3K_{e_{trunk}} - 3K_{e_{branch}}}{4}
-
-
-
-
-JUNK BELOW
-============
-
-where :math:`K_{e_{trunk}}` is the minor loss coefficient for all of the inlet trunks. The inlet trunks will be designed to have the same number of elbows. It is possible that we can design this so that the :math:`K_{e_{branch}}` is small by having the branch area larger than the trunk area.
-
- We want the head loss to be a function of the manifold velocity. The relationship between port and manifold velocity is given by equation :eq:`Manifold_max_v_no_hl_series`. Substitute equation :eq:`Manifold_max_v_no_hl_series` into equation :eq:`eq_he_port` to obtain an equation that is only a function of the manifold velocity.
+where the port velocity :math:`\bar v_{P}` is the *contracted* velocity out of the port. We want the head loss to be a function of the manifold velocity. The relationship between port and manifold velocity is given by equation :eq:`Manifold_max_v_no_hl_series`. Substitute equation :eq:`Manifold_max_v_no_hl_series` into equation :eq:`eq_he_port` to obtain an equation that is only a function of the manifold velocity.
 
 .. math::
   :label: eq_he_port_of_v_manifold
