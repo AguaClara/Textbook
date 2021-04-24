@@ -16,8 +16,8 @@ There are 4 levels of flow distribution in StaRS filters.
 
   * between filters: will be handled by design of the weirs into the filter inlet boxes
   * between sand layers: easily obtained by simply requiring that inlet head losses be identical in the 4 inlets under conditions of the target flow and accounting for the fact that the inner inlets have double the flow of the outer inlets.
-  * between branches (trunkPortQ_pi): aided considerably by the head loss through the sand and is helped by increasing the head loss though the orifices. Suggest using a value of 0.9 for this constraint.
-  * between orifices (branchPortQ_pi): made less important by the winged design that allows correcting flow in the winged space before the water enters the sand bed. Suggest using a value of 0.8 for this constraint.
+  * between branches (trunkPortQ_pi): aided considerably by the head loss through the sand and is helped by increasing the head loss though the orifices. Suggest using a value of 0.9 for this constraint. This constraint will be combined with a maximum permissible head loss during backwash to determine the required diameter of the trunk lines and will be combined with the equal trunk head loss constraint to obtain the diameter of the orifices.
+  * between orifices (branchPortQ_pi): made less important by the winged design that allows correcting flow in the winged space before the water enters the sand bed. Suggest using a value of 0.8 for this constraint. This constraint will determine the required diameter of the branches.
 
 
 The clean bed sand head loss and including the head loss right at the point where the water enters the sand helps with the flow distribution between branches and between orifices. We are not currently including the benefit of the high velocity at the point where the water enters the sand.
@@ -43,7 +43,7 @@ The head loss through a port can be expressed in the minor loss equation form.
 .. math::
   :label: eq_he_port
 
-  h_{e_P} = \frac{\bar v_{P}^2}{2g} = K_{e_{innerOrifices}}\frac{\bar v_{M_{inner}}^2}{2g}
+  h_{e_{P_{inner}}} = \frac{\bar v_{P_{inner}}^2}{2g} = K_{e_{innerOrifices}}\frac{\bar v_{M_{inner}}^2}{2g}
 
 where the port velocity :math:`\bar v_{P}` is the *contracted* velocity out of the port. Substitute equation :eq:`eq_he_port` into equation :eq:`Manifold_max_v_with_hl_series`.
 
@@ -62,14 +62,14 @@ We have two unknowns, the manifold velocity and the orifice minor loss coefficie
 We now have two equations in two unknowns and can solve for whichever term we choose. Arbitrarily we will eliminate :math:`K_{e_{innerOrifices}}` by first solving the previous equation for :math:`K_{e_{innerOrifices}}`.
 
 .. math::
-  :label:
+  :label: K_e_innerOrifices
 
     K_{e_{innerOrifices}} = \frac{8 g h_{e_{outerInlet_{Bw}}}}{N_{layer}^2 \bar v_{M_{inner}}^2} - K_{e_{trunk}} - K_{e_{branch}}
 
 Now solve equation :eq:`Manifold_max_v_with_hl_sand` for the manifold velocity
 
 .. math::
-  :label: K_e_innerOrifices
+  :label:
 
    \frac{\bar v_{M_{inner}}^2}{2g} -  \left(K_{e_{innerOrifices}}\frac{\bar v_{M_{inner}}^2}{2g} \right)\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1} = h_{l_{sand}}\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}
 
@@ -77,7 +77,7 @@ Now eliminate :math:`K_{e_{innerOrifices}}` in equation :eq:`Manifold_max_v_with
 
 
 .. math::
-  :label: K_e_innerOrifices
+  :label:
 
    \frac{\bar v_{M_{inner}}^2}{2g} -  \left( \frac{8 g h_{e_{outerInlet_{Bw}}}}{N_{layer}^2 \bar v_{M_{inner}}^2}\frac{\bar v_{M_{inner}}^2}{2g} - \left(K_{e_{trunk}} + K_{e_{branch}}\right)\frac{\bar v_{M_{inner}}^2}{2g} \right)\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1} = h_{l_{sand}}\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}
 
@@ -85,7 +85,7 @@ Now eliminate :math:`K_{e_{innerOrifices}}` in equation :eq:`Manifold_max_v_with
 Simplify more!
 
 .. math::
-  :label: K_e_innerOrifices
+  :label:
 
    \frac{\bar v_{M_{inner}}^2}{2g}\left(\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)} +   \left(K_{e_{trunk}} + K_{e_{branch}}\right)\right)  = h_{l_{sand}} +\frac{4 h_{e_{outerInlet_{Bw}}}}{N_{layer}^2}
 
@@ -93,27 +93,45 @@ Simplify more!
 Simplify more!
 
 .. math::
-  :label: K_e_innerOrifices
+  :label: v_M_inner
 
    \bar v_{M_{inner}} = \left[\frac{2g\left(h_{l_{sand}} +\frac{4 h_{e_{outerInlet_{Bw}}}}{N_{layer}^2}\right)}{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)} +   K_{e_{trunk}} + K_{e_{branch}}}\right]^\frac{1}{2}
 
 
 
-Inner manifold orifice diameter
--------------------------------
+Inner trunk branch orifice spacing
+----------------------------------
 
-Apply conservation of mass to obtain the port velocity to filter velocity ratio. Each port serves an area equal to the branch spacing times the port spacing.
+The orifice diameter will be constrained by the wing fabrication. Apply conservation of mass to obtain the port velocity to filter velocity ratio. Each port serves an area equal to the branch spacing times the port spacing.
 
 .. math::
-  :label: v_port_to_v_Fi
+  :label: v_port_inner_to_v_Fi
 
-  \frac{\bar v_{P_{Fi}}}{v_{Fi}} = \frac{2 B_{branch} B_{orifice_{outer}}}{\Pi_{vc}\frac{\pi}{4} D_{orifice}^2}
+  \frac{\bar v_{P_{inner}}}{2 v_{Fi}} = \frac{B_{branch} B_{orifice_{inner}}}{\Pi_{vc}\frac{\pi}{4} D_{orifice}^2}
 
-where the factor of 2 is because the inner trunks serve two layers of sand. The orifice diameter for the inner inlets is given by
+where the factor of 2 is because the inner trunks serve two layers of sand. The orifice diameter for the inner inlets is also constrained by the required minor loss coefficient of the orifices given by equation :eq:`K_e_innerOrifices`. The relationship between the minor loss coefficient :math:`K_{e_{innerOrifices}}` and the port velocity is obtained by setting the minor head loss equation equal for the two velocities used.
+
+The :math:`K_{e_{innerOrifices}}` is a minor loss coefficient for the orifices scaled to the velocity of the manifold. All of the kinetic energy is lost when flowing through the orifice and thus the minor loss coefficient scaled to the contracted orifice velocity is equal to 1. Solve equation :eq:`eq_he_port` for the :math:`\bar v_{P_{inner}}`.
+
+.. math::
+  :label: v_P_inner_to_v_M_inner
+
+  \bar v_{P_{inner}} = \sqrt{K_{e_{innerOrifices}}} \bar v_{M_{inner}}
+
+Combine equation :eq:`v_P_inner_to_v_M_inner` and :eq:`v_port_inner_to_v_Fi`
+Solve for port velocity.
+
+.. math::
+  :label:
+
+  B_{orifice_{inner}} = \frac{ \bar v_{M_{inner}} \Pi_{vc}\pi D_{orifice}^2 \sqrt{K_{e_{innerOrifices}}}}{8 v_{Fi} B_{branch}}
 
 
-Outer manifold orifice diameter
--------------------------------
+Outer trunk branch orifice spacing
+----------------------------------
+
+The outer trunk branch orifices must be designed to so that the head loss during filtration is identical between inner and outer inlets.
+
 
 
 
@@ -230,9 +248,6 @@ Solve for :math:`K_{e_{innerOrifices}}`.
 
 
 
-
-JUNK BELOW
-============
 
 where :math:`K_{e_{trunk}}` is the minor loss coefficient for all of the inlet trunks. The inlet trunks will be designed to have the same number of elbows. It is possible that we can design this so that the :math:`K_{e_{branch}}` is small by having the branch area larger than the trunk area.
 
