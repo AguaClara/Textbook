@@ -8,36 +8,6 @@ This document is meant to be a refresher on fluid mechanics. It will only cover 
 
 If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_ Note that to view this link, you will need a Github accounts. If you wish to review from a legitimate textbook, you can find a pdf of good book by Frank White `here <http://ftp.demec.ufpr.br/disciplinas/TM240/Marchi/Bibliografia/White_2011_7ed_Fluid-Mechanics.pdf>`_.
 
-.. _heading_fluids_terms_eqs:
-
-Important Terms and Equations
-=============================
-
-**Terms:**
-
-#. :ref:`Laminar <heading_laminar_and_turbulent_flow>`
-#. :ref:`Turbulent <heading_laminar_and_turbulent_flow>`
-#. :ref:`Viscosity <heading_laminar_and_turbulent_flow>`
-#. :ref:`Streamline <heading_streamlines_and_control_volumes>`
-#. :ref:`Control Volume <heading_streamlines_and_control_volumes>`
-#. :ref:`Head <heading_bernoulli_equation>`
-#. :ref:`Head loss <heading_head_loss>`
-#. :ref:`Driving head <heading_head_loss_elevation_difference_trick>`
-#. :ref:`Vena Contracta/Coefficient of Contraction <heading_what_is_a_vena_contracta>`
-
-**Equations:**
-
-#. Continuity equation: :eq:`continuity_equation`
-#. Reynolds number :eq:`reynolds_number_equation`
-#. Bernoulli Equation :eq:`bernoulli_equation`
-#. Energy Equation :eq:`energy_equation`
-#. Darcy-Weisbach Equation :eq:`darcy_weisbach`
-#. Swamee-Jain Equation :eq:`swamee_jain`
-#. Hagen-Poiseuille Equation :eq:`hagen_poiseuille`
-#. Orifice Equation :eq:`orifice_equation`
-
-
-
 .. _heading_introductory_concepts:
 
 Introductory Concepts
