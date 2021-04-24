@@ -209,11 +209,9 @@ You’ll also notice the :math:`\alpha` term attached to the velocity head. This
 
 **This is the form of the energy equation that you will see over and over again in this book.** To summarize, the main difference between the Bernoulli equation and the energy equation for the purposes of this class is energy loss. The energy equation accounts for the fluid’s loss of energy over time while the Bernoulli equation does not. So how can the fluid lose energy?
 
-
-
 .. _heading_head_loss:
 
-Head_loss
+Head Loss
 =========
 
 **Head (L)oss**, :math:`h_L` is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through space. There are two components to head loss: major losses caused by (f)riction between the fluid and the surface it's flowing over, :math:`h_{\rm{f}}`, and minor losses caused by fluid-fluid internal friction resulting from flow (e)xpansions, :math:`h_e`. These two components combine such that :math:`h_L = h_{\rm{f}} + h_e`.
@@ -380,8 +378,8 @@ In order to find :math:`\bar v_{out}`, we first need to know what (or where) is 
 
 .. _heading_head_loss_elevation_difference_trick:
 
-Head Loss = Elevation Difference Trick
---------------------------------------
+The Head Loss Elevation Trick
+-----------------------------
 
 This trick, also called the ‘control volume trick,’ or more colloquially, the ‘head loss trick,’ is incredibly useful for simplifying hydraulic systems and is used all the time in this class.
 
@@ -443,16 +441,16 @@ By applying the head loss trick, you are considering the entire flow of the flui
 
 .. _heading_the_orifice_equation:
 
-The Orifice Equation
-====================
+Vena Contracta and The Orifice Equation
+=======================================
 
 This equation is one that you’ll see and use again and again throughout this class. Understanding it now will be invaluable, as future concepts will use and build on this equation.
 
 
 .. _heading_what_is_a_vena_contracta:
 
-What is a Vena Contracta?
--------------------------
+Vena Contracta
+--------------
 
 Before describing the equation, we must first understand the concept of a `vena contracta <https://en.wikipedia.org/wiki/Vena_contracta>`_. Refer to the figure below.
 
