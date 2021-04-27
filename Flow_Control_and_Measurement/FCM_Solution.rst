@@ -91,7 +91,7 @@ The steps for making the graph are as follows:
     ax.set(ylabel='Flow rate through the orifice (L/s)')
     ax.legend(['Horizontal Orientation', 'Vertical orientation'])
     ax.grid(True)
-    fig.savefig('Flow_Control_and_Measurement/../Images/Horizontal_vs_Vertical_Orifice_Orientation')
+    fig.savefig('../Images/Horizontal_vs_Vertical_Orifice_Orientation')
     plt.show()
 
 .. _figure_Horizontal_vs_Vertical_Orifice_Orientation:

@@ -104,7 +104,7 @@ Particle separation distance matters because it determines which transport mecha
   fig, ax = plt.subplots()
   ax.loglog(C_Clay.to(u.NTU),n_Clay.to(1/u.L))
   ax.set(xlabel='Clay concentration ($NTU$)', ylabel='Number of clay per liter')
-  fig.savefig('Flocculation/../Images/NClay_vs_CClay')
+  fig.savefig('../Images/NClay_vs_CClay')
   plt.show()
 
 
@@ -133,7 +133,7 @@ The next step is to calculate the separation distance between the clay particles
   fig, ax = plt.subplots()
   ax.semilogx(C_Clay.to(u.NTU),lamda_Clay.to(u.mm))
   ax.set(xlabel='Clay concentration ($NTU$)', ylabel=r'Clay separation distance ($mm$)')
-  fig.savefig('Flocculation/../Images/LambdaClay_vs_CClay')
+  fig.savefig('../Images/LambdaClay_vs_CClay')
   plt.show()
 
 
@@ -181,7 +181,7 @@ We will use the inner viscous length scale, Equation :eq:`eq_inner_viscous_lengt
   ax.set(xlabel='Velocity gradient (Hz)', ylabel='Inner viscous length scale (mm)')
   ax.text(10, 30, 'Eddies cause mixing', fontsize=12,rotation=-30)
   ax.text(3, 14, 'Viscous shear', fontsize=12,rotation=-30)
-  fig.savefig('Flocculation/../Images/innerviscous_vs_G')
+  fig.savefig('../Images/innerviscous_vs_G')
   plt.show()
 
 

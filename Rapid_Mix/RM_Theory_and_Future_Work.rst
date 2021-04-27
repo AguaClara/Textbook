@@ -77,7 +77,7 @@ This diffusion layer thickness is the length scale over which diffusion becomes 
   import matplotlib.pyplot as plt
 
   """I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated."""
-  imagepath = 'Rapid_Mix/../Images/'
+  imagepath = '../Images/'
   T_graph = np.linspace(0,30,4)*u.degC
   G = np.arange(50,5000,50)*u.Hz
 
@@ -230,7 +230,7 @@ Below we estimate the time required to achieve 80% attachment of nanoparticles i
   import matplotlib.pyplot as plt
   """I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated."""
 
-  imagepath = 'Rapid_Mix/../Images/'
+  imagepath = '../Images/'
 
   # conventional mechanical design values below
   Mix_HRT = np.array([0.5,15,25,35,85])*u.s

@@ -202,7 +202,7 @@ Below is the code used to calculate the required base addition.
     ax.plot(pH_graph,C_NaHCO3)
     ax.plot(pH_graph,C_Na2CO3)
     ax.plot(pH_graph,C_NaOH)
-    imagepath = 'Rapid_Mix/../Images/'
+    imagepath = '../Images/'
     ax.set(xlabel='pH target', ylabel='Base concentration (mmole/L)')
     ax.legend(["sodium bicarbonate","sodium carbonate","sodium hydroxide"])
     fig.savefig(imagepath+'mole_base_for_target_pH')
@@ -285,7 +285,7 @@ We will use a :ref:`linear flow orifice meter <heading_lfom>` with 20 cm of head
  import aguaclara.research.floc_model as fm
 
  #from matplotlib.ticker import FormatStrFormatter
- imagepath = 'AguaClara Water Treatment Plant Design/Rapid Mix/../Images/'
+ imagepath = 'AguaClara Water Treatment Plant Design/../Images/'
 
  Q_plant = 120 * u.L/u.s
  HL_LFOM = 20 * u.cm

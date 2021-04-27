@@ -65,7 +65,7 @@ Collision potential :math:`(G_{CS} \theta)` is a term with a very straightforwar
 
 
 
-:math:`G` measures the magnitude of shear by using the velocity gradient of a fluid in space, :math:`\frac{\Delta \bar v}{\Delta h}`. This is essentially the same as the :math:`\frac{\delta u}{\delta y}` term in fluid mechanics, which is found in the ubiquitous `fluid-shear problem <http://polymerdatabase.com/polymer%20physics/../Images/Visc.png>`_ as sourced from `here. <http://polymerdatabase.com/polymer%20physics/Viscosity.html>`_
+:math:`G` measures the magnitude of shear by using the velocity gradient of a fluid in space, :math:`\frac{\Delta \bar v}{\Delta h}`. This is essentially the same as the :math:`\frac{\delta u}{\delta y}` term in fluid mechanics, which is found in the ubiquitous `fluid-shear problem <http://polymerdatabase.com/polymer%20physics/images/Visc.png>`_ as sourced from `here. <http://polymerdatabase.com/polymer%20physics/Viscosity.html>`_
 
 :math:`\bar G` represents the average :math:`\frac{\Delta \bar v}{\Delta h}` for the entire water volume under consideration, and is the parameter we will be using from now on. Unfortunately, it is unrealistic to measure :math:`\frac{\Delta \bar v}{\Delta h}` for every parcel of the water in our flocculator and take an average. We need to approximate :math:`\bar G` using measureable parameters.
 

@@ -34,7 +34,7 @@ Use your function to create a graph of the centerline (maximum) energy dissipati
     ax.plot(DistanceDownstream, energy_dissipation_rate(DistanceDownstream, DiamJet, VelJet), 'r-')
     ax.set(xlabel='Distance from jet origin (m)')
     ax.set(ylabel='Energy dissipation rate (W/kg)')
-    fig.savefig('Rapid_Mix/../Images/Energy_dissipation_rate_vs_Distance_from_jet_origin')
+    fig.savefig('../Images/Energy_dissipation_rate_vs_Distance_from_jet_origin')
     plt.show()
 
 0.7212 meter ** 2 / second ** 3

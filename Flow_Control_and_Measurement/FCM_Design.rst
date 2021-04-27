@@ -239,7 +239,7 @@ AguaClara plants currently use either alum (aluminum sulfate) or PACl (polyalumi
   ax.set(xlabel=r'Coagulant concentration prepared from granules ' + r'$\left[\frac{g}{L}\right]$')
   ax.set(ylabel='Kinematic Viscosity ' + r'$\left[\frac{mm^2}{s}\right]$')
   ax.legend(['Alum data','Alum model', 'PACl data','PACl model'])
-  fig.savefig('Flow_Control_and_Measurement/../Images/Coagulant_Viscosity')
+  fig.savefig('../Images/Coagulant_Viscosity')
   plt.show()
 
 
