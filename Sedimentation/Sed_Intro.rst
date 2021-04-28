@@ -39,7 +39,7 @@ Sedimentation is the process of particles ‘falling’ because they have a high
   ax.loglog(D_particle.to(u.m),v_t(D_particle,organic,Temperature).to(u.m/u.s))
   ax.set(xlabel='Particle diameter (m)', ylabel='Terminal velocity (m/s)')
   ax.legend(["clay or sand","organic particle"])
-  imagepath = 'Introduction/Images/'
+  imagepath = '..Images/'
   fig.savefig(imagepath+'Terminal_velocity')
   plt.show()
 
