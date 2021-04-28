@@ -1,7 +1,7 @@
 .. _title_rapid_mix_examples:
 
 ***************************************************
-Rapid Mix: Examples
+Rapid Mix Appendix C: Examples
 ***************************************************
 
 .. _heading_Example_pH_Adjustment:
@@ -13,7 +13,7 @@ Find the required dose of several bases to raise the pH at the Manzaragua Water 
 
 .. _figure_Manzaragua_WTP:
 
-.. figure::    Images/Manzaragua_WTP.jpg
+.. figure::    ../Images/Manzaragua_WTP.jpg
     :width: 700px
     :align: center
     :alt: Manzaragua WTP
@@ -24,7 +24,7 @@ The plant performed very poorly from the first day of operation. The first attem
 
 .. _figure_Manzaragua_Water_Analysis:
 
-.. figure::    Images/Manzaragua_Water_Analysis.jpg
+.. figure::    ../Images/Manzaragua_Water_Analysis.jpg
    :width: 700px
    :align: center
    :alt: Manzaragua Water Analysis
@@ -202,7 +202,7 @@ Below is the code used to calculate the required base addition.
     ax.plot(pH_graph,C_NaHCO3)
     ax.plot(pH_graph,C_Na2CO3)
     ax.plot(pH_graph,C_NaOH)
-    imagepath = 'Rapid_Mix/Images/'
+    imagepath = '../Images/'
     ax.set(xlabel='pH target', ylabel='Base concentration (mmole/L)')
     ax.legend(["sodium bicarbonate","sodium carbonate","sodium hydroxide"])
     fig.savefig(imagepath+'mole_base_for_target_pH')
@@ -234,7 +234,7 @@ The calcium bases are relatively inexpensive and have the disadvantage of lower 
 
 .. _figure_mole_base_for_target_pH:
 
-.. figure::    Images/mole_base_for_target_pH.png
+.. figure::    ../Images/mole_base_for_target_pH.png
     :width: 700px
     :align: center
     :alt: mole base for target pH
@@ -243,7 +243,7 @@ The calcium bases are relatively inexpensive and have the disadvantage of lower 
 
 .. _figure_mg_base_for_target_pH:
 
-.. figure::    Images/mg_base_for_target_pH.png
+.. figure::    ../Images/mg_base_for_target_pH.png
     :width: 700px
     :align: center
     :alt: mg base for target pH
@@ -272,7 +272,7 @@ A water treatment plant that is treating 120 L/s of water injects the coagulant 
 
 We will use a :ref:`linear flow orifice meter <heading_lfom>` with 20 cm of head loss. The first step is to determine the diameter of the LFOM.
 
-.. todo:: This example needs to be updated once the LFOM OO code is fixed.
+..todo:: This example needs to be updated once the LFOM OO code is fixed.
 
 .. code:: python
 
@@ -285,7 +285,7 @@ We will use a :ref:`linear flow orifice meter <heading_lfom>` with 20 cm of head
  import aguaclara.research.floc_model as fm
 
  #from matplotlib.ticker import FormatStrFormatter
- imagepath = 'AguaClara Water Treatment Plant Design/Rapid Mix/Images/'
+ imagepath = 'AguaClara Water Treatment Plant Design/../Images/'
 
  Q_plant = 120 * u.L/u.s
  HL_LFOM = 20 * u.cm
@@ -309,10 +309,9 @@ Example problem: Energy dissipation rate in a straight pipe
 
 
 Solution scheme
-
-#. Calculate the friction factor
-#. Use :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters
-#. Convert to pipe length in meters.
+ 1) Calculate the friction factor
+ 1) Use :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters
+ 1) Convert to pipe length in meters.
 
 .. code:: python
 

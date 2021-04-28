@@ -22,7 +22,7 @@ In this section, we will develop a conceptual understanding of the sedimentation
 
 .. _figure_sed_tank_overview:
 
-.. figure:: Images/sed_tank_overview.png
+.. figure:: ../Images/sed_tank_overview.png
     :target: https://youtu.be/ca3xVntxEzw
     :height: 300px
     :align: center
@@ -45,7 +45,7 @@ In electrical circuits, electrons will travel the path of least resistance in a 
 
 .. _figure_circuit_base:
 
-.. figure:: Images/circuit_base.png
+.. figure:: ../Images/circuit_base.png
     :height: 300px
     :align: center
     :alt: Sedimentation tank as a circuit.
@@ -77,7 +77,7 @@ After water exits the flocculator, it is ready for sedimentation. In AguaClara p
 
 .. _figure_influent_channel_bays:
 
-.. figure:: Images/influent_channel_bays.png
+.. figure:: ../Images/influent_channel_bays.png
     :height: 300px
     :align: center
     :alt: Influent channel with pipes leading to different sedimentation bays.
@@ -103,7 +103,7 @@ Now, we will focus on a single bay of the sedimentation system. Flocculated wate
 
 .. _figure_influent_channel_manifold:
 
-.. figure:: Images/influent_channel_manifold.png
+.. figure:: ../Images/influent_channel_manifold.png
     :height: 300px
     :align: center
     :alt: Influent channel with pipe leading to one inlet manifold.
@@ -114,7 +114,7 @@ Water exits the influent manifold through a series of orifices and **diffusers**
 
 .. _figure_influent_manifold_diffuser_base:
 
-.. figure:: Images/influent_manifold_diffuser_base.png
+.. figure:: ../Images/influent_manifold_diffuser_base.png
     :height: 300px
     :align: center
     :alt: Influent manifold with diffusers.
@@ -123,7 +123,7 @@ Water exits the influent manifold through a series of orifices and **diffusers**
 
 .. _figure_influent_manifold_diffuser_flow:
 
-.. figure:: Images/influent_manifold_diffuser_flow.png
+.. figure:: ../Images/influent_manifold_diffuser_flow.png
     :height: 300px
     :align: center
     :alt: Influent manifold and diffuser flow paths.
@@ -140,7 +140,7 @@ The influent manifold diffuser system straightens the fluid jets that are exitin
 
 .. _figure_flow_circulation:
 
-.. figure:: Images/flow_circulation.png
+.. figure:: ../Images/flow_circulation.png
     :height: 300px
     :align: center
     :alt: Flow with a horizontal velocity component that causes problematic flow circulation.
@@ -149,7 +149,7 @@ The influent manifold diffuser system straightens the fluid jets that are exitin
 
 .. _figure_flow_straightening:
 
-.. figure:: Images/flow_straightening.png
+.. figure:: ../Images/flow_straightening.png
     :height: 300px
     :align: center
     :alt: Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation.
@@ -166,7 +166,7 @@ You may be wondering, why do we need a jet reverser in the first place? Why don'
 
 .. _figure_jet_placement:
 
-.. figure:: Images/jet_placement.png
+.. figure:: ../Images/jet_placement.png
     :height: 300px
     :align: center
     :alt: The jet reverser and diffuser alignments; the offset jet is the most successful.
@@ -177,7 +177,7 @@ There is a lot of research interest in determining the optimal upflow velocity f
 
 .. _figure_flat_bottomed_tank:
 
-.. figure:: Images/flat_bottomed_tank.png
+.. figure:: ../Images/flat_bottomed_tank.png
    :target: https://www.youtube.com/watch?v=04OksWoRmQI
    :width: 400px
    :align: center
@@ -191,7 +191,7 @@ The influent manifold, diffusers, and jet reverser work with a **sloped bottom g
 
 .. _figure_sed_cross_section:
 
-.. figure:: Images/sed_cross_section.png
+.. figure:: ../Images/sed_cross_section.png
     :height: 300px
     :align: center
     :alt: Cross-section of the bottom of the sedimentation tank.
@@ -200,7 +200,7 @@ The influent manifold, diffusers, and jet reverser work with a **sloped bottom g
 
 .. _figure_Floc_Blanket_Floc_Hopper:
 
-.. figure:: Images/Floc_Blanket_Floc_Hopper.png
+.. figure:: ../Images/Floc_Blanket_Floc_Hopper.png
    :target: https://www.youtube.com/watch?v=2x12wGb7xZE
    :width: 400px
    :align: center
@@ -212,7 +212,7 @@ So we know that the diffusers, jet reverser, and sloped bottom ensure that no sl
 
 .. _figure_diffuser_jetreverser:
 
-.. figure:: Images/diffuser_jetreverser.png
+.. figure:: ../Images/diffuser_jetreverser.png
     :target: https://youtu.be/yJ-8g7vQTSM
     :height: 300px
     :align: center
@@ -224,7 +224,7 @@ What are the failure modes for this system? For one, we need to ensure that the 
 
 .. _figure_jet_angle:
 
-.. figure:: Images/jet_angle.png
+.. figure:: ../Images/jet_angle.png
     :height: 300px
     :align: center
     :alt: Jet diameter and current of settled flocs.
@@ -233,7 +233,7 @@ What are the failure modes for this system? For one, we need to ensure that the 
 
 .. _figure_diffuser_jet_reverser:
 
-.. figure:: Images/diffuser_jet_reverser.png
+.. figure:: ../Images/diffuser_jet_reverser.png
     :target: https://youtu.be/WEM-YyGITlQ
     :width: 400px
     :align: center
@@ -298,7 +298,7 @@ The maximum jet velocity increases with width of the sedimentation tank valley b
 
 .. _figure_Jet_velocity_vs_sed_valley_width:
 
-.. figure:: Images/Jet_velocity_vs_sed_valley_width.png
+.. figure:: ../Images/Jet_velocity_vs_sed_valley_width.png
    :width: 400px
    :align: center
    :alt: Maximum jet velocity as a function of sed valley width and temperature
@@ -308,7 +308,7 @@ The maximum jet velocity increases with width of the sedimentation tank valley b
 
 .. _figure_Jet_head_loss_vs_sed_valley_width:
 
-.. figure:: Images/Jet_head_loss_vs_sed_valley_width.png
+.. figure:: ../Images/Jet_head_loss_vs_sed_valley_width.png
    :width: 400px
    :align: center
    :alt: Maximum jet head loss as a function of sed valley width and temperature
@@ -342,7 +342,7 @@ For a floc blanket to form, a sedimentation system requires that 1) all flocs be
 
 .. _figure_floc_blanket_experiment:
 
-.. figure:: Images/floc_blanket_experiment.png
+.. figure:: ../Images/floc_blanket_experiment.png
    :target: https://www.youtube.com/watch?v=w8ZFCz54IBs
    :width: 400px
    :align: center
@@ -388,7 +388,7 @@ The **floc hopper** provides an opportunity for floc consolidation. The floc wei
 
 .. _figure_floc_hopper_highlight:
 
-.. figure:: Images/floc_hopper_highlight.png
+.. figure:: ../Images/floc_hopper_highlight.png
    :target: https://youtu.be/xh9dTjWRoto
    :width: 400px
    :align: center
@@ -400,7 +400,7 @@ Consolidated sludge in the bottom of the floc hopper is then removed from the se
 
 .. _figure_benchtop_sed:
 
-.. figure:: Images/benchtop_sed.png
+.. figure:: ../Images/benchtop_sed.png
     :height: 300px
     :align: center
     :alt: Benchtop sedimentation tank setup, highlighting the floc blanket and floc hopper.
@@ -428,7 +428,7 @@ We need particles to settle on the bottom plate for it to be effectively capture
 
 .. _figure_plate_settler_critpath:
 
-.. figure:: Images/plate_settler_critpath.png
+.. figure:: ../Images/plate_settler_critpath.png
     :height: 300px
     :align: center
     :alt: Critical path between two plate settlers.
@@ -441,7 +441,7 @@ Let's make a simplification and assume that water is flowing with uniform veloci
 
 .. _figure_plate_settler_critheight:
 
-.. figure:: Images/plate_settler_critheight.png
+.. figure:: ../Images/plate_settler_critheight.png
     :height: 300px
     :align: center
     :alt: Critical height between two plate settlers.
@@ -458,7 +458,7 @@ The fluid carries the floc between the plate settlers while gravity pulls the fl
 
 .. _figure_plate_settler_valpha:
 
-.. figure:: Images/plate_settler_base.png
+.. figure:: ../Images/plate_settler_base.png
     :height: 300px
     :align: center
     :alt: Velocity components between two plate settlers.
@@ -469,7 +469,7 @@ This means that the net vertical velocity :math:`v_{z_{net}}` is the vertical co
 
 .. _figure_plate_settler_vnet:
 
-.. figure:: Images/plate_settler_vnet.png
+.. figure:: ../Images/plate_settler_vnet.png
     :height: 300px
     :align: center
     :alt: Net velocity between two plate settlers.
@@ -552,7 +552,7 @@ What we really want to know is: what is the connection of spacing between plate 
 
 .. _figure_plate_settler_depth:
 
-.. figure:: Images/plate_settler_depth.png
+.. figure:: ../Images/plate_settler_depth.png
     :height: 300px
     :align: center
     :alt: Relationship between plate settler length and sedimentation tank depth.
@@ -583,7 +583,7 @@ As we have already suggested, small spacing between plates will cause more floc 
 
 .. _figure_floc_rollup:
 
-.. figure:: Images/floc_rollup.png
+.. figure:: ../Images/floc_rollup.png
     :target: https://youtu.be/cQJxLO0WOPA
     :height: 300px
     :align: center
@@ -597,7 +597,7 @@ Reading the graph, we can see the line for 1 mm/s upflow velocity in the sedimen
 
 .. _figure_floc_vsed:
 
-.. figure:: Images/floc_vsed.png
+.. figure:: ../Images/floc_vsed.png
     :height: 300px
     :align: center
     :alt: Minimum plate settler spacing as a function of floc sedimentation velocity.
@@ -618,7 +618,7 @@ However, if the plates are closer together, then they will be shorter in length 
 
 .. _figure_plate_settler_headloss_spacing:
 
-.. figure:: Images/plate_settler_headloss_spacing.png
+.. figure:: ../Images/plate_settler_headloss_spacing.png
    :height: 300px
    :align: center
    :alt: Head loss as a function of plate settler spacing.
@@ -645,7 +645,7 @@ After asking the operators, we are told that the floc volcanoes appear in the ea
 
 .. _figure_temp_turbidity:
 
-.. figure:: Images/temp_turbidity.png
+.. figure:: ../Images/temp_turbidity.png
     :height: 300px
     :align: center
     :alt: Turbidity as a function of time in San Nicolas, Honduras.
@@ -661,7 +661,7 @@ The problem is that there is warmer water entering the sedimentation tank than w
 
 .. _figure_temp_tube_settler:
 
-.. figure:: Images/temp_tube_settler.png
+.. figure:: ../Images/temp_tube_settler.png
     :height: 300px
     :align: center
     :alt: Hot water rising and cold water settling in a tube settler.
@@ -697,7 +697,7 @@ The **submerged effluent manifold**, sometimes called a launder, collects settle
 
 .. _figure_effluent_manifold:
 
-.. figure:: Images/effluent_manifold.png
+.. figure:: ../Images/effluent_manifold.png
     :height: 300px
     :align: center
     :alt: Effluent manifold from the side- and top-view.
@@ -718,7 +718,7 @@ Why did AguaClara design the effluent manifold to be submerged? There are 3 main
 
 .. _figure_sed_fill_empty:
 
-.. figure:: Images/sed_fill_empty.png
+.. figure:: ../Images/sed_fill_empty.png
     :target: https://youtu.be/B_LEH1ezd6E
     :height: 300px
     :align: center
@@ -738,7 +738,7 @@ The submerged effluent manifold transports water from the sedimentation tank to 
 
 .. _figure_channel_labeled:
 
-.. figure:: Images/channel_labeled.png
+.. figure:: ../Images/channel_labeled.png
     :height: 300px
     :align: center
     :alt: Image of sedimentation channels.
@@ -747,7 +747,7 @@ The submerged effluent manifold transports water from the sedimentation tank to 
 
 .. _figure_channel_labeled_cad:
 
-.. figure:: Images/channel_labeled_cad.png
+.. figure:: ../Images/channel_labeled_cad.png
     :height: 300px
     :align: center
     :alt: Figure of sedimentation channels.
@@ -775,7 +775,7 @@ Let's recap some important points about the sedimentation tank.
 
 .. _figure_circuit_full:
 
-.. figure:: Images/circuit_full.png
+.. figure:: ../Images/circuit_full.png
     :height: 300px
     :align: center
     :alt: Sedimentation tank as a circuit, showing "good" and "bad" head loss.
@@ -813,7 +813,7 @@ Appendix Photos
 
 .. _figure_bottom_of_sed_tank_detail:
 
-.. figure:: Images/bottom_of_sed_tank_detail.png
+.. figure:: ../Images/bottom_of_sed_tank_detail.png
     :height: 300px
     :align: center
     :alt: Detail of the bottom of the sedimentation tank.

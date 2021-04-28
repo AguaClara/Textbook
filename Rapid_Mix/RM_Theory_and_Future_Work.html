@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Rapid Mix Mechanical Solution" href="RM_Mechanical_Solution.html" />
-    <link rel="prev" title="Rapid Mix: Examples" href="RM_Examples.html" /> 
+    <link rel="prev" title="Rapid Mix Appendix C: Examples" href="RM_Examples.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -102,7 +102,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Fluid Mechanics Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Flocs, Fractals, and Forces</span></p>
@@ -133,7 +133,7 @@
 <li class="toctree-l1"><a class="reference internal" href="RM_Intro.html">Rapid Mix Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Design.html">Rapid Mix Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Derivations.html">Rapid Mix Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RM_Examples.html">Rapid Mix: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid Mix Theory and Future Work</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#diffusion-and-shear-transport-coagulant-nanoparticles-to-clay">Diffusion and Shear Transport Coagulant Nanoparticles to Clay</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#diffusion-band-thickness">Diffusion band thickness</a></li>
@@ -292,9 +292,9 @@
 </ul>
 </div></blockquote>
 <p>The following is a very preliminary estimate of the time required for attachment of the nanoparticles to the clay particles. This analysis includes multiple simplifying assumptions and there is a reasonable possibility that some of those assumptions are wrong. However, the core assumption that coagulant nanoparticles are transported to clay particles by a combination of fluid deformation (shear) and molecular diffusion is reasonable.</p>
-<p>The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. The core idea is that viscous shear dominated fluid deformation causes relative motion between the coagulant nanoparticles and the clay particles (or other suspended particles) with which they eventually will collide. The collision between these particles that are very different in size is difficult to achieve because there is a viscous layer of fluid around the clay particles that the clay particles drag with them as they rotate in deforming fluid. Diffusion helps transport the coagulant nanoparticles through this viscous layer.</p>
-<p>The volume of the suspension that is cleared of nanoparticles is proportional to a collision area defined by a ring around the clay particles with width of the diameter of the nanoparticle diffusion band. This diffusion band is the length scale over which diffusion is able to transport coagulant particles to the clay surface during the time that the nanoparticles are sliding past the clay particles.</p>
-<p>If we go backwards in time, the ring of fluid around the clay particles would deform into two separate highly distorted volumes of fluid, one located to the left of the clay particle and one to the right (see figure <a class="reference internal" href="#figure-coagulant-nanoparticle-clay-collisions"><span class="std std-numref">Fig. 76</span></a>). This volume of fluid is assumed to receive nanoparticles that are transported in by fluid deformation.</p>
+<p>The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. The core idea is that viscous shear dominated fluid deformation causes relative motion between the coagulant nanoparticles and the clay particles (or other suspended particles) with which they eventually will collide. The collision between these particles that are very different in size is difficult to achieve because there is a viscous layer of fluid around the clay particles that the clay particle drags with it as it rotates in deforming fluid. Diffusion helps transport the coagulant nanoparticles through this viscous layer.</p>
+<p>The volume of the suspension that is cleared of nanoparticles is proportional to a collision area defined by a ring around the clay particle with width of the diameter of the nanoparticle diffusion band. This diffusion band is the length scale over which diffusion is able to transport coagulant particles to the clay surface during the time that the nanoparticles are sliding past the clay particle.</p>
+<p>If we go backwards in time, the ring of fluid around the clay particle would deform into two separate highly distorted volumes of fluid, one located to the left of the clay particle and one to the right (see figure <a class="reference internal" href="#figure-coagulant-nanoparticle-clay-collisions"><span class="std std-numref">Fig. 76</span></a>). This volume of fluid is assumed to receive nanoparticles that are transported in by fluid deformation.</p>
 <div class="figure align-center" id="id2">
 <span id="figure-coagulant-nanoparticle-clay-collisions"></span><a class="reference internal image-reference" href="../_images/Coagulant_nanoparticle_clay_collisions.png"><img alt="Coagulant nanoparticle clay collisions" src="../_images/Coagulant_nanoparticle_clay_collisions.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 76 </span><span class="caption-text">Fluid deformation moves coagulant nanoparticles close to clay particles and diffusion helps transport the nanoparticles the last nanometers toward a successful collision.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
@@ -307,7 +307,7 @@
 <p>where <span class="math notranslate nohighlight">\(d_{cn}\)</span> is the diameter of the coagulant nanoparticles. The length scale over which diffusion is occurring can be estimate from the diffusion coefficient and the time allotted.</p>
 <div class="math notranslate nohighlight" id="equation-diffusion-length-scale">
 <span class="eqno">(351)<a class="headerlink" href="#equation-diffusion-length-scale" title="Permalink to this equation">¶</a></span>\[ L_{Diff} \approx \sqrt{D_{Diffusion} t_{Diffusion}}\]</div>
-<p>The time for coagulant nanoparticles to diffuse through the boundary layer around the clay particles is equal to the distance they travel around the clay particles divided by their velocity. The distance they travel scales with <span class="math notranslate nohighlight">\(d_{Clay}\)</span> and their average velocity scales with the thickness of the diffusion layer/2 * the velocity gradient.</p>
+<p>The time for coagulant nanoparticles to diffuse through the boundary layer around the clay particle is equal to the distance they travel around the clay particle divided by their velocity. The distance they travel scales with <span class="math notranslate nohighlight">\(d_{Clay}\)</span> and their average velocity scales with the thickness of the diffusion layer/2 * the velocity gradient.</p>
 <div class="math notranslate nohighlight" id="equation-diffusion-layer-time">
 <span class="eqno">(352)<a class="headerlink" href="#equation-diffusion-layer-time" title="Permalink to this equation">¶</a></span>\[ t_{Diffusion} = \frac{ 2d_{Clay}} {L_{Diff} G}\]</div>
 <p>We can eliminate the diffusion time in Equation <a class="reference internal" href="#equation-diffusion-length-scale">(351)</a> using Equation <a class="reference internal" href="#equation-diffusion-layer-time">(352)</a>.</p>
@@ -321,7 +321,7 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 
 <span class="sd">&quot;&quot;&quot;I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated.&quot;&quot;&quot;</span>
-<span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;Rapid_Mix/Images/&#39;</span>
+<span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;../Images/&#39;</span>
 <span class="n">T_graph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">5000</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">Hz</span>
 
@@ -349,13 +349,13 @@
 <p>We need to calculate the rate at which coagulant nanoparticles attach to the clay particles. The long range transport is assumed to be the rate limiting step. The volume cleared is proportional to the area of this ring with the ring thickness equal to the molecular diffusion band thickness. Here we assume that the <span class="math notranslate nohighlight">\(L_{Diff_{CN}} &lt;&lt; d_{Clay}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-2">
 <span class="eqno">(354)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[{\rlap{-} V_{\rm{Cleared}}} \propto \pi \, d_{Clay} \, L_{Diff_{CN}}\]</div>
-<p>The volume cleared is proportional to time.</p>
+<p>The volume cleared is proportional to time</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-3">
 <span class="eqno">(355)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[{\rlap{-} V_{\rm{Cleared}}} \propto t\]</div>
 <p>The volume cleared is proportional to the relative velocity between clay and nanoparticles. This relative velocity is in the viscous layer of fluid in the ring surrounding the clay particle.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-4">
 <span class="eqno">(356)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[{\rlap{-} V_{\rm{Cleared}}} \propto v_r\]</div>
-<p>We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between coagulant nanoparticles and clay particle that they will eventually collide with is assumed to be proportional to the average distance between clay particles. This assumption is both critical for the following derivation and is suspect. It is critical because if we were to assume that the relative velocity caused by shear is proportional to the nanoparticle diameter, the clay diameter, or the diffusion length scale, then the velocity would be extremely small and the time to clear the volume of fluid associated with one clay particle would take a very long time. However, wishing for a speedy process doesn’t justify incorrect scaling. The relative velocity is assumed to be the velocity at which coagulant nanoparticles are transported into the two separate fluid volumes that will deform into the ring around the clay particles in the next few seconds.</p>
+<p>We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between coagulant nanoparticles and clay particle that they will eventually collide with is assumed to be proportional to the average distance between clay particles. This assumption is both critical for the following derivation and is suspect. It is critical because if we were to assume that the relative velocity caused by shear is proportional to the nanoparticle diameter, the clay diameter, or the diffusion length scale, then the velocity would be extremely small and the time to clear the volume of fluid associated with one clay particle would take a very long time. However, wishing for a speedy process doesn’t justify incorrect scaling. The relative velocity is assumed to be the velocity at which coagulant nanoparticles are transported into the two separate fluid volumes that will deform into the ring around the clay particle in the next few seconds.</p>
 <p>The assumption that the relative velocity scales with the average distance between clay particles leads to the following steps. The first step is just a proposed functional relationship. We could also have jumped to the assumption that the relative velocity is a function of the length scale and the velocity gradient.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-5">
 <span class="eqno">(357)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-5" title="Permalink to this equation">¶</a></span>\[v_r = f \left( \varepsilon ,\nu ,\Lambda_{Clay} \right)\]</div>
@@ -372,11 +372,10 @@
 </div>
 <div class="section" id="collision-rates">
 <span id="heading-collision-rates"></span><h2>Collision Rates<a class="headerlink" href="#collision-rates" title="Permalink to this headline">¶</a></h2>
-<p>The time for all of the fluid to have had one opportunity for a collision occurs when
-.. math:: {rlap{-} V_{rm{Cleared}}} = {rlap{-} V_{rm{Occupied}}} = Lambda_{Clay}^3`</p>
+<p>The time for all of the fluid to have had one opportunity for a collision occurs when <span class="math notranslate nohighlight">\({\rlap{-} V_{\rm{Cleared}}} = {\rlap{-} V_{\rm{Occupied}}} = \Lambda_{Clay}^3\)</span></p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-9">
 <span class="eqno">(361)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-9" title="Permalink to this equation">¶</a></span>\[t_c = \frac{\Lambda_{Clay}^3}{\pi d_{Clay} L_{Diff_{CN}} \Lambda_{Clay} G}\]</div>
-<p>The successful collision rate (the attachment rate) is given by:</p>
+<p>The successful collision rate (the attachment rate) is given by</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-10">
 <span class="eqno">(362)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-10" title="Permalink to this equation">¶</a></span>\[\frac{dN_c}{dt} = \frac{1}{t_c}\]</div>
 <p>Substitute the equation for <span class="math notranslate nohighlight">\(t_c\)</span>.</p>
@@ -384,7 +383,7 @@
 <span class="eqno">(363)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-11" title="Permalink to this equation">¶</a></span>\[dN_c = \pi d_{Clay} L_{Diff_{CN}}{\Lambda^{-2}_{Clay}} G dt\]</div>
 <div class="section" id="collision-rate-and-particle-removal">
 <span id="heading-collision-rate-and-particle-removal"></span><h3>Collision Rate and Particle Removal<a class="headerlink" href="#collision-rate-and-particle-removal" title="Permalink to this headline">¶</a></h3>
-<p>A fraction of the remaining coagulant nanoparticles are removed during the time required for one sweep past the clay particles.</p>
+<p>A fraction of the remaining coagulant nanoparticles are removed during the time required for one sweep past the clay particle.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-12">
 <span class="eqno">(364)<a class="headerlink" href="#equation-rapid-mix-rm-theory-and-future-work-12" title="Permalink to this equation">¶</a></span>\[\frac{dn_{CN}}{ - k \, n_{CN}} = dN_c\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-theory-and-future-work-13">
@@ -430,7 +429,7 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="sd">&quot;&quot;&quot;I needed to attach units to material properties due to a bug in floc_model. This will need to be fixed when floc_model is updated.&quot;&quot;&quot;</span>
 
-<span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;Rapid_Mix/Images/&#39;</span>
+<span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;../Images/&#39;</span>
 
 <span class="c1"># conventional mechanical design values below</span>
 <span class="n">Mix_HRT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">85</span><span class="p">])</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
@@ -555,7 +554,7 @@ for G given a head loss.</p>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="RM_Mechanical_Solution.html" class="btn btn-neutral float-right" title="Rapid Mix Mechanical Solution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="RM_Examples.html" class="btn btn-neutral float-left" title="Rapid Mix: Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="RM_Examples.html" class="btn btn-neutral float-left" title="Rapid Mix Appendix C: Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

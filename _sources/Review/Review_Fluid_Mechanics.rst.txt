@@ -1,12 +1,42 @@
 .. _title_review_fluid_mechanics:
 
 ***********************
-Fluid Mechanics Review
+Review: Fluid Mechanics
 ***********************
 
 This document is meant to be a refresher on fluid mechanics. It will only cover the topics in fluids mechanics that will be used heavily in the course.
 
 If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_ Note that to view this link, you will need a Github accounts. If you wish to review from a legitimate textbook, you can find a pdf of good book by Frank White `here <http://ftp.demec.ufpr.br/disciplinas/TM240/Marchi/Bibliografia/White_2011_7ed_Fluid-Mechanics.pdf>`_.
+
+.. _heading_fluids_terms_eqs:
+
+Important Terms and Equations
+=============================
+
+**Terms:**
+
+#. :ref:`Laminar <heading_laminar_and_turbulent_flow>`
+#. :ref:`Turbulent <heading_laminar_and_turbulent_flow>`
+#. :ref:`Viscosity <heading_laminar_and_turbulent_flow>`
+#. :ref:`Streamline <heading_streamlines_and_control_volumes>`
+#. :ref:`Control Volume <heading_streamlines_and_control_volumes>`
+#. :ref:`Head <heading_bernoulli_equation>`
+#. :ref:`Head loss <heading_head_loss>`
+#. :ref:`Driving head <heading_head_loss_elevation_difference_trick>`
+#. :ref:`Vena Contracta/Coefficient of Contraction <heading_what_is_a_vena_contracta>`
+
+**Equations:**
+
+#. Continuity equation: :eq:`continuity_equation`
+#. Reynolds number :eq:`reynolds_number_equation`
+#. Bernoulli Equation :eq:`bernoulli_equation`
+#. Energy Equation :eq:`energy_equation`
+#. Darcy-Weisbach Equation :eq:`darcy_weisbach`
+#. Swamee-Jain Equation :eq:`swamee_jain`
+#. Hagen-Poiseuille Equation :eq:`hagen_poiseuille`
+#. Orifice Equation :eq:`orifice_equation`
+
+
 
 .. _heading_introductory_concepts:
 
@@ -58,7 +88,7 @@ An example of changing flow geometries is when a change in pipe size occurs in a
 
 .. _figure_continuity_pipes:
 
-.. figure:: Images/continuity_pipes.png
+.. figure:: ../Images/continuity_pipes.png
     :align: center
     :alt: internal figure
 
@@ -74,7 +104,7 @@ Considering that this class deals with the flow of water through a water treatme
 
 .. _figure_wikipedia_laminar_turbulent:
 
-.. figure:: Images/Wikipedia_laminar_turbulent.png
+.. figure:: ../Images/Wikipedia_laminar_turbulent.png
     :width: 400px
     :align: center
     :alt: Laminar flow, turbulent flow, and the transition
@@ -123,7 +153,7 @@ A **control volume** is just an imaginary 3-dimensional shape in space. Its boun
 
 .. _figure_control_volume_simplification:
 
-.. figure:: Images/control_volume_simplification.png
+.. figure:: ../Images/control_volume_simplification.png
     :width: 650px
     :align: center
     :alt: Control volume simplification
@@ -134,7 +164,7 @@ A **control volume** is just an imaginary 3-dimensional shape in space. Its boun
 
 .. _figure_image_control_volumes:
 
-.. figure:: Images/image_control_volumes.png
+.. figure:: ../Images/image_control_volumes.png
     :width: 650px
     :align: center
     :alt: Image control volumes
@@ -178,16 +208,23 @@ Going back to the Bernoulli equation, the :math:`\frac{p}{\rho g}` term is calle
 
 .. _figure_different_forms_of_head:
 
-.. figure:: Images/different_forms_of_head.png
+.. figure:: ../Images/different_forms_of_head.png
     :width: 650px
     :align: center
     :alt: Different forms of head
 
     The three forms of hydraulic head.
 
+Assumption in using the Bernoulli equation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Though there are `many assumptions needed to confirm that the Bernoulli equation can be used <https://en.wikipedia.org/wiki/Bernoulli%27s_principle#Incompressible_flow_equation>`_, the main one for the purpose of this class is that energy is not gained or lost throughout the streamline being considered. If we consider more precise fluid mechanics terminology, then “friction by viscous forces must be negligible.” What this means is that the fluid along the streamline being considered is not losing energy to viscosity. As a result, using the Bernoulli equation implies that energy can’t be gained or lost. It can only be transferred between its three forms.
 
+Example problems
+^^^^^^^^^^^^^^^^
+
 `Here is a simple worksheet with very straightforward example problems using the Bernoulli equation. <https://www.teachengineering.org/content/cub_/lessons/cub_bernoulli/cub_bernoulli_lesson01_bepworksheetas_draft4_tedl_dwc.pdf>`_ Note that the solutions use the pressure-form of the Bernoulli equation. This just means that every term in the equation is multiplied by :math:`\rho g`, so the pressure term is just :math:`P`. The form of the equation does not affect the solution to the problem it helps solved.
+
 
 .. _heading_energy_equation:
 
@@ -300,7 +337,7 @@ In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gat
 
 .. _figure_moody:
 
-.. figure:: Images/Moody.jpg
+.. figure:: ../Images/Moody.jpg
     :width: 650px
     :align: center
     :alt: Moody diagram
@@ -346,7 +383,7 @@ There are three forms of the minor loss equation that you will see in this class
 
 .. _figure_minor_loss_pipe_FRD:
 
-.. figure:: Images/minor_loss_pipe.png
+.. figure:: ../Images/minor_loss_pipe.png
     :width: 650px
     :align: center
     :alt: Minor loss displayed in a flow expansion
@@ -360,7 +397,7 @@ one <https://www.engineeringtoolbox.com/minor-loss-coefficients-pipes-d_626.html
 
 .. _figure_minor_loss_elbow:
 
-.. figure:: Images/minor_loss_elbow.png
+.. figure:: ../Images/minor_loss_elbow.png
     :width: 650px
     :align: center
     :alt: Minor loss displayed in an elbow
@@ -389,7 +426,7 @@ Consider the following figure:
 
 .. _figure_head_loss_trick:
 
-.. figure:: Images/head_loss_trick.png
+.. figure:: ../Images/head_loss_trick.png
     :width: 650px
     :align: center
     :alt: Image used to explain the head loss trick
@@ -458,7 +495,7 @@ Before describing the equation, we must first understand the concept of a `vena 
 
 .. _figure_sluice_gate_vena_contracta:
 
-.. figure:: Images/sluice_gate_vena_contracta.png
+.. figure:: ../Images/sluice_gate_vena_contracta.png
     :width: 650px
     :align: center
     :alt: Sluice Gate Vena Contracta
@@ -486,7 +523,7 @@ The orifice equation is derived from the Bernoulli equation as applied to the pu
 
 .. _figure_hole_in_a_bucket:
 
-.. figure:: Images/hole_in_a_bucket.png
+.. figure:: ../Images/hole_in_a_bucket.png
     :width: 650px
     :align: center
     :alt: Minor loss displayed in an elbow
@@ -525,7 +562,7 @@ There are two configurations for an orifice in the tank holding a fluid: horizon
 
 .. _figure_vertical_and_horizontal_orifices:
 
-.. figure:: Images/vertical_and_horizontal_orifices.png
+.. figure:: ../Images/vertical_and_horizontal_orifices.png
     :width: 650px
     :align: center
     :alt: Vertical and horizontal orifices

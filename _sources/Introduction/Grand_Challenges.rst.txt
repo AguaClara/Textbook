@@ -49,7 +49,7 @@ The potential to make a dramatic improvement in the quality of life of communiti
 
 * Why is reducing the turbidity to less than 0.01 NTU not currently possible for most surface water treatment plants that rely on flocculation, sedimentation and sand filtration? Or stated another way, what controls the particle removal efficiency of surface water treatment plants?
 * How can we take measurements of raw water quality and use that to optimize the design of a water treatment plant? This will require creating the models that describe the physics of each unit process and that is a recurring theme of the research introduced below.
-* How can we invent new and improved technologies that enable communities to reliably produce high quality drinking water without needing to rely on expensive, expendable proprietary components?
+* How can we invent new and improved technologies that enable communities to reliably produce high quality drinking water without needing to rely on expensive, expendable proprietary components.
 
 Fractal Floc Model
 ------------------
@@ -116,11 +116,11 @@ Although AguaClara began with a focus on drinking water treatment, we have alway
 
 One of the core ideas of the AguaClara design process is that reactor geometry and hydraulic design are critical to obtain the target performance. Environmental engineers have tended to focus on the microbiology and chemistry of unit processes and have sometimes neglected the interactions between fluids, particles, and reactor geometry. We hypothesize that it will be possible to significantly improve on the conventional UASB design by inventing a anaerobic digester that accounts for the interactions between fluids, particles, and reactor geometry. Similarly, we hypothesize that it will be possible to dramatically improve the design of ultra low energy atmospheric oxygen transfer into aerobic reactors.
 
-Wastewater treatment generally requires more land, capital, and energy than drinking water treatment and thus is out of reach for most towns and villages. The result is that the majority of human waste reaches the environment with little or no treatment. Drinking water treatment is currently beyond the reach of many towns and villages and wastewater treatment isn't even on the horizon. Thus we need innovations that are better by a factor of 10 or more. The treatment technologies must have retention times measured in minutes rather than hours or days and must also reduce moving parts and reduce energy consumption. Thus the critical questions are:
+Wastewater treatment generally requires more land, capital, and energy than drinking water treatment and thus is out of reach for most towns and villages. The result is that the majority of human waste reaches the environment with little or no treatment. Drinking water treatment is currently beyond the reach of many towns and villages and wastewater treatment isn't even on the horizon. Thus we need innovations that are better by a factor of 10 or more. The treatment technologies must have retention times measured in minutes rather than hours or days and must also reduce moving parts and reduce energy consumption. Thus critical questions are:
 
-1. Why are wastewater treatment processes so slow?
-2. What is the nature of the rate limiting step?
-3. How could the rate be dramatically increased?
+1. why are wastewater treatment processes so slow?
+2. what is the nature of the rate limiting step?
+3. how could the rate be dramatically increased?
 
 .. _heading_Anaerobic_Pulsed_Bed:
 
@@ -147,8 +147,8 @@ The upflow velocity required to maintain a fully fluidized bed of the anaerobic 
 
 Our proposed solution to this mismatch between required upflow velocity for a fluidized bed and target hydraulic residence time is to use a pulsed flow inlet. The pulsed flow will be designed to lift the entire settled bed off of the floor of the UASB reactor so that the influent wastewater is uniformly distributed to the bottom of the reactor. We hypothesize that the settled bed will then break apart and settled into the band of fresh wastewater that is on the bottom of the reactor. With this proposed mechanism it is clear that a critical parameter is the depth of wastewater that should be injected with each pulse. It is likely that this depth of fresh wastewater should be
 
- - A small fraction of the depth of the UASB (perhaps less than 10% to ensure that no fresh wastewater can jet through the entire UASB in the time that the sludge settled again)
- - Large enough to provide a flow passage underneath the lifted bed without requiring flow velocities that are so high that the bed is scoured near the inlet jet. This translates to larger than a minimum ratio of fresh wastewater depth per pulse/inlet spacing.
+ - a small fraction of the depth of the UASB (perhaps less than 10% to ensure that no fresh wastewater can jet through the entire UASB in the time that the sludge settled again)
+ - large enough to provide a flow passage underneath the lifted bed without requiring flow velocities that are so high that the bed is scoured near the inlet jet. This translates to larger than a minimum ratio of fresh wastewater depth per pulse/inlet spacing.
 
 Research is needed to characterize settled bed behavior under pulsed flow.
 

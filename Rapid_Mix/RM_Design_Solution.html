@@ -102,7 +102,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Fluid Mechanics Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Flocs, Fractals, and Forces</span></p>
@@ -133,10 +133,13 @@
 <li class="toctree-l1"><a class="reference internal" href="RM_Intro.html">Rapid Mix Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Design.html">Rapid Mix Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Derivations.html">Rapid Mix Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RM_Examples.html">Rapid Mix: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid Mix Design Solution</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid Mix Design Solution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1)</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Flocculation</span></p>
 <ul>
@@ -269,6 +272,8 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
+<div class="section" id="id1">
+<h2>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Create a function to return maximum energy dissipation rate along the centerline of a free jet given inputs of distance downstream of the jet (along the centerline), jet velocity, and initial jet diameter. You will find the Rapid Mix powerpoint useful in finding a relationship between these variables.</p>
 <p>Use your function to create a graph of the centerline (maximum) energy dissipation rate as a function of distance from jet origin. * Use an initial diameter of DiamJet = 10 cm and a velocity of VelJet = 1 m/s. * Use a range of 7 to 20 jet diameters when creating the graph. * Use units of meters for the x-axis and W/kg for the y-axis. Make sure to label your axes correctly.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DiamJet</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span>
@@ -286,14 +291,15 @@
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">DistanceDownstream</span><span class="p">,</span> <span class="n">energy_dissipation_rate</span><span class="p">(</span><span class="n">DistanceDownstream</span><span class="p">,</span> <span class="n">DiamJet</span><span class="p">,</span> <span class="n">VelJet</span><span class="p">),</span> <span class="s1">&#39;r-&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Distance from jet origin (m)&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Energy dissipation rate (W/kg)&#39;</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Rapid_Mix/Images/Energy_dissipation_rate_vs_Distance_from_jet_origin&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../Images/Energy_dissipation_rate_vs_Distance_from_jet_origin&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>0.7212 meter ** 2 / second ** 3</p>
-<div class="figure align-center" id="id1">
+<div class="figure align-center" id="id2">
 <span id="figure-energy-dissipation-rate-vs-distance-from-jet-origin"></span><a class="reference internal image-reference" href="../_images/Energy_dissipation_rate_vs_Distance_from_jet_origin.png"><img alt="Energy dissipation rate vs Distance from jet origin" src="../_images/Energy_dissipation_rate_vs_Distance_from_jet_origin.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 82 </span><span class="caption-text">Energy dissipation rate vs Distance from jet origin</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 82 </span><span class="caption-text">Energy dissipation rate vs Distance from jet origin</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 

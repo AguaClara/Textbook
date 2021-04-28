@@ -147,13 +147,13 @@ First, plot the minimum backwash velocity as a function of water temperature fro
 
     ax.set(xlabel=r'Temperature (°C)')
     ax.set(ylabel='Minimum backwash velocity')
-    fig.savefig('Filtration/Images/Minimum_backwash_velocity_vs_water_temperature')
+    fig.savefig('../Images/Minimum_backwash_velocity_vs_water_temperature')
     plt.show()
 
 
 .. _figure_Minimum_backwash_velocity_vs_water_temperature:
 
-.. figure:: Images/Minimum_backwash_velocity_vs_water_temperature.png
+.. figure:: ../Images/Minimum_backwash_velocity_vs_water_temperature.png
    :width: 400px
    :align: center
    :alt: Minimum backwash velocity vs water temperature
@@ -288,20 +288,20 @@ Now we will evaluate the very first data set from a full scale SRSF. The perform
     ax.plot(t_data.to(u.hour),filter_pc)
     ax.set(xlabel='Filter run time (hrs)')
     ax.set(ylabel='pC*')
-    fig.savefig('Filtration/Images/Filter_run_time_vs_removal_efficiency')
+    fig.savefig('../Images/Filter_run_time_vs_removal_efficiency')
     plt.show()
 
     fig, ax = plt.subplots()
     ax.plot(t_data.to(u.hour),filter_effluent)
     ax.set(xlabel='Filter run time (hrs)')
     ax.set(ylabel='Effluent turbidity (NTU)')
-    fig.savefig('Filtration/Images/Filter_run_time_vs_effluent_turbidity')
+    fig.savefig('../Images/Filter_run_time_vs_effluent_turbidity')
     plt.show()
 
 .. _figure_Filter_run_time_vs_removal_efficiency:
 
 
-.. figure:: Images/Filter_run_time_vs_removal_efficiency.png
+.. figure:: ../Images/Filter_run_time_vs_removal_efficiency.png
    :width: 400px
    :align: center
    :alt: Filter run time vs removal efficiency
@@ -311,7 +311,7 @@ Now we will evaluate the very first data set from a full scale SRSF. The perform
 
 .. _figure_Filter_run_time_vs_effluent_turbidity:
 
-.. figure:: Images/Filter_run_time_vs_effluent_turbidity.png
+.. figure:: ../Images/Filter_run_time_vs_effluent_turbidity.png
    :width: 400px
    :align: center
    :alt: Filter run time vs effluent turbidity
@@ -554,13 +554,13 @@ Plot the fractional removal per constriction as a function of particle size.
     ax.plot(D_floc(D_constriction),c_star)
     ax.set(xlabel='Particle diameter(micrometer)')
     ax.set(ylabel='Fractional remaining')
-    fig.savefig('Filtration/Images/Diameter_vs_fractional_remaining')
+    fig.savefig('Filtration/../Images/Diameter_vs_fractional_remaining')
     plt.show()
 
 
 .. _figure_Diameter_vs_fractional_remaining:
 
-.. figure:: Images/Diameter_vs_fractional_remaining.png
+.. figure:: ../Images/Diameter_vs_fractional_remaining.png
    :width: 400px
    :align: center
    :alt: Diameter vs fractional remaining

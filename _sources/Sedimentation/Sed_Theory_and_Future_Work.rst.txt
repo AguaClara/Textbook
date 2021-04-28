@@ -242,7 +242,7 @@ We estimate the hindered sedimentation velocity to be 1 mm/s since that is what 
   y=np.array([1,1])*yscale
   ax.plot(x,y)
   ax.plot(Pi_recycle,CP(H_fb,v_up,v_hindered,Pi_recycle,C_plant,C_recycle))
-  imagepath = 'Sedimentation/Images/'
+  imagepath = '../Images/'
   ax.set(xlabel='recycle ratio', ylabel='Collision Potential (kg/m^2)')
   ax.legend(["no recycle at 1 mm/s","with recycle at 3 mm/s"])
   fig.savefig(imagepath+'fb_recycle_ratio')
@@ -252,7 +252,7 @@ Here are the results.
 
  .. _Collision potential with sludge recycle:
 
-.. figure::    Images/fb_recycle_ratio.png
+.. figure::    ../Images/fb_recycle_ratio.png
     :width: 700px
     :align: center
     :alt: Collision potential with sludge recycle
