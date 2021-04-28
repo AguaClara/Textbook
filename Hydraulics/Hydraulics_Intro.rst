@@ -128,16 +128,16 @@ Substitute equations :eq:`Piezo_ports` into Equation :eq:`Pi_Q_ports` to obtain 
 This equation shows that the flow distribution will approach 1 when :math:`\bar \Psi_{M}` is much larger than :math:`\Delta \Psi_M`. This can be achieved by having the manifold velocities be small compared with the port velocities. Solving for the change in piezometric head in the manifold we obtain the relationship between change in piezometric head and uniformity of port flow.
 
 .. math::
-  :label: Pi_Q_ports3
+  :label: Pi_Psi
 
-   \Delta \Psi_M = 2\bar \Psi_{M}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}
+   \Pi_{\Psi} = \frac{\Delta \Psi_M}{\bar \Psi_{M}} = \frac{2\left(1 - \Pi_{Q}^2 \right)}{\Pi_{Q}^2 + 1}
 
-The energy equation also yields an equation for the change in piezometric head (see Equation :eq:`delta_piezometric_cv_manifold`) and we can equate those two to
+The energy equation also yields an equation for the change in piezometric head (see Equation :eq:`delta_piezometric_cv_manifold`) and we can equate those two to obtain
 
 .. math::
   :label: Energy_and_Pi_Q
 
-   \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L} = 2\bar \Psi_{M}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}
+   \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L} = \bar \Psi_{M} \Pi_{\Psi}
 
 
 If head loss in the manifold is small, then we have
@@ -145,7 +145,7 @@ If head loss in the manifold is small, then we have
 .. math::
   :label: Energy_and_Pi_Q_no_manifold_hl
 
-   \frac{\bar v_{M_1}^{2}}{2 g} = 2\bar \Psi_M\frac{1 - \Pi_Q^2}{\Pi_Q^2 + 1}
+   \frac{\bar v_{M_1}^{2}}{2 g} = \bar \Psi_M \Pi_{\Psi}
 
 The average piezometric head in the manifold is also influenced by any head loss that is in series with the port head loss. Here we assume that the piezometric head datum is in the receiving tank. If the receiving tank is a filter, then there could be head loss through the sand on the way to the outlet of the filter. This head loss in series will help provide more uniform flow out of the manifold if there aren't any paths for flow to blend between the first and last ports. This is the case for division of flow between sand layers in a stacked rapid sand filter where the head loss through the sand plays a key role in helping to divide the flow evenly between the 6 layers of sand. The average piezometric head in the manifold, :math:`\bar \Psi_{M}` is equal to the head from the port kinetic energy plus any downstream head loss.
 
@@ -160,14 +160,14 @@ The port head loss is given by :math:`\bar v_{P} = \sqrt{2gh_e}` where the port 
 .. math::
   :label: Manifold_max_v_with_hl_series
 
-   \bar v_{M_1}= 2\sqrt{g (h_{e_{port}} + h_{l_{series}})\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
+   \bar v_{M_1}= \sqrt{2 g (h_{e_{port}} + h_{l_{series}})\Pi_{\Psi}}
 
 If there is no additional head loss in series to improve flow distribution, then Equation :eq:`Manifold_max_v_with_hl_series` simplifies to
 
 .. math::
   :label: Manifold_max_v_no_hl_series
 
-   \frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)}}
+   \frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{1}{\Pi_{\Psi}}
 
 Equation :eq:`Manifold_max_v_no_hl_series` (see :numref:`figure_Ratio_port_to_manifold_velocity`) can be used to determine the required diameter of inlet manifolds in sedimentation tanks or to determine the required port velocity for the backwash manifold in the StaRS filters. It can also be used to solve for the maximum manifold velocity given the port velocity in the sedimentation tank diffusers.
 
