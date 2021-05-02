@@ -14,7 +14,7 @@ This document contains the derivation of the flow through a tank-with-a-valve ov
 
 .. _figure_drip_hypochlorinator:
 
-.. figure:: Images/drip_hypochlorinator.png
+.. figure:: ../Images/drip_hypochlorinator.png
     :width: 600px
     :align: center
     :alt: Drip hypochlorinator
@@ -108,7 +108,7 @@ Here lies another common source of confusion. :math:`h_{Tank}` is not the same a
 
 .. _figure_hypochlorinator_variable_explanation:
 
-.. figure:: Images/hypochlorinator_variable_explanation.png
+.. figure:: ../Images/hypochlorinator_variable_explanation.png
     :width: 600px
     :align: center
     :alt: Hypochlorinator variables
@@ -153,7 +153,7 @@ First, it is necessary to understand how AguaClara tank drains work and what the
 
 .. _figure_pipe_stub_drainage:
 
-.. figure:: Images/pipe_stub_drainage.png
+.. figure:: ../Images/pipe_stub_drainage.png
     :width: 600px
     :align: center
     :alt: Pipe stub drainage
@@ -204,7 +204,7 @@ Such that the variables are as the appear in the image below.
 
 .. _figure_pipe_stub_drainage_variables:
 
-.. figure:: Images/pipe_stub_drainage_variables.png
+.. figure:: ../Images/pipe_stub_drainage_variables.png
     :width: 600px
     :align: center
     :alt: Pipe stub drainage variables
@@ -224,7 +224,7 @@ We will use the ‘head loss trick’ that was introduced in the Fluids Review s
 
 .. _figure_cdc_derivation:
 
-.. figure:: Images/CDC_derivation.png
+.. figure:: ../Images/CDC_derivation.png
     :width: 600px
     :align: center
     :alt: CDC Derivation
@@ -292,7 +292,7 @@ Here is a plot of the three colored equations above. Our goal is to minimize the
 
 .. _figure_CDC_linearity_model:
 
-.. figure:: Images/CDC_linearity_model.png
+.. figure:: ../Images/CDC_linearity_model.png
     :width: 600px
     :align: center
     :alt: CDC linearity model
@@ -403,7 +403,7 @@ To visualize the distinction between :math:`\color{red}{  L_{Min, \, \Pi_{Error}
 
 .. _figure_CDC_length_model:
 
-.. figure:: Images/CDC_length_model.png
+.. figure:: ../Images/CDC_length_model.png
     :width: 600px
     :align: center
     :alt: CDC length model
@@ -457,7 +457,7 @@ Combined with the discrete amount of tubing sizes (shown in dark green), we can 
 
 .. _figure_CDC_diameter_model:
 
-.. figure:: Images/CDC_diameter_model.png
+.. figure:: ../Images/CDC_diameter_model.png
     :width: 600px
     :align: center
     :alt: CDC diameter model

@@ -75,7 +75,7 @@ The flow rate per mixing zone increases rapidly as the mixing time allowed is in
 
 .. _figure_flow_per_mixing_zone:
 
-.. figure::    Images/Flow_per_mixing_zone.png
+.. figure::    ../Images/Flow_per_mixing_zone.png
     :width: 700px
     :align: center
     :alt: Flow per mixing zone

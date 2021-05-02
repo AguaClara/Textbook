@@ -97,7 +97,7 @@ A critical property of coagulants is that in order to act as an adhesive between
 
 .. _figure_Al_solubility:
 
-.. figure::    Images/Al_solubility.png
+.. figure::    ../Images/Al_solubility.png
     :width: 600px
     :align: center
     :alt: Al solubility

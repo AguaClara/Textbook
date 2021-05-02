@@ -19,7 +19,7 @@ To understand how water flows in the sedimentation tank, we must understand how 
 
 .. _figure_sed_tank_flow_conserve:
 
-.. figure:: Images/sed_tank_flow_conserve.png
+.. figure:: ../Images/sed_tank_flow_conserve.png
     :height: 300px
     :align: center
     :alt: AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
@@ -104,7 +104,7 @@ and
 
 .. _figure_SvsBplatesettlers:
 
-.. figure:: Images/SvsBplatesettlers.png
+.. figure:: ../Images/SvsBplatesettlers.png
     :height: 300px
     :align: center
     :alt: Thick plate settlers.
@@ -113,7 +113,7 @@ and
 
 .. _figure_plate_settler_base:
 
-.. figure:: Images/plate_settler_base.png
+.. figure:: ../Images/plate_settler_base.png
     :height: 300px
     :align: center
     :alt: Plate settlers.
@@ -229,7 +229,7 @@ Plate Settler
 
 .. _figure_plate_settler_boundary_conditions:
 
-.. figure:: Images/plate_settler_boundary_conditions.png
+.. figure:: ../Images/plate_settler_boundary_conditions.png
     :height: 300px
     :align: center
     :alt: Boundary conditions in plate settlers.
@@ -238,7 +238,7 @@ Plate Settler
 
 .. _figure_floc_rollup_base:
 
-.. figure:: Images/floc_rollup_base.png
+.. figure:: ../Images/floc_rollup_base.png
     :height: 300px
     :align: center
     :alt: Velocity profile between plate settlers.
@@ -335,7 +335,7 @@ Simplifying the :math:`\left(\frac{du}{dy}\right)_{y=0}`, we have the velocity g
 
 .. _figure_floc_rollup_step1:
 
-.. figure:: Images/floc_rollup_step1.png
+.. figure:: ../Images/floc_rollup_step1.png
    :height: 300px
    :align: center
    :alt: Velocity gradient next to the plate.
@@ -410,7 +410,7 @@ Substituting by the trigonometric relationship :math:`\bar v_{\alpha_{Plate}} = 
 
 .. _figure_floc_rollup_step2:
 
-.. figure:: Images/floc_rollup_step2.png
+.. figure:: ../Images/floc_rollup_step2.png
    :height: 300px
    :align: center
    :alt: Fluid velocity at the center of the floc.
@@ -436,7 +436,7 @@ We will need this equation for :math:`D` in the next step.
 
 .. _figure_floc_rollup_step3:
 
-.. figure:: Images/floc_rollup_step3.png
+.. figure:: ../Images/floc_rollup_step3.png
    :height: 300px
    :align: center
    :alt: Terminal velocity of the floc down the plate (for the case of zero velocity fluid).
@@ -489,7 +489,7 @@ What happens if the primary particles are less dense?
 
 .. _figure_vsettle_vslide:
 
-.. figure:: Images/vslide_vsettle.png
+.. figure:: ../Images/vslide_vsettle.png
    :height: 300px
    :align: center
    :alt: Relationship between :math:`v_{Settle}` and :math:`v_{Slide}`.
@@ -507,7 +507,7 @@ Let's start with a force balance. Assume that there is a fully established veloc
 
 .. _figure_plate_settler_headloss_diag:
 
-.. figure:: Images/plate_settler_headloss_diag.png
+.. figure:: ../Images/plate_settler_headloss_diag.png
    :height: 300px
    :align: center
    :alt: Velocity, shear forces, and pressure loss through plate settlers.
@@ -703,7 +703,7 @@ We can plot our results for :math:`G_{CS}\theta` by multiplying :math:`G_{CS}` b
 
 .. _figure_lab_setup:
 
-.. figure:: Images/lab_setup.png
+.. figure:: ../Images/lab_setup.png
    :height: 300px
    :align: center
    :alt: Lab setup for flocculator, half-sedimentation tank, and plate settler testing.
@@ -712,7 +712,7 @@ We can plot our results for :math:`G_{CS}\theta` by multiplying :math:`G_{CS}` b
 
 .. _figure_floc_conc_G:
 
-.. figure:: Images/floc_conc_G.png
+.. figure:: ../Images/floc_conc_G.png
    :height: 300px
    :align: center
    :alt: Velocity gradient and collision potential as a function of floc blanket concentration.
@@ -767,7 +767,7 @@ Diffusers are shaped so that one end is a circular pipe that fits into the influ
 
 .. _figure_diffuser_side_top_bottom:
 
-.. figure:: Images/diffuser_side_top_bottom.png
+.. figure:: ../Images/diffuser_side_top_bottom.png
     :height: 300px
     :align: center
     :alt: Side, top, and bottom view of a diffuser.
@@ -778,7 +778,7 @@ Recall that this deformation is done to create a line jet entering the jet rever
 
 .. _figure_diffuser_fabrication:
 
-.. figure:: Images/diffuser_fabrication.png
+.. figure:: ../Images/diffuser_fabrication.png
     :height: 300px
     :align: center
     :alt: Process of heating the PVC in oil and molding the diffuser shape on the metal forms.
@@ -789,7 +789,7 @@ The bottom-view of the diffuser is shown in :numref:`figure_BvsS_diffuser`.
 
 .. _figure_BvsS_diffuser:
 
-.. figure:: Images/BvsS_diffuser.png
+.. figure:: ../Images/BvsS_diffuser.png
     :height: 300px
     :align: center
     :alt: Diagram of diffuser exit.
@@ -815,7 +815,7 @@ By Bernoulli, if the pressures between the exit of the diffuser to the exit of t
 
 .. _figure_Wdiff_Wjet:
 
-.. figure:: Images/Wdiff_Wjet.png
+.. figure:: ../Images/Wdiff_Wjet.png
     :height: 600px
     :align: center
     :alt: Diagram of diffuser exit and jet.
