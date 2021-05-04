@@ -272,7 +272,7 @@ A water treatment plant that is treating 120 L/s of water injects the coagulant 
 
 We will use a :ref:`linear flow orifice meter <heading_lfom>` with 20 cm of head loss. The first step is to determine the diameter of the LFOM.
 
-.. todo:: This example needs to be updated once the LFOM OO code is fixed.
+..todo:: This example needs to be updated once the LFOM OO code is fixed.
 
 .. code:: python
 
