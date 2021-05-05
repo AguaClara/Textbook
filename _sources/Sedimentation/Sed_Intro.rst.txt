@@ -1,10 +1,64 @@
-\Phi.. _title_Sedimentation_Intro:
+.. _title_Sedimentation_Intro:
 
 ***************************************
 Sedimentation Introduction
 ***************************************
 
 .. _Sedimentation Unit Process Overview:
+
+[THIS SECTION MOVED FROM INTRO CHAPTER - NEEDS TO BE INCORPORATED]
+
+Why does flocculation precedes sedimentation?
+Which process removes the largest quantity of contaminants?
+
+Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
+
+.. math::
+  :label: eq_laminar_terminal_velocity
+
+  \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
+
+| Such that:
+| :math:`\bar v_t` = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water
+| :math:`D_{particle}` = particle diameter
+| :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
+
+.. code:: python
+
+  import aguaclara.core.physchem as pc
+  import numpy as np
+  import matplotlib.pyplot as plt
+  def v_t(D_particle,density_particle,Temperature):
+    return (D_particle**2*pc.gravity *(density_particle - pc.density_water(Temperature))/(18*pc.viscosity_kinematic(Temperature)*pc.density_water(Temperature))).to(u.m/u.s)
+  clay = 2650 * u.kg/u.m**3
+  organic = 1040 * u.kg/u.m**3
+  Temperature = 20 * u.degC
+  D_particle = np.logspace(-6,-3)*u.m
+  fig, ax = plt.subplots()
+  ax.loglog(D_particle.to(u.m),v_t(D_particle,clay,Temperature).to(u.m/u.s))
+  ax.loglog(D_particle.to(u.m),v_t(D_particle,organic,Temperature).to(u.m/u.s))
+  ax.set(xlabel='Particle diameter (m)', ylabel='Terminal velocity (m/s)')
+  ax.legend(["clay or sand","organic particle"])
+  imagepath = '..Images/'
+  fig.savefig(imagepath+'Terminal_velocity')
+  plt.show()
+
+
+The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take care of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (:eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
+
+
+.. _figure_Terminal_velocity:
+
+.. figure:: ../Images/Terminal_velocity.png
+    :width: 500px
+    :align: center
+    :alt: Terminal Velocity
+
+    The terminal velocity of a 1 :math:`\mu m` bacteria cell is approximately 20 nanometers per second. The terminal velocity of a 5 :math:`\mu m` clay particles is 30 :math:`\mu m/s`. The velocity estimates for the faster settling particles may be too slow because those particles are transitioning to turbulent flow.
+
+The low terminal velocities of particles that we need to remove from surface waters reveals that sedimentation alone will not work. The time required for a small particle to settle even a few mm would require excessively large sedimentation tanks. This is why flocculation, the process of sticking particles together so that they can attain higher sedimentation velocities, is perhaps the most important unit process in surface water treatment plants.
+
+[END OF RELOCATED SECTION]
 
 Sedimentation is a gravity-driven unit process in which suspended flocs are settled out from water. Large flocs made up of many primary particles and coagulant will settle if given enough time. Sedimentation is commonly preceded by coagulation/flocculation processes - coagulation/flocculation aim to form flocs which will be large enough to settle in sedimentation - and is commonly followed by filtration processes for further treatment. Sludge consolidation processes are often present alongside sedimentation to reduce the waste stream of settled flocs. Optimizing sedimentation is important because the more particles that sedimentation can remove, the fewer particles the filter will have to remove. This is good because filters can only handle a small amount of solids, and cleaning the filters with backwash uses a lot of water so we want to reduce the number of backwashes. The goal of sedimentation is to concentrate a waste stream of flocs, or sludge.
 

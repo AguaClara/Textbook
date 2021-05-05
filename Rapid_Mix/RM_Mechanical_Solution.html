@@ -98,11 +98,11 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">AguaClara Treatment</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Fluid Mechanics Review</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Flocs, Fractals, and Forces</span></p>
@@ -133,30 +133,10 @@
 <li class="toctree-l1"><a class="reference internal" href="RM_Intro.html">Rapid Mix Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Design.html">Rapid Mix Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Derivations.html">Rapid Mix Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RM_Examples.html">Rapid Mix: Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Rapid Mix Mechanical Solution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#part-1-temperature-effects-energy-use-and-operating-costs">Part 1: Temperature effects, energy use, and operating costs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">1)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">2)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">3)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">4)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#a">5a)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#b">5b)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">6a)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">6b)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">7)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">8)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">9)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">9a)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">9b)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#c">9c)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#d">9d)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#e">9e)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#f">9f)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">10)</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#part-1-temperature-effects-energy-use-and-operating-costs">Part 1: Temperature effects, energy use, and operating costs</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
@@ -300,9 +280,14 @@
 <p>This design challenge contains two parts: - In the first section, we will explore the energy requirements and operating costs for conventional mechanized rapid mix. This provides an opportunity to learn about the consequences of failing to design for sustainability. Rapid mix is both poorly understood and potentially very important in determining the successful operation of a water treatment plant. - In the second section, we will explore the energy dissipation rate in a free jet.</p>
 <div class="section" id="part-1-temperature-effects-energy-use-and-operating-costs">
 <h2>Part 1: Temperature effects, energy use, and operating costs<a class="headerlink" href="#part-1-temperature-effects-energy-use-and-operating-costs" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>1)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Create a graph of the kinematic viscosity of water as a function of temperature. Use the <code class="docutils literal notranslate"><span class="pre">pc.viscosity_kinematic</span></code> function. 1. Create an array of temperatures (0 to 35) using <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> to create a dimensionless array. Then, attach appropriate temperature dimensions to the array by multiplying by the units. You can do this in one line! 1. Pass the entire array of temperatures to the kinematic viscosity function in aguaclara.core.pc to obtain an array of corresponding viscosities. 1. Plot viscosity (mm^2/s) as a function of temperature (Celsius).</p>
+<p><strong>1) Create a graph</strong> of the kinematic viscosity of water as a function of temperature. Use the <code class="docutils literal notranslate"><span class="pre">pc.viscosity_kinematic</span></code> function.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Create an array of temperatures (0 to 35) using <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> to create a dimensionless array. Then, attach appropriate temperature dimensions to the array by multiplying by the units. You can do this in one line!</p></li>
+<li><p>Pass the entire array of temperatures to the kinematic viscosity function in aguaclara.core.pc to obtain an array of corresponding viscosities.</p></li>
+<li><p>Plot viscosity (mm^2/s) as a function of temperature (Celsius).</p></li>
+</ol>
+</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">GraphTempArray</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">35</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
 <span class="n">GraphKinematicViscosity</span><span class="o">=</span><span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">GraphTempArray</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -313,9 +298,9 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id13">
+<div class="figure align-center" id="id1">
 <span id="figure-kinematic-vs-t"></span><a class="reference internal image-reference" href="../_images/Kinematic_vs_T.png"><img alt="Kinematic viscosity of water as a function of temperature" src="../_images/Kinematic_vs_T.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 80 </span><span class="caption-text">Kinematic viscosity decreases rapidly with temperature. This will influence the amount of fluid deformation obtained given an input of energy. It will also influence the flow rate in the AguaClara chemical dosing system.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 85 </span><span class="caption-text">Kinematic viscosity decreases rapidly with temperature. This will influence the amount of fluid deformation obtained given an input of energy. It will also influence the flow rate in the AguaClara chemical dosing system.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>We will design a mechanized rapid mix unit and then analyze the energy costs of mixing for a conventional water treatment plant. Below is a table of conventional design parameters.</p>
 <table class="docutils align-default">
@@ -353,12 +338,9 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id2">
-<h3>2)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p><strong>Define a function</strong> for the power required to run a rapid mix unit. The rapid mix shaft power function should have flow, velocity gradient, residence time (which can be described with t or <span class="math notranslate nohighlight">\(\theta\)</span>, as in the equation below), and temperature as its only inputs.</p>
+<p><strong>2) Define a function</strong> for the power required to run a rapid mix unit. The rapid mix shaft power function should have flow, velocity gradient, residence time (which can be described with t or <span class="math notranslate nohighlight">\(\theta\)</span>, as in the equation below), and temperature as its only inputs.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-mechanical-solution-0">
-<span class="eqno">(378)<a class="headerlink" href="#equation-rapid-mix-rm-mechanical-solution-0" title="Permalink to this equation">¶</a></span>\[P = G^2Q \theta \nu \rho\]</div>
+<span class="eqno">(379)<a class="headerlink" href="#equation-rapid-mix-rm-mechanical-solution-0" title="Permalink to this equation">¶</a></span>\[P = G^2Q \theta \nu \rho\]</div>
 <p>Using your function, plot the shaft power (kW) required for a conventional rapid mix unit that has a residence time of t = 15s, a velocity gradient of G = 1500/s, and a flow rate of 50 L/s as a function of temperature (Celsius).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">FlowPlant</span> <span class="o">=</span> <span class="mi">50</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 <span class="n">t</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
@@ -379,14 +361,11 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id14">
+<div class="figure align-center" id="id2">
 <span id="figure-shaft-power"></span><a class="reference internal image-reference" href="../_images/Shaft_Power.png"><img alt="Rapid Mix shaft power" src="../_images/Shaft_Power.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 81 </span><span class="caption-text">Rapid mix shaft power required as a function of temperature. Signfiicantly more power is required at low temperatures to overcome the effects of viscosity. This does assume that the goal for rapid mix is to achieve a target</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 86 </span><span class="caption-text">Rapid mix shaft power required as a function of temperature. Signfiicantly more power is required at low temperatures to overcome the effects of viscosity. This does assume that the goal for rapid mix is to achieve a target</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="id3">
-<h3>3)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>How would the shaft power for a conventional design be selected? You must consider the fact that temperature changes throughout the year, and temperature impacts the shaft power requirements as defined in your function above. Presumably, you should use the lowest water temperature that you expect to have to treat to make your design because low temperatures require the highest shaft power input (as shown in your graph above) and we want to design for the most conservative option.</p>
+<p><strong>3) Calculate the shaft power.</strong> How would the shaft power for a conventional design be selected? You must consider the fact that temperature changes throughout the year, and temperature impacts the shaft power requirements as defined in your function above. Presumably, you should use the lowest water temperature that you expect to have to treat to make your design because low temperatures require the highest shaft power input (as shown in your graph above) and we want to design for the most conservative option.</p>
 <p>Imagine you are designing a rapid mix unit for a water treatment plant in upstate NY. Water freezes in the winter, so the power requirements to run a rapid mix must be based on TempDesign = 0 °C.</p>
 <p>What is the required shaft power <strong>in horsepower</strong> for your water treatment plant in upsstate NY? Calculate the shaft power using the design temperature, and take other necessary parameters from Problem 2.</p>
 <p>You can <a class="reference external" href="https://github.com/hgrecco/pint/blob/c5925bfdab09c75a26bb70cd29fb3d34eed56a5f/pint/default_en_0.6.txt">find pint’s unit registry
@@ -397,21 +376,15 @@ here.</a>. We recommend bookmarking this page!</p>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The required shaft power is&#39;</span><span class="p">,</span> <span class="n">RapidMixShaftPower</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The required shaft power is 4.0 hp</p>
-</div>
-<div class="section" id="id4">
-<h3>4)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p>What is the equivalent height in meters that this much shaft power could elevate the water in a pump, assuming the pump is 100% efficient? Dimensional analysis of units is useful for this question. How do you get from units of power to units of length, and what constants will get you there?</p>
+<p>The required shaft power is 4.0 hp.</p>
+<p><strong>4) Find the equivalent height</strong> in meters that this much shaft power could elevate the water in a pump, assuming the pump is 100% efficient? Dimensional analysis of units is useful for this question. How do you get from units of power to units of length, and what constants will get you there?</p>
 <p>You may assume 100% efficiency in conversion of shaft power to increased potential energy. For comparison, the difference in water level between the entrance tank and flocculator for an AguaClara plant is less than 40 cm, and 20 cm of that elevation drop is used for flow measurement in the LFOM.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ElevDrop</span> <span class="o">=</span> <span class="p">(</span><span class="n">RapidMixShaftPower</span><span class="o">/</span> <span class="p">(</span><span class="n">FlowPlant</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">TempDesign</span><span class="p">)</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">gravity</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The equivalent height is&#39;</span><span class="p">,</span>  <span class="n">ElevDrop</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The equivalent height is 6.034 m</p>
-</div>
-<div class="section" id="a">
-<h3>5a)<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h3>
-<p>Our next task is to select a motor that can provide the required shaft power, as calculated in Problem 3.</p>
+<p><strong>5a) Select a motor</strong> that can provide the required shaft power, as calculated in Problem 3.</p>
 <ul class="simple">
 <li><p>First, bring in the <code class="docutils literal notranslate"><span class="pre">motor_efficiency.xlsx</span></code> file provided for this design challenge. You imported a similar file in Problem 13 of DC Python Tutorial 2, but this time you will use <code class="docutils literal notranslate"><span class="pre">pd.read_excel('filename.xlsx')</span></code> since the file is .xlsx instead of .csv.</p></li>
 <li><p>Display the extracted excel data, <code class="docutils literal notranslate"><span class="pre">motor_efficiency.xlsx</span></code>.</p></li>
@@ -448,21 +421,16 @@ here.</a>. We recommend bookmarking this page!</p>
 <span class="mi">15</span>         <span class="mi">250</span>                <span class="mf">95.8</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="b">
-<h3>5b)<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h3>
-<p>It is common in engineering design to have target design value that must be rounded up to the next available manufactured value. In the Flow Control and Measurement Design Challenge, we used this method to take a minimum pipe size required to deliver a target flow rate and then we rounded up to the nearest commonly available pipe size. We wrote a function, <code class="docutils literal notranslate"><span class="pre">ceil_nearest</span></code> in aguaclara.core.utility, that we used to select pipe sizes. Use that function to find a motor that is large enough to drive the rapid mix impeller (<a class="reference external" href="https://en.wikipedia.org/wiki/Impeller#In_pumps">What’s an impeller?</a>).</p>
+<p><strong>5b) Find a motor that is large enough to drive the rapid mix impeller.</strong>
+It is common in engineering design to have target design value that must be rounded up to the next available manufactured value. In the Flow Control and Measurement Design Challenge, we used this method to take a minimum pipe size required to deliver a target flow rate and then we rounded up to the nearest commonly available pipe size. We wrote a function, <code class="docutils literal notranslate"><span class="pre">ceil_nearest</span></code> in aguaclara.core.utility, that we used to select pipe sizes. Use that function to find a motor that is large enough to drive the rapid mix impeller (<a class="reference external" href="https://en.wikipedia.org/wiki/Impeller#In_pumps">What’s an impeller?</a>).</p>
 <p><code class="docutils literal notranslate"><span class="pre">ut.ceil_nearest</span></code> takes two inputs: the first is the value you are looking to match/exceed. In the pipe sizing example, this would be the smallest pipe that can handle the required flow. The second input is the array through which you are looking to compare the first input. If we continue with the pipe size example, this would be the array of available pipe sizes.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">MotorDesign</span> <span class="o">=</span> <span class="n">ut</span><span class="o">.</span><span class="n">ceil_nearest</span><span class="p">(</span><span class="n">RapidMixShaftPower</span><span class="p">,</span><span class="n">MotorHpArray</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The rapid mix motor has&#39;</span><span class="p">,</span>  <span class="n">MotorDesign</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The rapid mix motor has 5 hp</p>
-</div>
-<div class="section" id="id5">
-<h3>6a)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<p>Our next goal is to find the efficiency of this motor.</p>
-<p>One way to do this is to find the index (row number) of this motor horsepower in the original dataframe (or in your created array) and then use that index to find its corresponding efficiency. Use the <code class="docutils literal notranslate"><span class="pre">np.where</span></code> function to find the index of the motor horsepower. The <code class="docutils literal notranslate"><span class="pre">where</span></code> function will return an array, so you will need to use indexes on the returned array to extract the index of the motor. If you display the returned results, it will help you figure out how to use indexes to get the desired element.</p>
+<p>The rapid mix motor has 5 hp.</p>
+<p><strong>6) Find the efficiency of this motor.</strong></p>
+<p>6a) One way to do this is to find the index (row number) of this motor horsepower in the original dataframe (or in your created array) and then use that index to find its corresponding efficiency. Use the <code class="docutils literal notranslate"><span class="pre">np.where</span></code> function to find the index of the motor horsepower. The <code class="docutils literal notranslate"><span class="pre">where</span></code> function will return an array, so you will need to use indexes on the returned array to extract the index of the motor. If you display the returned results, it will help you figure out how to use indexes to get the desired element.</p>
 <p>The input in <code class="docutils literal notranslate"><span class="pre">np.where(input)</span></code> is ‘number you’re looking to match == array you’re looking to match it to’. Example: <code class="docutils literal notranslate"><span class="pre">np.where(variable</span> <span class="pre">==</span> <span class="pre">array)</span></code></p>
 <p>It is likely you will get the following output:
 <code class="docutils literal notranslate"><span class="pre">(array([8],</span> <span class="pre">dtype=int64),)</span></code></p>
@@ -471,11 +439,7 @@ here.</a>. We recommend bookmarking this page!</p>
 <span class="n">MotorIndex</span>
 </pre></div>
 </div>
-<p>8</p>
-</div>
-<div class="section" id="id6">
-<h3>6b)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<p>You will now use the index of the motor horsepower that you just found to extract the efficiency of the motor. This can be done by calling the index on the array of efficiencies you created or by calling on data from the original dataframe. Dataframes have a method called <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.get_value.html">get_value</a> that can return an element in a dataframe given a row index and a column heading. This is done for you as an example.</p>
+<p>6b) You will now use the index of the motor horsepower that you just found to extract the efficiency of the motor. This can be done by calling the index on the array of efficiencies you created or by calling on data from the original dataframe. Dataframes have a method called <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.get_value.html">get_value</a> that can return an element in a dataframe given a row index and a column heading. This is done for you as an example.</p>
 <p>For this problem, <strong>extract the efficiency of the motor by calling the index on the array you created in Problem 5a. Return the motor efficiency as a fraction rather than as a percent</strong>.</p>
 <p>Note: it would have been much easier to simply define a variable and type in the efficiency. However, if we did that, it would have broken dependency; the notebook wouldn’t update correctly when you change the flow rate. Our goal is to create designs that scale correctly when the flow rate is changed.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Examplefor how to use .get_value to return an element by calling on row index and column heading</span>
@@ -486,80 +450,56 @@ here.</a>. We recommend bookmarking this page!</p>
 <span class="k">print</span><span class="p">(</span><span class="n">MotorEfficiencyArray</span><span class="p">[</span><span class="n">MotorIndex</span><span class="p">])</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The motor efficiency is &#39;</span><span class="p">,</span><span class="n">MotorEfficiency</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+
+<span class="n">The</span> <span class="n">motor</span> <span class="n">efficiency</span> <span class="ow">is</span> <span class="mf">0.896</span><span class="o">.</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>0.896</dt><dd><p>The motor efficiency is 0.896.</p>
-</dd>
-</dl>
 <p>You might think that the rapid mix unit will take less electrical power when the water is warmer. But that isn’t the case because the Reynolds number for the rapid mix propeller is quite high and thus the drag coefficient is independent of Re. This means that the torque required to spin the propeller doesn’t change as the viscosity of the water changes. It would be possible to run the propeller slower when the water is warmer because the required energy dissipation rate is lower, but that would require a variable speed drive. You could add a variable speed motor controller to take advantage of this. However, the bigger problem is that we don’t yet have a good model explaining what rapid mix does.</p>
-</div>
-<div class="section" id="id7">
-<h3>7)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p><strong>7) Find a sufficient motor</strong> and link to its specifications</p>
 <p>Now, we want to find a 3 phase, 1800 rpm (approximately!) electric motor that is totally enclosed and fan cooled (TEFC), and that has enough power to operate your rapid mixer at <a class="reference external" href="https://www.mcmaster.com/">McMaster Carr</a>. You can find the link to the CAD drawing if you pretend you are going to select the motor for purchase. This part of the design challenge breaks dependency.</p>
 <p>Once you find a sufficient motor, <strong>display the CAD drawing of the motor and create a hyperlink to the motor specifications</strong>.</p>
 <p>Notes: we don’t currently know how to select and link to the correct motor using python, which is why you need to go to the McMaster Carr website to find the correct motor. If you know of an easy way to do this, please let us know!</p>
 <p>The motor specifications are given below.</p>
 <p>The <a class="reference external" href="https://www.mcmaster.com/#5990k314/=19d4hod">motor specifications</a> indicate that the efficiency is 89.5% which is very close to the premium efficiency standard.</p>
-</div>
-<div class="section" id="id8">
-<h3>8)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p><strong>8) Find the cost</strong> of the motor.</p>
 <p>How much does the motor cost? Create a variable showing the cost of the motor in USD. We have added USD to pint, so you will not find it in the original registry linked in Problem 3. The abbreviation for US Dollars is <code class="docutils literal notranslate"><span class="pre">u.USD</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">COST_MOTOR</span> <span class="o">=</span> <span class="mf">714.64</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">USD</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The cost of the motor is&#39;</span><span class="p">,</span> <span class="n">COST_MOTOR</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The cost of the motor is 714.6 dollar</p>
-</div>
-<div class="section" id="id9">
-<h3>9)<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-<p>Now, we want to determine the cost of electricity to operate the rapid mix unit you sized for your water treatment plant in NY.</p>
-</div>
-<div class="section" id="id10">
-<h3>9a)<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
-<p>Find the commercial rate for electricity in NY state at the <a class="reference external" href="https://www.eia.gov/electricity/data/browser/#/topic/7?agg=0,1&amp;geo=0002&amp;endsec=vg&amp;linechart=ELEC.PRICE.NY-ALL.M~ELEC.PRICE.NY-RES.M~ELEC.PRICE.NY-COM.M~ELEC.PRICE.NY-IND.M~ELEC.PRICE.NY-TRA.M&amp;columnchart=ELEC.PRICE.NY-ALL.M&amp;map=ELEC.PRICE.NY-ALL.M&amp;freq=M&amp;start=200101&amp;end=201706&amp;chartindexed=0&amp;ctype=linechart&amp;ltype=pin&amp;rtype=s&amp;maptype=0&amp;rse=0&amp;pin=">U.S. Energy Administration Website</a>. Download the data file for NY and then import the data file using pandas (<code class="docutils literal notranslate"><span class="pre">read_csv</span></code>). There are two versions of the csv data file on this page. The one you should use in this problem is titled <code class="docutils literal notranslate"><span class="pre">Average_retail_price_of_electricity_monthly.csv</span></code>.</p>
+<p>The cost of the motor is 714.6 dollars.</p>
+<p><strong>9) Determine the cost of electricity</strong> to operate the rapid mix unit you sized for your water treatment plant in NY.</p>
+<p>9a) Find the commercial rate for electricity in NY state at the <a class="reference external" href="https://www.eia.gov/electricity/data/browser/#/topic/7?agg=0,1&amp;geo=0002&amp;endsec=vg&amp;linechart=ELEC.PRICE.NY-ALL.M~ELEC.PRICE.NY-RES.M~ELEC.PRICE.NY-COM.M~ELEC.PRICE.NY-IND.M~ELEC.PRICE.NY-TRA.M&amp;columnchart=ELEC.PRICE.NY-ALL.M&amp;map=ELEC.PRICE.NY-ALL.M&amp;freq=M&amp;start=200101&amp;end=201706&amp;chartindexed=0&amp;ctype=linechart&amp;ltype=pin&amp;rtype=s&amp;maptype=0&amp;rse=0&amp;pin=">U.S. Energy Administration Website</a>. Download the data file for NY and then import the data file using pandas (<code class="docutils literal notranslate"><span class="pre">read_csv</span></code>). There are two versions of the csv data file on this page. The one you should use in this problem is titled <code class="docutils literal notranslate"><span class="pre">Average_retail_price_of_electricity_monthly.csv</span></code>.</p>
 <p>For this step, simply <strong>display the resulting data table showing the most recent 12 months of electricity costs in NY</strong>.</p>
 <p>Note that this data file has meta information about the data in the first rows. You can <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html">delete those rows by setting header = 4</a> in the function call to the <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code>. You can read exactly one year of data by setting nrows = 12. This will make it easy to calculate the average cost for the past year.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ElectricityCostdata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Average_retail_price_of_electricity_monthly.csv&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">nrows</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">ElectricityCostdata</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id11">
-<h3>9b)<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
-<p>Calculate the average commercial electricity cost for the most recent 12 months. Include the appropriate units. Don’t forget to correct for the fact that the prices are given in cents and not dollars.</p>
+<p>9b) Calculate the average commercial electricity cost for the most recent 12 months. Include the appropriate units. Don’t forget to correct for the fact that the prices are given in cents and not dollars.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ElectricityRate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ElectricityCostdata</span><span class="p">[</span><span class="s1">&#39;New York : commercial cents per kilowatthour&#39;</span><span class="p">]))</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">USD</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kWh</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The New York State commercial electricity cost for the past year was &#39;</span><span class="p">,</span><span class="n">ElectricityRate</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The New York State commercial electricity cost for the past year was 0.14622 USD/kWh</p>
-</div>
-<div class="section" id="c">
-<h3>9c)<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h3>
-<p>I think that we should buy electricity in giga Joules. KiloWatt-hr is what you get when someone who loves English units decides they don’t like seconds as the base unit of time that is the standard in the metric system.</p>
+<p>The New York State commercial electricity cost for the past year was 0.14622 USD/kWh.</p>
+<p>9c) I think that we should buy electricity in giga Joules. KiloWatt-hr is what you get when someone who loves English units decides they don’t like seconds as the base unit of time that is the standard in the metric system.</p>
 <p>How much would a giga Joule cost for the most recent 12 months? All you have to do is change the displayed units!</p>
 <p>Look through the pint unit registry. To add orders of magnitude (like kilo, micro, giga, yotta), simply place the appropriate prefix before the usual unit abbreviation. A yotta-meter is <code class="docutils literal notranslate"><span class="pre">u.Ym</span></code>, for example, as ‘<code class="docutils literal notranslate"><span class="pre">Y</span></code>’ represents yotta- in pint.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="p">(</span><span class="s1">&#39;The price of electricity is&#39;</span><span class="p">,</span> <span class="n">ElectricityRate</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">USD</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">GJ</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>The price of electricity is 40.62 USD/GJ</p>
-</div>
-<div class="section" id="d">
-<h3>9d)<a class="headerlink" href="#d" title="Permalink to this headline">¶</a></h3>
-<p>Let’s look back to our design of a rapid mix unit for a water treatment plant in New York. Estimate the electricity demand * <strong>in kilowatts</strong> * for the rapid mix by taking the shaft power required and adjust for the efficiency of the motor that you have selected. Note that when a motor is running it does not necessarily operate at full load and hence at full power. Electric motors maintain their efficiency over a wide range of loads. To calculate the electricity consumption, use the actual shaft power required by the rapid mix and the motor efficiency. Calculate the electrical power required by the motor when the water is at its coldest.</p>
+<p>The price of electricity is 40.62 USD/GJ.</p>
+<p>9d) Let’s look back to our design of a rapid mix unit for a water treatment plant in New York. Estimate the electricity demand * <strong>in kilowatts</strong> * for the rapid mix by taking the shaft power required and adjust for the efficiency of the motor that you have selected. Note that when a motor is running it does not necessarily operate at full load and hence at full power. Electric motors maintain their efficiency over a wide range of loads. To calculate the electricity consumption, use the actual shaft power required by the rapid mix and the motor efficiency. Calculate the electrical power required by the motor when the water is at its coldest.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PowerElectricity</span> <span class="o">=</span> <span class="p">(</span><span class="n">rapid_mix_shaft_power</span><span class="p">(</span><span class="n">FlowPlant</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">TempDesign</span><span class="p">)</span><span class="o">/</span><span class="n">MotorEfficiency</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kW</span><span class="p">)</span>
 <span class="k">print</span> <span class="p">(</span><span class="s1">&#39;The power required by the motor is&#39;</span><span class="p">,</span> <span class="n">PowerElectricity</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The power required by the motor is 3.30 kW</p>
+<p>The power required by the motor is 3.30 kW.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rapid_mix_shaft_power</span><span class="p">(</span><span class="n">FlowPlant</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">TempDesign</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">hp</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>3.967125458280934 horsepower</p>
-</div>
-<div class="section" id="e">
-<h3>9e)<a class="headerlink" href="#e" title="Permalink to this headline">¶</a></h3>
-<p>Calculate the annual cost of electricity in dollars required to operate the rapid mix unit.</p>
+<p>3.967125458280934 horsepower.</p>
+<p>9e) Calculate the annual cost of electricity in dollars required to operate the rapid mix unit.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">RMElectricityCost</span> <span class="o">=</span> <span class="p">(</span><span class="n">PowerElectricity</span><span class="o">*</span><span class="n">ElectricityRate</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">USD</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
 <span class="k">print</span> <span class="p">(</span><span class="s1">&#39;The cost of electricity to operate the rapid mix unit is&#39;</span><span class="p">,</span> <span class="n">RMElectricityCost</span><span class="p">)</span>
 
@@ -567,21 +507,14 @@ here.</a>. We recommend bookmarking this page!</p>
 <span class="k">print</span><span class="p">(</span><span class="n">ElectricityRate</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The cost of electricity to operate the rapid mix unit is 4232 USD/year 3.302 kilowatt 0.1462 dollar / kilowatt_hour</p>
-</div>
-<div class="section" id="f">
-<h3>9f)<a class="headerlink" href="#f" title="Permalink to this headline">¶</a></h3>
-<p>What is the total cumulative energy costs for the rapid mix unit over a period of 25 years? Note that we are not including the projected increase in electricity costs over the next 25 years. That would be a nice addition to this analysis that would make the need for energy efficiency all the more apparent, but we are ignoring that complexity for this problem.</p>
+<p>The cost of electricity to operate the rapid mix unit is 4232 USD/year per 3.302 kilowatts, or 0.1462 USD/kilowatt_hour.</p>
+<p>9f) What is the total cumulative energy costs for the rapid mix unit over a period of 25 years? Note that we are not including the projected increase in electricity costs over the next 25 years. That would be a nice addition to this analysis that would make the need for energy efficiency all the more apparent, but we are ignoring that complexity for this problem.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">YR25Electricity</span> <span class="o">=</span> <span class="n">RMElectricityCost</span><span class="o">*</span><span class="p">(</span><span class="mi">25</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
 <span class="k">print</span> <span class="p">(</span><span class="s1">&#39;The cumulative energy costs for a period of 25 years is&#39;</span><span class="p">,</span> <span class="n">YR25Electricity</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The cumulative energy costs for a period of 25 years is 105794.0 USD</p>
-</div>
-<div class="section" id="id12">
-<h3>10)<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
-<p>Write a paragraph describing what you learned from this design challenge. Include reflections on the temptation to use a standard design, the low capital cost of energy wasting designs, and the long term implications of engineering that isn’t guided by a goal of sustainability.</p>
-</div>
+<p>The cumulative energy costs for a period of 25 years is 105794.0 USD.</p>
+<p><strong>10) Write a paragraph</strong> describing what you learned from this design challenge. Include reflections on the temptation to use a standard design, the low capital cost of energy wasting designs, and the long term implications of engineering that isn’t guided by a goal of sustainability.</p>
 </div>
 </div>
 

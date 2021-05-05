@@ -76,16 +76,16 @@ Dissolved Gas Sources
 Dissolved Gas Concentration Reduction
 =====================================
 
-Methods to provide nucleation sites
+Methods to Provide Nucleation Sites
 -----------------------------------
- - aeration
-   - air can be pumped through diffusers
-   - air can be sucked into the diffusers if the reactor operated at less than atmospheric pressure
- - fluidized bed containing particles that have nucleation sites
+ - Aeration
+   - Air can be pumped through diffusers
+   - Air can be sucked into the diffusers if the reactor operated at less than atmospheric pressure
+ - Fluidized bed containing particles that have nucleation sites
 
 The fluidized nucleation site particles must be dense enough and large enough so that attached gas bubbles can't carry them out of the degassing reactor.
 
-Methods to reduce degassing reactor pressure
+Methods to Reduce Degassing Reactor Pressure
 --------------------------------------------
 
 The top of the degassing reactor can be located several meters above the entrance tank of the water treatment plant. The higher the tank (up to a max of 10 m) the more pronounced the pressure reduction will be and the more effective the reactor will be at degassing. The degassing reactor will produce a water and bubble effluent that must be

@@ -1,42 +1,12 @@
 .. _title_review_fluid_mechanics:
 
 ***********************
-Review: Fluid Mechanics
+Fluid Mechanics Review
 ***********************
 
 This document is meant to be a refresher on fluid mechanics. It will only cover the topics in fluids mechanics that will be used heavily in the course.
 
 If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_ Note that to view this link, you will need a Github accounts. If you wish to review from a legitimate textbook, you can find a pdf of good book by Frank White `here <http://ftp.demec.ufpr.br/disciplinas/TM240/Marchi/Bibliografia/White_2011_7ed_Fluid-Mechanics.pdf>`_.
-
-.. _heading_fluids_terms_eqs:
-
-Important Terms and Equations
-=============================
-
-**Terms:**
-
-#. :ref:`Laminar <heading_laminar_and_turbulent_flow>`
-#. :ref:`Turbulent <heading_laminar_and_turbulent_flow>`
-#. :ref:`Viscosity <heading_laminar_and_turbulent_flow>`
-#. :ref:`Streamline <heading_streamlines_and_control_volumes>`
-#. :ref:`Control Volume <heading_streamlines_and_control_volumes>`
-#. :ref:`Head <heading_bernoulli_equation>`
-#. :ref:`Head loss <heading_head_loss>`
-#. :ref:`Driving head <heading_head_loss_elevation_difference_trick>`
-#. :ref:`Vena Contracta/Coefficient of Contraction <heading_what_is_a_vena_contracta>`
-
-**Equations:**
-
-#. Continuity equation: :eq:`continuity_equation`
-#. Reynolds number :eq:`reynolds_number_equation`
-#. Bernoulli Equation :eq:`bernoulli_equation`
-#. Energy Equation :eq:`energy_equation`
-#. Darcy-Weisbach Equation :eq:`darcy_weisbach`
-#. Swamee-Jain Equation :eq:`swamee_jain`
-#. Hagen-Poiseuille Equation :eq:`hagen_poiseuille`
-#. Orifice Equation :eq:`orifice_equation`
-
-
 
 .. _heading_introductory_concepts:
 
@@ -215,16 +185,9 @@ Going back to the Bernoulli equation, the :math:`\frac{p}{\rho g}` term is calle
 
     The three forms of hydraulic head.
 
-Assumption in using the Bernoulli equation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 Though there are `many assumptions needed to confirm that the Bernoulli equation can be used <https://en.wikipedia.org/wiki/Bernoulli%27s_principle#Incompressible_flow_equation>`_, the main one for the purpose of this class is that energy is not gained or lost throughout the streamline being considered. If we consider more precise fluid mechanics terminology, then “friction by viscous forces must be negligible.” What this means is that the fluid along the streamline being considered is not losing energy to viscosity. As a result, using the Bernoulli equation implies that energy can’t be gained or lost. It can only be transferred between its three forms.
 
-Example problems
-^^^^^^^^^^^^^^^^
-
 `Here is a simple worksheet with very straightforward example problems using the Bernoulli equation. <https://www.teachengineering.org/content/cub_/lessons/cub_bernoulli/cub_bernoulli_lesson01_bepworksheetas_draft4_tedl_dwc.pdf>`_ Note that the solutions use the pressure-form of the Bernoulli equation. This just means that every term in the equation is multiplied by :math:`\rho g`, so the pressure term is just :math:`P`. The form of the equation does not affect the solution to the problem it helps solved.
-
 
 .. _heading_energy_equation:
 
@@ -246,11 +209,9 @@ You’ll also notice the :math:`\alpha` term attached to the velocity head. This
 
 **This is the form of the energy equation that you will see over and over again in this book.** To summarize, the main difference between the Bernoulli equation and the energy equation for the purposes of this class is energy loss. The energy equation accounts for the fluid’s loss of energy over time while the Bernoulli equation does not. So how can the fluid lose energy?
 
-
-
 .. _heading_head_loss:
 
-Head_loss
+Head Loss
 =========
 
 **Head (L)oss**, :math:`h_L` is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through space. There are two components to head loss: major losses caused by (f)riction between the fluid and the surface it's flowing over, :math:`h_{\rm{f}}`, and minor losses caused by fluid-fluid internal friction resulting from flow (e)xpansions, :math:`h_e`. These two components combine such that :math:`h_L = h_{\rm{f}} + h_e`.
@@ -417,8 +378,8 @@ In order to find :math:`\bar v_{out}`, we first need to know what (or where) is 
 
 .. _heading_head_loss_elevation_difference_trick:
 
-Head Loss = Elevation Difference Trick
---------------------------------------
+The Head Loss Elevation Trick
+-----------------------------
 
 This trick, also called the ‘control volume trick,’ or more colloquially, the ‘head loss trick,’ is incredibly useful for simplifying hydraulic systems and is used all the time in this class.
 
@@ -480,16 +441,16 @@ By applying the head loss trick, you are considering the entire flow of the flui
 
 .. _heading_the_orifice_equation:
 
-The Orifice Equation
-====================
+Vena Contracta and The Orifice Equation
+=======================================
 
 This equation is one that you’ll see and use again and again throughout this class. Understanding it now will be invaluable, as future concepts will use and build on this equation.
 
 
 .. _heading_what_is_a_vena_contracta:
 
-What is a Vena Contracta?
--------------------------
+Vena Contracta
+--------------
 
 Before describing the equation, we must first understand the concept of a `vena contracta <https://en.wikipedia.org/wiki/Vena_contracta>`_. Refer to the figure below.
 
@@ -516,7 +477,7 @@ When the most extreme turn a streamline must make is 90°, the value of the vena
 
 .. note:: Note that what this class calls :math:`\Pi_{vc}` is often referred to as a ‘Coefficient of Contraction,’ :math:`C_c`, in other engineering courses and settings.
 
-Origin of the Orifice Equation
+The Orifice Equation
 ------------------------------
 
 The orifice equation is derived from the Bernoulli equation as applied to the purple points in the following image:
