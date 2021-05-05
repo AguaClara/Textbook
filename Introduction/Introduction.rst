@@ -43,10 +43,10 @@ We need the brightest and the best to create new and better solutions so we can 
 
 Don't believe everything we say. Ask lots of questions:
 
-  - How do you know that? The goal here is to identify the difference between what is known and what is hypothesized.
-  - What is the equation that describes the physics of this process? If there isn't an equation that describes the process and that can be used to design the reactor for the process, then it is likely that the physics of the process is not yet understood.
-  - How could we improve this process? If the physics of a process are fully understood, then dimensionally correct equations can be used to obtain the optimal design for that process.
-  - Is the process design based on "rules of thumb" or on physics? "Rules of thumb" or empirical design guidelines often can be identified by the use of physical parameters that have units. For example, if the design guideline specifies a length, time, or velocity then it is likely that the guideline is not based on physics. If the design guidelines are based on a dimensionless parameter then it is possible that it is based on physics.
+ - How do you know that? The goal here is to identify the difference between what is known and what is hypothesized.
+ - What is the equation that describes the physics of this process? If there isn't an equation that describes the process and that can be used to design the reactor for the process, then it is likely that the physics of the process is not yet understood.
+ - How could we improve this process? If the physics of a process are fully understood, then dimensionally correct equations can be used to obtain the optimal design for that process.
+ - Is the process design based on "rules of thumb" or on physics? "Rules of thumb" or empirical design guidelines often can be identified by the use of physical parameters that have units. For example, if the design guideline specifies a length, time, or velocity then it is likely that the guideline is not based on physics. If the design guidelines are based on a dimensionless parameter then it is possible that it is based on physics.
  - Evaluate the data to see if it matches predictions of the hypothesized model. Assess whether the authors acknowledge when their data doesn't match hypothesized models.
  - Beware of the use of words that are poorly defined and that hide uncertainty. For example, creating a name for a supposed mechanism to describe all of the observations that don't fit with your theory does NOT mean that you understand that mechanism. The ability to name something doesn't mean it is understood (see "sweep" flocculation as an example).
  - Does this “theory” provide insights that have led to new discoveries or new applications?
