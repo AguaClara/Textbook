@@ -55,7 +55,7 @@ Mechanized and automated water treatment plants performed reasonably well in com
 
 .. _figure_Kathmandu_chemical_feed_room:
 
-.. figure:: Images/Kathmandu_chemical_feed_room.png
+.. figure:: ../Images/Kathmandu_chemical_feed_room.png
     :width: 300px
     :align: center
     :alt: Kathmandu chemical feed room
@@ -68,7 +68,7 @@ Chemical dosing systems are particularly vulnerable and their failures make plan
 
 .. _figure_Kathmandu_alum_dosing:
 
-.. figure:: Images/Kathmandu_alum_dosing.jpg
+.. figure:: ../Images/Kathmandu_alum_dosing.jpg
     :width: 300px
     :align: center
     :alt: Kathmandu alum dosing
@@ -96,7 +96,7 @@ An example of design for the operator is the elevation of the walkways in AguaCl
 
 .. _figure:
 
-.. figure:: Images/Improvised_ladder_access_to_sed_tank.jpg
+.. figure:: ../Images/Improvised_ladder_access_to_sed_tank.jpg
     :width: 300px
     :align: center
     :alt: Improvised ladder access to sed tank

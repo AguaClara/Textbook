@@ -1,4 +1,4 @@
-\Phi.. _title_Sedimentation_Intro:
+.. _title_Sedimentation_Intro:
 
 ***************************************
 Sedimentation Introduction
@@ -49,7 +49,7 @@ The terminal velocities of particles in surface waters range over many orders of
 
 .. _figure_Terminal_velocity:
 
-.. figure:: Images/Terminal_velocity.png
+.. figure:: ../Images/Terminal_velocity.png
     :width: 500px
     :align: center
     :alt: Terminal Velocity
