@@ -189,7 +189,7 @@ The dividing line between eddy transport and fluid deformation controlled by vis
     import aguaclara.research.floc_model as fm
 
     from matplotlib.ticker import FormatStrFormatter
-    imagepath = 'Rapid_Mix/Images/'
+    imagepath = '../Images/'
     EDR_array = np.logspace(0,4,num=50)*u.mW/u.kg
     Temperature = 20*u.degC
     def Inner_viscous(EDR, Temperature):
@@ -207,7 +207,7 @@ The dividing line between eddy transport and fluid deformation controlled by vis
 
 .. _figure_Inner_viscous_vs_EDR:
 
-.. figure:: Images/Inner_viscous_vs_EDR.png
+.. figure:: ../Images/Inner_viscous_vs_EDR.png
     :width: 400px
     :align: center
     :alt: Inner viscous vs EDR
@@ -243,7 +243,7 @@ We can plot the eddy turnover time as a function of scale from the inner viscous
     L_flow = 0.5*u.m
     L_scale = np.logspace(np.log10(Inner_viscous_graph.magnitude),np.log10(L_flow.magnitude),50)
     L_scale
-    imagepath = 'Rapid_Mix/Images/'
+    imagepath = '../Images/'
     fig, ax = plt.subplots()
     for i in range(len(EDR_graph)):
       ax.semilogx(L_scale,((L_scale**2/EDR_graph[i])**(1/3)).to_base_units())
@@ -258,7 +258,7 @@ We can plot the eddy turnover time as a function of scale from the inner viscous
 
 .. _figure_Eddy_turnover_time:
 
-.. figure:: Images/Eddy_turnover_time.png
+.. figure:: ../Images/Eddy_turnover_time.png
     :width: 400px
     :align: center
     :alt: Eddy turnover time
@@ -315,7 +315,7 @@ Substitute Einstein’s diffusion equation and solve for the length scale that t
     d_particle = fm.PACl.Diameter*u.m
     Temperature=20*u.degC
     x = (L_Shear_Diffusion(G,Temperature,d_particle)).to(u.nm)
-    imagepath = 'Rapid_Mix/Images/'
+    imagepath = '../Images/'
     fig, ax = plt.subplots()
     ax.semilogx(G,x)
     ax.set(xlabel='Velocity gradient (Hz)', ylabel='Length scale (nm)')
@@ -324,7 +324,7 @@ Substitute Einstein’s diffusion equation and solve for the length scale that t
 
 .. _figure_Shear_diffusion_length_scale:
 
-.. figure:: Images/Shear_diffusion_length_scale.png
+.. figure:: ../Images/Shear_diffusion_length_scale.png
     :width: 400px
     :align: center
     :alt: Shear diffusion length scale
@@ -458,7 +458,7 @@ Flow between parallel plates occurs in plate settlers in the sedimentation tank.
 
 .. _figure_Parallel_Plate_schematic:
 
-.. figure:: Images/Parallel_Plate_schematic.png
+.. figure:: ../Images/Parallel_Plate_schematic.png
    :width: 700px
    :align: center
    :alt: Parallel plate schematic
@@ -629,7 +629,7 @@ Coiled tubes are used as flocculators at laboratory scale. The one shown below i
 
 .. _figure_Coiled_tube_flocculator:
 
-.. figure:: Images/Coiled_tube_flocculator.jpg
+.. figure:: ../Images/Coiled_tube_flocculator.jpg
    :width: 500px
    :align: center
    :alt: double coiled tube flocculator
@@ -794,7 +794,7 @@ The maximum velocity gradient in pipe flow occurs at the wall. This is true for 
 
 .. _figure_pipe_pressure_shear_force_balance:
 
-.. figure:: Images/pipe_pressure_shear_force_balance.png
+.. figure:: ../Images/pipe_pressure_shear_force_balance.png
       :width: 400px
       :align: center
       :alt: Pipe pressure and shear force balance
@@ -930,7 +930,7 @@ Below we plot the Baldyga et al. equation for the energy dissipation rate as a f
 
 .. _figure_Jet_centerline_EDR:
 
-.. figure:: Images/Jet_centerline_EDR.png
+.. figure:: ../Images/Jet_centerline_EDR.png
     :width: 400px
     :align: center
     :alt: Pipe pressure and shear force balance
@@ -1043,7 +1043,7 @@ Ariane Walker-Horn modeled the flat plate using Fluent in 2015.
 
 .. _figure_CFD_Flat_Plate:
 
-.. figure::    Images/CFD_Flat_Plate.png
+.. figure::    ../Images/CFD_Flat_Plate.png
       :width: 600px
       :align: center
       :alt: CFD Flat Plate

@@ -58,7 +58,7 @@ An example of changing flow geometries is when a change in pipe size occurs in a
 
 .. _figure_continuity_pipes:
 
-.. figure:: Images/continuity_pipes.png
+.. figure:: ../Images/continuity_pipes.png
     :align: center
     :alt: internal figure
 
@@ -74,7 +74,7 @@ Considering that this class deals with the flow of water through a water treatme
 
 .. _figure_wikipedia_laminar_turbulent:
 
-.. figure:: Images/Wikipedia_laminar_turbulent.png
+.. figure:: ../Images/Wikipedia_laminar_turbulent.png
     :width: 400px
     :align: center
     :alt: Laminar flow, turbulent flow, and the transition
@@ -123,7 +123,7 @@ A **control volume** is just an imaginary 3-dimensional shape in space. Its boun
 
 .. _figure_control_volume_simplification:
 
-.. figure:: Images/control_volume_simplification.png
+.. figure:: ../Images/control_volume_simplification.png
     :width: 650px
     :align: center
     :alt: Control volume simplification
@@ -134,7 +134,7 @@ A **control volume** is just an imaginary 3-dimensional shape in space. Its boun
 
 .. _figure_image_control_volumes:
 
-.. figure:: Images/image_control_volumes.png
+.. figure:: ../Images/image_control_volumes.png
     :width: 650px
     :align: center
     :alt: Image control volumes
@@ -178,7 +178,7 @@ Going back to the Bernoulli equation, the :math:`\frac{p}{\rho g}` term is calle
 
 .. _figure_different_forms_of_head:
 
-.. figure:: Images/different_forms_of_head.png
+.. figure:: ../Images/different_forms_of_head.png
     :width: 650px
     :align: center
     :alt: Different forms of head
@@ -298,7 +298,7 @@ In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gat
 
 .. _figure_moody:
 
-.. figure:: Images/Moody.jpg
+.. figure:: ../Images/Moody.jpg
     :width: 650px
     :align: center
     :alt: Moody diagram
@@ -344,7 +344,7 @@ There are three forms of the minor loss equation that you will see in this class
 
 .. _figure_minor_loss_pipe_FRD:
 
-.. figure:: Images/minor_loss_pipe.png
+.. figure:: ../Images/minor_loss_pipe.png
     :width: 650px
     :align: center
     :alt: Minor loss displayed in a flow expansion
@@ -358,7 +358,7 @@ one <https://www.engineeringtoolbox.com/minor-loss-coefficients-pipes-d_626.html
 
 .. _figure_minor_loss_elbow:
 
-.. figure:: Images/minor_loss_elbow.png
+.. figure:: ../Images/minor_loss_elbow.png
     :width: 650px
     :align: center
     :alt: Minor loss displayed in an elbow
@@ -387,7 +387,7 @@ Consider the following figure:
 
 .. _figure_head_loss_trick:
 
-.. figure:: Images/head_loss_trick.png
+.. figure:: ../Images/head_loss_trick.png
     :width: 650px
     :align: center
     :alt: Image used to explain the head loss trick
@@ -456,7 +456,7 @@ Before describing the equation, we must first understand the concept of a `vena 
 
 .. _figure_sluice_gate_vena_contracta:
 
-.. figure:: Images/sluice_gate_vena_contracta.png
+.. figure:: ../Images/sluice_gate_vena_contracta.png
     :width: 650px
     :align: center
     :alt: Sluice Gate Vena Contracta
@@ -484,7 +484,7 @@ The orifice equation is derived from the Bernoulli equation as applied to the pu
 
 .. _figure_hole_in_a_bucket:
 
-.. figure:: Images/hole_in_a_bucket.png
+.. figure:: ../Images/hole_in_a_bucket.png
     :width: 650px
     :align: center
     :alt: Minor loss displayed in an elbow
@@ -523,7 +523,7 @@ There are two configurations for an orifice in the tank holding a fluid: horizon
 
 .. _figure_vertical_and_horizontal_orifices:
 
-.. figure:: Images/vertical_and_horizontal_orifices.png
+.. figure:: ../Images/vertical_and_horizontal_orifices.png
     :width: 650px
     :align: center
     :alt: Vertical and horizontal orifices

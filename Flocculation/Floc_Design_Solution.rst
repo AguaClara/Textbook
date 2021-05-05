@@ -133,7 +133,7 @@ Plot :math:`G\theta` as a function of the operating temperature given the head l
     #Without the "r" the \theta would be parsed as a tab (\t) followed by heta!
     ax.set(xlabel=r'Temperature ($^\circ$C)')
     ax.set(ylabel=r'G$\theta$')
-    fig.savefig('Flocculation/Images/Gtheta_vs_temperature')
+    fig.savefig('../Images/Gtheta_vs_temperature')
     plt.show()
 
 
@@ -141,7 +141,7 @@ Plot :math:`G\theta` as a function of the operating temperature given the head l
 
 .. _figure_Gtheta_vs_temperature:
 
-.. figure:: Images/Gtheta_vs_temperature.png
+.. figure:: ../Images/Gtheta_vs_temperature.png
    :width: 400px
    :align: center
    :alt: Gtheta_vs_temperature
@@ -464,7 +464,7 @@ Create plots showing number of channels, number of expansions per water depth, t
     ax.plot(flow_plant,expansions,'-')
     ax.set(xlabel='Plant Flow Rate (L/s)')
     ax.set(ylabel='Expansion per baffle space')
-    fig.savefig('Flocculation/Images/Expansions_per_baffle_space_vs_plant_flow')
+    fig.savefig('../Images/Expansions_per_baffle_space_vs_plant_flow')
     plt.show()
 
     channels=np.zeros(plot_points)
@@ -474,7 +474,7 @@ Create plots showing number of channels, number of expansions per water depth, t
     ax.plot(flow_plant,channels,'-')
     ax.set(xlabel='Plant Flow Rate (L/s)')
     ax.set(ylabel='Number of channels')
-    fig.savefig('Flocculation/Images/Number_of_channels_vs_plant_flow')
+    fig.savefig('../Images/Number_of_channels_vs_plant_flow')
     plt.show()
 
     baffles=np.zeros(plot_points)
@@ -484,7 +484,7 @@ Create plots showing number of channels, number of expansions per water depth, t
     ax.plot(flow_plant,baffles,'-')
     ax.set(xlabel='Plant Flow Rate (L/s)')
     ax.set(ylabel='Number of Baffle Spaces')
-    fig.savefig('Flocculation/Images/Number_of_baffle_spaces_vs_plant_flow')
+    fig.savefig('../Images/Number_of_baffle_spaces_vs_plant_flow')
     plt.show()
 
     width_floc_channel=np.zeros(plot_points)*u.m
@@ -495,12 +495,12 @@ Create plots showing number of channels, number of expansions per water depth, t
     ax.set(xlabel='Plant Flow Rate (L/s)')
     ax.set(ylabel='Floc Channel Width (m)')
     plt.title('Floc channel width vs plant flow')
-    fig.savefig('Flocculation/Images/Floc_channel_width_vs_plant_flow')
+    fig.savefig('../Images/Floc_channel_width_vs_plant_flow')
     plt.show()
 
 .. _figure_Expansions_per_baffle_space_vs_plant_flow:
 
-.. figure:: Images/Expansions_per_baffle_space_vs_plant_flow.png
+.. figure:: ../Images/Expansions_per_baffle_space_vs_plant_flow.png
    :width: 400px
    :align: center
    :alt: Expansions per baffle space vs plant flow
@@ -509,7 +509,7 @@ Create plots showing number of channels, number of expansions per water depth, t
 
 .. _figure_Number_of_channels_vs_plant_flow:
 
-.. figure:: Images/Number_of_channels_vs_plant_flow.png
+.. figure:: ../Images/Number_of_channels_vs_plant_flow.png
    :width: 400px
    :align: center
    :alt: Number of channels vs plant flow
@@ -518,7 +518,7 @@ Create plots showing number of channels, number of expansions per water depth, t
 
 .. _figure_Number_of_baffle_spaces_vs_plant_flow:
 
-.. figure:: Images/Number_of_baffle_spaces_vs_plant_flow.png
+.. figure:: ../Images/Number_of_baffle_spaces_vs_plant_flow.png
    :width: 400px
    :align: center
    :alt: Number of baffle spaces vs plant flow
@@ -527,7 +527,7 @@ Create plots showing number of channels, number of expansions per water depth, t
 
 .. _figure_Floc_channel_width_vs_plant_flow:
 
-.. figure:: Images/Floc_channel_width_vs_plant_flow.png
+.. figure:: ../Images/Floc_channel_width_vs_plant_flow.png
    :width: 400px
    :align: center
    :alt: Floc channel width vs plant flow

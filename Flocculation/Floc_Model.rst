@@ -78,7 +78,7 @@ Equations :eq:`eq_spacing_of_number_concentration` and :eq:`eq_number_concentrat
 
 .. _figure_Particle_separation:
 
-.. figure:: Images/Particle_separation.png
+.. figure:: ../Images/Particle_separation.png
    :width: 200px
    :align: center
    :alt: Particle separation
@@ -104,13 +104,13 @@ Particle separation distance matters because it determines which transport mecha
   fig, ax = plt.subplots()
   ax.loglog(C_Clay.to(u.NTU),n_Clay.to(1/u.L))
   ax.set(xlabel='Clay concentration ($NTU$)', ylabel='Number of clay per liter')
-  fig.savefig('Flocculation/Images/NClay_vs_CClay')
+  fig.savefig('../Images/NClay_vs_CClay')
   plt.show()
 
 
 .. _figure_NClay_vs_CClay:
 
-.. figure:: Images/NClay_vs_CClay.png
+.. figure:: ../Images/NClay_vs_CClay.png
    :width: 400px
    :align: center
    :alt: NClay vs CClay
@@ -133,13 +133,13 @@ The next step is to calculate the separation distance between the clay particles
   fig, ax = plt.subplots()
   ax.semilogx(C_Clay.to(u.NTU),lamda_Clay.to(u.mm))
   ax.set(xlabel='Clay concentration ($NTU$)', ylabel=r'Clay separation distance ($mm$)')
-  fig.savefig('Flocculation/Images/LambdaClay_vs_CClay')
+  fig.savefig('../Images/LambdaClay_vs_CClay')
   plt.show()
 
 
 .. _figure_LambdaClay_vs_CClay:
 
-.. figure:: Images/LambdaClay_vs_CClay.png
+.. figure:: ../Images/LambdaClay_vs_CClay.png
    :width: 400px
    :align: center
    :alt: LambdaClay vs CClay
@@ -181,13 +181,13 @@ We will use the inner viscous length scale, Equation :eq:`eq_inner_viscous_lengt
   ax.set(xlabel='Velocity gradient (Hz)', ylabel='Inner viscous length scale (mm)')
   ax.text(10, 30, 'Eddies cause mixing', fontsize=12,rotation=-30)
   ax.text(3, 14, 'Viscous shear', fontsize=12,rotation=-30)
-  fig.savefig('Flocculation/Images/innerviscous_vs_G')
+  fig.savefig('../Images/innerviscous_vs_G')
   plt.show()
 
 
 .. _figure_innerviscous_vs_G:
 
-.. figure:: Images/innerviscous_vs_G.png
+.. figure:: ../Images/innerviscous_vs_G.png
    :width: 400px
    :align: center
    :alt: inner viscous vs G
@@ -203,7 +203,7 @@ Now that we know that the collisions are controlled by viscosity we can begin fo
 
 .. _figure_Random_walk:
 
-.. figure:: Images/Random_walk.png
+.. figure:: ../Images/Random_walk.png
    :target: https://youtu.be/I9sEOJ-kB3A
    :width: 400px
    :align: center
@@ -214,7 +214,7 @@ Now that we know that the collisions are controlled by viscosity we can begin fo
 
 .. _figure_Final_approach:
 
-.. figure:: Images/Final_approach.png
+.. figure:: ../Images/Final_approach.png
    :target: https://youtu.be/BtG-IxCGAUk
    :width: 400px
    :align: center
@@ -425,7 +425,7 @@ Referring to Equation :eq:`EDR`, changing the head loss by changing the constric
 
 .. _figure_apparatus:
 
-.. figure:: Images/PennockFig1.png
+.. figure:: ../Images/PennockFig1.png
    :width: 400px
    :align: center
    :alt: Experimental apparatus
@@ -455,7 +455,7 @@ The above process was used to conduct the experiments to test the applicability 
 
 .. _figure_PennockFig2:
 
-.. figure:: Images/PennockFig2.png
+.. figure:: ../Images/PennockFig2.png
    :width: 400px
    :align: center
    :alt: internal figure
@@ -473,7 +473,7 @@ In this graph, the data are plotted in terms of Equation :eq:`pClam` and its cor
 
 .. _figure_PennockFig3:
 
-.. figure:: Images/PennockFig3.png
+.. figure:: ../Images/PennockFig3.png
    :width: 400px
    :align: center
    :alt: internal figure
@@ -488,7 +488,7 @@ For flocculation in laminar flows, data were used from the work of :cite:`Floc_M
 
 .. _figure_PennockFig5:
 
-.. figure:: Images/PennockFig5.png
+.. figure:: ../Images/PennockFig5.png
    :width: 400px
    :align: center
    :alt: internal figure
@@ -596,7 +596,7 @@ The three types of surfaces (PACl, humic acid, clay) have 6 (3!) potential inter
 
 .. _figure_Du_Fig2:
 
-.. figure:: Images/Du_Fig2.png
+.. figure:: ../Images/Du_Fig2.png
    :width: 400px
    :align: center
    :alt: Experimental Apparatus

@@ -9,7 +9,7 @@ Flocculation transform inorganic (clays such as `kaolinite, smectite, etc. and m
 
 .. _figure_Collisions_in_Sequence:
 
-.. figure:: Images/Collisions_in_Sequence.png
+.. figure:: ../Images/Collisions_in_Sequence.png
    :target: https://youtu.be/NIgP56htShw
    :width: 400px
    :align: center
@@ -45,7 +45,7 @@ See :numref:`figure_Ching_Electrophoretic_Mobility_vs_Ferric_Chloride` showing t
 
 .. _figure_Ching_Electrophoretic_Mobility_vs_Ferric_Chloride:
 
-.. figure:: Images/Ching_Electrophoretic_Mobility_vs_Ferric_Chloride.png
+.. figure:: ../Images/Ching_Electrophoretic_Mobility_vs_Ferric_Chloride.png
     :width: 300px
     :align: center
     :alt: internal figure
@@ -55,7 +55,7 @@ See :numref:`figure_Ching_Electrophoretic_Mobility_vs_Ferric_Chloride` showing t
 
 .. _figure_Ching_Residual_Turbidity_vs_Ferric_Chloride:
 
-.. figure:: Images/Ching_Residual_Turbidity_vs_Ferric_Chloride.png
+.. figure:: ../Images/Ching_Residual_Turbidity_vs_Ferric_Chloride.png
     :width: 300px
     :align: center
     :alt: internal figure
@@ -93,7 +93,7 @@ In a shear flow the particles rotate and a boundary layer is created all around 
 
 .. _figure_No_Dissimilar_Collisions_in_Shear:
 
-.. figure:: Images/no_collisions_when_different_sizes.png
+.. figure:: ../Images/no_collisions_when_different_sizes.png
    :target: https://youtu.be/f095r0Tvgoc
    :width: 400px
    :align: center
@@ -105,7 +105,7 @@ Collisions between similar sized particles are possible because the particles ar
 
 .. _figure_Similar_Size_Collisions_in_Shear:
 
-.. figure:: Images/Similar_Size_Collisions_in_Shear.png
+.. figure:: ../Images/Similar_Size_Collisions_in_Shear.png
    :target: https://youtu.be/zP-CK5fNH6Y
    :width: 400px
    :align: center
@@ -155,7 +155,7 @@ The size change produced by flocculation is dramatic. Clay particles and pathoge
 
 .. _figure_Flocs_are_fractals:
 
-.. figure:: Images/Flocs_are_fractals.png
+.. figure:: ../Images/Flocs_are_fractals.png
    :target: https://youtu.be/tAAC-KY8ZgA
    :width: 400px
    :align: center

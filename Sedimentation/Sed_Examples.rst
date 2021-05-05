@@ -73,7 +73,7 @@ Look at a proposed design for the bottom of the sedimentation tank, shown in :nu
 
 .. _figure_failure_mode_example:
 
-.. figure:: Images/failure_mode_example.png
+.. figure:: ../Images/failure_mode_example.png
     :height: 300px
     :align: center
     :alt: Proposed sedimentation tank design.

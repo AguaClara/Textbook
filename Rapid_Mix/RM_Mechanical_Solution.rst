@@ -41,13 +41,13 @@ Part 1: Temperature effects, energy use, and operating costs
     ax.plot(GraphTempArray, GraphKinematicViscosity.to(u.mm**2/u.s), 'r-')
     ax.set(xlabel='Temperature (degrees Celcius)')
     ax.set(ylabel='Kinematic viscosity (mm^2/s)')
-    fig.savefig('Rapid_Mix/Images/Kinematic_vs_T')
+    fig.savefig('../Images/Kinematic_vs_T')
     plt.show()
 
 
 .. _figure_Kinematic_vs_T:
 
-.. figure:: Images/Kinematic_vs_T.png
+.. figure:: ../Images/Kinematic_vs_T.png
    :width: 400px
    :align: center
    :alt: Kinematic viscosity of water as a function of temperature
@@ -94,12 +94,12 @@ Using your function, plot the shaft power (kW) required for a conventional rapid
     ax.plot(GraphTempArray, ShaftPower.to(u.kW), 'r-')
     ax.set(xlabel='Temperature (degrees Celcius)')
     ax.set(ylabel='shaft power required (kW)')
-    fig.savefig('Rapid_Mix/Images/Shaft_Power')
+    fig.savefig('../Images/Shaft_Power')
     plt.show()
 
 .. _figure_Shaft_Power:
 
-.. figure:: Images/Shaft_Power.png
+.. figure:: ../Images/Shaft_Power.png
    :width: 400px
    :align: center
    :alt: Rapid Mix shaft power

@@ -36,7 +36,7 @@ The trunks are constrained to both provide similar flow to each filter layer and
 
 .. _figure_Filter_Max_Q_given_ND:
 
-.. figure:: Images/Filter_Max_Q_given_ND.png
+.. figure:: ../Images/Filter_Max_Q_given_ND.png
     :width: 400px
     :align: center
     :alt: Trunk flows

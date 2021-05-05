@@ -30,7 +30,7 @@ We want to encourage skepticism and we want to develop insights to guide thought
 
 .. _figure_short_walk:
 
-.. figure:: Images/Short_walk_to_the_edge.jpg
+.. figure:: ../Images/Short_walk_to_the_edge.jpg
     :width: 500px
     :align: center
     :alt: internal figure
@@ -92,7 +92,7 @@ We've learned much from plant operators. They figured out how to reduce rising f
 
 .. _figure_Moroceli_curtains:
 
-.. figure:: Images/Moroceli_curtains.jpg
+.. figure:: ../Images/Moroceli_curtains.jpg
     :width: 500px
     :align: center
     :alt: Moroceli curtains
@@ -110,7 +110,7 @@ The `Sustainable Development Goals: SDGs <https://www.un.org/sustainabledevelopm
 
 .. _figure_SDG6:
 
-.. figure:: Images/SDG6.png
+.. figure:: ../Images/SDG6.png
     :width: 100px
     :align: center
     :alt: SDG6
@@ -121,7 +121,7 @@ The number of people who currently lack access to reliable safe water on tap is 
 
 .. _figure_CDC_Global_Safe_Tap_Water:
 
-.. figure:: Images/CDC_Global_Safe_Tap_Water.png
+.. figure:: ../Images/CDC_Global_Safe_Tap_Water.png
     :width: 600px
     :align: center
     :alt: CDC Global Safe Tap Water
@@ -133,7 +133,7 @@ The `UN estimate in 2017 <https://www.un.org/sustainabledevelopment/blog/2017/07
 
 .. _figure_Population_Infographic_01:
 
-.. figure:: Images/Population_Infographic_01.jpg
+.. figure:: ../Images/Population_Infographic_01.jpg
     :width: 400px
     :align: center
     :alt: Population infographic
@@ -248,7 +248,7 @@ Chlorine is widely recognized for reducing mortality from water borne disease in
 
 .. _figure_US_death_rate:
 
-.. figure:: Images/US_infectious_diseases_death_rate.jpg
+.. figure:: ../Images/US_infectious_diseases_death_rate.jpg
     :width: 500px
     :align: center
     :alt: US_infectious_diseases_death_rate
@@ -294,6 +294,226 @@ Example treatment trains include:
 
 An Evolving Research Approach
 -----------------------------
+=======
+.. _heading_The_AguaClara_Treatment_Train:
+
+The AguaClara Treatment Train
+=============================
+
+
+Why does flocculation precedes sedimentation?
+Which process removes the largest quantity of contaminants?
+
+Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
+
+.. math::
+  :label: eq_laminar_terminal_velocity
+
+  \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
+
+| Such that:
+| :math:`\bar v_t` = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water
+| :math:`D_{particle}` = particle diameter
+| :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
+
+.. code:: python
+
+  import aguaclara.core.physchem as pc
+  import numpy as np
+  import matplotlib.pyplot as plt
+  def v_t(D_particle,density_particle,Temperature):
+    return (D_particle**2*pc.gravity *(density_particle - pc.density_water(Temperature))/(18*pc.viscosity_kinematic(Temperature)*pc.density_water(Temperature))).to(u.m/u.s)
+  clay = 2650 * u.kg/u.m**3
+  organic = 1040 * u.kg/u.m**3
+  Temperature = 20 * u.degC
+  D_particle = np.logspace(-6,-3)*u.m
+  fig, ax = plt.subplots()
+  ax.loglog(D_particle.to(u.m),v_t(D_particle,clay,Temperature).to(u.m/u.s))
+  ax.loglog(D_particle.to(u.m),v_t(D_particle,organic,Temperature).to(u.m/u.s))
+  ax.set(xlabel='Particle diameter (m)', ylabel='Terminal velocity (m/s)')
+  ax.legend(["clay or sand","organic particle"])
+  imagepath = '../Images/'
+  fig.savefig(imagepath+'Terminal_velocity')
+  plt.show()
+
+
+The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take care of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (:eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
+
+
+.. _figure_Terminal_velocity:
+
+.. figure:: ../Images/Terminal_velocity.png
+    :width: 500px
+    :align: center
+    :alt: Terminal Velocity
+
+    The terminal velocity of a 1 :math:`\mu m` bacteria cell is approximately 20 nanometers per second. The terminal velocity of a 5 :math:`\mu m` clay particles is 30 :math:`\mu m/s`. The velocity estimates for the faster settling particles may be too slow because those particles are transitioning to turbulent flow.
+
+The low terminal velocities of particles that we need to remove from surface waters reveals that sedimentation alone will not work. The time required for a small particle to settle even a few mm would require excessively large sedimentation tanks. This is why flocculation, the process of sticking particles together so that they can attain higher sedimentation velocities, is perhaps the most important unit process in surface water treatment plants.
+
+The AguaClara treatment train consists of the following processes
+ - flow measurement
+ - metering of the coagulant (and chlorine) that will cause particles to stick together
+ - mixing of the coagulant with the raw water
+ - flocculation where the water is deformed to cause particle collisions
+ - floc blanket where large flocs settle through water that is flowing upward causing collisions between small particles carried by the upward flowing water and the large flocs
+ - lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc blanket
+ - stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed
+ - disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes
+
+Comparison with Croton Water Treatment Plant
+---------------------------------------------
+
+As AguaClara technologies extend to larger and larger cities one of the criticisms could be that the technologies are somehow limited to small scale facilities. To address this question we will compare AguaClara unit processes with one of the most recent large scale water treatment plants, the `Croton Water Treatment Plant <../_static/references/Croton-WFP.pdf>`_ (CWTP) in NYC.
+
+The CWTP is designed to treat `290 mgd <https://www.hazenandsawyer.com/work/projects/croton-wtp/>`_ (million gallons per day) which is equivalent to 12,700 L/s. The final cost of the project was $3.2bn. The cost per L/s of treatment capacity was thus $250,000. This is approximately 25 times more expensive than AguaClara water treatments. Of course, AguaClara water treatment plants haven't been constructed underground in the middle of a major city! Nonetheless, the factor of 25 suggests that AguaClara technologies have a significant cost advantage.
+
+The CWTP has 48 flocculators and 48 dissolved air flotation processes working in parallel. The flow per unit is thus 265 L/s. The current maximum size of the AguaClara Open Stacked Rapid Sand (OStaR) ilter is 20 L/s. It would be possible to design larger OStaR filters by simply including multiple sets of inlet/outlet trunk lines into a single filter box. The CWTP filters appear to have 6 outlet trunk lines per filter and thus the flow per trunk line is 44 L/s.
+
+The CWTP uses 2 stage mechanical flocculators with a total residence time of 4.8 minutes and a velocity gradient of 100 Hz. This residence time is much shorter than conventional design requirements, about half of the residence time used by the AguaClara plants built around 2017, significantly larger than the 90 second residence time used in the AguaClara 1 L/s plants.
+
+CWTP uses dissolved air flotation tanks that are located on top of the rapid sand filters.
+
+The filter approach velocity (the velocity of water before it enters the sand bed) for CWTP is 4.42 mm/s. This is significantly higher than the 1.85 mm/s filtration velocity currently used in StaRS filters. StaRS filters are a stack of 6 filters and the net filtration velocity is 11 mm/s. Thus by that metric the StaRS filters are significantly smaller than the CWTP filters.
+
+.. code:: python
+
+   #the unit registry has been imported above and does not need to be imported again
+   import aguaclara
+   import aguaclara.core.physchem as pc
+   from aguaclara.core.units import unit_registry as u
+   Q_Croton =(290 *u.Mgal/u.day).to(u.L/u.s)
+   Cost_Croton = 3.2 * 10**9 * u.USD
+   Cost_per_Lps = Cost_Croton/Q_Croton
+   Cost_per_Lps
+   N_DAF = 48
+   Q_per_unit = Q_Croton/N_DAF
+   Q_per_unit/6
+   (15.9 * u.m/u.hr).to(u.mm/u.s)
+
+Design Evolution
+----------------
+
+During the later half of the 20th century surface water treatment technologies evolved slowly. The slow evolution was likely a product of the regulatory environment, the high cost of water treatment infrastructure, and the low profit margin. The high cost of municipal scale water treatment infrastructure made experiments at scale infeasible and thus there was no mechanism to introduce disruptive innovations. With little opportunity for a significant return on investment there was little incentive to invest in the research and development that could have advanced the technologies. A final disincentive was the widely held belief that surface water treatment was a mature field with little opportunity for significant advancement. The advances of the latter half of the 20th century focused primarily on mechanization and automation (Supervisory Control and Data Acquisition - SCADA).
+
+Design standards such as the `Great Lakes - Upper Mississippi River Board 10 States Standards <http://10statesstandards.com/>`_ are evolving very slowly and retain an empirical approach to design. The empirical design methodology is a direct result of two confounding factors. The physics of particle interactions based on diffusion, fluid shear, and gravity are complex and given the challenges of characterizing surface water particle suspensions it was natural to assume that a mathematical description of the processes would be intractable.
+
+Mechanized and automated water treatment plants performed reasonably well in communities with ready access to technical support services and supply chains that could reliably deliver replacement parts. In the global south municipal water treatment plants haven't faired as well. In 2012, one of the main water treatment plants serving Kathmandu, Nepal had failed chlorine pumps and were using a red garden hose to siphon chlorine from the stock tank. They crimped the end of the hose to control the flow rate of the chlorine solution.
+
+.. _figure_Kathmandu_chemical_feed_room:
+
+.. figure:: ../Images/Kathmandu_chemical_feed_room.png
+    :width: 300px
+    :align: center
+    :alt: Kathmandu chemical feed room
+
+    Failed chlorine dosing system bypassed with a red tube that siphons the chlorine solution at a plant in Kathmandu, Nepal in 2012.
+
+
+The ingenious and simple chemical dosing system that uses a siphon to completely bypass the failed pumps begs the question of whether design engineers could have invented a better option than the short lived pumps that they specified. We will investigate a gravity powered chemical dosing system that is far more reliable than chemical dosing pumps and that borrows from the simplicity of the garden hose solution used by the Nepali plant operators.
+
+Chemical dosing systems are particularly vulnerable and their failures make plant operation very challenging. Providing the right coagulant dose is critical for efficient removal of particle and dissolved organics. Chemical dosing systems commonly rely on pumps and those pumps require regular maintenance and have relatively short mean times between failures.
+
+.. _figure_Kathmandu_alum_dosing:
+
+.. figure:: ../Images/Kathmandu_alum_dosing.jpg
+    :width: 300px
+    :align: center
+    :alt: Kathmandu alum dosing
+
+    Alum dosing system based on the rate that 25 kg blocks of alum are placed in the inlet channel of the plant.
+
+The AguaClara Cornell program was founded in 2005 with the goal of creating a new generation of sustainable technologies that would perform well even in the rugged settings of rural communities. The goal wasn't simply to create technologies that would work for communities with very limited resources. The goal was to create the next generation of technologies that would both perform well in communities with limited resources and would be the highest performing technologies on multiple metrics for all communities.
+
+.. _heading_Empirical_Design:
+
+Empirical Design
+----------------
+
+For the past several decades surface water treatment technologies have been considered "mature" and when I (Monroe) took a design course on drinking water treatment in 1985 I had the impression that there was little room for further innovation. This perspective is remarkable given that with the exception of lamellar sedimentation there were no equations describing the core treatment processes.
+
+Empirical design guidelines don't provide insight into how designs could be optimized or even what the performance of a water treatment plant will be.
+
+.. _heading_Design_for_the_Context:
+
+Design for the Financers, Venders, Client, or Context?
+======================================================
+
+Tours of water treatment plants suggest that it is common for designs to be driven by the vender goal of a stable revenue stream for replacement parts rather than by a goal of meeting the client's needs. Mandatory software upgrades, mechanical valves, chemical pumps, mixing units provide a steady demand for proprietary components. Financers often prefer projects that can be implemented quickly either because they have target expenditures for a fiscal year or because loan repayment begins when the facility is turned over to the client.
+
+Design for the client would strive to reduce capital, operating, and maintenance expenses. Clients also place a high value on reliability, ease of maintenance, and the ability to handle repairs with their staff. Design for the context would account for the capabilities of local and national supply chains. A key design consideration is to ensure that the treatment capabilities of the treatment plant match the variable water quality of the proposed water source. There are numerous slow sand filtration plants installed in the global south that are attempting to treat water sources that can not be effectively treated by slow sand filtration. The cost of the failure to consider the client and the context is born by the communities who end up with water treatment systems that aren't able to provide reliable safe water.
+
+Design for the client requires empathy and a commitment to listen to and learn from plant operators. It also requires attention to detail and watching how plant operators interact with water treatment plants. Empathy leads to the goal of creating a work environment that makes it easy for the plant operators to do their routine tasks. This isn't just to make the plant operators work easy. A plant that is designed with the plant operator in mind will also engender pride and that pride will lead to better plant performance.
+
+An example of design for the operator is the elevation of the walkways in AguaClara plants. Conventional plants often have walkways that are above the tanks. That places the operator's eyes several meters above the water surface and makes it difficult to see particles and flocs in the water. AguaClara plants have the walkways approximately 50 cm below the top of the tanks. This makes it easy for the plant operator to look into the tanks for quick visual inspections.
+
+.. _figure:
+
+.. figure:: ../Images/Improvised_ladder_access_to_sed_tank.jpg
+    :width: 300px
+    :align: center
+    :alt: Improvised ladder access to sed tank
+
+    A plant operator built a makeshift ladder to enable easier access to the flocculation and sedimentation tanks in a package plant. This ladder considerably shortened the distance between the coagulant dose controls and the flocculator. The ladder also makes it possible to look closely at the water to see the size of the flocs.
+
+.. _heading_Design_Bifurcations:
+
+Design Bifurcations
+===================
+
+Seemingly small decisions can have a profound effect on the evolution of design. Often these decisions have a clear logic and a simple analysis would suggest that the decision must be the right one. It is common for design choices to have multiple consequences that can turn a seemingly great choice into a poor performer.
+
+.. _heading_walls_and_a_roof:
+
+Walls and a Roof
+----------------
+
+Traditionally in tropical and temperate climates, flocculation and sedimentation units are built without an enclosing building because they aren't in danger of freezing. Without protection from the sun the materials used for plant construction must be UV resistant and thus plastic can't be used. This requires use of heavier and more expensive materials such stainless steel and aluminum. Metal plate settlers are heavy and thus they can't be easily removed by the plant operator.
+
+Without the ability to gain access to a sedimentation tank from above, conventional sedimentation tank cleaning must be done by providing operator access below the plate settlers. This in turn requires that the space below the plate settlers be tall enough to accommodate a plant operator. Thus sedimentation tanks that are built in the open have to be deeper than sedimentation tanks that are built under a roof and they are more difficult to maintain because the operator has to enter the tank through a waterproof access port. Operator access to the space below the stainless steel or aluminum plate settlers is through a port in the side of the tank (see the video :numref:`figure_Cleaning_a_Sed_Tank_with_fixed_plates`).
+
+
+.. _figure_Cleaning_a_Sed_Tank_with_fixed_plates:
+
+.. figure:: http://img.youtube.com/vi/TSh-ZNqaW8Y/0.jpg
+    :width: 300px
+    :align: center
+    :alt: Cleaning a Sed Tank with fixed plates
+    :target: http://www.youtube.com/watch?v=TSh-ZNqaW8Y
+
+    Plant operators opening hatch below plate settlers in a traditional sedimentation tank.
+
+AguaClara sedimentation tanks are designed to be taken off line one at a time so the water treatment plant can continue to operate during maintenance. Two plant operators can quickly open a sedimentation tank by removing the plastic plate settlers (see the video :numref:`figure_Removing_Plate_Settlers`). The zero settled sludge design of the AguaClara sedimentation tanks also reduces the need for cleaning.
+
+.. _figure_Removing_Plate_Settlers:
+
+.. figure:: http://img.youtube.com/vi/vZ2f6mduEls/0.jpg
+    :width: 300px
+    :align: center
+    :alt: Removing Plate Settlers from an AguaClara Sedimentation tank
+    :target: http://www.youtube.com/watch?v=vZ2f6mduEls
+
+    Plant operator removing plate settlers from an AguaClara sedimentation tank.
+
+
+
+There is another major consequence of building water treatment plants in a secure enclosed building. Many water treatment plants will operate around the clock and that requires plant operators to spend the night at the facility. Having a secure facility provides improved safety for the plant operator. That improved safety is very important for some potential operators and thus providing that safety will increase potential diversity.
+
+.. _heading_Mechanized_or_Smart_Hydraulics:
+
+Mechanized or Smart Hydraulics
+------------------------------
+
+Dramatically different designs are also created when we choose gravity power and smart hydraulics rather than mechanical mixers, pumps, and mechanical controls for each of the unit processes. It appears that use of electricity in drinking water treatment plants became the popular choice about 100 years ago. Many gravity powered plants have been converted to use mechanical mixers for rapid mix and flocculation. That choice may not have been well founded from a water quality or performance perspective.
+
+.. todo:: Research the history of the conversion from hydraulic to mechanical rapid mix and flocculation to see what evidence was used to support the decision.
+
+Automated plants often move the controls far away from the critical observation locations in the plant. This might be appropriate or necessary in some cases, but it has the disadvantage of making it more difficult for operators to directly observe what is happening in the plant. Direct observations are critical because even highly mechanized water treatment plants are not yet equipped with enough sensors to enable rapid troubleshooting from the control room.
+
+AguaClara plants have a layout that places the coagulant dose controls within a few steps of the best places to observe floc formation in the flocculator. This provides plant operators with rapid feedback that is critical when the raw water changes rapidly at the beginning of a high runoff event. As operators spend time observing the processes in the plant they begin to associate cause and effect and can make operational changes to improve performance. For example, gas bubbles that carry flocs to the surface can indicate sludge accumulation in a sedimentation tank. Rising flocs without gas bubbles can indicate a poor inlet flow distribution for a sedimentation tank or density differences caused by temperature differences.
+
+.. todo:: Show the plan view of an AguaClara plant.
+
 
 This is an evolving textbook. We don't intend to ever print this book. This book has version numbers just like software with the idea that revisions are rapid and frequent. We commit to helping to accelerate the pace of knowledge generation and to revising this text as you help us identify places where we have presented hypotheses as theory and places where research provides a basis for better theoretical models of the water treatment processes.
 

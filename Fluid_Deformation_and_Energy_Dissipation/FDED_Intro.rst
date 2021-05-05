@@ -27,7 +27,7 @@ Understanding :math:`G` and :math:`\varepsilon`
 
 .. _figure_Velocity_gradient_image:
 
-.. figure:: Images/Velocity_gradient_image.jpg
+.. figure:: ../Images/Velocity_gradient_image.jpg
     :width: 700px
     :align: center
     :alt: Velocity gradient image
@@ -57,7 +57,7 @@ Velocity gradients are central to flocculation because they cause the deformatio
 
 .. _figure_Pedestrians_on_sidewalk:
 
-.. figure:: Images/Pedestrians_on_sidewalk.jpg
+.. figure:: ../Images/Pedestrians_on_sidewalk.jpg
     :width: 700px
     :align: center
     :alt: Pedestrians on sidewalk
