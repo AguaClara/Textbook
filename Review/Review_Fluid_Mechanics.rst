@@ -6,7 +6,7 @@ Fluid Mechanics Review
 
 This document is meant to be a refresher on fluid mechanics. It will only cover the topics in fluids mechanics that will be used heavily in the course.
 
-If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_ Note that to view this link, you will need a Github accounts. If you wish to review from a legitimate textbook, you can find a pdf of good book by Frank White `here <http://ftp.demec.ufpr.br/disciplinas/TM240/Marchi/Bibliografia/White_2011_7ed_Fluid-Mechanics.pdf>`_.
+If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_ Note that to view this link, you will need a Github account. If you wish to review from a legitimate textbook, you can find a pdf of a good book by Frank White `here <http://ftp.demec.ufpr.br/disciplinas/TM240/Marchi/Bibliografia/White_2011_7ed_Fluid-Mechanics.pdf>`_.
 
 .. _heading_introductory_concepts:
 
@@ -30,7 +30,7 @@ Continuity is simply an application of mass balance to fluid mechanics. It state
 
 .. note:: The line above the :math:`v` is called a ‘bar,’ and represents an average. Any variable can have a bar. In this case, we are adding the bar to velocity :math:`v`, turning it into average velocity :math:`\bar v`. This variable is pronounced ‘v bar.’
 
-In this course, we deal primarily with flow through pipes. For a circular pipe, :math:`A = \pi r^2`. Substituting diameter in for radius, :math:`r = \frac{D}{2}`, we get :math:`A = \frac{\pi D^2}{4}`. You will often see this form of the continuity equation being used to relate the a pipe's flow rate to its diameter and the velocity of the fluid flowing through it:
+In this course, we deal primarily with flow through pipes. For a circular pipe, :math:`A = \pi r^2`. Substituting diameter in for radius, :math:`r = \frac{D}{2}`, we get :math:`A = \frac{\pi D^2}{4}`. You will often see this form of the continuity equation being used to relate a pipe's flow rate to its diameter and the velocity of the fluid flowing through it:
 
 .. math::
 
@@ -313,7 +313,7 @@ Minor Losses
 
 Unfortunately, there is no simple ‘pushing a box across the ground’ example to explain minor losses. So instead, consider a `hydraulic jump <https://www.youtube.com/watch?v=5spXXZX55C8>`_. In the video, you can see lots of turbulence and eddies in the transition region between the fast, shallow flow and the slow, deep flow. The high amount of mixing of the water in the transition region of the hydraulic jump results in significant friction *between water and water*. This turbulent, eddy-induced, fluid-fluid friction results in  minor losses, much like fluid-pipe friction results in major losses.
 
-As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: **minor losses are caused by flow expansions**. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in :numref:`figure_minor_loss_pipe_FRD` below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: :ref:`title_review_fluid_mechanics_derivations`.
+As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme  throughout the course: **minor losses are caused by flow expansions**. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in :numref:`figure_minor_loss_pipe_FRD` below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: :ref:`title_review_fluid_mechanics_derivations`.
 
 There are three forms of the minor loss equation that you will see in this class:
 
@@ -473,7 +473,7 @@ The term ‘vena contracta’ describes the phenomenon of contracting flow due t
 
 When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter value, 0.62, is in aguaclara as ``pc.VC_ORIFICE_RATIO``. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the least contracted area, :math:`\Pi_{vc}` is always less than 1.
 
-.. important:: **A vena contracta coefficient is not a minor loss coefficient.** Though the equations for the two both involve contracted and non-contracted areas, these coefficients are not the same. Minor losses coefficients imply energy loss, and vena contractas do not. Minor losses coefficients deal with flow expansions, and vena contracas deal with flow contractions. Confusing the two coefficients is common mistake that this paragraph will hopefully help you to avoid.
+.. important:: **A vena contracta coefficient is not a minor loss coefficient.** Though the equations for the two both involve contracted and non-contracted areas, these coefficients are not the same. Minor losses coefficients imply energy loss, and vena contractas do not. Minor losses coefficients deal with flow expansions, and vena contracas deal with flow contractions. Confusing the two coefficients is a common mistake that this paragraph will hopefully help you to avoid.
 
 .. note:: Note that what this class calls :math:`\Pi_{vc}` is often referred to as a ‘Coefficient of Contraction,’ :math:`C_c`, in other engineering courses and settings.
 
@@ -519,7 +519,7 @@ Which, rearranged to solve for :math:`Q` gives **The Orifice Equation:**
 
 .. seealso:: **Equation in aguaclara:** ``pc.flow_orifice_vert(Diam, Height, RatioVCOrifice)`` Returns flow through a vertical orifice. The height parameter refers to height above the center of the orifice.
 
-There are two configurations for an orifice in the tank holding a fluid: horizontal and vertical. These are both displayed in the figure below. The orifice equation written is for a horizontal orifice; the equation for flow through vertical orifice equation requires integration or the orifice equation across its height to return the correct flow. This is explored in the Flow Control and Measurement Examples section.
+There are two configurations for an orifice in the tank holding a fluid: horizontal and vertical. These are both displayed in the figure below. The orifice equation written is for a horizontal orifice; the equation for flow through a vertical orifice equation requires integration or the orifice equation across its height to return the correct flow. This is explored in the Flow Control and Measurement Examples section.
 
 .. _figure_vertical_and_horizontal_orifices:
 
@@ -566,7 +566,7 @@ Section Summary
 
         {\rm Re} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}
 
-    * **Control volumes vs Streamlines.** This section is quite short, a summary would simply repeat what the sections says. The section is its own summary; read it here: `Streamlines and Control Volumes`_
+    * **Control volumes vs Streamlines.** This section is quite short, a summary would simply repeat what the section says. The section is its own summary; read it here: `Streamlines and Control Volumes`_
 
 
 2. **Bernoulli vs Energy equations:** The Bernoulli equation assumes that energy is conserved throughout a streamline or control volume. The Energy equation assumes that there is energy loss, or head loss :math:`h_L`. This head loss is composed of major losses, :math:`h_{\rm{f}}`, and minor losses, :math:`h_e`.
