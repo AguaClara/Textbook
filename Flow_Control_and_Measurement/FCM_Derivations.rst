@@ -306,11 +306,6 @@ We will use the ‘head loss trick’ that was introduced in the Fluids Review s
 
     Visual representation of CDC.
 
-
-.. _heading_cdc_design_equation_derivations:
-
-CDC Design Equation Derivation
--------------------------------
 .. important:: **When designing the CDC, there are a few parameters which are picked and set initially, before applying any equations. These parameters are:**
 
 1. :math:`D` = tube diameter. only certain tubing diameters are manufactured (like :math:`\frac{x}{16}` inch), so an array of available tube diameters is set initially.
