@@ -1,8 +1,8 @@
 .. _title_Flocs_Fractals_Forces_and_Fluidized_Suspensions_Introduction:
 
-****************************************************************
-Flocs, Fractals, Forces, and Fluidized Suspensions Introduction
-****************************************************************
+************************
+Flocs, Fractals, Forces
+************************
 
 The physics of flocs, fractals, fluids, and forces define the processes of flocculation, flocnets, lamellar sedimentation, and filters. The chemical bonds that hold flocs together determine the maximum diameter that a floc can grow to in the fluid shear of a flocculator. The force of gravity is strong enough to break flocs and determines the maximum size that a floc can grow to on planet earth or, for that matter, in the flocnet that forms in the bottom of the AguaClara clarifiers. The maximum diameter that a floc can grow to without being pulled apart by gravity sets a maximum terminal velocity for flocs and that has direct implications for the maximum upflow velocity than can be used in upflow clarifiers.
 
