@@ -1,13 +1,8 @@
 .. _title_Chemistry_of_Water_Treatment_Introduction:
 
-*******************************************
-Chemistry of Water Treatment Introduction
-*******************************************
-
-.. _heading_Chemistry_of_Coagulant_Nanoparticles:
-
+*************************************
 Chemistry of Coagulant Nanoparticles
-========================================
+*************************************
 
 Aluminum based coagulants are commonly used in drinking water treatment plants. Less frequently iron based coagulants are used. These metals precipitate in water at neutral pH as :math:`Al(OH)_3` or :math:`Fe(OH)_3`. These precipitates form nanoparticles that are sticky. The origin of that stickiness is not well known, but one significant property of both precipitates is that they are both highly polar molecules. The `difference in electronegativity <https://en.wikipedia.org/wiki/Electronegativity>`_ (Pauling scale) between
  - Aluminum (1.61) and Oxygen (3.44) is 1.83
