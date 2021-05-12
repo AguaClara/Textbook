@@ -9,26 +9,6 @@ The challenge of constant head in chemical dosing for water treatment plants is 
 
 
 
-.. _heading_fcm_terms_eqs:
-
-Important Terms and Equations
-===============================
-**Terms:**
-
-1. Dose
-2. Coagulant
-3. Chlorination
-4. Turbidity
-5. Organic Matter
-6. Constant Head Tank
-7. Sutro weir
-
-**Equations:**
-
-1. Hagen-Poiseuille equation
-
-
-
 .. _heading_aguaclara_flow_control_and_measurement_technologies:
 
 AguaClara Flow Control and Measurement Technologies
