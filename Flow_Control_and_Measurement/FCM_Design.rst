@@ -231,30 +231,16 @@ The dosing systems should either be designed to be cleaned with vinegar in place
 
 .. _heading_FCM_section_summary:
 
-Section Summary
-================
-1. **Tank with a valve:**
+Summary
+========
 
-.. math::
+1. **LFOM:** The LFOM makes the water level in the entrance tank linear with respect to the flow out of the entrance tank. This is useful in measuring the flow and is a critical component in AguaClara’s chemical dosing system. The LFOM *measures* the flow through the plant, it does not *control* the flow through the plant.
 
-   \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
-
-This equation describes flow :math:`Q` as a function of time :math:`t` of a fluid leaving a tank through a valve. Attempting to get this ‘tank with a valve’ system to yield constant head means raising the tank far, far above the valve that controls the flow. This is unreasonable when designing a flow control system for constant dosing, but can be used to design systems to drain a tank. See the section above for a description of the variables in the equation.
-
-2. **LFOM:** The LFOM makes the water level in the entrance tank linear with respect to the flow out of the entrance tank. This is useful in measuring the flow and is a critical component in AguaClara’s chemical dosing system. The LFOM *measures* the flow through the plant, it does not *control* the flow through the plant.
-
-3. **The Linear Chemical Dose Controller (CDC)** combines the:
+2. **The Linear Chemical Dose Controller (CDC)** combines the:
    * linear relationship between water level and flow in the entrance tank caused by the LFOM,
    * linear relationship between elevation difference and flow caused by the Hagen-Poiseuille equation, which is only valid for major losses under laminar flow, and
    * a lever to link the two linear relationships
 
 To keep the chemical dose constant by automatically adjusting the addition of coagulant and chlorine as the plant flow rate varies. Two sliders on the lever allows the operator to change the dose of coagulant and chlorine independently of the plant flow rate.
 
-
-
-.. _heading_FCM_important_equations:
-
-Important Equations
-===================
-Below are a handful of equations relevant to the design of the different flow control and measurement technologies outlined in this chapter. For more context for these equations, please refer to the appropriate section in the chapter above; these equations have been copied verbatim for ease of reference. This list is not exhaustive—if there is an equation missing, please share it in the appropriate `GitHub issue <https://github.com/AguaClara/Textbook/issues/6>`_.
 
