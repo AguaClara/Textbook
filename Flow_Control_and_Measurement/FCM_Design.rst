@@ -1,24 +1,12 @@
 .. _title_flow_control_design:
 
-**************************************
-Flow Control and Measurement Design
-**************************************
+****************************************************
+AguaClara Flow Control and Measurement Technologies
+****************************************************
+
 This section explores AguaClara's search for constant head in chemical dosing. The term **constant head** means that the driving head of a system, :math:`\Delta z` or :math:`\Delta h`, does not change over time, even as water flows through or out of the system. Constant head implies constant flow, since the energy driving the flow does not change.
 
 The challenge of constant head in chemical dosing for water treatment plants is not *just* providing one continuous flow of chemicals; it is also varying that flow of chemicals as the flow rate through the plant changes, so that the concentration of chemicals in the raw water stays the same.
-
-
-
-.. _heading_aguaclara_flow_control_and_measurement_technologies:
-
-AguaClara Flow Control and Measurement Technologies
-=====================================================
-Each technology or component for this section will have five subsections:
-
--  **What it is**
--  **What it does and why**
--  **How it works**
--  **Notes**
 
 Before diving into the technologies, recall the purpose of the chemicals that we are seeking to constantly **dose**, and why it is important to keep a constant, specific dose. Also recall that ‘dose’ means ‘concentration of chemical’ *in the water we are trying to treat*, not in the stock tanks of the chemicals. `Coagulant <https://en.wikipedia.org/wiki/Coagulation_(water_treatment)>`_ like alum, PAC, and some iron-based chemicals are used to turn small particles into bigger particles, allowing them to be captured more easily. Waters with high `turbidity <https://en.wikipedia.org/wiki/Turbidity>`_, indicative of a lot of particles like clay and bacteria, require more coagulant to treat effectively. Additionally, waters with a lot of `organic matter <https://en.wikipedia.org/wiki/Organic_matter>`_ require significantly more coagulant to treat. `Chlorine <https://en.wikipedia.org/wiki/Water_chlorination>`_ is used to disinfect water that has already been fully treated. A proper and consistent chlorine dose is required, as too low of a dose creates a risk of reintroduction of pathogens in the distribution system and too high of a dose increases the risk of carcinogenic `disinfection byproduct <https://en.wikipedia.org/wiki/Disinfection_by-product>`_ formation.
 
