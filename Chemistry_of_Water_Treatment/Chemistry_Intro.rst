@@ -103,11 +103,6 @@ Research is needed to quantify flocculation performance in continuous flow floc/
 
 The aluminum concentration range used for flocculation ranges from approximately 0.4 - 10 mg/L and is strongly influenced by the concentration of dissolved organic matter and the concentration of suspended solids. The flocculation and floc blanket capacity to produce collisions between suspended particles also influences the required aluminum concentration.
 
-.. _heading_pH_Adjustment_in_Water_Treatment_Plants:
-
-pH Adjustment in Water Treatment Plants
-----------------------------------------
-
 In drinking water treatment plant operation it is sometimes necessary to add a base (or acid) to increase (or decrease) the pH of the raw water. The added coagulant tends to reduce the pH. The carbonate system is most important in understanding how the base will adjust the pH because the reaction between carbonic acid and bicarbonate occurs around pH 6.3, the pK (negative log of the dissociation constant is the pH where that reaction is centered) for that reaction. Carbon dioxide exchange with the atmosphere is insignificant in drinking water treatment unit processes unless there is an aeration stage. Thus we can use the ANC equation for the case with no :math:`CO_2` exchange with the atmosphere.
 
 In the :ref:`heading_pH_Adjustment` section of the textbook, we evaluate the case where we add a base to the influent water. Doing so will increase the ANC of the raw water and it may also increase the total carbonate concentration. We then calculate how much of that base needs to be added to reach a given target pH.
