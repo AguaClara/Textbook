@@ -347,7 +347,7 @@ Below are the derivations for the equations that appear in :numref:`table_Contro
 
 .. _heading_Straight_Pipe_Wall_Shear:
 
-Straight Pipe (wall Shear)
+Straight Pipe (Wall Shear)
 --------------------------
 
 The average energy dissipation rate, :math:`\bar\varepsilon`, in a control volume with residence time :math:`\theta` is
