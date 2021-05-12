@@ -40,8 +40,6 @@ Notes:
 Linear Flow Orifice Meter (LFOM)
 --------------------------------
 
-What it is
-^^^^^^^^^^^^^^
 The LFOM is a weir shape cut into a pipe. It was meant to imitate `the Sutro Weir <https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research>`_ while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.
 
 .. _figure_sutro_v_lfom:
@@ -52,8 +50,6 @@ The LFOM is a weir shape cut into a pipe. It was meant to imitate `the Sutro Wei
 
     On the left is a sutro weir. On the right is AguaClara's approximation of the sutro weir's geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.
 
-What it does and why
-^^^^^^^^^^^^^^^^^^^^^^^^
 The LFOM does one thing and serves two purposes.
 
 What it does:
@@ -65,15 +61,12 @@ Why it is useful:
 #. Allows the operator to measure the flow through the plant quickly and easily, explained above.
 #. Allows for the Linear Chemical Dose Controller, which will be explained next, to automatically adjust the flow of coagulant/chlorine into the plant as the plant flow rate changes. This means the operator would only need to adjust the flow of coagulant when there is a change in turbidity or organic matter.
 
-How it works
-^^^^^^^^^^^^^^^^
 This is best understood with examples. By shaping a weir differently, different relationships between :math:`Q` and :math:`h` are formed:
 * In the case of a `rectangular weir <https://swmm5.files.wordpress.com/2016/09/image00124.jpg>`_, :math:`Q \propto h^{\frac{3}{2}}`
 * In the case of a `v-notch weir <https://swmm5.files.wordpress.com/2016/09/image0096.jpg>`_, :math:`Q \propto h^{\frac{5}{2}}`
 * In the case of a `Sutro weir <http://www.engineeringexcelspreadsheets.com/wp-content/uploads/2012/11/Sutro-Weir-Diagram1.jpg>`_ and thus LFOM, :math:`Q \propto h`.
 
-Notes
-^^^^^^^^^
+Notes:
 
 -  The LFOM is not perfect. Before the water level reaches the second row of holes, the LFOM is simulating a rectangular weir, and thus :math:`h \not\propto Q`. The Sutro weir also experiences this problem.
 -  If the water level exceeds the topmost row of the LFOM’s orifices, the linearity also breaks down. The entire LFOM begins to act like an orifice, the exponent of :math:`Q` in :math:`h \propto Q` becomes greater than 1. This is because the LFOM approaches orifice behavior, and for orifices, :math:`h \propto Q^2`.
