@@ -4,8 +4,6 @@
 Flow Control and Measurement Derivations
 ******************************************
 
-
-
 .. _heading_flow_for_a_tank_with_a_valve:
 
 :math:`Q(t)` for a Tank with a Valve
@@ -376,8 +374,8 @@ Here is a plot of the three colored equations above. Our goal is to minimize the
 
     MathCAD generated graph for linearity error analysis. TODO: make this in python
 
-Designing for the error constraint, :math:`\Pi_{Error}`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Designing for the Error Constraint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. important:: The first step in the design is to make sure that major losses far exceed minor losses. This will result in an equation for the maximum velocity that can go through the dosing tube(s), :math:`\color{purple}{\bar v_{Max} }`.
 
 Minor losses will never be 0, so how much error in our linearity are we willing to accept? Let’s define a new parameter, :math:`\Pi_{Error}`, as the maximum amount of error we are willing to accept. We are ok with 10% error or less, so :math:`\Pi_{Error} = 0.1`.
@@ -441,8 +439,8 @@ From this equation for :math:`Q_{Max}`, we can get to our first design equation,
   \bar v_{Max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K} }}
      }
 
-Designing for the proper amount of head loss, :math:`h_{L_{Max}}`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Designing for Head Loss
+^^^^^^^^^^^^^^^^^^^^^^^^
 .. important:: The second step in the design is to make sure that the maximum head loss corresponds to the maximum flow of chemicals. This will result in an equation for the length of the dosing tube(s), :math:`\color{purple}{L_{Min} }`.
 
 We previously derived an equation for the minimum length of the dosing tube(s), :math:`L_{Min, \, \Pi_{Error}}`, which was the minimum length needed to ensure that our linearity constraint was met. This equation is shown again below, in red:
@@ -500,8 +498,8 @@ As you can see, the head loss constraint is more limiting than the linearity con
 The equations for :math:`\color{purple}{\bar v_{Max}}` and :math:`\color{purple}{L_{Min}}` are the only ones you **need** to manually design a CDC.
 
 
-CDC Dosing Tube(s) Diameter :math:`D_{Min}` Plots
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Designing for Dosing Tube Diameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Below are equations which also govern the CDC and greatly aid in understanding the physics behind it, but are not strictly necessary in design.
 
 By rearranging :math:`Q_{Max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum K }}`, we can solve for :math:`D` to get the *minimum* diameter we can use assuming the shortest tube possible that meets the error constraint, :math:`\color{red}{L_{Min, \, \Pi_{Error}}}`. If we use a diameter smaller than :math:`D_{Min, \, \Pi_{Error}}`, we will not be able to simultaneously reach :math:`Q_{Max}` and meet the error constraint :math:`\Pi_{Error}`.
