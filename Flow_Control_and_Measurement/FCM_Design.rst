@@ -31,6 +31,7 @@ As you remember from section 1.5, the summary of Fluids Review, :math:`Q \propto
 It is easy to design for laminar flow, but the “Almost Linear” Flow Controller was unable to make major losses far exceed minor losses. The bending in the flexible tube caused a lot of minor losses which changed in magnitude depending on exactly how the tube was bent. This made the flow controller “almost linear,” but that wasn’t good enough.
 
 Notes:
+
 -  This flow controller is **no longer used by AguaClara.**
 -  The tube connecting the CHT to the outlet of chemicals must be very long and, more importantly, **straight** to form a linear relationship between driving head and flow. This linear relationship was not true for the “Almost Linear” Flow Controller, and is why it was replaced by the Linear Chemical Dose Controller (CDC). The CDC will be covered in more depth later on in this section.
 
@@ -78,8 +79,6 @@ Linear Chemical Dose Controller (CDC)
 ---------------------------------------
 Since the Linear Chemical Dose Controller has become the standard in AguaClara, it is often simply called the Chemical Dose Controller, **or CDC for short**. It can be confusing to describe with words, so be sure to flip through the slides in the ‘Flow Control and Measurement’ powerpoint, as they contain very, very, helpful diagrams of the CDC.
 
-What it is
-^^^^^^^^^^^^^^
 The CDC brings together the LFOM and many improvements to the “Almost Linear” Flow Controller. Let’s break it down, with the image below as a guide.
 
 1. Start at the Constant Head Tank (CHT). This is the same set up as the “Almost Linear” Flow Controller. The stock tank feeds into the CHT, and the float valve makes sure that the water level in the constant head tank is always the same.
@@ -107,12 +106,8 @@ The CDC brings together the LFOM and many improvements to the “Almost Linear�
 
     This is the setup of the chemical dose controller.
 
-What it does and why
-^^^^^^^^^^^^^^^^^^^^^^^^
 The CDC makes it easy and accurate to dose chemicals. The flow of chemicals automatically adjusts to changes in the plant flow rate to keep a constant dose, set by the operator. When a turbidity event occurs, the operator can change the dose of coagulant by moving the coagulant slider *lower* on the lever to increase the dose. The slider has labelled marks so the operator can record the dose accurately.
 
-How it works
-^^^^^^^^^^^^^^^^
 A lot of design has gone into the CDC. The design equations and their derivations that the following steps are based on can be found here: :ref:`heading_design_equations_for_the_cdc`, and you are very, very strongly encouraged to read them.
 
 The CDC can be designed manually using the equations from the derivation linked above or via aguaclara, using the equations found in `cdc_functions.py <https://github.com/AguaClara/aguaclara>`_. Either way, the design algorithm is roughly the same:
@@ -214,8 +209,8 @@ This analysis is incomplete in that we don't know the aluminum concentration of 
 
     The viscosity of solutions prepared from granular aluminum sulfate and polyaluminum chloride. The concentration is the mass of granules per volume of solution.
 
-Notes
-^^^^^^^^^
+Notes:
+
 Nothing in life is perfect, and the CDC is no exception. It has a few causes of inaccuracy which go beyond non-zero minor losses:
 
 * Float valves are not perfect. There will still be minor fluctuations of the fluid level in the CHT which will result in imperfect dosing.
