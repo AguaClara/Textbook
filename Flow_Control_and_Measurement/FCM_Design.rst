@@ -18,28 +18,19 @@ Before diving into the technologies, recall the purpose of the chemicals that we
 “Almost Linear” Flow Controller
 --------------------------------
 
-What it is
-^^^^^^^^^^^^^^
-This device consists of a bottle of chemical solution, called the **Constant Head Tank** (CHT), a float valve to keep a solution in the CHT at a constant water level, a flexible tube starting at the bottom of the CHT, and many precisely placed and equally spaced holes in a pipes. The holes in the pipe hold the other end of the tube that starts at the CHT.
+This device consists of a bottle of chemical solution, called the **Constant Head Tank** (CHT), a float valve to keep a solution in the CHT at a constant water level, a flexible tube starting at the bottom of the CHT, and many precisely placed and equally spaced holes in a pipes. The holes in the pipe hold the other end of the tube that starts at the CHT. Chemical solution, either coagulant or chlorine, is stored in a stock tank somewhere above the CHT. A different tube connects the stock tank to the float valve within the CHT.
 
-Chemical solution, either coagulant or chlorine, is stored in a stock tank somewhere above the CHT. A different tube connects the stock tank to the float valve within the CHT.
-
-What it does and why
-^^^^^^^^^^^^^^^^^^^^^^^^
 This flow controller provides a constant flow of chemical solution to the water in the plant. When the end of the flexible tube is placed in a hole, the elevation difference between the water level in the bottle and the hole is set and does not change unless the tube is then placed in another hole. Thus, a constant flow is provided while the end of the tube is not moved.
 
 As has been mentioned previously, the amount of chlorine and coagulant that must be added to the raw water changes depending on the flow rate of the plant; the change is necessary to keep the dose constant. More water flowing through the plant means more chlorine is necessary to maintain the dose of chlorine in the treated water. For coagulant, there are also other factors aside from plant flow rate that impact the required dose, including the turbidity and amount of organic matter in the water. The operator must be able to change the dose of both coagulant and chlorine quickly and easily, and they must be able to know the value of the new dose they set. The “Almost Linear” Flow Controller accomplishes this by having a large number of holes in the flow control pipe next to the CHT. This large number of holes gives the operator many options for adjusting the dose, and let them quickly change the flow of chemicals into the raw water by moving the end of the flexible tube from one hole to another.
 
-How it works
-^^^^^^^^^^^^^^^^
 The idea behind this flow controller is to have a linear relationship between :math:`Q` and :math:`h_L` (remember that :math:`h_L` is equal to :math:`\Delta h` when we apply the head loss trick), which can be written as :math:`Q \propto h_L`. Here, :math:`Q` is the flow of chemicals out of the flexible tube, and :math:`h_L` is the elevation difference between the water level in the CHT and the end of the flexible tube.
 
 As you remember from section 1.5, the summary of Fluids Review, :math:`Q \propto \Delta h`, or :math:`\Delta h \propto Q` as it was written in the section summary, is only true for the combination of major losses and laminar flow, which makes applicable the Hagen-Poiseuille equation. Therefore, the flow must always be laminar in the flexible tube that goes between the CHT and the holes, and major losses must far exceed minor losses.
 
 It is easy to design for laminar flow, but the “Almost Linear” Flow Controller was unable to make major losses far exceed minor losses. The bending in the flexible tube caused a lot of minor losses which changed in magnitude depending on exactly how the tube was bent. This made the flow controller “almost linear,” but that wasn’t good enough.
 
-Notes
-^^^^^^^^^
+Notes:
 -  This flow controller is **no longer used by AguaClara.**
 -  The tube connecting the CHT to the outlet of chemicals must be very long and, more importantly, **straight** to form a linear relationship between driving head and flow. This linear relationship was not true for the “Almost Linear” Flow Controller, and is why it was replaced by the Linear Chemical Dose Controller (CDC). The CDC will be covered in more depth later on in this section.
 
