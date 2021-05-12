@@ -9,7 +9,11 @@ Fluid Deformation and Energy Dissipation Derivations
 Equations for :math:`\varepsilon` and :math:`G` in Varying Flow Geometries
 ===============================================================================
 
-Estimation of velocity gradients for various flow geometries is the basis for the design of rapid mix, flocculators, and plate settlers. Thus, our goal is to define the velocity gradients consistently across a range of possible flow regimes. There are three approaches to calculating the average velocity gradient within a control volume. 1) Use the Navier Stokes equations and solve for the spatially averaged velocity gradient. 1) Use Computational Fluid Dynamics (CFD) to solve for the spatially averaged velocity gradient. 1) Use the total mechanical energy loss in the control volume to calculate the energy dissipation rate. Estimate the velocity gradient directly from the energy dissipation rate, :math:`G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}`, as defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil Eng., 30, 203–221.).
+Estimation of velocity gradients for various flow geometries is the basis for the design of rapid mix, flocculators, and plate settlers. Thus, our goal is to define the velocity gradients consistently across a range of possible flow regimes. There are three approaches to calculating the average velocity gradient within a control volume. 
+
+#. Use the Navier Stokes equations and solve for the spatially averaged velocity gradient.
+#. Use Computational Fluid Dynamics (CFD) to solve for the spatially averaged velocity gradient.
+#. Use the total mechanical energy loss in the control volume to calculate the energy dissipation rate. Estimate the velocity gradient directly from the energy dissipation rate, :math:`G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}`, as defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil Eng., 30, 203–221.).
 
 The first approach would be ideal but is difficult in practice because Navier Stokes solutions are only available for limited geometries and laminar flow. CFD could be used but is difficult to use as a general engineering design approach given the large number of geometries that are used in drinking water treatment plants. For these reasons we will use the control volume approach to estimate the average velocity gradient. This method incorrectly assumes that the energy dissipation rate is completely uniform in the control volume and hence the velocity gradient is also uniform. This method results in an over estimation of the velocity gradient.
 The Camp-Stein estimate of :math:`G_{CS}` is based on a control volume where the velocity gradient is uniform. Consider a layer of fluid of depth :math:`H` and apply a velocity, :math:`v` at the top of the fluid. The velocity gradient, :math:`G`, is thus :math:`\frac{v}{H}` everywhere in the fluid. The force required to move the top of the fluid at velocity v can be obtained from the required shear, :math:`\tau`. From Newtons Law of Friction we have
@@ -60,7 +64,7 @@ Now we check to see if the Camp Stein method of estimating the average velocity 
 
 .. math:: \bar G_2 = \frac{\bar G_1}{4} \neq \sqrt{\frac{\bar\varepsilon_1}{4\nu}} =  \frac{\bar G_1}{2}
 
-Given that the energy dissipation rate is proportional to the square of the velocity gradient the mean of the energy dissipation rate is **not** proportional to the mean of the velocity gradient. Thus the Camp Stein method of calculating the average velocity gradient is not correct except in the case of uniform velocity gradient. The Camp Stein equation is dimensionally correct and could be corrected by adding a dimensionless constant :math:`\Pi_{CS}` that is a function of the energy dissipation rate distribution within the control volume.
+Given that the energy dissipation rate is proportional to the square of the velocity gradient, the mean of the energy dissipation rate is **not** proportional to the mean of the velocity gradient. Thus the Camp Stein method of calculating the average velocity gradient is not correct except in the case of uniform velocity gradient. The Camp Stein equation is dimensionally correct and could be corrected by adding a dimensionless constant :math:`\Pi_{CS}` that is a function of the energy dissipation rate distribution within the control volume.
 
 .. math:: \bar G =\Pi_{CS}\sqrt{\frac{\bar\varepsilon}{\nu}}
 
@@ -88,7 +92,7 @@ We will use the Camp Stein definition :math:`G_{CS} = \sqrt{\frac{\bar\varepsilo
 
 .. _heading_Estimates_of_time_required_for_mixing_processes:
 
-Estimates of time required for mixing processes
+Estimates of Time Required for Mixing Processes
 ================================================
 
 .. _heading_Turbulent_Large_Scale_Eddies:
@@ -343,7 +347,7 @@ Below are the derivations for the equations that appear in :numref:`table_Contro
 
 .. _heading_Straight_Pipe_Wall_Shear:
 
-Straight pipe (wall shear)
+Straight Pipe (wall Shear)
 --------------------------
 
 The average energy dissipation rate, :math:`\bar\varepsilon`, in a control volume with residence time :math:`\theta` is
@@ -619,7 +623,7 @@ The Camp-Stein velocity gradient for laminar flow between parallel plates is
 
 .. _heading_Coiled_tubes_(laminar_flow):
 
-Coiled tubes (laminar flow)
+Coiled Tubes (Laminar Flow)
 ----------------------------
 
 Coiled tubes are used as flocculators at laboratory scale. The one shown below is a doubled coil. A single coil would only go around one cylinder
@@ -683,7 +687,7 @@ where :math:`G_{CS} =4\sqrt2 \frac{\bar v}{D}` for laminar flow in a straight pi
 
 .. _heading_Flow_in_porous_media:
 
-Flow in porous media
+Flow in Porous Media
 --------------------
 
 The `Ergun equation <https://neutrium.net/fluid_flow/pressure-drop-through-a-packed-bed/>`_ applies to both laminar and turbulent flow through packed beds.
@@ -781,12 +785,12 @@ Combining the previous equations we obtain
 
 .. _heading_Maximum_velocity_gradients:
 
-Maximum velocity gradients
+Maximum Velocity Gradients
 ============================
 
 .. _heading_Straight_pipe_(major_losses):
 
-Straight pipe (major losses)
+Straight Pipe (Major Losses)
 -----------------------------
 
 The maximum velocity gradient in pipe flow occurs at the wall. This is true for both laminar and turbulent flow. In either case a force balance on a control volume of pipe gives us the wall shear and the wall shear can then be used to estimate the velocity gradient at the wall.
@@ -872,7 +876,7 @@ The energy dissipation rate at the wall is
 
 .. _heading_coiled-tubes-laminar-flow-1:
 
-Coiled tubes (laminar flow)
+Coiled Tubes (Laminar Flow)
 ---------------------------
 
 The shear on the wall of a coiled tube is not uniform. The outside of the curve has a higher velocity gradient than the inside of the curve and there are secondary currents that results in wall shear that is not purely in the locally defined upstream direction. We do not have a precise equation for the wall shear. The best we can do currently is define an average wall shear in the locally defined direction of flow by combining
@@ -1032,7 +1036,7 @@ We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value
 
 .. _heading_Behind_a_flat_plate:
 
-Behind a flat plate
+Behind a Flat Plate
 ---------------------
 
 A flat plate normal to the direction of flow could be used in a hydraulic flocculator. In vertical flow flocculators it would create a space where flocs can settle and thus it is not a recommended design.
