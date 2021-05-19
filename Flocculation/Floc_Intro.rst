@@ -71,4 +71,197 @@ The shortest synthetic polymers are similar in size to the coagulant nanoparticl
 
 Polymers undoubtedly increase the connections that bind flocs together and thus enable flocs to grow larger. The stronger flocs created by polymer addition may have unintended consequences in subsequent treatment steps. Large strong flocs are great for improved removal in plate or tube settlers. In sedimentation tanks with floc blankets they may form sludge that is more difficult to suspend after a brief shutdown. In filters it is possible that large flocs are more rigid and fail to enter the pore spaces of the filter. Thus the use of polymers may require using large media size for depth filtration. The polymers may also form mudballs in granular filters and thus require more aggressive washing.
 
+Flocculation Theory
+====================
 
+Particle aggregation is the fundamental mechanism that facilitates ultra low energy and low cost removal of particles and pathogens from water. Aggregation requires successful collisions. Success is defined by particles  attaching when they collide.
+
+Sticky Coagulant Nanoparticles
+------------------------------
+
+Prior to the AguaClara flocculation model it was widely assumed that attachment was made possible by reducing the net surface charge of the particles. The AguaClara flocculation model is based on the understanding that coagulant nanoparticles are sticky and are much larger than the length scale of the repulsive forces due to surface charges. Thus surface charge is largely irrelevant and this explains why particle aggregation begins even with very low dosages of coagulant.
+
+Particles Follow Fluid
+----------------------
+
+The collisions are caused by particles having relative motion due to fluid deformation. Particle trajectories can be different from the fluid trajectory if the density of the fluid and the particle are significantly different and if the viscous effects are small compared with inertial effects (the Stokes number). The motion of primary particles and small flocs in surface water treatment have low Stokes numbers and follow the fluid trajectory.
+
+Long Range Transport
+--------------------
+
+We need to calculate the rate of primary particle collisions. In turbulent flow flocculators the fluid deformation is caused by turbulent eddies that lose their energy to viscosity. The relative motion of particles would appear somewhat random as the small eddies have ever changing orientation and intensity. The result is that primary particles take a long meandering path before they finally approach each other and connect in a final collision. The path of relative motion prior to the collision can be thought of as having two distinct components.
+
+ - The first component is long range transport when the particles are far apart with a separation distance that is proportional to the average distance between particles.
+ - The second component is the short range transport at length scales less than the average particle separation distance to the final collision
+
+The AguaClara flocculation model assumes a relatively high velocity and long distance random walk clearing a volume of fluid equal to the volume occupied by a single particle. This is followed by a slow, short, straight walk toward a collision. The insight that the long range transport is the rate limiting step will be used to estimate the time required for particle collisions.
+
+Primary Particle Attachment
+---------------------------
+
+In our early modeling work we assumed that collisions between primary particles and large flocs were favorable. This assumption led to the prediction that the highest quality water should be obtained when the raw water has the highest turbidity. That prediction is inconsistent with observations and led to the insight that during flocculation, primary particles are only able to collide successfully with other primary particles (or potentially with other very small flocs).
+
+The only transport mechanism that could cause a clay particle to collide with a large floc is the fluid deformation caused by the linear velocity gradient. In our flocculators that linear velocity gradient is caused by turbulent eddies at much larger scales of the flow. We hypothesize that primary particles can not attach to large flocs because primary particles can not collide with large flocs! To understand why this collision is impossible, we need a simple insight.
+
+The insight is that the large flocs drag fluid around as they rotate (due to the linear velocity gradient). The viscous layer around the large flocs creates a flow field in which there is no location far from the flocs that will eventually approach the surface of the flocs or even approach within the clay particle radius. If this is correct, then clay particles never collide with large flocs in a linear velocity gradient flow field.
+
+.. todo:: Find evidence that proves or disproves the hypothesis that no collisions occur between dissimilar sized particles in a linear velocity gradient.
+
+Viscous Shear Dominates
+-----------------------
+
+Relative velocities between particles are dominated by viscous shear because the separation distances are smaller than the inner viscous length scale. The average particle separation distance is given by
+
+.. math::
+  :label: eq_spacing_of_number_concentration
+
+   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{-} V_{\rm{Surround}}}^\frac{1}{3}
+
+| Where:
+| :math:`\bar \Lambda` is the average separation distance
+| :math:`n_P` is the number of particles per volume of suspension
+| :math:`{\rlap{-} V_{\rm{Surround}}}` is the suspension volume occupied by one particle
+
+The number concentration of particles is given by
+
+.. math::
+  :label: eq_number_concentration_of_diameter
+
+   n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi \bar{d_P}^3} \frac{C_P}{\rho_P}
+
+| Where:
+| :math:`C_P` is the particle concentration
+| :math:`\rlap{-} V_P` is the volume of a single particle
+| :math:`\rho_P` is the particle density
+| :math:`\bar{d_P}` is the average particle diameter
+
+Equations :eq:`eq_spacing_of_number_concentration` and :eq:`eq_number_concentration_of_diameter` can be combined to obtain the relationship between separation distance and particle diameter.
+
+.. math::
+  :label: eq_spacing_of_diameter
+
+   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} =  \bar{d_P} \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{\frac{1}{3}}
+
+
+.. _figure_Particle_separation:
+
+.. figure:: ../Images/Particle_separation.png
+   :width: 200px
+   :align: center
+   :alt: Particle separation
+
+   The average particle separation distance is defined as the distance between centers of cubes that each contain the volume of the suspension occupied by a single particle.
+
+Particle separation distance matters because it determines which transport mechanisms are at play when two particles approach for a collision. The particle separation distance is a function of the particle concentration. Surface water treatment plants commonly treat water with turbidity between 1 and 1000 NTU. We will first find the number of clay particles per liter in typical raw water suspensions.
+
+.. code:: python
+
+  import aguaclara
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.core.constants as con
+  import aguaclara.research.environmental_processes_analysis as epa
+  import aguaclara.research.floc_model as fm
+
+  import numpy as np
+  import matplotlib.pyplot as plt
+
+  C_Clay = np.arange(1,1000,1)*u.NTU
+  n_Clay = fm.num_clay(C_Clay,fm.Clay)
+  fig, ax = plt.subplots()
+  ax.loglog(C_Clay.to(u.NTU),n_Clay.to(1/u.L))
+  ax.set(xlabel='Clay concentration ($NTU$)', ylabel='Number of clay per liter')
+  fig.savefig('../Images/NClay_vs_CClay')
+  plt.show()
+
+
+.. _figure_NClay_vs_CClay:
+
+.. figure:: ../Images/NClay_vs_CClay.png
+   :width: 400px
+   :align: center
+   :alt: NClay vs CClay
+
+   Diagram of number of clay particles per liter as a function of the clay concentration. Note that even 1 NTU water has millions of primary particles per liter.
+
+The next step is to calculate the separation distance between the clay particles over this range of clay concentrations using Equation :eq:`eq_spacing_of_diameter`.
+
+.. code:: python
+
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.core.constants as con
+  import aguaclara.research.environmental_processes_analysis as epa
+  import aguaclara.research.floc_model as fm
+
+  import numpy as np
+  import matplotlib.pyplot as plt
+  lamda_Clay = fm.sep_dist_clay(C_Clay,fm.Clay)
+  fig, ax = plt.subplots()
+  ax.semilogx(C_Clay.to(u.NTU),lamda_Clay.to(u.mm))
+  ax.set(xlabel='Clay concentration ($NTU$)', ylabel=r'Clay separation distance ($mm$)')
+  fig.savefig('../Images/LambdaClay_vs_CClay')
+  plt.show()
+
+
+.. _figure_LambdaClay_vs_CClay:
+
+.. figure:: ../Images/LambdaClay_vs_CClay.png
+   :width: 400px
+   :align: center
+   :alt: LambdaClay vs CClay
+
+   The clay separation distance varies with the cube root of the concentration and thus varies over a relatively narrow range (0.07 mm to 0.7 mm) while the turbidity varies from 1 to 1000 NTU.
+
+Given this range of particle separation distances the next question is whether transport of these particles relative to each other is driven by inertial or viscous dominated processes. Turbulent eddies devolve into smaller and smaller eddies until viscosity finally kills them. Viscosity damps out the effects of inertia at the inner viscous length scale.  Higher intensity turbulence can generate more energetic small eddies and can resist the effects of viscosity longer. Thus the inner viscous length scale decreases as the turbulent energy dissipation rate increases.
+
+The Camp-Stein velocity gradient used for flocculators varies from about 20 to 300 Hz. We will convert the Camp-Stein velocity gradient to an energy dissipation rate using
+
+.. math::
+
+   G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}
+
+Solving for the average energy dissipation rate, :math:`\bar \varepsilon`, we obtain
+
+.. math::
+
+  \bar \varepsilon = \nu G_{CS}^2
+
+We will use the inner viscous length scale, Equation :eq:`eq_inner_viscous_length` to determine whether viscous or inertial transport dominates particle collisions in surface water treatment given the range of particle separation distances (see :numref:`figure_LambdaClay_vs_CClay`).
+
+.. code:: python
+
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import aguaclara.core.constants as con
+  import aguaclara.research.environmental_processes_analysis as epa
+  import aguaclara.research.floc_model as fm
+
+  import numpy as np
+  import matplotlib.pyplot as plt
+  Temperature = 20 * u.degC
+  G=np.arange(1,1000,1)*u.Hz
+  EDR = G**2 * pc.viscosity_kinematic(Temperature)
+  Inner_viscous = fm.lambda_vel(EDR, Temperature)
+  fig, ax = plt.subplots()
+  ax.semilogx(G.to(u.Hz),Inner_viscous.to(u.mm))
+  ax.set(xlabel='Velocity gradient (Hz)', ylabel='Inner viscous length scale (mm)')
+  ax.text(10, 30, 'Eddies cause mixing', fontsize=12,rotation=-30)
+  ax.text(3, 14, 'Viscous shear', fontsize=12,rotation=-30)
+  fig.savefig('../Images/innerviscous_vs_G')
+  plt.show()
+
+
+.. _figure_innerviscous_vs_G:
+
+.. figure:: ../Images/innerviscous_vs_G.png
+   :width: 400px
+   :align: center
+   :alt: inner viscous vs G
+
+   The inner viscous length scale is approximately 3 to 10 mm for velocity gradients that are typically used in flocculators. Clay separation distances are smaller than the inner viscous length scale and thus viscous shear dominates particle collisions in flocculation.
+
+By comparing :numref:`figure_LambdaClay_vs_CClay` and :numref:`figure_innerviscous_vs_G` it is apparent that the particle separation distances commonly found in surface water treatment plants are much smaller than the inner viscous length scale for all practical flocculation velocity gradients. Thus viscosity will dominate the flocculation process. This key insight reveals why turbulent flow flocculators have been designed using the dimensionless grouping :math:`G \theta` which is fundamentally :math:`\sqrt\frac{\epsilon}{\nu} \theta`. Given that flocculation is viscous dominated implies that the flocculation process will slow down as the temperature increases and the viscosity increases.
+
+Modeling Particles
+==================
