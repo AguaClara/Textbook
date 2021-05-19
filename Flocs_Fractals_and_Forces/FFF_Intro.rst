@@ -327,9 +327,11 @@ Van der Waals forces have traditionally been viewed as the primary force respons
 Hydrated oxides of polyvalent metals like Fe(III), Al(III), Ti(IV) and Zr(IV) exhibit ligand sorption properties by forming inner-sphere complexes (`Sarkar et al, 2007 <https://doi.org/10.1016/j.reactfunctpolym.2007.07.047>`_). In inner-sphere complexes the coagulant nanoparticle forms covalent bonds with the molecules in the surface of the raw water particles. Inner sphere bonds are strong and stable. In contrast, outer sphere bonds include a molecule of water between the two surfaces and form a transient bond.
 
 Given that
-1) aluminum and iron coagulant nanoparticles form covalent bonds with arsenic
-1) outer sphere complexes are transient
-1) the shear forces acting on flocs suggest strong bonds
+
+#. Aluminum and iron coagulant nanoparticles form covalent bonds with arsenic
+#. Outer sphere complexes are transient
+#. The shear forces acting on flocs suggest strong bonds
+
 we conclude that the coagulant nanoparticles likely form covalent bonds with inorganic particles present in raw water.
 
 Shear Force Acting on Flocs
