@@ -41,9 +41,6 @@ If we go backwards in time, the ring of fluid around the clay particles would de
 
     Fluid deformation moves coagulant nanoparticles close to clay particles and diffusion helps transport the nanoparticles the last nanometers toward a successful collision.
 
-Diffusion band thickness
-------------------------
-
 The time required for shear to transport all of the fluid past the clay so that diffusion can transport the coagulant nanoparticles to the clay surface is significant. The diffusion coefficient for coagulant nanoparticles is given by
 
 .. math:: D_{Diffusion} = \frac{k_B T}{3 \pi \mu d_{CN}}
@@ -140,8 +137,8 @@ Combining the three equations for :math:`{\rlap{-} V_{\rm{Cleared}}}` and the eq
 
 .. _heading_Collision_Rates:
 
-Collision Rates
-===============
+Collision Rates and Particle Removal
+=====================================
 
 The time for all of the fluid to have had one opportunity for a collision occurs when:
 
@@ -157,21 +154,11 @@ Substitute the equation for :math:`t_c`.
 
 .. math:: dN_c = \pi d_{Clay} L_{Diff_{CN}}{\Lambda^{-2}_{Clay}} G dt
 
-.. _heading_Collision_Rate_and_Particle_Removal:
-
-Collision Rate and Particle Removal
------------------------------------
-
 A fraction of the remaining coagulant nanoparticles are removed during the time required for one sweep past the clay particles.
 
 .. math:: \frac{dn_{CN}}{ - k \, n_{CN}} = dN_c
 
 .. math:: \frac{dn_{CN}}{ - k \, n_{CN}} = \pi d_{Clay} L_{Diff_{CN}}{\Lambda^{-2}_{Clay}} G dt
-
-.. _heading_Integrate_the_coagulant_transport_model:
-
-Integrate the coagulant transport model
----------------------------------------
 
 Integrate from the initial coagulant nanoparticle concentration to the concentration at time t.
 
@@ -186,10 +173,6 @@ Solve for the time required to reach a target efficiency of application of coagu
 .. math::
 
   t_{coagulant, \, application} = \frac{2.3p C_{CN} \Lambda_{Clay}^2}{\pi G k \, d_{Clay}  L_{Diff_{CN}} }
-
-
-Coagulant nanoparticle application
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If we assume that we are willing to invest a certain amount of energy in the process, then we can estimate the time required to achieve a target coagulant nanoparticle application efficiency. The velocity gradient in the reactor where the coagulant is attaching to the clay particles is related to the head loss or drop in water level, :math:`\Delta h`, through the reactor.
 
@@ -282,7 +265,7 @@ Below we estimate the time required to achieve 80% attachment of nanoparticles i
 .. _heading_Energy_Tradeoff_for_Coagulant_Transport:
 
 Energy Tradeoff for Coagulant Transport
------------------------------------------
+========================================
 
 .. math::  \Delta h =  \frac{G^2 \nu \theta}{g}
 
