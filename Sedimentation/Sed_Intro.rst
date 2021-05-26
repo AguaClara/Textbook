@@ -257,7 +257,3 @@ References
 
 Schulz, C. R., Okun, D. A., & Water and Sanitation for Health Project (U.S.). (1984). Surface water treatment for communities in developing countries. New York: Wiley.
 
-Comments, Corrections, or Questions
-====================================
-
-This textbook is an ever-evolving project. If you find any errors while you are reading, or if you find something unclear, please let the authors know. Write your comment in `this Github issue <https://github.com/AguaClara/Textbook/issues/83>`_ and it will be addressed as soon as possible. Please look at other comments before writing your own to avoid duplicate comments.
