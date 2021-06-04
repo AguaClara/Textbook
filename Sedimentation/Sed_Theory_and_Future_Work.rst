@@ -1,9 +1,9 @@
 
 .. _title_Sedimentation_Theory_and_Future_Work:
 
-***************************************
-Sedimentation Theory and Future Work
-***************************************
+**************
+Future Work
+**************
 Unsolved sedimentation tank failure modes:
 
 #. :ref:`Floc volcanoes <heading_Floc_Volcanoes>`
@@ -13,8 +13,8 @@ Unsolved sedimentation tank failure modes:
 
 .. _heading_Floc_Floc_Blanket:
 
-Optimizing the transition from flocculator to floc blanket
-==========================================================
+Flocculator to Floc Blanket Transition
+=======================================
 
 We now how a published flocculator model and we have strong evidence that primary particles are removed first order with respect to depth (or time) in the floc blanket. Given these two models it is possible for the first time to optimize the design of a flocculator based on minimizing the volume of the flocculator and floc blanket reactors.
 
@@ -164,7 +164,7 @@ This analysis suggests that the primary particle concentration after flocculatio
 
 .. _heading_Floc_recycle:
 
-Floc recycle
+Floc Recycle
 ==================
 
 We hypothesize that the flocs in floc blankets serve as collectors that primary particles attach to. We suspect that collisions between primary particles and large flocs are possible in the sedimentation tank because the rotational velocity of the flocs is small relative to the sedimentation velocity of the flocs. If the rotational velocity of the flocs is small, then a stagnation point will exist on the floc and a finite flow of fluid will come within a primary particle radius of the floc. Thus we expect primary particle removal in floc blankets to be proportional to the number of collectors that a primary particle passes while in the floc blanket.
