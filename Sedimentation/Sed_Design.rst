@@ -95,6 +95,7 @@ Bottom Geometry
 -----------------
 
 [RELOCATE IMAGE WHERE RELEVANT]
+
 .. _figure_bottom_of_sed_tank_detail:
 
 .. figure:: ../Images/bottom_of_sed_tank_detail.png
