@@ -15,8 +15,8 @@ The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank
 1) to provide a mechanism for the operator to dump poorly flocculated water before it enters the sedimentation tank. This is important to reduce the recovery time when there is a flocculation failure.
 1) to ensure easy operation and maintenance.
 
-Components of an AguaClara Sedimentation Tank
-=============================================
+Components and Flow Paths
+===========================
 
 In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.
 
@@ -32,8 +32,8 @@ Overview of an AguaClara Sedimentation tank (click to be sent to video).
 
 .. _heading_Sed_Tank_As_Circuit:
 
-"Sedimentation Tank as a Circuit" Introduction
-================================================
+Entering the Tank
+==================
 
 To understand how we will use flow distribution as a primary design constraint, we will develop a concept called the "sedimentation tank as a circuit". This concept will be elaborated on as you learn about the sedimentation tank components and design, but we will introduce it now because it is a driving principle for flow distribution in AguaClara sedimentation tanks. The chapter on Manifold design (still needs to be written) will be very useful to understand some of these fluids concepts.
 
@@ -63,11 +63,6 @@ Remember, the goal is to have even flow distribution. It is bad if different flo
 
 We can artificially introduce the second form of head loss to dominate the resistance and render small variations due to pressure recovery insignificant. We will go through each part of the sedimentation tank to understand how these goals drive AguaClara designs. As we learn about each component, we will attempt to categorize its contribution into creating "good" or "bad" head loss.
 
-.. _heading_Sed_Tank_Entrance:
-
-1) How water enters the sedimentation tank
-============================================
-
 .. _heading_Sed_Tank_Influent_Channel:
 
 Influent Channel
@@ -96,8 +91,18 @@ Of note is that the sedimentation tank influent channel is located directly next
 
 .. _heading_Sed_Tank_Bottom_Geometry:
 
-Bottom Geometry: Influent Manifold, Diffusers, and Jet Reverser
---------------------------------------------------------------------------------
+Bottom Geometry
+-----------------
+
+[RELOCATE IMAGE WHERE RELEVANT]
+.. _figure_bottom_of_sed_tank_detail:
+
+.. figure:: ../Images/bottom_of_sed_tank_detail.png
+    :height: 300px
+    :align: center
+    :alt: Detail of the bottom of the sedimentation tank.
+
+    Cross-section of the bottom of the sedimentation tank.
 
 Now, we will focus on a single bay of the sedimentation system. Flocculated water enters a pipe in the bottom of the influent channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the sedimentation bay. This section of pipe that distributes water at the bottom of the sedimentation bay is referred to as the **influent manifold** shown in :numref:`figure_influent_channel_manifold`.
 
@@ -241,8 +246,8 @@ What are the failure modes for this system? For one, we need to ensure that the 
 
     Jet reverser resuspending flocs (click to be sent to video).
 
-Jet Reverser Shear Stress
--------------------------
+Jet Reverser
+-------------
 
 The jet reverser is an AguaClara invention for producing stable floc blankets. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see Equation :eq:`EDR_JetPlane`) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the sedimentation tank performance will deteriorate.
 
@@ -256,12 +261,6 @@ The maximum fluid shear stress for conservative basis of design should be calcul
 
 #. Calculate the diameter of the lowest density floc that has a terminal velocity equal to the capture velocity of the plate settlers.
 #. Solve Equation :eq:`d_floc_shear_stress` for the shear stress given the floc diameter.
-
-
-.. _Jet_Reverser_Design:
-
-Jet Reverser Design
--------------------
 
 The jet reverser can be designed given a maximum fluid shear stress that is calculated based on minimum operating temperature, plate settler capture velocity, and floc density. We do not yet have a comprehensive model for floc properties and thus we are not yet able to calculate floc terminal velocity as a function of composition. We do anticipate that floc density decreases dramatically for flocs that consist primarily of dissolved organics and coagulant.
 
@@ -328,8 +327,8 @@ Further works is required to determine the maximum shear stress that will not ca
 
 .. _heading_Sed_Tank_Middle:
 
-2) How water moves through the sedimentation tank
-===================================================
+Flow Through the Tank
+======================
 
 .. _heading_Sed_Tank_Floc_Blanket:
 
@@ -683,15 +682,15 @@ Let's recap some important conclusions from this section on plate settlers.
 
 .. _heading_Sed_Tank_Exit:
 
-3) How water leaves the sedimentation tank
-===========================================
+Exiting the Tank
+=================
 
 Now that we have passed through the plate settlers, we are ready to leave the sedimentation tank.
 
 .. _heading_Sed_Tank_Effluent_Manifold:
 
 Submerged Effluent Manifold
-----------------------------------------
+------------------------------
 
 The **submerged effluent manifold**, sometimes called a launder, collects settled water from the sedimentation tank. It is a horizontal pipe that extends along the length of the tank and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the sedimentation tank. Recall that the influent manifold also uses a submerged pipe and orifice design to distribute flow. However, unlike the influent manifold, the effluent manifold does not include diffusers because we do not need to precisely control velocity and flow direction.
 
@@ -756,8 +755,8 @@ The submerged effluent manifold transports water from the sedimentation tank to 
 
 .. _heading_Sed_Tank_Conclusions:
 
-Sedimentation Conclusions and Review
-=======================================
+Sedimentation Tank Summary
+============================
 
 You have now been introduced to the AguaClara sedimentation tank in three parts: 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank. This introduction should allow you to understand the components of the sedimentation unit process, the purpose of each component, and AguaClara-specific innovations.
 
@@ -802,20 +801,3 @@ References
 
 Garland, Casey, et al. “Revisiting Hydraulic Flocculator Design for Use in Water Treatment Systems with Fluidized Floc Beds.” Environmental Engineering Science, vol. 34, no. 2, 1 Feb. 2017, pp. 122–129., doi:10.1089/ees.2016.0174.
 
-Comments, Corrections, or Questions
-====================================
-
-This textbook is an ever-evolving project. If you find any errors while you are reading, or if you find something unclear, please let the authors know. Write your comment in `this Github issue <https://github.com/AguaClara/Textbook/issues/84>`_ and it will be addressed as soon as possible. Please look at other comments before writing your own to avoid duplicate comments.
-
-Appendix Photos
-================
-
-
-.. _figure_bottom_of_sed_tank_detail:
-
-.. figure:: ../Images/bottom_of_sed_tank_detail.png
-    :height: 300px
-    :align: center
-    :alt: Detail of the bottom of the sedimentation tank.
-
-    Cross-section of the bottom of the sedimentation tank.
