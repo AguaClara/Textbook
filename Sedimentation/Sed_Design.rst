@@ -1,7 +1,7 @@
 .. _title_Sed_Design:
 
 ***********************************************
-Sedimentation Design
+Sedimentation Tank Features
 ***********************************************
 
 .. _heading_Sed_Design:
