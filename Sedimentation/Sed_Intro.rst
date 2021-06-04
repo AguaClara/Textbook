@@ -93,7 +93,7 @@ We will develop our definition of settle capture velocity using examples of hori
 Temperature plays an important role in sedimentation processes. Colder temperatures mean more viscous fluid; particles suspended in viscous fluid don't fall as quickly as they would in warmer, less viscous fluid. Sedimentation tanks don't work as well in cold temperatures as they do in warm temperatures. If the goal is for the sedimentation tank to remove a certain size of particle, then the required capture velocity must also be a function of temperature. Keep this in mind throughout the chapter as you learn how capture velocity drives to plant design.
 
 Horizontal Flow Sedimentation Tank
-----------------------------------
+===================================
 
 .. _figure_horizontal_flow_tank_base:
 
@@ -178,7 +178,7 @@ To answer this question, think about the two extremes of our reactor.
     Horizontal flow sedimentation tank with critical path and small particle.
 
 Vertical Flow Sedimentation Tank
-----------------------------------
+=================================
 We will complete the same exercise for vertical flow sedimentation tanks shown in :numref:`figure_vertical_flow_tank_base`. In vertical flow sedimentation tanks, water flows up from the bottom of the reactor and exits near the top of the reactor.
 
 .. _figure_vertical_flow_tank_base:
