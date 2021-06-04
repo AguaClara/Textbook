@@ -338,8 +338,9 @@ Substitute Einstein’s diffusion equation and solve for the length scale that t
 Molecular diffusion finishes the blending process by transporting the coagulant nanoparticles the last few hundred nanometers. The entire mixing process from the coagulant injection point to uniform blending with the raw water takes only a few seconds.
 
 We have demonstrated that all of the steps for mixing of the coagulant nanoparticles with the raw water are very fast. Compared with the time required for flocculation, 10s to 1000s of seconds, the time required for this mixing (blending the nanoparticles uniformly with the water) is insignificant. The remaining steps are:
- 1. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
- 1. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
+
+ #. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
+ #. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
 
 The time scale for the fluid shear and molecular diffusion to cause coagulant nanoparticles to collide with particles is estimated in :ref:`heading_Diffusion_and_Shear_Transport_Coagulant_Nanoparticles_to_Clay`.
 
@@ -595,7 +596,7 @@ Substituting into the force balance equation
 
   \Delta P = -\frac{2 \nu \rho 6 \bar v L}{S^2}
 
-The head loss for horizontal flow at uniform velocity simplifies too
+The head loss for horizontal flow at uniform velocity simplifies to
 
 .. math::
 
@@ -649,7 +650,7 @@ The Dean number is defined as:
 
    De = Re\left(\frac{D}{D_c}\right)^\frac{1}{2}
 
-where :math:`D` is the inner diameter of the tube and :math:`D_c` is the diameter of the coil. Note that the tubing coils are actually helixes and that for the tubing diameters and coil diameters used for flocculators that the helix doesn’t significantly change the radius of curvature.
+where :math:`D` is the inner diameter of the tube and :math:`D_c` is the diameter of the coil. Note that the tubing coils are actually helices and that for the tubing diameters and coil diameters used for flocculators that the helix doesn’t significantly change the radius of curvature.
 
 .. math::
 
