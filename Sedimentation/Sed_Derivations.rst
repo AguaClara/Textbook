@@ -1,7 +1,7 @@
 .. _title_Sed_Derivations:
 
 ***********************************************
-Sedimentation Derivations
+AguaClara Sedimentation Design 
 ***********************************************
 In the next section, we will develop the mathematical models that help us explain the design.
 
