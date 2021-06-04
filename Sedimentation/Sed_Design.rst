@@ -326,6 +326,31 @@ Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must 
 
 Further works is required to determine the maximum shear stress that will not cause a deterioration on performance especially for flocs that consist of coagulant nanoparticles and dissolved organics.
 
+
+.. _heading_Sed_Tank_Velocity_Flow:
+
+Comparison of velocities and flow in sedimentation tank
+========================================================
+
+To understand how water flows in the sedimentation tank, we must understand how the water velocity changes with the geometry. There are four distinct zones in the sedimentation tank: 1) the velocity of water exiting the diffusers, 2) the velocity of water moving through the floc blanket, 3) the velocity of water that enters the plate settlers, and 4) the velocity of water through the plate settlers. The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v * A`, will be our guiding principle. In all cases,
+
+| :math:`Q_{Sed} =` flow rate through each sedimentation tank
+| :math:`W_{Sed} =` width of each sedimentation tank
+
+.. _figure_sed_tank_flow_conserve:
+
+.. figure:: ../Images/sed_tank_flow_conserve.png
+    :height: 300px
+    :align: center
+    :alt: AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
+
+    AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
+
+1) Velocity and flow exiting the diffusers
+------------------------------------------------------------
+
+This is discussed specifically in the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>`.
+
 .. _heading_Sed_Tank_Middle:
 
 Flow Through the Tank
@@ -378,6 +403,17 @@ Let's recap some important conclusions from this section on the floc blanket.
 - We do not have a model for floc blanket performance, meaning that we don't know the optimal floc blanket depth or optimal upflow velocity.
 - We do not yet have a consistent way for operators to observe the floc blanket.
 - We do not know what exactly contributes to the ability of a floc blanket to resuspend or survive variable flow.
+
+
+2) Velocity and flow in the floc blanket
+----------------------------------------
+
+After the water exits the diffusers and jet reverser, it flows through the expanded floc blanket region where:
+
+| :math:`L_{SedFloc} =` length of the sedimentation tank that has a floc blanket
+| :math:`\bar v_{z_{fb}} =` upflow velocity of the water through the floc blanket
+
+Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \bar v_{z_{fb}}`
 
 .. _heading_Sed_Tank_Floc_Hopper:
 
@@ -537,6 +573,48 @@ Solving for :math:`\bar v_c = \frac{Q}{A}`
   \bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
 
 We can see that there are five parameters which will impact each other in our design :math:`\bar v_{z_{Plate}}, \bar v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`\bar v_{z_{Plate}}, \bar v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on :ref:`plate settler design <heading_Sed_Tank_Plate_Settler_Design>`.
+
+
+3) Velocity and flow entering the plate settlers
+------------------------------------------------------------
+
+The 'active' sedimentation zone refers to the area of the tank in which water can flow through the plate settlers where:
+
+| :math:`L_{SedActive} =` length of the sedimentation tank that includes entrance to a plate settlers
+| :math:`\bar v_{z_{Active}} =` upflow velocity of the water entering the plate settlers; vertical velocity in 'active' region
+
+The only reason that there is a distinction between this area and the floc blanket area is because plate settlers are built at an angle. This angle creates a "lost triangle" because there is a space in which the plate settlers are not effective and water does not flow through them. Because the active length is less than the floc blanket length, :math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, the average active velocity must be greater than the average upflow velocity through the floc blanket, :math:`\bar v_{z_{Active}} > \bar v_{z_{fb}}`. The same flow going through less area means that the velocity must increase.
+
+Thus, :math:`Q_{Sed} = W_{Sed} L_{SedActive} \bar v_{z_{Active}}`, and :math:`\bar v_{z_{Active}} > \bar v_{z_{fb}}`.
+
+4) Velocity and flow in the plate settlers
+-------------------------------------------
+
+Now, we will discuss flow through plate settlers where:
+
+| :math:`\bar v_{z_{Plate}} =` upflow velocity of the water in the plate settlers; vertical velocity component between the plate settlers
+| :math:`S =` spacing between plate settlers
+| :math:`B =` center-to-center distance between plate settlers
+| :math:`T =` thickness of plate settlers
+| :math:`L =` length of plate settlers
+
+We know that plate settlers have a certain thickness and take up area, which means that once we reach the plate settler zone, there is less area for water to travel through. Because flow is conserved and there is a decrease in area, we know that the upflow velocity of water through the plate settlers must increase compared to the upflow velocity of water below the plate settlers, :math:`\bar v_{z_{Plate}} > \bar v_{z_{Active}}`.
+
+Thus, :math:`\bar v_{z_{Plate}} > \bar v_{z_{Active}} > \bar v_{z_{fb}}`
+
+In addition to the vertical velocity component increasing between the plates, the resultant velocity of water between the plates increases compared to :math:`\bar v_{z_{Active}}`. What are the two reasons that this is true?
+
+- the first reason, as already discussed, is that the vertical velocity component needs to increase to ensure conservation of flow.
+
+- the second reason has to do with the fact that the resultant velocity of water between the plates is at an angle. This means that there is a horizontal component introduced. Because we know that the vertical velocity increases, and there is a new positive horizontal velocity component, the resultant velocity must also increase.
+
+Now, consider a tube settler used in a lab setting instead of a plate settler. If a tube settler was designed with an angle to mimic a plate settler, would the water change vertical velocity after the angle? How does this compare to the plate settler scenario? In the case of the tube settler, the vertical velocity does not increase because there is no change in flow area; the diameter of the tube is constant throughout, meaning that for the flow to remain constant, the velocity does not change.
+
+For another example of flow conservation, let's consider the relationship between :math:`\bar v_{z_{Plate}}*S` and :math:`\bar v_{z_{Active}}*B`. :math:`B` is the center-to-center distance between plate settlers, and does not take into account the thickness of plate settlers. Considering only the center-to-center distance means that the area for water to travel through does to change from before the plate settlers to within the plate settlers because we are not accounting for any thickness. If the area does not change, then velocity should also not change to keep flow conserved. However, if we are to account for thickness, we must discuss :math:`S` which is the spacing between plate settlers. This does take into account the change in area,  which means that the velocity would need to increase through the lesser area. So if we look at the flow through plate settlers, we can confirm that :math:`\bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B`.
+
+By using flow conservation and plate settler geometry, we can begin to understand the mathematical relationships that drive design.
+
+
 
 Now that we have established how flocs settle on the plate and the increase in plan view area that plate settlers offer, we need to discuss how flocs will act once they are on the plates. We want particles and flocs that settle to agglomerate and slide down the plate settlers to be returned to the floc blanket. We will explore this concept by first considering the desired spacing between plate settlers.
 
