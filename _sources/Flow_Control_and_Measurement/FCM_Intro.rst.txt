@@ -1,14 +1,8 @@
 .. _title_flow_control_intro:
 
-********************************************
-Flow Control and Measurement Introduction
-********************************************
-
-
-.. _heading_tank_with_a_valve:
-
-Tank with a Valve
-==================
+********************
+Constant Head Tanks
+********************
 
 
 .. _heading_qh_as_a_function_of_t:

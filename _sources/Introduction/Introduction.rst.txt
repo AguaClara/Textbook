@@ -301,7 +301,7 @@ The AguaClara Treatment Train
 =============================
 
 
-Why does flocculation precedes sedimentation?
+Why does flocculation precede sedimentation?
 Which process removes the largest quantity of contaminants?
 
 Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
@@ -528,7 +528,7 @@ In We Make the Road by Walking: Conversations on Education and Social Change, Pa
 
 .. _heading_Myth_in_Environmental_Engineering:
 
-Myth in Environmental Engineering
+Myths in Environmental Engineering
 ---------------------------------
 
 The following list is designed to get you thinking. These are concepts that are present in the Environmental Engineering community and that may capture some elements of truth and that may also further misconceptions.

@@ -1,13 +1,8 @@
 .. _title_Chemistry_of_Water_Treatment_derivations:
 
-*******************************************
-Chemistry of Water Treatment Derivations
-*******************************************
-
-.. _heading_Carbonate_reactions_buffering_and_pH:
-
+***************************************
 Carbonate Reactions, Buffering, and pH
-======================================
+***************************************
 
 Carbonates provide the majority of the buffering for drinking water as long as the pH is close to neutral. These equations provide a basis to calculate how much base or acid must be added to a natural water to achieve a target pH.
 
