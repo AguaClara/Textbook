@@ -139,9 +139,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
   Troubleshooting/Troubleshooting.rst
 
-<!-- .. toctree::
-  :caption: Chapter 15: Wastewater
-  :maxdepth: 1 -->
 
 .. toctree::
   :caption: Appendix 1
