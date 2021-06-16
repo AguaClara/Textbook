@@ -1,13 +1,13 @@
 .. _title_Filtration_Theory_and_Future_Work:
 
-*********************************
-Filtration Theory and Future Work
-*********************************
+***********************
+Filtration Future Work
+***********************
 
 
 
-Maximum velocity in constrictions
-=================================
+Constriction Velocity
+======================
 
 The maximum velocity in a pore is set by the strength of the coagulant bonds and the size of the core particles that are being captured by the filter. The drag force on the core particle must be balanced by the chemical bond strength and that relationship is given by Equation :eq:`Fbond_of_v_constriction`.
 
@@ -52,8 +52,8 @@ From :numref:`figure_Head_loss_vs_time` we have an estimate of 80 cm of head los
 
 .. _heading_Shear_big_flocs_to_improve_filter_performance:
 
-Shear big flocs to improve filter performance
-=============================================
+Shear Big Flocs
+================
 
 Here we explore the possibility of breaking flocs as they enter the filter bed to eliminate large flocs that may be reducing filter performance.
 
@@ -76,8 +76,8 @@ to estimate the injection area that should be used to break up flocs entering th
 
 .. _heading_Floc_size_and_velocity_gradient_calculations:
 
-Floc size and velocity gradient calculations
-============================================
+Floc Size Calculations
+=======================
 
 .. code:: python
 
@@ -254,8 +254,8 @@ The analysis above suggests that a high velocity and high velocity gradient inje
 
 This is an experiment worth trying. It will help us understand if large flocs result in poorer filter performance.
 
-Volume of flocs per pore
-========================
+Floc Volume
+============
 
 The volume of solids deposited in one pore can be obtained based on the average diameter of clean pore constrictions, the diameter of the constricted pore after solids deposition, and the thickness of the deposit. We already have an estimate for the diameter of the constricted pore after solids deposition. The thickness of the deposit must be proportional to some other length scale. We initially hypothesized that the thickness of the deposit scaled with the diameter of the flocs that make it up. That led to the conclusion that increased coagulant dose would increase the total mass of solids that could be retained by the filter before breakthrough. That doesn't match experimental data and thus we now propose that the average thickness of the deposit scales with the sand grain size, or pore size, or pore separation distance. We will use the pore separation distance as our scaling parameter.
 
@@ -336,7 +336,7 @@ The head loss per mass of particles deposited can be obtained by dividing the he
 
 The head loss per mass of solids removed is significantly lower for larger sand sizes. When the coagulant dose increases the head loss increases rapidly because the constricted velocity increases and the floc diameter increases. Unfortunately we do not yet have a model describing floc size as a function of both velocity gradient and coagulant nanoparticle coverage.
 
-Particle removal efficiency
+Particle Removal Efficiency
 ===========================
 
 Particle removal is complicated. We hypothesize that flocs form the deposits that change the flow from being wall shear dominated with a parabolic velocity profile to being uniform velocity flow through the constrictions. This uniform velocity profile transports a very small fraction of clay particles close enough to the deposit to be captured.
@@ -345,8 +345,8 @@ During filter ripening the particles that pass through the filter would be expec
 
 The flocs form a series of actively growing deposits. The number of actively growing deposits in series is possibly a function of the average volume of the flocs (smaller flocs result in more active deposits) and the volume fraction of the flocs normalized by the volume fraction of the primary particles. If this dimensionless volume fraction increases there may be more active deposits and hence improved removal of primary particles.
 
-Proposed experiments and inventions
-===================================
+Proposed Experiments
+=====================
 
  #. Compare different sizes of sand media. Expect to get poorer removal efficiency with larger sand sizes, similar mass of particles retained at breakthrough, and much lower head loss.
  #. dual media. expect to find less head loss and poorer performance than single small media. And expect the smaller media to not contribute anything.
