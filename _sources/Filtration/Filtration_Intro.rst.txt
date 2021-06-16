@@ -53,7 +53,7 @@ Slow sand filters remove the majority of the particles in the top cm of the sand
 
     Slow sand filters at Jesus de Otoro, Honduras. Slow sand filters require extensive areas of flat terrain or extensive earthwork to create a level spot. In the tropics the filters are open to the sky and that results in nuisance growth of algae. In climates where freezing is a problem the filters are covered.
 
-Multistage filters
+Multistage Filters
 ------------------
 
 Multistage filters were invented to extend the range of applicability of slow sand filters. Slow sand filters were viewed as an appropriate technology for rural communities, but their very limited ability to treat water with suspended solids made them inappropriate for communities that have surface water sources with high turbidity during runoff events. Roughing filters made with various sizes of gravel were added to remove sediment. The roughing filters were essentially inefficient sedimentation tanks with 60% of their volume occupied by rocks! Roughing filters were also difficult to clean and without using coagulants their particle removal efficiency was poor. Nonetheless, multistage filters have been built in many rural communities in Latin America.
@@ -212,8 +212,8 @@ From this it becomes possible to directly relate porosity (as above) to the filt
 
 .. _CLean_Sand_Head_loss:
 
-Filtration Clean Bed Head loss
-==============================
+Clean Bed Head Loss
+====================
 
 The Carman Kozeny Equation, an adaptation of the Hagen-Poiseuille Equation :eq:`` describes the head loss through a clean bed during filtration. The Ergun Equation :eq:`eq_Ergun` can also be used to estimate head loss in porous media.
 
@@ -317,9 +317,9 @@ Using these two equations the minimum velocity for sand fluidization can be foun
 
 From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter does **not** imply that the sand at the bottom of the filter is fluidized.
 
-
+******************
 Filtration Theory
-=================
+******************
 
 Filters are used to remove particles and thus we'd like to be able to predict particle removal efficiency in a filter. Unfortunately we don't yet have equations that describe particle removal by sand filtration. This is a very unpleasant surprise. It is as if we were designing a suspension bridge and didn't have any equations describing the relationship between the tension in the cables and the load they are supporting. We only have an equation describing what the cables do when there isn't any additional load. In the case of filtration we only have clean bed filtration models that attempt to describe what happens before the filter begins to remove particles.
 
@@ -407,8 +407,8 @@ As sand size increases
  - There are fewer pores and thus fewer constrictions and thus less head loss at the end of the filter run
  - Each constriction requires more particles to build and thus there is less head loss per mass of particles removed.
 
-What about particle removal efficiency?
----------------------------------------
+Particle Removal Efficiency
+=============================
 
 This is the multi-decade old question that challenges us to continue our research. What determines how many particles sneak through a water treatment plant? We've learned that flocculation runs out of steam because the primary particles only want to collide with other primary particles and thus they start taking forever to collide as they become scarce. The floc blanket likely acts like a series of collectors (can't say it is like a filter because it doesn't have stationary constrictions). This would suggest that more floc blanket is always better. Some primary particles make it through the floc blanket. What determines how many of those primary particles make it through the filter? It must depend on the geometry of every constriction. Large flocs are easy to capture in a sand filter. Primary particles are much more difficult to capture. Large flocs tend to fill up the first unfilled pore they come to. Thus large flocs tend to take active pores out of service. This suggests that the influent floc size distribution might influence filter performance. See :ref:`heading_Shear_big_flocs_to_improve_filter_performance` for an analysis of the feasibility of breaking up flocs at the point of injection into the sand bed.
 
