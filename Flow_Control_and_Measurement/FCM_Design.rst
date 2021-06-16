@@ -84,6 +84,7 @@ The CDC brings together the LFOM and many improvements to the “Almost Linear�
 #. Start at the Constant Head Tank (CHT). This is the same set up as the “Almost Linear” Flow Controller. The stock tank feeds into the CHT, and the float valve makes sure that the water level in the constant head tank is always the same.
 
 #. Now the tubes. These fix the linearity problems that were the main problem in the “Almost Linear” Flow Controller.
+
 * The tube connected to the bottom of the CHT is large diameter to minimize any head loss through it.
 
    * The three thin, straight tubes are designed to generate a lot of major losses and to minimize any minor losses. This is to make sure that major losses far exceed any minor losses, which will ensure that the Hagen-Poiseuille equation is applicable and that flow will be directly proportional to the head, :math:`Q \propto \Delta h`. Why are there 3 tubes?
