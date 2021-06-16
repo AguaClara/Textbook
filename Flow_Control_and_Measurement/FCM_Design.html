@@ -325,9 +325,10 @@
 <p>The CDC brings together the LFOM and many improvements to the “Almost Linear” Flow Controller. Let’s break it down, with the image below as a guide.</p>
 <ol class="arabic simple">
 <li><p>Start at the Constant Head Tank (CHT). This is the same set up as the “Almost Linear” Flow Controller. The stock tank feeds into the CHT, and the float valve makes sure that the water level in the constant head tank is always the same.</p></li>
+<li><p>Now the tubes. These fix the linearity problems that were the main problem in the “Almost Linear” Flow Controller.</p></li>
 </ol>
-<p>2. Now the tubes. These fix the linearity problems that were the main problem in the “Almost Linear” Flow Controller.
-* The tube connected to the bottom of the CHT is large diameter to minimize any head loss through it.</p>
+<ul>
+<li><p>The tube connected to the bottom of the CHT is large diameter to minimize any head loss through it.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>The three thin, straight tubes are designed to generate a lot of major losses and to minimize any minor losses. This is to make sure that major losses far exceed any minor losses, which will ensure that the Hagen-Poiseuille equation is applicable and that flow will be directly proportional to the head, <span class="math notranslate nohighlight">\(Q \propto \Delta h\)</span>. Why are there 3 tubes?</p>
@@ -339,7 +340,9 @@
 <li><p>The large-diameter tube on the right of the three thin, straight tubes is where the chemicals flow out. The end of the tube is connected to both a slider and a ‘drop tube.’ The drop tube allows for supercritical flow of the chemical leaving the dosing tubes; once the chemical enters the drop tube it falls freely and no longer affects the CDC system.</p></li>
 </ul>
 </div></blockquote>
-<ol class="arabic simple" start="3">
+</li>
+</ul>
+<ol class="arabic simple">
 <li><p>The slider rests on a lever. This lever is the critical part of the CDC, it connects the water level in the entrance tank, which is adjusted by the LFOM, to the difference in head between the CHT and the end of the dosing tube. This allows the flow of chemicals to automatically adjust to a change in the plant flow rate, maintaining a constant dose in the plant water. One end of the lever tracks the water level in the entrance tank by using a float. The counterweight on the other side of the lever is to make sure the float ‘floats,’ since this float is usually made of PVC, which is more dense than water.</p></li>
 <li><p>The slider itself controls the dose of chemicals. For any given plant flow rate, the slider can be adjusted to increase or decrease the amount of chemical flowing through the plant.</p></li>
 </ol>
@@ -355,22 +358,22 @@
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-0">
 <span class="eqno">(279)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple">
 <li><p>Calculate how much flow of chemical needs to pass through the CDC at maximum plant flow and maximum chemical dose. This depends on the concentration of chemicals in the stock tank.</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-1">
 <span class="eqno">(280)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple">
 <li><p>Calculate the number of dosing tubes required if the tubes flow at  maximum capacity (round up)</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-2">
 <span class="eqno">(281)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple">
 <li><p>Calculate the length of dosing tube(s) that correspond to each available tube diameter.</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-3">
 <span class="eqno">(282)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-3" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
-<ol class="arabic simple" start="5">
+<ol class="arabic simple">
 <li><p>Select a tube length from your array of solutions. Pick the longest dosing tube that you can, keeping in mind that the tube(s) must be able to fit in the plant and can’t be longer than the length of the plant wall it will be placed along.</p></li>
 <li><p>Finally, select the dosing tube diameter and flow rate corresponding to the selected tube length.</p></li>
 </ol>
