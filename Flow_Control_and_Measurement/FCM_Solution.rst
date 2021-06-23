@@ -16,7 +16,7 @@ A Brief Programming Guide
 A Brief Design Challenge guide
 ==============================
 
- #. Read the Problem statement in its entirety before beginning a problem. If you don’t immediately know what to do, read it again, thoroughly. If you are getting stuck, read it a third time. If you have a good understanding of what the problem is asking and are still having trouble, TAs can help through email or office hours.
+ #. Read the problem statement in its entirety before beginning a problem. If you don’t immediately know what to do, read it again, thoroughly. If you are getting stuck, read it a third time. If you have a good understanding of what the problem is asking and are still having trouble, TAs can help through email or office hours.
  #. If you decide to email a TA, make sure the other two are CC’ed. This minimizes the time you will have to wait until one responds.
  #. When in doubt, Kernel -> Restart & Run All
  #. Play around! Print arrays, test inputs, and ask yourself if your answers are reasonable. Should flow have units of km mg/s?
@@ -33,7 +33,7 @@ A Brief Design Challenge guide
 Vertical Orifice Equation
 =========================
 
-1) Find the vena contract (VC) coefficient ratio for an orifice in the expert_inputs and print the result in a sentence. Please display 2 significant figures.
+**1) Find the vena contracta** (VC) coefficient ratio for an orifice in the expert_inputs and print the result in a sentence. Please display 2 significant figures.
 
 .. code:: python
 
@@ -41,7 +41,7 @@ Vertical Orifice Equation
 
 The vena contracta coefficient for an orifice is 0.63.
 
-2) The simple orifice Equation :math:`Q = {\Pi _{vc}}{A_{or}}\sqrt {2g\Delta h}` that we normally use is not applicable for vertically oriented orifices that are partially or barely submerged. The `USGS published a great solution <https://il.water.usgs.gov/proj/feq/fequtl98.i2h/4_7aupdate.html>`__ for flow through partially submerged vertically oriented orifices. AguaClara uses a general solution for a vertically oriented orifice, which is available in the physchem file as ``pc.flow_orifice_vert``. That function handles vertically oriented orifices even if they are only partially submerged.
+**2) The simple orifice** Equation :math:`Q = {\Pi _{vc}}{A_{or}}\sqrt {2g\Delta h}` that we normally use is not applicable for vertically oriented orifices that are partially or barely submerged. The `USGS published a great solution <https://il.water.usgs.gov/proj/feq/fequtl98.i2h/4_7aupdate.html>`__ for flow through partially submerged vertically oriented orifices. AguaClara uses a general solution for a vertically oriented orifice, which is available in the physchem file as ``pc.flow_orifice_vert``. That function handles vertically oriented orifices even if they are only partially submerged.
 
 The vertical orifice equation is based on the concept that the velocity through the orifice at any point is equal to :math:`\sqrt{2gh}`, where h is the local depth of submergence. The total flow can be obtained by integration of that velocity over the submerged area of the orifice.
 
@@ -97,7 +97,7 @@ The steps for making the graph are as follows:
 
    Horizontal vs. Vertical Orifice Orientation
 
-3) Write a paragraph about what the graph means by explaining the following two items: - Explain why the vertical orifice equation predicts more flow when the water level is below the center of the orifice and predicts less flow when the water level is above the center of the orifice. It might help to draw a picture of what the equations are describing to understand what is happening here! - Explain how the horizontal orifice equation function from ``physchem.py`` predicts the flow rate for submergence depths that are negative. You will need to find the function and look at the code.
+**3) Write a paragraph** about what the graph means by explaining the following two items: - Explain why the vertical orifice equation predicts more flow when the water level is below the center of the orifice and predicts less flow when the water level is above the center of the orifice. It might help to draw a picture of what the equations are describing to understand what is happening here! - Explain how the horizontal orifice equation function from ``physchem.py`` predicts the flow rate for submergence depths that are negative. You will need to find the function and look at the code.
 
 Explanation
 -----------
@@ -119,7 +119,7 @@ A linear flow orifice meter is used in AguaClara plants to measure the plant flo
 
 The following questions are all answered in one big block of code to make it easy to change values and then see the resulting graph.
 
-4) **Create a function** that calculates the flow rate through the LFOM as a function of only water elevation using the vertical orifice function. Use the arrays for LFOM key parameters, given above as ``my_LFOM.orifice_diameter``, ``my_LFOM.n_orifices_per_row``, and ``my_LFOM.height_orifices``.
+**4) Create a function** that calculates the flow rate through the LFOM as a function of only water elevation using the vertical orifice function. Use the arrays for LFOM key parameters, given above as ``my_LFOM.orifice_diameter``, ``my_LFOM.n_orifices_per_row``, and ``my_LFOM.height_orifices``.
 
  - Create an array for depth of submergence for each row of orifices at a given a height of water in the LFOM. This array is dependent on the water elevation (which should be your function input) and the height of the LFOM orifices (which is from the LFOM key parameters). Use this submergence depth array as the “height” input to your vertical orifice function. The array should be created within your function.
 
@@ -129,12 +129,12 @@ The following questions are all answered in one big block of code to make it eas
 
  - Add a comment under the function definition to explain what the function does (see any of the aguaclara design files for examples of descriptive comments).
 
-5) Calculate the total flow through the LFOM using the vertical orifice equation for the case when the water level is at the maximum water level for the LFOM, ``HeadlossLfom``. You are checking to make sure that the LFOM produces the correct target flow (given as ``Flow``) at the maximum height. Does it?
+**5) Calculate the total flow** through the LFOM using the vertical orifice equation for the case when the water level is at the maximum water level for the LFOM, ``HeadlossLfom``. You are checking to make sure that the LFOM produces the correct target flow (given as ``Flow``) at the maximum height. Does it?
 
 
 
 
-6) We want to compare the actual flow rate through the LFOM to the expected flow rate through the elevation as a function of water depth. Create a graph of the normalized actual and expected flow rates, using the following steps:
+**6) We want to compare** the actual flow rate through the LFOM to the expected flow rate through the elevation as a function of water depth. Create a graph of the normalized actual and expected flow rates, using the following steps:
 
   - Create an 100-unit long array of water depths using ``np.linspace``. Note: the expected flow rate at elevation zero is zero, which makes the normalized flow rate undefined for zero elevation. An undefined normalized flow will not run and Python will report an error. You can solve this by beginning your water depth array at a very small (nonzero) elevation. You can end your water depth array at the maximum water depth. Recall that an array of elevations should have units of length.
   - Create an array of normalized actual flow rates at each water depth; use the function you created in Problem 4 and a ``for`` loop (the function you created in Problem 4 probably can’t handle an array of depths as input, so you need the ``for`` loop to cycle through each depth value to make your array of flows).
@@ -155,13 +155,13 @@ The following questions are all answered in one big block of code to make it eas
 
    Normalized Flow Rate vs. Water Depth
 
-7) Play with the value for the plant flow rate, ``LFOM_flow``, and try a bunch of different flows over the range 1 to 100 L/s. The LFOM isn’t accurate for the first couple of rows.
+**7) Play with the value** for the plant flow rate, ``LFOM_flow``, and try a bunch of different flows over the range 1 to 100 L/s. The LFOM isn’t accurate for the first couple of rows.
 
 
-8) Do you observe any failure modes where the design produces very inaccurate flow measurements? If so, then create an issue!
+**8) Do you observe** any failure modes where the design produces very inaccurate flow measurements? If so, then create an issue!
 
 
-9) Explain why all LFOMs perform poorly when the water depth is in the first row of orifices.
+**9) Explain** why all LFOMs perform poorly when the water depth is in the first row of orifices.
 
 The relationship between head and flow is nonlinear for a single row of orifices. Thus it is impossible for the LFOM to be accurate when there is only one row of orifices.
 
@@ -199,7 +199,7 @@ You may assume that the chlorine stock solution kinematic viscosity is approxima
   KMinor = 2
 
 
-11) At the given water treatment plant design flow rate, what is the required flow of bleach (the chlorine stock solution)?
+**11)** At the given water treatment plant design flow rate, what is the required flow of bleach (the chlorine stock solution)?
 
 .. code:: python
 
@@ -208,7 +208,7 @@ You may assume that the chlorine stock solution kinematic viscosity is approxima
 
 The required flow of bleach is 1.95 ml/s
 
-12) How many liters of liquid bleach are required in one day? (you can simply change the units on the flow rate!)
+**12)** How many liters of liquid bleach are required in one day? (you can simply change the units on the flow rate!)
 
 .. code:: python
 
@@ -217,7 +217,7 @@ The required flow of bleach is 1.95 ml/s
 The daily required flow of bleach is 168.09 l/day
 
 
-13) Our next big goal is to choose a tubing size for the dosing tube (or tubes). This requires multiple steps. Begin by first creating a numpy array of tubing sizes between 1/16" and 5/16" with a 1/16" interval. Your list should contain 5 elements. Does ``np.linspace`` work here? What about ``np.arange``? Remember to always attach the units to the entire array and not to array elements!
+**13)** Our next big goal is to choose a tubing size for the dosing tube (or tubes). This requires multiple steps. Begin by first creating a numpy array of tubing sizes between 1/16" and 5/16" with a 1/16" interval. Your list should contain 5 elements. Does ``np.linspace`` work here? What about ``np.arange``? Remember to always attach the units to the entire array and not to array elements!
 
 .. code:: python
 
@@ -226,7 +226,7 @@ The daily required flow of bleach is 168.09 l/day
 
 [ 0.0625  0.125   0.1875  0.25    0.3125] inch
 
-14) What is the maximum average velocity in a dosing tube based on the constraint that minor losses must be small? This means that the minor losses account for ``RatioError`` fraction of the total losses (10% when ``RatioError`` is 0.1). Note that this velocity is independent of the tube diameter.
+**14)** What is the maximum average velocity in a dosing tube based on the constraint that minor losses must be small? This means that the minor losses account for ``RatioError`` fraction of the total losses (10% when ``RatioError`` is 0.1). Note that this velocity is independent of the tube diameter.
 
 .. code:: python
 
@@ -235,7 +235,7 @@ The daily required flow of bleach is 168.09 l/day
 
 The maximum average velocity in a dosing tube is 0.443 m/s
 
-15) What is the head loss due to minor losses in the tube when the tube is flowing at maximum capacity? Solve for this value algebraically by substituting your equation for the velocity in the tube into the minor loss equation and then calculate the value.
+**15)** What is the head loss due to minor losses in the tube when the tube is flowing at maximum capacity? Solve for this value algebraically by substituting your equation for the velocity in the tube into the minor loss equation and then calculate the value.
 
 .. code:: python
 
@@ -245,7 +245,7 @@ The maximum average velocity in a dosing tube is 0.443 m/s
 The head loss due to minor losses when the tube is at maximum capacity is 2.0 cm
 
 
-16) Create an array of the maximum flow rates corresponding to the array of tubing diameters. The flow rates must meet the error constraint.
+**16)** Create an array of the maximum flow rates corresponding to the array of tubing diameters. The flow rates must meet the error constraint.
 
 .. math:: Q_{Max} = \frac{\pi D^2}{4}\sqrt{\frac{2h_{L}g \Pi_{error}}{\sum K_{e}}}
 
@@ -264,7 +264,7 @@ The head loss due to minor losses when the tube is at maximum capacity is 2.0 cm
 [  0.87658228   3.5063291    7.88924048  14.02531641  21.91455688] milliliter / second
 
 
-17) Find the minimum number of tubes for each of the available tube diameters that would be required to deliver the maximum flow of bleach.
+**17)** Find the minimum number of tubes for each of the available tube diameters that would be required to deliver the maximum flow of bleach.
 
 .. code:: python
 
@@ -274,7 +274,7 @@ The head loss due to minor losses when the tube is at maximum capacity is 2.0 cm
 The number of tubes of each diameter is [ 3.  1.  1.  1.  1.] dimensionless
 
 
-18) Create an array of the maximum flow rate per tube for each of the available tubing diameters, given the number of tubes that would be used. This will be the flow through each dosing tube at the maximum flow of bleach.
+**18)** Create an array of the maximum flow rate per tube for each of the available tubing diameters, given the number of tubes that would be used. This will be the flow through each dosing tube at the maximum flow of bleach.
 
 .. code:: python
 
@@ -285,7 +285,7 @@ The number of tubes of each diameter is [ 3.  1.  1.  1.  1.] dimensionless
 The flow rate per tube is [ 0.64850843  1.94552529  1.94552529  1.94552529  1.94552529] milliliter / second
     1.9455252918287937 milliliter / second
 
-19) We now know the target flow in the dosing tubes, the diameter of the tubes, and the target head loss through the tubes. Thus, we can solve for the length of the tube that will deliver that target flow. Write a function to find the length of each tube that could handle the entire flow. Your function should use the following equation:
+**19)** We now know the target flow in the dosing tubes, the diameter of the tubes, and the target head loss through the tubes. Thus, we can solve for the length of the tube that will deliver that target flow. Write a function to find the length of each tube that could handle the entire flow. Your function should use the following equation:
 
 .. math:: L = \frac{g h_{L}\pi D^4}{128 \nu Q_{Max}}-\frac{Q_{Max}}{16 \pi \nu}\sum K_{e}
 
@@ -309,7 +309,7 @@ size.
 
 The length of each dosing tube would be [  0.44406171   2.42832361  12.60675229  40.01021413  97.79237081] meter
 
-20) Which option do you think is best? You can simply set the array index to your choice and then display your solution by using that index value on your arrays for number of tubes, flow rates, tube diameters, and length of tubes.
+**20)** Which option do you think is best? You can simply set the array index to your choice and then display your solution by using that index value on your arrays for number of tubes, flow rates, tube diameters, and length of tubes.
 
 .. code:: python
 
@@ -324,10 +324,10 @@ The number of dosing tubes I will need is 1
     The inner diameter of the tube is 0.125 inch
     The length of each tube is 2.43 m
 
-21) What physical constraints might you use to select the best solution? How did you make your selection in Problem 19?
+**21)** What physical constraints might you use to select the best solution? How did you make your selection in Problem 19?
 
 The ideal solution will have - a “reasonable” number of tubes and thus one possibility is to select the smallest diameter of tubing that uses a single tube. However, this won’t work for plants with high flow rates of chemicals. - tubes that are short enough to mount in the water treatment plant
 
-22) AguaClara has coded these dosing tube size functions in the CDC Functions (ac.CDC). Find the function calls for the length, diameter, and number of dosing tubes and use those functions to calculate the values for the problem that you solved above. Compare your answers. Your answers should agree!
+**22)** AguaClara has coded these dosing tube size functions in the CDC Functions (ac.CDC). Find the function calls for the length, diameter, and number of dosing tubes and use those functions to calculate the values for the problem that you solved above. Compare your answers. Your answers should agree!
 
 Pending new solution using updated CDC code.
