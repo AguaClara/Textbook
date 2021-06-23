@@ -33,7 +33,7 @@ A Brief Design Challenge guide
 Vertical Orifice Equation
 =========================
 
-**1) Find the vena contracta** (VC) coefficient ratio for an orifice in the expert_inputs and print the result in a sentence. Please display 2 significant figures.
+**1)** Find the vena contracta (VC) coefficient ratio for an orifice in the expert_inputs and print the result in a sentence. Please display 2 significant figures.
 
 .. code:: python
 
@@ -41,7 +41,7 @@ Vertical Orifice Equation
 
 The vena contracta coefficient for an orifice is 0.63.
 
-**2) The simple orifice** Equation :math:`Q = {\Pi _{vc}}{A_{or}}\sqrt {2g\Delta h}` that we normally use is not applicable for vertically oriented orifices that are partially or barely submerged. The `USGS published a great solution <https://il.water.usgs.gov/proj/feq/fequtl98.i2h/4_7aupdate.html>`__ for flow through partially submerged vertically oriented orifices. AguaClara uses a general solution for a vertically oriented orifice, which is available in the physchem file as ``pc.flow_orifice_vert``. That function handles vertically oriented orifices even if they are only partially submerged.
+**2)** The simple orifice Equation :math:`Q = {\Pi _{vc}}{A_{or}}\sqrt {2g\Delta h}` that we normally use is not applicable for vertically oriented orifices that are partially or barely submerged. The `USGS published a great solution <https://il.water.usgs.gov/proj/feq/fequtl98.i2h/4_7aupdate.html>`__ for flow through partially submerged vertically oriented orifices. AguaClara uses a general solution for a vertically oriented orifice, which is available in the physchem file as ``pc.flow_orifice_vert``. That function handles vertically oriented orifices even if they are only partially submerged.
 
 The vertical orifice equation is based on the concept that the velocity through the orifice at any point is equal to :math:`\sqrt{2gh}`, where h is the local depth of submergence. The total flow can be obtained by integration of that velocity over the submerged area of the orifice.
 
@@ -97,7 +97,7 @@ The steps for making the graph are as follows:
 
    Horizontal vs. Vertical Orifice Orientation
 
-**3) Write a paragraph** about what the graph means by explaining the following two items: - Explain why the vertical orifice equation predicts more flow when the water level is below the center of the orifice and predicts less flow when the water level is above the center of the orifice. It might help to draw a picture of what the equations are describing to understand what is happening here! - Explain how the horizontal orifice equation function from ``physchem.py`` predicts the flow rate for submergence depths that are negative. You will need to find the function and look at the code.
+**3)** Write a paragraph about what the graph means by explaining the following two items: - Explain why the vertical orifice equation predicts more flow when the water level is below the center of the orifice and predicts less flow when the water level is above the center of the orifice. It might help to draw a picture of what the equations are describing to understand what is happening here! - Explain how the horizontal orifice equation function from ``physchem.py`` predicts the flow rate for submergence depths that are negative. You will need to find the function and look at the code.
 
 Explanation
 -----------
@@ -119,7 +119,7 @@ A linear flow orifice meter is used in AguaClara plants to measure the plant flo
 
 The following questions are all answered in one big block of code to make it easy to change values and then see the resulting graph.
 
-**4) Create a function** that calculates the flow rate through the LFOM as a function of only water elevation using the vertical orifice function. Use the arrays for LFOM key parameters, given above as ``my_LFOM.orifice_diameter``, ``my_LFOM.n_orifices_per_row``, and ``my_LFOM.height_orifices``.
+**4)** Create a function that calculates the flow rate through the LFOM as a function of only water elevation using the vertical orifice function. Use the arrays for LFOM key parameters, given above as ``my_LFOM.orifice_diameter``, ``my_LFOM.n_orifices_per_row``, and ``my_LFOM.height_orifices``.
 
  - Create an array for depth of submergence for each row of orifices at a given a height of water in the LFOM. This array is dependent on the water elevation (which should be your function input) and the height of the LFOM orifices (which is from the LFOM key parameters). Use this submergence depth array as the “height” input to your vertical orifice function. The array should be created within your function.
 
@@ -129,12 +129,12 @@ The following questions are all answered in one big block of code to make it eas
 
  - Add a comment under the function definition to explain what the function does (see any of the aguaclara design files for examples of descriptive comments).
 
-**5) Calculate the total flow** through the LFOM using the vertical orifice equation for the case when the water level is at the maximum water level for the LFOM, ``HeadlossLfom``. You are checking to make sure that the LFOM produces the correct target flow (given as ``Flow``) at the maximum height. Does it?
+**5)** Calculate the total flow through the LFOM using the vertical orifice equation for the case when the water level is at the maximum water level for the LFOM, ``HeadlossLfom``. You are checking to make sure that the LFOM produces the correct target flow (given as ``Flow``) at the maximum height. Does it?
 
 
 
 
-**6) We want to compare** the actual flow rate through the LFOM to the expected flow rate through the elevation as a function of water depth. Create a graph of the normalized actual and expected flow rates, using the following steps:
+**6)** We want to compare the actual flow rate through the LFOM to the expected flow rate through the elevation as a function of water depth. Create a graph of the normalized actual and expected flow rates, using the following steps:
 
   - Create an 100-unit long array of water depths using ``np.linspace``. Note: the expected flow rate at elevation zero is zero, which makes the normalized flow rate undefined for zero elevation. An undefined normalized flow will not run and Python will report an error. You can solve this by beginning your water depth array at a very small (nonzero) elevation. You can end your water depth array at the maximum water depth. Recall that an array of elevations should have units of length.
   - Create an array of normalized actual flow rates at each water depth; use the function you created in Problem 4 and a ``for`` loop (the function you created in Problem 4 probably can’t handle an array of depths as input, so you need the ``for`` loop to cycle through each depth value to make your array of flows).
@@ -155,13 +155,13 @@ The following questions are all answered in one big block of code to make it eas
 
    Normalized Flow Rate vs. Water Depth
 
-**7) Play with the value** for the plant flow rate, ``LFOM_flow``, and try a bunch of different flows over the range 1 to 100 L/s. The LFOM isn’t accurate for the first couple of rows.
+**7)** Play with the value for the plant flow rate, ``LFOM_flow``, and try a bunch of different flows over the range 1 to 100 L/s. The LFOM isn’t accurate for the first couple of rows.
 
 
-**8) Do you observe** any failure modes where the design produces very inaccurate flow measurements? If so, then create an issue!
+**8)** Do you observe any failure modes where the design produces very inaccurate flow measurements? If so, then create an issue!
 
 
-**9) Explain** why all LFOMs perform poorly when the water depth is in the first row of orifices.
+**9)** Explain why all LFOMs perform poorly when the water depth is in the first row of orifices.
 
 The relationship between head and flow is nonlinear for a single row of orifices. Thus it is impossible for the LFOM to be accurate when there is only one row of orifices.
 
@@ -199,7 +199,7 @@ You may assume that the chlorine stock solution kinematic viscosity is approxima
   KMinor = 2
 
 
-**11)** At the given water treatment plant design flow rate, what is the required flow of bleach (the chlorine stock solution)?
+**11) A**t the given water treatment plant design flow rate, what is the required flow of bleach (the chlorine stock solution)?
 
 .. code:: python
 
