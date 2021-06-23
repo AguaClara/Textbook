@@ -39,7 +39,7 @@ We want to encourage skepticism and we want to develop insights to guide thought
 
 There are significant knowledge gaps in every process that we cover in this textbook. We aren’t yet able to optimize surface water treatment processes because we don’t yet understand the fundamental physics of many of the processes. We are getting closer, join us on the journey.
 
-We need the brightest and the best to create new and better solutions so we can meet the goal of providing everyone with safe drinking water. This challenge is apparently more difficult than building a space station, designing a fuel cell, or inventing the world wide web. So let’s role up our sleeves and begin.
+We need the brightest and the best to create new and better solutions so we can meet the goal of providing everyone with safe drinking water. This challenge is apparently more difficult than building a space station, designing a fuel cell, or inventing the world wide web. So let’s roll up our sleeves and begin.
 
 Don't believe everything we say. Ask lots of questions:
 
