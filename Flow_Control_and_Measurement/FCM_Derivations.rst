@@ -4,8 +4,6 @@
 Flow Control and Measurement Derivations
 ******************************************
 
-
-
 .. _heading_flow_for_a_tank_with_a_valve:
 
 :math:`Q(t)` for a Tank with a Valve
@@ -211,7 +209,84 @@ Such that the variables are as the appear in the image below.
 
     :math:`L_{Tank}` is the length of the tank which goes the page. :math:`K` is the aggregate minor loss coefficient of the drain system.
 
+.. _heading_Kinematic_Viscosity_of_Coagulants:
 
+Kinematic Viscosity of Coagulants
+=================================
+
+AguaClara plants currently use either alum (aluminum sulfate) or PACl (polyaluminum chloride) solutions that are prepared from granular chemicals. The viscosity of solutions created from granular alum and PACl were measured using a SV - 10 Vibro Viscometer. The results are shown below.
+
+.. code:: python
+
+  import aguaclara.core.physchem as pc
+  from aguaclara.core.units import unit_registry as u
+  import numpy as np
+  import matplotlib.pyplot as plt
+  # the following concentrations were prepared for each chemical
+  Measured_C = np.linspace(0,600,13) * u.g/u.L
+  Measured_C[0] = 10 * u.g/u.L
+  # the following dynamic viscosities were measured
+  Measured_Viscosity_Dynamic_Alum = np.array([0.00097, 0.00114,0.00143,0.00178,0.00208,0.00253,0.00349,0.00451,0.00532,0.00691,0.00901,0.0117,0.0133]) * u.kg/u.s/u.m
+  Measured_Viscosity_Dynamic_PACl = np.array([0.001,0.00108,0.00122,0.00145,0.00171,0.00231,0.00256,0.00301,0.00392,0.00378,0.00476,0.00486,0.00768]) * u.kg/u.s/u.m
+  Density_PACl_400gperL = 58.88 * u.g/(50 * u.mL)
+  Density_Alum_600gperL = 63.2 * u.g/(50 * u.mL)
+  temperature = 22 * u.degC
+
+  def Density_Alum(Alum_C, temperature):
+    #Alum_C is concentration of aluminum sulfate with attached waters (not concentration of aluminum)
+    return Density_Alum_600gperL * Alum_C/(600 * u.g/u.L) + pc.density_water(temperature)*(600 * u.g/u.L - Alum_C)/(600 * u.g/u.L)
+
+  def Density_PACl(PACl_C, temperature):
+    #PACl_C is concentration of poly aluminum chloride granules (not concentration of aluminum
+    return Density_PACl_400gperL * PACl_C/(400 * u.g/u.L) + pc.density_water(temperature)*(400 * u.g/u.L - PACl_C)/(400 * u.g/u.L)
+
+  Measured_Viscosity_Kinematic_Alum = Measured_Viscosity_Dynamic_Alum/Density_Alum(Measured_C, temperature)
+  Measured_Viscosity_Kinematic_PACl = Measured_Viscosity_Dynamic_PACl/Density_PACl(Measured_C, temperature)
+  def Alum_Viscosity_Kinematic(Alum_C, temperature):
+    return (1 + (4.225 * 10**(-6) * ((Alum_C.to(u.kg/u.m**3)).magnitude)**2.289))*pc.viscosity_kinematic(temperature)
+
+  def PACl_Viscosity_Kinematic(PACl_C, temperature):
+    return (1 + (2.383 * 10**(-5) * ((PACl_C.to(u.kg/u.m**3)).magnitude)**1.893))*pc.viscosity_kinematic(temperature)
+
+  fig, ax = plt.subplots()
+  ax.plot(Measured_C, Measured_Viscosity_Kinematic_Alum.to(u.mm**2/u.s), 'ro')
+  ax.plot(Measured_C, Alum_Viscosity_Kinematic(Measured_C, temperature).to(u.mm**2/u.s), 'r-')
+  ax.plot(Measured_C, Measured_Viscosity_Kinematic_PACl.to(u.mm**2/u.s), 'bo')
+  ax.plot(Measured_C, PACl_Viscosity_Kinematic(Measured_C, temperature).to(u.mm**2/u.s), 'b-')
+
+  ax.set(xlabel=r'Coagulant concentration prepared from granules ' + r'$\left[\frac{g}{L}\right]$')
+  ax.set(ylabel='Kinematic Viscosity ' + r'$\left[\frac{mm^2}{s}\right]$')
+  ax.legend(['Alum data','Alum model', 'PACl data','PACl model'])
+  fig.savefig('../Images/Coagulant_Viscosity')
+  plt.show()
+
+
+The equations for the kinematic viscosities of the two coagulants prepared from granules are given below.
+
+.. math::
+
+   \nu_{Alum} = \left[ 1 + 4.225 \times {10}^{-6}{\left( \frac{C_{Alum}}{\frac{kg}{m^3}} \right)}^{2.289} \right] \nu_{{H_2}O}
+
+   \nu_{PACl} = \left[ 1 + 2.383 \times {10}^{-5}\left(\frac{C_{PACl}}{\frac{kg}{m^3}} \right)^{1.893} \right] \nu_{{H_2}O}
+
+This analysis is incomplete in that we don't know the aluminum concentration of these coagulant solutions.
+
+.. _figure_coagulant_viscosity_kinematic:
+
+.. figure:: ../Images/Coagulant_Viscosity.png
+    :width: 400px
+    :align: center
+    :alt: internal figure
+
+    The viscosity of solutions prepared from granular aluminum sulfate and polyaluminum chloride. The concentration is the mass of granules per volume of solution.
+
+Notes:
+
+Nothing in life is perfect, and the CDC is no exception. It has a few causes of inaccuracy which go beyond non-zero minor losses:
+
+* Float valves are not perfect. There will still be minor fluctuations of the fluid level in the CHT which will result in imperfect dosing.
+* Surface tension may resist the flow of chemicals from the dosing tube into the drop tube during low flows. Since the CDC design does not consider surface tension, this is a potential source of error.
+* The lever and everything attached to it are not weightless. Changing the dose of coagulant or chlorine means moving the slider along the lever. Since the slider and tubes attached to it (drop tube, dosing tube) have mass, moving the slider means that the torque of the lever is altered. This means that the depth that the float is submerged is changed, which affects :math:`\Delta h` of the system. This can be remedied by making the float’s diameter as large as possible, which makes these fluctuations small. This problem can not be avoided entirely.
 
 .. _heading_design_equations_for_the_cdc:
 
@@ -231,11 +306,6 @@ We will use the ‘head loss trick’ that was introduced in the Fluids Review s
 
     Visual representation of CDC.
 
-
-.. _heading_cdc_design_equation_derivations:
-
-CDC Design Equation Derivation
--------------------------------
 .. important:: **When designing the CDC, there are a few parameters which are picked and set initially, before applying any equations. These parameters are:**
 
 1. :math:`D` = tube diameter. only certain tubing diameters are manufactured (like :math:`\frac{x}{16}` inch), so an array of available tube diameters is set initially.
@@ -299,8 +369,8 @@ Here is a plot of the three colored equations above. Our goal is to minimize the
 
     MathCAD generated graph for linearity error analysis. TODO: make this in python
 
-Designing for the error constraint, :math:`\Pi_{Error}`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Designing for the Error Constraint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. important:: The first step in the design is to make sure that major losses far exceed minor losses. This will result in an equation for the maximum velocity that can go through the dosing tube(s), :math:`\color{purple}{\bar v_{Max} }`.
 
 Minor losses will never be 0, so how much error in our linearity are we willing to accept? Let’s define a new parameter, :math:`\Pi_{Error}`, as the maximum amount of error we are willing to accept. We are ok with 10% error or less, so :math:`\Pi_{Error} = 0.1`.
@@ -364,8 +434,8 @@ From this equation for :math:`Q_{Max}`, we can get to our first design equation,
   \bar v_{Max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K} }}
      }
 
-Designing for the proper amount of head loss, :math:`h_{L_{Max}}`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Designing for Head Loss
+^^^^^^^^^^^^^^^^^^^^^^^^
 .. important:: The second step in the design is to make sure that the maximum head loss corresponds to the maximum flow of chemicals. This will result in an equation for the length of the dosing tube(s), :math:`\color{purple}{L_{Min} }`.
 
 We previously derived an equation for the minimum length of the dosing tube(s), :math:`L_{Min, \, \Pi_{Error}}`, which was the minimum length needed to ensure that our linearity constraint was met. This equation is shown again below, in red:
@@ -423,8 +493,8 @@ As you can see, the head loss constraint is more limiting than the linearity con
 The equations for :math:`\color{purple}{\bar v_{Max}}` and :math:`\color{purple}{L_{Min}}` are the only ones you **need** to manually design a CDC.
 
 
-CDC Dosing Tube(s) Diameter :math:`D_{Min}` Plots
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Designing for Dosing Tube Diameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Below are equations which also govern the CDC and greatly aid in understanding the physics behind it, but are not strictly necessary in design.
 
 By rearranging :math:`Q_{Max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum K }}`, we can solve for :math:`D` to get the *minimum* diameter we can use assuming the shortest tube possible that meets the error constraint, :math:`\color{red}{L_{Min, \, \Pi_{Error}}}`. If we use a diameter smaller than :math:`D_{Min, \, \Pi_{Error}}`, we will not be able to simultaneously reach :math:`Q_{Max}` and meet the error constraint :math:`\Pi_{Error}`.
