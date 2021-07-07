@@ -5,11 +5,11 @@ Rapid Mix Introduction
 ************************
 
 This chapter is currently home for the prerequisites of successful flocculation. Those prerequisites include:
- - ensuring that the pH is in the correct range for coagulant nanoparticle formation after the coagulant has been added to the raw water.
- - increasing the coagulant dose to account for the coagulant interactions with dissolved species that effectively cover some of the coagulant nanoparticle surfaces.
- - increasing the coagulant dose to account for the available surface area of suspended particles to achieve
+ - Ensuring that the pH is in the correct range for coagulant nanoparticle formation after the coagulant has been added to the raw water.
+ - Increasing the coagulant dose to account for the coagulant interactions with dissolved species that effectively cover some of the coagulant nanoparticle surfaces.
+ - Increasing the coagulant dose to account for the available surface area of suspended particles to achieve
  - If there are multiple treatment trains, mixing the coagulant with the raw water so that parallel treatment trains receive the same concentration of coagulant (perhaps the conventional role of rapid mix)
- - transporting the coagulant nanoparticles to attach to suspended particles
+ - Transporting the coagulant nanoparticles to attach to suspended particles
 
 
 Rapid mix is the term commonly used to describe the processes that occur between the coagulant addition to the raw water and the flocculation process. The processes that occur are not well understood and thus design guidelines have been empirical.
@@ -25,9 +25,9 @@ Coagulant nanoparticle application includes multiple steps that must occur befor
   #. Liquid coagulant stock solution with a low pH is injected into the raw water
   #. Fluid Mixing: Turbulent eddies randomize the fluids (but don’t blend them)
 
-     #. Large scale eddies mix the coagulant with the raw water by creating large fluid deformations. This stretching and turning of the raw water and coagulant is analogous to shuffling a deck of cards. The cards are randomized, but the cards maintain their identity. The original liquids retain their chemical composition. This step must be completed before any flow splitting for parallel treatment trains.
-     #. Turbulent eddies disintegrate into smaller and smaller eddies.
-     #. At a very small scale (Inner viscous length scale) viscosity becomes significant and the kinetic energy of the eddies begins to be converted to heat by viscosity.
+     a. Large scale eddies mix the coagulant with the raw water by creating large fluid deformations. This stretching and turning of the raw water and coagulant is analogous to shuffling a deck of cards. The cards are randomized, but the cards maintain their identity. The original liquids retain their chemical composition. This step must be completed before any flow splitting for parallel treatment trains.
+     b. Turbulent eddies disintegrate into smaller and smaller eddies.
+     c. At a very small scale (Inner viscous length scale) viscosity becomes significant and the kinetic energy of the eddies begins to be converted to heat by viscosity.
 
   #. The coagulant is blended with the raw water by molecular diffusion
   #. The higher pH of the raw water causes the coagulant to begin to precipitate as :math:`Al_{12}AlO_4(OH)_{24}(H_2O)_{12}^{7+}`, an aluminum, Al, nanoparticle.
@@ -140,7 +140,7 @@ The velocity gradient can be obtained from the rate at which mechanical energy i
 
 .. math::  \varepsilon = G^2 \nu
 
-where :math:`\varepsilon` is the energy dissipation rate, :math:`G` is the velocity gradient, and :math:`\nu` is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.
+Where :math:`\varepsilon` is the energy dissipation rate, :math:`G` is the velocity gradient, and :math:`\nu` is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.
 
 .. math:: P = \bar\varepsilon \rlap{-} V \rho
 
@@ -176,7 +176,7 @@ Rotating propellers can either be installed in open tanks or enclosed in pipes. 
 
 .. _heading_Mixing_time:
 
-Mixing time
+Mixing Time
 -----------
 
 The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see Equation :eq:`eq_t_eddy`) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (:numref:`figure_Eddy_turnover_times`).
@@ -203,7 +203,7 @@ The time required for mixing the coagulant nanoparticles with the fluid is typic
 Coagulant Nanoparticle Interactions
 ========================================
 
-Coagulant nanoparticles are sticky and can attach to suspended particles as well as to each other. Some dissolved substances also adsorb to coagulant nanoparticles. The development of models to describe these interactions has been impeded by the widespread acceptance of the `charge neutralization hypothesis <https://projects.ncsu.edu/project/hubbepaperchem/Defnitns/Neutrlzn.htm>`_ as the mechanism that governs these interactions. However, this hypothesis fails to account for the size of  coagulant nanoparticles and the various contaminants in the raw water influent. Instead, a simplified the model describing removal of these differently sized contaminants is proposed below; this simplified model posits that it is possible to separate fast and slow processes, which allows for a sequential model.
+Coagulant nanoparticles are sticky and can attach to suspended particles as well as to each other. Some dissolved substances also adsorb to coagulant nanoparticles. The development of models to describe these interactions has been impeded by the widespread acceptance of the `charge neutralization hypothesis <https://projects.ncsu.edu/project/hubbepaperchem/Defnitns/Neutrlzn.htm>`_ as the mechanism that governs these interactions. However, this hypothesis fails to account for the size of  coagulant nanoparticles and the various contaminants in the raw water influent. Instead, a simplified model describing removal of these differently sized contaminants is proposed below; this simplified model posits that it is possible to separate fast and slow processes, which allows for a sequential model.
 
 Interactions between the various suspended and dissolved substances (see :numref:`figure_Particle_sizes`) can occur simultaneously as soon as the coagulant is blended with the raw water. The rates of these interactions are controlled by the transport processes of fluid deformation and molecular diffusion. Molecular diffusion is fastest for small particles and fluid deformation is most effective for larger particles. Thus the fastest process is hypothesized to be the diffusion of low mass molecules to the coagulant nanoparticles. Transport of the coagulant nanoparticles to attach to suspended solids is expected to be a slower process. Transport of suspended particles to collide with other suspended particles (flocculation) is even slower.
 
