@@ -90,7 +90,7 @@ The dimensions of the opening between cylinders and the diameter of the cylinder
 
     h_e = \left(\frac{A_{exp}}{A_{con}} -1 \right)^2 \, \frac{\bar  v_{exp}^2}{2g}
 
-where con = contracted control surface and exp = expanded control surface. We can solve the head loss equation for the dimensions of the contractions. First, solve for the area ratio
+Where con = contracted control surface and exp = expanded control surface. We can solve the head loss equation for the dimensions of the contractions. First, solve for the area ratio
 
 .. math::
 
