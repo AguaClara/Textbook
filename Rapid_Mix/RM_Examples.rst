@@ -9,7 +9,7 @@ Rapid Mix: Examples
 Example: pH Adjustment
 ======================
 
-Find the required dose of several bases to raise the pH at the Manzaragua Water Treatment Plant. The Mazaragua AguaClara plant consists of two 1 L/s plants operating in parallel. The plant is located in the municipality of Guinope, the department of El Paraiso, Honduras.
+Find the required dose of several bases to raise the pH at the Manzaragua Water Treatment Plant. The Manzaragua AguaClara plant consists of two 1 L/s plants operating in parallel. The plant is located in the municipality of Guinope, the department of El Paraiso, Honduras.
 
 .. _figure_Manzaragua_WTP:
 
@@ -48,7 +48,7 @@ The plant performed very poorly from the first day of operation. The first attem
    "Carbonates", ":math:`mg/L` as :math:`CaCO_3`", "-", "0"
    "Hardness", ":math:`mg/L` as :math:`CaCO_3`", "400", "15.68"
 
-This water has high color which suggests a high concentration of dissolved organic matter. The pH is a clear problem because the pH is too low for the coagulant nanoparticles to precipitate. As the water sample pH of 5.91 a significant fraction of the coagulant will remain soluble.
+This water has high color which suggests a high concentration of dissolved organic matter. The pH is a clear problem because the pH is too low for the coagulant nanoparticles to precipitate. As the water sample has a pH of 5.91 a significant fraction of the coagulant will remain soluble.
 
 Our goal is to determine how much base will need to be added to raise the pH. We do not have data on the *optimal* pH for treating high color water with PACl and so we will use pH 7 as the target.
 
@@ -70,7 +70,7 @@ We will find the amount of base that must be added using :eq:`Base_for_pH_Adjust
    ":math:`HCl` or :math:`HNO_3`", "-1", "0"
    ":math:`H_2SO_4`", "-2", "0"
 
-For :math:`Na_2CO_3` \* :math:`\Pi_{ANC}` = 2 because we are adding
+For :math:`Na_2CO_3` \* :math:`\Pi_{ANC}` = 2 we are adding
 :math:`CO_3^{-2}` which is multiplied by two in the ANC equation because
 :math:`CO_3^{-2}` can react with two protons. \* :math:`\Pi_{CO_3^{-2}}`
 = 1 because there is one mole of :math:`CO_3` per mole of
@@ -223,12 +223,12 @@ The analysis reveals that the choice of base matters. The most efficient (on a m
 .. _Table_Calcium_bases:
 
 .. csv-table:: Calcium base.
-   :header:  "Chemical name",   "common name",  "Chemcal formula"
+   :header:  "Chemical Name",   "Common Name",  "Chemical Formula"
    :widths: 20, 20, 20
 
-   "calcium carbonate","limestone or chalk",":math:`CaCO_3`"
-   "calcium hydroxide","slaked lime or hydrated lime",":math:`Ca(OH)_2`"
-   "calcium oxide","quicklime",":math:`CaO`"
+   "Calcium carbonate","Limestone or chalk",":math:`CaCO_3`"
+   "Calcium hydroxide","Slaked lime or hydrated lime",":math:`Ca(OH)_2`"
+   "Calcium oxide","Quicklime",":math:`CaO`"
 
 The calcium bases are relatively inexpensive and have the disadvantage of lower solubility than sodium bases. Calcium carbonate has a low solubility, carbon dioxide is present in the atmosphere, and thus calcium carbonate precipitation limits the concentration that can be used for chemical feeds.
 
@@ -255,7 +255,7 @@ The required dose for each of the bases is summarized below.
 .. _table_Base_table:
 
 .. csv-table:: Dose of each base required to change the pH of the Manzaragua water to 7.
-   :header: "units", ":math:`NaOH`", ":math:`NaHCO_3`", ":math:`Na_2CO_3`"
+   :header: "Units", ":math:`NaOH`", ":math:`NaHCO_3`", ":math:`Na_2CO_3`"
    :widths: 20, 20, 20, 20
 
    "[mmoles/L]",  "0.45",     "2.8",    "0.53"
@@ -265,7 +265,7 @@ The required dose for each of the bases is summarized below.
 
 .. _heading_LFOM_and_Coag_Injection_sizing:
 
-LFOM and coagulant injection sizing
+LFOM and Coagulant Injection Sizing
 ================================================
 
 A water treatment plant that is treating 120 L/s of water injects the coagulant into the middle of the pipe that delivers the raw water to the plant and then splits the flow into 2 parallel treatment trains for subsequent flocculation. The pipe is PVC 24 inch nominal pipe diameter SDR 26. The water temperature is :math:`0^{\circ}C`. Estimate the minimum distance between the injection point and the flow split.
@@ -304,14 +304,12 @@ We will use a :ref:`linear flow orifice meter <heading_lfom>` with 20 cm of head
 The LFOM requires a 24 inch diameter pipe.
 
 
-Example problem: Energy dissipation rate in a straight pipe
+Example Problem: Energy Dissipation Rate in a Straight Pipe
 =============================================================
 
 
-Solution scheme
-
-#. Calculate the friction factor
-#. Use :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters
+#. Calculate the friction factor.
+#. Use :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters.
 #. Convert to pipe length in meters.
 
 .. code:: python
