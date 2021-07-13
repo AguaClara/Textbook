@@ -5,7 +5,7 @@ Rapid Mix Theory and Future Work
 ********************************
 
 
-Our understanding of the coagulant nanoparticle attachment to suspended particles and dissolved species is currently quite speculative. This is an area that requires substantial research and modeling because has the potential to significantly influence the design of flocculators. We have anecdotal evidence that the process of transporting coagulant nanoparticles to suspended particle surfaces may be a slow, rate-limiting process, especially when coupled with high rate flocculators. Dissolved organic matter may slow the rate of coagulant nanoparticle transport by effectively increasing the size of the coagulant nanoparticles and thus reducing the diffusion rate.
+Our understanding of the coagulant nanoparticle attachment to suspended particles and dissolved species is currently quite speculative. This is an area that requires substantial research and modeling because it has the potential to significantly influence the design of flocculators. We have anecdotal evidence that the process of transporting coagulant nanoparticles to suspended particle surfaces may be a slow, rate-limiting process, especially when coupled with high rate flocculators. Dissolved organic matter may slow the rate of coagulant nanoparticle transport by effectively increasing the size of the coagulant nanoparticles and thus reducing the diffusion rate.
 
 Developing a fundamental understanding of the mixing and transport processes that occur between coagulant addition and flocculation is a very high priority for the AguaClara program.
 
@@ -116,7 +116,7 @@ The volume cleared is proportional to the relative velocity between clay and nan
 
 .. math:: {\rlap{-} V_{\rm{Cleared}}} \propto v_r
 
-We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between coagulant nanoparticles and clay particle that they will eventually collide with is assumed to be proportional to the average distance between clay particles. This assumption is both critical for the following derivation and is suspect. It is critical because if we were to assume that the relative velocity caused by shear is proportional to the nanoparticle diameter, the clay diameter, or the diffusion length scale, then the velocity would be extremely small and the time to clear the volume of fluid associated with one clay particle would take a very long time. However, wishing for a speedy process doesn't justify incorrect scaling. The relative velocity is assumed to be the velocity at which coagulant nanoparticles are transported into the two separate fluid volumes that will deform into the ring around the clay particles in the next few seconds.
+We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between coagulant nanoparticles and the clay particles that they will eventually collide with is assumed to be proportional to the average distance between clay particles. This assumption is both critical for the following derivation and is suspect. It is critical because if we were to assume that the relative velocity caused by shear is proportional to the nanoparticle diameter, the clay diameter, or the diffusion length scale, then the velocity would be extremely small and the time to clear the volume of fluid associated with one clay particle would take a very long time. However, wishing for a speedy process doesn't justify incorrect scaling. The relative velocity is assumed to be the velocity at which coagulant nanoparticles are transported into the two separate fluid volumes that will deform into the ring around the clay particles in the next few seconds.
 
 The assumption that the relative velocity scales with the average distance between clay particles leads to the following steps. The first step is just a proposed functional relationship. We could also have jumped to the assumption that the relative velocity is a function of the length scale and the velocity gradient.
 
@@ -126,7 +126,7 @@ In a uniform shear environment the velocity gradient is linear. Thus the relativ
 
 .. math:: v_r = \Lambda_{Clay} f \left( \varepsilon ,\nu \right)
 
-The only way to for :math:`\varepsilon` and :math:`\nu` to produce dimensions of time is to combine to create 1/G.
+The only way to for :math:`\varepsilon` and :math:`\nu` to produce dimensions of time is to combine them to create 1/G.
 
 .. math:: v_r \approx \Lambda_{Clay} G
 
@@ -204,7 +204,7 @@ Using the equation for :math:`L_{Diff}` above, we can solve for  the time requir
 
 The time required for the coagulant to be transported to clay surfaces is strongly dependent on the turbidity as indicated by the average spacing of clay particles, :math:`\Lambda_{Clay}`. As turbidity increases the spacing between clay particles decreases and the time required for shear to transport coagulant nanoparticles to the clay decreases. Increasing the shear also results in faster transport of the coagulant nanoparticles to clay surfaces. The times required are strongly influenced by the size of the coagulant nanoparticles because larger nanoparticles diffuse more slowly.
 
-Below we estimate the time required to achieve 80% attachment of nanoparticles in a 10 NTU clay suspension in a reactor with G of 100 Hz.
+Below we estimate the time required to achieve 80% attachment of nanoparticles in a 10 NTU clay suspension in a reactor with a G of 100 Hz.
 
 .. code:: python
 
