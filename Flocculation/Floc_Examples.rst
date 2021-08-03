@@ -5,7 +5,7 @@ Flocculation Examples
 **************************
 
 
-Pipe flocculator
+Pipe Flocculator
 ================
 
 The following analysis requires complete reworking.
