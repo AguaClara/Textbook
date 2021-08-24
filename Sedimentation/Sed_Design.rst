@@ -8,17 +8,21 @@ Sedimentation Tank Features
 
 The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank that is designed with the following goals:
 
-1) to minimize secondary currents that could send high velocity flow through some of the plate settlers
-1) to prevent accumulation of sludge that would tend to become anaerobic and release both dissolved organics (taste and order issues) and methane bubbles that would carry flocs to the top of the sedimentation tank
-1) to include a stable floc blanket that reduces the settled water turbidity
-1) to remove the solids without requiring power or moving mechanical parts
-1) to provide a mechanism for the operator to dump poorly flocculated water before it enters the sedimentation tank. This is important to reduce the recovery time when there is a flocculation failure.
-1) to ensure easy operation and maintenance.
+#. To minimize secondary currents that could send high velocity flow through some of the plate settlers
+#. To prevent accumulation of sludge that would tend to become anaerobic and release both dissolved organics (taste and order issues) and methane bubbles that would carry flocs to the top of the sedimentation tank
+#. To include a stable floc blanket that reduces the settled water turbidity
+#. To remove the solids without requiring power or moving mechanical parts
+#. To provide a mechanism for the operator to dump poorly flocculated water before it enters the sedimentation tank. This is important to reduce the recovery time when there is a flocculation failure.
+#. To ensure easy operation and maintenance.
 
 Components and Flow Paths
 ===========================
 
-In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.
+In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are:
+
+#. How water enters the sedimentation tank.
+#. How water moves through the sedimentation tank.
+#. How water leaves the sedimentation tank.
 
 .. _figure_sed_tank_overview:
 
@@ -329,10 +333,17 @@ Further works is required to determine the maximum shear stress that will not ca
 
 .. _heading_Sed_Tank_Velocity_Flow:
 
-Comparison of velocities and flow in sedimentation tank
+Comparison of Velocities and Flow in Sedimentation Tank
 ========================================================
 
-To understand how water flows in the sedimentation tank, we must understand how the water velocity changes with the geometry. There are four distinct zones in the sedimentation tank: 1) the velocity of water exiting the diffusers, 2) the velocity of water moving through the floc blanket, 3) the velocity of water that enters the plate settlers, and 4) the velocity of water through the plate settlers. The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v * A`, will be our guiding principle. In all cases,
+To understand how water flows in the sedimentation tank, we must understand how the water velocity changes with the geometry. There are four distinct zones in the sedimentation tank: 
+
+#. The velocity of water exiting the diffusers.
+#. The velocity of water moving through the floc blanket.
+#. The velocity of water that enters the plate settlers.
+#. The velocity of water through the plate settlers. 
+
+The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v * A`, will be our guiding principle. In all cases,
 
 | :math:`Q_{Sed} =` flow rate through each sedimentation tank
 | :math:`W_{Sed} =` width of each sedimentation tank
@@ -346,7 +357,7 @@ To understand how water flows in the sedimentation tank, we must understand how 
 
     AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
 
-1) Velocity and flow exiting the diffusers
+1) Velocity and Flow Exiting the Diffusers
 ------------------------------------------------------------
 
 This is discussed specifically in the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>`.
