@@ -145,7 +145,7 @@ As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a failure mod
 
 We will solve for both the plate settler and tube settler conditions.
 
-1) Find the velocity gradient next to the plate:
+**1) Find the velocity gradient next to the plate:**
 
 .. _figure_plate_settler_boundary_conditions:
 
@@ -305,7 +305,7 @@ The resulting velocity gradient as function of average velocity for tube geometr
 
   \frac{ dv_{\alpha_{Tube}} }{ dy_{y=0} } = \frac{8\bar v_{\alpha_{Tube}}}{D}
 
-2) Find the fluid velocity at the center of the floc:
+**2) Find the fluid velocity at the center of the floc:**
 
 Now, we want to determine the velocity at the center of the floc. For flow between parallel plates we determined that,
 
@@ -334,7 +334,7 @@ Substituting by the trigonometric relationship :math:`\bar v_{\alpha_{Plate}} = 
 
    Fluid velocity at the center of the floc.
 
-3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):
+**3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):**
 
 
 Recall from our :ref:`previous explanation of terminal velocity <heading_Floc_Terminal_Velocity>` that the terminal velocity, :math:`v_t`, of the floc can be calculated by,
@@ -360,7 +360,7 @@ We will need this equation for :math:`D` in the next step.
 
    Terminal velocity of the floc down the plate (for the case of zero velocity fluid).
 
-4) Set the fluid velocity at the center of the floc equal to the terminal velocity of the floc to find the critical case of no movement, and the required plate spacing:
+**4) Set the fluid velocity at the center of the floc equal to the terminal velocity of the floc to find the critical case of no movement, and the required plate spacing:**
 
 The floc settles due to gravitational forces. First, the :math:`\alpha` component of the gravitational settling force, :math:`v_{t,\alpha}`, must be found by trigonometric relationships.
 
@@ -391,7 +391,7 @@ In this equation, we have both :math:`v_t` and :math:`D`, but we can simplify fu
 The minimum spacing increases as the size of the primary particle, :math:`D_{cp}`, decreases. This is an important insight because flocs that are made of coagulant nanoparticles (no clay) are the most difficult flocs to capture. Flocs made of coagulant nanoparticles are less dense than flocs made of clay. Coagulant nanoparticle flocs are produced when water treatment plants are used to remove dissolved organics or arsenic or when high coagulant dosages are used.
 
 
-5) Find the floc sedimentation velocity, :math:`v_{Slide}`:
+**5) Find the floc sedimentation velocity, :math:`v_{Slide}`:**
 
 Finally, we can determine :math:`v_{Slide}` by,
 
