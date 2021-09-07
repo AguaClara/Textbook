@@ -101,7 +101,7 @@ The relationship between the vertical velocity and the velocity in the direction
 .. _table_lamellar_settler_geometry:
 
 .. csv-table:: Lamellar settler geometry and relevant equations.
-   :header: "Settler geometry", "Single tubes", "multiple tubes or plates"
+   :header: "Settler geometry", "Single tubes", "Multiple tubes or plates"
    :align: left
 
    ":math:`\bar v_{z}` ratio", ":math:`\frac{\bar v_{z_{Tube}}}{\bar v_{c}}=\frac{L}{D} \cos \alpha \sin \alpha+\sin ^{2} \alpha`", ":math:`\frac{\bar v_{z_{Plate}}}{\bar v_{c}}=\frac{L}{S} \cos \alpha \sin \alpha+1`"
@@ -133,15 +133,15 @@ Floc Rollup and Slide Velocity
 
 As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine this by calculating the floc sedimentation velocity, :math:`v_{Slide}`, that can be captured given a plate spacing. The steps to calculate this are:
 
-1) find the velocity gradient next to the plate
+#. Find the velocity gradient next to the plate
 
-2) find the fluid velocity at the center of the floc
+#. Find the fluid velocity at the center of the floc
 
-3) find terminal velocity of the floc down the plate (for the case of zero velocity fluid)
+#. Find terminal velocity of the floc down the plate (for the case of zero velocity fluid)
 
-4) set those two velocities equal for the critical case of no movement, and the required plate spacing
+#. Set those two velocities equal for the critical case of no movement, and the required plate spacing
 
-5) find the floc sedimentation velocity, :math:`v_{Slide}`
+#. Find the floc sedimentation velocity, :math:`v_{Slide}`
 
 We will solve for both the plate settler and tube settler conditions.
 
@@ -720,9 +720,6 @@ The bottom-view of the diffuser is shown in :numref:`figure_BvsS_diffuser`.
 | :math:`\bar v_{jet} =` velocity of the jet exiting the diffuser
 | :math:`Q_{diff} =` flow rate through each diffuser
 | :math:`h_{L,jet} =` head loss in jet leaving the jet reverser
-
-Diffuser Design
----------------------
 
 What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our sedimentation tank, we want an upflow velocity of 1 mm/s. Additionally, because diffusers are a key component of our "sedimentation tank as a circuit", we want to precisely control head loss in the jet leaving the jet reverser because that will help us achieve uniform flow within and between sedimentation tanks. AguaClara designs set head loss in the jet constant at 1 cm.
 
