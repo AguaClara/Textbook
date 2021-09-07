@@ -62,8 +62,8 @@ Remember, the goal is to have even flow distribution. It is bad if different flo
 
 .. _heading_Good_v_Bad_Hl:
 
-- anything that makes parallel flow paths different is "bad" head loss.
-- anything that increases head loss through all of the paths, to make differences between the paths less significant, is "good" head loss.
+- Anything that makes parallel flow paths different is "bad" head loss.
+- Anything that increases head loss through all of the paths, to make differences between the paths less significant, is "good" head loss.
 
 We can artificially introduce the second form of head loss to dominate the resistance and render small variations due to pressure recovery insignificant. We will go through each part of the sedimentation tank to understand how these goals drive AguaClara designs. As we learn about each component, we will attempt to categorize its contribution into creating "good" or "bad" head loss.
 
@@ -416,7 +416,7 @@ Let's recap some important conclusions from this section on the floc blanket.
 - We do not know what exactly contributes to the ability of a floc blanket to resuspend or survive variable flow.
 
 
-2) Velocity and flow in the floc blanket
+2) Velocity and Flow in the Floc Blanket
 ----------------------------------------
 
 After the water exits the diffusers and jet reverser, it flows through the expanded floc blanket region where:
@@ -586,7 +586,7 @@ Solving for :math:`\bar v_c = \frac{Q}{A}`
 We can see that there are five parameters which will impact each other in our design :math:`\bar v_{z_{Plate}}, \bar v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`\bar v_{z_{Plate}}, \bar v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on :ref:`plate settler design <heading_Sed_Tank_Plate_Settler_Design>`.
 
 
-3) Velocity and flow entering the plate settlers
+3) Velocity and Flow Entering the Plate Settlers
 ------------------------------------------------------------
 
 The 'active' sedimentation zone refers to the area of the tank in which water can flow through the plate settlers where:
@@ -598,7 +598,7 @@ The only reason that there is a distinction between this area and the floc blank
 
 Thus, :math:`Q_{Sed} = W_{Sed} L_{SedActive} \bar v_{z_{Active}}`, and :math:`\bar v_{z_{Active}} > \bar v_{z_{fb}}`.
 
-4) Velocity and flow in the plate settlers
+4) Velocity and Flow in the Plate Settlers
 -------------------------------------------
 
 Now, we will discuss flow through plate settlers where:
@@ -724,11 +724,11 @@ Now, lets discuss a plate settler problem that has not yet been solved: **floc v
 
 Some hypotheses and questions may include:
 
-1) is the problem related to dissolved air flotation? Dissolved air coming out of flocculation can cause flocs to float to the top.
+1) Is the problem related to dissolved air flotation? Dissolved air coming out of flocculation can cause flocs to float to the top.
 
 After asking the operators, we are told that there are not any bubbles in the sedimentation tank.
 
-2) is the problem regularly intermittent? Is there anything that we can correlate these fluctuations to?
+2) Is the problem regularly intermittent? Is there anything that we can correlate these fluctuations to?
 
 After asking the operators, we are told that the floc volcanoes appear in the early afternoon each day.
 
@@ -761,7 +761,7 @@ So, now that we think we know what the problem is, how would we try to solve it?
 
 Let's recap some important conclusions from this section on plate settlers.
 
-1. Reynolds number calculations of flow through plate settlers prove that there is laminar flow between plate settlers. This is important because it allows us to assume that a parabolic velocity profile is established.
+#. Reynolds number calculations of flow through plate settlers prove that there is laminar flow between plate settlers. This is important because it allows us to assume that a parabolic velocity profile is established.
 #. There is very low head loss between plate settlers so they will not do a good job of helping to achieve uniform flow between the plate settlers.
 #. The plate settlers are designed to capture flocs with sedimentation velocities greater than the settle capture velocity. AguaClara currently uses :math:`\bar v_c = 0.12` mm/s but this value needs to be further optimized; we would like to know how settled water turbidity changes with capture velocity. Future work includes choosing a settle capture velocity based on overall plate performance.
 #. Plate settler spacing:
@@ -848,7 +848,13 @@ The submerged effluent manifold transports water from the sedimentation tank to 
 Sedimentation Tank Summary
 ============================
 
-You have now been introduced to the AguaClara sedimentation tank in three parts: 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank. This introduction should allow you to understand the components of the sedimentation unit process, the purpose of each component, and AguaClara-specific innovations.
+You have now been introduced to the AguaClara sedimentation tank in three parts: 
+
+1) How water enters the sedimentation tank;
+2) How water moves through the sedimentation tank, and;
+3) How water leaves the sedimentation tank. 
+
+This introduction should allow you to understand the components of the sedimentation unit process, the purpose of each component, and AguaClara-specific innovations.
 
 Let's recap some important points about the sedimentation tank.
 
