@@ -86,11 +86,11 @@ Now, we can use this form of the capture velocity equation to solve for :math:`B
    :header: "Parameter", "Variable", "Determined by:", "Determines:", "Value"
    :align: left
 
-   Upflow velocity, :math:`\bar v_{z_{fb}}`, floc blanket, plan view area of tank, 1 :math:`\frac{mm}{s}`
-   Capture velocity, :math:`\bar v_c`, target turbidity, particle size distribution, 0.12 :math:`\frac{mm}{s}`
-   Plate angle, :math:`\alpha`, self-cleaning requirements, :math:`L`, 60 deg
-   Plate spacing, :math:`S`, clogging and floc rollup constraints, :math:`L`, 2.5 cm
-   Plate settler length, :math:`L`, ":math:`\bar v_{z_{fb}}, \bar v_c, \alpha, S`",tank depth, Calculated for each plant
+   Upflow velocity, :math:`\bar v_{z_{fb}}`, Floc blanket, Plan view area of tank, 1 :math:`\frac{mm}{s}`
+   Capture velocity, :math:`\bar v_c`, Target turbidity, Particle size distribution, 0.12 :math:`\frac{mm}{s}`
+   Plate angle, :math:`\alpha`, Self-cleaning requirements, :math:`L`, 60 deg
+   Plate spacing, :math:`S`, Clogging and floc rollup constraints, :math:`L`, 2.5 cm
+   Plate settler length, :math:`L`, ":math:`\bar v_{z_{fb}}, \bar v_c, \alpha, S`",Tank depth, Calculated for each plant
 
 The relationship between the vertical velocity and the velocity in the direction of the sloped tube or plate settlers is given by
 
