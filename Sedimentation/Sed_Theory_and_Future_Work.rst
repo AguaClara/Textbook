@@ -9,14 +9,14 @@ Unsolved sedimentation tank failure modes:
 #. :ref:`Floc volcanoes <heading_Floc_Volcanoes>`
 #. Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.
 #. Slime growth from iron-oxidizing bacteria.
-#. NOM impact on floc density
+#. NOM impact on floc density.
 
 .. _heading_Floc_Floc_Blanket:
 
 Flocculator to Floc Blanket Transition
 =======================================
 
-We now how a published flocculator model and we have strong evidence that primary particles are removed first order with respect to depth (or time) in the floc blanket. Given these two models it is possible for the first time to optimize the design of a flocculator based on minimizing the volume of the flocculator and floc blanket reactors.
+We now have a published flocculator model and we have strong evidence that primary particles are removed first order with respect to depth (or time) in the floc blanket. Given these two models it is possible for the first time to optimize the design of a flocculator based on minimizing the volume of the flocculator and floc blanket reactors.
 
 From the floc model we have
 
@@ -171,7 +171,7 @@ We hypothesize that the flocs in floc blankets serve as collectors that primary 
 
 The number of collectors that a primary particle passes is proportional to the solids concentration (a surrogate for the number concentration of flocs), the primary particle residence time in the floc blanket, and the sedimentation velocity of the flocs. The sedimentation velocity of the flocs is important because that is what causes a relative velocity between the primary particles and the flocs.
 
-As we have explored increasing the upflow velocity in sedimentation tanks the performance has dropped markedly. This is undoubtedly due in part to the combined effective of a very dilute floc blanket at high upflow velocities AND a low residence time for the primary particles.
+As we have explored increasing the upflow velocity in sedimentation tanks the performance has dropped markedly. This is undoubtedly due in part to the combined effect of a very dilute floc blanket at high upflow velocities AND a low residence time for the primary particles.
 
 Would it be possible to increase the concentration of the floc blanket and thus increase the collision rate? At 3 mm/s upflow velocity there are very few flocs that can stay in the floc blanket. We need a mechanism to transport flocs to the bottom of the floc blanket and return them again after they are carried to the top of the floc blanket.
 
@@ -211,7 +211,7 @@ Now we can substitute to get the collision potential as a function of the flow r
 
 .. math:: CP_{fb} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{\bar v_{hindered}}{\bar v_z}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{fb}\bar v_{hindered}} {\bar v_z}
 
-We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc blanket. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc blanket. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland measurements of the solids concentration in the floc hopper sludge.
+We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc blanket. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc blanket. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland's measurements of the solids concentration in the floc hopper sludge.
 
 .. code:: python
 
@@ -317,7 +317,7 @@ Now we can solve for the required tube diameter
 
 The head loss in the recycle tube is approximately 1.6 cm in a 1.5 m deep floc blanket.
 
-The recycle line will be installed between the bottom of the tube settler and the inlet to the sedimentation tank. The recycle line will connect  directly to the side of the sedimentation tank to minimize minor losses. We will use a 0.25" ID, 3/8"OD clear flexible tube for the recycle line. We will use PVC glue to attach the flexible tube to the rigid clear PVC tubing.
+The recycle line will be installed between the bottom of the tube settler and the inlet to the sedimentation tank. The recycle line will connect  directly to the side of the sedimentation tank to minimize minor losses. We will use a 0.25" ID, 3/8" OD clear flexible tube for the recycle line. We will use PVC glue to attach the flexible tube to the rigid clear PVC tubing.
 
 It is possible that it will be necessary to prevent flow in the recycle line initially so that it doesn't flow upward. Once the tube begins filling with solids it should be possible for it to start flowing downwards.
 
