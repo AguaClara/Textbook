@@ -290,6 +290,8 @@ Flow distribution between and within sedimentation tanks is an important design 
 
 The following variable definitions and equations will be useful in answering later questions.
 
+**1. Determine the relationship** between diffuser exit velocity and the head loss in the parallel paths.
+
 :math:`{h}_{L,ParallelPath}` is the head loss (flow resistance) in the parallel paths leaving the manifold. The head loss in the parallel path is the total head loss from where the flow leaves the manifold to the point where the parallel flows reunite.
 
 :math:`\Delta{H}_{Manifold}` is the variability in piezometric head in the manifold that is driving the flow through the parallel paths.
@@ -311,8 +313,6 @@ The maximum allowable velocity in the manifold is given by:
 .. math:: \left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{{v_{manifold}}^{2}}{4g}
 
 Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint, :math:`\Pi_{DiffuserFlow}`, and the head loss in the parallel paths, :math:`h_{L,ParallelPath}`.
-
-**1. Determine the relationship** between diffuser exit velocity and the head loss in the parallel paths.
 
 **2. Determine an equation** for maximum velocity for an inlet manifold in terms of diffuser exit velocity and the flow distribution constraint.
 
