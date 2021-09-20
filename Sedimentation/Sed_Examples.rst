@@ -313,6 +313,7 @@ The maximum allowable velocity in the manifold is given by:
 Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint, :math:`\Pi_{DiffuserFlow}`, and the head loss in the parallel paths, :math:`h_{L,ParallelPath}`.
 
 **1. Determine the relationship** between diffuser exit velocity and the head loss in the parallel paths.
+
 **2. Determine an equation** for maximum velocity for an inlet manifold in terms of diffuser exit velocity and the flow distribution constraint.
 
 Write a function for maximum velocity for an inlet manifold using the equations you just found.
