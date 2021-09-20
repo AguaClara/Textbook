@@ -7,7 +7,7 @@ Future Work
 Unsolved sedimentation tank failure modes:
 
 #. :ref:`Floc volcanoes <heading_Floc_Volcanoes>`
-#. Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.
+#. Dissolved air flotation that results from air coming out of solution. Two sources of air include compressed air traveling from the transmission line and dissolved air released due to increased temperature.
 #. Slime growth from iron-oxidizing bacteria.
 #. NOM impact on floc density.
 
