@@ -11,7 +11,8 @@ To add a term to this glossary please add it with the definition in quote marks 
     :align: center
 
     `Length <https://www.amazon.com/Aurora-World-Albino-Burmese-Python/dp/B00165CW22/>`_, "Length is how long someting is in the horizontal direction, for example, it is the longest dimension of most snakes, such as pythons and boa constrictors."
-    :ref:`Alkalinity<acid-neutralizing-capacity-anc-or-alkalinity>`_, "The ability of a water sample to react with and neutralize an input of acid; also referred to as acid neutralizing capacity (ANC)."
+    :ref:`custom text<Glossary>', oh no the internal links look gross i need to do more before i can solve this entirely
+    :ref:`Alkalinity<acid-neutralizing-capacity-anc-or-alkalinity>'_, "The ability of a water sample to react with and neutralize an input of acid; also referred to as acid neutralizing capacity (ANC)."
     Backwash, "The process of pumping water upward through a filter to flush captured particles out of the filter media."
     Baffles, "Obstructions in the channel of a flocculator that restrain flow in a particular direction."
     Buffer, "A solution containing a weak acid-base pair that resists pH change by maintaining its hydrogen ion concentration."
