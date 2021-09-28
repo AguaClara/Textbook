@@ -26,7 +26,7 @@ that will probably look like:
 .. _equation_equation_name:
     
     Equation for energy:
-    :math:'400 +5 + TRE = 4'
+     :math:'400 +5 + TRE = 4'
     
 .. _equation_next_equation:
     
