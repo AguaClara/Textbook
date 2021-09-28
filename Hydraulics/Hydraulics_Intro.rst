@@ -38,7 +38,7 @@ The sum of the pressure and elevation term in the energy equation is the piezome
     :align: center
     :alt: Sloped manifold with no flow
 
-    Piezometric head is constant in a stationary body of water. The piezometric head inside the enclosed sloped pipe is greater (by height H) than the piezometric head in the tank. Thus if we add an orifice to this sloped pipe, water will from the sloped pipe into the tank.
+    Piezometric head is constant in a stationary body of water. The piezometric head inside the enclosed sloped pipe is greater (by height H) than the piezometric head in the tank. Thus if we add an orifice to this sloped pipe, water will flow from the sloped pipe into the tank.
 
 Add multiple outlets to this sloped pipe to create a sloped manifold (:numref:`figure_Sloped_Manifold_with_flow`). The energy equation applied between control surface 1 and n  shows that the piezometric head in an inlet manifold increases in the direction of flow for cases where head loss is smaller than :math:`\frac{\bar v_{M_1}^2}{2 g}`.
 
@@ -57,11 +57,11 @@ Add multiple outlets to this sloped pipe to create a sloped manifold (:numref:`f
 Inlet Manifold Flow Distribution
 ================================
 
-There is disagreement in the literature about the physics of manifolds. One school of thought postulates that the flow out of the ports exiting a manifold are controlled by the total energy of the flow inside the manifold. The other school of thought postulates that the flow of water out of the ports is controlled by the difference in piezometric head between the manifold and the receiving reservoir. These two approaches are mutually exclusive and make completely different predictions about how manifolds will perform especially for the case where head loss in the manifold is small compared with the pressure recovery caused by the gradual flow expansion in the manifold.
+There is disagreement in the literature about the physics of manifolds. One school of thought postulates that the flow out of the ports exiting a manifold is controlled by the total energy of the flow inside the manifold. The other school of thought postulates that the flow of water out of the ports is controlled by the difference in piezometric head between the manifold and the receiving reservoir. These two approaches are mutually exclusive and make completely different predictions about how manifolds will perform, especially for the case where head loss in the manifold is small compared with the pressure recovery caused by the gradual flow expansion in the manifold.
 
 Fortunately it is relatively easy to check the physics to see which approach is correct. A venturi (gradual flow contraction in a pipe) is used to generate a low pressure region in a pipe by converting pressure into kinetic energy. Venturis can be used to generate low pressure inside the pipe and then pull fluid **into** the pipe even though the total energy of the fluid in the pipe far exceeds the energy of the fluid that was outside of the pipe! This proves that flow out of a manifold is due to the difference in piezometric head and NOT due to the difference in total energy.
 
-If manifolds were built using pitot type exits with the exit facing upstream and into the flow of the fluid then the exit from the manifold would be based on the total energy. The manifolds that we use in water treatment plants do not have pitot tube style ports and thus our analysis of manifolds is based on piezometric head.
+If manifolds were built using pitot type exits with the exit facing upstream and into the flow of the fluid, the exit from the manifold would be based on the total energy. The manifolds that we use in water treatment plants do not have pitot tube style ports and thus our analysis of manifolds is based on piezometric head.
 
 Flow distribution from ports exiting a manifold is controlled by the change in piezometric head inside the manifold and the change in piezometric head as the water exits through a port. The reason that the flow from each port is not identical is because of changes in piezometric head in the manifold. These changes are caused by major losses due to shear on the manifold walls and due to pressure recovery as the velocity in the manifold decreases. The control volume is shown in :numref:`figure_inlet_manifold`
 
