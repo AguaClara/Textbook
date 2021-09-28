@@ -11,5 +11,6 @@ To add a term to this glossary please add it with the definition in quote marks 
     :align: center
 
     Length, "Length is how long someting is in the horizontal direction, for example, it is the longest dimension of most snakes, such as pythons and boa constrictors"
-    Mass, :math:`[M]`
-    Time, :math:`[T]`
+    Alkalinity, "The ability of a water sample to react with and neutralize an input of acid; also referred to as acid neutralizing capacity (ANC)."
+
+
