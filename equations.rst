@@ -17,13 +17,19 @@ Equations
 
 
 If you would like to be able to ``ctrl+f`` some variables/equations, click on 'View page source' on the top right of this window. If you want to know what a Greek variable is but don't know what it's called, you can view the source text on the file where you found the variable. nu, mu, eta, who actually remembers what these all look like? The letter 'v' should sue 'nu' for copyright infringement. Or is it the other way around?
-
-.. _table_parameter_table:
-
-.. csv-table:: Equations
-    :header: Name, Equation, Variable being solved for
-    :widths: 10, 30, 10
-
-    :math:`A`,Area,:math:`[L]^2`
-    :math:`A_{floc}`,Projected cross sectional area of particle,:math:`[L]^2`
+    
+    
+each equation will probably need to have it's own "title" to allow it to be linked to on a page. 
+    
+that will probably look like: 
+   
+.. _equation_equation_name:
+    
+    Equation for energy:
+    :math:'400 +5 + TRE = 4'
+    
+.. _equation_next_equation:
+    
+   Equation to find another things
+    Math math math
    
