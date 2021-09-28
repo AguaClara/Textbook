@@ -1,7 +1,7 @@
 Glossary
 ********
 
-To add a term to this glossary please add it with the definiteion in quote marks so that the whole thing is treated as a string rather than further separated by commas
+To add a term to this glossary please add it with the definition in quote marks so that the whole thing is treated as a string rather than further separated by commas
 
 .. _glossary_table:
 
