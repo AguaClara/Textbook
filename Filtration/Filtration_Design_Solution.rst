@@ -43,7 +43,7 @@ The stacked rapid sand filter at Tamara, Honduras is treating 12 L/s of water wi
     V_filter_backwash = 11 * u.mm / u.s
 
 
-Remember: don’t break continuity!
+Remember: Don’t break continuity!
 ---------------------------------
 
 Ensure that you use the variables defined above in your code, do not hard code any numbers if you do not have to.
