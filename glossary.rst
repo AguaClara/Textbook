@@ -2,7 +2,7 @@ Glossary
 ********
 
 To add a term to this glossary please add it with the definition in quote marks so that the whole thing is treated as a string rather than further separated by commas.
-:ref:`Alkalinity<https://aguaclara.github.io/Textbook/Chemistry_of_Water_Treatment/Chemistry_Derivations.html#acid-neutralizing-capacity-anc-or-alkalinity>`
+`Alkalinity <https://aguaclara.github.io/Textbook/Chemistry_of_Water_Treatment/Chemistry_Derivations.html#acid-neutralizing-capacity-anc-or-alkalinity>`
 
 .. _glossary_table:
 
