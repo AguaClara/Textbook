@@ -48,10 +48,7 @@ Remember: don’t break continuity!
 
 Ensure that you use the variables defined above in your code, do not hard code any numbers if you do not have to.
 
-1)
-~~
-
-Calculate the total sand depth of all 6 sand layers.
+**1) Calculate the total sand depth** of all 6 sand layers.
 
 .. code:: python
 
@@ -60,10 +57,7 @@ Calculate the total sand depth of all 6 sand layers.
 
 The total depth of the filter sand is 1.2 meter
 
-2)
-~~
-
-Calculate the diameter that is larger than 60% of the sand (D60 of the filter sand).
+**2) Calculate the diameter** that is larger than 60% of the sand (D60 of the filter sand).
 
 .. code:: python
 
@@ -72,10 +66,7 @@ Calculate the diameter that is larger than 60% of the sand (D60 of the filter sa
 
 The D60 for the sand grain size is 0.8 millimeter
 
-3)
-~~
-
-What is the total filter bed plan view area for both filters in Tamara?
+**3) What is the total filter** bed plan view area for both filters in Tamara?
 
 .. code:: python
 
@@ -84,10 +75,7 @@ What is the total filter bed plan view area for both filters in Tamara?
 
 The filter bed plan view area is  1.091 meter ** 2
 
-4)
-~~
-
-What is the velocity of water through a filter during filtration? Recall that the flow through the filter is the same in filter and backwash modes.
+**4) What is the velocity of water** through a filter during filtration? Recall that the flow through the filter is the same in filter and backwash modes.
 
 .. code:: python
 
@@ -96,10 +84,7 @@ What is the velocity of water through a filter during filtration? Recall that th
 
 The filtration velocity is 1.833 millimeter / second
 
-5)
-~~
-
-**Create a function** to calculate the head loss through the filter at the beginning of filtration with a clean filter bed. Then use that function to find the head loss through the clean bed of the Tamara filter. Assume that each flow path receives the same flow.
+**5) Create a function** to calculate the head loss through the filter at the beginning of filtration with a clean filter bed. Then use that function to find the head loss through the clean bed of the Tamara filter. Assume that each flow path receives the same flow.
 
 Recall: - If you have flow paths in parallel, the head loss is NOT the sum of the head loss in each path. - Instead, the head loss in each path is the same as the total head loss.
 
@@ -116,10 +101,7 @@ Recall: - If you have flow paths in parallel, the head loss is NOT the sum of th
 The head loss through the clean filter sand is 15.20 cm
 
 
-6)
-~~
-
-**Create a function** to estimate the minimum fluidization velocity for this filter bed. Then use that function to find the minimum fluidization velocity of the Tamara filter. Fluidization occurs at the beginning of backwash as all of the water flows through the bottom inlet. Note that this is not the actual velocity used for backwashing the sand.
+**6) Create a function** to estimate the minimum fluidization velocity for this filter bed. Then use that function to find the minimum fluidization velocity of the Tamara filter. Fluidization occurs at the beginning of backwash as all of the water flows through the bottom inlet. Note that this is not the actual velocity used for backwashing the sand.
 
 .. code:: python
 
@@ -133,10 +115,7 @@ The head loss through the clean filter sand is 15.20 cm
 The minimum fluidization velocity for this filter bed is 6.1 mm/s
 
 
-7)
-~~
-
-First, plot the minimum backwash velocity as a function of water temperature from 0°C to 30°C. Then use your plot to answer the following question: if you have a water treatment plant with a single filter and there is a drought that is reducing flow to the plant, when should you backwash the filter? Should you backwash when the water is coolest or when the water is warmest?
+**7) Plot the minimum backwash velocity** as a function of water temperature from 0°C to 30°C. Then use your plot to answer the following question: if you have a water treatment plant with a single filter and there is a drought that is reducing flow to the plant, when should you backwash the filter? Should you backwash when the water is coolest or when the water is warmest?
 
 .. code:: python
 
@@ -160,10 +139,7 @@ First, plot the minimum backwash velocity as a function of water temperature fro
 
    The minimum backwash velocity increases with temperature. Thus it is best to backwash when the water is coolest.
 
-8)
-~~
-
-What is the residence time of water in the filter during backwash, when the bed is fluidized? You may assume the sand bed expansion ratio is 1.3.
+**8) What is the residence time** of water in the filter during backwash, when the bed is fluidized? You may assume the sand bed expansion ratio is 1.3.
 
 .. code:: python
 
@@ -180,10 +156,7 @@ The residence time in the fluidized bed during backwash is 76.36 second
 Our next overall goal is to determine the ratio of water wasted in a Stacked Rapid Sand (StaRS) Filter to water treated in a StaRS. Given that the backwash water that ends up above the filter bed never returns to the filter it isn’t necessary to completely clear the water above the filter bed during a backwash cycle. Therefore we anticipate that backwash can be ended after approximately 3 expanded bed residence times. In addition it takes about 1 minute to initiate backwash by lowering the water level above the filter bed.
 
 
-9)
-~~
-
-To start, estimate the time between beginning backwash and finishing the cleaning of the bed.
+**9) Estimate the time** between beginning backwash and finishing the cleaning of the bed.
 
 .. code:: python
 
@@ -195,10 +168,7 @@ To start, estimate the time between beginning backwash and finishing the cleanin
 The time to backwash the filter is 289.1 second
 
 
-10)
-~~~
-
-Estimate the total **depth** of water that is wasted while backwash is occurring.
+**10) Estimate the total depth** of water that is wasted while backwash is occurring.
 
 .. code:: python
 
@@ -208,16 +178,13 @@ Estimate the total **depth** of water that is wasted while backwash is occurring
 
 The total depth of water that is wasted is 3.18 meter
 
-11)
-~~~
-
-Estimate the total depth of water that is lost due to refilling the filter box at the end of backwash plus the slow refilling to the maximum dirty bed height. You may ignore the influence of plumbing head loss and you may assume that the dirty bed head loss is about 40 cm. The water level in the filter during backwash is lower than the water level at the end of filtration by both the head loss during backwash AND the head loss at the end of filtration. There is also an additional 20 cm of lost water that is required for the hydraulic controls.
+**11) Estimate the total depth** of water that is lost due to refilling the filter box at the end of backwash plus the slow refilling to the maximum dirty bed height. You may ignore the influence of plumbing head loss and you may assume that the dirty bed head loss is about 40 cm. The water level in the filter during backwash is lower than the water level at the end of filtration by both the head loss during backwash AND the head loss at the end of filtration. There is also an additional 20 cm of lost water that is required for the hydraulic controls.
 
 To reiterate, the three components that contribute to the depth of water lost in refilling the filter box after backwash are as follows:
 
-1. Head loss during clean-bed filtration.
-2. Difference in head loss between clean-bed filtration and dirty-bed filtration, just before backwash.
-3. Height of the pipe that initiates backwash, also called the hydraulic control. This is actually the pipe’s diameter, since it is laying sideways in the filter.
+#. Head loss during clean-bed filtration.
+#. Difference in head loss between clean-bed filtration and dirty-bed filtration, just before backwash.
+#. Height of the pipe that initiates backwash, also called the hydraulic control. This is actually the pipe’s diameter, since it is laying sideways in the filter.
 
 .. code:: python
 
@@ -229,10 +196,7 @@ To reiterate, the three components that contribute to the depth of water lost in
 
 The total depth of water that is lost due to refilling the filter box is 1.8 meter
 
-12)
-~~~
-
-Now calculate the total length (or depth) of water that is wasted due to backwash by adding the two previous lengths. The length found in problem 10 represents water wasted while backwash is occurring, while the length in problem 11 represents the water lost in the transition to and from backwash.
+**12) Calculate the total length** (or depth) of water that is wasted due to backwash by adding the two previous lengths. The length found in problem 10 represents water wasted while backwash is occurring, while the length in problem 11 represents the water lost in the transition to and from backwash.
 
 .. code:: python
 
@@ -241,10 +205,7 @@ Now calculate the total length (or depth) of water that is wasted due to backwas
 
 The depth of the water that is wasted due to backwash is 4.98 meter
 
-13)
-~~~
-
-Assume that the filter is backwashed every 12 hours. This means that the filter is producing clean water for 12 hours before it need to be backwashed. What is the total height (or length) of water that would be treated by the filter during this time? This length when multiplied by the area of the filter would give the total volume of water processed by a filter.
+**13) Assume that the filter** is backwashed every 12 hours. This means that the filter is producing clean water for 12 hours before it need to be backwashed. What is the total height (or length) of water that would be treated by the filter during this time? This length when multiplied by the area of the filter would give the total volume of water processed by a filter.
 
 .. code:: python
 
@@ -254,10 +215,7 @@ Assume that the filter is backwashed every 12 hours. This means that the filter 
 
 The height of water that would enter the filter in 12 hours is 475.2 meter
 
-14)
-~~~
-
-Finally, what is the ratio of water lost due to backwash and related water level changes in the filter box to water treated?
+**14) Finally, what is the ratio** of water lost due to backwash and related water level changes in the filter box to water treated?
 
 .. code:: python
 
@@ -266,10 +224,7 @@ Finally, what is the ratio of water lost due to backwash and related water level
 
 The fraction of the total water that is lost due to backwash is 0.01048 dimensionless
 
-15)
-~~~
-
-Now we will evaluate the very first data set from a full scale SRSF. The performance data given below is the settled water turbidity and then the filtered water turbidity during one filter run. The time step is 5 minutes. Plot pC\* for the filter as well as effluent turbidity as a function of time on two separate graphs.
+**15) Now we will evaluate** the very first data set from a full scale SRSF. The performance data given below is the settled water turbidity and then the filtered water turbidity during one filter run. The time step is 5 minutes. Plot pC\* for the filter as well as effluent turbidity as a function of time on two separate graphs.
 
 .. todo:: Get an updated data for filter performance evaluation.
 
@@ -318,10 +273,7 @@ Now we will evaluate the very first data set from a full scale SRSF. The perform
 
    The filter performance deteriorated over the length of the filter run. This does not match the expectations that we have based on laboratory experiments with filters. AguaClara has limited data of filter performance as a function of time. However, the `recent data from Tamara <http://aguaclara.github.io/index.html>`__ (select Tamara from the drop down menu of plants) suggests that filtered water turbidity is consistently lower than in this first run of the filter that you plotted above.
 
-16)
-~~~
-
-How many kg of suspended solids per square meter of filter were removed during this filter run. Use the plan view area for the filter (don’t multiply by the number of layers)
+**16) How many kg of suspended solids** per square meter of filter were removed during this filter run. Use the plan view area for the filter (don’t multiply by the number of layers)
 
 .. code:: python
 
@@ -333,10 +285,7 @@ How many kg of suspended solids per square meter of filter were removed during t
 
 The mass of the suspended solids removed is 2.94 kg/m²
 
-17)
-~~~
-
-Another useful way to express the solids capacity of the filter is to calculate the turbidity removed the run time and then express the results with units of NTU hrs. What was the capacity of the filter in NTU hrs?
+**17) Another useful way to express** the solids capacity of the filter is to calculate the turbidity removed the run time and then express the results with units of NTU hrs. What was the capacity of the filter in NTU hrs?
 
 .. code:: python
 
@@ -347,10 +296,7 @@ Another useful way to express the solids capacity of the filter is to calculate 
 
 The filter capacity is 43.72 NTU * hour
 
-18)
-~~~
-
-How long was the filter run?
+**18) How long was the filter run?**
 
 .. code:: python
 
@@ -359,10 +305,7 @@ How long was the filter run?
 
 The filter was run for 14.25 hour
 
-19)
-~~~
-
-What is the total volume of pores per square meter (plan view area) of StarS filter bed (includes all 6 layers) (in L/m^2)?
+**19) What is the total volume** of pores per square meter (plan view area) of StarS filter bed (includes all 6 layers) (in L/m^2)?
 
 .. code:: python
 
@@ -371,10 +314,7 @@ What is the total volume of pores per square meter (plan view area) of StarS fil
 
 The total volume of pores is 480 liter / meter ** 2
 
-20)
-~~~
-
-The next step is to estimate the volume of flocs per plan view area of the filter. Assume the density of the flocs being captured by the filter are approximated by the density of flocs that have a sedimentation velocity of 0.10 mm/s (slightly less than the capture velocity of the plate settlers). (see slides in flocculation notes for size of the floc and then density of that floc. I’ve provided this value below to simplify the analysis
+**20) The next step is to estimate the volume** of flocs per plan view area of the filter. Assume the density of the flocs being captured by the filter are approximated by the density of flocs that have a sedimentation velocity of 0.10 mm/s (slightly less than the capture velocity of the plate settlers). (see slides in flocculation notes for size of the floc and then density of that floc. I’ve provided this value below to simplify the analysis
 
 .. code:: python
 
@@ -421,10 +361,7 @@ Solve for :math:`Vol_{Floc}`
 
 The volume of the flocs per plan view area is 18.34 liter / meter ** 2
 
-21)
-~~~
-
-What percent of the filter pore volume is occupied by the flocs? This fraction of pore space occupied is quite small and suggests that much of the filter bed has a very low particle concentration at the end of a filter run.
+**21) What percent of the filter** pore volume is occupied by the flocs? This fraction of pore space occupied is quite small and suggests that much of the filter bed has a very low particle concentration at the end of a filter run.
 
 .. code:: python
 
@@ -436,7 +373,7 @@ The fraction of filter pore volume that is occupied by flocs is 0.0382
 
 This result is surprising and intriguing. It indicates that the pores in the filters are 96% empty when the filter run is complete! Thus filters don't fail because the pores get full. There is a different mechanism at play here.
 
-Filter constriction hypothesis
+Filter Constriction Hypothesis
 ==============================
 
 The following analysis is completed for you and is intended to illustrate the hypothesis that flocs that are removed by the filter form a small diameter flow constriction at each place where the sand grains form a flow constriction.
