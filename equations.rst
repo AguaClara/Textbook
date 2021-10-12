@@ -37,6 +37,7 @@ Equations
     539, `Plate settler head loss <https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-55>`_, :math:`h_L = 2 \frac{\mu}{\rho g} \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)`, 9
     549, `Floc blanket head loss <https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-65>`_, :math:`h_L = H_{fb} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}`, 9
     621, `Backwash porosity <https://aguaclara.github.io/Textbook/Filtration/Filtration_Intro.html#equation-backwash-porosity>`_, :math:`\phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}`, 10
+    623, `Clean bed head loss <https://aguaclara.github.io/Textbook/Filtration/Filtration_Intro.html#equation-eq-carman-kozeny>`_, :math:`\frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu \bar v_a}{g D_{60}^2}`, 10
 
 
 
