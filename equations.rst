@@ -14,7 +14,7 @@ Equations
     Length, :math:`L = L`, meter
     Mass, :math:`m = E/[c]^2`, kilogram
     Time, :math:`[T]`, second
-    Particle terminal velocity, :math: `\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}`
+    Particle terminal velocity, :math:`\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}`
 
 
 If you would like to be able to ``ctrl+f`` some variables/equations, click on 'View page source' on the top right of this window. If you want to know what a Greek variable is but don't know what it's called, you can view the source text on the file where you found the variable. nu, mu, eta, who actually remembers what these all look like? The letter 'v' should sue 'nu' for copyright infringement. Or is it the other way around?
