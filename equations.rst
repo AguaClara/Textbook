@@ -35,6 +35,7 @@ Equations
     495, `Tube settler flow <https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-11>`_, :math:`Q_{Tube}=\frac{\bar v_{c}\pi D^2}{4} \left(\frac{L}{D} \cos \alpha +\sin \alpha \right)`, 9
     531, `Floc sedimentation velocity <https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-47>`_, :math:`v_{Slide} = \bar v_{z_{Plate}} \left[ \left( \frac{3D_{cp}}{Ssin^2\alpha} \right)^{\Pi_{fractal} - 1} \left( \frac{18 v_{z_{Plate}} \Phi \nu }{D_{cp}^2g} \frac{\rho_`, 9
     539, `Plate settler head loss <https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-55>`_, :math:`h_L = 2 \frac{\mu}{\rho g} \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)`, 9
+    549, `Floc blanket head loss <https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-65>`_, :math:`h_L = H_{fb} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}`, 9
 
 
 
