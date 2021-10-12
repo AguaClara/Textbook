@@ -18,7 +18,8 @@ Equations
     14, `Swamee-Jain <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-swamee-jain>`_, :math:`{\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}`, 2
     18, `Hagen-Poiseuille <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-hagen-poiseuille>`_, :math:`h_{\rm{f}} = \frac{128\mu L Q}{\rho g\pi D^4}`, 2
     35, `Orifice <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-orifice-equation>`_, :math:`Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}`, 2
-    67, `MInor loss <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics_Derivations.html#equation-minor-loss-equation>`_, :math:`{\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2 }.`, 2
+    67, `MInor loss <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics_Derivations.html#equation-minor-loss-equation>`_, :math:`\color{purple}{ {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2 }`, 2
+
 
 
 
