@@ -28,6 +28,7 @@ Equations
     343, `Mixer flow rate <https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Design.html#equation-rapid-mix-rm-design-5>`_, :math:`Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}`, 7
     407, `AguaClara floc model <https://aguaclara.github.io/Textbook/Flocculation/Floc_Model.html#equation-pclam>`_, :math:`p{C^\star}=\frac{3}{2}\log_{10}\left[\frac{2}{3}\left(\frac{6}{\pi}\right)^{2/3}k\pi\bar{\alpha}\bar G_{CS}\theta\phi_0^{2/3}+1\right]`, 8
     420, `Terminal floc velocity <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-0>`_, :math:`\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}`, 8
+    426, `Collision potential <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-5>`_, :math:`G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}`, 8
 
 
 
