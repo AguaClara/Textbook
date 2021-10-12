@@ -26,6 +26,7 @@ Equations
     284, `Tank with a valve <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Design.html#equation-flow-control-and-measurement-fcm-design-5>`_, :math:`\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}`, 6
     336, `Mechanical power <https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Intro.html#equation-rapid-mix-rm-intro-4>`_, :math:`P = \rho g Q \Delta h`, 7
     343, `Mixer flow rate <https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Design.html#equation-rapid-mix-rm-design-5>`_, :math:`Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}`, 7
+    353, `Diffusion layer thickness <https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Theory_and_Future_Work.html#equation-rapid-mix-rm-theory-and-future-work-1>`_, :math:`L_{Diff} \approx \left( \frac{2k_B T d_{Clay}}{3 \pi \,\mu \, d_{CN} G}\right)^\frac{1}{3}`, 7
 
 
 
