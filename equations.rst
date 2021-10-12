@@ -23,5 +23,6 @@ Equations
     94, `Max floc velocity gradient <https://aguaclara.github.io/Textbook/Flocs_Fractals_and_Forces/FFF_Intro.html#equation-gmax-of-d-floc>`_, :math:`G_{max} = \frac{4F_{bond}}{3 \pi \mu D_{floc_{max}}^2}`, 3
     122, `Camp-Stein velocity gradient <https://aguaclara.github.io/Textbook/Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html#equation-fluid-deformation-and-energy-dissipation-fded-intro-4>`_, :math:`G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}`, 4
     149, `Einstein’s diffusion <https://aguaclara.github.io/Textbook/Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-fluid-deformation-and-energy-dissipation-fded-derivations-21>`_, :math:`D_{Diffusion} = \frac{k_B T}{3 \pi \mu d_P}`, 4
+    279, `Linear CDC <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Design.html#equation-flow-control-and-measurement-fcm-design-0>`_, :math:`Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}`, 6
 
 
