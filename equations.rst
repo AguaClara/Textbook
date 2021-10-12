@@ -49,3 +49,5 @@ Equations
     627, `Backwash head loss  <https://aguaclara.github.io/Textbook/Filtration/Filtration_Intro.html#equation-filtration-filtration-intro-3>`_, :math:`h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}\\or\\h_{l_{FiBw}} = H`, 10
     629, `Fluidization velocity  <https://aguaclara.github.io/Textbook/Filtration/Filtration_Intro.html#equation-minimum-fluidization-velocity-sand>`_, :math:`\bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)`, 10
     701, `Sharp crested weir  <https://aguaclara.github.io/Textbook/Hydraulics/Hydraulics_Intro.html#equation-sharp-weir-q-of-channel-depth>`_, :math:`Q = \Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{channel}\right)^\frac{3}{2}`, 11
+
+
