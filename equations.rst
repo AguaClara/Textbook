@@ -42,7 +42,13 @@ Equations
     629, `Fluidization velocity <https://aguaclara.github.io/Textbook/Filtration/Filtration_Intro.html#equation-minimum-fluidization-velocity-sand>`_, :math:`\bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)`, 10
     701, `Sharp crested weir <https://aguaclara.github.io/Textbook/Hydraulics/Hydraulics_Intro.html#equation-sharp-weir-q-of-channel-depth>`_, :math:`Q = \Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{channel}\right)^\frac{3}{2}`, 11
 
-    11, `Darcy-Weisbach <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-darcy-weisbach>`_, :math:`h_{\rm{f}} \, = \, {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}`, 2
+11, `Darcy-Weisbach <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-darcy-weisbach>`_, :math:`h_{\rm{f}} \, = \, {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}`, 2
+67, `Minor loss <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics_Derivations.html#equation-minor-loss-equation>`_, :math:`{ {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2 }`, 2
+279, `Linear CDC <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Design.html#equation-flow-control-and-measurement-fcm-design-0>`_, :math:`Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}`, 6
+353, `Diffusion layer thickness <https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Theory_and_Future_Work.html#equation-rapid-mix-rm-theory-and-future-work-1>`_, :math:`L_{Diff} \approx \left( \frac{2k_B T d_{Clay}}{3 \pi \,\mu \, d_{CN} G}\right)^\frac{1}{3}`, 7
+375, `Coagulant nanoparticle application <https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Theory_and_Future_Work.html#equation-rapid-mix-rm-theory-and-future-work-23>`_, :math:`t_{coagulant, \, application} = \frac{2.3p C_{CN} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\, L_{Diff_{CN}} }`, 7
+440, `Channel width <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-19>`_, :math:`W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}`, 8
+560, `Diffuser width <https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-76>`_, :math:`W_{diff,min} = \frac{\bar v_{z_{fb}}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}`, 9
 
 
 
