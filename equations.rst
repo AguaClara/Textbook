@@ -15,5 +15,6 @@ Equations
     2, `Continuity <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-continuity-equation>`_, :math:`Q = \bar v A`, 2
     8, `Bernoulli <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-bernoulli-equation>`_, :math:`\frac{p_1}{\rho g} + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{v_2^2}{2g}`, 2
     10, `Energy <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-energy-equation>`_, :math:`\frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L`, 2
-    
+    14, `Swamee-Jain <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-swamee-jain>`_, :math:`{\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}`, 2
+
 
