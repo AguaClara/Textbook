@@ -30,6 +30,7 @@ Equations
     420, `Terminal floc velocity <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-0>`_, :math:`\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}`, 8
     426, `Collision potential <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-5>`_, :math:`G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}`, 8
     445, `Height between expansions <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-24>`_, :math:`H_{e_{Max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}`, 8
+    449, `Baffle spacing <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-floc-baffle-spacing>`_, :math:`S = \left( \frac{K}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}`, 8
 
 
 
