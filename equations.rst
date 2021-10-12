@@ -19,6 +19,9 @@ Equations
     18, `Hagen-Poiseuille <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-hagen-poiseuille>`_, :math:`h_{\rm{f}} = \frac{128\mu L Q}{\rho g\pi D^4}`, 2
     35, `Orifice <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-orifice-equation>`_, :math:`Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}`, 2
     68, `Fractal floc volume <https://aguaclara.github.io/Textbook/Flocs_Fractals_and_Forces/FFF_Intro.html#equation-v-floc-of-n-cp>`_, :math:`\rlap{-} V_{floc} = \rlap{-} V_{cp} n_{cp}^\frac{3}{\Pi_{fractal}}`, 3
+    87, `Floc terminal velocity <https://aguaclara.github.io/Textbook/Flocs_Fractals_and_Forces/FFF_Intro.html#equation-vt-of-floc>`_, :math:`v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}`, 3
+    94, `Max floc velocity gradient <https://aguaclara.github.io/Textbook/Flocs_Fractals_and_Forces/FFF_Intro.html#equation-gmax-of-d-floc>`_, :math:`G_{max} = \frac{4F_{bond}}{3 \pi \mu D_{floc_{max}}^2}`, 3
+    122, `Camp-Stein velocity gradient <https://aguaclara.github.io/Textbook/Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html#equation-fluid-deformation-and-energy-dissipation-fded-intro-4>`_, :math:`G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}`, 4
 
 
 
