@@ -26,7 +26,7 @@ Equations
     284, `Tank with a valve <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Design.html#equation-flow-control-and-measurement-fcm-design-5>`_, :math:`\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}`, 6
     336, `Mechanical power <https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Intro.html#equation-rapid-mix-rm-intro-4>`_, :math:`P = \rho g Q \Delta h`, 7
     343, `Mixer flow rate <https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Design.html#equation-rapid-mix-rm-design-5>`_, :math:`Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}`, 7
-    375, `Coagulant nanoparticle application <https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Theory_and_Future_Work.html#equation-rapid-mix-rm-theory-and-future-work-23>`_, :math:`t_{coagulant, \, application} = \frac{2.3p C_{CN} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\, L_{Diff_{CN}} }`, 7
+    407, `AguaClara floc model <https://aguaclara.github.io/Textbook/Flocculation/Floc_Model.html#equation-pclam>`_, :math:`p{C^\star}=\frac{3}{2}\log_{10}\left[\frac{2}{3}\left(\frac{6}{\pi}\right)^{2/3}k\pi\bar{\alpha}\bar G_{CS}\theta\phi_0^{2/3}+1\right]`, 8
 
 
 
