@@ -42,6 +42,7 @@ Equations
     629, `Fluidization velocity <https://aguaclara.github.io/Textbook/Filtration/Filtration_Intro.html#equation-minimum-fluidization-velocity-sand>`_, :math:`\bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)`, 10
     701, `Sharp crested weir <https://aguaclara.github.io/Textbook/Hydraulics/Hydraulics_Intro.html#equation-sharp-weir-q-of-channel-depth>`_, :math:`Q = \Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{channel}\right)^\frac{3}{2}`, 11
 
+11, `Darcy-Weisbach <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-darcy-weisbach>`_, :math:`h_{\rm{f}} \, = \, {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}`, 2
 
 
 
