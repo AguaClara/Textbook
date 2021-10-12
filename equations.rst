@@ -31,6 +31,7 @@ Equations
     426, `Collision potential <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-5>`_, :math:`G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}`, 8
     445, `Height between expansions <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-24>`_, :math:`H_{e_{Max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}`, 8
     449, `Baffle spacing <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-floc-baffle-spacing>`_, :math:`S = \left( \frac{K}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}`, 8
+    473, `Jet velocity <https://aguaclara.github.io/Textbook/Sedimentation/Sed_Design.html#equation-max-sed-tank-jet-velocity>`_, :math:`\bar v_{Jet} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{fb}} W_{Sed}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}`, 9
 
 
 
