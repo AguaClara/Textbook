@@ -255,14 +255,14 @@ The sedimentation tank outlet manifold collects the clarified water from the top
 
 The head loss through the sedimentation tank is due to:
 
-* entrance and elbow in influent manifold
-* major losses in influent manifold
-* diffuser exit loss
-* floc blanket (negligible)
-* plate settlers (negligible)
-* effluent manifold orifices
-* effluent manifold major loss
-* effluent manifold exit
+* Entrance and elbow in influent manifold
+* Major losses in influent manifold
+* Diffuser exit loss
+* Floc blanket (negligible)
+* Plate settlers (negligible)
+* Effluent manifold orifices
+* Effluent manifold major loss
+* Effluent manifold exit
 
 It might be convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm so that influent and effluent weirs always have the same elevation difference. The effluent manifold orifices could be designed for whatever head loss is required to meet that target.
 
