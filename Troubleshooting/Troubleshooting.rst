@@ -25,12 +25,12 @@ Use valves at the end of the pipeline to control transmission line flow rate rat
    :align: left
 
    Air bubbles, Air entrainment in the transmission line and transport to a high pressure zone in the pipeline where the air is dissolved in the water, Use downstream head loss to prevent air entrainment in transmission line or add a unit process (TBD) that removes excess dissolved air
-   Bubbles in sedimentation tanks, anaerobic production in methane in settled sludge, clean sedimentation tank and check design to eliminate all settled sludge
-   Bubbles in EStaRS, water entering the plant is supersaturated with air and EStaRS filters operate at very low pressure (compared with OStaRS), eliminate air entrainment in transmission line
-   Short filter runtimes, poor performance of floc/sed system or clogged slotted pipes or air lock, various solutions
-   Gradual increase in post backwash head loss in filters, slotted pipes are clogging, acid flush by pouring HCl (need the concentration) into the outlet pipes OR disassemble filter and clean with a pressure washer
-   Scale deposition in the distribution system, increase in temperature from groundwater conditions causes supersaturation of calcium carbonate, reduce the pH of the water slightly (perhaps 0.5 pH units) to eliminate the supersaturation
-   Clogging of chlorination system tubes and formation of precipitate at the injection point, dissolution of carbon dioxide from the atmosphere causes precipitation of calcium carbonate, Reduce exposure of the solution to the atmosphere OR drip the chlorine into the filtered water
+   Bubbles in sedimentation tanks, Anaerobic production in methane in settled sludge, Clean sedimentation tank and check design to eliminate all settled sludge
+   Bubbles in EStaRS, Water entering the plant is supersaturated with air and EStaRS filters operate at very low pressure (compared with OStaRS), Eliminate air entrainment in transmission line
+   Short filter runtimes, Poor performance of floc/sed system or clogged slotted pipes or air lock, Various solutions
+   Gradual increase in post backwash head loss in filters, Slotted pipes are clogging, Acid flush by pouring HCl (need the concentration) into the outlet pipes OR disassemble filter and clean with a pressure washer
+   Scale deposition in the distribution system, Increase in temperature from groundwater conditions causes supersaturation of calcium carbonate, Reduce the pH of the water slightly (perhaps 0.5 pH units) to eliminate the supersaturation
+   Clogging of chlorination system tubes and formation of precipitate at the injection point, Dissolution of carbon dioxide from the atmosphere causes precipitation of calcium carbonate, Reduce exposure of the solution to the atmosphere OR drip the chlorine into the filtered water
 
 
 High Head Loss After Backwash in EStaRS
