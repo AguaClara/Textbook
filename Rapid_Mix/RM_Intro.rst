@@ -104,26 +104,7 @@ Conventional Mechanical Rapid Mix
 Maximum Velocity Gradients
 --------------------------
 
-.. code:: python
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara as ac
-
-  Mix_HRT = np.array([0.5,15,25,35,85])*u.s
-  Mix_G = np.array([4000,1500,950,850,750])/u.s
-  Mix_CP = np.multiply(Mix_HRT, np.sqrt(Mix_G))
-  Mix_Gt = np.multiply(Mix_HRT, Mix_G)
-  Mix_EDR = (Mix_G**2*ac.viscosity_kinematic(Temperature))
-
-  fig, ax = plt.subplots()
-  ax.plot(Mix_G.to(1/u.s),Mix_HRT.to(u.s),'o')
-  ax.yaxis.set_major_formatter(FormatStrFormatter('%.f'))
-  ax.xaxis.set_major_formatter(FormatStrFormatter('%.f'))
-  ax.set(xlabel='Velocity gradient (Hz)', ylabel='Residence time (s)')
-  fig.savefig(imagepath+'Mechanical_RM_Gt')
-  plt.show()
+The code to generate this example plot can be found `here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=cu3z2Pi7XCUY&line=5&uniqifier=1>`_
 
 .. _figure_Mechanical_RM_Gt:
 
