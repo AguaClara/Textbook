@@ -83,13 +83,7 @@ If we assume (and we will show this assumption to be wrong in the next step) tha
 
     n_{collisions} = \frac{log(n_{primary})}{log(2)}
 
-.. code:: python
-
-  import numpy as np
-
-  n_primary = 1000000000
-  n_collisions = np.log10(n_primary)/np.log10(2)
-  print(n_collisions)
+`See here for the code to determine the number of collisions <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=cu3z2Pi7XCUY&line=3&uniqifier=1>`_
 
 30 sequential collisions would be required to produce a floc that contains 1 billion primary particles.
 
@@ -113,21 +107,7 @@ One of the mysteries of flocculation has been why it is such a slow process, req
 
 .. math:: \bar G = \sqrt{ \frac{g h_e}{\theta \nu}}
 
-.. code:: python
-
-  import aguaclara as sc
-  from aguaclara.core.units import unit_registry as u
-  import numpy as np
-
-  HL_floc = 43*u.cm
-  HRT = 8 * u.min
-  Temperature =20 * u.degC
-  G_floc = ((u.gravity*HL_floc/(HRT*ac.viscosity_kinematic(Temperature)))**0.5).to_base_units()
-  print(G_floc)
-  Gt_floc = G_floc*HRT
-  HRT_floc_visible = 0.5*u.min
-  Gt_floc_visible = (G_floc*HRT_floc_visible).to_base_units()
-  print(Gt_floc_visible)
+`See the code to determine :math:`G\theta` here. <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-1InCjkGqiuF&line=3&uniqifier=1>`_
 
 Here initial flocculation is visible at a :math:`G\theta` of less than 3000. Given that flocculation is visible at this low collision potential, it is unclear why recommended :math:`G\theta` are as high as 100,000. This is one of the great mysteries that motivated the search for a flocculation model that is based on physics and consistent with laboratory and field observations.
 
