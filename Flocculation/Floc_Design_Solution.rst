@@ -168,7 +168,7 @@ The average velocity of the water in the flocculator is 0.2046 meter / second
 
 **20) Calculate the depth of water** at the beginning of the flocculator based on the design head loss.
 
-`Find the depth of water https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=DclI0a4asC0x&line=1&uniqifier=1>`_
+`Find the depth of water <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=DclI0a4asC0x&line=1&uniqifier=1>`_
 
 The depth of the water at the beginning of the flocculator is 2.4 meter
 
