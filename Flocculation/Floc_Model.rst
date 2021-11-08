@@ -107,7 +107,7 @@ One of the mysteries of flocculation has been why it is such a slow process, req
 
 .. math:: \bar G = \sqrt{ \frac{g h_e}{\theta \nu}}
 
-`See the code to determine :math:`G\theta` here. <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-1InCjkGqiuF&line=3&uniqifier=1>`_
+`See the code to determine that value here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-1InCjkGqiuF&line=3&uniqifier=1>`_
 
 Here initial flocculation is visible at a :math:`G\theta` of less than 3000. Given that flocculation is visible at this low collision potential, it is unclear why recommended :math:`G\theta` are as high as 100,000. This is one of the great mysteries that motivated the search for a flocculation model that is based on physics and consistent with laboratory and field observations.
 
