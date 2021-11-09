@@ -4,7 +4,7 @@
 Filtration Future Work
 ***********************
 
-
+`Be sure to run the import code before trying any of the code examples linked in this section <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=iraCMmqY4sT2&line=1&uniqifier=1>`_
 
 Constriction Velocity
 ======================
@@ -79,54 +79,7 @@ to estimate the injection area that should be used to break up flocs entering th
 Floc Size Calculations
 =======================
 
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.research.floc_model as fm
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-  N_layers = 6
-  v_filter_backwash = 11 * u.mm/u.s
-  v_a = v_filter_backwash/N_layers
-  Porosity = 0.4
-  D_sand = 0.5 * u.mm
-  # the following is just a guess at pore size
-  D_pore = 0.2 * D_sand
-  Temperature = 20 * u.degC
-  L = 20 * u.cm
-  Q_waterfall = 20 *u.L/u.s
-  v_waterfall=(np.sqrt(pc.gravity*2*40*u.cm)).to(u.m/u.s)
-  v_waterfall
-  #use continuity to get diameter of waterfall
-  D_waterfall = (np.sqrt(Q_waterfall/v_waterfall *4/np.pi)).to(u.cm)
-  D_waterfall
-  Pi_JetRound = 0.08
-  G_Max_waterfall = (v_waterfall*np.sqrt(Pi_JetRound*v_waterfall/(pc.viscosity_kinematic(Temperature)*D_waterfall))).to(u.Hz)
-  print('The maximum velocity gradient in the plunging jet in the filter inlet box is ',G_Max_waterfall,'.')
-  # now estimate the size of this floc
-  EDR_waterfall = (G_Max_waterfall**2*pc.viscosity_kinematic(Temperature)).to(u.mW/u.kg)
-  EDR_waterfall
-  D_floc_waterfall = (fm.diam_floc_max(G_Max_waterfall**2*pc.viscosity_kinematic(Temperature))).to(u.um)
-  print('The diameter of flocs after the waterfall is estimated to be',D_floc_waterfall,'.')
-
-
-  # Calculate maximum diameter of flocs leaving the sedimentation tank
-  D_floc= fm.diam_floc_vel_term(0*u.mg/u.L,10*u.mg/u.L,fm.PACl,fm.Clay,fm.DIM_FRACTAL, 0.12*u.mm/u.s,20*u.degC)
-  print('The maximum diameter of flocs leaving the sedimentation tank is',D_floc.to(u.um),'.')
-
-  v_graph = np.linspace(0.1, 100, 500) * u.mm/u.s
-
-  fig, ax = plt.subplots()
-  ax.plot(v_graph,(hf_Erdon(v_graph, D_sand, Temperature, Porosity, L)/L).to(u.dimensionless),'-')
-  ax.plot(v_graph,(pc.headloss_kozeny(L,D_sand, v_graph, Porosity, pc.viscosity_kinematic(Temperature) )/L).to(u.dimensionless),'-')
-  ax.set(xlabel='approach velocity (mm/s)')
-  ax.set(ylabel='head loss per m')
-  ax.legend(['Ergun', 'Kozeny'])
-  fig.savefig('../Images/Head_loss_Ergun_and_Kozeny')
-  plt.show()
+`The code to make a figure showing the relationship between approach velocity and headloss can be found here. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=Mlv81ZYLi1Gc&line=25&uniqifier=1>`_
 
 
 
@@ -139,18 +92,7 @@ Floc Size Calculations
 
    The Ergun and Kozeny equations are very similar even at approach velocities that are much larger than are used in rapid sand filtration. At very high velocities the turbulent term in the Ergun equation begins to be significant.
 
-.. code:: python
-
-  # Need to use a root finding method here because f_phi is a function of velocity
-  # Will use a graphical solution for now
-
-  fig, ax = plt.subplots()
-  ax.plot(v_graph,G_CS_Ergun(v_graph, D_sand, Temperature, Porosity),'-')
-  ax.set(xlabel='approach velocity (mm/s)')
-  ax.set(ylabel='velocity gradient (Hz)')
-  fig.savefig('../Images/G_vs_approach_velocity')
-  plt.show()
-
+`The code for the following graph is found here. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=g4nn81gGi9aS&line=3&uniqifier=1>`_
 
 
 .. _figure_G_vs_approach_velocity:
@@ -163,20 +105,7 @@ Floc Size Calculations
    The Camp Stein velocity gradient increases rapidly with approach velocity.
 
 
-.. code:: python
-
-  #We guess at a velocity gradient by extrapolating wildly to a 20 um floc.
-  G_CS =np.sqrt((fm.ener_dis_diam_floc(40*u.um))/pc.viscosity_kinematic(Temperature)).to(u.Hz)
-  print('A wild guess at the velocity gradient required to break up flocs is ',G_CS,'.')
-  #from the graph above we'd need an approach velocity of about 80 mm/s to achieve a G of 10,000 Hz.
-  v_inject = 80*u.mm/u.s
-  (v_inject/v_a).to(u.dimensionless)
-  injection_port_spacing = 10 * u.cm
-  injection_port_width =     (injection_port_spacing/(v_inject/v_a)).to(u.mm)
-  print('The injection port width would be ',injection_port_width,'.')
-  print('The injection velocity would be ',v_inject.to(u.mm/u.s),'.')
-
-
+`See here for how the injection port width and injection velocity are determined. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=KqQCyZaZjBJm&line=3&uniqifier=1>`_
 
 The analysis above suggests that the approach velocity required to break flocs down to a dimension of :math:`20 \mu m` is approximately 80 mm/s. This is based on a VERY bad guesstimate of the relationship between floc size and shear.
 
@@ -227,28 +156,7 @@ Now we set up the numerical integration and integrate from the injection site to
 
 .. code:: python
 
-  #This is for an inlet that serves 2 layers (up and down)
-  v_filter = (11 * u.mm/u.s)/N_layers*2
-  S_branch = 10 * u.cm
-  v0 = 80 * u.mm/u.s
-  r0 = (2*v_filter/v0 * S_branch/(2*np.pi)).to(u.mm)
-  r0
-
-  #create coefficients for the constant terms in the equation
-  a0 = v0 * r0 /(2*pc.gravity*D_sand)
-  a1 = (300*pc.viscosity_kinematic(Temperature)*(1-Porosity)**2)/(D_sand*Porosity**3)
-  a2 = 3.5*(1-Porosity)* v0 * r0/Porosity**3
-  r1 = S_branch/(2*np.pi)
-  r1
-  #create an array of r values with each value centered in the ring that it represents. #We will use simple
-  n_points = 10000
-  dr = ((r1-r0)/(n_points)).to(u.mm)
-  r_array = np.linspace((r0).to(u.mm),(r1).to(u.mm),n_points)*u.mm
-  y_array = (a0*(np.divide(a1,r_array) + np.divide(a2,np.multiply(r_array,r_array)))).to(u.dimensionless)
-  #Use the trapezoidal rule to integrate
-  #need to reattach units to np.trapz.
-  hf_inlet = np.trapz(y_array,x=r_array, dx = dr)*u.mm
-  print('The head loss through the sand between the injection point and where it reaches the filtration velocity is ', hf_inlet)
+`For an inlet that service two layers, see here to determine the headloss through the sand <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=PF8v34hSjJtx&line=11&uniqifier=1>`_
 
 The analysis above suggests that a high velocity and high velocity gradient injection into the sand bed with the goal of breaking flocs into pieces that are 20 :math:`\mu m` in diameter would require about 12 cm of head loss. This is based on the assumption that the water would be able to flow radially from the injection point and thus rapidly slow down. Thus the head loss rapidly decreases with distance from the injection point.
 
