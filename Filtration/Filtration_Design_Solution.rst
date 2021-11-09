@@ -37,7 +37,7 @@ The filter bed plan view area is  1.091 meter ** 2
 
 The filtration velocity is 1.833 millimeter / second
 
-`5) Create a function* to calculate the head loss through the filter at the beginning of filtration with a clean filter bed. Then use that function to find the head loss through the clean bed of the Tamara filter. Assume that each flow path receives the same flow. >`_<https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=3W9UXgKVkG1f&line=4&uniqifier=1>`_
+`5) Create a function to calculate the head loss through the filter at the beginning of filtration with a clean filter bed. Then use that function to find the head loss through the clean bed of the Tamara filter. Assume that each flow path receives the same flow <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=3W9UXgKVkG1f&line=4&uniqifier=1>`_
 
 Recall: - If you have flow paths in parallel, the head loss is NOT the sum of the head loss in each path. - Instead, the head loss in each path is the same as the total head loss.
 
@@ -71,7 +71,7 @@ Our next overall goal is to determine the ratio of water wasted in a Stacked Rap
 
 The time to backwash the filter is 289.1 second
 
-`10) Estimate the total depth of water that is wasted while backwash is occurring. https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=QAudW_F3krtL&line=3&uniqifier=1>`_
+`10) Estimate the total depth of water that is wasted while backwash is occurring. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=QAudW_F3krtL&line=3&uniqifier=1>`_
 
 The total depth of water that is wasted is 3.18 meter
 
