@@ -298,25 +298,7 @@ Sedimentation is the process of particles ‘falling’ because they have a high
 | :math:`D_{particle}` = particle diameter
 | :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
 
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  import numpy as np
-  import matplotlib.pyplot as plt
-  def v_t(D_particle,density_particle,Temperature):
-    return (D_particle**2*pc.gravity *(density_particle - pc.density_water(Temperature))/(18*pc.viscosity_kinematic(Temperature)*pc.density_water(Temperature))).to(u.m/u.s)
-  clay = 2650 * u.kg/u.m**3
-  organic = 1040 * u.kg/u.m**3
-  Temperature = 20 * u.degC
-  D_particle = np.logspace(-6,-3)*u.m
-  fig, ax = plt.subplots()
-  ax.loglog(D_particle.to(u.m),v_t(D_particle,clay,Temperature).to(u.m/u.s))
-  ax.loglog(D_particle.to(u.m),v_t(D_particle,organic,Temperature).to(u.m/u.s))
-  ax.set(xlabel='Particle diameter (m)', ylabel='Terminal velocity (m/s)')
-  ax.legend(["clay or sand","organic particle"])
-  imagepath = '../Images/'
-  fig.savefig(imagepath+'Terminal_velocity')
-  plt.show()
+The code to generate a plot that shows this relationship can be found `here <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Colab/AC_Textbook_Chapter1.ipynb#scrollTo=sEqG7_T5Su2m>`_
 
 
 The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take care of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (:eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
