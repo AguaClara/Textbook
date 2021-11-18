@@ -18,7 +18,10 @@ serves as a basis for design. The final parameter derived is
 Width
 -----
 
-Our two restrictions are: - Ensuring that we maintain the :math:`\bar G` we get based on our input parameters - Ensuring that :math:`3 < \frac{H_e}{S} < 6`
+Our two restrictions are: 
+
+#. Ensuring that we maintain the :math:`\bar G` we get based on our input parameters.
+#. Ensuring that :math:`3 < \frac{H_e}{S} < 6`
 
 First, we begin by setting the two equations for energy dissipation rate, :math:`\bar \varepsilon = \nu \bar G^2` and :math:`\bar \varepsilon = \frac{g h_{L_{floc}}}{\theta}` equal to each other to bring :math:`\bar G` into the equation.
 

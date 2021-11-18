@@ -4,6 +4,8 @@
 Hydraulics Introduction
 ***********************
 
+`Be sure to run the import code before trying the code <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=QKlfOMPoROA3&line=5&uniqifier=1>`_
+
 The hydraulic controls provide the basis for efficient and robust water treatment plant operation. Water must move through unit processes and between unit processes and the flow passages must be designed to meet various constraints. One constraint is that water that is carrying a significant amount of sediment (flocculator and sedimentation tank inlet) must have sufficient velocity and turbulence levels to minimize sedimentation.  A more challenging constraint is that the flow must be divided equally between parallel processes. Flow distribution through parallel paths is a key hydraulic design constraint for all municipal scale water treatment plants. The parallel path constraint only goes away for laboratory scale processes where there is a single tube settler and a filter with a single layer of sand. A schematic illustrating the electrical circuit analogy is shown in :numref:`figure_circuit`.
 
 Municipal water treatment plants
@@ -38,7 +40,7 @@ The sum of the pressure and elevation term in the energy equation is the piezome
     :align: center
     :alt: Sloped manifold with no flow
 
-    Piezometric head is constant in a stationary body of water. The piezometric head inside the enclosed sloped pipe is greater (by height H) than the piezometric head in the tank. Thus if we add an orifice to this sloped pipe, water will from the sloped pipe into the tank.
+    Piezometric head is constant in a stationary body of water. The piezometric head inside the enclosed sloped pipe is greater (by height H) than the piezometric head in the tank. Thus if we add an orifice to this sloped pipe, water will flow from the sloped pipe into the tank.
 
 Add multiple outlets to this sloped pipe to create a sloped manifold (:numref:`figure_Sloped_Manifold_with_flow`). The energy equation applied between control surface 1 and n  shows that the piezometric head in an inlet manifold increases in the direction of flow for cases where head loss is smaller than :math:`\frac{\bar v_{M_1}^2}{2 g}`.
 
@@ -57,11 +59,11 @@ Add multiple outlets to this sloped pipe to create a sloped manifold (:numref:`f
 Inlet Manifold Flow Distribution
 ================================
 
-There is disagreement in the literature about the physics of manifolds. One school of thought postulates that the flow out of the ports exiting a manifold are controlled by the total energy of the flow inside the manifold. The other school of thought postulates that the flow of water out of the ports is controlled by the difference in piezometric head between the manifold and the receiving reservoir. These two approaches are mutually exclusive and make completely different predictions about how manifolds will perform especially for the case where head loss in the manifold is small compared with the pressure recovery caused by the gradual flow expansion in the manifold.
+There is disagreement in the literature about the physics of manifolds. One school of thought postulates that the flow out of the ports exiting a manifold is controlled by the total energy of the flow inside the manifold. The other school of thought postulates that the flow of water out of the ports is controlled by the difference in piezometric head between the manifold and the receiving reservoir. These two approaches are mutually exclusive and make completely different predictions about how manifolds will perform, especially for the case where head loss in the manifold is small compared with the pressure recovery caused by the gradual flow expansion in the manifold.
 
 Fortunately it is relatively easy to check the physics to see which approach is correct. A venturi (gradual flow contraction in a pipe) is used to generate a low pressure region in a pipe by converting pressure into kinetic energy. Venturis can be used to generate low pressure inside the pipe and then pull fluid **into** the pipe even though the total energy of the fluid in the pipe far exceeds the energy of the fluid that was outside of the pipe! This proves that flow out of a manifold is due to the difference in piezometric head and NOT due to the difference in total energy.
 
-If manifolds were built using pitot type exits with the exit facing upstream and into the flow of the fluid then the exit from the manifold would be based on the total energy. The manifolds that we use in water treatment plants do not have pitot tube style ports and thus our analysis of manifolds is based on piezometric head.
+If manifolds were built using pitot type exits with the exit facing upstream and into the flow of the fluid, the exit from the manifold would be based on the total energy. The manifolds that we use in water treatment plants do not have pitot tube style ports and thus our analysis of manifolds is based on piezometric head.
 
 Flow distribution from ports exiting a manifold is controlled by the change in piezometric head inside the manifold and the change in piezometric head as the water exits through a port. The reason that the flow from each port is not identical is because of changes in piezometric head in the manifold. These changes are caused by major losses due to shear on the manifold walls and due to pressure recovery as the velocity in the manifold decreases. The control volume is shown in :numref:`figure_inlet_manifold`
 
@@ -172,10 +174,7 @@ If there is no additional head loss in series to improve flow distribution, then
 Equation :eq:`Manifold_max_v_no_hl_series` (see :numref:`figure_Ratio_port_to_manifold_velocity`) can be used to determine the required diameter of inlet manifolds in sedimentation tanks or to determine the required port velocity for the backwash manifold in the StaRS filters. It can also be used to solve for the maximum manifold velocity given the port velocity in the sedimentation tank diffusers.
 
 
-.. code:: python
-
-  def Ratio_Pipe_Manifold_V_Port_to_V_Man(Ratio_Flow):
-    return np.sqrt((Ratio_Flow**2 + 1)/(2*(1-Ratio_Flow**2)))
+`Define a function for the flow ratio <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=JTY6Xw3SSuQ0&line=1&uniqifier=1>`_
 
 .. _figure_Ratio_port_to_manifold_velocity:
 
@@ -211,25 +210,7 @@ For sedimentation tanks that are 1.07 m wide, an upflow velocity of 1 mm/s, with
 
 The maximum inlet manifold velocity can now be determined from Equation :eq:`Manifold_max_v_no_hl_series`. Given a port flow ratio of 85% the maximum manifold velocity is about 0.6 m/s.
 
-.. code:: python
-
-  #Design the sedimentation tank inlet manifold
-  v_FB = 1 * u.mm/u.s
-  W_Diffuser = 3.175 * u.mm
-  W_Sed = 1.07 * u.m
-  v_jet = v_FB * W_Sed/W_Diffuser
-  print('The jet velocity is',v_jet)
-  L_Sed = 6 * u.m
-  Ratio_Flow = 0.85
-  v_Influent_Manifold = v_jet / Ratio_Pipe_Manifold_V_Port_to_V_Man(Ratio_Flow)
-  print('The manifold velocity is',v_Manifold)
-  Q_sed =(L_Sed * W_Sed * v_FB).to(u.L/u.s)
-  ID_min_Influent_Manifold = ac.diam_circle(Q_sed/v_Influent_Manifold)
-  print('The minimum manifold diameter is',ID_min_Influent_Manifold.to(u.inch))
-  SDR = 41
-  ID_Influent_Manifold = ac.ceil_nearest(ID_min_Influent_Manifold,ac.ID_SDR_all_available(SDR))
-  ND_Influent_Manifold = ac.ND_SDR_available(ID_Influent_Manifold,SDR)
-  print('The manifold nominal diameter is',ND_Influent_Manifold.to(u.inch))
+`Designe the inlet manifold <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=ndlvydp8UMFJ&line=7&uniqifier=1>`_
 
 .. _heading_sedimentation_tank_outlet_manifold:
 
@@ -238,31 +219,18 @@ Sedimentation Tank Outlet Manifold
 
 The sedimentation tank outlet manifold collects the clarified water from the top of the plate setters. The outlet manifold is required to help ensure uniform flow up through the plate settlers.  The outlet manifold has orifices and it is these orifices that provide the majority of the head loss through the sedimentation tank. The target head loss for those orifices is about 5 cm. This head loss helps ensure that flow divides evenly between sedimentation tanks and divides evenly between the plate settlers.
 
-.. code:: python
-
-  #Design the sedimentation tank inlet manifold
-  HL_orifice = 5 * u.cm
-  v_orifice_contracted = np.sqrt(2 * u.gravity * HL_orifice)
-  v_Effluent_Manifold = (v_orifice_contracted / Ratio_Pipe_Manifold_V_Port_to_V_Man(Ratio_Flow)).to(u.m/u.s)
-  print('The maximum effluent manifold velocity is',v_Effluent_Manifold)
-  Q_sed =(L_Sed * W_Sed * v_FB).to(u.L/u.s)
-  ID_min_Effluent_Manifold = ac.diam_circle(Q_sed/v_Effluent_Manifold)
-  print('The minimum effluent manifold diameter is',ID_min_Effluent_Manifold.to(u.inch))
-  SDR = 41
-  ID_Effluent_Manifold = ac.ceil_nearest(ID_min_Effluent_Manifold,ac.ID_SDR_all_available(SDR))
-  ND_Effluent_Manifold = ac.ND_SDR_available(ID_Effluent_Manifold,SDR)
-  print('The manifold nominal diameter is',ND_Effluent_Manifold.to(u.inch))
+`Design the sedimentation outlet manifold <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=pmtD8iWCUXu-&line=8&uniqifier=1>`_
 
 The head loss through the sedimentation tank is due to:
 
-* entrance and elbow in influent manifold
-* major losses in influent manifold
-* diffuser exit loss
-* floc blanket (negligible)
-* plate settlers (negligible)
-* effluent manifold orifices
-* effluent manifold major loss
-* effluent manifold exit
+* Entrance and elbow in influent manifold
+* Major losses in influent manifold
+* Diffuser exit loss
+* Floc blanket (negligible)
+* Plate settlers (negligible)
+* Effluent manifold orifices
+* Effluent manifold major loss
+* Effluent manifold exit
 
 It might be convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm so that influent and effluent weirs always have the same elevation difference. The effluent manifold orifices could be designed for whatever head loss is required to meet that target.
 
@@ -286,29 +254,7 @@ where :math:`\Pi_{Q}` represents the uniformity of flow distribution taken as th
 
 The Ten State Standards states, "The velocity of flocculated water through conduits to settling basins shall not be less than 0.15 m/s nor greater than 0.45 m/s." The lower velocity matches the constraint of ensuring that the velocity is high enough to scour flocs along the bottom of the channel and thus prevent sedimentation. The maximum velocity was presumably set to achieve reasonable flow distribution, but that values is dependent on the head loss through the sedimentation tanks.
 
-Below we calculate the maximum sedimentor inlet channel velocity as a function of the flow distribution uniformity.
-
-.. code:: python
-
-  Pi_Q_min = 0.8
-  Pi_Q = np.linspace(Pi_Q_min,0.99,50)
-  Psi_Sed = 5 * u.cm
-
-  def v_man(Psi,Pi_Q):
-    v_man = (2 * np.sqrt(u.gravity * Psi * (1 - Pi_Q**2)/(Pi_Q**2 + 1) )).to(u.m/u.s)
-    return v_man
-
-  v_man(Psi_Sed,Pi_Q)
-
-  plt.plot(Pi_Q,v_man(Psi_Sed,Pi_Q),linewidth=2, color='blue')
-  plt.plot([Pi_Q_min,1],[0.45,0.45],linewidth=2, color='black')
-  plt.plot([Pi_Q_min,1],[0.15,0.15],linewidth=2, color='black', linestyle='dashed')
-  plt.ylabel('Channel water velocity (m/s)')
-  plt.xlabel('Flow uniformity')
-  plt.ylim((0,0.7))
-  plt.legend(['Max channel velocity','10 State Standards Max','10 State Standards Min'])
-  plt.show()
-
+`Here we calculate the maximum sedimentor inlet channel velocity as a function of the flow distribution uniformity. <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=8DRdoLVGUmWS&line=3&uniqifier=1>`_
 
 .. _figure_Sedimentor_channel_max_v:
 
@@ -389,23 +335,7 @@ Now we can solve for maximum manifold channel velocity.
 
 The channel depth of water above the weir, :math:`\bar H_{channel}`, and the flow uniformity target set the maximum velocity in the manifold channel (see :numref:`figure_Filter_channel_v_max`).
 
-.. code:: python
-
-  def Inlet_Channel_V_Max(H_weir,Ratio_Flow):
-  return (2 * np.sqrt(u.gravity*H_weir*(1-Ratio_Flow**(2/3))/(1+Ratio_Flow**(2/3)))).to(u.m/u.s)
-
-  Ratio_Q_graph = np.linspace(0.6,0.95,20)
-
-  H_weir = 5 * u.cm
-  v_graph = np.empty_like(Ratio_Q_graph) * u.m/u.s
-  for i in range(20):
-  v_graph[i] = Inlet_Channel_V_Max(H_weir,Ratio_Q_graph[i])
-
-  plt.plot(Ratio_Q_graph,v_graph)
-  plt.xlabel(r'Flow ratio, $\Pi_{Q_{weir}}$')
-  plt.ylabel(r'Maximum manifold channel velocity, $ \bar v_{M_1} \left(\frac{m}{s} \right)$')
-  plt.show()
-
+`Geneeate the following plot <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=MyYpzYxOU5px&line=5&uniqifier=1>`_
 
 
 .. _figure_Filter_channel_v_max:

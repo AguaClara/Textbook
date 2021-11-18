@@ -2,16 +2,7 @@
 Rapid Mix Mechanical Solution
 ******************************
 
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.core.utility as ut
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-
-Numpy, fortunately, understands how to do matrix/array operations index by index. So if you have two length 5 arrays that you want to multiply index by index, you can simply multiply them! This will allow you to focus more on the rest of the code rather than frustrating indexing errors.
+The Numpy command, fortunately, understands how to do matrix/array operations index by index. So if you have two length 5 arrays that you want to multiply index by index, you can simply multiply them! This will allow you to focus more on the rest of the code rather than frustrating indexing errors.
 
 ``array3 = array1*array2``
 
@@ -33,16 +24,7 @@ Part 1: Temperature effects, energy use, and operating costs
   #. Pass the entire array of temperatures to the kinematic viscosity function in aguaclara.core.pc to obtain an array of corresponding viscosities. 
   #. Plot viscosity (mm^2/s) as a function of temperature (Celsius).
 
-.. code:: python
-
-    GraphTempArray =  np.linspace(0,35)*u.degC
-    GraphKinematicViscosity=pc.viscosity_kinematic(GraphTempArray)
-    fig, ax = plt.subplots()
-    ax.plot(GraphTempArray, GraphKinematicViscosity.to(u.mm**2/u.s), 'r-')
-    ax.set(xlabel='Temperature (degrees Celcius)')
-    ax.set(ylabel='Kinematic viscosity (mm^2/s)')
-    fig.savefig('../Images/Kinematic_vs_T')
-    plt.show()
+`Code for solution here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=KrQbKPFS9Trz&line=1&uniqifier=1>`_
 
 
 .. _figure_Kinematic_vs_T:
@@ -77,25 +59,8 @@ We will design a mechanized rapid mix unit and then analyze the energy costs of 
 
 Using your function, plot the shaft power (kW) required for a conventional rapid mix unit that has a residence time of t = 15s, a velocity gradient of G = 1500/s, and a flow rate of 50 L/s as a function of temperature (Celsius).
 
-.. code:: python
 
-    FlowPlant = 50*(u.L/u.s)
-    t = 15 * u.s
-    G = 1500 * 1/(u.s)
-
-    def rapid_mix_shaft_power(Flow,VelocityGradient,time,Temp):
-        power = ((VelocityGradient**2) * Flow * time * pc.viscosity_kinematic(Temp) * pc.density_water(Temp))
-        return power
-
-
-    ShaftPower = rapid_mix_shaft_power(FlowPlant,G,t,GraphTempArray)
-
-    fig, ax = plt.subplots()
-    ax.plot(GraphTempArray, ShaftPower.to(u.kW), 'r-')
-    ax.set(xlabel='Temperature (degrees Celcius)')
-    ax.set(ylabel='shaft power required (kW)')
-    fig.savefig('../Images/Shaft_Power')
-    plt.show()
+<Generate a figure here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=o25pKAfQ9dPu&line=2&uniqifier=1>`_
 
 .. _figure_Shaft_Power:
 
@@ -115,12 +80,7 @@ What is the required shaft power **in horsepower** for your water treatment plan
 You can `find pint’s unit registry
 here. <https://github.com/hgrecco/pint/blob/c5925bfdab09c75a26bb70cd29fb3d34eed56a5f/pint/default_en_0.6.txt>`__. We recommend bookmarking this page!
 
-.. code:: python
-
-    TempDesign = u.Quantity(0, u.degC)
-
-    RapidMixShaftPower = rapid_mix_shaft_power(FlowPlant,G,t,TempDesign).to(u.hp)
-    print('The required shaft power is', RapidMixShaftPower)
+`See how the required pwer is determiend here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=IAoPyhsK9tRB&line=3&uniqifier=1>`_
 
 The required shaft power is 4.0 hp.
 
@@ -128,10 +88,7 @@ The required shaft power is 4.0 hp.
 
 You may assume 100% efficiency in conversion of shaft power to increased potential energy. For comparison, the difference in water level between the entrance tank and flocculator for an AguaClara plant is less than 40 cm, and 20 cm of that elevation drop is used for flow measurement in the LFOM.
 
-.. code:: python
-
-    ElevDrop = (RapidMixShaftPower/ (FlowPlant * pc.density_water(TempDesign) * pc.gravity)).to(u.m)
-    print('The equivalent height is',  ElevDrop)
+`Code to determine the equivalent height here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=iccuk41t91Fz&line=1&uniqifier=1>`_
 
 The equivalent height is 6.034 m
 
@@ -144,46 +101,13 @@ The equivalent height is 6.034 m
 
 **NOTE:** The variable to which you assign the extracted excel document is a special type of data structure called a `dataframe <https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe>`__. You can call a column of data from a dataframe by ‘indexing’ by the columns title in the original file, like ``dataframe['Horsepower']``. Make sure the column header is input as a string!
 
-.. code:: python
-
-    #We use a pandas dataframe (df) to hold the data from the excel sheet.
-    MotorEfficiencydf = pd.read_excel('motor_efficiency.xlsx')
-
-    print(MotorEfficiencydf)
-
-    MotorHpArray = np.array(MotorEfficiencydf['Horsepower'])*u.horsepower
-    MotorEfficiencyArray = np.array(MotorEfficiencydf['Premium Efficiency'])/100
-
-    MotorHpArray
-
-    Horsepower  Premium Efficiency
-    0         0.25                  64
-    1       0.3333                  68
-    2          0.5                  71
-    3         0.75                75.5
-    4            1                82.5
-    5          1.5                82.5
-    6            2                  84
-    7            3                  86
-    8            5                89.6
-    9          7.5                  90
-    10          10                91.1
-    11          15                91.7
-    12          25                  93
-    13          50                94.1
-    14         100                  95
-    15         250                95.8
+`See how to make the correct array here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=nhp0DVic-B3K&line=8&uniqifier=1>`_
 
 
 **5b) Find a motor that is large enough to drive the rapid mix impeller.**
 It is common in engineering design to have target design value that must be rounded up to the next available manufactured value. In the Flow Control and Measurement Design Challenge, we used this method to take a minimum pipe size required to deliver a target flow rate and then we rounded up to the nearest commonly available pipe size. We wrote a function, ``ceil_nearest`` in aguaclara.core.utility, that we used to select pipe sizes. Use that function to find a motor that is large enough to drive the rapid mix impeller (`What’s an impeller? <https://en.wikipedia.org/wiki/Impeller#In_pumps>`__).
 
-``ut.ceil_nearest`` takes two inputs: the first is the value you are looking to match/exceed. In the pipe sizing example, this would be the smallest pipe that can handle the required flow. The second input is the array through which you are looking to compare the first input. If we continue with the pipe size example, this would be the array of available pipe sizes.
-
-.. code:: python
-
-    MotorDesign = ut.ceil_nearest(RapidMixShaftPower,MotorHpArray)
-    print('The rapid mix motor has',  MotorDesign)
+`See how the choose the correct motor <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=UEXCZ31D_hHl&line=1&uniqifier=1>`_
 
 The rapid mix motor has 5 hp.
 
@@ -200,10 +124,7 @@ It is likely you will get the following output:
 
 How to make sense of this? The parentheses around the entire output specify an array (note the comma before the final parentheses, specifying a blank second index). So you can index with square brackets to call the value within the array (Perhaps try index 0?). You should then get another array. How do you extract the value within this new array?
 
-.. code:: python
-
-    MotorIndex=(np.where(MotorEfficiencydf['Horsepower'] == MotorDesign.magnitude))[0][0]
-    MotorIndex
+`Find the index of the motor <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=7bB7njbF_j1y&line=1&uniqifier=1>`_
 
 6b) You will now use the index of the motor horsepower that you just found to extract the efficiency of the motor. This can be done by calling the index on the array of efficiencies you created or by calling on data from the original dataframe. Dataframes have a method called `get_value <https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.get_value.html>`__ that can return an element in a dataframe given a row index and a column heading. This is done for you as an example.
 
@@ -211,16 +132,7 @@ For this problem, **extract the efficiency of the motor by calling the index on 
 
 Note: it would have been much easier to simply define a variable and type in the efficiency. However, if we did that, it would have broken dependency; the notebook wouldn’t update correctly when you change the flow rate. Our goal is to create designs that scale correctly when the flow rate is changed.
 
-.. code:: python
-
-    #Examplefor how to use .get_value to return an element by calling on row index and column heading
-    MotorEfficiency=(MotorEfficiencydf.get_value(MotorIndex, 'Premium Efficiency', takeable=False))/100
-
-    #-------------------------------------------Your code below-------------------------------------
-
-    print(MotorEfficiencyArray[MotorIndex])
-
-    print('The motor efficiency is ',MotorEfficiency,'.')
+ `Get the motor efficiency <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=D5Xan45W_oHX&line=1&uniqifier=1>`_
 
     The motor efficiency is 0.896.
 
@@ -242,10 +154,7 @@ The `motor specifications <https://www.mcmaster.com/#5990k314/=19d4hod>`__ indic
 
 How much does the motor cost? Create a variable showing the cost of the motor in USD. We have added USD to pint, so you will not find it in the original registry linked in Problem 3. The abbreviation for US Dollars is ``u.USD``.
 
-.. code:: python
-
-    COST_MOTOR = 714.64 * u.USD
-    print('The cost of the motor is', COST_MOTOR)
+`Get the cost of the motor <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=Wyub0oW6BFHt&line=1&uniqifier=1>`_
 
 The cost of the motor is 714.6 dollars. 
 
@@ -257,18 +166,11 @@ For this step, simply **display the resulting data table showing the most recent
 
 Note that this data file has meta information about the data in the first rows. You can `delete those rows by setting header = 4 <https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html>`__ in the function call to the ``pd.read_csv``. You can read exactly one year of data by setting nrows = 12. This will make it easy to calculate the average cost for the past year.
 
-.. code:: python
-
-    ElectricityCostdata = pd.read_csv('Average_retail_price_of_electricity_monthly.csv',header=4,nrows=12)
-    ElectricityCostdata
-
+`Import the Electricity cost data <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=YkUI7CpyBIkC&line=4&uniqifier=1>`_
 
 9b) Calculate the average commercial electricity cost for the most recent 12 months. Include the appropriate units. Don’t forget to correct for the fact that the prices are given in cents and not dollars.
 
-.. code:: python
-
-    ElectricityRate = np.average(np.array(ElectricityCostdata['New York : commercial cents per kilowatthour']))/100*u.USD/(u.kWh)
-    print('The New York State commercial electricity cost for the past year was ',ElectricityRate)
+`Get the New York State energy rate <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=nncam7WwEYcV&line=2&uniqifier=1>`_
 
 The New York State commercial electricity cost for the past year was 0.14622 USD/kWh.
 
@@ -278,45 +180,27 @@ How much would a giga Joule cost for the most recent 12 months? All you have to 
 
 Look through the pint unit registry. To add orders of magnitude (like kilo, micro, giga, yotta), simply place the appropriate prefix before the usual unit abbreviation. A yotta-meter is ``u.Ym``, for example, as ‘``Y``’ represents yotta- in pint.
 
-.. code:: python
-
-    print ('The price of electricity is', ElectricityRate.to(u.USD/u.GJ))
+`See the unit change <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=boIVOsdOEZcy&line=1&uniqifier=1>`_
 
 The price of electricity is 40.62 USD/GJ.
 
 9d) Let’s look back to our design of a rapid mix unit for a water treatment plant in New York. Estimate the electricity demand \* **in kilowatts** \* for the rapid mix by taking the shaft power required and adjust for the efficiency of the motor that you have selected. Note that when a motor is running it does not necessarily operate at full load and hence at full power. Electric motors maintain their efficiency over a wide range of loads. To calculate the electricity consumption, use the actual shaft power required by the rapid mix and the motor efficiency. Calculate the electrical power required by the motor when the water is at its coldest.
 
-.. code:: python
-
-    PowerElectricity = (rapid_mix_shaft_power(FlowPlant,G,t,TempDesign)/MotorEfficiency).to(u.kW)
-    print ('The power required by the motor is', PowerElectricity)
+`Determine the power required <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=3JdNPmgiEbvG&line=2&uniqifier=1>`_
 
 The power required by the motor is 3.30 kW.
 
-.. code:: python
-
-    rapid_mix_shaft_power(FlowPlant,G,t,TempDesign).to(u.hp)
+`Determine the power in horsepower <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=VFULuIx_EfHm&line=1&uniqifier=1>`_
 
 3.967125458280934 horsepower.
 
-9e) Calculate the annual cost of electricity in dollars required to operate the rapid mix unit.
-
-.. code:: python
-
-    RMElectricityCost = (PowerElectricity*ElectricityRate).to(u.USD/u.year)
-    print ('The cost of electricity to operate the rapid mix unit is', RMElectricityCost)
-
-    print(PowerElectricity)
-    print(ElectricityRate)
+9e) Calculate the annual cost of electricity in dollars required to operate the rapid mix unit. `See here for code <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=H62VQXODEjyn&line=2&uniqifier=1>`_
 
 The cost of electricity to operate the rapid mix unit is 4232 USD/year per 3.302 kilowatts, or 0.1462 USD/kilowatt_hour.
 
 9f) What is the total cumulative energy costs for the rapid mix unit over a period of 25 years? Note that we are not including the projected increase in electricity costs over the next 25 years. That would be a nice addition to this analysis that would make the need for energy efficiency all the more apparent, but we are ignoring that complexity for this problem.
 
-.. code:: python
-
-    YR25Electricity = RMElectricityCost*(25*u.year)
-    print ('The cumulative energy costs for a period of 25 years is', YR25Electricity)
+`Code here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=TFup2VQLEp1K&line=2&uniqifier=1>`_
 
 The cumulative energy costs for a period of 25 years is 105794.0 USD.
 

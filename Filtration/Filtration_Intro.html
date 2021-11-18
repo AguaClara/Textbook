@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Filtration Design" href="Filtration_Design.html" />
-    <link rel="prev" title="Sedimentation Design Solution" href="../Sedimentation/Sed_Design_Solution.html" /> 
+    <link rel="prev" title="Sedimentation Examples" href="../Sedimentation/Sed_Examples.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -157,7 +157,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">AguaClara Sedimentation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 10: Filtration</span></p>
 <ul class="current">
@@ -208,9 +207,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#encrustation-of-filter-pipes-at-las-vegas">Encrustation of Filter Pipes at Las Vegas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#slime-at-las-vegas">Slime at Las Vegas</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Appendix 1</span></p>
+<p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
 <ul>
@@ -304,7 +305,7 @@
 <h3>Slow Sand Filters<a class="headerlink" href="#slow-sand-filters" title="Permalink to this headline">¶</a></h3>
 <p>Slow sand filters don’t use coagulants or pretreatment. They are suited for surface waters coming from pristine watersheds. They are a passive technology in that there is no way for an operator to improve performance other than to clean the filter.</p>
 <p>Slow sand filters are sometimes called bio filters, a misunderstanding that has persisted from the early observations that biofilms grow (or are imported) in the sand bed. Although biofilms do form in slow sand filters it is unlikely that they play a role in particle removal. Weber-Shirk demonstrated that removal of E. coli by slow sand filters was insignificant even when the filters had 1 m of head loss due to biofilm growth. Weber-Shirk also demonstrated that slow sand filters perform well even when poisoned with azide. Weber-Shirk also demonstrated that predation by a small protozoan, a chrysophyte, can play a role in the removal of bacteria. The chrysophyte is too small to ingest protozoan pathogens such as cryptosporidium or Giardia lamblia and thus those organisms are likely only removed by physical-chemical means. Similarly it is unlikely that the chrysophyte wastes energy on ingesting virus particles. The dominant particle removal mechanism in slow sand filters is physical-chemical and is the same mechanisms at work in rapid sand filters. Naturally occurring aluminum creates sticky surfaces in the sand bed and makes some of the influent particles sticky. It is likely that aluminum content in the raw water plays a significant role in slow sand filter performance. The aluminum hydroxide nanoparticle “glue” is likely able to effect the removal of a wide range of particle sizes.</p>
-<p>Slow sand filters remove the majority of the particles in the top cm of the sand bed. A schmutzdecke (filter cake or layer of dirt) generally forms on top of the sand and this layer of dirt causes the majority of the head loss thru the filter bed. It is this thin layer that is removed when the head loss is too high to achieve the desired flow rate through the filter. Most slow sand filters are cleaned by hand using shovels to remove a thin layer of the schmutzdecke. The cleaning process is labor intensive and requires taking the filter offline for a day or longer.</p>
+<p>Slow sand filters remove the majority of the particles in the top cm of the sand bed. A schmutzdecke (filter cake or layer of dirt) generally forms on top of the sand and this layer of dirt causes the majority of the head loss through the filter bed. It is this thin layer that is removed when the head loss is too high to achieve the desired flow rate through the filter. Most slow sand filters are cleaned by hand using shovels to remove a thin layer of the schmutzdecke. The cleaning process is labor intensive and requires taking the filter offline for a day or longer.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-ssf-at-jesus-de-otoro"></span><a class="reference internal image-reference" href="../_images/SSF_at_Jesus_de_Otoro.jpg"><img alt="filter set" src="../_images/SSF_at_Jesus_de_Otoro.jpg" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 186 </span><span class="caption-text">Slow sand filters at Jesus de Otoro, Honduras. Slow sand filters require extensive areas of flat terrain or extensive earthwork to create a level spot. In the tropics the filters are open to the sky and that results in nuisance growth of algae. In climates where freezing is a problem the filters are covered.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
@@ -316,13 +317,13 @@
 </div>
 <div class="section" id="rapid-sand-filters">
 <h3>Rapid Sand Filters<a class="headerlink" href="#rapid-sand-filters" title="Permalink to this headline">¶</a></h3>
-<p>It is always interesting to try to understand why different technologies were invented and specifically what problem they were trying to solve. One possibility is that goal was to reduce the labor required for cleaning slow sand filters by devising a system to clean the sand in place. Given the idea of fluidizing the bed of sand with a high upflow velocity it then became tempting evolve to higher flow rates during filtration because having to clean the filter frequently was no longer a problem. Another possibility is that rapid sand filters were invented to handle higher turbidity water, but that isn’t supported by the capabilities of rapid sand filters. Slow and rapid sand filters have very similar maximum influent water turbidity limits. Thus the real advantage to rapid sand filters is that they can be cleaned quickly.</p>
-<p>Many rapid sand filters use 2 or 3 different densities and sizes of filter media to achieve a system with large pores at the surface of the filter and smaller pores deeper within the filter. If sand with a wide range of sizes is fluidized the small sand grains quickly rise to the top and the large sand grains fall to the bottom. Thus a poorly sieved sand will have small pores at the top and large pores at the bottom after backwash. The trick to creating a mix of filter media that results in big pores on the top is to use low density, large diameter media with a lower terminal velocity than a higher density, small diameter media. During backwash the less dense media ends up on top and thus this reverse stratification is achieved.</p>
+<p>It is always interesting to try to understand why different technologies were invented and specifically what problem they were trying to solve. One possibility is that the goal was to reduce the labor required for cleaning slow sand filters by devising a system to clean the sand in place. Given the idea of fluidizing the bed of sand with a high upflow velocity it then became tempting to evolve to higher flow rates during filtration because having to clean the filter frequently was no longer a problem. Another possibility is that rapid sand filters were invented to handle higher turbidity water, but that isn’t supported by the capabilities of rapid sand filters. Slow and rapid sand filters have very similar maximum influent water turbidity limits. Thus the real advantage to rapid sand filters is that they can be cleaned quickly.</p>
+<p>Many rapid sand filters use 2 or 3 different densities and sizes of filter media to achieve a system with large pores at the surface of the filter and smaller pores deeper within the filter. If sand with a wide range of sizes is fluidized, the small sand grains quickly rise to the top and the large sand grains fall to the bottom. Thus a poorly sieved sand will have small pores at the top and large pores at the bottom after backwash. The trick to creating a mix of filter media that results in big pores on the top is to use low density, large diameter media with a lower terminal velocity rather than a higher density, small diameter media. During backwash the less dense media ends up on top and thus this reverse stratification is achieved.</p>
 <p>Given that many installed rapid sand filters are dual media it is worth reflecting on what problem the dual media filters are designed to solve. One possible problem is surface clogging of the sand filter when large, strong flocs bridge across sand pores and then support a layer of flocs above the sand bed. This surface layer would be similar to the schmutzdecke in slow sand filters and could be the location of significant head loss. It appears that rapid sand filters do suffer from surface clogging in some instances. Of course, it is possible that this failure is related to the use of flocculent aids that result in excessively strong flocs and/or sedimentation tanks that don’t effectively capture large flocs.</p>
-<p>Additional potential benefits of dual media filtration include the possibility that they can hold a larger mass of particles before requiring backwash or that they may be able to achieve higher particle removal efficiency. <a class="reference external" href="https://doi.org/10.1016/j.desal.2006.02.102">Zouboulis et al.</a> compared single and dual media filtration and demonstrated that the main advantage to dual media filtration was that it had a lower rate of head loss accumulation. Given that the rate of increase of head loss for the dual media filters was constant over time suggests that the pores that were doing the filtration were exclusively in the larger of the two media. This suggests that larger diameter media (rather than dual media) might be a better choice for rapid sand filters.</p>
+<p>Additional potential benefits of dual media filtration include the possibility that they can hold a larger mass of particles before requiring backwash or that they may be able to achieve higher particle removal efficiency. <a class="reference external" href="https://doi.org/10.1016/j.desal.2006.02.102">Zouboulis et al.</a> compared single and dual media filtration and demonstrated that the main advantage to dual media filtration was that it had a lower rate of head loss accumulation. Given that the rate of increase of head loss for the dual media filters was constant over time, this suggests that the pores that were doing the filtration were exclusively in the larger of the two media. This suggests that larger diameter media (rather than dual media) might be a better choice for rapid sand filters.</p>
 <p>Dual media filters face more challenges during cleaning. The use of relatively low density media for the top layer results in a lower density fluidized bed. This lower density fluidized bed makes it possible for flocs to form mudballs that are sufficiently dense to fall through the top layer of media during backwash (page 221 of Water and Wastewater Technology, 6th edition, by Hammer and Hammer, 2008). The formation of these mudballs is one of the reasons that dual media filters use air scour before or during backwash to breakup the mudballs.</p>
 <p>The addition of flocculation and sedimentation prior to filtration changes the properties of the incoming particles. The settled water contains small flocs and primary particles with some coagulant nanoparticles attached. These particles are sticky and the stickiness undoubtedly influences the physics of the particle attachment processes inside the sand bed. We will talk more about the mysteries of life inside a filter bed later in this chapter.</p>
-<p>Rapid sand filters rely on a backwash system.  It takes a relatively high velocity of water to fluidize a bed of sand and that water has to come from somewhere. In conventional water treatment plants that water comes from a clearwell that is filled with filtered water. During backwash water from the clearwell is pumped through the filter and then either wasted or returned to the head of the plant for another pass through the treatment processes. The need for pumps is one of the big disadvantages of conventional rapid sand filters. Conventional rapid sand filters fail if they lose power or if there isn’t enough filtered water in the clearwell when the filter needs to be backwashed. This raises an interesting question about how rapid sand filters are initially commissioned at water treatment plants given that the clearwell is initially empty and given that filters MUST BE FILLED WITH WATER FROM THE BOTTOM. If you dump water on top of a dry filter bed the water will create a few paths down through the sand and the majority of the sand pores will remain filled with air even when the level of water floods the top of the filter bed. Thus the first operation in rapid sand filter startup must be backwash!</p>
+<p>Rapid sand filters rely on a backwash system.  It takes a relatively high velocity of water to fluidize a bed of sand and that water has to come from somewhere. In conventional water treatment plants that water comes from a clearwell that is filled with filtered water. During backwash water from the clearwell is pumped through the filter and then either wasted or returned to the head of the plant for another pass through the treatment processes. The need for pumps is one of the big disadvantages of conventional rapid sand filters. Conventional rapid sand filters fail if they lose power or if there isn’t enough filtered water in the clearwell when the filter needs to be backwashed. This raises an interesting question about how rapid sand filters are initially commissioned at water treatment plants given that the clearwell is initially empty and given that filters must be filled with water from the bottom. If you dump water on top of a dry filter bed the water will create a few paths down through the sand and the majority of the sand pores will remain filled with air even when the level of water floods the top of the filter bed. Thus the first operation in rapid sand filter startup must be backwash!</p>
 <p>One solution for eliminating the need for backwash pumps is to design a set of filters that work together to backwash one of the filters. This eliminates the need for a clearwell for backwash water. This system of a set of filters is used by <a class="reference external" href="http://cepis.org.pe/sobre-el-cepis/">CEPIS</a> in their design of <a class="reference external" href="../_static/references/CEPIS/CEPIS5_Batería_de_filtros.pdf">rapid sand filters</a> This system is an elegant solution that works well for small cities, but the requirement of 6 filters is onerous for towns where 2 filters should have been sufficient.</p>
 <div class="figure align-center" id="id5">
 <span id="figure-cepis-filter-set"></span><a class="reference internal image-reference" href="../_images/CEPIS_filter_set.jpg"><img alt="filter set" src="../_images/CEPIS_filter_set.jpg" style="width: 300px;" /></a>
@@ -332,17 +333,8 @@
 <div class="section" id="stacked-rapid-sand-filters">
 <h3>Stacked Rapid Sand Filters<a class="headerlink" href="#stacked-rapid-sand-filters" title="Permalink to this headline">¶</a></h3>
 <p>Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornell program in response to the need for a new technology that would both eliminate the need for backwash pumps AND not require the construction of 6 filters for small towns. StaRS filters use 6 20 cm deep layers of sand (no dual media here) with the layers stacked vertically. The six layers give a total sand depth of 1.2 m. The filter operates with the same design flow rate for both backwash and filtration modes and uses settled water for backwash. This eliminates the startup problem for rapid sand filters that don’t have an initial source of backwash water. The shallow filter layers take advantage of new insights into the filtration mechanisms (more on that soon).</p>
-<p>StaRS filters come in two configurations. Open StaRS (OStaRS) are used for flow rates greater than about 8 L/s. An 8 L/s filter has a plan view area of 85 cm x 85 cm. This is considered the minimum size that can be constructed with a human working inside the filter. For lower flow rates Enclosed StaRS (EStaRS) filters can be assembled using PVC pipe as the body of the filter. The inner plumbing can be accessed through openings in the top and bottom of the main filter body.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-
-<span class="n">Q_Filter</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">V_filter_backwash</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">A_Filter</span> <span class="o">=</span> <span class="n">Q_Filter</span><span class="o">/</span><span class="n">V_filter_backwash</span>
-<span class="n">W_Filter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">A_Filter</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The width of a filter designed to treat &#39;</span><span class="p">,</span><span class="n">Q_Filter</span><span class="p">,</span><span class="s1">&#39; is &#39;</span><span class="p">,</span> <span class="n">W_Filter</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
+<p>StaRS filters come in two configurations. Open StaRS (OStaRS) are used for flow rates greater than about 8 L/s. An 8 L/s filter has a plan view area of 85 cm x 85 cm. This is considered the minimum size that can be constructed with a human working inside the filter. For lower flow rates, Enclosed StaRS (EStaRS) filters can be assembled using PVC pipe as the body of the filter. The inner plumbing can be accessed through openings in the top and bottom of the main filter body.</p>
+<p><a class="reference external" href="https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=xAc_E3A85-ai&amp;line=1&amp;uniqifier=1">See here for determining the filter width for a specific flow rate</a></p>
 <span id="table-net-velocities"></span><table class="colwidths-given docutils align-left" id="id6">
 <caption><span class="caption-number">Table 19 </span><span class="caption-text">Relative velocities and areas for different unit processes.</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -455,7 +447,7 @@
 <span id="heading-porosity"></span><h2>Porosity<a class="headerlink" href="#porosity" title="Permalink to this headline">¶</a></h2>
 <p>Porosity of a sand bed refers to the ratio of the void volume to the total volume of the sand bed.</p>
 <div class="math notranslate nohighlight" id="equation-porosity">
-<span class="eqno">(620)<a class="headerlink" href="#equation-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}\]</div>
+<span class="eqno">(611)<a class="headerlink" href="#equation-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}\]</div>
 <p>Porosity is determined by the geometry of the material and the size distribution (or uniformity of the particle sizes) and not by the average size of the particles. If you have three different sized spheres (such as  1 um clay, 0.2 mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in <a class="reference internal" href="#figure-porosity"><span class="std std-numref">Fig. 189</span></a>. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.</p>
 <div class="figure align-center" id="id8">
 <span id="figure-porosity"></span><img alt="This figure illustrates how different sized materials have the same total bulk porosity" src="../_images/figure_porosity.png" />
@@ -467,11 +459,11 @@
 <p><span class="math notranslate nohighlight">\(D_{10}\)</span> is used for particle removal models, and <span class="math notranslate nohighlight">\(D_{60}\)</span> is used for hydraulic modeling.</p>
 <p>The ratio of the two is the uniformity coefficient:</p>
 <div class="math notranslate nohighlight" id="equation-uniformity-coefficient">
-<span class="eqno">(621)<a class="headerlink" href="#equation-uniformity-coefficient" title="Permalink to this equation">¶</a></span>\[  UC = \frac{D_{60}}{D_{10}}\]</div>
+<span class="eqno">(612)<a class="headerlink" href="#equation-uniformity-coefficient" title="Permalink to this equation">¶</a></span>\[  UC = \frac{D_{60}}{D_{10}}\]</div>
 <p>The uniformity coefficient describes the uniformity of the sand. A <span class="math notranslate nohighlight">\(UC = 1\)</span> indicates that every grain of sand is the same size, which is the ideal case. A large <span class="math notranslate nohighlight">\(UC\)</span> is indicative of a wide range of grain sizes which will result in stratification of the sand bed after backwash with fine sand on top. This will result in more rapid development of head loss during filtration. The fine sand on top will also expand more during backwash and could result in loss of sand during backwash.</p>
 <p>During backwash, the sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-backwash-porosity">
-<span class="eqno">(622)<a class="headerlink" href="#equation-backwash-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}\]</div>
+<span class="eqno">(613)<a class="headerlink" href="#equation-backwash-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\phi_{FiSandBw}\)</span> = sand porosity during backwash</div>
@@ -482,7 +474,7 @@
 </div>
 <p>From this it becomes possible to directly relate porosity (as above) to the filter expansion ratio, which is simply the ratio of the heights of the expanded sand bed and the settled sand bed:</p>
 <div class="math notranslate nohighlight" id="equation-filter-expansion-ratio">
-<span class="eqno">(623)<a class="headerlink" href="#equation-filter-expansion-ratio" title="Permalink to this equation">¶</a></span>\[\Pi_{FiBw} = \frac{H_{FiSandBw}}{H_{FiSand}}\]</div>
+<span class="eqno">(614)<a class="headerlink" href="#equation-filter-expansion-ratio" title="Permalink to this equation">¶</a></span>\[\Pi_{FiBw} = \frac{H_{FiSandBw}}{H_{FiSand}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\Pi_{FiBw}\)</span> = the expansion ratio value</div>
@@ -494,7 +486,7 @@
 <span id="clean-sand-head-loss"></span><h2>Clean Bed Head Loss<a class="headerlink" href="#clean-bed-head-loss" title="Permalink to this headline">¶</a></h2>
 <p>The Carman Kozeny Equation, an adaptation of the Hagen-Poiseuille Equation :eq:`` describes the head loss through a clean bed during filtration. The Ergun Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-ergun">(201)</a> can also be used to estimate head loss in porous media.</p>
 <div class="math notranslate nohighlight" id="equation-eq-carman-kozeny">
-<span class="eqno">(624)<a class="headerlink" href="#equation-eq-carman-kozeny" title="Permalink to this equation">¶</a></span>\[ \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu \bar v_a}{g D_{60}^2}\]</div>
+<span class="eqno">(615)<a class="headerlink" href="#equation-eq-carman-kozeny" title="Permalink to this equation">¶</a></span>\[ \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu \bar v_a}{g D_{60}^2}\]</div>
 <div class="line-block">
 <div class="line">where</div>
 <div class="line"><span class="math notranslate nohighlight">\(h_l\)</span> = head loss in sand bed</div>
@@ -518,7 +510,7 @@
 </div>
 <p>The pressure from the water in the manometer:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-0">
-<span class="eqno">(625)<a class="headerlink" href="#equation-filtration-filtration-intro-0" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}\]</div>
+<span class="eqno">(616)<a class="headerlink" href="#equation-filtration-filtration-intro-0" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(P_{Manometer} =\)</span> total height from the bottom of the filter to the inlet box</div>
@@ -531,27 +523,27 @@
 </div>
 <p>The pressure from the sand and water in the filter:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-1">
-<span class="eqno">(626)<a class="headerlink" href="#equation-filtration-filtration-intro-1" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
+<span class="eqno">(617)<a class="headerlink" href="#equation-filtration-filtration-intro-1" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(h_{l_{FiBw}} =\)</span> the difference in height of the inlet and water surface height during backwash; the backwash head loss</div>
 </div>
 <p>Setting them equal for a force balance:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-2">
-<span class="eqno">(627)<a class="headerlink" href="#equation-filtration-filtration-intro-2" title="Permalink to this equation">¶</a></span>\[\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
+<span class="eqno">(618)<a class="headerlink" href="#equation-filtration-filtration-intro-2" title="Permalink to this equation">¶</a></span>\[\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
 <p>Which simplifies to:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-3">
-<span class="eqno">(628)<a class="headerlink" href="#equation-filtration-filtration-intro-3" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}\\or\\h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\end{aligned}\end{align} \]</div>
+<span class="eqno">(619)<a class="headerlink" href="#equation-filtration-filtration-intro-3" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}\\or\\h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\end{aligned}\end{align} \]</div>
 <p>This result gives a ratio of the head loss during backwash to the height difference during forward operation. With <span class="math notranslate nohighlight">\(\phi_{FiSand} = 0.4\)</span> and <span class="math notranslate nohighlight">\(\rho_{Sand} = 2650 kg/m^3\)</span> the value of this ratio is:</p>
 <div class="math notranslate nohighlight" id="equation-eq-min-fluidization-velocity">
-<span class="eqno">(629)<a class="headerlink" href="#equation-eq-min-fluidization-velocity" title="Permalink to this equation">¶</a></span>\[\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\]</div>
+<span class="eqno">(620)<a class="headerlink" href="#equation-eq-min-fluidization-velocity" title="Permalink to this equation">¶</a></span>\[\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\]</div>
 </div>
 <div class="section" id="minimum-fluidization-velocity">
 <h2>Minimum Fluidization Velocity<a class="headerlink" href="#minimum-fluidization-velocity" title="Permalink to this headline">¶</a></h2>
-<p>The minimum fluidization velocity for a sand bed can be obtained by setting the head loss through the sand (Equation <a class="reference internal" href="#equation-eq-carman-kozeny">(624)</a>) equal to the head required to suspend the sand bed (Equation <a class="reference internal" href="#equation-eq-min-fluidization-velocity">(629)</a>).</p>
-<p>Using these two equations the minimum velocity for sand fluidization can be found!</p>
+<p>The minimum fluidization velocity for a sand bed can be obtained by setting the head loss through the sand (Equation <a class="reference internal" href="#equation-eq-carman-kozeny">(615)</a>) equal to the head required to suspend the sand bed (Equation <a class="reference internal" href="#equation-eq-min-fluidization-velocity">(620)</a>).</p>
+<p>Using these two equations the minimum velocity for sand fluidization can be found.</p>
 <div class="math notranslate nohighlight" id="equation-minimum-fluidization-velocity-sand">
-<span class="eqno">(630)<a class="headerlink" href="#equation-minimum-fluidization-velocity-sand" title="Permalink to this equation">¶</a></span>\[\bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
+<span class="eqno">(621)<a class="headerlink" href="#equation-minimum-fluidization-velocity-sand" title="Permalink to this equation">¶</a></span>\[\bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
 <p>From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter does <strong>not</strong> imply that the sand at the bottom of the filter is fluidized.</p>
 </div>
 </div>
@@ -559,17 +551,17 @@
 <h1>Filtration Theory<a class="headerlink" href="#filtration-theory" title="Permalink to this headline">¶</a></h1>
 <p>Filters are used to remove particles and thus we’d like to be able to predict particle removal efficiency in a filter. Unfortunately we don’t yet have equations that describe particle removal by sand filtration. This is a very unpleasant surprise. It is as if we were designing a suspension bridge and didn’t have any equations describing the relationship between the tension in the cables and the load they are supporting. We only have an equation describing what the cables do when there isn’t any additional load. In the case of filtration we only have clean bed filtration models that attempt to describe what happens before the filter begins to remove particles.</p>
 <dl class="simple">
-<dt>Reflection: How did we get to 2019 without a model for filter performance? There may be several reasons for the lack of a filtration model. Here are a few ideas.</dt><dd><ul class="simple">
-<li><p>The lack of data acquisition systems in university laboratories means that very few rapid sand filters were operated and evaluated for full filter runs in laboratory settings</p></li>
+<dt>Reflection: How did we get to 2019 without a model for filter performance? There may be several reasons for the lack of a filtration model. Here are a few ideas:</dt><dd><ul class="simple">
+<li><p>The lack of data acquisition systems in university laboratories means that very few rapid sand filters were operated and evaluated for full filter runs in laboratory settings.</p></li>
 <li><p>The Environmental Engineering fixation on jar tests as the way to model water treatment plants provided no method to test filtration and thus most university laboratories only experimented with batch operation and not continuous flow.</p></li>
 <li><p>Filtration models were borrowed from air filtration (<a class="reference external" href="https://pubs.acs.org/doi/abs/10.1021/es60058a005">Yao et al, 1971</a>) and thus did not take into account that the coagulant nanoparticles made particle attachment to surfaces very favorable.</p></li>
-<li><p>Filtration models only modeled the clean bed phase(the first few minutes of a filter run) before particles were deposited and began altering the geometry of the pores.</p></li>
+<li><p>Filtration models only modeled the clean bed phase (the first few minutes of a filter run) before particles were deposited and began altering the geometry of the pores.</p></li>
 </ul>
 </dd>
 </dl>
 <p>Clean bed filtration models include an equation first presented by Iwasaki in 1937 that suggested that particle removal occurred as a first order process with respect to depth. This simplifies to</p>
 <div class="math notranslate nohighlight" id="equation-filter-iwasaki">
-<span class="eqno">(631)<a class="headerlink" href="#equation-filter-iwasaki" title="Permalink to this equation">¶</a></span>\[  pC^* \propto \frac{L}{D_{sand}}\]</div>
+<span class="eqno">(622)<a class="headerlink" href="#equation-filter-iwasaki" title="Permalink to this equation">¶</a></span>\[  pC^* \propto \frac{L}{D_{sand}}\]</div>
 <p>where L is the depth of the sand in the column. This suggests that increasing the depth of sand in a filter would dramatically improve performance.</p>
 <p>It is quite amazing that we have no useful models for sand filter performance after more than a century of using sand filters as a required process in converting surface waters into safe drinking water. Fortunately we have plenty of clues suggesting what is happening inside filters and at the level of the particles traveling through the pores.</p>
 <p>The movie in <a class="reference internal" href="#figure-active-zone-model"><span class="std std-numref">Fig. 191</span></a> illustrates that the classic performance of a rapid sand filter as a function of time could be explained by the presence of an active filtration zone that slowly progresses down through the filter as the pores become fully loaded. But that begs the question of what determines “fully loaded.”</p>
@@ -598,15 +590,15 @@
 <p>The active filtration zone is progressing through the filter at a constant velocity. The number of fully loaded pores is increasing linearly with time! That is why head loss increases linearly with time.</p>
 <p>The poor performance at the beginning of a filter run is because the clean zone isn’t a good filter. This suggests that dual media filters are pointless because the smaller media at the downstream end of the filter remains clean and doesn’t actually do anything. If this is correct, then multimedia filters can be replaced with a single larger media size.</p>
 <dl class="simple">
-<dt>As coagulant dose increases</dt><dd><ul class="simple">
-<li><p>flocs are larger and thus they fill the pores faster and thus the active zone moves faster through the filter</p></li>
-<li><p>large flocs are removed more efficiently and thus the active zone is thinner (fewer active pores in series)</p></li>
-<li><p>thinner active zone results in faster failure (higher slope of turbidity vs time during failure)</p></li>
-<li><p>larger flocs results in faster failure (higher slope of turbidity vs time during failure)</p></li>
+<dt>As coagulant dose increases:</dt><dd><ul class="simple">
+<li><p>Flocs are larger and thus they fill the pores faster and thus the active zone moves faster through the filter.</p></li>
+<li><p>Large flocs are removed more efficiently and thus the active zone is thinner (fewer active pores in series).</p></li>
+<li><p>Thinner active zone results in faster failure (higher slope of turbidity vs time during failure).</p></li>
+<li><p>Larger flocs results in faster failure (higher slope of turbidity vs time during failure).</p></li>
 </ul>
 </dd>
-<dt>As sand size increases</dt><dd><ul class="simple">
-<li><p>There are fewer pores and thus fewer constrictions and thus less head loss at the end of the filter run</p></li>
+<dt>As sand size increases:</dt><dd><ul class="simple">
+<li><p>There are fewer pores and thus fewer constrictions and thus less head loss at the end of the filter run.</p></li>
 <li><p>Each constriction requires more particles to build and thus there is less head loss per mass of particles removed.</p></li>
 </ul>
 </dd>
@@ -617,11 +609,11 @@
 </div>
 <div class="section" id="filtration-model">
 <h2>Filtration Model<a class="headerlink" href="#filtration-model" title="Permalink to this headline">¶</a></h2>
-<p>The filtration model is based on the insight that rapid sand filters have an active filtration zone that slowly progresses down through the filter as it fills to maximum capacity at the upstream end. A clean bed of sand is ineffective at capturing small particles as evidenced by the poor initial performance after backwash. Thus it is apparently that previously deposited particles play a key role in subsequent capture of particles.</p>
+<p>The filtration model is based on the insight that rapid sand filters have an active filtration zone that slowly progresses down through the filter as it fills to maximum capacity at the upstream end. A clean bed of sand is ineffective at capturing small particles as evidenced by the poor initial performance after backwash. Thus it is apparent that previously deposited particles play a key role in subsequent capture of particles.</p>
 <p>Interception!
-Flow constrictions - converging streamlines move particles closer to the pore wall. Previously deposited particles form constrictions. The constrictions are the most likely location for particles to collide with deposited particles. Thus particles do not fill the pores and clog the filter. Instead particle form constrictions where streamlines already converged.</p>
+Flow constrictions - converging streamlines move particles closer to the pore wall. Previously deposited particles form constrictions. The constrictions are the most likely location for particles to collide with deposited particles. Thus particles do not fill the pores and clog the filter. Instead particles form constrictions where streamlines already converged.</p>
 <p>Maximum shear sets a minimum constriction opening size!
-As particles gradually deposit in an ever shrinking flow constriction the velocity through the constriction increases and the velocity gradient at the wall increases. Eventually the bond strength of the coagulant nanoparticles is not great enough to capture suspended particles that collide with the deposited particles. The flow constriction reaches a minimum diameter and subsequent suspended flocs flow right through the constriction.</p>
+As particles gradually deposit in an ever shrinking flow constriction, the velocity through the constriction increases and the velocity gradient at the wall increases. Eventually the bond strength of the coagulant nanoparticles is not great enough to capture suspended particles that collide with the deposited particles. The flow constriction reaches a minimum diameter and subsequent suspended flocs flow right through the constriction.</p>
 <p>The gradual creation of more flow constrictions results in an almost linear increase in head loss as a function of the volume of deposited flocs.</p>
 <span id="table-filter-hypotheses"></span><table class="colwidths-given docutils align-center" id="id14">
 <caption><span class="caption-number">Table 20 </span><span class="caption-text">Hypotheses, evidence, and why it matters</span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
@@ -674,59 +666,59 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 </div>
 <div class="section" id="filter-head-loss">
 <span id="heading-filter-head-loss-model"></span><h2>Filter Head Loss<a class="headerlink" href="#filter-head-loss" title="Permalink to this headline">¶</a></h2>
-<p>The maximum velocity in a constriction is set by the drag on a primary particle that is large enough to prevent the primary particle from attaching. Given that the constriction is likely sharp edged on the upstream face the flow velocity is likely close to uniform at the entrance to the constriction. There is likely a vena contracta effect and that effect would prevent deposition of particles downstream of the leading edge of the constriction because particles are diverted away from the constriction walls.</p>
+<p>The maximum velocity in a constriction is set by the drag on a primary particle that is large enough to prevent the primary particle from attaching. Given that the constriction is likely sharp edged on the upstream face, the flow velocity is likely close to uniform at the entrance to the constriction. There is likely a vena contracta effect and that effect would prevent deposition of particles downstream of the leading edge of the constriction because particles are diverted away from the constriction walls.</p>
 <p>The maximum constriction velocity is thus likely independent of the filtration velocity and pore size. The maximum velocity at the inlet to the constrictions is likely proportional to the fractional surface coverage of the primary particles by coagulant nanoparticles. Thus as the coagulant dose increases the head loss per pore and the head loss at the time of particle breakthrough increases.</p>
 <div class="math notranslate nohighlight" id="equation-eq-headloss-constriction">
-<span class="eqno">(632)<a class="headerlink" href="#equation-eq-headloss-constriction" title="Permalink to this equation">¶</a></span>\[  h_{l_{constriction}} = \frac{\bar v_{constriction}^2}{2g}\]</div>
+<span class="eqno">(623)<a class="headerlink" href="#equation-eq-headloss-constriction" title="Permalink to this equation">¶</a></span>\[  h_{l_{constriction}} = \frac{\bar v_{constriction}^2}{2g}\]</div>
 <dl class="simple">
 <dt>The maximum drag that a primary particle can</dt><dd><ul class="simple">
-<li><p>need to connect velocity to drag</p></li>
-<li><p>Use experimental data from filtration to find critical velocity</p></li>
-<li><p>expect velocity to be independent of pore size (sand size)</p></li>
-<li><p>Create model for total head loss in a filter as a function of sand size</p></li>
+<li><p>Need to connect velocity to drag.</p></li>
+<li><p>Use experimental data from filtration to find critical velocity.</p></li>
+<li><p>Expect velocity to be independent of pore size (sand size).</p></li>
+<li><p>Create model for total head loss in a filter as a function of sand size.</p></li>
 <li><p>Need a connection between pore size and volume of particles it can hold.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The average distance between sand grains in a filter bed is obtained by taking the cube root of the total volume occupied by a sand grain including the pore space. We also assume that there is a one-to-one correspondence between pores and sand grains and thus the distance between pores is the same as the distance between sand grains.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-4">
-<span class="eqno">(633)<a class="headerlink" href="#equation-filtration-filtration-intro-4" title="Permalink to this equation">¶</a></span>\[\Lambda_{sand} = \Lambda_{pore} = \left(\frac{\pi}{6(1-\phi)} \right)^\frac{1}{3}D_{sand}\]</div>
+<span class="eqno">(624)<a class="headerlink" href="#equation-filtration-filtration-intro-4" title="Permalink to this equation">¶</a></span>\[\Lambda_{sand} = \Lambda_{pore} = \left(\frac{\pi}{6(1-\phi)} \right)^\frac{1}{3}D_{sand}\]</div>
 <p>The flow rate per pore is the approach velocity multiplied by <span class="math notranslate nohighlight">\(\Lambda^2\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-5">
-<span class="eqno">(634)<a class="headerlink" href="#equation-filtration-filtration-intro-5" title="Permalink to this equation">¶</a></span>\[Q_{pore} = v_a \Lambda_{pore}^2\]</div>
+<span class="eqno">(625)<a class="headerlink" href="#equation-filtration-filtration-intro-5" title="Permalink to this equation">¶</a></span>\[Q_{pore} = v_a \Lambda_{pore}^2\]</div>
 <p>The velocity through a constriction in a pore is</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-6">
-<span class="eqno">(635)<a class="headerlink" href="#equation-filtration-filtration-intro-6" title="Permalink to this equation">¶</a></span>\[Q_{pore} = v_a \Lambda_{pore}^2 = \frac{\pi}{4} D_{constriction}^2v_{constriction}\]</div>
+<span class="eqno">(626)<a class="headerlink" href="#equation-filtration-filtration-intro-6" title="Permalink to this equation">¶</a></span>\[Q_{pore} = v_a \Lambda_{pore}^2 = \frac{\pi}{4} D_{constriction}^2v_{constriction}\]</div>
 <p>The constriction diameter is thus given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-d-constriction">
-<span class="eqno">(636)<a class="headerlink" href="#equation-eq-d-constriction" title="Permalink to this equation">¶</a></span>\[  D_{constriction} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction}}\]</div>
-<p>The Reynolds number of the jet issuing from the constriction is obtained by using Equation <a class="reference internal" href="#equation-eq-d-constriction">(636)</a> to eliminate the dependence on diameter.</p>
+<span class="eqno">(627)<a class="headerlink" href="#equation-eq-d-constriction" title="Permalink to this equation">¶</a></span>\[  D_{constriction} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction}}\]</div>
+<p>The Reynolds number of the jet issuing from the constriction is obtained by using Equation <a class="reference internal" href="#equation-eq-d-constriction">(627)</a> to eliminate the dependence on diameter.</p>
 <div class="math notranslate nohighlight" id="equation-eq-re-constriction">
-<span class="eqno">(637)<a class="headerlink" href="#equation-eq-re-constriction" title="Permalink to this equation">¶</a></span>\[  Re_{jet} = \frac{\Lambda_{pore} }{\nu }\sqrt\frac{4 v_a v_{constriction}}{\pi }\]</div>
-<p>The jet issuing from the constrictions is laminar for Reynolds numbers below 500 (<a class="reference external" href="https://dspace.mit.edu/handle/1721.1/27517">see Ungate et al., 1975 page 13</a>).  The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. WE don’t have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.</p>
+<span class="eqno">(628)<a class="headerlink" href="#equation-eq-re-constriction" title="Permalink to this equation">¶</a></span>\[  Re_{jet} = \frac{\Lambda_{pore} }{\nu }\sqrt\frac{4 v_a v_{constriction}}{\pi }\]</div>
+<p>The jet issuing from the constrictions is laminar for Reynolds numbers below 500 (<a class="reference external" href="https://dspace.mit.edu/handle/1721.1/27517">see Ungate et al., 1975 page 13</a>).  The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. We don’t have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.</p>
 <p>The rate of jet expansion can be obtained from an analytical solution of the Navier Stokes equation as shown by <a class="reference external" href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99">Pai, S.I., Fluid dynamics of jets. (D. Van Nostrand Company, Inc., Princeton, NJ, 1954 (pages 78-79)</a></p>
 <p>The momentum in the direction of flow is conserved and is given by</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-7">
-<span class="eqno">(638)<a class="headerlink" href="#equation-filtration-filtration-intro-7" title="Permalink to this equation">¶</a></span>\[M_0 = 2 \pi \rho \int_{0}^{\infty} u^2 r dr\]</div>
+<span class="eqno">(629)<a class="headerlink" href="#equation-filtration-filtration-intro-7" title="Permalink to this equation">¶</a></span>\[M_0 = 2 \pi \rho \int_{0}^{\infty} u^2 r dr\]</div>
 <p>For the case of uniform velocity through the constriction we can replace <span class="math notranslate nohighlight">\(\infty\)</span> with <span class="math notranslate nohighlight">\(r_{constriction}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-8">
-<span class="eqno">(639)<a class="headerlink" href="#equation-filtration-filtration-intro-8" title="Permalink to this equation">¶</a></span>\[M_0 = 2 \pi \rho v_{constriction}^2 \int_{0}^{r_{constriction}}  r dr\]</div>
+<span class="eqno">(630)<a class="headerlink" href="#equation-filtration-filtration-intro-8" title="Permalink to this equation">¶</a></span>\[M_0 = 2 \pi \rho v_{constriction}^2 \int_{0}^{r_{constriction}}  r dr\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-9">
-<span class="eqno">(640)<a class="headerlink" href="#equation-filtration-filtration-intro-9" title="Permalink to this equation">¶</a></span>\[M_0 = \pi \rho v_{constriction}^2 r_{constriction}^2 = \rho Q_{pore}v_{constriction}\]</div>
+<span class="eqno">(631)<a class="headerlink" href="#equation-filtration-filtration-intro-9" title="Permalink to this equation">¶</a></span>\[M_0 = \pi \rho v_{constriction}^2 r_{constriction}^2 = \rho Q_{pore}v_{constriction}\]</div>
 <p>The velocity in the direction of the jet is given by (equation 4.39 in <a class="reference external" href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99">Pai, 1954</a>)</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-10">
-<span class="eqno">(641)<a class="headerlink" href="#equation-filtration-filtration-intro-10" title="Permalink to this equation">¶</a></span>\[u = \frac{3M_0}{8\pi \mu} \frac{1}{x} \frac{1}{\left[1+(\frac{\zeta^2}{4})\right]^2}\]</div>
+<span class="eqno">(632)<a class="headerlink" href="#equation-filtration-filtration-intro-10" title="Permalink to this equation">¶</a></span>\[u = \frac{3M_0}{8\pi \mu} \frac{1}{x} \frac{1}{\left[1+(\frac{\zeta^2}{4})\right]^2}\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-11">
-<span class="eqno">(642)<a class="headerlink" href="#equation-filtration-filtration-intro-11" title="Permalink to this equation">¶</a></span>\[\zeta = \frac{1}{4\nu} \left(\frac{3M_0}{\pi\rho}\right)^{\frac{1}{2}} \frac{r}{x}\]</div>
+<span class="eqno">(633)<a class="headerlink" href="#equation-filtration-filtration-intro-11" title="Permalink to this equation">¶</a></span>\[\zeta = \frac{1}{4\nu} \left(\frac{3M_0}{\pi\rho}\right)^{\frac{1}{2}} \frac{r}{x}\]</div>
 <p>and thus <span class="math notranslate nohighlight">\(\zeta\)</span> is zero at the centerline.  We will use the centerline velocity at distance <span class="math notranslate nohighlight">\(\Lambda_{pore}\)</span> from the constriction to estimate the head loss caused by one constriction.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-12">
-<span class="eqno">(643)<a class="headerlink" href="#equation-filtration-filtration-intro-12" title="Permalink to this equation">¶</a></span>\[v_{exp} = \frac{3\rho Q_{pore}v_{constriction}}{8\pi \mu \Lambda_{pore}}\]</div>
+<span class="eqno">(634)<a class="headerlink" href="#equation-filtration-filtration-intro-12" title="Permalink to this equation">¶</a></span>\[v_{exp} = \frac{3\rho Q_{pore}v_{constriction}}{8\pi \mu \Lambda_{pore}}\]</div>
 <p>We can substitute for <span class="math notranslate nohighlight">\(Q_{pore}\)</span> to obtain</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-13">
-<span class="eqno">(644)<a class="headerlink" href="#equation-filtration-filtration-intro-13" title="Permalink to this equation">¶</a></span>\[v_{exp} =  \frac{3 v_a \Lambda_{pore} }{8\pi \nu }v_{constriction}\]</div>
+<span class="eqno">(635)<a class="headerlink" href="#equation-filtration-filtration-intro-13" title="Permalink to this equation">¶</a></span>\[v_{exp} =  \frac{3 v_a \Lambda_{pore} }{8\pi \nu }v_{constriction}\]</div>
 <p>We can use mass conservation and the equation for <span class="math notranslate nohighlight">\(Q_{pore}\)</span> to replace <span class="math notranslate nohighlight">\(v_a\)</span> with <span class="math notranslate nohighlight">\(v_{constriction}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-14">
-<span class="eqno">(645)<a class="headerlink" href="#equation-filtration-filtration-intro-14" title="Permalink to this equation">¶</a></span>\[v_{exp} =  \frac{3}{32}\frac{D_{constriction}}{\Lambda_{pore}}Re_{jet}v_{constriction}\]</div>
+<span class="eqno">(636)<a class="headerlink" href="#equation-filtration-filtration-intro-14" title="Permalink to this equation">¶</a></span>\[v_{exp} =  \frac{3}{32}\frac{D_{constriction}}{\Lambda_{pore}}Re_{jet}v_{constriction}\]</div>
 <p>It isn’t yet clear if this always means that <span class="math notranslate nohighlight">\(v_{exp}\)</span> will be very small compared with <span class="math notranslate nohighlight">\(v_{constriction}\)</span>, but that seems to be the logical conclusion. Thus when calculating the head loss for a pore it is reasonable to assume that the kinetic energy of the jet is all lost before entering the next constriction.</p>
 </div>
 <div class="section" id="sedimentation-impacts">
@@ -738,19 +730,19 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
 <h3>Velocity Gradient<a class="headerlink" href="#velocity-gradient" title="Permalink to this headline">¶</a></h3>
 <p>Almost all of the kinetic energy of the jet issuing from the constriction is dissipated in the downstream pore. We will assume that the majority of the head loss is due to the jet (rather than wall shear). The volume of a pore is given by</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-15">
-<span class="eqno">(646)<a class="headerlink" href="#equation-filtration-filtration-intro-15" title="Permalink to this equation">¶</a></span>\[\rlap{-} V_{pore} = \phi\Lambda_{pore}^3\]</div>
+<span class="eqno">(637)<a class="headerlink" href="#equation-filtration-filtration-intro-15" title="Permalink to this equation">¶</a></span>\[\rlap{-} V_{pore} = \phi\Lambda_{pore}^3\]</div>
 <p>The hydraulic residence time in a pore is obtained from the volume and flow rate through a pore.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-16">
-<span class="eqno">(647)<a class="headerlink" href="#equation-filtration-filtration-intro-16" title="Permalink to this equation">¶</a></span>\[\theta_{pore} = \frac{\rlap{-} V_{pore}}{Q_{pore}} = \frac{\phi\Lambda_{pore}^3}{v_a \Lambda_{pore}^2} = \frac{\phi\Lambda_{pore}}{v_a}\]</div>
+<span class="eqno">(638)<a class="headerlink" href="#equation-filtration-filtration-intro-16" title="Permalink to this equation">¶</a></span>\[\theta_{pore} = \frac{\rlap{-} V_{pore}}{Q_{pore}} = \frac{\phi\Lambda_{pore}^3}{v_a \Lambda_{pore}^2} = \frac{\phi\Lambda_{pore}}{v_a}\]</div>
 <p>The Camp Stein velocity gradient in a pore is obtained by assuming that all of the input kinetic energy is dissipated through viscosity during the time that the water spends in the pore.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-17">
-<span class="eqno">(648)<a class="headerlink" href="#equation-filtration-filtration-intro-17" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{gh_{\rm{L}}}{\nu \theta}}\]</div>
+<span class="eqno">(639)<a class="headerlink" href="#equation-filtration-filtration-intro-17" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{gh_{\rm{L}}}{\nu \theta}}\]</div>
 <p>The head loss in the pore is from the jet kinetic energy. Substitute the equations for pore volume, residence time, and head loss to obtain the fundamental equation for the velocity gradient in a pore.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-18">
-<span class="eqno">(649)<a class="headerlink" href="#equation-filtration-filtration-intro-18" title="Permalink to this equation">¶</a></span>\[G_{CS} =\bar v_{constriction} \sqrt{\frac{ v_a}{2\nu \phi\Lambda_{pore}}}\]</div>
+<span class="eqno">(640)<a class="headerlink" href="#equation-filtration-filtration-intro-18" title="Permalink to this equation">¶</a></span>\[G_{CS} =\bar v_{constriction} \sqrt{\frac{ v_a}{2\nu \phi\Lambda_{pore}}}\]</div>
 <p>The estimated value of this velocity gradient is <em>300 Hz</em>.</p>
 <p>We need to compare the constricted jet velocity gradient with the clean bed injection velocity gradient that occurs due to the fact that the approach velocity at the point of flow injection in StaRS filters is much higher than the average approach velocity. The flow injection area is approximately 2.5 cm wide and serves an effective filter area (up and down!) of 20 cm (spacing between injection points is 10 cm.). Thus the approach velocity in current StaRS filters is 14.6 mm/s and the corresponding Camp Stein velocity gradient is <em>1440 Hz</em>.</p>
-<p>EstaRS filters have water falls from the filter inlet channel to inlet box. In recent designs the water flows through a narrow slot and then falls into the inlet box. The slot is about 3.4 cm wide and the water falls about 40 cm. The vertical velocity after dropping 40 cm is 2.8 m/s. The geometry of this water fall is complicated and We will assume the resulting jet is circular at impact with the water surface. The diameter of the jet is thus obtained from continuity and is equal to 9.5 cm.  Now we use the energy dissipation rate of a round jet to obtain <em>4300 Hz</em>. Thus the floc size could be set by the water fall in the inlet box since this is the highest velocity gradient on the path into and through the filter. However, our rough estimate based on wild extrapolation suggests that this would yield a 36 <span class="math notranslate nohighlight">\(\mu m\)</span> diameter floc. This is larger than the flocs produced by the sedimentation tank plate settlers and thus it is possible that even with this waterfall, that the floc size distribution is set by the sedimentation tank plate settlers.</p>
+<p>EstaRS filters have water falls from the filter inlet channel to inlet box. In recent designs the water flows through a narrow slot and then falls into the inlet box. The slot is about 3.4 cm wide and the water falls about 40 cm. The vertical velocity after dropping 40 cm is 2.8 m/s. The geometry of this water fall is complicated and we will assume the resulting jet is circular at impact with the water surface. The diameter of the jet is thus obtained from continuity and is equal to 9.5 cm.  Now we use the energy dissipation rate of a round jet to obtain <em>4300 Hz</em>. Thus the floc size could be set by the water fall in the inlet box since this is the highest velocity gradient on the path into and through the filter. However, our rough estimate based on wild extrapolation suggests that this would yield a 36 <span class="math notranslate nohighlight">\(\mu m\)</span> diameter floc. This is larger than the flocs produced by the sedimentation tank plate settlers and thus it is possible that even with this waterfall, that the floc size distribution is set by the sedimentation tank plate settlers.</p>
 <p>Note that the water fall height diminishes during a filter run as the water level in the inlet box increases due to head loss through the filter. Thus it is likely that the waterfall doesn’t significantly break flocs.</p>
 </div>
 </div>
@@ -763,7 +755,7 @@ As particles gradually deposit in an ever shrinking flow constriction the veloci
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="Filtration_Design.html" class="btn btn-neutral float-right" title="Filtration Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../Sedimentation/Sed_Design_Solution.html" class="btn btn-neutral float-left" title="Sedimentation Design Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Sedimentation/Sed_Examples.html" class="btn btn-neutral float-left" title="Sedimentation Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -42,7 +42,7 @@ Slow sand filters don't use coagulants or pretreatment. They are suited for surf
 
 Slow sand filters are sometimes called bio filters, a misunderstanding that has persisted from the early observations that biofilms grow (or are imported) in the sand bed. Although biofilms do form in slow sand filters it is unlikely that they play a role in particle removal. Weber-Shirk demonstrated that removal of E. coli by slow sand filters was insignificant even when the filters had 1 m of head loss due to biofilm growth. Weber-Shirk also demonstrated that slow sand filters perform well even when poisoned with azide. Weber-Shirk also demonstrated that predation by a small protozoan, a chrysophyte, can play a role in the removal of bacteria. The chrysophyte is too small to ingest protozoan pathogens such as cryptosporidium or Giardia lamblia and thus those organisms are likely only removed by physical-chemical means. Similarly it is unlikely that the chrysophyte wastes energy on ingesting virus particles. The dominant particle removal mechanism in slow sand filters is physical-chemical and is the same mechanisms at work in rapid sand filters. Naturally occurring aluminum creates sticky surfaces in the sand bed and makes some of the influent particles sticky. It is likely that aluminum content in the raw water plays a significant role in slow sand filter performance. The aluminum hydroxide nanoparticle "glue" is likely able to effect the removal of a wide range of particle sizes.
 
-Slow sand filters remove the majority of the particles in the top cm of the sand bed. A schmutzdecke (filter cake or layer of dirt) generally forms on top of the sand and this layer of dirt causes the majority of the head loss thru the filter bed. It is this thin layer that is removed when the head loss is too high to achieve the desired flow rate through the filter. Most slow sand filters are cleaned by hand using shovels to remove a thin layer of the schmutzdecke. The cleaning process is labor intensive and requires taking the filter offline for a day or longer.
+Slow sand filters remove the majority of the particles in the top cm of the sand bed. A schmutzdecke (filter cake or layer of dirt) generally forms on top of the sand and this layer of dirt causes the majority of the head loss through the filter bed. It is this thin layer that is removed when the head loss is too high to achieve the desired flow rate through the filter. Most slow sand filters are cleaned by hand using shovels to remove a thin layer of the schmutzdecke. The cleaning process is labor intensive and requires taking the filter offline for a day or longer.
 
 .. _figure_SSF_at_Jesus_de_Otoro:
 
@@ -61,19 +61,19 @@ Multistage filters were invented to extend the range of applicability of slow sa
 Rapid Sand Filters
 ------------------
 
-It is always interesting to try to understand why different technologies were invented and specifically what problem they were trying to solve. One possibility is that goal was to reduce the labor required for cleaning slow sand filters by devising a system to clean the sand in place. Given the idea of fluidizing the bed of sand with a high upflow velocity it then became tempting evolve to higher flow rates during filtration because having to clean the filter frequently was no longer a problem. Another possibility is that rapid sand filters were invented to handle higher turbidity water, but that isn't supported by the capabilities of rapid sand filters. Slow and rapid sand filters have very similar maximum influent water turbidity limits. Thus the real advantage to rapid sand filters is that they can be cleaned quickly.
+It is always interesting to try to understand why different technologies were invented and specifically what problem they were trying to solve. One possibility is that the goal was to reduce the labor required for cleaning slow sand filters by devising a system to clean the sand in place. Given the idea of fluidizing the bed of sand with a high upflow velocity it then became tempting to evolve to higher flow rates during filtration because having to clean the filter frequently was no longer a problem. Another possibility is that rapid sand filters were invented to handle higher turbidity water, but that isn't supported by the capabilities of rapid sand filters. Slow and rapid sand filters have very similar maximum influent water turbidity limits. Thus the real advantage to rapid sand filters is that they can be cleaned quickly.
 
-Many rapid sand filters use 2 or 3 different densities and sizes of filter media to achieve a system with large pores at the surface of the filter and smaller pores deeper within the filter. If sand with a wide range of sizes is fluidized the small sand grains quickly rise to the top and the large sand grains fall to the bottom. Thus a poorly sieved sand will have small pores at the top and large pores at the bottom after backwash. The trick to creating a mix of filter media that results in big pores on the top is to use low density, large diameter media with a lower terminal velocity than a higher density, small diameter media. During backwash the less dense media ends up on top and thus this reverse stratification is achieved.
+Many rapid sand filters use 2 or 3 different densities and sizes of filter media to achieve a system with large pores at the surface of the filter and smaller pores deeper within the filter. If sand with a wide range of sizes is fluidized, the small sand grains quickly rise to the top and the large sand grains fall to the bottom. Thus a poorly sieved sand will have small pores at the top and large pores at the bottom after backwash. The trick to creating a mix of filter media that results in big pores on the top is to use low density, large diameter media with a lower terminal velocity rather than a higher density, small diameter media. During backwash the less dense media ends up on top and thus this reverse stratification is achieved.
 
 Given that many installed rapid sand filters are dual media it is worth reflecting on what problem the dual media filters are designed to solve. One possible problem is surface clogging of the sand filter when large, strong flocs bridge across sand pores and then support a layer of flocs above the sand bed. This surface layer would be similar to the schmutzdecke in slow sand filters and could be the location of significant head loss. It appears that rapid sand filters do suffer from surface clogging in some instances. Of course, it is possible that this failure is related to the use of flocculent aids that result in excessively strong flocs and/or sedimentation tanks that don't effectively capture large flocs.
 
-Additional potential benefits of dual media filtration include the possibility that they can hold a larger mass of particles before requiring backwash or that they may be able to achieve higher particle removal efficiency. `Zouboulis et al. <https://doi.org/10.1016/j.desal.2006.02.102>`_ compared single and dual media filtration and demonstrated that the main advantage to dual media filtration was that it had a lower rate of head loss accumulation. Given that the rate of increase of head loss for the dual media filters was constant over time suggests that the pores that were doing the filtration were exclusively in the larger of the two media. This suggests that larger diameter media (rather than dual media) might be a better choice for rapid sand filters.
+Additional potential benefits of dual media filtration include the possibility that they can hold a larger mass of particles before requiring backwash or that they may be able to achieve higher particle removal efficiency. `Zouboulis et al. <https://doi.org/10.1016/j.desal.2006.02.102>`_ compared single and dual media filtration and demonstrated that the main advantage to dual media filtration was that it had a lower rate of head loss accumulation. Given that the rate of increase of head loss for the dual media filters was constant over time, this suggests that the pores that were doing the filtration were exclusively in the larger of the two media. This suggests that larger diameter media (rather than dual media) might be a better choice for rapid sand filters.
 
 Dual media filters face more challenges during cleaning. The use of relatively low density media for the top layer results in a lower density fluidized bed. This lower density fluidized bed makes it possible for flocs to form mudballs that are sufficiently dense to fall through the top layer of media during backwash (page 221 of Water and Wastewater Technology, 6th edition, by Hammer and Hammer, 2008). The formation of these mudballs is one of the reasons that dual media filters use air scour before or during backwash to breakup the mudballs.
 
 The addition of flocculation and sedimentation prior to filtration changes the properties of the incoming particles. The settled water contains small flocs and primary particles with some coagulant nanoparticles attached. These particles are sticky and the stickiness undoubtedly influences the physics of the particle attachment processes inside the sand bed. We will talk more about the mysteries of life inside a filter bed later in this chapter.
 
-Rapid sand filters rely on a backwash system.  It takes a relatively high velocity of water to fluidize a bed of sand and that water has to come from somewhere. In conventional water treatment plants that water comes from a clearwell that is filled with filtered water. During backwash water from the clearwell is pumped through the filter and then either wasted or returned to the head of the plant for another pass through the treatment processes. The need for pumps is one of the big disadvantages of conventional rapid sand filters. Conventional rapid sand filters fail if they lose power or if there isn't enough filtered water in the clearwell when the filter needs to be backwashed. This raises an interesting question about how rapid sand filters are initially commissioned at water treatment plants given that the clearwell is initially empty and given that filters MUST BE FILLED WITH WATER FROM THE BOTTOM. If you dump water on top of a dry filter bed the water will create a few paths down through the sand and the majority of the sand pores will remain filled with air even when the level of water floods the top of the filter bed. Thus the first operation in rapid sand filter startup must be backwash!
+Rapid sand filters rely on a backwash system.  It takes a relatively high velocity of water to fluidize a bed of sand and that water has to come from somewhere. In conventional water treatment plants that water comes from a clearwell that is filled with filtered water. During backwash water from the clearwell is pumped through the filter and then either wasted or returned to the head of the plant for another pass through the treatment processes. The need for pumps is one of the big disadvantages of conventional rapid sand filters. Conventional rapid sand filters fail if they lose power or if there isn't enough filtered water in the clearwell when the filter needs to be backwashed. This raises an interesting question about how rapid sand filters are initially commissioned at water treatment plants given that the clearwell is initially empty and given that filters must be filled with water from the bottom. If you dump water on top of a dry filter bed the water will create a few paths down through the sand and the majority of the sand pores will remain filled with air even when the level of water floods the top of the filter bed. Thus the first operation in rapid sand filter startup must be backwash!
 
 One solution for eliminating the need for backwash pumps is to design a set of filters that work together to backwash one of the filters. This eliminates the need for a clearwell for backwash water. This system of a set of filters is used by `CEPIS <http://cepis.org.pe/sobre-el-cepis/>`_ in their design of `rapid sand filters <../_static/references/CEPIS/CEPIS5_Batería_de_filtros.pdf>`_ This system is an elegant solution that works well for small cities, but the requirement of 6 filters is onerous for towns where 2 filters should have been sufficient.
 
@@ -92,18 +92,9 @@ Stacked Rapid Sand Filters
 
 Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornell program in response to the need for a new technology that would both eliminate the need for backwash pumps AND not require the construction of 6 filters for small towns. StaRS filters use 6 20 cm deep layers of sand (no dual media here) with the layers stacked vertically. The six layers give a total sand depth of 1.2 m. The filter operates with the same design flow rate for both backwash and filtration modes and uses settled water for backwash. This eliminates the startup problem for rapid sand filters that don't have an initial source of backwash water. The shallow filter layers take advantage of new insights into the filtration mechanisms (more on that soon).
 
-StaRS filters come in two configurations. Open StaRS (OStaRS) are used for flow rates greater than about 8 L/s. An 8 L/s filter has a plan view area of 85 cm x 85 cm. This is considered the minimum size that can be constructed with a human working inside the filter. For lower flow rates Enclosed StaRS (EStaRS) filters can be assembled using PVC pipe as the body of the filter. The inner plumbing can be accessed through openings in the top and bottom of the main filter body.
+StaRS filters come in two configurations. Open StaRS (OStaRS) are used for flow rates greater than about 8 L/s. An 8 L/s filter has a plan view area of 85 cm x 85 cm. This is considered the minimum size that can be constructed with a human working inside the filter. For lower flow rates, Enclosed StaRS (EStaRS) filters can be assembled using PVC pipe as the body of the filter. The inner plumbing can be accessed through openings in the top and bottom of the main filter body.
 
-.. code:: python
-
-  from aguaclara.core.units import unit_registry as u
-  import numpy as np
-
-  Q_Filter = 8 * u.L/u.s
-  V_filter_backwash = 11 * u.mm/u.s
-  A_Filter = Q_Filter/V_filter_backwash
-  W_Filter = np.sqrt(A_Filter).to(u.m)
-  print('The width of a filter designed to treat ',Q_Filter,' is ', W_Filter,'.')
+`See here for determining the filter width for a specific flow rate <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=xAc_E3A85-ai&line=1&uniqifier=1>`_
 
 .. _table_Net_Velocities:
 
@@ -308,7 +299,7 @@ Minimum Fluidization Velocity
 
 The minimum fluidization velocity for a sand bed can be obtained by setting the head loss through the sand (Equation :eq:`eq_Carman_Kozeny`) equal to the head required to suspend the sand bed (Equation :eq:`eq_Min_Fluidization_Velocity`).
 
-Using these two equations the minimum velocity for sand fluidization can be found!
+Using these two equations the minimum velocity for sand fluidization can be found.
 
 .. math::
   :label: minimum_fluidization_velocity_sand
@@ -323,11 +314,11 @@ Filtration Theory
 
 Filters are used to remove particles and thus we'd like to be able to predict particle removal efficiency in a filter. Unfortunately we don't yet have equations that describe particle removal by sand filtration. This is a very unpleasant surprise. It is as if we were designing a suspension bridge and didn't have any equations describing the relationship between the tension in the cables and the load they are supporting. We only have an equation describing what the cables do when there isn't any additional load. In the case of filtration we only have clean bed filtration models that attempt to describe what happens before the filter begins to remove particles.
 
-Reflection: How did we get to 2019 without a model for filter performance? There may be several reasons for the lack of a filtration model. Here are a few ideas.
- - The lack of data acquisition systems in university laboratories means that very few rapid sand filters were operated and evaluated for full filter runs in laboratory settings
+Reflection: How did we get to 2019 without a model for filter performance? There may be several reasons for the lack of a filtration model. Here are a few ideas:
+ - The lack of data acquisition systems in university laboratories means that very few rapid sand filters were operated and evaluated for full filter runs in laboratory settings.
  - The Environmental Engineering fixation on jar tests as the way to model water treatment plants provided no method to test filtration and thus most university laboratories only experimented with batch operation and not continuous flow.
  - Filtration models were borrowed from air filtration (`Yao et al, 1971 <https://pubs.acs.org/doi/abs/10.1021/es60058a005>`_) and thus did not take into account that the coagulant nanoparticles made particle attachment to surfaces very favorable.
- - Filtration models only modeled the clean bed phase(the first few minutes of a filter run) before particles were deposited and began altering the geometry of the pores.
+ - Filtration models only modeled the clean bed phase (the first few minutes of a filter run) before particles were deposited and began altering the geometry of the pores.
 
 Clean bed filtration models include an equation first presented by Iwasaki in 1937 that suggested that particle removal occurred as a first order process with respect to depth. This simplifies to
 
@@ -397,14 +388,14 @@ The active filtration zone is progressing through the filter at a constant veloc
 
 The poor performance at the beginning of a filter run is because the clean zone isn't a good filter. This suggests that dual media filters are pointless because the smaller media at the downstream end of the filter remains clean and doesn't actually do anything. If this is correct, then multimedia filters can be replaced with a single larger media size.
 
-As coagulant dose increases
- - flocs are larger and thus they fill the pores faster and thus the active zone moves faster through the filter
- - large flocs are removed more efficiently and thus the active zone is thinner (fewer active pores in series)
- - thinner active zone results in faster failure (higher slope of turbidity vs time during failure)
- - larger flocs results in faster failure (higher slope of turbidity vs time during failure)
+As coagulant dose increases:
+ - Flocs are larger and thus they fill the pores faster and thus the active zone moves faster through the filter.
+ - Large flocs are removed more efficiently and thus the active zone is thinner (fewer active pores in series).
+ - Thinner active zone results in faster failure (higher slope of turbidity vs time during failure).
+ - Larger flocs results in faster failure (higher slope of turbidity vs time during failure).
 
-As sand size increases
- - There are fewer pores and thus fewer constrictions and thus less head loss at the end of the filter run
+As sand size increases:
+ - There are fewer pores and thus fewer constrictions and thus less head loss at the end of the filter run.
  - Each constriction requires more particles to build and thus there is less head loss per mass of particles removed.
 
 Particle Removal Efficiency
@@ -416,13 +407,13 @@ This is the multi-decade old question that challenges us to continue our researc
 Filtration Model
 ================
 
-The filtration model is based on the insight that rapid sand filters have an active filtration zone that slowly progresses down through the filter as it fills to maximum capacity at the upstream end. A clean bed of sand is ineffective at capturing small particles as evidenced by the poor initial performance after backwash. Thus it is apparently that previously deposited particles play a key role in subsequent capture of particles.
+The filtration model is based on the insight that rapid sand filters have an active filtration zone that slowly progresses down through the filter as it fills to maximum capacity at the upstream end. A clean bed of sand is ineffective at capturing small particles as evidenced by the poor initial performance after backwash. Thus it is apparent that previously deposited particles play a key role in subsequent capture of particles.
 
 Interception!
-Flow constrictions - converging streamlines move particles closer to the pore wall. Previously deposited particles form constrictions. The constrictions are the most likely location for particles to collide with deposited particles. Thus particles do not fill the pores and clog the filter. Instead particle form constrictions where streamlines already converged.
+Flow constrictions - converging streamlines move particles closer to the pore wall. Previously deposited particles form constrictions. The constrictions are the most likely location for particles to collide with deposited particles. Thus particles do not fill the pores and clog the filter. Instead particles form constrictions where streamlines already converged.
 
 Maximum shear sets a minimum constriction opening size!
-As particles gradually deposit in an ever shrinking flow constriction the velocity through the constriction increases and the velocity gradient at the wall increases. Eventually the bond strength of the coagulant nanoparticles is not great enough to capture suspended particles that collide with the deposited particles. The flow constriction reaches a minimum diameter and subsequent suspended flocs flow right through the constriction.
+As particles gradually deposit in an ever shrinking flow constriction, the velocity through the constriction increases and the velocity gradient at the wall increases. Eventually the bond strength of the coagulant nanoparticles is not great enough to capture suspended particles that collide with the deposited particles. The flow constriction reaches a minimum diameter and subsequent suspended flocs flow right through the constriction.
 
 The gradual creation of more flow constrictions results in an almost linear increase in head loss as a function of the volume of deposited flocs.
 
@@ -447,7 +438,7 @@ The gradual creation of more flow constrictions results in an almost linear incr
 Filter Head Loss
 =================
 
-The maximum velocity in a constriction is set by the drag on a primary particle that is large enough to prevent the primary particle from attaching. Given that the constriction is likely sharp edged on the upstream face the flow velocity is likely close to uniform at the entrance to the constriction. There is likely a vena contracta effect and that effect would prevent deposition of particles downstream of the leading edge of the constriction because particles are diverted away from the constriction walls.
+The maximum velocity in a constriction is set by the drag on a primary particle that is large enough to prevent the primary particle from attaching. Given that the constriction is likely sharp edged on the upstream face, the flow velocity is likely close to uniform at the entrance to the constriction. There is likely a vena contracta effect and that effect would prevent deposition of particles downstream of the leading edge of the constriction because particles are diverted away from the constriction walls.
 
 The maximum constriction velocity is thus likely independent of the filtration velocity and pore size. The maximum velocity at the inlet to the constrictions is likely proportional to the fractional surface coverage of the primary particles by coagulant nanoparticles. Thus as the coagulant dose increases the head loss per pore and the head loss at the time of particle breakthrough increases.
 
@@ -458,10 +449,10 @@ The maximum constriction velocity is thus likely independent of the filtration v
 
 
 The maximum drag that a primary particle can
- - need to connect velocity to drag
- - Use experimental data from filtration to find critical velocity
- - expect velocity to be independent of pore size (sand size)
- - Create model for total head loss in a filter as a function of sand size
+ - Need to connect velocity to drag.
+ - Use experimental data from filtration to find critical velocity.
+ - Expect velocity to be independent of pore size (sand size).
+ - Create model for total head loss in a filter as a function of sand size.
  - Need a connection between pore size and volume of particles it can hold.
 
 The average distance between sand grains in a filter bed is obtained by taking the cube root of the total volume occupied by a sand grain including the pore space. We also assume that there is a one-to-one correspondence between pores and sand grains and thus the distance between pores is the same as the distance between sand grains.
@@ -497,7 +488,7 @@ The Reynolds number of the jet issuing from the constriction is obtained by usin
 
     Re_{jet} = \frac{\Lambda_{pore} }{\nu }\sqrt\frac{4 v_a v_{constriction}}{\pi }
 
-The jet issuing from the constrictions is laminar for Reynolds numbers below 500 (`see Ungate et al., 1975 page 13 <https://dspace.mit.edu/handle/1721.1/27517>`_).  The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. WE don't have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.
+The jet issuing from the constrictions is laminar for Reynolds numbers below 500 (`see Ungate et al., 1975 page 13 <https://dspace.mit.edu/handle/1721.1/27517>`_).  The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. We don't have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.
 
 The rate of jet expansion can be obtained from an analytical solution of the Navier Stokes equation as shown by `Pai, S.I., Fluid dynamics of jets. (D. Van Nostrand Company, Inc., Princeton, NJ, 1954 (pages 78-79) <https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99>`_
 
@@ -590,7 +581,7 @@ The estimated value of this velocity gradient is *300 Hz*.
 We need to compare the constricted jet velocity gradient with the clean bed injection velocity gradient that occurs due to the fact that the approach velocity at the point of flow injection in StaRS filters is much higher than the average approach velocity. The flow injection area is approximately 2.5 cm wide and serves an effective filter area (up and down!) of 20 cm (spacing between injection points is 10 cm.). Thus the approach velocity in current StaRS filters is 14.6 mm/s and the corresponding Camp Stein velocity gradient is *1440 Hz*.
 
 
-EstaRS filters have water falls from the filter inlet channel to inlet box. In recent designs the water flows through a narrow slot and then falls into the inlet box. The slot is about 3.4 cm wide and the water falls about 40 cm. The vertical velocity after dropping 40 cm is 2.8 m/s. The geometry of this water fall is complicated and We will assume the resulting jet is circular at impact with the water surface. The diameter of the jet is thus obtained from continuity and is equal to 9.5 cm.  Now we use the energy dissipation rate of a round jet to obtain *4300 Hz*. Thus the floc size could be set by the water fall in the inlet box since this is the highest velocity gradient on the path into and through the filter. However, our rough estimate based on wild extrapolation suggests that this would yield a 36 :math:`\mu m` diameter floc. This is larger than the flocs produced by the sedimentation tank plate settlers and thus it is possible that even with this waterfall, that the floc size distribution is set by the sedimentation tank plate settlers.
+EstaRS filters have water falls from the filter inlet channel to inlet box. In recent designs the water flows through a narrow slot and then falls into the inlet box. The slot is about 3.4 cm wide and the water falls about 40 cm. The vertical velocity after dropping 40 cm is 2.8 m/s. The geometry of this water fall is complicated and we will assume the resulting jet is circular at impact with the water surface. The diameter of the jet is thus obtained from continuity and is equal to 9.5 cm.  Now we use the energy dissipation rate of a round jet to obtain *4300 Hz*. Thus the floc size could be set by the water fall in the inlet box since this is the highest velocity gradient on the path into and through the filter. However, our rough estimate based on wild extrapolation suggests that this would yield a 36 :math:`\mu m` diameter floc. This is larger than the flocs produced by the sedimentation tank plate settlers and thus it is possible that even with this waterfall, that the floc size distribution is set by the sedimentation tank plate settlers.
 
 Note that the water fall height diminishes during a filter run as the water level in the inlet box increases due to head loss through the filter. Thus it is likely that the waterfall doesn't significantly break flocs.
 

@@ -162,7 +162,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Examples.html">Sedimentation Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 10: Filtration</span></p>
 <ul>
@@ -191,9 +190,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#encrustation-of-filter-pipes-at-las-vegas">Encrustation of Filter Pipes at Las Vegas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#slime-at-las-vegas">Slime at Las Vegas</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Appendix 1</span></p>
+<p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
 <ul>
@@ -272,13 +273,13 @@
 <p>Unsolved sedimentation tank failure modes:</p>
 <ol class="arabic simple">
 <li><p><a class="reference internal" href="#heading-floc-volcanoes"><span class="std std-ref">Floc volcanoes</span></a></p></li>
-<li><p>Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.</p></li>
+<li><p>Dissolved air flotation that results from air coming out of solution. Two sources of air include compressed air traveling from the transmission line and dissolved air released due to increased temperature.</p></li>
 <li><p>Slime growth from iron-oxidizing bacteria.</p></li>
-<li><p>NOM impact on floc density</p></li>
+<li><p>NOM impact on floc density.</p></li>
 </ol>
 <div class="section" id="flocculator-to-floc-blanket-transition">
 <span id="heading-floc-floc-blanket"></span><h2>Flocculator to Floc Blanket Transition<a class="headerlink" href="#flocculator-to-floc-blanket-transition" title="Permalink to this headline">¶</a></h2>
-<p>We now how a published flocculator model and we have strong evidence that primary particles are removed first order with respect to depth (or time) in the floc blanket. Given these two models it is possible for the first time to optimize the design of a flocculator based on minimizing the volume of the flocculator and floc blanket reactors.</p>
+<p>We now have a published flocculator model and we have strong evidence that primary particles are removed first order with respect to depth (or time) in the floc blanket. Given these two models it is possible for the first time to optimize the design of a flocculator based on minimizing the volume of the flocculator and floc blanket reactors.</p>
 <p>From the floc model we have</p>
 <div class="math notranslate nohighlight" id="equation-dcpdt-floc">
 <span class="eqno">(565)<a class="headerlink" href="#equation-dcpdt-floc" title="Permalink to this equation">¶</a></span>\[       \frac{dC_{P}}{dt}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} G_{CS}\]</div>
@@ -323,37 +324,7 @@ High velocity gradients for flocculators with this long of a residence time will
 <p>The flocculator head loss is given by</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-10">
 <span class="eqno">(577)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-10" title="Permalink to this equation">¶</a></span>\[ h_{Floc} = G_{CS} \theta \frac{\nu G_{CS}}{g}\]</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="kn">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="c1">#I played with the velocity gradient to get a reasonable head loss of 50 cm.</span>
-<span class="n">G_CS</span> <span class="o">=</span> <span class="mi">123</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Hz</span>
-<span class="n">density_clay</span> <span class="o">=</span> <span class="mi">2650</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span>
-<span class="c1">#From William&#39;s research the k for flocculator is 0.03. We need to confirm that this value is correct.</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mf">0.03</span>
-<span class="c1"># It isn&#39;t clear what value should be used for alpha</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="c1"># The following 3 values are estimates from Casey&#39;s floc blanket video.</span>
-<span class="n">C_infb</span> <span class="o">=</span> <span class="mi">40</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">NTU</span>
-<span class="n">C_outfb</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">NTU</span>
-<span class="n">t_fb</span> <span class="o">=</span> <span class="mi">800</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">k_fb</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">t_fb</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">C_outfb</span><span class="o">/</span><span class="n">C_infb</span><span class="p">))</span>
-<span class="n">C_out_f</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span> <span class="n">density_clay</span><span class="o">/</span><span class="mi">6</span> <span class="o">*</span> <span class="p">(</span><span class="n">k_fb</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">alpha</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">G_CS</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">NTU</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The concentration of primary particles in the flocculated water is&#39;</span><span class="p">,</span><span class="n">C_out_f</span><span class="p">)</span>
-
-<span class="n">Gt</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span> <span class="o">*</span> <span class="n">density_clay</span><span class="o">/</span><span class="n">C_out_f</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The flocculator Gt value is &#39;</span><span class="p">,</span><span class="n">Gt</span><span class="p">)</span>
-<span class="n">t_floc</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="n">k_fb</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The flocculator residence time is&#39;</span><span class="p">,</span><span class="n">t_floc</span><span class="p">)</span>
-
-<span class="n">Temp</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">degC</span>
-
-<span class="n">Floc_HL</span> <span class="o">=</span> <span class="p">(</span><span class="n">G_CS</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">t_floc</span> <span class="o">*</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_kinematic</span><span class="p">(</span><span class="n">Temp</span><span class="p">)</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">standard_gravity</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The head loss through the flocculator is&#39;</span><span class="p">,</span><span class="n">Floc_HL</span><span class="p">)</span>
-</pre></div>
-</div>
+<p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=fMlmtxm_YWJY&amp;line=2&amp;uniqifier=1">See here for calculations of headloss throuh the floc blanket</a></p>
 <p>The target flocculator Gt of 39,000 is crazy close to the current design. This value will undoubtedly change somewhat as we get better measurements for the floc blanket rate constant.</p>
 <p>This analysis suggests that the primary particle concentration after flocculation can be quite high when operating with a floc blanket. Further work will be required to ensure that startup is not a problem.</p>
 </div>
@@ -361,7 +332,7 @@ High velocity gradients for flocculators with this long of a residence time will
 <span id="heading-floc-recycle"></span><h2>Floc Recycle<a class="headerlink" href="#floc-recycle" title="Permalink to this headline">¶</a></h2>
 <p>We hypothesize that the flocs in floc blankets serve as collectors that primary particles attach to. We suspect that collisions between primary particles and large flocs are possible in the sedimentation tank because the rotational velocity of the flocs is small relative to the sedimentation velocity of the flocs. If the rotational velocity of the flocs is small, then a stagnation point will exist on the floc and a finite flow of fluid will come within a primary particle radius of the floc. Thus we expect primary particle removal in floc blankets to be proportional to the number of collectors that a primary particle passes while in the floc blanket.</p>
 <p>The number of collectors that a primary particle passes is proportional to the solids concentration (a surrogate for the number concentration of flocs), the primary particle residence time in the floc blanket, and the sedimentation velocity of the flocs. The sedimentation velocity of the flocs is important because that is what causes a relative velocity between the primary particles and the flocs.</p>
-<p>As we have explored increasing the upflow velocity in sedimentation tanks the performance has dropped markedly. This is undoubtedly due in part to the combined effective of a very dilute floc blanket at high upflow velocities AND a low residence time for the primary particles.</p>
+<p>As we have explored increasing the upflow velocity in sedimentation tanks the performance has dropped markedly. This is undoubtedly due in part to the combined effect of a very dilute floc blanket at high upflow velocities AND a low residence time for the primary particles.</p>
 <p>Would it be possible to increase the concentration of the floc blanket and thus increase the collision rate? At 3 mm/s upflow velocity there are very few flocs that can stay in the floc blanket. We need a mechanism to transport flocs to the bottom of the floc blanket and return them again after they are carried to the top of the floc blanket.</p>
 <p>We propose to test this by installing a settled floc recycle line. The recycle line will connect to the bottom surface of the tube settler below the location of the floc weir. From there is will carry concentrated sludge to the very bottom of the sedimentation tank where it will pass through the wall of the sedimentation tank. Increasing the amount of recycle flow will both increase the solids concentration in the floc blanket and decrease the primary particle residence time in the floc blanket.</p>
 <p>There must be an optimal amount of recycled flocs for a floc blanket. Of course, one possiblity is that the optimal recycle is zero. Recycled flocs increase the floc blanket concentration and thus increase the rate of collisions between primary particles and flocs. The recycled flocs also decrease the residence time in the floc blanket and thus decrease the total number of collisions between primary particles and flocs. It may be more complicated than this because the hindered sedimentation velocity of the flocs in the floc blanket is also a function of their concentration.</p>
@@ -392,42 +363,8 @@ High velocity gradients for flocculators with this long of a residence time will
 <p>Now we can substitute to get the collision potential as a function of the flow rates.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-21">
 <span class="eqno">(588)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-21" title="Permalink to this equation">¶</a></span>\[CP_{fb} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{\bar v_{hindered}}{\bar v_z}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{fb}\bar v_{hindered}} {\bar v_z}\]</div>
-<p>We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc blanket. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc blanket. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland measurements of the solids concentration in the floc hopper sludge.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="kn">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-
-<span class="n">D_fb</span><span class="o">=</span><span class="mf">2.5</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span>
-<span class="n">A_fb</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">D_fb</span><span class="p">)</span>
-<span class="n">H_fb</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
-<span class="n">v_hindered</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-<span class="n">C_fb_conventional</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
-<span class="n">C_recycle</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">L</span>
-<span class="n">C_plant</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">NTU</span>
-<span class="n">v_up</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
-
-
-<span class="k">def</span> <span class="nf">CP</span><span class="p">(</span><span class="n">H_fb</span><span class="p">,</span><span class="n">v_up</span><span class="p">,</span><span class="n">v_hindered</span><span class="p">,</span><span class="n">Pi_recycle</span><span class="p">,</span><span class="n">C_plant</span><span class="p">,</span><span class="n">C_recycle</span><span class="p">):</span>
- <span class="k">return</span> <span class="p">(</span><span class="n">H_fb</span><span class="o">*</span><span class="n">v_hindered</span><span class="o">/</span><span class="n">v_up</span><span class="o">*</span><span class="p">(</span><span class="n">C_plant</span><span class="o">+</span><span class="n">C_recycle</span><span class="o">*</span><span class="n">Pi_recycle</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="mi">1</span><span class="o">+</span><span class="n">Pi_recycle</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">Pi_recycle</span><span class="o">-</span><span class="n">v_hindered</span><span class="o">/</span><span class="n">v_up</span><span class="p">)))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
-<span class="n">Pi_recycle_max</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">Pi_recycle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">Pi_recycle_max</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">Pi_recycle_max</span><span class="p">])</span>
-<span class="n">yscale</span> <span class="o">=</span> <span class="p">(</span><span class="n">C_fb_conventional</span><span class="o">*</span><span class="n">H_fb</span><span class="o">*</span><span class="n">v_hindered</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
-<span class="n">yscale</span>
-<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">yscale</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Pi_recycle</span><span class="p">,</span><span class="n">CP</span><span class="p">(</span><span class="n">H_fb</span><span class="p">,</span><span class="n">v_up</span><span class="p">,</span><span class="n">v_hindered</span><span class="p">,</span><span class="n">Pi_recycle</span><span class="p">,</span><span class="n">C_plant</span><span class="p">,</span><span class="n">C_recycle</span><span class="p">))</span>
-<span class="n">imagepath</span> <span class="o">=</span> <span class="s1">&#39;../Images/&#39;</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;recycle ratio&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Collision Potential (kg/m^2)&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">&quot;no recycle at 1 mm/s&quot;</span><span class="p">,</span><span class="s2">&quot;with recycle at 3 mm/s&quot;</span><span class="p">])</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">imagepath</span><span class="o">+</span><span class="s1">&#39;fb_recycle_ratio&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Here are the results.</p>
+<p>We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc blanket. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc blanket. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland’s measurements of the solids concentration in the floc hopper sludge.</p>
+<p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=Z53_rxgCYne3&amp;line=4&amp;uniqifier=1">The following plot can be generated here</a></p>
 <blockquote>
 <div></div></blockquote>
 <div class="figure align-center" id="id1">
@@ -453,34 +390,9 @@ High velocity gradients for flocculators with this long of a residence time will
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-theory-and-future-work-26">
 <span class="eqno">(593)<a class="headerlink" href="#equation-sedimentation-sed-theory-and-future-work-26" title="Permalink to this equation">¶</a></span>\[L_{tube} = H_{fb}/sin(60)\]</div>
 <p>We will assume that the dynamic viscosity of the sludge is the same as the dynamic viscosity of water. We will calculate the kinematic viscosity of the sludge by dividing the dynamic viscosity of water by the density of the recycle.</p>
-<p>Now we can solve for the required tube diameter</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="kn">as</span> <span class="nn">pc</span>
-<span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-
-<span class="n">Temperature</span><span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">degC</span>
-<span class="n">D_fb</span><span class="o">=</span><span class="mf">2.5</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span>
-<span class="n">A_fb</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">area_circle</span><span class="p">(</span><span class="n">D_fb</span><span class="p">)</span>
-<span class="n">H_fb</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
-<span class="n">Angle_tube</span> <span class="o">=</span> <span class="mi">60</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span>
-<span class="n">L_tube</span> <span class="o">=</span> <span class="n">H_fb</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">Angle_tube</span><span class="p">)</span>
-<span class="n">density_clay</span><span class="o">=</span><span class="mi">2650</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span>
-
-<span class="n">H_l</span> <span class="o">=</span> <span class="n">H_fb</span><span class="o">*</span><span class="p">(</span><span class="n">C_recycle</span><span class="o">-</span><span class="n">C_fb</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">C_recycle</span><span class="o">+</span><span class="p">((</span><span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">Temperature</span><span class="p">)</span><span class="o">*</span><span class="n">density_clay</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">density_clay</span><span class="o">-</span><span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">Temperature</span><span class="p">))))</span>
-<span class="n">H_l</span>
-<span class="n">Q_plant</span><span class="o">=</span><span class="n">v_up</span><span class="o">*</span><span class="n">A_fb</span>
-<span class="n">Pi_recycle</span><span class="o">=</span><span class="mf">0.5</span>
-<span class="n">density_recycle</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">Temperature</span><span class="p">)</span><span class="o">/</span><span class="n">density_clay</span><span class="p">)</span><span class="o">*</span><span class="n">C_recycle</span> <span class="o">+</span> <span class="n">pc</span><span class="o">.</span><span class="n">density_water</span><span class="p">(</span><span class="n">Temperature</span><span class="p">)</span>
-<span class="n">nu_recycle</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">viscosity_dynamic</span><span class="p">(</span><span class="n">Temperature</span><span class="p">)</span><span class="o">/</span><span class="n">density_recycle</span>
-<span class="n">D_recycle</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">diam_pipe</span><span class="p">(</span><span class="n">Q_plant</span><span class="o">*</span><span class="n">Pi_recycle</span><span class="p">,</span><span class="n">H_l</span><span class="p">,</span><span class="n">L_tube</span><span class="p">,</span><span class="n">nu_recycle</span><span class="p">,</span><span class="mf">0.01</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">D_recycle</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="p">)</span>
-<span class="n">D_recycle</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span>
-</pre></div>
-</div>
+<p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=Nft_WjztY5YE&amp;line=5&amp;uniqifier=1">Now we can solve for the required tube diameter</a></p>
 <p>The head loss in the recycle tube is approximately 1.6 cm in a 1.5 m deep floc blanket.</p>
-<p>The recycle line will be installed between the bottom of the tube settler and the inlet to the sedimentation tank. The recycle line will connect  directly to the side of the sedimentation tank to minimize minor losses. We will use a 0.25” ID, 3/8”OD clear flexible tube for the recycle line. We will use PVC glue to attach the flexible tube to the rigid clear PVC tubing.</p>
+<p>The recycle line will be installed between the bottom of the tube settler and the inlet to the sedimentation tank. The recycle line will connect  directly to the side of the sedimentation tank to minimize minor losses. We will use a 0.25” ID, 3/8” OD clear flexible tube for the recycle line. We will use PVC glue to attach the flexible tube to the rigid clear PVC tubing.</p>
 <p>It is possible that it will be necessary to prevent flow in the recycle line initially so that it doesn’t flow upward. Once the tube begins filling with solids it should be possible for it to start flowing downwards.</p>
 </div>
 <div class="section" id="floc-volcanoes">

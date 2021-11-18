@@ -182,32 +182,7 @@ At length scales larger than the inner viscous length scale, :math:`\lambda_v`, 
 
 The dividing line between eddy transport and fluid deformation controlled by viscosity can be calculated as a function of the energy dissipation rate using :eq:`eq_inner_viscous_length`.
 
-.. code:: python
-
-    """ importing """
-
-    from aguaclara.core.units import unit_registry as u
-    import aguaclara.core.utility as ut
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import aguaclara.research.floc_model as fm
-
-    from matplotlib.ticker import FormatStrFormatter
-    imagepath = '../Images/'
-    EDR_array = np.logspace(0,4,num=50)*u.mW/u.kg
-    Temperature = 20*u.degC
-    def Inner_viscous(EDR, Temperature):
-        return fm.RATIO_KOLMOGOROV * fm.eta_kolmogorov(EDR, Temperature)
-
-    fig, ax = plt.subplots()
-    ax.semilogx(EDR_array.to(u.mW/u.kg),Inner_viscous(EDR_array, Temperature).to(u.mm))
-    ax.yaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    ax.xaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    ax.set(xlabel='Energy dissipation rate (W/kg)', ylabel='Inner viscous length scale (mm)')
-    ax.text(30, 6, 'Eddies cause mixing', fontsize=12,rotation=-30)
-    ax.text(1, 5, 'Shear and diffusion cause mixing', fontsize=12,rotation=-30)
-    fig.savefig(imagepath+'Inner_viscous_vs_EDR')
-    plt.show()
+The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=oizJutoQXBnU&line=5&uniqifier=1>`_
 
 .. _figure_Inner_viscous_vs_EDR:
 
@@ -233,32 +208,7 @@ We are searching for the rate limiting step in the mixing process as we transiti
 
 We can plot the eddy turnover time as a function of scale from the inner viscous length scale up to the scale of the flow. We will discover whether large scale mixing by eddies is faster or slower than small scale mixing by eddies.
 
-.. code:: python
-
-    from aguaclara.core.units import unit_registry as u
-    import aguaclara.core.utility as ut
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import aguaclara.research.floc_model as fm
-    EDR_graph = np.array([0.01,0.1,1,10 ])*u.W/u.kg
-    """Use the highest EDR to estimate the smallest length scale"""
-    Inner_viscous_graph = Inner_viscous(EDR_graph[2], Temperature)
-    Inner_viscous_graph
-    L_flow = 0.5*u.m
-    L_scale = np.logspace(np.log10(Inner_viscous_graph.magnitude),np.log10(L_flow.magnitude),50)
-    L_scale
-    imagepath = '../Images/'
-    fig, ax = plt.subplots()
-    for i in range(len(EDR_graph)):
-      ax.semilogx(L_scale,((L_scale**2/EDR_graph[i])**(1/3)).to_base_units())
-
-    ax.legend(EDR_graph)
-
-    #ax.yaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    #ax.xaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    ax.set(xlabel='Length (m)', ylabel='Eddy turnover time (s)')
-    fig.savefig(imagepath+'Eddy_turnover_time')
-    plt.show()
+The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=4zUMlZy8bR1Z>`_
 
 .. _figure_Eddy_turnover_time:
 
@@ -307,24 +257,7 @@ Substitute Einstein’s diffusion equation and solve for the length scale that t
 
 .. math:: L_{Diffusion}^{Shear} \approx \sqrt{\frac{k_B T}{3 G \pi \mu  d_P}}
 
-.. code:: python
-
-    import aguaclara.core.physchem as pc
-    import aguaclara.research.floc_model as fm
-    def L_Shear_Diffusion(G,Temperature,d_particle):
-      return np.sqrt((u.boltzmann_constant*Temperature/
-      (3 * G *  np.pi *pc.viscosity_dynamic(Temperature)* d_particle)).to_base_units())
-
-    G = np.arange(10,5000)*u.Hz
-    d_particle = fm.PACl.Diameter*u.m
-    Temperature=20*u.degC
-    x = (L_Shear_Diffusion(G,Temperature,d_particle)).to(u.nm)
-    imagepath = '../Images/'
-    fig, ax = plt.subplots()
-    ax.semilogx(G,x)
-    ax.set(xlabel='Velocity gradient (Hz)', ylabel='Length scale (nm)')
-    fig.savefig(imagepath+'Shear_diffusion_length_scale')
-    plt.show()
+The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=Wdvqa0VCchaD>`_
 
 .. _figure_Shear_diffusion_length_scale:
 
@@ -1025,15 +958,7 @@ We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value
 
   \Pi_{JetPlane} = 0.0124
 
-.. code:: python
-
-    import aguaclara.core.constants as con
-    VC_BAFFLE_RATIO=con.VC_ORIFICE_RATIO**2
-    K_MINOR_FLOC_BAFFLE = (1/VC_BAFFLE_RATIO - 1)**2
-    Ratio_Jet_Plane = 2*con.VC_ORIFICE_RATIO**8 * K_MINOR_FLOC_BAFFLE/2/5
-    Ratio_Jet_Plane
-
-    VC_BAFFLE_RATIO**4*K_MINOR_FLOC_BAFFLE/Ratio_Jet_Plane
+The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=WQtdrsP9egHB>`_
 
 .. _heading_Behind_a_flat_plate:
 
@@ -1070,13 +995,6 @@ The maximum velocity gradient is thus
 
   \Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}
 
-.. code:: python
-
-    """CFD analysis setup used by Ariane Walker-Horn in 2015"""
-    EDR_Max = 0.04*u.W/u.kg
-    v = 1*u.m/u.s
-    W = 1*u.m
-    Ratio_Jet_Plate = (EDR_Max * W/v**3).to_base_units()
-    print(Ratio_Jet_Plate)
+The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=juEleCKZLNuk>`_
 
 The flat plate :math:`\Pi_{Plate}` has a value of 0.04.
