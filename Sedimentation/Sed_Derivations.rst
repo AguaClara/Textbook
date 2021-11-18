@@ -86,11 +86,11 @@ Now, we can use this form of the capture velocity equation to solve for :math:`B
    :header: "Parameter", "Variable", "Determined by:", "Determines:", "Value"
    :align: left
 
-   Upflow velocity, :math:`\bar v_{z_{fb}}`, floc blanket, plan view area of tank, 1 :math:`\frac{mm}{s}`
-   Capture velocity, :math:`\bar v_c`, target turbidity, particle size distribution, 0.12 :math:`\frac{mm}{s}`
-   Plate angle, :math:`\alpha`, self-cleaning requirements, :math:`L`, 60 deg
-   Plate spacing, :math:`S`, clogging and floc rollup constraints, :math:`L`, 2.5 cm
-   Plate settler length, :math:`L`, ":math:`\bar v_{z_{fb}}, \bar v_c, \alpha, S`",tank depth, Calculated for each plant
+   Upflow velocity, :math:`\bar v_{z_{fb}}`, Floc blanket, Plan view area of tank, 1 :math:`\frac{mm}{s}`
+   Capture velocity, :math:`\bar v_c`, Target turbidity, Particle size distribution, 0.12 :math:`\frac{mm}{s}`
+   Plate angle, :math:`\alpha`, Self-cleaning requirements, :math:`L`, 60 deg
+   Plate spacing, :math:`S`, Clogging and floc rollup constraints, :math:`L`, 2.5 cm
+   Plate settler length, :math:`L`, ":math:`\bar v_{z_{fb}}, \bar v_c, \alpha, S`",Tank depth, Calculated for each plant
 
 The relationship between the vertical velocity and the velocity in the direction of the sloped tube or plate settlers is given by
 
@@ -101,7 +101,7 @@ The relationship between the vertical velocity and the velocity in the direction
 .. _table_lamellar_settler_geometry:
 
 .. csv-table:: Lamellar settler geometry and relevant equations.
-   :header: "Settler geometry", "Single tubes", "multiple tubes or plates"
+   :header: "Settler geometry", "Single tubes", "Multiple tubes or plates"
    :align: left
 
    ":math:`\bar v_{z}` ratio", ":math:`\frac{\bar v_{z_{Tube}}}{\bar v_{c}}=\frac{L}{D} \cos \alpha \sin \alpha+\sin ^{2} \alpha`", ":math:`\frac{\bar v_{z_{Plate}}}{\bar v_{c}}=\frac{L}{S} \cos \alpha \sin \alpha+1`"
@@ -133,19 +133,19 @@ Floc Rollup and Slide Velocity
 
 As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine this by calculating the floc sedimentation velocity, :math:`v_{Slide}`, that can be captured given a plate spacing. The steps to calculate this are:
 
-1) find the velocity gradient next to the plate
+#. Find the velocity gradient next to the plate
 
-2) find the fluid velocity at the center of the floc
+#. Find the fluid velocity at the center of the floc
 
-3) find terminal velocity of the floc down the plate (for the case of zero velocity fluid)
+#. Find terminal velocity of the floc down the plate (for the case of zero velocity fluid)
 
-4) set those two velocities equal for the critical case of no movement, and the required plate spacing
+#. Set those two velocities equal for the critical case of no movement, and the required plate spacing
 
-5) find the floc sedimentation velocity, :math:`v_{Slide}`
+#. Find the floc sedimentation velocity, :math:`v_{Slide}`
 
 We will solve for both the plate settler and tube settler conditions.
 
-1) Find the velocity gradient next to the plate:
+**1) Find the velocity gradient next to the plate:**
 
 .. _figure_plate_settler_boundary_conditions:
 
@@ -305,7 +305,7 @@ The resulting velocity gradient as function of average velocity for tube geometr
 
   \frac{ dv_{\alpha_{Tube}} }{ dy_{y=0} } = \frac{8\bar v_{\alpha_{Tube}}}{D}
 
-2) Find the fluid velocity at the center of the floc:
+**2) Find the fluid velocity at the center of the floc:**
 
 Now, we want to determine the velocity at the center of the floc. For flow between parallel plates we determined that,
 
@@ -334,7 +334,7 @@ Substituting by the trigonometric relationship :math:`\bar v_{\alpha_{Plate}} = 
 
    Fluid velocity at the center of the floc.
 
-3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):
+**3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):**
 
 
 Recall from our :ref:`previous explanation of terminal velocity <heading_Floc_Terminal_Velocity>` that the terminal velocity, :math:`v_t`, of the floc can be calculated by,
@@ -360,7 +360,7 @@ We will need this equation for :math:`D` in the next step.
 
    Terminal velocity of the floc down the plate (for the case of zero velocity fluid).
 
-4) Set the fluid velocity at the center of the floc equal to the terminal velocity of the floc to find the critical case of no movement, and the required plate spacing:
+**4) Set the fluid velocity at the center of the floc equal to the terminal velocity of the floc to find the critical case of no movement, and the required plate spacing:**
 
 The floc settles due to gravitational forces. First, the :math:`\alpha` component of the gravitational settling force, :math:`v_{t,\alpha}`, must be found by trigonometric relationships.
 
@@ -391,7 +391,7 @@ In this equation, we have both :math:`v_t` and :math:`D`, but we can simplify fu
 The minimum spacing increases as the size of the primary particle, :math:`D_{cp}`, decreases. This is an important insight because flocs that are made of coagulant nanoparticles (no clay) are the most difficult flocs to capture. Flocs made of coagulant nanoparticles are less dense than flocs made of clay. Coagulant nanoparticle flocs are produced when water treatment plants are used to remove dissolved organics or arsenic or when high coagulant dosages are used.
 
 
-5) Find the floc sedimentation velocity, :math:`v_{Slide}`:
+**5) Find the floc sedimentation velocity, :math:`v_{Slide}`:**
 
 Finally, we can determine :math:`v_{Slide}` by,
 
@@ -720,9 +720,6 @@ The bottom-view of the diffuser is shown in :numref:`figure_BvsS_diffuser`.
 | :math:`\bar v_{jet} =` velocity of the jet exiting the diffuser
 | :math:`Q_{diff} =` flow rate through each diffuser
 | :math:`h_{L,jet} =` head loss in jet leaving the jet reverser
-
-Diffuser Design
----------------------
 
 What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our sedimentation tank, we want an upflow velocity of 1 mm/s. Additionally, because diffusers are a key component of our "sedimentation tank as a circuit", we want to precisely control head loss in the jet leaving the jet reverser because that will help us achieve uniform flow within and between sedimentation tanks. AguaClara designs set head loss in the jet constant at 1 cm.
 
