@@ -72,7 +72,7 @@ The density of a floc decreases as it grows larger. The density of the floc can 
 
   M_{mix} = M_1 + M_2
 
-Mass conservation can be written in terms of density as
+Mass conservation can be written in terms of density as:
 
 .. math::
   :label:
