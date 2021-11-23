@@ -5,7 +5,7 @@ Introduction
 ************
 
 
-Flocculation transform inorganic (clays such as `kaolinite, smectite, etc. and metallic oxy-hydroxides such as goethite and gibbsite <https://www.sciencedirect.com/science/article/pii/S0048969708010103>`_) and organic (viruses, bacteria and protozoa) primary particles into flocs (particle aggregates). Flocculation doesn’t remove any particles from suspension. Instead it causes particle aggregation and then floc blankets, lamellar sedimentation, and sand filtration will be used to separate those flocs from the water. Sedimentation can remove flocs more easily than it can remove primary particles because flocs have a higher terminal sedimentation velocity. Floc blankets and sand filtration rely primarily on capture based on interception and interception is much more efficient when the particles are larger. Thus the purpose of flocculation is to join **all** of the primary particles together into flocs (See movie in :numref:`figure_Collisions_in_Sequence`).
+Flocculation transform inorganic (clays such as `kaolinite, smectite, etc. and metallic oxy-hydroxides such as goethite and gibbsite <https://www.sciencedirect.com/science/article/pii/S0048969708010103>`_) and organic (viruses, bacteria and protozoa) primary particles into flocs (particle aggregates). Flocculation does not remove any particles from suspension. Instead it causes particle aggregation and then floc blankets, lamellar sedimentation, and sand filtration will be used to separate those flocs from the water. Sedimentation can remove flocs more easily than it can remove primary particles because flocs have a higher terminal sedimentation velocity. Floc blankets and sand filtration rely primarily on capture based on interception and interception is much more efficient when the particles are larger. Thus the purpose of flocculation is to join **all** of the primary particles together into flocs (See movie in :numref:`figure_Collisions_in_Sequence`).
 
 .. _figure_Collisions_in_Sequence:
 
@@ -154,26 +154,7 @@ Equations :eq:`eq_spacing_of_number_concentration` and :eq:`eq_number_concentrat
 
 Particle separation distance matters because it determines which transport mechanisms are at play when two particles approach for a collision. The particle separation distance is a function of the particle concentration. Surface water treatment plants commonly treat water with turbidity between 1 and 1000 NTU. We will first find the number of clay particles per liter in typical raw water suspensions.
 
-.. code:: python
-
-  import aguaclara
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.core.constants as con
-  import aguaclara.research.environmental_processes_analysis as epa
-  import aguaclara.research.floc_model as fm
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-  C_Clay = np.arange(1,1000,1)*u.NTU
-  n_Clay = fm.num_clay(C_Clay,fm.Clay)
-  fig, ax = plt.subplots()
-  ax.loglog(C_Clay.to(u.NTU),n_Clay.to(1/u.L))
-  ax.set(xlabel='Clay concentration ($NTU$)', ylabel='Number of clay per liter')
-  fig.savefig('../Images/NClay_vs_CClay')
-  plt.show()
-
+`The code to generate this graph can be found here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=u9kpvCxjrTZS&line=1&uniqifier=1>`_
 
 .. _figure_NClay_vs_CClay:
 
@@ -186,22 +167,7 @@ Particle separation distance matters because it determines which transport mecha
 
 The next step is to calculate the separation distance between the clay particles over this range of clay concentrations using Equation :eq:`eq_spacing_of_diameter`.
 
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.core.constants as con
-  import aguaclara.research.environmental_processes_analysis as epa
-  import aguaclara.research.floc_model as fm
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-  lamda_Clay = fm.sep_dist_clay(C_Clay,fm.Clay)
-  fig, ax = plt.subplots()
-  ax.semilogx(C_Clay.to(u.NTU),lamda_Clay.to(u.mm))
-  ax.set(xlabel='Clay concentration ($NTU$)', ylabel=r'Clay separation distance ($mm$)')
-  fig.savefig('../Images/LambdaClay_vs_CClay')
-  plt.show()
+`The code to generate this graph can be found here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=53IFiKIAsZdK&line=9&uniqifier=1>`_
 
 
 .. _figure_LambdaClay_vs_CClay:
@@ -229,27 +195,7 @@ Solving for the average energy dissipation rate, :math:`\bar \varepsilon`, we ob
 
 We will use the inner viscous length scale, Equation :eq:`eq_inner_viscous_length` to determine whether viscous or inertial transport dominates particle collisions in surface water treatment given the range of particle separation distances (see :numref:`figure_LambdaClay_vs_CClay`).
 
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.core.constants as con
-  import aguaclara.research.environmental_processes_analysis as epa
-  import aguaclara.research.floc_model as fm
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-  Temperature = 20 * u.degC
-  G=np.arange(1,1000,1)*u.Hz
-  EDR = G**2 * pc.viscosity_kinematic(Temperature)
-  Inner_viscous = fm.lambda_vel(EDR, Temperature)
-  fig, ax = plt.subplots()
-  ax.semilogx(G.to(u.Hz),Inner_viscous.to(u.mm))
-  ax.set(xlabel='Velocity gradient (Hz)', ylabel='Inner viscous length scale (mm)')
-  ax.text(10, 30, 'Eddies cause mixing', fontsize=12,rotation=-30)
-  ax.text(3, 14, 'Viscous shear', fontsize=12,rotation=-30)
-  fig.savefig('../Images/innerviscous_vs_G')
-  plt.show()
+`The code to generate this graph can be found here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=naHLmCCWsIRt&line=8&uniqifier=1>`_
 
 
 .. _figure_innerviscous_vs_G:

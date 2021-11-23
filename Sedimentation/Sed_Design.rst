@@ -8,17 +8,21 @@ Sedimentation Tank Features
 
 The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank that is designed with the following goals:
 
-1) to minimize secondary currents that could send high velocity flow through some of the plate settlers
-1) to prevent accumulation of sludge that would tend to become anaerobic and release both dissolved organics (taste and order issues) and methane bubbles that would carry flocs to the top of the sedimentation tank
-1) to include a stable floc blanket that reduces the settled water turbidity
-1) to remove the solids without requiring power or moving mechanical parts
-1) to provide a mechanism for the operator to dump poorly flocculated water before it enters the sedimentation tank. This is important to reduce the recovery time when there is a flocculation failure.
-1) to ensure easy operation and maintenance.
+#. To minimize secondary currents that could send high velocity flow through some of the plate settlers
+#. To prevent accumulation of sludge that would tend to become anaerobic and release both dissolved organics (taste and order issues) and methane bubbles that would carry flocs to the top of the sedimentation tank
+#. To include a stable floc blanket that reduces the settled water turbidity
+#. To remove the solids without requiring power or moving mechanical parts
+#. To provide a mechanism for the operator to dump poorly flocculated water before it enters the sedimentation tank. This is important to reduce the recovery time when there is a flocculation failure.
+#. To ensure easy operation and maintenance.
 
 Components and Flow Paths
 ===========================
 
-In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank.
+In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are:
+
+#. How water enters the sedimentation tank.
+#. How water moves through the sedimentation tank.
+#. How water leaves the sedimentation tank.
 
 .. _figure_sed_tank_overview:
 
@@ -58,8 +62,8 @@ Remember, the goal is to have even flow distribution. It is bad if different flo
 
 .. _heading_Good_v_Bad_Hl:
 
-- anything that makes parallel flow paths different is "bad" head loss.
-- anything that increases head loss through all of the paths, to make differences between the paths less significant, is "good" head loss.
+- Anything that makes parallel flow paths different is "bad" head loss.
+- Anything that increases head loss through all of the paths, to make differences between the paths less significant, is "good" head loss.
 
 We can artificially introduce the second form of head loss to dominate the resistance and render small variations due to pressure recovery insignificant. We will go through each part of the sedimentation tank to understand how these goals drive AguaClara designs. As we learn about each component, we will attempt to categorize its contribution into creating "good" or "bad" head loss.
 
@@ -329,10 +333,17 @@ Further works is required to determine the maximum shear stress that will not ca
 
 .. _heading_Sed_Tank_Velocity_Flow:
 
-Comparison of velocities and flow in sedimentation tank
+Comparison of Velocities and Flow in Sedimentation Tank
 ========================================================
 
-To understand how water flows in the sedimentation tank, we must understand how the water velocity changes with the geometry. There are four distinct zones in the sedimentation tank: 1) the velocity of water exiting the diffusers, 2) the velocity of water moving through the floc blanket, 3) the velocity of water that enters the plate settlers, and 4) the velocity of water through the plate settlers. The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v * A`, will be our guiding principle. In all cases,
+To understand how water flows in the sedimentation tank, we must understand how the water velocity changes with the geometry. There are four distinct zones in the sedimentation tank: 
+
+#. The velocity of water exiting the diffusers.
+#. The velocity of water moving through the floc blanket.
+#. The velocity of water that enters the plate settlers.
+#. The velocity of water through the plate settlers. 
+
+The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v * A`, will be our guiding principle. In all cases,
 
 | :math:`Q_{Sed} =` flow rate through each sedimentation tank
 | :math:`W_{Sed} =` width of each sedimentation tank
@@ -346,24 +357,22 @@ To understand how water flows in the sedimentation tank, we must understand how 
 
     AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
 
-1) Velocity and flow exiting the diffusers
-------------------------------------------------------------
-
-This is discussed specifically in the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>`.
-
-.. _heading_Sed_Tank_Middle:
-
-Flow Through the Tank
-======================
 
 .. _heading_Sed_Tank_Floc_Blanket:
 
 Floc Blanket
 -------------
 
+After the water exits the diffusers and jet reverser, it flows through the expanded floc blanket region where:
+
+| :math:`L_{SedFloc} =` length of the sedimentation tank that has a floc blanket
+| :math:`\bar v_{z_{fb}} =` upflow velocity of the water through the floc blanket
+
+Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \bar v_{z_{fb}}`
+
 The line jet from the diffusers enters the jet reverser to force flow up through the sedimentation bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed which is called a **floc blanket**. The bed is fluidized because flocs are kept in suspension by the upflowing water.
 
-For a floc blanket to form, a sedimentation system requires that 1) all flocs be returned to the bottom of the sedimentation tank and 2) requires that all settled flocs be resuspended by incoming water. As will be discussed soon, plate settlers are used to return flocs to the bottom of the bay, while the jet reverser and sloped bottom geometry allow for floc resuspension. Any surface with a horizontal component in a sedimentation tank must be sloped to allow settled flocs to return to the resuspension zone. A flat bottom geometry does not allow for the formation of a floc blanket, as discussed previously.
+For a floc blanket to form, a sedimentation system requires that 1) all flocs be returned to the bottom of the sedimentation tank and 2) all settled flocs be resuspended by incoming water. As will be discussed soon, plate settlers are used to return flocs to the bottom of the bay, while the jet reverser and sloped bottom geometry allow for floc resuspension. Any surface with a horizontal component in a sedimentation tank must be sloped to allow settled flocs to return to the resuspension zone. A flat bottom geometry does not allow for the formation of a floc blanket, as discussed previously.
 
 .. _figure_floc_blanket_experiment:
 
@@ -375,13 +384,13 @@ For a floc blanket to form, a sedimentation system requires that 1) all flocs be
 
    Floc blanket formation over time (click to be sent to video).
 
-Studies by AguaClara researchers have found that floc blankets improve the performance of a sedimentation tank and reduces settled water turbidity by a factor of 10 for multiple reasons (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_):
+Studies by AguaClara researchers have found that floc blankets improve the performance of a sedimentation tank and reduce settled water turbidity by a factor of 10 for multiple reasons (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_):
 
-- by providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc blanket due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G_{CS} \theta` cause a large reduction in turbidity? The two-fold answer may be that the lower :math:`G_{CS}` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc blanket. See the section on :ref:`floc blanket design <heading_Sed_Tank_Floc_Blanket_Design>` for more information.
+- By providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc blanket due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G_{CS} \theta` cause a large reduction in turbidity? The two-fold answer may be that the lower :math:`G_{CS}` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc blanket. See the section on :ref:`floc blanket design <heading_Sed_Tank_Floc_Blanket_Design>` for more information.
 
-- by creating a uniform vertical velocity of water entering the plate settlers.
+- By creating a uniform vertical velocity of water entering the plate settlers.
 
-- by transporting excess floc consolidation pipe with a drain port, called the floc hopper. The floc hopper is discussed in the next section.
+- By transporting excess floc consolidation pipe with a drain port, called the floc hopper. The floc hopper is discussed in the next section.
 
 While we have just explained three reasons that the floc blanket improves sedimentation effluent quality, we do not yet have a model for floc blanket performance. Additional research is needed to create this model, and to determine optimal upflow velocity.
 
@@ -391,29 +400,18 @@ We do not yet have a way to design for variable or intermittent flow rates in a 
 
 It is of interesting note that the suspended solids concentration in the floc blanket is approximately 1-5 g/L. This concentration corresponds to measurements of thousands of NTU, which is remarkably turbid water. A water treatment plant could have 5 NTU water entering the plant, and water in the bottom of the sedimentation tank could have 1000 NTU. This is one clue that there are interesting things happening in the floc blanket; the bottom of the sedimentation tank can be a completely different world from the rest of the treatment process.
 
-An understanding the bottom of a sedimentation tank is important to understand how sedimentation tanks work. However, most sedimentation tanks do not allow the operator to observe what is happening. Without being able to observe the bottom of the sedimentation tank, an operator would not know what is happening or if a floc blanket is forming successfully. AguaClara research teams are working to develop a probe to get data on floc blanket performance. Until then, there are two ways to learn about the floc blanket. The AguaClara plant at the University of Zamorano in Honduras was built with a translucent wall on one end of a sedimentation bay. This allows students and operators to observe the floc blanket. The AguaClara pilot PF300 in testing at the Cornell Water Treatment Plant has small sample ports installed into the side of the reactor. Drawing a sample of water at different heights of the reactor will indicate if a floc blanket has grown, and how deep it is.
+An understanding of the bottom of a sedimentation tank is important to understand how sedimentation tanks work. However, most sedimentation tanks do not allow the operator to observe what is happening. Without being able to observe the bottom of the sedimentation tank, an operator would not know what is happening or if a floc blanket is forming successfully. AguaClara research teams are working to develop a probe to get data on floc blanket performance. Until then, there are two ways to learn about the floc blanket. The AguaClara plant at the University of Zamorano in Honduras was built with a translucent wall on one end of a sedimentation bay. This allows students and operators to observe the floc blanket. The AguaClara pilot PF300 in testing at the Cornell Water Treatment Plant has small sample ports installed into the side of the reactor. Drawing a sample of water at different heights of the reactor will indicate if a floc blanket has grown, and how deep it is.
 
 Let's recap some important conclusions from this section on the floc blanket.
 
 - The low G flocculation in the floc blanket may allow for the rapid growth of the flocs coming from the flocculator.
 - The floc blanket reduces the effluent turbidity from the sedimentation tank.
 - The floc blanket requires a mechanism to keep the flocs resuspended:
-  - an upflow velocity of approximately 1 mm/s is the current AguaClara design parameter;
-  - sloped surfaces to return flocs to the resuspension point is necessary to prevent floc build-up.
+  - An upflow velocity of approximately 1 mm/s is the current AguaClara design parameter;
+  - Sloped surfaces to return flocs to the resuspension point is necessary to prevent floc build-up.
 - We do not have a model for floc blanket performance, meaning that we don't know the optimal floc blanket depth or optimal upflow velocity.
 - We do not yet have a consistent way for operators to observe the floc blanket.
 - We do not know what exactly contributes to the ability of a floc blanket to resuspend or survive variable flow.
-
-
-2) Velocity and flow in the floc blanket
-----------------------------------------
-
-After the water exits the diffusers and jet reverser, it flows through the expanded floc blanket region where:
-
-| :math:`L_{SedFloc} =` length of the sedimentation tank that has a floc blanket
-| :math:`\bar v_{z_{fb}} =` upflow velocity of the water through the floc blanket
-
-Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \bar v_{z_{fb}}`
 
 .. _heading_Sed_Tank_Floc_Hopper:
 
@@ -574,10 +572,6 @@ Solving for :math:`\bar v_c = \frac{Q}{A}`
 
 We can see that there are five parameters which will impact each other in our design :math:`\bar v_{z_{Plate}}, \bar v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`\bar v_{z_{Plate}}, \bar v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on :ref:`plate settler design <heading_Sed_Tank_Plate_Settler_Design>`.
 
-
-3) Velocity and flow entering the plate settlers
-------------------------------------------------------------
-
 The 'active' sedimentation zone refers to the area of the tank in which water can flow through the plate settlers where:
 
 | :math:`L_{SedActive} =` length of the sedimentation tank that includes entrance to a plate settlers
@@ -586,9 +580,6 @@ The 'active' sedimentation zone refers to the area of the tank in which water ca
 The only reason that there is a distinction between this area and the floc blanket area is because plate settlers are built at an angle. This angle creates a "lost triangle" because there is a space in which the plate settlers are not effective and water does not flow through them. Because the active length is less than the floc blanket length, :math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, the average active velocity must be greater than the average upflow velocity through the floc blanket, :math:`\bar v_{z_{Active}} > \bar v_{z_{fb}}`. The same flow going through less area means that the velocity must increase.
 
 Thus, :math:`Q_{Sed} = W_{Sed} L_{SedActive} \bar v_{z_{Active}}`, and :math:`\bar v_{z_{Active}} > \bar v_{z_{fb}}`.
-
-4) Velocity and flow in the plate settlers
--------------------------------------------
 
 Now, we will discuss flow through plate settlers where:
 
@@ -604,16 +595,15 @@ Thus, :math:`\bar v_{z_{Plate}} > \bar v_{z_{Active}} > \bar v_{z_{fb}}`
 
 In addition to the vertical velocity component increasing between the plates, the resultant velocity of water between the plates increases compared to :math:`\bar v_{z_{Active}}`. What are the two reasons that this is true?
 
-- the first reason, as already discussed, is that the vertical velocity component needs to increase to ensure conservation of flow.
+- The first reason, as already discussed, is that the vertical velocity component needs to increase to ensure conservation of flow.
 
-- the second reason has to do with the fact that the resultant velocity of water between the plates is at an angle. This means that there is a horizontal component introduced. Because we know that the vertical velocity increases, and there is a new positive horizontal velocity component, the resultant velocity must also increase.
+- The second reason has to do with the fact that the resultant velocity of water between the plates is at an angle. This means that there is a horizontal component introduced. Because we know that the vertical velocity increases, and there is a new positive horizontal velocity component, the resultant velocity must also increase.
 
 Now, consider a tube settler used in a lab setting instead of a plate settler. If a tube settler was designed with an angle to mimic a plate settler, would the water change vertical velocity after the angle? How does this compare to the plate settler scenario? In the case of the tube settler, the vertical velocity does not increase because there is no change in flow area; the diameter of the tube is constant throughout, meaning that for the flow to remain constant, the velocity does not change.
 
 For another example of flow conservation, let's consider the relationship between :math:`\bar v_{z_{Plate}}*S` and :math:`\bar v_{z_{Active}}*B`. :math:`B` is the center-to-center distance between plate settlers, and does not take into account the thickness of plate settlers. Considering only the center-to-center distance means that the area for water to travel through does to change from before the plate settlers to within the plate settlers because we are not accounting for any thickness. If the area does not change, then velocity should also not change to keep flow conserved. However, if we are to account for thickness, we must discuss :math:`S` which is the spacing between plate settlers. This does take into account the change in area,  which means that the velocity would need to increase through the lesser area. So if we look at the flow through plate settlers, we can confirm that :math:`\bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B`.
 
 By using flow conservation and plate settler geometry, we can begin to understand the mathematical relationships that drive design.
-
 
 
 Now that we have established how flocs settle on the plate and the increase in plan view area that plate settlers offer, we need to discuss how flocs will act once they are on the plates. We want particles and flocs that settle to agglomerate and slide down the plate settlers to be returned to the floc blanket. We will explore this concept by first considering the desired spacing between plate settlers.
@@ -626,7 +616,7 @@ The Ten State Standards report that plate settlers should have a separation of t
 
 AguaClara plants can design for changes in the depth and/or plan view area of the tank for optimal plate settler efficiency. We want to have the smallest and shallowest tanks possible for low cost and ease of construction. We know that in the plate settler design, there is a dimensionless parameter of plate spacing to length, :math:`\frac{S}{L}`. The ratio is close to constant, which means that if we double the length of the plate settler, we can double the spacing between the plate settler and get the same performance as when we started. Conversely, if we halve the distance between the plate settlers, we can halve the length of the plate settlers. But how far can we push this? Can we make really compact plate settlers?
 
-What we really want to know is: what is the connection of spacing between plate settlers and performance?
+What we really want to know is: what is the connection between spacing of plate settlers and performance?
 
 .. _figure_plate_settler_depth:
 
@@ -713,11 +703,11 @@ Now, lets discuss a plate settler problem that has not yet been solved: **floc v
 
 Some hypotheses and questions may include:
 
-1) is the problem related to dissolved air flotation? Dissolved air coming out of flocculation can cause flocs to float to the top.
+1) Is the problem related to dissolved air flotation? Dissolved air coming out of flocculation can cause flocs to float to the top.
 
 After asking the operators, we are told that there are not any bubbles in the sedimentation tank.
 
-2) is the problem regularly intermittent? Is there anything that we can correlate these fluctuations to?
+2) Is the problem regularly intermittent? Is there anything that we can correlate these fluctuations to?
 
 After asking the operators, we are told that the floc volcanoes appear in the early afternoon each day.
 
@@ -750,7 +740,7 @@ So, now that we think we know what the problem is, how would we try to solve it?
 
 Let's recap some important conclusions from this section on plate settlers.
 
-1. Reynolds number calculations of flow through plate settlers prove that there is laminar flow between plate settlers. This is important because it allows us to assume that a parabolic velocity profile is established.
+#. Reynolds number calculations of flow through plate settlers prove that there is laminar flow between plate settlers. This is important because it allows us to assume that a parabolic velocity profile is established.
 #. There is very low head loss between plate settlers so they will not do a good job of helping to achieve uniform flow between the plate settlers.
 #. The plate settlers are designed to capture flocs with sedimentation velocities greater than the settle capture velocity. AguaClara currently uses :math:`\bar v_c = 0.12` mm/s but this value needs to be further optimized; we would like to know how settled water turbidity changes with capture velocity. Future work includes choosing a settle capture velocity based on overall plate performance.
 #. Plate settler spacing:
@@ -837,7 +827,13 @@ The submerged effluent manifold transports water from the sedimentation tank to 
 Sedimentation Tank Summary
 ============================
 
-You have now been introduced to the AguaClara sedimentation tank in three parts: 1) how water enters the sedimentation tank, 2) how water moves through the sedimentation tank, and 3) how water leaves the sedimentation tank. This introduction should allow you to understand the components of the sedimentation unit process, the purpose of each component, and AguaClara-specific innovations.
+You have now been introduced to the AguaClara sedimentation tank in three parts: 
+
+#. How water enters the sedimentation tank;
+#. How water moves through the sedimentation tank, and;
+#. How water leaves the sedimentation tank. 
+
+This introduction should allow you to understand the components of the sedimentation unit process, the purpose of each component, and AguaClara-specific innovations.
 
 Let's recap some important points about the sedimentation tank.
 

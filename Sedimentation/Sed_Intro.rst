@@ -6,59 +6,6 @@ Sedimentation Introduction
 
 .. _Sedimentation Unit Process Overview:
 
-[THIS SECTION MOVED FROM INTRO CHAPTER - NEEDS TO BE INCORPORATED]
-
-Why does flocculation precedes sedimentation?
-Which process removes the largest quantity of contaminants?
-
-Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
-
-.. math::
-  :label: eq_laminar_terminal_velocity
-
-  \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
-
-| Such that:
-| :math:`\bar v_t` = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water
-| :math:`D_{particle}` = particle diameter
-| :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
-
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  import numpy as np
-  import matplotlib.pyplot as plt
-  def v_t(D_particle,density_particle,Temperature):
-    return (D_particle**2*pc.gravity *(density_particle - pc.density_water(Temperature))/(18*pc.viscosity_kinematic(Temperature)*pc.density_water(Temperature))).to(u.m/u.s)
-  clay = 2650 * u.kg/u.m**3
-  organic = 1040 * u.kg/u.m**3
-  Temperature = 20 * u.degC
-  D_particle = np.logspace(-6,-3)*u.m
-  fig, ax = plt.subplots()
-  ax.loglog(D_particle.to(u.m),v_t(D_particle,clay,Temperature).to(u.m/u.s))
-  ax.loglog(D_particle.to(u.m),v_t(D_particle,organic,Temperature).to(u.m/u.s))
-  ax.set(xlabel='Particle diameter (m)', ylabel='Terminal velocity (m/s)')
-  ax.legend(["clay or sand","organic particle"])
-  imagepath = '..Images/'
-  fig.savefig(imagepath+'Terminal_velocity')
-  plt.show()
-
-
-The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take care of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (:eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
-
-
-.. _figure_Terminal_velocity:
-
-.. figure:: ../Images/Terminal_velocity.png
-    :width: 500px
-    :align: center
-    :alt: Terminal Velocity
-
-    The terminal velocity of a 1 :math:`\mu m` bacteria cell is approximately 20 nanometers per second. The terminal velocity of a 5 :math:`\mu m` clay particles is 30 :math:`\mu m/s`. The velocity estimates for the faster settling particles may be too slow because those particles are transitioning to turbulent flow.
-
-The low terminal velocities of particles that we need to remove from surface waters reveals that sedimentation alone will not work. The time required for a small particle to settle even a few mm would require excessively large sedimentation tanks. This is why flocculation, the process of sticking particles together so that they can attain higher sedimentation velocities, is perhaps the most important unit process in surface water treatment plants.
-
-[END OF RELOCATED SECTION]
 
 Sedimentation is a gravity-driven unit process in which suspended flocs are settled out from water. Large flocs made up of many primary particles and coagulant will settle if given enough time. Sedimentation is commonly preceded by coagulation/flocculation processes - coagulation/flocculation aim to form flocs which will be large enough to settle in sedimentation - and is commonly followed by filtration processes for further treatment. Sludge consolidation processes are often present alongside sedimentation to reduce the waste stream of settled flocs. Optimizing sedimentation is important because the more particles that sedimentation can remove, the fewer particles the filter will have to remove. This is good because filters can only handle a small amount of solids, and cleaning the filters with backwash uses a lot of water so we want to reduce the number of backwashes. The goal of sedimentation is to concentrate a waste stream of flocs, or sludge.
 
@@ -82,8 +29,40 @@ To understand how sedimentation works, a few key concepts must first be develope
 
 .. _heading_capture_velocity:
 
-Capture Velocity
-===============================
+Terminal Velocity and Capture Velocity
+======================================
+
+Why does flocculation precede sedimentation?
+Which process removes the largest quantity of contaminants?
+
+Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
+
+.. math::
+  :label: eq_laminar_terminal_velocity
+
+  \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
+
+| Such that:
+| :math:`\bar v_t` = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water
+| :math:`D_{particle}` = particle diameter
+| :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
+
+
+
+The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take care of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (:eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
+
+`The code to generate the following plot can be found here <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=7r75Qu4yPC80&line=18&uniqifier=1>`_
+
+.. _figure_Terminal_velocity:
+
+.. figure:: ../Images/Terminal_velocity.png
+    :width: 500px
+    :align: center
+    :alt: Terminal Velocity
+
+    The terminal velocity of a 1 :math:`\mu m` bacteria cell is approximately 20 nanometers per second. The terminal velocity of a 5 :math:`\mu m` clay particles is 30 :math:`\mu m/s`. The velocity estimates for the faster settling particles may be too slow because those particles are transitioning to turbulent flow.
+
+The low terminal velocities of particles that we need to remove from surface waters reveals that sedimentation alone will not work. The time required for a small particle to settle even a few mm would require excessively large sedimentation tanks. This is why flocculation, the process of sticking particles together so that they can attain higher sedimentation velocities, is perhaps the most important unit process in surface water treatment plants.
 Settle capture velocity is defined as the velocity of the slowest settling particle that a sedimentation tank captures reliably. It is a property of the geometry of the sedimentation tank. Because it is a property of geometry, we can use it as an important design tool; because we can control reactor geometry, we can control the sizes of particles that we can settle. However, the size of particles that a sedimentation tank can capture is also a function of the viscosity of the water and thus is influenced by temperature.
 
 Note that there are a couple of different terms used to describe the sedimentation process. We can say that sedimentation tanks "capture" particles when particles settled. We can also say that sedimentation tanks "remove" particles. Both terms refer to the process of particles or floc settling out of suspension in water. Sedimentation tanks separate some particles from the water and eventually divert those captured particles into a waste stream.
@@ -112,7 +91,7 @@ Horizontal Flow Sedimentation Tank
 
 Let's begin with a few questions that will describe our horizontal flow sedimentation tank in :numref:`figure_horizontal_flow_tank_base`. We will assume that 1) water travels uniformly from one end of the tank to the other, and 2) the particle that we are discussing is 35 :math:`\mu m` (which is the size of particle that AguaClara plate settlers can capture).
 
-1) How much time is required for water to pass through the tank?
+**1) How much time is required** for water to pass through the tank?
 
 To determine this value, we can use the given volume and flow rate information by the following relationship:
 
@@ -125,11 +104,11 @@ To determine this value, we can use the given volume and flow rate information b
 | :math:`\rlap{-}V_{tank} =` volume of the sedimentation tank :math:`\left[L^3\right]`
 | :math:`Q =` flow rate through the tank :math:`\left[\frac{L^3}{T}\right]`
 
-2) In the "worst case scenario", how far must a particle fall to reach the bottom of the tank?
+**2) In the "worst case scenario", how far** must a particle fall to reach the bottom of the tank?
 
 The "worst case scenario" is the condition in which a particle must travel the furthest in order to be successfully captured by the sedimentation tank. We assume that particles are evenly distributed throughout the height and width of the reactor entrance. Therefore, a particle entering at the top of the entrance of the reactor would need to fall a distance of :math:`H` to reach the bottom. Any particle entering from a position lower than the top of the tank would need to fall a distance :math:`< H`. We refer to the "worst case scenario" pathway as the "critical path" of the particle in the sedimentation tank design because this is the case which we must design to treat. The height that the particle must fall is called the "critical height", :math:`H_c`.
 
-3) How fast must the particle fall?
+**3) How fast** must the particle fall?
 
 We know that for a particle to fall to the bottom successfully, it needs to fall fast enough that it can reach the bottom before the water that is carrying it leaves the reactor. Water is carrying the particle across the reactor at the horizontal velocity speed, :math:`v_H`. Gravity is causing the particle to settle at its terminal velocity, :math:`v_t`. In order to reach the bottom, that settling velocity needs to be the capture velocity, :math:`\bar v_c`, to ensure that the particle will reach the bottom of the reactor. We can see the critical path of the particle in :numref:`figure_horizontal_flow_tank_capture`.
 
@@ -159,7 +138,7 @@ We can make some substitutions into the equation for :math:`\bar v_c` to solve f
 
 Thus, we have capture velocity which is a descriptor of a sedimentation tank. It determines how fast a particle has to settle in order to be reliably captured by a particular sedimentation tank, assuming idealized flow. The capture velocity is not a particle property, but rather a sedimentation tank property.
 
-4) Will any particles that are smaller than 35 :math:`\mu m` be captured in the sedimentation tank?
+**4) Will any particles** that are smaller than 35 :math:`\mu m` be captured in the sedimentation tank?
 
 This question is important because as stated in the beginning of this section, our discussion assumed that the particle in question was 35 :math:`\mu m`. If we design a sedimentation tank to capture particles that are 35 :math:`\mu m`, we also have to understand the impact of our design on particles smaller than 35 :math:`\mu m`.
 
@@ -190,7 +169,7 @@ We will complete the same exercise for vertical flow sedimentation tanks shown i
 
     Vertical flow sedimentation tank.
 
-1) How much time is required for water to pass through the tank?
+**1) How much time** is required for water to pass through the tank?
 
 The answer is the same for the horizontal flow sedimentation tank because this is a property of reactor flow rate and volume.
 
@@ -203,13 +182,13 @@ The answer is the same for the horizontal flow sedimentation tank because this i
 | :math:`\rlap{-}V_{tank} =` volume of the sedimentation tank [:math:`L^3`]
 | :math:`Q =` flow rate through the tank [:math:`\frac{L^3}{T}`]
 
-2) How far must a particle fall relative to the fluid to not be carried out the exit?
+**2) How far** must a particle fall relative to the fluid to not be carried out the exit?
 
 Note how this question is different from the question we asked for the horizontal flow sedimentation tank. In the horizontal flow sedimentation tank, particles could settle to the bottom of the reactor. We care about particles settling to the bottom because we assume that if particles hit the bottom of the reactor, then they would be captured and would not leave the reactor. Remember, the goal of sedimentation is to remove particles from suspension in water. In the vertical flow sedimentation tank, we also want to remove particles from suspension, but because there is a different geometry, we are now interested in the relative movement of particle to water. If a particle is falling due to the forces of gravity, but also water is pushing up on it, the only way for a particle to remain in the reactor is if it either falls at the same velocity or faster than the water is pushing it.
 
 If a particle is falling at the same velocity that water is moving it, it will be stationary in the reactor. Water flowing through the reactor moves a distance :math:`H` in time :math:`\theta`, which means that a stationary particle must settle the same distance :math:`H` in the same time :math:`\theta`. Therefore, the answer is :math:`H`.
 
-3) How fast must the particle fall (relative to the fluid)?
+**3) How fast** must the particle fall (relative to the fluid)?
 
 We determined in the previous question that a particle must fall a distance :math:`H` in time :math:`\theta`. Therefore, we determine the same capture velocity for vertical flow sedimentation tanks as for horizontal flow sedimentation tanks.
 
@@ -231,7 +210,7 @@ Again, we find that capture velocity is,
 
 It doesn't matter whether water is flowing horizontally or vertically in the tank. What determines the capture velocity is the flow rate and the plan view area of the sedimentation tank.
 
-4) Will any particles that are smaller than 35 :math:`\mu m` be captured in the sedimentation tank?
+**4) Will any particles** that are smaller than 35 :math:`\mu m` be captured in the sedimentation tank?
 
 This question is surprisingly complex because we have to consider what we have learned so far about sedimentation and also recall what we have learned about flocculation.
 
