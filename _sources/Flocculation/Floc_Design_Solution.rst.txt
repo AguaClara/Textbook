@@ -2,15 +2,7 @@
 Flocculator Design Solution
 ***************************
 
-.. code:: python
-
-    #import statements have been cleaned up
-    import aguaclara.core.physchem as pc
-    from aguaclara.core.units import unit_registry as u
-    import aguaclara.core.constants as constants
-    import numpy as np
-    import matplotlib.pyplot as plt
-    #plt.switch_backend('TKAgg')
+`Be sure to run all imports before viewing the code <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=QrnYxdOGmQ0x&line=3&uniqifier=1>`_
 
 In this design challenge you will design a vertical flow hydraulic flocculator. You will use the flow rate of ``flow_plant = 20 L/s`` as your default design value.
 
@@ -25,45 +17,8 @@ Hydraulic Vertical Flow Flocculator Design
 
 This challenge is design a hydraulic flocculator using the core concepts of the AguaClara design methodology.
 
-Below are the inputs for the design. BOD stands for Basis Of Design.
+`Here are the inputs for the design. <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=HsR9iOQUmTbu&line=5&uniqifier=1>`_ BOD stands for Basis Of Design.
 
-.. code:: python
-
-    # head loss through the flocculator
-    headloss_floc_BOD = 40 * u.cm
-
-    # collision potential based on recent designs for AguaClara Plants
-    Gt_BOD = 37000
-
-    # water depth at the end of flocculator where it flows into the inlet channel of the sedimentation tank
-    height_floc_end = 2 * u.m
-
-    flow_plant = 20 * u.L/u.s
-
-    # This is the estimate for larger plants where the flocculator is as long as the sedimentation tanks.
-    # For lower flow plants we will need to reduce this length because of the constraint that the channels must
-    # be wide enough to construct.
-    length_channel_max = 6 * u.m
-
-    # minimum and maximum ratios of distance between expansions to baffle spacing
-    Pi_HS_min = 3
-    Pi_HS_max = 6
-
-    Pi_vc = constants.VC_ORIFICE_RATIO
-    Pi_vc_baffle = Pi_vc**2
-
-    # width of the polycarbonate sheets used to make baffles
-    width_PC_sheet = 1.067*u.m
-
-    # this is a reasonable constraint to keep the channel constructable by humans
-    width_floc_min_BOD = width_PC_sheet / 2
-    width_floc_max_BOD = width_PC_sheet
-
-    # expansion minor loss coefficient for 180 degree bend
-    K_e = (1 / Pi_vc_baffle - 1)**2
-
-    # this is the minimum temperature of the raw water
-    T_BOD = 15* u.degC
 
 Design Algorithm Steps
 ----------------------
@@ -83,65 +38,29 @@ For this assignment **create functions for each question** and then use those fu
 
 That way you will be able to easily vary any of the three main input parameters (flow, Gt, head loss) to see their effect on the design.
 
-1)
-~~
+**1) Estimate the average velocity gradient** of a flocculator given head loss and collision potential. I’m going to solve this problem for you so you see how to use function calls.
 
-Estimate the average velocity gradient of a flocculator given head loss and collision potential. I’m going to solve this problem for you so you see how to use function calls.
-
-.. code:: python
-
-    def G_avg(hl, Gt, T):
-        G = (pc.gravity * hl) / (Gt * pc.viscosity_kinematic(T_BOD))
-        return G.to(1/u.s)
-
-    print ('The average velocity gradient of flocculator is', G_avg(headloss_floc_BOD, Gt_BOD, T_BOD))
+`See solution here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=btxgm0xvmw7M&line=2&uniqifier=1>`_
 
 The average velocity gradient of flocculator is 93.24 / second
 
-2)
-~~
+**2) Estimate the residence time** of flocculator given the target head loss and collision potential. (Note that this ignores the decrease in water depth caused by head loss. We hope to improve this design process further in the near future.)
 
-Estimate the residence time of flocculator given the target head loss and collision potential. (Note that this ignores the decrease in water depth caused by head loss. We hope to improve this design process further in the near future.)
-
-.. code:: python
-
-    def t_floc_est(hl, Gt, T):
-        theta = Gt / G_avg(hl, Gt, T)
-        return theta.to(u.s)
+`See solution here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=K4M3_Qaxm4OZ&line=2&uniqifier=1>`_
 
     print ('The residence time of flocculator is', t_floc_est(headloss_floc_BOD, Gt_BOD, T_BOD))
 
 The residence time of flocculator is 396.8 second
 
-3)
-~~
-
-Plot :math:`G\theta` as a function of the operating temperature given the head loss and residence time for this design. In this step you are assuming that you have built this hydraulic flocculator and you want to see how the collision potential, :math:`G\theta`, varies with temperature of operation. Vary the temperature from 0°C to 30°C. The following equation makes it clear that the velocity gradient originates from head loss that creates fluid deformation that is limited by viscosity.
+**3) Plot :math:`G\theta` as a function of the operating temperature** given the head loss and residence time for this design. In this step you are assuming that you have built this hydraulic flocculator and you want to see how the collision potential, :math:`G\theta`, varies with temperature of operation. Vary the temperature from 0°C to 30°C. The following equation makes it clear that the velocity gradient originates from head loss that creates fluid deformation that is limited by viscosity.
 
 .. math:: \bar G\theta =\sqrt {\frac{{g{h_e}\theta }}{\nu }}
 
-.. code:: python
-
-    def Gt_operation(hl,Gt,T_BOD,T):
-        Gt_operation = np.sqrt(pc.gravity * hl * t_floc_est(hl, Gt, T_BOD)/pc.viscosity_kinematic(T))
-        return Gt_operation.to(u.dimensionless)
-    Temp_Operation=np.linspace(0, 30)*u.degC
-    ypoints=(Gt_operation(headloss_floc_BOD, Gt_BOD, T_BOD,Temp_Operation))
-    fig, ax = plt.subplots()
-    ax.plot(Temp_Operation,ypoints,'-')
-    #Note the use of latex. The r tells matplotlib to interpret the following strings as raw text.
-    #Without the "r" the \theta would be parsed as a tab (\t) followed by heta!
-    ax.set(xlabel=r'Temperature ($^\circ$C)')
-    ax.set(ylabel=r'G$\theta$')
-    fig.savefig('Flocculation/Images/Gtheta_vs_temperature')
-    plt.show()
-
-
-
+`See the code to generate the plot <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=u-JpICEvm8OL&line=4&uniqifier=1>`_
 
 .. _figure_Gtheta_vs_temperature:
 
-.. figure:: Images/Gtheta_vs_temperature.png
+.. figure:: ../Images/Gtheta_vs_temperature.png
    :width: 400px
    :align: center
    :alt: Gtheta_vs_temperature
@@ -149,358 +68,123 @@ Plot :math:`G\theta` as a function of the operating temperature given the head l
    The :math:`\bar G\theta` delivered by a flocculator increases with temperature. Note that the apparent linearity of this graph is because the inverse of the square root of kinematic viscosity varies linearly with temperature over this range!
 
 
-4)
-~~
-
-The Equation :eq:`pClam` creates the link between :math:`\bar G \theta` and flocculator performance. What does the floc model and :numref:`figure_Gtheta_vs_temperature` tell you about flocculator performance and flocculator design? Explain why performance varies with temperature. Explain how temperature influences collisions between particles. What temperature should be used to design flocculators?
+**4) The Equation :eq:`pClam` creates the link** between :math:`\bar G \theta` and flocculator performance. What does the floc model and :numref:`figure_Gtheta_vs_temperature` tell you about flocculator performance and flocculator design? Explain why performance varies with temperature. Explain how temperature influences collisions between particles. What temperature should be used to design flocculators?
 
 Flocculator performance improves with warmer temperatures because the fluid deforms more given the same input energy. The fluid deforms more because it is less viscous at higher temperatures. Flocculators should be designed to perform well based on the coldest operating temperature that they will encounter.
 
-5)
-~~
+**5) Calculate the volume of flocculator.** Note that this volume does not take into account the extra volume that flocculator will have due to the changing water level caused by the head loss. Simply estimate the volume based on the residence time and the flow rate.
 
-Calculate the volume of flocculator. Note that this volume does not take into account the extra volume that flocculator will have due to the changing water level caused by the head loss. Simply estimate the volume based on the residence time and the flow rate.
-
-.. code:: python
-
-    def vol_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-        vol = t_floc_est(headloss_floc_BOD, Gt_BOD, T_BOD )*flow_plant
-        return vol.to(u.m**3)
-
-    print('The volume of flocculator is', vol_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
+`Determine the volume <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=yKbX8NzxnCAx&line=2&uniqifier=1>`_
 
 The volume of flocculator is 7.936 meter ** 3
 
-6)
-~~
+**6) Calculate the actual length** of the flocculator channels. This must meet two constraints. First, it must be less than or equal to the maximum channel length. Second, the channel length is limited by the flocculator volume, height, minimum number of channels, and minimum width of the channels. This second constraint is important for low flow rates so that the flocculator has the correct target volume. Make sure to use this floc channel length in subsequent calculations.
 
-Calculate the actual length of the flocculator channels. This must meet two constraints. First, it must be less than or equal to the maximum channel length. Second, the channel length is limited by the flocculator volume, height, minimum number of channels, and minimum width of the channels. This second constraint is important for low flow rates so that the flocculator has the correct target volume. Make sure to use this floc channel length in subsequent calculations.
+`Calculat the channel length <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=Q9e2Z2FVnG4K&line=1&uniqifier=1>`_
 
-.. code:: python
+The maximum channel length is 3.719 meters.
 
-    def length_channel(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
+**7) Calculate the combined total width** of the flocculator channels (not including walls) based on the given length and depth.
 
-        #The factor of two below is because the minimum number of channels in the flocculator is two.
-        #This is a result of the orientation of the sedimentation tanks and the plumbing in the plant.
-        #Unless the design is for very low flows (<10 L/s), there will always be an even number of flocculator channels.
-        length = vol_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)/width_floc_min_BOD/2/height_floc_end
-        return min(length,length_channel_max)
+`Calculate the width <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=YFINBYZynKaE&line=4&uniqifier=1>`_
 
-    print('The maximum channel length is',length_channel(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
+The total width of the flocculator channels is is 1.067 meters.
 
-The maximum channel length is 3.719 meter
-
-7)
-~~
-
-Calculate the combined total width of the flocculator channels (not including walls) based on the given length and depth.
-
-.. code:: python
-
-    def width_floc_total(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-        width_floc = vol_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)/(length_channel(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)*height_floc_end)
-        return width_floc.to(u.m)
-
-    print ('The total width of the flocculator channels is is', width_floc_total(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
-
-The total width of the flocculator channels is is 1.067 meter
-
-8)
-~~
-
-Calculate the minimum channel width required to achieve H/S>3. The channel can be wider than this, but this is the absolute minimum width for a channel. The minimum width occurs when there is only one expansion per baffle and thus the distance between expansions is the same as the depth of water at the end of the flocculator.
+**8) Calculate the minimum channel width** required to achieve H/S>3. The channel can be wider than this, but this is the absolute minimum width for a channel. The minimum width occurs when there is only one expansion per baffle and thus the distance between expansions is the same as the depth of water at the end of the flocculator.
 
 :math:`{W_{Min}} = \frac{{\Pi _{HS}}Q}{H_e}{\left( {\frac{K_e}{2{H_e}\nu {\bar G}^2}} \right)^{\frac{1}{3}}}`
 
-.. code:: python
+`Calculate the minimum width <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=r5K7ayIQnM_I&line=3&uniqifier=1>`_
 
-    def width_floc_min_est(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-        Gavg = G_avg(headloss_floc_BOD, Gt_BOD, T_BOD)
-        nu = pc.viscosity_kinematic(T_BOD)
-        width_floc_min = Pi_HS_min*((K_e/(2 * height_floc_end * (Gavg**2) * nu))**(1/3))*flow_plant/height_floc_end
-        return width_floc_min.to(u.cm)
+The minimum channel width is 11.64 centimeters.
 
-    print('The minimum channel width is', width_floc_min_est(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
+**9) What is the minimum channel width** given the additional constraint that must be built by humans? Use the max function to find the true minimum channel width given both constraints.
 
-The minimum channel width is 11.64 centimeter
+`Calculate the practical minimum width <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=qAn6NgRdnQmv&line=3&uniqifier=1>`_
 
-9)
-~~
+The minimum channel width is 0.5335 meter.
 
-What is the minimum channel width given the additional constraint that must be built by humans? Use the max function to find the true minimum channel width given both constraints.
+**10) Calculate the number of channels** by taking the total flocculator width (see step 7) and dividing by the minimum channel width (round down). Include the requirement that the number of channels must be even (Use the numpy floor function - look it up!). To make this function robust, make sure that it can’t ever return zero channels (the max function might be useful here)! You can convert the float to an integer with the int() function.
 
-.. code:: python
-
-    def width_floc_min(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-        return max(width_floc_min_est(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD),width_floc_min_BOD)
-
-    print('The minimum channel width is', width_floc_min(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
-
-The minimum channel width is 0.5335 meter
-
-10)
-~~~
-
-Calculate the number of channels by taking the total flocculator width (see step 7) and dividing by the minimum channel width (round down). Include the requirement that the number of channels must be even (Use the numpy floor function - look it up!). To make this function robust, make sure that it can’t ever return zero channels (the max function might be useful here)! You can convert the float to an integer with the int() function.
-
-.. code:: python
-
-    def num_channel(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-         num = (width_floc_total(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)/
-            (width_floc_min(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))).to(u.dimensionless)
-         # floor function with step size 2
-         num = np.floor(num/2)*2
-         return int(max(num,2))
-
-    print('There are', num_channel(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD),'channels.')
+`Calculate the number of channels <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=oORz6cGhnRhK&line=4&uniqifier=1>`_
 
 There are 2 channels.
 
-11)
-~~~
+**11) Calculate the actual channel width** based on the number of channels and the total flocculator width.
 
-Calculate the actual channel width based on the number of channels and the total flocculator width.
-
-.. code:: python
-
-    def width_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-        width_total = width_floc_total(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)
-        num_c = num_channel(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)
-        return (width_total/num_c).to(u.cm)
-
-    print('The actual flocculator channel width is', width_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
+`Calculate the actual width <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=FFx1TDcinUMT&line=4&uniqifier=1>`_
 
 The actual flocculator channel width is 53.35 centimeter
 
-12)
-~~~
-
-Calculate the *maximum* distance between expansions. This occurs for the largest allowable H/S ratio. Note that this isn’t accounting for the integer requirement for the number of baffle spaces per channel yet.
+**12) Calculate** the *maximum* distance between expansions. This occurs for the largest allowable H/S ratio. Note that this isn’t accounting for the integer requirement for the number of baffle spaces per channel yet.
 
 .. math::
 
   {H_{{e_{Max}}}} = {\left[ {\frac{{{K_e}}}{{2\nu {{\bar G}^2}}}{{\left( {\frac{{Q{\Pi _{H{S_{Max}}}}}}{W}} \right)}^3}} \right]^{\frac{1}{4}}}
 
-.. code:: python
+`Find the maximum distance <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=wzCaYvVSnY3Q&line=5&uniqifier=1>`_
 
-    def height_exp_max(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
+The maximum distance between expansions 1.074 meters.
 
-        g_avg = G_avg(headloss_floc_BOD, Gt_BOD, T_BOD)
-        nu = pc.viscosity_kinematic(T_BOD)
-        term1 = (K_e/(2 * (g_avg**2) * nu))**(1/4)
+**13) Calculate the minimum number of expansions per baffle space.**
 
-        term2 = (Pi_HS_max*flow_plant/width_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))**(3/4)
+`Find the minimum number of expansions <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=NOqKB2Iwnbgg&line=3&uniqifier=1>`_
 
-        height_exp = term1*term2
-        return height_exp.to(u.m)
+The number of expansions is 2.
 
-    print('The maximum distance between expansions', height_exp_max(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
+**14) Calculate the actual distance between expansions** given the integer requirement for the number of expansions per flocculator depth.
 
-The maximum distance between expansions 1.074 meter
+`Find the actual distance <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=Xq_jOoUJne2t&line=3&uniqifier=1>`_
 
-13)
-~~~
+The actual distance between expansions is 1 meter.
 
-Calculate the minimum number of expansions per baffle space.
+**15) Calculate the spacing between baffles** based on the target velocity gradient using :eq:`Floc_baffle_spacing`.
 
-.. code:: python
+`Find the baffle spacing <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=pWb4aEgFnhZe&line=6&uniqifier=1>`_
 
-    def num_expansions(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-        return int(np.ceil(height_floc_end/(height_exp_max(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))).to(u.dimensionless))
+The spacing between baffles is 0.1832 meter.
 
-    print('The number of expansions is', num_expansions(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
+**16) How many baffle spaces would fit** in the channel(s) given the length of the flocculator and the baffle spacing? Round to the nearest integer.
 
-The number of expansions is 2
-
-14)
-~~~
-
-Calculate the actual distance between expansions given the integer requirement for the number of expansions per flocculator depth.
-
-.. code:: python
-
-    def height_exp(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-
-        return height_floc_end/num_expansions(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)
-
-
-    print('The actual distance between expansions is', height_exp(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
-
-The actual distance between expansions is 1 meter
-
-15)
-~~~
-
-Calculate the spacing between baffles based on the target velocity gradient using :eq:`Floc_baffle_spacing`.
-
-
-.. code:: python
-
-    def spacing_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-
-        g_avg = G_avg(headloss_floc_BOD, Gt_BOD, T_BOD)
-        nu = pc.viscosity_kinematic(T_BOD)
-        term1 = (K_e/(2 * height_exp(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD) * (g_avg**2) * nu))**(1/3)
-
-        ans =  term1*flow_plant/width_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)
-        return ans.to(u.m)
-
-    print ('The spacing between baffles is', spacing_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
-
-The spacing between baffles is 0.1832 meter
-
-16)
-~~~
-
-How many baffle spaces would fit in the channel(s) given the length of the flocculator and the baffle spacing? Round to the nearest integer.
-
-.. code:: python
-
-    def num_baffles(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-        num = round(num_channel(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)*length_channel(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)/spacing_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
-        return int(num)
-
-    print ('The number of baffle spaces that would fit in the channels is', num_baffles(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
+`Find the number of baffle spaces <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=fPjTwCB9r8SP&line=3&uniqifier=1>`_
 
 The number of baffle spaces that would fit in the channels is 41
 
-17)
-~~~
+**17) How many baffle spaces are needed** to create the required collision potential? Note that this isn’t necessarily the same number as found in Problem 16. Calculating the collision potential per baffle space is the advised first step.
 
-How many baffle spaces are needed to create the required collision potential? Note that this isn’t necessarily the same number as found in Problem 16. Calculating the collision potential per baffle space is the advised first step.
-
-.. code:: python
-
-    def Gt_baffle(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-
-        term1 = spacing_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)*width_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)
-        ans = term1*G_avg(headloss_floc_BOD, Gt_BOD, T_BOD)*height_floc_end/flow_plant
-        return ans.to(u.dimensionless)
-
-    print ('The collision potential (Gt) per baffle space is', Gt_baffle(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
-
-    def num_baffle_min(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-
-        ans = round(Gt_BOD/Gt_baffle(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
-        return int(ans)
-
-    print ('The minimum number of baffles required is', num_baffle_min(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
+`Calculate the number of baffles needed <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=MyLau92XnkxF&line=6&uniqifier=1>`_
 
 The collision potential (Gt) per baffle space is 944 dimensionless. The minimum number of baffles required is 41
 
-18)
-~~~
+**18) Do the two estimates of the number of baffle spaces agree?**
 
-Do the two estimates of the number of baffle spaces agree?
+Yes.
 
-.. code:: python
+**19) Calculate the average velocity** of the water in the flocculator. This is the velocity after the flow has expanded through each baffle/obstacle.
 
-    if num_baffles(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD) == num_baffle_min(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-        print('Yes')
-    else:
-        print('No')
-
-Yes
-
-19)
-~~~
-
-Calculate the average velocity of the water in the flocculator. This is the velocity after the flow has expanded through each baffle/obstacle.
-
-.. code:: python
-
-    def vel_floc_ave(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
-
-        ans = flow_plant/( spacing_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD)*width_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
-        return ans.to(u.m/u.s)
-
-    print ('The average velocity of the water in the flocculator is', vel_floc_ave(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
+`Calculate average velocity <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=b5T9L7tZsAHP&line=5&uniqifier=1>`_
 
 The average velocity of the water in the flocculator is 0.2046 meter / second
 
-20)
-~~~
+**20) Calculate the depth of water** at the beginning of the flocculator based on the design head loss.
 
-Calculate the depth of water at the beginning of the flocculator based on the design head loss.
-
-.. code:: python
-
-    HEIGHT_WATER_FLOC_START = height_floc_end + headloss_floc_BOD
-    print ('The depth of the water at the beginning of the flocculator is', HEIGHT_WATER_FLOC_START)
+`Find the depth of water <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=DclI0a4asC0x&line=1&uniqifier=1>`_
 
 The depth of the water at the beginning of the flocculator is 2.4 meter
 
-21)
-~~~
+**21) Estimate the residence time** in the hydraulic flocculator taking head loss into account. It is okay if your estimate doesn’t capture all of the details of the flocculator. You don’t need to account for the volume of the baffles. Simply account for the added water due to head loss. You can approximate the extra depth as a triangle.
 
-Estimate the residence time in the hydraulic flocculator taking head loss into account. It is okay if your estimate doesn’t capture all of the details of the flocculator. You don’t need to account for the volume of the baffles. Simply account for the added water due to head loss. You can approximate the extra depth as a triangle.
+`Determine the residence time <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=nV_MCM7gsE_s&line=1&uniqifier=1>`_
 
-.. code:: python
+The residence time in the hydraulic flocculator is 7.275 minutes.
 
-    def theta_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD):
+**22) Create plots** showing number of channels, number of expansions per water depth, total number of baffles, and channel width for a flow range from 10-100 L/s. Note that the functions that we created in this design challenge are not able to handle arrays as inputs. Use ``for`` loops to create the numpy arrays of y data needed for these graphs. Use 100 points to define each plot. Remember to initialize the numpy arrays before
 
-        theta_est = t_floc_est(headloss_floc_BOD, Gt_BOD, T_BOD)
-        ans = theta_est*((height_floc_end + (headloss_floc_BOD/2))/height_floc_end)
-        return ans.to(u.min)
-
-    print ('The residence time in the hydraulic flocculator is', theta_floc(flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD))
-
-The residence time in the hydraulic flocculator is 7.275 minute
-
-22)
-~~~
-
-Create plots showing number of channels, number of expansions per water depth, total number of baffles, and channel width for a flow range from 10-100 L/s. Note that the functions that we created in this design challenge are not able to handle arrays as inputs. Use ``for`` loops to create the numpy arrays of y data needed for these graphs. Use 100 points to define each plot. Remember to initialize the numpy arrays before
-
-.. code:: python
-
-    plot_points=100
-    flow_plant=np.linspace(10,100, num=plot_points, endpoint=True)*u.L/u.s
-
-    expansions=np.zeros(plot_points)
-    for i in range(plot_points):
-        expansions[i] = num_expansions(flow_plant[i], headloss_floc_BOD, Gt_BOD, T_BOD)
-    fig, ax = plt.subplots()
-    ax.plot(flow_plant,expansions,'-')
-    ax.set(xlabel='Plant Flow Rate (L/s)')
-    ax.set(ylabel='Expansion per baffle space')
-    fig.savefig('Flocculation/Images/Expansions_per_baffle_space_vs_plant_flow')
-    plt.show()
-
-    channels=np.zeros(plot_points)
-    for i in range(plot_points):
-        channels[i]=num_channel(flow_plant[i], headloss_floc_BOD, Gt_BOD, T_BOD)
-    fig, ax = plt.subplots()
-    ax.plot(flow_plant,channels,'-')
-    ax.set(xlabel='Plant Flow Rate (L/s)')
-    ax.set(ylabel='Number of channels')
-    fig.savefig('Flocculation/Images/Number_of_channels_vs_plant_flow')
-    plt.show()
-
-    baffles=np.zeros(plot_points)
-    for i in range(plot_points):
-        baffles[i]=num_baffles(flow_plant[i], headloss_floc_BOD, Gt_BOD, T_BOD)
-    fig, ax = plt.subplots()
-    ax.plot(flow_plant,baffles,'-')
-    ax.set(xlabel='Plant Flow Rate (L/s)')
-    ax.set(ylabel='Number of Baffle Spaces')
-    fig.savefig('Flocculation/Images/Number_of_baffle_spaces_vs_plant_flow')
-    plt.show()
-
-    width_floc_channel=np.zeros(plot_points)*u.m
-    for i in range(plot_points):
-        width_floc_channel[i]=width_floc(flow_plant[i], headloss_floc_BOD, Gt_BOD, T_BOD)
-    fig, ax = plt.subplots()
-    ax.plot(flow_plant,width_floc_channel,'-')
-    ax.set(xlabel='Plant Flow Rate (L/s)')
-    ax.set(ylabel='Floc Channel Width (m)')
-    plt.title('Floc channel width vs plant flow')
-    fig.savefig('Flocculation/Images/Floc_channel_width_vs_plant_flow')
-    plt.show()
+`See how the plots are created here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=CCtncYrXsHPN&line=11&uniqifier=1>`_
 
 .. _figure_Expansions_per_baffle_space_vs_plant_flow:
 
-.. figure:: Images/Expansions_per_baffle_space_vs_plant_flow.png
+.. figure:: ../Images/Expansions_per_baffle_space_vs_plant_flow.png
    :width: 400px
    :align: center
    :alt: Expansions per baffle space vs plant flow
@@ -509,7 +193,7 @@ Create plots showing number of channels, number of expansions per water depth, t
 
 .. _figure_Number_of_channels_vs_plant_flow:
 
-.. figure:: Images/Number_of_channels_vs_plant_flow.png
+.. figure:: ../Images/Number_of_channels_vs_plant_flow.png
    :width: 400px
    :align: center
    :alt: Number of channels vs plant flow
@@ -518,7 +202,7 @@ Create plots showing number of channels, number of expansions per water depth, t
 
 .. _figure_Number_of_baffle_spaces_vs_plant_flow:
 
-.. figure:: Images/Number_of_baffle_spaces_vs_plant_flow.png
+.. figure:: ../Images/Number_of_baffle_spaces_vs_plant_flow.png
    :width: 400px
    :align: center
    :alt: Number of baffle spaces vs plant flow
@@ -527,32 +211,26 @@ Create plots showing number of channels, number of expansions per water depth, t
 
 .. _figure_Floc_channel_width_vs_plant_flow:
 
-.. figure:: Images/Floc_channel_width_vs_plant_flow.png
+.. figure:: ../Images/Floc_channel_width_vs_plant_flow.png
    :width: 400px
    :align: center
    :alt: Floc channel width vs plant flow
 
    The flocculator channel width varies linearly with flow rate for a constant number of channels. The exception is for flows below about 35 L/s. In that flow rate the requirement of 2 channels that are the length of the sedimentation tank is excessive and results in more collision potential than needed. We need a new design solution to handle this suboptimal design for flows lower than 35 L/s.
 
-23)
-~~~
+**23) Read from the graphs to determine:**
 
-Read from the graphs to determine
+#. At what flow rate is it no longer necessary to add extra obstacles in the flocculator?
+#. At what flow rate does the flocculator switch from 2 channels to 4 channels?
+#. **Why** did the flocculator switch from 2 to 4 channels?
+#. No obstacles are needed for flows greater than about 65 L/s.
+#. The flocculator switches from 2 to 4 channels at 65 L/s.
+#. The channels had reached their maximum width at that flow rate.
 
-1. At what flow rate is it no longer necessary to add extra obstacles in the flocculator?
-2. At what flow rate does the flocculator switch from 2 channels to 4 channels?
-3. **Why** did the flocculator switch from 2 to 4 channels?
-4. No obstacles are needed for flows greater than about 65 L/s.
-5. The flocculator switches from 2 to 4 channels at 65 L/s.
-6. The channels had reached their maximum width at that flow rate.
+**24) Change Gt_BOD to 20,000 and run the code again.** Identify at least 3 changes in the design.
 
-24)
-~~~
-
-Change Gt_BOD to 20,000 and run the code again. Identify at least 3 changes in the design.
-
-1. The number of channels would be 2 for all of the flows explored here.
-2. The value of G increased
-3. The spacing between baffles decreased
-4. The flow expansions became closer together (because the spacing between baffles decreased)
-5. The number of baffles decreased
+#. The number of channels would be 2 for all of the flows explored here.
+#. The value of G increased.
+#. The spacing between baffles decreased.
+#. The flow expansions became closer together (because the spacing between baffles decreased).
+#. The number of baffles decreased.

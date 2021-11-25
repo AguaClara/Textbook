@@ -104,7 +104,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Sedimentation/Sed_Derivations.rst
   Sedimentation/Sed_Theory_and_Future_Work.rst
   Sedimentation/Sed_Examples.rst
-  Sedimentation/Sed_Design_Solution.rst
 
 .. toctree::
   :caption: Chapter 10: Filtration
@@ -139,15 +138,14 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
   Troubleshooting/Troubleshooting.rst
 
-<!-- .. toctree::
-  :caption: Chapter 15: Wastewater
-  :maxdepth: 1 -->
 
 .. toctree::
-  :caption: Appendix 1
+  :caption: Appendix 1 + Resources
   :maxdepth: 1
 
   Introduction/Python_Tutorial.rst
+  equations.rst
+  glossary.rst
 
 
 .. toctree::

@@ -9,7 +9,11 @@ Fluid Deformation and Energy Dissipation Derivations
 Equations for :math:`\varepsilon` and :math:`G` in Varying Flow Geometries
 ===============================================================================
 
-Estimation of velocity gradients for various flow geometries is the basis for the design of rapid mix, flocculators, and plate settlers. Thus, our goal is to define the velocity gradients consistently across a range of possible flow regimes. There are three approaches to calculating the average velocity gradient within a control volume. 1) Use the Navier Stokes equations and solve for the spatially averaged velocity gradient. 1) Use Computational Fluid Dynamics (CFD) to solve for the spatially averaged velocity gradient. 1) Use the total mechanical energy loss in the control volume to calculate the energy dissipation rate. Estimate the velocity gradient directly from the energy dissipation rate, :math:`G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}`, as defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil Eng., 30, 203–221.).
+Estimation of velocity gradients for various flow geometries is the basis for the design of rapid mix, flocculators, and plate settlers. Thus, our goal is to define the velocity gradients consistently across a range of possible flow regimes. There are three approaches to calculating the average velocity gradient within a control volume. 
+
+#. Use the Navier Stokes equations and solve for the spatially averaged velocity gradient.
+#. Use Computational Fluid Dynamics (CFD) to solve for the spatially averaged velocity gradient.
+#. Use the total mechanical energy loss in the control volume to calculate the energy dissipation rate. Estimate the velocity gradient directly from the energy dissipation rate, :math:`G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}`, as defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil Eng., 30, 203–221.).
 
 The first approach would be ideal but is difficult in practice because Navier Stokes solutions are only available for limited geometries and laminar flow. CFD could be used but is difficult to use as a general engineering design approach given the large number of geometries that are used in drinking water treatment plants. For these reasons we will use the control volume approach to estimate the average velocity gradient. This method incorrectly assumes that the energy dissipation rate is completely uniform in the control volume and hence the velocity gradient is also uniform. This method results in an over estimation of the velocity gradient.
 The Camp-Stein estimate of :math:`G_{CS}` is based on a control volume where the velocity gradient is uniform. Consider a layer of fluid of depth :math:`H` and apply a velocity, :math:`v` at the top of the fluid. The velocity gradient, :math:`G`, is thus :math:`\frac{v}{H}` everywhere in the fluid. The force required to move the top of the fluid at velocity v can be obtained from the required shear, :math:`\tau`. From Newtons Law of Friction we have
@@ -60,7 +64,7 @@ Now we check to see if the Camp Stein method of estimating the average velocity 
 
 .. math:: \bar G_2 = \frac{\bar G_1}{4} \neq \sqrt{\frac{\bar\varepsilon_1}{4\nu}} =  \frac{\bar G_1}{2}
 
-Given that the energy dissipation rate is proportional to the square of the velocity gradient the mean of the energy dissipation rate is **not** proportional to the mean of the velocity gradient. Thus the Camp Stein method of calculating the average velocity gradient is not correct except in the case of uniform velocity gradient. The Camp Stein equation is dimensionally correct and could be corrected by adding a dimensionless constant :math:`\Pi_{CS}` that is a function of the energy dissipation rate distribution within the control volume.
+Given that the energy dissipation rate is proportional to the square of the velocity gradient, the mean of the energy dissipation rate is **not** proportional to the mean of the velocity gradient. Thus the Camp Stein method of calculating the average velocity gradient is not correct except in the case of uniform velocity gradient. The Camp Stein equation is dimensionally correct and could be corrected by adding a dimensionless constant :math:`\Pi_{CS}` that is a function of the energy dissipation rate distribution within the control volume.
 
 .. math:: \bar G =\Pi_{CS}\sqrt{\frac{\bar\varepsilon}{\nu}}
 
@@ -88,7 +92,7 @@ We will use the Camp Stein definition :math:`G_{CS} = \sqrt{\frac{\bar\varepsilo
 
 .. _heading_Estimates_of_time_required_for_mixing_processes:
 
-Estimates of time required for mixing processes
+Estimates of Time Required for Mixing Processes
 ================================================
 
 .. _heading_Turbulent_Large_Scale_Eddies:
@@ -178,36 +182,11 @@ At length scales larger than the inner viscous length scale, :math:`\lambda_v`, 
 
 The dividing line between eddy transport and fluid deformation controlled by viscosity can be calculated as a function of the energy dissipation rate using :eq:`eq_inner_viscous_length`.
 
-.. code:: python
-
-    """ importing """
-
-    from aguaclara.core.units import unit_registry as u
-    import aguaclara.core.utility as ut
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import aguaclara.research.floc_model as fm
-
-    from matplotlib.ticker import FormatStrFormatter
-    imagepath = 'Rapid_Mix/Images/'
-    EDR_array = np.logspace(0,4,num=50)*u.mW/u.kg
-    Temperature = 20*u.degC
-    def Inner_viscous(EDR, Temperature):
-        return fm.RATIO_KOLMOGOROV * fm.eta_kolmogorov(EDR, Temperature)
-
-    fig, ax = plt.subplots()
-    ax.semilogx(EDR_array.to(u.mW/u.kg),Inner_viscous(EDR_array, Temperature).to(u.mm))
-    ax.yaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    ax.xaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    ax.set(xlabel='Energy dissipation rate (W/kg)', ylabel='Inner viscous length scale (mm)')
-    ax.text(30, 6, 'Eddies cause mixing', fontsize=12,rotation=-30)
-    ax.text(1, 5, 'Shear and diffusion cause mixing', fontsize=12,rotation=-30)
-    fig.savefig(imagepath+'Inner_viscous_vs_EDR')
-    plt.show()
+The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=oizJutoQXBnU&line=5&uniqifier=1>`_
 
 .. _figure_Inner_viscous_vs_EDR:
 
-.. figure:: Images/Inner_viscous_vs_EDR.png
+.. figure:: ../Images/Inner_viscous_vs_EDR.png
     :width: 400px
     :align: center
     :alt: Inner viscous vs EDR
@@ -219,7 +198,7 @@ The dividing line between eddy transport and fluid deformation controlled by vis
 Turbulent Mixing Time as a Function of Scale
 --------------------------------------------
 
-We are searching for the rate limiting step in the mixing process as we transition from the scale of the flow down to the scale of the coagulant nanoparticles. We can estimate the time required for eddies to mix at their length scales by assuming that the eddies pass all of their energy to smaller scales in the time it takes for an eddy to travel the distance equal to the length scale of the eddy. This time is known as the **`eddy turnover time <http://ceeserver.cee.cornell.edu/eac20/cee637/handouts/TURBFLOW_1.pdf>`__**,
+We are searching for the rate limiting step in the mixing process as we transition from the scale of the flow down to the scale of the coagulant nanoparticles. We can estimate the time required for eddies to mix at their length scales by assuming that the eddies pass all of their energy to smaller scales in the time it takes for an eddy to travel the distance equal to the length scale of the eddy. This time is known as the `eddy turnover time <http://ceeserver.cee.cornell.edu/eac20/cee637/handouts/TURBFLOW_1.pdf>`__,
 :math:`t_{eddy}`. :ref:`The derivation for the equation below is found here <heading_Estimates_of_time_required_for_mixing_processes>`.
 
 .. math::
@@ -229,36 +208,11 @@ We are searching for the rate limiting step in the mixing process as we transiti
 
 We can plot the eddy turnover time as a function of scale from the inner viscous length scale up to the scale of the flow. We will discover whether large scale mixing by eddies is faster or slower than small scale mixing by eddies.
 
-.. code:: python
-
-    from aguaclara.core.units import unit_registry as u
-    import aguaclara.core.utility as ut
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import aguaclara.research.floc_model as fm
-    EDR_graph = np.array([0.01,0.1,1,10 ])*u.W/u.kg
-    """Use the highest EDR to estimate the smallest length scale"""
-    Inner_viscous_graph = Inner_viscous(EDR_graph[2], Temperature)
-    Inner_viscous_graph
-    L_flow = 0.5*u.m
-    L_scale = np.logspace(np.log10(Inner_viscous_graph.magnitude),np.log10(L_flow.magnitude),50)
-    L_scale
-    imagepath = 'Rapid_Mix/Images/'
-    fig, ax = plt.subplots()
-    for i in range(len(EDR_graph)):
-      ax.semilogx(L_scale,((L_scale**2/EDR_graph[i])**(1/3)).to_base_units())
-
-    ax.legend(EDR_graph)
-
-    #ax.yaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    #ax.xaxis.set_major_formatter(FormatStrFormatter('%.f'))
-    ax.set(xlabel='Length (m)', ylabel='Eddy turnover time (s)')
-    fig.savefig(imagepath+'Eddy_turnover_time')
-    plt.show()
+The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=4zUMlZy8bR1Z>`_
 
 .. _figure_Eddy_turnover_time:
 
-.. figure:: Images/Eddy_turnover_time.png
+.. figure:: ../Images/Eddy_turnover_time.png
     :width: 400px
     :align: center
     :alt: Eddy turnover time
@@ -303,28 +257,11 @@ Substitute Einstein’s diffusion equation and solve for the length scale that t
 
 .. math:: L_{Diffusion}^{Shear} \approx \sqrt{\frac{k_B T}{3 G \pi \mu  d_P}}
 
-.. code:: python
-
-    import aguaclara.core.physchem as pc
-    import aguaclara.research.floc_model as fm
-    def L_Shear_Diffusion(G,Temperature,d_particle):
-      return np.sqrt((u.boltzmann_constant*Temperature/
-      (3 * G *  np.pi *pc.viscosity_dynamic(Temperature)* d_particle)).to_base_units())
-
-    G = np.arange(10,5000)*u.Hz
-    d_particle = fm.PACl.Diameter*u.m
-    Temperature=20*u.degC
-    x = (L_Shear_Diffusion(G,Temperature,d_particle)).to(u.nm)
-    imagepath = 'Rapid_Mix/Images/'
-    fig, ax = plt.subplots()
-    ax.semilogx(G,x)
-    ax.set(xlabel='Velocity gradient (Hz)', ylabel='Length scale (nm)')
-    fig.savefig(imagepath+'Shear_diffusion_length_scale')
-    plt.show()
+The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=Wdvqa0VCchaD>`_
 
 .. _figure_Shear_diffusion_length_scale:
 
-.. figure:: Images/Shear_diffusion_length_scale.png
+.. figure:: ../Images/Shear_diffusion_length_scale.png
     :width: 400px
     :align: center
     :alt: Shear diffusion length scale
@@ -334,8 +271,9 @@ Substitute Einstein’s diffusion equation and solve for the length scale that t
 Molecular diffusion finishes the blending process by transporting the coagulant nanoparticles the last few hundred nanometers. The entire mixing process from the coagulant injection point to uniform blending with the raw water takes only a few seconds.
 
 We have demonstrated that all of the steps for mixing of the coagulant nanoparticles with the raw water are very fast. Compared with the time required for flocculation, 10s to 1000s of seconds, the time required for this mixing (blending the nanoparticles uniformly with the water) is insignificant. The remaining steps are:
- 1. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
- 1. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
+
+ #. Molecular diffusion causes some dissolved species and Al nanoparticles to aggregate.
+ #. Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).
 
 The time scale for the fluid shear and molecular diffusion to cause coagulant nanoparticles to collide with particles is estimated in :ref:`heading_Diffusion_and_Shear_Transport_Coagulant_Nanoparticles_to_Clay`.
 
@@ -343,7 +281,7 @@ Below are the derivations for the equations that appear in :numref:`table_Contro
 
 .. _heading_Straight_Pipe_Wall_Shear:
 
-Straight pipe (wall shear)
+Straight Pipe (Wall Shear)
 --------------------------
 
 The average energy dissipation rate, :math:`\bar\varepsilon`, in a control volume with residence time :math:`\theta` is
@@ -458,7 +396,7 @@ Flow between parallel plates occurs in plate settlers in the sedimentation tank.
 
 .. _figure_Parallel_Plate_schematic:
 
-.. figure:: Images/Parallel_Plate_schematic.png
+.. figure:: ../Images/Parallel_Plate_schematic.png
    :width: 700px
    :align: center
    :alt: Parallel plate schematic
@@ -591,7 +529,7 @@ Substituting into the force balance equation
 
   \Delta P = -\frac{2 \nu \rho 6 \bar v L}{S^2}
 
-The head loss for horizontal flow at uniform velocity simplifies too
+The head loss for horizontal flow at uniform velocity simplifies to
 
 .. math::
 
@@ -619,7 +557,7 @@ The Camp-Stein velocity gradient for laminar flow between parallel plates is
 
 .. _heading_Coiled_tubes_(laminar_flow):
 
-Coiled tubes (laminar flow)
+Coiled Tubes (Laminar Flow)
 ----------------------------
 
 Coiled tubes are used as flocculators at laboratory scale. The one shown below is a doubled coil. A single coil would only go around one cylinder
@@ -629,7 +567,7 @@ Coiled tubes are used as flocculators at laboratory scale. The one shown below i
 
 .. _figure_Coiled_tube_flocculator:
 
-.. figure:: Images/Coiled_tube_flocculator.jpg
+.. figure:: ../Images/Coiled_tube_flocculator.jpg
    :width: 500px
    :align: center
    :alt: double coiled tube flocculator
@@ -645,7 +583,7 @@ The Dean number is defined as:
 
    De = Re\left(\frac{D}{D_c}\right)^\frac{1}{2}
 
-where :math:`D` is the inner diameter of the tube and :math:`D_c` is the diameter of the coil. Note that the tubing coils are actually helixes and that for the tubing diameters and coil diameters used for flocculators that the helix doesn’t significantly change the radius of curvature.
+where :math:`D` is the inner diameter of the tube and :math:`D_c` is the diameter of the coil. Note that the tubing coils are actually helices and that for the tubing diameters and coil diameters used for flocculators that the helix doesn’t significantly change the radius of curvature.
 
 .. math::
 
@@ -683,7 +621,7 @@ where :math:`G_{CS} =4\sqrt2 \frac{\bar v}{D}` for laminar flow in a straight pi
 
 .. _heading_Flow_in_porous_media:
 
-Flow in porous media
+Flow in Porous Media
 --------------------
 
 The `Ergun equation <https://neutrium.net/fluid_flow/pressure-drop-through-a-packed-bed/>`_ applies to both laminar and turbulent flow through packed beds.
@@ -781,12 +719,12 @@ Combining the previous equations we obtain
 
 .. _heading_Maximum_velocity_gradients:
 
-Maximum velocity gradients
+Maximum Velocity Gradients
 ============================
 
 .. _heading_Straight_pipe_(major_losses):
 
-Straight pipe (major losses)
+Straight Pipe (Major Losses)
 -----------------------------
 
 The maximum velocity gradient in pipe flow occurs at the wall. This is true for both laminar and turbulent flow. In either case a force balance on a control volume of pipe gives us the wall shear and the wall shear can then be used to estimate the velocity gradient at the wall.
@@ -794,7 +732,7 @@ The maximum velocity gradient in pipe flow occurs at the wall. This is true for 
 
 .. _figure_pipe_pressure_shear_force_balance:
 
-.. figure:: Images/pipe_pressure_shear_force_balance.png
+.. figure:: ../Images/pipe_pressure_shear_force_balance.png
       :width: 400px
       :align: center
       :alt: Pipe pressure and shear force balance
@@ -872,7 +810,7 @@ The energy dissipation rate at the wall is
 
 .. _heading_coiled-tubes-laminar-flow-1:
 
-Coiled tubes (laminar flow)
+Coiled Tubes (Laminar Flow)
 ---------------------------
 
 The shear on the wall of a coiled tube is not uniform. The outside of the curve has a higher velocity gradient than the inside of the curve and there are secondary currents that results in wall shear that is not purely in the locally defined upstream direction. We do not have a precise equation for the wall shear. The best we can do currently is define an average wall shear in the locally defined direction of flow by combining
@@ -930,7 +868,7 @@ Below we plot the Baldyga et al. equation for the energy dissipation rate as a f
 
 .. _figure_Jet_centerline_EDR:
 
-.. figure:: Images/Jet_centerline_EDR.png
+.. figure:: ../Images/Jet_centerline_EDR.png
     :width: 400px
     :align: center
     :alt: Pipe pressure and shear force balance
@@ -1020,19 +958,11 @@ We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value
 
   \Pi_{JetPlane} = 0.0124
 
-.. code:: python
-
-    import aguaclara.core.constants as con
-    VC_BAFFLE_RATIO=con.VC_ORIFICE_RATIO**2
-    K_MINOR_FLOC_BAFFLE = (1/VC_BAFFLE_RATIO - 1)**2
-    Ratio_Jet_Plane = 2*con.VC_ORIFICE_RATIO**8 * K_MINOR_FLOC_BAFFLE/2/5
-    Ratio_Jet_Plane
-
-    VC_BAFFLE_RATIO**4*K_MINOR_FLOC_BAFFLE/Ratio_Jet_Plane
+The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=WQtdrsP9egHB>`_
 
 .. _heading_Behind_a_flat_plate:
 
-Behind a flat plate
+Behind a Flat Plate
 ---------------------
 
 A flat plate normal to the direction of flow could be used in a hydraulic flocculator. In vertical flow flocculators it would create a space where flocs can settle and thus it is not a recommended design.
@@ -1043,7 +973,7 @@ Ariane Walker-Horn modeled the flat plate using Fluent in 2015.
 
 .. _figure_CFD_Flat_Plate:
 
-.. figure::    Images/CFD_Flat_Plate.png
+.. figure::    ../Images/CFD_Flat_Plate.png
       :width: 600px
       :align: center
       :alt: CFD Flat Plate
@@ -1065,13 +995,6 @@ The maximum velocity gradient is thus
 
   \Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}
 
-.. code:: python
-
-    """CFD analysis setup used by Ariane Walker-Horn in 2015"""
-    EDR_Max = 0.04*u.W/u.kg
-    v = 1*u.m/u.s
-    W = 1*u.m
-    Ratio_Jet_Plate = (EDR_Max * W/v**3).to_base_units()
-    print(Ratio_Jet_Plate)
+The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=juEleCKZLNuk>`_
 
 The flat plate :math:`\Pi_{Plate}` has a value of 0.04.

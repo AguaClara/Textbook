@@ -10,12 +10,12 @@ The specific design characteristics of a water treatment plant dictate the poten
 
 The entrance tank has multiple functions in a drinking water treatment plant.
 
-1. remove air bubbles to reduce splashing, turbulence, and unsteady motion of the chemical feed surface tracking lever system
-1. remove grit to prevent grit accumulation in the flocculator
-1. remove leaves and other debris to prevent clogging of the diffusers in the sedimentation tank inlet
-1. dissipate kinetic energy of the water prior to facilitate accurate measurement of the water level used for flow measurement
-1. measure the flow rate so that operators can make adjustments to the incoming flow rate and respond to changes in water demand
-1. inject the coagulant and any other amendments required for flocculation
+#. Remove air bubbles to reduce splashing, turbulence, and unsteady motion of the chemical feed surface tracking lever system
+#. Remove grit to prevent grit accumulation in the flocculator
+#. Remove leaves and other debris to prevent clogging of the diffusers in the sedimentation tank inlet
+#. Dissipate kinetic energy of the water prior to facilitate accurate measurement of the water level used for flow measurement
+#. Measure the flow rate so that operators can make adjustments to the incoming flow rate and respond to changes in water demand
+#. Inject the coagulant and any other amendments required for flocculation
 
 Trash Rack Design
 ===============================

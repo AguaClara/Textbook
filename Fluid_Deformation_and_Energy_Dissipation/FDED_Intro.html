@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Fluid Deformation and Energy Dissipation Derivations &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
+  <title>Energy Dissipation Rate, Velocity Gradient, and Mixing &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
   
 
   
@@ -98,25 +98,22 @@
 <p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">Grand Challenges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">AguaClara Treatment</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Review: Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Fluid Mechanics Review</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Flocs, Fractals, and Forces</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces, and Fluidized Suspensions Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Fluid Deformation and Energy Dissipation Derivations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#energy-dissipation-rate-velocity-gradient-and-mixing">Energy Dissipation Rate, Velocity Gradient, and Mixing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#understanding-g-and-varepsilon">Understanding <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span></a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Energy Dissipation Rate, Velocity Gradient, and Mixing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-g-and-varepsilon">Understanding <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#common-flow-geometries-that-dissipate-energy">Common Flow Geometries that Dissipate Energy</a></li>
 </ul>
 </li>
@@ -124,13 +121,13 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 5: Chemistry of Water Treatment</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Water Treatment Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Chemistry of Water Treatment Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Coagulant Nanoparticles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Carbonate Reactions, Buffering, and pH</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 6: Flow Control and Measurement</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Flow Control and Measurement Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">Flow Control and Measurement Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Constant Head Tanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">AguaClara Flow Control and Measurement Technologies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
@@ -140,15 +137,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix Appendix C: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix: Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 8: Flocculation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Flocculation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">AguaClara Hydraulic Flocculation Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
@@ -160,17 +157,17 @@
 <p class="caption"><span class="caption-text">Chapter 9: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Sedimentation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">AguaClara Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Solution.html">Sedimentation Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 10: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html#filtration-theory">Filtration Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 11: Hydraulics</span></p>
@@ -187,13 +184,16 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 14: Troubleshooting</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Problems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#solutions">Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#proposed-solutions-to-eliminate-iron-oxidizing-slime-bacteria">Proposed solutions to eliminate iron oxidizing slime bacteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#high-head-loss-after-backwash-in-estars">High Head Loss After Backwash in EStaRS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#encrustation-of-filter-pipes-at-las-vegas">Encrustation of Filter Pipes at Las Vegas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#slime-at-las-vegas">Slime at Las Vegas</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Appendix 1</span></p>
+<p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
 <ul>
@@ -248,7 +248,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Fluid Deformation and Energy Dissipation Derivations</li>
+      <li>Energy Dissipation Rate, Velocity Gradient, and Mixing</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -267,12 +267,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="fluid-deformation-and-energy-dissipation-derivations">
-<span id="title-fluid-deformation-and-energy-dissipation-introduction"></span><h1>Fluid Deformation and Energy Dissipation Derivations<a class="headerlink" href="#fluid-deformation-and-energy-dissipation-derivations" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="energy-dissipation-rate-velocity-gradient-and-mixing">
-<span id="heading-edr-g-and-mixing"></span><h2>Energy Dissipation Rate, Velocity Gradient, and Mixing<a class="headerlink" href="#energy-dissipation-rate-velocity-gradient-and-mixing" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="energy-dissipation-rate-velocity-gradient-and-mixing">
+<span id="title-fluid-deformation-and-energy-dissipation-introduction"></span><h1>Energy Dissipation Rate, Velocity Gradient, and Mixing<a class="headerlink" href="#energy-dissipation-rate-velocity-gradient-and-mixing" title="Permalink to this headline">¶</a></h1>
 <dl class="simple">
-<dt>In addition to the general fluids review (<a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#title-review-fluid-mechanics"><span class="std std-ref">Review: Fluid Mechanics</span></a>), there are a few extra fluid dynamics concepts that are important to know in order to understand drinking water treatment and AguaClara’s approach to it. These concepts are primarily focused on the relationships between:</dt><dd><ul class="simple">
+<dt>In addition to the general fluids review (<a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#title-review-fluid-mechanics"><span class="std std-ref">Fluid Mechanics Review</span></a>), there are a few extra fluid dynamics concepts that are important to know in order to understand drinking water treatment and AguaClara’s approach to it. These concepts are primarily focused on the relationships between:</dt><dd><ul class="simple">
 <li><p>Turbulence</p></li>
 <li><p>Viscosity</p></li>
 <li><p>Shear</p></li>
@@ -282,13 +280,13 @@
 </dd>
 </dl>
 <p>Knowledge of these concepts and how they interact is critical to understand rapid mix, flocculation, filtration, and disinfection. These concepts and their interactions first become relevant in rapid mix, the step in which the coagulant gets added to the raw water.</p>
-<p>The two concepts that were not covered in the previous chapter, <a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#title-review-fluid-mechanics"><span class="std std-ref">Review: Fluid Mechanics</span></a>, are velocity gradient <span class="math notranslate nohighlight">\(G\)</span> and energy dissipation rate <span class="math notranslate nohighlight">\(\varepsilon\)</span>. While these will be very thoroughly described over the course of this introduction, a brief and simple explanation is included to help get the ball rolling.</p>
+<p>The two concepts that were not covered in the previous chapter, <a class="reference internal" href="../Review/Review_Fluid_Mechanics.html#title-review-fluid-mechanics"><span class="std std-ref">Fluid Mechanics Review</span></a>, are velocity gradient <span class="math notranslate nohighlight">\(G\)</span> and energy dissipation rate <span class="math notranslate nohighlight">\(\varepsilon\)</span>. While these will be very thoroughly described over the course of this introduction, a brief and simple explanation is included to help get the ball rolling.</p>
 <div class="section" id="understanding-g-and-varepsilon">
-<h3>Understanding <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span><a class="headerlink" href="#understanding-g-and-varepsilon" title="Permalink to this headline">¶</a></h3>
+<h2>Understanding <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span><a class="headerlink" href="#understanding-g-and-varepsilon" title="Permalink to this headline">¶</a></h2>
 <p><span class="math notranslate nohighlight">\(G\)</span>, or velocity gradient, is a measure of fluid deformation. It is defined by how quickly one point of water along one streamline moves in comparison to another point on another streamline (<span class="math notranslate nohighlight">\(v_A\)</span> compared to <span class="math notranslate nohighlight">\(v_B\)</span>, for example), taking into account the distance between the streamlines, <span class="math notranslate nohighlight">\(\Delta h\)</span>. A visual example of a velocity gradient is shown in the image below:</p>
 <div class="figure align-center" id="id2">
 <span id="figure-velocity-gradient-image"></span><a class="reference internal image-reference" href="../_images/Velocity_gradient_image.jpg"><img alt="Velocity gradient image" src="../_images/Velocity_gradient_image.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Velocity gradients cause relative velocities of fluid elements. Those relative velocities form the basis of particle collisions that are essential for the flocculation process.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">Velocity gradients cause relative velocities of fluid elements. Those relative velocities form the basis of particle collisions that are essential for the flocculation process.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>Note on terminology:</strong> “Fluid deformation” is equivalent to “velocity gradient,” and the two terms can be used interchangeably. They are different ways of thinking about the same concept. Thus, <span class="math notranslate nohighlight">\(G\)</span> is the measure of both terms.</p>
 <p><span class="math notranslate nohighlight">\(\varepsilon\)</span>, or energy dissipation rate, is the rate that the kinetic energy of the fluid is being converted to heat. EDR is a very useful concept because the last step of converting kinetic energy into heat is accomplished by viscosity (<span class="math notranslate nohighlight">\(\nu\)</span>). This kinetic energy being dissipated by viscosity is the energy associated with velocity gradients (<span class="math notranslate nohighlight">\(G\)</span>). Thus, through EDR there is a direct connection between <span class="math notranslate nohighlight">\(\nu\)</span> and <span class="math notranslate nohighlight">\(G\)</span>. This connection will be further covered later on in this introduction.</p>
@@ -300,11 +298,10 @@
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-1">
 <span class="eqno">(119)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-1" title="Permalink to this equation">¶</a></span>\[\varepsilon = \frac{[m^3]}{[s^3]} = {\rm \frac{W}{kg}}\]</div>
 <p>These dimensions can be understood as a velocity squared per time, otherwise known as a rate of kinetic energy loss (recall that kinetic energy is <span class="math notranslate nohighlight">\({\rm Ke} = \frac{\bar v^2}{2g}\)</span>, or <span class="math notranslate nohighlight">\({\rm Ke} \propto \bar v^2\)</span>), or as power per unit mass, which would be <span class="math notranslate nohighlight">\({\rm  \frac{W}{kg}}\)</span>.</p>
-<p>Velocity gradients are central to flocculation because they cause the deformation of the fluid, and this results in particle collisions. Consider a real-world example via the image below: if everyone on a sidewalk is walking in the same direction at exactly the same velocity, then there will never be any collisions between people (top). If, however, people at one side of the sidewalk stand still and people walk progressively faster as a function of how far they are away from the zero velocity side of the sidewalk, then there will be many collisions between the pedestrians (see <a class="reference internal" href="#figure-pedestrians-on-sidewalk"><span class="std std-numref">Fig. 37</span></a>). Indeed, the rate of collisions is proportional to the velocity gradient.</p>
+<p>Velocity gradients are central to flocculation because they cause the deformation of the fluid, and this results in particle collisions. Consider a real-world example via the image below: if everyone on a sidewalk is walking in the same direction at exactly the same velocity, then there will never be any collisions between people (top). If, however, people at one side of the sidewalk stand still and people walk progressively faster as a function of how far they are away from the zero velocity side of the sidewalk, then there will be many collisions between the pedestrians (see <a class="reference internal" href="#figure-pedestrians-on-sidewalk"><span class="std std-numref">Fig. 42</span></a>). Indeed, the rate of collisions is proportional to the velocity gradient.</p>
 <div class="figure align-center" id="id3">
 <span id="figure-pedestrians-on-sidewalk"></span><a class="reference internal image-reference" href="../_images/Pedestrians_on_sidewalk.jpg"><img alt="Pedestrians on sidewalk" src="../_images/Pedestrians_on_sidewalk.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">Pedestrians walking on a sidewalk serve as a model for velocity gradients.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">Pedestrians walking on a sidewalk serve as a model for velocity gradients.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="common-flow-geometries-that-dissipate-energy">

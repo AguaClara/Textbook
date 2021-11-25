@@ -56,7 +56,7 @@ Filtration
 
 Filtration performance can be severely harmed by gas bubbles. The bubbles form in the pores of the filter and are unable to leave the pore due to surface tension. Filter media can fill rapidly with gas bubbles and this results in increased head loss or decreased flow through the filter. Bubble formation can significantly reduce the filter run time. The amount of bubble formation is strongly dependent on the pressure in the filter. Filters that operate with a deep column of water on top of the filter bed can be unaffected by dissolved gasses if the high pressure within the filter raises the equilibrium dissolved gas concentration above the actual dissolved gas concentration. Enclosed Stacked Rapid Sand Filters are more vulnerable to bubble formation that Open Stacked Rapid Sand Filters because of the difference in pressure in the sand bed. This pressure analysis also reveals that gas bubble formation will tend to occur at the lowest pressure zone in the filter bed. This low pressure zone can occur in a down flow filter right below the partially clogged section of the bed because of the decrease in pressure due to head loss.
 
-At the El PODA Nicaragua AguaClara plant there was so much dissolved air in the influent water that the filters could only operate one hour before requiring backwash.
+At the El PODA Nicaragua AguaClara plant there was so much dissolved air in the influent water that the filters could only operate for one hour before requiring backwash.
 
 .. todo:: Determine if sand provides nucleation sites for gas bubble formation or if it simply serves as a trap preventing exit of gas bubbles and the gas bubbles serve as collectors for dissolved gas molecules.
 
@@ -67,7 +67,7 @@ At the El PODA Nicaragua AguaClara plant there was so much dissolved air in the 
 Dissolved Gas Sources
 =====================
 
- - high pressure regions in transmission lines where the pipeline flow capacity exceeds the need AND where the flow control is restricted by upstream supply rather than by downstream head loss control (meaning by partially closing a valve!).
+ - High pressure regions in transmission lines where the pipeline flow capacity exceeds the need AND where the flow control is restricted by upstream supply rather than by downstream head loss control (meaning by partially closing a valve!).
  - Temperature increase that reduces the equilibrium concentration. This gas source is observed in the AguaClara lab facilities where hot and cold incoming tap water are mixed to produce "room temperature" water. The increase in water temperature results in bubble formation.
 
 
@@ -76,16 +76,17 @@ Dissolved Gas Sources
 Dissolved Gas Concentration Reduction
 =====================================
 
-Methods to provide nucleation sites
+Methods to Provide Nucleation Sites
 -----------------------------------
- - aeration
-   - air can be pumped through diffusers
-   - air can be sucked into the diffusers if the reactor operated at less than atmospheric pressure
- - fluidized bed containing particles that have nucleation sites
+ - Aeration
+ 
+   - Air can be pumped through diffusers.
+   - Air can be sucked into the diffusers if the reactor operated at less than atmospheric pressure.
+ - Fluidized bed containing particles that have nucleation sites.
 
 The fluidized nucleation site particles must be dense enough and large enough so that attached gas bubbles can't carry them out of the degassing reactor.
 
-Methods to reduce degassing reactor pressure
+Methods to Reduce Degassing Reactor Pressure
 --------------------------------------------
 
 The top of the degassing reactor can be located several meters above the entrance tank of the water treatment plant. The higher the tank (up to a max of 10 m) the more pronounced the pressure reduction will be and the more effective the reactor will be at degassing. The degassing reactor will produce a water and bubble effluent that must be

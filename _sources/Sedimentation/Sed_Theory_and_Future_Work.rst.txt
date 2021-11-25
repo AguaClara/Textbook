@@ -1,22 +1,22 @@
 
 .. _title_Sedimentation_Theory_and_Future_Work:
 
-***************************************
-Sedimentation Theory and Future Work
-***************************************
+**************
+Future Work
+**************
 Unsolved sedimentation tank failure modes:
 
 #. :ref:`Floc volcanoes <heading_Floc_Volcanoes>`
-#. Dissolved air flotation that results from air coming out of solution. Two sources of air include 1) compressed air traveling from the transmission line and 2) increased temperature which releases dissolved air.
+#. Dissolved air flotation that results from air coming out of solution. Two sources of air include compressed air traveling from the transmission line and dissolved air released due to increased temperature.
 #. Slime growth from iron-oxidizing bacteria.
-#. NOM impact on floc density
+#. NOM impact on floc density.
 
 .. _heading_Floc_Floc_Blanket:
 
-Optimizing the transition from flocculator to floc blanket
-==========================================================
+Flocculator to Floc Blanket Transition
+=======================================
 
-We now how a published flocculator model and we have strong evidence that primary particles are removed first order with respect to depth (or time) in the floc blanket. Given these two models it is possible for the first time to optimize the design of a flocculator based on minimizing the volume of the flocculator and floc blanket reactors.
+We now have a published flocculator model and we have strong evidence that primary particles are removed first order with respect to depth (or time) in the floc blanket. Given these two models it is possible for the first time to optimize the design of a flocculator based on minimizing the volume of the flocculator and floc blanket reactors.
 
 From the floc model we have
 
@@ -124,37 +124,7 @@ The flocculator head loss is given by
 
 
 
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-  #I played with the velocity gradient to get a reasonable head loss of 50 cm.
-  G_CS = 123 * u.Hz
-  density_clay = 2650 * u.kg/u.m**3
-  #From William's research the k for flocculator is 0.03. We need to confirm that this value is correct.
-  k = 0.03
-  # It isn't clear what value should be used for alpha
-  alpha = 0.5
-  # The following 3 values are estimates from Casey's floc blanket video.
-  C_infb = 40 * u.NTU
-  C_outfb = 1 * u.NTU
-  t_fb = 800 * u.s
-  k_fb = -1/t_fb*(np.log(C_outfb/C_infb))
-  C_out_f = (np.pi* density_clay/6 * (k_fb/(np.pi*alpha*k*G_CS))**(3/2)).to(u.NTU)
-  print('The concentration of primary particles in the flocculated water is',C_out_f)
-
-  Gt = (3/2 * 1/(k*np.pi * alpha) * (np.pi/6 * density_clay/C_out_f)**(2/3)).to(u.dimensionless)
-  print('The flocculator Gt value is ',Gt)
-  t_floc = 3/2 * 1/k_fb
-  print('The flocculator residence time is',t_floc)
-
-  Temp = 20 * u.degC
-
-  Floc_HL = (G_CS**2 * t_floc * pc.viscosity_kinematic(Temp)/u.standard_gravity).to(u.cm)
-  print('The head loss through the flocculator is',Floc_HL)
+`See here for calculations of headloss throuh the floc blanket <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=fMlmtxm_YWJY&line=2&uniqifier=1>`_
 
 The target flocculator Gt of 39,000 is crazy close to the current design. This value will undoubtedly change somewhat as we get better measurements for the floc blanket rate constant.
 
@@ -164,14 +134,14 @@ This analysis suggests that the primary particle concentration after flocculatio
 
 .. _heading_Floc_recycle:
 
-Floc recycle
+Floc Recycle
 ==================
 
 We hypothesize that the flocs in floc blankets serve as collectors that primary particles attach to. We suspect that collisions between primary particles and large flocs are possible in the sedimentation tank because the rotational velocity of the flocs is small relative to the sedimentation velocity of the flocs. If the rotational velocity of the flocs is small, then a stagnation point will exist on the floc and a finite flow of fluid will come within a primary particle radius of the floc. Thus we expect primary particle removal in floc blankets to be proportional to the number of collectors that a primary particle passes while in the floc blanket.
 
 The number of collectors that a primary particle passes is proportional to the solids concentration (a surrogate for the number concentration of flocs), the primary particle residence time in the floc blanket, and the sedimentation velocity of the flocs. The sedimentation velocity of the flocs is important because that is what causes a relative velocity between the primary particles and the flocs.
 
-As we have explored increasing the upflow velocity in sedimentation tanks the performance has dropped markedly. This is undoubtedly due in part to the combined effective of a very dilute floc blanket at high upflow velocities AND a low residence time for the primary particles.
+As we have explored increasing the upflow velocity in sedimentation tanks the performance has dropped markedly. This is undoubtedly due in part to the combined effect of a very dilute floc blanket at high upflow velocities AND a low residence time for the primary particles.
 
 Would it be possible to increase the concentration of the floc blanket and thus increase the collision rate? At 3 mm/s upflow velocity there are very few flocs that can stay in the floc blanket. We need a mechanism to transport flocs to the bottom of the floc blanket and return them again after they are carried to the top of the floc blanket.
 
@@ -211,48 +181,13 @@ Now we can substitute to get the collision potential as a function of the flow r
 
 .. math:: CP_{fb} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{\bar v_{hindered}}{\bar v_z}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{fb}\bar v_{hindered}} {\bar v_z}
 
-We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc blanket. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc blanket. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland measurements of the solids concentration in the floc hopper sludge.
+We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc blanket. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc blanket. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland's measurements of the solids concentration in the floc hopper sludge.
 
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-  D_fb=2.5*u.cm
-  A_fb = pc.area_circle(D_fb)
-  H_fb = 1 * u.m
-  v_hindered = 1 * u.mm/u.s
-  C_fb_conventional = 3 * u.g/u.L
-  C_recycle = 20 * u.g/u.L
-  C_plant = 100 * u.NTU
-  v_up = 3 * u.mm/u.s
-
-
-  def CP(H_fb,v_up,v_hindered,Pi_recycle,C_plant,C_recycle):
-   return (H_fb*v_hindered/v_up*(C_plant+C_recycle*Pi_recycle)/((1+Pi_recycle)*(1+Pi_recycle-v_hindered/v_up))).to_base_units()
-  Pi_recycle_max = 2
-  Pi_recycle = np.arange(0,Pi_recycle_max,0.1)
-  fig, ax = plt.subplots()
-  x=np.array([0,Pi_recycle_max])
-  yscale = (C_fb_conventional*H_fb*v_hindered/(1*u.mm/u.s)).to_base_units()
-  yscale
-  y=np.array([1,1])*yscale
-  ax.plot(x,y)
-  ax.plot(Pi_recycle,CP(H_fb,v_up,v_hindered,Pi_recycle,C_plant,C_recycle))
-  imagepath = 'Sedimentation/Images/'
-  ax.set(xlabel='recycle ratio', ylabel='Collision Potential (kg/m^2)')
-  ax.legend(["no recycle at 1 mm/s","with recycle at 3 mm/s"])
-  fig.savefig(imagepath+'fb_recycle_ratio')
-  plt.show()
-
-Here are the results.
+`The following plot can be generated here <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=Z53_rxgCYne3&line=4&uniqifier=1>`_
 
  .. _Collision potential with sludge recycle:
 
-.. figure::    Images/fb_recycle_ratio.png
+.. figure::    ../Images/fb_recycle_ratio.png
     :width: 700px
     :align: center
     :alt: Collision potential with sludge recycle
@@ -287,37 +222,12 @@ The recycle tube is assumed to be sloped at 60 degrees from the horizontal to en
 
 We will assume that the dynamic viscosity of the sludge is the same as the dynamic viscosity of water. We will calculate the kinematic viscosity of the sludge by dividing the dynamic viscosity of water by the density of the recycle.
 
-Now we can solve for the required tube diameter
+`Now we can solve for the required tube diameter <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=Nft_WjztY5YE&line=5&uniqifier=1>`_
 
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-  Temperature= 20*u.degC
-  D_fb=2.5*u.cm
-  A_fb = pc.area_circle(D_fb)
-  H_fb = 1.5 * u.m
-  Angle_tube = 60*u.deg
-  L_tube = H_fb/np.sin(Angle_tube)
-  density_clay=2650*u.kg/u.m**3
-
-  H_l = H_fb*(C_recycle-C_fb)/(C_recycle+((pc.density_water(Temperature)*density_clay)/(density_clay-pc.density_water(Temperature))))
-  H_l
-  Q_plant=v_up*A_fb
-  Pi_recycle=0.5
-  density_recycle = (1 - pc.density_water(Temperature)/density_clay)*C_recycle + pc.density_water(Temperature)
-  nu_recycle = pc.viscosity_dynamic(Temperature)/density_recycle
-  D_recycle = pc.diam_pipe(Q_plant*Pi_recycle,H_l,L_tube,nu_recycle,0.01*u.mm,2)
-  D_recycle.to(u.mm)
-  D_recycle.to(u.inch)
 
 The head loss in the recycle tube is approximately 1.6 cm in a 1.5 m deep floc blanket.
 
-The recycle line will be installed between the bottom of the tube settler and the inlet to the sedimentation tank. The recycle line will connect  directly to the side of the sedimentation tank to minimize minor losses. We will use a 0.25" ID, 3/8"OD clear flexible tube for the recycle line. We will use PVC glue to attach the flexible tube to the rigid clear PVC tubing.
+The recycle line will be installed between the bottom of the tube settler and the inlet to the sedimentation tank. The recycle line will connect  directly to the side of the sedimentation tank to minimize minor losses. We will use a 0.25" ID, 3/8" OD clear flexible tube for the recycle line. We will use PVC glue to attach the flexible tube to the rigid clear PVC tubing.
 
 It is possible that it will be necessary to prevent flow in the recycle line initially so that it doesn't flow upward. Once the tube begins filling with solids it should be possible for it to start flowing downwards.
 

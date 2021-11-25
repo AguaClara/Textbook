@@ -8,14 +8,14 @@ Filtration Design
 
 #. Calculate array of maximum filter flows given available trunk sizes and given constraint of maximum allowable head loss in the trunk line during backwash. Note that the outer inlet trunk minor loss coefficient is set (by adding a flow restriction at the inlet to the trunk line) to be 4 times the minor loss coefficient for the inner inlet trunks so that during filtration they have the same head loss when the outer trunks have 1/2 the flow of the inner trunks.
 #. Select the trunk size that gives a number of filters equal to or less than the minimum number of filters required for operation and maintenance.
-#. Calculate filter flow given minimum number of filters
+#. Calculate filter flow given minimum number of filters.
 #. Calculate the orifice head loss required to provide uniform flow to the sand bed during backwash. This is based on the required ratio of port to manifold velocity (see Equation :eq:`Manifold_max_v_no_hl_series`).
-#. Design the branches based on manifold flow distribution requirements
+#. Design the branches based on manifold flow distribution requirements.
 #. Set the siphon drain time (assuming no inflow!) to equal the time required to refill the filter box after backwash.
-#. Design the siphon pipe given the constraint on drain time
-#. Design the siphon air valve given volume of air in the siphon
-#. Calculate all elevations
-#. Design backwash flow control weirs
+#. Design the siphon pipe given the constraint on drain time.
+#. Design the siphon air valve given volume of air in the siphon.
+#. Calculate all elevations.
+#. Design backwash flow control weirs.
 
 
 
@@ -24,9 +24,9 @@ Potential Changes to the Filter Design
 
 * Have the siphon manifold exit straight through the side of the filter (perhaps in line with the other inlets and outlets) and then elbow up to the required elevation and elbow and Tee back down again. This would make the siphon install inside the filter be a single straight pipe instead of the large assembly that is currently used. This will have the additional advantage that the connection between this drain manifold and the pipe stub in the wall doesn't have to be leak tight! The connection could be a wrap of stainless steel and two hose clamps.
 * Switch to gravity exclusion zones that include orifices to get uniform flow distribution without risk of sand scour.
-* Simplest design to fabricate will have identical trunk lines for all inlets
-* Change the inlet and outlet boxes so that all of the inlet trunks have only one elbow
-* Outlet trunks each have 2 elbows
+* Simplest design to fabricate will have identical trunk lines for all inlets.
+* Change the inlet and outlet boxes so that all of the inlet trunks have only one elbow.
+* Outlet trunks each have 2 elbows.
 
 
 Maximum Trunk Flows
@@ -36,7 +36,7 @@ The trunks are constrained to both provide similar flow to each filter layer and
 
 .. _figure_Filter_Max_Q_given_ND:
 
-.. figure:: Images/Filter_Max_Q_given_ND.png
+.. figure:: ../Images/Filter_Max_Q_given_ND.png
     :width: 400px
     :align: center
     :alt: Trunk flows

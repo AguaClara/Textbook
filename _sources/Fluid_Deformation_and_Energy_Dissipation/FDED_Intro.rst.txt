@@ -1,13 +1,8 @@
 .. _title_Fluid_Deformation_and_Energy_Dissipation_introduction:
 
 ******************************************************
-Fluid Deformation and Energy Dissipation Derivations
-******************************************************
-
-.. _heading_EDR_G_and_mixing:
-
 Energy Dissipation Rate, Velocity Gradient, and Mixing
-======================================================
+******************************************************
 
 In addition to the general fluids review (:ref:`title_review_fluid_mechanics`), there are a few extra fluid dynamics concepts that are important to know in order to understand drinking water treatment and AguaClara’s approach to it. These concepts are primarily focused on the relationships between:
  - Turbulence
@@ -21,13 +16,13 @@ Knowledge of these concepts and how they interact is critical to understand rapi
 The two concepts that were not covered in the previous chapter, :ref:`title_review_fluid_mechanics`, are velocity gradient :math:`G` and energy dissipation rate :math:`\varepsilon`. While these will be very thoroughly described over the course of this introduction, a brief and simple explanation is included to help get the ball rolling.
 
 Understanding :math:`G` and :math:`\varepsilon`
------------------------------------------------
+================================================
 
 :math:`G`, or velocity gradient, is a measure of fluid deformation. It is defined by how quickly one point of water along one streamline moves in comparison to another point on another streamline (:math:`v_A` compared to :math:`v_B`, for example), taking into account the distance between the streamlines, :math:`\Delta h`. A visual example of a velocity gradient is shown in the image below:
 
 .. _figure_Velocity_gradient_image:
 
-.. figure:: Images/Velocity_gradient_image.jpg
+.. figure:: ../Images/Velocity_gradient_image.jpg
     :width: 700px
     :align: center
     :alt: Velocity gradient image
@@ -57,7 +52,7 @@ Velocity gradients are central to flocculation because they cause the deformatio
 
 .. _figure_Pedestrians_on_sidewalk:
 
-.. figure:: Images/Pedestrians_on_sidewalk.jpg
+.. figure:: ../Images/Pedestrians_on_sidewalk.jpg
     :width: 700px
     :align: center
     :alt: Pedestrians on sidewalk
