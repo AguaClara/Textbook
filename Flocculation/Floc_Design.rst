@@ -153,7 +153,7 @@ Before beginning this section, it is important to understand how water flows thr
 
    Flow path through a vertical flow hydraulic flocculator
 
-Since baffles are the source of head loss via minor losses, we need to find the minor loss coefficient of one baffle if we want to be able to quantify its head loss. To do this, we apply fluid mechanics intuition and check it against a computational fluid dynamics (CFD) simulation. Flow around a 90° bend has a vena contracta value of around :math:`\Pi_{vc} = 0.62`. Flow around a 180° bend therefore has a value of :math:`\color{red}{\Pi_{vc, \, baffle} = \Pi_{vc}^2 = 0.384}`. This number is roughly confirmed with CFD, as shown in the image below.
+Since baffles are the source of head loss via minor losses, we need to find the minor loss coefficient of one baffle if we want to be able to quantify its head loss. To do this, we apply fluid mechanics intuition and check it against a computational fluid dynamics (CFD) simulation. Flow around a 90° bend has a vena contracta value of around :math:`\Pi_{vc} = 0.62`. Flow around a 180° bend therefore has a value of :math:`\color{red}{\Pi_{vc}^{baffle} = \Pi_{vc}^2 = 0.384}`. This number is roughly confirmed with CFD, as shown in the image below.
 
 .. _figure_cfd_VC_baffle:
 
@@ -164,19 +164,36 @@ Since baffles are the source of head loss via minor losses, we need to find the 
 
    The 180° bend at the end of a baffle results in a dramatic flow contraction with all of the flow passing through less than 40% of the space between the baffles.
 
-We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}`. Through the `:ref:`third form of the minor loss equation <heading_minor_losses>`, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine a :math:`k` for flow around a single baffle:
+
+
+We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc}^{baffle} A_{expanded}`. Through the `:ref:`third form of the minor loss equation <heading_minor_losses>`, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine the minimum minor loss coefficient for flow around a single baffle:
 
 .. math::
+  :label: K_baffle_min
 
-  K_{baffle} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2
+  K_{baffle_{min}} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2
 
-  K_{baffle} = \left( \frac{\rlap{\Big/} A_{expanded}}{\Pi_{vc, \, baffle} \rlap{\Big/} A_{expanded}} -1 \right)^2
 
-  K_{baffle} = \left( \frac{1}{0.384} -1 \right)^2
+  K_{baffle_{min}} = \left( \frac{1}{\Pi_{vc}^{baffle}} -1 \right)^2
 
-  \color{red}{K_{baffle} = 2.56}
 
-This :math:`K_{baffle}` has been used to design many flocculators in AguaClara plants. However, its value has not yet been rigorously tested for AguaClara plants in the field. Therefore it might actually deviate from :math:`2.56`. Research and testing the :math:`K` of a baffle in an AguaClara plant is ongoing, but for now the designs made under the assumption that :math:`\color{red}{K_{baffle} = 2.56}` are functioning very well in AguaClara plants. Although research has been done by many academics on the minor loss coefficient, including `this paper by Haarhoff in 1998 <https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a :math:`K_{baffle}` value between :math:`2.5` and :math:`4`.
+  K_{baffle_{min}} = \left( \frac{1}{0.384} -1 \right)^2
+
+  \color{red}{K_{baffle_{min}} = 2.56}
+
+This :math:`K_{baffle_{min}}` has been used to design flocculators in AguaClara plants until 2021. The plant at Gracias revealed that the observed head loss was greater than predicted.  `This paper by Haarhoff in 1998 <https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a :math:`K_{baffle}` value between :math:`2.5` and :math:`4`.
+
+The most efficient flocculator designs set the distance between flow expansions to be less than required for the contracted flow to fully expand before entering the next contraction. This ensures that the flow is always expanded and generating turbulence. If the flow doesn't fully expand before entering the next flow contraction, then the velocity exiting the contraction is higher than assumed by :eq:`K_baffle_min`.
+
+.. math::
+  :label: K_baffle_expanding
+
+   K_{baffle_{exp}} = \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS}}\right) ^ 2
+
+where :math:`\Pi_{PlaneJet_{exp}}` is the ratio of the increased width of the jet to the distance along the centerline of the expanding jet and has a value of 0.116 for unconfined plane jets. The flow regime between baffles is not unconfined and thus this is an approximation until further advances in CFD or field measurements.
+
+
+
 
 Flocculator Efficiency
 ---------------------------
@@ -217,7 +234,7 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
 
 .. math::
 
-  \frac{x}{10} = D - D_{cp}
+  \Pi_{PlaneJet_{exp}}x = D - D_{cp}
 
 .. _figure_jet_expansion_flocculator:
 
@@ -232,11 +249,11 @@ Using the equation and image above, we can find the distance required for the fl
 
 .. math::
 
-  \frac{H_e}{10} = S - (0.384 S)
-  \frac{H_e}{10} = 0.616 S
-  H_e = 6.16S
-  \frac{H_e}{S} = 6.16
-  \Pi_{H_eS_{Max}} = \frac{H_e}{S} = 6.16 \approx 6
+  \Pi_{PlaneJet_{exp}} H_e = S - (0.384 S)
+  Pi_{PlaneJet_{exp}} H_e= 0.616 S
+  H_e = 5.3S
+  \frac{H_e}{S} = 5.3
+  \Pi_{H_eS_{Max}} = \frac{H_e}{S} = 5.3
 
 This is the highest allowable :math:`\Pi_{H_eS}` that we can design while ensuring that there is no dead space in the flocculator.
 
@@ -458,8 +475,24 @@ The width of a single flocculator channel must meet the following conditions:
 The first two conditions are wrapped up into the following equation, :ref:`which is derived here <title_Flocculation_Derivations>`
 
 .. math::
+  :label: floc_channel_W_min_const_K
 
-  W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
+  W_{Min_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
+
+Given that the baffle minor loss coefficient is now known to be a function of :math:`\Pi_{H_eS}` we substitute :eq:`K_baffle_expanding`.
+
+.. math::
+  :label: floc_channel_W_min_var_K_draft
+
+  W_{Min_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{ \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS}}\right) ^ 2}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
+
+Group the parameters so that the dimensions inside the exponents are a simple as possible.
+
+.. math::
+  :label: floc_channel_W_min_var_K
+
+  W_{Min_{H_eS}} = \frac{Q}{\left(\nu G_{CS}^2 H_e^4\right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{H_eS}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
+
 
 This equation represents the absolute smallest width of a flocculator channel if we consider the lowest value of :math:`\Pi_{H_eS}` and the highest possible value of :math:`H_e`:
 
@@ -504,7 +537,21 @@ Height Between Expansions :math:`H_e` and Number of Obstacles per Baffle Space :
 
 We have a range of possible :math:`H_e` values based on our window of :math:`3 < \frac{H_e}{S} < 6`. However, we have a limitation and a preference which shape how we design :math:`H_e`. Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want :math:`\frac{H_e}{S}` to be closer to :math:`6` than it is to :math:`3`; we are looking for :math:`H_{e_{Max}}`.
 
-We calculate :math:`H_{e_{Max}}` based on the physical flocculator dimensions. The equation for :math:`H_e` is obtained by rearranging one of the equations for minimum channel width found above, :math:`W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}`. Because we have already design the channel width, we substitute :math:`W_{channel}` for :math:`W_{Min, \, \Pi_{H_eS}}`. Since we are looking for :math:`H_{e_{Max}}`, we also substitute :math:`\Pi_{{HS}_{Max}}` for :math:`\Pi_{H_eS}`. The result is:
+We calculate :math:`H_{e_{Max}}` based on the physical flocculator dimensions. The equation for :math:`H_e` is obtained by rearranging equation :eq:`floc_channel_W_min_var_K`. Because we have already designed the channel width, we substitute :math:`W_{channel}` for :math:`W_{Min_{H_eS}}`. Since we are looking for :math:`H_{e_{Max}}`, we also substitute :math:`\Pi_{{H_eS}_{Max}}` for :math:`\Pi_{H_eS}`. The result is:
+
+.. math::
+  :label: floc_He_max_var_K
+
+  H_{e_{Max}}^\frac{4}{3}= \frac{Q}{W_{Min_{H_eS}} \left(\nu G_{CS}^2 \right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{{H_eS}_{Max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
+
+raise to 3/4
+
+.. math::
+  :label: floc_He_max_var_K
+
+  H_{e_{Max}}= \left[ \left(\frac{Q^3}{W_{Min_{H_eS}}^3 \nu G_{CS}^2}\right)\frac{  \Pi_{{H_eS}_{Max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right]^\frac{1}{4} \left(1 - \Pi_{vc}^{baffle}\right)
+
+For :math:`\Pi_{H_eS}` large enough such that the flow has fully expanded the following equation applies.
 
 .. math::
 
@@ -539,7 +586,8 @@ Finally, we can find the space between baffles, :math:`S`. The equation for :mat
 
    S = \left( \frac{K}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}
 
-Fortunately, we either know or have already designed all the parameters in this equation.
+The minor loss coefficient is not known for this equation because we aren't making any assumptions about the value of :math:`\Pi_{HS}`. Thus we need to use equations :eq:`K_baffle_expanding` and :eq:`K_baffle_min` to iteratively find a solution.
+
 
 Checking the Flocculator Design
 =============================================

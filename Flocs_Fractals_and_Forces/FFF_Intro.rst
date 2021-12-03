@@ -428,7 +428,7 @@ Equation :eq:`d_floc_G` must be based on the maximum velocity gradient in a reac
 
     The maximum velocity gradient that flocs can withstand decreases rapidly as flocs increase in diameter.
 
-The maximum floc diameter is influenced by temperature because as the viscosity increases the shear force exerted on the floc decreases. Equation :eq:`d_floc_G` shows this dependency and illustrates one of the reasons (see :numref:`figure_DmaxofGandTemp`) why temperature is a critical parameter in the design of drinking water treatment plants.
+The maximum floc diameter is influenced by temperature because as the viscosity increases the shear force exerted on the floc increases. Equation :eq:`d_floc_G` shows this dependency and illustrates one of the reasons (see :numref:`figure_DmaxofGandTemp`) why temperature is a critical parameter in the design of drinking water treatment plants.
 
 .. _figure_DmaxofGandTemp:
 
