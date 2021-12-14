@@ -236,35 +236,43 @@ The maximum inlet manifold velocity can now be determined from Equation :eq:`Man
 Sedimentation Tank Outlet Manifold
 ----------------------------------
 
-The sedimentation tank outlet manifold collects the clarified water from the top of the plate setters. The outlet manifold is required to help ensure uniform flow up through the plate settlers.  The outlet manifold has orifices and it is these orifices that provide the majority of the head loss through the sedimentation tank. The target head loss for those orifices is about 5 cm. This head loss helps ensure that flow divides evenly between sedimentation tanks and divides evenly between the plate settlers.
+The sedimentation tank outlet manifold collects the clarified water from the top of the plate setters. The outlet manifold is required to help ensure uniform flow up through the plate settlers.  The outlet manifold has orifices and it is these orifices that provide the majority of the head loss through the sedimentation tank. The target head loss for the outlet manifold is about 5 cm. This head loss helps ensure that flow divides evenly between sedimentation tanks and divides evenly between the plate settlers.
 
-.. code:: python
+The outlet head loss is dominated by the orifice loss and by the exit loss where the manifold exits the sedimentation tank and enters a channel. The total head loss through the outlet manifold, :math:`h_{e_{T}}`, is thus the sum of those two losses. If pipes were made of all possible diameters, then the ratio of orifice to manifold velocity would be exactly given by Equation :eq:`Manifold_max_v_no_hl_series` and that relationship can be used to eliminate the port velocity.
 
-  #Design the sedimentation tank inlet manifold
-  HL_orifice = 5 * u.cm
-  v_orifice_contracted = np.sqrt(2 * u.gravity * HL_orifice)
-  v_Effluent_Manifold = (v_orifice_contracted / Ratio_Pipe_Manifold_V_Port_to_V_Man(Ratio_Flow)).to(u.m/u.s)
-  print('The maximum effluent manifold velocity is',v_Effluent_Manifold)
-  Q_sed =(L_Sed * W_Sed * v_FB).to(u.L/u.s)
-  ID_min_Effluent_Manifold = ac.diam_circle(Q_sed/v_Effluent_Manifold)
-  print('The minimum effluent manifold diameter is',ID_min_Effluent_Manifold.to(u.inch))
-  SDR = 41
-  ID_Effluent_Manifold = ac.ceil_nearest(ID_min_Effluent_Manifold,ac.ID_SDR_all_available(SDR))
-  ND_Effluent_Manifold = ac.ND_SDR_available(ID_Effluent_Manifold,SDR)
-  print('The manifold nominal diameter is',ND_Effluent_Manifold.to(u.inch))
+.. math::
+  :label: Outlet_manifold_hl
+
+   h_{e_{T}} = h_{e_{P}} + h_{e_{M}} = \frac{\bar v_{P}^2}{2g} + \frac{\bar v_{M}^2}{2g} =\frac{\bar v_{M}^2}{2g} \left(\frac{1}{\sqrt{{\Pi_{\Psi}}}} + 1 \right)
+
+The maximum manifold velocity can be obtained by solving Equation :eq:`Outlet_manifold_hl` for the manifold velocity.
+
+.. math::
+  :label: Outlet_manifold_hl
+
+  \bar v_{M_{max}} = \sqrt{\frac{2 g h_{e_{T}}\sqrt{{\Pi_{\Psi}}}}{\sqrt{{\Pi_{\Psi}}} + 1}}
+
+The solution steps are as follows:
+
+1) Calculate the minimum manifold diameter from continuity and the maximum allowable manifold velocity, :math:`\bar v_{M_{max}}`.
+1) Calculate the manifold inner diameter from the next available pipe size.
+1) Calculate the actual manifold velocity.
+1) Calculate the manifold exit head loss.
+1) Calculate the required orifice head loss by subtracting the manifold exit head loss from the desired total head loss.
+1) Calculate the orifice diameter from the orifice head loss and the orifice flow rate given the number of orifices.
 
 The head loss through the sedimentation tank is due to:
 
 * entrance and elbow in influent manifold
-* major losses in influent manifold
+* major losses in influent manifold (negligible)
 * diffuser exit loss
 * floc blanket (negligible)
 * plate settlers (negligible)
 * effluent manifold orifices
-* effluent manifold major loss
+* effluent manifold major loss (negligible)
 * effluent manifold exit
 
-It might be convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm so that influent and effluent weirs always have the same elevation difference. The effluent manifold orifices could be designed for whatever head loss is required to meet that target.
+It is convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm so that influent and effluent weirs always have the same elevation difference. The effluent manifold orifices are be designed for whatever head loss is required to meet that target.
 
 .. _heading_sedimentor_inlet_channel:
 
@@ -284,7 +292,7 @@ We can use :eq:`Energy_and_Pi_Q_no_manifold_hl` to calculate maximum velocity in
 
 where :math:`\Pi_{Q}` represents the uniformity of flow distribution taken as the minimum sedimentation tank flow divided by the maximum sedimentation tank flow.
 
-The Ten State Standards states, "The velocity of flocculated water through conduits to settling basins shall not be less than 0.15 m/s nor greater than 0.45 m/s." The lower velocity matches the constraint of ensuring that the velocity is high enough to scour flocs along the bottom of the channel and thus prevent sedimentation. The maximum velocity was presumably set to achieve reasonable flow distribution, but that values is dependent on the head loss through the sedimentation tanks.
+The Ten State Standards states, "The velocity of flocculated water through conduits to settling basins shall not be less than 0.15 m/s nor greater than 0.45 m/s." The lower velocity matches the constraint of ensuring that the velocity is high enough to scour flocs along the bottom of the channel and thus prevent sedimentation. The maximum velocity was presumably set to achieve reasonable flow distribution, but that value is dependent on the head loss through the sedimentation tanks.
 
 Below we calculate the maximum sedimentor inlet channel velocity as a function of the flow distribution uniformity.
 
