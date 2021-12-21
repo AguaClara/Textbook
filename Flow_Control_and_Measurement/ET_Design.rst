@@ -17,13 +17,22 @@ The entrance tank has multiple functions in a drinking water treatment plant.
 #. Measure the flow rate so that operators can make adjustments to the incoming flow rate and respond to changes in water demand
 #. Inject the coagulant and any other amendments required for flocculation
 
-As shown in Figure _, the entrance tank consists of several components: an influent pipe, a trash rack, an overflow pipe to prevent flows larger than the design flow rate from overwhelming the plant, the Liner Flow Orifice Meter (LFOM), and depending on the water quality characteristics, a grit chamber. The Chemical Dose Controller (CDC) lever arm and float sit between the trash rack and the LFOM. 
+The entrance tank consists of several components: an influent pipe, a trash rack, an overflow pipe to prevent flows larger than the design flow rate from overwhelming the plant, the Liner Flow Orifice Meter (LFOM), and depending on the water quality characteristics, a grit chamber. The Chemical Dose Controller (CDC) lever arm and float sit between the trash rack and the LFOM. 
 
-In some AguaClara plants, the entrance tank, flocculators, and sedimentation tanks are separated by walkways. However, a more space efficient approach would be to arrange the entrance tank in a channel next to the flocculator as shown in figure _ (emw - figure out how to link). This avoids the need for buried pipes to carry water underneath the walkway from one component to the other and simplifies construction. 
-
- .. _figure_Plant_Layout_Option: (emw_add image to folder https://github.com/Emily-Wood/AguaClara/blob/master/Plant%20Layout%20Option%202.PNG?raw=true)
+ .. _figure_ET_Diagram_Labeled:
 
 .. figure:: ../Images/ET_Diagram_Labeled.png
+    :width: 900px
+    :align: center
+    :alt: entrance tank diagram
+
+    The entrance tank contains the influent pipe, trash rack, overflow pipe, grit chamber with hoppers, pipe stubs for drainage, a waste channel, the LFOM, the lever arm of the chemical dosing system (not pictured), and a pipe leading to the flocculator. 
+
+In some AguaClara plants, the entrance tank, flocculators, and sedimentation tanks are separated by walkways. However, a more space efficient approach would be to arrange the entrance tank in a channel next to the flocculator as shown in :numref:`Plant_Layout_Option`. This avoids the need for buried pipes to carry water underneath the walkway from one component to the other and simplifies construction. 
+
+ .. _figure_Plant_Layout_Option:
+
+.. figure:: ../Images/Plant_Layout_Option.png
     :width: 900px
     :align: center
     :alt: Layout of entrance tank alongside plant treatment train
