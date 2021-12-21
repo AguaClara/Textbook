@@ -26,14 +26,16 @@ The entrance tank consists of several components: an influent pipe, a trash rack
     :align: center
     :alt: entrance tank diagram
 
-    The entrance tank contains the influent pipe, trash rack, overflow pipe, grit chamber with hoppers, pipe stubs for drainage, a waste channel, the LFOM, the lever arm of the chemical dosing system (not pictured), and a pipe leading to the flocculator. 
+    The entrance tank contains the influent pipe, trash rack, overflow pipe, grit chamber with hoppers, pipe stubs for drainage, a waste channel, the LFOM, the lever arm of the chemical dosing system (not pictured), and a pipe leading to the flocculator. (EMW - How to do figure captions?)
 
-In some AguaClara plants, the entrance tank, flocculators, and sedimentation tanks are separated by walkways. However, a more space efficient approach would be to arrange the entrance tank in a channel next to the flocculator as shown in :numref:`Plant_Layout_Option`. This avoids the need for buried pipes to carry water underneath the walkway from one component to the other and simplifies construction. 
+In some AguaClara plants, the entrance tank, flocculators, and sedimentation tanks are separated by walkways. However, a more space efficient approach would be to arrange the entrance tank in a channel next to the flocculator as shown in :numref:`figure_Plant_Layout_Option`. (EMW - need help linking figure number), This avoids the need for buried pipes to carry water underneath the walkway from one component to the other and simplifies construction. 
+
+(EMW - why isn't my picture centered?)
 
  .. _figure_Plant_Layout_Option:
 
 .. figure:: ../Images/Plant_Layout_Option.png
-    :width: 900px
+    :width: 600px
     :align: center
     :alt: Layout of entrance tank alongside plant treatment train
 
