@@ -23,8 +23,8 @@ In some AguaClara plants, the entrance tank, flocculators, and sedimentation tan
 
  .. _figure_Plant_Layout_Option: (emw_add image to folder https://github.com/Emily-Wood/AguaClara/blob/master/Plant%20Layout%20Option%202.PNG?raw=true)
 
-.. figure:: ../Images/Wikipedia_laminar_turbulent.png
-    :width: 400px
+.. figure:: ../Images/ET_Diagram_Labeled.png
+    :width: 900px
     :align: center
     :alt: Layout of entrance tank alongside plant treatment train
 
