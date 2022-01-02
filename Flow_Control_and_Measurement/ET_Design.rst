@@ -78,18 +78,16 @@ The trash rack characteristic velocity is 50 mm/s for 50% porosity, 90% clogged,
 Grit Chamber Design
 ===============================
 
-The length of the entrance tank may be extended to function as additional grit removal capacity for watersheds where sediment has the potential to produce harmful amounts of sand and gravel during storm events. As of 2021, plant operators at only two AguaClara plants, Gracias and Agalteca, have reported maintenance issues due to grit carryover. The grit chamber is located on the effluent side of the trash racks and is lined with a series of hoppers to faciliate cleaning. To remove settled grit from the entrance tank, the plant operator can remove the pipe stub blocking the drain at the bottom of each hopper, allowing water to pull the grit into the drain channel below. 
+The length of the entrance tank may be extended to function as additional grit removal capacity for watersheds where sediment has the potential to produce harmful amounts of sand and gravel during storm events. As of 2021, plant operators at only two AguaClara plants, Gracias and Agalteca, have reported maintenance issues due to grit settling in the flocculator or inlet channel to the sedimentation tanks. If a grit chamber is deemed necessary for a particular watershed, it would be located on the effluent side of the trash racks and is lined with a series of hoppers to faciliate cleaning. To remove settled grit from the entrance tank, the plant operator can remove the pipe stub blocking the drain at the bottom of each hopper, allowing water to pull the grit into the drain channel below. 
 
-The entrance tank can be treated as a grit chamber to capture large particles, preventing them from settling in the flocculator or inlet channel to the sedimentation tank. In this calculation we will use 0.1 mm as the critical particle size, as recommended by Kawamure (pg. 416) [emw - need to site this]. The overall strategy to determine appropriate dimensions of the entrance tank is follows: 
+Stokes' Law can be used to calculate the area of the grit chamber required to remove particles of a desired size. Kawamura recommends a critical pparticle size of 0.1 mm (1991, p. 416).  [emw - check publication date] The overall strategy to determine appropriate dimensions of the entrance tank is follows: 
 
-With the addition of a grit chamber to the design, it is possible that the entrance tank will extend to the full length of a flocculator channel and then get wider to meet its minimum plan-view area requirement.
-
-1. Use the appropriate Stokes Law for laminar or turbulent flow to determine the corresponding critical velocity of the particle. (See this chapter for a review on Stokes law) [emq - link to fluids chapter]
+1. Use the appropriate Stokes Law for laminar or turbulent flow to determine the corresponding critical velocity of the particle.
 2. Calculate the required plan-view area of the entrance tank
 3. Determine the ideal length and width of the entrance tank
 4. Calculate the required entrance tank depth
 
-Recall that Stokes Law tells us the terminal veloctity of a particle settling under laminar flow, and can be calculated as follows: 
+Recall that Stokes Law tells us the terminal velocity of a particle settling under laminar flow, and can be calculated as follows: 
 
 .. math::
   :label: grit_criticalVelocity
@@ -98,28 +96,44 @@ Recall that Stokes Law tells us the terminal veloctity of a particle settling un
   
   where d\ :sub:'p' is the minimum particle diameter to be removed (Kawamura recommends 0.1 mm). 
   
-  As a check, calculate the Reynolds number to confirm that flow is in the laminar regime for Stokes' Law to be valid
+  As a check, calculate the Reynolds number to confirm that flow is in the laminar regime for Stokes' Law to be valid. 
   
   .. math::
   :label: grit_Re
   
   Re = v_c*d_p/nu
   
-  The required plan view area to capture the minimum particle size is:
+  The required plan view area to capture the minimum particle can be calculated by dividing the plant flow rate by the critical particle velocity:
   
    .. math::
   :label: planViewA
   
   A = Q/v_c
   
-  The next step is to determine the optimal dimensions of the entrance tank. For constructibility purposes, the entrance tank must not be smaller than 50 cm. Here we will assume that the entrance tank is the same length as the flocculator for ease of construction; however designing to minimize the plan view area of the entrance tank is another valid assumption. 
+  The next step is to determine the optimal dimensions of the entrance tank. For constructibility purposes, the entrance tank must not be smaller than 50 cm, as a mason needs to work inside to apply a waterproof coating. Additionally, the entrance tank should not be longer than the flocculator. The ideal width of the entrance tank would be the area of the grit chamber divided by the length of the flocculator, or the minimum width of 50 cm, whichever is larger. 
   
    .. math::
   :label: width_ET
   
-  w_ET = max(area/length_flocculator, w_min)
+  W_ET = max(A/length_flocculator, W_min)
   
-  We previosuly calculated the active area of the trash rack, and so the required depth of the entrance tank is the active area of the trash rack divided by the entrance tank width, with additional freeboard added. 
+  The corresponding entrance tank length would be:
+  
+     .. math::
+  :label: length_ET
+  
+  L_ET = A/W_ET
+  
+ 
+ [EMW - start editing here]
+ The entrance tank must be deep enough Depending on the design flow rate of the plant, this maximum water level is governed by The depth of the entrance tank is governed by either the We previosuly calculated the active area of the trash rack, and so the required depth of the entrance tank is the active area of the trash rack divided by the entrance tank width, with additional freeboard added (10 cm 
+  
+  Using the active area of the trash rack previously calculated. 
+  
+    .. math::
+  :label: depth_ET
+  
+  d_ET = A_{trashrack}/ 
   
  Grit Chamber Hopper Design
 ===============================
