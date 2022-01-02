@@ -80,7 +80,7 @@ Grit Chamber Design
 
 The length of the entrance tank may be extended to function as additional grit removal capacity for watersheds where sediment has the potential to produce harmful amounts of sand and gravel during storm events. As of 2021, plant operators at only two AguaClara plants, Gracias and Agalteca, have reported maintenance issues due to grit settling in the flocculator or inlet channel to the sedimentation tanks. If a grit chamber is deemed necessary for a particular watershed, it would be located on the effluent side of the trash racks and is lined with a series of hoppers to faciliate cleaning. To remove settled grit from the entrance tank, the plant operator can remove the pipe stub blocking the drain at the bottom of each hopper, allowing water to pull the grit into the drain channel below. 
 
-Stokes' Law can be used to calculate the area of the grit chamber required to remove particles of a desired size. Kawamura recommends a critical pparticle size of 0.1 mm (1991, p. 416).  [emw - check publication date] The overall strategy to determine appropriate dimensions of the entrance tank is follows: 
+Stokes' Law can be used to calculate the area of the grit chamber required to remove particles of a desired size. Kawamura recommends a critical pparticle size of 0.1 mm (2000, p. 416).  [emw - check publication date] The overall strategy to determine appropriate dimensions of the entrance tank is follows: 
 
 1. Use the appropriate Stokes Law for laminar or turbulent flow to determine the corresponding critical velocity of the particle.
 2. Calculate the required plan-view area of the entrance tank
@@ -92,7 +92,7 @@ Recall that Stokes Law tells us the terminal velocity of a particle settling und
 .. math::
   :label: grit_criticalVelocity
   
-  v_c = ((rho_p - rho_H20)*ac.GRAVITY*d_p**2)/(18*nu*rho_H20)
+  v_c = \frac{(\rho_p - \rho_{H_20})\cdot g\cdot(d_p)^2}{18 \cdot \nu \cdot\rho_{H_20}}
   
   where d\ :sub:'p' is the minimum particle diameter to be removed (Kawamura recommends 0.1 mm). 
   
@@ -101,107 +101,45 @@ Recall that Stokes Law tells us the terminal velocity of a particle settling und
   .. math::
   :label: grit_Re
   
-  Re = v_c*d_p/nu
+  Re = \frac{v_c \cdot d_p}{\nu}
   
   The required plan view area to capture the minimum particle can be calculated by dividing the plant flow rate by the critical particle velocity:
   
    .. math::
   :label: planViewA
   
-  A = Q/v_c
+  A = \frac{Q}{v_c}
   
   The next step is to determine the optimal dimensions of the entrance tank. For constructibility purposes, the entrance tank must not be smaller than 50 cm, as a mason needs to work inside to apply a waterproof coating. Additionally, the entrance tank should not be longer than the flocculator. The ideal width of the entrance tank would be the area of the grit chamber divided by the length of the flocculator, or the minimum width of 50 cm, whichever is larger. 
   
    .. math::
   :label: width_ET
   
-  W_ET = max(A/length_flocculator, W_min)
+  W_{ET} = max(\frac{A}{L_{flocculator}}, W_{min})
   
   The corresponding entrance tank length would be:
   
      .. math::
   :label: length_ET
   
-  L_ET = A/W_ET
+  L_{ET} = \frac{A}{W_{ET}}
+   
+The maximum height of water in the entrance tank is governed by either the trash rack or the headloss of the Linear Flow Orifice Meter (LFOM), and depends on the design flow rate of the plant. The minimum depth of the trash rack is its active area divided by the width of the entrance tank and the LFOM headloss for a typicaly AguaClara plant is 20 cm. 
   
- 
- [EMW - start editing here]
- The entrance tank must be deep enough Depending on the design flow rate of the plant, this maximum water level is governed by The depth of the entrance tank is governed by either the We previosuly calculated the active area of the trash rack, and so the required depth of the entrance tank is the active area of the trash rack divided by the entrance tank width, with additional freeboard added (10 cm 
+    .. math::
+  :label: depth_trashrack
   
-  Using the active area of the trash rack previously calculated. 
+  d_{trashrack} = \frac{A_{trashrack}}{W_{ET}}
+  
+  The depth of the entrance tank is therefore the maximum of the trashrack depth and the LFOM headloss, plus some freeboard (typically 10 cm for AguaClara). 
   
     .. math::
   :label: depth_ET
   
-  d_ET = A_{trashrack}/ 
+  d_{ET} = max(d_{trashrack}, HL_{LFOM}) + FB
   
- Grit Chamber Hopper Design
+References
 ===============================
 
-The minimum slope of each hopper is determined by the angle of repose for wet sand (approximately 45 degrees). 
-
- Drain Channel Design
-===============================
-
-When a plant operator removes the pipe stubs in the hoppers, water and grit drain from the entrance tank and empty into a concrete channel. This channel has a sloped bottom to encourage grit to flow towards the exit. The size and slope of this channel has been arbitrarily chosen in the Onshape design for demonstration purposes. These parameters should be defined explicitly after considering implications for construction and maintenance. There is concern that a narrow drain channel would be difficult to construct if a person cannot fit inside. The drain channel could be replaced with a large pipe buried in the ground and connected to the hopper drains by vertical PVC pipes. 
-
- Linear Flow Orifice Meter (LFOM)
-===============================
-
-The LFOM is located at the very end of the entrance tank. It is supported by concrete in the shape of an inverted L. Below the LFOM, there is a port in the concrete which allows water to flow to the flocculator. The length of the LFOM pipe and the height of its supported concrete can be adjusted to facilitate easier fabrication. See [insert chapter] for LFOM design.
-
- Overflow Pipe Design
-===============================
-
-
-###############################
-
-Below is content that still needs to be organized:
-
-###############################
-
-Determine the required entrance tank depth
-
-# Calculate the trash rack approach velocity assuming a trash rack made with parallel wires
-S = 0.005 * u.m # trash rack opening size
-D = 0.002 * u.m # trash rack wire diameter
-PO_pi = 0.80 # the fraction of trash rack openings that are clogged when the trash rack is at its maximum allowable clogging and headloss
-HL_max = 0.05 * u.m # the maximum headloss allowed in the trash rack due to clogging
-PO = S / (D + S) # clean trashrack porosity given opening size and wire diameter
-V = (1 - PO_pi) * PO * (2* ac.GRAVITY * HL_max)**0.5 # Approach velocity for the trash racks
-
-# Calculate the required entrance tank depth
-A = q/V
-depth = A/w_ET
-print('The required entrance tank depth is ', depth)
-
-----------------------------
-
-## Example 4: Analyze the Kinetic Energy in the Entrance Tank at the Gracias, Honduras Plant
-
-# Initialization: Run this code block first
-!pip install aguaclara
-from aguaclara.core.units import unit_registry as u
-import aguaclara as ac
-import numpy as np
-
-# global variables
-q = (60 * u.L/u.s).to(u.m**3/u.s)
-T = 20 * u.degC
-rho_H20 = ac.density_water(T)
-rho_p = 2650 *u.kg/u.m**3 # density of sand
-nu = ac.viscosity_kinematic_water(T) # kinematic viscosity
-mu = nu*rho_H20 # dynamic viscosity of 
-w_flocculator = 0.60 * u.m # the width of one flocculator at Gracias (inner width ie. does not include thickness of the concrete)
-length_flocculator = 7.10 * u.m # the length of one flocculator channel at Gracias (inner length ie. does not include thickness of the concrete)
-depth_flocculator = 2.17 * u.m  # at Gracias (flocculator design code say 2.08)
-
-### Calculate the kinetic energy and velocity exiting the influent pipe at Gracias
-ID = 0.2 * u.m # inner diameter of influent pipe at Gracias
-a = 0.25*np.pi*ID**2
-v_influent = q/a
-KE_influent = v_influent**2/(2*ac.GRAVITY)
-
-print('The velocity exiting the influent pipe is ', v_influent)
-print('The kinetic energy exiting the influent pipe is ', KE_influent.to(u.cm))
-
+Kawamura, S. (2000). Integrated Design and Operation of Water Treatment Facilities. John Wiley &amp; Sons. 
+  
