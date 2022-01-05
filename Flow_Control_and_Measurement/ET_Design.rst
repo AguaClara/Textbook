@@ -19,27 +19,29 @@ The entrance tank has multiple functions in a drinking water treatment plant.
 
 The entrance tank consists of several components: an influent pipe, a trash rack, an overflow pipe to prevent flows larger than the design flow rate from overwhelming the plant, the Liner Flow Orifice Meter (LFOM), and depending on the water quality characteristics, a grit chamber. The Chemical Dose Controller (CDC) lever arm and float sit between the trash rack and the LFOM. 
 
- .. _figure_ET_Diagram_Labeled:
+.. _figure_ET_Diagram_Labeled:
 
 .. figure:: ../Images/ET_Diagram_Labeled.png
     :width: 900px
     :align: center
     :alt: entrance tank diagram
 
-    The entrance tank contains the influent pipe, trash rack, overflow pipe, grit chamber with hoppers, pipe stubs for drainage, a waste channel, the LFOM, the lever arm of the chemical dosing system (not pictured), and a pipe leading to the flocculator. (EMW - How to do figure captions?)
+    The entrance tank contains the influent pipe, trash rack, overflow pipe, grit chamber with hoppers, pipe stubs for drainage, a waste channel,
+    the LFOM, the lever arm of the chemical dosing system (not pictured), and a pipe leading to the flocculator. 
 
 In some AguaClara plants, the entrance tank, flocculators, and sedimentation tanks are separated by walkways. However, a more space efficient approach would be to arrange the entrance tank in a channel next to the flocculator as shown in :numref:`figure_Plant_Layout_Option`. (EMW - need help linking figure number), This avoids the need for buried pipes to carry water underneath the walkway from one component to the other and simplifies construction. 
 
-(EMW - why isn't my picture centered?)
 
- .. _figure_Plant_Layout_Option:
+
+.. _figure_Plant_Layout_Option:
 
 .. figure:: ../Images/Plant_Layout_Option.png
     :width: 600px
     :align: center
     :alt: Layout of entrance tank alongside plant treatment train
 
-    A space efficient layout of the entrance tank alongside the flocculators. The entrance tank may extend the full length of the flocculator and then get wider as needed to meet grit removal requirements. 
+    A space efficient layout of the entrance tank alongside the flocculators. The entrance tank may extend the full length of the flocculator 
+    and then get wider as needed to meet grit removal requirements. 
 
 Trash Rack Design
 ===============================
@@ -92,50 +94,50 @@ Recall that Stokes Law tells us the terminal velocity of a particle settling und
 .. math::
   :label: grit_criticalVelocity
   
-  v_c = \frac{(\rho_p - \rho_{H_20})\cdot g\cdot(d_p)^2}{18 \cdot \nu \cdot\rho_{H_20}}
+   v_c = \frac{(\rho_p - \rho_{H_20})\cdot g\cdot(d_p)^2}{18 \cdot \nu \cdot\rho_{H_20}}
   
   where d\ :sub:'p' is the minimum particle diameter to be removed (Kawamura recommends 0.1 mm). 
   
   As a check, calculate the Reynolds number to confirm that flow is in the laminar regime for Stokes' Law to be valid. 
   
-  .. math::
+.. math::
   :label: grit_Re
   
-  Re = \frac{v_c \cdot d_p}{\nu}
+     Re = \frac{v_c \cdot d_p}{\nu}
   
-  The required plan view area to capture the minimum particle can be calculated by dividing the plant flow rate by the critical particle velocity:
+The required plan view area to capture the minimum particle can be calculated by dividing the plant flow rate by the critical particle velocity:
   
-   .. math::
+.. math::
   :label: planViewA
   
-  A = \frac{Q}{v_c}
+   A = \frac{Q}{v_c}
   
   The next step is to determine the optimal dimensions of the entrance tank. For constructibility purposes, the entrance tank must not be smaller than 50 cm, as a mason needs to work inside to apply a waterproof coating. Additionally, the entrance tank should not be longer than the flocculator. The ideal width of the entrance tank would be the area of the grit chamber divided by the length of the flocculator, or the minimum width of 50 cm, whichever is larger. 
   
-   .. math::
+.. math::
   :label: width_ET
   
-  W_{ET} = max(\frac{A}{L_{flocculator}}, W_{min})
+   W_{ET} = max(\frac{A}{L_{flocculator}}, W_{min})
   
-  The corresponding entrance tank length would be:
+The corresponding entrance tank length would be:
   
-     .. math::
+.. math::
   :label: length_ET
   
-  L_{ET} = \frac{A}{W_{ET}}
+   L_{ET} = \frac{A}{W_{ET}}
    
 The maximum height of water in the entrance tank is governed by either the trash rack or the headloss of the Linear Flow Orifice Meter (LFOM), and depends on the design flow rate of the plant. The minimum depth of the trash rack is its active area divided by the width of the entrance tank and the LFOM headloss for a typicaly AguaClara plant is 20 cm. 
   
-    .. math::
+.. math::
   :label: depth_trashrack
   
   d_{trashrack} = \frac{A_{trashrack}}{W_{ET}}
   
-  The depth of the entrance tank is therefore the maximum of the trashrack depth and the LFOM headloss, plus some freeboard (typically 10 cm for AguaClara). 
+The depth of the entrance tank is therefore the maximum of the trashrack depth and the LFOM headloss, plus some freeboard (typically 10 cm for AguaClara). 
   
-    .. math::
+.. math::
   :label: depth_ET
-  
+   
   d_{ET} = max(d_{trashrack}, HL_{LFOM}) + FB
   
 References
