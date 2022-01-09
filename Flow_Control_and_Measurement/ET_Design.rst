@@ -4,7 +4,7 @@
 Entrance Tank Design
 **************************************
 
-The water treatment plant must be protected from potentially damaging materials that could be carried from the watershed to the plant by the water. Typically there will be a large opening trash rack at the water source to prevent damage to the transmission line that carries water to the plant. There may also be a small sedimentation tank to remove sand and gravel before the water enters the transmission line. The trash rack and removal of sand and gravel is important for protection of the water treatment plant, but these protections are generally not sufficient. Excessive grit has historically caused maintenance challenges in some AguaClara plants by settling in the flocculator and the channel leading the sedimentation tanks. Steep mountain streams often overwhelm the sand and gravel removal system during storm events and thus depending on the watershed characteristics additional protection is required at the water treatment plant.  
+Water treatment plants must be protected from potentially damaging materials that could be carried from the watershed to the plant by the water. There is typically a trash rack with large openings at the water source to prevent blockages and damage to the transmission line that converys water to the plant. A small grit chamber may also be installed to remove sand and gravel before the water enters the transmission line. This equipment is only able to provide preliminary protection of the water treatment plant, and is generally insufficient for surface water sources. Excessive sand and gravel have historically caused maintenance challenges in some AguaClara plants by settling in the flocculator and the sedimentation tank inlet channel. Source water from steep mountain streams often overwhelms the grit removal system during storm events with eroded sediment. Depending on the watershed characteristics, additional protection is often required to avoid failure modes downstream in the water treatment process.
 
 The specific design characteristics of a water treatment plant dictate the potential failure modes and hence the required protection.
 
@@ -13,28 +13,26 @@ The entrance tank has multiple functions in a drinking water treatment plant.
 #. Remove air bubbles to reduce splashing, turbulence, and unsteady motion of the chemical feed surface tracking lever system
 #. Remove grit to prevent grit accumulation in the flocculator
 #. Remove leaves and other debris to prevent clogging of the diffusers in the sedimentation tank inlet
-#. Dissipate kinetic energy of the water prior to facilitate accurate measurement of the water level used for flow measurement
-#. Measure the flow rate so that operators can make adjustments to the incoming flow rate and respond to changes in water demand
+#. Dissipate kinetic energy to keep the water level steady for accurate flow measurement
+#. Measure the incoming flow rate so that operators can make adjustments and respond to changes in water demand
 #. Inject the coagulant and any other amendments required for flocculation
 
-The entrance tank consists of several components: an influent pipe, a trash rack, an overflow pipe to prevent flows larger than the design flow rate from overwhelming the plant, the Liner Flow Orifice Meter (LFOM), and depending on the water quality characteristics, a grit chamber. The Chemical Dose Controller (CDC) lever arm and float sit between the trash rack and the LFOM. 
+Water enters the entrance tank via the influent pipe and passes through the trash rack towards the `Linear Flow Orifice Meter (LFOM) <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Design.html#linear-flow-orifice-meter-lfom>`_. For water sources with large sediment loads, a grit chamber may be installed between the trash rack and LFOM to facilitate additional removal of sand and gravel. Plant operators can remove the pipe stubs blocking the drain on the bottom of each hopper, allowing water to pull settled grit into the waste channel below for disposal. An overflow pipe on the influent side of the trash rack prevents flows larger than the design flow rate from overwhelming the plant. The Chemical Dose Controller (CDC) lever arm and float sit between the trash rack and the LFOM and are used to dose the appropriate amount of chemicals into the plant as described previously in `Chapter 6 <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Design.html#linear-chemical-dose-controller-cdc>`_. 
+
 
 .. _figure_ET_Diagram_Labeled:
-
 .. figure:: ../Images/ET_Diagram_Labeled.png
     :width: 900px
     :align: center
     :alt: entrance tank diagram
+    
+    Cross-section of an entrance tank. Lever arm of chemical dosing system not pictured. 
 
-    The entrance tank contains the influent pipe, trash rack, overflow pipe, grit chamber with hoppers, pipe stubs for drainage, a waste channel,
-    the LFOM, the lever arm of the chemical dosing system (not pictured), and a pipe leading to the flocculator. 
+EMW - START HERE
 
-In some AguaClara plants, the entrance tank, flocculators, and sedimentation tanks are separated by walkways. However, a more space efficient approach would be to arrange the entrance tank in a channel next to the flocculator as shown in :numref:`figure_Plant_Layout_Option`. (EMW - need help linking figure number), This avoids the need for buried pipes to carry water underneath the walkway from one component to the other and simplifies construction. 
-
-
+In some AguaClara plants, the entrance tank, flocculators, and sedimentation tanks are separated by walkways. However, a more space efficient approach would be to arrange the entrance tank in a channel next to the flocculator as constructed in the 120 L/s plant in Gracias, Honduras.  (EMW - need help linking figure number), This avoids the need for buried pipes to carry water underneath the walkway from one component to the other and simplifies construction. 
 
 .. _figure_Plant_Layout_Option:
-
 .. figure:: ../Images/Plant_Layout_Option.png
     :width: 600px
     :align: center
