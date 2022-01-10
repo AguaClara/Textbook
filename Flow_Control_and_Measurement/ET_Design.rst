@@ -28,32 +28,29 @@ Water enters the entrance tank via the influent pipe and passes through the tras
     
     Cross-section of an entrance tank. Lever arm of chemical dosing system not pictured. 
 
-EMW - START HERE
+In some AguaClara plants, the entrance tank, flocculators, and sedimentation tanks are separated by walkways. However, a more space efficient approach would be to arrange the entrance tank in a channel next to the flocculator as constructed in the 120 L/s plant in Gracias, Honduras (:numref:`figure_Gracias_Ent_Floc`). This avoids the need for buried pipes to carry water underneath the walkway from one component to the next and simplifies construction. In this layout, the entrance tank may extend up to the full length of the flocculator and then get wider as needed to meet grit removal requirements. 
 
-In some AguaClara plants, the entrance tank, flocculators, and sedimentation tanks are separated by walkways. However, a more space efficient approach would be to arrange the entrance tank in a channel next to the flocculator as constructed in the 120 L/s plant in Gracias, Honduras.  (EMW - need help linking figure number), This avoids the need for buried pipes to carry water underneath the walkway from one component to the other and simplifies construction. 
-
-.. _figure_Plant_Layout_Option:
-.. figure:: ../Images/Plant_Layout_Option.png
-    :width: 600px
+.. _figure_Gracias_Ent_Floc:
+.. figure:: ../Images/Gracias_Ent_Floc.JPG
+    :width: 500px
     :align: center
-    :alt: Layout of entrance tank alongside plant treatment train
+    :alt: Layout of entrance tank alongside flocculator at Gracias, Honduras AguaClara plant
 
-    A space efficient layout of the entrance tank alongside the flocculators. The entrance tank may extend the full length of the flocculator 
-    and then get wider as needed to meet grit removal requirements. 
+    A space efficient layout of the entrance tank alongside the flocculator in Gracias, Honduras. 
 
 Trash Rack Design
 ===============================
 
-The trash rack is specifically designed to remove low density debris that could easily be carried through the plant and clog any small flow passages. In an AguaClara plant there are critical flow passages in the sedimentation tank inlet manifold diffusers and in the flow injection system in the stacked rapid sand filters. The inlet manifold diffusers have flared nozzles which currently have a minimum dimension of about 4 mm. This sets a requirement that the opening dimension for the trash rack be less than the opening size of the inlet manifold nozzles.
+The trash rack is specifically designed to remove low density debris that could easily be carried through the plant and clog any small flow passages. In an AguaClara plant, there are critical flow passages in the sedimentation tank inlet manifold diffusers and in the flow injection system in the stacked rapid sand filters. The inlet manifold diffusers have flared nozzles which currently have a minimum dimension of about 4 mm. The opening dimension for the trash rack must therefore be less than the opening size of the inlet manifold nozzles.
 
-The minimum trash rack area is set by a goal of minimizing head loss through the plant while maintaining a trash rack size that is reasonably compact. We recommend that the trash rack be designed to reach a terminal head loss of 5 cm when it is 90% clogged. The design follows directly from that constraint. The guiding equation is the orifice equation with the simple addition of the fractions of the area that is actually available for the water to flow through the trash rack. The area is reduced by the porosity, the vena contracta, and the clogging.
+The minimum trash rack area is set to minimize head loss through the plant while maintaining an overall trash rack size that is reasonably compact. We recommend that the trash rack be designed to reach a terminal head loss of 5 cm when it is 90% clogged. The guiding principle for the design is the orifice equation modified to incorporate the fraction of the the trash rack area that is actually available for water to flow through. This area is reduced by the porosity, vena contracta, and amount of debris.
 
 .. math::
   :label: trashrack_flow
 
    Q = (1-\Pi_{clogged})\Pi_{vc} \phi A_{trashrack}\sqrt{2gh}
 
-where :math:`\phi_{trashrack}` is the fraction of clean trash rack that is open, :math:`\Pi_{vc}` is the vena contracta coefficient, :math:`\Pi_{clogged}` is the clogged fraction of the trash rack. The ideal trash rack has a high porosity and a large vena contracta coefficient. The vena contracta coefficient is set by the geometry of the entrance into the opening through the trash rack. If the entrance has a sharp edge, then the vena contract coefficient will have a value of approximately 0.62. If the entrance is rounded then the vena contracta could approach 1.0. Thus the idea trash rack will have rounded openings.
+where :math:`\phi_{trashrack}` is the fraction of clean trash rack that is open, :math:`\Pi_{vc}` is the vena contracta coefficient, and :math:`\Pi_{clogged}` is the clogged fraction of the trash rack. The ideal trash rack has a high porosity and a large vena contracta coefficient. The vena contracta coefficient is set by the entrance geometry of the trash rack openings. If the entrance has a sharp edge, then the vena contract coefficient will have a value of approximately 0.62. If the entrance is rounded then the vena contracta could approach 1.0. Thus, it is more efficient for a trash rack to have rounded openings.
 
 The area of the trash rack can be solved for as follows:
 
@@ -78,16 +75,16 @@ The trash rack characteristic velocity is 50 mm/s for 50% porosity, 90% clogged,
 Grit Chamber Design
 ===============================
 
-The length of the entrance tank may be extended to function as additional grit removal capacity for watersheds where sediment has the potential to produce harmful amounts of sand and gravel during storm events. As of 2021, plant operators at only two AguaClara plants, Gracias and Agalteca, have reported maintenance issues due to grit settling in the flocculator or inlet channel to the sedimentation tanks. If a grit chamber is deemed necessary for a particular watershed, it would be located on the effluent side of the trash racks and is lined with a series of hoppers to faciliate cleaning. To remove settled grit from the entrance tank, the plant operator can remove the pipe stub blocking the drain at the bottom of each hopper, allowing water to pull the grit into the drain channel below. 
+The length of the entrance tank can be extended to function as additional grit removal capacity for watersheds where sediment has the potential to produce harmful amounts of sand and gravel during storm events. As of 2021, plant operators at two AguaClara plants, Gracias and Agalteca, have reported maintenance issues due to grit settling in the flocculator or inlet channel to the sedimentation tanks. If a grit chamber is deemed necessary for a particular watershed, it would be located on the effluent side of the trash racks and is lined with a series of hoppers to facilitate cleaning. To remove settled grit from the entrance tank, the plant operator can remove the pipe stub blocking the drain at the bottom of each hopper, allowing grit to flow into the drain channel below. 
 
-Stokes' Law can be used to calculate the area of the grit chamber required to remove particles of a desired size. Kawamura recommends a critical pparticle size of 0.1 mm (2000, p. 416).  [emw - check publication date] The overall strategy to determine appropriate dimensions of the entrance tank is follows: 
+Stokes' Law can be used to calculate the grit chamber area required to remove particles of a desired size. Kawamura recommends a critical particle size of 0.1 mm (2000, p. 416). The overall strategy to determine appropriate dimensions of the entrance tank is as follows: 
 
-1. Use the appropriate Stokes Law for laminar or turbulent flow to determine the corresponding critical velocity of the particle.
+1. Use the appropriate Stokes' Law for laminar or turbulent flow to determine the corresponding critical velocity of the particle.
 2. Calculate the required plan-view area of the entrance tank
 3. Determine the ideal length and width of the entrance tank
 4. Calculate the required entrance tank depth
 
-Recall that Stokes Law tells us the terminal velocity of a particle settling under laminar flow, and can be calculated as follows: 
+Recall that Stokes Law tells us the terminal velocity of a particle settling under laminar flow, and can be calculated as: 
 
 .. math::
   :label: grit_criticalVelocity
@@ -124,7 +121,7 @@ The corresponding entrance tank length would be:
   
    L_{ET} = \frac{A}{W_{ET}}
    
-The maximum height of water in the entrance tank is governed by either the trash rack or the headloss of the Linear Flow Orifice Meter (LFOM), and depends on the design flow rate of the plant. The minimum depth of the trash rack is its active area divided by the width of the entrance tank and the LFOM headloss for a typicaly AguaClara plant is 20 cm. 
+The maximum height of water in the entrance tank is governed by either the trash rack or the head loss of the LFOM, and depends on the design flow rate of the plant. The minimum depth of the trash rack is its active area divided by the width of the entrance tank, and the LFOM head loss for a typical AguaClara plant is 20 cm. 
   
 .. math::
   :label: depth_trashrack
@@ -141,5 +138,5 @@ The depth of the entrance tank is therefore the maximum of the trashrack depth a
 References
 ===============================
 
-Kawamura, S. (2000). Integrated Design and Operation of Water Treatment Facilities. John Wiley &amp; Sons. 
+Kawamura, S. (2000). Integrated Design and Operation of Water Treatment Facilities. John Wiley & Sons. 
   
