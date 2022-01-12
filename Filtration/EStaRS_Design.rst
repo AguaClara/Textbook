@@ -28,12 +28,33 @@ The solution to air entrainment is to design the inlet pipes to act like tube se
 
 We need a method to measure the flow rate entering the filters. The slot weir in the OStaRS filter could be used to measure the flow and would have a nonlinear scale. An alternative that the operators would readily understand would be to replace the slot weir with an LFOM.
 
-The 4 OStaRS that are in operation in Central America as of 2021 have winged pipes with orifices for the inlets. There are no reports of problems with sand entering the inlet pipes and thus that appears to be a success. This does require the use of a gate valve for the backwash pipe to ensure that the transition from backwash to filtration mode doesn't happen too quickly. During this transition there is reverse flow from the filter into the inlet pipes and if that flow rate is too high it could carry sand into the inlet branches.
+The 4 EStaRS that are in operation in Central America as of 2021 have winged pipes with orifices for the inlets. There are no reports of problems with sand entering the inlet pipes and thus that appears to be a success. This does require the use of a gate valve for the backwash pipe to ensure that the transition from backwash to filtration mode doesn't happen too quickly. During this transition there is reverse flow from the filter into the inlet pipes and if that flow rate is too high it could carry sand into the inlet branches.
+
+Air venting from trunks
+***********************
+The trunks are initially filled with air.
+The trunks must have a water seal that is as low as the siphon water seal (is this the constraint?) to ensure that air is never sucked into the filter during backwash.
+The trunk entry into the filter body is thus at a local high point and air that accumulates in the top of the trunk and the top of the branches has no way to get out.
+There must be a vent on the top of the trunks where they enter the filter body.
+
+Vent options
+============
+
+1) tube straight up to top of inlet tank (will suck air during backwash)
+1) tube that connects into the top of the filter body (during filtration air will travel up the tubes and vent into the top of the filter body. During backwash water will take this shortcut to bypass the sand. It could work if the tubes are small enough that the bypass during backwash is small)
+1) Use sloped section of trunk line to act as tube settler to remove bubbles that are entrained in the inlet. This doesn't solve the problem of air that is in the local high spot of trunks.
+
+It seems that the only option is to connect the air release tubes to the top of the filter.
+
+Elevation considerations
+========================
+
+The head loss through the sand during backwash is equal to the settled depth of sand. This means that the water level in the top inlet pipe will drop by an amount equal to the depth of the sand. That means that the bottom of the inlet tank must be ABOVE the top of the sand + the OD of the trunk + head loss in the backwash trunk inlet.
 
 
-
-**Old info**
-
+********
+Old info
+********
 
 used for low flow plants because they are less resource intensive to construct than a small version of the full-size concrete filter, additionally the OStaRS become infeasible in term of maintenance at very low flows because it would very narrow and very deep. This difficulty is noted in OStaRS filters handling less than 8 L/s corresponding to plant flows less than 16 L/s. This challenge invites the EStaRS as an alternative.
 
