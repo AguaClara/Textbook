@@ -173,27 +173,119 @@ We can therefore state with reasonable accuracy that, when most contracted, the 
 
   K_{baffle_{min}} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2
 
+  = \left( \frac{1}{\Pi_{vc}^{baffle}} -1 \right)^2
 
-  K_{baffle_{min}} = \left( \frac{1}{\Pi_{vc}^{baffle}} -1 \right)^2
 
+  = \left( \frac{1}{0.384} -1 \right)^2
 
-  K_{baffle_{min}} = \left( \frac{1}{0.384} -1 \right)^2
-
-  \color{red}{K_{baffle_{min}} = 2.56}
+  \color{red} {= 2.56}
 
 This :math:`K_{baffle_{min}}` has been used to design flocculators in AguaClara plants until 2021. The plant at Gracias revealed that the observed head loss was greater than predicted.  `This paper by Haarhoff in 1998 <https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a :math:`K_{baffle}` value between :math:`2.5` and :math:`4`.
 
-The most efficient flocculator designs set the distance between flow expansions to be less than required for the contracted flow to fully expand before entering the next contraction. This ensures that the flow is always expanded and generating turbulence. If the flow doesn't fully expand before entering the next flow contraction, then the velocity exiting the contraction is higher than assumed by :eq:`K_baffle_min`.
+Equation :eq:`K_baffle_min` doesn't account for the fact that for a series of baffles the flow might not be able to fully expand before entering the next baffle. The flow exiting the contraction is a plane jet and plane jets grow in width at a rate
+
+.. math::
+  :label: PlaneJet_expansion
+
+  W_{jet} = 0.116x
+
+where x is the distance along the path of the jet centerline and :math:`\Pi_{PlaneJet_{exp}} = 0.116` for a plane jet in an infinite medium.
+
+
+.. _figure_baffle_geometry:
+
+.. figure:: Images/baffle_geometry.png
+   :align: center
+   :width: 300px
+   :alt: CFD vc baffle
+
+   Baffle geometry for a hydraulic flocculator where S is the space between baffles, :math:`L_{jet}` is the distance over which a jet can expand, and :math:`H_e` is the approximate total distance between expansions.
+
+The distance over which the jet can expand is given by :math:`L_{jet}`. The minimum path length assumes that jet expansion doesn't occur when the streamlines are curving to go around the end of the baffle.
+
+.. math::
+  :label: L_jet_min
+
+  L_{jet_{min}} = H_e - 2 S
+
+The maximum path length for the jet to expand could include an additional distance of approximately :math:`2S` (shown) for the centerline of the flow as it arcs around the end of the baffle.
+
+.. math::
+  :label: L_jet_max
+
+  L_{jet_{max}} = H_e
+
+The jet may be influenced by the presence of a baffle on the one side. Computational Fluid Dynamics is needed to determine the correct value for :math:`\Pi_{PlaneJet_{exp}} in baffled flocculators.
+
+The maximum width of the expanding jet, :math:`W_{jet_{max}}`, occurs immediately upstream of where the streamlines begin to curve to go around the end of the baffle. The jet minimum width (greatest contraction) occurs shortly after going around the 180° bend. Given that the flow might not have fully expanded we can express the jet minimum width as a function of the jet maximum width.
+
+
+.. math::
+  :label: W_jet_min
+
+  W_{jet_{min}} = W_{jet_{max}} \Pi_{vc}^{baffle}
+
+Similarly the maximum jet width is determined by how much it can expand in distance :math:`L_{jet}`.
+
+.. math::
+  :label: W_jet_max_of_W_jet_min
+
+  W_{jet_{max}} = W_{jet_{min}} +  \Pi_{PlaneJet_{exp}}L_{jet}
+
+Equations :eq:` W_jet_min` and :eq:`W_jet_max_of_W_jet_min` provide two equations in two unknowns. Eliminate :math:`W_{jet_{min}}` from equation :eq:`W_jet_max_of_W_jet_min`.
+
+.. math::
+  :label: W_jet_max
+
+  W_{jet_{max}} =  \frac{\Pi_{PlaneJet_{exp}}L_{jet}}{1 - \Pi_{vc}^{baffle}}
+
+The velocity in the expanded jet is higher would have been obtained based on continuity and the dimensions of the flow passage. The effect of the higher velocity can be factored into equation :eq:`K_baffle_min` by multiplying by the ratio of the velocity squared. From continuity the ratio of :math:`S` to :math:`W_{jet_{max}}` is the ratio velocity in the expanded jet to the velocity that would have occurred if the flow had filled the enter flow passage. Substitute equation :eq:`W_jet_max` to obtain
+
+.. math::
+  :label: baffle_expanded_jet_width_ratio
+
+   \frac{S}{W_{jet_{max}}}  =  \frac{S}{ \frac{\Pi_{PlaneJet_{exp}}L_{jet}}{1 - \Pi_{vc}^{baffle}}}
+
+The ratio of :math:`\frac{L_{jet}}{S}` can be expressed as a function of the baffle ratio, :math:`\Pi_{H_eS}`. The maximum path length for jet expansion is used here.
+
+.. math::
+  :label: L_jetS_ratio
+
+  \frac{L_{jet_{max}}}{S} = \frac{H_e}{S}= \Pi_{H_eS}
+
+Substitute equation :eq:`L_jetS_ratio` into equation :eq:`baffle_expanded_jet_width_ratio` to obtain the ratio of the velocity in the expanded jet to the velocity that would have occurred if the flow had filled the enter flow passage.
+
+.. math::
+  :label: baffle_unexpanded_velocity_ratio
+
+  \frac{S}{W_{jet_{max}}}  =   \frac{1 - \Pi_{vc}^{baffle}}{\Pi_{PlaneJet_{exp}}\Pi_{H_eS}}
+
+Equation :eq:`baffle_unexpanded_velocity_ratio` has a minimum value of 1 representing fully expanded flow. For small values of :math:`\Pi_{H_eS}` the equation would incorrectly predict values less than 1. The square of this velocity ratio can be factored into the baffle minor loss equation (equation :eq:`K_baffle_min`) to obtain an equation that handles baffles in series where the flow doesn't fully expand between baffles.
+
+.. math::
+  :label: K_baffle_expanding_messy
+
+  K_{baffle_{exp}} = \left( \frac{1 - \Pi_{vc}^{baffle}}{\Pi_{PlaneJet_{exp}}\Pi_{H_eS}} \right)^2 \left( \frac{1-\Pi_{vc}^{baffle}}{\Pi_{vc}^{baffle}} \right)^2
+
+Equation :eq:`K_baffle_expanding_messy` can be simplified to obtain
 
 .. math::
   :label: K_baffle_expanding
 
-   K_{baffle_{exp}} = \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS}}\right) ^ 2
+   K_{baffle_{exp}} = \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_{e}S}}\right) ^ 2
 
-where :math:`\Pi_{PlaneJet_{exp}}` is the ratio of the increased width of the jet to the distance along the centerline of the expanding jet and has a value of 0.116 for unconfined plane jets. The flow regime between baffles is not unconfined and thus this is an approximation until further advances in CFD or field measurements.
+Equation :eq:`K_baffle_expanding` incorporates two assumptions that need to be checked with computational fluid dynamics. The :math:`\Pi_{PlaneJet_{exp}}` may be missing a correction to account for the slower jet expansion along the baffle that is in contact with the jet. The distance for the jet to expand may be greater or less than :math:`H_e`.
 
+.. _figure_K_baffle:
 
+.. figure:: Images/K_baffle_model.png
+   :align: center
+   :width: 300px
+   :alt: CFD vc baffle
 
+   Baffle geometry for a hydraulic flocculator where S is the space between baffles, :math:`L_{jet}` is the distance over which a jet can expand, and :math:`H_e` is the approximate total distance between expansions.
+
+Figure numref:`figure_K_baffle` reveals that the baffle minor loss coefficient increases rapidly as :math:`\Pi_{H_{e}S}` decreases below about 5.6. This suggests that estimating the baffle minor loss coefficient correctly will be critical and more difficult for low values of :math:`\Pi_{H_{e}S}`.
 
 Flocculator Efficiency
 ---------------------------
