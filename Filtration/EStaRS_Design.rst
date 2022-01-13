@@ -525,18 +525,6 @@ Pressure Recovery and branch diameter to determine trunk sizing
 
 In determining the trunk size both pressure recovery and the influence of the branches intercepting the trunks must be considered.
 
-.. _figure_branch_configuration:
-
-.. figure:: ../Images/figure_branch_configuration.png
-    :width: 80%
-    :align: center
-    :alt: branch photograph, interal image
-
-    1. Image 1 shows the use of 1 pipe for the branches on both sides of the trunk, the location of the opening into the branches causes the pipe to act as a valve inside the trunk. This causes massive head loss in the filter. 2. Image 2 shoes an alternate method of connecting branches to trunks, with 2 separate pipes being used. In this design it takes much less force to dislodge the branch from the trunk due to the cantilever of every branch. 3. Image 3 shows a similar branch construction as in image 1 but with the hole in the branch drilled in such a way that it causes a smaller (but still significant) flow constriction. 4. Image 4 shows a branch in a similar orientation to image 1 but, the branch is going through a larger pipe so the flow constriction is not as significant.
-
-
-The images above show some of the challenges with determining the size of the trunks, as well as the importance of thoughtful fabrication.
-
 **Must figure out the importance of the valve effect on this to determine the algorithm**
 
 Trunk sizing and caps: orifice and slot spacing

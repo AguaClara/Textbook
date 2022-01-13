@@ -13,7 +13,7 @@ Environmental Protection Agency statement
 
 .. _figure_NSF_logo:
 
-.. figure:: https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo_thumb.jpg
+.. figure:: https://www.nsf.gov/Images/logos/NSF_4-Color_bitmap_Logo_thumb.jpg
 
 National Science Foundation statement
 =====================================
