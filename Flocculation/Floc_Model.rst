@@ -197,7 +197,7 @@ Collision potential :math:`(G_{CS} \theta)` is a term with a very straightforwar
 
 
 
-:math:`G` measures the magnitude of shear by using the velocity gradient of a fluid in space, :math:`\frac{\Delta \bar v}{\Delta h}`. This is essentially the same as the :math:`\frac{\delta u}{\delta y}` term in fluid mechanics, which is found in the ubiquitous `fluid-shear problem <http://polymerdatabase.com/polymer%20physics/Images/Visc.png>`_ as sourced from `here. <http://polymerdatabase.com/polymer%20physics/Viscosity.html>`_
+:math:`G` measures the magnitude of shear by using the velocity gradient of a fluid in space, :math:`\frac{\Delta \bar v}{\Delta h}`. This is essentially the same as the :math:`\frac{\delta u}{\delta y}` term in fluid mechanics.
 
 :math:`\bar G` represents the average :math:`\frac{\Delta \bar v}{\Delta h}` for the entire water volume under consideration, and is the parameter we will be using from now on. Unfortunately, it is unrealistic to measure :math:`\frac{\Delta \bar v}{\Delta h}` for every parcel of the water in our flocculator and take an average. We need to approximate :math:`\bar G` using measureable parameters.
 
@@ -752,7 +752,7 @@ Schulz, C. R., & Okun, D. A. (1984). Surface water treatment for communities in 
 
 Sharp, E. L., Jarvis, P., Parsons, S. A., & Jefferson, B. (2006). Impact of fractional character on the coagulation of NOM. Colloids and Surfaces A: Physicochemical and Engineering Aspects, 286(1–3), 104–111. https://doi.org/10.1016/j.colsurfa.2006.03.009
 
-Sigma-Aldrich. (2014). Humic acid sodium salt (H16752) (Safety Data Sheet) (p. 7). St. Louis, MO. 
+Sigma-Aldrich. (2014). Humic acid sodium salt (H16752) (Safety Data Sheet) (p. 7). St. Louis, MO.
 
 Soh, Y. C., Roddick, F., & Leeuwen, J. van. (2008). The impact of alum coagulation on the character, biodegradability and disinfection by-product formation potential of reservoir natural organic matter (NOM) fractions. Water Science and Technology; London, 58(6), 1173–1179. http://dx.doi.org/10.2166/wst.2008.475
 
