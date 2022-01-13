@@ -519,7 +519,7 @@ msgid ""
 "events on the path to or through the filter. We will estimate floc size from "
 "each of the potential shear and terminal velocity events. The calculations are "
 "done in :ref:`python below "
-"<heading_Floc_size_and_velocity_gradient_calculations>`."
+"<heading_floc_size_and_velocity_gradient_calculations>`."
 msgstr ""
 "El tamaño característico de los flóculos podría ser fijado por los colonos de "
 "placas que eliminan preferentemente grandes flóculos o podría ser fijado por "
@@ -527,7 +527,7 @@ msgstr ""
 "filtro. Estimaremos el tamaño de los flóculos a partir de cada uno de los "
 "potenciales eventos de cizallamiento y de velocidad terminal. Los cálculos se "
 "hacen en :ref:`python abajo "
-"<heading_Floc_size_and_velocity_gradient_calculations>`."
+"<heading_floc_size_and_velocity_gradient_calculations>`."
 
 #: ../../Filtration/Filtration_Theory_and_Future_Work.rst:204
 #, fuzzy

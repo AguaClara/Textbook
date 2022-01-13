@@ -99,7 +99,7 @@ In the design the first step is to determine what size EStaRS is needed because 
 .. figure:: ../Images/figure_body_d_and_n.png
     :width: 70%
     :align: center
-    :alt: flowchart showing how the filter size is determined, interal image
+    :alt: flowchart showing how the filter size is determined, internal image
 
     This flowchart shows the way the plant flow is used with the available pipe diameters to determine an appropriate size and number of filters based on the total plant flow.
 
@@ -210,7 +210,7 @@ This is not the flow experienced by all the pipe layers though. As shown in :num
 
 .. _figure_numbered_filter_layers:
 
-.. figure:: ../Images/figure_numbered_filter_layers.PNG
+.. figure:: ../Images/figure_numbered_filter_layers.png
     :width: 70%
     :align: center
     :alt: filter manifold layer schematic, interal image
@@ -445,7 +445,7 @@ The factors that makes the length of the branch different from simply :math:`ID/
 
 .. _figure_branch_length:
 
-.. figure::Images/figure_branch_length.png
+.. figure:: ../images/figure_branch_length.png
     :width: 80%
     :align: center
     :alt: filter manifold, interal image
@@ -551,7 +551,7 @@ See  :numref:`figure_estars_flow_schematic` for a schematic of the filter layers
 
 .. _figure_estars_flow_schematic:
 
-.. figure:: ../Images/figure_flow_distribution_estars.PNG
+.. figure:: ../Images/figure_flow_distribution_estars.png
     :width: 80%
     :align: center
     :alt: filter schematic, interal image
@@ -563,7 +563,7 @@ Because the 2 inner inlets (the ones that aren't the backwash trunk or the upper
 
 .. _figure_estars_bw_flow_schematic:
 
-.. figure:: ../Images/figure_bw_flow_distribution.PNG
+.. figure:: ../Images/figure_bw_flow_distribution.png
     :width: 80%
     :align: center
     :alt: filter schematic, interal image
@@ -655,8 +655,6 @@ Second Constraint: Pressure Recovery in lowest trunk during backwash
 
 The second pressure recovery constraint is in the backwash branch during backwash. During backwash the lowest trunk sees all the flow at a higher velocity than any other trunk does during filtration meaning all of its branches experience a higher flow as well. Because the velocity is higher, the PR term will also be higher, so it must be constrained to maintain even flow.
 
--there is 1.2 m of head loss through the sand bed.
-
 The initial estimate of head loss through the holes is :math:`HL_{FiBwOrifices} = 10cm`. [where did this come from? One proposal is the same constraint as we discussed with the horizontal filter. The head loss through the orifice must be close to the distance between orifices. This is to ensure that the entire bed fluidizes. If there is a section of the filter where the sand isn't fluidized, then that sand will form an incline that is the angle of repose of sand in water. Thus, the maximum depth that the first covered orifice under the settled sand will be determined by the distance between orifices and the angle of repose of the sand. If we assume conservatively that the angle of repose is 45 degrees, then the depth of sand would equal the spacing between the orifices. And if the head loss through the orifices was equal to that depth of sand, then there would be enough water coming out of the first covered orifice to fluidize the sand above it.
 
 Darn... My analysis in the previous paragraph is flawed because the water flows from the orifices into a big half pipe BEFORE coming into contact with sand. Thus, the head loss through the orifices DOES NOT help ensure that the sand fluidizes everywhere in the filter. Similarly, the orifices don't have to be sized to get the same flow out of the first and last orifice in a branch because flow equalization will occur in the half pipe. So perhaps the goal is to get reasonable flow distribution between first and last orifice so that the equalization flow has a much lower velocity than the main flow in the branch. We need to figure this out! and this can go near the top of the design. My sense is that there may be a good deal of flexibility in the total orifice area.   ]
@@ -720,7 +718,7 @@ Additional note for :numref:`table_branch_head_loss`. The pipes show the overall
 
 .. _figure_circle_branches:
 
-.. figure:: ../Images/figure_circle_branches.PNG
+.. figure:: ../Images/figure_circle_branches.png
     :width: 60%
     :align: center
     :alt: basic sketch of flow path within a manifold layer
@@ -964,7 +962,7 @@ Then the total sand volvume in the filter is the volume of the filter (a functio
 
 :math:`\rlap{-} V_{SandTotal} = (A_{Fi}*H_{FiSandLow}) - \rlap{-} V_{FiPlumbing}`.
 
-Multplying the density of the sand, :math:`\Rho_{Sand}` by the volume of the sand gives the mass of the sand, :math:`M_{Sand}`
+Multplying the density of the sand, :math:`\rho_{Sand}` by the volume of the sand gives the mass of the sand, :math:`M_{Sand}`
 
 The mass of one sand bag, :math:`M_{SandBag}` is 50 pounds so the number of sand bags can be determined by: :math:`N_{Fi}*\frac{M_{Sand}}{M_{SandBag}}` (rounded up to a whole number).
 

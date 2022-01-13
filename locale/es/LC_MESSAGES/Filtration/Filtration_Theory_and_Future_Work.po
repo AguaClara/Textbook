@@ -354,7 +354,7 @@ msgid ""
 "shear events on the path to or through the filter. We will estimate floc "
 "size from each of the potential shear and terminal velocity events. The "
 "calculations are done in :ref:`python below "
-"<heading_Floc_size_and_velocity_gradient_calculations>`."
+"<heading_floc_size_and_velocity_gradient_calculations>`."
 msgstr ""
 
 #: ../../Filtration/Filtration_Theory_and_Future_Work.rst:204
