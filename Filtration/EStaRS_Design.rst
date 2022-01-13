@@ -96,7 +96,7 @@ In the design the first step is to determine what size EStaRS is needed because 
 
 .. _figure_body_d_and_n:
 
-.. figure:: Images/figure_body_d_and_n.png
+.. figure:: ../Images/figure_body_d_and_n.png
     :width: 70%
     :align: center
     :alt: flowchart showing how the filter size is determined, interal image
@@ -180,7 +180,7 @@ In addition to these numerical constraints there are several other constraints t
 
 .. _figure_layer_depth_and_branch_spacing:
 
-.. figure:: Images/figure_layer_depth_and_branch_spacing.png
+.. figure:: ../Images/figure_layer_depth_and_branch_spacing.png
     :width: 70%
     :align: center
     :alt: schematic of brach spacing as comared to layer thickness, interal image
@@ -210,7 +210,7 @@ This is not the flow experienced by all the pipe layers though. As shown in :num
 
 .. _figure_numbered_filter_layers:
 
-.. figure:: Images/figure_numbered_filter_layers.PNG
+.. figure:: ../Images/figure_numbered_filter_layers.PNG
     :width: 70%
     :align: center
     :alt: filter manifold layer schematic, interal image
@@ -255,7 +255,7 @@ the ID function also takes the SDR for the pipe (26), but in the equation above 
 
 .. _figure_manifold_sizing:
 
-.. figure:: Images/figure_manifold_sizing.png
+.. figure:: ../Images/figure_manifold_sizing.png
     :width: 70%
     :align: center
     :alt: filter manifold schematic, interal image
@@ -360,7 +360,7 @@ In this case the longest branch is slightly less than :math:`\frac{ID_{Fi}}{2}`.
 
 .. _figure_flow_fraction_branch:
 
-.. figure:: Images/figure_flow_fraction_branch.png
+.. figure:: ../Images/figure_flow_fraction_branch.png
     :width: 80%
     :align: center
     :alt: filter schematic, interal image
@@ -527,7 +527,7 @@ In determining the trunk size both pressure recovery and the influence of the br
 
 .. _figure_branch_configuration:
 
-.. figure:: Images/figure_branch_configuration.png
+.. figure:: ../Images/figure_branch_configuration.png
     :width: 80%
     :align: center
     :alt: branch photograph, interal image
@@ -551,7 +551,7 @@ See  :numref:`figure_estars_flow_schematic` for a schematic of the filter layers
 
 .. _figure_estars_flow_schematic:
 
-.. figure:: Images/figure_flow_distribution_estars.PNG
+.. figure:: ../Images/figure_flow_distribution_estars.PNG
     :width: 80%
     :align: center
     :alt: filter schematic, interal image
@@ -563,7 +563,7 @@ Because the 2 inner inlets (the ones that aren't the backwash trunk or the upper
 
 .. _figure_estars_bw_flow_schematic:
 
-.. figure:: Images/figure_bw_flow_distribution.PNG
+.. figure:: ../Images/figure_bw_flow_distribution.PNG
     :width: 80%
     :align: center
     :alt: filter schematic, interal image
@@ -720,7 +720,7 @@ Additional note for :numref:`table_branch_head_loss`. The pipes show the overall
 
 .. _figure_circle_branches:
 
-.. figure:: Images/figure_circle_branches.PNG
+.. figure:: ../Images/figure_circle_branches.PNG
     :width: 60%
     :align: center
     :alt: basic sketch of flow path within a manifold layer
@@ -737,7 +737,7 @@ The construction of the entrance and exit pipes are the main difference between 
 
 .. _figure_estars_comparison:
 
-.. figure:: Images/figure_estars_comparison.png
+.. figure:: ../Images/figure_estars_comparison.png
     :width: 80%
     :align: center
     :alt: CAD "conventional" vs micky mouse photo design
@@ -871,7 +871,7 @@ The siphon in the EStaRS system is different from the OStaRS system because it d
 
 .. _figure_siphon_schematic:
 
-.. figure:: Images/figure_siphon_schematic.png
+.. figure:: ../Images/figure_siphon_schematic.png
     :width: 80%
     :align: center
     :alt: siphon schematic for EStaRS systems

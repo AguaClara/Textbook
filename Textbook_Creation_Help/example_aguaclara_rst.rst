@@ -112,7 +112,7 @@ Use this syntax for figures located within the /Textbook repository on GitHub::
 
   .. _figure_mountain:
 
-  .. figure:: Images/mountain.jpg
+  .. figure:: ../Images/mountain.jpg
       :width: 300px
       :align: center
       :alt: internal figure
@@ -136,7 +136,7 @@ See :numref:`figure_mountain` for a typical mountain view.
 
 .. _figure_mountain:
 
-.. figure:: Images/mountain.jpg
+.. figure:: ../Images/mountain.jpg
     :width: 300px
     :align: center
     :alt: internal figure

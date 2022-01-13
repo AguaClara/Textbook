@@ -39,7 +39,7 @@ Collision potential :math:`(G_{CS} \theta)` is a term with a very straightforwar
 
 .. _figure_G_velocity_profile:
 
-.. figure:: Images/G_velocity_profile.jpg
+.. figure:: ../Images/G_velocity_profile.jpg
     :width: 50%
     :align: center
     :alt: external figure
@@ -104,7 +104,7 @@ To generate minor losses, we need to create flow expansions. AguaClara does this
 
 .. _figure_AC_flocculator:
 
-.. figure:: Images/AC_flocculator.jpg
+.. figure:: ../Images/AC_flocculator.jpg
    :width: 100%
    :align: center
    :alt: AC Flocculator
@@ -113,7 +113,7 @@ To generate minor losses, we need to create flow expansions. AguaClara does this
 
 .. _figure_baffle_module:
 
-.. figure:: Images/Baffle_module.jpg
+.. figure:: ../Images/Baffle_module.jpg
    :width: 50%
    :align: center
    :alt: this image shows the floc baffle module out of the water within a plant.
@@ -129,7 +129,7 @@ Before beginning this section, it is important to understand how water flows thr
 
 .. _figure_flocculator_flow:
 
-.. figure:: Images/Flocculator_flow.jpg
+.. figure:: ../Images/Flocculator_flow.jpg
    :width: 600px
    :align: center
    :alt: flocculator flow image
@@ -140,7 +140,7 @@ Since baffles are the source of head loss via minor losses, we need to find the 
 
 .. _figure_cfd_VC_baffle:
 
-.. figure:: Images/CFD_vc_baffle.jpg
+.. figure:: ../Images/CFD_vc_baffle.jpg
    :align: center
    :width: 100px
    :alt: CFD vc baffle
@@ -177,7 +177,7 @@ where x is the distance along the path of the jet centerline and :math:`\Pi_{Pla
 
 .. _figure_baffle_geometry:
 
-.. figure:: Images/baffle_geometry.png
+.. figure:: ../Images/baffle_geometry.png
    :align: center
    :width: 300px
    :alt: CFD vc baffle
@@ -261,7 +261,7 @@ Equation :eq:`K_baffle_expanding` incorporates two assumptions that need to be c
 
 .. _figure_K_baffle:
 
-.. figure:: Images/K_baffle_model.png
+.. figure:: ../Images/K_baffle_model.png
    :align: center
    :width: 300px
    :alt: CFD vc baffle
@@ -313,7 +313,7 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
 
 .. _figure_jet_expansion_flocculator:
 
-.. figure:: Images/Jet_expansion_flocculator.jpg
+.. figure:: ../Images/Jet_expansion_flocculator.jpg
    :align: center
    :width: 400px
    :alt: jet expansion in the flocculator
@@ -334,7 +334,7 @@ This is the highest allowable :math:`\Pi_{H_eS}` that we can design while ensuri
 
 .. _figure_CFD_baffle_image:
 
-.. figure:: Images/CFD_baffle_image.jpg
+.. figure:: ../Images/CFD_baffle_image.jpg
    :align: center
    :width: 50%
    :alt: CFD baffle image
@@ -343,7 +343,7 @@ This is the highest allowable :math:`\Pi_{H_eS}` that we can design while ensuri
 
 .. _figure_CFD_full_channel:
 
-.. figure:: Images/CFD_full_channel.jpg
+.. figure:: ../Images/CFD_full_channel.jpg
    :width: 700px
    :align: center
    :alt: CFD full channel
@@ -356,7 +356,7 @@ AguaClara uses a fairly straightforward way of setting :math:`\Pi_{H_eS_{Min}}`.
 
 .. _figure_slot_width_description:
 
-.. figure:: Images/Slot_width_description.jpg
+.. figure:: ../Images/Slot_width_description.jpg
    :align: center
    :width: 600px
    :alt: image showing the dimensiond of spacing within the flocculator
@@ -369,7 +369,7 @@ The minimum :math:`\Pi_{H_eS}` allowable depends on the slot with ratio. If :mat
 
 .. _figure_HeS_ratio_min:
 
-.. figure:: Images/HeS_ratio_min.jpg
+.. figure:: ../Images/HeS_ratio_min.jpg
    :align: center
    :width: 600px
    :alt: minimum H S ratio
@@ -401,7 +401,7 @@ These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` t
 
 .. _figure_floc_module_with_obstacles:
 
-.. figure:: Images/Floc_module_with_obstacles.jpg
+.. figure:: ../Images/Floc_module_with_obstacles.jpg
    :width: 800px
    :align: center
    :alt: floc module with obstacles
@@ -410,7 +410,7 @@ These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` t
 
 .. _figure_floc_flow_with_obstacles:
 
-.. figure:: Images/Floc_flow_with_obstacles.jpg
+.. figure:: ../Images/Floc_flow_with_obstacles.jpg
    :align: center
    :width: 900px
    :alt: floc flow with obstacles
