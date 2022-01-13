@@ -445,10 +445,10 @@ The factors that makes the length of the branch different from simply :math:`ID/
 
 .. _figure_branch_length:
 
-.. figure:: ../images/figure_branch_length.png
+.. figure:: ../Images/filter_branch_length.png
     :width: 80%
     :align: center
-    :alt: filter manifold, interal image
+    :alt: filter manifold, internal image
 
     This image shows an old image of a filter inlet manifold. The center dotted line shows the midline of the trunk, and the circle shows the cap on the end of one branch. The radius of the trunk and the depth of the cap at then end must be subtracted from the length to determine the spacing of the orifices. This image also shows how not all of the branch length is used for inlet orifices.
 
@@ -561,17 +561,12 @@ Because the 2 inner inlets (the ones that aren't the backwash trunk or the upper
 On each layer trunk, there are :math:`N_{FiBranch}` branches on **each side** of the trunk. That means the total number of branches on each trunk is :math:`2N_{FiBranch}`
 
 
-
-Using the minimum ND of the Filter Manifold Branches, as defined above, the minimum flow area of a branch can be calculated: [I'm lost here. You haven't calculated the Branch diameter yet. See my approach above for calculating the area served by one branch. The ID of the branch is irrelevant. I now realize that we made a mistake in first creating the text. You can't see the mistakes if you don't actually do the calculations. I always develop a method in a calculation space (now python) AND in an equation derivation space (now RST)].
-
-
-
 First Constraint: Pressure Recovery in Trunks During Forward Filtration
 ---------------------------------------------------------------------------
 
 [This section needs to go above the section where you calculate the branch diameter given the PR constraint.]
 
-The total allowable pressure recovery of the filter manifold is controlled by the head loss in each sand layer and the head loss ratio, :math:`\Pi_{ManifoldHeadLoss}`, as defined above in :ref:`Flow Distrbution Constraints <flow_distribution_constraints>`.
+The total allowable pressure recovery of the filter manifold is controlled by the head loss in each sand layer and the head loss ratio, :math:`\Pi_{ManifoldHeadLoss}`, as defined above in :ref:`Flow Distribution Constraints <flow_distribution_constraints>`.
 
 The head loss through the sand layer, :math:`HL_{FiCleanLayerMin}` is a fuction of layer depth, :math:`H_{FiLayer}` and overall velocity of the filter , :math:`\frac{Q_{FiLayer}}{A_{Fi}}`, using the Kozeny Equation in :ref:`Headloss Requirement <heading_headloss_requirements>` in the Filtration Design section.
 
