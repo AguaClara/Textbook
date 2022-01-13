@@ -49,33 +49,13 @@ Substituting the previous equation for the eddy length scale, :math:`L_{eddy}`, 
     Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}
 
 The flow rate that can be served with a single injection port is a function of how much energy we use for the mixing process.
-
-.. code:: python
-
-  n_points = 50
-  h_e_graph = np.logspace(-1,1,n_points) * u.m
-
-  v_channel = 0.45 * u.m/u.s
-  def Q_per_mixer(t_eddy):
-  return (u.gravity * h_e_graph * t_eddy**2 * v_channel).to(u.L/u.s)
-
-  plt.plot(h_e_graph,Q_per_mixer(1*u.s),linewidth=3)
-  plt.plot(h_e_graph,Q_per_mixer(0.3*u.s),linewidth=3)
-  plt.plot(h_e_graph,Q_per_mixer(0.1*u.s),linewidth=3)
-  plt.xscale("log")
-  plt.yscale("log")
-  plt.xlabel('Head loss (m)')
-  plt.ylabel('Flow rate (L/s)')
-  plt.grid(which='both')
-  plt.legend(['1 s','0.3 s','0.1 s'])
-  plt.gca().yaxis.set_major_formatter(ticker.ScalarFormatter())
-  plt.gca().xaxis.set_major_formatter(ticker.ScalarFormatter())
+The code to generate the following plot can be found `here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=Wb5pRBA4Yw3e&line=2&uniqifier=1>`_
 
 The flow rate per mixing zone increases rapidly as the mixing time allowed is increased and as the energy input is increased.
 
 .. _figure_flow_per_mixing_zone:
 
-.. figure::    Images/Flow_per_mixing_zone.png
+.. figure::    ../Images/Flow_per_mixing_zone.png
     :width: 700px
     :align: center
     :alt: Flow per mixing zone
@@ -90,7 +70,7 @@ The dimensions of the opening between cylinders and the diameter of the cylinder
 
     h_e = \left(\frac{A_{exp}}{A_{con}} -1 \right)^2 \, \frac{\bar  v_{exp}^2}{2g}
 
-where con = contracted control surface and exp = expanded control surface. We can solve the head loss equation for the dimensions of the contractions. First, solve for the area ratio
+Where con = contracted control surface and exp = expanded control surface. We can solve the head loss equation for the dimensions of the contractions. First, solve for the area ratio
 
 .. math::
 
@@ -120,34 +100,7 @@ The diameter of the cylinders is equal to
 
     D_{cylinder}=W_{exp} - W_{con}
 
-Below is an example design for a rapid mix unit that uses 20 cm of head loss and achieves mixing in 0.3 seconds.
-
-.. code:: python
-
-  Head_loss_max = 20 * u.cm
-  t_eddy = 0.3 * u.s
-  L_eddy = (t_eddy * np.sqrt(u.gravity * Head_loss_max)).to(u.m)
-  print('The spacing between injection ports is',L_eddy)
-
-
-  #expanded velocity
-  v_channel = 0.45 * u.m/u.s
-  Q_per_mixer = (v_channel * L_eddy**2).to(u.L/u.s)
-  print('The flow rate of raw water per chemical injection point is',Q_per_mixer)
-
-  Q=20000/7 * u.L/u.s #Fairmont design
-  A_channel = Q/v_channel
-  n_ports = (A_channel/L_eddy**2).to(u.dimensionless)
-  print('The number of injection ports is',(np.round(n_ports)).magnitude)
-
-  Pi_A = np.sqrt(2*u.gravity*Head_loss_max)/v_channel + 1
-  print('The expansion ratio is',Pi_A)
-  v_jet = v_channel * Pi_A
-  w_contraction = L_eddy/Pi_A
-  print('The width of the contractions is',w_contraction)
-
-  D_cyl = L_eddy - w_contraction
-  print('The diameter of the cylinder is',D_cyl)
+`Here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=MpwXnJvCaN05&line=7&uniqifier=1>`_ is an example design for a rapid mix unit that uses 20 cm of head loss and achieves mixing in 0.3 seconds.
 
 * The spacing between injection ports is 0.4201 meter
 * The flow rate of raw water per chemical injection point is 79.43 liter / second

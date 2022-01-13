@@ -1,13 +1,8 @@
 .. _title_Chemistry_of_Water_Treatment_Introduction:
 
-*******************************************
-Chemistry of Water Treatment Introduction
-*******************************************
-
-.. _heading_Chemistry_of_Coagulant_Nanoparticles:
-
+*************************************
 Chemistry of Coagulant Nanoparticles
-========================================
+*************************************
 
 Aluminum based coagulants are commonly used in drinking water treatment plants. Less frequently iron based coagulants are used. These metals precipitate in water at neutral pH as :math:`Al(OH)_3` or :math:`Fe(OH)_3`. These precipitates form nanoparticles that are sticky. The origin of that stickiness is not well known, but one significant property of both precipitates is that they are both highly polar molecules. The `difference in electronegativity <https://en.wikipedia.org/wiki/Electronegativity>`_ (Pauling scale) between
  - Aluminum (1.61) and Oxygen (3.44) is 1.83
@@ -97,7 +92,7 @@ A critical property of coagulants is that in order to act as an adhesive between
 
 .. _figure_Al_solubility:
 
-.. figure::    Images/Al_solubility.png
+.. figure::    ../Images/Al_solubility.png
     :width: 600px
     :align: center
     :alt: Al solubility
@@ -107,11 +102,6 @@ A critical property of coagulants is that in order to act as an adhesive between
 Research is needed to quantify flocculation performance in continuous flow floc/floc blanket/plate settler systems as a function of pH.
 
 The aluminum concentration range used for flocculation ranges from approximately 0.4 - 10 mg/L and is strongly influenced by the concentration of dissolved organic matter and the concentration of suspended solids. The flocculation and floc blanket capacity to produce collisions between suspended particles also influences the required aluminum concentration.
-
-.. _heading_pH_Adjustment_in_Water_Treatment_Plants:
-
-pH Adjustment in Water Treatment Plants
-----------------------------------------
 
 In drinking water treatment plant operation it is sometimes necessary to add a base (or acid) to increase (or decrease) the pH of the raw water. The added coagulant tends to reduce the pH. The carbonate system is most important in understanding how the base will adjust the pH because the reaction between carbonic acid and bicarbonate occurs around pH 6.3, the pK (negative log of the dissociation constant is the pH where that reaction is centered) for that reaction. Carbon dioxide exchange with the atmosphere is insignificant in drinking water treatment unit processes unless there is an aeration stage. Thus we can use the ANC equation for the case with no :math:`CO_2` exchange with the atmosphere.
 

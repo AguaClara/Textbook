@@ -1,8 +1,8 @@
 .. _title_Introduction_to_The_Physics_of_Water_Treatment_Design:
 
-*****************************************************
+**************************************
 The Physics of Water Treatment Design
-*****************************************************
+**************************************
 
 .. _heading_A_Different_Kind_of_Textbook:
 
@@ -15,8 +15,8 @@ Engineering textbooks provide a venue for authors to share what they've learned,
 
 .. _heading_Edge_of_Knowledge:
 
-The edge of knowledge may be closer than we thought
-----------------------------------------------------
+The Edge of Knowledge
+----------------------
 
 The assumption that what is written and passed down in oral history through the scientific community is true can lead to missed opportunities and lost insights. The hypotheses from one generation of scientists can too easily evolve into new theories in the next generation and then into established theories for the next. The history of drinking water treatment science is cloudy (think high turbidity!) with hypotheses that miss or misrepresent key concepts.
 
@@ -30,7 +30,7 @@ We want to encourage skepticism and we want to develop insights to guide thought
 
 .. _figure_short_walk:
 
-.. figure:: Images/Short_walk_to_the_edge.jpg
+.. figure:: ../Images/Short_walk_to_the_edge.jpg
     :width: 500px
     :align: center
     :alt: internal figure
@@ -39,44 +39,20 @@ We want to encourage skepticism and we want to develop insights to guide thought
 
 There are significant knowledge gaps in every process that we cover in this textbook. We aren’t yet able to optimize surface water treatment processes because we don’t yet understand the fundamental physics of many of the processes. We are getting closer, join us on the journey.
 
-We need the brightest and the best to create new and better solutions so we can meet the goal of providing everyone with safe drinking water. This challenge is apparently more difficult than building a space station, designing a fuel cell, or inventing the world wide web. So let’s role up our sleeves and begin.
-
-.. _heading_Tools_to_Find_the_Edge_of_Knowledge:
-
-Tools to Find the Edge of Knowledge
------------------------------------
+We need the brightest and the best to create new and better solutions so we can meet the goal of providing everyone with safe drinking water. This challenge is apparently more difficult than building a space station, designing a fuel cell, or inventing the world wide web. So let’s roll up our sleeves and begin.
 
 Don't believe everything we say. Ask lots of questions:
 
-  - How do you know that? The goal here is to identify the difference between what is known and what is hypothesized.
-  - What is the equation that describes the physics of this process? If there isn't an equation that describes the process and that can be used to design the reactor for the process, then it is likely that the physics of the process is not yet understood.
-  - How could we improve this process? If the physics of a process are fully understood, then dimensionally correct equations can be used to obtain the optimal design for that process.
-  - Is the process design based on "rules of thumb" or on physics? "Rules of thumb" or empirical design guidelines often can be identified by the use of physical parameters that have units. For example, if the design guideline specifies a length, time, or velocity then it is likely that the guideline is not based on physics. If the design guidelines are based on a dimensionless parameter then it is possible that it is based on physics.
-
+ - How do you know that? The goal here is to identify the difference between what is known and what is hypothesized.
+ - What is the equation that describes the physics of this process? If there isn't an equation that describes the process and that can be used to design the reactor for the process, then it is likely that the physics of the process is not yet understood.
+ - How could we improve this process? If the physics of a process are fully understood, then dimensionally correct equations can be used to obtain the optimal design for that process.
+ - Is the process design based on "rules of thumb" or on physics? "Rules of thumb" or empirical design guidelines often can be identified by the use of physical parameters that have units. For example, if the design guideline specifies a length, time, or velocity then it is likely that the guideline is not based on physics. If the design guidelines are based on a dimensionless parameter then it is possible that it is based on physics.
  - Evaluate the data to see if it matches predictions of the hypothesized model. Assess whether the authors acknowledge when their data doesn't match hypothesized models.
  - Beware of the use of words that are poorly defined and that hide uncertainty. For example, creating a name for a supposed mechanism to describe all of the observations that don't fit with your theory does NOT mean that you understand that mechanism. The ability to name something doesn't mean it is understood (see "sweep" flocculation as an example).
  - Does this “theory” provide insights that have led to new discoveries or new applications?
  - Does the “theory” include equations that are based on the fundamental laws of nature?
  - Does the “theory” use dimensionless constants that are close to one?
  - Is it an elegant “theory” with no need for special cases?
-
-
-.. _heading_Myth_in_Environmental_Engineering:
-
-Myth in Environmental Engineering
----------------------------------
-
-The following list is designed to get you thinking. These are concepts that are present in the Environmental Engineering community and that may capture some elements of truth and that may also further misconceptions.
-
- - Dead bodies cause disease
- - Slow sand filters ripen (improve in ability to remove contaminants over time) because of biological growth in the filter bed
- - If a 20 cm deep sand filter removes 90% of influent particles, then a 40 cm deep filter will remove 99% of influent particles
- - If water is dirty, then you should filter it
- - Chlorine disinfects dirty water and makes it safe to drink
- - Chlorination and filtration eliminated typhoid fever from the US
- - Cessation of chlorination due to fear of disinfection by products caused the cholera outbreak in Peru in 1993
- - Sedimentation is simple
- - We already know how to solve the problem of the billions of people who do not having access to safe drinking water
 
 .. _heading_Uncertainty_in_Science_and_Engineering:
 
@@ -89,24 +65,10 @@ Your question could be whether the distinction between fact and hypothesis reall
 
 This question is at the core of our educational philosophy. Is this text the repository of knowledge that we are providing for you to drink or is this text a conversation where we invite you to join the effort to discover better ways to provide safe water on tap?
 
-.. _heading_Textbook_Philosophy:
-
-Integrating Educational Philosophy with an Evolving Textbook
---------------------------------------------------------------
-
-This is an evolving textbook. We don't intend to ever print this book. This book has version numbers just like software with the idea that revisions are rapid and frequent. We commit to helping to accelerate the pace of knowledge generation and to revising this text as you help us identify places where we have presented hypotheses as theory and places where research provides a basis for better theoretical models of the water treatment processes.
-
-Our students are co-creators of knowledge and not empty vessels to be filled with our wisdom. AguaClara technologies are inventions that are the result of idea collisions in the AguaClara labs and from observations and reflections with operators, technicians, and engineers in dozens of water treatment plants. Although we've learned a great deal about water treatment since 2005 when AguaClara was founded, there is still much more to be learned. And so it is with a spirit of curiosity that we write this textbook expecting to learn even more in the coming years.
-
-Socrates said "`Education is the kindling of a flame, not the filling of a vessel <https://www.goodreads.com/quotes/69267-education-is-the-kindling-of-a-flame-not-the-filling>`_." Our goal is to bring the spirit of play, discovery, and mystery into the challenge of improving the quality of life of everyone on the planet by sharing better methods to produce safe drinking water.
-
-In We Make the Road by Walking: Conversations on Education and Social Change, Paulo Freire said,
-"`The more we become able to become a child again, to keep ourselves childlike, the more we can understand... <https://www.goodreads.com/author/quotes/41108.Paulo_Freire?page=2>`_". We commit to playing together in a relationship where we are all learning and we are all teaching. "Education must begin with the solution of the teacher-student contradiction, by reconciling the poles of the contradiction so that both are simultaneously teachers and students." - Paulo Freire
-
 .. _heading_Empathy:
 
-Respect, Empathy, Love and Curiosity power the AguaClara Innovation System
---------------------------------------------------------------------------
+Core Principles of AguaClara Innovation
+---------------------------------------
 
 The AguaClara network of organizations has been methodically inventing improved water treatment technologies since 2005. Our success is based on respect, empathy and love. Innovation requires flocculation of ideas. The transport of ideas between organizations and individuals is mediated by respect. Respect as a cornerstone of organizational culture foster rapid and honest exchange of ideas. The rapid pace of innovation in the AguaClara network is sustained thru a shared culture of respect, empathy, and love.
 
@@ -130,7 +92,7 @@ We've learned much from plant operators. They figured out how to reduce rising f
 
 .. _figure_Moroceli_curtains:
 
-.. figure:: Images/Moroceli_curtains.jpg
+.. figure:: ../Images/Moroceli_curtains.jpg
     :width: 500px
     :align: center
     :alt: Moroceli curtains
@@ -148,7 +110,7 @@ The `Sustainable Development Goals: SDGs <https://www.un.org/sustainabledevelopm
 
 .. _figure_SDG6:
 
-.. figure:: Images/SDG6.png
+.. figure:: ../Images/SDG6.png
     :width: 100px
     :align: center
     :alt: SDG6
@@ -159,7 +121,7 @@ The number of people who currently lack access to reliable safe water on tap is 
 
 .. _figure_CDC_Global_Safe_Tap_Water:
 
-.. figure:: Images/CDC_Global_Safe_Tap_Water.png
+.. figure:: ../Images/CDC_Global_Safe_Tap_Water.png
     :width: 600px
     :align: center
     :alt: CDC Global Safe Tap Water
@@ -171,7 +133,7 @@ The `UN estimate in 2017 <https://www.un.org/sustainabledevelopment/blog/2017/07
 
 .. _figure_Population_Infographic_01:
 
-.. figure:: Images/Population_Infographic_01.jpg
+.. figure:: ../Images/Population_Infographic_01.jpg
     :width: 400px
     :align: center
     :alt: Population infographic
@@ -181,25 +143,7 @@ The `UN estimate in 2017 <https://www.un.org/sustainabledevelopment/blog/2017/07
 
 Thus by 2030 we need to provide safe water for at least 3.3 billion people AND maintain the water supply systems for the 5.2 billion who currently have access to safe water. That is a daunting number that requires some exploration!
 
-.. code:: python
-
-  from aguaclara.core.units import unit_registry as u
-  import datetime
-  People_needing_water_2030 = 3.3*10**9
-  now = datetime.datetime.now()
-  Task_time = (2030 - now.year)*u.year
-  #If we assume we will meet this demand by building the same amount of new capacity each year, then we have
-  People_per_year = People_needing_water_2030/Task_time
-  People_per_year
-  #The percapita demand for water
-  Per_capita_demand = 3*u.mL/u.s
-  Per_capita_demand.to(u.L/u.day)
-  Per_capita_demand
-  Rate_new_water_supply_capacity = (People_per_year * Per_capita_demand).to(u.L/(u.s*u.year))
-  Rate_new_water_supply_capacity
-  NYC_water_supply = 44000 * u.L/u.s
-  NYC_per_year = Rate_new_water_supply_capacity/NYC_water_supply
-  NYC_per_year
+`Use this code to calculate the increased capacity <https://colab.research.google.com/github/lainey-reed/Textbook/blob/master/Colab/AC_Textbook_Chapter1.ipynb#scrollTo=vQ7seH8lRXpx>`_
 
 If we provide 260 L/day per person, then we need to provide the equivalent of 19 water supplies for New York City every year between now and 2030. The planet needs approximately 800,000 L/s of new capacity each year. AguaClara water treatment plants cost approximately $10,000 per L/s of treatment capacity. Thus the budget for global water treatment needs to be 8 billion USD per year. Note that this doesn't include any other aspects of supplying water. Managing water sources, transmission lines, storage, and distribution systems are even more expensive than water treatment.
 
@@ -207,8 +151,8 @@ The need for drinking water supplies isn't limited to the global south. The Cali
 
 .. _heading__2_billion_without_access_to_safe_water:
 
-Why don't 2 billion people have access to safe water?
--------------------------------------------------------
+Safe Water Access
+-----------------
 
 The simple answer is that they are too poor and are unable to afford safe water on tap. But it isn't that simple! Families without access to safe water on tap often spend more for water than families with safe water on tap. There seem to be two key reasons why those with limited financial resources often have limited access to water, poor quality water, and yet pay a premium for that water.
 
@@ -279,19 +223,24 @@ The removal of other dissolved species is beyond the scope of the first release 
 
 .. _heading_Chlorine_Saved_the_World:
 
-Chlorine (Might Have) Saved the World
--------------------------------------
+Chlorination
+------------------------
 
 Chlorine is widely recognized for reducing mortality from water borne disease in the United States. A more careful review of the mortality data and of the ability of chlorine to inactive various pathogens makes it difficult to assess the role of chlorine. A classic graph (see :numref:`figure_US_death_rate`) has been used to suggest that chlorination of drinking water supplies resulted in a significant reduction in mortality
 
 .. _figure_US_death_rate:
 
-.. figure:: Images/US_infectious_diseases_death_rate.jpg
+.. figure:: ../Images/US_infectious_diseases_death_rate.jpg
     :width: 500px
     :align: center
     :alt: US_infectious_diseases_death_rate
 
     `Classic graph showing the reduction in the death rate for the United States from 1900 to 1996. <https://www.cdc.gov/mmwr/preview/mmwrhtml/mm4829a1.htm>`_
+
+.. _heading_Treatment_Trains:
+
+Treatment Trains
+----------------
 
 .. _table_Surface_Water_Treatment_Technologies:
 
@@ -302,7 +251,7 @@ Chlorine is widely recognized for reducing mortality from water borne disease in
    Simple sedimentation, particles settle, none, public, unknown
    Flocculation, aluminum and iron salts, none, public, `1757 <https://www.iwapublishing.com/news/coagulation-and-flocculation-water-and-wastewater-treatment>`_
    Sedimentation, horizontal flow, flocculation, public, unknown
-   Lamellar sedimentation, plate or tube settlers, flocculation or floc blanket, public, `1904 <http://www.hydroflotech.com/inclined-plate-clarifier-basic-theory-of-operation>`_
+   Lamellar sedimentation, plate or tube settlers, flocculation or floc blanket, public, `1904 <https://smartwatermagazine.com/blogs/karl-uwe-schmitz/tube-settler-design-basics-solid-settling-lamella-clarifiers>`_
    Roughing filter, simple sedimentation in a gravel bed, none, public, `unknown <https://www.researchgate.net/publication/237827490_Roughing_filter_for_water_pre-treatment_technology_in_developing_countries_A_review?enrichId=rgreq-bb1d04e6613378d626c78cadb6674ae8&enrichSource=Y292ZXJQYWdlOzIzNzgyNzQ5MDtBUzoyMDAwMDczMDQxMjY0NjdAMTQyNDY5Njg2NTYxMQ%3D%3D&el=1_x_2>`_
    Slow sand filtration, Roughing filter or single step treatment for low NTU water, none, public, `1829 <https://en.wikipedia.org/wiki/Slow_sand_filter>`_
    Rapid sand filtration, depth filtration, sedimentation, public, `1920 <https://en.wikipedia.org/wiki/Rapid_sand_filter>`_
@@ -315,12 +264,6 @@ Chlorine is widely recognized for reducing mortality from water borne disease in
 
 See `Pretreatment Processes for Potable Water Treatment Plants by Jeff Lindgren for an excellent overview of available technologies, May 2014 (not including AguaClara innovations) <https://www.pnws-awwa.org/uploads/PDFs/conferences/2014/2.%20PNWS%20AWWA%20WTC%20Precon%2005%2007%202014%20Pretreatment%20by%20B&V%201&2%20-%20R1.pdf>`_.
 
-
-.. _heading_Treatment_Trains:
-
-Treatment Trains
-----------------
-
 The prerequisites for the unit processes in :numref:`table_Surface_Water_Treatment_Technologies` reveal that surface water treatment almost always requires a series of treatment steps. A treatment train is a series of treatment steps (or unit processes) designed to convert a contaminated source water into a purified water meeting the use requirements.
 
 Example treatment trains include:
@@ -329,14 +272,18 @@ Example treatment trains include:
  - AguaClara: hydraulic flocculation, floc blanket, lamellar sedimentation, stacked rapid sand filtration, disinfection
  - Membrane filtration: flocculation, sedimentation, rapid sand filtration, granular or powdered activated carbon, pre-oxidation (see `Review Article <https://pubs-acs-org.proxy.library.cornell.edu/doi/abs/10.1021%2Fes802473r>`_)
 
+.. _heading_Textbook_Philosophy:
 
+An Evolving Research Approach
+-----------------------------
+=======
 .. _heading_The_AguaClara_Treatment_Train:
 
 The AguaClara Treatment Train
 =============================
 
 
-Why does flocculation precedes sedimentation?
+Why does flocculation precede sedimentation?
 Which process removes the largest quantity of contaminants?
 
 Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
@@ -351,25 +298,7 @@ Sedimentation is the process of particles ‘falling’ because they have a high
 | :math:`D_{particle}` = particle diameter
 | :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
 
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  import numpy as np
-  import matplotlib.pyplot as plt
-  def v_t(D_particle,density_particle,Temperature):
-    return (D_particle**2*pc.gravity *(density_particle - pc.density_water(Temperature))/(18*pc.viscosity_kinematic(Temperature)*pc.density_water(Temperature))).to(u.m/u.s)
-  clay = 2650 * u.kg/u.m**3
-  organic = 1040 * u.kg/u.m**3
-  Temperature = 20 * u.degC
-  D_particle = np.logspace(-6,-3)*u.m
-  fig, ax = plt.subplots()
-  ax.loglog(D_particle.to(u.m),v_t(D_particle,clay,Temperature).to(u.m/u.s))
-  ax.loglog(D_particle.to(u.m),v_t(D_particle,organic,Temperature).to(u.m/u.s))
-  ax.set(xlabel='Particle diameter (m)', ylabel='Terminal velocity (m/s)')
-  ax.legend(["clay or sand","organic particle"])
-  imagepath = 'Introduction/Images/'
-  fig.savefig(imagepath+'Terminal_velocity')
-  plt.show()
+The code to generate a plot that shows this relationship can be found `here <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Colab/AC_Textbook_Chapter1.ipynb#scrollTo=sEqG7_T5Su2m>`_
 
 
 The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take care of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (:eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
@@ -377,7 +306,7 @@ The terminal velocities of particles in surface waters range over many orders of
 
 .. _figure_Terminal_velocity:
 
-.. figure:: Images/Terminal_velocity.png
+.. figure:: ../Images/Terminal_velocity.png
     :width: 500px
     :align: center
     :alt: Terminal Velocity
@@ -437,7 +366,7 @@ Mechanized and automated water treatment plants performed reasonably well in com
 
 .. _figure_Kathmandu_chemical_feed_room:
 
-.. figure:: Images/Kathmandu_chemical_feed_room.png
+.. figure:: ../Images/Kathmandu_chemical_feed_room.png
     :width: 300px
     :align: center
     :alt: Kathmandu chemical feed room
@@ -451,7 +380,7 @@ Chemical dosing systems are particularly vulnerable and their failures make plan
 
 .. _figure_Kathmandu_alum_dosing:
 
-.. figure:: Images/Kathmandu_alum_dosing.jpg
+.. figure:: ../Images/Kathmandu_alum_dosing.jpg
     :width: 300px
     :align: center
     :alt: Kathmandu alum dosing
@@ -484,7 +413,7 @@ An example of design for the operator is the elevation of the walkways in AguaCl
 
 .. _figure:
 
-.. figure:: Images/Improvised_ladder_access_to_sed_tank.jpg
+.. figure:: ../Images/Improvised_ladder_access_to_sed_tank.jpg
     :width: 300px
     :align: center
     :alt: Improvised ladder access to sed tank
@@ -549,55 +478,32 @@ AguaClara plants have a layout that places the coagulant dose controls within a 
 
 .. todo:: Show the plan view of an AguaClara plant.
 
-.. _heading_AguaClara_Innovations:
 
-AguaClara Inventions
-=====================
+This is an evolving textbook. We don't intend to ever print this book. This book has version numbers just like software with the idea that revisions are rapid and frequent. We commit to helping to accelerate the pace of knowledge generation and to revising this text as you help us identify places where we have presented hypotheses as theory and places where research provides a basis for better theoretical models of the water treatment processes.
 
-Plant layout
-------------
- #. Compact layout with processes sharing common walls when possible
- #. Walkways set at optimal elevation for observation and maintenance of processes
- #. Open tanks used whenever possible to simplify maintenance
- #. Building enclosure to protect the entire plant from UV and for security
+Our students are co-creators of knowledge and not empty vessels to be filled with our wisdom. AguaClara technologies are inventions that are the result of idea collisions in the AguaClara labs and from observations and reflections with operators, technicians, and engineers in dozens of water treatment plants. Although we've learned a great deal about water treatment since 2005 when AguaClara was founded, there is still much more to be learned. And so it is with a spirit of curiosity that we write this textbook expecting to learn even more in the coming years.
 
-Chemical dosing
----------------
- #. Linear flow orifice meter to both measure the plant flow rate and to turn the entrance tank water surface into a flow sensor input for the chemical dosing system.
- #. Gravity powered semi-automated dosing system that delivers a constant dose even when plant flow rate changes.
- #. Slider on a calibrated scale for intuitive changes in chemical dose
+Socrates said "`Education is the kindling of a flame, not the filling of a vessel <https://www.goodreads.com/quotes/69267-education-is-the-kindling-of-a-flame-not-the-filling>`_." Our goal is to bring the spirit of play, discovery, and mystery into the challenge of improving the quality of life of everyone on the planet by sharing better methods to produce safe drinking water.
 
-Rapid mix
----------
- #. Simple orifice for hydraulic rapid mix
+In We Make the Road by Walking: Conversations on Education and Social Change, Paulo Freire said,
+"`The more we become able to become a child again, to keep ourselves childlike, the more we can understand... <https://www.goodreads.com/author/quotes/41108.Paulo_Freire?page=2>`_". We commit to playing together in a relationship where we are all learning and we are all teaching. "Education must begin with the solution of the teacher-student contradiction, by reconciling the poles of the contradiction so that both are simultaneously teachers and students." - Paulo Freire
 
-Flocculation
-------------
- #. Obstacles between baffles to create a more uniform distribution of energy dissipation rate and a more efficient use of available energy
- #. Plastic modules that can easily be removed from channels for maintenance
- #. Compact vertical flow flocculators for low flow plants
+[SECTIONS BELOW TO BE MOVED OUT OF CHAPTER]
 
-Sedimentation
--------------
- #. Four channel inlet/outlet system that enables
+.. _heading_Myth_in_Environmental_Engineering:
 
-     #. dumping flocculated water that doesn't meet specifications
-     #. taking one sedimentation tank offline by placing a pipe stub in the inlet and a cap on the outlet
-     #. dumping settled water that doesn't meet specifications
+Myths in Environmental Engineering
+---------------------------------
 
- #. Inlet manifold with flow diffusers that straighten the flow into a continuous line jet
- #. Inlet manifold is offset from center to force jet to all go in a consistent direction through the jet reverser
- #. Jet reverser that efficiently reverses the direction of the incoming water to be able to resuspend settled flocs that are sliding down the inclines
- #. Zero settled sludge in the main part of the sedimentation tank
- #. Hydraulically cleaned sedimentation tank with no moving parts
- #. Floc Hopper that consolidates the floc slurry prior to draining.
- #. Floc blanket that is stable due to loss to or gain from settled sludge
+The following list is designed to get you thinking. These are concepts that are present in the Environmental Engineering community and that may capture some elements of truth and that may also further misconceptions.
 
-Filtration
-----------
- #. Sand drain system to empty sand from filter hydraulically
- #. Wing and orifice system to inject water into the filter bed
- #. Stacked Rapid Sand Filtration system that has the same flow rate for filtration and for backwash
- #. Uses settled water for backwash to eliminate need for pumps and clearwells and to eliminate failure mode of inadequate supply of filtered water for backwash.
- #. Air valve control system to trigger mode change from backwash to filtration and from filtration to backwash
- #. No valves needed on inlet and outlet pipes
+ - Dead bodies cause disease
+ - Slow sand filters ripen (improve in ability to remove contaminants over time) because of biological growth in the filter bed
+ - If a 20 cm deep sand filter removes 90% of influent particles, then a 40 cm deep filter will remove 99% of influent particles
+ - If water is dirty, then you should filter it
+ - Chlorine disinfects dirty water and makes it safe to drink
+ - Chlorination and filtration eliminated typhoid fever from the US
+ - Cessation of chlorination due to fear of disinfection by products caused the cholera outbreak in Peru in 1993
+ - Sedimentation is simple
+ - We already know how to solve the problem of the billions of people who do not having access to safe drinking water
+

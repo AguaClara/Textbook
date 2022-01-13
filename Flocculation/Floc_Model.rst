@@ -1,209 +1,125 @@
 .. _title_Flocculation_Model:
 
 *****************************************
-Flocculation Model
+AguaClara Hydraulic Flocculation Model
 *****************************************
 
-Particle aggregation is the fundamental mechanism that facilitates ultra low energy and low cost removal of particles and pathogens from water. Aggregation requires successful collisions. Success is defined by particles  attaching when they collide.
+The AguaClara hydraulic flocculation model was developed over 15 years of extensive laboratory and field research and is based on the physics of interactions between particles in the raw water, dissolved organic molecules, and coagulant nanoparticles in a shear flow. The AguaClara model is based on the physics of these interactions and is the first non-empirical flocculation model. The AguaClara Hydraulic Flocculation model is described in detail in :ref:`title_Flocculation_Model`.
 
-Model assumptions
-=================
+2005 - We used conventional guidelines based on velocity gradient to design the first low flow vertical flocculator
 
-Key understanding: coagulant nanoparticles are sticky
------------------------------------------------------
+2010 - We designed using energy dissipation rate and accounted for the nonuniformity of the energy dissipation rate (:math:`\theta` = 15 minutes)
 
-Prior to the AguaClara flocculation model it was widely assumed that attachment was made possible by reducing the net surface charge of the particles. The AguaClara flocculation model is based on the understanding that coagulant nanoparticles are sticky and are much larger than the length scale of the repulsive forces due to surface charges. Thus surface charge is largely irrelevant and this explains why particle aggregation begins even with very low dosages of coagulant.
+2015 – We added obstacles to decrease the distance between expansions to make all of our flocculators have maximum collision efficiency (:math:`\theta` = 8 minutes)
 
-Key understanding: Particles follow the fluid
-----------------------------------------------
+2016 – Learned that particle/floc collisions are dominated by viscous shear (not by turbulent eddies). Began designing flocculators based on a target head loss of 40 cm. Used a :math:`G\theta` of 37,000.
 
-The collisions are caused by particles having relative motion due to fluid deformation. Particle trajectories can be different from the fluid trajectory if the density of the fluid and the particle are significantly different and if the viscous effects are small compared with inertial effects (the Stokes number). The motion of primary particles and small flocs in surface water treatment have low Stokes numbers and follow the fluid trajectory.
+2017 - Designed a pipe flocculator for the 1 L/s plant with a :math:`G\theta` of 20,000 and a residence time of about 100 s.
 
-Key understanding: Long range transport is the slow part of the collision process
-------------------------------------------------------------------------------------
+Conventional vs AguaClara Flocculation
+---------------------------------------
 
-We need to calculate the rate of primary particle collisions. In turbulent flow flocculators the fluid deformation is caused by turbulent eddies that lose their energy to viscosity. The relative motion of particles would appear somewhat random as the small eddies have ever changing orientation and intensity. The result is that primary particles take a long meandering path before they finally approach each other and connect in a final collision. The path of relative motion prior to the collision can be thought of as having two distinct components.
-
- - The first component is long range transport when the particles are far apart with a separation distance that is proportional to the average distance between particles.
- - The second component is the short range transport at length scales less than the average particle separation distance to the final collision
-
-The AguaClara flocculation model assumes a relatively high velocity and long distance random walk clearing a volume of fluid equal to the volume occupied by a single particle. This is followed by a slow, short, straight walk toward a collision. The insight that the long range transport is the rate limiting step will be used to estimate the time required for particle collisions.
-
-Key understanding: Primary particles can't attach to large flocs during Flocculation
-------------------------------------------------------------------------------------
-
-In our early modeling work we assumed that collisions between primary particles and large flocs were favorable. This assumption led to the prediction that the highest quality water should be obtained when the raw water has the highest turbidity. That prediction is inconsistent with observations and led to the insight that during flocculation, primary particles are only able to collide successfully with other primary particles (or potentially with other very small flocs).
-
-The only transport mechanism that could cause a clay particle to collide with a large floc is the fluid deformation caused by the linear velocity gradient. In our flocculators that linear velocity gradient is caused by turbulent eddies at much larger scales of the flow. We hypothesize that primary particles can not attach to large flocs because primary particles can not collide with large flocs! To understand why this collision is impossible, we need a simple insight.
-
-The insight is that the large flocs drag fluid around as they rotate (due to the linear velocity gradient). The viscous layer around the large flocs creates a flow field in which there is no location far from the flocs that will eventually approach the surface of the flocs or even approach within the clay particle radius. If this is correct, then clay particles never collide with large flocs in a linear velocity gradient flow field.
-
-.. todo:: Find evidence that proves or disproves the hypothesis that no collisions occur between dissimilar sized particles in a linear velocity gradient.
-
-Key understanding: Relative velocities between particles are dominated by viscous shear
----------------------------------------------------------------------------------------
-
-Relative velocities between particles are dominated by viscous shear because the separation distances are smaller than the inner viscous length scale. The average particle separation distance is given by
-
-.. math::
-  :label: eq_spacing_of_number_concentration
-
-   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{-} V_{\rm{Surround}}}^\frac{1}{3}
-
-| Where:
-| :math:`\bar \Lambda` is the average separation distance
-| :math:`n_P` is the number of particles per volume of suspension
-| :math:`{\rlap{-} V_{\rm{Surround}}}` is the suspension volume occupied by one particle
-
-The number concentration of particles is given by
-
-.. math::
-  :label: eq_number_concentration_of_diameter
-
-   n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi \bar{d_P}^3} \frac{C_P}{\rho_P}
-
-| Where:
-| :math:`C_P` is the particle concentration
-| :math:`\rlap{-} V_P` is the volume of a single particle
-| :math:`\rho_P` is the particle density
-| :math:`\bar{d_P}` is the average particle diameter
-
-Equations :eq:`eq_spacing_of_number_concentration` and :eq:`eq_number_concentration_of_diameter` can be combined to obtain the relationship between separation distance and particle diameter.
-
-.. math::
-  :label: eq_spacing_of_diameter
-
-   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} =  \bar{d_P} \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{\frac{1}{3}}
-
-
-.. _figure_Particle_separation:
-
-.. figure:: Images/Particle_separation.png
-   :width: 200px
+.. csv-table:: Conventional vs AguaClara flocculation
+   :header: "Characteristic", "Conventional - Mechanical", "AguaClara - Hydraulic"
    :align: center
-   :alt: Particle separation
 
-   The average particle separation distance is defined as the distance between centers of cubes that each contain the volume of the suspension occupied by a single particle.
+   Goal, produce large flocs to be captured by sedimentation, reduce the concentration of primary particles
+   Residence time (min), 30, 2 to 7.5
+   Velocity gradient (Hz), 20 - 180, 100+
+   :math:`G\theta`, "50,000 - 250,000", "20,000 - 37,000"
+   Velocity gradient variability, approximately 8, approximately 1.4
+   reactor type, approaching completely mixed, approaching plug flow
 
-Particle separation distance matters because it determines which transport mechanisms are at play when two particles approach for a collision. The particle separation distance is a function of the particle concentration. Surface water treatment plants commonly treat water with turbidity between 1 and 1000 NTU. We will first find the number of clay particles per liter in typical raw water suspensions.
-
-.. code:: python
-
-  import aguaclara
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.core.constants as con
-  import aguaclara.research.environmental_processes_analysis as epa
-  import aguaclara.research.floc_model as fm
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-  C_Clay = np.arange(1,1000,1)*u.NTU
-  n_Clay = fm.num_clay(C_Clay,fm.Clay)
-  fig, ax = plt.subplots()
-  ax.loglog(C_Clay.to(u.NTU),n_Clay.to(1/u.L))
-  ax.set(xlabel='Clay concentration ($NTU$)', ylabel='Number of clay per liter')
-  fig.savefig('Flocculation/Images/NClay_vs_CClay')
-  plt.show()
+#references `Coagulation and Flocculation in Water and Wastewater Treatment <https://www.iwapublishing.com/news/coagulation-and-flocculation-water-and-wastewater-treatment>`__,
+iwapublishing
 
 
-.. _figure_NClay_vs_CClay:
+Collisions in Shear Flow
+------------------------
 
-.. figure:: Images/NClay_vs_CClay.png
+Given that hydraulic flocculators approach plug flow conditions it is reasonable to assume that at any given location in the flocculator there is a predominance of one size of flocs. Thus collisions between similar sized flocs are most likely because that is what is present. There is also a hydrodynamic reason why collisions between similar sized flocs are favored.
+
+In a shear flow the particles rotate and a boundary layer is created all around the rotating particles. The boundary layer prevents collisions between different sized particles (see :numref:`figure_No_Dissimilar_Collisions_in_Shear`) because the smaller of the two particles is unable to extend through the boundary layer of the larger particle. Only particles that are large enough to extend through each other's boundary layers can collide (see :numref:`figure_Similar_Size_Collisions_in_Shear`). Thus the particles must be similar in size because the boundary layer also scales with the diameter of the particle.
+
+
+.. _figure_No_Dissimilar_Collisions_in_Shear:
+
+.. figure:: ../Images/no_collisions_when_different_sizes.png
+   :target: https://youtu.be/f095r0Tvgoc
    :width: 400px
    :align: center
-   :alt: NClay vs CClay
+   :alt: No collisions between different sized particles
 
-   Diagram of number of clay particles per liter as a function of the clay concentration. Note that even 1 NTU water has millions of primary particles per liter.
+   Particles that are very different in size don't even get close enough to make contact because of the boundary layer around the larger particle. This is because the thickness of the boundary layer also scales with the diameter of the particle.
 
-The next step is to calculate the separation distance between the clay particles over this range of clay concentrations using Equation :eq:`eq_spacing_of_diameter`.
+Collisions between similar sized particles are possible because the particles are able to extend through the boundary layers.
 
-.. code:: python
+.. _figure_Similar_Size_Collisions_in_Shear:
 
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.core.constants as con
-  import aguaclara.research.environmental_processes_analysis as epa
-  import aguaclara.research.floc_model as fm
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-  lamda_Clay = fm.sep_dist_clay(C_Clay,fm.Clay)
-  fig, ax = plt.subplots()
-  ax.semilogx(C_Clay.to(u.NTU),lamda_Clay.to(u.mm))
-  ax.set(xlabel='Clay concentration ($NTU$)', ylabel=r'Clay separation distance ($mm$)')
-  fig.savefig('Flocculation/Images/LambdaClay_vs_CClay')
-  plt.show()
-
-
-.. _figure_LambdaClay_vs_CClay:
-
-.. figure:: Images/LambdaClay_vs_CClay.png
+.. figure:: ../Images/Similar_Size_Collisions_in_Shear.png
+   :target: https://youtu.be/zP-CK5fNH6Y
    :width: 400px
    :align: center
-   :alt: LambdaClay vs CClay
+   :alt: Favorable collisions between similar sized particles
 
-   The clay separation distance varies with the cube root of the concentration and thus varies over a relatively narrow range (0.07 mm to 0.7 mm) while the turbidity varies from 1 to 1000 NTU.
+   In a shear flow the particles rotate and a boundary layer is created all around the rotating particle. Similar sized particles are able to extend through the boundary layers and make contact.
 
-Given this range of particle separation distances the next question is whether transport of these particles relative to each other is driven by inertial or viscous dominated processes. Turbulent eddies devolve into smaller and smaller eddies until viscosity finally kills them. Viscosity damps out the effects of inertia at the inner viscous length scale.  Higher intensity turbulence can generate more energetic small eddies and can resist the effects of viscosity longer. Thus the inner viscous length scale decreases as the turbulent energy dissipation rate increases.
+The rotating boundary layers in a shear flow limit collisions to similar sized particles. Given that flocculation is an environment specifically designed to create fluid shear it is reasonable to assume that only collisions between similar sized particles are able to occur. This simplifies the Smoluchowski equation tremendously.
 
-The Camp-Stein velocity gradient used for flocculators varies from about 20 to 300 Hz. We will convert the Camp-Stein velocity gradient to an energy dissipation rate using
+Floc Formation
+===============
 
-.. math::
-
-   G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}
-
-Solving for the average energy dissipation rate, :math:`\bar \varepsilon`, we obtain
+For simplicity of modeling let's assume that flocs repeatedly double in size as suggested by the movie in :numref:`figure_Collisions_in_Sequence`. In that case, the number of primary particles in a floc is given by
 
 .. math::
+  :label: eq_n_primary_of_n_collisions
 
-  \bar \varepsilon = \nu G_{CS}^2
+    n_{primary} = 2^{n_{collisions}}
 
-We will use the inner viscous length scale, Equation :eq:`eq_inner_viscous_length` to determine whether viscous or inertial transport dominates particle collisions in surface water treatment given the range of particle separation distances (see :numref:`figure_LambdaClay_vs_CClay`).
+If we assume (and we will show this assumption to be wrong in the next step) that the floc volume is directly proportional to the total volume of the primary particles in the floc, then we can rearrange :eq:`eq_n_primary_of_n_collisions` to solve for the number of sequential collisions required to increase the number of primary particles by a factor of 1000,000,000.
 
-.. code:: python
+.. math::
+  :label: n_collisions_not_fractal
 
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.core.constants as con
-  import aguaclara.research.environmental_processes_analysis as epa
-  import aguaclara.research.floc_model as fm
+    n_{collisions} = \frac{log(n_{primary})}{log(2)}
 
-  import numpy as np
-  import matplotlib.pyplot as plt
-  Temperature = 20 * u.degC
-  G=np.arange(1,1000,1)*u.Hz
-  EDR = G**2 * pc.viscosity_kinematic(Temperature)
-  Inner_viscous = fm.lambda_vel(EDR, Temperature)
-  fig, ax = plt.subplots()
-  ax.semilogx(G.to(u.Hz),Inner_viscous.to(u.mm))
-  ax.set(xlabel='Velocity gradient (Hz)', ylabel='Inner viscous length scale (mm)')
-  ax.text(10, 30, 'Eddies cause mixing', fontsize=12,rotation=-30)
-  ax.text(3, 14, 'Viscous shear', fontsize=12,rotation=-30)
-  fig.savefig('Flocculation/Images/innerviscous_vs_G')
-  plt.show()
+`See here for the code to determine the number of collisions <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=cu3z2Pi7XCUY&line=3&uniqifier=1>`_
 
+30 sequential collisions would be required to produce a floc that contains 1 billion primary particles.
 
-.. _figure_innerviscous_vs_G:
+As flocs combine they don't coalesce like mist turning into rain drops. Instead they form loose aggregates that contain a higher and higher fraction of water in the voids between the solid primary particles.
 
-.. figure:: Images/innerviscous_vs_G.png
+Although the obvious flocculation advantage is that it produces larger aggregates that are easier to remove, it is also **possible** (this is a hypothesis that needs testing) that a difference in a physical property between primary particles and flocs plays a role in enhanced removal of flocs in floc blankets and filters. For example, the many relatively weak connection points between the primary particles in the flocs enables the flocs to deform. It is possible that deformation plays an important role right at the moment of collision. Presumably the bond strength required to lock the colliding particles together is less if the particles can deform as they are colliding.
+
+The size change produced by flocculation is dramatic. Clay particles and pathogens have sizes that are order :math:`\mu m` and they combine to form flocs that are order :math:`mm`. A thousand fold increase in diameter suggests a billion fold increase in volume.
+
+.. _figure_Flocs_are_fractals:
+
+.. figure:: ../Images/Flocs_are_fractals.png
+   :target: https://youtu.be/tAAC-KY8ZgA
    :width: 400px
    :align: center
-   :alt: inner viscous vs G
+   :alt: Flocs are fractals
 
-   The inner viscous length scale is approximately 3 to 10 mm for velocity gradients that are typically used in flocculators. Clay separation distances are smaller than the inner viscous length scale and thus viscous shear dominates particle collisions in flocculation.
+   The amount of water contained within a volume defined by the floc increases as the flocs grows.
 
-By comparing :numref:`figure_LambdaClay_vs_CClay` and :numref:`figure_innerviscous_vs_G` it is apparent that the particle separation distances commonly found in surface water treatment plants are much smaller than the inner viscous length scale for all practical flocculation velocity gradients. Thus viscosity will dominate the flocculation process. This key insight reveals why turbulent flow flocculators have been designed using the dimensionless grouping :math:`G \theta` which is fundamentally :math:`\sqrt\frac{\epsilon}{\nu} \theta`. Given that flocculation is viscous dominated implies that the flocculation process will slow down as the temperature increases and the viscosity increases.
+One of the mysteries of flocculation has been why it is such a slow process, requiring 30 minutes according to conventional design, and yet it appears to be a very rapid process. Plant operators observe that with high raw water turbidities that they can see flocculation progressing after about 0.5 minutes of flocculation. We can estimate the collision potential, :math:`G\theta` that corresponds to making visible flocs.
 
-Collision time estimate
------------------------
+.. math:: \bar G = \sqrt{ \frac{g h_e}{\theta \nu}}
+
+`See the code to determine that value here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-1InCjkGqiuF&line=3&uniqifier=1>`_
+
+Here initial flocculation is visible at a :math:`G\theta` of less than 3000. Given that flocculation is visible at this low collision potential, it is unclear why recommended :math:`G\theta` are as high as 100,000. This is one of the great mysteries that motivated the search for a flocculation model that is based on physics and consistent with laboratory and field observations.
+
+
+Collision Time
+---------------
 
 Now that we know that the collisions are controlled by viscosity we can begin formulating a model that describes the long distance random walk. The long range transport is assumed to be the rate limiting step. We model a system of two particles where one particle is held fixed and we observe the second particle's random motion. It may be helpful to visualize this by playing the video inside your mind in reverse starting from the moment of the collision. That way you know which two particles to follow! The random walk is illustrated in the video in :numref:`figure_Random_walk`.
 
 .. _figure_Random_walk:
 
-.. figure:: Images/Random_walk.png
+.. figure:: ../Images/Random_walk.png
    :target: https://youtu.be/I9sEOJ-kB3A
    :width: 400px
    :align: center
@@ -214,7 +130,7 @@ Now that we know that the collisions are controlled by viscosity we can begin fo
 
 .. _figure_Final_approach:
 
-.. figure:: Images/Final_approach.png
+.. figure:: ../Images/Final_approach.png
    :target: https://youtu.be/BtG-IxCGAUk
    :width: 400px
    :align: center
@@ -265,145 +181,277 @@ Solving for the collision time we obtain
 
 In summary, a relationship for the mean time between collisions :math:`\bar{t_{c}}` was found by proposing an average condition for a collision, successful or unsuccessful, to occur. To define this condition, it was assumed that each primary particle on average occupies a fraction of the reactor volume, :math:`\bar{V}_{Surround}`, inversely proportional to the number concentration of particles. Furthermore, prior to a collision, a particle on average sweeps a volume, :math:`\bar{V}_{Cleared}`, proportional to :math:`\bar{t_c}` and to the mean relative velocity between approaching particles, :math:`\bar{v}_r`. As an average condition, it was posited that for each collision, :math:`\bar{V}_{Cleared}` must equal :math:`\bar{V}_{Surround}`. From this, a relationship for a characteristic collision time, :math:`\bar{t_c}`, was obtained:
 
-.. _heading_Floc_Collision_Rates:
+Collision Potential and Energy Dissipation Rate
+-----------------------------------------------
 
-Collision Rates
----------------
+Collision potential :math:`(G_{CS} \theta)` is a term with a very straightforward name. It represents the magnitude of potential particle collisions in a fluid. It is a *dimensionless* parameter which is often used as a performance metric for flocculators; big :math:`G_{CS} \theta` values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). AguaClara flocculators usually aim for a collision potential of :math:`(G_{CS} \theta) = 37,000`, which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying :math:`G_{CS}`, a parameter for average fluid shear with units of :math:`\frac{1}{[T]}`, and :math:`\theta` , the residence time of water in the flocculator, with units of ::math:`[T]` . :math:`\theta` is intuitive to measure, calculate, and understand. :math:`G_{CS}` is a bit more difficult. First, an intuitive explanation. See :numref:`figure_G_velocity_profile`, which shows the velocity profile of flowing water.
 
-The change in the number of successful collisions (from a single particle's perspective) with respect to time is equal to the mean probability that a collision will result in an attachment, :math:`\bar{\alpha}`, divided by time for one collision, :math:`\bar t_c`.
+.. _figure_G_velocity_profile:
 
-.. math::
-  :label: dNc
+.. figure:: ../Images/G_velocity_profile.jpg
+    :width: 50%
+    :align: center
+    :alt: external figure
 
-	 \frac{dN_c}{dt}=\frac{\bar{\alpha}}{\bar{t_{c}}},
+    The velocity profile of flowing fluid with uniform shear
 
 
-| Where
-| :math:`\frac{dN_c}{dt}` is the rate of successful collisions between primary particles,
-| :math:`\bar{\alpha}` is the mean probability that a collision will result in an attachment,
-| :math:`\bar{t_{c}}` is the mean time between collisions of primary particles.
 
-The probability that two primary particles attach is expected to be equal to the probability that at least one of the colliding particles has a precipitated coagulant nanoparticle at the initial contact point. It is simpler to derive the probability of attachment from the probability that neither particle has a coagulant nanoparticle at the point where the two particles collide, since the probability of a successful collision includes the probabilities of one particle and of both particles having a coagulant precipitate. The probability of one particle colliding at a point without a coagulant precipitate is :math:`(1-\bar{\Gamma})`, so the probability of neither particle having a coagulant precipitate at the point of collision is :math:`(1-\bar{\Gamma})^2`. As this is the probability of a failed collision, the probability of a successful collision is :math:`1-(1-\bar{\Gamma})^2`.
+:math:`G` measures the magnitude of shear by using the velocity gradient of a fluid in space, :math:`\frac{\Delta \bar v}{\Delta h}`. This is essentially the same as the :math:`\frac{\delta u}{\delta y}` term in fluid mechanics, which is found in the ubiquitous `fluid-shear problem <http://polymerdatabase.com/polymer%20physics/images/Visc.png>`_ as sourced from `here. <http://polymerdatabase.com/polymer%20physics/Viscosity.html>`_
 
-Since the model assumes an initially monodisperse population of primary particles and that collisions between differently-sized particles are unfavorable, differential sedimentation is considered negligible.  Brownian motion is only significant for particles smaller than 1 :math:`\mu m` :cite:`Floc_Model-benjamin_water_2013`, and so this model makes the assumption that primary particles are larger than 1 :math:`\mu m`.
+:math:`\bar G` represents the average :math:`\frac{\Delta \bar v}{\Delta h}` for the entire water volume under consideration, and is the parameter we will be using from now on. Unfortunately, it is unrealistic to measure :math:`\frac{\Delta \bar v}{\Delta h}` for every parcel of the water in our flocculator and take an average. We need to approximate :math:`\bar G` using measureable parameters.
 
-The collision rate :cite:`Floc_Model-pennock_theoretical_2016` can be obtained by substituting Equation :eq:`tc` into Equation :eq:`dNc`.
+The parameter that serves as the basis for obtaining :math:`G_{CS}` is :math:`\varepsilon`, which represents the **energy dissipation** rate of a fluid *normalized by its mass*. The units of :math:`\varepsilon` are Watts per kilogram:
 
 .. math::
-  :label: Nclam
 
-	  \frac{dN_{c}}{dt}=\pi\bar{\alpha}\frac{\bar{d}_{P}^2}{\bar \Lambda^2} \bar G_{CS}
+  \varepsilon = \left[ \frac{W}{Kg} \right] = \left[ \frac{J}{s \cdot Kg} \right] = \left[ \frac{N \cdot m}{s \cdot Kg} \right] = \left[ \frac{kg \cdot m \cdot m}{s^2 \cdot s \cdot Kg} \right] = \left[ \frac{m^2}{s^3} \right] = \left[ \frac{[L]^2}{[T]^3} \right]
 
-
-where :math:`\bar G_{CS}` is the Camp Stein velocity gradient.
-
-Because the flocculation performance equation will ultimately track particle concentration, the concentration of primary particles, :math:`C_{P}`, was substituted for :math:`\bar \Lambda` using
+There are at least two ways to think about :math:`\varepsilon`. One is through :math:`G`. Imagine that a fluid has *no viscosity* ; there is no internal friction caused by fluid flow. No matter how high :math:`G` becomes, no energy is dissipated. Now image a honey, which has a very high viscosity. Making honey flow fast requires a lot of energy over a short period of time, which means a high energy dissipation rate. This explanation allows us to understand the equation for :math:`\varepsilon` in terms of :math:`G` and :math:`\nu`. `See this textbook <https://app.knovel.com/web/view/khtml/show.v/rcid:kpMWHWTPD1/cid:kt00AD4KW1/viewerType:khtml/root_slug:mwh-s-water-treatment/url_slug:principles-reactor-analysis?&b-toc-cid=kpMWHWTPD1&b-toc-url-slug=coagulation-flocculation&b-toc-title=MWH%E2%80%99s%20Water%20Treatment%20-%20Principles%20and%20Design%20(3rd%20Edition)&page=80&view=collapsed&zoom=1)>`_ for the derivation of the following equation:
 
 .. math::
-  :label: Ld
 
-	 \bar \Lambda^3=\frac{\pi}{6}\frac{\rho_{P}}{C_{P}}\bar{d}_P^3,
+  \varepsilon = \nu G^2
 
-
-where :math:`\rho_{P}` is the characteristic density of primary particles. Equation :eq:`Ld` can be substituted into Equation :eq:`Nclam` to result in:
+Which means we can solve for :math:`G`:
 
 .. math::
-  :label: Ncld
 
-   dN_{c}=\pi\bar{\alpha}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3}\bar G_{CS}dt.
+  G = \sqrt{\frac{\varepsilon}{\nu}}
 
-
-
-Equation :eq:`Ncld` reveals that :math:`\frac{dN_c}{dt}` increases with :math:`C_P` and :math:`\bar{\Gamma}`. During flocculation
-:math:`C_P` will decrease and thus :math:`\frac{dN_c}{dt}` will also decrease.
-
-Coagulant nanoparticle and primary particle Model
--------------------------------------------------
-
-Continuing from :cite:`Floc_Model-pennock_theoretical_2016`, the above Lagrangian differential relationships are further developed to become integrated performance prediction equations. Equation :eq:`Ncld` cannot be integrated as written because the concentration of primary particles is expected to change with each collision, and thus that relationship must be specified. During the average time required for one collision it is expected that approximately :math:`e^{-1}` of the particles will undergo at least one collision. The time required for a collision will change as flocculation proceeds as the average distance between primary particles increases. The rate of loss of primary particles due to successful collisions will be first order with respect to the number of successful collisions.
+Energy dissipation rate is, fortunately, easier to determine than collision potential. This is due to the second way to think about :math:`\varepsilon`, which is using head loss. In any reactor, a flocculator in this case, the total energy dissipated is simply the head loss, :math:`h_L`. The amount of time required to dissipate that energy is the residence time of the water in the reactor, :math:`\theta`. Accounting for the fact that 'head' energy is due to gravity :math:`g`, we have all the parameters needed to determine another equation for energy dissipation rate:
 
 .. math::
-  :label: dCP
+  :label: EDR_of_headloss
 
-	 \frac{dC_{P}}{dN_{c}}=-kC_{P},
+  \bar \varepsilon = \frac{g h_L}{\theta}
 
-
-where :math:`k` is an experimentally-derived constant that physically represents the portion of the primary particles that become settleable particles on average after each collision time, :math:`\bar{t_c}`, and will depend, in part, upon the design capture velocity, :math:`\bar v_c`, used for sedimentation. Since :math:`\bar{t_c}` increases over time as :math:`\bar \Lambda` increases, the above formulation is not proportional to :math:`\frac{dC_P}{dt}`. Physically, Equation :eq:`dCP` states that, with each progressive primary particle collision, :math:`C_P` decreases by some proportion. Further, Equation :eq:`dCP` states that this decrease is directly proportional to :math:`C_P`. With each successive successful collision, the absolute reduction in :math:`C_P` is less than the prior one. The value of :math:`k` is expected to be less than 1, because not all primary particles will have a collision and grow to a size with a sedimentation velocity greater than :math:`\bar v_c` in the average time required for a collision.
-
-Having Equation :eq:`dCP`, the next step is to substitute it into Equation :eq:`Ncld` and integrate. Solving Equation :eq:`dCP` for :math:`dN_{c}`, substituting it into Equation :eq:`Ncld` and rewriting the equations in terms of primary particles results in Equation :eq:`dCPlam`,
+Note that the equation above is for :math:`\bar \varepsilon`, not :math:`\varepsilon`. Since the head loss term we are using, :math:`h_L`, occurs over the entire reactor, it can only be used to find an average energy dissipation rate for the entire reactor. Combining the equations above, :math:`G = \sqrt{\frac{\varepsilon}{\nu}}` and :math:`\bar \varepsilon = \frac{g h_L}{\theta}`, we can get an equation for :math:`G_{CS}` in terms of easily measureable parameters:
 
 .. math::
-  :label: dCPlam
 
-	 \frac{dC_{P}}{-kC_{P}}=\pi\bar{\alpha}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3}\bar G_{CS}dt,
+  G_{CS} = \sqrt{\frac{g h_L}{\nu \theta}}
 
-
-It is interesting to note that rearranging Equation :eq:`dCPlam` in terms of :math:`\frac{dC_P}{dt}` gives a :math:`C_P` exponent of :math:`\frac{5}{3}`. Previous flocculation rate equations were second-order, but the observed flocculation rate was less than second-order :cite:`Floc_Model-benjamin_water_2013`. The slight deviation from an exponent of two comes from the assumption of :cite:`Floc_Model-pennock_theoretical_2016` that relative velocity between colliding particles scales with :math:`\Lambda` rather than :math:`d_P`. This is to say that, in dilute suspensions characteristic of raw water, where particles are separated by :math:`\bar \Lambda\gg \bar{d}_P`, the majority of :math:`\bar{t_c}` is spent with the distance between particles characterized by :math:`\bar \Lambda` instead of :math:`\bar{d}_P`. The time required for the final approach for a collision is hypothesized to be insignificant compared the time for :math:`\bar{V}_Cleared` to equal :math:`\bar{V}_Surround`.
-
-From Equation :eq:`dCPlam` it is possible to integrate and obtain equations for flocculation performance. After separation of variables, one side of the equation is integrated with respect to time from the initial time (:math:`t=0`) to the time of interest, generally taken to be the mean hydraulic residence time (:math:`t=\theta`). The other side of the equation is integrated with respect to the concentration of primary particles from the value at the initial time (:math:`C_{P_0}`), equivalent to the initial concentration of primary particles, to the concentration of primary particles at the time of interest (:math:`C_{P}`). The integral becomes:
+We can use this to obtain a final equation for collision potential of a reactor:
 
 .. math::
-  :label: intdCPlam
 
-	 \frac{1}{\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\int_{C_{P_0}}^{C_{P}}C_{P}^{-5/3}dC_{P}=-k\bar{\alpha}\bar G_{CS}\int_0^\theta dt.
+  G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}
+
+**Note:** When we say :math:`G \theta` we are almost always referring to :math:`G_{CS} \theta`.
 
 
-The integral on the left hand side assumes that :math:`\rho_{P}` does not change as :math:`C_P` changes. One assumption on the right side is that :math:`\bar{\Gamma}`, of which :math:`\bar{\alpha}` is a function, does not vary with :math:`t`. This requires that adsorption of coagulant to colloidal particles in rapid mix be fast enough to be approximated as completed by the beginning of flocculation. This assumption may not be valid for high rate flocculators especially under conditions of low :math:`C_{P_0}`. Further work on the rate and efficacy of coagulant nanoparticle attachment to primary particle surfaces is needed.
+Generating Head Loss with Baffles
+----------------------------------
 
-The other assumption on the right hand side is that the mean velocity gradient, :math:`\bar G_{CS}`, does not change over the course of the flocculation process. In mechanically-mixed flocculators, the use of a simple spatial average is not reasonable, as the velocity gradient changes dramatically from the bulk flow to the tip of the impeller blade and individual particles follow different paths that expose them to different velocity gradient zones in different sequences and durations :cite:`Floc_Model-boller_particles_1998`. The distribution of residence times in a mechanical flocculator would also need to be taken into account for the integration. For baffled hydraulic flocculators, on the other hand, the use of the spatial average, :math:`\bar G_{CS}`, and considering it constant with :math:`t` is generally a reasonable approximation, as mixing energy in a well-designed hydraulic flocculator is rather uniformly distributed spatially, the zones of higher energy dissipation rate after the baffles do not vary appreciably with time when operating at a constant flow rate, and all particles have similar residence times in the flocculator.
+Now that we know how to measure collision potential with head loss, we need a way to actually generate head loss. While both major or minor losses can be the design basis, it generally makes more sense to use major losses only for very low-flow flocculation (lab-scale) and minor losses for higher flows, as flocculation with minor losses tends to be more space-efficient. Since this book focuses on town and village-scale water treatment (5 L/S to 120 L/S), we will use minor losses as our design basis.
 
-Integration of Equation :eq:`intdCPlam` gives:
+To generate minor losses, we need to create flow expansions. AguaClara does this with **baffles**, which are obstructions in the channel of a flocculator to force the flow to switch directions by 180°. Baffles in AguaClara plants are plastic sheets, and all of the baffles in one flocculator channel are connected to form a **baffle module.** :numref:`figure_AC_flocculator` shows an AguaClara flocculator and :numref:`figure_baffle_module` shows the assembly of a baffle module.
+
+.. _figure_AC_flocculator:
+
+.. figure:: ../Images/AC_flocculator.jpg
+   :width: 100%
+   :align: center
+   :alt: AC Flocculator
+
+   Clockwise from the top left the images show: the outline of the entire flocculator, some top and bottom baffles in the channels, the 4 flocculator channels in this flocculator, and the flow path of water through the flocculator
+
+.. _figure_baffle_module:
+
+.. figure:: ../Images/Baffle_module.jpg
+   :width: 50%
+   :align: center
+   :alt: this image shows the floc baffle module out of the water within a plant.
+
+   Before being inserted into the floccualtor channel, the baffle module is constructed as a unit as shown here.
+
+AguaClara flocculators, like the one pictured above, are called **vertical hydraulic flocculators** because the baffles force the flow vertically up and down. If the baffles were instead arranged to force the flow side-to-side, the flocculator would be called a **horizontal hydraulic flocculator**. AguaClara uses vertical flocculators because they are more efficient when considering plant area. They are deeper than horizontal flocculators, which allows them to have a smaller `plan-view area <https://simple.wikipedia.org/wiki/Plan_view>`_ and thus to be cheaper.
+
+Before beginning this section, it is important to understand how water flows through a baffled flocculator. This flow path is shown in :numref:`figure_flocculator_flow`. Take note of the thin red arrows; they indicate the compression of the flow around a baffle.
+
+.. _figure_flocculator_flow:
+
+.. figure:: ../Images/Flocculator_flow.jpg
+   :width: 600px
+   :align: center
+   :alt: flocculator flow image
+
+   Flow path through a vertical flow hydraulic flocculator
+
+Since baffles are the source of head loss via minor losses, we need to find the minor loss coefficient of one baffle if we want to be able to quantify its head loss. To do this, we apply fluid mechanics intuition and check it against a computational fluid dynamics (CFD) simulation. Flow around a 90° bend has a vena contracta value of around :math:`\Pi_{vc} = 0.62`. Flow around a 180° bend therefore has a value of :math:`\color{red}{\Pi_{vc, \, baffle} = \Pi_{vc}^2 = 0.384}`. This number is roughly confirmed with CFD, as shown in the image below.
+
+.. _figure_cfd_VC_baffle:
+
+.. figure:: ../Images/CFD_vc_baffle.jpg
+   :align: center
+   :width: 100px
+   :alt: CFD vc baffle
+
+   The 180° bend at the end of a baffle results in a dramatic flow contraction with all of the flow passing through less than 40% of the space between the baffles.
+
+We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc, \, baffle} A_{expanded}`. Through the `:ref:`third form of the minor loss equation <heading_minor_losses>`, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine a :math:`k` for flow around a single baffle:
 
 .. math::
-  :label: CPlamint
 
-	 \frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)=k\bar{\alpha}\bar G_{CS}\theta.
+  K_{baffle} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2
 
+  K_{baffle} = \left( \frac{\rlap{\Big/} A_{expanded}}{\Pi_{vc, \, baffle} \rlap{\Big/} A_{expanded}} -1 \right)^2
 
-This can be put in terms of :math:`\bar \Lambda` for simplicity by using Equation :eq:`Ld` and rearranging in terms of the familiar Camp-Stein parameter, :math:`\bar G_{CS}\theta`, to be
+  K_{baffle} = \left( \frac{1}{0.384} -1 \right)^2
 
-.. math::
-  :label: Gtlam
+  \color{red}{K_{baffle} = 2.56}
 
-	 \bar G_{CS}\theta = \frac{3}{2}\frac{{\left( {{\bar \Lambda ^2} - \bar \Lambda_0^2} \right)}}{{k\pi\bar{\alpha} \bar{d}_P^2}}.
+This :math:`K_{baffle}` has been used to design many flocculators in AguaClara plants. However, its value has not yet been rigorously tested for AguaClara plants in the field. Therefore it might actually deviate from :math:`2.56`. Research and testing the :math:`K` of a baffle in an AguaClara plant is ongoing, but for now the designs made under the assumption that :math:`\color{red}{K_{baffle} = 2.56}` are functioning very well in AguaClara plants. Although research has been done by many academics on the minor loss coefficient, including `this paper by Haarhoff in 1998 <https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a :math:`K_{baffle}` value between :math:`2.5` and :math:`4`.
 
+Flocculator Efficiency
+---------------------------
 
-Equation :eq:`Gtlam` gives guidance for flocculator design in that higher values of :math:`\bar G_{CS}\theta` are needed for flocculators to achieve greater changes in :math:`\bar \Lambda` (or :math:`C_P`) or to overcome low :math:`\bar{\Gamma}`. It should be noted that the :math:`\bar \Lambda_0` term in Equation :eq:`Gtlam` will generally be very small compared to the :math:`\bar \Lambda` term for most flocculation scenarios. In this case the initial particle separation distance, :math:`\bar \Lambda_0` can be considered negligible. While simplifying the equation, this also gives the result that **flocculators must be designed** not so much for the particle concentrations they will receive but **for the particle concentrations they are intended to produce**.
+When designing an effective and efficient flocculator, there are two main problems that we seek to avoid:
 
-Modifying Equation :eq:`Gtlam` to be in terms of :math:`C_P` produces:
+1. Having certain sections in the flocculator with such high local :math:`G` values that our big, fluffy flocs are sheared apart into smaller flocs.
+2. Having dead space. Dead space means volume within the flocculator that is not being used to facilitate collisions. Dead space occurs after the flow has fully expanded from flowing around a baffle and before it reaches the next baffle.
 
-.. math::
-  :label: GtlamSim
-
-	 \bar G_{CS}\theta = \frac{3}{2k\pi\bar{\alpha}}\left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{2/3}.
-
-
-A desirable way to represent flocculation performance is with the negative log of the fraction of particles remaining (also often referred to as log removal), :math:`pC^\star`, given in :cite:`Floc_Model-swetland_flocculation-sedimentation_2014` as:
+Fortunately for us, both problems can be quantified with a single ratio:
 
 .. math::
-  :label: pC
 
-	 p{C^\star}=-\log_{10}\left(\frac{C_{P}}{C_{P_0}}\right)
-
-
-Likewise, a way to simplify Equation :eq:`CPlamint` is to put it in terms of the particle volume fraction, :math:`\phi`, defined as:
-
-.. math::
-  :label: phi
-
-	 \phi=\frac{C_P}{\rho_P}=\frac{\pi}{6}\left(\frac{\bar{d}_P}{\bar \Lambda}\right)^3.
+  \Pi_{G_{CS}}^{G_{Max}} = \frac{G_{Max}}{G_{CS}}
 
 
-Putting Equation :eq:`CPlamint` in terms of :math:`pC^\star` and
-:math:`\phi` results in:
+High values of :math:`\Pi_{G_{CS}}^{G_{Max}}` occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local :math:`G` values, then :math:`G_{Max}` becomes large. If the flocculator has a lot of dead space, then :math:`G_{CS}` becomes small. Either way, :math:`\Pi_{G_{CS}}^{G_{Max}}` becomes larger.
+
+**Note:** Recall the relationship between :math:`G` and :math:`\varepsilon` : :math:`G = \sqrt{ \frac{\varepsilon}{\nu} }`. From this relationship, we can see that :math:`G \propto \sqrt{\varepsilon}`. Thus, by defining  :math:`\Pi_{G_{CS}}^{G_{Max}}`, we can also define a ratio for Max to average energy dissipation rate:
 
 .. math::
-  :label: pClam
 
-	 p{C^\star}=\frac{3}{2}\log_{10}\left[\frac{2}{3}\left(\frac{6}{\pi}\right)^{2/3}k\pi\bar{\alpha}\bar G_{CS}\theta\phi_0^{2/3}+1\right].
+  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{G_{CS}}^{G_{Max}} \right)^2
+
+Therefore, by making our :math:`\Pi_{G_{CS}}^{G_{Max}}` as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. `A paper by Haarhoff and van der Walt in 2001 <https://iwaponline.com/aqua/article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the>`_ uses CFD to show that the minimum :math:`\Pi_{G_{CS}}^{G_{Max}}` attainable in a hydraulic flocculator is :math:`\Pi_{G_{CS}}^{G_{Max}} = \sqrt{2} \approx 1.4`, which means that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{G_{CS}}^{G_{Max}} \right)^2 \approx 2`. So how do we optimize an AguaClara flocculator to make sure :math:`\Pi_{G_{CS}}^{G_{Max}} = \sqrt{2}`?
+
+We define and optimize a performance metric:
+
+.. math::
+
+  \frac{H_e}{S} = \Pi_{H_eS}
+
+Where :math:`H_e` is the distance between flow expansions in the flocculator and :math:`S` is the spacing between baffles. For now, :math:`H_e` is approximated as the height of water in the flocculator.
+
+Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on :math:`\frac{H_e}{S}`. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle. We base this on the rule of thumb for flow expansion, a jet doubles its initial diameter/length once it travels 10 times the distance of its original diameter/length. If this is confusing, refer to the equation and image below:
+
+.. todo:: Find a reference from CorMix to support this rule of thumb.
+
+.. math::
+
+  \frac{x}{10} = D - D_{cp}
+
+.. _figure_jet_expansion_flocculator:
+
+.. figure:: ../Images/Jet_expansion_flocculator.jpg
+   :align: center
+   :width: 400px
+   :alt: jet expansion in the flocculator
+
+   A turbulent jet expands in width by one unit for every 10 units downstream.
+
+Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing :math:`S`. We do this by substituting  :math:`D_{cp} = (0.384 S)` along with :math:`D = S` to approximate how much distance, :math:`x = H_e`, the contracted flow has to cover.
+
+.. math::
+
+  \frac{H_e}{10} = S - (0.384 S)
+  \frac{H_e}{10} = 0.616 S
+  H_e = 6.16S
+  \frac{H_e}{S} = 6.16
+  \Pi_{H_eS_{Max}} = \frac{H_e}{S} = 6.16 \approx 6
+
+This is the highest allowable :math:`\Pi_{H_eS}` that we can design while ensuring that there is no dead space in the flocculator.
+
+.. _figure_CFD_baffle_image:
+
+.. figure:: ../Images/CFD_baffle_image.jpg
+   :align: center
+   :width: 50%
+   :alt: CFD baffle image
+
+   High :math:`\frac{H_e}{S}` ratios result in flocculator zones with low velocity gradients that don't contribute effectively.
+
+.. _figure_CFD_full_channel:
+
+.. figure:: ../Images/CFD_full_channel.jpg
+   :width: 700px
+   :align: center
+   :alt: CFD full channel
+
+   Each bend creates a flow contraction and when the flow expands it converts kinetic energy into turbulent eddies and fluid deformation. The fluid deformation is what ultimately creates collisions between particles.
+
+In order to have a robust design process for a baffle module, we need to have some flexibility in the :math:`\Pi_{H_eS} = \frac{H_e}{S}` ratio. Since we found :math:`\Pi_{H_eS_{Max}}` previously, we must now find the lowest functional :math:`\frac{H_e}{S}` ratio, :math:`\Pi_{H_eS_{Min}}`.
+
+AguaClara uses a fairly straightforward way of setting :math:`\Pi_{H_eS_{Min}}`. It is based on the distance between the water level and the bottom baffle (which is the same distance between the flocculator floor and a top baffle). This distance is referred to as the slot width (`Haarhoff 1998 <http://aqua.iwaponline.com/content/47/3/142>`_)  DOI: 10.2166/aqua.1998.20") and is defined by the slot width ratio, which describes the slot width as a function of baffle spacing :math:`S`. Slot width is shown in the following image:
+
+.. _figure_slot_width_description:
+
+.. figure:: ../Images/Slot_width_description.jpg
+   :align: center
+   :width: 600px
+   :alt: image showing the dimensiond of spacing within the flocculator
+
+   The space between the bottom of the upper baffle and the floor of the flocculator is defined as the slot width.
+
+AguaClara uses a slot width ratio of 1 for its flocculators. This number has been the topic of much hydraulic flocculation research, and values between 1 and 1.5 are generally accepted for hydraulic flocculators. See the following paper and book respectively for more data on slot width ratios and other hydraulic flocculator parameters: :cite:`floc-haarhoff_design_1998`, :cite:`floc-schulz_surface_1984`. We base our slot width ratio of 1 on research done by :cite:`floc-haarhoff_towards_2001` on optimizing hydraulic flocculator parameters to maximize flocculator efficiency.
+
+The minimum :math:`\Pi_{H_eS}` allowable depends on the slot width ratio. If :math:`\Pi_{H_eS}` is less than twice the slot width ratio, the water would flow straight through the flocculator without having to bend around the baffles. This means that the flocculator would not be generating almost any head loss, and the top and bottom of the flocculator will largely be dead space. See the following image for an example:
+
+.. _figure_HeS_ratio_min:
+
+.. figure:: ../Images/HeS_ratio_min.jpg
+   :align: center
+   :width: 600px
+   :alt: minimum H S ratio
+
+   The minimum :math:`\frac{H_e}{S}` ratio is set by the need to prevent short circuiting through the flocculator.
+
+Thus, :math:`\Pi_{H_eS_{Min}}` should be at least twice the slot width ratio, :math:`\Pi_{H_eS_{Min}} = 2`. Historically, AguaClara plants have been designed using :math:`\Pi_{H_eS_{Min}} = 3`. This adds a safety factor of sorts, ensuring that the flow does not short-circuit through the flocculator and also allowing more space for the flow to expand after each contraction.
+
+.. math::
+
+  \Pi_{H_eS_{Min}} = \frac{H_e}{S} = 3
+
+Finally, we describe a range of :math:`\Pi_{H_eS}` that we can use to design an AguaClara flocculator:
+
+.. math::
+
+  3 < \Pi_{H_eS} < 6
+
+Obstacles
+----------
+
+Knowing that efficient flocculators require an :math:`\frac{H_e}{S}` ratio that lies between 3 and 6, we need to understand how that impacts the flocculator design. Keeping :math:`\frac{H_e}{S}` between two specific values limits the options for baffle spacing and quantity, due to the flocculator having certain size constraints before beginning the design of the baffles. This limitation places an upper limit on the amount of head loss that a baffled flocculator can generate, since the number of baffles is limited by space and baffles are what cause head loss. This is unfortunate, it means that baffled flocculators under certain size specifications can't be designed to generate certain values of :math:`\bar \varepsilon` and :math:`G_{CS}` *while remaining efficient and maintaining* :math:`3 < \Pi_{H_eS} < 6`. This problem only arises for low flow plants, usually below :math:`Q_{Plant} = 20 {\rm \frac{L}{s}}`.
+
+To get around this problem, AguaClara included 'obstacles,' or half-pipes to contract the flow after the flow expands around one baffle and before it reaches the next baffle. The purpose of these obstacles is to provide extra head loss in between baffles. They also generate head loss via minor losses, and one obstacle is designed to have the same :math:`K` as one baffle. Introducing obstacles slightly alters how we think about :math:`H_e`. In a flocculator where there are just baffles and no obstacles, then :math:`H_e = H`, since the height of water in the flocculator is equal to the distance between expansions. When obstacles are added, however, then :math:`H_e = \frac{H}{1 + n_{obstacles}}`, where :math:`n_{obstacles}` is the number of obstacles between two baffles.
+
+**Baffle space** is the term we use for the space between two baffles. The number of flow expansions per baffle space is :math:`n_{expansions} = 1 + n_{obstacles}`. The :math:`1` is because the baffle itself causes a flow expansion.
+
+These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` to exceed 6, while maintaining maximum flocculator efficiency since, :math:`\frac{H_e}{S}` can still be between 3 and 6. Obstacles make it possible to design smaller flocculators without compromising flocculation efficiency. :numref:`figure_Floc_module_with_obstacles` and :numref:`figure_Floc_flow_with_obstacles` show these obstacles and how they affect the flow in a flocculator.
+
+.. _figure_floc_module_with_obstacles:
+
+.. figure:: ../Images/Floc_module_with_obstacles.jpg
+   :width: 800px
+   :align: center
+   :alt: floc module with obstacles
+
+   Obstacles are added so that the flow continually contracts and expands. Additional obstacles are needed for low flow plants where the spacing between baffles is small realtive to the flocculator depth.
+
+.. _figure_floc_flow_with_obstacles:
+
+.. figure:: ../Images/Floc_flow_with_obstacles.jpg
+   :align: center
+   :width: 900px
+   :alt: floc flow with obstacles
+
+   Obstacles ensure that there aren't any zones with low velocity gradients.
 
 
-Equation :eq:`pClam` is a predictive performance model for flocculation in flows with long range particle transport toward collisions dominated by viscous forces. It is proposed as applicable to both laminar and turbulent hydraulic flocculators. Given the properties of the flocculator (:math:`\bar G_{CS}` and :math:`\theta`) and its influent (:math:`\phi_0` and :math:`\bar{\alpha}`), flocculation performance can be predicted in terms of :math:`pC^*`. The development of Equation :eq:`pClam` was the result of a team effort of Cornell University's AguaClara program and hence it will be subsequently referred to as the AguaClara flocculation model.
 
 
 Experimental Protocols
@@ -425,7 +473,7 @@ Referring to Equation :eq:`EDR`, changing the head loss by changing the constric
 
 .. _figure_apparatus:
 
-.. figure:: Images/PennockFig1.png
+.. figure:: ../Images/PennockFig1.png
    :width: 400px
    :align: center
    :alt: Experimental apparatus
@@ -455,7 +503,7 @@ The above process was used to conduct the experiments to test the applicability 
 
 .. _figure_PennockFig2:
 
-.. figure:: Images/PennockFig2.png
+.. figure:: ../Images/PennockFig2.png
    :width: 400px
    :align: center
    :alt: internal figure
@@ -473,7 +521,7 @@ In this graph, the data are plotted in terms of Equation :eq:`pClam` and its cor
 
 .. _figure_PennockFig3:
 
-.. figure:: Images/PennockFig3.png
+.. figure:: ../Images/PennockFig3.png
    :width: 400px
    :align: center
    :alt: internal figure
@@ -488,7 +536,7 @@ For flocculation in laminar flows, data were used from the work of :cite:`Floc_M
 
 .. _figure_PennockFig5:
 
-.. figure:: Images/PennockFig5.png
+.. figure:: ../Images/PennockFig5.png
    :width: 400px
    :align: center
    :alt: internal figure
@@ -596,7 +644,7 @@ The three types of surfaces (PACl, humic acid, clay) have 6 (3!) potential inter
 
 .. _figure_Du_Fig2:
 
-.. figure:: Images/Du_Fig2.png
+.. figure:: ../Images/Du_Fig2.png
    :width: 400px
    :align: center
    :alt: Experimental Apparatus
@@ -704,7 +752,7 @@ Schulz, C. R., & Okun, D. A. (1984). Surface water treatment for communities in 
 
 Sharp, E. L., Jarvis, P., Parsons, S. A., & Jefferson, B. (2006). Impact of fractional character on the coagulation of NOM. Colloids and Surfaces A: Physicochemical and Engineering Aspects, 286(1–3), 104–111. https://doi.org/10.1016/j.colsurfa.2006.03.009
 
-Sigma-Aldrich. (2014). Humic acid sodium salt (H16752) (Safety Data Sheet) (p. 7). St. Louis, MO. Retrieved from https://www.sigmaaldrich.com/MSDS/MSDS/DisplayMSDSPage.do?country=US&language=en&productNumber=H16752&brand=ALDRICH&PageToGoToURL=https%3A%2F%2Fwww.sigmaaldrich.com%2Fcatalog%2Fproduct%2Faldrich%2Fh16752%3Flang%3Den
+Sigma-Aldrich. (2014). Humic acid sodium salt (H16752) (Safety Data Sheet) (p. 7). St. Louis, MO. 
 
 Soh, Y. C., Roddick, F., & Leeuwen, J. van. (2008). The impact of alum coagulation on the character, biodegradability and disinfection by-product formation potential of reservoir natural organic matter (NOM) fractions. Water Science and Technology; London, 58(6), 1173–1179. http://dx.doi.org/10.2166/wst.2008.475
 

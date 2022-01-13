@@ -2,11 +2,8 @@
 Can we make some sort of a diagnostic guide based on symptoms? Make the following into a giant table.
 
 
-
-
-
-Problems
----------
+Plant Operation Troubleshooting
+=================================
 
 
 Temperature fluctuations
@@ -14,8 +11,6 @@ Temperature fluctuations
 Calcium from calcium hypochlorite combines with carbonate in the water to form low solubility calcium carbonate.
 
 
-Solutions
----------
 
 Drip chlorine into water rather than injecting it to eliminate formation of precipitate at the injection point
 
@@ -30,15 +25,15 @@ Use valves at the end of the pipeline to control transmission line flow rate rat
    :align: left
 
    Air bubbles, Air entrainment in the transmission line and transport to a high pressure zone in the pipeline where the air is dissolved in the water, Use downstream head loss to prevent air entrainment in transmission line or add a unit process (TBD) that removes excess dissolved air
-   Bubbles in sedimentation tanks, anaerobic production in methane in settled sludge, clean sedimentation tank and check design to eliminate all settled sludge
-   Bubbles in EStaRS, water entering the plant is supersaturated with air and EStaRS filters operate at very low pressure (compared with OStaRS), eliminate air entrainment in transmission line
-   Short filter runtimes, poor performance of floc/sed system or clogged slotted pipes or air lock, various solutions
-   Gradual increase in post backwash head loss in filters, slotted pipes are clogging, acid flush by pouring HCl (need the concentration) into the outlet pipes OR disassemble filter and clean with a pressure washer
-   Scale deposition in the distribution system, increase in temperature from groundwater conditions causes supersaturation of calcium carbonate, reduce the pH of the water slightly (perhaps 0.5 pH units) to eliminate the supersaturation
-   Clogging of chlorination system tubes and formation of precipitate at the injection point, dissolution of carbon dioxide from the atmosphere causes precipitation of calcium carbonate, Reduce exposure of the solution to the atmosphere OR drip the chlorine into the filtered water
+   Bubbles in sedimentation tanks, Anaerobic production in methane in settled sludge, Clean sedimentation tank and check design to eliminate all settled sludge
+   Bubbles in EStaRS, Water entering the plant is supersaturated with air and EStaRS filters operate at very low pressure (compared with OStaRS), Eliminate air entrainment in transmission line
+   Short filter runtimes, Poor performance of floc/sed system or clogged slotted pipes or air lock, Various solutions
+   Gradual increase in post backwash head loss in filters, Slotted pipes are clogging, Acid flush by pouring HCl (need the concentration) into the outlet pipes OR disassemble filter and clean with a pressure washer
+   Scale deposition in the distribution system, Increase in temperature from groundwater conditions causes supersaturation of calcium carbonate, Reduce the pH of the water slightly (perhaps 0.5 pH units) to eliminate the supersaturation
+   Clogging of chlorination system tubes and formation of precipitate at the injection point, Dissolution of carbon dioxide from the atmosphere causes precipitation of calcium carbonate, Reduce exposure of the solution to the atmosphere OR drip the chlorine into the filtered water
 
 
-High head loss after backwash in EStaRS
+High Head Loss After Backwash in EStaRS
 =======================================
 
 The 60 cm diameter EStaRS filters at El PODA had a very high head loss of 43 cm within a few minutes of ending backwash. The maximum available head is only 50 cm and thus filter runs lasted only a few hours. El PODA was the 2nd site where 60 cm diameter EStaRS filters were used. Given that the filter backwashed just fine without excess head required it appeared that the inlet system was performing as expected and did not have excessive head loss.
@@ -53,7 +48,7 @@ EStaRS with the wing inlets make a possible failure mode. At the end of the back
 
 The solution is in the operation of the system and maybe a change in the design. If the operators are manipulating pipe stubs to do the backwash, then the first step is to remove the pipe stubs before closing the valve. The other way around the problem would be to close the valve slowly to ensure that the water rises very slowly in the inlets.
 
-Encrustation of filter pipes at Las Vegas
+Encrustation of Filter Pipes at Las Vegas
 =========================================
 
 Remove the encrustation without disassembling the filter by pouring buckets of hydrochloric acid into pipes that are inserted into the couplings in the filtered water effluent box. The hydrochloric acid at Las Vegas is a 10% solution. Dilute that solution by a factor of 5 to produce a 2% HCl solution. Note that all of the acid and water injected into the filter will simply go into the filter box and increase the water level during this treatment. When diluting acid always add acid to water!
@@ -110,7 +105,7 @@ At pH 6.0 it requires 100 hours.
 For several reasons, routine chemical disinfectants that effectively wipe out other bacteria are only modestly successful against iron bacteria. Iron bacteria build up in thick layers, each forming a slime around bacterial cells that keeps disinfectants from penetrating beyond the surface cells. Chemical reactions occur far slower at the cool temperatures common in wells, and bacterial cell need a long exposure to the chemical for the treatment to be effective. Even if chlorine kills all the bacterial cells in the water, those in the groundwater can be drawn in by pumping or drift back into the well. `Read more about chlorine and iron oxidizing bacteria <http://www.lenntech.com/iron-bacteria.htm#ixzz4ehUFJwO6>`_
 
 
-Proposed solutions to eliminate iron oxidizing slime bacteria
+Iron Oxidizing Slime Bacteria
 -------------------------------------------------------------
 
 The solutions all revolve around oxidizing the iron chemically before the bacteria have a chance to oxidize the iron biologically.

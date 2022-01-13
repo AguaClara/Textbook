@@ -1,8 +1,8 @@
 .. _title_Flocs_Fractals_Forces_and_Fluidized_Suspensions_Introduction:
 
-****************************************************************
-Flocs, Fractals, Forces, and Fluidized Suspensions Introduction
-****************************************************************
+************************
+Flocs, Fractals, Forces
+************************
 
 The physics of flocs, fractals, fluids, and forces define the processes of flocculation, flocnets, lamellar sedimentation, and filters. The chemical bonds that hold flocs together determine the maximum diameter that a floc can grow to in the fluid shear of a flocculator. The force of gravity is strong enough to break flocs and determines the maximum size that a floc can grow to on planet earth or, for that matter, in the flocnet that forms in the bottom of the AguaClara clarifiers. The maximum diameter that a floc can grow to without being pulled apart by gravity sets a maximum terminal velocity for flocs and that has direct implications for the maximum upflow velocity than can be used in upflow clarifiers.
 
@@ -72,7 +72,7 @@ The density of a floc decreases as it grows larger. The density of the floc can 
 
   M_{mix} = M_1 + M_2
 
-Mass conservation can be written in terms of density as
+Mass conservation can be written in terms of density as:
 
 .. math::
   :label:
@@ -150,7 +150,7 @@ As flocs settle in water, they will fall at a speed dictated by the weight of th
 
 .. _figure_terminal_velocity_FBD:
 
-.. figure:: Images/terminal_velocity_FBD.png
+.. figure:: ../Images/terminal_velocity_FBD.png
     :height: 300px
     :align: center
     :alt: Buyouant force, drag force, and gravitational force shown for floc free body diagram.
@@ -219,7 +219,7 @@ Drag coefficients are used to describe flow around a particle and are shown in :
 
 .. _figure_drag_coeff_Re_base:
 
-.. figure:: Images/drag_coeff_Re_base.png
+.. figure:: ../Images/drag_coeff_Re_base.png
     :height: 300px
     :align: center
     :alt: Drag coefficient as a function of Reynolds number.
@@ -245,7 +245,7 @@ The flow around the particle and the Reynolds Number can be described in the lam
 
 .. _figure_drag_coeff_Re_full:
 
-.. figure:: Images/drag_coeff_Re_full.png
+.. figure:: ../Images/drag_coeff_Re_full.png
     :height: 300px
     :align: center
     :alt: Drag coefficient as a function of Reynolds number.
@@ -287,7 +287,7 @@ The following plot in :numref:`figure_terminal_velocity_floc_diam` shows the rel
 
 .. _figure_terminal_velocity_floc_diam:
 
-.. figure:: Images/terminal_velocity_floc_diam.png
+.. figure:: ../Images/terminal_velocity_floc_diam.png
     :width: 400px
     :align: center
     :alt: Terminal velocity as a function of floc diameter, taking into account the changing density of flocs formed from clay.
@@ -313,7 +313,7 @@ If we assume that the flocs are joined by 3 bonds to create a constrained connec
 
 .. _figure_Shear_force_and_bond_strength:
 
-.. figure:: Images/Shear_force_and_bond_strength.png
+.. figure:: ../Images/Shear_force_and_bond_strength.png
    :width: 400px
    :align: center
    :alt: figure_Shear_force_and_bond_strength
@@ -327,9 +327,11 @@ Van der Waals forces have traditionally been viewed as the primary force respons
 Hydrated oxides of polyvalent metals like Fe(III), Al(III), Ti(IV) and Zr(IV) exhibit ligand sorption properties by forming inner-sphere complexes (`Sarkar et al, 2007 <https://doi.org/10.1016/j.reactfunctpolym.2007.07.047>`_). In inner-sphere complexes the coagulant nanoparticle forms covalent bonds with the molecules in the surface of the raw water particles. Inner sphere bonds are strong and stable. In contrast, outer sphere bonds include a molecule of water between the two surfaces and form a transient bond.
 
 Given that
-1) aluminum and iron coagulant nanoparticles form covalent bonds with arsenic
-1) outer sphere complexes are transient
-1) the shear forces acting on flocs suggest strong bonds
+
+#. Aluminum and iron coagulant nanoparticles form covalent bonds with arsenic
+#. Outer sphere complexes are transient
+#. The shear forces acting on flocs suggest strong bonds
+
 we conclude that the coagulant nanoparticles likely form covalent bonds with inorganic particles present in raw water.
 
 Shear Force Acting on Flocs
@@ -378,7 +380,7 @@ When flocs are broken by the shearing action of the fluid it is possible that a 
 
 .. _figure_sed_performance_vs_jet_edr:
 
-.. figure:: Images/Sed_performance_vs_jet_edr.png
+.. figure:: ../Images/Sed_performance_vs_jet_edr.png
    :width: 400px
    :align: center
    :alt: Sed tank performance as a function of jet energy dissipation rate
@@ -421,7 +423,7 @@ Equation :eq:`d_floc_G` must be based on the maximum velocity gradient in a reac
 
 .. _figure_GmaxofFlocD:
 
-.. figure:: Images/GmaxofFlocD.png
+.. figure:: ../Images/GmaxofFlocD.png
     :width: 400px
     :align: center
     :alt: internal figure
@@ -432,7 +434,7 @@ The maximum floc diameter is influenced by temperature because as the viscosity 
 
 .. _figure_DmaxofGandTemp:
 
-.. figure:: Images/DmaxofGandTemp.png
+.. figure:: ../Images/DmaxofGandTemp.png
     :width: 400px
     :align: center
     :alt: internal figure
@@ -533,7 +535,7 @@ The maximum floc size that can be obtained based on a :math:`\Pi_{bond}^g = 8` a
 
 .. _figure_DmaxofFbondandGravity:
 
-.. figure:: Images/DmaxofFbondandGravity.png
+.. figure:: ../Images/DmaxofFbondandGravity.png
     :width: 400px
     :align: center
     :alt: internal figure
@@ -582,7 +584,7 @@ The maximum terminal velocity (Equation :eq:`v_t_of_F_bond`) that can be obtaine
 
 .. _figure_vtmaxofFbondandGravity:
 
-.. figure:: Images/vtmaxofFbondandGravity.png
+.. figure:: ../Images/vtmaxofFbondandGravity.png
     :width: 400px
     :align: center
     :alt: internal figure

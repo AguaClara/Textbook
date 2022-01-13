@@ -1,42 +1,12 @@
 .. _title_review_fluid_mechanics:
 
 ***********************
-Review: Fluid Mechanics
+Fluid Mechanics Review
 ***********************
 
 This document is meant to be a refresher on fluid mechanics. It will only cover the topics in fluids mechanics that will be used heavily in the course.
 
-If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_ Note that to view this link, you will need a Github accounts. If you wish to review from a legitimate textbook, you can find a pdf of good book by Frank White `here <http://ftp.demec.ufpr.br/disciplinas/TM240/Marchi/Bibliografia/White_2011_7ed_Fluid-Mechanics.pdf>`_.
-
-.. _heading_fluids_terms_eqs:
-
-Important Terms and Equations
-=============================
-
-**Terms:**
-
-#. :ref:`Laminar <heading_laminar_and_turbulent_flow>`
-#. :ref:`Turbulent <heading_laminar_and_turbulent_flow>`
-#. :ref:`Viscosity <heading_laminar_and_turbulent_flow>`
-#. :ref:`Streamline <heading_streamlines_and_control_volumes>`
-#. :ref:`Control Volume <heading_streamlines_and_control_volumes>`
-#. :ref:`Head <heading_bernoulli_equation>`
-#. :ref:`Head loss <heading_head_loss>`
-#. :ref:`Driving head <heading_head_loss_elevation_difference_trick>`
-#. :ref:`Vena Contracta/Coefficient of Contraction <heading_what_is_a_vena_contracta>`
-
-**Equations:**
-
-#. Continuity equation: :eq:`continuity_equation`
-#. Reynolds number :eq:`reynolds_number_equation`
-#. Bernoulli Equation :eq:`bernoulli_equation`
-#. Energy Equation :eq:`energy_equation`
-#. Darcy-Weisbach Equation :eq:`darcy_weisbach`
-#. Swamee-Jain Equation :eq:`swamee_jain`
-#. Hagen-Poiseuille Equation :eq:`hagen_poiseuille`
-#. Orifice Equation :eq:`orifice_equation`
-
-
+If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_ Note that to view this link, you will need a Github account. If you wish to review from a legitimate textbook, you can find a pdf of a good book by Frank White `here <http://ftp.demec.ufpr.br/disciplinas/TM240/Marchi/Bibliografia/White_2011_7ed_Fluid-Mechanics.pdf>`_.
 
 .. _heading_introductory_concepts:
 
@@ -60,7 +30,7 @@ Continuity is simply an application of mass balance to fluid mechanics. It state
 
 .. note:: The line above the :math:`v` is called a ‘bar,’ and represents an average. Any variable can have a bar. In this case, we are adding the bar to velocity :math:`v`, turning it into average velocity :math:`\bar v`. This variable is pronounced ‘v bar.’
 
-In this course, we deal primarily with flow through pipes. For a circular pipe, :math:`A = \pi r^2`. Substituting diameter in for radius, :math:`r = \frac{D}{2}`, we get :math:`A = \frac{\pi D^2}{4}`. You will often see this form of the continuity equation being used to relate the a pipe's flow rate to its diameter and the velocity of the fluid flowing through it:
+In this course, we deal primarily with flow through pipes. For a circular pipe, :math:`A = \pi r^2`. Substituting diameter in for radius, :math:`r = \frac{D}{2}`, we get :math:`A = \frac{\pi D^2}{4}`. You will often see this form of the continuity equation being used to relate a pipe's flow rate to its diameter and the velocity of the fluid flowing through it:
 
 .. math::
 
@@ -88,7 +58,7 @@ An example of changing flow geometries is when a change in pipe size occurs in a
 
 .. _figure_continuity_pipes:
 
-.. figure:: Images/continuity_pipes.png
+.. figure:: ../Images/continuity_pipes.png
     :align: center
     :alt: internal figure
 
@@ -104,7 +74,7 @@ Considering that this class deals with the flow of water through a water treatme
 
 .. _figure_wikipedia_laminar_turbulent:
 
-.. figure:: Images/Wikipedia_laminar_turbulent.png
+.. figure:: ../Images/Wikipedia_laminar_turbulent.png
     :width: 400px
     :align: center
     :alt: Laminar flow, turbulent flow, and the transition
@@ -153,7 +123,7 @@ A **control volume** is just an imaginary 3-dimensional shape in space. Its boun
 
 .. _figure_control_volume_simplification:
 
-.. figure:: Images/control_volume_simplification.png
+.. figure:: ../Images/control_volume_simplification.png
     :width: 650px
     :align: center
     :alt: Control volume simplification
@@ -164,7 +134,7 @@ A **control volume** is just an imaginary 3-dimensional shape in space. Its boun
 
 .. _figure_image_control_volumes:
 
-.. figure:: Images/image_control_volumes.png
+.. figure:: ../Images/image_control_volumes.png
     :width: 650px
     :align: center
     :alt: Image control volumes
@@ -208,23 +178,16 @@ Going back to the Bernoulli equation, the :math:`\frac{p}{\rho g}` term is calle
 
 .. _figure_different_forms_of_head:
 
-.. figure:: Images/different_forms_of_head.png
+.. figure:: ../Images/different_forms_of_head.png
     :width: 650px
     :align: center
     :alt: Different forms of head
 
     The three forms of hydraulic head.
 
-Assumption in using the Bernoulli equation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 Though there are `many assumptions needed to confirm that the Bernoulli equation can be used <https://en.wikipedia.org/wiki/Bernoulli%27s_principle#Incompressible_flow_equation>`_, the main one for the purpose of this class is that energy is not gained or lost throughout the streamline being considered. If we consider more precise fluid mechanics terminology, then “friction by viscous forces must be negligible.” What this means is that the fluid along the streamline being considered is not losing energy to viscosity. As a result, using the Bernoulli equation implies that energy can’t be gained or lost. It can only be transferred between its three forms.
 
-Example problems
-^^^^^^^^^^^^^^^^
-
 `Here is a simple worksheet with very straightforward example problems using the Bernoulli equation. <https://www.teachengineering.org/content/cub_/lessons/cub_bernoulli/cub_bernoulli_lesson01_bepworksheetas_draft4_tedl_dwc.pdf>`_ Note that the solutions use the pressure-form of the Bernoulli equation. This just means that every term in the equation is multiplied by :math:`\rho g`, so the pressure term is just :math:`P`. The form of the equation does not affect the solution to the problem it helps solved.
-
 
 .. _heading_energy_equation:
 
@@ -246,11 +209,9 @@ You’ll also notice the :math:`\alpha` term attached to the velocity head. This
 
 **This is the form of the energy equation that you will see over and over again in this book.** To summarize, the main difference between the Bernoulli equation and the energy equation for the purposes of this class is energy loss. The energy equation accounts for the fluid’s loss of energy over time while the Bernoulli equation does not. So how can the fluid lose energy?
 
-
-
 .. _heading_head_loss:
 
-Head_loss
+Head Loss
 =========
 
 **Head (L)oss**, :math:`h_L` is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through space. There are two components to head loss: major losses caused by (f)riction between the fluid and the surface it's flowing over, :math:`h_{\rm{f}}`, and minor losses caused by fluid-fluid internal friction resulting from flow (e)xpansions, :math:`h_e`. These two components combine such that :math:`h_L = h_{\rm{f}} + h_e`.
@@ -337,7 +298,7 @@ In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gat
 
 .. _figure_moody:
 
-.. figure:: Images/Moody.jpg
+.. figure:: ../Images/Moody.jpg
     :width: 650px
     :align: center
     :alt: Moody diagram
@@ -352,7 +313,7 @@ Minor Losses
 
 Unfortunately, there is no simple ‘pushing a box across the ground’ example to explain minor losses. So instead, consider a `hydraulic jump <https://www.youtube.com/watch?v=5spXXZX55C8>`_. In the video, you can see lots of turbulence and eddies in the transition region between the fast, shallow flow and the slow, deep flow. The high amount of mixing of the water in the transition region of the hydraulic jump results in significant friction *between water and water*. This turbulent, eddy-induced, fluid-fluid friction results in  minor losses, much like fluid-pipe friction results in major losses.
 
-As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: **minor losses are caused by flow expansions**. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in :numref:`figure_minor_loss_pipe_FRD` below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: :ref:`title_review_fluid_mechanics_derivations`.
+As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme  throughout the course: **minor losses are caused by flow expansions**. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in :numref:`figure_minor_loss_pipe_FRD` below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: :ref:`title_review_fluid_mechanics_derivations`.
 
 There are three forms of the minor loss equation that you will see in this class:
 
@@ -383,7 +344,7 @@ There are three forms of the minor loss equation that you will see in this class
 
 .. _figure_minor_loss_pipe_FRD:
 
-.. figure:: Images/minor_loss_pipe.png
+.. figure:: ../Images/minor_loss_pipe.png
     :width: 650px
     :align: center
     :alt: Minor loss displayed in a flow expansion
@@ -397,7 +358,7 @@ one <https://www.engineeringtoolbox.com/minor-loss-coefficients-pipes-d_626.html
 
 .. _figure_minor_loss_elbow:
 
-.. figure:: Images/minor_loss_elbow.png
+.. figure:: ../Images/minor_loss_elbow.png
     :width: 650px
     :align: center
     :alt: Minor loss displayed in an elbow
@@ -417,8 +378,8 @@ In order to find :math:`\bar v_{out}`, we first need to know what (or where) is 
 
 .. _heading_head_loss_elevation_difference_trick:
 
-Head Loss = Elevation Difference Trick
---------------------------------------
+The Head Loss Elevation Trick
+-----------------------------
 
 This trick, also called the ‘control volume trick,’ or more colloquially, the ‘head loss trick,’ is incredibly useful for simplifying hydraulic systems and is used all the time in this class.
 
@@ -426,7 +387,7 @@ Consider the following figure:
 
 .. _figure_head_loss_trick:
 
-.. figure:: Images/head_loss_trick.png
+.. figure:: ../Images/head_loss_trick.png
     :width: 650px
     :align: center
     :alt: Image used to explain the head loss trick
@@ -480,22 +441,22 @@ By applying the head loss trick, you are considering the entire flow of the flui
 
 .. _heading_the_orifice_equation:
 
-The Orifice Equation
-====================
+Vena Contracta and The Orifice Equation
+=======================================
 
 This equation is one that you’ll see and use again and again throughout this class. Understanding it now will be invaluable, as future concepts will use and build on this equation.
 
 
 .. _heading_what_is_a_vena_contracta:
 
-What is a Vena Contracta?
--------------------------
+Vena Contracta
+--------------
 
 Before describing the equation, we must first understand the concept of a `vena contracta <https://en.wikipedia.org/wiki/Vena_contracta>`_. Refer to the figure below.
 
 .. _figure_sluice_gate_vena_contracta:
 
-.. figure:: Images/sluice_gate_vena_contracta.png
+.. figure:: ../Images/sluice_gate_vena_contracta.png
     :width: 650px
     :align: center
     :alt: Sluice Gate Vena Contracta
@@ -516,14 +477,14 @@ When the most extreme turn a streamline must make is 90°, the value of the vena
 
 .. note:: Note that what this class calls :math:`\Pi_{vc}` is often referred to as a ‘Coefficient of Contraction,’ :math:`C_c`, in other engineering courses and settings.
 
-Origin of the Orifice Equation
+The Orifice Equation
 ------------------------------
 
 The orifice equation is derived from the Bernoulli equation as applied to the purple points in the following image:
 
 .. _figure_hole_in_a_bucket:
 
-.. figure:: Images/hole_in_a_bucket.png
+.. figure:: ../Images/hole_in_a_bucket.png
     :width: 650px
     :align: center
     :alt: Minor loss displayed in an elbow
@@ -558,11 +519,11 @@ Which, rearranged to solve for :math:`Q` gives **The Orifice Equation:**
 
 .. seealso:: **Equation in aguaclara:** ``pc.flow_orifice_vert(Diam, Height, RatioVCOrifice)`` Returns flow through a vertical orifice. The height parameter refers to height above the center of the orifice.
 
-There are two configurations for an orifice in the tank holding a fluid: horizontal and vertical. These are both displayed in the figure below. The orifice equation written is for a horizontal orifice; the equation for flow through vertical orifice equation requires integration or the orifice equation across its height to return the correct flow. This is explored in the Flow Control and Measurement Examples section.
+There are two configurations for an orifice in the tank holding a fluid: horizontal and vertical. These are both displayed in the figure below. The orifice equation written is for a horizontal orifice; the equation for flow through a vertical orifice equation requires integration or the orifice equation across its height to return the correct flow. This is explored in the Flow Control and Measurement Examples section.
 
 .. _figure_vertical_and_horizontal_orifices:
 
-.. figure:: Images/vertical_and_horizontal_orifices.png
+.. figure:: ../Images/vertical_and_horizontal_orifices.png
     :width: 650px
     :align: center
     :alt: Vertical and horizontal orifices
@@ -605,7 +566,7 @@ Section Summary
 
         {\rm Re} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}
 
-    * **Control volumes vs Streamlines.** This section is quite short, a summary would simply repeat what the sections says. The section is its own summary; read it here: `Streamlines and Control Volumes`_
+    * **Control volumes vs Streamlines.** This section is quite short, a summary would simply repeat what the section says. The section is its own summary; read it here: `Streamlines and Control Volumes`_
 
 
 2. **Bernoulli vs Energy equations:** The Bernoulli equation assumes that energy is conserved throughout a streamline or control volume. The Energy equation assumes that there is energy loss, or head loss :math:`h_L`. This head loss is composed of major losses, :math:`h_{\rm{f}}`, and minor losses, :math:`h_e`.

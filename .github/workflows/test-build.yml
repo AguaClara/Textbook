@@ -38,8 +38,8 @@ jobs:
         FOLDER: _build/html/ # The folder the action should deploy.
     - name: Test Build LaTeX
       run: make latex
-    - name: Test Build PDF
-      uses: xu-cheng/latex-action@v2
-      with:
-        working_directory: _build/latex
-        root_file: AguaClaraTextbook.tex
+   # - name: Test Build PDF
+    #  uses: xu-cheng/latex-action@v2
+     # with:
+      #  working_directory: _build/latex
+       # root_file: AguaClaraTextbook.tex

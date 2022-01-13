@@ -1,200 +1,13 @@
 .. _title_Filtration_Theory_and_Future_Work:
 
-*********************************
-Filtration Theory and Future Work
-*********************************
+***********************
+Filtration Future Work
+***********************
 
+`Be sure to run the import code before trying any of the code examples linked in this section <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=iraCMmqY4sT2&line=1&uniqifier=1>`_
 
-Filtration model
-================
-
-The filtration model is based on the insight that rapid sand filters have an active filtration zone that slowly progresses down through the filter as it fills to maximum capacity at the upstream end. A clean bed of sand is ineffective at capturing small particles as evidenced by the poor initial performance after backwash. Thus it is apparently that previously deposited particles play a key role in subsequent capture of particles.
-
-Interception!
-Flow constrictions - converging streamlines move particles closer to the pore wall. Previously deposited particles form constrictions. The constrictions are the most likely location for particles to collide with deposited particles. Thus particles do not fill the pores and clog the filter. Instead particle form constrictions where streamlines already converged.
-
-Maximum shear sets a minimum constriction opening size!
-As particles gradually deposit in an ever shrinking flow constriction the velocity through the constriction increases and the velocity gradient at the wall increases. Eventually the bond strength of the coagulant nanoparticles is not great enough to capture suspended particles that collide with the deposited particles. The flow constriction reaches a minimum diameter and subsequent suspended flocs flow right through the constriction.
-
-The gradual creation of more flow constrictions results in an almost linear increase in head loss as a function of the volume of deposited flocs.
-
-
-
-.. _table_filter_hypotheses:
-
-.. csv-table:: Hypotheses, evidence, and why it matters
-   :header: #,Hypotheses, Evidence, Why it matters
-   :widths: 2, 30, 15, 15
-   :align: center
-
-   1, Particle removal is primarily due to converging streamlines that move particles close to the sand surface or to previously deposited particles, Filtration theory and estimates of void volume occupied by particles, Basis for our filtration model
-   2, The particle size distribution entering the filter is set by the plate settlers, Estimate of velocity gradient in inlet waterfall and in filter bed, High velocity injection would be required to reduce the floc size
-   3, The jets that the constrictions create dissipate almost all of their energy in the downstream void BEFORE entering the next constriction, Laminar flow jets dissipate energy very quickly, Allows a simple relationship between pore head loss and constriction velocity
-   4, Flocs are captured with VERY high efficiency and thus primary particle removal limits filter performance, Clean bed filtration models, Need to optimize filters for primary particle removal
-   5, Constrictions form a continuous barrier across the filter at each sand grain layer, Any gaps would receive higher flow rate and thus higher flux of particles, Filter automatically prevents short circuiting
-   6, The thickness of the deposit scales with the width of the ring or perhaps simply with the pore size or sand size, Thickness can't scale with diameter of the flocs because that would predict more total mass retained with increased coagulant dose, Required to predict head loss vs mass deposited.
-
-.. _heading_Filter_Head_loss_model:
-
-Filter Head loss model
+Constriction Velocity
 ======================
-
-The maximum velocity in a constriction is set by the drag on a primary particle that is large enough to prevent the primary particle from attaching. Given that the constriction is likely sharp edged on the upstream face the flow velocity is likely close to uniform at the entrance to the constriction. There is likely a vena contracta effect and that effect would prevent deposition of particles downstream of the leading edge of the constriction because particles are diverted away from the constriction walls.
-
-The maximum constriction velocity is thus likely independent of the filtration velocity and pore size. The maximum velocity at the inlet to the constrictions is likely proportional to the fractional surface coverage of the primary particles by coagulant nanoparticles. Thus as the coagulant dose increases the head loss per pore and the head loss at the time of particle breakthrough increases.
-
-.. math::
-  :label: eq_headloss_constriction
-
-    h_{l_{constriction}} = \frac{\bar v_{constriction}^2}{2g}
-
-
-The maximum drag that a primary particle can
- - need to connect velocity to drag
- - Use experimental data from filtration to find critical velocity
- - expect velocity to be independent of pore size (sand size)
- - Create model for total head loss in a filter as a function of sand size
- - Need a connection between pore size and volume of particles it can hold.
-
-The average distance between sand grains in a filter bed is obtained by taking the cube root of the total volume occupied by a sand grain including the pore space. We also assume that there is a one-to-one correspondence between pores and sand grains and thus the distance between pores is the same as the distance between sand grains.
-
-.. math::
-
-   \Lambda_{sand} = \Lambda_{pore} = \left(\frac{\pi}{6(1-\phi)} \right)^\frac{1}{3}D_{sand}
-
-The flow rate per pore is the approach velocity multiplied by :math:`\Lambda^2`.
-
-.. math::
-
-     Q_{pore} = v_a \Lambda_{pore}^2
-
-The velocity through a constriction in a pore is
-
-.. math::
-
-     Q_{pore} = v_a \Lambda_{pore}^2 = \frac{\pi}{4} D_{constriction}^2v_{constriction}
-
-The constriction diameter is thus given by
-
-.. math::
-  :label: eq_D_constriction
-
-    D_{constriction} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction}}
-
-
-The Reynolds number of the jet issuing from the constriction is obtained by using Equation :eq:`eq_D_constriction` to eliminate the dependence on diameter.
-
-.. math::
-  :label: eq_Re_constriction
-
-    Re_{jet} = \frac{\Lambda_{pore} }{\nu }\sqrt\frac{4 v_a v_{constriction}}{\pi }
-
-The jet issuing from the constrictions is laminar for Reynolds numbers below 500 (`see Ungate et al., 1975 page 13 <https://dspace.mit.edu/handle/1721.1/27517>`_).  The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. WE don't have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.
-
-The rate of jet expansion can be obtained from an analytical solution of the Navier Stokes equation as shown by `Pai, S.I., Fluid dynamics of jets. (D. Van Nostrand Company, Inc., Princeton, NJ, 1954 (pages 78-79) <https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99>`_
-
-The momentum in the direction of flow is conserved and is given by
-
-.. math::
-
-    M_0 = 2 \pi \rho \int_{0}^{\infty} u^2 r dr
-
-For the case of uniform velocity through the constriction we can replace :math:`\infty` with :math:`r_{constriction}`
-
-.. math::
-
-    M_0 = 2 \pi \rho v_{constriction}^2 \int_{0}^{r_{constriction}}  r dr
-
-.. math::
-
-    M_0 = \pi \rho v_{constriction}^2 r_{constriction}^2 = \rho Q_{pore}v_{constriction}
-
-The velocity in the direction of the jet is given by (equation 4.39 in `Pai, 1954 <https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99>`_)
-
-.. math::
-
-    u = \frac{3M_0}{8\pi \mu} \frac{1}{x} \frac{1}{\left[1+(\frac{\zeta^2}{4})\right]^2}
-
-
-.. math::
-
-   \zeta = \frac{1}{4\nu} \left(\frac{3M_0}{\pi\rho}\right)^{\frac{1}{2}} \frac{r}{x}
-
-and thus :math:`\zeta` is zero at the centerline.  We will use the centerline velocity at distance :math:`\Lambda_{pore}` from the constriction to estimate the head loss caused by one constriction.
-
-.. math::
-
-    v_{exp} = \frac{3\rho Q_{pore}v_{constriction}}{8\pi \mu \Lambda_{pore}}
-
-We can substitute for :math:`Q_{pore}` to obtain
-
-.. math::
-
-    v_{exp} =  \frac{3 v_a \Lambda_{pore} }{8\pi \nu }v_{constriction}
-
-
-We can use mass conservation and the equation for :math:`Q_{pore}` to replace :math:`v_a` with :math:`v_{constriction}`
-
-.. math::
-
-    v_{exp} =  \frac{3}{32}\frac{D_{constriction}}{\Lambda_{pore}}Re_{jet}v_{constriction}
-
-It isn't yet clear if this always means that :math:`v_{exp}` will be very small compared with :math:`v_{constriction}`, but that seems to be the logical conclusion. Thus when calculating the head loss for a pore it is reasonable to assume that the kinetic energy of the jet is all lost before entering the next constriction.
-
-Sedimentation plates set the size of the flocs in the filter
-============================================================
-
-The characteristic floc size could be set by the plate settlers that preferentially remove large flocs or it could be set by any of the high shear events on the path to or through the filter. We will estimate floc size from each of the potential shear and terminal velocity events. The calculations are done in
-:ref:`python below <heading_Floc_size_and_velocity_gradient_calculations>`.
-
-Sedimentation tank floc diameter
---------------------------------
-
-The floc diameter that is not completely captured by plate settlers with a capture velocity of 0.12 mm/s (the capture velocity used by AguaClara) is 25 :math:`\mu m`.
-
-Constricted pore velocity gradient
-----------------------------------
-
-Almost all of the kinetic energy of the jet issuing from the constriction is dissipated in the downstream pore. We will assume that the majority of the head loss is due to the jet (rather than wall shear). The volume of a pore is given by
-
-.. math::
-
-   \rlap{-} V_{pore} = \phi\Lambda_{pore}^3
-
-The hydraulic residence time in a pore is obtained from the volume and flow rate through a pore.
-
-.. math::
-
-   \theta_{pore} = \frac{\rlap{-} V_{pore}}{Q_{pore}} = \frac{\phi\Lambda_{pore}^3}{v_a \Lambda_{pore}^2} = \frac{\phi\Lambda_{pore}}{v_a}
-
-The Camp Stein velocity gradient in a pore is obtained by assuming that all of the input kinetic energy is dissipated through viscosity during the time that the water spends in the pore.
-
-.. math::
-
-    G_{CS} = \sqrt{\frac{gh_{\rm{L}}}{\nu \theta}}
-
-The head loss in the pore is from the jet kinetic energy. Substitute the equations for pore volume, residence time, and head loss to obtain the fundamental equation for the velocity gradient in a pore.
-
-.. math::
-
-    G_{CS} =\bar v_{constriction} \sqrt{\frac{ v_a}{2\nu \phi\Lambda_{pore}}}
-
-The estimated value of this velocity gradient is *300 Hz*.
-
-Influent sand injection velocity gradient
------------------------------------------
-
-We need to compare the constricted jet velocity gradient with the clean bed injection velocity gradient that occurs due to the fact that the approach velocity at the point of flow injection in StaRS filters is much higher than the average approach velocity. The flow injection area is approximately 2.5 cm wide and serves an effective filter area (up and down!) of 20 cm (spacing between injection points is 10 cm.). Thus the approach velocity in current StaRS filters is 14.6 mm/s and the corresponding Camp Stein velocity gradient is *1440 Hz*.
-
-Filter inlet box water fall velocity Gradient
----------------------------------------------
-
-EstaRS filters have water falls from the filter inlet channel to inlet box. In recent designs the water flows through a narrow slot and then falls into the inlet box. The slot is about 3.4 cm wide and the water falls about 40 cm. The vertical velocity after dropping 40 cm is 2.8 m/s. The geometry of this water fall is complicated and We will assume the resulting jet is circular at impact with the water surface. The diameter of the jet is thus obtained from continuity and is equal to 9.5 cm.  Now we use the energy dissipation rate of a round jet to obtain *4300 Hz*. Thus the floc size could be set by the water fall in the inlet box since this is the highest velocity gradient on the path into and through the filter. However, our rough estimate based on wild extrapolation suggests that this would yield a 36 :math:`\mu m` diameter floc. This is larger than the flocs produced by the sedimentation tank plate settlers and thus it is possible that even with this waterfall, that the floc size distribution is set by the sedimentation tank plate settlers.
-
-Note that the water fall height diminishes during a filter run as the water level in the inlet box increases due to head loss through the filter. Thus it is likely that the waterfall doesn't significantly break flocs.
-
-Maximum velocity in constrictions
-=================================
 
 The maximum velocity in a pore is set by the strength of the coagulant bonds and the size of the core particles that are being captured by the filter. The drag force on the core particle must be balanced by the chemical bond strength and that relationship is given by Equation :eq:`Fbond_of_v_constriction`.
 
@@ -239,8 +52,8 @@ From :numref:`figure_Head_loss_vs_time` we have an estimate of 80 cm of head los
 
 .. _heading_Shear_big_flocs_to_improve_filter_performance:
 
-Shear big flocs to improve filter performance
-=============================================
+Shear Big Flocs
+================
 
 Here we explore the possibility of breaking flocs as they enter the filter bed to eliminate large flocs that may be reducing filter performance.
 
@@ -263,86 +76,28 @@ to estimate the injection area that should be used to break up flocs entering th
 
 .. _heading_Floc_size_and_velocity_gradient_calculations:
 
-Floc size and velocity gradient calculations
-============================================
+Floc Size Calculations
+=======================
 
-.. code:: python
-
-  import aguaclara.core.physchem as pc
-  from aguaclara.core.units import unit_registry as u
-  import aguaclara.research.floc_model as fm
-
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-  N_layers = 6
-  v_filter_backwash = 11 * u.mm/u.s
-  v_a = v_filter_backwash/N_layers
-  Porosity = 0.4
-  D_sand = 0.5 * u.mm
-  # the following is just a guess at pore size
-  D_pore = 0.2 * D_sand
-  Temperature = 20 * u.degC
-  L = 20 * u.cm
-  Q_waterfall = 20 *u.L/u.s
-  v_waterfall=(np.sqrt(pc.gravity*2*40*u.cm)).to(u.m/u.s)
-  v_waterfall
-  #use continuity to get diameter of waterfall
-  D_waterfall = (np.sqrt(Q_waterfall/v_waterfall *4/np.pi)).to(u.cm)
-  D_waterfall
-  Pi_JetRound = 0.08
-  G_Max_waterfall = (v_waterfall*np.sqrt(Pi_JetRound*v_waterfall/(pc.viscosity_kinematic(Temperature)*D_waterfall))).to(u.Hz)
-  print('The maximum velocity gradient in the plunging jet in the filter inlet box is ',G_Max_waterfall,'.')
-  # now estimate the size of this floc
-  EDR_waterfall = (G_Max_waterfall**2*pc.viscosity_kinematic(Temperature)).to(u.mW/u.kg)
-  EDR_waterfall
-  D_floc_waterfall = (fm.diam_floc_max(G_Max_waterfall**2*pc.viscosity_kinematic(Temperature))).to(u.um)
-  print('The diameter of flocs after the waterfall is estimated to be',D_floc_waterfall,'.')
-
-
-  # Calculate maximum diameter of flocs leaving the sedimentation tank
-  D_floc= fm.diam_floc_vel_term(0*u.mg/u.L,10*u.mg/u.L,fm.PACl,fm.Clay,fm.DIM_FRACTAL, 0.12*u.mm/u.s,20*u.degC)
-  print('The maximum diameter of flocs leaving the sedimentation tank is',D_floc.to(u.um),'.')
-
-  v_graph = np.linspace(0.1, 100, 500) * u.mm/u.s
-
-  fig, ax = plt.subplots()
-  ax.plot(v_graph,(hf_Erdon(v_graph, D_sand, Temperature, Porosity, L)/L).to(u.dimensionless),'-')
-  ax.plot(v_graph,(pc.headloss_kozeny(L,D_sand, v_graph, Porosity, pc.viscosity_kinematic(Temperature) )/L).to(u.dimensionless),'-')
-  ax.set(xlabel='approach velocity (mm/s)')
-  ax.set(ylabel='head loss per m')
-  ax.legend(['Ergun', 'Kozeny'])
-  fig.savefig('Filtration/Images/Head_loss_Ergun_and_Kozeny')
-  plt.show()
+`The code to make a figure showing the relationship between approach velocity and headloss can be found here. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=Mlv81ZYLi1Gc&line=25&uniqifier=1>`_
 
 
 
 .. _figure_Head_loss_Ergun_and_Kozeny:
 
-.. figure:: Images/Head_loss_Ergun_and_Kozeny.png
+.. figure:: ../Images/Head_loss_Ergun_and_Kozeny.png
    :width: 400px
    :align: center
    :alt: Head loss Ergun and Kozeny
 
    The Ergun and Kozeny equations are very similar even at approach velocities that are much larger than are used in rapid sand filtration. At very high velocities the turbulent term in the Ergun equation begins to be significant.
 
-.. code:: python
-
-  # Need to use a root finding method here because f_phi is a function of velocity
-  # Will use a graphical solution for now
-
-  fig, ax = plt.subplots()
-  ax.plot(v_graph,G_CS_Ergun(v_graph, D_sand, Temperature, Porosity),'-')
-  ax.set(xlabel='approach velocity (mm/s)')
-  ax.set(ylabel='velocity gradient (Hz)')
-  fig.savefig('Filtration/Images/G_vs_approach_velocity')
-  plt.show()
-
+`The code for the following graph is found here. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=g4nn81gGi9aS&line=3&uniqifier=1>`_
 
 
 .. _figure_G_vs_approach_velocity:
 
-.. figure:: Images/G_vs_approach_velocity.png
+.. figure:: ../Images/G_vs_approach_velocity.png
    :width: 400px
    :align: center
    :alt: G vs approach velocity
@@ -350,20 +105,7 @@ Floc size and velocity gradient calculations
    The Camp Stein velocity gradient increases rapidly with approach velocity.
 
 
-.. code:: python
-
-  #We guess at a velocity gradient by extrapolating wildly to a 20 um floc.
-  G_CS =np.sqrt((fm.ener_dis_diam_floc(40*u.um))/pc.viscosity_kinematic(Temperature)).to(u.Hz)
-  print('A wild guess at the velocity gradient required to break up flocs is ',G_CS,'.')
-  #from the graph above we'd need an approach velocity of about 80 mm/s to achieve a G of 10,000 Hz.
-  v_inject = 80*u.mm/u.s
-  (v_inject/v_a).to(u.dimensionless)
-  injection_port_spacing = 10 * u.cm
-  injection_port_width =     (injection_port_spacing/(v_inject/v_a)).to(u.mm)
-  print('The injection port width would be ',injection_port_width,'.')
-  print('The injection velocity would be ',v_inject.to(u.mm/u.s),'.')
-
-
+`See here for how the injection port width and injection velocity are determined. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=KqQCyZaZjBJm&line=3&uniqifier=1>`_
 
 The analysis above suggests that the approach velocity required to break flocs down to a dimension of :math:`20 \mu m` is approximately 80 mm/s. This is based on a VERY bad guesstimate of the relationship between floc size and shear.
 
@@ -414,35 +156,14 @@ Now we set up the numerical integration and integrate from the injection site to
 
 .. code:: python
 
-  #This is for an inlet that serves 2 layers (up and down)
-  v_filter = (11 * u.mm/u.s)/N_layers*2
-  S_branch = 10 * u.cm
-  v0 = 80 * u.mm/u.s
-  r0 = (2*v_filter/v0 * S_branch/(2*np.pi)).to(u.mm)
-  r0
-
-  #create coefficients for the constant terms in the equation
-  a0 = v0 * r0 /(2*pc.gravity*D_sand)
-  a1 = (300*pc.viscosity_kinematic(Temperature)*(1-Porosity)**2)/(D_sand*Porosity**3)
-  a2 = 3.5*(1-Porosity)* v0 * r0/Porosity**3
-  r1 = S_branch/(2*np.pi)
-  r1
-  #create an array of r values with each value centered in the ring that it represents. #We will use simple
-  n_points = 10000
-  dr = ((r1-r0)/(n_points)).to(u.mm)
-  r_array = np.linspace((r0).to(u.mm),(r1).to(u.mm),n_points)*u.mm
-  y_array = (a0*(np.divide(a1,r_array) + np.divide(a2,np.multiply(r_array,r_array)))).to(u.dimensionless)
-  #Use the trapezoidal rule to integrate
-  #need to reattach units to np.trapz.
-  hf_inlet = np.trapz(y_array,x=r_array, dx = dr)*u.mm
-  print('The head loss through the sand between the injection point and where it reaches the filtration velocity is ', hf_inlet)
+`For an inlet that service two layers, see here to determine the headloss through the sand <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=PF8v34hSjJtx&line=11&uniqifier=1>`_
 
 The analysis above suggests that a high velocity and high velocity gradient injection into the sand bed with the goal of breaking flocs into pieces that are 20 :math:`\mu m` in diameter would require about 12 cm of head loss. This is based on the assumption that the water would be able to flow radially from the injection point and thus rapidly slow down. Thus the head loss rapidly decreases with distance from the injection point.
 
 This is an experiment worth trying. It will help us understand if large flocs result in poorer filter performance.
 
-Volume of flocs per pore
-========================
+Floc Volume
+============
 
 The volume of solids deposited in one pore can be obtained based on the average diameter of clean pore constrictions, the diameter of the constricted pore after solids deposition, and the thickness of the deposit. We already have an estimate for the diameter of the constricted pore after solids deposition. The thickness of the deposit must be proportional to some other length scale. We initially hypothesized that the thickness of the deposit scaled with the diameter of the flocs that make it up. That led to the conclusion that increased coagulant dose would increase the total mass of solids that could be retained by the filter before breakthrough. That doesn't match experimental data and thus we now propose that the average thickness of the deposit scales with the sand grain size, or pore size, or pore separation distance. We will use the pore separation distance as our scaling parameter.
 
@@ -523,7 +244,7 @@ The head loss per mass of particles deposited can be obtained by dividing the he
 
 The head loss per mass of solids removed is significantly lower for larger sand sizes. When the coagulant dose increases the head loss increases rapidly because the constricted velocity increases and the floc diameter increases. Unfortunately we do not yet have a model describing floc size as a function of both velocity gradient and coagulant nanoparticle coverage.
 
-Particle removal efficiency
+Particle Removal Efficiency
 ===========================
 
 Particle removal is complicated. We hypothesize that flocs form the deposits that change the flow from being wall shear dominated with a parabolic velocity profile to being uniform velocity flow through the constrictions. This uniform velocity profile transports a very small fraction of clay particles close enough to the deposit to be captured.
@@ -532,8 +253,8 @@ During filter ripening the particles that pass through the filter would be expec
 
 The flocs form a series of actively growing deposits. The number of actively growing deposits in series is possibly a function of the average volume of the flocs (smaller flocs result in more active deposits) and the volume fraction of the flocs normalized by the volume fraction of the primary particles. If this dimensionless volume fraction increases there may be more active deposits and hence improved removal of primary particles.
 
-Proposed experiments and inventions
-===================================
+Proposed Experiments
+=====================
 
  #. Compare different sizes of sand media. Expect to get poorer removal efficiency with larger sand sizes, similar mass of particles retained at breakthrough, and much lower head loss.
  #. dual media. expect to find less head loss and poorer performance than single small media. And expect the smaller media to not contribute anything.
