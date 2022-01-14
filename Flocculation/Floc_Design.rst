@@ -325,9 +325,13 @@ Using the equation and image above, we can find the distance required for the fl
 .. math::
 
   \Pi_{PlaneJet_{exp}} H_e = S - (0.384 S)
-  Pi_{PlaneJet_{exp}} H_e= 0.616 S
-  H_e = 5.3S
-  \frac{H_e}{S} = 5.3
+
+.. math::
+
+  \Pi_{PlaneJet_{exp}} H_e= 0.616 S
+
+.. math::
+
   \Pi_{H_eS_{Max}} = \frac{H_e}{S} = 5.3
 
 This is the highest allowable :math:`\Pi_{H_eS}` that we can design while ensuring that there is no dead space in the flocculator.
