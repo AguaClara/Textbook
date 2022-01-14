@@ -1,0 +1,442 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Stacked Rapid Sand Filter Design &mdash; AguaClara Textbook EXPERIMENTAL documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="../_static/mathjax_config.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                EXPERIMENTAL
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Grand_Challenges.html">AguaClara Treatment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Fluid Mechanics Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 3: Flocs, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 4: Fluid Deformation and Energy Dissipation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Energy Dissipation Rate, Velocity Gradient, and Mixing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 5: Chemistry of Water Treatment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Coagulant Nanoparticles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Carbonate Reactions, Buffering, and pH</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 6: Flow Control and Measurement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Constant Head Tanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">AguaClara Flow Control and Measurement Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 7: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Derivations.html">Rapid Mix Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 8: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">AguaClara Hydraulic Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 9: Sedimentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">AguaClara Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 10: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html#filtration-theory">Filtration Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Stacked Rapid Sand Filter Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Hydraulics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html">Hydraulics Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 13: Fluoride</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 14: Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#high-head-loss-after-backwash-in-estars">High Head Loss After Backwash in EStaRS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#encrustation-of-filter-pipes-at-las-vegas">Encrustation of Filter Pipes at Las Vegas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#slime-at-las-vegas">Slime at Las Vegas</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara Textbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Stacked Rapid Sand Filter Design</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Filtration/Filtration_Design_wrong_constraint.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="stacked-rapid-sand-filter-design">
+<span id="title-filtration-design"></span><h1>Stacked Rapid Sand Filter Design<a class="headerlink" href="#stacked-rapid-sand-filter-design" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The hydraulic design of both the enclosed and open stacked rapid sand filter is complicated by the number of parallel flows, the manifolds in series, and the need to handle both backwash and filter modes. The design requires careful attention to weir hydraulics to achieve the target backwash flows when the plant is operating at less than full capacity. The siphon system has a tight design constraint to ensure that the siphon doesn’t trigger prematurely.</p>
+<p>There are two possible constraints on the trunk size. Either the trunk size is dictated by backwash flow distribution requirements or the trunk size is dictated by the need to have uniform flow distribution between filter layers and hence to have exactly twice the flow rate through the inner inlets.</p>
+<p>An analysis of the design reveals that the extra orifice head loss required to achieve the flow distribution between inner and outer trunks during filtration is greater than the head loss required to achieve uniform flow from the orifices during backwash.</p>
+</div>
+<div class="section" id="design-steps">
+<h2>Design Steps<a class="headerlink" href="#design-steps" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Apply a maximum head loss during backwash and flow distribution between filter layers during filtration to set the maximum velocity in the trunk during backwash</p></li>
+</ol>
+<div class="section" id="backwash-trunk-diameter">
+<h3>Backwash Trunk Diameter<a class="headerlink" href="#backwash-trunk-diameter" title="Permalink to this headline">¶</a></h3>
+<p>The first design step is to calculate the diameter of the trunk lines which is set by the backwash flow distribution requirement. The maximum acceptable head loss during backwash sets the required depth of the open filter box and so is an important constraint for O-StaRS. To simplify the analysis we will neglect major losses and calculate the minor losses using the trunk velocity during backwash.</p>
+<p>If the branch area is large compared with the trunk diameter, then the flow distribution between the branches is set by the head loss through the orifices and we can treat this as a single flow distribution problem rather than having two flow distribution events (branches and then orifices) in series.</p>
+<p>The total head loss in the inlet trunk and branches during backwash is</p>
+<div class="math notranslate nohighlight" id="equation-eq-he-inlet-bw">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-he-inlet-bw" title="Permalink to this equation">¶</a></span>\[h_{e_{inlet_{Bw}}} = \left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{outerOrifices}}\right)\frac{\bar v_{M_{Bw}}^2}{2g}\]</div>
+<p>where <span class="math notranslate nohighlight">\(K_{e_{trunk}}\)</span> is the minor loss coefficient for all of the inlet trunks. The inlet trunks will be designed to have the same number of elbows. It is possible that we can design this so that the <span class="math notranslate nohighlight">\(K_{e_{branch}}\)</span> is small by having the branch area larger than the trunk area. The minor loss coefficient associated with the orifices, <span class="math notranslate nohighlight">\(K_{e_{outerOrifices}}\)</span>, can be obtained from the minor loss equation written for port exit head loss. All of the kinetic energy in the port jet is lost.</p>
+<p>The head loss through a port can be expressed in the minor loss equation form.</p>
+<div class="math notranslate nohighlight" id="equation-eq-he-port">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-he-port" title="Permalink to this equation">¶</a></span>\[h_{e_P} = \frac{\bar v_{P}^2}{2g}\]</div>
+<p>where the port velocity <span class="math notranslate nohighlight">\(\bar v_{P}\)</span> is the <em>contracted</em> velocity out of the port. We want the head loss to be a function of the manifold velocity. The relationship between port and manifold velocity is given by equation <a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html#equation-manifold-max-v-no-hl-series">(804)</a>. Substitute equation <a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html#equation-manifold-max-v-no-hl-series">(804)</a> into equation <a class="reference internal" href="#equation-eq-he-port">()</a> to obtain an equation that is only a function of the manifold velocity.</p>
+<div class="math notranslate nohighlight" id="equation-eq-he-port-of-v-manifold">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-he-port-of-v-manifold" title="Permalink to this equation">¶</a></span>\[h_{e_P} = \frac{\Pi_{Q}^2 + 1}{2\left(1 - \Pi_{Q}^2\right)}\frac{\bar v_{M_1}^2}{2g}\]</div>
+<p>By analogy with the minor loss head loss equation we obtain the minimum minor loss coefficient scaled with the manifold velocity for the orifices in the top and bottom (outer) inlets.</p>
+<div class="math notranslate nohighlight" id="equation-eq-ke-outerorifices">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-ke-outerorifices" title="Permalink to this equation">¶</a></span>\[K_{e_{outerOrifices}} =\frac{\Pi_{Q}^2 + 1}{2\left(1 - \Pi_{Q}^2\right)}\]</div>
+<p>Solve equation <a class="reference internal" href="#equation-eq-he-inlet-bw">()</a> for the maximum manifold velocity and substitute equation <a class="reference internal" href="#equation-eq-ke-outerorifices">()</a>.</p>
+<div class="math notranslate nohighlight" id="equation-v-max-manifold">
+<span class="eqno">()<a class="headerlink" href="#equation-v-max-manifold" title="Permalink to this equation">¶</a></span>\[\bar v_{M_{Bw}} = \sqrt{\frac{2 g h_{e_{inlet_{Bw}}}}{K_{e_{trunk}} + K_{e_{branch}} + \frac{\Pi_{Q}^2 + 1}{2\left(1 - \Pi_{Q}^2\right)}}}\]</div>
+<p>Given a filter flow rate, equation <a class="reference internal" href="#equation-v-max-manifold">()</a> can be used to find the minimum diameter of the trunks. Alternatively, the maximum flow rate for each available manifold diameter can be calculated.</p>
+</div>
+<div class="section" id="backwash-inlet-orifice-area-and-spacing">
+<h3>Backwash Inlet Orifice Area and Spacing<a class="headerlink" href="#backwash-inlet-orifice-area-and-spacing" title="Permalink to this headline">¶</a></h3>
+<p>The port contracted velocity is given by solving equation <a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html#equation-manifold-max-v-no-hl-series">(804)</a> for the port velocity. We’d like the port velocity during filtration since the other inlet manifolds will be designed based on filtration velocity and backwash manifold velocity (from equation <a class="reference internal" href="#equation-v-max-manifold">()</a>).</p>
+<div class="math notranslate nohighlight" id="equation-port-contracted-v">
+<span class="eqno">()<a class="headerlink" href="#equation-port-contracted-v" title="Permalink to this equation">¶</a></span>\[ \bar v_{P_{Fi}} = \frac {\bar v_{M_{Bw}}}{N_{layer}}\sqrt{\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)}}\]</div>
+<p>The ratio of the active filter area to the orifice vena contracta area is equal to the ratio of the contracted port velocity during filtration to the filtration velocity. This ratio is the same during backwash.</p>
+<p>Apply conservation of mass to obtain the port velocity to filter velocity ratio. Each port serves an area equal to the branch spacing times the port spacing.</p>
+<div class="math notranslate nohighlight" id="equation-v-port-to-v-fi">
+<span class="eqno">()<a class="headerlink" href="#equation-v-port-to-v-fi" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{P_{Fi}}}{v_{Fi}} = \frac{B_{branch} B_{orifice_{outer}}}{\Pi_{vc}\frac{\pi}{4} D_{orifice}^2}\]</div>
+<p>Then the orifice diameter for the bottom and top inlets is given by</p>
+<div class="math notranslate nohighlight" id="equation-d-outerport-ofvport">
+<span class="eqno">()<a class="headerlink" href="#equation-d-outerport-ofvport" title="Permalink to this equation">¶</a></span>\[D_{orifice} = \sqrt{\frac{v_{Fi}}{\bar v_{P_{Fi}}}\frac{B_{branch} B_{orifice_{outer}}}{\Pi_{vc}\frac{\pi}{4} }}\]</div>
+<p>Eliminate port velocity by substituting equation <a class="reference internal" href="#equation-port-contracted-v">()</a></p>
+<div class="math notranslate nohighlight" id="equation-d-outerport">
+<span class="eqno">()<a class="headerlink" href="#equation-d-outerport" title="Permalink to this equation">¶</a></span>\[D_{orifice} = 2\sqrt{\frac{v_{Fi}N_{layer}}{\bar v_{M_{Bw}}}\frac{B_{branch} B_{orifice_{outer}}}{\pi\Pi_{vc} }}\left(\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}\right)^{\frac{1}{4}}\]</div>
+<p>We also need this equation solved for the orifice spacing because the orifice diameter is tightly constrained in the wing inlet design.</p>
+<div class="math notranslate nohighlight" id="equation-b-outerport">
+<span class="eqno">()<a class="headerlink" href="#equation-b-outerport" title="Permalink to this equation">¶</a></span>\[B_{orifice_{outer}} = D_{orifice}^2  \frac{\bar v_{M_{Bw}}}{v_{Fi}N_{layer}}  \frac{\pi\Pi_{vc} }{4 B_{branch} } \left(\frac{\Pi_{Q}^2 + 1}{2(1 - \Pi_{Q}^2)}\right)^{\frac{1}{2}}\]</div>
+</div>
+<div class="section" id="inner-inlet-orifice-area-and-spacing">
+<h3>Inner Inlet Orifice Area and Spacing<a class="headerlink" href="#inner-inlet-orifice-area-and-spacing" title="Permalink to this headline">¶</a></h3>
+<p>The inner inlets each serve two sand layers and thus have twice the flow rate of the outer (top and bottom) inlets. The head loss must be the same for the various inlets to optimize flow division between filter layers. The inner trunk minor losses will be higher due to the higher flow rate and thus the orifice head loss for the inner inlets must be less than the orifice head loss for the outer inlets.</p>
+<p>Let’s use the head loss constraint during filtration and see what we get. First the head loss from the inlet box to the orifices in the outer inlets is given by</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-wrong-constraint-0">
+<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-design-wrong-constraint-0" title="Permalink to this equation">¶</a></span>\[h_{e_{outerInlet_{Fi}}} = \left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{outerOrifices}}\right)\frac{\bar v_{M_{Bw}}^2}{2g N_{layer}^2}\]</div>
+<p>where the factor of <span class="math notranslate nohighlight">\(N_{layer}\)</span> comes from the fact that the velocity in the outer inlets during filtration is <span class="math notranslate nohighlight">\(1/N_{layer}\)</span> the velocity during backwash.</p>
+<p>Now the inner inlets</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-wrong-constraint-1">
+<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-design-wrong-constraint-1" title="Permalink to this equation">¶</a></span>\[h_{e_{innerInlet_{Fi}}} = \left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{innerOrifices}}\right)\frac{2\bar v_{M_{Bw}}^2}{g N_{layer}^2}\]</div>
+<p>where the factor of 4 difference is because the velocity in the inner inlet is double the outer inlets because each inner inlet serves 2 filter layers.</p>
+<p>The manifold - port flow distribution constraint (equation <a class="reference internal" href="#equation-v-max-manifold">()</a>) is not required during filtration. This is because the sand provides additional head loss in series and because the outlet system has a matching piezometric head distribution such that the difference in piezometric head is uniform across the filter bed. Thus the only constraint for the inner inlets is that there be uniform flow distribution between sand bed layers and thus the head loss for the various paths from inlet box to sand bed must be identical. This will give a required relationship between the inner and outer orifice Ke.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-wrong-constraint-2">
+<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-design-wrong-constraint-2" title="Permalink to this equation">¶</a></span>\[\left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{outerOrifices}}\right)\frac{\bar v_{M_{Bw}}^2}{2g N_{layer}^2} = \left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{innerOrifices}}\right)\frac{2\bar v_{M_{Bw}}^2}{g N_{layer}^2}\]</div>
+<p>Eliminate the identical terms.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-wrong-constraint-3">
+<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-design-wrong-constraint-3" title="Permalink to this equation">¶</a></span>\[\left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{outerOrifices}}\right) = 4\left(K_{e_{trunk}} + K_{e_{branch}} + K_{e_{innerOrifices}}\right)\]</div>
+<p>Solve for <span class="math notranslate nohighlight">\(K_{e_{innerOrifices}}\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-wrong-constraint-4">
+<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-design-wrong-constraint-4" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}:label:\\K_{e_{innerOrifices}} = \frac{K_{e_{outerOrifices}} - 3K_{e_{trunk}} - 3K_{e_{branch}}}{4}\end{aligned}\end{align} \]</div>
+<p>The value of <span class="math notranslate nohighlight">\(K_{e_{innerOrifices}}\)</span> should be calculated based on the actual value of <span class="math notranslate nohighlight">\(K_{e_{outerOrifices}}\)</span> given the orifice diameter and spacing used. FOr now we will assume that we will not do any rounding in the spacing of the orifices and thus we can use the value obtained from <a class="reference internal" href="#equation-eq-ke-outerorifices">()</a>.</p>
+<div class="math notranslate nohighlight" id="equation-eq-ke-innerorifices">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-ke-innerorifices" title="Permalink to this equation">¶</a></span>\[K_{e_{innerOrifices}} = \frac{\frac{\Pi_{Q}^2 + 1}{2\left(1 - \Pi_{Q}^2\right)} - 3K_{e_{trunk}} - 3K_{e_{branch}}}{4}\]</div>
+<p>The <span class="math notranslate nohighlight">\(K_{e_{innerOrifices}}\)</span> is a minor loss coefficient for the orifices scaled to the velocity of the manifold. All of the kinetic energy is lost when flowing through the orifice and thus the minor loss coefficient scaled to the contracted orifice velocity is equal to 1 (see equation <a class="reference internal" href="#equation-eq-he-port">()</a>). Set the minor head loss equation to be equal for the two choices of velocity.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-wrong-constraint-5">
+<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-design-wrong-constraint-5" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{P}^2}{2g} = K_{e_{innerOrifices}}\frac{2\bar v_{M_{Bw}}^2}{g N_{layer}^2}\]</div>
+<p>where the factor of <span class="math notranslate nohighlight">\(2^2\)</span> is because the flow through an inner manifolds is double the flow though the outer manifolds. Solve for port velocity.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-wrong-constraint-6">
+<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-design-wrong-constraint-6" title="Permalink to this equation">¶</a></span>\[\bar v_{P} = \frac{2\bar v_{M_{Bw}}}{N_{layer}} \sqrt{K_{e_{innerOrifices}}}\]</div>
+<p>The next step is to solve for the distance between orifices. This is identical to the method we used to find equation <a class="reference internal" href="#equation-b-outerport">()</a>. The ratio of filter velocity to port velocity is given by equation <a class="reference internal" href="#equation-v-port-to-v-fi">()</a>.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-wrong-constraint-7">
+<span class="eqno">()<a class="headerlink" href="#equation-filtration-filtration-design-wrong-constraint-7" title="Permalink to this equation">¶</a></span>\[v_{Fi} \frac{B_{branch} B_{orifice_{inner}}}{\Pi_{vc}\frac{\pi}{4} D_{orifice}^2} = \frac{2\bar v_{M_{Bw}}}{N_{layer}} \sqrt{K_{e_{innerOrifices}}}\]</div>
+<p>Solve for the orifice spacing, <span class="math notranslate nohighlight">\(B_{orifice}\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-b-innerport">
+<span class="eqno">()<a class="headerlink" href="#equation-b-innerport" title="Permalink to this equation">¶</a></span>\[B_{orifice_{inner}}  = \frac{\bar v_{M_{Bw}}\Pi_{vc}\pi D_{orifice}^2}{2 v_{Fi} N_{layer} B_{branch}} \sqrt{K_{e_{innerOrifices}}}\]</div>
+<p>Find:</p>
+<ul class="simple">
+<li><p>backwash branch ID</p></li>
+<li><p>other branch ID</p></li>
+<li><p>max length of a branch given an ID</p></li>
+<li><p>algorithm to set filter box dimensions.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="old-stuff">
+<h2>old stuff<a class="headerlink" href="#old-stuff" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Calculate array of maximum filter flows given available trunk sizes and given constraint of maximum allowable head loss in the trunk line during backwash. Note that the outer inlet trunk minor loss coefficient is set (by adding a flow restriction at the inlet to the trunk line) to be 4 times the minor loss coefficient for the inner inlet trunks so that during filtration they have the same head loss when the outer trunks have 1/2 the flow of the inner trunks.</p></li>
+<li><p>Select the trunk size that gives a number of filters equal to or less than the minimum number of filters required for operation and maintenance.</p></li>
+<li><p>Calculate filter flow given minimum number of filters</p></li>
+<li><p>Calculate the orifice head loss required to provide uniform flow to the sand bed during backwash. This is based on the required ratio of port to manifold velocity (see Equation <a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html#equation-manifold-max-v-no-hl-series">(804)</a>).</p></li>
+<li><p>Design the branches based on manifold flow distribution requirements</p></li>
+<li><p>Set the siphon drain time (assuming no inflow!) to equal the time required to refill the filter box after backwash.</p></li>
+<li><p>Design the siphon pipe given the constraint on drain time</p></li>
+<li><p>Design the siphon air valve given volume of air in the siphon</p></li>
+<li><p>Calculate all elevations</p></li>
+<li><p>Design backwash flow control weirs</p></li>
+</ol>
+</div>
+<div class="section" id="potential-changes-to-the-filter-design">
+<h2>Potential Changes to the Filter Design<a class="headerlink" href="#potential-changes-to-the-filter-design" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Have the siphon manifold exit straight through the side of the filter (perhaps in line with the other inlets and outlets) and then elbow up to the required elevation and elbow and Tee back down again. This would make the siphon install inside the filter be a single straight pipe instead of the large assembly that is currently used. This will have the additional advantage that the connection between this drain manifold and the pipe stub in the wall doesn’t have to be leak tight! The connection could be a wrap of stainless steel and two hose clamps.</p></li>
+<li><p>Switch to gravity exclusion zones that include orifices to get uniform flow distribution without risk of sand scour.</p></li>
+<li><p>Simplest design to fabricate will have identical trunk lines for all inlets</p></li>
+<li><p>Change the inlet and outlet boxes so that all of the inlet trunks have only one elbow</p></li>
+<li><p>Outlet trunks each have 2 elbows</p></li>
+</ul>
+</div>
+<div class="section" id="maximum-trunk-flows">
+<h2>Maximum Trunk Flows<a class="headerlink" href="#maximum-trunk-flows" title="Permalink to this headline">¶</a></h2>
+<p>The trunks are constrained to both provide similar flow to each filter layer and to provide similar flow to each branch within the sand bed. Providing the same flow to each filter layer during filtration is the key constraint that determines the size of the trunk lines. The most challenging flow distribution is between middle inlets that carry flow for two layers and the top and bottom inlets that carry flow for one sand layer. This flow distribution is ensured by making the head loss through the outer inlet trunks to be equal to the head loss through the inner inlet trunks when the outer inlet trunks have 1/2 the flow of the inner inlet trunks.</p>
+<div class="figure align-center" id="id1">
+<span id="figure-filter-max-q-given-nd"></span><a class="reference internal image-reference" href="../_images/Filter_Max_Q_given_ND.png"><img alt="Trunk flows" src="../_images/Filter_Max_Q_given_ND.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">The flows through the inlet trunks of stacked rapid sand filters are not identical and this requires a careful hydraulic design.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The flow distribution within the filter bed to ensure complete fluidization of the sand bed during backwash can be achieved by increasing the head loss through the flow control orifices in the branches. Calculating this required head loss is the second step in designing the filter inlet piping.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, AguaClara Cornell.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

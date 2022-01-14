@@ -4,7 +4,7 @@
 Filtration  Introduction
 ************************
 
-"If the water is dirty, then filter it." That is a common misunderstanding of what we should do if the water is dirty. And that misunderstanding has led to many, many failures of water treatment technologies. There are slow sand filters and multistage filters abandoned in many corners of Honduras. The first AguaClara plant at Marcala, Honduras was built in an abandoned filtration plant. In many cases the failed filters were installed in locations where the raw water carried far too much sediment to be treated by filtration. This common misunderstanding of the capabilities of sand filters has a long history. 
+"If the water is dirty, then filter it." That is a common misunderstanding of what we should do if the water is dirty. And that misunderstanding has led to many, many failures of water treatment technologies. There are slow sand filters and multistage filters abandoned in many corners of Honduras. The first AguaClara plant at Marcala, Honduras was built in an abandoned filtration plant. In many cases the failed filters were installed in locations where the raw water carried far too much sediment to be treated by filtration. This common misunderstanding of the capabilities of sand filters has a long history.
 
 .. _figure_Abandoned_Filtration_Plant:
 
@@ -544,7 +544,7 @@ Sedimentation Impacts
 ======================
 
 The characteristic floc size could be set by the plate settlers that preferentially remove large flocs or it could be set by any of the high shear events on the path to or through the filter. We will estimate floc size from each of the potential shear and terminal velocity events. The calculations are done in
-:ref:`python below <heading_Floc_size_and_velocity_gradient_calculations>`.
+:ref:`python below <heading_floc_size_and_velocity_gradient_calculations>`.
 
 The floc diameter that is not completely captured by plate settlers with a capture velocity of 0.12 mm/s (the capture velocity used by AguaClara) is 25 :math:`\mu m`.
 
@@ -584,4 +584,3 @@ We need to compare the constricted jet velocity gradient with the clean bed inje
 EstaRS filters have water falls from the filter inlet channel to inlet box. In recent designs the water flows through a narrow slot and then falls into the inlet box. The slot is about 3.4 cm wide and the water falls about 40 cm. The vertical velocity after dropping 40 cm is 2.8 m/s. The geometry of this water fall is complicated and we will assume the resulting jet is circular at impact with the water surface. The diameter of the jet is thus obtained from continuity and is equal to 9.5 cm.  Now we use the energy dissipation rate of a round jet to obtain *4300 Hz*. Thus the floc size could be set by the water fall in the inlet box since this is the highest velocity gradient on the path into and through the filter. However, our rough estimate based on wild extrapolation suggests that this would yield a 36 :math:`\mu m` diameter floc. This is larger than the flocs produced by the sedimentation tank plate settlers and thus it is possible that even with this waterfall, that the floc size distribution is set by the sedimentation tank plate settlers.
 
 Note that the water fall height diminishes during a filter run as the water level in the inlet box increases due to head loss through the filter. Thus it is likely that the waterfall doesn't significantly break flocs.
-

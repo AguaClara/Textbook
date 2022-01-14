@@ -74,7 +74,7 @@ Solving :eq:`eq_G_CS_porous_media` for the approach velocity, :math:`v_a`, we ob
 to estimate the injection area that should be used to break up flocs entering the sand bed.
 
 
-.. _heading_Floc_size_and_velocity_gradient_calculations:
+.. _heading_floc_size_and_velocity_gradient_calculations:
 
 Floc Size Calculations
 =======================
