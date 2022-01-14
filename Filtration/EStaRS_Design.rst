@@ -327,7 +327,7 @@ This equation is used to determine the smallest pipe size that meets the pressur
 
 Though the piezometric head profiles for the inlet and outlet manifolds for the middle layers may be parallel, meaning the pressure recovery is less constrained for a good flow distribution, a tight constraint is still needed for the outer manifolds where the velocity is 1/2 and the PR is 1/4 (because pressure recovery goes with the square of the velocity) that of the inner layer, while the term is smaller still in the bottom-most manifold where the velocity head is tiny as the diameter is larger to accommodate for full filter flow during backwash.
 
-See the section on Pressure Recovery  in :ref:`Filtration Intro <title_filtration>` for more infomation if this is unclear.
+See the section on Pressure Recovery  in :ref:`Filtration Intro <title_filtration>` for more information if this is unclear.
 
 
 Flow in branches to find orifice area and number
@@ -345,7 +345,8 @@ The overall steps to find the total orifice area and number of orifices necessar
 
 As shown in the previous section maximum flow in a trunk will be either :math:`Q_{Fi}` or :math:`\frac{Q_{Fi}}{3}` (the equivalent of :math:`2Q_{Layer}`). As we are concerned with maximum flows and corresponding maximum velocities, those flows are considered for the design.
 
-In this case the longest branch is slightly less than :math:`\frac{ID_{Fi}}{2}`. To keep the calculations simple the maximum fraction of the flow served by any branch would be in the longest branch, the approximate area of the filter layer served would be approximately the length of this branch time the spacing of the branches. :numref:`figure_flow_fraction_branch`
+In this case the longest branch is slightly less than :math:`\frac{ID_{Fi}}{2}`. To keep the calculations simple the maximum fraction of the flow served by any branch would be in the longest branch, the approximate area of the filter layer served would be approximately the length of this branch time the spacing of the branches.
+
 
 .. _figure_flow_fraction_branch:
 
@@ -553,9 +554,9 @@ First Constraint: Pressure Recovery in Trunks During Forward Filtration
 
 [This section needs to go above the section where you calculate the branch diameter given the PR constraint.]
 
-The total allowable pressure recovery of the filter manifold is controlled by the head loss in each sand layer and the head loss ratio, :math:`\Pi_{ManifoldHeadLoss}`, as defined above in :ref:`Flow Distribution Constraints <flow_distribution_constraints>`.
+The total allowable pressure recovery of the filter manifold is controlled by the head loss in each sand layer and the head loss ratio, :math:`\Pi_{ManifoldHeadLoss}`.
 
-The head loss through the sand layer, :math:`HL_{FiCleanLayerMin}` is a fuction of layer depth, :math:`H_{FiLayer}` and overall velocity of the filter , :math:`\frac{Q_{FiLayer}}{A_{Fi}}`, using the Kozeny Equation in :ref:`Headloss Requirement <heading_headloss_requirements>` in the Filtration Design section.
+The head loss through the sand layer, :math:`HL_{FiCleanLayerMin}` is a function of layer depth, :math:`H_{FiLayer}` and overall velocity of the filter , :math:`\frac{Q_{FiLayer}}{A_{Fi}}`, using the Kozeny Equation in :ref:`Headloss Requirement <heading_headloss_requirements>` in the Filtration Design section.
 
 Using the definition of the pressure recovery ratio, the maximum allowable pressure recovery in the filter manifold can be calculated, this value is not necessarily the actual pressure recovery the system may see, just the allowable maximum:
 
@@ -790,9 +791,9 @@ In each path, the path head loss is the sum of : inlet plumbing major and minor 
 
 The design steps are as follows:
 
-1. Find the max head loss through the respective paths (Q1 - Q6) using the equations specified in :ref:`Plumbing Head Loss <plumbing_head_loss>`
+1. Find the max head loss through the respective paths (Q1 - Q6).
 
-#. Find the min head loss through the respective paths (Q1 - Q6) using the equations specified in :ref:`Plumbing Head Loss <plumbing_head_loss>`
+#. Find the min head loss through the respective paths (Q1 - Q6).
 
 #. Find the average head loss of the paths :math:`(\frac{sum(HL)}{6})` (*This average is a theoretical term because the flow distribution will change slightly to make the head loss pretty much even in each path (otherwise flow distribution would be a non-issue) It is expected that each layer will have a head loss close to this average*)
 
@@ -838,7 +839,7 @@ The maximum head loss for siphon initiation is the sum of head losses of other p
 
 with  :math:`H_{SiphonNoSuckAir}` subtracted
 
-These values are calculated or described in the :ref:`Fluidized Bed and Head Loss Variation <fluidized_bed_headloss_variation>` section or defined as Expert Inputs for the system. This value represents the highest the water can be over the siphon exit.
+This value represents the highest the water can be over the siphon exit.
 
 To determine a more appropriate siphon head loss the actual head losses are determined.
 
@@ -854,10 +855,7 @@ From those calculated parameters the steady state backwash head loss can be foun
 
   HL_{FiBwTotalSS} = HL_{BwInletPlumbing} + HL_{BwSS} + HL_{SiphonOrifice} + HL_{FiSiphonPipe} + HL_{SiphonOutlet}
 
-
-The first term comes from the :ref:`Plumbing Head Loss <plumbing_head_loss>` section the second term comes from the :ref:`Fluidized Bed and Head Loss Variation <fluidized_bed_headloss_variation>` section. The last three were described just above.
-
-This the distance in height that must exist between the siphon outlet and 10 cm above the bottom of the filter entrance box, as shown in the schematic. Because the backwash system works using the difference in elevation getting these values correct is critical.
+This is the height that must exist between the siphon outlet and 10 cm above the bottom of the filter entrance box, as shown in the schematic. Because the backwash system works using the difference in elevation getting these values correct is critical.
 
 Additionally, the density of the fluidized sand can be determined.
 
