@@ -551,21 +551,21 @@ The first two conditions are wrapped up into the following equation, :ref:`which
 .. math::
   :label: floc_channel_W_min_const_K
 
-  W_{Min_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
+  W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
 
 Given that the baffle minor loss coefficient is now known to be a function of :math:`\Pi_{H_eS}` we substitute :eq:`K_baffle_expanding`.
 
 .. math::
   :label: floc_channel_W_min_var_K_draft
 
-  W_{Min_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{ \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS}}\right) ^ 2}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
+  W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{ \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS_{min}}}\right) ^ 2}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
 
 Group the parameters so that the dimensions inside the exponents are a simple as possible.
 
 .. math::
   :label: floc_channel_W_min_var_K
 
-  W_{Min_{H_eS}} = \frac{Q}{\left(\nu G_{CS}^2 H_e^4\right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{H_eS}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
+  W_{Min_{H_eS}} = \frac{Q}{\left(\nu G_{CS}^2 H_e^4\right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{H_eS_{min}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
 
 
 This equation represents the absolute smallest width of a flocculator channel if we consider the lowest value of :math:`\Pi_{H_eS}` and the highest possible value of :math:`H_e`:
@@ -653,14 +653,19 @@ Finally, we can obtain the number of obstacles per baffle space. The :math:`- 1`
 Baffle Spacing
 ^^^^^^^^^^^^^^^
 
-Finally, we can find the space between baffles, :math:`S`. The equation for :math:`S` is taken from an intermediate step in the :math:`W_{Min, \, \Pi_{H_eS}}` derivation where we obtained, :math:`W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}`. Rearranging for :math:`S`, we get:
+Finally, we can find the space between baffles, :math:`S`. If the jet has fully expanded before entering the next contraction and hence the minor loss coefficient is known then an equation for :math:`S` can be obtained from :eq:`floc_channel_W_min_const_K`. Rearranging for :math:`S`, we get:
 
 .. math::
   :label: Floc_baffle_spacing
 
    S = \left( \frac{K}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}
 
-The minor loss coefficient is not known for this equation because we aren't making any assumptions about the value of :math:`\Pi_{HS}`. Thus we need to use equations :eq:`K_baffle_expanding` and :eq:`K_baffle_min` to iteratively find a solution.
+If the jet has fully expanded before entering the next contraction then an exact solution for the space between baffles can be obtained by rearranging :eq:`floc_channel_W_min_var_K`.
+
+.. math::
+  :label: floc_baffle_spacing_var_K
+
+  S = \left(\frac{Q}{W H_e}\right)^3   \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4}{2 \nu G_{CS}^2 \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} 
 
 
 Checking the Flocculator Design
