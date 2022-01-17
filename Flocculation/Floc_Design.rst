@@ -50,7 +50,7 @@ Collision potential :math:`(G_{CS} \theta)` is a term with a very straightforwar
 
 :math:`G` measures the magnitude of shear by using the velocity gradient of a fluid in space, :math:`\frac{\Delta \bar v}{\Delta h}`. This is essentially the same as the :math:`\frac{\delta u}{\delta y}` term in fluid mechanics.
 
-:math:`\bar G` represents the average :math:`\frac{\Delta \bar v}{\Delta h}` for the entire water volume under consideration, and is the parameter we will be using from now on. Unfortunately, it is unrealistic to measure :math:`\frac{\Delta \bar v}{\Delta h}` for every parcel of the water in our flocculator and take an average. We need to approximate :math:`\bar G` using measureable parameters.
+:math:`G_{CS}` represents the average :math:`\frac{\Delta \bar v}{\Delta h}` for the entire water volume under consideration, and is the parameter we will be using from now on. Unfortunately, it is unrealistic to measure :math:`\frac{\Delta \bar v}{\Delta h}` for every parcel of the water in our flocculator and take an average. We need to approximate :math:`G_{CS}` using measureable parameters.
 
 The parameter that serves as the basis for obtaining :math:`G_{CS}` is :math:`\varepsilon`, which represents the **energy dissipation** rate of a fluid *normalized by its mass*. The units of :math:`\varepsilon` are Watts per kilogram:
 
@@ -421,7 +421,7 @@ These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` t
 
    Obstacles ensure that there aren't any zones with low velocity gradients.
 
-AguaClara Design of Hydraulic Flocculators
+Design of Hydraulic Flocculators
 ==========================================
 
 The geometry of hydraulic flocculators changes rather dramatically as the flow rate increases from a fraction of a L/s up to thousands of L/s. The transition from one geometry to another is dependent on economic, fabrication, and integration with the rest of the plant design. Thus the transition flows will evolve as design optimization progresses. Flows between 0.5 L/s and 20 L/s are
@@ -463,7 +463,62 @@ AguaClara's approach to flocculator design is the same as it is for any other un
 
 Take the CDC as an example of this design process in :ref:`title_flow_control_design`; its inputs are :math:`h_{L_{Max}}`, :math:`\sum K`, :math:`\Pi_{Error}`, and the discrete dosing tube diameters  :math:`D` that are available at hardware stores or pipe suppliers. Its dependent variables include the number and length of the dosing tubes and the flow through the CDC system.
 
-The flocculator is more complex to design than the CDC, as it has more details and parameters and the equations for those details and parameters are very interdependent. Therefore, there are many ways to design an AguaClara flocculator, and many different sets of critical design criteria to begin with. Enumerated below is the current AguaClara approach.
+The flocculator is more complex to design than the CDC, as it has more details and parameters and the equations for those details and parameters are very interdependent. Therefore, there are many ways to design an AguaClara flocculator, and many different sets of critical design criteria to begin with. Below are design approaches for several of the different potential flocculator geometries.
+
+In all cases we will need equations related head loss, velocity gradient, and collision potential. We can rearrange the equation for :math:`G_{CS}` from the section on collision potential, :math:`G_{CS} = \sqrt{\frac{g h_L}{\nu \theta}}`, to solve for :math:`G_{CS}` in terms of :math:`G_{CS} \theta`:
+
+.. math::
+
+  G_{CS} = \frac{g h_{L_{floc}}}{\nu (G_{CS} \theta)}
+
+Now that we have :math:`G_{CS}`, we can very easily find :math:`\theta`:
+
+.. math::
+
+  \theta = \frac{G_{CS} \theta}{G_{CS}}
+
+Finally, we take retention time :math:`\theta` over plant flow rate :math:`Q` to get the required volume of the flocculator:
+
+.. math::
+
+  \rlap{-} V_{floc} = \frac{\theta}{Q}
+
+Now that we have the basic parameters defined, we can start to design the details of the flocculator, starting from the physical dimensions.
+
+Horizontal-Horizontal Flow Flocculators
+---------------------------------------
+
+The core equation relating flow geometry and velocity gradient is Equation :eq:`flocGeoG`. One possible set of assumptions for Horizontal-Horizontal Flow Flocculators is that :math:`\Pi_{H_eS}` is specified (perhaps = 6).
+
+.. math::
+  :label: HeofPI_HS
+
+  H_e = \Pi_{H_eS} S
+
+If :math:`\Pi_{H_eS}` and the flow width, W, are specified we can substitution Equation :eq:`HeofPI_HS` into Equation :eq:`flocGeoG`  and solve for the baffle space, S.
+
+.. math::
+
+  S = \left[\frac{K_{baffle}}{2 \nu G_{CS}^2 \Pi_{H_eS}} \left( \frac{Q}{W} \right)^3\right]^{\frac{1}{4}}
+
+
+An alternative assumption is that the flow width and the baffle spacing are equal. Given those assumptions we can make those substitutions and solve Equation :eq:`flocGeoG` for the baffle space, S. For Horizontal-Horizonal flocculators the depth of water corresponds to the width of the flow, W.
+
+.. math::
+  :label: flocculatorSquareGeometry
+
+   \nu G_{CS}^2 = \frac{K_{baffle}}{2 S \Pi_{H_eS}} \left( \frac{Q}{WS} \right)^3
+
+Next
+
+.. math::
+  :label: flocculatorSquareGeometry
+
+   S = \left(\frac{K_{baffle}Q^3}{2  \nu G_{CS}^2 \Pi_{H_eS}} \right)^{\frac{1}{7}}
+
+
+Horizontal-Vertical Flow Flocculators
+-------------------------------------------------------
 
 1. Input parameters
     - Specify:
@@ -497,8 +552,7 @@ The flocculator is more complex to design than the CDC, as it has more details a
 
    Flocculator geometry definition including the effect of baffle thickness. Accounting for baffle thickness would be particularly important if `ferrocement <https://en.wikipedia.org/wiki/Ferrocement>`_ or wood were used for baffles.
 
-Input Parameters: Horizontal-Vertical Flow Flocculators
--------------------------------------------------------
+
 
 We start by making sure that our flocculator will be able to flocculate effectively by defining :math:`h_{L_{floc}}` and :math:`G_{CS} \theta`. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards in AguaClara flocculators:
 - :math:`h_{L_{floc}} = 40 \, {\rm cm}`
@@ -520,25 +574,7 @@ The plant flow rate :math:`Q` is defined by the needs of the community that the 
    Layout of flocculator and sedimentation tanks that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.
 
 
-We can rearrange the equation for :math:`G_{CS}` from the section on collision potential, :math:`G_{CS} = \sqrt{\frac{g h_L}{\nu \theta}}`, to solve for :math:`G_{CS}` in terms of :math:`G_{CS} \theta`:
 
-.. math::
-
-  G_{CS} = \frac{g h_{L_{floc}}}{\nu (G_{CS} \theta)}
-
-Now that we have :math:`G_{CS}`, we can very easily find :math:`theta`:
-
-.. math::
-
-  \theta = \frac{G_{CS} \theta}{G_{CS}}
-
-Finally, we take retention time :math:`\theta` over plant flow rate :math:`Q` to get the required volume of the flocculator:
-
-.. math::
-
-  \rlap{-} V_{floc} = \frac{\theta}{Q}
-
-Now that we have the basic parameters defined, we can start to design the details of the flocculator, starting from the physical dimensions.
 
 Physical Dimensions
 -----------------------------
