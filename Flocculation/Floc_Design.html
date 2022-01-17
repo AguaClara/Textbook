@@ -156,8 +156,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#aguaclara-design-of-hydraulic-vertical-flow-flocculators">AguaClara Design of Hydraulic, Vertical Flow Flocculators</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#input-parameters">Input Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aguaclara-design-of-hydraulic-flocculators">AguaClara Design of Hydraulic Flocculators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#input-parameters-horizontal-vertical-flow-flocculators">Input Parameters: Horizontal-Vertical Flow Flocculators</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#physical-dimensions">Physical Dimensions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#length">Length</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#width-and-number-of-channels">Width and Number of Channels</a></li>
@@ -424,7 +424,7 @@ Our goal in designing a flocculator is to facilitate particle collisions. How ca
 <p>Equation <a class="reference internal" href="#equation-k-baffle-expanding">(459)</a> incorporates two assumptions that need to be checked with computational fluid dynamics. The <span class="math notranslate nohighlight">\(\Pi_{PlaneJet_{exp}}\)</span> may be missing a correction to account for the slower jet expansion along the baffle that is in contact with the jet. The distance for the jet to expand may be greater or less than <span class="math notranslate nohighlight">\(H_e\)</span>.</p>
 <div class="figure align-center" id="id50">
 <span id="figure-k-baffle"></span><a class="reference internal image-reference" href="../_images/K_baffle_model.png"><img alt="CFD vc baffle" src="../_images/K_baffle_model.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 125 </span><span class="caption-text">Baffle geometry for a hydraulic flocculator where S is the space between baffles, <span class="math notranslate nohighlight">\(L_{jet}\)</span> is the distance over which a jet can expand, and <span class="math notranslate nohighlight">\(H_e\)</span> is the approximate total distance between expansions.</span><a class="headerlink" href="#id50" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 125 </span><span class="caption-text">Baffle minor loss coefficient (Equation <a class="reference internal" href="#equation-k-baffle-expanding">(459)</a>) is predicted to increase rapidly as the H/S ratio decreases.</span><a class="headerlink" href="#id50" title="Permalink to this image">¶</a></p>
 </div>
 <p>Figure numref:<cite>figure_K_baffle</cite> reveals that the baffle minor loss coefficient increases rapidly as <span class="math notranslate nohighlight">\(\Pi_{H_{e}S}\)</span> decreases below about 5.6. This suggests that estimating the baffle minor loss coefficient correctly will be critical and more difficult for low values of <span class="math notranslate nohighlight">\(\Pi_{H_{e}S}\)</span>.</p>
 </div>
@@ -506,8 +506,23 @@ Our goal in designing a flocculator is to facilitate particle collisions. How ca
 </div>
 </div>
 </div>
-<div class="section" id="aguaclara-design-of-hydraulic-vertical-flow-flocculators">
-<h2>AguaClara Design of Hydraulic, Vertical Flow Flocculators<a class="headerlink" href="#aguaclara-design-of-hydraulic-vertical-flow-flocculators" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="aguaclara-design-of-hydraulic-flocculators">
+<h2>AguaClara Design of Hydraulic Flocculators<a class="headerlink" href="#aguaclara-design-of-hydraulic-flocculators" title="Permalink to this headline">¶</a></h2>
+<p>The geometry of hydraulic flocculators changes rather dramatically as the flow rate increases from a fraction of a L/s up to thousands of L/s. The transition from one geometry to another is dependent on economic, fabrication, and integration with the rest of the plant design. Thus the transition flows will evolve as design optimization progresses. Flows between 0.5 L/s and 20 L/s are</p>
+<div class="figure align-center" id="id58">
+<span id="figure-vhflocculator"></span><a class="reference internal image-reference" href="../_images/VHflocculator.png"><img alt="vertical - horizontal flocculator" src="../_images/VHflocculator.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 133 </span><span class="caption-text">The vertical-horizontal flocculator has vertical flow in the channels and horizontal flow between baffles. This design is for 1 L/s with 40 cm of head loss.</span><a class="headerlink" href="#id58" title="Permalink to this image">¶</a></p>
+</div>
+<p>As the flows increase the spacing between baffles grows larger and a vertical-horizontal flocculator would need to be very deep in order to accommodate a reasonable number of baffle spaces per channel. The geometry switches to horizontal-vertical for flows between about 20 and 200 L/s.</p>
+<div class="figure align-center" id="id59">
+<span id="figure-hvflocculator"></span><a class="reference internal image-reference" href="../_images/HVflocculator.png"><img alt="horizontal-vertical flocculator" src="../_images/HVflocculator.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 134 </span><span class="caption-text">The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles.This design is for 80 L/s with 1 m wide channels and 40 cm of head loss.</span><a class="headerlink" href="#id59" title="Permalink to this image">¶</a></p>
+</div>
+<p>As the flow increases above 200 L/s the required depth to accommodate a reasonable H/S ratio will exceed the desired depth (from a construction and maintenance perspective) and the optimal design will switch to a horizontal-horizontal flocculator.</p>
+<div class="figure align-center" id="id60">
+<span id="figure-hhflocculator"></span><a class="reference internal image-reference" href="../_images/HHflocculator.png"><img alt="horizontal-vertical flocculator" src="../_images/HHflocculator.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 135 </span><span class="caption-text">The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles. This design has 10 flocculators working in parallel to treat 20 kL/s. The channels are 4 m deep and there is 40 cm head loss.</span><a class="headerlink" href="#id60" title="Permalink to this image">¶</a></p>
+</div>
 <p>AguaClara’s approach to flocculator design is the same as it is for any other unit process. First, critical design criteria, called inputs, are established. These criteria represent the priorities that the rest of the design will be based around. Once these parameters are established, then the other parameters of the design, which are dependent on the inputs, are calculated based on certain constraints.</p>
 <p>Take the CDC as an example of this design process in <a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#title-flow-control-design"><span class="std std-ref">AguaClara Flow Control and Measurement Technologies</span></a>; its inputs are <span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span>, <span class="math notranslate nohighlight">\(\sum K\)</span>, <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span>, and the discrete dosing tube diameters  <span class="math notranslate nohighlight">\(D\)</span> that are available at hardware stores or pipe suppliers. Its dependent variables include the number and length of the dosing tubes and the flow through the CDC system.</p>
 <p>The flocculator is more complex to design than the CDC, as it has more details and parameters and the equations for those details and parameters are very interdependent. Therefore, there are many ways to design an AguaClara flocculator, and many different sets of critical design criteria to begin with. Enumerated below is the current AguaClara approach.</p>
@@ -550,24 +565,24 @@ Our goal in designing a flocculator is to facilitate particle collisions. How ca
 </dl>
 </li>
 </ol>
-<div class="figure align-center" id="id58">
+<div class="figure align-center" id="id61">
 <span id="figure-floculator-physical-parameters"></span><a class="reference internal image-reference" href="../_images/Flocculator_physical_parameters.jpg"><img alt="physical floccuation parameter" src="../_images/Flocculator_physical_parameters.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 133 </span><span class="caption-text">Flocculator geometry definition including the effect of baffle thickness. Accounting for baffle thickness would be particularly important if <a class="reference external" href="https://en.wikipedia.org/wiki/Ferrocement">ferrocement</a> or wood were used for baffles.</span><a class="headerlink" href="#id58" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 136 </span><span class="caption-text">Flocculator geometry definition including the effect of baffle thickness. Accounting for baffle thickness would be particularly important if <a class="reference external" href="https://en.wikipedia.org/wiki/Ferrocement">ferrocement</a> or wood were used for baffles.</span><a class="headerlink" href="#id61" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="input-parameters">
-<h3>Input Parameters<a class="headerlink" href="#input-parameters" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="input-parameters-horizontal-vertical-flow-flocculators">
+<h3>Input Parameters: Horizontal-Vertical Flow Flocculators<a class="headerlink" href="#input-parameters-horizontal-vertical-flow-flocculators" title="Permalink to this headline">¶</a></h3>
 <p>We start by making sure that our flocculator will be able to flocculate effectively by defining <span class="math notranslate nohighlight">\(h_{L_{floc}}\)</span> and <span class="math notranslate nohighlight">\(G_{CS} \theta\)</span>. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards in AguaClara flocculators:
 - <span class="math notranslate nohighlight">\(h_{L_{floc}} = 40 \, {\rm cm}\)</span>
 - <span class="math notranslate nohighlight">\(G_{CS} \theta = 37,000\)</span></p>
-<p>The plant flow rate <span class="math notranslate nohighlight">\(Q\)</span> is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water <em>at the end</em> of the flocculator, <span class="math notranslate nohighlight">\(H\)</span>, the <em>maximum</em> length of the flocculator based on the length of the sedimentation tank length, <span class="math notranslate nohighlight">\(L_{Max, \, sed}\)</span>, and the <em>minimum</em> width of a flocculator channel required for a human to fit inside, <span class="math notranslate nohighlight">\(W_{Min, \, human}\)</span>, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the sedimentation tanks, which is why the length constraint exists. See <a class="reference internal" href="#figure-physical-design-criteria-floc"><span class="std std-numref">Fig. 134</span></a> for a representation of how the flocculator and sedimentation tanks are placed in a plant.</p>
+<p>The plant flow rate <span class="math notranslate nohighlight">\(Q\)</span> is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water <em>at the end</em> of the flocculator, <span class="math notranslate nohighlight">\(H\)</span>, the <em>maximum</em> length of the flocculator based on the length of the sedimentation tank length, <span class="math notranslate nohighlight">\(L_{Max, \, sed}\)</span>, and the <em>minimum</em> width of a flocculator channel required for a human to fit inside, <span class="math notranslate nohighlight">\(W_{Min, \, human}\)</span>, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the sedimentation tanks, which is why the length constraint exists. See <a class="reference internal" href="#figure-physical-design-criteria-floc"><span class="std std-numref">Fig. 137</span></a> for a representation of how the flocculator and sedimentation tanks are placed in a plant.</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(H = 2 \, {\rm m}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(L_{Max, \, sed} = 6 \, {\rm m}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(W_{Min, \, human} = 45 \, {\rm cm}\)</span></p></li>
 </ul>
-<div class="figure align-center" id="id59">
+<div class="figure align-center" id="id62">
 <span id="figure-physical-design-criteria-floc"></span><a class="reference internal image-reference" href="../_images/Physical_design_criteria.jpg"><img alt="physical design criteria" src="../_images/Physical_design_criteria.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 134 </span><span class="caption-text">Layout of flocculator and sedimentation tanks that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.</span><a class="headerlink" href="#id59" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 137 </span><span class="caption-text">Layout of flocculator and sedimentation tanks that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.</span><a class="headerlink" href="#id62" title="Permalink to this image">¶</a></p>
 </div>
 <p>We can rearrange the equation for <span class="math notranslate nohighlight">\(G_{CS}\)</span> from the section on collision potential, <span class="math notranslate nohighlight">\(G_{CS} = \sqrt{\frac{g h_L}{\nu \theta}}\)</span>, to solve for <span class="math notranslate nohighlight">\(G_{CS}\)</span> in terms of <span class="math notranslate nohighlight">\(G_{CS} \theta\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-15">
@@ -597,9 +612,9 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <p>The equation for <em>actual</em> flocculator length is therefore:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-19">
 <span class="eqno">(473)<a class="headerlink" href="#equation-flocculation-floc-design-19" title="Permalink to this equation">¶</a></span>\[L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \rlap{-} V})\]</div>
-<div class="figure align-center" id="id60">
+<div class="figure align-center" id="id63">
 <span id="figure-floc-channels"></span><a class="reference internal image-reference" href="../_images/Floc_channels.jpg"><img alt="floc channels" src="../_images/Floc_channels.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 135 </span><span class="caption-text">There are an even amount of flocculator channels to keep the AguaClara plant layout consistent for flows greater than 12 L/s. This ensures that the entrance tank, filter box, and filters can be kept in the same places across plants.</span><a class="headerlink" href="#id60" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 138 </span><span class="caption-text">There are an even amount of flocculator channels to keep the AguaClara plant layout consistent for flows greater than 12 L/s. This ensures that the entrance tank, filter box, and filters can be kept in the same places across plants.</span><a class="headerlink" href="#id63" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="width-and-number-of-channels">
@@ -610,13 +625,13 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 - Allow for a human to be able to fit into a flocculator channel</p>
 <p>The first two conditions are wrapped up into the following equation, <a class="reference internal" href="Floc_Derivations.html#title-flocculation-derivations"><span class="std std-ref">which is derived here</span></a></p>
 <div class="math notranslate nohighlight" id="equation-floc-channel-w-min-const-k">
-<span class="eqno">(474)<a class="headerlink" href="#equation-floc-channel-w-min-const-k" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(474)<a class="headerlink" href="#equation-floc-channel-w-min-const-k" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\]</div>
 <p>Given that the baffle minor loss coefficient is now known to be a function of <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> we substitute <a class="reference internal" href="#equation-k-baffle-expanding">(459)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-floc-channel-w-min-var-k-draft">
-<span class="eqno">(475)<a class="headerlink" href="#equation-floc-channel-w-min-var-k-draft" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{ \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS}}\right) ^ 2}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(475)<a class="headerlink" href="#equation-floc-channel-w-min-var-k-draft" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{ \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS_{min}}}\right) ^ 2}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\]</div>
 <p>Group the parameters so that the dimensions inside the exponents are a simple as possible.</p>
 <div class="math notranslate nohighlight" id="equation-floc-channel-w-min-var-k">
-<span class="eqno">(476)<a class="headerlink" href="#equation-floc-channel-w-min-var-k" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{Q}{\left(\nu G_{CS}^2 H_e^4\right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{H_eS}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(476)<a class="headerlink" href="#equation-floc-channel-w-min-var-k" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{Q}{\left(\nu G_{CS}^2 H_e^4\right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{H_eS_{min}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}\]</div>
 <p>This equation represents the absolute smallest width of a flocculator channel if we consider the lowest value of <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> and the highest possible value of <span class="math notranslate nohighlight">\(H_e\)</span>:</p>
 <p><span class="math notranslate nohighlight">\(H_e = H_{e_{Max}} = H = 2 \, {\rm m}\)</span>, this implies that there are no obstacles between baffles
 <span class="math notranslate nohighlight">\(\Pi_{H_eS} = \Pi_{ {HS}_{Min} } = 3\)</span></p>
@@ -665,10 +680,12 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 </div>
 <div class="section" id="baffle-spacing">
 <h4>Baffle Spacing<a class="headerlink" href="#baffle-spacing" title="Permalink to this headline">¶</a></h4>
-<p>Finally, we can find the space between baffles, <span class="math notranslate nohighlight">\(S\)</span>. The equation for <span class="math notranslate nohighlight">\(S\)</span> is taken from an intermediate step in the <span class="math notranslate nohighlight">\(W_{Min, \, \Pi_{H_eS}}\)</span> derivation where we obtained, <span class="math notranslate nohighlight">\(W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\)</span>. Rearranging for <span class="math notranslate nohighlight">\(S\)</span>, we get:</p>
+<p>Finally, we can find the space between baffles, <span class="math notranslate nohighlight">\(S\)</span>. If the jet has fully expanded before entering the next contraction and hence the minor loss coefficient is known then an equation for <span class="math notranslate nohighlight">\(S\)</span> can be obtained from <a class="reference internal" href="#equation-floc-channel-w-min-const-k">(474)</a>. Rearranging for <span class="math notranslate nohighlight">\(S\)</span>, we get:</p>
 <div class="math notranslate nohighlight" id="equation-floc-baffle-spacing">
 <span class="eqno">(487)<a class="headerlink" href="#equation-floc-baffle-spacing" title="Permalink to this equation">¶</a></span>\[ S = \left( \frac{K}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}\]</div>
-<p>The minor loss coefficient is not known for this equation because we aren’t making any assumptions about the value of <span class="math notranslate nohighlight">\(\Pi_{HS}\)</span>. Thus we need to use equations <a class="reference internal" href="#equation-k-baffle-expanding">(459)</a> and <a class="reference internal" href="#equation-k-baffle-min">(448)</a> to iteratively find a solution.</p>
+<p>If the jet has fully expanded before entering the next contraction then an exact solution for the space between baffles can be obtained by rearranging <a class="reference internal" href="#equation-floc-channel-w-min-var-k">(476)</a>.</p>
+<div class="math notranslate nohighlight" id="equation-floc-baffle-spacing-var-k">
+<span class="eqno">(488)<a class="headerlink" href="#equation-floc-baffle-spacing-var-k" title="Permalink to this equation">¶</a></span>\[S = \left(\frac{Q}{W H_e}\right)^3   \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4}{2 \nu G_{CS}^2 \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2}\]</div>
 </div>
 </div>
 <div class="section" id="checking-the-flocculator-design">
@@ -678,18 +695,18 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <h4>Average Velocity<a class="headerlink" href="#average-velocity" title="Permalink to this headline">¶</a></h4>
 <p>As water flows through the flocculators, the flocs will get larger and larger. As a result, their terminal sedimentation velocity will increase. This is what we want. However, we need to make sure that the flocs don’t settle in the flocculator; that they instead all settle in the sedimentation tank. To make sure of this, we need to make sure that the velocity of water in the flocculator is high enough to scour any flocs that fall to the bottom of the flocculator. The velocity required to scour flocs from the bottom and avoid floc accumulation is around <span class="math notranslate nohighlight">\(v_{scour} = 15 \, {\rm \frac{cm}{s}}\)</span>. We need to check our average velocity <span class="math notranslate nohighlight">\(\bar v\)</span> against this value.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-28">
-<span class="eqno">(488)<a class="headerlink" href="#equation-flocculation-floc-design-28" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{W_{channel} S}\]</div>
+<span class="eqno">(489)<a class="headerlink" href="#equation-flocculation-floc-design-28" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{W_{channel} S}\]</div>
 </div>
 <div class="section" id="residence-time">
 <h4>Residence Time<a class="headerlink" href="#residence-time" title="Permalink to this headline">¶</a></h4>
-<p>It is now time to make our final check. We need to make sure that our actual residence time is <em>at least</em> as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than <span class="math notranslate nohighlight">\(\rlap{-} V_{floc}\)</span>. See <a class="reference internal" href="#figure-flocculator-head-loss"><span class="std std-numref">Fig. 136</span></a> for clarification.</p>
-<div class="figure align-center" id="id61">
+<p>It is now time to make our final check. We need to make sure that our actual residence time is <em>at least</em> as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than <span class="math notranslate nohighlight">\(\rlap{-} V_{floc}\)</span>. See <a class="reference internal" href="#figure-flocculator-head-loss"><span class="std std-numref">Fig. 139</span></a> for clarification.</p>
+<div class="figure align-center" id="id64">
 <span id="figure-flocculator-head-loss"></span><a class="reference internal image-reference" href="../_images/Flocculator_head_loss.jpg"><img alt="Flocculator_head_loss" src="../_images/Flocculator_head_loss.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 136 </span><span class="caption-text">The water level in the flocculator decreases due to head loss. Flocculators may occupy multiple channels, but this extra triangle of water exists in any case.</span><a class="headerlink" href="#id61" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 139 </span><span class="caption-text">The water level in the flocculator decreases due to head loss. Flocculators may occupy multiple channels, but this extra triangle of water exists in any case.</span><a class="headerlink" href="#id64" title="Permalink to this image">¶</a></p>
 </div>
 <p>Thus, the actual average water level in the flocculator is <span class="math notranslate nohighlight">\(H + \frac{h_{L_{floc}}}{2}\)</span>. Thus, the actual residence time is:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-29">
-<span class="eqno">(489)<a class="headerlink" href="#equation-flocculation-floc-design-29" title="Permalink to this equation">¶</a></span>\[\theta_{actual} = \frac{n_{channels} L_{channel} W_{channel} \left( H + \frac{h_{L_{floc}}}{2} \right)} {Q}\]</div>
+<span class="eqno">(490)<a class="headerlink" href="#equation-flocculation-floc-design-29" title="Permalink to this equation">¶</a></span>\[\theta_{actual} = \frac{n_{channels} L_{channel} W_{channel} \left( H + \frac{h_{L_{floc}}}{2} \right)} {Q}\]</div>
 <p>Check to see if <span class="math notranslate nohighlight">\(\theta_{actual}\)</span> is greater than <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
 <p id="id7"><dl class="citation">
 <dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id4">Haa98</a></span></dt>

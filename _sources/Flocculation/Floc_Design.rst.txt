@@ -266,7 +266,7 @@ Equation :eq:`K_baffle_expanding` incorporates two assumptions that need to be c
    :width: 300px
    :alt: CFD vc baffle
 
-   Baffle geometry for a hydraulic flocculator where S is the space between baffles, :math:`L_{jet}` is the distance over which a jet can expand, and :math:`H_e` is the approximate total distance between expansions.
+   Baffle minor loss coefficient (Equation :eq:`K_baffle_expanding`) is predicted to increase rapidly as the H/S ratio decreases.
 
 Figure numref:`figure_K_baffle` reveals that the baffle minor loss coefficient increases rapidly as :math:`\Pi_{H_{e}S}` decreases below about 5.6. This suggests that estimating the baffle minor loss coefficient correctly will be critical and more difficult for low values of :math:`\Pi_{H_{e}S}`.
 
@@ -421,8 +421,44 @@ These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` t
 
    Obstacles ensure that there aren't any zones with low velocity gradients.
 
-AguaClara Design of Hydraulic, Vertical Flow Flocculators
-============================================================
+AguaClara Design of Hydraulic Flocculators
+==========================================
+
+The geometry of hydraulic flocculators changes rather dramatically as the flow rate increases from a fraction of a L/s up to thousands of L/s. The transition from one geometry to another is dependent on economic, fabrication, and integration with the rest of the plant design. Thus the transition flows will evolve as design optimization progresses. Flows between 0.5 L/s and 20 L/s are
+
+.. _figure_VHflocculator:
+
+.. figure:: ../Images/VHflocculator.png
+   :align: center
+   :width: 500px
+   :alt: vertical - horizontal flocculator
+
+   The vertical-horizontal flocculator has vertical flow in the channels and horizontal flow between baffles. This design is for 1 L/s with 40 cm of head loss.
+
+As the flows increase the spacing between baffles grows larger and a vertical-horizontal flocculator would need to be very deep in order to accommodate a reasonable number of baffle spaces per channel. The geometry switches to horizontal-vertical for flows between about 20 and 200 L/s.
+
+.. _figure_HVflocculator:
+
+.. figure:: ../Images/HVflocculator.png
+  :align: center
+  :width: 500px
+  :alt:  horizontal-vertical flocculator
+
+  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles.This design is for 80 L/s with 1 m wide channels and 40 cm of head loss.
+
+
+As the flow increases above 200 L/s the required depth to accommodate a reasonable H/S ratio will exceed the desired depth (from a construction and maintenance perspective) and the optimal design will switch to a horizontal-horizontal flocculator.
+
+.. _figure_HHflocculator:
+
+.. figure:: ../Images/HHflocculator.png
+  :align: center
+  :width: 500px
+  :alt:  horizontal-vertical flocculator
+
+  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles. This design has 10 flocculators working in parallel to treat 20 kL/s. The channels are 4 m deep and there is 40 cm head loss.
+
+
 AguaClara's approach to flocculator design is the same as it is for any other unit process. First, critical design criteria, called inputs, are established. These criteria represent the priorities that the rest of the design will be based around. Once these parameters are established, then the other parameters of the design, which are dependent on the inputs, are calculated based on certain constraints.
 
 Take the CDC as an example of this design process in :ref:`title_flow_control_design`; its inputs are :math:`h_{L_{Max}}`, :math:`\sum K`, :math:`\Pi_{Error}`, and the discrete dosing tube diameters  :math:`D` that are available at hardware stores or pipe suppliers. Its dependent variables include the number and length of the dosing tubes and the flow through the CDC system.
@@ -461,8 +497,8 @@ The flocculator is more complex to design than the CDC, as it has more details a
 
    Flocculator geometry definition including the effect of baffle thickness. Accounting for baffle thickness would be particularly important if `ferrocement <https://en.wikipedia.org/wiki/Ferrocement>`_ or wood were used for baffles.
 
-Input Parameters
-------------------------------
+Input Parameters: Horizontal-Vertical Flow Flocculators
+-------------------------------------------------------
 
 We start by making sure that our flocculator will be able to flocculate effectively by defining :math:`h_{L_{floc}}` and :math:`G_{CS} \theta`. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards in AguaClara flocculators:
 - :math:`h_{L_{floc}} = 40 \, {\rm cm}`
@@ -551,21 +587,21 @@ The first two conditions are wrapped up into the following equation, :ref:`which
 .. math::
   :label: floc_channel_W_min_const_K
 
-  W_{Min_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
+  W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
 
 Given that the baffle minor loss coefficient is now known to be a function of :math:`\Pi_{H_eS}` we substitute :eq:`K_baffle_expanding`.
 
 .. math::
   :label: floc_channel_W_min_var_K_draft
 
-  W_{Min_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{ \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS}}\right) ^ 2}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
+  W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{ \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS_{min}}}\right) ^ 2}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
 
 Group the parameters so that the dimensions inside the exponents are a simple as possible.
 
 .. math::
   :label: floc_channel_W_min_var_K
 
-  W_{Min_{H_eS}} = \frac{Q}{\left(\nu G_{CS}^2 H_e^4\right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{H_eS}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
+  W_{Min_{H_eS}} = \frac{Q}{\left(\nu G_{CS}^2 H_e^4\right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{H_eS_{min}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
 
 
 This equation represents the absolute smallest width of a flocculator channel if we consider the lowest value of :math:`\Pi_{H_eS}` and the highest possible value of :math:`H_e`:
@@ -653,14 +689,19 @@ Finally, we can obtain the number of obstacles per baffle space. The :math:`- 1`
 Baffle Spacing
 ^^^^^^^^^^^^^^^
 
-Finally, we can find the space between baffles, :math:`S`. The equation for :math:`S` is taken from an intermediate step in the :math:`W_{Min, \, \Pi_{H_eS}}` derivation where we obtained, :math:`W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}`. Rearranging for :math:`S`, we get:
+Finally, we can find the space between baffles, :math:`S`. If the jet has fully expanded before entering the next contraction and hence the minor loss coefficient is known then an equation for :math:`S` can be obtained from :eq:`floc_channel_W_min_const_K`. Rearranging for :math:`S`, we get:
 
 .. math::
   :label: Floc_baffle_spacing
 
    S = \left( \frac{K}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}
 
-The minor loss coefficient is not known for this equation because we aren't making any assumptions about the value of :math:`\Pi_{HS}`. Thus we need to use equations :eq:`K_baffle_expanding` and :eq:`K_baffle_min` to iteratively find a solution.
+If the jet has fully expanded before entering the next contraction then an exact solution for the space between baffles can be obtained by rearranging :eq:`floc_channel_W_min_var_K`.
+
+.. math::
+  :label: floc_baffle_spacing_var_K
+
+  S = \left(\frac{Q}{W H_e}\right)^3   \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4}{2 \nu G_{CS}^2 \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2}
 
 
 Checking the Flocculator Design
