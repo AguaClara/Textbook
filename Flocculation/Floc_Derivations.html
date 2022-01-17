@@ -168,7 +168,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html#filtration-theory">Filtration Theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Filtration Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Stacked Rapid Sand Filter Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
@@ -287,26 +287,26 @@ serves as a basis for design. The final parameter derived is
 </ol>
 <p>First, we begin by setting the two equations for energy dissipation rate, <span class="math notranslate nohighlight">\(\bar \varepsilon = \nu \bar G^2\)</span> and <span class="math notranslate nohighlight">\(\bar \varepsilon = \frac{g h_{L_{floc}}}{\theta}\)</span> equal to each other to bring <span class="math notranslate nohighlight">\(\bar G\)</span> into the equation.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-0">
-<span class="eqno">(452)<a class="headerlink" href="#equation-flocculation-floc-derivations-0" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = \frac{g h_{L_{floc}}}{\theta}\]</div>
+<span class="eqno">(491)<a class="headerlink" href="#equation-flocculation-floc-derivations-0" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = \frac{g h_{L_{floc}}}{\theta}\]</div>
 <p>For the following steps, we will consider the flow through a single flow expansion <span class="math notranslate nohighlight">\(H_e\)</span>, not through the entire flocculator. This could be from baffle to obstacle, obstacle to baffle, obstacle to obstacle, or baffle to baffle depending on how many obstacles are in the design. This means that the residence time is the time between expansions, <span class="math notranslate nohighlight">\(\theta_e\)</span>, and the head loss is for one expansion, <span class="math notranslate nohighlight">\(h_{L_{e}}\)</span>.</p>
 <p>From here we make three subsequent substitutions: first
 <span class="math notranslate nohighlight">\(h_{L_{e}} = K \frac{\bar v^2}{2g}\)</span>, then
 <span class="math notranslate nohighlight">\(\theta_e = \frac{H_e}{\bar v}\)</span>, and finally
 <span class="math notranslate nohighlight">\(\bar v = \frac{Q}{WS}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-1">
-<span class="eqno">(453)<a class="headerlink" href="#equation-flocculation-floc-derivations-1" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = K \frac{\bar v^2}{2 \theta_e}\]</div>
+<span class="eqno">(492)<a class="headerlink" href="#equation-flocculation-floc-derivations-1" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = K \frac{\bar v^2}{2 \theta_e}\]</div>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-2">
-<span class="eqno">(454)<a class="headerlink" href="#equation-flocculation-floc-derivations-2" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = K \frac{\bar v^3}{2 H_e}\]</div>
+<span class="eqno">(493)<a class="headerlink" href="#equation-flocculation-floc-derivations-2" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = K \frac{\bar v^3}{2 H_e}\]</div>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-3">
-<span class="eqno">(455)<a class="headerlink" href="#equation-flocculation-floc-derivations-3" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = \frac{K}{2 H_e} \left( \frac{Q}{WS} \right)^3\]</div>
+<span class="eqno">(494)<a class="headerlink" href="#equation-flocculation-floc-derivations-3" title="Permalink to this equation">¶</a></span>\[\nu \bar G^2 = \frac{K}{2 H_e} \left( \frac{Q}{WS} \right)^3\]</div>
 <p>Now we can solve this equation for channel width, <span class="math notranslate nohighlight">\(W\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-4">
-<span class="eqno">(456)<a class="headerlink" href="#equation-flocculation-floc-derivations-4" title="Permalink to this equation">¶</a></span>\[W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(495)<a class="headerlink" href="#equation-flocculation-floc-derivations-4" title="Permalink to this equation">¶</a></span>\[W = \frac{Q}{S}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\]</div>
 <p>From here, we can define <span class="math notranslate nohighlight">\(\Pi_{H_eS} = \frac{H_e}{S}\)</span> and
 substitute <span class="math notranslate nohighlight">\(S = \frac{H_e}{\Pi_{H_eS}}\)</span> into the previous equation
 for <span class="math notranslate nohighlight">\(W\)</span> to get <span class="math notranslate nohighlight">\(W_{Min, \, \Pi_{H_eS}}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-5">
-<span class="eqno">(457)<a class="headerlink" href="#equation-flocculation-floc-derivations-5" title="Permalink to this equation">¶</a></span>\[W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(496)<a class="headerlink" href="#equation-flocculation-floc-derivations-5" title="Permalink to this equation">¶</a></span>\[W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \bar G^2} \right)^\frac{1}{3}\]</div>
 <div class="line-block">
 <div class="line">This equation represents the absolute smallest width of a flocculator
 channel if we consider the lowest value of <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> and the

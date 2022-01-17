@@ -77,7 +77,7 @@ Iron bacteria slime showed up with application of hydrochloric acid at Las Vegas
 
 .. _figure_Las_Vegas_Slime:
 
-.. figure:: Images/Las_Vegas_Slime.jpg
+.. figure:: ../Images/Las_Vegas_Slime.jpg
    :width: 400px
    :align: center
    :alt: Oxygenation_vs_time
@@ -95,7 +95,7 @@ At pH 6.0 it requires 100 hours.
 
 .. _figure_Oxygenation_vs_time:
 
-.. figure:: Images/Oxygenation_vs_time.png
+.. figure:: ../Images/Oxygenation_vs_time.png
    :width: 400px
    :align: center
    :alt: Oxygenation_vs_time
