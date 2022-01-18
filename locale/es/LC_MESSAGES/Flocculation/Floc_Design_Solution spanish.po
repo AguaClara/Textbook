@@ -575,10 +575,10 @@ msgstr "15)"
 #, fuzzy
 msgid ""
 "Calculate the spacing between baffles based on the target velocity gradient "
-"using :eq:`Floc_baffle_spacing`."
+"using :eq:`Floc_baffle_spacing_of_K`."
 msgstr ""
 "Calcular el espacio entre los bafles basado en el gradiente de velocidad del "
-"objetivo usando :eq:`Floc_baffle_spacing`."
+"objetivo usando :eq:`Floc_baffle_spacing_of_K`."
 
 #: ../../Flocculation/Floc_Design_Solution.rst:350
 #, fuzzy

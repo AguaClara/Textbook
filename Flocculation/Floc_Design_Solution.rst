@@ -138,7 +138,7 @@ The number of expansions is 2.
 
 The actual distance between expansions is 1 meter.
 
-**15) Calculate the spacing between baffles** based on the target velocity gradient using :eq:`Floc_baffle_spacing`.
+**15) Calculate the spacing between baffles** based on the target velocity gradient using :eq:`Floc_baffle_spacing_of_K`.
 
 `Find the baffle spacing <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=pWb4aEgFnhZe&line=6&uniqifier=1>`_
 
