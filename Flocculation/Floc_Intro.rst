@@ -269,9 +269,9 @@ To generate minor losses, we need to create flow expansions. AguaClara does this
    :align: center
    :alt: this image shows the floc baffle module out of the water within a plant.
 
-   Before being inserted into the floccualtor channel, the baffle module is constructed as a unit as shown here.
+   Before being inserted into the flocculator channel, the baffle module is constructed as a unit as shown above.
 
-AguaClara flocculators, like the one pictured above, are called **vertical hydraulic flocculators** because the baffles force the flow vertically up and down. If the baffles were instead arranged to force the flow side-to-side, the flocculator would be called a **horizontal hydraulic flocculator**. AguaClara uses vertical flocculators because they are more efficient when considering plant area. They are deeper than horizontal flocculators, which allows them to have a smaller `plan-view area <https://simple.wikipedia.org/wiki/Plan_view>`_ and thus to be cheaper.
+AguaClara flocculators, like the one pictured above, are called **horizontal vertical flow flocculators** (see :numref:`figure_HVflocculator`).
 
 **Finding the Minor Loss of a Baffle**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -316,7 +316,8 @@ We can therefore state with reasonable accuracy that, when most contracted, the 
 
 This :math:`K_{baffle_{min}}` has been used to design flocculators in AguaClara plants until 2021. The plant at Gracias revealed that the observed head loss was greater than predicted.  `This paper by Haarhoff in 1998 <https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a :math:`K_{baffle}` value between :math:`2.5` and :math:`4`.
 
-Equation :eq:`K_baffle_min` doesn't account for the fact that for a series of baffles (or flow contractions) the flow might not be able to fully expand before entering the next baffle (or contraction). The distance required for the contracted flow to expand can be estimated from jet equations (see section on :ref:`Baffle Minor Loss Coefficient<heading_Baffle_Loss_Coefficient>`). 
+Equation :eq:`K_baffle_min` doesn't account for the fact that for a series of baffles (or flow contractions) the flow might not be able to fully expand before entering the next baffle (or contraction). The distance required for the contracted flow to expand can be estimated from jet equations (see section on :ref:`Baffle Minor Loss Coefficient<heading_Baffle_Loss_Coefficient>` for an estimate of how the minor loss coefficient increases when the flow doesn't fully expand).
+
 Flocculator Efficiency
 ---------------------------
 
@@ -433,7 +434,7 @@ Thus, :math:`\Pi_{H_eS_{Min}}` should be at least twice the slot width ratio, :m
 
   \Pi_{H_eS_{Min}} = \frac{H_e}{S} = 3
 
-Finally, we describe a range of :math:`\Pi_{H_eS}` that we can use to design an AguaClara flocculator:
+Finally, we describe a range of :math:`\Pi_{H_eS}` that we can use to design an AguaClara Horizontal-Vertical flocculator:
 
 .. math::
 
@@ -467,3 +468,40 @@ These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` t
    :alt: floc flow with obstacles
 
    Obstacles ensure that there aren't any zones with low velocity gradients.
+
+Flocculator Geometry
+--------------------
+
+The geometry of hydraulic flocculators changes rather dramatically as the flow rate increases from a fraction of a L/s up to thousands of L/s. The transition from one geometry to another is dependent on economic, fabrication, and integration with the rest of the plant design. Thus the transition flows will evolve as design optimization progresses. Flows between 0.5 L/s and 20 L/s are efficiently handled by a Vertical-Horizontal flow flocculator as shown in :numref:`figure_VHflocculator`.
+
+.. _figure_VHflocculator:
+
+.. figure:: ../Images/VHflocculator.png
+   :align: center
+   :width: 500px
+   :alt: vertical - horizontal flocculator
+
+   The vertical-horizontal flocculator has vertical flow in the channels and horizontal flow between baffles. This design is for 1 L/s with 40 cm of head loss.
+
+As the flows increase the spacing between baffles grows larger and a vertical-horizontal flocculator would need to be very deep in order to accommodate a reasonable number of baffle spaces per channel. The geometry switches to horizontal-vertical for flows between about 20 and 200 L/s as shown in :numref:`figure_HVflocculator`.
+
+.. _figure_HVflocculator:
+
+.. figure:: ../Images/HVflocculator.png
+  :align: center
+  :width: 500px
+  :alt:  horizontal-vertical flocculator
+
+  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles.This design is for 80 L/s with 1 m wide channels and 40 cm of head loss.
+
+
+As the flow increases above 200 L/s the required depth to accommodate a reasonable H/S ratio will exceed the desired depth (from a construction and maintenance perspective) and the optimal design will switch to a horizontal-horizontal flocculator  as shown in :numref:`figure_HHflocculator`.
+
+.. _figure_HHflocculator:
+
+.. figure:: ../Images/HHflocculator.png
+  :align: center
+  :width: 500px
+  :alt:  horizontal-vertical flocculator
+
+  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles. This design has 10 flocculators working in parallel to treat 20 kL/s. The channels are 4 m deep and there is 40 cm head loss.

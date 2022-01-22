@@ -186,7 +186,7 @@ for :math:`W` to get :math:`W_{Min, \, \Pi_{H_eS}}`:
 
 Baffle Spacing
 ==============
-The core equation relating flow geometry and velocity gradient is Equation :eq:`flocGeoG`. If the jet has fully expanded before entering the next contraction then the minor loss coefficient is a constant. Rearranging for :math:`S`, we get:
+The core equation relating flow geometry and velocity gradient is Equation :eq:`flocGeoG`. If the jet has fully expanded before entering the next contraction then the minor loss coefficient is a constant. Rearranging for :math:`S`, we obtain:
 
 .. math::
   :label: Floc_baffle_spacing_of_K
@@ -210,7 +210,7 @@ Factor out the :math:`S` from the righthand side and simplify to obtain
 
 If it is unknown if the jet has fully expanded, then simply use the maximum of Equations :eq:`Floc_baffle_spacing_of_K` and :eq:`floc_baffle_spacing_var_K`.
 
-One possible set of assumptions for Horizontal-Horizontal Flow Flocculators is that :math:`\Pi_{H_eS}` is specified (perhaps = 6).
+One possible set of assumptions for Horizontal-Horizontal and Vertical-Horizontal flow flocculators is that :math:`\Pi_{H_eS}` is specified (perhaps = 6).
 
 .. math::
   :label: HeofPI_HS

@@ -27,7 +27,7 @@ Conventional vs AguaClara Flocculation
    Residence time (min), 30, 2 to 7.5
    Velocity gradient (Hz), 20 - 180, 100+
    :math:`G\theta`, "50,000 - 250,000", "20,000 - 37,000"
-   Velocity gradient variability, approximately 8, approximately 1.4
+   Velocity gradient variability, 8 (highly variable), approximately 1.4
    reactor type, approaching completely mixed, approaching plug flow
 
 #references `Coagulation and Flocculation in Water and Wastewater Treatment <https://www.iwapublishing.com/news/coagulation-and-flocculation-water-and-wastewater-treatment>`__,

@@ -6,41 +6,6 @@ Flocculation Design
 
 **Important Note:** This chapter introduces uncertainty and empirical design. Some of the parameters used to design AguaClara flocculators are based on what has been shown to work in the field, as opposed to having been derived scientifically. To make sure that the reader is aware of these concepts and parameters that don’t yet have a thorough basis in research, they will be highlighted in red when they appear.
 
-The geometry of hydraulic flocculators changes rather dramatically as the flow rate increases from a fraction of a L/s up to thousands of L/s. The transition from one geometry to another is dependent on economic, fabrication, and integration with the rest of the plant design. Thus the transition flows will evolve as design optimization progresses. Flows between 0.5 L/s and 20 L/s are
-
-.. _figure_VHflocculator:
-
-.. figure:: ../Images/VHflocculator.png
-   :align: center
-   :width: 500px
-   :alt: vertical - horizontal flocculator
-
-   The vertical-horizontal flocculator has vertical flow in the channels and horizontal flow between baffles. This design is for 1 L/s with 40 cm of head loss.
-
-As the flows increase the spacing between baffles grows larger and a vertical-horizontal flocculator would need to be very deep in order to accommodate a reasonable number of baffle spaces per channel. The geometry switches to horizontal-vertical for flows between about 20 and 200 L/s.
-
-.. _figure_HVflocculator:
-
-.. figure:: ../Images/HVflocculator.png
-  :align: center
-  :width: 500px
-  :alt:  horizontal-vertical flocculator
-
-  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles.This design is for 80 L/s with 1 m wide channels and 40 cm of head loss.
-
-
-As the flow increases above 200 L/s the required depth to accommodate a reasonable H/S ratio will exceed the desired depth (from a construction and maintenance perspective) and the optimal design will switch to a horizontal-horizontal flocculator.
-
-.. _figure_HHflocculator:
-
-.. figure:: ../Images/HHflocculator.png
-  :align: center
-  :width: 500px
-  :alt:  horizontal-vertical flocculator
-
-  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles. This design has 10 flocculators working in parallel to treat 20 kL/s. The channels are 4 m deep and there is 40 cm head loss.
-
-
 AguaClara's approach to flocculator design is the same as it is for any other unit process. First, critical design criteria, called inputs, are established. These criteria represent the priorities that the rest of the design will be based around. Once these parameters are established, then the other parameters of the design, which are dependent on the inputs, are calculated based on certain constraints.
 
 Take the CDC as an example of this design process in :ref:`title_flow_control_design`; its inputs are :math:`h_{L_{Max}}`, :math:`\sum K`, :math:`\Pi_{Error}`, and the discrete dosing tube diameters  :math:`D` that are available at hardware stores or pipe suppliers. Its dependent variables include the number and length of the dosing tubes and the flow through the CDC system.
@@ -67,13 +32,13 @@ Finally, we take retention time :math:`\theta` over plant flow rate :math:`Q` to
 
 Now that we have the basic parameters defined, we can start to design the details of the flocculator, starting from the physical dimensions.
 
-Horizontal-Horizontal Flow Flocculators
+Horizontal-Horizontal flow flocculators
 =======================================
 
 Horizontal-Horizontal flocculators can be easily designed to have an optimal :math:`\Pi_{H_eS}`. Our current understanding is that the optimal value to achieve uniform velocity gradients and to allow the flow to fully expand is when :math:`\Pi_{H_eS} = 6`. The flow geometry can be optimized to reduce construction costs by varying the relationship between :math:`S` and :math:`W`. The dimension :math:`W` is in the vertical direction and thus increasing W will increase the water depth and reduce the plan view area of the flocculator. If land area is constrained and the cost of roofing is considered it is very likely that the optimal solution will require :math:`W>S`.
 
 
-Horizontal-Vertical Flow Flocculators
+Horizontal-Vertical flow flocculators
 =====================================
 
 1. Input parameters
