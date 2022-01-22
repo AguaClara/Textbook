@@ -145,10 +145,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">AguaClara Hydraulic Flocculation Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Theory_and_Future_Work.html">Flocculation Theory and Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Examples.html">Flocculation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Challenge.html">Flocculation Design Challenge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
@@ -287,7 +286,7 @@
 <p><a class="reference external" href="https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=KrQbKPFS9Trz&amp;line=1&amp;uniqifier=1">Code for solution here</a></p>
 <div class="figure align-center" id="id1">
 <span id="figure-kinematic-vs-t"></span><a class="reference internal image-reference" href="../_images/Kinematic_vs_T.png"><img alt="Kinematic viscosity of water as a function of temperature" src="../_images/Kinematic_vs_T.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 87 </span><span class="caption-text">Kinematic viscosity decreases rapidly with temperature. This will influence the amount of fluid deformation obtained given an input of energy. It will also influence the flow rate in the AguaClara chemical dosing system.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 88 </span><span class="caption-text">Kinematic viscosity decreases rapidly with temperature. This will influence the amount of fluid deformation obtained given an input of energy. It will also influence the flow rate in the AguaClara chemical dosing system.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>We will design a mechanized rapid mix unit and then analyze the energy costs of mixing for a conventional water treatment plant. Below is a table of conventional design parameters.</p>
 <table class="docutils align-default">
@@ -327,12 +326,12 @@
 </table>
 <p><strong>2) Define a function</strong> for the power required to run a rapid mix unit. The rapid mix shaft power function should have flow, velocity gradient, residence time (which can be described with t or <span class="math notranslate nohighlight">\(\theta\)</span>, as in the equation below), and temperature as its only inputs.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-mechanical-solution-0">
-<span class="eqno">(385)<a class="headerlink" href="#equation-rapid-mix-rm-mechanical-solution-0" title="Permalink to this equation">¶</a></span>\[P = G^2Q \theta \nu \rho\]</div>
+<span class="eqno">(386)<a class="headerlink" href="#equation-rapid-mix-rm-mechanical-solution-0" title="Permalink to this equation">¶</a></span>\[P = G^2Q \theta \nu \rho\]</div>
 <p>Using your function, plot the shaft power (kW) required for a conventional rapid mix unit that has a residence time of t = 15s, a velocity gradient of G = 1500/s, and a flow rate of 50 L/s as a function of temperature (Celsius).</p>
 <p>&lt;Generate a figure here &lt;<a class="reference external" href="https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=o25pKAfQ9dPu&amp;line=2&amp;uniqifier=1">https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=o25pKAfQ9dPu&amp;line=2&amp;uniqifier=1</a>&gt;`_</p>
 <div class="figure align-center" id="id2">
 <span id="figure-shaft-power"></span><a class="reference internal image-reference" href="../_images/Shaft_Power.png"><img alt="Rapid Mix shaft power" src="../_images/Shaft_Power.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 88 </span><span class="caption-text">Rapid mix shaft power required as a function of temperature. Signfiicantly more power is required at low temperatures to overcome the effects of viscosity. This does assume that the goal for rapid mix is to achieve a target</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 89 </span><span class="caption-text">Rapid mix shaft power required as a function of temperature. Signfiicantly more power is required at low temperatures to overcome the effects of viscosity. This does assume that the goal for rapid mix is to achieve a target</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>3) Calculate the shaft power.</strong> How would the shaft power for a conventional design be selected? You must consider the fact that temperature changes throughout the year, and temperature impacts the shaft power requirements as defined in your function above. Presumably, you should use the lowest water temperature that you expect to have to treat to make your design because low temperatures require the highest shaft power input (as shown in your graph above) and we want to design for the most conservative option.</p>
 <p>Imagine you are designing a rapid mix unit for a water treatment plant in upstate NY. Water freezes in the winter, so the power requirements to run a rapid mix must be based on TempDesign = 0 °C.</p>

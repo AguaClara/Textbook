@@ -12,7 +12,7 @@ Although we don’t require that you use the nomenclature from the AguaClara var
 
 The minimum input parameters to define a flocculator are (flow_plant, headloss_floc_BOD, Gt_BOD, T_BOD). We could have included a longer list of input parameters (height_floc_end, width_PC_sheet, K_e, etc.) to make our functions even more general. But to keep our code more concise we will focus on only 4 of the input parameters. This will make it possible to easily change the input parameters to obtain new designs. We will use this capability to plot the results of varying the design flow rate.
 
-Hydraulic Vertical Flow Flocculator Design
+Hydraulic Vertical flow flocculator Design
 ==========================================
 
 This challenge is design a hydraulic flocculator using the core concepts of the AguaClara design methodology.
@@ -138,7 +138,7 @@ The number of expansions is 2.
 
 The actual distance between expansions is 1 meter.
 
-**15) Calculate the spacing between baffles** based on the target velocity gradient using :eq:`Floc_baffle_spacing`.
+**15) Calculate the spacing between baffles** based on the target velocity gradient using :eq:`Floc_baffle_spacing_of_K`.
 
 `Find the baffle spacing <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=pWb4aEgFnhZe&line=6&uniqifier=1>`_
 
