@@ -4,14 +4,14 @@
 Entrance Tank Design
 **************************************
 
-Water treatment plants must be protected from potentially damaging materials that could be carried from the watershed to the plant by the water. There is typically a trash rack with large openings at the water source to prevent blockages and damage to the transmission line that converys water to the plant. A small grit chamber may also be installed to remove sand and gravel before the water enters the transmission line. This equipment is only able to provide preliminary protection of the water treatment plant, and is generally insufficient for surface water sources. Excessive sand and gravel have historically caused maintenance challenges in some AguaClara plants by settling in the flocculator and the sedimentation tank inlet channel. Source water from steep mountain streams often overwhelms the grit removal system during storm events with eroded sediment. Depending on the watershed characteristics, additional protection is often required to avoid failure modes downstream in the water treatment process.
+Water treatment plants must be protected from potentially damaging materials that could be carried from the watershed to the plant by the water. There is typically a trash rack with large openings at the water source to prevent blockages and damage to the transmission line that conveys water to the plant. A small grit chamber may also be installed to remove sand and gravel before the water enters the transmission line. This equipment is only able to provide preliminary protection of the water treatment plant, and is generally insufficient for surface water sources. Excessive sand and gravel have historically caused maintenance challenges in some AguaClara plants by settling in the flocculator and the sedimentation tank inlet channel. Source water from steep mountain streams often overwhelms the grit removal system during storm events with eroded sediment. Depending on the watershed characteristics, additional protection is often required to avoid failure modes downstream in the water treatment process.
 
 The specific design characteristics of a water treatment plant dictate the potential failure modes and hence the required protection.
 
 The entrance tank has multiple functions in a drinking water treatment plant.
 
 #. Remove air bubbles to reduce splashing, turbulence, and unsteady motion of the chemical feed surface tracking lever system
-#. Remove grit to prevent grit accumulation in the flocculator
+#. Remove grit to prevent accumulation in the flocculator
 #. Remove leaves and other debris to prevent clogging of the diffusers in the sedimentation tank inlet
 #. Dissipate kinetic energy to keep the water level steady for accurate flow measurement
 #. Measure the incoming flow rate so that operators can make adjustments and respond to changes in water demand
@@ -32,7 +32,7 @@ In some AguaClara plants, the entrance tank, flocculators, and sedimentation tan
 
 .. _figure_Gracias_Ent_Floc:
 .. figure:: ../Images/Gracias_Ent_Floc.JPG
-    :width: 500px
+    :width: 350px
     :align: center
     :alt: Layout of entrance tank alongside flocculator at Gracias, Honduras AguaClara plant
 
@@ -91,9 +91,9 @@ Recall that Stokes Law tells us the terminal velocity of a particle settling und
   
    v_c = \frac{(\rho_p - \rho_{H_20})\cdot g\cdot(d_p)^2}{18 \cdot \nu \cdot\rho_{H_20}}
   
-  where d\ :sub:'p' is the minimum particle diameter to be removed (Kawamura recommends 0.1 mm). 
+where d\ :sub:'p' is the minimum particle diameter to be removed (Kawamura recommends 0.1 mm). 
   
-  As a check, calculate the Reynolds number to confirm that flow is in the laminar regime for Stokes' Law to be valid. 
+As a check, calculate the Reynolds number to confirm that flow is in the laminar regime for Stokes' Law to be valid. 
   
 .. math::
   :label: grit_Re
@@ -107,7 +107,7 @@ The required plan view area to capture the minimum particle can be calculated by
   
    A = \frac{Q}{v_c}
   
-  The next step is to determine the optimal dimensions of the entrance tank. For constructibility purposes, the entrance tank must not be smaller than 50 cm, as a mason needs to work inside to apply a waterproof coating. Additionally, the entrance tank should not be longer than the flocculator. The ideal width of the entrance tank would be the area of the grit chamber divided by the length of the flocculator, or the minimum width of 50 cm, whichever is larger. 
+The next step is to determine the optimal dimensions of the entrance tank. For constructibility purposes, the entrance tank must not be smaller than 50 cm, as a mason needs to work inside to apply a waterproof coating. Additionally, the entrance tank should not be longer than the flocculator. The ideal width of the entrance tank would be the area of the grit chamber divided by the length of the flocculator, or the minimum width of 50 cm, whichever is larger. 
   
 .. math::
   :label: width_ET

@@ -27,16 +27,16 @@ There are 4 levels of flow distribution in StaRS filters. The direction of the d
 
  * between orifices (branchPortQ_pi): made less important by the winged design that allows correcting flow in the winged space before the water enters the sand bed. This flow distribution does not benefit from the head loss through the sand. Suggest using a value of 0.8 for this constraint because of the balancing provided by the wings. The flow distribution constraint only provides a ratio of the port and branch velocities. The constraint for the maximum velocity allowable is either set by head loss or by the strength of the branch to span its length and not bend to much at the initiation of backwash. Either of those constraints can be converted into a maximum velocity for the inner branches and that will be used as an input to the design.
 
-    * The velocity constraint will determine the maximum length of a branch given its diameter.
-    * Use equation :eq:`manifold_max_v_no_hl_series` combined with the maximum branch velocity constraint to calculate the port velocity. Calculate the required branch diameter given the length (or vice versa).
-    * The orifice diameter will be selected based on constructability and not being too small to risk clogging (between 4 and 10 mm)
-    * Calculate the orifice spacing for the inner branches based on mass conservation and the maximum port velocity.
-    *  Calculate the maximum length of the branches given mass conservation and the maximum branch velocity.
+  * The velocity constraint will determine the maximum length of a branch given its diameter.
+  * Use equation :eq:`manifold_max_v_no_hl_series` combined with the maximum branch velocity constraint to calculate the port velocity. Calculate the required branch diameter given the length (or vice versa).
+  * The orifice diameter will be selected based on constructability and not being too small to risk clogging (between 4 and 10 mm)
+  * Calculate the orifice spacing for the inner branches based on mass conservation and the maximum port velocity.
+  *  Calculate the maximum length of the branches given mass conservation and the maximum branch velocity.
 
  * between branches (trunkPortQ_pi): aided considerably by the head loss through the sand and is helped by the head loss though the orifices. Suggest using a value of 0.9 for this constraint. This constraint will be combined with a maximum permissible head loss during backwash to determine the required diameter of the trunk lines and will be combined with the equal trunk head loss constraint to obtain the diameter of the orifices.
 
-    * Use equation :eq:`manifold_max_v_with_hl_series` to solve for the maximum trunk velocity.
-    * Use the fact that the head loss is the same for outer and inner inlets to determine the :math:`K_{e_{outerOrifices}}`.
+  * Use equation :eq:`manifold_max_v_with_hl_series` to solve for the maximum trunk velocity.
+  * Use the fact that the head loss is the same for outer and inner inlets to determine the :math:`K_{e_{outerOrifices}}`.
 
  * between sand layers: easily obtained by simply requiring that inlet head losses be identical in the 4 inlets under conditions of the target flow and accounting for the fact that the inner inlets have double the flow of the outer inlets.
  * between filters: will be handled by design of the weirs into the filter inlet boxes
@@ -68,7 +68,7 @@ The head loss through the inner ports or orifices required to achieve reasonable
 .. math::
   :label: eq_he_port
 
-  h_{e_{P_{inner}}} = \frac{\bar v_{P_{inner}}^2}{2g} = \frac{\bar v_{B_{inner}}^2}{2g}\frac{1}{\Pi_{\Psi_P}}
+  h_{e_{P_{inner}}} = \frac{\bar v_{P_{inner}}^2}{2g} = \frac{\bar v_{B_{inner}}^2}{2g}\frac{1}{\Pi_{\Psi_P}
 
 where the port velocity :math:`\bar v_{P_{inner}}` is the *contracted* velocity out of the orifice.
 
@@ -152,7 +152,7 @@ Given the constraint of maximum branch velocity use the relationship between por
 .. math::
   :label: v_port_inner_branch
 
-  \bar v_{P_{innerMax}} = \bar v_{B_{innerMax}}\sqrt{\frac{1}{\Pi_{\Psi_P}}}
+  \bar v_{P_{innerMax}} = \bar v_{B_{innerMax}}\sqrt{\frac{1}{\Pi_{\Psi_P}}
 
 The orifice diameter will be constrained by the wing fabrication. Apply conservation of mass to obtain the port velocity to filter velocity ratio. Each port serves an area equal to the branch spacing times the port spacing.
 
@@ -166,7 +166,7 @@ where the factor of 2 is because the inner trunks serve two layers of sand. Comb
 .. math::
   :label: B_orifice_inner
 
-  B_{orifice_{inner}} = \frac{\bar v_{B_{innerMax}}\Pi_{vc}\pi D_{orifice}^2}{8 v_{Fi}B_{branch}}\sqrt{\frac{1}{\Pi_{\Psi_P}}}
+  B_{orifice_{inner}} = \frac{\bar v_{B_{innerMax}}\Pi_{vc}\pi D_{orifice}^2}{8 v_{Fi}B_{branch}}\sqrt{\frac{1}{\Pi_{\Psi_P}}
 
 We will assume that the user sets the target branch diameter as an input. The maximum length of a branch is set by mass conservation and the flow required to serve the filter area corresponding to the length of the branch.
 
@@ -187,7 +187,7 @@ Solve for the minimum pipe ID.
 .. math::
   :label: D_branch_min
 
-   D_{branch_{min}}= \sqrt\frac{8 v_{Fi}  B_{branch} L_{branch}}{\pi \bar v_{B_{innerMax}}}
+ D_{branch_{min}}= \sqrt\frac{8 v_{Fi}  B_{branch} L_{branch}}{\pi \bar v_{B_{innerMax}}}
 
 
 
@@ -354,7 +354,7 @@ where :math:`N_{sided}` is 2 for inner trunks that serve two layers of sand. Com
 .. math::
   :label: B_orifice_inner
 
-  B_{P_{inner}} = \frac{\bar v_{B}\Pi_{vc}\pi D_{P}^2}{8 v_{Fi}B_{B}}\sqrt{\frac{1}{\Pi_{\Psi_P}}}
+  B_{P_{inner}} = \frac{\bar v_{B}\Pi_{vc}\pi D_{P}^2}{8 v_{Fi}B_{B}}\sqrt{\frac{1}{\Pi_{\Psi_P}}
 
 .. _heading_StaRS_Trunk_Diameter:
 
@@ -805,4 +805,4 @@ Solve for the maximum discharge height assuming we empty the sand in backwash mo
 
    H_{discharge} = H_{sandbed} + \frac{\rho_{water}}{\rho_{sandbed}} H_{water} - K\frac{\bar v^2}{2g}
 
-The maximum sand dump height can either be achieved by dumping the sand in filtration mode or using backwash mode. In backwash mode the initial head will be sufficient to drive the sand through the sand dump, but as the sand empties the hydrostatic pressure at the bottom of the filter will decrease. The pressure could be increased by increasing the height of the siphon outlet.
+ The maximum sand dump height can either be achieved by dumping the sand in filtration mode or using backwash mode. In backwash mode the initial head will be sufficient to drive the sand through the sand dump, but as the sand empties the hydrostatic pressure at the bottom of the filter will decrease. The pressure could be increased by increasing the height of the siphon outlet.
