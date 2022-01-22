@@ -298,7 +298,7 @@ msgstr ""
 #: ../../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst:132
 msgid ""
 "For a long straight pipe :math:`\\bar\\varepsilon = \\frac{{\\rm f}}{2} "
-"\\frac{\\bar v^3}{D}` (Equation :eq:`eq_EDR_straight_pipe`) and thus we "
+"\\frac{\\bar v^3}{D}` (Equation :eq:`eq_EDR_HL`) and thus we "
 "can obtain the ratio between mean velocity and the velocity of the large "
 "scale eddies."
 msgstr ""

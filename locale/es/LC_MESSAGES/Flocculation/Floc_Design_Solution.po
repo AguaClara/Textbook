@@ -389,7 +389,7 @@ msgstr ""
 #: ../../Flocculation/Floc_Design_Solution.rst:334
 msgid ""
 "Calculate the spacing between baffles based on the target velocity "
-"gradient using :eq:`Floc_baffle_spacing`."
+"gradient using :eq:`Floc_baffle_spacing_of_K`."
 msgstr ""
 
 #: ../../Flocculation/Floc_Design_Solution.rst:350

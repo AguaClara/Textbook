@@ -9,7 +9,7 @@ Fluid Deformation and Energy Dissipation Derivations
 Equations for :math:`\varepsilon` and :math:`G` in Varying Flow Geometries
 ===============================================================================
 
-Estimation of velocity gradients for various flow geometries is the basis for the design of rapid mix, flocculators, and plate settlers. Thus, our goal is to define the velocity gradients consistently across a range of possible flow regimes. There are three approaches to calculating the average velocity gradient within a control volume. 
+Estimation of velocity gradients for various flow geometries is the basis for the design of rapid mix, flocculators, and plate settlers. Thus, our goal is to define the velocity gradients consistently across a range of possible flow regimes. There are three approaches to calculating the average velocity gradient within a control volume.
 
 #. Use the Navier Stokes equations and solve for the spatially averaged velocity gradient.
 #. Use Computational Fluid Dynamics (CFD) to solve for the spatially averaged velocity gradient.
@@ -23,9 +23,35 @@ The Camp-Stein estimate of :math:`G_{CS}` is based on a control volume where the
 
   \tau = \mu \frac{v}{H} = \mu G = \nu\rho G
 
-Where :math:`\tau` is the force required per unit plan view area. The power per unit area required to move the fluid at velocity :math:`v` is :math:`\tau v`. The mass per unit area is :math:`\rho H`. Thus the energy dissipation rate or the power per mass is
+Where :math:`\tau` is the force required per unit plan view area.
+
+Figure :numref:`figure_G_velocity_profile` shows the velocity profile of a fluid deforming under the influence of uniform shear.
+
+.. _figure_G_velocity_profile:
+
+.. figure:: ../Images/G_velocity_profile.jpg
+    :width: 50%
+    :align: center
+    :alt: fluid deformation
+
+    The velocity profile of a fluid being deformed by uniform shear.
+
+
+
+:math:`G` measures the magnitude of shear by using the velocity gradient of a fluid in space, :math:`\frac{\Delta \bar v}{\Delta h}`. This is essentially the same as the :math:`\frac{\delta u}{\delta y}` term in fluid mechanics.
+
+The power per unit area required to move the fluid at velocity :math:`v` is :math:`\tau v`. The mass per unit area is :math:`\rho H`. Thus the energy dissipation rate or the power per mass is
 
 .. math:: \varepsilon = \frac{P}{m} = \frac{\tau v}{\rho H} = \frac{\nu \rho G v}{\rho H} = \nu G^2
+
+where :math:`\varepsilon`, which represents the **energy dissipation** rate of a fluid *normalized by its mass*. The units of :math:`\varepsilon` are Watts per kilogram:
+
+.. math::
+
+  \varepsilon = \left[ \frac{W}{Kg} \right] = \left[ \frac{J}{s \cdot Kg} \right] = \left[ \frac{N \cdot m}{s \cdot Kg} \right] = \left[ \frac{kg \cdot m \cdot m}{s^2 \cdot s \cdot Kg} \right] = \left[ \frac{m^2}{s^3} \right] = \left[ \frac{[L]^2}{[T]^3} \right]
+
+There are at least two ways to think about :math:`\varepsilon`. One is through :math:`G`. Imagine that a fluid has *no viscosity* ; there is no internal friction caused by fluid flow. No matter how high :math:`G` becomes, no energy is dissipated. Now image a honey, which has a very high viscosity. Making honey flow fast requires a lot of energy over a short period of time, which means a high energy dissipation rate. This explanation allows us to understand the equation for :math:`\varepsilon` in terms of :math:`G` and :math:`\nu`. `See this textbook <https://app.knovel.com/web/view/khtml/show.v/rcid:kpMWHWTPD1/cid:kt00AD4KW1/viewerType:khtml/root_slug:mwh-s-water-treatment/url_slug:principles-reactor-analysis?&b-toc-cid=kpMWHWTPD1&b-toc-url-slug=coagulation-flocculation&b-toc-title=MWH%E2%80%99s%20Water%20Treatment%20-%20Principles%20and%20Design%20(3rd%20Edition)&page=80&view=collapsed&zoom=1)>`_ for the derivation of the following equation:
+
 
 This equation has no approximations, but has one very important assumption. We derived this equation for a control volume where the velocity gradient was **uniform**. The reactors and control volumes that we will be using as we design water treatment plants will **not** have uniform velocity gradients. Indeed, several of the water treatment processes will be turbulent and thus the velocity gradients in the fluid will vary in both space and time. Even in laminar flow in a pipe the velocity gradient is far from uniform with high velocity gradients at the wall and zero velocity gradient at the center of the pipe.
 
@@ -134,7 +160,7 @@ Chemical injection into the center of a pipe is common in drinking water treatme
 .. math:: v_{eddy} \approx \left( \bar\varepsilon \, D \right)^\frac{1}{3}
 
 For a long straight pipe
-:math:`\bar\varepsilon = \frac{{\rm f}}{2} \frac{\bar v^3}{D}` (Equation :eq:`eq_EDR_straight_pipe`) and thus we can obtain the ratio between mean velocity and the velocity of the large scale eddies.
+:math:`\bar\varepsilon = \frac{{\rm f}}{2} \frac{\bar v^3}{D}` (Equation :eq:`eq_EDR_HL`) and thus we can obtain the ratio between mean velocity and the velocity of the large scale eddies.
 
 .. math:: v_{eddy} \approx \left( \frac{{\rm f}}{2} \frac{\bar v^3}{D} \, D \right)^\frac{1}{3}
 
@@ -287,7 +313,7 @@ Straight Pipe (Wall Shear)
 The average energy dissipation rate, :math:`\bar\varepsilon`, in a control volume with residence time :math:`\theta` is
 
 .. math::
-  :label: eq_EDR_straight_pipe
+  :label: eq_EDR_HL
 
   \bar\varepsilon = \frac{gh_{\rm{L}}}{\theta}
 
