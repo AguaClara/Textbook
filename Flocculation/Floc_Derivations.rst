@@ -11,14 +11,14 @@ Flocculation Derivations
 Baffle Minor Loss Coefficient
 =============================
 
-For contractions in series the minor loss coefficient is strongly influenced by the distance between the contractions. When the contractions are spaced so closely that the flow can't fully expand between contractions the velocity exiting the contraction is greater and the resulting head loss is gerater. The distance required for the flow to expand can be estimated based on jet expansion equations. The flow exiting a rectangular contraction can be modeled as a plane jet and plane jets grow in width at a rate
+For contractions in series the minor loss coefficient is strongly influenced by the distance between the contractions. When the contractions are spaced so closely that the flow can't fully expand between contractions the velocity exiting the contraction is greater and the resulting head loss is greater. The distance required for the flow to expand can be estimated based on jet expansion equations. The flow exiting a rectangular contraction can be modeled as a plane jet and plane jets grow in width at a rate
 
 .. math::
   :label: PlaneJet_expansion
 
   W_{jet} = 0.116x
 
-where x is the distance along the path of the jet centerline and :math:`\Pi_{PlaneJet_{exp}} = 0.116` for a plane jet in an infinite medium. The location of this expanding jet is shown in Figure
+where x is the distance along the path of the jet centerline and :math:`\Pi_{PlaneJet_{exp}} = 0.116` for a plane jet in an infinite medium. The location of this expanding jet is shown in Figure :numref:`figure_baffle_geometry`.
 
 
 .. _figure_baffle_geometry:
@@ -44,7 +44,7 @@ The maximum path length for the jet to expand could include an additional distan
 
   L_{jet_{max}} = H_e
 
-The jet may be influenced by the presence of a baffle on the one side. Computational Fluid Dynamics is needed to determine the correct value for :math:`\Pi_{PlaneJet_{exp}} in baffled flocculators.
+The jet may be influenced by the presence of a baffle on the one side. Computational Fluid Dynamics is needed to determine the correct value for :math:`\Pi_{PlaneJet_{exp}}` in baffled flocculators.
 
 The maximum width of the expanding jet, :math:`W_{jet_{max}}`, occurs immediately upstream of where the streamlines begin to curve to go around the end of the baffle. The jet minimum width (greatest contraction) occurs shortly after going around the 180° bend. Given that the flow might not have fully expanded we can express the jet minimum width as a function of the jet maximum width.
 
@@ -61,7 +61,7 @@ Similarly the maximum jet width is determined by how much it can expand in dista
 
   W_{jet_{max}} = W_{jet_{min}} +  \Pi_{PlaneJet_{exp}}L_{jet}
 
-Equations :eq:` W_jet_min` and :eq:`W_jet_max_of_W_jet_min` provide two equations in two unknowns. Eliminate :math:`W_{jet_{min}}` from equation :eq:`W_jet_max_of_W_jet_min`.
+Equations :eq:`W_jet_min` and :eq:`W_jet_max_of_W_jet_min` provide two equations in two unknowns. Eliminate :math:`W_{jet_{min}}` from equation :eq:`W_jet_max_of_W_jet_min`.
 
 .. math::
   :label: W_jet_max
@@ -105,8 +105,8 @@ Equation :eq:`K_baffle_expanding_messy` can be simplified to obtain
 
 Equation :eq:`K_baffle_expanding` incorporates two assumptions that need to be checked with computational fluid dynamics.
 
-1) The :math:`\Pi_{PlaneJet_{exp}}` may be missing a correction to account for the slower jet expansion along the baffle that is in contact with the jet.
-1) The distance for the jet to expand may be greater or less than :math:`H_e`.
+1. The :math:`\Pi_{PlaneJet_{exp}}` may be missing a correction to account for the slower jet expansion along the baffle that is in contact with the jet.
+1. The distance for the jet to expand may be greater or less than :math:`H_e`.
 
 .. _figure_K_baffle:
 
