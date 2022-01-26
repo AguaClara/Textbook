@@ -87,10 +87,9 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
   Flocculation/Floc_Intro.rst
   Flocculation/Floc_Model.rst
-  Flocculation/Floc_Design.rst
   Flocculation/Floc_Derivations.rst
-  Flocculation/Floc_Theory_and_Future_Work.rst
-  Flocculation/Floc_Examples.rst
+  Flocculation/Floc_Design.rst
+  Flocculation/Floc_Design_Challenge.rst
   Flocculation/Floc_Mechanical_Solution.rst
   Flocculation/Floc_Model_Solution.rst
   Flocculation/Floc_Design_Solution.rst
