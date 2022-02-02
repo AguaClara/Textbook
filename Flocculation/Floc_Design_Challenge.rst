@@ -28,7 +28,6 @@ As you are developing code **create it in small pieces and verify as you go that
 1. FS: We have provided a the skeleton of a function (flowDimensions) where you can add code. Use it to calculate the flocculator flow dimensions. Note that the function takes the design map as an input and returns the design map (with more parameters defined). Thus every parameter that you define as design.x will be returned by this function. We have provided recommended names for the parameters that you will be calculating in () below. After each step you can check the value that is being calculated by opening the variable table in the PS. In this function calculate the following:
     1. :math:`K_{baffle}` from the *vena contracta* for the case when :math:`\Pi_{H_eS}>6` (design.baffleK_min). Our best estimate for the *vena contracta* is from sluice gates where the geometry is very similar to flow around a baffle and thus use a value of 0.6 for a 90 degree bend. Remember that the fluid change in direction is twice as large for a baffle than for a sluice gate and thus it contracts by this much twice!
     1. viscosity (design.NU)
-    1. the design value for the velocity gradient (design.G_bod) given the :math:`HL_{bod}` (bod: basis of design)
     1. the baffle spacing (design.S), :math:`S`, assuming the flow passage is square (see Equation :eq:`floc_baffle_spacing_squareGeometry`)
     1. the baffle spacing for the case (if statement here!) where the target outlet water height is greater than the calculated design.S. Use Equation :eq:`floc_baffle_spacing_const_PiHS`
     1. the distance between expansions (design.He), :math:`H_e`
@@ -77,7 +76,7 @@ As you are developing code **create it in small pieces and verify as you go that
     1. Open the `HV Flocculator <https://cad.onshape.com/documents/edb0d8000bff37cc559ebe89/w/1070adceaa2f931d13443deb/e/16171bc5d51fe4caa0b06c4e>`_ and make sure the flow is set to 100 L/s. Which is more cost effective, the HV Flocculator or the HH Flocculator for the flow of 100 L/s? This could be an interesting challenge to figure out where these two competing designs have the same cost and hence where the transition between these designs should occur.
     1. Decrease the temperature to 0 Celsius. What happens to the design? Can you explain why? This is a key insight about flocculation!
     1. Change Q_pi to 0.5. What happens to the water level in the plant? Was the change more dramatic than you expected? Explain why the water level drops so much when the flow rate is 50% of the design flow.
-    1. Reduce the basis of design head loss to 0.2 meter. What happens to the cost of the flocculator? Explain why this happens.
+    1. Reduce the basis of design velocity gradient to 50 Hz. What happens to the cost of the flocculator? Explain why this happens.
 
 
 
