@@ -77,17 +77,3 @@ As you are developing code **create it in small pieces and verify as you go that
     1. Decrease the temperature to 0 Celsius. What happens to the design? Can you explain why? This is a key insight about flocculation!
     1. Change Q_pi to 0.5. What happens to the water level in the plant? Was the change more dramatic than you expected? Explain why the water level drops so much when the flow rate is 50% of the design flow.
     1. Reduce the basis of design velocity gradient to 50 Hz. What happens to the cost of the flocculator? Explain why this happens.
-
-
-
-
-# Below is draft of possible future assignment
-Given a flocculator designed by AIDE (S, HE, Q, Nbaffles), calculate (V, theta, G, Gtheta, HL, VOL)
-
-Compare cost of the flocculator as a function of HL
-An important design constraint that is not well characterized is the maximum G that can be used. The maximum G determines the size of the flocs entering the sedimentation tank. If those flocs are too small to be captured by the plate settlers, then those flocs aren't effectively captured by the sedimentation tank and will contributed to the settled water turbidity. The sedimentation velocity of a floc (and hence its ability to be captured by the plate settlers) is a function of its size AND its density. Flocs that are made of clay and coagulant are more dense than flocs that are made of organic matter and coagulant. Your task is to explore how the flocculator design changes if the maximum velocity gradient is reduced from 200 Hz to 100 Hz and then to 50 Hz. Describe the changes in the flocculator and answer these questions for a vertical-horizontal flocculator.
-1) When you vary G_max, should you keep theta constant or Gtheta constant? Explain why!
-1) Why does the HE increase as G_max is decreased?
-1) Why does the volume of the flocculator increase as G_max is decreased?
-1) Does the number of baffles increase, decrease, or stay the same? Can you explain why? Find or derive an equation to calculate Gtheta for a single baffle to explain this!
-1) How much does the cost of the flocculator change when G is reduced from 100 Hz to 50 Hz?
