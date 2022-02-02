@@ -78,9 +78,7 @@ Notes:
 
 Linear Chemical Dose Controller (CDC)
 ---------------------------------------
-Since the Linear Chemical Dose Controller has become the standard in AguaClara, it is often simply called the Chemical Dose Controller, **or CDC for short**. It can be confusing to describe with words, so be sure to flip through the slides in the ‘Flow Control and Measurement’ powerpoint, as they contain very, very, helpful diagrams of the CDC.
-
-
+Since the Linear Chemical Dose Controller has become the AguaClara standard chemical dosing system, it is often simply called the Chemical Dose Controller, **or CDC for short** (see :numref:`figure_cdc_and_lfom_in_et`).
 
 .. _figure_cdc_and_lfom_in_et:
 
