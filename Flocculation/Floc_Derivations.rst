@@ -117,7 +117,7 @@ Equation :eq:`K_baffle_expanding` incorporates two assumptions that need to be c
 
    Baffle minor loss coefficient (Equation :eq:`K_baffle_expanding`) is predicted to increase rapidly as the H/S ratio decreases.
 
-Figure :numref:`figure_K_baffle` reveals that the baffle minor loss coefficient increases rapidly as :math:`\Pi_{H_{e}S}` decreases below about 5.6. This suggests that estimating the baffle minor loss coefficient correctly will be critical and more difficult for low values of :math:`\Pi_{H_{e}S}`.
+:numref:`figure_K_baffle` reveals that the baffle minor loss coefficient increases rapidly as :math:`\Pi_{H_{e}S}` decreases below about 5.6. This suggests that estimating the baffle minor loss coefficient correctly will be critical and more difficult for low values of :math:`\Pi_{H_{e}S}`.
 
 
 Linking head loss, velocity gradient, and geometry
