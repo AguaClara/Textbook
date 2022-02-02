@@ -12,9 +12,13 @@ Take the CDC as an example of this design process in :ref:`title_flow_control_de
 
 The flocculator is more complex to design than the CDC, as it has more details and parameters and the equations for those details and parameters are very interdependent. Therefore, there are many ways to design an AguaClara flocculator, and many different sets of critical design criteria to begin with. Below are design approaches for several of the different potential flocculator geometries.
 
-In all cases we will need equations relating head loss, velocity gradient, viscosity, and collision potential. Flocculators must operate effectively over a range of temperatures and the critical design temperature is the coldest operating temperature. The viscosity shown in subsequent equations is the viscosity at the coldest operating temperature.
+In all cases we will need equations related head loss, velocity gradient, and collision potential. We can rearrange the equation for :math:`G_{CS}` from the section on collision potential, :math:`G_{CS} = \sqrt{\frac{g h_L}{\nu \theta}}`, to solve for :math:`G_{CS}` in terms of :math:`G_{CS} \theta`:
 
-The following equations describe the design process assuming that a velocity gradient is specified for the coldest operating temperature. Given :math:`G_{CS}`, we can very easily find :math:`\theta`:
+.. math::
+
+  G_{CS} = \frac{g h_{L_{floc}}}{\nu (G_{CS} \theta)}
+
+Now that we have :math:`G_{CS}`, we can very easily find :math:`\theta`:
 
 .. math::
 
@@ -39,16 +43,16 @@ Horizontal-Vertical flow flocculators
 
 1. Input parameters
     - Specify:
-      - :math:`G_{CS}`, velocity gradient at the coldest operating temperature
-      - :math:`G_{CS} \theta`, collision potential at the coldest operating temperature
+      - :math:`h_{L_{floc}}`, head loss
+      - :math:`G_{CS} \theta`, collision potential
       - :math:`Q`, plant flow rate
       - :math:`H`, height of water *at the end of the flocculator*
       - :math:`L_{Max, \, sed}`, max length of a flocculator channel based on sedimentation tank length
       - :math:`W_{Min, \, human}` minimum width of a single channel based on the width of the average human hip (someone's got to go down there...)
     - Find:
+      - :math:`G_{CS}`, average velocity gradient
       - :math:`\theta`, hydraulic retention time
       - :math:`\rlap{-}V_{floc}`, flocculator volume
-      - :math:`h_{L_{floc}}`, head loss (independent of operating temperature)
 2. Physical dimensions
     - Calculate:
       - :math:`L_{channel}`, actual channel length
@@ -72,9 +76,8 @@ Horizontal-Vertical flow flocculators
 
 
 We start by making sure that our flocculator will be able to flocculate effectively by defining :math:`h_{L_{floc}}` and :math:`G_{CS} \theta`. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards in AguaClara flocculators:
-
- - :math:`G_{CS} = 100 Hz`
- - :math:`G_{CS} \theta = 37,000`
+- :math:`h_{L_{floc}} = 40 \, {\rm cm}`
+- :math:`G_{CS} \theta = 37,000`
 
 The plant flow rate :math:`Q` is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water *at the end* of the flocculator, :math:`H`, the *maximum* length of the flocculator based on the length of the sedimentation tank length, :math:`L_{Max, \, sed}`, and the *minimum* width of a flocculator channel required for a human to fit inside, :math:`W_{Min, \, human}`, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the sedimentation tanks, which is why the length constraint exists. See :numref:`figure_physical_design_criteria_floc` for a representation of how the flocculator and sedimentation tanks are placed in a plant.
 
@@ -90,6 +93,9 @@ The plant flow rate :math:`Q` is defined by the needs of the community that the 
    :alt: physical design criteria
 
    Layout of flocculator and sedimentation tanks that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.
+
+
+
 
 Physical Dimensions
 -----------------------------
@@ -251,15 +257,9 @@ We then compare :math:`n_{spaces, \, required}` to :math:`n_{spaces, \, actual}`
 Average Velocity
 ^^^^^^^^^^^^^^^^^
 
-As water flows through the flocculators, the flocs will get larger and larger. As a result, their terminal sedimentation velocity will increase. This is what we want. However, we need to make sure that the flocs don’t settle in the flocculator; that they instead all settle in the sedimentation tank. To make sure of this, we need to make sure that the velocity of water in the flocculator is high enough to scour any flocs that fall to the bottom of the flocculator. The velocity required to scour flocs from the bottom and avoid floc accumulation is around :math:`v_{scour} = 15 \, {\rm \frac{cm}{s}}`. We can check our average velocity :math:`\bar v` against this value. Unfortunately, the only method to increase the velocity through the flocculator is to increase the space between baffles, S, and decrease the channel width, W. Generally those changes aren't practical and thus there isn't any way to increase the velocity.
+As water flows through the flocculators, the flocs will get larger and larger. As a result, their terminal sedimentation velocity will increase. This is what we want. However, we need to make sure that the flocs don’t settle in the flocculator; that they instead all settle in the sedimentation tank. To make sure of this, we need to make sure that the velocity of water in the flocculator is high enough to scour any flocs that fall to the bottom of the flocculator. The velocity required to scour flocs from the bottom and avoid floc accumulation is around :math:`v_{scour} = 15 \, {\rm \frac{cm}{s}}`. We need to check our average velocity :math:`\bar v` against this value.
 
 .. math:: \bar v = \frac{Q}{W_{channel} S}
-
-
-Head loss
-^^^^^^^^^
-
-Head loss is calculated for each expansion using the minor loss coefficient associated with that expansion in equation :eq:`minor_loss`. The total head loss is simple a sum of the head loss for all of the expansions.
 
 Residence Time
 ^^^^^^^^^^^^^^^
@@ -281,8 +281,6 @@ Thus, the actual average water level in the flocculator is :math:`H + \frac{h_{L
 .. math:: \theta_{actual} = \frac{n_{channels} L_{channel} W_{channel} \left( H + \frac{h_{L_{floc}}}{2} \right)} {Q}
 
 Check to see if :math:`\theta_{actual}` is greater than :math:`\theta`.
-
-
 
 .. bibliography:: /references.bib
   :cited:

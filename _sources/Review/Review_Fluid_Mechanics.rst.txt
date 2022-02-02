@@ -191,10 +191,10 @@ Though there are `many assumptions needed to confirm that the Bernoulli equation
 
 .. _heading_energy_equation:
 
-The Control Volume Energy Equation
-----------------------------------
+The Energy Equation
+-------------------
 
-The assumption necessary to use the Bernoulli equation, which is stated above, represents the key difference between the Bernoulli equation and the control volume energy equation for the purpose of this class. The energy equation accounts for the potential addition or loss of fluid energy within the control volume. (L)oss of energy is usually due to viscous friction resisting fluid flow, :math:`h_L`, or the charging of a (T)urbine, :math:`h_T`. The most common input of fluid energy into a system is usually caused by a (P)ump within the control volume, :math:`h_P`.
+The assumption necessary to use the Bernoulli equation, which is stated above, represents the key difference between the Bernoulli equation and the energy equation for the purpose of this class. The energy equation accounts for the potential addition or loss of fluid energy within the control volume. (L)oss of energy is usually due to viscous friction resisting fluid flow, :math:`h_L`, or the charging of a (T)urbine, :math:`h_T`. The most common input of fluid energy into a system is usually caused by a (P)ump within the control volume, :math:`h_P`.
 
 .. math::
 
@@ -370,7 +370,6 @@ In order to find :math:`\bar v_{out}`, we first need to know what (or where) is 
 :math:`\bar v_{out}` is easy to determine because it is the velocity of the fluid as it flows through the entire area of the pipe. Thus, :math:`\bar v_{out}` can be found with the continuity equation, since the flow through the pipe and its diameter are easy to measure, :math:`\bar v_{out} = \frac{4 Q}{\pi D^2}`. On the other hand, :math:`\bar v_{in}` is difficult to find, as the area of the contracted flow is dependent on the exact geometry of the elbow. This is why the third form of the minor loss equation, as we have defined it, is the most common:
 
 .. math::
-  :label: minor_loss
 
     h_e = K \frac{\bar v_{out}^2}{2g} = \,\,\,\, \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \frac{\bar v_{out}^2}{2g}
 
