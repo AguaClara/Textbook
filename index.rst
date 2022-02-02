@@ -39,28 +39,24 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
 
 .. toctree::
-  :caption: Chapter 3: Flocs, Fractals, and Forces
-  :maxdepth: 1
-
-  Flocs_Fractals_and_Forces/FFF_Intro.rst
-  Flocs_Fractals_and_Forces/FFF_Suspensions.rst
-
-.. toctree::
-  :caption: Chapter 4: Fluid Deformation and Energy Dissipation
+  :caption: Chapter 3: Fluid Deformation, Fractals, and Forces
   :maxdepth: 1
 
   Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.rst
   Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst
+  Flocs_Fractals_and_Forces/FFF_Intro.rst
+  Flocs_Fractals_and_Forces/FFF_Suspensions.rst
+
 
 .. toctree::
-  :caption: Chapter 5: Chemistry of Water Treatment
+  :caption: Chapter 4: Chemistry of Water Treatment
   :maxdepth: 1
 
   Chemistry_of_Water_Treatment/Chemistry_Intro.rst
   Chemistry_of_Water_Treatment/Chemistry_Derivations.rst
 
 .. toctree::
-  :caption: Chapter 6: Flow Control and Measurement
+  :caption: Chapter 5: Flow Control and Measurement
   :maxdepth: 1
 
   Flow_Control_and_Measurement/FCM_Intro.rst
@@ -70,19 +66,18 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flow_Control_and_Measurement/ET_Design.rst
 
 .. toctree::
-  :caption: Chapter 7: Rapid Mix
+  :caption: Chapter 6: Rapid Mix
   :maxdepth: 1
 
   Rapid_Mix/RM_Intro.rst
   Rapid_Mix/RM_Design.rst
-  Rapid_Mix/RM_Derivations.rst
   Rapid_Mix/RM_Examples.rst
   Rapid_Mix/RM_Theory_and_Future_Work.rst
   Rapid_Mix/RM_Mechanical_Solution.rst
   Rapid_Mix/RM_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 8: Flocculation
+  :caption: Chapter 7: Flocculation
   :maxdepth: 1
 
   Flocculation/Floc_Intro.rst
@@ -95,7 +90,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flocculation/Floc_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 9: Sedimentation
+  :caption: Chapter 8: Sedimentation
   :maxdepth: 1
 
   Sedimentation/Sed_Intro.rst
@@ -105,7 +100,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Sedimentation/Sed_Examples.rst
 
 .. toctree::
-  :caption: Chapter 10: Filtration
+  :caption: Chapter 9: Filtration
   :maxdepth: 1
 
   Filtration/Filtration_Intro.rst
@@ -114,25 +109,25 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Filtration/Filtration_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 11: Hydraulics
+  :caption: Chapter 10: Hydraulics
   :maxdepth: 1
 
   Hydraulics/Hydraulics_Intro.rst
 
 .. toctree::
-  :caption: Chapter 12: Dissolved Gas
+  :caption: Chapter 11: Dissolved Gas
   :maxdepth: 1
 
   Dissolved_Gas/DG_Intro.rst
 
 .. toctree::
-  :caption: Chapter 13: Fluoride
+  :caption: Chapter 12: Fluoride
   :maxdepth: 1
 
   Fluoride/Fluoride_Intro.rst
 
 .. toctree::
-  :caption: Chapter 14: Troubleshooting
+  :caption: Chapter 13: Troubleshooting
   :maxdepth: 1
 
   Troubleshooting/Troubleshooting.rst
