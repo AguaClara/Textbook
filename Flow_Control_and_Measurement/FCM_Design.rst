@@ -44,6 +44,7 @@ Linear Flow Orifice Meter (LFOM)
 The LFOM is a weir shape cut into a pipe. It was meant to imitate `the Sutro Weir <https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research>`_ while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.
 
 .. _figure_sutro_v_lfom:
+
 .. figure:: ../Images/sutro_v_lfom.png
     :width: 600px
     :align: center
@@ -79,6 +80,18 @@ Linear Chemical Dose Controller (CDC)
 ---------------------------------------
 Since the Linear Chemical Dose Controller has become the standard in AguaClara, it is often simply called the Chemical Dose Controller, **or CDC for short**. It can be confusing to describe with words, so be sure to flip through the slides in the ‘Flow Control and Measurement’ powerpoint, as they contain very, very, helpful diagrams of the CDC.
 
+
+
+.. _figure_cdc_and_lfom_in_et:
+
+.. figure:: ../Images/cdc_and_lfom_in_et.png
+    :width: 600px
+    :align: center
+    :alt: A chemical dose controller and an LFOM
+
+    The LFOM and chemical dose controller work together to control the flow of the chemicals.
+
+
 The CDC brings together the LFOM and many improvements to the “Almost Linear” Flow Controller. Let’s break it down, with the image below as a guide.
 
 1. Start at the Constant Head Tank (CHT). This is the same set up as the “Almost Linear” Flow Controller. The stock tank feeds into the CHT, and the float valve makes sure that the water level in the constant head tank is always the same.
@@ -100,6 +113,7 @@ The CDC brings together the LFOM and many improvements to the “Almost Linear�
 4. The slider itself controls the dose of chemicals. For any given plant flow rate, the slider can be adjusted to increase or decrease the amount of chemical flowing through the plant.
 
 .. _figure_cdc_labelled:
+
 .. figure:: ../Images/cdc_labelled.png
     :width: 600px
     :align: center
@@ -143,8 +157,8 @@ The CDC can be designed manually using the equations from the derivation linked 
 
 
 
-Design of Chemical Feed Systems
-===============================
+Chemical Feed Stock Concentrations
+----------------------------------
 
 The AguaClara plants in Honduras have used chlorine stock concentrations between 9 and 11 g/L of calcium hypochlorite. The stainless steel cotter pin in the float valve only lasts about 4 months when the stock concentration is 11 g/L. Thus a maximum calcium hypochlorite concentration of 9 g/L is recommended. A supply of stainless steel cotter pins should be maintained at each plant or a chlorine and acid resistant replacement should be developed. Given the low cost of the stainless steel cotter pins it is likely most cost effective to simply put those pins on a regular replacement schedule. A PVC pin could be used, but PVC is weak in comparison with stainless steel. A larger pin diameter would be needed and could be used by enlarging the hole in the valve. Unfortunately there isn't much material available in the float valve to allow a significant increase in pin diameter.
 
@@ -153,6 +167,11 @@ The maximum coagulant stock concentrations had been 120 g/L as granular PACl pri
 At Gracias with 11 g/L of calcium hypochlorite and 150 g/L of granular PACl the operators need to disassemble and clean the dosing systems for both chlorine and PACl once per week. At other AguaClara plants the maintenance interval varies between 2 and 4 weeks. Maintenance for the chlorine system includes removal of the float valve and the dosing tubes and then cleaning those with vinegar to dissolve the deposition of calcium carbonate. The scaling that forms from polyaluminum chloride is water soluble and can be removed with water.
 
 The dosing systems should either be designed to be cleaned with vinegar in place or to be easily disassembled and cleaned. Given the relatively large volume of 1/2" diameter PVC piping that connects the components of the system the preferred option thus far has been to remove the dosing tubes and the float valves for cleaning. We have used barbed fittings for the dosing tubes, but it is quite challenging to remove tubing from barbed fittings and the result has been premature failure of those fittings. For future chemical dosing systems our goal is to use an easy to disconnect coupling that doesn't require taking the tubing off of the barbed fittings for cleaning.
+
+Main Tube diameter
+------------------
+
+The flexible tubing that transports a chemical feed from the dosing tubes to the chemical dose controller and for the coagulant, from the chemical dose controller to the injection port, must be large enough in diameter so that the head loss is very small compared with the head loss of the LFOM. Both major and minor losses may be significant for these chemical pipes because the tubes are relatively long (high L/d ratio) and entrance, exit, and geometry changes in fittings will contribute to minor losses. The tubing diameter can be selected based on the chemical that requires the largest tubing diameter to reduce the number of different types of fitting and tubing required by the water treatment plant.
 
 
 .. _heading_FCM_section_summary:
@@ -168,5 +187,3 @@ Summary
    * a lever to link the two linear relationships
 
 To keep the chemical dose constant by automatically adjusting the addition of coagulant and chlorine as the plant flow rate varies. Two sliders on the lever allows the operator to change the dose of coagulant and chlorine independently of the plant flow rate.
-
-
