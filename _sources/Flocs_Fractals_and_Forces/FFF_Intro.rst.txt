@@ -385,10 +385,10 @@ When flocs are broken by the shearing action of the fluid it is possible that a 
    :align: center
    :alt: Sed tank performance as a function of jet energy dissipation rate
 
-   System suspended solids concentrations during steady state as a function of jet energy dissipation rate for 1.2 mm/s.  Results shown are averaged over 2 residence times (1200 seconds) of the sedimentation tank.
+   System suspended solids concentrations during steady state as a function of jet energy dissipation rate given an upflow velocity of 1.2 mm/s.  Results shown are averaged over 2 residence times (1200 seconds) of the sedimentation tank.
 
 
-Using Equation :eq:`fluid_shear_stress` the maximum energy dissipation rate below the performance deterioration obtained by Garland (300 mW/kg) can be converted into a fluid shear stress of 0.55 Pa. The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using Equation :eq:`fluid_shear_stress_on_doublet`.
+The maximum energy dissipation rate below the performance deterioration obtained by Garland (300 mW/kg) can be converted into the corresponding *average* velocity gradient using :eq:`G_Camp_Stein` to obtain 560 Hz (assuming a water temperature of 22°C). Similarly, the energy dissipation rate can be converted to a shear stress using Equation :eq:`fluid_shear_stress` to obtain 0.55 Pa. The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using Equation :eq:`fluid_shear_stress_on_doublet`.
 
 .. math::
   :label: d_floc_shear_stress
@@ -440,6 +440,65 @@ The maximum floc diameter is influenced by temperature because as the viscosity 
     :alt: internal figure
 
     The maximum floc size at a maximum velocity gradient of 100 Hz increases with temperature due to a decrease in the viscosity.
+
+Linking Velocity Gradient and Capture Velocity
+==============================================
+
+The coagulant bond strength provides a link between flocculator design and sedimentation tank design.
+
+We can substitute equation :eq:`d_floc_G` into equation :eq:`vt_of_floc` and solve for the maximum flocculator velocity gradient that will produce flocs that are large enough to be captured by the sedimentation tank. The capture velocity of the sedimentation tank must be equal to or smaller than the floc terminal velocity to ensure capture of the floc.
+
+.. math::
+  :label: vc_of_G
+
+  v_c = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} -    \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{  \sqrt{\frac{4F_{bond}}{3 \pi \mu G_{max}}}}{D_{cp}} \right) ^{\Pi_{fractal}-1}
+
+Solve equation :eq:`vc_of_G` for the maximum velocity gradient :math:`G_{max}`.
+
+.. math::
+  :label: G_of_vc_derivation_step
+
+  D_{cp}^2\left(v_c  \frac{18\nu}{D_{cp}^2g} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}}\right) ^\frac{2}{\Pi_{fractal}-1} =  \frac{4F_{bond}}{3 \pi \mu G_{max}}
+
+more
+
+.. math::
+  :label: G_of_vc_and_fractal
+
+   G_{max} = \frac{4F_{bond}}{3 \pi \nu \rho_{H_2O} D_{cp}^2}\left(  \frac{D_{cp}^2g}{18 v_c \nu} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^\frac{2}{\Pi_{fractal}-1}
+
+Equation :eq:`G_of_vc_and_fractal` can be simplified by making the assumption that the floc fractal dimension exiting the flocculator is approximately 2.
+
+.. math::
+  :label: G_of_vc_and_fractal_of_2
+
+   G_{max} \approx  \frac{4F_{bond}}{3 \pi \nu^3 \rho_{H_2O}}\left(  \frac{g D_{cp}}{18 v_c} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2
+
+Equation :eq:`G_of_vc_and_fractal_of_2` reveals the key relationships between flocculator and sedimentation tank design. The flocculator velocity gradient must decrease in proportion to the square of the sedimentation tank capture velocity. If AguaClara were to increase the sedimentation tank capture velocity from 0.12 to 0.3 mm/s the flocculator velocity gradient would need to decrease by a factor of 6.25. The dramatic effect of temperature is revealed as well. It is well known that flocculation/sedimentation processes perform poorly at low temperatures. The kinematic viscosity of water approximately doubles as the temperature drops from 20°C to 0°C. That results in a need to decrease the velocity gradient by a factor of 8! Finally, the dissolved organic matter and inorganic particles together determine the density and diameter of the core particles that make up the flocs. Organic matter reduces the density of the core particles and that requires a lower velocity gradient. The worst combination of parameters is a cold water with a high dissolved organic concentration and a low concentration of inorganic particles.
+
+The effect of water temperature can sedimentation tank capture velocity on the maximum flocculator velocity gradient are shown in :numref:`figure_Gmax_of_T_and_vc`. The model assumptions were:
+
+  * :math:`F_{bond} = 0.57 nN`
+  * :math:`D_{cp} = 5 \mu m`
+  * :math:`\rho_{cp} = 2650 \frac{kg}{m^3}`
+
+The value of :math:`F_{bond}` was selected to match the results of `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_.
+
+
+.. _figure_Gmax_of_T_and_vc:
+
+.. figure:: ../Images/Gmax_of_T_and_vc.png
+    :width: 400px
+    :align: center
+    :alt: internal figure
+
+    The maximum average velocity gradient :math:`G_{CS}`, that can be used in the flocculator decreases rapidly as the water temperature decreases because the higher viscosity prevents flocs from growing as large in the flocculator and reducers their terminal velocity in the plate settlers.
+
+Cold temperatures are known to be particularly challenging for flocculation and the model results (equation :eq:`G_of_vc_and_fractal_of_2`) shown in :numref:`_figure_Gmax_of_T_and_vc` provides insight into the dramatic reduction in velocity gradient required for effectively cold weather operation.
+
+The effects of the core particle density on the velocity gradient may also be dramatic especially as the particle density approaches water. Water sources that have high concentrations of dissolved organics require pilot testing to ensure that flocs with a reasonable terminal velocity can be produced.
+
+:numref:`figure_Gmax_of_T_and_vc` suggests that AguaClara should limit the flocculation velocity gradient to 100 Hz for raw waters with a minimum temperature of 5°C. The velocity gradient may need to be lowered or the capture velocity may need to be reduced for raw water with high concentrations of dissolved organic matter. More research is required to characterize the effect of dissolved organic matter on the core particles that make up the flocs.
 
 Drag Force on a Floc in a Filter Constriction
 =============================================
