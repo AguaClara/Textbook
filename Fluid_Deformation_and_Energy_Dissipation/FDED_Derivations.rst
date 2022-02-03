@@ -58,7 +58,10 @@ This equation has no approximations, but has one very important assumption. We d
 We’d like to know if we can apply the previous equation
 
 
-.. math:: \varepsilon = \nu G^2
+.. math::
+  :label: EDRofG_nu
+
+   \varepsilon = \nu G^2
 
 to the case where the energy dissipation rate and velocity gradients are nonuniform by simply introducing average values of both quantities.
 
@@ -105,7 +108,10 @@ The conventional approach to design of flocculators uses the Camp Stein definiti
 
 where :math:`G_{CS}` is **not** the average velocity gradient, but is larger than the average velocity gradient by a factor of :math:`\Pi_{CS}`. Thus we have
 
-.. math:: G_{CS} = \Pi_{CS}\bar G
+.. math::
+  :label: Pi_Gcs
+
+  G_{CS} = \Pi_{CS}\bar G
 
 Use of the Camp Stein velocity gradient in design of mixing units and flocculators results in an error when applying results from one reactor to another. If the energy dissipation rate distribution within the reactors is different, then :math:`\Pi_{CS}` will be different for the two reactors and the actual average velocity gradient, :math:`\bar G` will be different for the two reactors.
 
