@@ -388,7 +388,7 @@ When flocs are broken by the shearing action of the fluid it is possible that a 
    System suspended solids concentrations during steady state as a function of jet energy dissipation rate given an upflow velocity of 1.2 mm/s.  Results shown are averaged over 2 residence times (1200 seconds) of the sedimentation tank.
 
 
-The maximum energy dissipation rate below the performance deterioration obtained by Garland (300 mW/kg) can be converted into the corresponding *average* velocity gradient using :eq:`G_Camp_Stein` and :eq:`Pi_Gcs` with an assumed :math:`\Pi_{CS} = \sqrt{2}` to obtain 400 Hz (assuming a water temperature of 22°C). Similarly, the energy dissipation rate can be converted to a shear stress using Equation :eq:`fluid_shear_stress` to obtain 0.55 Pa. The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using Equation :eq:`fluid_shear_stress_on_doublet`.
+The maximum energy dissipation rate below the performance deterioration obtained by Garland (300 mW/kg) can be converted into the corresponding *average* velocity gradient using :eq:`G_Camp_Stein` to obtain 560 Hz (assuming a water temperature of 22°C). Similarly, the energy dissipation rate can be converted to a shear stress using Equation :eq:`fluid_shear_stress` to obtain 0.55 Pa. The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using Equation :eq:`fluid_shear_stress_on_doublet`.
 
 .. math::
   :label: d_floc_shear_stress
