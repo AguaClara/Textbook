@@ -456,13 +456,6 @@ We can substitute equation :eq:`d_floc_G` into equation :eq:`vt_of_floc` and sol
 Solve equation :eq:`vc_of_G` for the maximum velocity gradient :math:`G_{max}`.
 
 .. math::
-  :label: G_of_vc_derivation_step
-
-  D_{cp}^2\left(v_c  \frac{18\nu}{D_{cp}^2g} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}}\right) ^\frac{2}{\Pi_{fractal}-1} =  \frac{4F_{bond}}{3 \pi \mu G_{max}}
-
-more
-
-.. math::
   :label: G_of_vc_and_fractal
 
    G_{max} = \frac{4F_{bond}}{3 \pi \nu \rho_{H_2O} D_{cp}^2}\left(  \frac{D_{cp}^2g}{18 v_c \nu} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^\frac{2}{\Pi_{fractal}-1}
@@ -476,7 +469,7 @@ Equation :eq:`G_of_vc_and_fractal` can be simplified by making the assumption th
 
 Equation :eq:`G_of_vc_and_fractal_of_2` reveals the key relationships between flocculator and sedimentation tank design. The flocculator velocity gradient must decrease in proportion to the square of the sedimentation tank capture velocity. If AguaClara were to increase the sedimentation tank capture velocity from 0.12 to 0.3 mm/s the flocculator velocity gradient would need to decrease by a factor of 6.25. The dramatic effect of temperature is revealed as well. It is well known that flocculation/sedimentation processes perform poorly at low temperatures. The kinematic viscosity of water approximately doubles as the temperature drops from 20°C to 0°C. That results in a need to decrease the velocity gradient by a factor of 8! Finally, the dissolved organic matter and inorganic particles together determine the density and diameter of the core particles that make up the flocs. Organic matter reduces the density of the core particles and that requires a lower velocity gradient. The worst combination of parameters is a cold water with a high dissolved organic concentration and a low concentration of inorganic particles.
 
-The effect of water temperature can sedimentation tank capture velocity on the maximum flocculator velocity gradient are shown in :numref:`figure_Gmax_of_T_and_vc`. The model assumptions were:
+The effect of water temperature and sedimentation tank capture velocity on the maximum flocculator velocity gradient are shown in :numref:`figure_Gmax_of_T_and_vc`. The model assumptions were:
 
   * :math:`F_{bond} = 0.57 nN`
   * :math:`D_{cp} = 5 \mu m`
