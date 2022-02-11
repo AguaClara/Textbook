@@ -493,8 +493,6 @@ The effects of the core particle density on the velocity gradient may also be dr
 
 :numref:`figure_Gmax_of_T_and_vc` suggests that AguaClara should limit the flocculation velocity gradient to 100 Hz for raw waters with a minimum temperature of 5°C. The velocity gradient may need to be lowered or the capture velocity may need to be reduced for raw water with high concentrations of dissolved organic matter. More research is required to characterize the effect of dissolved organic matter on the core particles that make up the flocs.
 
-For a given suspension and water temperature the factor  :math:`G_{max} v_c^2` is a constant. A range of designs can be compared that have the same value for :math:`G_{max} v_c^2`. A relatively small decrease in the capture velocity will allow a significant increase in the velocity gradient. Thus it is possible that the velocity gradient could be increased to allow use of a smaller inlet manifold and the savings from the smaller pipe could be applied to decrease the capture velocity of the plate settlers. 
-
 Drag Force on a Floc in a Filter Constriction
 =============================================
 
