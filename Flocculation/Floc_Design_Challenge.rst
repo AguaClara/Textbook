@@ -78,3 +78,4 @@ Make a copy of the `HH Flocculator Template <https://cad.onshape.com/documents/4
     #. Decrease the temperature to 0 Celsius. What happens to the design? Can you explain why? This is a key insight about flocculation!
     #. Change Q_pi to 0.5. What happens to the water level in the plant? Was the change more dramatic than you expected? Explain why the water level drops so much when the flow rate is 50% of the design flow.
     #. Reduce the basis of design velocity gradient to 50 Hz. What happens to the cost of the flocculator? Explain why this happens.
+
