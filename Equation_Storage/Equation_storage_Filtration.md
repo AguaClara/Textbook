@@ -228,7 +228,7 @@ $$D_{Molecular} = \frac{k_B T}{3 \pi \mu d_p} \left[ \frac{L^2}{T} \right]$$
 
 $${\rm f}_u = \mu \frac{V}{l^2}$$
 
-$$\Pi_{\rm Br} = \frac{k_B T}{3 \pi \mu d_P V_{Fi} d_c}$$
+$$\Pi_{\rm Br} = \frac{k_B T}{3 \pi \mu D_P V_{Fi} d_c}$$
 
 
 ### Geometric Parameters

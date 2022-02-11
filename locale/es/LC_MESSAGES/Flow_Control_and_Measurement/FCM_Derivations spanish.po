@@ -89,7 +89,7 @@ msgid ""
 ":math:`\\frac{d\\rlap{-}V}{dt}` = rate of change in volume of solution in the "
 "tank"
 msgstr ""
-":matemáticas:`\\frac{d}V}{dt}= tasa de cambio en el volumen de la solución en "
+":matemáticas:`\\frac{D}V}{dt}= tasa de cambio en el volumen de la solución en "
 "el tanque"
 
 #: ../../Flow_Control_and_Measurement/FCM_Derivations.rst:32
