@@ -255,11 +255,11 @@ msgstr ""
 #: ../../Hydraulics/Hydraulics_Intro.rst:97
 #, fuzzy
 msgid ""
-"For short :math:`f\\frac{L}{d}<<1`, straight (minor loss coefficient = 0), "
+"For short :math:`f\\frac{L}{D}<<1`, straight (minor loss coefficient = 0), "
 "inlet manifolds the change in piezometric head, :math:`\\Delta\\Psi_M` is "
 "equal the initial velocity head."
 msgstr ""
-"Para abreviar :math:`f\\frac{L}{d}<<1`, recta (coeficiente de pérdida menor = "
+"Para abreviar :math:`f\\frac{L}{D}<<1`, recta (coeficiente de pérdida menor = "
 "0), los colectores de entrada el cambio en la cabeza piezométrica, :math:"
 "``Delta\\Psi_M` es igual a la cabeza de velocidad inicial."
 
