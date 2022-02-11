@@ -96,7 +96,7 @@ The change in piezometric head is the important parameter and is given by
 
     The piezometric head can either increase due to conversion of kinetic energy to pressure or the piezometric head can decrease due to major losses.
 
-For short :math:`f\frac{L}{D}<<1`, straight (minor loss coefficient = 0), inlet manifolds the change in piezometric head, :math:`\Delta\Psi_M` is equal the initial velocity head.
+For short :math:`f\frac{L}{d}<<1`, straight (minor loss coefficient = 0), inlet manifolds the change in piezometric head, :math:`\Delta\Psi_M` is equal the initial velocity head.
 
 .. math::
   :label: delta_piezometric_is_velocity_head

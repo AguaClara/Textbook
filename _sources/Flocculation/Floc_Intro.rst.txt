@@ -140,20 +140,20 @@ The number concentration of particles is given by
 .. math::
   :label: eq_number_concentration_of_diameter
 
-   n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi \bar{D_P}^3} \frac{C_P}{\rho_P}
+   n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi \bar{d_P}^3} \frac{C_P}{\rho_P}
 
 | Where:
 | :math:`C_P` is the particle concentration
 | :math:`\rlap{-} V_P` is the volume of a single particle
 | :math:`\rho_P` is the particle density
-| :math:`\bar{D_P}` is the average particle diameter
+| :math:`\bar{d_P}` is the average particle diameter
 
 Equations :eq:`eq_spacing_of_number_concentration` and :eq:`eq_number_concentration_of_diameter` can be combined to obtain the relationship between separation distance and particle diameter.
 
 .. math::
   :label: eq_spacing_of_diameter
 
-   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} =  \bar{D_P} \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{\frac{1}{3}}
+   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} =  \bar{d_P} \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{\frac{1}{3}}
 
 
 .. _figure_Particle_separation:
