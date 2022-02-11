@@ -133,9 +133,9 @@ $$t_{Diffusion} \propto \frac{L_{Diffusion}^2}{D_{Diffusion}}$$
 
 
 ### Molecular diffusion quantified
-$$D_{Diffusion} = \frac{k_B T}{3 \pi \mu  d_P}$$
+$$D_{Diffusion} = \frac{k_B T}{3 \pi \mu  D_P}$$
 
-$$M W = \rho_P N_A \frac{\pi d_P^3}{6}$$
+$$M W = \rho_P N_A \frac{\pi D_P^3}{6}$$
 
 $$d_P = \left( \frac{6MW}{\pi \rho_P N_A} \right)^{\frac{1}{3}}$$
 
@@ -183,18 +183,18 @@ k_v \eta_K = 0.125
 
 
 ### Average distance between particles is the cube root of the volume occupied (L)
-$$\rlap{-} V_P = \frac{\pi}{6} d_P^3$$
+$$\rlap{-} V_P = \frac{\pi}{6} D_P^3$$
 
-$$n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
+$$n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi D_P^3} \frac{C_P}{\rho_P}$$
 
 $$\Lambda  = \frac{1}{n_P^{\frac{1}{3}}}$$
 
-$$\Lambda  = d_P \left( \frac{\pi }{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}}$$
+$$\Lambda  = D_P \left( \frac{\pi }{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}}$$
 
-$$n_P = n_{P_0} \left( \frac{D_{cp}}{d_P} \right)^{\Pi_{fractal}}$$
+$$n_P = n_{P_0} \left( \frac{D_{cp}}{D_P} \right)^{\Pi_{fractal}}$$
 
 **Off-slide**
-$$\phi_{Floc} = \phi_{Floc_0} \left( \frac{d}{D_{cp}} \right)^{3 - \Pi_{fractal}}$$
+$$\phi_{Floc} = \phi_{Floc_0} \left( \frac{D}{D_{cp}} \right)^{3 - \Pi_{fractal}}$$
 
 $$\begin{array}{l}
 n_{Floc} = \frac{C_{Floc}}{\rlap{-} V_{Floc} \rho_{Floc}} = \frac{\phi_{Floc}}{\rlap{-} V_{Floc}}
@@ -251,7 +251,7 @@ $$\Lambda_{Clay} = \left[ {\rm{L}} \right]
 
 
 ### Diffusion band thickness
-$$D_{Diffusion} = \frac{k_B T}{3 \pi \, \nu \rho \, d_P}$$
+$$D_{Diffusion} = \frac{k_B T}{3 \pi \, \nu \rho \, D_P}$$
 
 $$L_D \approx \sqrt{D_{Diffusion} t_{Diffusion}} $$
 

@@ -71,7 +71,7 @@ The next step is to determine the Gt for the flocculator given this effluent flo
 .. math::
   :label:
 
-   G_{CS}\theta \approx \frac{3}{2} \frac{\Lambda^2}{k \pi d_P^2 \alpha}
+   G_{CS}\theta \approx \frac{3}{2} \frac{\Lambda^2}{k \pi D_P^2 \alpha}
 
 
 where the particle separation distance is given by
@@ -79,14 +79,14 @@ where the particle separation distance is given by
 .. math::
   :label:
 
-  \Lambda = \left( \frac{\pi d_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{1}{3}
+  \Lambda = \left( \frac{\pi D_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{1}{3}
 
 Putting the previous two equations together we have:
 
 .. math::
   :label:
 
-   G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi d_P^2 \alpha} \left( \frac{\pi d_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}
+   G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi D_P^2 \alpha} \left( \frac{\pi D_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}
 
 We can simplify this equation because the particle size cancels out.
 

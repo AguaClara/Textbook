@@ -162,7 +162,7 @@ msgstr ""
 
 #: ../../Hydraulics/Hydraulics_Intro.rst:97
 msgid ""
-"For short :math:`f\\frac{L}{d}<<1`, straight (minor loss coefficient = "
+"For short :math:`f\\frac{L}{D}<<1`, straight (minor loss coefficient = "
 "0), inlet manifolds the change in piezometric head, "
 ":math:`\\Delta\\Psi_M` is equal the initial velocity head."
 msgstr ""

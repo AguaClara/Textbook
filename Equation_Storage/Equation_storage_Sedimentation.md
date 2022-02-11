@@ -52,7 +52,7 @@ $${\rm Re} = \frac{V_t d}{\nu}$$
 
 
 ### Floc Terminal Velocity
-$$V_t = \frac{g D_{cp}^2}{18 \Phi \nu_{H_2O}} \frac{\rho_{Floc_0} - \rho_{H_2O}} {\rho_{H_2O}} \left( \frac{d}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
+$$V_t = \frac{g D_{cp}^2}{18 \Phi \nu_{H_2O}} \frac{\rho_{Floc_0} - \rho_{H_2O}} {\rho_{H_2O}} \left( \frac{D}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
 
 
 ### Horizontal Flow Sedimentation Tank
@@ -255,7 +255,7 @@ $$\frac{d v_\alpha}{dy}_{y = 0} = \frac{6 V_\alpha}{S}$$
 
 
 ### Floc Rollup Constraint
-$$v_\alpha \approx \left( \frac{6 V_\alpha}{S} \right) \frac{d}{2}$$
+$$v_\alpha \approx \left( \frac{6 V_\alpha}{S} \right) \frac{D}{2}$$
 
 $$v_\alpha \approx \frac{3 V_{Plate \uparrow} d}{S \sin \alpha}$$
 
@@ -292,7 +292,7 @@ u = \frac{3}{2 h^2} V_\alpha \left( y^2 - h^2 \right)
 u ( d_{Floc} ) \approx \frac{6 d_{Floc}}{S} V_\alpha
 \end{array}$$
 
-$$\frac{3 d_{Floc}}{S} \frac{V_{Plate \uparrow}}{\sin \alpha} = \frac{g \sin (\alpha ) D_{cp}^2}{18 \Phi \nu_{H_2O}} \frac{\rho_{Floc_0} - \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{d}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
+$$\frac{3 d_{Floc}}{S} \frac{V_{Plate \uparrow}}{\sin \alpha} = \frac{g \sin (\alpha ) D_{cp}^2}{18 \Phi \nu_{H_2O}} \frac{\rho_{Floc_0} - \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
 
 $$V_{Plate \uparrow} = \frac{S g \sin^2(\alpha) D_{cp}^{3 - \Pi_{fractal}} d^{\Pi_{fractal} - 2}}{54 \Phi \nu_{H_2O}}
 \frac{\rho_{Floc_0} - \rho_{H_2O}} {\rho_{H_2O}}$$
