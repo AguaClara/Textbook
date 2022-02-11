@@ -32,7 +32,7 @@ $$\Pi_{\bar{\epsilon}}^{\epsilon_{Max}}$$
 
 
 ### Collision Potential
-$$\bar G\theta  = \frac{3}{2} \frac{\left( \Lambda^2 - \Lambda_0^2 \right)}{k \pi d_P^2 \alpha}$$
+$$\bar G\theta  = \frac{3}{2} \frac{\left( \Lambda^2 - \Lambda_0^2 \right)}{k \pi D_P^2 \alpha}$$
 
 
 ### Energy use (head loss) in flocculation controls velocity gradient
@@ -50,7 +50,7 @@ $$h_{Floc} = \bar G \theta \frac{\nu \bar G}{g}$$
 
 
 ### The design inputs for Flocculation
-$$\bar G \theta  = \frac{3}{2} \frac{\left( \Lambda^2 - \Lambda_0^2 \right)}{k \pi d_P^2 \alpha}$$
+$$\bar G \theta  = \frac{3}{2} \frac{\left( \Lambda^2 - \Lambda_0^2 \right)}{k \pi D_P^2 \alpha}$$
 
 
 ### Key equations that we can use to design flocculators
