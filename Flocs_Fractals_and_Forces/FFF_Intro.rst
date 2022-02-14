@@ -467,16 +467,18 @@ Equation :eq:`G_of_vc_and_fractal` can be simplified by making the assumption th
 
    G_{max} \approx  \frac{4F_{bond}}{3 \pi \nu^3 \rho_{H_2O}}\left(  \frac{g D_{cp}}{18 v_c} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2
 
-Equation :eq:`G_of_vc_and_fractal_of_2` reveals the key relationships between flocculator and sedimentation tank design. The flocculator velocity gradient must decrease in proportion to the square of the sedimentation tank capture velocity. If AguaClara were to increase the sedimentation tank capture velocity from 0.12 to 0.3 mm/s the flocculator velocity gradient would need to decrease by a factor of 6.25. The dramatic effect of temperature is revealed as well. It is well known that flocculation/sedimentation processes perform poorly at low temperatures. The kinematic viscosity of water approximately doubles as the temperature drops from 20°C to 0°C. That results in a need to decrease the velocity gradient by a factor of 8! Finally, the dissolved organic matter and inorganic particles together determine the density and diameter of the core particles that make up the flocs. Organic matter reduces the density of the core particles and that requires a lower velocity gradient. The worst combination of parameters is a cold water with a high dissolved organic concentration and a low concentration of inorganic particles.
+It would be helpful to develop a design guideline based on equation :eq:`G_of_vc_and_fractal_of_2`. We place the parameters that represent properties of the core particle on the right hand side. The left hand side of the equation is a combination of design parameters, :math:`G_{max}` and :math:`v_c`, as well as the water viscosity that is a function of temperature.  The right hand side of the equation represents a combination of the bond strength, the density of the core particle, and the diameter of the core particle.
 
-The effect of water temperature and sedimentation tank capture velocity on the maximum flocculator velocity gradient are shown in :numref:`figure_Gmax_of_T_and_vc`. The model assumptions were:
+.. math::
+  :label: G_of_vc_and_floc_props
 
-  * :math:`F_{bond} = 0.57 nN`
-  * :math:`D_{cp} = 5 \mu m`
-  * :math:`\rho_{cp} = 2650 \frac{kg}{m^3}`
+  \zeta = G_{max} \nu^3 v_c^2 \approx   \frac{4F_{bond}}{3 \pi  \rho_{H_2O}}\left(  \frac{ D_{cp} g}{18} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2
 
-The value of :math:`F_{bond}` was selected to match the results of `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_.
+Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of equation :eq:`G_of_vc_and_floc_props`, :math:`\zeta`, is  :math:`4.9 \cdot \frac{mm^8}{s^6}`, :math:`\left(4.9 \cdot  10^{-24}\frac{m^8}{s^6}\right)`, for a kaolin suspension. :math:`\zeta` represent an upper limit on the flocculation and sedimentation design parameters and is a combination of properties of the core particles. The expectation is that :math:`\zeta` will be less than 4.9 :math:`\frac{mm^8}{s^6}` for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see :numref:`figure_PennockFig3`).
 
+Equation :eq:`G_of_vc_and_floc_props` reveals the key relationships between flocculator and sedimentation tank design. The flocculator velocity gradient must decrease in proportion to the square of the sedimentation tank capture velocity. If AguaClara were to increase the sedimentation tank capture velocity from 0.12 to 0.3 mm/s the flocculator velocity gradient would need to decrease by a factor of 6.25. The dramatic effect of temperature is revealed as well. It is well known that flocculation/sedimentation processes perform poorly at low temperatures. The kinematic viscosity of water approximately doubles as the temperature drops from 20°C to 0°C. That results in a need to decrease the velocity gradient by a factor of 8! Finally, the dissolved organic matter and inorganic particles together determine the density and diameter of the core particles that make up the flocs. Organic matter reduces the density of the core particles and that requires a lower velocity gradient. The worst combination of parameters is a cold water with a high dissolved organic concentration and a low concentration of inorganic particles.
+
+The effect of water temperature and sedimentation tank capture velocity on the maximum flocculator velocity gradient for kaolin suspensions are shown in :numref:`figure_Gmax_of_T_and_vc`.
 
 .. _figure_Gmax_of_T_and_vc:
 
@@ -485,15 +487,32 @@ The value of :math:`F_{bond}` was selected to match the results of `Garland, 201
     :align: center
     :alt: internal figure
 
-    The maximum average velocity gradient :math:`G_{CS}`, that can be used in the flocculator decreases rapidly as the water temperature decreases because the higher viscosity prevents flocs from growing as large in the flocculator and reducers their terminal velocity in the plate settlers.
+    The maximum average velocity gradient, :math:`G_{CS}`, that can be used in the flocculator or in the inlet to the sedimentation tank for treating kaolin suspensions. The velocity gradient  decreases rapidly as the water temperature decreases because the higher viscosity prevents flocs from growing as large in the flocculator and reducers their terminal velocity in the plate settlers. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=r_wm34KQ8jm4&line=3&uniqifier=1>`_)
 
-Cold temperatures are known to be particularly challenging for flocculation and the model results (equation :eq:`G_of_vc_and_fractal_of_2`) shown in :numref:`_figure_Gmax_of_T_and_vc` provides insight into the dramatic reduction in velocity gradient required for effectively cold weather operation.
+Cold temperatures are known to be particularly challenging for flocculation and the model results (equation :eq:`G_of_vc_and_fractal_of_2`) shown in :numref:`figure_Gmax_of_T_and_vc` provides insight into the dramatic reduction in velocity gradient required for effectively cold weather operation.
 
 The effects of the core particle density on the velocity gradient may also be dramatic especially as the particle density approaches water. Water sources that have high concentrations of dissolved organics require pilot testing to ensure that flocs with a reasonable terminal velocity can be produced.
 
 :numref:`figure_Gmax_of_T_and_vc` suggests that AguaClara should limit the flocculation velocity gradient to 100 Hz for raw waters with a minimum temperature of 5°C. The velocity gradient may need to be lowered or the capture velocity may need to be reduced for raw water with high concentrations of dissolved organic matter. More research is required to characterize the effect of dissolved organic matter on the core particles that make up the flocs.
 
-For a given suspension and water temperature the factor  :math:`G_{max} v_c^2` is a constant. A range of designs can be compared that have the same value for :math:`G_{max} v_c^2`. A relatively small decrease in the capture velocity will allow a significant increase in the velocity gradient. Thus it is possible that the velocity gradient could be increased to allow use of a smaller inlet manifold and the savings from the smaller pipe could be applied to decrease the capture velocity of the plate settlers. 
+:eq:`G_of_vc_and_floc_props` also provides a window into the coagulant bond strength.
+
+.. math::
+  :label: coag_bond_of_zeta
+
+  F_{bond} \approx \frac{3}{4} \pi  \rho_{H_2O} \zeta \left(  \frac{18}{ D_{cp} g} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}}\right) ^2
+
+Given
+
+  * :math:`D_{cp} = 5 \mu m`
+  * :math:`\rho_{cp} = 2650 \frac{kg}{m^3}`
+  * :math:`\zeta = 4.9 \cdot \frac{mm^8}{s^6}`
+
+The value of :math:`F_{bond}` was calculated to be :math:`F_{bond} = 0.57 nN` (see `Colab worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=nEZGIfnHFRKo&line=3&uniqifier=1>`_) based on the measurements of `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_.
+
+Note that further work is required to better estimate the density of a clay particle with coagulant nanoparticles attached. The coagulant nanoparticles effectively increase the clay plate thickness by two times the diameter of the coagulant nanoparticles. That extra thickness is composed of water and the coagulant nanoparticles and thus has a much lower density than the clay particle.
+
+For a given flocculator and sedimentation tank the value of :math:`\zeta` increases rapidly as a function of the flow rate through the plant. Thus if a plant is designed with a value of :math:`\zeta` that is too high for the core particles that are being treated, the plant performance will deteriorate rapidly as the flow rate is increased. From :eq:`flocGeoG` the velocity gradient increases with flow rate to the :math:`\frac{3}{2}` power. The capture velocity is proportional to the flow rate and thus from :eq:`G_of_vc_and_floc_props` we have :math:`\zeta \propto Q^{\frac{7}{2}}`. If sedimentation tank performance decreases rapidly as the plant flow rate is increased it is possible that the velocity gradient needs to be reduced in the flocculator or in the sedimentation tank inlet. Of course, decreasing the plate settler capture velocity may also be needed, but making that change in an existing plant is a more substantial upgrade.
 
 Drag Force on a Floc in a Filter Constriction
 =============================================
