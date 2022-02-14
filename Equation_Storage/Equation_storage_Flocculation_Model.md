@@ -11,7 +11,7 @@ This file is a temporary storage place for the LaTeX equations used in 4540 slid
 
 # **Flocculation Model**
 ### Overview
-$$pC^\ast = \frac{3}{2} \log \left( \frac{2}{3} \pi k \frac{d_P^2}{\Lambda_0^2} Gt \alpha + 1 \right)$$
+$$pC^\ast = \frac{3}{2} \log \left( \frac{2}{3} \pi k \frac{D_P^2}{\Lambda_0^2} Gt \alpha + 1 \right)$$
 
 
 ### Recommended G and Gq values: Turbidity or Color Removal (Mechanical flocculators)
@@ -54,7 +54,7 @@ $$\rlap{-} V = \rlap{-} V_0 i^\frac{3}{\Pi_{fractal}}$$
 
 
 ### Buoyant Density of Flocs
-$$\rho_{Floc} - \rho_{H_2O} = \left( \rho_{Floc_0} - \rho_{H_2O} \right) \left( \frac{D_{cp}}{d} \right)^{3 - \Pi_{fractal}}$$
+$$\rho_{Floc} - \rho_{H_2O} = \left( \rho_{Floc_0} - \rho_{H_2O} \right) \left( \frac{D_{cp}}{D} \right)^{3 - \Pi_{fractal}}$$
 
 
 ### Fractal Terminal Velocity Equations
@@ -63,39 +63,39 @@ $$V_t = \frac{g d^2}{18 \nu_{H_2O}}
 
 $$V_t = \frac{g d^2}{18 \nu_{H_2O}}
 \frac{ \left( \rho_{Floc_0} - \rho_{H_2O} \right) }{\rho_{H_2O}}
-\left( \frac{D_{cp}}{d} \right)^{3 - \Pi_{fractal}}$$
+\left( \frac{D_{cp}}{D} \right)^{3 - \Pi_{fractal}}$$
 
 $$V_t = \frac{g d^2}{18 \nu_{H_2O}}
-\left( \frac{D_{cp}}{d} \right)^2
+\left( \frac{D_{cp}}{D} \right)^2
 \frac{ \left( \rho_{Floc} - \rho_{H_2O} \right) }{\rho_{H_2O}}
-\left( \frac{d}{D_{cp}} \right)^2
-\left( \frac{d}{D_{cp}} \right)^{\Pi_{fractal} -3 }$$
+\left( \frac{D}{D_{cp}} \right)^2
+\left( \frac{D}{D_{cp}} \right)^{\Pi_{fractal} -3 }$$
 
 
 $$V_t = \frac{g D_{cp}}{18 \nu_{H_2O}}
 \frac{ \left( \rho_{Floc_0} - \rho_{H_2O} \right)}{\rho_{H_2O}}
-\left( \frac{d}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
+\left( \frac{D}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
 
 
 ### Floc Terminal Velocity
 $$V_t = \frac{g D_{cp}}{18 \Phi \nu_{H_2O}}
 \frac{ \rho_{Floc_0} - \rho_{H_2O}}{\rho_{H_2O}}
-\left( \frac{d}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
+\left( \frac{D}{D_{cp}} \right)^{\Pi_{fractal} - 1}$$
 
 
 ### Average distance between particles is the cube root of the volume occupied ($\Lambda$)
-$$\rlap{-} V_P = \frac{\pi}{6} d_P^3$$
+$$\rlap{-} V_P = \frac{\pi}{6} D_P^3$$
 
-$$n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
+$$n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi D_P^3} \frac{C_P}{\rho_P}$$
 
 $$\Lambda  = \frac{1}{n_P^{\frac{1}{3}}}$$
 
-$$\Lambda  = d_P \left( \frac{\pi }{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}}$$
+$$\Lambda  = D_P \left( \frac{\pi }{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}}$$
 
-$$n_P = n_{P_0} \left( \frac{D_{cp}}{d_P} \right)^{\Pi_{fractal}}$$
+$$n_P = n_{P_0} \left( \frac{D_{cp}}{D_P} \right)^{\Pi_{fractal}}$$
 
 **Off-slide**
-$$\phi_{Floc} = \phi_{Floc_0} \left( \frac{d}{D_{cp}} \right)^{3 - \Pi_{fractal}}$$
+$$\phi_{Floc} = \phi_{Floc_0} \left( \frac{D}{D_{cp}} \right)^{3 - \Pi_{fractal}}$$
 
 $$\begin{array}{l}
 n_{Floc} = \frac{C_{Floc}}{\rlap{-} V_{Floc} \rho_{Floc}} = \frac{\phi_{Floc}}{\rlap{-} V_{Floc}}
@@ -113,7 +113,7 @@ n_{Floc} = n_{Floc_0} \left( \frac{D_{cp}}{d_{Floc}} \right)^{\Pi_{fractal}}
 
 
 ### Comparison of classic and hypothesized collision models
-$$v_r \approx d_P \bar G$$
+$$v_r \approx D_P \bar G$$
 
 $$v_r \approx \Lambda \bar G$$
 
@@ -127,7 +127,7 @@ $$\frac{\Lambda}{d_{Floc} G}$$
 
 
 ### How much water is cleared (filtered) from a floc’s perspective?
-$$ \propto \pi d_P^2$$
+$$ \propto \pi D_P^2$$
 
 $$ \propto t$$
 
@@ -135,9 +135,9 @@ $$ \propto v_r$$
 
 $$v_r t$$
 
-$$\pi d_P^2$$
+$$\pi D_P^2$$
 
-$$\rlap{-} V_{\rm{Cleared}} \propto \pi d_P^2 v_r t$$
+$$\rlap{-} V_{\rm{Cleared}} \propto \pi D_P^2 v_r t$$
 
 
 ### Use dimensional analysis to get a relative velocity
@@ -174,15 +174,15 @@ $$\Pi_{kv} = 50$$
 ### Collision rates for the two assumptions
 $$\rlap{-} V_{Occupied} = \Lambda^3$$
 
-$$t_c = \frac{\Lambda^2}{{\pi d_P^2G}}$$
+$$t_c = \frac{\Lambda^2}{{\pi D_P^2G}}$$
 
-$$t_c = \frac{\Lambda^3}{\pi d_P^3 G}$$
+$$t_c = \frac{\Lambda^3}{\pi D_P^3 G}$$
 
 $$dN_c = \frac{\alpha}{t_c} dt$$
 
-$$dN_c = \pi \frac{d_P^2}{\Lambda^2} G \alpha dt$$
+$$dN_c = \pi \frac{D_P^2}{\Lambda^2} G \alpha dt$$
 
-$$dN_c = \pi \frac{d_P^3}{\Lambda^3} G \alpha dt$$
+$$dN_c = \pi \frac{D_P^3}{\Lambda^3} G \alpha dt$$
 
 
 ### Collision Rate and Particle Removal
@@ -190,15 +190,15 @@ $$v_r \approx \Lambda \bar G$$
 
 $$v_r \approx d_p \bar G$$
 
-$$dN_c = \pi d_P^2 n_P^\frac{2}{3} \bar G \alpha dt$$
+$$dN_c = \pi D_P^2 n_P^\frac{2}{3} \bar G \alpha dt$$
 
-$$dN_c = \pi d_P^3 n_P \bar G \alpha dt$$
+$$dN_c = \pi D_P^3 n_P \bar G \alpha dt$$
 
 $$\frac{dn_P}{dN_c} =  - k n_P$$
 
-$$\frac{dn_P}{- kn_P} = \pi d_P^2 n_P^\frac{2}{3} \bar G \alpha dt$$
+$$\frac{dn_P}{- kn_P} = \pi D_P^2 n_P^\frac{2}{3} \bar G \alpha dt$$
 
-$$\frac{dn_P}{- kn_P} = \pi d_P^3 n_P \bar G \alpha dt$$
+$$\frac{dn_P}{- kn_P} = \pi D_P^3 n_P \bar G \alpha dt$$
 
 **Off-slide**
 $$dN_c = \pi d_T^2n_T^\frac{1}{3} G \Gamma dt$$
@@ -209,26 +209,26 @@ $$dn_S =  - k n_T \pi d_T^2 n_T^\frac{2}{3} G \Gamma dt$$
 
 
 ### Integrate
-$$n_P = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
+$$n_P = \frac{6}{\pi D_P^3} \frac{C_P}{\rho_P}$$
 
 $$\int \limits_{n_{P_0}}^{n_P} n_P^{- \frac{5}{3}} dn_P  
-= - k \pi d_P^2 \bar G \alpha \int \limits_0^t dt $$
+= - k \pi D_P^2 \bar G \alpha \int \limits_0^t dt $$
 
 $$\int \limits_{n_{P_0}}^{n_P} n_P^{- 2} dn_P
-= - \pi k d_P^3 \bar G \alpha \int \limits_0^t dt $$
+= - \pi k D_P^3 \bar G \alpha \int \limits_0^t dt $$
 
-$$- \frac{3}{2} \left( n_P^{- \frac{2}{3}} - n_{P_0}^{ - \frac{2}{3}} \right) =  - k \pi d_P^2 \bar Gt \alpha$$
+$$- \frac{3}{2} \left( n_P^{- \frac{2}{3}} - n_{P_0}^{ - \frac{2}{3}} \right) =  - k \pi D_P^2 \bar Gt \alpha$$
 
-$$\frac{1}{n_P} - \frac{1}{n_{P_0}} = \pi k d_P^3 \bar Gt \alpha$$
+$$\frac{1}{n_P} - \frac{1}{n_{P_0}} = \pi k D_P^3 \bar Gt \alpha$$
 
-$$pC^\ast = p \left( \frac{n_P}{n_{P_0}} \right) = \frac{3}{2} \log \left( \frac{2}{3} \pi k d_P^2 n_{P_0}^\frac{2}{3} \bar Gt \alpha + 1 \right)$$
+$$pC^\ast = p \left( \frac{n_P}{n_{P_0}} \right) = \frac{3}{2} \log \left( \frac{2}{3} \pi k D_P^2 n_{P_0}^\frac{2}{3} \bar Gt \alpha + 1 \right)$$
 
-$$pC^\ast = p \left( \frac{n_P}{n_{P_0}} \right) = \log \left( \pi k d_P^3 n_{P_0} \bar Gt \alpha  + 1 \right)$$
+$$pC^\ast = p \left( \frac{n_P}{n_{P_0}} \right) = \log \left( \pi k D_P^3 n_{P_0} \bar Gt \alpha  + 1 \right)$$
 
-$$n_{P_0} = \frac{6}{\pi d_P^3} \phi_0$$
+$$n_{P_0} = \frac{6}{\pi D_P^3} \phi_0$$
 
 **Off-slide: left**
-$$\frac{3}{2} \left( \Lambda^2 - \Lambda_0^2 \right) = k \pi d_P^2 Gt \Gamma$$
+$$\frac{3}{2} \left( \Lambda^2 - \Lambda_0^2 \right) = k \pi D_P^2 Gt \Gamma$$
 
 $$1 = k \frac{2\pi}{3} \left( \frac{6}{\pi} \right)^\frac{2}{3} Gt \Gamma \left( \frac{C_P}{\rho_P} \right)^\frac{2}{3}$$
 
@@ -257,29 +257,29 @@ $$\begin{array}{l}
 \end{array}$$
 
 **Off-slide: bottom**
-$$\frac{n_{P_0}}{n_P} = \pi k d_P^3 n_{P_0} G \Gamma t + 1$$
+$$\frac{n_{P_0}}{n_P} = \pi k D_P^3 n_{P_0} G \Gamma t + 1$$
 
 $$\frac{G_{Max}}{\rm{\bar G}}$$
 
 
 ### We can test the collision models with laboratory data
-$$pC^\ast = \frac{3}{2} \log \left( \frac{2}{3} \pi k \frac{d_P^2}{\Lambda_0^2} Gt \alpha + 1 \right)$$
+$$pC^\ast = \frac{3}{2} \log \left( \frac{2}{3} \pi k \frac{D_P^2}{\Lambda_0^2} Gt \alpha + 1 \right)$$
 
-$$pC^\ast = \frac{3}{2} \log \left( \frac{2}{3} \pi k \frac{d_P^3}{\Lambda_0^3} Gt \alpha + 1 \right)$$
+$$pC^\ast = \frac{3}{2} \log \left( \frac{2}{3} \pi k \frac{D_P^3}{\Lambda_0^3} Gt \alpha + 1 \right)$$
 
 $$\Lambda  = \frac{1}{n_P^\frac{1}{3}}$$
 
-$$pC^\ast = f \left( \frac{d_P^2}{\Lambda_0^2} \bar Gt \alpha \right)$$
+$$pC^\ast = f \left( \frac{D_P^2}{\Lambda_0^2} \bar Gt \alpha \right)$$
 
-$$pC^\ast = f \left( \frac{d_P^3}{\Lambda_0^3} \bar Gt \alpha \right)$$
+$$pC^\ast = f \left( \frac{D_P^3}{\Lambda_0^3} \bar Gt \alpha \right)$$
 
-$$\frac{d_P^2}{\Lambda_0^2} \bar Gt \alpha$$
+$$\frac{D_P^2}{\Lambda_0^2} \bar Gt \alpha$$
 
-$$\frac{d_P^3}{\Lambda_0^3} \bar Gt \alpha$$
+$$\frac{D_P^3}{\Lambda_0^3} \bar Gt \alpha$$
 
 
 ### Floc model for viscous dominated collisions
-$$pC^\ast = \frac{3}{2} \log \left( \frac{2}{3} \pi k \frac{d_P^2}{\Lambda_0^2} Gt \alpha + 1 \right)$$
+$$pC^\ast = \frac{3}{2} \log \left( \frac{2}{3} \pi k \frac{D_P^2}{\Lambda_0^2} Gt \alpha + 1 \right)$$
 
 $$\bar Gt = \frac{3}{2} \frac{\left( \Lambda^2 - \Lambda_0^2 \right)}{k \pi d_{Clay}^2 \alpha}$$
 
@@ -287,48 +287,48 @@ $$\left( \frac{\varepsilon}{\nu} \right)^\frac{1}{2}$$
 
 
 ### Model predictions?
-$$- \frac{3}{2} \left( \Lambda^2 - \Lambda_0^2 \right) = - k \pi d_P^2 \bar Gt \alpha$$
+$$- \frac{3}{2} \left( \Lambda^2 - \Lambda_0^2 \right) = - k \pi D_P^2 \bar Gt \alpha$$
 
-$$\Lambda^3 - \Lambda_0^3 = \pi k d_P^3 \bar Gt \alpha$$
+$$\Lambda^3 - \Lambda_0^3 = \pi k D_P^3 \bar Gt \alpha$$
 
-$$\bar Gt = \frac{3}{2} \frac{\left( \Lambda^2 - \Lambda_0^2 \right)}{k \pi d_P^2 \alpha}$$
+$$\bar Gt = \frac{3}{2} \frac{\left( \Lambda^2 - \Lambda_0^2 \right)}{k \pi D_P^2 \alpha}$$
 
-$$\bar Gt = \frac{\left( \Lambda^3 - \Lambda_0^3 \right)}{k \pi d_P^3 \alpha}$$
+$$\bar Gt = \frac{\left( \Lambda^3 - \Lambda_0^3 \right)}{k \pi D_P^3 \alpha}$$
 
 $$\Lambda  \gg \Lambda_0$$
 
-$$\bar Gt \approx \frac{3}{2} \frac{\Lambda^2}{k \pi d_P^2 \alpha}$$
+$$\bar Gt \approx \frac{3}{2} \frac{\Lambda^2}{k \pi D_P^2 \alpha}$$
 
-$$\bar Gt \approx \frac{\Lambda^3}{k \pi d_P^3 \alpha}$$
+$$\bar Gt \approx \frac{\Lambda^3}{k \pi D_P^3 \alpha}$$
 
 **Off-slide**
 $$\begin{array}{l}
-Gt_{v_r \approx d_P G}
-= \frac{\Lambda^3 - \Lambda_0^3}{k \pi d_P^3 \Gamma}
+Gt_{v_r \approx D_P G}
+= \frac{\Lambda^3 - \Lambda_0^3}{k \pi D_P^3 \Gamma}
 \\ \\
 Gt_{v_r \approx \Lambda G}
-= \frac{3}{2} \frac{\left( \Lambda^2 - \Lambda_0^2 \right)}{k \pi d_P^2 \Gamma}
+= \frac{3}{2} \frac{\left( \Lambda^2 - \Lambda_0^2 \right)}{k \pi D_P^2 \Gamma}
 \\ \\
-\frac{Gt_{v_r \approx d_P G}}{Gt_{v_r \approx \Lambda G}}
+\frac{Gt_{v_r \approx D_P G}}{Gt_{v_r \approx \Lambda G}}
 = \frac{2}{3d_P} \frac{\Lambda^3 - \Lambda_0^3}{\Lambda^2 - \Lambda_0^2}
 \\ \\
-\frac{Gt_{v_r \approx d_P G}}{Gt_{v_r \approx \Lambda G}}
+\frac{Gt_{v_r \approx D_P G}}{Gt_{v_r \approx \Lambda G}}
 = \frac{2}{3d_P} \frac{\Lambda^3 - \Lambda_0^3}{\Lambda ^2 - \Lambda_0^2}
 \end{array}$$
 
 
 ### The classic: "Click to add a title"
-$$\bar Gt \approx \frac{3}{2} \frac{\Lambda^2}{k \pi d_P^2 \alpha}$$
+$$\bar Gt \approx \frac{3}{2} \frac{\Lambda^2}{k \pi D_P^2 \alpha}$$
 
 $$\Lambda  = \frac{1}{n_P^\frac{1}{3}}$$
 
-$$\Lambda^2 = \frac{2}{3} \pi k \bar Gt d_P^2 \alpha$$
+$$\Lambda^2 = \frac{2}{3} \pi k \bar Gt D_P^2 \alpha$$
 
-$$n_P = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
+$$n_P = \frac{6}{\pi D_P^3} \frac{C_P}{\rho_P}$$
 
 $$C_P = \frac{ \left( {\frac{\pi}{6}{\rho_P}} \right)}{\left( \frac{2}{3} \pi k \bar Gt \alpha \right)^\frac{3}{2}}$$
 
-$$\Lambda = \left( \frac{\pi d_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{1}{3}$$
+$$\Lambda = \left( \frac{\pi D_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{1}{3}$$
 
 
 ### Track surface area to assign probabilities to collisions
@@ -389,43 +389,43 @@ $$\Gamma = \frac{n_{nc_0} \frac{\pi}{4} d_{nc}^2 }{n_{p_0}\pi d_p^2}$$
 
 $$\Gamma = \frac{n_{nc_0} d_{nc}^2}{4 n_{p_0} d_p^2}$$
 
-$$\Gamma = \frac{ \frac{6}{\pi d_{nc}^3} \frac{C_{nc_0}}{\rho_{nc}} \pi d_{nc}^2}{4 \frac{6}{\pi d_P^3} \frac{C_{P_0}}{\rho_P} \pi d_p^2}$$
+$$\Gamma = \frac{ \frac{6}{\pi d_{nc}^3} \frac{C_{nc_0}}{\rho_{nc}} \pi d_{nc}^2}{4 \frac{6}{\pi D_P^3} \frac{C_{P_0}}{\rho_P} \pi d_p^2}$$
 
 $$n_P = \frac{C_P}{\rlap{-} V_P} \rho_P
-= \frac{6}{\pi d_P^3}\frac{C_P}{\rho_P}$$
+= \frac{6}{\pi D_P^3}\frac{C_P}{\rho_P}$$
 
-$$\Gamma = \frac{C_{nc_0}}{4 d_{nc}\rho_{nc}} \frac{d_P \rho_P}{C_{P_0}}$$
+$$\Gamma = \frac{C_{nc_0}}{4 d_{nc}\rho_{nc}} \frac{D_P \rho_P}{C_{P_0}}$$
 
-$$\Gamma = \frac{1}{4} \frac{C_{nc_0}}{C_{P_0}} \frac{\rho_P}{\rho_{nc}} \frac{d_P}{d_{nc}}$$
+$$\Gamma = \frac{1}{4} \frac{C_{nc_0}}{C_{P_0}} \frac{\rho_P}{\rho_{nc}} \frac{D_P}{d_{nc}}$$
 
 $$\Gamma = \frac{\phi_{Coag}}{\phi_{Clay}} \frac{D_{Clay}}{D_{Coag}} \frac{\Pi_{A_{Clay}A_{Total}}}{\pi \Pi_{ClaySphere}}$$
 
-$$\frac{3}{2} \left( n_P^{- \frac{2}{3}} - n_{P_0}^{- \frac{2}{3}} \right) = k \pi d_P^2 Gt \Gamma$$
+$$\frac{3}{2} \left( n_P^{- \frac{2}{3}} - n_{P_0}^{- \frac{2}{3}} \right) = k \pi D_P^2 Gt \Gamma$$
 
 $$\frac{3}{2} \left( \frac{n_P^{- \frac{2}{3}}}{n_{P_0}^{- \frac{2}{3}}}
 - \frac{n_{P_0}^{- \frac{2}{3}}}{n_{P_0}^{- \frac{2}{3}}} \right)
-= k \pi d_P^2 Gt \frac{n_{nc_0} d_{nc}^2}{n_{P_0}^{- \frac{2}{3}} n_{p_0}d_p^2}$$
+= k \pi D_P^2 Gt \frac{n_{nc_0} d_{nc}^2}{n_{P_0}^{- \frac{2}{3}} n_{p_0}d_p^2}$$
 
-$$\bar Gt \approx \frac{3}{2} \frac{\Lambda^2}{k \pi d_P^2 \Gamma}$$
+$$\bar Gt \approx \frac{3}{2} \frac{\Lambda^2}{k \pi D_P^2 \Gamma}$$
 
-$$\Lambda^2 = \frac{2}{3} k \pi d_P^2 \Gamma \bar Gt$$
+$$\Lambda^2 = \frac{2}{3} k \pi D_P^2 \Gamma \bar Gt$$
 
-$$\Lambda^2 = \frac{2}{3} k \pi d_P^2 \bar Gt \frac{1}{4} \frac{C_{nc_0}}{C_{P_0}} \frac{\rho_P}{\rho_{nc}} \frac{d_P}{d_{nc}}$$
+$$\Lambda^2 = \frac{2}{3} k \pi D_P^2 \bar Gt \frac{1}{4} \frac{C_{nc_0}}{C_{P_0}} \frac{\rho_P}{\rho_{nc}} \frac{D_P}{d_{nc}}$$
 
-$$\Gamma = \frac{ \frac{6}{\pi d_{nc}^3} \frac{C_{nc_0}}{\rho_{nc}} \pi d_{nc}^2}{4\frac{6}{\pi d_P^3} \frac{C_{P_0}}{\rho_P}\pi d_p^2}$$
+$$\Gamma = \frac{ \frac{6}{\pi d_{nc}^3} \frac{C_{nc_0}}{\rho_{nc}} \pi d_{nc}^2}{4\frac{6}{\pi D_P^3} \frac{C_{P_0}}{\rho_P}\pi d_p^2}$$
 
 
 ### Even with simplified assumptions, including G complicates the analysis
 $$n_P = \frac{1}{\left( \frac{2}{3} k \pi Gt \frac{n_{nc_0} d_{nc}^2}{n_{p_0}} + \frac{1}{n_{P_0}^{\frac{2}{3}}} \right)^{\frac{3}{2}}}$$
 
-$$\frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}
+$$\frac{6}{\pi D_P^3} \frac{C_P}{\rho_P}
 = \frac{1}{
-  \left( \frac{2}{3} k \pi Gt \frac{\frac{6}{\pi d_{nc}^3} \frac{C_{nc_0}}{\rho_{nc}} d_{nc}^2}{\frac{6}{\pi d_P^3} \frac{C_{P_0}}{\rho_P}} + \frac{1}{\left( \frac{6}{\pi d_P^3} \frac{C_{P_0}}{\rho_P} \right)^{\frac{2}{3}}} \right)^{\frac{3}{2}}
+  \left( \frac{2}{3} k \pi Gt \frac{\frac{6}{\pi d_{nc}^3} \frac{C_{nc_0}}{\rho_{nc}} d_{nc}^2}{\frac{6}{\pi D_P^3} \frac{C_{P_0}}{\rho_P}} + \frac{1}{\left( \frac{6}{\pi D_P^3} \frac{C_{P_0}}{\rho_P} \right)^{\frac{2}{3}}} \right)^{\frac{3}{2}}
   }$$
 
 
 ### Solving for residual turbidity results in a complicated equation
-$$C_P = \frac{\pi d_P^3 \rho_P}{6} \frac{1}{\left[ \frac{2}{3} k \pi Gt \frac{d_P^3}{d_{nc}} \frac{\rho_P C_{nc_0}}{\rho _{nc}C_{P_0}} + \left( \frac{\pi d_P^3}{6} \frac{\rho_P}{C_{P_0}} \right)^{\frac{2}{3}} \right]^{\frac{3}{2}}}$$
+$$C_P = \frac{\pi D_P^3 \rho_P}{6} \frac{1}{\left[ \frac{2}{3} k \pi Gt \frac{D_P^3}{d_{nc}} \frac{\rho_P C_{nc_0}}{\rho _{nc}C_{P_0}} + \left( \frac{\pi D_P^3}{6} \frac{\rho_P}{C_{P_0}} \right)^{\frac{2}{3}} \right]^{\frac{3}{2}}}$$
 
 
 ### Floc Model Equations for G
@@ -536,9 +536,9 @@ $$C_{Coag} = - \rho_{Coag} \left[ \left( \frac{1}{2} + \Pi_{HD} \right)
 \left( \frac{2}{3 \Pi_{HD}} \right)^\frac{2}{3} + \frac{2D_{Clay}}{3D_{Tube} \phi_{Clay}} \right]
 \frac{\pi D_{Coag} \phi_{Clay}}{D_{Clay}} \ln \left( 1 - \Gamma  \right)$$
 
-$$Gt \approx \frac{3}{2} \frac{\Lambda^2}{k \pi d_P^2 \Gamma}$$
+$$Gt \approx \frac{3}{2} \frac{\Lambda^2}{k \pi D_P^2 \Gamma}$$
 
-$$\Gamma \approx \frac{3}{2} \frac{\Lambda^2}{k \pi d_P^2 Gt}$$
+$$\Gamma \approx \frac{3}{2} \frac{\Lambda^2}{k \pi D_P^2 Gt}$$
 
 $$C_D = \frac{24}{\rm Re}$$
 
@@ -574,9 +574,9 @@ $$v_{r_{Clay}} = 3 \Lambda G \frac{d_{Clay}}{d_{Floc}}$$
 ### CMFR model
 $$\forall_r \frac{dC}{dt} = \left( C_{in} - C \right) Q$$
 
-$$\frac{dn_P}{- kn_P} = \pi d_P^2 n_P^\frac{2}{3} \bar G \Gamma dt$$
+$$\frac{dn_P}{- kn_P} = \pi D_P^2 n_P^\frac{2}{3} \bar G \Gamma dt$$
 
-$$\frac{dn_P}{dt_{rxn}} = - k \pi d_P^2 n_P^\frac{5}{3} \bar G \Gamma$$
+$$\frac{dn_P}{dt_{rxn}} = - k \pi D_P^2 n_P^\frac{5}{3} \bar G \Gamma$$
 
 $$\frac{\partial n_p}{\partial t_{advection}} = \frac{n_{p_0} - n_p} \theta$$
 
@@ -585,14 +585,14 @@ $$\begin{array}{l}
 \\
 \frac{\partial n_p}{\partial t_{advection}} = \frac{n_{p_0} - n_p}{\theta}
 \\
-\frac{\partial n_P}{\partial t_{rxn}} = - k \pi d_P^2 n_P^\frac{5}{3} \bar G \Gamma
+\frac{\partial n_P}{\partial t_{rxn}} = - k \pi D_P^2 n_P^\frac{5}{3} \bar G \Gamma
 \\
-\frac{dn_p}{dt} = \frac{n_{p_0}}{\theta} - \frac{n_p}{\theta} - k \pi d_P^2 n_P^\frac{5}{3} \bar G \Gamma
+\frac{dn_p}{dt} = \frac{n_{p_0}}{\theta} - \frac{n_p}{\theta} - k \pi D_P^2 n_P^\frac{5}{3} \bar G \Gamma
 \end{array}$$
 
-$$ - \frac{3}{2} \left( n_P^{- \frac{2}{3}} - n_{P_0}^{- \frac{2}{3}} \right) = - k \pi d_P^2 \bar Gt \alpha$$
+$$ - \frac{3}{2} \left( n_P^{- \frac{2}{3}} - n_{P_0}^{- \frac{2}{3}} \right) = - k \pi D_P^2 \bar Gt \alpha$$
 
-$$n_P = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
+$$n_P = \frac{6}{\pi D_P^3} \frac{C_P}{\rho_P}$$
 
 $$1 = k \frac{2\pi}{3} \left( \frac{6}{\pi} \right)^\frac{2}{3} \bar Gt \alpha \left( \frac{C_P}{\rho_P} \right)^\frac{2}{3}$$
 

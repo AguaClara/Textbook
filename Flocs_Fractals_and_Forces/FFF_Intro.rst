@@ -472,6 +472,7 @@ It would be helpful to develop a design guideline based on equation :eq:`G_of_vc
 .. math::
   :label: G_of_vc_and_floc_props
 
+
   \zeta = G_{max} \nu^3 v_c^2 \approx   \frac{4F_{bond}}{3 \pi  \rho_{H_2O}}\left(  \frac{ D_{cp} g}{18} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2
 
 Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of equation :eq:`G_of_vc_and_floc_props`, :math:`\zeta`, is  :math:`4.9 \cdot \frac{mm^8}{s^6}`, :math:`\left(4.9 \cdot  10^{-24}\frac{m^8}{s^6}\right)`, for a kaolin suspension. :math:`\zeta` represent an upper limit on the flocculation and sedimentation design parameters and is a combination of properties of the core particles. The expectation is that :math:`\zeta` will be less than 4.9 :math:`\frac{mm^8}{s^6}` for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see :numref:`figure_PennockFig3`).
