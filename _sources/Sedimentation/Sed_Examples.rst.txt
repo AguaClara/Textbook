@@ -69,10 +69,10 @@ What are the failure modes for this design?
 
 Some issues are:
 
-- Flocs can settle in the influent manifold, specifically at the end of the influent manifold pipe;
-- The upflow line jet may be impacted and bent by settling flocs, allowing for floc settling on one side of the tank;
-- Without diffusers, there may not be uniform flow distribution from one end of the sedimentation tank to the other;
-- Without diffusers, there will be large flow circulations inside the sedimentation tank.
+- Flocs can settle in the influent manifold, specifically at the end of the influent manifold pipe
+- The upflow line jet may be impacted and bent by settling flocs, allowing for floc settling on one side of the tank
+- Without diffusers, there may not be uniform flow distribution from one end of the sedimentation tank to the other
+- Without diffusers, there will be large flow circulations inside the sedimentation tank
 
 This design has never been built and never will be. Understanding what the problems are with this design will help us design better in the future.
 

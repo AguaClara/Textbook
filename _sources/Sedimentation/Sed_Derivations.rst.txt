@@ -1,7 +1,7 @@
 .. _title_Sed_Derivations:
 
 ***********************************************
-AguaClara Sedimentation Design 
+AguaClara Sedimentation Design
 ***********************************************
 
 .. _heading_Sed_Tank_Plate_Settler_Design:
@@ -57,6 +57,7 @@ Solving for :math:`\bar v_{z_{Plate}}`, we rearrange and substitute by,
 We also already know from our :ref:`discussion of plate settlers <heading_Sed_Tank_Plate_Settlers>` that we can relate capture velocity, :math:`\bar v_c`, to :math:`S, L, \alpha`, and :math:`\bar v_{z_{Plate}}` by,
 
 .. math::
+  :label: vc_of_vz_plate
 
   \bar v_c = \frac{S  \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
 

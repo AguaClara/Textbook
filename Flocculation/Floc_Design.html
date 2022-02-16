@@ -170,8 +170,9 @@
 <p class="caption"><span class="caption-text">Chapter 8: Sedimentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">AguaClara Sedimentation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Challenge.html">Sedimentation Design Challenge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
 </ul>
@@ -289,10 +290,10 @@
 <p>In all cases we will need equations relating head loss, velocity gradient, viscosity, and collision potential. Flocculators must operate effectively over a range of temperatures and the critical design temperature is the coldest operating temperature. The viscosity shown in subsequent equations is the viscosity at the coldest operating temperature.</p>
 <p>The following equations describe the design process assuming that a velocity gradient is specified for the coldest operating temperature. Given <span class="math notranslate nohighlight">\(G_{CS}\)</span>, we can very easily find <span class="math notranslate nohighlight">\(\theta\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-0">
-<span class="eqno">(462)<a class="headerlink" href="#equation-flocculation-floc-design-0" title="Permalink to this equation">¶</a></span>\[\theta = \frac{G_{CS} \theta}{G_{CS}}\]</div>
+<span class="eqno">(464)<a class="headerlink" href="#equation-flocculation-floc-design-0" title="Permalink to this equation">¶</a></span>\[\theta = \frac{G_{CS} \theta}{G_{CS}}\]</div>
 <p>Finally, we take retention time <span class="math notranslate nohighlight">\(\theta\)</span> over plant flow rate <span class="math notranslate nohighlight">\(Q\)</span> to get the required volume of the flocculator:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-1">
-<span class="eqno">(463)<a class="headerlink" href="#equation-flocculation-floc-design-1" title="Permalink to this equation">¶</a></span>\[\rlap{-} V_{floc} = \frac{\theta}{Q}\]</div>
+<span class="eqno">(465)<a class="headerlink" href="#equation-flocculation-floc-design-1" title="Permalink to this equation">¶</a></span>\[\rlap{-} V_{floc} = \frac{\theta}{Q}\]</div>
 <p>Now that we have the basic parameters defined, we can start to design the details of the flocculator, starting from the physical dimensions.</p>
 <div class="section" id="horizontal-horizontal-flow-flocculators">
 <h2>Horizontal-Horizontal flow flocculators<a class="headerlink" href="#horizontal-horizontal-flow-flocculators" title="Permalink to this headline">¶</a></h2>
@@ -367,7 +368,7 @@
 <h4>Length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h4>
 <p>Flocculator length, <span class="math notranslate nohighlight">\(L_{channel}\)</span> must meet two constraints: it must be less than or equal to the length of the sedimentation tanks, as the flocculator is adjacent to the sed tanks. This constraint is <span class="math notranslate nohighlight">\(L_{Max, \, sed}\)</span>. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside <span class="math notranslate nohighlight">\(L_{Max, \, \rlap{-} V}\)</span>. <strong>The constraint that wins out is the one that results in the *smaller* length value</strong>.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-2">
-<span class="eqno">(464)<a class="headerlink" href="#equation-flocculation-floc-design-2" title="Permalink to this equation">¶</a></span>\[L_{Max, \, sed} = 6 \, {\rm m}
+<span class="eqno">(466)<a class="headerlink" href="#equation-flocculation-floc-design-2" title="Permalink to this equation">¶</a></span>\[L_{Max, \, sed} = 6 \, {\rm m}
 L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human} H}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
@@ -376,7 +377,7 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <p>The reason why <span class="math notranslate nohighlight">\(W_{Min, \, human}\)</span> is used is because it represents the absolute minimum of flocculator channel width. If the width ends up being larger, the length will decrease. <span class="math notranslate nohighlight">\(n_{Min, \, channels} = 2\)</span>  to make sure that the flow ends up on the correct side of the sedimentation tank, as the image below shows. Note that there can only be an even number of flocculator channels, as explained in the image’s caption.</p>
 <p>The equation for <em>actual</em> flocculator length is therefore:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-3">
-<span class="eqno">(465)<a class="headerlink" href="#equation-flocculation-floc-design-3" title="Permalink to this equation">¶</a></span>\[L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \rlap{-} V})\]</div>
+<span class="eqno">(467)<a class="headerlink" href="#equation-flocculation-floc-design-3" title="Permalink to this equation">¶</a></span>\[L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \rlap{-} V})\]</div>
 <div class="figure align-center" id="id40">
 <span id="figure-floc-channels"></span><a class="reference internal image-reference" href="../_images/Floc_channels.jpg"><img alt="floc channels" src="../_images/Floc_channels.jpg" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 128 </span><span class="caption-text">There are an even amount of flocculator channels to keep the AguaClara plant layout consistent for flows greater than 12 L/s. This ensures that the entrance tank, filter box, and filters can be kept in the same places across plants.</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
@@ -390,32 +391,32 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 - Allow for a human to be able to fit into a flocculator channel</p>
 <p>The first two conditions are wrapped up into the following equation, <a class="reference internal" href="Floc_Derivations.html#title-flocculation-derivations"><span class="std std-ref">which is derived here</span></a>.</p>
 <div class="math notranslate nohighlight" id="equation-floc-channel-w-min-const-k">
-<span class="eqno">(466)<a class="headerlink" href="#equation-floc-channel-w-min-const-k" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\]</div>
-<p>Given that the baffle minor loss coefficient is now known to be a function of <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> we substitute <a class="reference internal" href="Floc_Derivations.html#equation-k-baffle-expanding">(449)</a>.</p>
+<span class="eqno">(468)<a class="headerlink" href="#equation-floc-channel-w-min-const-k" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\]</div>
+<p>Given that the baffle minor loss coefficient is now known to be a function of <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> we substitute <a class="reference internal" href="Floc_Derivations.html#equation-k-baffle-expanding">(451)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-floc-channel-w-min-var-k-draft">
-<span class="eqno">(467)<a class="headerlink" href="#equation-floc-channel-w-min-var-k-draft" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{ \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS_{min}}}\right) ^ 2}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(469)<a class="headerlink" href="#equation-floc-channel-w-min-var-k-draft" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{ \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS_{min}}}\right) ^ 2}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\]</div>
 <p>Group the parameters so that the dimensions inside the exponents are a simple as possible.</p>
 <div class="math notranslate nohighlight" id="equation-floc-channel-w-min-var-k">
-<span class="eqno">(468)<a class="headerlink" href="#equation-floc-channel-w-min-var-k" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{Q}{\left(\nu G_{CS}^2 H_e^4\right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{H_eS_{min}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(470)<a class="headerlink" href="#equation-floc-channel-w-min-var-k" title="Permalink to this equation">¶</a></span>\[W_{Min_{H_eS}} = \frac{Q}{\left(\nu G_{CS}^2 H_e^4\right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{H_eS_{min}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}\]</div>
 <p>This equation represents the absolute smallest width of a flocculator channel if we consider the lowest value of <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> and the highest possible value of <span class="math notranslate nohighlight">\(H_e\)</span>:</p>
 <p><span class="math notranslate nohighlight">\(H_e = H_{e_{Max}} = H = 2 \, {\rm m}\)</span>, this implies that there are no obstacles between baffles
 <span class="math notranslate nohighlight">\(\Pi_{H_eS} = \Pi_{ {HS}_{Min} } = 3\)</span></p>
 <p>Recall our other width constraint, <span class="math notranslate nohighlight">\(W_{Min, \, human} = 45 \, {\rm cm}\)</span>, which is based on our desire to have a human be able to fit into the channels. The governing constraint is the <em>larger</em> value of <span class="math notranslate nohighlight">\(W_{Min}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-4">
-<span class="eqno">(469)<a class="headerlink" href="#equation-flocculation-floc-design-4" title="Permalink to this equation">¶</a></span>\[W_{Min} = {\rm max}(W_{Min, \, \Pi_{H_eS}}, \, W_{Min, \, human})\]</div>
+<span class="eqno">(471)<a class="headerlink" href="#equation-flocculation-floc-design-4" title="Permalink to this equation">¶</a></span>\[W_{Min} = {\rm max}(W_{Min, \, \Pi_{H_eS}}, \, W_{Min, \, human})\]</div>
 <p>We can find the number of channels, <span class="math notranslate nohighlight">\(n_{channels}\)</span> and their actual width in one last step, by finding the <em>total flocculator width</em> if there were no channels and dividing that by the minimum flocculator width, <span class="math notranslate nohighlight">\(W_{Min}\)</span>, found above. The equation for total flocculator width is based on our target volume:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-5">
-<span class="eqno">(470)<a class="headerlink" href="#equation-flocculation-floc-design-5" title="Permalink to this equation">¶</a></span>\[W_{total} = \frac{\rlap{-} V}{H L_{channel}}\]</div>
+<span class="eqno">(472)<a class="headerlink" href="#equation-flocculation-floc-design-5" title="Permalink to this equation">¶</a></span>\[W_{total} = \frac{\rlap{-} V}{H L_{channel}}\]</div>
 <p>Finally:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-6">
-<span class="eqno">(471)<a class="headerlink" href="#equation-flocculation-floc-design-6" title="Permalink to this equation">¶</a></span>\[n_{channels} = \frac{W_{total}}{W_{Min}}\]</div>
+<span class="eqno">(473)<a class="headerlink" href="#equation-flocculation-floc-design-6" title="Permalink to this equation">¶</a></span>\[n_{channels} = \frac{W_{total}}{W_{Min}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(n_{channels}\)</span> is an even number and is not 0. Usually, <span class="math notranslate nohighlight">\(n_{channels}\)</span> is either 2 or 4.</div>
 </div>
 <p>Now that we know <span class="math notranslate nohighlight">\(n_{channels}\)</span>, we can find the actual width of a channel, <span class="math notranslate nohighlight">\(W_{channel}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-7">
-<span class="eqno">(472)<a class="headerlink" href="#equation-flocculation-floc-design-7" title="Permalink to this equation">¶</a></span>\[W_{channel} = \frac{W_{total}}{n_{channels}}\]</div>
+<span class="eqno">(474)<a class="headerlink" href="#equation-flocculation-floc-design-7" title="Permalink to this equation">¶</a></span>\[W_{channel} = \frac{W_{total}}{n_{channels}}\]</div>
 </div>
 </div>
 <div class="section" id="hydraulic-parameters">
@@ -424,24 +425,24 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <div class="section" id="height-between-expansions">
 <h4>Height Between Expansions<a class="headerlink" href="#height-between-expansions" title="Permalink to this headline">¶</a></h4>
 <p>We have a range of possible <span class="math notranslate nohighlight">\(H_e\)</span> values based on our window of <span class="math notranslate nohighlight">\(3 &lt; \frac{H_e}{S} &lt; 6\)</span>. However, we have a limitation and a preference which shape how we design <span class="math notranslate nohighlight">\(H_e\)</span>. Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want <span class="math notranslate nohighlight">\(\frac{H_e}{S}\)</span> to be closer to <span class="math notranslate nohighlight">\(6\)</span> than it is to <span class="math notranslate nohighlight">\(3\)</span>; we are looking for <span class="math notranslate nohighlight">\(H_{e_{Max}}\)</span>.</p>
-<p>We calculate <span class="math notranslate nohighlight">\(H_{e_{Max}}\)</span> based on the physical flocculator dimensions. The equation for <span class="math notranslate nohighlight">\(H_e\)</span> is obtained by rearranging equation <a class="reference internal" href="#equation-floc-channel-w-min-var-k">(468)</a>. Because we have already designed the channel width, we substitute <span class="math notranslate nohighlight">\(W_{channel}\)</span> for <span class="math notranslate nohighlight">\(W_{Min_{H_eS}}\)</span>. Since we are looking for <span class="math notranslate nohighlight">\(H_{e_{Max}}\)</span>, we also substitute <span class="math notranslate nohighlight">\(\Pi_{{H_eS}_{Max}}\)</span> for <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span>. The result is:</p>
+<p>We calculate <span class="math notranslate nohighlight">\(H_{e_{Max}}\)</span> based on the physical flocculator dimensions. The equation for <span class="math notranslate nohighlight">\(H_e\)</span> is obtained by rearranging equation <a class="reference internal" href="#equation-floc-channel-w-min-var-k">(470)</a>. Because we have already designed the channel width, we substitute <span class="math notranslate nohighlight">\(W_{channel}\)</span> for <span class="math notranslate nohighlight">\(W_{Min_{H_eS}}\)</span>. Since we are looking for <span class="math notranslate nohighlight">\(H_{e_{Max}}\)</span>, we also substitute <span class="math notranslate nohighlight">\(\Pi_{{H_eS}_{Max}}\)</span> for <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span>. The result is:</p>
 <div class="math notranslate nohighlight" id="equation-floc-he-max-var-k">
-<span class="eqno">(474)<a class="headerlink" href="#equation-floc-he-max-var-k" title="Permalink to this equation">¶</a></span>\[H_{e_{Max}}^\frac{4}{3}= \frac{Q}{W_{Min_{H_eS}} \left(\nu G_{CS}^2 \right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{{H_eS}_{Max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(476)<a class="headerlink" href="#equation-floc-he-max-var-k" title="Permalink to this equation">¶</a></span>\[H_{e_{Max}}^\frac{4}{3}= \frac{Q}{W_{Min_{H_eS}} \left(\nu G_{CS}^2 \right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{{H_eS}_{Max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}\]</div>
 <p>raise to 3/4</p>
 <div class="math notranslate nohighlight" id="equation-floc-he-max-var-k">
-<span class="eqno">(474)<a class="headerlink" href="#equation-floc-he-max-var-k" title="Permalink to this equation">¶</a></span>\[H_{e_{Max}}= \left[ \left(\frac{Q^3}{W_{Min_{H_eS}}^3 \nu G_{CS}^2}\right)\frac{  \Pi_{{H_eS}_{Max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right]^\frac{1}{4} \left(1 - \Pi_{vc}^{baffle}\right)\]</div>
+<span class="eqno">(476)<a class="headerlink" href="#equation-floc-he-max-var-k" title="Permalink to this equation">¶</a></span>\[H_{e_{Max}}= \left[ \left(\frac{Q^3}{W_{Min_{H_eS}}^3 \nu G_{CS}^2}\right)\frac{  \Pi_{{H_eS}_{Max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right]^\frac{1}{4} \left(1 - \Pi_{vc}^{baffle}\right)\]</div>
 <p>For <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> large enough such that the flow has fully expanded the following equation applies.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-8">
-<span class="eqno">(475)<a class="headerlink" href="#equation-flocculation-floc-design-8" title="Permalink to this equation">¶</a></span>\[H_{e_{Max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}\]</div>
+<span class="eqno">(477)<a class="headerlink" href="#equation-flocculation-floc-design-8" title="Permalink to this equation">¶</a></span>\[H_{e_{Max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}\]</div>
 <p>Note that this is the <em>maximum</em> distance between flow expansions, and does not account for the limitation that there must be an integer number of obstacles per baffle space. Thus, we need to find the <em>actual</em> distance between flow expansions. To do this, we determine and round up the number of expansions per baffle space using the ceiling function:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-9">
-<span class="eqno">(476)<a class="headerlink" href="#equation-flocculation-floc-design-9" title="Permalink to this equation">¶</a></span>\[n_{expansions} = {\rm ceil}\left( \frac{H}{H_{e_{Max}}} \right)\]</div>
+<span class="eqno">(478)<a class="headerlink" href="#equation-flocculation-floc-design-9" title="Permalink to this equation">¶</a></span>\[n_{expansions} = {\rm ceil}\left( \frac{H}{H_{e_{Max}}} \right)\]</div>
 <p>If we had used the floor() function instead, we would find that <span class="math notranslate nohighlight">\(H_e\)</span> would be larger than our upper bound, <span class="math notranslate nohighlight">\(H_{e_{Max}}\)</span>. From here, we can easily get to the actual number of flow expansions per baffle spacing:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-10">
-<span class="eqno">(477)<a class="headerlink" href="#equation-flocculation-floc-design-10" title="Permalink to this equation">¶</a></span>\[H_e = \frac{H}{n_{expansions}}\]</div>
+<span class="eqno">(479)<a class="headerlink" href="#equation-flocculation-floc-design-10" title="Permalink to this equation">¶</a></span>\[H_e = \frac{H}{n_{expansions}}\]</div>
 <p>Finally, we can obtain the number of obstacles per baffle space. The <span class="math notranslate nohighlight">\(- 1\)</span> in the equation is because the baffles themselves provide one flow expansion per baffle space.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-11">
-<span class="eqno">(478)<a class="headerlink" href="#equation-flocculation-floc-design-11" title="Permalink to this equation">¶</a></span>\[n_{obstacles} = \frac{H}{H_e} - 1\]</div>
+<span class="eqno">(480)<a class="headerlink" href="#equation-flocculation-floc-design-11" title="Permalink to this equation">¶</a></span>\[n_{obstacles} = \frac{H}{H_e} - 1\]</div>
 </div>
 <div class="section" id="baffle-spacing">
 <h4>Baffle Spacing<a class="headerlink" href="#baffle-spacing" title="Permalink to this headline">¶</a></h4>
@@ -455,7 +456,7 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <h4>Average Velocity<a class="headerlink" href="#average-velocity" title="Permalink to this headline">¶</a></h4>
 <p>As water flows through the flocculators, the flocs will get larger and larger. As a result, their terminal sedimentation velocity will increase. This is what we want. However, we need to make sure that the flocs don’t settle in the flocculator; that they instead all settle in the sedimentation tank. To make sure of this, we need to make sure that the velocity of water in the flocculator is high enough to scour any flocs that fall to the bottom of the flocculator. The velocity required to scour flocs from the bottom and avoid floc accumulation is around <span class="math notranslate nohighlight">\(v_{scour} = 15 \, {\rm \frac{cm}{s}}\)</span>. We can check our average velocity <span class="math notranslate nohighlight">\(\bar v\)</span> against this value. Unfortunately, the only method to increase the velocity through the flocculator is to increase the space between baffles, S, and decrease the channel width, W. Generally those changes aren’t practical and thus there isn’t any way to increase the velocity.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-12">
-<span class="eqno">(479)<a class="headerlink" href="#equation-flocculation-floc-design-12" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{W_{channel} S}\]</div>
+<span class="eqno">(481)<a class="headerlink" href="#equation-flocculation-floc-design-12" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{W_{channel} S}\]</div>
 </div>
 <div class="section" id="head-loss">
 <h4>Head loss<a class="headerlink" href="#head-loss" title="Permalink to this headline">¶</a></h4>
@@ -470,7 +471,7 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 </div>
 <p>Thus, the actual average water level in the flocculator is <span class="math notranslate nohighlight">\(H + \frac{h_{L_{floc}}}{2}\)</span>. Thus, the actual residence time is:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-13">
-<span class="eqno">(480)<a class="headerlink" href="#equation-flocculation-floc-design-13" title="Permalink to this equation">¶</a></span>\[\theta_{actual} = \frac{n_{channels} L_{channel} W_{channel} \left( H + \frac{h_{L_{floc}}}{2} \right)} {Q}\]</div>
+<span class="eqno">(482)<a class="headerlink" href="#equation-flocculation-floc-design-13" title="Permalink to this equation">¶</a></span>\[\theta_{actual} = \frac{n_{channels} L_{channel} W_{channel} \left( H + \frac{h_{L_{floc}}}{2} \right)} {Q}\]</div>
 <p>Check to see if <span class="math notranslate nohighlight">\(\theta_{actual}\)</span> is greater than <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
 <p id="id1"><dl class="citation">
 <dt class="label" id="id7"><span class="brackets">Haa98</span></dt>
