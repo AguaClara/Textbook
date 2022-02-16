@@ -102,8 +102,9 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :maxdepth: 1
 
   Sedimentation/Sed_Intro.rst
-  Sedimentation/Sed_Design.rst
   Sedimentation/Sed_Derivations.rst
+  Sedimentation/Sed_Design.rst
+  Sedimentation/Sed_Design_Challenge.rst
   Sedimentation/Sed_Theory_and_Future_Work.rst
   Sedimentation/Sed_Examples.rst
 
