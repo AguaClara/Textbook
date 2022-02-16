@@ -232,6 +232,8 @@ So we know that the diffusers, jet reverser, and sloped bottom ensure that no sl
 
 What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
 
+ `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that the jet was unable to resuspend the flocs when the jet velocity was 57 mm/s and was successful for all velocities greater than 75 mm/s. The momentum of the floc density current will increase with the concentration of flocs in the primary filter which is in turn a function of the density and size of the core particles. The primary filter floc concentration will decrease at lower temperatures and thus failure of the jet reverser will occur at high temperatures. Given that Dr. Garland did the research at room temperature using a kaolin suspension it is likely that the 75 mm/s guidelines is sufficiently conservative for all designs that have a 1 mm/s upflow velocity. The jet reverser will fail at some point as the flow rate through the sedimentation tank is decreased. The solution for that case would be to take a fraction of the sedimentation tanks off line to maintain a higher jet velocity.
+
 .. _figure_jet_angle:
 
 .. figure:: ../Images/jet_angle.png
@@ -336,12 +338,12 @@ Further works is required to determine the maximum shear stress that will not ca
 Comparison of Velocities and Flow in Sedimentation Tank
 ========================================================
 
-To understand how water flows in the sedimentation tank, we must understand how the water velocity changes with the geometry. There are four distinct zones in the sedimentation tank: 
+To understand how water flows in the sedimentation tank, we must understand how the water velocity changes with the geometry. There are four distinct zones in the sedimentation tank:
 
 #. The velocity of water exiting the diffusers.
 #. The velocity of water moving through the floc blanket.
 #. The velocity of water that enters the plate settlers.
-#. The velocity of water through the plate settlers. 
+#. The velocity of water through the plate settlers.
 
 The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v * A`, will be our guiding principle. In all cases,
 
@@ -827,11 +829,11 @@ The submerged effluent manifold transports water from the sedimentation tank to 
 Sedimentation Tank Summary
 ============================
 
-You have now been introduced to the AguaClara sedimentation tank in three parts: 
+You have now been introduced to the AguaClara sedimentation tank in three parts:
 
 #. How water enters the sedimentation tank;
 #. How water moves through the sedimentation tank, and;
-#. How water leaves the sedimentation tank. 
+#. How water leaves the sedimentation tank.
 
 This introduction should allow you to understand the components of the sedimentation unit process, the purpose of each component, and AguaClara-specific innovations.
 
@@ -875,4 +877,3 @@ References
 ===========
 
 Garland, Casey, et al. “Revisiting Hydraulic Flocculator Design for Use in Water Treatment Systems with Fluidized Floc Beds.” Environmental Engineering Science, vol. 34, no. 2, 1 Feb. 2017, pp. 122–129., doi:10.1089/ees.2016.0174.
-
