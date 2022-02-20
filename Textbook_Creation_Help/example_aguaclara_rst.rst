@@ -393,17 +393,17 @@ Inserting Video
 To insert a video and use it like a figure, take an instructive snapshot of the video. Save that as an image, and create a figure linking to that image. Then, make the video open when the video is clicked on by setting the video url as the "target" for the image. To indicate it is a video, include the play bar. Here is the relevant code::
 
 
-  .. figure:: floc_filter.png
+  .. figure:: ../Images/Floc_Filter_Floc_Hopper.png
      :target: https://www.youtube.com/watch?v=Xp8ygnIOgi0
 
      This is a floc filter forming
 
 And here is a working example:
 
-.. figure:: floc_filter.png
-   :target: https://www.youtube.com/watch?v=Xp8ygnIOgi0
+.. figure:: ../Images/Floc_Filter_Floc_Hopper.png
+    :target: https://www.youtube.com/watch?v=Xp8ygnIOgi0
 
-   This is a floc filter forming
+    This is a floc filter forming
 
 
 .. _heading_assorted_convention:

@@ -208,9 +208,9 @@ The influent manifold, diffusers, and jet reverser work with a **sloped bottom g
 
     Cross-section of the bottom of the sedimentation tank.
 
-.. _figure_Floc_Blanket_Floc_Hopper:
+.. _figure_Floc_Filter_Floc_Hopper:
 
-.. figure:: ../Images/Floc_Blanket_Floc_Hopper.png
+.. figure:: ../Images/Floc_Filter_Floc_Hopper.png
    :target: https://www.youtube.com/watch?v=2x12wGb7xZE
    :width: 400px
    :align: center
