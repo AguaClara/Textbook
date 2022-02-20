@@ -11,9 +11,9 @@ Unsolved sedimentation tank failure modes:
 #. Slime growth from iron-oxidizing bacteria.
 #. NOM impact on floc density.
 
-.. _heading_Floc_Floc_Blanket:
+.. _heading_Floc_Floc_Filter:
 
-Flocculator to Floc Blanket Transition
+Flocculator to Floc Filter Transition
 =======================================
 
 We now have a published flocculator model and we have strong evidence that primary particles are removed first order with respect to depth (or time) in the floc filter. Given these two models it is possible for the first time to optimize the design of a flocculator based on minimizing the volume of the flocculator and floc filter reactors.
