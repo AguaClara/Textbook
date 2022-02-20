@@ -247,7 +247,7 @@ The head loss through the sedimentation tank is due to:
 * entrance and elbow in influent manifold
 * major losses in influent manifold (negligible)
 * diffuser exit loss
-* floc blanket (negligible)
+* floc filter (negligible)
 * plate settlers (negligible)
 * effluent manifold orifices
 * effluent manifold major loss (negligible)

@@ -99,9 +99,9 @@ A critical property of coagulants is that in order to act as an adhesive between
 
     Solubility of aluminum as a function of pH. Figure adapted from `Pernitsky and Edzwald <http://dx.doi.org/10.2166/aqua.2006.062>`_.
 
-Research is needed to quantify flocculation performance in continuous flow floc/floc blanket/plate settler systems as a function of pH.
+Research is needed to quantify flocculation performance in continuous flow floc/floc filter/plate settler systems as a function of pH.
 
-The aluminum concentration range used for flocculation ranges from approximately 0.4 - 10 mg/L and is strongly influenced by the concentration of dissolved organic matter and the concentration of suspended solids. The flocculation and floc blanket capacity to produce collisions between suspended particles also influences the required aluminum concentration.
+The aluminum concentration range used for flocculation ranges from approximately 0.4 - 10 mg/L and is strongly influenced by the concentration of dissolved organic matter and the concentration of suspended solids. The flocculation and floc filter capacity to produce collisions between suspended particles also influences the required aluminum concentration.
 
 In drinking water treatment plant operation it is sometimes necessary to add a base (or acid) to increase (or decrease) the pH of the raw water. The added coagulant tends to reduce the pH. The carbonate system is most important in understanding how the base will adjust the pH because the reaction between carbonic acid and bicarbonate occurs around pH 6.3, the pK (negative log of the dissociation constant is the pH where that reaction is centered) for that reaction. Carbon dioxide exchange with the atmosphere is insignificant in drinking water treatment unit processes unless there is an aeration stage. Thus we can use the ANC equation for the case with no :math:`CO_2` exchange with the atmosphere.
 

@@ -22,7 +22,7 @@ The assumption that what is written and passed down in oral history through the 
 
 You might wonder why we care so much about getting the science right and being as clear as possible about what is known. After all, the core drinking water treatment technologies were invented before we were born and many of us have safe drinking water coming from our taps. Environmental Engineers have known how to design municipal drinking water treatment plants since they early 1900's. We care about getting the science right because we hypothesize that there are many opportunities to significantly improve drinking water treatment technologies and that improved understandings of each unit process have the potential to lead to new breakthroughs.
 
-Our contention is that no one has ever optimized the design of a drinking water treatment plant! We are reasonably certain of this because we don't yet have models (with equations) that describe performance of most of the core unit processes (rapid mix, flocculation, floc blankets, sedimentation, sand filtration) used for surface water treatment. The only possible exception is lamellar sedimentation which can be characterized if we know the size and density distribution of the particles entering the sedimentation tank.
+Our contention is that no one has ever optimized the design of a drinking water treatment plant! We are reasonably certain of this because we don't yet have models (with equations) that describe performance of most of the core unit processes (rapid mix, flocculation, floc filters, sedimentation, sand filtration) used for surface water treatment. The only possible exception is lamellar sedimentation which can be characterized if we know the size and density distribution of the particles entering the sedimentation tank.
 
 Traditional drinking water treatment textbooks can too easily miss the opportunity to advance the science of drinking water treatment technologies by presenting certainty where there should be skepticism. For example, rapid mix is described as process that occurs in a few seconds, flocculation is described as a process that should be fastest for high turbidity waters and slowest for low turbidity waters, and filtration performance is described by a model that predicts first order removal with respect to filter bed depth. We will demonstrate why each of these assumptions doesn't match observations, we will discuss new insights into these processes, and we will identify high priority research questions that have the potential to lead to major improvements in drinking water treatment.
 
@@ -251,15 +251,15 @@ Treatment Trains
    Simple sedimentation, particles settle, none, public, unknown
    Flocculation, aluminum and iron salts, none, public, `1757 <https://www.iwapublishing.com/news/coagulation-and-flocculation-water-and-wastewater-treatment>`_
    Sedimentation, horizontal flow, flocculation, public, unknown
-   Lamellar sedimentation, plate or tube settlers, flocculation or floc blanket, public, `1904 <https://smartwatermagazine.com/blogs/karl-uwe-schmitz/tube-settler-design-basics-solid-settling-lamella-clarifiers>`_
+   Lamellar sedimentation, plate or tube settlers, flocculation or floc filter, public, `1904 <https://smartwatermagazine.com/blogs/karl-uwe-schmitz/tube-settler-design-basics-solid-settling-lamella-clarifiers>`_
    Roughing filter, simple sedimentation in a gravel bed, none, public, `unknown <https://www.researchgate.net/publication/237827490_Roughing_filter_for_water_pre-treatment_technology_in_developing_countries_A_review?enrichId=rgreq-bb1d04e6613378d626c78cadb6674ae8&enrichSource=Y292ZXJQYWdlOzIzNzgyNzQ5MDtBUzoyMDAwMDczMDQxMjY0NjdAMTQyNDY5Njg2NTYxMQ%3D%3D&el=1_x_2>`_
    Slow sand filtration, Roughing filter or single step treatment for low NTU water, none, public, `1829 <https://en.wikipedia.org/wiki/Slow_sand_filter>`_
    Rapid sand filtration, depth filtration, sedimentation, public, `1920 <https://en.wikipedia.org/wiki/Rapid_sand_filter>`_
    Stacked rapid sand filter, gravity powered backwash, lamellar sedimentation, AguaClara Cornell open source, `2012a <https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EE.1943-7870.0000562>`_
-   Floc blanket, upflow fluidized suspension of flocs, flocculation, public, `1930 <https://link.springer.com/chapter/10.1007%2F978-3-642-61196-4_2>`_
-   Jet reverser floc blanket, first fully fluidized floc blanket, flocculation, AguaClara Cornell open source, `2012b <http://cuaguaclara.blogspot.com/2012/08/the-floc-blanket-quest.html>`_
+   Floc filter, upflow fluidized suspension of flocs, flocculation, public, `1930 <https://link.springer.com/chapter/10.1007%2F978-3-642-61196-4_2>`_
+   Jet reverser floc filter, first fully fluidized floc filter, flocculation, AguaClara Cornell open source, `2012b <http://cuaguaclara.blogspot.com/2012/08/the-floc-blanket-quest.html>`_
    Ballasted sedimentation, micro sand increases floc density, -, `Actiflo Veolia <https://www.veoliawatertechnologies.com/en/technologies/actiflo>`_, `1995 <https://patents.google.com/patent/US5840195>`_
-   Superpulsator, pulsing flow through floc blanket, rapid mix, `Degremont <http://www.degremont-technologies.com/SUPERPULSATOR-R>`_, `1958 <https://patents.google.com/patent/US3038608A>`_  `1991 <https://patents.google.com/patent/US5143625>`_
+   Superpulsator, pulsing flow through floc filter, rapid mix, `Degremont <http://www.degremont-technologies.com/SUPERPULSATOR-R>`_, `1958 <https://patents.google.com/patent/US3038608A>`_  `1991 <https://patents.google.com/patent/US5143625>`_
    Dissolved air flotation, bubbles carry particles upward, flocculation, Public, `1905 <https://iwaponline.com/wst/article-abstract/31/3-4/1/4138/Principles-and-applications-of-dissolved-air>`_
 
 See `Pretreatment Processes for Potable Water Treatment Plants by Jeff Lindgren for an excellent overview of available technologies, May 2014 (not including AguaClara innovations) <https://www.pnws-awwa.org/uploads/PDFs/conferences/2014/2.%20PNWS%20AWWA%20WTC%20Precon%2005%2007%202014%20Pretreatment%20by%20B&V%201&2%20-%20R1.pdf>`_.
@@ -268,8 +268,8 @@ The prerequisites for the unit processes in :numref:`table_Surface_Water_Treatme
 
 Example treatment trains include:
  - Conventional mechanized treatment: mechanical flocculation, lamellar sedimentation, rapid sand filtration, disinfection
- - Superpulsator: rapid mix, floc blanket, lamellar sedimentation, rapid sand filtration
- - AguaClara: hydraulic flocculation, floc blanket, lamellar sedimentation, stacked rapid sand filtration, disinfection
+ - Superpulsator: rapid mix, floc filter, lamellar sedimentation, rapid sand filtration
+ - AguaClara: hydraulic flocculation, floc filter, lamellar sedimentation, stacked rapid sand filtration, disinfection
  - Membrane filtration: flocculation, sedimentation, rapid sand filtration, granular or powdered activated carbon, pre-oxidation (see `Review Article <https://pubs-acs-org.proxy.library.cornell.edu/doi/abs/10.1021%2Fes802473r>`_)
 
 .. _heading_Textbook_Philosophy:
@@ -320,8 +320,8 @@ The AguaClara treatment train consists of the following processes
  - metering of the coagulant (and chlorine) that will cause particles to stick together
  - mixing of the coagulant with the raw water
  - flocculation where the water is deformed to cause particle collisions
- - floc blanket where large flocs settle through water that is flowing upward causing collisions between small particles carried by the upward flowing water and the large flocs
- - lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc blanket
+ - floc filter where large flocs settle through water that is flowing upward causing collisions between small particles carried by the upward flowing water and the large flocs
+ - lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc filter
  - stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed
  - disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes
 
