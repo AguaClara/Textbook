@@ -38,7 +38,7 @@ Minimal adverse effects. Foam produced can dry and be blown around the water tre
 Floc Blankets
 -------------
 
-Disrupts floc blanket, breaks flocs, carries flocs into plate settlers.
+Disrupts floc filter, breaks flocs, carries flocs into plate settlers.
 
 .. _heading_DG_Sedimentation:
 

@@ -324,7 +324,7 @@ msgstr ":matemáticas:`H_{fb}`"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy
-msgid "Height of the floc blanket"
+msgid "Height of the floc filter"
 msgstr "La altura de la manta de flóculos"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
@@ -363,7 +363,7 @@ msgstr ":matemáticas:`L_{fb}`"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy
-msgid "Length of the floc blanket in a sedimentation tank"
+msgid "Length of the floc filter in a sedimentation tank"
 msgstr "La longitud del manto de flóculos en un tanque de sedimentación"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
@@ -783,7 +783,7 @@ msgstr ":math:`\\bar v_{z_{FB}}`"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy
-msgid "Average vertical velocity of the water through the floc blanket"
+msgid "Average vertical velocity of the water through the floc filter"
 msgstr "La velocidad vertical media del agua a través de la capa de flóculos"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
@@ -918,7 +918,7 @@ msgstr ":matemáticas:`\\phi_{fb}`"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy
-msgid "Porosity of floc blanket"
+msgid "Porosity of floc filter"
 msgstr "La porosidad de la manta de flóculos"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1

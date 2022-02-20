@@ -307,7 +307,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Examples.rst:231
 msgid ""
 "What is the Reynolds number of the vertical flow up through the top of "
-"the floc blanket?"
+"the floc filter?"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:233
@@ -615,16 +615,16 @@ msgid ""
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:398
-msgid "**Answer:** The plant view area of the floc blanket is 60 square meters."
+msgid "**Answer:** The plant view area of the floc filter is 60 square meters."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:400
-msgid "What is the total length of the floc blanket zone for all tanks?"
+msgid "What is the total length of the floc filter zone for all tanks?"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:407
 msgid ""
-"**Answer:** The total length of the floc blanket zone for all tanks is "
+"**Answer:** The total length of the floc filter zone for all tanks is "
 "56.24 meters."
 msgstr ""
 
@@ -669,7 +669,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Examples.rst:439
 msgid ""
 "We will assume that the active area of the sedimentation tank is equal to"
-" the top area of the floc blanket zone. This isn't quite right because of"
+" the top area of the floc filter zone. This isn't quite right because of"
 " the geometric constraints from the floc hopper, inlet channel, settled "
 "water channel, and angled plates. However, it is a good approximation for"
 " these long tanks."

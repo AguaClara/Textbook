@@ -27,7 +27,7 @@ To add a term to this glossary please add it with the definition in quote marks 
     `Energy Dissipation Rate <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html>`_, "The amount of energy lost from viscous forces in turbulent flow; equivalent to head loss in a reactor."
     `Floc <https://aguaclara.github.io/Textbook/Flocs_Fractals_and_Forces/FFF_Intro.html>`_, "A cluster of colloidal particles formed through collision and adhesion in the processes of coagulation and flocculation."
     `Floc Blanket <https://aguaclara.github.io/Textbook/Sedimentation/Sed_Design.html>`_, "A fluidized layer of flocs that is maintained in the bottom of an upflow sedimentation tank."
-    `Floc Hopper <https://aguaclara.github.io/Textbook/Sedimentation/Sed_Design.html>`_, "The collection area in a sedimentation tank where flocs accumulate after overflowing from the floc blanket."
+    `Floc Hopper <https://aguaclara.github.io/Textbook/Sedimentation/Sed_Design.html>`_, "The collection area in a sedimentation tank where flocs accumulate after overflowing from the floc filter."
     `Fractal <https://aguaclara.github.io/Textbook/Flocs_Fractals_and_Forces/FFF_Intro.html>`_, "A geometric structure in which each part shares the characteristics of the whole, forming the same pattern at any scale."
     `Friction Factor <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html>`_, "A dimensionless quantity approximating the magnitude of friction between a fluid and pipe wall, for use in the Darcy-Weisbach equation of major head loss."
     `Head Loss <https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html>`_, "Reduction in the energy of a fluid as it flows through a system, including major and minor losses."

@@ -463,7 +463,7 @@ msgstr "**El número de Reynolds de este avión es 974,6 sin dimensiones"
 #, fuzzy
 msgid ""
 "What is the Reynolds number of the vertical flow up through the top of the "
-"floc blanket?"
+"floc filter?"
 msgstr ""
 "¿Cuál es el número de Reynolds del flujo vertical que sube por la parte "
 "superior de la manta de flóculos?"
@@ -938,14 +938,14 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:398
 #, fuzzy
-msgid "**Answer:** The plant view area of the floc blanket is 60 square meters."
+msgid "**Answer:** The plant view area of the floc filter is 60 square meters."
 msgstr ""
 "**Respuesta:** El área de vista de la planta de la manta de flóculos es de 60 "
 "metros cuadrados."
 
 #: ../../Sedimentation/Sed_Examples.rst:400
 #, fuzzy
-msgid "What is the total length of the floc blanket zone for all tanks?"
+msgid "What is the total length of the floc filter zone for all tanks?"
 msgstr ""
 "¿Cuál es la longitud total de la zona de cobertura de flóculos para todos los "
 "tanques?"
@@ -953,7 +953,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Examples.rst:407
 #, fuzzy
 msgid ""
-"**Answer:** The total length of the floc blanket zone for all tanks is 56.24 "
+"**Answer:** The total length of the floc filter zone for all tanks is 56.24 "
 "meters."
 msgstr ""
 "**Respuesta:** La longitud total de la zona de cobertura de flóculos para "
@@ -1019,7 +1019,7 @@ msgstr "Diseño de los colonos de placas"
 #, fuzzy
 msgid ""
 "We will assume that the active area of the sedimentation tank is equal to the "
-"top area of the floc blanket zone. This isn't quite right because of the "
+"top area of the floc filter zone. This isn't quite right because of the "
 "geometric constraints from the floc hopper, inlet channel, settled water "
 "channel, and angled plates. However, it is a good approximation for these long "
 "tanks."

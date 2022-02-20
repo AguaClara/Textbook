@@ -80,13 +80,13 @@ msgid ""
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:35
-msgid "2) Velocity and flow in the floc blanket"
+msgid "2) Velocity and flow in the floc filter"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:37
 msgid ""
 "After the water exits the diffusers and jet reverser, it flows through "
-"the expanded floc blanket region where:"
+"the expanded floc filter region where:"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:39
@@ -130,13 +130,13 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:52
 msgid ""
 "The only reason that there is a distinction between this area and the "
-"floc blanket area is because plate settlers are built at an angle. This "
+"floc filter area is because plate settlers are built at an angle. This "
 "angle creates a \"lost triangle\" because there is a space in which the "
 "plate settlers are not effective and water does not flow through them. "
-"Because the active length is less than the floc blanket length, "
+"Because the active length is less than the floc filter length, "
 ":math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, "
 "the average active velocity must be greater than the average upflow "
-"velocity through the floc blanket, :math:`\\bar v_{z_{Active}} > \\bar "
+"velocity through the floc filter, :math:`\\bar v_{z_{Active}} > \\bar "
 "v_{z_{fb}}`. The same flow going through less area means that the "
 "velocity must increase."
 msgstr ""
@@ -341,7 +341,7 @@ msgid ":math:`\\bar v_{z_{fb}}`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
-msgid "floc blanket"
+msgid "floc filter"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
@@ -893,30 +893,30 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:573
 msgid ""
-"We have learned that growing a floc blanket leads to better sedimentation"
+"We have learned that growing a floc filter leads to better sedimentation"
 " tank performance. One explanation for the improved performance is that "
-"the floc blanket acts like an additional flocculator because there are "
+"the floc filter acts like an additional flocculator because there are "
 "additional collisions between particles. To understand the nature and "
 "significance of these additional collisions, we can calculate the floc "
 "blanket velocity gradients and residence time to find collision "
-"potential, :math:`G\\theta`. In a floc blanket, we expect that :math:`G` "
+"potential, :math:`G\\theta`. In a floc filter, we expect that :math:`G` "
 "is small; however, :math:`\\theta` is large, which means that "
-":math:`G\\theta` in the floc blanket may be significant."
+":math:`G\\theta` in the floc filter may be significant."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:575
 msgid ""
 "First, we will find :math:`\\theta`. If we simplify the bottom of the "
 "sedimentation tank and approximate it as a simple rectangle, we can "
-"easily determine the residence time. If the depth of the floc blanket is "
+"easily determine the residence time. If the depth of the floc filter is "
 "1 m and the upflow velocity is 1 mm/s, we determine that"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:581
 msgid ""
 "Next, we will find :math:`G`. Before we begin, consider why there is a "
-"velocity gradient in the floc blanket. What causes it? Water is flowing "
-"up through the floc blanket while the flocs in the floc blanket are being"
+"velocity gradient in the floc filter. What causes it? Water is flowing "
+"up through the floc filter while the flocs in the floc filter are being"
 " pulled down by gravity. The differential velocities are caused by "
 "particles settling and rising at different velocities relative to the "
 "fluid due to drag, gravity, and fluid flow. In the fluid around each "
@@ -938,9 +938,9 @@ msgstr ""
 msgid ""
 "Large flocs provide velocity gradients that can potentially cause "
 "collisions between other small particles that we are still trying to "
-"capture. Through our derivation to determine :math:`G` in a floc blanket,"
+"capture. Through our derivation to determine :math:`G` in a floc filter,"
 " we will also test an assumption. We will assume that primary particles "
-"coming into the floc blanket are not interacting with large flocs. "
+"coming into the floc filter are not interacting with large flocs. "
 "Instead,  we will assume that the the fluid shear and differential "
 "velocities promote interactions between two primary particles."
 msgstr ""
@@ -950,33 +950,33 @@ msgid ""
 "So, how can we calculate the velocity gradient? In flocculators, we "
 "determined :math:`G` from head loss and residence time. In sedimentation "
 "tanks, we determine :math:`G` the same way. Let's calculate the head loss"
-" through the floc blanket. To do this, we need to know the density of the"
-" floc blanket and we need to know the relationship between head loss a "
+" through the floc filter. To do this, we need to know the density of the"
+" floc filter and we need to know the relationship between head loss a "
 "fluidized bed and density of the bed."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:590
-msgid "Floc blanket density"
+msgid "Floc filter density"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:591
 msgid ""
-"To calculate the density of the floc blanket at steady-state, we will use"
+"To calculate the density of the floc filter at steady-state, we will use"
 " principles of mass and volume conservation."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:601
 msgid ""
 "We will start by finding the mass of clay and the mass of water in the "
-"floc blanket, where:"
+"floc filter, where:"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:603
-msgid ":math:`C_{clay} =` concentration of clay in the floc blanket"
+msgid ":math:`C_{clay} =` concentration of clay in the floc filter"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:604
-msgid ":math:`\\rlap{-}V_{fb} =` volume of floc blanket"
+msgid ":math:`\\rlap{-}V_{fb} =` volume of floc filter"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:605
@@ -988,22 +988,22 @@ msgid ":math:`\\rho_{H_2O} =` density of water"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:607
-msgid ":math:`\\rho_{fb} =` density of floc blanket"
+msgid ":math:`\\rho_{fb} =` density of floc filter"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:609
 msgid ""
-"The mass of clay in the floc blanket is concentration multiplied by "
+"The mass of clay in the floc filter is concentration multiplied by "
 "volume, shown by :math:`m_{clay} = C_{clay}\\rlap{-}V_{fb}`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:611
 msgid ""
-"The mass of water in the floc blanket is related to the volume fraction "
-"of the floc blanket that is occupied by clay, "
+"The mass of water in the floc filter is related to the volume fraction "
+"of the floc filter that is occupied by clay, "
 ":math:`\\frac{C_{clay}}{\\rho_{clay}}`, whic is a very small number. "
 ":math:`\\left( 1 - \\frac{C_{clay}}{\\rho_{clay}} \\right)` is the "
-"fraction of the floc blanket that is occupied by water, also called the "
+"fraction of the floc filter that is occupied by water, also called the "
 "water volume fraction. So, :math:`m_{H_2O} = \\left( 1 - "
 "\\frac{C_{clay}}{\\rho_{clay}} \\right) \\rho_{H_2O} \\rlap{-}V_{fb}`."
 msgstr ""
@@ -1027,7 +1027,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:631
 msgid ""
 "AguaClara researchers in the lab developed an empirical equation through "
-"experimental studies to calculate floc blanket density. They determined "
+"experimental studies to calculate floc filter density. They determined "
 "that,"
 msgstr ""
 
@@ -1038,26 +1038,26 @@ msgid ""
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:643
-msgid "Floc blanket head loss"
+msgid "Floc filter head loss"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:645
 msgid ""
-"Now that we can calculate the density of the floc blanket, we can "
-"calculate the head loss through the floc blanket. This topic will be "
+"Now that we can calculate the density of the floc filter, we can "
+"calculate the head loss through the floc filter. This topic will be "
 "discussed further in the chapter on filtration. For now, all you need to "
-"know is that density can be related to head loss in the floc blanket "
-"through the height of the floc blanket, :math:`H_{fb}`, and the densities"
-" of the floc blanket and water."
+"know is that density can be related to head loss in the floc filter "
+"through the height of the floc filter, :math:`H_{fb}`, and the densities"
+" of the floc filter and water."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:651
 msgid ""
-"There will be a small amount of head loss through the floc blanket "
-"because the density of the floc blanket is greater than the density of "
+"There will be a small amount of head loss through the floc filter "
+"because the density of the floc filter is greater than the density of "
 "water by only a little bit. Remember that "
 ":math:`\\frac{C_{clay}}{\\rho_{clay}}` is really just the fraction of the"
-" floc blanket that is occupied by clay."
+" floc filter that is occupied by clay."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:653
@@ -1067,7 +1067,7 @@ msgid ""
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:660
-msgid "Floc blanket velocity gradient and collision potential"
+msgid "Floc filter velocity gradient and collision potential"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:662
@@ -1080,7 +1080,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:672
 msgid ""
 "We will start by determining :math:`\\varepsilon` by calculating "
-":math:`\\theta` using the porosity of the floc blanket, "
+":math:`\\theta` using the porosity of the floc filter, "
 ":math:`\\phi_{fb}`,"
 msgstr ""
 
@@ -1106,9 +1106,9 @@ msgid ""
 "blanket concentrations, which is around 1 - 5 g/L. We find that "
 ":math:`G_{CS}` ranges from 2 to 6 Hz. Recall that for flocculator design,"
 " we get anywhere from 70 to several hundred Hz. The :math:`G_{CS}` "
-"provided by the floc blanket is much smaller than :math:`G_{CS}` provided"
+"provided by the floc filter is much smaller than :math:`G_{CS}` provided"
 " by the flocculator. This is an important point because in the low "
-":math:`G_{CS}` environment of the floc blanket where there are low levels"
+":math:`G_{CS}` environment of the floc filter where there are low levels"
 " of energy dissipation, we can grow larger flocs. The flocs are "
 "experiencing less shear so they can grow close to millimeter size."
 msgstr ""
@@ -1131,7 +1131,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:718
 msgid ""
-"Velocity gradient and collision potential as a function of floc blanket "
+"Velocity gradient and collision potential as a function of floc filter "
 "concentration."
 msgstr ""
 
@@ -1139,7 +1139,7 @@ msgstr ""
 msgid ""
 "How does such a small :math:`G_{CS}\\theta` cause such a large reduction "
 "in turbidity? The question we are really asking is, is there anything "
-"special about the :math:`G_{CS}\\theta` provided by the floc blanket "
+"special about the :math:`G_{CS}\\theta` provided by the floc filter "
 "compared to the :math:`G_{CS}\\theta` provided by the flocculator? If so,"
 " what is the difference and why is it so beneficial?"
 msgstr ""
@@ -1147,11 +1147,11 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:722
 msgid ""
 "Experimental data helps explain this. Two systems were set up: one had a "
-"flocculator where :math:`G_{CS}\\theta = 20,000` with a floc blanket "
+"flocculator where :math:`G_{CS}\\theta = 20,000` with a floc filter "
 "where :math:`G_{CS}\\theta = 4,000`; the other just had a flocculator "
 "where :math:`G_{CS}\\theta = 24,000`. Using the same influent water "
 "quality and coagulant dosing, we find that the first system with the "
-"flocculator and floc blanket performed better than the second system, "
+"flocculator and floc filter performed better than the second system, "
 "even though the overall :math:`G_{CS}\\theta` values were the same."
 msgstr ""
 
@@ -1165,11 +1165,11 @@ msgid ""
 "However, because we know that the two experimental setups did have "
 "different results, our assumption must be false because the assumption "
 "does not explain or account for these differences. There must be another "
-"mechanism occurring to explain why the floc blanket greatly improves "
+"mechanism occurring to explain why the floc filter greatly improves "
 "treatment quality. This leads us to believe that the flocs in the floc "
 "blanket must be more involved than simply providing shear and velocity "
 "gradients; they must be involved in some collisions with the small "
-"particles coming through the floc blanket."
+"particles coming through the floc filter."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:726
@@ -1179,8 +1179,8 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:728
 msgid ""
 "The model created by the original derivation assumption would suggests "
-"that flocs in the floc blanket are inert - simply occupying space and "
-"causing there to be head loss in the floc blanket - without being "
+"that flocs in the floc filter are inert - simply occupying space and "
+"causing there to be head loss in the floc filter - without being "
 "involved in any collisions. This model is disproved through the "
 "experimental analysis of the two experimental setups."
 msgstr ""
@@ -1188,8 +1188,8 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:729
 msgid ""
 "The model created after the analysis of experimental results suggests "
-"that flocs in the floc blanket are not inert - they are involved in "
-"collisions with small particles entering the floc blanket - and are "
+"that flocs in the floc filter are not inert - they are involved in "
+"collisions with small particles entering the floc filter - and are "
 "growing in size. The model is supported through the experimental "
 "analysis."
 msgstr ""
@@ -1201,7 +1201,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:736
 msgid ""
 "We now have a very interesting apparent contradiction between our "
-"conclusions about flocculation and floc blankets. We previously concluded"
+"conclusions about flocculation and floc filters. We previously concluded"
 " that primary particles do not collide with and attach to flocs in "
 "flocculators. This assumption is required to explain experimental "
 "observations. Indeed, if primary particles could attach to flocs in a "
@@ -1214,11 +1214,11 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:738
 msgid ""
 "The contradiction is that now we conclude that primary particles must be "
-"attaching to flocs in the floc blanket! Both of these conclusions are "
+"attaching to flocs in the floc filter! Both of these conclusions are "
 "based on a combination of experimental measurements and careful "
 "application of models. If these apparently contradictory conclusions are "
 "both correct, then there must be some fundamental difference between the "
-"particle interactions in flocculators and floc blankets."
+"particle interactions in flocculators and floc filters."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:740
@@ -1227,14 +1227,14 @@ msgid ""
 "forces. The source of the fluid deformation is different in these two "
 "flows. In the flocculator the source of the fluid deformation is from "
 "turbulent kinetic energy that is dissipating by deforming (shearing) the "
-"fluid. In the floc blanket the source of fluid deformation is from the "
+"fluid. In the floc filter the source of fluid deformation is from the "
 "gravitational pull on the flocs. The flocs are moving relative to the "
 "fluid and the fluid is being deformed as the flocs move through the "
 "fluid."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:744
-msgid "Comparison between flocculator and floc blanket."
+msgid "Comparison between flocculator and floc filter."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
@@ -1246,7 +1246,7 @@ msgid "Flocculator"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
-msgid "Floc blanket"
+msgid "Floc filter"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:1

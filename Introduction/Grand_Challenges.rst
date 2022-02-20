@@ -169,8 +169,8 @@ The AguaClara treatment train consists of the following processes
  - metering of the coagulant (and chlorine) that will cause particles to stick together
  - mixing of the coagulant with the raw water
  - flocculation where the water is deformed to cause particle collisions
- - floc blanket where large flocs settle through water that is flowing upward causing collisions between small particles carried by the upward flowing water and the large flocs
- - lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc blanket
+ - floc filter where large flocs settle through water that is flowing upward causing collisions between small particles carried by the upward flowing water and the large flocs
+ - lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc filter
  - stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed
  - disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes
 
@@ -211,7 +211,7 @@ Sedimentation
  #. Zero settled sludge in the main part of the sedimentation tank
  #. Hydraulically cleaned sedimentation tank with no moving parts
  #. Floc Hopper that consolidates the floc slurry prior to draining.
- #. Floc blanket that is stable due to loss to or gain from settled sludge
+ #. Floc filter that is stable due to loss to or gain from settled sludge
 
 Filtration
 ----------
@@ -348,7 +348,7 @@ Flow uniformity and contact with all of the solids could be achieved with a flui
 
 The hydraulic solution to this problem is to use pulsed flow with a pulse having a volume equal to perhaps 1-5 cm of depth in the reactor. The pulse will completely lift the settled bed of sludge and the sludge will then fall through the water column. This lift and drop cycle is expected to have much more uniform flow of water through the sludge bed then would be achieved by a stagnant bed that would rapidly develop preferential flow paths.
 
-Upflow anaerobic settled bed (UASB) are conventionally known as upflow anaerobic sludge blanket reactors. The word "blanket" is frequently used in the field of water and wastewater treatment to refer to a fluidized bed of suspended particles (see floc blanket). Unfortunately that definition is not clearly communicated by the term "blanket" and this has led to confusion of the fundamental mechanisms at play in UASB reactors.
+Upflow anaerobic settled bed (UASB) are conventionally known as upflow anaerobic sludge blanket reactors. The word "blanket" is frequently used in the field of water and wastewater treatment to refer to a fluidized bed of suspended particles (see floc filter). Unfortunately that definition is not clearly communicated by the term "blanket" and this has led to confusion of the fundamental mechanisms at play in UASB reactors.
 
 Fluidized bed reactors required inlet and bottom geometry configurations that prevent settled particles from accumulating anywhere on the bottom of the reactor. Many UASB reactors have flat bottoms and the inlets are not designed to ensure continuous resuspension of settled particles. Thus conventional UASB reactors are often not fluidized beds and thus don't have the mass transfer efficiencies that they could have.
 

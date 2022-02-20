@@ -142,7 +142,7 @@ Recall the formula for Reynold's number:
 
 **Answer:** The Reynolds number for this jet is 974.6 dimensionless
 
-6. `What is the Reynolds number of the vertical flow up through the top of the floc blanket? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=kvLaS4AEbhvR&line=2&uniqifier=1>`_
+6. `What is the Reynolds number of the vertical flow up through the top of the floc filter? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=kvLaS4AEbhvR&line=2&uniqifier=1>`_
 
 The same principle as above can be applied to this question except the length scale is the width of the sedimentation tank and the velocity is the upwards velocity in the tank.
 
@@ -254,11 +254,11 @@ The design will be for a 60 liter per second plant.
 
 1. `What is the total required plan area for the sedimentation tanks? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=wg6BNPlkP6oz&line=1&uniqifier=1>`_
 
-**Answer:** The plant view area of the floc blanket is 60 square meters.
+**Answer:** The plant view area of the floc filter is 60 square meters.
 
-2. `What is the total length of the floc blanket zone for all tanks? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=-MHwQyXUQEqp&line=1&uniqifier=1>`_
+2. `What is the total length of the floc filter zone for all tanks? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=-MHwQyXUQEqp&line=1&uniqifier=1>`_
 
-**Answer:** The total length of the floc blanket zone for all tanks is 56.24 meters.
+**Answer:** The total length of the floc filter zone for all tanks is 56.24 meters.
 
 3. `How many sedimentation tanks are required to treat the total plant flow? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=u0J7OWpoQVjy&line=1&uniqifier=1>`_ The plant flow rate is the basis of design and the maximum sed tank flow rate is based on the manifold diameter.
 
@@ -275,7 +275,7 @@ The design will be for a 60 liter per second plant.
 Plate Settler Design
 =====================
 
-We will assume that the active area of the sedimentation tank is equal to the top area of the floc blanket zone. This isn't quite right because of the geometric constraints from the floc hopper, inlet channel, settled water channel, and angled plates. However, it is a good approximation for these long tanks.
+We will assume that the active area of the sedimentation tank is equal to the top area of the floc filter zone. This isn't quite right because of the geometric constraints from the floc hopper, inlet channel, settled water channel, and angled plates. However, it is a good approximation for these long tanks.
 
 1. `What is the required length of the plate settlers? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=xK3Q6UmvRBAL&line=2&uniqifier=1>`_
 
