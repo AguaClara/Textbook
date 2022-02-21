@@ -4,14 +4,14 @@
 Flocs, Fractals, Forces
 ************************
 
-The physics of flocs, fractals, fluids, and forces define the processes of flocculation, flocnets, lamellar sedimentation, and filters. The chemical bonds that hold flocs together determine the maximum diameter that a floc can grow to in the fluid shear of a flocculator. The force of gravity is strong enough to break flocs and determines the maximum size that a floc can grow to on planet earth or, for that matter, in the flocnet that forms in the bottom of the AguaClara clarifiers. The maximum diameter that a floc can grow to without being pulled apart by gravity sets a maximum terminal velocity for flocs and that has direct implications for the maximum upflow velocity than can be used in upflow clarifiers.
+The physics of flocs, fractals, fluids, and forces define the processes of flocculation, floc filters, lamellar sedimentation, and filters. The chemical bonds that hold flocs together determine the maximum diameter that a floc can grow to in the fluid shear of a flocculator. The force of gravity is strong enough to break flocs and determines the maximum size that a floc can grow to on planet earth or, for that matter, in the floc filter that forms in the bottom of the AguaClara clarifiers. The maximum diameter that a floc can grow to without being pulled apart by gravity sets a maximum terminal velocity for flocs and that has direct implications for the maximum upflow velocity than can be used in upflow clarifiers.
 
 The three forces of chemical bonds, gravity, and shear can be grouped into two dimensionless parameters that will define the relationships between floc size, floc density, and these forces.
 
 Characteristic Core Particle
 ============================
 
-The concept of a characteristic core particle that sets the floc properties as it moves through the process of the flocculation, flocnet, settlers, and filter arose with two AguaClara plants in Honduras that ran into difficulties treating water from pristine high elevation mountain water sources. In both cases the water was very low turbidity and was yellow from dissolved organics. The exact source of the color was not identified, but it was likely the decaying leaf litter from the forests.
+The concept of a characteristic core particle that sets the floc properties as it moves through the process of the flocculation, floc filter, settlers, and filter arose with two AguaClara plants in Honduras that ran into difficulties treating water from pristine high elevation mountain water sources. In both cases the water was very low turbidity and was yellow from dissolved organics. The exact source of the color was not identified, but it was likely the decaying leaf litter from the forests.
 
 The high concentration of dissolved organics in the raw water requires a significant dosage of coagulant and there is very little clay present. The result is a very low density floc made of organic matter that is close to the density of water and perhaps even less dense than water and coagulant nanoparticles. These low density flocs are not captured efficiently by the plate settlers. The challenge of treating these two water sources led to the insight that we could characterize the properties of a floc if we understood the characteristic density and size of the core particle that aggregates to form the flocs.
 
@@ -665,4 +665,4 @@ The maximum terminal velocity (Equation :eq:`v_t_of_F_bond`) that can be obtaine
 
     The maximum terminal velocity increases as the density of the core particle increases.
 
-The maximum upflow velocity in the bottom of an upflow clarifier is limited by the maximum terminal velocity of the flocs. The flocs can grow to an even larger size while sliding down the plate settlers, but when they begin freefall they break apart and reach this maximum terminal velocity. The terminal velocity will also have direct influence on the concentration of the flocnet.
+The maximum upflow velocity in the bottom of an upflow clarifier is limited by the maximum terminal velocity of the flocs. The flocs can grow to an even larger size while sliding down the plate settlers, but when they begin freefall they break apart and reach this maximum terminal velocity. The terminal velocity will also have direct influence on the concentration of the floc filter.
