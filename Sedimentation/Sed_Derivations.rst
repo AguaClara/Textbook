@@ -87,11 +87,11 @@ Now, we can use this form of the capture velocity equation to solve for :math:`B
    :header: "Parameter", "Variable", "Determined by:", "Determines:", "Value"
    :align: left
 
-   Upflow velocity, :math:`\bar v_{z_{fb}}`, Floc filter, Plan view area of tank, 1 :math:`\frac{mm}{s}`
+   Upflow velocity, :math:`\bar v_{z_{ff}}`, Floc filter, Plan view area of tank, 1 :math:`\frac{mm}{s}`
    Capture velocity, :math:`\bar v_c`, Target turbidity, Particle size distribution, 0.12 :math:`\frac{mm}{s}`
    Plate angle, :math:`\alpha`, Self-cleaning requirements, :math:`L`, 60 deg
    Plate spacing, :math:`S`, Clogging and floc rollup constraints, :math:`L`, 2.5 cm
-   Plate settler length, :math:`L`, ":math:`\bar v_{z_{fb}}, \bar v_c, \alpha, S`",Tank depth, Calculated for each plant
+   Plate settler length, :math:`L`, ":math:`\bar v_{z_{ff}}, \bar v_c, \alpha, S`",Tank depth, Calculated for each plant
 
 The relationship between the vertical velocity and the velocity in the direction of the sloped tube or plate settlers is given by
 
@@ -501,31 +501,31 @@ With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use 
 
  \bar \varepsilon = \frac{gh_L}{\theta}
 
-We will start by determining :math:`\varepsilon` by calculating :math:`\theta` using the porosity of the floc filter, :math:`\phi_{fb}`,
+We will start by determining :math:`\varepsilon` by calculating :math:`\theta` using the porosity of the floc filter, :math:`\phi_{ff}`,
 
 .. math::
 
-  \theta = \frac{H_{fb} \phi_{fb}}{\bar v_{z_{fb}}}
+  \theta = \frac{H_{ff} \phi_{ff}}{\bar v_{z_{ff}}}
 
 Plugging :math:`\theta` into :math:`\varepsilon` yields
 
 .. math::
 
-  \bar \varepsilon = \frac{g \bar v_{z_{fb}}}{\phi_{fb}} \frac{h_L}{H_{fb}}
+  \bar \varepsilon = \frac{g \bar v_{z_{ff}}}{\phi_{ff}} \frac{h_L}{H_{ff}}
 
 Substituting into our equation for :math:`G`,
 
 .. math::
 
-  G_{CS} =  \sqrt{\frac{g \bar v_{z_{fb}}}{\nu \phi_{fb}} \frac{h_L}{H_{fb}}}
+  G_{CS} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \frac{h_L}{H_{ff}}}
 
 Using our equation for :math:`h_L`,
 
 .. math::
 
-  G_{CS} =  \sqrt{\frac{g \bar v_{z_{fb}}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }
+  G_{CS} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }
 
-:math:`\phi_{fb} \approx 1` and is a function of :math:`C_{clay}`
+:math:`\phi_{ff} \approx 1` and is a function of :math:`C_{clay}`
 
 We can plot our results for :math:`G_{CS}` over a range of typical floc filter concentrations, which is around 1 - 5 g/L. We find that :math:`G_{CS}` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`G_{CS}` provided by the floc filter is much smaller than :math:`G_{CS}` provided by the flocculator. This is an important point because in the low :math:`G_{CS}` environment of the floc filter where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
 
@@ -584,7 +584,7 @@ To calculate the density of the floc filter at steady-state, we will use princip
 
 .. math::
 
-  C_{clay} = \frac{m_{clay}}{\rlap{-}V_{fb}}
+  C_{clay} = \frac{m_{clay}}{\rlap{-}V_{ff}}
 
 .. math::
 
@@ -593,37 +593,37 @@ To calculate the density of the floc filter at steady-state, we will use princip
 We will start by finding the mass of clay and the mass of water in the floc filter, where:
 
 | :math:`C_{clay} =` concentration of clay in the floc filter
-| :math:`\rlap{-}V_{fb} =` volume of floc filter
+| :math:`\rlap{-}V_{ff} =` volume of floc filter
 | :math:`\rho_{clay} =` density of clay
 | :math:`\rho_{H_2O} =` density of water
-| :math:`\rho_{fb} =` density of floc filter
+| :math:`\rho_{ff} =` density of floc filter
 
-The mass of clay in the floc filter is concentration multiplied by volume, shown by :math:`m_{clay} = C_{clay}\rlap{-}V_{fb}`
+The mass of clay in the floc filter is concentration multiplied by volume, shown by :math:`m_{clay} = C_{clay}\rlap{-}V_{ff}`
 
-The mass of water in the floc filter is related to the volume fraction of the floc filter that is occupied by clay, :math:`\frac{C_{clay}}{\rho_{clay}}`, whic is a very small number. :math:`\left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)` is the fraction of the floc filter that is occupied by water, also called the water volume fraction. So, :math:`m_{H_2O} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right) \rho_{H_2O} \rlap{-}V_{fb}`.
+The mass of water in the floc filter is related to the volume fraction of the floc filter that is occupied by clay, :math:`\frac{C_{clay}}{\rho_{clay}}`, whic is a very small number. :math:`\left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)` is the fraction of the floc filter that is occupied by water, also called the water volume fraction. So, :math:`m_{H_2O} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right) \rho_{H_2O} \rlap{-}V_{ff}`.
 
 Now, we know how much clay and water is in our system. The density of the system, neglecting the addition of coagulant, is,
 
 .. math::
 
-  \rho_{fb} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{fb}}
+  \rho_{ff} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{ff}}
 
 Substituting for :math:`m_{clay}` and :math:`m_{H_2O}`,
 
 .. math::
 
-  \rho_{fb} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\rho_{H_2O} + C_{clay}
+  \rho_{ff} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\rho_{H_2O} + C_{clay}
 
 This can be rearranged to yield the following equation derived from first principles,
 
 .. math::
 
-  \rho_{fb} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right)C_{clay} + \rho_{H_2O}
+  \rho_{ff} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right)C_{clay} + \rho_{H_2O}
 
 AguaClara researchers in the lab developed an empirical equation through experimental studies to calculate floc filter density. They determined that,
 
 .. math::
-  \rho_{fb} = 0.687C_{clay} + \rho_{H_2O}
+  \rho_{ff} = 0.687C_{clay} + \rho_{H_2O}
 
 Comparing the empirical equation to the one determined by first principles, it is clear that the coefficient,
 
@@ -634,19 +634,19 @@ Comparing the empirical equation to the one determined by first principles, it i
 Head Loss
 -----------
 
-Now that we can calculate the density of the floc filter, we can calculate the head loss through the floc filter. This topic will be discussed further in the chapter on filtration. For now, all you need to know is that density can be related to head loss in the floc filter through the height of the floc filter, :math:`H_{fb}`, and the densities of the floc filter and water.
+Now that we can calculate the density of the floc filter, we can calculate the head loss through the floc filter. This topic will be discussed further in the chapter on filtration. For now, all you need to know is that density can be related to head loss in the floc filter through the height of the floc filter, :math:`H_{ff}`, and the densities of the floc filter and water.
 
 .. math::
 
-  \frac{h_L}{H_{fb}} = \frac{\rho_{fb} - \rho_{H_2O}}{\rho_{H_2O}}
+  \frac{h_L}{H_{ff}} = \frac{\rho_{ff} - \rho_{H_2O}}{\rho_{H_2O}}
 
 There will be a small amount of head loss through the floc filter because the density of the floc filter is greater than the density of water by only a little bit. Remember that :math:`\frac{C_{clay}}{\rho_{clay}}` is really just the fraction of the floc filter that is occupied by clay.
 
-Plugging in the equation for :math:`\rho_{fb}` and solving for :math:`h_L`,
+Plugging in the equation for :math:`\rho_{ff}` and solving for :math:`h_L`,
 
 .. math::
 
-  h_L = H_{fb} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}
+  h_L = H_{ff} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}
 
 .. _heading_Flocculator_Floc_Blanket_Paradox:
 
@@ -728,7 +728,7 @@ Let's begin by finding the internal width of a single diffuser. Using conservati
 
 .. math::
 
-  Q_{diff} = \bar v_{jet}W_{diff}S_{diff} = \bar v_{z_{fb}}W_{Sed}B_{diff}
+  Q_{diff} = \bar v_{jet}W_{diff}S_{diff} = \bar v_{z_{ff}}W_{Sed}B_{diff}
 
 :math:`Q_{diff}` is determined :ref:`as an example <heading_flow_thru_diffuser>`, where we find that :math:`Q_{diff} = 50 \frac{mL}{s}`.
 
@@ -736,7 +736,7 @@ Solving for :math:`W_{diff}`,
 
 .. math::
 
-  W_{diff} = \frac{\bar v_{z_{fb}}W_{Sed}B_{diff}}{\bar v_{jet}S_{diff}}
+  W_{diff} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{\bar v_{jet}S_{diff}}
 
 Using the constraint of head loss in the jet and solving for :math:`\bar v_{jet}`,
 
@@ -752,11 +752,11 @@ Substituting back into the equation for :math:`W_{diff}`, we can find the minimu
 
 .. math::
 
-  W_{diff,min} = \frac{\bar v_{z_{fb}}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}
+  W_{diff,min} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}
 
 Now that we have determined the minimum width, we can use known parameters and constraints to find a precise value for :math:`W_{diff}` and :math:`v_{jet}`.
 
-Using known constants for :math:`\bar v_{z_{fb}} = 1 \frac{mm}{s}`, :math:`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that :math:`W_{diff,min} = 2.7 mm`. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to 3.175 mm.
+Using known constants for :math:`\bar v_{z_{ff}} = 1 \frac{mm}{s}`, :math:`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that :math:`W_{diff,min} = 2.7 mm`. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to 3.175 mm.
 
 .. math::
 
@@ -766,7 +766,7 @@ Solving for :math:`\bar v_{jet}` from our earlier equations yields,
 
 .. math::
 
-  \bar v_{jet} = \frac{\bar v_{z_{fb}}W_{Sed}B_{diff}}{W_{diff}S_{diff}}
+  \bar v_{jet} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{W_{diff}S_{diff}}
 
 Using known constants,
 

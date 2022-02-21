@@ -31,21 +31,21 @@ From the floc filter we know that particle removal is first order with respect t
 .. math::
   :label: dCPdt_fb
 
-	 \frac{dC_{P}}{dt}=-k_{fb}C_{P}
+	 \frac{dC_{P}}{dt}=-k_{ff}C_{P}
 
 Separate variables to integrate this rate equation.
 
 .. math::
   :label:
 
-	 \frac{dC_{P}}{C_{P}}=-k_{fb}dt
+	 \frac{dC_{P}}{C_{P}}=-k_{ff}dt
 
 We integrate this to solve for the rate constant.
 
 .. math::
   :label:
 
-	 k_{fb} = -\frac{1}{\theta_{fb}}ln{\frac{C_{P}}{C_{P_0}}}
+	 k_{ff} = -\frac{1}{\theta_{ff}}ln{\frac{C_{P}}{C_{P_0}}}
 
 We will use the previous equation to estimate the rate constant for the floc filter.
 
@@ -54,14 +54,14 @@ We can obtain a minimum volume design by setting the rate of primary particle lo
 .. math::
   :label:
 
-	 -k_{fb}C_{P}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} G_{CS}
+	 -k_{ff}C_{P}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} G_{CS}
 
 Now we solve the previous equation for the target concentration of primary particles that we should design for at the end of the flocculator.
 
 .. math::
   :label:
 
-	C_{P_{floc out}} = \frac{\pi \rho_P}{6} \left( \frac{k_{fb}}{\pi\bar{\alpha}k G_{CS}}\right)^{3/2}
+	C_{P_{floc out}} = \frac{\pi \rho_P}{6} \left( \frac{k_{ff}}{\pi\bar{\alpha}k G_{CS}}\right)^{3/2}
 
 
 The concentration of primary particles at the flocculator effluent will be a function of the flocculator velocity gradient.
@@ -101,14 +101,14 @@ Now we can substitute the equation for the optimal flocculated water primary par
 .. math::
   :label:
 
-   G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi\bar{\alpha}k G_{CS}}{k_{fb}}\right)
+   G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi\bar{\alpha}k G_{CS}}{k_{ff}}\right)
 
 This simplifies to a very simple relationship that gives the optimal flocculator residence time. This analysis assumes that the cost per volume of flocculator is the same as the cost per volume of floc filter.
 
 .. math::
   :label:
 
-  \theta \approx \frac{3}{2} \left( \frac{1}{k_{fb}}\right)
+  \theta \approx \frac{3}{2} \left( \frac{1}{k_{ff}}\right)
 
 We now have an equation for the optimal flocculator residence time! It is a function of the floc filter rate constant. The analysis below suggests that the optimal flocculator residence time is about 300 seconds (5 minutes). This analysis does not provide guidance on the optimal amount of energy to be used in that flocculator. Overall plant performance is a function of how much energy is used in flocculation and so that would need to be an economic analysis. Startup performance when the floc filter is not yet formed is a function of the energy dissipation rate.
 
@@ -151,35 +151,35 @@ There must be an optimal amount of recycled flocs for a floc filter. Of course, 
 
 Our goal is to find the optimal recycle ratio. Optimal is defined as the maximum collision potential. Collision potential for the floc filter is proportional to to the collision rate times the hydraulic residence time. The collision rate is proportional to the solids concentration and the hindered sedimentation velocity of those flocs. The collision potential is thus proportional to the total number of flocs that a primary particle passes on its way through the floc filter.
 
-.. math:: CP_{fb} \propto C_{fb} \theta_{fb} \bar v_{hindered}
+.. math:: CP_{ff} \propto C_{ff} \theta_{ff} \bar v_{hindered}
 
 The residence time in the floc filter is given by
 
-.. math:: \theta_{fb} = \frac{H_{fb}}{\bar v_{fb}}
+.. math:: \theta_{ff} = \frac{H_{ff}}{\bar v_{ff}}
 
-.. math:: \bar v_{fb} = \frac{Q_{plant} + Q_{recycle}}{A_{fb}}
+.. math:: \bar v_{ff} = \frac{Q_{plant} + Q_{recycle}}{A_{ff}}
 
 .. math:: Q_{recycle} = \Pi_{recycle}Q_{plant}
 
 The velocity up through the floc filter without recycle is defined as
 
-.. math:: \bar v_z = \frac{Q_{plant}}{A_{fb}}
+.. math:: \bar v_z = \frac{Q_{plant}}{A_{ff}}
 
-.. math:: \bar v_{fb} = \bar v_z\left( 1 + \Pi_{recycle} \right)
+.. math:: \bar v_{ff} = \bar v_z\left( 1 + \Pi_{recycle} \right)
 
 Now we need equations for the concentration in the floc filter. This is based on mass conservation such that the mass in the floc filter is constant. There is a hindered sedimentation velocity of the flocs that results in a reduction of the mass flux out of the top of the control volume.
 
-.. math:: C_{fb}\left(\frac{ Q_{plant}+Q_{recycle} }{A_{fb}}-\bar v_{hindered}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}Q_{recycle}
+.. math:: C_{ff}\left(\frac{ Q_{plant}+Q_{recycle} }{A_{ff}}-\bar v_{hindered}\right) A_{ff}= C_{plant}Q_{plant} + C_{recycle}Q_{recycle}
 
-.. math:: C_{fb}\left(\frac{ Q_{plant}+\Pi_{recycle}Q_{plant} }{A_{fb}}-\bar v_{hindered}\frac{Q_{plant}}{Q_{plant}}\right) A_{fb}= C_{plant}Q_{plant} + C_{recycle}\Pi_{recycle}Q_{plant}
+.. math:: C_{ff}\left(\frac{ Q_{plant}+\Pi_{recycle}Q_{plant} }{A_{ff}}-\bar v_{hindered}\frac{Q_{plant}}{Q_{plant}}\right) A_{ff}= C_{plant}Q_{plant} + C_{recycle}\Pi_{recycle}Q_{plant}
 
-.. math:: C_{fb}\left( 1+\Pi_{recycle} -\frac{\bar v_{hindered}}{\bar v_z}\right) = C_{plant} + C_{recycle}\Pi_{recycle}
+.. math:: C_{ff}\left( 1+\Pi_{recycle} -\frac{\bar v_{hindered}}{\bar v_z}\right) = C_{plant} + C_{recycle}\Pi_{recycle}
 
-.. math:: C_{fb} = \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{\bar v_{hindered}}{\bar v_z}\right)}
+.. math:: C_{ff} = \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{\bar v_{hindered}}{\bar v_z}\right)}
 
 Now we can substitute to get the collision potential as a function of the flow rates.
 
-.. math:: CP_{fb} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{\bar v_{hindered}}{\bar v_z}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{fb}\bar v_{hindered}} {\bar v_z}
+.. math:: CP_{ff} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{\bar v_{hindered}}{\bar v_z}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{ff}\bar v_{hindered}} {\bar v_z}
 
 We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc filter. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc filter. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland's measurements of the solids concentration in the floc hopper sludge.
 
@@ -206,19 +206,19 @@ The recycle sludge has a density given by
 
 The piezometric head (measured in equivalent change in height of the recycle line liquid) that is causing the flow through the recycle line is equal to the difference in density between the recycled sludge and the floc filter times the height of the floc filter normalized by the recycle line density.
 
-.. math:: H_l = H_{fb}\frac{\rho_{sludge} - \rho_{fb}}{\rho_{sludge}}
+.. math:: H_l = H_{ff}\frac{\rho_{sludge} - \rho_{ff}}{\rho_{sludge}}
 
 Substitute to replace the sludge and floc filter densities.
 
-.. math:: H_l = H_{fb}\frac{\left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O} -\left[  \left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{fb} + \rho_{H_2O} \right]} {\left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O}}
+.. math:: H_l = H_{ff}\frac{\left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O} -\left[  \left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{ff} + \rho_{H_2O} \right]} {\left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{sludge} + \rho_{H_2O}}
 
 Simplify the equation for the head loss in the recycle tube.
 
-.. math:: H_l = H_{fb}\frac{ C_{sludge} -C_{fb}} { C_{sludge} + \frac{\rho_{H_2O}\rho_{Clay}}{  \rho_{Clay} -\rho_{H_2O} }}
+.. math:: H_l = H_{ff}\frac{ C_{sludge} -C_{ff}} { C_{sludge} + \frac{\rho_{H_2O}\rho_{Clay}}{  \rho_{Clay} -\rho_{H_2O} }}
 
 The recycle tube is assumed to be sloped at 60 degrees from the horizontal to enable further consolidation. The length of the recycle tube is
 
-.. math:: L_{tube} = H_{fb}/sin(60)
+.. math:: L_{tube} = H_{ff}/sin(60)
 
 We will assume that the dynamic viscosity of the sludge is the same as the dynamic viscosity of water. We will calculate the kinematic viscosity of the sludge by dividing the dynamic viscosity of water by the density of the recycle.
 

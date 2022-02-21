@@ -319,8 +319,8 @@ msgstr "Distancia entre las expansiones de flujo en un floculador"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy
-msgid ":math:`H_{fb}`"
-msgstr ":matemáticas:`H_{fb}`"
+msgid ":math:`H_{ff}`"
+msgstr ":matemáticas:`H_{ff}`"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy
@@ -358,8 +358,8 @@ msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy
-msgid ":math:`L_{fb}`"
-msgstr ":matemáticas:`L_{fb}`"
+msgid ":math:`L_{ff}`"
+msgstr ":matemáticas:`L_{ff}`"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy
@@ -913,8 +913,8 @@ msgstr "Porosidad"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy
-msgid ":math:`\\phi_{fb}`"
-msgstr ":matemáticas:`\\phi_{fb}`"
+msgid ":math:`\\phi_{ff}`"
+msgstr ":matemáticas:`\\phi_{ff}`"
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
 #, fuzzy

@@ -40,11 +40,11 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`H`,Height,:math:`[L]`
     :math:`H_c`,Critical height,:math:`[L]`
     :math:`H_e`,Distance Between Flow Expansions in a Flocculator,:math:`[L]`
-    :math:`H_{fb}`,Height of the floc filter,:math:`[L]`
+    :math:`H_{ff}`,Height of the floc filter,:math:`[L]`
     :math:`K`,Minor Loss coefficient,Dimensionless
     :math:`L`,Length,:math:`[L]`
     :math:`L_{SedActive}`,Length of the plate settlers in the sedimentation tank (not including the triangle at the end of the tank),:math:`[L]`
-    :math:`L_{fb}`,Length of the floc filter in a sedimentation tank,:math:`[L]`
+    :math:`L_{ff}`,Length of the floc filter in a sedimentation tank,:math:`[L]`
     :math:`M`,Fluid Momentum,:math:`\frac{[M][L]}{[T]^2}`
     :math:`P`,Power,:math:`\frac{[M][L]^2}{[T]^3}`
     :math:`Q`,Flow rate,:math:`\frac{[L]^3}{[T]}`
@@ -96,7 +96,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`\mu`,Dynamic viscosity,:math:`\frac{[M]}{[T][L]}`
     :math:`\nu`,Kinematic viscosity,:math:`\frac{[L]^2}{[T]}`
     :math:`\phi`,Porosity, Dimensionless
-    :math:`\phi_{fb}`,Porosity of floc filter, Dimensionless
+    :math:`\phi_{ff}`,Porosity of floc filter, Dimensionless
     :math:`\rho`,Density,:math:`\frac{[M]}{[L]^3}`
     :math:`\theta`,Residence Time,:math:`[T]`
     :math:`\tau`,Shear,:math:`\frac{[L]}{[M][T]^2}`

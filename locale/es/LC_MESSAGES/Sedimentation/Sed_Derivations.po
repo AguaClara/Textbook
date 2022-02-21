@@ -141,16 +141,16 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:40
 #, fuzzy
 msgid ""
-":math:`\\bar v_{z_{fb}} =` upflow velocity of the water through the floc "
+":math:`\\bar v_{z_{ff}} =` upflow velocity of the water through the floc "
 "blanket"
 msgstr ""
-":matemáticas:`\\bar v_{z_{fb}} =` velocidad de subida del agua a través de "
+":matemáticas:`\\bar v_{z_{ff}} =` velocidad de subida del agua a través de "
 "la manta de flóculos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:42
 #, fuzzy
-msgid "Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \\bar v_{z_{fb}}`"
-msgstr "Así, :matemáticas:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \\bar v_{z_{fb}`"
+msgid "Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \\bar v_{z_{ff}}`"
+msgstr "Así, :matemáticas:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \\bar v_{z_{ff}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:45
 #, fuzzy
@@ -195,7 +195,7 @@ msgid ""
 "active length is less than the floc filter length, :math:`L_{SedActive} < "
 "L_{SedFloc}`, and because flow must be conserved, the average active "
 "velocity must be greater than the average upflow velocity through the floc "
-"blanket, :math:`\\bar v_{z_{Active}} > \\bar v_{z_{fb}}`. The same flow "
+"blanket, :math:`\\bar v_{z_{Active}} > \\bar v_{z_{ff}}`. The same flow "
 "going through less area means that the velocity must increase."
 msgstr ""
 "La única razón por la que hay una distinción entre esta área y el área de la "
@@ -206,17 +206,17 @@ msgstr ""
 "de flóculos, :matemáticas:`L_{SedActive} < L_{SedFloc}`, y como el flujo "
 "debe ser conservado, la velocidad activa promedio debe ser mayor que la "
 "velocidad promedio de ascenso a través de la manta de flóculos, :math:`\\bar "
-"v_{z_{Active}} > \\bar v_{z_{fb}`. El mismo flujo que pasa por menos área "
+"v_{z_{Active}} > \\bar v_{z_{ff}`. El mismo flujo que pasa por menos área "
 "significa que la velocidad debe aumentar."
 
 #: ../../Sedimentation/Sed_Derivations.rst:54
 #, fuzzy
 msgid ""
 "Thus, :math:`Q_{Sed} = W_{Sed} L_{SedActive} \\bar v_{z_{Active}}`, and :"
-"math:`\\bar v_{z_{Active}} > \\bar v_{z_{fb}}`."
+"math:`\\bar v_{z_{Active}} > \\bar v_{z_{ff}}`."
 msgstr ""
 "Así, :matemáticas:`Q_{Sed} = W_{Sed} L_{SedActive} \\bar v_{z_{Active}`, y :"
-"matemáticas:`\\bar v_{z_{Active}} > \\bar v_{z_{fb}`."
+"matemáticas:`\\bar v_{z_{Active}} > \\bar v_{z_{ff}`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:57
 #, fuzzy
@@ -282,10 +282,10 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:69
 #, fuzzy
 msgid ""
-"Thus, :math:`\\bar v_{z_{Plate}} > \\bar v_{z_{Active}} > \\bar v_{z_{fb}}`"
+"Thus, :math:`\\bar v_{z_{Plate}} > \\bar v_{z_{Active}} > \\bar v_{z_{ff}}`"
 msgstr ""
 "Por lo tanto, :math:`\\bar v_{z_{Plate}} > \\bar v_{z_{Active}} > \\bar "
-"v_{z_{fb}`"
+"v_{z_{ff}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:71
 #, fuzzy
@@ -501,8 +501,8 @@ msgstr "Velocidad de ascenso"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
 #, fuzzy
-msgid ":math:`\\bar v_{z_{fb}}`"
-msgstr ":math:`\\bar v_{z_{fb}}`"
+msgid ":math:`\\bar v_{z_{ff}}`"
+msgstr ":math:`\\bar v_{z_{ff}}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
 #, fuzzy
@@ -596,8 +596,8 @@ msgstr "Longitud de la placa de asentamiento"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
 #, fuzzy
-msgid ":math:`\\bar v_{z_{fb}}, \\bar v_c, \\alpha, S`"
-msgstr ":matemáticas:``bar v_{z_{fb}}, \\bar v_c, \\alpha, S`"
+msgid ":math:`\\bar v_{z_{ff}}, \\bar v_c, \\alpha, S`"
+msgstr ":matemáticas:``bar v_{z_{ff}}, \\bar v_c, \\alpha, S`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
 #, fuzzy
@@ -1468,8 +1468,8 @@ msgstr ":matemáticas:`C_{clay} =` concentración de arcilla en la manta de floc
 
 #: ../../Sedimentation/Sed_Derivations.rst:604
 #, fuzzy
-msgid ":math:`\\rlap{-}V_{fb} =` volume of floc filter"
-msgstr ":matemáticas:`\\rlap{-}V_{fb} =` volumen de la manta de flóculos"
+msgid ":math:`\\rlap{-}V_{ff} =` volume of floc filter"
+msgstr ":matemáticas:`\\rlap{-}V_{ff} =` volumen de la manta de flóculos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:605
 #, fuzzy
@@ -1483,18 +1483,18 @@ msgstr ":matemáticas:`\\rho_{H_2O} =` densidad del agua"
 
 #: ../../Sedimentation/Sed_Derivations.rst:607
 #, fuzzy
-msgid ":math:`\\rho_{fb} =` density of floc filter"
-msgstr ":matemáticas:`\\rho_{fb} =` densidad de la manta de flóculos"
+msgid ":math:`\\rho_{ff} =` density of floc filter"
+msgstr ":matemáticas:`\\rho_{ff} =` densidad de la manta de flóculos"
 
 #: ../../Sedimentation/Sed_Derivations.rst:609
 #, fuzzy
 msgid ""
 "The mass of clay in the floc filter is concentration multiplied by volume, "
-"shown by :math:`m_{clay} = C_{clay}\\rlap{-}V_{fb}`"
+"shown by :math:`m_{clay} = C_{clay}\\rlap{-}V_{ff}`"
 msgstr ""
 "La masa de arcilla en el manto de flóculos es la concentración multiplicada "
 "por el volumen, mostrado por :matemáticas:`m_{clay} = C_{clay}\\rlap{-}"
-"V_{fb}`"
+"V_{ff}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:611
 #, fuzzy
@@ -1505,7 +1505,7 @@ msgid ""
 "\\frac{C_{clay}}{\\rho_{clay}} \\right)` is the fraction of the floc filter "
 "that is occupied by water, also called the water volume fraction. So, :math:"
 "`m_{H_2O} = \\left( 1 - \\frac{C_{clay}}{\\rho_{clay}} \\right) \\rho_{H_2O} "
-"\\rlap{-}V_{fb}`."
+"\\rlap{-}V_{ff}`."
 msgstr ""
 "La masa de agua en el manto de flóculo está relacionada con la fracción de "
 "volumen del manto de flóculo que está ocupada por la arcilla, :matemáticas:"
@@ -1513,7 +1513,7 @@ msgstr ""
 "izquierda( 1 - \\frac{C_{clay}{rho_{clay}} {\\a6}} {\\a6}}es la fracción del "
 "manto de flóculo que está ocupada por el agua, también llamada la fracción "
 "de volumen de agua. Así que, :matemáticas:`m_{H_2O} = \\Nizquierda( 1 - "
-"\\Nfrac{C_{clay}}{\\Nrho_{clay}} {\\i1}derecha} \\ ~ - V_{fb}`."
+"\\Nfrac{C_{clay}}{\\Nrho_{clay}} {\\i1}derecha} \\ ~ - V_{ff}`."
 
 #: ../../Sedimentation/Sed_Derivations.rst:613
 #, fuzzy
@@ -1569,7 +1569,7 @@ msgid ""
 "the head loss through the floc filter. This topic will be discussed further "
 "in the chapter on filtration. For now, all you need to know is that density "
 "can be related to head loss in the floc filter through the height of the "
-"floc filter, :math:`H_{fb}`, and the densities of the floc filter and "
+"floc filter, :math:`H_{ff}`, and the densities of the floc filter and "
 "water."
 msgstr ""
 "Ahora que podemos calcular la densidad de la manta de flóculos, podemos "
@@ -1577,7 +1577,7 @@ msgstr ""
 "discutirá más adelante en el capítulo sobre la filtración. Por ahora, todo "
 "lo que necesitas saber es que la densidad puede estar relacionada con la "
 "pérdida de carga en la manta de flóculos a través de la altura de la manta "
-"de flóculos, :math:`H_{fb}`, y las densidades de la manta de flóculos y del "
+"de flóculos, :math:`H_{ff}`, y las densidades de la manta de flóculos y del "
 "agua."
 
 #: ../../Sedimentation/Sed_Derivations.rst:651
@@ -1597,9 +1597,9 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:653
 #, fuzzy
 msgid ""
-"Plugging in the equation for :math:`\\rho_{fb}` and solving for :math:`h_L`,"
+"Plugging in the equation for :math:`\\rho_{ff}` and solving for :math:`h_L`,"
 msgstr ""
-"Conectando la ecuación para :math:`rho_{fb}` y resolviendo para :math:`h_L`,"
+"Conectando la ecuación para :math:`rho_{ff}` y resolviendo para :math:`h_L`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:660
 #, fuzzy
@@ -1622,10 +1622,10 @@ msgstr ""
 #, fuzzy
 msgid ""
 "We will start by determining :math:`\\varepsilon` by calculating :math:`"
-"\\theta` using the porosity of the floc filter, :math:`\\phi_{fb}`,"
+"\\theta` using the porosity of the floc filter, :math:`\\phi_{ff}`,"
 msgstr ""
 "Empezaremos determinando :matemáticas:`varepsilon` calculando :matemáticas:"
-"``la porosidad de la manta de flóculos, :matemáticas:``phi_{fb}`,"
+"``la porosidad de la manta de flóculos, :matemáticas:``phi_{ff}`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:678
 #, fuzzy
@@ -1644,9 +1644,9 @@ msgstr "Usando nuestra ecuación para :math:`h_L`,"
 
 #: ../../Sedimentation/Sed_Derivations.rst:696
 #, fuzzy
-msgid ":math:`\\phi_{fb} \\approx 1` and is a function of :math:`C_{clay}`"
+msgid ":math:`\\phi_{ff} \\approx 1` and is a function of :math:`C_{clay}`"
 msgstr ""
-":matemáticas:`\\phi_{fb} \\aproximadamente 1` y es una función de :"
+":matemáticas:`\\phi_{ff} \\aproximadamente 1` y es una función de :"
 "matemáticas:`C_{clay}`"
 
 #: ../../Sedimentation/Sed_Derivations.rst:698
@@ -2289,13 +2289,13 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:862
 #, fuzzy
 msgid ""
-"Using known constants for :math:`\\bar v_{z_{fb}} = 1 \\frac{mm}{s}`, :math:"
+"Using known constants for :math:`\\bar v_{z_{ff}} = 1 \\frac{mm}{s}`, :math:"
 "`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that :math:"
 "`W_{diff,min} = 2.7 mm`. The mold used to create diffusers in Honduras comes "
 "in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to "
 "3.175 mm."
 msgstr ""
-"Usando las constantes conocidas para :math:``bar v_{z_{fb}} = 1 \\frac{mm}{s}"
+"Usando las constantes conocidas para :math:``bar v_{z_{ff}} = 1 \\frac{mm}{s}"
 "`, :math:`h_{L,jet} = 1 cm`, y :math:`W_{Sed} = 1m`, podemos encontrar que :"
 "math:`W_{diff,min} = 2.7 mm`. El molde usado para crear difusores en "
 "Honduras viene en tamaños de 1/8 pulg. o 3.175 mm, así que para encontrar :"

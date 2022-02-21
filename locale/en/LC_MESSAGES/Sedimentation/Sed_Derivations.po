@@ -97,12 +97,12 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:40
 msgid ""
-":math:`\\bar v_{z_{fb}} =` upflow velocity of the water through the floc "
+":math:`\\bar v_{z_{ff}} =` upflow velocity of the water through the floc "
 "blanket"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:42
-msgid "Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \\bar v_{z_{fb}}`"
+msgid "Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \\bar v_{z_{ff}}`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:45
@@ -137,14 +137,14 @@ msgid ""
 ":math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, "
 "the average active velocity must be greater than the average upflow "
 "velocity through the floc filter, :math:`\\bar v_{z_{Active}} > \\bar "
-"v_{z_{fb}}`. The same flow going through less area means that the "
+"v_{z_{ff}}`. The same flow going through less area means that the "
 "velocity must increase."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:54
 msgid ""
 "Thus, :math:`Q_{Sed} = W_{Sed} L_{SedActive} \\bar v_{z_{Active}}`, and "
-":math:`\\bar v_{z_{Active}} > \\bar v_{z_{fb}}`."
+":math:`\\bar v_{z_{Active}} > \\bar v_{z_{ff}}`."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:57
@@ -191,7 +191,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Derivations.rst:69
 msgid ""
 "Thus, :math:`\\bar v_{z_{Plate}} > \\bar v_{z_{Active}} > \\bar "
-"v_{z_{fb}}`"
+"v_{z_{ff}}`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:71
@@ -337,7 +337,7 @@ msgid "Upflow velocity"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
-msgid ":math:`\\bar v_{z_{fb}}`"
+msgid ":math:`\\bar v_{z_{ff}}`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
@@ -413,7 +413,7 @@ msgid "Plate settler length"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
-msgid ":math:`\\bar v_{z_{fb}}, \\bar v_c, \\alpha, S`"
+msgid ":math:`\\bar v_{z_{ff}}, \\bar v_c, \\alpha, S`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:1
@@ -976,7 +976,7 @@ msgid ":math:`C_{clay} =` concentration of clay in the floc filter"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:604
-msgid ":math:`\\rlap{-}V_{fb} =` volume of floc filter"
+msgid ":math:`\\rlap{-}V_{ff} =` volume of floc filter"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:605
@@ -988,13 +988,13 @@ msgid ":math:`\\rho_{H_2O} =` density of water"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:607
-msgid ":math:`\\rho_{fb} =` density of floc filter"
+msgid ":math:`\\rho_{ff} =` density of floc filter"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:609
 msgid ""
 "The mass of clay in the floc filter is concentration multiplied by "
-"volume, shown by :math:`m_{clay} = C_{clay}\\rlap{-}V_{fb}`"
+"volume, shown by :math:`m_{clay} = C_{clay}\\rlap{-}V_{ff}`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:611
@@ -1005,7 +1005,7 @@ msgid ""
 ":math:`\\left( 1 - \\frac{C_{clay}}{\\rho_{clay}} \\right)` is the "
 "fraction of the floc filter that is occupied by water, also called the "
 "water volume fraction. So, :math:`m_{H_2O} = \\left( 1 - "
-"\\frac{C_{clay}}{\\rho_{clay}} \\right) \\rho_{H_2O} \\rlap{-}V_{fb}`."
+"\\frac{C_{clay}}{\\rho_{clay}} \\right) \\rho_{H_2O} \\rlap{-}V_{ff}`."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:613
@@ -1047,7 +1047,7 @@ msgid ""
 "calculate the head loss through the floc filter. This topic will be "
 "discussed further in the chapter on filtration. For now, all you need to "
 "know is that density can be related to head loss in the floc filter "
-"through the height of the floc filter, :math:`H_{fb}`, and the densities"
+"through the height of the floc filter, :math:`H_{ff}`, and the densities"
 " of the floc filter and water."
 msgstr ""
 
@@ -1062,7 +1062,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:653
 msgid ""
-"Plugging in the equation for :math:`\\rho_{fb}` and solving for "
+"Plugging in the equation for :math:`\\rho_{ff}` and solving for "
 ":math:`h_L`,"
 msgstr ""
 
@@ -1081,7 +1081,7 @@ msgstr ""
 msgid ""
 "We will start by determining :math:`\\varepsilon` by calculating "
 ":math:`\\theta` using the porosity of the floc filter, "
-":math:`\\phi_{fb}`,"
+":math:`\\phi_{ff}`,"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:678
@@ -1097,7 +1097,7 @@ msgid "Using our equation for :math:`h_L`,"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:696
-msgid ":math:`\\phi_{fb} \\approx 1` and is a function of :math:`C_{clay}`"
+msgid ":math:`\\phi_{ff} \\approx 1` and is a function of :math:`C_{clay}`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:698
@@ -1518,7 +1518,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Derivations.rst:862
 msgid ""
-"Using known constants for :math:`\\bar v_{z_{fb}} = 1 \\frac{mm}{s}`, "
+"Using known constants for :math:`\\bar v_{z_{ff}} = 1 \\frac{mm}{s}`, "
 ":math:`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that "
 ":math:`W_{diff,min} = 2.7 mm`. The mold used to create diffusers in "
 "Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find "

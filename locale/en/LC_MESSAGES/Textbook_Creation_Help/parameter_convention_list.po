@@ -253,7 +253,7 @@ msgid "Distance Between Flow Expansions in a Flocculator"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid ":math:`H_{fb}`"
+msgid ":math:`H_{ff}`"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
@@ -283,7 +283,7 @@ msgid ""
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid ":math:`L_{fb}`"
+msgid ":math:`L_{ff}`"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
@@ -725,7 +725,7 @@ msgid "Porosity"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid ":math:`\\phi_{fb}`"
+msgid ":math:`\\phi_{ff}`"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
