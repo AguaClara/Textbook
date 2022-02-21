@@ -54,7 +54,7 @@ Our goal is to determine how much base will need to be added to raise the pH. We
 
 At circumneutral pH (pH close to 7) the buffering capacity of the water is dominated by carbonate chemistry and specifically by the equilibrium between :math:`{H_2}CO_3^{\star}` and :math:`HCO_3^-` . We will use the acid neutralizing capacity (reported as calcium carbonate alkalinity) and the pH from the sample analysis to estimate the total concentration of carbonates. We will not use the sample analysis carbonate concentrations because they can not be precisely correct.
 
-We will find the amount of base that must be added using :eq:`Base_for_pH_Adjust`.
+We will find the amount of base that must be added using Equation :eq:`Base_for_pH_Adjust`.
 
 
 .. _Table_ANC_and_carbonate_values_for_several_bases_and_acids:
@@ -148,7 +148,7 @@ Example Problem: Energy Dissipation Rate in a Straight Pipe
 
 
 #. Calculate the friction factor.
-#. Use :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters.
+#. Use Equation :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters.
 #. Convert to pipe length in meters.
 
 Code for analysis for this example is `here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=tsf9Xo4a1Tjp&line=10&uniqifier=1>`_

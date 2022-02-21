@@ -446,14 +446,14 @@ Linking Velocity Gradient and Capture Velocity
 
 The coagulant bond strength provides a link between flocculator design and sedimentation tank design.
 
-We can substitute equation :eq:`d_floc_G` into equation :eq:`vt_of_floc` and solve for the maximum flocculator velocity gradient that will produce flocs that are large enough to be captured by the sedimentation tank. The capture velocity of the sedimentation tank must be equal to or smaller than the floc terminal velocity to ensure capture of the floc.
+We can substitute Equation :eq:`d_floc_G` into Equation :eq:`vt_of_floc` and solve for the maximum flocculator velocity gradient that will produce flocs that are large enough to be captured by the sedimentation tank. The capture velocity of the sedimentation tank must be equal to or smaller than the floc terminal velocity to ensure capture of the floc.
 
 .. math::
   :label: vc_of_G
 
   v_c = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} -    \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{  \sqrt{\frac{4F_{bond}}{3 \pi \mu G_{max}}}}{D_{cp}} \right) ^{\Pi_{fractal}-1}
 
-Solve equation :eq:`vc_of_G` for the maximum velocity gradient :math:`G_{max}`.
+Solve Equation :eq:`vc_of_G` for the maximum velocity gradient :math:`G_{max}`.
 
 .. math::
   :label: G_of_vc_and_fractal
@@ -467,7 +467,7 @@ Equation :eq:`G_of_vc_and_fractal` can be simplified by making the assumption th
 
    G_{max} \approx  \frac{4F_{bond}}{3 \pi \nu^3 \rho_{H_2O}}\left(  \frac{g D_{cp}}{18 v_c} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2
 
-It would be helpful to develop a design guideline based on equation :eq:`G_of_vc_and_fractal_of_2`. We place the parameters that represent properties of the core particle on the right hand side. The left hand side of the equation is a combination of design parameters, :math:`G_{max}` and :math:`v_c`, as well as the water viscosity that is a function of temperature.  The right hand side of the equation represents a combination of the bond strength, the density of the core particle, and the diameter of the core particle.
+It would be helpful to develop a design guideline based on Equation :eq:`G_of_vc_and_fractal_of_2`. We place the parameters that represent properties of the core particle on the right hand side. The left hand side of the equation is a combination of design parameters, :math:`G_{max}` and :math:`v_c`, as well as the water viscosity that is a function of temperature.  The right hand side of the equation represents a combination of the bond strength, the density of the core particle, and the diameter of the core particle.
 
 .. math::
   :label: G_of_vc_and_floc_props
@@ -475,7 +475,7 @@ It would be helpful to develop a design guideline based on equation :eq:`G_of_vc
 
   \zeta = G_{max} \nu^3 v_c^2 \approx   \frac{4F_{bond}}{3 \pi  \rho_{H_2O}}\left(  \frac{ D_{cp} g}{18} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2
 
-Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of equation :eq:`G_of_vc_and_floc_props`, :math:`\zeta`, is  :math:`4.9 \cdot \frac{mm^8}{s^6}`, :math:`\left(4.9 \cdot  10^{-24}\frac{m^8}{s^6}\right)`, for a kaolin suspension. :math:`\zeta` represent an upper limit on the flocculation and sedimentation design parameters and is a combination of properties of the core particles. The expectation is that :math:`\zeta` will be less than 4.9 :math:`\frac{mm^8}{s^6}` for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see :numref:`figure_PennockFig3`).
+Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of Equation :eq:`G_of_vc_and_floc_props`, :math:`\zeta`, is  :math:`4.9 \cdot \frac{mm^8}{s^6}`, :math:`\left(4.9 \cdot  10^{-24}\frac{m^8}{s^6}\right)`, for a kaolin suspension. :math:`\zeta` represent an upper limit on the flocculation and sedimentation design parameters and is a combination of properties of the core particles. The expectation is that :math:`\zeta` will be less than 4.9 :math:`\frac{mm^8}{s^6}` for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see :numref:`figure_PennockFig3`).
 
 Equation :eq:`G_of_vc_and_floc_props` reveals the key relationships between flocculator and sedimentation tank design. The flocculator velocity gradient must decrease in proportion to the square of the sedimentation tank capture velocity. If AguaClara were to increase the sedimentation tank capture velocity from 0.12 to 0.3 mm/s the flocculator velocity gradient would need to decrease by a factor of 6.25. The dramatic effect of temperature is revealed as well. It is well known that flocculation/sedimentation processes perform poorly at low temperatures. The kinematic viscosity of water approximately doubles as the temperature drops from 20°C to 0°C. That results in a need to decrease the velocity gradient by a factor of 8! Finally, the dissolved organic matter and inorganic particles together determine the density and diameter of the core particles that make up the flocs. Organic matter reduces the density of the core particles and that requires a lower velocity gradient. The worst combination of parameters is a cold water with a high dissolved organic concentration and a low concentration of inorganic particles.
 
@@ -490,7 +490,7 @@ The effect of water temperature and sedimentation tank capture velocity on the m
 
     The maximum average velocity gradient, :math:`G_{CS}`, that can be used in the flocculator or in the inlet to the sedimentation tank for treating kaolin suspensions. The velocity gradient  decreases rapidly as the water temperature decreases because the higher viscosity prevents flocs from growing as large in the flocculator and reducers their terminal velocity in the plate settlers. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=r_wm34KQ8jm4&line=3&uniqifier=1>`_)
 
-Cold temperatures are known to be particularly challenging for flocculation and the model results (equation :eq:`G_of_vc_and_fractal_of_2`) shown in :numref:`figure_Gmax_of_T_and_vc` provides insight into the dramatic reduction in velocity gradient required for effectively cold weather operation.
+Cold temperatures are known to be particularly challenging for flocculation and the model results (Equation :eq:`G_of_vc_and_fractal_of_2`) shown in :numref:`figure_Gmax_of_T_and_vc` provides insight into the dramatic reduction in velocity gradient required for effectively cold weather operation.
 
 The effects of the core particle density on the velocity gradient may also be dramatic especially as the particle density approaches water. Water sources that have high concentrations of dissolved organics require pilot testing to ensure that flocs with a reasonable terminal velocity can be produced.
 

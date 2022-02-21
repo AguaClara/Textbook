@@ -292,12 +292,20 @@ Use Equation :eq:`jet_sed_tank_continuity` to eliminate the thickness of the jet
 
   \tau_{max} = \rho \bar v_{Jet} ^2 \sqrt{ \frac{\nu \Pi_{JetPlane}}{\bar v_{z_{ff}} W_{Sed}}}
 
-Solve for the maximum permissible jet velocity, :math:`\bar v_{Jet}`.
+Solve for the maximum permissible jet velocity, :math:`\bar v_{Jet_{max}}`.
 
 .. math::
-  :label: max_sed_tank_jet_velocity
+  :label: max_sed_tank_jet_velocity_of_tau
 
-  \bar v_{Jet} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{ff}} W_{Sed}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}
+  \bar v_{Jet_{max}} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{ff}} W_{Sed}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}
+
+Given that the velocity gradient governs the design of the flocculator and the entrance to the floc filter we can substitute Equation :eq:`tau_of_mu_G` to obtain
+
+.. math::
+  :label: max_sed_tank_jet_velocity_of_G
+
+  \bar v_{Jet_{max}} =  \left( \frac{G_{max}^2 \nu \bar v_{z_{ff}} W_{Sed}}{ \Pi_{JetPlane}}\right)^\frac{1}{4}
+
 
 The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases. The maximum jet velocity, :numref:`figure_Jet_velocity_vs_sed_valley_width`, and head loss, :numref:`figure_Jet_head_loss_vs_sed_valley_width`, increases with temperature because as the viscosity decreases the fluid shear stress decreases. Floc breakup will be most problematic in low temperatures when the raw water has low turbidity and high concentration of dissolved organics.
 

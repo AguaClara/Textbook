@@ -198,7 +198,7 @@ Height Between Expansions
 
 We have a range of possible :math:`H_e` values based on our window of :math:`3 < \frac{H_e}{S} < 6`. However, we have a limitation and a preference which shape how we design :math:`H_e`. Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want :math:`\frac{H_e}{S}` to be closer to :math:`6` than it is to :math:`3`; we are looking for :math:`H_{e_{Max}}`.
 
-We calculate :math:`H_{e_{Max}}` based on the physical flocculator dimensions. The equation for :math:`H_e` is obtained by rearranging equation :eq:`floc_channel_W_min_var_K`. Because we have already designed the channel width, we substitute :math:`W_{channel}` for :math:`W_{Min_{H_eS}}`. Since we are looking for :math:`H_{e_{Max}}`, we also substitute :math:`\Pi_{{H_eS}_{Max}}` for :math:`\Pi_{H_eS}`. The result is:
+We calculate :math:`H_{e_{Max}}` based on the physical flocculator dimensions. The equation for :math:`H_e` is obtained by rearranging Equation :eq:`floc_channel_W_min_var_K`. Because we have already designed the channel width, we substitute :math:`W_{channel}` for :math:`W_{Min_{H_eS}}`. Since we are looking for :math:`H_{e_{Max}}`, we also substitute :math:`\Pi_{{H_eS}_{Max}}` for :math:`\Pi_{H_eS}`. The result is:
 
 .. math::
   :label: floc_He_max_var_K
@@ -259,7 +259,7 @@ As water flows through the flocculators, the flocs will get larger and larger. A
 Head loss
 ^^^^^^^^^
 
-Head loss is calculated for each expansion using the minor loss coefficient associated with that expansion in equation :eq:`minor_loss`. The total head loss is simple a sum of the head loss for all of the expansions.
+Head loss is calculated for each expansion using the minor loss coefficient associated with that expansion in Equation :eq:`minor_loss`. The total head loss is simple a sum of the head loss for all of the expansions.
 
 Residence Time
 ^^^^^^^^^^^^^^^
