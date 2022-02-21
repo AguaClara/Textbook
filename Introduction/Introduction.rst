@@ -128,7 +128,7 @@ The number of people who currently lack access to reliable safe water on tap is 
 
     There are relatively few countries where it is almost always safe to drink the tap water.
 
-The `UN estimate in 2017 <https://www.un.org/sustainabledevelopment/blog/2017/07/billions-around-the-world-lack-safe-water-proper-sanitation-facilities-reveals-un-report/>`_ was that 2.1 billion lack access to safe water. By 2030 there will be an additional `1.2 billion from population growth <https://news.un.org/en/story/2015/07/505352-un-projects-world-population-reach-85-billion-2030-driven-growth-developing>`_.
+The `UN estimate in 2017 was that 2.1 billion lack access to safe water. By 2030 there will be an additional `1.2 billion from population growth <https://news.un.org/en/story/2015/07/505352-un-projects-world-population-reach-85-billion-2030-driven-growth-developing>`_.
 
 
 .. _figure_Population_Infographic_01:
