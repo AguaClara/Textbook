@@ -11,11 +11,11 @@ These are a few short examples of calculations required for sedimentation tank d
 Tube Settler Design
 ===============================
 
-Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank, :math:`v_{z_{fb}}`, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, :math:`v_{\alpha}`. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.
+Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank, :math:`v_{z_{ff}}`, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, :math:`v_{\alpha}`. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.
 
-.. math:: \frac{\bar v_{z_{fb}}}{\bar v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha
+.. math:: \frac{\bar v_{z_{ff}}}{\bar v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha
 
-.. math:: \bar v_{z_{fb}} = \bar v_\alpha\sin \alpha
+.. math:: \bar v_{z_{ff}} = \bar v_\alpha\sin \alpha
 
 `Solve for the length of the tube settler. <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=qxeWciqaZnPZ&line=4&uniqifier=1>`_
 
@@ -39,9 +39,9 @@ What is this question really asking? This question is asking us to understand th
 
 .. math:: A = 50,000 mm^2
 
-The problem statement includes that :math:`\bar v_{z_{fb}} = 1` mm/s. Plugging into our flow equation,
+The problem statement includes that :math:`\bar v_{z_{ff}} = 1` mm/s. Plugging into our flow equation,
 
-.. math:: Q_{diff} = \bar v_{z_{fb}}A
+.. math:: Q_{diff} = \bar v_{z_{ff}}A
 
 .. math:: Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)
 
@@ -89,7 +89,7 @@ To find the maximum velocity based on maximum headloss we will use the minor los
 
 To find the minimum width based on the maximum velocity through the diffuser, we will use conservation of mass. Since it is an incompressible fluid the flow rate entering from the diffuser line jet must be equal to the flow rate up through the sedimentation tank.
 
-.. math:: \bar v_{jet}W_{diff} L_{sed} = \bar v_{z_{fb}}W_{sed}L_{sed}
+.. math:: \bar v_{jet}W_{diff} L_{sed} = \bar v_{z_{ff}}W_{sed}L_{sed}
 
 `Code for calculations found here <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=VE_1JE-pasAm&line=2&uniqifier=1>`_
 
@@ -123,7 +123,7 @@ Sedimentation diffuser inner length: 5.522 centimeter
 Each diffuser serves a certain width and length of the sedimentation tank. Assume that the diffusers are installed so that they touch each other.
 
 4. `Determine the flow and velocity through each diffuser. <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=CKVZRhHPbUfK&line=2&uniqifier=1>`_
-:math:`Q_{max,diff} = \bar v_{z_{fb}} A`
+:math:`Q_{max,diff} = \bar v_{z_{ff}} A`
 
 :math:`A = W_{sed}  B_{diff}`
 
@@ -146,14 +146,14 @@ Recall the formula for Reynold's number:
 
 The same principle as above can be applied to this question except the length scale is the width of the sedimentation tank and the velocity is the upwards velocity in the tank.
 
-:math:`Re = \frac{\bar v_{z_{fb}} W_{sed}}{\nu}`
+:math:`Re = \frac{\bar v_{z_{ff}} W_{sed}}{\nu}`
 
 **Answer:** Reynolds number through floc is 938.2 dimensionless. These two Reynold's numbers are similar because conservation of mass requires for a constant length that :math:`\bar v_{1}*W_{1} = \bar v_{2}*W_{2}`. The slight difference in the numbers is due to that fact that diffusers are not a continuous line jet but rather broken up by two times the thickness of the pipe wall between the diffusers.
 
 Next, we want to determine the energy dissipation rate for the flow leaving the jet reverser. For this process, you can assume that the jet remains laminar. The flow spreads to fill the gaps created by the walls of the diffuser tubes by the time it traverses the jet reverser. Jet velocity and flow rate are conserved as the jet changes direction in the jet reverser.
 
 7. Calculate the thickness of the jet after it does the 180 degree bend of the jet reverser. < The change in thickness of the jet after the 180 degree bend is due to the flow spreading out to fill in the gaps created by the diffuser pipe walls.
-:math:`W_{jet} * \bar v_{diff} = W_{sed} * \bar v_{z_{fb}}`
+:math:`W_{jet} * \bar v_{diff} = W_{sed} * \bar v_{z_{ff}}`
 
 8. `Calculate the maximum energy dissipation rate* for the flow leaving the jet reverser. <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=8vvPOw1RbsK2&line=1&uniqifier=1>`_ See Equation :eq:`EDR_JetPlane` for the maximum energy dissipation rate in a plane jet and see :numref:`table_EDR_G_equations` for the value of :math:`\Pi_{JetPlane}`.
 
@@ -165,7 +165,7 @@ In designing AguaClara plants, it is critical to account for all forms of signif
 
 First, calculate the head loss making sure to account for the upflow velocity in the sed tank.
 
-:math:`h_e = \frac{\left( {{\bar v_{diff}} - {\bar v_{z_{fb}}}} \right)^2}{2g}`
+:math:`h_e = \frac{\left( {{\bar v_{diff}} - {\bar v_{z_{ff}}}} \right)^2}{2g}`
 
 Second, calculate the head loss but assume that the upflow velocity is negligible.
 

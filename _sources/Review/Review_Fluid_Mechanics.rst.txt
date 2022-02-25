@@ -315,6 +315,15 @@ Unfortunately, there is no simple ‘pushing a box across the ground’ example 
 
 As occurs in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme  throughout the course: **minor losses are caused by flow expansions**. Imagine a pipe fitting that connects a small diameter pipe to a large diameter one, as shown in :numref:`figure_minor_loss_pipe_FRD` below. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies result in minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through its full derivation: :ref:`title_review_fluid_mechanics_derivations`.
 
+The general form of the minor loss equation is
+
+.. math::
+  :label: minor_loss
+
+    h_e = K_e \frac{\bar v^2}{2g}
+
+where :math:`\bar v` is a characteristic (and perhaps convenient) velocity that is typically based on the flow rate and the dimensions of the fully expanded flow. Thus minor loss coefficients, :math:`K_e` for flow through various pipe fittings are based on the average velocity in the pipe because that is easily known given the pipe internal diameter and the flow rate.
+
 There are three forms of the minor loss equation that you will see in this class:
 
 .. math::
@@ -329,9 +338,9 @@ There are three forms of the minor loss equation that you will see in this class
 .. math::
   :label: eq_exp_v_out
 
-   \color{purple}{
+
     {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left(\frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
-    }
+
 
 | Such that:
 | :math:`K_e^{'}, \,\, K_e` = minor loss coefficients, dimensionless
@@ -370,7 +379,7 @@ In order to find :math:`\bar v_{out}`, we first need to know what (or where) is 
 :math:`\bar v_{out}` is easy to determine because it is the velocity of the fluid as it flows through the entire area of the pipe. Thus, :math:`\bar v_{out}` can be found with the continuity equation, since the flow through the pipe and its diameter are easy to measure, :math:`\bar v_{out} = \frac{4 Q}{\pi D^2}`. On the other hand, :math:`\bar v_{in}` is difficult to find, as the area of the contracted flow is dependent on the exact geometry of the elbow. This is why the third form of the minor loss equation, as we have defined it, is the most common:
 
 .. math::
-  :label: minor_loss
+  :label: minor_loss_third_form
 
     h_e = K \frac{\bar v_{out}^2}{2g} = \,\,\,\, \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \frac{\bar v_{out}^2}{2g}
 

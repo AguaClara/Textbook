@@ -265,24 +265,24 @@
 <p>The design requirements for fluid mixing of the coagulant is an area that needs research. If the goal is to reduce the amount of self-aggregation of coagulant nanoparticles, then it is possible that an investment in energy to mix faster could be offset by a reduction in the chemical demand. This tradeoff needs a full economic and resource-use analysis. Regardless of the outcome of that analysis, it is essential that we evaluate options to reduce the energy input required to reduce the mixing time. One excellent option for reducing the energy required is to reduce the length scale of the largest eddies that are required for mixing.</p>
 <p>The mixing time is dominated by the turnover time of the largest eddies. Given an energy dissipation rate (or a velocity gradient) the mixing time is reduced if the required length scale of the mixing is reduced.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-0">
-<span class="eqno">(350)<a class="headerlink" href="#equation-rapid-mix-rm-design-0" title="Permalink to this equation">¶</a></span>\[t_{eddy} \approx \left( \frac{L_{eddy}^2}{ \bar\varepsilon }\right)^\frac{1}{3}\]</div>
+<span class="eqno">(351)<a class="headerlink" href="#equation-rapid-mix-rm-design-0" title="Permalink to this equation">¶</a></span>\[t_{eddy} \approx \left( \frac{L_{eddy}^2}{ \bar\varepsilon }\right)^\frac{1}{3}\]</div>
 <p>We will design a rapid mix unit that has an array of injection ports and couple that with flow expansions that will generate eddies at that same length scale. The reason for creating flow contractions at the same length scale as the distance between injection ports is to immediately create eddies of the right size rather than creating much larger eddies and then waiting for the turbulence cascade of eddies sizes to create the smaller eddies. By creating eddies with dimensions similar to the injection port separation we will dissipate the energy as quickly as possible (at that smaller length scale) and thus decrease the mixing time.</p>
 <p>We can use the center to center distance of the contractions (and injection ports) as the eddy length scale. This is because the eddies will need to mix over the length scale of the spacing of the injection ports.</p>
 <p>The relationship between head loss and energy dissipation rate is based on conservation of energy with <span class="math notranslate nohighlight">\(\theta\)</span> representing the time required for most of the energy to be dissipated.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-1">
-<span class="eqno">(351)<a class="headerlink" href="#equation-rapid-mix-rm-design-1" title="Permalink to this equation">¶</a></span>\[g h_e = \theta \bar\varepsilon\]</div>
+<span class="eqno">(352)<a class="headerlink" href="#equation-rapid-mix-rm-design-1" title="Permalink to this equation">¶</a></span>\[g h_e = \theta \bar\varepsilon\]</div>
 <p>We will assume that the time for the energy to dissipate, <span class="math notranslate nohighlight">\(\theta\)</span>, is <span class="math notranslate nohighlight">\(t_{eddy}\)</span>. Eliminate the unknown <span class="math notranslate nohighlight">\(\bar\varepsilon\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-2">
-<span class="eqno">(352)<a class="headerlink" href="#equation-rapid-mix-rm-design-2" title="Permalink to this equation">¶</a></span>\[t_{eddy} \approx \left( \frac{L_{eddy}^2 t_{eddy}}{ g h_e }\right)^\frac{1}{3}\]</div>
+<span class="eqno">(353)<a class="headerlink" href="#equation-rapid-mix-rm-design-2" title="Permalink to this equation">¶</a></span>\[t_{eddy} \approx \left( \frac{L_{eddy}^2 t_{eddy}}{ g h_e }\right)^\frac{1}{3}\]</div>
 <p>where <span class="math notranslate nohighlight">\(t_{eddy}\)</span> is the mixing time and <span class="math notranslate nohighlight">\(h_e\)</span> is the head loss that will be used to obtain the mixing. Solve for <span class="math notranslate nohighlight">\(L_{eddy}\)</span> which is the spacing of the contractions and the spacing of the coagulant injection points.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-3">
-<span class="eqno">(353)<a class="headerlink" href="#equation-rapid-mix-rm-design-3" title="Permalink to this equation">¶</a></span>\[L_{eddy} \approx  t_{eddy} \sqrt{g h_e }\]</div>
+<span class="eqno">(354)<a class="headerlink" href="#equation-rapid-mix-rm-design-3" title="Permalink to this equation">¶</a></span>\[L_{eddy} \approx  t_{eddy} \sqrt{g h_e }\]</div>
 <p>The raw water flow rate per injection port is equal to the water velocity upstream from the contractions in the channel or pipe multipled by the area of flow dedicated to one injection port.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-4">
-<span class="eqno">(354)<a class="headerlink" href="#equation-rapid-mix-rm-design-4" title="Permalink to this equation">¶</a></span>\[Q_mixing_zone = L_{eddy}^2 \bar v_{exp}\]</div>
+<span class="eqno">(355)<a class="headerlink" href="#equation-rapid-mix-rm-design-4" title="Permalink to this equation">¶</a></span>\[Q_mixing_zone = L_{eddy}^2 \bar v_{exp}\]</div>
 <p>Substituting the previous equation for the eddy length scale, <span class="math notranslate nohighlight">\(L_{eddy}\)</span>, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-5">
-<span class="eqno">(355)<a class="headerlink" href="#equation-rapid-mix-rm-design-5" title="Permalink to this equation">¶</a></span>\[Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}\]</div>
+<span class="eqno">(356)<a class="headerlink" href="#equation-rapid-mix-rm-design-5" title="Permalink to this equation">¶</a></span>\[Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}\]</div>
 <p>The flow rate that can be served with a single injection port is a function of how much energy we use for the mixing process.
 The code to generate the following plot can be found <a class="reference external" href="https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=Wb5pRBA4Yw3e&amp;line=2&amp;uniqifier=1">here</a></p>
 <p>The flow rate per mixing zone increases rapidly as the mixing time allowed is increased and as the energy input is increased.</p>
@@ -293,21 +293,21 @@ The code to generate the following plot can be found <a class="reference externa
 <p>The rapid mix unit will be created by placing round cylinders vertically in the inlet channel or pipe. The goal is to minimize the number of chemical injection points and thus to use as large a spacing of the cylinders, <span class="math notranslate nohighlight">\(L_{eddy}\)</span>, as possible.</p>
 <p>The dimensions of the opening between cylinders and the diameter of the cylinders can be obtained by analyzing the head loss through a flow expansion.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-6">
-<span class="eqno">(356)<a class="headerlink" href="#equation-rapid-mix-rm-design-6" title="Permalink to this equation">¶</a></span>\[h_e = \left(\frac{A_{exp}}{A_{con}} -1 \right)^2 \, \frac{\bar  v_{exp}^2}{2g}\]</div>
+<span class="eqno">(357)<a class="headerlink" href="#equation-rapid-mix-rm-design-6" title="Permalink to this equation">¶</a></span>\[h_e = \left(\frac{A_{exp}}{A_{con}} -1 \right)^2 \, \frac{\bar  v_{exp}^2}{2g}\]</div>
 <p>Where con = contracted control surface and exp = expanded control surface. We can solve the head loss equation for the dimensions of the contractions. First, solve for the area ratio</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-7">
-<span class="eqno">(357)<a class="headerlink" href="#equation-rapid-mix-rm-design-7" title="Permalink to this equation">¶</a></span>\[\frac{A_{exp}}{A_{con}}=\frac{\sqrt{2gh_e}}{\bar  v_{exp}} + 1\]</div>
+<span class="eqno">(358)<a class="headerlink" href="#equation-rapid-mix-rm-design-7" title="Permalink to this equation">¶</a></span>\[\frac{A_{exp}}{A_{con}}=\frac{\sqrt{2gh_e}}{\bar  v_{exp}} + 1\]</div>
 <p>Here the area ratio is also equal to the width ratio because the depth of flow is the other dimension. We assume here that the depth of flow is large compared with the head loss.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-8">
-<span class="eqno">(358)<a class="headerlink" href="#equation-rapid-mix-rm-design-8" title="Permalink to this equation">¶</a></span>\[\frac{A_{exp}}{A_{con}} = \frac{\bar v_{con}}{\bar v_{exp}}\]</div>
+<span class="eqno">(359)<a class="headerlink" href="#equation-rapid-mix-rm-design-8" title="Permalink to this equation">¶</a></span>\[\frac{A_{exp}}{A_{con}} = \frac{\bar v_{con}}{\bar v_{exp}}\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-9">
-<span class="eqno">(359)<a class="headerlink" href="#equation-rapid-mix-rm-design-9" title="Permalink to this equation">¶</a></span>\[\frac{W_{con}}{W_{exp}} = \frac{A_{con}}{A_{exp}}\]</div>
+<span class="eqno">(360)<a class="headerlink" href="#equation-rapid-mix-rm-design-9" title="Permalink to this equation">¶</a></span>\[\frac{W_{con}}{W_{exp}} = \frac{A_{con}}{A_{exp}}\]</div>
 <p>The width of the expanded flow, <span class="math notranslate nohighlight">\(W_{exp}\)</span>, is equal to the large eddy length scale, <span class="math notranslate nohighlight">\(L_{eddy}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-10">
-<span class="eqno">(360)<a class="headerlink" href="#equation-rapid-mix-rm-design-10" title="Permalink to this equation">¶</a></span>\[W_{con} = L_{eddy}\frac{A_{con}}{A_{exp}}\]</div>
+<span class="eqno">(361)<a class="headerlink" href="#equation-rapid-mix-rm-design-10" title="Permalink to this equation">¶</a></span>\[W_{con} = L_{eddy}\frac{A_{con}}{A_{exp}}\]</div>
 <p>The diameter of the cylinders is equal to</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-design-11">
-<span class="eqno">(361)<a class="headerlink" href="#equation-rapid-mix-rm-design-11" title="Permalink to this equation">¶</a></span>\[D_{cylinder}=W_{exp} - W_{con}\]</div>
+<span class="eqno">(362)<a class="headerlink" href="#equation-rapid-mix-rm-design-11" title="Permalink to this equation">¶</a></span>\[D_{cylinder}=W_{exp} - W_{con}\]</div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=MpwXnJvCaN05&amp;line=7&amp;uniqifier=1">Here</a> is an example design for a rapid mix unit that uses 20 cm of head loss and achieves mixing in 0.3 seconds.</p>
 <ul class="simple">
 <li><p>The spacing between injection ports is 0.4201 meter</p></li>

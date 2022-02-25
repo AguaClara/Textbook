@@ -106,7 +106,7 @@ Empathy is fundamental in design. Empathy enables us to consider reality from an
 The Global Context for Drinking Water Treatment
 ===============================================
 
-The `Sustainable Development Goals: SDGs <https://www.un.org/sustainabledevelopment/sustainable-development-goals/>`_ and specifically `SDG 6 <https://www.un.org/sustainabledevelopment/water-and-sanitation/>`_ provide the context and motivation for this text. The first SDG 6 target is: "By 2030, achieve universal and equitable access to safe and affordable drinking water for all." That goal is daunting and won't be met using the approaches of the past 5 decades. This text is about creating a new paradigm for the design of high performing water treatment technologies with the goal of making a real contribution toward SDG 6.1.
+The `Sustainable Development Goals: SDGs <https://sdgs.un.org/goals>`_ and specifically `SDG 6 <https://sdgs.un.org/goals/goal6>`_ provide the context and motivation for this text. The first SDG 6 target is: "By 2030, achieve universal and equitable access to safe and affordable drinking water for all." That goal is daunting and won't be met using the approaches of the past 5 decades. This text is about creating a new paradigm for the design of high performing water treatment technologies with the goal of making a real contribution toward SDG 6.1.
 
 .. _figure_SDG6:
 
@@ -117,7 +117,7 @@ The `Sustainable Development Goals: SDGs <https://www.un.org/sustainabledevelopm
 
     Sustainable development goal 6 is all about clean water and sanitation.
 
-The number of people who currently lack access to reliable safe water on tap is not known. Estimates range from "`1.8 billion who use a source of drinking water that is contaminated with feces <https://www.un.org/sustainabledevelopment/water-and-sanitation/>`_" to the Centers for Disease Control recommendations for where it is `usually safe to drink tap water <https://lifehacker.com/know-what-countries-guarantee-drinkable-tap-water-with-1635070463>`_.
+The number of people who currently lack access to reliable safe water on tap is not known. Estimates range from "`1.8 billion who use a source of drinking water that is contaminated with feces <https://www.who.int/news-room/fact-sheets/detail/drinking-water>`_" to the Centers for Disease Control recommendations for where it is `usually safe to drink tap water <https://lifehacker.com/know-what-countries-guarantee-drinkable-tap-water-with-1635070463>`_.
 
 .. _figure_CDC_Global_Safe_Tap_Water:
 
@@ -128,7 +128,7 @@ The number of people who currently lack access to reliable safe water on tap is 
 
     There are relatively few countries where it is almost always safe to drink the tap water.
 
-The `UN estimate in 2017 <https://www.un.org/sustainabledevelopment/blog/2017/07/billions-around-the-world-lack-safe-water-proper-sanitation-facilities-reveals-un-report/>`_ was that 2.1 billion lack access to safe water. By 2030 there will be an additional `1.2 billion from population growth <https://news.un.org/en/story/2015/07/505352-un-projects-world-population-reach-85-billion-2030-driven-growth-developing>`_.
+The `UN estimate in 2017 was that 2.1 billion lack access to safe water. By 2030 there will be an additional `1.2 billion from population growth <https://news.un.org/en/story/2015/07/505352-un-projects-world-population-reach-85-billion-2030-driven-growth-developing>`_.
 
 
 .. _figure_Population_Infographic_01:
@@ -506,4 +506,3 @@ The following list is designed to get you thinking. These are concepts that are 
  - Cessation of chlorination due to fear of disinfection by products caused the cholera outbreak in Peru in 1993
  - Sedimentation is simple
  - We already know how to solve the problem of the billions of people who do not having access to safe drinking water
-
