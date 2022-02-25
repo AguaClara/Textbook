@@ -17,6 +17,7 @@ In all cases we will need equations relating head loss, velocity gradient, visco
 The following equations describe the design process assuming that a velocity gradient is specified for the coldest operating temperature. Given :math:`G_{CS}`, we can very easily find :math:`\theta`:
 
 .. math::
+  :label: theta_of_Gtheta_and_G
 
   \theta = \frac{G_{CS} \theta}{G_{CS}}
 
