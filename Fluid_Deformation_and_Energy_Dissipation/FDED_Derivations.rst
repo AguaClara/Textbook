@@ -909,14 +909,30 @@ By substituting the continuity equation into Equation :eq:`jet_G_max` we can fin
 .. math::
   :label: jet_G_max_of_D_jet_min
 
-   G_{Max} = \left(\frac{4 \bar Q_{Jet}}{\pi D_{Jet}^2}\right)^\frac{3}{2} \sqrt{\frac{\Pi_{JetRound}  }{\nu D_{Jet}}}
+   G_{Max} = \left(\frac{4 \bar Q}{\pi D_{Jet}^2}\right)^\frac{3}{2} \sqrt{\frac{\Pi_{JetRound}  }{\nu D_{Jet}}}
 
-Solve for :math:`D_{Jet}`
+Solve for :math:`D_{Jet}` to obtain the minimum jet diameter to deliver a target flow without exceeding the maximum velocity gradient.
 
 .. math::
   :label: D_jet_min_of_jet_G_max
 
-   D_{Jet} = \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 \bar Q_{Jet}}{\pi }\right)^3 \right]^\frac{1}{7}
+   D_{Jet} = \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 \bar Q}{\pi }\right)^3 \right]^\frac{1}{7}
+
+Equation :eq:`D_jet_min_of_jet_G_max` allows us to make the connection between a flow contraction and the resulting maximum velocity gradient. As we design flow passages where there are constraints on the maximum velocity gradient we need to calculate the minimum pipe diameter. The pipe diameter can be obtained by substituting Equation :eq:`D_pipe_of_D_vc`.
+
+.. math::
+  :label: D_pipe_min_of_jet_G_max
+
+   D_{pipe_{min}} = \frac{1}{\sqrt{\Pi_{vc}}} \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 \bar Q}{\pi }\right)^3 \right]^\frac{1}{7}
+
+For many geometry changes we know the minor loss coefficient. An equivalent equation that is a function of the minor loss coefficient can be obtained by substituting Equation :eq:`pi_vc_of_minor_K` into Equation :eq:`D_pipe_min_of_jet_G_max`.
+
+.. math::
+  :label: D_pipe_min_of_K_and_jet_G_max
+
+   D_{pipe_{min}} = \sqrt{\sqrt{K_e} + 1} \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 \bar Q}{\pi }\right)^3 \right]^\frac{1}{7}
+
+Equation :eq:`D_pipe_min_of_K_and_jet_G_max` is limited to geometries where the flow contractions are sufficiently separated so that the flow completely expands before entering the next contraction. The pipe diameter is then set by the largest minor loss coefficient in the pipe system.
 
 .. _heading_Plane_Jet:
 
