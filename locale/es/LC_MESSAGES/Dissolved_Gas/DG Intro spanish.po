@@ -103,7 +103,7 @@ msgstr "Mantas Floc"
 
 #: ../../Dissolved_Gas/DG_Intro.rst:41
 #, fuzzy
-msgid "Disrupts floc blanket, breaks flocs, carries flocs into plate settlers."
+msgid "Disrupts floc filter, breaks flocs, carries flocs into plate settlers."
 msgstr ""
 "Desbarata la manta de flóculos, rompe los flóculos, lleva los flóculos a los "
 "colonos de placas."

@@ -253,11 +253,11 @@ msgid "Distance Between Flow Expansions in a Flocculator"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid ":math:`H_{fb}`"
+msgid ":math:`H_{ff}`"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid "Height of the floc blanket"
+msgid "Height of the floc filter"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
@@ -283,11 +283,11 @@ msgid ""
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid ":math:`L_{fb}`"
+msgid ":math:`L_{ff}`"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid "Length of the floc blanket in a sedimentation tank"
+msgid "Length of the floc filter in a sedimentation tank"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
@@ -621,7 +621,7 @@ msgid ":math:`\\bar v_{z_{FB}}`"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid "Average vertical velocity of the water through the floc blanket"
+msgid "Average vertical velocity of the water through the floc filter"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
@@ -725,11 +725,11 @@ msgid "Porosity"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid ":math:`\\phi_{fb}`"
+msgid ":math:`\\phi_{ff}`"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1
-msgid "Porosity of floc blanket"
+msgid "Porosity of floc filter"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/parameter_convention_list.rst:1

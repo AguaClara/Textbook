@@ -43,7 +43,7 @@ The head loss through a port can be expressed in the minor loss equation form.
 
   h_{e_P} = \frac{\bar v_{P}^2}{2g}
 
-where the port velocity :math:`\bar v_{P}` is the *contracted* velocity out of the port. We want the head loss to be a function of the manifold velocity. The relationship between port and manifold velocity is given by equation :eq:`Manifold_max_v_no_hl_series`. Substitute equation :eq:`Manifold_max_v_no_hl_series` into equation :eq:`eq_he_port` to obtain an equation that is only a function of the manifold velocity.
+where the port velocity :math:`\bar v_{P}` is the *contracted* velocity out of the port. We want the head loss to be a function of the manifold velocity. The relationship between port and manifold velocity is given by Equation :eq:`Manifold_max_v_no_hl_series`. Substitute Equation :eq:`Manifold_max_v_no_hl_series` into Equation :eq:`eq_he_port` to obtain an equation that is only a function of the manifold velocity.
 
 .. math::
   :label: eq_he_port_of_v_manifold
@@ -57,19 +57,19 @@ By analogy with the minor loss head loss equation we obtain the minimum minor lo
 
   K_{e_{outerOrifices}} =\frac{\Pi_{Q}^2 + 1}{2\left(1 - \Pi_{Q}^2\right)}
 
-Solve equation :eq:`eq_he_inlet_Bw` for the maximum manifold velocity and substitute equation :eq:`eq_Ke_outerOrifices`.
+Solve Equation :eq:`eq_he_inlet_Bw` for the maximum manifold velocity and substitute Equation :eq:`eq_Ke_outerOrifices`.
 
 .. math::
   :label: v_max_manifold
 
   \bar v_{M_{Bw}} = \sqrt{\frac{2 g h_{e_{inlet_{Bw}}}}{K_{e_{trunk}} + K_{e_{branch}} + \frac{\Pi_{Q}^2 + 1}{2\left(1 - \Pi_{Q}^2\right)}}}
 
-Given a filter flow rate, equation :eq:`v_max_manifold` can be used to find the minimum diameter of the trunks. Alternatively, the maximum flow rate for each available manifold diameter can be calculated.
+Given a filter flow rate, Equation :eq:`v_max_manifold` can be used to find the minimum diameter of the trunks. Alternatively, the maximum flow rate for each available manifold diameter can be calculated.
 
 Backwash Inlet Orifice Area and Spacing
 ---------------------------------------
 
-The port contracted velocity is given by solving equation :eq:`Manifold_max_v_no_hl_series` for the port velocity. We'd like the port velocity during filtration since the other inlet manifolds will be designed based on filtration velocity and backwash manifold velocity (from equation :eq:`v_max_manifold`).
+The port contracted velocity is given by solving Equation :eq:`Manifold_max_v_no_hl_series` for the port velocity. We'd like the port velocity during filtration since the other inlet manifolds will be designed based on filtration velocity and backwash manifold velocity (from Equation :eq:`v_max_manifold`).
 
 .. math::
   :label: port_contracted_v
@@ -92,7 +92,7 @@ Then the orifice diameter for the bottom and top inlets is given by
 
   D_{orifice} = \sqrt{\frac{v_{Fi}}{\bar v_{P_{Fi}}}\frac{B_{branch} B_{orifice_{outer}}}{\Pi_{vc}\frac{\pi}{4} }}
 
-Eliminate port velocity by substituting equation :eq:`port_contracted_v`
+Eliminate port velocity by substituting Equation :eq:`port_contracted_v`
 
 .. math::
   :label: D_outerPort
@@ -129,7 +129,7 @@ Now the inner inlets
 
 where the factor of 4 difference is because the velocity in the inner inlet is double the outer inlets because each inner inlet serves 2 filter layers.
 
-The manifold - port flow distribution constraint (equation :eq:`v_max_manifold`) is not required during filtration. This is because the sand provides additional head loss in series and because the outlet system has a matching piezometric head distribution such that the difference in piezometric head is uniform across the filter bed. Thus the only constraint for the inner inlets is that there be uniform flow distribution between sand bed layers and thus the head loss for the various paths from inlet box to sand bed must be identical. This will give a required relationship between the inner and outer orifice Ke.
+The manifold - port flow distribution constraint (Equation :eq:`v_max_manifold`) is not required during filtration. This is because the sand provides additional head loss in series and because the outlet system has a matching piezometric head distribution such that the difference in piezometric head is uniform across the filter bed. Thus the only constraint for the inner inlets is that there be uniform flow distribution between sand bed layers and thus the head loss for the various paths from inlet box to sand bed must be identical. This will give a required relationship between the inner and outer orifice Ke.
 
 .. math::
   :label:
@@ -158,7 +158,7 @@ The value of :math:`K_{e_{innerOrifices}}` should be calculated based on the act
 
   K_{e_{innerOrifices}} = \frac{\frac{\Pi_{Q}^2 + 1}{2\left(1 - \Pi_{Q}^2\right)} - 3K_{e_{trunk}} - 3K_{e_{branch}}}{4}
 
-The :math:`K_{e_{innerOrifices}}` is a minor loss coefficient for the orifices scaled to the velocity of the manifold. All of the kinetic energy is lost when flowing through the orifice and thus the minor loss coefficient scaled to the contracted orifice velocity is equal to 1 (see equation :eq:`eq_he_port`). Set the minor head loss equation to be equal for the two choices of velocity.
+The :math:`K_{e_{innerOrifices}}` is a minor loss coefficient for the orifices scaled to the velocity of the manifold. All of the kinetic energy is lost when flowing through the orifice and thus the minor loss coefficient scaled to the contracted orifice velocity is equal to 1 (see Equation :eq:`eq_he_port`). Set the minor head loss equation to be equal for the two choices of velocity.
 
 .. math::
   :label:
@@ -172,7 +172,7 @@ where the factor of :math:`2^2` is because the flow through an inner manifolds i
 
   \bar v_{P} = \frac{2\bar v_{M_{Bw}}}{N_{layer}} \sqrt{K_{e_{innerOrifices}}}
 
-The next step is to solve for the distance between orifices. This is identical to the method we used to find equation :eq:`B_outerPort`. The ratio of filter velocity to port velocity is given by equation :eq:`v_port_to_v_Fi`.
+The next step is to solve for the distance between orifices. This is identical to the method we used to find Equation :eq:`B_outerPort`. The ratio of filter velocity to port velocity is given by Equation :eq:`v_port_to_v_Fi`.
 
 .. math::
   :label:

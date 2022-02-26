@@ -36,7 +36,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Examples.rst:12
 msgid ""
 "Design a tube settler for a laboratory scale sedimentation tank. The "
-"vertical section of the sedimentation tank, :math:`v_{z_{fb}}`, has a net"
+"vertical section of the sedimentation tank, :math:`v_{z_{ff}}`, has a net"
 " upflow velocity of 3 mm/s. This velocity is maintained in the tube "
 "settler, :math:`v_{\\alpha}`. The target capture velocity is 0.2 mm/s. "
 "The tube settler diameter is 2.54 cm."
@@ -81,7 +81,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:57
 msgid ""
-"The problem statement includes that :math:`\\bar v_{z_{fb}} = 1` mm/s. "
+"The problem statement includes that :math:`\\bar v_{z_{ff}} = 1` mm/s. "
 "Plugging into our flow equation,"
 msgstr ""
 
@@ -263,7 +263,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Examples.rst:196
 msgid ""
 "4. Determine the flow through each diffuser. :math:`Q_{max,diff} = \\bar "
-"v_{z_{fb}} A`"
+"v_{z_{ff}} A`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:199
@@ -307,7 +307,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Examples.rst:231
 msgid ""
 "What is the Reynolds number of the vertical flow up through the top of "
-"the floc blanket?"
+"the floc filter?"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:233
@@ -318,7 +318,7 @@ msgid ""
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:235
-msgid ":math:`Re = \\frac{\\bar v_{z_{fb}} W_{sed}}{\\nu}`"
+msgid ":math:`Re = \\frac{\\bar v_{z_{ff}} W_{sed}}{\\nu}`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:242
@@ -347,7 +347,7 @@ msgid ""
 "of the jet reverser. The change in thickness of the jet after the 180 "
 "degree bend is due to the flow spreading out to fill in the gaps created "
 "by the diffuser pipe walls. :math:`W_{jet} * \\bar v_{diff} = W_{sed} * "
-"\\bar v_{z_{fb}}`"
+"\\bar v_{z_{ff}}`"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:249
@@ -383,7 +383,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:267
 msgid ""
-":math:`h_e = \\frac{\\left( {{\\bar v_{diff}} - {\\bar v_{z_{fb}}}} "
+":math:`h_e = \\frac{\\left( {{\\bar v_{diff}} - {\\bar v_{z_{ff}}}} "
 "\\right)^2}{2g}`"
 msgstr ""
 
@@ -615,16 +615,16 @@ msgid ""
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:398
-msgid "**Answer:** The plant view area of the floc blanket is 60 square meters."
+msgid "**Answer:** The plant view area of the floc filter is 60 square meters."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:400
-msgid "What is the total length of the floc blanket zone for all tanks?"
+msgid "What is the total length of the floc filter zone for all tanks?"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Examples.rst:407
 msgid ""
-"**Answer:** The total length of the floc blanket zone for all tanks is "
+"**Answer:** The total length of the floc filter zone for all tanks is "
 "56.24 meters."
 msgstr ""
 
@@ -669,7 +669,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Examples.rst:439
 msgid ""
 "We will assume that the active area of the sedimentation tank is equal to"
-" the top area of the floc blanket zone. This isn't quite right because of"
+" the top area of the floc filter zone. This isn't quite right because of"
 " the geometric constraints from the floc hopper, inlet channel, settled "
 "water channel, and angled plates. However, it is a good approximation for"
 " these long tanks."

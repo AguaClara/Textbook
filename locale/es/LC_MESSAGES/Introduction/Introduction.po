@@ -126,7 +126,7 @@ msgid ""
 "Our contention is that no one has ever optimized the design of a drinking water "
 "treatment plant! We are reasonably certain of this because we don't yet have "
 "models (with equations) that describe performance of most of the core unit "
-"processes (rapid mix, flocculation, floc blankets, sedimentation, sand "
+"processes (rapid mix, flocculation, floc filters, sedimentation, sand "
 "filtration) used for surface water treatment. The only possible exception is "
 "lamellar sedimentation which can be characterized if we know the size and "
 "density distribution of the particles entering the sedimentation tank."
@@ -1369,7 +1369,7 @@ msgstr "colonos de placas o tubos"
 
 #: ../../Introduction/Introduction.rst:1
 #, fuzzy
-msgid "flocculation or floc blanket"
+msgid "flocculation or floc filter"
 msgstr "floculación o manta de floc"
 
 #: ../../Introduction/Introduction.rst:1
@@ -1470,7 +1470,7 @@ msgstr ""
 
 #: ../../Introduction/Introduction.rst:1
 #, fuzzy
-msgid "Floc blanket"
+msgid "Floc filter"
 msgstr "Manta Floc"
 
 #: ../../Introduction/Introduction.rst:1
@@ -1485,12 +1485,12 @@ msgstr "`1930 <https://link.springer.com/chapter/10.1007%2F978-3-642-61196-4_2>`
 
 #: ../../Introduction/Introduction.rst:1
 #, fuzzy
-msgid "Jet reverser floc blanket"
+msgid "Jet reverser floc filter"
 msgstr "Manta de floca del inversor de chorro"
 
 #: ../../Introduction/Introduction.rst:1
 #, fuzzy
-msgid "first fully fluidized floc blanket"
+msgid "first fully fluidized floc filter"
 msgstr "la primera manta de flóculos totalmente fluidificada"
 
 #: ../../Introduction/Introduction.rst:1
@@ -1531,7 +1531,7 @@ msgstr "Superpulsor"
 
 #: ../../Introduction/Introduction.rst:1
 #, fuzzy
-msgid "pulsing flow through floc blanket"
+msgid "pulsing flow through floc filter"
 msgstr "flujo pulsante a través de la manta de flóculos"
 
 #: ../../Introduction/Introduction.rst:1
@@ -1630,7 +1630,7 @@ msgstr ""
 #: ../../Introduction/Introduction.rst:326
 #, fuzzy
 msgid ""
-"Superpulsator: rapid mix, floc blanket, lamellar sedimentation, rapid sand "
+"Superpulsator: rapid mix, floc filter, lamellar sedimentation, rapid sand "
 "filtration"
 msgstr ""
 "Superpulsor: mezcla rápida, manto de flóculos, sedimentación laminar, "
@@ -1639,7 +1639,7 @@ msgstr ""
 #: ../../Introduction/Introduction.rst:327
 #, fuzzy
 msgid ""
-"AguaClara: hydraulic flocculation, floc blanket, lamellar sedimentation, "
+"AguaClara: hydraulic flocculation, floc filter, lamellar sedimentation, "
 "stacked rapid sand filtration, disinfection"
 msgstr ""
 "AguaClara: floculación hidráulica, manto de floc, sedimentación laminar, "
@@ -1798,7 +1798,7 @@ msgstr ""
 #: ../../Introduction/Introduction.rst:392
 #, fuzzy
 msgid ""
-"floc blanket where large flocs settle through water that is flowing upward "
+"floc filter where large flocs settle through water that is flowing upward "
 "causing collisions between small particles carried by the upward flowing water "
 "and the large flocs"
 msgstr ""
@@ -1810,7 +1810,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "lamellar sedimentation where gravity causes particles to settle to an inclined "
-"plate and then slide back down into the floc blanket"
+"plate and then slide back down into the floc filter"
 msgstr ""
 "sedimentación laminar donde la gravedad hace que las partículas se asienten en "
 "una placa inclinada y luego se deslizan de nuevo hacia abajo en el manto de "
@@ -2601,7 +2601,7 @@ msgstr "Floc Hopper que consolida la lechada de flóculos antes del drenaje."
 
 #: ../../Introduction/Introduction.rst:592
 #, fuzzy
-msgid "Floc blanket that is stable due to loss to or gain from settled sludge"
+msgid "Floc filter that is stable due to loss to or gain from settled sludge"
 msgstr ""
 "Manta de flocaje que es estable debido a la pérdida o ganancia de los lodos "
 "asentados"

@@ -922,7 +922,7 @@ msgstr "Y aquí hay un ejemplo práctico:"
 
 #: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:425
 #, fuzzy
-msgid "This is a floc blanket forming"
+msgid "This is a floc filter forming"
 msgstr "Esta es una manta de flóculos que forma"
 
 #: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:431

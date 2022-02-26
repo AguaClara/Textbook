@@ -836,7 +836,7 @@ msgstr "Dé su respuesta final en metros cuadrados."
 
 #: ../../Sedimentation/Sed_Design_Solution.rst:458
 #, fuzzy
-msgid "The plant view area of the floc blanket is 60 meter ** 2"
+msgid "The plant view area of the floc filter is 60 meter ** 2"
 msgstr ""
 "El área de visión de la planta de la manta de flóculos es de 60 metros ** 2"
 
@@ -848,7 +848,7 @@ msgstr "16:"
 #: ../../Sedimentation/Sed_Design_Solution.rst:464
 #, fuzzy
 msgid ""
-"What is the total length of the floc blanket zone for all tanks? Calculate this "
+"What is the total length of the floc filter zone for all tanks? Calculate this "
 "using the total required plan area for the sedimentation tank and the "
 "sedimentation tank width."
 msgstr ""
@@ -954,7 +954,7 @@ msgstr "Los colonos de la placa"
 #, fuzzy
 msgid ""
 "You may assume that the active area of the sedimentation tank is equal to the "
-"top area of the floc blanket zone. This isn’t quite right because of the "
+"top area of the floc filter zone. This isn’t quite right because of the "
 "geometric constraints from the floc hopper, inlet channel, settled water "
 "channel, and angled plates. However, it is a good approximation for these long "
 "tanks. We will use this approximation to determine the plate settler details."

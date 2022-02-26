@@ -1037,7 +1037,7 @@ msgid ""
 ":`Floc_Model-davis_introduction_2008` give the range of  :math:`\\bar "
 "G_{CS}\\theta` values pertinent to flocculation of high turbidities as "
 "between 36,000 and 96,000, so this result is reasonable. This analysis "
-"does not account for removal of particles in a floc blanket that would "
+"does not account for removal of particles in a floc filter that would "
 "enable use of a lower value of :math:`\\bar G_{CS}\\theta`."
 msgstr ""
 

@@ -87,11 +87,11 @@ Now, we can use this form of the capture velocity equation to solve for :math:`B
    :header: "Parameter", "Variable", "Determined by:", "Determines:", "Value"
    :align: left
 
-   Upflow velocity, :math:`\bar v_{z_{fb}}`, Floc blanket, Plan view area of tank, 1 :math:`\frac{mm}{s}`
+   Upflow velocity, :math:`\bar v_{z_{ff}}`, Floc filter, Plan view area of tank, 1 :math:`\frac{mm}{s}`
    Capture velocity, :math:`\bar v_c`, Target turbidity, Particle size distribution, 0.12 :math:`\frac{mm}{s}`
    Plate angle, :math:`\alpha`, Self-cleaning requirements, :math:`L`, 60 deg
    Plate spacing, :math:`S`, Clogging and floc rollup constraints, :math:`L`, 2.5 cm
-   Plate settler length, :math:`L`, ":math:`\bar v_{z_{fb}}, \bar v_c, \alpha, S`",Tank depth, Calculated for each plant
+   Plate settler length, :math:`L`, ":math:`\bar v_{z_{ff}}, \bar v_c, \alpha, S`",Tank depth, Calculated for each plant
 
 The relationship between the vertical velocity and the velocity in the direction of the sloped tube or plate settlers is given by
 
@@ -501,33 +501,33 @@ With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use 
 
  \bar \varepsilon = \frac{gh_L}{\theta}
 
-We will start by determining :math:`\varepsilon` by calculating :math:`\theta` using the porosity of the floc blanket, :math:`\phi_{fb}`,
+We will start by determining :math:`\varepsilon` by calculating :math:`\theta` using the porosity of the floc filter, :math:`\phi_{ff}`,
 
 .. math::
 
-  \theta = \frac{H_{fb} \phi_{fb}}{\bar v_{z_{fb}}}
+  \theta = \frac{H_{ff} \phi_{ff}}{\bar v_{z_{ff}}}
 
 Plugging :math:`\theta` into :math:`\varepsilon` yields
 
 .. math::
 
-  \bar \varepsilon = \frac{g \bar v_{z_{fb}}}{\phi_{fb}} \frac{h_L}{H_{fb}}
+  \bar \varepsilon = \frac{g \bar v_{z_{ff}}}{\phi_{ff}} \frac{h_L}{H_{ff}}
 
 Substituting into our equation for :math:`G`,
 
 .. math::
 
-  G_{CS} =  \sqrt{\frac{g \bar v_{z_{fb}}}{\nu \phi_{fb}} \frac{h_L}{H_{fb}}}
+  G_{CS} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \frac{h_L}{H_{ff}}}
 
 Using our equation for :math:`h_L`,
 
 .. math::
 
-  G_{CS} =  \sqrt{\frac{g \bar v_{z_{fb}}}{\nu \phi_{fb}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }
+  G_{CS} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }
 
-:math:`\phi_{fb} \approx 1` and is a function of :math:`C_{clay}`
+:math:`\phi_{ff} \approx 1` and is a function of :math:`C_{clay}`
 
-We can plot our results for :math:`G_{CS}` over a range of typical floc blanket concentrations, which is around 1 - 5 g/L. We find that :math:`G_{CS}` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`G_{CS}` provided by the floc blanket is much smaller than :math:`G_{CS}` provided by the flocculator. This is an important point because in the low :math:`G_{CS}` environment of the floc blanket where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
+We can plot our results for :math:`G_{CS}` over a range of typical floc filter concentrations, which is around 1 - 5 g/L. We find that :math:`G_{CS}` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`G_{CS}` provided by the floc filter is much smaller than :math:`G_{CS}` provided by the flocculator. This is an important point because in the low :math:`G_{CS}` environment of the floc filter where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
 
 We can plot our results for :math:`G_{CS}\theta` by multiplying :math:`G_{CS}` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`Gv\theta` ranges from 2,000 to 6,000. Compare this to the :math:`G_{CS}\theta = 20,000` for the flocculator used in experiments (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_).
 
@@ -545,85 +545,85 @@ We can plot our results for :math:`G_{CS}\theta` by multiplying :math:`G_{CS}` b
 .. figure:: ../Images/floc_conc_G.png
    :height: 300px
    :align: center
-   :alt: Velocity gradient and collision potential as a function of floc blanket concentration.
+   :alt: Velocity gradient and collision potential as a function of floc filter concentration.
 
-   Velocity gradient and collision potential as a function of floc blanket concentration.
+   Velocity gradient and collision potential as a function of floc filter concentration.
 
-How does such a small :math:`G_{CS}\theta` cause such a large reduction in turbidity? The question we are really asking is, is there anything special about the :math:`G_{CS}\theta` provided by the floc blanket compared to the :math:`G_{CS}\theta` provided by the flocculator? If so, what is the difference and why is it so beneficial?
+How does such a small :math:`G_{CS}\theta` cause such a large reduction in turbidity? The question we are really asking is, is there anything special about the :math:`G_{CS}\theta` provided by the floc filter compared to the :math:`G_{CS}\theta` provided by the flocculator? If so, what is the difference and why is it so beneficial?
 
-Experimental data helps explain this. Two systems were set up: one had a flocculator where :math:`G_{CS}\theta = 20,000` with a floc blanket where :math:`G_{CS}\theta = 4,000`; the other just had a flocculator where :math:`G_{CS}\theta = 24,000`. Using the same influent water quality and coagulant dosing, we find that the first system with the flocculator and floc blanket performed better than the second system, even though the overall :math:`G_{CS}\theta` values were the same.
+Experimental data helps explain this. Two systems were set up: one had a flocculator where :math:`G_{CS}\theta = 20,000` with a floc filter where :math:`G_{CS}\theta = 4,000`; the other just had a flocculator where :math:`G_{CS}\theta = 24,000`. Using the same influent water quality and coagulant dosing, we find that the first system with the flocculator and floc filter performed better than the second system, even though the overall :math:`G_{CS}\theta` values were the same.
 
-To understand this, we have to review assumptions in the derivation for :math:`G_{CS}`. Recall our assumption that fluid shear promotes the collision of two primary particles instead of the collision of primary particles with existing, large flocs. If our assumption was true, we would expect to see no difference between our two experimental setups. However, because we know that the two experimental setups did have different results, our assumption must be false because the assumption does not explain or account for these differences. There must be another mechanism occurring to explain why the floc blanket greatly improves treatment quality. This leads us to believe that the flocs in the floc blanket must be more involved than simply providing shear and velocity gradients; they must be involved in some collisions with the small particles coming through the floc blanket.
+To understand this, we have to review assumptions in the derivation for :math:`G_{CS}`. Recall our assumption that fluid shear promotes the collision of two primary particles instead of the collision of primary particles with existing, large flocs. If our assumption was true, we would expect to see no difference between our two experimental setups. However, because we know that the two experimental setups did have different results, our assumption must be false because the assumption does not explain or account for these differences. There must be another mechanism occurring to explain why the floc filter greatly improves treatment quality. This leads us to believe that the flocs in the floc filter must be more involved than simply providing shear and velocity gradients; they must be involved in some collisions with the small particles coming through the floc filter.
 
 This highlights an important distinction:
 
-#. The model created by the original derivation assumption would suggests that flocs in the floc blanket are inert - simply occupying space and causing there to be head loss in the floc blanket - without being involved in any collisions. This model is disproved through the experimental analysis of the two experimental setups.
-#. The model created after the analysis of experimental results suggests that flocs in the floc blanket are not inert - they are involved in collisions with small particles entering the floc blanket - and are growing in size. The model is supported through the experimental analysis.
+#. The model created by the original derivation assumption would suggests that flocs in the floc filter are inert - simply occupying space and causing there to be head loss in the floc filter - without being involved in any collisions. This model is disproved through the experimental analysis of the two experimental setups.
+#. The model created after the analysis of experimental results suggests that flocs in the floc filter are not inert - they are involved in collisions with small particles entering the floc filter - and are growing in size. The model is supported through the experimental analysis.
 
 Collision Potential
 ---------------------
-We have learned that growing a floc blanket leads to better sedimentation tank performance. One explanation for the improved performance is that the floc blanket acts like an additional flocculator because there are additional collisions between particles. To understand the nature and significance of these additional collisions, we can calculate the floc blanket velocity gradients and residence time to find collision potential, :math:`G\theta`. In a floc blanket, we expect that :math:`G` is small; however, :math:`\theta` is large, which means that :math:`G\theta` in the floc blanket may be significant.
+We have learned that growing a floc filter leads to better sedimentation tank performance. One explanation for the improved performance is that the floc filter acts like an additional flocculator because there are additional collisions between particles. To understand the nature and significance of these additional collisions, we can calculate the floc filter velocity gradients and residence time to find collision potential, :math:`G\theta`. In a floc filter, we expect that :math:`G` is small; however, :math:`\theta` is large, which means that :math:`G\theta` in the floc filter may be significant.
 
-First, we will find :math:`\theta`. If we simplify the bottom of the sedimentation tank and approximate it as a simple rectangle, we can easily determine the residence time. If the depth of the floc blanket is 1 m and the upflow velocity is 1 mm/s, we determine that
+First, we will find :math:`\theta`. If we simplify the bottom of the sedimentation tank and approximate it as a simple rectangle, we can easily determine the residence time. If the depth of the floc filter is 1 m and the upflow velocity is 1 mm/s, we determine that
 
 .. math::
 
   \theta = 1000 s
 
-Next, we will find :math:`G`. Before we begin, consider why there is a velocity gradient in the floc blanket. What causes it? Water is flowing up through the floc blanket while the flocs in the floc blanket are being pulled down by gravity. The differential velocities are caused by particles settling and rising at different velocities relative to the fluid due to drag, gravity, and fluid flow. In the fluid around each particle, there is a velocity gradient and shear between the particles and the surrounding fluid.
+Next, we will find :math:`G`. Before we begin, consider why there is a velocity gradient in the floc filter. What causes it? Water is flowing up through the floc filter while the flocs in the floc filter are being pulled down by gravity. The differential velocities are caused by particles settling and rising at different velocities relative to the fluid due to drag, gravity, and fluid flow. In the fluid around each particle, there is a velocity gradient and shear between the particles and the surrounding fluid.
 
 Entering the sedimentation tank, there is a large range of particle sizes in the water. The range exists from big flocs made up with hundreds of millions of clay particles to primary particles that made it through flocculation without successful collision. These differentially sized particles create velocity gradients as the particles and flocs are acted on by both settling forces and upward fluid flow forces.
 
-Large flocs provide velocity gradients that can potentially cause collisions between other small particles that we are still trying to capture. Through our derivation to determine :math:`G` in a floc blanket, we will also test an assumption. We will assume that primary particles coming into the floc blanket are not interacting with large flocs. Instead,  we will assume that the the fluid shear and differential velocities promote interactions between two primary particles.
+Large flocs provide velocity gradients that can potentially cause collisions between other small particles that we are still trying to capture. Through our derivation to determine :math:`G` in a floc filter, we will also test an assumption. We will assume that primary particles coming into the floc filter are not interacting with large flocs. Instead,  we will assume that the the fluid shear and differential velocities promote interactions between two primary particles.
 
-So, how can we calculate the velocity gradient? In flocculators, we determined :math:`G` from head loss and residence time. In sedimentation tanks, we determine :math:`G` the same way. Let's calculate the head loss through the floc blanket. To do this, we need to know the density of the floc blanket and we need to know the relationship between head loss a fluidized bed and density of the bed.
+So, how can we calculate the velocity gradient? In flocculators, we determined :math:`G` from head loss and residence time. In sedimentation tanks, we determine :math:`G` the same way. Let's calculate the head loss through the floc filter. To do this, we need to know the density of the floc filter and we need to know the relationship between head loss a fluidized bed and density of the bed.
 
 Density
 ----------
-To calculate the density of the floc blanket at steady-state, we will use principles of mass and volume conservation.
+To calculate the density of the floc filter at steady-state, we will use principles of mass and volume conservation.
 
 .. math::
 
-  C_{clay} = \frac{m_{clay}}{\rlap{-}V_{fb}}
+  C_{clay} = \frac{m_{clay}}{\rlap{-}V_{ff}}
 
 .. math::
 
   \rho = \frac{m_{TOT}}{\rlap{-}V}
 
-We will start by finding the mass of clay and the mass of water in the floc blanket, where:
+We will start by finding the mass of clay and the mass of water in the floc filter, where:
 
-| :math:`C_{clay} =` concentration of clay in the floc blanket
-| :math:`\rlap{-}V_{fb} =` volume of floc blanket
+| :math:`C_{clay} =` concentration of clay in the floc filter
+| :math:`\rlap{-}V_{ff} =` volume of floc filter
 | :math:`\rho_{clay} =` density of clay
 | :math:`\rho_{H_2O} =` density of water
-| :math:`\rho_{fb} =` density of floc blanket
+| :math:`\rho_{ff} =` density of floc filter
 
-The mass of clay in the floc blanket is concentration multiplied by volume, shown by :math:`m_{clay} = C_{clay}\rlap{-}V_{fb}`
+The mass of clay in the floc filter is concentration multiplied by volume, shown by :math:`m_{clay} = C_{clay}\rlap{-}V_{ff}`
 
-The mass of water in the floc blanket is related to the volume fraction of the floc blanket that is occupied by clay, :math:`\frac{C_{clay}}{\rho_{clay}}`, whic is a very small number. :math:`\left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)` is the fraction of the floc blanket that is occupied by water, also called the water volume fraction. So, :math:`m_{H_2O} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right) \rho_{H_2O} \rlap{-}V_{fb}`.
+The mass of water in the floc filter is related to the volume fraction of the floc filter that is occupied by clay, :math:`\frac{C_{clay}}{\rho_{clay}}`, whic is a very small number. :math:`\left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)` is the fraction of the floc filter that is occupied by water, also called the water volume fraction. So, :math:`m_{H_2O} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right) \rho_{H_2O} \rlap{-}V_{ff}`.
 
 Now, we know how much clay and water is in our system. The density of the system, neglecting the addition of coagulant, is,
 
 .. math::
 
-  \rho_{fb} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{fb}}
+  \rho_{ff} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{ff}}
 
 Substituting for :math:`m_{clay}` and :math:`m_{H_2O}`,
 
 .. math::
 
-  \rho_{fb} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\rho_{H_2O} + C_{clay}
+  \rho_{ff} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\rho_{H_2O} + C_{clay}
 
 This can be rearranged to yield the following equation derived from first principles,
 
 .. math::
 
-  \rho_{fb} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right)C_{clay} + \rho_{H_2O}
+  \rho_{ff} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right)C_{clay} + \rho_{H_2O}
 
-AguaClara researchers in the lab developed an empirical equation through experimental studies to calculate floc blanket density. They determined that,
+AguaClara researchers in the lab developed an empirical equation through experimental studies to calculate floc filter density. They determined that,
 
 .. math::
-  \rho_{fb} = 0.687C_{clay} + \rho_{H_2O}
+  \rho_{ff} = 0.687C_{clay} + \rho_{H_2O}
 
 Comparing the empirical equation to the one determined by first principles, it is clear that the coefficient,
 
@@ -634,35 +634,35 @@ Comparing the empirical equation to the one determined by first principles, it i
 Head Loss
 -----------
 
-Now that we can calculate the density of the floc blanket, we can calculate the head loss through the floc blanket. This topic will be discussed further in the chapter on filtration. For now, all you need to know is that density can be related to head loss in the floc blanket through the height of the floc blanket, :math:`H_{fb}`, and the densities of the floc blanket and water.
+Now that we can calculate the density of the floc filter, we can calculate the head loss through the floc filter. This topic will be discussed further in the chapter on filtration. For now, all you need to know is that density can be related to head loss in the floc filter through the height of the floc filter, :math:`H_{ff}`, and the densities of the floc filter and water.
 
 .. math::
 
-  \frac{h_L}{H_{fb}} = \frac{\rho_{fb} - \rho_{H_2O}}{\rho_{H_2O}}
+  \frac{h_L}{H_{ff}} = \frac{\rho_{ff} - \rho_{H_2O}}{\rho_{H_2O}}
 
-There will be a small amount of head loss through the floc blanket because the density of the floc blanket is greater than the density of water by only a little bit. Remember that :math:`\frac{C_{clay}}{\rho_{clay}}` is really just the fraction of the floc blanket that is occupied by clay.
+There will be a small amount of head loss through the floc filter because the density of the floc filter is greater than the density of water by only a little bit. Remember that :math:`\frac{C_{clay}}{\rho_{clay}}` is really just the fraction of the floc filter that is occupied by clay.
 
-Plugging in the equation for :math:`\rho_{fb}` and solving for :math:`h_L`,
+Plugging in the equation for :math:`\rho_{ff}` and solving for :math:`h_L`,
 
 .. math::
 
-  h_L = H_{fb} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}
+  h_L = H_{ff} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}
 
 .. _heading_Flocculator_Floc_Blanket_Paradox:
 
 Flocculator and Floc Blanket Paradox
 --------------------------------------
 
-We now have a very interesting apparent contradiction between our conclusions about flocculation and floc blankets. We previously concluded that primary particles do not collide with and attach to flocs in flocculators. This assumption is required to explain experimental observations. Indeed, if primary particles could attach to flocs in a flocculator, then high turbidity events with appropriate coagulant dosages should result in super performance because there would be so many opportunities for collisions between large flocs and primary particles. This is not what we observe.
+We now have a very interesting apparent contradiction between our conclusions about flocculation and floc filters. We previously concluded that primary particles do not collide with and attach to flocs in flocculators. This assumption is required to explain experimental observations. Indeed, if primary particles could attach to flocs in a flocculator, then high turbidity events with appropriate coagulant dosages should result in super performance because there would be so many opportunities for collisions between large flocs and primary particles. This is not what we observe.
 
-The contradiction is that now we conclude that primary particles must be attaching to flocs in the floc blanket! Both of these conclusions are based on a combination of experimental measurements and careful application of models. If these apparently contradictory conclusions are both correct, then there must be some fundamental difference between the particle interactions in flocculators and floc blankets.
+The contradiction is that now we conclude that primary particles must be attaching to flocs in the floc filter! Both of these conclusions are based on a combination of experimental measurements and careful application of models. If these apparently contradictory conclusions are both correct, then there must be some fundamental difference between the particle interactions in flocculators and floc filters.
 
-In both environments the flow around the flocs is dominated by viscous forces. The source of the fluid deformation is different in these two flows. In the flocculator the source of the fluid deformation is from turbulent kinetic energy that is dissipating by deforming (shearing) the fluid. In the floc blanket the source of fluid deformation is from the gravitational pull on the flocs. The flocs are moving relative to the fluid and the fluid is being deformed as the flocs move through the fluid.
+In both environments the flow around the flocs is dominated by viscous forces. The source of the fluid deformation is different in these two flows. In the flocculator the source of the fluid deformation is from turbulent kinetic energy that is dissipating by deforming (shearing) the fluid. In the floc filter the source of fluid deformation is from the gravitational pull on the flocs. The flocs are moving relative to the fluid and the fluid is being deformed as the flocs move through the fluid.
 
-.. _table_flocculator_vs_floc_blanket:
+.. _table_flocculator_vs_floc_filter:
 
-.. csv-table:: Comparison between flocculator and floc blanket.
-   :header: "Property", "Flocculator", "Floc blanket"
+.. csv-table:: Comparison between flocculator and floc filter.
+   :header: "Property", "Flocculator", "Floc filter"
    :align: center
 
    Velocity gradient, ~100 Hz, x Hz
@@ -728,7 +728,7 @@ Let's begin by finding the internal width of a single diffuser. Using conservati
 
 .. math::
 
-  Q_{diff} = \bar v_{jet}W_{diff}S_{diff} = \bar v_{z_{fb}}W_{Sed}B_{diff}
+  Q_{diff} = \bar v_{jet}W_{diff}S_{diff} = \bar v_{z_{ff}}W_{Sed}B_{diff}
 
 :math:`Q_{diff}` is determined :ref:`as an example <heading_flow_thru_diffuser>`, where we find that :math:`Q_{diff} = 50 \frac{mL}{s}`.
 
@@ -736,7 +736,7 @@ Solving for :math:`W_{diff}`,
 
 .. math::
 
-  W_{diff} = \frac{\bar v_{z_{fb}}W_{Sed}B_{diff}}{\bar v_{jet}S_{diff}}
+  W_{diff} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{\bar v_{jet}S_{diff}}
 
 Using the constraint of head loss in the jet and solving for :math:`\bar v_{jet}`,
 
@@ -752,11 +752,11 @@ Substituting back into the equation for :math:`W_{diff}`, we can find the minimu
 
 .. math::
 
-  W_{diff,min} = \frac{\bar v_{z_{fb}}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}
+  W_{diff,min} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}
 
 Now that we have determined the minimum width, we can use known parameters and constraints to find a precise value for :math:`W_{diff}` and :math:`v_{jet}`.
 
-Using known constants for :math:`\bar v_{z_{fb}} = 1 \frac{mm}{s}`, :math:`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that :math:`W_{diff,min} = 2.7 mm`. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to 3.175 mm.
+Using known constants for :math:`\bar v_{z_{ff}} = 1 \frac{mm}{s}`, :math:`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that :math:`W_{diff,min} = 2.7 mm`. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to 3.175 mm.
 
 .. math::
 
@@ -766,7 +766,7 @@ Solving for :math:`\bar v_{jet}` from our earlier equations yields,
 
 .. math::
 
-  \bar v_{jet} = \frac{\bar v_{z_{fb}}W_{Sed}B_{diff}}{W_{diff}S_{diff}}
+  \bar v_{jet} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{W_{diff}S_{diff}}
 
 Using known constants,
 

@@ -8,7 +8,7 @@ Designing a sedimentation tank requires selecting several key design parameters.
 
 We know that performance deteriorates as the flow rate increases in a flocculation/sedimentation systems. To improve the performance of AguaClara plants at maximum flow we are exploring reducing the maximum velocity gradient in the flocculator and the inlet to the sedimentation tank. If we reduce the maximum velocity gradient to 100 Hz the inlet manifold for a 6 L/s plant increases to 10" nominal diameter and that pipe costs a significant fraction of the total sedimentation tank materials.
 
-:eq:`G_of_vc_and_floc_props` reveals that there is a tradeoff between the velocity gradient entering the sedimentation tank and the capture velocity of the plate settlers.
+Equation :eq:`G_of_vc_and_floc_props` reveals that there is a tradeoff between the velocity gradient entering the sedimentation tank and the capture velocity of the plate settlers.
 
 
 Learning Objectives
@@ -31,7 +31,7 @@ Use a temperature of 5°C, design the tank for APP, and an SDR_max of 41.
 #. What is the cost of the inlet manifold pipe? Note that this does not include the elbow and coupling that are designed as part of the channel system in the sedimentation tank.
 #. What is the ID of an 8" pipe with an SDR of 41? Use the queryPipeWithFittingDim function. Note that it returns a map with many parameters.
 #. Increase the velocity gradient for the diffuser until the inlet pipe switches from 10" to 8". You can see the change in the minimum required pipe ID by using the variable table with this input (#sedPlastic.inletManifold.manifold). The variable table is another custom table option at the same location as the bill of materials. You can see how much you have to adjust the velocity gradient based on the value of the minimum required pipe ID. What is the minimum velocity gradient that results in an 8" ND inlet manifold?
-#. Use :eq:`G_of_vc_and_floc_props` to calculate the maximum capture velocity that can be used given a water temperature of 5°C and assuming that the maximum allowable value of :math:`\zeta = 4.9 \cdot \frac{mm^8}{s^6}`.
+#. Use Equation :eq:`G_of_vc_and_floc_props` to calculate the maximum capture velocity that can be used given a water temperature of 5°C and assuming that the maximum allowable value of :math:`\zeta = 4.9 \cdot \frac{mm^8}{s^6}`.
 #. Change the capture velocity in the designOverrides and find the new cost of the 6 L/s sedimentation tank with an 8" inlet manifold.
 #. Explain why the cost decreased.
 #. How many plate settlers are in this sedimentation tank (see if you can find this value in the design map using the variable table)?
@@ -39,5 +39,5 @@ Use a temperature of 5°C, design the tank for APP, and an SDR_max of 41.
 #. What is the plan view area of the entrance into the space between two plate settlers? We will use this to calculate the vertical component of the velocity entering the plate settlers.
 #. What is the vertical velocity entering the plate settlers? You'll need to use continuity to figure this out.
 #. Why is this velocity greater than the upflow velocity in the sed tank in the section where the walls are vertical?
-#. What is the capture velocity of these plate settlers (see :eq:`vc_of_vz_plate`)?
+#. What is the capture velocity of these plate settlers (see Equation :eq:`vc_of_vz_plate`)?
 #. Is the calculated capture velocity better than or worse than the design capture velocity?

@@ -633,7 +633,7 @@ msgid "And here is a working example:"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:425
-msgid "This is a floc blanket forming"
+msgid "This is a floc filter forming"
 msgstr ""
 
 #: ../../Textbook_Creation_Help/example_aguaclara_rst.rst:431
