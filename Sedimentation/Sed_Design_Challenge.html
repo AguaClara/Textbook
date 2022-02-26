@@ -267,7 +267,7 @@
 <span id="title-sedimentation-design-challenge"></span><h1>Sedimentation Design Challenge<a class="headerlink" href="#sedimentation-design-challenge" title="Permalink to this headline">¶</a></h1>
 <p>Designing a sedimentation tank requires selecting several key design parameters. The upflow velocity sets the plan view area of the sedimentation tank and thus directly controls the cost of the concrete tank. The capture velocity sets the required area of the plate settlers and thus sets their cost. The maximum velocity gradient sets the maximum velocity exiting the diffuser ports and that in turn sets the maximum velocity in the inlet manifold and hence the diameter of the inlet manifold.</p>
 <p>We know that performance deteriorates as the flow rate increases in a flocculation/sedimentation systems. To improve the performance of AguaClara plants at maximum flow we are exploring reducing the maximum velocity gradient in the flocculator and the inlet to the sedimentation tank. If we reduce the maximum velocity gradient to 100 Hz the inlet manifold for a 6 L/s plant increases to 10” nominal diameter and that pipe costs a significant fraction of the total sedimentation tank materials.</p>
-<p>Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(232)</a> reveals that there is a tradeoff between the velocity gradient entering the sedimentation tank and the capture velocity of the plate settlers.</p>
+<p>Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(238)</a> reveals that there is a tradeoff between the velocity gradient entering the sedimentation tank and the capture velocity of the plate settlers.</p>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -285,7 +285,7 @@
 <li><p>What is the cost of the inlet manifold pipe? Note that this does not include the elbow and coupling that are designed as part of the channel system in the sedimentation tank.</p></li>
 <li><p>What is the ID of an 8” pipe with an SDR of 41? Use the queryPipeWithFittingDim function. Note that it returns a map with many parameters.</p></li>
 <li><p>Increase the velocity gradient for the diffuser until the inlet pipe switches from 10” to 8”. You can see the change in the minimum required pipe ID by using the variable table with this input (#sedPlastic.inletManifold.manifold). The variable table is another custom table option at the same location as the bill of materials. You can see how much you have to adjust the velocity gradient based on the value of the minimum required pipe ID. What is the minimum velocity gradient that results in an 8” ND inlet manifold?</p></li>
-<li><p>Use Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(232)</a> to calculate the maximum capture velocity that can be used given a water temperature of 5°C and assuming that the maximum allowable value of <span class="math notranslate nohighlight">\(\zeta = 4.9 \cdot \frac{mm^8}{s^6}\)</span>.</p></li>
+<li><p>Use Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(238)</a> to calculate the maximum capture velocity that can be used given a water temperature of 5°C and assuming that the maximum allowable value of <span class="math notranslate nohighlight">\(\zeta = 4.9 \cdot \frac{mm^8}{s^6}\)</span>.</p></li>
 <li><p>Change the capture velocity in the designOverrides and find the new cost of the 6 L/s sedimentation tank with an 8” inlet manifold.</p></li>
 <li><p>Explain why the cost decreased.</p></li>
 <li><p>How many plate settlers are in this sedimentation tank (see if you can find this value in the design map using the variable table)?</p></li>
@@ -293,7 +293,7 @@
 <li><p>What is the plan view area of the entrance into the space between two plate settlers? We will use this to calculate the vertical component of the velocity entering the plate settlers.</p></li>
 <li><p>What is the vertical velocity entering the plate settlers? You’ll need to use continuity to figure this out.</p></li>
 <li><p>Why is this velocity greater than the upflow velocity in the sed tank in the section where the walls are vertical?</p></li>
-<li><p>What is the capture velocity of these plate settlers (see Equation <a class="reference internal" href="Sed_Derivations.html#equation-vc-of-vz-plate">(503)</a>)?</p></li>
+<li><p>What is the capture velocity of these plate settlers (see Equation <a class="reference internal" href="Sed_Derivations.html#equation-vc-of-vz-plate">(509)</a>)?</p></li>
 <li><p>Is the calculated capture velocity better than or worse than the design capture velocity?</p></li>
 </ol>
 </div>

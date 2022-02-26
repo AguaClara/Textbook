@@ -324,14 +324,22 @@ eliminated.</p>
 <div class="math notranslate nohighlight" id="equation-review-review-fluid-mechanics-derivations-13">
 <span class="eqno">(67)<a class="headerlink" href="#equation-review-review-fluid-mechanics-derivations-13" title="Permalink to this equation">¶</a></span>\[{\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2\]</div>
 <div class="math notranslate nohighlight" id="equation-minor-loss-equation">
-<span class="eqno">(68)<a class="headerlink" href="#equation-minor-loss-equation" title="Permalink to this equation">¶</a></span>\[  \color{purple}{
-   {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
-   }\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<span class="eqno">(68)<a class="headerlink" href="#equation-minor-loss-equation" title="Permalink to this equation">¶</a></span>\[   {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2\]</div>
 <p>You will often see <span class="math notranslate nohighlight">\(K_e^{'}\)</span> and <span class="math notranslate nohighlight">\(K_e\)</span> used without the <span class="math notranslate nohighlight">\(e\)</span> subscript, they will appear as <span class="math notranslate nohighlight">\(K^{'}\)</span> and <span class="math notranslate nohighlight">\(K\)</span>.</p>
-</div>
 <p>Being familiar with these three forms and how they are used will be of great help throughout the class. The third form is the one that is most commonly used.</p>
+<p>We can convert the minor loss coefficient, <span class="math notranslate nohighlight">\(K_e\)</span>, into a flow contraction using the minor loss equation (see Equation <a class="reference internal" href="#equation-minor-loss-equation">(68)</a>)</p>
+<div class="math notranslate nohighlight" id="equation-minor-k-of-pi-vc">
+<span class="eqno">(69)<a class="headerlink" href="#equation-minor-k-of-pi-vc" title="Permalink to this equation">¶</a></span>\[ K_e = \left(\frac{1}{\Pi_{vc}}  - 1 \right)^2\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> is the ratio of the contracted area to the full expanded flow area.</p>
+<div class="math notranslate nohighlight" id="equation-review-review-fluid-mechanics-derivations-14">
+<span class="eqno">(70)<a class="headerlink" href="#equation-review-review-fluid-mechanics-derivations-14" title="Permalink to this equation">¶</a></span>\[\Pi_{vc} = \frac{A_{in}}{A_{out}}\]</div>
+<p>Given that <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> is the ratio of the contracted area to the full expanded flow area we obtain the relationship between the contracted diameter, <span class="math notranslate nohighlight">\(D_{vc}\)</span>, and the expanded diameter, <span class="math notranslate nohighlight">\(D_{pipe}\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-d-pipe-of-d-vc">
+<span class="eqno">(71)<a class="headerlink" href="#equation-d-pipe-of-d-vc" title="Permalink to this equation">¶</a></span>\[D_{pipe} = \frac{D_{vc}}{\sqrt{\Pi_{vc}}}\]</div>
+<p>Solving Equation <a class="reference internal" href="#equation-minor-k-of-pi-vc">(69)</a> for <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> we obtain</p>
+<div class="math notranslate nohighlight" id="equation-pi-vc-of-minor-k">
+<span class="eqno">(72)<a class="headerlink" href="#equation-pi-vc-of-minor-k" title="Permalink to this equation">¶</a></span>\[\Pi_{vc} = \frac{1}{\sqrt{K_e} + 1}\]</div>
+<p>The extent of a flow contraction, <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> can be estimated from the measured minor loss coefficient.</p>
 </div>
 </div>
 </div>
