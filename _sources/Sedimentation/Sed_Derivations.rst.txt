@@ -483,9 +483,9 @@ Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
 Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}`. The resulting two plots show how head loss and velocity relate to plate settlers (see :numref:`figure_plate_settler_headloss_spacing`).
 
 
-.. _heading_Sed_Tank_Floc_Blanket_Design:
+.. _heading_Sed_Tank_Floc_Filter_Design:
 
-Floc Blanket Design
+Floc Filter Design
 ======================
 
 Velocity Gradient
@@ -648,9 +648,9 @@ Plugging in the equation for :math:`\rho_{ff}` and solving for :math:`h_L`,
 
   h_L = H_{ff} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}
 
-.. _heading_Flocculator_Floc_Blanket_Paradox:
+.. _heading_Flocculator_Floc_Filter_Paradox:
 
-Flocculator and Floc Blanket Paradox
+Flocculator and Floc Filter Paradox
 --------------------------------------
 
 We now have a very interesting apparent contradiction between our conclusions about flocculation and floc filters. We previously concluded that primary particles do not collide with and attach to flocs in flocculators. This assumption is required to explain experimental observations. Indeed, if primary particles could attach to flocs in a flocculator, then high turbidity events with appropriate coagulant dosages should result in super performance because there would be so many opportunities for collisions between large flocs and primary particles. This is not what we observe.
