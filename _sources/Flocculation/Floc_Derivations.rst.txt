@@ -61,14 +61,14 @@ Similarly the maximum jet width is determined by how much it can expand in dista
 
   W_{jet_{max}} = W_{jet_{min}} +  \Pi_{PlaneJet_{exp}}L_{jet}
 
-Equations :eq:`W_jet_min` and :eq:`W_jet_max_of_W_jet_min` provide two equations in two unknowns. Eliminate :math:`W_{jet_{min}}` from equation :eq:`W_jet_max_of_W_jet_min`.
+Equations :eq:`W_jet_min` and :eq:`W_jet_max_of_W_jet_min` provide two equations in two unknowns. Eliminate :math:`W_{jet_{min}}` from Equation :eq:`W_jet_max_of_W_jet_min`.
 
 .. math::
   :label: W_jet_max
 
   W_{jet_{max}} =  \frac{\Pi_{PlaneJet_{exp}}L_{jet}}{1 - \Pi_{vc}^{baffle}}
 
-The velocity in the expanded jet is higher would have been obtained based on continuity and the dimensions of the flow passage. The effect of the higher velocity can be factored into equation :eq:`K_baffle_min` by multiplying by the ratio of the velocity squared. From continuity the ratio of :math:`S` to :math:`W_{jet_{max}}` is the ratio velocity in the expanded jet to the velocity that would have occurred if the flow had filled the enter flow passage. Substitute equation :eq:`W_jet_max` to obtain
+The velocity in the expanded jet is higher would have been obtained based on continuity and the dimensions of the flow passage. The effect of the higher velocity can be factored into Equation :eq:`K_baffle_min` by multiplying by the ratio of the velocity squared. From continuity the ratio of :math:`S` to :math:`W_{jet_{max}}` is the ratio velocity in the expanded jet to the velocity that would have occurred if the flow had filled the enter flow passage. Substitute Equation :eq:`W_jet_max` to obtain
 
 .. math::
   :label: baffle_expanded_jet_width_ratio
@@ -82,14 +82,14 @@ The ratio of :math:`\frac{L_{jet}}{S}` can be expressed as a function of the baf
 
   \frac{L_{jet_{max}}}{S} = \frac{H_e}{S}= \Pi_{H_eS}
 
-Substitute equation :eq:`L_jetS_ratio` into equation :eq:`baffle_expanded_jet_width_ratio` to obtain the ratio of the velocity in the expanded jet to the velocity that would have occurred if the flow had filled the enter flow passage.
+Substitute Equation :eq:`L_jetS_ratio` into Equation :eq:`baffle_expanded_jet_width_ratio` to obtain the ratio of the velocity in the expanded jet to the velocity that would have occurred if the flow had filled the enter flow passage.
 
 .. math::
   :label: baffle_unexpanded_velocity_ratio
 
   \frac{S}{W_{jet_{max}}}  =   \frac{1 - \Pi_{vc}^{baffle}}{\Pi_{PlaneJet_{exp}}\Pi_{H_eS}}
 
-Equation :eq:`baffle_unexpanded_velocity_ratio` has a minimum value of 1 representing fully expanded flow. For small values of :math:`\Pi_{H_eS}` the equation would incorrectly predict values less than 1. The square of this velocity ratio can be factored into the baffle minor loss equation (equation :eq:`K_baffle_min`) to obtain an equation that handles baffles in series where the flow doesn't fully expand between baffles.
+Equation :eq:`baffle_unexpanded_velocity_ratio` has a minimum value of 1 representing fully expanded flow. For small values of :math:`\Pi_{H_eS}` the equation would incorrectly predict values less than 1. The square of this velocity ratio can be factored into the baffle minor loss equation (Equation :eq:`K_baffle_min`) to obtain an equation that handles baffles in series where the flow doesn't fully expand between baffles.
 
 .. math::
   :label: K_baffle_expanding_messy

@@ -275,14 +275,14 @@
 <p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=FMhBN6N6xAPe&amp;line=10&amp;uniqifier=1">Be sure to run this code prior to trying any examples</a></p>
 <div class="section" id="tube-settler-design">
 <h2>Tube Settler Design<a class="headerlink" href="#tube-settler-design" title="Permalink to this headline">¶</a></h2>
-<p>Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank, <span class="math notranslate nohighlight">\(v_{z_{fb}}\)</span>, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, <span class="math notranslate nohighlight">\(v_{\alpha}\)</span>. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.</p>
+<p>Design a tube settler for a laboratory scale sedimentation tank. The vertical section of the sedimentation tank, <span class="math notranslate nohighlight">\(v_{z_{ff}}\)</span>, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, <span class="math notranslate nohighlight">\(v_{\alpha}\)</span>. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-0">
-<span class="eqno">(619)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{z_{fb}}}{\bar v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
+<span class="eqno">(621)<a class="headerlink" href="#equation-sedimentation-sed-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{z_{ff}}}{\bar v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-1">
-<span class="eqno">(620)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_{z_{fb}} = \bar v_\alpha\sin \alpha\]</div>
+<span class="eqno">(622)<a class="headerlink" href="#equation-sedimentation-sed-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_{z_{ff}} = \bar v_\alpha\sin \alpha\]</div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=qxeWciqaZnPZ&amp;line=4&amp;uniqifier=1">Solve for the length of the tube settler.</a></p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-2">
-<span class="eqno">(621)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
+<span class="eqno">(623)<a class="headerlink" href="#equation-sedimentation-sed-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
 <p>The tube settler above the floc hopper needs to be 72 cm long. The tube settler should provide a capture velocity of at least 1 mm/s prior to the floc hopper. Thus there should be 11 cm below the floc hopper.</p>
 </div>
 <div class="section" id="determining-flow-through-a-diffuser">
@@ -290,20 +290,20 @@
 <p>What is the flow rate of a single diffuser in the bottom of the sedimentation tank? Consider a sedimentation tank that is 6 m long, 1 m wide and 2 m deep, with an upflow velocity of 1 mm/s and a diffuser spacing of 5 cm.</p>
 <p>What is this question really asking? This question is asking us to understand that each diffuser “serves” a specific cross-sectional area of the sedimentation tank; all of the diffusers together serve the entire area of the sedimentation tank. So, let’s imagine a single diffuser serving a slice of a sedimentation tank. With this in mind, we can easily solve this using <span class="math notranslate nohighlight">\(Q = \bar vA\)</span>. The area, <span class="math notranslate nohighlight">\(A\)</span>, is the slice of the sedimentation tank that we are serving. We are told that the tank is 1 m wide, so <span class="math notranslate nohighlight">\(W_{tank} = 1\)</span> m. The length of the slice is dictated by the spacing of the diffusers, <span class="math notranslate nohighlight">\(B_{diff}\)</span>, so <span class="math notranslate nohighlight">\(B_{diff} = 5\)</span> cm.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-3">
-<span class="eqno">(622)<a class="headerlink" href="#equation-sedimentation-sed-examples-3" title="Permalink to this equation">¶</a></span>\[A = B_{diff}W_{tank}\]</div>
+<span class="eqno">(624)<a class="headerlink" href="#equation-sedimentation-sed-examples-3" title="Permalink to this equation">¶</a></span>\[A = B_{diff}W_{tank}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-4">
-<span class="eqno">(623)<a class="headerlink" href="#equation-sedimentation-sed-examples-4" title="Permalink to this equation">¶</a></span>\[A = 5 cm * 1 m\]</div>
+<span class="eqno">(625)<a class="headerlink" href="#equation-sedimentation-sed-examples-4" title="Permalink to this equation">¶</a></span>\[A = 5 cm * 1 m\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-5">
-<span class="eqno">(624)<a class="headerlink" href="#equation-sedimentation-sed-examples-5" title="Permalink to this equation">¶</a></span>\[A = 50,000 mm^2\]</div>
-<p>The problem statement includes that <span class="math notranslate nohighlight">\(\bar v_{z_{fb}} = 1\)</span> mm/s. Plugging into our flow equation,</p>
+<span class="eqno">(626)<a class="headerlink" href="#equation-sedimentation-sed-examples-5" title="Permalink to this equation">¶</a></span>\[A = 50,000 mm^2\]</div>
+<p>The problem statement includes that <span class="math notranslate nohighlight">\(\bar v_{z_{ff}} = 1\)</span> mm/s. Plugging into our flow equation,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-6">
-<span class="eqno">(625)<a class="headerlink" href="#equation-sedimentation-sed-examples-6" title="Permalink to this equation">¶</a></span>\[Q_{diff} = \bar v_{z_{fb}}A\]</div>
+<span class="eqno">(627)<a class="headerlink" href="#equation-sedimentation-sed-examples-6" title="Permalink to this equation">¶</a></span>\[Q_{diff} = \bar v_{z_{ff}}A\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-7">
-<span class="eqno">(626)<a class="headerlink" href="#equation-sedimentation-sed-examples-7" title="Permalink to this equation">¶</a></span>\[Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\]</div>
+<span class="eqno">(628)<a class="headerlink" href="#equation-sedimentation-sed-examples-7" title="Permalink to this equation">¶</a></span>\[Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-8">
-<span class="eqno">(627)<a class="headerlink" href="#equation-sedimentation-sed-examples-8" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50,000 \frac{mm^3}{s}\]</div>
+<span class="eqno">(629)<a class="headerlink" href="#equation-sedimentation-sed-examples-8" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50,000 \frac{mm^3}{s}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-9">
-<span class="eqno">(628)<a class="headerlink" href="#equation-sedimentation-sed-examples-9" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50 \frac{mL}{s}\]</div>
+<span class="eqno">(630)<a class="headerlink" href="#equation-sedimentation-sed-examples-9" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50 \frac{mL}{s}\]</div>
 <p>The flow rate of each diffuser is <span class="math notranslate nohighlight">\(50 \frac{mL}{s}\)</span>.</p>
 </div>
 <div class="section" id="identify-failure-modes-from-old-design">
@@ -331,10 +331,10 @@
 <p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=VE_1JE-pasAm&amp;line=6&amp;uniqifier=1">Use these given parameters</a></p>
 <p>To find the maximum velocity based on maximum headloss we will use the minor loss equation.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-10">
-<span class="eqno">(629)<a class="headerlink" href="#equation-sedimentation-sed-examples-10" title="Permalink to this equation">¶</a></span>\[h_{e,inlet} = K \frac{\bar v_{jet}^2}{2g}\]</div>
+<span class="eqno">(631)<a class="headerlink" href="#equation-sedimentation-sed-examples-10" title="Permalink to this equation">¶</a></span>\[h_{e,inlet} = K \frac{\bar v_{jet}^2}{2g}\]</div>
 <p>To find the minimum width based on the maximum velocity through the diffuser, we will use conservation of mass. Since it is an incompressible fluid the flow rate entering from the diffuser line jet must be equal to the flow rate up through the sedimentation tank.</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-11">
-<span class="eqno">(630)<a class="headerlink" href="#equation-sedimentation-sed-examples-11" title="Permalink to this equation">¶</a></span>\[\bar v_{jet}W_{diff} L_{sed} = \bar v_{z_{fb}}W_{sed}L_{sed}\]</div>
+<span class="eqno">(632)<a class="headerlink" href="#equation-sedimentation-sed-examples-11" title="Permalink to this equation">¶</a></span>\[\bar v_{jet}W_{diff} L_{sed} = \bar v_{z_{ff}}W_{sed}L_{sed}\]</div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=VE_1JE-pasAm&amp;line=2&amp;uniqifier=1">Code for calculations found here</a></p>
 <p><strong>Answer:</strong> The maximum velocity of the sedimentation tank diffusers is 0.4429 meters / second.
 The minimum width of the sedimentation tank diffusers is 2.409 millimeter.</p>
@@ -358,7 +358,7 @@ The <cite>ceil_nearest</cite> function defined in utility.py can take in a param
 <p>Sedimentation diffuser inner length: 5.522 centimeter</p>
 <p>Each diffuser serves a certain width and length of the sedimentation tank. Assume that the diffusers are installed so that they touch each other.</p>
 <p>4. <a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=CKVZRhHPbUfK&amp;line=2&amp;uniqifier=1">Determine the flow and velocity through each diffuser.</a>
-<span class="math notranslate nohighlight">\(Q_{max,diff} = \bar v_{z_{fb}} A\)</span></p>
+<span class="math notranslate nohighlight">\(Q_{max,diff} = \bar v_{z_{ff}} A\)</span></p>
 <p><span class="math notranslate nohighlight">\(A = W_{sed}  B_{diff}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\bar v_{diff} = \frac{Q_{max,diff}}{W_{diff} * S_{diff}}\)</span></p>
 <p><strong>Answer:</strong> The flow of water leaving a sed tank diffuser is 61.19 milliliter / second
@@ -371,16 +371,16 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <span class="math notranslate nohighlight">\(Re = \frac{\bar v_{diff}*W_{diff}}{\nu}\)</span></p>
 <p><strong>Answer:</strong> The Reynolds number for this jet is 974.6 dimensionless</p>
 <ol class="arabic simple" start="6">
-<li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=kvLaS4AEbhvR&amp;line=2&amp;uniqifier=1">What is the Reynolds number of the vertical flow up through the top of the floc blanket?</a></p></li>
+<li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=kvLaS4AEbhvR&amp;line=2&amp;uniqifier=1">What is the Reynolds number of the vertical flow up through the top of the floc filter?</a></p></li>
 </ol>
 <p>The same principle as above can be applied to this question except the length scale is the width of the sedimentation tank and the velocity is the upwards velocity in the tank.</p>
-<p><span class="math notranslate nohighlight">\(Re = \frac{\bar v_{z_{fb}} W_{sed}}{\nu}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Re = \frac{\bar v_{z_{ff}} W_{sed}}{\nu}\)</span></p>
 <p><strong>Answer:</strong> Reynolds number through floc is 938.2 dimensionless. These two Reynold’s numbers are similar because conservation of mass requires for a constant length that <span class="math notranslate nohighlight">\(\bar v_{1}*W_{1} = \bar v_{2}*W_{2}\)</span>. The slight difference in the numbers is due to that fact that diffusers are not a continuous line jet but rather broken up by two times the thickness of the pipe wall between the diffusers.</p>
 <p>Next, we want to determine the energy dissipation rate for the flow leaving the jet reverser. For this process, you can assume that the jet remains laminar. The flow spreads to fill the gaps created by the walls of the diffuser tubes by the time it traverses the jet reverser. Jet velocity and flow rate are conserved as the jet changes direction in the jet reverser.</p>
 <p>7. Calculate the thickness of the jet after it does the 180 degree bend of the jet reverser. &lt; The change in thickness of the jet after the 180 degree bend is due to the flow spreading out to fill in the gaps created by the diffuser pipe walls.
-<span class="math notranslate nohighlight">\(W_{jet} * \bar v_{diff} = W_{sed} * \bar v_{z_{fb}}\)</span></p>
+<span class="math notranslate nohighlight">\(W_{jet} * \bar v_{diff} = W_{sed} * \bar v_{z_{ff}}\)</span></p>
 <ol class="arabic simple" start="8">
-<li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=8vvPOw1RbsK2&amp;line=1&amp;uniqifier=1">Calculate the maximum energy dissipation rate* for the flow leaving the jet reverser.</a> See Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-edr-jetplane">(185)</a> for the maximum energy dissipation rate in a plane jet and see <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html#table-edr-g-equations"><span class="std std-numref">Table 7</span></a> for the value of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span>.</p></li>
+<li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=8vvPOw1RbsK2&amp;line=1&amp;uniqifier=1">Calculate the maximum energy dissipation rate* for the flow leaving the jet reverser.</a> See Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-edr-jetplane">(186)</a> for the maximum energy dissipation rate in a plane jet and see <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html#table-edr-g-equations"><span class="std std-numref">Table 7</span></a> for the value of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span>.</p></li>
 </ol>
 <p>The energy dissipation rate for inlet jet is 158.5 milliwatt / kilogram</p>
 <p>In designing AguaClara plants, it is critical to account for all forms of significant head loss. In the sedimentation tank, effluent launders provide about 4 cm of head loss. We want to calculate the exit head loss for water leaving the diffusers to determine whether it is a significant addition to the total head loss through the sedimentation tank.</p>
@@ -388,7 +388,7 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <li><p>Calculate the diffuser exit head loss in two ways.</p></li>
 </ol>
 <p>First, calculate the head loss making sure to account for the upflow velocity in the sed tank.</p>
-<p><span class="math notranslate nohighlight">\(h_e = \frac{\left( {{\bar v_{diff}} - {\bar v_{z_{fb}}}} \right)^2}{2g}\)</span></p>
+<p><span class="math notranslate nohighlight">\(h_e = \frac{\left( {{\bar v_{diff}} - {\bar v_{z_{ff}}}} \right)^2}{2g}\)</span></p>
 <p>Second, calculate the head loss but assume that the upflow velocity is negligible.</p>
 <p><span class="math notranslate nohighlight">\(h_e = \frac{\ {\bar v_{diff}}^2}{2g}\)</span></p>
 <ol class="arabic simple" start="10">
@@ -407,17 +407,17 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <p><span class="math notranslate nohighlight">\(\Delta{H}_{Manifold}\)</span> is the variability in piezometric head in the manifold that is driving the flow through the parallel paths.</p>
 <p>The ratio of minimum (first diffuser port) to maximum (last diffuser port) flow is given by:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-12">
-<span class="eqno">(631)<a class="headerlink" href="#equation-sedimentation-sed-examples-12" title="Permalink to this equation">¶</a></span>\[\Pi_{DiffuserFlow} = \sqrt{\frac{h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}}{h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2}}}\]</div>
+<span class="eqno">(633)<a class="headerlink" href="#equation-sedimentation-sed-examples-12" title="Permalink to this equation">¶</a></span>\[\Pi_{DiffuserFlow} = \sqrt{\frac{h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}}{h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2}}}\]</div>
 <p>The change in piezometric head is given by: <span class="math notranslate nohighlight">\(\Delta{H}_{Manifold} = \frac{{v_{manifold}}^{2}}{2g}\)</span></p>
 <p>The maximum allowable velocity in the manifold is given by:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-13">
-<span class="eqno">(632)<a class="headerlink" href="#equation-sedimentation-sed-examples-13" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left(h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2} \right) = h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}\]</div>
+<span class="eqno">(634)<a class="headerlink" href="#equation-sedimentation-sed-examples-13" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left(h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2} \right) = h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-14">
-<span class="eqno">(633)<a class="headerlink" href="#equation-sedimentation-sed-examples-14" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) h_{L,parallelpath} + \left({\Pi{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
+<span class="eqno">(635)<a class="headerlink" href="#equation-sedimentation-sed-examples-14" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) h_{L,parallelpath} + \left({\Pi{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-15">
-<span class="eqno">(634)<a class="headerlink" href="#equation-sedimentation-sed-examples-15" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{\Delta{H}_{Manifold}}{2}\]</div>
+<span class="eqno">(636)<a class="headerlink" href="#equation-sedimentation-sed-examples-15" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-examples-16">
-<span class="eqno">(635)<a class="headerlink" href="#equation-sedimentation-sed-examples-16" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{{v_{manifold}}^{2}}{4g}\]</div>
+<span class="eqno">(637)<a class="headerlink" href="#equation-sedimentation-sed-examples-16" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{{v_{manifold}}^{2}}{4g}\]</div>
 <p>Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint, <span class="math notranslate nohighlight">\(\Pi_{DiffuserFlow}\)</span>, and the head loss in the parallel paths, <span class="math notranslate nohighlight">\(h_{L,ParallelPath}\)</span>.</p>
 <ol class="arabic simple" start="2">
 <li><p>Determine an equation for maximum velocity for an inlet manifold in terms of diffuser exit velocity and the flow distribution constraint.</p></li>
@@ -459,11 +459,11 @@ The function from the pipe database can return the nominal diameter from the dia
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=wg6BNPlkP6oz&amp;line=1&amp;uniqifier=1">What is the total required plan area for the sedimentation tanks?</a></p></li>
 </ol>
-<p><strong>Answer:</strong> The plant view area of the floc blanket is 60 square meters.</p>
+<p><strong>Answer:</strong> The plant view area of the floc filter is 60 square meters.</p>
 <ol class="arabic simple" start="2">
-<li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=-MHwQyXUQEqp&amp;line=1&amp;uniqifier=1">What is the total length of the floc blanket zone for all tanks?</a></p></li>
+<li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=-MHwQyXUQEqp&amp;line=1&amp;uniqifier=1">What is the total length of the floc filter zone for all tanks?</a></p></li>
 </ol>
-<p><strong>Answer:</strong> The total length of the floc blanket zone for all tanks is 56.24 meters.</p>
+<p><strong>Answer:</strong> The total length of the floc filter zone for all tanks is 56.24 meters.</p>
 <ol class="arabic simple" start="3">
 <li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=u0J7OWpoQVjy&amp;line=1&amp;uniqifier=1">How many sedimentation tanks are required to treat the total plant flow?</a> The plant flow rate is the basis of design and the maximum sed tank flow rate is based on the manifold diameter.</p></li>
 </ol>
@@ -479,7 +479,7 @@ The function from the pipe database can return the nominal diameter from the dia
 </div>
 <div class="section" id="plate-settler-design">
 <h2>Plate Settler Design<a class="headerlink" href="#plate-settler-design" title="Permalink to this headline">¶</a></h2>
-<p>We will assume that the active area of the sedimentation tank is equal to the top area of the floc blanket zone. This isn’t quite right because of the geometric constraints from the floc hopper, inlet channel, settled water channel, and angled plates. However, it is a good approximation for these long tanks.</p>
+<p>We will assume that the active area of the sedimentation tank is equal to the top area of the floc filter zone. This isn’t quite right because of the geometric constraints from the floc hopper, inlet channel, settled water channel, and angled plates. However, it is a good approximation for these long tanks.</p>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=xK3Q6UmvRBAL&amp;line=2&amp;uniqifier=1">What is the required length of the plate settlers?</a></p></li>
 </ol>

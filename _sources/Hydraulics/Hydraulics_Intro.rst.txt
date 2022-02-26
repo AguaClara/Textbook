@@ -169,7 +169,7 @@ If there is no additional head loss in series to improve flow distribution, then
 .. math::
   :label: Manifold_max_v_no_hl_series
 
-   \frac{A_{M_1}}{A_{P}} =\frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{1}{\Pi_{\Psi}}
+   \frac{A_{M_1}}{A_{P}} =\frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{1}{\Pi_{\Psi}}}
 
 Equation :eq:`Manifold_max_v_no_hl_series` (see :numref:`figure_Ratio_port_to_manifold_velocity`) can be used to determine the required diameter of inlet manifolds in sedimentation tanks or to determine the required port velocity for the backwash manifold in the StaRS filters. It can also be used to solve for the maximum manifold velocity given the port velocity in the sedimentation tank diffusers.
 
@@ -247,7 +247,7 @@ The head loss through the sedimentation tank is due to:
 * entrance and elbow in influent manifold
 * major losses in influent manifold (negligible)
 * diffuser exit loss
-* floc blanket (negligible)
+* floc filter (negligible)
 * plate settlers (negligible)
 * effluent manifold orifices
 * effluent manifold major loss (negligible)
