@@ -368,9 +368,9 @@ The geometry of the sedimentation tank changes in these four zones, so we will f
     AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
 
 
-.. _heading_Sed_Tank_Floc_Blanket:
+.. _heading_Sed_Tank_Floc_Filter:
 
-Floc Blanket
+Floc Filter
 -------------
 
 After the water exits the diffusers and jet reverser, it flows through the expanded floc filter region where:
@@ -396,7 +396,7 @@ For a floc filter to form, a sedimentation system requires that 1) all flocs be 
 
 Studies by AguaClara researchers have found that floc filters improve the performance of a sedimentation tank and reduce settled water turbidity by a factor of 10 for multiple reasons (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_):
 
-- By providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc filter due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G_{CS} \theta` cause a large reduction in turbidity? The two-fold answer may be that the lower :math:`G_{CS}` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc filter. See the section on :ref:`floc filter design <heading_Sed_Tank_Floc_Blanket_Design>` for more information.
+- By providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc filter due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G_{CS} \theta` cause a large reduction in turbidity? The two-fold answer may be that the lower :math:`G_{CS}` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc filter. See the section on :ref:`floc filter design <heading_Sed_Tank_Floc_Filter_Design>` for more information.
 
 - By creating a uniform vertical velocity of water entering the plate settlers.
 
