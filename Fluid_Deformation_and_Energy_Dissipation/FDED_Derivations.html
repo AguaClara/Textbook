@@ -391,9 +391,6 @@ The “<span class="math notranslate nohighlight">\(\approx\)</span>” indicate
 <div class="math notranslate nohighlight" id="equation-mixing-pipe-diameters">
 <span class="eqno">(96)<a class="headerlink" href="#equation-mixing-pipe-diameters" title="Permalink to this equation">¶</a></span>\[N_{D_{pipe}} \approx \frac{\bar v}{v_{eddy}} \approx \left(\frac{2}{{\rm f}} \right)^\frac{1}{3}\]</div>
 <p>Where <span class="math notranslate nohighlight">\(N_{D_{pipe}}\)</span> is the distance in number of pipe diameters downstream of the injection point where complete mixing will have occurred. This estimate is a minimum distance and a factor of safety of 2 or more would reasonably be applied. In addition it is best practice to inject the coagulant in the center of the pipe. Injecting the coagulant at the side of the pipe will require considerably greater distance downstream for mixing across the pipe.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">((</span><span class="mf">0.02</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="inner-viscous-length-scale">
 <span id="heading-inner-viscous-length-scale"></span><h3>Inner Viscous Length Scale<a class="headerlink" href="#inner-viscous-length-scale" title="Permalink to this headline">¶</a></h3>
@@ -758,46 +755,52 @@ to obtain</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-95">
 <span class="eqno">(183)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-95" title="Permalink to this equation">¶</a></span>\[\Pi_{JetRound} = 0.08\]</div>
 <p>The maximum velocity gradient in a jet is thus</p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-96">
-<span class="eqno">(184)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-96" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-jet-g-max">
+<span class="eqno">(184)<a class="headerlink" href="#equation-jet-g-max" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}\]</div>
 <p>Below we plot the Baldyga et al. equation for the energy dissipation rate as a function of distance from the discharge location for the case of a round jet that is discharging into a large tank.</p>
 <div class="figure align-center" id="id14">
 <span id="figure-jet-centerline-edr"></span><a class="reference internal image-reference" href="../_images/Jet_centerline_EDR.png"><img alt="Pipe pressure and shear force balance" src="../_images/Jet_centerline_EDR.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">The centerline energy dissipation rate downstream from a round jet. The distance downstream is measured in units of jet diameters. The energy dissipation rate between the jet and 7 jet diameters is developing as the shear between the stationary fluid and the jet propagates toward the center of the jet and turbulence is generated.</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
+<p>By substituting the continuity equation into Equation <a class="reference internal" href="#equation-jet-g-max">(184)</a> we can find the minimum jet diameter given a maximum allowed velocity gradient.</p>
+<div class="math notranslate nohighlight" id="equation-jet-g-max-of-d-jet-min">
+<span class="eqno">(185)<a class="headerlink" href="#equation-jet-g-max-of-d-jet-min" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \left(\frac{4 \bar Q_{Jet}}{\pi D_{Jet}^2}\right)^\frac{3}{2} \sqrt{\frac{\Pi_{JetRound}  }{\nu D_{Jet}}}\]</div>
+<p>Solve for <span class="math notranslate nohighlight">\(D_{Jet}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-d-jet-min-of-jet-g-max">
+<span class="eqno">(186)<a class="headerlink" href="#equation-d-jet-min-of-jet-g-max" title="Permalink to this equation">¶</a></span>\[ D_{Jet} = \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 \bar Q_{Jet}}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
 </div>
 <div class="section" id="plane-jet">
 <span id="heading-plane-jet"></span><h3>Plane Jet<a class="headerlink" href="#plane-jet" title="Permalink to this headline">¶</a></h3>
 <p>Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by <a class="reference external" href="http://dx.doi.org/10.1115/1.3627309">Heskestad in 1965</a> and it may be possible to use that data to get a better estimate of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> from that source.</p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-97">
-<span class="eqno">(185)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-97" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}\]</div>
+<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-96">
+<span class="eqno">(187)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-96" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}\]</div>
 <div class="math notranslate nohighlight" id="equation-edr-jetplane">
-<span class="eqno">(186)<a class="headerlink" href="#equation-edr-jetplane" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}\]</div>
+<span class="eqno">(188)<a class="headerlink" href="#equation-edr-jetplane" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}\]</div>
 <p>The maximum velocity gradient is thus</p>
 <div class="math notranslate nohighlight" id="equation-eq-g-jetplane">
-<span class="eqno">(187)<a class="headerlink" href="#equation-eq-g-jetplane" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}\]</div>
+<span class="eqno">(189)<a class="headerlink" href="#equation-eq-g-jetplane" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-97">
+<span class="eqno">(190)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-97" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{SW}\]</div>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-98">
-<span class="eqno">(188)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-98" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{SW}\]</div>
+<span class="eqno">(191)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-98" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}\]</div>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-99">
-<span class="eqno">(189)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-99" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}\]</div>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-100">
-<span class="eqno">(190)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-100" title="Permalink to this equation">¶</a></span>\[S_{Jet} = S \Pi_{VCBaffle}\]</div>
+<span class="eqno">(192)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-99" title="Permalink to this equation">¶</a></span>\[S_{Jet} = S \Pi_{VCBaffle}\]</div>
 <p>The average hydraulic residence time for the fluid between two baffles
 is</p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-101">
-<span class="eqno">(191)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-101" title="Permalink to this equation">¶</a></span>\[\theta_B = \frac{H}{\bar v}\]</div>
+<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-100">
+<span class="eqno">(193)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-100" title="Permalink to this equation">¶</a></span>\[\theta_B = \frac{H}{\bar v}\]</div>
 <p>where <span class="math notranslate nohighlight">\(H\)</span> is the depth of water. Substituting into the equation for <span class="math notranslate nohighlight">\(\varepsilon_{Max}\)</span> to get the equation in terms of the average velocity <span class="math notranslate nohighlight">\(\bar v\)</span> and flow dimension <span class="math notranslate nohighlight">\(S\)</span></p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-102">
-<span class="eqno">(192)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-102" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max}= \frac{\Pi_{JetPlane}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3\]</div>
+<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-101">
+<span class="eqno">(194)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-101" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max}= \frac{\Pi_{JetPlane}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3\]</div>
 <p>From the control volume analysis the average energy dissipation rate is</p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-103">
-<span class="eqno">(193)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-103" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}\]</div>
+<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-102">
+<span class="eqno">(195)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-102" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}\]</div>
 <p>where <span class="math notranslate nohighlight">\(K\)</span> is the minor loss coefficient for flow around the end of a baffle with a <span class="math notranslate nohighlight">\(180^\circ\)</span> turn.</p>
 <p>Substitute the values for <span class="math notranslate nohighlight">\(\bar \varepsilon\)</span> and
 <span class="math notranslate nohighlight">\(\varepsilon_{Max}\)</span> to obtain the ratio,
 <span class="math notranslate nohighlight">\(\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}\)</span></p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-104">
-<span class="eqno">(194)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-104" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\]</div>
+<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-103">
+<span class="eqno">(196)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-103" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\]</div>
 <p><span class="math notranslate nohighlight">\(\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}\)</span> has a value of 2 for
 <span class="math notranslate nohighlight">\(H_e/S &lt;5\)</span> (CFD analysis and <a class="reference external" href="https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267">Haarhoff, 2001</a>)
 The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</span> is at 5 (from CFD analysis, our weakest assumption).</p>
@@ -805,12 +808,12 @@ The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</s
 <span class="math notranslate nohighlight">\(\frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\)</span> for
 <span class="math notranslate nohighlight">\(H_e/S&gt;5\)</span>. Thus we can solve for <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> at
 <span class="math notranslate nohighlight">\(H_e/S=5\)</span></p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-105">
-<span class="eqno">(195)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-105" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = \left(
+<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-104">
+<span class="eqno">(197)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-104" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = \left(
 \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
 \right)\]</div>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-106">
-<span class="eqno">(196)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-106" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = 0.0124\]</div>
+<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-105">
+<span class="eqno">(198)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-105" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = 0.0124\]</div>
 <p>The code for this example can be found <a class="reference external" href="https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=WQtdrsP9egHB">here</a></p>
 </div>
 <div class="section" id="behind-a-flat-plate">
@@ -822,13 +825,13 @@ The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</s
 <span id="figure-cfd-flat-plate"></span><a class="reference internal image-reference" href="../_images/CFD_Flat_Plate.png"><img alt="CFD Flat Plate" src="../_images/CFD_Flat_Plate.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">The energy dissipation rate and streamlines for a 1 m wide plate in two dimensional flow with an approach velocity of <span class="math notranslate nohighlight">\(1 m/s\)</span>. The maximum energy dissipation rate was approximately <span class="math notranslate nohighlight">\(0.04 W/kg\)</span>.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-107">
-<span class="eqno">(197)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-107" title="Permalink to this equation">¶</a></span>\[\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}\]</div>
+<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-106">
+<span class="eqno">(199)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-106" title="Permalink to this equation">¶</a></span>\[\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}\]</div>
 <p>The maximum velocity gradient is thus</p>
+<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-107">
+<span class="eqno">(200)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-107" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}\]</div>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-108">
-<span class="eqno">(198)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-108" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}\]</div>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-109">
-<span class="eqno">(199)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-109" title="Permalink to this equation">¶</a></span>\[\Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}\]</div>
+<span class="eqno">(201)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-108" title="Permalink to this equation">¶</a></span>\[\Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}\]</div>
 <p>The code for this example can be found <a class="reference external" href="https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=juEleCKZLNuk">here</a></p>
 <p>The flat plate <span class="math notranslate nohighlight">\(\Pi_{Plate}\)</span> has a value of 0.04.</p>
 </div>
