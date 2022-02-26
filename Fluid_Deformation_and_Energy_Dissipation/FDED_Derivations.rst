@@ -181,10 +181,6 @@ Given a friction factor of 0.02, the eddy velocity is approximately 20% of the m
 
 Where :math:`N_{D_{pipe}}` is the distance in number of pipe diameters downstream of the injection point where complete mixing will have occurred. This estimate is a minimum distance and a factor of safety of 2 or more would reasonably be applied. In addition it is best practice to inject the coagulant in the center of the pipe. Injecting the coagulant at the side of the pipe will require considerably greater distance downstream for mixing across the pipe.
 
-.. code:: python
-
-    print((0.02/2)**(1/3))
-
 .. _heading_Inner_Viscous_Length_Scale:
 
 Inner Viscous Length Scale
@@ -892,6 +888,7 @@ The measured dimensionless coefficient, :math:`\Pi_{JetRound}`, is proportional 
 The maximum velocity gradient in a jet is thus
 
 .. math::
+  :label: jet_G_max
 
    G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}
 
@@ -906,6 +903,20 @@ Below we plot the Baldyga et al. equation for the energy dissipation rate as a f
     :alt: Pipe pressure and shear force balance
 
     The centerline energy dissipation rate downstream from a round jet. The distance downstream is measured in units of jet diameters. The energy dissipation rate between the jet and 7 jet diameters is developing as the shear between the stationary fluid and the jet propagates toward the center of the jet and turbulence is generated.
+
+By substituting the continuity equation into Equation :eq:`jet_G_max` we can find the minimum jet diameter given a maximum allowed velocity gradient.
+
+.. math::
+  :label: jet_G_max_of_D_jet_min
+
+   G_{Max} = \left(\frac{4 \bar Q_{Jet}}{\pi D_{Jet}^2}\right)^\frac{3}{2} \sqrt{\frac{\Pi_{JetRound}  }{\nu D_{Jet}}}
+
+Solve for :math:`D_{Jet}`
+
+.. math::
+  :label: D_jet_min_of_jet_G_max
+
+   D_{Jet} = \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 \bar Q_{Jet}}{\pi }\right)^3 \right]^\frac{1}{7}
 
 .. _heading_Plane_Jet:
 
