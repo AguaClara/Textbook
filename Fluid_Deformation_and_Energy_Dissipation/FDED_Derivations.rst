@@ -892,7 +892,7 @@ The maximum velocity gradient in a jet is thus
 
    G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}
 
-Below we plot the Baldyga et al. equation for the energy dissipation rate as a function of distance from the discharge location for the case of a round jet that is discharging into a large tank. 
+Below we plot the Baldyga et al. equation for the energy dissipation rate as a function of distance from the discharge location for the case of a round jet that is discharging into a large tank.
 
 
 .. _figure_Jet_centerline_EDR:
@@ -932,7 +932,7 @@ For many geometry changes we know the minor loss coefficient. An equivalent equa
 
    D_{pipe_{min}} = \sqrt{\sqrt{K_e} + 1} \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 \bar Q}{\pi }\right)^3 \right]^\frac{1}{7}
 
-Equation :eq:`D_pipe_min_of_K_and_jet_G_max` is limited to geometries where the flow contractions are sufficiently separated so that the flow completely expands before entering the next contraction. The pipe diameter is then set by the largest minor loss coefficient in the pipe system.
+Equation :eq:`D_pipe_min_of_K_and_jet_G_max` is limited to geometries where any flow contractions in series are sufficiently separated so that the flow completely expands before entering the next contraction. The pipe diameter is then set by the largest minor loss coefficient in the pipe system.
 
 .. _heading_Plane_Jet:
 
