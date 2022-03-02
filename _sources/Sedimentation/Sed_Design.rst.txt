@@ -157,6 +157,12 @@ The influent manifold diffuser system straightens the fluid jets that are exitin
 
     Flow with a horizontal velocity component that causes problematic flow circulation.
 
+The horizontal flow created by the direction of flow inside the manifold results in preferential flow through the plate settlers at the terminal end of the manifold. This is a common problem in conventional sedimentation tanks that don't have flow straightening diffusers or that have horizontal flow in the tank.
+
+The underlying cause of the poor flow distribution between plate settlers (shown in :numref:`figure_flow_circulation`) is because the head loss through the plate settlers is inconsequential and thus there can't be **any** significant horizontal velocity below the plate settlers. It is possible that some plate settler manufactures address this issue by adding flow control orifices at the top of the plate settlers that add sufficient head loss to the flow through every plate settler to minimize the impact of velocity differences below the plates.
+
+The AguaClara solution is to use flow diffusers that simultaneously eliminate horizontal flow and create a line jet that resuspends settled flocs to maintain the floc filter in suspension.
+
 .. _figure_flow_straightening:
 
 .. figure:: ../Images/flow_straightening.png
@@ -170,9 +176,9 @@ The diffusers create a line jet that spans the entire length of the sedimentatio
 
 You may be wondering, why do we need a jet reverser in the first place? Why don't we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components.
 
-- If the diffusers were to point up, they could clog if anything settles in them. While this is unlikely due to the high velocity of flow exiting the small cross-sectional area diffuser, it is something that is avoided by pointing them down.
+- If the diffusers were to point up, that would mean that any sedimentation that happens near the terminal end of the manifold would accumulate and have no way of being removed.
 - If flow were just to point directly up, it would not have an opportunity to sufficiently spread into the width of the sedimentation bay, which could lead to "short-circuiting" and poor flow distribution overall.
-- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements, as derived in the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>`. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc filter, which will be discussed next. :numref:`figure_jet_placement` shows that flat bottomed and centered jets do not create a floc filter while offset jets are stable.
+- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements, as derived in the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>`. The jet reverser and diffuser alignment is not symmetrical; the diffusers are directed to one side of the jet reverser (either by slight rotation of the inlet manifold or by an offset). This is intentionally done to ensure that the diffuser jet never collapses to promote a floc filter, which will be discussed next. :numref:`figure_jet_placement` shows that flat bottomed and centered jets do not create a floc filter while offset jets are stable.
 
 .. _figure_jet_placement:
 
@@ -307,38 +313,22 @@ Given that the velocity gradient governs the design of the flocculator and the e
   \bar v_{Jet_{max}} =  \left( \frac{G_{max}^2 \nu \bar v_{z_{ff}} W_{Sed}}{ \Pi_{JetPlane}}\right)^\frac{1}{4}
 
 
-The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases. The maximum jet velocity, :numref:`figure_Jet_velocity_vs_sed_valley_width`, and head loss, :numref:`figure_Jet_head_loss_vs_sed_valley_width`, increases with temperature because as the viscosity decreases the fluid shear stress decreases. Floc breakup will be most problematic in low temperatures when the raw water has low turbidity and high concentration of dissolved organics.
+The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases.
 
+Sedimentation tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation :eq:`G_of_vc_and_floc_props`. Our goal is to eventually provide clear guidance on setting :math:`G_{max}`. In the meantime, given a maximum velocity gradient for the inlet to the sedimentation tank, Equation :eq:`max_sed_tank_jet_velocity_of_G` provides the maximum jet reverser velocity.
 
-.. _figure_Jet_velocity_vs_sed_valley_width:
-
-.. figure:: ../Images/Jet_velocity_vs_sed_valley_width.png
-   :width: 400px
-   :align: center
-   :alt: Maximum jet velocity as a function of sed valley width and temperature
-
-   The maximum jet velocity increases with width of the sedimentation tank valley and with temperature.
-
-
-.. _figure_Jet_head_loss_vs_sed_valley_width:
-
-.. figure:: ../Images/Jet_head_loss_vs_sed_valley_width.png
-   :width: 400px
-   :align: center
-   :alt: Maximum jet head loss as a function of sed valley width and temperature
-
-   The maximum jet head loss increases with width of the sedimentation tank valley and with temperature.
-
-Sedimentation tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The floc size velocity restriction limits the velocity of the water in the manifold that delivers water to the diffuser jets. The ratio of manifold velocity to port velocity can be obtained as the inverse of Equation :eq:`Manifold_max_v_no_hl_series`.
+The ratio of manifold velocity to port velocity can be obtained as the inverse of Equation :eq:`Manifold_max_v_no_hl_series`.
 
 .. math::
   :label: max_sed_tank_manifold_velocity
 
   \frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}
 
-Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity.
+Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_sed_tank_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
 
-Further works is required to determine the maximum shear stress that will not cause a deterioration on performance especially for flocs that consist of coagulant nanoparticles and dissolved organics.
+The big unknown is the required design value for :math:`\zeta` as defined in Equation :eq:`G_of_vc_and_floc_props`. The expectation is that raw waters with high concentrations of organic matter will have lower density core particles and thus will require a smaller :math:`\zeta` for successful capture of the lower density flocs.
+
+The maximum velocity that could be carried by the inlet manifold given the flow expansion corresponding to the inlet can be calculated using Equation :eq:`D_pipe_min_of_K_and_jet_G_max`.
 
 
 .. _heading_Sed_Tank_Velocity_Flow:

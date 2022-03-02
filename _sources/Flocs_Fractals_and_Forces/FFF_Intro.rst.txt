@@ -365,6 +365,14 @@ The shear stress is a function of the rate of turbulent energy dissipation and t
      3 \tau \frac{ \pi D_{floc}^2}{4} =
      3 \tau A_{floc}
 
+The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using Equation :eq:`fluid_shear_stress_on_doublet`.
+
+.. math::
+  :label: d_floc_shear_stress
+
+   D_{floc_{max}} =
+   \sqrt{\frac{4F_{bond}}{3 \pi \tau}}
+
 The floc will break apart when the :math:`F_{shear_{max}}` exceeds the coagulant bond strength of the coagulant nanoparticles and the particles they attach to. Thus we can create a dimensionless parameter describing the ratio of the fluid shear stress to the bond strength by dividing Equation :eq:`fluid_shear_stress_on_doublet` by :math:`F_{covalent}`.
 
 .. math::
@@ -385,22 +393,15 @@ When flocs are broken by the shearing action of the fluid it is possible that a 
    :align: center
    :alt: Sed tank performance as a function of jet energy dissipation rate
 
-   System suspended solids concentrations during steady state as a function of jet energy dissipation rate given an upflow velocity of 1.2 mm/s.  Results shown are averaged over 2 residence times (1200 seconds) of the sedimentation tank.
+   Settled water solids concentrations during steady state as a function of jet energy dissipation rate given an upflow velocity of 1.2 mm/s and 1.6 mm/s.  Results shown are averaged over 2 residence times.
 
 
-The maximum energy dissipation rate below the performance deterioration obtained by Garland (300 mW/kg) can be converted into the corresponding *average* velocity gradient using :eq:`G_Camp_Stein` to obtain 560 Hz (assuming a water temperature of 22°C). Similarly, the energy dissipation rate can be converted to a shear stress using Equation :eq:`fluid_shear_stress` to obtain 0.55 Pa. The fluid shear combined with the strength of covalent bonds can be used to solve for the floc diameter using Equation :eq:`fluid_shear_stress_on_doublet`.
-
-.. math::
-  :label: d_floc_shear_stress
-
-   D_{floc_{max}} =
-   \sqrt{\frac{4F_{bond}}{3 \pi \tau}}
-
-The floc size that corresponds to 300 mW/kg is 35 micrometers. For clay dominated flocs Equation :eq:`vt_of_floc` gives a 0.13 mm/s sedimentation velocity which is just slightly higher than the 0.1 mm/s capture velocity used by Garland.
+:numref:`figure_sed_performance_vs_jet_edr` suggests that the floc filter and plate settler system begins to fail for energy dissipation rates in excess of about 30 W/kg.
+The maximum energy dissipation rate can be converted into the corresponding *maximum* velocity gradient using :eq:`G_Camp_Stein` to obtain 5500 Hz (assuming a water temperature of 21°C).
 
 Garland's experiment with the result of floc breakup at the sedimentation tank inlet is consistent with several hypotheses.
 
-#. The bonds holding flocs together are likely strong (order 1.6 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012 <https://doi.org/10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
+#. The bonds holding flocs together are likely strong (order 10 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012 <https://doi.org/10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
 #. Flocs are broken where there is the largest force per bond. This would logically occur at the connection between the two subunits that form the floc. Thus when flocs break they would not be expected to produce tiny fragments.
 #. The fluid shear stress determines the force acting to tear a floc apart. Thus given a constant energy dissipation rate the force acting to break up flocs will increase as the temperature drops (see Equation :eq:`fluid_shear_stress`)
 #. Settled water turbidity increases when the floc terminal velocity is less than the capture velocity of the plate settlers.
@@ -475,7 +476,7 @@ It would be helpful to develop a design guideline based on Equation :eq:`G_of_vc
 
   \zeta = G_{max} \nu^3 v_c^2 \approx   \frac{4F_{bond}}{3 \pi  \rho_{H_2O}}\left(  \frac{ D_{cp} g}{18} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2
 
-Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of Equation :eq:`G_of_vc_and_floc_props`, :math:`\zeta`, is  :math:`4.9 \cdot \frac{mm^8}{s^6}`, :math:`\left(4.9 \cdot  10^{-24}\frac{m^8}{s^6}\right)`, for a kaolin suspension. :math:`\zeta` represent an upper limit on the flocculation and sedimentation design parameters and is a combination of properties of the core particles. The expectation is that :math:`\zeta` will be less than 4.9 :math:`\frac{mm^8}{s^6}` for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see :numref:`figure_PennockFig3`).
+Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of Equation :eq:`G_of_vc_and_floc_props`, :math:`\zeta`, is  :math:`50 \cdot \frac{mm^8}{s^6}`, :math:`\left(50 \cdot  10^{-24}\frac{m^8}{s^6}\right)`, for a kaolin suspension. :math:`\zeta` represent an upper limit on the flocculation and sedimentation design parameters and is a combination of properties of the core particles. The expectation is that :math:`\zeta` will be less than 50 :math:`\frac{mm^8}{s^6}` for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see :numref:`figure_PennockFig3`).
 
 Equation :eq:`G_of_vc_and_floc_props` reveals the key relationships between flocculator and sedimentation tank design. The flocculator velocity gradient must decrease in proportion to the square of the sedimentation tank capture velocity. If AguaClara were to increase the sedimentation tank capture velocity from 0.12 to 0.3 mm/s the flocculator velocity gradient would need to decrease by a factor of 6.25. The dramatic effect of temperature is revealed as well. It is well known that flocculation/sedimentation processes perform poorly at low temperatures. The kinematic viscosity of water approximately doubles as the temperature drops from 20°C to 0°C. That results in a need to decrease the velocity gradient by a factor of 8! Finally, the dissolved organic matter and inorganic particles together determine the density and diameter of the core particles that make up the flocs. Organic matter reduces the density of the core particles and that requires a lower velocity gradient. The worst combination of parameters is a cold water with a high dissolved organic concentration and a low concentration of inorganic particles.
 
@@ -488,7 +489,7 @@ The effect of water temperature and sedimentation tank capture velocity on the m
     :align: center
     :alt: internal figure
 
-    The maximum average velocity gradient, :math:`G_{CS}`, that can be used in the flocculator or in the inlet to the sedimentation tank for treating kaolin suspensions. The velocity gradient  decreases rapidly as the water temperature decreases because the higher viscosity prevents flocs from growing as large in the flocculator and reducers their terminal velocity in the plate settlers. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=r_wm34KQ8jm4&line=3&uniqifier=1>`_)
+    The maximum average velocity gradient, :math:`G_{CS}`, that can be used in the flocculator or in the inlet to the sedimentation tank for treating kaolin suspensions. The velocity gradient decreases rapidly as the water temperature decreases because the higher viscosity prevents flocs from growing as large in the flocculator and reducers their terminal velocity in the plate settlers. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=r_wm34KQ8jm4&line=3&uniqifier=1>`_)
 
 Cold temperatures are known to be particularly challenging for flocculation and the model results (Equation :eq:`G_of_vc_and_fractal_of_2`) shown in :numref:`figure_Gmax_of_T_and_vc` provides insight into the dramatic reduction in velocity gradient required for effectively cold weather operation.
 
@@ -507,9 +508,9 @@ Given
 
   * :math:`D_{cp} = 5 \mu m`
   * :math:`\rho_{cp} = 2650 \frac{kg}{m^3}`
-  * :math:`\zeta = 4.9 \cdot \frac{mm^8}{s^6}`
+  * :math:`\zeta = 50 \cdot \frac{mm^8}{s^6}`
 
-The value of :math:`F_{bond}` was calculated to be :math:`F_{bond} = 0.57 nN` (see `Colab worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=nEZGIfnHFRKo&line=3&uniqifier=1>`_) based on the measurements of `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_.
+The value of :math:`F_{bond}` was calculated to be :math:`F_{bond} = 6 nN` (see `Colab worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=nEZGIfnHFRKo&line=3&uniqifier=1>`_) based on the measurements of `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_.
 
 Note that further work is required to better estimate the density of a clay particle with coagulant nanoparticles attached. The coagulant nanoparticles effectively increase the clay plate thickness by two times the diameter of the coagulant nanoparticles. That extra thickness is composed of water and the coagulant nanoparticles and thus has a much lower density than the clay particle.
 

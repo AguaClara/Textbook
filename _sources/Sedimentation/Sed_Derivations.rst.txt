@@ -314,17 +314,17 @@ Now, we want to determine the velocity at the center of the floc. For flow betwe
 
   \frac{d v_{\alpha_{Plate}}}{dy}_{y = 0} = \frac{6 \bar v_{\alpha_{Plate}}}{S}
 
-The center of the floc is approximately half of the floc diameter, :math:`D`. So, to find the fluid velocity at the center of the floc, we linearize the differential and plug in :math:`\frac{D}{2}` to yield,
+The center of the floc is approximately half of the floc diameter, :math:`D_{floc}`. So, to find the fluid velocity at the center of the floc, we linearize the differential and plug in :math:`\frac{D_{floc}}{2}` to yield,
 
 .. math::
 
-  v_{\alpha} \approx \frac{6 \bar v_{\alpha_{Plate}}}{S} \frac{D}{2}
+  v_{\alpha} \approx \frac{6 \bar v_{\alpha_{Plate}}}{S} \frac{D_{floc}}{2}
 
 Substituting by the trigonometric relationship :math:`\bar v_{\alpha_{Plate}} = (\frac{\bar v_{z_{Plate}}}{sin\alpha})`, we find the fluid velocity at the center of the floc as,
 
 .. math::
 
-  \bar v_{\alpha_{Plate}} \approx \frac{3 \bar v_{z_{Plate}} D}{Ssin\alpha}
+  \bar v_{\alpha_{Plate}} \approx \frac{3 \bar v_{z_{Plate}} D_{floc}}{Ssin\alpha}
 
 .. _figure_floc_rollup_step2:
 
@@ -338,19 +338,13 @@ Substituting by the trigonometric relationship :math:`\bar v_{\alpha_{Plate}} = 
 **3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):**
 
 
-Recall from our :ref:`previous explanation of terminal velocity <heading_Floc_Terminal_Velocity>` that the terminal velocity, :math:`v_t`, of the floc can be calculated by,
+The terminal velocity of a floc is given by Equation :eq:`vt_of_floc`. We can rearrange this equation to solve for :math:`D_{floc}` by
 
 .. math::
 
-  v_t = \frac{D_{cp}^2g}{18\Phi\nu}\frac{\rho_{floc_0} -\rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D}{D_{cp}} \right) ^{\Pi_{fractal}-1}
+  D_{floc} = D_{cp} \left( \frac{18 v_t \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{cp} - \rho_{H_2O}}\right) ^{\frac{1}{ \Pi_{fractal} - 1}}
 
-We can rearrange this equation to solve for :math:`D` by
-
-.. math::
-
-  D = D_{cp} \left( \frac{18 v_t \Phi \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{floc_0} - \rho_{H_2O}}\right) ^{\frac{1}{ \Pi_{fractal} - 1}}
-
-We will need this equation for :math:`D` in the next step.
+We will need this equation for :math:`D_{floc}` in the next step.
 
 .. _figure_floc_rollup_step3:
 
@@ -359,7 +353,7 @@ We will need this equation for :math:`D` in the next step.
    :align: center
    :alt: Terminal velocity of the floc down the plate (for the case of zero velocity fluid).
 
-   Terminal velocity of the floc down the plate (for the case of zero velocity fluid).
+   Terminal velocity of the floc down the plate.
 
 **4) Set the fluid velocity at the center of the floc equal to the terminal velocity of the floc to find the critical case of no movement, and the required plate spacing:**
 
@@ -373,46 +367,42 @@ Setting :math:`v_{\alpha} = v_{t,\alpha}` yields,
 
 .. math::
 
-  \frac{3 \bar v_{z_{Plate}} D}{Ssin\alpha} \approx v_t sin\alpha
+  \frac{3 \bar v_{z_{Plate}} D_{floc}}{Ssin\alpha} \approx v_t sin\alpha
 
 Solving for :math:`S` to determine plate spacing,
 
 .. math::
 
-  S \approx \frac{3 \bar v_{z_{Plate}} D}{v_t sin^2\alpha}
+  S \approx \frac{3 \bar v_{z_{Plate}} D_{floc}}{v_t sin^2\alpha}
 
-In this equation, we have both :math:`v_t` and :math:`D`, but we can simplify further because we know that :math:`v_t` and :math:`D` are related by the relationship shown in step 3. The goal is to ensure that flocs that settle to the plates do not roll up. We replace the unknown diameter of the floc with its terminal velocity and set that to be the capture velocity, :math:`v_c` for the plate settler.
+In this equation, we have both :math:`v_t` and :math:`D_{floc}`, but we can simplify further because we know that :math:`v_t` and :math:`D_{floc}` are related by the relationship shown in step 3. The goal is to ensure that flocs that settle to the plates do not roll up. We replace the unknown diameter of the floc with its terminal velocity and set that to be the capture velocity, :math:`v_c` for the plate settler.
 
 .. math::
+  :label: Plate_S_min_of_fractal
 
-  S_{min} \approx \frac{3 D_{cp}}{sin^2\alpha} \frac{\bar v_{z_{Plate}}}{v_c}  \left( \frac{18 v_c \Phi \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{floc_0} - \rho_{H_2O}} \right) ^{\frac{1}{ \Pi_{fractal} - 1}}
+  S_{min} \approx \frac{3 D_{cp}}{sin^2\alpha} \frac{\bar v_{z_{Plate}}}{v_c}  \left( \frac{18 v_c \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{cp} - \rho_{H_2O}} \right) ^{\frac{1}{ \Pi_{fractal} - 1}}
 
 :math:`S_{min}` is the smallest spacing that will allow a floc with a given settling velocity to remain stationary on the slope and not be carried upward by rollup.
 
-The minimum spacing increases as the size of the primary particle, :math:`D_{cp}`, decreases. This is an important insight because flocs that are made of coagulant nanoparticles (no clay) are the most difficult flocs to capture. Flocs made of coagulant nanoparticles are less dense than flocs made of clay. Coagulant nanoparticle flocs are produced when water treatment plants are used to remove dissolved organics or arsenic or when high coagulant dosages are used.
-
-
-**5) Find the floc sedimentation velocity, :math:`v_{Slide}`:**
-
-Finally, we can determine :math:`v_{Slide}` by,
+If the fractal dimension, :math:`\Pi_{fractal}` has a value of 2, then Equation :eq:`Plate_S_min_of_fractal` can be simplified.
 
 .. math::
+  :label: Plate_S_min_of_fractal_of_2
 
-  v_{Slide} = \bar v_{z_{Plate}} \left[ \left( \frac{3D_{cp}}{Ssin^2\alpha} \right)^{\Pi_{fractal} - 1} \left( \frac{18 v_{z_{Plate}} \Phi \nu }{D_{cp}^2g} \frac{\rho_{H_2O}}{\rho_{floc_0} - \rho_{H_2O}} \right) \right] ^ {\frac{1}{ \Pi_{fractal} - 2}}
+  S_{min} \approx \frac{3 \bar v_{z_{Plate}}}{\sin^2 \alpha} \left( \frac{18 \nu}{g D_{cp}} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}} \right)
 
-:math:`v_{Slide}` is the terminal sedimentation velocity of the slowest-settling floc that can slide down an incline. Flocs with with terminal velocity (the slide velocity) will be held stationary on the incline because of a balance between gravitational forces and fluid drag. Flocs with a terminal velocity lower than :math:`v_{Slide}` will be carried out of the top of the settler (i.e., they will rollup) even if they settle onto the settler wall. Thus, the slide terminal velocity represents a constraint on the ability of plate settlers to capture flocs.
+The minimum spacing increases as the size of the primary particle, :math:`D_{cp}`, decreases. This is an important insight because flocs that are made of coagulant nanoparticles and dissolved organics are the most difficult flocs to capture. Flocs made of coagulant nanoparticles are less dense than flocs made of clay. Coagulant nanoparticle flocs are produced when water treatment plants are used to remove dissolved organics or arsenic or when high coagulant dosages are used.
 
-What happens if the primary particles are less dense?
-:math:`v_{Slide}` will increase because the particles need to be able to settle faster in order to not experience rollup.
+.. _figure_SofRollupwithfractal2:
 
-.. _figure_vsettle_vslide:
-
-.. figure:: ../Images/vslide_vsettle.png
+.. figure:: ../Images/SofRollupwithfractal2.png
    :height: 300px
    :align: center
-   :alt: Relationship between :math:`v_{Settle}` and :math:`v_{Slide}`.
+   :alt: Floc roll up as a function of core particle density and temperatures
 
-   Tube settler performance as a function of capture velocity ratio.
+   Plate settler spacing must increase to capture low density flocs.
+
+Given that AguaClara uses a lower upflow velocity, :math:`\bar v_{z_{Plate}}`, than many plate settler designs it is reasonable for us to use more closely spaced plates. More work is required to characterize the density and size of the core particles as a function of raw water constituents to provide guidance on the required plate spacing.
 
 .. _heading_Sed_Tank_Hl_thru_Plate_Settlers:
 
@@ -491,11 +481,7 @@ Floc Filter Design
 Velocity Gradient
 -------------------
 
-With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use the other equations we developed in the :ref:`chapter on flocculation <heading_Hydraulic_Flocculation_Design>`.
-
-.. math::
-
-  G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}
+With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use the other equations we developed in the :ref:`chapter on flocculation <heading_Hydraulic_Flocculation_Design>`. We will use Equation :eq:`G_Camp_Stein` to converts the energy dissipation rate into a velocity gradient.
 
 .. math::
 
@@ -553,12 +539,12 @@ How does such a small :math:`G_{CS}\theta` cause such a large reduction in turbi
 
 Experimental data helps explain this. Two systems were set up: one had a flocculator where :math:`G_{CS}\theta = 20,000` with a floc filter where :math:`G_{CS}\theta = 4,000`; the other just had a flocculator where :math:`G_{CS}\theta = 24,000`. Using the same influent water quality and coagulant dosing, we find that the first system with the flocculator and floc filter performed better than the second system, even though the overall :math:`G_{CS}\theta` values were the same.
 
-To understand this, we have to review assumptions in the derivation for :math:`G_{CS}`. Recall our assumption that fluid shear promotes the collision of two primary particles instead of the collision of primary particles with existing, large flocs. If our assumption was true, we would expect to see no difference between our two experimental setups. However, because we know that the two experimental setups did have different results, our assumption must be false because the assumption does not explain or account for these differences. There must be another mechanism occurring to explain why the floc filter greatly improves treatment quality. This leads us to believe that the flocs in the floc filter must be more involved than simply providing shear and velocity gradients; they must be involved in some collisions with the small particles coming through the floc filter.
+To understand this, we have to review assumptions in the derivation for :math:`G_{CS}`. Recall our assumption that fluid shear promotes the collision of two primary particles instead of the collision of primary particles with existing, large flocs. If our assumption was true, we would expect to see no difference between our two experimental setups. However, because we know that the two experimental setups did have different results, our assumption must be false because the assumption does not explain or account for these differences. There must be another mechanism occurring to explain why the floc filter greatly improves treatment quality. This leads us to believe that the flocs in the floc filter must be more involved than simply providing shear and velocity gradients; they must be capturing the small particles coming through the floc filter.
 
 This highlights an important distinction:
 
 #. The model created by the original derivation assumption would suggests that flocs in the floc filter are inert - simply occupying space and causing there to be head loss in the floc filter - without being involved in any collisions. This model is disproved through the experimental analysis of the two experimental setups.
-#. The model created after the analysis of experimental results suggests that flocs in the floc filter are not inert - they are involved in collisions with small particles entering the floc filter - and are growing in size. The model is supported through the experimental analysis.
+#. The model created after the analysis of experimental results suggests that flocs in the floc filter are not inert - they are involved in collisions with small particles entering the floc filter - and are becoming more dense, less porous, and with a higher fractal dimension.
 
 Collision Potential
 ---------------------
@@ -674,7 +660,7 @@ In both environments the flow around the flocs is dominated by viscous forces. T
 
 Flocs that are rotating in a shear flow drag a boundary layer of fluid with them as they rotate. This boundary layer of fluid prevents any approaching fluid from penetrating to the surface of the floc. There is no stagnation point on the floc! This means that approaching particles are swept around the floc due to the presence of the boundary layer. The only way for a particle to collide with a large floc is for the particle to be large enough that it can penetrate through the boundary layer even though the center of the particle continues to follow the streamline around the boundary layer of the floc.
 
-Flocs that are falling through a fluid that is not undergoing significant shear have stagnation points on the upstream side of the flocs and thus there exists a small amount of fluid that gets close enough to the floc near the stagnation point for small particles to collide with the floc.
+Flocs with low fractal dimensions that are falling through a fluid that is not undergoing significant shear have a small amount of fluid passes directly through the floc where any particles in the flow can collide with particles that are held inside the floc. Thus the floc is the filter and the filter media is the particles that make up the floc. This is why we call it a floc filter. Particles are filtered by individual flocs and are retained inside the floc. As particles accumulate inside the floc the floc porosity decreases and the flow through the floc decreases. Eventually the floc becomes ineffective as a filter because its filtration capacity has been exhausted.
 
 .. _heading_Sed_Tank_Diffuser_Design:
 
