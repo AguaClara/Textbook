@@ -339,13 +339,7 @@ Combining the 3 previous equations we obtain the energy dissipation rate for pip
   \bar\varepsilon = \frac{{\rm f}}{2} \frac{\bar v^3}{D}
 
 
-The average velocity gradient was defined by Camp and Stein as
-
-.. math::
-
-   G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}
-
-where this approximation neglects the fact that square root of an average is not the same as the average of the square roots.
+We use the average velocity gradient defined by Camp and Stein, Equation :eq:`G_Camp_Stein`, to obtain the velocity gradient in the pipe.
 
 .. math::
 
@@ -736,9 +730,7 @@ Combining the previous equations we obtain
 
   \bar\varepsilon = K\frac{\bar v_{out}^3}{2H}
 
-.. math::
-
-   G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}}
+The Camp Stein velocity gradient, Equation :eq:`G_Camp_Stein`, converts the energy dissipation rate into a velocity gradient.
 
 .. math::
 
@@ -862,6 +854,8 @@ Flow expansions are used intentionally or unavoidable in multiple locations in h
 Round Jet
 -----------
 
+.. todo:: need images for jets. add drawings that define dimensions.
+
 The energy dissipation rate at the centerline of a round jet is a well studied phenomenon (`Baldyga, et al. 1995 <https://doi.org/10.1016/0009-2509(95)00049-B>`__).
 
 
@@ -875,7 +869,7 @@ The maximum energy dissipation rate occurs at approximately 7D downstream from t
 
   \varepsilon_{Max} = \frac{\left( \frac{50}{\left( 5 \right)^4} \right) \bar v_{Jet}^3}{D_{Jet}}
 
-The measured dimensionless coefficient, :math:`\Pi_{JetRound}`, is proportional to the fraction of the kinetic energy that is dissipate in the time required for the jet to travel a distance equal to its original diameter. The higher this coefficient the faster the jet dissipates its energy. The coefficient is only a function of the geometry of the jet and thus round jets and plane jets have different coefficients.
+The measured dimensionless coefficient, :math:`\Pi_{JetRound}`, is proportional to the fraction of the kinetic energy that is dissipated in the time required for the jet to travel a distance equal to its original diameter. The higher this coefficient the faster the jet dissipates its energy. The coefficient is only a function of the geometry of the jet and thus round jets and plane jets have different coefficients.
 
 .. math::
 
@@ -909,115 +903,68 @@ By substituting the continuity equation into Equation :eq:`jet_G_max` we can fin
 .. math::
   :label: jet_G_max_of_D_jet_min
 
-   G_{Max} = \left(\frac{4 \bar Q}{\pi D_{Jet}^2}\right)^\frac{3}{2} \sqrt{\frac{\Pi_{JetRound}  }{\nu D_{Jet}}}
+   G_{Max} = \left(\frac{4 Q}{\pi D_{Jet}^2}\right)^\frac{3}{2} \sqrt{\frac{\Pi_{JetRound}  }{\nu D_{Jet}}}
 
 Solve for :math:`D_{Jet}` to obtain the minimum jet diameter to deliver a target flow without exceeding the maximum velocity gradient.
 
 .. math::
   :label: D_jet_min_of_jet_G_max
 
-   D_{Jet} = \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 \bar Q}{\pi }\right)^3 \right]^\frac{1}{7}
+   D_{Jet} = \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}
 
 Equation :eq:`D_jet_min_of_jet_G_max` allows us to make the connection between a flow contraction and the resulting maximum velocity gradient. As we design flow passages where there are constraints on the maximum velocity gradient we need to calculate the minimum pipe diameter. The pipe diameter can be obtained by substituting Equation :eq:`D_pipe_of_D_vc`.
 
 .. math::
   :label: D_pipe_min_of_jet_G_max
 
-   D_{pipe_{min}} = \frac{1}{\sqrt{\Pi_{vc}}} \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 \bar Q}{\pi }\right)^3 \right]^\frac{1}{7}
+   D_{pipe_{min}} = \frac{1}{\sqrt{\Pi_{vc}}} \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}
 
 For many geometry changes we know the minor loss coefficient. An equivalent equation that is a function of the minor loss coefficient can be obtained by substituting Equation :eq:`pi_vc_of_minor_K` into Equation :eq:`D_pipe_min_of_jet_G_max`.
 
 .. math::
   :label: D_pipe_min_of_K_and_jet_G_max
 
-   D_{pipe_{min}} = \sqrt{\sqrt{K_e} + 1} \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 \bar Q}{\pi }\right)^3 \right]^\frac{1}{7}
+   D_{pipe_{min}} = \sqrt{\sqrt{K_e} + 1} \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}
 
 Equation :eq:`D_pipe_min_of_K_and_jet_G_max` is limited to geometries where any flow contractions in series are sufficiently separated so that the flow completely expands before entering the next contraction. The pipe diameter is then set by the largest minor loss coefficient in the pipe system.
+
+The maximum flow that can be handled by a pipe with minor losses can be obtained by solving Equation :eq:`D_pipe_min_of_K_and_jet_G_max` for the flow rate.
+
+.. math::
+  :label: Q_max_of_D_and_K_and_jet_G_max
+
+  Q_{max} = \frac{\pi}{4}\left[\frac{\nu G_{Max}^2}{\Pi_{JetRound}} \left(\frac{D_{pipe}}{\sqrt{\sqrt{K_e} + 1}}\right)^7\right]^\frac{1}{3}
 
 .. _heading_Plane_Jet:
 
 Plane Jet
 ---------
 
-Plane jets occur in hydraulic flocculators and in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by `Heskestad in 1965 <http://dx.doi.org/10.1115/1.3627309>`__ and it may be possible to use that data to get a better estimate of :math:`\Pi_{JetPlane}` from that source.
+..note:: need images for jets. add drawings that define dimensions. add description of hydraulic residence time. Define Sjet. Add more text describing what the equations are doing.
+
+Plane jets occur in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by `Heskestad in 1965 <http://dx.doi.org/10.1115/1.3627309>`__ and it may be possible to use that data to get a better estimate of :math:`\Pi_{JetPlane}` from that source. An alternate estimate of :math:`\Pi_{JetPlane}` can be obtained by postulating that the rate of energy dissipation is proportional to the ratio of the circumference of the jet normalized by the jet area. The postulate is based on the insight that the jet is experiencing shear with the surrounding fluid around its perimeter. For a plane jet the ratio of the circumference of the jet to the jet area is
 
 .. math::
+  :label: P_A_ratio_for_plane_jet
 
-  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}
+  \Pi_{JetPlane} \propto  \frac{2L}{SL} = \frac{2}{S}
 
-.. math::
-  :label: EDR_JetPlane
-
-  \varepsilon_{Max} = \Pi_{JetPlane}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}
-
-The maximum velocity gradient is thus
+where L is the length of the plane jet, and S is the jet thickness at the jet origin. For a round jet we have
 
 .. math::
-  :label: eq_G_JetPlane
+  :label: P_A_ratio_for_round_jet
 
-   G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}
+  \Pi_{JetRound} \propto  \frac{4 \pi D}{\pi D^2} =  \frac{4}{D}
 
-.. math::
-
-  \bar v = \frac{Q}{SW}
+where D is the jet diameter at the origin. A round jet has twice the circumference of a plane jet given the same jet dimension. Thus a round jet will dissipate energy twice as fast and :math:`\Pi_{JetPlane}` is expected to have a value of exactly half of :math:`\Pi_{JetRound}`
 
 .. math::
+  :label: P_A_ratio_for_round_jet
 
-  \bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}
+  \Pi_{JetPlane} = 0.04
 
-.. math::
 
-   S_{Jet} = S \Pi_{VCBaffle}
 
-The average hydraulic residence time for the fluid between two baffles
-is
-
-.. math::
-
-  \theta_B = \frac{H}{\bar v}
-
-where :math:`H` is the depth of water. Substituting into the equation for :math:`\varepsilon_{Max}` to get the equation in terms of the average velocity :math:`\bar v` and flow dimension :math:`S`
-
-.. math::
-
-  \varepsilon_{Max}= \frac{\Pi_{JetPlane}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3
-
-From the control volume analysis the average energy dissipation rate is
-
-.. math::
-
-  \bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}
-
-where :math:`K` is the minor loss coefficient for flow around the end of a baffle with a :math:`180^\circ` turn.
-
-Substitute the values for :math:`\bar \varepsilon` and
-:math:`\varepsilon_{Max}` to obtain the ratio,
-:math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`
-
-.. math::
-
-  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}
-
-:math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value of 2 for
-:math:`H_e/S <5` (CFD analysis and `Haarhoff, 2001 <https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267>`__)
-The transition value for :math:`H_e/S` is at 5 (from CFD analysis, our weakest assumption).
-
-We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value of
-:math:`\frac{\Pi_{JetPlane}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}` for
-:math:`H_e/S>5`. Thus we can solve for :math:`\Pi_{JetPlane}` at
-:math:`H_e/S=5`
-
-.. math::
-
-  \Pi_{JetPlane} = \left(
-  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
-  \right)
-
-.. math::
-
-  \Pi_{JetPlane} = 0.0124
-
-The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=WQtdrsP9egHB>`_
 
 .. _heading_Behind_a_flat_plate:
 
@@ -1056,4 +1003,102 @@ The maximum velocity gradient is thus
 
 The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=juEleCKZLNuk>`_
 
-The flat plate :math:`\Pi_{Plate}` has a value of 0.04.
+The flat plate :math:`\Pi_{Plate}` has a value of 0.04 which is identical to our estimate for :math:`\Pi_{JetPlane}`.
+
+Flow expansion in a baffled flocculators
+----------------------------------------
+
+The flow expansion in a baffled flocculator occurs after the flow bends around the end of a baffle. The flow contracts against the baffle that defines the outside of the bend and thus one side of the flow is unable to expand because it is already against the baffle. This results in lower energy dissipation rate than would be obtained for a free jet. The first approximation would be that the baffle can be treated as the center of a virtual jet that is twice as large as the real jet. Alternately the energy dissipation can be neflected on the side of the jet that is against the baffle. Either assumption results half of the energy dissipation rate that would be expected for a similar dimensioned free jet.
+
+.. math::
+
+  \Pi_{FlocBaffle} =  \frac{1}{2} \Pi_{JetPlane} = 0.02
+
+An alternate estimate can be obtained by applying conservation of energy to the control volume defined by one baffle space in a baffled flocculator. The ratio of the maximum energy dissipation rate, :math:`\varepsilon_{Max}` to the average energy dissipation rate, :math:`{\bar \varepsilon}` is given by
+
+.. math::
+
+  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}
+
+The maximum energy dissipation rate is defined using the same form of the equation as in the previous sections.
+
+.. math::
+  :label: EDR_FlocBaffle
+
+  \varepsilon_{Max} = \Pi_{FlocBaffle}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}
+
+An equivalent relationship can be defined for the velocity gradient by using Equation :eq:`G_Camp_Stein`.
+
+.. math::
+  :label: eq_G_FlocBaffle
+
+   G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{FlocBaffle} \bar v_{Jet}}{\nu S_{Jet}}}
+
+The relationship between velocity and the flow dimensions in a baffle are given by
+
+.. math::
+
+  \bar v = \frac{Q}{SW}
+
+where Q is the flow rate, S is the distance between baffles, and W is the width of the flow. The velocity of the jet (the contracted flow) is obtained from continuity.
+
+.. math::
+
+  \bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}
+
+where :math:`\Pi_{VCBaffle}` is the *vena contracta* for the 180° bend.
+
+.. math::
+
+   S_{Jet} = S \Pi_{VCBaffle}
+
+The average hydraulic residence time for the fluid between two baffles is given by
+
+.. math::
+
+  \theta_B = \frac{H}{\bar v}
+
+where :math:`H` is the depth of water. Substituting into the equation for :math:`\varepsilon_{Max}` to get the equation in terms of the average velocity :math:`\bar v` and flow dimension :math:`S`
+
+.. math::
+
+  \varepsilon_{Max}= \frac{\Pi_{FlocBaffle}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3
+
+From the control volume analysis the average energy dissipation rate is
+
+.. math::
+
+  \bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}
+
+where :math:`K` is the minor loss coefficient for flow around the end of a baffle with a :math:`180^\circ` turn.
+
+Substitute the values for :math:`\bar \varepsilon` and
+:math:`\varepsilon_{Max}` to obtain the ratio,
+:math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`
+
+.. math::
+
+  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{FlocBaffle}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}
+
+:math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value of 2 for
+:math:`H_e/S <5` (CFD analysis and `Haarhoff, 2001 <https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267>`__)
+The transition value for :math:`H_e/S` is at 5 (from CFD analysis, our weakest assumption).
+
+We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}` has a value of
+:math:`\frac{\Pi_{FlocBaffle}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}` for
+:math:`H_e/S>5`. Thus we can solve for :math:`\Pi_{FlocBaffle}` at
+:math:`H_e/S=5`
+
+.. math::
+
+  \Pi_{FlocBaffle} \approx \left(
+  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
+  \right)
+
+.. math::
+
+  \Pi_{FlocBaffle} \approx 0.0124
+
+This value for :math:`\Pi_{FlocBaffle}` is lower than we estimated based on 50% of the :math:`\Pi_{JetPlane}`. Additional research is needed to measure :math:`\Pi_{FlocBaffle}`.
+
+The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=WQtdrsP9egHB>`_
