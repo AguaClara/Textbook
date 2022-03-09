@@ -546,30 +546,17 @@ In the previous discussion we assumed that the highest velocity gradient in the 
 Force Required for Attachment of Two Flocs
 ==========================================
 
-The velocity gradients in the jet reverser that are necessary to cause flocs to break are many times larger than the velocity gradients that are used in flocculators to bring flocs together. This suggests that there may be a difference between the maximum force that
+The velocity gradient in the jet reverser that causes flocs to break are many times larger than the velocity gradients that are used in flocculators to bring flocs together. The physics of these two situations are quite different. In the jet reverser, fluid shear is rotating the floc and exerting a moment in opposite directions on two halves of the floc. In the flocculator the velocity gradient is carrying flocs past each other and causing them to intersect. At the moment of collision the relative velocities must suddenly change if the coagulant nanoparticle bond that is connecting the two flocs is to remain intact. The deceleration force must be applied very quickly because the bond only acts over a very short distance. This suggests that the velocity gradient for successful attachment may be much lower than the velocity gradient that causes floc breakup.
 
 The attachment of two flocs requires that the flocs collide at a point where there is a coagulant nanoparticle and the bond must be strong enough to brake the relative motion of the two flocs. There are many possible collision paths and thus it isn't clear how to describe the total energy required to stop the relative motion. The critical force applied to the bonds could occur at the instance when the two flocs have a single bond connection. At that instance the two flocs are able to continue to rotate relative to each other around the single bond that is connecting them. As the two flocs rotate they eventually collide at a second point and make a second bond. With two active bonds the two flocs only have one degree of freedom to rotate relative to each other. As the two flocs rotate in the one free direction they will make contact at a third location and possibly create a third bond.
 
-As an attempt to characterize this braking energy we assume that the bond that experiences the greatest force is the first bond. In a shear flow the flocs are both rotating and translating relative to each other. The kinetic energy of both motions are directly proportional to the velocity gradient. To simplify the analysis we take the kinetic energy associated with the relative translation velocity and we assume that the bond must stop that relative motion. The braking energy is equal to the braking force times the braking distance. Thus we need a characteristic braking distance over which the bond can act. If two clay plates are parallel and separated by the diameter of the coagulant nanoparticle, then the two plates could continue translating relative to each other by having the coagulant nanoparticle roll between the two plates and in that case the braking distance would scale with the length of the clay plates. A more likely scenario is that the two plates are not parallel and thus the plates would act like levers that pull against the coagulant nanoparticle. It is possible that the coagulant nanoparticle can deform slightly or that it could slide on a clay surface to maintain contact over a short distance. It is also possible that the bond will break if there is relative motion of a distance comparable to the bond length.
+As an attempt to characterize this braking energy we assume that the bond that experiences the greatest force is the first bond. Note that this assumption could easily be wrong and it is likely that the forces involved are not so different between the first and second bonds because in all cases the relative motion of the two flocs must be stopped. In a shear flow the flocs are both rotating and translating relative to each other. The kinetic energy of both motions are directly proportional to the velocity gradient. To simplify the analysis we take the kinetic energy associated with the relative translation velocity and we assume that the first bond must stop that relative motion.
 
-If we assume a single covalent bond between a hydrogen in the coagulant nanoparticle and an oxygen in the clay it is expected to have a `bond energy of 464 kJ/mol <https://science.jrank.org/pages/984/Bond-Energy.html>`_ and a bond length of 96 pm. The bond energy is calculated by dividing by Avogadro's number to obtain  The force for a single bond can be obtained by dividing the bond energy by the bond length to obtain 8 nN. This estimate is similar to the estimate of 6 nN based on the floc breakup analysis for the velocity gradient in the jet reverser.
+The braking energy is equal to the braking force times the braking distance. Thus we need a characteristic braking distance over which the bond can act. If two clay plates are parallel and separated by the diameter of the coagulant nanoparticle, then the two plates could continue translating relative to each other by having the coagulant nanoparticle roll between the two plates and in that case the braking distance would scale with the length of the clay plates. A more likely scenario is that the two plates are not parallel and thus the plates would act like levers that pull against the coagulant nanoparticle. It is possible that the coagulant nanoparticle can deform slightly or that it could slide on a clay surface to maintain contact over a short distance. It is also possible that the bond will break if there is relative motion of a distance comparable to the bond length. To simplify the analysis we assume that the bond energy must exceed the kinetic energy of the relative velocity.
 
-The braking energy is a function of the distance over which the braking occurs. We can identify four possible length scales over which the bond braking might occur that would lead to a failure to attach.
+If we assume a single covalent bond between a hydrogen in the coagulant nanoparticle and an oxygen in the clay it is expected to have a `bond energy of 464 kJ/mol <https://science.jrank.org/pages/984/Bond-Energy.html>`_ and a bond length of 96 pm. The bond energy is calculated by dividing by Avogadro's number to obtain 0.77 aJ. The force for a single bond can be obtained by dividing the bond energy by the bond length to obtain 8 nN. This estimate is similar to the estimate of 6 nN based on the floc breakup analysis for the velocity gradient in the jet reverser.
 
-.. _table_bond_length_and_energy:
-
-.. csv-table:: Table of coagulant nanoparticle bond lengths and energies.
-     :header: "Length scale", "Length estimate", "Braking energy"
-     :widths: 30, 30, 30
-     :align: left
-
-      "bond length", "", " "
-      "coagulant nanoparticle elongation length given bond force in tension", "10 nm", ""
-      "coagulant nanoparticle diameter", "100 nm", ""
-      "clay plate length", "5000 nm", "w"
-
-
-The kinetic energy due to the relative translational velocity of two identical flocs separated by a distance equal to their diameters is obtained from :math:`\frac{mV^2}{2}`
+We hypothesize that the bond energy must be greater than the braking energy to achieve attachment. The kinetic energy due to the relative translational velocity of two identical flocs separated by a distance equal to their diameters is obtained from :math:`\frac{mV^2}{2}`.
 
 .. math::
   :label: floc_braking_energy_1
@@ -583,7 +570,7 @@ Substituting the floc density from Equation :eq:`floc_density` (assuming a fract
 
     E_{K_{floc}} = \left[ \rho_{H_2O} + \left( \rho_{cp}  - \rho_{H_2O} \right) \left(\frac{D_{cp}}{D_{floc}}\right) \right]  \frac{ \pi D_{floc}^5 G^2}{12}
 
-The flocs created in a flocculator must have a terminal velocity greater than the capture velocity of the plate settlers. We can add this constraint to Equation :eq:`floc_braking_energy` by substituting Equation :eq:`D_of_vt_Pi_fractal_of_2` to eliminate the :math:`D_{floc}`. However, the :math:`D_{floc}` do not have the same meaning in both equations. In the terminal velocity equation (:eq:`D_of_vt_Pi_fractal_of_2`) the :math:`D_{floc}` refers to the combined floc. In the braking energy equation (:eq:`floc_braking_energy`) the :math:`D_{floc}` refers to one colliding flocs.
+The flocs created in a flocculator must have a terminal velocity greater than the capture velocity of the plate settlers. We can add this constraint to Equation :eq:`floc_braking_energy` by substituting Equation :eq:`D_of_vt_Pi_fractal_of_2` to eliminate the :math:`D_{floc}`. However, the parameter, :math:`D_{floc}`, does not have the same meaning in both equations. In the terminal velocity equation (:eq:`D_of_vt_Pi_fractal_of_2`) the :math:`D_{floc}` refers to the combined floc. In the braking energy equation (:eq:`floc_braking_energy`) the :math:`D_{floc}` refers to one of the colliding flocs.
 
 Each of the flocs that are colliding have half of the core particles that the combined floc will have. The ratio of the diameter of the colliding flocs to the diameter of the combined floc can be obtained from Equation :eq:`D_floc_of_n_cp`. Given a fractal dimension of 2 the relationship between the resulting floc diameter and the constituent floc diameter is :math:`\sqrt{2}`.
 
@@ -594,7 +581,7 @@ Each of the flocs that are colliding have half of the core particles that the co
   = \frac{ n_{cp}^\frac{1}{\Pi_{fractal}}}{ (0.5n_{cp})^\frac{1}{\Pi_{fractal}}}
   =\sqrt{2}
 
-The energy analysis of floc collisions (see :numref:`figure_floc_braking_energy_of_G`) suggests that a single bond of 0.77 attoJoules (464 kJ/mol) cannot adsorb the kinetic energy of one of the constituent flocs given the assumption of a core particle with diameter 5 :math:`\mu m` and density of 2650 :math:`\frac{kg}{m^3}` and assuming that the constituent flocs are offset by a distance equal to their diameters. A successful collision could occur if much of the kinetic energy is transferred to the other floc through compression rather than through shear or tension. Flocs that are separated by less than their diameters would also have a lower relative velocity. The heterogeneity of the velocity gradients created by turbulence would also provide opportunities for low energy collisions that could be successful. Each of these effects (angle of contact, separation distance, local velocity gradient) suggests that the probability of a successful collision is reduced but does not go to zero as flocs grow in size.
+The energy analysis of floc collisions (see :numref:`figure_floc_braking_energy_of_G`) suggests that a single bond of 0.77 aJ (464 kJ/mol) cannot adsorb the kinetic energy of one of the constituent flocs given the assumption of a core particle with diameter 5 :math:`\mu m` and density of 2650 :math:`\frac{kg}{m^3}` and assuming that the constituent flocs are offset in the velocity gradient by a distance equal to their diameters. A successful collision could occur if much of the kinetic energy is transferred to the other floc through compression rather than through shear or tension. Flocs that are separated by less than their diameters would also have a lower relative velocity. The heterogeneity of the velocity gradients created by turbulence would also provide opportunities for low energy collisions that could be successful. Each of these effects (angle of contact, separation distance, local velocity gradient) suggests that the probability of a successful collision is reduced but does not go to zero as flocs grow in size.
 
 .. _figure_floc_braking_energy_of_G:
 
@@ -605,6 +592,8 @@ The energy analysis of floc collisions (see :numref:`figure_floc_braking_energy_
 
     The required braking energy for a floc collision that results in a floc that has a terminal velocity of 0.12 mm/s. The collision is the least favorable with only one bond acting to counteract all of the kinetic energy of one of the constituent flocs. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_)
 
+The required energy increases rapidly as the temperature decreases because larger flocs are needed to achieve the same terminal velocity. This analysis suggests that velocity gradients should be reduced for low temperature operation or that the flocculator velocity gradient should be set based on the coldest operating temperature. Although not shown here, the braking energy required also increases rapidly for lower density flocs because the diameter of the floc must increase to achieve the terminal velocity required to be removed by the plate settlers.
+
 The required energy for attachment increases rapidly with the floc diameter as shown in :numref:`floc_braking_energy_of_D`.
 
 .. _figure_floc_braking_energy_of_D:
@@ -614,9 +603,11 @@ The required energy for attachment increases rapidly with the floc diameter as s
     :align: center
     :alt: internal figure
 
-    The required braking energy for a floc collision that results in the final floc diameter at three different velocity gradients. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_)
+    The required braking energy for a collision between two flocs that results in the final floc diameter at three different velocity gradients. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_)
 
-The analysis of the ability of braking energy required for successful attachment suggests a rational for either using a lower velocity gradient or tapering the velocity gradient in flocculators.  It also reveals that the coagulant nanoparticle bonds are under much higher stress during the collision than when they are only counteracting the force of fluid shear.  
+The analysis of the ability of braking energy required for successful attachment suggests a rational for either using a lower velocity gradient or tapering the velocity gradient in flocculators.  It also reveals that the coagulant nanoparticle bonds are under much higher stress during the collision than when they are only counteracting the force of fluid shear. The analysis does not provide guidance on how to select the velocity gradient in the flocculator.
+
+The analysis assumes that all of the fluid inside the floc stops as quickly as the solid part of the floc. Given that the flocs are quite porous the fluid can continue moving and exert a smaller force on the solid part of the floc through shear than it would have given its inertia. The fluid flow through the floc as the floc quickly stops complicates this analysis beyond our current capabilities. More research and analysis is needed to develop a model that provides clear guidance on the flocculator velocity gradient.
 
 Drag Force on a Floc in a Filter Constriction
 =============================================
