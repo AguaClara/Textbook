@@ -120,6 +120,31 @@ Now, we will focus on a single bay of the sedimentation system. Flocculated wate
 
     Influent channel with pipe leading to one inlet manifold.
 
+.. _heading_sedimentation_tank_inlet_manifold:
+
+Sedimentation Tank Inlet Manifold
+---------------------------------
+
+The port velocity for inlet manifold diffusers is set by the slot width, the width of the sedimentation tank, and the upflow velocity in the sedimentation tank. From mass conservation we have
+
+.. math::
+  :label: Sed_diffuser_mass_conserve
+
+   Q_{Diffuser} = \bar v_{Jet} W_{Diffuser} S_{Diffuser} = \bar v_{FB} W_{Sed} B_{Diffuser}
+
+Solve for the jet velocity, :math:`\bar v_{Jet}`.
+
+.. math::
+  :label: Sed_diffuser_jet_velocity
+
+  \bar v_{Jet}  = \frac{\bar v_{FB} W_{Sed} B_{Diffuser}}{W_{Diffuser} S_{Diffuser}}
+
+For sedimentation tanks that are 1.07 m wide, an upflow velocity of 1 mm/s, with diffusers that are 3.175 mm wide, and assuming that the diffuser wall thickness is small we have a jet velocity of 0.34 m/s.
+
+The maximum inlet manifold velocity can now be determined from Equation :eq:`Manifold_max_v_no_hl_series`. Given a port flow ratio of 85% the maximum manifold velocity is about 0.6 m/s.
+
+`Design the inlet manifold <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=ndlvydp8UMFJ&line=7&uniqifier=1>`_
+
 Water exits the influent manifold through a series of orifices and **diffusers** in the bottom of the pipe shown in :numref:`figure_influent_manifold_diffuser_base`. Orifices refer to the holes that are drilled into the underside of the manifold while diffusers are what we call short stubs of pipe that extend down from the orifice, perpendicular to the influent manifold. The orifices and diffusers point down to the bottom of the sedimentation bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. The ends of the diffuser tubes are flattened so that they are thin rectangles and when placed side-by-side achieve a line-jet effect. The end of the influent manifold is capped.
 
 .. _figure_influent_manifold_diffuser_base:
@@ -157,6 +182,12 @@ The influent manifold diffuser system straightens the fluid jets that are exitin
 
     Flow with a horizontal velocity component that causes problematic flow circulation.
 
+The horizontal flow created by the direction of flow inside the manifold results in preferential flow through the plate settlers at the terminal end of the manifold. This is a common problem in conventional sedimentation tanks that don't have flow straightening diffusers or that have horizontal flow in the tank.
+
+The underlying cause of the poor flow distribution between plate settlers (shown in :numref:`figure_flow_circulation`) is because the head loss through the plate settlers is inconsequential and thus there can't be **any** significant horizontal velocity below the plate settlers. It is possible that some plate settler manufactures address this issue by adding flow control orifices at the top of the plate settlers that add sufficient head loss to the flow through every plate settler to minimize the impact of velocity differences below the plates.
+
+The AguaClara solution is to use flow diffusers that simultaneously eliminate horizontal flow and create a line jet that resuspends settled flocs to maintain the floc filter in suspension.
+
 .. _figure_flow_straightening:
 
 .. figure:: ../Images/flow_straightening.png
@@ -170,9 +201,9 @@ The diffusers create a line jet that spans the entire length of the sedimentatio
 
 You may be wondering, why do we need a jet reverser in the first place? Why don't we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components.
 
-- If the diffusers were to point up, they could clog if anything settles in them. While this is unlikely due to the high velocity of flow exiting the small cross-sectional area diffuser, it is something that is avoided by pointing them down.
+- If the diffusers were to point up, that would mean that any sedimentation that happens near the terminal end of the manifold would accumulate and have no way of being removed.
 - If flow were just to point directly up, it would not have an opportunity to sufficiently spread into the width of the sedimentation bay, which could lead to "short-circuiting" and poor flow distribution overall.
-- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements, as derived in the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>`. The jet reverser and diffuser alignment is not symmetrical; the diffusers are offset from the jet reverser centerline. This is intentionally done to ensure that the diffuser jet never collapses to promote a floc filter, which will be discussed next. :numref:`figure_jet_placement` shows that flat bottomed and centered jets do not create a floc filter while offset jets are stable.
+- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements, as derived in the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>`. The jet reverser and diffuser alignment is not symmetrical; the diffusers are directed to one side of the jet reverser (either by slight rotation of the inlet manifold or by an offset). This is intentionally done to ensure that the diffuser jet never collapses to promote a floc filter, which will be discussed next. :numref:`figure_jet_placement` shows that flat bottomed and centered jets do not create a floc filter while offset jets are stable.
 
 .. _figure_jet_placement:
 
@@ -307,38 +338,22 @@ Given that the velocity gradient governs the design of the flocculator and the e
   \bar v_{Jet_{max}} =  \left( \frac{G_{max}^2 \nu \bar v_{z_{ff}} W_{Sed}}{ \Pi_{JetPlane}}\right)^\frac{1}{4}
 
 
-The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases. The maximum jet velocity, :numref:`figure_Jet_velocity_vs_sed_valley_width`, and head loss, :numref:`figure_Jet_head_loss_vs_sed_valley_width`, increases with temperature because as the viscosity decreases the fluid shear stress decreases. Floc breakup will be most problematic in low temperatures when the raw water has low turbidity and high concentration of dissolved organics.
+The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases.
 
+Sedimentation tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation :eq:`G_of_vc_and_floc_props`. Our goal is to eventually provide clear guidance on setting :math:`G_{max}`. In the meantime, given a maximum velocity gradient for the inlet to the sedimentation tank, Equation :eq:`max_sed_tank_jet_velocity_of_G` provides the maximum jet reverser velocity.
 
-.. _figure_Jet_velocity_vs_sed_valley_width:
-
-.. figure:: ../Images/Jet_velocity_vs_sed_valley_width.png
-   :width: 400px
-   :align: center
-   :alt: Maximum jet velocity as a function of sed valley width and temperature
-
-   The maximum jet velocity increases with width of the sedimentation tank valley and with temperature.
-
-
-.. _figure_Jet_head_loss_vs_sed_valley_width:
-
-.. figure:: ../Images/Jet_head_loss_vs_sed_valley_width.png
-   :width: 400px
-   :align: center
-   :alt: Maximum jet head loss as a function of sed valley width and temperature
-
-   The maximum jet head loss increases with width of the sedimentation tank valley and with temperature.
-
-Sedimentation tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The floc size velocity restriction limits the velocity of the water in the manifold that delivers water to the diffuser jets. The ratio of manifold velocity to port velocity can be obtained as the inverse of Equation :eq:`Manifold_max_v_no_hl_series`.
+The ratio of manifold velocity to port velocity can be obtained as the inverse of Equation :eq:`Manifold_max_v_no_hl_series`.
 
 .. math::
   :label: max_sed_tank_manifold_velocity
 
   \frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}
 
-Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity.
+Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_sed_tank_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
 
-Further works is required to determine the maximum shear stress that will not cause a deterioration on performance especially for flocs that consist of coagulant nanoparticles and dissolved organics.
+The big unknown is the required design value for :math:`\zeta_{breakup}` as defined in Equation :eq:`G_of_vc_and_floc_props`. The expectation is that raw waters with high concentrations of organic matter will have lower density core particles and thus will require a smaller :math:`\zeta_{breakup}` for successful capture of the lower density flocs.
+
+The maximum velocity that could be carried by the inlet manifold given the flow expansion corresponding to the inlet can be calculated using Equation :eq:`D_pipe_min_of_K_and_jet_G_max`.
 
 
 .. _heading_Sed_Tank_Velocity_Flow:
@@ -368,9 +383,9 @@ The geometry of the sedimentation tank changes in these four zones, so we will f
     AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
 
 
-.. _heading_Sed_Tank_Floc_Blanket:
+.. _heading_Sed_Tank_Floc_Filter:
 
-Floc Blanket
+Floc Filter
 -------------
 
 After the water exits the diffusers and jet reverser, it flows through the expanded floc filter region where:
@@ -396,7 +411,7 @@ For a floc filter to form, a sedimentation system requires that 1) all flocs be 
 
 Studies by AguaClara researchers have found that floc filters improve the performance of a sedimentation tank and reduce settled water turbidity by a factor of 10 for multiple reasons (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_):
 
-- By providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc filter due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G_{CS} \theta` cause a large reduction in turbidity? The two-fold answer may be that the lower :math:`G_{CS}` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc filter. See the section on :ref:`floc filter design <heading_Sed_Tank_Floc_Blanket_Design>` for more information.
+- By providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc filter due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G_{CS} \theta` cause a large reduction in turbidity? The two-fold answer may be that the lower :math:`G_{CS}` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc filter. See the section on :ref:`floc filter design <heading_Sed_Tank_Floc_Filter_Design>` for more information.
 
 - By creating a uniform vertical velocity of water entering the plate settlers.
 

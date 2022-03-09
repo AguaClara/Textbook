@@ -120,8 +120,9 @@ For turbulent flow and for flow expansions the amount of fluid deformation decre
    :align: left
 
    "Round jet", "0.08", ":math:`\varepsilon_{Max} = \Pi_{JetRound}\frac{  \bar v_{Jet} ^3}{D_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}`"
-   "Plane jet", "0.0124", ":math:`\varepsilon_{Max} = \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{S_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}`"
+   "Plane jet", "0.04", ":math:`\varepsilon_{Max} = \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{S_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}`"
    "Behind a flat plate", "0.04", ":math:`\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}`", ":math:`G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}`"
+   "Flocculator baffle", "0.0124", ":math:`\varepsilon_{Max} = \Pi_{FlocBaffle} \frac{  \bar v_{Jet} ^3}{S_{Jet}}`", ":math:`G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{FlocBaffle} \bar v_{Jet}}{\nu S_{Jet}}}`"
 
 For mechanical mixing where an impeller or other stirring device is adding shaft work to a control volume we have
 
