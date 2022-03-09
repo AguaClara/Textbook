@@ -752,42 +752,48 @@ to obtain</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-93">
 <span class="eqno">(185)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-93" title="Permalink to this equation">¶</a></span>\[\Pi_{JetRound} = 0.08\]</div>
 <p>The maximum velocity gradient in a jet is thus</p>
-<div class="math notranslate nohighlight" id="equation-jet-g-max">
-<span class="eqno">(186)<a class="headerlink" href="#equation-jet-g-max" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-roundjet-g-max">
+<span class="eqno">(186)<a class="headerlink" href="#equation-roundjet-g-max" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}\]</div>
+<p>The maximum permissible velocity gradient in a jet given a maximum allowable velocity gradient is</p>
+<div class="math notranslate nohighlight" id="equation-roundjet-v-max">
+<span class="eqno">(187)<a class="headerlink" href="#equation-roundjet-v-max" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet_{Max}} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu D_{Jet}}{\Pi_{JetRound} }\right)^{\frac{1}{3}}\]</div>
+<p>The minimum jet diameter given a maximum allowable velocity gradient and required jet velocity is</p>
+<div class="math notranslate nohighlight" id="equation-roundjet-d-min">
+<span class="eqno">(188)<a class="headerlink" href="#equation-roundjet-d-min" title="Permalink to this equation">¶</a></span>\[D_{Jet_{Min}}= \frac{\Pi_{JetRound} \bar v_{Jet}^3}{\nu G_{Max}^2}\]</div>
 <p>Below we plot the Baldyga et al. equation for the energy dissipation rate as a function of distance from the discharge location for the case of a round jet that is discharging into a large tank.</p>
 <div class="figure align-center" id="id15">
 <span id="figure-jet-centerline-edr"></span><a class="reference internal image-reference" href="../_images/Jet_centerline_EDR.png"><img alt="Pipe pressure and shear force balance" src="../_images/Jet_centerline_EDR.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">The centerline energy dissipation rate downstream from a round jet. The distance downstream is measured in units of jet diameters. The energy dissipation rate between the jet and 7 jet diameters is developing as the shear between the stationary fluid and the jet propagates toward the center of the jet and turbulence is generated.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
-<p>By substituting the continuity equation into Equation <a class="reference internal" href="#equation-jet-g-max">(186)</a> we can find the minimum jet diameter given a maximum allowed velocity gradient.</p>
+<p>By substituting the continuity equation into Equation <a class="reference internal" href="#equation-roundjet-g-max">(186)</a> we can find the minimum jet diameter given a maximum allowed velocity gradient.</p>
 <div class="math notranslate nohighlight" id="equation-jet-g-max-of-d-jet-min">
-<span class="eqno">(187)<a class="headerlink" href="#equation-jet-g-max-of-d-jet-min" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \left(\frac{4 Q}{\pi D_{Jet}^2}\right)^\frac{3}{2} \sqrt{\frac{\Pi_{JetRound}  }{\nu D_{Jet}}}\]</div>
+<span class="eqno">(189)<a class="headerlink" href="#equation-jet-g-max-of-d-jet-min" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \left(\frac{4 Q}{\pi D_{Jet}^2}\right)^\frac{3}{2} \sqrt{\frac{\Pi_{JetRound}  }{\nu D_{Jet}}}\]</div>
 <p>Solve for <span class="math notranslate nohighlight">\(D_{Jet}\)</span> to obtain the minimum jet diameter to deliver a target flow without exceeding the maximum velocity gradient.</p>
 <div class="math notranslate nohighlight" id="equation-d-jet-min-of-jet-g-max">
-<span class="eqno">(188)<a class="headerlink" href="#equation-d-jet-min-of-jet-g-max" title="Permalink to this equation">¶</a></span>\[ D_{Jet} = \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
-<p>Equation <a class="reference internal" href="#equation-d-jet-min-of-jet-g-max">(188)</a> allows us to make the connection between a flow contraction and the resulting maximum velocity gradient. As we design flow passages where there are constraints on the maximum velocity gradient we need to calculate the minimum pipe diameter. The pipe diameter can be obtained by substituting Equation <a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html#equation-d-pipe-of-d-vc">(71)</a>.</p>
+<span class="eqno">(190)<a class="headerlink" href="#equation-d-jet-min-of-jet-g-max" title="Permalink to this equation">¶</a></span>\[ D_{Jet} = \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
+<p>Equation <a class="reference internal" href="#equation-d-jet-min-of-jet-g-max">(190)</a> allows us to make the connection between a flow contraction and the resulting maximum velocity gradient. As we design flow passages where there are constraints on the maximum velocity gradient we need to calculate the minimum pipe diameter. The pipe diameter can be obtained by substituting Equation <a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html#equation-d-pipe-of-d-vc">(71)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-d-pipe-min-of-jet-g-max">
-<span class="eqno">(189)<a class="headerlink" href="#equation-d-pipe-min-of-jet-g-max" title="Permalink to this equation">¶</a></span>\[ D_{pipe_{min}} = \frac{1}{\sqrt{\Pi_{vc}}} \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
-<p>For many geometry changes we know the minor loss coefficient. An equivalent equation that is a function of the minor loss coefficient can be obtained by substituting Equation <a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html#equation-pi-vc-of-minor-k">(72)</a> into Equation <a class="reference internal" href="#equation-d-pipe-min-of-jet-g-max">(189)</a>.</p>
+<span class="eqno">(191)<a class="headerlink" href="#equation-d-pipe-min-of-jet-g-max" title="Permalink to this equation">¶</a></span>\[ D_{pipe_{min}} = \frac{1}{\sqrt{\Pi_{vc}}} \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
+<p>For many geometry changes we know the minor loss coefficient. An equivalent equation that is a function of the minor loss coefficient can be obtained by substituting Equation <a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html#equation-pi-vc-of-minor-k">(72)</a> into Equation <a class="reference internal" href="#equation-d-pipe-min-of-jet-g-max">(191)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-d-pipe-min-of-k-and-jet-g-max">
-<span class="eqno">(190)<a class="headerlink" href="#equation-d-pipe-min-of-k-and-jet-g-max" title="Permalink to this equation">¶</a></span>\[ D_{pipe_{min}} = \sqrt{\sqrt{K_e} + 1} \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
-<p>Equation <a class="reference internal" href="#equation-d-pipe-min-of-k-and-jet-g-max">(190)</a> is limited to geometries where any flow contractions in series are sufficiently separated so that the flow completely expands before entering the next contraction. The pipe diameter is then set by the largest minor loss coefficient in the pipe system.</p>
-<p>The maximum flow that can be handled by a pipe with minor losses can be obtained by solving Equation <a class="reference internal" href="#equation-d-pipe-min-of-k-and-jet-g-max">(190)</a> for the flow rate.</p>
+<span class="eqno">(192)<a class="headerlink" href="#equation-d-pipe-min-of-k-and-jet-g-max" title="Permalink to this equation">¶</a></span>\[ D_{pipe_{min}} = \sqrt{\sqrt{K_e} + 1} \left[\frac{\Pi_{JetRound}  }{\nu G_{Max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
+<p>Equation <a class="reference internal" href="#equation-d-pipe-min-of-k-and-jet-g-max">(192)</a> is limited to geometries where any flow contractions in series are sufficiently separated so that the flow completely expands before entering the next contraction. The pipe diameter is then set by the largest minor loss coefficient in the pipe system.</p>
+<p>The maximum flow that can be handled by a pipe with minor losses can be obtained by solving Equation <a class="reference internal" href="#equation-d-pipe-min-of-k-and-jet-g-max">(192)</a> for the flow rate.</p>
 <div class="math notranslate nohighlight" id="equation-q-max-of-d-and-k-and-jet-g-max">
-<span class="eqno">(191)<a class="headerlink" href="#equation-q-max-of-d-and-k-and-jet-g-max" title="Permalink to this equation">¶</a></span>\[Q_{max} = \frac{\pi}{4}\left[\frac{\nu G_{Max}^2}{\Pi_{JetRound}} \left(\frac{D_{pipe}}{\sqrt{\sqrt{K_e} + 1}}\right)^7\right]^\frac{1}{3}\]</div>
+<span class="eqno">(193)<a class="headerlink" href="#equation-q-max-of-d-and-k-and-jet-g-max" title="Permalink to this equation">¶</a></span>\[Q_{max} = \frac{\pi}{4}\left[\frac{\nu G_{Max}^2}{\Pi_{JetRound}} \left(\frac{D_{pipe}}{\sqrt{\sqrt{K_e} + 1}}\right)^7\right]^\frac{1}{3}\]</div>
 </div>
 <div class="section" id="plane-jet">
 <span id="heading-plane-jet"></span><h3>Plane Jet<a class="headerlink" href="#plane-jet" title="Permalink to this headline">¶</a></h3>
 <p>..note:: need images for jets. add drawings that define dimensions. add description of hydraulic residence time. Define Sjet. Add more text describing what the equations are doing.</p>
 <p>Plane jets occur in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by <a class="reference external" href="http://dx.doi.org/10.1115/1.3627309">Heskestad in 1965</a> and it may be possible to use that data to get a better estimate of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> from that source. An alternate estimate of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> can be obtained by postulating that the rate of energy dissipation is proportional to the ratio of the circumference of the jet normalized by the jet area. The postulate is based on the insight that the jet is experiencing shear with the surrounding fluid around its perimeter. For a plane jet the ratio of the circumference of the jet to the jet area is</p>
 <div class="math notranslate nohighlight" id="equation-p-a-ratio-for-plane-jet">
-<span class="eqno">(192)<a class="headerlink" href="#equation-p-a-ratio-for-plane-jet" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} \propto  \frac{2L}{SL} = \frac{2}{S}\]</div>
+<span class="eqno">(194)<a class="headerlink" href="#equation-p-a-ratio-for-plane-jet" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} \propto  \frac{2L}{SL} = \frac{2}{S}\]</div>
 <p>where L is the length of the plane jet, and S is the jet thickness at the jet origin. For a round jet we have</p>
 <div class="math notranslate nohighlight" id="equation-p-a-ratio-for-round-jet">
-<span class="eqno">(194)<a class="headerlink" href="#equation-p-a-ratio-for-round-jet" title="Permalink to this equation">¶</a></span>\[\Pi_{JetRound} \propto  \frac{4 \pi D}{\pi D^2} =  \frac{4}{D}\]</div>
-<p>where D is the jet diameter at the origin. A round jet has twice the circumference of a plane jet given the same jet dimension. Thus a round jet will dissipate energy twice as fast and <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> is expected to have a value of exactly half of <span class="math notranslate nohighlight">\(\Pi_{JetRound}\)</span></p>
+<span class="eqno">(196)<a class="headerlink" href="#equation-p-a-ratio-for-round-jet" title="Permalink to this equation">¶</a></span>\[\Pi_{JetRound} \propto  \frac{4 \pi D}{\pi D^2} =  \frac{4}{D}\]</div>
+<p>where D is the jet diameter at the origin. A round jet has twice the circumference of a plane jet given the same jet dimension. Thus a plane jet will dissipate energy half as fast as a round jet and <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> is expected to have a value of exactly half of <span class="math notranslate nohighlight">\(\Pi_{JetRound}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-p-a-ratio-for-round-jet">
-<span class="eqno">(194)<a class="headerlink" href="#equation-p-a-ratio-for-round-jet" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = 0.04\]</div>
+<span class="eqno">(196)<a class="headerlink" href="#equation-p-a-ratio-for-round-jet" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = 0.04\]</div>
 </div>
 <div class="section" id="behind-a-flat-plate">
 <span id="heading-behind-a-flat-plate"></span><h3>Behind a Flat Plate<a class="headerlink" href="#behind-a-flat-plate" title="Permalink to this headline">¶</a></h3>
@@ -799,12 +805,12 @@ to obtain</p>
 <p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">The energy dissipation rate and streamlines for a 1 m wide plate in two dimensional flow with an approach velocity of <span class="math notranslate nohighlight">\(1 m/s\)</span>. The maximum energy dissipation rate was approximately <span class="math notranslate nohighlight">\(0.04 W/kg\)</span>.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-94">
-<span class="eqno">(195)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-94" title="Permalink to this equation">¶</a></span>\[\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}\]</div>
+<span class="eqno">(197)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-94" title="Permalink to this equation">¶</a></span>\[\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}\]</div>
 <p>The maximum velocity gradient is thus</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-95">
-<span class="eqno">(196)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-95" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}\]</div>
+<span class="eqno">(198)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-95" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}\]</div>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-96">
-<span class="eqno">(197)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-96" title="Permalink to this equation">¶</a></span>\[\Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}\]</div>
+<span class="eqno">(199)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-96" title="Permalink to this equation">¶</a></span>\[\Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}\]</div>
 <p>The code for this example can be found <a class="reference external" href="https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=juEleCKZLNuk">here</a></p>
 <p>The flat plate <span class="math notranslate nohighlight">\(\Pi_{Plate}\)</span> has a value of 0.04 which is identical to our estimate for <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span>.</p>
 </div>
@@ -812,40 +818,40 @@ to obtain</p>
 <h3>Flow expansion in a baffled flocculators<a class="headerlink" href="#flow-expansion-in-a-baffled-flocculators" title="Permalink to this headline">¶</a></h3>
 <p>The flow expansion in a baffled flocculator occurs after the flow bends around the end of a baffle. The flow contracts against the baffle that defines the outside of the bend and thus one side of the flow is unable to expand because it is already against the baffle. This results in lower energy dissipation rate than would be obtained for a free jet. The first approximation would be that the baffle can be treated as the center of a virtual jet that is twice as large as the real jet. Alternately the energy dissipation can be neflected on the side of the jet that is against the baffle. Either assumption results half of the energy dissipation rate that would be expected for a similar dimensioned free jet.</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-97">
-<span class="eqno">(198)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-97" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} =  \frac{1}{2} \Pi_{JetPlane} = 0.02\]</div>
+<span class="eqno">(200)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-97" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} =  \frac{1}{2} \Pi_{JetPlane} = 0.02\]</div>
 <p>An alternate estimate can be obtained by applying conservation of energy to the control volume defined by one baffle space in a baffled flocculator. The ratio of the maximum energy dissipation rate, <span class="math notranslate nohighlight">\(\varepsilon_{Max}\)</span> to the average energy dissipation rate, <span class="math notranslate nohighlight">\({\bar \varepsilon}\)</span> is given by</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-98">
-<span class="eqno">(199)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-98" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}\]</div>
+<span class="eqno">(201)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-98" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}\]</div>
 <p>The maximum energy dissipation rate is defined using the same form of the equation as in the previous sections.</p>
 <div class="math notranslate nohighlight" id="equation-edr-flocbaffle">
-<span class="eqno">(200)<a class="headerlink" href="#equation-edr-flocbaffle" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \Pi_{FlocBaffle}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}\]</div>
+<span class="eqno">(202)<a class="headerlink" href="#equation-edr-flocbaffle" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \Pi_{FlocBaffle}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}\]</div>
 <p>An equivalent relationship can be defined for the velocity gradient by using Equation <a class="reference internal" href="#equation-g-camp-stein">(90)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-g-flocbaffle">
-<span class="eqno">(201)<a class="headerlink" href="#equation-eq-g-flocbaffle" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{FlocBaffle} \bar v_{Jet}}{\nu S_{Jet}}}\]</div>
+<span class="eqno">(203)<a class="headerlink" href="#equation-eq-g-flocbaffle" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{FlocBaffle} \bar v_{Jet}}{\nu S_{Jet}}}\]</div>
 <p>The relationship between velocity and the flow dimensions in a baffle are given by</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-99">
-<span class="eqno">(202)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-99" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{SW}\]</div>
+<span class="eqno">(204)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-99" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{SW}\]</div>
 <p>where Q is the flow rate, S is the distance between baffles, and W is the width of the flow. The velocity of the jet (the contracted flow) is obtained from continuity.</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-100">
-<span class="eqno">(203)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-100" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}\]</div>
+<span class="eqno">(205)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-100" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Pi_{VCBaffle}\)</span> is the <em>vena contracta</em> for the 180° bend.</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-101">
-<span class="eqno">(204)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-101" title="Permalink to this equation">¶</a></span>\[S_{Jet} = S \Pi_{VCBaffle}\]</div>
+<span class="eqno">(206)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-101" title="Permalink to this equation">¶</a></span>\[S_{Jet} = S \Pi_{VCBaffle}\]</div>
 <p>The average hydraulic residence time for the fluid between two baffles is given by</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-102">
-<span class="eqno">(205)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-102" title="Permalink to this equation">¶</a></span>\[\theta_B = \frac{H}{\bar v}\]</div>
+<span class="eqno">(207)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-102" title="Permalink to this equation">¶</a></span>\[\theta_B = \frac{H}{\bar v}\]</div>
 <p>where <span class="math notranslate nohighlight">\(H\)</span> is the depth of water. Substituting into the equation for <span class="math notranslate nohighlight">\(\varepsilon_{Max}\)</span> to get the equation in terms of the average velocity <span class="math notranslate nohighlight">\(\bar v\)</span> and flow dimension <span class="math notranslate nohighlight">\(S\)</span></p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-103">
-<span class="eqno">(206)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-103" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max}= \frac{\Pi_{FlocBaffle}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3\]</div>
+<span class="eqno">(208)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-103" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max}= \frac{\Pi_{FlocBaffle}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3\]</div>
 <p>From the control volume analysis the average energy dissipation rate is</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-104">
-<span class="eqno">(207)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-104" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}\]</div>
+<span class="eqno">(209)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-104" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}\]</div>
 <p>where <span class="math notranslate nohighlight">\(K\)</span> is the minor loss coefficient for flow around the end of a baffle with a <span class="math notranslate nohighlight">\(180^\circ\)</span> turn.</p>
 <p>Substitute the values for <span class="math notranslate nohighlight">\(\bar \varepsilon\)</span> and
 <span class="math notranslate nohighlight">\(\varepsilon_{Max}\)</span> to obtain the ratio,
 <span class="math notranslate nohighlight">\(\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-105">
-<span class="eqno">(208)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-105" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{FlocBaffle}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\]</div>
+<span class="eqno">(210)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-105" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{FlocBaffle}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\]</div>
 <p><span class="math notranslate nohighlight">\(\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}\)</span> has a value of 2 for
 <span class="math notranslate nohighlight">\(H_e/S &lt;5\)</span> (CFD analysis and <a class="reference external" href="https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267">Haarhoff, 2001</a>)
 The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</span> is at 5 (from CFD analysis, our weakest assumption).</p>
@@ -854,11 +860,11 @@ The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</s
 <span class="math notranslate nohighlight">\(H_e/S&gt;5\)</span>. Thus we can solve for <span class="math notranslate nohighlight">\(\Pi_{FlocBaffle}\)</span> at
 <span class="math notranslate nohighlight">\(H_e/S=5\)</span></p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-106">
-<span class="eqno">(209)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-106" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} \approx \left(
+<span class="eqno">(211)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-106" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} \approx \left(
 \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
 \right)\]</div>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-107">
-<span class="eqno">(210)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-107" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} \approx 0.0124\]</div>
+<span class="eqno">(212)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-107" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} \approx 0.0124\]</div>
 <p>This value for <span class="math notranslate nohighlight">\(\Pi_{FlocBaffle}\)</span> is lower than we estimated based on 50% of the <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span>. Additional research is needed to measure <span class="math notranslate nohighlight">\(\Pi_{FlocBaffle}\)</span>.</p>
 <p>The code for this example can be found <a class="reference external" href="https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=WQtdrsP9egHB">here</a></p>
 </div>
