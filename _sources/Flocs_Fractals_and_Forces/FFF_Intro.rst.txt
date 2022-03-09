@@ -402,14 +402,14 @@ At 1000 W/kg the supernatant concentration increases to about 300 mg/L. This sug
 
 The maximum energy dissipation rate that has a low settled water solids concentration (30 W/kg) can be converted into the corresponding *maximum* velocity gradient using :eq:`G_Camp_Stein` to obtain 5500 Hz (assuming a water temperature of 21°C).
 
-Garland's experiment with the result of floc breakup at the sedimentation tank inlet is consistent with several hypotheses.
+Garland's experiment with the result of floc breakup in the jet reverser is consistent with several hypotheses.
 
 #. The bonds holding flocs together are likely strong (order 6 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012 <https://doi.org/10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
-#. Flocs are broken where there is the largest force per bond. This would logically occur at the connection between the two subunits that form the floc. Thus when flocs break they would not be expected to produce tiny fragments.
+#. Flocs are broken where there is the largest force per bond. This would logically occur at the connection between the two subunits that form the floc. Thus it is possible that flocs break without producing tiny fragments.
 #. The fluid shear stress determines the force acting to tear a floc apart. Thus given a constant energy dissipation rate, the force acting to break up flocs will increase as the temperature drops (see Equation :eq:`fluid_shear_stress`)
 #. Settled water turbidity increases when the broken floc terminal velocity is less than the capture velocity of the plate settlers.
 
-The maximum size of the flocs after exposure to the shear stress in the core of the jet reverser is given by  Equation :eq:`d_floc_shear_stress`. The shear stress can be replaced by the velocity gradient by substituting Equation :eq:`fluid_shear_stress` for the fluid shear.
+The maximum size of the flocs after exposure to the shear stress in the core of the jet reverser is given by Equation :eq:`d_floc_shear_stress`. The shear stress can be replaced by the velocity gradient by substituting Equation :eq:`fluid_shear_stress` for the fluid shear.
 
 .. math::
   :label: d_floc_G
@@ -479,7 +479,7 @@ It would be helpful to develop a design guideline based on Equation :eq:`G_of_vc
 
   \zeta_{breakup} = G_{max} \nu^3 v_c^2 \approx   \frac{4F_{bond}}{3 \pi  \rho_{H_2O}}\left(  \frac{ D_{cp} g}{18} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2
 
-Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of Equation :eq:`G_of_vc_and_floc_props`, :math:`\\zeta_{breakup}`, is  :math:`50 \cdot \frac{mm^8}{s^6}`, :math:`\left(50 \cdot  10^{-24}\frac{m^8}{s^6}\right)`, for a kaolin suspension. :math:`\\zeta_{breakup}` represent an upper limit on the maximum velocity gradient to prevent floc breakup and plate settler capture velocity design parameters and is a combination of properties of the core particles. The expectation is that :math:`\\zeta_{breakup}` will be less than 50 :math:`\frac{mm^8}{s^6}` for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see :numref:`figure_PennockFig3`).
+Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of Equation :eq:`G_of_vc_and_floc_props`, :math:`\zeta_{breakup}`, is  :math:`50 \cdot \frac{mm^8}{s^6}`, :math:`\left(50 \cdot  10^{-24}\frac{m^8}{s^6}\right)`, for a kaolin suspension. :math:`\zeta_{breakup}` represent an upper limit on the maximum velocity gradient to prevent floc breakup and plate settler capture velocity design parameters and is a combination of properties of the core particles. The expectation is that :math:`\zeta_{breakup}` will be less than 50 :math:`\frac{mm^8}{s^6}` for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see :numref:`figure_PennockFig3`).
 
 Equation :eq:`G_of_vc_and_floc_props` reveals the key relationships between jet reverser and plate settler design. The jet reverser velocity gradient must decrease in proportion to the square of the plate settler capture velocity. If AguaClara were to increase the plate settler capture velocity from 0.12 to 0.3 mm/s the jet reverser velocity gradient would need to decrease by a factor of 6.25. The dramatic effect of temperature is revealed as well. It is well known that flocculation and sedimentation processes perform poorly at low temperatures. The kinematic viscosity of water approximately doubles as the temperature drops from 20°C to 0°C. That results in a need to decrease the velocity gradient by a factor of 8! Finally, the dissolved organic matter and inorganic particles together determine the density and diameter of the core particles that make up the flocs. Organic matter reduces the density of the core particles and that requires a lower velocity gradient. The worst combination of parameters is a cold water with a high dissolved organic concentration and a low concentration of inorganic particles.
 
@@ -505,7 +505,7 @@ The effects of the core particle density on the velocity gradient is also dramat
 .. math::
   :label: coag_bond_of_zeta
 
-  F_{bond} \approx \frac{3}{4} \pi  \rho_{H_2O} \\zeta_{breakup} \left(  \frac{18}{ D_{cp} g} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}}\right) ^2
+  F_{bond} \approx \frac{3}{4} \pi  \rho_{H_2O} \zeta_{breakup} \left(  \frac{18}{ D_{cp} g} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}}\right) ^2
 
 Given
 
@@ -517,9 +517,25 @@ The value of :math:`F_{bond}` was calculated to be :math:`F_{bond} = 6 nN` (see 
 
 Note that further work is required to better estimate the density of a clay particle with coagulant nanoparticles attached. The coagulant nanoparticles effectively increase the clay plate thickness by two times the diameter of the coagulant nanoparticles. That extra thickness is composed of water and the coagulant nanoparticles and thus has a much lower density than the clay particle.
 
-For a given flocculator and sedimentation tank the value of :math:`\zeta_{breakup}` increases rapidly as a function of the flow rate through the plant. Thus if a plant is designed with a value of :math:`\zeta_{breakup}` that is too high for the core particles that are being treated, the plant performance will deteriorate rapidly as the flow rate is increased. From :eq:`flocGeoG` the velocity gradient increases with flow rate to the :math:`\frac{3}{2}` power. The capture velocity is proportional to the flow rate and thus from :eq:`G_of_vc_and_floc_props` we have :math:`\zeta_{breakup} \propto Q^{\frac{7}{2}}`. If sedimentation tank performance decreases rapidly as the plant flow rate is increased it is possible that the velocity gradient needs to be reduced in the jet reverser. Of course, decreasing the plate settler capture velocity may also be needed, but making that change in an existing plant is a more substantial upgrade.
+The value of :math:`\zeta_{breakup}` increases rapidly as a function of the flow rate through the plant. Thus if a plant is designed with a value of :math:`\zeta_{breakup}` that is too high for the core particles that are being treated, the plant performance will deteriorate rapidly as the flow rate is increased. From :eq:`flocGeoG` the velocity gradient increases with flow rate to the :math:`\frac{3}{2}` power. The capture velocity is proportional to the flow rate and thus from :eq:`G_of_vc_and_floc_props` we have :math:`\zeta_{breakup} \propto Q^{\frac{7}{2}}`. If settled water turbidity increases rapidly as the plant flow rate is increased it is possible that the velocity gradient needs to be reduced in the flow passages between the flocculator and floc filter. Of course, decreasing the plate settler capture velocity may also be needed, but making that change in an existing plant is a more substantial upgrade.
 
 In the previous discussion we assumed that the highest velocity gradient in the inlet to the floc filter is in the jet reverser because it has the smallest dimension of flow. Nonetheless, it is important to check the inlet into the inlet manifold and the elbow in the inlet manifold to ensure that those flow expansions don't result in higher velocity gradients. Equation :eq:`D_pipe_min_of_K_and_jet_G_max` can be used to check the design of the inlet manifold.
+
+Force Required for Attachment of Two Flocs
+==========================================
+
+The velocity gradients in the jet reverser that are necessary to cause flocs to break are many times larger than the velocity gradients that are used in flocculators to bring flocs together. This suggests that there may be a difference between the maximum force that
+
+The attachment of two flocs requires that the flocs collide at a point where there is a coagulant nanoparticle and the bond must be strong enough to brake the relative motion of the two flocs. There are many possible collision paths and thus it isn't clear how to describe the total energy required to stop the relative motion. The critical force applied to the bonds could occur at the instance when the two flocs have a single bond connection. At that instance the two flocs are able to continue to rotate relative to each other around the single bond that is connecting them. As the two flocs rotate they eventually collide at a second point and make a second bond. With two active bonds the two flocs only have one degree of freedom to rotate relative to each other. As the two flocs rotate in the one free direction they will make contact at a third location and possibly create a third bond.
+
+As an attempt to characterize this braking energy we assume that the bond that experiences the greatest force is the first bond. In a shear flow the flocs are both rotating and translating relative to each other. The kinetic energy of both motions are directly proportional to the velocity gradient. To simplify the analysis we take the kinetic energy associated with the relative translation velocity and we assume that the bond must stop that relative motion. The braking energy is equal to the braking force times the braking distance. Thus we need a characteristic braking distance over which the bond can act. If two clay plates are parallel and separated by the diameter of the coagulant nanoparticle, then the two plates could continue translating relative to each other by having the coagulant nanoparticle roll between the two plates and in that case the braking distance would scale with the length of the clay plates. A more likely scenario is that the two plates are not parallel and thus the plates would act like levers that pull against the coagulant nanoparticle. It is possible that the coagulant nanoparticle can deform slightly or that it could slide on a clay surface to maintain contact over a short distance. There are four possible length scales over which the braking can occur.
+
+1. clay plate length
+1. coagulant nanoparticle diameter
+1. coagulant nanoparticle elongation length given bond force in tension
+1. bond length
+
+The worst
 
 Drag Force on a Floc in a Filter Constriction
 =============================================
