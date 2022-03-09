@@ -197,8 +197,8 @@ Flocculation
  #. Plastic modules that can easily be removed from channels for maintenance
  #. Compact vertical flow flocculators for low flow plants
 
-Sedimentation
--------------
+Floc Filter and Plate Settlers
+------------------------------
  #. Four channel inlet/outlet system that enables
 
      #. dumping flocculated water that doesn't meet specifications
@@ -211,7 +211,7 @@ Sedimentation
  #. Zero settled sludge in the main part of the sedimentation tank
  #. Hydraulically cleaned sedimentation tank with no moving parts
  #. Floc Hopper that consolidates the floc slurry prior to draining.
- #. Floc filter that is stable due to loss to or gain from settled sludge
+ #. Floc filter that is stable and that reduces the clarified turbidity
 
 Filtration
 ----------
@@ -258,12 +258,12 @@ An enabling measurement will be particle size and count in a flocculating suspen
 
 There are challenges associated with both strategies and a review of the literature may uncover additional options.
 
-Fluidized Floc Primary Filtration
----------------------------------
+Floc Filter
+-----------
 
 AguaClara invented the zero settled sludge sedimentation tank and the required `geometry to maintain a stable fluidized floc suspension <https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EE.1943-7870.0000773>`_ that provides primary filtration. The addition of primary filtration in clarifiers improves their `particle removal efficiency <https://iwaponline.com/aqua/article/59/5/312/29069/Parameters-affecting-steady-state-floc-blanket>`_, eliminates the need for mechanized sludge removal, and dramatically reduces mean flows that commonly result in poor floc capture. Although it is known that the primary filtration process enhances particle removal, the physics of primary filtration have been elusive and are currently an AguaClara Cornell NSF research project. Experiments conducted starting in January of 2021 suggest that fluidized flocs have a finite capacity to capture particles. That insight paves the way for a new research project to optimize the design and operation of primary filters and answer a new series of questions.
 
-1. Why do flocs in the primary filter have a finite capacity to capture incoming particles and flocs?
+1. Why do flocs in the floc filter have a finite capacity to capture incoming particles and flocs?
 2. Could flocs that have reached their capacity be rejuvenated? This has the potential to dramatically improve the particle capture efficiency of the primary filter.
 3. What is the optimal floc size distribution in the flocculator effluent to achieve the lowest concentration of primary particles exiting the sedimentation tank?
 4. How could flocs that have reached their full capacity be selectively removed from the primary filter?
