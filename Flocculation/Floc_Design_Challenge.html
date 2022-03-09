@@ -355,8 +355,8 @@ Make a copy of the <a class="reference external" href="https://cad.onshape.com/d
 <li><p>Revert to the base case and then increase PI_HS to 8. Does the cost increase or decrease? What do you conclude about the optimal value of PI_HS?</p></li>
 <li><p>Open the <a class="reference external" href="https://cad.onshape.com/documents/edb0d8000bff37cc559ebe89/w/1070adceaa2f931d13443deb/e/16171bc5d51fe4caa0b06c4e">HV Flocculator</a> and make sure the flow is set to 100 L/s. Which is more cost effective, the HV Flocculator or the HH Flocculator for the flow of 100 L/s? This could be an interesting challenge to figure out where these two competing designs have the same cost and hence where the transition between these designs should occur.</p></li>
 <li><p>Decrease the temperature to 0 Celsius. What happens to the design? Can you explain why? This is a key insight about flocculation!</p></li>
-<li><p>Change Q_pi to 0.5. What happens to the water level in the plant? Was the change more dramatic than you expected? Explain why the water level drops so much when the flow rate is 50% of the design flow.</p></li>
-<li><p>Reduce the basis of design velocity gradient to 50 Hz. What happens to the cost of the flocculator? Explain why this happens.</p></li>
+<li><p>Change Q_pi to 0.5. (Verify that the wall height isn’t affected by the change in flow rate. If the walls of your plant change when you change the fraction of the plant flow, you will need to look at how you are calculating wall height, and may need to come up with a new variable that is not dependent on fraction of the flow passing through the plant to correctly define the wall height.)  What happens to the water level in the plant? Was the change more dramatic than you expected? Explain why the water level drops so much when the flow rate is 50% of the design flow.</p></li>
+<li><p>Reduce the basis of design velocity gradient to 50 Hz. What happens to the cost of the flocculator? Explain why this happens. Remember that Gt was held constant and that Gt is the product of G and t (residence time)!</p></li>
 </ol>
 </dd>
 </dl>
