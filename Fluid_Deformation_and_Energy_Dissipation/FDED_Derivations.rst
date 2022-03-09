@@ -882,9 +882,23 @@ The measured dimensionless coefficient, :math:`\Pi_{JetRound}`, is proportional 
 The maximum velocity gradient in a jet is thus
 
 .. math::
-  :label: jet_G_max
+  :label: roundjet_G_max
 
    G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}
+
+The maximum permissible velocity gradient in a jet given a maximum allowable velocity gradient is
+
+.. math::
+  :label: roundjet_V_max
+
+  \bar v_{Jet_{Max}} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu D_{Jet}}{\Pi_{JetRound} }\right)^{\frac{1}{3}}
+
+The minimum jet diameter given a maximum allowable velocity gradient and required jet velocity is
+
+.. math::
+  :label: roundjet_D_min
+
+  D_{Jet_{Min}}= \frac{\Pi_{JetRound} \bar v_{Jet}^3}{\nu G_{Max}^2}
 
 Below we plot the Baldyga et al. equation for the energy dissipation rate as a function of distance from the discharge location for the case of a round jet that is discharging into a large tank.
 
@@ -898,7 +912,7 @@ Below we plot the Baldyga et al. equation for the energy dissipation rate as a f
 
     The centerline energy dissipation rate downstream from a round jet. The distance downstream is measured in units of jet diameters. The energy dissipation rate between the jet and 7 jet diameters is developing as the shear between the stationary fluid and the jet propagates toward the center of the jet and turbulence is generated.
 
-By substituting the continuity equation into Equation :eq:`jet_G_max` we can find the minimum jet diameter given a maximum allowed velocity gradient.
+By substituting the continuity equation into Equation :eq:`roundjet_G_max` we can find the minimum jet diameter given a maximum allowed velocity gradient.
 
 .. math::
   :label: jet_G_max_of_D_jet_min
@@ -956,14 +970,12 @@ where L is the length of the plane jet, and S is the jet thickness at the jet or
 
   \Pi_{JetRound} \propto  \frac{4 \pi D}{\pi D^2} =  \frac{4}{D}
 
-where D is the jet diameter at the origin. A round jet has twice the circumference of a plane jet given the same jet dimension. Thus a round jet will dissipate energy twice as fast and :math:`\Pi_{JetPlane}` is expected to have a value of exactly half of :math:`\Pi_{JetRound}`
+where D is the jet diameter at the origin. A round jet has twice the circumference of a plane jet given the same jet dimension. Thus a plane jet will dissipate energy half as fast as a round jet and :math:`\Pi_{JetPlane}` is expected to have a value of exactly half of :math:`\Pi_{JetRound}`
 
 .. math::
   :label: P_A_ratio_for_round_jet
 
   \Pi_{JetPlane} = 0.04
-
-
 
 
 .. _heading_Behind_a_flat_plate:

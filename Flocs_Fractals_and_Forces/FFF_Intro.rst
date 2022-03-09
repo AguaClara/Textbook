@@ -139,7 +139,14 @@ Simplifying :eq:`floc_buoyant_density_2` we obtain
   \left( \rho_{cp}  - \rho_{H_2O} \right)
   \left(\frac{D_{cp}}{D_{floc}}\right)^{3-\Pi_{fractal}}
 
-For volume-based fractal dimension less than 3 the buoyant density decreases as the floc size increases. The smaller than fractal dimension the less dense the resulting floc.
+For volume-based fractal dimension less than 3 the buoyant density decreases as the floc size increases. The smaller the fractal dimension the less dense the resulting floc.
+
+The floc density assuming a fractal dimension of 2 is given by
+
+.. math::
+  :label: floc_density
+
+  \rho_{floc} = \rho_{H_2O} + \left( \rho_{cp}  - \rho_{H_2O} \right) \left(\frac{D_{cp}}{D_{floc}}\right)
 
 .. _heading_Floc_Terminal_Velocity:
 
@@ -302,6 +309,21 @@ Clay based flocs with diameters around 200 :math:`\mu m` have a terminal velocit
 
 Our understanding of floc terminal velocity suggests that we can decide the size of the floc that we want the plate settlers to capture. If we decide that we want to capture flocs that are 35 :math:`\mu m` or larger, we know that we must design the plate settlers to capture flocs falling at 0.12 :math:`\frac{mm}{s}`.
 
+If we assume the fractal dimension is 2, then Equation :eq:`vt_of_floc` simplifies to
+
+.. math::
+  :label: vt_of_floc_Pi_fractal_of_2
+
+  v_t = \frac{D_{cp} D_{floc} g}{18\nu}\frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}
+
+The diameter of a floc with a fractal dimension of 2 and given a terminal velocity is
+
+.. math::
+  :label: D_of_vt_Pi_fractal_of_2
+
+   D_{floc} = \frac{18\nu v_t}{D_{cp} g} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}}
+
+
 Chemical Bond Strength
 ======================
 
@@ -384,7 +406,7 @@ The floc will break apart when the :math:`F_{shear_{max}}` exceeds the coagulant
 
 The expectation is that the flocs will break for values of :math:`\Pi_{bond}^{shear}>1`. The value of :math:`\Pi_{bond}^{shear}` will ideally be measured experimentally since there are a number of unknowns buried in the term including a characteristic length of the lever arm that the coagulant bond is acting on.  This analysis shows that the maximum size of a floc is set by the fluid shear stress, :math:`\tau`. Previously it wasn't clear if floc size was limited by energy dissipation rate or by the velocity gradient. Neither of those parameters captures the physics because ultimately it is a force that breaks the covalent bond and thus it must be a fluid force (not energy dissipation rate or velocity gradient) that can be used as a design parameter. By recognizing that the shear stress :math:`\tau` must be limited we can now develop design equations that account for the effects of viscosity and temperature on the design.
 
-When flocs are broken by the shearing action of the fluid it is possible that a primary particle is torn off or that the floc is broken in half. The method of breaking matters because if primary particles are dislodged from a floc then any breaking will lead to a deterioration of the sedimentation tank performance because some of those primary particles will make it through the floc filter and won't be captured by the plate settlers. Conventional wisdom would suggest that flocs will be broken into little pieces. If that were the case then any floc breakup would cause the settled water turbidity to increase. `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that there was no sign of increased settled water turbidity up to an energy dissipation rate of 300 mw/kg (:numref:`figure_sed_performance_vs_jet_edr` adapted from `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_).
+When flocs are broken by the shearing action of the fluid it is possible that a primary particle is torn off or that the floc is broken in half. The method of breaking matters because if primary particles are dislodged from a floc then any breaking will lead to a deterioration of the sedimentation tank performance because some of those primary particles will make it through the floc filter and won't be captured by the plate settlers. Conventional wisdom would suggest that flocs will be broken into little pieces. If that were the case then any floc breakup would cause the settled water turbidity to increase. `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that there was no sign of increased settled water turbidity up to an energy dissipation rate of 300 mw/kg  (:numref:`figure_sed_performance_vs_jet_edr` adapted from `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_).
 
 .. _figure_sed_performance_vs_jet_edr:
 
@@ -396,17 +418,20 @@ When flocs are broken by the shearing action of the fluid it is possible that a 
    Settled water solids concentrations during steady state as a function of jet energy dissipation rate given an upflow velocity of 1.2 mm/s and 1.6 mm/s.  Results shown are averaged over 2 residence times.
 
 
-:numref:`figure_sed_performance_vs_jet_edr` suggests that the floc filter and plate settler system begins to fail for energy dissipation rates in excess of about 30 W/kg.
-The maximum energy dissipation rate can be converted into the corresponding *maximum* velocity gradient using :eq:`G_Camp_Stein` to obtain 5500 Hz (assuming a water temperature of 21°C).
+:numref:`figure_sed_performance_vs_jet_edr` suggests that the floc filter and plate settler system begins to fail for energy dissipation rates in excess of about 30 W/kg. At higher energy dissipation rates the settled water turbidity increased rapidly from about 1 mg/L at 30 W/kg to 45 mg/L at 1000 W/kg. If flocs from the floc filter were broken up such that the fragments had sedimentation velocities less than :math:`v_{z_{ff}}`, the supernatant concentration would increase. There was no indication of increasing supernatant concentration at 100 W/kg. This suggests that the performance deterioration began with the breakup of flocs from the flocculator rather than by breakup of flocs in the floc filter. The maximum energy dissipation rate occurs in the core of the jet and thus flocs from the floc filter that are being resuspended likely do not experience the maximum jet energy dissipation rate. This potentially explains why the supernatant solids concentration doesn't increase until the energy dissipation rate is even higher than where the settled water turbidity begins to increase.
 
-Garland's experiment with the result of floc breakup at the sedimentation tank inlet is consistent with several hypotheses.
+At 1000 W/kg the supernatant concentration increases to about 300 mg/L. This suggests that this very high energy dissipation rate was sufficient to begin breaking up flocs from the floc filter.
 
-#. The bonds holding flocs together are likely strong (order 10 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012 <https://doi.org/10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
-#. Flocs are broken where there is the largest force per bond. This would logically occur at the connection between the two subunits that form the floc. Thus when flocs break they would not be expected to produce tiny fragments.
-#. The fluid shear stress determines the force acting to tear a floc apart. Thus given a constant energy dissipation rate the force acting to break up flocs will increase as the temperature drops (see Equation :eq:`fluid_shear_stress`)
-#. Settled water turbidity increases when the floc terminal velocity is less than the capture velocity of the plate settlers.
+The maximum energy dissipation rate that has a low settled water solids concentration (30 W/kg) can be converted into the corresponding *maximum* velocity gradient using :eq:`G_Camp_Stein` to obtain 5500 Hz (assuming a water temperature of 21°C).
 
-Equation :eq:`d_floc_shear_stress` can be written as a function of the velocity gradient by substituting Equation :eq:`fluid_shear_stress` for the fluid shear.
+Garland's experiment with the result of floc breakup in the jet reverser is consistent with several hypotheses.
+
+#. The bonds holding flocs together are likely strong (order 6 nN). It is not yet clear what the origin of the bonds is. Van der Waals forces may be of similar magnitude, but they would also apply to water molecules and thus there wouldn't be a mechanism for the coagulant to displace water molecules between approaching surfaces. For example, the gecko adhesion to surfaces is reduced by a factor of 40 when the surface is wet (`Stark et al., 2012 <https://doi.org/10.1242/jeb.070912>`_). Thus a force that is stronger than any bonds between water molecules and the surfaces must be responsible for joining coagulant nanoparticles and the particles present in the raw water. One likely candidate is covalent bonds.
+#. Flocs are broken where there is the largest force per bond. This would logically occur at the connection between the two subunits that form the floc. Thus it is possible that flocs break without producing tiny fragments.
+#. The fluid shear stress determines the force acting to tear a floc apart. Thus given a constant energy dissipation rate, the force acting to break up flocs will increase as the temperature drops (see Equation :eq:`fluid_shear_stress`)
+#. Settled water turbidity increases when the broken floc terminal velocity is less than the capture velocity of the plate settlers.
+
+The maximum size of the flocs after exposure to the shear stress in the core of the jet reverser is given by Equation :eq:`d_floc_shear_stress`. The shear stress can be replaced by the velocity gradient by substituting Equation :eq:`fluid_shear_stress` for the fluid shear.
 
 .. math::
   :label: d_floc_G
@@ -442,12 +467,12 @@ The maximum floc diameter is influenced by temperature because as the viscosity 
 
     The maximum floc size at a maximum velocity gradient of 100 Hz increases with temperature due to a decrease in the viscosity.
 
-Linking Velocity Gradient and Capture Velocity
-==============================================
+Linking Jet Reverser Velocity Gradient and Capture Velocity
+===========================================================
 
-The coagulant bond strength provides a link between flocculator design and sedimentation tank design.
+The coagulant bond strength provides a link between diffuser-jet reverser design and plate settler design.
 
-We can substitute Equation :eq:`d_floc_G` into Equation :eq:`vt_of_floc` and solve for the maximum flocculator velocity gradient that will produce flocs that are large enough to be captured by the sedimentation tank. The capture velocity of the sedimentation tank must be equal to or smaller than the floc terminal velocity to ensure capture of the floc.
+We can substitute Equation :eq:`d_floc_G` into Equation :eq:`vt_of_floc` and solve for the maximum jet reverser velocity gradient that will produce flocs that are large enough to be captured by the sedimentation tank. The capture velocity of the sedimentation tank must be equal to or smaller than the floc terminal velocity to ensure capture of the floc.
 
 .. math::
   :label: vc_of_G
@@ -474,13 +499,13 @@ It would be helpful to develop a design guideline based on Equation :eq:`G_of_vc
   :label: G_of_vc_and_floc_props
 
 
-  \zeta = G_{max} \nu^3 v_c^2 \approx   \frac{4F_{bond}}{3 \pi  \rho_{H_2O}}\left(  \frac{ D_{cp} g}{18} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2
+  \zeta_{breakup} = G_{max} \nu^3 v_c^2 \approx   \frac{4F_{bond}}{3 \pi  \rho_{H_2O}}\left(  \frac{ D_{cp} g}{18} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2
 
-Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of Equation :eq:`G_of_vc_and_floc_props`, :math:`\zeta`, is  :math:`50 \cdot \frac{mm^8}{s^6}`, :math:`\left(50 \cdot  10^{-24}\frac{m^8}{s^6}\right)`, for a kaolin suspension. :math:`\zeta` represent an upper limit on the flocculation and sedimentation design parameters and is a combination of properties of the core particles. The expectation is that :math:`\zeta` will be less than 50 :math:`\frac{mm^8}{s^6}` for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see :numref:`figure_PennockFig3`).
+Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of Equation :eq:`G_of_vc_and_floc_props`, :math:`\zeta_{breakup}`, is  :math:`50 \cdot \frac{mm^8}{s^6}`, :math:`\left(50 \cdot  10^{-24}\frac{m^8}{s^6}\right)`, for a kaolin suspension. :math:`\zeta_{breakup}` represent an upper limit on the maximum velocity gradient to prevent floc breakup and plate settler capture velocity design parameters and is a combination of properties of the core particles. The expectation is that :math:`\zeta_{breakup}` will be less than 50 :math:`\frac{mm^8}{s^6}` for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see :numref:`figure_PennockFig3`).
 
-Equation :eq:`G_of_vc_and_floc_props` reveals the key relationships between flocculator and sedimentation tank design. The flocculator velocity gradient must decrease in proportion to the square of the sedimentation tank capture velocity. If AguaClara were to increase the sedimentation tank capture velocity from 0.12 to 0.3 mm/s the flocculator velocity gradient would need to decrease by a factor of 6.25. The dramatic effect of temperature is revealed as well. It is well known that flocculation/sedimentation processes perform poorly at low temperatures. The kinematic viscosity of water approximately doubles as the temperature drops from 20°C to 0°C. That results in a need to decrease the velocity gradient by a factor of 8! Finally, the dissolved organic matter and inorganic particles together determine the density and diameter of the core particles that make up the flocs. Organic matter reduces the density of the core particles and that requires a lower velocity gradient. The worst combination of parameters is a cold water with a high dissolved organic concentration and a low concentration of inorganic particles.
+Equation :eq:`G_of_vc_and_floc_props` reveals the key relationships between jet reverser and plate settler design. The jet reverser velocity gradient must decrease in proportion to the square of the plate settler capture velocity. If AguaClara were to increase the plate settler capture velocity from 0.12 to 0.3 mm/s the jet reverser velocity gradient would need to decrease by a factor of 6.25. The dramatic effect of temperature is revealed as well. It is well known that flocculation and sedimentation processes perform poorly at low temperatures. The kinematic viscosity of water approximately doubles as the temperature drops from 20°C to 0°C. That results in a need to decrease the velocity gradient by a factor of 8! Finally, the dissolved organic matter and inorganic particles together determine the density and diameter of the core particles that make up the flocs. Organic matter reduces the density of the core particles and that requires a lower velocity gradient. The worst combination of parameters is a cold water with a high dissolved organic concentration and a low concentration of inorganic particles.
 
-The effect of water temperature and sedimentation tank capture velocity on the maximum flocculator velocity gradient for kaolin suspensions are shown in :numref:`figure_Gmax_of_T_and_vc`.
+The effect of water temperature and plate settler capture velocity on the maximum jet reverser velocity gradient for kaolin suspensions are shown in :numref:`figure_Gmax_of_T_and_vc`.
 
 .. _figure_Gmax_of_T_and_vc:
 
@@ -489,11 +514,11 @@ The effect of water temperature and sedimentation tank capture velocity on the m
     :align: center
     :alt: internal figure
 
-    The maximum average velocity gradient, :math:`G_{CS}`, that can be used in the flocculator or in the inlet to the sedimentation tank for treating kaolin suspensions. The velocity gradient decreases rapidly as the water temperature decreases because the higher viscosity prevents flocs from growing as large in the flocculator and reducers their terminal velocity in the plate settlers. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=r_wm34KQ8jm4&line=3&uniqifier=1>`_)
+    The maximum average velocity gradient, :math:`G_{CS}`, that can be used in the jet reverser for treating kaolin suspensions. The velocity gradient decreases rapidly as the water temperature decreases because the higher viscosity results in more shear force being applied to the floc and reduces their terminal velocity in the plate settlers. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=r_wm34KQ8jm4&line=3&uniqifier=1>`_)
 
-Cold temperatures are known to be particularly challenging for flocculation and the model results (Equation :eq:`G_of_vc_and_fractal_of_2`) shown in :numref:`figure_Gmax_of_T_and_vc` provides insight into the dramatic reduction in velocity gradient required for effectively cold weather operation.
+The model results (Equation :eq:`G_of_vc_and_fractal_of_2`) shown in :numref:`figure_Gmax_of_T_and_vc` provides insight into the dramatic reduction in velocity gradient required for effectively cold weather operation. Design for cold temperatures will require lower velocity gradients in the flow path from the flocculator into the floc filter. This includes flow expansions in channels, pipes, diffusers, and in the jet reverser.
 
-The effects of the core particle density on the velocity gradient may also be dramatic especially as the particle density approaches water. Water sources that have high concentrations of dissolved organics require pilot testing to ensure that flocs with a reasonable terminal velocity can be produced.
+The effects of the core particle density on the velocity gradient is also dramatic especially as the particle density approaches the density of water. Water sources that have high concentrations of dissolved organics require pilot testing to ensure that flocs with a reasonable terminal velocity can be produced. If the buoyant density of the core particles is a factor of 5 lower than the buoyant density of kaolin clay the value of :math:`\zeta_{breakup}` will decrease by a factor of 25 (see Equation :eq:`G_of_vc_and_floc_props`). This will require a 25 fold reduction in the value of :math:`G_{max}`.
 
 :numref:`figure_Gmax_of_T_and_vc` suggests that AguaClara should limit the flocculation velocity gradient to 100 Hz for raw waters with a minimum temperature of 5°C. The velocity gradient may need to be lowered or the capture velocity may need to be reduced for raw water with high concentrations of dissolved organic matter. More research is required to characterize the effect of dissolved organic matter on the core particles that make up the flocs.
 
@@ -502,19 +527,87 @@ The effects of the core particle density on the velocity gradient may also be dr
 .. math::
   :label: coag_bond_of_zeta
 
-  F_{bond} \approx \frac{3}{4} \pi  \rho_{H_2O} \zeta \left(  \frac{18}{ D_{cp} g} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}}\right) ^2
+  F_{bond} \approx \frac{3}{4} \pi  \rho_{H_2O} \zeta_{breakup} \left(  \frac{18}{ D_{cp} g} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}}\right) ^2
 
 Given
 
   * :math:`D_{cp} = 5 \mu m`
   * :math:`\rho_{cp} = 2650 \frac{kg}{m^3}`
-  * :math:`\zeta = 50 \cdot \frac{mm^8}{s^6}`
+  * :math:`\zeta_{breakup} = 50 \cdot \frac{mm^8}{s^6}`
 
 The value of :math:`F_{bond}` was calculated to be :math:`F_{bond} = 6 nN` (see `Colab worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=nEZGIfnHFRKo&line=3&uniqifier=1>`_) based on the measurements of `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_.
 
 Note that further work is required to better estimate the density of a clay particle with coagulant nanoparticles attached. The coagulant nanoparticles effectively increase the clay plate thickness by two times the diameter of the coagulant nanoparticles. That extra thickness is composed of water and the coagulant nanoparticles and thus has a much lower density than the clay particle.
 
-For a given flocculator and sedimentation tank the value of :math:`\zeta` increases rapidly as a function of the flow rate through the plant. Thus if a plant is designed with a value of :math:`\zeta` that is too high for the core particles that are being treated, the plant performance will deteriorate rapidly as the flow rate is increased. From :eq:`flocGeoG` the velocity gradient increases with flow rate to the :math:`\frac{3}{2}` power. The capture velocity is proportional to the flow rate and thus from :eq:`G_of_vc_and_floc_props` we have :math:`\zeta \propto Q^{\frac{7}{2}}`. If sedimentation tank performance decreases rapidly as the plant flow rate is increased it is possible that the velocity gradient needs to be reduced in the flocculator or in the sedimentation tank inlet. Of course, decreasing the plate settler capture velocity may also be needed, but making that change in an existing plant is a more substantial upgrade.
+The value of :math:`\zeta_{breakup}` increases rapidly as a function of the flow rate through the plant. Thus if a plant is designed with a value of :math:`\zeta_{breakup}` that is too high for the core particles that are being treated, the plant performance will deteriorate rapidly as the flow rate is increased. From :eq:`flocGeoG` the velocity gradient increases with flow rate to the :math:`\frac{3}{2}` power. The capture velocity is proportional to the flow rate and thus from :eq:`G_of_vc_and_floc_props` we have :math:`\zeta_{breakup} \propto Q^{\frac{7}{2}}`. If settled water turbidity increases rapidly as the plant flow rate is increased it is possible that the velocity gradient needs to be reduced in the flow passages between the flocculator and floc filter. Of course, decreasing the plate settler capture velocity may also be needed, but making that change in an existing plant is a more substantial upgrade.
+
+In the previous discussion we assumed that the highest velocity gradient in the inlet to the floc filter is in the jet reverser because it has the smallest dimension of flow. Nonetheless, it is important to check the inlet into the inlet manifold and the elbow in the inlet manifold to ensure that those flow expansions don't result in higher velocity gradients. Equation :eq:`D_pipe_min_of_K_and_jet_G_max` can be used to check the design of the inlet manifold.
+
+Force Required for Attachment of Two Flocs
+==========================================
+
+The velocity gradient in the jet reverser that causes flocs to break are many times larger than the velocity gradients that are used in flocculators to bring flocs together. The physics of these two situations are quite different. In the jet reverser, fluid shear is rotating the floc and exerting a moment in opposite directions on two halves of the floc. In the flocculator the velocity gradient is carrying flocs past each other and causing them to intersect. At the moment of collision the relative velocities must suddenly change if the coagulant nanoparticle bond that is connecting the two flocs is to remain intact. The deceleration force must be applied very quickly because the bond only acts over a very short distance. This suggests that the velocity gradient for successful attachment may be much lower than the velocity gradient that causes floc breakup.
+
+The attachment of two flocs requires that the flocs collide at a point where there is a coagulant nanoparticle and the bond must be strong enough to brake the relative motion of the two flocs. There are many possible collision paths and thus it isn't clear how to describe the total energy required to stop the relative motion. The critical force applied to the bonds could occur at the instance when the two flocs have a single bond connection. At that instance the two flocs are able to continue to rotate relative to each other around the single bond that is connecting them. As the two flocs rotate they eventually collide at a second point and make a second bond. With two active bonds the two flocs only have one degree of freedom to rotate relative to each other. As the two flocs rotate in the one free direction they will make contact at a third location and possibly create a third bond.
+
+As an attempt to characterize this braking energy we assume that the bond that experiences the greatest force is the first bond. Note that this assumption could easily be wrong and it is likely that the forces involved are not so different between the first and second bonds because in all cases the relative motion of the two flocs must be stopped. In a shear flow the flocs are both rotating and translating relative to each other. The kinetic energy of both motions are directly proportional to the velocity gradient. To simplify the analysis we take the kinetic energy associated with the relative translation velocity and we assume that the first bond must stop that relative motion.
+
+The braking energy is equal to the braking force times the braking distance. Thus we need a characteristic braking distance over which the bond can act. If two clay plates are parallel and separated by the diameter of the coagulant nanoparticle, then the two plates could continue translating relative to each other by having the coagulant nanoparticle roll between the two plates and in that case the braking distance would scale with the length of the clay plates. A more likely scenario is that the two plates are not parallel and thus the plates would act like levers that pull against the coagulant nanoparticle. It is possible that the coagulant nanoparticle can deform slightly or that it could slide on a clay surface to maintain contact over a short distance. It is also possible that the bond will break if there is relative motion of a distance comparable to the bond length. To simplify the analysis we assume that the bond energy must exceed the kinetic energy of the relative velocity.
+
+If we assume a single covalent bond between a hydrogen in the coagulant nanoparticle and an oxygen in the clay it is expected to have a `bond energy of 464 kJ/mol <https://science.jrank.org/pages/984/Bond-Energy.html>`_ and a bond length of 96 pm. The bond energy is calculated by dividing by Avogadro's number to obtain 0.77 aJ. The force for a single bond can be obtained by dividing the bond energy by the bond length to obtain 8 nN. This estimate is similar to the estimate of 6 nN based on the floc breakup analysis for the velocity gradient in the jet reverser.
+
+We hypothesize that the bond energy must be greater than the braking energy to achieve attachment. The kinetic energy due to the relative translational velocity of two identical flocs separated by a distance equal to their diameters is obtained from :math:`\frac{mV^2}{2}`.
+
+.. math::
+  :label: floc_braking_energy_1
+
+    E_{K_{floc}} = \frac{\rho_{floc} \pi D_{floc}^3}{6} \frac{\left(G D_{floc}\right)^2}{2} =  \frac{\rho_{floc} \pi D_{floc}^5 G^2}{12}
+
+Substituting the floc density from Equation :eq:`floc_density` (assuming a fractal dimension of 2) into Equation :eq:`floc_braking_energy_1` we obtain the required braking energy as a function of floc size.
+
+.. math::
+  :label: floc_braking_energy
+
+    E_{K_{floc}} = \left[ \rho_{H_2O} + \left( \rho_{cp}  - \rho_{H_2O} \right) \left(\frac{D_{cp}}{D_{floc}}\right) \right]  \frac{ \pi D_{floc}^5 G^2}{12}
+
+The flocs created in a flocculator must have a terminal velocity greater than the capture velocity of the plate settlers. We can add this constraint to Equation :eq:`floc_braking_energy` by substituting Equation :eq:`D_of_vt_Pi_fractal_of_2` to eliminate the :math:`D_{floc}`. However, the parameter, :math:`D_{floc}`, does not have the same meaning in both equations. In the terminal velocity equation (:eq:`D_of_vt_Pi_fractal_of_2`) the :math:`D_{floc}` refers to the combined floc. In the braking energy equation (:eq:`floc_braking_energy`) the :math:`D_{floc}` refers to one of the colliding flocs.
+
+Each of the flocs that are colliding have half of the core particles that the combined floc will have. The ratio of the diameter of the colliding flocs to the diameter of the combined floc can be obtained from Equation :eq:`D_floc_of_n_cp`. Given a fractal dimension of 2 the relationship between the resulting floc diameter and the constituent floc diameter is :math:`\sqrt{2}`.
+
+.. math::
+  :label: ratio_D_floc_to_D_subfloc
+
+  \frac{D_{floc}}{D_{subfloc}}
+  = \frac{ n_{cp}^\frac{1}{\Pi_{fractal}}}{ (0.5n_{cp})^\frac{1}{\Pi_{fractal}}}
+  =\sqrt{2}
+
+The energy analysis of floc collisions (see :numref:`figure_floc_braking_energy_of_G`) suggests that a single bond of 0.77 aJ (464 kJ/mol) cannot adsorb the kinetic energy of one of the constituent flocs given the assumption of a core particle with diameter 5 :math:`\mu m` and density of 2650 :math:`\frac{kg}{m^3}` and assuming that the constituent flocs are offset in the velocity gradient by a distance equal to their diameters. A successful collision could occur if much of the kinetic energy is transferred to the other floc through compression rather than through shear or tension. Flocs that are separated by less than their diameters would also have a lower relative velocity. The heterogeneity of the velocity gradients created by turbulence would also provide opportunities for low energy collisions that could be successful. Each of these effects (angle of contact, separation distance, local velocity gradient) suggests that the probability of a successful collision is reduced but does not go to zero as flocs grow in size.
+
+.. _figure_floc_braking_energy_of_G:
+
+.. figure:: ../Images/floc_braking_energy.png
+    :width: 400px
+    :align: center
+    :alt: internal figure
+
+    The required braking energy for a floc collision that results in a floc that has a terminal velocity of 0.12 mm/s. The collision is the least favorable with only one bond acting to counteract all of the kinetic energy of one of the constituent flocs. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_)
+
+The required energy increases rapidly as the temperature decreases because larger flocs are needed to achieve the same terminal velocity. This analysis suggests that velocity gradients should be reduced for low temperature operation or that the flocculator velocity gradient should be set based on the coldest operating temperature. Although not shown here, the braking energy required also increases rapidly for lower density flocs because the diameter of the floc must increase to achieve the terminal velocity required to be removed by the plate settlers.
+
+The required energy for attachment increases rapidly with the floc diameter as shown in :numref:`floc_braking_energy_of_D`.
+
+.. _figure_floc_braking_energy_of_D:
+
+.. figure:: ../Images/floc_braking_energy_of_D.png
+    :width: 400px
+    :align: center
+    :alt: internal figure
+
+    The required braking energy for a collision between two flocs that results in the final floc diameter at three different velocity gradients. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_)
+
+The analysis of the ability of braking energy required for successful attachment suggests a rational for either using a lower velocity gradient or tapering the velocity gradient in flocculators.  It also reveals that the coagulant nanoparticle bonds are under much higher stress during the collision than when they are only counteracting the force of fluid shear. The analysis does not provide guidance on how to select the velocity gradient in the flocculator.
+
+The analysis assumes that all of the fluid inside the floc stops as quickly as the solid part of the floc. Given that the flocs are quite porous the fluid can continue moving and exert a smaller force on the solid part of the floc through shear than it would have given its inertia. The fluid flow through the floc as the floc quickly stops complicates this analysis beyond our current capabilities. More research and analysis is needed to develop a model that provides clear guidance on the flocculator velocity gradient.
 
 Drag Force on a Floc in a Filter Constriction
 =============================================

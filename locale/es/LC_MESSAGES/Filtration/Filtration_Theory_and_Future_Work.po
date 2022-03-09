@@ -319,7 +319,7 @@ msgstr ""
 
 #: ../../Filtration/Filtration_Theory_and_Future_Work.rst:123
 msgid ""
-"and thus :math:`\\zeta` is zero at the centerline.  We will use the "
+"and thus :math:`\zeta` is zero at the centerline.  We will use the "
 "centerline velocity at distance :math:`\\Lambda_{pore}` from the "
 "constriction to estimate the head loss caused by one constriction."
 msgstr ""
