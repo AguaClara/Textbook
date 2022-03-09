@@ -71,7 +71,7 @@ Make a copy of the `HH Flocculator Template <https://cad.onshape.com/documents/4
     #. What is the cost of a 100 L/s flocculator (on a per L/s basis) using the default values for all of the parameters? This is the base case for the various changes you will make.
     #. If you force the design to have taller walls it will result in a design that uses less plan view area. Set the wall height to 1.5 m ("outletHW_min": 1.5). Does the cost increase or decrease with taller walls?
     #. What other economic factors might make the flocculator with taller walls be the preferred option in a water treatment plant?
-    #. Revert to the base case and then increase the flow rate to 1000 L/s. What happens to the number of baffles and to the cost per L/s?
+    #. Revert to the base case and then increase the flow rate to 900 L/s. What happens to the number of baffles and to the cost per L/s?
     #. Revert to the base case and then increase PI_HS to 8. Does the cost increase or decrease? What do you conclude about the optimal value of PI_HS?
     #. Open the `HV Flocculator <https://cad.onshape.com/documents/edb0d8000bff37cc559ebe89/w/1070adceaa2f931d13443deb/e/16171bc5d51fe4caa0b06c4e>`_ and make sure the flow is set to 100 L/s. Which is more cost effective, the HV Flocculator or the HH Flocculator for the flow of 100 L/s? This could be an interesting challenge to figure out where these two competing designs have the same cost and hence where the transition between these designs should occur.
     #. Decrease the temperature to 0 Celsius. What happens to the design? Can you explain why? This is a key insight about flocculation!
