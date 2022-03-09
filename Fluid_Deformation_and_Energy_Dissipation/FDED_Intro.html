@@ -289,10 +289,10 @@
 <p>As mentioned above, EDR and velocity gradients play an important role in mixing and in causing suspended particles to collide with each other, both of which are important topics in flocculation. Their use is not limited to flocculation, they are also helpful in understanding failure modes of plate settlers and terminal head loss of sand filters</p>
 <p>We will begin by defining the concept of energy dissipation rate for a control volume. In a control volume that does not include pumps, turbines or other external energy sources or sinks, the mechanical energy lost is indicated by a change in elevation and quantified as <span class="math notranslate nohighlight">\(g h_L\)</span>. That mechanical energy is lost in the time, <span class="math notranslate nohighlight">\(\theta\)</span>, that the fluid is in the control volume.</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-0">
-<span class="eqno">(69)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-0" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon \theta = g h_L\]</div>
+<span class="eqno">(73)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-0" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon \theta = g h_L\]</div>
 <p>This equation simply states that the average rate of energy dissipation times the time over which that dissipation occurs is equal to the total lost mechanical energy. The dimensions of <span class="math notranslate nohighlight">\(\varepsilon\)</span> are:</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-1">
-<span class="eqno">(70)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-1" title="Permalink to this equation">¶</a></span>\[\varepsilon = \frac{[m^3]}{[s^3]} = {\rm \frac{W}{kg}}\]</div>
+<span class="eqno">(74)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-1" title="Permalink to this equation">¶</a></span>\[\varepsilon = \frac{[m^3]}{[s^3]} = {\rm \frac{W}{kg}}\]</div>
 <p>These dimensions can be understood as a velocity squared per time, otherwise known as a rate of kinetic energy loss (recall that kinetic energy is <span class="math notranslate nohighlight">\({\rm Ke} = \frac{\bar v^2}{2g}\)</span>, or <span class="math notranslate nohighlight">\({\rm Ke} \propto \bar v^2\)</span>), or as power per unit mass, which would be <span class="math notranslate nohighlight">\({\rm  \frac{W}{kg}}\)</span>.</p>
 <p>Velocity gradients are central to flocculation because they cause the deformation of the fluid, and this results in particle collisions. Consider a real-world example via the image below: if everyone on a sidewalk is walking in the same direction at exactly the same velocity, then there will never be any collisions between people (top). If, however, people at one side of the sidewalk stand still and people walk progressively faster as a function of how far they are away from the zero velocity side of the sidewalk, then there will be many collisions between the pedestrians (see <a class="reference internal" href="#figure-pedestrians-on-sidewalk"><span class="std std-numref">Fig. 32</span></a>). Indeed, the rate of collisions is proportional to the velocity gradient.</p>
 <div class="figure align-center" id="id3">
@@ -386,7 +386,7 @@
 </table>
 <p>The equations used to convert between columns in the table above are:</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-2">
-<span class="eqno">(71)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-2" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
+<span class="eqno">(75)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-2" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
  G_{CS} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 \bar v=\frac{4Q}{\pi D}\]</div>
 <p>Note that the velocity gradient is independent of viscosity (and hence temperature) for laminar flow. This is because the total amount of fluid deformation is simply based on geometry. The no slip condition, the diameter, and the length of the flow passage set the total fluid deformation. Of course, if temperature decreases and viscosity increases the amount of energy required to push the fluid through the flow passage will increase (head loss is proportional to viscosity for laminar flow).</p>
@@ -448,7 +448,7 @@
 <td><p><span class="math notranslate nohighlight">\(G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>Plane jet</p></td>
-<td><p>0.0124</p></td>
+<td><p>0.04</p></td>
 <td><p><span class="math notranslate nohighlight">\(\varepsilon_{Max} = \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{S_{Jet}}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet}}{\nu S_{Jet}}}\)</span></p></td>
 </tr>
@@ -457,11 +457,16 @@
 <td><p><span class="math notranslate nohighlight">\(\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}\)</span></p></td>
 </tr>
+<tr class="row-odd"><td><p>Flocculator baffle</p></td>
+<td><p>0.0124</p></td>
+<td><p><span class="math notranslate nohighlight">\(\varepsilon_{Max} = \Pi_{FlocBaffle} \frac{  \bar v_{Jet} ^3}{S_{Jet}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{FlocBaffle} \bar v_{Jet}}{\nu S_{Jet}}}\)</span></p></td>
+</tr>
 </tbody>
 </table>
 <p>For mechanical mixing where an impeller or other stirring device is adding shaft work to a control volume we have</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-3">
-<span class="eqno">(72)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-3" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}\]</div>
+<span class="eqno">(76)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-3" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}\]</div>
 <div class="line-block">
 <div class="line">where</div>
 <div class="line"><span class="math notranslate nohighlight">\(P\)</span> = power input into the control volume</div>
@@ -471,7 +476,7 @@
 </div>
 <p>The Camp-Stein velocity gradient for a mechanically mixed reactor is</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-4">
-<span class="eqno">(73)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-4" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}\]</div>
+<span class="eqno">(77)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-4" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}\]</div>
 </div>
 </div>
 

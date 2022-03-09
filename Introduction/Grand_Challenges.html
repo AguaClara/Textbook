@@ -118,15 +118,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#chemical-dosing">Chemical dosing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#rapid-mix">Rapid mix</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#flocculation">Flocculation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sedimentation">Sedimentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#floc-filter-and-plate-settlers">Floc Filter and Plate Settlers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#filtration">Filtration</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#drinking-water-treatment">Drinking Water Treatment</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#fractal-floc-model">Fractal Floc Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">Flocculation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fluidized-floc-primary-filtration">Fluidized Floc Primary Filtration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Sedimentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#floc-filter">Floc Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sedimentation">Sedimentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#granular-media-secondary-filtration">Granular Media Secondary Filtration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#disinfection">Disinfection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#comparison-with-croton-water-treatment-plant">Comparison with Croton Water Treatment Plant</a></li>
@@ -341,15 +341,15 @@
 <p>During the later half of the 20th century surface water treatment technologies evolved slowly. The slow evolution was likely a product of the regulatory environment, the high cost of water treatment infrastructure, and the low profit margin. The high cost of municipal scale water treatment infrastructure made experiments at scale infeasible and thus there was no mechanism to introduce disruptive innovations. With little opportunity for a significant return on investment there was little incentive to invest in the research and development that could have advanced the technologies. A final disincentive was the widely held belief that surface water treatment was a mature field with little opportunity for significant advancement. The advances of the latter half of the 20th century focused primarily on mechanization and automation (Supervisory Control and Data Acquisition - SCADA).</p>
 <p>Design standards such as the <a class="reference external" href="http://10statesstandards.com/">Great Lakes - Upper Mississippi River Board 10 States Standards</a> are evolving very slowly and retain an empirical approach to design. The empirical design methodology is a direct result of two confounding factors. The physics of particle interactions based on diffusion, fluid shear, and gravity are complex and given the challenges of characterizing surface water particle suspensions it was natural to assume that a mathematical description of the processes would be intractable.</p>
 <p>Mechanized and automated water treatment plants performed reasonably well in communities with ready access to technical support services and supply chains that could reliably deliver replacement parts. In the global south municipal water treatment plants haven’t faired as well. In 2012, one of the main water treatment plants serving Kathmandu, Nepal had failed chlorine pumps and were using a red garden hose to siphon chlorine from the stock tank. They crimped the end of the hose to control the flow rate of the chlorine solution.</p>
-<div class="figure align-center" id="id7">
+<div class="figure align-center" id="id6">
 <span id="figure-kathmandu-chemical-feed-room"></span><a class="reference internal image-reference" href="../_images/Kathmandu_chemical_feed_room.png"><img alt="Kathmandu chemical feed room" src="../_images/Kathmandu_chemical_feed_room.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Failed chlorine dosing system bypassed with a red tube that siphons the chlorine solution at a plant in Kathmandu, Nepal in 2012.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Failed chlorine dosing system bypassed with a red tube that siphons the chlorine solution at a plant in Kathmandu, Nepal in 2012.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <p>The ingenious and simple chemical dosing system that uses a siphon to completely bypass the failed pumps begs the question of whether design engineers could have invented a better option than the short lived pumps that they specified. We will investigate a gravity powered chemical dosing system that is far more reliable than chemical dosing pumps and that borrows from the simplicity of the garden hose solution used by the Nepali plant operators.</p>
 <p>Chemical dosing systems are particularly vulnerable and their failures make plant operation very challenging. Providing the right coagulant dose is critical for efficient removal of particle and dissolved organics. Chemical dosing systems commonly rely on pumps and those pumps require regular maintenance and have relatively short mean times between failures.</p>
-<div class="figure align-center" id="id8">
+<div class="figure align-center" id="id7">
 <span id="figure-kathmandu-alum-dosing"></span><a class="reference internal image-reference" href="../_images/Kathmandu_alum_dosing.jpg"><img alt="Kathmandu alum dosing" src="../_images/Kathmandu_alum_dosing.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Alum dosing system based on the rate that 25 kg blocks of alum are placed in the inlet channel of the plant.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Alum dosing system based on the rate that 25 kg blocks of alum are placed in the inlet channel of the plant.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <p>The AguaClara Cornell program was founded in 2005 with the goal of creating a new generation of sustainable technologies that would perform well even in the rugged settings of rural communities. The goal wasn’t simply to create technologies that would work for communities with very limited resources. The goal was to create the next generation of technologies that would both perform well in communities with limited resources and would be the highest performing technologies on multiple metrics for all communities.</p>
 <p>For the past several decades surface water treatment technologies have been considered “mature” and when I (Monroe) took a design course on drinking water treatment in 1985 I had the impression that there was little room for further innovation. This perspective is remarkable given that with the exception of lamellar sedimentation there were no equations describing the core treatment processes.</p>
@@ -361,9 +361,9 @@
 <p>Design for the client would strive to reduce capital, operating, and maintenance expenses. Clients also place a high value on reliability, ease of maintenance, and the ability to handle repairs with their staff. Design for the context would account for the capabilities of local and national supply chains. A key design consideration is to ensure that the treatment capabilities of the treatment plant match the variable water quality of the proposed water source. There are numerous slow sand filtration plants installed in the global south that are attempting to treat water sources that can not be effectively treated by slow sand filtration. The cost of the failure to consider the client and the context is born by the communities who end up with water treatment systems that aren’t able to provide reliable safe water.</p>
 <p>Design for the client requires empathy and a commitment to listen to and learn from plant operators. It also requires attention to detail and watching how plant operators interact with water treatment plants. Empathy leads to the goal of creating a work environment that makes it easy for the plant operators to do their routine tasks. This isn’t just to make the plant operators work easy. A plant that is designed with the plant operator in mind will also engender pride and that pride will lead to better plant performance.</p>
 <p>An example of design for the operator is the elevation of the walkways in AguaClara plants. Conventional plants often have walkways that are above the tanks. That places the operator’s eyes several meters above the water surface and makes it difficult to see particles and flocs in the water. AguaClara plants have the walkways approximately 50 cm below the top of the tanks. This makes it easy for the plant operator to look into the tanks for quick visual inspections.</p>
-<div class="figure align-center" id="id9">
+<div class="figure align-center" id="id8">
 <span id="figure"></span><a class="reference internal image-reference" href="../_images/Improvised_ladder_access_to_sed_tank.jpg"><img alt="Improvised ladder access to sed tank" src="../_images/Improvised_ladder_access_to_sed_tank.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">A plant operator built a makeshift ladder to enable easier access to the flocculation and sedimentation tanks in a package plant. This ladder considerably shortened the distance between the coagulant dose controls and the flocculator. The ladder also makes it possible to look closely at the water to see the size of the flocs.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">A plant operator built a makeshift ladder to enable easier access to the flocculation and sedimentation tanks in a package plant. This ladder considerably shortened the distance between the coagulant dose controls and the flocculator. The ladder also makes it possible to look closely at the water to see the size of the flocs.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="design-choices">
@@ -373,14 +373,14 @@
 <span id="heading-walls-and-a-roof"></span><h3>Built for Operation<a class="headerlink" href="#built-for-operation" title="Permalink to this headline">¶</a></h3>
 <p>Traditionally in tropical and temperate climates, flocculation and sedimentation units are built without an enclosing building because they aren’t in danger of freezing. Without protection from the sun the materials used for plant construction must be UV resistant and thus plastic can’t be used. This requires use of heavier and more expensive materials such stainless steel and aluminum. Metal plate settlers are heavy and thus they can’t be easily removed by the plant operator.</p>
 <p>Without the ability to gain access to a sedimentation tank from above, conventional sedimentation tank cleaning must be done by providing operator access below the plate settlers. This in turn requires that the space below the plate settlers be tall enough to accommodate a plant operator. Thus sedimentation tanks that are built in the open have to be deeper than sedimentation tanks that are built under a roof and they are more difficult to maintain because the operator has to enter the tank through a waterproof access port. Operator access to the space below the stainless steel or aluminum plate settlers is through a port in the side of the tank (see the video <a class="reference internal" href="Introduction.html#figure-cleaning-a-sed-tank-with-fixed-plates"><span class="std std-numref">Fig. 11</span></a>).</p>
-<div class="figure align-center" id="id10">
+<div class="figure align-center" id="id9">
 <span id="figure-cleaning-a-sed-tank-with-fixed-plates"></span><a class="reference external image-reference" href="http://www.youtube.com/watch?v=TSh-ZNqaW8Y"><img alt="Cleaning a Sed Tank with fixed plates" src="http://img.youtube.com/vi/TSh-ZNqaW8Y/0.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Plant operators opening hatch below plate settlers in a traditional sedimentation tank.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Plant operators opening hatch below plate settlers in a traditional sedimentation tank.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 <p>AguaClara sedimentation tanks are designed to be taken off line one at a time so the water treatment plant can continue to operate during maintenance. Two plant operators can quickly open a sedimentation tank by removing the plastic plate settlers (see the video <a class="reference internal" href="Introduction.html#figure-removing-plate-settlers"><span class="std std-numref">Fig. 12</span></a>). The zero settled sludge design of the AguaClara sedimentation tanks also reduces the need for cleaning.</p>
-<div class="figure align-center" id="id11">
+<div class="figure align-center" id="id10">
 <span id="figure-removing-plate-settlers"></span><a class="reference external image-reference" href="http://www.youtube.com/watch?v=vZ2f6mduEls"><img alt="Removing Plate Settlers from an AguaClara Sedimentation tank" src="http://img.youtube.com/vi/vZ2f6mduEls/0.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Plant operator removing plate settlers from an AguaClara sedimentation tank.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Plant operator removing plate settlers from an AguaClara sedimentation tank.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <p>There is another major consequence of building water treatment plants in a secure enclosed building. Many water treatment plants will operate around the clock and that requires plant operators to spend the night at the facility. Having a secure facility provides improved safety for the plant operator. That improved safety is very important for some potential operators and thus providing that safety will increase potential diversity.</p>
 </div>
@@ -445,8 +445,8 @@
 </ol>
 </div></blockquote>
 </div>
-<div class="section" id="sedimentation">
-<h3>Sedimentation<a class="headerlink" href="#sedimentation" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="floc-filter-and-plate-settlers">
+<h3>Floc Filter and Plate Settlers<a class="headerlink" href="#floc-filter-and-plate-settlers" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Four channel inlet/outlet system that enables</p>
@@ -464,7 +464,7 @@
 <li><p>Zero settled sludge in the main part of the sedimentation tank</p></li>
 <li><p>Hydraulically cleaned sedimentation tank with no moving parts</p></li>
 <li><p>Floc Hopper that consolidates the floc slurry prior to draining.</p></li>
-<li><p>Floc filter that is stable due to loss to or gain from settled sludge</p></li>
+<li><p>Floc filter that is stable and that reduces the clarified turbidity</p></li>
 </ol>
 </div></blockquote>
 </div>
@@ -509,18 +509,18 @@ The FFM will build the average floc in a series of ordered steps that capture th
 </ol>
 <p>There are challenges associated with both strategies and a review of the literature may uncover additional options.</p>
 </div>
-<div class="section" id="fluidized-floc-primary-filtration">
-<h3>Fluidized Floc Primary Filtration<a class="headerlink" href="#fluidized-floc-primary-filtration" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="floc-filter">
+<h3>Floc Filter<a class="headerlink" href="#floc-filter" title="Permalink to this headline">¶</a></h3>
 <p>AguaClara invented the zero settled sludge sedimentation tank and the required <a class="reference external" href="https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EE.1943-7870.0000773">geometry to maintain a stable fluidized floc suspension</a> that provides primary filtration. The addition of primary filtration in clarifiers improves their <a class="reference external" href="https://iwaponline.com/aqua/article/59/5/312/29069/Parameters-affecting-steady-state-floc-blanket">particle removal efficiency</a>, eliminates the need for mechanized sludge removal, and dramatically reduces mean flows that commonly result in poor floc capture. Although it is known that the primary filtration process enhances particle removal, the physics of primary filtration have been elusive and are currently an AguaClara Cornell NSF research project. Experiments conducted starting in January of 2021 suggest that fluidized flocs have a finite capacity to capture particles. That insight paves the way for a new research project to optimize the design and operation of primary filters and answer a new series of questions.</p>
 <ol class="arabic simple">
-<li><p>Why do flocs in the primary filter have a finite capacity to capture incoming particles and flocs?</p></li>
+<li><p>Why do flocs in the floc filter have a finite capacity to capture incoming particles and flocs?</p></li>
 <li><p>Could flocs that have reached their capacity be rejuvenated? This has the potential to dramatically improve the particle capture efficiency of the primary filter.</p></li>
 <li><p>What is the optimal floc size distribution in the flocculator effluent to achieve the lowest concentration of primary particles exiting the sedimentation tank?</p></li>
 <li><p>How could flocs that have reached their full capacity be selectively removed from the primary filter?</p></li>
 </ol>
 </div>
-<div class="section" id="id4">
-<h3>Sedimentation<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="sedimentation">
+<h3>Sedimentation<a class="headerlink" href="#sedimentation" title="Permalink to this headline">¶</a></h3>
 <p>Although we don’t currently see research into plate settlers as a priority, it is likely that we will circle around to research to determine the optimal design of plate settlers to maximize performance of the subsequent granular media filtration. The design of plate settlers is a function of the properties of the flocs given the raw water composition and the amendments added for treatment. AguaClara experience with highly colored, low turbidity water at Gracias, Honduras indicates that surface waters with those characteristics produce low density flocs that are difficult to remove by sedimentation. The minimum density of flocs given the raw water characteristic will be the critical design for sedimentation tanks and will determine if amendments to increase floc density are required for efficient gravity-based separation.</p>
 </div>
 <div class="section" id="granular-media-secondary-filtration">

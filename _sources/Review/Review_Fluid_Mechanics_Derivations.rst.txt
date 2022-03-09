@@ -119,10 +119,40 @@ From here, the two other forms of the minor loss equation can be derived by solv
 .. math::
  :label: minor_loss_equation
 
-   \color{purple}{
-    {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
-    }
 
-.. note:: You will often see :math:`K_e^{'}` and :math:`K_e` used without the :math:`e` subscript, they will appear as :math:`K^{'}` and :math:`K`.
+    {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2
+
+
+You will often see :math:`K_e^{'}` and :math:`K_e` used without the :math:`e` subscript, they will appear as :math:`K^{'}` and :math:`K`.
 
 Being familiar with these three forms and how they are used will be of great help throughout the class. The third form is the one that is most commonly used.
+
+We can convert the minor loss coefficient, :math:`K_e`, into a flow contraction using the minor loss equation (see Equation :eq:`minor_loss_equation`)
+
+.. math::
+  :label: minor_K_of_pi_vc
+
+   K_e = \left(\frac{1}{\Pi_{vc}}  - 1 \right)^2
+
+where :math:`\Pi_{vc}` is the ratio of the contracted area to the full expanded flow area.
+
+.. math::
+  :label:
+
+  \Pi_{vc} = \frac{A_{in}}{A_{out}}
+
+Given that :math:`\Pi_{vc}` is the ratio of the contracted area to the full expanded flow area we obtain the relationship between the contracted diameter, :math:`D_{vc}`, and the expanded diameter, :math:`D_{pipe}`.
+
+.. math::
+  :label: D_pipe_of_D_vc
+
+  D_{pipe} = \frac{D_{vc}}{\sqrt{\Pi_{vc}}}
+
+Solving Equation :eq:`minor_K_of_pi_vc` for :math:`\Pi_{vc}` we obtain
+
+.. math::
+  :label: pi_vc_of_minor_K
+
+  \Pi_{vc} = \frac{1}{\sqrt{K_e} + 1}
+
+The extent of a flow contraction, :math:`\Pi_{vc}` can be estimated from the measured minor loss coefficient.
