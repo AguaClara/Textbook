@@ -355,7 +355,7 @@ In this case the longest branch is slightly less than :math:`\frac{ID_{Fi}}{2}`.
     :align: center
     :alt: filter schematic, interal image
 
-    The red box shows the approximate area served by the longest branch. The area is slightly overestimated, but using a rectangular area and by assuming the branch is exaclty half the length of the inner diameter ensures that the largest fraction possible does not exceed what is designed for.
+    The red box shows the approximate area served by the longest branch. The area is slightly overestimated, but using a rectangular area and by assuming the branch is exactly half the length of the inner diameter ensures that the largest fraction possible does not exceed what is designed for.
 
 
 From that area, the fraction of the filter layer served by the hypothetical longest branch can be directly found by dividing that area by the total cross-sectional area of the filter.
