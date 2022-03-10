@@ -594,7 +594,7 @@ The energy analysis of floc collisions (see :numref:`figure_floc_braking_energy_
 
 The required energy increases rapidly as the temperature decreases because larger flocs are needed to achieve the same terminal velocity. This analysis suggests that velocity gradients should be reduced for low temperature operation or that the flocculator velocity gradient should be set based on the coldest operating temperature. Although not shown here, the braking energy required also increases rapidly for lower density flocs because the diameter of the floc must increase to achieve the terminal velocity required to be removed by the plate settlers.
 
-The required energy for attachment increases rapidly with the floc diameter as shown in :numref:`floc_braking_energy_of_D`.
+The required energy for attachment increases rapidly with the floc diameter as shown in :numref:`figure_floc_braking_energy_of_D`.
 
 .. _figure_floc_braking_energy_of_D:
 
