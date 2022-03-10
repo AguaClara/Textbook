@@ -505,7 +505,7 @@ Given the experimental conditions used by Casey Garland where performance began 
 
 Equation :eq:`G_of_vc_and_floc_props` reveals the key relationships between jet reverser and plate settler design. The jet reverser velocity gradient must decrease in proportion to the square of the plate settler capture velocity. If AguaClara were to increase the plate settler capture velocity from 0.12 to 0.3 mm/s the jet reverser velocity gradient would need to decrease by a factor of 6.25. The dramatic effect of temperature is revealed as well. It is well known that flocculation and sedimentation processes perform poorly at low temperatures. The kinematic viscosity of water approximately doubles as the temperature drops from 20°C to 0°C. That results in a need to decrease the velocity gradient by a factor of 8! Finally, the dissolved organic matter and inorganic particles together determine the density and diameter of the core particles that make up the flocs. Organic matter reduces the density of the core particles and that requires a lower velocity gradient. The worst combination of parameters is a cold water with a high dissolved organic concentration and a low concentration of inorganic particles.
 
-The effect of water temperature and plate settler capture velocity on the maximum jet reverser velocity gradient for kaolin suspensions are shown in :numref:`figure_Gmax_of_T_and_vc`.
+The effect of water temperature and plate settler capture velocity on the maximum jet reverser velocity gradient for kaolin suspensions are shown in :numref:`figure_Gmax_of_T_and_vc` (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=r_wm34KQ8jm4&line=3&uniqifier=1>`_).
 
 .. _figure_Gmax_of_T_and_vc:
 
@@ -514,7 +514,7 @@ The effect of water temperature and plate settler capture velocity on the maximu
     :align: center
     :alt: internal figure
 
-    The maximum average velocity gradient, :math:`G_{CS}`, that can be used in the jet reverser for treating kaolin suspensions. The velocity gradient decreases rapidly as the water temperature decreases because the higher viscosity results in more shear force being applied to the floc and reduces their terminal velocity in the plate settlers. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=r_wm34KQ8jm4&line=3&uniqifier=1>`_)
+    The maximum average velocity gradient, :math:`G_{CS}`, that can be used in the jet reverser for treating kaolin suspensions. The velocity gradient decreases rapidly as the water temperature decreases because the higher viscosity results in more shear force being applied to the floc and reduces their terminal velocity in the plate settlers.
 
 The model results (Equation :eq:`G_of_vc_and_fractal_of_2`) shown in :numref:`figure_Gmax_of_T_and_vc` provides insight into the dramatic reduction in velocity gradient required for effectively cold weather operation. Design for cold temperatures will require lower velocity gradients in the flow path from the flocculator into the floc filter. This includes flow expansions in channels, pipes, diffusers, and in the jet reverser.
 
@@ -581,7 +581,7 @@ Each of the flocs that are colliding have half of the core particles that the co
   = \frac{ n_{cp}^\frac{1}{\Pi_{fractal}}}{ (0.5n_{cp})^\frac{1}{\Pi_{fractal}}}
   =\sqrt{2}
 
-The energy analysis of floc collisions (see :numref:`figure_floc_braking_energy_of_G`) suggests that a single bond of 0.77 aJ (464 kJ/mol) cannot adsorb the kinetic energy of one of the constituent flocs given the assumption of a core particle with diameter 5 :math:`\mu m` and density of 2650 :math:`\frac{kg}{m^3}` and assuming that the constituent flocs are offset in the velocity gradient by a distance equal to their diameters. A successful collision could occur if much of the kinetic energy is transferred to the other floc through compression rather than through shear or tension. Flocs that are separated by less than their diameters would also have a lower relative velocity. The heterogeneity of the velocity gradients created by turbulence would also provide opportunities for low energy collisions that could be successful. Each of these effects (angle of contact, separation distance, local velocity gradient) suggests that the probability of a successful collision is reduced but does not go to zero as flocs grow in size.
+The energy analysis of floc collisions (see :numref:`figure_floc_braking_energy_of_G` and the `Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_) suggests that a single bond of 0.77 aJ (464 kJ/mol) cannot adsorb the kinetic energy of one of the constituent flocs given the assumption of a core particle with diameter 5 :math:`\mu m` and density of 2650 :math:`\frac{kg}{m^3}` and assuming that the constituent flocs are offset in the velocity gradient by a distance equal to their diameters. A successful collision could occur if much of the kinetic energy is transferred to the other floc through compression rather than through shear or tension. Flocs that are separated by less than their diameters would also have a lower relative velocity. The heterogeneity of the velocity gradients created by turbulence would also provide opportunities for low energy collisions that could be successful. Each of these effects (angle of contact, separation distance, local velocity gradient) suggests that the probability of a successful collision is reduced but does not go to zero as flocs grow in size.
 
 .. _figure_floc_braking_energy_of_G:
 
@@ -590,11 +590,11 @@ The energy analysis of floc collisions (see :numref:`figure_floc_braking_energy_
     :align: center
     :alt: internal figure
 
-    The required braking energy for a floc collision that results in a floc that has a terminal velocity of 0.12 mm/s. The collision is the least favorable with only one bond acting to counteract all of the kinetic energy of one of the constituent flocs. (see `Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_)
+    The required braking energy for a floc collision that results in a floc that has a terminal velocity of 0.12 mm/s. The collision is the least favorable with only one bond acting to counteract all of the kinetic energy of one of the constituent flocs.
 
 The required energy increases rapidly as the temperature decreases because larger flocs are needed to achieve the same terminal velocity. This analysis suggests that velocity gradients should be reduced for low temperature operation or that the flocculator velocity gradient should be set based on the coldest operating temperature. Although not shown here, the braking energy required also increases rapidly for lower density flocs because the diameter of the floc must increase to achieve the terminal velocity required to be removed by the plate settlers.
 
-The required energy for attachment increases rapidly with the floc diameter as shown in :numref:`figure_floc_braking_energy_of_D`.
+The required energy for attachment increases rapidly with the floc diameter as shown in :numref:`figure_floc_braking_energy_of_D` (see `Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_).
 
 .. _figure_floc_braking_energy_of_D:
 
@@ -603,7 +603,7 @@ The required energy for attachment increases rapidly with the floc diameter as s
     :align: center
     :alt: internal figure
 
-    The required braking energy for a collision between two flocs that results in the final floc diameter at three different velocity gradients. (see `Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_)
+    The required braking energy for a collision between two flocs that results in the final floc diameter at three different velocity gradients.
 
 The analysis of the ability of braking energy required for successful attachment suggests a rational for either using a lower velocity gradient or tapering the velocity gradient in flocculators.  It also reveals that the coagulant nanoparticle bonds are under much higher stress during the collision than when they are only counteracting the force of fluid shear. The analysis does not provide guidance on how to select the velocity gradient in the flocculator.
 
