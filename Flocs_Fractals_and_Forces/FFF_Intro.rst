@@ -590,7 +590,7 @@ The energy analysis of floc collisions (see :numref:`figure_floc_braking_energy_
     :align: center
     :alt: internal figure
 
-    The required braking energy for a floc collision that results in a floc that has a terminal velocity of 0.12 mm/s. The collision is the least favorable with only one bond acting to counteract all of the kinetic energy of one of the constituent flocs. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_)
+    The required braking energy for a floc collision that results in a floc that has a terminal velocity of 0.12 mm/s. The collision is the least favorable with only one bond acting to counteract all of the kinetic energy of one of the constituent flocs. (see `Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_)
 
 The required energy increases rapidly as the temperature decreases because larger flocs are needed to achieve the same terminal velocity. This analysis suggests that velocity gradients should be reduced for low temperature operation or that the flocculator velocity gradient should be set based on the coldest operating temperature. Although not shown here, the braking energy required also increases rapidly for lower density flocs because the diameter of the floc must increase to achieve the terminal velocity required to be removed by the plate settlers.
 
@@ -603,7 +603,7 @@ The required energy for attachment increases rapidly with the floc diameter as s
     :align: center
     :alt: internal figure
 
-    The required braking energy for a collision between two flocs that results in the final floc diameter at three different velocity gradients. (`see Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_)
+    The required braking energy for a collision between two flocs that results in the final floc diameter at three different velocity gradients. (see `Colab Worksheet <https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/Floc_Attachment_Energies.ipynb>`_)
 
 The analysis of the ability of braking energy required for successful attachment suggests a rational for either using a lower velocity gradient or tapering the velocity gradient in flocculators.  It also reveals that the coagulant nanoparticle bonds are under much higher stress during the collision than when they are only counteracting the force of fluid shear. The analysis does not provide guidance on how to select the velocity gradient in the flocculator.
 
