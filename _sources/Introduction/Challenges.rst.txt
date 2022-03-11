@@ -35,8 +35,8 @@ Drinking Water Challenges
 The potential to make a dramatic improvement in the quality of life of communities will guide our journey. Although the AguaClara program invented numerous technologies and contributed to a new understanding of the physics of drinking water treatment, there are still many unanswered questions.
 
 * Why is reducing the turbidity to less than 0.01 NTU not currently possible for most surface water treatment plants that rely on flocculation, sedimentation and sand filtration? Or stated another way, what controls the particle removal efficiency of surface water treatment plants?
-* How can we take measurements of raw water quality and use that to optimize the design of a water treatment plant? This will require creating the models that describe the physics of each unit process and that is a recurring theme of the research introduced below. We are making significant progress in making the connection between 
-* How can we invent new and improved technologies that enable communities to reliably produce high quality drinking water without needing to rely on expensive, expendable proprietary components?
+* How can we take measurements of raw water quality and use that to optimize the design of a water treatment plant? This will require creating the models that describe the physics of each unit process and that is a recurring theme of the research introduced below. We are making significant progress in making the connection between
+* How can we invent new and improved technologies that enable communities to reliably produce high quality drinking water without needing to rely on expensive, energy consuming, expendable proprietary components?
 
 Fractal Floc Model
 ------------------
@@ -48,7 +48,7 @@ The primary particles could include powdered activated carbon (PAC) or biochar t
 
 The floc properties calculated by the FFM will enable prediction of the terminal size and concentration of flocs in the Fluidized Floc Primary Filter, the head loss per pore in the Granular Media Secondary Filter, and the optimal coagulant dose. The FFM will be a core component of unit process models because the floc properties must be understood in order to model the floc behavior.
 
-Kevin Sarmiento (M.S. candidate at Cornell University) is currently taking the lead on developing the FFM.
+
 
 Flocculation
 ------------
