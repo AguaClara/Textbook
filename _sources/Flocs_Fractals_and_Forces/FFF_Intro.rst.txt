@@ -498,7 +498,6 @@ It would be helpful to develop a design guideline based on Equation :eq:`G_of_vc
 .. math::
   :label: G_of_vc_and_floc_props
 
-
   \zeta_{breakup} = G_{max} \nu^3 v_c^2 \approx   \frac{4F_{bond}}{3 \pi  \rho_{H_2O}}\left(  \frac{ D_{cp} g}{18} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2
 
 Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of Equation :eq:`G_of_vc_and_floc_props`, :math:`\zeta_{breakup}`, is  :math:`50 \cdot \frac{mm^8}{s^6}`, :math:`\left(50 \cdot  10^{-24}\frac{m^8}{s^6}\right)`, for a kaolin suspension. :math:`\zeta_{breakup}` represent an upper limit on the maximum velocity gradient to prevent floc breakup and plate settler capture velocity design parameters and is a combination of properties of the core particles. The expectation is that :math:`\zeta_{breakup}` will be less than 50 :math:`\frac{mm^8}{s^6}` for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see :numref:`figure_PennockFig3`).
@@ -539,6 +538,8 @@ The value of :math:`F_{bond}` was calculated to be :math:`F_{bond} = 6 nN` (see 
 
 Note that further work is required to better estimate the density of a clay particle with coagulant nanoparticles attached. The coagulant nanoparticles effectively increase the clay plate thickness by two times the diameter of the coagulant nanoparticles. That extra thickness is composed of water and the coagulant nanoparticles and thus has a much lower density than the clay particle.
 
+Dissolved organic matter will reduce the density of the core floc particles. The core particle diameter will likely also increase because it will have more attached coagulant nanoparticles that are in turn partially coated with organic molecules. The net effect on :math:`\zeta_{breakup}` has not yet been characterized, but given that dissolved organics have a density close to that of water it is possible that the buoyant density multiplied by the diameter would be reduced by a factor of two. From Equation :eq:`G_of_vc_and_floc_props` this would result in a four fold reduction in :math:`\zeta_{breakup}`. The maximum velocity gradient for delivering flocs to the floc filter would thus be about 250 Hz at 5°C.
+
 The value of :math:`\zeta_{breakup}` increases rapidly as a function of the flow rate through the plant. Thus if a plant is designed with a value of :math:`\zeta_{breakup}` that is too high for the core particles that are being treated, the plant performance will deteriorate rapidly as the flow rate is increased. From :eq:`flocGeoG` the velocity gradient increases with flow rate to the :math:`\frac{3}{2}` power. The capture velocity is proportional to the flow rate and thus from :eq:`G_of_vc_and_floc_props` we have :math:`\zeta_{breakup} \propto Q^{\frac{7}{2}}`. If settled water turbidity increases rapidly as the plant flow rate is increased it is possible that the velocity gradient needs to be reduced in the flow passages between the flocculator and floc filter. Of course, decreasing the plate settler capture velocity may also be needed, but making that change in an existing plant is a more substantial upgrade.
 
 In the previous discussion we assumed that the highest velocity gradient in the inlet to the floc filter is in the jet reverser because it has the smallest dimension of flow. Nonetheless, it is important to check the inlet into the inlet manifold and the elbow in the inlet manifold to ensure that those flow expansions don't result in higher velocity gradients. Equation :eq:`D_pipe_min_of_K_and_jet_G_max` can be used to check the design of the inlet manifold.
@@ -556,19 +557,19 @@ The braking energy is equal to the braking force times the braking distance. Thu
 
 If we assume a single covalent bond between a hydrogen in the coagulant nanoparticle and an oxygen in the clay it is expected to have a `bond energy of 464 kJ/mol <https://science.jrank.org/pages/984/Bond-Energy.html>`_ and a bond length of 96 pm. The bond energy is calculated by dividing by Avogadro's number to obtain 0.77 aJ. The force for a single bond can be obtained by dividing the bond energy by the bond length to obtain 8 nN. This estimate is similar to the estimate of 6 nN based on the floc breakup analysis for the velocity gradient in the jet reverser.
 
-We hypothesize that the bond energy must be greater than the braking energy to achieve attachment. The kinetic energy due to the relative translational velocity of two identical flocs separated by a distance equal to their diameters is obtained from :math:`\frac{mV^2}{2}`.
+We hypothesize that the bond energy must be greater than the braking energy to achieve attachment. The kinetic energy due to the relative translational velocity of two identical flocs separated by a distance equal to their diameters is obtained from :math:`\frac{mv^2}{4}` where v is the relative velocity and m is the mass of one of the flocs. This assumes conservation of momentum in a perfectly inelastic collision between the two flocs.
 
 .. math::
   :label: floc_braking_energy_1
 
-    E_{K_{floc}} = \frac{\rho_{floc} \pi D_{floc}^3}{6} \frac{\left(G D_{floc}\right)^2}{2} =  \frac{\rho_{floc} \pi D_{floc}^5 G^2}{12}
+    E_{K_{floc}} = \frac{\rho_{floc} \pi D_{floc}^3}{6} \frac{\left(G D_{floc}\right)^2}{4} =  \frac{\rho_{floc} \pi D_{floc}^5 G^2}{24}
 
 Substituting the floc density from Equation :eq:`floc_density` (assuming a fractal dimension of 2) into Equation :eq:`floc_braking_energy_1` we obtain the required braking energy as a function of floc size.
 
 .. math::
   :label: floc_braking_energy
 
-    E_{K_{floc}} = \left[ \rho_{H_2O} + \left( \rho_{cp}  - \rho_{H_2O} \right) \left(\frac{D_{cp}}{D_{floc}}\right) \right]  \frac{ \pi D_{floc}^5 G^2}{12}
+    E_{K_{floc}} = \left[ \rho_{H_2O} + \left( \rho_{cp}  - \rho_{H_2O} \right) \left(\frac{D_{cp}}{D_{floc}}\right) \right]  \frac{ \pi D_{floc}^5 G^2}{24}
 
 The flocs created in a flocculator must have a terminal velocity greater than the capture velocity of the plate settlers. We can add this constraint to Equation :eq:`floc_braking_energy` by substituting Equation :eq:`D_of_vt_Pi_fractal_of_2` to eliminate the :math:`D_{floc}`. However, the parameter, :math:`D_{floc}`, does not have the same meaning in both equations. In the terminal velocity equation (:eq:`D_of_vt_Pi_fractal_of_2`) the :math:`D_{floc}` refers to the combined floc. In the braking energy equation (:eq:`floc_braking_energy`) the :math:`D_{floc}` refers to one of the colliding flocs.
 

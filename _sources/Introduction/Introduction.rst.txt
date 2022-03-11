@@ -488,8 +488,6 @@ Socrates said "`Education is the kindling of a flame, not the filling of a vesse
 In We Make the Road by Walking: Conversations on Education and Social Change, Paulo Freire said,
 "`The more we become able to become a child again, to keep ourselves childlike, the more we can understand... <https://www.goodreads.com/author/quotes/41108.Paulo_Freire?page=2>`_". We commit to playing together in a relationship where we are all learning and we are all teaching. "Education must begin with the solution of the teacher-student contradiction, by reconciling the poles of the contradiction so that both are simultaneously teachers and students." - Paulo Freire
 
-[SECTIONS BELOW TO BE MOVED OUT OF CHAPTER]
-
 .. _heading_Myth_in_Environmental_Engineering:
 
 Myths in Environmental Engineering
@@ -497,7 +495,6 @@ Myths in Environmental Engineering
 
 The following list is designed to get you thinking. These are concepts that are present in the Environmental Engineering community and that may capture some elements of truth and that may also further misconceptions.
 
- - Dead bodies cause disease
  - Slow sand filters ripen (improve in ability to remove contaminants over time) because of biological growth in the filter bed
  - If a 20 cm deep sand filter removes 90% of influent particles, then a 40 cm deep filter will remove 99% of influent particles
  - If water is dirty, then you should filter it
