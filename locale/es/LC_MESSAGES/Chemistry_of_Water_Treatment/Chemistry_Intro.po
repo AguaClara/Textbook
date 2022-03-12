@@ -316,7 +316,7 @@ msgstr ""
 #: ../../Chemistry_of_Water_Treatment/Chemistry_Intro.rst:107
 msgid ""
 "Research is needed to quantify flocculation performance in continuous "
-"flow floc/floc blanket/plate settler systems as a function of pH."
+"flow floc/floc filter/plate settler systems as a function of pH."
 msgstr ""
 
 #: ../../Chemistry_of_Water_Treatment/Chemistry_Intro.rst:109
@@ -324,7 +324,7 @@ msgid ""
 "The aluminum concentration range used for flocculation ranges from "
 "approximately 0.4 - 10 mg/L and is strongly influenced by the "
 "concentration of dissolved organic matter and the concentration of "
-"suspended solids. The flocculation and floc blanket capacity to produce "
+"suspended solids. The flocculation and floc filter capacity to produce "
 "collisions between suspended particles also influences the required "
 "aluminum concentration."
 msgstr ""

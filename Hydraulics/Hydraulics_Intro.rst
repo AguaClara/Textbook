@@ -169,7 +169,7 @@ If there is no additional head loss in series to improve flow distribution, then
 .. math::
   :label: Manifold_max_v_no_hl_series
 
-   \frac{A_{M_1}}{A_{P}} =\frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{1}{\Pi_{\Psi}}
+   \frac{A_{M_1}}{A_{P}} =\frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{1}{\Pi_{\Psi}}}
 
 Equation :eq:`Manifold_max_v_no_hl_series` (see :numref:`figure_Ratio_port_to_manifold_velocity`) can be used to determine the required diameter of inlet manifolds in sedimentation tanks or to determine the required port velocity for the backwash manifold in the StaRS filters. It can also be used to solve for the maximum manifold velocity given the port velocity in the sedimentation tank diffusers.
 
@@ -187,30 +187,6 @@ Equation :eq:`Manifold_max_v_no_hl_series` (see :numref:`figure_Ratio_port_to_ma
 
 
 
-.. _heading_sedimentation_tank_inlet_manifold:
-
-Sedimentation Tank Inlet Manifold
----------------------------------
-
-The port velocity for inlet manifold diffusers is set by the slot width, the width of the sedimentation tank, and the upflow velocity in the sedimentation tank. From mass conservation we have
-
-.. math::
-  :label: Sed_diffuser_mass_conserve
-
-   Q_{Diffuser} = \bar v_{Jet} W_{Diffuser} S_{Diffuser} = \bar v_{FB} W_{Sed} B_{Diffuser}
-
-Solve for the jet velocity, :math:`\bar v_{Jet}`.
-
-.. math::
-  :label: Sed_diffuser_jet_velocity
-
-  \bar v_{Jet}  = \frac{\bar v_{FB} W_{Sed} B_{Diffuser}}{W_{Diffuser} S_{Diffuser}}
-
-For sedimentation tanks that are 1.07 m wide, an upflow velocity of 1 mm/s, with diffusers that are 3.175 mm wide, and assuming that the diffuser wall thickness is small we have a jet velocity of 0.34 m/s.
-
-The maximum inlet manifold velocity can now be determined from Equation :eq:`Manifold_max_v_no_hl_series`. Given a port flow ratio of 85% the maximum manifold velocity is about 0.6 m/s.
-
-`Designe the inlet manifold <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=ndlvydp8UMFJ&line=7&uniqifier=1>`_
 
 .. _heading_sedimentation_tank_outlet_manifold:
 
@@ -247,7 +223,7 @@ The head loss through the sedimentation tank is due to:
 * entrance and elbow in influent manifold
 * major losses in influent manifold (negligible)
 * diffuser exit loss
-* floc blanket (negligible)
+* floc filter (negligible)
 * plate settlers (negligible)
 * effluent manifold orifices
 * effluent manifold major loss (negligible)

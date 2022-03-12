@@ -511,7 +511,7 @@ msgstr "pérdida de salida del difusor"
 
 #: ../../Hydraulics/Hydraulics_Intro.rst:261
 #, fuzzy
-msgid "floc blanket (negligible)"
+msgid "floc filter (negligible)"
 msgstr "manta de floc (insignificante)"
 
 #: ../../Hydraulics/Hydraulics_Intro.rst:262

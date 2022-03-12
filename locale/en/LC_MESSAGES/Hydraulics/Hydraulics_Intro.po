@@ -323,7 +323,7 @@ msgid "diffuser exit loss"
 msgstr ""
 
 #: ../../Hydraulics/Hydraulics_Intro.rst:261
-msgid "floc blanket (negligible)"
+msgid "floc filter (negligible)"
 msgstr ""
 
 #: ../../Hydraulics/Hydraulics_Intro.rst:262

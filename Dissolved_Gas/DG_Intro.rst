@@ -33,12 +33,12 @@ Flocculation
 
 Minimal adverse effects. Foam produced can dry and be blown around the water treatment plant. Nuisance and aesthetically unpleasing.
 
-.. _heading_DG_Floc_Blankets:
+.. _heading_DG_Floc_Filters:
 
-Floc Blankets
+Floc Filters
 -------------
 
-Disrupts floc blanket, breaks flocs, carries flocs into plate settlers.
+Disrupts floc filter, breaks flocs, carries flocs into plate settlers.
 
 .. _heading_DG_Sedimentation:
 
@@ -79,7 +79,7 @@ Dissolved Gas Concentration Reduction
 Methods to Provide Nucleation Sites
 -----------------------------------
  - Aeration
- 
+
    - Air can be pumped through diffusers.
    - Air can be sucked into the diffusers if the reactor operated at less than atmospheric pressure.
  - Fluidized bed containing particles that have nucleation sites.

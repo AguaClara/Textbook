@@ -84,7 +84,7 @@ msgid ""
 "Our contention is that no one has ever optimized the design of a drinking"
 " water treatment plant! We are reasonably certain of this because we "
 "don't yet have models (with equations) that describe performance of most "
-"of the core unit processes (rapid mix, flocculation, floc blankets, "
+"of the core unit processes (rapid mix, flocculation, floc filters, "
 "sedimentation, sand filtration) used for surface water treatment. The "
 "only possible exception is lamellar sedimentation which can be "
 "characterized if we know the size and density distribution of the "
@@ -880,7 +880,7 @@ msgid "plate or tube settlers"
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:1
-msgid "flocculation or floc blanket"
+msgid "flocculation or floc filter"
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:1
@@ -957,7 +957,7 @@ msgid ""
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:1
-msgid "Floc blanket"
+msgid "Floc filter"
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:1
@@ -970,11 +970,11 @@ msgid "`1930 <https://link.springer.com/chapter/10.1007%2F978-3-642-61196-4_2>`_
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:1
-msgid "Jet reverser floc blanket"
+msgid "Jet reverser floc filter"
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:1
-msgid "first fully fluidized floc blanket"
+msgid "first fully fluidized floc filter"
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:1
@@ -1006,7 +1006,7 @@ msgid "Superpulsator"
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:1
-msgid "pulsing flow through floc blanket"
+msgid "pulsing flow through floc filter"
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:1
@@ -1076,13 +1076,13 @@ msgstr ""
 
 #: ../../Introduction/Introduction.rst:326
 msgid ""
-"Superpulsator: rapid mix, floc blanket, lamellar sedimentation, rapid "
+"Superpulsator: rapid mix, floc filter, lamellar sedimentation, rapid "
 "sand filtration"
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:327
 msgid ""
-"AguaClara: hydraulic flocculation, floc blanket, lamellar sedimentation, "
+"AguaClara: hydraulic flocculation, floc filter, lamellar sedimentation, "
 "stacked rapid sand filtration, disinfection"
 msgstr ""
 
@@ -1188,7 +1188,7 @@ msgstr ""
 
 #: ../../Introduction/Introduction.rst:392
 msgid ""
-"floc blanket where large flocs settle through water that is flowing "
+"floc filter where large flocs settle through water that is flowing "
 "upward causing collisions between small particles carried by the upward "
 "flowing water and the large flocs"
 msgstr ""
@@ -1196,7 +1196,7 @@ msgstr ""
 #: ../../Introduction/Introduction.rst:393
 msgid ""
 "lamellar sedimentation where gravity causes particles to settle to an "
-"inclined plate and then slide back down into the floc blanket"
+"inclined plate and then slide back down into the floc filter"
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:394
@@ -1687,7 +1687,7 @@ msgid "Floc Hopper that consolidates the floc slurry prior to draining."
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:592
-msgid "Floc blanket that is stable due to loss to or gain from settled sludge"
+msgid "Floc filter that is stable due to loss to or gain from settled sludge"
 msgstr ""
 
 #: ../../Introduction/Introduction.rst:595

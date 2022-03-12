@@ -401,7 +401,7 @@ As sand size increases:
 Particle Removal Efficiency
 =============================
 
-This is the multi-decade old question that challenges us to continue our research. What determines how many particles sneak through a water treatment plant? We've learned that flocculation runs out of steam because the primary particles only want to collide with other primary particles and thus they start taking forever to collide as they become scarce. The floc blanket likely acts like a series of collectors (can't say it is like a filter because it doesn't have stationary constrictions). This would suggest that more floc blanket is always better. Some primary particles make it through the floc blanket. What determines how many of those primary particles make it through the filter? It must depend on the geometry of every constriction. Large flocs are easy to capture in a sand filter. Primary particles are much more difficult to capture. Large flocs tend to fill up the first unfilled pore they come to. Thus large flocs tend to take active pores out of service. This suggests that the influent floc size distribution might influence filter performance. See :ref:`heading_Shear_big_flocs_to_improve_filter_performance` for an analysis of the feasibility of breaking up flocs at the point of injection into the sand bed.
+This is the multi-decade old question that challenges us to continue our research. What determines how many particles sneak through a water treatment plant? We've learned that flocculation runs out of steam because the primary particles only want to collide with other primary particles and thus they start taking forever to collide as they become scarce. The floc filter likely acts like a series of collectors (can't say it is like a filter because it doesn't have stationary constrictions). This would suggest that more floc filter is always better. Some primary particles make it through the floc filter. What determines how many of those primary particles make it through the filter? It must depend on the geometry of every constriction. Large flocs are easy to capture in a sand filter. Primary particles are much more difficult to capture. Large flocs tend to fill up the first unfilled pore they come to. Thus large flocs tend to take active pores out of service. This suggests that the influent floc size distribution might influence filter performance. See :ref:`heading_Shear_big_flocs_to_improve_filter_performance` for an analysis of the feasibility of breaking up flocs at the point of injection into the sand bed.
 
 
 Filtration Model
@@ -512,12 +512,12 @@ The velocity in the direction of the jet is given by (equation 4.39 in `Pai, 195
 
 .. math::
 
-    u = \frac{3M_0}{8\pi \mu} \frac{1}{x} \frac{1}{\left[1+(\frac{\zeta^2}{4})\right]^2}
+    u = \frac{3M_0}{8\pi \mu} \frac{1}{x} \frac{1}{\left[1+(\frac{\zeta_{jet}^2}{4})\right]^2}
 
 
 .. math::
 
-   \zeta = \frac{1}{4\nu} \left(\frac{3M_0}{\pi\rho}\right)^{\frac{1}{2}} \frac{r}{x}
+   \zeta_{jet} = \frac{1}{4\nu} \left(\frac{3M_0}{\pi\rho}\right)^{\frac{1}{2}} \frac{r}{x}
 
 and thus :math:`\zeta` is zero at the centerline.  We will use the centerline velocity at distance :math:`\Lambda_{pore}` from the constriction to estimate the head loss caused by one constriction.
 

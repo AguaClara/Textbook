@@ -72,7 +72,7 @@ msgid "Floc Blankets"
 msgstr ""
 
 #: ../../Dissolved_Gas/DG_Intro.rst:41
-msgid "Disrupts floc blanket, breaks flocs, carries flocs into plate settlers."
+msgid "Disrupts floc filter, breaks flocs, carries flocs into plate settlers."
 msgstr ""
 
 #: ../../Dissolved_Gas/DG_Intro.rst:46

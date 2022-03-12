@@ -353,7 +353,7 @@ $$V = \sqrt{2gh}$$
 
 
 # Floc Blanket
-### Density of the floc blanket
+### Density of the floc filter
 $$\rho_{FB} = 0.687 C_{FlocSolids} + \rho_{H_2O}$$
 
 $$m_{Clay} = C_{Clay} V_{FB}$$
@@ -367,7 +367,7 @@ $$\rho_{FB} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{Clay} + \rho
 $$m_{H_2O} = \left( 1 - \frac{C_{Clay}}{\rho_{Clay}} \right) \rho_{H_2O} V_{FB}$$
 
 
-### Flocculation in a floc blanket due to shear from suspended flocs
+### Flocculation in a floc filter due to shear from suspended flocs
 $$\frac{h_{L_{FB}}}{H_{FB}} = \frac{\rho_{FB} - \rho_{H_2O}}{\rho_{H_2O}}$$
 
 $$\rho_{FB} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{Clay}} \right) C_{Clay} + \rho_{H_2O}$$

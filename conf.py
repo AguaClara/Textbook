@@ -71,7 +71,7 @@ author = 'AguaClara Cornell'
 # We use semantic versioning - see here: semver.org as applied to textbooks.
 # Note that version names are set on GitHub - NOT here.
 import os
-version = os.getenv("TRAVIS_TAG", "EXPERIMENTAL")
+version = os.getenv("GITHUB_REF_NAME", "EXPERIMENTAL")
 # The full version, including alpha/beta/rc tags.
 release = version
 # Make version available to other processes

@@ -22,7 +22,7 @@ The assumption that what is written and passed down in oral history through the 
 
 You might wonder why we care so much about getting the science right and being as clear as possible about what is known. After all, the core drinking water treatment technologies were invented before we were born and many of us have safe drinking water coming from our taps. Environmental Engineers have known how to design municipal drinking water treatment plants since they early 1900's. We care about getting the science right because we hypothesize that there are many opportunities to significantly improve drinking water treatment technologies and that improved understandings of each unit process have the potential to lead to new breakthroughs.
 
-Our contention is that no one has ever optimized the design of a drinking water treatment plant! We are reasonably certain of this because we don't yet have models (with equations) that describe performance of most of the core unit processes (rapid mix, flocculation, floc blankets, sedimentation, sand filtration) used for surface water treatment. The only possible exception is lamellar sedimentation which can be characterized if we know the size and density distribution of the particles entering the sedimentation tank.
+Our contention is that no one has ever optimized the design of a drinking water treatment plant! We are reasonably certain of this because we don't yet have models (with equations) that describe performance of most of the core unit processes (rapid mix, flocculation, floc filters, sedimentation, sand filtration) used for surface water treatment. The only possible exception is lamellar sedimentation which can be characterized if we know the size and density distribution of the particles entering the sedimentation tank.
 
 Traditional drinking water treatment textbooks can too easily miss the opportunity to advance the science of drinking water treatment technologies by presenting certainty where there should be skepticism. For example, rapid mix is described as process that occurs in a few seconds, flocculation is described as a process that should be fastest for high turbidity waters and slowest for low turbidity waters, and filtration performance is described by a model that predicts first order removal with respect to filter bed depth. We will demonstrate why each of these assumptions doesn't match observations, we will discuss new insights into these processes, and we will identify high priority research questions that have the potential to lead to major improvements in drinking water treatment.
 
@@ -106,7 +106,7 @@ Empathy is fundamental in design. Empathy enables us to consider reality from an
 The Global Context for Drinking Water Treatment
 ===============================================
 
-The `Sustainable Development Goals: SDGs <https://www.un.org/sustainabledevelopment/sustainable-development-goals/>`_ and specifically `SDG 6 <https://www.un.org/sustainabledevelopment/water-and-sanitation/>`_ provide the context and motivation for this text. The first SDG 6 target is: "By 2030, achieve universal and equitable access to safe and affordable drinking water for all." That goal is daunting and won't be met using the approaches of the past 5 decades. This text is about creating a new paradigm for the design of high performing water treatment technologies with the goal of making a real contribution toward SDG 6.1.
+The `Sustainable Development Goals: SDGs <https://sdgs.un.org/goals>`_ and specifically `SDG 6 <https://sdgs.un.org/goals/goal6>`_ provide the context and motivation for this text. The first SDG 6 target is: "By 2030, achieve universal and equitable access to safe and affordable drinking water for all." That goal is daunting and won't be met using the approaches of the past 5 decades. This text is about creating a new paradigm for the design of high performing water treatment technologies with the goal of making a real contribution toward SDG 6.1.
 
 .. _figure_SDG6:
 
@@ -117,7 +117,7 @@ The `Sustainable Development Goals: SDGs <https://www.un.org/sustainabledevelopm
 
     Sustainable development goal 6 is all about clean water and sanitation.
 
-The number of people who currently lack access to reliable safe water on tap is not known. Estimates range from "`1.8 billion who use a source of drinking water that is contaminated with feces <https://www.un.org/sustainabledevelopment/water-and-sanitation/>`_" to the Centers for Disease Control recommendations for where it is `usually safe to drink tap water <https://lifehacker.com/know-what-countries-guarantee-drinkable-tap-water-with-1635070463>`_.
+The number of people who currently lack access to reliable safe water on tap is not known. Estimates range from "`1.8 billion who use a source of drinking water that is contaminated with feces <https://www.who.int/news-room/fact-sheets/detail/drinking-water>`_" to the Centers for Disease Control recommendations for where it is `usually safe to drink tap water <https://lifehacker.com/know-what-countries-guarantee-drinkable-tap-water-with-1635070463>`_.
 
 .. _figure_CDC_Global_Safe_Tap_Water:
 
@@ -128,7 +128,7 @@ The number of people who currently lack access to reliable safe water on tap is 
 
     There are relatively few countries where it is almost always safe to drink the tap water.
 
-The `UN estimate in 2017 <https://www.un.org/sustainabledevelopment/blog/2017/07/billions-around-the-world-lack-safe-water-proper-sanitation-facilities-reveals-un-report/>`_ was that 2.1 billion lack access to safe water. By 2030 there will be an additional `1.2 billion from population growth <https://news.un.org/en/story/2015/07/505352-un-projects-world-population-reach-85-billion-2030-driven-growth-developing>`_.
+The `UN estimate in 2017 was that 2.1 billion lack access to safe water. By 2030 there will be an additional `1.2 billion from population growth <https://news.un.org/en/story/2015/07/505352-un-projects-world-population-reach-85-billion-2030-driven-growth-developing>`_.
 
 
 .. _figure_Population_Infographic_01:
@@ -251,15 +251,15 @@ Treatment Trains
    Simple sedimentation, particles settle, none, public, unknown
    Flocculation, aluminum and iron salts, none, public, `1757 <https://www.iwapublishing.com/news/coagulation-and-flocculation-water-and-wastewater-treatment>`_
    Sedimentation, horizontal flow, flocculation, public, unknown
-   Lamellar sedimentation, plate or tube settlers, flocculation or floc blanket, public, `1904 <https://smartwatermagazine.com/blogs/karl-uwe-schmitz/tube-settler-design-basics-solid-settling-lamella-clarifiers>`_
+   Lamellar sedimentation, plate or tube settlers, flocculation or floc filter, public, `1904 <https://smartwatermagazine.com/blogs/karl-uwe-schmitz/tube-settler-design-basics-solid-settling-lamella-clarifiers>`_
    Roughing filter, simple sedimentation in a gravel bed, none, public, `unknown <https://www.researchgate.net/publication/237827490_Roughing_filter_for_water_pre-treatment_technology_in_developing_countries_A_review?enrichId=rgreq-bb1d04e6613378d626c78cadb6674ae8&enrichSource=Y292ZXJQYWdlOzIzNzgyNzQ5MDtBUzoyMDAwMDczMDQxMjY0NjdAMTQyNDY5Njg2NTYxMQ%3D%3D&el=1_x_2>`_
    Slow sand filtration, Roughing filter or single step treatment for low NTU water, none, public, `1829 <https://en.wikipedia.org/wiki/Slow_sand_filter>`_
    Rapid sand filtration, depth filtration, sedimentation, public, `1920 <https://en.wikipedia.org/wiki/Rapid_sand_filter>`_
    Stacked rapid sand filter, gravity powered backwash, lamellar sedimentation, AguaClara Cornell open source, `2012a <https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29EE.1943-7870.0000562>`_
-   Floc blanket, upflow fluidized suspension of flocs, flocculation, public, `1930 <https://link.springer.com/chapter/10.1007%2F978-3-642-61196-4_2>`_
-   Jet reverser floc blanket, first fully fluidized floc blanket, flocculation, AguaClara Cornell open source, `2012b <http://cuaguaclara.blogspot.com/2012/08/the-floc-blanket-quest.html>`_
+   Floc filter, upflow fluidized suspension of flocs, flocculation, public, `1930 <https://link.springer.com/chapter/10.1007%2F978-3-642-61196-4_2>`_
+   Jet reverser floc filter, first fully fluidized floc filter, flocculation, AguaClara Cornell open source, `2012b <http://cuaguaclara.blogspot.com/2012/08/the-floc-blanket-quest.html>`_
    Ballasted sedimentation, micro sand increases floc density, -, `Actiflo Veolia <https://www.veoliawatertechnologies.com/en/technologies/actiflo>`_, `1995 <https://patents.google.com/patent/US5840195>`_
-   Superpulsator, pulsing flow through floc blanket, rapid mix, `Degremont <http://www.degremont-technologies.com/SUPERPULSATOR-R>`_, `1958 <https://patents.google.com/patent/US3038608A>`_  `1991 <https://patents.google.com/patent/US5143625>`_
+   Superpulsator, pulsing flow through floc filter, rapid mix, `Degremont <http://www.degremont-technologies.com/SUPERPULSATOR-R>`_, `1958 <https://patents.google.com/patent/US3038608A>`_  `1991 <https://patents.google.com/patent/US5143625>`_
    Dissolved air flotation, bubbles carry particles upward, flocculation, Public, `1905 <https://iwaponline.com/wst/article-abstract/31/3-4/1/4138/Principles-and-applications-of-dissolved-air>`_
 
 See `Pretreatment Processes for Potable Water Treatment Plants by Jeff Lindgren for an excellent overview of available technologies, May 2014 (not including AguaClara innovations) <https://www.pnws-awwa.org/uploads/PDFs/conferences/2014/2.%20PNWS%20AWWA%20WTC%20Precon%2005%2007%202014%20Pretreatment%20by%20B&V%201&2%20-%20R1.pdf>`_.
@@ -268,8 +268,8 @@ The prerequisites for the unit processes in :numref:`table_Surface_Water_Treatme
 
 Example treatment trains include:
  - Conventional mechanized treatment: mechanical flocculation, lamellar sedimentation, rapid sand filtration, disinfection
- - Superpulsator: rapid mix, floc blanket, lamellar sedimentation, rapid sand filtration
- - AguaClara: hydraulic flocculation, floc blanket, lamellar sedimentation, stacked rapid sand filtration, disinfection
+ - Superpulsator: rapid mix, floc filter, lamellar sedimentation, rapid sand filtration
+ - AguaClara: hydraulic flocculation, floc filter, lamellar sedimentation, stacked rapid sand filtration, disinfection
  - Membrane filtration: flocculation, sedimentation, rapid sand filtration, granular or powdered activated carbon, pre-oxidation (see `Review Article <https://pubs-acs-org.proxy.library.cornell.edu/doi/abs/10.1021%2Fes802473r>`_)
 
 .. _heading_Textbook_Philosophy:
@@ -320,8 +320,8 @@ The AguaClara treatment train consists of the following processes
  - metering of the coagulant (and chlorine) that will cause particles to stick together
  - mixing of the coagulant with the raw water
  - flocculation where the water is deformed to cause particle collisions
- - floc blanket where large flocs settle through water that is flowing upward causing collisions between small particles carried by the upward flowing water and the large flocs
- - lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc blanket
+ - floc filter where large flocs settle through water that is flowing upward causing collisions between small particles carried by the upward flowing water and the large flocs
+ - lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc filter
  - stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed
  - disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes
 
@@ -488,8 +488,6 @@ Socrates said "`Education is the kindling of a flame, not the filling of a vesse
 In We Make the Road by Walking: Conversations on Education and Social Change, Paulo Freire said,
 "`The more we become able to become a child again, to keep ourselves childlike, the more we can understand... <https://www.goodreads.com/author/quotes/41108.Paulo_Freire?page=2>`_". We commit to playing together in a relationship where we are all learning and we are all teaching. "Education must begin with the solution of the teacher-student contradiction, by reconciling the poles of the contradiction so that both are simultaneously teachers and students." - Paulo Freire
 
-[SECTIONS BELOW TO BE MOVED OUT OF CHAPTER]
-
 .. _heading_Myth_in_Environmental_Engineering:
 
 Myths in Environmental Engineering
@@ -497,7 +495,6 @@ Myths in Environmental Engineering
 
 The following list is designed to get you thinking. These are concepts that are present in the Environmental Engineering community and that may capture some elements of truth and that may also further misconceptions.
 
- - Dead bodies cause disease
  - Slow sand filters ripen (improve in ability to remove contaminants over time) because of biological growth in the filter bed
  - If a 20 cm deep sand filter removes 90% of influent particles, then a 40 cm deep filter will remove 99% of influent particles
  - If water is dirty, then you should filter it
@@ -506,4 +503,3 @@ The following list is designed to get you thinking. These are concepts that are 
  - Cessation of chlorination due to fear of disinfection by products caused the cholera outbreak in Peru in 1993
  - Sedimentation is simple
  - We already know how to solve the problem of the billions of people who do not having access to safe drinking water
-

@@ -245,7 +245,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Design_Solution.rst:232
 msgid ""
 "What is the Reynolds number of the vertical flow up through the top of "
-"the floc blanket?"
+"the floc filter?"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Design_Solution.rst:239
@@ -553,7 +553,7 @@ msgstr ""
 msgid ""
 "What is the total required plan area for the sedimentation tanks? "
 "Calculate this using the design flow rate and the upflow velocity between"
-" the floc blanket and plate settlers."
+" the floc filter and plate settlers."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Design_Solution.rst:450
@@ -561,7 +561,7 @@ msgid "Give your final answer in square meters."
 msgstr ""
 
 #: ../../Sedimentation/Sed_Design_Solution.rst:458
-msgid "The plant view area of the floc blanket is 60 meter ** 2"
+msgid "The plant view area of the floc filter is 60 meter ** 2"
 msgstr ""
 
 #: ../../Sedimentation/Sed_Design_Solution.rst:462
@@ -570,7 +570,7 @@ msgstr ""
 
 #: ../../Sedimentation/Sed_Design_Solution.rst:464
 msgid ""
-"What is the total length of the floc blanket zone for all tanks? "
+"What is the total length of the floc filter zone for all tanks? "
 "Calculate this using the total required plan area for the sedimentation "
 "tank and the sedimentation tank width."
 msgstr ""
@@ -644,7 +644,7 @@ msgstr ""
 #: ../../Sedimentation/Sed_Design_Solution.rst:522
 msgid ""
 "You may assume that the active area of the sedimentation tank is equal to"
-" the top area of the floc blanket zone. This isn’t quite right because of"
+" the top area of the floc filter zone. This isn’t quite right because of"
 " the geometric constraints from the floc hopper, inlet channel, settled "
 "water channel, and angled plates. However, it is a good approximation for"
 " these long tanks. We will use this approximation to determine the plate "

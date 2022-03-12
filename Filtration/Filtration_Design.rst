@@ -28,14 +28,14 @@ There are 4 levels of flow distribution in StaRS filters. The direction of the d
  * between orifices (branchPortQ_pi): made less important by the winged design that allows correcting flow in the winged space before the water enters the sand bed. This flow distribution does not benefit from the head loss through the sand. Suggest using a value of 0.8 for this constraint because of the balancing provided by the wings. The flow distribution constraint only provides a ratio of the port and branch velocities. The constraint for the maximum velocity allowable is either set by head loss or by the strength of the branch to span its length and not bend to much at the initiation of backwash. Either of those constraints can be converted into a maximum velocity for the inner branches and that will be used as an input to the design.
 
     * The velocity constraint will determine the maximum length of a branch given its diameter.
-    * Use equation :eq:`manifold_max_v_no_hl_series` combined with the maximum branch velocity constraint to calculate the port velocity. Calculate the required branch diameter given the length (or vice versa).
+    * Use Equation :eq:`manifold_max_v_no_hl_series` combined with the maximum branch velocity constraint to calculate the port velocity. Calculate the required branch diameter given the length (or vice versa).
     * The orifice diameter will be selected based on constructability and not being too small to risk clogging (between 4 and 10 mm)
     * Calculate the orifice spacing for the inner branches based on mass conservation and the maximum port velocity.
     *  Calculate the maximum length of the branches given mass conservation and the maximum branch velocity.
 
  * between branches (trunkPortQ_pi): aided considerably by the head loss through the sand and is helped by the head loss though the orifices. Suggest using a value of 0.9 for this constraint. This constraint will be combined with a maximum permissible head loss during backwash to determine the required diameter of the trunk lines and will be combined with the equal trunk head loss constraint to obtain the diameter of the orifices.
 
-    * Use equation :eq:`manifold_max_v_with_hl_series` to solve for the maximum trunk velocity.
+    * Use Equation :eq:`manifold_max_v_with_hl_series` to solve for the maximum trunk velocity.
     * Use the fact that the head loss is the same for outer and inner inlets to determine the :math:`K_{e_{outerOrifices}}`.
 
  * between sand layers: easily obtained by simply requiring that inlet head losses be identical in the 4 inlets under conditions of the target flow and accounting for the fact that the inner inlets have double the flow of the outer inlets.
@@ -63,7 +63,7 @@ The equation for flow distribution between branches with additional head loss in
    \frac{\bar v_{T_{innerMax}}^2}{2g}=  \left(h_{e_{B_{inner}}} + h_{e_{P_{inner}}} + h_{l_{sand}} \right)\Pi_{\Psi_B}
 
 
-The head loss through the inner ports or orifices required to achieve reasonable flow distribution into the winged area of the inlet branches can be expressed in the minor loss equation form. The flow distribution constraint is given by equation :eq:`Manifold_max_v_no_hl_series`.
+The head loss through the inner ports or orifices required to achieve reasonable flow distribution into the winged area of the inlet branches can be expressed in the minor loss equation form. The flow distribution constraint is given by Equation :eq:`Manifold_max_v_no_hl_series`.
 
 .. math::
   :label: eq_he_port
@@ -79,7 +79,7 @@ The branch entrance loss is given by
 
   h_{e_{B_{inner}}} = K_{e_B}\frac{\bar v_{B_{innerMax}}^2}{2g}
 
-The minor loss associated with entering the branch is given by equation :eq:`he_branch`). The :math:`h_{l_{series}}` is the sum of the orifice head loss (see equation :eq:`eq_he_port`) and the head loss through the sand. Making those substitutions into equation :eq:`Trunk_to_branch_flow_distribution` we obtain
+The minor loss associated with entering the branch is given by Equation :eq:`he_branch`). The :math:`h_{l_{series}}` is the sum of the orifice head loss (see Equation :eq:`eq_he_port`) and the head loss through the sand. Making those substitutions into Equation :eq:`Trunk_to_branch_flow_distribution` we obtain
 
 .. math::
   :label: Trunk_max_v_flow_distribution
@@ -126,7 +126,7 @@ The head loss constraint reveals that we can achieve the highest trunk velocity 
 
   \bar v_{B_{innerMax}}^2 = \Pi_{BT} \bar v_{T_{innerMax}}^2
 
-Use equation :eq:`Branch_Trunk_Pi` to eliminate :math:`\bar v_{B_{innerMax}}` in equation :eq:`he_T_inner_of_V`.
+Use Equation :eq:`Branch_Trunk_Pi` to eliminate :math:`\bar v_{B_{innerMax}}` in Equation :eq:`he_T_inner_of_V`.
 
 .. math::
   :label: he_T_inner_of_V
@@ -145,9 +145,9 @@ solve for :math:`\bar v_{T_{innerMax}}`.
 Inner branch
 ------------
 
-Use equation :eq:`Branch_Trunk_Pi` to solve for the maximum branch velocity given the results from equation :eq:`V_trunk_of_HE_BW`.
+Use Equation :eq:`Branch_Trunk_Pi` to solve for the maximum branch velocity given the results from Equation :eq:`V_trunk_of_HE_BW`.
 
-Given the constraint of maximum branch velocity use the relationship between port velocity and branch velocity given by equation :eq:`Manifold_max_v_no_hl_series` to solve for the port velocity.
+Given the constraint of maximum branch velocity use the relationship between port velocity and branch velocity given by Equation :eq:`Manifold_max_v_no_hl_series` to solve for the port velocity.
 
 .. math::
   :label: v_port_inner_branch
@@ -198,14 +198,14 @@ At this stage in the design process we have set the flow rate through the filter
 Outer branch
 ------------
 
-The outer trunk branch orifices must be designed so that the head loss during filtration is identical between inner and outer inlets. This will result spacing between the outer branch orifices that is more than double that of the inner branch orifices. The derivation is similar to that used to obtain equation :eq:`B_orifice_inner`. Equate the head loss in the inner and outer inlets during filtration. We will use the maximum velocity in the inner trunks as our reference velocity. Note that the results would be the same if we used the actual velocity in the inner trunks because the velocity will drop out of the equation in the end. First the head loss from the inlet box to the orifices in the inner inlets is given by
+The outer trunk branch orifices must be designed so that the head loss during filtration is identical between inner and outer inlets. This will result spacing between the outer branch orifices that is more than double that of the inner branch orifices. The derivation is similar to that used to obtain Equation :eq:`B_orifice_inner`. Equate the head loss in the inner and outer inlets during filtration. We will use the maximum velocity in the inner trunks as our reference velocity. Note that the results would be the same if we used the actual velocity in the inner trunks because the velocity will drop out of the equation in the end. First the head loss from the inlet box to the orifices in the inner inlets is given by
 
 .. math::
   :label: he_T_inner_of_V_draft
 
   2gh_{e_{innerInlet}} = \left(K_{e_T}\bar v_{T_{inner}}^2 + K_{e_B}\bar v_{B_{inner}}^2 + \bar v_{B_{inner}}^2\frac{1}{\Pi_{\Psi_P}} \right)
 
-Substitute equation :eq:`Branch_Trunk_Pi` to eliminate :math:`\bar v_{B_{inner}}`.
+Substitute Equation :eq:`Branch_Trunk_Pi` to eliminate :math:`\bar v_{B_{inner}}`.
 
 .. math::
   :label: he_T_inner_of_V
@@ -274,7 +274,7 @@ Combine the previous 3 equations to obtain
 
 The orifice spacing should be designed based on the maximum inner trunk velocity rather than the actual inner trunk velocity so that the branches have the same design for all filters. Otherwise the orifice spacing would be different for every design and that would only make fabrication needlessly confusing.
 
-Substitute equation :eq:`v_P_outer_of_v_T_inner` into equation :eq:`v_port_outer_to_v_Fi` and solve for :math:`B_{orifice_{outer}}`.
+Substitute Equation :eq:`v_P_outer_of_v_T_inner` into Equation :eq:`v_port_outer_to_v_Fi` and solve for :math:`B_{orifice_{outer}}`.
 
 .. math::
   :label: B_orifice_outer
@@ -303,7 +303,7 @@ Design steps:
 
  * find the maximum velocity in the outlet branches to get flow distribution through the slots using the filter clean bed head loss. assume branch length and branch ND (or an array of paired options)
  * calculate branch velocity from mass conservation
- * calculate max trunk velocity using equation :eq:`V_trunk_of_he`
+ * calculate max trunk velocity using Equation :eq:`V_trunk_of_he`
  * size the trunk, then calculate number of filters, flow per filter, filter width, filter length
 
 
@@ -320,7 +320,7 @@ Outlet branch
 -------------
 The velocity in the outlet branches must be limited to prevent the change in piezometric head in the branch from causing significant differences in the velocity through the slots. The head loss through the filter bed helps keep this flow uniform. We could increase the head loss through the slots to make this flow more uniform, but that is a big failure mode because it is already too easy for these slots to clog over time and thus that problem would be made even worse. Instead we should be designing the outlet branches to have as much slot area as is structurally possible.
 
-Flow distribution through the slots is described by equation :eq:`Manifold_max_v_with_hl_series`. We will neglect the head loss through the slots because if done well it will be small compared with the head loss through the sand. We can check this assumption later!
+Flow distribution through the slots is described by Equation :eq:`Manifold_max_v_with_hl_series`. We will neglect the head loss through the slots because if done well it will be small compared with the head loss through the sand. We can check this assumption later!
 
 The maximum outlet branch velocity is
 
@@ -390,7 +390,7 @@ Solve for :math:`\bar v_{T_{innerMax}}`.
 
   \bar v_{T_{innerMax}} = \sqrt{\frac{1}{K_{e_T}}\left[2g  h_{e_{innerInlet}} -\bar v_{B_{inner}}^2\left(K_{e_B} + \frac{1}{\Pi_{\Psi_P}} \right)\right]}
 
-Use equation :eq:`V_trunk_of_he`to find the maximum trunk velocity. Use that constraint and the plant flow rate to find the trunk diameter, the number of filters, the filter flow rate, filter width, and filter length.
+Use Equation :eq:`V_trunk_of_he`to find the maximum trunk velocity. Use that constraint and the plant flow rate to find the trunk diameter, the number of filters, the filter flow rate, filter width, and filter length.
 
 At this stage in the design process we have set the flow rate through the filter, the trunk and branch diameters (except for the backwash branches), the length of the branches, and the orifice spacing on the inner inlets.
 
@@ -399,9 +399,9 @@ At this stage in the design process we have set the flow rate through the filter
 Outer branch
 ------------
 
-The outer trunk branch orifices must be designed so that the head loss during filtration is identical between inner and outer inlets. This will result spacing between the outer branch orifices that is more than double that of the inner branch orifices. The derivation is similar to that used to obtain equation :eq:`B_orifice_inner`. Equate the head loss in the inner and outer inlets during filtration. We will use the maximum velocity in the inner trunks as our reference velocity. Note that the results would be the same if we used the actual velocity in the inner trunks because the velocity will drop out of the equation in the end.
+The outer trunk branch orifices must be designed so that the head loss during filtration is identical between inner and outer inlets. This will result spacing between the outer branch orifices that is more than double that of the inner branch orifices. The derivation is similar to that used to obtain Equation :eq:`B_orifice_inner`. Equate the head loss in the inner and outer inlets during filtration. We will use the maximum velocity in the inner trunks as our reference velocity. Note that the results would be the same if we used the actual velocity in the inner trunks because the velocity will drop out of the equation in the end.
 
-The head loss from the inlet box to the orifices in the inner inlets is given by equation :eq:`he_T_inner_of_V`. The head loss in the top inlet is similar. We will likely treat the backwash inlet as a separate design. The unknown we are solving for is the port velocity for the top inlet. That port velocity is not constrained by flow distribution and so we will enter it directly in the head loss equation knowing that all of the port kinetic energy is lost.
+The head loss from the inlet box to the orifices in the inner inlets is given by Equation :eq:`he_T_inner_of_V`. The head loss in the top inlet is similar. We will likely treat the backwash inlet as a separate design. The unknown we are solving for is the port velocity for the top inlet. That port velocity is not constrained by flow distribution and so we will enter it directly in the head loss equation knowing that all of the port kinetic energy is lost.
 
 .. math::
   :label: he_T_top_of_V
@@ -423,7 +423,7 @@ Solve for the port velocity, :math:`v_{P_{top}}`.
 
   \bar v_{P_{top}} = \sqrt{\frac{3}{4} \left(K_{e_T}\bar v_{T_{inner}}^2 + K_{e_B}\bar v_{B_{inner}}^2\right) +  \frac{\bar v_{B_{inner}}^2}{\Pi_{\Psi_P}}}
 
-The port spacing can be obtained from equation :eq:`B_P_top`.
+The port spacing can be obtained from Equation :eq:`B_P_top`.
 
 .. math::
   :label: v_P_to_v_Fi
@@ -440,7 +440,7 @@ The backwash branch requires some flow distribution to ensure that the sand bed 
 
 Another possible mechanism is erosion of the sand under the wing based on the high horizontal velocity of the water in the wing as the water travels in the direction of the pipe axis toward the fluidized bed.
 
-In either case, it appears that the wing design results in high velocity at the toe of and settled sand that can then rapidly erode and fluidize the entire bed. This suggests that the flow uniformity from the orifices into the winged space does not need to be great and so a factor of 0.8 is likely reasonable in equation :eq:`Manifold_max_v_with_hl_series`.
+In either case, it appears that the wing design results in high velocity at the toe of and settled sand that can then rapidly erode and fluidize the entire bed. This suggests that the flow uniformity from the orifices into the winged space does not need to be great and so a factor of 0.8 is likely reasonable in Equation :eq:`Manifold_max_v_with_hl_series`.
 
 The backwash inlet design is driven by the need for flow distribution at the port and branch levels and thus there are required relationships between port and branch and between branch and trunk velocities. In addition the total head loss will be a design constraint and thus we have 3 equations (2 flow distribution and 1 head loss) and 3 unknown velocities.
 
@@ -449,7 +449,7 @@ The backwash inlet design is driven by the need for flow distribution at the por
 
   \bar v_{P_{BW}}^2 = \frac{\bar v_{B_{BW}}^2}{\Pi_{\Psi_{P_{BW}}}}
 
-Flow distribution between the trunk and branches is more important than the flow distribution into the wings because a whole branch could remain unfluidized if it received significantly less water. Thus a higher flow distribution criteria of perhaps 0.9 could be applied to the trunk-branch system. The port head loss is available to help achieve this flow distribution. Thus equation :eq:`Manifold_max_v_with_hl_series` applies.
+Flow distribution between the trunk and branches is more important than the flow distribution into the wings because a whole branch could remain unfluidized if it received significantly less water. Thus a higher flow distribution criteria of perhaps 0.9 could be applied to the trunk-branch system. The port head loss is available to help achieve this flow distribution. Thus Equation :eq:`Manifold_max_v_with_hl_series` applies.
 
 .. math::
   :label: v_B_to_v_T_BW_draft
@@ -477,7 +477,7 @@ Substitute to obtain a relationship between the three velocities.
 
   \bar v_{T_{BW}}^2= \left( K_{e_{B}}\bar v_{B_{BW}}^2 + \bar v_{P_{BW}}^2\right)\Pi_{\Psi_{B_{BW}}}
 
-Eliminate the port velocity by substituting equation :eq:`v_P_to_v_B_BW` and solve for :math:`\bar v_{B_{BW}}^2`.
+Eliminate the port velocity by substituting Equation :eq:`v_P_to_v_B_BW` and solve for :math:`\bar v_{B_{BW}}^2`.
 
 .. math::
   :label: v_B_to_v_T_BW
@@ -515,21 +515,21 @@ Solve for the maximum trunk velocity.
 
 The backwash trunk may be the same diameter as the other trunk lines or it may be larger depending on the maximum velocities calculated from equations :eq:`V_trunk_of_he` and :eq:`v_T_BW`.
 
-The maximum branch velocity is now obtained by solving equation :eq:`v_B_to_v_T_BW` for :math:`\bar v_{T_{BW}}`.
+The maximum branch velocity is now obtained by solving Equation :eq:`v_B_to_v_T_BW` for :math:`\bar v_{T_{BW}}`.
 
 .. math::
   :label: v_B_of_v_T_BW
 
   \bar v_{T_{BW}} = \bar v_{B_{BW}} \sqrt{\left( K_{e_{B}} + \frac{1}{\Pi_{\Psi_{P_{BW}}}} \right)\Pi_{\Psi_{B_{BW}}}}
 
-The branch minimum area is from equation :eq:`branch_V`.
+The branch minimum area is from Equation :eq:`branch_V`.
 
 .. math::
   :label: branch_A
 
   A_{B} = \frac{N_{layer} v_{Fi} B_{B} L_{B}}{v_{B}}
 
-The port velocity is obtained from equation :eq:`v_P_to_v_B_BW` and the backwash port spacing is obtained by rewriting :eq:`v_P_to_v_Fi` to include the relationship that the backwash velocity is the filtration velocity times the number of filter layers.
+The port velocity is obtained from Equation :eq:`v_P_to_v_B_BW` and the backwash port spacing is obtained by rewriting :eq:`v_P_to_v_Fi` to include the relationship that the backwash velocity is the filtration velocity times the number of filter layers.
 
 .. math::
   :label: v_P_to_v_Fi
@@ -541,7 +541,7 @@ The port velocity is obtained from equation :eq:`v_P_to_v_B_BW` and the backwash
 Backwash Flow Control Orifice
 -----------------------------
 
-The head loss through the backwash inlet system must be increased during filtration to match the head loss of the other inlets under conditions of ideal flow distribution between the filter layers. The orifice will likely be placed right on the inlet and thus this orifice will replace the entrance loss. The unknown is the inner diameter of the orifice. We know the expanded area (trunk area) and velocity and thus we can use the third form of the expansion head loss equation :eq:`minor_loss_equation`.
+The head loss through the backwash inlet system must be increased during filtration to match the head loss of the other inlets under conditions of ideal flow distribution between the filter layers. The orifice will likely be placed right on the inlet and thus this orifice will replace the entrance loss. The unknown is the inner diameter of the orifice. We know the expanded area (trunk area) and velocity and thus we can use the third form of the expansion head loss Equation :eq:`minor_loss_equation`.
 
 .. math::
   :label: bw_orifice_draft
@@ -562,7 +562,7 @@ Solve for the area of the orifice, :math:`A_{orifice}`.
 Backwash Siphon
 ===============
 
-The siphon manifold is designed to get reasonable flow distribution based on equation :eq:`Manifold_max_v_no_hl_series`. The siphon diameter is based on dumping the water in the filter box in a reasonable amount of time, currently set to yield an average dump velocity in the filter box equal to the backwash velocity.
+The siphon manifold is designed to get reasonable flow distribution based on Equation :eq:`Manifold_max_v_no_hl_series`. The siphon diameter is based on dumping the water in the filter box in a reasonable amount of time, currently set to yield an average dump velocity in the filter box equal to the backwash velocity.
 
 The siphon manifold is designed to have reasonable port flow distribution. The port flow distribution doesn't have to be very uniform because the sand-water interface has a very high density difference and thus is quite stable. Thus the velocity up out of the fluidized sand will not be harmed by a poor design of the manifold. A flow distribution, :math:`\Pi_{Q}` of 0.8 will be very good. The required orifice area is obtained by solving :eq:`Manifold_max_v_no_hl_series` for the total port area.
 
@@ -658,7 +658,7 @@ This result is a bit surprising until we recognize that the cantilever beam is n
 
 We previously supported the receptor pipe at the ends. That wasn't optimal. With the new StaRS design it is possible to make larger filters and it isn't get clear what the optimal ratio of width to length of the filters will be. In any case, the length of the receptor pipe is likely to be significantly longer than in our previous designs for the highest flow rates. It will be necessary to ensure that the deflection isn't too large.
 
-The deflection of the receptor pipe is given by equation :eq:`supported_at_both_ends`. The area moment of inertia, :math:`I` is
+The deflection of the receptor pipe is given by Equation :eq:`supported_at_both_ends`. The area moment of inertia, :math:`I` is
 
 .. math::
   :label: pipe_Ix_of_OD_ID
@@ -672,7 +672,7 @@ The standard diameter ratio for PVC pipes is
 
   \Pi_{SDR} = \frac{OD}{t}
 
-Substituting equation :eq:`SDR` into equation :eq:`pipe_Ix_of_OD_ID`
+Substituting Equation :eq:`SDR` into Equation :eq:`pipe_Ix_of_OD_ID`
 
 .. math::
   :label:
@@ -686,7 +686,7 @@ simplifying
 
   I = \frac{\pi}{4}OD^4\left[1 - \left(1-\frac{1}{\Pi_{SDR}}\right)^4\right]
 
-If we set a maximum deflection, then we can solve equation :eq:`supported_at_both_ends` for the maximum length between supports.
+If we set a maximum deflection, then we can solve Equation :eq:`supported_at_both_ends` for the maximum length between supports.
 
 .. math::
   :label: supported_at_both_ends
@@ -778,7 +778,7 @@ which has a value of about 2000 :math:`\frac{kg}{m^3}` for silica sand. The tota
 
 We will use a relatively short straight section of pipe as the sand drain and thus entrance and exit minor losses will dominate. The entrance will be a reentrant pipe and thus the total minor loss will be 2.
 
-Substitute equation :eq:`density_suspension` for :math:`\rho_{sandbed}` and solve equation :eq:`sand_dump_energy_final` for the maximum discharge height.
+Substitute Equation :eq:`density_suspension` for :math:`\rho_{sandbed}` and solve Equation :eq:`sand_dump_energy_final` for the maximum discharge height.
 
 .. math::
   :label: sand_dump_energy_fail
@@ -791,7 +791,7 @@ If it is possible to force the sand out during filtration mode, then the availab
 
 The backwash trunk prevents sand from moving between sides of the filter and thus there should be a sand drain on each side of the trunks.
 
-Instead of designing for the end of the sand removal process, design for the beginning when the hydrostatic pressure at the bottom of the filter is highest because of the column of fluidized sand. Under that assumption the left side of equation :eq:`sand_dump_energy_final` changes to be the height of the sand column plus water.
+Instead of designing for the end of the sand removal process, design for the beginning when the hydrostatic pressure at the bottom of the filter is highest because of the column of fluidized sand. Under that assumption the left side of Equation :eq:`sand_dump_energy_final` changes to be the height of the sand column plus water.
 
 .. math::
   :label: sand_dump_energy_initial
