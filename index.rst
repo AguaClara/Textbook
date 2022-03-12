@@ -3,7 +3,6 @@
     <embed>
        <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
        <script src="https://hypothes.is/embed.js" async></script>
-       <script type="text/javascript" src="htmlbook/book.js"></script>
     </embed>
 
 .. _toc:
