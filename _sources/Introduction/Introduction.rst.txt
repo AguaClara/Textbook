@@ -1,3 +1,10 @@
+.. raw:: html
+
+    <embed>
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <script src="https://hypothes.is/embed.js" async></script>
+    </embed>
+
 .. _title_Introduction_to_The_Physics_of_Water_Treatment_Design:
 
 **************************************
