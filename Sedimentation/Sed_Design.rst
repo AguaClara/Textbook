@@ -1,8 +1,8 @@
 .. _title_Sed_Design:
 
-***********************************************
-Sedimentation Tank Features
-***********************************************
+*************************
+Sedimentation Tank Design
+*************************
 
 .. _heading_Sed_Design:
 
@@ -723,6 +723,9 @@ The important thing to note is that after determining head loss as a function of
 The velocities of any eddies or mean flow need to be less than 4 mm/s to achieve uniform flow through plate settlers. This means that if there is any flow entering the plate settlers at greater than 4 mm/s, the head loss provided by the plate settlers will not help at all to dampen the nonuniformity and there will not be adequate flow distribution. Luckily for us, the upflow velocity through the sedimentation tank is on average 1 mm/s, which fulfills the requirement of less than 4 mm/s. However, remember the diffusers that distribute water into the sedimentation tank? They create velocities on the order of 100s of mm/s. Those high initial velocities are damped out by the floc filter which helps to distribute the flow. If we weren't able to use the floc filter to dampen the flow to be less than 4 mm/s, then the plate settlers would not provide any head loss to help with uniform flow distribution. This point about uniform flow is really important.
 
 .. _heading_Floc_Volcano_Intro:
+
+Floc Volcanoes
+==============
 
 Now, lets discuss a plate settler problem that has not yet been solved: **floc volcanoes**. Floc volcanoes occur when water and flocs rise preferentially in one part of the sedimentation tank. At points of high velocity, flocs can rise to the surface of the water. Consider the following case: an AguaClara plant in San Nicolas, Honduras, was witnessing intermittent floc volcanoes in the sedimentation tanks. During operation, the plant was treating raw water with 4 NTU with a PACl dose of 3.5 mg/L. The settled water turbidity varied between 0.5 and 4 NTU. What might explain the floc volcanoes and very poor plant performance? Try coming up with a hypothesis that matches the information given to us from the plant. We want to figure out what is causing this problem so we can design a solution. What questions would you want to ask the technicians or engineers in Honduras? This exercise emphasizes the idea that asking the right questions are sometimes the hardest first step to learning more information.
 
