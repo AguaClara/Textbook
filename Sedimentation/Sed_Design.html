@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Sedimentation Tank Features &mdash; AguaClara Textbook v1.2.6 documentation</title>
+  <title>Sedimentation Tank Design &mdash; AguaClara Textbook v1.2.7 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.2.6
+                v1.2.7
               </div>
             
           
@@ -154,7 +154,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Sed_Intro.html">Sedimentation Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sed_Derivations.html">AguaClara Sedimentation Design</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Tank Features</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sedimentation Tank Design</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#components-and-flow-paths">Components and Flow Paths</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#entering-the-tank">Entering the Tank</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#influent-channel">Influent Channel</a></li>
@@ -169,6 +169,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#plate-settlers">Plate Settlers</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#floc-volcanoes">Floc Volcanoes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exiting-the-tank">Exiting the Tank</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#submerged-effluent-manifold">Submerged Effluent Manifold</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#exit-weir-and-effluent-channel">Exit Weir and Effluent Channel</a></li>
@@ -271,7 +272,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Sedimentation Tank Features</li>
+      <li>Sedimentation Tank Design</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -290,8 +291,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sedimentation-tank-features">
-<span id="title-sed-design"></span><h1>Sedimentation Tank Features<a class="headerlink" href="#sedimentation-tank-features" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="sedimentation-tank-design">
+<span id="title-sed-design"></span><h1>Sedimentation Tank Design<a class="headerlink" href="#sedimentation-tank-design" title="Permalink to this headline">¶</a></h1>
 <p id="heading-sed-design">The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank that is designed with the following goals:</p>
 <ol class="arabic simple">
 <li><p>To minimize secondary currents that could send high velocity flow through some of the plate settlers</p></li>
@@ -686,7 +687,11 @@
 </div>
 <p>The important thing to note is that after determining head loss as a function of plate settler spacing, we realize that the plate settlers do not provide much head loss at the design separation of 2.5 cm. Head loss through plate settlers is really small, which means that they do not contribute much to equalizing flow distribution. So, is this head loss “good” or “bad”? It is neither because it is so small that it is negligible in our overall system.</p>
 <p>The velocities of any eddies or mean flow need to be less than 4 mm/s to achieve uniform flow through plate settlers. This means that if there is any flow entering the plate settlers at greater than 4 mm/s, the head loss provided by the plate settlers will not help at all to dampen the nonuniformity and there will not be adequate flow distribution. Luckily for us, the upflow velocity through the sedimentation tank is on average 1 mm/s, which fulfills the requirement of less than 4 mm/s. However, remember the diffusers that distribute water into the sedimentation tank? They create velocities on the order of 100s of mm/s. Those high initial velocities are damped out by the floc filter which helps to distribute the flow. If we weren’t able to use the floc filter to dampen the flow to be less than 4 mm/s, then the plate settlers would not provide any head loss to help with uniform flow distribution. This point about uniform flow is really important.</p>
-<p id="heading-floc-volcano-intro">Now, lets discuss a plate settler problem that has not yet been solved: <strong>floc volcanoes</strong>. Floc volcanoes occur when water and flocs rise preferentially in one part of the sedimentation tank. At points of high velocity, flocs can rise to the surface of the water. Consider the following case: an AguaClara plant in San Nicolas, Honduras, was witnessing intermittent floc volcanoes in the sedimentation tanks. During operation, the plant was treating raw water with 4 NTU with a PACl dose of 3.5 mg/L. The settled water turbidity varied between 0.5 and 4 NTU. What might explain the floc volcanoes and very poor plant performance? Try coming up with a hypothesis that matches the information given to us from the plant. We want to figure out what is causing this problem so we can design a solution. What questions would you want to ask the technicians or engineers in Honduras? This exercise emphasizes the idea that asking the right questions are sometimes the hardest first step to learning more information.</p>
+</div>
+</div>
+<div class="section" id="floc-volcanoes">
+<span id="heading-floc-volcano-intro"></span><h2>Floc Volcanoes<a class="headerlink" href="#floc-volcanoes" title="Permalink to this headline">¶</a></h2>
+<p>Now, lets discuss a plate settler problem that has not yet been solved: <strong>floc volcanoes</strong>. Floc volcanoes occur when water and flocs rise preferentially in one part of the sedimentation tank. At points of high velocity, flocs can rise to the surface of the water. Consider the following case: an AguaClara plant in San Nicolas, Honduras, was witnessing intermittent floc volcanoes in the sedimentation tanks. During operation, the plant was treating raw water with 4 NTU with a PACl dose of 3.5 mg/L. The settled water turbidity varied between 0.5 and 4 NTU. What might explain the floc volcanoes and very poor plant performance? Try coming up with a hypothesis that matches the information given to us from the plant. We want to figure out what is causing this problem so we can design a solution. What questions would you want to ask the technicians or engineers in Honduras? This exercise emphasizes the idea that asking the right questions are sometimes the hardest first step to learning more information.</p>
 <p>Some hypotheses and questions may include:</p>
 <ol class="arabic simple">
 <li><p>Is the problem related to dissolved air flotation? Dissolved air coming out of flocculation can cause flocs to float to the top.</p></li>
@@ -722,7 +727,6 @@ The problem is that there is warmer water entering the sedimentation tank than w
 </ol>
 </li>
 </ol>
-</div>
 </div>
 <div class="section" id="exiting-the-tank">
 <span id="heading-sed-tank-exit"></span><h2>Exiting the Tank<a class="headerlink" href="#exiting-the-tank" title="Permalink to this headline">¶</a></h2>
