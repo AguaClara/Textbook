@@ -36,8 +36,8 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: test # The branch the action should deploy to.
         FOLDER: _build/html/ # The folder the action should deploy.
-    - name: Test Build LaTeX
-      run: make latex
+  #  - name: Test Build LaTeX
+  #    run: make latex
    # - name: Test Build PDF
     #  uses: xu-cheng/latex-action@v2
      # with:
