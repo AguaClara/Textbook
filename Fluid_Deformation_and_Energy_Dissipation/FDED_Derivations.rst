@@ -1,3 +1,10 @@
+.. raw:: html
+
+    <embed>
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <script src="https://hypothes.is/embed.js" async></script>
+    </embed>
+
 .. _title_Fluid_Deformation_and_Energy_Dissipation_derivations:
 
 ******************************************************

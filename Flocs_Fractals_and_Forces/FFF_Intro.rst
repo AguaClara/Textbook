@@ -1,3 +1,10 @@
+.. raw:: html
+
+    <embed>
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <script src="https://hypothes.is/embed.js" async></script>
+    </embed>
+
 .. _title_Flocs_Fractals_Forces_and_Fluidized_Suspensions_Introduction:
 
 ************************
