@@ -289,7 +289,7 @@
                 "sha256:e1e0c8c69998452fea90e9179aa2a98ab103f3eed894405b7264e517cc2fcc0f"
             ],
             "index": "pypi",
-            "version": "==0.24.0"
+            "version": "==0.24"
         },
         "pybtex-docutils": {
             "hashes": [
