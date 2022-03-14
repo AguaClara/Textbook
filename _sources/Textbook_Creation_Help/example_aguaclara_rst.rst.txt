@@ -253,7 +253,7 @@ Links
 ^^^^^^
 Links are fairly straightforward, use the following syntax, ```hyperlink word display <https://www.aguaclarareach.org/>`_``, and look like this `hyperlink word display <https://www.aguaclarareach.org/>`_. If you will be using the same link many times in a document, you can place this line at the end of the document::
 
-  .. _AguaClara: http://aguaclara.cornell.edu/
+  .. _AguaClara: http://aguaclaraReach.org/
 
 Now, the syntax ``AguaClara_`` will link to the specified site: AguaClara_
 
@@ -419,7 +419,7 @@ Assorted Other Convention
 -------------------------
 * Colored :red:`text`. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.
 
-.. _AguaClara: http://aguaclara.cornell.edu/
+.. _AguaClara: http://aguaclarareach.org/
 .. _BibTeX: http://www.bibtex.org/
 .. _sphinxcontrib-bibtex: https://sphinxcontrib-bibtex.readthedocs.io/en/latest/
 .. _Sphinx: http://www.sphinx-doc.org/en/master/

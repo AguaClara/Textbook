@@ -545,6 +545,7 @@ The equation relating shear and velocity gradient is
 The velocity gradient at the wall is
 
 .. math::
+  :label: plate_settler_G_wall
 
    G_{wall} = \frac{6 \bar v}{S}
 
@@ -558,9 +559,10 @@ Substituting into the force balance equation
 
   \Delta P = -\frac{2 \nu \rho 6 \bar v L}{S^2}
 
-The head loss for horizontal flow at uniform velocity simplifies to
+The head loss for between parallel plates at uniform velocity simplifies to
 
 .. math::
+  :label: parallel_plate_laminar_headloss
 
    h_{{\rm f}} = \frac{-\Delta P}{\rho g}
 
@@ -819,6 +821,7 @@ The energy dissipation rate at the wall is
 For laminar flow we can substitute :math:`{\rm f} = \frac{64}{{\rm Re}}` and the definition of the Reynolds number to obtain
 
 .. math::
+  :label: G_wall_laminar_tube
 
    G_{wall} =  \frac{8\bar v}{D}
 
@@ -879,21 +882,23 @@ The maximum energy dissipation rate occurs at approximately 7D downstream from t
 The measured dimensionless coefficient, :math:`\Pi_{JetRound}`, is proportional to the fraction of the kinetic energy that is dissipated in the time required for the jet to travel a distance equal to its original diameter. The higher this coefficient the faster the jet dissipates its energy. The coefficient is only a function of the geometry of the jet and thus round jets and plane jets have different coefficients.
 
 .. math::
+  :label: roundjet_EDR
 
   \varepsilon_{Max} = \Pi_{JetRound} \frac{\bar v_{Jet} ^3}{D_{Jet}}
 
 .. math::
+  :label: roundjet_PI
 
   \Pi_{JetRound} = 0.08
 
-The maximum velocity gradient in a jet is thus
+The maximum velocity gradient in a round jet is thus
 
 .. math::
   :label: roundjet_G_max
 
    G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}
 
-The maximum permissible velocity gradient in a jet given a maximum allowable velocity gradient is
+The maximum permissible velocity gradient in a round jet given a maximum allowable velocity gradient is
 
 .. math::
   :label: roundjet_V_max
@@ -980,9 +985,52 @@ where L is the length of the plane jet, and S is the jet thickness at the jet or
 where D is the jet diameter at the origin. A round jet has twice the circumference of a plane jet given the same jet dimension. Thus a plane jet will dissipate energy half as fast as a round jet and :math:`\Pi_{JetPlane}` is expected to have a value of exactly half of :math:`\Pi_{JetRound}`
 
 .. math::
-  :label: P_A_ratio_for_round_jet
+  :label: jetplane_PI
 
   \Pi_{JetPlane} = 0.04
+
+
+what is This
+
+.. math::
+  :label: planejet_EDR
+
+  \varepsilon_{Max} = \Pi_{JetPlane} \frac{\bar v_{Jet} ^3}{S_{Jet}}
+
+where :math:`S_{Jet}` is the jet thickness. The maximum velocity gradient in a plane jet is thus
+
+.. math::
+  :label: planejet_G_max
+
+   G_{Max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet} }{\nu S_{Jet}}}
+
+The maximum permissible velocity gradient in a plane jet given a maximum allowable velocity gradient is
+
+.. math::
+  :label: planejet_V_max
+
+  \bar v_{Jet_{Max}} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu S_{Jet}}{\Pi_{JetRound} }\right)^{\frac{1}{3}}
+
+The minimum jet thickness given a maximum allowable velocity gradient and required jet velocity is
+
+.. math::
+  :label: planejet_D_min
+
+  S_{Jet_{Min}}= \frac{\Pi_{JetPlane} \bar v_{Jet}^3}{\nu G_{Max}^2}
+
+If the discharge per length of the jet, :math:`q`, is specified where
+
+.. math::
+  :label: planejet_q
+
+  q = \frac{Q}{L} = \bar v_{Jet} S_{Jet}
+
+then the jet thickness can be obtained.
+
+.. math::
+  :label: planejet_S_of_q
+
+   S_{Jet_{Min}}= \left(\frac{\Pi_{JetPlane} q^3}{\nu G_{Max}^2}\right)^\frac{1}{4}
 
 
 .. _heading_Behind_a_flat_plate:

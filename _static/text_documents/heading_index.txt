@@ -78,7 +78,7 @@ Textbook_Creation_Help\example_aguaclara_rst.rst:36:Each title, section and subs
 formatted like this ``.. _headings:``. There should always be a blank line between the label and the actual heading,
 else references to the label will not work. For the sake of document readability, include 3 blank lines before the
 section label and 2 blank lines before the subsection label. Lesser headings (subsubsections and beyond) do not need
-to have labels, and there should be one blank line between lower headings and the preceeding content. Here is an
+to have labels, and there should be one blank line between lower headings and the preceding content. Here is an
 example. Note the amount and location of blank lines::
 Textbook_Creation_Help\example_aguaclara_rst.rst:38:  .. _example_document_title:
 Textbook_Creation_Help\example_aguaclara_rst.rst:47:  .. _example_section:
@@ -93,7 +93,7 @@ Textbook_Creation_Help\example_aguaclara_rst.rst:203:.. _tables:
 Textbook_Creation_Help\example_aguaclara_rst.rst:209:  .. _an_example_table:
 Textbook_Creation_Help\example_aguaclara_rst.rst:220:.. _an_example_table:
 Textbook_Creation_Help\example_aguaclara_rst.rst:232:.. _links_and_references:
-Textbook_Creation_Help\example_aguaclara_rst.rst:238:  .. _AguaClara: http://aguaclara.cornell.edu/
+Textbook_Creation_Help\example_aguaclara_rst.rst:238:  .. _AguaClara: http://aguaclaraReach.org/
 Textbook_Creation_Help\example_aguaclara_rst.rst:265:.. _writing_code_blocks:
 Textbook_Creation_Help\example_aguaclara_rst.rst:284:.. _python_and_doctests:
 Textbook_Creation_Help\example_aguaclara_rst.rst:341:.. _assorted_convention:
