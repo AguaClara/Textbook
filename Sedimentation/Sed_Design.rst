@@ -23,7 +23,7 @@ The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank
 #. To ensure easy operation and maintenance.
 
 Components and Flow Paths
-===========================
+==========================
 
 In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are:
 
