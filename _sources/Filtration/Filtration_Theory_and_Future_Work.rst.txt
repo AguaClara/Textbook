@@ -161,9 +161,7 @@ We will create terms to make the integration easier
 
 Now we set up the numerical integration and integrate from the injection site to the radius where the velocity is equal to the filtration velocity.
 
-.. code:: python
-
-`For an inlet that service two layers, see here to determine the headloss through the sand <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=PF8v34hSjJtx&line=11&uniqifier=1>`_
+`For an inlet that service two layers, see here to determine the head loss through the sand <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=PF8v34hSjJtx&line=11&uniqifier=1>`_
 
 The analysis above suggests that a high velocity and high velocity gradient injection into the sand bed with the goal of breaking flocs into pieces that are 20 :math:`\mu m` in diameter would require about 12 cm of head loss. This is based on the assumption that the water would be able to flow radially from the injection point and thus rapidly slow down. Thus the head loss rapidly decreases with distance from the injection point.
 

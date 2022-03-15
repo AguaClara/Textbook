@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Sedimentation Tank Design &mdash; AguaClara Textbook 276/merge documentation</title>
+  <title>Sedimentation Tank Design &mdash; AguaClara Textbook 277/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                276/merge
+                277/merge
               </div>
             
           
@@ -159,7 +159,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#components-and-flow-paths">Components and Flow Paths</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#entering-the-tank">Entering the Tank</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#inlet-channel">Inlet Channel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bottom-geometry">Bottom Geometry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sedimentation-tank-inlet-manifold">Sedimentation Tank Inlet Manifold</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#jet-reverser">Jet Reverser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sedimentation-tank-outlet-manifold">Sedimentation Tank Outlet Manifold</a></li>
@@ -359,16 +358,13 @@
 </div>
 <p>The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the sedimentor head loss is 5 cm.</p>
 </div>
-<div class="section" id="bottom-geometry">
-<span id="heading-sed-tank-bottom-geometry"></span><h3>Bottom Geometry<a class="headerlink" href="#bottom-geometry" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="sedimentation-tank-inlet-manifold">
+<span id="heading-sedimentation-tank-inlet-manifold"></span><h3>Sedimentation Tank Inlet Manifold<a class="headerlink" href="#sedimentation-tank-inlet-manifold" title="Permalink to this headline">¶</a></h3>
 <p>Now, we will focus on a single bay of the sedimentation system. Flocculated water enters a pipe in the bottom of the influent channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the sedimentation bay. This section of pipe that distributes water at the bottom of the sedimentation bay is referred to as the <strong>influent manifold</strong> shown in <a class="reference internal" href="#figure-influent-channel-manifold"><span class="std std-numref">Fig. 164</span></a>.</p>
 <div class="figure align-center" id="id4">
 <span id="figure-influent-channel-manifold"></span><a class="reference internal image-reference" href="../_images/influent_channel_manifold.png"><img alt="Influent channel with pipe leading to one inlet manifold." src="../_images/influent_channel_manifold.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 164 </span><span class="caption-text">Influent channel with pipe leading to one inlet manifold.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="sedimentation-tank-inlet-manifold">
-<span id="heading-sedimentation-tank-inlet-manifold"></span><h3>Sedimentation Tank Inlet Manifold<a class="headerlink" href="#sedimentation-tank-inlet-manifold" title="Permalink to this headline">¶</a></h3>
 <p>The port velocity for inlet manifold diffusers is set by the slot width, the width of the sedimentation tank, and the upflow velocity in the sedimentation tank. From mass conservation we have</p>
 <div class="math notranslate nohighlight" id="equation-sed-diffuser-mass-conserve">
 <span class="eqno">(590)<a class="headerlink" href="#equation-sed-diffuser-mass-conserve" title="Permalink to this equation">¶</a></span>\[ Q_{Diffuser} = \bar v_{Jet} W_{Diffuser} S_{Diffuser} = \bar v_{FB} W_{Sed} B_{Diffuser}\]</div>
@@ -452,7 +448,7 @@
 </div>
 <div class="section" id="jet-reverser">
 <h3>Jet Reverser<a class="headerlink" href="#jet-reverser" title="Permalink to this headline">¶</a></h3>
-<p>The jet reverser is an AguaClara invention for producing stable floc filters. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see Equation <code class="xref eq docutils literal notranslate"><span class="pre">EDR_JetPlane</span></code>) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the sedimentation tank performance will deteriorate.</p>
+<p>The jet reverser is an AguaClara invention for producing stable floc filters. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-planejet-edr">(211)</a>) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the sedimentation tank performance will deteriorate.</p>
 <p>Conventional wisdom suggests that breaking up flocs on the way to the sedimentation tank is counter productive. The traditional goal of not breaking flocs led to design of tapered flocculators and guidelines suggesting maximum velocities for transport of those flocs to the sedimentation tank. Dimensional analysis provides the insight that if the constraint for not breaking flocs is actually a velocity, that there must be some way to make that velocity dimensionless if that constraint is rational. In order to identify and characterize the constraint related to floc break up we need to understand the physics of the processes and clearly identify the failure mode.</p>
 <p>The maximum shear stress that should be used for design of jet reversers requires further analysis. Flocs composed of less clay and more organic matter or more coagulant nanoparticles will have a lower density and would still be sheared to the same diameter by the fluid shear stress. These flocs would have a lower sedimentation velocity than clay based flocs and thus they would not be captured by the plate settlers. Thus the design constraint for the fluid shear stress should be based on the lowest density floc that is to be captured by the plate settlers.</p>
 <p>Different coagulants may well have different bond strengths and flocculant aids that increase the bond strength all merit study with the jet reverser experiment to determine an appropriate fluid shear stress. The shear stress of 0.55 Pa is likely an upper limit for operation without using flocculant aids.</p>
@@ -462,7 +458,7 @@
 <li><p>Solve Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-d-floc-shear-stress">(259)</a> for the shear stress given the floc diameter.</p></li>
 </ol>
 <p>The jet reverser can be designed given a maximum fluid shear stress that is calculated based on minimum operating temperature, plate settler capture velocity, and floc density. We do not yet have a comprehensive model for floc properties and thus we are not yet able to calculate floc terminal velocity as a function of composition. We do anticipate that floc density decreases dramatically for flocs that consist primarily of dissolved organics and coagulant.</p>
-<p>The goal is to derive an equation that will calculate the maximum jet velocity given the upflow velocity, <span class="math notranslate nohighlight">\(v_{z_{ff}}\)</span>, and width, <span class="math notranslate nohighlight">\(W_{Sed}\)</span>, of the sedimentation tank. Begin by eliminating the energy dissipation rate from the fluid shear stress, Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-fluid-shear-stress">(257)</a>, by substituting the plane jet energy dissipation rate, Equation <code class="xref eq docutils literal notranslate"><span class="pre">EDR_JetPlane</span></code>.</p>
+<p>The goal is to derive an equation that will calculate the maximum jet velocity given the upflow velocity, <span class="math notranslate nohighlight">\(v_{z_{ff}}\)</span>, and width, <span class="math notranslate nohighlight">\(W_{Sed}\)</span>, of the sedimentation tank. Begin by eliminating the energy dissipation rate from the fluid shear stress, Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-fluid-shear-stress">(257)</a>, by substituting the plane jet energy dissipation rate, Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-planejet-edr">(211)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-shear-stress-plane-jet">
 <span class="eqno">(592)<a class="headerlink" href="#equation-shear-stress-plane-jet" title="Permalink to this equation">¶</a></span>\[\tau_{max} = \rho \sqrt{\nu \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{W_{Jet}}}\]</div>
 <p>The volumetric flow rate of the plane jet is the same as the volumetric flow rate through the sedimentation tank.</p>

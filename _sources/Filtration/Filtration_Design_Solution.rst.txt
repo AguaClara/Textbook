@@ -226,7 +226,7 @@ The distance between flow constriction is 0.7645 millimeter
 
 A water molecule flows through 261.6 dimensionless constriction through the StaRS filter
 
-`What is the head loss per flow constriction? < https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=08iP2d2zmL9z&line=1&uniqifier=1>`_
+`Head loss per flow constriction < https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=08iP2d2zmL9z&line=1&uniqifier=1>`_
 
 The head loss per constriction is 1.33 millimeter
 
@@ -238,7 +238,7 @@ The velocity in the constriction is 166.1 millimeter / second
 
 `The flow rate of water through each pore can be estimated from the number of pores per square meter given the average separation distance. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=IT7ymBB-mWNh&line=4&uniqifier=1>`_
 
-  
+
   The flow rate through each pore is 1.071 microliter / second
 
 `What is the inner diameter of the flow constriction created by the flocs if the vena contracta is 0.62? <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=1P7WvFqRma4G&line=2&uniqifier=1>`_

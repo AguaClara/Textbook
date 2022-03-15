@@ -348,12 +348,13 @@ Recall that head loss through plate settlers is really small, on the order of mi
 .. _heading_Sed_Tank_Floc_Filter_Design:
 
 Floc Filter Design
-======================
+==================
+
 
 Velocity Gradient
 -------------------
 
-With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use the other equations we developed in the :ref:`chapter on flocculation <heading_Hydraulic_Flocculation_Design>`. We will use Equation :eq:`G_Camp_Stein` to converts the energy dissipation rate into a velocity gradient.
+The velocity gradient in the floc filter could cause some collisions between particles. We demonstrate that this is NOT a significant effect below. The velocity gradient in the floc filter is obtained from the head loss through a fluidized bed. We will use Equation :eq:`G_Camp_Stein` to converts the energy dissipation rate into a velocity gradient.
 
 .. math::
 

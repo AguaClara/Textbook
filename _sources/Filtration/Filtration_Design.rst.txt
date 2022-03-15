@@ -140,14 +140,14 @@ There are 4 levels of flow distribution in StaRS filters. The direction of the d
  * between orifices (branchPortQ_pi): made less important by the winged design that allows correcting flow in the winged space before the water enters the sand bed. This flow distribution does not benefit from the head loss through the sand. Suggest using a value of 0.8 for this constraint because of the balancing provided by the wings. The flow distribution constraint only provides a ratio of the port and branch velocities. The constraint for the maximum velocity allowable is either set by head loss or by the strength of the branch to span its length and not bend to much at the initiation of backwash. Either of those constraints can be converted into a maximum velocity for the inner branches and that will be used as an input to the design.
 
     * The velocity constraint will determine the maximum length of a branch given its diameter.
-    * Use Equation :eq:`manifold_max_v_no_hl_series` combined with the maximum branch velocity constraint to calculate the port velocity. Calculate the required branch diameter given the length (or vice versa).
+    * Use Equation :eq:`Manifold_max_v_no_hl_series` combined with the maximum branch velocity constraint to calculate the port velocity. Calculate the required branch diameter given the length (or vice versa).
     * The orifice diameter will be selected based on constructability and not being too small to risk clogging (between 4 and 10 mm)
     * Calculate the orifice spacing for the inner branches based on mass conservation and the maximum port velocity.
     *  Calculate the maximum length of the branches given mass conservation and the maximum branch velocity.
 
  * between branches (trunkPortQ_pi): aided considerably by the head loss through the sand and is helped by the head loss though the orifices. Suggest using a value of 0.9 for this constraint. This constraint will be combined with a maximum permissible head loss during backwash to determine the required diameter of the trunk lines and will be combined with the equal trunk head loss constraint to obtain the diameter of the orifices.
 
-    * Use Equation :eq:`manifold_max_v_with_hl_series` to solve for the maximum trunk velocity.
+    * Use Equation :eq:`Manifold_max_v_with_hl_series` to solve for the maximum trunk velocity.
     * Use the fact that the head loss is the same for outer and inner inlets to determine the :math:`K_{e_{outerOrifices}}`.
 
  * between sand layers: easily obtained by simply requiring that inlet head losses be identical in the 4 inlets under conditions of the target flow and accounting for the fact that the inner inlets have double the flow of the outer inlets.
@@ -241,7 +241,7 @@ The head loss constraint reveals that we can achieve the highest trunk velocity 
 Use Equation :eq:`Branch_Trunk_Pi` to eliminate :math:`\bar v_{B_{innerMax}}` in Equation :eq:`he_T_inner_of_V`.
 
 .. math::
-  :label: he_T_inner_of_V
+  :label: he_T_inner_of_V2
 
   2gh_{e_{outerInlet_{Bw}}} = N_{layer}^2 \left(K_{e_T}\bar v_{T_{innerMax}}^2 + K_{e_B}\Pi_{BT} \bar v_{T_{innerMax}}^2 + \Pi_{BT} \bar v_{T_{innerMax}}^2\frac{1}{\Pi_{\Psi_P}} \right)
 
@@ -320,7 +320,7 @@ The outer trunk branch orifices must be designed so that the head loss during fi
 Substitute Equation :eq:`Branch_Trunk_Pi` to eliminate :math:`\bar v_{B_{inner}}`.
 
 .. math::
-  :label: he_T_inner_of_V
+  :label: he_T_inner_of_V3
 
   2gh_{e_{innerInlet}} = \left[K_{e_T} + \Pi_{BT}\left( K_{e_B}  + \frac{1}{\Pi_{\Psi_P}}\right) \right]\bar v_{T_{inner}}^2
 
@@ -335,7 +335,7 @@ The orifices for the outer inlets are not constrained by the flow distribution t
 The head loss in the outer inlet is given by
 
 .. math::
-  :label: he_T_outer_of_V
+  :label: he_T_outer_of_V4
 
   2gh_{e_{outerInlet}} = \left(K_{e_T} + K_{e_B}\Pi_{BT}  + \Pi_{BT} \Pi_{PB_{outer}} \right)\frac{1}{4}\bar v_{T_{inner}}^2
 
@@ -464,7 +464,7 @@ The orifice diameter will be constrained by the wing fabrication. Apply conserva
 where :math:`N_{sided}` is 2 for inner trunks that serve two layers of sand. Combine equations :eq:`v_port_inner_branch` and :eq:`v_port_inner_to_v_Fi` and solve for the center to center spacing of the ports.
 
 .. math::
-  :label: B_orifice_inner
+  :label: B_orifice_inner2
 
   B_{P_{inner}} = \frac{\bar v_{B}\Pi_{vc}\pi D_{P}^2}{8 v_{Fi}B_{B}}\sqrt{\frac{1}{\Pi_{\Psi_P}}}
 
@@ -484,29 +484,29 @@ The head loss for the inner inlets is
 The trunk entrance and elbow losses are given by
 
 .. math::
-  :label: he_T_inner
+  :label: he_T_inner2
 
   h_{e_{T_{inner}}} = K_{e_T}\frac{\bar v_{T_{innerMax}}^2}{2g}
 
 Substitute with minor loss relationships.
 
 .. math::
-  :label: he_T_inner_of_V
+  :label: he_T_inner_of_V5
 
   2gh_{e_{innerInlet}} = \left(K_{e_T}\bar v_{T_{innerMax}}^2 + K_{e_B}\bar v_{B_{inner}}^2 + \bar v_{B_{inner}}^2\frac{1}{\Pi_{\Psi_P}} \right)
 
 Solve for :math:`\bar v_{T_{innerMax}}`.
 
 .. math::
-  :label: V_trunk_of_he
+  :label: V_trunk_of_he2
 
   \bar v_{T_{innerMax}} = \sqrt{\frac{1}{K_{e_T}}\left[2g  h_{e_{innerInlet}} -\bar v_{B_{inner}}^2\left(K_{e_B} + \frac{1}{\Pi_{\Psi_P}} \right)\right]}
 
-Use Equation :eq:`V_trunk_of_he`to find the maximum trunk velocity. Use that constraint and the plant flow rate to find the trunk diameter, the number of filters, the filter flow rate, filter width, and filter length.
+Use Equation :eq:`V_trunk_of_he2` to find the maximum trunk velocity. Use that constraint and the plant flow rate to find the trunk diameter, the number of filters, the filter flow rate, filter width, and filter length.
 
 At this stage in the design process we have set the flow rate through the filter, the trunk and branch diameters (except for the backwash branches), the length of the branches, and the orifice spacing on the inner inlets.
 
-.. _heading_StaRS_Outer_Branch:
+.. _heading_StaRS_Outer_Branch2:
 
 Outer branch
 ------------
@@ -538,7 +538,7 @@ Solve for the port velocity, :math:`v_{P_{top}}`.
 The port spacing can be obtained from Equation :eq:`B_P_top`.
 
 .. math::
-  :label: v_P_to_v_Fi
+  :label: B_P_top
 
   B_{P_{top}} = \frac{\Pi_{vc} \pi D_{P}^2\bar v_{P_{top}}}{4 v_{Fi}B_{B}}
 
@@ -585,7 +585,7 @@ and
 Substitute to obtain a relationship between the three velocities.
 
 .. math::
-  :label: v_B_to_v_T_BW
+  :label: v_B_to_v_T_BW_draft2
 
   \bar v_{T_{BW}}^2= \left( K_{e_{B}}\bar v_{B_{BW}}^2 + \bar v_{P_{BW}}^2\right)\Pi_{\Psi_{B_{BW}}}
 
@@ -625,7 +625,7 @@ Solve for the maximum trunk velocity.
 
   \bar v_{T_{BWmax}} = \sqrt\frac{2gh_{e_{BW}}}{K_{e_T} +  \frac{1}{\Pi_{\Psi_{B_{BW}}}}}
 
-The backwash trunk may be the same diameter as the other trunk lines or it may be larger depending on the maximum velocities calculated from equations :eq:`V_trunk_of_he` and :eq:`v_T_BW`.
+The backwash trunk may be the same diameter as the other trunk lines or it may be larger depending on the maximum velocities calculated from equations :eq:`V_trunk_of_he2` and :eq:`v_T_BW`.
 
 The maximum branch velocity is now obtained by solving Equation :eq:`v_B_to_v_T_BW` for :math:`\bar v_{T_{BW}}`.
 
@@ -641,10 +641,10 @@ The branch minimum area is from Equation :eq:`branch_V`.
 
   A_{B} = \frac{N_{layer} v_{Fi} B_{B} L_{B}}{v_{B}}
 
-The port velocity is obtained from Equation :eq:`v_P_to_v_B_BW` and the backwash port spacing is obtained by rewriting :eq:`v_P_to_v_Fi` to include the relationship that the backwash velocity is the filtration velocity times the number of filter layers.
+The port velocity is obtained from Equation :eq:`v_P_to_v_B_BW` and the backwash port spacing is obtained by rewriting :eq:`v_P_to_v_Fi1` to include the relationship that the backwash velocity is the filtration velocity times the number of filter layers.
 
 .. math::
-  :label: v_P_to_v_Fi
+  :label: v_P_to_v_Fi2
 
   B_{P_{bw}} = \frac{\Pi_{vc} \pi D_{P}^2\bar v_{P_{BW}}}{4 v_{Fi} N_{layer} B_{B}}
 
@@ -801,7 +801,7 @@ simplifying
 If we set a maximum deflection, then we can solve Equation :eq:`supported_at_both_ends` for the maximum length between supports.
 
 .. math::
-  :label: supported_at_both_ends
+  :label: L_of_supported_at_both_ends
 
   L_{both} = \left(\frac{384EI\delta_{max}}{5\omega}\right)^{\frac{1}{4}}
 
