@@ -11,7 +11,7 @@
 Sedimentation Examples
 ***************************************
 
-These are a few short examples of calculations required for sedimentation tank design. More examples can be found in the :ref:`Sedimentation Design Solution <heading_Sed_Design_Challenge_Solution>`.
+These are a few short examples of calculations required for sedimentation tank design.
 
 `Be sure to run this code prior to trying any examples <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=FMhBN6N6xAPe&line=10&uniqifier=1>`_
 
@@ -162,7 +162,7 @@ Next, we want to determine the energy dissipation rate for the flow leaving the 
 7. Calculate the thickness of the jet after it does the 180 degree bend of the jet reverser. < The change in thickness of the jet after the 180 degree bend is due to the flow spreading out to fill in the gaps created by the diffuser pipe walls.
 :math:`W_{jet} * \bar v_{diff} = W_{sed} * \bar v_{z_{ff}}`
 
-8. `Calculate the maximum energy dissipation rate* for the flow leaving the jet reverser. <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=8vvPOw1RbsK2&line=1&uniqifier=1>`_ See Equation :eq:`EDR_JetPlane` for the maximum energy dissipation rate in a plane jet and see :numref:`table_EDR_G_equations` for the value of :math:`\Pi_{JetPlane}`.
+8. `Calculate the maximum energy dissipation rate* for the flow leaving the jet reverser. <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=8vvPOw1RbsK2&line=1&uniqifier=1>`_ See Equation :eq:`planejet_EDR` for the maximum energy dissipation rate in a plane jet and see :numref:`table_EDR_G_equations` for the value of :math:`\Pi_{JetPlane}`.
 
 The energy dissipation rate for inlet jet is 158.5 milliwatt / kilogram
 
@@ -257,7 +257,7 @@ The function from the pipe database can return the nominal diameter from the dia
 
 Sedimentation Tank Bays and Number of Diffusers
 ===============================================
-The design will be for a 60 liter per second plant. 
+The design will be for a 60 liter per second plant.
 
 1. `What is the total required plan area for the sedimentation tanks? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=wg6BNPlkP6oz&line=1&uniqifier=1>`_
 

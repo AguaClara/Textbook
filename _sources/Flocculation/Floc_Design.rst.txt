@@ -216,7 +216,7 @@ We calculate :math:`H_{e_{Max}}` based on the physical flocculator dimensions. T
 raise to 3/4
 
 .. math::
-  :label: floc_He_max_var_K
+  :label: floc_He_max_var_K2
 
   H_{e_{Max}}= \left[ \left(\frac{Q^3}{W_{Min_{H_eS}}^3 \nu G_{CS}^2}\right)\frac{  \Pi_{{H_eS}_{Max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right]^\frac{1}{4} \left(1 - \Pi_{vc}^{baffle}\right)
 

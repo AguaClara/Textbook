@@ -39,11 +39,12 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
 
 .. toctree::
-  :caption: Chapter 2: Review: Fluid Mechanics
+  :caption: Chapter 2: Fluids and Hydraulics
   :maxdepth: 1
 
-  Review/Review_Fluid_Mechanics.rst
-  Review/Review_Fluid_Mechanics_Derivations.rst
+  Fluids_and_Hydraulics/Fluid_Mechanics.rst
+  Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.rst
+  Fluids_and_Hydraulics/Manifold_Hydraulics.rst
 
 
 .. toctree::
@@ -118,25 +119,19 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Filtration/Filtration_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 10: Hydraulics
-  :maxdepth: 1
-
-  Hydraulics/Hydraulics_Intro.rst
-
-.. toctree::
-  :caption: Chapter 11: Dissolved Gas
+  :caption: Chapter 10: Dissolved Gas
   :maxdepth: 1
 
   Dissolved_Gas/DG_Intro.rst
 
 .. toctree::
-  :caption: Chapter 12: Fluoride
+  :caption: Chapter 11: Fluoride
   :maxdepth: 1
 
   Fluoride/Fluoride_Intro.rst
 
 .. toctree::
-  :caption: Chapter 13: Troubleshooting
+  :caption: Chapter 12: Troubleshooting
   :maxdepth: 1
 
   Troubleshooting/Troubleshooting.rst
@@ -160,8 +155,6 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Textbook_Creation_Help/parameter_convention_list.rst
 
 
-`PDF and LaTeX versions <https://github.com/AguaClara/Textbook/releases/latest>`_ [#pdf_warning]_.
+Please use the annotation sidebar to leave comments with requests for improvements, additions, and corrections.
 
-.. rubric:: **Notes**
-
-.. [#pdf_warning] PDF and LaTeX versions may contain visual oddities because it is generated automatically. The website is the recommended way to read this textbook. `Please visit our GitHub site <https://github.com/AguaClara/Textbook>`_ to submit an issue, contribute, or comment.
+`Please visit our GitHub site <https://github.com/AguaClara/Textbook>`_ to submit an issue, contribute, or comment.

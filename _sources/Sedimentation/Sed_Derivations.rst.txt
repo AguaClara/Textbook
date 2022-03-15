@@ -155,6 +155,8 @@ We will solve for both the plate settler and tube settler conditions.
 
 **1) Find the velocity gradient next to the plate:**
 
+The velocity gradient is given by Equation :eq:`plate_settler_G_wall`
+
 .. _figure_plate_settler_boundary_conditions:
 
 .. figure:: ../Images/plate_settler_boundary_conditions.png
@@ -173,93 +175,7 @@ We will solve for both the plate settler and tube settler conditions.
 
     Velocity profile between plate settlers.
 
-We begin by describing the conditions of infinite horizontal plates.
 
-.. math::
-
-  \frac{y^2}{2}\frac{dp}{dx} + Ay + B = \mu u
-
-We employ the no-slip condition to solve for the constants A and B. The no-slip condition is that :math:`u = 0` at :math:`y = 0` and :math:`y = S`, where :math:`u` is the horizontal velocity component, :math:`y` is the location in the y-axis direction between plates, and :math:`S` is the spacing between plates.
-
-at :math:`u = 0` and :math:`y = 0`:
-
-.. math::
-
-  \frac{0}{2}\frac{dp}{dx} + A*0 + B = \mu *0
-
-.. math::
-
-  B = 0
-
-at :math:`u = 0` and :math:`y = S`, the solving for A:
-
-.. math::
-
-  \frac{S^2}{2}\frac{dp}{dx} + AS + 0 = \mu *0
-
-.. math::
-
-  \frac{S^2}{2}\frac{dp}{dx} + AS = 0
-
-.. math::
-
-  A = \frac{-S}{2}\frac{dp}{dx}
-
-Our initial equation can be updated as,
-
-.. math::
-
-  \frac{y^2}{2}\frac{dp}{dx} + \frac{-S}{2}\frac{dp}{dx}y + B = \mu u
-
-If we let :math:`\frac{dp}{dx}` be negative, then we can solve for :math:`\tau`.
-
-.. math::
-
-  \mu\left(\frac{du}{dy}\right) = y \frac{dp}{dx} + A
-
-.. math::
-
-  \tau = \left(y - \frac{S}{2}\right) \frac{dp}{dx}
-
-Determining the average velocity between plates, :math:`\bar v_{\alpha_{Plate}}`,
-
-.. math::
-
-  u = \frac{y(y-S)}{2\mu} \frac{dp}{dx}
-
-.. math::
-
-  \bar v_{\alpha_{Plate}} = \frac{q}{S} = \frac{1}{S} \int_{0}^{S}udy = \frac{1}{S} \int_{0}^{S} \left[\frac{y^2 - Sy}{2\mu} \left(\frac{dp}{dx}\right)\right]dy
-
-Integrating to get average velocity, then solving for :math:`\frac{dp}{dx}`,
-
-.. math::
-
-  \bar v_{\alpha_{Plate}} = \frac{S^2}{12\mu} \frac{dp}{dx}
-
-.. math::
-
-  \frac{dp}{dx} = \frac{12\mu \bar v_{\alpha_{Plate}} }{S^2}
-
-Using Navier-Stokes to model the flow between the plates, and substituting our equation for :math:` \frac{dp}{dx}`,
-
-.. math::
-
-  \left(\frac{du}{dy}\right)_{y=0} = \frac{-S}{2\mu} \frac{dp}{dx}
-
-.. math::
-
-  \left(\frac{du}{dy}\right)_{y=0} = \frac{-S}{2\mu} \frac{12\mu v_{\alpha} }{S^2}
-
-Simplifying the :math:`\left(\frac{du}{dy}\right)_{y=0}`, we have the velocity gradient as function of average velocity for plate geometry as,
-
-.. math::
-
-  \left(\frac{du}{dy}\right)_{y=0} = \frac{6 \bar v_{\alpha_{Plate}}}{S}
-
-.. math::
-
-  \frac{ dv_{\alpha} }{ dy_{y=0} } = \frac{6 \bar v_{\alpha_{Plate}}}{S}
 
 .. _figure_floc_rollup_step1:
 
@@ -270,48 +186,7 @@ Simplifying the :math:`\left(\frac{du}{dy}\right)_{y=0}`, we have the velocity g
 
    Velocity gradient next to the plate.
 
-For tube settlers, we will assume laminar flow through circular tubes. :math:`R` is the radius of the tube, and we assume that the maximum velocity is when :math:`r = 0`. The velocity distribution is a paraboloid of revolution, therefore average velocity, :math:`\bar v_{\alpha_{Tube}}`, is half of the maximum velocity, :math:`v_{\alpha_{max}}`. So, :math:`\bar v_{\alpha_{Tube}} = \frac{1}{2}v_{\alpha_{max}}`. We also know that :math:`Q = \bar v A` and :math:`Q = \bar v \pi R^2`. In the case of the tube settler, :math:`\frac{dp}{dx}` is the pressure gradient in the direction of flow, not the pressure gradient due to changes in elevation.
-
-.. math::
-
-  v_{\alpha_{Tube}} = \frac{r^2 - R^2}{4\mu} \frac{dp}{dx}
-
-.. math::
-
-  v_{\alpha_{max}} = - \frac{R^2}{4\mu} \frac{dp}{dx}
-
-
-The average velocity is 1/2 of the maximum velocity.
-
-.. math::
-
-  \bar v_{\alpha_{Tube}} = - \frac{R^2}{8\mu} \frac{dp}{dx}
-
-.. math::
-
-  Q = - \frac{\pi R^4}{8\mu} \frac{dp}{dx}
-
-Rearranging the flow Equation :math:`Q` to solve for :math:`\frac{dp}{dx}`,
-
-.. math::
-
-  \frac{dp}{dx} = - \frac{8 \mu Q}{\pi R^4}
-
-Plugging :math:`\frac{dp}{dx}` into the original equation for :math:`\bar v_{\alpha_{Tube}}`,
-
-.. math::
-
-  v_{\alpha_{Tube}} = -2Q \frac{r^2 - R^2}{\pi R^4}
-
-.. math::
-
-  \frac{ dv_{\alpha_{Tube}} }{ dr_{r=R} } = \frac{-4Q}{\pi R^3}
-
-The resulting velocity gradient as function of average velocity for tube geometry is,
-
-.. math::
-
-  \frac{ dv_{\alpha_{Tube}} }{ dy_{y=0} } = \frac{8\bar v_{\alpha_{Tube}}}{D}
+For tube settlers the velocity gradient at the wall is given by Equation :eq:`G_wall_laminar_tube`.
 
 **2) Find the fluid velocity at the center of the floc:**
 
@@ -398,27 +273,16 @@ If the fractal dimension, :math:`\Pi_{fractal}` has a value of 2, then Equation 
 
   S_{min} \approx \frac{3 \bar v_{z_{Plate}}}{\sin^2 \alpha} \left( \frac{18 \nu}{g D_{cp}} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}} \right)
 
-The minimum spacing increases as the size of the primary particle, :math:`D_{cp}`, decreases. This is an important insight because flocs that are made of coagulant nanoparticles and dissolved organics are the most difficult flocs to capture. Flocs made of coagulant nanoparticles are less dense than flocs made of clay. Coagulant nanoparticle flocs are produced when water treatment plants are used to remove dissolved organics or arsenic or when high coagulant dosages are used.
 
-.. _figure_SofRollupwithfractal2:
-
-.. figure:: ../Images/SofRollupwithfractal2.png
-   :height: 300px
-   :align: center
-   :alt: Floc roll up as a function of core particle density and temperatures
-
-   Plate settler spacing must increase to capture low density flocs.
-
-Given that AguaClara uses a lower upflow velocity, :math:`\bar v_{z_{Plate}}`, than many plate settler designs it is reasonable for us to use more closely spaced plates. More work is required to characterize the density and size of the core particles as a function of raw water constituents to provide guidance on the required plate spacing.
 
 .. _heading_Sed_Tank_Hl_thru_Plate_Settlers:
 
 Head Loss Through Plate Settlers
 --------------------------------
 
-Flow through the sedimentation tank is controlled by head loss in an attempt to achieve flow uniformity. We have already explained that :ref:`plate settler spacing impacts head loss <heading_Sed_Tank_Plate_Settlers_Head_Loss_Intro>`, but by what mathematical relationship? Will putting plate settlers closer together result in more or less head loss? This question is complicated because closer plate settlers would create more shear and head loss, but shorter plate settlers also mean that they become shorter which would decrease shear and head loss.
+Flow through the sedimentation tank is controlled by head loss in an attempt to achieve flow uniformity. We have already explained that :ref:`plate settler spacing impacts head loss <heading_Sed_Tank_Plate_Settlers_Head_Loss_Intro>`, but by what mathematical relationship? Will putting plate settlers closer together result in more or less head loss? This question is complicated because closer plate settlers would create more shear and head loss, but shorter plate settlers have less area which would decrease the head loss.
 
-Let's start with a force balance. Assume that there is a fully established velocity profile that is parabolic with laminar flow. The forces that we care about are shear forces on the walls of the plate settlers and the differential pressure from flow in the direction of the velocity.
+Let's start with a force balance similar to the derivation for head loss between parallel plates as done previously for Equation :eq:`parallel_plate_laminar_headloss`. Assume that there is a fully established velocity profile that is parabolic with laminar flow. The forces that we care about are shear forces on the walls of the plate settlers and the differential pressure from flow in the direction of the velocity.
 
 .. _figure_plate_settler_headloss_diag:
 
@@ -474,6 +338,7 @@ Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
   h_L = \frac{\Delta P}{\rho g}
 
 .. math::
+  :label: plate_settler_headloss
 
   h_L = 2 \frac{\mu}{\rho g} \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)
 
@@ -483,12 +348,13 @@ Recall that head loss through plate settlers is really small, on the order of mi
 .. _heading_Sed_Tank_Floc_Filter_Design:
 
 Floc Filter Design
-======================
+==================
+
 
 Velocity Gradient
 -------------------
 
-With the equation for :math:`h_L`, we can calculate :math:`G`. We will also use the other equations we developed in the :ref:`chapter on flocculation <heading_Hydraulic_Flocculation_Design>`. We will use Equation :eq:`G_Camp_Stein` to converts the energy dissipation rate into a velocity gradient.
+The velocity gradient in the floc filter could cause some collisions between particles. We demonstrate that this is NOT a significant effect below. The velocity gradient in the floc filter is obtained from the head loss through a fluidized bed. We will use Equation :eq:`G_Camp_Stein` to converts the energy dissipation rate into a velocity gradient.
 
 .. math::
 

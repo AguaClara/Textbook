@@ -28,6 +28,111 @@ Introduction
 
 The hydraulic design of both the enclosed and open stacked rapid sand filter is complicated by the number of parallel flows, the manifolds in series, and the need to handle both backwash and filter modes. The design requires careful attention to weir hydraulics to achieve the target backwash flows when the plant is operating at less than full capacity. The siphon system has a tight design constraint to ensure that the siphon doesn't trigger prematurely.
 
+
+
+Filter Inlet Channel with Rectangular Weir Flow Distribution
+============================================================
+
+In plants with flow rates large enough to use open stacked rapid sand filters the settled water is delivered to those filters through an open channel. The water exits the channel by flowing across a rectangular weir (see :numref:`figure_Filter_channel`). As is the case in a manifold pipe the water in the channel is decelerating and thus the piezometric head is increasing in the direction of flow. This increase in piezometric head is equivalent to the increase in the depth of water in the channel. This increase in water depth results in more water flowing across the final weir exiting the channel.
+
+.. _figure_Filter_channel:
+
+.. figure:: ../Images/Filter_channel.png
+    :width: 400px
+    :align: center
+    :alt: Filter channel
+
+    The filter inlet channel distributes flow to all of the filters. The water in the channel flows across sharp crested weirs into the filter inlet boxes. The velocity in the channel decreases in the direction of flow and thus the kinetic energy of the flow is converted into height. That added height results in greater flow into downstream filter inlet boxes.
+
+The flow across the weirs into the filter inlet boxes is complicated by several factors. First, there must be a *vena contracta* as the flow changes direction to flow across the weir and thus the :math:`90^{\circ}` *vena contracta* coefficient should enter the equations. Second, the weirs as they are fabricated are neither sharp nor broad and thus it isn't clear which equations are best suited. Sharp crested weirs are known to have a reduced depth of flow above the weir due to the acceleration of water approaching the weir and this effect is normally ignored and then thrown into the weir coefficient. Given that our weirs do not have a rounded upstream edge required by broad crested weirs we will use the sharp crested weir equation.
+
+Side Exit Sharp Crested Weir
+----------------------------
+
+.. math::
+  :label: Sharp_weir_Q_of_channel_depth
+
+   Q = \Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{channel}\right)^\frac{3}{2}
+
+
+where :math:`H_{channel}` is the height of the water in the channel above the top of the weir. (see equation 10.30 in Fundamentals of Fluid Mechanics, Fifth Edition by Munson, Young, and Okiishi)
+
+Inlet Channel Design for Equal Filter Flow
+------------------------------------------
+
+We will simplify this manifold problem by assuming that the average water height in the channel above the weirs corresponds to the average flow across the weirs and that the upstream depth is decreased by 1/2 of the channel velocity head and the downstream depth is increased by 1/2 the channel velocity head.
+
+
+
+The ratio of flows from the first filter and the last filter in the channel is given by
+
+.. math::
+  :label: Sharp_weir_flow_ratio_messy
+
+  \Pi_{Q_{weir}} = \frac{Q_{Filter_1}}{Q_{Filter_n}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}
+
+
+where :math:`\bar H_{channel}` is the average height of water in the channel relative to the top of the weir. Equation :eq:`Sharp_weir_flow_ratio_messy` simplifies to
+
+.. math::
+  :label: Sharp_weir_flow_ratio1
+
+  \Pi_{Q_{weir}} = \frac{ \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}
+
+The slower the velocity in the channel the more uniform the flow distribution will be between the filters.
+
+Solve for the maximum velocity in the channel given the average depth of water above the weirs and the required flow distribution.
+
+.. math::
+  :label: Sharp_weir_flow_ratio2
+
+   \bar H_{channel}\Pi_{Q_{weir}}^\frac{2}{3} + \frac{\bar v_{M_1}^2}{4g}\Pi_{Q_{weir}}^\frac{2}{3}= { \bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}}
+
+Now we can solve for maximum manifold channel velocity.
+
+.. math::
+  :label: Inlet_Channel_v_max
+
+  \bar v_{M_1} =  2\sqrt{g\bar H_{channel}\frac{\left(1-\Pi_{Q_{weir}}^\frac{2}{3}\right)}{\left(\Pi_{Q_{weir}}^\frac{2}{3} + 1\right)}}
+
+
+The channel depth of water above the weir, :math:`\bar H_{channel}`, and the flow uniformity target set the maximum velocity in the manifold channel (see :numref:`figure_Filter_channel_v_max`).
+
+`Geneeate the following plot <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=MyYpzYxOU5px&line=5&uniqifier=1>`_
+
+
+.. _figure_Filter_channel_v_max:
+
+.. figure:: ../Images/Filter_channel_v_max.png
+    :width: 400px
+    :align: center
+    :alt: Filter channel velocities
+
+    The maximum velocity in the filter inlet channel decreases as the target flow ratio, :math:`\Pi_{Q_{weir}}`, approaches 1. This graph was created assuming :math:`\bar H_{channel}` of 5 cm.
+
+
+
+Backwash Weir Slot Design
+-------------------------
+
+The goal of the backwash weir slot is to provide close to the design flow rate to a filter while it is in backwash mode. To accomplish this the wide gate weir is opened and the weir slot controls the flow of water into the inlet box. During backwash the water level in the inlet box is much lower and thus the backwash weir slot can extend deep into the box. The design constraint for this slot is that it must deliver the design flow when the water level in the inlet channel is at the design flow height and it must deliver at least 80% of the design flow  when there is no flow going to any of the other filters. The difference in water level between the two cases is :math:`H_{channel}` because this is the height of water flowing over the wide weir at the design flow rate. The height of the slot, :math:`H_{slot}`, is measured relative to the design flow water level in the inlet channel.
+
+This design will result in more water available for backwash than is absolutely needed and if it turns out that too much water is directed to this filter than the bottom of the slot can be elevated by adding a few stop logs.
+
+The equation is based on the sharp crested weir (Equation :eq:`Sharp_weir_Q_of_channel_depth`). The head loss through the gate weir should be subtracted from both the top and bottom terms
+
+.. math::
+  :label: Flow_ratio_backwash
+
+  \Pi_{Q_{BW}} = \frac{Q_{BW_{min}}}{Q_{BW_{max}}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot} - H_{channel} - HL_{Gate}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot}- HL_{Gate}\right)^\frac{3}{2}}
+
+Simplify and solve for :math:`H_{slot}`.
+
+.. math::
+  :label: backwash_slot_height
+
+     H_{slot} = \frac{H_{channel}}{1-\Pi_{Q_{BW}}^\frac{2}{3}} + HL_{Gate}
+
 There are two possible constraints on the trunk size. Either the trunk size is dictated by backwash flow distribution requirements or the trunk size is dictated by the need to have uniform flow distribution between filter layers and hence to have exactly twice the flow rate through the inner inlets.
 
 There are 4 levels of flow distribution in StaRS filters. The direction of the design (top-down or bottom-up) is determined by the fact that when there is head loss in series that all of the head loss helps to achieve flow distribution. Thus the head loss through the orifices will be a required part of the design of the branches and that head loss will be an input for the trunk design. Thus we need to start at the bottom and work up.
@@ -35,14 +140,14 @@ There are 4 levels of flow distribution in StaRS filters. The direction of the d
  * between orifices (branchPortQ_pi): made less important by the winged design that allows correcting flow in the winged space before the water enters the sand bed. This flow distribution does not benefit from the head loss through the sand. Suggest using a value of 0.8 for this constraint because of the balancing provided by the wings. The flow distribution constraint only provides a ratio of the port and branch velocities. The constraint for the maximum velocity allowable is either set by head loss or by the strength of the branch to span its length and not bend to much at the initiation of backwash. Either of those constraints can be converted into a maximum velocity for the inner branches and that will be used as an input to the design.
 
     * The velocity constraint will determine the maximum length of a branch given its diameter.
-    * Use Equation :eq:`manifold_max_v_no_hl_series` combined with the maximum branch velocity constraint to calculate the port velocity. Calculate the required branch diameter given the length (or vice versa).
+    * Use Equation :eq:`Manifold_max_v_no_hl_series` combined with the maximum branch velocity constraint to calculate the port velocity. Calculate the required branch diameter given the length (or vice versa).
     * The orifice diameter will be selected based on constructability and not being too small to risk clogging (between 4 and 10 mm)
     * Calculate the orifice spacing for the inner branches based on mass conservation and the maximum port velocity.
     *  Calculate the maximum length of the branches given mass conservation and the maximum branch velocity.
 
  * between branches (trunkPortQ_pi): aided considerably by the head loss through the sand and is helped by the head loss though the orifices. Suggest using a value of 0.9 for this constraint. This constraint will be combined with a maximum permissible head loss during backwash to determine the required diameter of the trunk lines and will be combined with the equal trunk head loss constraint to obtain the diameter of the orifices.
 
-    * Use Equation :eq:`manifold_max_v_with_hl_series` to solve for the maximum trunk velocity.
+    * Use Equation :eq:`Manifold_max_v_with_hl_series` to solve for the maximum trunk velocity.
     * Use the fact that the head loss is the same for outer and inner inlets to determine the :math:`K_{e_{outerOrifices}}`.
 
  * between sand layers: easily obtained by simply requiring that inlet head losses be identical in the 4 inlets under conditions of the target flow and accounting for the fact that the inner inlets have double the flow of the outer inlets.
@@ -136,7 +241,7 @@ The head loss constraint reveals that we can achieve the highest trunk velocity 
 Use Equation :eq:`Branch_Trunk_Pi` to eliminate :math:`\bar v_{B_{innerMax}}` in Equation :eq:`he_T_inner_of_V`.
 
 .. math::
-  :label: he_T_inner_of_V
+  :label: he_T_inner_of_V2
 
   2gh_{e_{outerInlet_{Bw}}} = N_{layer}^2 \left(K_{e_T}\bar v_{T_{innerMax}}^2 + K_{e_B}\Pi_{BT} \bar v_{T_{innerMax}}^2 + \Pi_{BT} \bar v_{T_{innerMax}}^2\frac{1}{\Pi_{\Psi_P}} \right)
 
@@ -215,7 +320,7 @@ The outer trunk branch orifices must be designed so that the head loss during fi
 Substitute Equation :eq:`Branch_Trunk_Pi` to eliminate :math:`\bar v_{B_{inner}}`.
 
 .. math::
-  :label: he_T_inner_of_V
+  :label: he_T_inner_of_V3
 
   2gh_{e_{innerInlet}} = \left[K_{e_T} + \Pi_{BT}\left( K_{e_B}  + \frac{1}{\Pi_{\Psi_P}}\right) \right]\bar v_{T_{inner}}^2
 
@@ -230,7 +335,7 @@ The orifices for the outer inlets are not constrained by the flow distribution t
 The head loss in the outer inlet is given by
 
 .. math::
-  :label: he_T_outer_of_V
+  :label: he_T_outer_of_V4
 
   2gh_{e_{outerInlet}} = \left(K_{e_T} + K_{e_B}\Pi_{BT}  + \Pi_{BT} \Pi_{PB_{outer}} \right)\frac{1}{4}\bar v_{T_{inner}}^2
 
@@ -359,7 +464,7 @@ The orifice diameter will be constrained by the wing fabrication. Apply conserva
 where :math:`N_{sided}` is 2 for inner trunks that serve two layers of sand. Combine equations :eq:`v_port_inner_branch` and :eq:`v_port_inner_to_v_Fi` and solve for the center to center spacing of the ports.
 
 .. math::
-  :label: B_orifice_inner
+  :label: B_orifice_inner2
 
   B_{P_{inner}} = \frac{\bar v_{B}\Pi_{vc}\pi D_{P}^2}{8 v_{Fi}B_{B}}\sqrt{\frac{1}{\Pi_{\Psi_P}}}
 
@@ -379,29 +484,29 @@ The head loss for the inner inlets is
 The trunk entrance and elbow losses are given by
 
 .. math::
-  :label: he_T_inner
+  :label: he_T_inner2
 
   h_{e_{T_{inner}}} = K_{e_T}\frac{\bar v_{T_{innerMax}}^2}{2g}
 
 Substitute with minor loss relationships.
 
 .. math::
-  :label: he_T_inner_of_V
+  :label: he_T_inner_of_V5
 
   2gh_{e_{innerInlet}} = \left(K_{e_T}\bar v_{T_{innerMax}}^2 + K_{e_B}\bar v_{B_{inner}}^2 + \bar v_{B_{inner}}^2\frac{1}{\Pi_{\Psi_P}} \right)
 
 Solve for :math:`\bar v_{T_{innerMax}}`.
 
 .. math::
-  :label: V_trunk_of_he
+  :label: V_trunk_of_he2
 
   \bar v_{T_{innerMax}} = \sqrt{\frac{1}{K_{e_T}}\left[2g  h_{e_{innerInlet}} -\bar v_{B_{inner}}^2\left(K_{e_B} + \frac{1}{\Pi_{\Psi_P}} \right)\right]}
 
-Use Equation :eq:`V_trunk_of_he`to find the maximum trunk velocity. Use that constraint and the plant flow rate to find the trunk diameter, the number of filters, the filter flow rate, filter width, and filter length.
+Use Equation :eq:`V_trunk_of_he2` to find the maximum trunk velocity. Use that constraint and the plant flow rate to find the trunk diameter, the number of filters, the filter flow rate, filter width, and filter length.
 
 At this stage in the design process we have set the flow rate through the filter, the trunk and branch diameters (except for the backwash branches), the length of the branches, and the orifice spacing on the inner inlets.
 
-.. _heading_StaRS_Outer_Branch:
+.. _heading_StaRS_Outer_Branch2:
 
 Outer branch
 ------------
@@ -433,7 +538,7 @@ Solve for the port velocity, :math:`v_{P_{top}}`.
 The port spacing can be obtained from Equation :eq:`B_P_top`.
 
 .. math::
-  :label: v_P_to_v_Fi
+  :label: B_P_top
 
   B_{P_{top}} = \frac{\Pi_{vc} \pi D_{P}^2\bar v_{P_{top}}}{4 v_{Fi}B_{B}}
 
@@ -480,7 +585,7 @@ and
 Substitute to obtain a relationship between the three velocities.
 
 .. math::
-  :label: v_B_to_v_T_BW
+  :label: v_B_to_v_T_BW_draft2
 
   \bar v_{T_{BW}}^2= \left( K_{e_{B}}\bar v_{B_{BW}}^2 + \bar v_{P_{BW}}^2\right)\Pi_{\Psi_{B_{BW}}}
 
@@ -520,7 +625,7 @@ Solve for the maximum trunk velocity.
 
   \bar v_{T_{BWmax}} = \sqrt\frac{2gh_{e_{BW}}}{K_{e_T} +  \frac{1}{\Pi_{\Psi_{B_{BW}}}}}
 
-The backwash trunk may be the same diameter as the other trunk lines or it may be larger depending on the maximum velocities calculated from equations :eq:`V_trunk_of_he` and :eq:`v_T_BW`.
+The backwash trunk may be the same diameter as the other trunk lines or it may be larger depending on the maximum velocities calculated from equations :eq:`V_trunk_of_he2` and :eq:`v_T_BW`.
 
 The maximum branch velocity is now obtained by solving Equation :eq:`v_B_to_v_T_BW` for :math:`\bar v_{T_{BW}}`.
 
@@ -536,10 +641,10 @@ The branch minimum area is from Equation :eq:`branch_V`.
 
   A_{B} = \frac{N_{layer} v_{Fi} B_{B} L_{B}}{v_{B}}
 
-The port velocity is obtained from Equation :eq:`v_P_to_v_B_BW` and the backwash port spacing is obtained by rewriting :eq:`v_P_to_v_Fi` to include the relationship that the backwash velocity is the filtration velocity times the number of filter layers.
+The port velocity is obtained from Equation :eq:`v_P_to_v_B_BW` and the backwash port spacing is obtained by rewriting :eq:`v_P_to_v_Fi1` to include the relationship that the backwash velocity is the filtration velocity times the number of filter layers.
 
 .. math::
-  :label: v_P_to_v_Fi
+  :label: v_P_to_v_Fi2
 
   B_{P_{bw}} = \frac{\Pi_{vc} \pi D_{P}^2\bar v_{P_{BW}}}{4 v_{Fi} N_{layer} B_{B}}
 
@@ -696,7 +801,7 @@ simplifying
 If we set a maximum deflection, then we can solve Equation :eq:`supported_at_both_ends` for the maximum length between supports.
 
 .. math::
-  :label: supported_at_both_ends
+  :label: L_of_supported_at_both_ends
 
   L_{both} = \left(\frac{384EI\delta_{max}}{5\omega}\right)^{\frac{1}{4}}
 

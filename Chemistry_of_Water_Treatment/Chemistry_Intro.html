@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Chemistry of Coagulant Nanoparticles &mdash; AguaClara Textbook v1.3.0 documentation</title>
+  <title>Chemistry of Coagulant Nanoparticles &mdash; AguaClara Textbook v1.3.1 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.0
+                v1.3.1
               </div>
             
           
@@ -105,10 +105,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html#anaerobic-pulsed-bed">Anaerobic Pulsed Bed</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html#aerobic-string-digester-asd">Aerobic String Digester (ASD)</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 2: Review: Fluid Mechanics</span></p>
+<p class="caption"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics.html">Fluid Mechanics Review</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Review/Review_Fluid_Mechanics_Derivations.html">Review: Fluid Mechanics Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics.html">Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html">Fluid Mechanics Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html">Manifold Hydraulics</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
 <ul>
@@ -172,19 +173,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Hydraulics</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Hydraulics/Hydraulics_Intro.html">Hydraulics Introduction</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
+<p class="caption"><span class="caption-text">Chapter 10: Dissolved Gas</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 12: Fluoride</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Fluoride</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 13: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#high-head-loss-after-backwash-in-estars">High Head Loss After Backwash in EStaRS</a></li>
@@ -288,7 +285,7 @@
 <p>The coagulants used for drinking water treatment are acidic and thus result in a lowering of the pH of the treated water. The optimal pH for aluminum coagulant nanoparticle formation is between pH of 6.5 and 8.5. This is also the <a class="reference external" href="https://www.epa.gov/dwstandardsregulations/secondary-drinking-water-standards-guidance-nuisance-chemicals">pH range set by the EPA secondary standards for drinking water</a>. Although many water sources are within this pH range, there are some waters with more extreme values of pH. The aluminum and iron based coagulants are also acidic and in some waters the pH may drop below the ideal range when adding the coagulant. When the pH is outside the acceptable range it is necessary to adjust the pH by adding either a base or an acid.</p>
 <p>When aluminum sulfate (alum) is added to water it dissociates and then precipitates as <span class="math notranslate nohighlight">\(Al(OH)_3\)</span>. In the process, protons (<span class="math notranslate nohighlight">\(H^+\)</span>) are released and thus the pH (<span class="math notranslate nohighlight">\(-log[H^+]\)</span>) decreases.</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-intro-0">
-<span class="eqno">(274)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-intro-0" title="Permalink to this equation">¶</a></span>\[Al_2(SO_4)_3 (aq) + 6H_2O (l) \rightarrow 2Al(OH)_3 (s) + 6H^+ (aq) + 3SO_4^{-2} (aq)\]</div>
+<span class="eqno">(294)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-intro-0" title="Permalink to this equation">¶</a></span>\[Al_2(SO_4)_3 (aq) + 6H_2O (l) \rightarrow 2Al(OH)_3 (s) + 6H^+ (aq) + 3SO_4^{-2} (aq)\]</div>
 <p>The release of these protons reduces the acid neutralizing capacity, ANC, (also known as alkalinity) of the water. ANC is traditionally measured with units of mg/L of <span class="math notranslate nohighlight">\(CaCO_3\)</span> rather than eq/L.  <a class="reference internal" href="#table-anc-consumed-by-alum"><span class="std std-numref">Table 9</span></a> shows the relationship between ANC measured as mg/L of <span class="math notranslate nohighlight">\(CaCO_3\)</span> and alum (<span class="math notranslate nohighlight">\(Al_2(SO_4)_3 \cdot 14H_2O\)</span>)</p>
 <span id="table-anc-consumed-by-alum"></span><table class="docutils align-left" id="id2">
 <caption><span class="caption-number">Table 9 </span><span class="caption-text">Reduction in ANC caused by addition of alum.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
@@ -330,14 +327,14 @@
 <p>Polyaluminum chloride (PACl) is another aluminum based coagulant that performs similarly to alum. PACl is manufactured by slowly titrating an acidic solution containing dissolved aluminum with a base (in the chemical plant) to produce a meta-stable and soluble polymeric aluminum. PACl consumes less alkalinity (ANC) because it is partially neutralized by the titration with a base. In addition, the aluminum mass fraction of PACl is higher than in alum because there are no attached water molecules. The mass of PACl required for flocculation is less the mass of alum required. This is due largely to the higher aluminum fraction. The lower mass of PACl required is an economic benefit when shipping is a significant portion of the cost of the coagulant.</p>
 <p>There are many different molecular formulas given for PACl. The molecular formulas are either from the perspective of the chemical supplier or represent the composition of the PACl nanoparticles. The molecular formula from the chemical supplier represents the extent of neutralization and hence the replacement of chloride with hydroxide. In that case the PACl molecular formula is:</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-intro-1">
-<span class="eqno">(275)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-intro-1" title="Permalink to this equation">¶</a></span>\[[Al_n(OH)_mCl_{3n-m}]_x\]</div>
+<span class="eqno">(295)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-intro-1" title="Permalink to this equation">¶</a></span>\[[Al_n(OH)_mCl_{3n-m}]_x\]</div>
 <p>The extent of the PACl titration with base is defined as basicity. Basicity is the ratio of hydroxyl equivalents to aluminum equivalents. Basicity of 1 would mean that the PACl does not produce any protons when it dissolves in water. Basicity of 0 means it produces 3 protons per Al (like alum). The equation for basicity is:</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-intro-2">
-<span class="eqno">(276)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-intro-2" title="Permalink to this equation">¶</a></span>\[Basicity = \left( \frac{m}{3n}\right)\]</div>
+<span class="eqno">(296)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-intro-2" title="Permalink to this equation">¶</a></span>\[Basicity = \left( \frac{m}{3n}\right)\]</div>
 <p>The lowest basicity commercial PACl formulations are about 10%. Most PACls are in the medium to high basicity range (50-70%). The highest stable basicity (83%) is aluminum chlorohydrate (<span class="math notranslate nohighlight">\(Al_2(OH)_5Cl\)</span>) that is useful for treating water with very low ANC.</p>
 <p>The ANC of the aluminum coagulant can be obtained from the number of protons it releases:</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-intro-3">
-<span class="eqno">(277)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-intro-3" title="Permalink to this equation">¶</a></span>\[ANC_{Al} = 3(Basicity-1)[Al] = \left(\frac{m}{n} - 3\right)[Al] = \Pi_{Al}[Al]\]</div>
+<span class="eqno">(297)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-intro-3" title="Permalink to this equation">¶</a></span>\[ANC_{Al} = 3(Basicity-1)[Al] = \left(\frac{m}{n} - 3\right)[Al] = \Pi_{Al}[Al]\]</div>
 <div class="line-block">
 <div class="line">where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\Pi_{Al}=\left(\frac{m}{n} - 3\right)\)</span> is ANC per mole of aluminum for the given coagulant</div>
@@ -345,7 +342,7 @@
 <p>Thus the ANC of alum (with 0 hydroxides) is <span class="math notranslate nohighlight">\(-3[Al]\)</span>. The method of calculating the <span class="math notranslate nohighlight">\(ANC_{Al}\)</span> will be used to calculate the amount of base that must be added to achieve a target pH.</p>
 <p>The molecular formula of the PACl nanoparticles is always some combination of Al, O, and H. One common molecular structure is a Keggin structure with 13 aluminum atoms. This molecule has a tetrahedral Al atom in the center of the cluster coordinated to 4 oxygen atoms. The molecular formula of the Keggin structured aluminum molecule is</p>
 <div class="math notranslate nohighlight" id="equation-chemistry-of-water-treatment-chemistry-intro-4">
-<span class="eqno">(278)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-intro-4" title="Permalink to this equation">¶</a></span>\[AlO_4Al_{12}(OH)_{24}(H_2O)_{12}^{7+}\]</div>
+<span class="eqno">(298)<a class="headerlink" href="#equation-chemistry-of-water-treatment-chemistry-intro-4" title="Permalink to this equation">¶</a></span>\[AlO_4Al_{12}(OH)_{24}(H_2O)_{12}^{7+}\]</div>
 <p>The attached water molecules are sometimes omitted. Coagulant nanoparticles are presumably created by aggregation of these Keggin structure molecules.</p>
 </div>
 <div class="section" id="buffering-capacity-of-natural-waters">
@@ -356,10 +353,10 @@
 </div>
 <div class="section" id="ph-range-for-precipitation-of-coagulant-nanoparticles">
 <span id="heading-ph-range-for-precipitation-of-coagulant-nanoparticles"></span><h2>pH Range for Precipitation of Coagulant Nanoparticles<a class="headerlink" href="#ph-range-for-precipitation-of-coagulant-nanoparticles" title="Permalink to this headline">¶</a></h2>
-<p>A critical property of coagulants is that in order to act as an adhesive between particles they must be solid phase at neutral pH. Both Al(III) and Fe(III) have low solubility at neutral pH and thus meet this requirement. The pH region of low solubility sets the range of pH where flocculation is effective. <a class="reference internal" href="#figure-al-solubility"><span class="std std-numref">Fig. 55</span></a> shows the solubilty of aluminum as a function of pH.</p>
+<p>A critical property of coagulants is that in order to act as an adhesive between particles they must be solid phase at neutral pH. Both Al(III) and Fe(III) have low solubility at neutral pH and thus meet this requirement. The pH region of low solubility sets the range of pH where flocculation is effective. <a class="reference internal" href="#figure-al-solubility"><span class="std std-numref">Fig. 60</span></a> shows the solubilty of aluminum as a function of pH.</p>
 <div class="figure align-center" id="id3">
 <span id="figure-al-solubility"></span><a class="reference internal image-reference" href="../_images/Al_solubility.png"><img alt="Al solubility" src="../_images/Al_solubility.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 55 </span><span class="caption-text">Solubility of aluminum as a function of pH. Figure adapted from <a class="reference external" href="http://dx.doi.org/10.2166/aqua.2006.062">Pernitsky and Edzwald</a>.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 60 </span><span class="caption-text">Solubility of aluminum as a function of pH. Figure adapted from <a class="reference external" href="http://dx.doi.org/10.2166/aqua.2006.062">Pernitsky and Edzwald</a>.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>Research is needed to quantify flocculation performance in continuous flow floc/floc filter/plate settler systems as a function of pH.</p>
 <p>The aluminum concentration range used for flocculation ranges from approximately 0.4 - 10 mg/L and is strongly influenced by the concentration of dissolved organic matter and the concentration of suspended solids. The flocculation and floc filter capacity to produce collisions between suspended particles also influences the required aluminum concentration.</p>
@@ -382,7 +379,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, AguaClara Cornell.
+        &#169; Copyright 2022, AguaClara Reach.
 
     </p>
   </div>
