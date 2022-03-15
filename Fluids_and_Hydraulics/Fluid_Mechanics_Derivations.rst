@@ -8,7 +8,7 @@
 .. _title_review_fluid_mechanics_derivations:
 
 ***************************************************
-Review: Fluid Mechanics Derivations
+Fluid Mechanics Derivations
 ***************************************************
 
 

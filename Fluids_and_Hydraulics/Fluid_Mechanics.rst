@@ -8,12 +8,12 @@
 .. _title_review_fluid_mechanics:
 
 ***********************
-Fluid Mechanics Review
+Fluid Mechanics
 ***********************
 
-This document is meant to be a refresher on fluid mechanics. It will only cover the topics in fluids mechanics that will be used heavily in the course.
+This chapter is meant to be a refresher on fluid mechanics. It will only cover the topics in fluids mechanics that will be used heavily in the course.
 
-If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_. Note that to view this link, you will need a Github account. If you wish to review from a legitimate textbook, you can find a pdf of a good book by Frank White `here <http://ftp.demec.ufpr.br/disciplinas/TM240/Marchi/Bibliografia/White_2011_7ed_Fluid-Mechanics.pdf>`_.
+If you wish to review fluid mechanics in (much) more detail, please refer to `this guide <https://github.com/AguaClara/CEE4540_Master/wiki/Fluids-Review-Guide>`_. Note that to view this link, you will need a Github account. If you wish to review from a textbook, you can find a pdf of a good fluid mechanics textbook by Frank White `here <http://ftp.demec.ufpr.br/disciplinas/TM240/Marchi/Bibliografia/White_2011_7ed_Fluid-Mechanics.pdf>`_.
 
 .. _heading_introductory_concepts:
 
