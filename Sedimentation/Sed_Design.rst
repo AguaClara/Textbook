@@ -39,7 +39,7 @@ In this section, we will develop a conceptual understanding of the sedimentation
     :align: center
     :alt: Overview of an AguaClara Sedimentation tank (click to be sent to video).
 
-Overview of an AguaClara Sedimentation tank (click to be sent to video).
+Overview of an AguaClara Sedimentation tank (click image to be sent to video).
 
 .. _heading_Sed_Tank_As_Circuit:
 
@@ -76,7 +76,7 @@ We can artificially introduce the second form of head loss to dominate the resis
 
 .. _heading_Sed_Tank_Influent_Channel:
 
-Influent Channel
+Inlet Channel
 --------------------
 
 After water exits the flocculator, it is ready for sedimentation. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple sedimentation units operating in parallel; we call each of these sedimentation units a 'bay' or a 'tank'. Because there may be multiple sedimentation bays, we have to distribute flocculated water between the bays. To do this, we have an **influent channel** shown in :numref:`figure_influent_channel_bays`, which receives water from the flocculator and passes it to the sedimentation bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the sedimentation bays without allowing any settling of flocs in the influent channel. The minimum velocity in the influent channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each sedimentation bay.
@@ -100,21 +100,39 @@ Sedimentation units have multiple bays for a few different reasons. Plants with 
 
 Of note is that the sedimentation tank influent channel is located directly next to a drain channel. This drain channel was built to remove poorly flocculated water from the treatment train. If an operator observes poor flocculation, they can change the chemical dosing in an attempt to improve flocculation. In the meantime, they will want to dump the poorly flocculated water to avoid poor effluent quality. Operators can plug the entrance hole to the sedimentation bays, allowing the influent channel to fill with water. Once water reaches the height of the wall separating it from the drain channel, the water will pour over from the influent channel into the drain channel. This allows operators to easily dump poorly treated water and then easily restart sedimentation once flocculation performance improves.
 
-.. _heading_Sed_Tank_Bottom_Geometry:
+The sedimentor inlet channel is designed to distribute the flow uniformly between the sedimentation tanks. The flow paths through the various sedimentation tanks are identical except for the difference in the length of the path in the sedimentor inlet channel. Thus the difference in piezometric head in the sedimentor inlet channel must be small compared with the head loss through a sedimentation tank. The head loss through a sedimentation tank is dominated by the outlet manifold which is designed to have a head loss of 5 cm. This 5 cm of head loss is in turn dominated by the orifice head loss as required to achieve uniform flow distribution between the orifices (see :ref:`sedimentation tank outlet manifold <heading_sedimentation_tank_outlet_manifold>`)
 
-Bottom Geometry
------------------
+For a simple conservative design we calculate the maximum channel velocity assuming that the channel cross section is constant. In our designs we slope the bottom of this channel to maintain a constant velocity to ensure that flocs are scoured and don't accumulate at the end of this channel where the velocities would be lower if the cross section were constant.
 
-[RELOCATE IMAGE WHERE RELEVANT]
+We can use :eq:`Energy_and_Pi_Q_no_manifold_hl` to calculate maximum velocity in the sedimentor inlet channel. In this case the average manifold piezometric head, :math:`\bar \Psi_M` ,is measured relative to the water level in the sedimentor that is above the sedimentor exit weir. This difference in elevation is dominated by the 5 cm of head loss created by the orifices in the sedimentor outlet manifold. Solving for the maximum channel velocity we obtain
 
-.. _figure_bottom_of_sed_tank_detail:
+.. math::
+  :label: vM_Energy_and_Pi_Q_no_manifold_hl
 
-.. figure:: ../Images/bottom_of_sed_tank_detail.png
-    :height: 300px
+  \bar v_{M_1} = 2\sqrt{g\bar \Psi_{Sed}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
+
+where :math:`\Pi_{Q}` represents the uniformity of flow distribution taken as the minimum sedimentation tank flow divided by the maximum sedimentation tank flow.
+
+The Ten State Standards states, "The velocity of flocculated water through conduits to settling basins shall not be less than 0.15 m/s nor greater than 0.45 m/s." The lower velocity matches the constraint of ensuring that the velocity is high enough to scour flocs along the bottom of the channel and thus prevent sedimentation. The maximum velocity was presumably set to achieve reasonable flow distribution, but that value is dependent on the head loss through the sedimentation tanks.
+
+`Here we calculate the maximum sedimentor inlet channel velocity as a function of the flow distribution uniformity. <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=8DRdoLVGUmWS&line=3&uniqifier=1>`_
+
+.. _figure_Sedimentor_channel_max_v:
+
+.. figure:: ../Images/Sedimentor_channel_max_v.png
+    :width: 400px
     :align: center
-    :alt: Detail of the bottom of the sedimentation tank.
+    :alt: Sedimentor inlet channel velocity constraints
 
-    Cross-section of the bottom of the sedimentation tank.
+    The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.
+
+The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the sedimentor head loss is 5 cm.
+
+
+.. _heading_sedimentation_tank_inlet_manifold:
+
+Sedimentation Tank Inlet Manifold
+---------------------------------
 
 Now, we will focus on a single bay of the sedimentation system. Flocculated water enters a pipe in the bottom of the influent channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the sedimentation bay. This section of pipe that distributes water at the bottom of the sedimentation bay is referred to as the **influent manifold** shown in :numref:`figure_influent_channel_manifold`.
 
@@ -127,10 +145,6 @@ Now, we will focus on a single bay of the sedimentation system. Flocculated wate
 
     Influent channel with pipe leading to one inlet manifold.
 
-.. _heading_sedimentation_tank_inlet_manifold:
-
-Sedimentation Tank Inlet Manifold
----------------------------------
 
 The port velocity for inlet manifold diffusers is set by the slot width, the width of the sedimentation tank, and the upflow velocity in the sedimentation tank. From mass conservation we have
 
@@ -150,7 +164,7 @@ For sedimentation tanks that are 1.07 m wide, an upflow velocity of 1 mm/s, with
 
 The maximum inlet manifold velocity can now be determined from Equation :eq:`Manifold_max_v_no_hl_series`. Given a port flow ratio of 85% the maximum manifold velocity is about 0.6 m/s.
 
-`Design the inlet manifold <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=ndlvydp8UMFJ&line=7&uniqifier=1>`_
+`Design the inlet manifold based on a simple manifold analysis <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=ndlvydp8UMFJ&line=7&uniqifier=1>`_
 
 Water exits the influent manifold through a series of orifices and **diffusers** in the bottom of the pipe shown in :numref:`figure_influent_manifold_diffuser_base`. Orifices refer to the holes that are drilled into the underside of the manifold while diffusers are what we call short stubs of pipe that extend down from the orifice, perpendicular to the influent manifold. The orifices and diffusers point down to the bottom of the sedimentation bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. The ends of the diffuser tubes are flattened so that they are thin rectangles and when placed side-by-side achieve a line-jet effect. The end of the influent manifold is capped.
 
@@ -205,6 +219,15 @@ The AguaClara solution is to use flow diffusers that simultaneously eliminate ho
     Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation.
 
 The diffusers create a line jet that spans the entire length of the sedimentation tank. This line jet enters the bay going down, but we want the water to ultimately flow up to make our vertical flow sedimentation tank. To get the flow to redirect upwards, we use a **jet reverser**, which is half of a pipe that is laid in the bottom of the bay.
+
+.. _figure_bottom_of_sed_tank_detail:
+
+.. figure:: ../Images/bottom_of_sed_tank_detail.png
+    :height: 300px
+    :align: center
+    :alt: Detail of the bottom of the sedimentation tank.
+
+    Cross-section of the bottom of the sedimentation tank.
 
 You may be wondering, why do we need a jet reverser in the first place? Why don't we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components.
 
@@ -294,7 +317,7 @@ What are the failure modes for this system? For one, we need to ensure that the 
 Jet Reverser
 -------------
 
-The jet reverser is an AguaClara invention for producing stable floc filters. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see Equation :eq:`EDR_JetPlane`) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the sedimentation tank performance will deteriorate.
+The jet reverser is an AguaClara invention for producing stable floc filters. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see Equation :eq:`planejet_EDR`) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the sedimentation tank performance will deteriorate.
 
 Conventional wisdom suggests that breaking up flocs on the way to the sedimentation tank is counter productive. The traditional goal of not breaking flocs led to design of tapered flocculators and guidelines suggesting maximum velocities for transport of those flocs to the sedimentation tank. Dimensional analysis provides the insight that if the constraint for not breaking flocs is actually a velocity, that there must be some way to make that velocity dimensionless if that constraint is rational. In order to identify and characterize the constraint related to floc break up we need to understand the physics of the processes and clearly identify the failure mode.
 
@@ -309,7 +332,7 @@ The maximum fluid shear stress for conservative basis of design should be calcul
 
 The jet reverser can be designed given a maximum fluid shear stress that is calculated based on minimum operating temperature, plate settler capture velocity, and floc density. We do not yet have a comprehensive model for floc properties and thus we are not yet able to calculate floc terminal velocity as a function of composition. We do anticipate that floc density decreases dramatically for flocs that consist primarily of dissolved organics and coagulant.
 
-The goal is to derive an equation that will calculate the maximum jet velocity given the upflow velocity, :math:`v_{z_{ff}}`, and width, :math:`W_{Sed}`, of the sedimentation tank. Begin by eliminating the energy dissipation rate from the fluid shear stress, Equation :eq:`fluid_shear_stress`, by substituting the plane jet energy dissipation rate, Equation :eq:`EDR_JetPlane`.
+The goal is to derive an equation that will calculate the maximum jet velocity given the upflow velocity, :math:`v_{z_{ff}}`, and width, :math:`W_{Sed}`, of the sedimentation tank. Begin by eliminating the energy dissipation rate from the fluid shear stress, Equation :eq:`fluid_shear_stress`, by substituting the plane jet energy dissipation rate, Equation :eq:`planejet_EDR`.
 
 .. math::
   :label: shear_stress_plane_jet
@@ -356,11 +379,89 @@ The ratio of manifold velocity to port velocity can be obtained as the inverse o
 
   \frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}
 
-Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_sed_tank_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
+where the port velocity, :math:`\bar v_{P}`, is equal to the jet velocity, :math:`v_{Jet_{max}}`, from Equation :eq:`max_sed_tank_jet_velocity_of_G`. Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_sed_tank_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
 
 The big unknown is the required design value for :math:`\zeta_{breakup}` as defined in Equation :eq:`G_of_vc_and_floc_props`. The expectation is that raw waters with high concentrations of organic matter will have lower density core particles and thus will require a smaller :math:`\zeta_{breakup}` for successful capture of the lower density flocs.
 
-The maximum velocity that could be carried by the inlet manifold given the flow expansion corresponding to the inlet can be calculated using Equation :eq:`D_pipe_min_of_K_and_jet_G_max`.
+The maximum velocity that could be carried by the inlet manifold given the flow expansion corresponding to the inlet can be calculated using Equation :eq:`D_pipe_min_of_K_and_jet_G_max`. This constraint would allow the use of a smaller diameter inlet manifold than the velocity constraint required by Equation :eq:`max_sed_tank_manifold_velocity`.
+
+The result of the requirement for a low velocity jet to prevent floc break up is that the inlet manifold has to be large in diameter to obtain reasonably uniform flow distribution between the diffusers. This constraint is fairly severe and results in large diameter (and hence expensive) inlet manifold pipes.
+
+The fundamental problem of the inlet manifold is that the diffusers exit perpendicular to the flow of the water in the inlet manifold and thus the flow into the diffusers is set by the difference in piezometric head between the manifold and the floc filter. The kinetic energy at the inlet of the manifold is converted to increased pressure at the end of the manifold. That results in more flow out of the last diffuser ports.
+
+An alternative design would be to have each of the diffuser pipes end inside the manifold with an elbow so that the inlet to the diffuser would face upstream. This change would potentially improve the flow distribution between diffuser pipes, but the large number of diffuser pipes makes this impossible to fabricate without introducing significant additional head loss in the manifold pipe from drag around all of the diffuser inlets.
+
+To overcome the impossibility of having higher velocity in the inlet manifold and directly connecting that to the diffusers we propose to use a two stage manifold system. The manifold pipe will be split into two chambers with the top chamber being the inlet manifold and the bottom section being a new equalization chamber (see :numref:`figure_2stageInletManifold`).
+
+
+.. _figure_2stageInletManifold:
+
+.. figure:: ../Images/2stageInletManifold.png
+    :width: 400px
+    :align: center
+    :alt: two stage inlet manifold
+
+    The two stage inlet manifold with upper chamber acting as the inlet manifold and the lower chamber acting to equalize the flow from the diffusers (not shown).
+
+The inlet manifold flow is transferred to the equalization chamber through half-pipe ports that are tapered (see :numref:`figure_2stageInletManifoldfromUpstream`) to guide flow into the equalization chamber. The taper is designed to be less than the rate of the flow expansion as given by Equation :eq:`PlaneJet_expansion`.
+
+.. _figure_2stageInletManifoldfromUpstream:
+
+.. figure:: ../Images/2stageInletManifoldfromUpstream.png
+    :width: 400px
+    :align: center
+    :alt: two stage inlet manifold from upstream
+
+    The half-pipe ports face upstream and slope at a rate that is slower than the rate at which the flow expands to ensure that the flow is fully expanded before the entrance into the next half-pipe port.
+
+The manifold system must be designed so that the velocity gradient in all flow expansions is less than the maximum allowed velocity gradient. The minimum diameter of the inlet manifold is set by the largest minor loss coefficient (see Equation :eq:`D_pipe_min_of_K_and_jet_G_max`) which is created by the 90° elbow.
+
+
+.. _heading_sedimentation_tank_outlet_manifold:
+
+Sedimentation Tank Outlet Manifold
+----------------------------------
+
+The sedimentation tank outlet manifold collects the clarified water from the top of the plate setters. The outlet manifold is required to help ensure uniform flow up through the plate settlers.  The outlet manifold has orifices and it is these orifices that provide the majority of the head loss through the sedimentation tank. The target head loss for the outlet manifold is about 5 cm. This head loss helps ensure that flow divides evenly between sedimentation tanks and divides evenly between the plate settlers.
+
+The outlet head loss is dominated by the orifice loss and by the exit loss where the manifold exits the sedimentation tank and enters a channel. The total head loss through the outlet manifold, :math:`h_{e_{T}}`, is thus the sum of those two losses. If pipes were made of all possible diameters, then the ratio of orifice to manifold velocity would be exactly given by Equation :eq:`Manifold_max_v_no_hl_series` and that relationship can be used to eliminate the port velocity.
+
+.. math::
+  :label: Outlet_manifold_hl
+
+   h_{e_{T}} = h_{e_{P}} + h_{e_{M}} = \frac{\bar v_{P}^2}{2g} + \frac{\bar v_{M}^2}{2g} =\frac{\bar v_{M}^2}{2g} \left(\frac{1}{\sqrt{{\Pi_{\Psi}}}} + 1 \right)
+
+The maximum manifold velocity can be obtained by solving Equation :eq:`Outlet_manifold_hl` for the manifold velocity.
+
+.. math::
+  :label: Outlet_manifold_hl
+
+  \bar v_{M_{max}} = \sqrt{\frac{2 g h_{e_{T}}\sqrt{{\Pi_{\Psi}}}}{\sqrt{{\Pi_{\Psi}}} + 1}}
+
+The solution steps are as follows:
+
+1) Calculate the minimum manifold diameter from continuity and the maximum allowable manifold velocity, :math:`\bar v_{M_{max}}`.
+1) Calculate the manifold inner diameter from the next available pipe size.
+1) Calculate the actual manifold velocity.
+1) Calculate the manifold exit head loss.
+1) Calculate the required orifice head loss by subtracting the manifold exit head loss from the desired total head loss.
+1) Calculate the orifice diameter from the orifice head loss and the orifice flow rate given the number of orifices.
+
+The head loss through the sedimentation tank is due to:
+
+* entrance and elbow in influent manifold
+* major losses in influent manifold (negligible)
+* diffuser exit loss
+* floc filter (negligible)
+* plate settlers (negligible)
+* effluent manifold orifices
+* effluent manifold major loss (negligible)
+* effluent manifold exit
+
+It is convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm so that influent and effluent weirs always have the same elevation difference. The effluent manifold orifices are be designed for whatever head loss is required to meet that target.
+
+.. _heading_sedimentor_inlet_channel:
+
 
 
 .. _heading_Sed_Tank_Velocity_Flow:
@@ -375,7 +476,7 @@ To understand how water flows in the sedimentation tank, we must understand how 
 #. The velocity of water that enters the plate settlers.
 #. The velocity of water through the plate settlers.
 
-The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v * A`, will be our guiding principle. In all cases,
+The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v A`, will be our guiding principle. In all cases,
 
 | :math:`Q_{Sed} =` flow rate through each sedimentation tank
 | :math:`W_{Sed} =` width of each sedimentation tank
@@ -657,7 +758,7 @@ What we really want to know is: what is the connection between spacing of plate 
     :align: center
     :alt: Relationship between plate settler length and sedimentation tank depth.
 
-    Relationship between plate settler length and sedimentation tank depth.
+    Relationship between plate settler spacing and sedimentation tank depth.
 
 When we were discussed how plate settlers promote settling, we assumed a uniform velocity profile between the plates. However, we know from fluid mechanics and boundary layer rules that in reality, there is a nonuniform velocity profile. The flow between the plates, as determined by the Reynolds number, is laminar which means that there is a parabolic velocity profile between the plates and the shape of the parabola is affected by the distance between the plates.
 
@@ -693,18 +794,20 @@ As we have already suggested, small spacing between plates will cause more floc 
 
 So what does this mean for plate settler spacing? Let's review some results from lab experiments. The following graph shows minimum plate settler spacing (mm) as a function of floc terminal velocity (mm/s). Some important things to note are that AguaClara plate settlers are designed for a capture velocity of 0.12 mm/s (recall that this capture velocity means that we want to capture flocs that are settling at 0.12 mm/s and faster). Before AguaClara filters were designed and deployed, AguaClara adopted the 0.12 mm/s capture velocity in an effort to reduce effluent turbidity as much as possible.
 
-Reading the graph, we can see the line for 1 mm/s upflow velocity in the sedimentation tank, :math:`v_{z_{ff}}`, at 0.12 mm/s capture velocity requires a minimum plate spacing of about about 2.5 mm to prevent floc rollup. Now, let's interpret this result. If the upflow velocity increases, we see that the required spacing between plates increases. The results from these experiments will help us answer one of our previous questions: will little flocs or big flocs be most vulnerable to floc rollup? From the graph, we know that it is the little ones. Smaller floc terminal velocities indicate smaller particles, and the graph shows that smaller floc terminal velocities require larger distances of floc spacing to not roll up. The bigger the flocs, the smaller the spacing required to not roll up. Little flocs are harder to capture as you move plates closer together. Little flocs roll up first.
+A plot of Equation :eq:`Plate_S_min_of_fractal_of_2` reveals that the minimum spacing is strongly influenced by the density of the core particle and by the temperature. The minimum spacing increases as the size of the primary particle, :math:`D_{cp}`, decreases. This is an important insight because flocs that are made of coagulant nanoparticles and dissolved organics are the most difficult flocs to capture. Flocs made of coagulant nanoparticles are less dense than flocs made of clay. Coagulant nanoparticle flocs are produced when water treatment plants are used to remove dissolved organics or arsenic or when high coagulant dosages are used.
 
-.. _figure_floc_vsed:
+.. _figure_SofRollupwithfractal2:
 
-.. figure:: ../Images/floc_vsed.png
-    :height: 300px
-    :align: center
-    :alt: Minimum plate settler spacing as a function of floc sedimentation velocity.
+.. figure:: ../Images/SofRollupwithfractal2.png
+   :height: 300px
+   :align: center
+   :alt: Floc roll up as a function of core particle density and temperatures
 
-    Minimum plate settler spacing as a function of floc sedimentation velocity.
+   Plate settler spacing must increase to capture low density flocs.
 
-This analysis suggests that the Standard design is nowhere near the constraint of floc roll up (recall that Standard design reports separations of 5 cm). AguaClara plate settlers are currently using separations of 2.5 cm, which is also far above the constraint of floc roll up. So if we determined that the minimum spacing for floc roll up constraints is closer to 2.5 mm, why are we using 2.5 cm? The answer is related to our initial assumptions about the floc composition and terminal velocity. When we calculated terminal velocities, we did so for clay-based flocs. But in reality, there are many kinds of flocs formed in water treatment plants. Dissolved organic matter also interacts with coagulant to form flocs that we assume are much less dense than clay based flocs. We don't currently have a good model to understand how these organic-matter flocs. We don't know what the terminal velocity of flocs is if they are made of organics, coagulant, and clay. But even without knowing specifics, how do we think minimum plate spacing will be impacted by flocs that are formed from organic matter instead of clay? If we use dissolved organic matter, the equation predicts that spacing will change primarily due to the big difference in floc density. As floc density decreases, as we expect for organic matter, minimum spacing increases. However, we don't yet know what that spacing is or where the boundary is because we don't know the properties of the humic acid-coagulant flocs. This prompts us to opt for safety factors, so we have chosen a plate settler spacing of 2.5 cm. There is room to learn more here.
+Given that AguaClara uses a lower upflow velocity, :math:`\bar v_{z_{Plate}}`, than many plate settler designs it is reasonable for us to use more closely spaced plates. More work is required to characterize the density and size of the core particles as a function of raw water constituents to provide guidance on the required plate spacing.
+
+AguaClara plate settlers are currently using separations of 2.5 cm, which is far above the constraint of floc roll up except for very low density flocs. As floc density decreases, as we expect for organic matter, minimum spacing increases. However, we don't yet know what that spacing is or where the boundary is because we don't know the properties of the humic acid-coagulant flocs. Further research is required here to determine the floc properties of flocs that are dominated by dissolved organic matter.
 
 Why does the plate settling distance matter so much? How much does it impact the rest of the sedimentation tank and its design?
 
@@ -712,7 +815,7 @@ One impact of plate settler spacing is on sedimentation tank depth. We know that
 
 .. _heading_Sed_Tank_Plate_Settlers_Head_Loss_Intro:
 
-Another impact of plate settler spacing is on flow distribution in the tank. This is related to our previous discussion of pressure recovery and flow distribution. Reduced spacing between plates leads to an increased pressure drop through the plate settlers due to higher head loss. Therefore, plate settlers with small spacing will have more uniform flow distributions because head loss will dominate. The pressure difference between one plate settler and the next would be very small compared to the pressure difference between the bottom of the plate settlers and the top of the plate settlers. This use of head loss can potentially get us better flow distribution. When the plates are brought closer together, there is more shear between the plates because the average velocity remains the same. The velocity gradient is higher between closer plates, which leads to higher shear, and thus higher head loss.
+Another impact of plate settler spacing is on flow distribution in the tank. This is related to our previous discussion of pressure recovery and flow distribution. Reduced spacing between plates leads to an increased pressure drop through the plate settlers due to higher head loss as shown in Equation :eq:`plate_settler_headloss`. Therefore, plate settlers with small spacing will have more uniform flow distributions because head loss will dominate. This use of head loss can potentially get us better flow distribution. When the plates are brought closer together, there is more shear between the plates because the average velocity remains the same. The velocity gradient is higher between closer plates, which leads to higher shear, and thus higher head loss.
 
 However, if the plates are closer together, then they will be shorter in length to keep the capture velocity constant. The decrease in length decreases the total amount of shear. The head loss from the competing impacts to shear can be determined through a force balance and the Navier-Stokes equation, as shown in the derivation of :ref:`head loss through a plate settler <heading_Sed_Tank_Hl_thru_Plate_Settlers>`.
 
@@ -725,9 +828,12 @@ However, if the plates are closer together, then they will be shorter in length 
 
    Head loss as a function of plate settler spacing.
 
-The important thing to note is that after determining head loss as a function of plate settler spacing, we realize that the plate settlers do not provide much head loss at the design separation of 2.5 cm. Head loss through plate settlers is really small, which means that they do not contribute much to equalizing flow distribution. So, is this head loss "good" or "bad"? It is neither because it is so small that it is negligible in our overall system.
+The important thing to note is that after determining head loss as a function of plate settler spacing, we realize that the plate settlers do not provide much head loss at the design separation of 2.5 cm. Head loss through plate settlers is really small, which means that they do not contribute much to equalizing flow distribution.
 
-The velocities of any eddies or mean flow need to be less than 4 mm/s to achieve uniform flow through plate settlers. This means that if there is any flow entering the plate settlers at greater than 4 mm/s, the head loss provided by the plate settlers will not help at all to dampen the nonuniformity and there will not be adequate flow distribution. Luckily for us, the upflow velocity through the sedimentation tank is on average 1 mm/s, which fulfills the requirement of less than 4 mm/s. However, remember the diffusers that distribute water into the sedimentation tank? They create velocities on the order of 100s of mm/s. Those high initial velocities are damped out by the floc filter which helps to distribute the flow. If we weren't able to use the floc filter to dampen the flow to be less than 4 mm/s, then the plate settlers would not provide any head loss to help with uniform flow distribution. This point about uniform flow is really important.
+The velocities of any eddies or mean flow need to be less than 4 mm/s to achieve uniform flow through plate settlers. This means that if there is any flow entering the plate settlers at greater than 4 mm/s, the head loss provided by the plate settlers will not be sufficient to dampen the nonuniformity and there will not be adequate flow distribution. Luckily for us, the upflow velocity through the sedimentation tank is on average 1 mm/s, which fulfills the requirement of less than 4 mm/s. The floc filter plays a very important role here in providing uniform vertical flow of 1 mm/s so that the flow between the plate settlers can be close to uniform.
+
+
+However, remember the diffusers that distribute water into the sedimentation tank? They create velocities on the order of 100 mm/s. Those high initial velocities are damped out by the floc filter which helps to distribute the flow. If we weren't able to use the floc filter to dampen the flow to be less than 4 mm/s, then the plate settlers would not provide any head loss to help with uniform flow distribution. This point about uniform flow is really important.
 
 .. _heading_Floc_Volcano_Intro:
 

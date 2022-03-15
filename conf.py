@@ -60,8 +60,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'AguaClara Textbook'
-copyright = '2021, AguaClara Cornell'
-author = 'AguaClara Cornell'
+copyright = '2022, AguaClara Reach'
+author = 'AguaClara Reach'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -180,7 +180,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'AguaClaraTextbook.tex', 'AguaClara Textbook Documentation',
-     'AguaClara Cornell', 'manual'),
+     'AguaClara Reach', 'manual'),
 ]
 
 
