@@ -128,12 +128,11 @@ The Ten State Standards states, "The velocity of flocculated water through condu
 
 The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the sedimentor head loss is 5 cm.
 
-.. _heading_Sed_Tank_Bottom_Geometry:
 
-Bottom Geometry
------------------
+.. _heading_sedimentation_tank_inlet_manifold:
 
-
+Sedimentation Tank Inlet Manifold
+---------------------------------
 
 Now, we will focus on a single bay of the sedimentation system. Flocculated water enters a pipe in the bottom of the influent channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the sedimentation bay. This section of pipe that distributes water at the bottom of the sedimentation bay is referred to as the **influent manifold** shown in :numref:`figure_influent_channel_manifold`.
 
@@ -146,10 +145,6 @@ Now, we will focus on a single bay of the sedimentation system. Flocculated wate
 
     Influent channel with pipe leading to one inlet manifold.
 
-.. _heading_sedimentation_tank_inlet_manifold:
-
-Sedimentation Tank Inlet Manifold
----------------------------------
 
 The port velocity for inlet manifold diffusers is set by the slot width, the width of the sedimentation tank, and the upflow velocity in the sedimentation tank. From mass conservation we have
 
