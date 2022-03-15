@@ -391,6 +391,85 @@ The inlet manifold flow is transferred to the equalization chamber through half-
 
     The half-pipe ports face upstream and slope at a rate that is slower than the rate at which the flow expands to ensure that the flow is fully expanded before the entrance into the next half-pipe port.
 
+The manifold system must be designed so that the velocity gradient in all flow expansions is less than the maximum allowed velocity gradient. The minimum diameter of the inlet manifold is set by the largest minor loss coefficient (see Equation :eq:`D_pipe_min_of_K_and_jet_G_max`) which is created by the 90° elbow.
+
+
+.. _heading_sedimentation_tank_outlet_manifold:
+
+Sedimentation Tank Outlet Manifold
+----------------------------------
+
+The sedimentation tank outlet manifold collects the clarified water from the top of the plate setters. The outlet manifold is required to help ensure uniform flow up through the plate settlers.  The outlet manifold has orifices and it is these orifices that provide the majority of the head loss through the sedimentation tank. The target head loss for the outlet manifold is about 5 cm. This head loss helps ensure that flow divides evenly between sedimentation tanks and divides evenly between the plate settlers.
+
+The outlet head loss is dominated by the orifice loss and by the exit loss where the manifold exits the sedimentation tank and enters a channel. The total head loss through the outlet manifold, :math:`h_{e_{T}}`, is thus the sum of those two losses. If pipes were made of all possible diameters, then the ratio of orifice to manifold velocity would be exactly given by Equation :eq:`Manifold_max_v_no_hl_series` and that relationship can be used to eliminate the port velocity.
+
+.. math::
+  :label: Outlet_manifold_hl
+
+   h_{e_{T}} = h_{e_{P}} + h_{e_{M}} = \frac{\bar v_{P}^2}{2g} + \frac{\bar v_{M}^2}{2g} =\frac{\bar v_{M}^2}{2g} \left(\frac{1}{\sqrt{{\Pi_{\Psi}}}} + 1 \right)
+
+The maximum manifold velocity can be obtained by solving Equation :eq:`Outlet_manifold_hl` for the manifold velocity.
+
+.. math::
+  :label: Outlet_manifold_hl
+
+  \bar v_{M_{max}} = \sqrt{\frac{2 g h_{e_{T}}\sqrt{{\Pi_{\Psi}}}}{\sqrt{{\Pi_{\Psi}}} + 1}}
+
+The solution steps are as follows:
+
+1) Calculate the minimum manifold diameter from continuity and the maximum allowable manifold velocity, :math:`\bar v_{M_{max}}`.
+1) Calculate the manifold inner diameter from the next available pipe size.
+1) Calculate the actual manifold velocity.
+1) Calculate the manifold exit head loss.
+1) Calculate the required orifice head loss by subtracting the manifold exit head loss from the desired total head loss.
+1) Calculate the orifice diameter from the orifice head loss and the orifice flow rate given the number of orifices.
+
+The head loss through the sedimentation tank is due to:
+
+* entrance and elbow in influent manifold
+* major losses in influent manifold (negligible)
+* diffuser exit loss
+* floc filter (negligible)
+* plate settlers (negligible)
+* effluent manifold orifices
+* effluent manifold major loss (negligible)
+* effluent manifold exit
+
+It is convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm so that influent and effluent weirs always have the same elevation difference. The effluent manifold orifices are be designed for whatever head loss is required to meet that target.
+
+.. _heading_sedimentor_inlet_channel:
+
+Sedimentor Inlet Channel
+========================
+
+The sedimentor inlet channel is designed to distribute the flow uniformly between the sedimentation tanks. The flow paths through the various sedimentation tanks are identical except for the difference in the length of the path in the sedimentor inlet channel. Thus the difference in piezometric head in the sedimentor inlet channel must be small compared with the head loss through a sedimentation tank. The head loss through a sedimentation tank is dominated by the outlet manifold which is designed to have a head loss of 5 cm. This 5 cm of head loss is in turn dominated by the orifice head loss as required to achieve uniform flow distribution between the orifices (see :ref:`sedimentation tank outlet manifold <heading_sedimentation_tank_outlet_manifold>`)
+
+For a simple conservative design we calculate the maximum channel velocity assuming that the channel cross section is constant. In our designs we slope the bottom of this channel to maintain a constant velocity to ensure that flocs are scoured and don't accumulate at the end of this channel where the velocities would be lower if the cross section were constant.
+
+We can use :eq:`Energy_and_Pi_Q_no_manifold_hl` to calculate maximum velocity in the sedimentor inlet channel. In this case the average manifold piezometric head, :math:`\bar \Psi_M` ,is measured relative to the water level in the sedimentor that is above the sedimentor exit weir. This difference in elevation is dominated by the 5 cm of head loss created by the orifices in the sedimentor outlet manifold. Solving for the maximum channel velocity we obtain
+
+.. math::
+  :label: vM_Energy_and_Pi_Q_no_manifold_hl
+
+  \bar v_{M_1} = 2\sqrt{g\bar \Psi_{Sed}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
+
+where :math:`\Pi_{Q}` represents the uniformity of flow distribution taken as the minimum sedimentation tank flow divided by the maximum sedimentation tank flow.
+
+The Ten State Standards states, "The velocity of flocculated water through conduits to settling basins shall not be less than 0.15 m/s nor greater than 0.45 m/s." The lower velocity matches the constraint of ensuring that the velocity is high enough to scour flocs along the bottom of the channel and thus prevent sedimentation. The maximum velocity was presumably set to achieve reasonable flow distribution, but that value is dependent on the head loss through the sedimentation tanks.
+
+`Here we calculate the maximum sedimentor inlet channel velocity as a function of the flow distribution uniformity. <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=8DRdoLVGUmWS&line=3&uniqifier=1>`_
+
+.. _figure_Sedimentor_channel_max_v:
+
+.. figure:: ../Images/Sedimentor_channel_max_v.png
+    :width: 400px
+    :align: center
+    :alt: Sedimentor inlet channel velocity constraints
+
+    The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.
+
+The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the sedimentor head loss is 5 cm. 
+
 .. _heading_Sed_Tank_Velocity_Flow:
 
 Comparison of Velocities and Flow in Sedimentation Tank
@@ -403,7 +482,7 @@ To understand how water flows in the sedimentation tank, we must understand how 
 #. The velocity of water that enters the plate settlers.
 #. The velocity of water through the plate settlers.
 
-The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v * A`, will be our guiding principle. In all cases,
+The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v A`, will be our guiding principle. In all cases,
 
 | :math:`Q_{Sed} =` flow rate through each sedimentation tank
 | :math:`W_{Sed} =` width of each sedimentation tank

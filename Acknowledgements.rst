@@ -45,4 +45,4 @@ More gratitude below!
  - Countless other donors whose contributions have made it possible to develop new technologies and share those technologies with partner organizations and communities
  - Many hundreds of students who gave their time and creativity so that others could have safe water on tap
  - The Swiss Development Cooperation that has funded the construction of 5 AguaClara plants in Honduras and 2 in Nicaragua
- - The Cornell Engineering that provided generous funding in the startup years.
+ - Cornell Engineering for providing generous funding in the startup years.
