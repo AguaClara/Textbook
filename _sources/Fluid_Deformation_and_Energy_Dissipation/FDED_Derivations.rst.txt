@@ -990,7 +990,7 @@ where D is the jet diameter at the origin. A round jet has twice the circumferen
   \Pi_{JetPlane} = 0.04
 
 
-what is This
+The energy dissipation rate is defined in the same way as for round jets in Equation :eq:`roundjet_EDR`.
 
 .. math::
   :label: planejet_EDR
