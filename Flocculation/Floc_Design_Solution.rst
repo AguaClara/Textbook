@@ -40,7 +40,7 @@ That way you will be able to easily vary any of the three main input parameters 
 
 **1) Estimate the average velocity gradient** of a flocculator given head loss and collision potential. I’m going to solve this problem for you so you see how to use function calls.
 
-`See solution here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=btxgm0xvmw7M&line=2&uniqifier=1>`_
+`See flocculator design solution here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=btxgm0xvmw7M&line=2&uniqifier=1>`_
 
 The average velocity gradient of flocculator is 93.24 / second
 

@@ -279,11 +279,8 @@ Example treatment trains include:
  - AguaClara: hydraulic flocculation, floc filter, lamellar sedimentation, stacked rapid sand filtration, disinfection
  - Membrane filtration: flocculation, sedimentation, rapid sand filtration, granular or powdered activated carbon, pre-oxidation (see `Review Article <https://pubs-acs-org.proxy.library.cornell.edu/doi/abs/10.1021%2Fes802473r>`_)
 
-.. _heading_Textbook_Philosophy:
 
-An Evolving Research Approach
------------------------------
-=======
+
 .. _heading_The_AguaClara_Treatment_Train:
 
 The AguaClara Treatment Train
@@ -498,7 +495,7 @@ In We Make the Road by Walking: Conversations on Education and Social Change, Pa
 .. _heading_Myth_in_Environmental_Engineering:
 
 Myths in Environmental Engineering
----------------------------------
+----------------------------------
 
 The following list is designed to get you thinking. These are concepts that are present in the Environmental Engineering community and that may capture some elements of truth and that may also further misconceptions.
 
