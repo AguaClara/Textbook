@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Filtration Introduction &mdash; AguaClara Textbook 277/merge documentation</title>
+  <title>Filtration Introduction &mdash; AguaClara Textbook 278/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                277/merge
+                278/merge
               </div>
             
           
@@ -194,11 +194,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Fluoride</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#high-head-loss-after-backwash-in-estars">High Head Loss After Backwash in EStaRS</a></li>
@@ -208,7 +204,7 @@
 <p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equation Quick Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
@@ -533,8 +529,8 @@
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-2">
 <span class="eqno">(662)<a class="headerlink" href="#equation-filtration-filtration-intro-2" title="Permalink to this equation">¶</a></span>\[\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
 <p>Which simplifies to:</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-3">
-<span class="eqno">(663)<a class="headerlink" href="#equation-filtration-filtration-intro-3" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}\\or\\h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-headloss-bw-sand">
+<span class="eqno">(663)<a class="headerlink" href="#equation-headloss-bw-sand" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
 <p>This result gives a ratio of the head loss during backwash to the height difference during forward operation. With <span class="math notranslate nohighlight">\(\phi_{FiSand} = 0.4\)</span> and <span class="math notranslate nohighlight">\(\rho_{Sand} = 2650 kg/m^3\)</span> the value of this ratio is:</p>
 <div class="math notranslate nohighlight" id="equation-eq-min-fluidization-velocity">
 <span class="eqno">(664)<a class="headerlink" href="#equation-eq-min-fluidization-velocity" title="Permalink to this equation">¶</a></span>\[\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\]</div>
@@ -682,14 +678,14 @@ As particles gradually deposit in an ever shrinking flow constriction, the veloc
 </dd>
 </dl>
 <p>The average distance between sand grains in a filter bed is obtained by taking the cube root of the total volume occupied by a sand grain including the pore space. We also assume that there is a one-to-one correspondence between pores and sand grains and thus the distance between pores is the same as the distance between sand grains.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-4">
-<span class="eqno">(668)<a class="headerlink" href="#equation-filtration-filtration-intro-4" title="Permalink to this equation">¶</a></span>\[\Lambda_{sand} = \Lambda_{pore} = \left(\frac{\pi}{6(1-\phi)} \right)^\frac{1}{3}D_{sand}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-3">
+<span class="eqno">(668)<a class="headerlink" href="#equation-filtration-filtration-intro-3" title="Permalink to this equation">¶</a></span>\[\Lambda_{sand} = \Lambda_{pore} = \left(\frac{\pi}{6(1-\phi)} \right)^\frac{1}{3}D_{sand}\]</div>
 <p>The flow rate per pore is the approach velocity multiplied by <span class="math notranslate nohighlight">\(\Lambda^2\)</span>.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-5">
-<span class="eqno">(669)<a class="headerlink" href="#equation-filtration-filtration-intro-5" title="Permalink to this equation">¶</a></span>\[Q_{pore} = v_a \Lambda_{pore}^2\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-4">
+<span class="eqno">(669)<a class="headerlink" href="#equation-filtration-filtration-intro-4" title="Permalink to this equation">¶</a></span>\[Q_{pore} = v_a \Lambda_{pore}^2\]</div>
 <p>The velocity through a constriction in a pore is</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-6">
-<span class="eqno">(670)<a class="headerlink" href="#equation-filtration-filtration-intro-6" title="Permalink to this equation">¶</a></span>\[Q_{pore} = v_a \Lambda_{pore}^2 = \frac{\pi}{4} D_{constriction}^2v_{constriction}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-5">
+<span class="eqno">(670)<a class="headerlink" href="#equation-filtration-filtration-intro-5" title="Permalink to this equation">¶</a></span>\[Q_{pore} = v_a \Lambda_{pore}^2 = \frac{\pi}{4} D_{constriction}^2v_{constriction}\]</div>
 <p>The constriction diameter is thus given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-d-constriction">
 <span class="eqno">(671)<a class="headerlink" href="#equation-eq-d-constriction" title="Permalink to this equation">¶</a></span>\[  D_{constriction} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction}}\]</div>
@@ -699,27 +695,27 @@ As particles gradually deposit in an ever shrinking flow constriction, the veloc
 <p>The jet issuing from the constrictions is laminar for Reynolds numbers below 500 (<a class="reference external" href="https://dspace.mit.edu/handle/1721.1/27517">see Ungate et al., 1975 page 13</a>).  The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. We don’t have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.</p>
 <p>The rate of jet expansion can be obtained from an analytical solution of the Navier Stokes equation as shown by <a class="reference external" href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99">Pai, S.I., Fluid dynamics of jets. (D. Van Nostrand Company, Inc., Princeton, NJ, 1954 (pages 78-79)</a></p>
 <p>The momentum in the direction of flow is conserved and is given by</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-7">
-<span class="eqno">(673)<a class="headerlink" href="#equation-filtration-filtration-intro-7" title="Permalink to this equation">¶</a></span>\[M_0 = 2 \pi \rho \int_{0}^{\infty} u^2 r dr\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-6">
+<span class="eqno">(673)<a class="headerlink" href="#equation-filtration-filtration-intro-6" title="Permalink to this equation">¶</a></span>\[M_0 = 2 \pi \rho \int_{0}^{\infty} u^2 r dr\]</div>
 <p>For the case of uniform velocity through the constriction we can replace <span class="math notranslate nohighlight">\(\infty\)</span> with <span class="math notranslate nohighlight">\(r_{constriction}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-7">
+<span class="eqno">(674)<a class="headerlink" href="#equation-filtration-filtration-intro-7" title="Permalink to this equation">¶</a></span>\[M_0 = 2 \pi \rho v_{constriction}^2 \int_{0}^{r_{constriction}}  r dr\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-8">
-<span class="eqno">(674)<a class="headerlink" href="#equation-filtration-filtration-intro-8" title="Permalink to this equation">¶</a></span>\[M_0 = 2 \pi \rho v_{constriction}^2 \int_{0}^{r_{constriction}}  r dr\]</div>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-9">
-<span class="eqno">(675)<a class="headerlink" href="#equation-filtration-filtration-intro-9" title="Permalink to this equation">¶</a></span>\[M_0 = \pi \rho v_{constriction}^2 r_{constriction}^2 = \rho Q_{pore}v_{constriction}\]</div>
+<span class="eqno">(675)<a class="headerlink" href="#equation-filtration-filtration-intro-8" title="Permalink to this equation">¶</a></span>\[M_0 = \pi \rho v_{constriction}^2 r_{constriction}^2 = \rho Q_{pore}v_{constriction}\]</div>
 <p>The velocity in the direction of the jet is given by (equation 4.39 in <a class="reference external" href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99">Pai, 1954</a>)</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-9">
+<span class="eqno">(676)<a class="headerlink" href="#equation-filtration-filtration-intro-9" title="Permalink to this equation">¶</a></span>\[u = \frac{3M_0}{8\pi \mu} \frac{1}{x} \frac{1}{\left[1+(\frac{\zeta_{jet}^2}{4})\right]^2}\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-10">
-<span class="eqno">(676)<a class="headerlink" href="#equation-filtration-filtration-intro-10" title="Permalink to this equation">¶</a></span>\[u = \frac{3M_0}{8\pi \mu} \frac{1}{x} \frac{1}{\left[1+(\frac{\zeta_{jet}^2}{4})\right]^2}\]</div>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-11">
-<span class="eqno">(677)<a class="headerlink" href="#equation-filtration-filtration-intro-11" title="Permalink to this equation">¶</a></span>\[\zeta_{jet} = \frac{1}{4\nu} \left(\frac{3M_0}{\pi\rho}\right)^{\frac{1}{2}} \frac{r}{x}\]</div>
+<span class="eqno">(677)<a class="headerlink" href="#equation-filtration-filtration-intro-10" title="Permalink to this equation">¶</a></span>\[\zeta_{jet} = \frac{1}{4\nu} \left(\frac{3M_0}{\pi\rho}\right)^{\frac{1}{2}} \frac{r}{x}\]</div>
 <p>and thus <span class="math notranslate nohighlight">\(\zeta\)</span> is zero at the centerline.  We will use the centerline velocity at distance <span class="math notranslate nohighlight">\(\Lambda_{pore}\)</span> from the constriction to estimate the head loss caused by one constriction.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-12">
-<span class="eqno">(678)<a class="headerlink" href="#equation-filtration-filtration-intro-12" title="Permalink to this equation">¶</a></span>\[v_{exp} = \frac{3\rho Q_{pore}v_{constriction}}{8\pi \mu \Lambda_{pore}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-11">
+<span class="eqno">(678)<a class="headerlink" href="#equation-filtration-filtration-intro-11" title="Permalink to this equation">¶</a></span>\[v_{exp} = \frac{3\rho Q_{pore}v_{constriction}}{8\pi \mu \Lambda_{pore}}\]</div>
 <p>We can substitute for <span class="math notranslate nohighlight">\(Q_{pore}\)</span> to obtain</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-13">
-<span class="eqno">(679)<a class="headerlink" href="#equation-filtration-filtration-intro-13" title="Permalink to this equation">¶</a></span>\[v_{exp} =  \frac{3 v_a \Lambda_{pore} }{8\pi \nu }v_{constriction}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-12">
+<span class="eqno">(679)<a class="headerlink" href="#equation-filtration-filtration-intro-12" title="Permalink to this equation">¶</a></span>\[v_{exp} =  \frac{3 v_a \Lambda_{pore} }{8\pi \nu }v_{constriction}\]</div>
 <p>We can use mass conservation and the equation for <span class="math notranslate nohighlight">\(Q_{pore}\)</span> to replace <span class="math notranslate nohighlight">\(v_a\)</span> with <span class="math notranslate nohighlight">\(v_{constriction}\)</span></p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-14">
-<span class="eqno">(680)<a class="headerlink" href="#equation-filtration-filtration-intro-14" title="Permalink to this equation">¶</a></span>\[v_{exp} =  \frac{3}{32}\frac{D_{constriction}}{\Lambda_{pore}}Re_{jet}v_{constriction}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-13">
+<span class="eqno">(680)<a class="headerlink" href="#equation-filtration-filtration-intro-13" title="Permalink to this equation">¶</a></span>\[v_{exp} =  \frac{3}{32}\frac{D_{constriction}}{\Lambda_{pore}}Re_{jet}v_{constriction}\]</div>
 <p>It isn’t yet clear if this always means that <span class="math notranslate nohighlight">\(v_{exp}\)</span> will be very small compared with <span class="math notranslate nohighlight">\(v_{constriction}\)</span>, but that seems to be the logical conclusion. Thus when calculating the head loss for a pore it is reasonable to assume that the kinetic energy of the jet is all lost before entering the next constriction.</p>
 </div>
 <div class="section" id="sedimentation-impacts">
@@ -730,17 +726,17 @@ As particles gradually deposit in an ever shrinking flow constriction, the veloc
 <div class="section" id="velocity-gradient">
 <h3>Velocity Gradient<a class="headerlink" href="#velocity-gradient" title="Permalink to this headline">¶</a></h3>
 <p>Almost all of the kinetic energy of the jet issuing from the constriction is dissipated in the downstream pore. We will assume that the majority of the head loss is due to the jet (rather than wall shear). The volume of a pore is given by</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-15">
-<span class="eqno">(681)<a class="headerlink" href="#equation-filtration-filtration-intro-15" title="Permalink to this equation">¶</a></span>\[\rlap{-} V_{pore} = \phi\Lambda_{pore}^3\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-14">
+<span class="eqno">(681)<a class="headerlink" href="#equation-filtration-filtration-intro-14" title="Permalink to this equation">¶</a></span>\[\rlap{-} V_{pore} = \phi\Lambda_{pore}^3\]</div>
 <p>The hydraulic residence time in a pore is obtained from the volume and flow rate through a pore.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-16">
-<span class="eqno">(682)<a class="headerlink" href="#equation-filtration-filtration-intro-16" title="Permalink to this equation">¶</a></span>\[\theta_{pore} = \frac{\rlap{-} V_{pore}}{Q_{pore}} = \frac{\phi\Lambda_{pore}^3}{v_a \Lambda_{pore}^2} = \frac{\phi\Lambda_{pore}}{v_a}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-15">
+<span class="eqno">(682)<a class="headerlink" href="#equation-filtration-filtration-intro-15" title="Permalink to this equation">¶</a></span>\[\theta_{pore} = \frac{\rlap{-} V_{pore}}{Q_{pore}} = \frac{\phi\Lambda_{pore}^3}{v_a \Lambda_{pore}^2} = \frac{\phi\Lambda_{pore}}{v_a}\]</div>
 <p>The Camp Stein velocity gradient in a pore is obtained by assuming that all of the input kinetic energy is dissipated through viscosity during the time that the water spends in the pore.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-17">
-<span class="eqno">(683)<a class="headerlink" href="#equation-filtration-filtration-intro-17" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{gh_{\rm{L}}}{\nu \theta}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-16">
+<span class="eqno">(683)<a class="headerlink" href="#equation-filtration-filtration-intro-16" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{gh_{\rm{L}}}{\nu \theta}}\]</div>
 <p>The head loss in the pore is from the jet kinetic energy. Substitute the equations for pore volume, residence time, and head loss to obtain the fundamental equation for the velocity gradient in a pore.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-18">
-<span class="eqno">(684)<a class="headerlink" href="#equation-filtration-filtration-intro-18" title="Permalink to this equation">¶</a></span>\[G_{CS} =\bar v_{constriction} \sqrt{\frac{ v_a}{2\nu \phi\Lambda_{pore}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-17">
+<span class="eqno">(684)<a class="headerlink" href="#equation-filtration-filtration-intro-17" title="Permalink to this equation">¶</a></span>\[G_{CS} =\bar v_{constriction} \sqrt{\frac{ v_a}{2\nu \phi\Lambda_{pore}}}\]</div>
 <p>The estimated value of this velocity gradient is <em>300 Hz</em>.</p>
 <p>We need to compare the constricted jet velocity gradient with the clean bed injection velocity gradient that occurs due to the fact that the approach velocity at the point of flow injection in StaRS filters is much higher than the average approach velocity. The flow injection area is approximately 2.5 cm wide and serves an effective filter area (up and down!) of 20 cm (spacing between injection points is 10 cm.). Thus the approach velocity in current StaRS filters is 14.6 mm/s and the corresponding Camp Stein velocity gradient is <em>1440 Hz</em>.</p>
 <p>EstaRS filters have water falls from the filter inlet channel to inlet box. In recent designs the water flows through a narrow slot and then falls into the inlet box. The slot is about 3.4 cm wide and the water falls about 40 cm. The vertical velocity after dropping 40 cm is 2.8 m/s. The geometry of this water fall is complicated and we will assume the resulting jet is circular at impact with the water surface. The diameter of the jet is thus obtained from continuity and is equal to 9.5 cm.  Now we use the energy dissipation rate of a round jet to obtain <em>4300 Hz</em>. Thus the floc size could be set by the water fall in the inlet box since this is the highest velocity gradient on the path into and through the filter. However, our rough estimate based on wild extrapolation suggests that this would yield a 36 <span class="math notranslate nohighlight">\(\mu m\)</span> diameter floc. This is larger than the flocs produced by the sedimentation tank plate settlers and thus it is possible that even with this waterfall, that the floc size distribution is set by the sedimentation tank plate settlers.</p>

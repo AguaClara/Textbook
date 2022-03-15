@@ -140,7 +140,11 @@ We can relate reactor volume to a hydraulic residence time, :math:`\theta`, and 
 
 This equation is perfectly useful for estimating electrical motor sizing requirements for mechanical rapid mix units. For gravity powered hydraulic rapid mix units it would be more intuitive to use the change in water surface elevation, :math:`\Delta h` instead of power input.
 
-.. math:: P = \rho g Q \Delta h
+.. math::
+  :label: power_of_Q_h
+
+
+  P = \rho g Q \Delta h
 
 Combining the two equations we obtain.
 

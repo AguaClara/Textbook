@@ -367,6 +367,12 @@ Given that the velocity gradient governs the design of the flocculator and the e
 
   \bar v_{Jet_{max}} =  \left( \frac{G_{max}^2 \nu \bar v_{z_{ff}} W_{Sed}}{ \Pi_{JetPlane}}\right)^\frac{1}{4}
 
+Equation can also be written in terms of flow rate by substituting the continuity equation.
+
+.. math::
+  :label: max_sed_tank_jet_velocity_of_G_and_Q
+
+  \bar v_{Jet_{max}} =  \left( \frac{G_{max}^2 \nu \bar Q }{L_{Sed} \Pi_{JetPlane}}\right)^\frac{1}{4}
 
 The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases.
 

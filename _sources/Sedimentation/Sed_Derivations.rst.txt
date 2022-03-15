@@ -124,6 +124,7 @@ For single tube settlers used in laboratory settings the
 Substituting into the equation for single tube settlers
 
 .. math::
+  :label: Q_tube_settler
 
   Q_{Tube}=\frac{\bar v_{c}\pi D^2}{4} \left(\frac{L}{D} \cos \alpha +\sin \alpha \right)
 
@@ -504,6 +505,7 @@ There will be a small amount of head loss through the floc filter because the de
 Plugging in the equation for :math:`\rho_{ff}` and solving for :math:`h_L`,
 
 .. math::
+  :label: floc_filter_head_loss
 
   h_L = H_{ff} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}
 

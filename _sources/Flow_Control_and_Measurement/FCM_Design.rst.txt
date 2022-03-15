@@ -135,6 +135,7 @@ The CDC can be designed manually using the equations from the derivation linked 
 1. Calculate the maximum flow rate, :math:`Q_{Max, \, Tube}`, through each available dosing tube diameter :math:`D` that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.
 
 .. math::
+  :label: cdc_tube_Q_max
 
     Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}
 
