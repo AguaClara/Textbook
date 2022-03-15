@@ -289,7 +289,7 @@ Our equations for terminal velocity depend on the density of a floc. As discusse
 .. math::
   :label: vt_of_floc
 
-  v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} -    \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}
+  v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}
 
 | Where:
 | :math:`D_{cp} =` diameter of core particle
