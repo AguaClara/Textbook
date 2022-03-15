@@ -223,6 +223,7 @@ raise to 3/4
 For :math:`\Pi_{H_eS}` large enough such that the flow has fully expanded the following equation applies.
 
 .. math::
+  :label: floc_He_max_const_K
 
   H_{e_{Max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}
 

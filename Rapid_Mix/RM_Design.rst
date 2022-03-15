@@ -52,6 +52,7 @@ The raw water flow rate per injection port is equal to the water velocity upstre
 Substituting the previous equation for the eddy length scale, :math:`L_{eddy}`, we obtain
 
 .. math::
+  :label: Q_max_served_per_injection_port
 
     Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}
 

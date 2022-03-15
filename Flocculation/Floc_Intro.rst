@@ -244,6 +244,7 @@ Note that the equation above is for :math:`\bar \varepsilon`, not :math:`\vareps
 We can use this to obtain a final equation for collision potential of a reactor:
 
 .. math::
+  :label: Gtheta_of_hL
 
   G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}
 

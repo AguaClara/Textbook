@@ -124,14 +124,9 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
   Dissolved_Gas/DG_Intro.rst
 
-.. toctree::
-  :caption: Chapter 11: Fluoride
-  :maxdepth: 1
-
-  Fluoride/Fluoride_Intro.rst
 
 .. toctree::
-  :caption: Chapter 12: Troubleshooting
+  :caption: Chapter 11: Troubleshooting
   :maxdepth: 1
 
   Troubleshooting/Troubleshooting.rst

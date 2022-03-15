@@ -278,7 +278,10 @@ Einstein’s Diffusion Equation
 
 The final step of mixing is mediated by molecular diffusion. We can estimate the length scale at which fluid shear and diffusion provide transport at the same rate. Einstein’s diffusion equation is
 
-.. math:: D_{Diffusion} = \frac{k_B T}{3 \pi \mu D_P}
+.. math::
+  :label: einstein_diffusion
+
+  D_{Diffusion} = \frac{k_B T}{3 \pi \mu D_P}
 
 where :math:`k_B` is the Boltzmann constant and :math:`d_P` is the diameter of the particle that is diffusion in a fluid with viscosity :math:`\nu` and density :math:`\rho`. The diffusion coefficient :math:`D_{Diffusion}` has dimensions of :math:`\frac{[L^2]}{[T]}` and can be understood as the velocity of the particle multiplied by the length of the mean free path. From dimensional analysis the time for diffusion to blur a concentration gradient over a length scale, :math:`L_{Diffusion}` is
 

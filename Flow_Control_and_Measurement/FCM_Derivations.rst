@@ -123,6 +123,7 @@ Here lies another common source of confusion. :math:`h_{Tank}` is not the same a
 Finally, our fabricated equivalence, :math:`\frac{Q_0}{A_{Tank}} = \frac{h_{Tank}}{t_{Design}}` can be plugged into :math:`\frac{Q}{Q_0} = 1 - \frac{t Q_0}{2 A_{Tank} h_0}` to create the highly useful equation for flow rate as a function of time for a drip hypochlorinator:
 
 .. math::
+  :label: Q_tank_with_valve
 
   \color{purple}{
   \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
