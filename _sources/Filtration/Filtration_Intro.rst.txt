@@ -286,10 +286,8 @@ Setting them equal for a force balance:
 Which simplifies to:
 
 .. math::
+  :label: headloss_bw_sand
 
-  h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}
-
-  or
 
   h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)
 

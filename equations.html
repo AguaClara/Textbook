@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Equations &mdash; AguaClara Textbook v1.3.1 documentation</title>
+  <title>Equation Quick Reference &mdash; AguaClara Textbook v1.3.2 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.1
+                v1.3.2
               </div>
             
           
@@ -172,11 +172,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Fluoride</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Troubleshooting/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Troubleshooting/Troubleshooting.html#high-head-loss-after-backwash-in-estars">High Head Loss After Backwash in EStaRS</a></li>
@@ -186,7 +182,7 @@
 <p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Introduction/Python_Tutorial.html">Python Tutorial</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Equations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Equation Quick Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
@@ -242,7 +238,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Equations</li>
+      <li>Equation Quick Reference</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -261,211 +257,181 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="equations">
-<span id="id1"></span><h1>Equations<a class="headerlink" href="#equations" title="Permalink to this headline">¶</a></h1>
-<span id="table-dimension-table"></span><table class="colwidths-given docutils align-center" id="id8">
-<caption><span class="caption-number">Table 23 </span><span class="caption-text">Equation formats</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+  <div class="section" id="equation-quick-reference">
+<span id="equations"></span><h1>Equation Quick Reference<a class="headerlink" href="#equation-quick-reference" title="Permalink to this headline">¶</a></h1>
+<span id="table-dimension-table"></span><table class="docutils align-center" id="id11">
+<caption><span class="caption-number">Table 23 </span><span class="caption-text">Equations</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 9%" />
-<col style="width: 27%" />
-<col style="width: 55%" />
-<col style="width: 9%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Number</p></th>
 <th class="head"><p>Name</p></th>
 <th class="head"><p>Equation</p></th>
-<th class="head"><p>Function</p></th>
+<th class="head"><p>Python</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>1</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Introduction/Introduction.html#equation-eq-laminar-terminal-velocity">Particle terminal velocity</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Sedimentation/Sed_Intro.html#equation-eq-laminar-terminal-velocity">(527)</a></p></td>
+<td><p>Particle terminal velocity</p></td>
 <td><p><span class="math notranslate nohighlight">\(\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\)</span></p></td>
 <td><p>2</p></td>
 </tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-continuity-equation">Continuity</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Fluids_and_Hydraulics/Fluid_Mechanics.html#equation-continuity-equation">(2)</a></p></td>
+<td><p>Continuity</p></td>
 <td><p><span class="math notranslate nohighlight">\(Q = \bar v A\)</span></p></td>
 <td><p>2</p></td>
 </tr>
-<tr class="row-even"><td><p>7</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-reynolds-number-equation">Reynold’s Number</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Fluids_and_Hydraulics/Fluid_Mechanics.html#equation-reynolds-number-equation">(7)</a></p></td>
+<td><p>Reynold’s Number</p></td>
 <td><p><span class="math notranslate nohighlight">\({\rm Re} = \frac{\bar vD}{\nu} = \frac{4Q}{\pi D\nu} = \frac{\rho \bar vD}{\mu}\)</span></p></td>
 <td><p><a class="reference external" href="https://aguaclara.github.io/aguaclara/core/physchem.html#aguaclara.core.physchem.re_pipe">[+]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>8</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-bernoulli-equation">Bernoulli</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Fluids_and_Hydraulics/Fluid_Mechanics.html#equation-bernoulli-equation">(8)</a></p></td>
+<td><p>Bernoulli</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{p_1}{\rho g} + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{v_2^2}{2g}\)</span></p></td>
 <td><p>2</p></td>
 </tr>
-<tr class="row-even"><td><p>10</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-energy-equation">Energy</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Fluids_and_Hydraulics/Fluid_Mechanics.html#equation-energy-equation">(10)</a></p></td>
+<td><p>Control Volume Energy</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{p_{1}}{\rho g} + z_{1} + \frac{\bar v_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{2} + \frac{\bar v_{2}^2}{2g} + h_L\)</span></p></td>
 <td><p>2</p></td>
 </tr>
-<tr class="row-odd"><td><p>11</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-darcy-weisbach">Darcy-Weisbach</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Fluids_and_Hydraulics/Fluid_Mechanics.html#equation-darcy-weisbach">(11)</a></p></td>
+<td><p>Darcy-Weisbach</p></td>
 <td><p><span class="math notranslate nohighlight">\(h_{\rm{f}}  = {\rm{f}} \frac{L}{D} \frac{\bar v^2}{2g}\)</span></p></td>
 <td><p><a class="reference external" href="https://aguaclara.github.io/aguaclara/core/physchem.html#aguaclara.core.physchem.headloss_major_pipe">[+]</a></p></td>
 </tr>
-<tr class="row-even"><td><p>14</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-swamee-jain">Swamee-Jain</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Fluids_and_Hydraulics/Fluid_Mechanics.html#equation-swamee-jain">(14)</a></p></td>
+<td><p>Swamee-Jain</p></td>
 <td><p><span class="math notranslate nohighlight">\({\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}\)</span></p></td>
 <td><p><a class="reference external" href="https://aguaclara.github.io/aguaclara/core/physchem.html#aguaclara.core.physchem.fric_pipe">[+]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>18</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-hagen-poiseuille">Hagen-Poiseuille</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Fluids_and_Hydraulics/Fluid_Mechanics.html#equation-hagen-poiseuille">(18)</a></p></td>
+<td><p>Hagen-Poiseuille</p></td>
 <td><p><span class="math notranslate nohighlight">\(h_{\rm{f}} = \frac{128\mu L Q}{\rho g\pi D^4}\)</span></p></td>
 <td><p>2</p></td>
 </tr>
-<tr class="row-even"><td><p>35</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics.html#equation-orifice-equation">Orifice</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Fluids_and_Hydraulics/Fluid_Mechanics.html#equation-orifice-equation">(36)</a></p></td>
+<td><p>Orifice</p></td>
 <td><p><span class="math notranslate nohighlight">\(Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}\)</span></p></td>
 <td><p><a class="reference external" href="https://aguaclara.github.io/aguaclara/core/physchem.html#aguaclara.core.physchem.flow_orifice">[+]</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>67</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Review/Review_Fluid_Mechanics_Derivations.html#equation-minor-loss-equation">Minor loss</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html#equation-minor-loss-equation">(68)</a></p></td>
+<td><p>Minor loss</p></td>
 <td><p><span class="math notranslate nohighlight">\({ {\rm{ \mathbf{Third form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \frac{\bar v_{out}^2}{2g} = K_e \frac{\bar v_{out}^2}{2g} \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2 }\)</span></p></td>
 <td><p><a class="reference external" href="https://aguaclara.github.io/aguaclara/core/physchem.html#aguaclara.core.physchem.headloss_minor_pipe">[+]</a></p></td>
 </tr>
-<tr class="row-even"><td><p>68</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Flocs_Fractals_and_Forces/FFF_Intro.html#equation-v-floc-of-n-cp">Fractal floc volume</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Flocs_Fractals_and_Forces/FFF_Intro.html#equation-v-floc-of-n-cp">(233)</a></p></td>
+<td><p>Fractal floc volume</p></td>
 <td><p><span class="math notranslate nohighlight">\(\rlap{-} V_{floc} = \rlap{-} V_{cp} n_{cp}^\frac{3}{\Pi_{fractal}}\)</span></p></td>
 <td><p>3</p></td>
 </tr>
-<tr class="row-odd"><td><p>87</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Flocs_Fractals_and_Forces/FFF_Intro.html#equation-vt-of-floc">Floc terminal velocity</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Flocs_Fractals_and_Forces/FFF_Intro.html#equation-vt-of-floc">(253)</a></p></td>
+<td><p>Floc terminal velocity</p></td>
 <td><p><span class="math notranslate nohighlight">\(v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}\)</span></p></td>
 <td><p>3</p></td>
 </tr>
-<tr class="row-even"><td><p>94</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Flocs_Fractals_and_Forces/FFF_Intro.html#equation-gmax-of-d-floc">Max floc velocity gradient</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Flocs_Fractals_and_Forces/FFF_Intro.html#equation-gmax-of-d-floc">(262)</a></p></td>
+<td><p>Max floc velocity gradient</p></td>
 <td><p><span class="math notranslate nohighlight">\(G_{max} = \frac{4F_{bond}}{3 \pi \mu D_{floc_{max}}^2}\)</span></p></td>
 <td><p>3</p></td>
 </tr>
-<tr class="row-odd"><td><p>122</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html#equation-fluid-deformation-and-energy-dissipation-fded-intro-4">Camp-Stein velocity gradient</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-g-camp-stein">(104)</a></p></td>
+<td><p>Camp-Stein velocity</p></td>
 <td><p><span class="math notranslate nohighlight">\(G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}\)</span></p></td>
 <td><p><a class="reference external" href="https://aguaclara.github.io/aguaclara/core/physchem.html#aguaclara.core.physchem.g_cs_ergun">[+]</a></p></td>
 </tr>
-<tr class="row-even"><td><p>149</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-fluid-deformation-and-energy-dissipation-fded-derivations-21">Einstein’s diffusion</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-einstein-diffusion">(119)</a></p></td>
+<td><p>Einstein’s diffusion</p></td>
 <td><p><span class="math notranslate nohighlight">\(D_{Diffusion} = \frac{k_B T}{3 \pi \mu D_P}\)</span></p></td>
 <td><p>4</p></td>
 </tr>
-<tr class="row-odd"><td><p>279</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Design.html#equation-flow-control-and-measurement-fcm-design-0">Linear CDC</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Design.html#equation-cdc-tube-q-max">(324)</a></p></td>
+<td><p>Linear CDC</p></td>
 <td><p><span class="math notranslate nohighlight">\(Q_{Max Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\)</span></p></td>
 <td><p>6</p></td>
 </tr>
-<tr class="row-even"><td><p>284</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Design.html#equation-flow-control-and-measurement-fcm-design-5">Tank with a valve</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Flow_Control_and_Measurement/FCM_Derivations.html#equation-q-tank-with-valve">(341)</a></p></td>
+<td><p>Tank with a valve</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}\)</span></p></td>
 <td><p>6</p></td>
 </tr>
-<tr class="row-odd"><td><p>336</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Intro.html#equation-rapid-mix-rm-intro-4">Mechanical power</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Rapid_Mix/RM_Intro.html#equation-power-of-q-h">(387)</a></p></td>
+<td><p>Mechanical power</p></td>
 <td><p><span class="math notranslate nohighlight">\(P = \rho g Q \Delta h\)</span></p></td>
 <td><p>7</p></td>
 </tr>
-<tr class="row-even"><td><p>343</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Design.html#equation-rapid-mix-rm-design-5">Mixer flow rate</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Rapid_Mix/RM_Design.html#equation-q-max-served-per-injection-port">(394)</a></p></td>
+<td><p>Flow per chemical injection port</p></td>
 <td><p><span class="math notranslate nohighlight">\(Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}\)</span></p></td>
 <td><p>7</p></td>
 </tr>
-<tr class="row-odd"><td><p>353</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Theory_and_Future_Work.html#equation-rapid-mix-rm-theory-and-future-work-1">Diffusion layer thickness</a></p></td>
-<td><p><span class="math notranslate nohighlight">\(L_{Diff} \approx \left( \frac{2k_B T d_{Clay}}{3 \pi \mu  d_{CN} G}\right)^\frac{1}{3}\)</span></p></td>
-<td><p>7</p></td>
-</tr>
-<tr class="row-even"><td><p>375</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Theory_and_Future_Work.html#equation-rapid-mix-rm-theory-and-future-work-23">Coagulant nanoparticle application</a></p></td>
-<td><p><span class="math notranslate nohighlight">\(t_{coagulant application} = \frac{2.3p C_{CN} \Lambda_{Clay}^2}{\pi G k d_{Clay} L_{Diff_{CN}} }\)</span></p></td>
-<td><p>7</p></td>
-</tr>
-<tr class="row-odd"><td><p>407</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Flocculation/Floc_Model.html#equation-pclam">AguaClara floc model</a></p></td>
-<td><p><span class="math notranslate nohighlight">\(p{C^\star}=\frac{3}{2}\log_{10}\left[\frac{2}{3}\left(\frac{6}{\pi}\right)^{2/3}k\pi\bar{\alpha}\bar G_{CS}\theta\phi_0^{2/3}+1\right]\)</span></p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="row-even"><td><p>420</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-0">Terminal floc velocity</a></p></td>
-<td><p><span class="math notranslate nohighlight">\(\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\)</span></p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="row-odd"><td><p>426</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-5">Collision potential</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Flocculation/Floc_Intro.html#equation-gtheta-of-hl">(437)</a></p></td>
+<td><p>Collision potential</p></td>
 <td><p><span class="math notranslate nohighlight">\(G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}\)</span></p></td>
 <td><p>8</p></td>
 </tr>
-<tr class="row-even"><td><p>440</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-19">Channel width</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Flocculation/Floc_Derivations.html#equation-w-min-hvfloc">(496)</a></p></td>
+<td><p>Channel width</p></td>
 <td><p><span class="math notranslate nohighlight">\(W_{Min \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\)</span></p></td>
 <td><p>8</p></td>
 </tr>
-<tr class="row-odd"><td><p>445</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-flocculation-floc-design-24">Height between expansions</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Flocculation/Floc_Design.html#equation-floc-he-max-const-k">(516)</a></p></td>
+<td><p>Distance between expansions</p></td>
 <td><p><span class="math notranslate nohighlight">\(H_{e_{Max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}\)</span></p></td>
 <td><p>8</p></td>
 </tr>
-<tr class="row-even"><td><p>449</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html#equation-floc-baffle-spacing">Baffle spacing</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Flocculation/Floc_Derivations.html#equation-floc-baffle-spacing-of-k">(497)</a></p></td>
+<td><p>Baffle spacing</p></td>
 <td><p><span class="math notranslate nohighlight">\(S = \left( \frac{K}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}\)</span></p></td>
 <td><p>8</p></td>
 </tr>
-<tr class="row-odd"><td><p>473</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Sedimentation/Sed_Design.html#equation-max-sed-tank-jet-velocity">Jet velocity</a></p></td>
-<td><p><span class="math notranslate nohighlight">\(\bar v_{Jet} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{ff}} W_{Sed}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}\)</span></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Sedimentation/Sed_Design.html#equation-max-sed-tank-jet-velocity-of-g">(595)</a></p></td>
+<td><p>Maximum jet velocity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}\)</span></p></td>
 <td><p>9</p></td>
 </tr>
-<tr class="row-even"><td><p>495</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-11">Tube settler flow</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Sedimentation/Sed_Derivations.html#equation-q-tube-settler">(546)</a></p></td>
+<td><p>Tube settler flow</p></td>
 <td><p><span class="math notranslate nohighlight">\(Q_{Tube}=\frac{\bar v_{c}\pi D^2}{4} \left(\frac{L}{D} \cos \alpha +\sin \alpha \right)\)</span></p></td>
 <td><p>9</p></td>
 </tr>
-<tr class="row-odd"><td><p>531</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-47">Floc sedimentation velocity</a></p></td>
-<td><p><span class="math notranslate nohighlight">\(v_{Slide} = \bar v_{z_{Plate}} \left[ \left( \frac{3D_{cp}}{Ssin^2\alpha} \right)^{\Pi_{fractal} - 1} \left( \frac{18 v_{z_{Plate}} \Phi \nu }{D_{cp}^2g} \frac{\rho_\)</span></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Sedimentation/Sed_Derivations.html#equation-plate-s-min-of-fractal">(555)</a></p></td>
+<td><p>Minimum plate settler spacing</p></td>
+<td><p><span class="math notranslate nohighlight">\(S_{min} \approx \frac{3 \bar v_{z_{Plate}}}{\sin^2 \alpha} \left( \frac{18 \nu}{g D_{cp}} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}} \right)\)</span></p></td>
 <td><p>9</p></td>
 </tr>
-<tr class="row-even"><td><p>539</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-55">Plate settler head loss</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Sedimentation/Sed_Derivations.html#equation-plate-settler-headloss">(564)</a></p></td>
+<td><p>Plate settler head loss</p></td>
 <td><p><span class="math notranslate nohighlight">\(h_L = 2 \frac{\mu}{\rho g} \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)\)</span></p></td>
 <td><p>9</p></td>
 </tr>
-<tr class="row-odd"><td><p>549</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-65">Floc filter head loss</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Sedimentation/Sed_Derivations.html#equation-floc-filter-head-loss">(579)</a></p></td>
+<td><p>Floc filter head loss</p></td>
 <td><p><span class="math notranslate nohighlight">\(h_L = H_{ff} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}\)</span></p></td>
 <td><p>9</p></td>
 </tr>
-<tr class="row-even"><td><p>560</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Sedimentation/Sed_Derivations.html#equation-sedimentation-sed-derivations-76">Diffuser width</a></p></td>
-<td><p><span class="math notranslate nohighlight">\(W_{diff_min} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{(\sqrt{2gh_{L_jet}})S_{diff}}\)</span></p></td>
-<td><p>9</p></td>
-</tr>
-<tr class="row-odd"><td><p>621</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Filtration/Filtration_Intro.html#equation-backwash-porosity">Backwash porosity</a></p></td>
-<td><p><span class="math notranslate nohighlight">\(\phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}\)</span></p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="row-even"><td><p>623</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Filtration/Filtration_Intro.html#equation-eq-carman-kozeny">Clean bed head loss</a></p></td>
+<tr class="row-even"><td><p><code class="xref eq docutils literal notranslate"><span class="pre">eq_carman_kozeny</span></code></p></td>
+<td><p><a href="#id7"><span class="problematic" id="id8">`</span></a>Clean bed head los</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu \bar v_a}{g D_{60}^2}\)</span></p></td>
 <td><p>10</p></td>
 </tr>
-<tr class="row-odd"><td><p>627</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Filtration/Filtration_Intro.html#equation-filtration-filtration-intro-3">Backwash head loss</a></p></td>
-<td><p><span class="math notranslate nohighlight">\(h_{l_{FiBw}} = \frac{\rho_{Sand} - \rho_{Water}}{\rho_{Water}} \left( 1 - \phi_{FiSand} \right) H_{FiSand}\\or\\h_{l_{FiBw}} = H\)</span></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="Filtration/Filtration_Intro.html#equation-headloss-bw-sand">(663)</a></p></td>
+<td><p><a href="#id9"><span class="problematic" id="id10">`</span></a>Backwash head loss</p></td>
+<td><p><span class="math notranslate nohighlight">\(h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\)</span></p></td>
 <td><p>10</p></td>
 </tr>
-<tr class="row-even"><td><p>629</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Filtration/Filtration_Intro.html#equation-minimum-fluidization-velocity-sand">Fluidization velocity</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Filtration/Filtration_Intro.html#equation-minimum-fluidization-velocity-sand">(665)</a></p></td>
+<td><p>Fluidization velocity</p></td>
 <td><p><span class="math notranslate nohighlight">\(\bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\)</span></p></td>
 <td><p>10</p></td>
 </tr>
-<tr class="row-odd"><td><p>701</p></td>
-<td><p><a class="reference external" href="https://aguaclara.github.io/Textbook/Hydraulics/Hydraulics_Intro.html#equation-sharp-weir-q-of-channel-depth">Sharp crested weir</a></p></td>
+<tr class="row-odd"><td><p><code class="xref eq docutils literal notranslate"><span class="pre">sharp_weir_q_of_channel_depth</span></code></p></td>
+<td><p>Sharp crested weir</p></td>
 <td><p><span class="math notranslate nohighlight">\(Q = \Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{channel}\right)^\frac{3}{2}\)</span></p></td>
 <td><p>11</p></td>
 </tr>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Flocs, Fractals, Forces &mdash; AguaClara Textbook v1.3.1 documentation</title>
+  <title>Flocs, Fractals, Forces &mdash; AguaClara Textbook v1.3.2 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.1
+                v1.3.2
               </div>
             
           
@@ -185,11 +185,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Fluoride</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#high-head-loss-after-backwash-in-estars">High Head Loss After Backwash in EStaRS</a></li>
@@ -199,7 +195,7 @@
 <p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equation Quick Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
@@ -459,7 +455,7 @@ n_{cp} \frac{\pi}{6} D_{cp}^3\]</div>
 <p>Again, we can draw a parallel with the Moody Diagram. The general form of the terminal velocity equation is like the Darcy-Weisbach equation; it is always true. The terminal velocity in the laminar flow region is like the Hagen-Poiselle equation; it is only good for laminar flow. We will use the laminar specific condition because we are working with flocs with low Reynolds numbers.</p>
 <p>Our equations for terminal velocity depend on the density of a floc. As discussed in previous sections, we know that there is a specific relationship between the density of a floc and the diameter of a floc because flocs are fractals and as flocs get bigger, their density gets lower. We can account for the size and density relationship by substitution Equation <a class="reference internal" href="#equation-floc-buoyant-density">(244)</a> into the terminal velocity equation.</p>
 <div class="math notranslate nohighlight" id="equation-vt-of-floc">
-<span class="eqno">(253)<a class="headerlink" href="#equation-vt-of-floc" title="Permalink to this equation">¶</a></span>\[v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} -    \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}\]</div>
+<span class="eqno">(253)<a class="headerlink" href="#equation-vt-of-floc" title="Permalink to this equation">¶</a></span>\[v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}\]</div>
 <div class="line-block">
 <div class="line">Where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(D_{cp} =\)</span> diameter of core particle</div>
@@ -602,7 +598,7 @@ n_{cp} \frac{\pi}{6} D_{cp}^3\]</div>
 <p>The value of <span class="math notranslate nohighlight">\(F_{bond}\)</span> was calculated to be <span class="math notranslate nohighlight">\(F_{bond} = 6 nN\)</span> (see <a class="reference external" href="https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=nEZGIfnHFRKo&amp;line=3&amp;uniqifier=1">Colab worksheet</a>) based on the measurements of <a class="reference external" href="https://doi.org/10.1089/ees.2015.0314">Garland, 2016</a>.</p>
 <p>Note that further work is required to better estimate the density of a clay particle with coagulant nanoparticles attached. The coagulant nanoparticles effectively increase the clay plate thickness by two times the diameter of the coagulant nanoparticles. That extra thickness is composed of water and the coagulant nanoparticles and thus has a much lower density than the clay particle.</p>
 <p>Dissolved organic matter will reduce the density of the core floc particles. The core particle diameter will likely also increase because it will have more attached coagulant nanoparticles that are in turn partially coated with organic molecules. The net effect on <span class="math notranslate nohighlight">\(\zeta_{breakup}\)</span> has not yet been characterized, but given that dissolved organics have a density close to that of water it is possible that the buoyant density multiplied by the diameter would be reduced by a factor of two. From Equation <a class="reference internal" href="#equation-g-of-vc-and-floc-props">(266)</a> this would result in a four fold reduction in <span class="math notranslate nohighlight">\(\zeta_{breakup}\)</span>. The maximum velocity gradient for delivering flocs to the floc filter would thus be about 250 Hz at 5°C.</p>
-<p>The value of <span class="math notranslate nohighlight">\(\zeta_{breakup}\)</span> increases rapidly as a function of the flow rate through the plant. Thus if a plant is designed with a value of <span class="math notranslate nohighlight">\(\zeta_{breakup}\)</span> that is too high for the core particles that are being treated, the plant performance will deteriorate rapidly as the flow rate is increased. From <a class="reference internal" href="../Flocculation/Floc_Derivations.html#equation-flocgeog">(495)</a> the velocity gradient increases with flow rate to the <span class="math notranslate nohighlight">\(\frac{3}{2}\)</span> power. The capture velocity is proportional to the flow rate and thus from <a class="reference internal" href="#equation-g-of-vc-and-floc-props">(266)</a> we have <span class="math notranslate nohighlight">\(\zeta_{breakup} \propto Q^{\frac{7}{2}}\)</span>. If settled water turbidity increases rapidly as the plant flow rate is increased it is possible that the velocity gradient needs to be reduced in the flow passages between the flocculator and floc filter. Of course, decreasing the plate settler capture velocity may also be needed, but making that change in an existing plant is a more substantial upgrade.</p>
+<p>The value of <span class="math notranslate nohighlight">\(\zeta_{breakup}\)</span> increases rapidly as a function of the flow rate through the plant. Thus if a plant is designed with a value of <span class="math notranslate nohighlight">\(\zeta_{breakup}\)</span> that is too high for the core particles that are being treated, the plant performance will deteriorate rapidly as the flow rate is increased. From <a class="reference internal" href="../Flocculation/Floc_Derivations.html#equation-flocgeog">(494)</a> the velocity gradient increases with flow rate to the <span class="math notranslate nohighlight">\(\frac{3}{2}\)</span> power. The capture velocity is proportional to the flow rate and thus from <a class="reference internal" href="#equation-g-of-vc-and-floc-props">(266)</a> we have <span class="math notranslate nohighlight">\(\zeta_{breakup} \propto Q^{\frac{7}{2}}\)</span>. If settled water turbidity increases rapidly as the plant flow rate is increased it is possible that the velocity gradient needs to be reduced in the flow passages between the flocculator and floc filter. Of course, decreasing the plate settler capture velocity may also be needed, but making that change in an existing plant is a more substantial upgrade.</p>
 <p>In the previous discussion we assumed that the highest velocity gradient in the inlet to the floc filter is in the jet reverser because it has the smallest dimension of flow. Nonetheless, it is important to check the inlet into the inlet manifold and the elbow in the inlet manifold to ensure that those flow expansions don’t result in higher velocity gradients. Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-d-pipe-min-of-k-and-jet-g-max">(206)</a> can be used to check the design of the inlet manifold.</p>
 </div>
 <div class="section" id="force-required-for-attachment-of-two-flocs">

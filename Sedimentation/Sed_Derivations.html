@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>AguaClara Sedimentation Design &mdash; AguaClara Textbook v1.3.1 documentation</title>
+  <title>AguaClara Sedimentation Design &mdash; AguaClara Textbook v1.3.2 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.1
+                v1.3.2
               </div>
             
           
@@ -193,11 +193,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Fluoride</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Fluoride/Fluoride_Intro.html">Fluoride Introduction</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Chapter 12: Troubleshooting</span></p>
+<p class="caption"><span class="caption-text">Chapter 11: Troubleshooting</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#high-head-loss-after-backwash-in-estars">High Head Loss After Backwash in EStaRS</a></li>
@@ -207,7 +203,7 @@
 <p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equation Quick Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributor's guide</span></p>
@@ -294,10 +290,10 @@
 <p>From the relationship that <span class="math notranslate nohighlight">\(\bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B\)</span>, we can solve for <span class="math notranslate nohighlight">\(B\)</span> or <span class="math notranslate nohighlight">\(L\)</span> in terms of their related parameters.</p>
 <p>Let’s start with the relationships that we already know:</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-0">
-<span class="eqno">(536)<a class="headerlink" href="#equation-sedimentation-sed-derivations-0" title="Permalink to this equation">¶</a></span>\[\bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B\]</div>
+<span class="eqno">(535)<a class="headerlink" href="#equation-sedimentation-sed-derivations-0" title="Permalink to this equation">¶</a></span>\[\bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-1">
-<span class="eqno">(537)<a class="headerlink" href="#equation-sedimentation-sed-derivations-1" title="Permalink to this equation">¶</a></span>\[B = S+T\]</div>
+<span class="eqno">(536)<a class="headerlink" href="#equation-sedimentation-sed-derivations-1" title="Permalink to this equation">¶</a></span>\[B = S+T\]</div>
 <div class="figure align-center" id="id1">
 <span id="figure-svsbplatesettlers"></span><a class="reference internal image-reference" href="../_images/SvsBplatesettlers.png"><img alt="Thick plate settlers." src="../_images/SvsBplatesettlers.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 147 </span><span class="caption-text">Thick plate settlers.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
@@ -308,22 +304,22 @@
 </div>
 <p>Solving for <span class="math notranslate nohighlight">\(\bar v_{z_{Plate}}\)</span>, we rearrange and substitute by,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-2">
-<span class="eqno">(538)<a class="headerlink" href="#equation-sedimentation-sed-derivations-2" title="Permalink to this equation">¶</a></span>\[\bar v_{z_{Plate}} S = \bar v_{z_{Active}} (S+T)\]</div>
+<span class="eqno">(537)<a class="headerlink" href="#equation-sedimentation-sed-derivations-2" title="Permalink to this equation">¶</a></span>\[\bar v_{z_{Plate}} S = \bar v_{z_{Active}} (S+T)\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-3">
-<span class="eqno">(539)<a class="headerlink" href="#equation-sedimentation-sed-derivations-3" title="Permalink to this equation">¶</a></span>\[\bar v_{z_{Plate}} = \frac{\bar v_{z_{Active}} (S+T)}{S}\]</div>
+<span class="eqno">(538)<a class="headerlink" href="#equation-sedimentation-sed-derivations-3" title="Permalink to this equation">¶</a></span>\[\bar v_{z_{Plate}} = \frac{\bar v_{z_{Active}} (S+T)}{S}\]</div>
 <p>We also already know from our <a class="reference internal" href="Sed_Design.html#heading-sed-tank-plate-settlers"><span class="std std-ref">discussion of plate settlers</span></a> that we can relate capture velocity, <span class="math notranslate nohighlight">\(\bar v_c\)</span>, to <span class="math notranslate nohighlight">\(S, L, \alpha\)</span>, and <span class="math notranslate nohighlight">\(\bar v_{z_{Plate}}\)</span> by,</p>
 <div class="math notranslate nohighlight" id="equation-vc-of-vz-plate">
-<span class="eqno">(540)<a class="headerlink" href="#equation-vc-of-vz-plate" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{S  \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}\]</div>
+<span class="eqno">(539)<a class="headerlink" href="#equation-vc-of-vz-plate" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{S  \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}\]</div>
 <p>Substitute for <span class="math notranslate nohighlight">\(\bar v_{z_{Plate}} = \frac{\bar v_{z_{Active}}(S+T)}{S}\)</span> by,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-4">
-<span class="eqno">(541)<a class="headerlink" href="#equation-sedimentation-sed-derivations-4" title="Permalink to this equation">¶</a></span>\[\bar v_c = \left(\frac{S}{Lsin\alpha cos\alpha + S}\right)\left(\frac{\bar v_{z_{Active}}(S+T)}{S}\right)\]</div>
+<span class="eqno">(540)<a class="headerlink" href="#equation-sedimentation-sed-derivations-4" title="Permalink to this equation">¶</a></span>\[\bar v_c = \left(\frac{S}{Lsin\alpha cos\alpha + S}\right)\left(\frac{\bar v_{z_{Active}}(S+T)}{S}\right)\]</div>
 <p>Now, we can use this form of the capture velocity equation to solve for <span class="math notranslate nohighlight">\(B\)</span> or <span class="math notranslate nohighlight">\(L\)</span>, as shown by,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-5">
-<span class="eqno">(542)<a class="headerlink" href="#equation-sedimentation-sed-derivations-5" title="Permalink to this equation">¶</a></span>\[B = \frac{Lsin\alpha cos\alpha - T}{\frac{\bar v_{z_{Plate}}}{\bar v_c}-1}\]</div>
+<span class="eqno">(541)<a class="headerlink" href="#equation-sedimentation-sed-derivations-5" title="Permalink to this equation">¶</a></span>\[B = \frac{Lsin\alpha cos\alpha - T}{\frac{\bar v_{z_{Plate}}}{\bar v_c}-1}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-6">
-<span class="eqno">(543)<a class="headerlink" href="#equation-sedimentation-sed-derivations-6" title="Permalink to this equation">¶</a></span>\[L = \frac{B\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}-1\right) + T}{sin\alpha cos\alpha}\]</div>
+<span class="eqno">(542)<a class="headerlink" href="#equation-sedimentation-sed-derivations-6" title="Permalink to this equation">¶</a></span>\[L = \frac{B\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}-1\right) + T}{sin\alpha cos\alpha}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-7">
-<span class="eqno">(544)<a class="headerlink" href="#equation-sedimentation-sed-derivations-7" title="Permalink to this equation">¶</a></span>\[L = \frac{S\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}-1\right) + T\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}\right)}{sin\alpha cos\alpha}\]</div>
+<span class="eqno">(543)<a class="headerlink" href="#equation-sedimentation-sed-derivations-7" title="Permalink to this equation">¶</a></span>\[L = \frac{S\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}-1\right) + T\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}\right)}{sin\alpha cos\alpha}\]</div>
 <span id="heading-sed-tank-plate-settler-design-review"></span><table class="docutils align-left" id="id3">
 <caption><span class="caption-number">Table 16 </span><span class="caption-text">AguaClara plate settler design approach.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -376,7 +372,7 @@
 </table>
 <p>The relationship between the vertical velocity and the velocity in the direction of the sloped tube or plate settlers is given by</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-8">
-<span class="eqno">(545)<a class="headerlink" href="#equation-sedimentation-sed-derivations-8" title="Permalink to this equation">¶</a></span>\[\bar v_{z} = \bar v_{\alpha} \sin \alpha\]</div>
+<span class="eqno">(544)<a class="headerlink" href="#equation-sedimentation-sed-derivations-8" title="Permalink to this equation">¶</a></span>\[\bar v_{z} = \bar v_{\alpha} \sin \alpha\]</div>
 <span id="table-lamellar-settler-geometry"></span><table class="docutils align-left" id="id4">
 <caption><span class="caption-number">Table 17 </span><span class="caption-text">Lamellar settler geometry and relevant equations.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -403,13 +399,13 @@
 </table>
 <p>For single tube settlers used in laboratory settings the</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-9">
-<span class="eqno">(546)<a class="headerlink" href="#equation-sedimentation-sed-derivations-9" title="Permalink to this equation">¶</a></span>\[\bar v_{\alpha_{Tube}}=\frac{4Q_{Tube}}{\pi D^2}\]</div>
+<span class="eqno">(545)<a class="headerlink" href="#equation-sedimentation-sed-derivations-9" title="Permalink to this equation">¶</a></span>\[\bar v_{\alpha_{Tube}}=\frac{4Q_{Tube}}{\pi D^2}\]</div>
 <p>Substituting into the equation for single tube settlers</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-10">
-<span class="eqno">(547)<a class="headerlink" href="#equation-sedimentation-sed-derivations-10" title="Permalink to this equation">¶</a></span>\[Q_{Tube}=\frac{\bar v_{c}\pi D^2}{4} \left(\frac{L}{D} \cos \alpha +\sin \alpha \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-q-tube-settler">
+<span class="eqno">(546)<a class="headerlink" href="#equation-q-tube-settler" title="Permalink to this equation">¶</a></span>\[Q_{Tube}=\frac{\bar v_{c}\pi D^2}{4} \left(\frac{L}{D} \cos \alpha +\sin \alpha \right)\]</div>
 <p>It is common to need to design the length of the tube given a target flow rate and thus we have</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-11">
-<span class="eqno">(548)<a class="headerlink" href="#equation-sedimentation-sed-derivations-11" title="Permalink to this equation">¶</a></span>\[L = \frac{4Q_{Tube}}{\bar v_{c}\pi D\cos \alpha} - D\tan\alpha\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-10">
+<span class="eqno">(547)<a class="headerlink" href="#equation-sedimentation-sed-derivations-10" title="Permalink to this equation">¶</a></span>\[L = \frac{4Q_{Tube}}{\bar v_{c}\pi D\cos \alpha} - D\tan\alpha\]</div>
 </div>
 <div class="section" id="floc-rollup-and-slide-velocity">
 <span id="heading-floc-rollup-slide-velocity-derivation"></span><h3>Floc Rollup and Slide Velocity<a class="headerlink" href="#floc-rollup-and-slide-velocity" title="Permalink to this headline">¶</a></h3>
@@ -439,22 +435,22 @@
 <p>For tube settlers the velocity gradient at the wall is given by Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-g-wall-laminar-tube">(192)</a>.</p>
 <p><strong>2) Find the fluid velocity at the center of the floc:</strong></p>
 <p>Now, we want to determine the velocity at the center of the floc. For flow between parallel plates we determined that,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-12">
-<span class="eqno">(549)<a class="headerlink" href="#equation-sedimentation-sed-derivations-12" title="Permalink to this equation">¶</a></span>\[\frac{d v_{\alpha_{Plate}}}{dy}_{y = 0} = \frac{6 \bar v_{\alpha_{Plate}}}{S}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-11">
+<span class="eqno">(548)<a class="headerlink" href="#equation-sedimentation-sed-derivations-11" title="Permalink to this equation">¶</a></span>\[\frac{d v_{\alpha_{Plate}}}{dy}_{y = 0} = \frac{6 \bar v_{\alpha_{Plate}}}{S}\]</div>
 <p>The center of the floc is approximately half of the floc diameter, <span class="math notranslate nohighlight">\(D_{floc}\)</span>. So, to find the fluid velocity at the center of the floc, we linearize the differential and plug in <span class="math notranslate nohighlight">\(\frac{D_{floc}}{2}\)</span> to yield,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-13">
-<span class="eqno">(550)<a class="headerlink" href="#equation-sedimentation-sed-derivations-13" title="Permalink to this equation">¶</a></span>\[v_{\alpha} \approx \frac{6 \bar v_{\alpha_{Plate}}}{S} \frac{D_{floc}}{2}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-12">
+<span class="eqno">(549)<a class="headerlink" href="#equation-sedimentation-sed-derivations-12" title="Permalink to this equation">¶</a></span>\[v_{\alpha} \approx \frac{6 \bar v_{\alpha_{Plate}}}{S} \frac{D_{floc}}{2}\]</div>
 <p>Substituting by the trigonometric relationship <span class="math notranslate nohighlight">\(\bar v_{\alpha_{Plate}} = (\frac{\bar v_{z_{Plate}}}{sin\alpha})\)</span>, we find the fluid velocity at the center of the floc as,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-14">
-<span class="eqno">(551)<a class="headerlink" href="#equation-sedimentation-sed-derivations-14" title="Permalink to this equation">¶</a></span>\[\bar v_{\alpha_{Plate}} \approx \frac{3 \bar v_{z_{Plate}} D_{floc}}{Ssin\alpha}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-13">
+<span class="eqno">(550)<a class="headerlink" href="#equation-sedimentation-sed-derivations-13" title="Permalink to this equation">¶</a></span>\[\bar v_{\alpha_{Plate}} \approx \frac{3 \bar v_{z_{Plate}} D_{floc}}{Ssin\alpha}\]</div>
 <div class="figure align-center" id="id8">
 <span id="figure-floc-rollup-step2"></span><a class="reference internal image-reference" href="../_images/floc_rollup_step2.png"><img alt="Fluid velocity at the center of the floc." src="../_images/floc_rollup_step2.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 152 </span><span class="caption-text">Fluid velocity at the center of the floc.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):</strong></p>
 <p>The terminal velocity of a floc is given by Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-vt-of-floc">(253)</a>. We can rearrange this equation to solve for <span class="math notranslate nohighlight">\(D_{floc}\)</span> by</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-15">
-<span class="eqno">(552)<a class="headerlink" href="#equation-sedimentation-sed-derivations-15" title="Permalink to this equation">¶</a></span>\[D_{floc} = D_{cp} \left( \frac{18 v_t \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{cp} - \rho_{H_2O}}\right) ^{\frac{1}{ \Pi_{fractal} - 1}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-14">
+<span class="eqno">(551)<a class="headerlink" href="#equation-sedimentation-sed-derivations-14" title="Permalink to this equation">¶</a></span>\[D_{floc} = D_{cp} \left( \frac{18 v_t \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{cp} - \rho_{H_2O}}\right) ^{\frac{1}{ \Pi_{fractal} - 1}}\]</div>
 <p>We will need this equation for <span class="math notranslate nohighlight">\(D_{floc}\)</span> in the next step.</p>
 <div class="figure align-center" id="id9">
 <span id="figure-floc-rollup-step3"></span><a class="reference internal image-reference" href="../_images/floc_rollup_step3.png"><img alt="Terminal velocity of the floc down the plate (for the case of zero velocity fluid)." src="../_images/floc_rollup_step3.png" style="height: 300px;" /></a>
@@ -462,21 +458,21 @@
 </div>
 <p><strong>4) Set the fluid velocity at the center of the floc equal to the terminal velocity of the floc to find the critical case of no movement, and the required plate spacing:</strong></p>
 <p>The floc settles due to gravitational forces. First, the <span class="math notranslate nohighlight">\(\alpha\)</span> component of the gravitational settling force, <span class="math notranslate nohighlight">\(v_{t,\alpha}\)</span>, must be found by trigonometric relationships.</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-16">
-<span class="eqno">(553)<a class="headerlink" href="#equation-sedimentation-sed-derivations-16" title="Permalink to this equation">¶</a></span>\[v_{t,\alpha} = v_t sin\alpha\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-15">
+<span class="eqno">(552)<a class="headerlink" href="#equation-sedimentation-sed-derivations-15" title="Permalink to this equation">¶</a></span>\[v_{t,\alpha} = v_t sin\alpha\]</div>
 <p>Setting <span class="math notranslate nohighlight">\(v_{\alpha} = v_{t,\alpha}\)</span> yields,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-17">
-<span class="eqno">(554)<a class="headerlink" href="#equation-sedimentation-sed-derivations-17" title="Permalink to this equation">¶</a></span>\[\frac{3 \bar v_{z_{Plate}} D_{floc}}{Ssin\alpha} \approx v_t sin\alpha\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-16">
+<span class="eqno">(553)<a class="headerlink" href="#equation-sedimentation-sed-derivations-16" title="Permalink to this equation">¶</a></span>\[\frac{3 \bar v_{z_{Plate}} D_{floc}}{Ssin\alpha} \approx v_t sin\alpha\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(S\)</span> to determine plate spacing,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-18">
-<span class="eqno">(555)<a class="headerlink" href="#equation-sedimentation-sed-derivations-18" title="Permalink to this equation">¶</a></span>\[S \approx \frac{3 \bar v_{z_{Plate}} D_{floc}}{v_t sin^2\alpha}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-17">
+<span class="eqno">(554)<a class="headerlink" href="#equation-sedimentation-sed-derivations-17" title="Permalink to this equation">¶</a></span>\[S \approx \frac{3 \bar v_{z_{Plate}} D_{floc}}{v_t sin^2\alpha}\]</div>
 <p>In this equation, we have both <span class="math notranslate nohighlight">\(v_t\)</span> and <span class="math notranslate nohighlight">\(D_{floc}\)</span>, but we can simplify further because we know that <span class="math notranslate nohighlight">\(v_t\)</span> and <span class="math notranslate nohighlight">\(D_{floc}\)</span> are related by the relationship shown in step 3. The goal is to ensure that flocs that settle to the plates do not roll up. We replace the unknown diameter of the floc with its terminal velocity and set that to be the capture velocity, <span class="math notranslate nohighlight">\(v_c\)</span> for the plate settler.</p>
 <div class="math notranslate nohighlight" id="equation-plate-s-min-of-fractal">
-<span class="eqno">(556)<a class="headerlink" href="#equation-plate-s-min-of-fractal" title="Permalink to this equation">¶</a></span>\[S_{min} \approx \frac{3 D_{cp}}{sin^2\alpha} \frac{\bar v_{z_{Plate}}}{v_c}  \left( \frac{18 v_c \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{cp} - \rho_{H_2O}} \right) ^{\frac{1}{ \Pi_{fractal} - 1}}\]</div>
+<span class="eqno">(555)<a class="headerlink" href="#equation-plate-s-min-of-fractal" title="Permalink to this equation">¶</a></span>\[S_{min} \approx \frac{3 D_{cp}}{sin^2\alpha} \frac{\bar v_{z_{Plate}}}{v_c}  \left( \frac{18 v_c \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{cp} - \rho_{H_2O}} \right) ^{\frac{1}{ \Pi_{fractal} - 1}}\]</div>
 <p><span class="math notranslate nohighlight">\(S_{min}\)</span> is the smallest spacing that will allow a floc with a given settling velocity to remain stationary on the slope and not be carried upward by rollup.</p>
-<p>If the fractal dimension, <span class="math notranslate nohighlight">\(\Pi_{fractal}\)</span> has a value of 2, then Equation <a class="reference internal" href="#equation-plate-s-min-of-fractal">(556)</a> can be simplified.</p>
+<p>If the fractal dimension, <span class="math notranslate nohighlight">\(\Pi_{fractal}\)</span> has a value of 2, then Equation <a class="reference internal" href="#equation-plate-s-min-of-fractal">(555)</a> can be simplified.</p>
 <div class="math notranslate nohighlight" id="equation-plate-s-min-of-fractal-of-2">
-<span class="eqno">(557)<a class="headerlink" href="#equation-plate-s-min-of-fractal-of-2" title="Permalink to this equation">¶</a></span>\[S_{min} \approx \frac{3 \bar v_{z_{Plate}}}{\sin^2 \alpha} \left( \frac{18 \nu}{g D_{cp}} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}} \right)\]</div>
+<span class="eqno">(556)<a class="headerlink" href="#equation-plate-s-min-of-fractal-of-2" title="Permalink to this equation">¶</a></span>\[S_{min} \approx \frac{3 \bar v_{z_{Plate}}}{\sin^2 \alpha} \left( \frac{18 \nu}{g D_{cp}} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}} \right)\]</div>
 </div>
 <div class="section" id="head-loss-through-plate-settlers">
 <span id="heading-sed-tank-hl-thru-plate-settlers"></span><h3>Head Loss Through Plate Settlers<a class="headerlink" href="#head-loss-through-plate-settlers" title="Permalink to this headline">¶</a></h3>
@@ -488,28 +484,28 @@
 </div>
 <p>The shear forces act over the area of the two plates, resulting in <span class="math notranslate nohighlight">\(F_{shear} = 2 \tau L W\)</span> where <span class="math notranslate nohighlight">\(\tau\)</span> is the viscous shear component.</p>
 <p>The pressure force is exerted over the entire width of the plate and the plate spacing. Pressure at the entrance of the plate settlers is different from the exit of the plate settlers by <span class="math notranslate nohighlight">\(\Delta P\)</span>. The resulting pressure force is <span class="math notranslate nohighlight">\(F_{pressure} = \Delta P W S\)</span>. So,</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-18">
+<span class="eqno">(557)<a class="headerlink" href="#equation-sedimentation-sed-derivations-18" title="Permalink to this equation">¶</a></span>\[F_{shear} = F_{pressure}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-19">
-<span class="eqno">(558)<a class="headerlink" href="#equation-sedimentation-sed-derivations-19" title="Permalink to this equation">¶</a></span>\[F_{shear} = F_{pressure}\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-20">
-<span class="eqno">(559)<a class="headerlink" href="#equation-sedimentation-sed-derivations-20" title="Permalink to this equation">¶</a></span>\[2 \tau L W = \Delta P W S\]</div>
+<span class="eqno">(558)<a class="headerlink" href="#equation-sedimentation-sed-derivations-19" title="Permalink to this equation">¶</a></span>\[2 \tau L W = \Delta P W S\]</div>
 <p>Dividing both sides by width, <span class="math notranslate nohighlight">\(W\)</span>, and solving for <span class="math notranslate nohighlight">\(\Delta P\)</span> yields,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-21">
-<span class="eqno">(560)<a class="headerlink" href="#equation-sedimentation-sed-derivations-21" title="Permalink to this equation">¶</a></span>\[\Delta P = \frac{2 \tau L}{S}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-20">
+<span class="eqno">(559)<a class="headerlink" href="#equation-sedimentation-sed-derivations-20" title="Permalink to this equation">¶</a></span>\[\Delta P = \frac{2 \tau L}{S}\]</div>
 <p>We need to figure out what each of the terms on the right side of the equation is equal to so we can calculate <span class="math notranslate nohighlight">\(\Delta P\)</span>. Ultimlately, we need <span class="math notranslate nohighlight">\(\Delta P\)</span> to calculate head loss because <span class="math notranslate nohighlight">\(h_L = \frac{\Delta P}{\rho g}\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\tau =\mu \frac{du}{dy}\)</span>, where <span class="math notranslate nohighlight">\(\tau\)</span> is shear, <span class="math notranslate nohighlight">\(\mu\)</span> is the viscosity, and <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> is the velocity gradient. Using the Navier-Stokes equation, we can find the velocity gradient as a function of the average velocity between the plates, yielding shear based on the vertical velocity entering the plates as,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-22">
-<span class="eqno">(561)<a class="headerlink" href="#equation-sedimentation-sed-derivations-22" title="Permalink to this equation">¶</a></span>\[\tau = \mu \frac{6 \bar v_{z_{Plate}}}{S sin\alpha}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-21">
+<span class="eqno">(560)<a class="headerlink" href="#equation-sedimentation-sed-derivations-21" title="Permalink to this equation">¶</a></span>\[\tau = \mu \frac{6 \bar v_{z_{Plate}}}{S sin\alpha}\]</div>
 <p><span class="math notranslate nohighlight">\(L\)</span> is found using the equation for capture velocity, <span class="math notranslate nohighlight">\(\bar v_c = \frac{S*\bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}\)</span>. Capture velocity is kept constant so we solve for <span class="math notranslate nohighlight">\(L\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-23">
-<span class="eqno">(562)<a class="headerlink" href="#equation-sedimentation-sed-derivations-23" title="Permalink to this equation">¶</a></span>\[L = \frac{S \left( \frac{\bar v_{z_{Plate}}}{\bar v_c} -1 \right)}{sin\alpha cos\alpha}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-22">
+<span class="eqno">(561)<a class="headerlink" href="#equation-sedimentation-sed-derivations-22" title="Permalink to this equation">¶</a></span>\[L = \frac{S \left( \frac{\bar v_{z_{Plate}}}{\bar v_c} -1 \right)}{sin\alpha cos\alpha}\]</div>
 <p>Substituting <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(L\)</span> into the equation for <span class="math notranslate nohighlight">\(\Delta P\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-24">
-<span class="eqno">(563)<a class="headerlink" href="#equation-sedimentation-sed-derivations-24" title="Permalink to this equation">¶</a></span>\[\Delta P = 2\mu \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-23">
+<span class="eqno">(562)<a class="headerlink" href="#equation-sedimentation-sed-derivations-23" title="Permalink to this equation">¶</a></span>\[\Delta P = 2\mu \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)\]</div>
 <p>Now that we have an equation for <span class="math notranslate nohighlight">\(\Delta P\)</span>, we can solve for head loss.</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-25">
-<span class="eqno">(564)<a class="headerlink" href="#equation-sedimentation-sed-derivations-25" title="Permalink to this equation">¶</a></span>\[h_L = \frac{\Delta P}{\rho g}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-24">
+<span class="eqno">(563)<a class="headerlink" href="#equation-sedimentation-sed-derivations-24" title="Permalink to this equation">¶</a></span>\[h_L = \frac{\Delta P}{\rho g}\]</div>
 <div class="math notranslate nohighlight" id="equation-plate-settler-headloss">
-<span class="eqno">(565)<a class="headerlink" href="#equation-plate-settler-headloss" title="Permalink to this equation">¶</a></span>\[h_L = 2 \frac{\mu}{\rho g} \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)\]</div>
+<span class="eqno">(564)<a class="headerlink" href="#equation-plate-settler-headloss" title="Permalink to this equation">¶</a></span>\[h_L = 2 \frac{\mu}{\rho g} \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)\]</div>
 <p>Recall that head loss through plate settlers is really small, on the order of micrometers, <span class="math notranslate nohighlight">\(\mu m\)</span>. We are interested in understanding how the head loss relates to velocity, through the relation <span class="math notranslate nohighlight">\(v = \sqrt{2gh}\)</span>. The resulting two plots show how head loss and velocity relate to plate settlers (see <a class="reference internal" href="Sed_Design.html#figure-plate-settler-headloss-spacing"><span class="std std-numref">Fig. 190</span></a>).</p>
 </div>
 </div>
@@ -518,20 +514,20 @@
 <div class="section" id="velocity-gradient">
 <h3>Velocity Gradient<a class="headerlink" href="#velocity-gradient" title="Permalink to this headline">¶</a></h3>
 <p>The velocity gradient in the floc filter could cause some collisions between particles. We demonstrate that this is NOT a significant effect below. The velocity gradient in the floc filter is obtained from the head loss through a fluidized bed. We will use Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-g-camp-stein">(104)</a> to converts the energy dissipation rate into a velocity gradient.</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-26">
-<span class="eqno">(566)<a class="headerlink" href="#equation-sedimentation-sed-derivations-26" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = \frac{gh_L}{\theta}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-25">
+<span class="eqno">(565)<a class="headerlink" href="#equation-sedimentation-sed-derivations-25" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = \frac{gh_L}{\theta}\]</div>
 <p>We will start by determining <span class="math notranslate nohighlight">\(\varepsilon\)</span> by calculating <span class="math notranslate nohighlight">\(\theta\)</span> using the porosity of the floc filter, <span class="math notranslate nohighlight">\(\phi_{ff}\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-27">
-<span class="eqno">(567)<a class="headerlink" href="#equation-sedimentation-sed-derivations-27" title="Permalink to this equation">¶</a></span>\[\theta = \frac{H_{ff} \phi_{ff}}{\bar v_{z_{ff}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-26">
+<span class="eqno">(566)<a class="headerlink" href="#equation-sedimentation-sed-derivations-26" title="Permalink to this equation">¶</a></span>\[\theta = \frac{H_{ff} \phi_{ff}}{\bar v_{z_{ff}}}\]</div>
 <p>Plugging <span class="math notranslate nohighlight">\(\theta\)</span> into <span class="math notranslate nohighlight">\(\varepsilon\)</span> yields</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-28">
-<span class="eqno">(568)<a class="headerlink" href="#equation-sedimentation-sed-derivations-28" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = \frac{g \bar v_{z_{ff}}}{\phi_{ff}} \frac{h_L}{H_{ff}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-27">
+<span class="eqno">(567)<a class="headerlink" href="#equation-sedimentation-sed-derivations-27" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = \frac{g \bar v_{z_{ff}}}{\phi_{ff}} \frac{h_L}{H_{ff}}\]</div>
 <p>Substituting into our equation for <span class="math notranslate nohighlight">\(G\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-29">
-<span class="eqno">(569)<a class="headerlink" href="#equation-sedimentation-sed-derivations-29" title="Permalink to this equation">¶</a></span>\[G_{CS} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \frac{h_L}{H_{ff}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-28">
+<span class="eqno">(568)<a class="headerlink" href="#equation-sedimentation-sed-derivations-28" title="Permalink to this equation">¶</a></span>\[G_{CS} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \frac{h_L}{H_{ff}}}\]</div>
 <p>Using our equation for <span class="math notranslate nohighlight">\(h_L\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-30">
-<span class="eqno">(570)<a class="headerlink" href="#equation-sedimentation-sed-derivations-30" title="Permalink to this equation">¶</a></span>\[G_{CS} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-29">
+<span class="eqno">(569)<a class="headerlink" href="#equation-sedimentation-sed-derivations-29" title="Permalink to this equation">¶</a></span>\[G_{CS} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }\]</div>
 <p><span class="math notranslate nohighlight">\(\phi_{ff} \approx 1\)</span> and is a function of <span class="math notranslate nohighlight">\(C_{clay}\)</span></p>
 <p>We can plot our results for <span class="math notranslate nohighlight">\(G_{CS}\)</span> over a range of typical floc filter concentrations, which is around 1 - 5 g/L. We find that <span class="math notranslate nohighlight">\(G_{CS}\)</span> ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The <span class="math notranslate nohighlight">\(G_{CS}\)</span> provided by the floc filter is much smaller than <span class="math notranslate nohighlight">\(G_{CS}\)</span> provided by the flocculator. This is an important point because in the low <span class="math notranslate nohighlight">\(G_{CS}\)</span> environment of the floc filter where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.</p>
 <p>We can plot our results for <span class="math notranslate nohighlight">\(G_{CS}\theta\)</span> by multiplying <span class="math notranslate nohighlight">\(G_{CS}\)</span> by the residence time we found earlier, <span class="math notranslate nohighlight">\(\theta = 1000 s\)</span>. The result is that <span class="math notranslate nohighlight">\(Gv\theta\)</span> ranges from 2,000 to 6,000. Compare this to the <span class="math notranslate nohighlight">\(G_{CS}\theta = 20,000\)</span> for the flocculator used in experiments (<a class="reference external" href="https://www.liebertpub.com/doi/10.1089/ees.2016.0174">Garland et al., 2017</a>).</p>
@@ -556,8 +552,8 @@
 <h3>Collision Potential<a class="headerlink" href="#collision-potential" title="Permalink to this headline">¶</a></h3>
 <p>We have learned that growing a floc filter leads to better sedimentation tank performance. One explanation for the improved performance is that the floc filter acts like an additional flocculator because there are additional collisions between particles. To understand the nature and significance of these additional collisions, we can calculate the floc filter velocity gradients and residence time to find collision potential, <span class="math notranslate nohighlight">\(G\theta\)</span>. In a floc filter, we expect that <span class="math notranslate nohighlight">\(G\)</span> is small; however, <span class="math notranslate nohighlight">\(\theta\)</span> is large, which means that <span class="math notranslate nohighlight">\(G\theta\)</span> in the floc filter may be significant.</p>
 <p>First, we will find <span class="math notranslate nohighlight">\(\theta\)</span>. If we simplify the bottom of the sedimentation tank and approximate it as a simple rectangle, we can easily determine the residence time. If the depth of the floc filter is 1 m and the upflow velocity is 1 mm/s, we determine that</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-31">
-<span class="eqno">(571)<a class="headerlink" href="#equation-sedimentation-sed-derivations-31" title="Permalink to this equation">¶</a></span>\[\theta = 1000 s\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-30">
+<span class="eqno">(570)<a class="headerlink" href="#equation-sedimentation-sed-derivations-30" title="Permalink to this equation">¶</a></span>\[\theta = 1000 s\]</div>
 <p>Next, we will find <span class="math notranslate nohighlight">\(G\)</span>. Before we begin, consider why there is a velocity gradient in the floc filter. What causes it? Water is flowing up through the floc filter while the flocs in the floc filter are being pulled down by gravity. The differential velocities are caused by particles settling and rising at different velocities relative to the fluid due to drag, gravity, and fluid flow. In the fluid around each particle, there is a velocity gradient and shear between the particles and the surrounding fluid.</p>
 <p>Entering the sedimentation tank, there is a large range of particle sizes in the water. The range exists from big flocs made up with hundreds of millions of clay particles to primary particles that made it through flocculation without successful collision. These differentially sized particles create velocity gradients as the particles and flocs are acted on by both settling forces and upward fluid flow forces.</p>
 <p>Large flocs provide velocity gradients that can potentially cause collisions between other small particles that we are still trying to capture. Through our derivation to determine <span class="math notranslate nohighlight">\(G\)</span> in a floc filter, we will also test an assumption. We will assume that primary particles coming into the floc filter are not interacting with large flocs. Instead,  we will assume that the the fluid shear and differential velocities promote interactions between two primary particles.</p>
@@ -566,10 +562,10 @@
 <div class="section" id="density">
 <h3>Density<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h3>
 <p>To calculate the density of the floc filter at steady-state, we will use principles of mass and volume conservation.</p>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-31">
+<span class="eqno">(571)<a class="headerlink" href="#equation-sedimentation-sed-derivations-31" title="Permalink to this equation">¶</a></span>\[C_{clay} = \frac{m_{clay}}{\rlap{-}V_{ff}}\]</div>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-32">
-<span class="eqno">(572)<a class="headerlink" href="#equation-sedimentation-sed-derivations-32" title="Permalink to this equation">¶</a></span>\[C_{clay} = \frac{m_{clay}}{\rlap{-}V_{ff}}\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-33">
-<span class="eqno">(573)<a class="headerlink" href="#equation-sedimentation-sed-derivations-33" title="Permalink to this equation">¶</a></span>\[\rho = \frac{m_{TOT}}{\rlap{-}V}\]</div>
+<span class="eqno">(572)<a class="headerlink" href="#equation-sedimentation-sed-derivations-32" title="Permalink to this equation">¶</a></span>\[\rho = \frac{m_{TOT}}{\rlap{-}V}\]</div>
 <p>We will start by finding the mass of clay and the mass of water in the floc filter, where:</p>
 <div class="line-block">
 <div class="line"><span class="math notranslate nohighlight">\(C_{clay} =\)</span> concentration of clay in the floc filter</div>
@@ -581,30 +577,30 @@
 <p>The mass of clay in the floc filter is concentration multiplied by volume, shown by <span class="math notranslate nohighlight">\(m_{clay} = C_{clay}\rlap{-}V_{ff}\)</span></p>
 <p>The mass of water in the floc filter is related to the volume fraction of the floc filter that is occupied by clay, <span class="math notranslate nohighlight">\(\frac{C_{clay}}{\rho_{clay}}\)</span>, whic is a very small number. <span class="math notranslate nohighlight">\(\left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\)</span> is the fraction of the floc filter that is occupied by water, also called the water volume fraction. So, <span class="math notranslate nohighlight">\(m_{H_2O} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right) \rho_{H_2O} \rlap{-}V_{ff}\)</span>.</p>
 <p>Now, we know how much clay and water is in our system. The density of the system, neglecting the addition of coagulant, is,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-34">
-<span class="eqno">(574)<a class="headerlink" href="#equation-sedimentation-sed-derivations-34" title="Permalink to this equation">¶</a></span>\[\rho_{ff} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{ff}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-33">
+<span class="eqno">(573)<a class="headerlink" href="#equation-sedimentation-sed-derivations-33" title="Permalink to this equation">¶</a></span>\[\rho_{ff} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{ff}}\]</div>
 <p>Substituting for <span class="math notranslate nohighlight">\(m_{clay}\)</span> and <span class="math notranslate nohighlight">\(m_{H_2O}\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-35">
-<span class="eqno">(575)<a class="headerlink" href="#equation-sedimentation-sed-derivations-35" title="Permalink to this equation">¶</a></span>\[\rho_{ff} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\rho_{H_2O} + C_{clay}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-34">
+<span class="eqno">(574)<a class="headerlink" href="#equation-sedimentation-sed-derivations-34" title="Permalink to this equation">¶</a></span>\[\rho_{ff} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)\rho_{H_2O} + C_{clay}\]</div>
 <p>This can be rearranged to yield the following equation derived from first principles,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-36">
-<span class="eqno">(576)<a class="headerlink" href="#equation-sedimentation-sed-derivations-36" title="Permalink to this equation">¶</a></span>\[\rho_{ff} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right)C_{clay} + \rho_{H_2O}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-35">
+<span class="eqno">(575)<a class="headerlink" href="#equation-sedimentation-sed-derivations-35" title="Permalink to this equation">¶</a></span>\[\rho_{ff} = \left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right)C_{clay} + \rho_{H_2O}\]</div>
 <p>AguaClara researchers in the lab developed an empirical equation through experimental studies to calculate floc filter density. They determined that,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-37">
-<span class="eqno">(577)<a class="headerlink" href="#equation-sedimentation-sed-derivations-37" title="Permalink to this equation">¶</a></span>\[\rho_{ff} = 0.687C_{clay} + \rho_{H_2O}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-36">
+<span class="eqno">(576)<a class="headerlink" href="#equation-sedimentation-sed-derivations-36" title="Permalink to this equation">¶</a></span>\[\rho_{ff} = 0.687C_{clay} + \rho_{H_2O}\]</div>
 <p>Comparing the empirical equation to the one determined by first principles, it is clear that the coefficient,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-38">
-<span class="eqno">(578)<a class="headerlink" href="#equation-sedimentation-sed-derivations-38" title="Permalink to this equation">¶</a></span>\[\left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right) = 0.687\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-37">
+<span class="eqno">(577)<a class="headerlink" href="#equation-sedimentation-sed-derivations-37" title="Permalink to this equation">¶</a></span>\[\left( 1 - \frac{\rho_{H_2O}}{\rho_{clay}} \right) = 0.687\]</div>
 </div>
 <div class="section" id="head-loss">
 <h3>Head Loss<a class="headerlink" href="#head-loss" title="Permalink to this headline">¶</a></h3>
 <p>Now that we can calculate the density of the floc filter, we can calculate the head loss through the floc filter. This topic will be discussed further in the chapter on filtration. For now, all you need to know is that density can be related to head loss in the floc filter through the height of the floc filter, <span class="math notranslate nohighlight">\(H_{ff}\)</span>, and the densities of the floc filter and water.</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-39">
-<span class="eqno">(579)<a class="headerlink" href="#equation-sedimentation-sed-derivations-39" title="Permalink to this equation">¶</a></span>\[\frac{h_L}{H_{ff}} = \frac{\rho_{ff} - \rho_{H_2O}}{\rho_{H_2O}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-38">
+<span class="eqno">(578)<a class="headerlink" href="#equation-sedimentation-sed-derivations-38" title="Permalink to this equation">¶</a></span>\[\frac{h_L}{H_{ff}} = \frac{\rho_{ff} - \rho_{H_2O}}{\rho_{H_2O}}\]</div>
 <p>There will be a small amount of head loss through the floc filter because the density of the floc filter is greater than the density of water by only a little bit. Remember that <span class="math notranslate nohighlight">\(\frac{C_{clay}}{\rho_{clay}}\)</span> is really just the fraction of the floc filter that is occupied by clay.</p>
 <p>Plugging in the equation for <span class="math notranslate nohighlight">\(\rho_{ff}\)</span> and solving for <span class="math notranslate nohighlight">\(h_L\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-40">
-<span class="eqno">(580)<a class="headerlink" href="#equation-sedimentation-sed-derivations-40" title="Permalink to this equation">¶</a></span>\[h_L = H_{ff} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}\]</div>
+<div class="math notranslate nohighlight" id="equation-floc-filter-head-loss">
+<span class="eqno">(579)<a class="headerlink" href="#equation-floc-filter-head-loss" title="Permalink to this equation">¶</a></span>\[h_L = H_{ff} \left( \frac{\rho_{clay}}{\rho_{H_2O}} - 1 \right) \frac{C_{clay}}{\rho_{clay}}\]</div>
 </div>
 <div class="section" id="flocculator-and-floc-filter-paradox">
 <span id="heading-flocculator-floc-filter-paradox"></span><h3>Flocculator and Floc Filter Paradox<a class="headerlink" href="#flocculator-and-floc-filter-paradox" title="Permalink to this headline">¶</a></h3>
@@ -683,30 +679,30 @@
 </div>
 <p>What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our sedimentation tank, we want an upflow velocity of 1 mm/s. Additionally, because diffusers are a key component of our “sedimentation tank as a circuit”, we want to precisely control head loss in the jet leaving the jet reverser because that will help us achieve uniform flow within and between sedimentation tanks. AguaClara designs set head loss in the jet constant at 1 cm.</p>
 <p>Let’s begin by finding the internal width of a single diffuser. Using conservation of flow, we know that,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-41">
-<span class="eqno">(581)<a class="headerlink" href="#equation-sedimentation-sed-derivations-41" title="Permalink to this equation">¶</a></span>\[Q_{diff} = \bar v_{jet}W_{diff}S_{diff} = \bar v_{z_{ff}}W_{Sed}B_{diff}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-39">
+<span class="eqno">(580)<a class="headerlink" href="#equation-sedimentation-sed-derivations-39" title="Permalink to this equation">¶</a></span>\[Q_{diff} = \bar v_{jet}W_{diff}S_{diff} = \bar v_{z_{ff}}W_{Sed}B_{diff}\]</div>
 <p><span class="math notranslate nohighlight">\(Q_{diff}\)</span> is determined <a class="reference internal" href="Sed_Examples.html#heading-flow-thru-diffuser"><span class="std std-ref">as an example</span></a>, where we find that <span class="math notranslate nohighlight">\(Q_{diff} = 50 \frac{mL}{s}\)</span>.</p>
 <p>Solving for <span class="math notranslate nohighlight">\(W_{diff}\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-42">
-<span class="eqno">(582)<a class="headerlink" href="#equation-sedimentation-sed-derivations-42" title="Permalink to this equation">¶</a></span>\[W_{diff} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{\bar v_{jet}S_{diff}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-40">
+<span class="eqno">(581)<a class="headerlink" href="#equation-sedimentation-sed-derivations-40" title="Permalink to this equation">¶</a></span>\[W_{diff} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{\bar v_{jet}S_{diff}}\]</div>
 <p>Using the constraint of head loss in the jet and solving for <span class="math notranslate nohighlight">\(\bar v_{jet}\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-43">
-<span class="eqno">(583)<a class="headerlink" href="#equation-sedimentation-sed-derivations-43" title="Permalink to this equation">¶</a></span>\[h_{L,jet} = \frac{\bar v_{jet}^2}{2g}\]</div>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-44">
-<span class="eqno">(584)<a class="headerlink" href="#equation-sedimentation-sed-derivations-44" title="Permalink to this equation">¶</a></span>\[\bar v_{jet} = \sqrt{2gh_{L,jet}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-41">
+<span class="eqno">(582)<a class="headerlink" href="#equation-sedimentation-sed-derivations-41" title="Permalink to this equation">¶</a></span>\[h_{L,jet} = \frac{\bar v_{jet}^2}{2g}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-42">
+<span class="eqno">(583)<a class="headerlink" href="#equation-sedimentation-sed-derivations-42" title="Permalink to this equation">¶</a></span>\[\bar v_{jet} = \sqrt{2gh_{L,jet}}\]</div>
 <p>Substituting back into the equation for <span class="math notranslate nohighlight">\(W_{diff}\)</span>, we can find the minimum diffuser width required to not exceed target head loss as,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-45">
-<span class="eqno">(585)<a class="headerlink" href="#equation-sedimentation-sed-derivations-45" title="Permalink to this equation">¶</a></span>\[W_{diff,min} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-43">
+<span class="eqno">(584)<a class="headerlink" href="#equation-sedimentation-sed-derivations-43" title="Permalink to this equation">¶</a></span>\[W_{diff,min} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}\]</div>
 <p>Now that we have determined the minimum width, we can use known parameters and constraints to find a precise value for <span class="math notranslate nohighlight">\(W_{diff}\)</span> and <span class="math notranslate nohighlight">\(v_{jet}\)</span>.</p>
 <p>Using known constants for <span class="math notranslate nohighlight">\(\bar v_{z_{ff}} = 1 \frac{mm}{s}\)</span>, <span class="math notranslate nohighlight">\(h_{L,jet} = 1 cm\)</span>, and <span class="math notranslate nohighlight">\(W_{Sed} = 1m\)</span>, we can find that <span class="math notranslate nohighlight">\(W_{diff,min} = 2.7 mm\)</span>. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find <span class="math notranslate nohighlight">\(W_{diff}\)</span> we round up to 3.175 mm.</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-46">
-<span class="eqno">(586)<a class="headerlink" href="#equation-sedimentation-sed-derivations-46" title="Permalink to this equation">¶</a></span>\[W_{diff} = 3.175 mm\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-44">
+<span class="eqno">(585)<a class="headerlink" href="#equation-sedimentation-sed-derivations-44" title="Permalink to this equation">¶</a></span>\[W_{diff} = 3.175 mm\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(\bar v_{jet}\)</span> from our earlier equations yields,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-47">
-<span class="eqno">(587)<a class="headerlink" href="#equation-sedimentation-sed-derivations-47" title="Permalink to this equation">¶</a></span>\[\bar v_{jet} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{W_{diff}S_{diff}}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-45">
+<span class="eqno">(586)<a class="headerlink" href="#equation-sedimentation-sed-derivations-45" title="Permalink to this equation">¶</a></span>\[\bar v_{jet} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{W_{diff}S_{diff}}\]</div>
 <p>Using known constants,</p>
-<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-48">
-<span class="eqno">(588)<a class="headerlink" href="#equation-sedimentation-sed-derivations-48" title="Permalink to this equation">¶</a></span>\[\bar v_{jet} \approx 380 \frac{mm}{s}\]</div>
+<div class="math notranslate nohighlight" id="equation-sedimentation-sed-derivations-46">
+<span class="eqno">(587)<a class="headerlink" href="#equation-sedimentation-sed-derivations-46" title="Permalink to this equation">¶</a></span>\[\bar v_{jet} \approx 380 \frac{mm}{s}\]</div>
 <div class="section" id="jet-velocity">
 <h3>Jet Velocity<a class="headerlink" href="#jet-velocity" title="Permalink to this headline">¶</a></h3>
 <p><span class="math notranslate nohighlight">\(\bar v_{jet}\)</span> is defined as the velocity of the water jet exiting the diffuser. After exiting the diffuser, this water jet is sent into the jet reverser to make a 180 degree turn. Does the water jet change pressure or velocity as it exits the jet reverser? Do we need to consider the effects of a <em>vena contracta</em>?</p>

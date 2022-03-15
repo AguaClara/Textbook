@@ -18,20 +18,7 @@ Flow :math:`Q` and Water Level :math:`h` as a Function of Time
 ----------------------------------------------------------------
 Our first step is to see if we can get constant head out of a simple system. The most simple flow control system is a bucket or tank with a hole in it. This system is too coarse to provide constant head. One step above that is a bucket or tank with a valve. This is where we begin our search for constant head.
 
-Using the setup described in the image below, we derive the following equation for flow :math:`Q` through the valve as a function of time :math:`t`. The derivation is found here: :ref:`heading_flow_for_a_tank_with_a_valve`. You are advised to read through it if you are at all confused about this equation.
-
-.. math::
-  :label: Q_tank_with_valve
-
-   \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
-
-| Such that:
-| :math:`Q` = :math:`Q(t)` = flow of hypochlorite through valve at time :math:`t`
-| :math:`Q_0` = flow of hypochlorite through valve at time :math:`t = 0`
-| :math:`t` = elapsed time
-| :math:`t_{Design}` = time it *would* take for tank to empty if flow stayed constant at :math:`Q_0`, which it does not
-| :math:`h_{Tank}` = elevation of water level with reference to tank bottom at time :math:`t` = 0
-| :math:`h_0` = elevation of water level with reference to the valve at time :math:`t = 0`
+Using the setup described in the image below, we derive the following equation for flow :math:`Q` through the valve as a function of time :math:`t`. The derivation is found here: :ref:`heading_flow_for_a_tank_with_a_valve`.
 
 .. _figure_hypochlorinator_variable_explanation_design:
 .. figure:: ../Images/hypochlorinator_variable_explanation.png
@@ -41,7 +28,7 @@ Using the setup described in the image below, we derive the following equation f
 
     This figure shows the variables that are defined in the equation above.
 
-This equation has historically give students some trouble, and while its nuances are explained in the derivation, they will be quickly summarized here:
+This equation has historically given students some trouble, and while its nuances are explained in the derivation, they will be quickly summarized here:
 
 * :math:`t_{Design}` is **NOT** the time it takes to drain the tank. It is the time that it *would* take to drain the tank *if* the flow rate at time :math:`t = 0`, :math:`Q_0`, were the flow rate forever, which it is not. :math:`t_{Design}` was used in the derivation to simplify the equation, which is why this potentially-confusing parameter exists. The actual time it takes to drain the tank lies somewhere between :math:`t_{Design}` and :math:`2 \, t_{Design}` and depends on the ratio :math:`\frac{h_{Tank}}{h_0}`.
 * :math:`h_{Tank}` is not the same as :math:`h_{0}`. :math:`h_{Tank}` is the height of water level in the tank with reference to the tank bottom. :math:`h_{0}` is the water level in the tank with reference to the valve. Neither change with time, they both refer to the water level at one instance in time, :math:`t = 0`. Therefore, :math:`h_{0} \geq h_{Tank}` is always true. If the tank is elevated far above the valve, then the :math:`h_{0} > > h_{Tank}`. If the valve is at the same elevation as the bottom of the tank, then :math:`h_{0} = h_{Tank}`. Please refer to the figure above to clarify :math:`h_{0}` and :math:`h_{Tank}`.

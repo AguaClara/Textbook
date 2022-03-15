@@ -179,6 +179,7 @@ substitute :math:`S = \frac{H_e}{\Pi_{H_eS}}` into the previous equation
 for :math:`W` to get :math:`W_{Min, \, \Pi_{H_eS}}`:
 
 .. math::
+  :label: W_min_HVFloc
 
 
    W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K_{baffle}}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
