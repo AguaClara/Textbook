@@ -38,14 +38,15 @@ We need a method to measure the flow rate entering the filters. The slot weir in
 The 4 EStaRS that are in operation in Central America as of 2021 have winged pipes with orifices for the inlets. There are no reports of problems with sand entering the inlet pipes and thus that appears to be a success. This does require the use of a gate valve for the backwash pipe to ensure that the transition from backwash to filtration mode doesn't happen too quickly. During this transition there is reverse flow from the filter into the inlet pipes and if that flow rate is too high it could carry sand into the inlet branches.
 
 Air venting from trunks
-***********************
+=======================
+
 The trunks are initially filled with air.
 The trunks must have a water seal that is as low as the siphon water seal (is this the constraint?) to ensure that air is never sucked into the filter during backwash.
 The trunk entry into the filter body is thus at a local high point and air that accumulates in the top of the trunk and the top of the branches has no way to get out.
 There must be a vent on the top of the trunks where they enter the filter body.
 
 Vent options
-============
+-----------
 
 1) tube straight up to top of inlet tank (will suck air during backwash)
 1) tube that connects into the top of the filter body (during filtration air will travel up the tubes and vent into the top of the filter body. During backwash water will take this shortcut to bypass the sand. It could work if the tubes are small enough that the bypass during backwash is small)
