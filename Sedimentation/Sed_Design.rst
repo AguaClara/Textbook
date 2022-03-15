@@ -39,7 +39,7 @@ In this section, we will develop a conceptual understanding of the sedimentation
     :align: center
     :alt: Overview of an AguaClara Sedimentation tank (click to be sent to video).
 
-Overview of an AguaClara Sedimentation tank (click to be sent to video).
+Overview of an AguaClara Sedimentation tank (click image to be sent to video).
 
 .. _heading_Sed_Tank_As_Circuit:
 
@@ -468,7 +468,7 @@ The Ten State Standards states, "The velocity of flocculated water through condu
 
     The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.
 
-The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the sedimentor head loss is 5 cm. 
+The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the sedimentor head loss is 5 cm.
 
 .. _heading_Sed_Tank_Velocity_Flow:
 
