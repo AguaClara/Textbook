@@ -293,7 +293,7 @@ So we know that the diffusers, jet reverser, and sloped bottom ensure that no sl
 
 What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
 
- `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that the jet was unable to resuspend the flocs when the jet velocity was 57 mm/s and was successful for all velocities greater than 75 mm/s. The momentum of the floc density current will increase with the concentration of flocs in the primary filter which is in turn a function of the density and size of the core particles. The primary filter floc concentration will decrease at lower temperatures and thus failure of the jet reverser will occur at high temperatures. Given that Dr. Garland did the research at room temperature using a kaolin suspension it is likely that the 75 mm/s guidelines is sufficiently conservative for all designs that have a 1 mm/s upflow velocity. The jet reverser will fail at some point as the flow rate through the sedimentation tank is decreased. The solution for that case would be to take a fraction of the sedimentation tanks off line to maintain a higher jet velocity.
+`Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that the jet was unable to resuspend the flocs when the jet velocity was 57 mm/s and was successful for all velocities greater than 75 mm/s. The momentum of the floc density current will increase with the concentration of flocs in the primary filter which is in turn a function of the density and size of the core particles. The primary filter floc concentration will decrease at lower temperatures and thus failure of the jet reverser will occur at high temperatures. Given that Dr. Garland did the research at room temperature using a kaolin suspension it is likely that the 75 mm/s guidelines is sufficiently conservative for all designs that have a 1 mm/s upflow velocity. The jet reverser will fail at some point as the flow rate through the sedimentation tank is decreased. The solution for that case would be to take a fraction of the sedimentation tanks off line to maintain a higher jet velocity.
 
 .. _figure_jet_angle:
 
@@ -421,6 +421,29 @@ The inlet manifold flow is transferred to the equalization chamber through half-
     The half-pipe ports face upstream and slope at a rate that is slower than the rate at which the flow expands to ensure that the flow is fully expanded before the entrance into the next half-pipe port.
 
 The manifold system must be designed so that the velocity gradient in all flow expansions is less than the maximum allowed velocity gradient. The minimum diameter of the inlet manifold is set by the largest minor loss coefficient (see Equation :eq:`D_pipe_min_of_K_and_jet_G_max`) which is created by the 90° elbow.
+
+The flow equalizer dissipates most of the kinetic energy in the inlet manifold as the flow exits the ports and enters the equalizer chamber. The ports face upstream and thus act like pitot tubes with the flow into the port controlled by the difference in total energy head between the manifold and the equalizer rather than controlled by the piezometric head (no kinetic energy term). The ports are sloped at a very gradual angle to allow the flow in the manifold to fully expand before arriving at the next port.
+
+The port diameter is set by two potential constraints.
+ 1) The velocity gradient created by the jet entering the equalizer must be less than the maximum allowed velocity gradient. This constraint appears to be easy to achieve and the 2nd constraint dominates
+ 1) The slope of the port must be less than the rate of flow expansion in the manifold.
+
+For the second constraint we use continuity to ensure that enough water enters the port to serve the diffusers that are in the length of the manifold corresponding to the sloped port. The flow per unit length of the sedimentation tank is
+
+.. math::
+  :label: port_continuity
+
+  Q_{port} = \bar v_{port} \Pi_{vc} \frac{\pi D_{port}^2}{8}
+          = \frac{Q_{manifold}}{L_{jetreverser}} \Pi_D^L D_{port}
+
+where :math:`\Pi_D^L` is the ratio of the port length to the port diameter and must have a value greater than the plane jet expansion ratio given in Equation :eq:`PlaneJet_expansion`. Solve for the minimum port diameter.
+
+.. math::
+  :label: D_port_min_continuity
+
+   D_{port} = \frac{8 \Pi_D^L Q_{manifold}}{\bar v_{port} \Pi_{vc} L_{jetreverser}\pi}  
+
+
 
 
 .. _heading_sedimentation_tank_outlet_manifold:
@@ -774,7 +797,7 @@ There are some cases in which the plates are so close that even if flocs settle 
 
 1) Why would flocs roll up?
 
-It is a force balance! There is a force of gravity pulling the particle down, balanced with the force that the fluid flow exerts through drag related to viscosity. But why does it matter if plates are close together for floc roll up? The average velocity between plates is about 1 mm/s and is the same for any spacing. However, when plates are closer together the velocity profile is much steeper. Compared with plates with greater spacing, the closer plates cause there to be a higher velocity closer to the surface of the plate. This means that flocs between closely spaced plates will see a greater velocity closer to the plate settler, which will impact the force balance. The derivation of the force balance is found in the section on :ref:`plate settler design <heading_Floc_Rollup_Slide_Velocity_Derivation>`. The velocity that the flocs slide down the plate is called :math:`v_{Slide}`.
+It is a force balance! There is a force of gravity pulling the particle down, balanced with the force that the fluid flow exerts through drag related to viscosity. But why does it matter if plates are close together for floc roll up? The average velocity between plates is about 1 mm/s and is the same for any spacing. However, when plates are closer together the velocity profile is much steeper. Compared with plates with greater spacing, the closer plates cause there to be a higher velocity closer to the surface of the plate. This means that flocs between closely spaced plates will see a greater velocity closer to the plate settler, which will impact the force balance. The derivation of the force balance is found in the section on :ref:`plate settler design <heading_Floc_Rollup_Derivation>`.
 
 2) How would you define the transition between floc rollup and slide down? What would describe the case for a floc that is stationary on the plate settler (not rolling up or sliding down?)
 
