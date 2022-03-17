@@ -424,25 +424,79 @@ The manifold system must be designed so that the velocity gradient in all flow e
 
 The flow equalizer dissipates most of the kinetic energy in the inlet manifold as the flow exits the ports and enters the equalizer chamber. The ports face upstream and thus act like pitot tubes with the flow into the port controlled by the difference in total energy head between the manifold and the equalizer rather than controlled by the piezometric head (no kinetic energy term). The ports are sloped at a very gradual angle to allow the flow in the manifold to fully expand before arriving at the next port.
 
-The port diameter is set by two potential constraints.
- 1) The velocity gradient created by the jet entering the equalizer must be less than the maximum allowed velocity gradient. This constraint appears to be easy to achieve and the 2nd constraint dominates
+The port diameter and port velocity are governed by two constraints.
  1) The slope of the port must be less than the rate of flow expansion in the manifold.
+ 1) The velocity gradient created by the jet entering the equalizer must be less than the maximum allowed velocity gradient.
 
-For the second constraint we use continuity to ensure that enough water enters the port to serve the diffusers that are in the length of the manifold corresponding to the sloped port. The flow per unit length of the sedimentation tank is
+For the first constraint we use continuity to ensure that enough water enters the port to serve the diffusers that are in the length of the manifold corresponding to the sloped port. The flow per unit length of the sedimentation tank is
 
 .. math::
   :label: port_continuity
 
   Q_{port} = \bar v_{port} \Pi_{vc} \frac{\pi D_{port}^2}{8}
-          = \frac{Q_{manifold}}{L_{jetreverser}} \Pi_D^L D_{port}
+          = \frac{Q_{manifold}}{L_{jetreverser}} \Pi_r^L \frac{D_{port}}{2}
 
-where :math:`\Pi_D^L` is the ratio of the port length to the port diameter and must have a value greater than the plane jet expansion ratio given in Equation :eq:`PlaneJet_expansion`. Solve for the minimum port diameter.
+where :math:`\Pi_r^L` is the ratio of the port length to the port radius and must have a value greater than the inverse of the plane jet expansion ratio given in Equation :eq:`PlaneJet_expansion`. Solve for the minimum port diameter.
 
 .. math::
   :label: D_port_min_continuity
 
-   D_{port} = \frac{8 \Pi_D^L Q_{manifold}}{\bar v_{port} \Pi_{vc} L_{jetreverser}\pi}  
+   D_{port_{min}} = \frac{4 \Pi_r^L Q_{manifold}}{\bar v_{port} \Pi_{vc} L_{jetreverser}\pi}
 
+The unknown in Equation :eq:`D_port_min_continuity` is the maximum allowable value for the port velocity, :math:`\bar v_{port}`. The port velocity is limited by the maximum allowable velocity gradient.
+
+The ports all deliver kinetic energy into the equalizer and that energy has to be dissipated through turbulence without creating any large mean flows. Given that the ports are all pointed in the same direction a high velocity would be generated in the same direction as the velocity in the manifold. To counteract this effect half of the flow from each port must be reversed. This will be accomplished with a jet reverser that will catch approximately 50% of the port flow and redirect it upstream. The thickness of this reversed jet will be approximately equal 50% of the port area divided by the port diameter.
+
+.. math::
+  :label: S_port_reversed_jet
+
+  S_{jet} =  \frac{\pi D_{port}}{16}
+
+The plane jet velocity gradient given in Equation :eq:`planejet_V_max` can be combined with Equation :eq:`S_port_reversed_jet` to obtain the maximum jet velocity.
+
+.. math::
+  :label: v_port_max_of_G
+
+  \bar v_{Port_{Max}} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}
+
+Now we can combine Equations :eq:`D_port_min_continuity` and :eq:`v_port_max_of_G` and solve for the minimum port diameter.
+
+.. math::
+  :label: D_port_min
+
+   D_{port_{min}} = \left[\left(\frac{16 \Pi_{JetPlane} }{\nu \pi  G_{Max}^2 }\right) \left(\frac{4 \Pi_r^L Q_{manifold}}{ \Pi_{vc} L_{jetreverser}\pi} \right)^3 \right]^{\frac{1}{4}}
+
+The port diameter will be rounded up to the next available pipe diameter. The maximum length of the port is given by the maximum flow from the port. The maximum port velocity is given by Equation :eq:`v_port_max_of_G`. The maximum port flow is obtained by multiplying by the port area.
+
+.. math::
+  :label: port_max_spacing
+
+  Q_{port_{max}} = \bar v_{Port_{Max}} \frac{\pi D_{port}^2}{8} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
+
+The port center to center distance is obtained by matching the port flow to the flow through the diffusers.
+
+.. math::
+  :label: continuity_for_port_spacing
+
+  Q_{port_{max}} = \frac{Q_{manifold}}{L_{jetreverser}} B_{port_{max}}
+
+where :math:`B_{port}` is the center to center spacing of the ports. Combining Equations :eq:`port_max_spacing` and :eq:`continuity_for_port_spacing` we obtain the maximum port spacing.
+
+.. math::
+  :label: max_port_spacing_draft
+
+  G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8} = \frac{Q_{manifold}}{L_{jetreverser}} B_{port_{max}}
+
+Solve for the port spacing.
+
+.. math::
+  :label: max_port_spacing
+
+  B_{port_{max}} = \frac{L_{jetreverser}}{Q_{manifold}}  \left(\frac{\nu G_{Max}^2 \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
+
+Round down to the port spacing that works given the total length of the jet reverser and the requirement that there be an integer number of ports.
+
+The port reverser must have a diameter that is at least double that given by Equation :eq:`S_port_reversed_jet`. The optimal location for installing the port reverser is not yet determined. The port reverser is installed with its center below dividing plate. The port reverser center coincindes with the center of the port. The assumption is that the flow has not expanded significantly and thus the port reverser will catch the flow in the upper half of the port reverser.
 
 
 
