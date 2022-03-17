@@ -117,7 +117,7 @@ Engineering requires calculations with units. Prior to modern computer languages
 
 Operations on values with units follow very clear algebraic rules and thus units can be attached to numerical values and carried through math operations. This capability is implemented in Python using `Pint <https://pint.readthedocs.io/en/latest/>`_ . The Pint package includes a host of units and prefixes (such as :math:`\mu` for :math:`10^{-6}`). As you master using Python and Pint you will say goodbye to mindless unit conversions forever!
 
-Environmental engineers historically described surface loading rates for sedimentation tanks using units of gal/min per square foot. How fast is :math:`\frac{1 gpm}{ft^2}` in :math:`\frac{mm}{s}`?
+Environmental engineers historically described surface loading rates for clarifiers using units of gal/min per square foot. How fast is :math:`\frac{1 gpm}{ft^2}` in :math:`\frac{mm}{s}`?
 
 .. code:: python
 

@@ -308,11 +308,11 @@ The following plot in :numref:`figure_terminal_velocity_floc_diam` shows the rel
 
     Terminal velocity as a function of floc diameter taking into account the changing density of flocs.
 
-Three important regions are highlighted in the plot. At small floc diameters, less than 10 :math:`\mu m`, terminal velocity is less that 0.1 :math:`\frac{mm}{s}`. A terminal velocity this low would require extremely large sedimentation tanks for reasonable treatment. Because large sedimentation tanks are costly and unfeasible, we use flocculation to aggregate particles and achieve floc sizes of greater diameters and higher terminal velocities.
+Three important regions are highlighted in the plot. At small floc diameters, less than 10 :math:`\mu m`, terminal velocity is less that 0.1 :math:`\frac{mm}{s}`. A terminal velocity this low would require extremely large clarifiers for reasonable treatment. Because large clarifiers are costly and unfeasible, we use flocculation to aggregate particles and achieve floc sizes of greater diameters and higher terminal velocities.
 
 For flocs made of clay and with diameters around 35 :math:`\mu m`, the terminal velocity is about 0.12 :math:`\frac{mm}{s}`. AguaClara plate settlers are designed to settle out flocs of this size (particles dropping at 0.12 :math:`\frac{mm}{s}`) so the smallest floc that the plate settlers can reliably capture is 35 :math:`\mu m`. This will be explored in more detail during the discussion on :ref:`capture velocity <heading_capture_velocity>`.
 
-Clay based flocs with diameters around 200 :math:`\mu m` have a terminal velocity of about 1 :math:`\frac{mm}{s}`. In our sedimentation tanks, which are upflow sedimentation tanks, we have water flowing up at about 1 :math:`\frac{mm}{s}` to capture a 200 :math:`\mu m` floc. These flocs are clearly visible but are small.
+Clay based flocs with diameters around 200 :math:`\mu m` have a terminal velocity of about 1 :math:`\frac{mm}{s}`. In our clarifiers, which are upflow clarifiers, we have water flowing up at about 1 :math:`\frac{mm}{s}` to capture a 200 :math:`\mu m` floc. These flocs are clearly visible but are small.
 
 Our understanding of floc terminal velocity suggests that we can decide the size of the floc that we want the plate settlers to capture. If we decide that we want to capture flocs that are 35 :math:`\mu m` or larger, we know that we must design the plate settlers to capture flocs falling at 0.12 :math:`\frac{mm}{s}`.
 
@@ -413,11 +413,11 @@ The floc will break apart when the :math:`F_{shear_{max}}` exceeds the coagulant
 
 The expectation is that the flocs will break for values of :math:`\Pi_{bond}^{shear}>1`. The value of :math:`\Pi_{bond}^{shear}` will ideally be measured experimentally since there are a number of unknowns buried in the term including a characteristic length of the lever arm that the coagulant bond is acting on.  This analysis shows that the maximum size of a floc is set by the fluid shear stress, :math:`\tau`. Previously it wasn't clear if floc size was limited by energy dissipation rate or by the velocity gradient. Neither of those parameters captures the physics because ultimately it is a force that breaks the covalent bond and thus it must be a fluid force (not energy dissipation rate or velocity gradient) that can be used as a design parameter. By recognizing that the shear stress :math:`\tau` must be limited we can now develop design equations that account for the effects of viscosity and temperature on the design.
 
-When flocs are broken by the shearing action of the fluid it is possible that a primary particle is torn off or that the floc is broken in half. The method of breaking matters because if primary particles are dislodged from a floc then any breaking will lead to a deterioration of the sedimentation tank performance because some of those primary particles will make it through the floc filter and won't be captured by the plate settlers. Conventional wisdom would suggest that flocs will be broken into little pieces. If that were the case then any floc breakup would cause the settled water turbidity to increase. `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that there was no sign of increased settled water turbidity up to an energy dissipation rate of 300 mw/kg  (:numref:`figure_sed_performance_vs_jet_edr` adapted from `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_).
+When flocs are broken by the shearing action of the fluid it is possible that a primary particle is torn off or that the floc is broken in half. The method of breaking matters because if primary particles are dislodged from a floc then any breaking will lead to a deterioration of the clarifier performance because some of those primary particles will make it through the floc filter and won't be captured by the plate settlers. Conventional wisdom would suggest that flocs will be broken into little pieces. If that were the case then any floc breakup would cause the settled water turbidity to increase. `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that there was no sign of increased settled water turbidity up to an energy dissipation rate of 300 mw/kg  (:numref:`figure_sed_performance_vs_jet_edr` adapted from `Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_).
 
 .. _figure_sed_performance_vs_jet_edr:
 
-.. figure:: ../Images/Sed_performance_vs_jet_edr.png
+.. figure:: ../Images/Clarifier_performance_vs_jet_edr.png
    :width: 400px
    :align: center
    :alt: Sed tank performance as a function of jet energy dissipation rate
@@ -425,7 +425,7 @@ When flocs are broken by the shearing action of the fluid it is possible that a 
    Settled water solids concentrations during steady state as a function of jet energy dissipation rate given an upflow velocity of 1.2 mm/s and 1.6 mm/s.  Results shown are averaged over 2 residence times.
 
 
-:numref:`figure_sed_performance_vs_jet_edr` suggests that the floc filter and plate settler system begins to fail for energy dissipation rates in excess of about 30 W/kg. At higher energy dissipation rates the settled water turbidity increased rapidly from about 1 mg/L at 30 W/kg to 45 mg/L at 1000 W/kg. If flocs from the floc filter were broken up such that the fragments had sedimentation velocities less than :math:`v_{z_{ff}}`, the supernatant concentration would increase. There was no indication of increasing supernatant concentration at 100 W/kg. This suggests that the performance deterioration began with the breakup of flocs from the flocculator rather than by breakup of flocs in the floc filter. The maximum energy dissipation rate occurs in the core of the jet and thus flocs from the floc filter that are being resuspended likely do not experience the maximum jet energy dissipation rate. This potentially explains why the supernatant solids concentration doesn't increase until the energy dissipation rate is even higher than where the settled water turbidity begins to increase.
+:numref:`figure_sed_performance_vs_jet_edr` suggests that the floc filter and plate settler system begins to fail for energy dissipation rates in excess of about 30 W/kg. At higher energy dissipation rates the settled water turbidity increased rapidly from about 1 mg/L at 30 W/kg to 45 mg/L at 1000 W/kg. If flocs from the floc filter were broken up such that the fragments had terminal velocities less than :math:`v_{z_{ff}}`, the supernatant concentration would increase. There was no indication of increasing supernatant concentration at 100 W/kg. This suggests that the performance deterioration began with the breakup of flocs from the flocculator rather than by breakup of flocs in the floc filter. The maximum energy dissipation rate occurs in the core of the jet and thus flocs from the floc filter that are being resuspended likely do not experience the maximum jet energy dissipation rate. This potentially explains why the supernatant solids concentration doesn't increase until the energy dissipation rate is even higher than where the settled water turbidity begins to increase.
 
 At 1000 W/kg the supernatant concentration increases to about 300 mg/L. This suggests that this very high energy dissipation rate was sufficient to begin breaking up flocs from the floc filter.
 
@@ -479,7 +479,7 @@ Linking Jet Reverser Velocity Gradient and Capture Velocity
 
 The coagulant bond strength provides a link between diffuser-jet reverser design and plate settler design.
 
-We can substitute Equation :eq:`d_floc_G` into Equation :eq:`vt_of_floc` and solve for the maximum jet reverser velocity gradient that will produce flocs that are large enough to be captured by the sedimentation tank. The capture velocity of the sedimentation tank must be equal to or smaller than the floc terminal velocity to ensure capture of the floc.
+We can substitute Equation :eq:`d_floc_G` into Equation :eq:`vt_of_floc` and solve for the maximum jet reverser velocity gradient that will produce flocs that are large enough to be captured by the clarifier. The capture velocity of the clarifier must be equal to or smaller than the floc terminal velocity to ensure capture of the floc.
 
 .. math::
   :label: vc_of_G
@@ -718,7 +718,7 @@ The maximum floc size that can be obtained based on a :math:`\Pi_{bond}^g = 8` a
 
     The maximum floc size deceases rapidly as the density of the core particle increases.
 
-The maximum size of flocs that can be obtained with aluminum-based coagulants is thus limited due to the force of gravity. This has direct implications for the use of ballasted sand flocculation that uses micro-sand (size 40 - 150 µm) to increase the sedimentation velocity of the flocs. Equation :eq:`D_floc_of_bong` reveals that aluminum-based coagulants aren't strong enough to hold two micro-sand particles together. Ballasted sand flocculation requires additional polymers that increase the bond strength to create flocs around the micro-sand.
+The maximum size of flocs that can be obtained with aluminum-based coagulants is thus limited due to the force of gravity. This has direct implications for the use of ballasted sand flocculation that uses micro-sand (size 40 - 150 µm) to increase the terminal velocity of the flocs. Equation :eq:`D_floc_of_bong` reveals that aluminum-based coagulants aren't strong enough to hold two micro-sand particles together. Ballasted sand flocculation requires additional polymers that increase the bond strength to create flocs around the micro-sand.
 
 Maximum Floc Terminal Velocity
 ==============================

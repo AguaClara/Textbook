@@ -5,31 +5,31 @@
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
-.. _title_Sed_Design:
+.. _title_Clarifier_Design:
 
 *************************
-Sedimentation Tank Design
+Clarifier Design
 *************************
 
-.. _heading_Sed_Design:
+.. _heading_Clarifier_Design:
 
-The AguaClara sedimentation tank is a high-rate vertical flow sedimentation tank that is designed with the following goals:
+The AguaClara clarifier is a high-rate vertical flow clarifier that is designed with the following goals:
 
 #. To minimize secondary currents that could send high velocity flow through some of the plate settlers
-#. To prevent accumulation of sludge that would tend to become anaerobic and release both dissolved organics (taste and order issues) and methane bubbles that would carry flocs to the top of the sedimentation tank
+#. To prevent accumulation of sludge that would tend to become anaerobic and release both dissolved organics (taste and order issues) and methane bubbles that would carry flocs to the top of the clarifier
 #. To include a stable floc filter that reduces the settled water turbidity
 #. To remove the solids without requiring power or moving mechanical parts
-#. To provide a mechanism for the operator to dump poorly flocculated water before it enters the sedimentation tank. This is important to reduce the recovery time when there is a flocculation failure.
+#. To provide a mechanism for the operator to dump poorly flocculated water before it enters the clarifier. This is important to reduce the recovery time when there is a flocculation failure.
 #. To ensure easy operation and maintenance.
 
 Components and Flow Paths
 ==========================
 
-In this section, we will develop a conceptual understanding of the sedimentation tank using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the sedimentation tank in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are:
+In this section, we will develop a conceptual understanding of the clarifier using figures and images. We will be using a mixture of terminology typically found in water treatment settings and AguaClara-specific terminology. We will discuss the different parts of the clarifier in the sequence that a parcel of water would encounter it, from the beginning of the unit process to the end. The three main sections are:
 
-#. How water enters the sedimentation tank.
-#. How water moves through the sedimentation tank.
-#. How water leaves the sedimentation tank.
+#. How water enters the clarifier.
+#. How water moves through the clarifier.
+#. How water leaves the clarifier.
 
 .. _figure_sed_tank_overview:
 
@@ -37,20 +37,20 @@ In this section, we will develop a conceptual understanding of the sedimentation
     :target: https://youtu.be/ca3xVntxEzw
     :height: 300px
     :align: center
-    :alt: Overview of an AguaClara Sedimentation tank (click to be sent to video).
+    :alt: Overview of an AguaClara Clarification tank (click to be sent to video).
 
-Overview of an AguaClara Sedimentation tank (click image to be sent to video).
+Overview of an AguaClara Clarification tank (click image to be sent to video).
 
-.. _heading_Sed_Tank_As_Circuit:
+.. _heading_Clarifier_As_Circuit:
 
 Entering the Tank
 ==================
 
-To understand how we will use flow distribution as a primary design constraint, we will develop a concept called the "sedimentation tank as a circuit". This concept will be elaborated on as you learn about the sedimentation tank components and design, but we will introduce it now because it is a driving principle for flow distribution in AguaClara sedimentation tanks. The chapter on Manifold design (still needs to be written) will be very useful to understand some of these fluids concepts.
+To understand how we will use flow distribution as a primary design constraint, we will develop a concept called the "clarifier as a circuit". This concept will be elaborated on as you learn about the clarifier components and design, but we will introduce it now because it is a driving principle for flow distribution in AguaClara clarifiers. The chapter on Manifold design (still needs to be written) will be very useful to understand some of these fluids concepts.
 
-An electrical circuit is a path in which electrons flow from a voltage or current source. Electrical circuits frequently have resistors, which are passive electrical components to create resistance in the flow of electric current. What does this have to do with sedimentation tanks? In our "sedimentation tank as a circuit" concept, we will draw parallels between how electrons flow through a circuit to how water flows through the sedimentation tank.
+An electrical circuit is a path in which electrons flow from a voltage or current source. Electrical circuits frequently have resistors, which are passive electrical components to create resistance in the flow of electric current. What does this have to do with clarifiers? In our "clarifier as a circuit" concept, we will draw parallels between how electrons flow through a circuit to how water flows through the clarifier.
 
-The AguaClara treatment train is designed so that flow is driven by potential energy. The entrance of the sedimentation tank, where water comes from the flocculator, is the source of the flow. Water then moves through the sedimentation tank and exits to the filter. At different points throughout the flow of water in the sedimentation tank, there are changes in piezometric head from fluid acceleration/deceleration and head loss. In the development of our circuit concept, piezometric head is like electrical resistance.
+The AguaClara treatment train is designed so that flow is driven by potential energy. The entrance of the clarifier, where water comes from the flocculator, is the source of the flow. Water then moves through the clarifier and exits to the filter. At different points throughout the flow of water in the clarifier, there are changes in piezometric head from fluid acceleration/deceleration and head loss. In the development of our circuit concept, piezometric head is like electrical resistance.
 
 In electrical circuits, electrons will travel the path of least resistance in a parallel path system. Water is similar in that it will flow in the path of least resistance.
 
@@ -59,36 +59,36 @@ In electrical circuits, electrons will travel the path of least resistance in a 
 .. figure:: ../Images/circuit_base.png
     :height: 300px
     :align: center
-    :alt: Sedimentation tank as a circuit.
+    :alt: Clarification tank as a circuit.
 
-    Sedimentation tank as a circuit.
+    Clarification tank as a circuit.
 
-:numref:`figure_circuit_base` shows flow through a sedimentation system in which there are two sedimentation bays working in parallel. Each bay has multiple components through which piezometric head changes; wherever a resistor symbol is shown, it means that there is a difference in piezometric head in that section of pipe. We want to understand what is going on between the influent channel and the effluent channel so that we can design to control head loss and fluid flow.
+:numref:`figure_circuit_base` shows flow through a clarifier in which there are two clarifier bays working in parallel. Each bay has multiple components through which piezometric head changes; wherever a resistor symbol is shown, it means that there is a difference in piezometric head in that section of pipe. We want to understand what is going on between the influent channel and the effluent channel so that we can design to control head loss and fluid flow.
 
-Remember, the goal is to have even flow distribution. It is bad if different flow paths have different head losses or changes in piezometric head. We must consider this between sedimentation bays (comparing each bay to each other) and within a single sedimentation bay (comparing the flows at different points within the sedimentation bay). We want to limit differences in "resistance" to ensure equal flow distribution. Therefore, we define
+Remember, the goal is to have even flow distribution. It is bad if different flow paths have different head losses or changes in piezometric head. We must consider this between clarifier bays (comparing each bay to each other) and within a single clarifier bay (comparing the flows at different points within the clarifier bay). We want to limit differences in "resistance" to ensure equal flow distribution. Therefore, we define
 
 .. _heading_Good_v_Bad_Hl:
 
 - Anything that makes parallel flow paths different is "bad" head loss.
 - Anything that increases head loss through all of the paths, to make differences between the paths less significant, is "good" head loss.
 
-We can artificially introduce the second form of head loss to dominate the resistance and render small variations due to pressure recovery insignificant. We will go through each part of the sedimentation tank to understand how these goals drive AguaClara designs. As we learn about each component, we will attempt to categorize its contribution into creating "good" or "bad" head loss.
+We can artificially introduce the second form of head loss to dominate the resistance and render small variations due to pressure recovery insignificant. We will go through each part of the clarifier to understand how these goals drive AguaClara designs. As we learn about each component, we will attempt to categorize its contribution into creating "good" or "bad" head loss.
 
-.. _heading_Sed_Tank_Influent_Channel:
+.. _heading_Clarifier_Influent_Channel:
 
 Inlet Channel
 --------------------
 
-After water exits the flocculator, it is ready for sedimentation. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple sedimentation units operating in parallel; we call each of these sedimentation units a 'bay' or a 'tank'. Because there may be multiple sedimentation bays, we have to distribute flocculated water between the bays. To do this, we have an **influent channel** shown in :numref:`figure_influent_channel_bays`, which receives water from the flocculator and passes it to the sedimentation bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the sedimentation bays without allowing any settling of flocs in the influent channel. The minimum velocity in the influent channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each sedimentation bay.
+After water exits the flocculator, it is ready for clarification. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple clarifiers operating in parallel; we call each of these clarifier units a 'bay'. Because there may be multiple clarifier bays, we have to distribute flocculated water between the bays. To do this, we have an **influent channel** shown in :numref:`figure_influent_channel_bays`, which receives water from the flocculator and passes it to the clarifier bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the clarifier bays without allowing any settling of flocs in the influent channel. The minimum velocity in the influent channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each clarifier bay.
 
 .. _figure_influent_channel_bays:
 
 .. figure:: ../Images/influent_channel_bays.png
     :height: 300px
     :align: center
-    :alt: Influent channel with pipes leading to different sedimentation bays.
+    :alt: Influent channel with pipes leading to different clarifier bays.
 
-    Influent channel with pipes leading to different sedimentation bays.
+    Influent channel with pipes leading to different clarifier bays.
 
 An important question is consider is whether or not the water in the influent channel gets evenly distributed between the different bays. If it does not get evenly distributed, which bay will receive the most water? We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to conversion of kinetic energy into potential energy as the flow decelerates. This deceleration results in an increase in the piezometric head in the direction of flow.
 
@@ -96,45 +96,45 @@ Where else in fluids have we discussed decelerating flow? We have discussed this
 
 So, is this type of head loss "good" or "bad"? In our :ref:`definition of "good" and "bad" <heading_Good_v_Bad_Hl>`, we stated that "bad" head loss creates unequal flow in parallel flow paths. The head loss in the influent channel is therefore "bad" head loss because it can lead to different bays in parallel receiving different flows.
 
-Sedimentation units have multiple bays for a few different reasons. Plants with higher flow rates require more sedimentation bays because the flow through each bay is limited by other design constraints, namely upflow velocity, which will be discussed later. Additionally, it is good to have more than one bay for maintenance purposes; if one bay needs to be cleaned, we want to always have another that can be working. Pipe stubs can be used to plug the entrance hole to a sedimentation bay to shut it down for maintenance.
+Clarification units have multiple bays for a few different reasons. Plants with higher flow rates require more clarifier bays because the flow through each bay is limited by other design constraints, namely upflow velocity, which will be discussed later. Additionally, it is good to have more than one bay for maintenance purposes; if one bay needs to be cleaned, we want to always have another that can be working. Pipe stubs can be used to plug the entrance hole to a clarifier bay to shut it down for maintenance.
 
-Of note is that the sedimentation tank influent channel is located directly next to a drain channel. This drain channel was built to remove poorly flocculated water from the treatment train. If an operator observes poor flocculation, they can change the chemical dosing in an attempt to improve flocculation. In the meantime, they will want to dump the poorly flocculated water to avoid poor effluent quality. Operators can plug the entrance hole to the sedimentation bays, allowing the influent channel to fill with water. Once water reaches the height of the wall separating it from the drain channel, the water will pour over from the influent channel into the drain channel. This allows operators to easily dump poorly treated water and then easily restart sedimentation once flocculation performance improves.
+Of note is that the clarifier influent channel is located directly next to a drain channel. This drain channel was built to remove poorly flocculated water from the treatment train. If an operator observes poor flocculation, they can change the chemical dosing in an attempt to improve flocculation. In the meantime, they will want to dump the poorly flocculated water to avoid poor effluent quality. Operators can plug the entrance hole to the clarifier bays, allowing the influent channel to fill with water. Once water reaches the height of the wall separating it from the drain channel, the water will pour over from the influent channel into the drain channel. This allows operators to easily dump poorly treated water and then easily restart the clarifier once flocculation performance improves.
 
-The sedimentor inlet channel is designed to distribute the flow uniformly between the sedimentation tanks. The flow paths through the various sedimentation tanks are identical except for the difference in the length of the path in the sedimentor inlet channel. Thus the difference in piezometric head in the sedimentor inlet channel must be small compared with the head loss through a sedimentation tank. The head loss through a sedimentation tank is dominated by the outlet manifold which is designed to have a head loss of 5 cm. This 5 cm of head loss is in turn dominated by the orifice head loss as required to achieve uniform flow distribution between the orifices (see :ref:`sedimentation tank outlet manifold <heading_sedimentation_tank_outlet_manifold>`)
+The clarifier inlet channel is designed to distribute the flow uniformly between the clarifiers. The flow paths through the various clarifiers are identical except for the difference in the length of the path in the clarifier inlet channel. Thus the difference in piezometric head in the clarifier inlet channel must be small compared with the head loss through a clarifier. The head loss through a clarifier is dominated by the outlet manifold which is designed to have a head loss of 5 cm. This 5 cm of head loss is in turn dominated by the orifice head loss as required to achieve uniform flow distribution between the orifices (see :ref:`clarifier outlet manifold <heading_clarifier_outlet_manifold>`)
 
 For a simple conservative design we calculate the maximum channel velocity assuming that the channel cross section is constant. In our designs we slope the bottom of this channel to maintain a constant velocity to ensure that flocs are scoured and don't accumulate at the end of this channel where the velocities would be lower if the cross section were constant.
 
-We can use :eq:`Energy_and_Pi_Q_no_manifold_hl` to calculate maximum velocity in the sedimentor inlet channel. In this case the average manifold piezometric head, :math:`\bar \Psi_M` ,is measured relative to the water level in the sedimentor that is above the sedimentor exit weir. This difference in elevation is dominated by the 5 cm of head loss created by the orifices in the sedimentor outlet manifold. Solving for the maximum channel velocity we obtain
+We can use :eq:`Energy_and_Pi_Q_no_manifold_hl` to calculate maximum velocity in the clarifier inlet channel. In this case the average manifold piezometric head, :math:`\bar \Psi_M` ,is measured relative to the water level in the clarifier that is above the clarifier exit weir. This difference in elevation is dominated by the 5 cm of head loss created by the orifices in the clarifier outlet manifold. Solving for the maximum channel velocity we obtain
 
 .. math::
   :label: vM_Energy_and_Pi_Q_no_manifold_hl
 
-  \bar v_{M_1} = 2\sqrt{g\bar \Psi_{Sed}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
+  \bar v_{M_1} = 2\sqrt{g\bar \Psi_{Clarifier}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
 
-where :math:`\Pi_{Q}` represents the uniformity of flow distribution taken as the minimum sedimentation tank flow divided by the maximum sedimentation tank flow.
+where :math:`\Pi_{Q}` represents the uniformity of flow distribution taken as the minimum clarifier flow divided by the maximum clarifier flow.
 
-The Ten State Standards states, "The velocity of flocculated water through conduits to settling basins shall not be less than 0.15 m/s nor greater than 0.45 m/s." The lower velocity matches the constraint of ensuring that the velocity is high enough to scour flocs along the bottom of the channel and thus prevent sedimentation. The maximum velocity was presumably set to achieve reasonable flow distribution, but that value is dependent on the head loss through the sedimentation tanks.
+The Ten State Standards states, "The velocity of flocculated water through conduits to settling basins shall not be less than 0.15 m/s nor greater than 0.45 m/s." The lower velocity matches the constraint of ensuring that the velocity is high enough to scour flocs along the bottom of the channel and thus prevent sedimentation. The maximum velocity was presumably set to achieve reasonable flow distribution, but that value is dependent on the head loss through the clarifiers.
 
-`Here we calculate the maximum sedimentor inlet channel velocity as a function of the flow distribution uniformity. <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=8DRdoLVGUmWS&line=3&uniqifier=1>`_
+`Here we calculate the maximum clarifier inlet channel velocity as a function of the flow distribution uniformity. <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=8DRdoLVGUmWS&line=3&uniqifier=1>`_
 
-.. _figure_Sedimentor_channel_max_v:
+.. _figure_Clarifier_channel_max_v:
 
-.. figure:: ../Images/Sedimentor_channel_max_v.png
+.. figure:: ../Images/Clarifier_channel_max_v.png
     :width: 400px
     :align: center
-    :alt: Sedimentor inlet channel velocity constraints
+    :alt: Clarifier inlet channel velocity constraints
 
     The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.
 
-The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the sedimentor head loss is 5 cm.
+The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the clarifier head loss is 5 cm.
 
 
-.. _heading_sedimentation_tank_inlet_manifold:
+.. _heading_clarifier_inlet_manifold:
 
-Sedimentation Tank Inlet Manifold
+Clarifier Inlet Manifold
 ---------------------------------
 
-Now, we will focus on a single bay of the sedimentation system. Flocculated water enters a pipe in the bottom of the influent channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the sedimentation bay. This section of pipe that distributes water at the bottom of the sedimentation bay is referred to as the **influent manifold** shown in :numref:`figure_influent_channel_manifold`.
+Now, we will focus on a single clarifier bay. Flocculated water enters a pipe in the bottom of the influent channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the clarifier bay. This section of pipe that distributes water at the bottom of the clarifier bay is referred to as the **influent manifold** shown in :numref:`figure_influent_channel_manifold`.
 
 .. _figure_influent_channel_manifold:
 
@@ -146,27 +146,27 @@ Now, we will focus on a single bay of the sedimentation system. Flocculated wate
     Influent channel with pipe leading to one inlet manifold.
 
 
-The port velocity for inlet manifold diffusers is set by the slot width, the width of the sedimentation tank, and the upflow velocity in the sedimentation tank. From mass conservation we have
+The port velocity for inlet manifold diffusers is set by the slot width, the width of the clarifier, and the upflow velocity in the clarifier. From mass conservation we have
 
 .. math::
-  :label: Sed_diffuser_mass_conserve
+  :label: Clarifier_diffuser_mass_conserve
 
-   Q_{Diffuser} = \bar v_{Jet} W_{Diffuser} S_{Diffuser} = \bar v_{FB} W_{Sed} B_{Diffuser}
+   Q_{Diffuser} = \bar v_{Jet} W_{Diffuser} S_{Diffuser} = \bar v_{FB} W_{Clarifier} B_{Diffuser}
 
 Solve for the jet velocity, :math:`\bar v_{Jet}`.
 
 .. math::
-  :label: Sed_diffuser_jet_velocity
+  :label: Clarifier_diffuser_jet_velocity
 
-  \bar v_{Jet}  = \frac{\bar v_{FB} W_{Sed} B_{Diffuser}}{W_{Diffuser} S_{Diffuser}}
+  \bar v_{Jet}  = \frac{\bar v_{FB} W_{Clarifier} B_{Diffuser}}{W_{Diffuser} S_{Diffuser}}
 
-For sedimentation tanks that are 1.07 m wide, an upflow velocity of 1 mm/s, with diffusers that are 3.175 mm wide, and assuming that the diffuser wall thickness is small we have a jet velocity of 0.34 m/s.
+For clarifiers that are 1.07 m wide, an upflow velocity of 1 mm/s, with diffusers that are 3.175 mm wide, and assuming that the diffuser wall thickness is small we have a jet velocity of 0.34 m/s.
 
 The maximum inlet manifold velocity can now be determined from Equation :eq:`Manifold_max_v_no_hl_series`. Given a port flow ratio of 85% the maximum manifold velocity is about 0.6 m/s.
 
 `Design the inlet manifold based on a simple manifold analysis <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=ndlvydp8UMFJ&line=7&uniqifier=1>`_
 
-Water exits the influent manifold through a series of orifices and **diffusers** in the bottom of the pipe shown in :numref:`figure_influent_manifold_diffuser_base`. Orifices refer to the holes that are drilled into the underside of the manifold while diffusers are what we call short stubs of pipe that extend down from the orifice, perpendicular to the influent manifold. The orifices and diffusers point down to the bottom of the sedimentation bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. The ends of the diffuser tubes are flattened so that they are thin rectangles and when placed side-by-side achieve a line-jet effect. The end of the influent manifold is capped.
+Water exits the influent manifold through a series of orifices and **diffusers** in the bottom of the pipe shown in :numref:`figure_influent_manifold_diffuser_base`. Orifices refer to the holes that are drilled into the underside of the manifold while diffusers are what we call short stubs of pipe that extend down from the orifice, perpendicular to the influent manifold. The orifices and diffusers point down to the bottom of the clarifier bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. The ends of the diffuser tubes are flattened so that they are thin rectangles and when placed side-by-side achieve a line-jet effect. The end of the influent manifold is capped.
 
 .. _figure_influent_manifold_diffuser_base:
 
@@ -186,13 +186,13 @@ Water exits the influent manifold through a series of orifices and **diffusers**
 
     Influent manifold and diffuser flow paths.
 
-Recall the discussion about flow distribution in the influent channel. We know that the sedimentation bay furthest away from the flocculator would receive the most flow from the influent channel due to fluids principles. For the same reasons, the orifice at the end of the influent manifold would receive the most flow in the pipe. Is the type of head loss introduced by the 90 degree bend "good" or "bad"? This head loss is "good" because it increases head loss through all paths equally.
+Recall the discussion about flow distribution in the influent channel. We know that the clarifier bay furthest away from the flocculator would receive the most flow from the influent channel due to fluids principles. For the same reasons, the orifice at the end of the influent manifold would receive the most flow in the pipe. Is the type of head loss introduced by the 90 degree bend "good" or "bad"? This head loss is "good" because it increases head loss through all paths equally.
 
-Is the type of head loss in the influent manifold "good" or "bad"? Like the influent channel, it would be "bad" head loss because it can lead to different flow along the length of the sedimentation tank; the end of the sedimentation tank would receive more flow than the beginning.
+Is the type of head loss in the influent manifold "good" or "bad"? Like the influent channel, it would be "bad" head loss because it can lead to different flow along the length of the clarifier; the end of the clarifier would receive more flow than the beginning.
 
-However, the diffuser system was designed to greatly impact the overall flow distribution in an attempt to make the flow more equal in all parts of the system. Diffusers are designed to introduce 1 cm of head loss (see the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>` for more information). This is "good" head loss because it uniformly increases the head loss through all flow paths. The "good" head loss from the diffusers dominate the "bad" head loss from the influent channel and manifold, making differences between the paths less significant.
+However, the diffuser system was designed to greatly impact the overall flow distribution in an attempt to make the flow more equal in all parts of the system. Diffusers are designed to introduce 1 cm of head loss (see the section on :ref:`diffuser design <heading_Clarifier_Diffuser_Design>` for more information). This is "good" head loss because it uniformly increases the head loss through all flow paths. The "good" head loss from the diffusers dominate the "bad" head loss from the influent channel and manifold, making differences between the paths less significant.
 
-The influent manifold diffuser system straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component as shown in :numref:`figure_flow_straightening`. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the sedimentation tank as shown in :numref:`figure_flow_circulation`. Influent manifolds without flow straightening diffusers are commonly used in vertical flow sedimentation tanks including designs by leading manufacturers.
+The influent manifold diffuser system straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component as shown in :numref:`figure_flow_straightening`. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the clarifier as shown in :numref:`figure_flow_circulation`. Influent manifolds without flow straightening diffusers are commonly used in vertical flow clarifiers including designs by leading manufacturers.
 
 .. _figure_flow_circulation:
 
@@ -203,7 +203,7 @@ The influent manifold diffuser system straightens the fluid jets that are exitin
 
     Flow with a horizontal velocity component that causes problematic flow circulation.
 
-The horizontal flow created by the direction of flow inside the manifold results in preferential flow through the plate settlers at the terminal end of the manifold. This is a common problem in conventional sedimentation tanks that don't have flow straightening diffusers or that have horizontal flow in the tank.
+The horizontal flow created by the direction of flow inside the manifold results in preferential flow through the plate settlers at the terminal end of the manifold. This is a common problem in conventional clarifiers that don't have flow straightening diffusers or that have horizontal flow in the tank.
 
 The underlying cause of the poor flow distribution between plate settlers (shown in :numref:`figure_flow_circulation`) is because the head loss through the plate settlers is inconsequential and thus there can't be **any** significant horizontal velocity below the plate settlers. It is possible that some plate settler manufactures address this issue by adding flow control orifices at the top of the plate settlers that add sufficient head loss to the flow through every plate settler to minimize the impact of velocity differences below the plates.
 
@@ -218,22 +218,22 @@ The AguaClara solution is to use flow diffusers that simultaneously eliminate ho
 
     Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation.
 
-The diffusers create a line jet that spans the entire length of the sedimentation tank. This line jet enters the bay going down, but we want the water to ultimately flow up to make our vertical flow sedimentation tank. To get the flow to redirect upwards, we use a **jet reverser**, which is half of a pipe that is laid in the bottom of the bay.
+The diffusers create a line jet that spans the entire length of the clarifier. This line jet enters the bay going down, but we want the water to ultimately flow up to make our vertical flow clarifier. To get the flow to redirect upwards, we use a **jet reverser**, which is half of a pipe that is laid in the bottom of the bay.
 
 .. _figure_bottom_of_sed_tank_detail:
 
 .. figure:: ../Images/bottom_of_sed_tank_detail.png
     :height: 300px
     :align: center
-    :alt: Detail of the bottom of the sedimentation tank.
+    :alt: Detail of the bottom of the clarifier.
 
-    Cross-section of the bottom of the sedimentation tank.
+    Cross-section of the bottom of the clarifier.
 
 You may be wondering, why do we need a jet reverser in the first place? Why don't we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components.
 
-- If the diffusers were to point up, that would mean that any sedimentation that happens near the terminal end of the manifold would accumulate and have no way of being removed.
-- If flow were just to point directly up, it would not have an opportunity to sufficiently spread into the width of the sedimentation bay, which could lead to "short-circuiting" and poor flow distribution overall.
-- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements, as derived in the section on :ref:`diffuser design <heading_Sed_Tank_Diffuser_Design>`. The jet reverser and diffuser alignment is not symmetrical; the diffusers are directed to one side of the jet reverser (either by slight rotation of the inlet manifold or by an offset). This is intentionally done to ensure that the diffuser jet never collapses to promote a floc filter, which will be discussed next. :numref:`figure_jet_placement` shows that flat bottomed and centered jets do not create a floc filter while offset jets are stable.
+- If the diffusers were to point up, that would mean that any sedimentation that happens near the terminal end of the manifold would accumulate and the sediment would have no way of being removed.
+- If flow were just to point directly up, it would not have an opportunity to sufficiently spread into the width of the clarifier bay, which could lead to "short-circuiting" and poor flow distribution overall.
+- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements, as derived in the section on :ref:`diffuser design <heading_Clarifier_Diffuser_Design>`. The jet reverser and diffuser alignment is not symmetrical; the diffusers are directed to one side of the jet reverser (either by slight rotation of the inlet manifold or by an offset). This is intentionally done to ensure that the diffuser jet never collapses to promote a floc filter, which will be discussed next. :numref:`figure_jet_placement` shows that flat bottomed and centered jets do not create a floc filter while offset jets are stable.
 
 .. _figure_jet_placement:
 
@@ -258,16 +258,16 @@ There is a lot of research interest in determining the optimal upflow velocity f
 
 As shown in :numref:`figure_flat_bottomed_tank` and the linked video, in a flat bottom geometry, flocs settle in the corners of the tank because there is no direct flow of water to resuspend it. Flocs fall in such a way that the corners of the tank will fill first, with more and more flocs settling until the angle of repose is created. This angle that is occupied by flocs suggests that if we want to avoid having flocs settle, we should fill the sides of the tank in with concrete and create a sloped bottom so that there are no surfaces for settling.
 
-The influent manifold, diffusers, and jet reverser work with a **sloped bottom geometry** in an AguaClara plant. The slope on either side of the diffusers is at a 50 degree angle. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can fall into the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the main sedimentation basin. Sludge that is allowed to accumulate in the bottom of sedimentation tanks in tropical and temperate climates decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the sedimentation tank and cause a reduction in particle removal efficiency. The AguaClara sedimentation tank bottom geometry prevents sludge accumulation while also ensuring good flow distribution.
+The influent manifold, diffusers, and jet reverser work with a **sloped bottom geometry** in an AguaClara plant. The slope on either side of the diffusers is at a 50 degree angle. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can fall into the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the clarifier bays. Sludge that is allowed to accumulate in the bottom of clarifiers in tropical and temperate climates decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the clarifier and cause a reduction in particle removal efficiency. The AguaClara clarifier bottom geometry prevents sludge accumulation while also ensuring good flow distribution.
 
 .. _figure_sed_cross_section:
 
 .. figure:: ../Images/sed_cross_section.png
     :height: 300px
     :align: center
-    :alt: Cross-section of the bottom of the sedimentation tank.
+    :alt: Cross-section of the bottom of the clarifier.
 
-    Cross-section of the bottom of the sedimentation tank.
+    Cross-section of the bottom of the clarifier.
 
 .. _figure_Floc_Filter_Floc_Hopper:
 
@@ -293,7 +293,7 @@ So we know that the diffusers, jet reverser, and sloped bottom ensure that no sl
 
 What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
 
-`Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that the jet was unable to resuspend the flocs when the jet velocity was 57 mm/s and was successful for all velocities greater than 75 mm/s. The momentum of the floc density current will increase with the concentration of flocs in the primary filter which is in turn a function of the density and size of the core particles. The primary filter floc concentration will decrease at lower temperatures and thus failure of the jet reverser will occur at high temperatures. Given that Dr. Garland did the research at room temperature using a kaolin suspension it is likely that the 75 mm/s guidelines is sufficiently conservative for all designs that have a 1 mm/s upflow velocity. The jet reverser will fail at some point as the flow rate through the sedimentation tank is decreased. The solution for that case would be to take a fraction of the sedimentation tanks off line to maintain a higher jet velocity.
+`Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that the jet was unable to resuspend the flocs when the jet velocity was 57 mm/s and was successful for all velocities greater than 75 mm/s. The momentum of the floc density current will increase with the concentration of flocs in the primary filter which is in turn a function of the density and size of the core particles. The primary filter floc concentration will decrease at lower temperatures and thus failure of the jet reverser will occur at high temperatures. Given that Dr. Garland did the research at room temperature using a kaolin suspension it is likely that the 75 mm/s guidelines is sufficiently conservative for all designs that have a 1 mm/s upflow velocity. The jet reverser will fail at some point as the flow rate through the clarifier is decreased. The solution for that case would be to take a fraction of the clarifiers off line to maintain a higher jet velocity.
 
 .. _figure_jet_angle:
 
@@ -317,11 +317,11 @@ What are the failure modes for this system? For one, we need to ensure that the 
 Jet Reverser
 -------------
 
-The jet reverser is an AguaClara invention for producing stable floc filters. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see Equation :eq:`planejet_EDR`) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the sedimentation tank performance will deteriorate.
+The jet reverser is an AguaClara invention for producing stable floc filters. The jet reverser includes a plane jet that is thin and has a high velocity. The momentum of that jet is important because it must counteract the momentum of the density current of the settled flocs. The thin, high velocity jet has a high energy dissipation rate (see Equation :eq:`planejet_EDR`) and a high energy dissipation rate undoubtedly breaks up flocs. If the jet breaks flocs into fragments that have a terminal velocity that is less than the capture velocity of the plate settlers, then the clarifier performance will deteriorate.
 
-Conventional wisdom suggests that breaking up flocs on the way to the sedimentation tank is counter productive. The traditional goal of not breaking flocs led to design of tapered flocculators and guidelines suggesting maximum velocities for transport of those flocs to the sedimentation tank. Dimensional analysis provides the insight that if the constraint for not breaking flocs is actually a velocity, that there must be some way to make that velocity dimensionless if that constraint is rational. In order to identify and characterize the constraint related to floc break up we need to understand the physics of the processes and clearly identify the failure mode.
+Conventional wisdom suggests that breaking up flocs on the way to the clarifier is counter productive. The traditional goal of not breaking flocs led to design of tapered flocculators and guidelines suggesting maximum velocities for transport of those flocs to the clarifier. Dimensional analysis provides the insight that if the constraint for not breaking flocs is actually a velocity, that there must be some way to make that velocity dimensionless if that constraint is rational. In order to identify and characterize the constraint related to floc break up we need to understand the physics of the processes and clearly identify the failure mode.
 
-The maximum shear stress that should be used for design of jet reversers requires further analysis. Flocs composed of less clay and more organic matter or more coagulant nanoparticles will have a lower density and would still be sheared to the same diameter by the fluid shear stress. These flocs would have a lower sedimentation velocity than clay based flocs and thus they would not be captured by the plate settlers. Thus the design constraint for the fluid shear stress should be based on the lowest density floc that is to be captured by the plate settlers.
+The maximum shear stress that should be used for design of jet reversers requires further analysis. Flocs composed of less clay and more organic matter or more coagulant nanoparticles will have a lower density and would still be sheared to the same diameter by the fluid shear stress. These flocs would have a lower terminal velocity than clay based flocs and thus they would not be captured by the plate settlers. Thus the design constraint for the fluid shear stress should be based on the lowest density floc that is to be captured by the plate settlers.
 
 Different coagulants may well have different bond strengths and flocculant aids that increase the bond strength all merit study with the jet reverser experiment to determine an appropriate fluid shear stress. The shear stress of 0.55 Pa is likely an upper limit for operation without using flocculant aids.
 
@@ -332,51 +332,51 @@ The maximum fluid shear stress for conservative basis of design should be calcul
 
 The jet reverser can be designed given a maximum fluid shear stress that is calculated based on minimum operating temperature, plate settler capture velocity, and floc density. We do not yet have a comprehensive model for floc properties and thus we are not yet able to calculate floc terminal velocity as a function of composition. We do anticipate that floc density decreases dramatically for flocs that consist primarily of dissolved organics and coagulant.
 
-The goal is to derive an equation that will calculate the maximum jet velocity given the upflow velocity, :math:`v_{z_{ff}}`, and width, :math:`W_{Sed}`, of the sedimentation tank. Begin by eliminating the energy dissipation rate from the fluid shear stress, Equation :eq:`fluid_shear_stress`, by substituting the plane jet energy dissipation rate, Equation :eq:`planejet_EDR`.
+The goal is to derive an equation that will calculate the maximum jet velocity given the upflow velocity, :math:`v_{z_{ff}}`, and width, :math:`W_{Clarifier}`, of the clarifier. Begin by eliminating the energy dissipation rate from the fluid shear stress, Equation :eq:`fluid_shear_stress`, by substituting the plane jet energy dissipation rate, Equation :eq:`planejet_EDR`.
 
 .. math::
   :label: shear_stress_plane_jet
 
   \tau_{max} = \rho \sqrt{\nu \Pi_{JetPlane} \frac{  \bar v_{Jet} ^3}{W_{Jet}}}
 
-The volumetric flow rate of the plane jet is the same as the volumetric flow rate through the sedimentation tank.
+The volumetric flow rate of the plane jet is the same as the volumetric flow rate through the clarifier.
 
 .. math::
   :label: jet_sed_tank_continuity
 
-  \bar v_{Jet} W_{Jet} = \bar v_{z_{ff}} W_{Sed}
+  \bar v_{Jet} W_{Jet} = \bar v_{z_{ff}} W_{Clarifier}
 
 Use Equation :eq:`jet_sed_tank_continuity` to eliminate the thickness of the jet, :math:`W_{Jet}` in Equation :eq:`shear_stress_plane_jet`
 
 .. math::
   :label: shear_stress_jet_sed_tank
 
-  \tau_{max} = \rho \bar v_{Jet} ^2 \sqrt{ \frac{\nu \Pi_{JetPlane}}{\bar v_{z_{ff}} W_{Sed}}}
+  \tau_{max} = \rho \bar v_{Jet} ^2 \sqrt{ \frac{\nu \Pi_{JetPlane}}{\bar v_{z_{ff}} W_{Clarifier}}}
 
 Solve for the maximum permissible jet velocity, :math:`\bar v_{Jet_{max}}`.
 
 .. math::
   :label: max_sed_tank_jet_velocity_of_tau
 
-  \bar v_{Jet_{max}} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{ff}} W_{Sed}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}
+  \bar v_{Jet_{max}} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{ff}} W_{Clarifier}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}
 
 Given that the velocity gradient governs the design of the flocculator and the entrance to the floc filter we can substitute Equation :eq:`tau_of_mu_G` to obtain
 
 .. math::
   :label: max_sed_tank_jet_velocity_of_G
 
-  \bar v_{Jet_{max}} =  \left( \frac{G_{max}^2 \nu \bar v_{z_{ff}} W_{Sed}}{ \Pi_{JetPlane}}\right)^\frac{1}{4}
+  \bar v_{Jet_{max}} =  \left( \frac{G_{max}^2 \nu \bar v_{z_{ff}} W_{Clarifier}}{ \Pi_{JetPlane}}\right)^\frac{1}{4}
 
 Equation can also be written in terms of flow rate by substituting the continuity equation.
 
 .. math::
   :label: max_sed_tank_jet_velocity_of_G_and_Q
 
-  \bar v_{Jet_{max}} =  \left( \frac{G_{max}^2 \nu \bar Q }{L_{Sed} \Pi_{JetPlane}}\right)^\frac{1}{4}
+  \bar v_{Jet_{max}} =  \left( \frac{G_{max}^2 \nu \bar Q }{L_{Clarifier} \Pi_{JetPlane}}\right)^\frac{1}{4}
 
-The maximum jet velocity increases with width of the sedimentation tank valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases.
+The maximum jet velocity increases with width of the clarifier valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases.
 
-Sedimentation tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation :eq:`G_of_vc_and_floc_props`. Our goal is to eventually provide clear guidance on setting :math:`G_{max}`. In the meantime, given a maximum velocity gradient for the inlet to the sedimentation tank, Equation :eq:`max_sed_tank_jet_velocity_of_G` provides the maximum jet reverser velocity.
+Clarification tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation :eq:`G_of_vc_and_floc_props`. Our goal is to eventually provide clear guidance on setting :math:`G_{max}`. In the meantime, given a maximum velocity gradient for the inlet to the clarifier, Equation :eq:`max_sed_tank_jet_velocity_of_G` provides the maximum jet reverser velocity.
 
 The ratio of manifold velocity to port velocity can be obtained as the inverse of Equation :eq:`Manifold_max_v_no_hl_series`.
 
@@ -428,7 +428,7 @@ The port diameter and port velocity are governed by two constraints.
  1) The slope of the port must be less than the rate of flow expansion in the manifold.
  1) The velocity gradient created by the jet entering the equalizer must be less than the maximum allowed velocity gradient.
 
-For the first constraint we use continuity to ensure that enough water enters the port to serve the diffusers that are in the length of the manifold corresponding to the sloped port. The flow per unit length of the sedimentation tank is
+For the first constraint we use continuity to ensure that enough water enters the port to serve the diffusers that are in the length of the manifold corresponding to the sloped port. The flow per unit length of the clarifier is
 
 .. math::
   :label: port_continuity
@@ -500,14 +500,14 @@ The port reverser must have a diameter that is at least double that given by Equ
 
 
 
-.. _heading_sedimentation_tank_outlet_manifold:
+.. _heading_clarifier_outlet_manifold:
 
-Sedimentation Tank Outlet Manifold
+Clarifier Outlet Manifold
 ----------------------------------
 
-The sedimentation tank outlet manifold collects the clarified water from the top of the plate setters. The outlet manifold is required to help ensure uniform flow up through the plate settlers.  The outlet manifold has orifices and it is these orifices that provide the majority of the head loss through the sedimentation tank. The target head loss for the outlet manifold is about 5 cm. This head loss helps ensure that flow divides evenly between sedimentation tanks and divides evenly between the plate settlers.
+The clarifier outlet manifold collects the clarified water from the top of the plate setters. The outlet manifold is required to help ensure uniform flow up through the plate settlers.  The outlet manifold has orifices and it is these orifices that provide the majority of the head loss through the clarifier. The target head loss for the outlet manifold is about 5 cm. This head loss helps ensure that flow divides evenly between clarifiers and divides evenly between the plate settlers.
 
-The outlet head loss is dominated by the orifice loss and by the exit loss where the manifold exits the sedimentation tank and enters a channel. The total head loss through the outlet manifold, :math:`h_{e_{T}}`, is thus the sum of those two losses. If pipes were made of all possible diameters, then the ratio of orifice to manifold velocity would be exactly given by Equation :eq:`Manifold_max_v_no_hl_series` and that relationship can be used to eliminate the port velocity.
+The outlet head loss is dominated by the orifice loss and by the exit loss where the manifold exits the clarifier and enters a channel. The total head loss through the outlet manifold, :math:`h_{e_{T}}`, is thus the sum of those two losses. If pipes were made of all possible diameters, then the ratio of orifice to manifold velocity would be exactly given by Equation :eq:`Manifold_max_v_no_hl_series` and that relationship can be used to eliminate the port velocity.
 
 .. math::
   :label: Outlet_manifold_hl
@@ -530,7 +530,7 @@ The solution steps are as follows:
 1) Calculate the required orifice head loss by subtracting the manifold exit head loss from the desired total head loss.
 1) Calculate the orifice diameter from the orifice head loss and the orifice flow rate given the number of orifices.
 
-The head loss through the sedimentation tank is due to:
+The head loss through the clarifier is due to:
 
 * entrance and elbow in influent manifold
 * major losses in influent manifold (negligible)
@@ -541,54 +541,54 @@ The head loss through the sedimentation tank is due to:
 * effluent manifold major loss (negligible)
 * effluent manifold exit
 
-It is convenient to set the total head loss through the sedimentation tank to be equal to exactly 5 cm so that influent and effluent weirs always have the same elevation difference. The effluent manifold orifices are be designed for whatever head loss is required to meet that target.
+It is convenient to set the total head loss through the clarifier to be equal to exactly 5 cm so that influent and effluent weirs always have the same elevation difference. The effluent manifold orifices are be designed for whatever head loss is required to meet that target.
 
-.. _heading_sedimentor_inlet_channel:
+.. _heading_clarifier_inlet_channel:
 
 
 
-.. _heading_Sed_Tank_Velocity_Flow:
+.. _heading_Clarifier_Velocity_Flow:
 
-Comparison of Velocities and Flow in Sedimentation Tank
+Comparison of Velocities and Flow in Clarifier
 ========================================================
 
-To understand how water flows in the sedimentation tank, we must understand how the water velocity changes with the geometry. There are four distinct zones in the sedimentation tank:
+To understand how water flows in the clarifier, we must understand how the water velocity changes with the geometry. There are four distinct zones in the clarifier:
 
 #. The velocity of water exiting the diffusers.
 #. The velocity of water moving through the floc filter.
 #. The velocity of water that enters the plate settlers.
 #. The velocity of water through the plate settlers.
 
-The geometry of the sedimentation tank changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the sedimentation tank is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v A`, will be our guiding principle. In all cases,
+The geometry of the clarifier changes in these four zones, so we will follow these changes to make sure that we understand the conservation of flow. The flow going through the clarifier is the same everywhere, but average velocities are different. The fact that flow rate is velocity multiplied by area, :math:`Q = \bar v A`, will be our guiding principle. In all cases,
 
-| :math:`Q_{Sed} =` flow rate through each sedimentation tank
-| :math:`W_{Sed} =` width of each sedimentation tank
+| :math:`Q_{Clarifier} =` flow rate through each clarifier
+| :math:`W_{Clarifier} =` width of each clarifier
 
 .. _figure_sed_tank_flow_conserve:
 
 .. figure:: ../Images/sed_tank_flow_conserve.png
     :height: 300px
     :align: center
-    :alt: AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
+    :alt: AguaClara clarifier showing "lost triangle" and its impact on relevant lengths.
 
-    AguaClara sedimentation tank showing "lost triangle" and its impact on relevant lengths.
+    AguaClara clarifier showing "lost triangle" and its impact on relevant lengths.
 
 
-.. _heading_Sed_Tank_Floc_Filter:
+.. _heading_Clarifier_Floc_Filter:
 
 Floc Filter
 -------------
 
 After the water exits the diffusers and jet reverser, it flows through the expanded floc filter region where:
 
-| :math:`L_{SedFloc} =` length of the sedimentation tank that has a floc filter
+| :math:`L_{SedFloc} =` length of the clarifier that has a floc filter
 | :math:`\bar v_{z_{ff}} =` upflow velocity of the water through the floc filter
 
-Thus, :math:`Q_{Sed} = W_{Sed}*L_{SedFloc}* \bar v_{z_{ff}}`
+Thus, :math:`Q_{Clarifier} = W_{Clarifier}*L_{SedFloc}* \bar v_{z_{ff}}`
 
-The line jet from the diffusers enters the jet reverser to force flow up through the sedimentation bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the sedimentation tank. The resuspended flocs form a fluidized bed which is called a **floc filter**. The bed is fluidized because flocs are kept in suspension by the upflowing water.
+The line jet from the diffusers enters the jet reverser to force flow up through the clarifier bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the clarifier. The resuspended flocs form a fluidized bed which is called a **floc filter**. The bed is fluidized because flocs are kept in suspension by the upflowing water.
 
-For a floc filter to form, a sedimentation system requires that 1) all flocs be returned to the bottom of the sedimentation tank and 2) all settled flocs be resuspended by incoming water. As will be discussed soon, plate settlers are used to return flocs to the bottom of the bay, while the jet reverser and sloped bottom geometry allow for floc resuspension. Any surface with a horizontal component in a sedimentation tank must be sloped to allow settled flocs to return to the resuspension zone. A flat bottom geometry does not allow for the formation of a floc filter, as discussed previously.
+For a floc filter to form 1) all flocs must be returned to the bottom of the clarifier and 2) all settled flocs must be resuspended by incoming water. As will be discussed soon, plate settlers are used to return flocs to the bottom of the bay, while the jet reverser and sloped bottom geometry allow for floc resuspension. Any surface with a horizontal component in a clarifier must be sloped to allow settled flocs to return to the resuspension zone. A flat bottom geometry does not allow for the formation of a floc filter, as discussed previously.
 
 .. _figure_floc_filter_experiment:
 
@@ -600,28 +600,28 @@ For a floc filter to form, a sedimentation system requires that 1) all flocs be 
 
    Floc filter formation over time (click to be sent to video).
 
-Studies by AguaClara researchers have found that floc filters improve the performance of a sedimentation tank and reduce settled water turbidity by a factor of 10 for multiple reasons (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_):
+Studies by AguaClara researchers have found that floc filters improve the performance of a clarifier and reduce settled water turbidity by a factor of 10 for multiple reasons (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_):
 
-- By providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow sedimentation tanks, flocculation can occur in a floc filter due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G_{CS} \theta` cause a large reduction in turbidity? The two-fold answer may be that the lower :math:`G_{CS}` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc filter. See the section on :ref:`floc filter design <heading_Sed_Tank_Floc_Filter_Design>` for more information.
+- By providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow clarifiers, flocculation can occur in a floc filter due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small :math:`G_{CS} \theta` cause a large reduction in turbidity? The two-fold answer may be that the lower :math:`G_{CS}` value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc filter. See the section on :ref:`floc filter design <heading_Clarifier_Floc_Filter_Design>` for more information.
 
 - By creating a uniform vertical velocity of water entering the plate settlers.
 
 - By transporting excess floc consolidation pipe with a drain port, called the floc hopper. The floc hopper is discussed in the next section.
 
-While we have just explained three reasons that the floc filter improves sedimentation effluent quality, we do not yet have a model for floc filter performance. Additional research is needed to create this model, and to determine optimal upflow velocity.
+While we have just explained three reasons that the floc filter improves clarifier effluent quality, we do not yet have a model for floc filter performance. Additional research is needed to create this model, and to determine optimal upflow velocity.
 
 Consider the requirements that we have stated for the creation of the floc filter. Could we design for a floc filter in a treatment plant that experiences flow variability? There are some plants that only run for certain hours of the day. While this intermittent flow would impact many parts of the plant, how would it impact the floc filter specifically? Can a settled floc filter be resuspended?
 
-We do not yet have a way to design for variable or intermittent flow rates in a sedimentation tank. The ability of a settled floc filter to resuspend is dependent on the characteristics of the flocs themselves. For example, sticky and clumpy flocs would have a more difficult time resuspending because they tend to settle into hard masses in the absence of sufficient upflow velocities. The capacity for resuspension may require site-specific analysis. The AguaClara pilot PF300 in testing at the Cornell Water Treatment Plant is going to determine whether the floc filter at that site will be able to intermittent flow; the pilot plant and the Cornell Water Treatment Plant will be offline from around 10pm - 5am daily.
+We do not yet have a way to design for variable or intermittent flow rates in a clarifier. The ability of a settled floc filter to resuspend is dependent on the characteristics of the flocs themselves. For example, sticky and clumpy flocs would have a more difficult time resuspending because they tend to settle into hard masses in the absence of sufficient upflow velocities. The capacity for resuspension may require site-specific analysis. The AguaClara pilot PF300 in testing at the Cornell Water Treatment Plant is going to determine whether the floc filter at that site will be able to intermittent flow; the pilot plant and the Cornell Water Treatment Plant will be offline from around 10pm - 5am daily.
 
-It is of interesting note that the suspended solids concentration in the floc filter is approximately 1-5 g/L. This concentration corresponds to measurements of thousands of NTU, which is remarkably turbid water. A water treatment plant could have 5 NTU water entering the plant, and water in the bottom of the sedimentation tank could have 1000 NTU. This is one clue that there are interesting things happening in the floc filter; the bottom of the sedimentation tank can be a completely different world from the rest of the treatment process.
+It is of interesting note that the suspended solids concentration in the floc filter is approximately 1-5 g/L. This concentration corresponds to measurements of thousands of NTU, which is remarkably turbid water. A water treatment plant could have 5 NTU water entering the plant, and water in the bottom of the clarifier could have 1000 NTU. This is one clue that there are interesting things happening in the floc filter; the bottom of the clarifier can be a completely different world from the rest of the treatment process.
 
-An understanding of the bottom of a sedimentation tank is important to understand how sedimentation tanks work. However, most sedimentation tanks do not allow the operator to observe what is happening. Without being able to observe the bottom of the sedimentation tank, an operator would not know what is happening or if a floc filter is forming successfully. AguaClara research teams are working to develop a probe to get data on floc filter performance. Until then, there are two ways to learn about the floc filter. The AguaClara plant at the University of Zamorano in Honduras was built with a translucent wall on one end of a sedimentation bay. This allows students and operators to observe the floc filter. The AguaClara pilot PF300 in testing at the Cornell Water Treatment Plant has small sample ports installed into the side of the reactor. Drawing a sample of water at different heights of the reactor will indicate if a floc filter has grown, and how deep it is.
+An understanding of the bottom of a clarifier is important to understand how clarifiers work. However, most clarifiers do not allow the operator to observe what is happening. Without being able to observe the bottom of the clarifier, an operator would not know what is happening or if a floc filter is forming successfully. AguaClara research teams are working to develop a probe to get data on floc filter performance. Until then, there are two ways to learn about the floc filter. The AguaClara plant at the University of Zamorano in Honduras was built with a translucent wall on one end of a clarifier bay. This allows students and operators to observe the floc filter. The AguaClara pilot PF300 in testing at the Cornell Water Treatment Plant has small sample ports installed into the side of the reactor. Drawing a sample of water at different heights of the reactor will indicate if a floc filter has grown, and how deep it is.
 
 Let's recap some important conclusions from this section on the floc filter.
 
 - The low G flocculation in the floc filter may allow for the rapid growth of the flocs coming from the flocculator.
-- The floc filter reduces the effluent turbidity from the sedimentation tank.
+- The floc filter reduces the effluent turbidity from the clarifier.
 - The floc filter requires a mechanism to keep the flocs resuspended:
   - An upflow velocity of approximately 1 mm/s is the current AguaClara design parameter;
   - Sloped surfaces to return flocs to the resuspension point is necessary to prevent floc build-up.
@@ -629,7 +629,7 @@ Let's recap some important conclusions from this section on the floc filter.
 - We do not yet have a consistent way for operators to observe the floc filter.
 - We do not know what exactly contributes to the ability of a floc filter to resuspend or survive variable flow.
 
-.. _heading_Sed_Tank_Floc_Hopper:
+.. _heading_Clarifier_Floc_Hopper:
 
 Floc Hopper
 -----------
@@ -646,29 +646,29 @@ The **floc hopper** provides an opportunity for floc consolidation. The floc wei
 
    Floc hopper detail with flocs "spilling" over the wall (click to be sent to video).
 
-Consolidated sludge in the bottom of the floc hopper is then removed from the sedimentation tank through small drain valve controlled by the operator. Floc hoppers in the lab-scale and PF300 setting are currently set at a 45 degree angle, but further optimization is needed.
+Consolidated sludge in the bottom of the floc hopper is then removed from the clarifier through small drain valve controlled by the operator. Floc hoppers in the lab-scale and PF300 setting are currently set at a 45 degree angle, but further optimization is needed.
 
 .. _figure_benchtop_sed:
 
 .. figure:: ../Images/benchtop_sed.png
     :height: 300px
     :align: center
-    :alt: Benchtop sedimentation tank setup, highlighting the floc filter and floc hopper.
+    :alt: Benchtop clarifier setup, highlighting the floc filter and floc hopper.
 
-    Benchtop sedimentation tank setup, highlighting the floc filter and floc hopper.
+    Benchtop clarifier setup, highlighting the floc filter and floc hopper.
 
-The floc hopper allows for a self-cleaning sedimentation tank. By gravity, flocs are sent over to a floc hopper. This means that operators only have to clean the sedimentation tank once every three to six months because there is no stagnant accumulation of anoxic sludge. When operators do clean the sedimentation tank, they are primarily cleaning plate settlers. Under normal operation, operators can open the floc hopper drain valve whenever they want to easily drain the sludge. We don't yet have a method to guide the operation of the floc hopper, so operators determine how frequently to drain the floc hopper from experimental and operational experience. Without the floc filter transport system, other methods would be required to remove accumulated sludge in the bay. Mechanical sludge removal systems are common alternatives but are well known to be costly to install and a challenge to maintain.
+The floc hopper allows for a self-cleaning clarifier. By gravity, flocs are sent over to a floc hopper. This means that operators only have to clean the clarifier once every three to six months because there is no stagnant accumulation of anoxic sludge. When operators do clean the clarifier, they are primarily cleaning plate settlers. Under normal operation, operators can open the floc hopper drain valve whenever they want to easily drain the sludge. We don't yet have a method to guide the operation of the floc hopper, so operators determine how frequently to drain the floc hopper from experimental and operational experience. Without the floc filter transport system, other methods would be required to remove accumulated sludge in the bay. Mechanical sludge removal systems are common alternatives but are well known to be costly to install and a challenge to maintain.
 
-We've stated that a benefit of the floc filter is that flocs can be removed without mechanical assistance, but why do we need the floc hopper at all? Why can't we just install drain holes in the bottom of the sedimentation tank so that any accumulated sludge is removed? This is a question that plagued AguaClara in its early years. At first, before we were able to successfully build and operate a floc filter, we had sludge accumulate in the bottom of the sedimentation bay. Therefore, we needed to remove the sludge with drain holes at the bottom. However, to have those drain holes where the sludge was accumulating in the tank, designers made a flat bottom tank. But as we now know, the flat bottom tank is part of the reason that there wasn't any floc filter forming. As soon as we realized that we could grow a floc filter with a sloped bottom tank and a jet reverser, we could not use drain holes in the bottom of the tank. Why? Because in the bottom of tanks with floc filters created by jet reversers, there is no settling. Drain holes at the bottom of a sloped tank would be draining a combination of flocculated water and floc filter water, neither of which are consolidated thus making the draining ineffective and inefficient. A benefit of the floc hopper is that there is no upflow velocity, which means that the sludge is able to settle and become more dense, allowing for less water waste from draining sludge.
+We've stated that a benefit of the floc filter is that flocs can be removed without mechanical assistance, but why do we need the floc hopper at all? Why can't we just install drain holes in the bottom of the clarifier so that any accumulated sludge is removed? This is a question that plagued AguaClara in its early years. At first, before we were able to successfully build and operate a floc filter, we had sludge accumulate in the bottom of the clarifier bay. Therefore, we needed to remove the sludge with drain holes at the bottom. However, to have those drain holes where the sludge was accumulating in the tank, designers made a flat bottom tank. But as we now know, the flat bottom tank is part of the reason that there wasn't any floc filter forming. As soon as we realized that we could grow a floc filter with a sloped bottom tank and a jet reverser, we could not use drain holes in the bottom of the tank. Why? Because in the bottom of tanks with floc filters created by jet reversers, there is no settling. Drain holes at the bottom of a sloped tank would be draining a combination of flocculated water and floc filter water, neither of which are consolidated thus making the draining ineffective and inefficient. A benefit of the floc hopper is that there is no upflow velocity, which means that the sludge is able to settle and become more dense, allowing for less water waste from draining sludge.
 
-Floc filter flow into the floc hopper is a function of the mass flux of particles into the sedimentation tank. In order to optimize the floc hopper design, we need to characterize the consolidation rate of the flocs. We do not have a good model for this yet; developing one would allow us to optimize design and guide operators for how much and how frequently the floc hopper should be drained.
+Floc filter flow into the floc hopper is a function of the mass flux of particles into the clarifier. In order to optimize the floc hopper design, we need to characterize the consolidation rate of the flocs. We do not have a good model for this yet; developing one would allow us to optimize design and guide operators for how much and how frequently the floc hopper should be drained.
 
-.. _heading_Sed_Tank_Plate_Settlers:
+.. _heading_Clarifier_Plate_Settlers:
 
 Plate Settlers
 --------------------
 
-After flowing through the floc filter, flocs reach the **plate settlers**. Plate settlers are sloped surfaces that provide additional settling area for flocs, thereby increasing the effective settling area of the sedimentation unit without increasing the plan view area. AguaClara plate settlers are sloped at 60 degrees. In our discussion of horizontal and vertical flow sedimentation tanks, an important design parameter was capture velocity which was set by flow rate and plan view area of the sedimentation tank. With the introduction of plate settlers, the important design parameter changes. What matters is not just the plan view area of the sedimentation tank, but instead the projected area of all of the surfaces where particles can settle out, which we call the effective settling area. Without plate settlers, the only way we could improve performance and impact the capture velocity was by increasing the plan view area of the sedimentation tank. With plate settlers, we can improve performance by adding additional settling area without increasing the plan view area. This allows for greater treatment efficiency at low cost because we can maintain a small footprint. Note that plate settlers can also be referred to as lamella settlers, or lamellas.
+After flowing through the floc filter, flocs reach the **plate settlers**. Plate settlers are sloped surfaces that provide additional settling area for flocs, thereby increasing the effective settling area of the clarifier without increasing the plan view area. AguaClara plate settlers are sloped at 60 degrees. In our discussion of horizontal and vertical flow clarifiers, an important design parameter was capture velocity which was set by flow rate and plan view area of the clarifier. With the introduction of plate settlers, the important design parameter changes. What matters is not just the plan view area of the clarifier, but instead the projected area of all of the surfaces where particles can settle out, which we call the effective settling area. Without plate settlers, the only way we could improve performance and impact the capture velocity was by increasing the plan view area of the clarifier. With plate settlers, we can improve performance by adding additional settling area without increasing the plan view area. This allows for greater treatment efficiency at low cost because we can maintain a small footprint. Note that plate settlers can also be referred to as lamella settlers, or lamellas.
 
 The first thing that we will discuss is how flocs can settle on plates. To understand this, we will ask a few questions about how particles and flocs will flow between two plate settlers.
 
@@ -786,16 +786,16 @@ Solving for :math:`\bar v_c = \frac{Q}{A}`
 
   \bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
 
-We can see that there are five parameters which will impact each other in our design :math:`\bar v_{z_{Plate}}, \bar v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`\bar v_{z_{Plate}}, \bar v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on :ref:`plate settler design <heading_Sed_Tank_Plate_Settler_Design>`.
+We can see that there are five parameters which will impact each other in our design :math:`\bar v_{z_{Plate}}, \bar v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`\bar v_{z_{Plate}}, \bar v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on :ref:`plate settler design <heading_Clarifier_Plate_Settler_Design>`.
 
 The 'active' sedimentation zone refers to the area of the tank in which water can flow through the plate settlers where:
 
-| :math:`L_{SedActive} =` length of the sedimentation tank that includes entrance to a plate settlers
+| :math:`L_{SedActive} =` length of the clarifier that includes entrance to a plate settlers
 | :math:`\bar v_{z_{Active}} =` upflow velocity of the water entering the plate settlers; vertical velocity in 'active' region
 
 The only reason that there is a distinction between this area and the floc filter area is because plate settlers are built at an angle. This angle creates a "lost triangle" because there is a space in which the plate settlers are not effective and water does not flow through them. Because the active length is less than the floc filter length, :math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, the average active velocity must be greater than the average upflow velocity through the floc filter, :math:`\bar v_{z_{Active}} > \bar v_{z_{ff}}`. The same flow going through less area means that the velocity must increase.
 
-Thus, :math:`Q_{Sed} = W_{Sed} L_{SedActive} \bar v_{z_{Active}}`, and :math:`\bar v_{z_{Active}} > \bar v_{z_{ff}}`.
+Thus, :math:`Q_{Clarifier} = W_{Clarifier} L_{SedActive} \bar v_{z_{Active}}`, and :math:`\bar v_{z_{Active}} > \bar v_{z_{ff}}`.
 
 Now, we will discuss flow through plate settlers where:
 
@@ -828,7 +828,7 @@ Let's start with a basic question. If we know that adding plate settlers improve
 
 We know that more plates means more effective settling area which means that we could remover more particles and make our tank smaller to save money and limit the use of concrete. But how close can those plates be?
 
-The Ten State Standards report that plate settlers should have a separation of two inches, with very long plate settlers, which means very deep tanks. Sedimentation tanks are usually 4 meters deep, maybe because filters are also deep. This is a result of the engineering context rather than the basic design principles. The Ten State Standards are primarily based off the modification of existing sedimentation tanks which were usually built deep and then plate settlers were added. This means that there wasn't added incentive to optimize the entire plate settler and tank process because the tanks were already built. However, AguaClara designs are made to use all of the AguaClara innovations in a green field, meaning that we are incentivized to optimize every part of this design process.
+The Ten State Standards report that plate settlers should have a separation of two inches, with very long plate settlers, which means very deep tanks. Clarification tanks are usually 4 meters deep, maybe because filters are also deep. This is a result of the engineering context rather than the basic design principles. The Ten State Standards are primarily based off the modification of existing clarifiers which were usually built deep and then plate settlers were added. This means that there wasn't added incentive to optimize the entire plate settler and tank process because the tanks were already built. However, AguaClara designs are made to use all of the AguaClara innovations in a green field, meaning that we are incentivized to optimize every part of this design process.
 
 AguaClara plants can design for changes in the depth and/or plan view area of the tank for optimal plate settler efficiency. We want to have the smallest and shallowest tanks possible for low cost and ease of construction. We know that in the plate settler design, there is a dimensionless parameter of plate spacing to length, :math:`\frac{S}{L}`. The ratio is close to constant, which means that if we double the length of the plate settler, we can double the spacing between the plate settler and get the same performance as when we started. Conversely, if we halve the distance between the plate settlers, we can halve the length of the plate settlers. But how far can we push this? Can we make really compact plate settlers?
 
@@ -839,9 +839,9 @@ What we really want to know is: what is the connection between spacing of plate 
 .. figure:: ../Images/plate_settler_depth.png
     :height: 300px
     :align: center
-    :alt: Relationship between plate settler length and sedimentation tank depth.
+    :alt: Relationship between plate settler length and clarifier depth.
 
-    Relationship between plate settler spacing and sedimentation tank depth.
+    Relationship between plate settler spacing and clarifier depth.
 
 When we were discussed how plate settlers promote settling, we assumed a uniform velocity profile between the plates. However, we know from fluid mechanics and boundary layer rules that in reality, there is a nonuniform velocity profile. The flow between the plates, as determined by the Reynolds number, is laminar which means that there is a parabolic velocity profile between the plates and the shape of the parabola is affected by the distance between the plates.
 
@@ -892,15 +892,15 @@ Given that AguaClara uses a lower upflow velocity, :math:`\bar v_{z_{Plate}}`, t
 
 AguaClara plate settlers are currently using separations of 2.5 cm, which is far above the constraint of floc roll up except for very low density flocs. As floc density decreases, as we expect for organic matter, minimum spacing increases. However, we don't yet know what that spacing is or where the boundary is because we don't know the properties of the humic acid-coagulant flocs. Further research is required here to determine the floc properties of flocs that are dominated by dissolved organic matter.
 
-Why does the plate settling distance matter so much? How much does it impact the rest of the sedimentation tank and its design?
+Why does the plate settling distance matter so much? How much does it impact the rest of the clarifier and its design?
 
-One impact of plate settler spacing is on sedimentation tank depth. We know that the spacing between plate settlers has a strong influence on sedimentation tank depth and closer plate settlers allows for shallower tanks. There is a diminishing effect for small spacings, meaning that the difference in depth between 5 and 2.5 cm spacing is greater than the different in depth between 2.5 and 1 cm spacing. Because AguaClara does not yet have a good model for non-clay flocs, we cannot optimize our plate settler spacing and thus cannot optimize for the shallowest tanks possible.
+One impact of plate settler spacing is on clarifier depth. We know that the spacing between plate settlers has a strong influence on clarifier depth and closer plate settlers allows for shallower tanks. There is a diminishing effect for small spacings, meaning that the difference in depth between 5 and 2.5 cm spacing is greater than the different in depth between 2.5 and 1 cm spacing. Because AguaClara does not yet have a good model for non-clay flocs, we cannot optimize our plate settler spacing and thus cannot optimize for the shallowest tanks possible.
 
-.. _heading_Sed_Tank_Plate_Settlers_Head_Loss_Intro:
+.. _heading_Clarifier_Plate_Settlers_Head_Loss_Intro:
 
 Another impact of plate settler spacing is on flow distribution in the tank. This is related to our previous discussion of pressure recovery and flow distribution. Reduced spacing between plates leads to an increased pressure drop through the plate settlers due to higher head loss as shown in Equation :eq:`plate_settler_headloss`. Therefore, plate settlers with small spacing will have more uniform flow distributions because head loss will dominate. This use of head loss can potentially get us better flow distribution. When the plates are brought closer together, there is more shear between the plates because the average velocity remains the same. The velocity gradient is higher between closer plates, which leads to higher shear, and thus higher head loss.
 
-However, if the plates are closer together, then they will be shorter in length to keep the capture velocity constant. The decrease in length decreases the total amount of shear. The head loss from the competing impacts to shear can be determined through a force balance and the Navier-Stokes equation, as shown in the derivation of :ref:`head loss through a plate settler <heading_Sed_Tank_Hl_thru_Plate_Settlers>`.
+However, if the plates are closer together, then they will be shorter in length to keep the capture velocity constant. The decrease in length decreases the total amount of shear. The head loss from the competing impacts to shear can be determined through a force balance and the Navier-Stokes equation, as shown in the derivation of :ref:`head loss through a plate settler <heading_Clarifier_Hl_thru_Plate_Settlers>`.
 
 .. _figure_plate_settler_headloss_spacing:
 
@@ -913,23 +913,23 @@ However, if the plates are closer together, then they will be shorter in length 
 
 The important thing to note is that after determining head loss as a function of plate settler spacing, we realize that the plate settlers do not provide much head loss at the design separation of 2.5 cm. Head loss through plate settlers is really small, which means that they do not contribute much to equalizing flow distribution.
 
-The velocities of any eddies or mean flow need to be less than 4 mm/s to achieve uniform flow through plate settlers. This means that if there is any flow entering the plate settlers at greater than 4 mm/s, the head loss provided by the plate settlers will not be sufficient to dampen the nonuniformity and there will not be adequate flow distribution. Luckily for us, the upflow velocity through the sedimentation tank is on average 1 mm/s, which fulfills the requirement of less than 4 mm/s. The floc filter plays a very important role here in providing uniform vertical flow of 1 mm/s so that the flow between the plate settlers can be close to uniform.
+The velocities of any eddies or mean flow need to be less than 4 mm/s to achieve uniform flow through plate settlers. This means that if there is any flow entering the plate settlers at greater than 4 mm/s, the head loss provided by the plate settlers will not be sufficient to dampen the nonuniformity and there will not be adequate flow distribution. Luckily for us, the upflow velocity through the clarifier is on average 1 mm/s, which fulfills the requirement of less than 4 mm/s. The floc filter plays a very important role here in providing uniform vertical flow of 1 mm/s so that the flow between the plate settlers can be close to uniform.
 
 
-However, remember the diffusers that distribute water into the sedimentation tank? They create velocities on the order of 100 mm/s. Those high initial velocities are damped out by the floc filter which helps to distribute the flow. If we weren't able to use the floc filter to dampen the flow to be less than 4 mm/s, then the plate settlers would not provide any head loss to help with uniform flow distribution. This point about uniform flow is really important.
+However, remember the diffusers that distribute water into the clarifier? They create velocities on the order of 100 mm/s. Those high initial velocities are damped out by the floc filter which helps to distribute the flow. If we weren't able to use the floc filter to dampen the flow to be less than 4 mm/s, then the plate settlers would not provide any head loss to help with uniform flow distribution. This point about uniform flow is really important.
 
 .. _heading_Floc_Volcano_Intro:
 
 Floc Volcanoes
 ==============
 
-Now, lets discuss a plate settler problem that has not yet been solved: **floc volcanoes**. Floc volcanoes occur when water and flocs rise preferentially in one part of the sedimentation tank. At points of high velocity, flocs can rise to the surface of the water. Consider the following case: an AguaClara plant in San Nicolas, Honduras, was witnessing intermittent floc volcanoes in the sedimentation tanks. During operation, the plant was treating raw water with 4 NTU with a PACl dose of 3.5 mg/L. The settled water turbidity varied between 0.5 and 4 NTU. What might explain the floc volcanoes and very poor plant performance? Try coming up with a hypothesis that matches the information given to us from the plant. We want to figure out what is causing this problem so we can design a solution. What questions would you want to ask the technicians or engineers in Honduras? This exercise emphasizes the idea that asking the right questions are sometimes the hardest first step to learning more information.
+Now, lets discuss a plate settler problem that has not yet been solved: **floc volcanoes**. Floc volcanoes occur when water and flocs rise preferentially in one part of the clarifier. At points of high velocity, flocs can rise to the surface of the water. Consider the following case: an AguaClara plant in San Nicolas, Honduras, was witnessing intermittent floc volcanoes in the clarifiers. During operation, the plant was treating raw water with 4 NTU with a PACl dose of 3.5 mg/L. The settled water turbidity varied between 0.5 and 4 NTU. What might explain the floc volcanoes and very poor plant performance? Try coming up with a hypothesis that matches the information given to us from the plant. We want to figure out what is causing this problem so we can design a solution. What questions would you want to ask the technicians or engineers in Honduras? This exercise emphasizes the idea that asking the right questions are sometimes the hardest first step to learning more information.
 
 Some hypotheses and questions may include:
 
 1) Is the problem related to dissolved air flotation? Dissolved air coming out of flocculation can cause flocs to float to the top.
 
-After asking the operators, we are told that there are not any bubbles in the sedimentation tank.
+After asking the operators, we are told that there are not any bubbles in the clarifier.
 
 2) Is the problem regularly intermittent? Is there anything that we can correlate these fluctuations to?
 
@@ -949,7 +949,7 @@ Using this new information, we have to make another hypothesis about why the flo
 We know that this plant brings water from a water source about 14 km away. The water is transported in a galvanized iron pipe that is placed on the surface of the ground because there is no concern about freezing pipes in Honduras (galvanized iron is not damaged by UV like PVC pipe is). The pipe functions as a 14 km water heater, raising the temperature of the water to the plant after noon.
 
 But why does the temperature difference cause a problem for the plate settlers?
-The problem is that there is warmer water entering the sedimentation tank than what is in it. This temperature difference causes a density difference in the sedimentation tank and plate settlers. The less dense, warmer water rises to the top of the plate settlers while the cold water drops to the bottom of the plate. This creates a current, allowing water to flow up on the top and settle on the bottom. The temperature gradient changes slowly over a few hours.
+The problem is that there is warmer water entering the clarifier than what is in it. This temperature difference causes a density difference in the clarifier and plate settlers. The less dense, warmer water rises to the top of the plate settlers while the cold water drops to the bottom of the plate. This creates a current, allowing water to flow up on the top and settle on the bottom. The temperature gradient changes slowly over a few hours.
 
 .. _figure_temp_tube_settler:
 
@@ -960,32 +960,32 @@ The problem is that there is warmer water entering the sedimentation tank than w
 
     Hot water rising and cold water settling in a tube settler.
 
-So, now that we think we know what the problem is, how would we try to solve it? One idea would be to paint the entire line to reflect heat, but this is not feasible due to cost. The town Water Board had been maintaining the distribution line by cleaning weeds and brush from the pipe. The solution ended up being to just let the weeds grow over the pipe to provide shade. We haven't yet come up with a real solution. A possible long-term solution could be to design a sedimentation tank that has a really short residence time. The longer the residence time in the sedimentation tank, the worse the problem is because there is a large variation between the water that entered it last night and the water that enters it this afternoon. A tank with a really short residence time, on the order of a few minutes, would ensure that the water coming in would be very close to the water already in the tank.
+So, now that we think we know what the problem is, how would we try to solve it? One idea would be to paint the entire line to reflect heat, but this is not feasible due to cost. The town Water Board had been maintaining the distribution line by cleaning weeds and brush from the pipe. The solution ended up being to just let the weeds grow over the pipe to provide shade. We haven't yet come up with a real solution. A possible long-term solution could be to design a clarifier that has a really short residence time. The longer the residence time in the clarifier, the worse the problem is because there is a large variation between the water that entered it last night and the water that enters it this afternoon. A tank with a really short residence time, on the order of a few minutes, would ensure that the water coming in would be very close to the water already in the tank.
 
 Let's recap some important conclusions from this section on plate settlers.
 
 #. Reynolds number calculations of flow through plate settlers prove that there is laminar flow between plate settlers. This is important because it allows us to assume that a parabolic velocity profile is established.
 #. There is very low head loss between plate settlers so they will not do a good job of helping to achieve uniform flow between the plate settlers.
-#. The plate settlers are designed to capture flocs with sedimentation velocities greater than the settle capture velocity. AguaClara currently uses :math:`\bar v_c = 0.12` mm/s but this value needs to be further optimized; we would like to know how settled water turbidity changes with capture velocity. Future work includes choosing a settle capture velocity based on overall plate performance.
+#. The plate settlers are designed to capture flocs with terminal velocities greater than the settle capture velocity. AguaClara currently uses :math:`\bar v_c = 0.12` mm/s but this value needs to be further optimized; we would like to know how settled water turbidity changes with capture velocity. Future work includes choosing a settle capture velocity based on overall plate performance.
 #. Plate settler spacing:
 
    a. Plate settler spacing determines the ability of flocs to roll down the incline.
-   b. Smaller spacings between plate setters have diminishing returns in terms of sedimentation tank depth. The current AguaClara spacing is 2.5 cm but there is room for further optimization.
+   b. Smaller spacings between plate setters have diminishing returns in terms of clarifier depth. The current AguaClara spacing is 2.5 cm but there is room for further optimization.
    c. Flocs made from natural organic matter (NOM) may be less dense, more prone to floc rollup, and may require larger spacing between plate settlers.
 
-.. _heading_Sed_Tank_Exit:
+.. _heading_Clarifier_Exit:
 
 Exiting the Tank
 =================
 
-Now that we have passed through the plate settlers, we are ready to leave the sedimentation tank.
+Now that we have passed through the plate settlers, we are ready to leave the clarifier.
 
-.. _heading_Sed_Tank_Effluent_Manifold:
+.. _heading_Clarifier_Effluent_Manifold:
 
 Submerged Effluent Manifold
 ------------------------------
 
-The **submerged effluent manifold**, sometimes called a launder, collects settled water from the sedimentation tank. It is a horizontal pipe that extends along the length of the tank and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the sedimentation tank. Recall that the influent manifold also uses a submerged pipe and orifice design to distribute flow. However, unlike the influent manifold, the effluent manifold does not include diffusers because we do not need to precisely control velocity and flow direction.
+The **submerged effluent manifold**, sometimes called a launder, collects settled water from the clarifier. It is a horizontal pipe that extends along the length of the tank and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the clarifier. Recall that the influent manifold also uses a submerged pipe and orifice design to distribute flow. However, unlike the influent manifold, the effluent manifold does not include diffusers because we do not need to precisely control velocity and flow direction.
 
 .. _figure_effluent_manifold:
 
@@ -998,15 +998,15 @@ The **submerged effluent manifold**, sometimes called a launder, collects settle
 
 The orifices in the pipe are evenly distributed along the length of the pipe to promote even flow collection from the tank. The orifices are designed create uniform head loss. Is this head loss "good" or "bad"? Like the diffusers, the orifices in the effluent manifold create "good" head loss because they increase head loss through all flow paths. This is critical because there is pressure recovery within the effluent manifold that creates "bad" head loss.
 
-Are there effluent manifold exit losses? What type of head loss would it be? This head loss is a result of exit loss into its receiving channel. Is it "good" or "bad"? This head loss is also "good" head loss because it impacts all flow paths the same; each sedimentation tank bay and all water within a single bay is subject to the same amount of exit loss.
+Are there effluent manifold exit losses? What type of head loss would it be? This head loss is a result of exit loss into its receiving channel. Is it "good" or "bad"? This head loss is also "good" head loss because it impacts all flow paths the same; each clarifier bay and all water within a single bay is subject to the same amount of exit loss.
 
 Why did AguaClara design the effluent manifold to be submerged? There are 3 main reasons.
 
-#. It is designed to be submerged because sometimes there are particles or substances that rise to the top of sedimentation tanks and float on the water surface. These particles or substances may be flocs that escaped capture and remain buoyant, or may be foam or scum that results from organic matter in the water. No matter what it is that is rising to the water surface, we want to avoid it entering the settled water effluent pipe. Placing the effluent manifold below the surface allows particles or substances floating on the surface to remain separate from the effluent water headed towards filtration. Operators can then skim the water surface to remove and dispose of anything that floats.
+#. It is designed to be submerged because sometimes there are particles or substances that rise to the top of clarifiers and float on the water surface. These particles or substances may be flocs that escaped capture and remain buoyant, or may be foam or scum that results from organic matter in the water. No matter what it is that is rising to the water surface, we want to avoid it entering the settled water effluent pipe. Placing the effluent manifold below the surface allows particles or substances floating on the surface to remain separate from the effluent water headed towards filtration. Operators can then skim the water surface to remove and dispose of anything that floats.
 
-#. The launders were also designed to be submerged to simplify construction. Effluent launders that also act as weirs must be installed perfectly level. This is difficult to ensure during construction and thus we have elected to use a single weir to regulate the water level in all of the sedimentation tanks. The water from all of the sedimentation tanks in one treatment train joins together in a common channel before flowing over the exit weir.
+#. The launders were also designed to be submerged to simplify construction. Effluent launders that also act as weirs must be installed perfectly level. This is difficult to ensure during construction and thus we have elected to use a single weir to regulate the water level in all of the clarifiers. The water from all of the clarifiers in one treatment train joins together in a common channel before flowing over the exit weir.
 
-#. The submerged launder and exit weir system also make it possible to refill and empty a sedimentation tank with clean water, as shown in the following video.
+#. The submerged launder and exit weir system also make it possible to refill and empty a clarifier with clean water, as shown in the following video.
 
 .. _figure_sed_fill_empty:
 
@@ -1014,61 +1014,61 @@ Why did AguaClara design the effluent manifold to be submerged? There are 3 main
     :target: https://youtu.be/B_LEH1ezd6E
     :height: 300px
     :align: center
-    :alt: Sedimentation tank filling and emptying with clean water (click to be sent to video).
+    :alt: Clarification tank filling and emptying with clean water (click to be sent to video).
 
-    Sedimentation tank filling and emptying with clean water (click to be sent to video).
+    Clarification tank filling and emptying with clean water (click to be sent to video).
 
 Why are the orifices in the effluent manifold located at the top of the pipe?
 They are located on the top to promote even flow collection and for ease of operation and maintenance. The orifices need to be either located on the top or bottom so that they are symmetrical about the tank because if the orifices were put on the sides, then they might not draw water evenly from the entire tank. So, we are to choose between the top or the bottom; which would be better for operation and maintenance? The top is better because orifices located on the top of the pipe can be easily observed and maintained by operators in case any clogging occurs. We also want to limit the number of flocs that rise through the plate settlers and enter the effluent manifold. Locating the orifices on the top discourages that from happening by not drawing up directly from the top of plate settlers and by giving more time for flocs to potentially settle.
 
-.. _heading_Sed_Tank_Exit_Weir_Channel:
+.. _heading_Clarifier_Exit_Weir_Channel:
 
 Exit Weir and Effluent Channel
 ----------------------------------------
 
-The submerged effluent manifold transports water from the sedimentation tank to a channel that runs perpendicular to the sedimentation bays. The channel collects water from all of the sedimentation bays. Water leaves this channel by flowing over a small wall, called the **exit weir**. The sedimentation tank exit weir controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and sedimentation tank. In construction, great care is taken to ensure that this weir is at the right elevation and is level. After the water flows over the exit weir, it is collected in the **effluent channel**. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box.
+The submerged effluent manifold transports water from the clarifier to a channel that runs perpendicular to the clarifier bays. The channel collects water from all of the clarifier bays. Water leaves this channel by flowing over a small wall, called the **exit weir**. The clarifier exit weir controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and clarifier. In construction, great care is taken to ensure that this weir is at the right elevation and is level. After the water flows over the exit weir, it is collected in the **effluent channel**. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box.
 
 .. _figure_channel_labeled:
 
 .. figure:: ../Images/channel_labeled.png
     :height: 300px
     :align: center
-    :alt: Image of sedimentation channels.
+    :alt: Image of clarifier channels.
 
-    Image of sedimentation channels.
+    Image of clarifier channels.
 
 .. _figure_channel_labeled_cad:
 
 .. figure:: ../Images/channel_labeled_cad.png
     :height: 300px
     :align: center
-    :alt: Figure of sedimentation channels.
+    :alt: Figure of clarifier channels.
 
-    Figure of sedimentation channels.
+    Figure of clarifier channels.
 
-.. _heading_Sed_Tank_Conclusions:
+.. _heading_Clarifier_Conclusions:
 
-Sedimentation Tank Summary
-============================
+Clarifier Summary
+=================
 
-You have now been introduced to the AguaClara sedimentation tank in three parts:
+You have now been introduced to the AguaClara clarifier in three parts:
 
-#. How water enters the sedimentation tank;
-#. How water moves through the sedimentation tank, and;
-#. How water leaves the sedimentation tank.
+#. How water enters the clarifier;
+#. How water moves through the clarifier, and;
+#. How water leaves the clarifier.
 
-This introduction should allow you to understand the components of the sedimentation unit process, the purpose of each component, and AguaClara-specific innovations.
+This introduction should allow you to understand the components of the clarifier, the purpose of each component, and AguaClara-specific innovations.
 
-Let's recap some important points about the sedimentation tank.
+Let's recap some important points about the clarifier.
 
-- The AguaClara sedimentation tank includes three process in one tank: filtration, sedimentation, and consolidation.
-- Floc filters improve sedimentation tank performance.
+- The AguaClara clarifier includes three process in one tank: filtration, sedimentation, and consolidation.
+- Floc filters improve clarifier performance two ways. First, they produce a uniform upward velocity so that the flow is distributed evenly between the plate settlers. Second, they filter small particles and flocs that have terminal velocities that are too low to be captured by the plate settlers.
 - The floc filter and floc hopper design eliminate the need for mechanized sludge removal by using hydraulic sludge removal.
-- Plate settlers make it possible to significantly reduce the plan-view area of the sedimentation tank.
+- Plate settlers make it possible to significantly reduce the plan-view area of the clarifier.
 - Reduced plate settler spacing allows for shallower, and therefore cheaper, tanks.
-- Flow distribution is very important in sedimentation tank design.
-- Hydraulic residence times can be greatly decreased using AguaClara innovations. While some standards suggest a minimum of four hours for sedimentation processes, AguaClara plants have shown that a hydraulic residence time of 24 minutes is sufficient for efficient sedimentation.
-- The AguaClara sedimentation tank design is driven by the need for high treatment capability coupled with easy operation and maintenance.
+- Flow distribution is very important in clarifier design.
+- Hydraulic residence times can be greatly decreased using AguaClara innovations. While some standards suggest a minimum of four hours for sedimentation processes, AguaClara plants have shown that a hydraulic residence time of 24 minutes is sufficient for efficient clarification.
+- The AguaClara clarifier design is driven by the need for high treatment capability coupled with easy operation and maintenance.
 - There is "good" head loss introduced by the influent manifold entrance, diffusers, effluent manifold orifices, and effluent manifold exit. There is "bad" head loss introduced by pressure recovery in the influent channel, influent manifold, and effluent manifold. Even flow distribution is achieved by ensuring that "good" head loss dominates through intentional design.
 
 .. _figure_circuit_full:
@@ -1076,24 +1076,24 @@ Let's recap some important points about the sedimentation tank.
 .. figure:: ../Images/circuit_full.png
     :height: 300px
     :align: center
-    :alt: Sedimentation tank as a circuit, showing "good" and "bad" head loss.
+    :alt: Clarification tank as a circuit, showing "good" and "bad" head loss.
 
-    Sedimentation tank as a circuit, showing "good" and "bad" head loss.
+    Clarification tank as a circuit, showing "good" and "bad" head loss.
 
-.. _heading_Sed_Tank_Review:
+.. _heading_Clarifier_Review:
 
 Review
 --------------------------------
-You can review your understanding of AguaClara sedimentation tanks by asking yourself the following questions:
+You can review your understanding of AguaClara clarifiers by asking yourself the following questions:
 
-#. Why do horizontal flow sedimentation tanks perform must worse than theory predicts?
-#. How does the floc filter improve sedimentation tank performance?
+#. Why do horizontal flow clarifiers perform must worse than theory predicts?
+#. How does the floc filter improve clarifier performance?
 #. What is the purpose of the floc hopper?
 #. Why do we use plate settlers?
 #. What is the failure mechanism for small spacing between plate settlers?
-#. What helps the flow divide evenly between and within the sedimentation tanks?
+#. What helps the flow divide evenly between and within the clarifiers?
 
-The hydraulic self cleaning sedimentation tank with a high performing floc filter, zero sludge accumulation, and with no moving parts outperforms conventional sedimentation tanks on capital cost, performance, and maintenance costs. We will now transition to the mathematical models which explain how we make these advancements possible.
+The hydraulic self cleaning clarifier with a high performing floc filter, zero sludge accumulation, and with no moving parts outperforms conventional clarifiers on capital cost, performance, and maintenance costs. We will now transition to the mathematical models which explain how we make these advancements possible.
 
 References
 ===========

@@ -50,7 +50,7 @@ Using Equation :eq:`Q_tank_with_valve` and this proportionality relationship, we
 
 Drain System for a Tank
 ------------------------
-While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and sedimentation tanks, since they are just tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: :ref:`heading_diameter_and_time_tank_drain_equation`. The derived ‘Tank Drain’ equation is as follows:
+While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and clarifiers, since they are just tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: :ref:`heading_diameter_and_time_tank_drain_equation`. The derived ‘Tank Drain’ equation is as follows:
 
 .. math::
 

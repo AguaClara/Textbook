@@ -25,7 +25,7 @@ Whenever possible, use variables defined within ``floc_model.py`` instead of red
 The diameter of the flocs that interact with the impeller is 127 um.
 
 
-**2) Estimate the terminal sedimentation velocity** in mm/s of the flocs that interact with the tip of the impeller of the mechanical flocculator analyzed above. Use the function ``fm.vel_term_floc``. You may assume that the flocs were made from a particle suspension that had 1.5 mg/L of aluminum and 100 NTU of clay.
+**2) Estimate the terminal velocity** in mm/s of the flocs that interact with the tip of the impeller of the mechanical flocculator analyzed above. Use the function ``fm.vel_term_floc``. You may assume that the flocs were made from a particle suspension that had 1.5 mg/L of aluminum and 100 NTU of clay.
 
 Note: AguaClara has defined the unit NTU as ``u.NTU``.
 
@@ -34,14 +34,14 @@ Note: AguaClara has defined the unit NTU as ``u.NTU``.
 The terminal velocity of flocs that interact with the impeller tip is estimated to be 0.738 mm/s
 
 
-**3) Would these flocs be captured** by a conventional design for a sedimentation tank `(10 State Standards) <http://10statesstandards.com/waterrev2012.pdf>`__ with a capture velocity of 1.2 m/hr? The capture velocity is a property of the sedimentation tank. If the floc settles faster than the capture velocity, then theoretically the floc will be captured by the sedimentation tank.
+**3) Would these flocs be captured** by a conventional design for a clarifier `(10 State Standards) <http://10statesstandards.com/waterrev2012.pdf>`__ with a capture velocity of 1.2 m/hr? The capture velocity is a property of the clarifier. If the floc settles faster than the capture velocity, then theoretically the floc will be captured by the clarifier.
 
 `Determine if the flocs will be captured <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=3LNMr5OL2Jlo&line=2&uniqifier=1>`_
 
 The 10 State Standards capture velocity is 0.333 mm/s
-The 10 State Standards sedimentation tank would capture the flocs that are able to survive the energy dissipation rate at the tip of the propeller.
+The 10 State Standards clarifier would capture the flocs that are able to survive the energy dissipation rate at the tip of the propeller.
 
-These flocs would be removed easily in an AguaClara sedimentation tank (capture velocity of 0.12 mm/s). However, our use of the empirical equation to predict the size of these flocs is questionable because we are extrapolating way beyond the original data. We need more experiments to characterize the size of flocs as a function of the velocity gradient.
+These flocs would be removed easily in an AguaClara clarifier (capture velocity of 0.12 mm/s). However, our use of the empirical equation to predict the size of these flocs is questionable because we are extrapolating way beyond the original data. We need more experiments to characterize the size of flocs as a function of the velocity gradient.
 
 **4) Estimate the average distance** between primary clay particles at the beginning and end of flocculation given an initial turbidity of 100 NTU and a target effluent unflocculated clay concentration at the end of flocculation of less than 1 NTU. Of course, the clay concentration is actually constant in flocculation since particles are not actually being removed. But here we are referring to the primary clay particles that have escaped aggregation and thus are still unattached.
 
@@ -133,7 +133,7 @@ If you doubled the residence time of the flocculator, the required coagulant cov
 Modeling Flocculation in the Presence of Humic Acid, With pC\* as the Performance Metric
 ----------------------------------------------------------------------------------------
 
-The flocculation model predicts the settled water turbidity given the composition of the raw water, the flocculator characteristics, and a fitting parameter that must be a function of the sedimentation tank characteristics. This fitting parameter is k, which is the same as the rate constant for collisions described above. The model is far from complete - it doesn’t yet describe the effects of floc filters. Below we have created a plot showing model predictions for a range of coagulant and humic acid (dissolved organic matter) concentrations. The plot uses our approximation for pC\* described in class and shown below:
+The flocculation model predicts the settled water turbidity given the composition of the raw water, the flocculator characteristics, and a fitting parameter that must be a function of the clarifier characteristics. This fitting parameter is k, which is the same as the rate constant for collisions described above. The model is far from complete - it doesn’t yet describe the effects of floc filters. Below we have created a plot showing model predictions for a range of coagulant and humic acid (dissolved organic matter) concentrations. The plot uses our approximation for pC\* described in class and shown below:
 
 .. math::
 

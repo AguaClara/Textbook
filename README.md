@@ -7,7 +7,7 @@ If you are interested in helping out by editing existing sections, begin by read
 # Textbook Structure
 This is the first version attempted of an AguaClara textbook. The current proposed structure is as follows:
 
-Each chapter will cover a unit process, like "Flow Control and Measurement" or "Sedimentation."
+Each chapter will cover a unit process, like "Flow Control and Measurement" or "Clarification."
 
 Each chapter will have the following three sections:
 - Introduction

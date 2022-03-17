@@ -69,7 +69,7 @@ An example of design for the operator is the elevation of the walkways in AguaCl
     :align: center
     :alt: Improvised ladder access to sed tank
 
-    A plant operator built a makeshift ladder to enable easier access to the flocculation and sedimentation tanks in a package plant. This ladder considerably shortened the distance between the coagulant dose controls and the flocculator. The ladder also makes it possible to look closely at the water to see the size of the flocs.
+    A plant operator built a makeshift ladder to enable easier access to the flocculation and clarifiers in a package plant. This ladder considerably shortened the distance between the coagulant dose controls and the flocculator. The ladder also makes it possible to look closely at the water to see the size of the flocs.
 
 .. _heading_Design_Bifurcations:
 
@@ -95,10 +95,10 @@ Built for Operation
 
 Traditionally in tropical and temperate climates, flocculation and sedimentation units are built without an enclosing building because they aren't in danger of freezing. Without protection from the sun the materials used for plant construction must be UV resistant and thus plastic can't be used. This requires use of heavier and more expensive materials such stainless steel and aluminum. Metal plate settlers are heavy and thus they can't be easily removed by the plant operator.
 
-Without the ability to gain access to a sedimentation tank from above, conventional sedimentation tank cleaning must be done by providing operator access below the plate settlers. This in turn requires that the space below the plate settlers be tall enough to accommodate a plant operator. Thus sedimentation tanks that are built in the open have to be deeper than sedimentation tanks that are built under a roof and they are more difficult to maintain because the operator has to enter the tank through a waterproof access port. Operator access to the space below the stainless steel or aluminum plate settlers is through a port in the side of the tank (see the video :numref:`figure_Cleaning_a_Sed_Tank_with_fixed_plates`).
+Without the ability to gain access to a clarifier from above, conventional clarifier cleaning must be done by providing operator access below the plate settlers. This in turn requires that the space below the plate settlers be tall enough to accommodate a plant operator. Thus clarifiers that are built in the open have to be deeper than clarifiers that are built under a roof and they are more difficult to maintain because the operator has to enter the tank through a waterproof access port. Operator access to the space below the stainless steel or aluminum plate settlers is through a port in the side of the tank (see the video :numref:`figure_Cleaning_a_Clarifier_with_fixed_plates`).
 
 
-.. _figure_Cleaning_a_Sed_Tank_with_fixed_plates:
+.. _figure_Cleaning_a_Clarifier_with_fixed_plates:
 
 .. figure:: http://img.youtube.com/vi/TSh-ZNqaW8Y/0.jpg
     :width: 300px
@@ -106,19 +106,19 @@ Without the ability to gain access to a sedimentation tank from above, conventio
     :alt: Cleaning a Sed Tank with fixed plates
     :target: http://www.youtube.com/watch?v=TSh-ZNqaW8Y
 
-    Plant operators opening hatch below plate settlers in a traditional sedimentation tank.
+    Plant operators opening hatch below plate settlers in a traditional clarifier.
 
-AguaClara sedimentation tanks are designed to be taken off line one at a time so the water treatment plant can continue to operate during maintenance. Two plant operators can quickly open a sedimentation tank by removing the plastic plate settlers (see the video :numref:`figure_Removing_Plate_Settlers`). The zero settled sludge design of the AguaClara sedimentation tanks also reduces the need for cleaning.
+AguaClara clarifiers are designed to be taken off line one at a time so the water treatment plant can continue to operate during maintenance. Two plant operators can quickly open a clarifier by removing the plastic plate settlers (see the video :numref:`figure_Removing_Plate_Settlers`). The zero settled sludge design of the AguaClara clarifiers also reduces the need for cleaning.
 
 .. _figure_Removing_Plate_Settlers:
 
 .. figure:: http://img.youtube.com/vi/vZ2f6mduEls/0.jpg
     :width: 300px
     :align: center
-    :alt: Removing Plate Settlers from an AguaClara Sedimentation tank
+    :alt: Removing Plate Settlers from an AguaClara Clarification tank
     :target: http://www.youtube.com/watch?v=vZ2f6mduEls
 
-    Plant operator removing plate settlers from an AguaClara sedimentation tank.
+    Plant operator removing plate settlers from an AguaClara clarifier.
 
 There is another major consequence of building water treatment plants in a secure enclosed building. Many water treatment plants will operate around the clock and that requires plant operators to spend the night at the facility. Having a secure facility provides improved safety for the plant operator. That improved safety is very important for some potential operators and thus providing that safety will increase potential diversity.
 
@@ -133,7 +133,7 @@ Dramatically different designs are also created when we choose gravity power and
 
 Automated plants often move the controls far away from the critical observation locations in the plant. This might be appropriate or necessary in some cases, but it has the disadvantage of making it more difficult for operators to directly observe what is happening in the plant. Direct observations are critical because even highly mechanized water treatment plants are not yet equipped with enough sensors to enable rapid troubleshooting from the control room.
 
-AguaClara plants have a layout that places the coagulant dose controls within a few steps of the best places to observe floc formation in the flocculator. This provides plant operators with rapid feedback that is critical when the raw water changes rapidly at the beginning of a high runoff event. As operators spend time observing the processes in the plant they begin to associate cause and effect and can make operational changes to improve performance. For example, gas bubbles that carry flocs to the surface can indicate sludge accumulation in a sedimentation tank. Rising flocs without gas bubbles can indicate a poor inlet flow distribution for a sedimentation tank or density differences caused by temperature differences.
+AguaClara plants have a layout that places the coagulant dose controls within a few steps of the best places to observe floc formation in the flocculator. This provides plant operators with rapid feedback that is critical when the raw water changes rapidly at the beginning of a high runoff event. As operators spend time observing the processes in the plant they begin to associate cause and effect and can make operational changes to improve performance. For example, gas bubbles that carry flocs to the surface can indicate sludge accumulation in a clarifier. Rising flocs without gas bubbles can indicate a poor inlet flow distribution for a clarifier or density differences caused by temperature differences.
 
 .. todo:: Show the plan view of an AguaClara plant.
 
@@ -180,14 +180,14 @@ Floc Filter and Plate Settlers
  #. Four channel inlet/outlet system that enables
 
      #. dumping flocculated water that doesn't meet specifications
-     #. taking one sedimentation tank offline by placing a pipe stub in the inlet and a cap on the outlet
+     #. taking one clarifier offline by placing a pipe stub in the inlet and a cap on the outlet
      #. dumping settled water that doesn't meet specifications
 
  #. Inlet manifold with flow diffusers that straighten the flow into a continuous line jet
  #. Inlet manifold is offset from center to force jet to all go in a consistent direction through the jet reverser
  #. Jet reverser that efficiently reverses the direction of the incoming water to be able to resuspend settled flocs that are sliding down the inclines
  #. Floc filter that is stable and that reduces the clarified turbidity. The floc filter coupled with the jet reverser system produces a very uniform vertical flow into the plate settlers and thus eliminates large scale flow circulation that commonly results in excess flow through some of the plate settlers.
- #. Zero settled sludge in the main part of the sedimentation tank
+ #. Zero settled sludge in the main part of the clarifier
  #. Hydraulically cleaned with no moving parts
  #. Floc Hopper that consolidates the floc slurry prior to draining.
 

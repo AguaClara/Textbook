@@ -51,7 +51,7 @@ Horizontal-Vertical flow flocculators
       - :math:`G_{CS} \theta`, collision potential at the coldest operating temperature
       - :math:`Q`, plant flow rate
       - :math:`H`, height of water *at the end of the flocculator*
-      - :math:`L_{Max, \, sed}`, max length of a flocculator channel based on sedimentation tank length
+      - :math:`L_{Max, \, sed}`, max length of a flocculator channel based on clarifier length
       - :math:`W_{Min, \, human}` minimum width of a single channel based on the width of the average human hip (someone's got to go down there...)
     - Find:
       - :math:`\theta`, hydraulic retention time
@@ -84,7 +84,7 @@ We start by making sure that our flocculator will be able to flocculate effectiv
  - :math:`G_{CS} = 100 Hz`
  - :math:`G_{CS} \theta = 37,000`
 
-The plant flow rate :math:`Q` is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water *at the end* of the flocculator, :math:`H`, the *maximum* length of the flocculator based on the length of the sedimentation tank length, :math:`L_{Max, \, sed}`, and the *minimum* width of a flocculator channel required for a human to fit inside, :math:`W_{Min, \, human}`, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the sedimentation tanks, which is why the length constraint exists. See :numref:`figure_physical_design_criteria_floc` for a representation of how the flocculator and sedimentation tanks are placed in a plant.
+The plant flow rate :math:`Q` is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water *at the end* of the flocculator, :math:`H`, the *maximum* length of the flocculator based on the length of the clarifier length, :math:`L_{Max, \, sed}`, and the *minimum* width of a flocculator channel required for a human to fit inside, :math:`W_{Min, \, human}`, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the clarifiers, which is why the length constraint exists. See :numref:`figure_physical_design_criteria_floc` for a representation of how the flocculator and clarifiers are placed in a plant.
 
 - :math:`H = 2 \, {\rm m}`
 - :math:`L_{Max, \, sed} = 6 \, {\rm m}`
@@ -97,7 +97,7 @@ The plant flow rate :math:`Q` is defined by the needs of the community that the 
    :width: 600px
    :alt: physical design criteria
 
-   Layout of flocculator and sedimentation tanks that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.
+   Layout of flocculator and clarifiers that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.
 
 Physical Dimensions
 -----------------------------
@@ -106,7 +106,7 @@ Deriving the equations required to find the physical dimensions now and the hydr
 Length
 ^^^^^^^^^^^^^^^^^^^^^
 
-Flocculator length, :math:`L_{channel}`` must meet two constraints: it must be less than or equal to the length of the sedimentation tanks, as the flocculator is adjacent to the sed tanks. This constraint is :math:`L_{Max, \, sed}`. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside :math:`L_{Max, \, \rlap{-} V}`. **The constraint that wins out is the one that results in the *smaller* length value**.
+Flocculator length, :math:`L_{channel}`` must meet two constraints: it must be less than or equal to the length of the clarifiers, as the flocculator is adjacent to the sed tanks. This constraint is :math:`L_{Max, \, sed}`. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside :math:`L_{Max, \, \rlap{-} V}`. **The constraint that wins out is the one that results in the *smaller* length value**.
 
 .. math::
 
@@ -116,7 +116,7 @@ Flocculator length, :math:`L_{channel}`` must meet two constraints: it must be l
 | Such that:
 | :math:`n_{Min, \, channels} = 2`
 
-The reason why :math:`W_{Min, \, human}` is used is because it represents the absolute minimum of flocculator channel width. If the width ends up being larger, the length will decrease. :math:`n_{Min, \, channels} = 2`  to make sure that the flow ends up on the correct side of the sedimentation tank, as the image below shows. Note that there can only be an even number of flocculator channels, as explained in the image's caption.
+The reason why :math:`W_{Min, \, human}` is used is because it represents the absolute minimum of flocculator channel width. If the width ends up being larger, the length will decrease. :math:`n_{Min, \, channels} = 2`  to make sure that the flow ends up on the correct side of the clarifier, as the image below shows. Note that there can only be an even number of flocculator channels, as explained in the image's caption.
 
 The equation for *actual* flocculator length is therefore:
 
@@ -260,7 +260,7 @@ We then compare :math:`n_{spaces, \, required}` to :math:`n_{spaces, \, actual}`
 Average Velocity
 ^^^^^^^^^^^^^^^^^
 
-As water flows through the flocculators, the flocs will get larger and larger. As a result, their terminal sedimentation velocity will increase. This is what we want. However, we need to make sure that the flocs don’t settle in the flocculator; that they instead all settle in the sedimentation tank. To make sure of this, we need to make sure that the velocity of water in the flocculator is high enough to scour any flocs that fall to the bottom of the flocculator. The velocity required to scour flocs from the bottom and avoid floc accumulation is around :math:`v_{scour} = 15 \, {\rm \frac{cm}{s}}`. We can check our average velocity :math:`\bar v` against this value. Unfortunately, the only method to increase the velocity through the flocculator is to increase the space between baffles, S, and decrease the channel width, W. Generally those changes aren't practical and thus there isn't any way to increase the velocity.
+As water flows through the flocculators, the flocs will get larger and larger. As a result, their terminal velocity will increase. This is what we want. However, we need to make sure that the flocs don’t settle in the flocculator; that they instead all settle in the clarifier. To make sure of this, we need to make sure that the velocity of water in the flocculator is high enough to scour any flocs that fall to the bottom of the flocculator. The velocity required to scour flocs from the bottom and avoid floc accumulation is around :math:`v_{scour} = 15 \, {\rm \frac{cm}{s}}`. We can check our average velocity :math:`\bar v` against this value. Unfortunately, the only method to increase the velocity through the flocculator is to increase the space between baffles, S, and decrease the channel width, W. Generally those changes aren't practical and thus there isn't any way to increase the velocity.
 
 .. math:: \bar v = \frac{Q}{W_{channel} S}
 

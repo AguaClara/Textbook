@@ -77,7 +77,7 @@ Water treatment plants at research and municipal scales deploy a wide range of f
   -  Mechanical mixing - [mechanical rapid mix and flocculators]
   -  Between flat plates (wall shear) - [plate settlers]
   -  Round jet (expansion) - [hydraulic rapid mix]
-  -  Plane jet (expansion) - [inlet into sedimentation tank]
+  -  Plane jet (expansion) - [inlet into clarifier]
   -  Behind a flat plate (expansion) - [mechanical mixers]
 
 The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants. The :ref:`heading_Equations_Varying_Flow_Geometries` are available as a reference.

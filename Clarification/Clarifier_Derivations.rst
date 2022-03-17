@@ -5,13 +5,13 @@
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
-.. _title_Sed_Derivations:
+.. _title_Clarifier_Derivations:
 
 ***********************************************
-Sedimentation Deriviations
+Clarification Deriviations
 ***********************************************
 
-.. _heading_Sed_Tank_Plate_Settler_Design:
+.. _heading_Clarifier_Plate_Settler_Design:
 
 Plate Settler Design
 ====================
@@ -61,7 +61,7 @@ Solving for :math:`\bar v_{z_{Plate}}`, we rearrange and substitute by,
 
   \bar v_{z_{Plate}} = \frac{\bar v_{z_{Active}} (S+T)}{S}
 
-We also already know from our :ref:`discussion of plate settlers <heading_Sed_Tank_Plate_Settlers>` that we can relate capture velocity, :math:`\bar v_c`, to :math:`S, L, \alpha`, and :math:`\bar v_{z_{Plate}}` by,
+We also already know from our :ref:`discussion of plate settlers <heading_Clarifier_Plate_Settlers>` that we can relate capture velocity, :math:`\bar v_c`, to :math:`S, L, \alpha`, and :math:`\bar v_{z_{Plate}}` by,
 
 .. math::
   :label: vc_of_vz_plate
@@ -88,7 +88,7 @@ Now, we can use this form of the capture velocity equation to solve for :math:`B
 
   L = \frac{S\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}-1\right) + T\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}\right)}{sin\alpha cos\alpha}
 
-.. _heading_Sed_Tank_Plate_Settler_Design_Review:
+.. _heading_Clarifier_Plate_Settler_Design_Review:
 
 .. csv-table:: AguaClara plate settler design approach.
    :header: "Parameter", "Variable", "Determined by:", "Determines:", "Value"
@@ -141,7 +141,7 @@ It is common to need to design the length of the tube given a target flow rate a
 Floc Rollup
 ------------------------------
 
-As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine this by calculating the floc sedimentation velocity, :math:`v_{Slide}`, that can be captured given a plate spacing. The steps to calculate this are:
+As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine the minimum plate spacing that will allow flocs that settle on the plate to slide down and return to the floc filter. The steps to calculate this are:
 
 #. Find the velocity gradient next to the plate
 
@@ -151,7 +151,7 @@ As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a failure mod
 
 #. Set those two velocities equal for the critical case of no movement, and the required plate spacing
 
-#. Find the floc sedimentation velocity, :math:`v_{Slide}`
+#. Find the floc terminal velocity, :math:`v_{Slide}`
 
 We will solve for both the plate settler and tube settler conditions.
 
@@ -277,12 +277,12 @@ If the fractal dimension, :math:`\Pi_{fractal}` has a value of 2, then Equation 
 
 
 
-.. _heading_Sed_Tank_Hl_thru_Plate_Settlers:
+.. _heading_Clarifier_Hl_thru_Plate_Settlers:
 
 Head Loss Through Plate Settlers
 --------------------------------
 
-Flow through the sedimentation tank is controlled by head loss in an attempt to achieve flow uniformity. We have already explained that :ref:`plate settler spacing impacts head loss <heading_Sed_Tank_Plate_Settlers_Head_Loss_Intro>`, but by what mathematical relationship? Will putting plate settlers closer together result in more or less head loss? This question is complicated because closer plate settlers would create more shear and head loss, but shorter plate settlers have less area which would decrease the head loss.
+Flow through the clarifier is controlled by head loss in an attempt to achieve flow uniformity. We have already explained that :ref:`plate settler spacing impacts head loss <heading_Clarifier_Plate_Settlers_Head_Loss_Intro>`, but by what mathematical relationship? Will putting plate settlers closer together result in more or less head loss? This question is complicated because closer plate settlers would create more shear and head loss, but shorter plate settlers have less area which would decrease the head loss.
 
 Let's start with a force balance similar to the derivation for head loss between parallel plates as done previously for Equation :eq:`parallel_plate_laminar_headloss`. Assume that there is a fully established velocity profile that is parabolic with laminar flow. The forces that we care about are shear forces on the walls of the plate settlers and the differential pressure from flow in the direction of the velocity.
 
@@ -347,7 +347,7 @@ Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
 Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}`. The resulting two plots show how head loss and velocity relate to plate settlers (see :numref:`figure_plate_settler_headloss_spacing`).
 
 
-.. _heading_Sed_Tank_Floc_Filter_Design:
+.. _heading_Clarifier_Floc_Filter_Design:
 
 Floc Filter Design
 ==================
@@ -397,9 +397,9 @@ We can plot our results for :math:`G_{CS}\theta` by multiplying :math:`G_{CS}` b
 .. figure:: ../Images/lab_setup.png
    :height: 300px
    :align: center
-   :alt: Lab setup for flocculator, half-sedimentation tank, and plate settler testing.
+   :alt: Lab setup for flocculator, half-clarifier, and plate settler testing.
 
-   Lab setup for flocculator, half-sedimentation tank, and plate settler testing.
+   Lab setup for flocculator, half-clarifier, and plate settler testing.
 
 .. _figure_floc_conc_G:
 
@@ -423,9 +423,9 @@ This highlights an important distinction:
 
 Collision Potential
 ---------------------
-We have learned that growing a floc filter leads to better sedimentation tank performance. One explanation for the improved performance is that the floc filter acts like an additional flocculator because there are additional collisions between particles. To understand the nature and significance of these additional collisions, we can calculate the floc filter velocity gradients and residence time to find collision potential, :math:`G\theta`. In a floc filter, we expect that :math:`G` is small; however, :math:`\theta` is large, which means that :math:`G\theta` in the floc filter may be significant.
+We have learned that growing a floc filter leads to better clarifier performance. One explanation for the improved performance is that the floc filter acts like an additional flocculator because there are additional collisions between particles. To understand the nature and significance of these additional collisions, we can calculate the floc filter velocity gradients and residence time to find collision potential, :math:`G\theta`. In a floc filter, we expect that :math:`G` is small; however, :math:`\theta` is large, which means that :math:`G\theta` in the floc filter may be significant.
 
-First, we will find :math:`\theta`. If we simplify the bottom of the sedimentation tank and approximate it as a simple rectangle, we can easily determine the residence time. If the depth of the floc filter is 1 m and the upflow velocity is 1 mm/s, we determine that
+First, we will find :math:`\theta`. If we simplify the bottom of the clarifier and approximate it as a simple rectangle, we can easily determine the residence time. If the depth of the floc filter is 1 m and the upflow velocity is 1 mm/s, we determine that
 
 .. math::
 
@@ -433,11 +433,11 @@ First, we will find :math:`\theta`. If we simplify the bottom of the sedimentati
 
 Next, we will find :math:`G`. Before we begin, consider why there is a velocity gradient in the floc filter. What causes it? Water is flowing up through the floc filter while the flocs in the floc filter are being pulled down by gravity. The differential velocities are caused by particles settling and rising at different velocities relative to the fluid due to drag, gravity, and fluid flow. In the fluid around each particle, there is a velocity gradient and shear between the particles and the surrounding fluid.
 
-Entering the sedimentation tank, there is a large range of particle sizes in the water. The range exists from big flocs made up with hundreds of millions of clay particles to primary particles that made it through flocculation without successful collision. These differentially sized particles create velocity gradients as the particles and flocs are acted on by both settling forces and upward fluid flow forces.
+Entering the clarifier, there is a large range of particle sizes in the water. The range exists from big flocs made up with hundreds of millions of clay particles to primary particles that made it through flocculation without successful collision. These differentially sized particles create velocity gradients as the particles and flocs are acted on by both settling forces and upward fluid flow forces.
 
 Large flocs provide velocity gradients that can potentially cause collisions between other small particles that we are still trying to capture. Through our derivation to determine :math:`G` in a floc filter, we will also test an assumption. We will assume that primary particles coming into the floc filter are not interacting with large flocs. Instead,  we will assume that the the fluid shear and differential velocities promote interactions between two primary particles.
 
-So, how can we calculate the velocity gradient? In flocculators, we determined :math:`G` from head loss and residence time. In sedimentation tanks, we determine :math:`G` the same way. Let's calculate the head loss through the floc filter. To do this, we need to know the density of the floc filter and we need to know the relationship between head loss a fluidized bed and density of the bed.
+So, how can we calculate the velocity gradient? In flocculators, we determined :math:`G` from head loss and residence time. In clarifiers, we determine :math:`G` the same way. Let's calculate the head loss through the floc filter. To do this, we need to know the density of the floc filter and we need to know the relationship between head loss a fluidized bed and density of the bed.
 
 Density
 ----------
@@ -538,7 +538,7 @@ Flocs that are rotating in a shear flow drag a boundary layer of fluid with them
 
 Flocs with low fractal dimensions that are falling through a fluid that is not undergoing significant shear have a small amount of fluid passes directly through the floc where any particles in the flow can collide with particles that are held inside the floc. Thus the floc is the filter and the filter media is the particles that make up the floc. This is why we call it a floc filter. Particles are filtered by individual flocs and are retained inside the floc. As particles accumulate inside the floc the floc porosity decreases and the flow through the floc decreases. Eventually the floc becomes ineffective as a filter because its filtration capacity has been exhausted.
 
-.. _heading_Sed_Tank_Diffuser_Design:
+.. _heading_Clarifier_Diffuser_Design:
 
 Diffuser Design
 ======================
@@ -554,7 +554,7 @@ Diffusers are shaped so that one end is a circular pipe that fits into the influ
 
     Side, top, and bottom view of a diffuser.
 
-Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the sedimentation tank. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form, as shown in :numref:`figure_diffuser_fabrication`. This metal form is sized so that the target shape is achieved.
+Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the clarifier. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form, as shown in :numref:`figure_diffuser_fabrication`. This metal form is sized so that the target shape is achieved.
 
 .. _figure_diffuser_fabrication:
 
@@ -584,13 +584,13 @@ The bottom-view of the diffuser is shown in :numref:`figure_BvsS_diffuser`.
 | :math:`Q_{diff} =` flow rate through each diffuser
 | :math:`h_{L,jet} =` head loss in jet leaving the jet reverser
 
-What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our sedimentation tank, we want an upflow velocity of 1 mm/s. Additionally, because diffusers are a key component of our "sedimentation tank as a circuit", we want to precisely control head loss in the jet leaving the jet reverser because that will help us achieve uniform flow within and between sedimentation tanks. AguaClara designs set head loss in the jet constant at 1 cm.
+What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our clarifier, we want an upflow velocity of 1 mm/s. Additionally, because diffusers are a key component of our "clarifier as a circuit", we want to precisely control head loss in the jet leaving the jet reverser because that will help us achieve uniform flow within and between clarifiers. AguaClara designs set head loss in the jet constant at 1 cm.
 
 Let's begin by finding the internal width of a single diffuser. Using conservation of flow, we know that,
 
 .. math::
 
-  Q_{diff} = \bar v_{jet}W_{diff}S_{diff} = \bar v_{z_{ff}}W_{Sed}B_{diff}
+  Q_{diff} = \bar v_{jet}W_{diff}S_{diff} = \bar v_{z_{ff}}W_{Clarifier}B_{diff}
 
 :math:`Q_{diff}` is determined :ref:`as an example <heading_flow_thru_diffuser>`, where we find that :math:`Q_{diff} = 50 \frac{mL}{s}`.
 
@@ -598,7 +598,7 @@ Solving for :math:`W_{diff}`,
 
 .. math::
 
-  W_{diff} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{\bar v_{jet}S_{diff}}
+  W_{diff} = \frac{\bar v_{z_{ff}}W_{Clarifier}B_{diff}}{\bar v_{jet}S_{diff}}
 
 Using the constraint of head loss in the jet and solving for :math:`\bar v_{jet}`,
 
@@ -614,11 +614,11 @@ Substituting back into the equation for :math:`W_{diff}`, we can find the minimu
 
 .. math::
 
-  W_{diff,min} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}
+  W_{diff,min} = \frac{\bar v_{z_{ff}}W_{Clarifier}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}
 
 Now that we have determined the minimum width, we can use known parameters and constraints to find a precise value for :math:`W_{diff}` and :math:`v_{jet}`.
 
-Using known constants for :math:`\bar v_{z_{ff}} = 1 \frac{mm}{s}`, :math:`h_{L,jet} = 1 cm`, and :math:`W_{Sed} = 1m`, we can find that :math:`W_{diff,min} = 2.7 mm`. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to 3.175 mm.
+Using known constants for :math:`\bar v_{z_{ff}} = 1 \frac{mm}{s}`, :math:`h_{L,jet} = 1 cm`, and :math:`W_{Clarifier} = 1m`, we can find that :math:`W_{diff,min} = 2.7 mm`. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to 3.175 mm.
 
 .. math::
 
@@ -628,7 +628,7 @@ Solving for :math:`\bar v_{jet}` from our earlier equations yields,
 
 .. math::
 
-  \bar v_{jet} = \frac{\bar v_{z_{ff}}W_{Sed}B_{diff}}{W_{diff}S_{diff}}
+  \bar v_{jet} = \frac{\bar v_{z_{ff}}W_{Clarifier}B_{diff}}{W_{diff}S_{diff}}
 
 Using known constants,
 
@@ -642,7 +642,7 @@ Jet Velocity
 
 :math:`\bar v_{jet}` is defined as the velocity of the water jet exiting the diffuser. After exiting the diffuser, this water jet is sent into the jet reverser to make a 180 degree turn. Does the water jet change pressure or velocity as it exits the jet reverser? Do we need to consider the effects of a *vena contracta*?
 
-Recall that a :ref:`*vena contracta* <heading_what_is_a_vena_contracta>` is associated with a change in pressure that causes a contraction and subsequent acceleration of the fluid. Water exiting the diffuser is pointed directly down and the streamlines are straight and parallel, which means that the pressure across the streamlines is constant. Water exiting the jet reverser is pointed directly up and the streamlines are straight and parallel, which again means that the pressure across the streamlines is constant. Because the pressure is constant at the exit of the diffuser and at the exit of the jet reverser, we assume that the pressure of the water in the space between those two points is also constant because there is no physical barrier. If the pressure in this bottom section of the sedimentation tank is constant from the exit of the diffuser to the exit of the jet reverser, we can infer that they are equal.
+Recall that a :ref:`*vena contracta* <heading_what_is_a_vena_contracta>` is associated with a change in pressure that causes a contraction and subsequent acceleration of the fluid. Water exiting the diffuser is pointed directly down and the streamlines are straight and parallel, which means that the pressure across the streamlines is constant. Water exiting the jet reverser is pointed directly up and the streamlines are straight and parallel, which again means that the pressure across the streamlines is constant. Because the pressure is constant at the exit of the diffuser and at the exit of the jet reverser, we assume that the pressure of the water in the space between those two points is also constant because there is no physical barrier. If the pressure in this bottom section of the clarifier is constant from the exit of the diffuser to the exit of the jet reverser, we can infer that they are equal.
 
 By Bernoulli, if the pressures between the exit of the diffuser to the exit of the jet reverser are equal then the velocities must also be equal. Bernoulli is applicable here because there is no flow expansion yet. The shear along the wall of the jet reverser is insignificant due to the short flow path. The water accelerates to account for the directional change but the absolute velocity does not change as it goes around the jet reverser.
 
