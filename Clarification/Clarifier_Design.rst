@@ -31,9 +31,9 @@ In this section, we will develop a conceptual understanding of the clarifier usi
 #. How water moves through the clarifier.
 #. How water leaves the clarifier.
 
-.. _figure_sed_tank_overview:
+.. _figure_clarifier_overview:
 
-.. figure:: ../Images/sed_tank_overview.png
+.. figure:: ../Images/clarifier_overview.png
     :target: https://youtu.be/ca3xVntxEzw
     :height: 300px
     :align: center
@@ -220,9 +220,9 @@ The AguaClara solution is to use flow diffusers that simultaneously eliminate ho
 
 The diffusers create a line jet that spans the entire length of the clarifier. This line jet enters the bay going down, but we want the water to ultimately flow up to make our vertical flow clarifier. To get the flow to redirect upwards, we use a **jet reverser**, which is half of a pipe that is laid in the bottom of the bay.
 
-.. _figure_bottom_of_sed_tank_detail:
+.. _figure_bottom_of_clarifier_detail:
 
-.. figure:: ../Images/bottom_of_sed_tank_detail.png
+.. figure:: ../Images/bottom_of_clarifier_detail.png
     :height: 300px
     :align: center
     :alt: Detail of the bottom of the clarifier.
@@ -260,9 +260,9 @@ As shown in :numref:`figure_flat_bottomed_tank` and the linked video, in a flat 
 
 The influent manifold, diffusers, and jet reverser work with a **sloped bottom geometry** in an AguaClara plant. The slope on either side of the diffusers is at a 50 degree angle. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can fall into the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the clarifier bays. Sludge that is allowed to accumulate in the bottom of clarifiers in tropical and temperate climates decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the clarifier and cause a reduction in particle removal efficiency. The AguaClara clarifier bottom geometry prevents sludge accumulation while also ensuring good flow distribution.
 
-.. _figure_sed_cross_section:
+.. _figure_clarifier_cross_section:
 
-.. figure:: ../Images/sed_cross_section.png
+.. figure:: ../Images/clarifier_cross_section.png
     :height: 300px
     :align: center
     :alt: Cross-section of the bottom of the clarifier.
@@ -342,54 +342,54 @@ The goal is to derive an equation that will calculate the maximum jet velocity g
 The volumetric flow rate of the plane jet is the same as the volumetric flow rate through the clarifier.
 
 .. math::
-  :label: jet_sed_tank_continuity
+  :label: jet_clarifier_continuity
 
   \bar v_{Jet} W_{Jet} = \bar v_{z_{ff}} W_{Clarifier}
 
-Use Equation :eq:`jet_sed_tank_continuity` to eliminate the thickness of the jet, :math:`W_{Jet}` in Equation :eq:`shear_stress_plane_jet`
+Use Equation :eq:`jet_clarifier_continuity` to eliminate the thickness of the jet, :math:`W_{Jet}` in Equation :eq:`shear_stress_plane_jet`
 
 .. math::
-  :label: shear_stress_jet_sed_tank
+  :label: shear_stress_jet_clarifier
 
   \tau_{max} = \rho \bar v_{Jet} ^2 \sqrt{ \frac{\nu \Pi_{JetPlane}}{\bar v_{z_{ff}} W_{Clarifier}}}
 
 Solve for the maximum permissible jet velocity, :math:`\bar v_{Jet_{max}}`.
 
 .. math::
-  :label: max_sed_tank_jet_velocity_of_tau
+  :label: max_clarifier_jet_velocity_of_tau
 
   \bar v_{Jet_{max}} = \left(\frac{\tau_{max}}{\rho}\right)^\frac{1}{2} \left( \frac{\bar v_{z_{ff}} W_{Clarifier}}{\nu \Pi_{JetPlane}}\right)^\frac{1}{4}
 
 Given that the velocity gradient governs the design of the flocculator and the entrance to the floc filter we can substitute Equation :eq:`tau_of_mu_G` to obtain
 
 .. math::
-  :label: max_sed_tank_jet_velocity_of_G
+  :label: max_clarifier_jet_velocity_of_G
 
   \bar v_{Jet_{max}} =  \left( \frac{G_{max}^2 \nu \bar v_{z_{ff}} W_{Clarifier}}{ \Pi_{JetPlane}}\right)^\frac{1}{4}
 
 Equation can also be written in terms of flow rate by substituting the continuity equation.
 
 .. math::
-  :label: max_sed_tank_jet_velocity_of_G_and_Q
+  :label: max_clarifier_jet_velocity_of_G_and_Q
 
   \bar v_{Jet_{max}} =  \left( \frac{G_{max}^2 \nu \bar Q }{L_{Clarifier} \Pi_{JetPlane}}\right)^\frac{1}{4}
 
 The maximum jet velocity increases with width of the clarifier valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases.
 
-Clarification tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation :eq:`G_of_vc_and_floc_props`. Our goal is to eventually provide clear guidance on setting :math:`G_{max}`. In the meantime, given a maximum velocity gradient for the inlet to the clarifier, Equation :eq:`max_sed_tank_jet_velocity_of_G` provides the maximum jet reverser velocity.
+Clarification tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation :eq:`G_of_vc_and_floc_props`. Our goal is to eventually provide clear guidance on setting :math:`G_{max}`. In the meantime, given a maximum velocity gradient for the inlet to the clarifier, Equation :eq:`max_clarifier_jet_velocity_of_G` provides the maximum jet reverser velocity.
 
 The ratio of manifold velocity to port velocity can be obtained as the inverse of Equation :eq:`Manifold_max_v_no_hl_series`.
 
 .. math::
-  :label: max_sed_tank_manifold_velocity
+  :label: max_clarifier_manifold_velocity
 
   \frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}
 
-where the port velocity, :math:`\bar v_{P}`, is equal to the jet velocity, :math:`v_{Jet_{max}}`, from Equation :eq:`max_sed_tank_jet_velocity_of_G`. Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_sed_tank_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
+where the port velocity, :math:`\bar v_{P}`, is equal to the jet velocity, :math:`v_{Jet_{max}}`, from Equation :eq:`max_clarifier_jet_velocity_of_G`. Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_clarifier_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
 
 The big unknown is the required design value for :math:`\zeta_{breakup}` as defined in Equation :eq:`G_of_vc_and_floc_props`. The expectation is that raw waters with high concentrations of organic matter will have lower density core particles and thus will require a smaller :math:`\zeta_{breakup}` for successful capture of the lower density flocs.
 
-The maximum velocity that could be carried by the inlet manifold given the flow expansion corresponding to the inlet can be calculated using Equation :eq:`D_pipe_min_of_K_and_jet_G_max`. This constraint would allow the use of a smaller diameter inlet manifold than the velocity constraint required by Equation :eq:`max_sed_tank_manifold_velocity`.
+The maximum velocity that could be carried by the inlet manifold given the flow expansion corresponding to the inlet can be calculated using Equation :eq:`D_pipe_min_of_K_and_jet_G_max`. This constraint would allow the use of a smaller diameter inlet manifold than the velocity constraint required by Equation :eq:`max_clarifier_manifold_velocity`.
 
 The result of the requirement for a low velocity jet to prevent floc break up is that the inlet manifold has to be large in diameter to obtain reasonably uniform flow distribution between the diffusers. This constraint is fairly severe and results in large diameter (and hence expensive) inlet manifold pipes.
 
@@ -564,9 +564,9 @@ The geometry of the clarifier changes in these four zones, so we will follow the
 | :math:`Q_{Clarifier} =` flow rate through each clarifier
 | :math:`W_{Clarifier} =` width of each clarifier
 
-.. _figure_sed_tank_flow_conserve:
+.. _figure_clarifier_flow_conserve:
 
-.. figure:: ../Images/sed_tank_flow_conserve.png
+.. figure:: ../Images/clarifier_flow_conserve.png
     :height: 300px
     :align: center
     :alt: AguaClara clarifier showing "lost triangle" and its impact on relevant lengths.
@@ -1008,9 +1008,9 @@ Why did AguaClara design the effluent manifold to be submerged? There are 3 main
 
 #. The submerged launder and exit weir system also make it possible to refill and empty a clarifier with clean water, as shown in the following video.
 
-.. _figure_sed_fill_empty:
+.. _figure_clarifier_fill_empty:
 
-.. figure:: ../Images/sed_fill_empty.png
+.. figure:: ../Images/clarifier_fill_empty.png
     :target: https://youtu.be/B_LEH1ezd6E
     :height: 300px
     :align: center

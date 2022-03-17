@@ -50,7 +50,7 @@ To add a term to this glossary please add it with the definition in quote marks 
     Settling Velocity, "The speed of a particle falling at terminal velocity in a still fluid."
     Shear, "A type of fluid flow where parallel layers move at different speeds."
     Streamline, "A line that is parallel to the local velocity vector at all points; the path that a particle would take if it could be placed in the fluid without changing the original flow."
-    Suspension, "A heterogeneous fluid mixture containing particles that are large enough for sedimentation to occur."
+    Suspension, "A heterogeneous fluid mixture containing particles."
     Sutro Weir, "A rectangular overflow dam sides that curve parabolically outward at the base causing discharge flow to be proportional to head; also referred to as a proportional weir."
     Terminal Velocity, "The maximum velocity of a particle falling through fluid, achieved when the drag and buoyancy forces equal gravity."
     Turbidity, "The optical clarity of water, measured by light scattering off suspended solid particles; turbidity is low in clear water and high in cloudy water."

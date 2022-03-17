@@ -24,7 +24,7 @@ Flocculation transform inorganic (clays such as `kaolinite, smectite, etc. and m
 
    Clay particles with attached coagulant nanoparticles collide due to fluid deformation. They grow in size quickly. The challenge is to catch the last few primary particles that failed to participate in the aggregation process.
 
-The reason that flocculation is widely used in water treatment is because of sedimentation. Clarification is the process that actually removes particles like clay, dirt, organic matter, and bacteria from water. As you learned in the
+The reason that flocculation is widely used in water treatment is because it converts small particles into much larger flocs that have a higher terminal velocity for removal by sedimentation and because they are larger they are easier to capture in filters. Clarification is the process that actually removes particles like clay, dirt, organic matter, and bacteria from water. As you learned in the
 :ref:`introduction on treatment trains <heading_Treatment_Trains>`, sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
 
 .. math:: \bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}
@@ -34,7 +34,7 @@ The reason that flocculation is widely used in water treatment is because of sed
 | :math:`D_{particle}` = particle diameter
 | :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
 
-To increase :math:`\bar v_t` and make sedimentation more efficient, flocculation aims to increase the diameter :math:`d` of the raw particles. This is done by applying a coagulant to the dirty water. Being partially covered by coagulant nanoparticles allows the raw water particles to collide, attach, and grow larger during flocculation.
+To increase :math:`\bar v_t` and make clarification more efficient, flocculation aims to increase the diameter :math:`d` of the raw particles. This is done by applying a coagulant to the dirty water. Being partially covered by coagulant nanoparticles allows the raw water particles to collide, attach, and grow larger during flocculation.
 Our goal in designing a flocculator is to facilitate particle collisions in a compact reactor without generating so much fluid shear that flocs are torn apart.
 
 History of Flocculation

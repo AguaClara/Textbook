@@ -64,7 +64,7 @@ An example of design for the operator is the elevation of the walkways in AguaCl
 
 .. _figure:
 
-.. figure:: ../Images/Improvised_ladder_access_to_sed_tank.jpg
+.. figure:: ../Images/Improvised_ladder_access_to_clarifier.jpg
     :width: 300px
     :align: center
     :alt: Improvised ladder access to sed tank
@@ -93,7 +93,7 @@ The current design process for water treatment plant relies on previous designs 
 Built for Operation
 -------------------
 
-Traditionally in tropical and temperate climates, flocculation and sedimentation units are built without an enclosing building because they aren't in danger of freezing. Without protection from the sun the materials used for plant construction must be UV resistant and thus plastic can't be used. This requires use of heavier and more expensive materials such stainless steel and aluminum. Metal plate settlers are heavy and thus they can't be easily removed by the plant operator.
+Traditionally in tropical and temperate climates, flocculators and clarifiers are built without an enclosing building because they aren't in danger of freezing. Without protection from the sun the materials used for plant construction must be UV resistant and thus plastic can't be used. This requires use of heavier and more expensive materials such stainless steel and aluminum. Metal plate settlers are heavy and thus they can't be easily removed by the plant operator.
 
 Without the ability to gain access to a clarifier from above, conventional clarifier cleaning must be done by providing operator access below the plate settlers. This in turn requires that the space below the plate settlers be tall enough to accommodate a plant operator. Thus clarifiers that are built in the open have to be deeper than clarifiers that are built under a roof and they are more difficult to maintain because the operator has to enter the tank through a waterproof access port. Operator access to the space below the stainless steel or aluminum plate settlers is through a port in the side of the tank (see the video :numref:`figure_Cleaning_a_Clarifier_with_fixed_plates`).
 

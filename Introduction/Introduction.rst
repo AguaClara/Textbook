@@ -29,7 +29,7 @@ The assumption that what is written and passed down in oral history through the 
 
 You might wonder why we care so much about getting the science right and being as clear as possible about what is known. After all, the core drinking water treatment technologies were invented before we were born and many of us have safe drinking water coming from our taps. Environmental Engineers have known how to design municipal drinking water treatment plants since they early 1900's. We care about getting the science right because we hypothesize that there are many opportunities to significantly improve drinking water treatment technologies and that improved understandings of each unit process have the potential to lead to new breakthroughs.
 
-Our contention is that no one has ever optimized the design of a drinking water treatment plant! We are reasonably certain of this because we don't yet have models (with equations) that describe performance of most of the core unit processes (rapid mix, flocculation, floc filters, sedimentation, sand filtration) used for surface water treatment. The only possible exception is lamellar sedimentation which can be characterized if we know the size and density distribution of the particles entering the clarifier.
+Our contention is that no one has ever optimized the design of a drinking water treatment plant! We are reasonably certain of this because we don't yet have models (with equations) that describe performance of most of the core unit processes (rapid mix, flocculation, floc filters, plate settlers, sand filtration) used for surface water treatment. The only possible exception is plate settlers which can be characterized if we know the size and density distribution of the particles.
 
 Traditional drinking water treatment textbooks can too easily miss the opportunity to advance the science of drinking water treatment technologies by presenting certainty where there should be skepticism. For example, rapid mix is described as process that occurs in a few seconds, flocculation is described as a process that should be fastest for high turbidity waters and slowest for low turbidity waters, and filtration performance is described by a model that predicts first order removal with respect to filter bed depth. We will demonstrate why each of these assumptions doesn't match observations, we will discuss new insights into these processes, and we will identify high priority research questions that have the potential to lead to major improvements in drinking water treatment.
 
@@ -290,7 +290,7 @@ The AguaClara Treatment Train
 Why does flocculation precede sedimentation?
 Which process removes the largest quantity of contaminants?
 
-Clarification is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
+Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
 
 .. math::
   :label: eq_laminar_terminal_velocity
@@ -321,11 +321,11 @@ The low terminal velocities of particles that we need to remove from surface wat
 
 The AguaClara treatment train consists of the following processes
  - flow measurement
- - metering of the coagulant (and chlorine) that will cause particles to stick together
+ - metering of the coagulant that will cause particles to stick together
  - mixing of the coagulant with the raw water
  - flocculation where the water is deformed to cause particle collisions
  - floc filter where large flocs settle through water that is flowing upward causing collisions between small particles carried by the upward flowing water and the large flocs
- - lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc filter
+ - plate settlers (lamellar sedimentation) where gravity causes particles to settle to an inclined plate and then slide back down into the floc filter
  - stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed
  - disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes
 
@@ -417,7 +417,7 @@ An example of design for the operator is the elevation of the walkways in AguaCl
 
 .. _figure:
 
-.. figure:: ../Images/Improvised_ladder_access_to_sed_tank.jpg
+.. figure:: ../Images/Improvised_ladder_access_to_clarifier.jpg
     :width: 300px
     :align: center
     :alt: Improvised ladder access to sed tank
@@ -436,7 +436,7 @@ Seemingly small decisions can have a profound effect on the evolution of design.
 Walls and a Roof
 ----------------
 
-Traditionally in tropical and temperate climates, flocculation and sedimentation units are built without an enclosing building because they aren't in danger of freezing. Without protection from the sun the materials used for plant construction must be UV resistant and thus plastic can't be used. This requires use of heavier and more expensive materials such stainless steel and aluminum. Metal plate settlers are heavy and thus they can't be easily removed by the plant operator.
+Traditionally in tropical and temperate climates, flocculators and clarifiers are built without an enclosing building because they aren't in danger of freezing. Without protection from the sun the materials used for plant construction must be UV resistant and thus plastic can't be used. This requires use of heavier and more expensive materials such stainless steel and aluminum. Metal plate settlers are heavy and thus they can't be easily removed by the plant operator.
 
 Without the ability to gain access to a clarifier from above, conventional clarifier cleaning must be done by providing operator access below the plate settlers. This in turn requires that the space below the plate settlers be tall enough to accommodate a plant operator. Thus clarifiers that are built in the open have to be deeper than clarifiers that are built under a roof and they are more difficult to maintain because the operator has to enter the tank through a waterproof access port. Operator access to the space below the stainless steel or aluminum plate settlers is through a port in the side of the tank (see the video :numref:`figure_Cleaning_a_Clarifier_with_fixed_plates`).
 
@@ -446,7 +446,7 @@ Without the ability to gain access to a clarifier from above, conventional clari
 .. figure:: http://img.youtube.com/vi/TSh-ZNqaW8Y/0.jpg
     :width: 300px
     :align: center
-    :alt: Cleaning a Sed Tank with fixed plates
+    :alt: Cleaning a clarifier with fixed plates
     :target: http://www.youtube.com/watch?v=TSh-ZNqaW8Y
 
     Plant operators opening hatch below plate settlers in a traditional clarifier.
