@@ -47,14 +47,14 @@ Floc Filters
 
 Disrupts floc filter, breaks flocs, carries flocs into plate settlers.
 
-.. _heading_DG_Sedimentation:
+.. _heading_DG_Clarification:
 
-Sedimentation
+Clarification
 -------------
 
-Bubbles carry flocs rapidly to the top of the sedimentation tank where they form a surface mat of flocs. The surface mat of flocs isn't necessarily harmful to plant performance, but it is a nuisance and requires that the operators scrape the flocs to remove them from the sedimentation tank. Some of the rising flocs are swept into the exit manifold and thus the settled water turbidity can be significantly increased by these rising flocs.
+Bubbles carry flocs rapidly to the top of the clarifier where they form a surface mat of flocs. The surface mat of flocs isn't necessarily harmful to plant performance, but it is a nuisance and requires that the operators scrape the flocs to remove them from the clarifier. Some of the rising flocs are swept into the exit manifold and thus the settled water turbidity can be significantly increased by these rising flocs.
 
-.. todo:: Invent a sedimentation tank effluent manifold with floc deflectors to prevent entrainment of rising flocs into the manifold.
+.. todo:: Invent a clarifier effluent manifold with floc deflectors to prevent entrainment of rising flocs into the manifold.
 
 .. _heading_DG_Filtration:
 

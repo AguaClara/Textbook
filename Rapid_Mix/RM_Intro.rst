@@ -231,7 +231,7 @@ Suspended solids include both organic and inorganic particles. Organic particles
 Pathogens
 ---------
 
-Virus particles readily attach to coagulant nanoparticles (see `"Effects of Floc-Virus Association on Chlorine Disinfection Efficiency by Shinichiro Ohgaki and Prasang Mongkonsiri <https://link-springer-com.proxy.library.cornell.edu/chapter/10.1007/978-3-642-76093-8_5>`_) and this attachment makes it possible to efficiently remove virus particles by flocculation followed by sedimentation. Bacteria (see `"Performance Evaluation of Gravity-Fed Water Treatment Systems in Rural Honduras:
+Virus particles readily attach to coagulant nanoparticles (see `"Effects of Floc-Virus Association on Chlorine Disinfection Efficiency by Shinichiro Ohgaki and Prasang Mongkonsiri <https://link-springer-com.proxy.library.cornell.edu/chapter/10.1007/978-3-642-76093-8_5>`_) and this attachment makes it possible to efficiently remove virus particles by flocculation followed by clarification. Bacteria (see `"Performance Evaluation of Gravity-Fed Water Treatment Systems in Rural Honduras:
 Verifying Robust Reduction of Turbidity and Escherichia coli during Wet and Dry Weather by Yolanda Brooks, et al <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6159558/pdf/tpmd170577.pdf>`_) and protozoans (need reference) are also removed by flocculation by coagulant nanoparticles.
 
 .. _heading_Rate_Estimates_for_Coagulant_Nanoparticle_Transport_to_Suspended_Solids:

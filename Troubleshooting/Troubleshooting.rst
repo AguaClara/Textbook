@@ -25,7 +25,7 @@ Use valves at the end of the pipeline to control transmission line flow rate rat
    :align: left
 
    Air bubbles, Air entrainment in the transmission line and transport to a high pressure zone in the pipeline where the air is dissolved in the water, Use downstream head loss to prevent air entrainment in transmission line or add a unit process (TBD) that removes excess dissolved air
-   Bubbles in sedimentation tanks, Anaerobic production in methane in settled sludge, Clean sedimentation tank and check design to eliminate all settled sludge
+   Bubbles in clarifiers, Anaerobic production in methane in settled sludge, Clean clarifier and check design to eliminate all settled sludge
    Bubbles in EStaRS, Water entering the plant is supersaturated with air and EStaRS filters operate at very low pressure (compared with OStaRS), Eliminate air entrainment in transmission line
    Short filter runtimes, Poor performance of floc/sed system or clogged slotted pipes or air lock, Various solutions
    Gradual increase in post backwash head loss in filters, Slotted pipes are clogging, Acid flush by pouring HCl (need the concentration) into the outlet pipes OR disassemble filter and clean with a pressure washer
@@ -73,7 +73,7 @@ Turn the filter back on and dump all water to waste for at least 5 minutes and u
 
 Slime at Las Vegas
 ==================
-Iron bacteria slime showed up with application of hydrochloric acid at Las Vegas. The acid was needed to slightly reduce the pH to reduce the amount of encrustation in the distribution system. The addition of acid was correlated with the growth of a slime in the flocculator and sedimentation tanks. It was hypothesized that this slime was iron oxidizing bacteria (see :numref:`figure_Las_Vegas_Slime`).
+Iron bacteria slime showed up with application of hydrochloric acid at Las Vegas. The acid was needed to slightly reduce the pH to reduce the amount of encrustation in the distribution system. The addition of acid was correlated with the growth of a slime in the flocculator and clarifiers. It was hypothesized that this slime was iron oxidizing bacteria (see :numref:`figure_Las_Vegas_Slime`).
 
 .. _figure_Las_Vegas_Slime:
 
@@ -82,7 +82,7 @@ Iron bacteria slime showed up with application of hydrochloric acid at Las Vegas
    :align: center
    :alt: Oxygenation_vs_time
 
-   The slime at Las Vegas showed up in the flocculator and sedimentation tanks.
+   The slime at Las Vegas showed up in the flocculator and clarifiers.
 
 Iron oxidizing bacteria need oxygen and reduced iron. The Las Vegas water source is a stream that is clearly groundwater given its propensity to deposit calcium carbonate on everything in the stream. Thus the stream water is likely poor in oxygen.
 

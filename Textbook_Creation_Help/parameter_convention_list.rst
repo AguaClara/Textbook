@@ -50,13 +50,13 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`H_{ff}`,Height of the floc filter,:math:`[L]`
     :math:`K`,Minor Loss coefficient,Dimensionless
     :math:`L`,Length,:math:`[L]`
-    :math:`L_{SedActive}`,Length of the plate settlers in the sedimentation tank (not including the triangle at the end of the tank),:math:`[L]`
-    :math:`L_{ff}`,Length of the floc filter in a sedimentation tank,:math:`[L]`
+    :math:`L_{SedActive}`,Length of the plate settlers in the clarifier (not including the triangle at the end of the tank),:math:`[L]`
+    :math:`L_{ff}`,Length of the floc filter in a clarifier,:math:`[L]`
     :math:`M`,Fluid Momentum,:math:`\frac{[M][L]}{[T]^2}`
     :math:`P`,Power,:math:`\frac{[M][L]^2}{[T]^3}`
     :math:`Q`,Flow rate,:math:`\frac{[L]^3}{[T]}`
     :math:`Q_{diff}`,Flow rate through each diffuser,:math:`\frac{[L]^3}{[T]}`
-    :math:`Q_{Sed}`,Flow rate through each sedimentation tank,:math:`\frac{[L]^3}{[T]}`
+    :math:`Q_{Clarifier}`,Flow rate through each clarifier,:math:`\frac{[L]^3}{[T]}`
     :math:`{\rm Re}`,Reynolds Number,Dimensionless
     :math:`S`,Spacing Between Two Objects,:math:`[L]`
     :math:`T`,Object Thickness,:math:`[L]`
@@ -64,7 +64,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`W`,Width,:math:`[L]`
     :math:`W_{diff_{min}}`,Minimum internal width of diffuser,:math:`[L]`
     :math:`W_{floc}`,Gravitational weight of floc,:math:`\frac{[M][L]}{[T]^2}`
-    :math:`W_{Sed}`,Width of each sedimentation tank,:math:`[L]`
+    :math:`W_{Clarifier}`,Width of each clarifier,:math:`[L]`
     *Lowercase letters*, ,
     :math:`\rm{f}`,Darcy-Weisbach friction factor,Dimensionless
     :math:`\frac{du}{dy}`,Velocity gradient between plate settlers,:math:`\frac{1}{[T]}`
@@ -90,7 +90,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`v_{particle}`,Net velocity of a particle between plate settlers,:math:`\frac{[L]}{[T]}`
     :math:`v_{z_{Plate}}`,Average vertical velocity of the water between the plate settlers,:math:`\frac{[L]}{[T]}`
     :math:`v_{Settle}`,Settling velocity,:math:`\frac{[L]}{[T]}`
-    :math:`v_{Slide}`,Sedimentation velocity of floc between plate settlers,:math:`\frac{[L]}{[T]}`
+    :math:`v_{Slide}`,Clarification velocity of floc between plate settlers,:math:`\frac{[L]}{[T]}`
     :math:`\bar v_{z_{FB}}`,Average vertical velocity of the water through the floc filter,:math:`\frac{[L]}{[T]}`
     :math:`v_t`,Terminal velocity of particle,:math:`\frac{[L]}{[T]}`
     :math:`z`,Elevation,:math:`[L]`
