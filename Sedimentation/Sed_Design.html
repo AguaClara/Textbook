@@ -494,27 +494,51 @@
 <p>The manifold system must be designed so that the velocity gradient in all flow expansions is less than the maximum allowed velocity gradient. The minimum diameter of the inlet manifold is set by the largest minor loss coefficient (see Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-d-pipe-min-of-k-and-jet-g-max">(206)</a>) which is created by the 90° elbow.</p>
 <p>The flow equalizer dissipates most of the kinetic energy in the inlet manifold as the flow exits the ports and enters the equalizer chamber. The ports face upstream and thus act like pitot tubes with the flow into the port controlled by the difference in total energy head between the manifold and the equalizer rather than controlled by the piezometric head (no kinetic energy term). The ports are sloped at a very gradual angle to allow the flow in the manifold to fully expand before arriving at the next port.</p>
 <dl class="simple">
-<dt>The port diameter is set by two potential constraints.</dt><dd><p>1) The velocity gradient created by the jet entering the equalizer must be less than the maximum allowed velocity gradient. This constraint appears to be easy to achieve and the 2nd constraint dominates
-1) The slope of the port must be less than the rate of flow expansion in the manifold.</p>
+<dt>The port diameter and port velocity are governed by two constraints.</dt><dd><p>1) The slope of the port must be less than the rate of flow expansion in the manifold.
+1) The velocity gradient created by the jet entering the equalizer must be less than the maximum allowed velocity gradient.</p>
 </dd>
 </dl>
-<p>For the second constraint we use continuity to ensure that enough water enters the port to serve the diffusers that are in the length of the manifold corresponding to the sloped port. The flow per unit length of the sedimentation tank is</p>
+<p>For the first constraint we use continuity to ensure that enough water enters the port to serve the diffusers that are in the length of the manifold corresponding to the sloped port. The flow per unit length of the sedimentation tank is</p>
 <div class="math notranslate nohighlight" id="equation-port-continuity">
 <span class="eqno">(598)<a class="headerlink" href="#equation-port-continuity" title="Permalink to this equation">¶</a></span>\[Q_{port} = \bar v_{port} \Pi_{vc} \frac{\pi D_{port}^2}{8}
-        = \frac{Q_{manifold}}{L_{jetreverser}} \Pi_D^L D_{port}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\Pi_D^L\)</span> is the ratio of the port length to the port diameter and must have a value greater than the plane jet expansion ratio given in Equation <a class="reference internal" href="../Flocculation/Floc_Derivations.html#equation-planejet-expansion">(480)</a>. Solve for the minimum port diameter.</p>
+        = \frac{Q_{manifold}}{L_{jetreverser}} \Pi_r^L \frac{D_{port}}{2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Pi_r^L\)</span> is the ratio of the port length to the port radius and must have a value greater than the inverse of the plane jet expansion ratio given in Equation <a class="reference internal" href="../Flocculation/Floc_Derivations.html#equation-planejet-expansion">(480)</a>. Solve for the minimum port diameter.</p>
 <div class="math notranslate nohighlight" id="equation-d-port-min-continuity">
-<span class="eqno">(599)<a class="headerlink" href="#equation-d-port-min-continuity" title="Permalink to this equation">¶</a></span>\[ D_{port} = \frac{8 \Pi_D^L Q_{manifold}}{\bar v_{port} \Pi_{vc} L_{jetreverser}\pi}\]</div>
+<span class="eqno">(599)<a class="headerlink" href="#equation-d-port-min-continuity" title="Permalink to this equation">¶</a></span>\[ D_{port_{min}} = \frac{4 \Pi_r^L Q_{manifold}}{\bar v_{port} \Pi_{vc} L_{jetreverser}\pi}\]</div>
+<p>The unknown in Equation <a class="reference internal" href="#equation-d-port-min-continuity">(599)</a> is the maximum allowable value for the port velocity, <span class="math notranslate nohighlight">\(\bar v_{port}\)</span>. The port velocity is limited by the maximum allowable velocity gradient.</p>
+<p>The ports all deliver kinetic energy into the equalizer and that energy has to be dissipated through turbulence without creating any large mean flows. Given that the ports are all pointed in the same direction a high velocity would be generated in the same direction as the velocity in the manifold. To counteract this effect half of the flow from each port must be reversed. This will be accomplished with a jet reverser that will catch approximately 50% of the port flow and redirect it upstream. The thickness of this reversed jet will be approximately equal 50% of the port area divided by the port diameter.</p>
+<div class="math notranslate nohighlight" id="equation-s-port-reversed-jet">
+<span class="eqno">(600)<a class="headerlink" href="#equation-s-port-reversed-jet" title="Permalink to this equation">¶</a></span>\[S_{jet} =  \frac{\pi D_{port}}{16}\]</div>
+<p>The plane jet velocity gradient given in Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-planejet-v-max">(213)</a> can be combined with Equation <a class="reference internal" href="#equation-s-port-reversed-jet">(600)</a> to obtain the maximum jet velocity.</p>
+<div class="math notranslate nohighlight" id="equation-v-port-max-of-g">
+<span class="eqno">(601)<a class="headerlink" href="#equation-v-port-max-of-g" title="Permalink to this equation">¶</a></span>\[\bar v_{Port_{Max}} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\]</div>
+<p>Now we can combine Equations <a class="reference internal" href="#equation-d-port-min-continuity">(599)</a> and <a class="reference internal" href="#equation-v-port-max-of-g">(601)</a> and solve for the minimum port diameter.</p>
+<div class="math notranslate nohighlight" id="equation-d-port-min">
+<span class="eqno">(602)<a class="headerlink" href="#equation-d-port-min" title="Permalink to this equation">¶</a></span>\[ D_{port_{min}} = \left[\left(\frac{16 \Pi_{JetPlane} }{\nu \pi  G_{Max}^2 }\right) \left(\frac{4 \Pi_r^L Q_{manifold}}{ \Pi_{vc} L_{jetreverser}\pi} \right)^3 \right]^{\frac{1}{4}}\]</div>
+<p>The port diameter will be rounded up to the next available pipe diameter. The maximum length of the port is given by the maximum flow from the port. The maximum port velocity is given by Equation <a class="reference internal" href="#equation-v-port-max-of-g">(601)</a>. The maximum port flow is obtained by multiplying by the port area.</p>
+<div class="math notranslate nohighlight" id="equation-port-max-spacing">
+<span class="eqno">(603)<a class="headerlink" href="#equation-port-max-spacing" title="Permalink to this equation">¶</a></span>\[Q_{port_{max}} = \bar v_{Port_{Max}} \frac{\pi D_{port}^2}{8} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}\]</div>
+<p>The port center to center distance is obtained by matching the port flow to the flow through the diffusers.</p>
+<div class="math notranslate nohighlight" id="equation-continuity-for-port-spacing">
+<span class="eqno">(604)<a class="headerlink" href="#equation-continuity-for-port-spacing" title="Permalink to this equation">¶</a></span>\[Q_{port_{max}} = \frac{Q_{manifold}}{L_{jetreverser}} B_{port_{max}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(B_{port}\)</span> is the center to center spacing of the ports. Combining Equations <a class="reference internal" href="#equation-port-max-spacing">(603)</a> and <a class="reference internal" href="#equation-continuity-for-port-spacing">(604)</a> we obtain the maximum port spacing.</p>
+<div class="math notranslate nohighlight" id="equation-max-port-spacing-draft">
+<span class="eqno">(605)<a class="headerlink" href="#equation-max-port-spacing-draft" title="Permalink to this equation">¶</a></span>\[G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8} = \frac{Q_{manifold}}{L_{jetreverser}} B_{port_{max}}\]</div>
+<p>Solve for the port spacing.</p>
+<div class="math notranslate nohighlight" id="equation-max-port-spacing">
+<span class="eqno">(606)<a class="headerlink" href="#equation-max-port-spacing" title="Permalink to this equation">¶</a></span>\[B_{port_{max}} = \frac{L_{jetreverser}}{Q_{manifold}}  \left(\frac{\nu G_{Max}^2 \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}\]</div>
+<p>Round down to the port spacing that works given the total length of the jet reverser and the requirement that there be an integer number of ports.</p>
+<p>The port reverser must have a diameter that is at least double that given by Equation <a class="reference internal" href="#equation-s-port-reversed-jet">(600)</a>. The optimal location for installing the port reverser is not yet determined. The port reverser is installed with its center below dividing plate. The port reverser center coincindes with the center of the port. The assumption is that the flow has not expanded significantly and thus the port reverser will catch the flow in the upper half of the port reverser.</p>
 </div>
 <div class="section" id="sedimentation-tank-outlet-manifold">
 <span id="heading-sedimentation-tank-outlet-manifold"></span><h3>Sedimentation Tank Outlet Manifold<a class="headerlink" href="#sedimentation-tank-outlet-manifold" title="Permalink to this headline">¶</a></h3>
 <p>The sedimentation tank outlet manifold collects the clarified water from the top of the plate setters. The outlet manifold is required to help ensure uniform flow up through the plate settlers.  The outlet manifold has orifices and it is these orifices that provide the majority of the head loss through the sedimentation tank. The target head loss for the outlet manifold is about 5 cm. This head loss helps ensure that flow divides evenly between sedimentation tanks and divides evenly between the plate settlers.</p>
 <p>The outlet head loss is dominated by the orifice loss and by the exit loss where the manifold exits the sedimentation tank and enters a channel. The total head loss through the outlet manifold, <span class="math notranslate nohighlight">\(h_{e_{T}}\)</span>, is thus the sum of those two losses. If pipes were made of all possible diameters, then the ratio of orifice to manifold velocity would be exactly given by Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(86)</a> and that relationship can be used to eliminate the port velocity.</p>
 <div class="math notranslate nohighlight" id="equation-outlet-manifold-hl">
-<span class="eqno">(601)<a class="headerlink" href="#equation-outlet-manifold-hl" title="Permalink to this equation">¶</a></span>\[ h_{e_{T}} = h_{e_{P}} + h_{e_{M}} = \frac{\bar v_{P}^2}{2g} + \frac{\bar v_{M}^2}{2g} =\frac{\bar v_{M}^2}{2g} \left(\frac{1}{\sqrt{{\Pi_{\Psi}}}} + 1 \right)\]</div>
-<p>The maximum manifold velocity can be obtained by solving Equation <a class="reference internal" href="#equation-outlet-manifold-hl">(601)</a> for the manifold velocity.</p>
+<span class="eqno">(608)<a class="headerlink" href="#equation-outlet-manifold-hl" title="Permalink to this equation">¶</a></span>\[ h_{e_{T}} = h_{e_{P}} + h_{e_{M}} = \frac{\bar v_{P}^2}{2g} + \frac{\bar v_{M}^2}{2g} =\frac{\bar v_{M}^2}{2g} \left(\frac{1}{\sqrt{{\Pi_{\Psi}}}} + 1 \right)\]</div>
+<p>The maximum manifold velocity can be obtained by solving Equation <a class="reference internal" href="#equation-outlet-manifold-hl">(608)</a> for the manifold velocity.</p>
 <div class="math notranslate nohighlight" id="equation-outlet-manifold-hl">
-<span class="eqno">(601)<a class="headerlink" href="#equation-outlet-manifold-hl" title="Permalink to this equation">¶</a></span>\[\bar v_{M_{max}} = \sqrt{\frac{2 g h_{e_{T}}\sqrt{{\Pi_{\Psi}}}}{\sqrt{{\Pi_{\Psi}}} + 1}}\]</div>
+<span class="eqno">(608)<a class="headerlink" href="#equation-outlet-manifold-hl" title="Permalink to this equation">¶</a></span>\[\bar v_{M_{max}} = \sqrt{\frac{2 g h_{e_{T}}\sqrt{{\Pi_{\Psi}}}}{\sqrt{{\Pi_{\Psi}}} + 1}}\]</div>
 <p>The solution steps are as follows:</p>
 <p>1) Calculate the minimum manifold diameter from continuity and the maximum allowable manifold velocity, <span class="math notranslate nohighlight">\(\bar v_{M_{max}}\)</span>.
 1) Calculate the manifold inner diameter from the next available pipe size.
@@ -647,33 +671,33 @@
 <p>From answering the questions above, we know that the particle must fall the distance <span class="math notranslate nohighlight">\(H_c\)</span> at its terminal velocity in the same amount of time that it rises a distance <span class="math notranslate nohighlight">\(H\)</span> at its net upward velocity, because otherwise it would not be captured; time to travel <span class="math notranslate nohighlight">\(H_c\)</span> = time to travel <span class="math notranslate nohighlight">\(H\)</span></p>
 <p>Finding time by dividing by distance by velocity for each travel,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-0">
-<span class="eqno">(602)<a class="headerlink" href="#equation-sedimentation-sed-design-0" title="Permalink to this equation">¶</a></span>\[Time = \frac{H_c}{\bar v_c} = \frac{H}{\bar v_{z_{net}}}\]</div>
+<span class="eqno">(609)<a class="headerlink" href="#equation-sedimentation-sed-design-0" title="Permalink to this equation">¶</a></span>\[Time = \frac{H_c}{\bar v_c} = \frac{H}{\bar v_{z_{net}}}\]</div>
 <p>Substituting for <span class="math notranslate nohighlight">\(\bar v_{z_{net}} = \bar v_{z_{Plate}}-v_{c}\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-1">
-<span class="eqno">(603)<a class="headerlink" href="#equation-sedimentation-sed-design-1" title="Permalink to this equation">¶</a></span>\[Time = \frac{H_c}{\bar v_c} = \frac{H}{\bar v_{z_{Plate}}- \bar v_{c}}\]</div>
+<span class="eqno">(610)<a class="headerlink" href="#equation-sedimentation-sed-design-1" title="Permalink to this equation">¶</a></span>\[Time = \frac{H_c}{\bar v_c} = \frac{H}{\bar v_{z_{Plate}}- \bar v_{c}}\]</div>
 <p>Using trigonometric substitutions for <span class="math notranslate nohighlight">\(H_c\)</span> and <span class="math notranslate nohighlight">\(H\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-2">
-<span class="eqno">(604)<a class="headerlink" href="#equation-sedimentation-sed-design-2" title="Permalink to this equation">¶</a></span>\[Time = \frac{S}{\bar v_c cos\alpha} = \frac{L sin\alpha}{\bar v_{z_{Plate}} - \bar v_{c}}\]</div>
+<span class="eqno">(611)<a class="headerlink" href="#equation-sedimentation-sed-design-2" title="Permalink to this equation">¶</a></span>\[Time = \frac{S}{\bar v_c cos\alpha} = \frac{L sin\alpha}{\bar v_{z_{Plate}} - \bar v_{c}}\]</div>
 <p>Rearranging to solve for <span class="math notranslate nohighlight">\(\bar v_{c}\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-3">
-<span class="eqno">(605)<a class="headerlink" href="#equation-sedimentation-sed-design-3" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}\]</div>
+<span class="eqno">(612)<a class="headerlink" href="#equation-sedimentation-sed-design-3" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}\]</div>
 <p>Rearranging to solve for <span class="math notranslate nohighlight">\(\frac{\bar v_{z_{Plate}}}{\bar v_{c}}\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-4">
-<span class="eqno">(606)<a class="headerlink" href="#equation-sedimentation-sed-design-4" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{z_{Plate}}}{\bar v_{c}} = 1+\frac{L}{S}cos\alpha sin\alpha\]</div>
+<span class="eqno">(613)<a class="headerlink" href="#equation-sedimentation-sed-design-4" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{z_{Plate}}}{\bar v_{c}} = 1+\frac{L}{S}cos\alpha sin\alpha\]</div>
 <p>The equation that we determined for critical velocity, <span class="math notranslate nohighlight">\(\bar v_c\)</span>, shows its dependence on plate settler geometry. Through another derivation, we can prove that by considering the total projected area over which particles can settle, we determine the same critical velocity.</p>
 <p>Beginning with <span class="math notranslate nohighlight">\(Q = \bar vA\)</span>, we can modify the equation to fit the specific flow through a plate settler, <span class="math notranslate nohighlight">\(Q = \bar v_{\alpha_{Plate}}SW\)</span>.</p>
 <p>Using trigonometric substitutions, we know that <span class="math notranslate nohighlight">\(\frac{\bar v_{z_{Plate}}}{\bar v_{\alpha_{Plate}}} = sin\alpha\)</span> and <span class="math notranslate nohighlight">\(\frac{\bar v_{z_{Plate}}}{sin\alpha} = v_{\alpha}\)</span>. So,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-5">
-<span class="eqno">(607)<a class="headerlink" href="#equation-sedimentation-sed-design-5" title="Permalink to this equation">¶</a></span>\[Q = \frac{\bar v_{z_{Plate}}SW}{sin\alpha}\]</div>
+<span class="eqno">(614)<a class="headerlink" href="#equation-sedimentation-sed-design-5" title="Permalink to this equation">¶</a></span>\[Q = \frac{\bar v_{z_{Plate}}SW}{sin\alpha}\]</div>
 <p>Determining the horizontal projection of the plate settlers,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-6">
-<span class="eqno">(608)<a class="headerlink" href="#equation-sedimentation-sed-design-6" title="Permalink to this equation">¶</a></span>\[S = Lcos\alpha + \frac{S}{sin\alpha}\]</div>
+<span class="eqno">(615)<a class="headerlink" href="#equation-sedimentation-sed-design-6" title="Permalink to this equation">¶</a></span>\[S = Lcos\alpha + \frac{S}{sin\alpha}\]</div>
 <p>Substituting for area, <span class="math notranslate nohighlight">\(A\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-7">
-<span class="eqno">(609)<a class="headerlink" href="#equation-sedimentation-sed-design-7" title="Permalink to this equation">¶</a></span>\[A = (Lcos\alpha + \frac{S}{sin\alpha})W\]</div>
+<span class="eqno">(616)<a class="headerlink" href="#equation-sedimentation-sed-design-7" title="Permalink to this equation">¶</a></span>\[A = (Lcos\alpha + \frac{S}{sin\alpha})W\]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(\bar v_c = \frac{Q}{A}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-sedimentation-sed-design-8">
-<span class="eqno">(610)<a class="headerlink" href="#equation-sedimentation-sed-design-8" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}\]</div>
+<span class="eqno">(617)<a class="headerlink" href="#equation-sedimentation-sed-design-8" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}\]</div>
 <p>We can see that there are five parameters which will impact each other in our design <span class="math notranslate nohighlight">\(\bar v_{z_{Plate}}, \bar v_{c}, L, S\)</span>, and <span class="math notranslate nohighlight">\(\alpha\)</span>. AguaClara plants typically use constants for <span class="math notranslate nohighlight">\(\bar v_{z_{Plate}}, \bar v_{c}, S\)</span>, and <span class="math notranslate nohighlight">\(\alpha\)</span>, leaving <span class="math notranslate nohighlight">\(L\)</span> to be calculated. More information is found in the section on <a class="reference internal" href="Sed_Derivations.html#heading-sed-tank-plate-settler-design"><span class="std std-ref">plate settler design</span></a>.</p>
 <p>The ‘active’ sedimentation zone refers to the area of the tank in which water can flow through the plate settlers where:</p>
 <div class="line-block">
