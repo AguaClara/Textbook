@@ -15,12 +15,12 @@ Clarifier Design
 
 The AguaClara clarifier is a high-rate vertical flow clarifier that is designed with the following goals:
 
-#. To minimize secondary currents that could send high velocity flow through some of the plate settlers
-#. To prevent accumulation of sludge that would tend to become anaerobic and release both dissolved organics (taste and order issues) and methane bubbles that would carry flocs to the top of the clarifier
-#. To include a stable floc filter that reduces the settled water turbidity
-#. To remove the solids without requiring power or moving mechanical parts
-#. To provide a mechanism for the operator to dump poorly flocculated water before it enters the clarifier. This is important to reduce the recovery time when there is a flocculation failure.
-#. To ensure easy operation and maintenance.
+#. Minimize secondary currents that could send high velocity flow through some of the plate settlers
+#. Prevent accumulation of sludge that would tend to become anaerobic and release both dissolved organics (taste and order issues) and methane bubbles that would carry flocs to the top of the clarifier
+#. Include a stable floc filter that reduces the settled water turbidity
+#. Remove the solids without requiring power or moving mechanical parts
+#. Provide a mechanism for the operator to dump poorly flocculated water before it enters the clarifier. This is important to reduce the recovery time when there is a flocculation failure.
+#. Ensure easy operation and maintenance.
 
 Components and Flow Paths
 ==========================
