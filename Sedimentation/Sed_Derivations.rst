@@ -8,7 +8,7 @@
 .. _title_Sed_Derivations:
 
 ***********************************************
-AguaClara Sedimentation Design
+Sedimentation Deriviations
 ***********************************************
 
 .. _heading_Sed_Tank_Plate_Settler_Design:
@@ -131,13 +131,14 @@ Substituting into the equation for single tube settlers
 It is common to need to design the length of the tube given a target flow rate and thus we have
 
 .. math::
+  :label: L_tube_settler
 
   L = \frac{4Q_{Tube}}{\bar v_{c}\pi D\cos \alpha} - D\tan\alpha
 
 
-.. _heading_Floc_Rollup_Slide_Velocity_Derivation:
+.. _heading_Floc_Rollup_Derivation:
 
-Floc Rollup and Slide Velocity
+Floc Rollup
 ------------------------------
 
 As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine this by calculating the floc sedimentation velocity, :math:`v_{Slide}`, that can be captured given a plate spacing. The steps to calculate this are:

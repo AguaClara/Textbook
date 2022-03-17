@@ -1012,7 +1012,7 @@ The maximum permissible velocity gradient in a plane jet given a maximum allowab
 .. math::
   :label: planejet_V_max
 
-  \bar v_{Jet_{Max}} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu S_{Jet}}{\Pi_{JetRound} }\right)^{\frac{1}{3}}
+  \bar v_{Jet_{Max}} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu S_{Jet}}{\Pi_{JetPlane} }\right)^{\frac{1}{3}}
 
 The minimum jet thickness given a maximum allowable velocity gradient and required jet velocity is
 
