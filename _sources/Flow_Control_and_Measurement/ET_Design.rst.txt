@@ -11,7 +11,7 @@
 Entrance Tank Design
 **************************************
 
-Water treatment plants must be protected from potentially damaging materials that could be carried from the watershed to the plant by the water. There is typically a trash rack with large openings at the water source to prevent blockages and damage to the transmission line that conveys water to the plant. A small grit chamber may also be installed to remove sand and gravel before the water enters the transmission line. This equipment is only able to provide preliminary protection of the water treatment plant, and is generally insufficient for surface water sources. Excessive sand and gravel have historically caused maintenance challenges in some AguaClara plants by settling in the flocculator and the sedimentation tank inlet channel. Source water from steep mountain streams often overwhelms the grit removal system during storm events with eroded sediment. Depending on the watershed characteristics, additional protection is often required to avoid failure modes downstream in the water treatment process.
+Water treatment plants must be protected from potentially damaging materials that could be carried from the watershed to the plant by the water. There is typically a trash rack with large openings at the water source to prevent blockages and damage to the transmission line that conveys water to the plant. A small grit chamber may also be installed to remove sand and gravel before the water enters the transmission line. This equipment is only able to provide preliminary protection of the water treatment plant, and is generally insufficient for surface water sources. Excessive sand and gravel have historically caused maintenance challenges in some AguaClara plants by settling in the flocculator and the clarifier inlet channel. Source water from steep mountain streams often overwhelms the grit removal system during storm events with eroded sediment. Depending on the watershed characteristics, additional protection is often required to avoid failure modes downstream in the water treatment process.
 
 The specific design characteristics of a water treatment plant dictate the potential failure modes and hence the required protection.
 
@@ -19,7 +19,7 @@ The entrance tank has multiple functions in a drinking water treatment plant.
 
 #. Remove air bubbles to reduce splashing, turbulence, and unsteady motion of the chemical feed surface tracking lever system
 #. Remove grit to prevent accumulation in the flocculator
-#. Remove leaves and other debris to prevent clogging of the diffusers in the sedimentation tank inlet
+#. Remove leaves and other debris to prevent clogging of the diffusers in the clarifier inlet
 #. Dissipate kinetic energy to keep the water level steady for accurate flow measurement
 #. Measure the incoming flow rate so that operators can make adjustments and respond to changes in water demand
 #. Inject the coagulant and any other amendments required for flocculation
@@ -35,7 +35,7 @@ Water enters the entrance tank via the influent pipe and passes through the tras
     
     Cross-section of an entrance tank. Lever arm of chemical dosing system not pictured. 
 
-In some AguaClara plants, the entrance tank, flocculators, and sedimentation tanks are separated by walkways. However, a more space efficient approach would be to arrange the entrance tank in a channel next to the flocculator as constructed in the 120 L/s plant in Gracias, Honduras (:numref:`figure_Gracias_Ent_Floc`). This avoids the need for buried pipes to carry water underneath the walkway from one component to the next and simplifies construction. In this layout, the entrance tank may extend up to the full length of the flocculator and then get wider as needed to meet grit removal requirements. 
+In some AguaClara plants, the entrance tank, flocculators, and clarifiers are separated by walkways. However, a more space efficient approach would be to arrange the entrance tank in a channel next to the flocculator as constructed in the 120 L/s plant in Gracias, Honduras (:numref:`figure_Gracias_Ent_Floc`). This avoids the need for buried pipes to carry water underneath the walkway from one component to the next and simplifies construction. In this layout, the entrance tank may extend up to the full length of the flocculator and then get wider as needed to meet grit removal requirements. 
 
 .. _figure_Gracias_Ent_Floc:
 .. figure:: ../Images/Gracias_Ent_Floc.JPG
@@ -48,7 +48,7 @@ In some AguaClara plants, the entrance tank, flocculators, and sedimentation tan
 Trash Rack Design
 ===============================
 
-The trash rack is specifically designed to remove low density debris that could easily be carried through the plant and clog any small flow passages. In an AguaClara plant, there are critical flow passages in the sedimentation tank inlet manifold diffusers and in the flow injection system in the stacked rapid sand filters. The inlet manifold diffusers have flared nozzles which currently have a minimum dimension of about 4 mm. The opening dimension for the trash rack must therefore be less than the opening size of the inlet manifold nozzles.
+The trash rack is specifically designed to remove low density debris that could easily be carried through the plant and clog any small flow passages. In an AguaClara plant, there are critical flow passages in the clarifier inlet manifold diffusers and in the flow injection system in the stacked rapid sand filters. The inlet manifold diffusers have flared nozzles which currently have a minimum dimension of about 4 mm. The opening dimension for the trash rack must therefore be less than the opening size of the inlet manifold nozzles.
 
 The minimum trash rack area is set to minimize head loss through the plant while maintaining an overall trash rack size that is reasonably compact. We recommend that the trash rack be designed to reach a terminal head loss of 5 cm when it is 90% clogged. The guiding principle for the design is the orifice equation modified to incorporate the fraction of the the trash rack area that is actually available for water to flow through. This area is reduced by the porosity, vena contracta, and amount of debris.
 
@@ -82,7 +82,7 @@ The trash rack characteristic velocity is 50 mm/s for 50% porosity, 90% clogged,
 Grit Chamber Design
 ===============================
 
-The length of the entrance tank can be extended to function as additional grit removal capacity for watersheds where sediment has the potential to produce harmful amounts of sand and gravel during storm events. As of 2021, plant operators at two AguaClara plants, Gracias and Agalteca, have reported maintenance issues due to grit settling in the flocculator or inlet channel to the sedimentation tanks. If a grit chamber is deemed necessary for a particular watershed, it would be located on the effluent side of the trash racks and is lined with a series of hoppers to facilitate cleaning. To remove settled grit from the entrance tank, the plant operator can remove the pipe stub blocking the drain at the bottom of each hopper, allowing grit to flow into the drain channel below. 
+The length of the entrance tank can be extended to function as additional grit removal capacity for watersheds where sediment has the potential to produce harmful amounts of sand and gravel during storm events. As of 2021, plant operators at two AguaClara plants, Gracias and Agalteca, have reported maintenance issues due to grit settling in the flocculator or inlet channel to the clarifiers. If a grit chamber is deemed necessary for a particular watershed, it would be located on the effluent side of the trash racks and is lined with a series of hoppers to facilitate cleaning. To remove settled grit from the entrance tank, the plant operator can remove the pipe stub blocking the drain at the bottom of each hopper, allowing grit to flow into the drain channel below. 
 
 Stokes' Law can be used to calculate the grit chamber area required to remove particles of a desired size. Kawamura recommends a critical particle size of 0.1 mm (2000, p. 416). The overall strategy to determine appropriate dimensions of the entrance tank is as follows: 
 

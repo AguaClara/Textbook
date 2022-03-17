@@ -33,7 +33,7 @@ Equation Quick Reference
     :eq:`W_min_HVFloc`, Channel width, :math:`W_{Min \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}`, 8
     :eq:`floc_He_max_const_K`, Distance between expansions, :math:`H_{e_{Max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}`, 8
     :eq:`Floc_baffle_spacing_of_K`, Baffle spacing, :math:`S = \left( \frac{K}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}`, 8
-    :eq:`max_sed_tank_jet_velocity_of_G`, Maximum jet velocity , :math:`\frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}`, 9
+    :eq:`max_clarifier_jet_velocity_of_G`, Maximum jet velocity , :math:`\frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}`, 9
     :eq:`Q_tube_settler`, Tube settler flow, :math:`Q_{Tube}=\frac{\bar v_{c}\pi D^2}{4} \left(\frac{L}{D} \cos \alpha +\sin \alpha \right)`, 9
     :eq:`Plate_S_min_of_fractal`, Minimum plate settler spacing, :math:`S_{min} \approx \frac{3 \bar v_{z_{Plate}}}{\sin^2 \alpha} \left( \frac{18 \nu}{g D_{cp}} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}} \right)`, 9
     :eq:`plate_settler_headloss`, Plate settler head loss, :math:`h_L = 2 \frac{\mu}{\rho g} \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)`, 9

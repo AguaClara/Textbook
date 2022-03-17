@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Flow Control and Measurement Derivations &mdash; AguaClara Textbook v1.3.4 documentation</title>
+  <title>Flow Control and Measurement Derivations &mdash; AguaClara Textbook v1.3.5 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.4
+                v1.3.5
               </div>
             
           
@@ -162,14 +162,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Sedimentation</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Deriviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Challenge.html">Sedimentation Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarification Deriviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
@@ -360,11 +360,11 @@
 <span id="figure-pipe-stub-drainage"></span><a class="reference internal image-reference" href="../_images/pipe_stub_drainage.png"><img alt="Pipe stub drainage" src="../_images/pipe_stub_drainage.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text">This is AguaClara’s alternatives to having valves.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
-<p>While AguaClara sedimentation tanks use valves instead of pipe to begin the process of draining, the actual drain piping system is the same, pipe and an elbow. The equation that will soon be derived applies to both pipe stub and valve drains.</p>
+<p>While AguaClara clarifiers use valves instead of pipe to begin the process of draining, the actual drain piping system is the same, pipe and an elbow. The equation that will soon be derived applies to both pipe stub and valve drains.</p>
 <p>We will start the derivation from the following equation, which is found in an intermediate step from the ‘<span class="math notranslate nohighlight">\(Q(t)\)</span> <a class="reference internal" href="#heading-flow-for-a-tank-with-a-valve"><span class="std std-ref">Q(t) for a Tank with a Valve</span></a>.’ While this system does not have a valve, it has other sources of minor loss and therefore the equation is still valid.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-14">
 <span class="eqno">(343)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-14" title="Permalink to this equation">¶</a></span>\[\sqrt h  = \sqrt{h_0} - t \frac{A_{Valve}}{2 A_{Tank}} \sqrt {\frac{2g}{K}}\]</div>
-<p>We need to make some adjustments to this equation before proceeding, to make it applicable for this new drain-system scenario. First, we want to assume that the tank has fully drained. Thus, <span class="math notranslate nohighlight">\(t = t_{Drain}\)</span> and <span class="math notranslate nohighlight">\(h = 0\)</span>. Next, we recall that the tank drain is not actually a valve, but just pipe and an elbow, so <span class="math notranslate nohighlight">\(A_{Valve} = A_{Pipe}\)</span>. Additionally, there can be multiple points of minor loss in the drain system: the entrance from the tank into the drain pipe, the elbow, and potentially the exit of the water out of the drain pipe. When considering a sedimentation tank, the open valve required to begin drainage also has a minor loss associated with it. Therefore, it is necessary to substitute <span class="math notranslate nohighlight">\(\sum K\)</span> for <span class="math notranslate nohighlight">\(K\)</span> With these substitutions, the equation becomes:</p>
+<p>We need to make some adjustments to this equation before proceeding, to make it applicable for this new drain-system scenario. First, we want to assume that the tank has fully drained. Thus, <span class="math notranslate nohighlight">\(t = t_{Drain}\)</span> and <span class="math notranslate nohighlight">\(h = 0\)</span>. Next, we recall that the tank drain is not actually a valve, but just pipe and an elbow, so <span class="math notranslate nohighlight">\(A_{Valve} = A_{Pipe}\)</span>. Additionally, there can be multiple points of minor loss in the drain system: the entrance from the tank into the drain pipe, the elbow, and potentially the exit of the water out of the drain pipe. When considering a clarifier, the open valve required to begin drainage also has a minor loss associated with it. Therefore, it is necessary to substitute <span class="math notranslate nohighlight">\(\sum K\)</span> for <span class="math notranslate nohighlight">\(K\)</span> With these substitutions, the equation becomes:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-15">
 <span class="eqno">(344)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-15" title="Permalink to this equation">¶</a></span>\[\sqrt{h_0}  = t_{Drain} \frac{A_{Pipe}}{2 A_{Tank}} \sqrt {\frac{2g}{\sum K}}\]</div>
 <p>Now, with the knowledge that <span class="math notranslate nohighlight">\(A_{Pipe} = \frac{\pi D_{Pipe}^2}{4}\)</span> and rearranging to solve for <span class="math notranslate nohighlight">\(D_{Pipe}\)</span>, we obtain the following equation:</p>

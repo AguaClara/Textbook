@@ -6,12 +6,12 @@
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
-.. _title_Sedimentation_Theory_and_Future_Work:
+.. _title_Clarification_Theory_and_Future_Work:
 
 **************
 Future Work
 **************
-Unsolved sedimentation tank failure modes:
+Unsolved clarifier failure modes:
 
 #. :ref:`Floc volcanoes <heading_Floc_Volcanoes>`
 #. Dissolved air flotation that results from air coming out of solution. Two sources of air include compressed air traveling from the transmission line and dissolved air released due to increased temperature.
@@ -144,19 +144,19 @@ This analysis suggests that the primary particle concentration after flocculatio
 Floc Recycle
 ==================
 
-We hypothesize that the flocs in floc filters serve as collectors that primary particles attach to. We suspect that collisions between primary particles and large flocs are possible in the sedimentation tank because the rotational velocity of the flocs is small relative to the sedimentation velocity of the flocs. If the rotational velocity of the flocs is small, then a stagnation point will exist on the floc and a finite flow of fluid will come within a primary particle radius of the floc. Thus we expect primary particle removal in floc filters to be proportional to the number of collectors that a primary particle passes while in the floc filter.
+We hypothesize that the flocs in floc filters serve as collectors that primary particles attach to. We suspect that collisions between primary particles and large flocs are possible in the clarifier because the rotational velocity of the flocs is small relative to the terminal velocity of the flocs. If the rotational velocity of the flocs is small, then a stagnation point will exist on the floc and a finite flow of fluid will come within a primary particle radius of the floc. Thus we expect primary particle removal in floc filters to be proportional to the number of collectors that a primary particle passes while in the floc filter.
 
-The number of collectors that a primary particle passes is proportional to the solids concentration (a surrogate for the number concentration of flocs), the primary particle residence time in the floc filter, and the sedimentation velocity of the flocs. The sedimentation velocity of the flocs is important because that is what causes a relative velocity between the primary particles and the flocs.
+The number of collectors that a primary particle passes is proportional to the solids concentration (a surrogate for the number concentration of flocs), the primary particle residence time in the floc filter, and the terminal velocity of the flocs. The terminal velocity of the flocs is important because that is what causes a relative velocity between the primary particles and the flocs.
 
-As we have explored increasing the upflow velocity in sedimentation tanks the performance has dropped markedly. This is undoubtedly due in part to the combined effect of a very dilute floc filter at high upflow velocities AND a low residence time for the primary particles.
+As we have explored increasing the upflow velocity in clarifiers the performance has dropped markedly. This is undoubtedly due in part to the combined effect of a very dilute floc filter at high upflow velocities AND a low residence time for the primary particles.
 
 Would it be possible to increase the concentration of the floc filter and thus increase the collision rate? At 3 mm/s upflow velocity there are very few flocs that can stay in the floc filter. We need a mechanism to transport flocs to the bottom of the floc filter and return them again after they are carried to the top of the floc filter.
 
-We propose to test this by installing a settled floc recycle line. The recycle line will connect to the bottom surface of the tube settler below the location of the floc weir. From there is will carry concentrated sludge to the very bottom of the sedimentation tank where it will pass through the wall of the sedimentation tank. Increasing the amount of recycle flow will both increase the solids concentration in the floc filter and decrease the primary particle residence time in the floc filter.
+We propose to test this by installing a settled floc recycle line. The recycle line will connect to the bottom surface of the tube settler below the location of the floc weir. From there is will carry concentrated sludge to the very bottom of the clarifier where it will pass through the wall of the clarifier. Increasing the amount of recycle flow will both increase the solids concentration in the floc filter and decrease the primary particle residence time in the floc filter.
 
-There must be an optimal amount of recycled flocs for a floc filter. Of course, one possiblity is that the optimal recycle is zero. Recycled flocs increase the floc filter concentration and thus increase the rate of collisions between primary particles and flocs. The recycled flocs also decrease the residence time in the floc filter and thus decrease the total number of collisions between primary particles and flocs. It may be more complicated than this because the hindered sedimentation velocity of the flocs in the floc filter is also a function of their concentration.
+There must be an optimal amount of recycled flocs for a floc filter. Of course, one possiblity is that the optimal recycle is zero. Recycled flocs increase the floc filter concentration and thus increase the rate of collisions between primary particles and flocs. The recycled flocs also decrease the residence time in the floc filter and thus decrease the total number of collisions between primary particles and flocs. It may be more complicated than this because the hindered terminal velocity of the flocs in the floc filter is also a function of their concentration.
 
-Our goal is to find the optimal recycle ratio. Optimal is defined as the maximum collision potential. Collision potential for the floc filter is proportional to to the collision rate times the hydraulic residence time. The collision rate is proportional to the solids concentration and the hindered sedimentation velocity of those flocs. The collision potential is thus proportional to the total number of flocs that a primary particle passes on its way through the floc filter.
+Our goal is to find the optimal recycle ratio. Optimal is defined as the maximum collision potential. Collision potential for the floc filter is proportional to to the collision rate times the hydraulic residence time. The collision rate is proportional to the solids concentration and the hindered terminal velocity of those flocs. The collision potential is thus proportional to the total number of flocs that a primary particle passes on its way through the floc filter.
 
 .. math:: CP_{ff} \propto C_{ff} \theta_{ff} \bar v_{hindered}
 
@@ -174,7 +174,7 @@ The velocity up through the floc filter without recycle is defined as
 
 .. math:: \bar v_{ff} = \bar v_z\left( 1 + \Pi_{recycle} \right)
 
-Now we need equations for the concentration in the floc filter. This is based on mass conservation such that the mass in the floc filter is constant. There is a hindered sedimentation velocity of the flocs that results in a reduction of the mass flux out of the top of the control volume.
+Now we need equations for the concentration in the floc filter. This is based on mass conservation such that the mass in the floc filter is constant. There is a hindered terminal velocity of the flocs that results in a reduction of the mass flux out of the top of the control volume.
 
 .. math:: C_{ff}\left(\frac{ Q_{plant}+Q_{recycle} }{A_{ff}}-\bar v_{hindered}\right) A_{ff}= C_{plant}Q_{plant} + C_{recycle}Q_{recycle}
 
@@ -188,7 +188,7 @@ Now we can substitute to get the collision potential as a function of the flow r
 
 .. math:: CP_{ff} \propto \frac{C_{plant} + C_{recycle}\Pi_{recycle}}{\left(1+\Pi_{recycle}-\frac{\bar v_{hindered}}{\bar v_z}\right)\left( 1 + \Pi_{recycle} \right)}  \frac{H_{ff}\bar v_{hindered}} {\bar v_z}
 
-We estimate the hindered sedimentation velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc filter. Ideally we would have a hindered sedimentation velocity as a function of the concentration of flocs in the floc filter. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland's measurements of the solids concentration in the floc hopper sludge.
+We estimate the hindered terminal velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc filter. Ideally we would have a hindered terminal velocity as a function of the concentration of flocs in the floc filter. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland's measurements of the solids concentration in the floc hopper sludge.
 
 `The following plot can be generated here <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=Z53_rxgCYne3&line=4&uniqifier=1>`_
 
@@ -205,7 +205,7 @@ This analysis suggest that a recycle flow rate that is between 0.5 and 1.5 at a 
 
 The next step is to design the recycle tube. The recycle tube could be inclined to promote additional consolidation to reduce the amount of water that is recycled. The slope would need to be about 60 degrees. We could experiment with the design of the recycle line if it were made of flexible tubing.
 
-It is expected that the consolidated sludge will flow by gravity because of its higher density. The big unknown is what diameter recycle line is needed for a lab scale test with a 2.5 cm diameter sedimentation tank.
+It is expected that the consolidated sludge will flow by gravity because of its higher density. The big unknown is what diameter recycle line is needed for a lab scale test with a 2.5 cm diameter clarifier.
 
 The recycle sludge has a density given by
 
@@ -234,7 +234,7 @@ We will assume that the dynamic viscosity of the sludge is the same as the dynam
 
 The head loss in the recycle tube is approximately 1.6 cm in a 1.5 m deep floc filter.
 
-The recycle line will be installed between the bottom of the tube settler and the inlet to the sedimentation tank. The recycle line will connect  directly to the side of the sedimentation tank to minimize minor losses. We will use a 0.25" ID, 3/8" OD clear flexible tube for the recycle line. We will use PVC glue to attach the flexible tube to the rigid clear PVC tubing.
+The recycle line will be installed between the bottom of the tube settler and the inlet to the clarifier. The recycle line will connect  directly to the side of the clarifier to minimize minor losses. We will use a 0.25" ID, 3/8" OD clear flexible tube for the recycle line. We will use PVC glue to attach the flexible tube to the rigid clear PVC tubing.
 
 It is possible that it will be necessary to prevent flow in the recycle line initially so that it doesn't flow upward. Once the tube begins filling with solids it should be possible for it to start flowing downwards.
 
@@ -243,6 +243,6 @@ It is possible that it will be necessary to prevent flow in the recycle line ini
 Floc Volcanoes
 ==================
 
-Floc volcanoes are caused by differences in temperature between the water that is in a sedimentation tank and the incoming water. If the incoming water is warmer than the water that is already in the sedimentation tank, then the incoming water will be buoyant and will rise quickly to the top of the sedimentation tank and carry flocs to the effluent launder.
+Floc volcanoes are caused by differences in temperature between the water that is in a clarifier and the incoming water. If the incoming water is warmer than the water that is already in the clarifier, then the incoming water will be buoyant and will rise quickly to the top of the clarifier and carry flocs to the effluent launder.
 
-Temperature fluctuations can be especially pronounced with small scale water supplies where small streams and small diameter transmission lines can be exposed to the sun and can warm up dramatically during a few hours of sunshine. Given that temperature changes and density changes can not easily be engineered, the only solution that we have is to reduce the time that water spends in the sedimentation tank so that the influent water is closer to the average temperature of the water in the sedimentation tank. Solar heating causing the raw water temperature to go from a minimum at 6 am to a maximum at 1 pm. AguaClara sedimentation tanks currently have a residence time of approximately 2 m / (1 mm/s) or 2000 s. We anticipate that by increasing the upflow velocity and by introducing floc recycle that the effects of temperature induced floc volcanoes will be reduced.
+Temperature fluctuations can be especially pronounced with small scale water supplies where small streams and small diameter transmission lines can be exposed to the sun and can warm up dramatically during a few hours of sunshine. Given that temperature changes and density changes can not easily be engineered, the only solution that we have is to reduce the time that water spends in the clarifier so that the influent water is closer to the average temperature of the water in the clarifier. Solar heating causing the raw water temperature to go from a minimum at 6 am to a maximum at 1 pm. AguaClara clarifiers currently have a residence time of approximately 2 m / (1 mm/s) or 2000 s. We anticipate that by increasing the upflow velocity and by introducing floc recycle that the effects of temperature induced floc volcanoes will be reduced.

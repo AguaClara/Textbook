@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Parameter Convention List &mdash; AguaClara Textbook v1.3.4 documentation</title>
+  <title>Parameter Convention List &mdash; AguaClara Textbook v1.3.5 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v1.3.4
+                v1.3.5
               </div>
             
           
@@ -150,14 +150,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Sedimentation</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Deriviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Challenge.html">Sedimentation Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarification Deriviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
@@ -381,11 +381,11 @@
 <td><p><span class="math notranslate nohighlight">\([L]\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(L_{SedActive}\)</span></p></td>
-<td><p>Length of the plate settlers in the sedimentation tank (not including the triangle at the end of the tank)</p></td>
+<td><p>Length of the plate settlers in the clarifier (not including the triangle at the end of the tank)</p></td>
 <td><p><span class="math notranslate nohighlight">\([L]\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(L_{ff}\)</span></p></td>
-<td><p>Length of the floc filter in a sedimentation tank</p></td>
+<td><p>Length of the floc filter in a clarifier</p></td>
 <td><p><span class="math notranslate nohighlight">\([L]\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(M\)</span></p></td>
@@ -404,8 +404,8 @@
 <td><p>Flow rate through each diffuser</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{[L]^3}{[T]}\)</span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q_{Sed}\)</span></p></td>
-<td><p>Flow rate through each sedimentation tank</p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q_{Clarifier}\)</span></p></td>
+<td><p>Flow rate through each clarifier</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{[L]^3}{[T]}\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\({\rm Re}\)</span></p></td>
@@ -436,8 +436,8 @@
 <td><p>Gravitational weight of floc</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{[M][L]}{[T]^2}\)</span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(W_{Sed}\)</span></p></td>
-<td><p>Width of each sedimentation tank</p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(W_{Clarifier}\)</span></p></td>
+<td><p>Width of each clarifier</p></td>
 <td><p><span class="math notranslate nohighlight">\([L]\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><em>Lowercase letters</em></p></td>
@@ -541,7 +541,7 @@
 <td><p><span class="math notranslate nohighlight">\(\frac{[L]}{[T]}\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(v_{Slide}\)</span></p></td>
-<td><p>Sedimentation velocity of floc between plate settlers</p></td>
+<td><p>Clarification velocity of floc between plate settlers</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{[L]}{[T]}\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\bar v_{z_{FB}}\)</span></p></td>

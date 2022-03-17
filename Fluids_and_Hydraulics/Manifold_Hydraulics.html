@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Manifold Hydraulics &mdash; AguaClara Textbook v1.3.4 documentation</title>
+  <title>Manifold Hydraulics &mdash; AguaClara Textbook v1.3.5 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.4
+                v1.3.5
               </div>
             
           
@@ -155,14 +155,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Sedimentation</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Deriviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Challenge.html">Sedimentation Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarification Deriviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
@@ -267,10 +267,10 @@
 </embed><div class="section" id="manifold-hydraulics">
 <span id="title-hydraulics-intro"></span><h1>Manifold Hydraulics<a class="headerlink" href="#manifold-hydraulics" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=QKlfOMPoROA3&amp;line=5&amp;uniqifier=1">Be sure to run the import code before trying the code</a></p>
-<p>The hydraulic controls provide the basis for efficient and robust water treatment plant operation. Water must move through unit processes and between unit processes and the flow passages must be designed to meet various constraints. One constraint is that water that is carrying a significant amount of sediment (flocculator and sedimentation tank inlet) must have sufficient velocity and turbulence levels to minimize sedimentation.  A more challenging constraint is that the flow must be divided equally between parallel processes. Flow distribution through parallel paths is a key hydraulic design constraint for all municipal scale water treatment plants. The parallel path constraint only goes away for laboratory scale processes where there is a single tube settler and a filter with a single layer of sand. A schematic illustrating the electrical circuit analogy is shown in <a class="reference internal" href="#figure-circuit"><span class="std std-numref">Fig. 31</span></a>.</p>
+<p>The hydraulic controls provide the basis for efficient and robust water treatment plant operation. Water must move through unit processes and between unit processes and the flow passages must be designed to meet various constraints. One constraint is that water that is carrying a significant amount of sediment (flocculator and clarifier inlet) must have sufficient velocity and turbulence levels to minimize sedimentation.  A more challenging constraint is that the flow must be divided equally between parallel processes. Flow distribution through parallel paths is a key hydraulic design constraint for all municipal scale water treatment plants. The parallel path constraint only goes away for laboratory scale processes where there is a single tube settler and a filter with a single layer of sand. A schematic illustrating the electrical circuit analogy is shown in <a class="reference internal" href="#figure-circuit"><span class="std std-numref">Fig. 31</span></a>.</p>
 <div class="figure align-center" id="id1">
-<span id="figure-circuit"></span><a class="reference internal image-reference" href="../_images/circuit.png"><img alt="Sedimentation tank flow circuit" src="../_images/circuit.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">The flow through a sedimentation tank is analogous to an electrical circuit with wires and resistors. Identical resistors in parallel paths help improve flow distribution between the paths. Differences in piezometric head (think voltage) in the manifolds that connect to multiple parallel paths.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<span id="figure-circuit"></span><a class="reference internal image-reference" href="../_images/circuit.png"><img alt="Clarification tank flow circuit" src="../_images/circuit.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">The flow through a clarifier is analogous to an electrical circuit with wires and resistors. Identical resistors in parallel paths help improve flow distribution between the paths. Differences in piezometric head (think voltage) in the manifolds that connect to multiple parallel paths.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="piezometric-head">
 <span id="heading-piezometric-head"></span><h2>Piezometric Head<a class="headerlink" href="#piezometric-head" title="Permalink to this headline">¶</a></h2>
@@ -302,7 +302,7 @@
 <div class="math notranslate nohighlight" id="equation-delta-piezometric-cv-manifold">
 <span class="eqno">(76)<a class="headerlink" href="#equation-delta-piezometric-cv-manifold" title="Permalink to this equation">¶</a></span>\[ \Delta\Psi_M = \frac{\bar v_{M_1}^{2}-\bar v_{M_n}^{2}}{2 g} - h_{L}\]</div>
 <div class="figure align-center" id="id4">
-<span id="figure-inlet-manifold"></span><a class="reference internal image-reference" href="../_images/inlet_manifold.png"><img alt="Sedimentation tank flow circuit" src="../_images/inlet_manifold.png" style="width: 400px;" /></a>
+<span id="figure-inlet-manifold"></span><a class="reference internal image-reference" href="../_images/inlet_manifold.png"><img alt="Clarification tank flow circuit" src="../_images/inlet_manifold.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">The piezometric head can either increase due to conversion of kinetic energy to pressure or the piezometric head can decrease due to major losses.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <p>For short <span class="math notranslate nohighlight">\(f\frac{L}{D}&lt;&lt;1\)</span>, straight (minor loss coefficient = 0), inlet manifolds the change in piezometric head, <span class="math notranslate nohighlight">\(\Delta\Psi_M\)</span> is equal the initial velocity head.</p>
@@ -335,7 +335,7 @@
 <p>If there is no additional head loss in series to improve flow distribution, then Equation <a class="reference internal" href="#equation-manifold-max-v-with-hl-series">(85)</a> simplifies to</p>
 <div class="math notranslate nohighlight" id="equation-manifold-max-v-no-hl-series">
 <span class="eqno">(86)<a class="headerlink" href="#equation-manifold-max-v-no-hl-series" title="Permalink to this equation">¶</a></span>\[ \frac{A_{M_1}}{A_{P}} =\frac{\bar v_{P}}{\bar v_{M_1}} = \sqrt{\frac{1}{\Pi_{\Psi}}}\]</div>
-<p>Equation <a class="reference internal" href="#equation-manifold-max-v-no-hl-series">(86)</a> (see <a class="reference internal" href="#figure-ratio-port-to-manifold-velocity"><span class="std std-numref">Fig. 35</span></a>) can be used to determine the required diameter of inlet manifolds in sedimentation tanks or to determine the required port velocity for the backwash manifold in the StaRS filters. It can also be used to solve for the maximum manifold velocity given the port velocity in the sedimentation tank diffusers.</p>
+<p>Equation <a class="reference internal" href="#equation-manifold-max-v-no-hl-series">(86)</a> (see <a class="reference internal" href="#figure-ratio-port-to-manifold-velocity"><span class="std std-numref">Fig. 35</span></a>) can be used to determine the required diameter of inlet manifolds in clarifiers or to determine the required port velocity for the backwash manifold in the StaRS filters. It can also be used to solve for the maximum manifold velocity given the port velocity in the clarifier diffusers.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=JTY6Xw3SSuQ0&amp;line=1&amp;uniqifier=1">Define a function for the flow ratio</a></p>
 <div class="figure align-center" id="id5">
 <span id="figure-ratio-port-to-manifold-velocity"></span><a class="reference internal image-reference" href="../_images/Ratio_port_to_manifold_velocity.png"><img alt="Filter channel" src="../_images/Ratio_port_to_manifold_velocity.png" style="width: 400px;" /></a>

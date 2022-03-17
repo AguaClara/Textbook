@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Filtration Introduction &mdash; AguaClara Textbook v1.3.4 documentation</title>
+  <title>Filtration Introduction &mdash; AguaClara Textbook v1.3.5 documentation</title>
   
 
   
@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Stacked Rapid Sand Filter Design" href="Filtration_Design.html" />
-    <link rel="prev" title="Sedimentation Examples" href="../Sedimentation/Sed_Examples.html" /> 
+    <link rel="prev" title="Clarification Examples" href="../Clarification/Clarifier_Examples.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.4
+                v1.3.5
               </div>
             
           
@@ -151,14 +151,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Sedimentation</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Deriviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Challenge.html">Sedimentation Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarification Deriviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul class="current">
@@ -180,7 +180,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#particle-removal-efficiency">Particle Removal Efficiency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#filtration-model">Filtration Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#filter-head-loss">Filter Head Loss</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sedimentation-impacts">Sedimentation Impacts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#clarification-impacts">Clarification Impacts</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#velocity-gradient">Velocity Gradient</a></li>
 </ul>
 </li>
@@ -297,7 +297,7 @@
 <p class="caption"><span class="caption-number">Fig. 201 </span><span class="caption-text">Sample taken from the top of a slow sand filter made with glass beads. Note the constriction that is building in the narrowest part of the void between 4 glass beads.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>Slow sand filtration ran into big trouble when they were installed in cities along the Ohio and Mississippi Rivers in the United States. The high sediment load carried by those rivers could not be removed using slow sand filters. The need to treat water with high sediment loads (high turbidities) led to the innovation of coupling flocculation, sedimentation, and a new kind of filter - rapid sand filters. The early emphasis on filtration as the primary process persisted and continues even today. For example, the surface water treatment plant that provides drinking water to the Cornell University campus is called Cornell Water Filtration Plant.</p>
-<p>The process that removes most of the particles in the Cornell Water Filtration Plant is the sedimentation tank with big assistance from the flocculators. The rapid sand filters are a polishing step that removes approximately 1 NTU or about 1 mg/L of solids. This is not to diminish the importance of filtration. After all, this chapter is all about filtration. The goal is to put filtration in context and remind all of us that both slow and rapid sand filters are limited to polishing water that is already very clean.</p>
+<p>The process that removes most of the particles in the Cornell Water Filtration Plant is the clarifier with big assistance from the flocculators. The rapid sand filters are a polishing step that removes approximately 1 NTU or about 1 mg/L of solids. This is not to diminish the importance of filtration. After all, this chapter is all about filtration. The goal is to put filtration in context and remind all of us that both slow and rapid sand filters are limited to polishing water that is already very clean.</p>
 <div class="section" id="slow-sand-filters">
 <h3>Slow Sand Filters<a class="headerlink" href="#slow-sand-filters" title="Permalink to this headline">¶</a></h3>
 <p>Slow sand filters don’t use coagulants or pretreatment. They are suited for surface waters coming from pristine watersheds. They are a passive technology in that there is no way for an operator to improve performance other than to clean the filter.</p>
@@ -310,13 +310,13 @@
 </div>
 <div class="section" id="multistage-filters">
 <h3>Multistage Filters<a class="headerlink" href="#multistage-filters" title="Permalink to this headline">¶</a></h3>
-<p>Multistage filters were invented to extend the range of applicability of slow sand filters. Slow sand filters were viewed as an appropriate technology for rural communities, but their very limited ability to treat water with suspended solids made them inappropriate for communities that have surface water sources with high turbidity during runoff events. Roughing filters made with various sizes of gravel were added to remove sediment. The roughing filters were essentially inefficient sedimentation tanks with 60% of their volume occupied by rocks! Roughing filters were also difficult to clean and without using coagulants their particle removal efficiency was poor. Nonetheless, multistage filters have been built in many rural communities in Latin America.</p>
+<p>Multistage filters were invented to extend the range of applicability of slow sand filters. Slow sand filters were viewed as an appropriate technology for rural communities, but their very limited ability to treat water with suspended solids made them inappropriate for communities that have surface water sources with high turbidity during runoff events. Roughing filters made with various sizes of gravel were added to remove sediment. The roughing filters were essentially inefficient clarifiers with 60% of their volume occupied by rocks! Roughing filters were also difficult to clean and without using coagulants their particle removal efficiency was poor. Nonetheless, multistage filters have been built in many rural communities in Latin America.</p>
 </div>
 <div class="section" id="rapid-sand-filters">
 <h3>Rapid Sand Filters<a class="headerlink" href="#rapid-sand-filters" title="Permalink to this headline">¶</a></h3>
 <p>It is always interesting to try to understand why different technologies were invented and specifically what problem they were trying to solve. One possibility is that the goal was to reduce the labor required for cleaning slow sand filters by devising a system to clean the sand in place. Given the idea of fluidizing the bed of sand with a high upflow velocity it then became tempting to evolve to higher flow rates during filtration because having to clean the filter frequently was no longer a problem. Another possibility is that rapid sand filters were invented to handle higher turbidity water, but that isn’t supported by the capabilities of rapid sand filters. Slow and rapid sand filters have very similar maximum influent water turbidity limits. Thus the real advantage to rapid sand filters is that they can be cleaned quickly.</p>
 <p>Many rapid sand filters use 2 or 3 different densities and sizes of filter media to achieve a system with large pores at the surface of the filter and smaller pores deeper within the filter. If sand with a wide range of sizes is fluidized, the small sand grains quickly rise to the top and the large sand grains fall to the bottom. Thus a poorly sieved sand will have small pores at the top and large pores at the bottom after backwash. The trick to creating a mix of filter media that results in big pores on the top is to use low density, large diameter media with a lower terminal velocity rather than a higher density, small diameter media. During backwash the less dense media ends up on top and thus this reverse stratification is achieved.</p>
-<p>Given that many installed rapid sand filters are dual media it is worth reflecting on what problem the dual media filters are designed to solve. One possible problem is surface clogging of the sand filter when large, strong flocs bridge across sand pores and then support a layer of flocs above the sand bed. This surface layer would be similar to the schmutzdecke in slow sand filters and could be the location of significant head loss. It appears that rapid sand filters do suffer from surface clogging in some instances. Of course, it is possible that this failure is related to the use of flocculent aids that result in excessively strong flocs and/or sedimentation tanks that don’t effectively capture large flocs.</p>
+<p>Given that many installed rapid sand filters are dual media it is worth reflecting on what problem the dual media filters are designed to solve. One possible problem is surface clogging of the sand filter when large, strong flocs bridge across sand pores and then support a layer of flocs above the sand bed. This surface layer would be similar to the schmutzdecke in slow sand filters and could be the location of significant head loss. It appears that rapid sand filters do suffer from surface clogging in some instances. Of course, it is possible that this failure is related to the use of flocculent aids that result in excessively strong flocs and/or clarifiers that don’t effectively capture large flocs.</p>
 <p>Additional potential benefits of dual media filtration include the possibility that they can hold a larger mass of particles before requiring backwash or that they may be able to achieve higher particle removal efficiency. <a class="reference external" href="https://doi.org/10.1016/j.desal.2006.02.102">Zouboulis et al.</a> compared single and dual media filtration and demonstrated that the main advantage to dual media filtration was that it had a lower rate of head loss accumulation. Given that the rate of increase of head loss for the dual media filters was constant over time, this suggests that the pores that were doing the filtration were exclusively in the larger of the two media. This suggests that larger diameter media (rather than dual media) might be a better choice for rapid sand filters.</p>
 <p>Dual media filters face more challenges during cleaning. The use of relatively low density media for the top layer results in a lower density fluidized bed. This lower density fluidized bed makes it possible for flocs to form mudballs that are sufficiently dense to fall through the top layer of media during backwash (page 221 of Water and Wastewater Technology, 6th edition, by Hammer and Hammer, 2008). The formation of these mudballs is one of the reasons that dual media filters use air scour before or during backwash to breakup the mudballs.</p>
 <p>The addition of flocculation and sedimentation prior to filtration changes the properties of the incoming particles. The settled water contains small flocs and primary particles with some coagulant nanoparticles attached. These particles are sticky and the stickiness undoubtedly influences the physics of the particle attachment processes inside the sand bed. We will talk more about the mysteries of life inside a filter bed later in this chapter.</p>
@@ -401,7 +401,7 @@
 <td></td>
 <td><p>0.25</p></td>
 </tr>
-<tr class="row-odd"><td><p>AC Sedimentation</p></td>
+<tr class="row-odd"><td><p>AC Clarification</p></td>
 <td><p>1</p></td>
 <td></td>
 <td></td>
@@ -431,7 +431,7 @@
 </tr>
 </tbody>
 </table>
-<p>The slowest (and hence largest) unit process in the AguaClara surface water treatment train is sedimentation. Thus sedimentation represents the most likely opportunity for significant cost reduction. The entire AguaClara treatment train is a fraction of the size of the dynamic filters that are used in multiple stage filtration plants.</p>
+<p>The slowest (and hence largest) unit process in the AguaClara surface water treatment train is clarification. Thus clarifiers represents the most likely opportunity for significant cost reduction. The entire AguaClara treatment train is a fraction of the size of the dynamic filters that are used in multiple stage filtration plants.</p>
 <p>Filters remove the least amount of contaminants in a surface water treatment plant.</p>
 <p>Filters have a huge range in velocities that correspond to a huge range in size. This is illustrated in the city of Jesus de Otoro, Honduras. They have both a 20 L/s multiple stage filtration plant and a 20 L/s AguaClara plant serving different sections of the city. The plants can both be seen in <a class="reference external" href="https://www.google.com/maps/d/u/0/viewer?mid=1Rjl2cfjMn0Pk7E11KVq9A1mlj2Q&amp;ll=14.491993514824715%2C-87.97505904373156&amp;z=16">Google Maps</a>.</p>
 <div class="figure align-center" id="id7">
@@ -718,8 +718,8 @@ As particles gradually deposit in an ever shrinking flow constriction, the veloc
 <span class="eqno">(689)<a class="headerlink" href="#equation-filtration-filtration-intro-13" title="Permalink to this equation">¶</a></span>\[v_{exp} =  \frac{3}{32}\frac{D_{constriction}}{\Lambda_{pore}}Re_{jet}v_{constriction}\]</div>
 <p>It isn’t yet clear if this always means that <span class="math notranslate nohighlight">\(v_{exp}\)</span> will be very small compared with <span class="math notranslate nohighlight">\(v_{constriction}\)</span>, but that seems to be the logical conclusion. Thus when calculating the head loss for a pore it is reasonable to assume that the kinetic energy of the jet is all lost before entering the next constriction.</p>
 </div>
-<div class="section" id="sedimentation-impacts">
-<h2>Sedimentation Impacts<a class="headerlink" href="#sedimentation-impacts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="clarification-impacts">
+<h2>Clarification Impacts<a class="headerlink" href="#clarification-impacts" title="Permalink to this headline">¶</a></h2>
 <p>The characteristic floc size could be set by the plate settlers that preferentially remove large flocs or it could be set by any of the high shear events on the path to or through the filter. We will estimate floc size from each of the potential shear and terminal velocity events. The calculations are done in
 <a class="reference internal" href="Filtration_Theory_and_Future_Work.html#heading-floc-size-and-velocity-gradient-calculations"><span class="std std-ref">python below</span></a>.</p>
 <p>The floc diameter that is not completely captured by plate settlers with a capture velocity of 0.12 mm/s (the capture velocity used by AguaClara) is 25 <span class="math notranslate nohighlight">\(\mu m\)</span>.</p>
@@ -739,7 +739,7 @@ As particles gradually deposit in an ever shrinking flow constriction, the veloc
 <span class="eqno">(693)<a class="headerlink" href="#equation-filtration-filtration-intro-17" title="Permalink to this equation">¶</a></span>\[G_{CS} =\bar v_{constriction} \sqrt{\frac{ v_a}{2\nu \phi\Lambda_{pore}}}\]</div>
 <p>The estimated value of this velocity gradient is <em>300 Hz</em>.</p>
 <p>We need to compare the constricted jet velocity gradient with the clean bed injection velocity gradient that occurs due to the fact that the approach velocity at the point of flow injection in StaRS filters is much higher than the average approach velocity. The flow injection area is approximately 2.5 cm wide and serves an effective filter area (up and down!) of 20 cm (spacing between injection points is 10 cm.). Thus the approach velocity in current StaRS filters is 14.6 mm/s and the corresponding Camp Stein velocity gradient is <em>1440 Hz</em>.</p>
-<p>EstaRS filters have water falls from the filter inlet channel to inlet box. In recent designs the water flows through a narrow slot and then falls into the inlet box. The slot is about 3.4 cm wide and the water falls about 40 cm. The vertical velocity after dropping 40 cm is 2.8 m/s. The geometry of this water fall is complicated and we will assume the resulting jet is circular at impact with the water surface. The diameter of the jet is thus obtained from continuity and is equal to 9.5 cm.  Now we use the energy dissipation rate of a round jet to obtain <em>4300 Hz</em>. Thus the floc size could be set by the water fall in the inlet box since this is the highest velocity gradient on the path into and through the filter. However, our rough estimate based on wild extrapolation suggests that this would yield a 36 <span class="math notranslate nohighlight">\(\mu m\)</span> diameter floc. This is larger than the flocs produced by the sedimentation tank plate settlers and thus it is possible that even with this waterfall, that the floc size distribution is set by the sedimentation tank plate settlers.</p>
+<p>EstaRS filters have water falls from the filter inlet channel to inlet box. In recent designs the water flows through a narrow slot and then falls into the inlet box. The slot is about 3.4 cm wide and the water falls about 40 cm. The vertical velocity after dropping 40 cm is 2.8 m/s. The geometry of this water fall is complicated and we will assume the resulting jet is circular at impact with the water surface. The diameter of the jet is thus obtained from continuity and is equal to 9.5 cm.  Now we use the energy dissipation rate of a round jet to obtain <em>4300 Hz</em>. Thus the floc size could be set by the water fall in the inlet box since this is the highest velocity gradient on the path into and through the filter. However, our rough estimate based on wild extrapolation suggests that this would yield a 36 <span class="math notranslate nohighlight">\(\mu m\)</span> diameter floc. This is larger than the flocs produced by the clarifier plate settlers and thus it is possible that even with this waterfall, that the floc size distribution is set by the clarifier plate settlers.</p>
 <p>Note that the water fall height diminishes during a filter run as the water level in the inlet box increases due to head loss through the filter. Thus it is likely that the waterfall doesn’t significantly break flocs.</p>
 </div>
 </div>
@@ -752,7 +752,7 @@ As particles gradually deposit in an ever shrinking flow constriction, the veloc
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="Filtration_Design.html" class="btn btn-neutral float-right" title="Stacked Rapid Sand Filter Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../Sedimentation/Sed_Examples.html" class="btn btn-neutral float-left" title="Sedimentation Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Clarification/Clarifier_Examples.html" class="btn btn-neutral float-left" title="Clarification Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

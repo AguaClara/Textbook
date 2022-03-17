@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Introduction &mdash; AguaClara Textbook v1.3.4 documentation</title>
+  <title>Introduction &mdash; AguaClara Textbook v1.3.5 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.4
+                v1.3.5
               </div>
             
           
@@ -174,14 +174,14 @@
 <li class="toctree-l1"><a class="reference internal" href="Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Sedimentation</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Deriviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Challenge.html">Sedimentation Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarification Deriviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
@@ -285,12 +285,12 @@
    <script src="https://hypothes.is/embed.js" async></script>
 </embed><div class="section" id="introduction">
 <span id="title-flocculation-introduction"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>Flocculation transform inorganic (clays such as <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0048969708010103">kaolinite, smectite, etc. and metallic oxy-hydroxides such as goethite and gibbsite</a>) and organic (viruses, bacteria and protozoa) primary particles into flocs (particle aggregates). Flocculation does not remove any particles from suspension. Instead it causes particle aggregation and then floc filter, lamellar sedimentation, and sand filtration will be used to separate those flocs from the water. Sedimentation can remove flocs more easily than it can remove primary particles because flocs have a higher terminal sedimentation velocity. Floc filters and sand filtration rely primarily on capture based on interception and interception is much more efficient when the particles are larger. Thus the purpose of flocculation is to join <strong>all</strong> of the primary particles together into flocs (See movie in <a class="reference internal" href="#figure-collisions-in-sequence"><span class="std std-numref">Fig. 100</span></a>).</p>
+<p>Flocculation transform inorganic (clays such as <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0048969708010103">kaolinite, smectite, etc. and metallic oxy-hydroxides such as goethite and gibbsite</a>) and organic (viruses, bacteria and protozoa) primary particles into flocs (particle aggregates). Flocculation does not remove any particles from suspension. Instead it causes particle aggregation and then floc filter, lamellar sedimentation, and sand filtration will be used to separate those flocs from the water. Clarification can remove flocs more easily than it can remove primary particles because flocs have a higher terminal velocity. Floc filters and sand filtration rely primarily on capture based on interception and interception is much more efficient when the particles are larger. Thus the purpose of flocculation is to join <strong>all</strong> of the primary particles together into flocs (See movie in <a class="reference internal" href="#figure-collisions-in-sequence"><span class="std std-numref">Fig. 100</span></a>).</p>
 <div class="figure align-center" id="id8">
 <span id="figure-collisions-in-sequence"></span><a class="reference external image-reference" href="https://youtu.be/NIgP56htShw"><img alt="Random walk toward a collision" src="../_images/Collisions_in_Sequence.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 100 </span><span class="caption-text">Clay particles with attached coagulant nanoparticles collide due to fluid deformation. They grow in size quickly. The challenge is to catch the last few primary particles that failed to participate in the aggregation process.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
-<p>The reason that flocculation is widely used in water treatment is because of sedimentation. Sedimentation is the process that actually removes particles like clay, dirt, organic matter, and bacteria from water. As you learned in the
+<p>The reason that flocculation is widely used in water treatment is because it converts small particles into much larger flocs that have a higher terminal velocity for removal by sedimentation and because they are larger they are easier to capture in filters. Clarification is the process that actually removes particles like clay, dirt, organic matter, and bacteria from water. As you learned in the
 <a class="reference internal" href="../Introduction/Introduction.html#heading-treatment-trains"><span class="std std-ref">introduction on treatment trains</span></a>, sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-0">
 <span class="eqno">(431)<a class="headerlink" href="#equation-flocculation-floc-intro-0" title="Permalink to this equation">¶</a></span>\[\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\]</div>
@@ -300,7 +300,7 @@
 <div class="line"><span class="math notranslate nohighlight">\(D_{particle}\)</span> = particle diameter</div>
 <div class="line"><span class="math notranslate nohighlight">\(\rho\)</span> = density. The <span class="math notranslate nohighlight">\(p\)</span> subscript stands for particle, while <span class="math notranslate nohighlight">\(w\)</span> stands for water</div>
 </div>
-<p>To increase <span class="math notranslate nohighlight">\(\bar v_t\)</span> and make sedimentation more efficient, flocculation aims to increase the diameter <span class="math notranslate nohighlight">\(d\)</span> of the raw particles. This is done by applying a coagulant to the dirty water. Being partially covered by coagulant nanoparticles allows the raw water particles to collide, attach, and grow larger during flocculation.
+<p>To increase <span class="math notranslate nohighlight">\(\bar v_t\)</span> and make clarification more efficient, flocculation aims to increase the diameter <span class="math notranslate nohighlight">\(d\)</span> of the raw particles. This is done by applying a coagulant to the dirty water. Being partially covered by coagulant nanoparticles allows the raw water particles to collide, attach, and grow larger during flocculation.
 Our goal in designing a flocculator is to facilitate particle collisions in a compact reactor without generating so much fluid shear that flocs are torn apart.</p>
 <div class="section" id="history-of-flocculation">
 <h2>History of Flocculation<a class="headerlink" href="#history-of-flocculation" title="Permalink to this headline">¶</a></h2>
@@ -335,7 +335,7 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 <h2>Polymers<a class="headerlink" href="#polymers" title="Permalink to this headline">¶</a></h2>
 <p>Synthetic polymers often made with repeating units of acrylic acid and its derivatives are used to aid flocculation by bridging between particles. For polymer bridging to occur the polymer chains must be able to span the length scale of double-layer repulsion. The thickness of the diffuse layer is about 10 nm at an ionic strength of 1 mM (Coagulants and Flocculants: Theory &amp; Practice by Yong Kim, 1995). The length of linear polymers ranges from 100 to 1500 nm (<a class="reference external" href="https://doi.org/10.1021/ma00168a023">Table 3 of Ying and Chu, 1987</a>) and thus both synthetic polymers and coagulant nanoparticles can easily span the length scale of double-layer repulsion.</p>
 <p>The shortest synthetic polymers are similar in size to the coagulant nanoparticles and the longest synthetic polymers are similar in length to bacteria. These polymers could create additional connections between primary particles and coagulant nanoparticles or they could connect primary particles. In either case the polymers can add connections (more bonds!) that likely have some elasticity and thus there can be more than 3 bonds connecting two particles.</p>
-<p>Polymers undoubtedly increase the connections that bind flocs together and thus enable flocs to grow larger. The stronger flocs created by polymer addition may have unintended consequences in subsequent treatment steps. Large strong flocs are great for improved removal in plate or tube settlers. In sedimentation tanks with floc filters they may form sludge that is more difficult to suspend after a brief shutdown. In filters it is possible that large flocs are more rigid and fail to enter the pore spaces of the filter. Thus the use of polymers may require using large media size for depth filtration. The polymers may also form mudballs in granular filters and thus require more aggressive washing.</p>
+<p>Polymers undoubtedly increase the connections that bind flocs together and thus enable flocs to grow larger. The stronger flocs created by polymer addition may have unintended consequences in subsequent treatment steps. Large strong flocs are great for improved removal in plate or tube settlers. In clarifiers with floc filters they may form sludge that is more difficult to suspend after a brief shutdown. In filters it is possible that large flocs are more rigid and fail to enter the pore spaces of the filter. Thus the use of polymers may require using large media size for depth filtration. The polymers may also form mudballs in granular filters and thus require more aggressive washing.</p>
 </div>
 <div class="section" id="flocculation-theory">
 <h2>Flocculation Theory<a class="headerlink" href="#flocculation-theory" title="Permalink to this headline">¶</a></h2>

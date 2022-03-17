@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Flocculation Design Challenge &mdash; AguaClara Textbook v1.3.4 documentation</title>
+  <title>Flocculation Design Challenge &mdash; AguaClara Textbook v1.3.5 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.4
+                v1.3.5
               </div>
             
           
@@ -155,14 +155,14 @@
 <li class="toctree-l1"><a class="reference internal" href="Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Sedimentation</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Deriviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Challenge.html">Sedimentation Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarification Deriviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
@@ -314,7 +314,7 @@ Make a copy of the <a class="reference external" href="https://cad.onshape.com/d
 <li><p>PS: Copy the overrides (everything inside the {}) from the FeatureScript notices into the overrides configuration (very top left of the PS window). This should result in no warning messages in the FeatureScript notices.</p></li>
 <li><p>PS: Use the Civil Tank feature to draw the flocculator tank. The Civil Tank feature is in the part studio, but the inputs have to be linked to variables that you calculate. Note that the Civil Tank has an option for ports that can be used to turn the internal tank walls into baffles. Initially set the port height to be the same as the tank wall height so that the ports effectively remove a section of the wall. You will have to think about geometry and the correspondence between the flow geometry in Equation <a class="reference internal" href="Floc_Derivations.html#equation-floc-baffle-spacing-const-pihs">(501)</a> and the tank geometry required as inputs for the Civil Tank feature.</p></li>
 <li><p>PS: Draw the water surface for the entire flocculator. To simplify this challenge make the assumption that the water slopes uniformly from one end of the flocculator to the other as it crosses the many baffles. There are many ways to approach this. We need a line that can then be “extruded” into a surface that will be normal to the sketch plane that the line was drawn on. To avoid needing a slanted plane you can create a sketch on the Front plane (assuming that you didn’t move the tank after inserting). All you need is to define a line on the sketch that has the right starting and ending elevations. Then extrude it to create a surface. Note that the extrude tool can either create a solid or a surface so you’ll need to select the surface option.</p></li>
-<li><p>The water elevation in a flocculator is controlled by the water elevation in the downstream sedimentation tank because we can’t have a sudden decrease in water elevation (a waterfall!) because that would break up the flocs. The water depth increases as we move upstream in the flocculator because potential energy is being lost to heat as the water is being deformed. This increase in water elevation results in the flow area increasing and the velocity decreasing as we move upstream. This would result in less energy loss in the upstream baffles. To remedy this situation and increase the strength of the tank, set the port height to be equal to the target width of the flow so that a beam extends over the top of the port. We don’t know if this contraction will be exactly what is needed, but it should be close. This is an example where some computational fluid dynamics would be great to check if this solution behaves as we expect.</p></li>
+<li><p>The water elevation in a flocculator is controlled by the water elevation in the downstream clarifier because we can’t have a sudden decrease in water elevation (a waterfall!) because that would break up the flocs. The water depth increases as we move upstream in the flocculator because potential energy is being lost to heat as the water is being deformed. This increase in water elevation results in the flow area increasing and the velocity decreasing as we move upstream. This would result in less energy loss in the upstream baffles. To remedy this situation and increase the strength of the tank, set the port height to be equal to the target width of the flow so that a beam extends over the top of the port. We don’t know if this contraction will be exactly what is needed, but it should be close. This is an example where some computational fluid dynamics would be great to check if this solution behaves as we expect.</p></li>
 <li><dl class="simple">
 <dt>FS: Design two drains for the flocculator tank. These drains will work together to drain the tank in the specified time (design.drainTI).</dt><dd><ol class="arabic simple">
 <li><p>Create a drain function (same inputs and outputs as the flowDimension function) that you call from the HHflocPreDesigner. (Done)</p></li>

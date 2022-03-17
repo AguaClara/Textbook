@@ -29,7 +29,7 @@ The assumption that what is written and passed down in oral history through the 
 
 You might wonder why we care so much about getting the science right and being as clear as possible about what is known. After all, the core drinking water treatment technologies were invented before we were born and many of us have safe drinking water coming from our taps. Environmental Engineers have known how to design municipal drinking water treatment plants since they early 1900's. We care about getting the science right because we hypothesize that there are many opportunities to significantly improve drinking water treatment technologies and that improved understandings of each unit process have the potential to lead to new breakthroughs.
 
-Our contention is that no one has ever optimized the design of a drinking water treatment plant! We are reasonably certain of this because we don't yet have models (with equations) that describe performance of most of the core unit processes (rapid mix, flocculation, floc filters, sedimentation, sand filtration) used for surface water treatment. The only possible exception is lamellar sedimentation which can be characterized if we know the size and density distribution of the particles entering the sedimentation tank.
+Our contention is that no one has ever optimized the design of a drinking water treatment plant! We are reasonably certain of this because we don't yet have models (with equations) that describe performance of most of the core unit processes (rapid mix, flocculation, floc filters, plate settlers, sand filtration) used for surface water treatment. The only possible exception is plate settlers which can be characterized if we know the size and density distribution of the particles.
 
 Traditional drinking water treatment textbooks can too easily miss the opportunity to advance the science of drinking water treatment technologies by presenting certainty where there should be skepticism. For example, rapid mix is described as process that occurs in a few seconds, flocculation is described as a process that should be fastest for high turbidity waters and slowest for low turbidity waters, and filtration performance is described by a model that predicts first order removal with respect to filter bed depth. We will demonstrate why each of these assumptions doesn't match observations, we will discuss new insights into these processes, and we will identify high priority research questions that have the potential to lead to major improvements in drinking water treatment.
 
@@ -95,7 +95,7 @@ Love-based leaders relate to others based on true respect for the other. They wi
 
 As water treatment plant designers it is critical that we spend time with a diverse set of stakeholders including community members and water treatment plant operators. Those relationships must begin with respect and valuing their insights. As we spend time together we can develop trust so that they communicate both the good and bad.
 
-We've learned much from plant operators. They figured out how to reduce rising flocs at Agalteca, Honduras where we learned that conventional sedimentation tank inlet manifolds generate large circulation currents. Plant operators added curtains to the windows at Moroceli, Honduras (see :numref:`figure_Moroceli_curtains`) because they noticed that direct sunlight on the sedimentation tanks caused an increase in settled water turbidity.
+We've learned much from plant operators. They figured out how to reduce rising flocs at Agalteca, Honduras where we learned that conventional clarifier inlet manifolds generate large circulation currents. Plant operators added curtains to the windows at Moroceli, Honduras (see :numref:`figure_Moroceli_curtains`) because they noticed that direct sunlight on the clarifiers caused an increase in settled water turbidity.
 
 .. _figure_Moroceli_curtains:
 
@@ -104,7 +104,7 @@ We've learned much from plant operators. They figured out how to reduce rising f
     :align: center
     :alt: Moroceli curtains
 
-    Moroceli AguaClara water treatment plant operators installed curtains to reduce direct sunshine on sedimentation tanks. Solar heating produces density currents that carry flocs to the top of the sedimentation tank.
+    Moroceli AguaClara water treatment plant operators installed curtains to reduce direct sunshine on clarifiers. Solar heating produces density currents that carry flocs to the top of the clarifier.
 
 Empathy is fundamental in design. Empathy enables us to consider reality from another's perspective. Empathy enables us to bring the people who will use or benefit from a technology into the design considerations. Empathy brings the insight that water treatment plants need to have roofs and provide a secure work environment both day and night. Empathy brings the insight that replacement parts must be readily available and that generic components are preferred over specialty proprietary components.
 
@@ -257,7 +257,7 @@ Treatment Trains
 
    Simple sedimentation, particles settle, none, public, unknown
    Flocculation, aluminum and iron salts, none, public, `1757 <https://www.iwapublishing.com/news/coagulation-and-flocculation-water-and-wastewater-treatment>`_
-   Sedimentation, horizontal flow, flocculation, public, unknown
+   Clarification, horizontal flow, flocculation, public, unknown
    Lamellar sedimentation, plate or tube settlers, flocculation or floc filter, public, `1904 <https://smartwatermagazine.com/blogs/karl-uwe-schmitz/tube-settler-design-basics-solid-settling-lamella-clarifiers>`_
    Roughing filter, simple sedimentation in a gravel bed, none, public, `unknown <https://www.researchgate.net/publication/237827490_Roughing_filter_for_water_pre-treatment_technology_in_developing_countries_A_review?enrichId=rgreq-bb1d04e6613378d626c78cadb6674ae8&enrichSource=Y292ZXJQYWdlOzIzNzgyNzQ5MDtBUzoyMDAwMDczMDQxMjY0NjdAMTQyNDY5Njg2NTYxMQ%3D%3D&el=1_x_2>`_
    Slow sand filtration, Roughing filter or single step treatment for low NTU water, none, public, `1829 <https://en.wikipedia.org/wiki/Slow_sand_filter>`_
@@ -317,15 +317,15 @@ The terminal velocities of particles in surface waters range over many orders of
 
     The terminal velocity of a 1 :math:`\mu m` bacteria cell is approximately 20 nanometers per second. The terminal velocity of a 5 :math:`\mu m` clay particles is 30 :math:`\mu m/s`. The velocity estimates for the faster settling particles may be too slow because those particles are transitioning to turbulent flow.
 
-The low terminal velocities of particles that we need to remove from surface waters reveals that sedimentation alone will not work. The time required for a small particle to settle even a few mm would require excessively large sedimentation tanks. This is why flocculation, the process of sticking particles together so that they can attain higher sedimentation velocities, is perhaps the most important unit process in surface water treatment plants.
+The low terminal velocities of particles that we need to remove from surface waters reveals that sedimentation alone will not work. The time required for a small particle to settle even a few mm would require excessively large clarifiers. This is why flocculation, the process of sticking particles together so that they can attain higher terminal velocities, is perhaps the most important unit process in surface water treatment plants.
 
 The AguaClara treatment train consists of the following processes
  - flow measurement
- - metering of the coagulant (and chlorine) that will cause particles to stick together
+ - metering of the coagulant that will cause particles to stick together
  - mixing of the coagulant with the raw water
  - flocculation where the water is deformed to cause particle collisions
  - floc filter where large flocs settle through water that is flowing upward causing collisions between small particles carried by the upward flowing water and the large flocs
- - lamellar sedimentation where gravity causes particles to settle to an inclined plate and then slide back down into the floc filter
+ - plate settlers (lamellar sedimentation) where gravity causes particles to settle to an inclined plate and then slide back down into the floc filter
  - stacked rapid sand filtration where particles collide with previously deposited particles in a sand filter bed
  - disinfection with chlorine to inactivate any pathogens that escaped the previous unit processes
 
@@ -417,12 +417,12 @@ An example of design for the operator is the elevation of the walkways in AguaCl
 
 .. _figure:
 
-.. figure:: ../Images/Improvised_ladder_access_to_sed_tank.jpg
+.. figure:: ../Images/Improvised_ladder_access_to_clarifier.jpg
     :width: 300px
     :align: center
     :alt: Improvised ladder access to sed tank
 
-    A plant operator built a makeshift ladder to enable easier access to the flocculation and sedimentation tanks in a package plant. This ladder considerably shortened the distance between the coagulant dose controls and the flocculator. The ladder also makes it possible to look closely at the water to see the size of the flocs.
+    A plant operator built a makeshift ladder to enable easier access to the flocculation and clarifiers in a package plant. This ladder considerably shortened the distance between the coagulant dose controls and the flocculator. The ladder also makes it possible to look closely at the water to see the size of the flocs.
 
 .. _heading_Design_Bifurcations:
 
@@ -436,32 +436,32 @@ Seemingly small decisions can have a profound effect on the evolution of design.
 Walls and a Roof
 ----------------
 
-Traditionally in tropical and temperate climates, flocculation and sedimentation units are built without an enclosing building because they aren't in danger of freezing. Without protection from the sun the materials used for plant construction must be UV resistant and thus plastic can't be used. This requires use of heavier and more expensive materials such stainless steel and aluminum. Metal plate settlers are heavy and thus they can't be easily removed by the plant operator.
+Traditionally in tropical and temperate climates, flocculators and clarifiers are built without an enclosing building because they aren't in danger of freezing. Without protection from the sun the materials used for plant construction must be UV resistant and thus plastic can't be used. This requires use of heavier and more expensive materials such stainless steel and aluminum. Metal plate settlers are heavy and thus they can't be easily removed by the plant operator.
 
-Without the ability to gain access to a sedimentation tank from above, conventional sedimentation tank cleaning must be done by providing operator access below the plate settlers. This in turn requires that the space below the plate settlers be tall enough to accommodate a plant operator. Thus sedimentation tanks that are built in the open have to be deeper than sedimentation tanks that are built under a roof and they are more difficult to maintain because the operator has to enter the tank through a waterproof access port. Operator access to the space below the stainless steel or aluminum plate settlers is through a port in the side of the tank (see the video :numref:`figure_Cleaning_a_Sed_Tank_with_fixed_plates`).
+Without the ability to gain access to a clarifier from above, conventional clarifier cleaning must be done by providing operator access below the plate settlers. This in turn requires that the space below the plate settlers be tall enough to accommodate a plant operator. Thus clarifiers that are built in the open have to be deeper than clarifiers that are built under a roof and they are more difficult to maintain because the operator has to enter the tank through a waterproof access port. Operator access to the space below the stainless steel or aluminum plate settlers is through a port in the side of the tank (see the video :numref:`figure_Cleaning_a_Clarifier_with_fixed_plates`).
 
 
-.. _figure_Cleaning_a_Sed_Tank_with_fixed_plates:
+.. _figure_Cleaning_a_Clarifier_with_fixed_plates:
 
 .. figure:: http://img.youtube.com/vi/TSh-ZNqaW8Y/0.jpg
     :width: 300px
     :align: center
-    :alt: Cleaning a Sed Tank with fixed plates
+    :alt: Cleaning a clarifier with fixed plates
     :target: http://www.youtube.com/watch?v=TSh-ZNqaW8Y
 
-    Plant operators opening hatch below plate settlers in a traditional sedimentation tank.
+    Plant operators opening hatch below plate settlers in a traditional clarifier.
 
-AguaClara sedimentation tanks are designed to be taken off line one at a time so the water treatment plant can continue to operate during maintenance. Two plant operators can quickly open a sedimentation tank by removing the plastic plate settlers (see the video :numref:`figure_Removing_Plate_Settlers`). The zero settled sludge design of the AguaClara sedimentation tanks also reduces the need for cleaning.
+AguaClara clarifiers are designed to be taken off line one at a time so the water treatment plant can continue to operate during maintenance. Two plant operators can quickly open a clarifier by removing the plastic plate settlers (see the video :numref:`figure_Removing_Plate_Settlers`). The zero settled sludge design of the AguaClara clarifiers also reduces the need for cleaning.
 
 .. _figure_Removing_Plate_Settlers:
 
 .. figure:: http://img.youtube.com/vi/vZ2f6mduEls/0.jpg
     :width: 300px
     :align: center
-    :alt: Removing Plate Settlers from an AguaClara Sedimentation tank
+    :alt: Removing Plate Settlers from an AguaClara Clarification tank
     :target: http://www.youtube.com/watch?v=vZ2f6mduEls
 
-    Plant operator removing plate settlers from an AguaClara sedimentation tank.
+    Plant operator removing plate settlers from an AguaClara clarifier.
 
 
 
@@ -478,7 +478,7 @@ Dramatically different designs are also created when we choose gravity power and
 
 Automated plants often move the controls far away from the critical observation locations in the plant. This might be appropriate or necessary in some cases, but it has the disadvantage of making it more difficult for operators to directly observe what is happening in the plant. Direct observations are critical because even highly mechanized water treatment plants are not yet equipped with enough sensors to enable rapid troubleshooting from the control room.
 
-AguaClara plants have a layout that places the coagulant dose controls within a few steps of the best places to observe floc formation in the flocculator. This provides plant operators with rapid feedback that is critical when the raw water changes rapidly at the beginning of a high runoff event. As operators spend time observing the processes in the plant they begin to associate cause and effect and can make operational changes to improve performance. For example, gas bubbles that carry flocs to the surface can indicate sludge accumulation in a sedimentation tank. Rising flocs without gas bubbles can indicate a poor inlet flow distribution for a sedimentation tank or density differences caused by temperature differences.
+AguaClara plants have a layout that places the coagulant dose controls within a few steps of the best places to observe floc formation in the flocculator. This provides plant operators with rapid feedback that is critical when the raw water changes rapidly at the beginning of a high runoff event. As operators spend time observing the processes in the plant they begin to associate cause and effect and can make operational changes to improve performance. For example, gas bubbles that carry flocs to the surface can indicate sludge accumulation in a clarifier. Rising flocs without gas bubbles can indicate a poor inlet flow distribution for a clarifier or density differences caused by temperature differences.
 
 .. todo:: Show the plan view of an AguaClara plant.
 
@@ -505,5 +505,5 @@ The following list is designed to get you thinking. These are concepts that are 
  - Chlorine disinfects dirty water and makes it safe to drink
  - Chlorination and filtration eliminated typhoid fever from the US
  - Cessation of chlorination due to fear of disinfection by products caused the cholera outbreak in Peru in 1993
- - Sedimentation is simple
+ - Clarification is simple
  - We already know how to solve the problem of the billions of people who do not having access to safe drinking water

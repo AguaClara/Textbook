@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Fluid Deformation and Energy Dissipation Derivations &mdash; AguaClara Textbook v1.3.4 documentation</title>
+  <title>Fluid Deformation and Energy Dissipation Derivations &mdash; AguaClara Textbook v1.3.5 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.4
+                v1.3.5
               </div>
             
           
@@ -179,14 +179,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Sedimentation</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Deriviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Challenge.html">Sedimentation Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarification Deriviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
@@ -520,7 +520,7 @@ Thus we have</p>
 </div>
 <div class="section" id="parallel-plates-laminar">
 <span id="heading-parallel-plates-laminar"></span><h3>Parallel Plates Laminar<a class="headerlink" href="#parallel-plates-laminar" title="Permalink to this headline">¶</a></h3>
-<p>Flow between parallel plates occurs in plate settlers in the sedimentation tank. We will derive the velocity gradient at the wall using the Navier Stokes equation.</p>
+<p>Flow between parallel plates occurs in plate settlers in the clarifier. We will derive the velocity gradient at the wall using the Navier Stokes equation.</p>
 <div class="figure align-center" id="id12">
 <span id="figure-parallel-plate-schematic"></span><a class="reference internal image-reference" href="../_images/Parallel_Plate_schematic.png"><img alt="Parallel plate schematic" src="../_images/Parallel_Plate_schematic.png" style="width: 700px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">A fluid flowing from left to right due to a pressure gradient results in wall shear on the parallel plates. This flow profile is for the case when the pressure gradient is negative.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
@@ -786,7 +786,7 @@ to obtain</p>
 <div class="section" id="plane-jet">
 <span id="heading-plane-jet"></span><h3>Plane Jet<a class="headerlink" href="#plane-jet" title="Permalink to this headline">¶</a></h3>
 <p>..note:: need images for jets. add drawings that define dimensions. add description of hydraulic residence time. Define Sjet. Add more text describing what the equations are doing.</p>
-<p>Plane jets occur in the sedimentation tank inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by <a class="reference external" href="http://dx.doi.org/10.1115/1.3627309">Heskestad in 1965</a> and it may be possible to use that data to get a better estimate of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> from that source. An alternate estimate of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> can be obtained by postulating that the rate of energy dissipation is proportional to the ratio of the circumference of the jet normalized by the jet area. The postulate is based on the insight that the jet is experiencing shear with the surrounding fluid around its perimeter. For a plane jet the ratio of the circumference of the jet to the jet area is</p>
+<p>Plane jets occur in the clarifier inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by <a class="reference external" href="http://dx.doi.org/10.1115/1.3627309">Heskestad in 1965</a> and it may be possible to use that data to get a better estimate of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> from that source. An alternate estimate of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> can be obtained by postulating that the rate of energy dissipation is proportional to the ratio of the circumference of the jet normalized by the jet area. The postulate is based on the insight that the jet is experiencing shear with the surrounding fluid around its perimeter. For a plane jet the ratio of the circumference of the jet to the jet area is</p>
 <div class="math notranslate nohighlight" id="equation-p-a-ratio-for-plane-jet">
 <span class="eqno">(208)<a class="headerlink" href="#equation-p-a-ratio-for-plane-jet" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} \propto  \frac{2L}{SL} = \frac{2}{S}\]</div>
 <p>where L is the length of the plane jet, and S is the jet thickness at the jet origin. For a round jet we have</p>

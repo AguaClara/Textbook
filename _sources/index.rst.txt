@@ -99,15 +99,15 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Flocculation/Floc_Design_Solution.rst
 
 .. toctree::
-  :caption: Chapter 8: Sedimentation
+  :caption: Chapter 8: Clarification
   :maxdepth: 1
 
-  Sedimentation/Sed_Intro.rst
-  Sedimentation/Sed_Derivations.rst
-  Sedimentation/Sed_Design.rst
-  Sedimentation/Sed_Design_Challenge.rst
-  Sedimentation/Sed_Theory_and_Future_Work.rst
-  Sedimentation/Sed_Examples.rst
+  Clarification/Clarifier_Intro.rst
+  Clarification/Clarifier_Derivations.rst
+  Clarification/Clarifier_Design.rst
+  Clarification/Clarifier_Design_Challenge.rst
+  Clarification/Clarifier_Theory_and_Future_Work.rst
+  Clarification/Clarifier_Examples.rst
 
 .. toctree::
   :caption: Chapter 9: Filtration

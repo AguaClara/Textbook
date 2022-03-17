@@ -157,10 +157,10 @@ See :numref:`figure_mountain` for a typical mountain view.
 .. figure:: http://img.youtube.com/vi/vZ2f6mduEls/0.jpg
     :width: 300px
     :align: center
-    :alt: Removing Plate Settlers from an AguaClara Sedimentation tank
+    :alt: Removing Plate Settlers from an AguaClara Clarification tank
     :target: http://www.youtube.com/watch?v=vZ2f6mduEls
 
-    Plant operator removing plate settlers from an AguaClara sedimentation tank.
+    Plant operator removing plate settlers from an AguaClara clarifier.
 
 .. _heading_math_and_equations:
 
