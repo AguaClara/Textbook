@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Flocculation Design &mdash; AguaClara Textbook 279/merge documentation</title>
+  <title>Flocculation Design &mdash; AguaClara Textbook 280/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                279/merge
+                280/merge
               </div>
             
           
@@ -173,14 +173,14 @@
 <li class="toctree-l1"><a class="reference internal" href="Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Sedimentation</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Deriviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Challenge.html">Sedimentation Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarification Deriviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
@@ -310,7 +310,7 @@
 - <span class="math notranslate nohighlight">\(G_{CS} \theta\)</span>, collision potential at the coldest operating temperature
 - <span class="math notranslate nohighlight">\(Q\)</span>, plant flow rate
 - <span class="math notranslate nohighlight">\(H\)</span>, height of water <em>at the end of the flocculator</em>
-- <span class="math notranslate nohighlight">\(L_{Max, \, sed}\)</span>, max length of a flocculator channel based on sedimentation tank length
+- <span class="math notranslate nohighlight">\(L_{Max, \, sed}\)</span>, max length of a flocculator channel based on clarifier length
 - <span class="math notranslate nohighlight">\(W_{Min, \, human}\)</span> minimum width of a single channel based on the width of the average human hip (someone’s got to go down there…)</p></li>
 <li><p>Find:
 - <span class="math notranslate nohighlight">\(\theta\)</span>, hydraulic retention time
@@ -352,7 +352,7 @@
 <li><p><span class="math notranslate nohighlight">\(G_{CS} \theta = 37,000\)</span></p></li>
 </ul>
 </div></blockquote>
-<p>The plant flow rate <span class="math notranslate nohighlight">\(Q\)</span> is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water <em>at the end</em> of the flocculator, <span class="math notranslate nohighlight">\(H\)</span>, the <em>maximum</em> length of the flocculator based on the length of the sedimentation tank length, <span class="math notranslate nohighlight">\(L_{Max, \, sed}\)</span>, and the <em>minimum</em> width of a flocculator channel required for a human to fit inside, <span class="math notranslate nohighlight">\(W_{Min, \, human}\)</span>, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the sedimentation tanks, which is why the length constraint exists. See <a class="reference internal" href="#figure-physical-design-criteria-floc"><span class="std std-numref">Fig. 134</span></a> for a representation of how the flocculator and sedimentation tanks are placed in a plant.</p>
+<p>The plant flow rate <span class="math notranslate nohighlight">\(Q\)</span> is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water <em>at the end</em> of the flocculator, <span class="math notranslate nohighlight">\(H\)</span>, the <em>maximum</em> length of the flocculator based on the length of the clarifier length, <span class="math notranslate nohighlight">\(L_{Max, \, sed}\)</span>, and the <em>minimum</em> width of a flocculator channel required for a human to fit inside, <span class="math notranslate nohighlight">\(W_{Min, \, human}\)</span>, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the clarifiers, which is why the length constraint exists. See <a class="reference internal" href="#figure-physical-design-criteria-floc"><span class="std std-numref">Fig. 134</span></a> for a representation of how the flocculator and clarifiers are placed in a plant.</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(H = 2 \, {\rm m}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(L_{Max, \, sed} = 6 \, {\rm m}\)</span></p></li>
@@ -360,14 +360,14 @@
 </ul>
 <div class="figure align-center" id="id39">
 <span id="figure-physical-design-criteria-floc"></span><a class="reference internal image-reference" href="../_images/Physical_design_criteria.jpg"><img alt="physical design criteria" src="../_images/Physical_design_criteria.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 134 </span><span class="caption-text">Layout of flocculator and sedimentation tanks that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 134 </span><span class="caption-text">Layout of flocculator and clarifiers that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="physical-dimensions">
 <h3>Physical Dimensions<a class="headerlink" href="#physical-dimensions" title="Permalink to this headline">¶</a></h3>
 <p>Deriving the equations required to find the physical dimensions now and the hydraulic parameters (baffle/obstacle design) in the next section requires many steps. To simplify this design explanation the equation derivations are developed in <a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html#title-review-fluid-mechanics-derivations"><span class="std std-ref">Fluid Mechanics Derivations</span></a>. All complex equations which seemingly came out of nowhere will be derived in the derivation sheet.</p>
 <div class="section" id="length">
 <h4>Length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h4>
-<p>Flocculator length, <span class="math notranslate nohighlight">\(L_{channel}\)</span> must meet two constraints: it must be less than or equal to the length of the sedimentation tanks, as the flocculator is adjacent to the sed tanks. This constraint is <span class="math notranslate nohighlight">\(L_{Max, \, sed}\)</span>. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside <span class="math notranslate nohighlight">\(L_{Max, \, \rlap{-} V}\)</span>. <strong>The constraint that wins out is the one that results in the *smaller* length value</strong>.</p>
+<p>Flocculator length, <span class="math notranslate nohighlight">\(L_{channel}\)</span> must meet two constraints: it must be less than or equal to the length of the clarifiers, as the flocculator is adjacent to the sed tanks. This constraint is <span class="math notranslate nohighlight">\(L_{Max, \, sed}\)</span>. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside <span class="math notranslate nohighlight">\(L_{Max, \, \rlap{-} V}\)</span>. <strong>The constraint that wins out is the one that results in the *smaller* length value</strong>.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-1">
 <span class="eqno">(505)<a class="headerlink" href="#equation-flocculation-floc-design-1" title="Permalink to this equation">¶</a></span>\[L_{Max, \, sed} = 6 \, {\rm m}
 L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human} H}\]</div>
@@ -375,7 +375,7 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(n_{Min, \, channels} = 2\)</span></div>
 </div>
-<p>The reason why <span class="math notranslate nohighlight">\(W_{Min, \, human}\)</span> is used is because it represents the absolute minimum of flocculator channel width. If the width ends up being larger, the length will decrease. <span class="math notranslate nohighlight">\(n_{Min, \, channels} = 2\)</span>  to make sure that the flow ends up on the correct side of the sedimentation tank, as the image below shows. Note that there can only be an even number of flocculator channels, as explained in the image’s caption.</p>
+<p>The reason why <span class="math notranslate nohighlight">\(W_{Min, \, human}\)</span> is used is because it represents the absolute minimum of flocculator channel width. If the width ends up being larger, the length will decrease. <span class="math notranslate nohighlight">\(n_{Min, \, channels} = 2\)</span>  to make sure that the flow ends up on the correct side of the clarifier, as the image below shows. Note that there can only be an even number of flocculator channels, as explained in the image’s caption.</p>
 <p>The equation for <em>actual</em> flocculator length is therefore:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-2">
 <span class="eqno">(506)<a class="headerlink" href="#equation-flocculation-floc-design-2" title="Permalink to this equation">¶</a></span>\[L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \rlap{-} V})\]</div>
@@ -455,7 +455,7 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <p>We then compare <span class="math notranslate nohighlight">\(n_{spaces, \, required}\)</span> to <span class="math notranslate nohighlight">\(n_{spaces, \, actual}\)</span> to make sure that they are equal.</p>
 <div class="section" id="average-velocity">
 <h4>Average Velocity<a class="headerlink" href="#average-velocity" title="Permalink to this headline">¶</a></h4>
-<p>As water flows through the flocculators, the flocs will get larger and larger. As a result, their terminal sedimentation velocity will increase. This is what we want. However, we need to make sure that the flocs don’t settle in the flocculator; that they instead all settle in the sedimentation tank. To make sure of this, we need to make sure that the velocity of water in the flocculator is high enough to scour any flocs that fall to the bottom of the flocculator. The velocity required to scour flocs from the bottom and avoid floc accumulation is around <span class="math notranslate nohighlight">\(v_{scour} = 15 \, {\rm \frac{cm}{s}}\)</span>. We can check our average velocity <span class="math notranslate nohighlight">\(\bar v\)</span> against this value. Unfortunately, the only method to increase the velocity through the flocculator is to increase the space between baffles, S, and decrease the channel width, W. Generally those changes aren’t practical and thus there isn’t any way to increase the velocity.</p>
+<p>As water flows through the flocculators, the flocs will get larger and larger. As a result, their terminal velocity will increase. This is what we want. However, we need to make sure that the flocs don’t settle in the flocculator; that they instead all settle in the clarifier. To make sure of this, we need to make sure that the velocity of water in the flocculator is high enough to scour any flocs that fall to the bottom of the flocculator. The velocity required to scour flocs from the bottom and avoid floc accumulation is around <span class="math notranslate nohighlight">\(v_{scour} = 15 \, {\rm \frac{cm}{s}}\)</span>. We can check our average velocity <span class="math notranslate nohighlight">\(\bar v\)</span> against this value. Unfortunately, the only method to increase the velocity through the flocculator is to increase the space between baffles, S, and decrease the channel width, W. Generally those changes aren’t practical and thus there isn’t any way to increase the velocity.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-10">
 <span class="eqno">(520)<a class="headerlink" href="#equation-flocculation-floc-design-10" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{W_{channel} S}\]</div>
 </div>

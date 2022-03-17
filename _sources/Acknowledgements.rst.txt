@@ -22,10 +22,10 @@ This material is based upon work supported by the National Science Foundation un
      :widths: 30, 150
      :align: left
 
-      "NSF","Wrf: Experimental Observation and Modeling of Coagulant Mediated Contaminant Removal: Flocculation, Floc Blankets, and Sedimentation"
+      "NSF","Wrf: Experimental Observation and Modeling of Coagulant Mediated Contaminant Removal: Flocculation, Floc Blankets, and Clarification"
       "USEPA","AguaClara's Ram Pump for Zero Electricity Drinking Water Treatment"
       "USEPA","Environment & Community Friendly Wastewater Treatment"
-      "USEPA","High Rate Sedimentation"
+      "USEPA","High Rate Clarification"
       "USEPA","Novel Reactor Design for Enhanced Removal of Fluoride Using A Modified Nalgonda Method"
       "USEPA","Novel Reactor Design for Enhanced Removal of Fluoride Using A Modified Nalgonda Method"
       "NSF","Experimental Evaluation And Modeling Of Hydraulic Flocculation Systems Under Conditions of Turbulent Flow"

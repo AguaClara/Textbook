@@ -35,7 +35,7 @@ This table for mechanical flocculators is taken from Sincero and Sincero’s 199
 | removal     |             |             |             |             |
 +-------------+-------------+-------------+-------------+-------------+
 
-Dissolved organic matter impacts the color of the water. Perhaps the reason for lower G values for color removal is because flocs created from dissolved organic matter are weaker or less dense. Hence, a lower G is needed to allow them to grow large enough for removal in the sedimentation tank.
+Dissolved organic matter impacts the color of the water. Perhaps the reason for lower G values for color removal is because flocs created from dissolved organic matter are weaker or less dense. Hence, a lower G is needed to allow them to grow large enough for removal in the clarifier.
 
 Mechanical Flocculator Design
 =============================
@@ -66,7 +66,7 @@ The power requirement is 0.57 kW
 
 Fun Fact: although the design guidelines would logically predict that the power requirements are higher for cold water, there is little evidence that mechanical flocculator plants actually increase the power input to their flocculators when the water is cold.
 
-**4) We hypothesize** that the maximum energy dissipation rate in a flocculator determines the size of the flocs, and those flocs may or may not be captured by the sedimentation tank. Sedimentation tank performance will deteriorate if the maximum energy dissipation rate results in flocs that are so small that their sedimentation velocity is lower than the capture velocity of the sedimentation tank. This likely occurs for very high maximum energy dissipation rates. Mechanical flocculators have traditionally been designed without insight into the variability of the energy dissipation rate and the need to keep the maximum energy dissipation rate low enough to prevent the creation of flocs that will avoid capture by the sedimentation tanks. At the same time, the traditional standards likely evolved to produce designs that were at least reasonable even in the absence of an understanding of the fluid mechanics of the mixing process.
+**4) We hypothesize** that the maximum energy dissipation rate in a flocculator determines the size of the flocs, and those flocs may or may not be captured by the clarifier. Clarification tank performance will deteriorate if the maximum energy dissipation rate results in flocs that are so small that their terminal velocity is lower than the capture velocity of the clarifier. This likely occurs for very high maximum energy dissipation rates. Mechanical flocculators have traditionally been designed without insight into the variability of the energy dissipation rate and the need to keep the maximum energy dissipation rate low enough to prevent the creation of flocs that will avoid capture by the clarifiers. At the same time, the traditional standards likely evolved to produce designs that were at least reasonable even in the absence of an understanding of the fluid mechanics of the mixing process.
 
 According to the Ten State Standards, “Agitators (Flocculators) shall be driven by variable speed drives with the peripheral speed of paddles ranging from 0.5 to 3.0 feet per second.” Note that they do not specify the size of the propeller and yet that is a critical dimension that determines the energy dissipation rate in the wake of the spinning propeller.
 
@@ -93,13 +93,13 @@ SOLUTION NOTE: this information is found on extra slide 48 in the Flocculator De
 
 High ratios of Max/Ave for velocity gradients (and therefore also energy dissipation rates) are common in both mechanical and hydraulic flocculators. A high velocity gradient ratio is a poor design for two reasons. - This high Max/Ave G results in significant inefficiency in the use of energy for flocculation. This inefficiency requires longer residence times and/or more energy input to achieve the same extent of flocculation.
 
-The high energy dissipation rate in the propeller wake limits the amount of energy that can be dissipated without causing excessive floc breakup. Excessive floc breakup produces flocs that are too small to be captured by the sedimentation tank.
+The high energy dissipation rate in the propeller wake limits the amount of energy that can be dissipated without causing excessive floc breakup. Excessive floc breakup produces flocs that are too small to be captured by the clarifier.
 
-We hypothesize that the maximum G values specified for mechanical flocculators were likely set by the constraint of not breaking flocs into small sizes. Sedimentation velocity needs to be less than capture velocity for a floc to settle - the smallest floc that will settle is referred to as the threshold floc because that is the smallest size we want to make. Because well-designed hydraulic flocculators have more uniform shear rates (as compared to mechanical flocculators), hydraulic flocculators are less likely to break up flocs. Therefore, the average G values specified for mechanical flocculators are not expected to apply to well designed hydraulic flocculators.
+We hypothesize that the maximum G values specified for mechanical flocculators were likely set by the constraint of not breaking flocs into small sizes. Clarification velocity needs to be less than capture velocity for a floc to settle - the smallest floc that will settle is referred to as the threshold floc because that is the smallest size we want to make. Because well-designed hydraulic flocculators have more uniform shear rates (as compared to mechanical flocculators), hydraulic flocculators are less likely to break up flocs. Therefore, the average G values specified for mechanical flocculators are not expected to apply to well designed hydraulic flocculators.
 
-The high energy dissipation rates at the tip of a propeller in a flocculator may be high enough to create flocs that are too small to be captured by the sedimentation tanks. We will determine if the sedimentation tank could capture these flocs in the analysis below.
+The high energy dissipation rates at the tip of a propeller in a flocculator may be high enough to create flocs that are too small to be captured by the clarifiers. We will determine if the clarifier could capture these flocs in the analysis below.
 
-These results also suggest that the traditional emphasis on maintaining the same or lesser G value for the transport of flocculated water to the sedimentation tank may have missed the more important point of not exceeding a value of G that produces flocs that are too small to be captured by the sedimentation tank.
+These results also suggest that the traditional emphasis on maintaining the same or lesser G value for the transport of flocculated water to the clarifier may have missed the more important point of not exceeding a value of G that produces flocs that are too small to be captured by the clarifier.
 
 **6) A mechanical flocculator** is treating high turbidity water, and therefore is using an average G value of 180 Hz.
 
@@ -143,7 +143,7 @@ The shaft power required is 0.57 kilowatt
 The required reactor volume for the mechanical flocculator is 90.0 meter ** 3
 
 
-**11) If this flocculator** is 4 m deep, then how many square meters of plan view area are required per L/s of flow capacity? This is a measure of required size of this unit process. For comparison, an AguaClara sedimentation tank requires about :math:`\frac{1m^{2}}{L/s}` and are only 2 m deep.
+**11) If this flocculator** is 4 m deep, then how many square meters of plan view area are required per L/s of flow capacity? This is a measure of required size of this unit process. For comparison, an AguaClara clarifier requires about :math:`\frac{1m^{2}}{L/s}` and are only 2 m deep.
 
 `Find plan view area <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=lxq0-ITCx5hW&line=2&uniqifier=1>`_
 

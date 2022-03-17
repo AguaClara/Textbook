@@ -139,7 +139,7 @@ The filter was run for 14.25 hour
 
 The total volume of pores is 480 liter / meter ** 2
 
-`20) The next step is to estimate the volume** of flocs per plan view area of the filter. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=1kFJ_GoDltxm>`_ Assume the density of the flocs being captured by the filter are approximated by the density of flocs that have a sedimentation velocity of 0.10 mm/s (slightly less than the capture velocity of the plate settlers). (see slides in flocculation notes for size of the floc and then density of that floc. `This value is provided here to simplify the analysis <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=5QW7qgdHlw26&line=1&uniqifier=1>`_
+`20) The next step is to estimate the volume** of flocs per plan view area of the filter. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=1kFJ_GoDltxm>`_ Assume the density of the flocs being captured by the filter are approximated by the density of flocs that have a terminal velocity of 0.10 mm/s (slightly less than the capture velocity of the plate settlers). (see slides in flocculation notes for size of the floc and then density of that floc. `This value is provided here to simplify the analysis <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=5QW7qgdHlw26&line=1&uniqifier=1>`_
 
 Given the floc density, calculate fraction of floc volume that is clay.
 

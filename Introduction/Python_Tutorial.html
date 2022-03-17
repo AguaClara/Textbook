@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Python Tutorial &mdash; AguaClara Textbook 279/merge documentation</title>
+  <title>Python Tutorial &mdash; AguaClara Textbook 280/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                279/merge
+                280/merge
               </div>
             
           
@@ -151,14 +151,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Sedimentation</span></p>
+<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Intro.html">Sedimentation Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Derivations.html">Sedimentation Deriviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design.html">Sedimentation Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Design_Challenge.html">Sedimentation Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Theory_and_Future_Work.html">Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Sedimentation/Sed_Examples.html">Sedimentation Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarification Deriviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
@@ -417,7 +417,7 @@ can do the following import inspect inspect.getsource(foo)</p>
 <h2>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h2>
 <p>Engineering requires calculations with units. Prior to modern computer languages engineers used paper and pencil, slide rules, calculators, and more recently spreadsheets to do calculations. All of these methods are prone to calculation errors because units aren’t handled as an essential part of each value. Spreadsheets are especially notorious for calculation errors because unit conversions are buried in formulas that are hidden in the cells.</p>
 <p>Operations on values with units follow very clear algebraic rules and thus units can be attached to numerical values and carried through math operations. This capability is implemented in Python using <a class="reference external" href="https://pint.readthedocs.io/en/latest/">Pint</a> . The Pint package includes a host of units and prefixes (such as <span class="math notranslate nohighlight">\(\mu\)</span> for <span class="math notranslate nohighlight">\(10^{-6}\)</span>). As you master using Python and Pint you will say goodbye to mindless unit conversions forever!</p>
-<p>Environmental engineers historically described surface loading rates for sedimentation tanks using units of gal/min per square foot. How fast is <span class="math notranslate nohighlight">\(\frac{1 gpm}{ft^2}\)</span> in <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>?</p>
+<p>Environmental engineers historically described surface loading rates for clarifiers using units of gal/min per square foot. How fast is <span class="math notranslate nohighlight">\(\frac{1 gpm}{ft^2}\)</span> in <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">V_surface_loading_rate</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gal</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">min</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">ft</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">V_surface_loading_rate</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">ac</span><span class="o">.</span><span class="n">round_sig_figs</span><span class="p">(</span><span class="n">V_surface_loading_rate</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
