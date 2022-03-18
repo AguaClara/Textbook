@@ -7,16 +7,79 @@
 
 .. _title_Clarification_Intro:
 
-***************************************
+**************************
 Clarification Introduction
-***************************************
-
-.. _Clarification Unit Process Overview:
+**************************
 
 
-Clarification is a gravity-driven unit process in which suspended flocs are settled out from water. Large flocs made up of many primary particles and coagulant will settle if given enough time. Clarification is commonly preceded by flocculation to form flocs which will be large enough to settle in the clarifier - and is commonly followed by filtration to capture particles that passed through the clarifier. Sludge consolidation processes are often present alongside clarifiers to reduce the waste stream of settled flocs. Optimizing clarification is important because the more particles that clarifiers can remove, the fewer particles the filter will have to remove. This is good because filters can only handle a small amount of solids, and cleaning the filters with backwash uses a lot of water so we want to reduce the number of backwashes.
+AguaClara Clarifier
+===================
 
-To introduce you to clarification, we will begin with a simple example. If a jar of water filled with flocs was left at rest, flocs would begin to settle due to gravitational forces pulling them down. Large flocs would settle first, but if left for long enough, all flocs would settle to the bottom of the jar. In its most basic form, the jar represents a clarifier in which flocculated water is treated. Settled flocs are waste and the water on the top of the jar, referred to as the supernatant, is the clarified water.
+.. |empty_floc_filter| image:: ../Images/empty_floc_filter.png
+  :width: 20
+.. |full_floc_filter| image:: ../Images/full_floc_filter.png
+  :width: 20
+.. |flocculator_floc| image:: ../Images/flocculator_floc.png
+  :width: 10
+.. |small_floc| image:: ../Images/small_floc.png
+  :width: 5
+
+
+
+
+
+.. _table_clarifier_floc_types:
+
+.. csv-table:: Floc and particle types in the clarifier.
+     :header: "Symbol", "Description", Terminal velocity
+     :widths: 10, 80, 10
+
+     |small_floc|, Flocs and raw water particles that settle too slowly to be captured by the plate settlers , :math:`v_t < v_c`
+     |flocculator_floc|, Flocculator flocs that settle fast enough to be captured by the plate settlers, :math:`\bar v_{z_{ff}} > v_t > v_c`
+     |empty_floc_filter|, Floc filters that form as |flocculator_floc| slide down the plate settlers ,:math:`v_t > \bar v_{z_{ff}}`
+     |full_floc_filter|, Floc filters that no longer have capacity to capture |small_floc| , :math:`v_t > \bar v_{z_{ff}}`
+
+
+The floc interactions in the clarifier include multiple steps. The video linked to :numref:`figure_clarifier_flocs` provides the context for the following description of the processes.
+
+
+.. _figure_clarifier_flocs:
+
+.. figure:: ../Images/clarifier_with_flocs.png
+    :target: https://youtu.be/8NPCq5zCF78
+    :align: center
+    :alt: Clarifier with flocs.
+
+
+    AguaClara clarifier showing the four types of flocs and animation (click for video).
+
+The inlet manifold supplies |small_floc| that settle too slowly to be captured by the plate settlers and |flocculator_floc| that will be captured by the plate settlers. Before the floc filter forms the |small_floc| are not removed by the clarifier and exit through the outlet manifold.
+
+The |flocculator_floc| settle on the plate settlers and then eventually slide down the plates in an avalanche  `(see animation of floc aggregation on a plate settler) <https://youtu.be/jCjKz6bCD7Y>`_. As the flocs slide down they aggregate into |empty_floc_filter|. The conversion of |flocculator_floc| into |empty_floc_filter| provides the mechanism for the flocs that are captured on the plate settlers to increase their terminal velocity so that they can fall back into the bottom of the clarifier. If |flocculator_floc| didn't convert into |empty_floc_filter| there wouldn't be any way for flocs captured by the plate settlers to exit from the bottom of the plate settlers.
+
+The |empty_floc_filter| have a fractal dimension of approximately 2 and thus are very porous. A significant amount of water flows right through these porous flocs (:numref:`figure_flow_thru_floc` and  `animation of floc capture <https://youtu.be/DZdF7_Krb2s>`_). As water flows through the floc some of the |small_floc| collide with similar sized particles that are held in place inside the floc.
+
+.. _figure_flow_thru_floc:
+
+.. figure:: ../Images/flow_thru_floc.png
+    :target: https://youtu.be/DZdF7_Krb2s
+    :align: center
+    :height: 200px
+    :alt: Flow through a floc.
+
+    Streamlines go around and through a floc filter. The fraction of the flow that goes through the floc is a function of the floc porosity.
+
+
+As the floc filters, |empty_floc_filter|, capture the particles that otherwise would have escaped the clarifier, |small_floc|, the porosity of the |empty_floc_filter| decreases and less flow goes through the floc. Eventually the floc becomes loaded to capacity with |small_floc| and the resulting |full_floc_filter| is no longer able to capture any more |small_floc|.
+
+Mass conservation requires that at steady state the mass flux of solids into the clarifier match the flux of solids out of the clarifier. If the clarifier is functioning as designed and the coagulant dose is correct the majority of the incoming solids will be converted into large flocs (|empty_floc_filter| and |full_floc_filter|) and those flocs will flow over the top of the floc weir.
+
+Sedimentation and Plate Settlers
+================================
+
+Sedimentation is a gravity-driven unit process in which suspended flocs are settled out from water. Large flocs made up of many primary particles and coagulant will settle if given enough time. Clarification is commonly preceded by flocculation to form flocs which will be large enough to settle in the clarifier - and is commonly followed by filtration to capture particles that passed through the clarifier. Sludge consolidation processes are often present alongside clarifiers to reduce the waste stream of settled flocs. Optimizing clarification is important because the more particles that clarifiers can remove, the fewer particles the filter will have to remove. This is good because filters can only handle a small amount of solids, and cleaning the filters with backwash uses a lot of water so we want to reduce the number of backwashes.
+
+To introduce you to sedimentation, we will begin with a simple example. If a jar of water filled with flocs was left at rest, flocs would begin to settle due to gravitational forces pulling them down. Large flocs would settle first, but if left for long enough, all flocs would settle to the bottom of the jar. In its most basic form, the jar represents a clarifier in which flocculated water is treated. Settled flocs are waste and the water on the top of the jar, referred to as the supernatant, is the clarified water.
 
 Constraints of space, time, and cost make it important to optimize the settling process. It would not be realistic to design water treatment systems that use the basic jar-like system to settle flocs because large flow rates would require unreasonably large reactor volumes and long retention times. The goal of clarifier design is to employ geometries that promote settling and allow for fast treatment with small footprints.
 
@@ -25,8 +88,8 @@ What if we were to do the same jar experiment with raw water that did not go thr
 The three main steps that need to be accomplished for a clarifier to be successful are as follows:
 
 1) Suspended flocs need to be able to settle out of the water.
-2) Settling flocs need to be able to move from wherever they settle to a lower section of the tank.
-3) Accumulated flocs at the bottom of the tank need to be resuspended.
+1) Settling flocs need to be able to move from wherever they settle to a resuspension zone.
+1) 
 
 Clarification is ubiquitous in water treatment. Nevertheless, the process is very complex with many failure modes and there are many active research areas. The following sections will explore the state of conventional sedimentation systems and their challenges, gaps in knowledge, and the AguaClara approach to clarification.
 
@@ -39,9 +102,6 @@ To understand how clarification works, a few key concepts must first be develope
 Terminal Velocity and Capture Velocity
 ======================================
 
-Why does flocculation precede clarification?
-Which process removes the largest quantity of contaminants?
-
 Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
 
 .. math::
@@ -53,7 +113,6 @@ Sedimentation is the process of particles ‘falling’ because they have a high
 | :math:`\bar v_t` = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water
 | :math:`D_{particle}` = particle diameter
 | :math:`\rho` = density. The :math:`p` subscript stands for particle, while :math:`w` stands for water
-
 
 
 The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take care of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (Equation :eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
@@ -80,12 +139,12 @@ We will develop our definition of settle capture velocity using examples of hori
 Temperature plays an important role in sedimentation processes. Colder temperatures mean more viscous fluid; particles suspended in viscous fluid don't fall as quickly as they would in warmer, less viscous fluid. Clarification tanks don't work as well in cold temperatures as they do in warm temperatures. If the goal is for the clarifier to remove a certain size of particle, then the required capture velocity must also be a function of temperature. Keep this in mind throughout the chapter as you learn how capture velocity drives to plant design.
 
 Horizontal Flow Clarifier
-===================================
+=========================
 
 .. _figure_horizontal_flow_tank_base:
 
 .. figure:: ../Images/horizontal_flow_tank_base.png
-    :height: 300px
+    :height: 200px
     :align: center
     :alt: Horizontal flow clarifier.
 
@@ -123,7 +182,7 @@ We know that for a particle to fall to the bottom successfully, it needs to fall
 .. _figure_horizontal_flow_tank_capture:
 
 .. figure:: ../Images/horizontal_flow_tank_capture.png
-    :height: 300px
+    :height: 200px
     :align: center
     :alt: Horizontal flow clarifier with capture velocity.
 
@@ -158,21 +217,21 @@ To answer this question, think about the two extremes of our reactor.
 .. _figure_horizontal_flow_tank_small_capture:
 
 .. figure:: ../Images/horizontal_flow_tank_small_capture.png
-    :height: 300px
+    :height: 200px
     :align: center
     :alt: Horizontal flow clarifier with critical path and small particle.
 
     Horizontal flow clarifier with critical path and small particle.
 
 Vertical Flow Clarifier
-=================================
+=======================
 We will complete the same exercise for vertical flow clarifiers shown in :numref:`figure_vertical_flow_tank_base`. In vertical flow clarifiers, water flows up from the bottom of the reactor and exits near the top of the reactor.
 
 .. _figure_vertical_flow_tank_base:
 
 .. figure:: ../Images/vertical_flow_tank_base.png
-    :height: 500px
     :align: center
+    :height: 400px
     :alt: Vertical flow clarifier.
 
     Vertical flow clarifier.
@@ -236,8 +295,6 @@ There are some important differences between horizontal and vertical clarifiers.
 - vertical and horizontal flow tanks may have different velocities and turbulence capacities due to plan view areas;
 - research on tube settlers by `Brentwood Industries <https://www.brentwoodindustries.com/water-wastewater-products/tube-settlers/>`_ suggests that settle capture velocities should be 0.12 - 0.36 mm/s;
 - research on horizontal flow tanks in *Surface Water Treatment for Communities in Developing Countries* by Schulz and Okun suggests that settle capture velocities should be 0.24 - 0.72 mm/s.
-
-With this understanding of the basic principles of sedimentation, we will transition to a discussion of AguaClara innovations.
 
 References
 ============

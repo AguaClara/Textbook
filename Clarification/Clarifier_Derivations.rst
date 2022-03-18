@@ -584,7 +584,7 @@ The bottom-view of the diffuser is shown in :numref:`figure_BvsS_diffuser`.
 | :math:`Q_{diff} =` flow rate through each diffuser
 | :math:`h_{L,jet} =` head loss in jet leaving the jet reverser
 
-What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our clarifier, we want an upflow velocity of 1 mm/s. Additionally, because diffusers are a key component of our "clarifier as a circuit", we want to precisely control head loss in the jet leaving the jet reverser because that will help us achieve uniform flow within and between clarifiers. AguaClara designs set head loss in the jet constant at 1 cm.
+What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our clarifier, we want an upflow velocity of 1 mm/s. The velocity gradient in the jet leaving the jet reverser must be low enough so that it 
 
 Let's begin by finding the internal width of a single diffuser. Using conservation of flow, we know that,
 
