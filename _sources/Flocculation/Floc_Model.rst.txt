@@ -283,7 +283,7 @@ Solving Equation :eq:`GtlamSim` for :math:`C_P` we obtain
 .. math::
   :label: CpofGtlamSim
 
-	 C_{cp} = \frac{ \left( {\frac{\pi}{6}{\rho_{cp}}} \right)}{\left( \frac{2}{3} \pi k G_{CS}\theta \alpha \right)^\frac{3}{2}}.
+	 C_{P} = \frac{ \left( {\frac{\pi}{6}{\rho_{P}}} \right)}{\left( \frac{2}{3} \pi k G_{CS}\theta \alpha \right)^\frac{3}{2}}.
 
 
 
@@ -433,7 +433,7 @@ A laminar-flow hydraulic flocculator model was developed and validated based on 
 .. math::
   :label: eq_AguaClara_Flocculation_Model
 
-  \mathrm{p}C^{*}=\frac{3}{2}{{\log}_{10} \left[\frac{2}{3}{\left(\frac{6}{\pi }\right)}^{\frac{2}{3}}\pi k\overline{\alpha }\overline G_{CS}\theta {\phi }^{\frac{2}{3}}_0+1\right]\ },
+  \mathrm{p}C^{*}=\frac{3}{2}{{\log}_{10} \left[\frac{2}{3}{\left(\frac{6}{\pi }\right)}^{\frac{2}{3}}\pi k\overline{\alpha }G_{CS}\theta {\phi }^{\frac{2}{3}}_0+1\right]\ },
 
 where  :math:`k` is a fitting parameter dependent on the value of :math:`V_{\mathrm c}` used for sedimentation, :math:`\overline{\alpha }` is the mean fraction of collisions that are successful (i.e., result in aggregation), and :math:`\mathrm{p}C^*` is defined as
 
@@ -442,7 +442,7 @@ where  :math:`k` is a fitting parameter dependent on the value of :math:`V_{\mat
 
   \mathrm{p}C^*=-{\log \left(\frac{\mathrm{Effluent\ Turbidity}}{\mathrm{Influent\ Turbidity}}\right)\ }.
 
-Equation :eq:`eq_AguaClara_Flocculation_Model`, referred to as the AguaClara flocculation model in Pennock et al. (2018), is a Lagrangian hydrodynamic model that assumes that the aggregation of primary particles is rate-limiting. It further assumes that these particles, on average, will collide when the volume of fluid swept out as one particle approaches the other is equal to the average volume occupied by a single particle in the suspension. The time for these collisions to occur increases as flocculation proceeds, since the concentration of primary particles decreases in a way that is assumed to be first order with respect to collisions. Thus, with each successive collision, the average volume occupied by primary particles increases, and it takes longer for the next collision to occur. In Equation :eq:`eq_AguaClara_Flocculation_Model`, performance is linearly proportional to the logarithm of the effective collision potential, :math:`\log(\overline{\alpha }\overline G_{CS}\theta {\phi }^{2/3}_0)`.
+Equation :eq:`eq_AguaClara_Flocculation_Model`, referred to as the AguaClara flocculation model in Pennock et al. (2018), is a Lagrangian hydrodynamic model that assumes that the aggregation of primary particles is rate-limiting. It further assumes that these particles, on average, will collide when the volume of fluid swept out as one particle approaches the other is equal to the average volume occupied by a single particle in the suspension. The time for these collisions to occur increases as flocculation proceeds, since the concentration of primary particles decreases in a way that is assumed to be first order with respect to collisions. Thus, with each successive collision, the average volume occupied by primary particles increases, and it takes longer for the next collision to occur. In Equation :eq:`eq_AguaClara_Flocculation_Model`, performance is linearly proportional to the logarithm of the effective collision potential, :math:`\log(\overline{\alpha }G_{CS}\theta {\phi }^{2/3}_0)`.
 
 This group of parameters is the same as the group first described by Swetland et al. (2014), with the exception that they used the estimated fractional coverage of the colloid surface by coagulant, :math:`{\overline{\Gamma}}_{\mathrm{PACl-Clay}}`, as a measure of attachment efficiency instead of :math:`\overline{\alpha }`. Pennock et al. (2018) recognized that surface coverage of both particles participating in a collision matters, and introduced :math:`\overline{\alpha }` to convert the geometric information contained in :math:`{\overline{\Gamma}}_{\mathrm{PACl-Clay}}` to a probability of a successful collision. Using data gathered by Swetland et al. (2014), Pennock et al. (2018) were able to predict the results of independent laminar flocculation experiments with no adjustable parameters in the absence of added DOM.
 
@@ -526,9 +526,33 @@ The model considered flocculation in the presence of humic acid as a two-step pr
 
 The characteristic humic acid dimension, :math:`d_\mathrm{HA}`, has a physical meaning, with the fitted value, 75 nm, falling within the range (4-110 nm) reported by \"{O}sterberg (1993), and the model fits are well correlated to the observations. The predictive capability of the model was verified by predicting results under different experimental conditions with no additional adjustable parameters.
 
-The flocculation model without the effects of humic acid shows that :math:`\mathrm{p}C^*` is directly proportional to the log of the effective collision potential, :math:`\log(\overline{\alpha }\overline G_{CS}\theta {\phi }^{\frac{2}{3}})`, and this relationship is still present in the model with a modified attachment efficiency, :math:`\overline{\alpha },` based on clay surface coverage by coagulant nanoparticles as adjusted for the presence of humic acids.
+The flocculation model without the effects of humic acid shows that :math:`\mathrm{p}C^*` is directly proportional to the log of the effective collision potential, :math:`\log(\overline{\alpha }G_{CS}\theta {\phi }^{\frac{2}{3}})`, and this relationship is still present in the model with a modified attachment efficiency, :math:`\overline{\alpha },` based on clay surface coverage by coagulant nanoparticles as adjusted for the presence of humic acids.
 
-The form of the flocculation model equation sets the interactions between raw water properties (:math:`{\phi }_0`), influent particle surface area (which contributes to :math:`{\overline{\Gamma}}_\mathrm{PACl-Clay}`), coagulant precipitate size and dose (which contributes to :math:`{\overline{\Gamma}}_\mathrm{PACl-Clay}` and :math:`{\overline{\Gamma}}_\mathrm{HA-PACl}`) , humic acid molecule size and concentration (which contribute to :math:`{\overline{\Gamma}}_\mathrm{HA-PACl}`), flocculator design (:math:`\overline G_{CS}\theta`), and clarifier design (:math:`k`). In a gravity-powered water treatment plant operating at constant flow rate, the flocculator and clarifier parameters are constant. An increase in concentration of humic acid causes an increase in :math:`{\overline{\Gamma}}_\mathrm{HA-PACl}`, which decreases :math:`\mathrm{p}C^*` but can be compensated for by increasing coagulant dose.
+The form of the flocculation model equation sets the interactions between raw water properties (:math:`{\phi }_0`), influent particle surface area (which contributes to :math:`{\overline{\Gamma}}_\mathrm{PACl-Clay}`), coagulant precipitate size and dose (which contributes to :math:`{\overline{\Gamma}}_\mathrm{PACl-Clay}` and :math:`{\overline{\Gamma}}_\mathrm{HA-PACl}`) , humic acid molecule size and concentration (which contribute to :math:`{\overline{\Gamma}}_\mathrm{HA-PACl}`), flocculator design (:math:`G_{CS}\theta`), and clarifier design (:math:`k`). In a gravity-powered water treatment plant operating at constant flow rate, the flocculator and clarifier parameters are constant. An increase in concentration of humic acid causes an increase in :math:`{\overline{\Gamma}}_\mathrm{HA-PACl}`, which decreases :math:`\mathrm{p}C^*` but can be compensated for by increasing coagulant dose.
+
+The effect of the humic acid is to tie up a proportional amount of coagulant. The turbidity doesn't begin to decrease until after all of the humic acid has coated the coagulant nanoparticles and thus it is finally possible for coagulant nanoparticles to remain sticky and attach to the inorganic particles (see :numref:`figure_floc_model_HA` `by Yingda Du, et al., 2019 <https://www.liebertpub.com/doi/abs/10.1089/ees.2018.0405>`_)
+
+.. _figure_floc_model_HA:
+
+.. figure:: ../Images/floc_model_HA.png
+   :width: 400px
+   :align: center
+   :alt: Du floc_model_HA
+
+   Flocculation performance as a function of coagulant dose and humic acid concentration.
+
+The data shown in :numref:`figure_floc_model_HA` can also be plotted in a dimensionless form to show that all of the data converges reasonably well on a single model curve (see :numref:`figure_floc_model_NTU_and_HA`).
+
+
+.. _figure_floc_model_NTU_and_HA:
+
+.. figure:: ../Images/floc_model_NTU_and_HA.png
+   :width: 400px
+   :align: center
+   :alt: Du floc_model_HA
+
+   Flocculation performance as a function of coagulant dose and humic acid concentration.
+
 
 References
 ==========
