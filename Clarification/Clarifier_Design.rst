@@ -476,7 +476,7 @@ The submerged effluent manifold transports water from the clarifier to a channel
     :align: center
     :alt: Figure of clarifier channels.
 
-    Figure of clarifier channels.
+    Clarifier channels.
 
 .. _heading_Clarifier_Conclusions:
 
