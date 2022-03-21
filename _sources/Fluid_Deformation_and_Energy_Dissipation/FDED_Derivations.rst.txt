@@ -969,7 +969,7 @@ The maximum flow that can be handled by a pipe with minor losses can be obtained
 Plane Jet
 ---------
 
-..note:: need images for jets. add drawings that define dimensions. add description of hydraulic residence time. Define Sjet. Add more text describing what the equations are doing.
+.. note:: This section needs images for jets. Add drawings that define dimensions. Add description of hydraulic residence time. Define Sjet. Add more text describing what the equations mean.
 
 Plane jets occur in the clarifier inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by `Heskestad in 1965 <http://dx.doi.org/10.1115/1.3627309>`__ and it may be possible to use that data to get a better estimate of :math:`\Pi_{JetPlane}` from that source. An alternate estimate of :math:`\Pi_{JetPlane}` can be obtained by postulating that the rate of energy dissipation is proportional to the ratio of the circumference of the jet normalized by the jet area. The postulate is based on the insight that the jet is experiencing shear with the surrounding fluid around its perimeter. For a plane jet the ratio of the circumference of the jet to the jet area is
 

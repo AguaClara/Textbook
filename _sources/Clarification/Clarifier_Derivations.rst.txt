@@ -7,347 +7,9 @@
 
 .. _title_Clarifier_Derivations:
 
-***********************************************
-Clarification Deriviations
-***********************************************
-
-.. _heading_Clarifier_Plate_Settler_Design:
-
-Plate Settler Design
-====================
-
-Parameters
------------
-
-From the relationship that :math:`\bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B`, we can solve for :math:`B` or :math:`L` in terms of their related parameters.
-
-Let's start with the relationships that we already know:
-
-.. math::
-
-  \bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B
-
-and
-
-.. math::
-
-  B = S+T
-
-.. _figure_SvsBplatesettlers:
-
-.. figure:: ../Images/SvsBplatesettlers.png
-    :height: 300px
-    :align: center
-    :alt: Thick plate settlers.
-
-    Thick plate settlers.
-
-.. _figure_plate_settler_base:
-
-.. figure:: ../Images/plate_settler_base.png
-    :height: 300px
-    :align: center
-    :alt: Plate settlers.
-
-    Plate settlers.
-
-Solving for :math:`\bar v_{z_{Plate}}`, we rearrange and substitute by,
-
-.. math::
-
-  \bar v_{z_{Plate}} S = \bar v_{z_{Active}} (S+T)
-
-.. math::
-
-  \bar v_{z_{Plate}} = \frac{\bar v_{z_{Active}} (S+T)}{S}
-
-We also already know from our :ref:`discussion of plate settlers <heading_Clarifier_Plate_Settlers>` that we can relate capture velocity, :math:`\bar v_c`, to :math:`S, L, \alpha`, and :math:`\bar v_{z_{Plate}}` by,
-
-.. math::
-  :label: vc_of_vz_plate
-
-  \bar v_c = \frac{S  \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
-
-Substitute for :math:`\bar v_{z_{Plate}} = \frac{\bar v_{z_{Active}}(S+T)}{S}` by,
-
-.. math::
-
-  \bar v_c = \left(\frac{S}{Lsin\alpha cos\alpha + S}\right)\left(\frac{\bar v_{z_{Active}}(S+T)}{S}\right)
-
-Now, we can use this form of the capture velocity equation to solve for :math:`B` or :math:`L`, as shown by,
-
-.. math::
-
-  B = \frac{Lsin\alpha cos\alpha - T}{\frac{\bar v_{z_{Plate}}}{\bar v_c}-1}
-
-.. math::
-
-  L = \frac{B\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}-1\right) + T}{sin\alpha cos\alpha}
-
-.. math::
-
-  L = \frac{S\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}-1\right) + T\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}\right)}{sin\alpha cos\alpha}
-
-.. _heading_Clarifier_Plate_Settler_Design_Review:
-
-.. csv-table:: AguaClara plate settler design approach.
-   :header: "Parameter", "Variable", "Determined by:", "Determines:", "Value"
-   :align: left
-
-   Upflow velocity, :math:`\bar v_{z_{ff}}`, Floc filter, Plan view area of tank, 1 :math:`\frac{mm}{s}`
-   Capture velocity, :math:`\bar v_c`, Target turbidity, Particle size distribution, 0.12 :math:`\frac{mm}{s}`
-   Plate angle, :math:`\alpha`, Self-cleaning requirements, :math:`L`, 60 deg
-   Plate spacing, :math:`S`, Clogging and floc rollup constraints, :math:`L`, 2.5 cm
-   Plate settler length, :math:`L`, ":math:`\bar v_{z_{ff}}, \bar v_c, \alpha, S`",Tank depth, Calculated for each plant
-
-The relationship between the vertical velocity and the velocity in the direction of the sloped tube or plate settlers is given by
-
-.. math::
-
-  \bar v_{z} = \bar v_{\alpha} \sin \alpha
-
-.. _table_lamellar_settler_geometry:
-
-.. csv-table:: Lamellar settler geometry and relevant equations.
-   :header: "Settler geometry", "Single tubes", "Multiple tubes or plates"
-   :align: left
-
-   ":math:`\bar v_{z}` ratio", ":math:`\frac{\bar v_{z_{Tube}}}{\bar v_{c}}=\frac{L}{D} \cos \alpha \sin \alpha+\sin ^{2} \alpha`", ":math:`\frac{\bar v_{z_{Plate}}}{\bar v_{c}}=\frac{L}{S} \cos \alpha \sin \alpha+1`"
-   ":math:`\bar v_{\alpha}` ratio  ",":math:`\frac{\bar v_{\alpha_{Tube}}}{\bar v_{c}}=\frac{L}{D} \cos \alpha +\sin \alpha`", ":math:`\frac{\bar v_{\alpha_{Plate}}}{\bar v_{c}}=\frac{L}{S} \cos \alpha +\frac{1}{\sin \alpha}`"
-
-For single tube settlers used in laboratory settings the
-
-.. math::
-
-  \bar v_{\alpha_{Tube}}=\frac{4Q_{Tube}}{\pi D^2}
-
-Substituting into the equation for single tube settlers
-
-.. math::
-  :label: Q_tube_settler
-
-  Q_{Tube}=\frac{\bar v_{c}\pi D^2}{4} \left(\frac{L}{D} \cos \alpha +\sin \alpha \right)
-
-It is common to need to design the length of the tube given a target flow rate and thus we have
-
-.. math::
-  :label: L_tube_settler
-
-  L = \frac{4Q_{Tube}}{\bar v_{c}\pi D\cos \alpha} - D\tan\alpha
-
-
-.. _heading_Floc_Rollup_Derivation:
-
-Floc Rollup
-------------------------------
-
-As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine the minimum plate spacing that will allow flocs that settle on the plate to slide down and return to the floc filter. The steps to calculate this are:
-
-#. Find the velocity gradient next to the plate
-
-#. Find the fluid velocity at the center of the floc
-
-#. Find terminal velocity of the floc down the plate (for the case of zero velocity fluid)
-
-#. Set those two velocities equal for the critical case of no movement, and the required plate spacing
-
-#. Find the floc terminal velocity, :math:`v_{Slide}`
-
-We will solve for both the plate settler and tube settler conditions.
-
-**1) Find the velocity gradient next to the plate:**
-
-The velocity gradient is given by Equation :eq:`plate_settler_G_wall`
-
-.. _figure_plate_settler_boundary_conditions:
-
-.. figure:: ../Images/plate_settler_boundary_conditions.png
-    :height: 300px
-    :align: center
-    :alt: Boundary conditions in plate settlers.
-
-    Boundary conditions in plate settlers.
-
-.. _figure_floc_rollup_base:
-
-.. figure:: ../Images/floc_rollup_base.png
-    :height: 300px
-    :align: center
-    :alt: Velocity profile between plate settlers.
-
-    Velocity profile between plate settlers.
-
-
-
-.. _figure_floc_rollup_step1:
-
-.. figure:: ../Images/floc_rollup_step1.png
-   :height: 300px
-   :align: center
-   :alt: Velocity gradient next to the plate.
-
-   Velocity gradient next to the plate.
-
-For tube settlers the velocity gradient at the wall is given by Equation :eq:`G_wall_laminar_tube`.
-
-**2) Find the fluid velocity at the center of the floc:**
-
-Now, we want to determine the velocity at the center of the floc. For flow between parallel plates we determined that,
-
-.. math::
-
-  \frac{d v_{\alpha_{Plate}}}{dy}_{y = 0} = \frac{6 \bar v_{\alpha_{Plate}}}{S}
-
-The center of the floc is approximately half of the floc diameter, :math:`D_{floc}`. So, to find the fluid velocity at the center of the floc, we linearize the differential and plug in :math:`\frac{D_{floc}}{2}` to yield,
-
-.. math::
-
-  v_{\alpha} \approx \frac{6 \bar v_{\alpha_{Plate}}}{S} \frac{D_{floc}}{2}
-
-Substituting by the trigonometric relationship :math:`\bar v_{\alpha_{Plate}} = (\frac{\bar v_{z_{Plate}}}{sin\alpha})`, we find the fluid velocity at the center of the floc as,
-
-.. math::
-
-  \bar v_{\alpha_{Plate}} \approx \frac{3 \bar v_{z_{Plate}} D_{floc}}{Ssin\alpha}
-
-.. _figure_floc_rollup_step2:
-
-.. figure:: ../Images/floc_rollup_step2.png
-   :height: 300px
-   :align: center
-   :alt: Fluid velocity at the center of the floc.
-
-   Fluid velocity at the center of the floc.
-
-**3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):**
-
-
-The terminal velocity of a floc is given by Equation :eq:`vt_of_floc`. We can rearrange this equation to solve for :math:`D_{floc}` by
-
-.. math::
-
-  D_{floc} = D_{cp} \left( \frac{18 v_t \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{cp} - \rho_{H_2O}}\right) ^{\frac{1}{ \Pi_{fractal} - 1}}
-
-We will need this equation for :math:`D_{floc}` in the next step.
-
-.. _figure_floc_rollup_step3:
-
-.. figure:: ../Images/floc_rollup_step3.png
-   :height: 300px
-   :align: center
-   :alt: Terminal velocity of the floc down the plate (for the case of zero velocity fluid).
-
-   Terminal velocity of the floc down the plate.
-
-**4) Set the fluid velocity at the center of the floc equal to the terminal velocity of the floc to find the critical case of no movement, and the required plate spacing:**
-
-The floc settles due to gravitational forces. First, the :math:`\alpha` component of the gravitational settling force, :math:`v_{t,\alpha}`, must be found by trigonometric relationships.
-
-.. math::
-
-  v_{t,\alpha} = v_t sin\alpha
-
-Setting :math:`v_{\alpha} = v_{t,\alpha}` yields,
-
-.. math::
-
-  \frac{3 \bar v_{z_{Plate}} D_{floc}}{Ssin\alpha} \approx v_t sin\alpha
-
-Solving for :math:`S` to determine plate spacing,
-
-.. math::
-
-  S \approx \frac{3 \bar v_{z_{Plate}} D_{floc}}{v_t sin^2\alpha}
-
-In this equation, we have both :math:`v_t` and :math:`D_{floc}`, but we can simplify further because we know that :math:`v_t` and :math:`D_{floc}` are related by the relationship shown in step 3. The goal is to ensure that flocs that settle to the plates do not roll up. We replace the unknown diameter of the floc with its terminal velocity and set that to be the capture velocity, :math:`v_c` for the plate settler.
-
-.. math::
-  :label: Plate_S_min_of_fractal
-
-  S_{min} \approx \frac{3 D_{cp}}{sin^2\alpha} \frac{\bar v_{z_{Plate}}}{v_c}  \left( \frac{18 v_c \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{cp} - \rho_{H_2O}} \right) ^{\frac{1}{ \Pi_{fractal} - 1}}
-
-:math:`S_{min}` is the smallest spacing that will allow a floc with a given settling velocity to remain stationary on the slope and not be carried upward by rollup.
-
-If the fractal dimension, :math:`\Pi_{fractal}` has a value of 2, then Equation :eq:`Plate_S_min_of_fractal` can be simplified.
-
-.. math::
-  :label: Plate_S_min_of_fractal_of_2
-
-  S_{min} \approx \frac{3 \bar v_{z_{Plate}}}{\sin^2 \alpha} \left( \frac{18 \nu}{g D_{cp}} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}} \right)
-
-
-
-.. _heading_Clarifier_Hl_thru_Plate_Settlers:
-
-Head Loss Through Plate Settlers
---------------------------------
-
-Flow through the clarifier is controlled by head loss in an attempt to achieve flow uniformity. We have already explained that :ref:`plate settler spacing impacts head loss <heading_Clarifier_Plate_Settlers_Head_Loss_Intro>`, but by what mathematical relationship? Will putting plate settlers closer together result in more or less head loss? This question is complicated because closer plate settlers would create more shear and head loss, but shorter plate settlers have less area which would decrease the head loss.
-
-Let's start with a force balance similar to the derivation for head loss between parallel plates as done previously for Equation :eq:`parallel_plate_laminar_headloss`. Assume that there is a fully established velocity profile that is parabolic with laminar flow. The forces that we care about are shear forces on the walls of the plate settlers and the differential pressure from flow in the direction of the velocity.
-
-.. _figure_plate_settler_headloss_diag:
-
-.. figure:: ../Images/plate_settler_headloss_diag.png
-   :height: 300px
-   :align: center
-   :alt: Velocity, shear forces, and pressure loss through plate settlers.
-
-   Velocity, shear forces, and pressure loss through plate settlers.
-
-The shear forces act over the area of the two plates, resulting in :math:`F_{shear} = 2 \tau L W` where :math:`\tau` is the viscous shear component.
-
-The pressure force is exerted over the entire width of the plate and the plate spacing. Pressure at the entrance of the plate settlers is different from the exit of the plate settlers by :math:`\Delta P`. The resulting pressure force is :math:`F_{pressure} = \Delta P W S`. So,
-
-.. math::
-
-  F_{shear} = F_{pressure}
-
-.. math::
-
-  2 \tau L W = \Delta P W S
-
-Dividing both sides by width, :math:`W`, and solving for :math:`\Delta P` yields,
-
-.. math::
-
-  \Delta P = \frac{2 \tau L}{S}
-
-We need to figure out what each of the terms on the right side of the equation is equal to so we can calculate :math:`\Delta P`. Ultimlately, we need :math:`\Delta P` to calculate head loss because :math:`h_L = \frac{\Delta P}{\rho g}`.
-
-:math:`\tau =\mu \frac{du}{dy}`, where :math:`\tau` is shear, :math:`\mu` is the viscosity, and :math:`\frac{du}{dy}` is the velocity gradient. Using the Navier-Stokes equation, we can find the velocity gradient as a function of the average velocity between the plates, yielding shear based on the vertical velocity entering the plates as,
-
-.. math::
-
-  \tau = \mu \frac{6 \bar v_{z_{Plate}}}{S sin\alpha}
-
-:math:`L` is found using the equation for capture velocity, :math:`\bar v_c = \frac{S*\bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}`. Capture velocity is kept constant so we solve for :math:`L`,
-
-.. math::
-
-  L = \frac{S \left( \frac{\bar v_{z_{Plate}}}{\bar v_c} -1 \right)}{sin\alpha cos\alpha}
-
-Substituting :math:`\tau` and :math:`L` into the equation for :math:`\Delta P`,
-
-.. math::
-
-  \Delta P = 2\mu \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)
-
-Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
-
-.. math::
-
-  h_L = \frac{\Delta P}{\rho g}
-
-.. math::
-  :label: plate_settler_headloss
-
-  h_L = 2 \frac{\mu}{\rho g} \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)
-
-Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}`. The resulting two plots show how head loss and velocity relate to plate settlers (see :numref:`figure_plate_settler_headloss_spacing`).
-
-
-.. _heading_Clarifier_Floc_Filter_Design:
+*********************
+Clarifier Derivations
+*********************
 
 Floc Filter Design
 ==================
@@ -538,103 +200,356 @@ Flocs that are rotating in a shear flow drag a boundary layer of fluid with them
 
 Flocs with low fractal dimensions that are falling through a fluid that is not undergoing significant shear have a small amount of fluid passes directly through the floc where any particles in the flow can collide with particles that are held inside the floc. Thus the floc is the filter and the filter media is the particles that make up the floc. This is why we call it a floc filter. Particles are filtered by individual flocs and are retained inside the floc. As particles accumulate inside the floc the floc porosity decreases and the flow through the floc decreases. Eventually the floc becomes ineffective as a filter because its filtration capacity has been exhausted.
 
-.. _heading_Clarifier_Diffuser_Design:
 
-Diffuser Design
-======================
 
-Diffusers are shaped so that one end is a circular pipe that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle, as shown in :numref:`figure_diffuser_side_top_bottom`.
+.. _heading_Clarifier_Plate_Settler_Design:
 
-.. _figure_diffuser_side_top_bottom:
+Plate Settler Design
+====================
 
-.. figure:: ../Images/diffuser_side_top_bottom.png
+The vertical component of the velocity in the plate settlers is greater than the vertical velocity in the floc filter due to the lost triangle at the one end of the plate settlers and due to the thickness of the plate settlers (:numref:`figure_clarifier_velocities`).
+
+.. _figure_clarifier_velocities:
+
+.. figure:: ../Images/clarifier_velocities.png
     :height: 300px
     :align: center
-    :alt: Side, top, and bottom view of a diffuser.
+    :alt: velocities in the clarifier.
 
-    Side, top, and bottom view of a diffuser.
+    Clarifier vertical velocity components in the floc filter, the active plate settler zone, and inside the plate settlers.
 
-Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the clarifier. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form, as shown in :numref:`figure_diffuser_fabrication`. This metal form is sized so that the target shape is achieved.
+Parameters
+-----------
 
-.. _figure_diffuser_fabrication:
+From the relationship that :math:`\bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B`, we can solve for :math:`B` or :math:`L` in terms of their related parameters.
 
-.. figure:: ../Images/diffuser_fabrication.png
+Let's start with the relationships that we already know:
+
+.. math::
+
+  \bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B
+
+and
+
+.. math::
+
+  B = S+T
+
+.. _figure_SvsBplatesettlers:
+
+.. figure:: ../Images/SvsBplatesettlers.png
     :height: 300px
     :align: center
-    :alt: Process of heating the PVC in oil and molding the diffuser shape on the metal forms.
+    :alt: Thick plate settlers.
 
-    Process of heating the PVC in oil and molding the diffuser shape on the metal forms.
+    Thick plate settlers.
 
-The bottom-view of the diffuser is shown in :numref:`figure_BvsS_diffuser`.
+.. _figure_plate_settler_base:
 
-.. _figure_BvsS_diffuser:
-
-.. figure:: ../Images/BvsS_diffuser.png
+.. figure:: ../Images/plate_settler_base.png
     :height: 300px
     :align: center
-    :alt: Diagram of diffuser exit.
+    :alt: Plate settlers.
 
-    Diagram of diffuser exit.
+    Plate settlers.
 
-| :math:`T_{diff} =` thickness of diffuser wall
-| :math:`S_{diff} =` internal width of diffuser
-| :math:`B_{diff} =` center-to-center spacing between diffusers; external width of diffuser
-| :math:`W_{diff} =` internal width of diffuser
-| :math:`\bar v_{jet} =` velocity of the jet exiting the diffuser
-| :math:`Q_{diff} =` flow rate through each diffuser
-| :math:`h_{L,jet} =` head loss in jet leaving the jet reverser
-
-What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our clarifier, we want an upflow velocity of 1 mm/s. Additionally, because diffusers are a key component of our "clarifier as a circuit", we want to precisely control head loss in the jet leaving the jet reverser because that will help us achieve uniform flow within and between clarifiers. AguaClara designs set head loss in the jet constant at 1 cm.
-
-Let's begin by finding the internal width of a single diffuser. Using conservation of flow, we know that,
+Solving for :math:`\bar v_{z_{Plate}}`, we rearrange and substitute by,
 
 .. math::
 
-  Q_{diff} = \bar v_{jet}W_{diff}S_{diff} = \bar v_{z_{ff}}W_{Clarifier}B_{diff}
-
-:math:`Q_{diff}` is determined :ref:`as an example <heading_flow_thru_diffuser>`, where we find that :math:`Q_{diff} = 50 \frac{mL}{s}`.
-
-Solving for :math:`W_{diff}`,
+  \bar v_{z_{Plate}} S = \bar v_{z_{Active}} (S+T)
 
 .. math::
 
-  W_{diff} = \frac{\bar v_{z_{ff}}W_{Clarifier}B_{diff}}{\bar v_{jet}S_{diff}}
+  \bar v_{z_{Plate}} = \frac{\bar v_{z_{Active}} (S+T)}{S}
 
-Using the constraint of head loss in the jet and solving for :math:`\bar v_{jet}`,
+We also already know from our :ref:`discussion of plate settlers <heading_Clarifier_Plate_Settlers>` that we can relate capture velocity, :math:`\bar v_c`, to :math:`S, L, \alpha`, and :math:`\bar v_{z_{Plate}}` by,
+
+.. math::
+  :label: vc_of_vz_plate
+
+  \bar v_c = \frac{S  \bar v_{z_{Plate}}}{L sin\alpha cos\alpha + S}
+
+Substitute for :math:`\bar v_{z_{Plate}} = \frac{\bar v_{z_{Active}}(S+T)}{S}` by,
+
+.. math::
+  :label: vc_of_vz_
+
+  \bar v_c = \left(\frac{S}{L sin\alpha cos\alpha + S}\right)\left(\frac{\bar v_{z_{Active}}(S+T)}{S}\right)
+
+Now, we can use this form of the capture velocity equation to solve for :math:`L`, as shown by,
+
+.. math::
+  :label: L_plate_settler
+
+  L = \frac{S\left(\frac{\bar v_{z_{Active}}}{\bar v_c}-1\right) + T\left(\frac{\bar v_{z_{Active}}}{\bar v_c}\right)}{sin\alpha cos\alpha}
+
+.. _heading_Clarifier_Plate_Settler_Design_Review:
+
+.. csv-table:: AguaClara plate settler design approach.
+   :header: "Parameter", "Variable", "Determined by:", "Determines:", "Value"
+   :align: left
+
+   Upflow velocity, :math:`\bar v_{z_{ff}}`, Floc filter, Plan view area of tank, 1 :math:`\frac{mm}{s}`
+   Capture velocity, :math:`\bar v_c`, Target turbidity, Particle size distribution, 0.12 :math:`\frac{mm}{s}`
+   Plate angle, :math:`\alpha`, Self-cleaning requirements, :math:`L`, 60 deg
+   Plate spacing, :math:`S`, Clogging and floc rollup constraints, :math:`L`, 2.5 cm
+   Plate settler length, :math:`L`, ":math:`\bar v_{z_{ff}}, \bar v_c, \alpha, S`",Tank depth, Calculated for each plant
+
+The relationship between the vertical velocity and the velocity in the direction of the sloped tube or plate settlers is given by
 
 .. math::
 
-  h_{L,jet} = \frac{\bar v_{jet}^2}{2g}
+  \bar v_{z} = \bar v_{\alpha} \sin \alpha
+
+.. _table_lamellar_settler_geometry:
+
+.. csv-table:: Lamellar settler geometry and relevant equations.
+   :header: "Settler geometry", "Single tubes", "Multiple tubes or plates"
+   :align: left
+
+   ":math:`\bar v_{z}` ratio", ":math:`\frac{\bar v_{z_{Tube}}}{\bar v_{c}}=\frac{L}{D} \cos \alpha \sin \alpha+\sin ^{2} \alpha`", ":math:`\frac{\bar v_{z_{Plate}}}{\bar v_{c}}=\frac{L}{S} \cos \alpha \sin \alpha+1`"
+   ":math:`\bar v_{\alpha}` ratio  ",":math:`\frac{\bar v_{\alpha_{Tube}}}{\bar v_{c}}=\frac{L}{D} \cos \alpha +\sin \alpha`", ":math:`\frac{\bar v_{\alpha_{Plate}}}{\bar v_{c}}=\frac{L}{S} \cos \alpha +\frac{1}{\sin \alpha}`"
+
+For single tube settlers used in laboratory settings the
 
 .. math::
 
-  \bar v_{jet} = \sqrt{2gh_{L,jet}}
+  \bar v_{\alpha_{Tube}}=\frac{4Q_{Tube}}{\pi D^2}
 
-Substituting back into the equation for :math:`W_{diff}`, we can find the minimum diffuser width required to not exceed target head loss as,
+Substituting into the equation for single tube settlers
+
+.. math::
+  :label: Q_tube_settler
+
+  Q_{Tube}=\frac{\bar v_{c}\pi D^2}{4} \left(\frac{L}{D} \cos \alpha +\sin \alpha \right)
+
+It is common to need to design the length of the tube given a target flow rate and thus we have
+
+.. math::
+  :label: L_tube_settler
+
+  L = \frac{4Q_{Tube}}{\bar v_{c}\pi D\cos \alpha} - D\tan\alpha
+
+
+.. _heading_Floc_Rollup_Derivation:
+
+Floc Rollup
+------------------------------
+
+As has been discussed, :ref:`floc rollup <heading_Floc_Rollup>` is a failure mode of plate settler performance. To determine the appropriate spacing between plate settlers, we must consider the potential for flocs to rollup because we want to minimize rollup and promote settling. We will determine the minimum plate spacing that will allow flocs that settle on the plate to slide down and return to the floc filter. The steps to calculate this are:
+
+#. Find the velocity gradient next to the plate
+
+#. Find the fluid velocity at the center of the floc
+
+#. Find terminal velocity of the floc down the plate (for the case of zero velocity fluid)
+
+#. Set those two velocities equal for the critical case of no movement, and the required plate spacing
+
+#. Find the floc terminal velocity, :math:`v_{Slide}`
+
+We will solve for both the plate settler and tube settler conditions.
+
+**1) Find the velocity gradient next to the plate:**
+
+The velocity gradient is given by Equation :eq:`plate_settler_G_wall`
+
+.. _figure_plate_settler_boundary_conditions:
+
+.. figure:: ../Images/plate_settler_boundary_conditions.png
+    :height: 300px
+    :align: center
+    :alt: Boundary conditions in plate settlers.
+
+    Boundary conditions in plate settlers.
+
+.. _figure_floc_rollup_base:
+
+.. figure:: ../Images/floc_rollup_base.png
+    :height: 300px
+    :align: center
+    :alt: Velocity profile between plate settlers.
+
+    Velocity profile between plate settlers.
+
+
+
+.. _figure_floc_rollup_step1:
+
+.. figure:: ../Images/floc_rollup_step1.png
+   :height: 300px
+   :align: center
+   :alt: Velocity gradient next to the plate.
+
+   Velocity gradient next to the plate.
+
+For tube settlers the velocity gradient at the wall is given by Equation :eq:`G_wall_laminar_tube`.
+
+**2) Find the fluid velocity at the center of the floc:**
+
+Now, we want to determine the velocity at the center of the floc. For flow between parallel plates we determined that,
 
 .. math::
 
-  W_{diff,min} = \frac{\bar v_{z_{ff}}W_{Clarifier}B_{diff}}{(\sqrt{2gh_{L,jet}})S_{diff}}
+  \frac{d v_{\alpha_{Plate}}}{dy}_{y = 0} = \frac{6 \bar v_{\alpha_{Plate}}}{S}
 
-Now that we have determined the minimum width, we can use known parameters and constraints to find a precise value for :math:`W_{diff}` and :math:`v_{jet}`.
-
-Using known constants for :math:`\bar v_{z_{ff}} = 1 \frac{mm}{s}`, :math:`h_{L,jet} = 1 cm`, and :math:`W_{Clarifier} = 1m`, we can find that :math:`W_{diff,min} = 2.7 mm`. The mold used to create diffusers in Honduras comes in sizes of 1/8 in, or 3.175 mm, so to find :math:`W_{diff}` we round up to 3.175 mm.
+The center of the floc is approximately half of the floc diameter, :math:`D_{floc}`. So, to find the fluid velocity at the center of the floc, we linearize the differential and plug in :math:`\frac{D_{floc}}{2}` to yield,
 
 .. math::
 
-  W_{diff} = 3.175 mm
+  v_{\alpha} \approx \frac{6 \bar v_{\alpha_{Plate}}}{S} \frac{D_{floc}}{2}
 
-Solving for :math:`\bar v_{jet}` from our earlier equations yields,
-
-.. math::
-
-  \bar v_{jet} = \frac{\bar v_{z_{ff}}W_{Clarifier}B_{diff}}{W_{diff}S_{diff}}
-
-Using known constants,
+Substituting by the trigonometric relationship :math:`\bar v_{\alpha_{Plate}} = (\frac{\bar v_{z_{Plate}}}{sin\alpha})`, we find the fluid velocity at the center of the floc as,
 
 .. math::
 
-  \bar v_{jet} \approx 380 \frac{mm}{s}
+  \bar v_{\alpha_{Plate}} \approx \frac{3 \bar v_{z_{Plate}} D_{floc}}{Ssin\alpha}
+
+.. _figure_floc_rollup_step2:
+
+.. figure:: ../Images/floc_rollup_step2.png
+   :height: 300px
+   :align: center
+   :alt: Fluid velocity at the center of the floc.
+
+   Fluid velocity at the center of the floc.
+
+**3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):**
+
+
+The terminal velocity of a floc is given by Equation :eq:`vt_of_floc`.
+
+.. _figure_floc_rollup_step3:
+
+.. figure:: ../Images/floc_rollup_step3.png
+   :height: 300px
+   :align: center
+   :alt: Terminal velocity of the floc down the plate (for the case of zero velocity fluid).
+
+   Terminal velocity of the floc down the plate.
+
+**4) Set the fluid velocity at the center of the floc equal to the terminal velocity of the floc to find the critical case of no movement, and the required plate spacing:**
+
+The floc settles due to gravitational forces. First, the :math:`\alpha` component of the gravitational settling force, :math:`v_{t,\alpha}`, must be found by trigonometric relationships.
+
+.. math::
+
+  v_{t,\alpha} = v_t sin\alpha
+
+Setting :math:`v_{\alpha} = v_{t,\alpha}` yields,
+
+.. math::
+
+  \frac{3 \bar v_{z_{Plate}} D_{floc}}{Ssin\alpha} \approx v_t sin\alpha
+
+Solving for :math:`S` to determine plate spacing,
+
+.. math::
+
+  S \approx \frac{3 \bar v_{z_{Plate}} D_{floc}}{v_t sin^2\alpha}
+
+In this equation, we have both :math:`v_t` and :math:`D_{floc}`, but we can simplify further because we know that :math:`v_t` and :math:`D_{floc}` are related by the relationship shown in step 3. The goal is to ensure that flocs that settle to the plates do not roll up. We replace the unknown diameter of the floc with its terminal velocity and set that to be the capture velocity, :math:`v_c` for the plate settler.
+
+.. math::
+  :label: Plate_S_min_of_fractal
+
+  S_{min} \approx \frac{3 D_{cp}}{sin^2\alpha} \frac{\bar v_{z_{Plate}}}{v_c}  \left( \frac{18 v_c \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{cp} - \rho_{H_2O}} \right) ^{\frac{1}{ \Pi_{fractal} - 1}}
+
+:math:`S_{min}` is the smallest spacing that will allow a floc with a given settling velocity to remain stationary on the slope and not be carried upward by rollup.
+
+If the fractal dimension, :math:`\Pi_{fractal}` has a value of 2, then Equation :eq:`Plate_S_min_of_fractal` can be simplified.
+
+.. math::
+  :label: Plate_S_min_of_fractal_of_2
+
+  S_{min} \approx \frac{3 \bar v_{z_{Plate}}}{\sin^2 \alpha} \left( \frac{18 \nu}{g D_{cp}} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}} \right)
+
+A plot of Equation :eq:`Plate_S_min_of_fractal_of_2` reveals that the minimum spacing is strongly influenced by the density of the core particle and by the temperature. The minimum spacing increases as the size of the primary particle, :math:`D_{cp}`, decreases. This is an important insight because flocs that are made of coagulant nanoparticles and dissolved organics are the most difficult flocs to capture. Flocs made of coagulant nanoparticles are less dense than flocs made of clay. Coagulant nanoparticle flocs are produced when water treatment plants are used to remove dissolved organics or arsenic or when high coagulant dosages are used.
+
+.. _figure_SofRollupwithfractal2:
+
+.. figure:: ../Images/SofRollupwithfractal2.png
+   :height: 300px
+   :align: center
+   :alt: Floc roll up as a function of core particle density and temperatures
+
+   Plate settler spacing must increase to capture low density flocs.
+
+Given that AguaClara uses a lower upflow velocity, :math:`\bar v_{z_{Plate}}`, than many plate settler designs it is reasonable for us to use more closely spaced plates. More work is required to characterize the density and size of the core particles as a function of raw water constituents to provide guidance on the required plate spacing.
+
+AguaClara plate settlers are currently using separations of 2.5 cm, which is far above the constraint of floc roll up except for very low density flocs. As floc density decreases, as we expect for organic matter, minimum spacing increases. However, we don't yet know what that spacing is or where the boundary is because we don't know the properties of the humic acid-coagulant flocs. Further research is required here to determine the floc properties of flocs that are dominated by dissolved organic matter.
+
+.. _heading_Clarifier_Hl_thru_Plate_Settlers:
+
+Head Loss Through Plate Settlers
+--------------------------------
+
+Flow through the clarifier is controlled by head loss in an attempt to achieve flow uniformity. We have already explained that :ref:`plate settler spacing impacts head loss <heading_Clarifier_Plate_Settlers_Head_Loss_Intro>`, but by what mathematical relationship? Will putting plate settlers closer together result in more or less head loss? This question is complicated because closer plate settlers would create more shear and head loss, but shorter plate settlers have less area which would decrease the head loss.
+
+Let's start with a force balance similar to the derivation for head loss between parallel plates as done previously for Equation :eq:`parallel_plate_laminar_headloss`. Assume that there is a fully established velocity profile that is parabolic with laminar flow. The forces that we care about are shear forces on the walls of the plate settlers and the differential pressure from flow in the direction of the velocity.
+
+.. _figure_plate_settler_headloss_diag:
+
+.. figure:: ../Images/plate_settler_headloss_diag.png
+   :height: 300px
+   :align: center
+   :alt: Velocity, shear forces, and pressure loss through plate settlers.
+
+   Velocity, shear forces, and pressure loss through plate settlers.
+
+The shear forces act over the area of the two plates, resulting in :math:`F_{shear} = 2 \tau L W` where :math:`\tau` is the viscous shear component.
+
+The pressure force is exerted over the entire width of the plate and the plate spacing. Pressure at the entrance of the plate settlers is different from the exit of the plate settlers by :math:`\Delta P`. The resulting pressure force is :math:`F_{pressure} = \Delta P W S`. So,
+
+.. math::
+
+  F_{shear} = F_{pressure}
+
+.. math::
+
+  2 \tau L W = \Delta P W S
+
+Dividing both sides by width, :math:`W`, and solving for :math:`\Delta P` yields,
+
+.. math::
+
+  \Delta P = \frac{2 \tau L}{S}
+
+We need to figure out what each of the terms on the right side of the equation is equal to so we can calculate :math:`\Delta P`. Ultimlately, we need :math:`\Delta P` to calculate head loss because :math:`h_L = \frac{\Delta P}{\rho g}`.
+
+:math:`\tau =\mu \frac{du}{dy}`, where :math:`\tau` is shear, :math:`\mu` is the viscosity, and :math:`\frac{du}{dy}` is the velocity gradient. Using the Navier-Stokes equation, we can find the velocity gradient as a function of the average velocity between the plates, yielding shear based on the vertical velocity entering the plates as,
+
+.. math::
+
+  \tau = \mu \frac{6 \bar v_{z_{Plate}}}{S sin\alpha}
+
+:math:`L` is found using the equation for capture velocity, :math:`\bar v_c = \frac{S*\bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}`. Capture velocity is kept constant so we solve for :math:`L`,
+
+.. math::
+
+  L = \frac{S \left( \frac{\bar v_{z_{Plate}}}{\bar v_c} -1 \right)}{sin\alpha cos\alpha}
+
+Substituting :math:`\tau` and :math:`L` into the equation for :math:`\Delta P`,
+
+.. math::
+
+  \Delta P = 2\mu \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)
+
+Now that we have an equation for :math:`\Delta P`, we can solve for head loss.
+
+.. math::
+
+  h_L = \frac{\Delta P}{\rho g}
+
+.. math::
+  :label: plate_settler_headloss
+
+  h_L = 2 \frac{\mu}{\rho g} \left( \frac{6 \bar v_{z_{Plate}}}{S sin^2 \alpha cos\alpha} \right) \left( \frac{ \bar v_{z_{Plate}}}{\bar v_c} -1 \right)
+
+Recall that head loss through plate settlers is really small, on the order of micrometers, :math:`\mu m`. We are interested in understanding how the head loss relates to velocity, through the relation :math:`v = \sqrt{2gh}`. The resulting two plots show how head loss and velocity relate to plate settlers (see :numref:`figure_plate_settler_headloss_spacing`).
+
+
 
 
 Jet Velocity
