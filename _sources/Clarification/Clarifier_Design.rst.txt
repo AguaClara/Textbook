@@ -150,7 +150,16 @@ The ratio of manifold velocity to port velocity can be obtained as the inverse o
 
 where the port velocity, :math:`\bar v_{P}`, is equal to the jet velocity, :math:`v_{Jet_{max}}`, from Equation :eq:`max_clarifier_jet_velocity_of_G`. Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_clarifier_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
 
-The big unknown is the required design value for :math:`\zeta_{breakup}` as defined in Equation :eq:`G_of_vc_and_floc_props`. The expectation is that raw waters with high concentrations of organic matter will have lower density core particles and thus will require a smaller :math:`\zeta_{breakup}` for successful capture of the lower density flocs.
+.. _figure_influent_manifold_diffuser_flow:
+
+.. figure:: ../Images/influent_manifold_diffuser_flow.png
+    :height: 300px
+    :align: center
+    :alt: Influent manifold and diffuser flow paths.
+
+    Influent manifold and diffuser flow paths.
+
+The big unknown is the required design value for :math:`\xi_{breakup}` as defined in Equation :eq:`G_of_vc_and_floc_props`. The expectation is that raw waters with high concentrations of organic matter will have lower density core particles and thus will require a smaller :math:`\xi_{breakup}` for successful capture of the lower density flocs.
 
 The maximum velocity that could be carried by the inlet manifold given the flow expansion corresponding to the inlet can be calculated using Equation :eq:`D_pipe_min_of_K_and_jet_G_max`. This constraint would allow the use of a smaller diameter inlet manifold than the velocity constraint required by Equation :eq:`max_clarifier_manifold_velocity`.
 
@@ -336,11 +345,17 @@ Equation :eq:`diffuser_dimensions` can be rewritten in standard quadratic form.
 
   0 = W_D^2 - \frac{\pi}{2} {\rm ID}_D \Pi_{stretch}W_D + S_{Jet} B_D
 
+The solution path for the diffuser is:
+
+#. Thickness of the jet exiting the reverser from Equation :eq:`planejet_S_of_q`.
+#. Diffuser center to center spacing from Equation :eq:`diffuser_B`.
+#. Diffuser width, :math:`W_D` from Equation :eq:`diffuser_dimensions_quadratic`.
+
 
 Floc Filter
 ===========
 
-
+We do not yet have equations for the design of the upflow velocity in the floc filter. The upflow velocity of 1 mm/s was determined from laboratory studies using kaolin clay. The floc filter suspended solids concentration will decrease if the primary particle density is lower and thus it is possible that a lower upflow velocity should be used when treating water with a high dissolved organic matter concentration.
 
 .. _heading_Clarifier_Floc_Hopper:
 

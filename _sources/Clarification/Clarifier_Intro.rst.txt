@@ -74,6 +74,184 @@ As the floc filters, |empty_floc_filter|, capture the particles that otherwise w
 
 Mass conservation requires that at steady state the mass flux of solids into the clarifier match the flux of solids out of the clarifier. If the clarifier is functioning as designed and the coagulant dose is correct the majority of the incoming solids will be converted into large flocs (|empty_floc_filter| and |full_floc_filter|) and those flocs will flow over the top of the floc weir.
 
+Inlet and Floc Resuspension
+===========================
+
+Delivering the flocculated water to the clarifier is one of the most critical design steps for ensuring successful operation of a water treatment plant. Design failures commonly produced much higher turbidity in the clarifier effluent due to large scale circulation that is set up in the clarifier basin due to the momentum of the incoming flow. The AguaClara design has evolved to eliminate large scale circulation and to ensure that the flow is distributed equally to all of the clarifier bays.
+
+Water enters the clarifier bay through the influent manifold. Water exits the influent manifold through a series  **diffusers** in the bottom of the pipe shown in :numref:`figure_influent_manifold_diffuser_base`. Diffusers are what we call short stubs of pipe that extend perpendicular to the influent manifold. The diffusers point down to the bottom of the clarifier bay and extend along the length of the influent manifold at regular intervals to ensure that water is evenly distributed within the bay. The ends of the diffuser tubes are flattened so that they are thin rectangles and when placed side-by-side achieve a line-jet effect. The end of the influent manifold is capped.
+
+.. _figure_influent_manifold_diffuser_base:
+
+.. figure:: ../Images/influent_manifold_diffuser_base.png
+    :height: 300px
+    :align: center
+    :alt: Influent manifold with diffusers.
+
+    Influent manifold with diffusers.
+
+
+The influent manifold diffuser system straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component as shown in :numref:`figure_flow_straightening`. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the clarifier as shown in :numref:`figure_flow_circulation`. Influent manifolds without flow straightening diffusers are commonly used in vertical flow clarifiers including designs by leading manufacturers.
+
+.. _figure_flow_circulation:
+
+.. figure:: ../Images/flow_circulation.png
+    :height: 300px
+    :align: center
+    :alt: Flow with a horizontal velocity component that causes problematic flow circulation.
+
+    Flow with a horizontal velocity component that causes problematic flow circulation.
+
+The horizontal flow created by the direction of flow inside the manifold results in preferential flow through the plate settlers at the terminal end of the manifold. This is a common problem in conventional clarifiers that don't have flow straightening diffusers or that have horizontal flow in the tank.
+
+The underlying cause of the poor flow distribution between plate settlers (shown in :numref:`figure_flow_circulation`) is because the head loss through the plate settlers is inconsequential and thus there can't be **any** significant horizontal velocity below the plate settlers. It is possible that some plate settler manufactures address this issue by adding flow control orifices at the top of the plate settlers that add sufficient head loss to the flow through every plate settler to minimize the impact of velocity differences below the plates.
+
+The AguaClara solution is to use flow diffusers that simultaneously eliminate horizontal flow and create a line jet that resuspends settled flocs to maintain the floc filter in suspension.
+
+.. _figure_flow_straightening:
+
+.. figure:: ../Images/flow_straightening.png
+    :height: 300px
+    :align: center
+    :alt: Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation.
+
+    Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation.
+
+The diffusers create a line jet that spans the entire length of the clarifier. This line jet enters the bay going down, but we want the water to ultimately flow up to make our vertical flow clarifier. To get the flow to redirect upwards, we use a **jet reverser**, which is half of a pipe that is laid in the bottom of the bay.
+
+.. _figure_bottom_of_clarifier_detail:
+
+.. figure:: ../Images/bottom_of_clarifier_detail.png
+    :height: 300px
+    :align: center
+    :alt: Detail of the bottom of the clarifier.
+
+    Cross-section of the bottom of the clarifier.
+
+You may be wondering, why do we need a jet reverser in the first place? Why don't we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components.
+
+- If the diffusers were to point up, that would mean that any sedimentation that happens near the terminal end of the manifold would accumulate and the sediment would have no way of being removed.
+- If flow were just to point directly up, it would not have an opportunity to sufficiently spread into the width of the clarifier bay, which could lead to "short-circuiting" and poor flow distribution overall.
+- The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. The jet reverser and diffuser alignment is not symmetrical; the diffusers are directed to one side of the jet reverser (either by slight rotation of the inlet manifold or by an offset). This is intentionally done to ensure that the diffuser jet never collapses to promote a floc filter, which will be discussed next. :numref:`figure_jet_placement` shows that flat bottomed and centered jets do not create a floc filter while offset jets are stable.
+
+.. _figure_jet_placement:
+
+.. figure:: ../Images/jet_placement.png
+    :height: 300px
+    :align: center
+    :alt: The jet reverser and diffuser alignments; the offset jet is the most successful.
+
+    The jet reverser and diffuser alignments; the offset jet is the most successful.
+
+There is a lot of research interest in determining the optimal upflow velocity for floc filters considering that high velocity is better for resuspension but breaks more flocs. Currently, AguaClara plants use an upflow velocity of 1 mm/s.
+
+.. _figure_flat_bottomed_tank:
+
+.. figure:: ../Images/flat_bottomed_tank.png
+   :target: https://www.youtube.com/watch?v=04OksWoRmQI
+   :width: 400px
+   :align: center
+   :alt: Flat bottomed tank with settled flocs (click to be sent to video).
+
+   Flat bottomed tank with settled flocs (click to be sent to video).
+
+As shown in :numref:`figure_flat_bottomed_tank` and the linked video, in a flat bottom geometry, flocs settle in the corners of the tank because there is no direct flow of water to resuspend it. Flocs fall in such a way that the corners of the tank will fill first, with more and more flocs settling until the angle of repose is created. This angle that is occupied by flocs suggests that if we want to avoid having flocs settle, we should fill the sides of the tank in with concrete and create a sloped bottom so that there are no surfaces for settling.
+
+Successful floc filter formation is shown in :numref:`figure_floc_filter_experiment`. Studies by AguaClara researchers have found that floc filters improve the performance of a clarifier and reduce settled water turbidity by a factor of 10 for multiple reasons (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_).
+
+.. _figure_floc_filter_experiment:
+
+.. figure:: ../Images/floc_filter_experiment.png
+   :target: https://www.youtube.com/watch?v=w8ZFCz54IBs
+   :width: 400px
+   :align: center
+   :alt: Floc filter formation over time (click to be sent to video).
+
+   Floc filter formation over time (click to be sent to video).
+
+The influent manifold, diffusers, and jet reverser work with a **sloped bottom geometry** in an AguaClara plant. The slope on either side of the diffusers is at a 50 degree angle. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can fall into the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the clarifier bays. Sludge that is allowed to accumulate in the bottom of clarifiers in tropical and temperate climates decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the clarifier and cause a reduction in particle removal efficiency. The AguaClara clarifier bottom geometry prevents sludge accumulation while also ensuring good flow distribution.
+
+.. _figure_clarifier_cross_section:
+
+.. figure:: ../Images/clarifier_cross_section.png
+    :height: 300px
+    :align: center
+    :alt: Cross-section of the bottom of the clarifier.
+
+    Cross-section of the bottom of the clarifier.
+
+.. _figure_Floc_Filter_Floc_Hopper:
+
+.. figure:: ../Images/Floc_Filter_Floc_Hopper.png
+   :target: https://www.youtube.com/watch?v=2x12wGb7xZE
+   :width: 400px
+   :align: center
+   :alt: Sloped bottom tank with fully suspended flocs (click to be sent to video).
+
+   Sloped bottom tank with fully suspended flocs (click to be sent to video).
+
+So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates in the bay by creating a system to resuspend any settled flocs.
+
+.. _figure_diffuser_jetreverser:
+
+.. figure:: ../Images/diffuser_jetreverser.png
+    :target: https://youtu.be/yJ-8g7vQTSM
+    :height: 300px
+    :align: center
+    :alt: Distribution of flocculated water and resuspension of settling flocs (click to be sent to video).
+
+    Distribution of flocculated water and resuspension of settling flocs (click to be sent to video).
+
+What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.
+
+`Garland, 2016 <https://doi.org/10.1089/ees.2015.0314>`_ showed that the jet was unable to resuspend the flocs when the jet velocity was 57 mm/s and was successful for all velocities greater than 75 mm/s. The momentum of the floc density current will increase with the concentration of flocs in the primary filter which is in turn a function of the density and size of the core particles. The primary filter floc concentration will decrease at lower temperatures and thus failure of the jet reverser will occur at high temperatures. Given that Dr. Garland did the research at room temperature using a kaolin suspension it is likely that the 75 mm/s guidelines is sufficiently conservative for all designs that have a 1 mm/s upflow velocity. The jet reverser will fail at some point as the flow rate through the clarifier is decreased. The solution for that case would be to take a fraction of the clarifiers off line to maintain a higher jet velocity.
+
+.. _figure_jet_angle:
+
+.. figure:: ../Images/jet_angle.png
+    :height: 300px
+    :align: center
+    :alt: Jet diameter and current of settled flocs.
+
+    Jet diameter and current of settled flocs.
+
+.. _figure_diffuser_jet_reverser:
+
+.. figure:: ../Images/diffuser_jet_reverser.png
+    :target: https://youtu.be/WEM-YyGITlQ
+    :width: 400px
+    :align: center
+    :alt: Jet reverser resuspending flocs (click to be sent to video).
+
+    Jet reverser resuspending flocs (click to be sent to video).
+
+
+Diffuser Fabrication
+--------------------
+
+Diffusers are shaped so that one end is a circular pipe that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle, as shown in :numref:`figure_diffuser_side_top_bottom`.
+
+.. _figure_diffuser_side_top_bottom:
+
+.. figure:: ../Images/diffuser_side_top_bottom.png
+    :height: 300px
+    :align: center
+    :alt: Side, top, and bottom view of a diffuser.
+
+    Side, top, and bottom view of a diffuser.
+
+Recall that this deformation is done to create a line jet entering the jet reverser in the bottom of the clarifier. Diffusers are shaped by dipping the pipe stubs in hot oil, and then pushing the maleable and heated pipe onto a metal form, as shown in :numref:`figure_diffuser_fabrication`. This metal form is sized so that the target shape is achieved.
+
+.. _figure_diffuser_fabrication:
+
+.. figure:: ../Images/diffuser_fabrication.png
+    :height: 300px
+    :align: center
+    :alt: Process of heating the PVC in oil and molding the diffuser shape on the metal forms.
+
+    Process of heating the PVC in oil and molding the diffuser shape on the metal forms.
+
+
 Sedimentation and Plate Settlers
 ================================
 
@@ -455,10 +633,7 @@ In addition to the vertical velocity component increasing between the plates, th
 
 Now, consider a tube settler used in a lab setting instead of a plate settler. If a tube settler was designed with an angle to mimic a plate settler, would the water change vertical velocity after the angle? How does this compare to the plate settler scenario? In the case of the tube settler, the vertical velocity does not increase because there is no change in flow area; the diameter of the tube is constant throughout, meaning that for the flow to remain constant, the velocity does not change.
 
-For another example of flow conservation, let's consider the relationship between :math:`\bar v_{z_{Plate}}*S` and :math:`\bar v_{z_{Active}}*B`. :math:`B` is the center-to-center distance between plate settlers, and does not take into account the thickness of plate settlers. Considering only the center-to-center distance means that the area for water to travel through does to change from before the plate settlers to within the plate settlers because we are not accounting for any thickness. If the area does not change, then velocity should also not change to keep flow conserved. However, if we are to account for thickness, we must discuss :math:`S` which is the spacing between plate settlers. This does take into account the change in area,  which means that the velocity would need to increase through the lesser area. So if we look at the flow through plate settlers, we can confirm that :math:`\bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B`.
-
-By using flow conservation and plate settler geometry, we can begin to understand the mathematical relationships that drive design.
-
+For another example of flow conservation, let's consider the relationship between :math:`\bar v_{z_{Plate}} S` and :math:`\bar v_{z_{Active}} B`. :math:`B` is the center-to-center distance between plate settlers, and does not take into account the thickness of plate settlers. Considering only the center-to-center distance means that the area for water to travel through does to change from before the plate settlers to within the plate settlers because we are not accounting for any thickness. If the area does not change, then velocity should also not change to keep flow conserved. However, if we are to account for thickness, we must discuss :math:`S` which is the spacing between plate settlers. This does take into account the change in area,  which means that the velocity would need to increase through the lesser area. So if we look at the flow through plate settlers, we can confirm that :math:`\bar v_{z_{Plate}} S = \bar v_{z_{Active}} B`. By using flow conservation and plate settler geometry, we can begin to understand the mathematical relationships that drive design.
 
 Now that we have established how flocs settle on the plate and the increase in plan view area that plate settlers offer, we need to discuss how flocs will act once they are on the plates. We want particles and flocs that settle to agglomerate and slide down the plate settlers to be returned to the floc filter. We will explore this concept by first considering the desired spacing between plate settlers.
 
@@ -519,20 +694,6 @@ As we have already suggested, small spacing between plates will cause more floc 
 
 So what does this mean for plate settler spacing? Let's review some results from lab experiments. The following graph shows minimum plate settler spacing (mm) as a function of floc terminal velocity (mm/s). Some important things to note are that AguaClara plate settlers are designed for a capture velocity of 0.12 mm/s (recall that this capture velocity means that we want to capture flocs that are settling at 0.12 mm/s and faster). Before AguaClara filters were designed and deployed, AguaClara adopted the 0.12 mm/s capture velocity in an effort to reduce effluent turbidity as much as possible.
 
-A plot of Equation :eq:`Plate_S_min_of_fractal_of_2` reveals that the minimum spacing is strongly influenced by the density of the core particle and by the temperature. The minimum spacing increases as the size of the primary particle, :math:`D_{cp}`, decreases. This is an important insight because flocs that are made of coagulant nanoparticles and dissolved organics are the most difficult flocs to capture. Flocs made of coagulant nanoparticles are less dense than flocs made of clay. Coagulant nanoparticle flocs are produced when water treatment plants are used to remove dissolved organics or arsenic or when high coagulant dosages are used.
-
-.. _figure_SofRollupwithfractal2:
-
-.. figure:: ../Images/SofRollupwithfractal2.png
-   :height: 300px
-   :align: center
-   :alt: Floc roll up as a function of core particle density and temperatures
-
-   Plate settler spacing must increase to capture low density flocs.
-
-Given that AguaClara uses a lower upflow velocity, :math:`\bar v_{z_{Plate}}`, than many plate settler designs it is reasonable for us to use more closely spaced plates. More work is required to characterize the density and size of the core particles as a function of raw water constituents to provide guidance on the required plate spacing.
-
-AguaClara plate settlers are currently using separations of 2.5 cm, which is far above the constraint of floc roll up except for very low density flocs. As floc density decreases, as we expect for organic matter, minimum spacing increases. However, we don't yet know what that spacing is or where the boundary is because we don't know the properties of the humic acid-coagulant flocs. Further research is required here to determine the floc properties of flocs that are dominated by dissolved organic matter.
 
 Why does the plate settling distance matter so much? How much does it impact the rest of the clarifier and its design?
 

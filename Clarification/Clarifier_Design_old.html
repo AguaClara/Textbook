@@ -176,6 +176,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#high-head-loss-after-backwash-in-estars">High Head Loss After Backwash in EStaRS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#encrustation-of-filter-pipes-at-las-vegas">Encrustation of Filter Pipes at Las Vegas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#slime-at-las-vegas">Slime at Las Vegas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Troubleshooting/Troubleshooting.html#floc-volcanoes">Floc Volcanoes</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
 <ul>
@@ -290,75 +291,6 @@
 <p>For clarifiers that are 1.07 m wide, an upflow velocity of 1 mm/s, with diffusers that are 3.175 mm wide, and assuming that the diffuser wall thickness is small we have a jet velocity of 0.34 m/s.</p>
 <p>The maximum inlet manifold velocity can now be determined from Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(86)</a>. Given a port flow ratio of 85% the maximum manifold velocity is about 0.6 m/s.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=ndlvydp8UMFJ&amp;line=7&amp;uniqifier=1">Design the inlet manifold based on a simple manifold analysis</a></p>
-<p>Water exits the influent manifold through a series of orifices and <strong>diffusers</strong> in the bottom of the pipe shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_influent_manifold_diffuser_base</span></code>. Orifices refer to the holes that are drilled into the underside of the manifold while diffusers are what we call short stubs of pipe that extend down from the orifice, perpendicular to the influent manifold. The orifices and diffusers point down to the bottom of the clarifier bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. The ends of the diffuser tubes are flattened so that they are thin rectangles and when placed side-by-side achieve a line-jet effect. The end of the influent manifold is capped.</p>
-<div class="figure align-center" id="id1">
-<span id="figure-influent-manifold-diffuser-base"></span><a class="reference internal image-reference" href="../_images/influent_manifold_diffuser_base.png"><img alt="Influent manifold with diffusers." src="../_images/influent_manifold_diffuser_base.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">Influent manifold with diffusers.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-center" id="id2">
-<span id="figure-influent-manifold-diffuser-flow"></span><a class="reference internal image-reference" href="../_images/influent_manifold_diffuser_flow.png"><img alt="Influent manifold and diffuser flow paths." src="../_images/influent_manifold_diffuser_flow.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">Influent manifold and diffuser flow paths.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-<p>Recall the discussion about flow distribution in the influent channel. We know that the clarifier bay furthest away from the flocculator would receive the most flow from the influent channel due to fluids principles. For the same reasons, the orifice at the end of the influent manifold would receive the most flow in the pipe. Is the type of head loss introduced by the 90 degree bend “good” or “bad”? This head loss is “good” because it increases head loss through all paths equally.</p>
-<p>Is the type of head loss in the influent manifold “good” or “bad”? Like the influent channel, it would be “bad” head loss because it can lead to different flow along the length of the clarifier; the end of the clarifier would receive more flow than the beginning.</p>
-<p>However, the diffuser system was designed to greatly impact the overall flow distribution in an attempt to make the flow more equal in all parts of the system. Diffusers are designed to introduce 1 cm of head loss (see the section on <a class="reference internal" href="Clarifier_Derivations.html#heading-clarifier-diffuser-design"><span class="std std-ref">diffuser design</span></a> for more information). This is “good” head loss because it uniformly increases the head loss through all flow paths. The “good” head loss from the diffusers dominate the “bad” head loss from the influent channel and manifold, making differences between the paths less significant.</p>
-<p>The influent manifold diffuser system straightens the fluid jets that are exiting the manifold so that they have no horizontal velocity component as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_flow_straightening</span></code>. This is critical because even a small horizontal velocity causes a large scale circulation that transports flocs directly to the top of the clarifier as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_flow_circulation</span></code>. Influent manifolds without flow straightening diffusers are commonly used in vertical flow clarifiers including designs by leading manufacturers.</p>
-<div class="figure align-center" id="id3">
-<span id="figure-flow-circulation"></span><a class="reference internal image-reference" href="../_images/flow_circulation.png"><img alt="Flow with a horizontal velocity component that causes problematic flow circulation." src="../_images/flow_circulation.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">Flow with a horizontal velocity component that causes problematic flow circulation.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
-<p>The horizontal flow created by the direction of flow inside the manifold results in preferential flow through the plate settlers at the terminal end of the manifold. This is a common problem in conventional clarifiers that don’t have flow straightening diffusers or that have horizontal flow in the tank.</p>
-<p>The underlying cause of the poor flow distribution between plate settlers (shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_flow_circulation</span></code>) is because the head loss through the plate settlers is inconsequential and thus there can’t be <strong>any</strong> significant horizontal velocity below the plate settlers. It is possible that some plate settler manufactures address this issue by adding flow control orifices at the top of the plate settlers that add sufficient head loss to the flow through every plate settler to minimize the impact of velocity differences below the plates.</p>
-<p>The AguaClara solution is to use flow diffusers that simultaneously eliminate horizontal flow and create a line jet that resuspends settled flocs to maintain the floc filter in suspension.</p>
-<div class="figure align-center" id="id4">
-<span id="figure-flow-straightening"></span><a class="reference internal image-reference" href="../_images/flow_straightening.png"><img alt="Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation." src="../_images/flow_straightening.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">Flow with the diffusers to remove horizontal velocity component to prevent problematic flow circulation.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
-<p>The diffusers create a line jet that spans the entire length of the clarifier. This line jet enters the bay going down, but we want the water to ultimately flow up to make our vertical flow clarifier. To get the flow to redirect upwards, we use a <strong>jet reverser</strong>, which is half of a pipe that is laid in the bottom of the bay.</p>
-<div class="figure align-center" id="id5">
-<span id="figure-bottom-of-clarifier-detail"></span><a class="reference internal image-reference" href="../_images/bottom_of_clarifier_detail.png"><img alt="Detail of the bottom of the clarifier." src="../_images/bottom_of_clarifier_detail.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">Cross-section of the bottom of the clarifier.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
-<p>You may be wondering, why do we need a jet reverser in the first place? Why don’t we just have the diffusers point up to avoid having to change the flow in the first place? The answer has multiple components.</p>
-<ul class="simple">
-<li><p>If the diffusers were to point up, that would mean that any sedimentation that happens near the terminal end of the manifold would accumulate and the sediment would have no way of being removed.</p></li>
-<li><p>If flow were just to point directly up, it would not have an opportunity to sufficiently spread into the width of the clarifier bay, which could lead to “short-circuiting” and poor flow distribution overall.</p></li>
-<li><p>The jet reverser functions as a way to keep flocs suspended by ensuring that anything that settles will be propelled back up from the force of the diffuser jet. Because the diffusers and jet reverser are responsible for resuspension, their design must meet minimum velocity requirements, as derived in the section on <a class="reference internal" href="Clarifier_Derivations.html#heading-clarifier-diffuser-design"><span class="std std-ref">diffuser design</span></a>. The jet reverser and diffuser alignment is not symmetrical; the diffusers are directed to one side of the jet reverser (either by slight rotation of the inlet manifold or by an offset). This is intentionally done to ensure that the diffuser jet never collapses to promote a floc filter, which will be discussed next. <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_jet_placement</span></code> shows that flat bottomed and centered jets do not create a floc filter while offset jets are stable.</p></li>
-</ul>
-<div class="figure align-center" id="id6">
-<span id="figure-jet-placement"></span><a class="reference internal image-reference" href="../_images/jet_placement.png"><img alt="The jet reverser and diffuser alignments; the offset jet is the most successful." src="../_images/jet_placement.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">The jet reverser and diffuser alignments; the offset jet is the most successful.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
-</div>
-<p>There is a lot of research interest in determining the optimal upflow velocity for floc filters considering that high velocity is better for resuspension but breaks more flocs. Currently, AguaClara plants use an upflow velocity of 1 mm/s.</p>
-<div class="figure align-center" id="id7">
-<span id="figure-flat-bottomed-tank"></span><a class="reference external image-reference" href="https://www.youtube.com/watch?v=04OksWoRmQI"><img alt="Flat bottomed tank with settled flocs (click to be sent to video)." src="../_images/flat_bottomed_tank.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Flat bottomed tank with settled flocs (click to be sent to video).</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
-</div>
-<p>As shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_flat_bottomed_tank</span></code> and the linked video, in a flat bottom geometry, flocs settle in the corners of the tank because there is no direct flow of water to resuspend it. Flocs fall in such a way that the corners of the tank will fill first, with more and more flocs settling until the angle of repose is created. This angle that is occupied by flocs suggests that if we want to avoid having flocs settle, we should fill the sides of the tank in with concrete and create a sloped bottom so that there are no surfaces for settling.</p>
-<p>The influent manifold, diffusers, and jet reverser work with a <strong>sloped bottom geometry</strong> in an AguaClara plant. The slope on either side of the diffusers is at a 50 degree angle. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can fall into the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the clarifier bays. Sludge that is allowed to accumulate in the bottom of clarifiers in tropical and temperate climates decomposes anaerobically and generates methane. The methane forms gas bubbles that carry suspended solids to the top of the clarifier and cause a reduction in particle removal efficiency. The AguaClara clarifier bottom geometry prevents sludge accumulation while also ensuring good flow distribution.</p>
-<div class="figure align-center" id="id8">
-<span id="figure-clarifier-cross-section"></span><a class="reference internal image-reference" href="../_images/clarifier_cross_section.png"><img alt="Cross-section of the bottom of the clarifier." src="../_images/clarifier_cross_section.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">Cross-section of the bottom of the clarifier.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-center" id="id9">
-<span id="figure-floc-filter-floc-hopper"></span><a class="reference external image-reference" href="https://www.youtube.com/watch?v=2x12wGb7xZE"><img alt="Sloped bottom tank with fully suspended flocs (click to be sent to video)." src="../_images/Floc_Filter_Floc_Hopper.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Sloped bottom tank with fully suspended flocs (click to be sent to video).</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
-</div>
-<p>So we know that the diffusers, jet reverser, and sloped bottom ensure that no sludge accumulates in the bay by creating a system to resuspend any settled flocs.</p>
-<div class="figure align-center" id="id10">
-<span id="figure-diffuser-jetreverser"></span><a class="reference external image-reference" href="https://youtu.be/yJ-8g7vQTSM"><img alt="Distribution of flocculated water and resuspension of settling flocs (click to be sent to video)." src="../_images/diffuser_jetreverser.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">Distribution of flocculated water and resuspension of settling flocs (click to be sent to video).</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
-</div>
-<p>What are the failure modes for this system? For one, we need to ensure that the jet of water exiting the diffuser is able to maintain its upward direction after the jet reverser. The jet is influenced by the flows that are coming down the sloped sides of the tank. Thus, the jet must have enough momentum to remain upwards even with the momentum from other flows downwards. We can control the momentum of the jet by controlling the cross-sectional area of the diffuser slot. A smaller cross-sectional area will increase the velocity of the jet but the mass is the same because the flow rate for the plant is the same, thus increasing the momentum.</p>
-<p><a class="reference external" href="https://doi.org/10.1089/ees.2015.0314">Garland, 2016</a> showed that the jet was unable to resuspend the flocs when the jet velocity was 57 mm/s and was successful for all velocities greater than 75 mm/s. The momentum of the floc density current will increase with the concentration of flocs in the primary filter which is in turn a function of the density and size of the core particles. The primary filter floc concentration will decrease at lower temperatures and thus failure of the jet reverser will occur at high temperatures. Given that Dr. Garland did the research at room temperature using a kaolin suspension it is likely that the 75 mm/s guidelines is sufficiently conservative for all designs that have a 1 mm/s upflow velocity. The jet reverser will fail at some point as the flow rate through the clarifier is decreased. The solution for that case would be to take a fraction of the clarifiers off line to maintain a higher jet velocity.</p>
-<div class="figure align-center" id="id11">
-<span id="figure-jet-angle"></span><a class="reference internal image-reference" href="../_images/jet_angle.png"><img alt="Jet diameter and current of settled flocs." src="../_images/jet_angle.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">Jet diameter and current of settled flocs.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-center" id="id12">
-<span id="figure-diffuser-jet-reverser"></span><a class="reference external image-reference" href="https://youtu.be/WEM-YyGITlQ"><img alt="Jet reverser resuspending flocs (click to be sent to video)." src="../_images/diffuser_jet_reverser.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Jet reverser resuspending flocs (click to be sent to video).</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
-</div>
 </div>
 <div class="section" id="jet-reverser">
 <h3>Jet Reverser<a class="headerlink" href="#jet-reverser" title="Permalink to this headline">¶</a></h3>
@@ -422,9 +354,9 @@
 <div class="line"><span class="math notranslate nohighlight">\(Q_{Clarifier} =\)</span> flow rate through each clarifier</div>
 <div class="line"><span class="math notranslate nohighlight">\(W_{Clarifier} =\)</span> width of each clarifier</div>
 </div>
-<div class="figure align-center" id="id13">
+<div class="figure align-center" id="id1">
 <span id="figure-clarifier-flow-conserve"></span><a class="reference internal image-reference" href="../_images/clarifier_flow_conserve.png"><img alt="AguaClara clarifier showing &quot;lost triangle&quot; and its impact on relevant lengths." src="../_images/clarifier_flow_conserve.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">AguaClara clarifier showing “lost triangle” and its impact on relevant lengths.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">AguaClara clarifier showing “lost triangle” and its impact on relevant lengths.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="floc-filter">
 <span id="heading-clarifier-floc-filter"></span><h3>Floc Filter<a class="headerlink" href="#floc-filter" title="Permalink to this headline">¶</a></h3>
@@ -436,13 +368,8 @@
 <p>Thus, <span class="math notranslate nohighlight">\(Q_{Clarifier} = W_{Clarifier}*L_{SedFloc}* \bar v_{z_{ff}}\)</span></p>
 <p>The line jet from the diffusers enters the jet reverser to force flow up through the clarifier bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the clarifier. The resuspended flocs form a fluidized bed which is called a <strong>floc filter</strong>. The bed is fluidized because flocs are kept in suspension by the upflowing water.</p>
 <p>For a floc filter to form 1) all flocs must be returned to the bottom of the clarifier and 2) all settled flocs must be resuspended by incoming water. As will be discussed soon, plate settlers are used to return flocs to the bottom of the bay, while the jet reverser and sloped bottom geometry allow for floc resuspension. Any surface with a horizontal component in a clarifier must be sloped to allow settled flocs to return to the resuspension zone. A flat bottom geometry does not allow for the formation of a floc filter, as discussed previously.</p>
-<div class="figure align-center" id="id14">
-<span id="figure-floc-filter-experiment"></span><a class="reference external image-reference" href="https://www.youtube.com/watch?v=w8ZFCz54IBs"><img alt="Floc filter formation over time (click to be sent to video)." src="../_images/floc_filter_experiment.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Floc filter formation over time (click to be sent to video).</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
-</div>
-<p>Studies by AguaClara researchers have found that floc filters improve the performance of a clarifier and reduce settled water turbidity by a factor of 10 for multiple reasons (<a class="reference external" href="https://www.liebertpub.com/doi/10.1089/ees.2016.0174">Garland et al., 2017</a>):</p>
 <ul class="simple">
-<li><p>By providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow clarifiers, flocculation can occur in a floc filter due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small <span class="math notranslate nohighlight">\(G_{CS} \theta\)</span> cause a large reduction in turbidity? The two-fold answer may be that the lower <span class="math notranslate nohighlight">\(G_{CS}\)</span> value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc filter. See the section on <a class="reference internal" href="Clarifier_Derivations.html#heading-clarifier-floc-filter-design"><span class="std std-ref">floc filter design</span></a> for more information.</p></li>
+<li><p>By providing additional collision potential. The high concentration of particles, with a suspended solids concentrations of approximately 1-5 g/L, leads to an increase in collisions and particle aggregation. As discussed for vertical flow clarifiers, flocculation can occur in a floc filter due to shear from suspended flocs which are colliding and growing. Fluidized flocs provide a collision potential of a few thousand. This collision potential is small compared to the collision potential from the flocculator. So how does a small <span class="math notranslate nohighlight">\(G_{CS} \theta\)</span> cause a large reduction in turbidity? The two-fold answer may be that the lower <span class="math notranslate nohighlight">\(G_{CS}\)</span> value provides an opportunity for all flocs to grow larger without floc breakup. The high concentration of flocs provides many opportunities for clay particles to collide with big flocs, but it is not clear if or when those collisions are successful. We also want to know which flocs are active or inactive in collisions in the floc filter. See the section on <span class="xref std std-ref">floc filter design</span> for more information.</p></li>
 <li><p>By creating a uniform vertical velocity of water entering the plate settlers.</p></li>
 <li><p>By transporting excess floc consolidation pipe with a drain port, called the floc hopper. The floc hopper is discussed in the next section.</p></li>
 </ul>
@@ -466,34 +393,7 @@
 <div class="section" id="floc-hopper">
 <h3>Floc Hopper<a class="headerlink" href="#floc-hopper" title="Permalink to this headline">¶</a></h3>
 <p>However, remember the diffusers that distribute water into the clarifier? They create velocities on the order of 100 mm/s. Those high initial velocities are damped out by the floc filter which helps to distribute the flow. If we weren’t able to use the floc filter to dampen the flow to be less than 4 mm/s, then the plate settlers would not provide any head loss to help with uniform flow distribution. This point about uniform flow is really important.</p>
-</div>
-</div>
-<div class="section" id="floc-volcanoes">
-<span id="heading-floc-volcano-intro"></span><h2>Floc Volcanoes<a class="headerlink" href="#floc-volcanoes" title="Permalink to this headline">¶</a></h2>
-<p>Now, lets discuss a plate settler problem that has not yet been solved: <strong>floc volcanoes</strong>. Floc volcanoes occur when water and flocs rise preferentially in one part of the clarifier. At points of high velocity, flocs can rise to the surface of the water. Consider the following case: an AguaClara plant in San Nicolas, Honduras, was witnessing intermittent floc volcanoes in the clarifiers. During operation, the plant was treating raw water with 4 NTU with a PACl dose of 3.5 mg/L. The settled water turbidity varied between 0.5 and 4 NTU. What might explain the floc volcanoes and very poor plant performance? Try coming up with a hypothesis that matches the information given to us from the plant. We want to figure out what is causing this problem so we can design a solution. What questions would you want to ask the technicians or engineers in Honduras? This exercise emphasizes the idea that asking the right questions are sometimes the hardest first step to learning more information.</p>
-<p>Some hypotheses and questions may include:</p>
-<ol class="arabic simple">
-<li><p>Is the problem related to dissolved air flotation? Dissolved air coming out of flocculation can cause flocs to float to the top.</p></li>
-</ol>
-<p>After asking the operators, we are told that there are not any bubbles in the clarifier.</p>
-<ol class="arabic simple" start="2">
-<li><p>Is the problem regularly intermittent? Is there anything that we can correlate these fluctuations to?</p></li>
-</ol>
-<p>After asking the operators, we are told that the floc volcanoes appear in the early afternoon each day.</p>
-<div class="figure align-center" id="id15">
-<span id="figure-temp-turbidity"></span><a class="reference internal image-reference" href="../_images/temp_turbidity.png"><img alt="Turbidity as a function of time in San Nicolas, Honduras." src="../_images/temp_turbidity.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">Turbidity as a function of time in San Nicolas, Honduras.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
-</div>
-<p>Using this new information, we have to make another hypothesis about why the floc volcanoes are impacted daily. Perhaps it is related to the sun and daily temperature changes. We can ask the operators to measure the water temperatures so we can do some analysis. The operators measure temperature and we plot the results, providing the following graph.</p>
-<p>We know that this plant brings water from a water source about 14 km away. The water is transported in a galvanized iron pipe that is placed on the surface of the ground because there is no concern about freezing pipes in Honduras (galvanized iron is not damaged by UV like PVC pipe is). The pipe functions as a 14 km water heater, raising the temperature of the water to the plant after noon.</p>
-<p>But why does the temperature difference cause a problem for the plate settlers?
-The problem is that there is warmer water entering the clarifier than what is in it. This temperature difference causes a density difference in the clarifier and plate settlers. The less dense, warmer water rises to the top of the plate settlers while the cold water drops to the bottom of the plate. This creates a current, allowing water to flow up on the top and settle on the bottom. The temperature gradient changes slowly over a few hours.</p>
-<div class="figure align-center" id="id16">
-<span id="figure-temp-tube-settler"></span><a class="reference internal image-reference" href="../_images/temp_tube_settler.png"><img alt="Hot water rising and cold water settling in a tube settler." src="../_images/temp_tube_settler.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">Hot water rising and cold water settling in a tube settler.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
-</div>
-<p>So, now that we think we know what the problem is, how would we try to solve it? One idea would be to paint the entire line to reflect heat, but this is not feasible due to cost. The town Water Board had been maintaining the distribution line by cleaning weeds and brush from the pipe. The solution ended up being to just let the weeds grow over the pipe to provide shade. We haven’t yet come up with a real solution. A possible long-term solution could be to design a clarifier that has a really short residence time. The longer the residence time in the clarifier, the worse the problem is because there is a large variation between the water that entered it last night and the water that enters it this afternoon. A tank with a really short residence time, on the order of a few minutes, would ensure that the water coming in would be very close to the water already in the tank.</p>
-<p>Let’s recap some important conclusions from this section on plate settlers.</p>
+<p id="heading-floc-volcano-intro">Let’s recap some important conclusions from this section on plate settlers.</p>
 <ol class="arabic simple">
 <li><p>Reynolds number calculations of flow through plate settlers prove that there is laminar flow between plate settlers. This is important because it allows us to assume that a parabolic velocity profile is established.</p></li>
 <li><p>There is very low head loss between plate settlers so they will not do a good job of helping to achieve uniform flow between the plate settlers.</p></li>
@@ -507,6 +407,7 @@ The problem is that there is warmer water entering the clarifier than what is in
 </li>
 </ol>
 </div>
+</div>
 <div class="section" id="exiting-the-tank">
 <span id="heading-clarifier-exit"></span><h2>Exiting the Tank<a class="headerlink" href="#exiting-the-tank" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have passed through the plate settlers, we are ready to leave the clarifier.</p>
@@ -519,9 +420,9 @@ The problem is that there is warmer water entering the clarifier than what is in
 <li><p>The AguaClara clarifier design is driven by the need for high treatment capability coupled with easy operation and maintenance.</p></li>
 <li><p>There is “good” head loss introduced by the influent manifold entrance, diffusers, effluent manifold orifices, and effluent manifold exit. There is “bad” head loss introduced by pressure recovery in the influent channel, influent manifold, and effluent manifold. Even flow distribution is achieved by ensuring that “good” head loss dominates through intentional design.</p></li>
 </ul>
-<div class="figure align-center" id="id17">
+<div class="figure align-center" id="id2">
 <span id="figure-circuit-full"></span><a class="reference internal image-reference" href="../_images/circuit_full.png"><img alt="Clarification tank as a circuit, showing &quot;good&quot; and &quot;bad&quot; head loss." src="../_images/circuit_full.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text">Clarification tank as a circuit, showing “good” and “bad” head loss.</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Clarification tank as a circuit, showing “good” and “bad” head loss.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="review">
