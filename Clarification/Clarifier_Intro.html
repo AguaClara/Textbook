@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Clarification Introduction &mdash; AguaClara Textbook 281/merge documentation</title>
+  <title>Clarification Introduction &mdash; AguaClara Textbook 283/merge documentation</title>
   
 
   
@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Clarification Deriviations" href="Clarifier_Derivations.html" />
+    <link rel="next" title="Clarifier Derivations" href="Clarifier_Derivations.html" />
     <link rel="prev" title="Flocculator Design Solution" href="../Flocculation/Floc_Design_Solution.html" /> 
 </head>
 
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                281/merge
+                283/merge
               </div>
             
           
@@ -160,7 +160,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Clarifier_Derivations.html">Clarification Deriviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clarifier_Derivations.html">Clarifier Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Clarifier_Design.html">Clarifier Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
@@ -286,7 +286,7 @@
 Which process removes the largest quantity of contaminants?</p>
 <p>Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:</p>
 <div class="math notranslate nohighlight" id="equation-eq-laminar-terminal-velocity">
-<span class="eqno">(527)<a class="headerlink" href="#equation-eq-laminar-terminal-velocity" title="Permalink to this equation">¶</a></span>\[\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\]</div>
+<span class="eqno">(528)<a class="headerlink" href="#equation-eq-laminar-terminal-velocity" title="Permalink to this equation">¶</a></span>\[\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\bar v_t\)</span> = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water</div>
@@ -322,7 +322,7 @@ Which process removes the largest quantity of contaminants?</p>
 <p><strong>1) How much time is required</strong> for water to pass through the tank?</p>
 <p>To determine this value, we can use the given volume and flow rate information by the following relationship:</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-intro-0">
-<span class="eqno">(528)<a class="headerlink" href="#equation-clarification-clarifier-intro-0" title="Permalink to this equation">¶</a></span>\[\theta = \frac{\rlap{-}V_{tank}}{Q}\]</div>
+<span class="eqno">(529)<a class="headerlink" href="#equation-clarification-clarifier-intro-0" title="Permalink to this equation">¶</a></span>\[\theta = \frac{\rlap{-}V_{tank}}{Q}\]</div>
 <div class="line-block">
 <div class="line">Where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\theta =\)</span> residence time <span class="math notranslate nohighlight">\([T]\)</span></div>
@@ -339,10 +339,10 @@ Which process removes the largest quantity of contaminants?</p>
 </div>
 <p>Capture velocity can be determined by the distance that a particle must travel and the time that the particle has to travel.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-intro-1">
-<span class="eqno">(529)<a class="headerlink" href="#equation-clarification-clarifier-intro-1" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{H}{\theta}\]</div>
+<span class="eqno">(530)<a class="headerlink" href="#equation-clarification-clarifier-intro-1" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{H}{\theta}\]</div>
 <p>We can make some substitutions into the equation for <span class="math notranslate nohighlight">\(\bar v_c\)</span> to solve for it in explicit terms of reactor plan view area. We are interested in plan view area because this will indicate the efficiency and cost of an associated reactor.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-intro-2">
-<span class="eqno">(530)<a class="headerlink" href="#equation-clarification-clarifier-intro-2" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\bar v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}\\\bar v_c = \frac{Q}{A_p}\end{aligned}\end{align} \]</div>
+<span class="eqno">(531)<a class="headerlink" href="#equation-clarification-clarifier-intro-2" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\bar v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}\\\bar v_c = \frac{Q}{A_p}\end{aligned}\end{align} \]</div>
 <p>Thus, we have capture velocity which is a descriptor of a clarifier. It determines how fast a particle has to settle in order to be reliably captured by a particular clarifier, assuming idealized flow. The capture velocity is not a particle property, but rather a clarifier property.</p>
 <p><strong>4) Will any particles</strong> that are smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span> be captured in the clarifier?</p>
 <p>This question is important because as stated in the beginning of this section, our discussion assumed that the particle in question was 35 <span class="math notranslate nohighlight">\(\mu m\)</span>. If we design a clarifier to capture particles that are 35 <span class="math notranslate nohighlight">\(\mu m\)</span>, we also have to understand the impact of our design on particles smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span>.</p>
@@ -366,7 +366,7 @@ Which process removes the largest quantity of contaminants?</p>
 <p><strong>1) How much time</strong> is required for water to pass through the tank?</p>
 <p>The answer is the same for the horizontal flow clarifier because this is a property of reactor flow rate and volume.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-intro-3">
-<span class="eqno">(531)<a class="headerlink" href="#equation-clarification-clarifier-intro-3" title="Permalink to this equation">¶</a></span>\[\theta = \frac{\rlap{-}V_{tank}}{Q}\]</div>
+<span class="eqno">(532)<a class="headerlink" href="#equation-clarification-clarifier-intro-3" title="Permalink to this equation">¶</a></span>\[\theta = \frac{\rlap{-}V_{tank}}{Q}\]</div>
 <div class="line-block">
 <div class="line">Where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\theta =\)</span> residence time [T]</div>
@@ -379,13 +379,13 @@ Which process removes the largest quantity of contaminants?</p>
 <p><strong>3) How fast</strong> must the particle fall (relative to the fluid)?</p>
 <p>We determined in the previous question that a particle must fall a distance <span class="math notranslate nohighlight">\(H\)</span> in time <span class="math notranslate nohighlight">\(\theta\)</span>. Therefore, we determine the same capture velocity for vertical flow clarifiers as for horizontal flow clarifiers.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-intro-4">
-<span class="eqno">(532)<a class="headerlink" href="#equation-clarification-clarifier-intro-4" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{H}{\theta}\]</div>
+<span class="eqno">(533)<a class="headerlink" href="#equation-clarification-clarifier-intro-4" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{H}{\theta}\]</div>
 <p>We can the same substitutions to show,</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-intro-5">
-<span class="eqno">(533)<a class="headerlink" href="#equation-clarification-clarifier-intro-5" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}\]</div>
+<span class="eqno">(534)<a class="headerlink" href="#equation-clarification-clarifier-intro-5" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{H}{\theta} = \frac{HQ}{\rlap{-}V_{tank}} = \frac{Q}{LW} = \frac{Q}{A_p}\]</div>
 <p>Again, we find that capture velocity is,</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-intro-6">
-<span class="eqno">(534)<a class="headerlink" href="#equation-clarification-clarifier-intro-6" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{Q}{A_p}\]</div>
+<span class="eqno">(535)<a class="headerlink" href="#equation-clarification-clarifier-intro-6" title="Permalink to this equation">¶</a></span>\[\bar v_c = \frac{Q}{A_p}\]</div>
 <p>It doesn’t matter whether water is flowing horizontally or vertically in the tank. What determines the capture velocity is the flow rate and the plan view area of the clarifier.</p>
 <p><strong>4) Will any particles</strong> that are smaller than 35 <span class="math notranslate nohighlight">\(\mu m\)</span> be captured in the clarifier?</p>
 <p>This question is surprisingly complex because we have to consider what we have learned so far about sedimentation and also recall what we have learned about flocculation.</p>
@@ -393,7 +393,7 @@ Which process removes the largest quantity of contaminants?</p>
 <p>However, we must also consider potential flocculation processes that could occur in the clarifier. A clarifier is still subject to the same laws of fluids as the flocculator, meaning that there will still be shear in the reactor. While it may not be as much shear as that introduced in the flocculator, there are still velocity gradients which mean that there could be some additional flocculation happening in the clarifier. In the flocculator, the main mechanism that led to flocculation was the deformation of fluid which caused particles to collide. In the clarifier, the main mechanism that can lead to flocculation is velocity gradients. Flocculation is provided by an opportunity for collision by differences in relative velocities of particles. Big particles in the clarifier settle out but are still in suspension, and small particles continue to move up through the large particles. There is relative velocity between particles based on their terminal velocities.</p>
 <p>Understanding relative velocities is very important to understand how vertical flow clarifiers work. Let’s consider an example to develop our understanding of differential sedimentation. Imagine that two people are skydiving; one person is 150 lbs and the other person is 300 lbs. Assume that both people are using the same size parachutes and are jumping out of the same stationary helicopter. If the 150 lb person jumps out first and the 300 lb person jumps out a few moments after, what will happen? The 300 lb person will fall faster than the 150 lb person, causing a collision in the air. In a clarifier, we would describe the collision due to differential sedimentation as flocculation because particles are colliding and growing.</p>
 <p>Now that we understand differential settling and the potential for flocculation in a clarifier, let’s revisit the original question. Can smaller particles be captured? The answer is that smaller particles can be captured only if they collide with other particles and grow so that they have a terminal velocity that is greater than the capture velocity. This flocculation that happens in the clarifier is an additional mechanism for removing particles.</p>
-<p>There are some important differences between horizontal and vertical clarifiers. Many of these points will be discussed next when we learn specifically about the <a class="reference internal" href="Clarifier_Design.html#heading-clarifier-design"><span class="std std-ref">AguaClara design process</span></a>, but it is important to get introduced to these ideas now:</p>
+<p>There are some important differences between horizontal and vertical clarifiers. Many of these points will be discussed next when we learn specifically about the <a class="reference internal" href="Clarifier_Design_old.html#heading-clarifier-design"><span class="std std-ref">AguaClara design process</span></a>, but it is important to get introduced to these ideas now:</p>
 <ul class="simple">
 <li><p>vertical flow tanks require careful attention to the delivery of water in the bottom of the tank and the extraction of water in the top of the tank;</p></li>
 <li><p>vertical and horizontal flow tanks may have different velocities and turbulence capacities due to plan view areas;</p></li>
@@ -414,7 +414,7 @@ Which process removes the largest quantity of contaminants?</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Clarifier_Derivations.html" class="btn btn-neutral float-right" title="Clarification Deriviations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Clarifier_Derivations.html" class="btn btn-neutral float-right" title="Clarifier Derivations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="../Flocculation/Floc_Design_Solution.html" class="btn btn-neutral float-left" title="Flocculator Design Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
