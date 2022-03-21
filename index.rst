@@ -126,10 +126,11 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
 
 .. toctree::
-  :caption: Chapter 11: Troubleshooting
+  :caption: Chapter 11: Operation
   :maxdepth: 1
 
-  Troubleshooting/Troubleshooting.rst
+  Operation/Coagulant_Automation.rst
+  Operation/Troubleshooting.rst
 
 
 .. toctree::
