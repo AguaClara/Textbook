@@ -65,4 +65,6 @@ Combining Equations :eq:`K_u` and :eq:`coagdoseofCpandturbidity` we obtain a sim
 
   C_{coag_{goal_t}}  =C_{coag_{t-\theta}}\left( \frac{C_{cp_t}}{C_{cp_{goal}}} \right)^\frac{2}{3}\left( \frac{C_{turbidity_t}}{C_{turbidity_{t-\theta}}} \right)
 
+If the particle count is too high the coagulant dose will be increased. The coagulant dose will also be increased if the raw water turbidity increases. In this system the flocculator and tube settler system is providing continuous guidance on how to optimize the coagulant dose. Small errors in the model or in measurements will be self correcting because the value of :math:`K_u` will be continuously updated.
+
 The next improvement in this simple model would be to add a correction factor for dissolved organic matter. The dissolved organic matter would effectively inactivate a concentration of the coagulant.
