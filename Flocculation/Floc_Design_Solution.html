@@ -180,6 +180,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Chapter 11: Operation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Operation/Coagulant_Automation.html">Coagulant Automation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Operation/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
@@ -296,7 +297,7 @@
 <p>The residence time of flocculator is 396.8 second</p>
 <p><strong>3) Plot :math:`Gtheta` as a function of the operating temperature</strong> given the head loss and residence time for this design. In this step you are assuming that you have built this hydraulic flocculator and you want to see how the collision potential, <span class="math notranslate nohighlight">\(G\theta\)</span>, varies with temperature of operation. Vary the temperature from 0°C to 30°C. The following equation makes it clear that the velocity gradient originates from head loss that creates fluid deformation that is limited by viscosity.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-solution-0">
-<span class="eqno">(526)<a class="headerlink" href="#equation-flocculation-floc-design-solution-0" title="Permalink to this equation">¶</a></span>\[\bar G\theta =\sqrt {\frac{{g{h_e}\theta }}{\nu }}\]</div>
+<span class="eqno">(527)<a class="headerlink" href="#equation-flocculation-floc-design-solution-0" title="Permalink to this equation">¶</a></span>\[\bar G\theta =\sqrt {\frac{{g{h_e}\theta }}{\nu }}\]</div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=u-JpICEvm8OL&amp;line=4&amp;uniqifier=1">See the code to generate the plot</a></p>
 <div class="figure align-center" id="id1">
 <span id="figure-gtheta-vs-temperature"></span><a class="reference internal image-reference" href="../_images/Gtheta_vs_temperature.png"><img alt="Gtheta_vs_temperature" src="../_images/Gtheta_vs_temperature.png" style="width: 400px;" /></a>
@@ -328,7 +329,7 @@
 <p>The actual flocculator channel width is 53.35 centimeter</p>
 <p><strong>12) Calculate</strong> the <em>maximum</em> distance between expansions. This occurs for the largest allowable H/S ratio. Note that this isn’t accounting for the integer requirement for the number of baffle spaces per channel yet.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-solution-1">
-<span class="eqno">(527)<a class="headerlink" href="#equation-flocculation-floc-design-solution-1" title="Permalink to this equation">¶</a></span>\[{H_{{e_{Max}}}} = {\left[ {\frac{{{K_e}}}{{2\nu {{\bar G}^2}}}{{\left( {\frac{{Q{\Pi _{H{S_{Max}}}}}}{W}} \right)}^3}} \right]^{\frac{1}{4}}}\]</div>
+<span class="eqno">(528)<a class="headerlink" href="#equation-flocculation-floc-design-solution-1" title="Permalink to this equation">¶</a></span>\[{H_{{e_{Max}}}} = {\left[ {\frac{{{K_e}}}{{2\nu {{\bar G}^2}}}{{\left( {\frac{{Q{\Pi _{H{S_{Max}}}}}}{W}} \right)}^3}} \right]^{\frac{1}{4}}}\]</div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=wzCaYvVSnY3Q&amp;line=5&amp;uniqifier=1">Find the maximum distance</a></p>
 <p>The maximum distance between expansions 1.074 meters.</p>
 <p><strong>13) Calculate the minimum number of expansions per baffle space.</strong></p>
@@ -337,7 +338,7 @@
 <p><strong>14) Calculate the actual distance between expansions</strong> given the integer requirement for the number of expansions per flocculator depth.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=Xq_jOoUJne2t&amp;line=3&amp;uniqifier=1">Find the actual distance</a></p>
 <p>The actual distance between expansions is 1 meter.</p>
-<p><strong>15) Calculate the spacing between baffles</strong> based on the target velocity gradient using <a class="reference internal" href="Floc_Derivations.html#equation-floc-baffle-spacing-of-k">(498)</a>.</p>
+<p><strong>15) Calculate the spacing between baffles</strong> based on the target velocity gradient using <a class="reference internal" href="Floc_Derivations.html#equation-floc-baffle-spacing-of-k">(499)</a>.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=pWb4aEgFnhZe&amp;line=6&amp;uniqifier=1">Find the baffle spacing</a></p>
 <p>The spacing between baffles is 0.1832 meter.</p>
 <p><strong>16) How many baffle spaces would fit</strong> in the channel(s) given the length of the flocculator and the baffle spacing? Round to the nearest integer.</p>
