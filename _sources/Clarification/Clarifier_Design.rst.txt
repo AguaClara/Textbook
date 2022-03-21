@@ -139,51 +139,51 @@ Now, we will focus on a single clarifier bay. Flocculated water enters a pipe in
 
     Influent channel with pipe leading to one inlet manifold.
 
-    Clarification tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation :eq:`G_of_vc_and_floc_props`. Our goal is to eventually provide clear guidance on setting :math:`G_{max}`. In the meantime, given a maximum velocity gradient for the inlet to the clarifier, Equation :eq:`max_clarifier_jet_velocity_of_G` provides the maximum jet reverser velocity.
+Clarification tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation :eq:`G_of_vc_and_floc_props`. Our goal is to eventually provide clear guidance on setting :math:`G_{max}`. In the meantime, given a maximum velocity gradient for the inlet to the clarifier, Equation :eq:`max_clarifier_jet_velocity_of_G` provides the maximum jet reverser velocity.
 
-    The ratio of manifold velocity to port velocity can be obtained as the inverse of Equation :eq:`Manifold_max_v_no_hl_series`.
+The ratio of manifold velocity to port velocity can be obtained as the inverse of Equation :eq:`Manifold_max_v_no_hl_series`.
 
-    .. math::
-      :label: max_clarifier_manifold_velocity
+.. math::
+  :label: max_clarifier_manifold_velocity
 
-      \frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}
+  \frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}
 
-    where the port velocity, :math:`\bar v_{P}`, is equal to the jet velocity, :math:`v_{Jet_{max}}`, from Equation :eq:`max_clarifier_jet_velocity_of_G`. Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_clarifier_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
+where the port velocity, :math:`\bar v_{P}`, is equal to the jet velocity, :math:`v_{Jet_{max}}`, from Equation :eq:`max_clarifier_jet_velocity_of_G`. Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_clarifier_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
 
-    The big unknown is the required design value for :math:`\zeta_{breakup}` as defined in Equation :eq:`G_of_vc_and_floc_props`. The expectation is that raw waters with high concentrations of organic matter will have lower density core particles and thus will require a smaller :math:`\zeta_{breakup}` for successful capture of the lower density flocs.
+The big unknown is the required design value for :math:`\zeta_{breakup}` as defined in Equation :eq:`G_of_vc_and_floc_props`. The expectation is that raw waters with high concentrations of organic matter will have lower density core particles and thus will require a smaller :math:`\zeta_{breakup}` for successful capture of the lower density flocs.
 
-    The maximum velocity that could be carried by the inlet manifold given the flow expansion corresponding to the inlet can be calculated using Equation :eq:`D_pipe_min_of_K_and_jet_G_max`. This constraint would allow the use of a smaller diameter inlet manifold than the velocity constraint required by Equation :eq:`max_clarifier_manifold_velocity`.
+The maximum velocity that could be carried by the inlet manifold given the flow expansion corresponding to the inlet can be calculated using Equation :eq:`D_pipe_min_of_K_and_jet_G_max`. This constraint would allow the use of a smaller diameter inlet manifold than the velocity constraint required by Equation :eq:`max_clarifier_manifold_velocity`.
 
-    The result of the requirement for a low velocity jet to prevent floc break up is that the inlet manifold has to be large in diameter to obtain reasonably uniform flow distribution between the diffusers. This constraint is fairly severe and results in large diameter (and hence expensive) inlet manifold pipes.
+The result of the requirement for a low velocity jet to prevent floc break up is that the inlet manifold has to be large in diameter to obtain reasonably uniform flow distribution between the diffusers. This constraint is fairly severe and results in large diameter (and hence expensive) inlet manifold pipes.
 
-    The fundamental problem of the inlet manifold is that the diffusers exit perpendicular to the flow of the water in the inlet manifold and thus the flow into the diffusers is set by the difference in piezometric head between the manifold and the floc filter. The kinetic energy at the inlet of the manifold is converted to increased pressure at the end of the manifold. That results in more flow out of the last diffuser ports.
+The fundamental problem of the inlet manifold is that the diffusers exit perpendicular to the flow of the water in the inlet manifold and thus the flow into the diffusers is set by the difference in piezometric head between the manifold and the floc filter. The kinetic energy at the inlet of the manifold is converted to increased pressure at the end of the manifold. That results in more flow out of the last diffuser ports.
 
-    An alternative design would be to have each of the diffuser pipes end inside the manifold with an elbow so that the inlet to the diffuser would face upstream. This change would potentially improve the flow distribution between diffuser pipes, but the large number of diffuser pipes makes this impossible to fabricate without introducing significant additional head loss in the manifold pipe from drag around all of the diffuser inlets.
+An alternative design would be to have each of the diffuser pipes end inside the manifold with an elbow so that the inlet to the diffuser would face upstream. This change would potentially improve the flow distribution between diffuser pipes, but the large number of diffuser pipes makes this impossible to fabricate without introducing significant additional head loss in the manifold pipe from drag around all of the diffuser inlets.
 
-    To overcome the impossibility of having higher velocity in the inlet manifold and directly connecting that to the diffusers we propose to use a two stage manifold system. The manifold pipe will be split into two chambers with the top chamber being the inlet manifold and the bottom section being a new equalization chamber (see :numref:`figure_2stageInletManifold`).
+To overcome the impossibility of having higher velocity in the inlet manifold and directly connecting that to the diffusers we propose to use a two stage manifold system. The manifold pipe will be split into two chambers with the top chamber being the inlet manifold and the bottom section being a new equalization chamber (see :numref:`figure_2stageInletManifold`).
 
 
-    .. _figure_2stageInletManifold:
+.. _figure_2stageInletManifold:
 
-    .. figure:: ../Images/2stageInletManifold.png
-        :width: 400px
-        :align: center
-        :alt: two stage inlet manifold
+.. figure:: ../Images/2stageInletManifold.png
+    :width: 400px
+    :align: center
+    :alt: two stage inlet manifold
 
-        The two stage inlet manifold with upper chamber acting as the inlet manifold and the lower chamber acting to equalize the flow from the diffusers (not shown).
+    The two stage inlet manifold with upper chamber acting as the inlet manifold and the lower chamber acting to equalize the flow from the diffusers (not shown).
 
-    The inlet manifold flow is transferred to the equalization chamber through half-pipe ports that are tapered (see :numref:`figure_2stageInletManifoldfromUpstream`) to guide flow into the equalization chamber. The taper is designed to be less than the rate of the flow expansion as given by Equation :eq:`PlaneJet_expansion`.
+The inlet manifold flow is transferred to the equalization chamber through half-pipe ports that are tapered (see :numref:`figure_2stageInletManifoldfromUpstream`) to guide flow into the equalization chamber. The taper is designed to be less than the rate of the flow expansion as given by Equation :eq:`PlaneJet_expansion`.
 
-    .. _figure_2stageInletManifoldfromUpstream:
+.. _figure_2stageInletManifoldfromUpstream:
 
-    .. figure:: ../Images/2stageInletManifoldfromUpstream.png
-        :width: 400px
-        :align: center
-        :alt: two stage inlet manifold from upstream
+.. figure:: ../Images/2stageInletManifoldfromUpstream.png
+    :width: 400px
+    :align: center
+    :alt: two stage inlet manifold from upstream
 
-        The half-pipe ports face upstream and slope at a rate that is slower than the rate at which the flow expands to ensure that the flow is fully expanded before the entrance into the next half-pipe port.
+    The half-pipe ports face upstream and slope at a rate that is slower than the rate at which the flow expands to ensure that the flow is fully expanded before the entrance into the next half-pipe port.
 
-    The manifold system must be designed so that the velocity gradient in all flow expansions is less than the maximum allowed velocity gradient.
+The manifold system must be designed so that the velocity gradient in all flow expansions is less than the maximum allowed velocity gradient.
 
 Manifold diameter
 ^^^^^^^^^^^^^^^^^
@@ -198,8 +198,9 @@ Flow Equalizer
 The flow equalizer dissipates most of the kinetic energy in the inlet manifold as the flow exits the ports and enters the equalizer chamber. The ports face upstream and thus act like pitot tubes with the flow into the port controlled by the difference in total energy head between the manifold and the equalizer rather than controlled by the piezometric head (no kinetic energy term). The ports are sloped at a very gradual angle to allow the flow in the manifold to fully expand before arriving at the next port.
 
 The port diameter and port velocity are governed by two constraints.
- 1) The slope of the port must be less than the rate of flow expansion in the manifold.
- 1) The velocity gradient created by the jet entering the equalizer must be less than the maximum allowed velocity gradient.
+
+#. The slope of the port must be less than the rate of flow expansion in the manifold.
+#. The velocity gradient created by the jet entering the equalizer must be less than the maximum allowed velocity gradient.
 
 For the first constraint we use continuity to ensure that enough water enters the port to serve the diffusers that are in the length of the manifold corresponding to the sloped port. The flow per unit length of the clarifier is
 
@@ -309,13 +310,31 @@ The perimeter dimension of the rectangularly formed part of the diffuser is incr
 
   2\left(W_D + S_D\right) = \pi {\rm ID}_D \Pi_{stretch}
 
-where :math:`{\rm ID}_D` is the inner diameter of the diffuser pipe and :math:`\Pi_{stretch}` is the factor describing the perimeter that can be created by heating and molding the PVC pipe. The value of :math:`\Pi_{stretch}` is approximately 1.1. We now have two Equations, :eq:`diffuser_area` and :eq:`diffuser_perimeter`, and two unknowns, :math:`W_D` and :math:`S_D`. Eliminating :math:`S_D` in Equation :eq:`diffuser_perimeter` we obtain
+where :math:`{\rm ID}_D` is the inner diameter of the diffuser pipe and :math:`\Pi_{stretch}` is the factor describing the perimeter that can be created by heating and molding the PVC pipe. The value of :math:`\Pi_{stretch}` is approximately 1.1.
+
+The center to center spacing of the diffusers, :math:`B_D`, must be large enough to not cause interference between diffusers and the gap between diffusers must be small enough that the diffuser jets combine into a continuous line jet as they flow around the jet reverser. We don't have a good estimate for how much the diffuser jets expand and hence how large of a gap is permissible between diffusers.
+
+The current design approach is to set the spacing based on the simplifying assumption that no plastic is needed for the short diffuser walls. This is equivalent to assuming that the slot width is zero.
+
+.. math::
+  :label: diffuser_B
+
+  B_D = ceil\left[\frac{\pi}{4} \left({\rm OD}_D^2 - {\rm ID}_D^2 \right) \frac{\Pi_{stretch}}{{\rm OD}_D - {\rm ID}_D}\right]
+
+
+We now have two Equations, :eq:`diffuser_area` and :eq:`diffuser_perimeter`, and two unknowns, :math:`W_D` and :math:`S_D`. Eliminating :math:`S_D` in Equation :eq:`diffuser_perimeter` we obtain
 
 .. math::
   :label: diffuser_dimensions
 
   2\left(W_D + \frac{S_{Jet} B_D}{W_D}\right) = \pi {\rm ID}_D \Pi_{stretch}
 
+Equation :eq:`diffuser_dimensions` can be rewritten in standard quadratic form.
+
+.. math::
+  :label: diffuser_dimensions_quadratic
+
+  0 = W_D^2 - \frac{\pi}{2} {\rm ID}_D \Pi_{stretch}W_D + S_{Jet} B_D
 
 
 Floc Filter
@@ -421,12 +440,12 @@ The maximum manifold velocity can be obtained by solving Equation :eq:`Outlet_ma
 
 The solution steps are as follows:
 
-1) Calculate the minimum manifold diameter from continuity and the maximum allowable manifold velocity, :math:`\bar v_{M_{max}}`.
-1) Calculate the manifold inner diameter from the next available pipe size.
-1) Calculate the actual manifold velocity.
-1) Calculate the manifold exit head loss.
-1) Calculate the required orifice head loss by subtracting the manifold exit head loss from the desired total head loss.
-1) Calculate the orifice diameter from the orifice head loss and the orifice flow rate given the number of orifices.
+#. Calculate the minimum manifold diameter from continuity and the maximum allowable manifold velocity, :math:`\bar v_{M_{max}}`.
+#. Calculate the manifold inner diameter from the next available pipe size.
+#. Calculate the actual manifold velocity.
+#. Calculate the manifold exit head loss.
+#. Calculate the required orifice head loss by subtracting the manifold exit head loss from the desired total head loss.
+#. Calculate the orifice diameter from the orifice head loss and the orifice flow rate given the number of orifices.
 
 The **submerged effluent manifold**, sometimes called a launder, collects settled water from the clarifier. It is a horizontal pipe that extends along the length of the tank and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the clarifier. Recall that the influent manifold also uses a submerged pipe and orifice design to distribute flow. However, unlike the influent manifold, the effluent manifold does not include diffusers because we do not need to precisely control velocity and flow direction.
 
